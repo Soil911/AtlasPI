@@ -10,7 +10,7 @@
 <body>
   <header id="header">
     <div class="header-left">
-      <h1>AtlasPI</h1>
+      <h1>Atlas<span>PI</span></h1>
       <span class="subtitle">Database Geografico Storico per Agenti AI</span>
     </div>
     <div class="header-right">
@@ -21,10 +21,16 @@
   <main id="app">
     <!-- Sidebar -->
     <aside id="sidebar">
+      <div class="data-banner">
+        <strong>Confini approssimativi.</strong> I poligoni mostrati sono semplificazioni geometriche
+        a scopo dimostrativo, non confini storici verificati. Le fonti e il confidence score
+        indicano il livello di affidabilit&agrave; di ogni record.
+      </div>
+
       <div class="controls">
         <div class="search-box">
-          <input type="text" id="search-input" placeholder="Cerca entit&agrave;..." />
-          <button id="search-btn" title="Cerca">&#128269;</button>
+          <input type="text" id="search-input" placeholder="Cerca per nome, anche varianti..." />
+          <button id="search-btn" title="Cerca">&#8594;</button>
         </div>
 
         <div class="year-control">
@@ -56,6 +62,9 @@
     <!-- Map -->
     <section id="map-container">
       <div id="map"></div>
+      <div class="map-info-overlay" id="map-info">
+        Seleziona un'entit&agrave; dalla lista o clicca su un'area della mappa per visualizzare i dettagli storici, le fonti e le note etiche.
+      </div>
     </section>
 
     <!-- Detail panel -->
@@ -71,7 +80,7 @@
       <span class="legend-item"><span class="dot uncertain"></span> Incerto</span>
       <span class="legend-item"><span class="dot disputed"></span> Contestato</span>
     </div>
-    <span class="footer-note">AtlasPI v1.0 &mdash; Dati storici con governance etica</span>
+    <span class="footer-note">AtlasPI v1.0 &mdash; Confini approssimativi &middot; Dati storici con governance etica</span>
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

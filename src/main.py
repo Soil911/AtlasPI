@@ -12,6 +12,7 @@ from src.api.routes import entities, health
 from src.config import APP_DESCRIPTION, APP_TITLE, APP_VERSION
 from src.db.database import Base, engine
 from src.db.seed import seed_database
+from src.ingestion.update_boundaries import update_all_boundaries
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -25,7 +26,8 @@ async def lifespan(app: FastAPI):
     logger.info("Inizializzazione database...")
     Base.metadata.create_all(bind=engine)
     seed_database()
-    logger.info("AtlasPI pronto su http://127.0.0.1:8000")
+    update_all_boundaries()
+    logger.info("AtlasPI pronto su http://127.0.0.1:10100")
     yield
 
 
