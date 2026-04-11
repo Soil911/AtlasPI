@@ -2,6 +2,41 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v5.5.1] - 2026-04-11
+
+### Frontend — UI Polish & Precision
+- **Caricamento completo entita'**: paginazione automatica (era troncato a 100)
+- **Fix scroll mappa**: scrollWheelZoom disabilitato di default, si attiva al click
+  - Hint visivo "Clicca sulla mappa per abilitare lo zoom" quando si tenta lo scroll
+- **Pannello dettaglio migliorato**:
+  - Griglia informazioni (tipo, periodo, durata, capitale con coordinate, regione)
+  - Tag continente con icona accanto a status badge
+  - Indicatore affidabilita' dettagliato (alta/bassa con colore)
+  - Info confini: tipo geometria (Point/Polygon/MultiPolygon), numero vertici/regioni
+  - Coordinate capitale visibili
+  - Sezione fonti con icone per tipo (academic, primary, archaeological, etc.)
+  - Messaggio quando confini non disponibili
+- **Slider anno esteso**: da -3100 a -4500 a.C. per le nuove entita' antiche
+- **Preset anno aggiuntivo**: pulsante 4500 a.C.
+- **Testi aggiornati**: footer v5.5, OG meta "255+ entita'", anno minimo corretto
+
+### Dataset — Espansione fase 2
+- **441 entita' storiche** (da 258) — 13 batch JSON regionali
+- 6 nuovi batch da agenti paralleli:
+  - **Oceania/Pacifico (25)**: Aboriginal nations, Maori iwi, Pacific island kingdoms
+  - **Asia Centrale/Steppe (30)**: Sciti, Parti, Timuridi, Khanati dell'Asia Centrale
+  - **Sudest Asiatico (25)**: Majapahit, Srivijaya, Lan Xang, Dai Viet, Champa
+  - **Subcontinente Indiano (25)**: Pandya, Kakatiya, Polonnaruwa, Ahom, Sikh Empire
+  - **Africa espansa (23)**: Great Zimbabwe, Mapungubwe, Lozi, Merina, Rozwi
+  - **Europa espansa (23)**: Kyivan Rus', Toscana, Milano, Sardegna, Teutonic Order
+- 1332 fonti accademiche, 1190 cambi territoriali documentati
+- Fix dati: population_affected convertiti da stringa a intero, entity_type corretti
+
+### Test
+- 143 test tutti verdi
+- Fix ETHICS-003: disputed entities con confidence <= 0.7
+- Fix data quality: varianti nome per territori contestati
+
 ## [v5.5.0] - 2026-04-11
 
 ### Dataset — Espansione massiva

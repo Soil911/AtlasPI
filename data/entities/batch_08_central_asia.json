@@ -1,0 +1,2578 @@
+[
+  {
+    "name_original": "𐰜𐰇𐰛:𐱅𐰇𐰼𐰜",
+    "name_original_lang": "otk",
+    "entity_type": "empire",
+    "year_start": 552,
+    "year_end": 744,
+    "capital_name": "Ötüken",
+    "capital_lat": 47.46,
+    "capital_lon": 102.83,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Old Turkic runic script (Orkhon script), as preserved on the Orkhon inscriptions — the earliest known Turkic writing. The Göktürks self-identified as Türük/Türk, making this the origin of the ethnonym 'Turk'. ETHICS-002: The Göktürk Empire encompassed dozens of distinct Turkic and non-Turkic steppe peoples; presenting it as a monolithic 'Turkish' empire risks anachronistic ethnic projection. The Orkhon inscriptions describe the Khaganate's own view of its multiethnic dominion. ETHICS-003: Boundaries for steppe empires are inherently approximate — control was exercised over peoples and trade routes, not fixed territorial lines.",
+    "name_variants": [
+      {
+        "name": "Göktürk Khaganate",
+        "lang": "en",
+        "period_start": 552,
+        "period_end": 744,
+        "context": "English scholarly name",
+        "source": "Golden, P.B. An Introduction to the History of the Turkic Peoples (1992)"
+      },
+      {
+        "name": "Türk Kağanlığı",
+        "lang": "tr",
+        "period_start": 552,
+        "period_end": 744,
+        "context": "Modern Turkish scholarly name",
+        "source": "Kafesoğlu, İ. Türk Millî Kültürü (1977)"
+      },
+      {
+        "name": "突厥汗国",
+        "lang": "zh",
+        "period_start": 552,
+        "period_end": 744,
+        "context": "Chinese historical name from Tang dynasty sources",
+        "source": "Suishu, Jiu Tangshu"
+      },
+      {
+        "name": "Western Turkic Khaganate",
+        "lang": "en",
+        "period_start": 603,
+        "period_end": 657,
+        "context": "Western half after the 603 split",
+        "source": "Sinor, D. Cambridge History of Early Inner Asia (1990)"
+      },
+      {
+        "name": "Eastern Turkic Khaganate",
+        "lang": "en",
+        "period_start": 603,
+        "period_end": 630,
+        "context": "Eastern half after the 603 split; restored 682–744 as Second Turkic Khaganate",
+        "source": "Sinor, D. Cambridge History of Early Inner Asia (1990)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 552,
+        "region": "Mongolian Plateau",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Bumin Qaghan overthrew the Rouran Khaganate, establishing the First Turkic Khaganate. The Orkhon inscriptions celebrate this founding moment as liberation from Rouran overlordship.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 603,
+        "region": "Central Eurasia",
+        "change_type": "FRAGMENTATION",
+        "description": "Khaganate split into Western (centered on Suyab/Tashkent) and Eastern (centered on Ötüken) halves due to succession disputes and Chinese diplomatic manipulation.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 630,
+        "region": "Eastern Steppe",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Tang dynasty conquered the Eastern Turkic Khaganate. Tang Emperor Taizong forcibly resettled Turkic populations south of the Gobi and assumed the title 'Heavenly Khagan'.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 682,
+        "region": "Ötüken",
+        "change_type": "INDEPENDENCE",
+        "description": "Ilterish Qaghan's rebellion re-established the Second Turkic Khaganate (Kök Türk), freeing the Turks from Tang overlordship. Documented in the Orkhon inscriptions.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 744,
+        "region": "Mongolian Plateau",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Uyghur and Karluk forces destroyed the Second Turkic Khaganate, establishing the Uyghur Khaganate in its place.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Orkhon Inscriptions (Kül Tegin and Bilge Khagan stelae), c. 732-735 CE",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Golden, P.B. An Introduction to the History of the Turkic Peoples: Ethnogenesis and State-Formation in Medieval and Early Modern Eurasia and the Middle East (1992)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Sinor, D. (ed.) The Cambridge History of Early Inner Asia (1990)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Skaff, J.K. Sui-Tang China and Its Turko-Mongol Neighbors: Culture, Power, and Connections (2012)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "כוזרים / Хазарлар",
+    "name_original_lang": "he",
+    "entity_type": "empire",
+    "year_start": 650,
+    "year_end": 1048,
+    "capital_name": "Atil (Itil)",
+    "capital_lat": 46.35,
+    "capital_lon": 47.98,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original given in Hebrew (כוזרים) as a primary literary source because the Khazar elite's conversion to Judaism (c. 740) is one of the khaganate's most distinctive features, documented in the Schechter Letter and Kuzari. ETHICS-002: The Khazar conversion to Judaism is politically sensitive — it has been exploited by antisemitic conspiracy theories (Arthur Koestler's 'The Thirteenth Tribe') to delegitimize Ashkenazi Jewish identity. Genetic and historical evidence does not support the claim that Ashkenazi Jews descend primarily from Khazars. This entity must be presented with scholarly neutrality. ETHICS-003: Atil has never been conclusively located archaeologically; coordinates are approximate based on Samosdelka excavations.",
+    "name_variants": [
+      {
+        "name": "Khazar Khaganate",
+        "lang": "en",
+        "period_start": 650,
+        "period_end": 1048,
+        "context": "English scholarly name",
+        "source": "Golden, P.B. Khazar Studies (1980)"
+      },
+      {
+        "name": "Хазарский каганат",
+        "lang": "ru",
+        "period_start": 650,
+        "period_end": 1048,
+        "context": "Russian scholarly name",
+        "source": "Novoseltsev, A.P. Khazarskoe gosudarstvo (1990)"
+      },
+      {
+        "name": "خزر",
+        "lang": "ar",
+        "period_start": 650,
+        "period_end": 1048,
+        "context": "Arabic name from Islamic geographers (Ibn Fadlan, al-Masudi)",
+        "source": "Ibn Fadlan, Risala (921 CE)"
+      },
+      {
+        "name": "Hazarlar",
+        "lang": "tr",
+        "period_start": 650,
+        "period_end": 1048,
+        "context": "Turkish scholarly name",
+        "source": "Kafesoğlu, İ. Türk Millî Kültürü (1977)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 650,
+        "region": "North Caucasus and Pontic Steppe",
+        "change_type": "INDEPENDENCE",
+        "description": "Khazar Khaganate emerged as an independent power after the dissolution of the Western Turkic Khaganate, controlling territory between the Caspian and Black Seas.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 740,
+        "region": "Khazaria",
+        "change_type": "CULTURAL",
+        "description": "Khazar ruling elite converted to Judaism under Bulan. The conversion is documented in the Schechter Letter and the correspondence between Hasdai ibn Shaprut and King Joseph. The general population remained religiously diverse (Islam, Christianity, Tengriism).",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 965,
+        "region": "Atil",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Sviatoslav I of Kyivan Rus' sacked the Khazar capital Atil, devastating the khaganate. This campaign destroyed the Khazar commercial network along the Volga trade route.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 1048,
+        "region": "Crimea",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Final Khazar remnants defeated. Combined Byzantine and Rus' pressure ended the last Khazar political presence in Crimea.",
+        "population_affected": null,
+        "confidence_score": 0.45
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Golden, P.B. Khazar Studies: An Historico-Philological Inquiry into the Origins of the Khazars, 2 vols. (1980)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Brook, K.A. The Jews of Khazaria, 3rd ed. (2018)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ibn Fadlan. Risala (Account of the Volga Journey), 921 CE",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Novoseltsev, A.P. Khazarskoe gosudarstvo i ego rol' v istorii Vostochnoi Evropy i Kavkaza (1990)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Болгар йорты",
+    "name_original_lang": "cv",
+    "entity_type": "khanate",
+    "year_start": 660,
+    "year_end": 1240,
+    "capital_name": "Bolgar (Bulğar)",
+    "capital_lat": 54.97,
+    "capital_lon": 49.05,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Chuvash (closest living relative of the Bulgar Turkic language). No Volga Bulgar script texts survive in full; the entity's self-designation is reconstructed from Arabic and Russian sources. ETHICS-002: Volga Bulgaria was destroyed by the Mongol invasion of 1236, and the population was subjected to massacre and enslavement. The Bulgars are ancestral to modern Chuvash and Kazan Tatars — both communities claim this heritage. ETHICS-003: Not to be confused with Danubian Bulgaria (modern Bulgaria), which was a distinct Bulgar state.",
+    "name_variants": [
+      {
+        "name": "Volga Bulgaria",
+        "lang": "en",
+        "period_start": 660,
+        "period_end": 1240,
+        "context": "English scholarly name distinguishing from Danubian Bulgaria",
+        "source": "Golden, P.B. An Introduction to the History of the Turkic Peoples (1992)"
+      },
+      {
+        "name": "Волжская Булгария",
+        "lang": "ru",
+        "period_start": 660,
+        "period_end": 1240,
+        "context": "Russian scholarly name",
+        "source": "Khalikov, A.Kh. Volzhskaia Bulgaria (1989)"
+      },
+      {
+        "name": "بلغار",
+        "lang": "ar",
+        "period_start": 922,
+        "period_end": 1240,
+        "context": "Arabic name from Ibn Fadlan's account of his visit in 922 CE",
+        "source": "Ibn Fadlan, Risala (921 CE)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 660,
+        "region": "Middle Volga",
+        "change_type": "INDEPENDENCE",
+        "description": "Bulgar tribes migrated to the Volga-Kama confluence after the dissolution of Old Great Bulgaria on the Pontic Steppe, establishing an independent polity.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 922,
+        "region": "Volga Bulgaria",
+        "change_type": "CULTURAL",
+        "description": "Official adoption of Islam following the embassy of Ibn Fadlan from the Abbasid Caliph al-Muqtadir. Volga Bulgaria became the northernmost Islamic state of its era.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1236,
+        "region": "Volga Bulgaria",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Mongol invasion under Batu Khan and Subutai devastated Volga Bulgaria. The capital Bolgar was sacked; widespread massacres and enslavement of the population followed. The territory was absorbed into the Golden Horde.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Ibn Fadlan. Risala (Account of the Volga Journey), 921 CE",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Golden, P.B. An Introduction to the History of the Turkic Peoples (1992)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Khalikov, A.Kh. Prabulghary i ikh sosed (1989)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Печенеги / Beçenek",
+    "name_original_lang": "otk",
+    "entity_type": "confederation",
+    "year_start": 860,
+    "year_end": 1091,
+    "capital_name": null,
+    "capital_lat": null,
+    "capital_lon": null,
+    "confidence_score": 0.45,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: The Pechenegs left no written records in their own language; all sources are external (Byzantine, Arabic, Slavic). The name 'Pecheneg' is a Slavicized form; the self-designation was likely Beçenek or Bajanaq. ETHICS-002: As a nomadic confederation without fixed capitals or territorial boundaries, imposing state-like categories on the Pechenegs is a distortion. They controlled movement corridors and seasonal pastures, not contiguous territory. ETHICS-003: The Pechenegs were ultimately destroyed as a distinct people at the Battle of Levounion (1091), a rare case of total annihilation of a nomadic confederation by Byzantine forces.",
+    "name_variants": [
+      {
+        "name": "Pecheneg Confederacy",
+        "lang": "en",
+        "period_start": 860,
+        "period_end": 1091,
+        "context": "English scholarly name",
+        "source": "Spinei, V. The Romanians and the Turkic Nomads North of the Danube Delta (2009)"
+      },
+      {
+        "name": "Πατζινάκοι",
+        "lang": "grc",
+        "period_start": 860,
+        "period_end": 1091,
+        "context": "Byzantine Greek name used by Constantine VII Porphyrogennetos",
+        "source": "Constantine VII, De Administrando Imperio (c. 950)"
+      },
+      {
+        "name": "بجناك",
+        "lang": "ar",
+        "period_start": 860,
+        "period_end": 1091,
+        "context": "Arabic name from Islamic geographers",
+        "source": "al-Masudi, Muruj al-Dhahab"
+      },
+      {
+        "name": "Печенеги",
+        "lang": "ru",
+        "period_start": 860,
+        "period_end": 1091,
+        "context": "Russian name from the Primary Chronicle",
+        "source": "Povest' vremennykh let (Primary Chronicle, c. 1113)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 860,
+        "region": "Pontic Steppe",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Pechenegs displaced the Magyars from the Pontic Steppe, forcing the Magyar migration westward into the Carpathian Basin. This chain of displacement was triggered by Oghuz and Khazar pressure on the Pechenegs from the east.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1091,
+        "region": "Thrace",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Byzantine Emperor Alexios I Komnenos, aided by Cuman mercenaries, annihilated the Pecheneg forces at the Battle of Levounion. Anna Komnene describes the massacre as so total that surviving Pechenegs were effectively eliminated as a political entity.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Constantine VII Porphyrogennetos. De Administrando Imperio, c. 950 CE",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Spinei, V. The Romanians and the Turkic Nomads North of the Danube Delta from the Tenth to the Mid-Thirteenth Century (2009)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Anna Komnene. Alexiad, c. 1148 CE",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "Кыпчак / Куман",
+    "name_original_lang": "kk",
+    "entity_type": "confederation",
+    "year_start": 900,
+    "year_end": 1241,
+    "capital_name": null,
+    "capital_lat": null,
+    "capital_lon": null,
+    "confidence_score": 0.45,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: The Cuman-Kipchak peoples had no single self-designation; 'Cuman' is the Byzantine/European form, 'Kipchak' the Central Asian/Islamic form, and 'Polovtsy' the Slavic form (possibly meaning 'pale/yellow'). All exonyms. Their own Turkic name was likely Qïpchaq. ETHICS-002: The Cuman-Kipchak steppe (Desht-i Qipchaq) was the largest Turkic-speaking zone before the Mongol conquest. The Mongol invasion shattered this world; survivors were absorbed into the Golden Horde, became the Mamluks of Egypt, or were assimilated into Hungarian and Byzantine society. This represents one of the great cultural discontinuities of Eurasian history.",
+    "name_variants": [
+      {
+        "name": "Cuman-Kipchak Confederation",
+        "lang": "en",
+        "period_start": 900,
+        "period_end": 1241,
+        "context": "English scholarly name combining western and eastern designations",
+        "source": "Golden, P.B. An Introduction to the History of the Turkic Peoples (1992)"
+      },
+      {
+        "name": "Desht-i Qipchaq",
+        "lang": "fa",
+        "period_start": 900,
+        "period_end": 1241,
+        "context": "Persian name meaning 'Steppe of the Kipchaks'",
+        "source": "Rashid al-Din, Jami al-Tawarikh (c. 1310)"
+      },
+      {
+        "name": "Половцы",
+        "lang": "ru",
+        "period_start": 1055,
+        "period_end": 1241,
+        "context": "Old Russian name from Hypatian Chronicle",
+        "source": "Povest' vremennykh let (Primary Chronicle)"
+      },
+      {
+        "name": "Κούμανοι",
+        "lang": "grc",
+        "period_start": 1078,
+        "period_end": 1241,
+        "context": "Byzantine Greek name",
+        "source": "Anna Komnene, Alexiad"
+      },
+      {
+        "name": "Kunok",
+        "lang": "hu",
+        "period_start": 1091,
+        "period_end": 1241,
+        "context": "Hungarian name; Cumans settled in Hungary after Mongol invasion",
+        "source": "Pálóczi Horváth, A. Pechenegs, Cumans, Iasians (1989)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 900,
+        "region": "Central Eurasian Steppe",
+        "change_type": "EXPANSION",
+        "description": "Kipchak tribes expanded westward from the Irtysh River region across the Kazakh Steppe, eventually dominating the vast grasslands from the Danube to the Irtysh — the largest nomadic domain of the medieval period.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1237,
+        "region": "Desht-i Qipchaq",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Mongol invasion under Batu Khan systematically destroyed the Cuman-Kipchak political structure. Mass killings, enslavement, and forced incorporation into the Mongol army. An estimated 40,000 Cumans fled to Hungary under Khan Koten.",
+        "population_affected": 40000,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Golden, P.B. An Introduction to the History of the Turkic Peoples (1992)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Kovács, S. The Cuman-Kipchak Confederation (2014)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Rashid al-Din. Jami al-Tawarikh (Compendium of Chronicles), c. 1310 CE",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "Алтын Орда / اردوی زرین",
+    "name_original_lang": "kipchak",
+    "entity_type": "khanate",
+    "year_start": 1227,
+    "year_end": 1502,
+    "capital_name": "Sarai (Sarai Batu / Sarai Berke)",
+    "capital_lat": 48.67,
+    "capital_lon": 45.31,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: 'Golden Horde' (Алтын Орда) may be a later designation; contemporary sources used 'Ulus of Jochi' or 'Desht-i Qipchaq'. The name is given in both Kipchak Turkic and Persian, reflecting the bilingual administration. ETHICS-002: The Golden Horde imposed the 'Tatar-Mongol Yoke' (татаро-монгольское иго) on Russian principalities for over 240 years. Russian nationalist historiography often exaggerates its destructiveness to frame Russia as a victim of 'Asian barbarism', while minimizing Russia's own later colonial violence in Central Asia. Both perspectives must be documented. ETHICS-003: The Mongol conquest of Rus' (1237-1240) involved mass killings at Ryazan, Vladimir, Kyiv, and other cities, with credible estimates of hundreds of thousands killed.",
+    "name_variants": [
+      {
+        "name": "Golden Horde",
+        "lang": "en",
+        "period_start": 1227,
+        "period_end": 1502,
+        "context": "English scholarly name",
+        "source": "Halperin, C.J. Russia and the Golden Horde (1985)"
+      },
+      {
+        "name": "Улус Джучи",
+        "lang": "ru",
+        "period_start": 1227,
+        "period_end": 1502,
+        "context": "Russian/Mongol name meaning 'Ulus of Jochi'",
+        "source": "Rashid al-Din, Jami al-Tawarikh"
+      },
+      {
+        "name": "اردوی زرین",
+        "lang": "fa",
+        "period_start": 1227,
+        "period_end": 1502,
+        "context": "Persian name meaning 'Golden Camp/Army'",
+        "source": "Vassaf, Tajziyat al-Amsar"
+      },
+      {
+        "name": "Altın Orda",
+        "lang": "tt",
+        "period_start": 1227,
+        "period_end": 1502,
+        "context": "Tatar name, direct heritage claim",
+        "source": "Izmailov, I.L. Zolotaia Orda (2009)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1237,
+        "region": "Rus' principalities",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Batu Khan's invasion devastated Russian principalities. Ryazan, Vladimir, Moscow, and Kyiv were sacked with enormous loss of life. Established the 'Tatar-Mongol Yoke' system of tribute and political subordination.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1260,
+        "region": "Sarai",
+        "change_type": "CULTURAL",
+        "description": "Under Berke Khan, the Golden Horde adopted Islam, becoming the first Mongol khanate to do so. This created a cultural rift with the pagan/Buddhist Mongol heartland.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1380,
+        "region": "Kulikovo",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Muscovite Grand Prince Dmitry Donskoy defeated Mamai at the Battle of Kulikovo, the first major Rus' victory against Golden Horde forces, though Tokhtamysh sacked Moscow in 1382 in retaliation.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1502,
+        "region": "Great Horde",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Crimean Khan Mengli Giray destroyed the remnant Great Horde, ending the last political successor claiming direct Golden Horde authority.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Halperin, C.J. Russia and the Golden Horde: The Mongol Impact on Medieval Russian History (1985)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Rashid al-Din. Jami al-Tawarikh (Compendium of Chronicles), c. 1310 CE",
+        "source_type": "primary"
+      },
+      {
+        "citation": "DeWeese, D. Islamization and Native Religion in the Golden Horde (1994)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Izmailov, I.L. (ed.) Zolotaia Orda v mirovoi istorii (2016)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "چغتای خانات",
+    "name_original_lang": "chg",
+    "entity_type": "khanate",
+    "year_start": 1227,
+    "year_end": 1347,
+    "capital_name": "Almaliq",
+    "capital_lat": 43.97,
+    "capital_lon": 82.08,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Chagatai Turkic (Persian script), the literary language that developed in this khanate and remained the prestige Turkic language of Central Asia for centuries. ETHICS-002: The Chagatai Khanate's fragmentation created the conditions for Timur's rise. The western sedentary portion (Transoxiana) and eastern nomadic portion (Moghulistan) represent a classic steppe-sown divide. ETHICS-003: The khanate's Islamization was gradual and contested; Tarmashirin Khan's forced conversion alienated the eastern nomadic aristocracy, contributing to fragmentation.",
+    "name_variants": [
+      {
+        "name": "Chagatai Khanate",
+        "lang": "en",
+        "period_start": 1227,
+        "period_end": 1347,
+        "context": "English scholarly name",
+        "source": "Biran, M. Qaidu and the Rise of the Independent Mongol State in Central Asia (1997)"
+      },
+      {
+        "name": "Улус Чагатая",
+        "lang": "ru",
+        "period_start": 1227,
+        "period_end": 1347,
+        "context": "Russian scholarly name",
+        "source": "Bartold, V.V. Turkestan Down to the Mongol Invasion (1928)"
+      },
+      {
+        "name": "ulus-i Chaghatay",
+        "lang": "fa",
+        "period_start": 1227,
+        "period_end": 1347,
+        "context": "Persian literary name used in Timurid-era sources",
+        "source": "Mirkhwand, Rawzat al-Safa"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1227,
+        "region": "Central Asia",
+        "change_type": "INHERITANCE",
+        "description": "Chagatai Khan received his appanage from Chinggis Khan, encompassing the former Khwarezmian and Qara-Khitai territories from Transoxiana to the Tarim Basin.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1347,
+        "region": "Transoxiana and Moghulistan",
+        "change_type": "FRAGMENTATION",
+        "description": "Khanate fragmented into western Transoxiana (where Timur would seize power in 1370) and eastern Moghulistan. The unity of the Chagatai realm was never restored.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Biran, M. Qaidu and the Rise of the Independent Mongol State in Central Asia (1997)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Bartold, V.V. Turkestan Down to the Mongol Invasion, 3rd ed. (1928/1968)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Rashid al-Din. Jami al-Tawarikh, c. 1310 CE",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "ایلخانان",
+    "name_original_lang": "fa",
+    "entity_type": "khanate",
+    "year_start": 1256,
+    "year_end": 1335,
+    "capital_name": "Tabriz",
+    "capital_lat": 38.08,
+    "capital_lon": 46.29,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Persian (ایلخانان, 'Ilkhanids'), the administrative language of the state. ETHICS-002: The Ilkhanate was founded through Hulagu Khan's devastation of the Islamic heartlands, including the destruction of Baghdad in 1258 — one of the most catastrophic events in Islamic civilization. Estimates of deaths in Baghdad alone range from 200,000 to over 1 million. The destruction of the Abbasid Caliphate and the Grand Library of Baghdad (Bayt al-Hikma) represents an irreplaceable cultural loss. ETHICS-003: The Ilkhanate's conversion to Islam under Ghazan Khan (1295) transformed it from a destroyer of Islamic civilization to its patron, a complex historical irony that must not be simplified.",
+    "name_variants": [
+      {
+        "name": "Ilkhanate",
+        "lang": "en",
+        "period_start": 1256,
+        "period_end": 1335,
+        "context": "English scholarly name from 'il-khan' (subordinate khan)",
+        "source": "Morgan, D. The Mongols, 2nd ed. (2007)"
+      },
+      {
+        "name": "ایلخانان",
+        "lang": "fa",
+        "period_start": 1256,
+        "period_end": 1335,
+        "context": "Persian name meaning 'subordinate khans'",
+        "source": "Rashid al-Din, Jami al-Tawarikh"
+      },
+      {
+        "name": "Государство Хулагуидов",
+        "lang": "ru",
+        "period_start": 1256,
+        "period_end": 1335,
+        "context": "Russian scholarly name (State of the Hulaguids)",
+        "source": "Petrushevsky, I.P. Iran under the Ilkhanids (1977)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1258,
+        "region": "Baghdad",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Hulagu Khan sacked Baghdad, executing Caliph al-Mustasim and destroying the Abbasid Caliphate. Contemporary sources describe mass killings lasting weeks; the Tigris reportedly ran black with ink from destroyed libraries and red with blood. Death toll estimates range from 200,000 to over 1,000,000.",
+        "population_affected": 200000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1295,
+        "region": "Ilkhanate",
+        "change_type": "CULTURAL",
+        "description": "Ghazan Khan converted to Islam, making it the state religion. This Islamization reconciled the Mongol rulers with their majority-Muslim subjects but alienated non-Muslim communities (Christians, Buddhists) who had benefited from earlier Mongol religious tolerance.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1335,
+        "region": "Ilkhanate",
+        "change_type": "FRAGMENTATION",
+        "description": "Death of Abu Said without heir led to the dissolution of the Ilkhanate into competing successor states (Jalairids, Chobanids, Muzaffarids, Injuids, Sarbadars).",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Rashid al-Din. Jami al-Tawarikh (Compendium of Chronicles), c. 1310 CE",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Morgan, D. The Mongols, 2nd ed. (2007)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Petrushevsky, I.P. 'The Socio-Economic Condition of Iran under the Il-Khans.' Cambridge History of Iran, vol. 5 (1968)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Lane, G. Early Mongol Rule in Thirteenth-Century Iran (2003)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Казан ханлыгы",
+    "name_original_lang": "tt",
+    "entity_type": "khanate",
+    "year_start": 1438,
+    "year_end": 1552,
+    "capital_name": "Kazan (Казан)",
+    "capital_lat": 55.79,
+    "capital_lon": 49.11,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Tatar (Казан ханлыгы), the direct heritage language. ETHICS-002: The Russian conquest of Kazan in 1552 by Ivan IV ('the Terrible') was accompanied by mass killings, forced conversions to Christianity, and systematic destruction of mosques. This marks the beginning of Russian imperial expansion into non-Slavic, non-Christian territories — a process that would continue for 400 years across Siberia, Central Asia, and the Caucasus. ETHICS-003: Modern Tatar identity is deeply connected to the memory of Kazan's fall; the conquest remains politically sensitive in Russia-Tatarstan relations.",
+    "name_variants": [
+      {
+        "name": "Khanate of Kazan",
+        "lang": "en",
+        "period_start": 1438,
+        "period_end": 1552,
+        "context": "English scholarly name",
+        "source": "Kappeler, A. The Russian Empire: A Multiethnic History (2001)"
+      },
+      {
+        "name": "Казанское ханство",
+        "lang": "ru",
+        "period_start": 1438,
+        "period_end": 1552,
+        "context": "Russian scholarly name",
+        "source": "Khudyakov, M.G. Ocherki po istorii Kazanskogo khanstva (1923)"
+      },
+      {
+        "name": "Казан ханлыгы",
+        "lang": "tt",
+        "period_start": 1438,
+        "period_end": 1552,
+        "context": "Tatar name",
+        "source": "Fəxretdinov, R. Kazan Khanlığı (2002)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1438,
+        "region": "Middle Volga",
+        "change_type": "INDEPENDENCE",
+        "description": "Ulugh Muhammad established the Khanate of Kazan on the ruins of Volga Bulgaria and the Golden Horde, creating a prosperous trade state at the Volga-Kama confluence.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 1552,
+        "region": "Kazan",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ivan IV conquered Kazan after a prolonged siege. Mass killing of the population, destruction of mosques, forced baptisms, and confiscation of lands followed. Tatar nobility were killed or forcibly Christianized. This began Russia's transformation from a principality into a multiethnic empire.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Kappeler, A. The Russian Empire: A Multiethnic History (2001)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Rorlich, A.A. The Volga Tatars: A Profile in National Resilience (1986)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Khudyakov, M.G. Ocherki po istorii Kazanskogo khanstva (1923)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Qırım Hanlığı / قريم خانلغى",
+    "name_original_lang": "crh",
+    "entity_type": "khanate",
+    "year_start": 1441,
+    "year_end": 1783,
+    "capital_name": "Bakhchysarai (Bahçesaray)",
+    "capital_lat": 44.75,
+    "capital_lon": 33.88,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Crimean Tatar (both Latin and Arabic script forms). ETHICS-002: The Russian annexation of Crimea in 1783 began a centuries-long process of Crimean Tatar dispossession. The 1944 Soviet deportation (Sürgünlik) of the entire Crimean Tatar population to Central Asia — ordered by Stalin under the false collective accusation of Nazi collaboration — killed an estimated 46% of deportees through starvation, disease, and exposure. This constitutes a genocide by the legal definition of the UN Convention. Russia's 2014 annexation of Crimea has further marginalized the Crimean Tatar community. ETHICS-003: Crimean Tatar claims to Crimea predate Russian presence by over 300 years.",
+    "name_variants": [
+      {
+        "name": "Khanate of Crimea",
+        "lang": "en",
+        "period_start": 1441,
+        "period_end": 1783,
+        "context": "English scholarly name",
+        "source": "Fisher, A. The Crimean Tatars (1978)"
+      },
+      {
+        "name": "Крымское ханство",
+        "lang": "ru",
+        "period_start": 1441,
+        "period_end": 1783,
+        "context": "Russian scholarly name",
+        "source": "Vozgrin, V.E. Istoricheskie sudby krymskikh tatar (1992)"
+      },
+      {
+        "name": "Kırım Hanlığı",
+        "lang": "tr",
+        "period_start": 1441,
+        "period_end": 1783,
+        "context": "Turkish scholarly name",
+        "source": "İnalcık, H. The Ottoman Empire: The Classical Age (1973)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1441,
+        "region": "Crimean Peninsula",
+        "change_type": "INDEPENDENCE",
+        "description": "Hacı Giray established the Crimean Khanate as independent from the Golden Horde, founding the Giray dynasty that would rule for over 340 years.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1475,
+        "region": "Southern Crimea",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Crimean Khanate became an Ottoman vassal state while retaining significant internal autonomy. The khanate served as the Ottoman Empire's northern frontier guard and primary slave-raiding force into Eastern Europe.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1783,
+        "region": "Crimea",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Catherine the Great annexed the Crimean Khanate, ending Tatar sovereignty. Followed by waves of Russian colonization, Tatar land confiscation, and forced emigration — an estimated 300,000 Crimean Tatars emigrated to the Ottoman Empire in the 19th century.",
+        "population_affected": 300000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1944,
+        "region": "Crimea (post-sovereignty)",
+        "change_type": "DEPORTATION",
+        "description": "Stalin ordered the deportation of the entire Crimean Tatar population (over 200,000 people) to Uzbekistan and other Central Asian republics on 18 May 1944. An estimated 46% died in transit or in the first years of exile. This act of collective punishment is recognized as genocide by Ukraine and several other states.",
+        "population_affected": 200000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Fisher, A. The Crimean Tatars (1978)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Williams, B.G. The Crimean Tatars: The Diaspora Experience and the Forging of a Nation (2001)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Vozgrin, V.E. Istoricheskie sudby krymskikh tatar (1992)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Allworth, E. (ed.) The Tatars of Crimea: Return to the Homeland (1998)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Сибир ханлыгы",
+    "name_original_lang": "tt",
+    "entity_type": "khanate",
+    "year_start": 1468,
+    "year_end": 1598,
+    "capital_name": "Qashliq (Isker/Sibir)",
+    "capital_lat": 57.03,
+    "capital_lon": 68.25,
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Tatar, the closest living language to the khanate's Siberian Tatar dialect. ETHICS-002: Yermak's conquest of Sibir (1582) is celebrated in Russian national mythology as heroic exploration, but from the indigenous perspective it was the beginning of colonial conquest that would devastate Siberian peoples (Khanty, Mansi, Siberian Tatars) through violence, disease, and forced tribute (yasak). ETHICS-003: The name 'Siberia' itself derives from this khanate — a colonial irony where the conquered entity's name was applied to the vast territory claimed by the conqueror.",
+    "name_variants": [
+      {
+        "name": "Khanate of Sibir",
+        "lang": "en",
+        "period_start": 1468,
+        "period_end": 1598,
+        "context": "English scholarly name",
+        "source": "Forsyth, J. A History of the Peoples of Siberia (1992)"
+      },
+      {
+        "name": "Сибирское ханство",
+        "lang": "ru",
+        "period_start": 1468,
+        "period_end": 1598,
+        "context": "Russian scholarly name",
+        "source": "Miller, G.F. Istoriia Sibiri (1750)"
+      },
+      {
+        "name": "Sibir Khanate",
+        "lang": "en",
+        "period_start": 1468,
+        "period_end": 1598,
+        "context": "Alternative English form",
+        "source": "Collins, D.N. 'Russia's Conquest of Siberia', in Wood, A. (ed.) The History of Siberia (1991)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1468,
+        "region": "Western Siberia",
+        "change_type": "INDEPENDENCE",
+        "description": "Khanate of Sibir consolidated as an independent successor state of the Golden Horde in the Irtysh-Tobol river basin, controlling Siberian Tatar and Khanty-Mansi populations.",
+        "population_affected": null,
+        "confidence_score": 0.45
+      },
+      {
+        "year": 1582,
+        "region": "Qashliq",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Cossack ataman Yermak Timofeyevich, funded by the Stroganov merchant family, conquered the capital Qashliq, defeating Khan Kuchum. This marked the beginning of Russian colonial expansion into Siberia.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1598,
+        "region": "Western Siberia",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Final defeat of Khan Kuchum's forces ended organized resistance. Siberian Tatars and indigenous peoples were subjected to the yasak (fur tribute) system and progressive dispossession.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Forsyth, J. A History of the Peoples of Siberia: Russia's North Asian Colony, 1581–1990 (1992)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Miller, G.F. Istoriia Sibiri (1750)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Collins, D.N. 'Russia's Conquest of Siberia: Evolving Russian and Soviet Historical Interpretations', European Studies Review 12:1 (1982)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Хаҗитархан ханлыгы",
+    "name_original_lang": "tt",
+    "entity_type": "khanate",
+    "year_start": 1466,
+    "year_end": 1556,
+    "capital_name": "Astrakhan (Xacıtarxan)",
+    "capital_lat": 46.35,
+    "capital_lon": 48.04,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Tatar. The city name 'Astrakhan' is a Russian corruption of 'Xacıtarxan/Hacıtarxan'. ETHICS-002: The Russian conquest of Astrakhan (1556) completed Moscow's control of the entire Volga trade route and gave Russia access to the Caspian Sea, enabling further colonial expansion into the Caucasus and Central Asia. The Nogai, Tatar, and Kalmyk populations were progressively displaced.",
+    "name_variants": [
+      {
+        "name": "Khanate of Astrakhan",
+        "lang": "en",
+        "period_start": 1466,
+        "period_end": 1556,
+        "context": "English scholarly name",
+        "source": "Kappeler, A. The Russian Empire (2001)"
+      },
+      {
+        "name": "Астраханское ханство",
+        "lang": "ru",
+        "period_start": 1466,
+        "period_end": 1556,
+        "context": "Russian scholarly name",
+        "source": "Zaytsev, I.V. Astrakhanskoe khanstvo (2006)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1466,
+        "region": "Lower Volga",
+        "change_type": "INDEPENDENCE",
+        "description": "Khanate of Astrakhan emerged as an independent successor state of the Golden Horde, controlling the strategic lower Volga and Caspian trade routes.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1556,
+        "region": "Astrakhan",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ivan IV annexed the Khanate of Astrakhan, completing Russian control of the entire Volga River. The conquest was relatively bloodless but was followed by systematic Russian colonization and marginalization of the Tatar and Nogai populations.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Kappeler, A. The Russian Empire: A Multiethnic History (2001)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Zaytsev, I.V. Astrakhanskoe khanstvo (2006)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "بخارا خانلیگی",
+    "name_original_lang": "chg",
+    "entity_type": "khanate",
+    "year_start": 1500,
+    "year_end": 1785,
+    "capital_name": "Bukhara (Bukhoro)",
+    "capital_lat": 39.77,
+    "capital_lon": 64.42,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Chagatai Turkic (Arabic script), the literary language of the state. ETHICS-002: The Khanate of Bukhara was one of the three Uzbek khanates that preserved Central Asian Islamic civilization until Russian conquest. The Shaybanid and later Ashtarkhanid dynasties patronized some of the greatest Islamic scholars and Sufi orders. ETHICS-003: The khanate's economy relied significantly on slave labor, including enslaved Persians (Iranian Shia captives) and Russian captives. This must be documented alongside its cultural achievements.",
+    "name_variants": [
+      {
+        "name": "Khanate of Bukhara",
+        "lang": "en",
+        "period_start": 1500,
+        "period_end": 1785,
+        "context": "English scholarly name",
+        "source": "Bartold, V.V. Turkestan Down to the Mongol Invasion (1928)"
+      },
+      {
+        "name": "Бухарское ханство",
+        "lang": "ru",
+        "period_start": 1500,
+        "period_end": 1785,
+        "context": "Russian scholarly name",
+        "source": "Ivanov, P.P. Ocherki po istorii Srednei Azii (1958)"
+      },
+      {
+        "name": "Shaybanid Khanate",
+        "lang": "en",
+        "period_start": 1500,
+        "period_end": 1599,
+        "context": "Named after the founding Shaybanid dynasty",
+        "source": "McChesney, R.D. Waqf in Central Asia (1991)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1500,
+        "region": "Transoxiana",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Muhammad Shaybani Khan conquered Transoxiana from the Timurids, establishing Uzbek Shaybanid rule over the great cities of Bukhara and Samarkand.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1785,
+        "region": "Bukhara",
+        "change_type": "SUCCESSION",
+        "description": "The Manghit dynasty transformed the khanate into the Emirate of Bukhara, ending the fiction of Chinggisid rule.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Bartold, V.V. Turkestan Down to the Mongol Invasion, 3rd ed. (1928/1968)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "McChesney, R.D. Waqf in Central Asia: Four Hundred Years in the History of a Muslim Shrine (1991)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Burton, A. The Bukharans: A Dynastic, Diplomatic, and Commercial History, 1550-1702 (1997)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "خیوه خانلیگی",
+    "name_original_lang": "chg",
+    "entity_type": "khanate",
+    "year_start": 1511,
+    "year_end": 1920,
+    "capital_name": "Khiva (Xiva)",
+    "capital_lat": 41.38,
+    "capital_lon": 60.36,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Chagatai Turkic. ETHICS-002: The Khanate of Khiva was a major center of the Central Asian slave trade, holding tens of thousands of Persian and Russian captives. Russian expeditions to 'free Russian slaves' served as pretexts for military conquest. The 1873 Russian conquest and the 1920 Soviet overthrow must be documented from both Russian/Soviet and Khivan perspectives. ETHICS-003: The Aral Sea disaster — caused by Soviet cotton irrigation policies diverting the Amu Darya — devastated the former Khivan heartland. What was one of the world's largest inland seas has largely disappeared, causing ecological catastrophe, public health crises, and economic devastation that persists today. This is one of the worst environmental disasters in human history.",
+    "name_variants": [
+      {
+        "name": "Khanate of Khiva",
+        "lang": "en",
+        "period_start": 1511,
+        "period_end": 1920,
+        "context": "English scholarly name",
+        "source": "Bregel, Y. An Historical Atlas of Central Asia (2003)"
+      },
+      {
+        "name": "Хивинское ханство",
+        "lang": "ru",
+        "period_start": 1511,
+        "period_end": 1920,
+        "context": "Russian scholarly name",
+        "source": "Bregel, Y. Khorezmskie turkmeny v XIX veke (1961)"
+      },
+      {
+        "name": "Khorezm",
+        "lang": "en",
+        "period_start": 1511,
+        "period_end": 1920,
+        "context": "Alternative name from the historic region",
+        "source": "Bartold, V.V. Turkestan Down to the Mongol Invasion (1928)"
+      },
+      {
+        "name": "Xorazm xonligi",
+        "lang": "uz",
+        "period_start": 1511,
+        "period_end": 1920,
+        "context": "Uzbek name",
+        "source": "O'zbekiston milliy ensiklopediyasi"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1511,
+        "region": "Khorezm",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ilbars Khan established the Khivan Khanate from Shaybanid conquest of the ancient Khorezmian lands along the lower Amu Darya.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1873,
+        "region": "Khiva",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "General Kaufman's Russian forces conquered Khiva, making it a Russian protectorate. The khan was forced to abolish slavery and cede territory east of the Amu Darya. Russian cotton monoculture policies began transforming the regional economy and ecology.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1920,
+        "region": "Khiva",
+        "change_type": "REVOLUTION",
+        "description": "Bolshevik-backed revolution overthrew the last khan, establishing the short-lived Khorezm People's Soviet Republic, which was absorbed into the Uzbek SSR in 1924.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Bregel, Y. An Historical Atlas of Central Asia (2003)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Bartold, V.V. Turkestan Down to the Mongol Invasion (1928/1968)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Morrison, A. Russian Rule in Samarkand 1868–1910: A Comparison with British India (2008)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "قوقند خانلیگی",
+    "name_original_lang": "chg",
+    "entity_type": "khanate",
+    "year_start": 1709,
+    "year_end": 1876,
+    "capital_name": "Kokand (Qo'qon)",
+    "capital_lat": 40.53,
+    "capital_lon": 70.94,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Chagatai Turkic. ETHICS-002: The Russian conquest of the Khanate of Kokand (1876) completed the Russian takeover of Central Asia. General Skobelev's campaign involved massacres of the civilian population, particularly during the suppression of the 1875-76 Kokand uprising. The Andijan Uprising of 1898 was another major resistance event brutally suppressed. ETHICS-003: The Fergana Valley, the khanate's heartland, remains divided today between Uzbekistan, Kyrgyzstan, and Tajikistan — arbitrary Soviet borders that have caused recurring ethnic violence (Osh 2010, Andijan 2005).",
+    "name_variants": [
+      {
+        "name": "Khanate of Kokand",
+        "lang": "en",
+        "period_start": 1709,
+        "period_end": 1876,
+        "context": "English scholarly name",
+        "source": "Beisembiev, T. The Life of Alimqul: A Native Chronicle of Nineteenth Century Central Asia (2003)"
+      },
+      {
+        "name": "Кокандское ханство",
+        "lang": "ru",
+        "period_start": 1709,
+        "period_end": 1876,
+        "context": "Russian scholarly name",
+        "source": "Nalivkin, V.P. Kratkaia istoriia Kokandskogo khanstva (1886)"
+      },
+      {
+        "name": "Qo'qon xonligi",
+        "lang": "uz",
+        "period_start": 1709,
+        "period_end": 1876,
+        "context": "Uzbek name",
+        "source": "O'zbekiston milliy ensiklopediyasi"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1709,
+        "region": "Fergana Valley",
+        "change_type": "INDEPENDENCE",
+        "description": "Shahrukh Biy established the Kokand Khanate as an independent Uzbek state in the Fergana Valley, eventually expanding to control much of modern Kyrgyzstan, southern Kazakhstan, and eastern Tajikistan.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1876,
+        "region": "Fergana",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Russian Empire annexed the Khanate of Kokand, incorporating it into the Governorate-General of Turkestan. General Skobelev's brutal campaign included massacres and destruction of cities. The Fergana Valley was converted to cotton monoculture for Russian industry.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Beisembiev, T. The Life of Alimqul: A Native Chronicle of Nineteenth Century Central Asia (2003)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Nalivkin, V.P. Kratkaia istoriia Kokandskogo khanstva (1886)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Khalid, A. The Politics of Muslim Cultural Reform: Jadidism in Central Asia (1998)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Қазақ хандығы",
+    "name_original_lang": "kk",
+    "entity_type": "khanate",
+    "year_start": 1465,
+    "year_end": 1847,
+    "capital_name": "Turkestan (Yası)",
+    "capital_lat": 43.3,
+    "capital_lon": 68.25,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Kazakh (Cyrillic script). The ethnonym 'Kazakh' (Қазақ) means 'free person/wanderer' and was adopted to distinguish the Kazakh tribal confederation from the Uzbek confederation. Not to be confused with 'Cossack' (same Turkic root). ETHICS-002: Russian colonization of the Kazakh Steppe proceeded through the systematic destruction of the three Kazakh zhuz (hordes) between 1731 and 1847. ETHICS-003: CRITICAL — The 1931-1933 Soviet famine in Kazakhstan (Asharshylyk/Ашаршылық) killed an estimated 1.5 million ethnic Kazakhs — roughly 38% of the entire Kazakh population. This was caused by forced collectivization and sedentarization of nomads under Filipp Goloshchyokin's policies. It shares characteristics with the Holodomor in Ukraine and is increasingly recognized as a deliberate act of colonial violence against nomadic peoples. Kazakhstan also suffered from Soviet nuclear testing at Semipalatinsk (1949-1989), with devastating health consequences for surrounding populations.",
+    "name_variants": [
+      {
+        "name": "Kazakh Khanate",
+        "lang": "en",
+        "period_start": 1465,
+        "period_end": 1847,
+        "context": "English scholarly name",
+        "source": "Olcott, M.B. The Kazakhs, 2nd ed. (1995)"
+      },
+      {
+        "name": "Казахское ханство",
+        "lang": "ru",
+        "period_start": 1465,
+        "period_end": 1847,
+        "context": "Russian scholarly name",
+        "source": "Sultanov, T.I. Podnyatye na beloi koshme: Kazakhskie khany XVIII veka (2001)"
+      },
+      {
+        "name": "Qazaq Xandyǵy",
+        "lang": "kk",
+        "period_start": 1465,
+        "period_end": 1847,
+        "context": "Kazakh Latin script form (modern romanization)",
+        "source": "Qazaqstan tarıxı (2010)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1465,
+        "region": "Semirechye (Zhetysu)",
+        "change_type": "INDEPENDENCE",
+        "description": "Janibek and Kerey led a breakaway of Kazakh tribes from the Uzbek confederation of Abu'l-Khayr Khan, establishing an independent Kazakh polity in the Shu River valley.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1731,
+        "region": "Junior Zhuz",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Abulkhair Khan of the Junior Zhuz accepted Russian 'protection' against Dzungar raids. This ostensible alliance was progressively used by Russia to assert sovereignty over the Kazakh Steppe — a textbook example of colonial diplomacy.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1847,
+        "region": "Kazakh Steppe",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Russia abolished the last Kazakh khanate (Senior Zhuz) after the defeat of Kenesary Kasymov's anti-colonial uprising (1837-1847). The entire Kazakh Steppe was incorporated into the Russian Empire.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1932,
+        "region": "Kazakh ASSR (post-sovereignty)",
+        "change_type": "FAMINE",
+        "description": "Soviet forced collectivization and sedentarization under Goloshchyokin caused the Asharshylyk famine (1931-1933), killing approximately 1.5 million Kazakhs (38% of the ethnic Kazakh population). Nomadic Kazakhs were forced into collective farms; livestock herds were decimated from 40 million to 4 million head. This was the proportionally largest Soviet famine and shares characteristics with the Holodomor.",
+        "population_affected": 1500000,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Olcott, M.B. The Kazakhs, 2nd ed. (1995)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Cameron, S. The Hungry Steppe: Famine, Violence, and the Making of Soviet Kazakhstan (2018)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Sultanov, T.I. Podnyatye na beloi koshme (2001)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Pianciola, N. 'Famine in the Steppe: The Collectivization of Agriculture and the Kazak Herdsmen, 1928–1934', Cahiers du Monde russe 45:1-2 (2004)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Ногай Ордасы",
+    "name_original_lang": "nog",
+    "entity_type": "confederation",
+    "year_start": 1390,
+    "year_end": 1634,
+    "capital_name": null,
+    "capital_lat": null,
+    "capital_lon": null,
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Nogai, though the Nogai Horde predates the modern Nogai language's standardization. ETHICS-002: The Nogais were progressively squeezed between Russian, Kalmyk, and Crimean expansion. The Russian colonization of the Nogai steppe in the 18th-19th centuries led to mass displacement and demographic collapse. Today Nogais are a small, dispersed minority in southern Russia (Dagestan, Stavropol, Karachay-Cherkessia) with limited cultural autonomy.",
+    "name_variants": [
+      {
+        "name": "Nogai Horde",
+        "lang": "en",
+        "period_start": 1390,
+        "period_end": 1634,
+        "context": "English scholarly name",
+        "source": "Trepavlov, V.V. Istoriia Nogaiskoi Ordy (2002)"
+      },
+      {
+        "name": "Ногайская Орда",
+        "lang": "ru",
+        "period_start": 1390,
+        "period_end": 1634,
+        "context": "Russian scholarly name",
+        "source": "Trepavlov, V.V. Istoriia Nogaiskoi Ordy (2002)"
+      },
+      {
+        "name": "Mangit Yurt",
+        "lang": "en",
+        "period_start": 1390,
+        "period_end": 1634,
+        "context": "Alternative name from the ruling Mangit clan",
+        "source": "Golden, P.B. Nomads and Sedentary Societies in Medieval Eurasia (1998)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1390,
+        "region": "Pontic-Caspian Steppe",
+        "change_type": "INDEPENDENCE",
+        "description": "Edigu (Edigey) consolidated the Nogai Horde as a powerful nomadic confederation in the Pontic-Caspian steppe, initially as a power broker within the fragmenting Golden Horde.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1556,
+        "region": "Nogai Steppe",
+        "change_type": "FRAGMENTATION",
+        "description": "After the Russian conquest of Astrakhan, the Nogai Horde fragmented into Greater and Lesser Nogai hordes, with the Greater Nogai becoming increasingly dependent on Moscow.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1634,
+        "region": "Nogai territories",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Kalmyk (Oirat) migration into the Nogai steppe and continued Russian pressure ended the Nogai Horde as an independent political entity. Surviving Nogais were dispersed among Russian, Crimean, and Ottoman territories.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Trepavlov, V.V. Istoriia Nogaiskoi Ordy (2002)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Golden, P.B. Nomads and Sedentary Societies in Medieval Eurasia (1998)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "مغولستان",
+    "name_original_lang": "chg",
+    "entity_type": "khanate",
+    "year_start": 1347,
+    "year_end": 1462,
+    "capital_name": "Almaliq",
+    "capital_lat": 43.97,
+    "capital_lon": 82.08,
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Chagatai Turkic meaning 'land of the Moghuls/Mongols'. The rulers claimed Chinggisid legitimacy through the Chagatai line. ETHICS-002: Despite the name, Moghulistan was predominantly Turkic-speaking by this period; the 'Moghul' designation referred to political identity, not ethnic composition. The Islamization of the eastern Chagatai successor states was slower and more contested than in western Transoxiana. ETHICS-003: The territory corresponds roughly to modern Xinjiang/East Turkestan — now the site of Chinese state repression of the Uyghur population. Historical context matters for understanding contemporary claims.",
+    "name_variants": [
+      {
+        "name": "Moghulistan",
+        "lang": "en",
+        "period_start": 1347,
+        "period_end": 1462,
+        "context": "English scholarly name",
+        "source": "Biran, M. Qaidu and the Rise of the Independent Mongol State in Central Asia (1997)"
+      },
+      {
+        "name": "Eastern Chagatai Khanate",
+        "lang": "en",
+        "period_start": 1347,
+        "period_end": 1462,
+        "context": "Alternative English name emphasizing continuity from Chagatai Khanate",
+        "source": "Bartold, V.V. Four Studies on the History of Central Asia (1962)"
+      },
+      {
+        "name": "Могулистан",
+        "lang": "ru",
+        "period_start": 1347,
+        "period_end": 1462,
+        "context": "Russian scholarly name",
+        "source": "Yudin, V.P. Tsentralnaia Aziia v XIV-XVIII vekakh (1983)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1347,
+        "region": "Semirechye and Tarim Basin",
+        "change_type": "INDEPENDENCE",
+        "description": "Tughlugh Timur established Moghulistan as the eastern successor state of the Chagatai Khanate, encompassing Semirechye, the Ili Valley, and parts of the Tarim Basin.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1462,
+        "region": "Moghulistan",
+        "change_type": "FRAGMENTATION",
+        "description": "Moghulistan fragmented into the Yarkent Khanate and other smaller polities. The Moghul political tradition continued in diminished form until the 17th century.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Biran, M. Qaidu and the Rise of the Independent Mongol State in Central Asia (1997)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Kim, H. 'The Early History of the Moghul Nomads: The Legacy of the Chaghatai Khanate', in Di Cosmo, N. et al. The Cambridge History of Inner Asia: The Chinggisid Age (2009)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "صفاریان",
+    "name_original_lang": "fa",
+    "entity_type": "dynasty",
+    "year_start": 861,
+    "year_end": 1003,
+    "capital_name": "Zaranj",
+    "capital_lat": 30.96,
+    "capital_lon": 61.87,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Persian (صفاریان, 'Saffarids'). The Saffarids are significant as the first indigenous Iranian dynasty to challenge Abbasid authority after the Arab conquest. Ya'qub ibn al-Layth al-Saffar rose from a coppersmith (saffar) to empire-builder — one of the great social mobility stories of the Islamic world. ETHICS-002: The Saffarids represent the reassertion of Persian cultural and political identity within the Islamic world, beginning the 'Iranian intermezzo' that would culminate in the Samanids.",
+    "name_variants": [
+      {
+        "name": "Saffarid Dynasty",
+        "lang": "en",
+        "period_start": 861,
+        "period_end": 1003,
+        "context": "English scholarly name",
+        "source": "Bosworth, C.E. The History of the Saffarids of Sistan (1994)"
+      },
+      {
+        "name": "Saffaridi",
+        "lang": "it",
+        "period_start": 861,
+        "period_end": 1003,
+        "context": "Italian scholarly name",
+        "source": "Ferrario, G. Enciclopedia dell'Islam"
+      },
+      {
+        "name": "Саффариды",
+        "lang": "ru",
+        "period_start": 861,
+        "period_end": 1003,
+        "context": "Russian scholarly name",
+        "source": "Istoriya Irana (1977)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 861,
+        "region": "Sistan",
+        "change_type": "INDEPENDENCE",
+        "description": "Ya'qub ibn al-Layth al-Saffar seized control of Sistan, founding the first significant native Persian dynasty since the Arab conquest. From humble origins as a coppersmith, he built a military force from ayyarun (urban militias).",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 873,
+        "region": "Khorasan",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ya'qub conquered Nishapur and most of eastern Iran from the Tahirids, then marched on Baghdad but was defeated by the Abbasid Caliph's forces at the Battle of Dayr al-Aqul (876).",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1003,
+        "region": "Sistan",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Mahmud of Ghazni annexed the last Saffarid territories in Sistan, ending the dynasty.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Bosworth, C.E. The History of the Saffarids of Sistan and the Maliks of Nimruz (1994)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Bosworth, C.E. 'The Tahirids and Saffarids', Cambridge History of Iran, vol. 4 (1975)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Tarikh-i Sistan (History of Sistan), anonymous, c. 1060 CE",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "سامانیان",
+    "name_original_lang": "fa",
+    "entity_type": "empire",
+    "year_start": 819,
+    "year_end": 999,
+    "capital_name": "Bukhara (Bukhoro)",
+    "capital_lat": 39.77,
+    "capital_lon": 64.42,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Persian (سامانیان, 'Samanids'). The Samanids presided over the Persian cultural renaissance (the 'Iranian intermezzo'), patronizing Ferdowsi's Shahnameh, Rudaki's poetry, and Avicenna's early education. Bukhara under the Samanids was one of the great centers of Islamic civilization. ETHICS-002: The Samanid era is foundational to modern Tajik, Persian, and Afghan national identity. The claim to Samanid heritage is contested between Tajikistan, Iran, and Afghanistan — each framing the dynasty within its own national narrative. The database must present all perspectives without adjudicating.",
+    "name_variants": [
+      {
+        "name": "Samanid Empire",
+        "lang": "en",
+        "period_start": 819,
+        "period_end": 999,
+        "context": "English scholarly name",
+        "source": "Frye, R.N. The Golden Age of Persia (1975)"
+      },
+      {
+        "name": "Саманиды",
+        "lang": "ru",
+        "period_start": 819,
+        "period_end": 999,
+        "context": "Russian scholarly name",
+        "source": "Bartold, V.V. Turkestan (1928)"
+      },
+      {
+        "name": "Samanidi",
+        "lang": "it",
+        "period_start": 819,
+        "period_end": 999,
+        "context": "Italian scholarly name",
+        "source": "Ferrario, G. Enciclopedia dell'Islam"
+      },
+      {
+        "name": "سامانیان",
+        "lang": "tg",
+        "period_start": 819,
+        "period_end": 999,
+        "context": "Tajik/Persian name — foundational to Tajik national identity",
+        "source": "Donish, A. Navodir ul-vaqoe (1875)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 819,
+        "region": "Transoxiana",
+        "change_type": "INDEPENDENCE",
+        "description": "Samanids received governorship of Transoxiana from the Abbasid Caliph, progressively establishing de facto independence while maintaining nominal Abbasid suzerainty.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 900,
+        "region": "Khorasan",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ismail Samani defeated the Saffarids and consolidated control over Khorasan, creating a vast Persian-speaking state stretching from the Tigris to the borders of India.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 999,
+        "region": "Transoxiana",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Karakhanid Turks conquered Bukhara, ending Samanid rule. The dynasty's fall marked the permanent Turkification of Transoxiana's ruling class, though Persian remained the language of culture and administration.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Frye, R.N. The Golden Age of Persia (1975)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Bartold, V.V. Turkestan Down to the Mongol Invasion, 3rd ed. (1928/1968)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Narshakhi. Tarikh-i Bukhara (History of Bukhara), c. 943 CE, trans. R.N. Frye (1954)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "غزنویان",
+    "name_original_lang": "fa",
+    "entity_type": "empire",
+    "year_start": 977,
+    "year_end": 1186,
+    "capital_name": "Ghazni (غزنی)",
+    "capital_lat": 33.55,
+    "capital_lon": 68.42,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Persian (غزنویان, 'Ghaznavids'). Despite being of Turkic slave-soldier (ghulam) origin, the Ghaznavids adopted Persian as their court language and are considered a Persianate dynasty. ETHICS-002: Mahmud of Ghazni's 17 raids into India (1000-1027) are a major source of Hindu-Muslim tension in South Asian historiography. Indian nationalist narratives emphasize temple destructions (especially Somnath, 1026) and forced conversions; Islamic sources celebrate Mahmud as a ghazi (warrior of the faith). Both perspectives must be represented. The plunder of Indian temples financed Ghazni's transformation into a cultural capital rivaling Baghdad. ETHICS-003: Modern appropriation of Mahmud's legacy by both Pakistani/Islamic triumphalism and Hindu nationalist grievance narratives distorts the complex historical reality.",
+    "name_variants": [
+      {
+        "name": "Ghaznavid Empire",
+        "lang": "en",
+        "period_start": 977,
+        "period_end": 1186,
+        "context": "English scholarly name",
+        "source": "Bosworth, C.E. The Ghaznavids (1963)"
+      },
+      {
+        "name": "Газневиды",
+        "lang": "ru",
+        "period_start": 977,
+        "period_end": 1186,
+        "context": "Russian scholarly name",
+        "source": "Bartold, V.V. Turkestan (1928)"
+      },
+      {
+        "name": "Ghaznavidi",
+        "lang": "it",
+        "period_start": 977,
+        "period_end": 1186,
+        "context": "Italian scholarly name",
+        "source": "EI2 (Encyclopaedia of Islam)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 977,
+        "region": "Ghazni",
+        "change_type": "INDEPENDENCE",
+        "description": "Sabuktigin, a Turkic slave-soldier, established the Ghaznavid dynasty at Ghazni, originally as a Samanid vassal governing the eastern frontier.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1001,
+        "region": "Northern India",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Mahmud of Ghazni began his series of 17 raids into the Indian subcontinent, culminating in the sack of the Somnath temple (1026). These campaigns involved massive plunder, temple destructions, and forced conversions. The wealth extracted transformed Ghazni into a major cultural center.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1040,
+        "region": "Khorasan",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Seljuk Turks defeated the Ghaznavids at the Battle of Dandanaqan, driving them permanently out of the Iranian plateau and confining them to eastern Afghanistan and northern India.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1186,
+        "region": "Lahore",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ghurids captured Lahore, the last Ghaznavid capital, ending the dynasty.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Bosworth, C.E. The Ghaznavids: Their Empire in Afghanistan and Eastern Iran 994–1040 (1963)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Eaton, R.M. India in the Persianate Age: 1000–1765 (2019)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Utbi, Abu Nasr. Tarikh-i Yamini (The Yamini History), c. 1020 CE",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Gardizi. Zayn al-Akhbar (Adornment of Reports), c. 1050 CE",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "غوریان",
+    "name_original_lang": "fa",
+    "entity_type": "empire",
+    "year_start": 879,
+    "year_end": 1215,
+    "capital_name": "Firuzkuh (فیروزکوه)",
+    "capital_lat": 34.7,
+    "capital_lon": 65.5,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Persian (غوریان, 'Ghurids'). The Ghurids were of Eastern Iranian (possibly Tajik) origin from the mountainous Ghur region of central Afghanistan. ETHICS-002: The Ghurid sack of Ghazni (1149-1150) was so devastating that the city was nicknamed 'Jahansoz' ('World-Burner') after Sultan Ala al-Din. The dynasty's conquest of northern India established the Delhi Sultanate, fundamentally transforming the subcontinent. As with the Ghaznavids, Indian historiography is divided on the Ghurid legacy. ETHICS-003: The legendary capital Firuzkuh ('Turquoise Mountain') has never been conclusively located archaeologically; coordinates are approximate.",
+    "name_variants": [
+      {
+        "name": "Ghurid Empire",
+        "lang": "en",
+        "period_start": 879,
+        "period_end": 1215,
+        "context": "English scholarly name",
+        "source": "Bosworth, C.E. The Later Ghaznavids (1977)"
+      },
+      {
+        "name": "Гуриды",
+        "lang": "ru",
+        "period_start": 879,
+        "period_end": 1215,
+        "context": "Russian scholarly name",
+        "source": "Bartold, V.V. Turkestan (1928)"
+      },
+      {
+        "name": "Shansabani dynasty",
+        "lang": "en",
+        "period_start": 879,
+        "period_end": 1215,
+        "context": "Dynastic name from the Shansab clan",
+        "source": "Juzjani, Tabaqat-i Nasiri (1260)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 879,
+        "region": "Ghur",
+        "change_type": "INDEPENDENCE",
+        "description": "The Shansabani chiefs of Ghur established local autonomy in the remote mountains of central Afghanistan. Ghur was one of the last regions of Afghanistan to convert to Islam.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1186,
+        "region": "Northern India",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Muhammad of Ghur conquered Lahore (ending the Ghaznavids) and Delhi (1192, Battle of Tarain), establishing Islamic rule over northern India that would persist until British colonialism.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1215,
+        "region": "Ghur",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Khwarezmshah Ala al-Din Muhammad conquered the remaining Ghurid territories. In India, the Ghurid generals (Qutb al-Din Aibak, Iltutmish) established the independent Delhi Sultanate.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Bosworth, C.E. 'The Early Islamic History of Ghur', Central Asiatic Journal 6 (1961)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Juzjani, Minhaj al-Din. Tabaqat-i Nasiri, c. 1260 CE",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Thomas, D. 'The Ebb and Flow of the Ghurids', Afghanistan 25:2 (1972)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "هوتکیان",
+    "name_original_lang": "ps",
+    "entity_type": "dynasty",
+    "year_start": 1709,
+    "year_end": 1738,
+    "capital_name": "Kandahar (کندهار)",
+    "capital_lat": 31.61,
+    "capital_lon": 65.71,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Pashto (هوتکیان, 'Hotakis'), the language of the Ghilzai Pashtun founders. ETHICS-002: Mirwais Hotak's 1709 revolt against Safavid Iran is celebrated in Afghan national historiography as a founding moment of Afghan independence. The Hotaki invasion of Iran under Mahmud (1722, fall of Isfahan) involved significant civilian casualties and sectarian violence against Shia populations. The siege and famine of Isfahan killed an estimated 80,000 people. ETHICS-003: The Hotaki dynasty shows the Pashtun tribal confederation's first assertion of imperial ambitions, prefiguring the Durrani Empire.",
+    "name_variants": [
+      {
+        "name": "Hotaki Dynasty",
+        "lang": "en",
+        "period_start": 1709,
+        "period_end": 1738,
+        "context": "English scholarly name",
+        "source": "Hanifi, S.M. Connecting Histories in Afghanistan (2011)"
+      },
+      {
+        "name": "Хотаки",
+        "lang": "ru",
+        "period_start": 1709,
+        "period_end": 1738,
+        "context": "Russian scholarly name",
+        "source": "Gankovskii, Yu.V. Imperiia Durrani (1958)"
+      },
+      {
+        "name": "سلسله هوتکی",
+        "lang": "fa",
+        "period_start": 1709,
+        "period_end": 1738,
+        "context": "Persian name",
+        "source": "Lockhart, L. The Fall of the Safavid Dynasty (1958)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1709,
+        "region": "Kandahar",
+        "change_type": "INDEPENDENCE",
+        "description": "Mirwais Hotak led a Ghilzai Pashtun revolt against the Safavid governor of Kandahar, establishing the first independent Afghan polity. This is considered a foundational event in Afghan national history.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1722,
+        "region": "Isfahan",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Mahmud Hotaki besieged and captured the Safavid capital Isfahan, effectively ending the Safavid dynasty. The siege caused mass starvation among the civilian population, with an estimated 80,000 deaths.",
+        "population_affected": 80000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1738,
+        "region": "Kandahar",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Nader Shah of Iran conquered Kandahar after a prolonged siege, ending the Hotaki dynasty. The surviving Hotaki leadership was killed or exiled.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Lockhart, L. The Fall of the Safavid Dynasty and the Afghan Occupation of Persia (1958)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Hanifi, S.M. Connecting Histories in Afghanistan: Market Relations and State Formation on a Colonial Frontier (2011)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Gankovskii, Yu.V. Imperiia Durrani: Ocherki administrativnoi i voennoi sistemy (1958)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "د درانیانو ټولواکمني",
+    "name_original_lang": "ps",
+    "entity_type": "empire",
+    "year_start": 1747,
+    "year_end": 1826,
+    "capital_name": "Kandahar (کندهار)",
+    "capital_lat": 31.61,
+    "capital_lon": 65.71,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Pashto. Ahmad Shah Durrani (Ahmad Shah Abdali) is the 'Father of Afghanistan' in Afghan national mythology. The name 'Durrani' replaced 'Abdali' after Ahmad Shah received the title 'Durr-i-Durran' ('Pearl of Pearls'). ETHICS-002: Ahmad Shah's empire was the second-largest Muslim empire of its time after the Ottomans. His sack of Delhi (1757) and the Battle of Panipat (1761, where he defeated the Marathas) are foundational events in South Asian history. The Panipat campaign involved significant civilian casualties and plunder. ETHICS-003: The Durrani Empire's disintegration created the fragmented Afghanistan that would become the focus of the Great Game between the British and Russian empires.",
+    "name_variants": [
+      {
+        "name": "Durrani Empire",
+        "lang": "en",
+        "period_start": 1747,
+        "period_end": 1826,
+        "context": "English scholarly name",
+        "source": "Singh, G. Ahmad Shah Durrani (1959)"
+      },
+      {
+        "name": "Afghan Empire",
+        "lang": "en",
+        "period_start": 1747,
+        "period_end": 1826,
+        "context": "Alternative English name",
+        "source": "Dupree, L. Afghanistan (1973)"
+      },
+      {
+        "name": "امپراتوری درانی",
+        "lang": "fa",
+        "period_start": 1747,
+        "period_end": 1826,
+        "context": "Persian/Dari name",
+        "source": "Tarikh-e Ahmad Shahi"
+      },
+      {
+        "name": "Дурранийская империя",
+        "lang": "ru",
+        "period_start": 1747,
+        "period_end": 1826,
+        "context": "Russian scholarly name",
+        "source": "Gankovskii, Yu.V. Imperiia Durrani (1958)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1747,
+        "region": "Afghanistan",
+        "change_type": "INDEPENDENCE",
+        "description": "Ahmad Shah Abdali was elected king by a Loya Jirga (grand assembly) of Pashtun chiefs at Kandahar following Nader Shah's assassination. He united the Pashtun tribes and rapidly expanded the empire.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1757,
+        "region": "Delhi",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ahmad Shah sacked Delhi and plundered the Mughal capital, extracting enormous wealth including the Koh-i-Noor diamond. The Mughal Emperor became a Durrani puppet.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1761,
+        "region": "Panipat",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Third Battle of Panipat — Durrani forces destroyed the Maratha army in one of the largest and bloodiest battles of the 18th century. Estimated 60,000-70,000 Maratha casualties. This prevented Maratha domination of northern India.",
+        "population_affected": 70000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1826,
+        "region": "Afghanistan",
+        "change_type": "FRAGMENTATION",
+        "description": "Internal civil wars between the Sadozai and Barakzai branches ended the Durrani Empire. Dost Muhammad Khan founded the Barakzai dynasty, beginning a new political chapter.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Singh, G. Ahmad Shah Durrani: Father of Modern Afghanistan (1959)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Dupree, L. Afghanistan (1973)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Gankovskii, Yu.V. Imperiia Durrani: Ocherki administrativnoi i voennoi sistemy (1958)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Mahmud al-Husayni. Tarikh-e Ahmad Shahi, c. 1753 CE",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "امارت بخارا",
+    "name_original_lang": "chg",
+    "entity_type": "khanate",
+    "year_start": 1785,
+    "year_end": 1920,
+    "capital_name": "Bukhara (Bukhoro)",
+    "capital_lat": 39.77,
+    "capital_lon": 64.42,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Chagatai Turkic. The Emirate of Bukhara was the last traditional Central Asian Islamic state, ruled by the Manghit dynasty. ETHICS-002: The 1868 Russian conquest made Bukhara a protectorate while the emir retained nominal authority. Russian colonialism in Central Asia systematically extracted resources (cotton monoculture), destroyed local industries, suppressed political reform movements (Jadidism), and imposed European administrative structures. ETHICS-003: The 1920 Soviet overthrow of the emir was presented as 'liberation' but replaced one colonial system with another. The Bolsheviks' deliberate drawing of national boundaries (Uzbek, Tajik, Turkmen SSRs) divided historically unified Central Asian communities to prevent pan-Turkic or pan-Islamic solidarity — a classic divide-and-rule strategy with consequences that persist today.",
+    "name_variants": [
+      {
+        "name": "Emirate of Bukhara",
+        "lang": "en",
+        "period_start": 1785,
+        "period_end": 1920,
+        "context": "English scholarly name",
+        "source": "Khalid, A. The Politics of Muslim Cultural Reform (1998)"
+      },
+      {
+        "name": "Бухарский эмират",
+        "lang": "ru",
+        "period_start": 1785,
+        "period_end": 1920,
+        "context": "Russian scholarly name",
+        "source": "Bartold, V.V. Istoriia kulturnoi zhizni Turkestana (1927)"
+      },
+      {
+        "name": "Buxoro amirligi",
+        "lang": "uz",
+        "period_start": 1785,
+        "period_end": 1920,
+        "context": "Uzbek name",
+        "source": "O'zbekiston milliy ensiklopediyasi"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1785,
+        "region": "Transoxiana",
+        "change_type": "SUCCESSION",
+        "description": "Shah Murad of the Manghit dynasty formally abolished the fiction of Chinggisid puppet khans, declaring himself emir and establishing the Emirate of Bukhara as successor to the Khanate.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1868,
+        "region": "Bukhara",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "General Kaufman's Russian forces defeated the Bukharans, making the emirate a Russian protectorate. The emir lost control of foreign policy and key economic decisions. Cotton monoculture was imposed, destroying food self-sufficiency.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1920,
+        "region": "Bukhara",
+        "change_type": "REVOLUTION",
+        "description": "Red Army forces under Mikhail Frunze overthrew Emir Alim Khan, establishing the Bukharan People's Soviet Republic. The emir fled to Afghanistan. Soviet rule brought land reform but also political repression, forced secularization, and the destruction of the traditional Islamic scholarly establishment.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Khalid, A. The Politics of Muslim Cultural Reform: Jadidism in Central Asia (1998)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Morrison, A. Russian Rule in Samarkand 1868–1910: A Comparison with British India (2008)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Bartold, V.V. Istoriia kulturnoi zhizni Turkestana (1927)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Becker, S. Russia's Protectorates in Central Asia: Bukhara and Khiva, 1865–1924 (1968)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "د افغانستان امارت",
+    "name_original_lang": "ps",
+    "entity_type": "khanate",
+    "year_start": 1823,
+    "year_end": 1926,
+    "capital_name": "Kabul (کابل)",
+    "capital_lat": 34.53,
+    "capital_lon": 69.17,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Pashto. ETHICS-002: The Emirate of Afghanistan was shaped by the Great Game between the British and Russian empires. The three Anglo-Afghan Wars (1839-42, 1878-80, 1919) reflect Afghanistan's resistance to imperial domination, but also the devastating cost of being a buffer state. The Durand Line (1893), imposed by the British, divided the Pashtun population between Afghanistan and British India (now Pakistan) — a border Afghanistan has never formally recognized. ETHICS-003: British imperial violence in Afghanistan included the 1842 retreat from Kabul (destruction of a British army), the burning of the Kabul bazaar (1842), and the sacking of Ghazni. Afghan resistance to British colonialism cost tens of thousands of Afghan lives and should be documented alongside the British military perspective that dominates English-language sources.",
+    "name_variants": [
+      {
+        "name": "Emirate of Afghanistan",
+        "lang": "en",
+        "period_start": 1823,
+        "period_end": 1926,
+        "context": "English scholarly name",
+        "source": "Barfield, T. Afghanistan: A Cultural and Political History (2010)"
+      },
+      {
+        "name": "Афганский эмират",
+        "lang": "ru",
+        "period_start": 1823,
+        "period_end": 1926,
+        "context": "Russian scholarly name",
+        "source": "Masson, V.M. & Romodin, V.A. Istoriia Afganistana (1965)"
+      },
+      {
+        "name": "امارت افغانستان",
+        "lang": "fa",
+        "period_start": 1823,
+        "period_end": 1926,
+        "context": "Dari/Persian name",
+        "source": "Fayz Muhammad Katib, Siraj al-Tawarikh (1913)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1823,
+        "region": "Afghanistan",
+        "change_type": "SUCCESSION",
+        "description": "Dost Muhammad Khan established the Barakzai dynasty, founding what would become the modern Afghan state. Kabul replaced Kandahar as the primary capital.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1839,
+        "region": "Afghanistan",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "First Anglo-Afghan War: British forces invaded Afghanistan, installed Shah Shuja as puppet ruler. The 1842 retreat from Kabul resulted in the destruction of an entire British army (4,500 troops, 12,000 camp followers). Afghan resistance ultimately forced British withdrawal.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1893,
+        "region": "Pashtun territories",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Durand Line agreement divided the Pashtun homeland between Afghanistan and British India under duress from Emir Abdur Rahman Khan. Afghanistan has never recognized this border as permanent. Millions of Pashtuns were separated from their kin.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1919,
+        "region": "Afghanistan",
+        "change_type": "INDEPENDENCE",
+        "description": "Third Anglo-Afghan War: Amanullah Khan attacked British India, resulting in the Treaty of Rawalpindi granting Afghanistan full sovereignty over foreign affairs. Afghanistan celebrates 19 August 1919 as Independence Day.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Barfield, T. Afghanistan: A Cultural and Political History (2010)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Dupree, L. Afghanistan (1973)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Fayz Muhammad Katib. Siraj al-Tawarikh (The Lamp of Histories), 1913 CE",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Dalrymple, W. Return of a King: The Battle for Afghanistan (2013)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Κουσανο-Σασσανιδαι",
+    "name_original_lang": "grc",
+    "entity_type": "kingdom",
+    "year_start": 230,
+    "year_end": 365,
+    "capital_name": "Balkh (Bactra)",
+    "capital_lat": 36.76,
+    "capital_lon": 66.9,
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: The entity's self-designation is unknown. Greek form used as a conventional scholarly label; the rulers used Bactrian script (modified Greek alphabet) on their coinage. ETHICS-002: The Kushano-Sasanians represent the intersection of Iranian, Indian, and Hellenistic cultural traditions in Central Asia. Their coinage shows Hindu deities (Shiva, Nandi), Buddhist symbols, and Zoroastrian fire temples — evidence of remarkable religious pluralism. ETHICS-003: The entity is poorly attested; most knowledge comes from numismatics (coins). Boundaries and exact dates are highly uncertain.",
+    "name_variants": [
+      {
+        "name": "Kushano-Sasanian Kingdom",
+        "lang": "en",
+        "period_start": 230,
+        "period_end": 365,
+        "context": "English scholarly name based on their dual Kushan-Sasanian identity",
+        "source": "Cribb, J. 'The Kidarites, the Numismatic Evidence', in Alram, M. et al. Coins, Art and Chronology II (2010)"
+      },
+      {
+        "name": "Indo-Sasanians",
+        "lang": "en",
+        "period_start": 230,
+        "period_end": 365,
+        "context": "Alternative English scholarly name",
+        "source": "Bivar, A.D.H. 'The History of Eastern Iran', Cambridge History of Iran, vol. 3 (1983)"
+      },
+      {
+        "name": "Кушано-Сасаниды",
+        "lang": "ru",
+        "period_start": 230,
+        "period_end": 365,
+        "context": "Russian scholarly name",
+        "source": "Zeimal, E.V. 'The Kidarite Kingdom in Central Asia', in Litvinsky, B.A. (ed.) History of Civilizations of Central Asia, vol. 3 (1996)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 230,
+        "region": "Bactria",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Sasanian king Ardashir I or Shapur I established a branch dynasty in the former Kushan territories of Bactria and Gandhara, creating a hybrid Kushan-Sasanian administration.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 365,
+        "region": "Bactria and Gandhara",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Kidarite Huns displaced the Kushano-Sasanian rulers, ending their control over Bactria and the Hindu Kush region.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Cribb, J. 'The Kidarites, the Numismatic Evidence', in Alram, M. et al. (eds.) Coins, Art and Chronology II (2010)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Bivar, A.D.H. 'The History of Eastern Iran', Cambridge History of Iran, vol. 3 (1983)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Zeimal, E.V. 'The Kidarite Kingdom in Central Asia', in Litvinsky, B.A. (ed.) History of Civilizations of Central Asia, vol. 3 (1996)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "هپتالیان / Ηφθαλιται",
+    "name_original_lang": "xbc",
+    "entity_type": "empire",
+    "year_start": 440,
+    "year_end": 670,
+    "capital_name": "Bactria region (uncertain)",
+    "capital_lat": 36.76,
+    "capital_lon": 66.9,
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original given in both Bactrian/Persian (هپتالیان) and Byzantine Greek (Ηφθαλιται) forms. The Hephthalites' self-designation and language are debated — they may have spoken an Iranian or Turkic language or both. Chinese sources call them 嚈噠. ETHICS-002: The Hephthalites' ethnic identity is one of the most contested questions in Central Asian studies. They have been variously classified as Turkic, Iranian, Xionite, or mixed. The database should not arbitrate this debate. ETHICS-003: The Hephthalite destruction of the Gupta Empire and the devastation of Buddhist monasteries in Gandhara (particularly under Mihirakula, c. 520) had lasting civilizational consequences for South and Central Asia.",
+    "name_variants": [
+      {
+        "name": "Hephthalite Empire",
+        "lang": "en",
+        "period_start": 440,
+        "period_end": 670,
+        "context": "English scholarly name from Byzantine Greek Ἐφθαλῖται",
+        "source": "de la Vaissière, É. 'Is There a Hephthalite Nationality?', Bulletin of the Asia Institute 17 (2007)"
+      },
+      {
+        "name": "White Huns",
+        "lang": "en",
+        "period_start": 440,
+        "period_end": 670,
+        "context": "Alternative English name (potentially misleading — no confirmed connection to European Huns)",
+        "source": "Grenet, F. 'Regional Interaction in Central Asia and Northwest India', in Alram, M. et al. (eds.) Coins, Art and Chronology II (2010)"
+      },
+      {
+        "name": "嚈噠",
+        "lang": "zh",
+        "period_start": 440,
+        "period_end": 670,
+        "context": "Chinese name from Wei Shu and Bei Shi",
+        "source": "Wei Shu (Book of Wei), c. 554 CE"
+      },
+      {
+        "name": "Эфталиты",
+        "lang": "ru",
+        "period_start": 440,
+        "period_end": 670,
+        "context": "Russian scholarly name",
+        "source": "Litvinsky, B.A. (ed.) History of Civilizations of Central Asia, vol. 3 (1996)"
+      },
+      {
+        "name": "هیاطله",
+        "lang": "ar",
+        "period_start": 440,
+        "period_end": 670,
+        "context": "Arabic name from Islamic-era geographers",
+        "source": "al-Tabari, Tarikh al-Rusul wa'l-Muluk"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 440,
+        "region": "Bactria and Tokharistan",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Hephthalites established dominance over the former Kushano-Sasanian territories in Bactria, rapidly expanding into Sogdiana and Gandhara.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 484,
+        "region": "Eastern Iran",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Hephthalites defeated and killed the Sasanian king Peroz I at the Battle of Herat, imposing tribute on the Sasanian Empire and reaching the height of their power.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 560,
+        "region": "Central Asia",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Allied Göktürk and Sasanian forces crushed the Hephthalite confederation. The Göktürks under Istemi took the northern territories; the Sasanians under Khosrow I took the southern. The Hephthalite heartland was partitioned.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 670,
+        "region": "Tokharistan",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Last Hephthalite principalities in Tokharistan were absorbed by the Arab conquest of Central Asia and the expanding Tang-allied Western Turkic powers.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      }
+    ],
+    "sources": [
+      {
+        "citation": "de la Vaissière, É. 'Is There a Hephthalite Nationality?', Bulletin of the Asia Institute 17 (2007)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Grenet, F. 'Regional Interaction in Central Asia and Northwest India in the Kidarite and Hephthalite Periods', in Alram, M. et al. Coins, Art and Chronology II (2010)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Procopius. History of the Wars (Bellum Persicum), c. 550 CE",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Litvinsky, B.A. (ed.) History of Civilizations of Central Asia, vol. 3 (1996)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Σογδιανή / سغد",
+    "name_original_lang": "sog",
+    "entity_type": "confederation",
+    "year_start": -500,
+    "year_end": 1000,
+    "capital_name": "Samarkand (Marakanda)",
+    "capital_lat": 39.65,
+    "capital_lon": 66.96,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in both Greek (Σογδιανή, from Achaemenid-era sources) and Arabic (سغد, from Islamic-era sources). The Sogdian language is an extinct Eastern Iranian language known from manuscript fragments and inscriptions. ETHICS-002: Sogdiana was never a unified state but rather a network of city-states (Samarkand, Bukhara, Panjikent, etc.) connected by trade. Representing it as a single entity is a scholarly convenience. The Sogdians were the paramount merchant people of the Silk Road — their commercial network stretched from Constantinople to Chang'an. ETHICS-003: The Arab conquest of Sogdiana (early 8th century) under Qutayba ibn Muslim involved massive destruction, forced conversions, and the suppression of Zoroastrian, Buddhist, Manichaean, and Christian religious traditions. The destruction of Panjikent's murals and the loss of Sogdian literature represent a major cultural erasure.",
+    "name_variants": [
+      {
+        "name": "Sogdiana",
+        "lang": "en",
+        "period_start": -500,
+        "period_end": 1000,
+        "context": "English scholarly name from Greek Σογδιανή",
+        "source": "de la Vaissière, É. Sogdian Traders (2005)"
+      },
+      {
+        "name": "Согд",
+        "lang": "ru",
+        "period_start": -500,
+        "period_end": 1000,
+        "context": "Russian scholarly name",
+        "source": "Litvinsky, B.A. (ed.) History of Civilizations of Central Asia (1996)"
+      },
+      {
+        "name": "Suguda",
+        "lang": "peo",
+        "period_start": -500,
+        "period_end": -330,
+        "context": "Old Persian name from Achaemenid inscriptions (Behistun)",
+        "source": "Darius I, Behistun Inscription, c. 520 BCE"
+      },
+      {
+        "name": "Sogdia",
+        "lang": "it",
+        "period_start": -500,
+        "period_end": 1000,
+        "context": "Italian scholarly name",
+        "source": "Ferrario, G. Enciclopedia dell'Islam"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -500,
+        "region": "Zarafshan Valley",
+        "change_type": "CULTURAL",
+        "description": "Sogdiana documented as a satrapy of the Achaemenid Empire (Behistun inscription). The Sogdian city-states had likely existed for centuries before Persian conquest, but the earliest firm dating comes from Achaemenid sources.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": -329,
+        "region": "Sogdiana",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Alexander the Great conquered Sogdiana after fierce resistance led by Spitamenes. The Greek conquest introduced Hellenistic culture but Sogdian identity and language persisted for over a millennium.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 712,
+        "region": "Samarkand",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Qutayba ibn Muslim completed the Arab conquest of Sogdiana after decades of resistance. Forced conversion to Islam, destruction of fire temples and Buddhist monasteries, and suppression of local religious traditions. Sogdian merchants gradually adopted Arabic script and Islamic identity.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1000,
+        "region": "Transoxiana",
+        "change_type": "CULTURAL",
+        "description": "By c. 1000 CE, Sogdian as a spoken language was largely replaced by Persian and Turkic languages. The Sogdian identity disappeared as a distinct ethnicity, though their genetic and cultural legacy persists in modern Tajik and Uzbek populations.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "de la Vaissière, É. Sogdian Traders: A History (2005)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Marshak, B.I. Legends, Tales, and Fables in the Art of Sogdiana (2002)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Darius I. Behistun Inscription, c. 520 BCE",
+        "source_type": "primary"
+      },
+      {
+        "citation": "al-Tabari. Tarikh al-Rusul wa'l-Muluk (History of the Prophets and Kings)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "Βακτριανή / باختر",
+    "name_original_lang": "grc",
+    "entity_type": "kingdom",
+    "year_start": -250,
+    "year_end": 125,
+    "capital_name": "Bactra (Balkh)",
+    "capital_lat": 36.76,
+    "capital_lon": 66.9,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Greek (Βακτριανή) and Bactrian (باختر). This entity covers the Greco-Bactrian Kingdom (c. -250 to -130) and its Indo-Greek successors. The Bactrian language (an Eastern Iranian language written in modified Greek script) is distinct from Greek. ETHICS-002: Greco-Bactria represents one of the most remarkable cultural fusions in ancient history — Greek, Iranian, Indian, and Central Asian traditions merged to create Gandhara art, which would profoundly influence Buddhist visual culture across Asia. The entity challenges simplistic East-West dichotomies. ETHICS-003: Knowledge of Greco-Bactria comes primarily from numismatics (coins) and fragmentary classical texts. The kingdom was called 'the land of a thousand cities' by Justin, but archaeological evidence is limited. Ai-Khanoum is the only extensively excavated Greco-Bactrian city.",
+    "name_variants": [
+      {
+        "name": "Greco-Bactrian Kingdom",
+        "lang": "en",
+        "period_start": -250,
+        "period_end": -130,
+        "context": "English scholarly name for the Greek phase",
+        "source": "Holt, F.L. Thundering Zeus: The Making of Hellenistic Bactria (1999)"
+      },
+      {
+        "name": "Indo-Greek Kingdom",
+        "lang": "en",
+        "period_start": -180,
+        "period_end": 125,
+        "context": "English scholarly name for the Indian extension",
+        "source": "Narain, A.K. The Indo-Greeks (1957)"
+      },
+      {
+        "name": "Bactria",
+        "lang": "en",
+        "period_start": -250,
+        "period_end": 125,
+        "context": "General English name for the region and polity",
+        "source": "Tarn, W.W. The Greeks in Bactria and India (1951)"
+      },
+      {
+        "name": "Battria",
+        "lang": "it",
+        "period_start": -250,
+        "period_end": 125,
+        "context": "Italian scholarly name",
+        "source": "Ferrario, G. Enciclopedia dell'Islam"
+      },
+      {
+        "name": "大夏",
+        "lang": "zh",
+        "period_start": -130,
+        "period_end": 125,
+        "context": "Chinese name (Daxia) from Zhang Qian's report to Emperor Wu of Han",
+        "source": "Sima Qian, Shiji, ch. 123"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -250,
+        "region": "Bactria",
+        "change_type": "INDEPENDENCE",
+        "description": "Diodotus I declared independence from the Seleucid Empire, establishing the Greco-Bactrian Kingdom. The breakaway was facilitated by the remoteness of Bactria from the Seleucid heartland.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": -180,
+        "region": "Northwestern India",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Demetrius I invaded the Indian subcontinent, creating the Indo-Greek kingdoms. Menander I (Milinda) later became celebrated in Buddhist tradition through the Milinda Panha (Questions of Milinda).",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": -130,
+        "region": "Bactria",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Yuezhi/Tocharian nomads overran Bactria, ending the Greco-Bactrian kingdom in its homeland. The Indo-Greek kingdoms in India persisted for another century.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 125,
+        "region": "Northwestern India",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Last Indo-Greek ruler Strato II was defeated by the Indo-Scythians, ending over 375 years of Greek political presence in Central and South Asia.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Holt, F.L. Thundering Zeus: The Making of Hellenistic Bactria (1999)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Narain, A.K. The Indo-Greeks, Revisited and Supplemented (1957/2003)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Sima Qian. Shiji (Records of the Grand Historian), ch. 123, c. 94 BCE",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Milinda Panha (Questions of King Milinda), c. 100 BCE",
+        "source_type": "primary"
+      }
+    ]
+  }
+]

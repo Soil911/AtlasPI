@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "atlaspi",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "uvicorn", "src.main:app", "--host", "127.0.0.1", "--port", "10100"],
+      "port": 10100
+    }
+  ]
+}

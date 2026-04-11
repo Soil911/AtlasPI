@@ -1,4 +1,4 @@
-/* AtlasPI v4.6 — Interfaccia web con deep linking e keyboard nav */
+/* AtlasPI v5.5.1 — Interfaccia web con deep linking e keyboard nav */
 
 const API = '';
 const COLORS = {
@@ -61,7 +61,33 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initMap() {
-  map = L.map('map', { center: [30, 20], zoom: 3, minZoom: 2, maxZoom: 12 });
+  map = L.map('map', {
+    center: [30, 20],
+    zoom: 3,
+    minZoom: 2,
+    maxZoom: 12,
+    scrollWheelZoom: false,   // prevent scroll-hijack on page scroll
+    zoomControl: true,
+  });
+  // Enable scroll-zoom only after the user clicks on the map
+  let scrollHintTimer = null;
+  const scrollHint = document.getElementById('map-scroll-hint');
+
+  map.on('click', () => { map.scrollWheelZoom.enable(); if (scrollHint) scrollHint.classList.remove('visible'); });
+  map.on('focus', () => { map.scrollWheelZoom.enable(); });
+  map.on('mouseout', () => { map.scrollWheelZoom.disable(); });
+
+  // Show hint when user tries to scroll on map without clicking first
+  document.getElementById('map').addEventListener('wheel', (ev) => {
+    if (!map.scrollWheelZoom.enabled()) {
+      if (scrollHint) {
+        scrollHint.classList.add('visible');
+        clearTimeout(scrollHintTimer);
+        scrollHintTimer = setTimeout(() => scrollHint.classList.remove('visible'), 2000);
+      }
+    }
+  }, { passive: true });
+
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
     subdomains: 'abcd', maxZoom: 19,
@@ -157,11 +183,24 @@ function restoreUrlState() {
 
 async function loadEntities() {
   try {
-    const res = await fetch(`${API}/v1/entities?limit=100&offset=0`, { cache: 'no-cache' });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    allEntities = data.entities;
-    document.getElementById('entity-count').textContent = `${data.count} ${t('entities')}`;
+    // Fetch all entities with pagination (API max 100 per page)
+    allEntities = [];
+    let offset = 0;
+    const limit = 100;
+    let total = Infinity;
+
+    while (offset < total) {
+      const res = await fetch(`${API}/v1/entities?limit=${limit}&offset=${offset}`, { cache: 'no-cache' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      total = data.count;
+      allEntities = allEntities.concat(data.entities);
+      offset += limit;
+      // Safety: avoid infinite loops
+      if (data.entities.length === 0) break;
+    }
+
+    document.getElementById('entity-count').textContent = `${allEntities.length} ${t('entities')}`;
     applyFilters();
   } catch (err) {
     showError(t('error_connection') || 'Impossibile caricare i dati.');
@@ -416,18 +455,43 @@ async function showDetail(id) {
   const pct = Math.round(e.confidence_score * 100);
   const sc = COLORS[e.status] || '#8b949e';
   const real = isReal(e);
+  const duration = e.year_end ? (e.year_end - e.year_start) : (new Date().getFullYear() - e.year_start);
+  const cIcon = CONTINENT_ICONS[e.continent] || '🌐';
+
+  // Boundary geometry summary
+  let geoSummary = '';
+  if (e.boundary_geojson) {
+    const gt = e.boundary_geojson.type;
+    if (gt === 'Point') {
+      const [lon, lat] = e.boundary_geojson.coordinates;
+      geoSummary = `<p class="geo-coords">📍 ${lat.toFixed(4)}°N, ${lon.toFixed(4)}°E</p>`;
+    } else if (gt === 'Polygon') {
+      const pts = e.boundary_geojson.coordinates[0]?.length || 0;
+      geoSummary = `<p class="geo-coords">🗺️ Polygon: ${pts} ${lang === 'it' ? 'vertici' : 'vertices'}</p>`;
+    } else if (gt === 'MultiPolygon') {
+      const polys = e.boundary_geojson.coordinates?.length || 0;
+      geoSummary = `<p class="geo-coords">🗺️ MultiPolygon: ${polys} ${lang === 'it' ? 'regioni' : 'regions'}</p>`;
+    }
+  }
 
   let html = `
     <h2>${esc(e.name_original)}</h2>
-    <span class="lang-tag">${e.name_original_lang}</span>
-    <span class="status-badge ${e.status}">${t(e.status)}</span>
+    <div class="detail-tags">
+      <span class="lang-tag">${e.name_original_lang}</span>
+      <span class="status-badge ${e.status}">${t(e.status)}</span>
+      <span class="continent-tag">${cIcon} ${e.continent || '?'}</span>
+    </div>
 
     <div class="detail-section" data-section="info">
       <h3 class="collapsible" tabindex="0">${t('info')} <span class="collapse-icon">▾</span></h3>
       <div class="section-body">
-        <p><strong>${t('type') || 'Tipo'}:</strong> ${TYPE_ICONS[e.entity_type] || ''} ${e.entity_type}</p>
-        <p><strong>${t('period')}:</strong> ${fmtY(e.year_start)} \u2013 ${e.year_end ? fmtY(e.year_end) : t('present')}</p>
-        ${e.capital ? `<p><strong>${t('capital')}:</strong> ${esc(e.capital.name)}</p>` : ''}
+        <div class="info-grid">
+          <div class="info-item"><span class="info-label">${t('type') || 'Tipo'}</span><span class="info-value">${TYPE_ICONS[e.entity_type] || ''} ${e.entity_type}</span></div>
+          <div class="info-item"><span class="info-label">${t('period')}</span><span class="info-value">${fmtY(e.year_start)} \u2013 ${e.year_end ? fmtY(e.year_end) : t('present')}</span></div>
+          <div class="info-item"><span class="info-label">${t('duration') || 'Durata'}</span><span class="info-value">${duration.toLocaleString('it-IT')} ${t('years') || 'anni'}</span></div>
+          ${e.capital ? `<div class="info-item"><span class="info-label">${t('capital')}</span><span class="info-value">${esc(e.capital.name)}${e.capital.lat ? ` <span class="geo-micro">(${e.capital.lat.toFixed(2)}°, ${e.capital.lon.toFixed(2)}°)</span>` : ''}</span></div>` : ''}
+          <div class="info-item"><span class="info-label">${lang === 'it' ? 'Regione' : 'Region'}</span><span class="info-value">${cIcon} ${e.continent || '—'}</span></div>
+        </div>
       </div>
     </div>
 
@@ -436,16 +500,21 @@ async function showDetail(id) {
       <div class="section-body">
         <div class="confidence-bar"><div class="confidence-fill" style="width:${pct}%;background:${sc}"></div></div>
         <p style="font-size:0.78em;color:var(--text-muted);margin-top:4px">
-          ${t('score')}: ${e.confidence_score.toFixed(2)} / 1.00
+          ${t('score')}: <strong>${e.confidence_score.toFixed(2)}</strong> / 1.00
           ${e.confidence_score < 0.6 ? ` \u2014 <span style="color:var(--uncertain)">${t('partial_data') || 'dati parziali'}</span>` : ''}
+          ${e.confidence_score >= 0.85 ? ` \u2014 <span style="color:var(--confirmed)">\u2713 ${lang === 'it' ? 'alta affidabilit\u00e0' : 'high reliability'}</span>` : ''}
         </p>
         ${e.boundary_geojson ? (real ? `
           <div class="boundary-notice real-notice">
-            ${t('real_boundary')}
+            \u2713 ${t('real_boundary')}
           </div>` : `
           <div class="boundary-notice">
-            ${t('approx_boundary')}
-          </div>`) : ''}
+            \u26a0 ${t('approx_boundary')}
+          </div>`) : `
+          <div class="boundary-notice" style="border-color:rgba(139,148,158,0.25);background:rgba(139,148,158,0.06);color:var(--text-muted)">
+            ${lang === 'it' ? 'Nessun confine geografico disponibile' : 'No geographic boundary available'}
+          </div>`}
+        ${geoSummary}
       </div>
     </div>`;
 
@@ -484,12 +553,19 @@ async function showDetail(id) {
   }
 
   if (e.sources.length) {
+    const sourceIcons = { academic: '📚', primary: '📜', archaeological: '🏺', cartographic: '🗺️', official: '🏛️', modern_database: '💾', genetic: '🧬' };
     html += `
     <div class="detail-section" data-section="sources">
-      <h3 class="collapsible" tabindex="0">${t('sources_section')} <span class="collapse-icon">▾</span></h3>
+      <h3 class="collapsible" tabindex="0">${t('sources_section')} (${e.sources.length}) <span class="collapse-icon">▾</span></h3>
       <div class="section-body">
-        <ul>${e.sources.map(s => `
-          <li>${esc(s.citation)} <span class="lang-tag">${s.source_type}</span></li>`).join('')}
+        <ul class="sources-list">${e.sources.map(s => `
+          <li class="source-item">
+            <span class="source-icon">${sourceIcons[s.source_type] || '📄'}</span>
+            <div class="source-detail">
+              <span class="source-citation">${esc(s.citation)}</span>
+              <span class="source-type-tag">${s.source_type.replace(/_/g, ' ')}</span>
+            </div>
+          </li>`).join('')}
         </ul>
       </div>
     </div>`;
@@ -671,7 +747,7 @@ function bindEvents() {
   function applyYearInput() {
     let val = parseInt(yearInput.value, 10) || 0;
     if (yearEra.value === 'bc') val = -Math.abs(val);
-    val = Math.max(-3100, Math.min(2025, val));
+    val = Math.max(-4500, Math.min(2025, val));
     yearSlider.value = val;
     yearDisplay.textContent = fmtY(val);
     applyFilters();
@@ -1119,7 +1195,7 @@ function togglePlayback() {
   playbackInterval = setInterval(() => {
     let val = parseInt(slider.value, 10) + step;
     if (val > 2025) {
-      val = -3100; // Loop back
+      val = -4500; // Loop back
     }
 
     slider.value = val;

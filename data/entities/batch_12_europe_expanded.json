@@ -1,0 +1,3083 @@
+[
+  {
+    "name_original": "Rus' Kyivska",
+    "name_original_lang": "uk",
+    "entity_type": "federation",
+    "year_start": 882,
+    "year_end": 1240,
+    "capital_name": "Kyiv",
+    "capital_lat": 50.4501,
+    "capital_lon": 30.5234,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            24.0,
+            56.0
+          ],
+          [
+            27.0,
+            57.5
+          ],
+          [
+            30.0,
+            58.5
+          ],
+          [
+            33.0,
+            59.0
+          ],
+          [
+            36.0,
+            58.0
+          ],
+          [
+            40.0,
+            56.5
+          ],
+          [
+            42.0,
+            54.0
+          ],
+          [
+            40.0,
+            52.0
+          ],
+          [
+            37.0,
+            50.5
+          ],
+          [
+            34.0,
+            49.0
+          ],
+          [
+            30.0,
+            48.5
+          ],
+          [
+            27.0,
+            49.0
+          ],
+          [
+            25.0,
+            50.0
+          ],
+          [
+            23.5,
+            51.5
+          ],
+          [
+            23.0,
+            53.0
+          ],
+          [
+            24.0,
+            55.0
+          ],
+          [
+            24.0,
+            56.0
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-002: Kievan Rus' is claimed as foundational heritage by Ukraine, Russia, and Belarus. Modern Russian historiography often frames it as proto-Russian, while Ukrainian historians emphasize its Kyiv-centered identity. Belarusian scholars highlight the Polatsk principality's autonomy. This database lists the entity under its Ukrainian-language name because Kyiv was the capital and primary political center. All three successor claims are documented. ETHICS-001: Ukrainian name used as primary because the capital and political center was Kyiv.",
+    "name_variants": [
+      {
+        "name": "Kievan Rus'",
+        "lang": "en",
+        "period_start": 882,
+        "period_end": 1240,
+        "context": "Standard English historiographic name",
+        "source": "Franklin, S. & Shepard, J. The Emergence of Rus (1996)"
+      },
+      {
+        "name": "Kievskaya Rus'",
+        "lang": "ru",
+        "period_start": 882,
+        "period_end": 1240,
+        "context": "Russian-language name; Russian historiography claims Kievan Rus' as proto-Russian state",
+        "source": "Martin, Janet. Medieval Russia, 980-1584 (2007)"
+      },
+      {
+        "name": "Kijivska Rus'",
+        "lang": "be",
+        "period_start": 882,
+        "period_end": 1240,
+        "context": "Belarusian-language name",
+        "source": "Plokhy, Serhii. The Origins of the Slavic Nations (2006)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 882,
+        "region": "Kyiv and Dnipro basin",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Oleg of Novgorod seized Kyiv from Askold and Dir, uniting northern and southern Rus' under one rule",
+        "population_affected": 500000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1240,
+        "region": "Kyiv and surrounding principalities",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Mongol invasion under Batu Khan destroyed Kyiv and shattered the federation into fragmented principalities under Mongol suzerainty",
+        "population_affected": 5000000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Franklin, Simon & Shepard, Jonathan. The Emergence of Rus, 750-1200. Longman, 1996",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Plokhy, Serhii. The Origins of the Slavic Nations: Premodern Identities in Russia, Ukraine, and Belarus. Cambridge University Press, 2006",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Martin, Janet. Medieval Russia, 980-1584. Cambridge University Press, 2007",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Granducato di Toscana",
+    "name_original_lang": "it",
+    "entity_type": "duchy",
+    "year_start": 1569,
+    "year_end": 1859,
+    "capital_name": "Firenze",
+    "capital_lat": 43.7696,
+    "capital_lon": 11.2558,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            9.7,
+            44.1
+          ],
+          [
+            10.0,
+            44.4
+          ],
+          [
+            10.5,
+            44.5
+          ],
+          [
+            11.2,
+            44.5
+          ],
+          [
+            11.8,
+            44.2
+          ],
+          [
+            12.3,
+            43.8
+          ],
+          [
+            12.4,
+            43.3
+          ],
+          [
+            12.1,
+            42.8
+          ],
+          [
+            11.5,
+            42.4
+          ],
+          [
+            11.1,
+            42.4
+          ],
+          [
+            10.5,
+            42.8
+          ],
+          [
+            10.0,
+            43.2
+          ],
+          [
+            9.7,
+            43.5
+          ],
+          [
+            9.7,
+            44.1
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Italian name used as primary. The Grand Duchy was created by papal decree elevating the Medici dukes. ETHICS-002: The Medici grand dukes suppressed the republican traditions of Florence and Siena. Siena was conquered by Cosimo I in 1555 and its republican government forcibly dissolved.",
+    "name_variants": [
+      {
+        "name": "Grand Duchy of Tuscany",
+        "lang": "en",
+        "period_start": 1569,
+        "period_end": 1859,
+        "context": "Standard English name",
+        "source": "Cochrane, Eric. Florence in the Forgotten Centuries (1973)"
+      },
+      {
+        "name": "Magnus Ducatus Etruriae",
+        "lang": "la",
+        "period_start": 1569,
+        "period_end": 1859,
+        "context": "Official Latin name used in papal bulls and diplomatic documents",
+        "source": "Diaz, Furio. Il Granducato di Toscana: I Medici (1976)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1569,
+        "region": "Tuscany",
+        "change_type": "ELEVATION",
+        "description": "Pope Pius V elevated Cosimo I de' Medici from Duke of Florence to Grand Duke of Tuscany, formalizing Medici control over the region including conquered Siena",
+        "population_affected": 800000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1859,
+        "region": "Tuscany",
+        "change_type": "ANNEXATION",
+        "description": "Popular uprising and plebiscite led to the deposition of Grand Duke Leopold II and annexation to the Kingdom of Sardinia during Italian unification",
+        "population_affected": 1800000,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Cochrane, Eric. Florence in the Forgotten Centuries, 1527-1800. University of Chicago Press, 1973",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Diaz, Furio. Il Granducato di Toscana: I Medici. UTET, 1976",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Ducato di Milano",
+    "name_original_lang": "it",
+    "entity_type": "duchy",
+    "year_start": 1395,
+    "year_end": 1797,
+    "capital_name": "Milano",
+    "capital_lat": 45.4642,
+    "capital_lon": 9.19,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            8.5,
+            46.0
+          ],
+          [
+            9.0,
+            46.3
+          ],
+          [
+            9.8,
+            46.5
+          ],
+          [
+            10.5,
+            46.2
+          ],
+          [
+            10.8,
+            45.8
+          ],
+          [
+            10.6,
+            45.3
+          ],
+          [
+            10.2,
+            44.9
+          ],
+          [
+            9.5,
+            44.7
+          ],
+          [
+            8.8,
+            44.9
+          ],
+          [
+            8.3,
+            45.2
+          ],
+          [
+            8.2,
+            45.5
+          ],
+          [
+            8.5,
+            46.0
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Italian name used as primary. ETHICS-002: The Duchy changed hands between the Visconti, Sforza, French, Spanish, and Austrian rulers. The population of Lombardy was subjected to repeated foreign domination. The Spanish period (1535-1706) and Austrian period (1706-1797) represent foreign rule imposed on an Italian population.",
+    "name_variants": [
+      {
+        "name": "Duchy of Milan",
+        "lang": "en",
+        "period_start": 1395,
+        "period_end": 1797,
+        "context": "Standard English name",
+        "source": "Bentley, Jerry. Politics and Culture in Renaissance Naples (1987)"
+      },
+      {
+        "name": "Ducatus Mediolani",
+        "lang": "la",
+        "period_start": 1395,
+        "period_end": 1797,
+        "context": "Latin name used in imperial diplomas",
+        "source": "Bentley, Jerry. Politics and Culture in Renaissance Naples (1987)"
+      },
+      {
+        "name": "Ducado de Milan",
+        "lang": "es",
+        "period_start": 1535,
+        "period_end": 1706,
+        "context": "Spanish-period name during Habsburg rule",
+        "source": "Ferroni, Giulio. Storia della letteratura italiana (1991)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1395,
+        "region": "Lombardy",
+        "change_type": "ELEVATION",
+        "description": "Gian Galeazzo Visconti purchased the ducal title from Emperor Wenceslaus, formalizing Visconti lordship over Milan and surrounding territories",
+        "population_affected": 1000000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1797,
+        "region": "Lombardy",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Napoleon Bonaparte conquered the duchy and dissolved it, incorporating it into the Cisalpine Republic",
+        "population_affected": 1200000,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Black, Jane. Absolutism in Renaissance Milan: Plenitude of Power under the Visconti and the Sforza 1329-1535. Oxford University Press, 2009",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Bentley, Jerry. Politics and Culture in Renaissance Naples. Princeton University Press, 1987",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Regno di Sardegna",
+    "name_original_lang": "it",
+    "entity_type": "kingdom",
+    "year_start": 1720,
+    "year_end": 1861,
+    "capital_name": "Torino",
+    "capital_lat": 45.0703,
+    "capital_lon": 7.6869,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            6.6,
+            44.1
+          ],
+          [
+            7.0,
+            44.5
+          ],
+          [
+            7.5,
+            45.0
+          ],
+          [
+            8.0,
+            45.5
+          ],
+          [
+            8.5,
+            45.8
+          ],
+          [
+            9.2,
+            45.5
+          ],
+          [
+            9.5,
+            45.0
+          ],
+          [
+            9.2,
+            44.5
+          ],
+          [
+            8.8,
+            44.2
+          ],
+          [
+            8.5,
+            44.0
+          ],
+          [
+            8.0,
+            43.8
+          ],
+          [
+            7.5,
+            43.8
+          ],
+          [
+            6.8,
+            43.8
+          ],
+          [
+            6.6,
+            44.1
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Italian name used as primary. ETHICS-002: The Kingdom of Sardinia led Italian unification (Risorgimento), which, while celebrated as national liberation, involved the forcible annexation of southern Italian states and the suppression of southern resistance movements. The Savoy dynasty's conquest of the South led to mass brigandage and harsh military repression (1861-1865) that killed thousands of southern Italians.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Sardinia",
+        "lang": "en",
+        "period_start": 1720,
+        "period_end": 1861,
+        "context": "Standard English name",
+        "source": "Smith, Denis Mack. Italy: A Modern History (1997)"
+      },
+      {
+        "name": "Regnum Sardiniae",
+        "lang": "la",
+        "period_start": 1720,
+        "period_end": 1861,
+        "context": "Latin diplomatic name",
+        "source": "Woolf, Stuart. A History of Italy 1700-1860 (1979)"
+      },
+      {
+        "name": "Stati Sardi",
+        "lang": "it",
+        "period_start": 1720,
+        "period_end": 1861,
+        "context": "Alternate Italian name for the Sardinian states on the mainland",
+        "source": "Woolf, Stuart. A History of Italy 1700-1860 (1979)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1720,
+        "region": "Sardinia and Piedmont-Savoy",
+        "change_type": "TRANSFER",
+        "description": "Treaty of The Hague: Duke of Savoy exchanged Sicily for Sardinia, becoming King of Sardinia while retaining Piedmont",
+        "population_affected": 3000000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1861,
+        "region": "Italian peninsula",
+        "change_type": "UNIFICATION",
+        "description": "Kingdom of Sardinia absorbed all other Italian states to form the Kingdom of Italy under Victor Emmanuel II",
+        "population_affected": 22000000,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Smith, Denis Mack. Italy: A Modern History. University of Michigan Press, 1997",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Woolf, Stuart. A History of Italy 1700-1860: The Social Constraints of Political Change. Routledge, 1979",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Regno di Napoli",
+    "name_original_lang": "it",
+    "entity_type": "kingdom",
+    "year_start": 1282,
+    "year_end": 1816,
+    "capital_name": "Napoli",
+    "capital_lat": 40.8518,
+    "capital_lon": 14.2681,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            13.5,
+            42.5
+          ],
+          [
+            14.0,
+            42.8
+          ],
+          [
+            15.0,
+            42.2
+          ],
+          [
+            16.0,
+            41.8
+          ],
+          [
+            16.5,
+            41.2
+          ],
+          [
+            17.0,
+            40.5
+          ],
+          [
+            18.5,
+            40.0
+          ],
+          [
+            18.5,
+            39.5
+          ],
+          [
+            17.0,
+            39.0
+          ],
+          [
+            16.5,
+            38.5
+          ],
+          [
+            16.0,
+            38.0
+          ],
+          [
+            15.6,
+            38.0
+          ],
+          [
+            15.5,
+            38.5
+          ],
+          [
+            15.0,
+            39.0
+          ],
+          [
+            14.5,
+            39.5
+          ],
+          [
+            14.0,
+            40.0
+          ],
+          [
+            13.5,
+            40.5
+          ],
+          [
+            13.2,
+            41.2
+          ],
+          [
+            13.0,
+            41.8
+          ],
+          [
+            13.5,
+            42.5
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Italian name used as primary. ETHICS-002: The Kingdom of Naples was ruled by foreign dynasties for most of its existence (Angevin French, Aragonese Spanish, Habsburg Spanish, Bourbon). Local populations were subjected to feudal exploitation under absentee foreign rulers. The transition from Angevin to Aragonese rule in 1442 was accomplished by military conquest. ETHICS-003: The kingdom's end through merger into the Two Sicilies (1816) erased a distinct political identity.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Naples",
+        "lang": "en",
+        "period_start": 1282,
+        "period_end": 1816,
+        "context": "Standard English name",
+        "source": "Ferroni, Giulio. Storia della letteratura italiana (1991)"
+      },
+      {
+        "name": "Regnum Neapolitanum",
+        "lang": "la",
+        "period_start": 1282,
+        "period_end": 1816,
+        "context": "Latin diplomatic name used in papal and imperial documents",
+        "source": "Ferroni, Giulio. Storia della letteratura italiana (1991)"
+      },
+      {
+        "name": "Reino de Napoles",
+        "lang": "es",
+        "period_start": 1442,
+        "period_end": 1707,
+        "context": "Spanish name during Aragonese and Habsburg rule",
+        "source": "Ferroni, Giulio. Storia della letteratura italiana (1991)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1282,
+        "region": "Southern Italian peninsula",
+        "change_type": "SEPARATION",
+        "description": "Following the Sicilian Vespers revolt, Sicily broke away from Angevin rule; the mainland kingdom became distinct as the Kingdom of Naples",
+        "population_affected": 2000000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1816,
+        "region": "Naples and Sicily",
+        "change_type": "UNIFICATION",
+        "description": "The Congress of Vienna led to the formal merger of the kingdoms of Naples and Sicily into the Kingdom of the Two Sicilies under the Bourbon dynasty",
+        "population_affected": 6000000,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Ferroni, Giulio. Storia della letteratura italiana: Il Cinquecento e il Seicento. Einaudi, 1991",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Galasso, Giuseppe. Il Regno di Napoli: Il Mezzogiorno angioino e aragonese. UTET, 1992",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Nafarroako Erresuma",
+    "name_original_lang": "eu",
+    "entity_type": "kingdom",
+    "year_start": 824,
+    "year_end": 1620,
+    "capital_name": "Irunea",
+    "capital_lat": 42.8169,
+    "capital_lon": -1.6432,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -2.5,
+            43.3
+          ],
+          [
+            -1.8,
+            43.4
+          ],
+          [
+            -1.0,
+            43.3
+          ],
+          [
+            -0.5,
+            43.0
+          ],
+          [
+            -0.3,
+            42.7
+          ],
+          [
+            -0.5,
+            42.4
+          ],
+          [
+            -1.0,
+            42.2
+          ],
+          [
+            -1.5,
+            42.0
+          ],
+          [
+            -2.2,
+            42.3
+          ],
+          [
+            -2.5,
+            42.6
+          ],
+          [
+            -2.7,
+            43.0
+          ],
+          [
+            -2.5,
+            43.3
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Basque name Nafarroako Erresuma used as primary because the kingdom was founded by and identified with the Basque-speaking population. The Spanish name 'Reino de Navarra' reflects the Castilian perspective. ETHICS-002: The 1512 conquest of Upper Navarre by Ferdinand of Aragon was a forcible annexation of a sovereign state. Lower Navarre retained nominal independence until absorbed by France in 1620. The Basque cultural and linguistic identity was progressively marginalized under both Spanish and French rule.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Navarre",
+        "lang": "en",
+        "period_start": 824,
+        "period_end": 1620,
+        "context": "Standard English name",
+        "source": "Collins, Roger. The Basques (1990)"
+      },
+      {
+        "name": "Reino de Navarra",
+        "lang": "es",
+        "period_start": 824,
+        "period_end": 1620,
+        "context": "Castilian Spanish name",
+        "source": "Lacarra, Jose Maria. Historia politica del reino de Navarra (1972)"
+      },
+      {
+        "name": "Royaume de Navarre",
+        "lang": "fr",
+        "period_start": 824,
+        "period_end": 1620,
+        "context": "French name, especially for Lower Navarre under French sovereignty",
+        "source": "Lacarra, Jose Maria. Historia politica del reino de Navarra (1972)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 824,
+        "region": "Western Pyrenees",
+        "change_type": "INDEPENDENCE",
+        "description": "Inigo Arista established an independent Basque kingdom in the Pyrenean region, resisting both Frankish and Umayyad authority",
+        "population_affected": 100000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1512,
+        "region": "Upper Navarre (south of the Pyrenees)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ferdinand of Aragon conquered Upper Navarre, forcibly annexing the majority of the kingdom to the Crown of Castile",
+        "population_affected": 150000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1620,
+        "region": "Lower Navarre (north of the Pyrenees)",
+        "change_type": "ABSORPTION",
+        "description": "Louis XIII formally merged the Crown of Navarre with the Crown of France, ending the last vestige of Navarrese sovereignty",
+        "population_affected": 50000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Collins, Roger. The Basques. Blackwell, 1990",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Lacarra, Jose Maria. Historia politica del reino de Navarra, desde sus origenes hasta su incorporacion a Castilla. Caja de Ahorros de Navarra, 1972",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Comtats Catalans",
+    "name_original_lang": "ca",
+    "entity_type": "confederation",
+    "year_start": 801,
+    "year_end": 1162,
+    "capital_name": "Barcelona",
+    "capital_lat": 41.3874,
+    "capital_lon": 2.1686,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            0.5,
+            42.8
+          ],
+          [
+            1.5,
+            42.9
+          ],
+          [
+            2.5,
+            42.5
+          ],
+          [
+            3.2,
+            42.0
+          ],
+          [
+            3.3,
+            41.5
+          ],
+          [
+            3.0,
+            41.2
+          ],
+          [
+            2.5,
+            41.0
+          ],
+          [
+            1.5,
+            41.0
+          ],
+          [
+            0.8,
+            41.2
+          ],
+          [
+            0.3,
+            41.8
+          ],
+          [
+            0.2,
+            42.3
+          ],
+          [
+            0.5,
+            42.8
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Catalan name used as primary because the counties were Catalan-speaking and identified as such. ETHICS-002: The Catalan Counties emerged from the Frankish Marca Hispanica, gradually gaining de facto independence. Their union with the Kingdom of Aragon in 1162 through dynastic marriage is debated: Catalan historians emphasize it as a union of equals, while some Aragonese and Spanish historians frame it as absorption. The distinct Catalan identity and institutions (Corts, Generalitat) persisted within the Crown of Aragon.",
+    "name_variants": [
+      {
+        "name": "Catalan Counties",
+        "lang": "en",
+        "period_start": 801,
+        "period_end": 1162,
+        "context": "Standard English historiographic name",
+        "source": "Bisson, Thomas N. The Medieval Crown of Aragon (1986)"
+      },
+      {
+        "name": "Condados Catalanes",
+        "lang": "es",
+        "period_start": 801,
+        "period_end": 1162,
+        "context": "Castilian Spanish name",
+        "source": "Salrach, Josep Maria. El proces de formacio nacional de Catalunya (1978)"
+      },
+      {
+        "name": "Marca Hispanica",
+        "lang": "la",
+        "period_start": 801,
+        "period_end": 988,
+        "context": "Frankish Latin name for the early period when the counties were frontier territories of the Carolingian Empire",
+        "source": "Lewis, Archibald. The Development of Southern French and Catalan Society (1965)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 801,
+        "region": "Barcelona and Pyrenean foothills",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Frankish forces under Louis the Pious captured Barcelona from the Umayyad Emirate, establishing the Marca Hispanica as a buffer zone",
+        "population_affected": 100000,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1162,
+        "region": "Catalonia",
+        "change_type": "DYNASTIC_UNION",
+        "description": "Count Ramon Berenguer IV's son Alfonso inherited both the County of Barcelona and the Kingdom of Aragon, forming the Crown of Aragon while Catalonia retained its distinct laws and institutions",
+        "population_affected": 500000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Bisson, Thomas N. The Medieval Crown of Aragon: A Short History. Oxford University Press, 1986",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Salrach, Josep Maria. El proces de formacio nacional de Catalunya. Edicions 62, 1978",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Suomen suuriruhtinaskunta",
+    "name_original_lang": "fi",
+    "entity_type": "duchy",
+    "year_start": 1809,
+    "year_end": 1917,
+    "capital_name": "Helsinki",
+    "capital_lat": 60.1699,
+    "capital_lon": 24.9384,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            20.5,
+            60.0
+          ],
+          [
+            21.5,
+            59.8
+          ],
+          [
+            23.0,
+            59.8
+          ],
+          [
+            25.0,
+            60.0
+          ],
+          [
+            27.0,
+            60.5
+          ],
+          [
+            29.5,
+            61.5
+          ],
+          [
+            31.5,
+            63.0
+          ],
+          [
+            30.0,
+            65.0
+          ],
+          [
+            29.0,
+            67.0
+          ],
+          [
+            28.0,
+            69.0
+          ],
+          [
+            26.0,
+            70.0
+          ],
+          [
+            24.0,
+            69.5
+          ],
+          [
+            21.0,
+            68.5
+          ],
+          [
+            20.0,
+            66.0
+          ],
+          [
+            20.0,
+            63.5
+          ],
+          [
+            20.0,
+            61.5
+          ],
+          [
+            20.5,
+            60.0
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Finnish name used as primary. The Swedish name Storfurstendoet Finland reflects the Swedish-speaking minority's perspective and the legacy of centuries of Swedish rule prior to Russian acquisition. ETHICS-002: Finland was transferred from Sweden to Russia by military conquest (Treaty of Fredrikshamn 1809) without consulting the Finnish population. However, the Grand Duchy enjoyed considerable autonomy within the Russian Empire, and Finnish national identity crystallized during this period. Russian Russification policies in the late 19th century suppressed Finnish autonomy.",
+    "name_variants": [
+      {
+        "name": "Grand Duchy of Finland",
+        "lang": "en",
+        "period_start": 1809,
+        "period_end": 1917,
+        "context": "Standard English name",
+        "source": "Jutikkala, Eino. A History of Finland (2003)"
+      },
+      {
+        "name": "Storfurstendoet Finland",
+        "lang": "sv",
+        "period_start": 1809,
+        "period_end": 1917,
+        "context": "Swedish-language name; Swedish was the administrative language until Finnish gained equal status in 1863",
+        "source": "Jutikkala, Eino. A History of Finland (2003)"
+      },
+      {
+        "name": "Velikoye knyazhestvo Finlyandskoye",
+        "lang": "ru",
+        "period_start": 1809,
+        "period_end": 1917,
+        "context": "Russian name; the Grand Duchy was part of the Russian Empire",
+        "source": "Kirby, David. A Concise History of Finland (2006)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1809,
+        "region": "Finland",
+        "change_type": "CESSION_FORCED",
+        "description": "Treaty of Fredrikshamn: Sweden ceded Finland to Russia following military defeat in the Finnish War. The Finnish population was not consulted",
+        "population_affected": 900000,
+        "confidence_score": 0.95
+      },
+      {
+        "year": 1917,
+        "region": "Finland",
+        "change_type": "INDEPENDENCE",
+        "description": "Finland declared independence from Russia on 6 December 1917, taking advantage of the Russian Revolution",
+        "population_affected": 3100000,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Jutikkala, Eino & Pirinen, Kauko. A History of Finland. WS Bookwell, 2003",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Kirby, David. A Concise History of Finland. Cambridge University Press, 2006",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Staat des Deutschen Ordens",
+    "name_original_lang": "de",
+    "entity_type": "confederation",
+    "year_start": 1224,
+    "year_end": 1525,
+    "capital_name": "Marienburg",
+    "capital_lat": 54.0395,
+    "capital_lon": 19.0283,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            18.5,
+            54.8
+          ],
+          [
+            19.5,
+            55.0
+          ],
+          [
+            20.5,
+            55.5
+          ],
+          [
+            21.5,
+            55.8
+          ],
+          [
+            22.5,
+            55.5
+          ],
+          [
+            22.0,
+            54.5
+          ],
+          [
+            21.5,
+            53.8
+          ],
+          [
+            20.5,
+            53.5
+          ],
+          [
+            19.5,
+            53.8
+          ],
+          [
+            18.5,
+            54.2
+          ],
+          [
+            18.5,
+            54.8
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-002: The Teutonic Order's state was established through the systematic military conquest and forced Christianization of the Baltic Prussian (Old Prussian), Lithuanian, and Latvian populations. The Old Prussians were effectively exterminated as a distinct people -- their language went extinct by the 17th century. This represents one of medieval Europe's most complete cultural and demographic erasures. ETHICS-001: German name used as primary because the Order operated in German. The Polish name Panstwo Zakonu Krzyzackiego reflects the perspective of Poland-Lithuania, which fought prolonged wars against the Order.",
+    "name_variants": [
+      {
+        "name": "Teutonic Order State",
+        "lang": "en",
+        "period_start": 1224,
+        "period_end": 1525,
+        "context": "Standard English name",
+        "source": "Urban, William. The Teutonic Knights: A Military History (2003)"
+      },
+      {
+        "name": "Panstwo Zakonu Krzyzackiego",
+        "lang": "pl",
+        "period_start": 1224,
+        "period_end": 1525,
+        "context": "Polish name; Poland fought major wars against the Order including the Battle of Grunwald (1410)",
+        "source": "Christiansen, Eric. The Northern Crusades (1997)"
+      },
+      {
+        "name": "Ordensland Preussen",
+        "lang": "de",
+        "period_start": 1224,
+        "period_end": 1525,
+        "context": "Alternate German name emphasizing the Prussian territory",
+        "source": "Urban, William. The Teutonic Knights (2003)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1224,
+        "region": "Prussia (Baltic)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "The Teutonic Order began the systematic conquest and forced Christianization of Old Prussian lands, leading to the near-complete destruction of the indigenous Baltic Prussian population and culture",
+        "population_affected": 200000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1525,
+        "region": "Prussia",
+        "change_type": "SECULARIZATION",
+        "description": "Grand Master Albert of Brandenburg-Ansbach secularized the Order's state, converting to Lutheranism and creating the Duchy of Prussia as a Polish fief",
+        "population_affected": 400000,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Urban, William. The Teutonic Knights: A Military History. Greenhill Books, 2003",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Christiansen, Eric. The Northern Crusades. Penguin, 1997",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Livonijas konfederacija",
+    "name_original_lang": "lv",
+    "entity_type": "confederation",
+    "year_start": 1228,
+    "year_end": 1561,
+    "capital_name": "Riga",
+    "capital_lat": 56.9496,
+    "capital_lon": 24.1052,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            21.0,
+            57.5
+          ],
+          [
+            22.0,
+            58.0
+          ],
+          [
+            24.0,
+            58.5
+          ],
+          [
+            26.0,
+            59.0
+          ],
+          [
+            28.0,
+            58.5
+          ],
+          [
+            28.0,
+            57.5
+          ],
+          [
+            27.5,
+            56.5
+          ],
+          [
+            26.0,
+            56.0
+          ],
+          [
+            24.0,
+            55.8
+          ],
+          [
+            22.0,
+            56.5
+          ],
+          [
+            21.0,
+            57.0
+          ],
+          [
+            21.0,
+            57.5
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-002: The Livonian Confederation was established through the military conquest and forced Christianization of the indigenous Latvian and Estonian populations by German crusading orders. The native Baltic and Finnic peoples were subjected to serfdom under a German-speaking ruling class. This German Baltic feudal system persisted for centuries and created deep social stratification along ethnic lines. ETHICS-001: Latvian name used as primary because Riga was the capital and the territory corresponds largely to modern Latvia and Estonia.",
+    "name_variants": [
+      {
+        "name": "Livonian Confederation",
+        "lang": "en",
+        "period_start": 1228,
+        "period_end": 1561,
+        "context": "Standard English name",
+        "source": "Christiansen, Eric. The Northern Crusades (1997)"
+      },
+      {
+        "name": "Livlandische Konfoderation",
+        "lang": "de",
+        "period_start": 1228,
+        "period_end": 1561,
+        "context": "German name; the ruling class was German-speaking",
+        "source": "Christiansen, Eric. The Northern Crusades (1997)"
+      },
+      {
+        "name": "Liivimaa",
+        "lang": "et",
+        "period_start": 1228,
+        "period_end": 1561,
+        "context": "Estonian name for Livonia",
+        "source": "Raun, Toivo. Estonia and the Estonians (2002)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1228,
+        "region": "Livonia (modern Latvia and Estonia)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "German crusading orders, particularly the Livonian Brothers of the Sword, completed the military conquest of Latvian and Estonian territories, imposing Christianity and German feudal rule on the indigenous population",
+        "population_affected": 300000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1561,
+        "region": "Livonia",
+        "change_type": "DISSOLUTION",
+        "description": "The Livonian War led to the dissolution of the Confederation. Territories were partitioned between Poland-Lithuania, Sweden, and Denmark, ending the German-dominated crusader state",
+        "population_affected": 500000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Christiansen, Eric. The Northern Crusades. Penguin, 1997",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Raun, Toivo. Estonia and the Estonians. Hoover Institution Press, 2002",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Sakartvelos samepo",
+    "name_original_lang": "ka",
+    "entity_type": "kingdom",
+    "year_start": 1008,
+    "year_end": 1490,
+    "capital_name": "Tbilisi",
+    "capital_lat": 41.7151,
+    "capital_lon": 44.8271,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            40.0,
+            43.5
+          ],
+          [
+            41.0,
+            43.8
+          ],
+          [
+            42.5,
+            43.5
+          ],
+          [
+            44.0,
+            42.5
+          ],
+          [
+            46.0,
+            42.0
+          ],
+          [
+            46.5,
+            41.5
+          ],
+          [
+            46.0,
+            41.0
+          ],
+          [
+            44.5,
+            40.5
+          ],
+          [
+            43.0,
+            40.8
+          ],
+          [
+            41.5,
+            41.0
+          ],
+          [
+            40.5,
+            41.5
+          ],
+          [
+            39.8,
+            42.0
+          ],
+          [
+            39.5,
+            42.8
+          ],
+          [
+            40.0,
+            43.5
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Georgian-language name used as primary. ETHICS-002: The Kingdom of Georgia at its height under David IV and Queen Tamar represented a multicultural state including Armenian, Azerbaijani, and Ossetian populations. Georgian historiography celebrates this as a golden age, but the perspectives of non-Georgian populations within the kingdom deserve representation. The kingdom's fragmentation followed devastating Mongol and Timurid invasions that caused massive civilian casualties.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Georgia",
+        "lang": "en",
+        "period_start": 1008,
+        "period_end": 1490,
+        "context": "Standard English name",
+        "source": "Suny, Ronald Grigor. The Making of the Georgian Nation (1994)"
+      },
+      {
+        "name": "Regnum Iberiae",
+        "lang": "la",
+        "period_start": 1008,
+        "period_end": 1490,
+        "context": "Medieval Latin name, using the classical designation 'Iberia' for the Caucasian kingdom",
+        "source": "Suny, Ronald Grigor. The Making of the Georgian Nation (1994)"
+      },
+      {
+        "name": "Gurjistan",
+        "lang": "fa",
+        "period_start": 1008,
+        "period_end": 1490,
+        "context": "Persian name; Georgia had extensive diplomatic and military interactions with Persian empires",
+        "source": "Rayfield, Donald. Edge of Empires: A History of Georgia (2012)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1008,
+        "region": "Georgia, including Abkhazia, Kakheti, and Kartli",
+        "change_type": "UNIFICATION",
+        "description": "Bagrat III unified the various Georgian kingdoms and principalities into a single Kingdom of Georgia",
+        "population_affected": 1000000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1490,
+        "region": "Georgia",
+        "change_type": "FRAGMENTATION",
+        "description": "The kingdom permanently fragmented into the kingdoms of Kartli, Kakheti, and Imereti, and the principalities of Samtskhe, Guria, Mingrelia, and Abkhazia, following centuries of Mongol and Timurid devastation",
+        "population_affected": 800000,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Suny, Ronald Grigor. The Making of the Georgian Nation. Indiana University Press, 1994",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Rayfield, Donald. Edge of Empires: A History of Georgia. Reaktion Books, 2012",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Regnum Francorum",
+    "name_original_lang": "la",
+    "entity_type": "kingdom",
+    "year_start": 481,
+    "year_end": 751,
+    "capital_name": "Lutetia",
+    "capital_lat": 48.8566,
+    "capital_lon": 2.3522,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -4.0,
+            48.5
+          ],
+          [
+            -1.0,
+            49.5
+          ],
+          [
+            2.0,
+            51.0
+          ],
+          [
+            4.0,
+            51.5
+          ],
+          [
+            6.0,
+            50.5
+          ],
+          [
+            7.5,
+            49.0
+          ],
+          [
+            8.0,
+            47.5
+          ],
+          [
+            7.0,
+            46.0
+          ],
+          [
+            5.0,
+            45.0
+          ],
+          [
+            3.0,
+            44.0
+          ],
+          [
+            1.0,
+            43.5
+          ],
+          [
+            -1.0,
+            43.5
+          ],
+          [
+            -1.5,
+            44.5
+          ],
+          [
+            -2.0,
+            46.0
+          ],
+          [
+            -3.5,
+            47.5
+          ],
+          [
+            -4.0,
+            48.5
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Latin name used as primary because Merovingian administration used Latin. The Frankish language (Old Franconian) was spoken by the ruling elite but left few written records. ETHICS-002: The Merovingian conquest of Gaul involved the forcible subjugation of Gallo-Roman, Burgundian, Visigothic, and Alemannic populations. Clovis I's conversion to Christianity was both a religious and political act that facilitated the absorption of Gallo-Roman elites but also imposed Christianity on pagan Frankish populations.",
+    "name_variants": [
+      {
+        "name": "Merovingian Kingdom",
+        "lang": "en",
+        "period_start": 481,
+        "period_end": 751,
+        "context": "Standard English historiographic name",
+        "source": "Wood, Ian. The Merovingian Kingdoms 450-751 (1994)"
+      },
+      {
+        "name": "Royaume des Francs",
+        "lang": "fr",
+        "period_start": 481,
+        "period_end": 751,
+        "context": "Modern French name",
+        "source": "Geary, Patrick. Before France and Germany (1988)"
+      },
+      {
+        "name": "Ryk der Franken",
+        "lang": "frk",
+        "period_start": 481,
+        "period_end": 751,
+        "context": "Reconstructed Old Franconian name",
+        "source": "Geary, Patrick. Before France and Germany (1988)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 481,
+        "region": "Northern Gaul",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Clovis I succeeded his father Childeric I as king of the Salian Franks, beginning the military conquest that would unite most of Gaul under Merovingian rule",
+        "population_affected": 500000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 751,
+        "region": "Francia",
+        "change_type": "DYNASTY_CHANGE",
+        "description": "Pepin the Short, with papal approval, deposed the last Merovingian king Childeric III and established the Carolingian dynasty, ending the Merovingian period",
+        "population_affected": 8000000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Wood, Ian. The Merovingian Kingdoms 450-751. Longman, 1994",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Geary, Patrick. Before France and Germany: The Creation and Transformation of the Merovingian World. Oxford University Press, 1988",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Kongeriget Danmark",
+    "name_original_lang": "da",
+    "entity_type": "kingdom",
+    "year_start": 800,
+    "year_end": 1397,
+    "capital_name": "Roskilde",
+    "capital_lat": 55.6415,
+    "capital_lon": 12.0803,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            8.0,
+            54.8
+          ],
+          [
+            8.5,
+            55.5
+          ],
+          [
+            9.5,
+            57.0
+          ],
+          [
+            10.5,
+            57.7
+          ],
+          [
+            12.0,
+            56.0
+          ],
+          [
+            12.8,
+            55.4
+          ],
+          [
+            13.0,
+            55.0
+          ],
+          [
+            12.5,
+            54.5
+          ],
+          [
+            11.0,
+            54.5
+          ],
+          [
+            9.5,
+            54.5
+          ],
+          [
+            8.0,
+            54.8
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Danish name used as primary. ETHICS-002: Viking-Age Denmark's expansion involved the military conquest and colonization of parts of England (Danelaw), Normandy, and Baltic territories. Viking raids caused massive destruction and enslavement across Western Europe. However, the period also involved significant cultural exchange and trade. Danish rule over the Wendish Slavic populations in southern Baltic involved forced Christianization and cultural suppression.",
+    "name_variants": [
+      {
+        "name": "Viking Age Denmark",
+        "lang": "en",
+        "period_start": 800,
+        "period_end": 1397,
+        "context": "English historiographic term emphasizing the early period",
+        "source": "Sawyer, Peter. The Oxford Illustrated History of the Vikings (1997)"
+      },
+      {
+        "name": "Danernes Rige",
+        "lang": "da",
+        "period_start": 800,
+        "period_end": 1397,
+        "context": "Old Danish form meaning 'Realm of the Danes'",
+        "source": "Sawyer, Peter. The Oxford Illustrated History of the Vikings (1997)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 800,
+        "region": "Jutland and the Danish islands",
+        "change_type": "CONSOLIDATION",
+        "description": "The Jelling dynasty consolidated control over the Danish territories, unifying Jutland, Zealand, and Scania into a coherent kingdom",
+        "population_affected": 500000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1397,
+        "region": "Denmark, Norway, Sweden",
+        "change_type": "DYNASTIC_UNION",
+        "description": "The Kalmar Union united Denmark with Norway and Sweden under Queen Margaret I, ending Denmark's existence as a fully independent kingdom",
+        "population_affected": 1000000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Sawyer, Peter. The Oxford Illustrated History of the Vikings. Oxford University Press, 1997",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Roesdahl, Else. The Vikings. Penguin, 1998",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Kalmarunionen",
+    "name_original_lang": "da",
+    "entity_type": "confederation",
+    "year_start": 1397,
+    "year_end": 1523,
+    "capital_name": "Kobenhavn",
+    "capital_lat": 55.6761,
+    "capital_lon": 12.5683,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            5.0,
+            57.5
+          ],
+          [
+            8.0,
+            54.8
+          ],
+          [
+            9.5,
+            54.5
+          ],
+          [
+            12.0,
+            55.5
+          ],
+          [
+            14.0,
+            55.0
+          ],
+          [
+            16.0,
+            55.5
+          ],
+          [
+            18.5,
+            56.5
+          ],
+          [
+            20.0,
+            58.5
+          ],
+          [
+            18.5,
+            60.0
+          ],
+          [
+            20.0,
+            63.0
+          ],
+          [
+            18.5,
+            66.0
+          ],
+          [
+            20.0,
+            69.0
+          ],
+          [
+            24.0,
+            69.5
+          ],
+          [
+            28.0,
+            70.0
+          ],
+          [
+            30.0,
+            70.0
+          ],
+          [
+            30.0,
+            68.0
+          ],
+          [
+            28.0,
+            66.0
+          ],
+          [
+            28.0,
+            63.0
+          ],
+          [
+            26.0,
+            61.0
+          ],
+          [
+            22.0,
+            59.5
+          ],
+          [
+            18.0,
+            59.5
+          ],
+          [
+            15.0,
+            60.0
+          ],
+          [
+            12.0,
+            58.5
+          ],
+          [
+            10.0,
+            58.0
+          ],
+          [
+            7.0,
+            58.0
+          ],
+          [
+            5.0,
+            60.0
+          ],
+          [
+            5.0,
+            62.0
+          ],
+          [
+            6.0,
+            65.0
+          ],
+          [
+            8.0,
+            68.0
+          ],
+          [
+            12.0,
+            70.0
+          ],
+          [
+            16.0,
+            70.5
+          ],
+          [
+            20.0,
+            70.0
+          ],
+          [
+            15.0,
+            68.0
+          ],
+          [
+            10.0,
+            65.0
+          ],
+          [
+            7.0,
+            62.0
+          ],
+          [
+            5.0,
+            59.0
+          ],
+          [
+            5.0,
+            57.5
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Danish name used as primary because Denmark was the dominant partner. Swedish and Norwegian names (Kalmarunionen, Kalmarunionen) are identical. ETHICS-002: The union was frequently resisted by the Swedish nobility, who viewed it as Danish hegemony. The Stockholm Bloodbath of 1520, in which Christian II of Denmark executed approximately 80 Swedish nobles, was a defining act of violence that precipitated Sweden's final secession. Norwegian autonomy was progressively eroded under the union, and Norway became effectively subordinate to Denmark.",
+    "name_variants": [
+      {
+        "name": "Kalmar Union",
+        "lang": "en",
+        "period_start": 1397,
+        "period_end": 1523,
+        "context": "Standard English name",
+        "source": "Gustafsson, Harald. The Conglomerate State (1998)"
+      },
+      {
+        "name": "Kalmarunionen",
+        "lang": "sv",
+        "period_start": 1397,
+        "period_end": 1523,
+        "context": "Swedish name; Sweden was the most reluctant member and repeatedly rebelled",
+        "source": "Gustafsson, Harald. The Conglomerate State (1998)"
+      },
+      {
+        "name": "Kalmarunionen",
+        "lang": "nb",
+        "period_start": 1397,
+        "period_end": 1523,
+        "context": "Norwegian name; Norway's autonomy was diminished under the union",
+        "source": "Imsen, Steinar. The Union of Calmar (2003)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1397,
+        "region": "Denmark, Norway, and Sweden",
+        "change_type": "DYNASTIC_UNION",
+        "description": "Queen Margaret I of Denmark united the three Scandinavian kingdoms under the Treaty of Kalmar, creating the largest state in European history by area at that time",
+        "population_affected": 3000000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1523,
+        "region": "Sweden",
+        "change_type": "SECESSION",
+        "description": "Gustav Vasa led a successful Swedish rebellion against Danish rule, dissolving the union. The Stockholm Bloodbath of 1520 had catalyzed Swedish resistance",
+        "population_affected": 1000000,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Gustafsson, Harald. The Conglomerate State: A Perspective on State Formation in Early Modern Europe. Scandinavian Journal of History, 1998",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Imsen, Steinar (ed.). The Union of Calmar and After: Studies in the Scandinavian Unions. Scandia, 2003",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Kraljevina Hrvatska",
+    "name_original_lang": "hr",
+    "entity_type": "kingdom",
+    "year_start": 925,
+    "year_end": 1102,
+    "capital_name": "Biograd na Moru",
+    "capital_lat": 43.9416,
+    "capital_lon": 15.4469,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            13.5,
+            45.5
+          ],
+          [
+            14.5,
+            45.8
+          ],
+          [
+            15.5,
+            45.5
+          ],
+          [
+            16.5,
+            45.2
+          ],
+          [
+            17.5,
+            45.0
+          ],
+          [
+            18.0,
+            44.5
+          ],
+          [
+            17.5,
+            43.5
+          ],
+          [
+            16.5,
+            43.0
+          ],
+          [
+            15.5,
+            43.5
+          ],
+          [
+            14.5,
+            44.0
+          ],
+          [
+            13.5,
+            44.5
+          ],
+          [
+            13.5,
+            45.5
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Croatian name used as primary. ETHICS-002: The end of the medieval Croatian kingdom in 1102 through the Pacta Conventa with Hungary is a contested historical event. Croatian historians generally view it as a personal union preserving Croatian autonomy, while some Hungarian historians frame it as a conquest or absorption. The nature of this agreement has deep implications for Croatian national identity and the historical legitimacy of Croatian statehood. Both interpretations are documented here.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Croatia",
+        "lang": "en",
+        "period_start": 925,
+        "period_end": 1102,
+        "context": "Standard English name",
+        "source": "Fine, John V.A. The Early Medieval Balkans (1991)"
+      },
+      {
+        "name": "Regnum Croatiae",
+        "lang": "la",
+        "period_start": 925,
+        "period_end": 1102,
+        "context": "Latin name used in papal and royal documents",
+        "source": "Fine, John V.A. The Early Medieval Balkans (1991)"
+      },
+      {
+        "name": "Horvat Kiralysag",
+        "lang": "hu",
+        "period_start": 925,
+        "period_end": 1102,
+        "context": "Hungarian name; Hungary became linked to Croatia through the Pacta Conventa",
+        "source": "Goldstein, Ivo. Croatia: A History (1999)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 925,
+        "region": "Dalmatian coast and Croatian hinterland",
+        "change_type": "ELEVATION",
+        "description": "Tomislav was recognized as the first King of Croatia, unifying the Croatian principalities and receiving recognition from Pope John X",
+        "population_affected": 400000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1102,
+        "region": "Croatia",
+        "change_type": "DYNASTIC_UNION",
+        "description": "Following the death of the last native Croatian king Petar Svacic, the Pacta Conventa established a personal union with Hungary under King Coloman. The exact terms and nature of this agreement are historically disputed",
+        "population_affected": 500000,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Fine, John V.A. The Early Medieval Balkans: A Critical Survey from the Sixth to the Late Twelfth Century. University of Michigan Press, 1991",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Goldstein, Ivo. Croatia: A History. McGill-Queen's University Press, 1999",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Vtoro Balgarsko Tsarstvo",
+    "name_original_lang": "bg",
+    "entity_type": "empire",
+    "year_start": 1185,
+    "year_end": 1396,
+    "capital_name": "Tarnovo",
+    "capital_lat": 43.0757,
+    "capital_lon": 25.6172,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            22.0,
+            44.5
+          ],
+          [
+            23.5,
+            44.2
+          ],
+          [
+            25.0,
+            44.5
+          ],
+          [
+            27.0,
+            44.0
+          ],
+          [
+            28.5,
+            43.5
+          ],
+          [
+            28.5,
+            42.5
+          ],
+          [
+            27.5,
+            41.5
+          ],
+          [
+            26.0,
+            41.5
+          ],
+          [
+            24.5,
+            41.0
+          ],
+          [
+            23.0,
+            41.5
+          ],
+          [
+            22.0,
+            42.0
+          ],
+          [
+            21.5,
+            42.5
+          ],
+          [
+            21.5,
+            43.5
+          ],
+          [
+            22.0,
+            44.5
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Bulgarian name used as primary (transliterated from Cyrillic). ETHICS-002: The Second Bulgarian Empire's establishment in 1185 was a revolt against Byzantine imperial rule. Under Kaloyan and Ivan Asen II, Bulgaria became the dominant Balkan power. The empire's territory included significant Vlach, Greek, and Serbian populations. The empire's destruction by the Ottoman Turks in 1396 led to nearly five centuries of Ottoman domination that profoundly shaped Bulgarian national consciousness.",
+    "name_variants": [
+      {
+        "name": "Second Bulgarian Empire",
+        "lang": "en",
+        "period_start": 1185,
+        "period_end": 1396,
+        "context": "Standard English historiographic name",
+        "source": "Fine, John V.A. The Late Medieval Balkans (1994)"
+      },
+      {
+        "name": "Tsarstvo Balgarsko",
+        "lang": "bg",
+        "period_start": 1185,
+        "period_end": 1396,
+        "context": "Alternate Bulgarian form",
+        "source": "Fine, John V.A. The Late Medieval Balkans (1994)"
+      },
+      {
+        "name": "Voulgarikon Vasileion",
+        "lang": "el",
+        "period_start": 1185,
+        "period_end": 1396,
+        "context": "Byzantine Greek name; Byzantium viewed Bulgaria as a rival and threat",
+        "source": "Curta, Florin. Southeastern Europe in the Middle Ages (2006)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1185,
+        "region": "Moesia and Thrace",
+        "change_type": "REVOLT",
+        "description": "The Asen brothers Peter and Asen led a successful revolt against Byzantine rule, re-establishing an independent Bulgarian state with its capital at Tarnovo",
+        "population_affected": 1000000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1396,
+        "region": "Bulgaria",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ottoman forces under Sultan Bayezid I conquered the Bulgarian capital Nikopol and the remaining Bulgarian territories, ending the empire and beginning nearly five centuries of Ottoman rule",
+        "population_affected": 1500000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Fine, John V.A. The Late Medieval Balkans: A Critical Survey from the Late Twelfth Century to the Ottoman Conquest. University of Michigan Press, 1994",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Curta, Florin. Southeastern Europe in the Middle Ages, 500-1250. Cambridge University Press, 2006",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Srpsko Carstvo",
+    "name_original_lang": "sr",
+    "entity_type": "empire",
+    "year_start": 1346,
+    "year_end": 1371,
+    "capital_name": "Skopje",
+    "capital_lat": 41.9981,
+    "capital_lon": 21.4254,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            19.0,
+            44.5
+          ],
+          [
+            20.5,
+            44.8
+          ],
+          [
+            22.0,
+            44.0
+          ],
+          [
+            23.5,
+            42.5
+          ],
+          [
+            24.0,
+            41.5
+          ],
+          [
+            24.5,
+            40.5
+          ],
+          [
+            24.0,
+            39.5
+          ],
+          [
+            22.5,
+            39.0
+          ],
+          [
+            21.0,
+            39.5
+          ],
+          [
+            20.0,
+            40.0
+          ],
+          [
+            19.0,
+            40.5
+          ],
+          [
+            18.5,
+            41.5
+          ],
+          [
+            18.5,
+            42.5
+          ],
+          [
+            19.0,
+            43.5
+          ],
+          [
+            19.0,
+            44.5
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Serbian name used as primary (transliterated from Cyrillic). ETHICS-002: Stefan Dusan's empire was built through military conquest of Byzantine territories, incorporating large Greek, Albanian, Vlach, and Bulgarian populations under Serbian rule. The empire's claim to be the successor of Byzantium is a central element of Serbian national mythology. The Battle of Kosovo (1389), which occurred after the empire's dissolution, became the foundational myth of Serbian national identity, with significant implications for modern Balkan conflicts. ETHICS-003: The use of Skopje as the capital is contested; North Macedonian scholars emphasize the region's distinct identity from Serbia.",
+    "name_variants": [
+      {
+        "name": "Serbian Empire",
+        "lang": "en",
+        "period_start": 1346,
+        "period_end": 1371,
+        "context": "Standard English name, specifically the empire of Stefan Dusan",
+        "source": "Fine, John V.A. The Late Medieval Balkans (1994)"
+      },
+      {
+        "name": "Basileia ton Serbon",
+        "lang": "el",
+        "period_start": 1346,
+        "period_end": 1371,
+        "context": "Greek name; Dusan styled himself Emperor of the Serbs and Greeks",
+        "source": "Fine, John V.A. The Late Medieval Balkans (1994)"
+      },
+      {
+        "name": "Imperium Serborum et Graecorum",
+        "lang": "la",
+        "period_start": 1346,
+        "period_end": 1371,
+        "context": "Latin form of Dusan's full imperial title",
+        "source": "Soulis, George C. The Serbs and Byzantium (1984)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1346,
+        "region": "Serbia, Macedonia, Thessaly, Epirus",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Stefan Dusan proclaimed himself Emperor of the Serbs and Greeks at Skopje after conquering extensive Byzantine territories in Macedonia, Thessaly, and Epirus",
+        "population_affected": 2500000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1371,
+        "region": "Serbian Empire",
+        "change_type": "FRAGMENTATION",
+        "description": "Following the Battle of Maritsa, where Ottoman forces destroyed a Serbian army, the empire fragmented into competing feudal lordships that were gradually absorbed by the Ottoman Empire",
+        "population_affected": 2000000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Fine, John V.A. The Late Medieval Balkans: A Critical Survey from the Late Twelfth Century to the Ottoman Conquest. University of Michigan Press, 1994",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Soulis, George C. The Serbs and Byzantium during the Reign of Tsar Stephen Dusan. Dumbarton Oaks, 1984",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Despotaton tou Moreos",
+    "name_original_lang": "el",
+    "entity_type": "despotate",
+    "year_start": 1349,
+    "year_end": 1460,
+    "capital_name": "Mystras",
+    "capital_lat": 37.0756,
+    "capital_lon": 22.3674,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            21.5,
+            38.3
+          ],
+          [
+            22.0,
+            38.5
+          ],
+          [
+            22.8,
+            38.0
+          ],
+          [
+            23.0,
+            37.5
+          ],
+          [
+            23.2,
+            37.0
+          ],
+          [
+            22.8,
+            36.5
+          ],
+          [
+            22.0,
+            36.4
+          ],
+          [
+            21.3,
+            36.8
+          ],
+          [
+            21.0,
+            37.2
+          ],
+          [
+            21.0,
+            37.8
+          ],
+          [
+            21.5,
+            38.3
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Greek name used as primary. ETHICS-002: The Despotate of Morea was the last significant remnant of Byzantine civilization before Ottoman conquest. It represented a cultural renaissance in the Peloponnese, with Mystras becoming a center of late Byzantine art and philosophy (including Gemistus Pletho). The Ottoman conquest in 1460 ended the last Byzantine political entity and subjected the Greek population to Ottoman rule for nearly four centuries.",
+    "name_variants": [
+      {
+        "name": "Despotate of the Morea",
+        "lang": "en",
+        "period_start": 1349,
+        "period_end": 1460,
+        "context": "Standard English name",
+        "source": "Runciman, Steven. The Fall of Constantinople 1453 (1965)"
+      },
+      {
+        "name": "Despotatus Moreae",
+        "lang": "la",
+        "period_start": 1349,
+        "period_end": 1460,
+        "context": "Latin name used in Western European documents",
+        "source": "Runciman, Steven. The Fall of Constantinople 1453 (1965)"
+      },
+      {
+        "name": "Mora Despotlugu",
+        "lang": "tr",
+        "period_start": 1349,
+        "period_end": 1460,
+        "context": "Ottoman Turkish name",
+        "source": "Nicol, Donald. The Last Centuries of Byzantium (1993)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1349,
+        "region": "Peloponnese",
+        "change_type": "ESTABLISHMENT",
+        "description": "Emperor John VI Kantakouzenos established the Despotate of the Morea, appointing his son Manuel as despot of the Peloponnese under Byzantine imperial authority",
+        "population_affected": 300000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1460,
+        "region": "Peloponnese",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ottoman Sultan Mehmed II conquered the Despotate, ending the last Byzantine political entity seven years after the fall of Constantinople",
+        "population_affected": 250000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Runciman, Steven. The Fall of Constantinople 1453. Cambridge University Press, 1965",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Nicol, Donald. The Last Centuries of Byzantium, 1261-1453. Cambridge University Press, 1993",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Imperium Romaniae",
+    "name_original_lang": "la",
+    "entity_type": "empire",
+    "year_start": 1204,
+    "year_end": 1261,
+    "capital_name": "Constantinopolis",
+    "capital_lat": 41.0082,
+    "capital_lon": 28.9784,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            26.0,
+            41.5
+          ],
+          [
+            27.5,
+            41.8
+          ],
+          [
+            29.5,
+            41.5
+          ],
+          [
+            30.0,
+            41.0
+          ],
+          [
+            29.5,
+            40.5
+          ],
+          [
+            28.0,
+            40.0
+          ],
+          [
+            26.5,
+            40.0
+          ],
+          [
+            25.0,
+            40.5
+          ],
+          [
+            24.5,
+            41.0
+          ],
+          [
+            25.0,
+            41.5
+          ],
+          [
+            26.0,
+            41.5
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-002: The Latin Empire was established through the violent sack of Constantinople during the Fourth Crusade (1204), one of the most destructive events in medieval history. Western Crusaders, diverted from their stated goal of recapturing Jerusalem, looted and desecrated the greatest Christian city in the world. The massacre, rape, and pillage committed by Crusaders against fellow Christians was condemned by Pope Innocent III himself. Countless irreplaceable works of art, manuscripts, and relics were destroyed or stolen. This act permanently weakened Christendom's defense against Ottoman expansion. ETHICS-001: Latin name used as primary because the Crusader state operated in Latin and French.",
+    "name_variants": [
+      {
+        "name": "Latin Empire",
+        "lang": "en",
+        "period_start": 1204,
+        "period_end": 1261,
+        "context": "Standard English historiographic name",
+        "source": "Queller, Donald. The Fourth Crusade (1997)"
+      },
+      {
+        "name": "Empire latin de Constantinople",
+        "lang": "fr",
+        "period_start": 1204,
+        "period_end": 1261,
+        "context": "French name; the ruling elite was predominantly French-speaking",
+        "source": "Queller, Donald. The Fourth Crusade (1997)"
+      },
+      {
+        "name": "Latinikon Kratos",
+        "lang": "el",
+        "period_start": 1204,
+        "period_end": 1261,
+        "context": "Greek name used by Byzantine historians who viewed the Latin Empire as an illegitimate usurper",
+        "source": "Harris, Jonathan. Byzantium and the Crusades (2003)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1204,
+        "region": "Constantinople and Thrace",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "The Fourth Crusade sacked Constantinople, the greatest Christian city, establishing a Latin-ruled state on Byzantine territory. The sack involved mass murder, rape, and the destruction of irreplaceable cultural treasures",
+        "population_affected": 400000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1261,
+        "region": "Constantinople",
+        "change_type": "RECONQUEST",
+        "description": "Michael VIII Palaiologos of the Empire of Nicaea recaptured Constantinople, restoring Byzantine rule and ending the Latin Empire",
+        "population_affected": 350000,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Queller, Donald & Madden, Thomas. The Fourth Crusade: The Conquest of Constantinople. University of Pennsylvania Press, 1997",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Harris, Jonathan. Byzantium and the Crusades. Hambledon and London, 2003",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Autokratoria tis Trapezountas",
+    "name_original_lang": "el",
+    "entity_type": "empire",
+    "year_start": 1204,
+    "year_end": 1461,
+    "capital_name": "Trapezous",
+    "capital_lat": 41.0027,
+    "capital_lon": 39.7168,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            37.0,
+            41.5
+          ],
+          [
+            38.0,
+            41.8
+          ],
+          [
+            39.5,
+            41.5
+          ],
+          [
+            40.5,
+            41.3
+          ],
+          [
+            41.5,
+            41.0
+          ],
+          [
+            41.5,
+            40.8
+          ],
+          [
+            40.5,
+            40.5
+          ],
+          [
+            39.0,
+            40.5
+          ],
+          [
+            37.5,
+            40.8
+          ],
+          [
+            36.5,
+            41.0
+          ],
+          [
+            37.0,
+            41.5
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Greek name used as primary because the empire was a Greek-speaking successor state of Byzantium. ETHICS-002: The Empire of Trebizond was a multiethnic state including Pontic Greeks, Lazians, Armenians, and Turkic populations. Its fall in 1461 to Mehmed II led to the beginning of the gradual marginalization and eventual expulsion of the Pontic Greek population, culminating in the Greek genocide of 1914-1923 in which hundreds of thousands of Pontic Greeks were killed or expelled. The modern Turkish name Trabzon replaced the Greek Trapezous.",
+    "name_variants": [
+      {
+        "name": "Empire of Trebizond",
+        "lang": "en",
+        "period_start": 1204,
+        "period_end": 1461,
+        "context": "Standard English name",
+        "source": "Miller, William. Trebizond: The Last Greek Empire (1926)"
+      },
+      {
+        "name": "Trabzon Imparatorlugu",
+        "lang": "tr",
+        "period_start": 1204,
+        "period_end": 1461,
+        "context": "Turkish name; the region was later absorbed into the Ottoman Empire",
+        "source": "Bryer, Anthony. The Empire of Trebizond and the Pontos (1980)"
+      },
+      {
+        "name": "Imperium Trapezuntinum",
+        "lang": "la",
+        "period_start": 1204,
+        "period_end": 1461,
+        "context": "Latin name used in Western European documents",
+        "source": "Miller, William. Trebizond: The Last Greek Empire (1926)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1204,
+        "region": "Pontic coast of Anatolia",
+        "change_type": "INDEPENDENCE",
+        "description": "Following the Fourth Crusade's sack of Constantinople, Alexios I Komnenos established an independent Greek state on the southeastern Black Sea coast, claiming continuity with the Byzantine Empire",
+        "population_affected": 250000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1461,
+        "region": "Pontus",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Sultan Mehmed II conquered Trebizond, ending the last Greek-ruled successor state of the Roman Empire. The Pontic Greek population would face centuries of marginalization culminating in the genocide of 1914-1923",
+        "population_affected": 200000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Miller, William. Trebizond: The Last Greek Empire of the Byzantine Era. Society for Promoting Christian Knowledge, 1926",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Bryer, Anthony & Winfield, David. The Byzantine Monuments and Topography of the Pontos. Dumbarton Oaks, 1985",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Gothia",
+    "name_original_lang": "got",
+    "entity_type": "principality",
+    "year_start": 250,
+    "year_end": 1475,
+    "capital_name": "Doros",
+    "capital_lat": 44.5958,
+    "capital_lon": 33.7355,
+    "confidence_score": 0.6,
+    "status": "disputed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            33.3,
+            44.7
+          ],
+          [
+            33.8,
+            44.8
+          ],
+          [
+            34.3,
+            44.7
+          ],
+          [
+            34.5,
+            44.5
+          ],
+          [
+            34.3,
+            44.3
+          ],
+          [
+            33.8,
+            44.2
+          ],
+          [
+            33.3,
+            44.3
+          ],
+          [
+            33.1,
+            44.5
+          ],
+          [
+            33.3,
+            44.7
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Gothic name used as primary, though the entity used various names over its long existence. ETHICS-002: The Crimean Goths are one of history's most enigmatic and poorly documented peoples. Their continuous existence from the 3rd to the 15th century is attested but boundaries and political structures are uncertain. They represent a remarkable survival of a Germanic-speaking population in a region dominated by Turkic, Greek, and Slavic peoples. Their absorption by the Ottoman Empire after 1475 and eventual disappearance represents a cultural extinction. ETHICS-003: Confidence score is low due to limited primary sources and significant scholarly debate about the nature and extent of Gothic political authority in Crimea.",
+    "name_variants": [
+      {
+        "name": "Crimean Goths",
+        "lang": "en",
+        "period_start": 250,
+        "period_end": 1475,
+        "context": "Standard English historiographic name",
+        "source": "Vasiliev, Alexander. The Goths in the Crimea (1936)"
+      },
+      {
+        "name": "Principality of Theodoro",
+        "lang": "en",
+        "period_start": 1204,
+        "period_end": 1475,
+        "context": "Name for the late medieval Gothic principality in southwestern Crimea",
+        "source": "Vasiliev, Alexander. The Goths in the Crimea (1936)"
+      },
+      {
+        "name": "Knyazhestvo Feodoro",
+        "lang": "ru",
+        "period_start": 1204,
+        "period_end": 1475,
+        "context": "Russian name for the principality of Theodoro",
+        "source": "Gertsen, A.G. Fortress of Doros (2003)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 250,
+        "region": "Southwestern Crimea",
+        "change_type": "SETTLEMENT",
+        "description": "Gothic groups settled in Crimea as part of the broader Gothic migration period, establishing communities in the mountainous southwestern peninsula",
+        "population_affected": 50000,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1475,
+        "region": "Southwestern Crimea",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ottoman forces conquered the Principality of Theodoro, ending the last independent Gothic political entity. The Gothic population was gradually assimilated over the following centuries",
+        "population_affected": 30000,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Vasiliev, Alexander. The Goths in the Crimea. Medieval Academy of America, 1936",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Gertsen, A.G. & Mogarichev, Yu.M. Fortress Doros: Mangup. Krymuchpedgiz, 2003",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Halytsko-Volynske knyazivstvo",
+    "name_original_lang": "uk",
+    "entity_type": "kingdom",
+    "year_start": 1199,
+    "year_end": 1349,
+    "capital_name": "Halych",
+    "capital_lat": 49.1221,
+    "capital_lon": 24.7289,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            22.0,
+            51.5
+          ],
+          [
+            23.5,
+            52.0
+          ],
+          [
+            25.0,
+            52.5
+          ],
+          [
+            27.0,
+            52.0
+          ],
+          [
+            28.5,
+            51.0
+          ],
+          [
+            28.0,
+            50.0
+          ],
+          [
+            27.0,
+            49.0
+          ],
+          [
+            25.5,
+            48.5
+          ],
+          [
+            24.0,
+            48.5
+          ],
+          [
+            22.5,
+            49.0
+          ],
+          [
+            21.5,
+            50.0
+          ],
+          [
+            22.0,
+            51.0
+          ],
+          [
+            22.0,
+            51.5
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Ukrainian name used as primary because the kingdom's territory corresponds to western Ukraine and its population spoke an East Slavic language ancestral to Ukrainian. ETHICS-002: The kingdom is claimed by both Ukrainian and Polish historiography. Ukrainian scholars view it as a direct predecessor of Ukrainian statehood, while Polish historians emphasize the subsequent Polish conquest and integration. Russian historiography has often marginalized the kingdom's distinct identity. The kingdom's fall to Poland and Lithuania in 1349 led to centuries of Polish and later Austrian rule over its former territory. ETHICS-003: Daniel of Galicia received a crown from Pope Innocent IV in 1253, making it one of the few Rus' states to be recognized as a kingdom by Western Christendom.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Galicia-Volhynia",
+        "lang": "en",
+        "period_start": 1199,
+        "period_end": 1349,
+        "context": "Standard English name",
+        "source": "Plokhy, Serhii. The Gates of Europe: A History of Ukraine (2015)"
+      },
+      {
+        "name": "Halicko-Wlodzimierskie",
+        "lang": "pl",
+        "period_start": 1199,
+        "period_end": 1349,
+        "context": "Polish name; Poland eventually conquered and absorbed the territory",
+        "source": "Plokhy, Serhii. The Origins of the Slavic Nations (2006)"
+      },
+      {
+        "name": "Regnum Galiciae et Lodomeriae",
+        "lang": "la",
+        "period_start": 1253,
+        "period_end": 1349,
+        "context": "Latin name used after Daniel of Galicia received a royal crown from Pope Innocent IV",
+        "source": "Dimnik, Martin. The Dynasty of Chernigov (2003)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1199,
+        "region": "Galicia and Volhynia",
+        "change_type": "UNIFICATION",
+        "description": "Roman the Great united the principalities of Galicia and Volhynia into a single powerful state, creating the strongest successor state of Kievan Rus' in the west",
+        "population_affected": 500000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1349,
+        "region": "Galicia and Volhynia",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Casimir III of Poland conquered Galicia while Lithuania absorbed Volhynia, ending the kingdom's existence and beginning centuries of Polish rule over Galician Ukrainians",
+        "population_affected": 600000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Plokhy, Serhii. The Gates of Europe: A History of Ukraine. Basic Books, 2015",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Dimnik, Martin. The Dynasty of Chernigov, 1146-1246. Cambridge University Press, 2003",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Regatul Romaniei",
+    "name_original_lang": "ro",
+    "entity_type": "kingdom",
+    "year_start": 1881,
+    "year_end": 1947,
+    "capital_name": "Bucuresti",
+    "capital_lat": 44.4268,
+    "capital_lon": 26.1025,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            22.0,
+            48.2
+          ],
+          [
+            24.0,
+            48.5
+          ],
+          [
+            26.0,
+            48.2
+          ],
+          [
+            28.0,
+            48.0
+          ],
+          [
+            29.5,
+            46.5
+          ],
+          [
+            29.5,
+            45.0
+          ],
+          [
+            29.0,
+            44.0
+          ],
+          [
+            28.5,
+            43.5
+          ],
+          [
+            27.0,
+            43.7
+          ],
+          [
+            25.0,
+            43.7
+          ],
+          [
+            22.5,
+            44.0
+          ],
+          [
+            21.5,
+            44.5
+          ],
+          [
+            20.5,
+            45.0
+          ],
+          [
+            20.5,
+            46.0
+          ],
+          [
+            21.0,
+            46.5
+          ],
+          [
+            22.0,
+            47.5
+          ],
+          [
+            22.0,
+            48.2
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Romanian name used as primary. ETHICS-002: Greater Romania (Romania Mare) after 1918 incorporated Transylvania, Bessarabia, Bukovina, and parts of the Banat, creating a multi-ethnic state with significant Hungarian, German, Jewish, Ukrainian, and Bulgarian minorities. The treatment of minorities, particularly the Hungarian population in Transylvania and the Jewish population throughout the country, is a deeply contested topic. Romania's territorial changes following both World Wars involved population transfers and ethnic tensions. ETHICS-003: The loss of Bessarabia and Northern Bukovina to the Soviet Union in 1940, and Northern Transylvania to Hungary, involved forced population transfers affecting millions. Romania's participation in the Holocaust resulted in the murder of between 280,000 and 380,000 Romanian and Ukrainian Jews.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Romania",
+        "lang": "en",
+        "period_start": 1881,
+        "period_end": 1947,
+        "context": "Standard English name",
+        "source": "Hitchins, Keith. Romania 1866-1947 (1994)"
+      },
+      {
+        "name": "Romania Mare",
+        "lang": "ro",
+        "period_start": 1918,
+        "period_end": 1940,
+        "context": "Greater Romania: the Romanian term for the interwar period when Romania included Transylvania, Bessarabia, and Bukovina",
+        "source": "Hitchins, Keith. Romania 1866-1947 (1994)"
+      },
+      {
+        "name": "Konigreich Rumanien",
+        "lang": "de",
+        "period_start": 1881,
+        "period_end": 1947,
+        "context": "German name; the Romanian royal house was the House of Hohenzollern-Sigmaringen",
+        "source": "Boia, Lucian. Romania: Borderland of Europe (2001)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1881,
+        "region": "Wallachia, Moldavia, and Northern Dobruja",
+        "change_type": "ELEVATION",
+        "description": "The United Principalities of Romania were elevated to the Kingdom of Romania under Carol I of Hohenzollern-Sigmaringen, gaining international recognition of full sovereignty",
+        "population_affected": 5500000,
+        "confidence_score": 0.95
+      },
+      {
+        "year": 1918,
+        "region": "Transylvania, Bessarabia, Bukovina, Banat",
+        "change_type": "ANNEXATION",
+        "description": "Following World War I, Romania more than doubled its territory by incorporating Transylvania from Hungary, Bessarabia from Russia, Bukovina from Austria, and parts of the Banat",
+        "population_affected": 10000000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1947,
+        "region": "Romania",
+        "change_type": "REGIME_CHANGE",
+        "description": "King Michael I was forced to abdicate by the Soviet-backed Communist government, ending the monarchy and establishing the Romanian People's Republic",
+        "population_affected": 16000000,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hitchins, Keith. Romania 1866-1947. Oxford University Press, 1994",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Boia, Lucian. Romania: Borderland of Europe. Reaktion Books, 2001",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  }
+]

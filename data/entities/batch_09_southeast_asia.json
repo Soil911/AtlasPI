@@ -1,0 +1,1230 @@
+[
+  {
+    "name_original": "Wangsa Sailendra",
+    "name_original_lang": "jv",
+    "entity_type": "kingdom",
+    "year_start": 750,
+    "year_end": 832,
+    "capital_name": "Kedu Plain (Central Java)",
+    "capital_lat": -7.61,
+    "capital_lon": 110.20,
+    "confidence_score": 0.55,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [109.5, -7.0],
+          [110.0, -6.8],
+          [110.5, -7.0],
+          [111.0, -7.2],
+          [111.2, -7.5],
+          [111.0, -7.8],
+          [110.5, -8.0],
+          [110.0, -8.0],
+          [109.5, -7.8],
+          [109.3, -7.5],
+          [109.5, -7.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Old Javanese. The Sailendra ('Lords of the Mountain') were a Buddhist dynasty that built Borobudur, the largest Buddhist monument in the world. Their relationship with the rival Sanjaya/Mataram Hindu dynasty is debated. Some scholars argue they were a branch of the same family; others see them as distinct lineages. The Sailendra were eventually displaced from Java but continued ruling Srivijaya in Sumatra. Confidence is low because epigraphic evidence (Kalasan inscription 778, Kelurak inscription 782) leaves many political questions unresolved.",
+    "name_variants": [
+      {"name": "Sailendra Dynasty", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention", "source": "Coedes, The Indianized States of Southeast Asia"},
+      {"name": "शैलेन्द्र", "lang": "sa", "period_start": null, "period_end": null, "context": "Sanskrit form meaning 'Lords of the Mountain'", "source": "Kalasan inscription (778 CE)"},
+      {"name": "Dinasti Sailendra", "lang": "id", "period_start": null, "period_end": null, "context": "Modern Indonesian designation", "source": "Soekmono, Pengantar Sejarah Kebudayaan Indonesia"}
+    ],
+    "territory_changes": [
+      {"year": 750, "region": "Central Java (Kedu Plain)", "change_type": "EMERGENCE", "description": "The Sailendra dynasty emerged as a major Buddhist ruling house in Central Java, possibly displacing or coexisting with the Hindu Sanjaya dynasty", "population_affected": null, "confidence_score": 0.4},
+      {"year": 832, "region": "Central Java", "change_type": "CONQUEST_MILITARY", "description": "Rakai Pikatan of the Sanjaya dynasty defeated or displaced Sailendra power in Java. The surviving Sailendra prince Balaputradewa fled to Sumatra and became ruler of Srivijaya", "population_affected": null, "confidence_score": 0.5}
+    ],
+    "sources": [
+      {"citation": "Coedes, G. (1968). The Indianized States of Southeast Asia. University of Hawaii Press.", "source_type": "academic", "url": null},
+      {"citation": "Kalasan inscription (778 CE). Old Malay and Sanskrit bilingual inscription.", "source_type": "primary", "url": null},
+      {"citation": "Soekmono, R. (1973). Pengantar Sejarah Kebudayaan Indonesia. Kanisius.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Kraton Mataram",
+    "name_original_lang": "jv",
+    "entity_type": "kingdom",
+    "year_start": 716,
+    "year_end": 1016,
+    "capital_name": "Prambanan region (Central Java)",
+    "capital_lat": -7.75,
+    "capital_lon": 110.49,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [109.0, -6.8],
+          [110.0, -6.5],
+          [111.0, -6.8],
+          [112.0, -7.0],
+          [112.5, -7.5],
+          [112.0, -8.0],
+          [111.0, -8.2],
+          [110.0, -8.3],
+          [109.0, -8.0],
+          [108.5, -7.5],
+          [109.0, -6.8]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Old Javanese. The Mataram Kingdom of Java (also called Medang) encompassed two rival dynastic lineages: the Hindu Sanjaya and the Buddhist Sailendra. The kingdom produced both Borobudur (Buddhist) and Prambanan (Hindu), demonstrating religious pluralism that later Indonesian nationalist narratives sometimes oversimplify. The mysterious shift of political center from Central to East Java (c. 929) may relate to the catastrophic eruption of Mount Merapi. Confidence is moderate due to fragmentary epigraphic record.",
+    "name_variants": [
+      {"name": "Mataram Kingdom of Java", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention, disambiguated from later Islamic Mataram", "source": "Coedes, The Indianized States of Southeast Asia"},
+      {"name": "Medang Kingdom", "lang": "en", "period_start": null, "period_end": null, "context": "Alternative name from the Mantyasih inscription (907)", "source": "De Casparis, Selected Inscriptions"},
+      {"name": "Kerajaan Mataram Kuno", "lang": "id", "period_start": null, "period_end": null, "context": "Modern Indonesian: 'Ancient Mataram Kingdom'", "source": "Soekmono, Pengantar Sejarah Kebudayaan Indonesia"}
+    ],
+    "territory_changes": [
+      {"year": 716, "region": "Central Java", "change_type": "EMERGENCE", "description": "Sanjaya established Hindu Mataram kingdom in Central Java, as recorded in the Canggal inscription (732 CE); the dynasty likely began consolidating power from c. 716", "population_affected": null, "confidence_score": 0.5},
+      {"year": 929, "region": "East Java", "change_type": "ADMINISTRATIVE", "description": "King Mpu Sindok moved the capital from Central to East Java, possibly due to a catastrophic eruption of Mount Merapi. The reasons remain debated among scholars", "population_affected": null, "confidence_score": 0.5},
+      {"year": 1016, "region": "East Java", "change_type": "CONQUEST_MILITARY", "description": "King Wurawari of Lwaram attacked and destroyed the Mataram court. The last king Dharmawangsa was killed, ending the dynasty. Airlangga later restored order but as a new polity", "population_affected": null, "confidence_score": 0.6}
+    ],
+    "sources": [
+      {"citation": "Coedes, G. (1968). The Indianized States of Southeast Asia. University of Hawaii Press.", "source_type": "academic", "url": null},
+      {"citation": "Canggal inscription (732 CE). Sanskrit inscription of Sanjaya.", "source_type": "primary", "url": null},
+      {"citation": "De Casparis, J.G. (1956). Selected Inscriptions from the 7th to the 9th Century A.D. Bandung.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Singhasari",
+    "name_original_lang": "jv",
+    "entity_type": "kingdom",
+    "year_start": 1222,
+    "year_end": 1292,
+    "capital_name": "Singhasari (East Java)",
+    "capital_lat": -7.89,
+    "capital_lon": 112.66,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [110.5, -6.5],
+          [111.5, -6.5],
+          [112.5, -6.8],
+          [113.5, -7.0],
+          [114.0, -7.5],
+          [114.0, -8.0],
+          [113.5, -8.3],
+          [112.0, -8.5],
+          [111.0, -8.3],
+          [110.0, -8.0],
+          [110.0, -7.5],
+          [110.5, -6.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Old Javanese. Singhasari rose from the violent overthrow of the Kediri kingdom by Ken Arok in 1222, an event the Pararaton chronicle describes with legendary embellishments. The kingdom's last king, Kertanagara, was killed during a rebellion by Jayakatwang of Kediri (1292), after which his son-in-law Raden Wijaya exploited the Mongol invasion to found Majapahit. Kertanagara's Tantric Buddhist-Hindu syncretism and his expansionist ambitions (expeditions to Sumatra against Srivijaya) are significant for understanding pre-Islamic Javanese statecraft.",
+    "name_variants": [
+      {"name": "Kingdom of Singhasari", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention", "source": "Coedes, The Indianized States of Southeast Asia"},
+      {"name": "Kerajaan Singhasari", "lang": "id", "period_start": null, "period_end": null, "context": "Modern Indonesian designation", "source": "Soekmono, Pengantar Sejarah Kebudayaan Indonesia"},
+      {"name": "Tumapel", "lang": "jv", "period_start": 1222, "period_end": 1254, "context": "Earlier name of the polity before Ken Arok renamed it", "source": "Pararaton (Book of Kings)"}
+    ],
+    "territory_changes": [
+      {"year": 1222, "region": "East Java", "change_type": "CONQUEST_MILITARY", "description": "Ken Arok overthrew the Kediri kingdom at the Battle of Ganter, establishing the Singhasari dynasty. The Pararaton chronicle depicts Ken Arok as an orphan of divine origin who rose through murder and intrigue", "population_affected": null, "confidence_score": 0.65},
+      {"year": 1275, "region": "Sumatra (Melayu/Srivijaya remnants)", "change_type": "CONQUEST_MILITARY", "description": "Kertanagara launched the Pamalayu expedition to Sumatra, subjugating the remnants of Srivijaya/Melayu and extending Singhasari's maritime reach", "population_affected": null, "confidence_score": 0.6},
+      {"year": 1292, "region": "East Java", "change_type": "CONQUEST_MILITARY", "description": "Jayakatwang of Kediri rebelled and killed Kertanagara during a Tantric ceremony. Singhasari collapsed, but Kertanagara's son-in-law Raden Wijaya would exploit the subsequent Mongol invasion to found Majapahit", "population_affected": null, "confidence_score": 0.7}
+    ],
+    "sources": [
+      {"citation": "Pararaton (Book of Kings). Old Javanese court chronicle, c. 15th century.", "source_type": "primary", "url": null},
+      {"citation": "Coedes, G. (1968). The Indianized States of Southeast Asia. University of Hawaii Press.", "source_type": "academic", "url": null},
+      {"citation": "Nagarakretagama (Desawarnnana) by Mpu Prapanca (1365). Old Javanese kakawin.", "source_type": "primary", "url": null}
+    ]
+  },
+  {
+    "name_original": "Kasultanan Demak",
+    "name_original_lang": "jv",
+    "entity_type": "sultanate",
+    "year_start": 1475,
+    "year_end": 1548,
+    "capital_name": "Demak (Central Java)",
+    "capital_lat": -6.89,
+    "capital_lon": 110.64,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [109.5, -6.3],
+          [110.5, -6.2],
+          [111.5, -6.5],
+          [112.0, -7.0],
+          [111.5, -7.5],
+          [110.5, -7.8],
+          [109.5, -7.5],
+          [109.0, -7.0],
+          [109.5, -6.3]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Javanese. The Sultanate of Demak was the first major Islamic state on Java, marking the transition from Hindu-Buddhist to Islamic political dominance. This process was complex and gradual -- Islam spread through trade networks and Sufi missionaries (the Wali Songo, 'Nine Saints'), not solely through conquest. Demak's rise coincided with the decline of Hindu Majapahit, but the relationship between Islamization and the fall of Majapahit is debated. The Portuguese arrival in Malacca (1511) contemporaneously introduced European colonial competition for spice trade control.",
+    "name_variants": [
+      {"name": "Sultanate of Demak", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention", "source": "Ricklefs, A History of Modern Indonesia"},
+      {"name": "Demak Bintoro", "lang": "jv", "period_start": null, "period_end": null, "context": "Javanese traditional name", "source": "Babad Tanah Jawi"},
+      {"name": "سلطنت دماق", "lang": "ms-Arab", "period_start": null, "period_end": null, "context": "Jawi script form", "source": "Ricklefs, A History of Modern Indonesia"}
+    ],
+    "territory_changes": [
+      {"year": 1475, "region": "North coast of Java", "change_type": "EMERGENCE", "description": "Raden Patah, traditionally linked to Majapahit royalty, established an independent Muslim polity at Demak on Java's north coast, leveraging Islamic trade networks", "population_affected": null, "confidence_score": 0.5},
+      {"year": 1527, "region": "West Java (Sunda Kelapa)", "change_type": "CONQUEST_MILITARY", "description": "Demak forces under Fatahillah conquered Sunda Kelapa (later renamed Jayakarta, then Batavia/Jakarta), preventing a Portuguese alliance with the Hindu Sunda kingdom", "population_affected": null, "confidence_score": 0.6},
+      {"year": 1548, "region": "Central Java", "change_type": "ADMINISTRATIVE", "description": "Power shifted to the successor Sultanate of Pajang after internal succession disputes, effectively ending Demak as an independent polity", "population_affected": null, "confidence_score": 0.55}
+    ],
+    "sources": [
+      {"citation": "Ricklefs, M.C. (2008). A History of Modern Indonesia Since c. 1200. 4th ed. Palgrave Macmillan.", "source_type": "academic", "url": null},
+      {"citation": "Babad Tanah Jawi. Javanese court chronicle, multiple versions from 17th-18th centuries.", "source_type": "primary", "url": null},
+      {"citation": "De Graaf, H.J. and Pigeaud, T.G. (1974). De eerste Moslimse vorstendommen op Java. VKI 69.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Kasultanan Mataram",
+    "name_original_lang": "jv",
+    "entity_type": "sultanate",
+    "year_start": 1587,
+    "year_end": 1755,
+    "capital_name": "Kota Gede / Plered / Kartasura",
+    "capital_lat": -7.81,
+    "capital_lon": 110.40,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [108.5, -6.0],
+          [110.0, -5.8],
+          [111.5, -6.0],
+          [113.0, -6.5],
+          [114.0, -7.0],
+          [114.5, -7.5],
+          [114.0, -8.0],
+          [112.5, -8.3],
+          [111.0, -8.5],
+          [109.5, -8.3],
+          [108.0, -7.8],
+          [107.5, -7.0],
+          [108.5, -6.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Javanese. The Sultanate of Mataram was the last major independent Javanese state before Dutch colonial domination. Sultan Agung's wars against the VOC (Batavia sieges 1628-1629) represent Javanese resistance to European colonialism. The Dutch East India Company (VOC) systematically exploited Mataram succession crises to impose treaties that stripped sovereignty. The 1755 Treaty of Giyanti, which split Mataram into the Sunanate of Surakarta and Sultanate of Yogyakarta, was a deliberate colonial divide-and-rule strategy. The VOC's forced monopolies devastated local economies and trade networks.",
+    "name_variants": [
+      {"name": "Sultanate of Mataram", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention", "source": "Ricklefs, A History of Modern Indonesia"},
+      {"name": "سلطنت ماتارام", "lang": "ms-Arab", "period_start": null, "period_end": null, "context": "Jawi script form", "source": "Ricklefs, A History of Modern Indonesia"},
+      {"name": "Mataram Islam", "lang": "id", "period_start": null, "period_end": null, "context": "Indonesian: distinguishes from ancient Hindu Mataram", "source": "Soekmono, Pengantar Sejarah Kebudayaan Indonesia"}
+    ],
+    "territory_changes": [
+      {"year": 1588, "region": "Central Java", "change_type": "CONQUEST_MILITARY", "description": "Senopati defeated the Sultanate of Pajang (successor of Demak), establishing Mataram as the dominant Javanese state with its capital at Kota Gede", "population_affected": null, "confidence_score": 0.7},
+      {"year": 1628, "region": "Batavia (Jakarta)", "change_type": "CONQUEST_MILITARY", "description": "Sultan Agung launched two massive sieges of the VOC fortress at Batavia (1628, 1629). Both failed due to VOC naval superiority and supply-line destruction, but demonstrated Javanese military resistance to European colonialism", "population_affected": null, "confidence_score": 0.85},
+      {"year": 1755, "region": "Central Java", "change_type": "PARTITION", "description": "The Treaty of Giyanti, brokered by the VOC, divided Mataram into the Sunanate of Surakarta (Solo) and the Sultanate of Yogyakarta. This was a deliberate Dutch divide-and-rule strategy that ended Javanese political unity", "population_affected": null, "confidence_score": 0.9}
+    ],
+    "sources": [
+      {"citation": "Ricklefs, M.C. (2008). A History of Modern Indonesia Since c. 1200. 4th ed. Palgrave Macmillan.", "source_type": "academic", "url": null},
+      {"citation": "Babad Tanah Jawi. Javanese court chronicle, multiple versions.", "source_type": "primary", "url": null},
+      {"citation": "De Graaf, H.J. (1958). De regering van Sultan Agung en zijn voorganger. VKI 23.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Kesultanan Aceh Darussalam",
+    "name_original_lang": "ace",
+    "entity_type": "sultanate",
+    "year_start": 1496,
+    "year_end": 1903,
+    "capital_name": "Banda Aceh (Kutaraja)",
+    "capital_lat": 5.55,
+    "capital_lon": 95.32,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [95.0, 5.8],
+          [96.0, 5.6],
+          [97.5, 5.2],
+          [98.0, 4.5],
+          [97.8, 3.5],
+          [97.0, 2.5],
+          [96.0, 2.0],
+          [95.0, 2.5],
+          [94.5, 3.5],
+          [94.5, 4.5],
+          [95.0, 5.8]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Acehnese. Aceh was the most powerful and fiercely independent Malay-Islamic state in Southeast Asia. The Dutch Aceh War (1873-1914) was one of the longest and bloodiest colonial conflicts in history. The Dutch employed systematic scorched-earth tactics, mass killings, and the use of the 'ethical policy' as cover for military subjugation. General J.B. van Heutsz's campaigns involved destruction of villages and civilian massacres. Acehnese resistance, including that led by female warrior Cut Nyak Dhien and the uleebalang, represents one of the most sustained anti-colonial struggles in Southeast Asian history. The Dutch only achieved nominal control, never fully pacifying the region.",
+    "name_variants": [
+      {"name": "Sultanate of Aceh", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention", "source": "Reid, An Indonesian Frontier: Acehnese"},
+      {"name": "سلطنة اتشيه دار السلام", "lang": "ms-Arab", "period_start": null, "period_end": null, "context": "Jawi script official form", "source": "Hikayat Aceh (17th century)"},
+      {"name": "Aceh Darussalam", "lang": "ace", "period_start": null, "period_end": null, "context": "Acehnese: 'Aceh, Abode of Peace'", "source": "Reid, An Indonesian Frontier"}
+    ],
+    "territory_changes": [
+      {"year": 1496, "region": "Northern Sumatra", "change_type": "EMERGENCE", "description": "Sultan Ali Mughayat Syah founded the Sultanate of Aceh, unifying local Islamic polities on the northern tip of Sumatra", "population_affected": null, "confidence_score": 0.65},
+      {"year": 1607, "region": "Northern Sumatra and Malay Peninsula", "change_type": "EXPANSION", "description": "Under Sultan Iskandar Muda, Aceh reached its peak territorial extent, controlling much of eastern Sumatra's coast, Malay Peninsula tin ports, and dominating Indian Ocean trade. Aceh became the leading Islamic power in Southeast Asia", "population_affected": null, "confidence_score": 0.75},
+      {"year": 1873, "region": "Aceh", "change_type": "CONQUEST_MILITARY", "description": "The Dutch launched the Aceh War (1873-1914), one of the longest colonial wars in history. Initial Dutch assaults were repulsed, but sustained military campaigns involving scorched-earth tactics, village destruction, and civilian massacres gradually ground down Acehnese resistance", "population_affected": 100000, "confidence_score": 0.85},
+      {"year": 1903, "region": "Aceh", "change_type": "CONQUEST_MILITARY", "description": "Sultan Muhammad Daud surrendered to the Dutch, ending formal Acehnese sovereignty, though guerrilla resistance continued until 1914. Cut Nyak Dhien, a national heroine, was captured in 1905 and exiled", "population_affected": null, "confidence_score": 0.85}
+    ],
+    "sources": [
+      {"citation": "Reid, A. (2005). An Indonesian Frontier: Acehnese and Other Histories of Sumatra. Singapore University Press.", "source_type": "academic", "url": null},
+      {"citation": "Hikayat Aceh. Anonymous Malay court chronicle, c. 17th century.", "source_type": "primary", "url": null},
+      {"citation": "Van 't Veer, P. (1969). De Atjeh-oorlog. De Arbeiderspers.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Kesultanan Ternate",
+    "name_original_lang": "ms",
+    "entity_type": "sultanate",
+    "year_start": 1257,
+    "year_end": 1914,
+    "capital_name": "Ternate (Maluku)",
+    "capital_lat": 0.79,
+    "capital_lon": 127.38,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [126.5, 2.0],
+          [127.5, 2.5],
+          [128.5, 2.0],
+          [129.0, 1.0],
+          [128.5, 0.0],
+          [128.0, -0.5],
+          [127.0, -1.0],
+          [126.0, -0.5],
+          [125.5, 0.5],
+          [126.0, 1.5],
+          [126.5, 2.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Malay, the lingua franca of the region. Ternate was one of the four sultanates of the Maluku 'Spice Islands' (with Tidore, Bacan, Jailolo). The Portuguese arrived in 1512, beginning centuries of European exploitation of the clove and nutmeg trade. The Dutch VOC subsequently imposed violent monopolies: they destroyed clove trees outside their control, forced populations into monoculture, and committed massacres to enforce trade monopolies. Sultan Babullah's war against the Portuguese (1570-1575) is a key episode of anti-colonial resistance. The hongi raids -- Dutch naval expeditions to destroy 'unauthorized' spice trees -- devastated local economies and ecologies.",
+    "name_variants": [
+      {"name": "Sultanate of Ternate", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention", "source": "Andaya, The World of Maluku"},
+      {"name": "سلطنت ترناتى", "lang": "ms-Arab", "period_start": null, "period_end": null, "context": "Jawi script form", "source": "Andaya, The World of Maluku"},
+      {"name": "Gapi", "lang": "ternate", "period_start": null, "period_end": null, "context": "Indigenous Ternate name for the island polity", "source": "Andaya, The World of Maluku"}
+    ],
+    "territory_changes": [
+      {"year": 1257, "region": "North Maluku", "change_type": "EMERGENCE", "description": "Traditional founding date of the Ternate sultanate, though the polity likely existed as a chiefdom before adopting Islamic sultanate structure in the 15th century", "population_affected": null, "confidence_score": 0.4},
+      {"year": 1512, "region": "North Maluku", "change_type": "COLONIAL_CONTACT", "description": "Portuguese arrival in the Spice Islands. Francisco Serrao reached Ternate, beginning European competition for monopoly over the clove trade", "population_affected": null, "confidence_score": 0.85},
+      {"year": 1575, "region": "Ternate", "change_type": "CONQUEST_MILITARY", "description": "Sultan Babullah expelled the Portuguese from Ternate after a five-year siege, killing the Portuguese governor and asserting Ternatan sovereignty over much of the Maluku region", "population_affected": null, "confidence_score": 0.75},
+      {"year": 1607, "region": "North Maluku", "change_type": "TREATY", "description": "Ternate allied with the Dutch VOC against Spain and Portugal. The VOC gradually transformed this alliance into colonial subjugation, imposing trade monopolies and the destructive hongi raids", "population_affected": null, "confidence_score": 0.8}
+    ],
+    "sources": [
+      {"citation": "Andaya, L.Y. (1993). The World of Maluku: Eastern Indonesia in the Early Modern Period. University of Hawaii Press.", "source_type": "academic", "url": null},
+      {"citation": "Valentijn, F. (1724-1726). Oud en Nieuw Oost-Indien. Dordrecht.", "source_type": "primary", "url": null},
+      {"citation": "Leirissa, R.Z. (1996). Halmahera Timur dan Raja Jailolo. Balai Pustaka.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "سلطنت بروني",
+    "name_original_lang": "ms-Arab",
+    "entity_type": "sultanate",
+    "year_start": 1368,
+    "year_end": null,
+    "capital_name": "Bandar Seri Begawan (Brunei Town)",
+    "capital_lat": 4.94,
+    "capital_lon": 114.95,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [113.5, 6.5],
+          [114.5, 7.0],
+          [116.0, 7.0],
+          [117.5, 7.5],
+          [119.0, 7.0],
+          [119.5, 6.0],
+          [119.0, 5.0],
+          [117.5, 4.0],
+          [116.0, 3.0],
+          [114.5, 2.5],
+          [113.0, 3.0],
+          [112.0, 4.0],
+          [112.5, 5.5],
+          [113.5, 6.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Jawi (Arabic-script Malay), the traditional script of the Brunei Sultanate. At its peak (15th-16th centuries), Brunei controlled much of northern Borneo and parts of the Philippines (Manila, Sulu). The boundary shown represents peak extent c. 1500. European colonial encroachment -- Portuguese, Spanish, and especially British -- progressively stripped Brunei of its territories. James Brooke's establishment of the 'White Rajah' dynasty in Sarawak (1841) was enabled by exploiting a Brunei civil war, and the British North Borneo Company took Sabah. The present-day tiny state is a remnant of a once-vast maritime empire, reduced by colonial extraction. Brunei remains a sultanate today.",
+    "name_variants": [
+      {"name": "Sultanate of Brunei", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention", "source": "Brown, Brunei: The Structure and History of a Bornean Malay Sultanate"},
+      {"name": "Kesultanan Brunei", "lang": "ms", "period_start": null, "period_end": null, "context": "Standard Malay form", "source": "Saunders, A History of Brunei"},
+      {"name": "بروني دارالسلام", "lang": "ms-Arab", "period_start": null, "period_end": null, "context": "Jawi: 'Brunei, Abode of Peace' (official)", "source": "Saunders, A History of Brunei"},
+      {"name": "Poni / 渤泥", "lang": "zh", "period_start": 1368, "period_end": 1500, "context": "Chinese name from Ming dynasty records", "source": "Ming Shilu (Veritable Records of the Ming Dynasty)"}
+    ],
+    "territory_changes": [
+      {"year": 1368, "region": "Northwest Borneo", "change_type": "EMERGENCE", "description": "Traditional founding date of the sultanate under Muhammad Shah. The polity likely existed earlier as a Hindu-Buddhist kingdom known to Chinese sources as Poni (渤泥)", "population_affected": null, "confidence_score": 0.5},
+      {"year": 1500, "region": "Borneo, Sulu, Manila", "change_type": "EXPANSION", "description": "Under Sultan Bolkiah ('The Singing Captain'), Brunei reached peak extent, controlling most of coastal Borneo, Sulu archipelago, and establishing influence over Manila", "population_affected": null, "confidence_score": 0.6},
+      {"year": 1841, "region": "Sarawak", "change_type": "CESSION", "description": "Sultan Omar Ali Saifuddien II ceded Sarawak to British adventurer James Brooke, who established the 'White Rajah' dynasty. Brooke exploited a local rebellion to extract this territorial concession", "population_affected": null, "confidence_score": 0.85},
+      {"year": 1888, "region": "Brunei", "change_type": "TREATY", "description": "Brunei became a British protectorate, surrendering foreign affairs and defense while retaining internal autonomy. The sultanate had been reduced to a fraction of its former extent", "population_affected": null, "confidence_score": 0.9}
+    ],
+    "sources": [
+      {"citation": "Saunders, G. (2002). A History of Brunei. 2nd ed. Routledge.", "source_type": "academic", "url": null},
+      {"citation": "Brown, D.E. (1970). Brunei: The Structure and History of a Bornean Malay Sultanate. Star Press.", "source_type": "academic", "url": null},
+      {"citation": "Ming Shilu (明實錄). Veritable Records of the Ming Dynasty, various reigns.", "source_type": "primary", "url": null}
+    ]
+  },
+  {
+    "name_original": "တောင်ငူခေတ်",
+    "name_original_lang": "my",
+    "entity_type": "empire",
+    "year_start": 1510,
+    "year_end": 1752,
+    "capital_name": "Taungoo (တောင်ငူ) / Pegu (Bago)",
+    "capital_lat": 18.94,
+    "capital_lon": 96.43,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [92.5, 27.5],
+          [94.5, 28.0],
+          [96.5, 27.5],
+          [98.5, 25.5],
+          [100.0, 22.0],
+          [101.5, 19.5],
+          [101.0, 17.0],
+          [100.0, 14.5],
+          [99.0, 13.0],
+          [98.0, 11.0],
+          [97.0, 10.0],
+          [96.0, 11.0],
+          [95.0, 13.0],
+          [94.0, 15.5],
+          [93.0, 17.5],
+          [92.0, 19.5],
+          [91.5, 21.5],
+          [91.5, 24.0],
+          [92.5, 27.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Burmese (တောင်ငူခေတ် = Taungoo era/dynasty). The Taungoo dynasty created the largest empire in Southeast Asian history under Bayinnaung (r. 1551-1581), conquering Ava, Prome, Pegu, Lan Na (Chiang Mai), Lan Xang (Laos), Ayutthaya, and Manipur. Bayinnaung's campaigns involved massive forced population transfers (war captives) that reshaped the demography of the region. The boundary represents peak extent c. 1580 under Bayinnaung. The First Toungoo Empire collapsed after overextension, and the Restored Toungoo dynasty (1599-1752) ruled a much smaller Burma. Portuguese mercenary involvement (Felipe de Brito at Syriam) illustrates early European military adventurism in the region.",
+    "name_variants": [
+      {"name": "Toungoo Dynasty", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention", "source": "Lieberman, Strange Parallels"},
+      {"name": "First Toungoo Empire", "lang": "en", "period_start": 1510, "period_end": 1599, "context": "Period of expansion under Tabinshwehti and Bayinnaung", "source": "Lieberman, Burmese Administrative Cycles"},
+      {"name": "Restored Toungoo Dynasty", "lang": "en", "period_start": 1599, "period_end": 1752, "context": "Period of consolidation after collapse of the overextended empire", "source": "Lieberman, Strange Parallels"},
+      {"name": "ราชวงศ์ตองอู", "lang": "th", "period_start": null, "period_end": null, "context": "Thai name for the Burmese dynasty that repeatedly invaded Siam", "source": "Royal Chronicles of Ayutthaya"}
+    ],
+    "territory_changes": [
+      {"year": 1539, "region": "Lower Burma (Pegu/Bago)", "change_type": "CONQUEST_MILITARY", "description": "Tabinshwehti conquered the Mon kingdom of Pegu, unifying Upper and Lower Burma for the first time. This involved extensive fighting and the subjugation of the Mon population", "population_affected": null, "confidence_score": 0.8},
+      {"year": 1564, "region": "Ayutthaya (Siam)", "change_type": "CONQUEST_MILITARY", "description": "Bayinnaung conquered the Siamese capital of Ayutthaya, making Siam a vassal state. Massive deportation of Siamese artisans, scholars, and war captives to Burma", "population_affected": 50000, "confidence_score": 0.8},
+      {"year": 1752, "region": "Ava (Upper Burma)", "change_type": "CONQUEST_MILITARY", "description": "Mon rebels from Pegu captured Ava, ending the Restored Toungoo dynasty. Alaungpaya of the Konbaung dynasty soon rose to reconquer Burma", "population_affected": null, "confidence_score": 0.85}
+    ],
+    "sources": [
+      {"citation": "Lieberman, V. (2003). Strange Parallels: Southeast Asia in Global Context, c. 800-1830. Cambridge University Press.", "source_type": "academic", "url": null},
+      {"citation": "Glass Palace Chronicle (Hmannan Yazawin). 1829.", "source_type": "primary", "url": null},
+      {"citation": "Harvey, G.E. (1925). History of Burma. London: Longmans, Green.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "ကုန်းဘောင်ခေတ်",
+    "name_original_lang": "my",
+    "entity_type": "empire",
+    "year_start": 1752,
+    "year_end": 1885,
+    "capital_name": "Ava (အင်းဝ) / Mandalay (မန္တလေး)",
+    "capital_lat": 21.97,
+    "capital_lon": 96.08,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [92.0, 28.0],
+          [94.0, 28.5],
+          [96.0, 28.0],
+          [98.0, 27.0],
+          [99.5, 24.0],
+          [100.0, 21.0],
+          [99.5, 18.0],
+          [98.5, 15.0],
+          [97.5, 12.0],
+          [97.0, 10.5],
+          [96.0, 11.0],
+          [95.0, 13.0],
+          [94.0, 15.0],
+          [93.0, 17.0],
+          [92.0, 19.0],
+          [91.5, 21.0],
+          [91.0, 23.0],
+          [91.5, 25.0],
+          [92.0, 28.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Burmese (ကုန်းဘောင်ခေတ် = Konbaung era). NOTE: This entity also appears in batch_02_asia.json as a dynasty entry; this batch_09 entry recategorizes it as 'empire' with expanded Southeast Asian context. The Konbaung dynasty's expansion involved the complete destruction of Ayutthaya (1767), with the burning of the city, mass looting of cultural treasures, and deportation of tens of thousands of Siamese captives. British conquest in three Anglo-Burmese Wars (1824, 1852, 1885) dismembered the kingdom progressively. The final annexation (1885) saw King Thibaw and Queen Supayalat humiliated and exiled to India. British rule imposed ethnic classifications that hardened divisions between Bamar, Shan, Karen, Kachin, and other peoples, sowing seeds of conflicts that persist to this day.",
+    "name_variants": [
+      {"name": "Konbaung Dynasty Burma", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention", "source": "Lieberman, Strange Parallels"},
+      {"name": "Third Burmese Empire", "lang": "en", "period_start": null, "period_end": null, "context": "Alternative periodization term", "source": "Thant Myint-U, The Making of Modern Burma"},
+      {"name": "ราชวงศ์คองบอง", "lang": "th", "period_start": null, "period_end": null, "context": "Thai name for the dynasty that destroyed Ayutthaya", "source": "Phongsawadan Krung Si Ayutthaya"}
+    ],
+    "territory_changes": [
+      {"year": 1752, "region": "Upper Burma", "change_type": "EMERGENCE", "description": "Alaungpaya, village chief of Shwebo, rallied Burmese resistance against Mon occupation and founded the Konbaung dynasty, reconquering all of Burma within a decade", "population_affected": null, "confidence_score": 0.85},
+      {"year": 1767, "region": "Ayutthaya (Siam)", "change_type": "CONQUEST_MILITARY", "description": "Konbaung forces under Hsinbyushin sacked and destroyed the Siamese capital of Ayutthaya after a 14-month siege. The city was burned, its libraries and temples looted, cultural treasures destroyed or carried off, and tens of thousands of Siamese deported as war captives", "population_affected": 30000, "confidence_score": 0.85},
+      {"year": 1824, "region": "Arakan, Tenasserim", "change_type": "CONQUEST_MILITARY", "description": "First Anglo-Burmese War: Britain seized Arakan and Tenasserim, beginning the colonial dismemberment of Burma. The war was provoked by Burmese expansion into Assam and Manipur", "population_affected": null, "confidence_score": 0.9},
+      {"year": 1885, "region": "Upper Burma (Mandalay)", "change_type": "CONQUEST_MILITARY", "description": "Third Anglo-Burmese War: British forces conquered Mandalay and deposed King Thibaw. Burma was annexed to British India. The royal family was exiled to Ratnagiri, India, in a deliberate act of imperial humiliation", "population_affected": null, "confidence_score": 0.95}
+    ],
+    "sources": [
+      {"citation": "Lieberman, V. (2003). Strange Parallels: Southeast Asia in Global Context, c. 800-1830. Cambridge University Press.", "source_type": "academic", "url": null},
+      {"citation": "Thant Myint-U (2001). The Making of Modern Burma. Cambridge University Press.", "source_type": "academic", "url": null},
+      {"citation": "Glass Palace Chronicle (Hmannan Yazawin). 1829.", "source_type": "primary", "url": null}
+    ]
+  },
+  {
+    "name_original": "กรุงรัตนโกสินทร์",
+    "name_original_lang": "th",
+    "entity_type": "kingdom",
+    "year_start": 1782,
+    "year_end": 1932,
+    "capital_name": "Krung Thep (Bangkok, กรุงเทพมหานคร)",
+    "capital_lat": 13.75,
+    "capital_lon": 100.50,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [97.5, 20.5],
+          [100.0, 20.5],
+          [101.5, 19.5],
+          [103.0, 18.0],
+          [104.5, 17.0],
+          [105.0, 15.5],
+          [105.0, 14.0],
+          [104.0, 12.0],
+          [103.0, 10.0],
+          [101.5, 7.0],
+          [100.5, 6.5],
+          [99.5, 7.0],
+          [98.5, 8.5],
+          [98.0, 10.0],
+          [98.5, 12.0],
+          [98.0, 14.0],
+          [97.5, 16.0],
+          [97.5, 18.0],
+          [97.5, 20.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Thai (กรุงรัตนโกสินทร์ = Rattanakosin, 'Abode of the Emerald Buddha'). Siam/Rattanakosin is the only Southeast Asian state never formally colonized by a European power, though it ceded significant territory to Britain (Malay states, Shan states) and France (Laos, Cambodia). This framing as 'never colonized' obscures the fact that Siam survived through strategic cessions, modernization mimicking European models, and playing Britain and France against each other. Thai nationalist historiography credits the Chakri dynasty's wisdom, but the 'buffer state' thesis is equally important. The boundary represents c. 1850 extent before territorial cessions. The 1932 Revolution ended absolute monarchy but did not end the kingdom.",
+    "name_variants": [
+      {"name": "Rattanakosin Kingdom", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention (from the capital's formal name)", "source": "Wyatt, Thailand: A Short History"},
+      {"name": "Siam", "lang": "en", "period_start": null, "period_end": 1939, "context": "International name until 1939 when renamed Thailand", "source": "Wyatt, Thailand: A Short History"},
+      {"name": "สยาม", "lang": "th", "period_start": null, "period_end": 1939, "context": "Thai form of 'Siam'", "source": "Wyatt, Thailand: A Short History"},
+      {"name": "ราชอาณาจักรสยาม", "lang": "th", "period_start": null, "period_end": null, "context": "Formal Thai: 'Royal Kingdom of Siam'", "source": "Bowring Treaty (1855)"}
+    ],
+    "territory_changes": [
+      {"year": 1782, "region": "Central Thailand", "change_type": "EMERGENCE", "description": "General Chakri (Rama I) seized power and moved the capital from Thonburi to Bangkok across the Chao Phraya river, founding the Rattanakosin kingdom and the Chakri dynasty after the destruction of Ayutthaya by Burma (1767)", "population_affected": null, "confidence_score": 0.9},
+      {"year": 1893, "region": "Laos (east of Mekong)", "change_type": "CESSION", "description": "Franco-Siamese Crisis: France sent gunboats up the Chao Phraya to Bangkok, forcing Siam to cede all territories east of the Mekong (Laos) to French Indochina. A humiliating loss of sovereignty under gunboat diplomacy", "population_affected": null, "confidence_score": 0.9},
+      {"year": 1909, "region": "Northern Malay states", "change_type": "CESSION", "description": "Anglo-Siamese Treaty: Siam ceded the Malay states of Kelantan, Terengganu, Kedah, and Perlis to British Malaya, severing historic Siamese suzerainty over the Malay peninsula", "population_affected": null, "confidence_score": 0.9},
+      {"year": 1932, "region": "Siam", "change_type": "REVOLUTION", "description": "Siamese Revolution of 1932: the Khana Ratsadon (People's Party) ended 150 years of absolute monarchy, establishing a constitutional monarchy", "population_affected": null, "confidence_score": 0.95}
+    ],
+    "sources": [
+      {"citation": "Wyatt, D.K. (2003). Thailand: A Short History. 2nd ed. Yale University Press.", "source_type": "academic", "url": null},
+      {"citation": "Baker, C. and Pasuk Phongpaichit (2014). A History of Thailand. 3rd ed. Cambridge University Press.", "source_type": "academic", "url": null},
+      {"citation": "Dynastic Chronicles, Bangkok Era (Phra Ratcha Phongsawadan). Royal Thai chronicles.", "source_type": "primary", "url": null}
+    ]
+  },
+  {
+    "name_original": "สุโขทัย",
+    "name_original_lang": "th",
+    "entity_type": "kingdom",
+    "year_start": 1238,
+    "year_end": 1438,
+    "capital_name": "Sukhothai (สุโขทัย)",
+    "capital_lat": 17.02,
+    "capital_lon": 99.70,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [98.5, 18.5],
+          [99.5, 19.0],
+          [100.5, 18.5],
+          [101.5, 18.0],
+          [102.0, 17.0],
+          [101.5, 16.0],
+          [101.0, 15.0],
+          [100.0, 14.5],
+          [99.0, 14.5],
+          [98.0, 15.0],
+          [97.5, 16.0],
+          [97.5, 17.0],
+          [98.0, 18.0],
+          [98.5, 18.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Thai. Sukhothai occupies a complex place in Thai national mythology. Thai nationalist historiography presents Sukhothai as the 'first Thai kingdom' and its King Ramkhamhaeng as the inventor of the Thai script and a benevolent ruler. This narrative, heavily promoted since the early 20th century, is contested by scholars: the Ramkhamhaeng Inscription (1292) has been questioned by some academics as a later fabrication (notably by Michael Vickery and Piriya Krairiksh), though the majority view supports its authenticity. The 'cradle of Thai civilization' narrative also obscures the prior Khmer and Mon presence in the region and the fact that Tai-speaking peoples migrated southward, displacing earlier populations.",
+    "name_variants": [
+      {"name": "Sukhothai Kingdom", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention", "source": "Wyatt, Thailand: A Short History"},
+      {"name": "อาณาจักรสุโขทัย", "lang": "th", "period_start": null, "period_end": null, "context": "Formal Thai: 'Sukhothai Kingdom'", "source": "Wyatt, Thailand: A Short History"},
+      {"name": "Sukhodaya", "lang": "sa", "period_start": null, "period_end": null, "context": "Sanskrit etymological form: 'Dawn of Happiness'", "source": "Ramkhamhaeng Inscription (1292)"}
+    ],
+    "territory_changes": [
+      {"year": 1238, "region": "Upper Central Thailand", "change_type": "EMERGENCE", "description": "Traditional founding date: Tai chieftains Pho Khun Pha Muang and Pho Khun Bang Klang Hao overthrew Khmer governor at Sukhothai, establishing an independent Tai polity. The exact circumstances are debated", "population_affected": null, "confidence_score": 0.6},
+      {"year": 1279, "region": "Central Siam", "change_type": "EXPANSION", "description": "Under King Ramkhamhaeng, Sukhothai expanded to its greatest extent, claiming suzerainty from Luang Prabang to the Malay Peninsula. The Ramkhamhaeng Inscription (1292) describes an idealized realm, though the extent of actual control is debated", "population_affected": null, "confidence_score": 0.55},
+      {"year": 1438, "region": "Sukhothai", "change_type": "ABSORPTION", "description": "Sukhothai was fully absorbed into the Ayutthaya kingdom, ending its existence as a distinct political entity after decades as a vassal state", "population_affected": null, "confidence_score": 0.8}
+    ],
+    "sources": [
+      {"citation": "Wyatt, D.K. (2003). Thailand: A Short History. 2nd ed. Yale University Press.", "source_type": "academic", "url": null},
+      {"citation": "Ramkhamhaeng Inscription (Stone Inscription No. 1). 1292 CE (attributed).", "source_type": "primary", "url": null},
+      {"citation": "Vickery, M. (1991). 'On the Ramkhamhaeng Inscription.' Journal of the Siam Society 79(2).", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "ອານາຈັກຈຳປາສັກ",
+    "name_original_lang": "lo",
+    "entity_type": "kingdom",
+    "year_start": 1713,
+    "year_end": 1946,
+    "capital_name": "Champasak (ຈຳປາສັກ)",
+    "capital_lat": 14.88,
+    "capital_lon": 105.87,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [104.5, 16.0],
+          [105.5, 16.5],
+          [106.5, 16.0],
+          [107.0, 15.5],
+          [107.0, 14.5],
+          [106.5, 13.5],
+          [105.5, 13.0],
+          [104.5, 13.5],
+          [104.0, 14.5],
+          [104.0, 15.5],
+          [104.5, 16.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Lao. The Champassak Kingdom was one of three successor states of Lan Xang (with Luang Prabang and Vientiane). It fell under Siamese suzerainty in the late 18th century, then was transferred to French Indochina through gunboat diplomacy (1893 Franco-Siamese Treaty). French colonial administration treated Laos as an economic backwater, extracting resources while investing minimally in infrastructure or education. The kingdom's name derives from the ancient Champa-influenced polity at Wat Phu, connecting it to pre-Tai Austroasiatic cultural layers.",
+    "name_variants": [
+      {"name": "Champassak Kingdom", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention", "source": "Stuart-Fox, A History of Laos"},
+      {"name": "Bassac", "lang": "fr", "period_start": null, "period_end": null, "context": "French colonial rendering of the name", "source": "Pavie Mission reports (1880s-1890s)"},
+      {"name": "จำปาศักดิ์", "lang": "th", "period_start": null, "period_end": null, "context": "Thai form, reflecting Siamese suzerainty", "source": "Wyatt, Thailand: A Short History"}
+    ],
+    "territory_changes": [
+      {"year": 1713, "region": "Southern Laos", "change_type": "PARTITION", "description": "Champassak emerged as an independent kingdom from the fragmentation of Lan Xang, controlling the southern Mekong region around Wat Phu", "population_affected": null, "confidence_score": 0.7},
+      {"year": 1779, "region": "Southern Laos", "change_type": "CONQUEST_MILITARY", "description": "Siam under Taksin and later Rama I imposed suzerainty over Champassak, reducing it to a tributary state", "population_affected": null, "confidence_score": 0.75},
+      {"year": 1893, "region": "Southern Laos", "change_type": "CESSION", "description": "Franco-Siamese Treaty: France forced Siam to cede all territories east of the Mekong, including Champassak, to French Indochina. The kingdom continued as a French-supervised monarchy", "population_affected": null, "confidence_score": 0.85},
+      {"year": 1946, "region": "Southern Laos", "change_type": "ABOLITION", "description": "The Champassak monarchy was abolished as Laos was unified under the Kingdom of Luang Prabang within the French Union", "population_affected": null, "confidence_score": 0.8}
+    ],
+    "sources": [
+      {"citation": "Stuart-Fox, M. (1997). A History of Laos. Cambridge University Press.", "source_type": "academic", "url": null},
+      {"citation": "Pavie, A. (1898-1919). Mission Pavie en Indo-Chine. Paris: Ernest Leroux.", "source_type": "primary", "url": null},
+      {"citation": "Simms, P. and Simms, S. (1999). The Kingdoms of Laos. Curzon Press.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "ອານາຈັກຫລວງພະບາງ",
+    "name_original_lang": "lo",
+    "entity_type": "kingdom",
+    "year_start": 1707,
+    "year_end": 1949,
+    "capital_name": "Luang Prabang (ຫລວງພະບາງ)",
+    "capital_lat": 19.88,
+    "capital_lon": 102.13,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [100.5, 21.5],
+          [101.5, 22.0],
+          [102.5, 21.5],
+          [103.5, 21.0],
+          [103.5, 20.0],
+          [103.0, 19.0],
+          [102.5, 18.5],
+          [101.5, 18.0],
+          [100.5, 18.5],
+          [100.0, 19.5],
+          [100.0, 20.5],
+          [100.5, 21.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Lao. The Kingdom of Luang Prabang was the northern successor state of Lan Xang. It was repeatedly devastated by invaders: Burmese raids in the 1760s-1770s, Siamese domination from the 1770s, Chinese Haw marauders in the 1870s-1880s. France used the Haw threat as pretext to impose a protectorate (1893). The kingdom served as the nominal Lao royal entity under French Indochina and later during the Lao civil war, until the Pathet Lao communist revolution abolished the monarchy in 1975 (though formally the kingdom ended within the French Union structure in 1949). King Sisavang Vatthana and the royal family were sent to re-education camps where they perished -- a fate officially unacknowledged by the Lao government for decades.",
+    "name_variants": [
+      {"name": "Kingdom of Luang Prabang", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention", "source": "Stuart-Fox, A History of Laos"},
+      {"name": "Luang Prabang", "lang": "fr", "period_start": null, "period_end": null, "context": "French colonial usage", "source": "Pavie Mission reports"},
+      {"name": "หลวงพระบาง", "lang": "th", "period_start": null, "period_end": null, "context": "Thai form", "source": "Wyatt, Thailand: A Short History"}
+    ],
+    "territory_changes": [
+      {"year": 1707, "region": "Northern Laos", "change_type": "PARTITION", "description": "Luang Prabang became an independent kingdom following the fragmentation of Lan Xang into three rival kingdoms", "population_affected": null, "confidence_score": 0.75},
+      {"year": 1779, "region": "Northern Laos", "change_type": "CONQUEST_MILITARY", "description": "Siam imposed suzerainty over Luang Prabang. The kingdom became a Siamese tributary, though it retained internal autonomy", "population_affected": null, "confidence_score": 0.8},
+      {"year": 1893, "region": "Laos", "change_type": "TREATY", "description": "Franco-Siamese Treaty: France established a protectorate over Luang Prabang as part of French Indochina, wresting it from Siamese suzerainty", "population_affected": null, "confidence_score": 0.9},
+      {"year": 1949, "region": "Laos", "change_type": "ADMINISTRATIVE", "description": "Laos became semi-independent within the French Union as a unified kingdom under Luang Prabang's dynasty, formally ending the distinct Kingdom of Luang Prabang as a separate entity", "population_affected": null, "confidence_score": 0.85}
+    ],
+    "sources": [
+      {"citation": "Stuart-Fox, M. (1997). A History of Laos. Cambridge University Press.", "source_type": "academic", "url": null},
+      {"citation": "Stuart-Fox, M. (1998). The Lao Kingdom of Lan Xang: Rise and Decline. White Lotus Press.", "source_type": "academic", "url": null},
+      {"citation": "Pavie, A. (1898-1919). Mission Pavie en Indo-Chine. Paris: Ernest Leroux.", "source_type": "primary", "url": null}
+    ]
+  },
+  {
+    "name_original": "سلطنت سولو",
+    "name_original_lang": "tsg",
+    "entity_type": "sultanate",
+    "year_start": 1405,
+    "year_end": 1915,
+    "capital_name": "Jolo (سوگ, Sulu)",
+    "capital_lat": 6.05,
+    "capital_lon": 121.00,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [117.5, 7.5],
+          [119.0, 8.0],
+          [121.0, 7.5],
+          [122.0, 7.0],
+          [123.0, 6.0],
+          [122.0, 5.0],
+          [120.0, 4.5],
+          [118.5, 5.0],
+          [117.5, 6.0],
+          [117.5, 7.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Tausug (Jawi script), the language of the Sulu Sultanate's core population. The Sulu Sultanate controlled a vast maritime domain spanning the Sulu Sea, including parts of Palawan, Mindanao, and northeastern Borneo (Sabah). Spanish colonialism waged centuries of warfare against Sulu, framing Muslim Filipinos as 'Moros' (a pejorative borrowed from the Reconquista) and treating their resistance as piracy rather than legitimate defense of sovereignty. American colonialism continued this war (the Moro Wars, 1899-1913), culminating in the Bud Dajo massacre (1906) where U.S. troops killed approximately 600-1000 Moro men, women, and children sheltering in a volcanic crater. The Sulu claim to Sabah remains a live diplomatic dispute between the Philippines and Malaysia.",
+    "name_variants": [
+      {"name": "Sultanate of Sulu", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention", "source": "Majul, Muslims in the Philippines"},
+      {"name": "Kasultanan sin Sug", "lang": "tsg", "period_start": null, "period_end": null, "context": "Tausug (Latin script) form", "source": "Saleeby, The History of Sulu"},
+      {"name": "Sultanato de Joló", "lang": "es", "period_start": null, "period_end": null, "context": "Spanish colonial designation", "source": "Combes, Historia de Mindanao y Joló (1667)"}
+    ],
+    "territory_changes": [
+      {"year": 1405, "region": "Sulu Archipelago", "change_type": "EMERGENCE", "description": "Paduka Pahala (Rajah Baguinda) and Arab missionaries established the Sulu Sultanate, the first Islamic sultanate in the Philippines. The exact founding date is debated", "population_affected": null, "confidence_score": 0.5},
+      {"year": 1578, "region": "Sulu", "change_type": "CONQUEST_MILITARY", "description": "First major Spanish military expedition against Sulu. Beginning of centuries of Spanish-Moro warfare, which the Spanish characterized as suppression of piracy but was fundamentally a colonial war against an independent Islamic state", "population_affected": null, "confidence_score": 0.75},
+      {"year": 1878, "region": "North Borneo (Sabah)", "change_type": "CESSION", "description": "Sultan of Sulu ceded/leased (the exact nature is disputed) North Borneo to the British North Borneo Company. Malaysia and the Philippines still dispute sovereignty over Sabah based on differing interpretations of this agreement", "population_affected": null, "confidence_score": 0.7},
+      {"year": 1915, "region": "Sulu", "change_type": "TREATY", "description": "Carpenter Agreement: the last Sultan of Sulu, Jamalul Kiram II, formally recognized U.S. sovereignty, ending the sultanate's political authority. This followed the brutal Moro Wars (1899-1913), including the Bud Dajo massacre (1906)", "population_affected": null, "confidence_score": 0.85}
+    ],
+    "sources": [
+      {"citation": "Majul, C.A. (1973). Muslims in the Philippines. University of the Philippines Press.", "source_type": "academic", "url": null},
+      {"citation": "Saleeby, N.M. (1908). The History of Sulu. Manila: Bureau of Printing.", "source_type": "academic", "url": null},
+      {"citation": "Warren, J.F. (2007). The Sulu Zone 1768-1898. 2nd ed. NUS Press.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Sugbu",
+    "name_original_lang": "ceb",
+    "entity_type": "kingdom",
+    "year_start": 1200,
+    "year_end": 1565,
+    "capital_name": "Sugbu (Cebu)",
+    "capital_lat": 10.31,
+    "capital_lon": 123.89,
+    "confidence_score": 0.45,
+    "status": "disputed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [123.5, 11.0],
+          [124.0, 11.2],
+          [124.3, 10.8],
+          [124.2, 10.2],
+          [124.0, 9.5],
+          [123.5, 9.4],
+          [123.2, 9.8],
+          [123.3, 10.5],
+          [123.5, 11.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Cebuano (Sugbu), the local Austronesian language. The 'Rajahnate of Cebu' is largely reconstructed from fragmentary Spanish colonial accounts, Chinese trade records, and oral tradition. The confidence score is low because pre-colonial Philippine polities (barangay-based) did not conform to Southeast Asian 'kingdom' models. The term 'rajahnate' itself may impose a Hinduized political framework onto a more complex, decentralized reality. Spanish colonization after Magellan's arrival (1521) and Legazpi's conquest (1565) destroyed indigenous political structures, burned native records, and imposed Christianity. Rajah Humabon's baptism and the death of Lapu-Lapu's resistance at Mactan are foundational narratives in Filipino identity.",
+    "name_variants": [
+      {"name": "Rajahnate of Cebu", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention (reconstructed term)", "source": "Scott, Barangay: Sixteenth-Century Philippine Culture and Society"},
+      {"name": "Zubu", "lang": "es", "period_start": null, "period_end": null, "context": "Early Spanish rendering from Pigafetta's account", "source": "Pigafetta, Primo viaggio intorno al mondo (1525)"},
+      {"name": "宿务 (Sùwù)", "lang": "zh", "period_start": null, "period_end": null, "context": "Chinese trade name from Song-Yuan dynasty records", "source": "Zhao Rugua, Zhufan Zhi (1225)"}
+    ],
+    "territory_changes": [
+      {"year": 1200, "region": "Cebu Island", "change_type": "EMERGENCE", "description": "Approximate date for the establishment of a Hindu-influenced polity on Cebu, based on archaeological evidence and Chinese trade records. The exact political structure is debated", "population_affected": null, "confidence_score": 0.35},
+      {"year": 1521, "region": "Cebu", "change_type": "COLONIAL_CONTACT", "description": "Magellan's expedition arrived at Cebu. Rajah Humabon was baptized, but Lapu-Lapu of Mactan resisted. Magellan was killed at the Battle of Mactan -- one of the earliest successful armed resistances to European colonialism in Southeast Asia", "population_affected": null, "confidence_score": 0.85},
+      {"year": 1565, "region": "Cebu", "change_type": "CONQUEST_MILITARY", "description": "Miguel Lopez de Legazpi's expedition conquered Cebu, establishing the first permanent Spanish settlement in the Philippines. Indigenous political structures were systematically dismantled", "population_affected": null, "confidence_score": 0.9}
+    ],
+    "sources": [
+      {"citation": "Scott, W.H. (1994). Barangay: Sixteenth-Century Philippine Culture and Society. Ateneo de Manila University Press.", "source_type": "academic", "url": null},
+      {"citation": "Pigafetta, A. (1525). Primo viaggio intorno al mondo (First Voyage Around the World).", "source_type": "primary", "url": null},
+      {"citation": "Zhao Rugua (1225). Zhufan Zhi (Description of Barbarous Peoples). Song dynasty.", "source_type": "primary", "url": null}
+    ]
+  },
+  {
+    "name_original": "Tundo",
+    "name_original_lang": "tl",
+    "entity_type": "kingdom",
+    "year_start": 900,
+    "year_end": 1589,
+    "capital_name": "Tondo (Manila Bay)",
+    "capital_lat": 14.62,
+    "capital_lon": 120.97,
+    "confidence_score": 0.5,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [120.5, 15.0],
+          [121.0, 15.2],
+          [121.5, 14.8],
+          [121.5, 14.3],
+          [121.2, 14.0],
+          [120.8, 14.0],
+          [120.3, 14.3],
+          [120.3, 14.8],
+          [120.5, 15.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Tagalog. Tondo is attested in the Laguna Copperplate Inscription (900 CE), the oldest known written document from the Philippines, which records a debt settlement in Old Malay with Sanskrit loanwords. This demonstrates pre-colonial Philippine integration into Indianized Southeast Asian trade networks. The polity was governed by a lakandula (paramount ruler). Spanish colonization after 1571 destroyed Tondo's independence; the Tondo Conspiracy of 1587-1588, led by Agustin de Legazpi (a Christianized Tondo noble) and Magat Salamat (son of Lakandula), was one of the earliest anti-colonial revolts. Its failure led to the execution of Filipino nobles and the consolidation of Spanish Manila. Pre-colonial Tondo's exact political structure is difficult to reconstruct due to Spanish destruction of indigenous records.",
+    "name_variants": [
+      {"name": "Kingdom of Tondo", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention (reconstructed)", "source": "Scott, Barangay: Sixteenth-Century Philippine Culture and Society"},
+      {"name": "Tundun", "lang": "tl", "period_start": 900, "period_end": null, "context": "Old Tagalog form from the Laguna Copperplate Inscription (900 CE)", "source": "Laguna Copperplate Inscription"},
+      {"name": "東都", "lang": "zh", "period_start": null, "period_end": null, "context": "Chinese trade name appearing in Song dynasty records", "source": "Song Shi (History of Song Dynasty)"}
+    ],
+    "territory_changes": [
+      {"year": 900, "region": "Manila Bay area", "change_type": "EMERGENCE", "description": "The Laguna Copperplate Inscription (900 CE) attests to the existence of Tondo as a polity integrated into Indianized Southeast Asian trade networks. The inscription records a debt settlement in Old Malay", "population_affected": null, "confidence_score": 0.7},
+      {"year": 1571, "region": "Manila Bay", "change_type": "CONQUEST_MILITARY", "description": "Spanish forces under Legazpi conquered Manila (the Islamic Rajahnate of Maynila) and subjugated neighboring Tondo. Tondo's Lakandula initially cooperated but the indigenous elite was progressively marginalized", "population_affected": null, "confidence_score": 0.85},
+      {"year": 1589, "region": "Tondo", "change_type": "CONQUEST_MILITARY", "description": "After the failed Tondo Conspiracy (1587-1588) -- an anti-colonial revolt led by Christianized Filipino nobles -- Spanish authorities executed the conspirators and fully absorbed Tondo into the colonial administration of Manila", "population_affected": null, "confidence_score": 0.8}
+    ],
+    "sources": [
+      {"citation": "Scott, W.H. (1994). Barangay: Sixteenth-Century Philippine Culture and Society. Ateneo de Manila University Press.", "source_type": "academic", "url": null},
+      {"citation": "Laguna Copperplate Inscription. 900 CE. National Museum of the Philippines.", "source_type": "primary", "url": null},
+      {"citation": "Postma, A. (1992). 'The Laguna Copperplate Inscription.' Philippine Studies 40(2).", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "سلطنت ماڬينداناو",
+    "name_original_lang": "mdh",
+    "entity_type": "sultanate",
+    "year_start": 1500,
+    "year_end": 1888,
+    "capital_name": "Cotabato (کوتاباتو)",
+    "capital_lat": 7.22,
+    "capital_lon": 124.25,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [123.5, 8.0],
+          [124.5, 8.5],
+          [125.5, 8.0],
+          [126.0, 7.5],
+          [126.5, 7.0],
+          [126.0, 6.0],
+          [125.0, 5.5],
+          [124.0, 6.0],
+          [123.0, 6.5],
+          [123.0, 7.5],
+          [123.5, 8.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Maguindanaon (Jawi script). Maguindanao was a powerful Islamic sultanate in Mindanao. Under Sultan Kudarat (Muhammad Dipatuan Kudarat, r. 1619-1671), it was the center of Muslim Filipino resistance to Spanish colonialism. Spanish sources demonized Maguindanao as a 'pirate state,' but this framing served colonial propaganda -- Maguindanao was defending its sovereignty and Islamic identity. American colonial forces continued the subjugation (Moro Wars), and the Philippine state's post-independence policies of Christian settler colonization of Mindanao displaced the Moro population from their ancestral lands, leading to the Moro conflict that persists today. Sultan Kudarat is now honored as a Philippine national hero, an acknowledgment of the legitimacy of Moro resistance.",
+    "name_variants": [
+      {"name": "Sultanate of Maguindanao", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention", "source": "Majul, Muslims in the Philippines"},
+      {"name": "Kasultanan nu Magindanaw", "lang": "mdh", "period_start": null, "period_end": null, "context": "Maguindanaon (Latin script) form", "source": "Majul, Muslims in the Philippines"},
+      {"name": "Sultanato de Maguindanao", "lang": "es", "period_start": null, "period_end": null, "context": "Spanish colonial designation", "source": "Combes, Historia de Mindanao y Joló (1667)"}
+    ],
+    "territory_changes": [
+      {"year": 1500, "region": "Cotabato Basin, Mindanao", "change_type": "EMERGENCE", "description": "Sharif Muhammad Kabungsuwan, an Islamic missionary from Johor, established the Sultanate of Maguindanao by converting local datu and establishing an Islamic polity in the Cotabato River basin", "population_affected": null, "confidence_score": 0.5},
+      {"year": 1637, "region": "Mindanao", "change_type": "CONQUEST_MILITARY", "description": "Major Spanish military expedition against Maguindanao. Sultan Kudarat resisted fiercely and organized a pan-Moro alliance against Spanish colonialism, becoming a symbol of Muslim Filipino resistance", "population_affected": null, "confidence_score": 0.7},
+      {"year": 1888, "region": "Cotabato", "change_type": "CONQUEST_MILITARY", "description": "Spain finally conquered Cotabato and imposed direct rule over Maguindanao, ending the sultanate's independence after nearly 300 years of resistance", "population_affected": null, "confidence_score": 0.75}
+    ],
+    "sources": [
+      {"citation": "Majul, C.A. (1973). Muslims in the Philippines. University of the Philippines Press.", "source_type": "academic", "url": null},
+      {"citation": "Combes, F. (1667/1897). Historia de Mindanao y Joló. Madrid. (Reprinted with translation by W.E. Retana).", "source_type": "primary", "url": null},
+      {"citation": "Ileto, R. (1971). Magindanao 1860-1888: The Career of Datu Utto of Buayan. Cornell University Southeast Asia Program.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Nhà Lý",
+    "name_original_lang": "vi",
+    "entity_type": "dynasty",
+    "year_start": 1009,
+    "year_end": 1225,
+    "capital_name": "Thăng Long (昇龍, Hanoi)",
+    "capital_lat": 21.03,
+    "capital_lon": 105.85,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [103.5, 22.5],
+          [105.0, 23.0],
+          [106.5, 22.5],
+          [108.0, 21.5],
+          [108.5, 20.5],
+          [108.0, 19.0],
+          [107.0, 17.5],
+          [106.5, 16.5],
+          [106.0, 16.0],
+          [105.5, 17.0],
+          [105.0, 18.0],
+          [104.5, 19.0],
+          [104.0, 20.0],
+          [103.5, 21.0],
+          [103.5, 22.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Vietnamese. The Ly dynasty (Nhà Lý) was one of Vietnam's greatest dynasties, establishing Thang Long (modern Hanoi) as the capital and consolidating Vietnamese independence after centuries of Chinese domination. The Vietnamese name Dai Viet (大越) was adopted under this dynasty. The Ly dynasty's southern expansion (Nam Tien, 'March to the South') began the centuries-long process of Vietnamese colonization of Champa and Khmer territories -- a process that Vietnamese nationalist historiography celebrates as unification but that Cham and Khmer perspectives view as conquest and cultural erasure. The dynasty also waged wars against Song China (1075-1077), demonstrating Vietnamese military resilience against its northern neighbor.",
+    "name_variants": [
+      {"name": "Ly Dynasty", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention (without diacritics)", "source": "Taylor, A History of the Vietnamese"},
+      {"name": "李朝", "lang": "zh", "period_start": null, "period_end": null, "context": "Chinese characters (Sino-Vietnamese: Lý triều)", "source": "Dai Viet Su Ky Toan Thu"},
+      {"name": "Nhà Lý", "lang": "vi", "period_start": null, "period_end": null, "context": "Vietnamese: 'House of Ly'", "source": "Dai Viet Su Ky Toan Thu"}
+    ],
+    "territory_changes": [
+      {"year": 1009, "region": "Northern Vietnam", "change_type": "EMERGENCE", "description": "Ly Cong Uan seized power from the Early Le dynasty and established the Ly dynasty, moving the capital to Thang Long (Hanoi). The Ly dynasty consolidated Vietnamese state institutions and Buddhist cultural identity", "population_affected": null, "confidence_score": 0.8},
+      {"year": 1075, "region": "Guangxi (Southern China)", "change_type": "CONQUEST_MILITARY", "description": "Ly Thuong Kiet launched a preemptive invasion of Song dynasty China, sacking Nanning. He then composed the 'Nam Quoc Son Ha' poem, considered Vietnam's declaration of independence: 'The southern country's mountains and rivers belong to the southern emperor'", "population_affected": null, "confidence_score": 0.8},
+      {"year": 1225, "region": "Northern Vietnam", "change_type": "ABDICATION", "description": "The last Ly emperor, Ly Chieu Hoang (a child empress), was forced to abdicate in favor of her husband Tran Canh, ending the Ly dynasty and beginning the Tran dynasty", "population_affected": null, "confidence_score": 0.85}
+    ],
+    "sources": [
+      {"citation": "Taylor, K.W. (2013). A History of the Vietnamese. Cambridge University Press.", "source_type": "academic", "url": null},
+      {"citation": "Dai Viet Su Ky Toan Thu (大越史記全書, Complete Annals of Dai Viet). Compiled 15th-17th centuries.", "source_type": "primary", "url": null},
+      {"citation": "Wolters, O.W. (1988). Two Essays on Dai-Viet in the Fourteenth Century. Yale Southeast Asia Studies.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Nhà Trần",
+    "name_original_lang": "vi",
+    "entity_type": "dynasty",
+    "year_start": 1225,
+    "year_end": 1400,
+    "capital_name": "Thăng Long (昇龍, Hanoi)",
+    "capital_lat": 21.03,
+    "capital_lon": 105.85,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [103.5, 22.5],
+          [105.0, 23.5],
+          [106.5, 22.5],
+          [108.0, 21.5],
+          [108.5, 20.0],
+          [108.0, 18.5],
+          [107.5, 17.0],
+          [107.0, 16.0],
+          [106.5, 15.5],
+          [105.5, 16.5],
+          [105.0, 17.5],
+          [104.5, 19.0],
+          [104.0, 20.0],
+          [103.5, 21.5],
+          [103.5, 22.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Vietnamese. The Tran dynasty is celebrated in Vietnamese history for repelling three Mongol invasions (1258, 1285, 1288) -- one of the few states in the world to successfully resist Mongol conquest. General Tran Hung Dao's victory at the Battle of Bach Dang (1288), using iron-tipped stakes to destroy the Mongol fleet, is a foundational Vietnamese national narrative. The dynasty also continued the Nam Tien southward expansion against Champa. The Tran rise to power involved the politically engineered marriage and abdication described in the Ly dynasty entry. The Tran clan originally had Chinese (Fujian) ancestry, a fact that complicates simplistic ethnic narratives about Vietnamese identity.",
+    "name_variants": [
+      {"name": "Tran Dynasty", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention (without diacritics)", "source": "Taylor, A History of the Vietnamese"},
+      {"name": "陳朝", "lang": "zh", "period_start": null, "period_end": null, "context": "Chinese characters (Sino-Vietnamese: Tran trieu)", "source": "Dai Viet Su Ky Toan Thu"},
+      {"name": "Nhà Trần", "lang": "vi", "period_start": null, "period_end": null, "context": "Vietnamese: 'House of Tran'", "source": "Dai Viet Su Ky Toan Thu"}
+    ],
+    "territory_changes": [
+      {"year": 1225, "region": "Northern Vietnam", "change_type": "SUCCESSION", "description": "Tran Canh married the child empress Ly Chieu Hoang, engineering a dynastic transition from Ly to Tran. The Tran clan consolidated power through strategic intermarriage and political maneuvering", "population_affected": null, "confidence_score": 0.85},
+      {"year": 1258, "region": "Northern Vietnam", "change_type": "DEFENSE", "description": "First Mongol invasion of Dai Viet. The Tran court evacuated Thang Long but counterattacked, forcing Mongol withdrawal. The scorched-earth strategy became a template for future resistance", "population_affected": null, "confidence_score": 0.85},
+      {"year": 1288, "region": "Bach Dang River", "change_type": "DEFENSE", "description": "Third Mongol invasion repelled at the Battle of Bach Dang. Tran Hung Dao's forces planted iron-tipped wooden stakes in the riverbed, destroying the Mongol fleet at low tide. One of the most significant military victories in Southeast Asian history", "population_affected": null, "confidence_score": 0.9},
+      {"year": 1400, "region": "Vietnam", "change_type": "USURPATION", "description": "Ho Quy Ly forced the last Tran emperor to abdicate and established the Ho dynasty, ending Tran rule after 175 years", "population_affected": null, "confidence_score": 0.85}
+    ],
+    "sources": [
+      {"citation": "Taylor, K.W. (2013). A History of the Vietnamese. Cambridge University Press.", "source_type": "academic", "url": null},
+      {"citation": "Dai Viet Su Ky Toan Thu (大越史記全書, Complete Annals of Dai Viet). Compiled 15th-17th centuries.", "source_type": "primary", "url": null},
+      {"citation": "Chapuis, O. (1995). A History of Vietnam: From Hong Bang to Tu Duc. Greenwood Press.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Nhà Lê",
+    "name_original_lang": "vi",
+    "entity_type": "dynasty",
+    "year_start": 1428,
+    "year_end": 1789,
+    "capital_name": "Thăng Long (昇龍, Hanoi)",
+    "capital_lat": 21.03,
+    "capital_lon": 105.85,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [103.0, 23.0],
+          [105.0, 23.5],
+          [107.0, 22.5],
+          [108.5, 21.0],
+          [109.0, 19.5],
+          [109.0, 17.5],
+          [108.5, 16.0],
+          [108.0, 14.0],
+          [107.5, 12.0],
+          [107.0, 11.0],
+          [106.5, 10.5],
+          [106.0, 11.5],
+          [106.0, 13.0],
+          [105.5, 14.5],
+          [105.5, 16.0],
+          [105.0, 17.5],
+          [104.5, 19.0],
+          [104.0, 20.5],
+          [103.5, 21.5],
+          [103.0, 23.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Vietnamese. The Le dynasty (specifically the Later Le, Nhà Hậu Lê) was the longest-ruling dynasty in Vietnamese history, though for much of its later period the Le emperors were puppets of the Trinh lords in the north while the Nguyen lords ruled the south. Le Loi's rebellion against Ming Chinese occupation (1418-1428) and the proclamation 'Binh Ngo Dai Cao' (written by Nguyen Trai) is a foundational Vietnamese independence narrative. The Le dynasty's greatest territorial expansion came under Le Thanh Tong (r. 1460-1497), who conquered the Cham capital Vijaya in 1471 -- a campaign involving the massacre of an estimated 60,000 Cham and the deportation of 30,000 more, effectively destroying the Champa kingdom. The boundary shown represents the later Le period c. 1750 including Nguyen-controlled southern territories, which were nominally under Le sovereignty.",
+    "name_variants": [
+      {"name": "Le Dynasty", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention (without diacritics)", "source": "Taylor, A History of the Vietnamese"},
+      {"name": "Nhà Hậu Lê", "lang": "vi", "period_start": 1428, "period_end": 1789, "context": "Vietnamese: 'Later Le House', distinguishing from the Earlier Le (980-1009)", "source": "Dai Viet Su Ky Toan Thu"},
+      {"name": "黎朝", "lang": "zh", "period_start": null, "period_end": null, "context": "Chinese characters (Sino-Vietnamese: Le trieu)", "source": "Dai Viet Su Ky Toan Thu"},
+      {"name": "Later Lê dynasty", "lang": "en", "period_start": null, "period_end": null, "context": "Academic periodization distinguishing from the Earlier Le dynasty", "source": "Whitmore, Vietnam, Ho Quy Ly, and the Ming"}
+    ],
+    "territory_changes": [
+      {"year": 1428, "region": "Northern Vietnam", "change_type": "LIBERATION", "description": "Le Loi's ten-year resistance war expelled Ming Chinese occupation forces, restoring Vietnamese independence. Nguyen Trai composed the Binh Ngo Dai Cao, a proclamation of Vietnamese sovereignty and identity", "population_affected": null, "confidence_score": 0.9},
+      {"year": 1471, "region": "Champa (Vijaya)", "change_type": "CONQUEST_MILITARY", "description": "Le Thanh Tong invaded and conquered the Cham capital Vijaya. Vietnamese sources record 60,000 Cham killed and 30,000 captured. This campaign effectively destroyed Champa as an independent state and opened central-southern Vietnam to Vietnamese settlement (Nam Tien)", "population_affected": 90000, "confidence_score": 0.8},
+      {"year": 1789, "region": "Vietnam", "change_type": "CONQUEST_MILITARY", "description": "The Tay Son rebellion overthrew the Le dynasty and the Trinh lords. Le Chieu Thong fled to Qing China and asked for military intervention, but the Tay Son defeated the Qing invasion at the Battle of Ngoc Hoi-Dong Da (1789)", "population_affected": null, "confidence_score": 0.85}
+    ],
+    "sources": [
+      {"citation": "Taylor, K.W. (2013). A History of the Vietnamese. Cambridge University Press.", "source_type": "academic", "url": null},
+      {"citation": "Dai Viet Su Ky Toan Thu (大越史記全書, Complete Annals of Dai Viet). Compiled 15th-17th centuries.", "source_type": "primary", "url": null},
+      {"citation": "Whitmore, J.K. (1985). Vietnam, Ho Quy Ly, and the Ming (1371-1421). Yale Southeast Asia Studies.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Nhà Tây Sơn",
+    "name_original_lang": "vi",
+    "entity_type": "dynasty",
+    "year_start": 1778,
+    "year_end": 1802,
+    "capital_name": "Quy Nhơn (Qui Nhon)",
+    "capital_lat": 13.77,
+    "capital_lon": 109.22,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [103.5, 23.0],
+          [105.5, 23.5],
+          [107.0, 22.5],
+          [108.5, 21.0],
+          [109.0, 19.0],
+          [109.0, 16.5],
+          [108.5, 14.0],
+          [108.0, 12.0],
+          [107.0, 10.5],
+          [106.5, 10.0],
+          [106.0, 10.5],
+          [105.5, 12.0],
+          [105.5, 14.5],
+          [105.0, 16.5],
+          [105.0, 18.0],
+          [104.5, 19.5],
+          [104.0, 21.0],
+          [103.5, 23.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Vietnamese. The Tay Son movement was a peasant rebellion that unified Vietnam for the first time by overthrowing both the Nguyen lords (south) and the Trinh lords/Le dynasty (north). Emperor Quang Trung (Nguyen Hue) is celebrated for defeating a Qing Chinese invasion of 200,000 troops at the Battle of Ngoc Hoi-Dong Da (1789) during Tet -- one of the most remarkable military victories in Vietnamese history. The Tay Son also defeated a Siamese invasion of Cochinchina (1785, Battle of Rach Gam-Xoai Mut). Despite their military brilliance, the Tay Son dynasty collapsed rapidly after Quang Trung's death (1792) due to succession disputes, and was overthrown by Nguyen Anh (later Emperor Gia Long) with French military assistance.",
+    "name_variants": [
+      {"name": "Tay Son Dynasty", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention", "source": "Dutton, The Tay Son Uprising"},
+      {"name": "西山朝", "lang": "zh", "period_start": null, "period_end": null, "context": "Chinese characters (Sino-Vietnamese: Tay Son trieu)", "source": "Qing dynasty records"},
+      {"name": "Nhà Tây Sơn", "lang": "vi", "period_start": null, "period_end": null, "context": "Vietnamese: 'House of Tay Son (Western Mountain)'", "source": "Dutton, The Tay Son Uprising"}
+    ],
+    "territory_changes": [
+      {"year": 1778, "region": "Central Vietnam", "change_type": "REVOLUTION", "description": "The three Tay Son brothers (Nguyen Nhac, Nguyen Hue, Nguyen Lu) established formal rule after years of peasant rebellion. Nguyen Nhac declared himself emperor at Quy Nhon", "population_affected": null, "confidence_score": 0.85},
+      {"year": 1785, "region": "Southern Vietnam (Cochinchina)", "change_type": "DEFENSE", "description": "Nguyen Hue defeated a massive Siamese invasion force at the Battle of Rach Gam-Xoai Mut, destroying most of the Siamese fleet and army", "population_affected": null, "confidence_score": 0.85},
+      {"year": 1789, "region": "Northern Vietnam (Thang Long)", "change_type": "DEFENSE", "description": "Emperor Quang Trung launched a lightning campaign during Tet, annihilating a Qing Chinese army of 200,000 at the Battle of Ngoc Hoi-Dong Da and liberating Thang Long (Hanoi)", "population_affected": null, "confidence_score": 0.9},
+      {"year": 1802, "region": "Vietnam", "change_type": "CONQUEST_MILITARY", "description": "Nguyen Anh (Emperor Gia Long), with French military advisors and weapons, defeated the weakened Tay Son regime and unified Vietnam under the Nguyen dynasty. The Tay Son royal family was subjected to posthumous desecration", "population_affected": null, "confidence_score": 0.9}
+    ],
+    "sources": [
+      {"citation": "Dutton, G. (2006). The Tay Son Uprising: Society and Rebellion in Eighteenth-Century Vietnam. University of Hawaii Press.", "source_type": "academic", "url": null},
+      {"citation": "Taylor, K.W. (2013). A History of the Vietnamese. Cambridge University Press.", "source_type": "academic", "url": null},
+      {"citation": "Dai Nam Thuc Luc (大南實錄, Veritable Records of Dai Nam). Nguyen dynasty, 19th century.", "source_type": "primary", "url": null}
+    ]
+  },
+  {
+    "name_original": "ละโว้",
+    "name_original_lang": "th",
+    "entity_type": "kingdom",
+    "year_start": 450,
+    "year_end": 1388,
+    "capital_name": "Lopburi (ลพบุรี / Lavo)",
+    "capital_lat": 14.80,
+    "capital_lon": 100.62,
+    "confidence_score": 0.5,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [99.5, 15.5],
+          [100.5, 16.0],
+          [101.5, 15.5],
+          [102.0, 15.0],
+          [102.0, 14.0],
+          [101.5, 13.0],
+          [100.5, 12.5],
+          [99.5, 13.0],
+          [99.0, 14.0],
+          [99.0, 15.0],
+          [99.5, 15.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Thai script (ละโว้), though the original polity was Mon/Khmer, not Thai. The Lavo kingdom's ethnic and linguistic identity shifted over its long history: it was originally a Mon-Khmer polity within the Dvaravati cultural sphere, later came under Khmer (Angkorian) influence and governance, and was eventually absorbed into the Tai-speaking Ayutthaya kingdom. Representing Lavo with a Thai script name reflects modern convention but obscures its Mon-Khmer origins. The alternative Mon name 'Lavapura' better reflects its early identity. The confidence score is low due to the fragmentary nature of evidence for the early period and the difficulty of distinguishing Lavo as an independent polity from a Khmer provincial administration.",
+    "name_variants": [
+      {"name": "Lavo Kingdom", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention", "source": "Coedes, The Indianized States of Southeast Asia"},
+      {"name": "Lavapura", "lang": "sa", "period_start": null, "period_end": null, "context": "Sanskrit form, reflecting Indian cultural influence", "source": "Coedes, The Indianized States of Southeast Asia"},
+      {"name": "ลวปุระ", "lang": "th", "period_start": null, "period_end": null, "context": "Thai rendering of the Sanskrit name", "source": "Wyatt, Thailand: A Short History"},
+      {"name": "Louvo", "lang": "fr", "period_start": null, "period_end": null, "context": "French colonial rendering (Simon de la Loubere, 1687)", "source": "De la Loubere, Du Royaume de Siam"}
+    ],
+    "territory_changes": [
+      {"year": 450, "region": "Central Thailand (Chao Phraya basin)", "change_type": "EMERGENCE", "description": "Approximate founding of a Mon-Khmer polity at Lopburi within the broader Dvaravati cultural sphere. The exact founding date is conjectural", "population_affected": null, "confidence_score": 0.3},
+      {"year": 1000, "region": "Central Thailand", "change_type": "CONQUEST_MILITARY", "description": "Lavo came under direct Khmer (Angkorian) rule during the expansion of the Khmer Empire under Suryavarman I. Lopburi became a major Khmer provincial center, as evidenced by Khmer-style prasat architecture", "population_affected": null, "confidence_score": 0.6},
+      {"year": 1388, "region": "Lopburi region", "change_type": "ABSORPTION", "description": "Lavo was fully integrated into the Ayutthaya kingdom, losing any remaining political autonomy. Lopburi became a secondary royal residence and military base", "population_affected": null, "confidence_score": 0.7}
+    ],
+    "sources": [
+      {"citation": "Coedes, G. (1968). The Indianized States of Southeast Asia. University of Hawaii Press.", "source_type": "academic", "url": null},
+      {"citation": "Wyatt, D.K. (2003). Thailand: A Short History. 2nd ed. Yale University Press.", "source_type": "academic", "url": null},
+      {"citation": "Brown, R.L. (1996). The Dvaravati Wheels of the Law and the Indianization of South East Asia. Brill.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "ចេនឡា",
+    "name_original_lang": "km",
+    "entity_type": "kingdom",
+    "year_start": 550,
+    "year_end": 802,
+    "capital_name": "Isanapura (ឥសានបុរៈ, Sambor Prei Kuk)",
+    "capital_lat": 12.88,
+    "capital_lon": 105.03,
+    "confidence_score": 0.5,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [102.5, 15.5],
+          [104.0, 16.0],
+          [106.0, 15.5],
+          [107.5, 14.5],
+          [108.0, 13.0],
+          [107.5, 11.5],
+          [106.5, 10.5],
+          [105.5, 10.0],
+          [104.5, 10.5],
+          [103.5, 11.5],
+          [102.5, 12.5],
+          [102.0, 14.0],
+          [102.5, 15.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in Khmer script. 'Chenla' is a Chinese exonym (真臘, Zhenla) from Tang dynasty records; the indigenous name is unknown. The use of 'Chenla' imposes an external Chinese framework on a Khmer/Mon-Khmer polity. Chenla emerged from or succeeded Funan (another Chinese exonym) and preceded the Khmer Empire, forming part of the continuous Khmer civilizational trajectory. Chinese sources distinguish 'Water Chenla' (coastal) and 'Land Chenla' (inland), but whether these represent distinct polities or a Chinese misunderstanding of a single fragmented state is debated. The confidence score reflects the heavy reliance on Chinese sources and the limited indigenous epigraphic record.",
+    "name_variants": [
+      {"name": "Chenla", "lang": "en", "period_start": null, "period_end": null, "context": "English academic convention (from Chinese)", "source": "Coedes, The Indianized States of Southeast Asia"},
+      {"name": "真臘 (Zhēnlà)", "lang": "zh", "period_start": null, "period_end": null, "context": "Chinese name from Sui and Tang dynasty records", "source": "Suishu (Book of Sui), 7th century"},
+      {"name": "Zhenla", "lang": "en", "period_start": null, "period_end": null, "context": "Romanization of the Chinese name", "source": "Vickery, Society, Economics, and Politics in Pre-Angkor Cambodia"}
+    ],
+    "territory_changes": [
+      {"year": 550, "region": "Middle Mekong and Tonle Sap region", "change_type": "EMERGENCE", "description": "Chenla emerged as a successor or breakaway state from Funan, the earlier Indianized polity. The relationship between Funan and Chenla is debated: Chinese sources describe a conquest, but the transition may have been more gradual", "population_affected": null, "confidence_score": 0.4},
+      {"year": 707, "region": "Cambodia and southern Laos", "change_type": "PARTITION", "description": "Chinese sources describe Chenla splitting into 'Water Chenla' (coastal, around the Mekong delta) and 'Land Chenla' (inland, around the Dangrek mountains). Whether this represents a real political division or a Chinese simplification is debated", "population_affected": null, "confidence_score": 0.4},
+      {"year": 802, "region": "Angkor region", "change_type": "UNIFICATION", "description": "Jayavarman II proclaimed himself devaraja ('god-king') on Mount Kulen, unifying Chenla's fragments and founding the Khmer Empire. This marks the conventional end of the Chenla period", "population_affected": null, "confidence_score": 0.65}
+    ],
+    "sources": [
+      {"citation": "Coedes, G. (1968). The Indianized States of Southeast Asia. University of Hawaii Press.", "source_type": "academic", "url": null},
+      {"citation": "Vickery, M. (1998). Society, Economics, and Politics in Pre-Angkor Cambodia: The 7th-8th Centuries. Centre for East Asian Cultural Studies for Unesco.", "source_type": "academic", "url": null},
+      {"citation": "Suishu (隋書, Book of Sui). 7th century Chinese dynastic history.", "source_type": "primary", "url": null}
+    ]
+  },
+  {
+    "name_original": "British Malaya",
+    "name_original_lang": "en",
+    "entity_type": "colony",
+    "year_start": 1826,
+    "year_end": 1957,
+    "capital_name": "Singapore (1826-1946) / Kuala Lumpur (1946-1957)",
+    "capital_lat": 3.14,
+    "capital_lon": 101.69,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [99.5, 6.7],
+          [100.5, 6.5],
+          [101.5, 6.2],
+          [102.5, 5.5],
+          [103.5, 4.5],
+          [104.0, 3.5],
+          [104.5, 2.5],
+          [104.0, 1.5],
+          [103.5, 1.2],
+          [103.0, 1.5],
+          [102.0, 2.0],
+          [101.0, 2.5],
+          [100.5, 3.5],
+          [100.0, 4.5],
+          [99.5, 5.5],
+          [99.5, 6.7]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS: name_original in English, the colonial language. This is a colonial administrative entity, not a nation. 'British Malaya' encompassed the Straits Settlements (Penang, Malacca, Singapore), the Federated Malay States (Perak, Selangor, Negeri Sembilan, Pahang), and the Unfederated Malay States (Johor, Kedah, Kelantan, Terengganu, Perlis). The British acquired these territories through a combination of treaties, military force, and exploitation of local succession disputes. The Pangkor Treaty (1874) imposed the 'Resident' system, stripping Malay sultans of real power while maintaining the fiction of sovereignty. British economic exploitation centered on tin mining and rubber plantations, for which they imported massive numbers of Chinese and Indian laborers, fundamentally altering Malaya's demographic composition and creating ethnic tensions that persist. The Japanese occupation (1942-1945) exposed the fragility of British colonial authority. The Malayan Emergency (1948-1960) was primarily a British counterinsurgency against communist (predominantly Chinese) insurgents, involving mass forced relocation of rural populations (the Briggs Plan). The name in Malay is 'Tanah Melayu British' but the primary designation was always the English colonial term.",
+    "name_variants": [
+      {"name": "British Malaya", "lang": "en", "period_start": null, "period_end": null, "context": "Standard colonial designation", "source": "Andaya and Andaya, A History of Malaysia"},
+      {"name": "Tanah Melayu British", "lang": "ms", "period_start": null, "period_end": null, "context": "Malay term: 'British Land of the Malays'", "source": "Andaya and Andaya, A History of Malaysia"},
+      {"name": "تانه ملايو بريتيش", "lang": "ms-Arab", "period_start": null, "period_end": null, "context": "Jawi script form", "source": "Andaya and Andaya, A History of Malaysia"},
+      {"name": "Straits Settlements", "lang": "en", "period_start": 1826, "period_end": 1946, "context": "Crown Colony component (Penang, Malacca, Singapore)", "source": "Turnbull, A Short History of Malaysia, Singapore and Brunei"},
+      {"name": "英属马来亚", "lang": "zh", "period_start": null, "period_end": null, "context": "Chinese: reflecting the large Chinese diaspora community", "source": "Andaya and Andaya, A History of Malaysia"},
+      {"name": "பிரித்தானிய மலாயா", "lang": "ta", "period_start": null, "period_end": null, "context": "Tamil: reflecting the Indian diaspora community", "source": "Andaya and Andaya, A History of Malaysia"}
+    ],
+    "territory_changes": [
+      {"year": 1826, "region": "Penang, Malacca, Singapore", "change_type": "COLONIAL_ESTABLISHMENT", "description": "Formation of the Straits Settlements as a unified British Crown Colony, consolidating earlier acquisitions: Penang (1786), Singapore (Raffles, 1819), and Malacca (Anglo-Dutch Treaty, 1824)", "population_affected": null, "confidence_score": 0.95},
+      {"year": 1874, "region": "Perak", "change_type": "TREATY", "description": "Pangkor Treaty: Britain imposed a 'Resident' (advisor whose advice must be followed) on the Sultan of Perak, beginning the system of indirect colonial rule over the Malay states. Sultan Abdullah was manipulated through a succession dispute", "population_affected": null, "confidence_score": 0.9},
+      {"year": 1909, "region": "Northern Malay States", "change_type": "CESSION", "description": "Anglo-Siamese Treaty: Siam ceded Kelantan, Terengganu, Kedah, and Perlis to British suzerainty, completing the formation of British Malaya. These states retained their sultans under British Advisors", "population_affected": null, "confidence_score": 0.9},
+      {"year": 1942, "region": "Malaya", "change_type": "CONQUEST_MILITARY", "description": "Japanese invasion and rapid conquest of Malaya. The fall of Singapore (15 February 1942) was the largest British military surrender in history. Japanese occupation (1942-1945) involved mass atrocities, forced labor on the Burma Railway, and the Sook Ching massacre of Chinese civilians", "population_affected": 50000, "confidence_score": 0.95},
+      {"year": 1957, "region": "Malaya", "change_type": "INDEPENDENCE", "description": "Federation of Malaya gained independence (Merdeka) on 31 August 1957 under Tunku Abdul Rahman. The transition was negotiated rather than revolutionary, but followed years of the Malayan Emergency and anti-colonial activism", "population_affected": null, "confidence_score": 0.95}
+    ],
+    "sources": [
+      {"citation": "Andaya, B.W. and Andaya, L.Y. (2016). A History of Malaysia. 3rd ed. Palgrave Macmillan.", "source_type": "academic", "url": null},
+      {"citation": "Turnbull, C.M. (1989). A Short History of Malaysia, Singapore and Brunei. Cassell.", "source_type": "academic", "url": null},
+      {"citation": "Harper, T.N. (1999). The End of Empire and the Making of Malaya. Cambridge University Press.", "source_type": "academic", "url": null},
+      {"citation": "Pangkor Treaty (1874). Treaty between the British and the chiefs of Perak.", "source_type": "primary", "url": null}
+    ]
+  }
+]
