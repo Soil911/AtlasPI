@@ -357,6 +357,24 @@ def list_continents(db: Session = Depends(get_db)):
 
 
 @router.get(
+    "/v1/random",
+    response_model=EntityResponse,
+    summary="Entit\u00e0 casuale",
+    description="Restituisce un'entit\u00e0 casuale dal dataset. Utile per scoprire nuove entit\u00e0.",
+)
+def random_entity(response: Response, db: Session = Depends(get_db)):
+    import random as rnd
+    total = db.query(GeoEntity).count()
+    if total == 0:
+        from src.api.errors import AtlasError
+        raise AtlasError(status_code=404, detail="Nessuna entit\u00e0 nel dataset")
+    offset = rnd.randint(0, total - 1)
+    entity = _eager_query(db).offset(offset).limit(1).first()
+    response.headers["Cache-Control"] = "no-cache"
+    return _entity_to_response(entity)
+
+
+@router.get(
     "/v1/stats",
     response_model=StatsResponse,
     summary="Statistiche del dataset",

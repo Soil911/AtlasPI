@@ -58,13 +58,65 @@ async def lifespan(app: FastAPI):
     yield
 
 
+OPENAPI_DESCRIPTION = """
+# AtlasPI — Database Geografico Storico per Agenti AI
+
+**40+ entita' storiche** su 6 continenti, da 3100 a.C. al 2014.
+Confini reali da fonti accademiche, governance etica documentata.
+
+## Quick Start
+
+```python
+import requests
+
+# Cerca entita' per anno
+r = requests.get("http://localhost:10100/v1/entity?year=1500")
+entities = r.json()["entities"]
+
+# Entita' casuale
+r = requests.get("http://localhost:10100/v1/random")
+entity = r.json()
+
+# Confronta due entita'
+r = requests.get("http://localhost:10100/v1/compare/1/2")
+comparison = r.json()
+```
+
+```javascript
+// JavaScript/Node.js
+const res = await fetch('http://localhost:10100/v1/entity?year=1500');
+const { entities } = await res.json();
+```
+
+```bash
+# curl
+curl -s http://localhost:10100/v1/entities?limit=5 | jq .
+curl -s http://localhost:10100/v1/random | jq .name_original
+```
+
+## Principi Etici
+- **ETHICS-001**: Nomi originali/locali come dato primario
+- **ETHICS-002**: Conquiste e violenze documentate esplicitamente
+- **ETHICS-003**: Territori contestati con tutte le versioni
+
+## Fonti
+- Natural Earth (ne_110m_admin_0_countries)
+- aourednik/historical-basemaps (7 periodi: 100-1900)
+"""
+
 app = FastAPI(
     title=APP_TITLE,
-    description=APP_DESCRIPTION,
+    description=OPENAPI_DESCRIPTION,
     version=APP_VERSION,
     lifespan=lifespan,
     docs_url="/docs",
     redoc_url="/redoc",
+    openapi_tags=[
+        {"name": "entit\u00e0", "description": "CRUD e ricerca entit\u00e0 geopolitiche storiche"},
+        {"name": "relazioni", "description": "Contemporanei, correlazioni e confronto tra entit\u00e0"},
+        {"name": "esportazione", "description": "Export GeoJSON, CSV e Timeline"},
+        {"name": "sistema", "description": "Health check e diagnostica"},
+    ],
 )
 
 # ─── Middleware (ordine: ultimo aggiunto = primo eseguito) ────────

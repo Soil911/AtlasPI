@@ -103,6 +103,26 @@ class TestContinents:
         assert e["continent"] is not None
 
 
+class TestRandom:
+    def test_random_returns_entity(self, client):
+        r = client.get("/v1/random")
+        assert r.status_code == 200
+        d = r.json()
+        assert "id" in d
+        assert "name_original" in d
+        assert "entity_type" in d
+
+    def test_random_has_no_cache(self, client):
+        r = client.get("/v1/random")
+        assert r.status_code == 200
+        assert "no-cache" in r.headers.get("cache-control", "")
+
+    def test_random_has_continent(self, client):
+        r = client.get("/v1/random")
+        d = r.json()
+        assert "continent" in d
+
+
 class TestStats:
     def test_stats_response(self, client):
         r = client.get("/v1/stats")
