@@ -6,7 +6,7 @@ def test_health_returns_ok(client):
     assert r.status_code == 200
     d = r.json()
     assert d["status"] == "ok"
-    assert d["version"] == "4.7.0"
+    assert d["version"] == "4.8.0"
     assert d["entity_count"] >= 35
 
 

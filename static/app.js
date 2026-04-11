@@ -707,6 +707,8 @@ function bindEvents() {
 
   document.getElementById('close-detail').addEventListener('click', closeDetail);
   document.getElementById('lang-toggle').addEventListener('click', switchLang);
+  document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+  initTheme();
 
   document.getElementById('map-fullscreen').addEventListener('click', () => {
     const container = document.getElementById('map-container');
@@ -1036,6 +1038,28 @@ function applyLangUI() {
   if (info) info.textContent = t('map_hint');
   applyFilters();
   loadStats();
+}
+
+// ─── Theme ─────────────────────────────────────────────────────
+
+function initTheme() {
+  const saved = localStorage.getItem('atlaspi-theme') || 'dark';
+  applyTheme(saved);
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme') || 'dark';
+  const next = current === 'dark' ? 'light' : 'dark';
+  applyTheme(next);
+  localStorage.setItem('atlaspi-theme', next);
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  const btn = document.getElementById('theme-toggle');
+  if (btn) btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+  // Invalidate map size after theme change
+  setTimeout(() => { if (map) map.invalidateSize(); }, 100);
 }
 
 function isReal(e) {

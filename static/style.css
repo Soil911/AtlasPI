@@ -1,6 +1,7 @@
 /* AtlasPI — Stile interfaccia */
 
-:root {
+/* ─── Dark theme (default) ────────────────────────────────────── */
+:root, [data-theme="dark"] {
   --bg-dark: #0d1117;
   --bg-sidebar: #161b22;
   --bg-card: #1c2333;
@@ -15,6 +16,51 @@
   --disputed: #f85149;
   --border: #30363d;
   --shadow: rgba(0,0,0,0.4);
+  --leaflet-filter: none;
+}
+
+/* ─── Light theme ──────────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg-dark: #ffffff;
+  --bg-sidebar: #f6f8fa;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f0f3f6;
+  --accent: #0969da;
+  --accent-light: #218bff;
+  --accent-warm: #bf8700;
+  --text: #1f2328;
+  --text-muted: #656d76;
+  --confirmed: #1a7f37;
+  --uncertain: #9a6700;
+  --disputed: #cf222e;
+  --border: #d0d7de;
+  --shadow: rgba(0,0,0,0.1);
+  --leaflet-filter: invert(1) hue-rotate(180deg) brightness(1.1) contrast(0.9);
+}
+
+/* Invert dark map tiles for light mode */
+[data-theme="light"] .leaflet-tile-pane {
+  filter: var(--leaflet-filter);
+}
+
+[data-theme="light"] .leaflet-control-zoom a {
+  background: var(--bg-sidebar) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+[data-theme="light"] .leaflet-tooltip {
+  background: var(--bg-sidebar) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+[data-theme="light"] .ethics-box::before { color: var(--disputed); }
+
+[data-theme="light"] kbd {
+  background: var(--bg-sidebar);
+  border-color: var(--border);
+  color: var(--accent);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -648,6 +694,21 @@ footer {
 
 .api-link:hover { background: var(--bg-card); border-color: var(--accent); }
 
+/* Theme toggle */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 1em;
+  padding: 3px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 6px;
+  transition: all 0.15s;
+  line-height: 1;
+}
+.theme-toggle:hover { border-color: var(--accent); color: var(--text); }
+
 /* Fieldset reset */
 fieldset.filter-control {
   border: none;
@@ -1063,6 +1124,13 @@ kbd {
 
 /* Print */
 @media print {
-  #sidebar, footer, .sidebar-toggle, .map-info-overlay { display: none; }
+  #sidebar, footer, .sidebar-toggle, .map-info-overlay, .timeline-bar,
+  .map-control-btn, .detail-actions, .header-right { display: none !important; }
   #map-container { width: 100%; }
+  body { background: #fff; color: #000; }
+  #header { background: #fff; border-color: #ccc; }
+  #header h1 { color: #000; }
+  .detail-panel { position: static; width: 100%; max-width: 100%; box-shadow: none; border: 1px solid #ccc; }
+  .detail-section { break-inside: avoid; }
+  .status-badge { border: 1px solid #999; }
 }
