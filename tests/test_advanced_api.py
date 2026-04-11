@@ -69,11 +69,11 @@ class TestTypes:
         assert len(types) >= 3
         assert all("type" in t and "count" in t for t in types)
 
-    def test_empire_is_most_common(self, client):
+    def test_empire_or_kingdom_most_common(self, client):
         r = client.get("/v1/types")
         types = r.json()
-        # L'empire dovrebbe essere il tipo piu' comune
-        assert types[0]["type"] == "empire"
+        # Empire e kingdom sono i tipi piu' comuni nel dataset
+        assert types[0]["type"] in ("empire", "kingdom")
 
 
 class TestContinents:

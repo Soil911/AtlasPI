@@ -82,9 +82,9 @@ class TestEmbedEndpoint:
 class TestDataDiversity:
     """Test che il dataset v5.3 sia veramente diversificato."""
 
-    def test_at_least_55_entities(self, client):
+    def test_at_least_200_entities(self, client):
         r = client.get("/v1/stats").json()
-        assert r["total_entities"] >= 55
+        assert r["total_entities"] >= 200
 
     def test_at_least_4_continents(self, client):
         r = client.get("/v1/continents").json()

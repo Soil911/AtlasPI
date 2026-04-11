@@ -18,6 +18,12 @@ const TYPE_ICONS = {
   republic: '🏛️',
   shogunate: '⚔️',
   dynasty: '🐉',
+  sultanate: '🕌',
+  khanate: '🏇',
+  principality: '🏴',
+  duchy: '🛡️',
+  federation: '🌐',
+  city: '🏙️',
 };
 
 let map, layerGroup;
@@ -151,7 +157,7 @@ function restoreUrlState() {
 
 async function loadEntities() {
   try {
-    const res = await fetch(`${API}/v1/entities?limit=100&offset=0`);
+    const res = await fetch(`${API}/v1/entities?limit=100&offset=0`, { cache: 'no-cache' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     allEntities = data.entities;
@@ -188,7 +194,7 @@ async function loadContemporaries(id) {
 
 async function loadTypes() {
   try {
-    const res = await fetch(`${API}/v1/types`);
+    const res = await fetch(`${API}/v1/types`, { cache: 'no-cache' });
     if (!res.ok) return;
     const types = await res.json();
     const container = document.getElementById('type-chips');
@@ -212,7 +218,7 @@ async function loadTypes() {
 
 async function loadContinents() {
   try {
-    const res = await fetch(`${API}/v1/continents`);
+    const res = await fetch(`${API}/v1/continents`, { cache: 'no-cache' });
     if (!res.ok) return;
     const continents = await res.json();
     const container = document.getElementById('continent-chips');
@@ -236,7 +242,7 @@ async function loadContinents() {
 
 async function loadStats() {
   try {
-    const res = await fetch(`${API}/v1/stats`);
+    const res = await fetch(`${API}/v1/stats`, { cache: 'no-cache' });
     if (!res.ok) return;
     const s = await res.json();
     const bar = document.getElementById('stats-bar');

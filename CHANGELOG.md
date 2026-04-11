@@ -2,6 +2,51 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v5.5.0] - 2026-04-11
+
+### Dataset — Espansione massiva
+- **255 entita' storiche** (da 55) — copertura globale da -4500 a.C. al 2024
+- 200 nuove entita' organizzate in 6 batch regionali:
+  - **Europa (45)**: Francia, Inghilterra, Svezia, Danimarca, Norvegia, Portogallo,
+    Commonwealth Polacco-Lituano, Ungheria, Macedonia, Sparta, Prussia, Austria,
+    Serbia, Bulgaria, Stato Pontificio, Aragona, Castiglia, Visigoti, Ostrogoti,
+    Lombardi, Novgorod, Moscovia, Genova, Firenze, Svizzera, Borgogna, Sicilia,
+    Ragusa, Hanse, Paesi Bassi, Carolingi, Scozia, Irlanda, Galles, Valacchia,
+    Moldavia, Montenegro, Albania, Boemia, Impero Tedesco, Austria-Ungheria, Italia
+  - **Asia (36)**: Shang, Zhou, Qin, Han, Tang, Song, Yuan, Ming, Gupta, Chola,
+    Maratha, Delhi Sultanate, Vijayanagara, Kushan, Goguryeo, Baekje, Goryeo,
+    Joseon, Timuridi, Parti, Sasanidi, Selgiuchidi, Liao, Jin, Xia, Ryukyu,
+    Lan Na, Lan Xang, Pagan, Dai Viet, Pallava, Rashtrakuta, Pala, Funan, Balhae
+  - **Africa/Medio Oriente (30)**: Ghana, Kanem-Bornu, Ashanti, Dahomey, Sokoto,
+    Oyo, Luba, Kilwa, Ajuran, Sumer, Akkad, Assiria, Babilonia, Ittiti, Omayyadi,
+    Fatimidi, Ayyubidi, Mamelucchi, Seleucidi, Tolomei, Nabatei, Palmira, Himyar,
+    Mitanni, Urartu, Elam, Almoravidi, Almohadi, Lydia, Media
+  - **Americhe (31)**: Olmechi, Maya, Teotihuacan, Toltechi, Zapotechi, Mixtechi,
+    Muisca, Wari, Chimu, Moche, Caral-Supe, Tiwanaku, Purepecha, Puebloani,
+    Nuova Spagna, Peru', Brasile, 13 Colonie, Haiti, Comanche, Lakota, Cherokee,
+    Creek, Quilombo dos Palmares, Missioni Gesuite Guarani
+  - **Stati moderni (35)**: Germania nazista, URSS, Jugoslavia, Cecoslovacchia,
+    Congo Belga, India, Pakistan, Bangladesh, Vietnam, PRC, DDR, Khmer Rouge,
+    Sudafrica apartheid, Rhodesia, USA, Francia, Coree, Turchia, Iran, Arabia
+    Saudita, Israele, Iraq, Irlanda, Finlandia, AOF, Indocina francese
+  - **Mondo antico (25)**: Fenici, Israele, Giuda, Troia, Minoici, Micenei,
+    Sciti, Sarmati, Harappa, Bitinia, Pergamo, Bosforo, Galazia, Commagene,
+    Dacia, Corinto, Siracusa, Colchide, Armenia, Xiongnu, Dilmun, Mauretania
+- 15 tipi di entita': empire, kingdom, republic, confederation, city-state,
+  dynasty, colony, disputed_territory, sultanate, khanate, principality,
+  duchy, caliphate, federation, city
+- Copertura 7 regioni: Europa (68), Asia (60), Medio Oriente (46),
+  Africa (41), Americhe (38), Oceania (1), Altro (1)
+- 678 fonti accademiche, 544 cambi territoriali documentati
+- ETHICS-003: tutti i territori contestati con confidence <= 0.7
+
+### Frontend
+- Icone per 6 nuovi tipi entita': sultanate, khanate, principality, duchy, federation, city
+
+### Test
+- 143 test tutti verdi (aggiornati threshold per 255+ entita')
+- Lint ruff pulito
+
 ## [v5.4.0] - 2026-04-11
 
 ### Dataset

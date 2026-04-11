@@ -1,0 +1,1135 @@
+[
+  {
+    "name_original": "Wagadu",
+    "name_original_lang": "snk",
+    "entity_type": "empire",
+    "year_start": 300,
+    "year_end": 1200,
+    "capital_name": "Kumbi Saleh",
+    "capital_lat": 15.77,
+    "capital_lon": -7.97,
+    "confidence_score": 0.6,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [-12.0, 14.0], [-11.0, 14.5], [-10.0, 15.0], [-9.0, 15.5],
+        [-8.0, 16.0], [-7.0, 16.5], [-6.0, 17.0], [-5.0, 17.5],
+        [-4.0, 17.0], [-3.0, 16.5], [-2.5, 16.0], [-2.0, 15.5],
+        [-2.5, 15.0], [-3.0, 14.5], [-4.0, 14.0], [-5.0, 13.5],
+        [-6.0, 13.0], [-7.0, 12.5], [-8.0, 12.0], [-9.0, 12.5],
+        [-10.0, 13.0], [-11.0, 13.5], [-12.0, 14.0]
+      ]]
+    },
+    "ethical_notes": "Known in Western historiography primarily as 'Ghana Empire', a name derived from the ruler's title (ghana = war chief), not the people's own name. The Soninke people called their state Wagadu. Western sources long minimized African state complexity. Al-Bakri's 11th-century account is among the earliest external sources but reflects an outsider's perspective. Archaeological evidence from Kumbi Saleh remains incomplete. Confidence score reflects reliance on limited oral traditions and external Arabic sources.",
+    "name_variants": [
+      {"name": "Ghana Empire", "lang": "en", "period_start": 300, "period_end": 1200, "context": "Western historiographic name derived from ruler's title, not the polity's self-designation", "source": "Levtzion, Ancient Ghana and Mali (1973)"},
+      {"name": "Empire du Ghana", "lang": "fr", "period_start": 300, "period_end": 1200, "context": "French colonial historiographic designation", "source": "Delafosse, Haut-Sénégal-Niger (1912)"},
+      {"name": "غانا", "lang": "ar", "period_start": 800, "period_end": 1200, "context": "Arab geographers' designation from the ruler's title", "source": "Al-Bakri, Kitab al-Masalik wa-l-Mamalik (1068)"}
+    ],
+    "territory_changes": [
+      {"year": 1076, "region": "Kumbi Saleh", "change_type": "CONQUEST_MILITARY", "description": "Almoravid invasion under Abu Bakr ibn Umar. The capital Kumbi Saleh was sacked. Extent of destruction and conversion policies remain debated among historians.", "population_affected": null, "confidence_score": 0.5},
+      {"year": 1200, "region": "Western Sahel", "change_type": "CONQUEST_MILITARY", "description": "Final dissolution as Sosso Kingdom under Sumanguru Kante absorbed remaining Wagadu territories. Population dispersed into successor polities.", "population_affected": null, "confidence_score": 0.6}
+    ],
+    "sources": [
+      {"citation": "Al-Bakri, Kitab al-Masalik wa-l-Mamalik (1068)", "source_type": "primary", "url": null},
+      {"citation": "Levtzion, Nehemia. Ancient Ghana and Mali. London: Methuen, 1973", "source_type": "academic", "url": null},
+      {"citation": "Munson, Patrick J. 'Archaeology and the Prehistoric Origins of the Ghana Empire.' Journal of African History 21.4 (1980): 457-466", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Kanem",
+    "name_original_lang": "kr",
+    "entity_type": "empire",
+    "year_start": 700,
+    "year_end": 1900,
+    "capital_name": "Njimi",
+    "capital_lat": 14.0,
+    "capital_lon": 16.0,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [11.0, 10.0], [12.0, 10.5], [13.0, 11.0], [14.0, 12.0],
+        [15.0, 13.0], [16.0, 14.0], [17.0, 15.0], [18.0, 15.5],
+        [19.0, 15.0], [19.5, 14.0], [19.0, 13.0], [18.5, 12.0],
+        [18.0, 11.0], [17.0, 10.5], [16.0, 10.0], [15.0, 9.5],
+        [14.0, 9.0], [13.0, 9.5], [12.0, 9.5], [11.0, 10.0]
+      ]]
+    },
+    "ethical_notes": "One of the longest-lasting African polities, spanning over a millennium. Western historiography has often treated Kanem and Bornu as a single entity ('Kanem-Bornu'), obscuring distinct political phases. The early Kanem period relies heavily on the Girgam (royal chronicle), an indigenous African historical document of great importance. The slave trade conducted by the empire, particularly raids southward, must be acknowledged alongside its state-building achievements.",
+    "name_variants": [
+      {"name": "Kanem-Bornu Empire", "lang": "en", "period_start": 700, "period_end": 1900, "context": "Combined Western designation for both phases of the empire", "source": "Lange, Dierk. A Sudanic Chronicle: The Borno Expeditions of Idris Alauma (1987)"},
+      {"name": "Empire du Kanem-Bornou", "lang": "fr", "period_start": 700, "period_end": 1900, "context": "French colonial designation", "source": "Urvoy, Yves. Histoire de l'empire du Bornou (1949)"},
+      {"name": "كانم برنو", "lang": "ar", "period_start": 1000, "period_end": 1900, "context": "Arabic designation from North African and Middle Eastern sources", "source": "Ibn Said al-Maghribi, Kitab al-Jughrafiya (13th c.)"}
+    ],
+    "territory_changes": [
+      {"year": 1391, "region": "Bornu", "change_type": "CONQUEST_MILITARY", "description": "Displacement of the Sayfawa dynasty from Kanem to Bornu due to Bulala attacks. The court relocated west of Lake Chad, marking the transition from Kanem to Bornu phase.", "population_affected": null, "confidence_score": 0.6},
+      {"year": 1900, "region": "Bornu", "change_type": "COLONIZATION", "description": "British and French colonial forces dismembered the empire. Rabih az-Zubayr had already seized power in 1893; French forces killed Rabih in 1900. Territory partitioned between British Nigeria, French Chad, and German Cameroon without regard for existing political structures.", "population_affected": null, "confidence_score": 0.85}
+    ],
+    "sources": [
+      {"citation": "The Girgam (Diwan of the Sultans of Bornu), royal chronicle", "source_type": "primary", "url": null},
+      {"citation": "Lange, Dierk. A Sudanic Chronicle: The Borno Expeditions of Idris Alauma (1564-1576). Stuttgart: Steiner, 1987", "source_type": "academic", "url": null},
+      {"citation": "Urvoy, Yves. Histoire de l'empire du Bornou. Paris: Larose, 1949", "source_type": "secondary", "url": null}
+    ]
+  },
+  {
+    "name_original": "سلطنة زنجبار",
+    "name_original_lang": "sw",
+    "entity_type": "sultanate",
+    "year_start": 1856,
+    "year_end": 1964,
+    "capital_name": "Zanzibar City",
+    "capital_lat": -6.1622,
+    "capital_lon": 39.1921,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [39.05, -5.7], [39.15, -5.72], [39.25, -5.8], [39.35, -5.9],
+        [39.45, -6.0], [39.50, -6.1], [39.52, -6.2], [39.50, -6.3],
+        [39.45, -6.4], [39.35, -6.45], [39.25, -6.48], [39.15, -6.45],
+        [39.10, -6.35], [39.05, -6.25], [39.03, -6.15], [39.02, -6.05],
+        [39.03, -5.95], [39.02, -5.85], [39.03, -5.78], [39.05, -5.7]
+      ]]
+    },
+    "ethical_notes": "The Sultanate of Zanzibar was the center of the East African slave trade. At its peak, an estimated 50,000 enslaved people passed through Zanzibar annually. The Omani Arab ruling class enslaved East African peoples for plantation labor on the island and for export. This must be documented honestly. The 1964 revolution that ended the Sultanate involved ethnic violence against Arab and South Asian communities. Both the slavery and the revolutionary violence require transparent documentation.",
+    "name_variants": [
+      {"name": "Sultanate of Zanzibar", "lang": "en", "period_start": 1856, "period_end": 1964, "context": "English designation", "source": "Sheriff, Abdul. Slaves, Spices and Ivory in Zanzibar (1987)"},
+      {"name": "Usultani wa Zanzibar", "lang": "sw", "period_start": 1856, "period_end": 1964, "context": "Swahili designation", "source": "Freeman-Grenville, G.S.P. The Medieval History of the Coast of Tanganyika (1962)"},
+      {"name": "سلطنت زنگبار", "lang": "fa", "period_start": 1856, "period_end": 1964, "context": "Persian designation used in Omani court documents", "source": "Al-Mughairi, Said bin Ali. Juhaynat al-Akhbar (1979)"}
+    ],
+    "territory_changes": [
+      {"year": 1890, "region": "East African coast", "change_type": "CESSION_FORCED", "description": "Heligoland-Zanzibar Treaty between Britain and Germany. The Sultan's mainland territories were divided between European powers without Zanzibari consent. Britain established a protectorate over Zanzibar itself.", "population_affected": null, "confidence_score": 0.95},
+      {"year": 1964, "region": "Zanzibar", "change_type": "REVOLUTION", "description": "Zanzibar Revolution overthrew the Sultan. Ethnic violence targeted Arab and South Asian communities; estimates of deaths range from hundreds to 20,000. Zanzibar subsequently merged with Tanganyika to form Tanzania.", "population_affected": 20000, "confidence_score": 0.7}
+    ],
+    "sources": [
+      {"citation": "Sheriff, Abdul. Slaves, Spices and Ivory in Zanzibar: Integration of an East African Commercial Empire. London: James Currey, 1987", "source_type": "academic", "url": null},
+      {"citation": "Lofchie, Michael F. Zanzibar: Background to Revolution. Princeton University Press, 1965", "source_type": "academic", "url": null},
+      {"citation": "British Foreign Office records on the Zanzibar Protectorate, National Archives, Kew", "source_type": "primary", "url": null}
+    ]
+  },
+  {
+    "name_original": "Asanteman",
+    "name_original_lang": "ak",
+    "entity_type": "empire",
+    "year_start": 1670,
+    "year_end": 1902,
+    "capital_name": "Kumasi",
+    "capital_lat": 6.6885,
+    "capital_lon": -1.6244,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [-3.0, 5.5], [-2.5, 5.8], [-2.0, 6.2], [-1.5, 6.5],
+        [-1.0, 7.0], [-0.5, 7.5], [-0.2, 8.0], [0.0, 8.5],
+        [0.3, 8.2], [0.5, 7.8], [0.3, 7.2], [0.0, 6.8],
+        [-0.3, 6.5], [-0.5, 6.2], [-0.8, 5.8], [-1.0, 5.5],
+        [-1.3, 5.2], [-1.5, 5.0], [-2.0, 5.2], [-2.5, 5.3],
+        [-3.0, 5.5]
+      ]]
+    },
+    "ethical_notes": "The Ashanti Empire had a sophisticated political and legal system that European colonizers systematically dismantled. The Golden Stool (Sika Dwa Kofi) remains a powerful symbol of Ashanti sovereignty. British attempts to seize it in 1900 (Governor Hodgson's demand) triggered the War of the Golden Stool. The empire participated in the Atlantic slave trade, which must be acknowledged, but this was instrumentalized by British propaganda to justify colonization. The Ashanti fought four wars against British imperialism before final annexation in 1902.",
+    "name_variants": [
+      {"name": "Ashanti Empire", "lang": "en", "period_start": 1670, "period_end": 1902, "context": "English colonial-era designation, anglicization of Asante", "source": "Wilks, Ivor. Asante in the Nineteenth Century (1975)"},
+      {"name": "Empire Ashanti", "lang": "fr", "period_start": 1670, "period_end": 1902, "context": "French designation", "source": "Perrot, Claude-Hélène. Les Anyi-Ndenye et le pouvoir (1982)"},
+      {"name": "Asante", "lang": "ak", "period_start": 1670, "period_end": 1902, "context": "Short form in Akan/Twi", "source": "McCaskie, T.C. State and Society in Pre-colonial Asante (1995)"}
+    ],
+    "territory_changes": [
+      {"year": 1874, "region": "Kumasi", "change_type": "CONQUEST_MILITARY", "description": "British forces under Sir Garnet Wolseley invaded and burned Kumasi. Third Anglo-Ashanti War. The British looted cultural artifacts, many of which remain in British museums. Treaty of Fomena imposed humiliating terms.", "population_affected": null, "confidence_score": 0.9},
+      {"year": 1902, "region": "Ashanti territory", "change_type": "COLONIZATION", "description": "Final British annexation as Crown Colony. Asantehene Prempeh I had been exiled to Seychelles in 1896. The Ashanti political system was dismantled and territory absorbed into the Gold Coast colony.", "population_affected": null, "confidence_score": 0.95}
+    ],
+    "sources": [
+      {"citation": "Wilks, Ivor. Asante in the Nineteenth Century: The Structure and Evolution of a Political Order. Cambridge University Press, 1975", "source_type": "academic", "url": null},
+      {"citation": "McCaskie, T.C. State and Society in Pre-colonial Asante. Cambridge University Press, 1995", "source_type": "academic", "url": null},
+      {"citation": "Bowdich, Thomas Edward. Mission from Cape Coast Castle to Ashantee. London: John Murray, 1819", "source_type": "primary", "url": null}
+    ]
+  },
+  {
+    "name_original": "Danhomè",
+    "name_original_lang": "fr",
+    "entity_type": "kingdom",
+    "year_start": 1600,
+    "year_end": 1904,
+    "capital_name": "Abomey",
+    "capital_lat": 7.1833,
+    "capital_lon": 1.9833,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [1.5, 6.2], [1.6, 6.5], [1.7, 6.8], [1.8, 7.0],
+        [1.9, 7.3], [2.0, 7.6], [2.1, 7.8], [2.2, 8.0],
+        [2.3, 8.2], [2.4, 8.0], [2.5, 7.7], [2.6, 7.4],
+        [2.5, 7.1], [2.4, 6.8], [2.3, 6.5], [2.2, 6.3],
+        [2.1, 6.2], [2.0, 6.1], [1.8, 6.0], [1.6, 6.1],
+        [1.5, 6.2]
+      ]]
+    },
+    "ethical_notes": "The Kingdom of Dahomey was a major participant in the Atlantic slave trade, conducting raids against neighboring peoples to capture slaves for sale to European traders. The Mahi and Ouidah peoples were particularly targeted. This complicity must be documented alongside the kingdom's remarkable military and political achievements, including the famous Mino (Amazons) warrior regiment. French conquest (1892-1894) was brutal and the subsequent colonial exploitation severe. The Fon language lacks an ISO 639-1 code; 'fr' used per instructions as proxy. The original Fon name is Danhomè.",
+    "name_variants": [
+      {"name": "Kingdom of Dahomey", "lang": "en", "period_start": 1600, "period_end": 1904, "context": "English designation, from Fon Danhomè", "source": "Law, Robin. The Kingdom of Dahomey (1986)"},
+      {"name": "Royaume du Dahomey", "lang": "fr", "period_start": 1600, "period_end": 1904, "context": "French colonial designation", "source": "Le Herissé, Auguste. L'Ancien Royaume du Dahomey (1911)"},
+      {"name": "Dan-ho-min", "lang": "fr", "period_start": 1600, "period_end": 1904, "context": "Original Fon-language form meaning 'in the belly of Dan', referring to foundation myth (ISO proxy: fr)", "source": "Akinjogbin, I.A. Dahomey and Its Neighbours (1967)"}
+    ],
+    "territory_changes": [
+      {"year": 1724, "region": "Ouidah", "change_type": "CONQUEST_MILITARY", "description": "King Agaja conquered the coastal kingdom of Ouidah (Whydah), gaining direct access to European slave traders. The conquest displaced the Ouidah people and established Dahomey as a major slave-trading power.", "population_affected": null, "confidence_score": 0.8},
+      {"year": 1894, "region": "Dahomey", "change_type": "COLONIZATION", "description": "French forces under Colonel Alfred-Amédée Dodds defeated King Béhanzin after two Franco-Dahomean Wars. Béhanzin was exiled to Martinique. The kingdom became the French colony of Dahomey. Systematic looting of royal palaces and cultural artifacts.", "population_affected": null, "confidence_score": 0.95}
+    ],
+    "sources": [
+      {"citation": "Dalzel, Archibald. The History of Dahomey, an Inland Kingdom of Africa. London: Spilsbury, 1793", "source_type": "primary", "url": null},
+      {"citation": "Law, Robin. The Oyo Empire c.1600-c.1836: A West African Imperialism in the Era of the Atlantic Slave Trade. Oxford: Clarendon Press, 1977", "source_type": "academic", "url": null},
+      {"citation": "Akinjogbin, I.A. Dahomey and Its Neighbours, 1708-1818. Cambridge University Press, 1967", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Mwenemutapa",
+    "name_original_lang": "sn",
+    "entity_type": "empire",
+    "year_start": 1430,
+    "year_end": 1760,
+    "capital_name": "Zvongombe",
+    "capital_lat": -16.3,
+    "capital_lon": 31.0,
+    "confidence_score": 0.6,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [28.0, -14.0], [29.0, -14.0], [30.0, -14.5], [31.0, -14.5],
+        [32.0, -15.0], [33.0, -15.5], [34.0, -16.0], [35.0, -16.5],
+        [35.5, -17.0], [35.0, -18.0], [34.0, -18.5], [33.0, -19.0],
+        [32.0, -19.0], [31.0, -18.5], [30.0, -18.0], [29.0, -17.5],
+        [28.5, -17.0], [28.0, -16.5], [27.5, -16.0], [27.5, -15.0],
+        [28.0, -14.0]
+      ]]
+    },
+    "ethical_notes": "The Mutapa Empire succeeded Great Zimbabwe and represented continuity of Shona political civilization. Portuguese sources (our primary external records) are heavily biased, portraying the empire as primitive to justify intervention. The Portuguese name 'Monomotapa' is a corruption of the Shona title Mwene Mutapa ('Lord of the Conquered Lands'). Portuguese trade and military intervention from the 16th century systematically weakened the empire. Archaeological evidence is limited, and confidence score reflects reliance on biased Portuguese documentation.",
+    "name_variants": [
+      {"name": "Mutapa Empire", "lang": "en", "period_start": 1430, "period_end": 1760, "context": "English academic designation", "source": "Mudenge, S.I.G. A Political History of Munhumutapa (1988)"},
+      {"name": "Monomotapa", "lang": "pt", "period_start": 1500, "period_end": 1760, "context": "Portuguese corruption of Mwene Mutapa, used in colonial documents", "source": "De Barros, João. Décadas da Ásia (1552)"},
+      {"name": "مونوموتابا", "lang": "ar", "period_start": 1500, "period_end": 1700, "context": "Arabic designation from East African trade contacts", "source": "Al-Masudi references to gold-producing kingdoms of Southeast Africa"}
+    ],
+    "territory_changes": [
+      {"year": 1569, "region": "Zambezi valley", "change_type": "CONQUEST_MILITARY", "description": "Portuguese military expedition under Francisco Barreto attempted conquest of gold-producing regions. Though militarily unsuccessful, Portuguese intervention began destabilizing the empire through trade manipulation and supporting rival factions.", "population_affected": null, "confidence_score": 0.65},
+      {"year": 1760, "region": "Central Mozambique/Zimbabwe plateau", "change_type": "CONQUEST_MILITARY", "description": "Final collapse of Mutapa authority. Territory fragmented among successor Shona states and increasing Portuguese prazo (estate) system encroachment. The Rozwi Empire had already absorbed much of the southern territory.", "population_affected": null, "confidence_score": 0.5}
+    ],
+    "sources": [
+      {"citation": "De Barros, João. Décadas da Ásia. Lisbon, 1552", "source_type": "primary", "url": null},
+      {"citation": "Mudenge, S.I.G. A Political History of Munhumutapa c.1400-1902. Harare: Zimbabwe Publishing House, 1988", "source_type": "academic", "url": null},
+      {"citation": "Beach, D.N. The Shona and Zimbabwe 900-1850. London: Heinemann, 1980", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Baluba",
+    "name_original_lang": "lu",
+    "entity_type": "kingdom",
+    "year_start": 1585,
+    "year_end": 1889,
+    "capital_name": "Mwibele",
+    "capital_lat": -8.0,
+    "capital_lon": 26.0,
+    "confidence_score": 0.55,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [24.0, -6.5], [25.0, -6.5], [26.0, -6.8], [27.0, -7.0],
+        [28.0, -7.5], [28.5, -8.0], [28.5, -8.5], [28.0, -9.0],
+        [27.5, -9.5], [27.0, -10.0], [26.0, -10.0], [25.0, -9.5],
+        [24.0, -9.0], [23.5, -8.5], [23.0, -8.0], [23.5, -7.5],
+        [24.0, -7.0], [24.0, -6.5]
+      ]]
+    },
+    "ethical_notes": "The Luba Kingdom's history is primarily transmitted through oral traditions (lukasa memory boards and oral chronicles). Western historiography has systematically undervalued these indigenous knowledge systems. Belgian colonial scholarship often distorted Luba political history to justify colonial rule. The Luba political model (bulopwe - sacred kingship) influenced state formation across Central Africa, a significance often minimized in Eurocentric accounts. Confidence score reflects the primary reliance on oral tradition and limited archaeological excavation.",
+    "name_variants": [
+      {"name": "Luba Kingdom", "lang": "en", "period_start": 1585, "period_end": 1889, "context": "English academic designation", "source": "Reefe, Thomas Q. The Rainbow and the Kings (1981)"},
+      {"name": "Royaume Luba", "lang": "fr", "period_start": 1585, "period_end": 1889, "context": "French designation used in Belgian colonial scholarship", "source": "Vansina, Jan. Kingdoms of the Savanna (1966)"},
+      {"name": "Empire Baluba", "lang": "fr", "period_start": 1585, "period_end": 1889, "context": "Alternative French designation using ethnonym prefix", "source": "Burton, W.F.P. Luba Religion and Magic in Custom and Belief (1961)"}
+    ],
+    "territory_changes": [
+      {"year": 1700, "region": "Upper Lualaba valley", "change_type": "UNIFICATION", "description": "Consolidation of Luba heartland under strong mulopwe (sacred king). Expansion of bulopwe political system to surrounding polities through both conquest and cultural influence.", "population_affected": null, "confidence_score": 0.5},
+      {"year": 1889, "region": "Katanga/Luba territory", "change_type": "COLONIZATION", "description": "Belgian Congo Free State forces dismantled Luba political structures. Leopold II's regime imposed forced labor, rubber collection quotas, and systematic violence. Luba people suffered under one of colonialism's most brutal regimes.", "population_affected": null, "confidence_score": 0.8}
+    ],
+    "sources": [
+      {"citation": "Reefe, Thomas Q. The Rainbow and the Kings: A History of the Luba Empire to 1891. Berkeley: University of California Press, 1981", "source_type": "academic", "url": null},
+      {"citation": "Vansina, Jan. Kingdoms of the Savanna. Madison: University of Wisconsin Press, 1966", "source_type": "academic", "url": null},
+      {"citation": "Roberts, Mary Nooter and Allen F. Roberts. Memory: Luba Art and the Making of History. New York: Museum for African Art, 1996", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Mwata Yamvo",
+    "name_original_lang": "lu",
+    "entity_type": "empire",
+    "year_start": 1665,
+    "year_end": 1887,
+    "capital_name": "Musumba",
+    "capital_lat": -8.5,
+    "capital_lon": 23.5,
+    "confidence_score": 0.55,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [20.0, -6.0], [21.0, -6.0], [22.0, -6.5], [23.0, -7.0],
+        [24.0, -7.5], [25.0, -8.0], [25.5, -8.5], [25.0, -9.0],
+        [24.5, -9.5], [24.0, -10.0], [23.0, -10.5], [22.0, -11.0],
+        [21.0, -11.0], [20.0, -10.5], [19.0, -10.0], [18.5, -9.0],
+        [19.0, -8.0], [19.5, -7.0], [20.0, -6.0]
+      ]]
+    },
+    "ethical_notes": "The Lunda Empire was one of Central Africa's largest pre-colonial states. 'Mwata Yamvo' is the title of the supreme ruler, not a personal name. The empire's political system (tubungu) spread across a vast area of Central Africa. Portuguese and Ovimbundu slave-trading networks deeply impacted Lunda society. Belgian and Portuguese colonial powers dismembered the empire, dividing Lunda people across multiple colonial borders (Congo, Angola, Zambia) - borders that persist today, separating communities with shared cultural identity.",
+    "name_variants": [
+      {"name": "Lunda Empire", "lang": "en", "period_start": 1665, "period_end": 1887, "context": "English academic designation", "source": "Vansina, Jan. Kingdoms of the Savanna (1966)"},
+      {"name": "Empire Lunda", "lang": "fr", "period_start": 1665, "period_end": 1887, "context": "French designation in Belgian colonial scholarship", "source": "Duysters, Léon. 'Histoire des Aluunda.' Problèmes d'Afrique Centrale (1958)"},
+      {"name": "Reino da Lunda", "lang": "pt", "period_start": 1665, "period_end": 1887, "context": "Portuguese designation from Angolan trade contacts", "source": "Dias de Carvalho, Henrique. Expedição ao Muatiânvua (1890)"}
+    ],
+    "territory_changes": [
+      {"year": 1750, "region": "Central Africa", "change_type": "UNIFICATION", "description": "Peak expansion of Lunda influence. Tributary states established across modern-day DRC, Angola, and Zambia. The tubungu system allowed local autonomy under Lunda overlordship.", "population_affected": null, "confidence_score": 0.5},
+      {"year": 1887, "region": "Lunda territory", "change_type": "COLONIZATION", "description": "Belgian Congo Free State and Portuguese Angola forces dismembered the empire. Lunda territory partitioned between Belgium, Portugal, and Britain. Colonial borders deliberately cut through Lunda communities, a division that persists in modern DRC, Angola, and Zambia.", "population_affected": null, "confidence_score": 0.75}
+    ],
+    "sources": [
+      {"citation": "Dias de Carvalho, Henrique. Expedição Portugueza ao Muatiânvua. Lisbon, 1890", "source_type": "primary", "url": null},
+      {"citation": "Vansina, Jan. Kingdoms of the Savanna. Madison: University of Wisconsin Press, 1966", "source_type": "academic", "url": null},
+      {"citation": "Schecter, Robert E. 'History and Historiography on a Frontier of Lunda Expansion.' PhD dissertation, University of Wisconsin, 1976", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Rozvi",
+    "name_original_lang": "sn",
+    "entity_type": "empire",
+    "year_start": 1660,
+    "year_end": 1866,
+    "capital_name": "Danangombe",
+    "capital_lat": -20.35,
+    "capital_lon": 29.6,
+    "confidence_score": 0.55,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [27.0, -18.5], [28.0, -18.5], [29.0, -18.8], [30.0, -19.0],
+        [31.0, -19.5], [31.5, -20.0], [31.5, -20.5], [31.0, -21.0],
+        [30.5, -21.5], [30.0, -22.0], [29.0, -22.0], [28.0, -21.5],
+        [27.0, -21.0], [26.5, -20.5], [26.0, -20.0], [26.5, -19.5],
+        [27.0, -19.0], [27.0, -18.5]
+      ]]
+    },
+    "ethical_notes": "The Rozwi Empire is critical to understanding the continuity of Shona political civilization after Great Zimbabwe. Western historiography long attributed Zimbabwe's stone architecture to non-African builders (Phoenicians, Arabs, etc.) - a racist myth decisively disproven by archaeology. The Rozwi were the inheritors and builders of the stone-walled (madzimbabwe) tradition. Portuguese sources are our main external documentation but are deeply biased. The name 'Rozwi' means 'the destroyers' and reflects their military reputation.",
+    "name_variants": [
+      {"name": "Rozwi Empire", "lang": "en", "period_start": 1660, "period_end": 1866, "context": "English academic designation", "source": "Beach, D.N. The Shona and Zimbabwe 900-1850 (1980)"},
+      {"name": "Changamire Empire", "lang": "en", "period_start": 1660, "period_end": 1866, "context": "Alternative English designation from ruler's title Changamire", "source": "Mudenge, S.I.G. The Rozvi Empire and the Feira of Zumbo (1974)"},
+      {"name": "VaRozvi", "lang": "sn", "period_start": 1660, "period_end": 1866, "context": "Shona ethnonym with class prefix", "source": "Pikirayi, Innocent. The Zimbabwe Culture (2001)"}
+    ],
+    "territory_changes": [
+      {"year": 1693, "region": "Zimbabwe plateau", "change_type": "CONQUEST_MILITARY", "description": "Changamire Dombo expelled Portuguese from the Zimbabwe plateau, destroying the feira (trading posts) at Dambarare and other locations. A major assertion of African sovereignty against European encroachment.", "population_affected": null, "confidence_score": 0.65},
+      {"year": 1840, "region": "Zimbabwe plateau", "change_type": "CONQUEST_MILITARY", "description": "Nguni (Ndebele) invasion under Mzilikazi devastated Rozwi polity. The Ndebele established the Matabele Kingdom on former Rozwi territory. Rozwi political structures were dismantled though cultural practices persisted.", "population_affected": null, "confidence_score": 0.7}
+    ],
+    "sources": [
+      {"citation": "Beach, D.N. The Shona and Zimbabwe 900-1850: An Introduction to the History of the Shona Peoples. London: Heinemann, 1980", "source_type": "academic", "url": null},
+      {"citation": "Mudenge, S.I.G. 'The Rozvi Empire and the Feira of Zumbo.' PhD thesis, University of London, 1974", "source_type": "academic", "url": null},
+      {"citation": "Pikirayi, Innocent. The Zimbabwe Culture: Origins and Decline of Southern Zambezian States. Walnut Creek: AltaMira, 2001", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Imerina",
+    "name_original_lang": "mg",
+    "entity_type": "kingdom",
+    "year_start": 1540,
+    "year_end": 1897,
+    "capital_name": "Antananarivo",
+    "capital_lat": -18.9137,
+    "capital_lon": 47.5361,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [43.5, -12.0], [44.5, -12.5], [46.0, -13.0], [48.0, -13.5],
+        [49.5, -14.0], [50.0, -15.5], [50.2, -17.0], [50.0, -18.5],
+        [49.5, -20.0], [48.5, -22.0], [47.0, -23.5], [45.5, -24.5],
+        [44.0, -25.0], [43.5, -24.0], [43.0, -22.5], [43.0, -20.0],
+        [43.0, -18.0], [43.2, -16.0], [43.3, -14.0], [43.5, -12.0]
+      ]]
+    },
+    "ethical_notes": "The Merina Kingdom unified most of Madagascar under indigenous rule before French conquest. Under Radama I and Ranavalona I, it was one of Africa's most sophisticated pre-colonial states with written laws, a standing army, and diplomatic relations with European powers. French conquest in 1896-1897 involved significant violence and was followed by colonial exploitation. The Malagasy uprising of 1947 (which France brutally suppressed, killing an estimated 11,000-89,000) has roots in resistance to the destruction of Merina sovereignty. Boundary shown represents maximum extent under Radama I and successors, encompassing most of Madagascar.",
+    "name_variants": [
+      {"name": "Merina Kingdom", "lang": "en", "period_start": 1540, "period_end": 1897, "context": "English designation", "source": "Campbell, Gwyn. An Economic History of Imperial Madagascar (2005)"},
+      {"name": "Royaume de Madagascar", "lang": "fr", "period_start": 1817, "period_end": 1897, "context": "French designation after international recognition under Radama I", "source": "Raison-Jourde, Françoise. Bible et pouvoir à Madagascar au XIXe siècle (1991)"},
+      {"name": "Fanjakan'Imerina", "lang": "mg", "period_start": 1540, "period_end": 1897, "context": "Malagasy name for the Kingdom of Imerina", "source": "Callet, R.P. Tantara ny Andriana eto Madagascar (1908)"}
+    ],
+    "territory_changes": [
+      {"year": 1817, "region": "Madagascar", "change_type": "UNIFICATION", "description": "Radama I unified most of Madagascar under Merina rule through military campaigns and diplomacy. British recognition and military assistance aided expansion. Subjugation of coastal peoples involved significant violence.", "population_affected": null, "confidence_score": 0.8},
+      {"year": 1897, "region": "Madagascar", "change_type": "COLONIZATION", "description": "French military conquest under General Gallieni. Queen Ranavalona III exiled to Algeria. Madagascar became a French colony. The subsequent Menalamba rebellion was crushed with severe reprisals.", "population_affected": null, "confidence_score": 0.95}
+    ],
+    "sources": [
+      {"citation": "Callet, R.P. Tantara ny Andriana eto Madagascar (History of the Kings of Madagascar). Antananarivo, 1908", "source_type": "primary", "url": null},
+      {"citation": "Campbell, Gwyn. An Economic History of Imperial Madagascar, 1750-1895. Cambridge University Press, 2005", "source_type": "academic", "url": null},
+      {"citation": "Ellis, Stephen. The Rising of the Red Shawls: A Revolt in Madagascar 1895-1899. Cambridge University Press, 1985", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Daular Usmaniyya",
+    "name_original_lang": "ha",
+    "entity_type": "caliphate",
+    "year_start": 1804,
+    "year_end": 1903,
+    "capital_name": "Sokoto",
+    "capital_lat": 13.0622,
+    "capital_lon": 5.2339,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [2.0, 9.0], [3.0, 9.5], [4.0, 10.0], [5.0, 10.5],
+        [6.0, 11.0], [7.0, 11.5], [8.0, 12.0], [9.0, 12.5],
+        [10.0, 13.0], [11.0, 13.5], [12.0, 13.0], [12.5, 12.5],
+        [12.0, 11.5], [11.0, 10.5], [10.0, 9.5], [9.0, 9.0],
+        [8.0, 8.5], [7.0, 8.0], [6.0, 7.5], [5.0, 7.5],
+        [4.0, 8.0], [3.0, 8.5], [2.0, 9.0]
+      ]]
+    },
+    "ethical_notes": "The Sokoto Caliphate was the largest state in 19th-century Africa, founded through Usman dan Fodio's jihad. The jihad had complex motivations: religious reform, political grievances of Fulani pastoralists against Hausa rulers, and social justice concerns. The caliphate practiced slavery on a massive scale, particularly enslaving non-Muslim populations. British conquest in 1903 was framed as anti-slavery intervention but was fundamentally an imperial land-grab. The British policy of 'indirect rule' co-opted caliphate structures, preserving elite power while extracting resources.",
+    "name_variants": [
+      {"name": "Sokoto Caliphate", "lang": "en", "period_start": 1804, "period_end": 1903, "context": "English academic designation", "source": "Last, Murray. The Sokoto Caliphate (1967)"},
+      {"name": "Califat de Sokoto", "lang": "fr", "period_start": 1804, "period_end": 1903, "context": "French designation", "source": "Hogben, S.J. and A.H.M. Kirk-Greene. The Emirates of Northern Nigeria (1966)"},
+      {"name": "خلافة صكتو", "lang": "ar", "period_start": 1804, "period_end": 1903, "context": "Arabic designation", "source": "Dan Fodio, Usman. Kitab al-Farq (c.1806)"}
+    ],
+    "territory_changes": [
+      {"year": 1808, "region": "Hausaland", "change_type": "REVOLUTION", "description": "Usman dan Fodio's jihad overthrew Hausa city-states (Gobir, Kano, Katsina, Zaria). Fulani scholars and warriors established emirates under the caliphate. Pre-existing Hausa political structures were dismantled.", "population_affected": null, "confidence_score": 0.85},
+      {"year": 1903, "region": "Northern Nigeria", "change_type": "CONQUEST_MILITARY", "description": "British forces under Frederick Lugard conquered Sokoto and Kano. Sultan Attahiru I was killed fleeing. British established 'indirect rule' using caliphate administrative structures to govern colonial Northern Nigeria.", "population_affected": null, "confidence_score": 0.95}
+    ],
+    "sources": [
+      {"citation": "Dan Fodio, Usman. Kitab al-Farq ('The Book of Difference'). c.1806", "source_type": "primary", "url": null},
+      {"citation": "Last, Murray. The Sokoto Caliphate. London: Longman, 1967", "source_type": "academic", "url": null},
+      {"citation": "Lovejoy, Paul E. 'Slavery in the Sokoto Caliphate.' In The Ideology of Slavery in Africa, ed. Paul Lovejoy. Beverly Hills: Sage, 1981", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Bornu",
+    "name_original_lang": "kr",
+    "entity_type": "empire",
+    "year_start": 1380,
+    "year_end": 1893,
+    "capital_name": "Birni Ngazargamu",
+    "capital_lat": 12.85,
+    "capital_lon": 12.85,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [10.0, 10.5], [11.0, 11.0], [12.0, 11.5], [13.0, 12.0],
+        [14.0, 12.5], [15.0, 13.0], [15.5, 13.5], [15.5, 14.0],
+        [15.0, 14.5], [14.0, 14.5], [13.0, 14.0], [12.0, 13.5],
+        [11.0, 13.0], [10.5, 12.5], [10.0, 12.0], [9.5, 11.5],
+        [10.0, 11.0], [10.0, 10.5]
+      ]]
+    },
+    "ethical_notes": "The Bornu Empire represents the western phase of the Kanem-Bornu polity after the Sayfawa dynasty relocated west of Lake Chad. It maintained one of Africa's longest continuous dynasties. The empire practiced slavery and conducted raids against neighboring peoples. Under Idris Alauma (r. 1564-1596), Bornu reached its peak. European travelers' accounts (Denham, Clapperton, Barth) provide detailed but culturally biased documentation. The Girgam (royal chronicle) is an invaluable indigenous primary source. Distinguished from the broader Kanem-Bornu entry as a distinct political phase.",
+    "name_variants": [
+      {"name": "Bornu Empire", "lang": "en", "period_start": 1380, "period_end": 1893, "context": "English academic designation for the western phase", "source": "Brenner, Louis. The Shehus of Kukawa (1973)"},
+      {"name": "Empire du Bornou", "lang": "fr", "period_start": 1380, "period_end": 1893, "context": "French colonial designation", "source": "Urvoy, Yves. Histoire de l'empire du Bornou (1949)"},
+      {"name": "برنو", "lang": "ar", "period_start": 1380, "period_end": 1893, "context": "Arabic designation from North African and Middle Eastern sources", "source": "Leo Africanus, Description of Africa (1526)"}
+    ],
+    "territory_changes": [
+      {"year": 1571, "region": "Lake Chad region", "change_type": "CONQUEST_MILITARY", "description": "Idris Alauma expanded Bornu to its greatest extent, deploying firearms obtained through Saharan trade. Military campaigns consolidated control over trade routes and tributary states.", "population_affected": null, "confidence_score": 0.7},
+      {"year": 1893, "region": "Bornu", "change_type": "CONQUEST_MILITARY", "description": "Rabih az-Zubayr, a Sudanese warlord, conquered Bornu, killing the last Sayfawa sultan. Rabih's rule lasted until French forces killed him in 1900 at the Battle of Kousséri.", "population_affected": null, "confidence_score": 0.85}
+    ],
+    "sources": [
+      {"citation": "The Girgam (Diwan of the Sultans of Bornu), royal chronicle", "source_type": "primary", "url": null},
+      {"citation": "Barth, Heinrich. Travels and Discoveries in North and Central Africa (1857-1858). 5 vols.", "source_type": "primary", "url": null},
+      {"citation": "Brenner, Louis. The Shehus of Kukawa: A History of the al-Kanemi Dynasty of Bornu. Oxford: Clarendon Press, 1973", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Oyo",
+    "name_original_lang": "yo",
+    "entity_type": "empire",
+    "year_start": 1300,
+    "year_end": 1896,
+    "capital_name": "Oyo-Ile",
+    "capital_lat": 8.85,
+    "capital_lon": 3.93,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [1.5, 6.5], [2.0, 7.0], [2.5, 7.5], [3.0, 8.0],
+        [3.5, 8.5], [4.0, 9.0], [4.5, 9.2], [5.0, 9.0],
+        [5.5, 8.5], [5.5, 8.0], [5.0, 7.5], [4.5, 7.0],
+        [4.0, 6.5], [3.5, 6.2], [3.0, 6.0], [2.5, 5.8],
+        [2.0, 6.0], [1.5, 6.5]
+      ]]
+    },
+    "ethical_notes": "The Oyo Empire was one of West Africa's most powerful states, with a sophisticated political system including the Alaafin (king) checked by the Oyo Mesi (council of notables) and the Bashorun (prime minister). This constitutional system is often overlooked in Western accounts that portray pre-colonial Africa as uniformly autocratic. Oyo was deeply involved in the Atlantic slave trade, exporting enslaved people through the port of Porto-Novo. The empire's collapse in the early 19th century precipitated the devastating Yoruba civil wars.",
+    "name_variants": [
+      {"name": "Oyo Empire", "lang": "en", "period_start": 1300, "period_end": 1896, "context": "English academic designation", "source": "Law, Robin. The Oyo Empire c.1600-c.1836 (1977)"},
+      {"name": "Empire d'Oyo", "lang": "fr", "period_start": 1300, "period_end": 1896, "context": "French designation", "source": "Morton-Williams, Peter. 'The Oyo Yoruba and the Atlantic Trade' (1964)"},
+      {"name": "Ìlú Oyo", "lang": "yo", "period_start": 1300, "period_end": 1896, "context": "Yoruba name for the polity centered at Old Oyo", "source": "Johnson, Samuel. The History of the Yorubas (1921)"}
+    ],
+    "territory_changes": [
+      {"year": 1730, "region": "Dahomey/West Africa", "change_type": "CONQUEST_MILITARY", "description": "Oyo defeated Dahomey and imposed tributary status. Oyo cavalry (the basis of its military power) dominated the savanna regions. Control of slave-trade routes was a primary economic motivation.", "population_affected": null, "confidence_score": 0.75},
+      {"year": 1836, "region": "Old Oyo", "change_type": "CONQUEST_MILITARY", "description": "Destruction of Old Oyo (Oyo-Ile) by Fulani jihad forces from Ilorin. The capital was abandoned and the empire fragmented. Refugees founded New Oyo further south. This triggered decades of Yoruba internecine warfare.", "population_affected": null, "confidence_score": 0.8}
+    ],
+    "sources": [
+      {"citation": "Johnson, Samuel. The History of the Yorubas from the Earliest Times to the Beginning of the British Protectorate. Lagos: CMS Bookshop, 1921", "source_type": "primary", "url": null},
+      {"citation": "Law, Robin. The Oyo Empire c.1600-c.1836: A West African Imperialism in the Era of the Atlantic Slave Trade. Oxford: Clarendon Press, 1977", "source_type": "academic", "url": null},
+      {"citation": "Ajayi, J.F.A. and Robert Smith. Yoruba Warfare in the Nineteenth Century. Cambridge University Press, 1964", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Ọ̀ràézè Nrì",
+    "name_original_lang": "ig",
+    "entity_type": "kingdom",
+    "year_start": 948,
+    "year_end": 1911,
+    "capital_name": "Nri",
+    "capital_lat": 6.15,
+    "capital_lon": 7.0,
+    "confidence_score": 0.5,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [6.5, 5.8], [6.7, 5.9], [6.9, 6.0], [7.1, 6.1],
+        [7.3, 6.2], [7.5, 6.3], [7.6, 6.4], [7.5, 6.5],
+        [7.3, 6.6], [7.1, 6.7], [7.0, 6.8], [6.8, 6.7],
+        [6.6, 6.6], [6.5, 6.5], [6.4, 6.3], [6.3, 6.2],
+        [6.3, 6.1], [6.4, 5.9], [6.5, 5.8]
+      ]]
+    },
+    "ethical_notes": "The Kingdom of Nri challenges Western assumptions about African political organization. It exercised authority primarily through religious and ritual power rather than military force - a political model fundamentally different from European state concepts and often dismissed as 'not a real state' by Eurocentric historians. Archaeological excavations at Igbo-Ukwu (1959-1960) revealed sophisticated bronze-working dated to the 9th century, predating European contact. The low confidence score reflects limited archaeological excavation and the destruction of oral traditions during British colonization, not the historical significance of the polity.",
+    "name_variants": [
+      {"name": "Nri Kingdom", "lang": "en", "period_start": 948, "period_end": 1911, "context": "English academic designation", "source": "Onwuejeogwu, M.A. An Igbo Civilization: Nri Kingdom and Hegemony (1981)"},
+      {"name": "Royaume de Nri", "lang": "fr", "period_start": 948, "period_end": 1911, "context": "French academic designation", "source": "Isichei, Elizabeth. A History of the Igbo People (1976)"},
+      {"name": "Eze Nri", "lang": "ig", "period_start": 948, "period_end": 1911, "context": "Igbo title of the sacred king, often used to refer to the polity itself", "source": "Onwuejeogwu, M.A. An Igbo Civilization (1981)"}
+    ],
+    "territory_changes": [
+      {"year": 1043, "region": "Igboland", "change_type": "UNIFICATION", "description": "Consolidation of Nri ritual authority over surrounding Igbo communities. Expansion through religious influence and conflict resolution rather than military conquest. Nri priests (ndi nri) traveled widely to perform cleansing rituals.", "population_affected": null, "confidence_score": 0.4},
+      {"year": 1911, "region": "Nri territory", "change_type": "COLONIZATION", "description": "British colonial forces destroyed Nri's sacred symbols and forced the Eze Nri to renounce ritual authority. The deliberate dismantling of Nri's religious-political system was part of systematic British suppression of indigenous African governance structures.", "population_affected": null, "confidence_score": 0.75}
+    ],
+    "sources": [
+      {"citation": "Onwuejeogwu, M. Angulu. An Igbo Civilization: Nri Kingdom and Hegemony. London: Ethnographica, 1981", "source_type": "academic", "url": null},
+      {"citation": "Shaw, Thurstan. Igbo-Ukwu: An Account of Archaeological Discoveries in Eastern Nigeria. London: Faber and Faber, 1970", "source_type": "academic", "url": null},
+      {"citation": "Isichei, Elizabeth. A History of the Igbo People. London: Macmillan, 1976", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "سومر",
+    "name_original_lang": "ar",
+    "entity_type": "city-state",
+    "year_start": -4500,
+    "year_end": -1900,
+    "capital_name": "Ur",
+    "capital_lat": 30.9627,
+    "capital_lon": 46.1031,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [44.0, 30.0], [44.5, 30.5], [45.0, 31.0], [45.5, 31.5],
+        [46.0, 32.0], [46.5, 32.5], [47.0, 32.5], [47.5, 32.0],
+        [48.0, 31.5], [48.5, 31.0], [48.5, 30.5], [48.0, 30.0],
+        [47.5, 29.5], [47.0, 29.5], [46.5, 29.8], [46.0, 30.0],
+        [45.5, 30.0], [45.0, 29.8], [44.5, 29.8], [44.0, 30.0]
+      ]]
+    },
+    "ethical_notes": "Sumer is often called the 'cradle of civilization', a framing that implicitly devalues contemporary civilizations elsewhere (Nile Valley, Indus Valley, Yellow River). The original Sumerian language (language isolate, ISO 639-3: sux) has no modern ISO 639-1 code; Arabic is used here as the modern language of the region. 'Sumer' is itself an Akkadian exonym; the Sumerians called their land 'ki-en-gi' (land of the noble lords). Capital designation is complex as Sumer was a collection of city-states with shifting hegemony (Ur, Uruk, Lagash, Eridu). Ur shown as capital represents the Ur III period of maximum unification.",
+    "name_variants": [
+      {"name": "Sumer", "lang": "en", "period_start": -4500, "period_end": -1900, "context": "English designation from Akkadian 'Šumeru'", "source": "Kramer, Samuel Noah. The Sumerians (1963)"},
+      {"name": "ki-en-gi", "lang": "ar", "period_start": -4500, "period_end": -1900, "context": "Sumerian self-designation meaning 'land of the noble lords' (ISO proxy: ar)", "source": "Jacobsen, Thorkild. The Sumerian King List (1939)"},
+      {"name": "Σουμερία", "lang": "el", "period_start": null, "period_end": null, "context": "Greek designation used in Hellenistic scholarship", "source": "Berossos, Babyloniaka (c.280 BC, fragments)"}
+    ],
+    "territory_changes": [
+      {"year": -2112, "region": "Southern Mesopotamia", "change_type": "UNIFICATION", "description": "Ur-Nammu founded the Third Dynasty of Ur, unifying Sumerian city-states. Produced the Code of Ur-Nammu, the oldest known law code. This period represents the peak of Sumerian political unity.", "population_affected": null, "confidence_score": 0.75},
+      {"year": -2004, "region": "Southern Mesopotamia", "change_type": "CONQUEST_MILITARY", "description": "Elamite and Amorite invasions destroyed Ur III dynasty. The Lament for Ur, one of the earliest literary descriptions of urban destruction, documents this catastrophe. Sumerian political independence effectively ended.", "population_affected": null, "confidence_score": 0.7}
+    ],
+    "sources": [
+      {"citation": "The Sumerian King List (WB 444 and parallels), c.2100-1900 BC", "source_type": "primary", "url": null},
+      {"citation": "Kramer, Samuel Noah. The Sumerians: Their History, Culture, and Character. Chicago: University of Chicago Press, 1963", "source_type": "academic", "url": null},
+      {"citation": "Postgate, J.N. Early Mesopotamia: Society and Economy at the Dawn of History. London: Routledge, 1992", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "الإمبراطورية الآشورية",
+    "name_original_lang": "ar",
+    "entity_type": "empire",
+    "year_start": -911,
+    "year_end": -609,
+    "capital_name": "Nineveh",
+    "capital_lat": 36.3592,
+    "capital_lon": 43.1528,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [34.0, 31.0], [35.0, 32.0], [36.0, 33.0], [37.0, 34.0],
+        [38.0, 35.0], [39.0, 36.0], [40.0, 37.0], [42.0, 37.5],
+        [44.0, 37.0], [46.0, 36.5], [48.0, 35.0], [48.5, 33.0],
+        [48.0, 31.5], [47.0, 30.0], [46.0, 29.5], [44.0, 29.5],
+        [42.0, 30.0], [40.0, 30.5], [38.0, 31.0], [36.0, 31.0],
+        [34.0, 31.0]
+      ]]
+    },
+    "ethical_notes": "The original language was Akkadian (ISO 639-3: akk), which has no modern ISO 639-1 code; Arabic used as modern regional language. The Neo-Assyrian Empire practiced systematic deportation (nasahu) of conquered peoples - an early form of ethnic cleansing used as state policy. Assyrian royal inscriptions boast of mass killings and deportations. These must be documented as historical facts. At the same time, Assyria produced remarkable cultural achievements including the Library of Ashurbanipal. Modern Assyrian people (distinct from the ancient empire) face ongoing persecution; care must be taken not to conflate ancient and modern identities.",
+    "name_variants": [
+      {"name": "Neo-Assyrian Empire", "lang": "en", "period_start": -911, "period_end": -609, "context": "English academic periodization distinguishing from earlier Assyrian states", "source": "Radner, Karen. Ancient Assyria: A Very Short Introduction (2015)"},
+      {"name": "Aššur", "lang": "ar", "period_start": -911, "period_end": -609, "context": "Akkadian self-designation from the name of the patron god and original city (ISO proxy: ar)", "source": "Cuneiform royal inscriptions from Nineveh and Nimrud"},
+      {"name": "Ασσυρία", "lang": "el", "period_start": -500, "period_end": null, "context": "Greek designation used by Herodotus and later authors", "source": "Herodotus, Historiae I.178-200 (c.440 BC)"}
+    ],
+    "territory_changes": [
+      {"year": -722, "region": "Samaria/Israel", "change_type": "CONQUEST_MILITARY", "description": "Sargon II conquered the Kingdom of Israel. Mass deportation of Israelite population (the 'Lost Ten Tribes'). An estimated 27,290 people were deported according to Assyrian records. This event profoundly shaped Jewish history and identity.", "population_affected": 27290, "confidence_score": 0.8},
+      {"year": -612, "region": "Nineveh", "change_type": "CONQUEST_MILITARY", "description": "Coalition of Babylonians and Medes destroyed Nineveh. The fall of Assyria was so complete that within centuries the city's location was forgotten. The Book of Nahum in the Hebrew Bible celebrates the destruction.", "population_affected": null, "confidence_score": 0.85}
+    ],
+    "sources": [
+      {"citation": "Royal inscriptions of Sargon II, Sennacherib, and Ashurbanipal (cuneiform tablets from Nineveh)", "source_type": "primary", "url": null},
+      {"citation": "Radner, Karen. Ancient Assyria: A Very Short Introduction. Oxford University Press, 2015", "source_type": "academic", "url": null},
+      {"citation": "Parpola, Simo and Karen Radner, eds. The Prosopography of the Neo-Assyrian Empire. Helsinki: Neo-Assyrian Text Corpus Project, 1998-2011", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "الإمبراطورية البابلية",
+    "name_original_lang": "ar",
+    "entity_type": "empire",
+    "year_start": -626,
+    "year_end": -539,
+    "capital_name": "Babylon",
+    "capital_lat": 32.5363,
+    "capital_lon": 44.4209,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [34.5, 30.0], [35.5, 31.0], [36.0, 32.0], [37.0, 33.0],
+        [38.0, 34.0], [39.0, 35.0], [40.0, 35.5], [42.0, 36.0],
+        [44.0, 35.5], [46.0, 35.0], [47.0, 34.0], [47.5, 33.0],
+        [47.0, 32.0], [46.5, 31.0], [46.0, 30.0], [45.0, 29.5],
+        [43.0, 29.0], [41.0, 29.5], [39.0, 30.0], [37.0, 30.0],
+        [35.5, 29.5], [34.5, 30.0]
+      ]]
+    },
+    "ethical_notes": "The original language was Akkadian (ISO 639-3: akk), which has no modern ISO 639-1 code; Arabic used as modern regional language. The Neo-Babylonian Empire under Nebuchadnezzar II is associated with the destruction of Jerusalem and the Babylonian Exile of the Jewish people (586 BC), events of immense religious and cultural significance. Biblical accounts and Babylonian cuneiform sources provide different perspectives on these events. The Babylonian perspective (as recorded in the Babylonian Chronicles) treats the conquest as routine imperial expansion, while the Hebrew Bible presents it as catastrophic national and religious trauma.",
+    "name_variants": [
+      {"name": "Neo-Babylonian Empire", "lang": "en", "period_start": -626, "period_end": -539, "context": "English academic periodization distinguishing from earlier Babylonian kingdoms", "source": "Jursa, Michael. The Babylonian Economy in the First Millennium BC (2010)"},
+      {"name": "Bābili", "lang": "ar", "period_start": -626, "period_end": -539, "context": "Akkadian name meaning 'Gate of God' (ISO proxy: ar)", "source": "Babylonian Chronicles (BM 21946)"},
+      {"name": "Χαλδαία", "lang": "el", "period_start": -500, "period_end": null, "context": "Greek designation 'Chaldea', used by Herodotus", "source": "Herodotus, Historiae I.181-183 (c.440 BC)"}
+    ],
+    "territory_changes": [
+      {"year": -586, "region": "Jerusalem/Judah", "change_type": "CONQUEST_MILITARY", "description": "Nebuchadnezzar II destroyed Jerusalem and the First Temple. Mass deportation of Jewish population to Babylon (the Babylonian Exile/Captivity). This event fundamentally shaped Judaism, producing much of the Hebrew Bible's final form.", "population_affected": null, "confidence_score": 0.85},
+      {"year": -539, "region": "Babylon", "change_type": "CONQUEST_MILITARY", "description": "Cyrus the Great of Persia conquered Babylon. The Cyrus Cylinder records his version of a peaceful takeover. He permitted the return of exiled peoples, including the Jews. The Persian conquest ended Mesopotamian political independence permanently.", "population_affected": null, "confidence_score": 0.9}
+    ],
+    "sources": [
+      {"citation": "The Babylonian Chronicles (British Museum tablets BM 21901, 21946)", "source_type": "primary", "url": null},
+      {"citation": "Jursa, Michael. Aspects of the Economic History of Babylonia in the First Millennium BC. Münster: Ugarit-Verlag, 2010", "source_type": "academic", "url": null},
+      {"citation": "Wiseman, D.J. Chronicles of Chaldaean Kings (626-556 BC). London: British Museum, 1956", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Hitit İmparatorluğu",
+    "name_original_lang": "tr",
+    "entity_type": "empire",
+    "year_start": -1600,
+    "year_end": -1178,
+    "capital_name": "Hattusa",
+    "capital_lat": 40.0200,
+    "capital_lon": 34.6153,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [28.0, 36.0], [29.0, 37.0], [30.0, 38.0], [32.0, 39.0],
+        [34.0, 40.0], [36.0, 40.5], [38.0, 40.0], [40.0, 39.0],
+        [40.0, 38.0], [39.0, 37.0], [38.0, 36.0], [37.0, 35.5],
+        [36.0, 35.0], [35.0, 34.5], [34.0, 35.0], [33.0, 35.5],
+        [32.0, 36.0], [31.0, 36.0], [30.0, 36.0], [29.0, 36.0],
+        [28.0, 36.0]
+      ]]
+    },
+    "ethical_notes": "The original Hittite language (ISO 639-3: hit) has no modern ISO 639-1 code; Turkish used as the modern language of the region where the empire was centered. The Hittites called their language 'Nesili' (language of Nesa) and their land 'Hatti'. They are historically significant for the Treaty of Kadesh (c.1259 BC) with Egypt, often cited as the earliest known international peace treaty. The Late Bronze Age Collapse that ended the Hittite Empire remains one of history's great unsolved mysteries, with proposed causes ranging from invasion to climate change to systems collapse.",
+    "name_variants": [
+      {"name": "Hittite Empire", "lang": "en", "period_start": -1600, "period_end": -1178, "context": "English academic designation", "source": "Bryce, Trevor. The Kingdom of the Hittites (2005)"},
+      {"name": "Ḫatti", "lang": "tr", "period_start": -1600, "period_end": -1178, "context": "Hittite self-designation for their land (ISO proxy: tr)", "source": "Hittite cuneiform tablets from Bogazkoy/Hattusa"},
+      {"name": "خيتا", "lang": "ar", "period_start": -1300, "period_end": -1178, "context": "Egyptian designation found in Amarna letters and Kadesh inscriptions", "source": "Amarna Letters (EA 41-44)"}
+    ],
+    "territory_changes": [
+      {"year": -1274, "region": "Kadesh/Syria", "change_type": "CONQUEST_MILITARY", "description": "Battle of Kadesh against Ramesses II of Egypt. The resulting Treaty of Kadesh (c.1259 BC) is the earliest known international peace treaty. Both sides claimed victory; the treaty text survives in both Hittite and Egyptian versions.", "population_affected": null, "confidence_score": 0.85},
+      {"year": -1178, "region": "Anatolia", "change_type": "UNKNOWN", "description": "Collapse of the Hittite Empire during the Late Bronze Age Collapse. Hattusa was destroyed and abandoned. The exact causes remain debated: Sea Peoples invasions, internal rebellion, drought, and cascading systems failure are all proposed. Neo-Hittite successor states persisted in southeastern Anatolia and northern Syria.", "population_affected": null, "confidence_score": 0.6}
+    ],
+    "sources": [
+      {"citation": "Hittite cuneiform archives from Bogazkoy/Hattusa (over 30,000 tablets)", "source_type": "primary", "url": null},
+      {"citation": "Bryce, Trevor. The Kingdom of the Hittites. New edition. Oxford University Press, 2005", "source_type": "academic", "url": null},
+      {"citation": "Cline, Eric H. 1177 B.C.: The Year Civilization Collapsed. Princeton University Press, 2014", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Βασιλεία τῶν Σελευκιδῶν",
+    "name_original_lang": "el",
+    "entity_type": "empire",
+    "year_start": -312,
+    "year_end": -63,
+    "capital_name": "Antioch",
+    "capital_lat": 36.2028,
+    "capital_lon": 36.1606,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [26.0, 37.0], [28.0, 38.0], [30.0, 38.5], [33.0, 38.0],
+        [36.0, 37.5], [39.0, 37.0], [42.0, 36.5], [45.0, 36.0],
+        [48.0, 35.0], [50.0, 34.0], [52.0, 33.0], [54.0, 32.0],
+        [55.0, 30.0], [54.0, 28.0], [52.0, 27.0], [50.0, 26.5],
+        [48.0, 27.0], [45.0, 28.0], [42.0, 29.0], [39.0, 30.0],
+        [36.0, 31.0], [33.0, 32.0], [30.0, 34.0], [28.0, 35.5],
+        [26.0, 37.0]
+      ]]
+    },
+    "ethical_notes": "The Seleucid Empire was a Hellenistic successor state to Alexander's conquests. It imposed Greek culture and political structures on indigenous Middle Eastern populations, a process known as Hellenization. This cultural imperialism provoked resistance, most famously the Maccabean Revolt (167-160 BC). The original language of the ruling class was Ancient Greek (grc); Modern Greek (el) used per ISO 639-1 availability. The empire's multi-ethnic character and the tensions between Greek colonizers and indigenous populations provide important context for understanding later cultural and religious developments in the region.",
+    "name_variants": [
+      {"name": "Seleucid Empire", "lang": "en", "period_start": -312, "period_end": -63, "context": "English academic designation", "source": "Sherwin-White, Susan and Amélie Kuhrt. From Samarkhand to Sardis (1993)"},
+      {"name": "السلوقيون", "lang": "ar", "period_start": -312, "period_end": -63, "context": "Arabic designation", "source": "Ibn Khaldun, Muqaddimah (1377)"},
+      {"name": "Empire séleucide", "lang": "fr", "period_start": -312, "period_end": -63, "context": "French academic designation", "source": "Will, Édouard. Histoire politique du monde hellénistique (1979)"}
+    ],
+    "territory_changes": [
+      {"year": -190, "region": "Western Anatolia", "change_type": "CONQUEST_MILITARY", "description": "Battle of Magnesia: Roman defeat of Antiochus III. Treaty of Apamea (188 BC) stripped Seleucids of territory west of the Taurus Mountains, marking the beginning of Roman dominance in the eastern Mediterranean.", "population_affected": null, "confidence_score": 0.9},
+      {"year": -167, "region": "Judea", "change_type": "REVOLUTION", "description": "Maccabean Revolt against Antiochus IV Epiphanes' forced Hellenization and desecration of the Jerusalem Temple. This religious and national uprising established the Hasmonean dynasty and is commemorated in the Jewish festival of Hanukkah.", "population_affected": null, "confidence_score": 0.85}
+    ],
+    "sources": [
+      {"citation": "Polybius, Historiae (c.150 BC), books on Seleucid wars and diplomacy", "source_type": "primary", "url": null},
+      {"citation": "Sherwin-White, Susan and Amélie Kuhrt. From Samarkhand to Sardis: A New Approach to the Seleucid Empire. London: Duckworth, 1993", "source_type": "academic", "url": null},
+      {"citation": "Grainger, John D. The Rise of the Seleukid Empire (323-223 BC). Barnsley: Pen and Sword, 2014", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Βασιλεία τῶν Πτολεμαίων",
+    "name_original_lang": "el",
+    "entity_type": "kingdom",
+    "year_start": -305,
+    "year_end": -30,
+    "capital_name": "Alexandria",
+    "capital_lat": 31.2001,
+    "capital_lon": 29.9187,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [25.0, 31.5], [27.0, 31.5], [29.0, 31.3], [31.0, 31.0],
+        [32.0, 30.5], [33.0, 29.5], [34.0, 28.5], [34.5, 27.0],
+        [34.5, 25.0], [34.0, 24.0], [33.0, 23.0], [32.0, 22.0],
+        [31.0, 22.0], [30.0, 22.5], [29.0, 23.0], [28.0, 24.0],
+        [27.0, 25.5], [26.0, 27.0], [25.5, 28.5], [25.0, 30.0],
+        [25.0, 31.5]
+      ]]
+    },
+    "ethical_notes": "The Ptolemaic Kingdom was a Greek colonial state ruling over an Egyptian population. The Ptolemaic rulers adopted Egyptian religious imagery and pharaonic titles as tools of political legitimacy, while maintaining Greek as the language of administration and reserving power for a Greek-Macedonian elite. Indigenous Egyptians faced systemic discrimination. Cleopatra VII was notable for reportedly being the first Ptolemaic ruler to learn the Egyptian language. The original language of the ruling class was Ancient Greek (grc); Modern Greek (el) used per ISO 639-1 availability.",
+    "name_variants": [
+      {"name": "Ptolemaic Egypt", "lang": "en", "period_start": -305, "period_end": -30, "context": "English academic designation", "source": "Hölbl, Günther. A History of the Ptolemaic Empire (2001)"},
+      {"name": "بطالمة مصر", "lang": "ar", "period_start": -305, "period_end": -30, "context": "Arabic designation for the Ptolemaic period of Egypt", "source": "Al-Maqrizi, Al-Khitat (15th century)"},
+      {"name": "Aegyptus Ptolemaica", "lang": "la", "period_start": -305, "period_end": -30, "context": "Latin designation used in Roman sources", "source": "Caesar, De Bello Civili III (c.47 BC)"}
+    ],
+    "territory_changes": [
+      {"year": -305, "region": "Egypt", "change_type": "CONQUEST_MILITARY", "description": "Ptolemy I Soter declared himself pharaoh, formalizing Greek-Macedonian colonial rule over Egypt following Alexander's conquest. The foundation of Alexandria as capital symbolized the imposition of Greek urban culture on Egyptian territory.", "population_affected": null, "confidence_score": 0.9},
+      {"year": -30, "region": "Egypt", "change_type": "CONQUEST_MILITARY", "description": "Octavian (Augustus) conquered Egypt after defeating Cleopatra VII and Mark Antony. Egypt became a personal province of the Roman emperor. The last vestiges of Egyptian political independence, even under foreign rulers, were extinguished.", "population_affected": null, "confidence_score": 0.95}
+    ],
+    "sources": [
+      {"citation": "The Rosetta Stone (196 BC), Memphis Decree of Ptolemy V", "source_type": "primary", "url": null},
+      {"citation": "Hölbl, Günther. A History of the Ptolemaic Empire. London: Routledge, 2001", "source_type": "academic", "url": null},
+      {"citation": "Manning, Joseph G. The Last Pharaohs: Egypt Under the Ptolemies, 305-30 BC. Princeton University Press, 2010", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "الدولة الأموية",
+    "name_original_lang": "ar",
+    "entity_type": "caliphate",
+    "year_start": 661,
+    "year_end": 750,
+    "capital_name": "Dimashq",
+    "capital_lat": 33.5138,
+    "capital_lon": 36.2765,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [-8.0, 31.0], [-5.0, 33.0], [-1.0, 35.0], [3.0, 37.0],
+        [10.0, 37.0], [15.0, 35.0], [20.0, 33.0], [25.0, 32.0],
+        [30.0, 31.5], [35.0, 33.0], [40.0, 37.0], [45.0, 38.0],
+        [50.0, 37.5], [55.0, 37.0], [60.0, 35.0], [65.0, 33.0],
+        [68.0, 30.0], [65.0, 25.0], [60.0, 23.0], [55.0, 22.0],
+        [50.0, 20.0], [45.0, 15.0], [40.0, 13.0], [35.0, 15.0],
+        [30.0, 22.0], [25.0, 25.0], [20.0, 28.0], [15.0, 30.0],
+        [10.0, 32.0], [5.0, 33.0], [0.0, 33.0], [-5.0, 31.0],
+        [-8.0, 31.0]
+      ]]
+    },
+    "ethical_notes": "The Umayyad Caliphate was the largest empire the world had yet seen, stretching from Iberia to Central Asia. Its rapid expansion involved military conquest of diverse peoples. The dynasty's legitimacy was contested from its inception - Shia Muslims consider the Umayyads usurpers who seized power from Ali's descendants. The Battle of Karbala (680 CE) and the killing of Husayn ibn Ali remain one of Islam's most painful events. The Umayyads implemented discriminatory policies (mawali system) against non-Arab Muslims, contradicting Islamic egalitarian principles. Both Sunni and Shia perspectives must be documented.",
+    "name_variants": [
+      {"name": "Umayyad Caliphate", "lang": "en", "period_start": 661, "period_end": 750, "context": "English academic designation", "source": "Hawting, G.R. The First Dynasty of Islam (2000)"},
+      {"name": "الأمويون", "lang": "ar", "period_start": 661, "period_end": 750, "context": "Arabic designation - adjectival form from clan name Banu Umayya", "source": "Al-Tabari, Tarikh al-Rusul wa-l-Muluk (10th c.)"},
+      {"name": "Califat omeyyade", "lang": "fr", "period_start": 661, "period_end": 750, "context": "French academic designation", "source": "Marin, Manuela. 'Les Omeyyades.' In Les débuts du monde musulman (2012)"}
+    ],
+    "territory_changes": [
+      {"year": 680, "region": "Karbala/Iraq", "change_type": "CONQUEST_MILITARY", "description": "Battle of Karbala: Umayyad forces killed Husayn ibn Ali, grandson of Prophet Muhammad. This event created the permanent Sunni-Shia schism in Islam and remains commemorated annually by Shia Muslims during Ashura. The massacre of the Prophet's family profoundly shaped Islamic political theology.", "population_affected": null, "confidence_score": 0.95},
+      {"year": 711, "region": "Iberian Peninsula", "change_type": "CONQUEST_MILITARY", "description": "Umayyad forces under Tariq ibn Ziyad crossed into Iberia, defeating the Visigothic Kingdom. Beginning of nearly 800 years of Islamic presence in the Iberian Peninsula (Al-Andalus). Complex legacy of cultural exchange and religious coexistence alongside conquest.", "population_affected": null, "confidence_score": 0.9}
+    ],
+    "sources": [
+      {"citation": "Al-Tabari, Abu Ja'far Muhammad. Tarikh al-Rusul wa-l-Muluk (History of Prophets and Kings), 10th century", "source_type": "primary", "url": null},
+      {"citation": "Hawting, G.R. The First Dynasty of Islam: The Umayyad Caliphate AD 661-750. 2nd ed. London: Routledge, 2000", "source_type": "academic", "url": null},
+      {"citation": "Kennedy, Hugh. The Prophet and the Age of the Caliphates. 2nd ed. London: Longman, 2004", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "الدولة الفاطمية",
+    "name_original_lang": "ar",
+    "entity_type": "caliphate",
+    "year_start": 909,
+    "year_end": 1171,
+    "capital_name": "Al-Qahira",
+    "capital_lat": 30.0444,
+    "capital_lon": 31.2357,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [-2.0, 30.0], [0.0, 32.0], [3.0, 34.0], [6.0, 35.5],
+        [9.0, 36.5], [12.0, 35.0], [15.0, 33.0], [20.0, 32.0],
+        [25.0, 31.5], [30.0, 31.5], [33.0, 31.0], [35.0, 30.0],
+        [38.0, 28.0], [40.0, 22.0], [42.0, 18.0], [43.0, 15.0],
+        [42.0, 13.0], [39.0, 13.0], [36.0, 15.0], [33.0, 20.0],
+        [30.0, 22.0], [25.0, 25.0], [20.0, 28.0], [15.0, 30.0],
+        [10.0, 32.0], [5.0, 33.0], [0.0, 31.5], [-2.0, 30.0]
+      ]]
+    },
+    "ethical_notes": "The Fatimid Caliphate was an Ismaili Shia dynasty that challenged Sunni Abbasid legitimacy by claiming descent from Fatimah, the Prophet Muhammad's daughter. Their claim to legitimacy is viewed differently by Sunni and Ismaili scholars. The Fatimids founded Cairo (al-Qahira, 'the Victorious') and Al-Azhar, one of the world's oldest universities. Their policies toward religious minorities (Christians, Jews, Sunni Muslims) varied greatly by ruler - from the tolerance of most caliphs to the persecution under al-Hakim bi-Amr Allah. Both aspects must be documented.",
+    "name_variants": [
+      {"name": "Fatimid Caliphate", "lang": "en", "period_start": 909, "period_end": 1171, "context": "English academic designation", "source": "Halm, Heinz. The Fatimids and Their Traditions of Learning (1997)"},
+      {"name": "الفاطميون", "lang": "ar", "period_start": 909, "period_end": 1171, "context": "Arabic adjectival form from Fatimah bint Muhammad", "source": "Al-Maqrizi, Itti'az al-Hunafa (15th century)"},
+      {"name": "Califat fatimide", "lang": "fr", "period_start": 909, "period_end": 1171, "context": "French academic designation", "source": "Lev, Yaacov. State and Society in Fatimid Egypt (1991)"}
+    ],
+    "territory_changes": [
+      {"year": 969, "region": "Egypt", "change_type": "CONQUEST_MILITARY", "description": "Fatimid general Jawhar al-Siqilli conquered Egypt from the Ikhshidid dynasty. Founded the city of al-Qahira (Cairo) as the new Fatimid capital. Al-Azhar mosque and university were established shortly after.", "population_affected": null, "confidence_score": 0.9},
+      {"year": 1171, "region": "Egypt", "change_type": "REVOLUTION", "description": "Saladin (Salah al-Din al-Ayyubi) abolished the Fatimid Caliphate after the death of the last caliph al-Adid. Restored Sunni Islam as the state religion of Egypt. The transition was gradual rather than violent, but represented the end of Ismaili political power in Egypt.", "population_affected": null, "confidence_score": 0.9}
+    ],
+    "sources": [
+      {"citation": "Al-Maqrizi, Ahmad ibn Ali. Itti'az al-Hunafa bi-Akhbar al-A'imma al-Fatimiyyin al-Khulafa. 15th century", "source_type": "primary", "url": null},
+      {"citation": "Halm, Heinz. The Fatimids and Their Traditions of Learning. London: I.B. Tauris, 1997", "source_type": "academic", "url": null},
+      {"citation": "Brett, Michael. The Fatimid Empire. Edinburgh University Press, 2017", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "الدولة الأيوبية",
+    "name_original_lang": "ar",
+    "entity_type": "sultanate",
+    "year_start": 1171,
+    "year_end": 1260,
+    "capital_name": "Al-Qahira",
+    "capital_lat": 30.0444,
+    "capital_lon": 31.2357,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [25.0, 31.5], [27.0, 31.5], [29.0, 31.3], [31.0, 31.0],
+        [33.0, 31.5], [35.0, 32.0], [36.0, 33.0], [37.0, 34.0],
+        [38.0, 35.0], [39.0, 36.0], [40.0, 36.5], [41.0, 36.0],
+        [42.0, 35.5], [43.0, 35.0], [43.5, 34.0], [43.0, 33.0],
+        [42.0, 30.0], [41.0, 25.0], [40.0, 20.0], [39.0, 15.0],
+        [37.0, 15.0], [35.0, 17.0], [33.0, 20.0], [31.0, 22.0],
+        [29.0, 24.0], [27.0, 26.0], [25.5, 28.0], [25.0, 30.0],
+        [25.0, 31.5]
+      ]]
+    },
+    "ethical_notes": "The Ayyubid dynasty was founded by Saladin (Salah al-Din al-Ayyubi), a Kurdish military leader. Saladin's recapture of Jerusalem in 1187 is a pivotal event viewed very differently in Islamic and Western Christian historiography. Western Crusader sources portray it as catastrophe; Islamic sources as liberation. Saladin's relative mercy toward Jerusalem's population contrasted sharply with the Crusader massacre during the First Crusade (1099). The Ayyubid period also saw intensified persecution of Ismaili Shia communities. The dynasty's Kurdish ethnicity is significant and often overlooked in Arab-centric narratives.",
+    "name_variants": [
+      {"name": "Ayyubid Dynasty", "lang": "en", "period_start": 1171, "period_end": 1260, "context": "English academic designation", "source": "Humphreys, R. Stephen. From Saladin to the Mongols (1977)"},
+      {"name": "الأيوبيون", "lang": "ar", "period_start": 1171, "period_end": 1260, "context": "Arabic adjectival form from the dynasty's founder's father Ayyub", "source": "Ibn al-Athir, Al-Kamil fi al-Tarikh (13th century)"},
+      {"name": "Eyubiler", "lang": "tr", "period_start": 1171, "period_end": 1260, "context": "Turkish designation", "source": "Cahen, Claude. 'Ayyubids.' Encyclopaedia of Islam (1986)"}
+    ],
+    "territory_changes": [
+      {"year": 1187, "region": "Jerusalem/Palestine", "change_type": "CONQUEST_MILITARY", "description": "Saladin defeated the Crusaders at the Battle of Hattin and recaptured Jerusalem. Unlike the Crusader massacre of 1099, Saladin permitted Christian inhabitants to ransom themselves and leave. This event reshaped the political and religious landscape of the Levant.", "population_affected": null, "confidence_score": 0.9},
+      {"year": 1260, "region": "Egypt/Syria", "change_type": "CONQUEST_MILITARY", "description": "Mamluks under Qutuz and Baybars overthrew the last Ayyubid sultan in Egypt. The dynasty had already fragmented into rival principalities. Mamluk victory over the Mongols at Ain Jalut (1260) consolidated their power.", "population_affected": null, "confidence_score": 0.85}
+    ],
+    "sources": [
+      {"citation": "Ibn al-Athir, Izz al-Din. Al-Kamil fi al-Tarikh (The Complete History). 13th century", "source_type": "primary", "url": null},
+      {"citation": "Humphreys, R. Stephen. From Saladin to the Mongols: The Ayyubids of Damascus, 1193-1260. Albany: SUNY Press, 1977", "source_type": "academic", "url": null},
+      {"citation": "Lyons, Malcolm Cameron and D.E.P. Jackson. Saladin: The Politics of the Holy War. Cambridge University Press, 1982", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "دولة المماليك",
+    "name_original_lang": "ar",
+    "entity_type": "sultanate",
+    "year_start": 1250,
+    "year_end": 1517,
+    "capital_name": "Al-Qahira",
+    "capital_lat": 30.0444,
+    "capital_lon": 31.2357,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [25.0, 31.5], [27.0, 31.5], [29.0, 31.3], [31.0, 31.0],
+        [33.0, 31.5], [35.0, 32.0], [36.0, 33.0], [37.0, 34.0],
+        [38.0, 35.0], [39.0, 36.0], [40.0, 37.0], [41.0, 37.5],
+        [42.0, 37.0], [42.5, 36.0], [42.0, 35.0], [41.0, 33.0],
+        [40.0, 25.0], [39.0, 20.0], [38.0, 15.0], [36.0, 15.0],
+        [34.0, 18.0], [32.0, 21.0], [30.0, 23.0], [28.0, 25.0],
+        [26.0, 28.0], [25.0, 30.0], [25.0, 31.5]
+      ]]
+    },
+    "ethical_notes": "The Mamluk Sultanate was uniquely governed by a military caste of formerly enslaved soldiers. The word 'mamluk' literally means 'owned/slave'. Young boys, primarily Turkic and Circassian, were enslaved, converted to Islam, and trained as warriors - a system that inverted normal power dynamics as the enslaved became rulers. This paradox of slavery-as-path-to-power must not obscure the fundamental violence of the system. The Mamluks stopped the Mongol advance at Ain Jalut (1260) and eliminated the last Crusader states, but also practiced extreme violence against internal dissidents and Shia communities.",
+    "name_variants": [
+      {"name": "Mamluk Sultanate", "lang": "en", "period_start": 1250, "period_end": 1517, "context": "English academic designation", "source": "Irwin, Robert. The Middle East in the Middle Ages: The Early Mamluk Sultanate (1986)"},
+      {"name": "المماليك", "lang": "ar", "period_start": 1250, "period_end": 1517, "context": "Arabic: literally 'the owned ones/slaves'", "source": "Al-Maqrizi, Al-Suluk (15th century)"},
+      {"name": "Sultanat mamelouk", "lang": "fr", "period_start": 1250, "period_end": 1517, "context": "French academic designation", "source": "Garcin, Jean-Claude. 'The Regime of the Circassian Mamluks.' Cambridge History of Egypt (1998)"}
+    ],
+    "territory_changes": [
+      {"year": 1260, "region": "Palestine", "change_type": "CONQUEST_MILITARY", "description": "Battle of Ain Jalut: Mamluk forces under Qutuz and Baybars defeated the Mongol army, halting Mongol westward expansion. One of history's most consequential battles. Baybars subsequently murdered Qutuz and seized power.", "population_affected": null, "confidence_score": 0.9},
+      {"year": 1517, "region": "Egypt/Syria", "change_type": "CONQUEST_MILITARY", "description": "Ottoman Sultan Selim I defeated the Mamluks at the Battle of Ridaniya. Last Mamluk Sultan Tuman Bay II was executed. Egypt and Syria were absorbed into the Ottoman Empire. The Mamluk military caste continued to exist as local power brokers under Ottoman rule.", "population_affected": null, "confidence_score": 0.95}
+    ],
+    "sources": [
+      {"citation": "Al-Maqrizi, Ahmad ibn Ali. Al-Suluk li-Ma'rifat Duwal al-Muluk (Book of Travelling the Paths to Know the Dynasties of Kings). 15th century", "source_type": "primary", "url": null},
+      {"citation": "Irwin, Robert. The Middle East in the Middle Ages: The Early Mamluk Sultanate 1250-1382. London: Croom Helm, 1986", "source_type": "academic", "url": null},
+      {"citation": "Amitai-Preiss, Reuven. Mongols and Mamluks: The Mamluk-Ilkhanid War, 1260-1281. Cambridge University Press, 1995", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Regnum Hierosolymitanum",
+    "name_original_lang": "la",
+    "entity_type": "kingdom",
+    "year_start": 1099,
+    "year_end": 1291,
+    "capital_name": "Jerusalem",
+    "capital_lat": 31.7683,
+    "capital_lon": 35.2137,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [34.0, 29.5], [34.3, 30.0], [34.5, 30.5], [34.7, 31.0],
+        [35.0, 31.5], [35.3, 32.0], [35.5, 32.5], [35.8, 33.0],
+        [36.0, 33.5], [36.2, 33.8], [36.5, 33.5], [36.5, 33.0],
+        [36.3, 32.5], [36.0, 32.0], [35.8, 31.5], [35.5, 31.0],
+        [35.3, 30.5], [35.0, 30.0], [34.8, 29.5], [34.5, 29.2],
+        [34.0, 29.5]
+      ]]
+    },
+    "ethical_notes": "The Kingdom of Jerusalem was a Crusader state established through violent conquest and massacre. The fall of Jerusalem in 1099 involved the mass slaughter of Muslim and Jewish inhabitants - contemporary sources describe blood running ankle-deep. This violence must not be sanitized. The kingdom imposed a colonial feudal system on indigenous populations. The term 'Crusader states' reflects a Western perspective; in Arabic historiography, these are the Frankish/Crusader occupations (الاحتلال الصليبي). Both perspectives must be represented. Latin used as the official language of the Crusader court and legal system.",
+    "name_variants": [
+      {"name": "Kingdom of Jerusalem", "lang": "en", "period_start": 1099, "period_end": 1291, "context": "English designation", "source": "Riley-Smith, Jonathan. The Crusades: A History (1987)"},
+      {"name": "مملكة بيت المقدس الصليبية", "lang": "ar", "period_start": 1099, "period_end": 1291, "context": "Arabic designation emphasizing Crusader (Frankish) colonial nature", "source": "Ibn al-Athir, Al-Kamil fi al-Tarikh (13th century)"},
+      {"name": "Royaume de Jérusalem", "lang": "fr", "period_start": 1099, "period_end": 1291, "context": "Old French was the spoken language of the Frankish ruling class", "source": "Jean de Joinville, Vie de Saint Louis (c.1309)"}
+    ],
+    "territory_changes": [
+      {"year": 1099, "region": "Jerusalem", "change_type": "CONQUEST_MILITARY", "description": "First Crusade captured Jerusalem. Mass massacre of Muslim and Jewish inhabitants. Contemporary sources (Fulcher of Chartres, Ibn al-Athir) describe indiscriminate killing. The Dome of the Rock was converted to a church. Jewish community was burned alive in their synagogue.", "population_affected": null, "confidence_score": 0.9},
+      {"year": 1187, "region": "Jerusalem", "change_type": "CONQUEST_MILITARY", "description": "Saladin recaptured Jerusalem after the Battle of Hattin. The Crusader kingdom lost most of its territory but survived in a diminished form centered on Acre until 1291, when the Mamluks captured the last Crusader stronghold.", "population_affected": null, "confidence_score": 0.95}
+    ],
+    "sources": [
+      {"citation": "Fulcher of Chartres. Historia Hierosolymitana (1101-1127)", "source_type": "primary", "url": null},
+      {"citation": "Ibn al-Athir, Izz al-Din. Al-Kamil fi al-Tarikh (The Complete History), 13th century", "source_type": "primary", "url": null},
+      {"citation": "Riley-Smith, Jonathan. The Crusades: A History. New Haven: Yale University Press, 1987", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Comitatus Edessanus",
+    "name_original_lang": "la",
+    "entity_type": "kingdom",
+    "year_start": 1098,
+    "year_end": 1150,
+    "capital_name": "Edessa",
+    "capital_lat": 37.1591,
+    "capital_lon": 38.7955,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [36.5, 36.0], [37.0, 36.5], [37.5, 37.0], [38.0, 37.5],
+        [38.5, 38.0], [39.0, 38.0], [39.5, 37.5], [40.0, 37.0],
+        [40.5, 37.0], [40.5, 36.5], [40.0, 36.0], [39.5, 35.5],
+        [39.0, 35.5], [38.5, 36.0], [38.0, 36.0], [37.5, 36.0],
+        [37.0, 35.8], [36.5, 36.0]
+      ]]
+    },
+    "ethical_notes": "The County of Edessa was the first Crusader state established and the first to fall. Its capture by Zengi in 1144 triggered the Second Crusade. The county was established over territory with significant Armenian Christian, Syriac Christian, and Muslim populations. The Frankish ruling class was a small minority imposing feudal colonial structures. Latin is used as the official administrative language, though the population spoke Armenian, Syriac, and Arabic. The fall of Edessa involved massacre and enslavement of the Christian population.",
+    "name_variants": [
+      {"name": "County of Edessa", "lang": "en", "period_start": 1098, "period_end": 1150, "context": "English designation", "source": "MacEvitt, Christopher. The Crusades and the Christian World of the East (2008)"},
+      {"name": "الرها", "lang": "ar", "period_start": 1098, "period_end": 1150, "context": "Arabic name for Edessa, used by Muslim sources for the Crusader county", "source": "Ibn al-Qalanisi, Dhayl Tarikh Dimashq (12th century)"},
+      {"name": "Comté d'Édesse", "lang": "fr", "period_start": 1098, "period_end": 1150, "context": "French designation; Old French was spoken by the ruling Frankish class", "source": "William of Tyre, Historia Rerum in Partibus Transmarinis Gestarum (c.1170)"}
+    ],
+    "territory_changes": [
+      {"year": 1098, "region": "Edessa/Upper Mesopotamia", "change_type": "CONQUEST_MILITARY", "description": "Baldwin of Boulogne seized Edessa from its Armenian ruler Thoros through political manipulation - adopted as Thoros's heir, then stood by as a mob killed him. This founding through treachery set the tone for Crusader-Armenian relations.", "population_affected": null, "confidence_score": 0.85},
+      {"year": 1144, "region": "Edessa", "change_type": "CONQUEST_MILITARY", "description": "Imad al-Din Zengi, atabeg of Mosul, captured Edessa. The siege involved significant violence against the Christian population. The fall of Edessa shocked Western Christendom and prompted Pope Eugene III to call the Second Crusade.", "population_affected": null, "confidence_score": 0.9}
+    ],
+    "sources": [
+      {"citation": "William of Tyre. Historia Rerum in Partibus Transmarinis Gestarum (A History of Deeds Done Beyond the Sea). c.1170", "source_type": "primary", "url": null},
+      {"citation": "MacEvitt, Christopher. The Crusades and the Christian World of the East: Rough Tolerance. Philadelphia: University of Pennsylvania Press, 2008", "source_type": "academic", "url": null},
+      {"citation": "Michael the Syrian. Chronicle. 12th century", "source_type": "primary", "url": null}
+    ]
+  },
+  {
+    "name_original": "دولت نزاریه",
+    "name_original_lang": "fa",
+    "entity_type": "confederation",
+    "year_start": 1090,
+    "year_end": 1256,
+    "capital_name": "Alamut",
+    "capital_lat": 36.4333,
+    "capital_lon": 50.5833,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [49.5, 35.5], [49.8, 35.8], [50.0, 36.0], [50.3, 36.3],
+        [50.5, 36.5], [51.0, 36.8], [51.5, 36.5], [52.0, 36.2],
+        [52.5, 36.0], [52.5, 35.5], [52.2, 35.2], [52.0, 35.0],
+        [51.5, 34.8], [51.0, 35.0], [50.5, 35.0], [50.0, 35.2],
+        [49.5, 35.5]
+      ]]
+    },
+    "ethical_notes": "The Nizari Ismaili State (often sensationalized as 'Assassins' in Western sources) was a network of fortified communities in Iran and Syria. The word 'Assassin' derives from 'Hashishin', a pejorative label applied by enemies. Western historiography has long sensationalized the Nizari as a 'cult of assassins', drawing on Marco Polo's fanciful account and Crusader propaganda. Modern Ismaili scholarship has worked to recover the actual political and intellectual history. The Nizari practiced targeted political assassination (fidai missions) but this was a strategy of a small state against overwhelming Seljuk and later Mongol power, not mere fanaticism. The library of Alamut, destroyed by the Mongols, represented a major intellectual loss.",
+    "name_variants": [
+      {"name": "Nizari Ismaili State", "lang": "en", "period_start": 1090, "period_end": 1256, "context": "Modern academic designation avoiding pejorative 'Assassins'", "source": "Daftary, Farhad. The Assassin Legends (1994)"},
+      {"name": "الحشاشون", "lang": "ar", "period_start": 1090, "period_end": 1256, "context": "Arabic pejorative used by Sunni enemies; 'Hashishin' origin disputed", "source": "Juvaini, Ata-Malik. Tarikh-i Jahan-gusha (13th century)"},
+      {"name": "Assassins", "lang": "en", "period_start": 1100, "period_end": 1256, "context": "Western designation derived from Arabic pejorative, heavily mythologized by Crusader and later European sources", "source": "Marco Polo, Il Milione (c.1300)"}
+    ],
+    "territory_changes": [
+      {"year": 1090, "region": "Alamut/Daylam", "change_type": "REVOLUTION", "description": "Hassan-i Sabbah seized the fortress of Alamut through infiltration rather than siege. Established an independent Ismaili polity within Seljuk territory. The castle became the center of a network of mountain fortresses across Iran and Syria.", "population_affected": null, "confidence_score": 0.8},
+      {"year": 1256, "region": "Alamut/Iran", "change_type": "CONQUEST_MILITARY", "description": "Mongol forces under Hulagu Khan destroyed Alamut and the Nizari fortress network. The last lord Rukn al-Din Khurshah surrendered and was later executed. The famous library of Alamut was destroyed, an incalculable intellectual loss. Surviving Nizaris went underground.", "population_affected": null, "confidence_score": 0.85}
+    ],
+    "sources": [
+      {"citation": "Juvaini, Ata-Malik. Tarikh-i Jahan-gusha (History of the World Conqueror). 13th century", "source_type": "primary", "url": null},
+      {"citation": "Daftary, Farhad. The Assassin Legends: Myths of the Isma'ilis. London: I.B. Tauris, 1994", "source_type": "academic", "url": null},
+      {"citation": "Hodgson, Marshall G.S. The Order of Assassins: The Struggle of the Early Nizari Ismailis Against the Islamic World. The Hague: Mouton, 1955", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "ميتاني",
+    "name_original_lang": "ar",
+    "entity_type": "kingdom",
+    "year_start": -1500,
+    "year_end": -1270,
+    "capital_name": "Washukanni",
+    "capital_lat": 36.88,
+    "capital_lon": 40.05,
+    "confidence_score": 0.5,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [36.0, 35.5], [37.0, 36.0], [38.0, 36.5], [39.0, 37.0],
+        [40.0, 37.5], [41.0, 37.5], [42.0, 37.0], [42.5, 36.5],
+        [42.5, 36.0], [42.0, 35.5], [41.0, 35.0], [40.0, 34.5],
+        [39.0, 34.5], [38.0, 35.0], [37.0, 35.0], [36.0, 35.5]
+      ]]
+    },
+    "ethical_notes": "The original Hurrian language (ISO 639-3: xhu) has no modern ISO 639-1 code; Arabic used as the modern language of the region. Mitanni remains one of the most poorly documented major Bronze Age kingdoms. The capital Washukanni has never been located archaeologically, contributing to the low confidence score. The kingdom had a Hurrian-speaking majority ruled by an Indo-Aryan elite (evidenced by Indo-Aryan names and horse-training terminology), a complex ethnic dynamic. Most documentation comes from external sources (Egyptian Amarna Letters, Hittite archives), introducing significant bias.",
+    "name_variants": [
+      {"name": "Mitanni", "lang": "en", "period_start": -1500, "period_end": -1270, "context": "English academic designation", "source": "Wilhelm, Gernot. The Hurrians (1989)"},
+      {"name": "Naharina", "lang": "ar", "period_start": -1500, "period_end": -1270, "context": "Egyptian designation for Mitanni, from Akkadian 'Naharaim' (land of rivers); ISO proxy: ar", "source": "Amarna Letters (EA 17-29)"},
+      {"name": "Hanigalbat", "lang": "ar", "period_start": -1350, "period_end": -1270, "context": "Assyrian designation for Mitanni territory after its decline; ISO proxy: ar", "source": "Assyrian royal inscriptions, 13th-12th centuries BC"}
+    ],
+    "territory_changes": [
+      {"year": -1430, "region": "Upper Mesopotamia/North Syria", "change_type": "UNIFICATION", "description": "Mitanni reached peak power under Saushtatar, controlling territory from the Mediterranean to the Zagros Mountains. Subjugated Assyria as a vassal state. Diplomatic marriage alliances with Egypt documented in the Amarna Letters.", "population_affected": null, "confidence_score": 0.5},
+      {"year": -1270, "region": "Upper Mesopotamia", "change_type": "CONQUEST_MILITARY", "description": "Combined Hittite and Assyrian pressure destroyed Mitanni. Shalmaneser I of Assyria conquered the remaining Mitanni territory. The Hurrian population was absorbed into the Assyrian and Hittite domains.", "population_affected": null, "confidence_score": 0.6}
+    ],
+    "sources": [
+      {"citation": "Amarna Letters (cuneiform diplomatic correspondence from Tell el-Amarna, Egypt), c.1350-1330 BC", "source_type": "primary", "url": null},
+      {"citation": "Wilhelm, Gernot. The Hurrians. Warminster: Aris and Phillips, 1989", "source_type": "academic", "url": null},
+      {"citation": "Bryce, Trevor. Letters of the Great Kings of the Ancient Near East: The Royal Correspondence of the Late Bronze Age. London: Routledge, 2003", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "مملكة سبأ",
+    "name_original_lang": "ar",
+    "entity_type": "kingdom",
+    "year_start": -1200,
+    "year_end": 275,
+    "capital_name": "Marib",
+    "capital_lat": 15.4561,
+    "capital_lon": 45.3497,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [43.5, 13.5], [44.0, 14.0], [44.5, 14.5], [45.0, 15.0],
+        [45.5, 15.5], [46.0, 16.0], [46.5, 16.0], [47.0, 15.5],
+        [47.5, 15.0], [47.5, 14.5], [47.0, 14.0], [46.5, 13.5],
+        [46.0, 13.0], [45.5, 12.5], [45.0, 12.5], [44.5, 13.0],
+        [44.0, 13.0], [43.5, 13.5]
+      ]]
+    },
+    "ethical_notes": "The Kingdom of Saba (Sheba) occupies a unique place in religious historiography, mentioned in the Hebrew Bible, New Testament, and Quran in connection with the Queen of Sheba's visit to Solomon. Separating archaeological evidence from religious tradition is essential. The original language was Old South Arabian/Sabaean (ISO 639-3: xsa), which has no modern ISO 639-1 code; Arabic used as the modern language of the region. The Great Dam of Marib was one of the ancient world's most impressive engineering achievements. South Arabian civilizations are systematically understudied compared to their Mesopotamian and Egyptian contemporaries.",
+    "name_variants": [
+      {"name": "Kingdom of Saba", "lang": "en", "period_start": -1200, "period_end": 275, "context": "English academic designation", "source": "Kitchen, Kenneth. 'Sheba and Arabia.' In The Age of Solomon (1997)"},
+      {"name": "Sheba", "lang": "en", "period_start": null, "period_end": null, "context": "Biblical English designation from Hebrew שבא (Sheva)", "source": "1 Kings 10:1-13, Hebrew Bible"},
+      {"name": "سبأ", "lang": "ar", "period_start": -1200, "period_end": 275, "context": "Arabic form of the original Sabaean name, also used in the Quran (Sura 27, Sura 34)", "source": "Quran, Sura 27:22-44 (Sura al-Naml)"}
+    ],
+    "territory_changes": [
+      {"year": -750, "region": "Yemen", "change_type": "UNIFICATION", "description": "Sabaean expansion and consolidation under the Mukarribs (priest-kings). Construction and expansion of the Great Dam of Marib, which supported intensive agriculture in an arid region and sustained a population estimated at 30,000-50,000 in the Marib oasis.", "population_affected": 50000, "confidence_score": 0.6},
+      {"year": 275, "region": "Yemen", "change_type": "CONQUEST_MILITARY", "description": "Himyarite Kingdom conquered and absorbed the last Sabaean territories. The Himyarites had been gradually expanding at Sabaean expense for centuries. End of the independent Sabaean polity after over a millennium.", "population_affected": null, "confidence_score": 0.65}
+    ],
+    "sources": [
+      {"citation": "Sabaean inscriptions (South Arabian Musnad script), Royal Inscriptions from Marib", "source_type": "primary", "url": null},
+      {"citation": "Kitchen, Kenneth A. 'Sheba and Arabia.' In The Age of Solomon: Scholarship at the Turn of the Millennium, ed. Lowell K. Handy. Leiden: Brill, 1997", "source_type": "academic", "url": null},
+      {"citation": "Robin, Christian. 'Les royaumes de l'Arabie du Sud avant l'Islam.' In Routes d'Arabie (2010)", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "حِمْيَر",
+    "name_original_lang": "ar",
+    "entity_type": "kingdom",
+    "year_start": -110,
+    "year_end": 525,
+    "capital_name": "Zafar",
+    "capital_lat": 14.2167,
+    "capital_lon": 44.4000,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [[
+        [42.5, 12.5], [43.0, 13.0], [43.5, 13.5], [44.0, 14.0],
+        [44.5, 14.5], [45.0, 15.0], [45.5, 15.5], [46.0, 16.0],
+        [47.0, 16.5], [48.0, 16.0], [48.5, 15.5], [49.0, 15.0],
+        [49.0, 14.0], [48.5, 13.0], [48.0, 12.5], [47.0, 12.0],
+        [46.0, 12.0], [45.0, 12.0], [44.0, 12.0], [43.0, 12.0],
+        [42.5, 12.5]
+      ]]
+    },
+    "ethical_notes": "The original language was Himyaritic/Old South Arabian (related to Sabaean), which has no modern ISO 639-1 code; Arabic used as the modern regional language. The Himyarite Kingdom is significant for its late adoption of Judaism as a state religion (c.380 CE) and the subsequent Dhu Nuwas persecution of Christians (c.523 CE), which provoked the Aksumite Ethiopian invasion. This is one of the few instances of a Jewish kingdom persecuting Christians, and must be documented with the same honesty applied to Christian and Muslim persecutions. The destruction of the kingdom was partly precipitated by great-power rivalry between Byzantium and Sassanid Persia, with Yemen as a proxy battlefield.",
+    "name_variants": [
+      {"name": "Himyarite Kingdom", "lang": "en", "period_start": -110, "period_end": 525, "context": "English academic designation", "source": "Robin, Christian. 'Himyar et Israël.' Comptes rendus de l'Académie des Inscriptions (2004)"},
+      {"name": "Homeritae", "lang": "la", "period_start": -110, "period_end": 525, "context": "Latin/Greek designation used by Roman and Byzantine sources", "source": "Procopius, History of the Wars I.20 (c.550)"},
+      {"name": "ذو ريدان", "lang": "ar", "period_start": -110, "period_end": 525, "context": "Alternative Arabic name meaning 'those of Raydan' (the royal palace)", "source": "Sabaean/Himyaritic royal inscriptions"}
+    ],
+    "territory_changes": [
+      {"year": 280, "region": "Yemen", "change_type": "UNIFICATION", "description": "Himyarite unification of Yemen, absorbing the remaining Sabaean, Qatabanian, and Hadramauti territories. The Himyarite king adopted the title 'King of Saba, Dhu Raydan, Hadramaut, and Yamnat.'", "population_affected": null, "confidence_score": 0.65},
+      {"year": 525, "region": "Yemen", "change_type": "CONQUEST_MILITARY", "description": "Aksumite Ethiopian invasion under Kaleb destroyed the Himyarite Kingdom. The invasion was provoked by King Dhu Nuwas's massacre of Christians at Najran (c.523 CE). Ethiopia established a client kingdom; later Sassanid Persian intervention followed. End of independent South Arabian political tradition.", "population_affected": null, "confidence_score": 0.7}
+    ],
+    "sources": [
+      {"citation": "Himyaritic royal inscriptions in Musnad script (Zafar, Marib)", "source_type": "primary", "url": null},
+      {"citation": "Robin, Christian. 'Himyar et Israël.' Comptes rendus des séances de l'Académie des Inscriptions et Belles-Lettres 148.2 (2004): 831-908", "source_type": "academic", "url": null},
+      {"citation": "Bowersock, G.W. The Throne of Adulis: Red Sea Wars on the Eve of Islam. Oxford University Press, 2013", "source_type": "academic", "url": null}
+    ]
+  }
+]

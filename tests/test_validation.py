@@ -55,7 +55,7 @@ class TestEdgeCases:
 
     def test_year_boundary_negative(self, client):
         """Anno -657 (fondazione di Bisanzio) deve trovare Istanbul."""
-        r = client.get("/v1/entity?year=-657")
+        r = client.get("/v1/entity?year=-657&limit=100")
         assert r.status_code == 200
         names = [e["name_original"] for e in r.json()["entities"]]
         assert "\u0130stanbul" in names

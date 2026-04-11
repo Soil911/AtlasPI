@@ -1,0 +1,2854 @@
+[
+  {
+    "name_original": "Olmecatl",
+    "name_original_lang": "nah",
+    "entity_type": "city-state",
+    "year_start": -1500,
+    "year_end": -400,
+    "capital_name": "San Lorenzo Tenochtitlán",
+    "capital_lat": 17.75,
+    "capital_lon": -94.76,
+    "confidence_score": 0.55,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-96.0, 18.6],
+          [-95.6, 18.8],
+          [-95.2, 18.9],
+          [-94.8, 19.0],
+          [-94.4, 19.1],
+          [-94.0, 19.0],
+          [-93.6, 18.8],
+          [-93.3, 18.6],
+          [-93.2, 18.3],
+          [-93.3, 18.0],
+          [-93.5, 17.7],
+          [-93.8, 17.5],
+          [-94.2, 17.4],
+          [-94.6, 17.3],
+          [-95.0, 17.4],
+          [-95.4, 17.5],
+          [-95.7, 17.7],
+          [-96.0, 18.0],
+          [-96.1, 18.3],
+          [-96.0, 18.6]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: 'Olmeca' e' un esonimo nahuatl posteriore, dato dagli Aztechi secoli dopo. Il nome che questo popolo usava per se stesso e' sconosciuto. Il confidence_score e' basso perche' la scrittura olmeca non e' stata decifrata e le fonti sono esclusivamente archeologiche. ETHICS-003: questa civilta' e' spesso definita 'madre della Mesoamerica' — definizione eurocentrica che semplifica interazioni complesse tra popoli coevi.",
+    "name_variants": [
+      {
+        "name": "Olmec",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione accademica inglese derivata dal nahuatl",
+        "source": "Diehl, R.A. The Olmecs: America's First Civilization (2004)"
+      },
+      {
+        "name": "Olmecas",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione accademica spagnola",
+        "source": "Pool, C.A. Olmec Archaeology and Early Mesoamerica (2007)"
+      },
+      {
+        "name": "Xi People",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "ipotesi controversa e rifiutata — proposta afrocentrica di Van Sertima",
+        "source": "Van Sertima, I. They Came Before Columbus (1976)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -1200,
+        "region": "Costa del Golfo del Messico",
+        "change_type": "UNKNOWN",
+        "description": "Fioritura del centro cerimoniale di San Lorenzo. Prima urbanizzazione documentata in Mesoamerica con sculture colossali in basalto.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": -900,
+        "region": "La Venta, Tabasco",
+        "change_type": "UNKNOWN",
+        "description": "Spostamento del centro di potere da San Lorenzo a La Venta. Ragioni del declino di San Lorenzo sconosciute — ipotesi includono rivolta interna o cambiamenti ambientali.",
+        "population_affected": null,
+        "confidence_score": 0.45
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Diehl, R.A. The Olmecs: America's First Civilization (2004)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Pool, C.A. Olmec Archaeology and Early Mesoamerica (2007)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Coe, M.D. & Koontz, R. Mexico: From the Olmecs to the Aztecs (2013)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "K'uhul Ajaw",
+    "name_original_lang": "yua",
+    "entity_type": "city-state",
+    "year_start": -2000,
+    "year_end": 900,
+    "capital_name": "Tikal",
+    "capital_lat": 17.222,
+    "capital_lon": -89.611,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-92.5, 18.5],
+          [-91.8, 18.8],
+          [-91.0, 19.0],
+          [-90.2, 19.5],
+          [-89.5, 20.0],
+          [-88.5, 20.5],
+          [-87.5, 20.2],
+          [-87.0, 19.5],
+          [-87.2, 18.5],
+          [-87.5, 17.5],
+          [-87.8, 16.5],
+          [-88.0, 15.5],
+          [-88.5, 14.8],
+          [-89.0, 14.5],
+          [-89.5, 14.3],
+          [-90.5, 14.5],
+          [-91.0, 15.0],
+          [-91.5, 15.5],
+          [-92.0, 16.0],
+          [-92.5, 16.5],
+          [-93.0, 17.0],
+          [-93.0, 17.5],
+          [-92.8, 18.0],
+          [-92.5, 18.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: 'Maya' e' un termine collettivo — non esisteva un singolo stato maya. K'uhul Ajaw ('Signore Divino') era il titolo dei sovrani delle citta'-stato. Ogni citta' (Tikal, Palenque, Copan, Calakmul) era entita' politica indipendente. Questa entry rappresenta l'area culturale maya classica, non uno stato unitario. Il popolo maya esiste ancora oggi: circa 6 milioni di persone parlano lingue maya.",
+    "name_variants": [
+      {
+        "name": "Maya Civilization",
+        "lang": "en",
+        "period_start": -2000,
+        "period_end": 900,
+        "context": "termine collettivo occidentale per un'area culturale composta da citta'-stato indipendenti",
+        "source": "Sharer, R.J. & Traxler, L.P. The Ancient Maya (2006)"
+      },
+      {
+        "name": "Civilización Maya",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione spagnola accademica",
+        "source": "Martin, S. & Grube, N. Chronicle of the Maya Kings and Queens (2000)"
+      },
+      {
+        "name": "Maaya",
+        "lang": "yua",
+        "period_start": null,
+        "period_end": null,
+        "context": "auto-denominazione in maya yucateco",
+        "source": "Houston, S.D. The First Writing (2004)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 378,
+        "region": "Tikal, Peten",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Entrada di Siyaj K'ahk' a Tikal — possibile intervento militare da Teotihuacan. Inizio della supremazia di Tikal nel periodo Classico.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 900,
+        "region": "Terre basse maya",
+        "change_type": "UNKNOWN",
+        "description": "Collasso classico maya: abbandono delle citta' nelle terre basse. Cause dibattute — siccita', sovrappopolazione, guerre. Non fu un'estinzione: le citta' del nord (Chichen Itza, Uxmal) continuarono.",
+        "population_affected": 3000000,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Sharer, R.J. & Traxler, L.P. The Ancient Maya, 6th ed. (2006)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Martin, S. & Grube, N. Chronicle of the Maya Kings and Queens (2000)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Houston, S.D. & Stuart, D. Classic Maya Place Names (1998)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Teotihuacan",
+    "name_original_lang": "nah",
+    "entity_type": "city-state",
+    "year_start": -100,
+    "year_end": 550,
+    "capital_name": "Teotihuacan",
+    "capital_lat": 19.692,
+    "capital_lon": -98.844,
+    "confidence_score": 0.6,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-99.8, 20.5],
+          [-99.3, 20.7],
+          [-98.8, 20.8],
+          [-98.3, 20.7],
+          [-97.8, 20.5],
+          [-97.5, 20.2],
+          [-97.3, 19.8],
+          [-97.2, 19.4],
+          [-97.3, 19.0],
+          [-97.5, 18.7],
+          [-97.8, 18.5],
+          [-98.2, 18.3],
+          [-98.6, 18.2],
+          [-99.0, 18.3],
+          [-99.4, 18.5],
+          [-99.7, 18.8],
+          [-99.9, 19.2],
+          [-100.0, 19.6],
+          [-100.0, 20.0],
+          [-99.8, 20.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: 'Teotihuacan' e' un nome nahuatl dato successivamente dagli Aztechi, che significa 'luogo dove si diventa dei'. L'identita' etnica e linguistica dei costruttori e' sconosciuta — ipotesi includono Totonachi, Nahua proto-classici, o una societa' multietnica. Il confidence_score riflette questa incertezza fondamentale. Non si sa nemmeno come i suoi abitanti chiamassero la citta'.",
+    "name_variants": [
+      {
+        "name": "Teotihuacan",
+        "lang": "nah",
+        "period_start": null,
+        "period_end": null,
+        "context": "nome nahuatl azteco assegnato secoli dopo — significato: 'luogo dove si diventa dei'",
+        "source": "Millon, R. Urbanization at Teotihuacan (1973)"
+      },
+      {
+        "name": "City of the Gods",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "traduzione inglese del nome nahuatl, usata in ambito divulgativo",
+        "source": "Cowgill, G.L. Ancient Teotihuacan (2015)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 100,
+        "region": "Valle del Messico",
+        "change_type": "UNKNOWN",
+        "description": "Rapida urbanizzazione: Teotihuacan raggiunge 100.000-200.000 abitanti, diventando una delle citta' piu' grandi al mondo. Costruzione della Piramide del Sole.",
+        "population_affected": 150000,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 550,
+        "region": "Teotihuacan",
+        "change_type": "UNKNOWN",
+        "description": "Incendio e distruzione del centro cerimoniale. Cause dibattute — rivolta interna, invasione esterna o combinazione. La citta' non scompare ma perde il ruolo egemonico.",
+        "population_affected": 100000,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Cowgill, G.L. Ancient Teotihuacan: Early Urbanism in Central Mexico (2015)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Millon, R. Urbanization at Teotihuacan, Mexico (1973)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Tollan",
+    "name_original_lang": "nah",
+    "entity_type": "empire",
+    "year_start": 900,
+    "year_end": 1168,
+    "capital_name": "Tula",
+    "capital_lat": 20.065,
+    "capital_lon": -99.34,
+    "confidence_score": 0.5,
+    "status": "disputed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-100.5, 21.5],
+          [-100.0, 21.8],
+          [-99.5, 22.0],
+          [-99.0, 21.8],
+          [-98.5, 21.5],
+          [-98.0, 21.0],
+          [-97.8, 20.5],
+          [-97.7, 20.0],
+          [-97.8, 19.5],
+          [-98.0, 19.0],
+          [-98.5, 18.8],
+          [-99.0, 18.7],
+          [-99.5, 18.8],
+          [-100.0, 19.0],
+          [-100.3, 19.5],
+          [-100.5, 20.0],
+          [-100.6, 20.5],
+          [-100.6, 21.0],
+          [-100.5, 21.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: 'Tollan' (luogo dei giunchi) e' il nome nahuatl della capitale. 'Tolteca' significava 'artigiano' o 'persona civilizzata' in nahuatl ed era usato genericamente. La distinzione tra mito e storia e' particolarmente difficile per i Toltechi, poiche' gli Aztechi li idealizzarono come predecessori. Il confidence_score e' basso — molti dati 'toltechi' riflettono la mitologia azteca piu' che fatti storici.",
+    "name_variants": [
+      {
+        "name": "Toltec Empire",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione accademica inglese — 'impero' e' una semplificazione contestata",
+        "source": "Davies, N. The Toltecs: Until the Fall of Tula (1977)"
+      },
+      {
+        "name": "Imperio Tolteca",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione spagnola accademica",
+        "source": "Diehl, R.A. Tula: The Toltec Capital of Ancient Mexico (1983)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1168,
+        "region": "Tula, Hidalgo",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Caduta di Tula. Le fonti azteche attribuiscono la distruzione a conflitti interni e invasioni chichimeche. Fuga del sovrano Ce Acatl Topiltzin Quetzalcoatl verso est — mito che sara' strumentalizzato dai conquistadores spagnoli.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Davies, N. The Toltecs: Until the Fall of Tula (1977)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Diehl, R.A. Tula: The Toltec Capital of Ancient Mexico (1983)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Muisca",
+    "name_original_lang": "es",
+    "entity_type": "confederation",
+    "year_start": -600,
+    "year_end": 1537,
+    "capital_name": "Bacatá",
+    "capital_lat": 4.711,
+    "capital_lon": -74.072,
+    "confidence_score": 0.55,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-74.5, 7.5],
+          [-74.0, 7.6],
+          [-73.5, 7.5],
+          [-73.0, 7.2],
+          [-72.8, 6.8],
+          [-72.6, 6.3],
+          [-72.5, 5.8],
+          [-72.6, 5.3],
+          [-72.8, 4.8],
+          [-73.0, 4.5],
+          [-73.3, 4.2],
+          [-73.6, 4.0],
+          [-74.0, 3.9],
+          [-74.4, 4.0],
+          [-74.7, 4.3],
+          [-74.9, 4.7],
+          [-75.0, 5.2],
+          [-75.0, 5.7],
+          [-74.9, 6.2],
+          [-74.8, 6.7],
+          [-74.6, 7.1],
+          [-74.5, 7.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: 'Muisca' e' un termine chibcha che significa 'gente'. La lingua muisca (muysccubun) e' estinta dal XVIII secolo. La Confederazione era divisa tra lo Zipa (Bacata') e lo Zaque (Hunza). ETHICS-002: la conquista spagnola di Gonzalo Jiménez de Quesada nel 1537 distrusse la struttura politica muisca. Il mito di 'El Dorado' nacque dalla cerimonia muisca del lago Guatavita e fu usato per giustificare ulteriori conquiste.",
+    "name_variants": [
+      {
+        "name": "Muisca Confederation",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione accademica inglese",
+        "source": "Langebaek, C.H. Mercados, Poblamiento e Integración Étnica entre los Muiscas (1987)"
+      },
+      {
+        "name": "Confederación Muisca",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione spagnola accademica",
+        "source": "Broadbent, S.M. Los Chibchas: Organización Sociopolítica (1964)"
+      },
+      {
+        "name": "Chibcha",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "esonimo generico — si riferisce alla famiglia linguistica, non specificamente ai Muisca",
+        "source": "Reichel-Dolmatoff, G. Colombia (1965)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1537,
+        "region": "Altipiano cundiboyacense, Colombia",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Conquista spagnola sotto Gonzalo Jiménez de Quesada. Distruzione della struttura politica della confederazione. Fondazione di Bogotá sulle rovine di Bacatá.",
+        "population_affected": 500000,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Langebaek, C.H. Mercados, Poblamiento e Integración Étnica entre los Muiscas, Siglo XVI (1987)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Broadbent, S.M. Los Chibchas: Organización Sociopolítica (1964)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Wari",
+    "name_original_lang": "qu",
+    "entity_type": "empire",
+    "year_start": 600,
+    "year_end": 1100,
+    "capital_name": "Wari",
+    "capital_lat": -13.06,
+    "capital_lon": -74.22,
+    "confidence_score": 0.55,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-77.0, -5.0],
+          [-76.5, -5.5],
+          [-76.0, -6.5],
+          [-75.5, -7.5],
+          [-75.3, -8.5],
+          [-75.0, -9.5],
+          [-74.8, -10.5],
+          [-74.5, -11.5],
+          [-74.3, -12.5],
+          [-74.0, -13.5],
+          [-74.0, -14.5],
+          [-74.5, -15.0],
+          [-75.0, -15.5],
+          [-75.5, -15.0],
+          [-76.0, -14.5],
+          [-76.5, -13.5],
+          [-77.0, -12.5],
+          [-77.5, -11.5],
+          [-78.0, -10.5],
+          [-78.5, -9.0],
+          [-78.5, -7.5],
+          [-78.0, -6.0],
+          [-77.0, -5.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: il nome 'Wari' (in quechua) e' quello usato accademicamente. E' un impero preincaico la cui struttura politica e' ancora dibattuta — potrebbe essere stato un impero centralizzato o una rete di centri collegati. Non va confuso con i Wari del Brasile (popolo amazzonico). Il confidence_score riflette la mancanza di fonti scritte e la dipendenza esclusiva dall'archeologia.",
+    "name_variants": [
+      {
+        "name": "Wari Empire",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione accademica — 'impero' e' contestato da alcuni studiosi",
+        "source": "Isbell, W.H. & McEwan, G.F. (eds.) Wari: Political Organization (1991)"
+      },
+      {
+        "name": "Huari",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "ortografia spagnola alternativa",
+        "source": "Schreiber, K.J. Wari Imperialism in Middle Horizon Peru (1992)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 700,
+        "region": "Ande centrali",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Espansione wari lungo la costa e le valli andine. Costruzione di centri amministrativi provinciali (Pikillaqta, Viracochapampa). Sistema stradale che prefigura quello inca.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1100,
+        "region": "Ande centrali",
+        "change_type": "UNKNOWN",
+        "description": "Collasso dell'impero Wari. Cause sconosciute — ipotesi includono siccita', frammentazione politica, e rivoluzioni locali.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Isbell, W.H. & McEwan, G.F. (eds.) A History of Wari Political Organization (1991)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Schreiber, K.J. Wari Imperialism in Middle Horizon Peru (1992)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Chimor",
+    "name_original_lang": "qu",
+    "entity_type": "kingdom",
+    "year_start": 900,
+    "year_end": 1470,
+    "capital_name": "Chan Chan",
+    "capital_lat": -8.107,
+    "capital_lon": -79.074,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-80.5, -3.5],
+          [-80.0, -3.8],
+          [-79.5, -4.5],
+          [-79.3, -5.5],
+          [-79.2, -6.5],
+          [-79.0, -7.5],
+          [-79.0, -8.5],
+          [-79.2, -9.5],
+          [-79.5, -10.0],
+          [-80.0, -10.5],
+          [-80.5, -10.2],
+          [-81.0, -9.5],
+          [-81.3, -8.5],
+          [-81.5, -7.5],
+          [-81.5, -6.5],
+          [-81.3, -5.5],
+          [-81.0, -4.5],
+          [-80.5, -3.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: 'Chimor' e' il nome del regno nella lingua mochica/yunga (oggi estinta). 'Chimu' e' la forma spagnolizzata. Chan Chan era la citta' di adobe piu' grande del mondo precolombiano (circa 20 km²). Il regno fu conquistato dagli Inca nel 1470 — la conquista e' documentata sia nelle cronache inca che nella tradizione orale chimu.",
+    "name_variants": [
+      {
+        "name": "Chimú Kingdom",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione accademica inglese",
+        "source": "Moseley, M.E. The Incas and Their Ancestors (2001)"
+      },
+      {
+        "name": "Reino Chimú",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione accademica spagnola",
+        "source": "Ravines, R. Chan Chan: Metrópoli Chimú (1980)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1470,
+        "region": "Costa settentrionale del Peru'",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Conquista da parte dell'esercito inca sotto Tupac Inca Yupanqui. Il sovrano chimu Minchançaman fu deportato a Cusco. Gli artigiani chimu furono trasferiti forzatamente per servire l'impero inca.",
+        "population_affected": 500000,
+        "confidence_score": 0.65
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Moseley, M.E. The Incas and Their Ancestors: The Archaeology of Peru (2001)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Ravines, R. Chan Chan: Metrópoli Chimú (1980)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Tiwanaku",
+    "name_original_lang": "ay",
+    "entity_type": "city-state",
+    "year_start": -300,
+    "year_end": 1000,
+    "capital_name": "Tiwanaku",
+    "capital_lat": -16.555,
+    "capital_lon": -68.673,
+    "confidence_score": 0.55,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-70.0, -14.5],
+          [-69.5, -14.8],
+          [-69.0, -15.2],
+          [-68.5, -15.8],
+          [-68.0, -16.5],
+          [-67.8, -17.0],
+          [-67.5, -17.5],
+          [-67.5, -18.0],
+          [-67.8, -18.5],
+          [-68.0, -19.0],
+          [-68.5, -19.5],
+          [-69.0, -19.5],
+          [-69.5, -19.3],
+          [-70.0, -19.0],
+          [-70.5, -18.5],
+          [-71.0, -18.0],
+          [-71.2, -17.5],
+          [-71.0, -17.0],
+          [-70.8, -16.5],
+          [-70.5, -16.0],
+          [-70.3, -15.5],
+          [-70.0, -14.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: 'Tiwanaku' e' il nome in aymara. La citta' si trova a 3850 m di altitudine presso il Lago Titicaca. L'identita' etno-linguistica dei costruttori e' dibattuta — probabilmente parlavano puquina (lingua oggi quasi estinta) piuttosto che aymara. Il confidence_score riflette l'incertezza sulla natura politica dell'entita' (stato, citta'-stato, centro cerimoniale).",
+    "name_variants": [
+      {
+        "name": "Tiahuanaco",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "ortografia coloniale spagnola",
+        "source": "Kolata, A.L. The Tiwanaku (1993)"
+      },
+      {
+        "name": "Tiwanaku",
+        "lang": "ay",
+        "period_start": null,
+        "period_end": null,
+        "context": "ortografia aymara moderna — significato incerto, forse 'pietra al centro'",
+        "source": "Janusek, J.W. Ancient Tiwanaku (2008)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 500,
+        "region": "Altipiano del Titicaca",
+        "change_type": "UNKNOWN",
+        "description": "Massima espansione: influenza culturale e politica estesa dalla costa pacifica alle valli amazzoniche. Popolazione stimata della citta': 20.000-40.000 abitanti.",
+        "population_affected": 30000,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1000,
+        "region": "Altipiano del Titicaca",
+        "change_type": "UNKNOWN",
+        "description": "Collasso di Tiwanaku. Forte correlazione con un periodo di siccita' prolungata documentato nei sedimenti del lago Titicaca. Frammentazione in signorie aymara (señoríos).",
+        "population_affected": null,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Kolata, A.L. The Tiwanaku: Portrait of an Andean Civilization (1993)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Janusek, J.W. Ancient Tiwanaku (2008)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Ben Zaa",
+    "name_original_lang": "es",
+    "entity_type": "city-state",
+    "year_start": -700,
+    "year_end": 1521,
+    "capital_name": "Monte Albán",
+    "capital_lat": 17.043,
+    "capital_lon": -96.768,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-97.5, 17.8],
+          [-97.2, 18.0],
+          [-96.8, 18.1],
+          [-96.4, 18.0],
+          [-96.0, 17.8],
+          [-95.7, 17.5],
+          [-95.5, 17.2],
+          [-95.4, 16.8],
+          [-95.5, 16.4],
+          [-95.7, 16.1],
+          [-96.0, 15.9],
+          [-96.3, 15.8],
+          [-96.6, 15.8],
+          [-97.0, 15.9],
+          [-97.3, 16.1],
+          [-97.5, 16.4],
+          [-97.7, 16.8],
+          [-97.7, 17.2],
+          [-97.5, 17.8]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: 'Ben Zaa' (gente delle nuvole) e' l'auto-denominazione in lingua zapoteca. 'Zapoteco' e' un esonimo nahuatl (tzapotecatl = 'gente della zapote'). La civilta' zapoteca sviluppo' uno dei primi sistemi di scrittura delle Americhe. Il popolo zapoteco esiste oggi: circa 500.000 parlanti. Monte Alban fu abbandonato verso l'800 d.C. ma la cultura zapoteca continuo' in altri centri.",
+    "name_variants": [
+      {
+        "name": "Zapotec Civilization",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "esonimo nahuatl adottato in ambito accademico — 'zapoteco' non e' il nome originale",
+        "source": "Marcus, J. & Flannery, K.V. Zapotec Civilization (1996)"
+      },
+      {
+        "name": "Civilización Zapoteca",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione spagnola accademica basata sull'esonimo nahuatl",
+        "source": "Whitecotton, J.W. The Zapotecs (1977)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -500,
+        "region": "Valle di Oaxaca",
+        "change_type": "UNKNOWN",
+        "description": "Fondazione di Monte Alban come centro cerimoniale e politico. Unificazione della Valle di Oaxaca sotto un'unica autorita'. Sviluppo della scrittura zapoteca.",
+        "population_affected": 25000,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1521,
+        "region": "Oaxaca",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Conquista spagnola dei territori zapotechi durante la campagna di Francisco de Orozco. Resistenza significativa ma frammentata.",
+        "population_affected": 350000,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Marcus, J. & Flannery, K.V. Zapotec Civilization: How Urban Society Evolved in Mexico's Oaxaca Valley (1996)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Whitecotton, J.W. The Zapotecs: Princes, Priests, and Peasants (1977)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Ñuu Dzaui",
+    "name_original_lang": "es",
+    "entity_type": "kingdom",
+    "year_start": 1100,
+    "year_end": 1523,
+    "capital_name": "Tilantongo",
+    "capital_lat": 17.28,
+    "capital_lon": -97.28,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-98.5, 18.0],
+          [-98.2, 18.2],
+          [-97.8, 18.3],
+          [-97.4, 18.2],
+          [-97.0, 18.0],
+          [-96.7, 17.7],
+          [-96.5, 17.4],
+          [-96.4, 17.0],
+          [-96.5, 16.6],
+          [-96.7, 16.3],
+          [-97.0, 16.1],
+          [-97.3, 16.0],
+          [-97.7, 16.0],
+          [-98.0, 16.1],
+          [-98.3, 16.3],
+          [-98.5, 16.6],
+          [-98.6, 17.0],
+          [-98.6, 17.4],
+          [-98.5, 18.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: 'Nuu Dzaui' (popolo della pioggia) e' l'auto-denominazione in lingua mixteca. 'Mixteco' e' un esonimo nahuatl (mixtecatl = 'gente del luogo delle nuvole'). I codici mixteci (Vindobonensis, Nuttall, Bodley) sono tra i pochissimi manoscritti precolombiani sopravvissuti alla distruzione spagnola. Il re 8-Cervo Garra di Giaguaro (1063-1115) e' la figura storica precolombiana meglio documentata della Mesoamerica.",
+    "name_variants": [
+      {
+        "name": "Mixtec Kingdom",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "esonimo nahuatl adottato in ambito accademico — era in realta' un sistema di citta'-stato (yuhuitayu)",
+        "source": "Terraciano, K. The Mixtecs of Colonial Oaxaca (2001)"
+      },
+      {
+        "name": "Cultura Mixteca",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione spagnola accademica",
+        "source": "Spores, R. The Mixtecs in Ancient and Colonial Times (1984)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1100,
+        "region": "Mixteca Alta, Oaxaca",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Unificazione di diverse citta'-stato mixteca sotto 8-Cervo Garra di Giaguaro. Conquista di Tilantongo e altri centri. La Mixteca raggiunge la massima estensione.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1523,
+        "region": "Oaxaca",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Conquista spagnola sotto Pedro de Alvarado. I codici mixteci sopravvissero in parte alla distruzione — tra i documenti precolombiani piu' importanti delle Americhe.",
+        "population_affected": 250000,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Terraciano, K. The Mixtecs of Colonial Oaxaca: Ñudzahui History, Sixteenth through Eighteenth Centuries (2001)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Spores, R. The Mixtecs in Ancient and Colonial Times (1984)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Nʉmʉnʉʉ Sʉkʉbʉtʉ",
+    "name_original_lang": "en",
+    "entity_type": "confederation",
+    "year_start": 1700,
+    "year_end": 1875,
+    "capital_name": "Nessun centro fisso",
+    "capital_lat": 34.0,
+    "capital_lon": -100.0,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-104.0, 38.0],
+          [-103.0, 38.5],
+          [-102.0, 38.0],
+          [-101.0, 37.5],
+          [-100.0, 37.0],
+          [-99.0, 36.5],
+          [-98.0, 35.5],
+          [-97.0, 34.5],
+          [-96.5, 33.5],
+          [-96.5, 32.5],
+          [-97.0, 31.5],
+          [-97.5, 30.5],
+          [-98.5, 29.5],
+          [-99.5, 29.5],
+          [-100.5, 30.0],
+          [-101.5, 30.5],
+          [-102.5, 31.5],
+          [-103.5, 32.5],
+          [-104.0, 33.5],
+          [-104.5, 34.5],
+          [-105.0, 35.5],
+          [-105.0, 36.5],
+          [-104.5, 37.5],
+          [-104.0, 38.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: 'Numunuu' (il popolo) e' l'auto-denominazione. 'Comanche' e' un esonimo ute (kohmahts = 'coloro che vogliono combatterci'). La Comancheria era il piu' grande dominio indigeno delle Grandi Pianure — uno stato nomade de facto che controllava il commercio tra il Messico e le pianure. ETHICS-003: la politica statunitense di sterminio dei bisonti fu deliberatamente diretta a distruggere la base economica comanche.",
+    "name_variants": [
+      {
+        "name": "Comancheria",
+        "lang": "es",
+        "period_start": 1700,
+        "period_end": 1875,
+        "context": "nome spagnolo per il territorio controllato — adottato anche in inglese",
+        "source": "Hämäläinen, P. The Comanche Empire (2008)"
+      },
+      {
+        "name": "Comanche Empire",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "termine accademico recente che riconosce la Comancheria come entita' statale",
+        "source": "Hämäläinen, P. The Comanche Empire (2008)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1750,
+        "region": "Grandi Pianure meridionali",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Espulsione degli Apache dalle pianure meridionali. La Comancheria raggiunge la massima estensione, controllando un territorio grande quanto la Francia.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1875,
+        "region": "Comancheria",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Resa di Quanah Parker a Fort Sill. Fine della Comancheria. Sterminio deliberato dei bisonti da parte dell'esercito USA come arma di guerra. Da 20.000 Comanche a meno di 1.500 sopravvissuti.",
+        "population_affected": 20000,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hämäläinen, P. The Comanche Empire (2008)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Kavanagh, T.W. Comanche Political History (1996)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Očhéthi Šakówiŋ",
+    "name_original_lang": "en",
+    "entity_type": "confederation",
+    "year_start": 1776,
+    "year_end": 1877,
+    "capital_name": "Nessun centro fisso",
+    "capital_lat": 44.0,
+    "capital_lon": -103.0,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-106.0, 48.0],
+          [-105.0, 48.5],
+          [-104.0, 48.5],
+          [-103.0, 48.0],
+          [-102.0, 47.5],
+          [-101.0, 47.0],
+          [-100.0, 46.0],
+          [-99.0, 45.0],
+          [-98.5, 44.0],
+          [-98.5, 43.0],
+          [-99.0, 42.0],
+          [-100.0, 41.5],
+          [-101.0, 41.5],
+          [-102.0, 42.0],
+          [-103.0, 42.5],
+          [-104.0, 43.0],
+          [-105.0, 44.0],
+          [-105.5, 45.0],
+          [-106.0, 46.0],
+          [-106.5, 47.0],
+          [-106.0, 48.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: 'Ochethi Sakowin' (Sette Fuochi del Consiglio) e' il nome proprio dell'alleanza. 'Sioux' e' un esonimo ojibwe dispregiativo (nadouessioux = 'serpenti/nemici'). ETHICS-003: il massacro di Wounded Knee (1890) fu un atto di genocidio — l'esercito USA uccise circa 300 Lakota disarmati, incluse donne e bambini. Il Trattato di Fort Laramie (1868) fu sistematicamente violato dagli USA dopo la scoperta dell'oro nelle Black Hills.",
+    "name_variants": [
+      {
+        "name": "Lakota Nation",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione inglese comune — si riferisce alla divisione occidentale dell'alleanza",
+        "source": "Ostler, J. The Lakota and the Black Hills (2010)"
+      },
+      {
+        "name": "Sioux",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "esonimo ojibwe dispregiativo ancora diffuso — rifiutato dai Lakota",
+        "source": "DeMallie, R.J. (ed.) Handbook of North American Indians, vol. 13 (2001)"
+      },
+      {
+        "name": "Great Sioux Nation",
+        "lang": "en",
+        "period_start": 1868,
+        "period_end": 1877,
+        "context": "nome usato nel Trattato di Fort Laramie (1868)",
+        "source": "Trattato di Fort Laramie (1868)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1868,
+        "region": "Grandi Pianure settentrionali",
+        "change_type": "TREATY",
+        "description": "Trattato di Fort Laramie: gli USA riconoscono la Great Sioux Reservation, incluse le Black Hills (Paha Sapa, sacre per i Lakota).",
+        "population_affected": 40000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1877,
+        "region": "Black Hills, Dakota",
+        "change_type": "CESSION_FORCED",
+        "description": "Annessione illegale delle Black Hills dopo la scoperta dell'oro. Violazione unilaterale del Trattato di Fort Laramie. La Corte Suprema USA (1980) confermo' che l'annessione fu illegale, ma i Lakota rifiutarono il risarcimento monetario chiedendo la restituzione della terra.",
+        "population_affected": 40000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Ostler, J. The Lakota and the Black Hills: The Struggle for Sacred Ground (2010)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "DeMallie, R.J. (ed.) Handbook of North American Indians, vol. 13: Plains (2001)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Tsalagi",
+    "name_original_lang": "en",
+    "entity_type": "confederation",
+    "year_start": 1540,
+    "year_end": 1838,
+    "capital_name": "Chota",
+    "capital_lat": 35.53,
+    "capital_lon": -84.13,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-85.5, 36.5],
+          [-85.0, 36.8],
+          [-84.5, 37.0],
+          [-84.0, 36.8],
+          [-83.5, 36.5],
+          [-83.0, 36.0],
+          [-82.5, 35.5],
+          [-82.0, 35.0],
+          [-81.5, 34.5],
+          [-81.5, 34.0],
+          [-82.0, 33.5],
+          [-82.5, 33.2],
+          [-83.0, 33.0],
+          [-83.5, 33.0],
+          [-84.0, 33.2],
+          [-84.5, 33.5],
+          [-85.0, 34.0],
+          [-85.5, 34.5],
+          [-86.0, 35.0],
+          [-86.0, 35.5],
+          [-85.8, 36.0],
+          [-85.5, 36.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: 'Tsalagi' e' l'auto-denominazione in lingua cherokee. 'Cherokee' e' probabilmente un esonimo choctaw. La nazione Cherokee sviluppo' un sillabario (inventato da Sequoyah nel 1821), una costituzione scritta, un giornale (Cherokee Phoenix). ETHICS-003: il Trail of Tears (1838) fu un atto di pulizia etnica legalizzata — circa 4.000 Cherokee morirono durante la deportazione forzata nonostante una sentenza della Corte Suprema (Worcester v. Georgia, 1832) che riconosceva la sovranita' cherokee.",
+    "name_variants": [
+      {
+        "name": "Cherokee Nation",
+        "lang": "en",
+        "period_start": 1794,
+        "period_end": 1838,
+        "context": "governo formale costituzionale cherokee",
+        "source": "Perdue, T. & Green, M.D. The Cherokee Nation and the Trail of Tears (2007)"
+      },
+      {
+        "name": "Aniyunwiya",
+        "lang": "chr",
+        "period_start": null,
+        "period_end": null,
+        "context": "auto-denominazione alternativa — 'il popolo principale'",
+        "source": "Mooney, J. Myths of the Cherokee (1900)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1830,
+        "region": "Georgia, Tennessee, Carolina del Nord",
+        "change_type": "CESSION_FORCED",
+        "description": "Indian Removal Act firmato dal presidente Andrew Jackson. Autorizza la deportazione forzata dei Cherokee e altre nazioni dai loro territori ancestrali.",
+        "population_affected": 16000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1838,
+        "region": "Territori Cherokee orientali",
+        "change_type": "ETHNIC_CLEANSING",
+        "description": "Trail of Tears: deportazione forzata di circa 16.000 Cherokee verso il Territorio Indiano (Oklahoma). Circa 4.000 morti durante la marcia. Violazione diretta della sentenza Worcester v. Georgia della Corte Suprema USA.",
+        "population_affected": 16000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Perdue, T. & Green, M.D. The Cherokee Nation and the Trail of Tears (2007)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Mooney, J. Myths of the Cherokee, 19th Annual Report of the Bureau of American Ethnology (1900)",
+        "source_type": "primary",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Ancestral Puebloans",
+    "name_original_lang": "en",
+    "entity_type": "confederation",
+    "year_start": -100,
+    "year_end": 1600,
+    "capital_name": "Pueblo Bonito",
+    "capital_lat": 36.06,
+    "capital_lon": -107.96,
+    "confidence_score": 0.5,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-111.0, 38.5],
+          [-110.5, 39.0],
+          [-110.0, 39.0],
+          [-109.0, 38.5],
+          [-108.0, 38.0],
+          [-107.0, 37.5],
+          [-106.0, 37.0],
+          [-105.5, 36.5],
+          [-105.0, 36.0],
+          [-105.0, 35.0],
+          [-105.5, 34.5],
+          [-106.0, 34.0],
+          [-107.0, 33.5],
+          [-108.0, 33.5],
+          [-109.0, 34.0],
+          [-110.0, 34.5],
+          [-110.5, 35.0],
+          [-111.0, 35.5],
+          [-111.5, 36.0],
+          [-111.5, 37.0],
+          [-111.5, 38.0],
+          [-111.0, 38.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: il termine precedente 'Anasazi' (esonimo navajo che significa 'antichi nemici') e' rifiutato dai popoli pueblo moderni. 'Ancestral Puebloans' e' il termine accademico corrente. I discendenti diretti sono i popoli Hopi, Zuni, e i Pueblo del Rio Grande, che mantengono tradizioni vive e continue. Non si tratta di una civilta' 'scomparsa' — l'esodo da Chaco Canyon fu una migrazione, non un'estinzione.",
+    "name_variants": [
+      {
+        "name": "Anasazi",
+        "lang": "nv",
+        "period_start": null,
+        "period_end": null,
+        "context": "esonimo navajo dispregiativo — significa 'antichi nemici'. Rifiutato dai discendenti pueblo",
+        "source": "Lekson, S.H. A History of the Ancient Southwest (2009)"
+      },
+      {
+        "name": "Ancient Pueblo People",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione alternativa usata dal National Park Service per sostituire 'Anasazi'",
+        "source": "Noble, D.G. (ed.) The Mesa Verde World (2006)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1150,
+        "region": "Chaco Canyon, Nuovo Messico",
+        "change_type": "UNKNOWN",
+        "description": "Abbandono di Chaco Canyon. Migrazione verso Mesa Verde, Kayenta e il Rio Grande. Cause dibattute: siccita' prolungata, conflitti sociali, ristrutturazione religiosa. Non fu un 'collasso' — i popoli si spostarono e continuarono altrove.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Lekson, S.H. A History of the Ancient Southwest (2009)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Noble, D.G. (ed.) The Mesa Verde World: Explorations in Ancestral Pueblo Archaeology (2006)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Taíno",
+    "name_original_lang": "es",
+    "entity_type": "confederation",
+    "year_start": 1200,
+    "year_end": 1504,
+    "capital_name": "Xaragua",
+    "capital_lat": 18.83,
+    "capital_lon": -72.7,
+    "confidence_score": 0.5,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-74.0, 20.5],
+          [-73.0, 20.8],
+          [-72.0, 21.0],
+          [-71.0, 20.5],
+          [-70.0, 20.0],
+          [-69.0, 19.5],
+          [-68.0, 19.0],
+          [-67.0, 18.5],
+          [-66.0, 18.0],
+          [-65.5, 18.0],
+          [-65.0, 18.3],
+          [-65.0, 18.8],
+          [-66.0, 19.0],
+          [-67.0, 19.3],
+          [-68.0, 19.5],
+          [-69.0, 19.8],
+          [-70.0, 20.0],
+          [-71.0, 20.3],
+          [-72.0, 20.5],
+          [-73.0, 20.5],
+          [-74.0, 20.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: 'Taino' e' un termine che i nativi usarono per distinguersi dai Caribi (kariba). I Taino sono il primo popolo delle Americhe a incontrare Colombo (1492). ETHICS-003: GENOCIDIO DOCUMENTATO — la popolazione taino di Hispaniola scese da circa 250.000-1.000.000 nel 1492 a poche migliaia nel 1520. Cause: lavoro forzato nelle encomiendas, epidemie di vaiolo, fame e suicidi di massa documentati da Bartolome' de las Casas. Questo fu il primo genocidio coloniale europeo nelle Americhe.",
+    "name_variants": [
+      {
+        "name": "Taino",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione accademica inglese",
+        "source": "Rouse, I. The Tainos: Rise and Decline of the People Who Greeted Columbus (1992)"
+      },
+      {
+        "name": "Arawak",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "famiglia linguistica — talvolta usato come sinonimo di Taino, ma impreciso",
+        "source": "Wilson, S.M. The Archaeology of the Caribbean (2007)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1492,
+        "region": "Hispaniola, Caraibi",
+        "change_type": "COLONIZATION",
+        "description": "Arrivo di Cristoforo Colombo. I Taino sono il primo popolo americano a subire la colonizzazione europea. Colombo immediatamente annoto' nel suo diario che i Taino 'sarebbero stati buoni servitori'.",
+        "population_affected": 500000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1504,
+        "region": "Caraibi",
+        "change_type": "GENOCIDE",
+        "description": "Completamento della conquista spagnola delle Grandi Antille. Il sistema delle encomiendas e il lavoro forzato nelle miniere d'oro decimarono la popolazione taino. Bartolome' de las Casas documento' le atrocita' nel 'Brevísima Relación de la Destrucción de las Indias' (1552).",
+        "population_affected": 500000,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Rouse, I. The Tainos: Rise and Decline of the People Who Greeted Columbus (1992)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Las Casas, B. de. Brevísima Relación de la Destrucción de las Indias (1552)",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Wilson, S.M. The Archaeology of the Caribbean (2007)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Virreinato de Nueva España",
+    "name_original_lang": "es",
+    "entity_type": "colony",
+    "year_start": 1521,
+    "year_end": 1821,
+    "capital_name": "Ciudad de México",
+    "capital_lat": 19.4326,
+    "capital_lon": -99.1332,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-118.0, 42.0],
+          [-115.0, 42.0],
+          [-110.0, 37.0],
+          [-106.0, 32.0],
+          [-104.0, 30.0],
+          [-100.0, 28.0],
+          [-97.0, 26.0],
+          [-97.5, 22.0],
+          [-96.0, 19.0],
+          [-93.0, 16.0],
+          [-90.0, 14.5],
+          [-88.0, 14.5],
+          [-86.0, 15.0],
+          [-84.0, 14.5],
+          [-83.0, 14.8],
+          [-83.0, 16.0],
+          [-87.0, 18.0],
+          [-91.0, 19.0],
+          [-95.0, 20.0],
+          [-97.0, 22.0],
+          [-100.0, 25.0],
+          [-105.0, 28.0],
+          [-110.0, 32.0],
+          [-115.0, 33.0],
+          [-118.0, 35.0],
+          [-118.0, 42.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-002: il Virreinato di Nueva España fu il piu' grande dominio coloniale spagnolo nelle Americhe, costruito sulla distruzione dell'Impero Azteco e delle civilta' mesoamericane. ETHICS-003: il crollo demografico delle popolazioni indigene fu catastrofico — da circa 25 milioni nel 1519 a circa 1 milione nel 1605. Il sistema di encomiendas, il lavoro forzato nelle miniere, e le epidemie di vaiolo costituirono un genocidio de facto. Il sistema delle castas istituzionalizzo' la gerarchia razziale.",
+    "name_variants": [
+      {
+        "name": "New Spain",
+        "lang": "en",
+        "period_start": 1521,
+        "period_end": 1821,
+        "context": "traduzione inglese del nome ufficiale spagnolo",
+        "source": "Gibson, C. The Aztecs Under Spanish Rule (1964)"
+      },
+      {
+        "name": "Nova España",
+        "lang": "es",
+        "period_start": 1521,
+        "period_end": 1535,
+        "context": "nome usato prima dell'istituzione formale del vicereame",
+        "source": "Lockhart, J. & Schwartz, S.B. Early Latin America (1983)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1521,
+        "region": "Mesoamerica",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Caduta di Tenochtitlan. Hernan Cortes completa la conquista dell'Impero Azteco con l'aiuto di alleati indigeni (Tlaxcalteca). Inizio della colonizzazione spagnola del Messico.",
+        "population_affected": 25000000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1821,
+        "region": "Messico e America Centrale",
+        "change_type": "LIBERATION",
+        "description": "Indipendenza del Messico. Il Plan de Iguala (Agustin de Iturbide) porta all'indipendenza dopo 11 anni di guerra. Fine di 300 anni di dominio coloniale spagnolo.",
+        "population_affected": 6000000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Gibson, C. The Aztecs Under Spanish Rule: A History of the Indians of the Valley of Mexico (1964)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Lockhart, J. & Schwartz, S.B. Early Latin America: A History of Colonial Spanish America and Brazil (1983)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Vice-Reino do Brasil",
+    "name_original_lang": "pt",
+    "entity_type": "colony",
+    "year_start": 1500,
+    "year_end": 1822,
+    "capital_name": "Salvador da Bahia",
+    "capital_lat": -12.971,
+    "capital_lon": -38.512,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-50.0, 4.0],
+          [-47.0, 2.0],
+          [-44.0, -2.0],
+          [-41.0, -4.0],
+          [-38.0, -7.0],
+          [-35.0, -9.0],
+          [-35.5, -12.0],
+          [-38.0, -15.0],
+          [-39.0, -18.0],
+          [-40.0, -21.0],
+          [-42.0, -23.0],
+          [-44.0, -24.0],
+          [-47.0, -26.0],
+          [-49.0, -28.0],
+          [-51.0, -30.0],
+          [-53.0, -33.0],
+          [-55.0, -33.5],
+          [-57.0, -30.0],
+          [-58.0, -25.0],
+          [-60.0, -20.0],
+          [-62.0, -15.0],
+          [-65.0, -10.0],
+          [-68.0, -5.0],
+          [-65.0, -2.0],
+          [-60.0, 0.0],
+          [-55.0, 2.0],
+          [-50.0, 4.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-002: il Brasile coloniale fu il piu' grande importatore di schiavi africani nelle Americhe — circa 4,9 milioni di persone ridotte in schiavitu'. ETHICS-003: le popolazioni indigene subirono un genocidio sistematico: da circa 3,5 milioni nel 1500 a poche centinaia di migliaia nel XIX secolo. Il sistema delle capitanias hereditárias e delle bandeiras (spedizioni di cattura schiavi) furono strumenti di distruzione delle comunita' native.",
+    "name_variants": [
+      {
+        "name": "Colonial Brazil",
+        "lang": "en",
+        "period_start": 1500,
+        "period_end": 1822,
+        "context": "denominazione inglese generica per l'intero periodo coloniale",
+        "source": "Bethell, L. (ed.) Colonial Brazil (1987)"
+      },
+      {
+        "name": "Estado do Brasil",
+        "lang": "pt",
+        "period_start": 1549,
+        "period_end": 1815,
+        "context": "nome ufficiale dal governo generale fino all'elevazione a regno",
+        "source": "Boxer, C.R. The Golden Age of Brazil (1962)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1500,
+        "region": "Costa atlantica brasiliana",
+        "change_type": "COLONIZATION",
+        "description": "Pedro Alvares Cabral sbarca a Porto Seguro. Inizio della colonizzazione portoghese. I popoli Tupi e Guarani sono i primi a subire l'impatto coloniale.",
+        "population_affected": 3500000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1822,
+        "region": "Brasile",
+        "change_type": "LIBERATION",
+        "description": "Dichiarazione di indipendenza di Dom Pedro I ('Grito do Ipiranga'). Il Brasile diventa impero indipendente — unica colonia americana a diventare monarchia.",
+        "population_affected": 4500000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Bethell, L. (ed.) Colonial Brazil (Cambridge History of Latin America, vol. 1) (1987)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Boxer, C.R. The Golden Age of Brazil, 1695-1750 (1962)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Virreinato del Perú",
+    "name_original_lang": "es",
+    "entity_type": "colony",
+    "year_start": 1542,
+    "year_end": 1824,
+    "capital_name": "Lima",
+    "capital_lat": -12.046,
+    "capital_lon": -77.043,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-81.0, 2.0],
+          [-79.0, 0.0],
+          [-78.0, -2.0],
+          [-77.0, -4.0],
+          [-76.0, -6.0],
+          [-75.0, -8.0],
+          [-74.0, -10.0],
+          [-72.0, -13.0],
+          [-70.0, -15.0],
+          [-70.0, -18.0],
+          [-69.0, -22.0],
+          [-68.0, -25.0],
+          [-67.0, -28.0],
+          [-66.0, -30.0],
+          [-64.0, -30.0],
+          [-60.0, -25.0],
+          [-58.0, -20.0],
+          [-60.0, -15.0],
+          [-62.0, -10.0],
+          [-65.0, -5.0],
+          [-70.0, 0.0],
+          [-75.0, 2.0],
+          [-78.0, 3.0],
+          [-81.0, 2.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-002: il Virreinato del Peru' fu costruito sulle rovine del Tawantinsuyu (Impero Inca). ETHICS-003: il sistema della mita coloniale (lavoro forzato nelle miniere, specialmente Potosi') causo' la morte di milioni di indigeni. Potosi' produsse circa l'80% dell'argento mondiale nel XVI-XVII secolo — ricchezza estratta con il lavoro forzato e la morte di circa 8 milioni di persone. Bartolome' de las Casas denuncio' queste atrocita'.",
+    "name_variants": [
+      {
+        "name": "Viceroyalty of Peru",
+        "lang": "en",
+        "period_start": 1542,
+        "period_end": 1824,
+        "context": "traduzione inglese del nome ufficiale",
+        "source": "Andrien, K.J. Crisis and Decline: The Viceroyalty of Peru in the Seventeenth Century (1985)"
+      },
+      {
+        "name": "Virreinato del Perú",
+        "lang": "es",
+        "period_start": 1542,
+        "period_end": 1824,
+        "context": "nome ufficiale spagnolo",
+        "source": "Fisher, J.R. Bourbon Peru, 1750-1824 (2003)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1542,
+        "region": "Ande e costa pacifica sudamericana",
+        "change_type": "COLONIZATION",
+        "description": "Istituzione formale del Virreinato del Peru' con le Nuevas Leyes. Territorio enorme che inizialmente comprendeva gran parte del Sudamerica spagnolo.",
+        "population_affected": 5000000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1824,
+        "region": "Peru'",
+        "change_type": "LIBERATION",
+        "description": "Battaglia di Ayacucho. Le forze di Sucre sconfiggono definitivamente gli spagnoli. Ultima grande battaglia della guerra d'indipendenza sudamericana.",
+        "population_affected": 2000000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Andrien, K.J. Crisis and Decline: The Viceroyalty of Peru in the Seventeenth Century (1985)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Fisher, J.R. Bourbon Peru, 1750-1824 (2003)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Virreinato del Río de la Plata",
+    "name_original_lang": "es",
+    "entity_type": "colony",
+    "year_start": 1776,
+    "year_end": 1814,
+    "capital_name": "Buenos Aires",
+    "capital_lat": -34.603,
+    "capital_lon": -58.381,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-58.0, -20.0],
+          [-57.0, -22.0],
+          [-56.0, -24.0],
+          [-55.0, -26.0],
+          [-54.0, -28.0],
+          [-53.5, -30.0],
+          [-54.0, -32.0],
+          [-55.0, -34.0],
+          [-56.0, -35.0],
+          [-57.5, -36.0],
+          [-59.0, -38.0],
+          [-62.0, -40.0],
+          [-65.0, -42.0],
+          [-68.0, -50.0],
+          [-70.0, -55.0],
+          [-72.0, -50.0],
+          [-71.0, -45.0],
+          [-70.0, -40.0],
+          [-69.0, -35.0],
+          [-68.0, -30.0],
+          [-67.0, -25.0],
+          [-65.0, -22.0],
+          [-62.0, -20.0],
+          [-58.0, -20.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-002: il Virreinato del Rio de la Plata fu creato nel 1776 scorporando territori dal Virreinato del Peru'. La sua creazione rispondeva a esigenze strategiche spagnole (contenere l'espansione portoghese). I popoli indigeni del territorio (Guarani, Mapuche, Diaguita, Tehuelche) subirono progressiva marginalizzazione. Le missioni gesuitiche con i Guarani rappresentano un caso ambiguo — protezione dai bandeirantes ma anche imposizione culturale.",
+    "name_variants": [
+      {
+        "name": "Viceroyalty of the Río de la Plata",
+        "lang": "en",
+        "period_start": 1776,
+        "period_end": 1814,
+        "context": "traduzione inglese del nome ufficiale",
+        "source": "Lynch, J. The Spanish American Revolutions, 1808-1826 (1973)"
+      },
+      {
+        "name": "Virreinato Rioplatense",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "forma abbreviata spagnola",
+        "source": "Rock, D. Argentina 1516-1987 (1987)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1776,
+        "region": "Sudamerica meridionale",
+        "change_type": "PARTITION",
+        "description": "Creazione del virreinato per decreto di Carlo III. Scorporo dal Virreinato del Peru' di Argentina, Uruguay, Paraguay e Alto Peru' (Bolivia).",
+        "population_affected": 800000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1810,
+        "region": "Buenos Aires",
+        "change_type": "REVOLUTION",
+        "description": "Revolución de Mayo: deposizione del virre' Cisneros. Inizio de facto dell'indipendenza argentina, anche se l'indipendenza formale sara' dichiarata nel 1816.",
+        "population_affected": 500000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Lynch, J. The Spanish American Revolutions, 1808-1826 (1973)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Rock, D. Argentina 1516-1987: From Spanish Colonization to Alfonsín (1987)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Nouvelle-France",
+    "name_original_lang": "fr",
+    "entity_type": "colony",
+    "year_start": 1534,
+    "year_end": 1763,
+    "capital_name": "Québec",
+    "capital_lat": 46.813,
+    "capital_lon": -71.215,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-60.0, 50.0],
+          [-55.0, 48.0],
+          [-58.0, 46.0],
+          [-62.0, 44.0],
+          [-66.0, 43.0],
+          [-70.0, 42.0],
+          [-75.0, 41.5],
+          [-80.0, 42.0],
+          [-85.0, 42.5],
+          [-88.0, 43.0],
+          [-90.0, 44.0],
+          [-92.0, 46.0],
+          [-93.0, 48.0],
+          [-95.0, 49.0],
+          [-93.0, 50.0],
+          [-90.0, 52.0],
+          [-85.0, 54.0],
+          [-80.0, 55.0],
+          [-75.0, 54.0],
+          [-70.0, 52.0],
+          [-65.0, 50.0],
+          [-60.0, 50.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-002: la Nouvelle-France occupava territori delle Prime Nazioni (Algonchini, Irochesi, Huron-Wendat, Cree, Innu). I francesi adottarono un modello di alleanze commerciali con i nativi (commercio delle pellicce) meno basato sulla conquista diretta rispetto agli spagnoli, ma comunque coloniale. Le epidemie decimate le popolazioni native — gli Huron-Wendat persero circa il 60% della popolazione negli anni 1630-1640.",
+    "name_variants": [
+      {
+        "name": "New France",
+        "lang": "en",
+        "period_start": 1534,
+        "period_end": 1763,
+        "context": "traduzione inglese standard",
+        "source": "Eccles, W.J. France in America (1972)"
+      },
+      {
+        "name": "Nouvelle France",
+        "lang": "fr",
+        "period_start": 1534,
+        "period_end": 1763,
+        "context": "nome ufficiale francese",
+        "source": "Havard, G. & Vidal, C. Histoire de l'Amérique française (2003)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1534,
+        "region": "Valle del San Lorenzo",
+        "change_type": "COLONIZATION",
+        "description": "Jacques Cartier esplora il San Lorenzo e rivendica il territorio per la Francia. I popoli Innu e Mi'kmaq sono i primi nativi a subire l'impatto coloniale francese.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1763,
+        "region": "Nord America",
+        "change_type": "CESSION_FORCED",
+        "description": "Trattato di Parigi: la Francia cede il Canada e i territori a est del Mississippi alla Gran Bretagna, e la Louisiana alla Spagna. Fine della Nouvelle-France. I popoli nativi alleati della Francia furono abbandonati al dominio britannico.",
+        "population_affected": 65000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Eccles, W.J. France in America (1972)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Havard, G. & Vidal, C. Histoire de l'Amérique française (2003)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "British America",
+    "name_original_lang": "en",
+    "entity_type": "colony",
+    "year_start": 1607,
+    "year_end": 1776,
+    "capital_name": "Williamsburg",
+    "capital_lat": 37.271,
+    "capital_lon": -76.707,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-67.0, 45.0],
+          [-66.0, 44.5],
+          [-67.0, 43.5],
+          [-69.0, 42.0],
+          [-71.0, 41.5],
+          [-72.0, 41.0],
+          [-73.5, 40.5],
+          [-74.0, 39.5],
+          [-75.5, 38.5],
+          [-76.0, 37.0],
+          [-77.0, 35.5],
+          [-78.0, 34.0],
+          [-79.5, 33.0],
+          [-80.0, 32.0],
+          [-81.0, 31.0],
+          [-82.0, 30.5],
+          [-82.0, 31.5],
+          [-83.0, 33.0],
+          [-84.0, 35.0],
+          [-82.0, 37.0],
+          [-80.0, 39.0],
+          [-78.0, 40.0],
+          [-76.0, 42.0],
+          [-73.0, 43.0],
+          [-70.0, 44.0],
+          [-67.0, 45.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-002: le Tredici Colonie furono fondate su territori dei popoli Powhatan, Wampanoag, Lenape, Cherokee, Creek e molti altri. ETHICS-003: la colonizzazione britannica causo' genocidio sistematico delle popolazioni native attraverso guerre, epidemie, e deportazioni. La schiavitu' africana fu introdotta a Jamestown nel 1619 e divenne il fondamento economico delle colonie meridionali. Il paradosso della Dichiarazione di Indipendenza — 'tutti gli uomini sono creati uguali' — scritto da proprietari di schiavi.",
+    "name_variants": [
+      {
+        "name": "Thirteen Colonies",
+        "lang": "en",
+        "period_start": 1732,
+        "period_end": 1776,
+        "context": "nome usato dopo la fondazione della Georgia (ultima colonia)",
+        "source": "Taylor, A. American Colonies: The Settling of North America (2001)"
+      },
+      {
+        "name": "Trece Colonias",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione spagnola",
+        "source": "Middlekauff, R. The Glorious Cause (2005)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1607,
+        "region": "Virginia",
+        "change_type": "COLONIZATION",
+        "description": "Fondazione di Jamestown — primo insediamento britannico permanente in America. Territorio dei Powhatan occupato. Entro 15 anni, guerre e epidemie dimezzarono la popolazione Powhatan.",
+        "population_affected": 20000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1776,
+        "region": "Costa orientale nordamericana",
+        "change_type": "REVOLUTION",
+        "description": "Dichiarazione di Indipendenza. Le tredici colonie si separano dalla Gran Bretagna. La dichiarazione non si applica a schiavi, nativi americani e donne.",
+        "population_affected": 2500000,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Taylor, A. American Colonies: The Settling of North America (2001)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Middlekauff, R. The Glorious Cause: The American Revolution, 1763-1789 (2005)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "United States of America",
+    "name_original_lang": "en",
+    "entity_type": "republic",
+    "year_start": 1776,
+    "year_end": null,
+    "capital_name": "Washington, D.C.",
+    "capital_lat": 38.9072,
+    "capital_lon": -77.0369,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-124.7, 48.4],
+          [-123.0, 48.5],
+          [-117.0, 49.0],
+          [-110.0, 49.0],
+          [-104.0, 49.0],
+          [-97.0, 49.0],
+          [-89.0, 48.0],
+          [-84.0, 46.0],
+          [-82.0, 43.0],
+          [-79.0, 43.0],
+          [-76.0, 44.0],
+          [-71.0, 45.0],
+          [-67.0, 45.0],
+          [-67.0, 44.0],
+          [-70.0, 42.0],
+          [-73.5, 40.5],
+          [-74.0, 39.5],
+          [-75.5, 38.5],
+          [-77.0, 35.5],
+          [-80.0, 32.0],
+          [-81.5, 30.0],
+          [-88.0, 29.0],
+          [-94.0, 29.0],
+          [-97.0, 26.0],
+          [-103.0, 29.0],
+          [-106.5, 32.0],
+          [-117.0, 32.5],
+          [-118.0, 33.5],
+          [-120.5, 35.0],
+          [-122.5, 37.5],
+          [-124.0, 40.0],
+          [-124.5, 42.0],
+          [-124.0, 46.0],
+          [-124.7, 48.4]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-002: gli Stati Uniti si espansero attraverso la conquista sistematica dei territori nativi (Manifest Destiny), la guerra con il Messico (1846-1848), e l'acquisto forzato di terre. ETHICS-003: il genocidio dei popoli nativi americani — attraverso guerre, deportazioni (Trail of Tears), distruzione dei bisonti, e boarding schools — e' uno dei piu' grandi della storia. La schiavitu' di circa 4 milioni di africani fu abolita solo nel 1865. Il Fugitive Slave Act, il sistema Jim Crow, e la segregazione razziale perpetuarono la disuguaglianza per oltre un secolo dopo l'abolizione.",
+    "name_variants": [
+      {
+        "name": "Estados Unidos de América",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione spagnola ufficiale",
+        "source": "Zinn, H. A People's History of the United States (1980)"
+      },
+      {
+        "name": "États-Unis d'Amérique",
+        "lang": "fr",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione francese ufficiale",
+        "source": "Wood, G.S. The Radicalism of the American Revolution (1991)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1803,
+        "region": "Louisiana",
+        "change_type": "TREATY",
+        "description": "Louisiana Purchase: acquisto di 2.140.000 km² dalla Francia napoleonica per 15 milioni di dollari. Il territorio apparteneva ai popoli nativi — la Francia non aveva diritto di venderlo.",
+        "population_affected": 100000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1848,
+        "region": "Messico settentrionale (California, Texas, Nuovo Messico, Arizona)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Trattato di Guadalupe Hidalgo dopo la guerra messicano-statunitense. Il Messico cede meta' del suo territorio. Circa 100.000 messicani divennero cittadini americani senza spostarsi — 'il confine li attraverso''.",
+        "population_affected": 100000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Zinn, H. A People's History of the United States (1980)",
+        "source_type": "secondary",
+        "url": null
+      },
+      {
+        "citation": "Wood, G.S. The Radicalism of the American Revolution (1991)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Dunbar-Ortiz, R. An Indigenous Peoples' History of the United States (2014)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Império do Brasil",
+    "name_original_lang": "pt",
+    "entity_type": "empire",
+    "year_start": 1822,
+    "year_end": 1889,
+    "capital_name": "Rio de Janeiro",
+    "capital_lat": -22.906,
+    "capital_lon": -43.173,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-50.0, 4.0],
+          [-47.0, 2.0],
+          [-44.0, -2.0],
+          [-38.0, -7.0],
+          [-35.0, -9.0],
+          [-35.5, -12.0],
+          [-38.0, -15.0],
+          [-39.0, -18.0],
+          [-40.0, -21.0],
+          [-42.0, -23.0],
+          [-47.0, -26.0],
+          [-49.0, -28.0],
+          [-51.0, -30.0],
+          [-53.0, -33.5],
+          [-55.0, -33.5],
+          [-57.5, -30.0],
+          [-58.0, -25.0],
+          [-60.0, -20.0],
+          [-62.0, -15.0],
+          [-65.0, -10.0],
+          [-68.0, -5.0],
+          [-65.0, -2.0],
+          [-60.0, 0.0],
+          [-55.0, 2.0],
+          [-50.0, 4.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-002: l'Impero del Brasile fu l'ultimo stato delle Americhe ad abolire la schiavitu' (Lei Áurea, 1888). Durante l'impero, circa 1,5 milioni di schiavi africani furono importati (fino al 1850). La Guerra del Paraguay (1864-1870) fu la guerra piu' sanguinosa della storia sudamericana — il Paraguay perse circa il 60-90% della popolazione maschile. L'impero perpetuo' le strutture coloniali di disuguaglianza razziale ed economica.",
+    "name_variants": [
+      {
+        "name": "Empire of Brazil",
+        "lang": "en",
+        "period_start": 1822,
+        "period_end": 1889,
+        "context": "traduzione inglese del nome ufficiale",
+        "source": "Barman, R.J. Citizen Emperor: Pedro II and the Making of Brazil (1999)"
+      },
+      {
+        "name": "Imperio del Brasil",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione spagnola",
+        "source": "Bethell, L. Brazil: Empire and Republic, 1822-1930 (1989)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1822,
+        "region": "Brasile",
+        "change_type": "LIBERATION",
+        "description": "Grito do Ipiranga: Dom Pedro I dichiara l'indipendenza dal Portogallo. Unica ex-colonia americana a diventare impero. La schiavitu' continua — circa 1,5 milioni di schiavi al momento dell'indipendenza.",
+        "population_affected": 4500000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1889,
+        "region": "Brasile",
+        "change_type": "REVOLUTION",
+        "description": "Colpo di stato militare. Proclamazione della Repubblica. Dom Pedro II va in esilio. La transizione fu incruenta ma non risolse le questioni sociali fondamentali — la schiavitu' era stata abolita solo l'anno prima.",
+        "population_affected": 14000000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Barman, R.J. Citizen Emperor: Pedro II and the Making of Brazil, 1825-1891 (1999)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Bethell, L. Brazil: Empire and Republic, 1822-1930 (1989)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Primer Imperio Mexicano",
+    "name_original_lang": "es",
+    "entity_type": "empire",
+    "year_start": 1821,
+    "year_end": 1823,
+    "capital_name": "Ciudad de México",
+    "capital_lat": 19.4326,
+    "capital_lon": -99.1332,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-118.0, 42.0],
+          [-115.0, 42.0],
+          [-110.0, 37.0],
+          [-106.0, 32.0],
+          [-104.0, 30.0],
+          [-100.0, 28.0],
+          [-97.0, 26.0],
+          [-97.5, 22.0],
+          [-96.0, 19.0],
+          [-93.0, 16.0],
+          [-90.0, 14.5],
+          [-88.0, 14.5],
+          [-86.0, 15.0],
+          [-84.0, 14.0],
+          [-83.0, 11.0],
+          [-83.5, 10.0],
+          [-85.0, 11.0],
+          [-87.0, 13.5],
+          [-90.0, 14.0],
+          [-93.0, 16.0],
+          [-96.0, 18.0],
+          [-100.0, 23.0],
+          [-105.0, 28.0],
+          [-110.0, 32.0],
+          [-115.0, 33.0],
+          [-118.0, 35.0],
+          [-118.0, 42.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: il Primo Impero Messicano di Agustin de Iturbide fu un tentativo di creare uno stato indipendente che includesse l'intero territorio della Nueva España piu' l'America Centrale. Duro' meno di due anni. L'indipendenza fu conquistata da un'alleanza tra conservatori (come Iturbide) e liberali, ma non porto' cambiamenti strutturali per le popolazioni indigene e meticce. Il Plan de Iguala promise uguaglianza ma la mantenne solo sulla carta.",
+    "name_variants": [
+      {
+        "name": "First Mexican Empire",
+        "lang": "en",
+        "period_start": 1821,
+        "period_end": 1823,
+        "context": "traduzione inglese",
+        "source": "Anna, T.E. The Mexican Empire of Iturbide (1990)"
+      },
+      {
+        "name": "Imperio Mexicano",
+        "lang": "es",
+        "period_start": 1821,
+        "period_end": 1823,
+        "context": "nome ufficiale durante il regno di Iturbide",
+        "source": "Rodríguez O., J.E. The Independence of Spanish America (1998)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1821,
+        "region": "Messico e America Centrale",
+        "change_type": "LIBERATION",
+        "description": "Piano di Iguala e Trattato di Córdoba: indipendenza dal dominio spagnolo. Agustin de Iturbide si proclama imperatore Agustin I. Il territorio include anche l'America Centrale (temporaneamente).",
+        "population_affected": 6500000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1823,
+        "region": "Messico",
+        "change_type": "REVOLUTION",
+        "description": "Abdicazione di Iturbide dopo il Piano di Casa Mata. Proclamazione della Repubblica Messicana. L'America Centrale si separa formando le Province Unite dell'America Centrale.",
+        "population_affected": 6500000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Anna, T.E. The Mexican Empire of Iturbide (1990)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Rodríguez O., J.E. The Independence of Spanish America (1998)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Republic of Texas",
+    "name_original_lang": "en",
+    "entity_type": "republic",
+    "year_start": 1836,
+    "year_end": 1846,
+    "capital_name": "Austin",
+    "capital_lat": 30.267,
+    "capital_lon": -97.743,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-100.0, 36.5],
+          [-99.0, 36.5],
+          [-97.0, 34.0],
+          [-95.0, 33.5],
+          [-94.0, 33.5],
+          [-94.0, 31.0],
+          [-94.0, 29.5],
+          [-95.0, 28.5],
+          [-97.0, 26.0],
+          [-97.5, 25.5],
+          [-99.0, 26.0],
+          [-100.0, 28.0],
+          [-101.0, 29.5],
+          [-103.0, 29.5],
+          [-104.0, 30.0],
+          [-106.0, 32.0],
+          [-106.5, 32.0],
+          [-106.5, 36.5],
+          [-104.0, 36.5],
+          [-103.0, 36.5],
+          [-100.0, 36.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: il nome ufficiale in inglese fu 'Republic of Texas', ma il territorio era stato parte del Messico (e prima della Nueva España). La secessione dal Messico fu guidata in gran parte da coloni angloamericani che si opponevano all'abolizione della schiavitu' da parte del Messico (1829). La Costituzione della Repubblica del Texas legalizzo' esplicitamente la schiavitu' e nego' la cittadinanza ai neri e agli indigeni. L'annessione agli USA nel 1845 fu un fattore scatenante della guerra messicano-statunitense.",
+    "name_variants": [
+      {
+        "name": "Estado Libre y Soberano de Texas",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "nome in spagnolo — il Texas si dichiaro' prima stato libero del Messico prima della secessione totale",
+        "source": "Lack, P.D. The Texas Revolutionary Experience (1992)"
+      },
+      {
+        "name": "República de Texas",
+        "lang": "es",
+        "period_start": 1836,
+        "period_end": 1846,
+        "context": "denominazione spagnola",
+        "source": "Cantrell, G. Stephen F. Austin: Empresario of Texas (1999)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1836,
+        "region": "Texas",
+        "change_type": "SECESSION",
+        "description": "Dichiarazione di indipendenza dal Messico dopo la Battaglia di San Jacinto. Motivazione chiave: i coloni angloamericani rifiutavano l'abolizione della schiavitu' messicana. Sam Houston diventa presidente.",
+        "population_affected": 40000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1845,
+        "region": "Texas",
+        "change_type": "UNIFICATION",
+        "description": "Annessione agli Stati Uniti. Il Messico non riconobbe mai l'indipendenza texana — l'annessione scateno' la guerra messicano-statunitense (1846-1848).",
+        "population_affected": 125000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Lack, P.D. The Texas Revolutionary Experience: A Political and Social History, 1835-1836 (1992)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Cantrell, G. Stephen F. Austin: Empresario of Texas (1999)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Confederación Argentina",
+    "name_original_lang": "es",
+    "entity_type": "confederation",
+    "year_start": 1831,
+    "year_end": 1861,
+    "capital_name": "Paraná",
+    "capital_lat": -31.732,
+    "capital_lon": -60.529,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-58.0, -22.0],
+          [-56.0, -24.0],
+          [-55.0, -26.0],
+          [-54.5, -28.0],
+          [-55.0, -30.0],
+          [-56.0, -32.0],
+          [-57.0, -34.0],
+          [-58.5, -35.0],
+          [-60.0, -37.0],
+          [-63.0, -39.0],
+          [-65.0, -41.0],
+          [-67.0, -46.0],
+          [-68.0, -50.0],
+          [-70.0, -52.0],
+          [-72.0, -50.0],
+          [-71.0, -45.0],
+          [-70.5, -40.0],
+          [-70.0, -35.0],
+          [-69.0, -30.0],
+          [-67.0, -25.0],
+          [-65.0, -22.0],
+          [-62.0, -22.0],
+          [-58.0, -22.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: la Confederación Argentina fu il periodo di governo federalista sotto Juan Manuel de Rosas e i caudillos provinciali. La 'Conquista del Desierto' (1878-1885, successiva ma preparata in questo periodo) fu una campagna di genocidio contro i popoli Mapuche, Tehuelche e Ranquel della Patagonia e della Pampa. ETHICS-003: il termine 'desierto' (deserto) per descrivere terre abitate da popoli indigeni era propaganda finalizzata a giustificare lo sterminio e l'appropriazione territoriale.",
+    "name_variants": [
+      {
+        "name": "Argentine Confederation",
+        "lang": "en",
+        "period_start": 1831,
+        "period_end": 1861,
+        "context": "traduzione inglese del nome ufficiale",
+        "source": "Lynch, J. Argentine Caudillo: Juan Manuel de Rosas (2001)"
+      },
+      {
+        "name": "Confederación de las Provincias Unidas del Río de la Plata",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "nome formale completo — variava nella documentazione ufficiale",
+        "source": "Shumway, N. The Invention of Argentina (1991)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1831,
+        "region": "Province argentine",
+        "change_type": "UNIFICATION",
+        "description": "Pacto Federal: alleanza tra Buenos Aires, Entre Rios e Santa Fe. Inizio della Confederazione sotto leadership de facto di Rosas.",
+        "population_affected": 600000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1861,
+        "region": "Argentina",
+        "change_type": "UNIFICATION",
+        "description": "Battaglia di Pavon: Buenos Aires sconfigge la Confederazione. Bartolome' Mitre riunifica l'Argentina sotto il governo di Buenos Aires. Fine della Confederazione.",
+        "population_affected": 1500000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Lynch, J. Argentine Caudillo: Juan Manuel de Rosas (2001)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Shumway, N. The Invention of Argentina (1991)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Dominion of Canada",
+    "name_original_lang": "en",
+    "entity_type": "confederation",
+    "year_start": 1867,
+    "year_end": 1982,
+    "capital_name": "Ottawa",
+    "capital_lat": 45.421,
+    "capital_lon": -75.695,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-141.0, 69.0],
+          [-130.0, 70.0],
+          [-120.0, 72.0],
+          [-110.0, 74.0],
+          [-95.0, 74.0],
+          [-85.0, 73.0],
+          [-75.0, 72.0],
+          [-65.0, 68.0],
+          [-60.0, 60.0],
+          [-55.0, 52.0],
+          [-52.0, 47.0],
+          [-55.0, 46.0],
+          [-60.0, 44.0],
+          [-64.0, 43.5],
+          [-66.0, 44.0],
+          [-67.0, 45.0],
+          [-70.0, 46.0],
+          [-75.0, 45.0],
+          [-79.0, 43.0],
+          [-83.0, 42.0],
+          [-89.0, 48.0],
+          [-95.0, 49.0],
+          [-110.0, 49.0],
+          [-123.0, 49.0],
+          [-130.0, 55.0],
+          [-136.0, 59.0],
+          [-141.0, 60.0],
+          [-141.0, 69.0]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-002: il Dominion of Canada fu costruito su territori delle Prime Nazioni e degli Inuit senza il loro consenso. ETHICS-003: il sistema delle residential schools (1831-1996) fu uno strumento di genocidio culturale — circa 150.000 bambini indigeni furono separati dalle famiglie. La Truth and Reconciliation Commission (2015) ha documentato migliaia di morti. Il trattato Indian Act (1876) impose un sistema di riserve e tutela forzata. Nel 2021, le scoperte di fosse comuni presso le ex-residential schools hanno confermato la scala del genocidio.",
+    "name_variants": [
+      {
+        "name": "Canada",
+        "lang": "en",
+        "period_start": 1867,
+        "period_end": null,
+        "context": "nome corrente — 'Dominion' cadde gradualmente in disuso dopo il 1953",
+        "source": "Bumsted, J.M. A History of the Canadian Peoples (2011)"
+      },
+      {
+        "name": "Puissance du Canada",
+        "lang": "fr",
+        "period_start": 1867,
+        "period_end": 1982,
+        "context": "nome ufficiale francese nel British North America Act",
+        "source": "Dickinson, J.A. & Young, B. A Short History of Quebec (2008)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1867,
+        "region": "Canada orientale",
+        "change_type": "UNIFICATION",
+        "description": "British North America Act: confederazione di Ontario, Quebec, Nova Scotia e New Brunswick. Auto-governo sotto la corona britannica. Le Prime Nazioni non furono consultate.",
+        "population_affected": 3500000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1982,
+        "region": "Canada",
+        "change_type": "LIBERATION",
+        "description": "Constitution Act: il Canada ottiene piena sovranita' costituzionale dalla Gran Bretagna. La Carta dei Diritti e delle Liberta' diventa suprema. Fine formale dello status di Dominion.",
+        "population_affected": 25000000,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Bumsted, J.M. A History of the Canadian Peoples (2011)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Truth and Reconciliation Commission of Canada. Honouring the Truth, Reconciling for the Future (2015)",
+        "source_type": "primary",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "République d'Haïti",
+    "name_original_lang": "fr",
+    "entity_type": "republic",
+    "year_start": 1804,
+    "year_end": null,
+    "capital_name": "Port-au-Prince",
+    "capital_lat": 18.541,
+    "capital_lon": -72.336,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-73.4, 19.9],
+          [-73.0, 20.0],
+          [-72.5, 19.9],
+          [-72.0, 19.8],
+          [-71.8, 19.7],
+          [-71.6, 19.4],
+          [-71.7, 19.1],
+          [-71.8, 18.7],
+          [-72.0, 18.4],
+          [-72.3, 18.2],
+          [-72.6, 18.0],
+          [-73.0, 18.0],
+          [-73.5, 18.2],
+          [-73.8, 18.5],
+          [-74.0, 18.7],
+          [-74.2, 19.0],
+          [-74.3, 19.3],
+          [-74.2, 19.5],
+          [-74.0, 19.7],
+          [-73.4, 19.9]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: 'Ayiti' e' il nome taino originale dell'isola — significava 'terra montuosa'. Haiti e' la prima repubblica nera indipendente e il secondo stato indipendente delle Americhe. ETHICS-003: la rivoluzione haitiana (1791-1804) fu l'unica rivolta di schiavi nella storia a creare uno stato indipendente. La Francia impose ad Haiti un debito di 150 milioni di franchi come 'risarcimento' ai proprietari di schiavi — Haiti fini' di pagarlo solo nel 1947. Questo debito odioso e' considerato una causa fondamentale della poverta' haitiana. Gli USA occuparono Haiti dal 1915 al 1934.",
+    "name_variants": [
+      {
+        "name": "Repiblik d Ayiti",
+        "lang": "ht",
+        "period_start": null,
+        "period_end": null,
+        "context": "nome ufficiale in creolo haitiano (co-lingua ufficiale dal 1987)",
+        "source": "Dubois, L. Haiti: The Aftershocks of History (2012)"
+      },
+      {
+        "name": "Republic of Haiti",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "traduzione inglese",
+        "source": "James, C.L.R. The Black Jacobins (1938)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1804,
+        "region": "Hispaniola occidentale",
+        "change_type": "REVOLUTION",
+        "description": "Dichiarazione di indipendenza dopo 13 anni di rivoluzione degli schiavi. Jean-Jacques Dessalines proclama Haiti — primo stato indipendente fondato da ex-schiavi. La Francia, la Gran Bretagna e gli USA rifiutarono di riconoscere Haiti per decenni.",
+        "population_affected": 500000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1825,
+        "region": "Haiti",
+        "change_type": "CESSION_FORCED",
+        "description": "La Francia riconosce Haiti solo in cambio di 150 milioni di franchi (poi ridotti a 90 milioni) come 'indennita'' ai proprietari di schiavi. Haiti dovette indebitarsi con banche francesi per pagare — debito estinto solo nel 1947. E' considerato il debito piu' odioso della storia.",
+        "population_affected": 700000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "James, C.L.R. The Black Jacobins: Toussaint L'Ouverture and the San Domingo Revolution (1938)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Dubois, L. Haiti: The Aftershocks of History (2012)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Capitanía General de Cuba",
+    "name_original_lang": "es",
+    "entity_type": "colony",
+    "year_start": 1510,
+    "year_end": 1898,
+    "capital_name": "La Habana",
+    "capital_lat": 23.113,
+    "capital_lon": -82.367,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-85.0, 23.2],
+          [-84.5, 23.5],
+          [-84.0, 23.3],
+          [-83.0, 23.1],
+          [-82.0, 23.2],
+          [-81.0, 23.0],
+          [-80.0, 22.8],
+          [-79.0, 22.5],
+          [-78.0, 22.2],
+          [-77.0, 21.8],
+          [-76.0, 20.5],
+          [-75.0, 20.0],
+          [-74.5, 20.0],
+          [-75.0, 20.5],
+          [-76.0, 21.0],
+          [-77.0, 21.5],
+          [-78.0, 21.8],
+          [-79.0, 22.0],
+          [-80.0, 22.2],
+          [-81.0, 22.4],
+          [-82.0, 22.6],
+          [-83.0, 22.5],
+          [-84.0, 22.8],
+          [-85.0, 23.2]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-002: Cuba fu una delle ultime colonie spagnole nelle Americhe. ETHICS-003: la popolazione taino di Cuba fu annientata — da circa 100.000 nel 1510 a quasi zero entro il 1550. La schiavitu' fu abolita a Cuba solo nel 1886. L'economia delle piantagioni di zucchero dipendeva interamente dal lavoro schiavile. Le guerre d'indipendenza cubane (1868-1878, 1895-1898) costarono centinaia di migliaia di vite. La politica spagnola di 'reconcentración' del generale Weyler (1896) prefiguro' i campi di concentramento del XX secolo.",
+    "name_variants": [
+      {
+        "name": "Colonial Cuba",
+        "lang": "en",
+        "period_start": 1510,
+        "period_end": 1898,
+        "context": "denominazione generica inglese per il periodo coloniale",
+        "source": "Thomas, H. Cuba: The Pursuit of Freedom (1971)"
+      },
+      {
+        "name": "Cuba española",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione storiografica informale",
+        "source": "Pérez, L.A. Cuba: Between Reform and Revolution (2006)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1510,
+        "region": "Cuba",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Diego Velázquez de Cuéllar conquista Cuba. Il cacique taino Hatuey, rifugiatosi da Hispaniola, fu catturato e bruciato vivo. Distruzione completa della popolazione taino cubana entro pochi decenni.",
+        "population_affected": 100000,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1898,
+        "region": "Cuba",
+        "change_type": "LIBERATION",
+        "description": "Trattato di Parigi: la Spagna cede Cuba agli USA dopo la guerra ispano-americana. Cuba ottiene un'indipendenza condizionata — l'Emendamento Platt (1901) diede agli USA il diritto di intervento fino al 1934.",
+        "population_affected": 1500000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Thomas, H. Cuba: The Pursuit of Freedom (1971)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Pérez, L.A. Cuba: Between Reform and Revolution (2006)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Confederate States of America",
+    "name_original_lang": "en",
+    "entity_type": "confederation",
+    "year_start": 1861,
+    "year_end": 1865,
+    "capital_name": "Richmond",
+    "capital_lat": 37.541,
+    "capital_lon": -77.434,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-77.0, 38.5],
+          [-76.0, 37.0],
+          [-76.0, 35.5],
+          [-78.0, 34.0],
+          [-79.5, 33.0],
+          [-80.0, 32.0],
+          [-81.0, 31.0],
+          [-82.0, 30.0],
+          [-83.0, 29.5],
+          [-85.0, 29.0],
+          [-87.0, 30.0],
+          [-88.5, 30.0],
+          [-89.5, 29.0],
+          [-91.0, 29.0],
+          [-93.0, 29.5],
+          [-94.0, 30.0],
+          [-94.5, 31.0],
+          [-94.5, 33.5],
+          [-94.0, 36.5],
+          [-92.0, 36.5],
+          [-90.0, 36.5],
+          [-88.0, 36.5],
+          [-86.0, 36.5],
+          [-84.0, 36.5],
+          [-82.0, 37.0],
+          [-80.0, 38.0],
+          [-77.0, 38.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: la Confederazione fu fondata esplicitamente per preservare la schiavitu'. Il vicepresidente Alexander Stephens nel suo 'Cornerstone Speech' (1861) dichiaro' che il governo confederato si fondava 'sulla grande verita' che il negro non e' uguale all'uomo bianco; che la schiavitu' — la subordinazione alla razza superiore — e' la sua condizione naturale e normale'. ETHICS-003: qualsiasi rappresentazione della Confederazione che ometta la centralita' della schiavitu' nella sua fondazione e' storicamente disonesta. La narrativa della 'Lost Cause' e' una distorsione revisionista.",
+    "name_variants": [
+      {
+        "name": "The Confederacy",
+        "lang": "en",
+        "period_start": 1861,
+        "period_end": 1865,
+        "context": "abbreviazione comune — usata sia durante che dopo la guerra civile",
+        "source": "McPherson, J.M. Battle Cry of Freedom (1988)"
+      },
+      {
+        "name": "Estados Confederados de América",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "denominazione spagnola",
+        "source": "Davis, W.C. Look Away! A History of the Confederate States of America (2002)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1861,
+        "region": "Stati Uniti meridionali",
+        "change_type": "SECESSION",
+        "description": "Secessione di 11 stati dall'Unione. Motivazione dichiarata: preservare la schiavitu' e la supremazia bianca. La Costituzione confederata proteggeva esplicitamente la schiavitu' come istituzione perpetua.",
+        "population_affected": 9000000,
+        "confidence_score": 0.95
+      },
+      {
+        "year": 1865,
+        "region": "Stati Confederati",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Resa del generale Lee ad Appomattox. Fine della Confederazione. La guerra civile costo' circa 620.000-750.000 morti. Il XIII Emendamento abolisce la schiavitu'.",
+        "population_affected": 9000000,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "McPherson, J.M. Battle Cry of Freedom: The Civil War Era (1988)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Davis, W.C. Look Away! A History of the Confederate States of America (2002)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Stephens, A.H. Cornerstone Speech, Savannah, Georgia (1861)",
+        "source_type": "primary",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Virreinato de Nueva Granada",
+    "name_original_lang": "es",
+    "entity_type": "colony",
+    "year_start": 1717,
+    "year_end": 1819,
+    "capital_name": "Santafé de Bogotá",
+    "capital_lat": 4.711,
+    "capital_lon": -74.072,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [-79.0, 12.5],
+          [-77.0, 12.0],
+          [-75.0, 11.5],
+          [-73.0, 12.0],
+          [-72.0, 11.5],
+          [-71.0, 10.5],
+          [-70.0, 9.0],
+          [-68.0, 7.0],
+          [-67.0, 5.0],
+          [-67.0, 3.0],
+          [-68.0, 1.0],
+          [-70.0, -1.0],
+          [-73.0, -2.0],
+          [-75.0, -1.5],
+          [-77.0, 0.0],
+          [-78.5, 1.0],
+          [-79.0, 2.0],
+          [-78.0, 4.0],
+          [-77.5, 6.0],
+          [-77.0, 8.0],
+          [-78.0, 9.0],
+          [-79.0, 9.5],
+          [-80.0, 10.0],
+          [-79.5, 11.0],
+          [-79.0, 12.5]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-002: il Virreinato di Nueva Granada fu creato nel 1717, sciolto nel 1723, e ricreato definitivamente nel 1739. Comprendeva i territori attuali di Colombia, Venezuela, Ecuador e Panama. I popoli indigeni (Muisca, Wayuu, Pasto, Embera e molti altri) subirono progressiva marginalizzazione sotto il sistema coloniale. Il sistema delle castas regolava rigidamente la gerarchia razziale. La rivolta dei Comuneros (1781) fu una delle prime insurrezioni anti-coloniali nelle Americhe.",
+    "name_variants": [
+      {
+        "name": "Viceroyalty of New Granada",
+        "lang": "en",
+        "period_start": 1717,
+        "period_end": 1819,
+        "context": "traduzione inglese del nome ufficiale",
+        "source": "McFarlane, A. Colombia Before Independence (1993)"
+      },
+      {
+        "name": "Nuevo Reino de Granada",
+        "lang": "es",
+        "period_start": 1538,
+        "period_end": 1717,
+        "context": "nome precedente alla creazione del virreinato — designava il territorio dal XVI secolo",
+        "source": "Kuethe, A.J. Military Reform and Society in New Granada, 1773-1808 (1978)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1717,
+        "region": "Colombia, Venezuela, Ecuador, Panama",
+        "change_type": "PARTITION",
+        "description": "Creazione del Virreinato di Nueva Granada per scorporo dal Virreinato del Peru'. Bogota' diventa capitale. Obiettivo: migliore controllo amministrativo e difesa contro la pirateria.",
+        "population_affected": 800000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1819,
+        "region": "Nueva Granada",
+        "change_type": "LIBERATION",
+        "description": "Battaglia di Boyaca': Simon Bolivar sconfigge gli spagnoli. Fine del dominio coloniale. I territori diventeranno la Gran Colombia.",
+        "population_affected": 1800000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "McFarlane, A. Colombia Before Independence: Economy, Society, and Politics under Bourbon Rule (1993)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Kuethe, A.J. Military Reform and Society in New Granada, 1773-1808 (1978)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  }
+]
