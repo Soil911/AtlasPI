@@ -25,7 +25,19 @@ let allEntities = [];
 let detailCache = {};
 let debounceTimer = null;
 let activeType = '';
+let activeContinent = '';
 let selectedCardIndex = -1;
+
+const CONTINENT_ICONS = {
+  'Europe': '🇪🇺',
+  'Asia': '🌏',
+  'Africa': '🌍',
+  'Americas': '🌎',
+  'Middle East': '🕌',
+  'Oceania': '🏝️',
+  'Unknown': '❓',
+  'Other': '🌐',
+};
 
 // ─── Init ───────────────────────────────────────────────────────
 
@@ -33,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMap();
   loadEntities().then(() => restoreUrlState());
   loadTypes();
+  loadContinents();
   loadStats();
   loadTimeline();
   bindEvents();
@@ -57,6 +70,7 @@ function getUrlState() {
     year: params.get('year') ? parseInt(params.get('year'), 10) : null,
     search: params.get('q') || null,
     type: params.get('type') || null,
+    continent: params.get('continent') || null,
     lang: params.get('lang') || null,
   };
 }
@@ -69,6 +83,7 @@ function pushUrlState(opts = {}) {
   if (year !== 1500) params.set('year', year);
   if (search) params.set('q', search);
   if (activeType) params.set('type', activeType);
+  if (activeContinent) params.set('continent', activeContinent);
   if (opts.entity) params.set('entity', opts.entity);
   if (lang !== 'it') params.set('lang', lang);
 
@@ -111,6 +126,14 @@ function restoreUrlState() {
     activeType = state.type;
     document.querySelectorAll('#type-chips .chip').forEach(c => {
       c.classList.toggle('active', c.dataset.type === activeType);
+    });
+    changed = true;
+  }
+
+  if (state.continent) {
+    activeContinent = state.continent;
+    document.querySelectorAll('#continent-chips .chip').forEach(c => {
+      c.classList.toggle('active', c.dataset.continent === activeContinent);
     });
     changed = true;
   }
@@ -185,6 +208,30 @@ async function loadTypes() {
   } catch (_) {}
 }
 
+async function loadContinents() {
+  try {
+    const res = await fetch(`${API}/v1/continents`);
+    if (!res.ok) return;
+    const continents = await res.json();
+    const container = document.getElementById('continent-chips');
+    container.innerHTML = `<button class="chip active" data-continent="">${t('all')}</button>` +
+      continents.map(c => {
+        const icon = CONTINENT_ICONS[c.continent] || '🌐';
+        return `<button class="chip" data-continent="${esc(c.continent)}">${icon} ${esc(c.continent)} (${c.count})</button>`;
+      }).join('');
+
+    container.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        container.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        activeContinent = chip.dataset.continent;
+        applyFilters();
+        pushUrlState();
+      });
+    });
+  } catch (_) {}
+}
+
 async function loadStats() {
   try {
     const res = await fetch(`${API}/v1/stats`);
@@ -218,6 +265,7 @@ function applyFilters() {
     if (e.year_start > year) return false;
     if (e.year_end !== null && e.year_end < year) return false;
     if (activeType && e.entity_type !== activeType) return false;
+    if (activeContinent && e.continent !== activeContinent) return false;
     if (search) {
       const inOrig = e.name_original.toLowerCase().includes(search);
       const inVar = (e.name_variants || []).some(v => v.name.toLowerCase().includes(search));
@@ -645,9 +693,13 @@ function bindEvents() {
     document.querySelectorAll('.checkbox-group input').forEach(cb => { cb.checked = true; });
     document.getElementById('sort-select').value = '';
     activeType = '';
+    activeContinent = '';
     document.querySelectorAll('#type-chips .chip').forEach(c => c.classList.remove('active'));
     const allChip = document.querySelector('#type-chips .chip[data-type=""]');
     if (allChip) allChip.classList.add('active');
+    document.querySelectorAll('#continent-chips .chip').forEach(c => c.classList.remove('active'));
+    const allContChip = document.querySelector('#continent-chips .chip[data-continent=""]');
+    if (allContChip) allContChip.classList.add('active');
     applyFilters();
     closeDetail();
     pushUrlState();

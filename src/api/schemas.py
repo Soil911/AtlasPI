@@ -59,6 +59,7 @@ class EntityResponse(BaseModel):
     territory_changes: list[TerritoryChangeResponse] = Field(default_factory=list, description="Cambi territoriali (ETHICS-002)")
     sources: list[SourceResponse] = Field(default_factory=list, description="Fonti bibliografiche")
     ethical_notes: str | None = Field(None, description="Note sulla governance etica del dato")
+    continent: str | None = Field(None, description="Continente derivato dalle coordinate della capitale")
 
     model_config = {
         "from_attributes": True,

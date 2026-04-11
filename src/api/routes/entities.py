@@ -6,6 +6,7 @@ GET /v1/entities/{id}                                           dettaglio entit�
 GET /v1/search?q=...                                            autocomplete
 GET /v1/types                                                   tipi disponibili
 GET /v1/stats                                                   statistiche dataset
+GET /v1/continents                                              continenti disponibili
 """
 
 import json
@@ -35,6 +36,54 @@ StatusFilter = Literal["confirmed", "uncertain", "disputed"] | None
 SortField = Literal["name", "year_start", "confidence", "year_end"] | None
 
 
+# ─── Continente da coordinate ────────────────────────────────────
+
+def _get_continent(lat: float | None, lon: float | None) -> str:
+    """Determina il continente dalla posizione della capitale.
+
+    ETHICS: il mapping è un'approssimazione geografica, non una
+    dichiarazione politica. Le entità trans-continentali (es. Impero
+    Romano, Ottomano) vengono assegnate al continente della capitale.
+    """
+    if lat is None or lon is None:
+        return "Unknown"
+
+    # Middle East special case (politicamente Asia ma spesso trattato a parte)
+    if 25 <= lat <= 42 and 25 <= lon <= 50:
+        return "Middle East"
+
+    # Africa
+    if lat < 37 and -20 <= lon <= 55 and lat < (37 - (lon - 10) * 0.05 if lon > 10 else 37):
+        if lat < 35:
+            return "Africa"
+
+    # Europe
+    if 35 <= lat <= 72 and -25 <= lon <= 40:
+        return "Europe"
+
+    # Asia (including Far East, Central, South, Southeast)
+    if -15 <= lat <= 75 and 40 <= lon <= 180:
+        return "Asia"
+
+    # North America
+    if 7 <= lat <= 85 and -170 <= lon <= -50:
+        return "Americas"
+
+    # South America
+    if -60 <= lat <= 15 and -85 <= lon <= -30:
+        return "Americas"
+
+    # Oceania
+    if -50 <= lat <= 0 and 100 <= lon <= 180:
+        return "Oceania"
+
+    # Africa fallback
+    if -40 <= lat <= 37 and -20 <= lon <= 55:
+        return "Africa"
+
+    return "Other"
+
+
 # ─── Schema aggiuntivi ──────────────────────────────────────────
 
 class SearchResult(BaseModel):
@@ -46,6 +95,7 @@ class SearchResult(BaseModel):
     year_end: int | None
     status: str
     confidence_score: float
+    continent: str | None = None
 
 
 class SearchResponse(BaseModel):
@@ -58,6 +108,11 @@ class TypeInfo(BaseModel):
     count: int
 
 
+class ContinentInfo(BaseModel):
+    continent: str
+    count: int
+
+
 class StatsResponse(BaseModel):
     total_entities: int
     types: list[TypeInfo]
@@ -67,6 +122,7 @@ class StatsResponse(BaseModel):
     total_sources: int
     total_territory_changes: int
     disputed_count: int
+    continents: list[ContinentInfo] = []
 
 
 # ─── Conversione ─────────────────────────────────────────────────
@@ -88,6 +144,8 @@ def _entity_to_response(entity: GeoEntity) -> EntityResponse:
         except (json.JSONDecodeError, TypeError):
             logger.warning("GeoJSON malformato per entità %d", entity.id)
 
+    continent = _get_continent(entity.capital_lat, entity.capital_lon)
+
     return EntityResponse(
         id=entity.id,
         entity_type=entity.entity_type,
@@ -103,6 +161,7 @@ def _entity_to_response(entity: GeoEntity) -> EntityResponse:
         territory_changes=entity.territory_changes,
         sources=entity.sources,
         ethical_notes=entity.ethical_notes,
+        continent=continent,
     )
 
 
@@ -145,6 +204,7 @@ def query_entity(
     year: int | None = Query(None, ge=-4000, le=2100, description="Anno di riferimento (negativo = a.C.)"),
     status: StatusFilter = Query(None, description="Filtra per status"),
     type: str | None = Query(None, max_length=50, description="Filtra per entity_type (empire, kingdom, city, etc.)"),
+    continent: str | None = Query(None, max_length=50, description="Filtra per continente (Europe, Asia, Africa, Americas, Middle East, Oceania)"),
     sort: SortField = Query(None, description="Ordina per: name, year_start, confidence, year_end"),
     order: Literal["asc", "desc"] = Query("asc", description="Direzione ordinamento"),
     limit: int = Query(20, ge=1, le=100, description="Risultati per pagina"),
@@ -177,6 +237,11 @@ def query_entity(
     q = _apply_sort(q, sort, order)
     results = q.offset(offset).limit(limit).all()
     entities = [_entity_to_response(e) for e in results]
+
+    # Filtra per continente post-query (calcolato da coordinate)
+    if continent:
+        entities = [e for e in entities if e.continent and e.continent.lower() == continent.lower()]
+        total = len(entities)
 
     response.headers["Cache-Control"] = "public, max-age=3600"
     return PaginatedEntityResponse(count=total, limit=limit, offset=offset, entities=entities)
@@ -273,6 +338,25 @@ def list_types(db: Session = Depends(get_db)):
 
 
 @router.get(
+    "/v1/continents",
+    response_model=list[ContinentInfo],
+    summary="Elenco continenti con conteggio entità",
+    description="Restituisce i continenti disponibili calcolati dalle coordinate delle capitali.",
+)
+def list_continents(db: Session = Depends(get_db)):
+    entities = db.query(GeoEntity).all()
+    counts: dict[str, int] = {}
+    for e in entities:
+        c = _get_continent(e.capital_lat, e.capital_lon)
+        counts[c] = counts.get(c, 0) + 1
+    return sorted(
+        [ContinentInfo(continent=c, count=n) for c, n in counts.items()],
+        key=lambda x: x.count,
+        reverse=True,
+    )
+
+
+@router.get(
     "/v1/stats",
     response_model=StatsResponse,
     summary="Statistiche del dataset",
@@ -300,6 +384,13 @@ def dataset_stats(response: Response, db: Session = Depends(get_db)):
     total_changes = db.query(TerritoryChange).count()
     disputed = db.query(GeoEntity).filter(GeoEntity.status == "disputed").count()
 
+    # Continenti
+    all_entities = db.query(GeoEntity).all()
+    continent_counts: dict[str, int] = {}
+    for ent in all_entities:
+        c = _get_continent(ent.capital_lat, ent.capital_lon)
+        continent_counts[c] = continent_counts.get(c, 0) + 1
+
     response.headers["Cache-Control"] = "public, max-age=3600"
 
     return StatsResponse(
@@ -311,4 +402,8 @@ def dataset_stats(response: Response, db: Session = Depends(get_db)):
         total_sources=total_sources,
         total_territory_changes=total_changes,
         disputed_count=disputed,
+        continents=sorted(
+            [ContinentInfo(continent=c, count=n) for c, n in continent_counts.items()],
+            key=lambda x: x.count, reverse=True,
+        ),
     )
