@@ -1364,6 +1364,455 @@ kbd {
 
 .map-scroll-hint.visible { opacity: 1; }
 
+/* ─── v5.6: Search autocomplete dropdown ──────────────────── */
+
+.search-box {
+  position: relative;
+}
+
+.autocomplete-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg-sidebar);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  max-height: 320px;
+  overflow-y: auto;
+  z-index: 500;
+  box-shadow: 0 8px 24px var(--shadow);
+  display: none;
+}
+
+.autocomplete-dropdown.visible { display: block; }
+
+.autocomplete-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.12s;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.autocomplete-item:hover,
+.autocomplete-item.ac-active {
+  background: var(--bg-card-hover);
+}
+
+.autocomplete-item .ac-icon {
+  font-size: 1em;
+  flex-shrink: 0;
+}
+
+.autocomplete-item .ac-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.autocomplete-item .ac-name {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.autocomplete-item .ac-name mark {
+  background: rgba(88,166,255,0.25);
+  color: var(--accent);
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+.autocomplete-item .ac-meta {
+  font-size: 0.7em;
+  color: var(--text-muted);
+}
+
+.autocomplete-item .ac-score {
+  flex-shrink: 0;
+  font-size: 0.68em;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  padding: 2px 6px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.autocomplete-hint {
+  padding: 6px 12px;
+  font-size: 0.68em;
+  color: var(--text-muted);
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+/* ─── v5.6: Stats dashboard ──────────────────────────────────── */
+
+.stats-dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.stat-card .stat-number {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--accent);
+  display: block;
+}
+
+.stat-card .stat-label {
+  font-size: 0.68em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ─── v5.6: Improved mobile ──────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .autocomplete-dropdown {
+    max-height: 250px;
+  }
+
+  .autocomplete-item {
+    padding: 10px 12px;
+    min-height: 44px;
+  }
+
+  .compare-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-dashboard {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    padding: 8px 10px;
+  }
+}
+
+/* ─── v5.6: Nearby entities indicator ─────────────────────────── */
+
+.nearby-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 6px;
+  background: rgba(88,166,255,0.1);
+  border: 1px solid rgba(88,166,255,0.2);
+  border-radius: 4px;
+  font-size: 0.68em;
+  color: var(--accent);
+}
+
+/* ─── v5.6: Entity card hover enhancements ─────────────────── */
+
+.result-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.result-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 3px;
+  background: transparent;
+  transition: background 0.15s;
+}
+
+.result-card:hover::after {
+  background: var(--accent);
+}
+
+/* ─── v5.6: Map year badge ────────────────────────────────────── */
+
+.map-year-badge {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(22,27,34,0.92);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 0.78em;
+  color: var(--text-muted);
+  z-index: 10;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.map-year-badge .year-value {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.map-year-badge .entity-count {
+  color: var(--confirmed);
+  font-weight: 600;
+}
+
+/* ─── v5.6: Loading progress bar ──────────────────────────────── */
+
+.loading-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  z-index: 9999;
+  transition: width 0.3s ease;
+}
+
+/* ─── v5.7: Capital markers on map ──────────────────────────── */
+
+.capital-marker {
+  transition: r 0.2s ease;
+}
+
+.capital-label {
+  transition: opacity 0.2s;
+}
+
+/* ─── v5.7: Map cluster density indicator ──────────────────── */
+
+.map-density-legend {
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+  background: rgba(22,27,34,0.85);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 0.72em;
+  color: var(--text-muted);
+  z-index: 5;
+  backdrop-filter: blur(4px);
+}
+
+/* ─── v5.7: Improved result cards ──────────────────────────── */
+
+.result-card .capital-info {
+  font-size: 0.72em;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.result-card .capital-info::before {
+  content: '📍 ';
+}
+
+/* ─── v5.7: Stats dashboard cards ──────────────────────────── */
+
+.stats-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  padding: 8px 12px;
+  font-size: 0.78em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.stat-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-value {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* ─── v5.7: Entity detail panel improvements ───────────────── */
+
+.detail-section[data-section="info"] .info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 12px;
+}
+
+.detail-section .info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.detail-section .info-label {
+  font-size: 0.72em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.detail-section .info-value {
+  font-weight: 500;
+}
+
+/* ─── v5.7: Timeline improvements ──────────────────────────── */
+
+.timeline-bar .timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 12px;
+}
+
+.timeline-bar .timeline-export {
+  display: flex;
+  gap: 8px;
+}
+
+.export-btn {
+  font-size: 0.72em;
+  padding: 2px 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.export-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(88,166,255,0.08);
+}
+
+/* ─── v5.7: Smooth hover animations ───────────────────────── */
+
+.result-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.result-card:hover {
+  transform: translateX(2px);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.chip {
+  transition: all 0.15s ease;
+}
+
+.chip:hover:not(.active) {
+  background: var(--bg-card-hover);
+  transform: translateY(-1px);
+}
+
+/* ─── v5.7: Welcome/empty state ───────────────────────────── */
+
+.map-info-overlay {
+  text-align: center;
+  max-width: 280px;
+  line-height: 1.5;
+}
+
+/* ─── v5.7: Source type colors ────────────────────────────── */
+
+.source-type-tag {
+  font-size: 0.68em;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: rgba(88,166,255,0.1);
+  color: var(--accent);
+  margin-left: 4px;
+}
+
+.source-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(48,54,61,0.3);
+}
+
+.source-item:last-child {
+  border-bottom: none;
+}
+
+.source-icon {
+  flex-shrink: 0;
+  font-size: 1.1em;
+}
+
+.source-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.source-citation {
+  font-size: 0.82em;
+  line-height: 1.4;
+}
+
+/* ─── v5.7: Scrollbar styling ─────────────────────────────── */
+
+#sidebar::-webkit-scrollbar,
+#results-list::-webkit-scrollbar,
+.detail-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+#sidebar::-webkit-scrollbar-track,
+#results-list::-webkit-scrollbar-track,
+.detail-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#sidebar::-webkit-scrollbar-thumb,
+#results-list::-webkit-scrollbar-thumb,
+.detail-panel::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+#sidebar::-webkit-scrollbar-thumb:hover,
+#results-list::-webkit-scrollbar-thumb:hover,
+.detail-panel::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* ─── v5.7: Focus visible for keyboard nav ─────────────────── */
+
+.result-card:focus-visible,
+.chip:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.collapsible:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-radius: 3px;
+}
+
 /* Print */
 @media print {
   #sidebar, footer, .sidebar-toggle, .map-info-overlay, .timeline-bar,

@@ -1,147 +1,5 @@
 [
   {
-    "name_original": "Jolof",
-    "name_original_lang": "wo",
-    "entity_type": "empire",
-    "year_start": 1350,
-    "year_end": 1549,
-    "capital_name": "Linguere",
-    "capital_lat": 15.39,
-    "capital_lon": -15.11,
-    "confidence_score": 0.55,
-    "status": "uncertain",
-    "boundary_geojson": {
-      "type": "Polygon",
-      "coordinates": [[
-        [-17.0, 13.5], [-16.5, 13.8], [-16.0, 14.2], [-15.5, 14.8],
-        [-15.0, 15.3], [-14.5, 15.8], [-14.0, 16.0], [-13.5, 16.0],
-        [-13.5, 15.5], [-14.0, 15.0], [-14.5, 14.5], [-15.0, 14.0],
-        [-15.5, 13.5], [-16.0, 13.2], [-16.5, 13.2], [-17.0, 13.5]
-      ]]
-    },
-    "ethical_notes": "The Wolof Empire (self-designation Jolof) was a confederation of Wolof states in present-day Senegal. Western sources often understate its political sophistication. The empire's decline coincided with increasing Portuguese maritime trade along the coast, which shifted economic power to coastal vassal states (Kayor, Waalo, Baol) at the expense of the inland center. The Atlantic slave trade played a central role in destabilizing the polity. Oral traditions (preserved by griots) remain the primary indigenous source but have been systematically undervalued by colonial scholarship. Confidence score reflects reliance on oral tradition and sparse archaeological evidence.",
-    "name_variants": [
-      {"name": "Wolof Empire", "lang": "en", "period_start": 1350, "period_end": 1549, "context": "English academic designation, using the ethnic group's name rather than the polity's own name", "source": "Barry, Boubacar. Senegambia and the Atlantic Slave Trade (1998)"},
-      {"name": "Empire du Djolof", "lang": "fr", "period_start": 1350, "period_end": 1549, "context": "French colonial designation", "source": "Monteil, Vincent. Esquisses senegalesies (1966)"},
-      {"name": "Jolof", "lang": "wo", "period_start": 1350, "period_end": 1549, "context": "Wolof-language self-designation of the polity", "source": "Searing, James F. West African Slavery and Atlantic Commerce (1993)"}
-    ],
-    "territory_changes": [
-      {"year": 1549, "region": "Senegambia", "change_type": "SECESSION", "description": "Battle of Danki. The coastal vassal state of Kayor, under Amari Ngoone Sobel Fall, defeated the Jolof army and declared independence. This fragmented the empire into independent Wolof kingdoms (Kayor, Waalo, Baol, Sine, Saloum). Portuguese coastal trade had shifted the balance of power to littoral states.", "population_affected": null, "confidence_score": 0.6},
-      {"year": 1890, "region": "Senegambia", "change_type": "COLONIZATION", "description": "French colonial conquest absorbed the successor Wolof kingdoms. The last Jolof buurba (king) was deposed. The Wolof political system was dismantled and replaced by French colonial administration.", "population_affected": null, "confidence_score": 0.85}
-    ],
-    "sources": [
-      {"citation": "Barry, Boubacar. Senegambia and the Atlantic Slave Trade. Cambridge University Press, 1998", "source_type": "academic", "url": null},
-      {"citation": "Searing, James F. West African Slavery and Atlantic Commerce: The Senegal River Valley, 1700-1860. Cambridge University Press, 1993", "source_type": "academic", "url": null},
-      {"citation": "Cadamosto, Alvise. The Voyages of Cadamosto and Other Documents on Western Africa in the Second Half of the Fifteenth Century. Hakluyt Society, 1937 (orig. c.1460)", "source_type": "primary", "url": null}
-    ]
-  },
-  {
-    "name_original": "Jolof",
-    "name_original_lang": "wo",
-    "entity_type": "kingdom",
-    "year_start": 1350,
-    "year_end": 1890,
-    "capital_name": "Linguere",
-    "capital_lat": 15.39,
-    "capital_lon": -15.11,
-    "confidence_score": 0.55,
-    "status": "uncertain",
-    "boundary_geojson": {
-      "type": "Polygon",
-      "coordinates": [[
-        [-15.8, 14.5], [-15.5, 14.8], [-15.0, 15.2], [-14.7, 15.5],
-        [-14.5, 15.7], [-14.3, 15.5], [-14.5, 15.0], [-14.8, 14.6],
-        [-15.2, 14.3], [-15.5, 14.2], [-15.8, 14.5]
-      ]]
-    },
-    "ethical_notes": "After the fragmentation of the Jolof Empire in 1549, the rump Jolof kingdom continued as an inland state, reduced in power and territory compared to the coastal Wolof states. The kingdom persisted until French colonial conquest in the late 19th century. Griots maintain the memory of the Buurba Jolof lineage. French colonizers deliberately exploited rivalries among successor Wolof states. This entity represents the post-1549 continuation, distinct from the earlier empire phase.",
-    "name_variants": [
-      {"name": "Kingdom of Jolof", "lang": "en", "period_start": 1350, "period_end": 1890, "context": "English designation for the rump state after empire fragmentation", "source": "Clark, Andrew F. and Lucie Colvin Phillips. Historical Dictionary of Senegal (1994)"},
-      {"name": "Royaume du Djolof", "lang": "fr", "period_start": 1350, "period_end": 1890, "context": "French colonial designation", "source": "Monteil, Vincent. Esquisses senegalesies (1966)"}
-    ],
-    "territory_changes": [
-      {"year": 1549, "region": "Interior Senegambia", "change_type": "FRAGMENTATION", "description": "After the Battle of Danki, the Jolof empire fragmented. The rump Jolof kingdom retained only the inland core territory, losing the wealthy coastal vassal states.", "population_affected": null, "confidence_score": 0.6},
-      {"year": 1890, "region": "Jolof territory", "change_type": "COLONIZATION", "description": "French forces absorbed Jolof into colonial Senegal. The buurba's authority was abolished. The territory was administered as part of French West Africa.", "population_affected": null, "confidence_score": 0.85}
-    ],
-    "sources": [
-      {"citation": "Clark, Andrew F. and Lucie Colvin Phillips. Historical Dictionary of Senegal. 2nd ed. Metuchen, NJ: Scarecrow Press, 1994", "source_type": "academic", "url": null},
-      {"citation": "Diouf, Mamadou. Le Kajoor au XIXe siecle: Pouvoir ceddo et conquete coloniale. Paris: Karthala, 1990", "source_type": "academic", "url": null}
-    ]
-  },
-  {
-    "name_original": "Kaabu",
-    "name_original_lang": "ff",
-    "entity_type": "kingdom",
-    "year_start": 1537,
-    "year_end": 1867,
-    "capital_name": "Kansala",
-    "capital_lat": 12.25,
-    "capital_lon": -13.85,
-    "confidence_score": 0.5,
-    "status": "uncertain",
-    "boundary_geojson": {
-      "type": "Polygon",
-      "coordinates": [[
-        [-16.0, 11.5], [-15.5, 11.8], [-15.0, 12.0], [-14.5, 12.3],
-        [-14.0, 12.5], [-13.5, 12.8], [-13.0, 13.0], [-13.0, 12.5],
-        [-13.2, 12.0], [-13.5, 11.5], [-14.0, 11.2], [-14.5, 11.0],
-        [-15.0, 11.0], [-15.5, 11.2], [-16.0, 11.5]
-      ]]
-    },
-    "ethical_notes": "Kaabu was a Mandinka kingdom that emerged as a successor state to the Mali Empire in the Senegambia region. It was a major center of the Atlantic slave trade, with its ruling nyanthio class conducting raids against neighboring peoples. The kingdom was destroyed by an Islamic jihad led by Fula forces under Alpha Molo in 1867 at the Battle of Kansala, where the last king reportedly detonated the powder magazine rather than surrender. Portuguese colonial presence along the coast (in what became Portuguese Guinea/Guinea-Bissau) complicated and exacerbated regional conflicts. Oral traditions preserved by Mandinka griots are the primary indigenous source. Confidence is low due to limited written records.",
-    "name_variants": [
-      {"name": "Kingdom of Kaabu", "lang": "en", "period_start": 1537, "period_end": 1867, "context": "English academic designation", "source": "Lopes, Carlos. Kaabunke: Espaco, territorio e poder na Guine-Bissau, Gambia e Casamance pre-coloniais (1999)"},
-      {"name": "Gabu", "lang": "pt", "period_start": 1537, "period_end": 1867, "context": "Portuguese colonial designation", "source": "Teixeira da Mota, Avelino. Guinea Portuguesa (1954)"},
-      {"name": "Royaume de Kaabu", "lang": "fr", "period_start": 1537, "period_end": 1867, "context": "French designation", "source": "Niane, Djibril Tamsir. Histoire des Mandingues de l'Ouest (1989)"}
-    ],
-    "territory_changes": [
-      {"year": 1537, "region": "Senegambia", "change_type": "SECESSION", "description": "Kaabu became effectively independent from the declining Mali Empire, though it continued to acknowledge nominal Mali suzerainty. The Mandinka nyanthio warrior aristocracy established full autonomous control.", "population_affected": null, "confidence_score": 0.45},
-      {"year": 1867, "region": "Kansala", "change_type": "CONQUEST_MILITARY", "description": "Battle of Kansala. Fula forces under Alpha Molo, conducting an Islamic jihad, destroyed Kansala. The last king, Janke Waali, reportedly blew up the fortress rather than surrender. The Mandinka political system was destroyed and Fula hegemony established.", "population_affected": null, "confidence_score": 0.55}
-    ],
-    "sources": [
-      {"citation": "Lopes, Carlos. Kaabunke: Espaco, territorio e poder na Guine-Bissau, Gambia e Casamance pre-coloniais. Lisbon: Comissao Nacional para as Comemoracoes dos Descobrimentos Portugueses, 1999", "source_type": "academic", "url": null},
-      {"citation": "Niane, Djibril Tamsir. Histoire des Mandingues de l'Ouest: le royaume du Gabou. Paris: Karthala, 1989", "source_type": "academic", "url": null},
-      {"citation": "Teixeira da Mota, Avelino. Guinea Portuguesa. Lisbon: Agencia Geral do Ultramar, 1954", "source_type": "secondary", "url": null}
-    ]
-  },
-  {
-    "name_original": "Moose",
-    "name_original_lang": "mos",
-    "entity_type": "confederation",
-    "year_start": 1100,
-    "year_end": 1896,
-    "capital_name": "Ouagadougou",
-    "capital_lat": 12.3714,
-    "capital_lon": -1.5197,
-    "confidence_score": 0.6,
-    "status": "confirmed",
-    "boundary_geojson": {
-      "type": "Polygon",
-      "coordinates": [[
-        [-2.5, 11.0], [-2.0, 11.5], [-1.5, 12.0], [-1.0, 12.5],
-        [-0.5, 13.0], [0.0, 13.5], [0.5, 13.5], [0.5, 13.0],
-        [0.0, 12.5], [-0.3, 12.0], [-0.5, 11.5], [-0.8, 11.0],
-        [-1.0, 10.8], [-1.5, 10.5], [-2.0, 10.5], [-2.5, 10.8],
-        [-2.5, 11.0]
-      ]]
-    },
-    "ethical_notes": "The Mossi Kingdoms (self-designation: Moose, singular Moaga) comprised several independent but culturally linked states including Ouagadougou, Yatenga, Tenkodogo, and Fada N'Gourma. They successfully resisted incorporation into the Islamic empires of Mali and Songhai, maintaining their indigenous religious practices. This resistance to Islamization is sometimes misrepresented in both Islamic and Western sources as 'backwardness' rather than political independence. The Mossi cavalry raided Timbuktu in 1329 and 1477. French colonial conquest in 1896-1897 dismantled the Mogho Naaba (paramount chief) system, though the title persists ceremonially in modern Burkina Faso. The name 'Mossi' is the French colonial spelling; the people call themselves Moose.",
-    "name_variants": [
-      {"name": "Mossi Kingdoms", "lang": "en", "period_start": 1100, "period_end": 1896, "context": "English academic designation using French colonial-era spelling of the ethnic name", "source": "Skinner, Elliott P. The Mossi of Upper Volta (1964)"},
-      {"name": "Royaumes Mossi", "lang": "fr", "period_start": 1100, "period_end": 1896, "context": "French colonial designation", "source": "Izard, Michel. Gens du pouvoir, gens de la terre (1985)"},
-      {"name": "Moogo", "lang": "mos", "period_start": 1100, "period_end": 1896, "context": "Moore-language term for the Mossi territory/world", "source": "Izard, Michel. Le Yatenga precolonial (1985)"}
-    ],
-    "territory_changes": [
-      {"year": 1333, "region": "Timbuktu", "change_type": "CONQUEST_MILITARY", "description": "Mossi cavalry raided and briefly occupied Timbuktu. This demonstrated the military power of the Mossi states and their capacity to project force into the Sahelian zone, challenging the Mali Empire's dominance.", "population_affected": null, "confidence_score": 0.5},
-      {"year": 1896, "region": "Mossi territory", "change_type": "COLONIZATION", "description": "French forces under Lieutenant Voulet and Captain Chanoine conquered the Mossi kingdoms. The Mogho Naaba Wobogo of Ouagadougou fled. The Voulet-Chanoine expedition was notorious for extreme brutality against civilian populations, including massacres and village burnings across the Sahel.", "population_affected": null, "confidence_score": 0.85}
-    ],
-    "sources": [
-      {"citation": "Skinner, Elliott P. The Mossi of Upper Volta: The Political Development of a Sudanese People. Stanford University Press, 1964", "source_type": "academic", "url": null},
-      {"citation": "Izard, Michel. Gens du pouvoir, gens de la terre: les institutions politiques de l'ancien royaume du Yatenga. Cambridge University Press, 1985", "source_type": "academic", "url": null},
-      {"citation": "Tauxier, Louis. Le Noir du Yatenga: Mossis, Nioniossese, Samos, Yarsee, Silmi-Mossi, Peuls. Paris: Larose, 1917", "source_type": "secondary", "url": null}
-    ]
-  },
-  {
     "name_original": "Bulozi",
     "name_original_lang": "loz",
     "entity_type": "kingdom",
@@ -154,29 +12,148 @@
     "status": "confirmed",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [22.0, -13.5], [22.5, -13.5], [23.0, -14.0], [23.5, -14.5],
-        [24.0, -15.0], [24.5, -15.5], [25.0, -16.0], [25.0, -16.5],
-        [24.5, -17.0], [24.0, -17.0], [23.5, -16.5], [23.0, -16.0],
-        [22.5, -15.5], [22.0, -15.0], [21.5, -14.5], [21.5, -14.0],
-        [22.0, -13.5]
-      ]]
+      "coordinates": [
+        [
+          [
+            22.0,
+            -13.5
+          ],
+          [
+            22.5,
+            -13.5
+          ],
+          [
+            23.0,
+            -14.0
+          ],
+          [
+            23.5,
+            -14.5
+          ],
+          [
+            24.0,
+            -15.0
+          ],
+          [
+            24.5,
+            -15.5
+          ],
+          [
+            25.0,
+            -16.0
+          ],
+          [
+            25.0,
+            -16.5
+          ],
+          [
+            24.5,
+            -17.0
+          ],
+          [
+            24.0,
+            -17.0
+          ],
+          [
+            23.5,
+            -16.5
+          ],
+          [
+            23.0,
+            -16.0
+          ],
+          [
+            22.5,
+            -15.5
+          ],
+          [
+            22.0,
+            -15.0
+          ],
+          [
+            21.5,
+            -14.5
+          ],
+          [
+            21.5,
+            -14.0
+          ],
+          [
+            22.0,
+            -13.5
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Lozi Kingdom (Barotseland, self-name Bulozi) was centered on the Zambezi floodplain, with a unique annual migration ceremony (Kuomboka) tied to seasonal flooding that persists today. The kingdom negotiated a special protectorate status with the British South Africa Company (1890 Lochner Concession), obtained under misleading terms. The Barotseland Agreement of 1964 with Northern Rhodesia/Zambia was supposed to preserve internal autonomy, but its terms were progressively ignored by the Zambian state after independence. Contemporary Lozi separatist sentiment is rooted in this perceived treaty violation. Makololo conquerors displaced the original Lozi dynasty (1838-1864) before being overthrown; both periods must be documented.",
     "name_variants": [
-      {"name": "Barotseland", "lang": "en", "period_start": 1600, "period_end": 1964, "context": "English colonial-era name derived from 'Barotse', itself a corruption of 'Balozi' (the Lozi people)", "source": "Caplan, Gerald L. The Elites of Barotseland (1970)"},
-      {"name": "Lozi Kingdom", "lang": "en", "period_start": 1600, "period_end": 1964, "context": "Alternate English designation using the people's name", "source": "Mainga, Mutumba. Bulozi Under the Luyana Kings (1973)"},
-      {"name": "Royaume du Barotseland", "lang": "fr", "period_start": 1600, "period_end": 1964, "context": "French designation", "source": "Jalla, Adolphe. History of Barotseland (1909)"}
+      {
+        "name": "Barotseland",
+        "lang": "en",
+        "period_start": 1600,
+        "period_end": 1964,
+        "context": "English colonial-era name derived from 'Barotse', itself a corruption of 'Balozi' (the Lozi people)",
+        "source": "Caplan, Gerald L. The Elites of Barotseland (1970)"
+      },
+      {
+        "name": "Lozi Kingdom",
+        "lang": "en",
+        "period_start": 1600,
+        "period_end": 1964,
+        "context": "Alternate English designation using the people's name",
+        "source": "Mainga, Mutumba. Bulozi Under the Luyana Kings (1973)"
+      },
+      {
+        "name": "Royaume du Barotseland",
+        "lang": "fr",
+        "period_start": 1600,
+        "period_end": 1964,
+        "context": "French designation",
+        "source": "Jalla, Adolphe. History of Barotseland (1909)"
+      }
     ],
     "territory_changes": [
-      {"year": 1838, "region": "Bulozi floodplain", "change_type": "CONQUEST_MILITARY", "description": "Makololo invaders (Sotho people displaced by the Mfecane) under Sebitwane conquered the Lozi kingdom. The Lozi royal family was exiled. Makololo rule lasted until 1864 when the Lozi Litungaship was restored under Sipopa.", "population_affected": null, "confidence_score": 0.6},
-      {"year": 1890, "region": "Barotseland", "change_type": "CESSION_FORCED", "description": "Lochner Concession signed by Litunga Lewanika with the British South Africa Company. The terms were misrepresented to Lewanika, who believed he was gaining British protection against Ndebele raids, not ceding sovereignty. The concession became the legal basis for British colonial control.", "population_affected": null, "confidence_score": 0.75},
-      {"year": 1964, "region": "Barotseland", "change_type": "INCORPORATION", "description": "Barotseland Agreement 1964 incorporated Barotseland into newly independent Zambia with guarantees of internal autonomy. These guarantees were progressively eroded by subsequent Zambian governments, generating ongoing disputes.", "population_affected": null, "confidence_score": 0.9}
+      {
+        "year": 1838,
+        "region": "Bulozi floodplain",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Makololo invaders (Sotho people displaced by the Mfecane) under Sebitwane conquered the Lozi kingdom. The Lozi royal family was exiled. Makololo rule lasted until 1864 when the Lozi Litungaship was restored under Sipopa.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1890,
+        "region": "Barotseland",
+        "change_type": "CESSION_FORCED",
+        "description": "Lochner Concession signed by Litunga Lewanika with the British South Africa Company. The terms were misrepresented to Lewanika, who believed he was gaining British protection against Ndebele raids, not ceding sovereignty. The concession became the legal basis for British colonial control.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1964,
+        "region": "Barotseland",
+        "change_type": "INCORPORATION",
+        "description": "Barotseland Agreement 1964 incorporated Barotseland into newly independent Zambia with guarantees of internal autonomy. These guarantees were progressively eroded by subsequent Zambian governments, generating ongoing disputes.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
     ],
     "sources": [
-      {"citation": "Mainga, Mutumba. Bulozi Under the Luyana Kings: Political Evolution and State Formation in Pre-colonial Zambia. London: Longman, 1973", "source_type": "academic", "url": null},
-      {"citation": "Caplan, Gerald L. The Elites of Barotseland, 1878-1969: A Political History of Zambia's Western Province. London: Hurst, 1970", "source_type": "academic", "url": null},
-      {"citation": "Jalla, Adolphe. History of the Barotse Nation. Unpublished manuscript, later published in part, 1909", "source_type": "primary", "url": null}
+      {
+        "citation": "Mainga, Mutumba. Bulozi Under the Luyana Kings: Political Evolution and State Formation in Pre-colonial Zambia. London: Longman, 1973",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Caplan, Gerald L. The Elites of Barotseland, 1878-1969: A Political History of Zambia's Western Province. London: Hurst, 1970",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Jalla, Adolphe. History of the Barotse Nation. Unpublished manuscript, later published in part, 1909",
+        "source_type": "primary",
+        "url": null
+      }
     ]
   },
   {
@@ -192,27 +169,128 @@
     "status": "uncertain",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [26.0, 3.0], [27.0, 3.5], [28.0, 4.0], [29.0, 4.5],
-        [30.0, 5.0], [30.5, 5.0], [30.5, 4.5], [30.0, 4.0],
-        [29.5, 3.5], [29.0, 3.0], [28.5, 2.5], [28.0, 2.5],
-        [27.0, 2.5], [26.0, 3.0]
-      ]]
+      "coordinates": [
+        [
+          [
+            26.0,
+            3.0
+          ],
+          [
+            27.0,
+            3.5
+          ],
+          [
+            28.0,
+            4.0
+          ],
+          [
+            29.0,
+            4.5
+          ],
+          [
+            30.0,
+            5.0
+          ],
+          [
+            30.5,
+            5.0
+          ],
+          [
+            30.5,
+            4.5
+          ],
+          [
+            30.0,
+            4.0
+          ],
+          [
+            29.5,
+            3.5
+          ],
+          [
+            29.0,
+            3.0
+          ],
+          [
+            28.5,
+            2.5
+          ],
+          [
+            28.0,
+            2.5
+          ],
+          [
+            27.0,
+            2.5
+          ],
+          [
+            26.0,
+            3.0
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Zande kingdoms (Avungara ruling dynasty over Azande peoples) were decentralized polities spanning present-day South Sudan, DRC, and Central African Republic. The Avungara aristocracy ruled over absorbed and conquered peoples through a system of provincial governors (sons of the king). European colonialism (Anglo-Egyptian Sudan, Belgian Congo, French Equatorial Africa) partitioned Zande territory among three colonial powers, dividing a unified cultural zone that remains fragmented today. Evans-Pritchard's ethnographic work among the Azande, while foundational, reflects colonial-era assumptions. The Azande manbetu poison oracle (benge) and witchcraft beliefs were sensationalized by European observers. The Zande language ISO code 'zne' is used; multiple dialects exist.",
     "name_variants": [
-      {"name": "Zande Kingdom", "lang": "en", "period_start": 1600, "period_end": 1912, "context": "English academic designation using the people's collective name", "source": "Evans-Pritchard, E.E. The Azande: History and Political Institutions (1971)"},
-      {"name": "Royaume Zande", "lang": "fr", "period_start": 1600, "period_end": 1912, "context": "French designation used in Belgian and French colonial contexts", "source": "De Calonne-Beaufaict, A. Azande (1921)"},
-      {"name": "Niam-Niam", "lang": "ar", "period_start": 1800, "period_end": 1900, "context": "Derogatory exonym used by Arab slave traders, meaning 'cannibals'. This name must be documented but flagged as pejorative.", "source": "Schweinfurth, Georg. The Heart of Africa (1873)"}
+      {
+        "name": "Zande Kingdom",
+        "lang": "en",
+        "period_start": 1600,
+        "period_end": 1912,
+        "context": "English academic designation using the people's collective name",
+        "source": "Evans-Pritchard, E.E. The Azande: History and Political Institutions (1971)"
+      },
+      {
+        "name": "Royaume Zande",
+        "lang": "fr",
+        "period_start": 1600,
+        "period_end": 1912,
+        "context": "French designation used in Belgian and French colonial contexts",
+        "source": "De Calonne-Beaufaict, A. Azande (1921)"
+      },
+      {
+        "name": "Niam-Niam",
+        "lang": "ar",
+        "period_start": 1800,
+        "period_end": 1900,
+        "context": "Derogatory exonym used by Arab slave traders, meaning 'cannibals'. This name must be documented but flagged as pejorative.",
+        "source": "Schweinfurth, Georg. The Heart of Africa (1873)"
+      }
     ],
     "territory_changes": [
-      {"year": 1870, "region": "Bahr el Ghazal", "change_type": "CONQUEST_MILITARY", "description": "Khedival Egyptian expansion and Sudanese slave traders (zariba system) began encroaching on Zande territory. Zande kings like Gbudwe resisted but were gradually pushed south. The slave trade devastated subject populations.", "population_affected": null, "confidence_score": 0.55},
-      {"year": 1905, "region": "Zande territory", "change_type": "COLONIZATION", "description": "Anglo-Egyptian, Belgian, and French colonial forces partitioned Zande territory. King Gbudwe was killed by British forces in 1905. The Azande were divided among Sudan, Belgian Congo, and French Equatorial Africa, fragmenting a unified political and cultural zone along arbitrary colonial boundaries.", "population_affected": null, "confidence_score": 0.7}
+      {
+        "year": 1870,
+        "region": "Bahr el Ghazal",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Khedival Egyptian expansion and Sudanese slave traders (zariba system) began encroaching on Zande territory. Zande kings like Gbudwe resisted but were gradually pushed south. The slave trade devastated subject populations.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1905,
+        "region": "Zande territory",
+        "change_type": "COLONIZATION",
+        "description": "Anglo-Egyptian, Belgian, and French colonial forces partitioned Zande territory. King Gbudwe was killed by British forces in 1905. The Azande were divided among Sudan, Belgian Congo, and French Equatorial Africa, fragmenting a unified political and cultural zone along arbitrary colonial boundaries.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
     ],
     "sources": [
-      {"citation": "Evans-Pritchard, E.E. The Azande: History and Political Institutions. Oxford: Clarendon Press, 1971", "source_type": "academic", "url": null},
-      {"citation": "De Schlippe, Pierre. Shifting Cultivation in Africa: The Zande System of Agriculture. London: Routledge, 1956", "source_type": "academic", "url": null},
-      {"citation": "Schweinfurth, Georg. The Heart of Africa: Three Years' Travels and Adventures in the Unexplored Regions of Central Africa. London: Sampson Low, 1873", "source_type": "primary", "url": null}
+      {
+        "citation": "Evans-Pritchard, E.E. The Azande: History and Political Institutions. Oxford: Clarendon Press, 1971",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "De Schlippe, Pierre. Shifting Cultivation in Africa: The Zande System of Agriculture. London: Routledge, 1956",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Schweinfurth, Georg. The Heart of Africa: Three Years' Travels and Adventures in the Unexplored Regions of Central Africa. London: Sampson Low, 1873",
+        "source_type": "primary",
+        "url": null
+      }
     ]
   },
   {
@@ -228,27 +306,128 @@
     "status": "confirmed",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [13.5, -8.5], [14.0, -8.5], [14.5, -8.8], [15.0, -9.0],
-        [15.5, -9.3], [15.5, -9.8], [15.0, -10.2], [14.5, -10.5],
-        [14.0, -10.5], [13.5, -10.2], [13.0, -9.8], [13.0, -9.3],
-        [13.2, -8.8], [13.5, -8.5]
-      ]]
+      "coordinates": [
+        [
+          [
+            13.5,
+            -8.5
+          ],
+          [
+            14.0,
+            -8.5
+          ],
+          [
+            14.5,
+            -8.8
+          ],
+          [
+            15.0,
+            -9.0
+          ],
+          [
+            15.5,
+            -9.3
+          ],
+          [
+            15.5,
+            -9.8
+          ],
+          [
+            15.0,
+            -10.2
+          ],
+          [
+            14.5,
+            -10.5
+          ],
+          [
+            14.0,
+            -10.5
+          ],
+          [
+            13.5,
+            -10.2
+          ],
+          [
+            13.0,
+            -9.8
+          ],
+          [
+            13.0,
+            -9.3
+          ],
+          [
+            13.2,
+            -8.8
+          ],
+          [
+            13.5,
+            -8.5
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Kingdom of Ndongo was a Mbundu state in present-day Angola that was systematically destroyed by Portuguese colonialism. The Portuguese slave trade was the primary driver of conflict: Ndongo rulers initially traded with Portuguese but increasingly resisted as slave raids intensified. Queen Njinga (Ana de Sousa Nzinga Mbandi), who ruled both Ndongo and Matamba, is one of the most significant figures in African resistance to European colonialism. Portuguese sources are heavily biased, portraying Ndongo as savage to justify enslavement. The Kimbundu language name 'Ngola' (king) gave the Portuguese colony its name 'Angola'. This appropriation of an indigenous title for a colonial territory must be noted.",
     "name_variants": [
-      {"name": "Kingdom of Ndongo", "lang": "en", "period_start": 1500, "period_end": 1671, "context": "English academic designation", "source": "Heywood, Linda M. and John K. Thornton. Central Africans, Atlantic Creoles, and the Foundation of the Americas (2007)"},
-      {"name": "Reino de Angola", "lang": "pt", "period_start": 1500, "period_end": 1671, "context": "Portuguese designation, derived from the Kimbundu royal title 'ngola'", "source": "Cavazzi de Montecuccolo, Giovanni Antonio. Istorica Descrizione de' tre Regni Congo, Matamba, et Angola (1687)"},
-      {"name": "Dongo", "lang": "kmb", "period_start": 1500, "period_end": 1671, "context": "Alternate Kimbundu form", "source": "Miller, Joseph C. Kings and Kinsmen (1976)"}
+      {
+        "name": "Kingdom of Ndongo",
+        "lang": "en",
+        "period_start": 1500,
+        "period_end": 1671,
+        "context": "English academic designation",
+        "source": "Heywood, Linda M. and John K. Thornton. Central Africans, Atlantic Creoles, and the Foundation of the Americas (2007)"
+      },
+      {
+        "name": "Reino de Angola",
+        "lang": "pt",
+        "period_start": 1500,
+        "period_end": 1671,
+        "context": "Portuguese designation, derived from the Kimbundu royal title 'ngola'",
+        "source": "Cavazzi de Montecuccolo, Giovanni Antonio. Istorica Descrizione de' tre Regni Congo, Matamba, et Angola (1687)"
+      },
+      {
+        "name": "Dongo",
+        "lang": "kmb",
+        "period_start": 1500,
+        "period_end": 1671,
+        "context": "Alternate Kimbundu form",
+        "source": "Miller, Joseph C. Kings and Kinsmen (1976)"
+      }
     ],
     "territory_changes": [
-      {"year": 1575, "region": "Luanda coast", "change_type": "CONQUEST_MILITARY", "description": "Portuguese founded Luanda as a base for the slave trade and military operations against Ndongo. Paulo Dias de Novais began systematic conquest of Ndongo territory, driven by the demand for enslaved people for Brazilian plantations.", "population_affected": null, "confidence_score": 0.75},
-      {"year": 1671, "region": "Ndongo heartland", "change_type": "CONQUEST_MILITARY", "description": "Portuguese forces destroyed the last Ndongo stronghold at Pungo a Ndongo. The ngola was killed. Surviving Mbundu elites were enslaved or fled to Matamba. The kingdom's territory was fully absorbed into the Portuguese colony of Angola.", "population_affected": null, "confidence_score": 0.7}
+      {
+        "year": 1575,
+        "region": "Luanda coast",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Portuguese founded Luanda as a base for the slave trade and military operations against Ndongo. Paulo Dias de Novais began systematic conquest of Ndongo territory, driven by the demand for enslaved people for Brazilian plantations.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1671,
+        "region": "Ndongo heartland",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Portuguese forces destroyed the last Ndongo stronghold at Pungo a Ndongo. The ngola was killed. Surviving Mbundu elites were enslaved or fled to Matamba. The kingdom's territory was fully absorbed into the Portuguese colony of Angola.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
     ],
     "sources": [
-      {"citation": "Heywood, Linda M. Njinga of Angola: Africa's Warrior Queen. Cambridge, MA: Harvard University Press, 2017", "source_type": "academic", "url": null},
-      {"citation": "Miller, Joseph C. Kings and Kinsmen: Early Mbundu States in Angola. Oxford: Clarendon Press, 1976", "source_type": "academic", "url": null},
-      {"citation": "Cavazzi de Montecuccolo, Giovanni Antonio. Istorica Descrizione de' tre Regni Congo, Matamba, et Angola. Bologna, 1687", "source_type": "primary", "url": null}
+      {
+        "citation": "Heywood, Linda M. Njinga of Angola: Africa's Warrior Queen. Cambridge, MA: Harvard University Press, 2017",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Miller, Joseph C. Kings and Kinsmen: Early Mbundu States in Angola. Oxford: Clarendon Press, 1976",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Cavazzi de Montecuccolo, Giovanni Antonio. Istorica Descrizione de' tre Regni Congo, Matamba, et Angola. Bologna, 1687",
+        "source_type": "primary",
+        "url": null
+      }
     ]
   },
   {
@@ -264,26 +443,120 @@
     "status": "uncertain",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [15.5, -8.0], [16.0, -8.0], [16.5, -8.3], [17.0, -8.5],
-        [17.5, -9.0], [17.5, -9.5], [17.0, -10.0], [16.5, -10.0],
-        [16.0, -9.5], [15.5, -9.0], [15.0, -8.5], [15.5, -8.0]
-      ]]
+      "coordinates": [
+        [
+          [
+            15.5,
+            -8.0
+          ],
+          [
+            16.0,
+            -8.0
+          ],
+          [
+            16.5,
+            -8.3
+          ],
+          [
+            17.0,
+            -8.5
+          ],
+          [
+            17.5,
+            -9.0
+          ],
+          [
+            17.5,
+            -9.5
+          ],
+          [
+            17.0,
+            -10.0
+          ],
+          [
+            16.5,
+            -10.0
+          ],
+          [
+            16.0,
+            -9.5
+          ],
+          [
+            15.5,
+            -9.0
+          ],
+          [
+            15.0,
+            -8.5
+          ],
+          [
+            15.5,
+            -8.0
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Kingdom of Matamba became a major power under Queen Njinga (Nzinga Mbandi), who conquered it after being displaced from Ndongo by Portuguese aggression. Njinga is a complex historical figure: she resisted Portuguese colonialism and the slave trade while also conducting slave raids and engaging in the slave trade herself when strategically necessary. Western historiography has oscillated between demonizing and romanticizing her. Portuguese missionary sources (Cavazzi) are deeply biased but contain valuable details. Matamba became a center of resistance to Portuguese expansion and a refuge for Mbundu people fleeing enslavement. After Njinga's death (1663), successive queens maintained independence until Portuguese subjugation.",
     "name_variants": [
-      {"name": "Kingdom of Matamba", "lang": "en", "period_start": 1631, "period_end": 1744, "context": "English academic designation", "source": "Heywood, Linda M. Njinga of Angola (2017)"},
-      {"name": "Reino de Matamba", "lang": "pt", "period_start": 1631, "period_end": 1744, "context": "Portuguese colonial designation", "source": "Cavazzi de Montecuccolo, Giovanni Antonio. Istorica Descrizione (1687)"},
-      {"name": "Matamba a Njinga", "lang": "kmb", "period_start": 1631, "period_end": 1663, "context": "Kimbundu designation during Njinga's reign, associating the kingdom with its most famous ruler", "source": "Thornton, John K. 'Legitimacy and Political Power: Queen Njinga' (1991)"}
+      {
+        "name": "Kingdom of Matamba",
+        "lang": "en",
+        "period_start": 1631,
+        "period_end": 1744,
+        "context": "English academic designation",
+        "source": "Heywood, Linda M. Njinga of Angola (2017)"
+      },
+      {
+        "name": "Reino de Matamba",
+        "lang": "pt",
+        "period_start": 1631,
+        "period_end": 1744,
+        "context": "Portuguese colonial designation",
+        "source": "Cavazzi de Montecuccolo, Giovanni Antonio. Istorica Descrizione (1687)"
+      },
+      {
+        "name": "Matamba a Njinga",
+        "lang": "kmb",
+        "period_start": 1631,
+        "period_end": 1663,
+        "context": "Kimbundu designation during Njinga's reign, associating the kingdom with its most famous ruler",
+        "source": "Thornton, John K. 'Legitimacy and Political Power: Queen Njinga' (1991)"
+      }
     ],
     "territory_changes": [
-      {"year": 1631, "region": "Eastern Mbundu territory", "change_type": "CONQUEST_MILITARY", "description": "Njinga conquered the pre-existing Matamba kingdom after being driven from Ndongo by Portuguese forces. She reorganized the state as a base for resistance against Portuguese colonial expansion and the slave trade.", "population_affected": null, "confidence_score": 0.6},
-      {"year": 1744, "region": "Matamba territory", "change_type": "CONQUEST_MILITARY", "description": "Portuguese forces finally subjugated Matamba, ending the last major independent Mbundu polity. The kingdom was absorbed into the Portuguese colony of Angola. The Mbundu population was subjected to colonial exploitation and the slave trade.", "population_affected": null, "confidence_score": 0.55}
+      {
+        "year": 1631,
+        "region": "Eastern Mbundu territory",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Njinga conquered the pre-existing Matamba kingdom after being driven from Ndongo by Portuguese forces. She reorganized the state as a base for resistance against Portuguese colonial expansion and the slave trade.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1744,
+        "region": "Matamba territory",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Portuguese forces finally subjugated Matamba, ending the last major independent Mbundu polity. The kingdom was absorbed into the Portuguese colony of Angola. The Mbundu population was subjected to colonial exploitation and the slave trade.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      }
     ],
     "sources": [
-      {"citation": "Heywood, Linda M. Njinga of Angola: Africa's Warrior Queen. Cambridge, MA: Harvard University Press, 2017", "source_type": "academic", "url": null},
-      {"citation": "Thornton, John K. 'Legitimacy and Political Power: Queen Njinga, 1624-1663.' Journal of African History 32.1 (1991): 25-40", "source_type": "academic", "url": null},
-      {"citation": "Cavazzi de Montecuccolo, Giovanni Antonio. Istorica Descrizione de' tre Regni Congo, Matamba, et Angola. Bologna, 1687", "source_type": "primary", "url": null}
+      {
+        "citation": "Heywood, Linda M. Njinga of Angola: Africa's Warrior Queen. Cambridge, MA: Harvard University Press, 2017",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Thornton, John K. 'Legitimacy and Political Power: Queen Njinga, 1624-1663.' Journal of African History 32.1 (1991): 25-40",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Cavazzi de Montecuccolo, Giovanni Antonio. Istorica Descrizione de' tre Regni Congo, Matamba, et Angola. Bologna, 1687",
+        "source_type": "primary",
+        "url": null
+      }
     ]
   },
   {
@@ -299,29 +572,160 @@
     "status": "confirmed",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [-6.5, 30.0], [-6.0, 30.5], [-5.0, 31.0], [-4.0, 31.5],
-        [-3.0, 32.0], [-2.0, 32.5], [-1.5, 33.0], [-1.5, 34.0],
-        [-2.0, 34.5], [-3.0, 35.0], [-4.0, 35.5], [-5.0, 35.8],
-        [-6.0, 35.5], [-6.5, 35.0], [-7.0, 34.5], [-7.5, 34.0],
-        [-8.0, 33.5], [-8.5, 33.0], [-8.5, 32.0], [-8.0, 31.0],
-        [-7.5, 30.5], [-6.5, 30.0]
-      ]]
+      "coordinates": [
+        [
+          [
+            -6.5,
+            30.0
+          ],
+          [
+            -6.0,
+            30.5
+          ],
+          [
+            -5.0,
+            31.0
+          ],
+          [
+            -4.0,
+            31.5
+          ],
+          [
+            -3.0,
+            32.0
+          ],
+          [
+            -2.0,
+            32.5
+          ],
+          [
+            -1.5,
+            33.0
+          ],
+          [
+            -1.5,
+            34.0
+          ],
+          [
+            -2.0,
+            34.5
+          ],
+          [
+            -3.0,
+            35.0
+          ],
+          [
+            -4.0,
+            35.5
+          ],
+          [
+            -5.0,
+            35.8
+          ],
+          [
+            -6.0,
+            35.5
+          ],
+          [
+            -6.5,
+            35.0
+          ],
+          [
+            -7.0,
+            34.5
+          ],
+          [
+            -7.5,
+            34.0
+          ],
+          [
+            -8.0,
+            33.5
+          ],
+          [
+            -8.5,
+            33.0
+          ],
+          [
+            -8.5,
+            32.0
+          ],
+          [
+            -8.0,
+            31.0
+          ],
+          [
+            -7.5,
+            30.5
+          ],
+          [
+            -6.5,
+            30.0
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Wattasid Dynasty ruled Morocco during a period of Portuguese and Spanish coastal encroachment. Portuguese seizure of Ceuta (1415), Tangier, and other coastal towns represented early European colonialism in Africa. The Wattasids' inability to expel the Portuguese from these coastal enclaves undermined their legitimacy and fueled the rise of the Saadian sharifs. The dynasty was of Zenata Berber origin but ruled an Arab-Berber mixed population. The interplay between Berber and Arab identity in Moroccan political history is complex and should not be oversimplified.",
     "name_variants": [
-      {"name": "Wattasid Dynasty", "lang": "en", "period_start": 1472, "period_end": 1554, "context": "English academic designation", "source": "Abun-Nasr, Jamil M. A History of the Maghrib in the Islamic Period (1987)"},
-      {"name": "Dynastie Wattasside", "lang": "fr", "period_start": 1472, "period_end": 1554, "context": "French designation", "source": "Terrasse, Henri. Histoire du Maroc (1949)"},
-      {"name": "الدولة الوطاسية", "lang": "ar", "period_start": 1472, "period_end": 1554, "context": "Arabic self-designation", "source": "Al-Nasiri, Ahmad ibn Khalid. Kitab al-Istiqsa (1894)"}
+      {
+        "name": "Wattasid Dynasty",
+        "lang": "en",
+        "period_start": 1472,
+        "period_end": 1554,
+        "context": "English academic designation",
+        "source": "Abun-Nasr, Jamil M. A History of the Maghrib in the Islamic Period (1987)"
+      },
+      {
+        "name": "Dynastie Wattasside",
+        "lang": "fr",
+        "period_start": 1472,
+        "period_end": 1554,
+        "context": "French designation",
+        "source": "Terrasse, Henri. Histoire du Maroc (1949)"
+      },
+      {
+        "name": "الدولة الوطاسية",
+        "lang": "ar",
+        "period_start": 1472,
+        "period_end": 1554,
+        "context": "Arabic self-designation",
+        "source": "Al-Nasiri, Ahmad ibn Khalid. Kitab al-Istiqsa (1894)"
+      }
     ],
     "territory_changes": [
-      {"year": 1471, "region": "Northern Morocco coast", "change_type": "CONQUEST_MILITARY", "description": "Portuguese captured Arzila and Tangier. These coastal enclaves became bases for European encroachment and the Wattasids were unable to recover them, eroding their legitimacy as defenders of Muslim territory.", "population_affected": null, "confidence_score": 0.85},
-      {"year": 1554, "region": "Fez", "change_type": "CONQUEST_MILITARY", "description": "Saadian forces under Mohammed ash-Sheikh captured Fez and deposed the last Wattasid sultan. The Saadians had built legitimacy through their jihad against Portuguese coastal enclaves, contrasting with Wattasid inaction.", "population_affected": null, "confidence_score": 0.85}
+      {
+        "year": 1471,
+        "region": "Northern Morocco coast",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Portuguese captured Arzila and Tangier. These coastal enclaves became bases for European encroachment and the Wattasids were unable to recover them, eroding their legitimacy as defenders of Muslim territory.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1554,
+        "region": "Fez",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Saadian forces under Mohammed ash-Sheikh captured Fez and deposed the last Wattasid sultan. The Saadians had built legitimacy through their jihad against Portuguese coastal enclaves, contrasting with Wattasid inaction.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
     ],
     "sources": [
-      {"citation": "Abun-Nasr, Jamil M. A History of the Maghrib in the Islamic Period. Cambridge University Press, 1987", "source_type": "academic", "url": null},
-      {"citation": "Terrasse, Henri. Histoire du Maroc des origines a l'etablissement du protectorat francais. 2 vols. Casablanca: Atlantides, 1949-1950", "source_type": "academic", "url": null},
-      {"citation": "Al-Nasiri, Ahmad ibn Khalid. Kitab al-Istiqsa li-Akhbar Duwal al-Maghrib al-Aqsa. Cairo, 1894", "source_type": "primary", "url": null}
+      {
+        "citation": "Abun-Nasr, Jamil M. A History of the Maghrib in the Islamic Period. Cambridge University Press, 1987",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Terrasse, Henri. Histoire du Maroc des origines a l'etablissement du protectorat francais. 2 vols. Casablanca: Atlantides, 1949-1950",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Al-Nasiri, Ahmad ibn Khalid. Kitab al-Istiqsa li-Akhbar Duwal al-Maghrib al-Aqsa. Cairo, 1894",
+        "source_type": "primary",
+        "url": null
+      }
     ]
   },
   {
@@ -337,29 +741,152 @@
     "status": "confirmed",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [-8.0, 29.0], [-7.0, 29.5], [-5.0, 30.0], [-3.0, 31.0],
-        [-1.5, 32.0], [-1.0, 33.0], [-1.5, 34.0], [-2.5, 35.0],
-        [-4.0, 35.5], [-5.5, 35.8], [-6.5, 35.5], [-7.5, 35.0],
-        [-8.5, 34.0], [-9.0, 33.0], [-9.5, 32.0], [-9.5, 31.0],
-        [-9.0, 30.0], [-8.0, 29.0]
-      ]]
+      "coordinates": [
+        [
+          [
+            -8.0,
+            29.0
+          ],
+          [
+            -7.0,
+            29.5
+          ],
+          [
+            -5.0,
+            30.0
+          ],
+          [
+            -3.0,
+            31.0
+          ],
+          [
+            -1.5,
+            32.0
+          ],
+          [
+            -1.0,
+            33.0
+          ],
+          [
+            -1.5,
+            34.0
+          ],
+          [
+            -2.5,
+            35.0
+          ],
+          [
+            -4.0,
+            35.5
+          ],
+          [
+            -5.5,
+            35.8
+          ],
+          [
+            -6.5,
+            35.5
+          ],
+          [
+            -7.5,
+            35.0
+          ],
+          [
+            -8.5,
+            34.0
+          ],
+          [
+            -9.0,
+            33.0
+          ],
+          [
+            -9.5,
+            32.0
+          ],
+          [
+            -9.5,
+            31.0
+          ],
+          [
+            -9.0,
+            30.0
+          ],
+          [
+            -8.0,
+            29.0
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Saadian Dynasty achieved fame for the Battle of Alcacer Quibir (1578), which destroyed a Portuguese invasion force and killed Portuguese King Sebastian. Sultan Ahmad al-Mansur subsequently conquered the Songhai Empire (1591), seizing control of trans-Saharan gold routes. The Moroccan conquest of Songhai involved significant violence against Songhai populations, the deportation of Songhai scholars from Timbuktu (including Ahmad Baba), and disrupted political structures across the western Sahel. This must be documented as a case of African-on-African imperialism, not minimized. The Saadian tombs in Marrakesh remain a major cultural heritage site.",
     "name_variants": [
-      {"name": "Saadi Dynasty", "lang": "en", "period_start": 1554, "period_end": 1659, "context": "English academic designation", "source": "El-Fasi, Mohammed. 'Morocco.' In UNESCO General History of Africa, vol. V (1999)"},
-      {"name": "Dynastie Saadienne", "lang": "fr", "period_start": 1554, "period_end": 1659, "context": "French designation", "source": "Brignon, Jean et al. Histoire du Maroc (1967)"},
-      {"name": "السعديون", "lang": "ar", "period_start": 1554, "period_end": 1659, "context": "Arabic self-designation, claiming descent from the Prophet Muhammad", "source": "Al-Fishtali, Abd al-Aziz. Manahil al-Safa (c.1600)"}
+      {
+        "name": "Saadi Dynasty",
+        "lang": "en",
+        "period_start": 1554,
+        "period_end": 1659,
+        "context": "English academic designation",
+        "source": "El-Fasi, Mohammed. 'Morocco.' In UNESCO General History of Africa, vol. V (1999)"
+      },
+      {
+        "name": "Dynastie Saadienne",
+        "lang": "fr",
+        "period_start": 1554,
+        "period_end": 1659,
+        "context": "French designation",
+        "source": "Brignon, Jean et al. Histoire du Maroc (1967)"
+      },
+      {
+        "name": "السعديون",
+        "lang": "ar",
+        "period_start": 1554,
+        "period_end": 1659,
+        "context": "Arabic self-designation, claiming descent from the Prophet Muhammad",
+        "source": "Al-Fishtali, Abd al-Aziz. Manahil al-Safa (c.1600)"
+      }
     ],
     "territory_changes": [
-      {"year": 1578, "region": "Northern Morocco", "change_type": "CONQUEST_MILITARY", "description": "Battle of Alcacer Quibir (Wadi al-Makhazin). Saadian forces defeated a Portuguese invasion led by King Sebastian, who was killed. This ended Portuguese ambitions in Morocco and established Saadian prestige across the Islamic world.", "population_affected": null, "confidence_score": 0.9},
-      {"year": 1591, "region": "Songhai Empire / Niger bend", "change_type": "CONQUEST_MILITARY", "description": "Saadian army under Judar Pasha crossed the Sahara and destroyed the Songhai Empire at the Battle of Tondibi. The conquest devastated Timbuktu's scholarly community; Ahmad Baba and other scholars were deported to Marrakesh. Trans-Saharan trade was disrupted for decades.", "population_affected": null, "confidence_score": 0.85},
-      {"year": 1659, "region": "Morocco", "change_type": "FRAGMENTATION", "description": "Saadian dynasty collapsed amid civil war and fragmentation. Various local rulers controlled different parts of Morocco until the Alaouite dynasty consolidated power.", "population_affected": null, "confidence_score": 0.8}
+      {
+        "year": 1578,
+        "region": "Northern Morocco",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Battle of Alcacer Quibir (Wadi al-Makhazin). Saadian forces defeated a Portuguese invasion led by King Sebastian, who was killed. This ended Portuguese ambitions in Morocco and established Saadian prestige across the Islamic world.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1591,
+        "region": "Songhai Empire / Niger bend",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Saadian army under Judar Pasha crossed the Sahara and destroyed the Songhai Empire at the Battle of Tondibi. The conquest devastated Timbuktu's scholarly community; Ahmad Baba and other scholars were deported to Marrakesh. Trans-Saharan trade was disrupted for decades.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1659,
+        "region": "Morocco",
+        "change_type": "FRAGMENTATION",
+        "description": "Saadian dynasty collapsed amid civil war and fragmentation. Various local rulers controlled different parts of Morocco until the Alaouite dynasty consolidated power.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
     ],
     "sources": [
-      {"citation": "Al-Fishtali, Abd al-Aziz. Manahil al-Safa fi Ma'athir Mawlana al-Shurafa. c.1600", "source_type": "primary", "url": null},
-      {"citation": "El-Fasi, Mohammed. 'Morocco.' In UNESCO General History of Africa, vol. V: Africa from the Sixteenth to the Eighteenth Century, ed. B.A. Ogot. Paris: UNESCO, 1999", "source_type": "academic", "url": null},
-      {"citation": "Abitbol, Michel. Tombouctou et les Arma: De la conquete marocaine du Soudan nigerin en 1591 a l'hegemonir de l'Empire Peul du Macina en 1833. Paris: Maisonneuve et Larose, 1979", "source_type": "academic", "url": null}
+      {
+        "citation": "Al-Fishtali, Abd al-Aziz. Manahil al-Safa fi Ma'athir Mawlana al-Shurafa. c.1600",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "El-Fasi, Mohammed. 'Morocco.' In UNESCO General History of Africa, vol. V: Africa from the Sixteenth to the Eighteenth Century, ed. B.A. Ogot. Paris: UNESCO, 1999",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Abitbol, Michel. Tombouctou et les Arma: De la conquete marocaine du Soudan nigerin en 1591 a l'hegemonir de l'Empire Peul du Macina en 1833. Paris: Maisonneuve et Larose, 1979",
+        "source_type": "academic",
+        "url": null
+      }
     ]
   },
   {
@@ -375,30 +902,160 @@
     "status": "confirmed",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [-8.0, 29.0], [-6.5, 29.5], [-5.0, 30.0], [-3.0, 31.0],
-        [-1.5, 32.0], [-1.0, 33.0], [-1.5, 34.0], [-2.5, 35.0],
-        [-4.0, 35.5], [-5.5, 35.8], [-6.5, 35.5], [-7.5, 35.0],
-        [-8.5, 34.0], [-9.5, 33.0], [-9.8, 32.0], [-9.5, 31.0],
-        [-9.0, 30.0], [-8.0, 29.0]
-      ]]
+      "coordinates": [
+        [
+          [
+            -8.0,
+            29.0
+          ],
+          [
+            -6.5,
+            29.5
+          ],
+          [
+            -5.0,
+            30.0
+          ],
+          [
+            -3.0,
+            31.0
+          ],
+          [
+            -1.5,
+            32.0
+          ],
+          [
+            -1.0,
+            33.0
+          ],
+          [
+            -1.5,
+            34.0
+          ],
+          [
+            -2.5,
+            35.0
+          ],
+          [
+            -4.0,
+            35.5
+          ],
+          [
+            -5.5,
+            35.8
+          ],
+          [
+            -6.5,
+            35.5
+          ],
+          [
+            -7.5,
+            35.0
+          ],
+          [
+            -8.5,
+            34.0
+          ],
+          [
+            -9.5,
+            33.0
+          ],
+          [
+            -9.8,
+            32.0
+          ],
+          [
+            -9.5,
+            31.0
+          ],
+          [
+            -9.0,
+            30.0
+          ],
+          [
+            -8.0,
+            29.0
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Alaouite Dynasty is the current ruling dynasty of Morocco, making this an ongoing polity. Historical phases include: the piracy era (Moulay Ismail's use of Christian slaves and Abid al-Bukhari slave soldiers); the European colonial period (French and Spanish protectorates 1912-1956); and the post-independence period. Moulay Ismail's army of enslaved Black Africans (Abid al-Bukhari, estimated 150,000) represents a major case of African slavery by an African state that must be documented honestly. The French Protectorate period involved significant suppression of Moroccan sovereignty while technically maintaining the Sultan's nominal authority. Morocco's current claim over Western Sahara is a contested territorial issue that the database must present from multiple perspectives.",
     "name_variants": [
-      {"name": "Alaouite Dynasty Morocco", "lang": "en", "period_start": 1631, "period_end": null, "context": "English academic designation", "source": "Pennell, C.R. Morocco Since 1830 (2000)"},
-      {"name": "Dynastie Alaouite", "lang": "fr", "period_start": 1631, "period_end": null, "context": "French designation", "source": "Julien, Charles-Andre. Le Maroc face aux imperialismes (1978)"},
-      {"name": "العلويون", "lang": "ar", "period_start": 1631, "period_end": null, "context": "Arabic self-designation, claiming descent from Ali ibn Abi Talib and the Prophet Muhammad", "source": "Al-Nasiri, Ahmad ibn Khalid. Kitab al-Istiqsa (1894)"},
-      {"name": "ⵉⵄⵍⴰⵡⵉⵢⵏ", "lang": "zgh", "period_start": 1631, "period_end": null, "context": "Standard Moroccan Amazigh (Berber) designation", "source": "Institut Royal de la Culture Amazighe (IRCAM)"}
+      {
+        "name": "Alaouite Dynasty Morocco",
+        "lang": "en",
+        "period_start": 1631,
+        "period_end": null,
+        "context": "English academic designation",
+        "source": "Pennell, C.R. Morocco Since 1830 (2000)"
+      },
+      {
+        "name": "Dynastie Alaouite",
+        "lang": "fr",
+        "period_start": 1631,
+        "period_end": null,
+        "context": "French designation",
+        "source": "Julien, Charles-Andre. Le Maroc face aux imperialismes (1978)"
+      },
+      {
+        "name": "العلويون",
+        "lang": "ar",
+        "period_start": 1631,
+        "period_end": null,
+        "context": "Arabic self-designation, claiming descent from Ali ibn Abi Talib and the Prophet Muhammad",
+        "source": "Al-Nasiri, Ahmad ibn Khalid. Kitab al-Istiqsa (1894)"
+      },
+      {
+        "name": "ⵉⵄⵍⴰⵡⵉⵢⵏ",
+        "lang": "zgh",
+        "period_start": 1631,
+        "period_end": null,
+        "context": "Standard Moroccan Amazigh (Berber) designation",
+        "source": "Institut Royal de la Culture Amazighe (IRCAM)"
+      }
     ],
     "territory_changes": [
-      {"year": 1912, "region": "Morocco", "change_type": "COLONIZATION", "description": "Treaty of Fez established French and Spanish protectorates over Morocco. Sultan Abdelhafid was forced to sign under pressure. Morocco was divided into French and Spanish zones. The Sultan retained nominal authority but real power was exercised by the French Resident-General.", "population_affected": null, "confidence_score": 0.95},
-      {"year": 1956, "region": "Morocco", "change_type": "INDEPENDENCE", "description": "Morocco regained independence from France and Spain. Sultan Mohammed V (later King) had been exiled by the French in 1953 for supporting independence, which galvanized the nationalist movement. The Spanish enclaves of Ceuta and Melilla remain under Spanish sovereignty, contested by Morocco.", "population_affected": null, "confidence_score": 0.95},
-      {"year": 1975, "region": "Western Sahara", "change_type": "ANNEXATION_DISPUTED", "description": "Green March: Morocco claimed Western Sahara as Spain withdrew. The Polisario Front, backed by Algeria, declared the Sahrawi Arab Democratic Republic. The ICJ advisory opinion found no ties of sovereignty. The conflict remains unresolved; a UN-mediated ceasefire has held since 1991 but no referendum has been conducted. This is an actively contested territorial claim.", "population_affected": null, "confidence_score": 0.85}
+      {
+        "year": 1912,
+        "region": "Morocco",
+        "change_type": "COLONIZATION",
+        "description": "Treaty of Fez established French and Spanish protectorates over Morocco. Sultan Abdelhafid was forced to sign under pressure. Morocco was divided into French and Spanish zones. The Sultan retained nominal authority but real power was exercised by the French Resident-General.",
+        "population_affected": null,
+        "confidence_score": 0.95
+      },
+      {
+        "year": 1956,
+        "region": "Morocco",
+        "change_type": "INDEPENDENCE",
+        "description": "Morocco regained independence from France and Spain. Sultan Mohammed V (later King) had been exiled by the French in 1953 for supporting independence, which galvanized the nationalist movement. The Spanish enclaves of Ceuta and Melilla remain under Spanish sovereignty, contested by Morocco.",
+        "population_affected": null,
+        "confidence_score": 0.95
+      },
+      {
+        "year": 1975,
+        "region": "Western Sahara",
+        "change_type": "ANNEXATION_DISPUTED",
+        "description": "Green March: Morocco claimed Western Sahara as Spain withdrew. The Polisario Front, backed by Algeria, declared the Sahrawi Arab Democratic Republic. The ICJ advisory opinion found no ties of sovereignty. The conflict remains unresolved; a UN-mediated ceasefire has held since 1991 but no referendum has been conducted. This is an actively contested territorial claim.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
     ],
     "sources": [
-      {"citation": "Pennell, C.R. Morocco Since 1830: A History. London: Hurst, 2000", "source_type": "academic", "url": null},
-      {"citation": "Al-Nasiri, Ahmad ibn Khalid. Kitab al-Istiqsa li-Akhbar Duwal al-Maghrib al-Aqsa. Cairo, 1894", "source_type": "primary", "url": null},
-      {"citation": "Julien, Charles-Andre. Le Maroc face aux imperialismes, 1415-1956. Paris: Editions J.A., 1978", "source_type": "academic", "url": null}
+      {
+        "citation": "Pennell, C.R. Morocco Since 1830: A History. London: Hurst, 2000",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Al-Nasiri, Ahmad ibn Khalid. Kitab al-Istiqsa li-Akhbar Duwal al-Maghrib al-Aqsa. Cairo, 1894",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Julien, Charles-Andre. Le Maroc face aux imperialismes, 1415-1956. Paris: Editions J.A., 1978",
+        "source_type": "academic",
+        "url": null
+      }
     ]
   },
   {
@@ -409,34 +1066,153 @@
     "year_end": 1577,
     "capital_name": "Harar",
     "capital_lat": 9.3117,
-    "capital_lon": 42.1200,
+    "capital_lon": 42.12,
     "confidence_score": 0.65,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [40.0, 8.0], [41.0, 8.5], [42.0, 9.0], [43.0, 9.5],
-        [44.0, 10.0], [45.0, 10.5], [45.5, 11.0], [45.5, 10.0],
-        [45.0, 9.0], [44.5, 8.0], [44.0, 7.5], [43.0, 7.0],
-        [42.0, 7.5], [41.0, 7.5], [40.0, 8.0]
-      ]]
+      "coordinates": [
+        [
+          [
+            40.0,
+            8.0
+          ],
+          [
+            41.0,
+            8.5
+          ],
+          [
+            42.0,
+            9.0
+          ],
+          [
+            43.0,
+            9.5
+          ],
+          [
+            44.0,
+            10.0
+          ],
+          [
+            45.0,
+            10.5
+          ],
+          [
+            45.5,
+            11.0
+          ],
+          [
+            45.5,
+            10.0
+          ],
+          [
+            45.0,
+            9.0
+          ],
+          [
+            44.5,
+            8.0
+          ],
+          [
+            44.0,
+            7.5
+          ],
+          [
+            43.0,
+            7.0
+          ],
+          [
+            42.0,
+            7.5
+          ],
+          [
+            41.0,
+            7.5
+          ],
+          [
+            40.0,
+            8.0
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Sultanate of Adal was a major Horn of Africa Islamic polity, successor to Ifat, centered on the Somali and Afar peoples. Its most dramatic period was the conquest of Ethiopia under Imam Ahmad ibn Ibrahim al-Ghazi ('Ahmad Gran') in 1529-1543, which nearly destroyed the Ethiopian Christian kingdom. This conflict is remembered very differently by Ethiopian Christians (as a catastrophic invasion) and Somali/Afar Muslims (as a righteous jihad). Both perspectives must be represented. Portuguese military intervention in support of Ethiopia and Ottoman support for Adal internationalized the conflict. The devastation of both sides contributed to the Oromo expansion into depopulated territories. Harar's identity as a center of Islamic scholarship predates and survives the sultanate.",
     "name_variants": [
-      {"name": "Sultanate of Adal", "lang": "en", "period_start": 1415, "period_end": 1577, "context": "English academic designation", "source": "Braukamper, Ulrich. Islamic History and Culture in Southern Ethiopia (2002)"},
-      {"name": "Sultanat de l'Adal", "lang": "fr", "period_start": 1415, "period_end": 1577, "context": "French designation", "source": "Chekroun, Amelie. 'Adal' in Encyclopaedia Aethiopica (2003)"},
-      {"name": "سلطنة عدل", "lang": "ar", "period_start": 1415, "period_end": 1577, "context": "Arabic designation", "source": "Arab-Faqih, Shihab al-Din. Futuh al-Habasha (c.1559)"},
-      {"name": "Awdal", "lang": "so", "period_start": 1415, "period_end": 1577, "context": "Somali-language designation", "source": "Lewis, I.M. A Modern History of the Somali (2002)"}
+      {
+        "name": "Sultanate of Adal",
+        "lang": "en",
+        "period_start": 1415,
+        "period_end": 1577,
+        "context": "English academic designation",
+        "source": "Braukamper, Ulrich. Islamic History and Culture in Southern Ethiopia (2002)"
+      },
+      {
+        "name": "Sultanat de l'Adal",
+        "lang": "fr",
+        "period_start": 1415,
+        "period_end": 1577,
+        "context": "French designation",
+        "source": "Chekroun, Amelie. 'Adal' in Encyclopaedia Aethiopica (2003)"
+      },
+      {
+        "name": "سلطنة عدل",
+        "lang": "ar",
+        "period_start": 1415,
+        "period_end": 1577,
+        "context": "Arabic designation",
+        "source": "Arab-Faqih, Shihab al-Din. Futuh al-Habasha (c.1559)"
+      },
+      {
+        "name": "Awdal",
+        "lang": "so",
+        "period_start": 1415,
+        "period_end": 1577,
+        "context": "Somali-language designation",
+        "source": "Lewis, I.M. A Modern History of the Somali (2002)"
+      }
     ],
     "territory_changes": [
-      {"year": 1529, "region": "Ethiopian highlands", "change_type": "CONQUEST_MILITARY", "description": "Imam Ahmad ibn Ibrahim al-Ghazi launched a devastating jihad against the Ethiopian Empire. Battle of Shimbra Kure. Adal forces conquered most of the Ethiopian highlands, destroying churches and forcing conversions. The campaign displaced hundreds of thousands.", "population_affected": null, "confidence_score": 0.7},
-      {"year": 1543, "region": "Ethiopian highlands", "change_type": "CONQUEST_MILITARY", "description": "Battle of Wayna Daga. Combined Ethiopian-Portuguese forces killed Ahmad Gran. Adal forces withdrew from the highlands. The war left both Adal and Ethiopia devastated, enabling the Oromo expansion into depopulated regions.", "population_affected": null, "confidence_score": 0.75},
-      {"year": 1577, "region": "Harar region", "change_type": "FRAGMENTATION", "description": "Sultanate fragmented after prolonged internal conflict. Harar became an independent emirate. The Somali Ajuran Sultanate and Oromo expansion absorbed former Adal territories.", "population_affected": null, "confidence_score": 0.55}
+      {
+        "year": 1529,
+        "region": "Ethiopian highlands",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Imam Ahmad ibn Ibrahim al-Ghazi launched a devastating jihad against the Ethiopian Empire. Battle of Shimbra Kure. Adal forces conquered most of the Ethiopian highlands, destroying churches and forcing conversions. The campaign displaced hundreds of thousands.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1543,
+        "region": "Ethiopian highlands",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Battle of Wayna Daga. Combined Ethiopian-Portuguese forces killed Ahmad Gran. Adal forces withdrew from the highlands. The war left both Adal and Ethiopia devastated, enabling the Oromo expansion into depopulated regions.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1577,
+        "region": "Harar region",
+        "change_type": "FRAGMENTATION",
+        "description": "Sultanate fragmented after prolonged internal conflict. Harar became an independent emirate. The Somali Ajuran Sultanate and Oromo expansion absorbed former Adal territories.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      }
     ],
     "sources": [
-      {"citation": "Arab-Faqih, Shihab al-Din Ahmad ibn Abd al-Qadir. Futuh al-Habasha: The Conquest of Abyssinia. Trans. Paul Lester Stenhouse. Hollywood, CA: Tsehai, 2003 (orig. c.1559)", "source_type": "primary", "url": null},
-      {"citation": "Braukamper, Ulrich. Islamic History and Culture in Southern Ethiopia: Collected Essays. Munster: LIT Verlag, 2002", "source_type": "academic", "url": null},
-      {"citation": "Lewis, I.M. A Modern History of the Somali: Nation and State in the Horn of Africa. 4th ed. Oxford: James Currey, 2002", "source_type": "academic", "url": null}
+      {
+        "citation": "Arab-Faqih, Shihab al-Din Ahmad ibn Abd al-Qadir. Futuh al-Habasha: The Conquest of Abyssinia. Trans. Paul Lester Stenhouse. Hollywood, CA: Tsehai, 2003 (orig. c.1559)",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Braukamper, Ulrich. Islamic History and Culture in Southern Ethiopia: Collected Essays. Munster: LIT Verlag, 2002",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Lewis, I.M. A Modern History of the Somali: Nation and State in the Horn of Africa. 4th ed. Oxford: James Currey, 2002",
+        "source_type": "academic",
+        "url": null
+      }
     ]
   },
   {
@@ -452,27 +1228,124 @@
     "status": "uncertain",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [41.0, 9.0], [42.0, 9.5], [43.0, 10.0], [44.0, 10.5],
-        [44.5, 11.0], [44.5, 11.5], [44.0, 11.5], [43.5, 11.0],
-        [43.0, 10.5], [42.0, 10.0], [41.0, 9.5], [40.5, 9.0],
-        [41.0, 9.0]
-      ]]
+      "coordinates": [
+        [
+          [
+            41.0,
+            9.0
+          ],
+          [
+            42.0,
+            9.5
+          ],
+          [
+            43.0,
+            10.0
+          ],
+          [
+            44.0,
+            10.5
+          ],
+          [
+            44.5,
+            11.0
+          ],
+          [
+            44.5,
+            11.5
+          ],
+          [
+            44.0,
+            11.5
+          ],
+          [
+            43.5,
+            11.0
+          ],
+          [
+            43.0,
+            10.5
+          ],
+          [
+            42.0,
+            10.0
+          ],
+          [
+            41.0,
+            9.5
+          ],
+          [
+            40.5,
+            9.0
+          ],
+          [
+            41.0,
+            9.0
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Sultanate of Ifat was an early Islamic polity in the Horn of Africa, predecessor to the Sultanate of Adal. Its history is primarily known through Ethiopian Christian chronicles (which portray it as an enemy) and fragmentary Arabic sources. The sultanate was ruled by the Walashma dynasty, whose ethnic affiliation (Somali, Afar, or Argobba) is debated among historians. This debate has modern political implications for Somali, Afar, and Ethiopian national narratives. The database must present all scholarly positions without arbitrating. The port of Zeila was a major node in Indian Ocean trade and the slave trade from the Horn of Africa. Confidence score reflects limited and biased primary sources.",
     "name_variants": [
-      {"name": "Sultanate of Ifat", "lang": "en", "period_start": 1285, "period_end": 1415, "context": "English academic designation", "source": "Trimingham, J. Spencer. Islam in Ethiopia (1952)"},
-      {"name": "Sultanat d'Ifat", "lang": "fr", "period_start": 1285, "period_end": 1415, "context": "French designation", "source": "Cerulli, Enrico. 'L'Islam en Ethiopie' in Studi Etiopici (1936)"},
-      {"name": "سلطنة إيفات", "lang": "ar", "period_start": 1285, "period_end": 1415, "context": "Arabic designation from Islamic historical sources", "source": "Al-Umari, Ibn Fadl Allah. Masalik al-Absar (c.1340)"}
+      {
+        "name": "Sultanate of Ifat",
+        "lang": "en",
+        "period_start": 1285,
+        "period_end": 1415,
+        "context": "English academic designation",
+        "source": "Trimingham, J. Spencer. Islam in Ethiopia (1952)"
+      },
+      {
+        "name": "Sultanat d'Ifat",
+        "lang": "fr",
+        "period_start": 1285,
+        "period_end": 1415,
+        "context": "French designation",
+        "source": "Cerulli, Enrico. 'L'Islam en Ethiopie' in Studi Etiopici (1936)"
+      },
+      {
+        "name": "سلطنة إيفات",
+        "lang": "ar",
+        "period_start": 1285,
+        "period_end": 1415,
+        "context": "Arabic designation from Islamic historical sources",
+        "source": "Al-Umari, Ibn Fadl Allah. Masalik al-Absar (c.1340)"
+      }
     ],
     "territory_changes": [
-      {"year": 1332, "region": "Ifat territory", "change_type": "CONQUEST_MILITARY", "description": "Ethiopian Emperor Amda Seyon I campaigned against Ifat, defeating Sultan Haqq ad-Din I. The sultanate was forced to acknowledge Ethiopian suzerainty, though it retained internal autonomy. Ethiopian chronicles describe this campaign in detail but from a hostile perspective.", "population_affected": null, "confidence_score": 0.55},
-      {"year": 1415, "region": "Horn of Africa", "change_type": "SUCCESSION", "description": "Ifat was succeeded by the Sultanate of Adal, also under the Walashma dynasty but centered further east. The transition reflects both Ethiopian military pressure and shifting trade routes. Adal would continue Ifat's conflict with Christian Ethiopia.", "population_affected": null, "confidence_score": 0.5}
+      {
+        "year": 1332,
+        "region": "Ifat territory",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ethiopian Emperor Amda Seyon I campaigned against Ifat, defeating Sultan Haqq ad-Din I. The sultanate was forced to acknowledge Ethiopian suzerainty, though it retained internal autonomy. Ethiopian chronicles describe this campaign in detail but from a hostile perspective.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1415,
+        "region": "Horn of Africa",
+        "change_type": "SUCCESSION",
+        "description": "Ifat was succeeded by the Sultanate of Adal, also under the Walashma dynasty but centered further east. The transition reflects both Ethiopian military pressure and shifting trade routes. Adal would continue Ifat's conflict with Christian Ethiopia.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      }
     ],
     "sources": [
-      {"citation": "Trimingham, J. Spencer. Islam in Ethiopia. Oxford University Press, 1952", "source_type": "academic", "url": null},
-      {"citation": "Al-Umari, Ibn Fadl Allah. Masalik al-Absar fi Mamalik al-Amsar. c.1340", "source_type": "primary", "url": null},
-      {"citation": "Cerulli, Enrico. 'L'Islam en Ethiopie.' In Studi Etiopici, vol. I. Rome: Instituto per l'Oriente, 1936", "source_type": "academic", "url": null}
+      {
+        "citation": "Trimingham, J. Spencer. Islam in Ethiopia. Oxford University Press, 1952",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Al-Umari, Ibn Fadl Allah. Masalik al-Absar fi Mamalik al-Amsar. c.1340",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Cerulli, Enrico. 'L'Islam en Ethiopie.' In Studi Etiopici, vol. I. Rome: Instituto per l'Oriente, 1936",
+        "source_type": "academic",
+        "url": null
+      }
     ]
   },
   {
@@ -482,34 +1355,146 @@
     "year_start": 1504,
     "year_end": 1821,
     "capital_name": "Sennar",
-    "capital_lat": 13.5500,
-    "capital_lon": 33.6000,
+    "capital_lat": 13.55,
+    "capital_lon": 33.6,
     "confidence_score": 0.6,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [32.0, 12.0], [33.0, 12.5], [34.0, 13.0], [35.0, 13.5],
-        [36.0, 14.0], [36.0, 15.5], [35.5, 16.5], [35.0, 17.0],
-        [34.0, 17.0], [33.0, 16.5], [32.0, 16.0], [31.5, 15.0],
-        [31.5, 14.0], [31.5, 13.0], [32.0, 12.0]
-      ]]
+      "coordinates": [
+        [
+          [
+            32.0,
+            12.0
+          ],
+          [
+            33.0,
+            12.5
+          ],
+          [
+            34.0,
+            13.0
+          ],
+          [
+            35.0,
+            13.5
+          ],
+          [
+            36.0,
+            14.0
+          ],
+          [
+            36.0,
+            15.5
+          ],
+          [
+            35.5,
+            16.5
+          ],
+          [
+            35.0,
+            17.0
+          ],
+          [
+            34.0,
+            17.0
+          ],
+          [
+            33.0,
+            16.5
+          ],
+          [
+            32.0,
+            16.0
+          ],
+          [
+            31.5,
+            15.0
+          ],
+          [
+            31.5,
+            14.0
+          ],
+          [
+            31.5,
+            13.0
+          ],
+          [
+            32.0,
+            12.0
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Funj Sultanate (Sultanate of Sennar) was a major Sudanese Islamic state that united the Blue Nile region. The ethnic origins of the Funj ruling dynasty remain debated: claims of Umayyad Arab descent are likely political legitimation myths, and the Funj were probably of indigenous Sudanese (possibly Shilluk-related) origin who converted to Islam. The sultanate operated an extensive slave trade, raiding non-Muslim peoples to the south (Nuba Mountains, Shilluk, etc.). This internal African slave trade must be documented alongside the sultanate's achievements in Islamic scholarship and state-building. The Egyptian-Ottoman conquest in 1821 under Ismail Pasha was brutal, involving massacres and the imposition of extractive colonial rule (Turkiyya).",
     "name_variants": [
-      {"name": "Funj Sultanate", "lang": "en", "period_start": 1504, "period_end": 1821, "context": "English academic designation using the dynasty name", "source": "Spaulding, Jay. The Heroic Age in Sinnar (1985)"},
-      {"name": "Sultanate of Sennar", "lang": "en", "period_start": 1504, "period_end": 1821, "context": "English designation using the capital city", "source": "O'Fahey, R.S. and J.L. Spaulding. Kingdoms of the Sudan (1974)"},
-      {"name": "سلطنة سنار", "lang": "ar", "period_start": 1504, "period_end": 1821, "context": "Arabic self-designation", "source": "Funj Chronicle (Tabaqat Wad Dayf Allah)"},
-      {"name": "Sultanat des Fung", "lang": "fr", "period_start": 1504, "period_end": 1821, "context": "French designation", "source": "Holt, P.M. and M.W. Daly. A History of the Sudan (2011)"}
+      {
+        "name": "Funj Sultanate",
+        "lang": "en",
+        "period_start": 1504,
+        "period_end": 1821,
+        "context": "English academic designation using the dynasty name",
+        "source": "Spaulding, Jay. The Heroic Age in Sinnar (1985)"
+      },
+      {
+        "name": "Sultanate of Sennar",
+        "lang": "en",
+        "period_start": 1504,
+        "period_end": 1821,
+        "context": "English designation using the capital city",
+        "source": "O'Fahey, R.S. and J.L. Spaulding. Kingdoms of the Sudan (1974)"
+      },
+      {
+        "name": "سلطنة سنار",
+        "lang": "ar",
+        "period_start": 1504,
+        "period_end": 1821,
+        "context": "Arabic self-designation",
+        "source": "Funj Chronicle (Tabaqat Wad Dayf Allah)"
+      },
+      {
+        "name": "Sultanat des Fung",
+        "lang": "fr",
+        "period_start": 1504,
+        "period_end": 1821,
+        "context": "French designation",
+        "source": "Holt, P.M. and M.W. Daly. A History of the Sudan (2011)"
+      }
     ],
     "territory_changes": [
-      {"year": 1504, "region": "Blue Nile confluence", "change_type": "CONQUEST_MILITARY", "description": "Amara Dunqas, founder of the Funj dynasty, defeated the remnants of the Christian kingdom of Alodia/Alwa and established the Sultanate of Sennar. This marked the end of Nubian Christianity in the central Nile region.", "population_affected": null, "confidence_score": 0.55},
-      {"year": 1821, "region": "Sennar", "change_type": "CONQUEST_MILITARY", "description": "Egyptian-Ottoman forces under Ismail Pasha conquered the Funj Sultanate. The last sultan surrendered Sennar without significant resistance, as the state had been weakened by internal divisions. The Turkiyya (Egyptian colonial period) imposed brutal extractive rule, heavy taxation, and expanded the slave trade.", "population_affected": null, "confidence_score": 0.8}
+      {
+        "year": 1504,
+        "region": "Blue Nile confluence",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Amara Dunqas, founder of the Funj dynasty, defeated the remnants of the Christian kingdom of Alodia/Alwa and established the Sultanate of Sennar. This marked the end of Nubian Christianity in the central Nile region.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1821,
+        "region": "Sennar",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Egyptian-Ottoman forces under Ismail Pasha conquered the Funj Sultanate. The last sultan surrendered Sennar without significant resistance, as the state had been weakened by internal divisions. The Turkiyya (Egyptian colonial period) imposed brutal extractive rule, heavy taxation, and expanded the slave trade.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
     ],
     "sources": [
-      {"citation": "Spaulding, Jay. The Heroic Age in Sinnar. East Lansing: African Studies Center, Michigan State University, 1985", "source_type": "academic", "url": null},
-      {"citation": "O'Fahey, R.S. and J.L. Spaulding. Kingdoms of the Sudan. London: Methuen, 1974", "source_type": "academic", "url": null},
-      {"citation": "Tabaqat Wad Dayf Allah (Biographical Dictionary of Sudanese Holy Men), early 19th century", "source_type": "primary", "url": null}
+      {
+        "citation": "Spaulding, Jay. The Heroic Age in Sinnar. East Lansing: African Studies Center, Michigan State University, 1985",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "O'Fahey, R.S. and J.L. Spaulding. Kingdoms of the Sudan. London: Methuen, 1974",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Tabaqat Wad Dayf Allah (Biographical Dictionary of Sudanese Holy Men), early 19th century",
+        "source_type": "primary",
+        "url": null
+      }
     ]
   },
   {
@@ -525,26 +1510,116 @@
     "status": "disputed",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [29.5, 11.0], [30.0, 11.3], [30.5, 11.6], [31.0, 12.0],
-        [31.5, 12.3], [31.5, 11.8], [31.0, 11.3], [30.5, 10.8],
-        [30.0, 10.5], [29.5, 10.8], [29.5, 11.0]
-      ]]
+      "coordinates": [
+        [
+          [
+            29.5,
+            11.0
+          ],
+          [
+            30.0,
+            11.3
+          ],
+          [
+            30.5,
+            11.6
+          ],
+          [
+            31.0,
+            12.0
+          ],
+          [
+            31.5,
+            12.3
+          ],
+          [
+            31.5,
+            11.8
+          ],
+          [
+            31.0,
+            11.3
+          ],
+          [
+            30.5,
+            10.8
+          ],
+          [
+            30.0,
+            10.5
+          ],
+          [
+            29.5,
+            10.8
+          ],
+          [
+            29.5,
+            11.0
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Kingdom of Taqali was a small but significant Nuba Mountains polity in present-day South Kordofan, Sudan. The Nuba peoples have faced centuries of marginalization: raided for slaves by the Funj Sultanate, the Turkiyya regime, and the Mahdist state; bombed by the Sudanese government in modern civil wars. Taqali's history is representative of the broader Nuba experience of being targeted by lowland states. Sources are extremely limited; oral traditions are the primary indigenous record. The kingdom's boundaries and dates are approximate. The low confidence score reflects genuine uncertainty about political structures that were poorly documented by external observers.",
     "name_variants": [
-      {"name": "Kingdom of Taqali", "lang": "en", "period_start": 1570, "period_end": 1884, "context": "English academic designation", "source": "Ewald, Janet J. Soldiers, Traders, and Slaves (1990)"},
-      {"name": "Tegali", "lang": "en", "period_start": 1570, "period_end": 1884, "context": "Alternate English spelling", "source": "Pallme, Ignatius. Travels in Kordofan (1844)"},
-      {"name": "مملكة تقلي", "lang": "ar", "period_start": 1570, "period_end": 1884, "context": "Arabic designation", "source": "Na'um Shuqayr. Tarikh al-Sudan al-Qadim wa-l-Hadith (1903)"}
+      {
+        "name": "Kingdom of Taqali",
+        "lang": "en",
+        "period_start": 1570,
+        "period_end": 1884,
+        "context": "English academic designation",
+        "source": "Ewald, Janet J. Soldiers, Traders, and Slaves (1990)"
+      },
+      {
+        "name": "Tegali",
+        "lang": "en",
+        "period_start": 1570,
+        "period_end": 1884,
+        "context": "Alternate English spelling",
+        "source": "Pallme, Ignatius. Travels in Kordofan (1844)"
+      },
+      {
+        "name": "مملكة تقلي",
+        "lang": "ar",
+        "period_start": 1570,
+        "period_end": 1884,
+        "context": "Arabic designation",
+        "source": "Na'um Shuqayr. Tarikh al-Sudan al-Qadim wa-l-Hadith (1903)"
+      }
     ],
     "territory_changes": [
-      {"year": 1821, "region": "Nuba Mountains", "change_type": "CESSION_FORCED", "description": "Egyptian-Ottoman (Turkiyya) forces imposed tribute and slave-raiding obligations on Taqali. The kingdom retained nominal autonomy but became a vassal state, forced to participate in slave raids against neighboring Nuba communities.", "population_affected": null, "confidence_score": 0.45},
-      {"year": 1884, "region": "Nuba Mountains", "change_type": "CONQUEST_MILITARY", "description": "Mahdist forces conquered Taqali during the Mahdist Revolution. The kingdom was incorporated into the Mahdist state. The Nuba population suffered further displacement and enslavement.", "population_affected": null, "confidence_score": 0.5}
+      {
+        "year": 1821,
+        "region": "Nuba Mountains",
+        "change_type": "CESSION_FORCED",
+        "description": "Egyptian-Ottoman (Turkiyya) forces imposed tribute and slave-raiding obligations on Taqali. The kingdom retained nominal autonomy but became a vassal state, forced to participate in slave raids against neighboring Nuba communities.",
+        "population_affected": null,
+        "confidence_score": 0.45
+      },
+      {
+        "year": 1884,
+        "region": "Nuba Mountains",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Mahdist forces conquered Taqali during the Mahdist Revolution. The kingdom was incorporated into the Mahdist state. The Nuba population suffered further displacement and enslavement.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      }
     ],
     "sources": [
-      {"citation": "Ewald, Janet J. Soldiers, Traders, and Slaves: State Formation and Economic Transformation in the Greater Nile Valley, 1700-1885. Madison: University of Wisconsin Press, 1990", "source_type": "academic", "url": null},
-      {"citation": "Pallme, Ignatius. Travels in Kordofan. London: J. Madden, 1844", "source_type": "primary", "url": null},
-      {"citation": "Sagar, J.W. 'Notes on the History, Religion and Customs of the Nuba.' Sudan Notes and Records 5 (1922): 137-156", "source_type": "secondary", "url": null}
+      {
+        "citation": "Ewald, Janet J. Soldiers, Traders, and Slaves: State Formation and Economic Transformation in the Greater Nile Valley, 1700-1885. Madison: University of Wisconsin Press, 1990",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Pallme, Ignatius. Travels in Kordofan. London: J. Madden, 1844",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Sagar, J.W. 'Notes on the History, Religion and Customs of the Nuba.' Sudan Notes and Records 5 (1922): 137-156",
+        "source_type": "secondary",
+        "url": null
+      }
     ]
   },
   {
@@ -560,27 +1635,132 @@
     "status": "uncertain",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [19.0, 12.0], [20.0, 12.5], [21.0, 13.0], [22.0, 13.5],
-        [22.5, 14.0], [22.5, 15.0], [22.0, 15.5], [21.0, 16.0],
-        [20.0, 16.0], [19.0, 15.5], [18.5, 15.0], [18.0, 14.0],
-        [18.0, 13.0], [18.5, 12.5], [19.0, 12.0]
-      ]]
+      "coordinates": [
+        [
+          [
+            19.0,
+            12.0
+          ],
+          [
+            20.0,
+            12.5
+          ],
+          [
+            21.0,
+            13.0
+          ],
+          [
+            22.0,
+            13.5
+          ],
+          [
+            22.5,
+            14.0
+          ],
+          [
+            22.5,
+            15.0
+          ],
+          [
+            22.0,
+            15.5
+          ],
+          [
+            21.0,
+            16.0
+          ],
+          [
+            20.0,
+            16.0
+          ],
+          [
+            19.0,
+            15.5
+          ],
+          [
+            18.5,
+            15.0
+          ],
+          [
+            18.0,
+            14.0
+          ],
+          [
+            18.0,
+            13.0
+          ],
+          [
+            18.5,
+            12.5
+          ],
+          [
+            19.0,
+            12.0
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Wadai Empire (Ouaddai in French spelling) was a major Sahelian state in present-day eastern Chad. It was a significant participant in the trans-Saharan slave trade, raiding southern non-Muslim peoples (Sara, Bagirmi) for enslaved people exported north via the Darb al-Arba'in route. The Maba and related peoples formed the ruling class. French colonial conquest (1909-1912) was met with fierce resistance: Sultan Dud Murra fought guerrilla warfare for years. French colonial sources portray Wadai as a 'slave state' to justify conquest, while minimizing the economic exploitation that French colonialism itself imposed. Both the indigenous slave trade and the colonial violence must be documented without one being used to excuse the other.",
     "name_variants": [
-      {"name": "Wadai Empire", "lang": "en", "period_start": 1501, "period_end": 1912, "context": "English academic designation", "source": "Nachtigal, Gustav. Sahara and Sudan, vol. IV (1889, tr. 1971)"},
-      {"name": "Empire du Ouaddai", "lang": "fr", "period_start": 1501, "period_end": 1912, "context": "French colonial designation", "source": "Carbou, Henri. La Region du Tchad et du Ouaddai (1912)"},
-      {"name": "دار وداي", "lang": "ar", "period_start": 1501, "period_end": 1912, "context": "Arabic designation meaning 'Land of Wadai'", "source": "Al-Tunisi, Muhammad ibn Umar. Tashhidh al-Adhhan (1851)"}
+      {
+        "name": "Wadai Empire",
+        "lang": "en",
+        "period_start": 1501,
+        "period_end": 1912,
+        "context": "English academic designation",
+        "source": "Nachtigal, Gustav. Sahara and Sudan, vol. IV (1889, tr. 1971)"
+      },
+      {
+        "name": "Empire du Ouaddai",
+        "lang": "fr",
+        "period_start": 1501,
+        "period_end": 1912,
+        "context": "French colonial designation",
+        "source": "Carbou, Henri. La Region du Tchad et du Ouaddai (1912)"
+      },
+      {
+        "name": "دار وداي",
+        "lang": "ar",
+        "period_start": 1501,
+        "period_end": 1912,
+        "context": "Arabic designation meaning 'Land of Wadai'",
+        "source": "Al-Tunisi, Muhammad ibn Umar. Tashhidh al-Adhhan (1851)"
+      }
     ],
     "territory_changes": [
-      {"year": 1804, "region": "Bagirmi", "change_type": "CONQUEST_MILITARY", "description": "Wadai defeated and subjugated the Bagirmi kingdom, making it a tributary state. Bagirmi had been a rival power in the central Chad basin. The conquest expanded Wadai's access to slave-raiding zones in the south.", "population_affected": null, "confidence_score": 0.55},
-      {"year": 1912, "region": "Wadai territory", "change_type": "COLONIZATION", "description": "French forces conquered Wadai after prolonged resistance. Sultan Dud Murra was captured in 1911 after years of guerrilla warfare. The territory was incorporated into French Equatorial Africa (Chad). Traditional political structures were dismantled.", "population_affected": null, "confidence_score": 0.8}
+      {
+        "year": 1804,
+        "region": "Bagirmi",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Wadai defeated and subjugated the Bagirmi kingdom, making it a tributary state. Bagirmi had been a rival power in the central Chad basin. The conquest expanded Wadai's access to slave-raiding zones in the south.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1912,
+        "region": "Wadai territory",
+        "change_type": "COLONIZATION",
+        "description": "French forces conquered Wadai after prolonged resistance. Sultan Dud Murra was captured in 1911 after years of guerrilla warfare. The territory was incorporated into French Equatorial Africa (Chad). Traditional political structures were dismantled.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
     ],
     "sources": [
-      {"citation": "Nachtigal, Gustav. Sahara and Sudan. Vol. IV: Wadai and Darfur. Trans. Allan G.B. Fisher and Humphrey J. Fisher. London: Hurst, 1971 (orig. 1889)", "source_type": "primary", "url": null},
-      {"citation": "Al-Tunisi, Muhammad ibn Umar. Tashhidh al-Adhhan bi-Sirat Bilad al-Arab wa-l-Sudan. Paris, 1851", "source_type": "primary", "url": null},
-      {"citation": "Carbou, Henri. La Region du Tchad et du Ouaddai. 2 vols. Paris: Leroux, 1912", "source_type": "secondary", "url": null}
+      {
+        "citation": "Nachtigal, Gustav. Sahara and Sudan. Vol. IV: Wadai and Darfur. Trans. Allan G.B. Fisher and Humphrey J. Fisher. London: Hurst, 1971 (orig. 1889)",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Al-Tunisi, Muhammad ibn Umar. Tashhidh al-Adhhan bi-Sirat Bilad al-Arab wa-l-Sudan. Paris, 1851",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Carbou, Henri. La Region du Tchad et du Ouaddai. 2 vols. Paris: Leroux, 1912",
+        "source_type": "secondary",
+        "url": null
+      }
     ]
   },
   {
@@ -596,29 +1776,148 @@
     "status": "confirmed",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [23.0, 12.0], [24.0, 12.5], [25.0, 13.0], [26.0, 13.5],
-        [27.0, 14.0], [27.5, 15.0], [27.0, 16.0], [26.0, 16.5],
-        [25.0, 16.5], [24.0, 16.0], [23.0, 15.5], [22.5, 15.0],
-        [22.5, 14.0], [22.5, 13.0], [23.0, 12.0]
-      ]]
+      "coordinates": [
+        [
+          [
+            23.0,
+            12.0
+          ],
+          [
+            24.0,
+            12.5
+          ],
+          [
+            25.0,
+            13.0
+          ],
+          [
+            26.0,
+            13.5
+          ],
+          [
+            27.0,
+            14.0
+          ],
+          [
+            27.5,
+            15.0
+          ],
+          [
+            27.0,
+            16.0
+          ],
+          [
+            26.0,
+            16.5
+          ],
+          [
+            25.0,
+            16.5
+          ],
+          [
+            24.0,
+            16.0
+          ],
+          [
+            23.0,
+            15.5
+          ],
+          [
+            22.5,
+            15.0
+          ],
+          [
+            22.5,
+            14.0
+          ],
+          [
+            22.5,
+            13.0
+          ],
+          [
+            23.0,
+            12.0
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Sultanate of Darfur was a major Sahelian state whose legacy is deeply entangled with modern conflict. The Fur people established the Keira dynasty. The sultanate was a major node in the trans-Saharan slave trade, particularly along the Darb al-Arba'in ('Forty Days Road') to Egypt. The 2003-present Darfur conflict has roots in historical tensions between sedentary Fur/Masalit/Zaghawa farmers and nomadic Arab groups, but these tensions were exacerbated by British colonial policies of indirect rule that hardened ethnic boundaries. Modern political instrumentalization of the Darfur Sultanate's history by all sides of the conflict must be acknowledged. The sultanate's destruction by Anglo-Egyptian forces in 1916 and the killing of Sultan Ali Dinar was an act of colonial aggression during WWI.",
     "name_variants": [
-      {"name": "Sultanate of Darfur", "lang": "en", "period_start": 1603, "period_end": 1916, "context": "English academic designation", "source": "O'Fahey, R.S. The Darfur Sultanate (2008)"},
-      {"name": "Sultanat du Darfour", "lang": "fr", "period_start": 1603, "period_end": 1916, "context": "French designation", "source": "Nachtigal, Gustav. Sahara and Sudan, vol. IV (1889)"},
-      {"name": "سلطنة دار فور", "lang": "ar", "period_start": 1603, "period_end": 1916, "context": "Arabic designation meaning 'Sultanate of the Land of the Fur'", "source": "Al-Tunisi, Muhammad ibn Umar. Tashhidh al-Adhhan (1851)"},
-      {"name": "Dar Fur", "lang": "fur", "period_start": 1603, "period_end": 1916, "context": "Fur-language name meaning 'Land of the Fur'", "source": "O'Fahey, R.S. State and Society in Darfur (1980)"}
+      {
+        "name": "Sultanate of Darfur",
+        "lang": "en",
+        "period_start": 1603,
+        "period_end": 1916,
+        "context": "English academic designation",
+        "source": "O'Fahey, R.S. The Darfur Sultanate (2008)"
+      },
+      {
+        "name": "Sultanat du Darfour",
+        "lang": "fr",
+        "period_start": 1603,
+        "period_end": 1916,
+        "context": "French designation",
+        "source": "Nachtigal, Gustav. Sahara and Sudan, vol. IV (1889)"
+      },
+      {
+        "name": "سلطنة دار فور",
+        "lang": "ar",
+        "period_start": 1603,
+        "period_end": 1916,
+        "context": "Arabic designation meaning 'Sultanate of the Land of the Fur'",
+        "source": "Al-Tunisi, Muhammad ibn Umar. Tashhidh al-Adhhan (1851)"
+      },
+      {
+        "name": "Dar Fur",
+        "lang": "fur",
+        "period_start": 1603,
+        "period_end": 1916,
+        "context": "Fur-language name meaning 'Land of the Fur'",
+        "source": "O'Fahey, R.S. State and Society in Darfur (1980)"
+      }
     ],
     "territory_changes": [
-      {"year": 1874, "region": "Darfur", "change_type": "CONQUEST_MILITARY", "description": "Zubayr Rahma Mansur, a Sudanese slave trader allied with the Egyptian Khedivate, conquered Darfur. Sultan Ibrahim was killed. Egyptian rule imposed extractive taxation and expanded slave trading. This ended the first period of Keira dynasty rule.", "population_affected": null, "confidence_score": 0.7},
-      {"year": 1898, "region": "Darfur", "change_type": "INDEPENDENCE", "description": "Sultan Ali Dinar, descendant of the Keira dynasty, restored the Darfur Sultanate after the fall of the Mahdist state. He initially cooperated with Anglo-Egyptian authorities but maintained de facto independence.", "population_affected": null, "confidence_score": 0.7},
-      {"year": 1916, "region": "Darfur", "change_type": "CONQUEST_MILITARY", "description": "Anglo-Egyptian forces invaded Darfur during WWI, partly because Ali Dinar had received overtures from the Ottoman Empire. Ali Dinar was killed in battle. Darfur was annexed to the Anglo-Egyptian Sudan. British indirect rule policies exacerbated ethnic divisions that contributed to later conflicts.", "population_affected": null, "confidence_score": 0.85}
+      {
+        "year": 1874,
+        "region": "Darfur",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Zubayr Rahma Mansur, a Sudanese slave trader allied with the Egyptian Khedivate, conquered Darfur. Sultan Ibrahim was killed. Egyptian rule imposed extractive taxation and expanded slave trading. This ended the first period of Keira dynasty rule.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1898,
+        "region": "Darfur",
+        "change_type": "INDEPENDENCE",
+        "description": "Sultan Ali Dinar, descendant of the Keira dynasty, restored the Darfur Sultanate after the fall of the Mahdist state. He initially cooperated with Anglo-Egyptian authorities but maintained de facto independence.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1916,
+        "region": "Darfur",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Anglo-Egyptian forces invaded Darfur during WWI, partly because Ali Dinar had received overtures from the Ottoman Empire. Ali Dinar was killed in battle. Darfur was annexed to the Anglo-Egyptian Sudan. British indirect rule policies exacerbated ethnic divisions that contributed to later conflicts.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
     ],
     "sources": [
-      {"citation": "O'Fahey, R.S. The Darfur Sultanate: A History. London: Hurst, 2008", "source_type": "academic", "url": null},
-      {"citation": "O'Fahey, R.S. State and Society in Darfur. London: Hurst, 1980", "source_type": "academic", "url": null},
-      {"citation": "Al-Tunisi, Muhammad ibn Umar. Tashhidh al-Adhhan bi-Sirat Bilad al-Arab wa-l-Sudan. Paris, 1851", "source_type": "primary", "url": null}
+      {
+        "citation": "O'Fahey, R.S. The Darfur Sultanate: A History. London: Hurst, 2008",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "O'Fahey, R.S. State and Society in Darfur. London: Hurst, 1980",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Al-Tunisi, Muhammad ibn Umar. Tashhidh al-Adhhan bi-Sirat Bilad al-Arab wa-l-Sudan. Paris, 1851",
+        "source_type": "primary",
+        "url": null
+      }
     ]
   },
   {
@@ -629,33 +1928,145 @@
     "year_end": 1804,
     "capital_name": "Kano",
     "capital_lat": 12.0022,
-    "capital_lon": 8.5920,
+    "capital_lon": 8.592,
     "confidence_score": 0.65,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [5.0, 10.0], [6.0, 10.5], [7.0, 11.0], [8.0, 11.5],
-        [9.0, 12.0], [10.0, 12.5], [10.5, 13.0], [10.5, 13.5],
-        [10.0, 14.0], [9.0, 14.0], [8.0, 13.5], [7.0, 13.0],
-        [6.0, 12.5], [5.0, 12.0], [4.5, 11.5], [4.5, 10.5],
-        [5.0, 10.0]
-      ]]
+      "coordinates": [
+        [
+          [
+            5.0,
+            10.0
+          ],
+          [
+            6.0,
+            10.5
+          ],
+          [
+            7.0,
+            11.0
+          ],
+          [
+            8.0,
+            11.5
+          ],
+          [
+            9.0,
+            12.0
+          ],
+          [
+            10.0,
+            12.5
+          ],
+          [
+            10.5,
+            13.0
+          ],
+          [
+            10.5,
+            13.5
+          ],
+          [
+            10.0,
+            14.0
+          ],
+          [
+            9.0,
+            14.0
+          ],
+          [
+            8.0,
+            13.5
+          ],
+          [
+            7.0,
+            13.0
+          ],
+          [
+            6.0,
+            12.5
+          ],
+          [
+            5.0,
+            12.0
+          ],
+          [
+            4.5,
+            11.5
+          ],
+          [
+            4.5,
+            10.5
+          ],
+          [
+            5.0,
+            10.0
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Hausa city-states (Bakwai or 'legitimate seven': Kano, Katsina, Zaria/Zazzau, Gobir, Daura, Rano, Biram) were independent polities sharing a common language and culture but never politically unified before the Sokoto jihad of 1804. Each city-state had distinct characteristics: Kano and Katsina were major trade centers; Zazzau was known for slave-raiding. The Hausa states were significant participants in both the trans-Saharan and later the Atlantic slave trade. The Kano Chronicle, an indigenous historical document, provides valuable but politically motivated history. The Fulani jihad of 1804 overthrew the Hausa sarkin (kings), replacing them with Fulani emirs. The Hausa-Fulani distinction remains politically significant in modern Nigeria. The Bayajidda legend of Hausa origins should be noted as foundational mythology, not literal history.",
     "name_variants": [
-      {"name": "Hausa city-states", "lang": "en", "period_start": 1000, "period_end": 1804, "context": "English academic designation for the collectively recognized states", "source": "Smith, Abdullahi. 'The Early States of the Central Sudan' in History of West Africa, vol. 1 (1971)"},
-      {"name": "Hausa Bakwai", "lang": "ha", "period_start": 1000, "period_end": 1804, "context": "Hausa designation for the 'legitimate seven' states", "source": "Palmer, H.R. 'The Kano Chronicle.' Journal of the Royal Anthropological Institute 38 (1908)"},
-      {"name": "Cites-Etats Haoussa", "lang": "fr", "period_start": 1000, "period_end": 1804, "context": "French academic designation", "source": "Adamu, Mahdi. The Hausa Factor in West African History (1978)"}
+      {
+        "name": "Hausa city-states",
+        "lang": "en",
+        "period_start": 1000,
+        "period_end": 1804,
+        "context": "English academic designation for the collectively recognized states",
+        "source": "Smith, Abdullahi. 'The Early States of the Central Sudan' in History of West Africa, vol. 1 (1971)"
+      },
+      {
+        "name": "Hausa Bakwai",
+        "lang": "ha",
+        "period_start": 1000,
+        "period_end": 1804,
+        "context": "Hausa designation for the 'legitimate seven' states",
+        "source": "Palmer, H.R. 'The Kano Chronicle.' Journal of the Royal Anthropological Institute 38 (1908)"
+      },
+      {
+        "name": "Cites-Etats Haoussa",
+        "lang": "fr",
+        "period_start": 1000,
+        "period_end": 1804,
+        "context": "French academic designation",
+        "source": "Adamu, Mahdi. The Hausa Factor in West African History (1978)"
+      }
     ],
     "territory_changes": [
-      {"year": 1513, "region": "Kano", "change_type": "CONQUEST_MILITARY", "description": "Songhai Empire under Askia Muhammad conquered parts of western Hausaland. Kano and other cities paid tribute to Songhai, though local Hausa rulers retained internal authority. This demonstrated the integration of Hausaland into wider Sahelian political networks.", "population_affected": null, "confidence_score": 0.55},
-      {"year": 1804, "region": "Hausaland", "change_type": "REVOLUTION", "description": "Fulani jihad launched by Usman dan Fodio overthrew the Hausa sarkin. The Hausa city-states were absorbed into the Sokoto Caliphate as emirates ruled by Fulani emirs. This was justified as Islamic reform against syncretic practices but fundamentally restructured political power along ethnic lines. Many Hausa commoners supported the jihad against their own rulers.", "population_affected": null, "confidence_score": 0.75}
+      {
+        "year": 1513,
+        "region": "Kano",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Songhai Empire under Askia Muhammad conquered parts of western Hausaland. Kano and other cities paid tribute to Songhai, though local Hausa rulers retained internal authority. This demonstrated the integration of Hausaland into wider Sahelian political networks.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1804,
+        "region": "Hausaland",
+        "change_type": "REVOLUTION",
+        "description": "Fulani jihad launched by Usman dan Fodio overthrew the Hausa sarkin. The Hausa city-states were absorbed into the Sokoto Caliphate as emirates ruled by Fulani emirs. This was justified as Islamic reform against syncretic practices but fundamentally restructured political power along ethnic lines. Many Hausa commoners supported the jihad against their own rulers.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
     ],
     "sources": [
-      {"citation": "Palmer, H.R. 'The Kano Chronicle.' Journal of the Royal Anthropological Institute 38 (1908): 58-98", "source_type": "primary", "url": null},
-      {"citation": "Smith, Abdullahi. 'The Early States of the Central Sudan.' In History of West Africa, vol. 1, ed. J.F.A. Ajayi and Michael Crowder. London: Longman, 1971", "source_type": "academic", "url": null},
-      {"citation": "Adamu, Mahdi. The Hausa Factor in West African History. Zaria: Ahmadu Bello University Press, 1978", "source_type": "academic", "url": null}
+      {
+        "citation": "Palmer, H.R. 'The Kano Chronicle.' Journal of the Royal Anthropological Institute 38 (1908): 58-98",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Smith, Abdullahi. 'The Early States of the Central Sudan.' In History of West Africa, vol. 1, ed. J.F.A. Ajayi and Michael Crowder. London: Longman, 1971",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Adamu, Mahdi. The Hausa Factor in West African History. Zaria: Ahmadu Bello University Press, 1978",
+        "source_type": "academic",
+        "url": null
+      }
     ]
   },
   {
@@ -671,26 +2082,116 @@
     "status": "uncertain",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [6.0, 6.5], [6.5, 6.8], [7.0, 7.0], [7.5, 7.3],
-        [8.0, 7.5], [8.0, 7.0], [7.5, 6.5], [7.0, 6.2],
-        [6.5, 6.0], [6.0, 6.2], [6.0, 6.5]
-      ]]
+      "coordinates": [
+        [
+          [
+            6.0,
+            6.5
+          ],
+          [
+            6.5,
+            6.8
+          ],
+          [
+            7.0,
+            7.0
+          ],
+          [
+            7.5,
+            7.3
+          ],
+          [
+            8.0,
+            7.5
+          ],
+          [
+            8.0,
+            7.0
+          ],
+          [
+            7.5,
+            6.5
+          ],
+          [
+            7.0,
+            6.2
+          ],
+          [
+            6.5,
+            6.0
+          ],
+          [
+            6.0,
+            6.2
+          ],
+          [
+            6.0,
+            6.5
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Igala Kingdom, centered at the Niger-Benue confluence at Idah, was a significant political entity in what became central Nigeria. The kingdom's ruling dynasty (Attah of Igala) claims descent from Jukun and Benin origins, reflecting complex inter-ethnic political networks. The Igala were involved in the slave trade along the Niger River. The kingdom had important cultural and political connections with the Benin Kingdom and the Jukun. British conquest in 1901 was part of the Royal Niger Company's campaigns; Igala resistance was overcome by superior military technology. The Attah of Igala remains a recognized traditional institution in modern Nigeria. Oral traditions are the primary indigenous historical source.",
     "name_variants": [
-      {"name": "Igala Kingdom", "lang": "en", "period_start": 1400, "period_end": 1901, "context": "English academic designation", "source": "Boston, J.S. The Igala Kingdom (1968)"},
-      {"name": "Royaume Igala", "lang": "fr", "period_start": 1400, "period_end": 1901, "context": "French designation", "source": "Isichei, Elizabeth. A History of Nigeria (1983)"},
-      {"name": "Ane Igala", "lang": "igl", "period_start": 1400, "period_end": 1901, "context": "Igala-language designation meaning 'Igala land/nation'", "source": "Okwoli, P.E. A Short History of Igala (1973)"}
+      {
+        "name": "Igala Kingdom",
+        "lang": "en",
+        "period_start": 1400,
+        "period_end": 1901,
+        "context": "English academic designation",
+        "source": "Boston, J.S. The Igala Kingdom (1968)"
+      },
+      {
+        "name": "Royaume Igala",
+        "lang": "fr",
+        "period_start": 1400,
+        "period_end": 1901,
+        "context": "French designation",
+        "source": "Isichei, Elizabeth. A History of Nigeria (1983)"
+      },
+      {
+        "name": "Ane Igala",
+        "lang": "igl",
+        "period_start": 1400,
+        "period_end": 1901,
+        "context": "Igala-language designation meaning 'Igala land/nation'",
+        "source": "Okwoli, P.E. A Short History of Igala (1973)"
+      }
     ],
     "territory_changes": [
-      {"year": 1830, "region": "Niger-Benue confluence", "change_type": "CONQUEST_MILITARY", "description": "Nupe Kingdom expansion under Etsu Nupe Masaba pressured Igala territory. The Igala and Nupe had a complex relationship involving both conflict and alliance. The Igala maintained their independence but faced increasing external pressures.", "population_affected": null, "confidence_score": 0.45},
-      {"year": 1901, "region": "Igala territory", "change_type": "COLONIZATION", "description": "Royal Niger Company (later British colonial administration) imposed control over the Igala Kingdom. The Attah of Igala was forced to accept British overlordship. Traditional political structures were subordinated to colonial administration but the Attah institution survived.", "population_affected": null, "confidence_score": 0.75}
+      {
+        "year": 1830,
+        "region": "Niger-Benue confluence",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Nupe Kingdom expansion under Etsu Nupe Masaba pressured Igala territory. The Igala and Nupe had a complex relationship involving both conflict and alliance. The Igala maintained their independence but faced increasing external pressures.",
+        "population_affected": null,
+        "confidence_score": 0.45
+      },
+      {
+        "year": 1901,
+        "region": "Igala territory",
+        "change_type": "COLONIZATION",
+        "description": "Royal Niger Company (later British colonial administration) imposed control over the Igala Kingdom. The Attah of Igala was forced to accept British overlordship. Traditional political structures were subordinated to colonial administration but the Attah institution survived.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
     ],
     "sources": [
-      {"citation": "Boston, J.S. The Igala Kingdom. Ibadan: Oxford University Press (for the International African Institute), 1968", "source_type": "academic", "url": null},
-      {"citation": "Okwoli, P.E. A Short History of Igala. Ilorin: Ilorin University Press, 1973", "source_type": "secondary", "url": null},
-      {"citation": "Seton, Rosemary E. 'The Igala Kingdom.' In Nigerian Perspectives: An Historical Anthology, ed. Thomas Hodgkin. London: Oxford University Press, 1960", "source_type": "academic", "url": null}
+      {
+        "citation": "Boston, J.S. The Igala Kingdom. Ibadan: Oxford University Press (for the International African Institute), 1968",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Okwoli, P.E. A Short History of Igala. Ilorin: Ilorin University Press, 1973",
+        "source_type": "secondary",
+        "url": null
+      },
+      {
+        "citation": "Seton, Rosemary E. 'The Igala Kingdom.' In Nigerian Perspectives: An Historical Anthology, ed. Thomas Hodgkin. London: Oxford University Press, 1960",
+        "source_type": "academic",
+        "url": null
+      }
     ]
   },
   {
@@ -706,27 +2207,124 @@
     "status": "uncertain",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [4.5, 8.5], [5.0, 8.8], [5.5, 9.0], [6.0, 9.3],
-        [6.5, 9.5], [7.0, 9.5], [7.0, 9.0], [6.5, 8.5],
-        [6.0, 8.2], [5.5, 8.0], [5.0, 8.0], [4.5, 8.2],
-        [4.5, 8.5]
-      ]]
+      "coordinates": [
+        [
+          [
+            4.5,
+            8.5
+          ],
+          [
+            5.0,
+            8.8
+          ],
+          [
+            5.5,
+            9.0
+          ],
+          [
+            6.0,
+            9.3
+          ],
+          [
+            6.5,
+            9.5
+          ],
+          [
+            7.0,
+            9.5
+          ],
+          [
+            7.0,
+            9.0
+          ],
+          [
+            6.5,
+            8.5
+          ],
+          [
+            6.0,
+            8.2
+          ],
+          [
+            5.5,
+            8.0
+          ],
+          [
+            5.0,
+            8.0
+          ],
+          [
+            4.5,
+            8.2
+          ],
+          [
+            4.5,
+            8.5
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Kingdom of Nupe was a significant Niger River polity known for its metalworking, glassmaking, and military power. The kingdom's cavalry raided neighboring peoples for slaves. Founded according to tradition by Tsoede (Edegi), who is said to have fled the Igala court. Nupe was conquered by the Fulani jihad and became the Emirate of Bida under the Sokoto Caliphate in 1835. British Royal Niger Company forces under Sir George Goldie conquered Bida in 1897. The Nupe brass and glass industries, among the most sophisticated in precolonial Africa, were disrupted by colonial economic policies favoring European manufactures.",
     "name_variants": [
-      {"name": "Kingdom of Nupe", "lang": "en", "period_start": 1531, "period_end": 1835, "context": "English academic designation", "source": "Nadel, S.F. A Black Byzantium: The Kingdom of Nupe in Nigeria (1942)"},
-      {"name": "Tapa", "lang": "yo", "period_start": 1531, "period_end": 1835, "context": "Yoruba exonym for the Nupe people and kingdom", "source": "Johnson, Samuel. The History of the Yorubas (1921)"},
-      {"name": "Royaume de Nupe", "lang": "fr", "period_start": 1531, "period_end": 1835, "context": "French designation", "source": "Isichei, Elizabeth. A History of Nigeria (1983)"}
+      {
+        "name": "Kingdom of Nupe",
+        "lang": "en",
+        "period_start": 1531,
+        "period_end": 1835,
+        "context": "English academic designation",
+        "source": "Nadel, S.F. A Black Byzantium: The Kingdom of Nupe in Nigeria (1942)"
+      },
+      {
+        "name": "Tapa",
+        "lang": "yo",
+        "period_start": 1531,
+        "period_end": 1835,
+        "context": "Yoruba exonym for the Nupe people and kingdom",
+        "source": "Johnson, Samuel. The History of the Yorubas (1921)"
+      },
+      {
+        "name": "Royaume de Nupe",
+        "lang": "fr",
+        "period_start": 1531,
+        "period_end": 1835,
+        "context": "French designation",
+        "source": "Isichei, Elizabeth. A History of Nigeria (1983)"
+      }
     ],
     "territory_changes": [
-      {"year": 1835, "region": "Nupe territory", "change_type": "CONQUEST_MILITARY", "description": "Fulani jihadists allied with Nupe faction leaders conquered the kingdom. Nupe became the Emirate of Bida under the Sokoto Caliphate. The Nupe etsu (king) was replaced by a Fulani emir, though Nupe cultural practices continued.", "population_affected": null, "confidence_score": 0.6},
-      {"year": 1897, "region": "Bida", "change_type": "COLONIZATION", "description": "Royal Niger Company forces under Sir George Goldie attacked and captured Bida. The conquest was justified partly as an anti-slavery action, though the Company's primary interest was commercial control of Niger River trade. Bida was looted; many Nupe bronzes were taken to Britain.", "population_affected": null, "confidence_score": 0.8}
+      {
+        "year": 1835,
+        "region": "Nupe territory",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Fulani jihadists allied with Nupe faction leaders conquered the kingdom. Nupe became the Emirate of Bida under the Sokoto Caliphate. The Nupe etsu (king) was replaced by a Fulani emir, though Nupe cultural practices continued.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1897,
+        "region": "Bida",
+        "change_type": "COLONIZATION",
+        "description": "Royal Niger Company forces under Sir George Goldie attacked and captured Bida. The conquest was justified partly as an anti-slavery action, though the Company's primary interest was commercial control of Niger River trade. Bida was looted; many Nupe bronzes were taken to Britain.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
     ],
     "sources": [
-      {"citation": "Nadel, S.F. A Black Byzantium: The Kingdom of Nupe in Nigeria. London: Oxford University Press, 1942", "source_type": "academic", "url": null},
-      {"citation": "Mason, Michael. Foundations of the Bida Kingdom. Zaria: Ahmadu Bello University Press, 1981", "source_type": "academic", "url": null},
-      {"citation": "Edigi/Tsoede traditions, oral history collected by S.F. Nadel and R.E. Bradbury", "source_type": "primary", "url": null}
+      {
+        "citation": "Nadel, S.F. A Black Byzantium: The Kingdom of Nupe in Nigeria. London: Oxford University Press, 1942",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Mason, Michael. Foundations of the Bida Kingdom. Zaria: Ahmadu Bello University Press, 1981",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Edigi/Tsoede traditions, oral history collected by S.F. Nadel and R.E. Bradbury",
+        "source_type": "primary",
+        "url": null
+      }
     ]
   },
   {
@@ -742,27 +2340,124 @@
     "status": "confirmed",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [20.5, -3.5], [21.0, -3.5], [21.5, -3.8], [22.0, -4.0],
-        [22.5, -4.5], [22.5, -5.0], [22.0, -5.3], [21.5, -5.5],
-        [21.0, -5.3], [20.5, -5.0], [20.0, -4.5], [20.0, -4.0],
-        [20.5, -3.5]
-      ]]
+      "coordinates": [
+        [
+          [
+            20.5,
+            -3.5
+          ],
+          [
+            21.0,
+            -3.5
+          ],
+          [
+            21.5,
+            -3.8
+          ],
+          [
+            22.0,
+            -4.0
+          ],
+          [
+            22.5,
+            -4.5
+          ],
+          [
+            22.5,
+            -5.0
+          ],
+          [
+            22.0,
+            -5.3
+          ],
+          [
+            21.5,
+            -5.5
+          ],
+          [
+            21.0,
+            -5.3
+          ],
+          [
+            20.5,
+            -5.0
+          ],
+          [
+            20.0,
+            -4.5
+          ],
+          [
+            20.0,
+            -4.0
+          ],
+          [
+            20.5,
+            -3.5
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Kuba Kingdom (Bushoong ruling clan over a confederation of 18 peoples) was renowned for its sophisticated art, textiles (raffia cloth), and political organization. King Shyaam a-Mbul a Ngoong (c.1625) is credited in oral tradition with founding or reforming the kingdom. The Kuba are among the best-documented precolonial Central African polities thanks to their own historical traditions and the work of anthropologists like Jan Vansina. However, early European accounts (Emil Torday, 1908) exoticized Kuba culture. Belgian colonial rule (Congo Free State, then Belgian Congo) devastated the kingdom through rubber extraction, forced labor, and cultural destruction. Leopold II's regime killed millions across the Congo; the Kuba were not spared. Kuba art was systematically looted and now fills European museums.",
     "name_variants": [
-      {"name": "Kuba Kingdom", "lang": "en", "period_start": 1625, "period_end": 1900, "context": "English academic designation, 'Kuba' being the collective name for the confederation", "source": "Vansina, Jan. The Children of Woot: A History of the Kuba Peoples (1978)"},
-      {"name": "Royaume Kuba", "lang": "fr", "period_start": 1625, "period_end": 1900, "context": "French designation used in Belgian colonial sources", "source": "Torday, Emil and T.A. Joyce. Notes ethnographiques sur les Bushongo (1910)"},
-      {"name": "Bakuba", "lang": "fr", "period_start": 1625, "period_end": 1900, "context": "Belgian colonial-era designation using the Bantu plural prefix 'ba-'", "source": "Torday, Emil. On the Trail of the Bushongo (1925)"}
+      {
+        "name": "Kuba Kingdom",
+        "lang": "en",
+        "period_start": 1625,
+        "period_end": 1900,
+        "context": "English academic designation, 'Kuba' being the collective name for the confederation",
+        "source": "Vansina, Jan. The Children of Woot: A History of the Kuba Peoples (1978)"
+      },
+      {
+        "name": "Royaume Kuba",
+        "lang": "fr",
+        "period_start": 1625,
+        "period_end": 1900,
+        "context": "French designation used in Belgian colonial sources",
+        "source": "Torday, Emil and T.A. Joyce. Notes ethnographiques sur les Bushongo (1910)"
+      },
+      {
+        "name": "Bakuba",
+        "lang": "fr",
+        "period_start": 1625,
+        "period_end": 1900,
+        "context": "Belgian colonial-era designation using the Bantu plural prefix 'ba-'",
+        "source": "Torday, Emil. On the Trail of the Bushongo (1925)"
+      }
     ],
     "territory_changes": [
-      {"year": 1885, "region": "Congo basin", "change_type": "COLONIZATION", "description": "Berlin Conference assigned the Congo basin to Leopold II as the Congo Free State. The Kuba Kingdom's sovereignty was not recognized. Initial European contact was limited, but the rubber terror regime gradually penetrated Kuba territory.", "population_affected": null, "confidence_score": 0.75},
-      {"year": 1900, "region": "Kuba territory", "change_type": "COLONIZATION", "description": "Congo Free State forces imposed direct control over the Kuba Kingdom. Forced rubber collection and labor devastated the population. King Kot a-Pe was forced to submit. Kuba artistic production and social structures were severely disrupted by colonial extraction.", "population_affected": null, "confidence_score": 0.7}
+      {
+        "year": 1885,
+        "region": "Congo basin",
+        "change_type": "COLONIZATION",
+        "description": "Berlin Conference assigned the Congo basin to Leopold II as the Congo Free State. The Kuba Kingdom's sovereignty was not recognized. Initial European contact was limited, but the rubber terror regime gradually penetrated Kuba territory.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1900,
+        "region": "Kuba territory",
+        "change_type": "COLONIZATION",
+        "description": "Congo Free State forces imposed direct control over the Kuba Kingdom. Forced rubber collection and labor devastated the population. King Kot a-Pe was forced to submit. Kuba artistic production and social structures were severely disrupted by colonial extraction.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
     ],
     "sources": [
-      {"citation": "Vansina, Jan. The Children of Woot: A History of the Kuba Peoples. Madison: University of Wisconsin Press, 1978", "source_type": "academic", "url": null},
-      {"citation": "Vansina, Jan. Being Colonized: The Kuba Experience in Rural Congo, 1880-1960. Madison: University of Wisconsin Press, 2010", "source_type": "academic", "url": null},
-      {"citation": "Torday, Emil and T.A. Joyce. 'Notes ethnographiques sur les peuples communement appeles Bakuba.' Annales du Musee du Congo Belge, 1910", "source_type": "primary", "url": null}
+      {
+        "citation": "Vansina, Jan. The Children of Woot: A History of the Kuba Peoples. Madison: University of Wisconsin Press, 1978",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Vansina, Jan. Being Colonized: The Kuba Experience in Rural Congo, 1880-1960. Madison: University of Wisconsin Press, 2010",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Torday, Emil and T.A. Joyce. 'Notes ethnographiques sur les peuples communement appeles Bakuba.' Annales du Musee du Congo Belge, 1910",
+        "source_type": "primary",
+        "url": null
+      }
     ]
   },
   {
@@ -778,30 +2473,161 @@
     "status": "confirmed",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [39.0, -1.0], [39.5, -1.5], [40.0, -2.0], [40.5, -3.0],
-        [41.0, -4.0], [41.0, -5.0], [40.5, -6.0], [40.0, -7.0],
-        [39.5, -8.0], [39.5, -9.0], [39.5, -10.0], [39.0, -10.0],
-        [39.0, -9.0], [39.0, -8.0], [38.5, -7.0], [39.0, -6.0],
-        [39.0, -5.0], [38.5, -4.0], [39.0, -3.0], [39.0, -2.0],
-        [39.0, -1.0]
-      ]]
+      "coordinates": [
+        [
+          [
+            39.0,
+            -1.0
+          ],
+          [
+            39.5,
+            -1.5
+          ],
+          [
+            40.0,
+            -2.0
+          ],
+          [
+            40.5,
+            -3.0
+          ],
+          [
+            41.0,
+            -4.0
+          ],
+          [
+            41.0,
+            -5.0
+          ],
+          [
+            40.5,
+            -6.0
+          ],
+          [
+            40.0,
+            -7.0
+          ],
+          [
+            39.5,
+            -8.0
+          ],
+          [
+            39.5,
+            -9.0
+          ],
+          [
+            39.5,
+            -10.0
+          ],
+          [
+            39.0,
+            -10.0
+          ],
+          [
+            39.0,
+            -9.0
+          ],
+          [
+            39.0,
+            -8.0
+          ],
+          [
+            38.5,
+            -7.0
+          ],
+          [
+            39.0,
+            -6.0
+          ],
+          [
+            39.0,
+            -5.0
+          ],
+          [
+            38.5,
+            -4.0
+          ],
+          [
+            39.0,
+            -3.0
+          ],
+          [
+            39.0,
+            -2.0
+          ],
+          [
+            39.0,
+            -1.0
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Swahili coast city-states (Kilwa, Mombasa, Lamu, Pate, Sofala, Zanzibar, Malindi, and others) represent a major African maritime civilization that participated fully in Indian Ocean trade networks. Colonial-era scholarship repeatedly denied the African character of Swahili civilization, attributing it to Arab or Persian colonists. Modern archaeology and linguistics have definitively established that Swahili civilization was fundamentally African (Bantu-speaking), with influences from Indian Ocean trade contacts. The 'Shirazi' origin myths of many ruling dynasties were political legitimation narratives, not evidence of foreign foundations. The city-states participated in the slave trade, both internally and for export to the Persian Gulf and Indian subcontinent. Portuguese conquest after 1498 was devastating: Vasco da Gama bombarded Mombasa, and the Portuguese destroyed existing trade networks to monopolize Indian Ocean commerce.",
     "name_variants": [
-      {"name": "Swahili coast city-states", "lang": "en", "period_start": 800, "period_end": 1505, "context": "English academic designation for the collectively recognized urban polities", "source": "Horton, Mark and John Middleton. The Swahili: The Social Landscape of a Mercantile Society (2000)"},
-      {"name": "Cites-Etats Swahili", "lang": "fr", "period_start": 800, "period_end": 1505, "context": "French designation", "source": "Chittick, Neville. Kilwa: An Islamic Trading City on the East African Coast (1974)"},
-      {"name": "مدن الساحل السواحيلي", "lang": "ar", "period_start": 800, "period_end": 1505, "context": "Arabic designation; Arab geographers (Al-Masudi, Ibn Battuta) provided key descriptions of these cities", "source": "Al-Masudi. Muruj al-Dhahab (947 CE)"}
+      {
+        "name": "Swahili coast city-states",
+        "lang": "en",
+        "period_start": 800,
+        "period_end": 1505,
+        "context": "English academic designation for the collectively recognized urban polities",
+        "source": "Horton, Mark and John Middleton. The Swahili: The Social Landscape of a Mercantile Society (2000)"
+      },
+      {
+        "name": "Cites-Etats Swahili",
+        "lang": "fr",
+        "period_start": 800,
+        "period_end": 1505,
+        "context": "French designation",
+        "source": "Chittick, Neville. Kilwa: An Islamic Trading City on the East African Coast (1974)"
+      },
+      {
+        "name": "مدن الساحل السواحيلي",
+        "lang": "ar",
+        "period_start": 800,
+        "period_end": 1505,
+        "context": "Arabic designation; Arab geographers (Al-Masudi, Ibn Battuta) provided key descriptions of these cities",
+        "source": "Al-Masudi. Muruj al-Dhahab (947 CE)"
+      }
     ],
     "territory_changes": [
-      {"year": 1331, "region": "Kilwa", "change_type": "CULTURAL_EXCHANGE", "description": "Ibn Battuta visited Kilwa and described it as one of the most beautiful cities in the world. This period represents the peak of Swahili city-state prosperity, based on gold trade from Great Zimbabwe via Sofala, ivory, and other commodities.", "population_affected": null, "confidence_score": 0.7},
-      {"year": 1505, "region": "Kilwa and Mombasa", "change_type": "CONQUEST_MILITARY", "description": "Portuguese forces under Francisco de Almeida sacked Kilwa and Mombasa. The destruction of Kilwa marked the beginning of Portuguese disruption of Indian Ocean trade. Churches were built on mosque ruins. Existing trade networks were destroyed to benefit Portuguese commercial monopoly.", "population_affected": null, "confidence_score": 0.75}
+      {
+        "year": 1331,
+        "region": "Kilwa",
+        "change_type": "CULTURAL_EXCHANGE",
+        "description": "Ibn Battuta visited Kilwa and described it as one of the most beautiful cities in the world. This period represents the peak of Swahili city-state prosperity, based on gold trade from Great Zimbabwe via Sofala, ivory, and other commodities.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1505,
+        "region": "Kilwa and Mombasa",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Portuguese forces under Francisco de Almeida sacked Kilwa and Mombasa. The destruction of Kilwa marked the beginning of Portuguese disruption of Indian Ocean trade. Churches were built on mosque ruins. Existing trade networks were destroyed to benefit Portuguese commercial monopoly.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
     ],
     "sources": [
-      {"citation": "Horton, Mark and John Middleton. The Swahili: The Social Landscape of a Mercantile Society. Oxford: Blackwell, 2000", "source_type": "academic", "url": null},
-      {"citation": "Chittick, Neville. Kilwa: An Islamic Trading City on the East African Coast. 2 vols. Nairobi: British Institute in Eastern Africa, 1974", "source_type": "academic", "url": null},
-      {"citation": "Ibn Battuta. Rihla (Travels). c.1355. Description of East African coast from 1331 visit", "source_type": "primary", "url": null},
-      {"citation": "Al-Masudi. Muruj al-Dhahab wa-Ma'adin al-Jawhar (Meadows of Gold). 947 CE", "source_type": "primary", "url": null}
+      {
+        "citation": "Horton, Mark and John Middleton. The Swahili: The Social Landscape of a Mercantile Society. Oxford: Blackwell, 2000",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Chittick, Neville. Kilwa: An Islamic Trading City on the East African Coast. 2 vols. Nairobi: British Institute in Eastern Africa, 1974",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Ibn Battuta. Rihla (Travels). c.1355. Description of East African coast from 1331 visit",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Al-Masudi. Muruj al-Dhahab wa-Ma'adin al-Jawhar (Meadows of Gold). 947 CE",
+        "source_type": "primary",
+        "url": null
+      }
     ]
   },
   {
@@ -817,26 +2643,120 @@
     "status": "uncertain",
     "boundary_geojson": {
       "type": "Polygon",
-      "coordinates": [[
-        [10.5, -3.0], [11.0, -3.0], [11.5, -3.3], [12.0, -3.5],
-        [12.5, -4.0], [12.5, -4.5], [12.0, -5.0], [11.5, -5.0],
-        [11.0, -4.5], [10.5, -4.0], [10.5, -3.5], [10.5, -3.0]
-      ]]
+      "coordinates": [
+        [
+          [
+            10.5,
+            -3.0
+          ],
+          [
+            11.0,
+            -3.0
+          ],
+          [
+            11.5,
+            -3.3
+          ],
+          [
+            12.0,
+            -3.5
+          ],
+          [
+            12.5,
+            -4.0
+          ],
+          [
+            12.5,
+            -4.5
+          ],
+          [
+            12.0,
+            -5.0
+          ],
+          [
+            11.5,
+            -5.0
+          ],
+          [
+            11.0,
+            -4.5
+          ],
+          [
+            10.5,
+            -4.0
+          ],
+          [
+            10.5,
+            -3.5
+          ],
+          [
+            10.5,
+            -3.0
+          ]
+        ]
+      ]
     },
     "ethical_notes": "The Kingdom of Loango (Kikongo: Nsi a Lwangu) was a coastal Central African kingdom north of the mouth of the Congo River, in present-day Republic of Congo. It was closely related to, but independent from, the Kingdom of Kongo. Loango became a major embarkation point for the Atlantic slave trade: the port of Loango exported hundreds of thousands of enslaved people to the Americas, particularly to Brazil and the Caribbean. The kingdom's rulers actively participated in and profited from the slave trade, which must be documented alongside the violence it inflicted on interior populations who were raided. Dutch and French traders were the primary European partners. French colonial conquest in the 1880s dismantled the kingdom and incorporated it into French Congo. Oral traditions and limited European trade accounts are the main sources.",
     "name_variants": [
-      {"name": "Kingdom of Loango", "lang": "en", "period_start": 1550, "period_end": 1883, "context": "English academic designation", "source": "Martin, Phyllis M. The External Trade of the Loango Coast (1972)"},
-      {"name": "Royaume de Loango", "lang": "fr", "period_start": 1550, "period_end": 1883, "context": "French designation", "source": "Proyart, Abbe Lievin-Bonaventure. Histoire de Loango, Kakongo, et autres royaumes d'Afrique (1776)"},
-      {"name": "Lwangu", "lang": "kg", "period_start": 1550, "period_end": 1883, "context": "Kikongo-language short form", "source": "Vansina, Jan. Paths in the Rainforests (1990)"}
+      {
+        "name": "Kingdom of Loango",
+        "lang": "en",
+        "period_start": 1550,
+        "period_end": 1883,
+        "context": "English academic designation",
+        "source": "Martin, Phyllis M. The External Trade of the Loango Coast (1972)"
+      },
+      {
+        "name": "Royaume de Loango",
+        "lang": "fr",
+        "period_start": 1550,
+        "period_end": 1883,
+        "context": "French designation",
+        "source": "Proyart, Abbe Lievin-Bonaventure. Histoire de Loango, Kakongo, et autres royaumes d'Afrique (1776)"
+      },
+      {
+        "name": "Lwangu",
+        "lang": "kg",
+        "period_start": 1550,
+        "period_end": 1883,
+        "context": "Kikongo-language short form",
+        "source": "Vansina, Jan. Paths in the Rainforests (1990)"
+      }
     ],
     "territory_changes": [
-      {"year": 1770, "region": "Loango coast", "change_type": "ECONOMIC_DECLINE", "description": "Peak of the slave trade at Loango Bay. By this period, Loango was one of the largest slave-trading ports on the Atlantic coast of Central Africa, with French and Dutch traders exporting thousands of enslaved people annually. The trade enriched the Maloango (king) and coastal elites but devastated interior populations.", "population_affected": null, "confidence_score": 0.55},
-      {"year": 1883, "region": "Loango territory", "change_type": "COLONIZATION", "description": "French explorer Pierre Savorgnan de Brazza established French control over the Loango coast through a series of treaties, some obtained under duress. The Maloango's authority was extinguished. The territory was incorporated into French Congo (later part of French Equatorial Africa).", "population_affected": null, "confidence_score": 0.7}
+      {
+        "year": 1770,
+        "region": "Loango coast",
+        "change_type": "ECONOMIC_DECLINE",
+        "description": "Peak of the slave trade at Loango Bay. By this period, Loango was one of the largest slave-trading ports on the Atlantic coast of Central Africa, with French and Dutch traders exporting thousands of enslaved people annually. The trade enriched the Maloango (king) and coastal elites but devastated interior populations.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1883,
+        "region": "Loango territory",
+        "change_type": "COLONIZATION",
+        "description": "French explorer Pierre Savorgnan de Brazza established French control over the Loango coast through a series of treaties, some obtained under duress. The Maloango's authority was extinguished. The territory was incorporated into French Congo (later part of French Equatorial Africa).",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
     ],
     "sources": [
-      {"citation": "Martin, Phyllis M. The External Trade of the Loango Coast, 1576-1870: The Effects of Changing Commercial Relations on the Vili Kingdom of Loango. Oxford: Clarendon Press, 1972", "source_type": "academic", "url": null},
-      {"citation": "Proyart, Abbe Lievin-Bonaventure. Histoire de Loango, Kakongo, et autres royaumes d'Afrique. Paris, 1776", "source_type": "primary", "url": null},
-      {"citation": "Vansina, Jan. Paths in the Rainforests: Toward a History of Political Tradition in Equatorial Africa. Madison: University of Wisconsin Press, 1990", "source_type": "academic", "url": null}
+      {
+        "citation": "Martin, Phyllis M. The External Trade of the Loango Coast, 1576-1870: The Effects of Changing Commercial Relations on the Vili Kingdom of Loango. Oxford: Clarendon Press, 1972",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Proyart, Abbe Lievin-Bonaventure. Histoire de Loango, Kakongo, et autres royaumes d'Afrique. Paris, 1776",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Vansina, Jan. Paths in the Rainforests: Toward a History of Political Tradition in Equatorial Africa. Madison: University of Wisconsin Press, 1990",
+        "source_type": "academic",
+        "url": null
+      }
     ]
   }
 ]

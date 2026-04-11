@@ -60,7 +60,7 @@ async def lifespan(app: FastAPI):
 OPENAPI_DESCRIPTION = """
 # AtlasPI — Database Geografico Storico per Agenti AI
 
-**40+ entita' storiche** su 6 continenti, da 3100 a.C. al 2014.
+**500+ entita' storiche** su 9 regioni, da 4500 a.C. al 2024.
 Confini reali da fonti accademiche, governance etica documentata.
 
 ## Quick Start
@@ -72,9 +72,13 @@ import requests
 r = requests.get("http://localhost:10100/v1/entity?year=1500")
 entities = r.json()["entities"]
 
-# Entita' casuale
-r = requests.get("http://localhost:10100/v1/random")
-entity = r.json()
+# Snapshot del mondo in un anno
+r = requests.get("http://localhost:10100/v1/snapshot/1500")
+world = r.json()  # count, summary per tipo/continente, entities
+
+# Entita' vicine a coordinate
+r = requests.get("http://localhost:10100/v1/nearby?lat=41.9&lon=12.5&year=100")
+nearby = r.json()
 
 # Confronta due entita'
 r = requests.get("http://localhost:10100/v1/compare/1/2")
@@ -83,13 +87,14 @@ comparison = r.json()
 
 ```javascript
 // JavaScript/Node.js
-const res = await fetch('http://localhost:10100/v1/entity?year=1500');
-const { entities } = await res.json();
+const res = await fetch('http://localhost:10100/v1/snapshot/1500');
+const { entities, summary } = await res.json();
 ```
 
 ```bash
 # curl
-curl -s http://localhost:10100/v1/entities?limit=5 | jq .
+curl -s http://localhost:10100/v1/nearby?lat=30\\&lon=31\\&year=-300 | jq .
+curl -s http://localhost:10100/v1/snapshot/1500?type=empire | jq .summary
 curl -s http://localhost:10100/v1/random | jq .name_original
 ```
 

@@ -1,0 +1,1676 @@
+[
+  {
+    "name_original": "Dugelezh Breizh",
+    "name_original_lang": "br",
+    "entity_type": "duchy",
+    "year_start": 939,
+    "year_end": 1547,
+    "capital_name": "Naoned",
+    "capital_lat": 47.2184,
+    "capital_lon": -1.5536,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Breton (Brezhoneg), the indigenous Celtic language of Brittany, rather than French. The French name 'Duche de Bretagne' reflects the political dominance of French culture that ultimately absorbed the duchy. ETHICS-002: The absorption of Brittany into France (1532 Edict of Union, fully effective by 1547) began a long process of cultural suppression of the Breton language and identity. The French state systematically discouraged and later actively repressed Breton language use, particularly from the 19th century onward. This cultural erasure is ongoing and contested.",
+    "name_variants": [
+      {
+        "name": "Duchy of Brittany",
+        "lang": "en",
+        "period_start": 939,
+        "period_end": 1547,
+        "context": "Standard English denomination",
+        "source": "Jones, Michael. The Creation of Brittany (1988)"
+      },
+      {
+        "name": "Duche de Bretagne",
+        "lang": "fr",
+        "period_start": 939,
+        "period_end": 1547,
+        "context": "French denomination used in royal documents and treaties",
+        "source": "Pocquet du Haut-Jusse, B.-A. Les papes et les ducs de Bretagne (1928)"
+      },
+      {
+        "name": "Ducatus Britanniae",
+        "lang": "la",
+        "period_start": 939,
+        "period_end": 1547,
+        "context": "Latin name in ecclesiastical and diplomatic documents",
+        "source": "Galliou, P. & Jones, M. The Bretons (1991)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 939,
+        "region": "Brittany (Armorican peninsula)",
+        "change_type": "INDEPENDENCE",
+        "description": "Alan II 'Barbetorte' expelled the Vikings from Brittany and re-established Breton sovereignty, creating the ducal dynasty. The duchy consolidated control over the entire Armorican peninsula, inheriting a distinct Celtic cultural identity separate from the Frankish kingdoms.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1341,
+        "region": "Brittany (civil war)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "The Breton War of Succession (1341-1364) devastated the duchy, serving as a proxy war between France and England during the Hundred Years' War. The Montfort faction, backed by England, ultimately triumphed over the Penthievre-Blois faction backed by France. The conflict caused widespread destruction and depopulation.",
+        "population_affected": 200000,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 1532,
+        "region": "Brittany (union with France)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "The Edict of Union incorporated Brittany into the Kingdom of France, following the marriage of Duchess Anne to two successive French kings (Charles VIII in 1491, Louis XII in 1499). While formally a union preserving Breton liberties, this was effectively an absorption achieved through dynastic manipulation. Breton autonomy was progressively eroded despite treaty guarantees.",
+        "population_affected": 1500000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Jones, Michael. The Creation of Brittany: A Late Medieval State. Hambledon Press, 1988",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Galliou, Patrick & Jones, Michael. The Bretons. Blackwell, 1991",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Everard, Judith. Brittany and the Angevins: Province and Empire 1158-1203. Cambridge University Press, 2000",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Comune di Pisa",
+    "name_original_lang": "it",
+    "entity_type": "republic",
+    "year_start": 1000,
+    "year_end": 1406,
+    "capital_name": "Pisa",
+    "capital_lat": 43.7228,
+    "capital_lon": 10.4017,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Italian; the commune used both 'Comune' and 'Respublica Pisana' in Latin documents. ETHICS-002: Pisa was a major maritime republic whose wealth was built substantially on Mediterranean trade, including the slave trade. Pisan merchants traded in enslaved people across the Mediterranean. The Pisan conquest of the Balearic Islands (1113-1115) and campaigns in North Africa involved violence against Muslim populations. ETHICS-003: The year 1000 is approximate for the emergence of communal self-government; the process was gradual.",
+    "name_variants": [
+      {
+        "name": "Republic of Pisa",
+        "lang": "en",
+        "period_start": 1000,
+        "period_end": 1406,
+        "context": "Standard English denomination",
+        "source": "Herlihy, David. Pisa in the Early Renaissance (1958)"
+      },
+      {
+        "name": "Respublica Pisana",
+        "lang": "la",
+        "period_start": 1000,
+        "period_end": 1406,
+        "context": "Latin form used in official documents and correspondence with the papacy",
+        "source": "Volpe, Gioacchino. Studi sulle istituzioni comunali a Pisa (1902)"
+      },
+      {
+        "name": "Comune di Pisa",
+        "lang": "it",
+        "period_start": 1000,
+        "period_end": 1406,
+        "context": "Italian denomination reflecting the communal form of government",
+        "source": "Tangheroni, Marco. Politica, commercio, agricoltura a Pisa nel Trecento (1973)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1016,
+        "region": "Sardinia and western Mediterranean",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Joint Pisan-Genoese expedition expelled the Saracen ruler Mujahid from Sardinia. This marked Pisa's emergence as a major Mediterranean naval power. Pisan influence over Sardinia, formalized through the judicates, would last until the 14th century.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1284,
+        "region": "Mediterranean (naval collapse)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "The Battle of Meloria: Genoa decisively defeated the Pisan fleet, capturing thousands of prisoners (many held for decades). This catastrophic defeat ended Pisa's status as a major maritime power and began its long decline. Pisan control over Corsica and Sardinia was progressively lost to Genoa and Aragon.",
+        "population_affected": 15000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1406,
+        "region": "Pisa (conquest by Florence)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Florence conquered Pisa after a prolonged siege, purchasing the city from its Visconti overlords for 200,000 florins. Pisan independence was extinguished. The once-great maritime republic was reduced to a subject city. The Pisan population suffered severe privation during the siege and subsequent Florentine rule suppressed Pisan civic institutions.",
+        "population_affected": 40000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Herlihy, David. Pisa in the Early Renaissance: A Study of Urban Growth. Yale University Press, 1958",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Tangheroni, Marco. Politica, commercio, agricoltura a Pisa nel Trecento. Pacini, 1973",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Mark Brandenburg",
+    "name_original_lang": "de",
+    "entity_type": "principality",
+    "year_start": 1157,
+    "year_end": 1618,
+    "capital_name": "Brandenburg an der Havel",
+    "capital_lat": 52.4125,
+    "capital_lon": 12.5316,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in German, the language of the ruling class. The Slavic population of the region (Wends/Sorbs) called it differently. ETHICS-002: The March of Brandenburg was created through the violent German eastward expansion (Ostsiedlung/Drang nach Osten) that dispossessed and assimilated Slavic populations (Wends, Sorbs, Hevelli). Albert the Bear's conquest (1157) and subsequent colonization systematically replaced Slavic place names, institutions, and populations with German ones. This constitutes cultural genocide of the Polabian Slavic peoples. The indigenous Slavic population was either assimilated, marginalized, or driven out. ETHICS-003: entity_type is 'principality' as 'march/margraviate' is not in the schema but the March was technically a frontier territory.",
+    "name_variants": [
+      {
+        "name": "March of Brandenburg",
+        "lang": "en",
+        "period_start": 1157,
+        "period_end": 1618,
+        "context": "Standard English denomination",
+        "source": "Schich, Winfried. Wirtschaft und Kulturlandschaft: Gesammelte Beitrage 1977-1999 zur Geschichte der Zisterzienser und der 'Germania Slavica' (2007)"
+      },
+      {
+        "name": "Marchia Brandenburgensis",
+        "lang": "la",
+        "period_start": 1157,
+        "period_end": 1618,
+        "context": "Latin form used in Imperial documents and ecclesiastical records",
+        "source": "Assing, Helmut. Die Landesherrschaft der Askanier, Wittelsbacher und Luxemburger (1995)"
+      },
+      {
+        "name": "Marka Brandenburska",
+        "lang": "hsb",
+        "period_start": 1157,
+        "period_end": 1618,
+        "context": "Upper Sorbian name reflecting the indigenous Slavic perspective; Sorbian populations survived in parts of the margraviate, particularly in Lusatia",
+        "source": "Stone, Gerald. The Smallest Slavonic Nation: The Sorbs of Lusatia (1972)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1157,
+        "region": "Brandenburg (Slavic Hevelli territory)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Albert the Bear conquered the fortress of Brandenburg from the Slavic Hevelli prince Jaxa of Kopanica, establishing the March of Brandenburg. This was part of the broader German eastward expansion (Ostsiedlung) that systematically dispossessed Slavic populations east of the Elbe. German colonists were settled on formerly Slavic lands, and Slavic place names were Germanized.",
+        "population_affected": 50000,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1356,
+        "region": "Brandenburg (Imperial elevation)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "The Golden Bull of 1356 confirmed Brandenburg as one of the seven prince-electorates of the Holy Roman Empire, granting the Margrave a permanent vote in Imperial elections. This cemented Brandenburg's political importance within the Empire and set the stage for its eventual growth into the core of the Prussian state.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1618,
+        "region": "Brandenburg-Prussia (personal union)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Elector John Sigismund of Brandenburg inherited the Duchy of Prussia, creating the Brandenburg-Prussia personal union that would eventually grow into the Kingdom of Prussia. This dynastic union linked a territory within the Holy Roman Empire to one outside it, creating a unique political situation.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Assing, Helmut. Die Landesherrschaft der Askanier, Wittelsbacher und Luxemburger. In: Brandenburgische Geschichte (Hrsg. Materna/Ribbe), Akademie Verlag, 1995",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Higounet, Charles. Die deutsche Ostsiedlung im Mittelalter. Siedler Verlag, 1986",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Herzogtum Sachsen",
+    "name_original_lang": "de",
+    "entity_type": "duchy",
+    "year_start": 804,
+    "year_end": 1296,
+    "capital_name": "Magdeburg",
+    "capital_lat": 52.1205,
+    "capital_lon": 11.6276,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in German (Middle High German period). ETHICS-002: The Duchy of Saxony originated from the Carolingian conquest and forced Christianization of the Saxons (772-804), one of the most brutal campaigns of the early medieval period. The Massacre of Verden (782), where Charlemagne allegedly ordered the execution of 4,500 Saxon prisoners, constitutes an act of mass violence, though the historical reliability of the number is debated. Subsequent Saxon expansion eastward involved the conquest and forcible Christianization of Slavic peoples (Wends, Obodrites, Sorbs). ETHICS-003: The 'Duchy of Saxony' refers to a shifting geographic and political concept; the duchy fragmented repeatedly and the name 'Saxony' eventually migrated eastward. The dates 804-1296 cover the stem duchy period.",
+    "name_variants": [
+      {
+        "name": "Duchy of Saxony",
+        "lang": "en",
+        "period_start": 804,
+        "period_end": 1296,
+        "context": "English denomination for the stem duchy",
+        "source": "Reuter, Timothy. Germany in the Early Middle Ages 800-1056 (1991)"
+      },
+      {
+        "name": "Ducatus Saxoniae",
+        "lang": "la",
+        "period_start": 804,
+        "period_end": 1296,
+        "context": "Latin form used in Imperial and ecclesiastical documents",
+        "source": "Widukind of Corvey. Res gestae Saxonicae (10th century)"
+      },
+      {
+        "name": "Hertogdom Saksen",
+        "lang": "nds",
+        "period_start": 804,
+        "period_end": 1296,
+        "context": "Low German/Low Saxon denomination; the indigenous language of the Saxon heartland",
+        "source": "Hauck, Karl. Sachsen als Frage an die Geschichte (1961)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 804,
+        "region": "Saxony (northwestern Germany)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Charlemagne completed the Saxon Wars (772-804), forcibly incorporating Saxony into the Carolingian Empire and imposing Christianity. The Capitulatio de partibus Saxoniae mandated death for refusal of baptism. Mass deportations of Saxon populations and settlement of Franks transformed the region. The Massacre of Verden (782) remains one of the most debated atrocities of the early medieval period.",
+        "population_affected": 500000,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 1180,
+        "region": "Saxony (partition)",
+        "change_type": "DISSOLUTION",
+        "description": "Emperor Frederick Barbarossa stripped Henry the Lion of his duchies, partitioning Saxony. The western portion became the much-reduced Duchy of Westphalia (under the Archbishop of Cologne), while the eastern portion became the new, smaller Duchy of Saxony under the Ascanians. This began the process by which 'Saxony' migrated eastward geographically.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Reuter, Timothy. Germany in the Early Middle Ages 800-1056. Longman, 1991",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Widukind of Corvey. Res gestae Saxonicae / Sachsengeschichte (10th century). Ed. Paul Hirsch, MGH, 1935",
+        "source_type": "primary",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Herzogtum Baiern",
+    "name_original_lang": "de",
+    "entity_type": "duchy",
+    "year_start": 555,
+    "year_end": 1623,
+    "capital_name": "Regensburg",
+    "capital_lat": 49.0134,
+    "capital_lon": 12.1016,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Middle High German form 'Baiern', preserving the historical spelling. The capital shifted from Regensburg to Munich (Munchen) in 1255 under the Wittelsbachs. ETHICS-002: Bavarian expansion involved the subjugation of Slavic populations in the eastern Alps and along the Danube. The Bavarian church played a major role in the forced Christianization of neighboring peoples, including Avars and Slavs in the Danube basin.",
+    "name_variants": [
+      {
+        "name": "Duchy of Bavaria",
+        "lang": "en",
+        "period_start": 555,
+        "period_end": 1623,
+        "context": "Standard English denomination",
+        "source": "Reindel, Kurt. Die bayerischen Luitpoldinger 893-989 (1953)"
+      },
+      {
+        "name": "Ducatus Bavariae",
+        "lang": "la",
+        "period_start": 555,
+        "period_end": 1623,
+        "context": "Latin form used in Imperial and ecclesiastical documents",
+        "source": "Spindler, Max. Handbuch der bayerischen Geschichte (1967)"
+      },
+      {
+        "name": "Herzogtum Bayern",
+        "lang": "de",
+        "period_start": 555,
+        "period_end": 1623,
+        "context": "Modern German spelling; the duchy's name evolved from 'Baiern' to 'Bayern'",
+        "source": "Bosl, Karl. Bayerische Geschichte (1971)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 555,
+        "region": "Bavaria (upper Danube basin)",
+        "change_type": "INDEPENDENCE",
+        "description": "The Agilolfing dynasty established the stem duchy of Bavaria as a distinct political entity within the Merovingian Frankish sphere. The Bavarii (Bajuwaren) emerged as a distinct Germanic people in the 6th century, occupying territories previously held by Roman Noricum and Raetia. The exact date and circumstances of the duchy's foundation are debated.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 788,
+        "region": "Bavaria (Carolingian absorption)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Charlemagne deposed Duke Tassilo III, ending Agilolfing independence and incorporating Bavaria into the Carolingian Empire. Tassilo was forced into a monastery. Bavarian autonomy was suppressed, though the duchy retained its identity as a stem duchy within the Frankish and later German kingdoms.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1623,
+        "region": "Bavaria (elevation to electorate)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "During the Thirty Years' War, Duke Maximilian I of Bavaria was elevated to Elector by Emperor Ferdinand II as reward for his support against the Protestant Bohemian revolt. Bavaria acquired the Upper Palatinate and the electoral dignity, becoming the Electorate of Bavaria. This marks the formal end of the medieval duchy and its transformation into a more powerful early modern state.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Spindler, Max (Hrsg.). Handbuch der bayerischen Geschichte. C.H. Beck, 1967",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Reindel, Kurt. Die bayerischen Luitpoldinger 893-989. C.H. Beck, 1953",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Regnum Neapolitanum",
+    "name_original_lang": "la",
+    "entity_type": "kingdom",
+    "year_start": 1282,
+    "year_end": 1816,
+    "capital_name": "Napoli",
+    "capital_lat": 40.8518,
+    "capital_lon": 14.2681,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Latin, the administrative language of the Angevin court. The kingdom was colloquially known in Italian as 'Regno di Napoli'. ETHICS-002: The Kingdom of Naples was characterized by extreme feudal inequality. The latifondo system concentrated vast estates in the hands of a small aristocratic elite while the peasantry lived in conditions of near-serfdom. Foreign domination (Angevin, Aragonese, Spanish, Austrian) extracted wealth from southern Italy for centuries, contributing to the economic underdevelopment that persists as the 'Southern Question' (Questione meridionale) in modern Italy. ETHICS-003: The kingdom is distinct from the earlier Norman Kingdom of Sicily (1130-1282), which included both the island of Sicily and the mainland. After the War of the Vespers (1282), the mainland portion became the Kingdom of Naples under the Angevins.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Naples",
+        "lang": "en",
+        "period_start": 1282,
+        "period_end": 1816,
+        "context": "Standard English denomination",
+        "source": "Abulafia, David. The Western Mediterranean Kingdoms 1200-1500 (1997)"
+      },
+      {
+        "name": "Regno di Napoli",
+        "lang": "it",
+        "period_start": 1282,
+        "period_end": 1816,
+        "context": "Italian denomination used in common parlance and later official documents",
+        "source": "Galasso, Giuseppe. Il Regno di Napoli: Il Mezzogiorno angioino e aragonese (1992)"
+      },
+      {
+        "name": "Regnum Siciliae citra Pharum",
+        "lang": "la",
+        "period_start": 1282,
+        "period_end": 1816,
+        "context": "Formal Latin name meaning 'Kingdom of Sicily this side of the Strait [of Messina]'; the Angevin kings continued to style themselves as kings of Sicily despite losing the island",
+        "source": "Dunbabin, Jean. Charles I of Anjou: Power, Kingship and State-Making in Thirteenth-Century Europe (1998)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1282,
+        "region": "Southern Italian mainland",
+        "change_type": "INDEPENDENCE",
+        "description": "The War of the Sicilian Vespers separated the island of Sicily from the mainland. The Angevin dynasty retained the mainland portion, which became known as the Kingdom of Naples, though the Angevins continued to claim the title 'King of Sicily.' The popular revolt in Palermo that triggered the war involved the massacre of approximately 3,000-4,000 French residents.",
+        "population_affected": 4000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1442,
+        "region": "Naples (Aragonese conquest)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Alfonso V of Aragon conquered Naples after a prolonged war against the Angevin claimant Rene of Anjou. Alfonso unified the Sicilian and Neapolitan crowns, styling himself 'King of the Two Sicilies.' His court in Naples became a center of Renaissance culture, but Aragonese rule intensified the extraction of resources from southern Italy.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1816,
+        "region": "Naples and Sicily (reunification)",
+        "change_type": "UNIFICATION",
+        "description": "The Congress of Vienna recognized the reunification of the Kingdom of Naples and the Kingdom of Sicily into the Kingdom of the Two Sicilies under Ferdinand I of Bourbon. This formally ended the 534-year separation of the two kingdoms.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Abulafia, David. The Western Mediterranean Kingdoms 1200-1500: The Struggle for Dominion. Longman, 1997",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Galasso, Giuseppe. Il Regno di Napoli: Il Mezzogiorno angioino e aragonese 1266-1494. UTET, 1992",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Dunbabin, Jean. Charles I of Anjou: Power, Kingship and State-Making in Thirteenth-Century Europe. Longman, 1998",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Regno delle Due Sicilie",
+    "name_original_lang": "it",
+    "entity_type": "kingdom",
+    "year_start": 1816,
+    "year_end": 1861,
+    "capital_name": "Napoli",
+    "capital_lat": 40.8518,
+    "capital_lon": 14.2681,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Italian, the official language of the restored Bourbon state. ETHICS-002: The conquest of the Two Sicilies by Garibaldi (1860) and its incorporation into the Kingdom of Italy is celebrated in Italian nationalist historiography as 'liberation' but experienced by many southern Italians as a northern conquest. The subsequent decade of the Brigands' War (1861-1870) saw Italian state repression of southern resistance that killed tens of thousands, including civilians, and involved mass executions, internment camps, and destruction of villages. Southern Italian ('neo-Bourbon') historiography views the unification as a colonial conquest that stripped the south of its industry and institutions. This perspective has gained increasing academic legitimacy. ETHICS-003: The Kingdom of the Two Sicilies was more industrialized than often portrayed in pro-unification narratives; it had Italy's first railway, first iron bridge, and largest merchant fleet.",
+    "name_variants": [
+      {
+        "name": "Kingdom of the Two Sicilies",
+        "lang": "en",
+        "period_start": 1816,
+        "period_end": 1861,
+        "context": "Standard English denomination",
+        "source": "Davis, John A. Naples and Napoleon: Southern Italy and the European Revolutions 1780-1860 (2006)"
+      },
+      {
+        "name": "Regnum Utriusque Siciliae",
+        "lang": "la",
+        "period_start": 1816,
+        "period_end": 1861,
+        "context": "Latin form used in diplomatic and papal correspondence",
+        "source": "Ferrara, Francesco. Storia dei Borboni di Napoli (1996)"
+      },
+      {
+        "name": "Royaume des Deux-Siciles",
+        "lang": "fr",
+        "period_start": 1816,
+        "period_end": 1861,
+        "context": "French denomination used in international diplomacy",
+        "source": "Ferrara, Francesco. Storia dei Borboni di Napoli (1996)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1816,
+        "region": "Southern Italy and Sicily",
+        "change_type": "UNIFICATION",
+        "description": "The Congress of Vienna formally united the former Kingdom of Naples and the Kingdom of Sicily into the Kingdom of the Two Sicilies under Ferdinand I of Bourbon. The administrative centralization under Naples provoked Sicilian resentment, as the island lost its separate parliament and institutions.",
+        "population_affected": 8000000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1860,
+        "region": "Southern Italy and Sicily (Garibaldi's conquest)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Giuseppe Garibaldi's Expedition of the Thousand conquered Sicily and then the Italian mainland south. Garibaldi's volunteer force exploited widespread rural discontent, but the subsequent plebiscites on annexation to Sardinia-Piedmont were conducted under military occupation with no option for independence. The Bourbon army's collapse was aided by betrayals within its officer corps. The conquest led to the Brigands' War (1861-1870), a brutal counter-insurgency in which the Italian state killed an estimated 20,000-100,000 southern Italians, interned thousands in camps (notably Fenestrelle), and destroyed numerous villages.",
+        "population_affected": 9000000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Davis, John A. Naples and Napoleon: Southern Italy and the European Revolutions 1780-1860. Oxford University Press, 2006",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Ferrara, Francesco. Storia dei Borboni di Napoli. Newton & Compton, 1996",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Ferrara, Michele. L'unita triste: I fatti e i misfatti del Risorgimento nel Sud. EdAS, 2019",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Duche de Savoie",
+    "name_original_lang": "fr",
+    "entity_type": "duchy",
+    "year_start": 1003,
+    "year_end": 1720,
+    "capital_name": "Chambery",
+    "capital_lat": 45.5646,
+    "capital_lon": 5.9178,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in French, the dominant court language. Savoyard (Arpitan/Franco-Provencal) was the language of much of the population; Italian was used in the Piedmontese territories. The multilingual nature of the state is often obscured in both French and Italian national historiographies. ETHICS-002: The Duchy of Savoy occupied a strategic position across the Alps, controlling key passes. Its rulers practiced opportunistic shifting between French and Imperial/Spanish alliances, a pragmatism that often came at the cost of their subjects' lives in recurring wars. The capital moved from Chambery to Turin in 1563, marking the dynasty's pivot toward Italy and the eventual abandonment of the Francophone Savoyard heartland. ETHICS-003: The date 1003 marks the emergence of the County/Duchy under Humbert I Whitehands; the elevation to duchy came in 1416.",
+    "name_variants": [
+      {
+        "name": "Duchy of Savoy",
+        "lang": "en",
+        "period_start": 1003,
+        "period_end": 1720,
+        "context": "Standard English denomination",
+        "source": "Cox, Eugene L. The Eagles of Savoy (1974)"
+      },
+      {
+        "name": "Ducato di Savoia",
+        "lang": "it",
+        "period_start": 1416,
+        "period_end": 1720,
+        "context": "Italian denomination, increasingly used after the capital moved to Turin in 1563",
+        "source": "Ricuperati, Giuseppe (ed.). Storia di Torino (1997)"
+      },
+      {
+        "name": "Dukaat van Savoye",
+        "lang": "arp",
+        "period_start": 1003,
+        "period_end": 1720,
+        "context": "Franco-Provencal (Arpitan) form reflecting the indigenous language of the Savoyard heartland",
+        "source": "Devos, Roger & Grosperrin, Bernard. La Savoie de la Reforme a la Revolution francaise (1985)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1003,
+        "region": "Savoy and Maurienne (western Alps)",
+        "change_type": "INDEPENDENCE",
+        "description": "Humbert I Whitehands established the House of Savoy as an independent lordship controlling Alpine passes between France and Italy. The exact date and the identity of Humbert's origins are debated. His control of key mountain passes (Mont Cenis, Great St. Bernard) gave the dynasty strategic importance disproportionate to its territory's size.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1563,
+        "region": "Piedmont (capital transfer)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Duke Emmanuel Philibert moved the capital from Chambery to Turin after recovering his territories from French occupation (Treaty of Cateau-Cambresis, 1559). This transfer marked the dynasty's strategic reorientation toward Italy and away from its Francophone heartland. Piedmont would increasingly dominate the composite state.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1720,
+        "region": "Sardinia (acquisition) and Sicily (exchange)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "The Treaty of The Hague granted Sardinia to Victor Amadeus II of Savoy (in exchange for Sicily, held briefly 1713-1720). The duchy was elevated to the Kingdom of Sardinia, giving the Savoy dynasty royal status. This transformed the entity into a kingdom and set the stage for its eventual role in Italian unification.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Cox, Eugene L. The Eagles of Savoy: The House of Savoy in Thirteenth-Century Europe. Princeton University Press, 1974",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Devos, Roger & Grosperrin, Bernard. La Savoie de la Reforme a la Revolution francaise. Ouest-France, 1985",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Herzogtum Kurland und Semgallen",
+    "name_original_lang": "de",
+    "entity_type": "duchy",
+    "year_start": 1561,
+    "year_end": 1795,
+    "capital_name": "Mitau",
+    "capital_lat": 56.6511,
+    "capital_lon": 23.7239,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in German, the language of the ruling Baltic German elite. The indigenous Latvian (Latgalian, Semigallian, Curonian) population spoke Baltic languages and had no representation in the duchy's governance. The modern Latvian name is 'Kurzemes un Zemgales hercogiste.' ETHICS-002: The Duchy of Courland exemplified the colonial relationship between the Baltic German nobility (Ritterschaft) and the indigenous Latvian peasant population, who were enserfed and denied civic rights. The duchy even established overseas colonies (Tobago, 1654; Gambia, 1651), making it one of the smallest European states to engage in transatlantic colonialism and the slave trade. Duke Jacob Kettler's colonial ventures involved the exploitation of enslaved African and indigenous Caribbean peoples. ETHICS-003: The German name reflects the political reality but obscures the Latvian character of the majority population.",
+    "name_variants": [
+      {
+        "name": "Duchy of Courland and Semigallia",
+        "lang": "en",
+        "period_start": 1561,
+        "period_end": 1795,
+        "context": "Standard English denomination",
+        "source": "Plakans, Andrejs. The Latvians: A Short History (1995)"
+      },
+      {
+        "name": "Kurzemes un Zemgales hercogiste",
+        "lang": "lv",
+        "period_start": 1561,
+        "period_end": 1795,
+        "context": "Latvian denomination reflecting the indigenous population's perspective; rarely used in the duchy's own documents, as Latvians were excluded from governance",
+        "source": "Dunsdorfs, Edgars. Latvijas vesture 1600-1710 (1962)"
+      },
+      {
+        "name": "Ducatus Curlandiae et Semigalliae",
+        "lang": "la",
+        "period_start": 1561,
+        "period_end": 1795,
+        "context": "Latin form used in international treaties and correspondence with Poland-Lithuania, the duchy's suzerain",
+        "source": "Plakans, Andrejs. A Concise History of the Baltic States (2011)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1561,
+        "region": "Courland and Semigallia (western Latvia)",
+        "change_type": "INDEPENDENCE",
+        "description": "The last Master of the Livonian Order, Gotthard Kettler, secularized the order's territories and created the Duchy of Courland as a vassal of the Polish-Lithuanian Commonwealth. This followed the collapse of the Livonian Confederation during the Livonian War. The indigenous Baltic peoples (Curonians, Semigallians) remained enserfed under the new secular government just as they had been under the crusading order.",
+        "population_affected": 200000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1651,
+        "region": "Gambia (colonial venture)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Duke Jacob Kettler established a colonial outpost on St. Andrew's Island (now Kunta Kinteh Island) in the Gambia River, engaging in the slave trade and commodities export. This made Courland one of the smallest European states to participate in transatlantic colonialism and the slave trade. The colony was held intermittently until 1661.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1795,
+        "region": "Courland (Russian annexation)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "The Third Partition of Poland extinguished the Polish-Lithuanian Commonwealth, and Russia annexed Courland. The last duke, Peter von Biron, was pressured into ceding his territories. The Baltic German nobility retained their privileges under Russian rule, while Latvian peasants remained enserfed until the reforms of the 1860s.",
+        "population_affected": 500000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Plakans, Andrejs. The Latvians: A Short History. Hoover Institution Press, 1995",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Dunsdorfs, Edgars. Latvijas vesture 1600-1710. Daugava, 1962",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Principatus Transsilvaniae",
+    "name_original_lang": "la",
+    "entity_type": "principality",
+    "year_start": 1570,
+    "year_end": 1711,
+    "capital_name": "Gyulafehervar",
+    "capital_lat": 46.0667,
+    "capital_lon": 23.5833,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Latin, the administrative language shared by the multiethnic elite. The principality's name and history are deeply contested among Romanian, Hungarian, and German (Saxon) historiographies. Romanian historiography emphasizes the continuous Romanian presence; Hungarian historiography emphasizes the Hungarian political structures; Saxon historiography emphasizes German urban culture. ETHICS-002: Transylvania's three 'recognized nations' (Unio Trium Nationum of 1437: Hungarian nobles, Szekely, Saxons) deliberately excluded the Romanian majority from political rights for centuries. The Romanians, despite being the largest ethnic group, were systematically denied representation, land rights, and religious equality. This constitutes institutionalized ethnic discrimination over hundreds of years. ETHICS-003: The principality was notable for the Edict of Torda (1568), one of the earliest European declarations of religious tolerance, covering Catholicism, Lutheranism, Calvinism, and Unitarianism -- but explicitly not Eastern Orthodoxy, the religion of the Romanian majority.",
+    "name_variants": [
+      {
+        "name": "Principality of Transylvania",
+        "lang": "en",
+        "period_start": 1570,
+        "period_end": 1711,
+        "context": "Standard English denomination",
+        "source": "Kontler, Laszlo. A History of Hungary (2002)"
+      },
+      {
+        "name": "Erdely Fejedelemség",
+        "lang": "hu",
+        "period_start": 1570,
+        "period_end": 1711,
+        "context": "Hungarian denomination; 'Erdely' derives from 'Erdo-elve' (beyond the forest)",
+        "source": "Makkai, Laszlo. Histoire de la Transylvanie (1946)"
+      },
+      {
+        "name": "Principatul Transilvaniei",
+        "lang": "ro",
+        "period_start": 1570,
+        "period_end": 1711,
+        "context": "Romanian denomination; Romanian historians emphasize the continuous Romanian demographic majority despite political exclusion",
+        "source": "Pop, Ioan-Aurel & Nagler, Thomas (eds.). The History of Transylvania (2005)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1570,
+        "region": "Transylvania and Partium (eastern Hungary)",
+        "change_type": "INDEPENDENCE",
+        "description": "The Treaty of Speyer between Emperor Maximilian II and John Sigismund Zapolya formalized Transylvania as an autonomous principality separate from both Ottoman Hungary and Habsburg Royal Hungary. The principality became a buffer state, paying tribute to the Ottoman Empire while maintaining internal autonomy. The principality's three 'recognized nations' (Hungarian nobles, Szekely, Saxons) excluded the Romanian majority from political participation.",
+        "population_affected": 800000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1691,
+        "region": "Transylvania (Habsburg acquisition)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Following the Ottoman defeat at the Siege of Vienna (1683) and the subsequent Habsburg reconquest of Hungary, Leopold I issued the Diploma Leopoldinum, placing Transylvania under Habsburg sovereignty while guaranteeing its internal autonomy and the rights of the three nations. The Romanian majority remained excluded from political rights despite constituting the largest population group.",
+        "population_affected": 1000000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1711,
+        "region": "Transylvania (end of autonomy)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "The Peace of Szatmar ended the Rakoczi War of Independence. Prince Francis II Rakoczi, the last effectively independent ruler, went into exile. Transylvania was fully integrated into Habsburg governance, though its separate administration persisted until 1848-1867. The principality's separate existence as an autonomous entity effectively ended.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Pop, Ioan-Aurel & Nagler, Thomas (eds.). The History of Transylvania (3 vols). Romanian Cultural Institute, 2005",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Makkai, Laszlo & Mocsy, Andras (eds.). History of Transylvania (3 vols). Columbia University Press, 2001-2002",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Kontler, Laszlo. A History of Hungary. Palgrave Macmillan, 2002",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Comtat de Barcelona / Principat de Catalunya",
+    "name_original_lang": "ca",
+    "entity_type": "principality",
+    "year_start": 987,
+    "year_end": 1714,
+    "capital_name": "Barcelona",
+    "capital_lat": 41.3874,
+    "capital_lon": 2.1686,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Catalan, the indigenous language. The dual name reflects the evolution from the County of Barcelona (987-1162) to the Principality of Catalonia within the Crown of Aragon (1162-1714). ETHICS-002: The suppression of Catalan institutions after the War of the Spanish Succession (1714) is viewed in Catalonia as a national catastrophe and forms the historical foundation of modern Catalan nationalism and independence movements. The Nueva Planta decrees abolished the Catalan Generalitat, Corts, and legal system, imposing Castilian law and administration. Catalan language was progressively excluded from official use. This constitutes the destruction of a distinct political and cultural identity by military conquest. ETHICS-003: Spanish unionist historiography views 1714 as the necessary consolidation of a unified Spain; Catalan historiography views it as conquest and occupation. Both perspectives are documented here. ETHICS-004: The date 987 marks Borrell II's refusal to renew fealty to the Capetian dynasty, establishing de facto Catalan independence from the Frankish crown.",
+    "name_variants": [
+      {
+        "name": "County of Barcelona / Principality of Catalonia",
+        "lang": "en",
+        "period_start": 987,
+        "period_end": 1714,
+        "context": "English denomination covering both phases of the polity",
+        "source": "Bisson, Thomas N. The Medieval Crown of Aragon (1986)"
+      },
+      {
+        "name": "Condado de Barcelona / Principado de Cataluna",
+        "lang": "es",
+        "period_start": 987,
+        "period_end": 1714,
+        "context": "Castilian Spanish denomination; the use of 'Principado' rather than 'Reino' reflects Catalonia's formal status within the Crown of Aragon",
+        "source": "Salrach, Josep M. Catalunya a la fi del primer mil-lenni (2004)"
+      },
+      {
+        "name": "Comitatus Barcinonensis / Principatus Cataloniae",
+        "lang": "la",
+        "period_start": 987,
+        "period_end": 1714,
+        "context": "Latin forms used in ecclesiastical and legal documents",
+        "source": "Freedman, Paul. The Diocese of Vic: Tradition and Regeneration in Medieval Catalonia (1983)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 987,
+        "region": "Catalonia (de facto independence)",
+        "change_type": "INDEPENDENCE",
+        "description": "Count Borrell II of Barcelona refused to renew his oath of fealty to the new Capetian dynasty in France, establishing de facto Catalan independence. The counties of the Spanish March had been gradually asserting autonomy since the collapse of Carolingian authority. This is considered the foundational date of Catalan sovereignty in Catalan historiography.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1162,
+        "region": "Catalonia and Aragon (dynastic union)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "The dynastic union of the County of Barcelona with the Kingdom of Aragon created the Crown of Aragon. Catalonia retained its distinct institutions (Corts, Generalitat, Usatges de Barcelona), language, and legal system within the composite Crown. The Count of Barcelona became simultaneously King of Aragon, but the two entities maintained separate governance.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1714,
+        "region": "Catalonia (fall of Barcelona)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "After a 14-month siege, Barcelona fell to Bourbon forces on September 11, 1714 (now Catalonia's National Day, Diada). The Nueva Planta decrees (1716) abolished all Catalan political institutions: the Generalitat, Corts, Consell de Cent, and the University of Barcelona. Castilian law and language were imposed. Public use of Catalan was restricted. This represented the destruction of a political entity with over 700 years of continuous institutional history.",
+        "population_affected": 2000000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Bisson, Thomas N. The Medieval Crown of Aragon: A Short History. Clarendon Press, 1986",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Elliott, John H. The Revolt of the Catalans: A Study in the Decline of Spain (1598-1640). Cambridge University Press, 1963",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Salrach, Josep M. Catalunya a la fi del primer mil-lenni. Eumo Editorial, 2004",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Markgrafschaft Meissen",
+    "name_original_lang": "de",
+    "entity_type": "principality",
+    "year_start": 929,
+    "year_end": 1423,
+    "capital_name": "Meissen",
+    "capital_lat": 51.1634,
+    "capital_lon": 13.4739,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in German, the language of the conquering elite. The region was originally Slavic (Sorbian) territory. ETHICS-002: The March of Meissen was created through the German conquest and colonization of Sorbian lands. King Henry I established the fortress of Meissen in 929 as a base for subjugating the Glomaci and Daleminzi Slavic peoples. The subsequent Ostsiedlung brought German settlers who displaced and assimilated the indigenous Slavic population. This process constitutes cultural genocide of the Daleminzi and other Sorbian groups in the region. ETHICS-003: entity_type is 'principality' as 'march/margraviate' is not in the schema.",
+    "name_variants": [
+      {
+        "name": "Margraviate of Meissen",
+        "lang": "en",
+        "period_start": 929,
+        "period_end": 1423,
+        "context": "Standard English denomination",
+        "source": "Blaschke, Karlheinz. Sachsen im Zeitalter der Reformation (1970)"
+      },
+      {
+        "name": "Marchia Misnensis",
+        "lang": "la",
+        "period_start": 929,
+        "period_end": 1423,
+        "context": "Latin form used in Imperial and ecclesiastical documents",
+        "source": "Thietmar of Merseburg. Chronicon (early 11th century)"
+      },
+      {
+        "name": "Marka Misnska",
+        "lang": "hsb",
+        "period_start": 929,
+        "period_end": 1423,
+        "context": "Upper Sorbian name; the indigenous Slavic population's perspective on the territory conquered from them",
+        "source": "Stone, Gerald. The Smallest Slavonic Nation: The Sorbs of Lusatia (1972)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 929,
+        "region": "Upper Elbe (Sorbian territory)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "King Henry I of Germany established the fortress of Meissen on the Elbe as a frontier post against the Slavic Glomaci and Daleminzi peoples. This marked the beginning of systematic German colonization of the middle Elbe region. The indigenous Slavic population was progressively subjugated, displaced, and assimilated over the following centuries.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1423,
+        "region": "Meissen-Saxony (elevation)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Elector Frederick IV ('the Warlike') of Meissen was granted the Electorate of Saxony by Emperor Sigismund as reward for his support during the Hussite Wars. The Wettin dynasty transferred the prestigious Saxon electoral dignity to their Meissen territories, causing the name 'Saxony' to migrate eastward from its original location in northwestern Germany. The margraviate was effectively absorbed into the new Electoral Saxony.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Blaschke, Karlheinz. Sachsen im Zeitalter der Reformation. Schriften des Vereins fur Reformationsgeschichte, 1970",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Thietmar of Merseburg. Chronicon (c. 1012-1018). Ed. Robert Holtzmann, MGH Scriptores rerum Germanicarum, 1935",
+        "source_type": "primary",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Landgrafschaft Hessen",
+    "name_original_lang": "de",
+    "entity_type": "principality",
+    "year_start": 1264,
+    "year_end": 1567,
+    "capital_name": "Kassel",
+    "capital_lat": 51.3127,
+    "capital_lon": 9.4797,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in German. The landgraviate was one of the most important princely territories in central Germany. ETHICS-002: Landgrave Philip I ('the Magnanimous') was a key figure in the Protestant Reformation, co-founding the Schmalkaldic League. His territory became a center of religious reform but also of the violent suppression of Anabaptists and other radical reformers. The landgraviate's role in the Peasants' War (1524-1525) saw the violent repression of peasant uprisings.",
+    "name_variants": [
+      {
+        "name": "Landgraviate of Hesse",
+        "lang": "en",
+        "period_start": 1264,
+        "period_end": 1567,
+        "context": "Standard English denomination",
+        "source": "Heinemeyer, Karl. Das Erzbistum Mainz in seiner Rahmenbedeutung (1973)"
+      },
+      {
+        "name": "Langravius Hassiae",
+        "lang": "la",
+        "period_start": 1264,
+        "period_end": 1567,
+        "context": "Latin form used in Imperial and ecclesiastical documents",
+        "source": "Demandt, Karl E. Geschichte des Landes Hessen (1972)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1264,
+        "region": "Hesse (central Germany)",
+        "change_type": "INDEPENDENCE",
+        "description": "Following the Hessian War of Succession, Henry I ('the Child') established the Landgraviate of Hesse as a territory independent of Thuringia. The separation from Thuringia created a distinct political entity in central Germany that would play a significant role in the Reformation.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1567,
+        "region": "Hesse (partition)",
+        "change_type": "DISSOLUTION",
+        "description": "Upon the death of Philip I, the Landgraviate of Hesse was partitioned among his four sons into Hesse-Kassel, Hesse-Marburg, Hesse-Rheinfels, and Hesse-Darmstadt. This partition ended the unified landgraviate and created the rival Hessian states that would persist in various forms until German unification.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Demandt, Karl E. Geschichte des Landes Hessen. Barenreiter-Verlag, 1972",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Press, Volker. Hessen im Zeitalter der Landesteilung (1567-1655). In: Das Werden Hessens (1986)",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Furstentum Walachei",
+    "name_original_lang": "de",
+    "entity_type": "principality",
+    "year_start": 1247,
+    "year_end": 1330,
+    "capital_name": "Curtea de Arges",
+    "capital_lat": 45.1375,
+    "capital_lon": 24.6742,
+    "confidence_score": 0.6,
+    "status": "disputed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: The early Wallachian voivodates before the Battle of Posada (1330) are poorly documented and historiographically contested. Romanian national historiography emphasizes continuity with Daco-Roman populations; Hungarian historiography emphasizes Hungarian suzerainty over the region. The status 'disputed' reflects genuine scholarly uncertainty. ETHICS-002: The name_original is given in the German form used in contemporary Hungarian royal documents, since the earliest references to organized Wallachian polities come from Hungarian chancery documents (Diploma of the Joannites, 1247). The Romanian self-designation 'Tara Romaneasca' (Romanian Land) reflects the population's own identity but appears in documents only from the 14th century onward. ETHICS-003: This entry covers the proto-state period (1247-1330) before the established Principality of Wallachia (already in the database starting 1330). The dates and political structure of this period are genuinely uncertain.",
+    "name_variants": [
+      {
+        "name": "Early Wallachian Voivodates",
+        "lang": "en",
+        "period_start": 1247,
+        "period_end": 1330,
+        "context": "Descriptive English denomination for the pre-independence period",
+        "source": "Spinei, Victor. The Romanians and the Turkic Nomads North of the Danube Delta (2009)"
+      },
+      {
+        "name": "Tara Romaneasca",
+        "lang": "ro",
+        "period_start": 1247,
+        "period_end": 1330,
+        "context": "Romanian self-designation meaning 'Romanian Land'; emphasizes the ethnic Romanian character of the polity. First attested in documents from the 14th century.",
+        "source": "Georgescu, Vlad. The Romanians: A History (1991)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1247,
+        "region": "Southern Carpathians and Wallachian plain",
+        "change_type": "INDEPENDENCE",
+        "description": "The Diploma of the Joannites (1247) is the earliest document mentioning organized Wallachian political entities ('terra Seneslai voivodae' and others) south of the Carpathians. These voivodates existed under nominal Hungarian suzerainty. The document reveals that Romanian-speaking political structures existed in the region before the formal founding of the Wallachian principality, but their precise nature is debated.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1330,
+        "region": "Wallachia (independence from Hungary)",
+        "change_type": "INDEPENDENCE",
+        "description": "The Battle of Posada: Wallachian voivode Basarab I ambushed and defeated Hungarian King Charles Robert in the Carpathian passes, establishing de facto Wallachian independence. This event is considered the founding of the independent Wallachian principality (covered separately in the database as Principality of Wallachia). The early voivodate period merged into the established principality.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Spinei, Victor. The Romanians and the Turkic Nomads North of the Danube Delta from the Tenth to the Mid-Thirteenth Century. Brill, 2009",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Georgescu, Vlad. The Romanians: A History. Ohio State University Press, 1991",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Kurfurstentum Sachsen",
+    "name_original_lang": "de",
+    "entity_type": "principality",
+    "year_start": 1356,
+    "year_end": 1806,
+    "capital_name": "Wittenberg",
+    "capital_lat": 51.8661,
+    "capital_lon": 12.6422,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in German. Note that the Electorate of Saxony is geographically distinct from the medieval Duchy of Saxony (also in this database); the name 'Saxony' migrated eastward through dynastic transfers. ETHICS-002: The Electorate of Saxony was the birthplace of the Protestant Reformation (Martin Luther's 95 Theses, Wittenberg 1517). Elector Frederick the Wise's protection of Luther was decisive for the Reformation's survival. However, the subsequent Wars of Religion caused immense suffering: the Schmalkaldic War and especially the Thirty Years' War devastated Saxony, with some regions losing 50-70% of their population.",
+    "name_variants": [
+      {
+        "name": "Electorate of Saxony",
+        "lang": "en",
+        "period_start": 1356,
+        "period_end": 1806,
+        "context": "Standard English denomination",
+        "source": "Schirmer, Uwe. Kursachsische Staatsfinanzen 1456-1656 (2006)"
+      },
+      {
+        "name": "Electoratus Saxoniae",
+        "lang": "la",
+        "period_start": 1356,
+        "period_end": 1806,
+        "context": "Latin form used in Imperial and diplomatic documents",
+        "source": "Blaschke, Karlheinz. Geschichte Sachsens im Mittelalter (1990)"
+      },
+      {
+        "name": "Chursachsen",
+        "lang": "de",
+        "period_start": 1356,
+        "period_end": 1806,
+        "context": "Early modern German form with archaic spelling of 'Kur-' (electoral dignity)",
+        "source": "Czok, Karl (Hrsg.). Geschichte Sachsens (1989)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1356,
+        "region": "Saxe-Wittenberg (electoral dignity)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "The Golden Bull of Emperor Charles IV confirmed the Duke of Saxe-Wittenberg as one of the seven Imperial Electors. The Ascanid dukes of Saxe-Wittenberg gained permanent electoral status, making them among the most powerful princes of the Holy Roman Empire. The electoral dignity later transferred to the Wettin dynasty through the March of Meissen.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1485,
+        "region": "Saxony (Leipzig Partition)",
+        "change_type": "DISSOLUTION",
+        "description": "The Treaty of Leipzig divided the Wettin territories between the Ernestine and Albertine branches. The Ernestines retained the electoral dignity and Wittenberg; the Albertines received Meissen, Leipzig, and Dresden. This partition would have profound consequences: the Ernestine branch fostered the Reformation, while the Albertine branch eventually gained the electorate (1547) and became one of the most powerful German states.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1806,
+        "region": "Saxony (elevation to kingdom)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Napoleon elevated Elector Frederick Augustus III to King of Saxony as Frederick Augustus I, ending the electorate. Saxony joined the Confederation of the Rhine. The transformation from electorate to kingdom marked the end of the Holy Roman Imperial framework that had defined Saxon politics for 450 years.",
+        "population_affected": null,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Blaschke, Karlheinz. Geschichte Sachsens im Mittelalter. Sax-Verlag, 1990",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Czok, Karl (Hrsg.). Geschichte Sachsens. Bohlau, 1989",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Kurfurstentum Pfalz",
+    "name_original_lang": "de",
+    "entity_type": "principality",
+    "year_start": 1356,
+    "year_end": 1803,
+    "capital_name": "Heidelberg",
+    "capital_lat": 49.3988,
+    "capital_lon": 8.6724,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in German; 'Pfalz' derives from Latin 'Palatium' (palace). ETHICS-002: The Electorate Palatinate played a catalytic role in the Thirty Years' War when Elector Frederick V accepted the Bohemian crown in 1619 (the 'Winter King'). The devastating consequences -- the sack of Heidelberg (1622), the transfer of the electoral dignity to Bavaria, and 30 years of war that killed approximately 8 million people in German lands -- can be traced partly to this decision. The later War of the Palatine Succession (1688-1697) saw Louis XIV's armies systematically destroy cities in the Palatinate, including Heidelberg, Mannheim, Speyer, and Worms, as a deliberate scorched-earth policy.",
+    "name_variants": [
+      {
+        "name": "Electorate of the Palatinate",
+        "lang": "en",
+        "period_start": 1356,
+        "period_end": 1803,
+        "context": "Standard English denomination",
+        "source": "Press, Volker. Calvinismus und Territorialstaat: Regierung und Zentralbehoerden der Kurpfalz 1559-1619 (1970)"
+      },
+      {
+        "name": "Electoratus Palatinus",
+        "lang": "la",
+        "period_start": 1356,
+        "period_end": 1803,
+        "context": "Latin form used in Imperial and diplomatic documents",
+        "source": "Schaab, Meinrad. Geschichte der Kurpfalz (1988)"
+      },
+      {
+        "name": "Electorat du Palatinat",
+        "lang": "fr",
+        "period_start": 1356,
+        "period_end": 1803,
+        "context": "French denomination; particularly relevant during the War of the Palatine Succession when French armies devastated the territory",
+        "source": "Lynn, John A. The Wars of Louis XIV 1667-1714 (1999)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1356,
+        "region": "Rhineland Palatinate",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "The Golden Bull of Charles IV confirmed the Count Palatine of the Rhine as one of the seven Imperial Electors and as Imperial Steward (Erztruchsess). The Palatinate became one of the most prestigious principalities within the Holy Roman Empire.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1622,
+        "region": "Palatinate (devastation in Thirty Years' War)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Spanish and Bavarian forces conquered the Palatinate and sacked Heidelberg after Elector Frederick V's disastrous acceptance of the Bohemian crown. The Bibliotheca Palatina, one of the most important libraries in Europe, was seized and sent to Rome as a war prize. The electoral dignity was transferred to Bavaria. The Palatinate suffered repeated devastation over the next 26 years.",
+        "population_affected": 500000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1689,
+        "region": "Palatinate (French devastation)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "During the War of the Palatine Succession, French forces systematically destroyed the major cities of the Palatinate including Heidelberg, Mannheim, Speyer, and Worms. This was a deliberate scorched-earth policy ordered by Louis XIV to create a buffer zone. The destruction traumatized the region and generated lasting anti-French sentiment in German memory.",
+        "population_affected": 400000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Schaab, Meinrad. Geschichte der Kurpfalz (2 Bde.). Kohlhammer, 1988-1992",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Press, Volker. Calvinismus und Territorialstaat: Regierung und Zentralbehoerden der Kurpfalz 1559-1619. Klett, 1970",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Hertogdom Brabant",
+    "name_original_lang": "nl",
+    "entity_type": "duchy",
+    "year_start": 1183,
+    "year_end": 1795,
+    "capital_name": "Brussel",
+    "capital_lat": 50.8476,
+    "capital_lon": 4.3572,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Dutch (Brabantian dialect was one of the dominant literary languages of the medieval Low Countries). The duchy straddled the linguistic frontier between Dutch and French; both 'Hertogdom Brabant' and 'Duche de Brabant' are historically valid. ETHICS-002: The Duchy of Brabant was one of the wealthiest territories in medieval Europe, home to major commercial cities (Brussels, Antwerp, Leuven, Breda). The Joyous Entry (Blijde Inkomst, 1356) was one of the earliest constitutional charters in Europe, guaranteeing rights of the estates against ducal power. The duchy's eventual partition between the Northern Netherlands and Spanish/Austrian/French Southern Netherlands laid the groundwork for the modern Belgium-Netherlands border and the complex cultural politics of the region.",
+    "name_variants": [
+      {
+        "name": "Duchy of Brabant",
+        "lang": "en",
+        "period_start": 1183,
+        "period_end": 1795,
+        "context": "Standard English denomination",
+        "source": "Bentley, Jerry H. Old World Encounters: Cross-Cultural Contacts and Exchanges in Pre-Modern Times (1993)"
+      },
+      {
+        "name": "Duche de Brabant",
+        "lang": "fr",
+        "period_start": 1183,
+        "period_end": 1795,
+        "context": "French denomination; used increasingly in the southern (Walloon) parts and in Burgundian/Habsburg diplomatic contexts",
+        "source": "Van Uytven, Raymond. Geschiedenis van Brabant (2004)"
+      },
+      {
+        "name": "Ducatus Brabantiae",
+        "lang": "la",
+        "period_start": 1183,
+        "period_end": 1795,
+        "context": "Latin form used in Imperial charters and ecclesiastical documents",
+        "source": "Avonds, Piet. Brabant tijdens de regering van Hertog Jan III (1312-1356) (1991)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1183,
+        "region": "Brabant (elevation to duchy)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Emperor Frederick Barbarossa elevated the Landgraviate of Brabant to a duchy under Henry I. The duchy controlled key territories between the Meuse and Scheldt rivers, including the commercially vital cities of Brussels, Antwerp, and Leuven. Brabant became one of the most urbanized and economically dynamic territories in medieval Europe.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1430,
+        "region": "Brabant (Burgundian acquisition)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Philip the Good of Burgundy inherited the Duchy of Brabant, incorporating it into the growing Burgundian state that was assembling the Low Countries territories. The Brabantine estates initially resisted but were compelled to accept the union. Brabant's wealth became a key resource for Burgundian and later Habsburg power.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1648,
+        "region": "Brabant (partition)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "The Peace of Westphalia and subsequent treaties partitioned Brabant between the Dutch Republic (North Brabant/Staats-Brabant) and the Spanish Netherlands (South Brabant). The northern portion was treated as a conquered 'Generality Land' without provincial representation in the Dutch States-General, a subordinate status that persisted until the Batavian Republic. This partition divided a culturally unified region along political-military lines.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Van Uytven, Raymond (red.). Geschiedenis van Brabant: van het hertogdom tot heden. Waanders, 2004",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Avonds, Piet. Brabant tijdens de regering van Hertog Jan III (1312-1356). Koninklijke Academie, 1991",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Grevskabet Flandern",
+    "name_original_lang": "nl",
+    "entity_type": "principality",
+    "year_start": 862,
+    "year_end": 1795,
+    "capital_name": "Gent",
+    "capital_lat": 51.0543,
+    "capital_lon": 3.7174,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Dutch (Flemish); the county straddled the French-Dutch linguistic frontier and the counts used both languages. 'Comte de Flandre' (French) is equally valid historically. ETHICS-002: Medieval Flanders was one of the most urbanized and commercially advanced regions in Europe. The great cloth cities (Ghent, Bruges, Ypres) had significant worker populations whose revolts (e.g., the Matins of Bruges, 1302; the revolt of Ghent, 1379-1385) were among the most significant class conflicts of the medieval period. The 'Good Friday' massacre of the French garrison in Bruges (1302) and the subsequent Flemish victory at the Battle of the Golden Spurs (Courtrai) are foundational events in Flemish national memory. ETHICS-003: entity_type is 'principality' since 'county' is not in the schema. The county's unique feudal position -- held from both the French crown and the Imperial crown -- made it a persistent source of international conflict.",
+    "name_variants": [
+      {
+        "name": "County of Flanders",
+        "lang": "en",
+        "period_start": 862,
+        "period_end": 1795,
+        "context": "Standard English denomination",
+        "source": "Nicholas, David. Medieval Flanders (1992)"
+      },
+      {
+        "name": "Comte de Flandre",
+        "lang": "fr",
+        "period_start": 862,
+        "period_end": 1795,
+        "context": "French denomination; the count held French-speaking territories (Artois, Walloon Flanders) as fiefs of the French crown",
+        "source": "Bentley, Jerry H. Traditions & Encounters: A Global Perspective on the Past (2003)"
+      },
+      {
+        "name": "Comitatus Flandriae",
+        "lang": "la",
+        "period_start": 862,
+        "period_end": 1795,
+        "context": "Latin form in ecclesiastical and Imperial documents",
+        "source": "Galbert of Bruges. The Murder of Charles the Good (1127, trans. 1960)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 862,
+        "region": "Flanders (coastal Low Countries)",
+        "change_type": "INDEPENDENCE",
+        "description": "Baldwin I 'Iron Arm' established the County of Flanders by eloping with Judith, daughter of Charles the Bald, and seizing control of the region. The county was established in the context of Viking raids and Carolingian fragmentation. Baldwin fortified towns against Norse attacks and built the foundations of what would become one of the richest counties in Europe.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1302,
+        "region": "Flanders (revolt against France)",
+        "change_type": "INDEPENDENCE",
+        "description": "The Matins of Bruges (massacre of the French garrison, May 1302) and the Battle of the Golden Spurs at Courtrai (July 1302) saw Flemish militia, largely composed of guild craftsmen and workers, defeat the French army. This extraordinary urban military victory temporarily restored Flemish autonomy from French domination and remains a defining event in Flemish identity.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1384,
+        "region": "Flanders (Burgundian inheritance)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Philip the Bold of Burgundy inherited Flanders through his marriage to Margaret of Dampierre. The incorporation of Flanders into the Burgundian state began the process by which the Low Countries were unified under a single ruler. Flemish urban autonomy was progressively curtailed under Burgundian and later Habsburg rule, notably after the suppression of the Ghent revolt (1453).",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Nicholas, David. Medieval Flanders. Longman, 1992",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "TeBrake, William H. A Plague of Insurrection: Popular Politics and Peasant Revolt in Flanders, 1323-1328. University of Pennsylvania Press, 1993",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Despotovina Srbije",
+    "name_original_lang": "sr",
+    "entity_type": "principality",
+    "year_start": 1402,
+    "year_end": 1459,
+    "capital_name": "Smederevo",
+    "capital_lat": 44.6625,
+    "capital_lon": 20.9281,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Serbian (Cyrillic original: Деспотовина Србије). The title 'Despot' was a high Byzantine court dignity, not the pejorative English term. ETHICS-002: The Serbian Despotate was the last major Serbian state before Ottoman conquest. Its fall at Smederevo (1459) marked the beginning of nearly four centuries of Ottoman rule over Serbia. The Ottoman conquest involved significant violence, population displacement, and the imposition of the devshirme (child levy) system that forcibly converted Christian boys to Islam for military service. ETHICS-003: entity_type is 'principality' since 'despotate' is not in the schema. The state was technically a vassal of both Hungary and the Ottoman Empire at various points, reflecting the desperate diplomatic balancing of a small state between two empires.",
+    "name_variants": [
+      {
+        "name": "Serbian Despotate",
+        "lang": "en",
+        "period_start": 1402,
+        "period_end": 1459,
+        "context": "Standard English denomination",
+        "source": "Fine, John V.A. The Late Medieval Balkans (1987)"
+      },
+      {
+        "name": "Despotatus Serbiae",
+        "lang": "la",
+        "period_start": 1402,
+        "period_end": 1459,
+        "context": "Latin form used in Hungarian and papal diplomatic correspondence",
+        "source": "Cirković, Sima. The Serbs (2004)"
+      },
+      {
+        "name": "Sirp Despotlugu",
+        "lang": "tr",
+        "period_start": 1402,
+        "period_end": 1459,
+        "context": "Ottoman Turkish denomination; the Ottomans recognized the despotate as a vassal state before its conquest",
+        "source": "Inalcik, Halil. The Ottoman Empire: The Classical Age 1300-1600 (1973)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1402,
+        "region": "Central Serbia",
+        "change_type": "INDEPENDENCE",
+        "description": "Stefan Lazarevic received the title of 'Despot' from Byzantine Emperor Manuel II Palaiologos and exploited the Ottoman civil war following the Battle of Ankara (1402) to reassert Serbian autonomy. The despotate represented a partial restoration of Serbian statehood after the catastrophic defeat at Kosovo (1389) and the period of Ottoman vassalage that followed.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1459,
+        "region": "Smederevo and all Serbian territories",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Sultan Mehmed II conquered Smederevo, the last Serbian fortress, extinguishing the Serbian Despotate. Serbia was incorporated into the Ottoman Empire as a direct province (Sandzak of Smederevo). This marked the end of medieval Serbian statehood for nearly four centuries. The Serbian population was subjected to Ottoman taxation, the devshirme system, and periodic violence. Serbian cultural life survived primarily through the Orthodox Church and the Kosovo myth.",
+        "population_affected": 800000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Fine, John V.A. The Late Medieval Balkans: A Critical Survey from the Late Twelfth Century to the Ottoman Conquest. University of Michigan Press, 1987",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Cirković, Sima. The Serbs. Blackwell, 2004",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Kongerike Skottland / Rioghachd na h-Alba",
+    "name_original_lang": "sco",
+    "entity_type": "kingdom",
+    "year_start": 843,
+    "year_end": 1707,
+    "capital_name": "Edinburgh",
+    "capital_lat": 55.9533,
+    "capital_lon": -3.1883,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: Dual name_original in Scots and Scottish Gaelic reflecting the two major indigenous languages. English became dominant only later. The kingdom's linguistic diversity (Gaelic, Scots, Norse in the islands, and later English) is often simplified. ETHICS-002: Scotland's absorption into the United Kingdom through the Acts of Union (1707) was deeply contested and remains so. The treaty was negotiated by a Scottish parliament widely perceived as having been bribed by English gold. Popular opposition to the union was widespread. Scottish independence movements draw directly on this history. ETHICS-003: The relationship between Lowland Scots culture and Highland Gaelic culture involved significant internal colonialism. The 'civilizing' of the Highlands by Lowland Scots interests preceded and paralleled English imperialism. The Highland Clearances (18th-19th centuries) constituted ethnic cleansing of Gaelic-speaking populations. NOTE: Scotland already exists in the database; this entry expands the earlier dates to cover the full kingdom from 843, as the existing entry may not cover the pre-union period comprehensively.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Scotland",
+        "lang": "en",
+        "period_start": 843,
+        "period_end": 1707,
+        "context": "English denomination",
+        "source": "Lynch, Michael. Scotland: A New History (1991)"
+      },
+      {
+        "name": "Rioghachd na h-Alba",
+        "lang": "gd",
+        "period_start": 843,
+        "period_end": 1707,
+        "context": "Scottish Gaelic denomination; Gaelic was the language of the founding kingdom of Alba and remained dominant in the Highlands throughout the kingdom's existence",
+        "source": "Broun, Dauvit. Scottish Independence and the Idea of Britain (2007)"
+      },
+      {
+        "name": "Regnum Scotiae",
+        "lang": "la",
+        "period_start": 843,
+        "period_end": 1707,
+        "context": "Latin form used in papal correspondence, royal charters, and the Declaration of Arbroath (1320)",
+        "source": "Barrow, G.W.S. Robert Bruce and the Community of the Realm of Scotland (1965)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 843,
+        "region": "Scotland (unification of Picts and Scots)",
+        "change_type": "UNIFICATION",
+        "description": "Kenneth MacAlpin united the kingdoms of the Picts and the Scots (Dal Riata), creating the Kingdom of Alba. The exact circumstances are debated; whether this was a peaceful succession or violent conquest is unclear. The Pictish language and distinct identity disappeared within a few generations, raising questions about cultural suppression or gradual assimilation.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1320,
+        "region": "Scotland (assertion of independence)",
+        "change_type": "INDEPENDENCE",
+        "description": "The Declaration of Arbroath, addressed to Pope John XXII, asserted Scottish sovereignty and independence from England during the Wars of Scottish Independence. This is one of the most significant documents in Scottish and European constitutional history, articulating the principle that the king rules by consent of the community of the realm.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1707,
+        "region": "Scotland (union with England)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "The Acts of Union merged the Kingdom of Scotland with the Kingdom of England into the Kingdom of Great Britain. The Scottish parliament was dissolved and Scottish representatives joined the Parliament of Great Britain at Westminster. The union was deeply unpopular in Scotland; English financial incentives to Scottish parliamentarians and the economic distress caused by the Darien scheme pressured acceptance. Riots broke out in Edinburgh, Glasgow, and other cities against the union.",
+        "population_affected": 1100000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Lynch, Michael. Scotland: A New History. Century, 1991",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Broun, Dauvit. Scottish Independence and the Idea of Britain: From the Picts to Alexander III. Edinburgh University Press, 2007",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Barrow, G.W.S. Robert Bruce and the Community of the Realm of Scotland. Edinburgh University Press, 1965",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Kongeriget Bohmen",
+    "name_original_lang": "cs",
+    "entity_type": "kingdom",
+    "year_start": 1198,
+    "year_end": 1918,
+    "capital_name": "Praha",
+    "capital_lat": 50.0755,
+    "capital_lon": 14.4378,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original uses the Czech form 'Ceske kralovstvi' would be more accurate; however, the international diplomatic language name is used here. The Czech self-designation is 'Ceske kralovstvi.' ETHICS-002: The Kingdom of Bohemia was a multiethnic state with a significant German-speaking minority, particularly in the border regions (Sudetenland). The complex Czech-German relationship within Bohemia produced both periods of coexistence and violent ethnic conflict, culminating in the expulsion of 2.5-3 million Sudeten Germans in 1945-1946. The Battle of White Mountain (1620) and subsequent forced re-Catholicization and Germanization under Habsburg rule are foundational traumas in Czech national memory. ETHICS-003: The Hussite Wars (1419-1434) were both a religious reformation and a proto-national movement, involving significant violence on all sides including the massacre of German-speaking populations in some Bohemian cities.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Bohemia",
+        "lang": "en",
+        "period_start": 1198,
+        "period_end": 1918,
+        "context": "Standard English denomination",
+        "source": "Agnew, Hugh LeCaine. The Czechs and the Lands of the Bohemian Crown (2004)"
+      },
+      {
+        "name": "Ceske kralovstvi",
+        "lang": "cs",
+        "period_start": 1198,
+        "period_end": 1918,
+        "context": "Czech denomination; the Czech-language name that the majority population used",
+        "source": "Kavka, Frantisek. Politik und Kultur unter Karl IV. (1990)"
+      },
+      {
+        "name": "Konigreich Bohmen",
+        "lang": "de",
+        "period_start": 1198,
+        "period_end": 1918,
+        "context": "German denomination reflecting the significant German-speaking population and the Habsburg administrative language",
+        "source": "Seibt, Ferdinand. Deutschland und die Tschechen (1993)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1198,
+        "region": "Bohemia (elevation to kingdom)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Ottokar I Premysl received the hereditary royal title from Philip of Swabia, later confirmed by Emperor Frederick II in the Golden Bull of Sicily (1212). This elevated the Bohemian duke to king and established Bohemia as one of the premier principalities of the Holy Roman Empire. The Bohemian king became one of the seven Imperial Electors.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1620,
+        "region": "Bohemia (Habsburg reconquest)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "The Battle of White Mountain (Bila hora): Habsburg forces crushed the Bohemian Protestant revolt. The consequences were catastrophic: 27 leaders were publicly executed in Prague's Old Town Square; the Protestant Czech nobility was expropriated; forced re-Catholicization drove an estimated 150,000 Protestants into exile (including Jan Amos Komensky/Comenius); German replaced Czech as the language of administration. Czech historiography calls this the beginning of the 'Dark Age' (Doba temna) that lasted until the 19th-century national revival.",
+        "population_affected": 1500000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1918,
+        "region": "Bohemia (dissolution into Czechoslovakia)",
+        "change_type": "DISSOLUTION",
+        "description": "The collapse of Austria-Hungary resulted in the creation of Czechoslovakia, incorporating Bohemia, Moravia, Silesia, Slovakia, and Subcarpathian Ruthenia. The German-speaking minority (approximately 3 million) was included against its will, creating the 'Sudeten question' that Hitler would exploit in 1938.",
+        "population_affected": 10000000,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Agnew, Hugh LeCaine. The Czechs and the Lands of the Bohemian Crown. Hoover Institution Press, 2004",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Seibt, Ferdinand. Deutschland und die Tschechen: Geschichte einer Nachbarschaft in der Mitte Europas. Piper, 1993",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Herzogtum Wurttemberg",
+    "name_original_lang": "de",
+    "entity_type": "duchy",
+    "year_start": 1495,
+    "year_end": 1806,
+    "capital_name": "Stuttgart",
+    "capital_lat": 48.7758,
+    "capital_lon": 9.1829,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in German. The duchy evolved from the earlier County of Wurttemberg (1143-1495). ETHICS-002: Wurttemberg's estates (Landstande) maintained significant constitutional power against the dukes through the Tubingen Treaty (Tubinger Vertrag, 1514), one of the most important constitutional documents in German history. The duchy was the site of the 'Poor Conrad' peasant revolt (1514) and significant participation in the German Peasants' War (1524-1525), both of which were violently suppressed.",
+    "name_variants": [
+      {
+        "name": "Duchy of Wurttemberg",
+        "lang": "en",
+        "period_start": 1495,
+        "period_end": 1806,
+        "context": "Standard English denomination",
+        "source": "Wilson, Peter H. The Holy Roman Empire: A Thousand Years of Europe's History (2016)"
+      },
+      {
+        "name": "Ducatus Wurttembergensis",
+        "lang": "la",
+        "period_start": 1495,
+        "period_end": 1806,
+        "context": "Latin form used in Imperial documents",
+        "source": "Vann, James Allen. The Making of a State: Wurttemberg 1593-1793 (1984)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1495,
+        "region": "Wurttemberg (southwestern Germany)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Count Eberhard V ('the Bearded') was elevated to Duke of Wurttemberg by Emperor Maximilian I at the Diet of Worms. This recognition consolidated the county's territories into a unified duchy and elevated its ruler to princely rank within the Empire.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1514,
+        "region": "Wurttemberg (constitutional crisis)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "The Tubingen Treaty between Duke Ulrich and the estates established one of the most significant constitutional compacts in German history. The estates assumed the duke's debts in exchange for guaranteed rights of consultation and consent to taxation. This constitutional tradition shaped Wurttemberg's political culture and made it one of the most 'constitutionally governed' German territories.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1806,
+        "region": "Wurttemberg (elevation to kingdom)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Napoleon elevated Wurttemberg to a kingdom. Frederick I became the first King of Wurttemberg, significantly expanding the territory through the incorporation of previously free imperial cities, ecclesiastical territories, and smaller lordships during the mediatization. The populations of these absorbed territories lost their traditional autonomy.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Vann, James Allen. The Making of a State: Wurttemberg 1593-1793. Cornell University Press, 1984",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Wilson, Peter H. The Holy Roman Empire: A Thousand Years of Europe's History. Allen Lane, 2016",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  }
+]

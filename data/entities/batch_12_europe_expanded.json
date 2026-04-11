@@ -1601,118 +1601,6 @@
     ]
   },
   {
-    "name_original": "Kongeriget Danmark",
-    "name_original_lang": "da",
-    "entity_type": "kingdom",
-    "year_start": 800,
-    "year_end": 1397,
-    "capital_name": "Roskilde",
-    "capital_lat": 55.6415,
-    "capital_lon": 12.0803,
-    "confidence_score": 0.75,
-    "status": "confirmed",
-    "boundary_geojson": {
-      "type": "Polygon",
-      "coordinates": [
-        [
-          [
-            8.0,
-            54.8
-          ],
-          [
-            8.5,
-            55.5
-          ],
-          [
-            9.5,
-            57.0
-          ],
-          [
-            10.5,
-            57.7
-          ],
-          [
-            12.0,
-            56.0
-          ],
-          [
-            12.8,
-            55.4
-          ],
-          [
-            13.0,
-            55.0
-          ],
-          [
-            12.5,
-            54.5
-          ],
-          [
-            11.0,
-            54.5
-          ],
-          [
-            9.5,
-            54.5
-          ],
-          [
-            8.0,
-            54.8
-          ]
-        ]
-      ]
-    },
-    "ethical_notes": "ETHICS-001: Danish name used as primary. ETHICS-002: Viking-Age Denmark's expansion involved the military conquest and colonization of parts of England (Danelaw), Normandy, and Baltic territories. Viking raids caused massive destruction and enslavement across Western Europe. However, the period also involved significant cultural exchange and trade. Danish rule over the Wendish Slavic populations in southern Baltic involved forced Christianization and cultural suppression.",
-    "name_variants": [
-      {
-        "name": "Viking Age Denmark",
-        "lang": "en",
-        "period_start": 800,
-        "period_end": 1397,
-        "context": "English historiographic term emphasizing the early period",
-        "source": "Sawyer, Peter. The Oxford Illustrated History of the Vikings (1997)"
-      },
-      {
-        "name": "Danernes Rige",
-        "lang": "da",
-        "period_start": 800,
-        "period_end": 1397,
-        "context": "Old Danish form meaning 'Realm of the Danes'",
-        "source": "Sawyer, Peter. The Oxford Illustrated History of the Vikings (1997)"
-      }
-    ],
-    "territory_changes": [
-      {
-        "year": 800,
-        "region": "Jutland and the Danish islands",
-        "change_type": "CONSOLIDATION",
-        "description": "The Jelling dynasty consolidated control over the Danish territories, unifying Jutland, Zealand, and Scania into a coherent kingdom",
-        "population_affected": 500000,
-        "confidence_score": 0.7
-      },
-      {
-        "year": 1397,
-        "region": "Denmark, Norway, Sweden",
-        "change_type": "DYNASTIC_UNION",
-        "description": "The Kalmar Union united Denmark with Norway and Sweden under Queen Margaret I, ending Denmark's existence as a fully independent kingdom",
-        "population_affected": 1000000,
-        "confidence_score": 0.9
-      }
-    ],
-    "sources": [
-      {
-        "citation": "Sawyer, Peter. The Oxford Illustrated History of the Vikings. Oxford University Press, 1997",
-        "source_type": "academic",
-        "url": null
-      },
-      {
-        "citation": "Roesdahl, Else. The Vikings. Penguin, 1998",
-        "source_type": "academic",
-        "url": null
-      }
-    ]
-  },
-  {
     "name_original": "Kalmarunionen",
     "name_original_lang": "da",
     "entity_type": "confederation",
@@ -2331,7 +2219,7 @@
   {
     "name_original": "Despotaton tou Moreos",
     "name_original_lang": "el",
-    "entity_type": "despotate",
+    "entity_type": "principality",
     "year_start": 1349,
     "year_end": 1460,
     "capital_name": "Mystras",

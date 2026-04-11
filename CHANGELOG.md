@@ -2,6 +2,99 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v5.7.0] - 2026-04-11
+
+### Dataset — Espansione massiva a 632 entita'
+- **632 entita' uniche** da 20 batch file (batches 00-19)
+- **1.907 fonti accademiche**, **1.865 varianti nome**, **1.772 cambi territoriali**
+- Nuovi batch: East Asia (28), Crusader/Islamic (43), Americas/Caribbean (39),
+  Africa Kingdoms (14), Europe Medieval (22), South/Central Asia (26), Ancient/Classical (20)
+- Pulizia: 29 duplicati rimossi con dedup cross-batch automatizzato
+- Validazione completa: nessun tipo entita' invalido, nessuno status invalido
+
+### API — Nuovo endpoint evolution
+- **`/v1/entities/{id}/evolution`**: cronologia completa di un'entita'
+  - Timeline ordinata per anno con tutti i cambiamenti territoriali
+  - Sommario: conteggio espansioni, contrazioni, fonti, varianti
+  - ETHICS: change_type preservato senza eufemismi
+
+### Frontend — Map capital markers
+- **Marker capitali sulla mappa**: tutte le entita' con coordinate capitale
+  ora appaiono sulla mappa, anche senza confini GeoJSON
+- Label nomi entita' sopra i marker capitali
+- Stile CSS migliorato: scrollbar personalizzate, focus visible, hover animations
+- Source type styling nel pannello dettaglio
+- Stats bar e info grid con layout migliorato
+
+### Test — 185 test passano
+- **19 nuovi test** in `test_v57_features.py`:
+  - Evolution endpoint (6 test): timeline, ordinamento, sommario, 404, campi
+  - Capital data (2 test): copertura coordinate, validazione range
+  - Data quality expanded (9 test): 600+ entita', 1800+ fonti, diversita'
+  - Cache headers (2 test): max-age, no-cache su random
+
+### Infrastruttura
+- Version bump a 5.7.0
+- README aggiornato: badge, conteggi, nuovo endpoint nella tabella API
+- Lint clean (ruff), 0 errori
+
+---
+
+## [v5.6.0] - 2026-04-11
+
+### API — Nuovi endpoint intelligenti
+- **`/v1/nearby`**: ricerca per prossimita' geografica (lat, lon, raggio, anno)
+  - Distanza Haversine dalle coordinate capitale
+  - Risultati ordinati per distanza, filtrabili per anno
+- **`/v1/snapshot/{year}`**: stato del mondo in un anno specifico
+  - Sommario per tipo, continente, status
+  - Filtrabile per tipo e continente
+- Totale: **18 endpoint REST** (da 16)
+- OpenAPI aggiornata con esempi per i nuovi endpoint
+
+### Frontend — Autocomplete & UX
+- **Ricerca autocomplete**: dropdown con suggerimenti in tempo reale
+  - Evidenziazione match nel testo, navigazione con frecce
+  - Mostra varianti di nome quando il match e' su un alias
+  - Chiusura con Esc, selezione con Enter/click
+- **Tasto destro sulla mappa**: popup "Entita' vicine" con distanze
+  - Usa `/v1/nearby` con l'anno corrente dello slider
+- **Barra di caricamento**: progress bar visiva durante fetch entita'
+- **Compare view**: i18n completo, layout refactored
+- **Aiuto tastiera**: aggiornato con nuove funzionalita'
+- OG meta aggiornata: "550+ entita'"
+
+### Dataset — Espansione fase 3
+- **587 entita' storiche** (da 441) — 18 batch JSON
+- 5 nuovi batch:
+  - **Asia Orientale espansa (29)**: Yamato, Nara, Heian, Kamakura, Muromachi, Sui, 
+    Northern Wei, Nanzhao, Dali, State of Chu, Three Kingdoms (Wu, Shu, Wei), 
+    Uyghur Khaganate, Tibetan Empire, Tuyuhun, Ainu Mosir
+  - **Crociate/Islam espanso (46)**: Kingdom of Jerusalem, County of Tripoli, 
+    Principality of Antioch, County of Edessa, Latin Empire, Hamdanids, Buyids, 
+    Zengids, Ghaznavids, Samanids, Idrisids, Aghlabids, Marinids, Hafsids, 
+    Sultanate of Rum, Caliphate of Cordoba, Nasrid Granada, Rashidun Caliphate
+  - **Americhe/Caraibi espanso (45)**: Taino, Maroons, Apache, Navajo, Seminole, 
+    Metis Nation, Republic of Texas, CSA, Empire of Brazil, Pirate Republic Nassau, 
+    Mosquitia, Cahokia, Mesa Verde, Kingdom of Quito, vicereami coloniali
+  - **Regni africani (25)**: Buganda, Bunyoro, Rwanda, Burundi, Lunda, Mutapa, 
+    Ndongo, Matamba (Queen Nzinga), Loango, Kano, Dagbon, Futa Jallon, Jolof, 
+    Bambara/Segou, Wadai, Baguirmi, eSwatini
+  - **Europa medievale (25)**: Brittany, Navarre, Pisa, Brandenburg, Saxony, 
+    Bavaria, Naples, Two Sicilies, Savoy, Sardinia-Piedmont, Croatia, 
+    Epirus, Trebizond, Second Bulgarian, Georgia, Livonian Order, Courland, 
+    Transylvania, Grand Duchy of Lithuania, Catalonia
+- Fix dati: rimosso duplicato Balhae, corretto despotate -> principality
+- Merge batch duplicati (14, 15) con dedup automatico
+- 1683 fonti accademiche, 1530 cambi territoriali documentati
+
+### Test
+- **166 test tutti verdi** (23 nuovi per v5.6)
+  - 8 test `/v1/nearby`: coordinate, distanza, raggio, anno, ordinamento
+  - 9 test `/v1/snapshot`: sommario, filtri, anno antico/moderno
+  - 6 test autocomplete: ricerca, varianti, unicode, limiti
+- Lint ruff pulito
+
 ## [v5.5.1] - 2026-04-11
 
 ### Frontend — UI Polish & Precision

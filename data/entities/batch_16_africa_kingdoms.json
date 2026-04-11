@@ -1,0 +1,1766 @@
+[
+  {
+    "name_original": "Meroe",
+    "name_original_lang": "mro",
+    "entity_type": "kingdom",
+    "year_start": -300,
+    "year_end": 350,
+    "capital_name": "Meroe",
+    "capital_lat": 16.9386,
+    "capital_lon": 33.7489,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            32.0,
+            15.0
+          ],
+          [
+            33.0,
+            15.5
+          ],
+          [
+            34.0,
+            16.0
+          ],
+          [
+            35.0,
+            17.0
+          ],
+          [
+            35.5,
+            18.0
+          ],
+          [
+            35.0,
+            19.0
+          ],
+          [
+            34.0,
+            19.5
+          ],
+          [
+            33.0,
+            19.0
+          ],
+          [
+            32.0,
+            18.0
+          ],
+          [
+            31.5,
+            17.0
+          ],
+          [
+            31.5,
+            16.0
+          ],
+          [
+            32.0,
+            15.0
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: This entity covers the specifically Meroitic phase of the Kingdom of Kush, when the capital shifted south to Meroe and the civilization developed its own distinctive script (Meroitic), iron-smelting industry, and cultural forms distinct from Egyptian influence. Western scholarship long dismissed Meroe as a derivative Egyptian civilization; this view has been challenged by Africanist scholars who emphasize its indigenous African character. The Meroitic script remains only partially deciphered, meaning indigenous textual sources are largely inaccessible -- a significant historiographic gap. Women rulers (Kandakes/Candaces) held significant political and military power, a feature often minimized in Eurocentric accounts. The kingdom's decline and conquest by Aksum c. 350 CE ended one of Africa's longest-lived civilizations. Archaeological evidence from Meroe is extensive but has been unevenly studied, with early excavations by colonial-era archaeologists (Reisner, Garstang) following methods now considered destructive.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Kush (Meroitic period)",
+        "lang": "en",
+        "context": "English academic designation for the later Kushite period centered on Meroe",
+        "period_start": -300,
+        "period_end": 350
+      },
+      {
+        "name": "Meroitic Kingdom",
+        "lang": "en",
+        "context": "Common English shorthand for the Meroe-centered phase of Kush",
+        "period_start": -300,
+        "period_end": 350
+      },
+      {
+        "name": "Regno di Meroe",
+        "lang": "it",
+        "context": "Italian academic designation",
+        "period_start": -300,
+        "period_end": 350
+      },
+      {
+        "name": "Kush",
+        "lang": "egy",
+        "context": "Egyptian-derived name for the broader Nubian polity, used throughout its history",
+        "period_start": -300,
+        "period_end": 350
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -300,
+        "change_type": "formation",
+        "region": "Upper Nubia / Island of Meroe",
+        "description": "The political and ceremonial center of the Kingdom of Kush shifted definitively southward from Napata to Meroe, likely driven by Egyptian and later Ptolemaic pressure in the north. Meroe became the royal necropolis and primary capital, giving its name to this phase of Kushite civilization. The region between the Nile, Atbara, and Blue Nile (the 'Island of Meroe') became the heartland.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": -24,
+        "change_type": "contraction",
+        "region": "Lower Nubia / Triakontaschoinos",
+        "description": "Roman expedition under Petronius sacked Napata in retaliation for Kushite raids into Roman Egypt led by Kandake Amanirenas. The subsequent Treaty of Samos (21/20 BCE) established a frontier at Maharraqa, but Kush lost effective control over the Dodekaschoinos (Lower Nubia). Amanirenas's military resistance to Rome is a significant episode of African resistance to imperial expansion.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 350,
+        "change_type": "dissolution",
+        "region": "Meroe and Upper Nubia",
+        "description": "King Ezana of Aksum invaded and destroyed Meroe, as recorded in Aksumite victory inscriptions. The Meroitic state collapsed, ending over a millennium of Kushite civilization. The Noba and other peoples occupied former Meroitic territory. Causes of decline include environmental degradation, loss of trade routes, and internal fragmentation, though Aksumite military conquest was the proximate cause.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Welsby, Derek A. The Kingdom of Kush: The Napatan and Meroitic Empires. London: British Museum Press, 1996",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Shinnie, P.L. Meroe: A Civilization of the Sudan. London: Thames and Hudson, 1967",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Torok, Laszlo. The Kingdom of Kush: Handbook of the Napatan-Meroitic Civilization. Leiden: Brill, 1997",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ezana of Aksum, victory inscription (c. 350 CE), DAE 11 / RIE 189",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "Eze Nri",
+    "name_original_lang": "ig",
+    "entity_type": "kingdom",
+    "year_start": 900,
+    "year_end": 1911,
+    "capital_name": "Nri",
+    "capital_lat": 6.15,
+    "capital_lon": 7.0,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            6.5,
+            5.8
+          ],
+          [
+            7.0,
+            5.9
+          ],
+          [
+            7.5,
+            6.0
+          ],
+          [
+            7.6,
+            6.3
+          ],
+          [
+            7.5,
+            6.6
+          ],
+          [
+            7.2,
+            6.8
+          ],
+          [
+            6.8,
+            6.8
+          ],
+          [
+            6.5,
+            6.5
+          ],
+          [
+            6.3,
+            6.2
+          ],
+          [
+            6.5,
+            5.8
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
+    "status": "uncertain",
+    "ethical_notes": "ETHICS: The Kingdom of Nri is unique in African history for its ritual-based political authority rather than military conquest. The Eze Nri (priest-king) exercised power through religious sanctions, ritual cleansing, and moral authority rather than standing armies. Nri is credited with originating many Igbo cultural institutions including the Ozo title system and the Igbo calendar. The kingdom's non-violent governance model challenges Western assumptions that African states were primarily built through military coercion. British colonial forces under the Bende-Onitsha Hinterland Expedition forcibly deposed the Eze Nri in 1911, destroying indigenous governance in favor of warrant chiefs. Archaeological evidence from Igbo-Ukwu (9th century, within Nri cultural sphere) demonstrates sophisticated bronze-casting technology predating European contact. Confidence is lower due to reliance on oral tradition and limited archaeological work.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Nri",
+        "lang": "en",
+        "context": "English academic designation",
+        "period_start": 900,
+        "period_end": 1911
+      },
+      {
+        "name": "Odinani Nri",
+        "lang": "ig",
+        "context": "Igbo designation referring to the Nri religious-political system",
+        "period_start": 900,
+        "period_end": 1911
+      },
+      {
+        "name": "Alaeze Nri",
+        "lang": "ig",
+        "context": "Igbo term meaning 'Kingdom of Nri'",
+        "period_start": 900,
+        "period_end": 1911
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 900,
+        "change_type": "formation",
+        "region": "Igboland / Anambra River basin",
+        "description": "Foundation of the Nri kingdom under the mythical first Eze Nri (Eri). The kingdom established ritual authority over a wide area of Igboland through religious prestige rather than military conquest. The Eze Nri's role centered on purification rituals, agricultural ceremonies, and resolution of abominations (nso ani). Oral genealogies trace the dynasty to this approximate period.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1911,
+        "change_type": "colonization",
+        "region": "Igboland / Nri territory",
+        "description": "British forces under the Bende-Onitsha Hinterland Expedition forcibly deposed Eze Nri Obalike and confiscated the sacred regalia (ofo and otonsi). The British replaced indigenous governance with the warrant chief system, which had no basis in Igbo political tradition and generated widespread resentment. The ritual authority of Nri was deliberately dismantled to facilitate colonial control.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1043,
+        "change_type": "expansion",
+        "region": "Igboland, Anambra and beyond",
+        "description": "Under Eze Nri Namoke (traditionally dated), Nri influence expanded significantly as Nri ritual authority and the Ozo title system were adopted by communities across a wide area of northern Igboland. This was a cultural and ritual expansion, not military conquest.",
+        "population_affected": null,
+        "confidence_score": 0.35
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Onwuejeogwu, M. Angulu. An Igbo Civilization: Nri Kingdom and Hegemony. London: Ethnographica, 1981",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Shaw, Thurstan. Igbo-Ukwu: An Account of Archaeological Discoveries in Eastern Nigeria. 2 vols. London: Faber and Faber, 1970",
+        "source_type": "archaeological"
+      },
+      {
+        "citation": "Afigbo, A.E. The Warrant Chiefs: Indirect Rule in Southeastern Nigeria 1891-1929. London: Longman, 1972",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Faama-dugu",
+    "name_original_lang": "bm",
+    "entity_type": "empire",
+    "year_start": 1712,
+    "year_end": 1861,
+    "capital_name": "Segou",
+    "capital_lat": 13.4317,
+    "capital_lon": -5.6157,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -8.0,
+            12.0
+          ],
+          [
+            -7.0,
+            12.0
+          ],
+          [
+            -6.0,
+            12.5
+          ],
+          [
+            -5.0,
+            13.0
+          ],
+          [
+            -4.0,
+            13.5
+          ],
+          [
+            -3.5,
+            14.0
+          ],
+          [
+            -4.0,
+            14.5
+          ],
+          [
+            -5.0,
+            14.5
+          ],
+          [
+            -6.0,
+            14.0
+          ],
+          [
+            -7.0,
+            13.5
+          ],
+          [
+            -8.0,
+            13.0
+          ],
+          [
+            -8.0,
+            12.0
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Bambara Empire of Segou was founded by Mamari Kulibali (Biton Coulibaly), originally a leader of the ton-djon warrior association. The empire maintained traditional African religious practices in a region increasingly influenced by Islam, which makes its history politically sensitive in the context of West African Islamization narratives. The empire was a major participant in the slave trade, both internal (ton-djon were often war captives) and Atlantic. The ton-djon system itself was based on unfree labor -- warrior-slaves who could rise to power. El Hadj Umar Tall's Toucouleur jihad conquered Segou in 1861, and the French colonial conquest followed in 1890-1893. Oral traditions (particularly the Bambara epic of Da Monzon) are crucial indigenous sources.",
+    "name_variants": [
+      {
+        "name": "Bambara Empire",
+        "lang": "en",
+        "context": "English academic designation",
+        "period_start": 1712,
+        "period_end": 1861
+      },
+      {
+        "name": "Kingdom of Segou",
+        "lang": "en",
+        "context": "Alternative English name based on the capital city",
+        "period_start": 1712,
+        "period_end": 1861
+      },
+      {
+        "name": "Empire bambara de Ségou",
+        "lang": "fr",
+        "context": "French designation, standard in Francophone West African historiography",
+        "period_start": 1712,
+        "period_end": 1861
+      },
+      {
+        "name": "Ségou",
+        "lang": "bm",
+        "context": "Bambara name for the capital city, often used metonymically for the state",
+        "period_start": 1712,
+        "period_end": 1861
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1712,
+        "change_type": "formation",
+        "region": "Middle Niger valley",
+        "description": "Mamari Kulibali (Biton Coulibaly) transformed the ton-djon warrior association into a state structure, seizing control of Segou. The ton-djon were a fraternity of warriors, many of slave origin, who had gained military power independent of traditional Bambara clan structures.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1790,
+        "change_type": "expansion",
+        "region": "Upper Niger / Macina / Timbuktu",
+        "description": "Under Ngolo Diara and his successor Da Monzon (r. 1808-1827), the Bambara Empire reached its greatest extent, controlling much of the Middle Niger valley including Timbuktu and exerting influence over neighboring polities. Da Monzon's exploits are celebrated in the Bambara oral epic tradition.",
+        "population_affected": 1500000,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1861,
+        "change_type": "annexation",
+        "region": "Segou and the Middle Niger",
+        "description": "El Hadj Umar Tall's Toucouleur jihad conquered Segou on March 10, 1861. The last Bambara faama (king), Ali Diara, fled. Umar Tall incorporated the territory into the Toucouleur Empire. The conquest was framed as an Islamic holy war against paganism. French colonial conquest of the Toucouleur Empire followed in 1890-1893.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Roberts, Richard L. Warriors, Merchants, and Slaves: The State and the Economy in the Middle Niger Valley, 1700-1914. Stanford University Press, 1987",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Bazin, Jean. 'Guerre et servitude a Segou' in Meillassoux, C. (ed.) L'esclavage en Afrique precoloniale. Paris: Maspero, 1975",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Monteil, Charles. Les Bambara du Segou et du Kaarta. Paris: Larose, 1924",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Bagirmi",
+    "name_original_lang": "bmi",
+    "entity_type": "kingdom",
+    "year_start": 1522,
+    "year_end": 1897,
+    "capital_name": "Massenya",
+    "capital_lat": 11.4,
+    "capital_lon": 16.17,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            15.0,
+            10.5
+          ],
+          [
+            16.0,
+            10.5
+          ],
+          [
+            17.0,
+            11.0
+          ],
+          [
+            17.5,
+            11.5
+          ],
+          [
+            17.5,
+            12.0
+          ],
+          [
+            17.0,
+            12.5
+          ],
+          [
+            16.0,
+            12.5
+          ],
+          [
+            15.0,
+            12.0
+          ],
+          [
+            14.5,
+            11.5
+          ],
+          [
+            15.0,
+            10.5
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
+    "status": "uncertain",
+    "ethical_notes": "ETHICS: The Baguirmi Kingdom was caught between the larger powers of Bornu to the west and Wadai to the east, frequently paying tribute to both. It was an active participant in the slave trade, raiding non-Muslim Sara and other southern populations. The kingdom's history illustrates the complex power dynamics of the central Sudanic belt, where multiple overlapping hegemonies coexisted. French colonization (1897-1900) formally ended the kingdom's independence, though the sultanate was retained as a subordinate institution under indirect rule. The Sara peoples who were the primary targets of Baguirmi slave raids became the demographic majority in southern Chad and later dominated post-independence politics -- a reversal with deep historical roots.",
+    "name_variants": [
+      {
+        "name": "Baguirmi Kingdom",
+        "lang": "en",
+        "context": "English academic designation",
+        "period_start": 1522,
+        "period_end": 1897
+      },
+      {
+        "name": "Sultanat du Baguirmi",
+        "lang": "fr",
+        "context": "French colonial designation",
+        "period_start": 1522,
+        "period_end": 1897
+      },
+      {
+        "name": "Massenya",
+        "lang": "bmi",
+        "context": "Capital city name, sometimes used metonymically for the kingdom",
+        "period_start": 1522,
+        "period_end": 1897
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1522,
+        "change_type": "formation",
+        "region": "Chari River basin, central Chad",
+        "description": "Traditional foundation of the Baguirmi kingdom by Birni Besse (or Dokkenge), who established the capital at Massenya on the Chari River. The state was built around the Barma ethnic group and adopted Islam early in its history.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1741,
+        "change_type": "expansion",
+        "region": "Southern Chad / Sara lands",
+        "description": "Under Mbang (sultan) Muhammad al-Amin, Baguirmi reached significant territorial extent and intensified slave raids into southern non-Muslim regions, particularly targeting Sara communities. The slave trade was a primary source of revenue.",
+        "population_affected": null,
+        "confidence_score": 0.45
+      },
+      {
+        "year": 1897,
+        "change_type": "colonization",
+        "region": "Baguirmi territory",
+        "description": "The warlord Rabih az-Zubayr sacked Massenya in 1893 and killed Mbang Abd ar-Rahman Gaourang I. The latter's son, Gaourang II, allied with the French against Rabih. After Rabih's defeat in 1900, France established a protectorate over Baguirmi, effectively ending its independence while retaining the sultanate as a figurehead institution.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Nachtigal, Gustav. Sahara and Sudan. Vol. II: Kawar, Bornu, Kanem, Borku, Ennedi. Trans. Allan G.B. Fisher and Humphrey J. Fisher. London: Hurst, 1980 (orig. 1881)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Carbou, Henri. La region du Tchad et du Ouaddai. 2 vols. Paris: Leroux, 1912",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Reyna, Stephen P. Wars Without End: The Political Economy of a Precolonial African State. Hanover, NH: University Press of New England, 1990",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Toro",
+    "name_original_lang": "nyo",
+    "entity_type": "kingdom",
+    "year_start": 1830,
+    "year_end": 1967,
+    "capital_name": "Fort Portal",
+    "capital_lat": 0.6711,
+    "capital_lon": 30.275,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            29.8,
+            -0.2
+          ],
+          [
+            30.2,
+            -0.2
+          ],
+          [
+            30.5,
+            0.2
+          ],
+          [
+            30.8,
+            0.6
+          ],
+          [
+            30.8,
+            1.0
+          ],
+          [
+            30.5,
+            1.4
+          ],
+          [
+            30.2,
+            1.5
+          ],
+          [
+            29.8,
+            1.3
+          ],
+          [
+            29.5,
+            1.0
+          ],
+          [
+            29.5,
+            0.5
+          ],
+          [
+            29.8,
+            -0.2
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Kingdom of Toro was a breakaway state from Bunyoro, established by Prince Kaboyo Olimi I. Its history is intertwined with the rivalries among the Ugandan Great Lakes kingdoms (Bunyoro, Buganda, Ankole, Toro). The British used these rivalries to establish colonial control, forming alliances with Buganda and Toro against the resisting Bunyoro. Under the Toro Agreement of 1900, the kingdom became a British client state. President Milton Obote abolished all Ugandan kingdoms in 1967 as part of the republican constitution. The kingdoms were restored as cultural institutions (without political power) in 1993. The Batooro people's oral traditions trace a longer history than the formal secession date.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Toro",
+        "lang": "en",
+        "context": "English academic designation",
+        "period_start": 1830,
+        "period_end": 1967
+      },
+      {
+        "name": "Obukama bwa Toro",
+        "lang": "nyo",
+        "context": "Rutooro-language designation meaning 'Kingdom of Toro'",
+        "period_start": 1830,
+        "period_end": 1967
+      },
+      {
+        "name": "Toro Kingdom",
+        "lang": "en",
+        "context": "Alternative English form",
+        "period_start": 1830,
+        "period_end": 1967
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1830,
+        "change_type": "independence",
+        "region": "Western Uganda / Rwenzori Mountains",
+        "description": "Prince Kaboyo Olimi I, son of Bunyoro's Omukama (king) Nyamutukura Kyebambe III, seceded from the Bunyoro kingdom and established Toro as an independent kingdom in the Rwenzori Mountains region. The secession was driven by succession disputes and Bunyoro's weakening power.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1900,
+        "change_type": "colonization",
+        "region": "Toro",
+        "description": "The Toro Agreement formalized British colonial control, making the kingdom a protectorate within the Uganda Protectorate. The Omukama retained local authority under indirect rule. Britain used Toro as an ally against the resisting Bunyoro kingdom.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1967,
+        "change_type": "dissolution",
+        "region": "Toro territory",
+        "description": "President Milton Obote abolished all traditional kingdoms in Uganda through the 1967 republican constitution, following the 1966 Buganda crisis. The Omukama of Toro, Patrick David Matthew Kaboyo Olimi VII, went into exile. Kingdoms were restored as purely cultural institutions in 1993 under President Museveni.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Steinhart, Edward I. Conflict and Collaboration: The Kingdoms of Western Uganda, 1890-1907. Princeton University Press, 1977",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ingham, Kenneth. The Kingdom of Toro in Uganda. London: Methuen, 1975",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Uganda Protectorate, Toro Agreement of 1900 (official colonial document)",
+        "source_type": "official"
+      }
+    ]
+  },
+  {
+    "name_original": "Bunyoro-Kitara",
+    "name_original_lang": "nyo",
+    "entity_type": "kingdom",
+    "year_start": 1300,
+    "year_end": 1967,
+    "capital_name": "Hoima",
+    "capital_lat": 1.4314,
+    "capital_lon": 31.3525,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            30.0,
+            0.5
+          ],
+          [
+            30.5,
+            0.5
+          ],
+          [
+            31.0,
+            0.8
+          ],
+          [
+            31.5,
+            1.2
+          ],
+          [
+            32.0,
+            1.5
+          ],
+          [
+            32.0,
+            2.0
+          ],
+          [
+            31.5,
+            2.5
+          ],
+          [
+            31.0,
+            2.5
+          ],
+          [
+            30.5,
+            2.2
+          ],
+          [
+            30.0,
+            1.8
+          ],
+          [
+            29.8,
+            1.3
+          ],
+          [
+            30.0,
+            0.5
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: Bunyoro-Kitara claims descent from the legendary Kitara empire (Cwezi dynasty), which may represent a mythological charter for legitimacy rather than a historical state. This distinction must be preserved. Bunyoro was the dominant power in the Great Lakes region before Buganda's rise, and the rivalry between these two kingdoms shaped the region's history for centuries. The British alliance with Buganda against Bunyoro (1890s-1900s) was a deliberate divide-and-rule strategy: Bunyoro's Omukama Kabalega resisted British colonialism vigorously and was captured only in 1899 after years of guerrilla warfare. As punishment, large portions of Bunyoro territory (the 'Lost Counties') were transferred to Buganda, a colonial injustice not partially rectified until a 1964 referendum. The kingdom was abolished in 1967 and restored in 1993.",
+    "name_variants": [
+      {
+        "name": "Bunyoro Kingdom",
+        "lang": "en",
+        "context": "English academic designation (short form)",
+        "period_start": 1300,
+        "period_end": 1967
+      },
+      {
+        "name": "Kingdom of Bunyoro-Kitara",
+        "lang": "en",
+        "context": "Full English form including the legendary Kitara heritage",
+        "period_start": 1300,
+        "period_end": 1967
+      },
+      {
+        "name": "Obukama bwa Bunyoro-Kitara",
+        "lang": "nyo",
+        "context": "Runyoro-language designation",
+        "period_start": 1300,
+        "period_end": 1967
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1300,
+        "change_type": "formation",
+        "region": "Western Uganda / Great Lakes",
+        "description": "The Babito dynasty established the Bunyoro kingdom, claiming succession from the legendary Cwezi rulers of the Kitara empire. Bunyoro was initially the dominant power in the interlacustrine region, controlling territory from the Albert Nile to the edges of Lake Victoria.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1700,
+        "change_type": "contraction",
+        "region": "Southern territories / Buganda frontier",
+        "description": "Bunyoro progressively lost territory to the expanding Buganda kingdom. Breakaway states including Toro (c. 1830) and Ankole further reduced Bunyoro's domain. By the 18th century, Bunyoro had lost its preeminence to Buganda.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1899,
+        "change_type": "colonization",
+        "region": "Bunyoro",
+        "description": "Omukama Kabalega, who had waged sustained guerrilla resistance against the British, was captured alongside Buganda's exiled Kabaka Mwanga II at Lango in 1899. Bunyoro was incorporated into the Uganda Protectorate. The 'Lost Counties' of Buyaga and Bugangaizi were punitively transferred to Buganda for its collaboration with the British.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1967,
+        "change_type": "dissolution",
+        "region": "Bunyoro",
+        "description": "All Ugandan kingdoms were abolished by the 1967 republican constitution. The kingdom was restored as a cultural institution in 1993.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Nyakatura, John W. Anatomy of an African Kingdom: A History of Bunyoro-Kitara. Trans. Teopista Muganwa. Ed. Godfrey N. Uzoigwe. Garden City, NY: Anchor Press/Doubleday, 1973",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Steinhart, Edward I. Conflict and Collaboration: The Kingdoms of Western Uganda, 1890-1907. Princeton University Press, 1977",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Uzoigwe, Godfrey N. 'Kabalega and the Making of a New Kitara' in Tarikh, 3.2, 1970",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "U Rwanda",
+    "name_original_lang": "rw",
+    "entity_type": "kingdom",
+    "year_start": 1081,
+    "year_end": 1961,
+    "capital_name": "Nyanza",
+    "capital_lat": -2.3497,
+    "capital_lon": 29.7506,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            28.8,
+            -1.0
+          ],
+          [
+            29.5,
+            -1.0
+          ],
+          [
+            30.0,
+            -1.3
+          ],
+          [
+            30.8,
+            -1.5
+          ],
+          [
+            30.9,
+            -2.0
+          ],
+          [
+            30.8,
+            -2.5
+          ],
+          [
+            30.5,
+            -2.8
+          ],
+          [
+            29.8,
+            -2.8
+          ],
+          [
+            29.0,
+            -2.5
+          ],
+          [
+            28.8,
+            -2.0
+          ],
+          [
+            28.8,
+            -1.5
+          ],
+          [
+            28.8,
+            -1.0
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Kingdom of Rwanda's history is inseparable from the Hutu-Tutsi-Twa social categories, whose origins remain hotly debated among scholars. The precolonial kingdom was a centralized Tutsi monarchy under the Mwami (king), with a complex patron-client system (ubuhake) that gave Tutsi cattle-owning elites power over Hutu agriculturalists. CRITICAL: Belgian colonial rule (1916-1962) radically hardened these fluid social categories into fixed racial identities through identity cards, racial pseudoscience (the 'Hamitic hypothesis'), and systematic Tutsi privileging. The 1959 Hutu Revolution overthrew the monarchy and led to mass Tutsi killings and exile. This history is a direct precursor to the 1994 genocide against the Tutsi. ANY representation of Rwandan history that treats Hutu/Tutsi as primordial 'tribes' in eternal conflict reproduces colonial ideology and must be avoided. The social categories were real but their meaning was transformed by colonialism.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Rwanda",
+        "lang": "en",
+        "context": "English academic designation",
+        "period_start": 1081,
+        "period_end": 1961
+      },
+      {
+        "name": "Royaume du Rwanda",
+        "lang": "fr",
+        "context": "French designation, standard in Belgian colonial literature",
+        "period_start": 1081,
+        "period_end": 1961
+      },
+      {
+        "name": "U Rwanda rwa Kale",
+        "lang": "rw",
+        "context": "Kinyarwanda designation meaning 'ancient Rwanda'",
+        "period_start": 1081,
+        "period_end": 1961
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1081,
+        "change_type": "formation",
+        "region": "Central highlands of Rwanda",
+        "description": "Traditional foundation of the Rwandan kingdom under Mwami Gihanga, a semi-mythical figure. The early kingdom was centered on a small area near Gasabo and gradually expanded through centuries of conquest and incorporation. Dating is based on royal genealogies maintained by the abiru (court ritualists) and is approximate.",
+        "population_affected": null,
+        "confidence_score": 0.35
+      },
+      {
+        "year": 1700,
+        "change_type": "expansion",
+        "region": "Greater Rwanda",
+        "description": "Under Mwami Ruganzu II Ndori and subsequent rulers, the kingdom expanded significantly, incorporating peripheral Hutu kingdoms and Tutsi principalities through military conquest and political absorption. The ubuhake (patron-client) system was extended to new territories as a mechanism of political integration.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1916,
+        "change_type": "colonization",
+        "region": "Rwanda",
+        "description": "Belgian forces occupied Rwanda-Urundi during World War I, displacing German colonial authority (established 1899). Belgium administered Rwanda as a League of Nations mandate (later UN trust territory), ruling through the Tutsi monarchy but radically transforming the social order by issuing ethnic identity cards (1933) and using the Hamitic hypothesis to justify Tutsi supremacy as a racial category.",
+        "population_affected": 2000000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1961,
+        "change_type": "dissolution",
+        "region": "Rwanda",
+        "description": "The Gitarama coup (January 1961) abolished the monarchy. Mwami Kigeli V Ndahindurwa went into exile. A Belgian-supervised referendum (September 1961) confirmed the republic. The Hutu Revolution (1959-1962) was accompanied by mass violence against Tutsi, with tens of thousands killed and hundreds of thousands driven into exile. Rwanda became independent in 1962 as a Hutu-dominated republic.",
+        "population_affected": 300000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Vansina, Jan. Antecedents to Modern Rwanda: The Nyiginya Kingdom. Madison: University of Wisconsin Press, 2004",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Mamdani, Mahmood. When Victims Become Killers: Colonialism, Nativism, and the Genocide in Rwanda. Princeton University Press, 2001",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Newbury, Catharine. The Cohesion of Oppression: Clientship and Ethnicity in Rwanda 1860-1960. New York: Columbia University Press, 1988",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Ingoma y'Uburundi",
+    "name_original_lang": "rn",
+    "entity_type": "kingdom",
+    "year_start": 1680,
+    "year_end": 1966,
+    "capital_name": "Muramvya",
+    "capital_lat": -3.2667,
+    "capital_lon": 29.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            28.9,
+            -2.3
+          ],
+          [
+            29.5,
+            -2.3
+          ],
+          [
+            30.0,
+            -2.5
+          ],
+          [
+            30.5,
+            -2.8
+          ],
+          [
+            30.8,
+            -3.0
+          ],
+          [
+            30.8,
+            -3.5
+          ],
+          [
+            30.5,
+            -4.0
+          ],
+          [
+            30.0,
+            -4.3
+          ],
+          [
+            29.5,
+            -4.3
+          ],
+          [
+            29.0,
+            -4.0
+          ],
+          [
+            28.9,
+            -3.5
+          ],
+          [
+            28.9,
+            -2.3
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: Like Rwanda, the Kingdom of Burundi had a complex social structure involving Hutu, Tutsi, and Twa categories, but with critical differences that must not be collapsed into a single 'Great Lakes' narrative. Burundi's Ganwa (royal princes) formed a distinct ruling class separate from ordinary Tutsi, and Hutu could achieve higher social status more readily than in Rwanda. German (1899-1916) and then Belgian (1916-1962) colonial rule imposed the same racial categorization as in Rwanda, hardening fluid identities. The monarchy's abolition in 1966 (by a Tutsi military coup, unlike Rwanda's Hutu revolution) led to decades of ethnic violence including the 1972 Ikiza genocide against Hutu intellectuals. The two countries' parallel but distinct trajectories must not be conflated.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Burundi",
+        "lang": "en",
+        "context": "English academic designation",
+        "period_start": 1680,
+        "period_end": 1966
+      },
+      {
+        "name": "Royaume du Burundi",
+        "lang": "fr",
+        "context": "French designation, standard in Belgian colonial literature",
+        "period_start": 1680,
+        "period_end": 1966
+      },
+      {
+        "name": "Uburundi",
+        "lang": "rn",
+        "context": "Kirundi self-designation",
+        "period_start": 1680,
+        "period_end": 1966
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1680,
+        "change_type": "formation",
+        "region": "Central Burundi highlands",
+        "description": "Traditional foundation of the Burundian kingdom under Mwami Ntare Rushatsi, who unified several smaller chieftaincies in the highlands. The dating is approximate and based on royal genealogies. The Mwami ruled through a system of provincial chiefs (Ganwa, royal princes of the blood), creating a multi-tiered political system.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1850,
+        "change_type": "expansion",
+        "region": "Greater Burundi",
+        "description": "Under Mwami Ntare IV Rutaganzwa Rugamba (r. c. 1796-1850), the kingdom reached its greatest extent, incorporating peripheral territories and establishing Burundi as a significant regional power. Ntare IV is the most celebrated king in Burundian oral tradition.",
+        "population_affected": 500000,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1916,
+        "change_type": "colonization",
+        "region": "Burundi",
+        "description": "Belgian forces occupied Burundi (as part of Rwanda-Urundi) during World War I. Belgium administered the territory as a League of Nations mandate, ruling through the existing monarchy but imposing racial categorization and identity cards, as in Rwanda.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1966,
+        "change_type": "dissolution",
+        "region": "Burundi",
+        "description": "Captain Michel Micombero, a Tutsi-Hima military officer, overthrew the young Mwami Ntare V Ndizeye in a coup and proclaimed a republic. Ntare V was later killed in 1972 during the Ikiza massacres. The monarchy was not restored. Burundi descended into decades of ethnic Hutu-Tutsi violence.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Chrétien, Jean-Pierre. The Great Lakes of Africa: Two Thousand Years of History. Trans. Scott Straus. New York: Zone Books, 2003",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Mworoha, Emile. Peuples et rois de l'Afrique des lacs: Le Burundi et les royaumes voisins au XIXe siècle. Dakar: Les Nouvelles Editions Africaines, 1977",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Lemarchand, René. Burundi: Ethnic Conflict and Genocide. Cambridge University Press, 1996",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Kano",
+    "name_original_lang": "ha",
+    "entity_type": "city-state",
+    "year_start": 1000,
+    "year_end": 1903,
+    "capital_name": "Kano",
+    "capital_lat": 12.0,
+    "capital_lon": 8.5167,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            7.5,
+            11.0
+          ],
+          [
+            8.5,
+            11.0
+          ],
+          [
+            9.5,
+            11.5
+          ],
+          [
+            10.0,
+            12.0
+          ],
+          [
+            10.0,
+            13.0
+          ],
+          [
+            9.5,
+            13.5
+          ],
+          [
+            8.5,
+            13.5
+          ],
+          [
+            7.5,
+            13.0
+          ],
+          [
+            7.0,
+            12.0
+          ],
+          [
+            7.5,
+            11.0
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Kano Emirate / city-state represents one of the most important Hausa states, with a documented history preserved in the Kano Chronicle (an indigenous written source of major importance). Kano was a hub of trans-Saharan trade, including the slave trade, and a center of Islamic learning. The 1807 Fulani jihad of Usman dan Fodio overthrew the Hausa Habe dynasty and installed a Fulani emir, transforming Kano into an emirate within the Sokoto Caliphate. This remains politically sensitive as the Hausa-Fulani distinction carries contemporary political weight in Nigeria. The British conquest of Kano (1903) by Frederick Lugard was justified as anti-slavery but primarily served imperial economic interests. The Kano city walls (begun 12th century) are among the largest pre-colonial structures in Africa.",
+    "name_variants": [
+      {
+        "name": "Kano Emirate",
+        "lang": "en",
+        "context": "English designation for the post-1807 Fulani period",
+        "period_start": 1807,
+        "period_end": 1903
+      },
+      {
+        "name": "Kano city-state",
+        "lang": "en",
+        "context": "English designation for the pre-jihad Hausa period",
+        "period_start": 1000,
+        "period_end": 1807
+      },
+      {
+        "name": "Masarautar Kano",
+        "lang": "ha",
+        "context": "Hausa-language designation meaning 'Kano Emirate/Kingdom'",
+        "period_start": 1000,
+        "period_end": 1903
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1000,
+        "change_type": "formation",
+        "region": "Northern Nigeria",
+        "description": "According to the Kano Chronicle, the city-state was founded by Bagauda, grandson of the legendary Bayajidda. By the 11th century, Kano was an established walled city and a significant node in trans-Saharan trade networks. Islam was introduced gradually, becoming dominant by the 15th century under Muhammad Rumfa (r. 1463-1499).",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1807,
+        "change_type": "annexation",
+        "region": "Kano",
+        "description": "Usman dan Fodio's Fulani jihad overthrew the Habe (Hausa) dynasty of Kano. The last Habe king, Alwali, was killed. A Fulani emir (Sulaiman) was installed, and Kano became the most important emirate within the Sokoto Caliphate. The jihad was framed as religious reform against syncretic Islam but also reflected Fulani-Hausa ethnic tensions.",
+        "population_affected": 500000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1903,
+        "change_type": "colonization",
+        "region": "Kano",
+        "description": "British forces under Frederick Lugard conquered Kano on February 3, 1903, after a brief battle. The last independent emir, Aliyu Babba, fled. Lugard installed a cooperative emir and established indirect rule through the emirate structure. The British publicly justified the conquest as an anti-slavery measure, though economic motives (groundnut trade, tin mining) were paramount.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Palmer, H.R. (trans. and ed.). 'The Kano Chronicle' in Journal of the Royal Anthropological Institute, 38, 1908 (Hausa original manuscript, c. late 19th century)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Smith, M.G. Government in Kano 1350-1950. Boulder: Westview Press, 1997",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Last, Murray. The Sokoto Caliphate. London: Longman, 1967",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Dagbon",
+    "name_original_lang": "dag",
+    "entity_type": "kingdom",
+    "year_start": 1409,
+    "year_end": null,
+    "capital_name": "Yendi",
+    "capital_lat": 9.4333,
+    "capital_lon": -0.0167,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -0.8,
+            9.0
+          ],
+          [
+            -0.3,
+            9.0
+          ],
+          [
+            0.2,
+            9.3
+          ],
+          [
+            0.5,
+            9.7
+          ],
+          [
+            0.5,
+            10.2
+          ],
+          [
+            0.2,
+            10.5
+          ],
+          [
+            -0.3,
+            10.5
+          ],
+          [
+            -0.8,
+            10.2
+          ],
+          [
+            -1.0,
+            9.7
+          ],
+          [
+            -0.8,
+            9.0
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Kingdom of Dagbon is one of the oldest extant kingdoms in Ghana, with the Ya Na (paramount chief) maintaining authority as a traditional ruler to this day. The kingdom's history involves complex succession disputes between two royal gates (Andani and Abudu), which have periodically erupted into violence, most tragically in the murder of Ya Na Yakubu Andani II in 2002. Colonial powers (Germany, then Britain) exploited these divisions. The German partition of Dagbon (splitting it between German Togoland and the Gold Coast) and subsequent British indirect rule restructured traditional authority. The kingdom's traditions are maintained by the Lunsi (talking drum) historians, whose oral records constitute a significant indigenous historiographic tradition. The Dagbon is not merely historical -- it is a living institution.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Dagbon",
+        "lang": "en",
+        "context": "English academic designation",
+        "period_start": 1409,
+        "period_end": null
+      },
+      {
+        "name": "Dagomba Kingdom",
+        "lang": "en",
+        "context": "Alternative English name based on the people's name (Dagomba)",
+        "period_start": 1409,
+        "period_end": null
+      },
+      {
+        "name": "Nam Dagbana",
+        "lang": "dag",
+        "context": "Dagbani-language designation",
+        "period_start": 1409,
+        "period_end": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1409,
+        "change_type": "formation",
+        "region": "Northern Ghana / Volta basin",
+        "description": "Traditional foundation of the Dagbon kingdom by Na Gbewaa's grandson Na Sitobu at Yendi Dabari. The Dagomba state developed from the southward migration of cavalry-based warriors who established dominance over the indigenous peoples of the Volta basin. The kingdom developed a sophisticated political hierarchy centered on the Ya Na (paramount chief) at Yendi.",
+        "population_affected": null,
+        "confidence_score": 0.45
+      },
+      {
+        "year": 1713,
+        "change_type": "contraction",
+        "region": "Western Dagbon",
+        "description": "The Gonja kingdom, allied with Asante, defeated Dagbon at the Battle of Daboya, reducing its western territories. Dagbon subsequently came under Asante suzerainty and paid tribute. The kingdom's military power declined relative to the Asante Confederacy.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1899,
+        "change_type": "colonization",
+        "region": "Dagbon territory",
+        "description": "The Anglo-German agreement partitioned Dagbon between British Gold Coast and German Togoland, splitting the kingdom with an arbitrary colonial border. After World War I, the German portion was added to British administration. The British used indirect rule through the Ya Na, but colonial intervention in succession disputes created lasting divisions between the Andani and Abudu gates.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Staniland, Martin. The Lions of Dagbon: Political Change in Northern Ghana. Cambridge University Press, 1975",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Mahama, Ibrahim. History and Traditions of Dagbon. Tamale: GILLBT Press, 2004",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Rattray, R.S. The Tribes of the Ashanti Hinterland. 2 vols. Oxford: Clarendon Press, 1932",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Igbo-Ukwu",
+    "name_original_lang": "ig",
+    "entity_type": "city",
+    "year_start": 800,
+    "year_end": 1000,
+    "capital_name": "Igbo-Ukwu",
+    "capital_lat": 6.0167,
+    "capital_lon": 7.0167,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        7.0167,
+        6.0167
+      ]
+    },
+    "confidence_score": 0.5,
+    "status": "uncertain",
+    "ethical_notes": "ETHICS: Igbo-Ukwu is an archaeological site rather than a conventional political entity. Its inclusion documents a 9th-century civilization that produced sophisticated bronze castings using the lost-wax technique, demonstrating advanced metallurgical technology in West Africa centuries before European contact. The site was excavated by Thurstan Shaw (1959-1964) and revealed a burial chamber with elaborate regalia and thousands of glass beads indicating long-distance trade connections (possibly to Egypt, Venice, or India). The significance of Igbo-Ukwu is frequently underrepresented in global history: it challenges narratives that advanced metallurgy in sub-Saharan Africa was always derived from external sources. The political organization associated with the site is debated -- it may represent an early manifestation of the Nri kingdom's ritual authority or a distinct polity. Confidence is lower due to the limited extent of excavation and ongoing debates about the site's dating (radiocarbon dates of the 9th century have been questioned by some scholars).",
+    "name_variants": [
+      {
+        "name": "Igbo-Ukwu",
+        "lang": "en",
+        "context": "Standard English academic designation, same as Igbo-language name",
+        "period_start": 800,
+        "period_end": 1000
+      },
+      {
+        "name": "Igbo-Ukwu civilization",
+        "lang": "en",
+        "context": "Broader designation for the archaeological culture",
+        "period_start": 800,
+        "period_end": 1000
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 800,
+        "change_type": "formation",
+        "region": "Igboland / Anambra River basin",
+        "description": "The Igbo-Ukwu civilization flourished in the 9th-10th centuries CE, as demonstrated by archaeological excavations revealing a sophisticated bronze-casting tradition, elaborate burial practices, and extensive trade networks indicated by thousands of glass beads. The site includes a burial chamber (Igbo Richard), a repository (Igbo Isaiah), and a disposal pit (Igbo Jonah).",
+        "population_affected": null,
+        "confidence_score": 0.45
+      },
+      {
+        "year": 1000,
+        "change_type": "dissolution",
+        "region": "Anambra area",
+        "description": "The specific polity or ritual center associated with the Igbo-Ukwu archaeological assemblage appears to have declined or transformed by approximately the 10th-11th century. The cultural traditions may have been absorbed into the emerging Kingdom of Nri, which occupied the same region and developed similar ritual-based political authority. The relationship between Igbo-Ukwu and Nri remains debated.",
+        "population_affected": null,
+        "confidence_score": 0.35
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Shaw, Thurstan. Igbo-Ukwu: An Account of Archaeological Discoveries in Eastern Nigeria. 2 vols. London: Faber and Faber, 1970",
+        "source_type": "archaeological"
+      },
+      {
+        "citation": "Shaw, Thurstan. Unearthing Igbo-Ukwu: Archaeological Discoveries in Eastern Nigeria. Ibadan: Oxford University Press Nigeria, 1977",
+        "source_type": "archaeological"
+      },
+      {
+        "citation": "Insoll, Timothy and Shaw, Thurstan. 'Gao and Igbo-Ukwu: Beads, Inter-Regional Trade, and Beyond' in African Archaeological Review, 14.1, 1997",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Siin",
+    "name_original_lang": "srr",
+    "entity_type": "kingdom",
+    "year_start": 1335,
+    "year_end": 1969,
+    "capital_name": "Diakhao",
+    "capital_lat": 14.15,
+    "capital_lon": -16.3,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -16.8,
+            13.8
+          ],
+          [
+            -16.3,
+            13.8
+          ],
+          [
+            -16.0,
+            14.0
+          ],
+          [
+            -16.0,
+            14.5
+          ],
+          [
+            -16.2,
+            14.7
+          ],
+          [
+            -16.5,
+            14.7
+          ],
+          [
+            -16.8,
+            14.5
+          ],
+          [
+            -16.9,
+            14.2
+          ],
+          [
+            -16.8,
+            13.8
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Kingdom of Sine (Serer: Siin) was a Serer kingdom in present-day Senegal that maintained its indigenous religious traditions longer than most West African states, resisting both Islamization and Christianization until French colonial rule. The Serer religion, centered on Roog (the supreme deity), was systematically denigrated by both Muslim and Christian missionaries as 'paganism'. The kingdom's political system (with the Maad a Sinig as king) was sophisticated and well-documented through both oral tradition and European accounts. French colonization (formal from 1891) dismantled the kingdom's political authority, though the last king was not deposed until 1969. The Serer have been historically underrepresented in West African historiography, which tends to be dominated by Mande and Wolof narratives.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Sine",
+        "lang": "en",
+        "context": "English academic designation, using French-influenced spelling",
+        "period_start": 1335,
+        "period_end": 1969
+      },
+      {
+        "name": "Royaume du Sine",
+        "lang": "fr",
+        "context": "French colonial designation",
+        "period_start": 1335,
+        "period_end": 1969
+      },
+      {
+        "name": "Siin",
+        "lang": "srr",
+        "context": "Serer self-designation of the kingdom",
+        "period_start": 1335,
+        "period_end": 1969
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1335,
+        "change_type": "formation",
+        "region": "Senegambia / Sine River basin",
+        "description": "Traditional foundation of the Kingdom of Sine by the Guelowar dynasty, who migrated from the collapsing Kaabu region. The Guelowar established rule over existing Serer populations and created the institution of the Maad a Sinig (king of Sine). The kingdom was initially a vassal of the Jolof Empire.",
+        "population_affected": null,
+        "confidence_score": 0.45
+      },
+      {
+        "year": 1549,
+        "change_type": "independence",
+        "region": "Sine",
+        "description": "After the Battle of Danki and the collapse of the Jolof Empire, Sine became fully independent. The kingdom maintained its traditional Serer religious character, resisting Islamic influence more successfully than the neighboring Wolof states.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1969,
+        "change_type": "dissolution",
+        "region": "Sine / Senegal",
+        "description": "The last Maad a Sinig, Mahecor Diouf, died in 1969, effectively ending the kingdom as a functioning institution. French colonialism had already stripped the kingdom of political power from the 1890s, but the Serer maintained the institution as a cultural symbol. Senegalese independence (1960) did not restore royal authority.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Gravrand, Henri. La civilisation sereer, vol. 1: Pangool. Dakar: Les Nouvelles Editions Africaines, 1983",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Klein, Martin A. Islam and Imperialism in Senegal: Sine-Saloum, 1847-1914. Stanford University Press, 1968",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Becker, Charles and Martin, Victor. 'Les tenc du Siin' in Bulletin de l'IFAN, serie B, 44.3-4, 1982",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Imamat Fuuta Jaloo",
+    "name_original_lang": "ff",
+    "entity_type": "confederation",
+    "year_start": 1727,
+    "year_end": 1896,
+    "capital_name": "Timbo",
+    "capital_lat": 10.6167,
+    "capital_lon": -11.9,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -13.5,
+            10.0
+          ],
+          [
+            -12.5,
+            10.0
+          ],
+          [
+            -11.5,
+            10.5
+          ],
+          [
+            -10.5,
+            11.0
+          ],
+          [
+            -10.5,
+            12.0
+          ],
+          [
+            -11.0,
+            12.5
+          ],
+          [
+            -12.0,
+            12.5
+          ],
+          [
+            -13.0,
+            12.0
+          ],
+          [
+            -13.5,
+            11.5
+          ],
+          [
+            -14.0,
+            10.5
+          ],
+          [
+            -13.5,
+            10.0
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Imamate of Futa Jallon was founded through a Fulani jihad that overthrew the indigenous Jallonke peoples, imposing Islamic governance and a stratified social system in which the conquered populations were subjected to slavery and serfdom. The imamate was a major exporter of enslaved people to the Atlantic trade: some estimates suggest that up to a third of the population were slaves (maccube). This internal slavery system, combined with the export trade, represents one of the most significant examples of African participation in the slave trade. The political system featured a unique alternating imamate between two lineages (Alfaya and Soriya), reducing succession conflicts but concentrating power within the Fulani elite. French colonial conquest (1896) dismantled the imamate. The Fulani-Jallonke ethnic hierarchy established during the jihad period continues to have social echoes in modern Guinea.",
+    "name_variants": [
+      {
+        "name": "Imamate of Futa Jallon",
+        "lang": "en",
+        "context": "English academic designation",
+        "period_start": 1727,
+        "period_end": 1896
+      },
+      {
+        "name": "Imamat du Fouta-Djallon",
+        "lang": "fr",
+        "context": "French colonial designation",
+        "period_start": 1727,
+        "period_end": 1896
+      },
+      {
+        "name": "Fuuta Jaloo",
+        "lang": "ff",
+        "context": "Fulfulde (Pular) self-designation",
+        "period_start": 1727,
+        "period_end": 1896
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1727,
+        "change_type": "formation",
+        "region": "Fouta Djallon highlands / Guinea",
+        "description": "Fulani Muslim scholars and pastoralists, led by Ibrahim Sori Mawdo (Karamoko Alfa), launched a jihad against the Jallonke rulers of the highland region. The jihad established an Islamic theocracy with its capital at Timbo. The Jallonke and other indigenous peoples were subjected to slavery and serfdom under the new Fulani-dominated order.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1780,
+        "change_type": "expansion",
+        "region": "Fouta Djallon and surrounding lowlands",
+        "description": "Under Almamy Ibrahim Sori (the military leader complementing the religious Almamy), Futa Jallon expanded its territory and slave-raiding zone into surrounding lowland regions. The alternating imamate system between the Alfaya and Soriya lineages was established, providing political stability. The imamate became a major supplier of enslaved people to the Atlantic trade through Senegambian coastal ports.",
+        "population_affected": 500000,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1896,
+        "change_type": "colonization",
+        "region": "Fouta Djallon",
+        "description": "French forces defeated the last Almamy, Bokar Biro, at the Battle of Porédaka (November 1896). Bokar Biro was killed. France dismantled the imamate and incorporated Futa Jallon into French Guinea. The French exploited the existing Alfaya-Soriya rivalry to divide and control the Fulani elite.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Barry, Ismaël. Le Fuuta-Jaloo face à la colonisation: Conquête et mise en place de l'administration en Guinée. 2 vols. Paris: L'Harmattan, 1997",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Diallo, Thierno. Les institutions politiques du Fouta Djallon au XIXe siècle. Dakar: IFAN, 1972",
+        "source_type": "academic"
+      },
+      {
+        "citation": "McGowan, Winston. 'The Establishment of Long-Distance Trade between Sierra Leone and Its Hinterland, 1787-1821' in Journal of African History, 31.1, 1990",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "eSwatini",
+    "name_original_lang": "ss",
+    "entity_type": "kingdom",
+    "year_start": 1745,
+    "year_end": null,
+    "capital_name": "Lobamba",
+    "capital_lat": -26.4494,
+    "capital_lon": 31.2,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            30.8,
+            -25.7
+          ],
+          [
+            31.5,
+            -25.7
+          ],
+          [
+            32.1,
+            -26.0
+          ],
+          [
+            32.1,
+            -26.8
+          ],
+          [
+            31.9,
+            -27.3
+          ],
+          [
+            31.3,
+            -27.3
+          ],
+          [
+            30.8,
+            -27.0
+          ],
+          [
+            30.5,
+            -26.5
+          ],
+          [
+            30.8,
+            -25.7
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Kingdom of Swaziland/eSwatini is one of the last absolute monarchies in Africa. The kingdom's survival as an independent state (unlike most African kingdoms) is partly due to British colonial policy, which maintained Swaziland as a protectorate rather than annexing it to South Africa. However, this 'independence' came at the cost of major land alienation: by 1907, two-thirds of Swazi land had been conceded to European settlers. King Sobhuza II (r. 1921-1982) spent decades recovering Swazi land. The 2018 name change from 'Swaziland' to 'eSwatini' was a decolonizing act, restoring the Swazi-language name. The current absolute monarchy under King Mswati III has been criticized for suppressing democratic movements. The kingdom's origins during the Mfecane period (early 19th century disruptions caused by Zulu state formation) must be understood in the context of broader regional upheaval driven partly by European colonial pressures in southeastern Africa.",
+    "name_variants": [
+      {
+        "name": "Kingdom of eSwatini",
+        "lang": "en",
+        "context": "Current official English name since 2018",
+        "period_start": 2018,
+        "period_end": null
+      },
+      {
+        "name": "Kingdom of Swaziland",
+        "lang": "en",
+        "context": "Former English name, colonial-era designation",
+        "period_start": 1745,
+        "period_end": 2018
+      },
+      {
+        "name": "Umbuso weSwatini",
+        "lang": "ss",
+        "context": "SiSwati self-designation",
+        "period_start": 1745,
+        "period_end": null
+      },
+      {
+        "name": "Ngwane",
+        "lang": "ss",
+        "context": "Historical Swazi self-designation from founding king Ngwane III",
+        "period_start": 1745,
+        "period_end": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1745,
+        "change_type": "formation",
+        "region": "Southeastern Africa / modern eSwatini",
+        "description": "King Ngwane III led the Swazi people across the Lubombo Mountains into the territory of modern eSwatini, establishing the Dlamini dynasty's rule. The kingdom consolidated by incorporating or displacing existing Nguni and Sotho-speaking communities.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1840,
+        "change_type": "expansion",
+        "region": "Greater Swaziland",
+        "description": "Under King Mswati II (r. c. 1840-1868), the kingdom reached its greatest territorial extent, with influence extending into parts of modern Mpumalanga and KwaZulu-Natal. Mswati II repelled Zulu incursions and consolidated the age-regiment (emabutfo) military system. The modern Swazi nation and the name 'Swaziland/eSwatini' derive from Mswati II.",
+        "population_affected": 100000,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1903,
+        "change_type": "colonization",
+        "region": "Swaziland",
+        "description": "After the South African War, Britain assumed direct control of Swaziland as a protectorate (previously under Transvaal suzerainty). The 1907 Concessions Partition proclaimed two-thirds of Swazi land as European-owned, dispossessing the Swazi people of most of their territory.",
+        "population_affected": 100000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1968,
+        "change_type": "independence",
+        "region": "Swaziland",
+        "description": "Swaziland gained independence from Britain on September 6, 1968, under King Sobhuza II. Unlike most African kingdoms, the Swazi monarchy survived colonialism intact. In 1973, Sobhuza suspended the constitution and established absolute rule. The kingdom was renamed eSwatini in 2018 by King Mswati III.",
+        "population_affected": 400000,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Bonner, Philip. Kings, Commoners and Concessionaires: The Evolution and Dissolution of the Nineteenth-Century Swazi State. Cambridge University Press, 1983",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Kuper, Hilda. An African Aristocracy: Rank Among the Swazi. London: Oxford University Press, 1947",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Macmillan, Hugh. 'Swaziland: Decolonisation and the Triumph of Tradition' in Journal of Modern African Studies, 23.4, 1985",
+        "source_type": "academic"
+      }
+    ]
+  }
+]

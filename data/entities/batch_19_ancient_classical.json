@@ -1,0 +1,620 @@
+[
+  {
+    "name_original": "Ἄπειρος",
+    "name_original_lang": "grc",
+    "entity_type": "kingdom",
+    "year_start": -330,
+    "year_end": -167,
+    "capital_name": "Ambrakia",
+    "capital_lat": 39.1567,
+    "capital_lon": 20.9854,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Ancient Greek (Ἄπειρος). The Epirote population included both Greek-speaking tribes (Molossians, Thesprotians, Chaonians) and non-Greek-speaking peoples. Whether the Epirotes were 'Greek' was debated even in antiquity — Thucydides classified some as barbaroi while they participated in Panhellenic games. This ambiguity should be preserved, not resolved. ETHICS-002: Pyrrhus's campaigns in Italy and Sicily (280-275 BCE) brought enormous casualties on all sides. His famous 'Pyrrhic victories' at Heraclea and Asculum cost the lives of thousands of soldiers from diverse Italian and Greek populations. The term 'Pyrrhic victory' itself encodes the devastating human cost of these engagements.",
+    "name_variants": [
+      {"name": "Kingdom of Epirus", "lang": "en", "period_start": -330, "period_end": -167, "context": "Standard English denomination for the Aeacid and later Epirote kingdom", "source": "Hammond, N.G.L. Epirus (1967)"},
+      {"name": "Epiro", "lang": "it", "period_start": -330, "period_end": -167, "context": "Italian scholarly designation", "source": "Cabanes, P. Gli Illiri (2002, trad. it.)"},
+      {"name": "Ἤπειρος", "lang": "grc", "period_start": -330, "period_end": -167, "context": "Later Koine Greek form, used in Hellenistic and Roman-period texts", "source": "Plutarch, Life of Pyrrhus"},
+      {"name": "Regnum Epirotarum", "lang": "la", "period_start": -280, "period_end": -167, "context": "Latin designation used in Roman sources during the Pyrrhic War and after", "source": "Justin, Epitome of Pompeius Trogus, XVII-XVIII"}
+    ],
+    "territory_changes": [
+      {"year": -330, "region": "Epirus (northwestern Greece)", "change_type": "INDEPENDENCE", "description": "Alexander I the Molossian consolidated the Epirote kingdom by unifying the three major tribal groups (Molossians, Thesprotians, Chaonians) under Molossian leadership. The Aeacid dynasty claimed descent from Achilles through Neoptolemus, connecting Epirote royal legitimacy to Homeric tradition. Alexander was brother-in-law to Philip II of Macedon.", "population_affected": null, "confidence_score": 0.65},
+      {"year": -280, "region": "Southern Italy and Sicily", "change_type": "CONQUEST_MILITARY", "description": "Pyrrhus invaded Italy at the invitation of Tarentum, defeating Rome at Heraclea (280 BCE) and Asculum (279 BCE) at enormous cost — the origin of 'Pyrrhic victory'. He briefly controlled much of Magna Graecia and parts of Sicily. His campaigns failed strategically, withdrawing by 275 BCE, but demonstrated the military sophistication of Hellenistic warfare to Rome.", "population_affected": null, "confidence_score": 0.8},
+      {"year": -167, "region": "Epirus", "change_type": "CONQUEST_MILITARY", "description": "After the Third Macedonian War, Roman forces under Lucius Aemilius Paullus systematically devastated Epirus. According to Polybius and Livy, 150,000 Epirotes were enslaved in a single campaign — one of the largest mass enslavements in ancient history. Seventy towns were destroyed. This was punitive destruction, not mere conquest.", "population_affected": 150000, "confidence_score": 0.75}
+    ],
+    "sources": [
+      {"citation": "Hammond, N.G.L. Epirus: The Geography, the Ancient Remains, the History and Topography of Epirus and Adjacent Areas. Oxford: Clarendon Press, 1967", "source_type": "academic"},
+      {"citation": "Cabanes, Pierre. L'Épire de la mort de Pyrrhos à la conquête romaine (272-167 av. J.-C.). Paris: Les Belles Lettres, 1976", "source_type": "academic"},
+      {"citation": "Plutarch, Life of Pyrrhus (c. 100 CE)", "source_type": "primary"},
+      {"citation": "Polybius, Histories XXX.15 (destruction of Epirus, 167 BCE)", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "Βασιλεία Ἀντιγονιδῶν",
+    "name_original_lang": "grc",
+    "entity_type": "kingdom",
+    "year_start": -306,
+    "year_end": -168,
+    "capital_name": "Pella",
+    "capital_lat": 40.7614,
+    "capital_lon": 22.5217,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Ancient Greek. The Antigonid dynasty ruled Macedon as one of the Diadochi successor states after Alexander the Great's death. ETHICS-002: The question of whether ancient Macedonians were 'Greek' remains politically charged due to the modern North Macedonia naming dispute. Ancient sources are ambiguous — Macedonians participated in Greek games (implying Greek identity) but were also called barbaroi by some Athenian orators. The database records both perspectives without arbitrating. ETHICS-003: The Roman destruction of the Antigonid kingdom at Pydna (168 BCE) and subsequent partition of Macedonia into four republics was a deliberate erasure of Macedonian political identity.",
+    "name_variants": [
+      {"name": "Antigonid Kingdom of Macedon", "lang": "en", "period_start": -306, "period_end": -168, "context": "English scholarly name distinguishing the Antigonid dynasty from earlier Argead Macedon", "source": "Hammond, N.G.L. & Walbank, F.W. A History of Macedonia, vol. 3 (1988)"},
+      {"name": "Macedonia Antigonide", "lang": "it", "period_start": -306, "period_end": -168, "context": "Italian scholarly designation", "source": "Errington, R.M. Storia della Macedonia (2012, trad. it.)"},
+      {"name": "Μακεδονία", "lang": "grc", "period_start": -306, "period_end": -168, "context": "Ancient Greek name for the territory and kingdom", "source": "Polybius, Histories"},
+      {"name": "Regnum Macedoniae", "lang": "la", "period_start": -306, "period_end": -168, "context": "Latin name used in Roman accounts of the Macedonian Wars", "source": "Livy, Ab Urbe Condita XXXI-XLV"}
+    ],
+    "territory_changes": [
+      {"year": -306, "region": "Macedonia and parts of Greece", "change_type": "INDEPENDENCE", "description": "Antigonus I Monophthalmus declared himself king in 306 BCE during the Wars of the Diadochi. His grandson Antigonus II Gonatas definitively secured Macedon after the Gallic invasion of 279-277 BCE, establishing stable Antigonid rule. The dynasty inherited the Argead heartland but never approached the scale of Alexander's empire.", "population_affected": null, "confidence_score": 0.8},
+      {"year": -222, "region": "Peloponnese and central Greece", "change_type": "CONQUEST_MILITARY", "description": "Antigonus III Doson defeated Sparta at the Battle of Sellasia, crushing the last major independent Greek military power and reasserting Macedonian hegemony over the Peloponnese through the Hellenic League. Spartan king Cleomenes III fled to Ptolemaic Egypt.", "population_affected": null, "confidence_score": 0.8},
+      {"year": -168, "region": "Macedonia", "change_type": "CONQUEST_MILITARY", "description": "Rome crushed the Antigonid kingdom at the Battle of Pydna. King Perseus was captured and paraded in Aemilius Paullus's triumph. Macedonia was divided into four nominally independent republics (merides) stripped of mutual contact — a deliberate policy of political fragmentation. In 148 BCE it became the Roman province of Macedonia.", "population_affected": null, "confidence_score": 0.9}
+    ],
+    "sources": [
+      {"citation": "Hammond, N.G.L. & Walbank, F.W. A History of Macedonia, vol. 3: 336-167 B.C. Oxford: Clarendon Press, 1988", "source_type": "academic"},
+      {"citation": "Errington, R. Malcolm. A History of Macedonia. Berkeley: University of California Press, 1990", "source_type": "academic"},
+      {"citation": "Polybius, Histories (c. 150 BCE)", "source_type": "primary"},
+      {"citation": "Livy, Ab Urbe Condita XXXI-XLV (Roman-Macedonian Wars)", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "Καππαδοκία",
+    "name_original_lang": "grc",
+    "entity_type": "kingdom",
+    "year_start": -331,
+    "year_end": 17,
+    "capital_name": "Mazaka / Caesarea",
+    "capital_lat": 38.7312,
+    "capital_lon": 35.4787,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Ancient Greek, which was the administrative language of the dynasty, though the population spoke Cappadocian Aramaic and indigenous Anatolian languages. The Old Persian form Katpatuka is the older attested name. ETHICS-002: Cappadocia's strategic position between Rome and Parthia made it a buffer state whose rulers were frequently deposed, installed, or murdered by both great powers. The final annexation by Tiberius in 17 CE was achieved by summoning the elderly king Archelaus to Rome and allowing him to die in custody — a form of imperial violence disguised as legal procedure.",
+    "name_variants": [
+      {"name": "Kingdom of Cappadocia", "lang": "en", "period_start": -331, "period_end": 17, "context": "English scholarly name for the Ariarathid and Ariobarzanid dynasties", "source": "Sullivan, R.D. Near Eastern Royalty and Rome (1990)"},
+      {"name": "Cappadocia", "lang": "it", "period_start": -331, "period_end": 17, "context": "Italian scholarly designation", "source": "Marek, C. Storia dell'Asia Minore nell'antichita (2019, trad. it.)"},
+      {"name": "Katpatuka", "lang": "peo", "period_start": -550, "period_end": -331, "context": "Old Persian name attested in Achaemenid inscriptions (Behistun), predating the kingdom", "source": "Kent, R.G. Old Persian: Grammar, Texts, Lexicon (1953)"},
+      {"name": "Regnum Cappadociae", "lang": "la", "period_start": -200, "period_end": 17, "context": "Latin name used in Roman diplomatic and historical sources", "source": "Strabo, Geography XII.1-2"}
+    ],
+    "territory_changes": [
+      {"year": -331, "region": "Central Anatolia", "change_type": "INDEPENDENCE", "description": "Ariarathes I established an independent Cappadocian kingdom after the collapse of Achaemenid authority following Alexander's conquests. The Ariarathid dynasty claimed Persian noble descent. Cappadocia was one of the few regions Alexander did not directly conquer, and it resisted Macedonian control for decades.", "population_affected": null, "confidence_score": 0.65},
+      {"year": -188, "region": "Eastern Cappadocia", "change_type": "CONQUEST_DIPLOMATIC", "description": "After the Treaty of Apamea, Rome's defeat of the Seleucids allowed Cappadocia to expand eastward under Ariarathes IV. The kingdom became a Roman client state, its foreign policy increasingly subordinate to Roman interests while maintaining internal autonomy and Persian-Hellenistic court culture.", "population_affected": null, "confidence_score": 0.7},
+      {"year": 17, "region": "Cappadocia", "change_type": "CONQUEST_DIPLOMATIC", "description": "Emperor Tiberius annexed Cappadocia as a Roman province. King Archelaus, who had ruled since 36 BCE, was summoned to Rome on false pretenses and died there — Tacitus says from illness and humiliation. The kingdom's revenues were substantial enough that Tiberius used them to justify reducing the Roman sales tax from 1% to 0.5%.", "population_affected": 1000000, "confidence_score": 0.85}
+    ],
+    "sources": [
+      {"citation": "Sullivan, R.D. Near Eastern Royalty and Rome, 100-30 B.C. Toronto: University of Toronto Press, 1990", "source_type": "academic"},
+      {"citation": "Marek, Christian. In the Land of a Thousand Gods: A History of Asia Minor in the Ancient World. Princeton University Press, 2016", "source_type": "academic"},
+      {"citation": "Strabo, Geography XII.1-2 (c. 7 BCE)", "source_type": "primary"},
+      {"citation": "Tacitus, Annals II.42 (annexation of Cappadocia, 17 CE)", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "ממלכת החשמונאים",
+    "name_original_lang": "he",
+    "entity_type": "kingdom",
+    "year_start": -140,
+    "year_end": -37,
+    "capital_name": "Yerushalayim (Jerusalem)",
+    "capital_lat": 31.7767,
+    "capital_lon": 35.2345,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Hebrew, reflecting the dynasty's linguistic and cultural identity. ETHICS-002: The Hasmonean kingdom is deeply politically sensitive. The Maccabean revolt (167-160 BCE) and subsequent Hasmonean state are central to Jewish national and religious identity (Hanukkah). However, the Hasmoneans also forcibly converted the Idumeans and Itureans, destroyed the Samaritan temple on Mount Gerizim (110 BCE), and engaged in internal violence including civil war. These aspects must not be suppressed. ETHICS-003: This entity should NOT be used to validate or invalidate modern territorial claims. The geographic extent of the Hasmonean kingdom does not establish any precedent for contemporary borders.",
+    "name_variants": [
+      {"name": "Hasmonean Kingdom", "lang": "en", "period_start": -140, "period_end": -37, "context": "English scholarly name from the dynasty name Hasmonai/Hashmonai", "source": "Schurer, E. The History of the Jewish People in the Age of Jesus Christ, rev. ed. by Vermes & Millar (1973)"},
+      {"name": "Maccabean Kingdom", "lang": "en", "period_start": -140, "period_end": -37, "context": "Alternative English name, from the epithet of Judas Maccabeus. Less precise as 'Maccabee' refers to one individual, not the dynasty", "source": "1 Maccabees (c. 100 BCE)"},
+      {"name": "Regno Asmoneo", "lang": "it", "period_start": -140, "period_end": -37, "context": "Italian scholarly designation", "source": "Sacchi, P. Storia del Secondo Tempio (1994)"},
+      {"name": "Βασιλεία τῶν Ἁσμωναίων", "lang": "grc", "period_start": -140, "period_end": -37, "context": "Greek form used by Josephus and in Hellenistic sources", "source": "Josephus, Antiquities of the Jews XIII-XIV"}
+    ],
+    "territory_changes": [
+      {"year": -140, "region": "Judea", "change_type": "INDEPENDENCE", "description": "Simon Thassi achieved formal Seleucid recognition of Judean independence in 142 BCE. His son John Hyrcanus I (134-104 BCE) transformed the small temple-state into an expansionist kingdom, conquering Idumea, Samaria, and parts of Transjordan. The forced conversion of the Idumeans under Hyrcanus was a significant act of religious coercion.", "population_affected": null, "confidence_score": 0.75},
+      {"year": -110, "region": "Samaria and Galilee", "change_type": "CONQUEST_MILITARY", "description": "John Hyrcanus I destroyed the Samaritan temple on Mount Gerizim (c. 110 BCE), a sacred site of the Samaritan religious community. This was a deliberate act of religious destruction that deepened the lasting rift between Jews and Samaritans. Under Alexander Jannaeus (103-76 BCE), the kingdom reached its maximum extent, encompassing most of historic Palestine.", "population_affected": null, "confidence_score": 0.75},
+      {"year": -63, "region": "Judea", "change_type": "CONQUEST_MILITARY", "description": "Pompey the Great intervened in the Hasmonean civil war between Hyrcanus II and Aristobulus II, besieging and capturing Jerusalem. The Temple was entered but not plundered. Judea became a Roman client state, losing the coastal cities, Samaria, and Transjordan. The Hasmonean dynasty continued as puppet rulers until Herod's takeover in 37 BCE.", "population_affected": null, "confidence_score": 0.85}
+    ],
+    "sources": [
+      {"citation": "Schurer, Emil. The History of the Jewish People in the Age of Jesus Christ (175 B.C. - A.D. 135), rev. ed. by Geza Vermes & Fergus Millar. Edinburgh: T&T Clark, 1973-1987", "source_type": "academic"},
+      {"citation": "Regev, Eyal. The Hasmoneans: Ideology, Archaeology, Identity. Gottingen: Vandenhoeck & Ruprecht, 2013", "source_type": "academic"},
+      {"citation": "Josephus, Antiquities of the Jews XIII-XIV (c. 94 CE)", "source_type": "primary"},
+      {"citation": "1 Maccabees (c. 100 BCE)", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "ממלכת הורדוס",
+    "name_original_lang": "he",
+    "entity_type": "kingdom",
+    "year_start": -37,
+    "year_end": 6,
+    "capital_name": "Yerushalayim (Jerusalem)",
+    "capital_lat": 31.7767,
+    "capital_lon": 35.2345,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Hebrew, though Herod's court used Greek extensively and the king was of Idumean (Edomite) origin — forcibly converted to Judaism under the Hasmoneans. His ethnic identity was used against him by opponents who questioned his legitimacy as king of the Jews. ETHICS-002: Herod's reign combined remarkable construction achievements (rebuilding of the Jerusalem Temple, Caesarea Maritima, Masada, Herodium) with extreme political violence, including the execution of his own wife Mariamne and several sons. The 'Massacre of the Innocents' (Matthew 2:16-18) is not independently attested and likely reflects literary/theological motifs rather than historical events. ETHICS-003: The Herodian kingdom was a Roman client state with no independent foreign policy. Its sovereignty was nominal — Herod ruled at the pleasure of Augustus.",
+    "name_variants": [
+      {"name": "Herodian Kingdom", "lang": "en", "period_start": -37, "period_end": 6, "context": "English scholarly name covering Herod the Great and his immediate successors", "source": "Richardson, P. Herod: King of the Jews and Friend of the Romans (1996)"},
+      {"name": "Regno di Erode", "lang": "it", "period_start": -37, "period_end": 6, "context": "Italian scholarly designation", "source": "Sacchi, P. Storia del Secondo Tempio (1994)"},
+      {"name": "Βασιλεία Ἡρῴδου", "lang": "grc", "period_start": -37, "period_end": 6, "context": "Greek form as used in Josephus and New Testament sources", "source": "Josephus, Antiquities of the Jews XV-XVII"},
+      {"name": "Regnum Herodis", "lang": "la", "period_start": -37, "period_end": 6, "context": "Latin form used in Roman administrative context", "source": "Augustus, Res Gestae 27"}
+    ],
+    "territory_changes": [
+      {"year": -37, "region": "Judea", "change_type": "CONQUEST_MILITARY", "description": "Herod captured Jerusalem with Roman military support after a three-year campaign against the last Hasmonean ruler Antigonus II. The Roman Senate had designated Herod 'King of the Jews' in 40 BCE but he had to conquer his own kingdom by force. Antigonus was executed — the first time Rome beheaded a king. Herod systematically eliminated the Hasmonean family to remove rival claimants.", "population_affected": null, "confidence_score": 0.85},
+      {"year": -20, "region": "Judea, Samaria, Galilee, Idumea, Perea", "change_type": "CONQUEST_DIPLOMATIC", "description": "At the height of his power, Herod's kingdom encompassed most of historic Palestine plus territories in Transjordan, granted by Augustus in stages. He began the massive reconstruction of the Jerusalem Temple (20-19 BCE), one of the largest building projects in the ancient world. The kingdom's prosperity was real but accompanied by heavy taxation and political repression.", "population_affected": 2000000, "confidence_score": 0.7},
+      {"year": 6, "region": "Judea, Samaria, Idumea", "change_type": "CONQUEST_DIPLOMATIC", "description": "After Herod's death (4 BCE), Augustus divided the kingdom among his sons. Herod Archelaus received Judea, Samaria, and Idumea but was deposed in 6 CE for misrule, and his territory became the Roman province of Judaea under a prefect. The other tetrarchies (Galilee under Antipas, Gaulanitis under Philip) persisted longer but were also eventually absorbed.", "population_affected": 1500000, "confidence_score": 0.85}
+    ],
+    "sources": [
+      {"citation": "Richardson, Peter. Herod: King of the Jews and Friend of the Romans. Columbia: University of South Carolina Press, 1996", "source_type": "academic"},
+      {"citation": "Roller, Duane W. The Building Program of Herod the Great. Berkeley: University of California Press, 1998", "source_type": "academic"},
+      {"citation": "Josephus, Antiquities of the Jews XV-XVII and The Jewish War I (c. 75-94 CE)", "source_type": "primary"},
+      {"citation": "Strabo, Geography XVI.2.46 (description of Herod's kingdom)", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "Ἰλλυρία / Ardiaei",
+    "name_original_lang": "grc",
+    "entity_type": "kingdom",
+    "year_start": -250,
+    "year_end": -167,
+    "capital_name": "Rhizon (Risan)",
+    "capital_lat": 42.5147,
+    "capital_lon": 18.6961,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: The Illyrians did not leave written records in their own language. All names come through Greek (Ἰλλυρία) and Latin (Illyria) sources written by their enemies and neighbors. 'Illyrian' itself may be a Greek exonym applied to diverse, loosely related peoples. The Ardiaei tribal confederation formed the core of the Illyrian kingdom at its peak. ETHICS-002: Queen Teuta (r. 231-228 BCE) has been treated with misogynistic bias in ancient and modern sources. Roman authors depicted her as irrational and arrogant to justify military intervention. Her actual governance deserves more neutral assessment. ETHICS-003: Modern claims on Illyrian heritage by both Albanians and South Slavic peoples are politically charged. The database records the ancient entity without endorsing any modern ethnic continuity claim.",
+    "name_variants": [
+      {"name": "Illyrian Kingdom", "lang": "en", "period_start": -250, "period_end": -167, "context": "English conventional name for the Ardiaei-dominated polity", "source": "Wilkes, J. The Illyrians (1992)"},
+      {"name": "Regno Illirico", "lang": "it", "period_start": -250, "period_end": -167, "context": "Italian scholarly name", "source": "Cabanes, P. Gli Illiri (2002, trad. it.)"},
+      {"name": "Illyria", "lang": "la", "period_start": -250, "period_end": -167, "context": "Latin name used by Roman historians", "source": "Polybius, Histories II.2-12"},
+      {"name": "Mbretëria Ilire", "lang": "sq", "period_start": -250, "period_end": -167, "context": "Modern Albanian name, reflecting Albanian claims to Illyrian heritage", "source": "Stipčević, A. The Illyrians: History and Culture (1977)"}
+    ],
+    "territory_changes": [
+      {"year": -250, "region": "Adriatic coast (modern Montenegro, Albania, Croatia)", "change_type": "INDEPENDENCE", "description": "King Agron (c. 250-231 BCE) expanded the Ardiaei kingdom to its greatest extent, dominating the eastern Adriatic coast from Dalmatia to Epirus. The Illyrian fleet controlled maritime trade and engaged in piracy that disrupted Roman and Greek commerce, eventually provoking Roman intervention.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -229, "region": "Southern Illyria", "change_type": "CONQUEST_MILITARY", "description": "First Illyrian War: Rome invaded Illyria to suppress piracy and protect its Adriatic trade routes. Queen Teuta, who had succeeded Agron, was forced to cede territory and pay tribute. This was Rome's first major military engagement east of the Adriatic, establishing a precedent for Roman intervention in the Balkans and Greece.", "population_affected": null, "confidence_score": 0.75},
+      {"year": -167, "region": "Illyria", "change_type": "CONQUEST_MILITARY", "description": "After the Third Illyrian War, the last king Gentius was defeated and captured by Rome. His kingdom was dissolved and divided into three (later merged into the Roman province of Illyricum). The systematic destruction mirrored Rome's simultaneous dismantling of Antigonid Macedonia and Epirus in the same year.", "population_affected": null, "confidence_score": 0.8}
+    ],
+    "sources": [
+      {"citation": "Wilkes, John. The Illyrians. Oxford: Blackwell, 1992", "source_type": "academic"},
+      {"citation": "Cabanes, Pierre. Les Illyriens de Bardylis à Genthios (IVe-IIe siècles avant J.-C.). Paris: SEDES, 1988", "source_type": "academic"},
+      {"citation": "Polybius, Histories II.2-12 (First Illyrian War)", "source_type": "primary"},
+      {"citation": "Livy, Ab Urbe Condita XLIV.30-32 (defeat of Gentius, 167 BCE)", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "𒀀𒈬𒊒𒌝",
+    "name_original_lang": "akk",
+    "entity_type": "confederation",
+    "year_start": -2000,
+    "year_end": -1595,
+    "capital_name": "Babylon (under Hammurabi)",
+    "capital_lat": 32.5427,
+    "capital_lon": 44.4209,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Akkadian cuneiform (Amurrum). 'Amorite' is an Akkadian/Sumerian exonym meaning 'westerner' (MAR.TU in Sumerian). The Amorites' self-designation is uncertain. Sumerian literary texts (e.g., 'The Marriage of Martu') portray Amorites with ethnic prejudice as uncivilized nomads — this bias must be noted, not reproduced. ETHICS-002: The Amorite period represents a major transformation of Mesopotamian civilization. The Old Babylonian dynasty of Hammurabi, the kingdoms of Mari and Yamhad, and many other states were Amorite-ruled. Treating them as a single 'confederation' is a scholarly convenience — they were rival dynasties sharing a common linguistic/ethnic background, not a unified polity.",
+    "name_variants": [
+      {"name": "Amorite Kingdoms", "lang": "en", "period_start": -2000, "period_end": -1595, "context": "English collective term for the various Amorite-ruled states of the early second millennium BCE", "source": "Liverani, M. The Ancient Near East (2014)"},
+      {"name": "Regni Amorrei", "lang": "it", "period_start": -2000, "period_end": -1595, "context": "Italian scholarly designation", "source": "Liverani, M. Antico Oriente (1988)"},
+      {"name": "MAR.TU", "lang": "sux", "period_start": -2100, "period_end": -1800, "context": "Sumerian logographic writing for Amorite, meaning 'westerner'. Used pejoratively in Sumerian literary texts", "source": "Civil, M. 'The Marriage of Martu', in ANES 5 (1967)"},
+      {"name": "Tidnum / Didanum", "lang": "akk", "period_start": -2100, "period_end": -1800, "context": "Akkadian tribal name associated with some Amorite groups, possibly a specific confederation", "source": "Buccellati, G. The Amorites of the Ur III Period (1966)"}
+    ],
+    "territory_changes": [
+      {"year": -2000, "region": "Mesopotamia and Syria", "change_type": "CONQUEST_MILITARY", "description": "Amorite groups gradually infiltrated and then seized control of major Mesopotamian cities during the collapse of the Ur III dynasty (c. 2004 BCE). By 1900 BCE, Amorite dynasties ruled in Babylon, Isin, Larsa, Eshnunna, Mari, and across Syria (Yamhad/Aleppo, Qatna). This was not a single invasion but a complex process of migration, settlement, and political takeover over several generations.", "population_affected": null, "confidence_score": 0.5},
+      {"year": -1792, "region": "Southern Mesopotamia", "change_type": "CONQUEST_MILITARY", "description": "Hammurabi of Babylon (1792-1750 BCE), the most famous Amorite ruler, conquered southern Mesopotamia, defeating Larsa, Eshnunna, and Mari. His law code (c. 1754 BCE) is the most complete surviving legal text from the ancient Near East. The destruction of Mari by Hammurabi (c. 1761 BCE) was a deliberate destruction of a fellow Amorite capital.", "population_affected": null, "confidence_score": 0.7},
+      {"year": -1595, "region": "Babylon", "change_type": "CONQUEST_MILITARY", "description": "The Hittite king Mursili I raided Babylon, ending the Amorite First Dynasty of Babylon. The subsequent Kassite takeover marked the end of Amorite political dominance in Mesopotamia. Amorite identity gradually dissolved into the broader Mesopotamian population over the following centuries.", "population_affected": null, "confidence_score": 0.65}
+    ],
+    "sources": [
+      {"citation": "Liverani, Mario. The Ancient Near East: History, Society and Economy. London: Routledge, 2014", "source_type": "academic"},
+      {"citation": "Buccellati, Giorgio. The Amorites of the Ur III Period. Naples: Istituto Orientale di Napoli, 1966", "source_type": "academic"},
+      {"citation": "Van De Mieroop, Marc. King Hammurabi of Babylon: A Biography. Oxford: Blackwell, 2005", "source_type": "academic"},
+      {"citation": "Code of Hammurabi (c. 1754 BCE), Louvre Museum, Sb 8", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "Napata",
+    "name_original_lang": "egy",
+    "entity_type": "kingdom",
+    "year_start": -750,
+    "year_end": -590,
+    "capital_name": "Napata",
+    "capital_lat": 18.5341,
+    "capital_lon": 31.8278,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: The Napatan period of Kush is distinct from the later Meroitic period (already in the database as a separate entity). The indigenous name for the state and its language during this period are debated — Egyptian-language texts were used for royal inscriptions, but the spoken language was likely an ancestor of Meroitic. ETHICS-002: The Kushite 25th Dynasty of Egypt (c. 747-656 BCE) is sometimes marginalized in Egyptological narratives as a 'foreign' or 'Nubian' interlude. In fact, the Napatan kings saw themselves as legitimate Egyptian pharaohs and restorers of traditional Egyptian religion and culture. Their 'foreignness' is a construct that reflects modern racial categories projected onto antiquity. ETHICS-003: The distinction between Napatan and Meroitic periods is partly conventional. The move of the royal cemetery from Napata (El-Kurru, Nuri) to Meroe was gradual, not a sharp political break.",
+    "name_variants": [
+      {"name": "Kingdom of Kush (Napatan period)", "lang": "en", "period_start": -750, "period_end": -590, "context": "English scholarly designation distinguishing the Napata-centered phase from the later Meroitic period", "source": "Welsby, D.A. The Kingdom of Kush: The Napatan and Meroitic Empires (1996)"},
+      {"name": "25th Dynasty of Egypt", "lang": "en", "period_start": -747, "period_end": -656, "context": "Designation for the period when Napatan kings ruled Egypt as pharaohs", "source": "Torok, L. The Kingdom of Kush (1997)"},
+      {"name": "Regno di Napata", "lang": "it", "period_start": -750, "period_end": -590, "context": "Italian scholarly designation", "source": "Kendall, T. in Wenig, S. (ed.) Studien zum antiken Sudan (1999)"},
+      {"name": "Kš", "lang": "egy", "period_start": -750, "period_end": -590, "context": "Ancient Egyptian hieroglyphic name for the kingdom, attested from the New Kingdom onward", "source": "Egyptian hieroglyphic texts, Gebel Barkal stelae"}
+    ],
+    "territory_changes": [
+      {"year": -747, "region": "Egypt and Nubia", "change_type": "CONQUEST_MILITARY", "description": "Piye (Piankhy) invaded Egypt from Napata, defeating the Libyan rulers of the Delta and establishing the 25th Dynasty. His Victory Stela at Gebel Barkal is one of the longest Egyptian royal inscriptions. The Kushite pharaohs controlled the largest territory in the Nile Valley since the New Kingdom, from the Mediterranean to at least the Fifth Cataract.", "population_affected": null, "confidence_score": 0.7},
+      {"year": -671, "region": "Lower Egypt", "change_type": "CONQUEST_MILITARY", "description": "The Assyrian king Esarhaddon invaded Egypt and captured Memphis, driving the Kushite pharaoh Taharqa south. Ashurbanipal completed the Assyrian conquest in 663 BCE, sacking Thebes — an event recorded in the Hebrew Bible (Nahum 3:8-10). The loss of Egypt was a catastrophic blow to Kushite prestige and resources.", "population_affected": null, "confidence_score": 0.8},
+      {"year": -590, "region": "Napata", "change_type": "CONQUEST_MILITARY", "description": "Egyptian pharaoh Psamtik II raided deep into Kush, possibly reaching Napata itself. Greek and Carian mercenary inscriptions at Abu Simbel record this campaign. The raid accelerated the shift of the Kushite center of gravity southward to Meroe, though the exact chronology of this transition remains debated.", "population_affected": null, "confidence_score": 0.6}
+    ],
+    "sources": [
+      {"citation": "Welsby, Derek A. The Kingdom of Kush: The Napatan and Meroitic Empires. London: British Museum Press, 1996", "source_type": "academic"},
+      {"citation": "Torok, Laszlo. The Kingdom of Kush: Handbook of the Napatan-Meroitic Civilization. Leiden: Brill, 1997", "source_type": "academic"},
+      {"citation": "Piye (Piankhy), Victory Stela at Gebel Barkal (c. 727 BCE), Cairo Museum JE 48862", "source_type": "primary"},
+      {"citation": "Esarhaddon, Annals (conquest of Egypt, 671 BCE), British Museum prism", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "गन्धार",
+    "name_original_lang": "sa",
+    "entity_type": "kingdom",
+    "year_start": -600,
+    "year_end": 1021,
+    "capital_name": "Purushapura (Peshawar)",
+    "capital_lat": 34.0151,
+    "capital_lon": 71.5249,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Sanskrit (Gandhāra). The region's name appears in the Rigveda and Avesta, making it one of the oldest attested toponyms in South Asia. The Gandharan civilization synthesized Indian, Persian, Greek, and Central Asian influences in a way that defies categorization within any single cultural tradition. ETHICS-002: Gandharan Buddhist art, which fused Hellenistic and Indian aesthetics, is one of the most significant cross-cultural artistic traditions in world history. The destruction of Gandharan Buddhist sites by successive invaders (Hephthalites in the 5th century, Turkic rulers in the 10th-11th centuries) represents a major loss of cultural heritage. The Taliban's 2001 destruction of the Bamiyan Buddhas was a continuation of this pattern. ETHICS-003: Gandhara's long history means it was ruled by many different polities (Achaemenid, Maurya, Indo-Greek, Kushan, Hephthalite, Hindu Shahi). This entry represents the cultural-geographic region, not any single political entity.",
+    "name_variants": [
+      {"name": "Gandhara", "lang": "en", "period_start": -600, "period_end": 1021, "context": "English scholarly name from Sanskrit, referring to the cultural region in the Peshawar basin and Swat valley", "source": "Behrendt, K.A. The Buddhist Architecture of Gandhara (2004)"},
+      {"name": "Gandhāra", "lang": "it", "period_start": -600, "period_end": 1021, "context": "Italian scholarly designation", "source": "Faccenna, D. Sculture da Saidu Sharif I (1962)"},
+      {"name": "Gandāra", "lang": "peo", "period_start": -520, "period_end": -330, "context": "Old Persian form attested in the Behistun inscription of Darius I as a satrapy of the Achaemenid Empire", "source": "Kent, R.G. Old Persian: Grammar, Texts, Lexicon (1953)"},
+      {"name": "گندھارا", "lang": "ur", "period_start": -600, "period_end": 1021, "context": "Modern Urdu form, used in Pakistani scholarship and heritage discourse", "source": "Dar, S.R. Taxila and the Western World (1984)"}
+    ],
+    "territory_changes": [
+      {"year": -518, "region": "Peshawar basin and Swat valley", "change_type": "CONQUEST_MILITARY", "description": "Darius I of Persia incorporated Gandhara as a satrapy of the Achaemenid Empire. The Behistun inscription lists Gandāra as the seventh satrapy. Gandhara contributed troops to Persian armies, including at the Battle of Thermopylae. This began the region's long engagement with Western cultures.", "population_affected": null, "confidence_score": 0.7},
+      {"year": -180, "region": "Northwestern India", "change_type": "CONQUEST_MILITARY", "description": "The Indo-Greek kings established control over Gandhara, initiating the fusion of Hellenistic and Indian artistic traditions that produced Gandharan Buddhist art. King Menander I (Milinda) is remembered in the Buddhist text Milindapanha. This period saw the creation of the first anthropomorphic images of the Buddha.", "population_affected": null, "confidence_score": 0.65},
+      {"year": 1021, "region": "Gandhara", "change_type": "CONQUEST_MILITARY", "description": "Mahmud of Ghazni's campaigns devastated the remaining Buddhist and Hindu centers in Gandhara. The Hindu Shahi dynasty was defeated, and Buddhist monasteries that had survived for over a millennium were destroyed. This effectively ended Gandhara as a distinct cultural entity, though the geographic region continued under various names.", "population_affected": null, "confidence_score": 0.7}
+    ],
+    "sources": [
+      {"citation": "Behrendt, Kurt A. The Buddhist Architecture of Gandhara. Leiden: Brill, 2004", "source_type": "academic"},
+      {"citation": "Faccenna, Domenico. Sculptures from the Sacred Area of Butkara I (Swat). Rome: IsMEO, 1962-1964", "source_type": "academic"},
+      {"citation": "Darius I, Behistun Inscription (c. 520 BCE), column I, lines 12-17", "source_type": "primary"},
+      {"citation": "Milindapanha (Questions of King Milinda, c. 100 BCE)", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "Ἑλληνικὴ Βασιλεία τῆς Ἰνδικῆς",
+    "name_original_lang": "grc",
+    "entity_type": "kingdom",
+    "year_start": -180,
+    "year_end": -10,
+    "capital_name": "Sagala (Sialkot)",
+    "capital_lat": 32.4945,
+    "capital_lon": 74.5229,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: The Indo-Greek kings left extensive numismatic evidence (bilingual coins in Greek and Kharoshthi/Brahmi), but virtually no literary records survive from their perspective. Most textual sources are Indian (Milindapanha, Yuga Purana) or Chinese (Zhang Qian's reports). ETHICS-002: The Indo-Greek kingdom represents one of history's most remarkable cultural fusions — Greek-speaking kings ruling Indian populations, some converting to Buddhism, producing bilingual coinage, and patronizing Gandharan art. This challenges simplistic narratives of cultural 'purity' or civilizational boundaries. ETHICS-003: Chronology is extremely uncertain. Many kings are known only from coins. The dates and sequence of rulers are heavily debated (Bopearachchi vs. Senior vs. Mitchiner chronologies).",
+    "name_variants": [
+      {"name": "Indo-Greek Kingdom", "lang": "en", "period_start": -180, "period_end": -10, "context": "English scholarly name for the Hellenistic states in northwestern India and Pakistan", "source": "Bopearachchi, O. Monnaies gréco-bactriennes et indo-grecques (1991)"},
+      {"name": "Regno Indo-Greco", "lang": "it", "period_start": -180, "period_end": -10, "context": "Italian scholarly designation", "source": "Coloru, O. Da Alessandro a Menandro (2009)"},
+      {"name": "Yavana", "lang": "sa", "period_start": -180, "period_end": -10, "context": "Sanskrit term for the Greeks (from 'Ionian'), used in Indian texts like the Mahabharata and Yuga Purana to refer to Indo-Greek rulers", "source": "Thapar, R. The Penguin History of Early India (2002)"},
+      {"name": "大夏 (Dàxià)", "lang": "zh", "period_start": -130, "period_end": -10, "context": "Chinese name used by Zhang Qian and Han dynasty sources, though it may refer more broadly to Bactria", "source": "Sima Qian, Shiji 123 (Records of the Grand Historian)"}
+    ],
+    "territory_changes": [
+      {"year": -180, "region": "Northwestern India (Gandhara, Punjab)", "change_type": "CONQUEST_MILITARY", "description": "Demetrius I of Bactria crossed the Hindu Kush and invaded India, establishing Indo-Greek rule over Gandhara and the Punjab. This was the most extensive Greek penetration into the Indian subcontinent, exceeding Alexander's brief campaign. The invaders were culturally hybrid from the start, using Indian scripts alongside Greek on their coinage.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -155, "region": "Northern India (Gandhara to Mathura)", "change_type": "CONQUEST_MILITARY", "description": "Menander I (Milinda) expanded the Indo-Greek kingdom to its greatest extent, possibly reaching Pataliputra according to the Yuga Purana. Menander is the only Indo-Greek king mentioned in Indian literary tradition — the Milindapanha records philosophical dialogues between him and the Buddhist sage Nagasena. His conversion to Buddhism (if historical) represents a profound cross-cultural encounter.", "population_affected": null, "confidence_score": 0.5},
+      {"year": -10, "region": "Eastern Punjab", "change_type": "CONQUEST_MILITARY", "description": "The last known Indo-Greek king, Strato II, was overthrown by the Indo-Scythian ruler Rajuvula. By this point the kingdom had fragmented into small, isolated city-states. The Indo-Greek legacy persisted in art (Gandharan sculpture), numismatics, and cross-cultural religious practices long after political power ended.", "population_affected": null, "confidence_score": 0.45}
+    ],
+    "sources": [
+      {"citation": "Bopearachchi, Osmund. Monnaies gréco-bactriennes et indo-grecques: Catalogue raisonné. Paris: Bibliothèque nationale, 1991", "source_type": "academic"},
+      {"citation": "Narain, A.K. The Indo-Greeks Revisited and Supplemented. Delhi: B.R. Publishing, 2003", "source_type": "academic"},
+      {"citation": "Milindapanha (Questions of King Milinda, c. 100 BCE)", "source_type": "primary"},
+      {"citation": "Bilingual coinage of Menander I (c. 155-130 BCE), British Museum collection", "source_type": "archaeological"}
+    ]
+  },
+  {
+    "name_original": "𐭇𐭍𐭃𐭅𐭐𐭓𐭕",
+    "name_original_lang": "xpr",
+    "entity_type": "kingdom",
+    "year_start": 19,
+    "year_end": 226,
+    "capital_name": "Taxila (Sirkap)",
+    "capital_lat": 33.7462,
+    "capital_lon": 72.7986,
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Parthian script. The Indo-Parthian dynasty bridged Iranian and Indian cultural worlds. The rulers used Greek, Kharoshthi, and Brahmi scripts on their coinage, reflecting the multilingual and multicultural nature of their realm. ETHICS-002: The Indo-Parthians are poorly documented in literary sources. Almost everything known comes from numismatic and archaeological evidence, making reconstructions highly tentative. Different scholars propose significantly different chronologies and sequences of rulers. ETHICS-003: The kingdom overlapped with and eventually gave way to the Kushan Empire, but the transition was gradual and contested, not a single event.",
+    "name_variants": [
+      {"name": "Indo-Parthian Kingdom", "lang": "en", "period_start": 19, "period_end": 226, "context": "English scholarly name for the Suren-descended dynasty ruling in Gandhara and Sindh", "source": "Senior, R.C. Indo-Scythian Coins and History (2001)"},
+      {"name": "Regno Indo-Partico", "lang": "it", "period_start": 19, "period_end": 226, "context": "Italian scholarly designation", "source": "Coloru, O. Da Alessandro a Menandro (2009)"},
+      {"name": "Apracarāja", "lang": "sa", "period_start": 19, "period_end": 100, "context": "Sanskrit name for the Apraca dynasty, an Indo-Parthian vassal dynasty in Bajaur known from Buddhist reliquary inscriptions", "source": "Salomon, R. 'The Apracarajas', in Indo-Iranian Journal 48 (2005)"},
+      {"name": "Pahlavān", "lang": "sa", "period_start": 19, "period_end": 226, "context": "Sanskritized form of 'Parthian' (Pahlava), used in Indian texts to describe these rulers", "source": "Rosenfield, J. The Dynastic Arts of the Kushans (1967)"}
+    ],
+    "territory_changes": [
+      {"year": 19, "region": "Gandhara and Sindh", "change_type": "CONQUEST_MILITARY", "description": "Gondophares I established the Indo-Parthian kingdom, seizing control of Gandhara and much of the Indus valley from the Indo-Scythians. Christian tradition (Acts of Thomas) claims the apostle Thomas visited Gondophares's court, though this is historically unverifiable. His coins are found from Seistan to the Punjab.", "population_affected": null, "confidence_score": 0.5},
+      {"year": 75, "region": "Eastern territories", "change_type": "CONQUEST_MILITARY", "description": "The Kushan expansion under Kujula Kadphises began eroding Indo-Parthian territory in Gandhara and the northwest. The Indo-Parthians were progressively confined to Sindh and Seistan. This transition — from Parthian to Kushan dominance — reshaped the cultural and political landscape of the entire region.", "population_affected": null, "confidence_score": 0.45},
+      {"year": 226, "region": "Seistan and Sindh", "change_type": "CONQUEST_MILITARY", "description": "The rise of the Sasanian Empire in Iran (224 CE) and continued Kushan expansion effectively eliminated the last Indo-Parthian territories. The final Indo-Parthian rulers are known only from isolated coin finds, suggesting a gradual diminishment rather than a dramatic end.", "population_affected": null, "confidence_score": 0.4}
+    ],
+    "sources": [
+      {"citation": "Senior, R.C. Indo-Scythian Coins and History, vols. I-IV. Lancaster: Classical Numismatic Group, 2001-2006", "source_type": "academic"},
+      {"citation": "Alram, Michael. 'The History of the Indo-Parthians', in Errington, E. & Curtis, V.S. (eds.) From Persepolis to the Punjab (2007)", "source_type": "academic"},
+      {"citation": "Coins of Gondophares I (c. 19-46 CE), British Museum and Bibliothèque nationale collections", "source_type": "archaeological"},
+      {"citation": "Acts of Thomas (c. 220 CE, Syriac)", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "Μεσήνη / Χαρακηνή",
+    "name_original_lang": "grc",
+    "entity_type": "kingdom",
+    "year_start": -127,
+    "year_end": 222,
+    "capital_name": "Charax Spasinou",
+    "capital_lat": 30.9667,
+    "capital_lon": 47.4333,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Greek, as Characene/Mesene is primarily known from Greek sources and bilingual inscriptions. The Aramaic form was Mayšān. The kingdom straddled multiple cultural traditions — Babylonian, Greek, Parthian, and Arabian — and its rulers used both Greek and Aramaic on their coinage. ETHICS-002: Characene's importance in controlling the trade route from the Persian Gulf to Mesopotamia has been underemphasized in traditional historiography focused on the Parthian-Roman rivalry. It was a major node in Indian Ocean trade long before the Islamic period. ETHICS-003: The kingdom's population included diverse communities — Babylonian, Arab, Greek, Jewish — whose interactions represent a model of pre-modern cosmopolitanism that challenges narratives of ancient civilizations as monolithic ethnic blocks.",
+    "name_variants": [
+      {"name": "Kingdom of Characene", "lang": "en", "period_start": -127, "period_end": 222, "context": "English scholarly name from the capital Charax Spasinou", "source": "Schuol, M. Die Charakene (2000)"},
+      {"name": "Mesene", "lang": "en", "period_start": -127, "period_end": 222, "context": "Alternative English name from the Greek Μεσήνη, referring to the lowland region of southern Mesopotamia", "source": "Hansman, J. 'Charax and the Karkheh', Iranica Antiqua 7 (1967)"},
+      {"name": "Mayšān", "lang": "arc", "period_start": -127, "period_end": 222, "context": "Aramaic name for the kingdom and region, ancestral to the Arabic Maysān (modern Maysan Province, Iraq)", "source": "Potts, D.T. The Arabian Gulf in Antiquity (1990)"},
+      {"name": "Regno di Caracene", "lang": "it", "period_start": -127, "period_end": 222, "context": "Italian scholarly designation", "source": "Invernizzi, A. (ed.) La terra tra i due fiumi (1985)"}
+    ],
+    "territory_changes": [
+      {"year": -127, "region": "Southern Mesopotamia (head of the Persian Gulf)", "change_type": "INDEPENDENCE", "description": "Hyspaosines, a former Seleucid governor, established Characene as an independent kingdom during the collapse of Seleucid power and the advance of Parthia. The capital Charax Spasinou (originally founded by Alexander or his successors) controlled the critical junction of Mesopotamian river and Persian Gulf maritime trade routes.", "population_affected": null, "confidence_score": 0.55},
+      {"year": 100, "region": "Persian Gulf trade routes", "change_type": "CONQUEST_DIPLOMATIC", "description": "Under Attambelos and his successors, Characene flourished as a major Indian Ocean trade hub. Pliny the Elder and the Periplus of the Erythraean Sea describe Charax Spasinou as a major port. The kingdom maintained semi-autonomy under Parthian suzerainty, issuing its own coinage and maintaining independent commercial relations with India and Arabia.", "population_affected": null, "confidence_score": 0.6},
+      {"year": 222, "region": "Characene / Mesene", "change_type": "CONQUEST_MILITARY", "description": "The Sasanian Empire absorbed Characene during or shortly after Ardashir I's overthrow of the last Parthian king. Mesene became a Sasanian province (ostān). The transition ended centuries of semi-independent rule and integrated the region fully into the centralized Sasanian state.", "population_affected": null, "confidence_score": 0.5}
+    ],
+    "sources": [
+      {"citation": "Schuol, Monika. Die Charakene: Ein mesopotamisches Königreich in hellenistisch-parthischer Zeit. Stuttgart: Franz Steiner Verlag, 2000", "source_type": "academic"},
+      {"citation": "Potts, Daniel T. The Arabian Gulf in Antiquity, vol. 2: From Alexander the Great to the Coming of Islam. Oxford: Clarendon Press, 1990", "source_type": "academic"},
+      {"citation": "Periplus Maris Erythraei (Periplus of the Erythraean Sea, c. 40-70 CE), §35-36", "source_type": "primary"},
+      {"citation": "Pliny the Elder, Natural History VI.138-139 (description of Charax Spasinou)", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "Βασιλεία Ἑλληνο-Βακτριανή",
+    "name_original_lang": "grc",
+    "entity_type": "kingdom",
+    "year_start": -256,
+    "year_end": -125,
+    "capital_name": "Bactra (Balkh)",
+    "capital_lat": 36.7583,
+    "capital_lon": 66.8986,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Ancient Greek, reflecting the administrative language. The Bactrian population was culturally diverse — Greek colonists, Iranian Bactrians, and Central Asian peoples coexisted. The Bactrian language (an Iranian language written in Greek script) persisted long after the kingdom's fall. ETHICS-002: Justin called Bactria 'the kingdom of a thousand cities' — its urbanization and prosperity have been underestimated in Western historiography, which treats the Hellenistic east as peripheral. The Ai-Khanoum excavations revealed a fully developed Greek city in Central Asia, challenging assumptions about the limits of Hellenistic culture. ETHICS-003: The coinage of the Greco-Bactrian kings includes the finest portraits in ancient numismatics. Some of the largest gold and silver coins from the ancient world were minted here.",
+    "name_variants": [
+      {"name": "Greco-Bactrian Kingdom", "lang": "en", "period_start": -256, "period_end": -125, "context": "Standard English scholarly name", "source": "Holt, F.L. Thundering Zeus (1999)"},
+      {"name": "Regno Greco-Battriano", "lang": "it", "period_start": -256, "period_end": -125, "context": "Italian scholarly designation", "source": "Coloru, O. Da Alessandro a Menandro (2009)"},
+      {"name": "Bāxtriš", "lang": "peo", "period_start": -256, "period_end": -125, "context": "Old Persian name for Bactria from the Behistun inscription, the historical region", "source": "Kent, R.G. Old Persian: Grammar, Texts, Lexicon (1953)"},
+      {"name": "大夏 (Dàxià)", "lang": "zh", "period_start": -256, "period_end": -125, "context": "Chinese name used by Zhang Qian (c. 128 BCE) to describe the remnants of the Greco-Bactrian kingdom encountered in Central Asia", "source": "Sima Qian, Shiji 123 (Records of the Grand Historian)"}
+    ],
+    "territory_changes": [
+      {"year": -256, "region": "Bactria (modern northern Afghanistan / southern Uzbekistan/Tajikistan)", "change_type": "INDEPENDENCE", "description": "Diodotus I, the Seleucid governor of Bactria, revolted and established an independent kingdom. Bactria's remoteness from the Seleucid heartland and its wealth from trade and agriculture made independence sustainable. The kingdom inherited the Greek colonies planted by Alexander and the Seleucids, including the city of Ai-Khanoum.", "population_affected": null, "confidence_score": 0.65},
+      {"year": -185, "region": "Gandhara and northwestern India", "change_type": "CONQUEST_MILITARY", "description": "Demetrius I crossed the Hindu Kush and invaded India, establishing Greek rule in Gandhara and the Punjab. This led to the bifurcation of the kingdom into a Bactrian branch and the Indo-Greek kingdom. The invasion may have been motivated by the fall of the Maurya Empire and the instability it created.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -125, "region": "Bactria", "change_type": "CONQUEST_MILITARY", "description": "Yuezhi (later Kushan) nomadic migrations overwhelmed the last Greco-Bactrian king Heliocles I. The Chinese envoy Zhang Qian, arriving c. 128 BCE, found the Yuezhi in control of Bactria. The destruction of Ai-Khanoum (c. 145 BCE) by nomadic invaders marks the visible archaeological end of Greek urban civilization in Central Asia.", "population_affected": null, "confidence_score": 0.6}
+    ],
+    "sources": [
+      {"citation": "Holt, Frank L. Thundering Zeus: The Making of Hellenistic Bactria. Berkeley: University of California Press, 1999", "source_type": "academic"},
+      {"citation": "Bernard, Paul. 'Ai Khanoum on the Oxus: A Hellenistic City in Central Asia', Proceedings of the British Academy 53 (1967)", "source_type": "academic"},
+      {"citation": "Sima Qian, Shiji (Records of the Grand Historian) 123, 'Dayuan liezhuan' (c. 90 BCE)", "source_type": "primary"},
+      {"citation": "Justin, Epitome of Pompeius Trogus XLI (revolt of Diodotus, c. 256 BCE)", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "𐩪𐩧𐩬 / أوسان",
+    "name_original_lang": "xsa",
+    "entity_type": "kingdom",
+    "year_start": -800,
+    "year_end": -500,
+    "capital_name": "Hajar Yahirr (Miswar)",
+    "capital_lat": 13.95,
+    "capital_lon": 45.55,
+    "confidence_score": 0.45,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Old South Arabian script and Arabic. Ausan is attested in South Arabian inscriptions but its history is largely known from the inscriptions of its enemies (particularly the Sabaeans and Qatabanians). ETHICS-002: South Arabian kingdoms like Ausan have been marginalized in ancient history curricula that prioritize the Near East and Mediterranean. Their sophisticated irrigation systems, monumental architecture, and long-distance trade networks represent an autonomous civilization that developed independently of Mesopotamian and Egyptian influence. ETHICS-003: The dating of South Arabian kingdoms is extremely uncertain. The 'long' and 'short' chronologies differ by up to 300 years. This entry uses the intermediate chronology but the uncertainty must be communicated.",
+    "name_variants": [
+      {"name": "Kingdom of Ausan", "lang": "en", "period_start": -800, "period_end": -500, "context": "English scholarly name for this ancient South Arabian kingdom in the Wadi Markha", "source": "Kitchen, K.A. Documentation for Ancient Arabia, vol. 1 (1994)"},
+      {"name": "Regno di Ausan", "lang": "it", "period_start": -800, "period_end": -500, "context": "Italian scholarly designation", "source": "de Maigret, A. Arabia Felix (1996, trad. it.)"},
+      {"name": "ʾwsn", "lang": "xsa", "period_start": -800, "period_end": -500, "context": "Old South Arabian consonantal form as attested in Sabaean and Qatabanian inscriptions", "source": "Beeston, A.F.L. et al. Sabaic Dictionary (1982)"}
+    ],
+    "territory_changes": [
+      {"year": -800, "region": "Wadi Markha (southern Yemen)", "change_type": "INDEPENDENCE", "description": "Ausan emerged as an independent South Arabian kingdom controlling the Wadi Markha and parts of the incense trade routes connecting the Hadramaut to the coast. Its early history is obscure due to limited inscriptional evidence, but it appears to have been a significant power rivaling Saba and Qataban.", "population_affected": null, "confidence_score": 0.35},
+      {"year": -650, "region": "Southern Arabia", "change_type": "CONQUEST_MILITARY", "description": "At its peak, Ausan may have controlled territory extending to the Indian Ocean coast, challenging Sabaean commercial dominance. Sabaean inscriptions of the mukarrib Karib'il Watar describe a devastating military campaign against Ausan and its allies, claiming thousands of casualties and the destruction of Ausani cities.", "population_affected": null, "confidence_score": 0.4},
+      {"year": -500, "region": "Wadi Markha", "change_type": "CONQUEST_MILITARY", "description": "Ausan was conquered and absorbed, likely by the expanding Kingdom of Qataban. The kingdom's territory was divided between Qataban and Saba. Some scholars argue Ausan experienced brief later revivals, but the evidence is fragmentary and debated.", "population_affected": null, "confidence_score": 0.35}
+    ],
+    "sources": [
+      {"citation": "Kitchen, Kenneth A. Documentation for Ancient Arabia, Part I: Chronological Framework and Historical Sources. Liverpool: Liverpool University Press, 1994", "source_type": "academic"},
+      {"citation": "de Maigret, Alessandro. Arabia Felix: An Exploration of the Archaeological History of Yemen. London: Stacey International, 2002", "source_type": "academic"},
+      {"citation": "Karib'il Watar inscription, RES 3945 (c. 7th century BCE, Sabaean)", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "𐩤𐩩𐩨𐩬 / قتبان",
+    "name_original_lang": "xqt",
+    "entity_type": "kingdom",
+    "year_start": -400,
+    "year_end": 200,
+    "capital_name": "Tamna' (Timna')",
+    "capital_lat": 14.0167,
+    "capital_lon": 45.75,
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Qatabanic script and Arabic. Qataban used its own variant of the Old South Arabian script and had a distinct language (Qatabanic), closely related to but different from Sabaean. ETHICS-002: Qataban's prosperity was built on the incense trade — the harvesting, processing, and export of frankincense and myrrh along overland routes to the Mediterranean and maritime routes to India. This economic system, which sustained multiple South Arabian kingdoms for centuries, is often treated as a footnote in histories centered on Mediterranean civilizations. ETHICS-003: The Qatabanic legal texts from Timna (especially the 'market law' inscription) provide rare evidence of pre-Islamic Arabian commercial law and social organization.",
+    "name_variants": [
+      {"name": "Kingdom of Qataban", "lang": "en", "period_start": -400, "period_end": 200, "context": "English scholarly name for this South Arabian kingdom centered on the Wadi Bayhan", "source": "Kitchen, K.A. Documentation for Ancient Arabia, vol. 1 (1994)"},
+      {"name": "Regno di Qataban", "lang": "it", "period_start": -400, "period_end": 200, "context": "Italian scholarly designation", "source": "de Maigret, A. Arabia Felix (1996, trad. it.)"},
+      {"name": "Qtbn", "lang": "xqt", "period_start": -400, "period_end": 200, "context": "Qatabanic consonantal form in the Old South Arabian script", "source": "Beeston, A.F.L. et al. Sabaic Dictionary (1982)"},
+      {"name": "Κατταβανία", "lang": "grc", "period_start": -300, "period_end": 200, "context": "Greek form used by Eratosthenes, Strabo, and Ptolemy in their descriptions of Arabia Felix", "source": "Strabo, Geography XVI.4.2"}
+    ],
+    "territory_changes": [
+      {"year": -400, "region": "Wadi Bayhan (southern Yemen)", "change_type": "INDEPENDENCE", "description": "Qataban became a major independent power after the decline of Sabaean hegemony. The capital Tamna (Timna) was a sophisticated walled city controlling key incense trade routes. The kingdom's prosperity is evidenced by monumental inscriptions, elaborate temples, and extensive irrigation works.", "population_affected": null, "confidence_score": 0.45},
+      {"year": -200, "region": "Southern Arabia", "change_type": "CONQUEST_DIPLOMATIC", "description": "At its peak, Qataban controlled significant portions of the incense trade routes and the port of Qana on the Indian Ocean coast. The kingdom maintained commercial relations with the Ptolemaic kingdom, the Nabataeans, and Indian Ocean merchants. The Periplus of the Erythraean Sea describes this trade network in detail.", "population_affected": null, "confidence_score": 0.5},
+      {"year": 200, "region": "Qataban", "change_type": "CONQUEST_MILITARY", "description": "Qataban was conquered and absorbed by the Hadramaut kingdom, ending centuries of independence. The exact date is debated — some scholars place the fall earlier (1st century CE). The collapse was part of a broader realignment of South Arabian power that eventually saw Himyar emerge as the dominant state.", "population_affected": null, "confidence_score": 0.4}
+    ],
+    "sources": [
+      {"citation": "Kitchen, Kenneth A. Documentation for Ancient Arabia, Part I: Chronological Framework and Historical Sources. Liverpool: Liverpool University Press, 1994", "source_type": "academic"},
+      {"citation": "Beeston, A.F.L. 'Qatabān', in Encyclopaedia of Islam, 2nd ed. Leiden: Brill", "source_type": "academic"},
+      {"citation": "Periplus Maris Erythraei (Periplus of the Erythraean Sea, c. 40-70 CE), §27", "source_type": "primary"},
+      {"citation": "Qatabanic market law inscription, Timna (c. 3rd century BCE), CIAS 39.11/o 2", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "𐩢𐩳𐩧𐩣𐩥𐩩 / حضرموت",
+    "name_original_lang": "xsa",
+    "entity_type": "kingdom",
+    "year_start": -800,
+    "year_end": 300,
+    "capital_name": "Shabwa",
+    "capital_lat": 15.3667,
+    "capital_lon": 47.0333,
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Old South Arabian script and Arabic. Hadramaut is one of the most ancient continuously attested place names in the world — it appears in Genesis 10:26 (Hazarmaveth) and is attested in Old South Arabian inscriptions from the early first millennium BCE. ETHICS-002: The Hadrami frankincense-producing region was the source of one of the most valued commodities in the ancient world. The extraordinary wealth generated by this trade funded monumental building programs and complex social structures that have been systematically understudied compared to Mediterranean civilizations. ETHICS-003: The Hadrami language was a distinct member of the Old South Arabian language family. Its script and grammar are preserved in inscriptions but no literary texts survive.",
+    "name_variants": [
+      {"name": "Kingdom of Hadramaut", "lang": "en", "period_start": -800, "period_end": 300, "context": "English scholarly name for the ancient South Arabian kingdom in eastern Yemen", "source": "Kitchen, K.A. Documentation for Ancient Arabia, vol. 1 (1994)"},
+      {"name": "Regno di Hadramawt", "lang": "it", "period_start": -800, "period_end": 300, "context": "Italian scholarly designation", "source": "de Maigret, A. Arabia Felix (1996, trad. it.)"},
+      {"name": "Ḥḍrmwt", "lang": "xsa", "period_start": -800, "period_end": 300, "context": "Old South Arabian consonantal form as attested in Hadrami inscriptions", "source": "Beeston, A.F.L. et al. Sabaic Dictionary (1982)"},
+      {"name": "Χατραμωτῖται", "lang": "grc", "period_start": -300, "period_end": 300, "context": "Greek form (Chatramotitae) used by Eratosthenes and Strabo", "source": "Strabo, Geography XVI.4.2"}
+    ],
+    "territory_changes": [
+      {"year": -800, "region": "Eastern Yemen (Wadi Hadramaut)", "change_type": "INDEPENDENCE", "description": "Hadramaut emerged as an independent South Arabian kingdom controlling the primary frankincense-producing regions of the Arabian Peninsula. The capital Shabwa, at the entrance to the Wadi Hadramaut, was a major fortified city and trade center. The kingdom's wealth derived primarily from its monopoly on the highest-quality frankincense.", "population_affected": null, "confidence_score": 0.4},
+      {"year": -200, "region": "Southern Arabian coast", "change_type": "CONQUEST_DIPLOMATIC", "description": "At its greatest extent, Hadramaut controlled the major Indian Ocean port of Qana (Bir Ali), which the Periplus of the Erythraean Sea describes as the principal harbor of the frankincense country. The kingdom participated in maritime trade networks stretching from East Africa to India, exporting frankincense, myrrh, and aloes.", "population_affected": null, "confidence_score": 0.5},
+      {"year": 300, "region": "Hadramaut", "change_type": "CONQUEST_MILITARY", "description": "Hadramaut was conquered by the Himyarite Kingdom, which unified most of South Arabia by the early 4th century CE. The fall of Shabwa (possibly destroyed by fire) marked the end of Hadramaut as an independent polity. Himyarite unification ended the pluralistic system of competing South Arabian kingdoms that had persisted for over a millennium.", "population_affected": null, "confidence_score": 0.5}
+    ],
+    "sources": [
+      {"citation": "Kitchen, Kenneth A. Documentation for Ancient Arabia, Part I: Chronological Framework and Historical Sources. Liverpool: Liverpool University Press, 1994", "source_type": "academic"},
+      {"citation": "Breton, Jean-François. Arabia Felix from the Time of the Queen of Sheba: Eighth Century B.C. to First Century A.D. Notre Dame: University of Notre Dame Press, 1999", "source_type": "academic"},
+      {"citation": "Periplus Maris Erythraei (Periplus of the Erythraean Sea, c. 40-70 CE), §27-28", "source_type": "primary"},
+      {"citation": "Pliny the Elder, Natural History XII.52-65 (on frankincense and Arabia)", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "Rasna / Rasenna",
+    "name_original_lang": "ett",
+    "entity_type": "confederation",
+    "year_start": -800,
+    "year_end": -264,
+    "capital_name": "Velzna (Volsinii / Orvieto)",
+    "capital_lat": 42.7185,
+    "capital_lon": 12.1108,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Etruscan. The Etruscans called themselves Rasenna (or Rasna) — 'Etruscan' is derived from the Latin Etrusci/Tusci, and 'Tyrrhenian' from the Greek Τυρρηνοί. Using the endonym as primary name respects the Etruscans' own identity, which was systematically overwritten by Roman cultural dominance. ETHICS-002: The Etruscan language is only partially deciphered and belongs to no known language family. The loss of Etruscan literature (which certainly existed — Livy mentions Etruscan histories) represents one of the great cultural losses of the ancient Mediterranean. Almost everything known about Etruscan beliefs, customs, and history comes from Greek and Roman sources written by outsiders, often with hostile or condescending attitudes. ETHICS-003: The Roman absorption of Etruscan civilization was both cultural appropriation (Rome adopted Etruscan architecture, religious practices, political symbols) and cultural erasure (Etruscan language and identity were suppressed). The fasces, the triumphal procession, and much of Roman temple architecture were Etruscan in origin.",
+    "name_variants": [
+      {"name": "Etruscan League", "lang": "en", "period_start": -800, "period_end": -264, "context": "English name for the dodecapolis — the loose confederation of twelve (or more) Etruscan city-states", "source": "Bonfante, G. & Bonfante, L. The Etruscan Language (2002)"},
+      {"name": "Etruschi / Lega Etrusca", "lang": "it", "period_start": -800, "period_end": -264, "context": "Italian designation, directly ancestral to the region name 'Toscana'", "source": "Pallottino, M. Etruscologia (1984)"},
+      {"name": "Τυρρηνοί / Τυρσηνοί", "lang": "grc", "period_start": -800, "period_end": -264, "context": "Ancient Greek names, giving the name to the Tyrrhenian Sea", "source": "Herodotus, Histories I.94"},
+      {"name": "Etrusci / Tusci", "lang": "la", "period_start": -700, "period_end": -264, "context": "Latin names — Etrusci in formal usage, Tusci in common speech, giving the name to 'Tuscany'", "source": "Livy, Ab Urbe Condita V.33; Varro, De Lingua Latina V.55"}
+    ],
+    "territory_changes": [
+      {"year": -800, "region": "Central Italy (modern Tuscany, Lazio, Umbria)", "change_type": "INDEPENDENCE", "description": "The Villanovan culture transitioned into the historically attested Etruscan civilization, with city-states (Veii, Cerveteri, Tarquinia, Vulci, Chiusi, Volterra, etc.) emerging as major urban centers. Etruria was arguably the most urbanized region of western Europe at this period. The Etruscans developed the first true cities in Italy, predating Roman urbanization by centuries.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -540, "region": "Po Valley, Campania, Corsica", "change_type": "CONQUEST_MILITARY", "description": "At their greatest extent, the Etruscans controlled territory from the Po Valley (Felsina/Bologna, Mantua, Spina) through central Italy to Campania (Capua, Pompeii). The naval Battle of Alalia (c. 540 BCE), fought alongside Carthage against Greek colonists, secured Etruscan dominance in the Tyrrhenian Sea. This represented the high point of Etruscan power.", "population_affected": null, "confidence_score": 0.6},
+      {"year": -264, "region": "Etruria", "change_type": "CONQUEST_MILITARY", "description": "The fall of Volsinii (264 BCE) — Rome destroyed the sacred federal center of the Etruscan League, deporting the population to a new site (Bolsena) and looting 2,000 bronze statues. This date marks the effective end of Etruscan political independence, though Etruscan cultural identity persisted for another century. The Roman conquest of Etruria was a gradual process spanning two centuries, involving the destruction of Veii (396 BCE), Cerveteri, Tarquinia, and other cities.", "population_affected": null, "confidence_score": 0.75}
+    ],
+    "sources": [
+      {"citation": "Pallottino, Massimo. Etruscologia, 7th ed. Milan: Hoepli, 1984", "source_type": "academic"},
+      {"citation": "Bonfante, Giuliano & Bonfante, Larissa. The Etruscan Language: An Introduction, 2nd ed. Manchester: Manchester University Press, 2002", "source_type": "academic"},
+      {"citation": "Herodotus, Histories I.94 (on Etruscan origins)", "source_type": "primary"},
+      {"citation": "Livy, Ab Urbe Condita V.33-35 (fall of Veii, 396 BCE)", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "Safineis / Safinium",
+    "name_original_lang": "osc",
+    "entity_type": "federation",
+    "year_start": -600,
+    "year_end": -82,
+    "capital_name": "Bovianum (Bojano)",
+    "capital_lat": 41.4833,
+    "capital_lon": 14.4719,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Oscan, the Samnite language. 'Samnite' is a Latin exonym (Samnites); the Oscan endonym was Safineis. The Oscan language, written in a native alphabet, is attested in inscriptions including the Tabula Bantina and the Cippus Abellanus. It was one of the major Italic languages alongside Latin. ETHICS-002: The Samnite Wars (343-290 BCE) were among the bloodiest conflicts in pre-Punic War Italy. Roman sources present the Samnites as fierce but ultimately inferior enemies — this is victor's historiography. The Samnites were a politically sophisticated federation that came closer to defeating Rome than any Italian people. ETHICS-003: The destruction of Samnite identity was completed during the Social War (91-88 BCE) and Sulla's proscriptions (82 BCE), when Samnium was systematically devastated and depopulated. Sulla reportedly declared that Romans would never have peace while the Samnites existed as a people — a statement of genocidal intent.",
+    "name_variants": [
+      {"name": "Samnite Federation", "lang": "en", "period_start": -600, "period_end": -82, "context": "English scholarly name for the tribal confederation of Samnite peoples (Pentri, Caudini, Hirpini, Carricini)", "source": "Salmon, E.T. Samnium and the Samnites (1967)"},
+      {"name": "Federazione Sannitica", "lang": "it", "period_start": -600, "period_end": -82, "context": "Italian scholarly designation, the Samnites being a central part of pre-Roman Italian history", "source": "Tagliamonte, G. I Sanniti (1996)"},
+      {"name": "Samnium", "lang": "la", "period_start": -600, "period_end": -82, "context": "Latin name for the Samnite territory in the central-southern Apennines", "source": "Livy, Ab Urbe Condita VII-X"},
+      {"name": "Σαυνῖται", "lang": "grc", "period_start": -400, "period_end": -82, "context": "Greek form used by Strabo and other Greek historians", "source": "Strabo, Geography V.4.12"}
+    ],
+    "territory_changes": [
+      {"year": -600, "region": "Central-southern Apennines (modern Molise, Campania, Abruzzo)", "change_type": "INDEPENDENCE", "description": "The Samnite tribal federation consolidated in the mountainous interior of southern Italy. The federation comprised four main tribes (Pentri, Caudini, Hirpini, Carricini) loosely united around the sacred site of Bovianum. Their ver sacrum (sacred spring) tradition of organized migration spread Oscan-speaking peoples across southern Italy.", "population_affected": null, "confidence_score": 0.5},
+      {"year": -321, "region": "Caudine Forks (Campania)", "change_type": "CONQUEST_MILITARY", "description": "The Samnites trapped and humiliated the entire Roman army at the Caudine Forks, forcing the consuls to pass under the yoke. This was Rome's most humiliating military defeat before Cannae. The three Samnite Wars (343-290 BCE) were the defining conflict of Italian unification under Rome — the Samnites were the last major Italian power to resist Roman expansion.", "population_affected": null, "confidence_score": 0.7},
+      {"year": -82, "region": "Samnium", "change_type": "CONQUEST_MILITARY", "description": "After the Samnites fought against Sulla in the Roman civil war, Sulla systematically devastated Samnium. At the Battle of the Colline Gate (82 BCE), thousands of Samnite prisoners were massacred. Sulla's proscriptions specifically targeted Samnite communities. Strabo, writing a generation later, described Samnite towns as reduced to villages. This was the deliberate destruction of a people and their culture.", "population_affected": 100000, "confidence_score": 0.7}
+    ],
+    "sources": [
+      {"citation": "Salmon, Edward Togo. Samnium and the Samnites. Cambridge: Cambridge University Press, 1967", "source_type": "academic"},
+      {"citation": "Tagliamonte, Gianluca. I Sanniti: Caudini, Irpini, Pentri, Carricini, Frentani. Milan: Longanesi, 1996", "source_type": "academic"},
+      {"citation": "Livy, Ab Urbe Condita VII-X (Samnite Wars, c. 25 BCE)", "source_type": "primary"},
+      {"citation": "Strabo, Geography V.4.12 (description of Samnite devastation)", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "Βασιλεία Ὀδρυσῶν",
+    "name_original_lang": "grc",
+    "entity_type": "kingdom",
+    "year_start": -475,
+    "year_end": -46,
+    "capital_name": "Seuthopolis",
+    "capital_lat": 42.6167,
+    "capital_lon": 25.05,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Ancient Greek, as the Thracians left almost no written records in their own language. The Thracian language is very poorly attested — only isolated glosses and a few inscriptions survive. The Odrysian kings used Greek for official inscriptions, which has led to their civilization being filtered entirely through Greek and Roman perceptions. ETHICS-002: Greek and Roman sources consistently described Thracians as barbaroi, emphasizing their alleged drunkenness, violence, and human sacrifice. These stereotypes must be recognized as colonial discourse — the Thracians possessed a sophisticated material culture (goldworking, burial practices, horse culture) that archaeological evidence increasingly reveals. ETHICS-003: Modern Bulgaria and parts of Turkey, Greece, and Romania claim Thracian heritage. The database presents the ancient entity without endorsing any modern national continuity claim.",
+    "name_variants": [
+      {"name": "Odrysian Kingdom", "lang": "en", "period_start": -475, "period_end": -46, "context": "English scholarly name for the Thracian kingdom ruled by the Odrysian dynasty", "source": "Archibald, Z.H. The Odrysian Kingdom of Thrace (1998)"},
+      {"name": "Regno Odrysio di Tracia", "lang": "it", "period_start": -475, "period_end": -46, "context": "Italian scholarly designation", "source": "Zanoni, P. I Traci (1998)"},
+      {"name": "Θράκη Ὀδρυσῶν", "lang": "grc", "period_start": -475, "period_end": -46, "context": "Greek designation meaning 'Thrace of the Odrysians', used by Thucydides and later historians", "source": "Thucydides, History of the Peloponnesian War II.29"},
+      {"name": "Тракийско Одриско царство", "lang": "bg", "period_start": -475, "period_end": -46, "context": "Modern Bulgarian name, reflecting Bulgaria's claim to Thracian heritage", "source": "Fol, A. Thracian Orphism (1991)"}
+    ],
+    "territory_changes": [
+      {"year": -475, "region": "Thrace (modern Bulgaria, Turkish Thrace, northeastern Greece)", "change_type": "INDEPENDENCE", "description": "Teres I founded the Odrysian kingdom by unifying numerous Thracian tribes under a single dynasty. Thucydides (II.97) describes the kingdom at its height as the largest and wealthiest state in Europe between the Adriatic and the Black Sea. The Odrysians controlled gold and silver mines, extensive horse-breeding lands, and strategic trade routes.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -429, "region": "Balkans", "change_type": "CONQUEST_MILITARY", "description": "King Sitalces invaded Macedonia with an army that Thucydides estimates at 150,000 (certainly exaggerated). The campaign demonstrated Odrysian military power but failed strategically. Under Seuthes I and Cotys I (383-359 BCE), the kingdom oscillated between alliance with and opposition to Athens, leveraging its position in Aegean geopolitics.", "population_affected": null, "confidence_score": 0.6},
+      {"year": -46, "region": "Thrace", "change_type": "CONQUEST_DIPLOMATIC", "description": "The last Odrysian king, Rhoemetalces III, was murdered by his wife in 46 CE, and Emperor Claudius annexed Thrace as a Roman province. In reality, Odrysian independence had been effectively lost much earlier — Philip II of Macedon subjugated much of Thrace in the 340s BCE, and the kingdom was a Roman client state from the late 2nd century BCE onward.", "population_affected": null, "confidence_score": 0.7}
+    ],
+    "sources": [
+      {"citation": "Archibald, Zofia H. The Odrysian Kingdom of Thrace: Orpheus Unmasked. Oxford: Clarendon Press, 1998", "source_type": "academic"},
+      {"citation": "Delev, Peter. 'The Odrysian Kingdom', in Companion to Ancient Thrace, ed. Valeva, Nankov & Graninger (2015)", "source_type": "academic"},
+      {"citation": "Thucydides, History of the Peloponnesian War II.29, II.95-101 (c. 400 BCE)", "source_type": "primary"},
+      {"citation": "Panagyurishte gold treasure (c. 300 BCE), National Museum of History, Sofia", "source_type": "archaeological"}
+    ]
+  },
+  {
+    "name_original": "Κιμμέριοι",
+    "name_original_lang": "grc",
+    "entity_type": "confederation",
+    "year_start": -1100,
+    "year_end": -600,
+    "capital_name": null,
+    "capital_lat": 45.5,
+    "capital_lon": 34.5,
+    "confidence_score": 0.35,
+    "status": "disputed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: name_original in Ancient Greek (Κιμμέριοι). The Cimmerians' self-designation and language are completely unknown. They are attested in Assyrian sources as Gimirri/Gimiraya and in Greek sources as Kimmerioi. Homer places them at the edge of the world (Odyssey XI.14). Their ethnic and linguistic identity is one of the most debated questions in Eurasian steppe archaeology. ETHICS-002: The Cimmerians are a case study in the limits of historical knowledge. They left no written records. Their material culture is difficult to distinguish archaeologically from other steppe peoples. Much of what is attributed to them may actually belong to the Scythians or other groups. The confidence score is appropriately low. ETHICS-003: The Assyrian records of Cimmerian invasions (especially the defeat of Rusa I of Urartu and the death of Sargon II) are among the few firmly datable events in Cimmerian history.",
+    "name_variants": [
+      {"name": "Cimmerians", "lang": "en", "period_start": -1100, "period_end": -600, "context": "English scholarly name from Greek Κιμμέριοι", "source": "Ivantchik, A. Les Cimmériens au Proche-Orient (1993)"},
+      {"name": "Cimmeri", "lang": "it", "period_start": -1100, "period_end": -600, "context": "Italian scholarly designation", "source": "Lanfranchi, G.B. I Cimmeri (1990)"},
+      {"name": "Gimirri / Gimiraya", "lang": "akk", "period_start": -720, "period_end": -600, "context": "Akkadian name in Neo-Assyrian royal inscriptions, first attested in letters of Sargon II's reign", "source": "State Archives of Assyria (SAA), Sargon II correspondence"},
+      {"name": "Gamir", "lang": "xur", "period_start": -714, "period_end": -640, "context": "Urartian name attested in Urartian royal inscriptions describing Cimmerian attacks", "source": "Salvini, M. Corpus dei testi urartei (2008)"}
+    ],
+    "territory_changes": [
+      {"year": -720, "region": "Southern Caucasus / eastern Anatolia", "change_type": "CONQUEST_MILITARY", "description": "Cimmerians invaded the territories of Urartu and the Neo-Assyrian Empire from the north Pontic steppe. Assyrian intelligence reports (found at Nineveh) document King Rusa I of Urartu suffering a devastating defeat at Cimmerian hands (c. 714 BCE). This invasion disrupted the entire Near Eastern political system and contributed to the weakening of Urartu.", "population_affected": null, "confidence_score": 0.5},
+      {"year": -705, "region": "Anatolia / Mesopotamian frontier", "change_type": "CONQUEST_MILITARY", "description": "Sargon II of Assyria died in battle, possibly against the Cimmerians (the exact circumstances are debated). This was an extraordinary event — the death of the most powerful ruler in the Near East at the hands of steppe nomads. Cimmerian bands subsequently raided across Anatolia, contributing to the destruction of the Phrygian kingdom (c. 696-695 BCE) and the death of King Midas.", "population_affected": null, "confidence_score": 0.45},
+      {"year": -637, "region": "Western Anatolia", "change_type": "CONQUEST_MILITARY", "description": "Cimmerian forces sacked Sardis, the Lydian capital, and temporarily occupied parts of western Anatolia. King Gyges of Lydia died fighting them (c. 644 BCE). The Cimmerians were eventually defeated and absorbed by a combination of Lydian and Assyrian resistance. By c. 600 BCE they disappear from historical records, likely absorbed into other steppe populations or settled communities.", "population_affected": null, "confidence_score": 0.45}
+    ],
+    "sources": [
+      {"citation": "Ivantchik, Askold I. Les Cimmériens au Proche-Orient. Fribourg: Éditions Universitaires / Göttingen: Vandenhoeck & Ruprecht, 1993 (OBO 127)", "source_type": "academic"},
+      {"citation": "Lanfranchi, Giovanni Battista. I Cimmeri: Emergenza delle élites militari iraniche nel Vicino Oriente (VIII-VII sec. a.C.). Padova: Sargon, 1990", "source_type": "academic"},
+      {"citation": "Neo-Assyrian royal correspondence, State Archives of Assyria (SAA), letters from Sargon II's reign on Cimmerian movements", "source_type": "primary"},
+      {"citation": "Homer, Odyssey XI.14-19 (earliest Greek reference to the Cimmerians)", "source_type": "primary"}
+    ]
+  }
+]

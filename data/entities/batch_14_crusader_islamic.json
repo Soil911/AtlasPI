@@ -1,0 +1,3679 @@
+[
+  {
+    "name_original": "Regnum Hierosolymitanum",
+    "name_original_lang": "la",
+    "entity_type": "kingdom",
+    "year_start": 1099,
+    "year_end": 1291,
+    "capital_name": "Jerusalem",
+    "capital_lat": 31.7683,
+    "capital_lon": 35.2137,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        35.2137,
+        31.7683
+      ]
+    },
+    "confidence_score": 0.7,
+    "status": "disputed",
+    "ethical_notes": "ETHICS: The Kingdom of Jerusalem was established through the First Crusade (1099), during which Crusaders massacred the Muslim and Jewish inhabitants of Jerusalem. Contemporary sources (both Latin and Arabic) describe the slaughter of thousands of civilians in the al-Aqsa mosque and throughout the city. The kingdom imposed a feudal system that displaced or subordinated the existing Muslim, Jewish, and Eastern Christian populations. Local communities were subject to discriminatory laws, forced conversions, and periodic violence. The 'Crusader states' narrative often centres European perspectives; Arab/Muslim sources (Ibn al-Athir, Usama ibn Munqidh) describe the same events as an invasion (al-hurub al-salibiyya). Both perspectives must be represented. The kingdom's boundaries shifted constantly and are inherently disputed.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Jerusalem",
+        "lang": "en",
+        "context": "Standard English designation",
+        "period_start": 1099,
+        "period_end": 1291
+      },
+      {
+        "name": "مملكة بيت المقدس",
+        "lang": "ar",
+        "context": "Arabic name used by Muslim chroniclers; Bayt al-Maqdis refers to the sacred house (Jerusalem)",
+        "period_start": 1099,
+        "period_end": 1291
+      },
+      {
+        "name": "Royaume de Jérusalem",
+        "lang": "fr",
+        "context": "Old French was the primary language of the Crusader nobility",
+        "period_start": 1099,
+        "period_end": 1291
+      },
+      {
+        "name": "Regno di Gerusalemme",
+        "lang": "it",
+        "context": "Italian designation, relevant due to significant Italian merchant involvement",
+        "period_start": 1099,
+        "period_end": 1291
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1099,
+        "change_type": "formation",
+        "region": "Palestine and Levantine coast",
+        "description": "Founded after the First Crusade captured Jerusalem on 15 July 1099. The conquest was accompanied by a notorious massacre of Muslim and Jewish inhabitants. Godfrey of Bouillon became the first ruler, styled Advocatus Sancti Sepulchri (Defender of the Holy Sepulchre).",
+        "population_affected": 40000,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1187,
+        "change_type": "contraction",
+        "region": "Jerusalem and most of inland Palestine",
+        "description": "Saladin (Salah al-Din) defeated the Crusader army at the Battle of Hattin and reconquered Jerusalem. Unlike the Crusader conquest of 1099, Saladin allowed the Christian population to ransom themselves and largely spared civilian lives. The kingdom was reduced to a coastal strip centred on Tyre.",
+        "population_affected": 100000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1191,
+        "change_type": "expansion",
+        "region": "Coastal Levant from Tyre to Jaffa",
+        "description": "The Third Crusade under Richard I of England recaptured Acre and coastal territories. Acre became the new de facto capital. The massacre of approximately 2,700 Muslim prisoners at Acre by Richard I is documented by both Latin and Arabic sources.",
+        "population_affected": 50000,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1291,
+        "change_type": "dissolution",
+        "region": "Acre and last coastal holdings",
+        "description": "The Mamluk Sultanate under Sultan al-Ashraf Khalil captured Acre, the last major Crusader stronghold. The fall of Acre ended nearly two centuries of Crusader presence in the Levant. Surviving Crusader populations fled to Cyprus.",
+        "population_affected": 30000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Riley-Smith, J. The Crusades: A History (3rd ed., 2014)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ibn al-Athir, al-Kamil fi al-Tarikh (The Complete History), 13th century",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Prawer, J. The Latin Kingdom of Jerusalem: European Colonialism in the Middle Ages (1972)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Fulcher of Chartres, Historia Hierosolymitana (c. 1127)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "Comitatus Tripolitanus",
+    "name_original_lang": "la",
+    "entity_type": "kingdom",
+    "year_start": 1102,
+    "year_end": 1289,
+    "capital_name": "Tripoli",
+    "capital_lat": 34.4367,
+    "capital_lon": 35.8497,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        35.8497,
+        34.4367
+      ]
+    },
+    "confidence_score": 0.65,
+    "status": "disputed",
+    "ethical_notes": "ETHICS: The County of Tripoli was established through military conquest by Raymond IV of Toulouse during the First Crusade. The siege of Tripoli (1102-1109) caused severe suffering to the local Muslim population. The county displaced and subordinated indigenous Muslim, Druze, and Maronite Christian communities. Maronite Christians had a complex relationship with the Crusaders — often allied but not treated as equals. The county's entity_type is listed as 'kingdom' since 'county' is not in the allowed types; it was technically a feudal county vassal to Jerusalem. Boundaries are approximate and heavily contested in scholarship.",
+    "name_variants": [
+      {
+        "name": "County of Tripoli",
+        "lang": "en",
+        "context": "Standard English designation for this Crusader state",
+        "period_start": 1102,
+        "period_end": 1289
+      },
+      {
+        "name": "Comté de Tripoli",
+        "lang": "fr",
+        "context": "Old French designation used by the Crusader ruling class",
+        "period_start": 1102,
+        "period_end": 1289
+      },
+      {
+        "name": "طرابلس الصليبية",
+        "lang": "ar",
+        "context": "Arabic designation meaning 'Crusader Tripoli', distinguishing it from Tripoli in Libya",
+        "period_start": 1102,
+        "period_end": 1289
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1102,
+        "change_type": "formation",
+        "region": "Northern Lebanon coast",
+        "description": "Raymond IV of Toulouse began the siege of Tripoli, establishing a Crusader presence in the region. The county was formally established after the city fell in 1109 under his son Bertrand. The local Muslim population was killed or expelled during the conquest.",
+        "population_affected": 20000,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1109,
+        "change_type": "expansion",
+        "region": "Tripoli and surrounding territory",
+        "description": "The city of Tripoli finally fell after a seven-year siege with Genoese naval assistance. The famous Dar al-Ilm (House of Knowledge) library, one of the great libraries of the Islamic world with reportedly 100,000 manuscripts, was destroyed.",
+        "population_affected": 15000,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 1289,
+        "change_type": "dissolution",
+        "region": "Tripoli and remaining Crusader holdings in Lebanon",
+        "description": "The Mamluk Sultan Qalawun captured Tripoli, massacring much of the population and destroying the city. The county was dissolved, ending 180 years of Crusader rule in the region.",
+        "population_affected": 25000,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Richard, J. The Latin Kingdom of Jerusalem (1979)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Asbridge, T. The Crusades: The War for the Holy Land (2010)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "William of Tyre, Historia rerum in partibus transmarinis gestarum (c. 1170-1184)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "Principatus Antiochenus",
+    "name_original_lang": "la",
+    "entity_type": "principality",
+    "year_start": 1098,
+    "year_end": 1268,
+    "capital_name": "Antioch",
+    "capital_lat": 36.2025,
+    "capital_lon": 36.1564,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        36.1564,
+        36.2025
+      ]
+    },
+    "confidence_score": 0.65,
+    "status": "disputed",
+    "ethical_notes": "ETHICS: The Principality of Antioch was established by Bohemond I of Taranto after the siege of Antioch (1098), during which both the Crusader besiegers and the Muslim defenders suffered enormous casualties. The city had been part of the Byzantine Empire and its seizure by the Normans created lasting conflict with Byzantium. The principality subordinated a diverse population including Greek Orthodox Christians, Armenian Christians, Syriac Christians, and Muslims. The Crusader elite imposed Latin religious authority, marginalizing Eastern Christian churches. The destruction of Antioch by the Mongols (1260) and final conquest by Baybars (1268) effectively destroyed one of the oldest continuously inhabited cities of the ancient world.",
+    "name_variants": [
+      {
+        "name": "Principality of Antioch",
+        "lang": "en",
+        "context": "Standard English designation",
+        "period_start": 1098,
+        "period_end": 1268
+      },
+      {
+        "name": "Principauté d'Antioche",
+        "lang": "fr",
+        "context": "Old French designation used by the Norman Crusader ruling class",
+        "period_start": 1098,
+        "period_end": 1268
+      },
+      {
+        "name": "إمارة أنطاكية",
+        "lang": "ar",
+        "context": "Arabic designation, Imarat Antakiya",
+        "period_start": 1098,
+        "period_end": 1268
+      },
+      {
+        "name": "Անտիոքի իշխdelays",
+        "lang": "hy",
+        "context": "Armenian designation; Armenians were a significant portion of the principality's Christian population",
+        "period_start": 1098,
+        "period_end": 1268
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1098,
+        "change_type": "formation",
+        "region": "Northern Syria and Cilician coast",
+        "description": "Bohemond I of Taranto seized Antioch during the First Crusade after a prolonged siege. The city's Muslim garrison was massacred. Bohemond refused to return the city to the Byzantine Empire despite having sworn an oath to do so, establishing the principality as an independent Crusader state.",
+        "population_affected": 30000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1119,
+        "change_type": "contraction",
+        "region": "Eastern territories near Aleppo",
+        "description": "The Battle of Ager Sanguinis (Field of Blood) resulted in a devastating defeat for the principality. Prince Roger of Salerno was killed and the Antiochene army was annihilated by Ilghazi of Mardin. The principality lost its eastern frontier territories.",
+        "population_affected": 10000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1268,
+        "change_type": "dissolution",
+        "region": "Antioch and remaining territories",
+        "description": "Mamluk Sultan Baybars captured Antioch on 18 May 1268 after a brief siege. The city was sacked and its population massacred or enslaved. Baybars wrote a mocking letter to Prince Bohemond VI describing the destruction. The city never recovered its former importance.",
+        "population_affected": 40000,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Asbridge, T. The Creation of the Principality of Antioch 1098-1130 (2000)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Kamal al-Din, Zubdat al-Halab fi Tarikh Halab (Cream of Aleppo's History), 13th century",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Cahen, C. La Syrie du Nord a l'époque des Croisades (1940)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Comitatus Edessanus",
+    "name_original_lang": "la",
+    "entity_type": "kingdom",
+    "year_start": 1098,
+    "year_end": 1150,
+    "capital_name": "Edessa",
+    "capital_lat": 37.1591,
+    "capital_lon": 38.7955,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        38.7955,
+        37.1591
+      ]
+    },
+    "confidence_score": 0.6,
+    "status": "disputed",
+    "ethical_notes": "ETHICS: The County of Edessa was the first Crusader state established and the first to fall. Baldwin of Boulogne exploited local Armenian Christian political rivalries to seize power. He was adopted by the Armenian ruler Thoros, who was subsequently murdered in a popular uprising that Baldwin may have instigated. The county was unique among Crusader states for its significant Armenian Christian population, who served as intermediaries but were not treated as equals by the Frankish elite. Its fall to Zengi in 1144 triggered the Second Crusade. entity_type is 'kingdom' as 'county' is not in the allowed types; this was a feudal county. Modern Urfa (Sanliurfa), Turkey, preserves some Crusader-era remains.",
+    "name_variants": [
+      {
+        "name": "County of Edessa",
+        "lang": "en",
+        "context": "Standard English designation for the first Crusader state",
+        "period_start": 1098,
+        "period_end": 1150
+      },
+      {
+        "name": "Comté d'Édesse",
+        "lang": "fr",
+        "context": "Old French designation used by the Crusader ruling class",
+        "period_start": 1098,
+        "period_end": 1150
+      },
+      {
+        "name": "الرها الصليبية",
+        "lang": "ar",
+        "context": "Arabic designation, al-Ruha al-Salibiyya (Crusader Edessa)",
+        "period_start": 1098,
+        "period_end": 1150
+      },
+      {
+        "name": "Ուdelays Կոմադ",
+        "lang": "hy",
+        "context": "Armenian designation; Edessa had a large Armenian population who initially welcomed the Crusaders",
+        "period_start": 1098,
+        "period_end": 1150
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1098,
+        "change_type": "formation",
+        "region": "Upper Mesopotamia (modern southeastern Turkey)",
+        "description": "Baldwin of Boulogne seized Edessa from the Armenian ruler Thoros, who was killed in suspicious circumstances. Baldwin established the first Crusader state, exploiting Armenian-Turkish conflicts. The population was predominantly Armenian and Syriac Christian.",
+        "population_affected": 20000,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 1144,
+        "change_type": "contraction",
+        "region": "Edessa and eastern territories",
+        "description": "Imad al-Din Zengi, Atabeg of Mosul and Aleppo, captured Edessa on 24 December 1144. The city's Armenian and Frankish Christian population suffered heavily. This was the first major Crusader territory to fall to Muslim forces and directly triggered the Second Crusade.",
+        "population_affected": 30000,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1150,
+        "change_type": "dissolution",
+        "region": "Remaining territories west of the Euphrates",
+        "description": "Nur al-Din captured the last remnants of the county. Count Joscelin II was captured and blinded. The remaining Frankish and Armenian population was killed, enslaved, or fled westward to the Principality of Antioch and the Armenian Kingdom of Cilicia.",
+        "population_affected": 15000,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "MacEvitt, C. The Crusades and the Christian World of the East: Rough Tolerance (2008)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Matthew of Edessa, Chronicle (Zhamanakagrut'iwn), 12th century",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Runciman, S. A History of the Crusades, vol. 2 (1952)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "الحمدانيون",
+    "name_original_lang": "ar",
+    "entity_type": "dynasty",
+    "year_start": 890,
+    "year_end": 1004,
+    "capital_name": "Aleppo",
+    "capital_lat": 36.2021,
+    "capital_lon": 37.1343,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        37.1343,
+        36.2021
+      ]
+    },
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Hamdanids were an Arab Shi'a dynasty during the fragmentation of the Abbasid Caliphate. They ruled two branches: Mosul and Aleppo. Sayf al-Dawla's court in Aleppo was a major centre of Arabic literature and philosophy, patronizing the poet al-Mutanabbi and the philosopher al-Farabi. The Hamdanids fought continuous frontier warfare (thughur) against the Byzantine Empire, which involved raids, enslavement, and destruction on both sides. Their Shi'a identity in a predominantly Sunni region creates competing sectarian narratives in historical sources.",
+    "name_variants": [
+      {
+        "name": "Hamdanid Dynasty",
+        "lang": "en",
+        "context": "Standard English designation",
+        "period_start": 890,
+        "period_end": 1004
+      },
+      {
+        "name": "Dinastia Hamdanide",
+        "lang": "it",
+        "context": "Italian designation",
+        "period_start": 890,
+        "period_end": 1004
+      },
+      {
+        "name": "بنو حمدان",
+        "lang": "ar",
+        "context": "Banu Hamdan, the tribal/genealogical designation",
+        "period_start": 890,
+        "period_end": 1004
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 890,
+        "change_type": "formation",
+        "region": "Northern Mesopotamia (Mosul and Jazira)",
+        "description": "The Hamdanid family established autonomous rule in the Jazira (upper Mesopotamia) as the Abbasid central authority weakened. Hamdan ibn Hamdun, the dynasty's founder, was a local Arab tribal leader who leveraged Abbasid internal conflicts.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 944,
+        "change_type": "expansion",
+        "region": "Northern Syria (Aleppo)",
+        "description": "Sayf al-Dawla seized Aleppo and established the Hamdanid emirate of Aleppo, which became the dynasty's most prestigious branch. His court became a renowned centre of Arab culture, poetry, and philosophy.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1004,
+        "change_type": "dissolution",
+        "region": "Mosul and Aleppo",
+        "description": "The last Hamdanid rulers were overthrown. The Aleppo branch had already been reduced to Fatimid vassals, while the Mosul branch was overthrown by the Uqaylids. The dynasty's territories were absorbed by rival powers.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Bikhazi, R.J. The Hamdanid Dynasty of Mesopotamia and North Syria 254-404/868-1014 (PhD thesis, University of Michigan, 1981)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Canard, M. Histoire de la dynastie des Hamdanides de Jazira et de Syrie (1953)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "al-Mutanabbi, Diwan (collected poems), 10th century",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "آل بویه",
+    "name_original_lang": "fa",
+    "entity_type": "dynasty",
+    "year_start": 934,
+    "year_end": 1062,
+    "capital_name": "Shiraz",
+    "capital_lat": 29.5918,
+    "capital_lon": 52.5837,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        52.5837,
+        29.5918
+      ]
+    },
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Buyids (Buwayhids) were a Daylamite Shi'a dynasty from northern Iran who conquered Baghdad in 945, effectively becoming the military patrons of the Sunni Abbasid caliph — a remarkable sectarian inversion. They maintained the Abbasid caliph as a figurehead while wielding actual power, establishing a precedent for Shi'a-Sunni political coexistence (or domination, depending on perspective). Their patronage of scholarship, including the founding of hospitals and libraries, should be noted alongside their military conquests. Sectarian framing of this dynasty varies significantly between Shi'a and Sunni historical traditions.",
+    "name_variants": [
+      {
+        "name": "Buyid Dynasty",
+        "lang": "en",
+        "context": "Standard English designation",
+        "period_start": 934,
+        "period_end": 1062
+      },
+      {
+        "name": "Buwayhid Dynasty",
+        "lang": "en",
+        "context": "Alternative English transliteration closer to Arabic pronunciation",
+        "period_start": 934,
+        "period_end": 1062
+      },
+      {
+        "name": "Dinastia Buide",
+        "lang": "it",
+        "context": "Italian designation",
+        "period_start": 934,
+        "period_end": 1062
+      },
+      {
+        "name": "البويهيون",
+        "lang": "ar",
+        "context": "Arabic form of the dynasty name",
+        "period_start": 934,
+        "period_end": 1062
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 934,
+        "change_type": "formation",
+        "region": "Fars (southern Iran)",
+        "description": "Ali ibn Buya captured Isfahan and Fars, establishing Buyid rule. The three Buyid brothers (Ali, Hasan, Ahmad) divided Iranian territories among themselves while maintaining family unity.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 945,
+        "change_type": "expansion",
+        "region": "Baghdad and Iraq",
+        "description": "Ahmad ibn Buya captured Baghdad, becoming the effective ruler of the Abbasid Caliphate. The Abbasid caliph al-Mustakfi was blinded and deposed. Ahmad took the title Mu'izz al-Dawla. A Shi'a dynasty now controlled the seat of Sunni Islam — an unprecedented political arrangement.",
+        "population_affected": 500000,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1055,
+        "change_type": "contraction",
+        "region": "Baghdad and western territories",
+        "description": "The Seljuk Turks under Tughril Beg entered Baghdad, ending Buyid control over Iraq. The Buyids were reduced to minor holdings in Fars and Kirman.",
+        "population_affected": 300000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1062,
+        "change_type": "dissolution",
+        "region": "Remaining Iranian territories",
+        "description": "The last Buyid ruler, Abu Mansur Fulad Sutun, was deposed by the Seljuks. The dynasty that had controlled the heart of the Islamic world for over a century ceased to exist.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Donohue, J.J. The Buwayhid Dynasty in Iraq 334H/945 to 403H/1012 (2003)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Miskawayh, Tajarib al-Umam (Experiences of the Nations), 11th century",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Kabir, M. The Buwayhid Dynasty of Baghdad (1964)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "الزنكيون",
+    "name_original_lang": "ar",
+    "entity_type": "dynasty",
+    "year_start": 1127,
+    "year_end": 1250,
+    "capital_name": "Aleppo",
+    "capital_lat": 36.2021,
+    "capital_lon": 37.1343,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        37.1343,
+        36.2021
+      ]
+    },
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Zengids were a Turkic Sunni dynasty that played a central role in the Muslim counter-crusade (jihad). Imad al-Din Zengi captured Edessa in 1144, triggering the Second Crusade. His son Nur al-Din unified Muslim Syria and promoted the ideology of jihad against the Crusaders — a framing that was both a genuine religious movement and a political tool to legitimise Zengid authority over rival Muslim states. The Zengid narrative of jihad was later appropriated and expanded by Saladin. Western historiography has traditionally focused on the Crusader perspective; the Zengid role as defenders of the Islamic world receives different emphasis in Arabic sources.",
+    "name_variants": [
+      {
+        "name": "Zengid Dynasty",
+        "lang": "en",
+        "context": "Standard English designation",
+        "period_start": 1127,
+        "period_end": 1250
+      },
+      {
+        "name": "Dinastia Zengide",
+        "lang": "it",
+        "context": "Italian designation",
+        "period_start": 1127,
+        "period_end": 1250
+      },
+      {
+        "name": "بنو زنكي",
+        "lang": "ar",
+        "context": "Arabic patronymic form, Banu Zengi",
+        "period_start": 1127,
+        "period_end": 1250
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1127,
+        "change_type": "formation",
+        "region": "Mosul and northern Iraq",
+        "description": "Imad al-Din Zengi was appointed atabeg (governor) of Mosul by the Seljuk sultan. He rapidly expanded his authority, unifying fragmented Muslim territories in northern Mesopotamia.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1144,
+        "change_type": "expansion",
+        "region": "Edessa (County of Edessa)",
+        "description": "Zengi captured the Crusader County of Edessa on 24 December 1144 — the first major Crusader territory reconquered by Muslim forces. The fall of Edessa triggered the Second Crusade. Zengi was celebrated throughout the Muslim world as a champion of jihad.",
+        "population_affected": 30000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1174,
+        "change_type": "contraction",
+        "region": "Syria",
+        "description": "After Nur al-Din's death, Saladin gradually absorbed Zengid territories in Syria. The Zengids were confined to Mosul and northern Mesopotamia, subordinated to the rising Ayyubid power.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1250,
+        "change_type": "dissolution",
+        "region": "Mosul and Jazira",
+        "description": "The last Zengid rulers of Mosul submitted to Mongol authority before the Mongol invasion destroyed their remaining power. The Jazira branch had already been absorbed by the Ayyubids.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Elisseeff, N. Nur ad-Din: Un Grand Prince Musulman de Syrie au Temps des Croisades (3 vols., 1967)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ibn al-Athir, al-Kamil fi al-Tarikh (The Complete History), 13th century",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Hillenbrand, C. The Crusades: Islamic Perspectives (1999)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "دولت غزنویان",
+    "name_original_lang": "fa",
+    "entity_type": "empire",
+    "year_start": 977,
+    "year_end": 1186,
+    "capital_name": "Ghazni",
+    "capital_lat": 33.5469,
+    "capital_lon": 68.4208,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        68.4208,
+        33.5469
+      ]
+    },
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Ghaznavid Empire was a Persianate Turkic dynasty whose most famous ruler, Mahmud of Ghazni, conducted 17 campaigns into the Indian subcontinent (1001-1027). These campaigns involved systematic looting of Hindu temples (notably Somnath in 1026), mass enslavement, and destruction of religious sites. Indian and Pakistani nationalist historiographies present starkly different interpretations of these invasions: some celebrate Mahmud as a champion of Islam, while others condemn him as a destroyer of indigenous culture. The database must present both perspectives. The Ghaznavids were also major patrons of Persian literature and culture — Ferdowsi composed the Shahnameh at Mahmud's court (though was reportedly poorly rewarded).",
+    "name_variants": [
+      {
+        "name": "Ghaznavid Empire",
+        "lang": "en",
+        "context": "Standard English designation",
+        "period_start": 977,
+        "period_end": 1186
+      },
+      {
+        "name": "Impero Ghaznavide",
+        "lang": "it",
+        "context": "Italian designation",
+        "period_start": 977,
+        "period_end": 1186
+      },
+      {
+        "name": "الغزنويون",
+        "lang": "ar",
+        "context": "Arabic designation",
+        "period_start": 977,
+        "period_end": 1186
+      },
+      {
+        "name": "غزنویان",
+        "lang": "fa",
+        "context": "Persian short form",
+        "period_start": 977,
+        "period_end": 1186
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 977,
+        "change_type": "formation",
+        "region": "Eastern Afghanistan (Ghazni)",
+        "description": "Sebuktigin, a former Turkic slave soldier (ghulam), established independent rule in Ghazni after the death of his Samanid patron. He laid the foundations for the Ghaznavid state.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1001,
+        "change_type": "expansion",
+        "region": "Punjab and northern India",
+        "description": "Mahmud of Ghazni began his Indian campaigns, defeating the Hindu Shahi dynasty at the Battle of Peshawar. Over the next 26 years he conducted 17 raids into India, accumulating enormous wealth from temple plunder and enslaving large numbers. The sack of the Somnath temple (1026) remains deeply controversial.",
+        "population_affected": 2000000,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 1040,
+        "change_type": "contraction",
+        "region": "Khorasan and western territories",
+        "description": "The Seljuk Turks defeated the Ghaznavids at the Battle of Dandanqan (1040), seizing Khorasan and Iran. The Ghaznavids were confined to Afghanistan and parts of the Punjab.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1186,
+        "change_type": "dissolution",
+        "region": "Lahore (last Ghaznavid capital)",
+        "description": "The Ghurid dynasty captured Lahore, deposing the last Ghaznavid ruler Khusrau Malik. The Ghaznavid Empire, which had once stretched from Iran to India, ceased to exist after over two centuries.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Bosworth, C.E. The Ghaznavids: Their Empire in Afghanistan and Eastern Iran 994-1040 (2nd ed., 1973)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Utbi, Tarikh-i Yamini (History of the Right Hand, i.e. Mahmud), 11th century",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Nazim, M. The Life and Times of Sultan Mahmud of Ghazna (1931)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "الأدارسة",
+    "name_original_lang": "ar",
+    "entity_type": "dynasty",
+    "year_start": 788,
+    "year_end": 974,
+    "capital_name": "Fes",
+    "capital_lat": 34.0181,
+    "capital_lon": -5.0078,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        -5.0078,
+        34.0181
+      ]
+    },
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Idrisids were the first major Muslim dynasty in Morocco and are traditionally considered the founders of the Moroccan state. Idris I was a descendant of the Prophet Muhammad (an Alid) who fled the Abbasid massacre of Alids at the Battle of Fakh (786). The Idrisids founded the city of Fes, which became a major centre of Islamic learning (the University of al-Qarawiyyin, founded 859, is sometimes claimed as the world's oldest university). The dynasty's Sharifian (prophetic) lineage remains politically significant in Morocco today, where the ruling Alaouite dynasty also claims descent from the Prophet. Competing claims of Idrisid legitimacy from Berber and Arab perspectives should be noted.",
+    "name_variants": [
+      {
+        "name": "Idrisid Dynasty",
+        "lang": "en",
+        "context": "Standard English designation",
+        "period_start": 788,
+        "period_end": 974
+      },
+      {
+        "name": "Dinastia Idriside",
+        "lang": "it",
+        "context": "Italian designation",
+        "period_start": 788,
+        "period_end": 974
+      },
+      {
+        "name": "ⵉⴷⵔⵉⵙⵉⵢⵏ",
+        "lang": "ber",
+        "context": "Berber (Amazigh) designation; the Idrisids relied heavily on Berber tribal support",
+        "period_start": 788,
+        "period_end": 974
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 788,
+        "change_type": "formation",
+        "region": "Northern Morocco (Volubilis/Walili)",
+        "description": "Idris ibn Abdallah, fleeing Abbasid persecution after the Battle of Fakh, was welcomed by the Awraba Berber tribe and proclaimed imam. He established an independent state in Morocco, the first to break from Abbasid authority in the Maghreb.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 808,
+        "change_type": "expansion",
+        "region": "Fes and central Morocco",
+        "description": "Idris II founded the city of Fes (Madinat Fas), which became the dynasty's capital and a major centre of learning. The city attracted Arab settlers from Kairouan and Cordoba, creating distinct quarters (Adwat al-Andalus and Adwat al-Qarawiyyin).",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 974,
+        "change_type": "dissolution",
+        "region": "Northern Morocco",
+        "description": "The last Idrisid strongholds fell. The dynasty had been progressively weakened by internal fragmentation and pressure from the Fatimids (from the east) and the Umayyad Caliphate of Cordoba (from the north). Their legacy persists in the Sharifian tradition of Moroccan governance.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Le Tourneau, R. Fez in the Age of the Marinides (1961)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ibn Abi Zar, Rawd al-Qirtas (The Garden of Pages), 14th century",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Benchekroun, M.B.A. La vie intellectuelle marocaine sous les Merinides et les Wattasides (1974)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "الأغالبة",
+    "name_original_lang": "ar",
+    "entity_type": "dynasty",
+    "year_start": 800,
+    "year_end": 909,
+    "capital_name": "Kairouan",
+    "capital_lat": 35.6781,
+    "capital_lon": 10.0963,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        10.0963,
+        35.6781
+      ]
+    },
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Aghlabids were a nominally Abbasid-vassal dynasty in Ifriqiya (modern Tunisia, eastern Algeria, western Libya). They are most notable for the conquest of Sicily (827-902), which transformed the island culturally and economically. The Aghlabid conquest of Sicily involved prolonged warfare, enslavement, and displacement of the local Christian population, though Muslim rule also brought agricultural innovation, architectural achievements, and cultural exchange. The Great Mosque of Kairouan, largely rebuilt under Aghlabid patronage, remains one of the most important mosques in North Africa. Christian and Muslim accounts of the Sicilian conquest differ markedly in emphasis.",
+    "name_variants": [
+      {
+        "name": "Aghlabid Emirate",
+        "lang": "en",
+        "context": "Standard English designation; entity_type uses 'dynasty' as 'emirate' is not in allowed types",
+        "period_start": 800,
+        "period_end": 909
+      },
+      {
+        "name": "Dinastia Aghlabide",
+        "lang": "it",
+        "context": "Italian designation",
+        "period_start": 800,
+        "period_end": 909
+      },
+      {
+        "name": "بنو الأغلب",
+        "lang": "ar",
+        "context": "Arabic patronymic form, Banu al-Aghlab",
+        "period_start": 800,
+        "period_end": 909
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 800,
+        "change_type": "formation",
+        "region": "Ifriqiya (modern Tunisia)",
+        "description": "Ibrahim ibn al-Aghlab was appointed governor of Ifriqiya by the Abbasid caliph Harun al-Rashid, establishing de facto autonomous rule. Kairouan served as the capital and as a major centre of Islamic learning.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 827,
+        "change_type": "expansion",
+        "region": "Sicily",
+        "description": "The Aghlabids began the invasion of Byzantine Sicily, starting a decades-long campaign. Palermo fell in 831. The conquest was completed with the fall of Taormina in 902. The island's Christian population was subjected to varying degrees of subordination, though many converted or coexisted under Muslim rule.",
+        "population_affected": 200000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 909,
+        "change_type": "dissolution",
+        "region": "Ifriqiya",
+        "description": "The Fatimid (Ismaili Shi'a) movement overthrew the last Aghlabid ruler Ziyadat Allah III. The Fatimid da'i Abu Abdallah al-Shi'i, with Kutama Berber support, conquered Kairouan and established the Fatimid Caliphate in North Africa.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Talbi, M. L'Emirat Aghlabide 184-296/800-909 (1966)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Metcalfe, A. The Muslims of Medieval Italy (2009)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ibn al-Athir, al-Kamil fi al-Tarikh (The Complete History), 13th century",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "الطولونيون",
+    "name_original_lang": "ar",
+    "entity_type": "dynasty",
+    "year_start": 868,
+    "year_end": 905,
+    "capital_name": "Al-Qata'i",
+    "capital_lat": 30.0288,
+    "capital_lon": 31.2625,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        31.2625,
+        30.0288
+      ]
+    },
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Tulunids were the first independent dynasty to rule Egypt since the Ptolemies, breaking Abbasid direct control. Ahmad ibn Tulun was of Turkic slave (ghulam) origin — his rise illustrates the critical role of enslaved peoples in Islamic political history. The Mosque of Ibn Tulun in Cairo, one of the oldest intact mosques in Egypt, is the dynasty's most enduring legacy. The Tulunids exploited Egypt's agricultural wealth while nominally acknowledging Abbasid suzerainty. Their rule established Egypt as an autonomous political entity, a pattern that would persist through the Ikhshidids, Fatimids, Ayyubids, and Mamluks.",
+    "name_variants": [
+      {
+        "name": "Tulunid Dynasty",
+        "lang": "en",
+        "context": "Standard English designation",
+        "period_start": 868,
+        "period_end": 905
+      },
+      {
+        "name": "Dinastia Tulunide",
+        "lang": "it",
+        "context": "Italian designation",
+        "period_start": 868,
+        "period_end": 905
+      },
+      {
+        "name": "بنو طولون",
+        "lang": "ar",
+        "context": "Arabic patronymic form, Banu Tulun",
+        "period_start": 868,
+        "period_end": 905
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 868,
+        "change_type": "formation",
+        "region": "Egypt",
+        "description": "Ahmad ibn Tulun, a Turkic ghulam (military slave) appointed as governor, established de facto independent rule over Egypt. He built a new capital, al-Qata'i (now part of Cairo), with the famous mosque that still bears his name.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 878,
+        "change_type": "expansion",
+        "region": "Syria and parts of the Jazira",
+        "description": "Ahmad ibn Tulun seized control of Syria and parts of upper Mesopotamia, creating a realm stretching from Cyrenaica to the Euphrates. This expansion challenged Abbasid authority and established Egypt's strategic importance as a power base.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 905,
+        "change_type": "dissolution",
+        "region": "Egypt and Syria",
+        "description": "An Abbasid army reconquered Egypt and destroyed al-Qata'i, sparing only the mosque. The last Tulunid ruler Shaybani was captured and sent to Baghdad. Abbasid direct rule was briefly restored, though Egyptian autonomy would soon re-emerge under the Ikhshidids.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Gordon, M.S. The Breaking of a Thousand Swords: A History of the Turkish Military of Samarra (2001)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "al-Balawi, Sirat Ahmad ibn Tulun (Life of Ahmad ibn Tulun), 10th century",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Bianquis, T. 'Autonomous Egypt from Ibn Tulun to Kafur' in Cambridge History of Egypt, vol. 1 (1998)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "الإخشيديون",
+    "name_original_lang": "ar",
+    "entity_type": "dynasty",
+    "year_start": 935,
+    "year_end": 969,
+    "capital_name": "Fustat",
+    "capital_lat": 30.01,
+    "capital_lon": 31.235,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        31.235,
+        30.01
+      ]
+    },
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Ikhshidid dynasty continued Egypt's pattern of autonomous rule under nominal Abbasid suzerainty. The dynasty's most remarkable figure was Abu al-Misk Kafur, an Abyssinian (Ethiopian) eunuch slave who rose to become the effective ruler of Egypt (966-968). Kafur's story illustrates both the extraordinary social mobility possible in medieval Islamic societies and the centrality of slavery to political systems. The poet al-Mutanabbi, who initially praised Kafur, later wrote viciously racist satires about him — these poems remain controversial and illuminate medieval attitudes toward race and enslaved peoples. The Ikhshidid period is often overshadowed by the Tulunids before and Fatimids after.",
+    "name_variants": [
+      {
+        "name": "Ikhshidid Dynasty",
+        "lang": "en",
+        "context": "Standard English designation",
+        "period_start": 935,
+        "period_end": 969
+      },
+      {
+        "name": "Dinastia Ikhshidide",
+        "lang": "it",
+        "context": "Italian designation",
+        "period_start": 935,
+        "period_end": 969
+      },
+      {
+        "name": "بنو الإخشيد",
+        "lang": "ar",
+        "context": "Arabic patronymic form, Banu al-Ikhshid",
+        "period_start": 935,
+        "period_end": 969
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 935,
+        "change_type": "formation",
+        "region": "Egypt",
+        "description": "Muhammad ibn Tughj al-Ikhshid, a Turkic general of Ferghanid origin, was appointed governor of Egypt by the Abbasid caliph and established autonomous rule. The title 'Ikhshid' is a Sogdian/Ferghani royal title meaning 'prince'.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 945,
+        "change_type": "expansion",
+        "region": "Syria and the Hejaz",
+        "description": "The Ikhshidids extended control over Syria and the Hejaz (including Mecca and Medina), making them guardians of the Two Holy Mosques — a source of enormous prestige. This expansion was facilitated by the Abbasid caliphate's weakness after the Buyid takeover of Baghdad.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 969,
+        "change_type": "dissolution",
+        "region": "Egypt",
+        "description": "The Fatimid general Jawhar al-Siqilli conquered Egypt for the Fatimid Caliphate, ending Ikhshidid rule. Jawhar founded the new city of al-Qahira (Cairo) as the Fatimid capital. The transition marked the beginning of Ismaili Shi'a rule in Egypt.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Bianquis, T. 'Autonomous Egypt from Ibn Tulun to Kafur' in Cambridge History of Egypt, vol. 1 (1998)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "al-Mutanabbi, Diwan (collected poems), 10th century — especially the Kafuriyyat poems",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Bacharach, J.L. 'The Career of Muhammad ibn Tughj al-Ikhshid', Speculum 50/4 (1975)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "المرينيون",
+    "name_original_lang": "ar",
+    "entity_type": "dynasty",
+    "year_start": 1244,
+    "year_end": 1465,
+    "capital_name": "Fes",
+    "capital_lat": 34.0181,
+    "capital_lon": -5.0078,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        -5.0078,
+        34.0181
+      ]
+    },
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Marinids were a Zenata Berber dynasty that replaced the Almohads in Morocco. Unlike the Almohads, they did not claim religious legitimacy through a mahdi figure but relied on tribal solidarity and military power. They are notable for founding the madrasa system in Morocco (Bou Inania, al-Attarine) and for their support of the Nasrid Kingdom of Granada against Castilian expansion. The Marinids participated in the Battle of Rio Salado (1340) against Castile, a significant moment in the Reconquista. Their treatment of Jewish communities in Morocco was complex — periods of protection alternated with episodes of violence, particularly during the merinid succession crises.",
+    "name_variants": [
+      {
+        "name": "Marinid Dynasty",
+        "lang": "en",
+        "context": "Standard English designation",
+        "period_start": 1244,
+        "period_end": 1465
+      },
+      {
+        "name": "Merinid Dynasty",
+        "lang": "en",
+        "context": "Alternative English spelling",
+        "period_start": 1244,
+        "period_end": 1465
+      },
+      {
+        "name": "Dinastia Merinide",
+        "lang": "it",
+        "context": "Italian designation",
+        "period_start": 1244,
+        "period_end": 1465
+      },
+      {
+        "name": "ⵉⵎⵔⵉⵏⵏ",
+        "lang": "ber",
+        "context": "Berber (Amazigh) designation; the Marinids were Zenata Berbers",
+        "period_start": 1244,
+        "period_end": 1465
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1244,
+        "change_type": "formation",
+        "region": "Eastern Morocco",
+        "description": "The Marinid (Banu Marin) Zenata Berber confederation defeated the Almohads at the Battle of the Rou. They captured Fes in 1248 and Marrakech in 1269, completing their takeover of Morocco.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1275,
+        "change_type": "expansion",
+        "region": "Al-Andalus (southern Spain)",
+        "description": "The Marinids crossed the Strait of Gibraltar to support the Nasrid Kingdom of Granada, establishing garrisons in southern Spain. This marked the last significant North African military intervention in Iberia.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 1340,
+        "change_type": "contraction",
+        "region": "Al-Andalus",
+        "description": "The Battle of Rio Salado (Tarifa) resulted in a decisive defeat of the combined Marinid-Nasrid forces by Castile and Portugal. The Marinids permanently lost their foothold in Iberia.",
+        "population_affected": 30000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1465,
+        "change_type": "dissolution",
+        "region": "Fes",
+        "description": "The last Marinid sultan Abd al-Haqq II was killed in a popular revolt in Fes. The Wattasid dynasty, former Marinid viziers, assumed control. The Marinid period is remembered as one of Morocco's great cultural golden ages despite political instability.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Kably, M. Société, pouvoir et religion au Maroc à la fin du Moyen-Âge (1986)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ibn Khaldun, Kitab al-Ibar (Book of Lessons), 14th century",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Abun-Nasr, J.M. A History of the Maghrib in the Islamic Period (1987)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "الحفصيون",
+    "name_original_lang": "ar",
+    "entity_type": "dynasty",
+    "year_start": 1229,
+    "year_end": 1574,
+    "capital_name": "Tunis",
+    "capital_lat": 36.8065,
+    "capital_lon": 10.1815,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        10.1815,
+        36.8065
+      ]
+    },
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Hafsids were an Almohad successor dynasty in Ifriqiya (Tunisia) who claimed the caliphal title, making Tunis a rival centre to other claimants. They maintained a complex relationship with Christian Mediterranean powers (Aragon, Genoa, Venice) involving both commerce and conflict. The Hafsids participated in and profited from the trans-Saharan slave trade. Ibn Khaldun, one of history's greatest social thinkers, was born and initially worked under Hafsid patronage in Tunis. The dynasty's fall to the Ottomans in 1574 marked the incorporation of the Maghreb into the Ottoman sphere — a transition with competing nationalist narratives in modern Tunisia.",
+    "name_variants": [
+      {
+        "name": "Hafsid Dynasty",
+        "lang": "en",
+        "context": "Standard English designation",
+        "period_start": 1229,
+        "period_end": 1574
+      },
+      {
+        "name": "Dinastia Hafside",
+        "lang": "it",
+        "context": "Italian designation",
+        "period_start": 1229,
+        "period_end": 1574
+      },
+      {
+        "name": "بنو حفص",
+        "lang": "ar",
+        "context": "Arabic patronymic form, Banu Hafs",
+        "period_start": 1229,
+        "period_end": 1574
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1229,
+        "change_type": "formation",
+        "region": "Ifriqiya (modern Tunisia)",
+        "description": "Abu Zakariya Yahya, an Almohad governor, declared independence from the crumbling Almohad Caliphate, establishing the Hafsid state with Tunis as capital. The dynasty claimed legitimacy as the true successors to the Almohad movement.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1253,
+        "change_type": "expansion",
+        "region": "Eastern Maghreb and Tripolitania",
+        "description": "Abu Zakariya extended Hafsid authority over Tripolitania and parts of eastern Algeria. The Hafsid caliph received delegations from as far as Egypt and was briefly recognised as caliph by Mecca after the Mongol destruction of Baghdad (1258).",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1535,
+        "change_type": "contraction",
+        "region": "Tunis",
+        "description": "Habsburg Emperor Charles V captured Tunis and restored the Hafsid sultan Muley Hassan as a Spanish vassal. The capture involved significant violence against the population of Tunis, including the sack of the city by Spanish troops.",
+        "population_affected": 100000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1574,
+        "change_type": "dissolution",
+        "region": "Tunis and Ifriqiya",
+        "description": "The Ottoman general Sinan Pasha captured Tunis, deposing the last Hafsid sultan. Ifriqiya became an Ottoman province (the Eyalet of Tunis). The Hafsid dynasty ended after 345 years of rule.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Brunschvig, R. La Berbérie orientale sous les Hafsides (2 vols., 1940-1947)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ibn Khaldun, Kitab al-Ibar (Book of Lessons), 14th century",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Julien, C.-A. History of North Africa (1970)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "الزيانيون",
+    "name_original_lang": "ar",
+    "entity_type": "kingdom",
+    "year_start": 1235,
+    "year_end": 1556,
+    "capital_name": "Tlemcen",
+    "capital_lat": 34.8828,
+    "capital_lon": -1.3167,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        -1.3167,
+        34.8828
+      ]
+    },
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Zayyanid Kingdom of Tlemcen was a Zenata Berber dynasty that ruled the central Maghreb (modern western Algeria). Tlemcen was a major centre of trans-Saharan trade and Islamic scholarship, but the kingdom was frequently caught between the larger Marinid (Morocco) and Hafsid (Tunisia) states, suffering repeated invasions from both sides. The Zayyanid period saw significant Jewish-Muslim coexistence in Tlemcen, with Jewish scholars contributing to the city's intellectual life. The kingdom's absorption by the Ottomans (1556) is part of the larger pattern of Ottoman expansion in the Maghreb, which modern Algerian nationalism interprets through varying lenses.",
+    "name_variants": [
+      {
+        "name": "Zayyanid Kingdom",
+        "lang": "en",
+        "context": "Standard English designation",
+        "period_start": 1235,
+        "period_end": 1556
+      },
+      {
+        "name": "Kingdom of Tlemcen",
+        "lang": "en",
+        "context": "Alternative English designation referring to the capital",
+        "period_start": 1235,
+        "period_end": 1556
+      },
+      {
+        "name": "بنو زيان",
+        "lang": "ar",
+        "context": "Arabic patronymic form, Banu Zayyan",
+        "period_start": 1235,
+        "period_end": 1556
+      },
+      {
+        "name": "ⵉⵣⵢⴰⵏⵉⵢⵏ",
+        "lang": "ber",
+        "context": "Berber (Amazigh) designation; the Zayyanids were Zenata Berbers",
+        "period_start": 1235,
+        "period_end": 1556
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1235,
+        "change_type": "formation",
+        "region": "Central Maghreb (western Algeria)",
+        "description": "Yaghmurasan ibn Zayyan, chief of the Banu Abd al-Wad Zenata Berbers, established the Zayyanid kingdom with Tlemcen as capital after the collapse of Almohad authority in the region.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 1337,
+        "change_type": "contraction",
+        "region": "Tlemcen",
+        "description": "The Marinid sultan Abu al-Hasan Ali captured Tlemcen after an extended siege, briefly annexing the Zayyanid kingdom. Marinid occupation lasted until 1348, when internal Marinid problems allowed Zayyanid restoration.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1556,
+        "change_type": "dissolution",
+        "region": "Tlemcen and central Maghreb",
+        "description": "The Ottoman regency of Algiers absorbed the remnants of the Zayyanid kingdom. The last Zayyanid ruler was deposed and Tlemcen became part of the Ottoman Empire's North African territories.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Marçais, G. Tlemcen (1950)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ibn Khaldun, Kitab al-Ibar (Book of Lessons), 14th century",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Abun-Nasr, J.M. A History of the Maghrib in the Islamic Period (1987)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "سلاجقه روم",
+    "name_original_lang": "fa",
+    "entity_type": "sultanate",
+    "year_start": 1077,
+    "year_end": 1307,
+    "capital_name": "Konya",
+    "capital_lat": 37.8746,
+    "capital_lon": 32.4932,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        32.4932,
+        37.8746
+      ]
+    },
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Sultanate of Rum (Rum = Rome/Roman, referring to former Roman/Byzantine territories) was a Seljuk successor state in Anatolia. The Turkification of Anatolia — the gradual displacement or assimilation of Greek, Armenian, and other Christian populations — is one of the most significant demographic transformations in Near Eastern history. This process was neither instantaneous nor uniformly violent; it involved settlement, intermarriage, conversion, and cultural absorption over centuries, alongside periodic massacres and forced displacement. The sultanate was also a centre of Sufi mysticism — Jalal al-Din Rumi (from whom the dynasty takes its modern fame) lived in Konya under Seljuk patronage. Greek and Turkish nationalist narratives present sharply different accounts of this period.",
+    "name_variants": [
+      {
+        "name": "Sultanate of Rum",
+        "lang": "en",
+        "context": "Standard English designation; 'Rum' refers to Rome/Roman/Byzantine lands",
+        "period_start": 1077,
+        "period_end": 1307
+      },
+      {
+        "name": "Sultanato di Rum",
+        "lang": "it",
+        "context": "Italian designation",
+        "period_start": 1077,
+        "period_end": 1307
+      },
+      {
+        "name": "سلطنت روم",
+        "lang": "fa",
+        "context": "Persian form used in official documents",
+        "period_start": 1077,
+        "period_end": 1307
+      },
+      {
+        "name": "Anadolu Selçuklu Devleti",
+        "lang": "tr",
+        "context": "Modern Turkish designation meaning 'Anatolian Seljuk State'",
+        "period_start": 1077,
+        "period_end": 1307
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1077,
+        "change_type": "formation",
+        "region": "Central Anatolia (Nicaea/Iznik)",
+        "description": "Suleyman ibn Qutalmish established an independent Seljuk state in Anatolia following the Turkic victory at the Battle of Manzikert (1071), which had opened Anatolia to Turkish settlement. Nicaea served as the first capital.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1097,
+        "change_type": "contraction",
+        "region": "Western Anatolia",
+        "description": "The First Crusade recaptured Nicaea (1097) for the Byzantine Empire. The Seljuk capital was moved to Konya (Iconium). The sultanate lost its western Anatolian territories.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1243,
+        "change_type": "contraction",
+        "region": "Eastern territories",
+        "description": "The Mongol victory at the Battle of Kose Dag reduced the Sultanate of Rum to a Mongol vassal state. The sultan became a puppet of the Mongol Ilkhanate, and the sultanate's effective sovereignty was lost.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1307,
+        "change_type": "dissolution",
+        "region": "Central Anatolia",
+        "description": "The last Seljuk sultan Mesud III was executed by the Mongols. The sultanate's territories fragmented into numerous Turkmen beyliks (principalities), one of which — the Ottoman beylik — would eventually unite Anatolia and create a world empire.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Cahen, C. Pre-Ottoman Turkey (1968)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ibn Bibi, El-Evamirü'l-Ala'iyye fi'l-Umuri'l-Ala'iyye (Acts of the Alaeddin), 13th century",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Peacock, A.C.S. and Yildiz, S.N. (eds.) The Seljuks of Anatolia: Court and Society in the Medieval Middle East (2013)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "خلافة قرطبة",
+    "name_original_lang": "ar",
+    "entity_type": "caliphate",
+    "year_start": 929,
+    "year_end": 1031,
+    "capital_name": "Cordoba",
+    "capital_lat": 37.8882,
+    "capital_lon": -4.7794,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        -4.7794,
+        37.8882
+      ]
+    },
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Caliphate of Cordoba represented the peak of Islamic civilization in Europe. Under Abd al-Rahman III and al-Hakam II, Cordoba was arguably the most advanced city in Europe: a centre of learning, tolerance (convivencia), and architectural achievement (the Great Mosque of Cordoba). However, the convivencia narrative can be romanticized — religious minorities (dhimmis) faced legal restrictions and periodic persecution. The Umayyad Emirate preceded the Caliphate (756-929) but this entry covers only the caliphal period. The sack of Santiago de Compostela by al-Mansur (997) and his destruction of the cathedral represent the darker side of Muslim-Christian relations in al-Andalus. Spanish and Arab nationalist historiographies frame this period very differently.",
+    "name_variants": [
+      {
+        "name": "Caliphate of Cordoba",
+        "lang": "en",
+        "context": "Standard English designation for the caliphal period (929-1031)",
+        "period_start": 929,
+        "period_end": 1031
+      },
+      {
+        "name": "Califfato di Cordova",
+        "lang": "it",
+        "context": "Italian designation",
+        "period_start": 929,
+        "period_end": 1031
+      },
+      {
+        "name": "Califato de Córdoba",
+        "lang": "es",
+        "context": "Spanish designation",
+        "period_start": 929,
+        "period_end": 1031
+      },
+      {
+        "name": "إمارة قرطبة",
+        "lang": "ar",
+        "context": "Arabic name for the preceding Emirate period (756-929); Imarat Qurtuba",
+        "period_start": 756,
+        "period_end": 929
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 929,
+        "change_type": "formation",
+        "region": "Al-Andalus (Iberian Peninsula)",
+        "description": "Abd al-Rahman III proclaimed himself Caliph (Amir al-Mu'minin), elevating the Umayyad Emirate of Cordoba to a caliphate. This was a direct challenge to the Abbasid and Fatimid caliphal claims. Cordoba became one of the largest and most cultured cities in the world.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 978,
+        "change_type": "expansion",
+        "region": "Northern Iberia",
+        "description": "Al-Mansur (Almanzor), the powerful hajib (chamberlain), launched devastating raids into Christian northern Spain, sacking Barcelona (985), Leon, and Santiago de Compostela (997). The caliphate reached its maximum territorial extent and military power under his effective dictatorship.",
+        "population_affected": 500000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1009,
+        "change_type": "contraction",
+        "region": "Al-Andalus",
+        "description": "The fitna (civil war) of al-Andalus began with the Berber revolt and sack of Cordoba. The Berber soldiers, Slavic palace guards, and Arab elites fought for control. The caliphate fragmented as provincial governors declared independence.",
+        "population_affected": 200000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1031,
+        "change_type": "dissolution",
+        "region": "Cordoba",
+        "description": "The last Umayyad caliph Hisham III was deposed and the caliphate formally abolished. Al-Andalus fragmented into dozens of small kingdoms (taifas), ending the political unity of Islamic Iberia.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Scales, P.C. The Fall of the Caliphate of Córdoba: Berbers and Andalusis in Conflict (1994)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "al-Maqqari, Nafh al-Tib min Ghusn al-Andalus al-Ratib (Breath of Perfume from the Green Branch of al-Andalus), 17th century",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Fierro, M. Abd al-Rahman III: The First Cordoban Caliph (2005)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "ملوك الطوائف",
+    "name_original_lang": "ar",
+    "entity_type": "kingdom",
+    "year_start": 1009,
+    "year_end": 1091,
+    "capital_name": "Seville",
+    "capital_lat": 37.3891,
+    "capital_lon": -5.9845,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        -5.9845,
+        37.3891
+      ]
+    },
+    "confidence_score": 0.55,
+    "status": "disputed",
+    "ethical_notes": "ETHICS: This is a GENERIC REPRESENTATIVE entry for the Taifa period, which actually comprised dozens of independent kingdoms. The Taifas illustrate the political fragmentation of al-Andalus after the fall of the Cordoba Caliphate. The Seville coordinates represent the most powerful taifa (the Abbadids), but other major taifas included Toledo, Zaragoza, Badajoz, Granada, Denia, and Valencia. The Taifa period saw both cultural flourishing (poetry, philosophy) and the exploitation of inter-Muslim rivalries by Christian kingdoms through the parias (tribute) system. The collapse of unified Muslim power enabled the Christian Reconquista to accelerate. The confidence score is low because this single entry cannot adequately represent dozens of distinct political entities.",
+    "name_variants": [
+      {
+        "name": "Taifa Kingdoms",
+        "lang": "en",
+        "context": "Standard English designation for the fractured post-caliphal kingdoms of al-Andalus",
+        "period_start": 1009,
+        "period_end": 1091
+      },
+      {
+        "name": "Reinos de Taifas",
+        "lang": "es",
+        "context": "Spanish designation",
+        "period_start": 1009,
+        "period_end": 1091
+      },
+      {
+        "name": "Regni delle Taife",
+        "lang": "it",
+        "context": "Italian designation",
+        "period_start": 1009,
+        "period_end": 1091
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1009,
+        "change_type": "formation",
+        "region": "Al-Andalus (Iberian Peninsula)",
+        "description": "The fitna (civil war) of Cordoba led to the fragmentation of the caliphate into numerous independent taifa kingdoms. The word 'taifa' (from Arabic ta'ifa, 'faction/party') describes the nature of these states: factional, ethnically divided (Arab, Berber, Slavic), and mutually hostile.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1085,
+        "change_type": "contraction",
+        "region": "Toledo",
+        "description": "Alfonso VI of Castile captured Toledo, the former Visigothic capital, from the taifa king al-Qadir. This was the most significant Christian conquest since the fall of the caliphate and alarmed the remaining taifa kings, who invited the Almoravids from North Africa to intervene.",
+        "population_affected": 40000,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1091,
+        "change_type": "dissolution",
+        "region": "Al-Andalus",
+        "description": "The Almoravid Empire, invited by the taifa kings to defend against Castile, instead annexed most of the taifa kingdoms. The Almoravid leader Yusuf ibn Tashfin accused the taifa kings of impiety and cooperation with Christians. This ended the first taifa period, though later taifa periods would recur.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Wasserstein, D.J. The Rise and Fall of the Party-Kings: Politics and Society in Islamic Spain 1002-1086 (1985)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Kennedy, H. Muslim Spain and Portugal: A Political History of al-Andalus (1996)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ibn Hayyan, al-Muqtabas (selections), 11th century",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "مملكة غرناطة",
+    "name_original_lang": "ar",
+    "entity_type": "kingdom",
+    "year_start": 1238,
+    "year_end": 1492,
+    "capital_name": "Granada",
+    "capital_lat": 37.1773,
+    "capital_lon": -3.5986,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        -3.5986,
+        37.1773
+      ]
+    },
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Nasrid Kingdom of Granada was the last Muslim state in Iberia, and its fall in 1492 to Ferdinand and Isabella marks the end of al-Andalus — a civilizational transformation with profound consequences. The Alhambra palace complex, the Nasrids' greatest architectural legacy, represents one of the finest achievements of Islamic art. The fall of Granada was followed by broken promises: the Treaty of Granada (1491) guaranteed Muslim rights, but within a decade forced conversions began, culminating in the forced conversion or expulsion of all Muslims (1502) and eventually the expulsion of the Moriscos (1609-1614). The Spanish Inquisition targeted converted Muslims (and Jews). This represents cultural erasure on a massive scale. Both Spanish and Arab/Muslim historiographies carry deep emotional investments in this narrative.",
+    "name_variants": [
+      {
+        "name": "Nasrid Kingdom of Granada",
+        "lang": "en",
+        "context": "Standard English designation specifying the ruling dynasty",
+        "period_start": 1238,
+        "period_end": 1492
+      },
+      {
+        "name": "Reino Nazarí de Granada",
+        "lang": "es",
+        "context": "Spanish designation",
+        "period_start": 1238,
+        "period_end": 1492
+      },
+      {
+        "name": "Regno Nasride di Granada",
+        "lang": "it",
+        "context": "Italian designation",
+        "period_start": 1238,
+        "period_end": 1492
+      },
+      {
+        "name": "بنو الأحمر",
+        "lang": "ar",
+        "context": "Arabic patronymic: Banu al-Ahmar (Sons of the Red One), the dynasty's tribal name",
+        "period_start": 1238,
+        "period_end": 1492
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1238,
+        "change_type": "formation",
+        "region": "Southeastern Iberia (modern Andalusia)",
+        "description": "Muhammad I ibn al-Ahmar established the Nasrid kingdom after the collapse of Almohad power. He secured Granada by becoming a vassal of Castile, even aiding Ferdinand III in the siege of Seville (1248) — a pragmatic but controversial alliance that ensured Nasrid survival at the cost of other Muslim states.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1340,
+        "change_type": "contraction",
+        "region": "Strait of Gibraltar region",
+        "description": "The Battle of Rio Salado ended the last major North African intervention in Iberia. The Nasrids lost Algeciras (1344) and were increasingly confined to the mountainous southeast of the peninsula.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1492,
+        "change_type": "dissolution",
+        "region": "Granada",
+        "description": "Sultan Muhammad XII (Boabdil) surrendered Granada to Ferdinand II of Aragon and Isabella I of Castile on 2 January 1492. The Treaty of Granada guaranteed Muslim religious rights, but these promises were systematically violated. Forced conversions, the Inquisition, and eventual expulsion followed, destroying the Muslim community of Iberia.",
+        "population_affected": 500000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Harvey, L.P. Islamic Spain 1250 to 1500 (1990)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ibn al-Khatib, al-Ihata fi Akhbar Gharnata (Comprehensive History of Granada), 14th century",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Fernández-Puertas, A. The Alhambra (2 vols., 1997)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "المملكة الحجازية الهاشمية",
+    "name_original_lang": "ar",
+    "entity_type": "kingdom",
+    "year_start": 1916,
+    "year_end": 1925,
+    "capital_name": "Mecca",
+    "capital_lat": 21.4225,
+    "capital_lon": 39.8262,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        39.8262,
+        21.4225
+      ]
+    },
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Hashemite Kingdom of Hejaz was established during the Arab Revolt (1916-1918), one of the most mythologized episodes of WWI, shaped by both Arab nationalist aspirations and British imperial manipulation. Sharif Hussein bin Ali proclaimed the revolt against Ottoman rule with British support, but the Sykes-Picot Agreement (1916) simultaneously divided the promised Arab territories between Britain and France — a betrayal that remains central to Arab political consciousness. T.E. Lawrence's ('Lawrence of Arabia') romanticized narrative has often overshadowed Arab agency in the revolt. The kingdom's conquest by Ibn Saud in 1925 created modern Saudi Arabia and marginalized the Hashemites, who were compensated with British-created kingdoms in Iraq and Transjordan. This entry touches on colonialism, broken promises, and the artificial creation of modern Middle Eastern states.",
+    "name_variants": [
+      {
+        "name": "Hashemite Kingdom of Hejaz",
+        "lang": "en",
+        "context": "Standard English designation",
+        "period_start": 1916,
+        "period_end": 1925
+      },
+      {
+        "name": "Kingdom of Hejaz",
+        "lang": "en",
+        "context": "Shortened English form",
+        "period_start": 1916,
+        "period_end": 1925
+      },
+      {
+        "name": "Regno Hashemita del Hegiaz",
+        "lang": "it",
+        "context": "Italian designation",
+        "period_start": 1916,
+        "period_end": 1925
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1916,
+        "change_type": "independence",
+        "region": "Hejaz (western Arabian Peninsula)",
+        "description": "Sharif Hussein bin Ali proclaimed the Arab Revolt against the Ottoman Empire on 10 June 1916. With British support (the Hussein-McMahon Correspondence promised Arab independence), the Hashemites established control over the Hejaz, including the holy cities of Mecca and Medina.",
+        "population_affected": 800000,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1924,
+        "change_type": "expansion",
+        "region": "Hejaz",
+        "description": "After the abolition of the Ottoman Caliphate by Turkey (March 1924), Hussein bin Ali proclaimed himself Caliph — a claim rejected by most of the Muslim world and which provoked Ibn Saud's invasion.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1925,
+        "change_type": "annexation",
+        "region": "Hejaz",
+        "description": "Abdulaziz ibn Saud conquered the Hejaz, entering Mecca in October 1924 and Medina in December 1925. Hussein abdicated and went into exile. The Hejaz was incorporated into what became the Kingdom of Saudi Arabia (1932). The Hashemite family was given the British-created kingdoms of Iraq and Transjordan as compensation.",
+        "population_affected": 800000,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Teitelbaum, J. The Rise and Fall of the Hashemite Kingdom of Arabia (2001)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Antonius, G. The Arab Awakening: The Story of the Arab National Movement (1938)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Hussein-McMahon Correspondence (1915-1916)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "𒆳𒆍𒀭𒊏𒆠",
+    "name_original_lang": "akk",
+    "entity_type": "empire",
+    "year_start": -626,
+    "year_end": -539,
+    "capital_name": "Babylon",
+    "capital_lat": 32.5363,
+    "capital_lon": 44.4209,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        44.4209,
+        32.5363
+      ]
+    },
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Neo-Babylonian Empire, also known as the Chaldean Empire, is most famously associated with Nebuchadnezzar II, who destroyed the Temple of Solomon in Jerusalem (586 BCE) and deported the Jewish population to Babylon (the 'Babylonian Captivity'). This event is foundational to Jewish historical consciousness and religious identity. The biblical narrative presents Babylon as a symbol of tyranny and exile; Babylonian sources present Nebuchadnezzar as a great builder and restorer. Both perspectives must be represented. The Ishtar Gate, the Hanging Gardens (whose existence is disputed), and the ziggurat Etemenanki (possible inspiration for the Tower of Babel) represent the empire's cultural achievements. The empire's fall to Cyrus the Great of Persia (539 BCE) is celebrated in both Jewish and Persian traditions as liberation.",
+    "name_variants": [
+      {
+        "name": "Neo-Babylonian Empire",
+        "lang": "en",
+        "context": "Standard English academic designation distinguishing from earlier Babylonian periods",
+        "period_start": -626,
+        "period_end": -539
+      },
+      {
+        "name": "Chaldean Empire",
+        "lang": "en",
+        "context": "Alternative designation referring to the Chaldean dynasty",
+        "period_start": -626,
+        "period_end": -539
+      },
+      {
+        "name": "Impero Neo-Babilonese",
+        "lang": "it",
+        "context": "Italian designation",
+        "period_start": -626,
+        "period_end": -539
+      },
+      {
+        "name": "الإمبراطورية البابلية الحديثة",
+        "lang": "ar",
+        "context": "Arabic designation",
+        "period_start": -626,
+        "period_end": -539
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -626,
+        "change_type": "formation",
+        "region": "Mesopotamia (southern Iraq)",
+        "description": "Nabopolassar, a Chaldean tribal chief, rebelled against the Assyrian Empire and established independent rule in Babylon. He allied with the Medes to destroy the Assyrian Empire.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": -612,
+        "change_type": "expansion",
+        "region": "Northern Mesopotamia (Assyria)",
+        "description": "The combined Babylonian-Median forces destroyed Nineveh, the Assyrian capital. The fall of the most powerful empire the ancient Near East had known was a watershed event. The Neo-Babylonian Empire inherited most of the Assyrian territories in Mesopotamia and the Levant.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": -586,
+        "change_type": "expansion",
+        "region": "Kingdom of Judah",
+        "description": "Nebuchadnezzar II destroyed Jerusalem and the First Temple (Temple of Solomon), deporting the Jewish elite to Babylon. This 'Babylonian Captivity' lasted until 539 BCE and profoundly shaped Judaism, including the compilation of much of the Hebrew Bible in its current form.",
+        "population_affected": 50000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": -539,
+        "change_type": "dissolution",
+        "region": "Babylon and entire empire",
+        "description": "Cyrus II (the Great) of Persia captured Babylon, allegedly without a battle (the 'Fall of Babylon'). The Cyrus Cylinder records Cyrus's claim to have liberated the Babylonians from their own king Nabonidus. The Jews were permitted to return to Jerusalem — an event celebrated in the Hebrew Bible.",
+        "population_affected": 1000000,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Beaulieu, P.-A. A History of Babylon 2200 BC - AD 75 (2018)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Nebuchadnezzar II, Wadi Brisa Inscription and other royal inscriptions",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Jursa, M. Aspects of the Economic History of Babylonia in the First Millennium BC (2010)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Cyrus Cylinder, c. 539 BCE (British Museum)",
+        "source_type": "archaeological"
+      }
+    ]
+  },
+  {
+    "name_original": "ዛግዌ",
+    "name_original_lang": "gez",
+    "entity_type": "dynasty",
+    "year_start": 900,
+    "year_end": 1270,
+    "capital_name": "Roha (Lalibela)",
+    "capital_lat": 12.0319,
+    "capital_lon": 39.0474,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        39.0474,
+        12.0319
+      ]
+    },
+    "confidence_score": 0.5,
+    "status": "uncertain",
+    "ethical_notes": "ETHICS: The Zagwe Dynasty ruled the Ethiopian highlands between the fall of Aksum and the rise of the Solomonic Dynasty. King Lalibela (r. c. 1181-1221) is credited with commissioning the rock-hewn churches of Lalibela, one of the greatest architectural achievements in Africa. The dynasty's exact dates are deeply uncertain — Ethiopian traditional chronology differs significantly from modern scholarly estimates. The Solomonic Dynasty, which overthrew the Zagwe, deliberately delegitimized them in official histories (the Kebra Nagast) by claiming they were usurpers who broke the line of descent from King Solomon. This dynastic propaganda has shaped Ethiopian historiography for centuries. Agaw/Agew ethnic identity of the Zagwe is sometimes downplayed in Amhara-centric national narratives. The confidence_score is low due to the severe lack of contemporary written sources.",
+    "name_variants": [
+      {
+        "name": "Zagwe Dynasty",
+        "lang": "en",
+        "context": "Standard English designation",
+        "period_start": 900,
+        "period_end": 1270
+      },
+      {
+        "name": "Dinastia Zagwe",
+        "lang": "it",
+        "context": "Italian designation",
+        "period_start": 900,
+        "period_end": 1270
+      },
+      {
+        "name": "ዛግዌ ሥርወ መንግሥት",
+        "lang": "am",
+        "context": "Amharic designation (Zagwe Sirwe Mengist)",
+        "period_start": 900,
+        "period_end": 1270
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 900,
+        "change_type": "formation",
+        "region": "Ethiopian Highlands (Lasta region)",
+        "description": "The Zagwe Dynasty emerged in the Lasta region of the Ethiopian Highlands after the decline of the Aksumite Empire. The transition from Aksum to Zagwe is poorly documented, and dates are highly uncertain. The Zagwe were of Agaw (Cushitic) ethnicity, distinct from the Semitic-speaking Aksumite elite.",
+        "population_affected": null,
+        "confidence_score": 0.35
+      },
+      {
+        "year": 1181,
+        "change_type": "expansion",
+        "region": "Lasta (Roha/Lalibela)",
+        "description": "King Lalibela (Gebre Meskel) commissioned the construction of the famous rock-hewn churches at Roha (later renamed Lalibela in his honour). The churches, carved from solid rock, represent a 'New Jerusalem' and are among the most remarkable architectural achievements in world history. UNESCO World Heritage Site since 1978.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1270,
+        "change_type": "dissolution",
+        "region": "Ethiopian Highlands",
+        "description": "Yekuno Amlak overthrew the last Zagwe king and established the Solomonic Dynasty, claiming descent from King Solomon and the Queen of Sheba. The Zagwe were systematically delegitimized in subsequent Solomonic historiography, particularly the Kebra Nagast.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Phillipson, D.W. Foundations of an African Civilisation: Aksum and the Northern Horn 1000 BC - AD 1300 (2012)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Taddesse Tamrat, Church and State in Ethiopia 1270-1527 (1972)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Kebra Nagast (Glory of Kings), 14th century compilation",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "الخلافة الراشدة",
+    "name_original_lang": "ar",
+    "entity_type": "caliphate",
+    "year_start": 632,
+    "year_end": 661,
+    "capital_name": "Medina",
+    "capital_lat": 24.4672,
+    "capital_lon": 39.6024,
+    "boundary_geojson": {
+      "type": "Point",
+      "coordinates": [
+        39.6024,
+        24.4672
+      ]
+    },
+    "confidence_score": 0.65,
+    "status": "disputed",
+    "ethical_notes": "ETHICS: The Rashidun ('Rightly Guided') Caliphate represents one of the most religiously sensitive entities in this database. For Sunni Muslims, the four Rashidun caliphs (Abu Bakr, Umar, Uthman, Ali) represent the ideal Islamic governance. For Shi'a Muslims, only Ali was the legitimate successor to Muhammad; the first three caliphs are considered usurpers. This fundamental disagreement has shaped Islamic history for 1,400 years and continues to drive sectarian conflict. The Rashidun conquests (Ridda wars, conquest of Persia, Egypt, the Levant) were among the most rapid and consequential military campaigns in world history, permanently transforming the religious and cultural landscape of the Near East and North Africa. The database must present both Sunni and Shi'a perspectives on legitimacy without privileging either. The status is 'disputed' because Sunni and Shi'a traditions disagree fundamentally about the nature and legitimacy of this state.",
+    "name_variants": [
+      {
+        "name": "Rashidun Caliphate",
+        "lang": "en",
+        "context": "Standard English designation; 'Rashidun' means 'Rightly Guided', a Sunni designation",
+        "period_start": 632,
+        "period_end": 661
+      },
+      {
+        "name": "Califfato dei Rashidun",
+        "lang": "it",
+        "context": "Italian designation",
+        "period_start": 632,
+        "period_end": 661
+      },
+      {
+        "name": "الخلفاء الراشدون",
+        "lang": "ar",
+        "context": "Arabic form: al-Khulafa al-Rashidun (the Rightly Guided Caliphs), a Sunni designation",
+        "period_start": 632,
+        "period_end": 661
+      },
+      {
+        "name": "خلافت راشدین",
+        "lang": "fa",
+        "context": "Persian form of the name",
+        "period_start": 632,
+        "period_end": 661
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 632,
+        "change_type": "formation",
+        "region": "Arabian Peninsula (Medina)",
+        "description": "Following the death of the Prophet Muhammad, Abu Bakr al-Siddiq was selected as the first caliph (khalifa, 'successor'). This selection is accepted by Sunni Muslims but rejected by Shi'a Muslims, who believe Ali ibn Abi Talib was the designated successor. Abu Bakr fought the Ridda Wars (Wars of Apostasy) to reunify the Arabian Peninsula.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 636,
+        "change_type": "expansion",
+        "region": "Syria, Palestine, and Mesopotamia",
+        "description": "Under Caliph Umar ibn al-Khattab, Muslim armies defeated the Byzantine Empire at the Battle of Yarmouk (636) and the Sassanid Empire at the Battle of al-Qadisiyyah (636-637). Jerusalem was captured in 637. The speed of these conquests astonished contemporaries and remains a subject of scholarly debate regarding the roles of military prowess, religious zeal, and Byzantine/Sassanid weakness.",
+        "population_affected": 5000000,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 642,
+        "change_type": "expansion",
+        "region": "Egypt and Persia",
+        "description": "Amr ibn al-As conquered Egypt (641-642), ending Byzantine rule. Simultaneously, Muslim armies completed the conquest of the Sassanid Empire. The conversion of these vast populations to Islam occurred gradually over centuries, not through immediate forced conversion, though the conquered peoples' status as dhimmis involved legal subordination.",
+        "population_affected": 10000000,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 656,
+        "change_type": "contraction",
+        "region": "Internal fragmentation (First Fitna)",
+        "description": "The assassination of Caliph Uthman ibn Affan (656) triggered the First Fitna (Islamic civil war). Ali ibn Abi Talib became the fourth caliph but faced rebellion from Mu'awiya ibn Abi Sufyan, governor of Syria. The battles of the Camel (656) and Siffin (657) divided the Muslim community permanently. Ali moved the capital to Kufa.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 661,
+        "change_type": "dissolution",
+        "region": "Kufa (Iraq)",
+        "description": "Ali ibn Abi Talib was assassinated by a Kharijite in Kufa. Mu'awiya established the Umayyad Caliphate in Damascus, transforming the caliphate from an elected/selected institution to a hereditary dynasty. For Shi'a Muslims, this marks the usurpation of Ali's legitimate authority. For Sunni Muslims, it marks the end of the ideal caliphal period.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Donner, F.M. The Early Islamic Conquests (1981)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "al-Tabari, Tarikh al-Rusul wa-l-Muluk (History of the Prophets and Kings), 10th century",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Madelung, W. The Succession to Muhammad: A Study of the Early Caliphate (1997)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Hinds, M. 'The Siffin Arbitration Agreement' in Journal of Semitic Studies 17/1 (1972)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "Regnum Cypri",
+    "name_original_lang": "la",
+    "entity_type": "kingdom",
+    "year_start": 1192,
+    "year_end": 1489,
+    "capital_name": "Nicosia",
+    "capital_lat": 35.1856,
+    "capital_lon": 33.3823,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome ufficiale era in latino; la corte usava il francese. La popolazione locale era greco-cipriota e parlava greco. Il nome greco dell'isola e' Κυπρος (Kypros). ETHICS-002: la conquista dell'isola da parte di Riccardo Cuor di Leone nel 1191 e la successiva vendita a Guido di Lusignano rappresentano un atto di colonialismo feudale. La Chiesa ortodossa cipriota fu subordinata alla Chiesa latina. I contadini greci (parici) furono ridotti a una condizione semi-servile sotto i signori franchi. ETHICS-003: il regno dei Lusignano fu anche un rifugio per i crociati in fuga dal Levante dopo il 1291 e un importante centro commerciale nel Mediterraneo orientale.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Cyprus",
+        "lang": "en",
+        "period_start": 1192,
+        "period_end": 1489,
+        "context": "English scholarly name",
+        "source": "Edbury, P. The Kingdom of Cyprus and the Crusades (1991)"
+      },
+      {
+        "name": "Regno di Cipro",
+        "lang": "it",
+        "period_start": 1192,
+        "period_end": 1489,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      },
+      {
+        "name": "Royaume de Chypre",
+        "lang": "fr",
+        "period_start": 1192,
+        "period_end": 1489,
+        "context": "nome in antico francese, lingua della corte Lusignano",
+        "source": "Mas Latrie, L. Histoire de l'ile de Chypre (1852-61)"
+      },
+      {
+        "name": "Βασιλειο της Κυπρου",
+        "lang": "el",
+        "period_start": 1192,
+        "period_end": 1489,
+        "context": "nome in greco, lingua della popolazione locale",
+        "source": "Leontios Machairas, Recital Concerning the Sweet Land of Cyprus"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1191,
+        "region": "Cipro",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Riccardo I d'Inghilterra conquista Cipro dall'usurpatore bizantino Isacco Comneno durante la Terza Crociata. L'isola viene venduta ai Cavalieri Templari e poi a Guido di Lusignano.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1192,
+        "region": "Cipro",
+        "change_type": "INDEPENDENCE",
+        "description": "Guido di Lusignano, ex re di Gerusalemme, acquista Cipro e fonda la dinastia Lusignano. Introduzione del sistema feudale franco su una popolazione greco-ortodossa.",
+        "population_affected": 200000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1489,
+        "region": "Cipro",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Caterina Cornaro, ultima regina Lusignano (di origine veneziana), cede Cipro alla Repubblica di Venezia. Fine del regno indipendente. L'isola restera' veneziana fino alla conquista ottomana del 1570-71.",
+        "population_affected": 150000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Edbury, P. The Kingdom of Cyprus and the Crusades, 1191-1374 (1991)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Leontios Machairas, Recital Concerning the Sweet Land of Cyprus (XV sec.)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Mas Latrie, L. Histoire de l'ile de Chypre sous le regne des princes de la maison de Lusignan (1852-61)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "آل بويه",
+    "name_original_lang": "ar",
+    "entity_type": "dynasty",
+    "year_start": 934,
+    "year_end": 1062,
+    "capital_name": "Shiraz / Baghdad",
+    "capital_lat": 29.5918,
+    "capital_lon": 52.5837,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome arabo e' Al Buyah (آل بويه), talvolta traslitterato Buwayhid. Il nome persiano e' آل بویه (Al-e Buye). La dinastia era di origine persiana daylamita (regione del Daylam, sul Caspio meridionale). ETHICS-002: i Buyidi, sciiti zaiditi, controllavano il califfo abbaside sunnita come 'protettori', creando la situazione paradossale di un califfato sunnita dominato da una dinastia sciita. Questo e' fondamentale per comprendere la complessita' settaria del periodo. ETHICS-003: sotto i Buyidi fiorirono le scienze e la filosofia islamica. Il loro mecenatismo permise il lavoro di studiosi come al-Biruni e Ibn Sina (Avicenna).",
+    "name_variants": [
+      {
+        "name": "Buyid Dynasty",
+        "lang": "en",
+        "period_start": 934,
+        "period_end": 1062,
+        "context": "English scholarly name; also spelled 'Buwayhid'",
+        "source": "Donohue, J.J. The Buwayhid Dynasty in Iraq (2003)"
+      },
+      {
+        "name": "Buwayhid Emirate",
+        "lang": "en",
+        "period_start": 934,
+        "period_end": 1062,
+        "context": "alternative English transliteration",
+        "source": "Kabir, M. The Buwayhid Dynasty of Baghdad (1964)"
+      },
+      {
+        "name": "Dinastia Buide",
+        "lang": "it",
+        "period_start": 934,
+        "period_end": 1062,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 934,
+        "region": "Fars (Iran meridionale)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "I tre fratelli buyidi (Ali, Hasan, Ahmad) — soldati daylamiti — conquistano progressivamente il Fars, il Jibal e il Khuzestan, sfruttando la frammentazione del califfato abbaside.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 945,
+        "region": "Baghdad",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ahmad ibn Buya entra a Baghdad e assume il titolo di Mu'izz al-Dawla. Il califfo abbaside al-Mustakfi e' ridotto a figura cerimoniale. Una dinastia sciita controlla il cuore del califfato sunnita — fatto senza precedenti.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1055,
+        "region": "Baghdad e Iraq",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Il sultano selgiuchide Toghrul Beg conquista Baghdad e pone fine al dominio buyide in Iraq. L'ultimo buyide di Fars cade nel 1062. I Selgiuchidi, turchi sunniti, restaurano l'autorita' sunnita a Baghdad.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Donohue, J.J. The Buwayhid Dynasty in Iraq, 334H./945 to 403H./1012 (2003)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Kabir, M. The Buwayhid Dynasty of Baghdad, 334/946-447/1055 (1964)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Miskawayh, Tajarib al-Umam (X-XI sec.)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "بنو رسول",
+    "name_original_lang": "ar",
+    "entity_type": "sultanate",
+    "year_start": 1229,
+    "year_end": 1454,
+    "capital_name": "Ta'izz",
+    "capital_lat": 13.5789,
+    "capital_lon": 44.0219,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome e' in arabo. I Rasulidi erano di possibile origine turcomanna (Oghuz), ma la dinastia si era completamente arabizzata. Il nome Rasul ('messaggero') si riferiva al capostipite che era stato ambasciatore ayyubide. ETHICS-002: il sultanato rasulide fu uno dei piu' prosperi e culturalmente vivaci della storia yemenita. Ta'izz divenne un importante centro di sapere islamico. Il sultano al-Ashraf Umar II (r. 1295-96) scrisse un trattato di agricoltura (al-Mu'tamad). ETHICS-003: la storia dello Yemen e' spesso marginalizzata nella storiografia del Medio Oriente. I Rasulidi dimostrano la complessita' e l'importanza della storia yemenita autonoma.",
+    "name_variants": [
+      {
+        "name": "Rasulid Dynasty",
+        "lang": "en",
+        "period_start": 1229,
+        "period_end": 1454,
+        "context": "English scholarly name",
+        "source": "Smith, G.R. The Ayyubids and Early Rasulids in the Yemen (1978)"
+      },
+      {
+        "name": "Dinastia Rasulide",
+        "lang": "it",
+        "period_start": 1229,
+        "period_end": 1454,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia dell'Islam"
+      },
+      {
+        "name": "الدولة الرسولية",
+        "lang": "ar",
+        "period_start": 1229,
+        "period_end": 1454,
+        "context": "nome arabo formale: 'lo stato rasulide'",
+        "source": "al-Khazraji, al-Uqud al-lu'lu'iyya"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1229,
+        "region": "Yemen",
+        "change_type": "INDEPENDENCE",
+        "description": "Umar ibn Rasul, governatore ayyubide dello Yemen, si dichiara indipendente dopo la morte dell'ultimo sultano ayyubide al-Mas'ud Yusuf. Fondazione del sultanato rasulide con capitale a Ta'izz.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1250,
+        "region": "Yemen meridionale e Hadramawt",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Espansione massima del sultanato sotto al-Muzaffar Yusuf I. Controllo di Aden, principale porto commerciale dell'Oceano Indiano occidentale, e delle rotte del commercio delle spezie.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1454,
+        "region": "Yemen",
+        "change_type": "DISSOLUTION",
+        "description": "I Tahiridi conquistano Ta'izz e pongono fine alla dinastia rasulide. Due secoli di relativa stabilita' e prosperita' yemenita giungono al termine.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Smith, G.R. The Ayyubids and Early Rasulids in the Yemen (567-694/1173-1295) (1978)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "al-Khazraji, al-Uqud al-lu'lu'iyya fi tarikh al-dawla al-rasuliyya (XV sec.)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Vallet, E. L'Arabie marchande: Etat et commerce sous les sultans rasulides du Yemen (2010)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "بنو زيري",
+    "name_original_lang": "ar",
+    "entity_type": "dynasty",
+    "year_start": 972,
+    "year_end": 1152,
+    "capital_name": "al-Mansuriyya / Mahdia",
+    "capital_lat": 36.36,
+    "capital_lon": 10.17,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome e' in arabo. Gli Ziridi erano Berberi Sanhaja. Il loro capostipite Ziri ibn Manad era stato un fedele comandante militare dei Fatimidi. ETHICS-002: la rottura degli Ziridi con i Fatimidi (1048) e la conseguente invasione dei Banu Hilal — tribu' arabe nomadi inviate dai Fatimidi come rappresaglia — e' uno degli eventi piu' discussi della storia nordafricana. Ibn Khaldun la definisce una devastazione comparabile a un'invasione di cavallette. La storiografia moderna dibatte se la migrazione hilaliana abbia realmente causato la desertificazione e il declino urbano tradizionalmente attribuitigli. ETHICS-003: la rotta verso il sunnismo degli Ziridi e il riconoscimento del califfato abbaside rappresentano una complessa dinamica di identita' religiosa e politica berbera.",
+    "name_variants": [
+      {
+        "name": "Zirid Dynasty",
+        "lang": "en",
+        "period_start": 972,
+        "period_end": 1152,
+        "context": "English scholarly name",
+        "source": "Idris, H.R. La Berberie orientale sous les Zirides (1962)"
+      },
+      {
+        "name": "Dinastia Ziride",
+        "lang": "it",
+        "period_start": 972,
+        "period_end": 1152,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      },
+      {
+        "name": "ⵉⵣⵉⵔⵉⵢⴻⵏ",
+        "lang": "ber",
+        "period_start": 972,
+        "period_end": 1152,
+        "context": "nome berbero; gli Ziridi erano Sanhaja berberi",
+        "source": "Idris, H.R. La Berberie orientale sous les Zirides (1962)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 972,
+        "region": "Ifriqiya (Tunisia)",
+        "change_type": "INDEPENDENCE",
+        "description": "Quando i Fatimidi trasferiscono la capitale al Cairo, Buluggin ibn Ziri viene nominato governatore dell'Ifriqiya. Inizio dell'autonomia de facto degli Ziridi.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1048,
+        "region": "Ifriqiya",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "L'emiro ziride al-Mu'izz ibn Badis rompe con i Fatimidi, abbandona lo sciismo e riconosce il califfato abbaside sunnita. I Fatimidi rispondono inviando le tribu' arabe dei Banu Hilal e Banu Sulaym verso l'Ifriqiya.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1152,
+        "region": "Mahdia",
+        "change_type": "DISSOLUTION",
+        "description": "I Normanni di Sicilia sotto Ruggero II conquistano Mahdia, ultima capitale ziride. Fine della dinastia. La costa tunisina subisce un breve periodo di dominio normanno prima della conquista almohade.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Idris, H.R. La Berberie orientale sous les Zirides, Xe-XIIe siecles (1962)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ibn Khaldun, Kitab al-Ibar (XIV sec.)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Brett, M. The Rise of the Fatimids (2001)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "الإمبراطورية البابلية الحديثة",
+    "name_original_lang": "akk",
+    "entity_type": "empire",
+    "year_start": -626,
+    "year_end": -539,
+    "capital_name": "Babylon",
+    "capital_lat": 32.5363,
+    "capital_lon": 44.4209,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: la lingua della corte era l'accadico-babilonese (cuneiforme). Il nome 'Neo-Babilonese' e' una convenzione storiografica moderna; i babilonesi non si definivano cosi'. In accadico il territorio era Babili / mat Akkadi. ETHICS-002: Nabucodonosor II (Nebuchadnezzar) e' una figura la cui rappresentazione varia radicalmente tra le fonti babilonesi (re costruttore e restauratore dei templi) e la tradizione biblica (distruttore di Gerusalemme e del Tempio, deportatore degli ebrei). Entrambe le prospettive devono essere documentate. La distruzione del Tempio di Gerusalemme (-586) e l'esilio babilonese sono eventi di enorme conseguenza per la storia delle religioni. ETHICS-003: il codice di Nabonido e le Cronache Babilonesi sono fonti primarie fondamentali per questo periodo.",
+    "name_variants": [
+      {
+        "name": "Neo-Babylonian Empire",
+        "lang": "en",
+        "period_start": -626,
+        "period_end": -539,
+        "context": "English scholarly convention; also called Chaldean Empire",
+        "source": "Beaulieu, P.-A. A History of Babylon (2018)"
+      },
+      {
+        "name": "Impero Neo-Babilonese",
+        "lang": "it",
+        "period_start": -626,
+        "period_end": -539,
+        "context": "denominazione italiana; anche 'Impero Caldeo'",
+        "source": "Enciclopedia Treccani"
+      },
+      {
+        "name": "Chaldean Empire",
+        "lang": "en",
+        "period_start": -626,
+        "period_end": -539,
+        "context": "older English designation, from the Chaldean tribal origin of the dynasty",
+        "source": "Wiseman, D.J. Nebuchadnezzar and Babylon (1985)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -626,
+        "region": "Babilonia (Iraq meridionale)",
+        "change_type": "INDEPENDENCE",
+        "description": "Nabopolassar, capo caldeo, si ribella contro il dominio assiro e fonda la dinastia neo-babilonese. L'alleanza con i Medi porta alla distruzione dell'Assiria.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": -612,
+        "region": "Ninive e Assiria",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Alleanza medo-babilonese distrugge Ninive, capitale assira. L'Impero Assiro, uno dei piu' potenti della storia antica, viene annientato. Nabopolassar e Ciassare si spartiscono i territori assiri.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": -586,
+        "region": "Gerusalemme e Giudea",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Nabucodonosor II distrugge Gerusalemme e il Primo Tempio. Deportazione della popolazione giudaica a Babilonia (Esilio babilonese). Evento fondativo per il giudaismo rabbinico e la tradizione biblica.",
+        "population_affected": 25000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": -539,
+        "region": "Babilonia",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ciro il Grande di Persia conquista Babilonia. Il Cilindro di Ciro registra l'evento come una liberazione. I giudei vengono autorizzati a tornare a Gerusalemme. Fine dell'impero neo-babilonese.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Beaulieu, P.-A. A History of Babylon, 2200 BC-AD 75 (2018)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Wiseman, D.J. Nebuchadnezzar and Babylon, The Schweich Lectures (1985)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Cronache Babilonesi (British Museum)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Cilindro di Ciro (British Museum, c. -539)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "𐎜𐎂𐎗𐎚 / Ugarit",
+    "name_original_lang": "uga",
+    "entity_type": "city-state",
+    "year_start": -1450,
+    "year_end": -1185,
+    "capital_name": "Ugarit (Ras Shamra)",
+    "capital_lat": 35.6006,
+    "capital_lon": 35.7847,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome e' in ugaritico, scritto in un alfabeto cuneiforme unico scoperto nel 1929 a Ras Shamra (Siria). L'ugaritico e' una lingua semitica nordoccidentale strettamente imparentata con l'ebraico e il fenicio. ETHICS-002: Ugarit e' di importanza capitale per la storia delle religioni: i testi mitologici ugaritici (Ciclo di Baal, Epopea di Keret) rivelano il contesto religioso cananeo da cui emerse la religione israelitica. Questo dato e' fondamentale e non deve essere edulcorato per sensibilita' religiose contemporanee. ETHICS-003: la distruzione di Ugarit intorno al -1185 e' uno degli episodi meglio documentati del Collasso dell'Eta' del Bronzo. L'ultima lettera del re di Ugarit (RS 20.238) e' un documento straordinario di una civilta' sul punto dell'annientamento.",
+    "name_variants": [
+      {
+        "name": "Ugarit",
+        "lang": "en",
+        "period_start": -1450,
+        "period_end": -1185,
+        "context": "English scholarly name from the ancient name",
+        "source": "Pardee, D. Ritual and Cult at Ugarit (2002)"
+      },
+      {
+        "name": "Ras Shamra",
+        "lang": "ar",
+        "period_start": -1450,
+        "period_end": -1185,
+        "context": "nome arabo moderno del sito archeologico: 'Capo del Finocchio'",
+        "source": "Schaeffer, C. Ugaritica (1939-78)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -1450,
+        "region": "Costa siriana settentrionale",
+        "change_type": "INDEPENDENCE",
+        "description": "Ugarit emerge come potente citta'-stato commerciale sotto vassallaggio egiziano, poi ittita. Le tavolette di Amarna testimoniano la corrispondenza diplomatica con il faraone. Periodo di massimo splendore della citta'.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": -1340,
+        "region": "Costa siriana",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Dopo la Battaglia di Qadesh (-1274) e il trattato egizio-ittita, Ugarit resta nella sfera ittita. Periodo di grande attivita' letteraria e commerciale. Produzione dei testi mitologici e rituali in alfabeto ugaritico.",
+        "population_affected": 10000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": -1185,
+        "region": "Ugarit",
+        "change_type": "DISSOLUTION",
+        "description": "Distruzione di Ugarit nel quadro del Collasso dell'Eta' del Bronzo. L'ultima lettera nota (RS 20.238), scritta dal re a un alto funzionario, descrive navi nemiche e fuoco nel territorio. La citta' non fu mai piu' rioccupata.",
+        "population_affected": 10000,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Pardee, D. Ritual and Cult at Ugarit, Writings from the Ancient World (2002)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Yon, M. The City of Ugarit at Tell Ras Shamra (2006)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Singer, I. 'A Political History of Ugarit', in Handbook of Ugaritic Studies (1999)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "RS 20.238 — ultima lettera di Ugarit (Musee du Louvre)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "אדום / 𐤀𐤃𐤌",
+    "name_original_lang": "xdm",
+    "entity_type": "kingdom",
+    "year_start": -1200,
+    "year_end": -125,
+    "capital_name": "Bozrah (Busayra)",
+    "capital_lat": 30.7333,
+    "capital_lon": 35.6167,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome e' in edomita (lingua semitica nordoccidentale estinta). La principale fonte scritta su Edom e' la Bibbia ebraica, che presenta gli Edomiti come discendenti di Esau e spesso in conflitto con Israele. Le fonti edomite indipendenti sono rarissime. ETHICS-002: la conquista del territorio edomita da parte dei Nabatei e la successiva 'conversione forzata' degli Idumei (discendenti degli Edomiti) da parte di Giovanni Ircano I (-125) sono eventi eticamente significativi. Erode il Grande era di origine idumea — un fatto che influenzo' la sua ricezione nella tradizione ebraica. ETHICS-003: la storia edomita e' conosciuta quasi esclusivamente da fonti esterne (bibliche, assire); questo bias documentario deve essere esplicitato.",
+    "name_variants": [
+      {
+        "name": "Edom",
+        "lang": "en",
+        "period_start": -1200,
+        "period_end": -125,
+        "context": "English scholarly name from Hebrew/Edomite",
+        "source": "Bienkowski, P. (ed.) Early Edom and Moab (1992)"
+      },
+      {
+        "name": "Udumu",
+        "lang": "akk",
+        "period_start": -900,
+        "period_end": -600,
+        "context": "nome accadico nelle fonti assire",
+        "source": "Annali di Tiglath-Pileser III"
+      },
+      {
+        "name": "Idumea / Ιδουμαια",
+        "lang": "grc",
+        "period_start": -400,
+        "period_end": -125,
+        "context": "nome greco; indica il territorio edomita dopo la migrazione nel Negev",
+        "source": "Giuseppe Flavio, Antichita' giudaiche"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -1200,
+        "region": "Altopiano a sud del Mar Morto",
+        "change_type": "INDEPENDENCE",
+        "description": "Emergere del regno edomita nell'Eta' del Ferro I. Le fonti archeologiche (scavi di Busayra/Bozrah) suggeriscono un'organizzazione statale dal XII-XI secolo a.C. Le fonti bibliche riferiscono re edomiti gia' prima dei re d'Israele (Genesi 36).",
+        "population_affected": null,
+        "confidence_score": 0.45
+      },
+      {
+        "year": -735,
+        "region": "Edom",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Vassallaggio assiro sotto Tiglath-Pileser III. Il re edomita Qaus-Malaka paga tributo. Edom appare regolarmente nelle fonti assire come stato vassallo ma autonomo.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": -125,
+        "region": "Idumea (Negev e Giudea meridionale)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Giovanni Ircano I (Asmoneo) conquista l'Idumea e impone la conversione al giudaismo agli Idumei. Primo caso documentato di conversione forzata nella tradizione giudaica. Gli Idumei saranno successivamente integrati nella societa' giudaica (dinastia erodiana).",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Bienkowski, P. (ed.) Early Edom and Moab: The Beginning of the Iron Age in Southern Jordan (1992)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Bartlett, J.R. Edom and the Edomites (1989)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Giuseppe Flavio, Antichita' Giudaiche, XIII.9.1",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "المملكة الهاشمية الحجازية",
+    "name_original_lang": "ar",
+    "entity_type": "kingdom",
+    "year_start": 1916,
+    "year_end": 1925,
+    "capital_name": "Mecca",
+    "capital_lat": 21.4225,
+    "capital_lon": 39.8262,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome e' in arabo. Il Regno dell'Hejaz nacque dalla Grande Rivolta Araba del 1916 contro l'Impero Ottomano, orchestrata con il sostegno britannico (T.E. Lawrence, McMahon-Hussein Correspondence). ETHICS-002: la promessa britannica di un grande stato arabo indipendente (corrispondenza McMahon-Hussein 1915-16) fu tradita dalla contemporanea negoziazione degli accordi Sykes-Picot (1916) e dalla Dichiarazione Balfour (1917). Questo triplo gioco britannico e' alla radice di molti conflitti mediorientali contemporanei. ETHICS-003: la conquista saudita dell'Hejaz (1924-25) estinse l'ultimo stato hashemita nella penisola arabica. La distruzione di siti storici a Mecca e Medina da parte dei Sauditi wahhabiti e' un tema eticamente sensibile.",
+    "name_variants": [
+      {
+        "name": "Hashemite Kingdom of Hejaz",
+        "lang": "en",
+        "period_start": 1916,
+        "period_end": 1925,
+        "context": "English scholarly name",
+        "source": "Teitelbaum, J. The Rise and Fall of the Hashimite Kingdom of Arabia (2001)"
+      },
+      {
+        "name": "Regno Hashemita dell'Hejaz",
+        "lang": "it",
+        "period_start": 1916,
+        "period_end": 1925,
+        "context": "denominazione italiana",
+        "source": "Ferraris, L.V. Manuale della politica estera italiana (1996)"
+      },
+      {
+        "name": "مملكة الحجاز",
+        "lang": "ar",
+        "period_start": 1916,
+        "period_end": 1925,
+        "context": "nome arabo abbreviato",
+        "source": "al-Rasheed, M. A History of Saudi Arabia (2002)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1916,
+        "region": "Hejaz (Arabia occidentale)",
+        "change_type": "INDEPENDENCE",
+        "description": "Lo Sharif Hussein ibn Ali di Mecca proclama la Grande Rivolta Araba contro l'Impero Ottomano (10 giugno 1916). Supporto britannico attraverso T.E. Lawrence e aiuti militari. L'Hejaz diventa formalmente indipendente.",
+        "population_affected": 800000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1924,
+        "region": "Hejaz",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Abdulaziz ibn Saud (Ibn Saud) invade l'Hejaz con le forze wahhabite Ikhwan. Hussayn abdica in favore del figlio Ali. Mecca cade il 13 ottobre 1924.",
+        "population_affected": 800000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1925,
+        "region": "Medina e Jeddah",
+        "change_type": "DISSOLUTION",
+        "description": "Caduta di Medina e Jeddah. Re Ali lascia l'Hejaz. Ibn Saud proclama il Regno dell'Hejaz e del Najd (poi Arabia Saudita, 1932). Gli Hashemiti sopravvivono come sovrani in Iraq e Transgiordania.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Teitelbaum, J. The Rise and Fall of the Hashimite Kingdom of Arabia (2001)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Wilson, M.C. King Abdullah, Britain and the Making of Jordan (1987)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "McMahon-Hussein Correspondence (1915-16)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "إمارة شرق الأردن",
+    "name_original_lang": "ar",
+    "entity_type": "colony",
+    "year_start": 1921,
+    "year_end": 1946,
+    "capital_name": "Amman",
+    "capital_lat": 31.9454,
+    "capital_lon": 35.9284,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome e' in arabo. L'Emirato di Transgiordania fu creato come entita' separata dal Mandato Britannico della Palestina nel 1921, con Abdullah ibn Hussein (figlio dello Sharif Hussein) come emiro sotto supervisione britannica. ETHICS-002: la separazione della Transgiordania dalla Palestina fu una decisione coloniale britannica motivata da calcoli geopolitici (compensare gli Hashemiti per la perdita della Siria a favore della Francia). I confini furono tracciati arbitrariamente senza consultare le popolazioni locali — beduini, circassi, armeni, palestinesi. ETHICS-003: l'entity_type 'colony' riflette la realta' del controllo britannico, nonostante la formale autonomia interna dell'emiro. La Legione Araba era comandata da ufficiali britannici (Glubb Pasha).",
+    "name_variants": [
+      {
+        "name": "Emirate of Transjordan",
+        "lang": "en",
+        "period_start": 1921,
+        "period_end": 1946,
+        "context": "English administrative/scholarly name",
+        "source": "Wilson, M.C. King Abdullah, Britain and the Making of Jordan (1987)"
+      },
+      {
+        "name": "Emirato di Transgiordania",
+        "lang": "it",
+        "period_start": 1921,
+        "period_end": 1946,
+        "context": "denominazione italiana",
+        "source": "Ferraris, L.V. Manuale della politica estera italiana (1996)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1921,
+        "region": "Transgiordania",
+        "change_type": "COLONIZATION",
+        "description": "Winston Churchill, alla Conferenza del Cairo (marzo 1921), crea l'Emirato di Transgiordania come entita' separata dalla Palestina mandataria. Abdullah ibn Hussein, in marcia verso la Siria con un esercito per vendicare l'espulsione del fratello Faysal, viene convinto a fermarsi ad Amman e accettare l'emirato.",
+        "population_affected": 225000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1946,
+        "region": "Transgiordania",
+        "change_type": "INDEPENDENCE",
+        "description": "Indipendenza formale e proclamazione del Regno Hashemita di Transgiordania (25 maggio 1946). Il trattato anglo-transgiordano mantiene una forte influenza britannica. La Legione Araba resta sotto comando britannico.",
+        "population_affected": 400000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Wilson, M.C. King Abdullah, Britain and the Making of Jordan (1987)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Robins, P. A History of Jordan (2004)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Churchill White Paper on Palestine (1922)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "Mandat francais pour la Syrie et le Liban",
+    "name_original_lang": "fr",
+    "entity_type": "colony",
+    "year_start": 1920,
+    "year_end": 1946,
+    "capital_name": "Beirut",
+    "capital_lat": 33.8938,
+    "capital_lon": 35.5018,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome ufficiale era in francese, la lingua della potenza mandataria. In arabo الانتداب الفرنسي على سوريا ولبنان. ETHICS-002: il mandato francese fu un atto coloniale mascherato da missione civilizzatrice sotto l'egida della Societa' delle Nazioni. La Francia utilizzo' sistematicamente la strategia del 'divide et impera', frammentando il territorio in stati confessionali (Stato di Damasco, Stato di Aleppo, Stato degli Alawiti, Jabal Druze, Grande Libano) per impedire l'unita' araba. Questa frammentazione e' alla radice delle tensioni settarie contemporanee in Siria e Libano. ETHICS-003: la resistenza siriana al mandato fu violenta e repressa con brutalita'. La Grande Rivolta Siriana (1925-27) fu soppressa con bombardamenti di Damasco. La creazione del Grande Libano (1920) con confini che includevano aree a maggioranza musulmana scontente fu un atto di ingegneria demografica a favore della comunita' maronita alleata della Francia.",
+    "name_variants": [
+      {
+        "name": "French Mandate for Syria and the Lebanon",
+        "lang": "en",
+        "period_start": 1920,
+        "period_end": 1946,
+        "context": "English official League of Nations designation",
+        "source": "Khoury, P. Syria and the French Mandate (1987)"
+      },
+      {
+        "name": "Mandato francese della Siria e del Libano",
+        "lang": "it",
+        "period_start": 1920,
+        "period_end": 1946,
+        "context": "denominazione italiana",
+        "source": "Ferraris, L.V. Manuale della politica estera italiana (1996)"
+      },
+      {
+        "name": "الانتداب الفرنسي على سوريا ولبنان",
+        "lang": "ar",
+        "period_start": 1920,
+        "period_end": 1946,
+        "context": "nome arabo",
+        "source": "Khoury, P. Syria and the French Mandate (1987)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1920,
+        "region": "Siria e Libano",
+        "change_type": "COLONIZATION",
+        "description": "Dopo la Battaglia di Maysalun (24 luglio 1920), le truppe francesi del generale Gouraud sconfiggono l'esercito del re Faysal ed entrano a Damasco. Il breve Regno Arabo di Siria (marzo-luglio 1920) viene distrutto. La Francia impone il mandato, dividendo il territorio in entita' settarie.",
+        "population_affected": 3000000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1925,
+        "region": "Jabal Druze e Damasco",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Grande Rivolta Siriana (1925-1927). Sultan al-Atrash guida la rivolta druza che si estende a tutta la Siria. La Francia bombarda Damasco nell'ottobre 1925. Migliaia di civili uccisi. La rivolta e' soppressa ma il mandato e' delegittimato.",
+        "population_affected": 100000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1943,
+        "region": "Libano",
+        "change_type": "INDEPENDENCE",
+        "description": "Il Libano dichiara l'indipendenza (22 novembre 1943). I francesi arrestano il presidente Bechara el-Khoury e il primo ministro Riad al-Solh, ma cedono sotto pressione internazionale. Indipendenza effettiva nel 1946 con il ritiro delle truppe.",
+        "population_affected": 1200000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1946,
+        "region": "Siria",
+        "change_type": "INDEPENDENCE",
+        "description": "Ultime truppe francesi lasciano la Siria (17 aprile 1946, oggi festa nazionale siriana). Fine del mandato dopo 26 anni di dominio coloniale mascherato da mandato della Societa' delle Nazioni.",
+        "population_affected": 3500000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Khoury, P. Syria and the French Mandate: The Politics of Arab Nationalism, 1920-1945 (1987)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Thompson, E. Colonial Citizens: Republican Rights, Paternal Privilege, and Gender in French Syria and Lebanon (2000)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "League of Nations Mandate for Syria and the Lebanon (1922)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "الغساسنة",
+    "name_original_lang": "ar",
+    "entity_type": "kingdom",
+    "year_start": 220,
+    "year_end": 636,
+    "capital_name": "Jabiyah",
+    "capital_lat": 32.9333,
+    "capital_lon": 36.0833,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome e' in arabo. I Ghassanidi erano arabi cristiani (monofisiti/miafisiti) che fungevano da stato-cuscinetto dell'Impero Bizantino contro i Sasanidi e i loro clienti Lakhmidi. ETHICS-002: i Ghassanidi rappresentano un caso fondamentale di cristianesimo arabo pre-islamico, un fatto spesso trascurato nelle narrative che identificano il mondo arabo esclusivamente con l'Islam. La loro confessione monofisita li metteva in conflitto dottrinale con Costantinopoli. ETHICS-003: le fonti sono quasi esclusivamente esterne (bizantine, siriache, arabe islamiche). La voce ghassanide e' praticamente assente dal record storico. Le iscrizioni in arabo pre-islamico sono estremamente rare.",
+    "name_variants": [
+      {
+        "name": "Ghassanid Kingdom",
+        "lang": "en",
+        "period_start": 220,
+        "period_end": 636,
+        "context": "English scholarly name; sometimes called Ghassanid phylarchate",
+        "source": "Shahid, I. Byzantium and the Arabs in the Sixth Century (1995)"
+      },
+      {
+        "name": "Regno Ghassanide",
+        "lang": "it",
+        "period_start": 220,
+        "period_end": 636,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      },
+      {
+        "name": "بنو غسان",
+        "lang": "ar",
+        "period_start": 220,
+        "period_end": 636,
+        "context": "nome patronimico arabo: 'figli di Ghassan'",
+        "source": "al-Tabari, Tarikh al-Rusul wa-l-Muluk"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 220,
+        "region": "Siria meridionale e Giordania",
+        "change_type": "INDEPENDENCE",
+        "description": "Migrazione dei Ghassanidi dalla penisola arabica meridionale (regione di Marib) verso il Levante meridionale. Datazione incerta; il radicamento nel Hauran e nel Golan avviene gradualmente tra III e IV secolo.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 529,
+        "region": "Siria, Palestina, Giordania",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Al-Harith ibn Jabalah (Arethas) riceve il titolo di patricius dall'imperatore Giustiniano I. Apogeo del potere ghassanide come principale alleato arabo di Bisanzio contro i Sasanidi e i Lakhmidi.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 636,
+        "region": "Siria",
+        "change_type": "DISSOLUTION",
+        "description": "La conquista arabo-musulmana della Siria (Battaglia dello Yarmuk, 636) pone fine all'autonomia ghassanide. Alcuni Ghassanidi si convertono all'Islam, altri restano cristiani e mantengono posizioni di prestigio sotto gli Omayyadi.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Shahid, I. Byzantium and the Arabs in the Sixth Century, vol. I-II (1995-2002)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Fisher, G. Between Empires: Arabs, Romans, and Sasanians in Late Antiquity (2011)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Procopio di Cesarea, Le Guerre (VI sec.)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "اللخميون",
+    "name_original_lang": "ar",
+    "entity_type": "kingdom",
+    "year_start": 300,
+    "year_end": 602,
+    "capital_name": "al-Hira",
+    "capital_lat": 31.8833,
+    "capital_lon": 44.4333,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome e' in arabo. I Lakhmidi erano arabi cristiani (nestoriani) e pre-islamici che fungevano da stato-cuscinetto dell'Impero Sasanide contro Bisanzio e i suoi clienti Ghassanidi. ETHICS-002: al-Hira fu un importante centro del cristianesimo nestoriano arabo e della cultura letteraria araba pre-islamica. La poesia pre-islamica associata alla corte lakhmide (Imru' al-Qays, al-Nabigha) e' fondamentale per la letteratura araba. ETHICS-003: come per i Ghassanidi, le fonti dirette lakhmidi sono quasi inesistenti. La storia lakhmide e' ricostruita da fonti arabe islamiche posteriori, siriache e persiane. Il confidence_score riflette questa dipendenza da fonti indirette.",
+    "name_variants": [
+      {
+        "name": "Lakhmid Kingdom",
+        "lang": "en",
+        "period_start": 300,
+        "period_end": 602,
+        "context": "English scholarly name; also known as Kingdom of al-Hira",
+        "source": "Rothstein, G. Die Dynastie der Lahmiden in al-Hira (1899)"
+      },
+      {
+        "name": "Regno Lakhmide",
+        "lang": "it",
+        "period_start": 300,
+        "period_end": 602,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia dell'Islam"
+      },
+      {
+        "name": "بنو لخم / مملكة الحيرة",
+        "lang": "ar",
+        "period_start": 300,
+        "period_end": 602,
+        "context": "nome patronimico arabo / nome del regno dalla capitale al-Hira",
+        "source": "al-Tabari, Tarikh al-Rusul wa-l-Muluk"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 300,
+        "region": "Iraq meridionale (al-Hira)",
+        "change_type": "INDEPENDENCE",
+        "description": "Fondazione tradizionale del regno lakhmide ad al-Hira, presso l'antica Babilonia. I Lakhmidi servono come vassalli e alleati dell'Impero Sasanide sulla frontiera araba. Datazione incerta.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 505,
+        "region": "al-Hira e deserto siro-mesopotamico",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Sotto al-Mundhir III (r. 505-554), il regno raggiunge il massimo potere. Conflitti frequenti con i Ghassanidi bizantini. Al-Hira diventa un centro culturale e religioso di grande importanza.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 602,
+        "region": "al-Hira",
+        "change_type": "DISSOLUTION",
+        "description": "Il re sasanide Cosroe II (Khosrow II) depone l'ultimo re lakhmide al-Nu'man III e annette direttamente il territorio. La caduta dei Lakhmidi lascia la frontiera sasanide esposta, contribuendo alla successiva conquista arabo-musulmana dell'Iraq.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Rothstein, G. Die Dynastie der Lahmiden in al-Hira (1899)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Fisher, G. Between Empires: Arabs, Romans, and Sasanians in Late Antiquity (2011)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "al-Tabari, Tarikh al-Rusul wa-l-Muluk (X sec.)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "قاجاریه",
+    "name_original_lang": "fa",
+    "entity_type": "dynasty",
+    "year_start": 1789,
+    "year_end": 1925,
+    "capital_name": "Tehran",
+    "capital_lat": 35.6892,
+    "capital_lon": 51.389,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome e' in persiano. I Qajar erano una tribu' turcomanna Oghuz. Il nome della dinastia in persiano moderno e' Qajariyye (قاجاریه). ETHICS-002: il periodo Qajar e' segnato dalla progressiva perdita di sovranita' dell'Iran a favore di Russia e Gran Bretagna ('Grande Gioco'). I trattati di Golestan (1813) e Turkmenchay (1828) imposero la cessione del Caucaso alla Russia. La Concessione del Tabacco (1890) e la Rivoluzione Costituzionale (1905-11) mostrano la tensione tra imperialismo straniero e aspirazioni democratiche iraniane. ETHICS-003: la storiografia Pahlavi ha sistematicamente denigrato i Qajar per legittimare il colpo di stato di Reza Khan (1921/1925). Una rappresentazione equilibrata richiede fonti non-Pahlavi.",
+    "name_variants": [
+      {
+        "name": "Qajar Dynasty",
+        "lang": "en",
+        "period_start": 1789,
+        "period_end": 1925,
+        "context": "English scholarly name",
+        "source": "Amanat, A. Pivot of the Universe: Nasir al-Din Shah Qajar and the Iranian Monarchy (1997)"
+      },
+      {
+        "name": "Dinastia Qajar",
+        "lang": "it",
+        "period_start": 1789,
+        "period_end": 1925,
+        "context": "denominazione italiana",
+        "source": "Ferraris, L.V. Manuale della politica estera italiana (1996)"
+      },
+      {
+        "name": "سلسله قاجار",
+        "lang": "fa",
+        "period_start": 1789,
+        "period_end": 1925,
+        "context": "nome persiano formale",
+        "source": "Amanat, A. Pivot of the Universe (1997)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1789,
+        "region": "Iran",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Agha Mohammad Khan Qajar sconfigge l'ultimo Zand e riunifica l'Iran dopo decenni di guerre civili. Sposta la capitale a Tehran. Conquista brutale della Georgia (1795) con deportazioni di massa.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1813,
+        "region": "Caucaso meridionale",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Trattato di Golestan: l'Iran cede la maggior parte del Caucaso (Georgia, Daghestan, parti dell'Azerbaigian) alla Russia dopo la sconfitta nella prima guerra russo-persiana. Inizio della perdita di sovranita'.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1906,
+        "region": "Iran",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Rivoluzione Costituzionale iraniana: Muzaffar al-Din Shah concede una costituzione e un parlamento (Majles). Primo esperimento democratico in Medio Oriente. Repressa nel 1908 da Muhammad Ali Shah con l'aiuto della Brigata Cosacca russa.",
+        "population_affected": 10000000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1925,
+        "region": "Iran",
+        "change_type": "DISSOLUTION",
+        "description": "Il Majles depone l'ultimo Shah Qajar, Ahmad Shah, e proclama Reza Khan (Reza Shah Pahlavi) come nuovo sovrano. Fine della dinastia Qajar dopo 136 anni. Il colpo di stato del 1921 di Reza Khan, sostenuto dai britannici, aveva gia' svuotato il potere Qajar.",
+        "population_affected": 12000000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Amanat, A. Pivot of the Universe: Nasir al-Din Shah Qajar and the Iranian Monarchy, 1831-1896 (1997)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Afary, J. The Iranian Constitutional Revolution, 1906-1911 (1996)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Treaty of Golestan (1813) and Treaty of Turkmenchay (1828)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "Ṣūr / 𐤑𐤓",
+    "name_original_lang": "phn",
+    "entity_type": "city-state",
+    "year_start": -2750,
+    "year_end": -332,
+    "capital_name": "Tyre",
+    "capital_lat": 33.2705,
+    "capital_lon": 35.2038,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome e' in fenicio (Ṣūr, 'roccia'). Il nome greco Τυρος e l'italiano Tiro sono esonimi. La citta' era originariamente su un'isola, poi collegata alla terraferma dalla diga costruita da Alessandro Magno durante l'assedio del -332. ETHICS-002: l'assedio di Tiro da parte di Alessandro (-332) fu uno degli episodi piu' violenti della conquista macedone: la citta' resistette sette mesi; alla caduta, 8.000 tiriani furono uccisi e 30.000 venduti come schiavi (Arriano, Diodoro Siculo). Questo massacro e' spesso minimizzato nella storiografia che celebra Alessandro. ETHICS-003: Tiro era la madrepatria di Cartagine e la citta' fenicia piu' potente. La sua storia non deve essere ridotta a un capitolo della storia greca o romana.",
+    "name_variants": [
+      {
+        "name": "Tyre",
+        "lang": "en",
+        "period_start": -2750,
+        "period_end": -332,
+        "context": "English name from Greek Τυρος",
+        "source": "Aubet, M.E. The Phoenicians and the West (2001)"
+      },
+      {
+        "name": "Tiro",
+        "lang": "it",
+        "period_start": -2750,
+        "period_end": -332,
+        "context": "denominazione italiana",
+        "source": "Moscati, S. I Fenici (1988)"
+      },
+      {
+        "name": "Ṣurru",
+        "lang": "akk",
+        "period_start": -2750,
+        "period_end": -332,
+        "context": "nome accadico nelle fonti assire e babilonesi",
+        "source": "Lettere di Amarna (EA 89-92, 146-155)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -1200,
+        "region": "Costa levantina meridionale",
+        "change_type": "INDEPENDENCE",
+        "description": "Dopo il Collasso dell'Eta' del Bronzo, Tiro emerge come citta'-stato indipendente dominante tra le citta' fenicie, soppiantando Byblos. Sotto il re Hiram I (alleato di Salomone secondo la Bibbia), Tiro estende la sua influenza commerciale nel Mediterraneo.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": -814,
+        "region": "Mediterraneo occidentale",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Fondazione di Cartagine (Qart-hadasht) da coloni tirii secondo la tradizione. La rete commerciale fenicia tiriana si estende dalla Spagna alla Sardegna. Tiro e' il cuore di un impero commerciale, non territoriale.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": -332,
+        "region": "Tiro",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Alessandro Magno assedia Tiro per sette mesi. Costruisce una diga (molo) per collegare l'isola alla terraferma. Alla caduta della citta': 8.000 uccisi, 30.000 venduti come schiavi (Arriano, Anabasi). Fine dell'indipendenza tiria.",
+        "population_affected": 38000,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Aubet, M.E. The Phoenicians and the West: Politics, Colonies and Trade, 2nd ed. (2001)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Katzenstein, H.J. The History of Tyre (1973)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Arriano, Anabasi di Alessandro, II.15-24",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "Ṣīdūn / 𐤑𐤃𐤍",
+    "name_original_lang": "phn",
+    "entity_type": "city-state",
+    "year_start": -3000,
+    "year_end": -332,
+    "capital_name": "Sidon",
+    "capital_lat": 33.56,
+    "capital_lon": 35.3714,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome e' in fenicio (Ṣīdūn, probabilmente 'luogo di pesca'). Il nome greco Σιδων e l'italiano Sidone sono esonimi. Nella Bibbia ebraica (Genesi 10:15), Sidon e' il primogenito di Canaan. ETHICS-002: Sidone fu la citta' fenicia piu' antica e importante prima di essere eclissata da Tiro. La competizione tra le due citta' e' un tema centrale della storia fenicia. Le sarcofagi reali di Sidone (incluso il cosiddetto 'Sarcofago di Alessandro', oggi al Museo Archeologico di Istanbul) furono portati via sotto l'Impero Ottomano — un caso di patrimonio culturale contestato. ETHICS-003: le fonti sulla storia indipendente di Sidone sono scarse; gran parte e' nota attraverso fonti assire, babilonesi, bibliche e greche.",
+    "name_variants": [
+      {
+        "name": "Sidon",
+        "lang": "en",
+        "period_start": -3000,
+        "period_end": -332,
+        "context": "English name from Greek Σιδων",
+        "source": "Markoe, G. Phoenicians (2000)"
+      },
+      {
+        "name": "Sidone",
+        "lang": "it",
+        "period_start": -3000,
+        "period_end": -332,
+        "context": "denominazione italiana",
+        "source": "Moscati, S. I Fenici (1988)"
+      },
+      {
+        "name": "Ṣidunu",
+        "lang": "akk",
+        "period_start": -3000,
+        "period_end": -332,
+        "context": "nome accadico nelle fonti assire",
+        "source": "Lettere di Amarna (EA 144-145)"
+      },
+      {
+        "name": "صيدا",
+        "lang": "ar",
+        "period_start": -3000,
+        "period_end": -332,
+        "context": "nome arabo moderno (Saida)",
+        "source": "uso corrente"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -1200,
+        "region": "Costa levantina",
+        "change_type": "INDEPENDENCE",
+        "description": "Dopo il Collasso dell'Eta' del Bronzo, Sidone e' tra le citta' fenicie che emergono come entita' indipendenti. Nei testi omerici e in Genesi, 'Sidoni' e' sinonimo di 'Fenici', indicando la primazia storica della citta'.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": -677,
+        "region": "Sidone",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Sennacherib (o Esarhaddon) distrugge Sidone dopo una rivolta. Il re Abdi-Milkutti viene catturato e giustiziato. La citta' viene ricostruita come colonia assira ('Kar-Esarhaddon'). Esempio della brutalita' dell'imperialismo assiro.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": -332,
+        "region": "Sidone",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Sidone si arrende pacificamente ad Alessandro Magno, a differenza di Tiro. Il re Strato II, filopersiano, viene deposto e sostituito da Abdalonymos, un lontano discendente dei re. Fine dell'indipendenza fenicia.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Markoe, G. Phoenicians, Peoples of the Past (2000)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Jidejian, N. Sidon through the Ages (1971)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Annali di Esarhaddon (British Museum)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "Karkamış / 𔐀𔐬𔑣𔗢𔐖𔗐",
+    "name_original_lang": "hit",
+    "entity_type": "kingdom",
+    "year_start": -1180,
+    "year_end": -717,
+    "capital_name": "Carchemish",
+    "capital_lat": 36.8283,
+    "capital_lon": 38.0083,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome e' in luvio geroglifico (la lingua scritta dei regni neo-ittiti). 'Neo-Hittite' e' una convenzione storiografica moderna; i popoli di questi stati non si definivano cosi'. Carchemish e' il piu' importante dei regni neo-ittiti sopravvissuti al collasso dell'impero ittita. ETHICS-002: Carchemish e' qui usata come rappresentante degli stati neo-ittiti (Kummuh, Sam'al/Ya'diya, Patina/Unqi, Tabal, Que, Hilakku), ciascuno dei quali aveva identita' distinta. Questa semplificazione e' documentata. ETHICS-003: i regni neo-ittiti sono spesso trascurati tra la caduta dell'Impero Ittita e l'espansione assira. Rappresentano una continuita' culturale anatolico-siriana fondamentale e un periodo di innovazione nell'arte e nella scrittura.",
+    "name_variants": [
+      {
+        "name": "Carchemish",
+        "lang": "en",
+        "period_start": -1180,
+        "period_end": -717,
+        "context": "English scholarly name; also Karkemish",
+        "source": "Hawkins, J.D. Corpus of Hieroglyphic Luwian Inscriptions (2000)"
+      },
+      {
+        "name": "Karkemish",
+        "lang": "it",
+        "period_start": -1180,
+        "period_end": -717,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      },
+      {
+        "name": "Karkamis",
+        "lang": "akk",
+        "period_start": -1180,
+        "period_end": -717,
+        "context": "nome accadico nelle fonti assire",
+        "source": "Annali di Sargon II"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -1180,
+        "region": "Siria settentrionale (alto Eufrate)",
+        "change_type": "INDEPENDENCE",
+        "description": "Dopo il collasso dell'Impero Ittita (~1180 a.C.), Carchemish sopravvive come stato neo-ittita indipendente sotto una dinastia che rivendicava la discendenza dalla casa reale ittita. Diventa il piu' potente degli stati neo-ittiti.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": -875,
+        "region": "Siria settentrionale",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Sotto Assurnasirpal II e Salmanassar III, l'Assiria impone il vassallaggio a Carchemish. Le iscrizioni luv-geroglfiiche del re Katuwas documentano un periodo di splendore culturale nonostante la pressione assira.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": -717,
+        "region": "Carchemish",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Sargon II d'Assiria conquista Carchemish dopo una rivolta di re Pisiri. La citta' diventa una provincia assira. Fine dell'ultimo grande stato neo-ittita indipendente. La cultura luvio-gerogliifica sopravvive per qualche tempo.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hawkins, J.D. Corpus of Hieroglyphic Luwian Inscriptions, vol. I: Inscriptions of the Iron Age (2000)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Bryce, T. The World of the Neo-Hittite Kingdoms: A Political and Military History (2012)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Annali di Sargon II d'Assiria",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "الدولة الغورية",
+    "name_original_lang": "fa",
+    "entity_type": "sultanate",
+    "year_start": 1148,
+    "year_end": 1215,
+    "capital_name": "Firuzkuh",
+    "capital_lat": 34.7,
+    "capital_lon": 65.2333,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome e' in persiano (Ghuriyyan). I Ghuridi erano originari della regione montana del Ghur (Afghanistan centrale). Parlavano probabilmente una varieta' di persiano orientale. ETHICS-002: la conquista ghuride dell'India settentrionale sotto Muhammad di Ghur (Battaglia di Tarain II, 1192) segno' l'inizio del dominio islamico persistente nell'India del nord. La distruzione del monastero buddista di Nalanda (circa 1193) e di templi hindu e' uno degli episodi piu' controversi della storia dell'Asia meridionale. Le fonti indiane, persiane e le interpretazioni storiografiche moderne divergono profondamente. ETHICS-003: la storiografia nazionalista indiana e quella islamista tendono a strumentalizzare questi eventi. Una rappresentazione equilibrata richiede fonti molteplici.",
+    "name_variants": [
+      {
+        "name": "Ghurid Dynasty",
+        "lang": "en",
+        "period_start": 1148,
+        "period_end": 1215,
+        "context": "English scholarly name; also 'Ghurid Sultanate' or 'Shansabanid'",
+        "source": "Bosworth, C.E. 'The Early Islamic History of Ghur', Central Asiatic Journal (1961)"
+      },
+      {
+        "name": "Dinastia Ghuride",
+        "lang": "it",
+        "period_start": 1148,
+        "period_end": 1215,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia dell'Islam"
+      },
+      {
+        "name": "غوریان / شنسبانیان",
+        "lang": "fa",
+        "period_start": 1148,
+        "period_end": 1215,
+        "context": "nome persiano; Shansabani era il nome del clan",
+        "source": "Juzjani, Tabaqat-i Nasiri"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1148,
+        "region": "Ghur (Afghanistan centrale)",
+        "change_type": "INDEPENDENCE",
+        "description": "Ala al-Din Husayn, 'Jahan-Suz' (Incendiatore del Mondo), si ribella ai Ghaznavidi e distrugge la citta' di Ghazni in rappresaglia per l'assassinio di due fratelli. Inizio dell'indipendenza ghuride.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1192,
+        "region": "India settentrionale",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Seconda Battaglia di Tarain: Muhammad di Ghur sconfigge Prithviraj III Chauhan. Conquista di Delhi e inizio del dominio islamico nell'India del nord. Le conseguenze culturali e religiose di questo evento sono enormi e intensamente dibattute.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1215,
+        "region": "Afghanistan e Khorasan",
+        "change_type": "DISSOLUTION",
+        "description": "I Khwarezmshah conquistano il Ghur e pongono fine alla dinastia. I generali turchi di Muhammad di Ghur (Qutb al-Din Aibak, Iltutmish) fondano il Sultanato di Delhi, continuando l'eredita' ghuride in India.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Bosworth, C.E. 'The Early Islamic History of Ghur', Central Asiatic Journal 6 (1961)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Juzjani, Tabaqat-i Nasiri (XIII sec.)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Thomas, D. 'The Ghurid Sultans and the Islamicization of South Asia', in Flood, F.B. (ed.) Piety and Politics in the Early Indian Mosque (2009)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "الدولة الأيوبية في اليمن",
+    "name_original_lang": "ar",
+    "entity_type": "sultanate",
+    "year_start": 1174,
+    "year_end": 1229,
+    "capital_name": "Zabid",
+    "capital_lat": 14.195,
+    "capital_lon": 43.3153,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome e' in arabo. Il ramo ayyubide dello Yemen e' distinto dalla casa ayyubide principale di Egitto e Siria. Lo Yemen era governato da fratelli e nipoti di Saladino. ETHICS-002: l'invasione ayyubide dello Yemen (1174) estinse la dinastia sciita isma'ilita dei Fatimidi yemeniti (Sulayhidi) e i loro successori. La transizione al dominio sunnita-ayyubide ebbe conseguenze durature sulla composizione settaria dello Yemen. ETHICS-003: la storia dello Yemen medievale e' spesso trascurata nella storiografia mediorientale centrata su Egitto e Levante. Aden era uno dei porti piu' importanti del mondo per il commercio tra Oceano Indiano e Mediterraneo.",
+    "name_variants": [
+      {
+        "name": "Ayyubid Yemen",
+        "lang": "en",
+        "period_start": 1174,
+        "period_end": 1229,
+        "context": "English scholarly designation",
+        "source": "Smith, G.R. The Ayyubids and Early Rasulids in the Yemen (1978)"
+      },
+      {
+        "name": "Yemen Ayyubide",
+        "lang": "it",
+        "period_start": 1174,
+        "period_end": 1229,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia dell'Islam"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1174,
+        "region": "Yemen",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Turan Shah, fratello di Saladino, invade lo Yemen con un esercito ayyubide. Conquista Zabid, Aden e gran parte dello Yemen occidentale. Inizio del dominio ayyubide.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1229,
+        "region": "Yemen",
+        "change_type": "DISSOLUTION",
+        "description": "L'ultimo governatore ayyubide, al-Mas'ud Yusuf, perde il controllo. Il suo luogotenente Umar ibn Rasul fonda la dinastia Rasulide. Transizione pacifica ma definitiva dal dominio ayyubide a quello rasulide.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Smith, G.R. The Ayyubids and Early Rasulids in the Yemen (567-694/1173-1295) (1978)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ibn al-Mujawir, Tarikh al-Mustabsir (XIII sec.)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Vallet, E. L'Arabie marchande (2010)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "مملكة بيت المقدس العربية",
+    "name_original_lang": "ar",
+    "entity_type": "kingdom",
+    "year_start": 1187,
+    "year_end": 1229,
+    "capital_name": "Jerusalem",
+    "capital_lat": 31.7683,
+    "capital_lon": 35.2137,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: questa entita' rappresenta il controllo ayyubide su Gerusalemme dopo la riconquista di Saladino (1187) fino alla cessione crociata del 1229 tramite il trattato tra Federico II e al-Kamil. Il nome e' una designazione storica convenzionale. ETHICS-002: il trattato di Giaffa (1229) in cui al-Kamil cedette Gerusalemme a Federico II senza combattere fu enormemente controverso nel mondo islamico. I cronisti arabi lo condannarono come un tradimento. La citta' ritorno' sotto controllo musulmano nel 1244 con la conquista dei Khwarezmiani. ETHICS-003: Gerusalemme nel periodo ayyubide ospitava musulmani, cristiani ed ebrei in una coesistenza che, pur non essendo idilliaca, contrasta con la violenza della conquista crociata del 1099.",
+    "name_variants": [
+      {
+        "name": "Ayyubid Jerusalem",
+        "lang": "en",
+        "period_start": 1187,
+        "period_end": 1229,
+        "context": "English scholarly designation for the Ayyubid control period",
+        "source": "Humphreys, R.S. From Saladin to the Mongols (1977)"
+      },
+      {
+        "name": "Gerusalemme Ayyubide",
+        "lang": "it",
+        "period_start": 1187,
+        "period_end": 1229,
+        "context": "denominazione italiana accademica",
+        "source": "Cardini, F. Gerusalemme d'oro, di rame, di luce (2012)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1187,
+        "region": "Gerusalemme",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Saladino riconquista Gerusalemme il 2 ottobre 1187 (27 Rajab 583 AH), anniversario dell'Isra' e Mi'raj. A differenza del massacro crociato del 1099, Saladino consente la partenza pacifica dei cristiani dietro riscatto. Episodio centrale della memoria storica islamica.",
+        "population_affected": 60000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1229,
+        "region": "Gerusalemme",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Trattato di Giaffa: il sultano ayyubide al-Kamil cede Gerusalemme all'imperatore Federico II per dieci anni, senza le mura e mantenendo i santuari musulmani. Atto enormemente controverso nel mondo islamico. La citta' torna sotto controllo musulmano nel 1244.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Humphreys, R.S. From Saladin to the Mongols: The Ayyubids of Damascus, 1193-1260 (1977)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Imad al-Din al-Isfahani, al-Fath al-Qussi fi al-Fath al-Qudsi (XII sec.)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Hillenbrand, C. The Crusades: Islamic Perspectives (1999)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "سلطنة عدن",
+    "name_original_lang": "ar",
+    "entity_type": "sultanate",
+    "year_start": 1454,
+    "year_end": 1517,
+    "capital_name": "Aden",
+    "capital_lat": 12.7855,
+    "capital_lon": 45.0187,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome e' in arabo. I Tahiridi erano una dinastia yemenita locale che succedette ai Rasulidi. Il loro breve periodo di potere e' spesso trascurato nella storiografia. ETHICS-002: la conquista mamelucca e poi portoghese di Aden (tentativo del 1513) e infine l'invasione ottomana (1517) rappresentano l'intrusione di potenze esterne nel sistema commerciale dell'Oceano Indiano, con conseguenze devastanti per l'economia yemenita e indiana. ETHICS-003: la storia dei Tahiridi illustra come le dinamiche locali yemenite siano spesso oscurate dalla storiografia centrata sulle grandi potenze (Mamelucchi, Ottomani, Portoghesi).",
+    "name_variants": [
+      {
+        "name": "Tahirid Dynasty",
+        "lang": "en",
+        "period_start": 1454,
+        "period_end": 1517,
+        "context": "English scholarly name",
+        "source": "Smith, G.R. 'The Tahirids in the Yemen', Journal of the Royal Asiatic Society (1988)"
+      },
+      {
+        "name": "Dinastia Tahiride (Yemen)",
+        "lang": "it",
+        "period_start": 1454,
+        "period_end": 1517,
+        "context": "denominazione italiana; distinta dai Tahiridi del Khorasan (IX sec.)",
+        "source": "Enciclopedia dell'Islam"
+      },
+      {
+        "name": "بنو طاهر",
+        "lang": "ar",
+        "period_start": 1454,
+        "period_end": 1517,
+        "context": "nome patronimico arabo",
+        "source": "al-Khazraji, al-Uqud al-lu'lu'iyya"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1454,
+        "region": "Yemen meridionale",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "I Tahiridi conquistano Aden e Ta'izz, ponendo fine alla dinastia Rasulide. Aden resta un porto di importanza mondiale per il commercio tra l'Oceano Indiano e il Mediterraneo.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 1517,
+        "region": "Yemen",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "I Mamelucchi e poi gli Ottomani invadono lo Yemen. Fine della dinastia tahiride. L'arrivo dei Portoghesi nell'Oceano Indiano (da Vasco da Gama in poi) aveva gia' sconvolto il commercio che era la base economica del potere tahiride.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Smith, G.R. 'The Tahirids in the Yemen', Journal of the Royal Asiatic Society (1988)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "al-Khazraji, al-Uqud al-lu'lu'iyya fi tarikh al-dawla al-rasuliyya (XV sec.)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Vallet, E. L'Arabie marchande (2010)",
+        "source_type": "academic"
+      }
+    ]
+  }
+]

@@ -2,6 +2,7 @@
 
 GET /v1/entities/{id}/related          entità correlate
 GET /v1/entities/{id}/contemporaries   entità attive nello stesso periodo
+GET /v1/entities/{id}/evolution        evoluzione temporale dell'entità
 GET /v1/compare/{id1}/{id2}            confronto tra due entità
 """
 
@@ -121,6 +122,84 @@ def get_related(
         "temporal_overlap": [
             {**_mini(e), "overlap_years": ov}
             for e, ov in scored[:5]
+        ],
+    }
+
+
+# ─── Evolution ─────────────────────────────────────────────────
+
+
+@router.get(
+    "/v1/entities/{entity_id}/evolution",
+    summary="Evoluzione temporale di un'entità",
+    description=(
+        "Restituisce la cronologia completa di un'entità: fondazione, "
+        "cambiamenti territoriali ordinati, fase finale. Utile per agenti AI "
+        "che devono ricostruire la storia di un'entità nel tempo."
+    ),
+)
+def get_evolution(
+    entity_id: int,
+    response: Response,
+    db: Session = Depends(get_db),
+):
+    """Cronologia completa di un'entità storica.
+
+    ETHICS: ogni cambiamento territoriale mantiene il change_type
+    originale (conquest, colonization, etc.) senza eufemismi.
+    """
+    entity = (
+        db.query(GeoEntity)
+        .options(
+            joinedload(GeoEntity.territory_changes),
+            joinedload(GeoEntity.sources),
+            joinedload(GeoEntity.name_variants),
+        )
+        .filter(GeoEntity.id == entity_id)
+        .first()
+    )
+    if not entity:
+        raise EntityNotFoundError(entity_id)
+
+    # Ordina cambiamenti per anno
+    changes = sorted(entity.territory_changes, key=lambda tc: tc.year)
+
+    # Calcola fasi: espansione, contrazione, stabilità
+    expansion_years = sum(1 for tc in changes if tc.change_type in (
+        "expansion", "conquest", "colonization", "unification",
+    ))
+    contraction_years = sum(1 for tc in changes if tc.change_type in (
+        "contraction", "dissolution", "partition", "secession",
+    ))
+
+    duration = (entity.year_end or 2025) - entity.year_start
+
+    response.headers["Cache-Control"] = "public, max-age=3600"
+
+    return {
+        "entity_id": entity_id,
+        "name_original": entity.name_original,
+        "entity_type": entity.entity_type,
+        "year_start": entity.year_start,
+        "year_end": entity.year_end,
+        "duration_years": duration,
+        "total_changes": len(changes),
+        "summary": {
+            "expansion_events": expansion_years,
+            "contraction_events": contraction_years,
+            "sources_count": len(entity.sources),
+            "name_variants_count": len(entity.name_variants),
+        },
+        "timeline": [
+            {
+                "year": tc.year,
+                "change_type": tc.change_type,
+                "region": tc.region,
+                "description": tc.description,
+                "population_affected": tc.population_affected,
+                "confidence_score": tc.confidence_score,
+            }
+            for tc in changes
         ],
     }
 

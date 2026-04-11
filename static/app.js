@@ -1,4 +1,4 @@
-/* AtlasPI v5.5.1 — Interfaccia web con deep linking e keyboard nav */
+/* AtlasPI v5.7.0 — Capital markers, evolution endpoint, UI polish */
 
 const API = '';
 const COLORS = {
@@ -30,9 +30,11 @@ let map, layerGroup;
 let allEntities = [];
 let detailCache = {};
 let debounceTimer = null;
+let acDebounceTimer = null;
 let activeType = '';
 let activeContinent = '';
 let selectedCardIndex = -1;
+let acSelectedIndex = -1;
 let playbackInterval = null;
 let compareEntityId = null;
 
@@ -93,6 +95,40 @@ function initMap() {
     subdomains: 'abcd', maxZoom: 19,
   }).addTo(map);
   layerGroup = L.layerGroup().addTo(map);
+
+  // Right-click on map → find nearby entities
+  map.on('contextmenu', async (e) => {
+    e.originalEvent.preventDefault();
+    const { lat, lng } = e.latlng;
+    const year = parseInt(document.getElementById('year-slider').value, 10);
+    try {
+      const res = await fetch(`${API}/v1/nearby?lat=${lat.toFixed(4)}&lon=${lng.toFixed(4)}&year=${year}&radius=1000&limit=8`);
+      if (!res.ok) return;
+      const data = await res.json();
+      if (!data.entities.length) {
+        L.popup().setLatLng(e.latlng)
+          .setContent(`<div style="font-size:0.85em;color:#8b949e">${t('no_results')}</div>`)
+          .openOn(map);
+        return;
+      }
+      const html = `<div style="min-width:200px;max-height:250px;overflow-y:auto">
+        <div style="font-weight:600;margin-bottom:6px;font-size:0.85em">${t('nearby')} (${fmtY(year)})</div>
+        ${data.entities.map(ne => {
+          const icon = TYPE_ICONS[ne.entity_type] || '\ud83d\udccd';
+          return `<div class="nearby-popup-item" data-id="${ne.id}" style="padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.1);cursor:pointer;font-size:0.82em">
+            ${icon} <strong>${esc(ne.name_original)}</strong>
+            <span style="color:#8b949e;font-size:0.85em">${ne.distance_km} km</span>
+          </div>`;
+        }).join('')}
+      </div>`;
+      const popup = L.popup({ maxWidth: 280 }).setLatLng(e.latlng).setContent(html).openOn(map);
+      setTimeout(() => {
+        document.querySelectorAll('.nearby-popup-item').forEach(item => {
+          item.addEventListener('click', () => { map.closePopup(); showDetail(+item.dataset.id); });
+        });
+      }, 50);
+    } catch (_) {}
+  });
 }
 
 // ─── URL State Management ──────────────────────────────────────
@@ -182,12 +218,13 @@ function restoreUrlState() {
 // ─── API ────────────────────────────────────────────────────────
 
 async function loadEntities() {
+  const loadBar = document.getElementById('loading-bar');
   try {
-    // Fetch all entities with pagination (API max 100 per page)
     allEntities = [];
     let offset = 0;
     const limit = 100;
     let total = Infinity;
+    if (loadBar) { loadBar.style.width = '5%'; loadBar.style.opacity = '1'; }
 
     while (offset < total) {
       const res = await fetch(`${API}/v1/entities?limit=${limit}&offset=${offset}`, { cache: 'no-cache' });
@@ -196,13 +233,17 @@ async function loadEntities() {
       total = data.count;
       allEntities = allEntities.concat(data.entities);
       offset += limit;
-      // Safety: avoid infinite loops
+      if (loadBar && total > 0) {
+        loadBar.style.width = `${Math.min(95, Math.round((allEntities.length / total) * 100))}%`;
+      }
       if (data.entities.length === 0) break;
     }
 
+    if (loadBar) { loadBar.style.width = '100%'; setTimeout(() => { loadBar.style.opacity = '0'; }, 300); }
     document.getElementById('entity-count').textContent = `${allEntities.length} ${t('entities')}`;
     applyFilters();
   } catch (err) {
+    if (loadBar) { loadBar.style.width = '100%'; loadBar.style.background = 'var(--disputed)'; }
     showError(t('error_connection') || 'Impossibile caricare i dati.');
     document.getElementById('results-list').innerHTML =
       '<p class="placeholder">Errore di connessione</p>';
@@ -295,6 +336,121 @@ async function loadStats() {
   } catch (_) {}
 }
 
+async function loadSnapshotSummary(year) {
+  try {
+    const res = await fetch(`${API}/v1/snapshot/${year}`, { cache: 'no-cache' });
+    if (!res.ok) return;
+    const s = await res.json();
+    const bar = document.getElementById('stats-bar');
+    const topTypes = Object.entries(s.summary.types)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 3)
+      .map(([k, v]) => `${TYPE_ICONS[k] || ''} ${v}`)
+      .join(' ');
+    bar.innerHTML = `
+      <span class="stat-item"><span class="stat-value">${s.count}</span> ${t('active_in')} ${fmtY(year)}</span>
+      <span class="stat-item">${topTypes}</span>
+    `;
+  } catch (_) {}
+}
+
+// ─── Autocomplete ──────────────────────────────────────────────
+
+function showAutocomplete(query) {
+  const dropdown = document.getElementById('autocomplete-list');
+  const input = document.getElementById('search-input');
+
+  if (!query || query.length < 2) {
+    hideAutocomplete();
+    return;
+  }
+
+  const q = query.toLowerCase();
+  const matches = allEntities
+    .filter(e => {
+      const inName = e.name_original.toLowerCase().includes(q);
+      const inVar = (e.name_variants || []).some(v => v.name.toLowerCase().includes(q));
+      return inName || inVar;
+    })
+    .slice(0, 8);
+
+  if (!matches.length) {
+    dropdown.innerHTML = `<div class="autocomplete-hint">${t('no_results')}</div>`;
+    dropdown.classList.add('visible');
+    input.setAttribute('aria-expanded', 'true');
+    acSelectedIndex = -1;
+    return;
+  }
+
+  dropdown.innerHTML = matches.map((e, i) => {
+    const icon = TYPE_ICONS[e.entity_type] || '\ud83d\udccd';
+    const pct = Math.round(e.confidence_score * 100);
+    const name = highlightMatch(e.name_original, query);
+    const matchedVar = (e.name_variants || []).find(v => v.name.toLowerCase().includes(q));
+    const variantHint = matchedVar && !e.name_original.toLowerCase().includes(q)
+      ? ` <span style="color:var(--accent);font-size:0.85em">\u2190 ${esc(matchedVar.name)}</span>` : '';
+    return `<div class="autocomplete-item" data-id="${e.id}" data-idx="${i}" role="option" tabindex="-1">
+      <span class="ac-icon">${icon}</span>
+      <div class="ac-info">
+        <div class="ac-name">${name}${variantHint}</div>
+        <div class="ac-meta">${e.entity_type} \u00b7 ${fmtY(e.year_start)}\u2013${e.year_end ? fmtY(e.year_end) : t('today')}</div>
+      </div>
+      <span class="ac-score">${pct}%</span>
+    </div>`;
+  }).join('') + `<div class="autocomplete-hint">\u21b5 ${t('enter_to_search') || 'Invio per cercare'} \u00b7 \u2191\u2193 ${t('navigate') || 'naviga'}</div>`;
+
+  dropdown.classList.add('visible');
+  input.setAttribute('aria-expanded', 'true');
+  acSelectedIndex = -1;
+
+  dropdown.querySelectorAll('.autocomplete-item').forEach(item => {
+    item.addEventListener('mousedown', (ev) => {
+      ev.preventDefault();
+      showDetail(+item.dataset.id);
+      hideAutocomplete();
+    });
+  });
+}
+
+function hideAutocomplete() {
+  const dropdown = document.getElementById('autocomplete-list');
+  const input = document.getElementById('search-input');
+  dropdown.classList.remove('visible');
+  input.setAttribute('aria-expanded', 'false');
+  acSelectedIndex = -1;
+}
+
+function navigateAutocomplete(dir) {
+  const items = document.querySelectorAll('.autocomplete-item');
+  if (!items.length) return;
+
+  items.forEach(i => i.classList.remove('ac-active'));
+  acSelectedIndex += dir;
+  if (acSelectedIndex < 0) acSelectedIndex = items.length - 1;
+  if (acSelectedIndex >= items.length) acSelectedIndex = 0;
+
+  items[acSelectedIndex].classList.add('ac-active');
+  items[acSelectedIndex].scrollIntoView({ block: 'nearest' });
+}
+
+function selectAutocompleteItem() {
+  const items = document.querySelectorAll('.autocomplete-item');
+  if (acSelectedIndex >= 0 && acSelectedIndex < items.length) {
+    showDetail(+items[acSelectedIndex].dataset.id);
+    hideAutocomplete();
+    return true;
+  }
+  return false;
+}
+
+function highlightMatch(text, query) {
+  if (!query) return esc(text);
+  const escaped = esc(text);
+  const q = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const regex = new RegExp(`(${q})`, 'gi');
+  return escaped.replace(regex, '<mark>$1</mark>');
+}
+
 // ─── Filtri ─────────────────────────────────────────────────────
 
 function getStatuses() {
@@ -332,6 +488,12 @@ function applyFilters() {
   selectedCardIndex = -1;
   renderResults(filtered);
   renderMap(filtered);
+
+  // Update map year badge
+  const yearBadge = document.getElementById('map-year-badge');
+  if (yearBadge) {
+    yearBadge.innerHTML = `<span class="year-value">${fmtY(year)}</span> \u00b7 <span class="entity-count">${filtered.length}</span> ${t('entities')}`;
+  }
 }
 
 // ─── Lista risultati ────────────────────────────────────────────
@@ -374,11 +536,11 @@ function renderResults(entities) {
 function renderMap(entities) {
   layerGroup.clearLayers();
   entities.forEach(e => {
-    if (!e.boundary_geojson) return;
     const c = COLORS[e.status] || '#8b949e';
     try {
       const geo = e.boundary_geojson;
-      if (geo.type === 'Point') {
+
+      if (geo && geo.type === 'Point') {
         const [lon, lat] = geo.coordinates;
         const m = L.circleMarker([lat, lon], {
           radius: 8, fillColor: c, color: '#fff', weight: 1.5, fillOpacity: 0.85,
@@ -386,7 +548,7 @@ function renderMap(entities) {
         m.bindTooltip(richTooltip(e), { direction: 'top' });
         m.on('click', () => showDetail(e.id));
         layerGroup.addLayer(m);
-      } else {
+      } else if (geo && (geo.type === 'Polygon' || geo.type === 'MultiPolygon')) {
         const real = isReal(e);
         const layer = L.geoJSON(geo, {
           style: {
@@ -406,6 +568,25 @@ function renderMap(entities) {
             className: '',
             html: `<div style="color:${c};font-size:11px;font-weight:600;text-shadow:0 0 4px #000,0 0 2px #000;white-space:nowrap;pointer-events:none">${esc(e.name_original)}</div>`,
             iconSize: null, iconAnchor: [0, 0],
+          }),
+          interactive: false,
+        }));
+      } else if (e.capital && e.capital.lat && e.capital.lon) {
+        // No boundary GeoJSON — show capital as a marker
+        const m = L.circleMarker([e.capital.lat, e.capital.lon], {
+          radius: 5, fillColor: c, color: c, weight: 1, fillOpacity: 0.7,
+          className: 'capital-marker',
+        });
+        m.bindTooltip(richTooltip(e), { direction: 'top' });
+        m.on('click', () => showDetail(e.id));
+        layerGroup.addLayer(m);
+
+        // Label for larger zoom levels
+        layerGroup.addLayer(L.marker([e.capital.lat, e.capital.lon], {
+          icon: L.divIcon({
+            className: 'capital-label',
+            html: `<div style="color:${c};font-size:9px;font-weight:500;text-shadow:0 0 3px #000,0 0 2px #000;white-space:nowrap;pointer-events:none;opacity:0.8">${esc(e.name_original)}</div>`,
+            iconSize: null, iconAnchor: [-6, 3],
           }),
           interactive: false,
         }));
@@ -723,12 +904,39 @@ function bindEvents() {
   const yearInput = document.getElementById('year-input');
   const yearEra = document.getElementById('year-era');
 
-  document.getElementById('search-btn').addEventListener('click', () => { applyFilters(); pushUrlState(); });
-  searchInput.addEventListener('keyup', e => { if (e.key === 'Enter') { applyFilters(); pushUrlState(); } });
+  document.getElementById('search-btn').addEventListener('click', () => { hideAutocomplete(); applyFilters(); pushUrlState(); });
+
+  searchInput.addEventListener('keydown', e => {
+    const dropdown = document.getElementById('autocomplete-list');
+    if (dropdown.classList.contains('visible')) {
+      if (e.key === 'ArrowDown') { e.preventDefault(); navigateAutocomplete(1); return; }
+      if (e.key === 'ArrowUp') { e.preventDefault(); navigateAutocomplete(-1); return; }
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        if (!selectAutocompleteItem()) { hideAutocomplete(); applyFilters(); pushUrlState(); }
+        return;
+      }
+      if (e.key === 'Escape') { e.preventDefault(); hideAutocomplete(); return; }
+    } else if (e.key === 'Enter') {
+      applyFilters(); pushUrlState();
+    }
+  });
 
   searchInput.addEventListener('input', () => {
     clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(() => { applyFilters(); pushUrlState(); }, 300);
+    clearTimeout(acDebounceTimer);
+    const val = searchInput.value.trim();
+    acDebounceTimer = setTimeout(() => showAutocomplete(val), 150);
+    debounceTimer = setTimeout(() => { applyFilters(); pushUrlState(); }, 400);
+  });
+
+  searchInput.addEventListener('blur', () => {
+    setTimeout(hideAutocomplete, 200);
+  });
+
+  searchInput.addEventListener('focus', () => {
+    const val = searchInput.value.trim();
+    if (val.length >= 2) showAutocomplete(val);
   });
 
   yearSlider.addEventListener('input', () => {
@@ -742,7 +950,7 @@ function bindEvents() {
       yearEra.value = 'ad';
     }
   });
-  yearSlider.addEventListener('change', () => { applyFilters(); pushUrlState(); });
+  yearSlider.addEventListener('change', () => { applyFilters(); pushUrlState(); loadSnapshotSummary(+yearSlider.value); });
 
   function applyYearInput() {
     let val = parseInt(yearInput.value, 10) || 0;
@@ -914,17 +1122,21 @@ function showKeyboardHelp() {
   const panel = document.getElementById('detail-panel');
   const content = document.getElementById('detail-content');
   panel.classList.remove('hidden');
+  const isIt = lang === 'it';
   content.innerHTML = `
-    <h2>Scorciatoie Tastiera</h2>
+    <h2>${isIt ? 'Scorciatoie Tastiera' : 'Keyboard Shortcuts'}</h2>
     <div class="detail-section">
       <div class="section-body">
         <table class="kbd-table">
-          <tr><td><kbd>↑</kbd> <kbd>↓</kbd></td><td>Naviga risultati</td></tr>
-          <tr><td><kbd>Enter</kbd></td><td>Apri entit\u00e0 selezionata</td></tr>
-          <tr><td><kbd>Esc</kbd></td><td>Chiudi pannello</td></tr>
-          <tr><td><kbd>/</kbd></td><td>Focus sulla ricerca</td></tr>
-          <tr><td><kbd>?</kbd></td><td>Mostra aiuto</td></tr>
+          <tr><td><kbd>\u2191</kbd> <kbd>\u2193</kbd></td><td>${isIt ? 'Naviga risultati / autocomplete' : 'Navigate results / autocomplete'}</td></tr>
+          <tr><td><kbd>Enter</kbd></td><td>${isIt ? 'Apri entit\u00e0 selezionata' : 'Open selected entity'}</td></tr>
+          <tr><td><kbd>Esc</kbd></td><td>${isIt ? 'Chiudi pannello / autocomplete' : 'Close panel / autocomplete'}</td></tr>
+          <tr><td><kbd>/</kbd></td><td>${isIt ? 'Focus sulla ricerca' : 'Focus search'}</td></tr>
+          <tr><td><kbd>?</kbd></td><td>${isIt ? 'Mostra aiuto' : 'Show help'}</td></tr>
         </table>
+        <p style="font-size:0.78em;color:var(--text-muted);margin-top:10px">
+          ${isIt ? 'Tasto destro sulla mappa per trovare entit\u00e0 vicine.' : 'Right-click on the map to find nearby entities.'}
+        </p>
       </div>
     </div>`;
 }
@@ -1088,7 +1300,7 @@ const I18N = {
     approx_boundary: 'Confini approssimativi a scopo dimostrativo.',
     pop_affected: 'Popolazione colpita',
     banner: 'Confini da fonti accademiche. Dati storici da Natural Earth e aourednik/historical-basemaps.',
-    map_hint: "Seleziona un'entit\u00e0 dalla lista o clicca su un'area della mappa.",
+    map_hint: "Seleziona un'entit\u00e0 dalla lista o clicca sulla mappa. Tasto destro per trovare entit\u00e0 vicine.",
     share: 'Condividi', link_copied: 'Link copiato negli appunti!',
     partial_data: 'dati parziali o incerti',
     contemporaries: 'Contemporanei',
@@ -1103,6 +1315,12 @@ const I18N = {
     years: 'anni',
     no_overlap: 'Nessuna sovrapposizione',
     view: 'Vedi',
+    enter_to_search: 'Invio per cercare',
+    navigate: 'naviga',
+    nearby: 'Vicini',
+    distance: 'Distanza',
+    snapshot: 'Snapshot',
+    active_in: 'Attive nel',
   },
   en: {
     search: 'Search by name, including variants...',
@@ -1123,7 +1341,7 @@ const I18N = {
     approx_boundary: 'Approximate boundaries for demonstration.',
     pop_affected: 'Population affected',
     banner: 'Boundaries from academic sources. Data from Natural Earth and aourednik/historical-basemaps.',
-    map_hint: 'Select an entity from the list or click on the map.',
+    map_hint: 'Select an entity from the list or click the map. Right-click to find nearby entities.',
     share: 'Share', link_copied: 'Link copied to clipboard!',
     partial_data: 'partial or uncertain data',
     contemporaries: 'Contemporaries',
@@ -1138,6 +1356,12 @@ const I18N = {
     years: 'years',
     no_overlap: 'No overlap',
     view: 'View',
+    enter_to_search: 'Enter to search',
+    navigate: 'navigate',
+    nearby: 'Nearby',
+    distance: 'Distance',
+    snapshot: 'Snapshot',
+    active_in: 'Active in',
   },
 };
 
@@ -1228,40 +1452,30 @@ async function showCompare(id1, id2) {
     const b = data.entity_b;
     const cmp = data.comparison;
 
+    const makeCard = (e) => `
+        <div class="compare-card" style="border-top:3px solid ${COLORS[e.status]}">
+          <h4>${TYPE_ICONS[e.entity_type] || ''} ${esc(e.name_original)}</h4>
+          <div class="compare-stat"><span class="label">${t('type')}</span><span class="value">${e.entity_type}</span></div>
+          <div class="compare-stat"><span class="label">${t('period')}</span><span class="value">${fmtY(e.year_start)}\u2013${e.year_end ? fmtY(e.year_end) : t('present')}</span></div>
+          <div class="compare-stat"><span class="label">${t('duration')}</span><span class="value">${e.duration_years.toLocaleString()} ${t('years')}</span></div>
+          <div class="compare-stat"><span class="label">${t('score')}</span><span class="value">${Math.round(e.confidence_score*100)}%</span></div>
+          <div class="compare-stat"><span class="label">Status</span><span class="value"><span class="status-badge ${e.status}">${t(e.status)}</span></span></div>
+          <div class="compare-stat"><span class="label">${t('sources')}</span><span class="value">${e.sources_count}</span></div>
+          <div class="compare-stat"><span class="label">${t('changes')}</span><span class="value">${e.territory_changes_count}</span></div>
+          ${e.capital ? `<div class="compare-stat"><span class="label">${t('capital')}</span><span class="value">${esc(e.capital.name)}</span></div>` : ''}
+        </div>`;
+
     content.innerHTML = `
-      <h2>Confronto</h2>
-      <div class="compare-panel">
-        <div class="compare-card" style="border-top:3px solid ${COLORS[a.status]}">
-          <h4>${TYPE_ICONS[a.entity_type] || ''} ${esc(a.name_original)}</h4>
-          <div class="compare-stat"><span class="label">${t('type')}</span><span class="value">${a.entity_type}</span></div>
-          <div class="compare-stat"><span class="label">${t('period')}</span><span class="value">${fmtY(a.year_start)}–${a.year_end ? fmtY(a.year_end) : t('present')}</span></div>
-          <div class="compare-stat"><span class="label">Durata</span><span class="value">${a.duration_years} anni</span></div>
-          <div class="compare-stat"><span class="label">${t('score')}</span><span class="value">${Math.round(a.confidence_score*100)}%</span></div>
-          <div class="compare-stat"><span class="label">Status</span><span class="value"><span class="status-badge ${a.status}">${t(a.status)}</span></span></div>
-          <div class="compare-stat"><span class="label">${t('sources')}</span><span class="value">${a.sources_count}</span></div>
-          <div class="compare-stat"><span class="label">${t('changes')}</span><span class="value">${a.territory_changes_count}</span></div>
-          ${a.capital ? `<div class="compare-stat"><span class="label">${t('capital')}</span><span class="value">${esc(a.capital.name)}</span></div>` : ''}
-        </div>
-        <div class="compare-card" style="border-top:3px solid ${COLORS[b.status]}">
-          <h4>${TYPE_ICONS[b.entity_type] || ''} ${esc(b.name_original)}</h4>
-          <div class="compare-stat"><span class="label">${t('type')}</span><span class="value">${b.entity_type}</span></div>
-          <div class="compare-stat"><span class="label">${t('period')}</span><span class="value">${fmtY(b.year_start)}–${b.year_end ? fmtY(b.year_end) : t('present')}</span></div>
-          <div class="compare-stat"><span class="label">Durata</span><span class="value">${b.duration_years} anni</span></div>
-          <div class="compare-stat"><span class="label">${t('score')}</span><span class="value">${Math.round(b.confidence_score*100)}%</span></div>
-          <div class="compare-stat"><span class="label">Status</span><span class="value"><span class="status-badge ${b.status}">${t(b.status)}</span></span></div>
-          <div class="compare-stat"><span class="label">${t('sources')}</span><span class="value">${b.sources_count}</span></div>
-          <div class="compare-stat"><span class="label">${t('changes')}</span><span class="value">${b.territory_changes_count}</span></div>
-          ${b.capital ? `<div class="compare-stat"><span class="label">${t('capital')}</span><span class="value">${esc(b.capital.name)}</span></div>` : ''}
-        </div>
-      </div>
+      <h2>\u2696\ufe0f ${t('compare')}</h2>
+      <div class="compare-panel">${makeCard(a)}${makeCard(b)}</div>
       <div class="compare-overlap">
-        <div style="font-size:0.78em;color:var(--text-muted);margin-bottom:4px">Sovrapposizione temporale</div>
-        <div class="overlap-value">${cmp.temporal_overlap_years} anni</div>
-        ${cmp.overlap_period ? `<div style="font-size:0.75em;color:var(--text-muted);margin-top:2px">${cmp.overlap_period}</div>` : '<div style="font-size:0.75em;color:var(--text-muted)">Nessuna sovrapposizione</div>'}
+        <div style="font-size:0.78em;color:var(--text-muted);margin-bottom:4px">${t('temporal_overlap')}</div>
+        <div class="overlap-value">${cmp.temporal_overlap_years.toLocaleString()} ${t('years')}</div>
+        ${cmp.overlap_period ? `<div style="font-size:0.75em;color:var(--text-muted);margin-top:2px">${cmp.overlap_period}</div>` : `<div style="font-size:0.75em;color:var(--text-muted)">${t('no_overlap')}</div>`}
       </div>
       <div class="detail-actions">
-        <button class="btn-share" onclick="showDetail(${a.id})">Vedi ${esc(a.name_original)}</button>
-        <button class="btn-share" onclick="showDetail(${b.id})">Vedi ${esc(b.name_original)}</button>
+        <button class="btn-share" onclick="showDetail(${a.id})">${t('view')} ${esc(a.name_original)}</button>
+        <button class="btn-share" onclick="showDetail(${b.id})">${t('view')} ${esc(b.name_original)}</button>
       </div>`;
 
     // Fit both on map

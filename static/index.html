@@ -7,12 +7,13 @@
   <title>AtlasPI — Database Geografico Storico</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
   <meta property="og:title" content="AtlasPI — Database Geografico Storico">
-  <meta property="og:description" content="255+ entità storiche su 7 regioni, da 4500 a.C. al 2024. Confini reali, fonti accademiche, governance etica.">
+  <meta property="og:description" content="632 entità storiche su 9 regioni, da 4500 a.C. al 2024. Confini reali, fonti accademiche, governance etica.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="/static/style.css" />
 </head>
 <body>
+  <div id="loading-bar" class="loading-bar" style="width:0%"></div>
   <header id="header">
     <div class="header-left">
       <h1>Atlas<span>PI</span></h1>
@@ -40,8 +41,10 @@
         <div class="search-box">
           <label for="search-input" class="sr-only">Cerca entit&agrave;</label>
           <input type="search" id="search-input" placeholder="Cerca per nome, anche varianti..."
-                 aria-label="Cerca entit&agrave; per nome" autocomplete="off" />
+                 aria-label="Cerca entit&agrave; per nome" autocomplete="off" role="combobox"
+                 aria-expanded="false" aria-controls="autocomplete-list" aria-autocomplete="list" />
           <button id="search-btn" title="Cerca" aria-label="Avvia ricerca">&#8594;</button>
+          <div id="autocomplete-list" class="autocomplete-dropdown" role="listbox" aria-label="Suggerimenti ricerca"></div>
         </div>
 
         <div class="year-control">
@@ -140,8 +143,9 @@
       <div id="map-scroll-hint" class="map-scroll-hint">Clicca sulla mappa per abilitare lo zoom con la rotella</div>
       <button id="map-fullscreen" class="map-control-btn" title="Schermo intero" aria-label="Mappa a schermo intero">&#x26F6;</button>
       <button id="map-fit-all" class="map-control-btn map-fit-btn" title="Mostra tutte le entit&agrave;" aria-label="Zoom su tutte le entit&agrave;">&#x29BB;</button>
+      <div id="map-year-badge" class="map-year-badge" aria-live="polite"></div>
       <div class="map-info-overlay" id="map-info">
-        Seleziona un'entit&agrave; dalla lista o clicca su un'area della mappa per visualizzare i dettagli storici, le fonti e le note etiche.
+        Seleziona un'entit&agrave; dalla lista o clicca su un'area della mappa. Tasto destro sulla mappa per trovare entit&agrave; vicine in quell'anno.
       </div>
     </section>
 
@@ -187,7 +191,7 @@
       <span class="legend-item" aria-hidden="true">&#9473; Reale</span>
       <span class="legend-item" aria-hidden="true">&#9476; Approssimato</span>
     </div>
-    <span class="footer-note">AtlasPI v5.5.1 &mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie</span>
+    <span class="footer-note">AtlasPI v5.7.0 &mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie</span>
   </footer>
 
   <noscript>

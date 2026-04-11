@@ -375,6 +375,151 @@ def random_entity(response: Response, db: Session = Depends(get_db)):
 
 
 @router.get(
+    "/v1/nearby",
+    summary="Entit\u00e0 vicine a coordinate date",
+    description=(
+        "Trova entit\u00e0 storiche vicine a una posizione geografica. "
+        "Utile per agenti AI che partono da coordinate."
+    ),
+)
+def nearby_entities(
+    lat: float = Query(..., ge=-90, le=90, description="Latitudine"),
+    lon: float = Query(..., ge=-180, le=180, description="Longitudine"),
+    radius: float = Query(500, ge=1, le=5000, description="Raggio in km"),
+    year: int | None = Query(None, ge=-4500, le=2100, description="Anno (opzionale)"),
+    limit: int = Query(10, ge=1, le=50, description="Max risultati"),
+    response: Response = None,
+    db: Session = Depends(get_db),
+):
+    """Trova entit\u00e0 vicine usando distanza euclidea sulle coordinate capitali.
+
+    ETHICS: la prossimit\u00e0 geografica \u00e8 calcolata dalla capitale,
+    non dai confini reali. Per entit\u00e0 estese (es. Impero Romano)
+    il risultato \u00e8 approssimativo.
+    """
+    import math
+
+    def haversine(lat1, lon1, lat2, lon2):
+        earth_r = 6371  # km
+        dlat = math.radians(lat2 - lat1)
+        dlon = math.radians(lon2 - lon1)
+        a = math.sin(dlat/2)**2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dlon/2)**2
+        return earth_r * 2 * math.asin(math.sqrt(a))
+
+    q = db.query(GeoEntity).filter(
+        GeoEntity.capital_lat.isnot(None),
+        GeoEntity.capital_lon.isnot(None),
+    )
+
+    if year is not None:
+        q = q.filter(GeoEntity.year_start <= year)
+        q = q.filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= year))
+
+    entities = q.all()
+    results = []
+    for e in entities:
+        dist = haversine(lat, lon, e.capital_lat, e.capital_lon)
+        if dist <= radius:
+            results.append((e, round(dist, 1)))
+
+    results.sort(key=lambda x: x[1])
+    results = results[:limit]
+
+    response.headers["Cache-Control"] = "public, max-age=3600"
+
+    return {
+        "query": {"lat": lat, "lon": lon, "radius_km": radius, "year": year},
+        "count": len(results),
+        "entities": [
+            {
+                "id": e.id,
+                "name_original": e.name_original,
+                "entity_type": e.entity_type,
+                "year_start": e.year_start,
+                "year_end": e.year_end,
+                "status": e.status,
+                "confidence_score": e.confidence_score,
+                "capital": {"name": e.capital_name, "lat": e.capital_lat, "lon": e.capital_lon},
+                "distance_km": dist,
+                "continent": _get_continent(e.capital_lat, e.capital_lon),
+            }
+            for e, dist in results
+        ],
+    }
+
+
+@router.get(
+    "/v1/snapshot/{year}",
+    summary="Snapshot del mondo in un anno specifico",
+    description=(
+        "Restituisce tutte le entit\u00e0 attive in un dato anno, "
+        "con conteggi per tipo e continente. Ideale per agenti AI "
+        "che vogliono ricostruire il mondo in un momento storico."
+    ),
+)
+def year_snapshot(
+    year: int,
+    response: Response,
+    type: str | None = Query(None, max_length=50, description="Filtra per tipo"),
+    continent: str | None = Query(None, max_length=50, description="Filtra per continente"),
+    db: Session = Depends(get_db),
+):
+    if year < -4500 or year > 2100:
+        from src.api.errors import AtlasError
+        raise AtlasError(status_code=400, detail=f"Anno fuori range: {year}")
+
+    q = db.query(GeoEntity).filter(GeoEntity.year_start <= year)
+    q = q.filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= year))
+
+    if type:
+        q = q.filter(GeoEntity.entity_type == type)
+
+    entities = q.all()
+
+    # Calcola continenti e filtra se richiesto
+    results = []
+    type_counts: dict[str, int] = {}
+    continent_counts: dict[str, int] = {}
+    status_counts: dict[str, int] = {}
+
+    for e in entities:
+        c = _get_continent(e.capital_lat, e.capital_lon)
+        if continent and c.lower() != continent.lower():
+            continue
+        results.append((e, c))
+        type_counts[e.entity_type] = type_counts.get(e.entity_type, 0) + 1
+        continent_counts[c] = continent_counts.get(c, 0) + 1
+        status_counts[e.status] = status_counts.get(e.status, 0) + 1
+
+    response.headers["Cache-Control"] = "public, max-age=3600"
+
+    return {
+        "year": year,
+        "count": len(results),
+        "summary": {
+            "types": type_counts,
+            "continents": continent_counts,
+            "statuses": status_counts,
+        },
+        "entities": [
+            {
+                "id": e.id,
+                "name_original": e.name_original,
+                "entity_type": e.entity_type,
+                "year_start": e.year_start,
+                "year_end": e.year_end,
+                "status": e.status,
+                "confidence_score": e.confidence_score,
+                "continent": c,
+                "capital": {"name": e.capital_name, "lat": e.capital_lat, "lon": e.capital_lon}
+                if e.capital_name else None,
+            }
+            for e, c in results
+        ],
+    }
+
+
+@router.get(
     "/v1/stats",
     response_model=StatsResponse,
     summary="Statistiche del dataset",

@@ -1,0 +1,2114 @@
+[
+  {
+    "name_original": "大和王権",
+    "name_original_lang": "ja",
+    "entity_type": "kingdom",
+    "year_start": 250,
+    "year_end": 710,
+    "capital_name": "飛鳥",
+    "capital_lat": 34.4747,
+    "capital_lon": 135.82,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in giapponese classico. Il periodo Yamato rappresenta la formazione dello stato giapponese, ma la cronologia prima del V secolo e' fortemente dibattuta. Le fonti primarie (Kojiki, Nihon Shoki) mescolano mito e storia. ETHICS-002: la relazione tra Yamato e gli stati coreani (Gaya, Baekje) e' oggetto di dispute nazionalistiche tra storici giapponesi e coreani, particolarmente riguardo alla presunta colonia giapponese di Mimana. Il database presenta entrambe le interpretazioni senza privilegiarne una. ETHICS-004: il trattamento delle popolazioni Emishi e Kumaso come 'barbari' nella storiografia giapponese tradizionale riflette un bias etnocentrico.",
+    "name_variants": [
+      {
+        "name": "Yamato Kingdom",
+        "lang": "en",
+        "period_start": 250,
+        "period_end": 710,
+        "context": "denominazione inglese standard",
+        "source": "Piggott, J. The Emergence of Japanese Kingship (1997)"
+      },
+      {
+        "name": "Regno di Yamato",
+        "lang": "it",
+        "period_start": 250,
+        "period_end": 710,
+        "context": "denominazione italiana",
+        "source": "Caroli, R. & Gatti, F. Storia del Giappone (2004)"
+      },
+      {
+        "name": "倭国",
+        "lang": "zh",
+        "period_start": 250,
+        "period_end": 600,
+        "context": "nome cinese nelle fonti Wei e Sui; 'Wa' era il termine cinese per il Giappone, considerato peggiorativo dai giapponesi",
+        "source": "Weishu (Libro dei Wei), cap. 30"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 250,
+        "region": "Kinai (regione del Kansai)",
+        "change_type": "UNIFICATION",
+        "description": "Consolidamento della corte Yamato nella regione del Kinai. Le tombe a tumulo (kofun) di dimensioni crescenti indicano una centralizzazione del potere. La regina Himiko, menzionata nelle fonti cinesi Wei, potrebbe appartenere a questo periodo o precedente. La cronologia resta molto incerta.",
+        "population_affected": null,
+        "confidence_score": 0.35
+      },
+      {
+        "year": 527,
+        "region": "Kyushu settentrionale",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ribellione di Iwai nel nord Kyushu repressa dalla corte Yamato. L'episodio dimostra che il controllo di Yamato su Kyushu non era ancora consolidato nel VI secolo. La vittoria rafforzo' il potere centrale.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 645,
+        "region": "Giappone centrale",
+        "change_type": "ADMINISTRATIVE_REFORM",
+        "description": "Riforma Taika: colpo di stato contro il clan Soga e ristrutturazione dello stato sul modello cinese Tang. Nazionalizzazione delle terre, creazione di province e distretti, introduzione del sistema ritsuryo. Trasformazione fondamentale del Yamato in stato burocratico centralizzato.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Piggott, J. The Emergence of Japanese Kingship (1997)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Barnes, G. State Formation in Japan (2007)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Nihon Shoki (Cronache del Giappone, 720 d.C.)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "奈良時代",
+    "name_original_lang": "ja",
+    "entity_type": "kingdom",
+    "year_start": 710,
+    "year_end": 794,
+    "capital_name": "平城京",
+    "capital_lat": 34.6851,
+    "capital_lon": 135.8048,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in giapponese. Il periodo Nara vide la compilazione delle storie ufficiali (Kojiki, Nihon Shoki) che costruirono la narrativa dell'origine divina della dinastia imperiale. ETHICS-002: queste narrazioni mitologiche furono usate per legittimare il dominio Yamato e successivamente strumentalizzate dal nazionalismo giapponese moderno. La coesistenza con le popolazioni Emishi nelle regioni settentrionali comporto' campagne militari documentate con eufemismi nella storiografia ufficiale.",
+    "name_variants": [
+      {
+        "name": "Nara Period",
+        "lang": "en",
+        "period_start": 710,
+        "period_end": 794,
+        "context": "denominazione inglese standard dal nome della capitale",
+        "source": "Totman, C. A History of Japan (2005)"
+      },
+      {
+        "name": "Periodo Nara",
+        "lang": "it",
+        "period_start": 710,
+        "period_end": 794,
+        "context": "denominazione italiana",
+        "source": "Caroli, R. & Gatti, F. Storia del Giappone (2004)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 710,
+        "region": "Nara (Heijo-kyo)",
+        "change_type": "ADMINISTRATIVE_REFORM",
+        "description": "Fondazione della capitale permanente Heijo-kyo (Nara) sul modello di Chang'an della dinastia Tang. La citta' raggiunse una popolazione di circa 100.000 abitanti. Sistema amministrativo ritsuryo pienamente operativo con province governate da funzionari centrali.",
+        "population_affected": 100000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 724,
+        "region": "Tohoku (Honshu nord-orientale)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Intensificazione delle campagne contro gli Emishi nel nord-est. Costruzione di fortezze (jo/saku) come Taga-jo. Le popolazioni Emishi subirono espropriazione delle terre e assimilazione forzata. La storiografia giapponese tradizionale presenta queste campagne come 'pacificazione', oscurando la violenza della conquista.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Totman, C. A History of Japan (2005)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Shoku Nihongi (Cronache Continuate del Giappone, 797 d.C.)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Piggott, J. (ed.) Capital and Countryside in Japan, 300-1180 (2006)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "平安時代",
+    "name_original_lang": "ja",
+    "entity_type": "kingdom",
+    "year_start": 794,
+    "year_end": 1185,
+    "capital_name": "平安京",
+    "capital_lat": 35.0116,
+    "capital_lon": 135.7681,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in giapponese. Il periodo Heian e' considerato l'apice della cultura classica giapponese, ma questa narrativa privilegia l'elite di corte e ignora la condizione dei contadini e delle classi subalterne. ETHICS-002: il sistema shoen (possedimenti privati) creo' disuguaglianze fondiarie estreme. Le campagne militari contro gli Emishi culminarono nella sottomissione definitiva del nord-est, con conseguenze durature per le popolazioni indigene.",
+    "name_variants": [
+      {
+        "name": "Heian Period",
+        "lang": "en",
+        "period_start": 794,
+        "period_end": 1185,
+        "context": "denominazione inglese standard, dal nome della capitale 'Heian-kyo' (capitale della pace)",
+        "source": "Shively, D. & McCullough, W. Cambridge History of Japan, Vol. 2 (1999)"
+      },
+      {
+        "name": "Periodo Heian",
+        "lang": "it",
+        "period_start": 794,
+        "period_end": 1185,
+        "context": "denominazione italiana",
+        "source": "Caroli, R. & Gatti, F. Storia del Giappone (2004)"
+      },
+      {
+        "name": "藤原時代",
+        "lang": "ja",
+        "period_start": 858,
+        "period_end": 1068,
+        "context": "periodo di dominio dei reggenti Fujiwara, il clan piu' potente dell'era Heian",
+        "source": "McCullough, W. & McCullough, H. A Tale of Flowering Fortunes (1980)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 794,
+        "region": "Heian-kyo (Kyoto)",
+        "change_type": "ADMINISTRATIVE_REFORM",
+        "description": "L'imperatore Kanmu trasferisce la capitale a Heian-kyo (Kyoto) per sfuggire all'influenza dei monasteri buddisti di Nara. La nuova capitale restera' sede imperiale per oltre mille anni. Contemporaneamente, campagne militari decisive contro gli Emishi sotto il generale Sakanoue no Tamuramaro.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1185,
+        "region": "Dan-no-ura (Shimonoseki)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Battaglia di Dan-no-ura: il clan Minamoto sconfigge definitivamente i Taira nella guerra Genpei. L'imperatore bambino Antoku annega. Minamoto no Yoritomo stabilisce il bakufu (governo militare) a Kamakura, segnando la fine del potere effettivo della corte imperiale.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Shively, D. & McCullough, W. (eds.) The Cambridge History of Japan, Vol. 2: Heian Japan (1999)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Morris, I. The World of the Shining Prince (1964)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Heike Monogatari (Racconto dei Taira, XIII secolo)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "鎌倉幕府",
+    "name_original_lang": "ja",
+    "entity_type": "kingdom",
+    "year_start": 1185,
+    "year_end": 1333,
+    "capital_name": "鎌倉",
+    "capital_lat": 35.3192,
+    "capital_lon": 139.5467,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in giapponese. Lo shogunato di Kamakura introdusse il governo militare (bakufu) che caratterizzera' il Giappone per sette secoli. ETHICS-002: la classe guerriera (bushi) imponeva un sistema feudale con servitu' contadina. Le invasioni mongole del 1274 e 1281 coinvolsero combattenti coreani forzati a partecipare dall'occupazione Yuan della Corea.",
+    "name_variants": [
+      {
+        "name": "Kamakura Shogunate",
+        "lang": "en",
+        "period_start": 1185,
+        "period_end": 1333,
+        "context": "denominazione inglese standard",
+        "source": "Mass, J. (ed.) The Origins of Japan's Medieval World (1997)"
+      },
+      {
+        "name": "Shogunato di Kamakura",
+        "lang": "it",
+        "period_start": 1185,
+        "period_end": 1333,
+        "context": "denominazione italiana",
+        "source": "Caroli, R. & Gatti, F. Storia del Giappone (2004)"
+      },
+      {
+        "name": "鎌倉時代",
+        "lang": "ja",
+        "period_start": 1185,
+        "period_end": 1333,
+        "context": "nome alternativo giapponese come designazione di periodo",
+        "source": "Kozo Yamamura (ed.) Cambridge History of Japan, Vol. 3 (1990)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1185,
+        "region": "Kamakura (Kanto)",
+        "change_type": "ADMINISTRATIVE_REFORM",
+        "description": "Minamoto no Yoritomo stabilisce il bakufu (governo militare) a Kamakura dopo la vittoria nella guerra Genpei. Nomina di shugo (governatori militari) e jito (amministratori fondiari) in tutto il Giappone. Creazione di un sistema duale: corte imperiale a Kyoto, potere reale a Kamakura.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1274,
+        "region": "Kyushu settentrionale (Hakata)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Prima invasione mongola: flotta di circa 900 navi con 23.000 soldati mongoli, cinesi e coreani attacca Hakata. I coreani furono costretti dalla dinastia Yuan a fornire navi e soldati. Un tifone disperse la flotta. Nel 1281 una seconda invasione con 140.000 uomini fu distrutta da un altro tifone (kamikaze).",
+        "population_affected": 140000,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1333,
+        "region": "Kamakura",
+        "change_type": "DISSOLUTION",
+        "description": "L'imperatore Go-Daigo si ribella contro lo shogunato. Il generale Ashikaga Takauji tradisce Kamakura e i guerrieri di Nitta Yoshisada assaltano la citta'. Il reggente Hojo Takatoki e centinaia di guerrieri Hojo si suicidano ritualmente. Fine dello shogunato.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Kozo Yamamura (ed.) The Cambridge History of Japan, Vol. 3: Medieval Japan (1990)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Mass, J. (ed.) The Origins of Japan's Medieval World: Courtiers, Clerics, Warriors, and Peasants in the Fourteenth Century (1997)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Conlan, T. In Little Need of Divine Intervention: Takezaki Suenaga's Scrolls of the Mongol Invasions of Japan (2001)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "室町幕府",
+    "name_original_lang": "ja",
+    "entity_type": "kingdom",
+    "year_start": 1336,
+    "year_end": 1573,
+    "capital_name": "京都",
+    "capital_lat": 35.0116,
+    "capital_lon": 135.7681,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in giapponese. Il periodo Muromachi/Ashikaga include il Sengoku (Stati Combattenti), un'era di guerra civile con milioni di vittime e devastazioni. ETHICS-002: il commercio con la Cina Ming (tally trade) prevedeva una relazione tributaria che la storiografia nazionalista giapponese ha spesso minimizzato. La pirateria wako causava sofferenze lungo le coste cinesi e coreane.",
+    "name_variants": [
+      {
+        "name": "Muromachi Shogunate / Ashikaga Shogunate",
+        "lang": "en",
+        "period_start": 1336,
+        "period_end": 1573,
+        "context": "denominazioni inglesi intercambiabili: Muromachi dal quartiere di Kyoto, Ashikaga dal clan dominante",
+        "source": "Kozo Yamamura (ed.) Cambridge History of Japan, Vol. 3 (1990)"
+      },
+      {
+        "name": "Shogunato Muromachi / Ashikaga",
+        "lang": "it",
+        "period_start": 1336,
+        "period_end": 1573,
+        "context": "denominazione italiana",
+        "source": "Caroli, R. & Gatti, F. Storia del Giappone (2004)"
+      },
+      {
+        "name": "足利幕府",
+        "lang": "ja",
+        "period_start": 1336,
+        "period_end": 1573,
+        "context": "nome alternativo giapponese dal clan Ashikaga",
+        "source": "Kozo Yamamura (ed.) Cambridge History of Japan, Vol. 3 (1990)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1336,
+        "region": "Kyoto",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ashikaga Takauji sconfigge le forze dell'imperatore Go-Daigo e installa un imperatore rivale. Inizio del periodo delle Corti del Nord e del Sud (Nanboku-cho), con due imperatori rivali. La guerra civile devasta il Giappone centrale per 56 anni.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1467,
+        "region": "Kyoto e tutto il Giappone",
+        "change_type": "DISSOLUTION",
+        "description": "Guerra Onin (1467-1477): disputa di successione nello shogunato degenera in guerra civile che distrugge Kyoto. Inizio dell'era Sengoku (Stati Combattenti) con frammentazione del potere tra daimyo regionali. Cento anni di guerre con milioni di vittime e dislocamenti.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1573,
+        "region": "Kyoto",
+        "change_type": "DISSOLUTION",
+        "description": "Oda Nobunaga espelle l'ultimo shogun Ashikaga Yoshiaki da Kyoto. Fine formale dello shogunato Muromachi. Nobunaga inizia il processo di riunificazione del Giappone.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Kozo Yamamura (ed.) The Cambridge History of Japan, Vol. 3: Medieval Japan (1990)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Berry, M.E. The Culture of Civil War in Kyoto (1994)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Sansom, G. A History of Japan, 1334-1615 (1961)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "安土桃山時代",
+    "name_original_lang": "ja",
+    "entity_type": "kingdom",
+    "year_start": 1568,
+    "year_end": 1600,
+    "capital_name": "安土城",
+    "capital_lat": 35.1547,
+    "capital_lon": 136.1356,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in giapponese. Il periodo Azuchi-Momoyama include le invasioni giapponesi della Corea (1592-1598) di Toyotomi Hideyoshi, che causarono devastazioni immense in Corea: centinaia di migliaia di morti, deportazione di artigiani coreani, distruzione di patrimonio culturale. ETHICS-002: queste invasioni sono un tema estremamente sensibile nelle relazioni coreano-giapponesi. Il database documenta le prospettive coreane e giapponesi. La pratica della raccolta di orecchie/nasi (mimizuka) dei nemici uccisi e' documentata ed esposta onestamente.",
+    "name_variants": [
+      {
+        "name": "Azuchi-Momoyama Period",
+        "lang": "en",
+        "period_start": 1568,
+        "period_end": 1600,
+        "context": "denominazione inglese: Azuchi dal castello di Nobunaga, Momoyama dal castello di Hideyoshi",
+        "source": "Berry, M.E. Hideyoshi (1982)"
+      },
+      {
+        "name": "Periodo Azuchi-Momoyama",
+        "lang": "it",
+        "period_start": 1568,
+        "period_end": 1600,
+        "context": "denominazione italiana",
+        "source": "Caroli, R. & Gatti, F. Storia del Giappone (2004)"
+      },
+      {
+        "name": "織豊時代",
+        "lang": "ja",
+        "period_start": 1568,
+        "period_end": 1600,
+        "context": "nome alternativo giapponese dalle prime sillabe dei clan Oda e Toyotomi (Shokuho jidai)",
+        "source": "Asao Naohiro (ed.) Iwanami Koza Nihon Tsushi, Vol. 11 (1994)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1568,
+        "region": "Giappone centrale",
+        "change_type": "UNIFICATION",
+        "description": "Oda Nobunaga entra a Kyoto e inizia la riunificazione del Giappone. Distruzione sistematica delle fortezze dei monasteri guerrieri (ikko-ikki), incluso il massacro di Nagashima (1574, circa 20.000 morti) e l'incendio dell'Enryaku-ji sul Monte Hiei (1571, migliaia di morti).",
+        "population_affected": 20000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1592,
+        "region": "Penisola coreana",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Toyotomi Hideyoshi invade la Corea (Imjin War / 임진왜란) con circa 158.000 soldati. Prima invasione (1592-1593): conquista rapida ma resistenza coreana (ammiraglio Yi Sun-sin) e intervento Ming cinese. Seconda invasione (1597-1598) fallisce. Devastazione della Corea: centinaia di migliaia di vittime civili e militari, deportazione di artigiani ceramisti coreani in Giappone.",
+        "population_affected": 1000000,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Berry, M.E. Hideyoshi (1982)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Turnbull, S. Samurai Invasion: Japan's Korean War 1592-1598 (2002)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Swope, K. A Dragon's Head and a Serpent's Tail: Ming China and the First Great East Asian War, 1592-1598 (2009)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "隋朝",
+    "name_original_lang": "zh",
+    "entity_type": "empire",
+    "year_start": 581,
+    "year_end": 618,
+    "capital_name": "大興城",
+    "capital_lat": 34.265,
+    "capital_lon": 108.9422,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in cinese. La dinastia Sui riunifico' la Cina dopo quasi quattro secoli di divisione, ma il suo secondo imperatore (Yang Di) e' ricordato per la coscrizione di massa e la brutalita'. ETHICS-002: la costruzione del Grande Canale e le campagne militari contro Goguryeo costarono milioni di vite. Le fonti ufficiali Tang tendono a esagerare la tirannia dei Sui per giustificare il cambio di dinastia (narrativa del 'Mandato del Cielo').",
+    "name_variants": [
+      {
+        "name": "Sui Dynasty",
+        "lang": "en",
+        "period_start": 581,
+        "period_end": 618,
+        "context": "denominazione inglese standard",
+        "source": "Wright, A. The Sui Dynasty (1978)"
+      },
+      {
+        "name": "Dinastia Sui",
+        "lang": "it",
+        "period_start": 581,
+        "period_end": 618,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 589,
+        "region": "Cina meridionale",
+        "change_type": "UNIFICATION",
+        "description": "Conquista della dinastia Chen nel sud: riunificazione della Cina dopo 369 anni di divisione tra Nord e Sud. L'imperatore Wen Di creo' uno stato centralizzato efficiente con il sistema di esami imperiali e il codice legale Kaihuang.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 612,
+        "region": "Goguryeo (Corea settentrionale / Manciuria)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Prima delle tre disastrose campagne di Yang Di contro Goguryeo. L'esercito Sui di oltre un milione di uomini fu sconfitto nella battaglia del fiume Salsu (612), con la perdita di quasi l'intero corpo di spedizione (forse 300.000 morti). Le campagne fallite contribuirono direttamente alla caduta della dinastia.",
+        "population_affected": 300000,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 618,
+        "region": "Cina",
+        "change_type": "DISSOLUTION",
+        "description": "Ribellioni su vasta scala provocate dalla coscrizione per le guerre coreane e i mega-progetti edilizi. Yang Di assassinato dai suoi guardie. Li Yuan (futuro Tang Gaozu) prende il potere e fonda la dinastia Tang.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Wright, A. The Sui Dynasty: The Unification of China, A.D. 581-617 (1978)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Xiong, V.C. Emperor Yang of the Sui Dynasty: His Life, Times, and Legacy (2006)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Suishu (Libro dei Sui), storia ufficiale compilata sotto i Tang",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "北魏",
+    "name_original_lang": "zh",
+    "entity_type": "empire",
+    "year_start": 386,
+    "year_end": 534,
+    "capital_name": "平城",
+    "capital_lat": 40.0764,
+    "capital_lon": 113.2979,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in cinese, ma la dinastia fu fondata dai Tuoba, un popolo Xianbei (proto-mongolo/turco). ETHICS-002: la sinizzazione dei Tuoba sotto l'imperatore Xiaowen (riforma del 494: cambio di cognomi, abbigliamento, lingua) e' un caso emblematico di assimilazione culturale volontaria dall'alto, ma forzata sulla popolazione Xianbei. Questo processo va presentato nella sua complessita': non fu ne' una semplice 'civilizzazione' ne' una mera perdita identitaria. ETHICS-004: le Grotte di Yungang e Longmen testimoniano la fusione culturale sino-steppica.",
+    "name_variants": [
+      {
+        "name": "Northern Wei Dynasty",
+        "lang": "en",
+        "period_start": 386,
+        "period_end": 534,
+        "context": "denominazione inglese standard",
+        "source": "Holcombe, C. In the Shadow of the Han (1994)"
+      },
+      {
+        "name": "Dinastia Wei del Nord",
+        "lang": "it",
+        "period_start": 386,
+        "period_end": 534,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      },
+      {
+        "name": "拓跋魏",
+        "lang": "zh",
+        "period_start": 386,
+        "period_end": 494,
+        "context": "nome cinese dal cognome originario Tuoba prima della sinizzazione",
+        "source": "Weishu (Libro dei Wei)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 439,
+        "region": "Cina settentrionale",
+        "change_type": "UNIFICATION",
+        "description": "I Wei del Nord unificano tutto il nord della Cina conquistando lo stato di Liang del Nord, ultimo dei Sedici Regni. Per la prima volta dalla caduta dei Jin Occidentali (316), tutto il nord e' sotto un unico governo. Amministrazione duale: tradizioni steppiche per l'esercito, burocrazia cinese per il governo civile.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 494,
+        "region": "Luoyang",
+        "change_type": "ADMINISTRATIVE_REFORM",
+        "description": "L'imperatore Xiaowen trasferisce la capitale da Pingcheng a Luoyang e impone la sinizzazione radicale: adozione di cognomi cinesi (Tuoba diventa Yuan), abbigliamento cinese obbligatorio, divieto della lingua Xianbei a corte, matrimoni misti incoraggiati. Questa riforma alieno' la guarnigione militare del nord e contribui' alla futura divisione.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 534,
+        "region": "Cina settentrionale",
+        "change_type": "PARTITION",
+        "description": "Divisione dei Wei del Nord in Wei Orientali (capitale Ye, controllati dal generale Gao Huan) e Wei Occidentali (capitale Chang'an, controllati da Yuwen Tai). La frattura riflette il conflitto tra fazione sinizzata e fazione pro-tradizioni steppiche.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Holcombe, C. In the Shadow of the Han: Literati Thought and Society at the Beginning of the Southern Dynasties (1994)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Pearce, S., Spiro, A. & Ebrey, P. (eds.) Culture and Power in the Reconstitution of the Chinese Realm, 200-600 (2001)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Weishu (Libro dei Wei), storia ufficiale compilata da Wei Shou (554)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "南宋",
+    "name_original_lang": "zh",
+    "entity_type": "dynasty",
+    "year_start": 1127,
+    "year_end": 1279,
+    "capital_name": "臨安",
+    "capital_lat": 30.2741,
+    "capital_lon": 120.1551,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in cinese. La Song del Sud e' distinta dalla Song (del Nord) gia' presente nel database. ETHICS-002: la caduta dei Song del Nord (1127) comporto' la cattura dell'imperatore e della famiglia imperiale da parte dei Jurchen Jin (Incidente di Jingkang), un evento traumatico nella memoria storica cinese. Il generale Yue Fei, eroe nazionale cinese, fu giustiziato dalla fazione pacifista — la sua figura e' stata strumentalizzata da narrativi nazionalistiche in epoche diverse. ETHICS-003: la conquista mongola di Xiangyang (1273) e la resa finale furono accompagnate da distruzioni e massacri.",
+    "name_variants": [
+      {
+        "name": "Southern Song Dynasty",
+        "lang": "en",
+        "period_start": 1127,
+        "period_end": 1279,
+        "context": "denominazione inglese standard, distinta dalla Northern Song (960-1127)",
+        "source": "Hymes, R. & Schirokauer, C. (eds.) Ordering the World (1993)"
+      },
+      {
+        "name": "Dinastia Song del Sud",
+        "lang": "it",
+        "period_start": 1127,
+        "period_end": 1279,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1127,
+        "region": "Jiangnan (Cina meridionale)",
+        "change_type": "PARTITION",
+        "description": "Incidente di Jingkang: i Jurchen Jin catturano l'imperatore Qinzong e il padre Huizong con 3.000 membri della corte, deportandoli in Manciuria. Il principe Zhao Gou fugge a sud e fonda i Song del Sud con capitale a Lin'an (Hangzhou). Perdita di tutta la Cina settentrionale.",
+        "population_affected": 3000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1141,
+        "region": "Confine Song-Jin",
+        "change_type": "CESSION",
+        "description": "Trattato di Shaoxing: i Song del Sud cedono formalmente tutta la Cina a nord del fiume Huai ai Jurchen Jin e accettano lo status di tributari. Il generale Yue Fei, che aveva riconquistato territorio, fu richiamato e giustiziato per ordine del cancelliere Qin Hui. La pace permise prosperita' economica ma al prezzo della divisione permanente.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1279,
+        "region": "Yamen (Guangdong)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Battaglia di Yamen: la flotta mongola Yuan distrugge l'ultima resistenza Song. Il ministro Lu Xiufu si getta in mare con l'ultimo imperatore bambino. Fine definitiva della dinastia Song. La conquista mongola della Cina meridionale causo' perdite demografiche enormi, stimate fino al 50% della popolazione in alcune regioni.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hymes, R. & Schirokauer, C. (eds.) Ordering the World: Approaches to State and Society in Sung Dynasty China (1993)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Lorge, P. War, Politics and Society in Early Modern China, 900-1795 (2005)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Songshi (Storia dei Song), storia ufficiale compilata sotto gli Yuan",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "五代",
+    "name_original_lang": "zh",
+    "entity_type": "dynasty",
+    "year_start": 907,
+    "year_end": 960,
+    "capital_name": "開封",
+    "capital_lat": 34.7972,
+    "capital_lon": 114.3075,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in cinese. Le Cinque Dinastie (Liang Posteriore, Tang Posteriore, Jin Posteriore, Han Posteriore, Zhou Posteriore) controllavano solo il nord della Cina. ETHICS-002: questo e' un periodo di frammentazione e guerra continua. I Dieci Regni (十國) nel sud non sono inclusi individualmente ma la loro esistenza va riconosciuta. Alcune dinastie furono fondate da generali di origine turca Shatuo (Tang Posteriore, Jin Posteriore, Han Posteriore), un aspetto spesso minimizzato dalla storiografia tradizionale cinese che privilegia la narrativa di continuita' dinastica cinese.",
+    "name_variants": [
+      {
+        "name": "Five Dynasties and Ten Kingdoms",
+        "lang": "en",
+        "period_start": 907,
+        "period_end": 960,
+        "context": "denominazione inglese completa includendo i regni meridionali",
+        "source": "Mote, F.W. Imperial China, 900-1800 (1999)"
+      },
+      {
+        "name": "Cinque Dinastie e Dieci Regni",
+        "lang": "it",
+        "period_start": 907,
+        "period_end": 960,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      },
+      {
+        "name": "五代十國",
+        "lang": "zh",
+        "period_start": 907,
+        "period_end": 979,
+        "context": "nome completo cinese includendo i Dieci Regni (caduti tra 960 e 979)",
+        "source": "Xin Wudaishi (Nuova Storia delle Cinque Dinastie) di Ouyang Xiu"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 907,
+        "region": "Cina settentrionale",
+        "change_type": "DISSOLUTION",
+        "description": "Caduta della dinastia Tang. Il generale Zhu Wen depone l'ultimo imperatore Tang e fonda la dinastia Liang Posteriore. La Cina si frammenta in multipli stati rivali. Il sud si divide nei Dieci Regni, largamente indipendenti.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 938,
+        "region": "Sedici Prefetture (nord di Pechino)",
+        "change_type": "CESSION",
+        "description": "Shi Jingtang, fondatore dei Jin Posteriori, cede le strategiche Sedici Prefetture (Yanyun Shiliu Zhou) ai Khitan Liao in cambio del loro aiuto militare. Questa cessione rimuove la barriera difensiva naturale della Cina settentrionale e sara' causa di conflitti per i successivi due secoli.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 960,
+        "region": "Kaifeng",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Il generale Zhao Kuangyin compie un colpo di stato incruento (mutineria di Chenqiao) e fonda la dinastia Song. Fine delle Cinque Dinastie. La riunificazione della Cina procedera' gradualmente fino al 979 (conquista dei Han del Nord, ultimo dei Dieci Regni).",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Mote, F.W. Imperial China, 900-1800 (1999)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ouyang Xiu, Xin Wudaishi (Nuova Storia delle Cinque Dinastie, 1053)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Standen, N. Unbounded Loyalty: Frontier Crossings in Liao China (2007)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "太平天國",
+    "name_original_lang": "zh",
+    "entity_type": "kingdom",
+    "year_start": 1851,
+    "year_end": 1864,
+    "capital_name": "天京",
+    "capital_lat": 32.0603,
+    "capital_lon": 118.7969,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in cinese (Taiping Tianguo, 'Regno Celeste della Grande Pace'). ETHICS-002: la Ribellione Taiping fu il conflitto piu' mortale del XIX secolo, con stime di 20-30 milioni di morti (alcune stime arrivano a 70 milioni). Il leader Hong Xiuquan affermava di essere il fratello di Gesu' Cristo. La guerra coinvolse violenze di massa da entrambe le parti: i Taiping massacrarono manchu e buddisti, le forze Qing compirono rappresaglie indiscriminate. ETHICS-003: il coinvolgimento occidentale (Charles Gordon, Frederick Ward) a supporto dei Qing va documentato come intervento coloniale nei conflitti interni cinesi.",
+    "name_variants": [
+      {
+        "name": "Taiping Heavenly Kingdom",
+        "lang": "en",
+        "period_start": 1851,
+        "period_end": 1864,
+        "context": "traduzione letterale del nome ufficiale",
+        "source": "Platt, S. Autumn in the Heavenly Kingdom (2012)"
+      },
+      {
+        "name": "Regno Celeste Taiping",
+        "lang": "it",
+        "period_start": 1851,
+        "period_end": 1864,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      },
+      {
+        "name": "Taiping Rebellion",
+        "lang": "en",
+        "period_start": 1851,
+        "period_end": 1864,
+        "context": "denominazione come ribellione, prospettiva della dinastia Qing",
+        "source": "Spence, J. God's Chinese Son (1996)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1853,
+        "region": "Nanjing e valle dello Yangtze",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "I Taiping conquistano Nanjing, rinominata Tianjing ('Capitale Celeste'). La popolazione manchu della citta' (circa 40.000 persone) fu sterminata. Il Regno Celeste controlla vaste aree del sud e centro della Cina con una popolazione stimata di 30 milioni.",
+        "population_affected": 40000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1856,
+        "region": "Nanjing",
+        "change_type": "DISSOLUTION",
+        "description": "Incidente di Tianjing: guerra civile interna tra i leader Taiping. Il Re dell'Est Yang Xiuqing assassinato dal Re del Nord Wei Changhui, che a sua volta viene giustiziato. Purga di migliaia di seguaci. L'autodistruzione della leadership Taiping segna l'inizio del declino.",
+        "population_affected": 20000,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1864,
+        "region": "Nanjing",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Le forze Qing del generale Zeng Guofan conquistano Nanjing dopo un lungo assedio. Massacro della popolazione della citta': stime variabili da 100.000 a oltre un milione di morti. Hong Xiuquan era morto poco prima (per malattia o suicidio). Fine del Regno Celeste dopo 13 anni di guerra che devasto' vaste aree della Cina.",
+        "population_affected": 100000,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Spence, J. God's Chinese Son: The Taiping Heavenly Kingdom of Hong Xiuquan (1996)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Platt, S. Autumn in the Heavenly Kingdom: China, the West, and the Epic Story of the Taiping Civil War (2012)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Reilly, T. The Taiping Heavenly Kingdom: Rebellion and the Blasphemy of Empire (2004)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "大理國",
+    "name_original_lang": "zh",
+    "entity_type": "kingdom",
+    "year_start": 937,
+    "year_end": 1253,
+    "capital_name": "大理",
+    "capital_lat": 25.6065,
+    "capital_lon": 100.2679,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome cinese e' la forma piu' attestata nelle fonti storiche, ma il regno era multietnico con popolazione prevalentemente Bai. Il nome nella lingua Bai non e' attestato con certezza. ETHICS-002: il regno di Dali era uno stato multietnico (Bai, Yi, Dai, Naxi e altri) nella regione dell'attuale Yunnan. La storiografia cinese tende a presentarlo come stato periferico, ma era un regno sofisticato con propria cultura buddista. La conquista mongola (1253) porto' alla distruzione di questo sistema politico autonomo. ETHICS-004: le minoranze etniche dello Yunnan odierno discendono in parte dalle popolazioni di Dali.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Dali",
+        "lang": "en",
+        "period_start": 937,
+        "period_end": 1253,
+        "context": "denominazione inglese standard",
+        "source": "Backus, C. The Nan-chao Kingdom and T'ang China's Southwestern Frontier (1981)"
+      },
+      {
+        "name": "Regno di Dali",
+        "lang": "it",
+        "period_start": 937,
+        "period_end": 1253,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      },
+      {
+        "name": "Duan Dali",
+        "lang": "zh",
+        "period_start": 937,
+        "period_end": 1253,
+        "context": "dal clan regnante Duan",
+        "source": "Yang Shenmin, Dali Guoshi (2001)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 937,
+        "region": "Yunnan",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Duan Siping fonda il regno di Dali dopo il collasso della dinastia Zhao dello Yunnan, successore di Nanzhao. Il nuovo stato eredita il territorio di Nanzhao coprendo l'attuale Yunnan, parti del Guizhou, Sichuan meridionale e zone dell'odierna Birmania e Vietnam settentrionale.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 1253,
+        "region": "Yunnan",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "L'esercito mongolo guidato da Kublai Khan conquista Dali. Il re Duan Xingzhi si arrende. I Mongoli mantengono i Duan come amministratori locali ma sotto supervisione diretta. Lo Yunnan viene integrato nell'Impero Yuan, segnando la fine dell'indipendenza politica della regione che durava da sei secoli (dal Nanzhao).",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Backus, C. The Nan-chao Kingdom and T'ang China's Southwestern Frontier (1981)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Yang Shenmin, Dali Guoshi Xintan (Nuova Esplorazione della Storia di Dali) (2001)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Yuanshi (Storia degli Yuan), capitoli sullo Yunnan",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "南詔",
+    "name_original_lang": "zh",
+    "entity_type": "kingdom",
+    "year_start": 738,
+    "year_end": 902,
+    "capital_name": "太和城",
+    "capital_lat": 25.689,
+    "capital_lon": 100.1575,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome cinese 南詔 (Nanzhao) e' il piu' attestato, ma il regno era fondato dal popolo Bai/Mengshe-zhao. Le fonti in lingua locale non sono sopravvissute. ETHICS-002: Nanzhao fu un attore regionale potente che sconfisse ripetutamente gli eserciti Tang, ma la storiografia cinese tende a rappresentarlo come stato 'barbaro' periferico. Le campagne Tang contro Nanzhao (751, 754) furono disastri militari con centinaia di migliaia di morti cinesi. Il poeta Bai Juyi denuncio' la sofferenza dei coscritti nelle guerre Nanzhao.",
+    "name_variants": [
+      {
+        "name": "Nanzhao Kingdom",
+        "lang": "en",
+        "period_start": 738,
+        "period_end": 902,
+        "context": "denominazione inglese standard",
+        "source": "Backus, C. The Nan-chao Kingdom and T'ang China's Southwestern Frontier (1981)"
+      },
+      {
+        "name": "Regno di Nanzhao",
+        "lang": "it",
+        "period_start": 738,
+        "period_end": 902,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      },
+      {
+        "name": "蒙舍詔",
+        "lang": "zh",
+        "period_start": 649,
+        "period_end": 738,
+        "context": "nome originario come uno dei sei zhao (principati) della regione prima dell'unificazione",
+        "source": "Manshu (Libro dei Barbari del Sud) di Fan Chuo (863)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 738,
+        "region": "Yunnan",
+        "change_type": "UNIFICATION",
+        "description": "Piluoge unifica i sei zhao (principati) della regione con il supporto della dinastia Tang, formando il Nanzhao. Il territorio copre l'attuale Yunnan, parti del Guizhou, Sichuan meridionale, Birmania settentrionale e Laos settentrionale.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 751,
+        "region": "Yunnan / frontiera Tang",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Nanzhao si rivolta contro i Tang e sconfigge un esercito cinese di 80.000 uomini nella Battaglia di Xiaguan. Nel 754, una seconda spedizione Tang di 100.000 uomini e' annientata. Il poeta Bai Juyi nel suo 'Canto della Guerra di Yunnan' denuncio' le sofferenze dei coscritti. Alleanza con il Tibet contro i Tang.",
+        "population_affected": 180000,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 902,
+        "region": "Yunnan",
+        "change_type": "DISSOLUTION",
+        "description": "Il ministro Zheng Maisi usurpa il trono e la dinastia Meng termina. Seguono decenni di instabilita' nello Yunnan fino alla fondazione del Regno di Dali nel 937.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Backus, C. The Nan-chao Kingdom and T'ang China's Southwestern Frontier (1981)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Fan Chuo, Manshu (Libro dei Barbari del Sud, 863 d.C.)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Luce, G.H. The Early Syam in Burma's History. A Supplement. Journal of the Siam Society, Vol. 47, Part 1 (1959)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "楚國",
+    "name_original_lang": "zh",
+    "entity_type": "kingdom",
+    "year_start": -770,
+    "year_end": -223,
+    "capital_name": "郢",
+    "capital_lat": 30.3267,
+    "capital_lon": 112.2339,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in cinese. Lo Stato di Chu e' un caso importante di 'alterita'' nella storia cinese antica: considerato semi-barbaro dagli stati del nord (Zhongyuan), Chu aveva una cultura distintiva (lingua, religione, arte) che fu in parte assimilata dopo la conquista Qin. ETHICS-002: la distruzione di Chu da parte di Qin fu accompagnata dalla soppressione della sua tradizione culturale. Il poeta Qu Yuan, che si suicido' per la caduta di Chu, e' commemorato nella Festa delle Barche Drago — ma la sua figura e' stata strumentalizzata da narrative nazionaliste diverse.",
+    "name_variants": [
+      {
+        "name": "State of Chu",
+        "lang": "en",
+        "period_start": -770,
+        "period_end": -223,
+        "context": "denominazione inglese standard per il periodo degli Stati Combattenti",
+        "source": "Cook, C. & Major, J. (eds.) Defining Chu (1999)"
+      },
+      {
+        "name": "Stato di Chu",
+        "lang": "it",
+        "period_start": -770,
+        "period_end": -223,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      },
+      {
+        "name": "荊楚",
+        "lang": "zh",
+        "period_start": -770,
+        "period_end": -223,
+        "context": "nome alternativo cinese (Jing-Chu), dalla regione di Jing; usato spesso nella letteratura classica",
+        "source": "Zuozhuan (Commentario di Zuo)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -706,
+        "region": "Valle dello Yangtze medio",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Il re Wu di Chu si autoproclama 'wang' (re), sfidando la supremazia Zhou. Inizio dell'espansione aggressiva di Chu che assorbira' decine di piccoli stati nella valle dello Yangtze. Chu diventa il piu' grande degli stati cinesi per territorio, coprendo l'attuale Hubei, Hunan, parti di Anhui, Jiangxi e Henan meridionale.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": -278,
+        "region": "Ying (capitale di Chu)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Il generale Qin Bai Qi conquista e distrugge la capitale Ying. Il poeta Qu Yuan, esiliato dalla corte, si suicida nel fiume Miluo alla notizia. La corte di Chu si trasferisce verso est. Inizio del declino irreversibile dello stato.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": -223,
+        "region": "Cina meridionale",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Il generale Qin Wang Jian conquista definitivamente Chu con un esercito di 600.000 uomini, il piu' grande dispiegamento militare degli Stati Combattenti. Cattura dell'ultimo re di Chu. Fine di uno stato durato oltre cinque secoli. L'identita' Chu sopravvivra' nelle ribellioni anti-Qin (il detto 'Chu puo' avere solo tre famiglie, ma sara' Chu a distruggere Qin').",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Cook, C. & Major, J. (eds.) Defining Chu: Image and Reality in Ancient China (1999)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Blakeley, B. 'Regional Aspects of Chinese Socio-Political Development in the Spring and Autumn Period' in Defining Chu (1999)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Shiji (Memorie dello Storico) di Sima Qian, capitoli 39-40 (Casa di Chu)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "통일신라",
+    "name_original_lang": "ko",
+    "entity_type": "kingdom",
+    "year_start": 668,
+    "year_end": 935,
+    "capital_name": "금성 (경주)",
+    "capital_lat": 35.8562,
+    "capital_lon": 129.2249,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in coreano (Tongil Silla). Il concetto di 'Silla Unificata' e' una costruzione storiografica: Silla non unifico' tutta la penisola coreana, poiche' il nord rimase sotto Balhae. ETHICS-002: l'unificazione fu ottenuta con l'aiuto decisivo della Cina Tang, che intendeva controllare la penisola. Silla dovette combattere contro i Tang per mantenere l'indipendenza (guerre Silla-Tang, 670-676). La distruzione di Baekje e Goguryeo comporto' la perdita di tradizioni culturali distinte. ETHICS-003: il termine 'unificazione' e' contestato dagli storici che evidenziano come la Corea settentrionale (Balhae) restasse fuori dal controllo di Silla.",
+    "name_variants": [
+      {
+        "name": "Unified Silla",
+        "lang": "en",
+        "period_start": 668,
+        "period_end": 935,
+        "context": "denominazione inglese standard; il termine 'unified' e' dibattuto dagli storici",
+        "source": "Seth, M. A History of Korea (2010)"
+      },
+      {
+        "name": "Silla Unificata",
+        "lang": "it",
+        "period_start": 668,
+        "period_end": 935,
+        "context": "denominazione italiana",
+        "source": "Ferrante, R. Storia della Corea (2019)"
+      },
+      {
+        "name": "新羅",
+        "lang": "zh",
+        "period_start": 668,
+        "period_end": 935,
+        "context": "nome nelle fonti cinesi Tang",
+        "source": "Xin Tangshu (Nuovo Libro dei Tang)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 668,
+        "region": "Penisola coreana (meridionale e centrale)",
+        "change_type": "UNIFICATION",
+        "description": "Alleanza Silla-Tang distrugge Goguryeo (668) dopo la caduta di Baekje (660). Silla controlla la penisola a sud del fiume Taedong. Ma i Tang intendono governare direttamente il territorio conquistato, portando allo scontro con Silla.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 676,
+        "region": "Penisola coreana",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Guerre Silla-Tang (670-676): Silla espelle le forze Tang dalla penisola. Vittorie a Maeso-song (675) e Kibeolpo (676). La Cina Tang accetta il controllo di Silla fino al fiume Taedong. Silla ottiene una indipendenza de facto pur mantenendo formalmente lo status tributario.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 935,
+        "region": "Gyeongju",
+        "change_type": "CESSION",
+        "description": "L'ultimo re di Silla, Gyeongsun, si arrende pacificamente a Wang Geon del Goryeo. Il periodo dei Tre Regni Posteriori (Later Three Kingdoms, 892-936) aveva gia' frammentato il potere di Silla. Wang Geon tratta il re abdicante con rispetto, integrandolo nella nuova aristocrazia.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Seth, M. A History of Korea: From Antiquity to the Present (2010)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Lee, K. A New History of Korea (1984, traduzione Wagner & Shultz)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Samguk Sagi (Cronache dei Tre Regni) di Kim Bu-sik (1145)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "가야",
+    "name_original_lang": "ko",
+    "entity_type": "confederation",
+    "year_start": 42,
+    "year_end": 562,
+    "capital_name": "금관가야 (김해)",
+    "capital_lat": 35.2285,
+    "capital_lon": 128.8894,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in coreano. La Confederazione di Gaya e' al centro di una delle dispute storiografiche piu' intense tra Corea e Giappone. ETHICS-002: la storiografia giapponese tradizionale identifica Gaya con la colonia giapponese 'Mimana' (任那), descritta nel Nihon Shoki. La storiografia coreana moderna rigetta completamente questa interpretazione, sostenendo che Gaya era una confederazione coreana indipendente con possibili influenze sul Giappone. Il database presenta entrambe le interpretazioni senza arbitrare la disputa. ETHICS-003: la mancanza di fonti scritte proprie di Gaya rende la ricostruzione dipendente da fonti coreane (Samguk Sagi), cinesi e giapponesi, tutte con bias propri.",
+    "name_variants": [
+      {
+        "name": "Gaya Confederacy",
+        "lang": "en",
+        "period_start": 42,
+        "period_end": 562,
+        "context": "denominazione inglese moderna preferita",
+        "source": "Barnes, G. State Formation in Korea (2001)"
+      },
+      {
+        "name": "Confederazione di Gaya",
+        "lang": "it",
+        "period_start": 42,
+        "period_end": 562,
+        "context": "denominazione italiana",
+        "source": "Ferrante, R. Storia della Corea (2019)"
+      },
+      {
+        "name": "任那 (Mimana)",
+        "lang": "ja",
+        "period_start": null,
+        "period_end": null,
+        "context": "nome giapponese controverso; interpretazione tradizionale giapponese come colonia Yamato, rigettata dalla storiografia coreana moderna",
+        "source": "Nihon Shoki (Cronache del Giappone, 720)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 42,
+        "region": "Nakdong River basin (Gyeongsang meridionale)",
+        "change_type": "UNIFICATION",
+        "description": "Data tradizionale di fondazione di Geumgwan Gaya (Gimhae) secondo il Samguk Yusa. La confederazione comprendeva sei principali citta'-stato (Geumgwan, Daegaya, Ara, Sogaya, Goryeong, Seongsan) nella regione tra i fiumi Nakdong e Nam. Centro di produzione di ferro e commercio marittimo.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 400,
+        "region": "Gyeongsang meridionale",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Campagna di Goguryeo: il re Gwanggaeto il Grande invia truppe contro le forze di Gaya/Wa che avevano attaccato Silla. La stele di Gwanggaeto (414) menziona queste campagne, ma l'interpretazione del testo e' al centro della disputa sulla presenza giapponese a Gaya. Geumgwan Gaya perde la posizione dominante nella confederazione a favore di Daegaya.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 562,
+        "region": "Goryeong (Daegaya)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Silla conquista Daegaya, ultimo stato Gaya indipendente. Geumgwan Gaya si era gia' arresa nel 532. La famiglia reale Gaya viene integrata nell'aristocrazia di Silla (la famiglia Kim di Gimhae). Fine della confederazione dopo cinque secoli.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Barnes, G. State Formation in Korea: Historical and Archaeological Perspectives (2001)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Kim, T. 'Mimana Nihon-fu Reconsidered' in Korean Studies, Vol. 15 (1991)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Samguk Sagi (Cronache dei Tre Regni) di Kim Bu-sik (1145)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "北元",
+    "name_original_lang": "zh",
+    "entity_type": "khanate",
+    "year_start": 1368,
+    "year_end": 1635,
+    "capital_name": "哈拉和林",
+    "capital_lat": 47.1967,
+    "capital_lon": 102.8303,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome cinese 北元 (Bei Yuan) e' la designazione cinese; i mongoli continuavano a chiamarsi semplicemente 'Yeke Mongghol Ulus' (Grande Stato Mongolo). ETHICS-002: lo Yuan del Nord rappresenta la continuazione della dinastia Yuan dopo l'espulsione dalla Cina. La storiografia cinese tende a minimizzare la legittimita' di questo stato, trattandolo come un'entita' residuale. In realta' i khan di Chinggisid mantennero autorita' nominale sulla steppa mongolica per quasi tre secoli. ETHICS-004: le relazioni tra lo Yuan del Nord e la dinastia Ming furono caratterizzate da conflitti, commercio e diplomazia complessi che non si riducono alla narrativa sinocentrica della 'difesa dai barbari'.",
+    "name_variants": [
+      {
+        "name": "Northern Yuan",
+        "lang": "en",
+        "period_start": 1368,
+        "period_end": 1635,
+        "context": "denominazione inglese standard, dal nome cinese",
+        "source": "Atwood, C. Encyclopedia of Mongolia and the Mongol Empire (2004)"
+      },
+      {
+        "name": "Yuan del Nord",
+        "lang": "it",
+        "period_start": 1368,
+        "period_end": 1635,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      },
+      {
+        "name": "ᠶᠡᠬᠡ ᠮᠣᠩᠭᠣᠯ ᠤᠯᠤᠰ",
+        "lang": "mn",
+        "period_start": 1368,
+        "period_end": 1635,
+        "context": "Yeke Mongghol Ulus in scrittura mongola tradizionale (Grande Stato Mongolo)",
+        "source": "Erdeni-yin Tobci (Storia Preziosa)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1368,
+        "region": "Mongolia",
+        "change_type": "DISSOLUTION",
+        "description": "L'ultimo imperatore Yuan, Toghon Temur, fugge da Dadu (Pechino) verso la Mongolia quando le forze di Zhu Yuanzhang (futuro fondatore Ming) conquistano la capitale. Continuazione della dinastia Yuan nella steppa mongolica con il titolo imperiale.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1388,
+        "region": "Mongolia orientale",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "La dinastia Ming invade la Mongolia e distrugge la capitale Karakorum. L'ultimo khan Chinggisid diretto, Tokuztimur, viene assassinato. Periodo di frammentazione con khan non-Chinggisid. Il potere reale passa ai taishi (primi ministri) Oirat nel XV secolo.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 1635,
+        "region": "Mongolia meridionale",
+        "change_type": "CESSION",
+        "description": "L'ultimo khan dello Yuan del Nord, Ligdan Khan, muore di vaiolo durante la ritirata verso il Tibet. Il suo figlio Ejei si arrende ai Manchu di Huang Taiji e consegna il sigillo imperiale Yuan. Fine formale dello Yuan del Nord. I Manchu acquisiscono la legittimita' mongola, fondamentale per la costruzione dell'impero Qing.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Atwood, C. Encyclopedia of Mongolia and the Mongol Empire (2004)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Veit, V. 'The Eastern Steppe: Mongol Regimes After the Yuan' in The Cambridge History of Inner Asia (2009)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Erdeni-yin Tobci (Storia Preziosa), cronaca mongola del XVII secolo",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "ᠣᠢᠷᠠᠳ ᠬᠣᠯᠪᠣᠭ᠎ᠠ",
+    "name_original_lang": "mn",
+    "entity_type": "confederation",
+    "year_start": 1399,
+    "year_end": 1634,
+    "capital_name": "Kobdo",
+    "capital_lat": 48.0042,
+    "capital_lon": 91.6389,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome in scrittura mongola tradizionale e' la forma piu' appropriata. Gli Oirat erano una confederazione di tribu' mongole occidentali (Choros, Torghut, Dorbet, Khoshut). ETHICS-002: la storiografia cinese tende a trattare gli Oirat come 'barbari' del nord, mentre la storiografia mongola li considera parte della tradizione mongola. La Confederazione Oirat e' distinta dal Khanato Dzungar (gia' nel database), che ne fu il successore piu' potente. L'espansione Oirat coinvolse conflitti con i Mongoli orientali, i Ming e le popolazioni dell'Asia Centrale.",
+    "name_variants": [
+      {
+        "name": "Oirat Confederation / Four Oirat",
+        "lang": "en",
+        "period_start": 1399,
+        "period_end": 1634,
+        "context": "denominazione inglese; 'Four Oirat' (Dorben Oirat) dal numero delle tribu' principali",
+        "source": "Miyawaki, J. 'The Qalqa Mongols and the Oyirad' in The Cambridge History of Inner Asia (2009)"
+      },
+      {
+        "name": "Confederazione Oirat",
+        "lang": "it",
+        "period_start": 1399,
+        "period_end": 1634,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      },
+      {
+        "name": "瓦剌",
+        "lang": "zh",
+        "period_start": 1399,
+        "period_end": 1634,
+        "context": "nome cinese (Wala), usato nelle fonti Ming",
+        "source": "Mingshi (Storia dei Ming)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1399,
+        "region": "Mongolia occidentale / Altai",
+        "change_type": "UNIFICATION",
+        "description": "Consolidamento della confederazione sotto il taishi Mahamu nella Mongolia occidentale. Gli Oirat emergono come la forza dominante nella steppa, sfidando i khan Chinggisid dello Yuan del Nord.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1449,
+        "region": "Tumu (nord di Pechino)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Crisi di Tumu: il taishi Oirat Esen cattura l'imperatore Ming Yingzong nella Battaglia di Tumu. Piu' grande umiliazione militare della dinastia Ming. Esen reclama il titolo di Gran Khan ma viene assassinato nel 1455. Breve periodo di dominio Oirat su gran parte della Mongolia.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1634,
+        "region": "Mongolia occidentale",
+        "change_type": "DISSOLUTION",
+        "description": "La confederazione Oirat si frammenta in fazioni rivali. I Choros formano il Khanato Dzungar, i Torghut migrano verso il Volga (Khanato dei Kalmyk), i Khoshut si stabiliscono nel Kokonor (Tibet). Fine della confederazione unitaria ma inizio di entita' politiche Oirat separate.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Miyawaki, J. 'The Qalqa Mongols and the Oyirad in the Seventeenth Century' in The Cambridge History of Inner Asia: The Chinggisid Age (2009)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Atwood, C. Encyclopedia of Mongolia and the Mongol Empire (2004)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Mingshi (Storia dei Ming), capitoli sugli Oirat",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "後金",
+    "name_original_lang": "zh",
+    "entity_type": "khanate",
+    "year_start": 1616,
+    "year_end": 1636,
+    "capital_name": "赫圖阿拉",
+    "capital_lat": 41.8,
+    "capital_lon": 124.85,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome cinese 後金 (Hou Jin, 'Jin Posteriore') e' la designazione cinese. In mancese lo stato era chiamato Aisin Gurun (Stato d'Oro). ETHICS-002: il Later Jin/Hou Jin e' il precursore diretto della dinastia Qing (gia' nel database). Nurhaci unifico' le tribu' Jurchen con campagne militari che comportarono la sottomissione forzata e la deportazione di popolazioni rivali. Il sistema delle Otto Bandiere (baqi) era una struttura militare-sociale che incorporava forzatamente prigionieri di guerra cinesi e mongoli. ETHICS-003: la transizione Later Jin-Qing nel 1636 fu un cambio di nome ma la continuita' di governo e' diretta.",
+    "name_variants": [
+      {
+        "name": "Later Jin",
+        "lang": "en",
+        "period_start": 1616,
+        "period_end": 1636,
+        "context": "denominazione inglese standard",
+        "source": "Elliott, M. The Manchu Way (2001)"
+      },
+      {
+        "name": "Jin Posteriore",
+        "lang": "it",
+        "period_start": 1616,
+        "period_end": 1636,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      },
+      {
+        "name": "ᠠᡳᠰᡳᠨ ᡤᡠᡵᡠᠨ",
+        "lang": "mnc",
+        "period_start": 1616,
+        "period_end": 1636,
+        "context": "Aisin Gurun (Stato d'Oro) in scrittura mancese, nome proprio dello stato",
+        "source": "Manwen Laodang (Vecchi Archivi Mancesi)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1616,
+        "region": "Manciuria (Liaoning orientale)",
+        "change_type": "UNIFICATION",
+        "description": "Nurhaci proclama la fondazione del Later Jin dopo aver unificato le tribu' Jurchen (Jianzhou, Haixi, Yeren). Capitale a Hetu Ala. Pubblicazione delle Sette Rimostranze contro la dinastia Ming.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1619,
+        "region": "Sarhu (Manciuria)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Battaglia di Sarhu: Nurhaci sconfigge un esercito Ming di oltre 100.000 uomini diviso in quattro colonne. Vittoria decisiva che dimostra la superiorita' militare Jurchen e apre la strada alla conquista della Manciuria meridionale. I Ming non si riprenderanno mai da questa sconfitta.",
+        "population_affected": 45000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1636,
+        "region": "Mukden (Shenyang)",
+        "change_type": "ADMINISTRATIVE_REFORM",
+        "description": "Huang Taiji rinomina lo stato da 'Jin' a 'Qing' (Grande Qing) e il popolo da 'Jurchen' a 'Manchu'. Adozione del titolo imperiale cinese. Questa transizione marca la trasformazione da khanato tribale a impero multietnico con ambizioni di dominio sulla Cina.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Elliott, M. The Manchu Way: The Eight Banners and Ethnic Identity in Late Imperial China (2001)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Crossley, P.K. The Manchus (1997)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Manwen Laodang (Vecchi Archivi Mancesi), documenti di stato del periodo Nurhaci-Huang Taiji",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "アイヌモシㇼ",
+    "name_original_lang": "ain",
+    "entity_type": "confederation",
+    "year_start": -200,
+    "year_end": 1869,
+    "capital_name": null,
+    "capital_lat": 43.0621,
+    "capital_lon": 141.3544,
+    "confidence_score": 0.45,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in lingua Ainu ('Ainu Mosir' = 'Terra degli Esseri Umani'). Non esisteva uno stato centralizzato Ainu ma una rete di comunita' autonome (kotan). ETHICS-002: gli Ainu sono un popolo indigeno che ha subito colonizzazione giapponese progressiva, culminata nell'annessione formale di Hokkaido (1869). La politica di assimilazione forzata (Former Aborigines Protection Act, 1899) comporto' la perdita della lingua, della cultura e delle terre. Il Giappone ha riconosciuto gli Ainu come popolo indigeno solo nel 2008. ETHICS-004: il confidence_score basso riflette l'assenza di fonti scritte Ainu (tradizione orale) e il fatto che le informazioni provengono prevalentemente da fonti giapponesi con bias coloniale. La datazione dell'inizio (-200) e' approssimativa, basata sull'archeologia della cultura di Okhotsk e Satsumon.",
+    "name_variants": [
+      {
+        "name": "Ainu Mosir",
+        "lang": "en",
+        "period_start": -200,
+        "period_end": 1869,
+        "context": "traslitterazione latina del nome Ainu; usata nella letteratura accademica moderna",
+        "source": "Walker, B. The Conquest of Ainu Lands (2001)"
+      },
+      {
+        "name": "Territorio Ainu / Ezo",
+        "lang": "it",
+        "period_start": -200,
+        "period_end": 1869,
+        "context": "denominazione italiana; 'Ezo' era il nome giapponese per Hokkaido prima del 1869",
+        "source": "Sjoberg, K. The Return of the Ainu (1993)"
+      },
+      {
+        "name": "蝦夷地",
+        "lang": "ja",
+        "period_start": null,
+        "period_end": 1869,
+        "context": "Ezochi: nome giapponese coloniale ('terra dei barbari pelosi'), termine considerato peggiorativo dalla comunita' Ainu",
+        "source": "Walker, B. The Conquest of Ainu Lands (2001)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1457,
+        "region": "Hokkaido meridionale (Oshima)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Guerra di Koshamain: rivolta Ainu contro i coloni giapponesi (wajin) nel sud di Hokkaido. Il capo Ainu Koshamain guida un attacco contro le postazioni commerciali giapponesi. La rivolta viene repressa da Takeda Nobuhiro. Segna l'inizio del conflitto prolungato tra Ainu e giapponesi.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1669,
+        "region": "Hokkaido",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Guerra di Shakushain: la piu' grande rivolta Ainu guidata dal capo Shakushain contro il clan Matsumae e lo sfruttamento commerciale. Inizialmente vittoriosa, la rivolta viene repressa con l'inganno: Shakushain viene assassinato durante un banchetto di pace. Il dominio Matsumae/Tokugawa su Hokkaido si consolida.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1869,
+        "region": "Hokkaido, Sakhalin, Kurili",
+        "change_type": "ANNEXATION",
+        "description": "Il governo Meiji rinomina Ezochi in 'Hokkaido' e inizia la colonizzazione sistematica. Espropriazione delle terre di caccia e pesca Ainu, divieto della lingua e delle pratiche culturali. Former Aborigines Protection Act (1899) impone l'agricoltura e l'assimilazione. La popolazione Ainu crolla da circa 80.000 a poche migliaia a causa di malattie, perdita dei mezzi di sussistenza e marginalizzazione.",
+        "population_affected": 80000,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Walker, B. The Conquest of Ainu Lands: Ecology and Culture in Japanese Expansion, 1590-1800 (2001)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Siddle, R. Race, Resistance and the Ainu of Japan (1996)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Howell, D. Geographies of Identity in Nineteenth-Century Japan (2005)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "隋以前北朝",
+    "name_original_lang": "zh",
+    "entity_type": "dynasty",
+    "year_start": 550,
+    "year_end": 577,
+    "capital_name": "鄴",
+    "capital_lat": 36.3333,
+    "capital_lon": 114.6,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: questa entita' rappresenta i Qi del Nord (北齊), una delle dinastie del periodo di divisione Nord-Sud. Il nome e' in cinese. ETHICS-002: i Qi del Nord furono fondati da Gao Yang, di stirpe mista cinese-Xianbei, e la corte mostrava una sintesi culturale sino-steppica. La storiografia tradizionale cinese tende a presentare questo periodo come un'interregno caotico, ma le dinastie del Nord furono centri di innovazione culturale e religiosa (buddismo).",
+    "name_variants": [
+      {
+        "name": "Northern Qi Dynasty",
+        "lang": "en",
+        "period_start": 550,
+        "period_end": 577,
+        "context": "denominazione inglese standard",
+        "source": "Pearce, S. et al. (eds.) Culture and Power in the Reconstitution of the Chinese Realm (2001)"
+      },
+      {
+        "name": "Dinastia Qi del Nord",
+        "lang": "it",
+        "period_start": 550,
+        "period_end": 577,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      },
+      {
+        "name": "北齊",
+        "lang": "zh",
+        "period_start": 550,
+        "period_end": 577,
+        "context": "nome cinese standard",
+        "source": "Beiqishu (Libro dei Qi del Nord)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 550,
+        "region": "Cina nord-orientale",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Gao Yang depone l'ultimo imperatore dei Wei Orientali e fonda i Qi del Nord. Controlla la pianura della Cina settentrionale orientale con la ricca capitale Ye. Popolazione e risorse superiori ai rivali Zhou del Nord.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 577,
+        "region": "Ye e Cina nord-orientale",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "I Zhou del Nord conquistano i Qi del Nord sotto l'imperatore Wu. Fine della dinastia dopo soli 27 anni. La riunificazione del nord sotto i Zhou del Nord prepara il terreno per la futura unificazione Sui.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Pearce, S., Spiro, A. & Ebrey, P. (eds.) Culture and Power in the Reconstitution of the Chinese Realm, 200-600 (2001)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Li Baiyao, Beiqishu (Libro dei Qi del Nord, VII secolo)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Graff, D. Medieval Chinese Warfare, 300-900 (2002)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "北周",
+    "name_original_lang": "zh",
+    "entity_type": "dynasty",
+    "year_start": 557,
+    "year_end": 581,
+    "capital_name": "長安",
+    "capital_lat": 34.265,
+    "capital_lon": 108.9422,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in cinese. I Zhou del Nord (Northern Zhou) furono fondati dalla famiglia Yuwen di origine Xianbei. ETHICS-002: la dinastia e' notevole per la persecuzione del buddismo (574-577) sotto l'imperatore Wu, che confisco' le proprieta' monastiche e forzo' monaci e monache a tornare alla vita laica. Questo va documentato nel contesto delle tensioni tra potere secolare e istituzione religiosa, non come semplice intolleranza. Yang Jian, fondatore della dinastia Sui, usurpo' il trono Zhou nel 581.",
+    "name_variants": [
+      {
+        "name": "Northern Zhou Dynasty",
+        "lang": "en",
+        "period_start": 557,
+        "period_end": 581,
+        "context": "denominazione inglese standard",
+        "source": "Graff, D. Medieval Chinese Warfare, 300-900 (2002)"
+      },
+      {
+        "name": "Dinastia Zhou del Nord",
+        "lang": "it",
+        "period_start": 557,
+        "period_end": 581,
+        "context": "denominazione italiana, da non confondere con la dinastia Zhou (1046-256 a.C.)",
+        "source": "Enciclopedia Treccani"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 557,
+        "region": "Cina nord-occidentale",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Yuwen Jue depone l'ultimo imperatore dei Wei Occidentali e fonda i Zhou del Nord. La capitale e' Chang'an. Lo stato controlla il nord-ovest della Cina ed e' militarmente forte ma economicamente piu' debole dei rivali Qi del Nord.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 577,
+        "region": "Cina settentrionale",
+        "change_type": "UNIFICATION",
+        "description": "L'imperatore Wu conquista i Qi del Nord e riunifica tutta la Cina settentrionale per la prima volta dal 534. La campagna e' rapida e decisiva. Il nord unificato getta le basi per la futura riunificazione di tutta la Cina sotto i Sui.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 581,
+        "region": "Chang'an",
+        "change_type": "DISSOLUTION",
+        "description": "Yang Jian, reggente e suocero dell'ultimo imperatore bambino, usurpa il trono e fonda la dinastia Sui. Fine della dinastia Zhou del Nord. Yang Jian era di cultura cinese Han, segnando la fine della dominazione Xianbei nel nord.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Graff, D. Medieval Chinese Warfare, 300-900 (2002)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Linghu Defen, Zhoushu (Libro degli Zhou, 636)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Dien, A. Six Dynasties Civilization (2007)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "陳朝",
+    "name_original_lang": "zh",
+    "entity_type": "dynasty",
+    "year_start": 557,
+    "year_end": 589,
+    "capital_name": "建康",
+    "capital_lat": 32.0603,
+    "capital_lon": 118.7969,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in cinese. La dinastia Chen fu l'ultima delle dinastie del Sud durante il periodo di divisione Nord-Sud. ETHICS-002: la fine dei Chen (589) segna la riunificazione della Cina sotto i Sui, ponendo fine a quasi quattro secoli di divisione. La storiografia tradizionale presenta l'ultimo imperatore Chen Shubao come un sovrano dissoluto, ma questa narrativa e' influenzata dalla propaganda Sui che doveva giustificare la conquista. Il sud aveva sviluppato tradizioni culturali e letterarie proprie che la riunificazione rischio' di marginalizzare.",
+    "name_variants": [
+      {
+        "name": "Chen Dynasty (Southern)",
+        "lang": "en",
+        "period_start": 557,
+        "period_end": 589,
+        "context": "denominazione inglese; 'Southern' per distinguerla da altre dinastie Chen",
+        "source": "Holcombe, C. In the Shadow of the Han (1994)"
+      },
+      {
+        "name": "Dinastia Chen (del Sud)",
+        "lang": "it",
+        "period_start": 557,
+        "period_end": 589,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 557,
+        "region": "Cina meridionale",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Chen Baxian fonda la dinastia Chen dopo aver sedato la ribellione di Hou Jing e deposto l'ultima dinastia Liang. Il territorio e' ridotto rispetto alle precedenti dinastie meridionali, avendo perso vaste aree a favore dei Zhou del Nord e dei Qi del Nord.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 589,
+        "region": "Jiankang (Nanjing)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "La dinastia Sui attraversa lo Yangtze e conquista Jiankang. L'ultimo imperatore Chen Shubao viene catturato nascosto in un pozzo con due concubine. Fine delle Dinastie del Sud e riunificazione della Cina dopo 369 anni di divisione. La vittoria e' facilitata dalla superiorita' navale Sui e dalla corruzione dell'elite Chen.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Holcombe, C. In the Shadow of the Han: Literati Thought and Society at the Beginning of the Southern Dynasties (1994)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Yao Silian, Chenshu (Libro dei Chen, VII secolo)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Dien, A. Six Dynasties Civilization (2007)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "吐谷渾",
+    "name_original_lang": "zh",
+    "entity_type": "khanate",
+    "year_start": 285,
+    "year_end": 663,
+    "capital_name": "伏俟城",
+    "capital_lat": 36.8,
+    "capital_lon": 99.7,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome cinese 吐谷渾 (Tuyuhun) e' la forma piu' attestata. Il Tuyuhun era uno stato fondato da un ramo dei Murong Xianbei nella regione del Kokonor (Qinghai). ETHICS-002: la storiografia cinese tende a classificare il Tuyuhun come semplice entita' tribale, ma fu un regno strutturato che controllo' importanti sezioni della Via della Seta. La conquista Tang (663) cancello' questa entita' politica autonoma. Le popolazioni del Qinghai odierno (tibetani, mongoli) hanno connessioni complesse con il territorio Tuyuhun.",
+    "name_variants": [
+      {
+        "name": "Tuyuhun Kingdom",
+        "lang": "en",
+        "period_start": 285,
+        "period_end": 663,
+        "context": "denominazione inglese standard",
+        "source": "Molé, G. The T'u-yü-hun from the Northern Wei to the Time of the Five Dynasties (1970)"
+      },
+      {
+        "name": "Regno Tuyuhun",
+        "lang": "it",
+        "period_start": 285,
+        "period_end": 663,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      },
+      {
+        "name": "'A-zha",
+        "lang": "bo",
+        "period_start": 285,
+        "period_end": 663,
+        "context": "nome tibetano, usato nelle fonti dell'Impero Tibetano",
+        "source": "Beckwith, C. The Tibetan Empire in Central Asia (1987)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 285,
+        "region": "Qinghai / Kokonor",
+        "change_type": "UNIFICATION",
+        "description": "Tuyuhun, principe Murong Xianbei, migra verso ovest dal Liaoning e stabilisce un dominio nella regione del lago Kokonor (Qinghai). Il territorio si espande gradualmente fino a controllare le rotte commerciali tra la Cina e l'Asia Centrale.",
+        "population_affected": null,
+        "confidence_score": 0.45
+      },
+      {
+        "year": 635,
+        "region": "Qinghai",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "La dinastia Tang invade e sconfigge il Tuyuhun. Il khan Murong Fuyun fugge. I Tang installano un governo fantoccio ma il controllo effettivo rimane precario. L'espansione tibetana diventa la minaccia principale.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 663,
+        "region": "Qinghai",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "L'Impero Tibetano conquista il territorio Tuyuhun. Il khan Murong Nuohebo fugge presso i Tang e il popolo Tuyuhun viene assorbito sotto il dominio tibetano. Fine dell'entita' politica indipendente. I discendenti Tuyuhun continuano a esistere come gruppo subordinato per secoli.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Molé, G. The T'u-yü-hun from the Northern Wei to the Time of the Five Dynasties (1970)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Beckwith, C. The Tibetan Empire in Central Asia (1987)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Jiu Tangshu (Vecchio Libro dei Tang), capitoli sui Tuyuhun",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "百濟復興運動",
+    "name_original_lang": "ko",
+    "entity_type": "kingdom",
+    "year_start": 660,
+    "year_end": 663,
+    "capital_name": "주류성",
+    "capital_lat": 36.06,
+    "capital_lon": 126.75,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome e' in coreano (Baekje Restoration Movement). Questo evento rappresenta la resistenza di Baekje dopo la conquista Silla-Tang. ETHICS-002: la battaglia di Baekgang/Hakusonko (663) fu un evento internazionale: Giappone (Yamato) invia una flotta in aiuto di Baekje contro l'alleanza Silla-Tang. La distruzione della flotta giapponese segno' un punto di svolta nelle relazioni est-asiatiche. La prospettiva dei guerrieri Baekje che resistettero alla conquista e' spesso marginalizzata nella narrativa della 'unificazione' di Silla.",
+    "name_variants": [
+      {
+        "name": "Baekje Revival Movement",
+        "lang": "en",
+        "period_start": 660,
+        "period_end": 663,
+        "context": "denominazione inglese standard",
+        "source": "Best, J. A History of the Early Korean Kingdom of Paekche (2006)"
+      },
+      {
+        "name": "Movimento di Restaurazione Baekje",
+        "lang": "it",
+        "period_start": 660,
+        "period_end": 663,
+        "context": "denominazione italiana",
+        "source": "Ferrante, R. Storia della Corea (2019)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 660,
+        "region": "Corea sud-occidentale",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Dopo la caduta di Baekje per l'alleanza Silla-Tang, il generale Gwisil Boksin e il monaco Dochim guidano la resistenza. Chiedono aiuto al Giappone Yamato, che invia il principe Buyeo Pung (ostaggio in Giappone) come re legittimo. La resistenza controlla temporaneamente vaste aree dell'ex territorio Baekje.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 663,
+        "region": "Baekgang (Geum River)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Battaglia di Baekgang (白村江): la flotta giapponese di circa 400 navi viene distrutta dalla flotta Silla-Tang. Fine del movimento di restaurazione. Il Giappone si ritira dalla penisola coreana per quasi mille anni. Punto di svolta geopolitico nell'Asia orientale.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Best, J. A History of the Early Korean Kingdom of Paekche (2006)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Nihon Shoki (Cronache del Giappone, 720), capitoli sulla campagna di Baekgang",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Samguk Sagi (Cronache dei Tre Regni) di Kim Bu-sik (1145)",
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "梁朝",
+    "name_original_lang": "zh",
+    "entity_type": "dynasty",
+    "year_start": 502,
+    "year_end": 557,
+    "capital_name": "建康",
+    "capital_lat": 32.0603,
+    "capital_lon": 118.7969,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in cinese. La dinastia Liang (del Sud) fu l'ultima dinastia meridionale stabile prima della riunificazione Sui. ETHICS-002: il lungo regno dell'imperatore Wu (502-549) vide una fioritura culturale e buddista, ma la ribellione di Hou Jing (548-552) causo' una delle peggiori catastrofi demografiche della storia cinese, con la distruzione di Jiankang e la morte di centinaia di migliaia di persone per carestia, malattia e violenza. La storiografia tradizionale incolpa la devozione buddista dell'imperatore Wu, ma le cause erano strutturali.",
+    "name_variants": [
+      {
+        "name": "Liang Dynasty (Southern)",
+        "lang": "en",
+        "period_start": 502,
+        "period_end": 557,
+        "context": "denominazione inglese; 'Southern' per distinguerla dalla Liang Posteriore delle Cinque Dinastie",
+        "source": "Dien, A. Six Dynasties Civilization (2007)"
+      },
+      {
+        "name": "Dinastia Liang (del Sud)",
+        "lang": "it",
+        "period_start": 502,
+        "period_end": 557,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 502,
+        "region": "Cina meridionale",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Xiao Yan depone l'ultimo imperatore della dinastia Qi del Sud e fonda la Liang. Come imperatore Wu, governera' per 48 anni, il regno piu' lungo tra le dinastie del Sud. Patrono del buddismo, costrui' migliaia di templi.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 548,
+        "region": "Jiankang (Nanjing)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ribellione di Hou Jing: il generale disertore delle dinastie del Nord assedia e conquista Jiankang. L'imperatore Wu muore di fame durante l'assedio (549). La citta' viene saccheggiata. La popolazione di Jiankang crolla da centinaia di migliaia a poche migliaia di sopravvissuti. La guerra civile seguente devasta tutto il sud della Cina.",
+        "population_affected": 300000,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 557,
+        "region": "Cina meridionale",
+        "change_type": "DISSOLUTION",
+        "description": "Chen Baxian depone l'ultimo imperatore Liang e fonda la dinastia Chen. I territori occidentali della Liang sono gia' persi a favore dei Zhou del Nord. Fine della dinastia in un contesto di devastazione post-ribellione.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Dien, A. Six Dynasties Civilization (2007)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Yao Silian, Liangshu (Libro dei Liang, VII secolo)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Pearce, S., Spiro, A. & Ebrey, P. (eds.) Culture and Power in the Reconstitution of the Chinese Realm, 200-600 (2001)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "後趙",
+    "name_original_lang": "zh",
+    "entity_type": "kingdom",
+    "year_start": 319,
+    "year_end": 351,
+    "capital_name": "襄國",
+    "capital_lat": 37.0689,
+    "capital_lon": 114.5048,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in cinese. Il Later Zhao fu fondato da Shi Le, un ex schiavo di etnia Jie (probabilmente di origine centroasiatica). ETHICS-002: la storia di Shi Le — da schiavo a imperatore — e' una delle piu' notevoli della storia cinese, ma la sua dinastia e' anche associata a Shi Hu, il cui regno di terrore comporto' atrocita' di massa. La successione dopo Shi Hu porto' al massacro quasi totale dell'etnia Jie (350), uno dei primi genocidi etnici documentati nella storia cinese. ETHICS-004: il 'Decreto di Sterminio dei Jie' di Ran Min va documentato come evento di pulizia etnica.",
+    "name_variants": [
+      {
+        "name": "Later Zhao",
+        "lang": "en",
+        "period_start": 319,
+        "period_end": 351,
+        "context": "denominazione inglese standard tra i Sedici Regni",
+        "source": "Grousset, R. The Empire of the Steppes (1970, trad. Walford)"
+      },
+      {
+        "name": "Zhao Posteriore",
+        "lang": "it",
+        "period_start": 319,
+        "period_end": 351,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 319,
+        "region": "Cina settentrionale",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Shi Le, ex schiavo Jie, fonda il Later Zhao dopo essersi separato dai Han Zhao (Xiongnu). Controlla la Cina nord-orientale con capitale a Xiangguo. Shi Le e' descritto come un governante capace nonostante le origini umili, la prima persona di basso rango a fondare una dinastia nella storia cinese.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 329,
+        "region": "Cina settentrionale",
+        "change_type": "UNIFICATION",
+        "description": "Shi Le conquista gli Han Zhao e unifica temporaneamente la Cina settentrionale. Il suo successore Shi Hu (r. 334-349) regna con brutalita' estrema: lavori forzati su scala massiva, deportazioni e violenze sistematiche.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 350,
+        "region": "Cina settentrionale",
+        "change_type": "DISSOLUTION",
+        "description": "Dopo la morte di Shi Hu, Ran Min usurpa il trono e proclama il 'Decreto di Sterminio dei Jie', ordinando il massacro di tutti i Jie e degli 'hu' (stranieri) nella capitale. Circa 200.000 persone vengono uccise, inclusi cinesi Han dai tratti somatici non-Han scambiati per Jie. L'etnia Jie e' praticamente annientata. Il Later Zhao si dissolve nel caos.",
+        "population_affected": 200000,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Grousset, R. The Empire of the Steppes: A History of Central Asia (1970, traduzione Walford)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Fang Xuanling et al., Jinshu (Libro dei Jin, 648), capitoli su Shi Le e Shi Hu",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Barfield, T. The Perilous Frontier: Nomadic Empires and China (1989)",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "name_original": "前秦",
+    "name_original_lang": "zh",
+    "entity_type": "empire",
+    "year_start": 351,
+    "year_end": 394,
+    "capital_name": "長安",
+    "capital_lat": 34.265,
+    "capital_lon": 108.9422,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: il nome originale e' in cinese. Il Former Qin fu fondato dalla famiglia Fu di etnia Di (un popolo tibeto-birmano). ETHICS-002: il sovrano Fu Jian e' una figura complessa nella storiografia cinese: governante tollerante che promosse l'integrazione multietnica nel nord, ma la sua sconfitta nella Battaglia del fiume Fei (383) contro i Jin Orientali e' uno degli eventi militari piu' celebri della storia cinese. La sua politica di inclusione etnica e' spesso presentata come causa della fragilita' dell'impero — un'interpretazione che va problematizzata.",
+    "name_variants": [
+      {
+        "name": "Former Qin",
+        "lang": "en",
+        "period_start": 351,
+        "period_end": 394,
+        "context": "denominazione inglese standard tra i Sedici Regni; da non confondere con la dinastia Qin (221-206 a.C.)",
+        "source": "Holcombe, C. In the Shadow of the Han (1994)"
+      },
+      {
+        "name": "Qin Anteriore",
+        "lang": "it",
+        "period_start": 351,
+        "period_end": 394,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 376,
+        "region": "Cina settentrionale",
+        "change_type": "UNIFICATION",
+        "description": "Fu Jian riunifica tutta la Cina settentrionale conquistando i Former Liang (Gansu) e i Dai/Tuoba (Mongolia interna). E' l'unificazione piu' ampia del nord dal collasso dei Jin Occidentali (316). Fu Jian adotta una politica di integrazione multietnica, impiegando consiglieri di diverse etnie.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 383,
+        "region": "Fiume Fei (Anhui)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Battaglia del fiume Fei: l'esercito Former Qin di circa 800.000 uomini (cifra probabilmente esagerata dalle fonti) viene sconfitto dall'esercito Jin Orientale di circa 80.000. La rotta e' causata dal panico nella ritirata tattica. Dopo la sconfitta, le tribu' sottoposte si ribellano e l'impero si frammenta.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 394,
+        "region": "Chang'an",
+        "change_type": "DISSOLUTION",
+        "description": "I Later Qin (di etnia Qiang) conquistano l'ultimo territorio Former Qin. Fu Jian era stato catturato e ucciso nel 385. La disgregazione dell'impero Former Qin riporta la Cina settentrionale alla frammentazione tra multipli stati rivali.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Holcombe, C. In the Shadow of the Han: Literati Thought and Society at the Beginning of the Southern Dynasties (1994)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Fang Xuanling et al., Jinshu (Libro dei Jin, 648), capitoli sui Former Qin",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Graff, D. Medieval Chinese Warfare, 300-900 (2002)",
+        "source_type": "academic"
+      }
+    ]
+  }
+]
