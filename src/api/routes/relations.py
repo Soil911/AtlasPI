@@ -1,14 +1,16 @@
 """Endpoint per relazioni tra entità.
 
-GET /v1/entities/{id}/related     entità temporalmente e tipologicamente correlate
-GET /v1/entities/{id}/contemporaries  entità attive nello stesso periodo
+GET /v1/entities/{id}/related          entità correlate
+GET /v1/entities/{id}/contemporaries   entità attive nello stesso periodo
+GET /v1/compare/{id1}/{id2}            confronto tra due entità
 """
 
+import json
 import logging
 
 from fastapi import APIRouter, Depends, Query, Response
 from sqlalchemy import or_
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, joinedload
 
 from src.api.errors import EntityNotFoundError
 from src.db.database import get_db
@@ -17,11 +19,6 @@ from src.db.models import GeoEntity
 logger = logging.getLogger(__name__)
 
 router = APIRouter(tags=["relazioni"])
-
-
-class RelatedEntity:
-    """Helper per serializzazione."""
-    pass
 
 
 @router.get(
@@ -125,4 +122,98 @@ def get_related(
             {**_mini(e), "overlap_years": ov}
             for e, ov in scored[:5]
         ],
+    }
+
+
+# ─── Compare ────────────────────────────────────────────────────
+
+def _entity_compare_data(entity: GeoEntity) -> dict:
+    """Costruisce dati confronto per un'entità."""
+    geojson = None
+    if entity.boundary_geojson:
+        try:
+            geojson = json.loads(entity.boundary_geojson)
+        except (json.JSONDecodeError, TypeError):
+            pass
+
+    return {
+        "id": entity.id,
+        "name_original": entity.name_original,
+        "name_original_lang": entity.name_original_lang,
+        "entity_type": entity.entity_type,
+        "year_start": entity.year_start,
+        "year_end": entity.year_end,
+        "status": entity.status,
+        "confidence_score": entity.confidence_score,
+        "capital": {"name": entity.capital_name, "lat": entity.capital_lat, "lon": entity.capital_lon}
+        if entity.capital_name else None,
+        "boundary_geojson": geojson,
+        "name_variants_count": len(entity.name_variants),
+        "territory_changes_count": len(entity.territory_changes),
+        "sources_count": len(entity.sources),
+        "duration_years": (entity.year_end or 2025) - entity.year_start,
+        "ethical_notes": entity.ethical_notes,
+    }
+
+
+@router.get(
+    "/v1/compare/{id1}/{id2}",
+    summary="Confronta due entità storiche",
+    description=(
+        "Restituisce un confronto strutturato tra due entità: "
+        "durata, overlap temporale, metriche di qualità dati."
+    ),
+)
+def compare_entities(
+    id1: int,
+    id2: int,
+    response: Response,
+    db: Session = Depends(get_db),
+):
+    e1 = (
+        db.query(GeoEntity)
+        .options(
+            joinedload(GeoEntity.name_variants),
+            joinedload(GeoEntity.territory_changes),
+            joinedload(GeoEntity.sources),
+        )
+        .filter(GeoEntity.id == id1)
+        .first()
+    )
+    e2 = (
+        db.query(GeoEntity)
+        .options(
+            joinedload(GeoEntity.name_variants),
+            joinedload(GeoEntity.territory_changes),
+            joinedload(GeoEntity.sources),
+        )
+        .filter(GeoEntity.id == id2)
+        .first()
+    )
+
+    if not e1:
+        raise EntityNotFoundError(id1)
+    if not e2:
+        raise EntityNotFoundError(id2)
+
+    # Calcola overlap temporale
+    overlap_start = max(e1.year_start, e2.year_start)
+    overlap_end = min(e1.year_end or 2025, e2.year_end or 2025)
+    temporal_overlap = max(0, overlap_end - overlap_start)
+
+    response.headers["Cache-Control"] = "public, max-age=3600"
+
+    return {
+        "entity_a": _entity_compare_data(e1),
+        "entity_b": _entity_compare_data(e2),
+        "comparison": {
+            "temporal_overlap_years": temporal_overlap,
+            "overlap_period": f"{overlap_start} — {overlap_end}" if temporal_overlap > 0 else None,
+            "same_type": e1.entity_type == e2.entity_type,
+            "same_status": e1.status == e2.status,
+            "confidence_diff": round(abs(e1.confidence_score - e2.confidence_score), 3),
+            "duration_diff": abs(
+                ((e1.year_end or 2025) - e1.year_start) - ((e2.year_end or 2025) - e2.year_start)
+            ),
+        },
     }

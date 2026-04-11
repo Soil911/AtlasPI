@@ -76,6 +76,33 @@ class TestTypes:
         assert types[0]["type"] == "empire"
 
 
+class TestContinents:
+    def test_list_continents(self, client):
+        r = client.get("/v1/continents")
+        assert r.status_code == 200
+        continents = r.json()
+        assert len(continents) >= 3
+        assert all("continent" in c and "count" in c for c in continents)
+
+    def test_has_multiple_regions(self, client):
+        r = client.get("/v1/continents")
+        names = [c["continent"] for c in r.json()]
+        assert "Europe" in names
+        assert "Asia" in names or "Middle East" in names
+
+    def test_continent_filter(self, client):
+        r = client.get("/v1/entity?continent=Europe")
+        assert r.status_code == 200
+        for e in r.json()["entities"]:
+            assert e.get("continent") == "Europe"
+
+    def test_entity_has_continent(self, client):
+        r = client.get("/v1/entities?limit=1")
+        e = r.json()["entities"][0]
+        assert "continent" in e
+        assert e["continent"] is not None
+
+
 class TestStats:
     def test_stats_response(self, client):
         r = client.get("/v1/stats")
@@ -87,3 +114,9 @@ class TestStats:
         assert d["total_territory_changes"] > 0
         assert 0.0 < d["avg_confidence"] < 1.0
         assert d["year_range"]["min"] < 0  # abbiamo entita' a.C.
+
+    def test_stats_has_continents(self, client):
+        r = client.get("/v1/stats")
+        d = r.json()
+        assert "continents" in d
+        assert len(d["continents"]) >= 3

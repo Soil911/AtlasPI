@@ -27,6 +27,8 @@ let debounceTimer = null;
 let activeType = '';
 let activeContinent = '';
 let selectedCardIndex = -1;
+let playbackInterval = null;
+let compareEntityId = null;
 
 const CONTINENT_ICONS = {
   'Europe': '🇪🇺',
@@ -506,11 +508,14 @@ async function showDetail(id) {
       </div>
     </div>`;
 
-  // Share button
+  // Action buttons
   html += `
     <div class="detail-actions">
       <button class="btn-share" onclick="shareEntity(${e.id})" title="${t('share') || 'Condividi'}">
         🔗 ${t('share') || 'Condividi'}
+      </button>
+      <button class="btn-compare" onclick="startCompare(${e.id})" title="Confronta con un'altra entit\u00e0">
+        ⚖️ ${t('compare') || 'Confronta'}
       </button>
     </div>`;
 
@@ -575,6 +580,29 @@ function shareEntity(id) {
     });
   } else {
     prompt('Copia questo link:', url);
+  }
+}
+
+function startCompare(id) {
+  if (compareEntityId === null) {
+    compareEntityId = id;
+    showToast(t('compare_select') || 'Ora clicca su un\'altra entit\u00e0 per confrontarle');
+    // Highlight cards with compare indicator
+    document.querySelectorAll('.result-card').forEach(card => {
+      if (+card.dataset.id !== id) {
+        card.classList.add('compare-candidate');
+        const origHandler = card.onclick;
+        card.onclick = () => {
+          showCompare(compareEntityId, +card.dataset.id);
+          compareEntityId = null;
+          document.querySelectorAll('.result-card').forEach(c => c.classList.remove('compare-candidate'));
+        };
+      }
+    });
+  } else {
+    showCompare(compareEntityId, id);
+    compareEntityId = null;
+    document.querySelectorAll('.result-card').forEach(c => c.classList.remove('compare-candidate'));
   }
 }
 
@@ -735,6 +763,9 @@ function bindEvents() {
       toggle.setAttribute('aria-expanded', !sidebar.classList.contains('collapsed'));
     });
   }
+
+  // Playback
+  document.getElementById('play-btn').addEventListener('click', togglePlayback);
 
   // ─── Keyboard Navigation ──────────────────────────────────────
   document.addEventListener('keydown', handleKeyboard);
@@ -983,6 +1014,13 @@ const I18N = {
     error_connection: 'Impossibile caricare i dati. Verifica che il server sia attivo.',
     error_detail: 'Errore nel caricamento dei dettagli.',
     keyboard_help: 'Scorciatoie tastiera',
+    compare: 'Confronta',
+    compare_select: "Ora clicca su un'altra entit\u00e0 per confrontarle",
+    duration: 'Durata',
+    temporal_overlap: 'Sovrapposizione temporale',
+    years: 'anni',
+    no_overlap: 'Nessuna sovrapposizione',
+    view: 'Vedi',
   },
   en: {
     search: 'Search by name, including variants...',
@@ -1011,6 +1049,13 @@ const I18N = {
     error_connection: 'Unable to load data. Check if the server is running.',
     error_detail: 'Error loading details.',
     keyboard_help: 'Keyboard shortcuts',
+    compare: 'Compare',
+    compare_select: 'Now click another entity to compare them',
+    duration: 'Duration',
+    temporal_overlap: 'Temporal overlap',
+    years: 'years',
+    no_overlap: 'No overlap',
+    view: 'View',
   },
 };
 
@@ -1038,6 +1083,117 @@ function applyLangUI() {
   if (info) info.textContent = t('map_hint');
   applyFilters();
   loadStats();
+}
+
+// ─── Playback ───────────────────────────────────────────────────
+
+function togglePlayback() {
+  const btn = document.getElementById('play-btn');
+  if (playbackInterval) {
+    clearInterval(playbackInterval);
+    playbackInterval = null;
+    btn.textContent = '▶';
+    btn.classList.remove('playing');
+    return;
+  }
+
+  btn.textContent = '⏸';
+  btn.classList.add('playing');
+
+  const speed = parseInt(document.getElementById('play-speed').value, 10);
+  const slider = document.getElementById('year-slider');
+  const yearInput = document.getElementById('year-input');
+  const yearEra = document.getElementById('year-era');
+  const yearDisplay = document.getElementById('year-display');
+
+  // Step size depends on the range
+  const currentYear = parseInt(slider.value, 10);
+  const step = currentYear < -1000 ? 100 : currentYear < 0 ? 50 : currentYear < 1000 ? 25 : 10;
+
+  playbackInterval = setInterval(() => {
+    let val = parseInt(slider.value, 10) + step;
+    if (val > 2025) {
+      val = -3100; // Loop back
+    }
+
+    slider.value = val;
+    yearDisplay.textContent = fmtY(val);
+    if (val < 0) {
+      yearInput.value = Math.abs(val);
+      yearEra.value = 'bc';
+    } else {
+      yearInput.value = val;
+      yearEra.value = 'ad';
+    }
+    applyFilters();
+    if (timelineData) drawTimeline();
+  }, speed);
+}
+
+// ─── Compare ────────────────────────────────────────────────────
+
+async function showCompare(id1, id2) {
+  const panel = document.getElementById('detail-panel');
+  const content = document.getElementById('detail-content');
+  panel.classList.remove('hidden');
+  content.innerHTML = '<div class="detail-spinner"><div class="spinner"></div></div>';
+
+  try {
+    const res = await fetch(`${API}/v1/compare/${id1}/${id2}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    const a = data.entity_a;
+    const b = data.entity_b;
+    const cmp = data.comparison;
+
+    content.innerHTML = `
+      <h2>Confronto</h2>
+      <div class="compare-panel">
+        <div class="compare-card" style="border-top:3px solid ${COLORS[a.status]}">
+          <h4>${TYPE_ICONS[a.entity_type] || ''} ${esc(a.name_original)}</h4>
+          <div class="compare-stat"><span class="label">${t('type')}</span><span class="value">${a.entity_type}</span></div>
+          <div class="compare-stat"><span class="label">${t('period')}</span><span class="value">${fmtY(a.year_start)}–${a.year_end ? fmtY(a.year_end) : t('present')}</span></div>
+          <div class="compare-stat"><span class="label">Durata</span><span class="value">${a.duration_years} anni</span></div>
+          <div class="compare-stat"><span class="label">${t('score')}</span><span class="value">${Math.round(a.confidence_score*100)}%</span></div>
+          <div class="compare-stat"><span class="label">Status</span><span class="value"><span class="status-badge ${a.status}">${t(a.status)}</span></span></div>
+          <div class="compare-stat"><span class="label">${t('sources')}</span><span class="value">${a.sources_count}</span></div>
+          <div class="compare-stat"><span class="label">${t('changes')}</span><span class="value">${a.territory_changes_count}</span></div>
+          ${a.capital ? `<div class="compare-stat"><span class="label">${t('capital')}</span><span class="value">${esc(a.capital.name)}</span></div>` : ''}
+        </div>
+        <div class="compare-card" style="border-top:3px solid ${COLORS[b.status]}">
+          <h4>${TYPE_ICONS[b.entity_type] || ''} ${esc(b.name_original)}</h4>
+          <div class="compare-stat"><span class="label">${t('type')}</span><span class="value">${b.entity_type}</span></div>
+          <div class="compare-stat"><span class="label">${t('period')}</span><span class="value">${fmtY(b.year_start)}–${b.year_end ? fmtY(b.year_end) : t('present')}</span></div>
+          <div class="compare-stat"><span class="label">Durata</span><span class="value">${b.duration_years} anni</span></div>
+          <div class="compare-stat"><span class="label">${t('score')}</span><span class="value">${Math.round(b.confidence_score*100)}%</span></div>
+          <div class="compare-stat"><span class="label">Status</span><span class="value"><span class="status-badge ${b.status}">${t(b.status)}</span></span></div>
+          <div class="compare-stat"><span class="label">${t('sources')}</span><span class="value">${b.sources_count}</span></div>
+          <div class="compare-stat"><span class="label">${t('changes')}</span><span class="value">${b.territory_changes_count}</span></div>
+          ${b.capital ? `<div class="compare-stat"><span class="label">${t('capital')}</span><span class="value">${esc(b.capital.name)}</span></div>` : ''}
+        </div>
+      </div>
+      <div class="compare-overlap">
+        <div style="font-size:0.78em;color:var(--text-muted);margin-bottom:4px">Sovrapposizione temporale</div>
+        <div class="overlap-value">${cmp.temporal_overlap_years} anni</div>
+        ${cmp.overlap_period ? `<div style="font-size:0.75em;color:var(--text-muted);margin-top:2px">${cmp.overlap_period}</div>` : '<div style="font-size:0.75em;color:var(--text-muted)">Nessuna sovrapposizione</div>'}
+      </div>
+      <div class="detail-actions">
+        <button class="btn-share" onclick="showDetail(${a.id})">Vedi ${esc(a.name_original)}</button>
+        <button class="btn-share" onclick="showDetail(${b.id})">Vedi ${esc(b.name_original)}</button>
+      </div>`;
+
+    // Fit both on map
+    if (a.boundary_geojson && b.boundary_geojson) {
+      try {
+        const la = L.geoJSON(a.boundary_geojson);
+        const lb = L.geoJSON(b.boundary_geojson);
+        const bounds = la.getBounds().extend(lb.getBounds());
+        map.fitBounds(bounds, { padding: [50, 50] });
+      } catch (_) {}
+    }
+  } catch (err) {
+    content.innerHTML = '<p class="placeholder">Errore nel confronto</p>';
+  }
 }
 
 // ─── Theme ─────────────────────────────────────────────────────
