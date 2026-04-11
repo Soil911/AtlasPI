@@ -395,6 +395,9 @@ function bindEvents() {
   });
 
   document.getElementById('close-detail').addEventListener('click', closeDetail);
+  // Language toggle
+  document.getElementById('lang-toggle').addEventListener('click', switchLang);
+
   document.getElementById('error-dismiss').addEventListener('click', () => {
     document.getElementById('error-toast').classList.add('hidden');
   });
@@ -517,6 +520,73 @@ function drawTimeline() {
     ctx.lineTo(cx, h - pad.bottom);
     ctx.stroke();
   }
+}
+
+// ─── i18n ───────────────────────────────────────────────────────
+
+let lang = localStorage.getItem('atlaspi-lang') || 'it';
+
+const I18N = {
+  it: {
+    search: 'Cerca per nome, anche varianti...',
+    year: 'Anno',
+    status: 'Status',
+    confirmed: 'Confermato', uncertain: 'Incerto', disputed: 'Contestato',
+    type: 'Tipo', sort_label: 'Ordina', sort_default: 'Predefinito',
+    sort_name: 'Nome A-Z', sort_year: 'Anno', sort_conf: 'Affidabilit\u00e0',
+    reset: 'Reset filtri', all: 'Tutti', loading: 'Caricamento...',
+    no_results: 'Nessuna entit\u00e0 trovata', entities: 'entit\u00e0',
+    sources: 'fonti', changes: 'cambi', contested: 'contestati',
+    avg_conf: 'conf. media', info: 'Informazioni', reliability: 'Affidabilit\u00e0',
+    names_section: 'Nomi e varianti (ETHICS-001)',
+    territory_section: 'Cambiamenti territoriali (ETHICS-002)',
+    sources_section: 'Fonti', ethics_section: 'Governance etica',
+    period: 'Periodo', capital: 'Capitale', score: 'Score',
+    today: 'oggi', present: 'presente', bc: 'a.C.',
+    real_boundary: 'Confini da dataset accademici.',
+    approx_boundary: 'Confini approssimativi.',
+    pop_affected: 'Popolazione colpita',
+    banner: 'Confini da fonti accademiche. Dati storici da Natural Earth e aourednik/historical-basemaps.',
+    map_hint: 'Seleziona un\'entit\u00e0 dalla lista o clicca su un\'area della mappa.',
+  },
+  en: {
+    search: 'Search by name, including variants...',
+    year: 'Year', status: 'Status',
+    confirmed: 'Confirmed', uncertain: 'Uncertain', disputed: 'Disputed',
+    type: 'Type', sort_label: 'Sort', sort_default: 'Default',
+    sort_name: 'Name A-Z', sort_year: 'Year', sort_conf: 'Reliability',
+    reset: 'Reset filters', all: 'All', loading: 'Loading...',
+    no_results: 'No entities found', entities: 'entities',
+    sources: 'sources', changes: 'changes', contested: 'contested',
+    avg_conf: 'avg conf.', info: 'Information', reliability: 'Reliability',
+    names_section: 'Names & variants (ETHICS-001)',
+    territory_section: 'Territory changes (ETHICS-002)',
+    sources_section: 'Sources', ethics_section: 'Ethical governance',
+    period: 'Period', capital: 'Capital', score: 'Score',
+    today: 'today', present: 'present', bc: 'BC',
+    real_boundary: 'Boundaries from academic datasets.',
+    approx_boundary: 'Approximate boundaries.',
+    pop_affected: 'Population affected',
+    banner: 'Boundaries from academic sources. Data from Natural Earth and aourednik/historical-basemaps.',
+    map_hint: 'Select an entity from the list or click on the map.',
+  },
+};
+
+function t(key) { return (I18N[lang] || I18N.it)[key] || key; }
+
+function switchLang() {
+  lang = lang === 'it' ? 'en' : 'it';
+  localStorage.setItem('atlaspi-lang', lang);
+  document.getElementById('lang-toggle').textContent = lang === 'it' ? 'EN' : 'IT';
+  document.getElementById('search-input').placeholder = t('search');
+  document.getElementById('reset-btn').textContent = t('reset');
+  const banner = document.querySelector('.data-banner');
+  if (banner) banner.innerHTML = `<strong>${t('banner').split('.')[0]}.</strong> ${t('banner').split('.').slice(1).join('.')}`;
+  const info = document.getElementById('map-info');
+  if (info) info.textContent = t('map_hint');
+  // Refresh UI
+  applyFilters();
+  loadStats();
 }
 
 function isReal(e) {

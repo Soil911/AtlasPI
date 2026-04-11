@@ -2,6 +2,43 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v4.5.0] - 2026-04-11
+
+### Dataset
+- 40 entità storiche — copertura globale da -3100 a.C. al 2014
+- 7 territori contestati (Palestina, Kosovo, Taiwan, Sahara Occ., Crimea, Tibet, Cipro Nord)
+- Nuove: Kemet, Achemenide, Spagnolo, Britannico, SRI, Abbaside,
+  Giappone imperiale, Lituania, Zulu, Cartagine, Maurya, Gran Colombia, Haudenosaunee
+
+### API (12 endpoint)
+- /v1/entity (search + filter + sort + pagination)
+- /v1/entities (list + sort + pagination)
+- /v1/entities/{id} (dettaglio)
+- /v1/search (autocomplete leggero)
+- /v1/types (tipi disponibili)
+- /v1/stats (statistiche dataset)
+- /v1/entities/{id}/contemporaries (overlap temporale)
+- /v1/entities/{id}/related (correlate per tipo/periodo)
+- /v1/export/geojson (FeatureCollection)
+- /v1/export/csv (tabellare)
+- /v1/export/timeline (visualizzazione)
+- /health (stato servizio)
+
+### Frontend
+- Timeline interattiva con canvas (sotto la mappa)
+- Filtro per tipo (chip), ordinamento, barra statistiche
+- Export buttons (GeoJSON, CSV, API)
+- i18n italiano/inglese con toggle
+- Responsive (mobile/tablet)
+- Accessibilità WCAG 2.1 AA
+
+### Infrastruttura
+- GZip compression middleware
+- 100 test (tecnici, etici, sicurezza, edge cases, performance, data quality)
+- Performance test: tutti gli endpoint < 500ms
+- Data quality test: completezza, diversità, coerenza
+- Docker + CI + CORS + rate limit + security headers
+
 ## [v3.0.0] - 2026-04-11
 
 ### Dataset
