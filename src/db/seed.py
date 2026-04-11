@@ -1,4 +1,4 @@
-"""Dati demo per AtlasPI — 10 entità storiche.
+"""Dati demo per AtlasPI — 55 entità storiche.
 
 ETHICS: ogni entità dimostra i principi etici del progetto.
 I nomi originali hanno priorità (ETHICS-001).
@@ -1980,6 +1980,871 @@ DEMO_ENTITIES = [
         "sources": [
             {"citation": "Fenton, W. The Great Law and the Longhouse (1998)", "source_type": "academic"},
             {"citation": "Mann, C.C. 1491: New Revelations of the Americas Before Columbus (2005)", "source_type": "academic"},
+        ],
+    },
+    # ─── 41. Majapahit ──────────────────────────────────────────
+    {
+        "name_original": "Majapahit",
+        "name_original_lang": "jv",
+        "entity_type": "kingdom",
+        "year_start": 1293,
+        "year_end": 1527,
+        "capital_name": "Trowulan",
+        "capital_lat": -7.5456,
+        "capital_lon": 112.3867,
+        "confidence_score": 0.65,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [105.0, -6.0], [106.5, -5.5], [108.0, -5.8], [109.5, -6.0],
+                [111.0, -6.5], [112.5, -7.0], [114.0, -7.5], [115.5, -8.0],
+                [117.0, -8.2], [118.5, -8.0], [120.0, -7.5], [121.0, -6.5],
+                [120.5, -5.0], [119.5, -3.5], [118.0, -2.5], [116.5, -1.5],
+                [115.0, -0.5], [113.5, 0.5], [112.0, 1.5], [110.5, 2.0],
+                [109.0, 1.5], [107.5, 0.5], [106.5, -0.5], [105.5, -2.0],
+                [105.0, -3.5], [104.5, -5.0], [105.0, -6.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: 'Majapahit' e' il nome in antico giavanese. La storiografia "
+            "occidentale ha storicamente minimizzato la complessita' e la portata di "
+            "questo impero marittimo, che al suo apice controllava gran parte del Sud-Est "
+            "asiatico. Le fonti principali (Nagarakretagama, Pararaton) sono in antico "
+            "giavanese e kawi, raramente tradotte in lingue occidentali. Il confidence_score "
+            "riflette la dipendenza da fonti limitate e il bias della storiografia coloniale "
+            "olandese che ha dominato gli studi sulla regione."
+        ),
+        "name_variants": [
+            {"name": "Majapahit Empire", "lang": "en",
+             "context": "denominazione inglese moderna",
+             "source": "Ricklefs, A History of Modern Indonesia (2008)"},
+            {"name": "Wilwatikta", "lang": "jv",
+             "context": "nome alternativo in antico giavanese usato nel Nagarakretagama",
+             "source": "Nagarakretagama, Canto 1"},
+            {"name": "Impero Majapahit", "lang": "it",
+             "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 1293, "region": "Giava orientale", "change_type": "REVOLUTION",
+             "description": "Raden Wijaya fonda Majapahit dopo aver sfruttato l'invasione mongola per rovesciare il regno di Singhasari.",
+             "confidence_score": 0.70},
+            {"year": 1350, "region": "Arcipelago malese", "change_type": "CONQUEST_MILITARY",
+             "description": "Massima espansione sotto Hayam Wuruk e il primo ministro Gajah Mada. Controllo su gran parte dell'arcipelago secondo il Nagarakretagama.",
+             "confidence_score": 0.60},
+        ],
+        "sources": [
+            {"citation": "Prapanca, Nagarakretagama (1365)", "source_type": "primary"},
+            {"citation": "Ricklefs, M.C. A History of Modern Indonesia since c. 1200 (2008)", "source_type": "academic"},
+            {"citation": "Muljana, S. Runtuhnya Kerajaan Hindu-Jawa dan Timbulnya Negara-Negara Islam di Nusantara (2005)", "source_type": "academic"},
+        ],
+    },
+    # ─── 42. Srivijaya ──────────────────────────────────────────
+    {
+        "name_original": "ศรีวิชัย",
+        "name_original_lang": "ms",
+        "entity_type": "kingdom",
+        "year_start": 650,
+        "year_end": 1377,
+        "capital_name": "Palembang",
+        "capital_lat": -2.9761,
+        "capital_lon": 104.7754,
+        "confidence_score": 0.55,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [100.0, 5.0], [101.5, 5.5], [103.0, 4.5], [104.5, 3.5],
+                [105.5, 2.0], [106.0, 0.5], [106.5, -1.0], [106.0, -2.5],
+                [105.5, -3.5], [104.5, -4.5], [103.0, -5.0], [101.5, -4.5],
+                [100.5, -3.5], [99.5, -2.5], [98.5, -1.5], [97.5, 0.0],
+                [97.0, 1.5], [97.5, 3.0], [98.5, 4.0], [100.0, 5.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome 'Srivijaya' e' in sanscrito, riflettendo l'influenza "
+            "culturale indiana, ma l'impero era un'entita' malese indigena. La storiografia "
+            "occidentale ha a lungo trascurato Srivijaya — fu 'riscoperta' solo nel 1918 "
+            "da George Coedes. Le fonti sono frammentarie: iscrizioni in malese antico, "
+            "cronache cinesi e arabe. Il confidence_score basso riflette questa scarsita' "
+            "di fonti e la dipendenza da prospettive esterne (cinesi, arabe, indiane) "
+            "piuttosto che da fonti indigene."
+        ),
+        "name_variants": [
+            {"name": "Srivijaya", "lang": "sa",
+             "context": "nome sanscrito, forma piu' diffusa nella storiografia",
+             "source": "Coedes, G. The Indianized States of Southeast Asia (1968)"},
+            {"name": "San-fo-qi", "lang": "zh",
+             "context": "trascrizione cinese nelle cronache della dinastia Song",
+             "source": "Zhao Rugua, Zhufanzhi (1225)"},
+            {"name": "Sribuza", "lang": "ar",
+             "context": "nome usato dai geografi arabi medievali",
+             "source": "al-Mas'udi, Muruj al-Dhahab (947)"},
+        ],
+        "territory_changes": [
+            {"year": 1025, "region": "Stretto di Malacca", "change_type": "CONQUEST_MILITARY",
+             "description": "Raid navale della dinastia Chola dall'India meridionale. Grave indebolimento del controllo marittimo di Srivijaya.",
+             "confidence_score": 0.60},
+            {"year": 1377, "region": "Sumatra", "change_type": "CONQUEST_MILITARY",
+             "description": "Majapahit conquista Palembang, ponendo fine all'ultimo centro di potere di Srivijaya.",
+             "confidence_score": 0.55},
+        ],
+        "sources": [
+            {"citation": "Coedes, G. The Indianized States of Southeast Asia (1968)", "source_type": "academic"},
+            {"citation": "Wolters, O.W. Early Indonesian Commerce (1967)", "source_type": "academic"},
+            {"citation": "Zhao Rugua, Zhufanzhi [Descrizione dei Popoli Barbari] (1225)", "source_type": "primary"},
+        ],
+    },
+    # ─── 43. Regno delle Hawai'i ─────────────────────────────────
+    {
+        "name_original": "Aupuni Mōʻī o Hawaiʻi",
+        "name_original_lang": "haw",
+        "entity_type": "kingdom",
+        "year_start": 1795,
+        "year_end": 1893,
+        "capital_name": "Honolulu",
+        "capital_lat": 21.3069,
+        "capital_lon": -157.8583,
+        "confidence_score": 0.80,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [-160.5, 22.5], [-160.0, 22.8], [-159.3, 22.3],
+                [-159.0, 21.9], [-158.3, 21.4], [-157.7, 21.3],
+                [-157.0, 21.1], [-156.5, 20.6], [-156.0, 20.5],
+                [-155.5, 19.7], [-155.0, 19.5], [-154.8, 19.9],
+                [-155.2, 20.1], [-155.8, 20.3], [-156.3, 20.8],
+                [-156.8, 21.0], [-157.5, 21.3], [-158.0, 21.6],
+                [-158.5, 21.8], [-159.5, 22.2], [-160.0, 22.3],
+                [-160.5, 22.5],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-003: il Regno delle Hawai'i fu rovesciato nel 1893 da un colpo di stato "
+            "orchestrato da imprenditori americani con il supporto dei Marines USA. La regina "
+            "Lili'uokalani fu deposta illegalmente. Il Congresso USA ha riconosciuto "
+            "l'illegalita' dell'annessione nella Apology Resolution del 1993 (PL 103-150). "
+            "Il movimento di sovranita' hawaiana considera tuttora l'annessione illegale. "
+            "Il confidence_score alto riflette la buona documentazione del periodo."
+        ),
+        "name_variants": [
+            {"name": "Kingdom of Hawai'i", "lang": "en",
+             "context": "denominazione inglese ufficiale",
+             "source": "Kuykendall, The Hawaiian Kingdom (1938)"},
+            {"name": "Regno delle Hawaii", "lang": "it",
+             "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 1795, "region": "Arcipelago hawaiano", "change_type": "UNIFICATION",
+             "description": "Kamehameha I unifica le isole hawaiane dopo la battaglia di Nu'uanu, creando il primo stato unificato.",
+             "confidence_score": 0.85},
+            {"year": 1893, "region": "Arcipelago hawaiano", "change_type": "COLONIZATION",
+             "description": "Rovesciamento della regina Lili'uokalani da parte di imprenditori americani con supporto militare USA. Annessione agli USA nel 1898.",
+             "population_affected": 40000, "confidence_score": 0.95},
+        ],
+        "sources": [
+            {"citation": "Kuykendall, R.S. The Hawaiian Kingdom (1938-1967), 3 volumi", "source_type": "academic"},
+            {"citation": "US Congress, Apology Resolution PL 103-150 (1993)", "source_type": "primary"},
+            {"citation": "Silva, N.K. Aloha Betrayed: Native Hawaiian Resistance to American Colonialism (2004)", "source_type": "academic"},
+        ],
+    },
+    # ─── 44. Tu'i Tonga ─────────────────────────────────────────
+    {
+        "name_original": "Tu'i Tonga",
+        "name_original_lang": "to",
+        "entity_type": "kingdom",
+        "year_start": 950,
+        "year_end": 1865,
+        "capital_name": "Mu'a",
+        "capital_lat": -21.1550,
+        "capital_lon": -175.1544,
+        "confidence_score": 0.55,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [-176.5, -20.5], [-176.0, -20.0], [-175.5, -19.5],
+                [-175.0, -19.0], [-174.5, -18.5], [-174.0, -19.0],
+                [-174.5, -19.5], [-175.0, -20.0], [-175.5, -20.5],
+                [-175.8, -21.0], [-176.0, -21.5], [-176.3, -21.2],
+                [-176.5, -20.5],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: Tu'i Tonga e' il titolo del lignaggio regnante, usato come "
+            "nome dell'entita' politica. La storiografia occidentale ha storicamente "
+            "classificato le societa' polinesiane come 'chiefdom' piuttosto che regni, "
+            "riflettendo un bias eurocentrista nella classificazione politica. Il Tu'i "
+            "Tonga esercitava influenza su Fiji, Samoa e parti della Melanesia — un "
+            "'impero marittimo' del Pacifico spesso ignorato. Il confidence_score basso "
+            "riflette la predominanza di tradizione orale e la scarsita' di fonti scritte "
+            "pre-contatto europeo."
+        ),
+        "name_variants": [
+            {"name": "Tongan Empire", "lang": "en",
+             "context": "denominazione usata nella storiografia anglofona recente",
+             "source": "Campbell, I.C. Island Kingdom: Tonga Ancient and Modern (2001)"},
+            {"name": "Impero Tongano", "lang": "it",
+             "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 1200, "region": "Pacifico meridionale", "change_type": "CONQUEST_MILITARY",
+             "description": "Espansione dell'influenza tongana su Fiji, Samoa e altre isole. Tipo e grado di controllo dibattuti dagli storici.",
+             "confidence_score": 0.45},
+            {"year": 1865, "region": "Tonga", "change_type": "TREATY",
+             "description": "Abolizione del titolo Tu'i Tonga con la morte dell'ultimo detentore. Transizione al sistema monarchico moderno sotto George Tupou I.",
+             "confidence_score": 0.75},
+        ],
+        "sources": [
+            {"citation": "Campbell, I.C. Island Kingdom: Tonga Ancient and Modern (2001)", "source_type": "academic"},
+            {"citation": "Mahina, O. Ko e Ngaahi 'Ata mei he Hisitolia mo e Kalatua 'o Tonga (1992)", "source_type": "academic"},
+        ],
+    },
+    # ─── 45. Mapuche (Wallmapu) ──────────────────────────────────
+    {
+        "name_original": "Wallmapu",
+        "name_original_lang": "arn",
+        "entity_type": "confederation",
+        "year_start": -500,
+        "year_end": 1883,
+        "capital_name": "Temuco",
+        "capital_lat": -38.7359,
+        "capital_lon": -72.5904,
+        "confidence_score": 0.60,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [-73.5, -36.0], [-73.0, -35.5], [-72.0, -35.0],
+                [-71.0, -35.5], [-70.5, -36.0], [-70.0, -37.0],
+                [-69.5, -38.0], [-69.5, -39.0], [-70.0, -40.0],
+                [-70.5, -41.0], [-71.0, -42.0], [-71.5, -43.0],
+                [-72.0, -43.5], [-72.5, -43.0], [-73.0, -42.0],
+                [-73.5, -41.0], [-74.0, -40.0], [-74.0, -39.0],
+                [-73.8, -38.0], [-73.5, -37.0], [-73.5, -36.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-003: i Mapuche resistettero con successo alla conquista spagnola — "
+            "uno dei pochissimi popoli indigeni a mantenere l'indipendenza durante il "
+            "colonialismo. Furono sconfitti solo nel 1883 dalla 'Ocupacion de la Araucania' "
+            "cilena, una campagna militare che e' spesso presentata come 'pacificazione' "
+            "nella storiografia cilena ufficiale. Il termine 'Araucano' e' un esonimo "
+            "rifiutato dai Mapuche. Il conflitto per i diritti territoriali continua oggi. "
+            "Il Wallmapu (territorio mapuche) comprende aree sia in Cile che in Argentina."
+        ),
+        "name_variants": [
+            {"name": "Mapuche", "lang": "arn",
+             "context": "nome del popolo ('gente della terra' in mapudungun)",
+             "source": "Bengoa, J. Historia del Pueblo Mapuche (2000)"},
+            {"name": "Araucanians", "lang": "en",
+             "context": "esonimo coloniale spagnolo — rifiutato dai Mapuche",
+             "source": "Bengoa, J. Historia del Pueblo Mapuche (2000)"},
+            {"name": "Reche", "lang": "arn",
+             "context": "autodenominazione precoloniale ('gente vera')",
+             "source": "Boccara, G. Guerre et Ethnogenese Mapuche (1998)"},
+        ],
+        "territory_changes": [
+            {"year": 1641, "region": "Bio-Bio al Tolten", "change_type": "TREATY",
+             "description": "Trattato di Quillin: la Spagna riconosce l'indipendenza mapuche a sud del fiume Bio-Bio. Uno dei pochi trattati coloniali favorevoli a un popolo indigeno.",
+             "confidence_score": 0.80},
+            {"year": 1883, "region": "Wallmapu", "change_type": "CONQUEST_MILITARY",
+             "description": "Ocupacion de la Araucania: il Cile conquista il territorio mapuche. Deportazioni, confische terriere e riduzione in 'reducciones' (riserve).",
+             "population_affected": 150000, "confidence_score": 0.80},
+        ],
+        "sources": [
+            {"citation": "Bengoa, J. Historia del Pueblo Mapuche: Siglos XIX y XX (2000)", "source_type": "academic"},
+            {"citation": "Boccara, G. Guerre et Ethnogenese Mapuche dans le Chili Colonial (1998)", "source_type": "academic"},
+            {"citation": "Parlamento de Quillin (1641)", "source_type": "primary"},
+        ],
+    },
+    # ─── 46. Cahokia (Civiltà del Mississippi) ───────────────────
+    {
+        "name_original": "Cahokia",
+        "name_original_lang": "en",
+        "entity_type": "city-state",
+        "year_start": 600,
+        "year_end": 1400,
+        "capital_name": "Cahokia",
+        "capital_lat": 38.6555,
+        "capital_lon": -90.0622,
+        "confidence_score": 0.55,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [-91.5, 39.5], [-91.0, 39.8], [-90.5, 39.5],
+                [-90.0, 39.0], [-89.5, 38.5], [-89.0, 38.0],
+                [-89.0, 37.5], [-89.5, 37.0], [-90.0, 36.5],
+                [-90.5, 36.5], [-91.0, 37.0], [-91.5, 37.5],
+                [-92.0, 38.0], [-92.0, 38.5], [-91.8, 39.0],
+                [-91.5, 39.5],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome 'Cahokia' e' in realta' il nome di un sottogruppo "
+            "della confederazione Illini che viveva nell'area secoli dopo l'abbandono "
+            "del sito. Il nome originale del sito e del popolo che lo costrui' e' "
+            "sconosciuto. Il confidence_score riflette questa lacuna fondamentale. "
+            "ETHICS-003: Cahokia al suo apice (~1100 d.C.) aveva una popolazione "
+            "stimata di 10.000-20.000 persone, piu' grande di Londra nello stesso "
+            "periodo. Questo fatto e' sistematicamente omesso nella storiografia "
+            "occidentale, alimentando il mito del Nord America come 'terra vuota' "
+            "prima della colonizzazione europea."
+        ),
+        "name_variants": [
+            {"name": "Mississippian Culture", "lang": "en",
+             "context": "termine archeologico per la civilta' piu' ampia",
+             "source": "Pauketat, T. Cahokia: Ancient America's Great City (2009)"},
+            {"name": "Civilta' del Mississippi", "lang": "it",
+             "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 1050, "region": "Confluenza Mississippi-Missouri", "change_type": "UNIFICATION",
+             "description": "Big Bang di Cahokia: rapida urbanizzazione e centralizzazione politica. Costruzione di Monks Mound, la piu' grande struttura precolombiana a nord del Messico.",
+             "confidence_score": 0.60},
+            {"year": 1350, "region": "Regione di Cahokia", "change_type": "UNKNOWN",
+             "description": "Declino e abbandono graduale del sito. Cause dibattute: cambiamento climatico, deforestazione, instabilita' politica.",
+             "confidence_score": 0.40},
+        ],
+        "sources": [
+            {"citation": "Pauketat, T.R. Cahokia: Ancient America's Great City on the Mississippi (2009)", "source_type": "academic"},
+            {"citation": "Mann, C.C. 1491: New Revelations of the Americas Before Columbus (2005)", "source_type": "academic"},
+        ],
+    },
+    # ─── 47. Grande Zimbabwe ─────────────────────────────────────
+    {
+        "name_original": "Dzimba dza mabwe",
+        "name_original_lang": "sn",
+        "entity_type": "kingdom",
+        "year_start": 1100,
+        "year_end": 1450,
+        "capital_name": "Grande Zimbabwe",
+        "capital_lat": -20.2674,
+        "capital_lon": 30.9338,
+        "confidence_score": 0.60,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [28.5, -19.0], [29.5, -18.5], [30.5, -18.5],
+                [31.5, -19.0], [32.5, -19.5], [33.0, -20.0],
+                [33.0, -21.0], [32.5, -21.5], [32.0, -22.0],
+                [31.0, -22.5], [30.0, -22.5], [29.0, -22.0],
+                [28.5, -21.5], [28.0, -21.0], [28.0, -20.0],
+                [28.5, -19.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-003: il Grande Zimbabwe e' stato al centro di una lunga storia "
+            "di negazione razzista. I coloni europei rifiutarono sistematicamente di "
+            "attribuire la costruzione agli africani, inventando teorie su costruttori "
+            "fenici, arabi o biblici. Il regime della Rhodesia mise al bando le "
+            "pubblicazioni che attribuivano il sito al popolo Shona. Questa negazione "
+            "e' un esempio paradigmatico di razzismo nella storiografia. Le evidenze "
+            "archeologiche moderne confermano inequivocabilmente l'origine Shona."
+        ),
+        "name_variants": [
+            {"name": "Great Zimbabwe", "lang": "en",
+             "context": "denominazione inglese; 'zimbabwe' = 'grandi case di pietra' in Shona",
+             "source": "Pikirayi, I. The Zimbabwe Culture (2001)"},
+            {"name": "Grande Zimbabwe", "lang": "it",
+             "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+            {"name": "Zimbabwe ya Mambwe", "lang": "sn",
+             "context": "denominazione Shona tradizionale",
+             "source": "Pikirayi, I. The Zimbabwe Culture (2001)"},
+        ],
+        "territory_changes": [
+            {"year": 1100, "region": "Altopiano dello Zimbabwe", "change_type": "UNIFICATION",
+             "description": "Emergere del Grande Zimbabwe come centro politico ed economico dominante dell'altopiano, legato al commercio dell'oro con la costa swahili.",
+             "confidence_score": 0.55},
+            {"year": 1450, "region": "Altopiano dello Zimbabwe", "change_type": "UNKNOWN",
+             "description": "Declino e abbandono del sito. Cause dibattute: esaurimento ambientale, spostamento delle rotte commerciali, frammentazione politica. Potere trasferito a Mutapa.",
+             "confidence_score": 0.45},
+        ],
+        "sources": [
+            {"citation": "Pikirayi, I. The Zimbabwe Culture: Origins and Decline in Southern Zambezian States (2001)", "source_type": "academic"},
+            {"citation": "Fontein, J. The Silence of Great Zimbabwe (2006)", "source_type": "academic"},
+            {"citation": "Huffman, T.N. Snakes and Crocodiles: Power and Symbolism in Ancient Zimbabwe (1996)", "source_type": "academic"},
+        ],
+    },
+    # ─── 48. Regno del Benin ─────────────────────────────────────
+    {
+        "name_original": "Edo",
+        "name_original_lang": "bin",
+        "entity_type": "kingdom",
+        "year_start": 1180,
+        "year_end": 1897,
+        "capital_name": "Edo (Benin City)",
+        "capital_lat": 6.3350,
+        "capital_lon": 5.6037,
+        "confidence_score": 0.70,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [4.5, 7.5], [5.0, 7.8], [5.5, 7.5], [6.0, 7.2],
+                [6.5, 7.0], [7.0, 6.5], [7.0, 6.0], [6.8, 5.5],
+                [6.5, 5.0], [6.0, 5.0], [5.5, 5.5], [5.0, 5.8],
+                [4.5, 6.0], [4.0, 6.5], [4.0, 7.0], [4.5, 7.5],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-003: il Regno del Benin fu distrutto dalla 'Spedizione Punitiva' "
+            "britannica del 1897, che saccheggio' migliaia di opere d'arte (i celebri "
+            "'Bronzi del Benin') ora conservate nei musei occidentali. La restituzione "
+            "di queste opere e' un dibattito attuale. La citta' di Edo aveva una rete "
+            "di mura piu' estesa della Grande Muraglia cinese — fatto sistematicamente "
+            "ignorato. Il nome 'Benin' e' un esonimo portoghese; il nome proprio del "
+            "popolo e del regno e' Edo."
+        ),
+        "name_variants": [
+            {"name": "Kingdom of Benin", "lang": "en",
+             "context": "esonimo di origine portoghese, usato nella storiografia occidentale",
+             "source": "Egharevba, J. A Short History of Benin (1968)"},
+            {"name": "Regno del Benin", "lang": "it",
+             "context": "denominazione italiana (esonimo)",
+             "source": "Enciclopedia Treccani"},
+            {"name": "Igodomigodo", "lang": "bin",
+             "context": "nome pre-dinastico del regno nella tradizione Edo",
+             "source": "Egharevba, J. A Short History of Benin (1968)"},
+        ],
+        "territory_changes": [
+            {"year": 1440, "region": "Nigeria meridionale", "change_type": "CONQUEST_MILITARY",
+             "description": "Massima espansione sotto l'Oba Ewuare il Grande. Riforma dello stato, fortificazione di Edo, espansione territoriale.",
+             "confidence_score": 0.65},
+            {"year": 1897, "region": "Edo", "change_type": "COLONIZATION",
+             "description": "Spedizione punitiva britannica: distruzione della citta', deportazione dell'Oba, saccheggio di migliaia di opere d'arte. I 'Bronzi del Benin' finiscono nei musei europei.",
+             "population_affected": 100000, "confidence_score": 0.90},
+        ],
+        "sources": [
+            {"citation": "Egharevba, J.U. A Short History of Benin (1968)", "source_type": "academic"},
+            {"citation": "Hicks, D. The Brutish Museums: The Benin Bronzes, Colonial Violence and Cultural Restitution (2020)", "source_type": "academic"},
+            {"citation": "Connah, G. The Archaeology of Benin (1975)", "source_type": "academic"},
+        ],
+    },
+    # ─── 49. Silla ───────────────────────────────────────────────
+    {
+        "name_original": "신라",
+        "name_original_lang": "ko",
+        "entity_type": "kingdom",
+        "year_start": -57,
+        "year_end": 935,
+        "capital_name": "Gyeongju",
+        "capital_lat": 35.8562,
+        "capital_lon": 129.2247,
+        "confidence_score": 0.75,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [126.0, 37.5], [127.0, 38.0], [128.0, 38.5],
+                [129.0, 38.0], [129.5, 37.5], [130.0, 37.0],
+                [130.0, 36.0], [129.5, 35.5], [129.0, 35.0],
+                [128.5, 34.5], [128.0, 34.5], [127.0, 34.5],
+                [126.5, 35.0], [126.0, 35.5], [125.5, 36.0],
+                [125.5, 36.5], [126.0, 37.0], [126.0, 37.5],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome '신라' (Silla) e' in coreano. I confini mostrati "
+            "si riferiscono al periodo della Silla Unificata (668-935 d.C.) dopo "
+            "l'unificazione della penisola coreana. La storiografia giapponese e "
+            "quella coreana hanno interpretazioni divergenti su molti aspetti della "
+            "storia di Silla, in particolare riguardo ai rapporti con il Giappone "
+            "antico (Wa/Yamato). Le fonti primarie includono il Samguk Sagi e il "
+            "Samguk Yusa, compilati secoli dopo gli eventi."
+        ),
+        "name_variants": [
+            {"name": "Silla", "lang": "en",
+             "context": "romanizzazione standard del nome coreano",
+             "source": "Lee, K. A New History of Korea (1984)"},
+            {"name": "新羅", "lang": "zh",
+             "context": "nome in caratteri cinesi, usato nelle fonti cinesi e giapponesi",
+             "source": "Samguk Sagi (1145)"},
+            {"name": "Unified Silla", "lang": "en", "period_start": 668, "period_end": 935,
+             "context": "denominazione del periodo post-unificazione nella storiografia anglofona",
+             "source": "Lee, K. A New History of Korea (1984)"},
+        ],
+        "territory_changes": [
+            {"year": 668, "region": "Penisola coreana", "change_type": "CONQUEST_MILITARY",
+             "description": "Silla, alleata con la dinastia Tang, conquista Goguryeo e Baekje, unificando la penisola. Successivamente respinge i tentativi di controllo Tang.",
+             "confidence_score": 0.80},
+            {"year": 935, "region": "Penisola coreana", "change_type": "CESSION_FORCED",
+             "description": "L'ultimo re di Silla, Gyeongsun, si arrende a Wang Geon di Goryeo, ponendo fine al regno dopo quasi mille anni.",
+             "confidence_score": 0.85},
+        ],
+        "sources": [
+            {"citation": "Kim Bu-sik, Samguk Sagi [Storia dei Tre Regni] (1145)", "source_type": "primary"},
+            {"citation": "Lee, K.-B. A New History of Korea (1984)", "source_type": "academic"},
+            {"citation": "Seth, M.J. A History of Korea: From Antiquity to the Present (2010)", "source_type": "academic"},
+        ],
+    },
+    # ─── 50. Champa ──────────────────────────────────────────────
+    {
+        "name_original": "Campā",
+        "name_original_lang": "cjm",
+        "entity_type": "kingdom",
+        "year_start": 192,
+        "year_end": 1832,
+        "capital_name": "Indrapura",
+        "capital_lat": 15.9370,
+        "capital_lon": 108.2770,
+        "confidence_score": 0.60,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [107.0, 17.0], [107.5, 17.5], [108.0, 17.0],
+                [108.5, 16.5], [109.0, 16.0], [109.5, 15.5],
+                [109.5, 14.5], [109.0, 13.5], [108.5, 12.5],
+                [108.5, 11.5], [109.0, 11.0], [109.0, 10.5],
+                [108.5, 10.0], [108.0, 10.5], [107.5, 11.0],
+                [107.0, 12.0], [107.0, 13.0], [106.5, 14.0],
+                [106.5, 15.0], [107.0, 16.0], [107.0, 17.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: 'Champa' (o 'Campā') e' il nome sanscrito del regno. "
+            "Il popolo Cham si autodenomina 'Urang Campa'. Champa fu gradualmente "
+            "conquistata e assorbita dal Vietnam (Dai Viet) in un processo secolare "
+            "noto come 'Nam Tien' (marcia verso sud). ETHICS-003: il popolo Cham "
+            "e' oggi una minoranza etnica in Vietnam e Cambogia. La storiografia "
+            "vietnamita tradizionale presenta il Nam Tien come espansione naturale, "
+            "minimizzando la distruzione della civilta' Cham. I templi Cham "
+            "(My Son, Po Nagar) sono tra le evidenze della sofisticazione culturale "
+            "di questo regno induista-islamico."
+        ),
+        "name_variants": [
+            {"name": "Champa", "lang": "en",
+             "context": "romanizzazione standard, da sanscrito Campā",
+             "source": "Maspero, G. The Champa Kingdom (2002)"},
+            {"name": "Chiêm Thành", "lang": "vi",
+             "context": "nome vietnamita storico del regno",
+             "source": "Dai Viet Su Ky Toan Thu"},
+            {"name": "占城", "lang": "zh",
+             "context": "nome nelle cronache cinesi",
+             "source": "Song Shi (Storia dei Song)"},
+        ],
+        "territory_changes": [
+            {"year": 1471, "region": "Vietnam centrale", "change_type": "CONQUEST_MILITARY",
+             "description": "L'imperatore Le Thanh Tong di Dai Viet conquista la capitale Vijaya. Massacro di massa: le fonti vietnamite registrano 60.000 morti e 30.000 prigionieri.",
+             "population_affected": 90000, "confidence_score": 0.65},
+            {"year": 1832, "region": "Vietnam meridionale", "change_type": "COLONIZATION",
+             "description": "L'imperatore Minh Mang del Vietnam abolisce gli ultimi resti dell'autonomia Cham. Politiche di assimilazione forzata.",
+             "population_affected": 50000, "confidence_score": 0.70},
+        ],
+        "sources": [
+            {"citation": "Maspero, G. The Champa Kingdom: The History of an Extinct Vietnamese Culture (2002, trad.)", "source_type": "academic"},
+            {"citation": "Vickery, M. Champa Revised (2005)", "source_type": "academic"},
+            {"citation": "Dai Viet Su Ky Toan Thu [Annali Completi del Grande Viet]", "source_type": "primary"},
+        ],
+    },
+    # ─── 51. Aksum ───────────────────────────────────────────────
+    {
+        "name_original": "መንግሥተ አክሱም",
+        "name_original_lang": "gez",
+        "entity_type": "kingdom",
+        "year_start": -400,
+        "year_end": 960,
+        "capital_name": "Aksum",
+        "capital_lat": 14.1211,
+        "capital_lon": 38.7468,
+        "confidence_score": 0.65,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [36.0, 16.0], [37.0, 16.5], [38.5, 16.0],
+                [39.5, 15.5], [40.5, 15.0], [41.5, 14.5],
+                [42.5, 14.0], [43.0, 13.0], [43.0, 12.0],
+                [42.5, 11.0], [42.0, 10.0], [41.0, 9.5],
+                [40.0, 9.5], [39.0, 10.0], [38.0, 10.5],
+                [37.0, 11.0], [36.0, 12.0], [35.5, 13.0],
+                [35.5, 14.0], [36.0, 15.0], [36.0, 16.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome in Ge'ez (l'antica lingua etiopica) e' 'Mangesta Aksum'. "
+            "Aksum e' uno dei quattro grandi imperi del mondo antico secondo il profeta persiano "
+            "Mani (III sec. d.C.), insieme a Roma, Persia e Cina — un fatto "
+            "frequentemente omesso nella storiografia eurocentrica. Aksum fu tra le "
+            "prime entita' politiche ad adottare il cristianesimo come religione di stato "
+            "(IV sec.), prima dell'Impero Romano. La storiografia occidentale ha storicamente "
+            "minimizzato il ruolo di Aksum nel commercio internazionale antico."
+        ),
+        "name_variants": [
+            {"name": "Axum", "lang": "en",
+             "context": "romanizzazione alternativa comune in inglese",
+             "source": "Munro-Hay, S. Aksum: An African Civilisation (1991)"},
+            {"name": "Aksum", "lang": "en",
+             "context": "romanizzazione preferita nella storiografia moderna",
+             "source": "Phillipson, D.W. Foundations of an African Civilisation (2012)"},
+            {"name": "Regno di Axum", "lang": "it",
+             "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 325, "region": "Etiopia e Yemen", "change_type": "CONQUEST_MILITARY",
+             "description": "Massima espansione sotto il re Ezana. Conquista del regno di Meroe (Kush) e conversione al cristianesimo. Controllo su rotte commerciali del Mar Rosso.",
+             "confidence_score": 0.65},
+            {"year": 570, "region": "Yemen", "change_type": "CONQUEST_MILITARY",
+             "description": "Perdita del controllo sullo Yemen a favore dell'Impero Sasanide. Inizio del declino commerciale.",
+             "confidence_score": 0.55},
+        ],
+        "sources": [
+            {"citation": "Munro-Hay, S.C. Aksum: An African Civilisation of Late Antiquity (1991)", "source_type": "academic"},
+            {"citation": "Phillipson, D.W. Foundations of an African Civilisation: Aksum and the Northern Horn (2012)", "source_type": "academic"},
+            {"citation": "Periplus Maris Erythraei (I sec. d.C.)", "source_type": "primary"},
+        ],
+    },
+    # ─── 52. Kush / Meroë ───────────────────────────────────────
+    {
+        "name_original": "Kush",
+        "name_original_lang": "egy",
+        "entity_type": "kingdom",
+        "year_start": -1070,
+        "year_end": 350,
+        "capital_name": "Meroë",
+        "capital_lat": 16.9386,
+        "capital_lon": 33.7489,
+        "confidence_score": 0.60,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [31.0, 22.0], [32.0, 22.5], [33.0, 22.0],
+                [34.0, 21.0], [35.0, 20.0], [35.5, 19.0],
+                [35.5, 18.0], [35.0, 17.0], [34.5, 16.0],
+                [34.0, 15.0], [33.5, 14.5], [33.0, 14.0],
+                [32.5, 14.0], [32.0, 14.5], [31.5, 15.0],
+                [31.0, 16.0], [30.5, 17.0], [30.5, 18.0],
+                [30.5, 19.0], [31.0, 20.0], [31.0, 21.0],
+                [31.0, 22.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-003: il Regno di Kush e' sistematicamente sottorappresentato nella "
+            "storiografia occidentale, spesso ridotto a 'periferia egizia'. In realta' "
+            "Kush conquisto' l'Egitto e governo' come XXV Dinastia (747-656 a.C.). "
+            "La civilta' meroitica sviluppo' un proprio sistema di scrittura (meroitico) "
+            "ancora solo parzialmente decifrato. Le piramidi di Meroe sono piu' numerose "
+            "di quelle egizie. Il bias eurocentrico ha portato a decenni di negazione "
+            "delle capacita' tecnologiche e culturali di questa civilta' nubiana."
+        ),
+        "name_variants": [
+            {"name": "Kingdom of Kush", "lang": "en",
+             "context": "denominazione inglese standard",
+             "source": "Welsby, D. The Kingdom of Kush (1996)"},
+            {"name": "Meroë", "lang": "en",
+             "context": "nome della capitale tarda, spesso usato come sinonimo del regno",
+             "source": "Shinnie, P.L. Meroe: A Civilization of the Sudan (1967)"},
+            {"name": "Regno di Kush", "lang": "it",
+             "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": -747, "region": "Egitto", "change_type": "CONQUEST_MILITARY",
+             "description": "Il re kushita Piankhy conquista l'Egitto, fondando la XXV Dinastia (faraoni nubiani). Kush governa l'Egitto per quasi un secolo.",
+             "confidence_score": 0.75},
+            {"year": 350, "region": "Sudan settentrionale", "change_type": "CONQUEST_MILITARY",
+             "description": "Invasione di Aksum sotto il re Ezana. Distruzione di Meroe e fine del regno. Le circostanze esatte sono dibattute.",
+             "confidence_score": 0.50},
+        ],
+        "sources": [
+            {"citation": "Welsby, D.A. The Kingdom of Kush: The Napatan and Meroitic Empires (1996)", "source_type": "academic"},
+            {"citation": "Shinnie, P.L. Meroe: A Civilization of the Sudan (1967)", "source_type": "academic"},
+            {"citation": "Stele di Ezana (IV sec. d.C.)", "source_type": "primary"},
+        ],
+    },
+    # ─── 53. Impero Corasmio ─────────────────────────────────────
+    {
+        "name_original": "خوارزمشاهیان",
+        "name_original_lang": "fa",
+        "entity_type": "empire",
+        "year_start": 1077,
+        "year_end": 1231,
+        "capital_name": "Gurganj",
+        "capital_lat": 42.3000,
+        "capital_lon": 59.1500,
+        "confidence_score": 0.70,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [50.0, 40.0], [52.0, 42.0], [54.0, 43.0],
+                [56.0, 43.5], [58.0, 43.0], [60.0, 42.5],
+                [62.0, 42.0], [64.0, 41.0], [66.0, 40.0],
+                [68.0, 39.0], [70.0, 38.0], [71.0, 37.0],
+                [71.0, 35.0], [70.0, 33.0], [68.0, 31.0],
+                [66.0, 29.0], [64.0, 27.5], [62.0, 26.0],
+                [60.0, 25.5], [58.0, 26.0], [56.0, 27.0],
+                [54.0, 28.0], [52.0, 29.0], [50.0, 30.0],
+                [48.0, 31.0], [47.0, 33.0], [47.5, 35.0],
+                [48.0, 37.0], [49.0, 38.5], [50.0, 40.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome in persiano e' 'Khwarazmshahiyan' (dinastia dei "
+            "Shah di Corasmia). L'Impero Corasmio e' spesso ridotto a una nota a "
+            "pie' di pagina nella storia delle conquiste mongole, piuttosto che "
+            "studiato come civilta' a se'. ETHICS-002: la distruzione mongola della "
+            "Corasmia (1219-1221) fu una delle catastrofi demografiche piu' gravi "
+            "della storia pre-moderna. Citta' come Urgench, Bukhara e Samarcanda "
+            "furono rase al suolo. Le stime parlano di milioni di morti."
+        ),
+        "name_variants": [
+            {"name": "Khwarezmian Empire", "lang": "en",
+             "context": "denominazione anglofona standard",
+             "source": "Bosworth, C.E. The New Islamic Dynasties (1996)"},
+            {"name": "Khwarezm-Shah dynasty", "lang": "en",
+             "context": "denominazione dinastica alternativa",
+             "source": "Encyclopaedia Iranica"},
+            {"name": "Impero Corasmio", "lang": "it",
+             "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 1200, "region": "Asia Centrale e Iran", "change_type": "CONQUEST_MILITARY",
+             "description": "Massima espansione sotto Ala ad-Din Muhammad II. L'impero si estende dall'Iraq all'India settentrionale.",
+             "confidence_score": 0.75},
+            {"year": 1220, "region": "Corasmia", "change_type": "CONQUEST_MILITARY",
+             "description": "Invasione mongola di Gengis Khan. Distruzione sistematica delle citta' corasmie. Stime di milioni di morti. Crollo dell'impero in meno di due anni.",
+             "population_affected": 2000000, "confidence_score": 0.60},
+        ],
+        "sources": [
+            {"citation": "Bosworth, C.E. The New Islamic Dynasties (1996)", "source_type": "academic"},
+            {"citation": "al-Juwayni, Ata-Malik. Tarikh-i Jahan Gusha [Storia del Conquistatore del Mondo] (1260)", "source_type": "primary"},
+            {"citation": "Barthold, V.V. Turkestan Down to the Mongol Invasion (1928)", "source_type": "academic"},
+        ],
+    },
+    # ─── 54. Ayutthaya ───────────────────────────────────────────
+    {
+        "name_original": "อาณาจักรอยุธยา",
+        "name_original_lang": "th",
+        "entity_type": "kingdom",
+        "year_start": 1351,
+        "year_end": 1767,
+        "capital_name": "Ayutthaya",
+        "capital_lat": 14.3692,
+        "capital_lon": 100.5877,
+        "confidence_score": 0.75,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [98.0, 19.0], [99.0, 20.0], [100.0, 20.5],
+                [101.0, 20.0], [102.0, 19.5], [103.0, 18.5],
+                [104.0, 17.5], [104.5, 16.5], [105.0, 15.5],
+                [105.0, 14.5], [104.5, 13.5], [104.0, 12.5],
+                [103.5, 11.5], [103.0, 10.5], [102.0, 9.5],
+                [101.0, 8.5], [100.0, 7.5], [99.0, 7.0],
+                [98.5, 8.0], [98.0, 9.5], [97.5, 11.0],
+                [97.5, 12.5], [98.0, 14.0], [98.0, 15.5],
+                [97.5, 17.0], [98.0, 18.0], [98.0, 19.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome in thailandese e' 'Anachak Ayutthaya'. 'Siam' e' un "
+            "esonimo usato dagli europei, di origine incerta (forse dal sanscrito Syama "
+            "o dal malese Siam). La storiografia tailandese tradizionale presenta Ayutthaya "
+            "come antecedente diretto dello stato Thai moderno, ma questa narrazione "
+            "semplifica una realta' multietnica che includeva Thai, Mon, Khmer, Cinesi e "
+            "Malesi. ETHICS-002: la distruzione di Ayutthaya da parte dei Birmani nel 1767 "
+            "comporto' la perdita di gran parte della documentazione storica."
+        ),
+        "name_variants": [
+            {"name": "Siam", "lang": "en",
+             "context": "esonimo europeo, di uso corrente fino al 1939",
+             "source": "Baker, C. A History of Thailand (2014)"},
+            {"name": "Kingdom of Ayutthaya", "lang": "en",
+             "context": "denominazione storiografica inglese",
+             "source": "Baker, C. A History of Thailand (2014)"},
+            {"name": "Regno di Ayutthaya", "lang": "it",
+             "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 1431, "region": "Cambogia", "change_type": "CONQUEST_MILITARY",
+             "description": "Saccheggio di Angkor. Ayutthaya conquista la capitale khmer, causando lo spostamento del centro politico cambogiano a Phnom Penh.",
+             "confidence_score": 0.75},
+            {"year": 1767, "region": "Siam centrale", "change_type": "CONQUEST_MILITARY",
+             "description": "Assedio e distruzione di Ayutthaya da parte dell'esercito birmano della dinastia Konbaung. Incendio della citta', deportazione di massa della popolazione.",
+             "population_affected": 200000, "confidence_score": 0.80},
+        ],
+        "sources": [
+            {"citation": "Baker, C. & Phongpaichit, P. A History of Thailand (2014)", "source_type": "academic"},
+            {"citation": "Wyatt, D.K. Thailand: A Short History (2003)", "source_type": "academic"},
+            {"citation": "Royal Chronicles of Ayutthaya (Phongsawadan)", "source_type": "primary"},
+        ],
+    },
+    # ─── 55. Māori Aotearoa ──────────────────────────────────────
+    {
+        "name_original": "Aotearoa",
+        "name_original_lang": "mi",
+        "entity_type": "confederation",
+        "year_start": 1250,
+        "year_end": 1840,
+        "capital_name": "Kororareka",
+        "capital_lat": -35.2627,
+        "capital_lon": 174.1226,
+        "confidence_score": 0.55,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [166.0, -47.0], [167.0, -46.5], [168.0, -46.0],
+                [169.5, -45.5], [171.0, -44.5], [172.5, -43.5],
+                [173.5, -42.5], [174.5, -41.5], [175.0, -40.5],
+                [176.0, -39.5], [177.0, -38.5], [178.0, -37.5],
+                [178.0, -36.5], [177.5, -35.5], [176.5, -34.5],
+                [175.5, -34.5], [174.5, -35.0], [173.5, -35.5],
+                [172.5, -36.5], [171.5, -37.5], [170.5, -39.0],
+                [169.5, -40.5], [168.5, -42.0], [167.5, -44.0],
+                [166.5, -45.5], [166.0, -47.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: 'Aotearoa' ('terra della lunga nuvola bianca') e' il nome "
+            "Maori della Nuova Zelanda. 'Nuova Zelanda' e' un nome coloniale olandese. "
+            "ETHICS-003: il Trattato di Waitangi (1840) e' un documento fondamentale "
+            "ma profondamente problematico: la versione in te reo Maori e quella in "
+            "inglese differiscono sostanzialmente sul concetto di 'sovranita'' (mana) "
+            "vs 'kawanatanga' (governance). I Maori non cedettero la sovranita' nella "
+            "loro comprensione del trattato. Le guerre successive (New Zealand Wars, "
+            "1845-1872) e le confische terriere violarono anche la versione inglese. "
+            "La struttura politica Maori era basata su iwi (tribu'), hapu (sotto-tribu') "
+            "e whanau (famiglie allargate), non su un singolo stato centralizzato."
+        ),
+        "name_variants": [
+            {"name": "New Zealand", "lang": "en",
+             "context": "nome coloniale olandese (Nieuw Zeeland), poi anglicizzato",
+             "source": "King, M. The Penguin History of New Zealand (2003)"},
+            {"name": "Nuova Zelanda", "lang": "it",
+             "context": "denominazione italiana (derivata dall'olandese)",
+             "source": "Enciclopedia Treccani"},
+            {"name": "Nu Tireni", "lang": "mi",
+             "context": "adattamento Maori del nome 'New Zealand'",
+             "source": "Trattato di Waitangi, versione Maori (1840)"},
+        ],
+        "territory_changes": [
+            {"year": 1840, "region": "Aotearoa", "change_type": "TREATY",
+             "description": "Trattato di Waitangi tra la Corona britannica e i capi Maori. Le due versioni linguistiche differiscono radicalmente: i Maori cedono 'kawanatanga' (governance), non 'mana' (sovranita').",
+             "confidence_score": 0.90},
+            {"year": 1863, "region": "Waikato", "change_type": "CONQUEST_MILITARY",
+             "description": "Invasione britannica del Waikato. Confisca di 1,2 milioni di acri di terra Maori. Le New Zealand Wars (1845-1872) portano a massicce perdite territoriali per i Maori.",
+             "population_affected": 60000, "confidence_score": 0.85},
+        ],
+        "sources": [
+            {"citation": "King, M. The Penguin History of New Zealand (2003)", "source_type": "academic"},
+            {"citation": "Orange, C. The Treaty of Waitangi (1987)", "source_type": "academic"},
+            {"citation": "Te Tiriti o Waitangi / Treaty of Waitangi (1840)", "source_type": "primary"},
         ],
     },
 ]

@@ -128,7 +128,7 @@ class TestStats:
         r = client.get("/v1/stats")
         assert r.status_code == 200
         d = r.json()
-        assert d["total_entities"] >= 35
+        assert d["total_entities"] >= 50
         assert d["disputed_count"] >= 5
         assert d["total_sources"] > 0
         assert d["total_territory_changes"] > 0

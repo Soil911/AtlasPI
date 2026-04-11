@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 
 # ─── Applicazione ────────────────────────────────────────────────
-APP_VERSION = "5.2.0"
+APP_VERSION = "5.3.0"
 APP_TITLE = "AtlasPI"
 APP_DESCRIPTION = "Database geografico storico strutturato per agenti AI"
 

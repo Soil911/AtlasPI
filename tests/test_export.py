@@ -9,7 +9,7 @@ class TestGeoJsonExport:
         assert r.status_code == 200
         d = json.loads(r.content)
         assert d["type"] == "FeatureCollection"
-        assert len(d["features"]) >= 35
+        assert len(d["features"]) >= 50
 
     def test_has_correct_content_type(self, client):
         r = client.get("/v1/export/geojson")
@@ -47,7 +47,7 @@ class TestTimeline:
         r = client.get("/v1/export/timeline")
         assert r.status_code == 200
         d = r.json()
-        assert d["count"] >= 35
+        assert d["count"] >= 50
         assert d["min_year"] < 0
         assert "items" in d
 
