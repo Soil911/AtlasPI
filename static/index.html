@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AtlasPI — Database Geografico Storico</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header id="header">
+    <div class="header-left">
+      <h1>AtlasPI</h1>
+      <span class="subtitle">Database Geografico Storico per Agenti AI</span>
+    </div>
+    <div class="header-right">
+      <span id="entity-count" class="badge">...</span>
+    </div>
+  </header>
+
+  <main id="app">
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="controls">
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="Cerca entit&agrave;..." />
+          <button id="search-btn" title="Cerca">&#128269;</button>
+        </div>
+
+        <div class="year-control">
+          <label for="year-slider">Anno: <strong id="year-display">1500</strong></label>
+          <input type="range" id="year-slider" min="-700" max="2025" value="1500" step="1" />
+          <div class="year-range">
+            <span>700 a.C.</span>
+            <span>2025</span>
+          </div>
+        </div>
+
+        <div class="filter-control">
+          <label>Status:</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" value="confirmed" checked /> Confermato</label>
+            <label><input type="checkbox" value="uncertain" checked /> Incerto</label>
+            <label><input type="checkbox" value="disputed" checked /> Contestato</label>
+          </div>
+        </div>
+
+        <button id="reset-btn" class="btn-secondary">Reset filtri</button>
+      </div>
+
+      <div id="results-list" class="results">
+        <p class="placeholder">Caricamento...</p>
+      </div>
+    </aside>
+
+    <!-- Map -->
+    <section id="map-container">
+      <div id="map"></div>
+    </section>
+
+    <!-- Detail panel -->
+    <div id="detail-panel" class="detail-panel hidden">
+      <button id="close-detail" class="close-btn">&times;</button>
+      <div id="detail-content"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="legend">
+      <span class="legend-item"><span class="dot confirmed"></span> Confermato</span>
+      <span class="legend-item"><span class="dot uncertain"></span> Incerto</span>
+      <span class="legend-item"><span class="dot disputed"></span> Contestato</span>
+    </div>
+    <span class="footer-note">AtlasPI v1.0 &mdash; Dati storici con governance etica</span>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
