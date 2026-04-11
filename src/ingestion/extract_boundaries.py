@@ -187,6 +187,79 @@ ENTITY_MAPPINGS = {
         "source": "aourednik/historical-basemaps, world_1500",
         "precision": "academic_approximate",
     },
+    # ─── Nuove entità v2.1 ──────────────────────────────────────
+    "Βασιλεία Ῥωμαίων": {
+        "file": "historical-basemaps/world_1300.geojson",
+        "name": "Byzantine Empire",
+        "source": "aourednik/historical-basemaps, world_1300",
+        "precision": "academic_approximate",
+    },
+    "مغلیہ سلطنت": {
+        "file": "historical-basemaps/world_1700.geojson",
+        "name": "Mughal Empire",
+        "source": "aourednik/historical-basemaps, world_1700",
+        "precision": "academic_approximate",
+    },
+    "دولت صفویه": {
+        "file": "historical-basemaps/world_1700.geojson",
+        "name": "Safavid Empire",
+        "source": "aourednik/historical-basemaps, world_1700",
+        "precision": "academic_approximate",
+    },
+    "徳川幕府": {
+        "file": "historical-basemaps/world_1700.geojson",
+        "name": "Tokugawa Shogunate",
+        "source": "aourednik/historical-basemaps, world_1700",
+        "precision": "academic_approximate",
+    },
+    "大清帝國": {
+        "file": "historical-basemaps/world_1800.geojson",
+        "name": "Qing Empire",
+        "source": "aourednik/historical-basemaps, world_1800",
+        "precision": "academic_approximate",
+    },
+    "Российская Империя": {
+        "file": "historical-basemaps/world_1800.geojson",
+        "name": "Russian Empire",
+        "source": "aourednik/historical-basemaps, world_1800",
+        "precision": "academic_approximate",
+    },
+    "Ēxcān Tlahtōlōyān": {
+        "file": "historical-basemaps/world_1500.geojson",
+        "name": "Aztec Empire",
+        "source": "aourednik/historical-basemaps, world_1500",
+        "precision": "academic_approximate",
+    },
+    "Manden Kurufaba": {
+        "file": "historical-basemaps/world_1300.geojson",
+        "name": "Mali",
+        "source": "aourednik/historical-basemaps, world_1300",
+        "precision": "academic_approximate",
+    },
+    "អាណាចក្រខ្មែរ": {
+        "file": "historical-basemaps/world_1300.geojson",
+        "name": "Khmer Empire",
+        "source": "aourednik/historical-basemaps, world_1300",
+        "precision": "academic_approximate",
+    },
+    "臺灣 / Taiwan": {
+        "file": "natural-earth/ne_110m_admin_0_countries.geojson",
+        "name": "Taiwan",
+        "source": "Natural Earth ne_110m (confini moderni contestati)",
+        "precision": "modern_approximate",
+    },
+    "Songhai": {
+        "file": "historical-basemaps/world_1500.geojson",
+        "name": "Songhai",
+        "source": "aourednik/historical-basemaps, world_1500",
+        "precision": "academic_approximate",
+    },
+    "የኢትዮጵያ ንጉሠ ነገሥት መንግሥት": {
+        "file": "historical-basemaps/world_1700.geojson",
+        "name": "Ethiopia",
+        "source": "aourednik/historical-basemaps, world_1700",
+        "precision": "academic_approximate",
+    },
 }
 
 

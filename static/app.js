@@ -33,7 +33,7 @@ function initMap() {
 
 async function loadEntities() {
   try {
-    const res = await fetch(`${API}/v1/entities?limit=100`);
+    const res = await fetch(`${API}/v1/entities?limit=100&offset=0`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     allEntities = data.entities;

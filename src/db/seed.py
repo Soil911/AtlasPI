@@ -584,6 +584,718 @@ DEMO_ENTITIES = [
             {"citation": "Vansina, J. Kingdoms of the Savanna (1966)", "source_type": "academic"},
         ],
     },
+    # ─── 11. Impero Bizantino ───────────────────────────────────
+    {
+        "name_original": "Βασιλεία Ῥωμαίων",
+        "name_original_lang": "grc",
+        "entity_type": "empire",
+        "year_start": 395,
+        "year_end": 1453,
+        "capital_name": "Κωνσταντινούπολις",
+        "capital_lat": 41.0082,
+        "capital_lon": 28.9784,
+        "confidence_score": 0.85,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [19.0, 35.0], [20.0, 38.0], [22.0, 40.0], [25.0, 41.5],
+                [28.5, 41.0], [31.0, 41.5], [35.0, 40.0], [37.0, 38.0],
+                [36.0, 35.5], [35.0, 34.0], [32.0, 35.0], [28.0, 36.0],
+                [25.0, 35.5], [22.0, 34.5], [19.0, 35.0],
+            ]],
+        },
+        "ethical_notes": (
+            "L'Impero Bizantino si autodefiniva 'Impero Romano' (Βασιλεία Ῥωμαίων). "
+            "Il termine 'Bizantino' e' una costruzione storiografica occidentale "
+            "del XVI secolo. name_original usa il nome che i suoi cittadini usavano. "
+            "I confini mostrati sono del periodo medio (~1000 d.C.)."
+        ),
+        "name_variants": [
+            {"name": "Byzantine Empire", "lang": "en", "context": "termine storiografico occidentale moderno",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Impero Bizantino", "lang": "it", "context": "termine italiano moderno",
+             "source": "Enciclopedia Treccani"},
+            {"name": "Eastern Roman Empire", "lang": "en", "context": "denominazione alternativa inglese",
+             "source": "Oxford Dictionary of Byzantium"},
+        ],
+        "territory_changes": [
+            {"year": 395, "region": "Mediterraneo orientale", "change_type": "INHERITANCE",
+             "description": "Divisione dell'Impero Romano alla morte di Teodosio I.",
+             "confidence_score": 0.90},
+            {"year": 1204, "region": "Costantinopoli", "change_type": "CONQUEST_MILITARY",
+             "description": "Quarta Crociata: sacco di Costantinopoli da parte dei crociati latini. Distruzione e saccheggio della capitale cristiana da parte di altri cristiani.",
+             "confidence_score": 0.90},
+        ],
+        "sources": [
+            {"citation": "Ostrogorsky, G. History of the Byzantine State (1969)", "source_type": "academic"},
+            {"citation": "Norwich, J.J. Byzantium (1988-1995)", "source_type": "academic"},
+        ],
+    },
+    # ─── 12. Impero Mughal ──────────────────────────────────────
+    {
+        "name_original": "مغلیہ سلطنت",
+        "name_original_lang": "ur",
+        "entity_type": "empire",
+        "year_start": 1526,
+        "year_end": 1857,
+        "capital_name": "Delhi",
+        "capital_lat": 28.6139,
+        "capital_lon": 77.2090,
+        "confidence_score": 0.80,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [66.0, 25.0], [68.0, 30.0], [70.0, 35.0], [74.0, 36.0],
+                [78.0, 34.0], [82.0, 27.0], [88.0, 25.0], [90.0, 22.0],
+                [85.0, 18.0], [80.0, 14.0], [75.0, 12.0], [72.0, 18.0],
+                [68.0, 22.0], [66.0, 25.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome originale e' in Urdu. 'Mughal' deriva dal persiano "
+            "per 'Mongolo' — la dinastia discendeva da Tamerlano e Gengis Khan. "
+            "L'impero fu multireligioso sotto Akbar, poi progressivamente intollerante "
+            "sotto Aurangzeb. I confini mostrati sono al periodo di massima espansione (~1700)."
+        ),
+        "name_variants": [
+            {"name": "Mughal Empire", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Impero Moghul", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+            {"name": "گورکانیان", "lang": "fa", "period_start": 1526, "period_end": 1857,
+             "context": "nome persiano (Gurkaniyan)", "source": "Richards, The Mughal Empire (1993)"},
+        ],
+        "territory_changes": [
+            {"year": 1526, "region": "Nord India", "change_type": "CONQUEST_MILITARY",
+             "description": "Babur sconfigge il Sultanato di Delhi nella battaglia di Panipat. Fondazione dell'Impero Mughal.",
+             "confidence_score": 0.85},
+            {"year": 1857, "region": "India", "change_type": "COLONIZATION",
+             "description": "Ultimo imperatore Mughal deposto dalla Compagnia delle Indie Orientali dopo la rivolta dei Sepoy. Fine formale dell'impero.",
+             "confidence_score": 0.90},
+        ],
+        "sources": [
+            {"citation": "Richards, J.F. The Mughal Empire (1993)", "source_type": "academic"},
+            {"citation": "Dalrymple, W. The Last Mughal (2006)", "source_type": "academic"},
+        ],
+    },
+    # ─── 13. Impero Safavide ────────────────────────────────────
+    {
+        "name_original": "دولت صفویه",
+        "name_original_lang": "fa",
+        "entity_type": "empire",
+        "year_start": 1501,
+        "year_end": 1736,
+        "capital_name": "Eṣfahān",
+        "capital_lat": 32.6546,
+        "capital_lon": 51.6680,
+        "confidence_score": 0.75,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [44.0, 30.0], [44.5, 34.0], [46.0, 37.0], [48.0, 39.0],
+                [51.0, 40.0], [54.0, 38.5], [58.0, 37.5], [62.0, 36.0],
+                [65.0, 34.0], [63.0, 29.0], [60.0, 26.0], [56.0, 25.0],
+                [52.0, 26.0], [48.0, 28.0], [44.0, 30.0],
+            ]],
+        },
+        "ethical_notes": (
+            "L'Impero Safavide e' fondamentale per l'identità iraniana moderna. "
+            "Impose lo sciismo come religione di stato — decisione con enormi "
+            "conseguenze geopolitiche che persistono ancora oggi nella divisione "
+            "sunnita-sciita. La conversione fu spesso forzata."
+        ),
+        "name_variants": [
+            {"name": "Safavid Empire", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Impero Safavide", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 1501, "region": "Persia", "change_type": "CONQUEST_MILITARY",
+             "description": "Ismail I conquista Tabriz e si proclama Shah. Imposizione dello sciismo duodecimano come religione di stato.",
+             "confidence_score": 0.80},
+        ],
+        "sources": [
+            {"citation": "Floor, W. & Herzig, E. Iran and the World in the Safavid Age (2012)", "source_type": "academic"},
+            {"citation": "Matthee, R. Persia in Crisis: Safavid Decline (2012)", "source_type": "academic"},
+        ],
+    },
+    # ─── 14. Shogunato Tokugawa ─────────────────────────────────
+    {
+        "name_original": "徳川幕府",
+        "name_original_lang": "ja",
+        "entity_type": "empire",
+        "year_start": 1603,
+        "year_end": 1868,
+        "capital_name": "江戸",
+        "capital_lat": 35.6762,
+        "capital_lon": 139.6503,
+        "confidence_score": 0.85,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [129.5, 31.0], [130.0, 33.0], [131.0, 34.0], [132.5, 34.5],
+                [135.0, 35.0], [137.0, 36.5], [139.5, 38.0], [140.5, 40.0],
+                [141.5, 42.0], [142.0, 43.5], [145.0, 45.0], [145.5, 43.0],
+                [144.0, 41.0], [142.0, 39.0], [141.0, 37.0], [140.5, 35.5],
+                [140.0, 34.0], [138.0, 33.0], [135.0, 33.5], [132.0, 32.5],
+                [130.5, 31.5], [129.5, 31.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome originale e' in giapponese. Lo Shogunato manteneva "
+            "un rigido sistema di caste (shi-nō-kō-shō) e un isolamento quasi totale "
+            "(sakoku) dal 1639 al 1853. La popolazione Ainu di Hokkaido fu "
+            "progressivamente colonizzata durante questo periodo."
+        ),
+        "name_variants": [
+            {"name": "Tokugawa Shogunate", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Shogunato Tokugawa", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+            {"name": "Edo period", "lang": "en", "period_start": 1603, "period_end": 1868,
+             "context": "nome del periodo storico dalla capitale Edo (Tokyo)",
+             "source": "Totman, Early Modern Japan (1993)"},
+        ],
+        "territory_changes": [
+            {"year": 1603, "region": "Giappone", "change_type": "REVOLUTION",
+             "description": "Tokugawa Ieyasu unifica il Giappone dopo la battaglia di Sekigahara (1600) e viene nominato Shogun dall'Imperatore.",
+             "confidence_score": 0.90},
+            {"year": 1868, "region": "Giappone", "change_type": "REVOLUTION",
+             "description": "Restaurazione Meiji: lo Shogunato cade e il potere torna all'Imperatore. Inizio della modernizzazione del Giappone.",
+             "confidence_score": 0.95},
+        ],
+        "sources": [
+            {"citation": "Totman, C. Early Modern Japan (1993)", "source_type": "academic"},
+            {"citation": "Jansen, M. The Making of Modern Japan (2000)", "source_type": "academic"},
+        ],
+    },
+    # ─── 15. Impero Qing ────────────────────────────────────────
+    {
+        "name_original": "大清帝國",
+        "name_original_lang": "zh",
+        "entity_type": "empire",
+        "year_start": 1636,
+        "year_end": 1912,
+        "capital_name": "北京",
+        "capital_lat": 39.9042,
+        "capital_lon": 116.4074,
+        "confidence_score": 0.85,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [73.0, 40.0], [78.0, 44.0], [85.0, 48.0], [95.0, 50.0],
+                [110.0, 52.0], [120.0, 53.0], [130.0, 48.0], [135.0, 43.0],
+                [128.0, 38.0], [122.0, 33.0], [121.0, 28.0], [117.0, 24.0],
+                [110.0, 20.0], [108.0, 18.0], [105.0, 22.0], [100.0, 22.0],
+                [97.0, 28.0], [92.0, 28.0], [87.0, 28.0], [80.0, 32.0],
+                [76.0, 36.0], [73.0, 40.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome originale e' in cinese tradizionale. La dinastia Qing "
+            "era mancese, non han — una distinzione etnica cruciale. L'espansione "
+            "includeva la conquista del Tibet, del Xinjiang e della Mongolia, "
+            "territori le cui popolazioni non si identificavano come 'cinesi'. "
+            "Le Guerre dell'Oppio (1839-1860) rappresentano un punto di svolta "
+            "nell'imperialismo occidentale in Asia."
+        ),
+        "name_variants": [
+            {"name": "Qing Dynasty", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Dinastia Qing", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+            {"name": "ᡩᠠᡳᠴᡳᠩ ᡤᡠᡵᡠᠨ", "lang": "mnc", "context": "nome in lingua mancese (Daicing Gurun)",
+             "source": "Elliott, The Manchu Way (2001)"},
+        ],
+        "territory_changes": [
+            {"year": 1644, "region": "Cina", "change_type": "CONQUEST_MILITARY",
+             "description": "I Mancesi conquistano Pechino e la dinastia Ming crolla. Violenza su larga scala durante la transizione; il taglio forzato della treccia (queue order) provoca resistenza e massacri.",
+             "population_affected": 25000000, "confidence_score": 0.65},
+            {"year": 1839, "region": "Cina meridionale", "change_type": "CONQUEST_MILITARY",
+             "description": "Prima Guerra dell'Oppio: la Gran Bretagna attacca la Cina per mantenere il commercio di oppio. Trattato di Nanchino (1842): cessione forzata di Hong Kong.",
+             "confidence_score": 0.90},
+        ],
+        "sources": [
+            {"citation": "Elliott, M. The Manchu Way (2001)", "source_type": "academic"},
+            {"citation": "Rowe, W. China's Last Empire: The Great Qing (2009)", "source_type": "academic"},
+        ],
+    },
+    # ─── 16. Impero Russo ───────────────────────────────────────
+    {
+        "name_original": "Российская Империя",
+        "name_original_lang": "ru",
+        "entity_type": "empire",
+        "year_start": 1721,
+        "year_end": 1917,
+        "capital_name": "Санкт-Петербург",
+        "capital_lat": 59.9343,
+        "capital_lon": 30.3351,
+        "confidence_score": 0.85,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [20.0, 45.0], [22.0, 50.0], [25.0, 55.0], [30.0, 60.0],
+                [35.0, 65.0], [45.0, 70.0], [60.0, 72.0], [90.0, 73.0],
+                [120.0, 70.0], [140.0, 65.0], [170.0, 65.0], [180.0, 62.0],
+                [170.0, 55.0], [155.0, 50.0], [140.0, 45.0], [135.0, 42.0],
+                [128.0, 43.0], [115.0, 45.0], [100.0, 48.0], [85.0, 50.0],
+                [70.0, 48.0], [55.0, 42.0], [50.0, 38.0], [45.0, 40.0],
+                [38.0, 42.0], [32.0, 44.0], [25.0, 44.0], [20.0, 45.0],
+            ]],
+        },
+        "ethical_notes": (
+            "L'Impero Russo si espanse attraverso la colonizzazione di territori "
+            "abitati da centinaia di popoli diversi (Siberia, Caucaso, Asia Centrale). "
+            "La conquista del Caucaso comportò deportazioni di massa (Circassi). "
+            "Il servaggio (schiavitù di fatto) fu abolito solo nel 1861."
+        ),
+        "name_variants": [
+            {"name": "Russian Empire", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Impero Russo", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 1721, "region": "Russia", "change_type": "TREATY",
+             "description": "Trattato di Nystad: Pietro il Grande proclama l'Impero Russo dopo la vittoria sulla Svezia.",
+             "confidence_score": 0.90},
+            {"year": 1864, "region": "Caucaso", "change_type": "ETHNIC_CLEANSING",
+             "description": "Espulsione dei Circassi dal Caucaso nord-occidentale. Si stima che 500.000-1.500.000 persone siano state deportate o uccise.",
+             "population_affected": 1000000, "confidence_score": 0.70},
+        ],
+        "sources": [
+            {"citation": "Lieven, D. Empire: The Russian Empire and Its Rivals (2000)", "source_type": "academic"},
+            {"citation": "Richmond, W. The Circassian Genocide (2013)", "source_type": "academic"},
+        ],
+    },
+    # ─── 17. Impero Azteco ──────────────────────────────────────
+    {
+        "name_original": "Ēxcān Tlahtōlōyān",
+        "name_original_lang": "nah",
+        "entity_type": "empire",
+        "year_start": 1428,
+        "year_end": 1521,
+        "capital_name": "Tenochtitlan",
+        "capital_lat": 19.4326,
+        "capital_lon": -99.1332,
+        "confidence_score": 0.70,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [-99.5, 17.5], [-98.0, 16.5], [-96.0, 16.0], [-95.0, 17.0],
+                [-94.5, 18.0], [-96.0, 19.5], [-97.5, 20.5], [-99.0, 21.0],
+                [-100.5, 20.5], [-101.0, 19.5], [-100.5, 18.5], [-99.5, 17.5],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome originale e' in nahuatl (Ēxcān Tlahtōlōyān = "
+            "'Tripla Alleanza'). 'Impero Azteco' e' una semplificazione europea. "
+            "Il confidence_score e' piu' basso perché le fonti scritte nahua "
+            "pre-conquista sono limitate (i codici furono in larga parte distrutti "
+            "dai conquistadores spagnoli). ETHICS-002: la conquista spagnola "
+            "causò il crollo demografico piu' devastante della storia documentata."
+        ),
+        "name_variants": [
+            {"name": "Aztec Empire", "lang": "en",
+             "context": "denominazione europea — 'Azteco' deriva da Aztlán, luogo mitico di origine",
+             "source": "Smith, The Aztecs (2012)"},
+            {"name": "Impero Azteco", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+            {"name": "Triple Alliance", "lang": "en",
+             "context": "traduzione del nome nahuatl (alleanza Tenochtitlan-Texcoco-Tlacopan)",
+             "source": "Hassig, Aztec Warfare (1988)"},
+        ],
+        "territory_changes": [
+            {"year": 1521, "region": "Messico Centrale", "change_type": "COLONIZATION",
+             "description": "Hernán Cortés conquista Tenochtitlan con alleati indigeni. Vaiolo e altre malattie europee devastano la popolazione: da ~25 milioni a ~1 milione in un secolo.",
+             "population_affected": 24000000, "confidence_score": 0.65},
+        ],
+        "sources": [
+            {"citation": "Smith, M.E. The Aztecs (2012)", "source_type": "academic"},
+            {"citation": "Hassig, R. Aztec Warfare (1988)", "source_type": "academic"},
+            {"citation": "León-Portilla, M. Visión de los Vencidos (1959)", "source_type": "primary"},
+        ],
+    },
+    # ─── 18. Impero del Mali ────────────────────────────────────
+    {
+        "name_original": "Manden Kurufaba",
+        "name_original_lang": "bm",
+        "entity_type": "empire",
+        "year_start": 1235,
+        "year_end": 1600,
+        "capital_name": "Niani",
+        "capital_lat": 11.3833,
+        "capital_lon": -8.6833,
+        "confidence_score": 0.60,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [-16.0, 12.0], [-15.0, 14.0], [-12.0, 16.0], [-8.0, 17.0],
+                [-4.0, 17.5], [0.0, 17.0], [2.0, 15.0], [0.0, 12.0],
+                [-4.0, 10.0], [-8.0, 9.0], [-12.0, 10.0], [-14.0, 11.0],
+                [-16.0, 12.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome originale e' in Bambara. Il confidence_score e' "
+            "piu' basso perché la tradizione storiografica e' in parte orale "
+            "(griot). Le fonti scritte principali sono arabe (Ibn Battuta, Al-Umari). "
+            "Mansa Musa (r. 1312-1337) e' considerato tra le persone piu' ricche "
+            "della storia — il suo pellegrinaggio alla Mecca nel 1324 causò inflazione "
+            "in Egitto per il volume d'oro distribuito."
+        ),
+        "name_variants": [
+            {"name": "Mali Empire", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Impero del Mali", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 1235, "region": "Africa Occidentale", "change_type": "CONQUEST_MILITARY",
+             "description": "Sundiata Keita sconfigge il re Sumanguru nella battaglia di Kirina. Fondazione dell'Impero del Mali.",
+             "confidence_score": 0.55},
+        ],
+        "sources": [
+            {"citation": "Levtzion, N. Ancient Ghana and Mali (1973)", "source_type": "academic"},
+            {"citation": "Ibn Battuta, Rihla (1354)", "source_type": "primary"},
+            {"citation": "Niane, D.T. Sundiata: An Epic of Old Mali (1960)", "source_type": "primary"},
+        ],
+    },
+    # ─── 19. Impero Khmer ──────────────────────────────────────
+    {
+        "name_original": "អាណាចក្រខ្មែរ",
+        "name_original_lang": "km",
+        "entity_type": "empire",
+        "year_start": 802,
+        "year_end": 1431,
+        "capital_name": "Angkor",
+        "capital_lat": 13.4125,
+        "capital_lon": 103.8670,
+        "confidence_score": 0.70,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [100.0, 10.0], [100.5, 14.0], [102.0, 16.0], [104.0, 17.5],
+                [106.5, 17.0], [108.0, 15.5], [107.5, 12.0], [106.0, 10.5],
+                [104.0, 9.5], [102.0, 9.5], [100.0, 10.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome originale e' in khmer. L'Impero Khmer costruì "
+            "Angkor Wat, il piu' grande edificio religioso del mondo. Le cause "
+            "del declino sono ancora dibattute (cambiamenti climatici, invasioni "
+            "thai, crisi idrica). Il confidence_score riflette l'incertezza "
+            "sulle fonti, in parte epigrafiche."
+        ),
+        "name_variants": [
+            {"name": "Khmer Empire", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Impero Khmer", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+            {"name": "Angkor", "lang": "km", "context": "nome dalla capitale, spesso usato per l'intero impero",
+             "source": "Higham, The Civilization of Angkor (2001)"},
+        ],
+        "territory_changes": [
+            {"year": 802, "region": "Sud-Est Asiatico", "change_type": "REVOLUTION",
+             "description": "Jayavarman II si proclama devaraja (re-dio) sul monte Kulen. Fondazione dell'Impero Khmer unificato.",
+             "confidence_score": 0.65},
+        ],
+        "sources": [
+            {"citation": "Higham, C. The Civilization of Angkor (2001)", "source_type": "academic"},
+            {"citation": "Coe, M. Angkor and the Khmer Civilization (2003)", "source_type": "academic"},
+        ],
+    },
+    # ─── 20. Taiwan (contestato) ────────────────────────────────
+    {
+        "name_original": "臺灣 / Taiwan",
+        "name_original_lang": "zh",
+        "entity_type": "disputed_territory",
+        "year_start": 1949,
+        "year_end": None,
+        "capital_name": "Taipei",
+        "capital_lat": 25.0330,
+        "capital_lon": 121.5654,
+        "confidence_score": 0.50,
+        "status": "disputed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [120.2, 22.0], [120.0, 23.0], [120.5, 24.5], [121.0, 25.3],
+                [121.8, 25.3], [122.0, 24.5], [121.5, 23.0], [121.0, 22.0],
+                [120.2, 22.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-003: Taiwan e' un territorio il cui status e' attivamente contestato. "
+            "La Repubblica di Cina (ROC) governa de facto l'isola dal 1949, ma la "
+            "Repubblica Popolare Cinese (PRC) la rivendica come propria provincia. "
+            "La maggioranza degli stati ONU non riconosce Taiwan come stato indipendente "
+            "ma mantiene relazioni commerciali de facto. Questo record non arbitra la disputa."
+        ),
+        "name_variants": [
+            {"name": "Republic of China", "lang": "en", "period_start": 1949,
+             "context": "nome ufficiale del governo che controlla l'isola",
+             "source": "Costituzione della ROC"},
+            {"name": "中華民國", "lang": "zh", "period_start": 1912,
+             "context": "nome cinese della Repubblica di Cina",
+             "source": "Costituzione della ROC"},
+            {"name": "Chinese Taipei", "lang": "en",
+             "context": "nome usato in contesti internazionali (Olimpiadi, OMS) per evitare conflitto diplomatico",
+             "source": "Comitato Olimpico Internazionale"},
+        ],
+        "territory_changes": [
+            {"year": 1949, "region": "Taiwan", "change_type": "REVOLUTION",
+             "description": "Il governo della Repubblica di Cina si ritira a Taiwan dopo la vittoria comunista nella guerra civile cinese.",
+             "confidence_score": 0.90},
+        ],
+        "sources": [
+            {"citation": "Rigger, S. Why Taiwan Matters (2011)", "source_type": "academic"},
+            {"citation": "Bush, R. Uncharted Strait: The Future of China-Taiwan Relations (2013)", "source_type": "academic"},
+        ],
+    },
+    # ─── 21. Sahara Occidentale (contestato) ────────────────────
+    {
+        "name_original": "الصحراء الغربية / Sahara Occidental",
+        "name_original_lang": "ar",
+        "entity_type": "disputed_territory",
+        "year_start": 1975,
+        "year_end": None,
+        "capital_name": None,
+        "capital_lat": 24.2155,
+        "capital_lon": -12.8858,
+        "confidence_score": 0.40,
+        "status": "disputed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [-17.1, 21.4], [-17.0, 23.0], [-16.0, 24.0], [-14.8, 24.7],
+                [-13.0, 24.0], [-12.0, 23.5], [-8.7, 21.3], [-12.0, 21.3],
+                [-13.2, 21.4], [-15.0, 21.3], [-17.1, 21.4],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-003: il Sahara Occidentale e' l'ultimo territorio in Africa "
+            "classificato come 'non autonomo' dall'ONU. Il Marocco occupa e "
+            "amministra la maggior parte del territorio dal 1975. Il Fronte "
+            "Polisario, sostenuto dall'Algeria, rivendica l'indipendenza come "
+            "Repubblica Araba Sahrawi Democratica (RASD). Il referendum promesso "
+            "dall'ONU non si e' mai tenuto. Questo record documenta entrambe le posizioni."
+        ),
+        "name_variants": [
+            {"name": "Western Sahara", "lang": "en", "context": "denominazione internazionale ONU",
+             "source": "Nazioni Unite"},
+            {"name": "Sahara Occidental", "lang": "es", "context": "nome in spagnolo (ex colonia spagnola)",
+             "source": "Nazioni Unite"},
+            {"name": "الجمهورية العربية الصحراوية الديمقراطية", "lang": "ar",
+             "context": "RASD — nome rivendicato dal Fronte Polisario",
+             "source": "Fronte Polisario"},
+        ],
+        "territory_changes": [
+            {"year": 1975, "region": "Sahara Occidentale", "change_type": "CONQUEST_MILITARY",
+             "description": "Marcia Verde: il Marocco occupa il Sahara Occidentale dopo il ritiro della Spagna. Guerra con il Fronte Polisario fino al cessate il fuoco del 1991.",
+             "population_affected": 170000, "confidence_score": 0.80},
+        ],
+        "sources": [
+            {"citation": "Shelley, T. Endgame in the Western Sahara (2004)", "source_type": "academic"},
+            {"citation": "Nazioni Unite, Risoluzione 690 (1991)", "source_type": "primary"},
+        ],
+    },
+    # ─── 22. Impero Songhai ─────────────────────────────────────
+    {
+        "name_original": "Songhai",
+        "name_original_lang": "ses",
+        "entity_type": "empire",
+        "year_start": 1464,
+        "year_end": 1591,
+        "capital_name": "Gao",
+        "capital_lat": 16.2717,
+        "capital_lon": -0.0433,
+        "confidence_score": 0.60,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [-12.0, 12.0], [-10.0, 15.0], [-5.0, 17.0], [0.0, 18.0],
+                [4.0, 17.0], [4.0, 14.0], [2.0, 12.0], [-2.0, 11.0],
+                [-6.0, 10.0], [-10.0, 11.0], [-12.0, 12.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: uno dei piu' grandi imperi africani precoloniali. "
+            "Le universita' di Timbuktu (Sankore) erano centri di cultura "
+            "islamica di importanza mondiale. Le fonti sono in parte arabe "
+            "(Tarikh al-Sudan, Tarikh al-Fattash) e in parte orali."
+        ),
+        "name_variants": [
+            {"name": "Songhai Empire", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Impero Songhai", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 1468, "region": "Timbuktu", "change_type": "CONQUEST_MILITARY",
+             "description": "Sunni Ali conquista Timbuktu dall'Impero del Mali, espandendo il Songhai in tutta l'ansa del Niger.",
+             "confidence_score": 0.60},
+            {"year": 1591, "region": "Songhai", "change_type": "CONQUEST_MILITARY",
+             "description": "Invasione marocchina: l'esercito saadiano con armi da fuoco sconfigge i Songhai nella battaglia di Tondibi. Fine dell'impero.",
+             "confidence_score": 0.65},
+        ],
+        "sources": [
+            {"citation": "Hunwick, J. Timbuktu and the Songhay Empire (1999)", "source_type": "academic"},
+            {"citation": "al-Sadi, Tarikh al-Sudan (~1655)", "source_type": "primary"},
+        ],
+    },
+    # ─── 23. Repubblica di Venezia ──────────────────────────────
+    {
+        "name_original": "Serenìsima Repùblega de Venèsia",
+        "name_original_lang": "vec",
+        "entity_type": "republic",
+        "year_start": 697,
+        "year_end": 1797,
+        "capital_name": "Venèsia",
+        "capital_lat": 45.4408,
+        "capital_lon": 12.3155,
+        "confidence_score": 0.85,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Point",
+            "coordinates": [12.3155, 45.4408],
+        },
+        "ethical_notes": (
+            "La Serenissima era una repubblica oligarchica, non democratica "
+            "nel senso moderno. Solo i patrizi avevano diritto di voto. "
+            "Venezia fu una potenza coloniale nel Mediterraneo orientale "
+            "(Creta, Cipro, Dalmazia) e giocò un ruolo chiave nella "
+            "Quarta Crociata che saccheggiò Costantinopoli nel 1204."
+        ),
+        "name_variants": [
+            {"name": "Republic of Venice", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Repubblica di Venezia", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 1204, "region": "Costantinopoli", "change_type": "CONQUEST_MILITARY",
+             "description": "Venezia devia la Quarta Crociata contro Costantinopoli. Saccheggio della capitale bizantina e acquisizione di territori nel Mediterraneo orientale.",
+             "confidence_score": 0.90},
+            {"year": 1797, "region": "Venezia", "change_type": "CONQUEST_MILITARY",
+             "description": "Napoleone Bonaparte conquista Venezia. Fine della repubblica dopo 1100 anni. Trattato di Campoformio: Venezia ceduta all'Austria.",
+             "confidence_score": 0.95},
+        ],
+        "sources": [
+            {"citation": "Norwich, J.J. A History of Venice (1982)", "source_type": "academic"},
+            {"citation": "Madden, T. Venice: A New History (2012)", "source_type": "academic"},
+        ],
+    },
+    # ─── 24. Impero Etiope ──────────────────────────────────────
+    {
+        "name_original": "የኢትዮጵያ ንጉሠ ነገሥት መንግሥት",
+        "name_original_lang": "am",
+        "entity_type": "empire",
+        "year_start": 1270,
+        "year_end": 1974,
+        "capital_name": "Addis Abeba",
+        "capital_lat": 9.0250,
+        "capital_lon": 38.7469,
+        "confidence_score": 0.75,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [33.0, 4.0], [34.0, 6.0], [36.0, 8.0], [38.0, 10.0],
+                [40.0, 12.0], [42.0, 13.0], [44.0, 12.0], [46.0, 10.0],
+                [48.0, 8.0], [47.0, 5.0], [45.0, 3.0], [42.0, 2.0],
+                [39.0, 3.0], [36.0, 3.5], [33.0, 4.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome originale e' in amarico. L'Etiopia e' uno dei "
+            "pochissimi paesi africani mai colonizzati (Italia sconfitta ad Adua "
+            "nel 1896; occupazione fascista 1936-1941 non riconosciuta). "
+            "La dinastia Salomonide rivendicava discendenza dal Re Salomone e "
+            "dalla Regina di Saba. L'impero includeva popoli diversi (Amhara, "
+            "Oromo, Tigrinya, Somali) con tensioni etniche tuttora irrisolte."
+        ),
+        "name_variants": [
+            {"name": "Ethiopian Empire", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Impero Etiope", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+            {"name": "Abyssinia", "lang": "en", "context": "nome europeo storico — considerato obsoleto e riduttivo",
+             "source": "Marcus, A History of Ethiopia (2002)"},
+        ],
+        "territory_changes": [
+            {"year": 1896, "region": "Adua", "change_type": "LIBERATION",
+             "description": "Vittoria etiope contro l'Italia nella battaglia di Adua. L'Etiopia mantiene l'indipendenza — evento simbolo della resistenza africana al colonialismo.",
+             "confidence_score": 0.90},
+            {"year": 1936, "region": "Etiopia", "change_type": "CONQUEST_MILITARY",
+             "description": "L'Italia fascista invade l'Etiopia usando gas tossici (vietati dalla Convenzione di Ginevra). Occupazione fino al 1941.",
+             "population_affected": 760000, "confidence_score": 0.80},
+        ],
+        "sources": [
+            {"citation": "Marcus, H. A History of Ethiopia (2002)", "source_type": "academic"},
+            {"citation": "Pankhurst, R. The Ethiopians: A History (2001)", "source_type": "academic"},
+        ],
+    },
+    # ─── 25. Crimea (contestata) ────────────────────────────────
+    {
+        "name_original": "Крим / Крым",
+        "name_original_lang": "uk",
+        "entity_type": "disputed_territory",
+        "year_start": 2014,
+        "year_end": None,
+        "capital_name": None,
+        "capital_lat": 44.9521,
+        "capital_lon": 34.1024,
+        "confidence_score": 0.35,
+        "status": "disputed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [32.5, 44.4], [32.8, 45.2], [33.5, 45.8], [34.5, 45.6],
+                [35.2, 45.4], [36.0, 45.5], [36.6, 45.2], [36.5, 44.8],
+                [35.8, 44.4], [35.0, 44.3], [34.0, 44.4], [33.0, 44.4],
+                [32.5, 44.4],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-003: la Crimea e' un territorio attivamente contestato tra "
+            "Ucraina e Russia. Annessa dalla Russia nel 2014 dopo un referendum "
+            "non riconosciuto dalla comunità internazionale. L'Ucraina e la "
+            "maggior parte degli stati ONU considerano la Crimea territorio "
+            "ucraino sotto occupazione russa. name_original include sia la forma "
+            "ucraina (Крим) che russa (Крым). Questo record non arbitra la disputa."
+        ),
+        "name_variants": [
+            {"name": "Crimea", "lang": "en", "context": "denominazione internazionale",
+             "source": "Nazioni Unite"},
+            {"name": "Qırım", "lang": "crh", "context": "nome in lingua tartara di Crimea — popolazione indigena deportata in massa nel 1944",
+             "source": "Williams, The Crimean Tatars (2001)"},
+        ],
+        "territory_changes": [
+            {"year": 1944, "region": "Crimea", "change_type": "ETHNIC_CLEANSING",
+             "description": "Stalin ordina la deportazione totale dei Tartari di Crimea in Asia Centrale. Si stima che il 18-46% sia morto durante il trasferimento o subito dopo.",
+             "population_affected": 200000, "confidence_score": 0.85},
+            {"year": 2014, "region": "Crimea", "change_type": "CONQUEST_MILITARY",
+             "description": "Annessione russa della Crimea dopo l'intervento militare e un referendum contestato. Condannata come violazione del diritto internazionale dalla Risoluzione ONU 68/262.",
+             "confidence_score": 0.90},
+        ],
+        "sources": [
+            {"citation": "Williams, B.G. The Crimean Tatars (2001)", "source_type": "academic"},
+            {"citation": "Nazioni Unite, Risoluzione 68/262 (2014)", "source_type": "primary"},
+            {"citation": "Plokhy, S. The Gates of Europe: A History of Ukraine (2015)", "source_type": "academic"},
+        ],
+    },
 ]
 
 
