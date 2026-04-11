@@ -16,7 +16,6 @@ from slowapi.util import get_remote_address
 from src.api.errors import register_error_handlers
 from src.api.routes import entities, export, health, relations
 from src.config import (
-    APP_DESCRIPTION,
     APP_TITLE,
     APP_VERSION,
     AUTO_SEED,

@@ -2,6 +2,49 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v5.4.0] - 2026-04-11
+
+### Dataset
+- 55 entita' storiche — copertura globale da -3100 a.C. al 2014
+- 15 nuove entita' focalizzate su regioni sottorappresentate:
+  Majapahit, Srivijaya, Hawaii, Tonga, Mapuche, Cahokia,
+  Great Zimbabwe, Benin, Silla, Champa, Aksum, Kush,
+  Khwarezmian, Ayutthaya, Aotearoa (Maori)
+- Copertura Oceania, Sudest Asiatico, America precolombiana
+
+### API (16 endpoint)
+- /v1/entity, /v1/entities, /v1/entities/{id}, /v1/search
+- /v1/types, /v1/stats, /v1/continents
+- /v1/random (entita' casuale)
+- /v1/compare/{id1}/{id2} (confronto strutturato)
+- /v1/entities/{id}/contemporaries, /v1/entities/{id}/related
+- /v1/export/geojson, /v1/export/csv, /v1/export/timeline
+- /health, /embed
+
+### Frontend
+- Deep linking completo (?entity=5&year=1500&type=empire&continent=Europe)
+- Scorciatoie tastiera (Esc, frecce, /, ?)
+- Sezioni dettaglio collassabili con animazioni smooth
+- Tooltip arricchiti con confidence bar e icone tipo
+- Contemporanei caricati async nel pannello dettaglio
+- Filtro per continente con chip e icone regione
+- Icone emoji per tipo entita' (empire, kingdom, etc.)
+- Dark/light mode toggle con persistenza localStorage
+- Time playback (animazione attraverso gli anni)
+- Timeline clickabile (click per saltare a un anno)
+- Modalita' confronto tra due entita'
+- Pulsante condivisione (copia permalink)
+- Pagina embed (/embed) per iframe
+- Print stylesheet migliorato
+- i18n completo IT/EN con nuove chiavi
+
+### Infrastruttura
+- 143 test (tecnici, etici, sicurezza, edge cases, performance, data quality, v5 features)
+- OpenAPI description con code snippets (Python, JS, curl)
+- Tags organizzati per sezione
+- GZip + CORS + rate limit + security headers
+- Docker + CI + logging strutturato
+
 ## [v4.5.0] - 2026-04-11
 
 ### Dataset
