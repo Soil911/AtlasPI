@@ -1,4 +1,4 @@
-/* AtlasPI v2.0 — Interfaccia web */
+/* AtlasPI v2.3 — Interfaccia web */
 
 const API = '';
 const COLORS = {
@@ -11,12 +11,15 @@ let map, layerGroup;
 let allEntities = [];
 let detailCache = {};
 let debounceTimer = null;
+let activeType = '';
 
 // ─── Init ───────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', () => {
   initMap();
   loadEntities();
+  loadTypes();
+  loadStats();
   bindEvents();
 });
 
@@ -60,6 +63,42 @@ async function loadDetail(id) {
   }
 }
 
+async function loadTypes() {
+  try {
+    const res = await fetch(`${API}/v1/types`);
+    if (!res.ok) return;
+    const types = await res.json();
+    const container = document.getElementById('type-chips');
+    container.innerHTML = '<button class="chip active" data-type="">Tutti</button>' +
+      types.map(t => `<button class="chip" data-type="${esc(t.type)}">${esc(t.type)} (${t.count})</button>`).join('');
+
+    container.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        container.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        activeType = chip.dataset.type;
+        applyFilters();
+      });
+    });
+  } catch (_) {}
+}
+
+async function loadStats() {
+  try {
+    const res = await fetch(`${API}/v1/stats`);
+    if (!res.ok) return;
+    const s = await res.json();
+    const bar = document.getElementById('stats-bar');
+    bar.innerHTML = `
+      <span class="stat-item"><span class="stat-value">${s.total_entities}</span> entit\u00e0</span>
+      <span class="stat-item"><span class="stat-value">${s.total_sources}</span> fonti</span>
+      <span class="stat-item"><span class="stat-value">${s.total_territory_changes}</span> cambi</span>
+      <span class="stat-item"><span class="stat-value">${s.disputed_count}</span> contestati</span>
+      <span class="stat-item">conf. media <span class="stat-value">${Math.round(s.avg_confidence*100)}%</span></span>
+    `;
+  } catch (_) {}
+}
+
 // ─── Filtri ─────────────────────────────────────────────────────
 
 function getStatuses() {
@@ -70,11 +109,13 @@ function applyFilters() {
   const search = document.getElementById('search-input').value.toLowerCase().trim();
   const year = parseInt(document.getElementById('year-slider').value, 10);
   const statuses = getStatuses();
+  const sortVal = document.getElementById('sort-select').value;
 
-  const filtered = allEntities.filter(e => {
+  let filtered = allEntities.filter(e => {
     if (!statuses.includes(e.status)) return false;
     if (e.year_start > year) return false;
     if (e.year_end !== null && e.year_end < year) return false;
+    if (activeType && e.entity_type !== activeType) return false;
     if (search) {
       const inOrig = e.name_original.toLowerCase().includes(search);
       const inVar = (e.name_variants || []).some(v => v.name.toLowerCase().includes(search));
@@ -82,6 +123,15 @@ function applyFilters() {
     }
     return true;
   });
+
+  // Sorting
+  if (sortVal === 'name') {
+    filtered.sort((a, b) => a.name_original.localeCompare(b.name_original));
+  } else if (sortVal === 'year_start') {
+    filtered.sort((a, b) => a.year_start - b.year_start);
+  } else if (sortVal === 'confidence-desc') {
+    filtered.sort((a, b) => b.confidence_score - a.confidence_score);
+  }
 
   renderResults(filtered);
   renderMap(filtered);
@@ -313,11 +363,18 @@ function bindEvents() {
     cb.addEventListener('change', applyFilters);
   });
 
+  document.getElementById('sort-select').addEventListener('change', applyFilters);
+
   document.getElementById('reset-btn').addEventListener('click', () => {
     searchInput.value = '';
     yearSlider.value = 1500;
     yearDisplay.textContent = '1500';
     document.querySelectorAll('.checkbox-group input').forEach(cb => { cb.checked = true; });
+    document.getElementById('sort-select').value = '';
+    activeType = '';
+    document.querySelectorAll('#type-chips .chip').forEach(c => c.classList.remove('active'));
+    const allChip = document.querySelector('#type-chips .chip[data-type=""]');
+    if (allChip) allChip.classList.add('active');
     applyFilters();
     closeDetail();
   });

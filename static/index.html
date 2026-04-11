@@ -56,8 +56,28 @@
           </div>
         </fieldset>
 
+        <fieldset class="filter-control">
+          <legend>Tipo:</legend>
+          <div id="type-chips" class="chip-group" aria-label="Filtra per tipo di entit&agrave;">
+            <button class="chip active" data-type="">Tutti</button>
+          </div>
+        </fieldset>
+
+        <div class="sort-control">
+          <label for="sort-select">Ordina:</label>
+          <select id="sort-select" aria-label="Ordina risultati">
+            <option value="">Predefinito</option>
+            <option value="name">Nome A-Z</option>
+            <option value="year_start">Anno (antico-recente)</option>
+            <option value="confidence-desc">Affidabilit&agrave; (alta-bassa)</option>
+          </select>
+        </div>
+
         <button id="reset-btn" class="btn-secondary" aria-label="Azzera tutti i filtri">Reset filtri</button>
       </div>
+
+      <!-- Stats bar -->
+      <div id="stats-bar" class="stats-bar" aria-label="Statistiche dataset"></div>
 
       <div id="results-list" class="results" role="list" aria-label="Risultati ricerca">
         <div class="skeleton-loader" aria-hidden="true">
@@ -104,7 +124,7 @@
       <span class="legend-item" aria-hidden="true">&#9473; Reale</span>
       <span class="legend-item" aria-hidden="true">&#9476; Approssimato</span>
     </div>
-    <span class="footer-note">AtlasPI v2.0 &mdash; Dati storici con governance etica</span>
+    <span class="footer-note">AtlasPI v2.3 &mdash; Dati storici con governance etica</span>
   </footer>
 
   <noscript>

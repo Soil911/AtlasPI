@@ -640,6 +640,75 @@ fieldset.filter-control legend {
   justify-content: center;
 }
 
+/* Chip group (type filter) */
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.chip {
+  padding: 3px 8px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.72em;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.chip:hover { border-color: var(--accent); color: var(--text); }
+.chip.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 600; }
+
+/* Sort control */
+.sort-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.sort-control label {
+  font-size: 0.82em;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.sort-control select {
+  flex: 1;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-dark);
+  color: var(--text);
+  font-size: 0.8em;
+  outline: none;
+}
+
+.sort-control select:focus { border-color: var(--accent); }
+
+/* Stats bar */
+.stats-bar {
+  display: flex;
+  gap: 10px;
+  padding: 6px 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.7em;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.stat-value { color: var(--accent); font-weight: 600; }
+
 /* ─── Responsive ─────────────────────────────────────────────── */
 
 /* Tablet */
