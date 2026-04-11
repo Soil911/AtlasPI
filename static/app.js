@@ -1,4 +1,4 @@
-/* AtlasPI v2.3 — Interfaccia web */
+/* AtlasPI v4.6 — Interfaccia web con deep linking e keyboard nav */
 
 const API = '';
 const COLORS = {
@@ -7,21 +7,36 @@ const COLORS = {
   disputed: '#f85149',
 };
 
+const TYPE_ICONS = {
+  empire: '👑',
+  kingdom: '🏰',
+  'city-state': '🏛️',
+  colony: '⚓',
+  disputed_territory: '⚠️',
+  confederation: '🤝',
+  caliphate: '☪️',
+  republic: '🏛️',
+  shogunate: '⚔️',
+  dynasty: '🐉',
+};
+
 let map, layerGroup;
 let allEntities = [];
 let detailCache = {};
 let debounceTimer = null;
 let activeType = '';
+let selectedCardIndex = -1;
 
 // ─── Init ───────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', () => {
   initMap();
-  loadEntities();
+  loadEntities().then(() => restoreUrlState());
   loadTypes();
   loadStats();
   loadTimeline();
   bindEvents();
+  initLang();
 });
 
 function initMap() {
@@ -33,6 +48,80 @@ function initMap() {
   layerGroup = L.layerGroup().addTo(map);
 }
 
+// ─── URL State Management ──────────────────────────────────────
+
+function getUrlState() {
+  const params = new URLSearchParams(window.location.search);
+  return {
+    entity: params.get('entity') ? parseInt(params.get('entity'), 10) : null,
+    year: params.get('year') ? parseInt(params.get('year'), 10) : null,
+    search: params.get('q') || null,
+    type: params.get('type') || null,
+    lang: params.get('lang') || null,
+  };
+}
+
+function pushUrlState(opts = {}) {
+  const params = new URLSearchParams();
+  const year = parseInt(document.getElementById('year-slider').value, 10);
+  const search = document.getElementById('search-input').value.trim();
+
+  if (year !== 1500) params.set('year', year);
+  if (search) params.set('q', search);
+  if (activeType) params.set('type', activeType);
+  if (opts.entity) params.set('entity', opts.entity);
+  if (lang !== 'it') params.set('lang', lang);
+
+  const url = params.toString() ? `?${params.toString()}` : window.location.pathname;
+  history.replaceState(null, '', url);
+}
+
+function restoreUrlState() {
+  const state = getUrlState();
+  let changed = false;
+
+  if (state.lang && state.lang !== lang) {
+    lang = state.lang;
+    localStorage.setItem('atlaspi-lang', lang);
+    applyLangUI();
+  }
+
+  if (state.year !== null) {
+    const slider = document.getElementById('year-slider');
+    const input = document.getElementById('year-input');
+    const era = document.getElementById('year-era');
+    slider.value = state.year;
+    document.getElementById('year-display').textContent = fmtY(state.year);
+    if (state.year < 0) {
+      input.value = Math.abs(state.year);
+      era.value = 'bc';
+    } else {
+      input.value = state.year;
+      era.value = 'ad';
+    }
+    changed = true;
+  }
+
+  if (state.search) {
+    document.getElementById('search-input').value = state.search;
+    changed = true;
+  }
+
+  if (state.type) {
+    activeType = state.type;
+    document.querySelectorAll('#type-chips .chip').forEach(c => {
+      c.classList.toggle('active', c.dataset.type === activeType);
+    });
+    changed = true;
+  }
+
+  if (changed) applyFilters();
+
+  if (state.entity) {
+    setTimeout(() => showDetail(state.entity), 300);
+  }
+}
+
 // ─── API ────────────────────────────────────────────────────────
 
 async function loadEntities() {
@@ -41,10 +130,10 @@ async function loadEntities() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     allEntities = data.entities;
-    document.getElementById('entity-count').textContent = `${data.count} entit\u00e0`;
+    document.getElementById('entity-count').textContent = `${data.count} ${t('entities')}`;
     applyFilters();
   } catch (err) {
-    showError('Impossibile caricare i dati. Verifica che il server sia attivo.');
+    showError(t('error_connection') || 'Impossibile caricare i dati.');
     document.getElementById('results-list').innerHTML =
       '<p class="placeholder">Errore di connessione</p>';
   }
@@ -59,9 +148,17 @@ async function loadDetail(id) {
     detailCache[id] = data;
     return data;
   } catch (err) {
-    showError('Errore nel caricamento dei dettagli.');
+    showError(t('error_detail') || 'Errore nel caricamento dei dettagli.');
     return null;
   }
+}
+
+async function loadContemporaries(id) {
+  try {
+    const res = await fetch(`${API}/v1/entities/${id}/contemporaries?limit=20`);
+    if (!res.ok) return null;
+    return await res.json();
+  } catch (_) { return null; }
 }
 
 async function loadTypes() {
@@ -70,8 +167,11 @@ async function loadTypes() {
     if (!res.ok) return;
     const types = await res.json();
     const container = document.getElementById('type-chips');
-    container.innerHTML = '<button class="chip active" data-type="">Tutti</button>' +
-      types.map(t => `<button class="chip" data-type="${esc(t.type)}">${esc(t.type)} (${t.count})</button>`).join('');
+    container.innerHTML = `<button class="chip active" data-type="">${t('all')}</button>` +
+      types.map(tp => {
+        const icon = TYPE_ICONS[tp.type] || '📍';
+        return `<button class="chip" data-type="${esc(tp.type)}">${icon} ${esc(tp.type)} (${tp.count})</button>`;
+      }).join('');
 
     container.querySelectorAll('.chip').forEach(chip => {
       chip.addEventListener('click', () => {
@@ -79,6 +179,7 @@ async function loadTypes() {
         chip.classList.add('active');
         activeType = chip.dataset.type;
         applyFilters();
+        pushUrlState();
       });
     });
   } catch (_) {}
@@ -91,11 +192,11 @@ async function loadStats() {
     const s = await res.json();
     const bar = document.getElementById('stats-bar');
     bar.innerHTML = `
-      <span class="stat-item"><span class="stat-value">${s.total_entities}</span> entit\u00e0</span>
-      <span class="stat-item"><span class="stat-value">${s.total_sources}</span> fonti</span>
-      <span class="stat-item"><span class="stat-value">${s.total_territory_changes}</span> cambi</span>
-      <span class="stat-item"><span class="stat-value">${s.disputed_count}</span> contestati</span>
-      <span class="stat-item">conf. media <span class="stat-value">${Math.round(s.avg_confidence*100)}%</span></span>
+      <span class="stat-item"><span class="stat-value">${s.total_entities}</span> ${t('entities')}</span>
+      <span class="stat-item"><span class="stat-value">${s.total_sources}</span> ${t('sources')}</span>
+      <span class="stat-item"><span class="stat-value">${s.total_territory_changes}</span> ${t('changes')}</span>
+      <span class="stat-item"><span class="stat-value">${s.disputed_count}</span> ${t('contested')}</span>
+      <span class="stat-item">${t('avg_conf')} <span class="stat-value">${Math.round(s.avg_confidence*100)}%</span></span>
     `;
   } catch (_) {}
 }
@@ -125,7 +226,6 @@ function applyFilters() {
     return true;
   });
 
-  // Sorting
   if (sortVal === 'name') {
     filtered.sort((a, b) => a.name_original.localeCompare(b.name_original));
   } else if (sortVal === 'year_start') {
@@ -134,6 +234,7 @@ function applyFilters() {
     filtered.sort((a, b) => b.confidence_score - a.confidence_score);
   }
 
+  selectedCardIndex = -1;
   renderResults(filtered);
   renderMap(filtered);
 }
@@ -147,19 +248,19 @@ function renderResults(entities) {
     return;
   }
 
-  // Show count
   const countInfo = `<div class="results-count">${entities.length} / ${allEntities.length} ${t('entities')}</div>`;
 
-  el.innerHTML = countInfo + entities.map(e => {
+  el.innerHTML = countInfo + entities.map((e, idx) => {
     const pct = Math.round(e.confidence_score * 100);
     const real = isReal(e);
+    const icon = TYPE_ICONS[e.entity_type] || '📍';
     return `
-    <div class="result-card ${e.status}" data-id="${e.id}" role="listitem" tabindex="0">
-      <div class="name">${esc(e.name_original)}${real ? '' : ' <span class="precision-tag approx">~</span>'}</div>
+    <div class="result-card ${e.status}" data-id="${e.id}" data-idx="${idx}" role="listitem" tabindex="0">
+      <div class="name"><span class="type-icon">${icon}</span> ${esc(e.name_original)}${real ? '' : ' <span class="precision-tag approx">~</span>'}</div>
       <div class="meta">
         ${e.entity_type} &middot;
-        ${fmtY(e.year_start)}\u2013${e.year_end ? fmtY(e.year_end) : 'oggi'} &middot;
-        <span class="status-badge ${e.status}">${e.status}</span>
+        ${fmtY(e.year_start)}\u2013${e.year_end ? fmtY(e.year_end) : t('today')} &middot;
+        <span class="status-badge ${e.status}">${t(e.status)}</span>
         &middot; ${pct}%
       </div>
       <div class="score-bar"><div class="score-fill" style="width:${pct}%;background:${COLORS[e.status]}"></div></div>
@@ -187,7 +288,7 @@ function renderMap(entities) {
         const m = L.circleMarker([lat, lon], {
           radius: 8, fillColor: c, color: '#fff', weight: 1.5, fillOpacity: 0.85,
         });
-        m.bindTooltip(tip(e), { direction: 'top' });
+        m.bindTooltip(richTooltip(e), { direction: 'top' });
         m.on('click', () => showDetail(e.id));
         layerGroup.addLayer(m);
       } else {
@@ -200,7 +301,7 @@ function renderMap(entities) {
             opacity: real ? 0.8 : 0.5,
           },
         });
-        layer.bindTooltip(tip(e), { sticky: true });
+        layer.bindTooltip(richTooltip(e), { sticky: true });
         layer.on('click', () => showDetail(e.id));
         layerGroup.addLayer(layer);
 
@@ -218,11 +319,25 @@ function renderMap(entities) {
   });
 }
 
-function tip(e) {
-  return `<strong>${esc(e.name_original)}</strong><br>${e.entity_type} &middot; ${fmtY(e.year_start)}\u2013${e.year_end ? fmtY(e.year_end) : 'oggi'}<br>Affidabilit\u00e0: ${Math.round(e.confidence_score*100)}% &middot; <em>${e.status}</em>`;
+function richTooltip(e) {
+  const icon = TYPE_ICONS[e.entity_type] || '📍';
+  const pct = Math.round(e.confidence_score * 100);
+  const barColor = COLORS[e.status] || '#8b949e';
+  return `
+    <div style="min-width:160px">
+      <strong>${icon} ${esc(e.name_original)}</strong><br>
+      <span style="font-size:0.85em;opacity:0.8">${e.entity_type} &middot; ${fmtY(e.year_start)}\u2013${e.year_end ? fmtY(e.year_end) : t('today')}</span><br>
+      <div style="display:flex;align-items:center;gap:6px;margin-top:3px">
+        <div style="flex:1;height:3px;background:rgba(255,255,255,0.15);border-radius:2px">
+          <div style="width:${pct}%;height:100%;background:${barColor};border-radius:2px"></div>
+        </div>
+        <span style="font-size:0.75em;opacity:0.7">${pct}%</span>
+      </div>
+      <span style="font-size:0.75em;opacity:0.6">${t(e.status)}</span>
+    </div>`;
 }
 
-// ─── Dettaglio ──────────────────────────────────────────────────
+// ─── Dettaglio (con sezioni collassabili) ───────────────────────
 
 async function showDetail(id) {
   const panel = document.getElementById('detail-panel');
@@ -230,13 +345,14 @@ async function showDetail(id) {
   panel.classList.remove('hidden');
   content.innerHTML = '<div class="detail-spinner"><div class="spinner"></div></div>';
 
-  // Collapse sidebar on mobile
   if (window.innerWidth <= 768) {
     document.getElementById('sidebar').classList.add('collapsed');
   }
 
   const info = document.getElementById('map-info');
   if (info) info.style.display = 'none';
+
+  pushUrlState({ entity: id });
 
   const e = await loadDetail(id);
   if (!e) { panel.classList.add('hidden'); return; }
@@ -245,74 +361,143 @@ async function showDetail(id) {
   const sc = COLORS[e.status] || '#8b949e';
   const real = isReal(e);
 
-  content.innerHTML = `
+  let html = `
     <h2>${esc(e.name_original)}</h2>
     <span class="lang-tag">${e.name_original_lang}</span>
-    <span class="status-badge ${e.status}">${e.status}</span>
+    <span class="status-badge ${e.status}">${t(e.status)}</span>
 
-    <div class="detail-section">
-      <h3>Informazioni</h3>
-      <p><strong>Tipo:</strong> ${e.entity_type}</p>
-      <p><strong>Periodo:</strong> ${fmtY(e.year_start)} \u2013 ${e.year_end ? fmtY(e.year_end) : 'presente'}</p>
-      ${e.capital ? `<p><strong>Capitale:</strong> ${esc(e.capital.name)}</p>` : ''}
+    <div class="detail-section" data-section="info">
+      <h3 class="collapsible" tabindex="0">${t('info')} <span class="collapse-icon">▾</span></h3>
+      <div class="section-body">
+        <p><strong>${t('type') || 'Tipo'}:</strong> ${TYPE_ICONS[e.entity_type] || ''} ${e.entity_type}</p>
+        <p><strong>${t('period')}:</strong> ${fmtY(e.year_start)} \u2013 ${e.year_end ? fmtY(e.year_end) : t('present')}</p>
+        ${e.capital ? `<p><strong>${t('capital')}:</strong> ${esc(e.capital.name)}</p>` : ''}
+      </div>
     </div>
 
-    <div class="detail-section">
-      <h3>Affidabilit\u00e0</h3>
-      <div class="confidence-bar"><div class="confidence-fill" style="width:${pct}%;background:${sc}"></div></div>
-      <p style="font-size:0.78em;color:var(--text-muted);margin-top:4px">
-        Score: ${e.confidence_score.toFixed(2)} / 1.00
-        ${e.confidence_score < 0.6 ? ' \u2014 <span style="color:var(--uncertain)">dati parziali o incerti</span>' : ''}
-      </p>
-      ${e.boundary_geojson ? (real ? `
-        <div class="boundary-notice" style="border-color:rgba(63,185,80,0.3);background:rgba(63,185,80,0.08);color:var(--confirmed)">
-          Confini da dataset accademici. Verificare le fonti per dettagli.
-        </div>` : `
-        <div class="boundary-notice">
-          Confini approssimativi a scopo dimostrativo.
-        </div>`) : ''}
-    </div>
+    <div class="detail-section" data-section="reliability">
+      <h3 class="collapsible" tabindex="0">${t('reliability')} <span class="collapse-icon">▾</span></h3>
+      <div class="section-body">
+        <div class="confidence-bar"><div class="confidence-fill" style="width:${pct}%;background:${sc}"></div></div>
+        <p style="font-size:0.78em;color:var(--text-muted);margin-top:4px">
+          ${t('score')}: ${e.confidence_score.toFixed(2)} / 1.00
+          ${e.confidence_score < 0.6 ? ` \u2014 <span style="color:var(--uncertain)">${t('partial_data') || 'dati parziali'}</span>` : ''}
+        </p>
+        ${e.boundary_geojson ? (real ? `
+          <div class="boundary-notice real-notice">
+            ${t('real_boundary')}
+          </div>` : `
+          <div class="boundary-notice">
+            ${t('approx_boundary')}
+          </div>`) : ''}
+      </div>
+    </div>`;
 
-    ${e.name_variants.length ? `
-    <div class="detail-section">
-      <h3>Nomi e varianti (ETHICS-001)</h3>
-      <ul>${e.name_variants.map(v => `
-        <li>
-          <strong>${esc(v.name)}</strong> <span class="lang-tag">${v.lang}</span>
-          ${v.period_start != null ? `<span style="font-size:0.75em;color:var(--text-muted)">${fmtY(v.period_start)}\u2013${v.period_end ? fmtY(v.period_end) : '...'}</span>` : ''}
-          ${v.context ? `<br><span style="font-size:0.78em;color:var(--text-muted)">${esc(v.context)}</span>` : ''}
-        </li>`).join('')}
-      </ul>
-    </div>` : ''}
+  if (e.name_variants.length) {
+    html += `
+    <div class="detail-section" data-section="names">
+      <h3 class="collapsible" tabindex="0">${t('names_section')} <span class="collapse-icon">▾</span></h3>
+      <div class="section-body">
+        <ul>${e.name_variants.map(v => `
+          <li>
+            <strong>${esc(v.name)}</strong> <span class="lang-tag">${v.lang}</span>
+            ${v.period_start != null ? `<span style="font-size:0.75em;color:var(--text-muted)">${fmtY(v.period_start)}\u2013${v.period_end ? fmtY(v.period_end) : '...'}</span>` : ''}
+            ${v.context ? `<br><span style="font-size:0.78em;color:var(--text-muted)">${esc(v.context)}</span>` : ''}
+          </li>`).join('')}
+        </ul>
+      </div>
+    </div>`;
+  }
 
-    ${e.territory_changes.length ? `
-    <div class="detail-section">
-      <h3>Cambiamenti territoriali (ETHICS-002)</h3>
-      <ul>${e.territory_changes.map(tc => `
-        <li>
-          <span class="change-type ${tc.change_type}">${tc.change_type.replace(/_/g, ' ')}</span>
-          <strong>${fmtY(tc.year)}</strong> \u2014 ${esc(tc.region)}
-          <span style="font-size:0.7em;color:var(--text-muted)">(${Math.round(tc.confidence_score*100)}%)</span>
-          ${tc.description ? `<br><span style="font-size:0.8em">${esc(tc.description)}</span>` : ''}
-          ${tc.population_affected ? `<br><span style="font-size:0.75em;color:var(--uncertain)">Popolazione colpita: ~${tc.population_affected.toLocaleString('it-IT')}</span>` : ''}
-        </li>`).join('')}
-      </ul>
-    </div>` : ''}
+  if (e.territory_changes.length) {
+    html += `
+    <div class="detail-section" data-section="territory">
+      <h3 class="collapsible" tabindex="0">${t('territory_section')} <span class="collapse-icon">▾</span></h3>
+      <div class="section-body">
+        <ul>${e.territory_changes.map(tc => `
+          <li>
+            <span class="change-type ${tc.change_type}">${tc.change_type.replace(/_/g, ' ')}</span>
+            <strong>${fmtY(tc.year)}</strong> \u2014 ${esc(tc.region)}
+            <span style="font-size:0.7em;color:var(--text-muted)">(${Math.round(tc.confidence_score*100)}%)</span>
+            ${tc.description ? `<br><span style="font-size:0.8em">${esc(tc.description)}</span>` : ''}
+            ${tc.population_affected ? `<br><span style="font-size:0.75em;color:var(--uncertain)">${t('pop_affected')}: ~${tc.population_affected.toLocaleString('it-IT')}</span>` : ''}
+          </li>`).join('')}
+        </ul>
+      </div>
+    </div>`;
+  }
 
-    ${e.sources.length ? `
-    <div class="detail-section">
-      <h3>Fonti</h3>
-      <ul>${e.sources.map(s => `
-        <li>${esc(s.citation)} <span class="lang-tag">${s.source_type}</span></li>`).join('')}
-      </ul>
-    </div>` : ''}
+  if (e.sources.length) {
+    html += `
+    <div class="detail-section" data-section="sources">
+      <h3 class="collapsible" tabindex="0">${t('sources_section')} <span class="collapse-icon">▾</span></h3>
+      <div class="section-body">
+        <ul>${e.sources.map(s => `
+          <li>${esc(s.citation)} <span class="lang-tag">${s.source_type}</span></li>`).join('')}
+        </ul>
+      </div>
+    </div>`;
+  }
 
-    ${e.ethical_notes ? `
-    <div class="detail-section">
-      <h3>Governance etica</h3>
-      <div class="ethics-box">${esc(e.ethical_notes)}</div>
-    </div>` : ''}
-  `;
+  if (e.ethical_notes) {
+    html += `
+    <div class="detail-section" data-section="ethics">
+      <h3 class="collapsible" tabindex="0">${t('ethics_section')} <span class="collapse-icon">▾</span></h3>
+      <div class="section-body">
+        <div class="ethics-box">${esc(e.ethical_notes)}</div>
+      </div>
+    </div>`;
+  }
+
+  // Contemporaries section
+  html += `
+    <div class="detail-section" data-section="contemporaries">
+      <h3 class="collapsible" tabindex="0">${t('contemporaries') || 'Contemporanei'} <span class="collapse-icon">▾</span></h3>
+      <div class="section-body" id="contemporaries-body">
+        <div class="detail-spinner" style="height:60px"><div class="spinner" style="width:20px;height:20px"></div></div>
+      </div>
+    </div>`;
+
+  // Share button
+  html += `
+    <div class="detail-actions">
+      <button class="btn-share" onclick="shareEntity(${e.id})" title="${t('share') || 'Condividi'}">
+        🔗 ${t('share') || 'Condividi'}
+      </button>
+    </div>`;
+
+  content.innerHTML = html;
+
+  // Bind collapsible sections
+  content.querySelectorAll('.collapsible').forEach(h3 => {
+    h3.addEventListener('click', () => toggleSection(h3));
+    h3.addEventListener('keydown', ev => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); toggleSection(h3); } });
+  });
+
+  // Load contemporaries async
+  loadContemporaries(id).then(data => {
+    const body = document.getElementById('contemporaries-body');
+    if (!body) return;
+    if (!data || !data.contemporaries.length) {
+      body.innerHTML = `<p style="font-size:0.8em;color:var(--text-muted)">${t('no_contemporaries') || 'Nessun contemporaneo trovato'}</p>`;
+      return;
+    }
+    body.innerHTML = data.contemporaries.slice(0, 8).map(c => {
+      const icon = TYPE_ICONS[c.entity_type] || '📍';
+      return `<div class="contemporary-item" data-id="${c.id}" tabindex="0">
+        <span class="type-icon">${icon}</span>
+        <div>
+          <strong>${esc(c.name_original)}</strong>
+          <div style="font-size:0.72em;color:var(--text-muted)">${c.entity_type} &middot; ${fmtY(c.overlap_start)}\u2013${fmtY(c.overlap_end)}</div>
+        </div>
+      </div>`;
+    }).join('');
+    body.querySelectorAll('.contemporary-item').forEach(item => {
+      const handler = () => showDetail(+item.dataset.id);
+      item.addEventListener('click', handler);
+      item.addEventListener('keydown', ev => { if (ev.key === 'Enter') handler(); });
+    });
+  });
 
   // Zoom
   if (e.boundary_geojson) {
@@ -327,16 +512,45 @@ async function showDetail(id) {
   }
 }
 
+function toggleSection(h3) {
+  const section = h3.closest('.detail-section');
+  section.classList.toggle('collapsed');
+  const icon = h3.querySelector('.collapse-icon');
+  if (icon) icon.textContent = section.classList.contains('collapsed') ? '▸' : '▾';
+}
+
+function shareEntity(id) {
+  const url = `${window.location.origin}${window.location.pathname}?entity=${id}&year=${document.getElementById('year-slider').value}`;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(url).then(() => {
+      showToast(t('link_copied') || 'Link copiato!');
+    });
+  } else {
+    prompt('Copia questo link:', url);
+  }
+}
+
+function showToast(msg) {
+  const toast = document.getElementById('error-toast');
+  const msgEl = document.getElementById('error-message');
+  toast.style.background = 'rgba(63,185,80,0.95)';
+  msgEl.textContent = msg;
+  toast.classList.remove('hidden');
+  setTimeout(() => { toast.classList.add('hidden'); toast.style.background = ''; }, 3000);
+}
+
 function closeDetail() {
   document.getElementById('detail-panel').classList.add('hidden');
   const info = document.getElementById('map-info');
   if (info) info.style.display = '';
+  pushUrlState();
 }
 
 // ─── Error toast ────────────────────────────────────────────────
 
 function showError(msg) {
   const toast = document.getElementById('error-toast');
+  toast.style.background = '';
   document.getElementById('error-message').textContent = msg;
   toast.classList.remove('hidden');
   setTimeout(() => toast.classList.add('hidden'), 8000);
@@ -351,16 +565,14 @@ function bindEvents() {
   const yearInput = document.getElementById('year-input');
   const yearEra = document.getElementById('year-era');
 
-  document.getElementById('search-btn').addEventListener('click', applyFilters);
-  searchInput.addEventListener('keyup', e => { if (e.key === 'Enter') applyFilters(); });
+  document.getElementById('search-btn').addEventListener('click', () => { applyFilters(); pushUrlState(); });
+  searchInput.addEventListener('keyup', e => { if (e.key === 'Enter') { applyFilters(); pushUrlState(); } });
 
-  // Debounced live search
   searchInput.addEventListener('input', () => {
     clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(applyFilters, 300);
+    debounceTimer = setTimeout(() => { applyFilters(); pushUrlState(); }, 300);
   });
 
-  // Year slider → sync input
   yearSlider.addEventListener('input', () => {
     const val = +yearSlider.value;
     yearDisplay.textContent = fmtY(val);
@@ -372,9 +584,8 @@ function bindEvents() {
       yearEra.value = 'ad';
     }
   });
-  yearSlider.addEventListener('change', applyFilters);
+  yearSlider.addEventListener('change', () => { applyFilters(); pushUrlState(); });
 
-  // Year input + era → sync slider
   function applyYearInput() {
     let val = parseInt(yearInput.value, 10) || 0;
     if (yearEra.value === 'bc') val = -Math.abs(val);
@@ -382,13 +593,13 @@ function bindEvents() {
     yearSlider.value = val;
     yearDisplay.textContent = fmtY(val);
     applyFilters();
+    pushUrlState();
   }
 
   document.getElementById('year-go').addEventListener('click', applyYearInput);
   yearInput.addEventListener('keyup', e => { if (e.key === 'Enter') applyYearInput(); });
   yearEra.addEventListener('change', applyYearInput);
 
-  // Year presets
   document.querySelectorAll('.year-presets button').forEach(btn => {
     btn.addEventListener('click', () => {
       const val = parseInt(btn.dataset.year, 10);
@@ -402,11 +613,12 @@ function bindEvents() {
         yearEra.value = 'ad';
       }
       applyFilters();
+      pushUrlState();
     });
   });
 
   document.querySelectorAll('.checkbox-group input').forEach(cb => {
-    cb.addEventListener('change', applyFilters);
+    cb.addEventListener('change', () => { applyFilters(); pushUrlState(); });
   });
 
   document.getElementById('sort-select').addEventListener('change', applyFilters);
@@ -422,7 +634,6 @@ function bindEvents() {
     });
   }
 
-  // Redraw timeline on year change
   yearSlider.addEventListener('input', () => { if (timelineData) drawTimeline(); });
 
   document.getElementById('reset-btn').addEventListener('click', () => {
@@ -439,20 +650,18 @@ function bindEvents() {
     if (allChip) allChip.classList.add('active');
     applyFilters();
     closeDetail();
+    pushUrlState();
   });
 
   document.getElementById('close-detail').addEventListener('click', closeDetail);
-  // Language toggle
   document.getElementById('lang-toggle').addEventListener('click', switchLang);
 
-  // Map fullscreen
   document.getElementById('map-fullscreen').addEventListener('click', () => {
     const container = document.getElementById('map-container');
     container.classList.toggle('fullscreen');
     setTimeout(() => map.invalidateSize(), 300);
   });
 
-  // Map fit all visible entities
   document.getElementById('map-fit-all').addEventListener('click', () => {
     if (layerGroup.getLayers().length > 0) {
       const bounds = layerGroup.getBounds();
@@ -464,7 +673,6 @@ function bindEvents() {
     document.getElementById('error-toast').classList.add('hidden');
   });
 
-  // Mobile sidebar toggle
   const toggle = document.getElementById('sidebar-toggle');
   const sidebar = document.getElementById('sidebar');
   if (toggle) {
@@ -473,11 +681,93 @@ function bindEvents() {
       toggle.setAttribute('aria-expanded', !sidebar.classList.contains('collapsed'));
     });
   }
+
+  // ─── Keyboard Navigation ──────────────────────────────────────
+  document.addEventListener('keydown', handleKeyboard);
+}
+
+function handleKeyboard(e) {
+  // Ignore if user is typing in input
+  const tag = document.activeElement?.tagName;
+  if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+
+  switch (e.key) {
+    case 'Escape': {
+      const panel = document.getElementById('detail-panel');
+      if (!panel.classList.contains('hidden')) {
+        closeDetail();
+        e.preventDefault();
+      }
+      break;
+    }
+    case 'ArrowDown': {
+      e.preventDefault();
+      navigateResults(1);
+      break;
+    }
+    case 'ArrowUp': {
+      e.preventDefault();
+      navigateResults(-1);
+      break;
+    }
+    case 'Enter': {
+      const cards = document.querySelectorAll('.result-card');
+      if (selectedCardIndex >= 0 && selectedCardIndex < cards.length) {
+        showDetail(+cards[selectedCardIndex].dataset.id);
+      }
+      break;
+    }
+    case '/': {
+      e.preventDefault();
+      document.getElementById('search-input').focus();
+      break;
+    }
+    case '?': {
+      showKeyboardHelp();
+      break;
+    }
+  }
+}
+
+function navigateResults(dir) {
+  const cards = document.querySelectorAll('.result-card');
+  if (!cards.length) return;
+
+  cards.forEach(c => c.classList.remove('keyboard-focus'));
+  selectedCardIndex += dir;
+  if (selectedCardIndex < 0) selectedCardIndex = cards.length - 1;
+  if (selectedCardIndex >= cards.length) selectedCardIndex = 0;
+
+  const card = cards[selectedCardIndex];
+  card.classList.add('keyboard-focus');
+  card.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+}
+
+function showKeyboardHelp() {
+  const panel = document.getElementById('detail-panel');
+  const content = document.getElementById('detail-content');
+  panel.classList.remove('hidden');
+  content.innerHTML = `
+    <h2>Scorciatoie Tastiera</h2>
+    <div class="detail-section">
+      <div class="section-body">
+        <table class="kbd-table">
+          <tr><td><kbd>↑</kbd> <kbd>↓</kbd></td><td>Naviga risultati</td></tr>
+          <tr><td><kbd>Enter</kbd></td><td>Apri entit\u00e0 selezionata</td></tr>
+          <tr><td><kbd>Esc</kbd></td><td>Chiudi pannello</td></tr>
+          <tr><td><kbd>/</kbd></td><td>Focus sulla ricerca</td></tr>
+          <tr><td><kbd>?</kbd></td><td>Mostra aiuto</td></tr>
+        </table>
+      </div>
+    </div>`;
 }
 
 // ─── Utility ────────────────────────────────────────────────────
 
-function fmtY(y) { return y < 0 ? `${Math.abs(y)} a.C.` : String(y); }
+function fmtY(y) {
+  if (y < 0) return `${Math.abs(y)} ${t('bc')}`;
+  return String(y);
+}
 
 function esc(s) {
   if (!s) return '';
@@ -540,14 +830,12 @@ function drawTimeline() {
     ctx.fillText(y < 0 ? `${Math.abs(y)}aC` : String(y), x, h - 8);
   }
 
-  // Sort by duration desc for layering
   const sorted = [...timelineData.items].sort((a, b) => {
     const durA = (a.end || 2025) - a.start;
     const durB = (b.end || 2025) - b.start;
     return durB - durA;
   });
 
-  // Draw bars
   const barH = Math.min(8, plotH / sorted.length - 1);
   sorted.forEach((item, i) => {
     const x1 = yearToX(item.start);
@@ -560,7 +848,6 @@ function drawTimeline() {
     ctx.fillRect(x1, y, Math.max(x2 - x1, 2), barH);
     ctx.globalAlpha = 1;
 
-    // Label if bar is wide enough
     if (x2 - x1 > 50) {
       ctx.fillStyle = '#e6edf3';
       ctx.font = '8px sans-serif';
@@ -582,6 +869,32 @@ function drawTimeline() {
     ctx.lineTo(cx, h - pad.bottom);
     ctx.stroke();
   }
+
+  // Make timeline clickable
+  canvas.onclick = (e) => {
+    const rect = canvas.getBoundingClientRect();
+    const x = (e.clientX - rect.left);
+    const clickedYear = Math.round(minY + ((x - pad.left) / plotW) * range);
+    if (clickedYear >= minY && clickedYear <= maxY) {
+      const slider = document.getElementById('year-slider');
+      const yearInput = document.getElementById('year-input');
+      const yearEra = document.getElementById('year-era');
+      slider.value = clickedYear;
+      document.getElementById('year-display').textContent = fmtY(clickedYear);
+      if (clickedYear < 0) {
+        yearInput.value = Math.abs(clickedYear);
+        yearEra.value = 'bc';
+      } else {
+        yearInput.value = clickedYear;
+        yearEra.value = 'ad';
+      }
+      applyFilters();
+      pushUrlState();
+      drawTimeline();
+    }
+  };
+
+  canvas.style.cursor = 'crosshair';
 }
 
 // ─── i18n ───────────────────────────────────────────────────────
@@ -591,8 +904,7 @@ let lang = localStorage.getItem('atlaspi-lang') || 'it';
 const I18N = {
   it: {
     search: 'Cerca per nome, anche varianti...',
-    year: 'Anno',
-    status: 'Status',
+    year: 'Anno', status: 'Status',
     confirmed: 'Confermato', uncertain: 'Incerto', disputed: 'Contestato',
     type: 'Tipo', sort_label: 'Ordina', sort_default: 'Predefinito',
     sort_name: 'Nome A-Z', sort_year: 'Anno', sort_conf: 'Affidabilit\u00e0',
@@ -605,11 +917,18 @@ const I18N = {
     sources_section: 'Fonti', ethics_section: 'Governance etica',
     period: 'Periodo', capital: 'Capitale', score: 'Score',
     today: 'oggi', present: 'presente', bc: 'a.C.',
-    real_boundary: 'Confini da dataset accademici.',
-    approx_boundary: 'Confini approssimativi.',
+    real_boundary: 'Confini da dataset accademici. Verificare le fonti per dettagli.',
+    approx_boundary: 'Confini approssimativi a scopo dimostrativo.',
     pop_affected: 'Popolazione colpita',
     banner: 'Confini da fonti accademiche. Dati storici da Natural Earth e aourednik/historical-basemaps.',
-    map_hint: 'Seleziona un\'entit\u00e0 dalla lista o clicca su un\'area della mappa.',
+    map_hint: "Seleziona un'entit\u00e0 dalla lista o clicca su un'area della mappa.",
+    share: 'Condividi', link_copied: 'Link copiato negli appunti!',
+    partial_data: 'dati parziali o incerti',
+    contemporaries: 'Contemporanei',
+    no_contemporaries: 'Nessun contemporaneo trovato',
+    error_connection: 'Impossibile caricare i dati. Verifica che il server sia attivo.',
+    error_detail: 'Errore nel caricamento dei dettagli.',
+    keyboard_help: 'Scorciatoie tastiera',
   },
   en: {
     search: 'Search by name, including variants...',
@@ -626,27 +945,43 @@ const I18N = {
     sources_section: 'Sources', ethics_section: 'Ethical governance',
     period: 'Period', capital: 'Capital', score: 'Score',
     today: 'today', present: 'present', bc: 'BC',
-    real_boundary: 'Boundaries from academic datasets.',
-    approx_boundary: 'Approximate boundaries.',
+    real_boundary: 'Boundaries from academic datasets. Check sources for details.',
+    approx_boundary: 'Approximate boundaries for demonstration.',
     pop_affected: 'Population affected',
     banner: 'Boundaries from academic sources. Data from Natural Earth and aourednik/historical-basemaps.',
     map_hint: 'Select an entity from the list or click on the map.',
+    share: 'Share', link_copied: 'Link copied to clipboard!',
+    partial_data: 'partial or uncertain data',
+    contemporaries: 'Contemporaries',
+    no_contemporaries: 'No contemporaries found',
+    error_connection: 'Unable to load data. Check if the server is running.',
+    error_detail: 'Error loading details.',
+    keyboard_help: 'Keyboard shortcuts',
   },
 };
 
 function t(key) { return (I18N[lang] || I18N.it)[key] || key; }
 
+function initLang() {
+  document.getElementById('lang-toggle').textContent = lang === 'it' ? 'EN' : 'IT';
+  applyLangUI();
+}
+
 function switchLang() {
   lang = lang === 'it' ? 'en' : 'it';
   localStorage.setItem('atlaspi-lang', lang);
   document.getElementById('lang-toggle').textContent = lang === 'it' ? 'EN' : 'IT';
+  applyLangUI();
+  pushUrlState();
+}
+
+function applyLangUI() {
   document.getElementById('search-input').placeholder = t('search');
   document.getElementById('reset-btn').textContent = t('reset');
   const banner = document.querySelector('.data-banner');
   if (banner) banner.innerHTML = `<strong>${t('banner').split('.')[0]}.</strong> ${t('banner').split('.').slice(1).join('.')}`;
   const info = document.getElementById('map-info');
   if (info) info.textContent = t('map_hint');
-  // Refresh UI
   applyFilters();
   loadStats();
 }

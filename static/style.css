@@ -951,6 +951,116 @@ fieldset.filter-control legend {
   .checkbox-group label { padding: 4px 0; min-height: 44px; }
 }
 
+/* ─── v4.6: Collapsible sections ────────────────────────────── */
+
+.collapsible {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.15s;
+}
+
+.collapsible:hover { color: var(--accent); }
+.collapsible:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+
+.collapse-icon {
+  font-size: 0.7em;
+  transition: transform 0.2s;
+}
+
+.detail-section .section-body {
+  overflow: hidden;
+  max-height: 2000px;
+  transition: max-height 0.3s ease, opacity 0.2s ease;
+  opacity: 1;
+}
+
+.detail-section.collapsed .section-body {
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Keyboard navigation */
+.result-card.keyboard-focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  background: var(--bg-card-hover);
+}
+
+/* Type icons in results */
+.type-icon {
+  font-size: 0.9em;
+  margin-right: 2px;
+}
+
+/* Contemporaries items */
+.contemporary-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-size: 0.85em;
+}
+
+.contemporary-item:hover { background: var(--bg-card-hover); }
+.contemporary-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Share button */
+.detail-actions {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 8px;
+}
+
+.btn-share {
+  padding: 6px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-size: 0.8em;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-share:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Keyboard help table */
+.kbd-table {
+  width: 100%;
+  font-size: 0.85em;
+}
+
+.kbd-table td { padding: 6px 8px; border-bottom: 1px solid var(--border); }
+.kbd-table td:first-child { text-align: right; width: 40%; }
+
+kbd {
+  display: inline-block;
+  padding: 2px 6px;
+  background: var(--bg-dark);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-family: monospace;
+  color: var(--accent);
+}
+
+/* Boundary notice variants */
+.boundary-notice.real-notice {
+  border-color: rgba(63,185,80,0.3);
+  background: rgba(63,185,80,0.08);
+  color: var(--confirmed);
+}
+
 /* Print */
 @media print {
   #sidebar, footer, .sidebar-toggle, .map-info-overlay { display: none; }
