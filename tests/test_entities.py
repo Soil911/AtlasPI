@@ -6,7 +6,7 @@ class TestListEntities:
         r = client.get("/v1/entities")
         assert r.status_code == 200
         d = r.json()
-        assert d["count"] >= 20
+        assert d["count"] >= 35
         assert len(d["entities"]) <= d["limit"]
 
     def test_pagination_default(self, client):

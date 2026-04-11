@@ -1296,6 +1296,692 @@ DEMO_ENTITIES = [
             {"citation": "Plokhy, S. The Gates of Europe: A History of Ukraine (2015)", "source_type": "academic"},
         ],
     },
+    # ─── 26. Antico Egitto ──────────────────────────────────────
+    {
+        "name_original": "Kemet",
+        "name_original_lang": "egy",
+        "entity_type": "empire",
+        "year_start": -3100,
+        "year_end": -30,
+        "capital_name": "Memphis / Thebes",
+        "capital_lat": 29.8680,
+        "capital_lon": 31.2559,
+        "confidence_score": 0.80,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [29.0, 22.0], [29.5, 24.0], [30.5, 26.0], [31.5, 28.0],
+                [32.0, 30.0], [32.5, 31.5], [34.0, 31.5], [35.0, 30.0],
+                [34.0, 28.0], [33.5, 26.0], [33.0, 24.0], [32.0, 22.0],
+                [29.0, 22.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome originale 'Kemet' (terra nera) e' il nome che gli "
+            "antichi egizi usavano per il loro paese. 'Egitto' deriva dal greco "
+            "Aigyptos. I confini variano enormemente nei 3000 anni di storia. "
+            "Quelli mostrati sono una approssimazione del Nuovo Regno (~1400 a.C.)."
+        ),
+        "name_variants": [
+            {"name": "Ancient Egypt", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Antico Egitto", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+            {"name": "Αἴγυπτος", "lang": "grc", "context": "nome greco, origine del termine moderno",
+             "source": "Erodoto, Storie II"},
+        ],
+        "territory_changes": [
+            {"year": -3100, "region": "Valle del Nilo", "change_type": "REVOLUTION",
+             "description": "Unificazione dell'Alto e Basso Egitto tradizionalmente attribuita a Narmer/Menes.",
+             "confidence_score": 0.55},
+            {"year": -30, "region": "Egitto", "change_type": "CONQUEST_MILITARY",
+             "description": "Conquista romana dopo la sconfitta di Cleopatra VII e Marco Antonio. L'Egitto diventa provincia romana.",
+             "confidence_score": 0.90},
+        ],
+        "sources": [
+            {"citation": "Shaw, I. The Oxford History of Ancient Egypt (2000)", "source_type": "academic"},
+            {"citation": "Erodoto, Storie, Libro II", "source_type": "primary"},
+        ],
+    },
+    # ─── 27. Impero Persiano Achemenide ─────────────────────────
+    {
+        "name_original": "Xšāça",
+        "name_original_lang": "peo",
+        "entity_type": "empire",
+        "year_start": -550,
+        "year_end": -330,
+        "capital_name": "Persepolis",
+        "capital_lat": 29.9352,
+        "capital_lon": 52.8914,
+        "confidence_score": 0.80,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [26.0, 30.0], [28.0, 35.0], [30.0, 38.0], [35.0, 40.0],
+                [42.0, 40.5], [50.0, 40.0], [55.0, 38.0], [62.0, 37.0],
+                [68.0, 35.0], [72.0, 30.0], [68.0, 25.0], [60.0, 24.0],
+                [52.0, 25.0], [45.0, 28.0], [38.0, 30.0], [34.0, 31.0],
+                [30.0, 30.5], [26.0, 30.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome in antico persiano (Xšāça = 'il regno') e' il "
+            "nome proprio. 'Persia' e' la forma greca. L'Impero Achemenide sotto "
+            "Ciro il Grande pratico' una politica relativamente tollerante verso "
+            "i popoli conquistati (Cilindro di Ciro), pur restando un impero "
+            "costruito sulla conquista militare."
+        ),
+        "name_variants": [
+            {"name": "Achaemenid Empire", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Impero Persiano", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+            {"name": "هخامنشیان", "lang": "fa", "context": "nome persiano moderno",
+             "source": "Briant, From Cyrus to Alexander (2002)"},
+        ],
+        "territory_changes": [
+            {"year": -550, "region": "Media", "change_type": "CONQUEST_MILITARY",
+             "description": "Ciro II sconfigge i Medi e fonda l'Impero Persiano.",
+             "confidence_score": 0.80},
+            {"year": -330, "region": "Persia", "change_type": "CONQUEST_MILITARY",
+             "description": "Alessandro Magno sconfigge Dario III. Fine dell'Impero Achemenide.",
+             "confidence_score": 0.90},
+        ],
+        "sources": [
+            {"citation": "Briant, P. From Cyrus to Alexander (2002)", "source_type": "academic"},
+            {"citation": "Erodoto, Storie, Libri I-VII", "source_type": "primary"},
+        ],
+    },
+    # ─── 28. Impero Spagnolo ────────────────────────────────────
+    {
+        "name_original": "Imperio Español",
+        "name_original_lang": "es",
+        "entity_type": "empire",
+        "year_start": 1492,
+        "year_end": 1898,
+        "capital_name": "Madrid",
+        "capital_lat": 40.4168,
+        "capital_lon": -3.7038,
+        "confidence_score": 0.85,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Point",
+            "coordinates": [-3.7038, 40.4168],
+        },
+        "ethical_notes": (
+            "ETHICS-002: il piu' grande impero coloniale della storia pre-britannica. "
+            "La conquista delle Americhe causo' il crollo demografico piu' catastrofico "
+            "della storia: si stima 90% della popolazione indigena morta in un secolo "
+            "per malattie, guerra e sfruttamento. Il sistema delle encomiendas fu "
+            "schiavitu' de facto. I confini non sono mostrati come poligono per la "
+            "vastita' e dispersione dell'impero (4 continenti)."
+        ),
+        "name_variants": [
+            {"name": "Spanish Empire", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Impero Spagnolo", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 1492, "region": "Americhe", "change_type": "COLONIZATION",
+             "description": "Colombo raggiunge le Americhe. Inizio della colonizzazione spagnola del continente.",
+             "confidence_score": 0.95},
+            {"year": 1521, "region": "Messico", "change_type": "CONQUEST_MILITARY",
+             "description": "Cortés conquista l'Impero Azteco. Distruzione di Tenochtitlan.",
+             "population_affected": 24000000, "confidence_score": 0.70},
+            {"year": 1898, "region": "Cuba, Filippine, Porto Rico", "change_type": "CESSION_FORCED",
+             "description": "Guerra ispano-americana: la Spagna cede le ultime colonie. Fine dell'impero.",
+             "confidence_score": 0.95},
+        ],
+        "sources": [
+            {"citation": "Kamen, H. Empire: How Spain Became a World Power (2003)", "source_type": "academic"},
+            {"citation": "Las Casas, B. Brevísima Relación de la Destruición de las Indias (1552)", "source_type": "primary"},
+        ],
+    },
+    # ─── 29. Gran Bretagna / Impero Britannico ──────────────────
+    {
+        "name_original": "British Empire",
+        "name_original_lang": "en",
+        "entity_type": "empire",
+        "year_start": 1583,
+        "year_end": 1997,
+        "capital_name": "London",
+        "capital_lat": 51.5074,
+        "capital_lon": -0.1278,
+        "confidence_score": 0.90,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Point",
+            "coordinates": [-0.1278, 51.5074],
+        },
+        "ethical_notes": (
+            "ETHICS-002: il piu' grande impero della storia per estensione (~35 milioni km²). "
+            "Responsabile di colonizzazione, schiavitu' transatlantica, carestie indotte "
+            "(Bengala 1943: 2-3 milioni di morti), repressione di movimenti indipendentisti. "
+            "I confini non sono mostrati come poligono per la vastita' (tutti i continenti). "
+            "Il British Raj (India) e' un'entita' separata nel database."
+        ),
+        "name_variants": [
+            {"name": "Impero Britannico", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 1757, "region": "Bengala", "change_type": "CONQUEST_MILITARY",
+             "description": "Battaglia di Plassey: la Compagnia delle Indie Orientali conquista il Bengala. Inizio del dominio britannico in India.",
+             "confidence_score": 0.90},
+            {"year": 1997, "region": "Hong Kong", "change_type": "TREATY",
+             "description": "Restituzione di Hong Kong alla Cina. Fine formale dell'Impero Britannico.",
+             "confidence_score": 0.95},
+        ],
+        "sources": [
+            {"citation": "Ferguson, N. Empire: How Britain Made the Modern World (2003)", "source_type": "academic"},
+            {"citation": "Tharoor, S. Inglorious Empire (2017)", "source_type": "academic"},
+        ],
+    },
+    # ─── 30. Sacro Romano Impero ────────────────────────────────
+    {
+        "name_original": "Sacrum Imperium Romanum",
+        "name_original_lang": "la",
+        "entity_type": "empire",
+        "year_start": 800,
+        "year_end": 1806,
+        "capital_name": "Wien",
+        "capital_lat": 48.2082,
+        "capital_lon": 16.3738,
+        "confidence_score": 0.80,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [2.0, 46.0], [4.0, 49.0], [6.0, 51.0], [8.0, 54.0],
+                [10.0, 55.0], [12.0, 54.5], [14.0, 54.0], [16.0, 51.0],
+                [17.0, 49.0], [16.5, 47.0], [15.0, 46.0], [13.0, 46.5],
+                [11.0, 46.0], [9.0, 46.0], [6.0, 45.5], [3.0, 45.0],
+                [2.0, 46.0],
+            ]],
+        },
+        "ethical_notes": (
+            "Voltaire scrisse che non era 'né sacro, né romano, né un impero'. "
+            "Struttura politica estremamente frammentata con centinaia di entita' "
+            "semi-indipendenti. I confini mostrati sono molto approssimativi "
+            "per la natura fluida del territorio."
+        ),
+        "name_variants": [
+            {"name": "Holy Roman Empire", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Sacro Romano Impero", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+            {"name": "Heiliges Römisches Reich", "lang": "de", "context": "nome tedesco",
+             "source": "Wilson, Heart of Europe (2016)"},
+        ],
+        "territory_changes": [
+            {"year": 800, "region": "Europa Centrale", "change_type": "TREATY",
+             "description": "Incoronazione di Carlo Magno a Roma da parte di Papa Leone III. Fondazione tradizionale.",
+             "confidence_score": 0.85},
+            {"year": 1806, "region": "Europa Centrale", "change_type": "CONQUEST_MILITARY",
+             "description": "Napoleone forza la dissoluzione dell'Impero dopo la battaglia di Austerlitz.",
+             "confidence_score": 0.95},
+        ],
+        "sources": [
+            {"citation": "Wilson, P. Heart of Europe: A History of the Holy Roman Empire (2016)", "source_type": "academic"},
+            {"citation": "Whaley, J. Germany and the Holy Roman Empire (2012)", "source_type": "academic"},
+        ],
+    },
+    # ─── 31. Califfato Abbaside ─────────────────────────────────
+    {
+        "name_original": "الخلافة العباسية",
+        "name_original_lang": "ar",
+        "entity_type": "empire",
+        "year_start": 750,
+        "year_end": 1258,
+        "capital_name": "بغداد",
+        "capital_lat": 33.3152,
+        "capital_lon": 44.3661,
+        "confidence_score": 0.75,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [25.0, 30.0], [28.0, 34.0], [32.0, 37.0], [38.0, 38.0],
+                [45.0, 37.5], [52.0, 38.0], [58.0, 37.0], [62.0, 35.0],
+                [65.0, 30.0], [62.0, 25.0], [55.0, 22.0], [48.0, 20.0],
+                [42.0, 15.0], [38.0, 14.0], [35.0, 20.0], [32.0, 25.0],
+                [28.0, 28.0], [25.0, 30.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome originale e' in arabo. L'era abbaside e' considerata "
+            "l'eta' d'oro islamica: Baghdad era la citta' piu' grande del mondo e un "
+            "centro di scienza, filosofia e letteratura. I confini variano enormemente "
+            "nei 500 anni di esistenza; quelli mostrati sono del periodo iniziale (~800)."
+        ),
+        "name_variants": [
+            {"name": "Abbasid Caliphate", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Califfato Abbaside", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 750, "region": "Medio Oriente", "change_type": "REVOLUTION",
+             "description": "Rivoluzione abbaside: rovesciamento degli Omayyadi. Trasferimento della capitale a Baghdad.",
+             "confidence_score": 0.85},
+            {"year": 1258, "region": "Baghdad", "change_type": "CONQUEST_MILITARY",
+             "description": "Sacco di Baghdad da parte dei Mongoli sotto Hulagu Khan. Fine del Califfato. Distruzione della biblioteca e massacro stimato in centinaia di migliaia di vittime.",
+             "population_affected": 200000, "confidence_score": 0.60},
+        ],
+        "sources": [
+            {"citation": "Kennedy, H. When Baghdad Ruled the Muslim World (2004)", "source_type": "academic"},
+            {"citation": "al-Tabari, Tarikh al-Rusul wa al-Muluk", "source_type": "primary"},
+        ],
+    },
+    # ─── 32. Impero del Giappone (moderno) ──────────────────────
+    {
+        "name_original": "大日本帝國",
+        "name_original_lang": "ja",
+        "entity_type": "empire",
+        "year_start": 1868,
+        "year_end": 1947,
+        "capital_name": "東京",
+        "capital_lat": 35.6762,
+        "capital_lon": 139.6503,
+        "confidence_score": 0.90,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [123.0, 24.0], [127.0, 26.0], [129.5, 31.0], [131.0, 34.0],
+                [135.0, 35.5], [140.0, 38.0], [142.0, 43.0], [145.0, 45.5],
+                [145.5, 43.0], [141.5, 39.0], [140.5, 35.0], [137.0, 33.0],
+                [132.0, 32.0], [128.0, 28.0], [123.0, 24.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-002: l'Impero del Giappone fu responsabile di crimini di guerra "
+            "estesi: massacro di Nanchino (1937, 200.000-300.000 vittime), sistema "
+            "delle comfort women, esperimenti dell'Unità 731, brutalita' nei campi "
+            "di prigionia. Distinzione dal Giappone Tokugawa (entita' separata)."
+        ),
+        "name_variants": [
+            {"name": "Empire of Japan", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Impero del Giappone", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 1910, "region": "Corea", "change_type": "COLONIZATION",
+             "description": "Annessione della Corea. Repressione della cultura e lingua coreana per 35 anni.",
+             "population_affected": 17000000, "confidence_score": 0.90},
+            {"year": 1937, "region": "Nanchino", "change_type": "CONQUEST_MILITARY",
+             "description": "Massacro di Nanchino: l'esercito imperiale massacra civili e prigionieri di guerra cinesi.",
+             "population_affected": 300000, "confidence_score": 0.80},
+        ],
+        "sources": [
+            {"citation": "Bix, H. Hirohito and the Making of Modern Japan (2000)", "source_type": "academic"},
+            {"citation": "Chang, I. The Rape of Nanking (1997)", "source_type": "academic"},
+        ],
+    },
+    # ─── 33. Granducato di Lituania ─────────────────────────────
+    {
+        "name_original": "Lietuvos Didžioji Kunigaikštystė",
+        "name_original_lang": "lt",
+        "entity_type": "kingdom",
+        "year_start": 1236,
+        "year_end": 1795,
+        "capital_name": "Vilnius",
+        "capital_lat": 54.6872,
+        "capital_lon": 25.2797,
+        "confidence_score": 0.75,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [20.5, 52.0], [22.0, 54.0], [24.0, 56.0], [26.0, 56.5],
+                [28.0, 55.5], [31.0, 54.0], [33.0, 52.5], [32.0, 50.0],
+                [28.0, 48.5], [25.0, 49.0], [22.0, 50.5], [20.5, 52.0],
+            ]],
+        },
+        "ethical_notes": (
+            "Il Granducato di Lituania fu il piu' grande stato d'Europa nel XV secolo. "
+            "Multietnico e multireligioso, includeva lituani, ruteni, polacchi e tartari. "
+            "L'unione con la Polonia (1569, Unione di Lublino) creo' la Confederazione "
+            "polacco-lituana."
+        ),
+        "name_variants": [
+            {"name": "Grand Duchy of Lithuania", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Granducato di Lituania", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 1569, "region": "Polonia-Lituania", "change_type": "TREATY",
+             "description": "Unione di Lublino: fusione con il Regno di Polonia nella Confederazione polacco-lituana.",
+             "confidence_score": 0.85},
+            {"year": 1795, "region": "Lituania", "change_type": "CONQUEST_MILITARY",
+             "description": "Terza spartizione della Polonia: la Lituania e' divisa tra Russia, Prussia e Austria.",
+             "confidence_score": 0.90},
+        ],
+        "sources": [
+            {"citation": "Rowell, S.C. Lithuania Ascending (1994)", "source_type": "academic"},
+            {"citation": "Stone, D. The Polish-Lithuanian State, 1386-1795 (2001)", "source_type": "academic"},
+        ],
+    },
+    # ─── 34. Impero Zulu ────────────────────────────────────────
+    {
+        "name_original": "KwaZulu",
+        "name_original_lang": "zu",
+        "entity_type": "kingdom",
+        "year_start": 1816,
+        "year_end": 1897,
+        "capital_name": "KwaBulawayo",
+        "capital_lat": -28.3,
+        "capital_lon": 31.0,
+        "confidence_score": 0.70,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [29.0, -27.0], [29.5, -28.0], [30.0, -29.5], [31.0, -30.0],
+                [32.5, -29.5], [32.8, -28.0], [32.0, -27.0], [31.0, -26.5],
+                [30.0, -26.5], [29.0, -27.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome in lingua zulu. Il regno di Shaka Zulu unifico' "
+            "le comunita' nguni in un potente stato militare. Il Mfecane "
+            "(dispersione violenta di popoli) associato all'espansione zulu e' "
+            "dibattuto: la storiografia coloniale lo esagero' per giustificare "
+            "l'occupazione europea dei territori 'spopolati'."
+        ),
+        "name_variants": [
+            {"name": "Zulu Kingdom", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Regno Zulu", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 1879, "region": "KwaZulu", "change_type": "CONQUEST_MILITARY",
+             "description": "Guerra anglo-zulu: dopo la vittoria zulu a Isandlwana, la Gran Bretagna conquista e smembra il regno.",
+             "confidence_score": 0.85},
+        ],
+        "sources": [
+            {"citation": "Laband, J. The Rise and Fall of the Zulu Nation (1997)", "source_type": "academic"},
+            {"citation": "Morris, D. The Washing of the Spears (1965)", "source_type": "academic"},
+        ],
+    },
+    # ─── 35. Tibet (contestato) ─────────────────────────────────
+    {
+        "name_original": "བོད",
+        "name_original_lang": "bo",
+        "entity_type": "disputed_territory",
+        "year_start": 1950,
+        "year_end": None,
+        "capital_name": "Lhasa",
+        "capital_lat": 29.6520,
+        "capital_lon": 91.1721,
+        "confidence_score": 0.40,
+        "status": "disputed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [78.0, 30.0], [80.0, 32.0], [84.0, 33.5], [88.0, 34.0],
+                [92.0, 34.5], [96.0, 34.0], [99.0, 33.0], [102.0, 30.0],
+                [99.0, 28.0], [96.0, 27.5], [92.0, 27.0], [88.0, 27.5],
+                [84.0, 28.0], [80.0, 29.0], [78.0, 30.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-003: il Tibet e' un territorio attivamente contestato. La Cina "
+            "lo considera una 'regione autonoma' della RPC. Il Governo Tibetano in "
+            "Esilio (Dharamsala, India) e molte organizzazioni internazionali "
+            "contestano l'annessione del 1950. Il Dalai Lama e' in esilio dal 1959. "
+            "Restrizioni alla liberta' religiosa e culturale sono documentate."
+        ),
+        "name_variants": [
+            {"name": "Tibet", "lang": "en", "context": "denominazione internazionale",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "西藏", "lang": "zh", "context": "nome cinese (Xīzàng)",
+             "source": "Goldstein, A History of Modern Tibet (1989)"},
+        ],
+        "territory_changes": [
+            {"year": 1950, "region": "Tibet", "change_type": "CONQUEST_MILITARY",
+             "description": "L'Esercito Popolare di Liberazione invade il Tibet. L'Accordo in 17 Punti (1951) e' considerato firmato sotto coercizione.",
+             "confidence_score": 0.85},
+            {"year": 1959, "region": "Lhasa", "change_type": "CONQUEST_MILITARY",
+             "description": "Rivolta tibetana repressa. Il Dalai Lama fugge in India. Inizio dell'esilio.",
+             "population_affected": 86000, "confidence_score": 0.75},
+        ],
+        "sources": [
+            {"citation": "Goldstein, M. A History of Modern Tibet (1989)", "source_type": "academic"},
+            {"citation": "Shakya, T. The Dragon in the Land of Snows (1999)", "source_type": "academic"},
+        ],
+    },
+    # ─── 36. Carthago ───────────────────────────────────────────
+    {
+        "name_original": "Qart-ḥadašt",
+        "name_original_lang": "xpu",
+        "entity_type": "republic",
+        "year_start": -814,
+        "year_end": -146,
+        "capital_name": "Qart-ḥadašt",
+        "capital_lat": 36.8528,
+        "capital_lon": 10.3234,
+        "confidence_score": 0.70,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [-2.0, 35.5], [0.0, 37.0], [3.0, 38.0], [6.0, 37.5],
+                [9.0, 37.0], [11.0, 37.5], [14.0, 36.0], [11.0, 33.0],
+                [9.0, 32.0], [5.0, 33.5], [1.0, 34.5], [-2.0, 35.5],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome fenicio Qart-ḥadašt = 'citta' nuova'. Le fonti "
+            "su Cartagine sono quasi esclusivamente romane (i vincitori). La "
+            "storiografia fenicia e' andata perduta con la distruzione della citta'. "
+            "Questo e' un esempio critico di ETHICS-002: la storia scritta dai vincitori."
+        ),
+        "name_variants": [
+            {"name": "Carthage", "lang": "en", "context": "denominazione inglese dal latino Carthago",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Cartagine", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+            {"name": "Καρχηδών", "lang": "grc", "context": "nome greco",
+             "source": "Polibio, Storie"},
+        ],
+        "territory_changes": [
+            {"year": -146, "region": "Nord Africa", "change_type": "GENOCIDE",
+             "description": "Terza Guerra Punica: Roma distrugge completamente Cartagine. La citta' e' rasa al suolo, la popolazione superstite venduta come schiava.",
+             "population_affected": 500000, "confidence_score": 0.65},
+        ],
+        "sources": [
+            {"citation": "Hoyos, D. The Carthaginians (2010)", "source_type": "academic"},
+            {"citation": "Polibio, Storie, Libri I-III", "source_type": "primary"},
+        ],
+    },
+    # ─── 37. Impero Maurya ──────────────────────────────────────
+    {
+        "name_original": "मौर्य साम्राज्य",
+        "name_original_lang": "sa",
+        "entity_type": "empire",
+        "year_start": -322,
+        "year_end": -185,
+        "capital_name": "Pāṭaliputra",
+        "capital_lat": 25.6100,
+        "capital_lon": 85.1400,
+        "confidence_score": 0.70,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [66.0, 25.0], [68.0, 30.0], [72.0, 34.0], [78.0, 34.0],
+                [84.0, 28.0], [88.0, 24.0], [86.0, 20.0], [80.0, 14.0],
+                [76.0, 10.0], [73.0, 14.0], [70.0, 20.0], [66.0, 25.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: il nome in sanscrito. L'Impero Maurya sotto Ashoka e' "
+            "notevole per la conversione al buddismo dopo la conquista del Kalinga "
+            "(~260.000 morti). Gli Editti di Ashoka rappresentano uno dei primi "
+            "documenti di governance etica nella storia. Il confidence_score "
+            "riflette la dipendenza da fonti archeologiche e agiografiche."
+        ),
+        "name_variants": [
+            {"name": "Maurya Empire", "lang": "en", "context": "denominazione inglese",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Impero Maurya", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": -261, "region": "Kalinga", "change_type": "CONQUEST_MILITARY",
+             "description": "Ashoka conquista il Kalinga. La brutalita' della guerra lo porta alla conversione al buddismo e all'adozione del dharma come principio di governo.",
+             "population_affected": 260000, "confidence_score": 0.60},
+        ],
+        "sources": [
+            {"citation": "Thapar, R. Asoka and the Decline of the Mauryas (1961)", "source_type": "academic"},
+            {"citation": "Editti di Ashoka (III secolo a.C.)", "source_type": "primary"},
+        ],
+    },
+    # ─── 38. Gran Colombia ──────────────────────────────────────
+    {
+        "name_original": "Gran Colombia",
+        "name_original_lang": "es",
+        "entity_type": "republic",
+        "year_start": 1819,
+        "year_end": 1831,
+        "capital_name": "Bogotá",
+        "capital_lat": 4.7110,
+        "capital_lon": -74.0721,
+        "confidence_score": 0.80,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [-80.0, 2.0], [-79.0, 4.0], [-77.0, 7.0], [-75.0, 10.0],
+                [-72.0, 12.0], [-68.0, 12.5], [-63.0, 11.0], [-60.0, 8.0],
+                [-60.0, 2.0], [-65.0, 0.0], [-70.0, -2.0], [-75.0, -4.0],
+                [-78.0, -3.0], [-80.0, 0.0], [-80.0, 2.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: la Gran Colombia di Simón Bolívar fu uno dei progetti "
+            "politici piu' ambiziosi del XIX secolo: unire Venezuela, Colombia, "
+            "Ecuador e Panama. Duro' solo 12 anni. E' un esempio di come le "
+            "lotte di liberazione dal colonialismo non sempre portano a stabilita'."
+        ),
+        "name_variants": [
+            {"name": "Republic of Colombia", "lang": "en", "context": "nome ufficiale",
+             "source": "Encyclopaedia Britannica"},
+            {"name": "Gran Colombia", "lang": "it", "context": "termine storiografico per distinguerla dalla Colombia attuale",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 1819, "region": "Sud America settentrionale", "change_type": "LIBERATION",
+             "description": "Bolívar sconfigge gli spagnoli nella battaglia di Boyacá. Proclamazione della Gran Colombia.",
+             "confidence_score": 0.90},
+            {"year": 1831, "region": "Gran Colombia", "change_type": "REVOLUTION",
+             "description": "Dissoluzione della Gran Colombia in Venezuela, Colombia (con Panama) ed Ecuador.",
+             "confidence_score": 0.90},
+        ],
+        "sources": [
+            {"citation": "Lynch, J. Simón Bolívar: A Life (2006)", "source_type": "academic"},
+            {"citation": "Arana, M. Bolivar: American Liberator (2013)", "source_type": "academic"},
+        ],
+    },
+    # ─── 39. Cipro del Nord (contestato) ────────────────────────
+    {
+        "name_original": "Kuzey Kıbrıs Türk Cumhuriyeti",
+        "name_original_lang": "tr",
+        "entity_type": "disputed_territory",
+        "year_start": 1983,
+        "year_end": None,
+        "capital_name": "Lefkoşa",
+        "capital_lat": 35.1856,
+        "capital_lon": 33.3823,
+        "confidence_score": 0.35,
+        "status": "disputed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [32.3, 35.05], [33.0, 35.1], [33.6, 35.2], [34.1, 35.5],
+                [34.6, 35.6], [34.6, 35.35], [34.0, 35.1], [33.5, 34.95],
+                [32.8, 34.95], [32.3, 35.05],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-003: la Repubblica Turca di Cipro del Nord e' riconosciuta "
+            "solo dalla Turchia. L'ONU e la comunita' internazionale riconoscono "
+            "la sovranita' della Repubblica di Cipro sull'intera isola. La "
+            "divisione risale all'invasione turca del 1974 dopo il colpo di "
+            "stato greco-cipriota. Questo record documenta entrambe le posizioni."
+        ),
+        "name_variants": [
+            {"name": "Northern Cyprus", "lang": "en", "context": "denominazione internazionale comune",
+             "source": "Nazioni Unite"},
+            {"name": "Cipro del Nord", "lang": "it", "context": "denominazione italiana",
+             "source": "Enciclopedia Treccani"},
+        ],
+        "territory_changes": [
+            {"year": 1974, "region": "Cipro settentrionale", "change_type": "CONQUEST_MILITARY",
+             "description": "Invasione turca di Cipro dopo il colpo di stato greco-cipriota. Circa 200.000 greco-ciprioti sfollati dal nord.",
+             "population_affected": 200000, "confidence_score": 0.85},
+        ],
+        "sources": [
+            {"citation": "Ker-Lindsay, J. The Cyprus Problem (2011)", "source_type": "academic"},
+            {"citation": "Nazioni Unite, Risoluzione 541 (1983)", "source_type": "primary"},
+        ],
+    },
+    # ─── 40. Confederazione Irochese ────────────────────────────
+    {
+        "name_original": "Haudenosaunee",
+        "name_original_lang": "moh",
+        "entity_type": "confederation",
+        "year_start": 1142,
+        "year_end": None,
+        "capital_name": "Onondaga",
+        "capital_lat": 42.9700,
+        "capital_lon": -76.1800,
+        "confidence_score": 0.55,
+        "status": "confirmed",
+        "boundary_geojson": {
+            "type": "Polygon",
+            "coordinates": [[
+                [-79.0, 42.0], [-77.5, 43.0], [-76.0, 43.5], [-74.5, 43.0],
+                [-73.5, 42.5], [-74.0, 41.5], [-75.5, 41.0], [-77.0, 41.5],
+                [-78.5, 41.5], [-79.0, 42.0],
+            ]],
+        },
+        "ethical_notes": (
+            "ETHICS-001: Haudenosaunee ('popolo della lunga casa') e' il nome proprio. "
+            "'Irochesi' e' un esonimo (nome dato da altri, probabilmente di origine "
+            "francese/algonchina). La Confederazione esiste ancora oggi come nazione "
+            "sovrana. La Grande Legge della Pace (Gayanashagowa) e' considerata una "
+            "delle influenze sulla Costituzione degli Stati Uniti — fatto spesso "
+            "omesso nella storiografia occidentale. Il confidence_score riflette "
+            "la predominanza di fonti orali pre-contatto."
+        ),
+        "name_variants": [
+            {"name": "Iroquois Confederacy", "lang": "en",
+             "context": "esonimo — 'Irochesi' non e' il nome che il popolo si da'",
+             "source": "Fenton, The Great Law and the Longhouse (1998)"},
+            {"name": "Confederazione Irochese", "lang": "it", "context": "denominazione italiana (esonimo)",
+             "source": "Enciclopedia Treccani"},
+            {"name": "Six Nations", "lang": "en", "period_start": 1722,
+             "context": "dopo l'aggiunta dei Tuscarora (da Cinque a Sei Nazioni)",
+             "source": "Fenton, The Great Law and the Longhouse (1998)"},
+        ],
+        "territory_changes": [
+            {"year": 1142, "region": "Nord-Est America", "change_type": "TREATY",
+             "description": "Fondazione tradizionale della Confederazione con la Grande Legge della Pace (Gayanashagowa). Data dibattuta dagli storici.",
+             "confidence_score": 0.45},
+        ],
+        "sources": [
+            {"citation": "Fenton, W. The Great Law and the Longhouse (1998)", "source_type": "academic"},
+            {"citation": "Mann, C.C. 1491: New Revelations of the Americas Before Columbus (2005)", "source_type": "academic"},
+        ],
+    },
 ]
 
 

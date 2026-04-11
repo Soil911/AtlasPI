@@ -16,7 +16,7 @@ class TestSeedIdempotency:
         seed_module.SessionLocal = original
 
         count = db.query(GeoEntity).count()
-        assert count == 25, f"Attese 10 entit\u00e0, trovate {count} (seed non idempotente)"
+        assert count == 40, f"Attese 10 entit\u00e0, trovate {count} (seed non idempotente)"
 
 
 class TestCascadeDelete:

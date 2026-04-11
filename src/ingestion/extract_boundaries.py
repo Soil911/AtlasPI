@@ -260,6 +260,31 @@ ENTITY_MAPPINGS = {
         "source": "aourednik/historical-basemaps, world_1700",
         "precision": "academic_approximate",
     },
+    # ─── Nuove entità v3.1 ──────────────────────────────────────
+    "Sacrum Imperium Romanum": {
+        "file": "historical-basemaps/world_1500.geojson",
+        "name": "Holy Roman Empire",
+        "source": "aourednik/historical-basemaps, world_1500",
+        "precision": "academic_approximate",
+    },
+    "大日本帝國": {
+        "file": "historical-basemaps/world_1900.geojson",
+        "name": "Japan",
+        "source": "aourednik/historical-basemaps, world_1900",
+        "precision": "academic_approximate",
+    },
+    "KwaZulu": {
+        "file": "historical-basemaps/world_1800.geojson",
+        "name": "Zulu",
+        "source": "aourednik/historical-basemaps, world_1800",
+        "precision": "academic_approximate",
+    },
+    "Imperio Español": {
+        "file": "historical-basemaps/world_1700.geojson",
+        "name": "Spain",
+        "source": "aourednik/historical-basemaps, world_1700",
+        "precision": "academic_approximate",
+    },
 }
 
 

@@ -7,7 +7,7 @@ def test_health_returns_ok(client):
     d = r.json()
     assert d["status"] == "ok"
     assert d["version"] == "3.0.0"
-    assert d["entity_count"] >= 20
+    assert d["entity_count"] >= 35
 
 
 def test_health_reports_database_type(client):
