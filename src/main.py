@@ -6,6 +6,7 @@ from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from slowapi import Limiter, _rate_limit_exceeded_handler
@@ -13,7 +14,7 @@ from slowapi.errors import RateLimitExceeded
 from slowapi.util import get_remote_address
 
 from src.api.errors import register_error_handlers
-from src.api.routes import entities, export, health
+from src.api.routes import entities, export, health, relations
 from src.config import (
     APP_DESCRIPTION,
     APP_TITLE,
@@ -68,6 +69,9 @@ app = FastAPI(
 
 # ─── Middleware (ordine: ultimo aggiunto = primo eseguito) ────────
 
+# GZip compression (min 500 bytes)
+app.add_middleware(GZipMiddleware, minimum_size=500)
+
 # CORS
 app.add_middleware(
     CORSMiddleware,
@@ -95,6 +99,7 @@ register_error_handlers(app)
 app.include_router(health.router)
 app.include_router(entities.router)
 app.include_router(export.router)
+app.include_router(relations.router)
 
 
 @app.get("/", include_in_schema=False)
