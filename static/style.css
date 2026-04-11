@@ -709,6 +709,72 @@ fieldset.filter-control legend {
 
 .stat-value { color: var(--accent); font-weight: 600; }
 
+/* Timeline bar */
+.timeline-bar {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 12px;
+  background: rgba(22,27,34,0.95);
+  border-top: 1px solid var(--border);
+  pointer-events: auto;
+  backdrop-filter: blur(4px);
+}
+
+.timeline-toggle {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.78em;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.timeline-toggle:hover { color: var(--accent); }
+
+.timeline-export {
+  display: flex;
+  gap: 6px;
+}
+
+.export-btn {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.7em;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+
+.export-btn:hover { color: var(--accent); border-color: var(--accent); }
+
+.timeline-canvas {
+  background: rgba(22,27,34,0.95);
+  border-top: 1px solid var(--border);
+  overflow: hidden;
+  transition: height 0.3s ease;
+  height: 120px;
+  pointer-events: auto;
+  backdrop-filter: blur(4px);
+}
+
+.timeline-canvas.collapsed { height: 0; border: none; }
+
+#timeline-chart {
+  width: 100%;
+  height: 120px;
+}
+
 /* ─── Responsive ─────────────────────────────────────────────── */
 
 /* Tablet */

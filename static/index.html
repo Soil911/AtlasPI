@@ -109,6 +109,23 @@
       </div>
     </div>
 
+    <!-- Timeline -->
+    <div id="timeline-bar" class="timeline-bar" aria-label="Timeline storica">
+      <div class="timeline-header">
+        <button id="timeline-toggle" class="timeline-toggle" aria-label="Mostra/nascondi timeline">
+          Timeline &#9660;
+        </button>
+        <div class="timeline-export">
+          <a href="/v1/export/geojson" class="export-btn" title="Esporta GeoJSON">GeoJSON</a>
+          <a href="/v1/export/csv" class="export-btn" title="Esporta CSV">CSV</a>
+          <a href="/docs" class="export-btn" title="API Docs">API</a>
+        </div>
+      </div>
+      <div id="timeline-canvas" class="timeline-canvas collapsed">
+        <canvas id="timeline-chart"></canvas>
+      </div>
+    </div>
+
     <!-- Error toast -->
     <div id="error-toast" class="error-toast hidden" role="alert" aria-live="assertive">
       <span id="error-message"></span>

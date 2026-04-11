@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loadEntities();
   loadTypes();
   loadStats();
+  loadTimeline();
   bindEvents();
 });
 
@@ -365,6 +366,20 @@ function bindEvents() {
 
   document.getElementById('sort-select').addEventListener('change', applyFilters);
 
+  // Timeline toggle
+  const tlToggle = document.getElementById('timeline-toggle');
+  const tlCanvas = document.getElementById('timeline-canvas');
+  if (tlToggle && tlCanvas) {
+    tlToggle.addEventListener('click', () => {
+      tlCanvas.classList.toggle('collapsed');
+      tlToggle.textContent = tlCanvas.classList.contains('collapsed') ? 'Timeline \u25BC' : 'Timeline \u25B2';
+      if (!tlCanvas.classList.contains('collapsed')) drawTimeline();
+    });
+  }
+
+  // Redraw timeline on year change
+  yearSlider.addEventListener('input', () => { if (timelineData) drawTimeline(); });
+
   document.getElementById('reset-btn').addEventListener('click', () => {
     searchInput.value = '';
     yearSlider.value = 1500;
@@ -404,6 +419,104 @@ function esc(s) {
   const d = document.createElement('div');
   d.textContent = s;
   return d.innerHTML;
+}
+
+// ─── Timeline ───────────────────────────────────────────────────
+
+let timelineData = null;
+
+async function loadTimeline() {
+  try {
+    const res = await fetch(`${API}/v1/export/timeline`);
+    if (!res.ok) return;
+    timelineData = await res.json();
+    drawTimeline();
+  } catch (_) {}
+}
+
+function drawTimeline() {
+  if (!timelineData) return;
+  const canvas = document.getElementById('timeline-chart');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const rect = canvas.parentElement.getBoundingClientRect();
+  canvas.width = rect.width * window.devicePixelRatio;
+  canvas.height = 120 * window.devicePixelRatio;
+  canvas.style.width = rect.width + 'px';
+  ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+
+  const w = rect.width;
+  const h = 120;
+  const pad = { left: 40, right: 20, top: 10, bottom: 25 };
+  const plotW = w - pad.left - pad.right;
+  const plotH = h - pad.top - pad.bottom;
+
+  ctx.clearRect(0, 0, w, h);
+
+  const minY = timelineData.min_year;
+  const maxY = Math.min(timelineData.max_year, 2025);
+  const range = maxY - minY || 1;
+
+  const yearToX = y => pad.left + ((y - minY) / range) * plotW;
+
+  // Grid lines
+  ctx.strokeStyle = 'rgba(48,54,61,0.5)';
+  ctx.lineWidth = 0.5;
+  const step = range > 2000 ? 500 : range > 500 ? 100 : 50;
+  for (let y = Math.ceil(minY / step) * step; y <= maxY; y += step) {
+    const x = yearToX(y);
+    ctx.beginPath();
+    ctx.moveTo(x, pad.top);
+    ctx.lineTo(x, h - pad.bottom);
+    ctx.stroke();
+    ctx.fillStyle = '#8b949e';
+    ctx.font = '9px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(y < 0 ? `${Math.abs(y)}aC` : String(y), x, h - 8);
+  }
+
+  // Sort by duration desc for layering
+  const sorted = [...timelineData.items].sort((a, b) => {
+    const durA = (a.end || 2025) - a.start;
+    const durB = (b.end || 2025) - b.start;
+    return durB - durA;
+  });
+
+  // Draw bars
+  const barH = Math.min(8, plotH / sorted.length - 1);
+  sorted.forEach((item, i) => {
+    const x1 = yearToX(item.start);
+    const x2 = yearToX(item.end || 2025);
+    const y = pad.top + (i * (plotH / sorted.length));
+    const color = COLORS[item.status] || '#8b949e';
+
+    ctx.fillStyle = color;
+    ctx.globalAlpha = 0.6;
+    ctx.fillRect(x1, y, Math.max(x2 - x1, 2), barH);
+    ctx.globalAlpha = 1;
+
+    // Label if bar is wide enough
+    if (x2 - x1 > 50) {
+      ctx.fillStyle = '#e6edf3';
+      ctx.font = '8px sans-serif';
+      ctx.textAlign = 'left';
+      const label = item.name.length > 20 ? item.name.slice(0, 18) + '...' : item.name;
+      ctx.fillText(label, x1 + 3, y + barH - 1);
+    }
+  });
+
+  // Year indicator line
+  const slider = document.getElementById('year-slider');
+  if (slider) {
+    const curYear = parseInt(slider.value, 10);
+    const cx = yearToX(curYear);
+    ctx.strokeStyle = '#e94560';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(cx, pad.top);
+    ctx.lineTo(cx, h - pad.bottom);
+    ctx.stroke();
+  }
 }
 
 function isReal(e) {

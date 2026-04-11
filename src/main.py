@@ -13,7 +13,7 @@ from slowapi.errors import RateLimitExceeded
 from slowapi.util import get_remote_address
 
 from src.api.errors import register_error_handlers
-from src.api.routes import entities, health
+from src.api.routes import entities, export, health
 from src.config import (
     APP_DESCRIPTION,
     APP_TITLE,
@@ -94,6 +94,7 @@ register_error_handlers(app)
 
 app.include_router(health.router)
 app.include_router(entities.router)
+app.include_router(export.router)
 
 
 @app.get("/", include_in_schema=False)
