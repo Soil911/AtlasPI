@@ -345,6 +345,8 @@ function bindEvents() {
   const searchInput = document.getElementById('search-input');
   const yearSlider = document.getElementById('year-slider');
   const yearDisplay = document.getElementById('year-display');
+  const yearInput = document.getElementById('year-input');
+  const yearEra = document.getElementById('year-era');
 
   document.getElementById('search-btn').addEventListener('click', applyFilters);
   searchInput.addEventListener('keyup', e => { if (e.key === 'Enter') applyFilters(); });
@@ -355,10 +357,50 @@ function bindEvents() {
     debounceTimer = setTimeout(applyFilters, 300);
   });
 
+  // Year slider → sync input
   yearSlider.addEventListener('input', () => {
-    yearDisplay.textContent = fmtY(+yearSlider.value);
+    const val = +yearSlider.value;
+    yearDisplay.textContent = fmtY(val);
+    if (val < 0) {
+      yearInput.value = Math.abs(val);
+      yearEra.value = 'bc';
+    } else {
+      yearInput.value = val;
+      yearEra.value = 'ad';
+    }
   });
   yearSlider.addEventListener('change', applyFilters);
+
+  // Year input + era → sync slider
+  function applyYearInput() {
+    let val = parseInt(yearInput.value, 10) || 0;
+    if (yearEra.value === 'bc') val = -Math.abs(val);
+    val = Math.max(-3100, Math.min(2025, val));
+    yearSlider.value = val;
+    yearDisplay.textContent = fmtY(val);
+    applyFilters();
+  }
+
+  document.getElementById('year-go').addEventListener('click', applyYearInput);
+  yearInput.addEventListener('keyup', e => { if (e.key === 'Enter') applyYearInput(); });
+  yearEra.addEventListener('change', applyYearInput);
+
+  // Year presets
+  document.querySelectorAll('.year-presets button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const val = parseInt(btn.dataset.year, 10);
+      yearSlider.value = val;
+      yearDisplay.textContent = fmtY(val);
+      if (val < 0) {
+        yearInput.value = Math.abs(val);
+        yearEra.value = 'bc';
+      } else {
+        yearInput.value = val;
+        yearEra.value = 'ad';
+      }
+      applyFilters();
+    });
+  });
 
   document.querySelectorAll('.checkbox-group input').forEach(cb => {
     cb.addEventListener('change', applyFilters);
@@ -384,6 +426,8 @@ function bindEvents() {
     searchInput.value = '';
     yearSlider.value = 1500;
     yearDisplay.textContent = '1500';
+    yearInput.value = 1500;
+    yearEra.value = 'ad';
     document.querySelectorAll('.checkbox-group input').forEach(cb => { cb.checked = true; });
     document.getElementById('sort-select').value = '';
     activeType = '';

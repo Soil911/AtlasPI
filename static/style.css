@@ -133,12 +133,57 @@ body {
 
 .year-control { margin-bottom: 12px; }
 
-.year-control label { font-size: 0.82em; color: var(--text-muted); }
-.year-control strong { color: var(--accent); font-size: 1.05em; }
+.year-control > label { font-size: 0.82em; color: var(--text-muted); display: block; margin-bottom: 4px; }
+
+.year-input-row {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.year-input-row input[type="number"] {
+  flex: 1;
+  padding: 5px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-dark);
+  color: var(--accent);
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  outline: none;
+  -moz-appearance: textfield;
+}
+
+.year-input-row input[type="number"]::-webkit-inner-spin-button { opacity: 1; }
+.year-input-row input[type="number"]:focus { border-color: var(--accent); }
+
+.year-input-row select {
+  padding: 5px 6px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-dark);
+  color: var(--text);
+  font-size: 0.82em;
+  outline: none;
+}
+
+.year-go-btn {
+  padding: 5px 10px;
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.year-go-btn:hover { background: var(--accent-light); }
 
 #year-slider {
   width: 100%;
-  margin: 4px 0 2px;
+  margin: 2px 0;
   accent-color: var(--accent);
   height: 4px;
 }
@@ -149,6 +194,28 @@ body {
   font-size: 0.68em;
   color: var(--text-muted);
 }
+
+.year-range #year-display { color: var(--accent); font-weight: 600; font-size: 1.1em; }
+
+.year-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-top: 6px;
+}
+
+.year-presets button {
+  padding: 2px 7px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.68em;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.year-presets button:hover { border-color: var(--accent); color: var(--text); }
 
 .filter-control { margin-bottom: 10px; }
 .filter-control > label { font-size: 0.82em; color: var(--text-muted); display: block; margin-bottom: 3px; }

@@ -39,12 +39,32 @@
         </div>
 
         <div class="year-control">
-          <label for="year-slider">Anno: <strong id="year-display" aria-live="polite">1500</strong></label>
-          <input type="range" id="year-slider" min="-700" max="2025" value="1500" step="1"
+          <label for="year-input">Anno:</label>
+          <div class="year-input-row">
+            <input type="number" id="year-input" value="1500" min="-3100" max="2025" step="1"
+                   aria-label="Inserisci anno esatto" />
+            <select id="year-era" aria-label="Era">
+              <option value="ad">d.C.</option>
+              <option value="bc">a.C.</option>
+            </select>
+            <button id="year-go" class="year-go-btn" aria-label="Applica anno">&#10148;</button>
+          </div>
+          <input type="range" id="year-slider" min="-3100" max="2025" value="1500" step="1"
                  aria-label="Seleziona anno storico" />
           <div class="year-range" aria-hidden="true">
-            <span>700 a.C.</span>
+            <span>3100 a.C.</span>
+            <span id="year-display" aria-live="polite">1500</span>
             <span>2025</span>
+          </div>
+          <div class="year-presets" aria-label="Periodi storici">
+            <button data-year="-3000">3000 aC</button>
+            <button data-year="-500">500 aC</button>
+            <button data-year="1">1</button>
+            <button data-year="500">500</button>
+            <button data-year="1000">1000</button>
+            <button data-year="1500">1500</button>
+            <button data-year="1800">1800</button>
+            <button data-year="2024">Oggi</button>
           </div>
         </div>
 
