@@ -1,8 +1,11 @@
 """Endpoint per le entità geopolitiche — vedi ADR-002.
 
-GET /v1/entity?name=...&year=...&status=...   query principale
-GET /v1/entities?limit=...&offset=...          elenco paginato
-GET /v1/entities/{id}                          dettaglio entità
+GET /v1/entity?name=...&year=...&status=...&type=...&sort=...  query principale
+GET /v1/entities?limit=...&offset=...                           elenco paginato
+GET /v1/entities/{id}                                           dettaglio entità
+GET /v1/search?q=...                                            autocomplete
+GET /v1/types                                                   tipi disponibili
+GET /v1/stats                                                   statistiche dataset
 """
 
 import json
@@ -10,7 +13,8 @@ import logging
 from typing import Literal
 
 from fastapi import APIRouter, Depends, Query, Response
-from sqlalchemy import or_, select
+from pydantic import BaseModel
+from sqlalchemy import desc, func, or_, select
 from sqlalchemy.orm import Session, joinedload
 
 from src.api.errors import EntityNotFoundError
@@ -20,15 +24,52 @@ from src.api.schemas import (
     PaginatedEntityResponse,
 )
 from src.db.database import get_db
-from src.db.models import GeoEntity, NameVariant
+from src.db.models import GeoEntity, NameVariant, Source, TerritoryChange
 
 logger = logging.getLogger(__name__)
 
 router = APIRouter(tags=["entità"])
 
-# Tipo per validazione status
+# Tipi per validazione
 StatusFilter = Literal["confirmed", "uncertain", "disputed"] | None
+SortField = Literal["name", "year_start", "confidence", "year_end"] | None
 
+
+# ─── Schema aggiuntivi ──────────────────────────────────────────
+
+class SearchResult(BaseModel):
+    id: int
+    name_original: str
+    name_original_lang: str
+    entity_type: str
+    year_start: int
+    year_end: int | None
+    status: str
+    confidence_score: float
+
+
+class SearchResponse(BaseModel):
+    count: int
+    results: list[SearchResult]
+
+
+class TypeInfo(BaseModel):
+    type: str
+    count: int
+
+
+class StatsResponse(BaseModel):
+    total_entities: int
+    types: list[TypeInfo]
+    status_counts: dict[str, int]
+    year_range: dict[str, int]
+    avg_confidence: float
+    total_sources: int
+    total_territory_changes: int
+    disputed_count: int
+
+
+# ─── Conversione ─────────────────────────────────────────────────
 
 def _entity_to_response(entity: GeoEntity) -> EntityResponse:
     """Converte un record ORM in risposta API."""
@@ -73,14 +114,29 @@ def _eager_query(db: Session):
     )
 
 
+def _apply_sort(q, sort: SortField, order: str = "asc"):
+    """Applica ordinamento alla query."""
+    if not sort:
+        return q
+    col_map = {
+        "name": GeoEntity.name_original,
+        "year_start": GeoEntity.year_start,
+        "year_end": GeoEntity.year_end,
+        "confidence": GeoEntity.confidence_score,
+    }
+    col = col_map.get(sort, GeoEntity.name_original)
+    return q.order_by(desc(col) if order == "desc" else col)
+
+
+# ─── Endpoints ───────────────────────────────────────────────────
+
 @router.get(
     "/v1/entity",
     response_model=PaginatedEntityResponse,
-    summary="Cerca entità per nome e/o anno",
+    summary="Cerca entità per nome, anno, status e tipo",
     description=(
         "Endpoint principale (ADR-002). Cerca per nome (anche varianti), "
-        "filtra per anno e status. Il nome viene cercato con match parziale "
-        "sia in name_original che nelle name_variants."
+        "filtra per anno, status e tipo. Supporta ordinamento."
     ),
 )
 def query_entity(
@@ -88,6 +144,9 @@ def query_entity(
     name: str | None = Query(None, max_length=200, description="Nome (parziale) dell'entità"),
     year: int | None = Query(None, ge=-4000, le=2100, description="Anno di riferimento (negativo = a.C.)"),
     status: StatusFilter = Query(None, description="Filtra per status"),
+    type: str | None = Query(None, max_length=50, description="Filtra per entity_type (empire, kingdom, city, etc.)"),
+    sort: SortField = Query(None, description="Ordina per: name, year_start, confidence, year_end"),
+    order: Literal["asc", "desc"] = Query("asc", description="Direzione ordinamento"),
     limit: int = Query(20, ge=1, le=100, description="Risultati per pagina"),
     offset: int = Query(0, ge=0, description="Offset per paginazione"),
     db: Session = Depends(get_db),
@@ -111,15 +170,15 @@ def query_entity(
     if status:
         q = q.filter(GeoEntity.status == status)
 
-    # Conta totale prima della paginazione
-    total = q.count()
+    if type:
+        q = q.filter(GeoEntity.entity_type == type)
 
+    total = q.count()
+    q = _apply_sort(q, sort, order)
     results = q.offset(offset).limit(limit).all()
     entities = [_entity_to_response(e) for e in results]
 
-    # Cache: dati storici cambiano raramente
     response.headers["Cache-Control"] = "public, max-age=3600"
-
     return PaginatedEntityResponse(count=total, limit=limit, offset=offset, entities=entities)
 
 
@@ -130,16 +189,19 @@ def query_entity(
 )
 def list_entities(
     response: Response,
+    sort: SortField = Query(None, description="Ordina per: name, year_start, confidence, year_end"),
+    order: Literal["asc", "desc"] = Query("asc", description="Direzione ordinamento"),
     limit: int = Query(20, ge=1, le=100, description="Risultati per pagina"),
     offset: int = Query(0, ge=0, description="Offset"),
     db: Session = Depends(get_db),
 ):
     total = db.query(GeoEntity).count()
-    results = _eager_query(db).offset(offset).limit(limit).all()
+    q = _eager_query(db)
+    q = _apply_sort(q, sort, order)
+    results = q.offset(offset).limit(limit).all()
     entities = [_entity_to_response(e) for e in results]
 
     response.headers["Cache-Control"] = "public, max-age=3600"
-
     return PaginatedEntityResponse(count=total, limit=limit, offset=offset, entities=entities)
 
 
@@ -154,5 +216,99 @@ def get_entity(entity_id: int, response: Response, db: Session = Depends(get_db)
         raise EntityNotFoundError(entity_id)
 
     response.headers["Cache-Control"] = "public, max-age=3600"
-
     return _entity_to_response(entity)
+
+
+@router.get(
+    "/v1/search",
+    response_model=SearchResponse,
+    summary="Ricerca veloce per autocomplete",
+    description="Restituisce risultati leggeri (senza GeoJSON) per ricerca rapida.",
+)
+def search_entities(
+    q: str = Query(..., min_length=1, max_length=200, description="Testo da cercare"),
+    limit: int = Query(10, ge=1, le=50, description="Max risultati"),
+    db: Session = Depends(get_db),
+):
+    pattern = f"%{q}%"
+    variant_ids = select(NameVariant.entity_id).where(NameVariant.name.ilike(pattern))
+    results = (
+        db.query(GeoEntity)
+        .filter(or_(GeoEntity.name_original.ilike(pattern), GeoEntity.id.in_(variant_ids)))
+        .limit(limit)
+        .all()
+    )
+
+    return SearchResponse(
+        count=len(results),
+        results=[
+            SearchResult(
+                id=e.id,
+                name_original=e.name_original,
+                name_original_lang=e.name_original_lang,
+                entity_type=e.entity_type,
+                year_start=e.year_start,
+                year_end=e.year_end,
+                status=e.status,
+                confidence_score=e.confidence_score,
+            )
+            for e in results
+        ],
+    )
+
+
+@router.get(
+    "/v1/types",
+    response_model=list[TypeInfo],
+    summary="Elenco tipi di entità disponibili",
+)
+def list_types(db: Session = Depends(get_db)):
+    results = (
+        db.query(GeoEntity.entity_type, func.count(GeoEntity.id))
+        .group_by(GeoEntity.entity_type)
+        .order_by(desc(func.count(GeoEntity.id)))
+        .all()
+    )
+    return [TypeInfo(type=t, count=c) for t, c in results]
+
+
+@router.get(
+    "/v1/stats",
+    response_model=StatsResponse,
+    summary="Statistiche del dataset",
+    description="Panoramica del dataset: conteggi, range, media confidence.",
+)
+def dataset_stats(response: Response, db: Session = Depends(get_db)):
+    total = db.query(GeoEntity).count()
+
+    type_counts = (
+        db.query(GeoEntity.entity_type, func.count(GeoEntity.id))
+        .group_by(GeoEntity.entity_type)
+        .all()
+    )
+
+    status_counts = dict(
+        db.query(GeoEntity.status, func.count(GeoEntity.id))
+        .group_by(GeoEntity.status)
+        .all()
+    )
+
+    min_year = db.query(func.min(GeoEntity.year_start)).scalar() or 0
+    max_year = db.query(func.max(GeoEntity.year_start)).scalar() or 0
+    avg_conf = db.query(func.avg(GeoEntity.confidence_score)).scalar() or 0.0
+    total_sources = db.query(Source).count()
+    total_changes = db.query(TerritoryChange).count()
+    disputed = db.query(GeoEntity).filter(GeoEntity.status == "disputed").count()
+
+    response.headers["Cache-Control"] = "public, max-age=3600"
+
+    return StatsResponse(
+        total_entities=total,
+        types=[TypeInfo(type=t, count=c) for t, c in type_counts],
+        status_counts=status_counts,
+        year_range={"min": min_year, "max": max_year},
+        avg_confidence=round(avg_conf, 3),
+        total_sources=total_sources,
+        total_territory_changes=total_changes,
+        disputed_count=disputed,
+    )
