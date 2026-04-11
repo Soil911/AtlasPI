@@ -2,6 +2,37 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v3.0.0] - 2026-04-11
+
+### Dataset
+- 25 entità storiche (da 10) — copertura 6 continenti
+- 5 territori contestati: Palestina/Israele, Kosovo, Taiwan, Sahara Occ., Crimea
+- 15 nuove: Bizantino, Mughal, Safavide, Tokugawa, Qing, Russo, Azteco, Mali,
+  Songhai, Khmer, Venezia, Etiope, Taiwan, Sahara Occ., Crimea
+- Confini reali da aourednik/historical-basemaps (7 periodi: 100-1900)
+- Confini moderni da Natural Earth (110m)
+
+### API
+- Nuovi endpoint: /v1/search (autocomplete), /v1/types, /v1/stats
+- Filtro per entity_type su /v1/entity
+- Ordinamento: sort=name|year_start|confidence, order=asc|desc
+- Paginazione completa su tutti gli endpoint
+
+### Frontend
+- Chip filtro per tipo (empire, kingdom, city, etc.)
+- Dropdown ordinamento
+- Barra statistiche dataset live
+- Responsive (mobile/tablet)
+- Accessibilità WCAG 2.1 AA
+- Skeleton loader, spinner, error toast
+
+### Infrastruttura
+- 68 test (tecnici + etici + sicurezza + edge cases + API avanzata)
+- 0 errori lint (ruff)
+- Docker + docker-compose
+- GitHub Actions CI
+- Logging strutturato + rate limiting + CORS + security headers
+
 ## [v2.0.0] - 2026-04-11
 
 ### Infrastruttura produzione
