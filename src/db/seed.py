@@ -92,7 +92,18 @@ def seed_database():
                 entity.name_variants.append(NameVariant(**nv))
 
             for tc in data.get("territory_changes", []):
-                entity.territory_changes.append(TerritoryChange(**tc))
+                # ETHICS: population_affected deve essere un intero nel DB.
+                # Stringhe descrittive vengono convertite a None per evitare
+                # perdita di contesto numerico. Il campo description mantiene
+                # il contesto narrativo completo.
+                tc_data = dict(tc)
+                pa = tc_data.get("population_affected")
+                if pa is not None and not isinstance(pa, int):
+                    try:
+                        tc_data["population_affected"] = int(pa)
+                    except (ValueError, TypeError):
+                        tc_data["population_affected"] = None
+                entity.territory_changes.append(TerritoryChange(**tc_data))
 
             for src in data.get("sources", []):
                 entity.sources.append(Source(**src))

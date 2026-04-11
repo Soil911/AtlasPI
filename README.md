@@ -5,13 +5,13 @@
   </p>
   <p align="center">
     Query any empire, kingdom, or territory from 4500 BCE to 2024 &mdash; with coordinates,<br>
-    boundaries, confidence scores, and 1,900+ academic sources.
+    boundaries, confidence scores, and 2,000+ academic sources.
   </p>
 </p>
 
 <p align="center">
   <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-5.7.0-blue?style=flat-square"></a>
-  <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-632-green?style=flat-square"></a>
+  <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-682-green?style=flat-square"></a>
   <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-185%20passing-brightgreen?style=flat-square"></a>
   <a href="#-license"><img alt="License" src="https://img.shields.io/badge/license-Apache%202.0-orange?style=flat-square"></a>
   <a href="#-api-documentation"><img alt="API" src="https://img.shields.io/badge/API-19%20endpoints-purple?style=flat-square"></a>
@@ -157,7 +157,7 @@ curl "http://localhost:10100/v1/compare/1/5"
 
 ## Dataset Overview
 
-**632 historical entities** spanning 6,500 years of human civilization, backed by **1,907 academic sources** and documenting **1,772 territory changes**.
+**682 historical entities** spanning 6,500 years of human civilization, backed by **2,022 academic sources** and documenting **1,899 territory changes**.
 
 ### Coverage by Region
 

@@ -4,12 +4,14 @@ Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
 ## [v5.7.0] - 2026-04-11
 
-### Dataset — Espansione massiva a 632 entita'
-- **632 entita' uniche** da 20 batch file (batches 00-19)
-- **1.907 fonti accademiche**, **1.865 varianti nome**, **1.772 cambi territoriali**
+### Dataset — Espansione massiva a 682 entita'
+- **682 entita' uniche** da 22 batch file (batches 00-21)
+- **2.022 fonti accademiche**, **2.041 varianti nome**, **1.899 cambi territoriali**
 - Nuovi batch: East Asia (28), Crusader/Islamic (43), Americas/Caribbean (39),
-  Africa Kingdoms (14), Europe Medieval (22), South/Central Asia (26), Ancient/Classical (20)
+  Africa Kingdoms (14), Europe Medieval (22), South/Central Asia (26), Ancient/Classical (20),
+  Mesoamerica/Pacific (25), Horn of Africa/Balkans (25)
 - Pulizia: 29 duplicati rimossi con dedup cross-batch automatizzato
+- Seed fix: population_affected string-to-int conversion nel seed
 - Validazione completa: nessun tipo entita' invalido, nessuno status invalido
 
 ### API — Nuovo endpoint evolution
