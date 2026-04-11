@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="AtlasPI — Database geografico storico strutturato per agenti AI. Confini, nomi e metadati storici con governance etica.">
   <title>AtlasPI — Database Geografico Storico</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <meta property="og:title" content="AtlasPI — Database Geografico Storico">
+  <meta property="og:description" content="40 entità storiche su 6 continenti, da 3100 a.C. al 2014. Confini reali, fonti accademiche, governance etica.">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="/static/style.css" />
 </head>
@@ -115,6 +119,8 @@
     <!-- Map -->
     <section id="map-container" aria-label="Mappa storica">
       <div id="map"></div>
+      <button id="map-fullscreen" class="map-control-btn" title="Schermo intero" aria-label="Mappa a schermo intero">&#x26F6;</button>
+      <button id="map-fit-all" class="map-control-btn map-fit-btn" title="Mostra tutte le entit&agrave;" aria-label="Zoom su tutte le entit&agrave;">&#x29BB;</button>
       <div class="map-info-overlay" id="map-info">
         Seleziona un'entit&agrave; dalla lista o clicca su un'area della mappa per visualizzare i dettagli storici, le fonti e le note etiche.
       </div>

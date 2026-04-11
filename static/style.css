@@ -271,6 +271,15 @@ body {
 
 .placeholder { text-align: center; color: var(--text-muted); padding: 20px; font-size: 0.85em; }
 
+.results-count {
+  text-align: center;
+  font-size: 0.72em;
+  color: var(--text-muted);
+  padding: 4px 0 6px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4px;
+}
+
 .result-card {
   padding: 8px 10px;
   margin-bottom: 4px;
@@ -335,6 +344,38 @@ body {
   top: 0;
   left: 0;
 }
+
+/* Map control buttons */
+.map-control-btn {
+  position: absolute;
+  z-index: 10;
+  background: var(--bg-sidebar);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.map-control-btn:hover { color: var(--accent); border-color: var(--accent); }
+
+#map-fullscreen { top: 10px; right: 10px; }
+.map-fit-btn { top: 48px; right: 10px; }
+
+/* Fullscreen mode */
+#map-container.fullscreen {
+  position: fixed !important;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 9999;
+}
+
+#map-container.fullscreen #map-fullscreen { top: 10px; right: 10px; }
 
 /* Map overlay info */
 .map-info-overlay {

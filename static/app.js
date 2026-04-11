@@ -143,11 +143,14 @@ function applyFilters() {
 function renderResults(entities) {
   const el = document.getElementById('results-list');
   if (!entities.length) {
-    el.innerHTML = '<p class="placeholder">Nessuna entit\u00e0 trovata per i filtri selezionati</p>';
+    el.innerHTML = `<p class="placeholder">${t('no_results')}</p>`;
     return;
   }
 
-  el.innerHTML = entities.map(e => {
+  // Show count
+  const countInfo = `<div class="results-count">${entities.length} / ${allEntities.length} ${t('entities')}</div>`;
+
+  el.innerHTML = countInfo + entities.map(e => {
     const pct = Math.round(e.confidence_score * 100);
     const real = isReal(e);
     return `
@@ -441,6 +444,21 @@ function bindEvents() {
   document.getElementById('close-detail').addEventListener('click', closeDetail);
   // Language toggle
   document.getElementById('lang-toggle').addEventListener('click', switchLang);
+
+  // Map fullscreen
+  document.getElementById('map-fullscreen').addEventListener('click', () => {
+    const container = document.getElementById('map-container');
+    container.classList.toggle('fullscreen');
+    setTimeout(() => map.invalidateSize(), 300);
+  });
+
+  // Map fit all visible entities
+  document.getElementById('map-fit-all').addEventListener('click', () => {
+    if (layerGroup.getLayers().length > 0) {
+      const bounds = layerGroup.getBounds();
+      if (bounds.isValid()) map.fitBounds(bounds, { padding: [30, 30] });
+    }
+  });
 
   document.getElementById('error-dismiss').addEventListener('click', () => {
     document.getElementById('error-toast').classList.add('hidden');
