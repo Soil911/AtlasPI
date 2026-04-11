@@ -107,4 +107,10 @@ async def serve_ui():
     return FileResponse(STATIC_DIR / "index.html")
 
 
+@app.get("/embed", include_in_schema=False)
+async def serve_embed():
+    """Serve la versione embed (UI minimale per iframe)."""
+    return FileResponse(STATIC_DIR / "embed.html")
+
+
 app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
