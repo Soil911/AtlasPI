@@ -1,5 +1,13 @@
 """Fixture condivise per i test AtlasPI."""
 
+import os
+
+# Forza SQLite per i test
+os.environ["DATABASE_URL"] = "sqlite:///./data/test.db"
+os.environ["LOG_LEVEL"] = "WARNING"
+os.environ["LOG_FORMAT"] = "text"
+os.environ["AUTO_SEED"] = "false"
+
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine, event
@@ -8,7 +16,6 @@ from sqlalchemy.orm import sessionmaker
 from src.db.database import Base, get_db
 from src.db.seed import seed_database
 from src.main import app
-
 
 TEST_DATABASE_URL = "sqlite:///./data/test.db"
 test_engine = create_engine(TEST_DATABASE_URL, connect_args={"check_same_thread": False})
@@ -37,11 +44,9 @@ def setup_test_db():
     """Crea le tabelle e popola i dati demo per tutta la sessione di test."""
     Base.metadata.create_all(bind=test_engine)
 
-    # Seed con una sessione dedicata
     from src.db.models import GeoEntity
     db = TestSession()
     if db.query(GeoEntity).count() == 0:
-        # Usa la stessa logica di seed ma sul test engine
         from src.db import seed as seed_module
         original = seed_module.SessionLocal
         seed_module.SessionLocal = TestSession

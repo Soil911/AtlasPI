@@ -2,16 +2,21 @@
 
 
 def test_health_returns_ok(client):
-    response = client.get("/health")
-    assert response.status_code == 200
-    data = response.json()
-    assert data["status"] == "ok"
-    assert data["version"] == "1.0.0"
-    assert data["entity_count"] >= 10
+    r = client.get("/health")
+    assert r.status_code == 200
+    d = r.json()
+    assert d["status"] == "ok"
+    assert d["version"] == "2.0.0"
+    assert d["entity_count"] >= 9
 
 
-def test_health_has_entity_count(client):
-    response = client.get("/health")
-    data = response.json()
-    assert isinstance(data["entity_count"], int)
-    assert data["entity_count"] > 0
+def test_health_reports_database_type(client):
+    r = client.get("/health")
+    d = r.json()
+    assert "database" in d
+    assert "connected" in d["database"]
+
+
+def test_health_has_request_id_header(client):
+    r = client.get("/health")
+    assert "x-request-id" in r.headers

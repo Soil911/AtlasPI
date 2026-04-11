@@ -1,25 +1,33 @@
 """Endpoint per le entità geopolitiche — vedi ADR-002.
 
-GET /v1/entity?name=...&year=...   query principale
-GET /v1/entities                    elenco entità
-GET /v1/entities/{id}               dettaglio entità
+GET /v1/entity?name=...&year=...&status=...   query principale
+GET /v1/entities?limit=...&offset=...          elenco paginato
+GET /v1/entities/{id}                          dettaglio entità
 """
 
 import json
+import logging
+from typing import Literal
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, Query, Response
 from sqlalchemy import or_, select
 from sqlalchemy.orm import Session, joinedload
 
+from src.api.errors import EntityNotFoundError
 from src.api.schemas import (
     CapitalResponse,
-    EntityListResponse,
     EntityResponse,
+    PaginatedEntityResponse,
 )
 from src.db.database import get_db
 from src.db.models import GeoEntity, NameVariant
 
-router = APIRouter(tags=["entities"])
+logger = logging.getLogger(__name__)
+
+router = APIRouter(tags=["entità"])
+
+# Tipo per validazione status
+StatusFilter = Literal["confirmed", "uncertain", "disputed"] | None
 
 
 def _entity_to_response(entity: GeoEntity) -> EntityResponse:
@@ -37,7 +45,7 @@ def _entity_to_response(entity: GeoEntity) -> EntityResponse:
         try:
             geojson = json.loads(entity.boundary_geojson)
         except (json.JSONDecodeError, TypeError):
-            geojson = None
+            logger.warning("GeoJSON malformato per entità %d", entity.id)
 
     return EntityResponse(
         id=entity.id,
@@ -65,26 +73,30 @@ def _eager_query(db: Session):
     )
 
 
-@router.get("/v1/entity", response_model=EntityListResponse)
+@router.get(
+    "/v1/entity",
+    response_model=PaginatedEntityResponse,
+    summary="Cerca entità per nome e/o anno",
+    description=(
+        "Endpoint principale (ADR-002). Cerca per nome (anche varianti), "
+        "filtra per anno e status. Il nome viene cercato con match parziale "
+        "sia in name_original che nelle name_variants."
+    ),
+)
 def query_entity(
-    name: str | None = Query(None, description="Nome (parziale) dell'entità"),
-    year: int | None = Query(None, description="Anno di riferimento (negativo = a.C.)"),
-    status: str | None = Query(None, description="Filtra per status: confirmed, uncertain, disputed"),
+    response: Response,
+    name: str | None = Query(None, max_length=200, description="Nome (parziale) dell'entità"),
+    year: int | None = Query(None, ge=-4000, le=2100, description="Anno di riferimento (negativo = a.C.)"),
+    status: StatusFilter = Query(None, description="Filtra per status"),
+    limit: int = Query(20, ge=1, le=100, description="Risultati per pagina"),
+    offset: int = Query(0, ge=0, description="Offset per paginazione"),
     db: Session = Depends(get_db),
 ):
-    """Endpoint principale — vedi ADR-002.
-
-    Cerca entità per nome e/o anno. Il nome viene cercato
-    sia in name_original che nelle name_variants.
-    """
     q = _eager_query(db)
 
     if name:
         pattern = f"%{name}%"
-        variant_ids = (
-            select(NameVariant.entity_id)
-            .where(NameVariant.name.ilike(pattern))
-        )
+        variant_ids = select(NameVariant.entity_id).where(NameVariant.name.ilike(pattern))
         q = q.filter(
             or_(
                 GeoEntity.name_original.ilike(pattern),
@@ -94,30 +106,53 @@ def query_entity(
 
     if year is not None:
         q = q.filter(GeoEntity.year_start <= year)
-        q = q.filter(
-            or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= year)
-        )
+        q = q.filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= year))
 
     if status:
         q = q.filter(GeoEntity.status == status)
 
-    results = q.all()
+    # Conta totale prima della paginazione
+    total = q.count()
+
+    results = q.offset(offset).limit(limit).all()
     entities = [_entity_to_response(e) for e in results]
-    return EntityListResponse(count=len(entities), entities=entities)
+
+    # Cache: dati storici cambiano raramente
+    response.headers["Cache-Control"] = "public, max-age=3600"
+
+    return PaginatedEntityResponse(count=total, limit=limit, offset=offset, entities=entities)
 
 
-@router.get("/v1/entities", response_model=EntityListResponse)
-def list_entities(db: Session = Depends(get_db)):
-    """Elenco completo di tutte le entità."""
-    results = _eager_query(db).all()
+@router.get(
+    "/v1/entities",
+    response_model=PaginatedEntityResponse,
+    summary="Elenco paginato di tutte le entità",
+)
+def list_entities(
+    response: Response,
+    limit: int = Query(20, ge=1, le=100, description="Risultati per pagina"),
+    offset: int = Query(0, ge=0, description="Offset"),
+    db: Session = Depends(get_db),
+):
+    total = db.query(GeoEntity).count()
+    results = _eager_query(db).offset(offset).limit(limit).all()
     entities = [_entity_to_response(e) for e in results]
-    return EntityListResponse(count=len(entities), entities=entities)
+
+    response.headers["Cache-Control"] = "public, max-age=3600"
+
+    return PaginatedEntityResponse(count=total, limit=limit, offset=offset, entities=entities)
 
 
-@router.get("/v1/entities/{entity_id}", response_model=EntityResponse)
-def get_entity(entity_id: int, db: Session = Depends(get_db)):
-    """Dettaglio di una singola entità per ID."""
+@router.get(
+    "/v1/entities/{entity_id}",
+    response_model=EntityResponse,
+    summary="Dettaglio di una singola entità",
+)
+def get_entity(entity_id: int, response: Response, db: Session = Depends(get_db)):
     entity = _eager_query(db).filter(GeoEntity.id == entity_id).first()
     if not entity:
-        raise HTTPException(status_code=404, detail="Entità non trovata")
+        raise EntityNotFoundError(entity_id)
+
+    response.headers["Cache-Control"] = "public, max-age=3600"
+
     return _entity_to_response(entity)

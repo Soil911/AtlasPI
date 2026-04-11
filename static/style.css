@@ -511,3 +511,205 @@ footer {
 
 .leaflet-tooltip-top:before { border-top-color: var(--border) !important; }
 .leaflet-tooltip-bottom:before { border-bottom-color: var(--border) !important; }
+
+/* ─── Nuovi componenti v2 ────────────────────────────────────── */
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* API docs link */
+.api-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.8em;
+  padding: 3px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-right: 10px;
+  transition: all 0.15s;
+}
+
+.api-link:hover { background: var(--bg-card); border-color: var(--accent); }
+
+/* Fieldset reset */
+fieldset.filter-control {
+  border: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+fieldset.filter-control legend {
+  font-size: 0.82em;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+
+/* Skeleton loader */
+.skeleton-loader { padding: 8px; }
+
+.skeleton-card {
+  height: 60px;
+  margin-bottom: 6px;
+  background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-card-hover) 50%, var(--bg-card) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 6px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Detail spinner */
+.detail-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Error toast */
+.error-toast {
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(248,81,73,0.95);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.85em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 2000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: opacity 0.3s;
+}
+
+.error-toast.hidden { opacity: 0; pointer-events: none; }
+
+.error-toast button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+/* Sidebar toggle (mobile) */
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  top: 52px;
+  left: 8px;
+  z-index: 200;
+  background: var(--bg-sidebar);
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  #sidebar {
+    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
+  }
+
+  .detail-panel {
+    width: 340px;
+    max-width: calc(100% - 280px);
+  }
+
+  .subtitle { display: none; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sidebar-toggle { display: flex; }
+
+  #sidebar {
+    position: fixed;
+    top: 44px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    z-index: 150;
+    transform: translateX(0);
+    transition: transform 0.25s ease;
+  }
+
+  #sidebar.collapsed {
+    transform: translateX(-100%);
+  }
+
+  #map-container { width: 100%; }
+
+  .detail-panel {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #header {
+    padding: 6px 12px;
+  }
+
+  #header h1 { font-size: 1em; }
+
+  footer {
+    flex-direction: column;
+    gap: 2px;
+    padding: 4px 10px;
+    font-size: 0.68em;
+  }
+
+  .legend { flex-wrap: wrap; gap: 8px; }
+
+  /* Touch-friendly targets */
+  .result-card { padding: 12px; min-height: 44px; }
+  .search-box input { padding: 10px 12px; }
+  .search-box button { padding: 10px 14px; }
+  .checkbox-group label { padding: 4px 0; min-height: 44px; }
+}
+
+/* Print */
+@media print {
+  #sidebar, footer, .sidebar-toggle, .map-info-overlay { display: none; }
+  #map-container { width: 100%; }
+}

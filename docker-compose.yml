@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    ports:
+      - "10100:10100"
+    environment:
+      - DATABASE_URL=sqlite:///data/atlaspi.db
+      - HOST=0.0.0.0
+      - PORT=10100
+      - LOG_FORMAT=json
+      - LOG_LEVEL=INFO
+      - AUTO_SEED=true
+      - CORS_ORIGINS=*
+    volumes:
+      - app-data:/app/data
+
+volumes:
+  app-data:

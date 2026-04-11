@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AtlasPI — Database geografico storico strutturato per agenti AI. Confini, nomi e metadati storici con governance etica.">
   <title>AtlasPI — Database Geografico Storico</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="/static/style.css" />
@@ -14,53 +15,64 @@
       <span class="subtitle">Database Geografico Storico per Agenti AI</span>
     </div>
     <div class="header-right">
-      <span id="entity-count" class="badge">...</span>
+      <a href="/docs" class="api-link" title="Documentazione API OpenAPI">API Docs</a>
+      <span id="entity-count" class="badge" aria-live="polite">...</span>
     </div>
   </header>
 
   <main id="app">
     <!-- Sidebar -->
-    <aside id="sidebar">
-      <div class="data-banner">
-        <strong>Confini approssimativi.</strong> I poligoni mostrati sono semplificazioni geometriche
-        a scopo dimostrativo, non confini storici verificati. Le fonti e il confidence score
-        indicano il livello di affidabilit&agrave; di ogni record.
+    <aside id="sidebar" aria-label="Filtri e risultati">
+      <div class="data-banner" role="status">
+        <strong>Confini da fonti accademiche.</strong> Dati storici da
+        Natural Earth e aourednik/historical-basemaps. Il confidence score
+        indica l'affidabilit&agrave; di ogni record.
       </div>
 
       <div class="controls">
         <div class="search-box">
-          <input type="text" id="search-input" placeholder="Cerca per nome, anche varianti..." />
-          <button id="search-btn" title="Cerca">&#8594;</button>
+          <label for="search-input" class="sr-only">Cerca entit&agrave;</label>
+          <input type="search" id="search-input" placeholder="Cerca per nome, anche varianti..."
+                 aria-label="Cerca entit&agrave; per nome" autocomplete="off" />
+          <button id="search-btn" title="Cerca" aria-label="Avvia ricerca">&#8594;</button>
         </div>
 
         <div class="year-control">
-          <label for="year-slider">Anno: <strong id="year-display">1500</strong></label>
-          <input type="range" id="year-slider" min="-700" max="2025" value="1500" step="1" />
-          <div class="year-range">
+          <label for="year-slider">Anno: <strong id="year-display" aria-live="polite">1500</strong></label>
+          <input type="range" id="year-slider" min="-700" max="2025" value="1500" step="1"
+                 aria-label="Seleziona anno storico" />
+          <div class="year-range" aria-hidden="true">
             <span>700 a.C.</span>
             <span>2025</span>
           </div>
         </div>
 
-        <div class="filter-control">
-          <label>Status:</label>
+        <fieldset class="filter-control">
+          <legend>Status:</legend>
           <div class="checkbox-group">
             <label><input type="checkbox" value="confirmed" checked /> Confermato</label>
             <label><input type="checkbox" value="uncertain" checked /> Incerto</label>
             <label><input type="checkbox" value="disputed" checked /> Contestato</label>
           </div>
-        </div>
+        </fieldset>
 
-        <button id="reset-btn" class="btn-secondary">Reset filtri</button>
+        <button id="reset-btn" class="btn-secondary" aria-label="Azzera tutti i filtri">Reset filtri</button>
       </div>
 
-      <div id="results-list" class="results">
-        <p class="placeholder">Caricamento...</p>
+      <div id="results-list" class="results" role="list" aria-label="Risultati ricerca">
+        <div class="skeleton-loader" aria-hidden="true">
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+        </div>
       </div>
     </aside>
 
+    <!-- Toggle sidebar mobile -->
+    <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Mostra/nascondi filtri" aria-expanded="true">&#9776;</button>
+
     <!-- Map -->
-    <section id="map-container">
+    <section id="map-container" aria-label="Mappa storica">
       <div id="map"></div>
       <div class="map-info-overlay" id="map-info">
         Seleziona un'entit&agrave; dalla lista o clicca su un'area della mappa per visualizzare i dettagli storici, le fonti e le note etiche.
@@ -68,20 +80,40 @@
     </section>
 
     <!-- Detail panel -->
-    <div id="detail-panel" class="detail-panel hidden">
-      <button id="close-detail" class="close-btn">&times;</button>
-      <div id="detail-content"></div>
+    <div id="detail-panel" class="detail-panel hidden" role="dialog" aria-label="Dettagli entit&agrave;">
+      <button id="close-detail" class="close-btn" aria-label="Chiudi pannello dettagli">&times;</button>
+      <div id="detail-content">
+        <div class="detail-spinner" aria-label="Caricamento dettagli">
+          <div class="spinner"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Error toast -->
+    <div id="error-toast" class="error-toast hidden" role="alert" aria-live="assertive">
+      <span id="error-message"></span>
+      <button id="error-dismiss" aria-label="Chiudi avviso">&times;</button>
     </div>
   </main>
 
   <footer>
-    <div class="legend">
-      <span class="legend-item"><span class="dot confirmed"></span> Confermato</span>
-      <span class="legend-item"><span class="dot uncertain"></span> Incerto</span>
-      <span class="legend-item"><span class="dot disputed"></span> Contestato</span>
+    <div class="legend" aria-label="Legenda colori mappa">
+      <span class="legend-item"><span class="dot confirmed" aria-hidden="true"></span> Confermato</span>
+      <span class="legend-item"><span class="dot uncertain" aria-hidden="true"></span> Incerto</span>
+      <span class="legend-item"><span class="dot disputed" aria-hidden="true"></span> Contestato</span>
+      <span class="legend-item" aria-hidden="true">&#9473; Reale</span>
+      <span class="legend-item" aria-hidden="true">&#9476; Approssimato</span>
     </div>
-    <span class="footer-note">AtlasPI v1.0 &mdash; Confini approssimativi &middot; Dati storici con governance etica</span>
+    <span class="footer-note">AtlasPI v2.0 &mdash; Dati storici con governance etica</span>
   </footer>
+
+  <noscript>
+    <div style="padding:40px;text-align:center;color:#eee;background:#1a1a2e">
+      <h2>AtlasPI richiede JavaScript</h2>
+      <p>Abilita JavaScript per visualizzare la mappa interattiva e i dati storici.</p>
+      <p>In alternativa, usa l'API REST: <code>GET /v1/entities</code></p>
+    </div>
+  </noscript>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="/static/app.js"></script>

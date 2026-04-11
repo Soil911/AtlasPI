@@ -2,6 +2,63 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v2.0.0] - 2026-04-11
+
+### Infrastruttura produzione
+- configurazione ambiente con .env e pydantic-settings
+- Docker: Dockerfile multi-stage + docker-compose.yml
+- CORS middleware configurabile
+- security headers (X-Frame-Options, X-Content-Type-Options, X-XSS-Protection)
+- logging strutturato (JSON per produzione, testo per sviluppo)
+- request_id univoco su ogni richiesta
+- error handling centralizzato con formato errore standard
+- rate limiting (60 req/min con slowapi)
+
+### API hardening
+- input validation: year (-4000..2100), name (max 200), status enum
+- paginazione su tutti gli endpoint lista (limit/offset)
+- cache headers (Cache-Control: public, max-age=3600)
+- OpenAPI documentation con descrizioni e esempi
+- errori strutturati {error, detail, request_id}
+
+### Database
+- supporto duale SQLite (dev) / PostgreSQL (prod) via DATABASE_URL
+- connection pooling per PostgreSQL
+- indici compositi su (year_start, year_end), status, name_variants.name
+- CheckConstraint su confidence_score (0.0-1.0)
+- enum Python per status, change_type, source_type
+- seed idempotente (non duplica al riavvio)
+
+### Frontend
+- responsive design: desktop, tablet, mobile
+- skeleton loader durante caricamento
+- spinner nel pannello dettaglio
+- error toast con auto-dismiss
+- sidebar collassabile su mobile
+- accessibilita' WCAG 2.1 AA: aria-label, roles, keyboard navigation
+- debounce sulla ricerca (300ms)
+- cache client-side dei dettagli entita'
+- noscript fallback
+
+### Test (56 test)
+- test infrastruttura: health check, database type, request_id
+- test paginazione: default, custom, offset, beyond results
+- test validazione: year range, name length, invalid status, negative offset
+- test edge cases: anno negativo, Unicode, arabo, risultati vuoti
+- test integrita' DB: seed idempotenza, cascade config, confidence range
+- test sicurezza: CORS preflight, security headers, errori strutturati
+- test etici: ETHICS-001/002/003 tutti verificati
+
+### DevOps
+- GitHub Actions CI: lint (ruff) + test (pytest) + build Docker
+- .dockerignore ottimizzato
+- .env.example documentato
+
+### Documentazione
+- docs/API.md: documentazione completa endpoint con esempi curl
+- docs/DEPLOYMENT.md: guida deploy locale, Docker, PostgreSQL
+- OpenAPI interattivo su /docs e /redoc
+
 ## [v1.1.0] - 2026-04-11
 
 ### Cambiato
