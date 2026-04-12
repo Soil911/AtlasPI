@@ -1597,6 +1597,78 @@ kbd {
   transition: opacity 0.2s;
 }
 
+/* ─── v5.8: Marker cluster styling ─────────────────────────── */
+
+.marker-cluster-custom {
+  background: transparent !important;
+  border: none !important;
+}
+
+.cluster-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.cluster-small {
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  background: rgba(88, 166, 255, 0.75);
+  border: 2px solid rgba(88, 166, 255, 0.9);
+}
+
+.cluster-medium {
+  width: 36px;
+  height: 36px;
+  font-size: 13px;
+  background: rgba(210, 153, 34, 0.75);
+  border: 2px solid rgba(210, 153, 34, 0.9);
+}
+
+.cluster-large {
+  width: 42px;
+  height: 42px;
+  font-size: 14px;
+  background: rgba(218, 54, 51, 0.75);
+  border: 2px solid rgba(218, 54, 51, 0.9);
+}
+
+/* Override default markercluster styles for dark theme */
+.leaflet-cluster-anim .leaflet-marker-icon,
+.leaflet-cluster-anim .leaflet-marker-shadow {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-in;
+}
+
+/* ─── v5.8: Mini-timeline canvas ───────────────────────────── */
+
+.mini-timeline-container {
+  margin: 12px 0;
+  padding: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.mini-timeline-container h4 {
+  margin: 0 0 6px 0;
+  font-size: 0.85em;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.mini-timeline-canvas {
+  width: 100%;
+  height: 60px;
+  border-radius: 4px;
+  cursor: crosshair;
+}
+
 /* ─── v5.7: Map cluster density indicator ──────────────────── */
 
 .map-density-legend {

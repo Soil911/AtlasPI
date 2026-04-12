@@ -359,17 +359,43 @@ def list_continents(db: Session = Depends(get_db)):
 @router.get(
     "/v1/random",
     response_model=EntityResponse,
-    summary="Entit\u00e0 casuale",
-    description="Restituisce un'entit\u00e0 casuale dal dataset. Utile per scoprire nuove entit\u00e0.",
+    summary="Entit\u00e0 casuale (con filtri opzionali)",
+    description=(
+        "Restituisce un'entit\u00e0 casuale dal dataset. "
+        "Supporta filtri per tipo, anno, status e continente."
+    ),
 )
-def random_entity(response: Response, db: Session = Depends(get_db)):
+def random_entity(
+    response: Response,
+    type: str | None = Query(None, max_length=50, description="Filtra per entity_type"),
+    year: int | None = Query(None, ge=-4500, le=2100, description="Entit\u00e0 attiva in questo anno"),
+    status: StatusFilter = Query(None, description="Filtra per status"),
+    continent: str | None = Query(None, max_length=50, description="Filtra per continente"),
+    db: Session = Depends(get_db),
+):
     import random as rnd
-    total = db.query(GeoEntity).count()
-    if total == 0:
+
+    q = _eager_query(db)
+
+    if type:
+        q = q.filter(GeoEntity.entity_type == type)
+    if status:
+        q = q.filter(GeoEntity.status == status)
+    if year is not None:
+        q = q.filter(GeoEntity.year_start <= year)
+        q = q.filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= year))
+
+    candidates = q.all()
+
+    # Filtro continente post-query (calcolato da coordinate)
+    if continent:
+        candidates = [e for e in candidates if _get_continent(e.capital_lat, e.capital_lon).lower() == continent.lower()]
+
+    if not candidates:
         from src.api.errors import AtlasError
-        raise AtlasError(status_code=404, detail="Nessuna entit\u00e0 nel dataset")
-    offset = rnd.randint(0, total - 1)
-    entity = _eager_query(db).offset(offset).limit(1).first()
+        raise AtlasError(status_code=404, detail="Nessuna entit\u00e0 corrisponde ai filtri")
+
+    entity = rnd.choice(candidates)
     response.headers["Cache-Control"] = "no-cache"
     return _entity_to_response(entity)
 
@@ -570,3 +596,112 @@ def dataset_stats(response: Response, db: Session = Depends(get_db)):
             key=lambda x: x.count, reverse=True,
         ),
     )
+
+
+# ─── Aggregation ────────────────────────────────────────────────
+
+def _year_to_century_label(year: int) -> str:
+    """Converte un anno in etichetta di secolo (es. 1500 → 'XVI', -500 → 'V a.C.')."""
+    if year > 0:
+        century = (year - 1) // 100 + 1
+    elif year < 0:
+        century = (-year - 1) // 100 + 1
+    else:
+        century = 1
+
+    roman_map = {
+        1: "I", 2: "II", 3: "III", 4: "IV", 5: "V",
+        6: "VI", 7: "VII", 8: "VIII", 9: "IX", 10: "X",
+        11: "XI", 12: "XII", 13: "XIII", 14: "XIV", 15: "XV",
+        16: "XVI", 17: "XVII", 18: "XVIII", 19: "XIX", 20: "XX",
+        21: "XXI", 22: "XXII", 23: "XXIII", 24: "XXIV", 25: "XXV",
+        26: "XXVI", 27: "XXVII", 28: "XXVIII", 29: "XXIX", 30: "XXX",
+        31: "XXXI", 32: "XXXII", 33: "XXXIII", 34: "XXXIV", 35: "XXXV",
+        36: "XXXVI", 37: "XXXVII", 38: "XXXVIII", 39: "XXXIX", 40: "XL",
+        41: "XLI", 42: "XLII", 43: "XLIII", 44: "XLIV", 45: "XLV",
+        46: "XLVI",
+    }
+    label = roman_map.get(century, str(century))
+    return f"{label} a.C." if year < 0 else label
+
+
+@router.get(
+    "/v1/aggregation",
+    summary="Statistiche aggregate per secolo, tipo, continente e status",
+    description=(
+        "Restituisce conteggi aggregati delle entit\u00e0 raggruppati per "
+        "secolo (basato su year_start), tipo, continente e status. "
+        "Ideale per dashboard e analisi AI."
+    ),
+)
+def aggregation(response: Response, db: Session = Depends(get_db)):
+    entities = db.query(GeoEntity).all()
+
+    by_century: dict[str, int] = {}
+    by_type: dict[str, int] = {}
+    by_continent: dict[str, int] = {}
+    by_status: dict[str, int] = {}
+    earliest = 0
+    latest = 0
+
+    for e in entities:
+        # Century
+        century_label = _year_to_century_label(e.year_start)
+        by_century[century_label] = by_century.get(century_label, 0) + 1
+
+        # Type
+        by_type[e.entity_type] = by_type.get(e.entity_type, 0) + 1
+
+        # Continent
+        c = _get_continent(e.capital_lat, e.capital_lon)
+        by_continent[c] = by_continent.get(c, 0) + 1
+
+        # Status
+        by_status[e.status] = by_status.get(e.status, 0) + 1
+
+        # Time span
+        if e.year_start < earliest:
+            earliest = e.year_start
+        if e.year_start > latest:
+            latest = e.year_start
+
+    # Ordina secoli cronologicamente (a.C. prima, poi d.C.)
+    def century_sort_key(label: str) -> int:
+        roman_to_int = {
+            "I": 1, "II": 2, "III": 3, "IV": 4, "V": 5,
+            "VI": 6, "VII": 7, "VIII": 8, "IX": 9, "X": 10,
+            "XI": 11, "XII": 12, "XIII": 13, "XIV": 14, "XV": 15,
+            "XVI": 16, "XVII": 17, "XVIII": 18, "XIX": 19, "XX": 20,
+            "XXI": 21, "XXII": 22, "XXIII": 23, "XXIV": 24, "XXV": 25,
+            "XXVI": 26, "XXVII": 27, "XXVIII": 28, "XXIX": 29, "XXX": 30,
+            "XXXI": 31, "XXXII": 32, "XXXIII": 33, "XXXIV": 34, "XXXV": 35,
+            "XXXVI": 36, "XXXVII": 37, "XXXVIII": 38, "XXXIX": 39, "XL": 40,
+            "XLI": 41, "XLII": 42, "XLIII": 43, "XLIV": 44, "XLV": 45,
+            "XLVI": 46,
+        }
+        if label.endswith(" a.C."):
+            roman = label[:-5]
+            return -(roman_to_int.get(roman, 0))
+        return roman_to_int.get(label, 0)
+
+    sorted_centuries = sorted(by_century.keys(), key=century_sort_key)
+
+    response.headers["Cache-Control"] = "public, max-age=3600"
+
+    return {
+        "by_century": [{"century": c, "count": by_century[c]} for c in sorted_centuries],
+        "by_type": sorted(
+            [{"type": t, "count": n} for t, n in by_type.items()],
+            key=lambda x: x["count"], reverse=True,
+        ),
+        "by_continent": sorted(
+            [{"continent": c, "count": n} for c, n in by_continent.items()],
+            key=lambda x: x["count"], reverse=True,
+        ),
+        "by_status": sorted(
+            [{"status": s, "count": n} for s, n in by_status.items()],
+            key=lambda x: x["count"], reverse=True,
+        ),
+        "total": len(entities),
+        "time_span": {"earliest": earliest, "latest": latest},
+    }

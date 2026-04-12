@@ -535,6 +535,25 @@ function renderResults(entities) {
 
 function renderMap(entities) {
   layerGroup.clearLayers();
+
+  // Cluster group for capital-only markers (no GeoJSON boundary)
+  const clusterGroup = typeof L.markerClusterGroup === 'function'
+    ? L.markerClusterGroup({
+        maxClusterRadius: 40,
+        spiderfyOnMaxZoom: true,
+        showCoverageOnHover: false,
+        iconCreateFunction: cluster => {
+          const count = cluster.getChildCount();
+          const size = count < 10 ? 'small' : count < 50 ? 'medium' : 'large';
+          return L.divIcon({
+            html: `<div class="cluster-icon cluster-${size}">${count}</div>`,
+            className: 'marker-cluster-custom',
+            iconSize: L.point(36, 36),
+          });
+        },
+      })
+    : L.layerGroup(); // fallback if plugin not loaded
+
   entities.forEach(e => {
     const c = COLORS[e.status] || '#8b949e';
     try {
@@ -572,17 +591,17 @@ function renderMap(entities) {
           interactive: false,
         }));
       } else if (e.capital && e.capital.lat && e.capital.lon) {
-        // No boundary GeoJSON — show capital as a marker
+        // No boundary GeoJSON — show capital as a clustered marker
         const m = L.circleMarker([e.capital.lat, e.capital.lon], {
           radius: 5, fillColor: c, color: c, weight: 1, fillOpacity: 0.7,
           className: 'capital-marker',
         });
         m.bindTooltip(richTooltip(e), { direction: 'top' });
         m.on('click', () => showDetail(e.id));
-        layerGroup.addLayer(m);
+        clusterGroup.addLayer(m);
 
         // Label for larger zoom levels
-        layerGroup.addLayer(L.marker([e.capital.lat, e.capital.lon], {
+        clusterGroup.addLayer(L.marker([e.capital.lat, e.capital.lon], {
           icon: L.divIcon({
             className: 'capital-label',
             html: `<div style="color:${c};font-size:9px;font-weight:500;text-shadow:0 0 3px #000,0 0 2px #000;white-space:nowrap;pointer-events:none;opacity:0.8">${esc(e.name_original)}</div>`,
@@ -593,6 +612,8 @@ function renderMap(entities) {
       }
     } catch (_) {}
   });
+
+  layerGroup.addLayer(clusterGroup);
 }
 
 function richTooltip(e) {
@@ -762,6 +783,15 @@ async function showDetail(id) {
     </div>`;
   }
 
+  // Mini-timeline canvas (v5.8)
+  if (e.year_start != null) {
+    html += `
+    <div class="mini-timeline-container">
+      <h4>${lang === 'it' ? 'Timeline' : 'Timeline'}: ${fmtY(e.year_start)} – ${e.year_end ? fmtY(e.year_end) : (lang === 'it' ? 'oggi' : 'today')}</h4>
+      <canvas class="mini-timeline-canvas" id="mini-timeline" width="600" height="60"></canvas>
+    </div>`;
+  }
+
   // Contemporaries section
   html += `
     <div class="detail-section" data-section="contemporaries">
@@ -783,6 +813,9 @@ async function showDetail(id) {
     </div>`;
 
   content.innerHTML = html;
+
+  // Draw mini-timeline canvas (v5.8)
+  drawMiniTimeline(e);
 
   // Bind collapsible sections
   content.querySelectorAll('.collapsible').forEach(h3 => {
@@ -826,6 +859,115 @@ async function showDetail(id) {
       }
     } catch (_) {}
   }
+}
+
+function drawMiniTimeline(e) {
+  const canvas = document.getElementById('mini-timeline');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+
+  // Size canvas properly
+  const rect = canvas.parentElement.getBoundingClientRect();
+  canvas.width = rect.width * dpr;
+  canvas.height = 60 * dpr;
+  canvas.style.width = rect.width + 'px';
+  canvas.style.height = '60px';
+  ctx.scale(dpr, dpr);
+
+  const W = rect.width;
+  const H = 60;
+  const pad = 30;
+  const barY = 25;
+  const barH = 12;
+
+  const ys = e.year_start;
+  const ye = e.year_end || new Date().getFullYear();
+  const span = ye - ys || 1;
+
+  // Background
+  ctx.clearRect(0, 0, W, H);
+
+  // Time axis
+  ctx.fillStyle = '#30363d';
+  ctx.fillRect(pad, barY, W - 2 * pad, barH);
+
+  // Entity lifespan bar
+  const sc = COLORS[e.status] || '#58a6ff';
+  ctx.fillStyle = sc;
+  ctx.globalAlpha = 0.5;
+  ctx.fillRect(pad, barY, W - 2 * pad, barH);
+  ctx.globalAlpha = 1;
+
+  // Year labels
+  ctx.fillStyle = '#8b949e';
+  ctx.font = '10px system-ui, sans-serif';
+  ctx.textAlign = 'left';
+  ctx.fillText(fmtY(ys), pad, barY + barH + 14);
+  ctx.textAlign = 'right';
+  ctx.fillText(fmtY(ye), W - pad, barY + barH + 14);
+
+  // Territory change markers
+  const changes = (e.territory_changes || []).slice().sort((a, b) => a.year - b.year);
+  const changeColors = {
+    expansion: '#3fb950', conquest: '#3fb950',
+    contraction: '#da3633', split: '#da3633',
+    independence: '#58a6ff', treaty: '#58a6ff',
+    colonization: '#d29922', merger: '#d29922',
+  };
+
+  const markers = [];
+  changes.forEach(tc => {
+    const x = pad + ((tc.year - ys) / span) * (W - 2 * pad);
+    const color = changeColors[tc.change_type] || '#8b949e';
+
+    // Marker line
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(x, barY - 6);
+    ctx.lineTo(x, barY + barH + 6);
+    ctx.stroke();
+
+    // Diamond marker
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(x, barY - 8);
+    ctx.lineTo(x + 4, barY - 4);
+    ctx.lineTo(x, barY);
+    ctx.lineTo(x - 4, barY - 4);
+    ctx.closePath();
+    ctx.fill();
+
+    markers.push({ x, year: tc.year, type: tc.change_type, desc: tc.description || '', region: tc.region || '' });
+  });
+
+  // Tooltip on hover
+  let tooltipDiv = null;
+  canvas.addEventListener('mousemove', ev => {
+    const bnd = canvas.getBoundingClientRect();
+    const mx = ev.clientX - bnd.left;
+    const hit = markers.find(m => Math.abs(m.x - mx) < 8);
+    if (hit) {
+      canvas.style.cursor = 'pointer';
+      if (!tooltipDiv) {
+        tooltipDiv = document.createElement('div');
+        tooltipDiv.style.cssText = 'position:absolute;background:#161b22;border:1px solid #30363d;border-radius:4px;padding:4px 8px;font-size:11px;color:#e6edf3;pointer-events:none;z-index:1000;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,0.4)';
+        canvas.parentElement.style.position = 'relative';
+        canvas.parentElement.appendChild(tooltipDiv);
+      }
+      tooltipDiv.innerHTML = `<strong>${fmtY(hit.year)}</strong> — ${hit.type.replace(/_/g, ' ')}${hit.region ? ' (' + esc(hit.region) + ')' : ''}`;
+      tooltipDiv.style.left = Math.min(hit.x, W - 150) + 'px';
+      tooltipDiv.style.top = '-22px';
+      tooltipDiv.style.display = 'block';
+    } else {
+      canvas.style.cursor = 'crosshair';
+      if (tooltipDiv) tooltipDiv.style.display = 'none';
+    }
+  });
+  canvas.addEventListener('mouseleave', () => {
+    if (tooltipDiv) tooltipDiv.style.display = 'none';
+  });
 }
 
 function toggleSection(h3) {

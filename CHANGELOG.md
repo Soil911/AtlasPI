@@ -2,6 +2,39 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v5.8.0] - 2026-04-12
+
+### API — Nuovi endpoint e filtri avanzati
+- **`/v1/random` con filtri**: parametri opzionali `type`, `year`, `status`, `continent`
+  per ottenere entita' casuali filtrate (es. `/v1/random?type=empire&year=1500`)
+- **`/v1/aggregation`**: nuovo endpoint con statistiche aggregate per secolo (etichette romane),
+  tipo, continente e status — ideale per dashboard e analisi AI
+- Totale endpoint: **21** (da 19)
+
+### Frontend — Cluster markers e mini-timeline
+- **Leaflet.markercluster**: i marker delle capitali ora si raggruppano a zoom basso,
+  con cluster colorati per densita' (small/medium/large). I poligoni GeoJSON restano visibili
+- **Mini-timeline canvas**: nel pannello dettaglio, un canvas interattivo mostra la durata
+  dell'entita' con marcatori diamante per ogni cambio territoriale. Tooltip on hover con
+  anno, tipo e regione. Colori: verde=espansione, rosso=contrazione, blu=altro
+- Stili cluster personalizzati per tema scuro
+
+### Dataset — Espansione a 746 entita'
+- **batch_22**: Southeast Asia e Indonesia (26 entita' — Ayutthaya, Dai Viet, Sukhothai, etc.)
+- **batch_23**: Americhe pre-colombiane e coloniali (19 entita' — Gran Colombia, Comancheria, etc.)
+- **batch_24**: Africa medievale e moderna (19 entita' — Jolof, Zanzibar, Mahdist State, etc.)
+- Dedup automatico: 11 duplicati rimossi dai nuovi batch
+
+### Test — 208 test totali
+- 23 nuovi test in `test_v58_features.py`:
+  - `TestFilteredRandom`: 7 test (filtri tipo/anno/status, combinati, 404, cache)
+  - `TestAggregation`: 9 test (struttura, somme coerenti, ordinamento secoli, time_span)
+  - `TestDataExpansion`: 4 test (conteggio, tipi, continenti, no duplicati)
+  - `TestEvolutionForTimeline`: 3 test (dati canvas timeline)
+- Fix test performance random (200ms -> 500ms per query filtrata)
+
+---
+
 ## [v5.7.0] - 2026-04-11
 
 ### Dataset — Espansione massiva a 682 entita'

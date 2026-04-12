@@ -10,11 +10,11 @@
 </p>
 
 <p align="center">
-  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-5.7.0-blue?style=flat-square"></a>
-  <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-682-green?style=flat-square"></a>
-  <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-185%20passing-brightgreen?style=flat-square"></a>
+  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-5.8.0-blue?style=flat-square"></a>
+  <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-746-green?style=flat-square"></a>
+  <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-208%20passing-brightgreen?style=flat-square"></a>
   <a href="#-license"><img alt="License" src="https://img.shields.io/badge/license-Apache%202.0-orange?style=flat-square"></a>
-  <a href="#-api-documentation"><img alt="API" src="https://img.shields.io/badge/API-19%20endpoints-purple?style=flat-square"></a>
+  <a href="#-api-documentation"><img alt="API" src="https://img.shields.io/badge/API-21%20endpoints-purple?style=flat-square"></a>
 </p>
 
 ---
@@ -67,7 +67,7 @@ docker compose up --build
 
 ## API Documentation
 
-AtlasPI exposes 18 REST endpoints under `/v1/`. Full interactive documentation is available at `/docs` (Swagger UI) and `/redoc` when the server is running.
+AtlasPI exposes 21 REST endpoints under `/v1/`. Full interactive documentation is available at `/docs` (Swagger UI) and `/redoc` when the server is running.
 
 ### Core Endpoints
 
@@ -80,7 +80,8 @@ AtlasPI exposes 18 REST endpoints under `/v1/`. Full interactive documentation i
 | `GET` | `/v1/types` | List available entity types |
 | `GET` | `/v1/stats` | Dataset statistics |
 | `GET` | `/v1/continents` | Available continent/region filters |
-| `GET` | `/v1/random` | Random entity |
+| `GET` | `/v1/random` | Random entity (with optional type/year/status/continent filters) |
+| `GET` | `/v1/aggregation` | Aggregate stats by century, type, continent, status |
 | `GET` | `/v1/nearby?lat=&lon=` | Find entities near coordinates (with distance) |
 | `GET` | `/v1/snapshot/{year}` | World state at a given year (summary + entities) |
 | `GET` | `/v1/compare/{id1}/{id2}` | Structured comparison of two entities |
@@ -157,7 +158,7 @@ curl "http://localhost:10100/v1/compare/1/5"
 
 ## Dataset Overview
 
-**682 historical entities** spanning 6,500 years of human civilization, backed by **2,022 academic sources** and documenting **1,899 territory changes**.
+**746 historical entities** spanning 6,500 years of human civilization, backed by **2,200+ academic sources** and documenting **2,000+ territory changes**.
 
 ### Coverage by Region
 
@@ -235,7 +236,7 @@ atlaspi/
     entities/       # Source entity data (JSON)
     raw/            # Original unmodified source data
     processed/      # Normalized data
-  tests/            # 185 tests: technical, ethical, security, performance, data quality
+  tests/            # 208 tests: technical, ethical, security, performance, data quality
   docs/
     adr/            # Architecture Decision Records
     ethics/         # Documented ethical decisions (ETHICS-001, 002, 003...)
