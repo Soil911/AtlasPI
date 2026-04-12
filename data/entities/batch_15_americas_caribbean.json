@@ -138,7 +138,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Maroon Communities of Jamaica",
@@ -251,7 +252,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Ndé / Inde",
@@ -376,7 +378,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Diné Bikéyah",
@@ -497,7 +500,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Seminole",
@@ -618,7 +622,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Nation métisse / La Nâsyon di Michif",
@@ -735,7 +740,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Selk'nam",
@@ -852,7 +858,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "República de Yucatán",
@@ -960,7 +967,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Republic of Texas",
@@ -1089,7 +1097,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Segundo Imperio Mexicano",
@@ -1218,7 +1227,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Império do Brasil",
@@ -1375,7 +1385,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Republic of Pirates / Nassau",
@@ -1476,7 +1487,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Herzogtum Kurland und Semgallen: Kolonien",
@@ -1572,7 +1584,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Kingdom of Mosquitia / Miskitu Kingdom",
@@ -1689,7 +1702,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Arawak / Lokono",
@@ -1830,7 +1844,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Poverty Point",
@@ -1931,7 +1946,8 @@
         "source_type": "archaeological",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Ancestral Puebloan / Mesa Verde",
@@ -2048,7 +2064,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Kingdom of Quito",
@@ -2149,7 +2166,8 @@
         "source_type": "archaeological",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Wanka / Huanca",
@@ -2258,7 +2276,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Taino",
@@ -2269,9 +2288,67 @@
     "capital_name": "Cacicazgo de Maguana",
     "capital_lat": 18.85,
     "capital_lon": -71.25,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -67.2592,
+            18.85
+          ],
+          [
+            -67.505,
+            20.4558
+          ],
+          [
+            -69.2913,
+            22.4003
+          ],
+          [
+            -71.25,
+            22.4794
+          ],
+          [
+            -73.1894,
+            21.4307
+          ],
+          [
+            -74.4417,
+            20.6473
+          ],
+          [
+            -76.5611,
+            18.85
+          ],
+          [
+            -75.1982,
+            16.9624
+          ],
+          [
+            -74.0501,
+            13.831
+          ],
+          [
+            -71.25,
+            14.7391
+          ],
+          [
+            -68.7495,
+            14.5248
+          ],
+          [
+            -66.5763,
+            16.6196
+          ],
+          [
+            -67.2592,
+            18.85
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: 'Taino' as a unified ethnic label is debated; it derives from the indigenous word meaning 'good/noble' used during first contact with Columbus. The Taino comprised multiple cacicazgos (chiefdoms) across the Greater Antilles and Bahamas. ETHICS-002: The Taino experienced one of the most catastrophic population collapses in human history, from an estimated 250,000-1,000,000+ to near-extinction within 50 years of contact, due to enslavement, disease, and violence under the encomienda system. Columbus's own journals document forced labor and mutilation. Recent genetic studies (Schroeder et al. 2018) show significant Taino ancestry persists in Caribbean populations, contradicting the 'extinction' narrative.",
     "name_variants": [
       {
@@ -2367,7 +2444,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Mosquitia",
@@ -2378,9 +2456,67 @@
     "capital_name": "Sandy Bay",
     "capital_lat": 14.04,
     "capital_lon": -83.35,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -80.7762,
+            14.04
+          ],
+          [
+            -81.3828,
+            15.1726
+          ],
+          [
+            -81.248,
+            17.0829
+          ],
+          [
+            -83.35,
+            16.8798
+          ],
+          [
+            -84.7566,
+            16.3306
+          ],
+          [
+            -85.5305,
+            15.3376
+          ],
+          [
+            -87.0444,
+            14.04
+          ],
+          [
+            -87.2499,
+            11.6792
+          ],
+          [
+            -85.1384,
+            10.4615
+          ],
+          [
+            -83.35,
+            9.9483
+          ],
+          [
+            -81.8845,
+            11.5957
+          ],
+          [
+            -80.07,
+            12.2369
+          ],
+          [
+            -80.7762,
+            14.04
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The Miskitu Kingdom had a complex relationship with British colonialism; British recognition and arms supplies strengthened Miskitu power over neighboring indigenous groups, creating a colonial proxy dynamic. The Miskitu themselves exercised genuine sovereignty while also being instrumentalized in Anglo-Spanish imperial competition. ETHICS-002: The incorporation into Honduras and Nicaragua in 1894 was a unilateral act that extinguished Miskitu self-governance without consent, a pattern of indigenous sovereignty erasure common in 19th-century Latin America.",
     "name_variants": [
       {
@@ -2458,7 +2594,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Repiblik Dayiti",
@@ -2469,9 +2606,67 @@
     "capital_name": "Port-au-Prince",
     "capital_lat": 18.5429,
     "capital_lon": -72.3388,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -68.1111,
+            18.5429
+          ],
+          [
+            -69.933,
+            19.8352
+          ],
+          [
+            -71.0846,
+            20.6142
+          ],
+          [
+            -72.3388,
+            21.4688
+          ],
+          [
+            -74.2363,
+            20.9431
+          ],
+          [
+            -76.2057,
+            20.6516
+          ],
+          [
+            -75.994,
+            18.5429
+          ],
+          [
+            -75.1361,
+            16.8463
+          ],
+          [
+            -74.1895,
+            15.2564
+          ],
+          [
+            -72.3388,
+            14.0432
+          ],
+          [
+            -71.0028,
+            16.4681
+          ],
+          [
+            -68.4908,
+            16.6025
+          ],
+          [
+            -68.1111,
+            18.5429
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: This entity specifically covers the period of Jean-Jacques Dessalines (1804-1806), who declared independence and initially governed as Governor-General for Life, then Emperor Jacques I. The Haitian Revolution was the only successful large-scale slave revolt in history, creating the first free Black republic. ETHICS-002: Dessalines ordered the 1804 massacre of remaining French colonists, an act of retaliatory violence that must be contextualized within the preceding centuries of chattel slavery, the genocidal campaign of Leclerc and Rochambeau (who used attack dogs and mass drownings), and Napoleon's attempt to re-establish slavery. ETHICS-003: France imposed an indemnity of 150 million francs (later reduced to 90 million) in 1825 as the price of recognizing Haitian independence, forcing Haiti to pay reparations to its former enslavers -- a debt not fully repaid until 1947, crippling the nation's economy for over a century.",
     "name_variants": [
       {
@@ -2538,7 +2733,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Republica Dominicana",
@@ -2549,9 +2745,67 @@
     "capital_name": "Santo Domingo",
     "capital_lat": 18.4861,
     "capital_lon": -69.9312,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -67.7631,
+            18.4861
+          ],
+          [
+            -68.4763,
+            19.3014
+          ],
+          [
+            -68.8193,
+            20.0889
+          ],
+          [
+            -69.9312,
+            20.9077
+          ],
+          [
+            -71.3296,
+            20.8056
+          ],
+          [
+            -71.7223,
+            19.4775
+          ],
+          [
+            -71.9844,
+            18.4861
+          ],
+          [
+            -72.1413,
+            17.1221
+          ],
+          [
+            -70.7992,
+            17.0547
+          ],
+          [
+            -69.9312,
+            16.4076
+          ],
+          [
+            -68.9231,
+            16.7655
+          ],
+          [
+            -68.3412,
+            17.5969
+          ],
+          [
+            -67.7631,
+            18.4861
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The Dominican Republic declared independence not from a European colonial power but from Haiti, which had unified the island of Hispaniola from 1822-1844. Dominican national identity has been constructed partly in opposition to Haiti, with significant anti-Haitian and anti-Black racial ideology (antihaitianismo) embedded in official historiography, particularly under Trujillo's dictatorship (1930-1961). ETHICS-002: The 1937 Parsley Massacre (Masacre del Perejil) under Trujillo killed an estimated 12,000-35,000 Haitians and dark-skinned Dominicans along the border. This genocide is documented but remains insufficiently acknowledged in Dominican official memory. ETHICS-003: Contemporary statelessness of Dominicans of Haitian descent, following Constitutional Tribunal ruling TC/0168/13, represents ongoing ethnic discrimination.",
     "name_variants": [
       {
@@ -2626,7 +2880,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Cuba",
@@ -2637,9 +2892,67 @@
     "capital_name": "La Habana",
     "capital_lat": 23.1136,
     "capital_lon": -82.3666,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -76.7613,
+            23.1136
+          ],
+          [
+            -77.8763,
+            25.7173
+          ],
+          [
+            -79.3639,
+            28.1952
+          ],
+          [
+            -82.3666,
+            28.4315
+          ],
+          [
+            -84.6371,
+            27.3304
+          ],
+          [
+            -86.1572,
+            24.8648
+          ],
+          [
+            -87.0913,
+            23.1136
+          ],
+          [
+            -85.4255,
+            21.3294
+          ],
+          [
+            -85.6538,
+            18.0651
+          ],
+          [
+            -82.3666,
+            16.931
+          ],
+          [
+            -80.4315,
+            19.8333
+          ],
+          [
+            -77.7872,
+            19.947
+          ],
+          [
+            -76.7613,
+            23.1136
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The name 'Cuba' derives from the Taino language, meaning uncertain (possibly 'great place' or 'fertile land'). ETHICS-002: Colonial Cuba was one of the last territories in the Americas to abolish slavery (1886), and one of the largest recipients of enslaved Africans. The sugar plantation economy was built entirely on forced labor. Spanish colonial rule included systematic suppression of independence movements, concentration camps during the Ten Years' War and under General Weyler (reconcentracion, 1896-1898), which killed an estimated 170,000-300,000 Cubans. The 1898 US intervention transformed Cuba from Spanish colony to American neocolonial dependency.",
     "name_variants": [
       {
@@ -2722,7 +3035,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Reche / Mapuche",
@@ -2733,9 +3047,67 @@
     "capital_name": "Temuco region (no single capital)",
     "capital_lat": -38.7359,
     "capital_lon": -72.5904,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -66.7758,
+            -38.7359
+          ],
+          [
+            -67.1022,
+            -35.9595
+          ],
+          [
+            -68.9678,
+            -33.9052
+          ],
+          [
+            -72.5904,
+            -33.9161
+          ],
+          [
+            -74.7688,
+            -36.0519
+          ],
+          [
+            -77.6475,
+            -36.1518
+          ],
+          [
+            -78.6428,
+            -38.7359
+          ],
+          [
+            -76.0704,
+            -40.2665
+          ],
+          [
+            -75.5177,
+            -43.5478
+          ],
+          [
+            -72.5904,
+            -41.8391
+          ],
+          [
+            -70.0019,
+            -42.2057
+          ],
+          [
+            -67.7008,
+            -41.066
+          ],
+          [
+            -66.7758,
+            -38.7359
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The Mapuche ('people of the land' in Mapudungun) called themselves 'Reche' ('true people') before Spanish contact; the term 'Araucanian' was imposed by the Spanish and is considered exonymous and reductive. ETHICS-002: The Mapuche are unique in the Americas for having successfully resisted both the Inca Empire and the Spanish Empire for over 300 years. The Biobio River functioned as a de facto international border recognized by Spain. Chilean military conquest (1861-1883, euphemistically called 'Pacificacion de la Araucania') involved systematic military campaigns, land confiscation, and cultural suppression. ETHICS-003: Mapuche land rights remain actively contested in present-day Chile and Argentina; ongoing conflicts over ancestral territory are a current human rights issue.",
     "name_variants": [
       {
@@ -2826,7 +3198,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Avakuarusu",
@@ -2837,9 +3210,67 @@
     "capital_name": null,
     "capital_lat": -23.5,
     "capital_lon": -55.0,
-    "confidence_score": 0.5,
+    "confidence_score": 0.4,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -51.9511,
+            -23.5
+          ],
+          [
+            -49.6779,
+            -20.9407
+          ],
+          [
+            -53.0534,
+            -20.2985
+          ],
+          [
+            -55.0,
+            -18.0211
+          ],
+          [
+            -56.796,
+            -20.5555
+          ],
+          [
+            -58.0147,
+            -22.037
+          ],
+          [
+            -59.9162,
+            -23.5
+          ],
+          [
+            -57.9386,
+            -25.4379
+          ],
+          [
+            -56.6217,
+            -26.2815
+          ],
+          [
+            -55.0,
+            -28.5453
+          ],
+          [
+            -52.6815,
+            -27.0553
+          ],
+          [
+            -50.6311,
+            -25.267
+          ],
+          [
+            -51.9511,
+            -23.5
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: 'Guarani' is a broad ethnolinguistic designation covering numerous distinct groups including Kaiowa, Mbya, Nhandeva, Ache, and others. Pre-colonial Guarani did not form a single polity but shared language, cosmology, and agricultural practices across a vast territory. The Guarani concept of 'Yvy mara'ey' (land without evil) reflects a profound spiritual relationship with land that cannot be reduced to Western territorial concepts. ETHICS-002: Guarani peoples faced enslavement by Portuguese bandeirantes, forced missionization by Jesuits (which also provided some protection), and later dispossession by nation-states. Contemporary Guarani Kaiowa in Brazil face ongoing land theft, violence, and the highest indigenous suicide rate in the Americas.",
     "name_variants": [
       {
@@ -2914,7 +3345,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Diaguita",
@@ -2925,9 +3357,67 @@
     "capital_name": null,
     "capital_lat": -29.5,
     "capital_lon": -67.5,
-    "confidence_score": 0.5,
+    "confidence_score": 0.4,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -62.559,
+            -29.5
+          ],
+          [
+            -63.5925,
+            -27.4451
+          ],
+          [
+            -64.9562,
+            -25.6534
+          ],
+          [
+            -67.5,
+            -23.8051
+          ],
+          [
+            -69.3374,
+            -26.9526
+          ],
+          [
+            -71.6482,
+            -27.728
+          ],
+          [
+            -71.7611,
+            -29.5
+          ],
+          [
+            -70.8099,
+            -31.2345
+          ],
+          [
+            -69.7446,
+            -33.1962
+          ],
+          [
+            -67.5,
+            -35.1138
+          ],
+          [
+            -65.3148,
+            -33.2203
+          ],
+          [
+            -62.8947,
+            -31.6383
+          ],
+          [
+            -62.559,
+            -29.5
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: 'Diaguita' is a collective designation for multiple Kakan-speaking peoples of northwestern Argentina and central-north Chile, including the Calchaqui, Quilmes, Pulares, and others. They did not form a single polity but shared linguistic and cultural features. The Kakan language is now extinct, extinguished through colonial violence and forced assimilation. ETHICS-002: The Calchaqui Wars (1560-1665) represent one of the longest sustained indigenous resistance campaigns in the Americas. The final defeat of the Quilmes people resulted in their forced deportation march of over 1,200 km to Buenos Aires province -- an act of ethnic cleansing. The town of Quilmes near Buenos Aires is named for these deportees.",
     "name_variants": [
       {
@@ -2997,7 +3487,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Charrua",
@@ -3008,9 +3499,67 @@
     "capital_name": null,
     "capital_lat": -34.0,
     "capital_lon": -56.0,
-    "confidence_score": 0.5,
+    "confidence_score": 0.4,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -50.7358,
+            -34.0
+          ],
+          [
+            -51.7302,
+            -32.1939
+          ],
+          [
+            -54.29,
+            -31.3536
+          ],
+          [
+            -56.0,
+            -30.8073
+          ],
+          [
+            -58.5089,
+            -29.9636
+          ],
+          [
+            -60.9143,
+            -31.9902
+          ],
+          [
+            -61.1463,
+            -34.0
+          ],
+          [
+            -60.3034,
+            -36.213
+          ],
+          [
+            -57.6664,
+            -36.8159
+          ],
+          [
+            -56.0,
+            -38.8699
+          ],
+          [
+            -54.1995,
+            -36.572
+          ],
+          [
+            -51.3349,
+            -35.9341
+          ],
+          [
+            -50.7358,
+            -34.0
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The Charrua were semi-nomadic hunter-gatherers of the Rio de la Plata grasslands (present-day Uruguay and adjacent regions). Very little is known from their own perspective as they had no writing system and their language is extinct, known only from a few word lists. ETHICS-002: The Salsipuedes Massacre (April 11, 1831), ordered by Uruguayan President Fructuoso Rivera, was a deliberate act of extermination targeting the remaining Charrua population. Survivors were distributed as servants, and four Charrua (including the chief Vaimaca Peru) were taken to Paris and exhibited as curiosities, where three died. This constitutes genocide and dehumanizing exhibition of indigenous peoples. ETHICS-003: Uruguayan national identity paradoxically celebrates 'garra charrua' (Charrua tenacity) while the state is directly responsible for the Charrua's destruction.",
     "name_variants": [
       {
@@ -3077,7 +3626,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Aonikenk",
@@ -3088,9 +3638,67 @@
     "capital_name": null,
     "capital_lat": -47.0,
     "capital_lon": -69.0,
-    "confidence_score": 0.5,
+    "confidence_score": 0.4,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -65.1048,
+            -47.0
+          ],
+          [
+            -65.8789,
+            -45.7059
+          ],
+          [
+            -66.3963,
+            -43.5691
+          ],
+          [
+            -69.0,
+            -43.3601
+          ],
+          [
+            -71.2522,
+            -44.0442
+          ],
+          [
+            -74.4183,
+            -44.8373
+          ],
+          [
+            -73.2019,
+            -47.0
+          ],
+          [
+            -72.8411,
+            -48.6505
+          ],
+          [
+            -71.2749,
+            -50.1156
+          ],
+          [
+            -69.0,
+            -50.7488
+          ],
+          [
+            -67.1893,
+            -49.1877
+          ],
+          [
+            -64.4229,
+            -48.8971
+          ],
+          [
+            -65.1048,
+            -47.0
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: 'Tehuelche' is an exonym probably from Mapudungun; the people called themselves 'Aonikenk' (southern groups) and 'Gununakuna' (northern groups). European accounts of 'Patagonian giants' (from Magellan's 1520 expedition) exoticized and distorted Tehuelche identity for centuries. ETHICS-002: The Argentine 'Conquista del Desierto' (1878-1885) was neither a conquest of desert nor uninhabited land; it was a military campaign of extermination and dispossession against Tehuelche and Mapuche peoples to seize Patagonian territory for ranching and settlement. General Julio Roca, who led this campaign, remains on the Argentine 100-peso note -- a fact contested by indigenous rights organizations.",
     "name_variants": [
       {
@@ -3160,7 +3768,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Quilombos",
@@ -3171,9 +3780,67 @@
     "capital_name": null,
     "capital_lat": -12.5,
     "capital_lon": -42.0,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -38.3811,
+            -12.5
+          ],
+          [
+            -36.5156,
+            -9.3708
+          ],
+          [
+            -39.2112,
+            -6.9719
+          ],
+          [
+            -42.0,
+            -8.1964
+          ],
+          [
+            -45.1794,
+            -8.1665
+          ],
+          [
+            -45.1592,
+            -10.6394
+          ],
+          [
+            -45.9675,
+            -12.5
+          ],
+          [
+            -46.7843,
+            -15.4693
+          ],
+          [
+            -44.0961,
+            -15.9356
+          ],
+          [
+            -42.0,
+            -15.6901
+          ],
+          [
+            -39.5224,
+            -17.3184
+          ],
+          [
+            -38.0862,
+            -14.7093
+          ],
+          [
+            -38.3811,
+            -12.5
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The term 'quilombo' derives from the Kimbundu word 'kilombo' meaning 'war camp' or 'community,' reflecting the Central African origins of many quilombo founders. This entity covers the broader quilombo phenomenon beyond the famous Palmares (already in the database), encompassing thousands of fugitive enslaved communities across Brazil. ETHICS-002: Quilombos represent fundamental acts of resistance against the largest slave system in the Americas. Brazil received more enslaved Africans than any other country (estimated 4-5 million). Quilombo communities developed syncretic cultures blending African, indigenous, and European elements, demonstrating resilience and cultural creation under extreme oppression. The 1988 Brazilian constitution recognized quilombo descendant communities' land rights, but implementation remains contested and incomplete.",
     "name_variants": [
       {
@@ -3248,7 +3915,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Ndee",
@@ -3259,9 +3927,67 @@
     "capital_name": null,
     "capital_lat": 33.5,
     "capital_lon": -109.5,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -105.3521,
+            33.5
+          ],
+          [
+            -103.9014,
+            35.7226
+          ],
+          [
+            -107.0292,
+            37.0663
+          ],
+          [
+            -109.5,
+            36.6675
+          ],
+          [
+            -111.9899,
+            36.6155
+          ],
+          [
+            -113.0868,
+            35.2894
+          ],
+          [
+            -114.4891,
+            33.5
+          ],
+          [
+            -112.7308,
+            31.6904
+          ],
+          [
+            -111.1173,
+            30.7655
+          ],
+          [
+            -109.5,
+            29.6007
+          ],
+          [
+            -106.8819,
+            29.2435
+          ],
+          [
+            -106.3963,
+            31.5864
+          ],
+          [
+            -105.3521,
+            33.5
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: 'Apache' is likely derived from the Zuni word 'apachu' (enemy) or Yavapai 'epache' (people). The peoples collectively called Apache refer to themselves as 'Ndee,' 'Inde,' or 'Nne' (the people) depending on the group. The Apache Nations comprised multiple distinct bands including Chiricahua, Mescalero, Jicarilla, Western Apache, Lipan, and Plains Apache, each with their own leadership and territory. ETHICS-002: US and Mexican military campaigns against the Apache constitute some of the longest and most brutal Indian Wars. Geronimo's surrender (1886) was followed by 27 years of prisoner-of-war status for the Chiricahua at Fort Sill. The Camp Grant Massacre (1871) killed over 100 Apache, mostly women and children. General Crook's campaigns used Apache scouts against other Apache, exploiting inter-band divisions.",
     "name_variants": [
       {
@@ -3344,7 +4070,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Dine Bikeyah",
@@ -3355,9 +4082,67 @@
     "capital_name": "Tseyi' (Canyon de Chelly)",
     "capital_lat": 36.13,
     "capital_lon": -109.47,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -102.1669,
+            36.13
+          ],
+          [
+            -103.1279,
+            39.2455
+          ],
+          [
+            -107.0569,
+            39.1554
+          ],
+          [
+            -109.47,
+            41.4647
+          ],
+          [
+            -111.9807,
+            39.2944
+          ],
+          [
+            -116.3633,
+            39.5133
+          ],
+          [
+            -113.3355,
+            36.13
+          ],
+          [
+            -115.3319,
+            32.9366
+          ],
+          [
+            -113.1588,
+            30.9536
+          ],
+          [
+            -109.47,
+            31.8598
+          ],
+          [
+            -107.4689,
+            32.8668
+          ],
+          [
+            -104.0825,
+            33.6473
+          ],
+          [
+            -102.1669,
+            36.13
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The Navajo self-designation is 'Dine' (the People) and their homeland is 'Dine Bikeyah' (Navajo Country). 'Navajo' is derived from the Tewa Pueblo word 'Navahu'u' (place of large cultivated fields). ETHICS-002: The Long Walk of the Navajo (1864) was a US military campaign of ethnic cleansing. Kit Carson's scorched-earth campaign destroyed Dine orchards, livestock, and homes to force surrender. Approximately 8,000-9,000 Dine were force-marched 300+ miles to Bosque Redondo (Hweldi) internment camp where approximately 2,000 died of disease, starvation, and exposure. The 1868 treaty allowing return to a reduced homeland is one of the few cases where a removed indigenous nation successfully negotiated return. ETHICS-003: The Navajo Nation today is the largest reservation in the US and maintains significant self-governance, representing resilience and continuity.",
     "name_variants": [
       {
@@ -3432,7 +4217,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Seminole / Ikaniuksalgi",
@@ -3443,9 +4229,67 @@
     "capital_name": "Cuscowilla / Alachua",
     "capital_lat": 29.65,
     "capital_lon": -82.32,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -77.9391,
+            29.65
+          ],
+          [
+            -77.9288,
+            31.9529
+          ],
+          [
+            -80.634,
+            32.4568
+          ],
+          [
+            -82.32,
+            33.9039
+          ],
+          [
+            -85.1191,
+            34.093
+          ],
+          [
+            -86.4741,
+            31.6427
+          ],
+          [
+            -86.7461,
+            29.65
+          ],
+          [
+            -87.2714,
+            27.2058
+          ],
+          [
+            -84.3138,
+            26.8718
+          ],
+          [
+            -82.32,
+            25.5167
+          ],
+          [
+            -79.7801,
+            25.1584
+          ],
+          [
+            -78.8835,
+            28.1309
+          ],
+          [
+            -77.9391,
+            29.65
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: 'Seminole' likely derives from the Spanish 'cimarron' (wild/runaway) or the Muskogee 'simanoli' (separatist). The Seminole were not a single pre-existing tribe but an ethnogenesis of Creek dissidents, refugees from other nations, and escaped enslaved Africans (Black Seminoles). This multi-ethnic formation challenges simplistic racial categories. ETHICS-002: The Seminole Wars (1817-1858) were the longest and most expensive Indian Wars fought by the US. The Second Seminole War alone cost the US government over $40 million and 1,500 soldiers. Osceola was captured under a flag of truce -- a violation of the laws of war. Most Seminole were forcibly removed to Oklahoma, but a remnant in the Everglades never surrendered, making the Seminole Nation the only indigenous nation that never signed a peace treaty with the United States.",
     "name_variants": [
       {
@@ -3528,7 +4372,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Otipemisiwak",
@@ -3539,9 +4384,67 @@
     "capital_name": "Red River Settlement (Saint-Boniface)",
     "capital_lat": 49.892,
     "capital_lon": -97.13,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -91.5243,
+            49.892
+          ],
+          [
+            -92.9966,
+            51.3394
+          ],
+          [
+            -94.626,
+            53.488
+          ],
+          [
+            -97.13,
+            53.8976
+          ],
+          [
+            -100.2584,
+            54.1021
+          ],
+          [
+            -103.0235,
+            52.1162
+          ],
+          [
+            -101.7475,
+            49.892
+          ],
+          [
+            -102.8744,
+            47.9938
+          ],
+          [
+            -100.2181,
+            46.0569
+          ],
+          [
+            -97.13,
+            44.9705
+          ],
+          [
+            -93.585,
+            45.3983
+          ],
+          [
+            -93.1763,
+            48.2906
+          ],
+          [
+            -91.5243,
+            49.892
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: 'Metis' (from French 'metis' meaning mixed) or 'Otipemisiwak' (Cree for 'the people who own themselves') designates a distinct indigenous nation that emerged from the unions of French and Scottish fur traders with Cree, Ojibwe, and other First Nations women. The Metis are not simply 'mixed-race' but a distinct people with their own language (Michif), culture, governance (Laws of the Buffalo Hunt), and national identity. ETHICS-002: Louis Riel led two Metis resistance movements (Red River 1869-70, North-West Rebellion 1885). His execution in 1885 remains one of the most controversial events in Canadian history, reflecting English-French and Protestant-Catholic divisions as well as indigenous rights. The Canadian government's suppression of Metis land rights (scrip system) constitutes dispossession through bureaucratic fraud. ETHICS-003: The Metis were recognized as one of Canada's three Aboriginal peoples in the 1982 Constitution but Metis land claims remain largely unresolved.",
     "name_variants": [
       {
@@ -3616,7 +4519,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "California Republic",
@@ -3627,9 +4531,67 @@
     "capital_name": "Sonoma",
     "capital_lat": 38.2919,
     "capital_lon": -122.458,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -118.6858,
+            38.2919
+          ],
+          [
+            -120.7359,
+            39.0406
+          ],
+          [
+            -120.7947,
+            40.0531
+          ],
+          [
+            -122.458,
+            40.841
+          ],
+          [
+            -124.0768,
+            40.4462
+          ],
+          [
+            -124.4151,
+            39.3313
+          ],
+          [
+            -125.8309,
+            38.2919
+          ],
+          [
+            -124.9735,
+            37.2503
+          ],
+          [
+            -124.0606,
+            36.0721
+          ],
+          [
+            -122.458,
+            36.5021
+          ],
+          [
+            -120.9375,
+            36.0654
+          ],
+          [
+            -120.4685,
+            37.4302
+          ],
+          [
+            -118.6858,
+            38.2919
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The California Republic (Bear Flag Republic) lasted only 25 days (June 14 - July 9, 1846) and was primarily an act of American settler aggression against Mexican sovereignty during the Mexican-American War. The 'republic' was proclaimed by a small group of American settlers who seized the Mexican garrison at Sonoma. It was immediately superseded by US military occupation. ETHICS-002: The Gold Rush following US annexation (1848-1855) resulted in catastrophic violence against California's indigenous peoples. An estimated 100,000-150,000 Native Californians died between 1846-1870 through systematic state-sponsored killing, forced labor, starvation, and disease. The California state government paid bounties for indigenous scalps and authorized militia campaigns. This constitutes genocide under any modern definition.",
     "name_variants": [
       {
@@ -3683,7 +4645,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Ko Hawaii Pae Aina",
@@ -3694,9 +4657,67 @@
     "capital_name": "Honolulu",
     "capital_lat": 21.3069,
     "capital_lon": -157.8583,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -153.5623,
+            21.3069
+          ],
+          [
+            -154.0058,
+            23.2223
+          ],
+          [
+            -156.4358,
+            23.613
+          ],
+          [
+            -157.8583,
+            23.8746
+          ],
+          [
+            -159.1507,
+            23.3358
+          ],
+          [
+            -161.294,
+            23.2931
+          ],
+          [
+            -161.289,
+            21.3069
+          ],
+          [
+            -161.3391,
+            19.404
+          ],
+          [
+            -159.5909,
+            18.4363
+          ],
+          [
+            -157.8583,
+            17.7945
+          ],
+          [
+            -156.1481,
+            18.5083
+          ],
+          [
+            -155.0335,
+            19.9446
+          ],
+          [
+            -153.5623,
+            21.3069
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The Kingdom of Hawaii was a fully sovereign, internationally recognized nation with diplomatic relations with the United States, Britain, France, Japan, and many others. Its overthrow in 1893 was an illegal act perpetrated by American businessmen with the active support of US Marines. ETHICS-002: The 1993 Apology Resolution (US Public Law 103-150) officially acknowledged that the overthrow was illegal, that the indigenous Hawaiian people never directly relinquished their sovereignty, and that the US was complicit. Despite this acknowledgment, Hawaiian sovereignty has not been restored. ETHICS-003: Queen Liliuokalani surrendered to avoid bloodshed under protest, explicitly stating she yielded to the superior military force of the United States. Hawaiian language was banned in schools from 1896 to 1986, a policy of cultural suppression. The sovereignty movement (ea) is ongoing and represents a legitimate claim under international law.",
     "name_variants": [
       {
@@ -3784,7 +4805,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Q'umarkaj",
@@ -3795,9 +4817,67 @@
     "capital_name": "Q'umarkaj (Utatlan)",
     "capital_lat": 15.0275,
     "capital_lon": -91.1675,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -87.7244,
+            15.0275
+          ],
+          [
+            -88.4546,
+            16.6595
+          ],
+          [
+            -89.7873,
+            17.8277
+          ],
+          [
+            -91.1675,
+            17.7203
+          ],
+          [
+            -92.2407,
+            16.9984
+          ],
+          [
+            -94.4613,
+            16.7583
+          ],
+          [
+            -93.4959,
+            15.0275
+          ],
+          [
+            -93.0813,
+            14.0955
+          ],
+          [
+            -92.9551,
+            11.9318
+          ],
+          [
+            -91.1675,
+            12.2293
+          ],
+          [
+            -90.0668,
+            13.1694
+          ],
+          [
+            -88.3519,
+            13.4829
+          ],
+          [
+            -87.7244,
+            15.0275
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The K'iche' Maya kingdom is documented in the Popol Vuh, one of the most important indigenous literary works in the Americas, transcribed in Latin script in the 16th century from an older hieroglyphic original that was likely destroyed. The Popol Vuh preserves K'iche' cosmology, mythology, and political history and must be treated as a primary historical source of immense cultural value, not merely as 'myth.' ETHICS-002: Pedro de Alvarado's conquest of the K'iche' (1524) involved extreme violence, including the burning alive of K'iche' rulers Oxib-Keh and Beleheb-Tzy. The Spanish campaign weaponized alliances with rival Maya groups (Kaqchikel). ETHICS-003: The K'iche' Maya constitute the largest Maya-speaking group today (over 1 million speakers), demonstrating cultural and linguistic resilience despite centuries of colonial and post-colonial oppression, including the Guatemalan genocide of the 1980s.",
     "name_variants": [
       {
@@ -3872,7 +4952,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Cuzcatan",
@@ -3883,9 +4964,67 @@
     "capital_name": "Cuzcatan",
     "capital_lat": 13.72,
     "capital_lon": -89.2,
-    "confidence_score": 0.5,
+    "confidence_score": 0.4,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -85.7174,
+            13.72
+          ],
+          [
+            -86.0644,
+            15.3318
+          ],
+          [
+            -87.8503,
+            15.74
+          ],
+          [
+            -89.2,
+            16.2749
+          ],
+          [
+            -91.2646,
+            16.4018
+          ],
+          [
+            -92.2266,
+            15.2947
+          ],
+          [
+            -91.4315,
+            13.72
+          ],
+          [
+            -92.231,
+            11.8931
+          ],
+          [
+            -90.8548,
+            10.5172
+          ],
+          [
+            -89.2,
+            11.5261
+          ],
+          [
+            -87.9469,
+            11.5763
+          ],
+          [
+            -87.1448,
+            12.62
+          ],
+          [
+            -85.7174,
+            13.72
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The Pipil are Nahua-speaking peoples who migrated from central Mexico to Central America in multiple waves. Their language (Nawat) is closely related to Nahuatl but distinct. 'Cuzcatan' (place of jewels/necklaces in Nawat) gives modern El Salvador its name through the Spanish adaptation. ETHICS-002: The Pipil resisted Spanish conquest fiercely; the 1524 campaign under Pedro de Alvarado met stronger resistance here than in Guatemala. Prince Atlacatl (whether historical or legendary) is commemorated as a resistance figure. ETHICS-003: The 1932 La Matanza in El Salvador, in which the Salvadoran military killed an estimated 10,000-40,000 indigenous people (mostly Pipil), effectively destroyed visible indigenous identity in El Salvador. After 1932, Pipil people abandoned traditional dress and language to avoid identification and death. The Nawat language is now critically endangered with fewer than 200 speakers.",
     "name_variants": [
       {
@@ -3960,7 +5099,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Lenca",
@@ -3971,9 +5111,67 @@
     "capital_name": "Cerquin",
     "capital_lat": 14.35,
     "capital_lon": -88.45,
-    "confidence_score": 0.5,
+    "confidence_score": 0.4,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -84.032,
+            14.35
+          ],
+          [
+            -84.725,
+            16.1813
+          ],
+          [
+            -86.0978,
+            18.3994
+          ],
+          [
+            -88.45,
+            17.1753
+          ],
+          [
+            -89.9183,
+            16.7085
+          ],
+          [
+            -92.5943,
+            16.312
+          ],
+          [
+            -91.4831,
+            14.35
+          ],
+          [
+            -91.2364,
+            12.7081
+          ],
+          [
+            -90.7053,
+            10.3114
+          ],
+          [
+            -88.45,
+            9.8323
+          ],
+          [
+            -86.1187,
+            10.9714
+          ],
+          [
+            -86.176,
+            12.8019
+          ],
+          [
+            -84.032,
+            14.35
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The Lenca language is now extinct, and little is known about Lenca self-designation. The term 'Lenca' may derive from a local placename. The Lenca were linguistically isolated, unrelated to surrounding Mesoamerican or Chibchan language families, suggesting deep antiquity in the region. ETHICS-002: Lempira, a Lenca war chief, organized a confederation of 30,000 warriors against Spanish forces in 1537-1539 and is now the national hero of Honduras (the currency is named after him). Spanish accounts state he was killed treacherously during peace negotiations -- lured out under a flag of truce and shot by a Spanish soldier. ETHICS-003: Contemporary Lenca communities in Honduras face violence for environmental and land rights activism. Berta Caceres, a Lenca environmental activist, was assassinated in 2016 for opposing the Agua Zarca hydroelectric dam, highlighting the continuity of indigenous land struggles from the 16th century to the present.",
     "name_variants": [
       {
@@ -4040,6 +5238,7 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   }
 ]

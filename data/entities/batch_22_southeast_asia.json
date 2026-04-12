@@ -8,8 +8,66 @@
     "capital_name": "Manila",
     "capital_lat": 14.5995,
     "capital_lon": 120.9842,
-    "boundary_geojson": null,
-    "confidence_score": 0.85,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            127.7721,
+            14.5995
+          ],
+          [
+            127.1529,
+            18.5668
+          ],
+          [
+            124.0958,
+            19.1663
+          ],
+          [
+            120.9842,
+            21.6548
+          ],
+          [
+            118.3601,
+            18.5712
+          ],
+          [
+            115.0107,
+            17.5153
+          ],
+          [
+            115.325,
+            14.5995
+          ],
+          [
+            115.1097,
+            10.7823
+          ],
+          [
+            117.5149,
+            9.6234
+          ],
+          [
+            120.9842,
+            7.0979
+          ],
+          [
+            123.5398,
+            10.3778
+          ],
+          [
+            126.1787,
+            11.8721
+          ],
+          [
+            127.7721,
+            14.5995
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.75,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Spanish colonial Philippines was administered as part of the Viceroyalty of New Spain (Mexico) until 1821, then directly from Madrid. Spanish colonization imposed Catholicism, the encomienda system, and the reduccion policy that forcibly resettled indigenous communities into compact towns for taxation and religious conversion. The Moro Wars (1565-1898) against the Muslim south represent one of the longest colonial conflicts in history. Indigenous pre-colonial polities (barangay, rajahnates, sultanates) were systematically dismantled. The Galleon Trade (1565-1815) connected Manila to Acapulco but enriched Spain while exploiting Filipino labor. The Philippine Revolution of 1896-1898 under Andres Bonifacio and Emilio Aguinaldo was a genuine independence movement subsequently betrayed by US annexation.",
     "name_variants": [
@@ -76,7 +134,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Gowa-Tallo",
@@ -87,8 +146,66 @@
     "capital_name": "Makassar (Somba Opu)",
     "capital_lat": -5.1477,
     "capital_lon": 119.4327,
-    "boundary_geojson": null,
-    "confidence_score": 0.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            123.5413,
+            -5.1477
+          ],
+          [
+            122.1394,
+            -3.7426
+          ],
+          [
+            120.8904,
+            -2.2865
+          ],
+          [
+            119.4327,
+            -1.8597
+          ],
+          [
+            117.9931,
+            -2.8522
+          ],
+          [
+            117.0039,
+            -3.3597
+          ],
+          [
+            115.5465,
+            -5.1477
+          ],
+          [
+            115.6801,
+            -6.976
+          ],
+          [
+            117.7336,
+            -8.1674
+          ],
+          [
+            119.4327,
+            -9.2474
+          ],
+          [
+            121.0959,
+            -8.9694
+          ],
+          [
+            121.8116,
+            -6.4181
+          ],
+          [
+            123.5413,
+            -5.1477
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The twin kingdoms of Gowa and Tallo (often treated as a single polity, 'Makassar') were the dominant maritime power of eastern Indonesia before Dutch conquest. Sultan Hasanuddin's resistance to VOC monopoly earned him the epithet 'Cock of the East' from the Dutch. The Treaty of Bungaya (1669), imposed by the VOC with Bugis allies, was a profoundly unequal treaty that destroyed Makassarese sovereignty and trade. The VOC systematically dismantled Makassar's role as a free-trade port, forcing spice trade through Dutch monopoly channels. Makassarese diaspora communities spread across the archipelago as a result of the conquest.",
     "name_variants": [
@@ -150,7 +267,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kesultanan Tidore",
@@ -161,8 +279,66 @@
     "capital_name": "Tidore",
     "capital_lat": 0.6833,
     "capital_lon": 127.4,
-    "boundary_geojson": null,
-    "confidence_score": 0.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            129.4946,
+            0.6833
+          ],
+          [
+            129.5543,
+            2.2051
+          ],
+          [
+            128.6892,
+            2.9631
+          ],
+          [
+            127.4,
+            2.9588
+          ],
+          [
+            126.5504,
+            2.6058
+          ],
+          [
+            125.1685,
+            1.8211
+          ],
+          [
+            125.1703,
+            0.6833
+          ],
+          [
+            125.796,
+            -0.3355
+          ],
+          [
+            126.6842,
+            -0.8117
+          ],
+          [
+            127.4,
+            -0.7989
+          ],
+          [
+            128.27,
+            -0.9754
+          ],
+          [
+            129.0716,
+            -0.1845
+          ],
+          [
+            129.4946,
+            0.6833
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
     "status": "confirmed",
     "ethical_notes": "ETHICS: Tidore was Ternate's principal rival in the Spice Islands. The sultanate allied with Spain and Portugal against Ternate's Dutch-allied strategy, demonstrating that indigenous polities actively played European powers against each other. Tidore's territorial claims extended to parts of Halmahera, coastal Papua, and the Raja Ampat Islands -- making it one of the largest pre-colonial polities in eastern Indonesia. The rivalry between Ternate and Tidore predates European arrival and should not be reduced to a proxy conflict between European powers.",
     "name_variants": [
@@ -219,7 +395,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kesultanan Johor",
@@ -230,8 +407,66 @@
     "capital_name": "Johor Lama",
     "capital_lat": 1.5535,
     "capital_lon": 104.126,
-    "boundary_geojson": null,
-    "confidence_score": 0.75,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.8063,
+            1.5535
+          ],
+          [
+            106.8788,
+            2.8235
+          ],
+          [
+            105.1489,
+            3.7036
+          ],
+          [
+            104.126,
+            5.6892
+          ],
+          [
+            102.9446,
+            3.5486
+          ],
+          [
+            101.757,
+            2.7893
+          ],
+          [
+            101.9851,
+            1.5535
+          ],
+          [
+            101.0448,
+            -0.4267
+          ],
+          [
+            102.7399,
+            -0.5654
+          ],
+          [
+            104.126,
+            -2.5118
+          ],
+          [
+            105.9137,
+            -1.5179
+          ],
+          [
+            106.1466,
+            0.3864
+          ],
+          [
+            106.8063,
+            1.5535
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.65,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Sultanate of Johor was the direct successor state of the Sultanate of Malacca, founded by the fleeing Malaccan royal family after the Portuguese conquest of 1511. Johor's history is central to Malay identity and the concept of 'Melayu' (Malayness). The sultanate claimed legitimate succession from Malacca and therefore from Srivijaya, underpinning the idea of a continuous Malay political tradition. Modern Malaysian and Singaporean national narratives draw heavily on Johor's legacy. The Temenggong line that eventually controlled Singapore was a branch of the Johor ruling elite.",
     "name_variants": [
@@ -293,7 +528,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kesultanan Banten",
@@ -304,8 +540,66 @@
     "capital_name": "Banten (Bantam)",
     "capital_lat": -6.0502,
     "capital_lon": 106.1543,
-    "boundary_geojson": null,
-    "confidence_score": 0.75,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            108.3168,
+            -6.0502
+          ],
+          [
+            108.3683,
+            -4.521
+          ],
+          [
+            107.4923,
+            -4.1579
+          ],
+          [
+            106.1543,
+            -2.6915
+          ],
+          [
+            104.3325,
+            -3.3255
+          ],
+          [
+            102.9392,
+            -4.6473
+          ],
+          [
+            103.6457,
+            -6.0502
+          ],
+          [
+            103.4029,
+            -7.3841
+          ],
+          [
+            104.9316,
+            -8.3143
+          ],
+          [
+            106.1543,
+            -9.5554
+          ],
+          [
+            107.6357,
+            -8.3335
+          ],
+          [
+            108.4165,
+            -7.2932
+          ],
+          [
+            108.3168,
+            -6.0502
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.65,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Sultanate of Banten was a major independent Islamic trading state in western Java and southern Sumatra. Sultan Ageng Tirtayasa's resistance to VOC monopoly in the 1680s represents one of the most significant episodes of Indonesian anti-colonial resistance. The VOC exploited a succession crisis between Sultan Ageng and his son Sultan Haji to intervene militarily, installing a puppet ruler and imposing trade monopolies. Banten's pepper trade, previously open to all nations, was forcibly monopolized by the Dutch, devastating the local economy. The VOC's destruction of Banten's cosmopolitan trade network is a case study in how European colonialism undermined existing Asian commercial systems.",
     "name_variants": [
@@ -367,7 +661,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kerajaan Sunda",
@@ -378,8 +673,66 @@
     "capital_name": "Pakuan Pajajaran",
     "capital_lat": -6.5971,
     "capital_lon": 106.806,
-    "boundary_geojson": null,
-    "confidence_score": 0.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            109.5885,
+            -6.5971
+          ],
+          [
+            109.3806,
+            -5.003
+          ],
+          [
+            108.345,
+            -3.9077
+          ],
+          [
+            106.806,
+            -4.7165
+          ],
+          [
+            104.636,
+            -3.4938
+          ],
+          [
+            103.9277,
+            -4.9384
+          ],
+          [
+            104.6637,
+            -6.5971
+          ],
+          [
+            103.8626,
+            -8.038
+          ],
+          [
+            105.6565,
+            -8.8265
+          ],
+          [
+            106.806,
+            -9.319
+          ],
+          [
+            108.0173,
+            -8.5204
+          ],
+          [
+            109.5922,
+            -7.8381
+          ],
+          [
+            109.5885,
+            -6.5971
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Sunda Kingdom (also called Pajajaran) was a Hindu-Buddhist polity in western Java whose history is underrepresented compared to the Javanese kingdoms of Central and East Java. The Sundanese people maintain a distinct cultural identity from the Javanese, and the history of the Sunda Kingdom is important to Sundanese ethnic consciousness. The fall of Sunda to the Islamic Sultanate of Banten (1579) and the earlier betrayal at Sunda Kelapa by Demak-allied forces (1527) are sensitive events that involved the destruction of Hindu-Buddhist culture in western Java. The Carita Parahyangan, the main Sundanese chronicle, mixes historical and legendary material.",
     "name_variants": [
@@ -446,7 +799,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "အင်းဝခေတ်",
@@ -457,8 +811,66 @@
     "capital_name": "Inwa (Ava)",
     "capital_lat": 21.85,
     "capital_lon": 95.9833,
-    "boundary_geojson": null,
-    "confidence_score": 0.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            99.913,
+            21.85
+          ],
+          [
+            99.0536,
+            23.3323
+          ],
+          [
+            97.3406,
+            24.0269
+          ],
+          [
+            95.9833,
+            24.1703
+          ],
+          [
+            94.7946,
+            23.4444
+          ],
+          [
+            93.9862,
+            22.9267
+          ],
+          [
+            92.0767,
+            21.85
+          ],
+          [
+            93.6017,
+            20.8168
+          ],
+          [
+            94.8994,
+            20.1081
+          ],
+          [
+            95.9833,
+            18.567
+          ],
+          [
+            97.1736,
+            20.0997
+          ],
+          [
+            98.2133,
+            20.4521
+          ],
+          [
+            99.913,
+            21.85
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Kingdom of Ava was the primary Burmese successor state after the fall of Pagan. Its history is intertwined with conflicts with the Shan states and the Mon Kingdom of Hanthawaddy, reflecting the ethnic complexity of pre-colonial Burma. Burmese nationalist historiography often portrays Ava as the legitimate continuation of Pagan-era Burmese civilization, but the kingdom's founders were heavily Shan-influenced, and the strict Burman/Shan ethnic distinction is an oversimplification imposed by later historiography.",
     "name_variants": [
@@ -515,7 +927,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ဟံသာဝတီ",
@@ -526,8 +939,66 @@
     "capital_name": "Bago (Pegu)",
     "capital_lat": 17.335,
     "capital_lon": 96.4814,
-    "boundary_geojson": null,
-    "confidence_score": 0.65,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            99.321,
+            17.335
+          ],
+          [
+            98.5565,
+            18.5133
+          ],
+          [
+            97.8103,
+            19.4921
+          ],
+          [
+            96.4814,
+            20.6082
+          ],
+          [
+            94.5803,
+            20.5848
+          ],
+          [
+            94.0609,
+            18.8863
+          ],
+          [
+            94.307,
+            17.335
+          ],
+          [
+            93.9274,
+            15.8152
+          ],
+          [
+            95.3643,
+            15.1481
+          ],
+          [
+            96.4814,
+            14.4858
+          ],
+          [
+            98.032,
+            14.1195
+          ],
+          [
+            99.7812,
+            15.5121
+          ],
+          [
+            99.321,
+            17.335
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Kingdom of Hanthawaddy (Pegu) was the primary Mon political entity in Lower Burma. Mon identity and history have been systematically marginalized in Burmese nationalist historiography, which centers Burman ethnic identity. The Mon were culturally influential -- introducing Theravada Buddhism and literacy to the Burmese -- yet were repeatedly conquered and their political autonomy destroyed. The fall of Hanthawaddy in 1539 to Toungoo and again in 1757 to Konbaung (with the destruction of the city of Pegu) involved massacres and forced assimilation. Today the Mon are a minority in Myanmar with limited recognition of their historical contributions.",
     "name_variants": [
@@ -589,7 +1060,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "မြောက်ဦးခေတ်",
@@ -600,8 +1072,66 @@
     "capital_name": "Mrauk U",
     "capital_lat": 20.5958,
     "capital_lon": 93.2047,
-    "boundary_geojson": null,
-    "confidence_score": 0.65,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            97.831,
+            20.5958
+          ],
+          [
+            95.9091,
+            22.3827
+          ],
+          [
+            95.7431,
+            24.6836
+          ],
+          [
+            93.2047,
+            24.4786
+          ],
+          [
+            91.0092,
+            23.6263
+          ],
+          [
+            89.1737,
+            22.6727
+          ],
+          [
+            89.7737,
+            20.5958
+          ],
+          [
+            90.0908,
+            18.9726
+          ],
+          [
+            90.9604,
+            16.5572
+          ],
+          [
+            93.2047,
+            16.9834
+          ],
+          [
+            95.7504,
+            16.8412
+          ],
+          [
+            96.7699,
+            18.484
+          ],
+          [
+            97.831,
+            20.5958
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Kingdom of Mrauk U (Arakan) was an independent Arakanese/Rakhine Buddhist kingdom with strong ties to the Bengal Sultanate and Mughal India. Arakan's history is highly contested in the context of the modern Rohingya crisis. Mrauk U's rulers used both Buddhist and Islamic titles, employed Muslim courtiers, and minted coins with Arabic inscriptions, reflecting a multicultural polity. The question of whether Muslims in historical Arakan were 'indigenous' or 'settlers' is politically charged and instrumentalized by multiple sides. This database records the documented historical evidence without adjudicating modern ethnic claims.",
     "name_variants": [
@@ -663,7 +1193,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ปาตานี",
@@ -674,8 +1205,66 @@
     "capital_name": "Patani",
     "capital_lat": 6.8691,
     "capital_lon": 101.2508,
-    "boundary_geojson": null,
-    "confidence_score": 0.65,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            103.1398,
+            6.8691
+          ],
+          [
+            103.0607,
+            7.7742
+          ],
+          [
+            102.6749,
+            9.3413
+          ],
+          [
+            101.2508,
+            8.9528
+          ],
+          [
+            100.0926,
+            9.1564
+          ],
+          [
+            98.4376,
+            8.7102
+          ],
+          [
+            98.0908,
+            6.8691
+          ],
+          [
+            99.185,
+            5.4287
+          ],
+          [
+            99.9042,
+            4.588
+          ],
+          [
+            101.2508,
+            4.5597
+          ],
+          [
+            102.2883,
+            5.2682
+          ],
+          [
+            103.1318,
+            5.9762
+          ],
+          [
+            103.1398,
+            6.8691
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Sultanate of Patani was an independent Malay Muslim state in what is now southern Thailand. Its forcible incorporation into Siam is the root cause of the ongoing conflict in Thailand's southern border provinces (Pattani, Yala, Narathiwat). Thai nationalist historiography treats Patani as a historically Thai territory, while Malay-Muslim narratives view it as an occupied Malay state. The violent suppression of Patani autonomy, including the 1909 Anglo-Siamese Treaty that placed it under Thai sovereignty without consulting its people, the 1902 abolition of the sultanate, and repeated Thai military crackdowns, are ongoing sources of grievance. This entry records Patani as a historically independent entity per the available evidence.",
     "name_variants": [
@@ -742,7 +1331,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ອານາຈັກວຽງຈັນ",
@@ -753,8 +1343,66 @@
     "capital_name": "Vientiane",
     "capital_lat": 17.9757,
     "capital_lon": 102.6331,
-    "boundary_geojson": null,
-    "confidence_score": 0.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            107.1378,
+            17.9757
+          ],
+          [
+            106.0673,
+            19.9797
+          ],
+          [
+            104.5635,
+            21.2194
+          ],
+          [
+            102.6331,
+            21.019
+          ],
+          [
+            101.1215,
+            20.5737
+          ],
+          [
+            99.2841,
+            19.7481
+          ],
+          [
+            97.7304,
+            17.9757
+          ],
+          [
+            99.6774,
+            16.1219
+          ],
+          [
+            100.4951,
+            15.1314
+          ],
+          [
+            102.6331,
+            14.4518
+          ],
+          [
+            103.9304,
+            15.9061
+          ],
+          [
+            105.5545,
+            16.3004
+          ],
+          [
+            107.1378,
+            17.9757
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Kingdom of Vientiane was one of three successor states formed after the breakup of Lan Xang in 1707. Its destruction by Siam in 1828 was one of the most devastating events in Lao history. King Anuvong's revolt against Siamese suzerainty (1826-1828) was met with the complete destruction of Vientiane, deportation of most of its population to Siamese territory, and the near-erasure of the city. Thai nationalist historiography portrays Anuvong as a rebel; Lao nationalist historiography celebrates him as a hero of independence. The depopulation of the Vientiane plain by Siamese forces constitutes a demographic catastrophe whose effects shaped modern Laos.",
     "name_variants": [
@@ -811,7 +1459,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kerajaan Gelgel",
@@ -822,8 +1471,66 @@
     "capital_name": "Gelgel",
     "capital_lat": -8.535,
     "capital_lon": 115.453,
-    "boundary_geojson": null,
-    "confidence_score": 0.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            119.5412,
+            -8.535
+          ],
+          [
+            118.7137,
+            -6.5952
+          ],
+          [
+            117.5341,
+            -5.3757
+          ],
+          [
+            115.453,
+            -5.5302
+          ],
+          [
+            113.5271,
+            -5.163
+          ],
+          [
+            111.9616,
+            -6.801
+          ],
+          [
+            111.1347,
+            -8.535
+          ],
+          [
+            112.5768,
+            -10.123
+          ],
+          [
+            113.803,
+            -11.5194
+          ],
+          [
+            115.453,
+            -12.1001
+          ],
+          [
+            117.5017,
+            -12.1475
+          ],
+          [
+            118.4447,
+            -10.0452
+          ],
+          [
+            119.5412,
+            -8.535
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Kingdom of Gelgel was the first unified Balinese Hindu kingdom and the primary refuge for Hindu-Javanese culture after the fall of Majapahit. Bali's preservation of Hindu civilization while the rest of the Indonesian archipelago Islamized makes it culturally unique. However, the narrative that Bali 'preserved pure Majapahit culture' is an oversimplification: Balinese Hinduism evolved distinctly, incorporating local animist traditions. The Gelgel period established the caste system (wangsa) and courtly traditions that define Balinese identity today. Dutch colonial scholars romanticized Bali as a 'living museum' of Hindu-Javanese culture, a characterization that served colonial purposes of divide-and-rule.",
     "name_variants": [
@@ -885,7 +1592,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kesultanan Cirebon",
@@ -896,8 +1604,66 @@
     "capital_name": "Cirebon",
     "capital_lat": -6.732,
     "capital_lon": 108.5523,
-    "boundary_geojson": null,
-    "confidence_score": 0.65,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            110.2749,
+            -6.732
+          ],
+          [
+            110.5166,
+            -5.4465
+          ],
+          [
+            109.364,
+            -5.3062
+          ],
+          [
+            108.5523,
+            -5.2128
+          ],
+          [
+            107.5691,
+            -4.7698
+          ],
+          [
+            105.8936,
+            -5.41
+          ],
+          [
+            106.0865,
+            -6.732
+          ],
+          [
+            105.7751,
+            -8.448
+          ],
+          [
+            107.2283,
+            -8.8572
+          ],
+          [
+            108.5523,
+            -9.6268
+          ],
+          [
+            109.4234,
+            -8.5086
+          ],
+          [
+            111.1193,
+            -8.1536
+          ],
+          [
+            110.2749,
+            -6.732
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Sultanate of Cirebon occupied a unique cultural position at the boundary between Sundanese and Javanese cultural zones. Sunan Gunung Jati, its founding figure and one of the Wali Songo, is revered as a saint in Javanese Islamic tradition. Cirebon's syncretic culture blended Javanese, Sundanese, Chinese, and Islamic elements. The VOC forced Cirebon into a subordinate treaty in 1681, beginning the erosion of its sovereignty. The sultanate was eventually split into three competing courts (Kasepuhan, Kanoman, Kacirebonan), a division partly engineered by Dutch colonial policy.",
     "name_variants": [
@@ -946,7 +1712,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ပင်းယခေတ်",
@@ -957,8 +1724,66 @@
     "capital_name": "Pinya",
     "capital_lat": 21.88,
     "capital_lon": 95.96,
-    "boundary_geojson": null,
-    "confidence_score": 0.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            99.355,
+            21.88
+          ],
+          [
+            99.4271,
+            23.4832
+          ],
+          [
+            97.3892,
+            24.0315
+          ],
+          [
+            95.96,
+            24.1424
+          ],
+          [
+            94.7213,
+            24.2674
+          ],
+          [
+            93.1825,
+            23.7498
+          ],
+          [
+            91.6896,
+            21.88
+          ],
+          [
+            93.7105,
+            20.5995
+          ],
+          [
+            93.8002,
+            19.2071
+          ],
+          [
+            95.96,
+            18.132
+          ],
+          [
+            97.5273,
+            19.712
+          ],
+          [
+            99.1071,
+            20.0156
+          ],
+          [
+            99.355,
+            21.88
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
     "status": "uncertain",
     "ethical_notes": "ETHICS: The Kingdom of Pinya was one of the small successor states that emerged from the collapse of the Pagan Empire. Together with Myinsaing and Sagaing, it represents the fragmentation of Upper Burma in the 14th century. These petty kingdoms are often glossed over in Burmese historical narratives that emphasize the grand empires (Pagan, Toungoo, Konbaung), but they represent an important period of Shan-Burmese cultural interaction. The founding 'Three Shan Brothers' of Myinsaing who preceded Pinya demonstrate the deep Shan influence on Upper Burmese politics.",
     "name_variants": [
@@ -1002,7 +1827,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "စစ်ကိုင်းခေတ်",
@@ -1013,8 +1839,66 @@
     "capital_name": "Sagaing",
     "capital_lat": 21.8787,
     "capital_lon": 95.9785,
-    "boundary_geojson": null,
-    "confidence_score": 0.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            99.2772,
+            21.8787
+          ],
+          [
+            100.0608,
+            23.6933
+          ],
+          [
+            97.4991,
+            24.9388
+          ],
+          [
+            95.9785,
+            26.2021
+          ],
+          [
+            94.1391,
+            24.8099
+          ],
+          [
+            92.8548,
+            23.2864
+          ],
+          [
+            92.6135,
+            21.8787
+          ],
+          [
+            93.2685,
+            20.2686
+          ],
+          [
+            94.5968,
+            19.782
+          ],
+          [
+            95.9785,
+            19.7338
+          ],
+          [
+            98.2567,
+            18.2689
+          ],
+          [
+            99.197,
+            20.5052
+          ],
+          [
+            99.2772,
+            21.8787
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
     "status": "uncertain",
     "ethical_notes": "ETHICS: The Kingdom of Sagaing coexisted with Pinya as a rival successor state in Upper Burma. Sagaing is particularly significant for its role as a major center of Theravada Buddhist scholarship and monasticism. The Sagaing Hills remain one of the most important monastic sites in Myanmar. The kingdom's brief independent existence is often overshadowed by the larger polities that preceded and followed it.",
     "name_variants": [
@@ -1058,7 +1942,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kesultanan Palembang Darussalam",
@@ -1069,8 +1954,66 @@
     "capital_name": "Palembang",
     "capital_lat": -2.9761,
     "capital_lon": 104.7754,
-    "boundary_geojson": null,
-    "confidence_score": 0.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            107.0552,
+            -2.9761
+          ],
+          [
+            107.5788,
+            -1.4275
+          ],
+          [
+            106.284,
+            -0.1881
+          ],
+          [
+            104.7754,
+            -0.0929
+          ],
+          [
+            103.5541,
+            -0.6924
+          ],
+          [
+            102.8424,
+            -1.9395
+          ],
+          [
+            102.5041,
+            -2.9761
+          ],
+          [
+            102.3005,
+            -4.5155
+          ],
+          [
+            103.2275,
+            -5.9313
+          ],
+          [
+            104.7754,
+            -5.4435
+          ],
+          [
+            106.4666,
+            -6.1289
+          ],
+          [
+            106.38,
+            -3.9674
+          ],
+          [
+            107.0552,
+            -2.9761
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Sultanate of Palembang Darussalam emerged in the former heartland of Srivijaya and claimed spiritual continuity with that ancient empire. Palembang was a major center of the pepper trade and Chinese-Malay cultural interaction. The Dutch conquered the sultanate in 1821-1823 with considerable violence. Sultan Mahmud Badaruddin II, who resisted the Dutch, is a national hero in Indonesia. The Dutch justification for conquest -- suppression of piracy and protection of trade -- masked the economic exploitation that followed. The large Chinese community in Palembang played a significant economic role but also suffered periodic violence, including a massacre in 1811.",
     "name_variants": [
@@ -1127,7 +2070,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Bone",
@@ -1138,8 +2082,66 @@
     "capital_name": "Watampone (Bone)",
     "capital_lat": -4.5383,
     "capital_lon": 120.3297,
-    "boundary_geojson": null,
-    "confidence_score": 0.65,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            124.5197,
+            -4.5383
+          ],
+          [
+            123.7454,
+            -2.9335
+          ],
+          [
+            121.7625,
+            -2.2269
+          ],
+          [
+            120.3297,
+            -0.5569
+          ],
+          [
+            118.2848,
+            -1.5246
+          ],
+          [
+            116.523,
+            -2.2151
+          ],
+          [
+            117.8748,
+            -4.5383
+          ],
+          [
+            117.1683,
+            -6.3293
+          ],
+          [
+            118.7812,
+            -7.2541
+          ],
+          [
+            120.3297,
+            -6.6206
+          ],
+          [
+            122.0321,
+            -7.7442
+          ],
+          [
+            122.5139,
+            -5.7357
+          ],
+          [
+            124.5197,
+            -4.5383
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Kingdom of Bone was the most powerful Bugis state in South Sulawesi. Bugis identity and political tradition are distinct from both Makassarese and Javanese cultures. Arung Palakka, the Bone prince who allied with the VOC to defeat Makassar in 1669, is a highly polarizing figure: celebrated in Bone as a liberator from Makassarese domination, but condemned in Makassarese tradition as a traitor who enabled European colonialism. This database records both perspectives. The Bugis were among the most mobile peoples of the Indonesian archipelago, establishing diaspora communities throughout Southeast Asia.",
     "name_variants": [
@@ -1201,7 +2203,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kasultanan Pajang",
@@ -1212,8 +2215,66 @@
     "capital_name": "Pajang (near Surakarta)",
     "capital_lat": -7.57,
     "capital_lon": 110.81,
-    "boundary_geojson": null,
-    "confidence_score": 0.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            113.705,
+            -7.57
+          ],
+          [
+            114.2089,
+            -5.9924
+          ],
+          [
+            112.8378,
+            -4.652
+          ],
+          [
+            110.81,
+            -3.3404
+          ],
+          [
+            108.9722,
+            -4.3057
+          ],
+          [
+            108.4712,
+            -5.8557
+          ],
+          [
+            108.5989,
+            -7.57
+          ],
+          [
+            108.4441,
+            -9.0511
+          ],
+          [
+            109.3631,
+            -10.0812
+          ],
+          [
+            110.81,
+            -9.8346
+          ],
+          [
+            111.8307,
+            -9.4487
+          ],
+          [
+            112.6709,
+            -8.8391
+          ],
+          [
+            113.705,
+            -7.57
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Sultanate of Pajang was a transitional state between the decline of Demak and the rise of Mataram, representing the consolidation of Islamic political power in the Javanese interior. Jaka Tingkir (Sultan Hadiwijaya), its founder, is a significant figure in Javanese oral tradition and the Babad Tanah Jawi. His reign marks the shift of Javanese political gravity from the north coast (pasisir) trading cities to the agrarian interior (kejawen), with lasting consequences for Javanese political culture.",
     "name_variants": [
@@ -1262,7 +2323,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kesultanan Banjar",
@@ -1273,8 +2335,66 @@
     "capital_name": "Banjarmasin",
     "capital_lat": -3.3194,
     "capital_lon": 114.5907,
-    "boundary_geojson": null,
-    "confidence_score": 0.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            117.8848,
+            -3.3194
+          ],
+          [
+            118.0469,
+            -1.546
+          ],
+          [
+            116.3221,
+            -0.6105
+          ],
+          [
+            114.5907,
+            -0.6557
+          ],
+          [
+            113.185,
+            -0.712
+          ],
+          [
+            112.5281,
+            -1.867
+          ],
+          [
+            111.6207,
+            -3.3194
+          ],
+          [
+            112.1198,
+            -4.7882
+          ],
+          [
+            113.4829,
+            -5.1664
+          ],
+          [
+            114.5907,
+            -5.5724
+          ],
+          [
+            116.1835,
+            -6.0225
+          ],
+          [
+            117.1534,
+            -4.8933
+          ],
+          [
+            117.8848,
+            -3.3194
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Sultanate of Banjar in southeastern Borneo controlled the pepper and diamond trades. Its destruction by the Dutch in the Banjar War (1859-1863) involved scorched-earth tactics and the forced abdication of the last sultan. The Banjarese people today maintain a strong Islamic identity rooted in the sultanate period. Dutch colonial exploitation of Borneo's resources (rubber, oil, coal) followed the sultanate's destruction. Prince Antasari's resistance to Dutch conquest is celebrated as a national hero of Indonesia.",
     "name_variants": [
@@ -1341,7 +2461,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kerajaan Klungkung",
@@ -1352,8 +2473,66 @@
     "capital_name": "Klungkung (Semarapura)",
     "capital_lat": -8.5362,
     "capital_lon": 115.4073,
-    "boundary_geojson": null,
-    "confidence_score": 0.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            117.6994,
+            -8.5362
+          ],
+          [
+            117.2234,
+            -7.3321
+          ],
+          [
+            116.7209,
+            -6.5514
+          ],
+          [
+            115.4073,
+            -4.7729
+          ],
+          [
+            114.2272,
+            -6.8619
+          ],
+          [
+            112.8484,
+            -6.9611
+          ],
+          [
+            112.1393,
+            -8.5362
+          ],
+          [
+            112.9341,
+            -9.9745
+          ],
+          [
+            114.0293,
+            -10.8444
+          ],
+          [
+            115.4073,
+            -10.5701
+          ],
+          [
+            116.7883,
+            -10.9661
+          ],
+          [
+            117.4967,
+            -9.702
+          ],
+          [
+            117.6994,
+            -8.5362
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Kingdom of Klungkung was the paramount Hindu court of Bali, holding ceremonial precedence (though not always political power) over the other Balinese kingdoms. The Dutch conquest of Bali culminated in the puputan of 1906 (Badung) and 1908 (Klungkung), mass ritual suicides in which Balinese royal families marched into Dutch gunfire rather than surrender. The puputan of Klungkung -- in which Dewa Agung Jambe and his court dressed in white ceremonial garments and walked into Dutch rifle fire -- is one of the most devastating events of Dutch colonialism and profoundly shaped Indonesian national consciousness. Dutch colonial officers expressed shock, yet the conquest continued.",
     "name_variants": [
@@ -1415,7 +2594,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Rajahnate of Maynila",
@@ -1426,8 +2606,66 @@
     "capital_name": "Maynila",
     "capital_lat": 14.5923,
     "capital_lon": 120.974,
-    "boundary_geojson": null,
-    "confidence_score": 0.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            121.476,
+            14.5923
+          ],
+          [
+            121.4592,
+            14.8817
+          ],
+          [
+            121.2537,
+            15.2141
+          ],
+          [
+            120.974,
+            15.1806
+          ],
+          [
+            120.6425,
+            15.0436
+          ],
+          [
+            120.6064,
+            14.7809
+          ],
+          [
+            120.5088,
+            14.5923
+          ],
+          [
+            120.5638,
+            14.3605
+          ],
+          [
+            120.7536,
+            14.1683
+          ],
+          [
+            120.974,
+            14.0319
+          ],
+          [
+            121.3353,
+            14.0378
+          ],
+          [
+            121.332,
+            14.3787
+          ],
+          [
+            121.476,
+            14.5923
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Rajahnate of Maynila was an Islamic polity at the mouth of the Pasig River, predating and directly displaced by Spanish colonization. Rajah Sulayman III resisted Spanish conquest and was killed defending his city. Spanish sources describe Maynila as a thriving Muslim trading settlement with connections to Brunei, Borneo, and the broader Malay-Islamic world. The conversion of Manila's rulers to Islam (from Brunei influence) and the subsequent Spanish re-conquest and Christianization represent a violent erasure of an Islamic layer of Philippine history that Filipino historiography has only recently begun to recover.",
     "name_variants": [
@@ -1489,7 +2727,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kesultanan Sambas",
@@ -1500,8 +2739,66 @@
     "capital_name": "Sambas",
     "capital_lat": 1.3587,
     "capital_lon": 109.3061,
-    "boundary_geojson": null,
-    "confidence_score": 0.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            112.0489,
+            1.3587
+          ],
+          [
+            110.8424,
+            2.1843
+          ],
+          [
+            110.7484,
+            4.1457
+          ],
+          [
+            109.3061,
+            4.8612
+          ],
+          [
+            108.0513,
+            3.7581
+          ],
+          [
+            106.8941,
+            2.4425
+          ],
+          [
+            107.0051,
+            1.3587
+          ],
+          [
+            106.8908,
+            0.2817
+          ],
+          [
+            107.8516,
+            -0.7431
+          ],
+          [
+            109.3061,
+            -1.1569
+          ],
+          [
+            110.8375,
+            -1.4941
+          ],
+          [
+            111.9309,
+            -0.1666
+          ],
+          [
+            112.0489,
+            1.3587
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Sultanate of Sambas in western Borneo was a significant Malay-Islamic polity whose economy was transformed by Chinese gold mining kongsis (communities). The relationship between the Malay sultanate and the Chinese mining settlements was complex -- initially symbiotic but later marked by conflict. The Dutch intervention in Sambas was partly driven by the desire to control Chinese gold mining communities, leading to the destruction of the Lanfang Republic (a Chinese kongsi) in 1884 and the subordination of the sultanate.",
     "name_variants": [
@@ -1550,7 +2847,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Lanfang Gongheguo",
@@ -1561,8 +2859,66 @@
     "capital_name": "Mandor (Pontianak region)",
     "capital_lat": 0.05,
     "capital_lon": 109.3,
-    "boundary_geojson": null,
-    "confidence_score": 0.65,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            110.8,
+            0.05
+          ],
+          [
+            111.1418,
+            0.9309
+          ],
+          [
+            110.3122,
+            1.6556
+          ],
+          [
+            109.3,
+            2.3486
+          ],
+          [
+            107.8153,
+            2.3593
+          ],
+          [
+            107.2607,
+            1.4752
+          ],
+          [
+            106.7239,
+            0.05
+          ],
+          [
+            106.7804,
+            -1.3531
+          ],
+          [
+            108.0933,
+            -1.9776
+          ],
+          [
+            109.3,
+            -2.2183
+          ],
+          [
+            110.5499,
+            -1.9214
+          ],
+          [
+            110.7042,
+            -0.7968
+          ],
+          [
+            110.8,
+            0.05
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Lanfang Republic was a Chinese-led polity in western Borneo that has been variously described as the 'first republic in Asia' or simply a mining kongsi (corporate community). Chinese nationalist historiography sometimes overstates its political sophistication, while Dutch colonial sources minimized its significance. The reality was a self-governing Hakka Chinese mining community with elected leaders that existed for over a century. Its destruction by the Dutch in 1884 was part of the broader colonial consolidation of Borneo. The Lanfang Republic's multiethnic dimension -- Hakka Chinese coexisting with Dayak and Malay populations -- complicates simplistic ethnic narratives.",
     "name_variants": [
@@ -1616,7 +2972,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "British Burma",
@@ -1627,8 +2984,66 @@
     "capital_name": "Rangoon (Yangon)",
     "capital_lat": 16.8661,
     "capital_lon": 96.1951,
-    "boundary_geojson": null,
-    "confidence_score": 0.85,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            99.0358,
+            16.8661
+          ],
+          [
+            99.4178,
+            18.8527
+          ],
+          [
+            98.8336,
+            21.5282
+          ],
+          [
+            96.1951,
+            21.4919
+          ],
+          [
+            93.5173,
+            20.7146
+          ],
+          [
+            92.589,
+            18.5326
+          ],
+          [
+            90.4755,
+            16.8661
+          ],
+          [
+            92.375,
+            15.1458
+          ],
+          [
+            93.7739,
+            12.834
+          ],
+          [
+            96.1951,
+            12.357
+          ],
+          [
+            98.0725,
+            13.8943
+          ],
+          [
+            99.0479,
+            15.2664
+          ],
+          [
+            99.0358,
+            16.8661
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.75,
     "status": "confirmed",
     "ethical_notes": "ETHICS: British colonization of Burma occurred through three Anglo-Burmese Wars (1824-26, 1852, 1885). The third war and annexation of Upper Burma (1885) involved the exile of King Thibaw and Queen Supayalat, the looting of Mandalay Palace, and the destruction of the Burmese monarchy. British colonial policy favored ethnic minorities (Karen, Chin, Kachin) for military service while marginalizing the Burman majority, creating ethnic divisions that persist in post-independence Myanmar's civil wars. Indian immigration under British rule, particularly into Lower Burma's rice economy, created demographic changes that fueled anti-Indian violence. The colonial extraction of teak, oil, and rice enriched Britain while impoverishing Burmese cultivators.",
     "name_variants": [
@@ -1695,7 +3110,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kerajaan Lombok",
@@ -1706,8 +3122,66 @@
     "capital_name": "Cakranegara",
     "capital_lat": -8.5855,
     "capital_lon": 116.13,
-    "boundary_geojson": null,
-    "confidence_score": 0.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            120.8359,
+            -8.5855
+          ],
+          [
+            118.7859,
+            -7.1812
+          ],
+          [
+            118.4001,
+            -4.3835
+          ],
+          [
+            116.13,
+            -3.1941
+          ],
+          [
+            113.7657,
+            -4.6686
+          ],
+          [
+            112.9573,
+            -6.8283
+          ],
+          [
+            112.5588,
+            -8.5855
+          ],
+          [
+            113.5502,
+            -10.2579
+          ],
+          [
+            114.8597,
+            -11.0166
+          ],
+          [
+            116.13,
+            -11.969
+          ],
+          [
+            117.6293,
+            -11.4569
+          ],
+          [
+            119.842,
+            -10.2052
+          ],
+          [
+            120.8359,
+            -8.5855
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Kingdom of Lombok was a Balinese Hindu kingdom ruling over a predominantly Sasak Muslim population, representing a case of minority ethno-religious rule. The Dutch conquest of Lombok in 1894 was justified as 'liberating' the Sasak from Balinese oppression, but in reality served Dutch imperial interests. The puputan of the Mataram court in Lombok (1894), in which the Balinese raja and his followers chose ritual suicide rather than surrender, was one of the first such events to shock European public opinion. The complex relationship between Balinese Hindu rulers and Sasak Muslim subjects defies simplistic colonizer/colonized narratives.",
     "name_variants": [
@@ -1756,7 +3230,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kesultanan Pontianak",
@@ -1767,8 +3242,66 @@
     "capital_name": "Pontianak",
     "capital_lat": 0.0,
     "capital_lon": 109.3333,
-    "boundary_geojson": null,
-    "confidence_score": 0.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            112.8005,
+            0.0
+          ],
+          [
+            111.3198,
+            1.0373
+          ],
+          [
+            110.4737,
+            1.7973
+          ],
+          [
+            109.3333,
+            2.803
+          ],
+          [
+            107.9797,
+            2.6273
+          ],
+          [
+            107.1439,
+            1.2955
+          ],
+          [
+            105.9808,
+            0.0
+          ],
+          [
+            106.9447,
+            -1.2455
+          ],
+          [
+            108.3528,
+            -1.96
+          ],
+          [
+            109.3333,
+            -3.1477
+          ],
+          [
+            111.0467,
+            -3.038
+          ],
+          [
+            112.8205,
+            -1.7852
+          ],
+          [
+            112.8005,
+            0.0
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Sultanate of Pontianak was founded by Sharif Abdurrahman Alkadrie, an Arab-Malay trader from the Hadhrami diaspora, at the exact equator on the coast of western Borneo. The sultanate's founding represents the wider phenomenon of Hadhrami Arab diaspora establishing political authority in the Malay-Indonesian archipelago through trade and Islamic prestige. Pontianak's relationship with the Dutch and the neighboring Chinese kongsis (including the Lanfang Republic) shaped the complex ethnic politics of western Borneo. The Japanese occupation during WWII saw the massacre of the Malay and Chinese elites in the Pontianak Incidents (Mandor Affair, 1943-1944), killing thousands.",
     "name_variants": [
@@ -1825,6 +3358,7 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   }
 ]

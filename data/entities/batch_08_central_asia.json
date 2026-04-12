@@ -8,9 +8,67 @@
     "capital_name": "Ötüken",
     "capital_lat": 47.46,
     "capital_lon": 102.83,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            114.3407,
+            47.46
+          ],
+          [
+            117.022,
+            53.4354
+          ],
+          [
+            110.7447,
+            56.024
+          ],
+          [
+            102.83,
+            59.6078
+          ],
+          [
+            96.5503,
+            54.093
+          ],
+          [
+            89.7102,
+            51.4332
+          ],
+          [
+            86.4072,
+            47.46
+          ],
+          [
+            91.9002,
+            43.6144
+          ],
+          [
+            95.3473,
+            36.6621
+          ],
+          [
+            102.83,
+            39.6415
+          ],
+          [
+            111.2651,
+            38.8784
+          ],
+          [
+            110.8396,
+            43.5801
+          ],
+          [
+            114.3407,
+            47.46
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Old Turkic runic script (Orkhon script), as preserved on the Orkhon inscriptions — the earliest known Turkic writing. The Göktürks self-identified as Türük/Türk, making this the origin of the ethnonym 'Turk'. ETHICS-002: The Göktürk Empire encompassed dozens of distinct Turkic and non-Turkic steppe peoples; presenting it as a monolithic 'Turkish' empire risks anachronistic ethnic projection. The Orkhon inscriptions describe the Khaganate's own view of its multiethnic dominion. ETHICS-003: Boundaries for steppe empires are inherently approximate — control was exercised over peoples and trade routes, not fixed territorial lines.",
     "name_variants": [
       {
@@ -113,7 +171,8 @@
         "citation": "Skaff, J.K. Sui-Tang China and Its Turko-Mongol Neighbors: Culture, Power, and Connections (2012)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "כוזרים / Хазарлар",
@@ -124,9 +183,67 @@
     "capital_name": "Atil (Itil)",
     "capital_lat": 46.35,
     "capital_lon": 47.98,
-    "confidence_score": 0.55,
+    "confidence_score": 0.45,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            60.2304,
+            46.35
+          ],
+          [
+            60.9119,
+            51.9741
+          ],
+          [
+            54.8027,
+            56.6264
+          ],
+          [
+            47.98,
+            56.0948
+          ],
+          [
+            38.461,
+            58.9062
+          ],
+          [
+            37.4805,
+            50.9365
+          ],
+          [
+            29.6865,
+            46.35
+          ],
+          [
+            32.4754,
+            40.5974
+          ],
+          [
+            41.611,
+            36.9076
+          ],
+          [
+            47.98,
+            38.9107
+          ],
+          [
+            53.8115,
+            38.1563
+          ],
+          [
+            62.2562,
+            40.6574
+          ],
+          [
+            60.2304,
+            46.35
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original given in Hebrew (כוזרים) as a primary literary source because the Khazar elite's conversion to Judaism (c. 740) is one of the khaganate's most distinctive features, documented in the Schechter Letter and Kuzari. ETHICS-002: The Khazar conversion to Judaism is politically sensitive — it has been exploited by antisemitic conspiracy theories (Arthur Koestler's 'The Thirteenth Tribe') to delegitimize Ashkenazi Jewish identity. Genetic and historical evidence does not support the claim that Ashkenazi Jews descend primarily from Khazars. This entity must be presented with scholarly neutrality. ETHICS-003: Atil has never been conclusively located archaeologically; coordinates are approximate based on Samosdelka excavations.",
     "name_variants": [
       {
@@ -213,7 +330,8 @@
         "citation": "Novoseltsev, A.P. Khazarskoe gosudarstvo i ego rol' v istorii Vostochnoi Evropy i Kavkaza (1990)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Болгар йорты",
@@ -224,9 +342,67 @@
     "capital_name": "Bolgar (Bulğar)",
     "capital_lat": 54.97,
     "capital_lon": 49.05,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            58.2392,
+            54.97
+          ],
+          [
+            56.9935,
+            57.8959
+          ],
+          [
+            52.4314,
+            58.7673
+          ],
+          [
+            49.05,
+            59.5061
+          ],
+          [
+            43.9692,
+            59.7266
+          ],
+          [
+            41.5892,
+            57.6548
+          ],
+          [
+            40.5004,
+            54.97
+          ],
+          [
+            39.1097,
+            51.4561
+          ],
+          [
+            44.4764,
+            50.5214
+          ],
+          [
+            49.05,
+            51.1818
+          ],
+          [
+            54.414,
+            49.5139
+          ],
+          [
+            58.2164,
+            52.41
+          ],
+          [
+            58.2392,
+            54.97
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Chuvash (closest living relative of the Bulgar Turkic language). No Volga Bulgar script texts survive in full; the entity's self-designation is reconstructed from Arabic and Russian sources. ETHICS-002: Volga Bulgaria was destroyed by the Mongol invasion of 1236, and the population was subjected to massacre and enslavement. The Bulgars are ancestral to modern Chuvash and Kazan Tatars — both communities claim this heritage. ETHICS-003: Not to be confused with Danubian Bulgaria (modern Bulgaria), which was a distinct Bulgar state.",
     "name_variants": [
       {
@@ -293,7 +469,8 @@
         "citation": "Khalikov, A.Kh. Prabulghary i ikh sosed (1989)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Печенеги / Beçenek",
@@ -472,9 +649,67 @@
     "capital_name": "Sarai (Sarai Batu / Sarai Berke)",
     "capital_lat": 48.67,
     "capital_lon": 45.31,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            55.3597,
+            48.67
+          ],
+          [
+            53.1867,
+            51.2379
+          ],
+          [
+            50.1326,
+            54.112
+          ],
+          [
+            45.31,
+            54.5006
+          ],
+          [
+            40.2,
+            53.2245
+          ],
+          [
+            39.7933,
+            51.3046
+          ],
+          [
+            35.844,
+            48.67
+          ],
+          [
+            39.8609,
+            46.0893
+          ],
+          [
+            41.0658,
+            43.3648
+          ],
+          [
+            45.31,
+            41.619
+          ],
+          [
+            49.7718,
+            43.908
+          ],
+          [
+            54.9861,
+            45.2578
+          ],
+          [
+            55.3597,
+            48.67
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: 'Golden Horde' (Алтын Орда) may be a later designation; contemporary sources used 'Ulus of Jochi' or 'Desht-i Qipchaq'. The name is given in both Kipchak Turkic and Persian, reflecting the bilingual administration. ETHICS-002: The Golden Horde imposed the 'Tatar-Mongol Yoke' (татаро-монгольское иго) on Russian principalities for over 240 years. Russian nationalist historiography often exaggerates its destructiveness to frame Russia as a victim of 'Asian barbarism', while minimizing Russia's own later colonial violence in Central Asia. Both perspectives must be documented. ETHICS-003: The Mongol conquest of Rus' (1237-1240) involved mass killings at Ryazan, Vladimir, Kyiv, and other cities, with credible estimates of hundreds of thousands killed.",
     "name_variants": [
       {
@@ -561,7 +796,8 @@
         "citation": "Izmailov, I.L. (ed.) Zolotaia Orda v mirovoi istorii (2016)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "چغتای خانات",
@@ -572,9 +808,67 @@
     "capital_name": "Almaliq",
     "capital_lat": 43.97,
     "capital_lon": 82.08,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            88.3479,
+            43.97
+          ],
+          [
+            88.4973,
+            46.6631
+          ],
+          [
+            85.9121,
+            48.5255
+          ],
+          [
+            82.08,
+            50.2178
+          ],
+          [
+            76.9168,
+            50.9648
+          ],
+          [
+            76.5085,
+            46.0093
+          ],
+          [
+            72.9918,
+            43.97
+          ],
+          [
+            74.7783,
+            41.3674
+          ],
+          [
+            79.4513,
+            40.6136
+          ],
+          [
+            82.08,
+            36.2668
+          ],
+          [
+            85.1774,
+            40.5409
+          ],
+          [
+            90.5107,
+            40.3921
+          ],
+          [
+            88.3479,
+            43.97
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Chagatai Turkic (Persian script), the literary language that developed in this khanate and remained the prestige Turkic language of Central Asia for centuries. ETHICS-002: The Chagatai Khanate's fragmentation created the conditions for Timur's rise. The western sedentary portion (Transoxiana) and eastern nomadic portion (Moghulistan) represent a classic steppe-sown divide. ETHICS-003: The khanate's Islamization was gradual and contested; Tarmashirin Khan's forced conversion alienated the eastern nomadic aristocracy, contributing to fragmentation.",
     "name_variants": [
       {
@@ -633,7 +927,8 @@
         "citation": "Rashid al-Din. Jami al-Tawarikh, c. 1310 CE",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ایلخانان",
@@ -644,9 +939,67 @@
     "capital_name": "Tabriz",
     "capital_lat": 38.08,
     "capital_lon": 46.29,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            54.6979,
+            38.08
+          ],
+          [
+            55.3272,
+            41.5878
+          ],
+          [
+            49.4058,
+            42.6971
+          ],
+          [
+            46.29,
+            43.2643
+          ],
+          [
+            41.3575,
+            46.231
+          ],
+          [
+            41.5715,
+            40.5794
+          ],
+          [
+            36.3833,
+            38.08
+          ],
+          [
+            40.2962,
+            35.4601
+          ],
+          [
+            42.7402,
+            32.5512
+          ],
+          [
+            46.29,
+            29.1378
+          ],
+          [
+            50.8066,
+            32.3215
+          ],
+          [
+            51.783,
+            35.052
+          ],
+          [
+            54.6979,
+            38.08
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Persian (ایلخانان, 'Ilkhanids'), the administrative language of the state. ETHICS-002: The Ilkhanate was founded through Hulagu Khan's devastation of the Islamic heartlands, including the destruction of Baghdad in 1258 — one of the most catastrophic events in Islamic civilization. Estimates of deaths in Baghdad alone range from 200,000 to over 1 million. The destruction of the Abbasid Caliphate and the Grand Library of Baghdad (Bayt al-Hikma) represents an irreplaceable cultural loss. ETHICS-003: The Ilkhanate's conversion to Islam under Ghazan Khan (1295) transformed it from a destroyer of Islamic civilization to its patron, a complex historical irony that must not be simplified.",
     "name_variants": [
       {
@@ -717,7 +1070,8 @@
         "citation": "Lane, G. Early Mongol Rule in Thirteenth-Century Iran (2003)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Казан ханлыгы",
@@ -728,9 +1082,67 @@
     "capital_name": "Kazan (Казан)",
     "capital_lat": 55.79,
     "capital_lon": 49.11,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            57.285,
+            55.79
+          ],
+          [
+            55.9707,
+            58.0858
+          ],
+          [
+            56.1358,
+            62.2115
+          ],
+          [
+            49.11,
+            61.9095
+          ],
+          [
+            45.0044,
+            59.4281
+          ],
+          [
+            41.5311,
+            58.1044
+          ],
+          [
+            38.4166,
+            55.79
+          ],
+          [
+            40.3661,
+            53.1669
+          ],
+          [
+            42.392,
+            50.1569
+          ],
+          [
+            49.11,
+            51.5848
+          ],
+          [
+            53.9346,
+            51.6025
+          ],
+          [
+            56.6244,
+            53.3589
+          ],
+          [
+            57.285,
+            55.79
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Tatar (Казан ханлыгы), the direct heritage language. ETHICS-002: The Russian conquest of Kazan in 1552 by Ivan IV ('the Terrible') was accompanied by mass killings, forced conversions to Christianity, and systematic destruction of mosques. This marks the beginning of Russian imperial expansion into non-Slavic, non-Christian territories — a process that would continue for 400 years across Siberia, Central Asia, and the Caucasus. ETHICS-003: Modern Tatar identity is deeply connected to the memory of Kazan's fall; the conquest remains politically sensitive in Russia-Tatarstan relations.",
     "name_variants": [
       {
@@ -789,7 +1201,8 @@
         "citation": "Khudyakov, M.G. Ocherki po istorii Kazanskogo khanstva (1923)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Qırım Hanlığı / قريم خانلغى",
@@ -800,9 +1213,67 @@
     "capital_name": "Bakhchysarai (Bahçesaray)",
     "capital_lat": 44.75,
     "capital_lon": 33.88,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            41.7884,
+            44.75
+          ],
+          [
+            39.3908,
+            47.3154
+          ],
+          [
+            38.2235,
+            49.4568
+          ],
+          [
+            33.88,
+            50.3094
+          ],
+          [
+            30.4307,
+            49.6403
+          ],
+          [
+            26.4618,
+            48.0361
+          ],
+          [
+            24.938,
+            44.75
+          ],
+          [
+            28.0963,
+            42.459
+          ],
+          [
+            29.8294,
+            39.2488
+          ],
+          [
+            33.88,
+            39.182
+          ],
+          [
+            38.8093,
+            38.2069
+          ],
+          [
+            39.8262,
+            42.4528
+          ],
+          [
+            41.7884,
+            44.75
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Crimean Tatar (both Latin and Arabic script forms). ETHICS-002: The Russian annexation of Crimea in 1783 began a centuries-long process of Crimean Tatar dispossession. The 1944 Soviet deportation (Sürgünlik) of the entire Crimean Tatar population to Central Asia — ordered by Stalin under the false collective accusation of Nazi collaboration — killed an estimated 46% of deportees through starvation, disease, and exposure. This constitutes a genocide by the legal definition of the UN Convention. Russia's 2014 annexation of Crimea has further marginalized the Crimean Tatar community. ETHICS-003: Crimean Tatar claims to Crimea predate Russian presence by over 300 years.",
     "name_variants": [
       {
@@ -881,7 +1352,8 @@
         "citation": "Allworth, E. (ed.) The Tatars of Crimea: Return to the Homeland (1998)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Сибир ханлыгы",
@@ -892,9 +1364,67 @@
     "capital_name": "Qashliq (Isker/Sibir)",
     "capital_lat": 57.03,
     "capital_lon": 68.25,
-    "confidence_score": 0.5,
+    "confidence_score": 0.4,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            79.0666,
+            57.03
+          ],
+          [
+            74.8239,
+            59.6462
+          ],
+          [
+            75.5678,
+            63.0947
+          ],
+          [
+            68.25,
+            63.5638
+          ],
+          [
+            62.779,
+            61.7554
+          ],
+          [
+            58.4077,
+            59.6467
+          ],
+          [
+            53.8538,
+            57.03
+          ],
+          [
+            55.5844,
+            52.6376
+          ],
+          [
+            62.991,
+            51.3592
+          ],
+          [
+            68.25,
+            51.9657
+          ],
+          [
+            75.6341,
+            49.6833
+          ],
+          [
+            81.9511,
+            53.0607
+          ],
+          [
+            79.0666,
+            57.03
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Tatar, the closest living language to the khanate's Siberian Tatar dialect. ETHICS-002: Yermak's conquest of Sibir (1582) is celebrated in Russian national mythology as heroic exploration, but from the indigenous perspective it was the beginning of colonial conquest that would devastate Siberian peoples (Khanty, Mansi, Siberian Tatars) through violence, disease, and forced tribute (yasak). ETHICS-003: The name 'Siberia' itself derives from this khanate — a colonial irony where the conquered entity's name was applied to the vast territory claimed by the conqueror.",
     "name_variants": [
       {
@@ -961,7 +1491,8 @@
         "citation": "Collins, D.N. 'Russia's Conquest of Siberia: Evolving Russian and Soviet Historical Interpretations', European Studies Review 12:1 (1982)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Хаҗитархан ханлыгы",
@@ -972,9 +1503,67 @@
     "capital_name": "Astrakhan (Xacıtarxan)",
     "capital_lat": 46.35,
     "capital_lon": 48.04,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            58.9629,
+            46.35
+          ],
+          [
+            56.3156,
+            49.7514
+          ],
+          [
+            52.7508,
+            51.7747
+          ],
+          [
+            48.04,
+            51.876
+          ],
+          [
+            42.1418,
+            52.8084
+          ],
+          [
+            41.335,
+            49.1084
+          ],
+          [
+            37.3099,
+            46.35
+          ],
+          [
+            39.5828,
+            42.6757
+          ],
+          [
+            43.3694,
+            41.3815
+          ],
+          [
+            48.04,
+            41.0441
+          ],
+          [
+            52.229,
+            40.8028
+          ],
+          [
+            53.6495,
+            43.5354
+          ],
+          [
+            58.9629,
+            46.35
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Tatar. The city name 'Astrakhan' is a Russian corruption of 'Xacıtarxan/Hacıtarxan'. ETHICS-002: The Russian conquest of Astrakhan (1556) completed Moscow's control of the entire Volga trade route and gave Russia access to the Caspian Sea, enabling further colonial expansion into the Caucasus and Central Asia. The Nogai, Tatar, and Kalmyk populations were progressively displaced.",
     "name_variants": [
       {
@@ -1021,7 +1610,8 @@
         "citation": "Zaytsev, I.V. Astrakhanskoe khanstvo (2006)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "بخارا خانلیگی",
@@ -1032,9 +1622,67 @@
     "capital_name": "Bukhara (Bukhoro)",
     "capital_lat": 39.77,
     "capital_lon": 64.42,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            72.2826,
+            39.77
+          ],
+          [
+            69.746,
+            42.3404
+          ],
+          [
+            69.3806,
+            46.377
+          ],
+          [
+            64.42,
+            48.7259
+          ],
+          [
+            59.7194,
+            46.762
+          ],
+          [
+            54.7947,
+            43.8216
+          ],
+          [
+            54.4027,
+            39.77
+          ],
+          [
+            56.8305,
+            35.9018
+          ],
+          [
+            58.4706,
+            31.7355
+          ],
+          [
+            64.42,
+            32.5012
+          ],
+          [
+            68.8004,
+            34.6615
+          ],
+          [
+            71.6146,
+            36.4207
+          ],
+          [
+            72.2826,
+            39.77
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Chagatai Turkic (Arabic script), the literary language of the state. ETHICS-002: The Khanate of Bukhara was one of the three Uzbek khanates that preserved Central Asian Islamic civilization until Russian conquest. The Shaybanid and later Ashtarkhanid dynasties patronized some of the greatest Islamic scholars and Sufi orders. ETHICS-003: The khanate's economy relied significantly on slave labor, including enslaved Persians (Iranian Shia captives) and Russian captives. This must be documented alongside its cultural achievements.",
     "name_variants": [
       {
@@ -1093,7 +1741,8 @@
         "citation": "Burton, A. The Bukharans: A Dynastic, Diplomatic, and Commercial History, 1550-1702 (1997)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "خیوه خانلیگی",
@@ -1104,9 +1753,67 @@
     "capital_name": "Khiva (Xiva)",
     "capital_lat": 41.38,
     "capital_lon": 60.36,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            68.2112,
+            41.38
+          ],
+          [
+            67.5454,
+            44.0068
+          ],
+          [
+            65.396,
+            47.5238
+          ],
+          [
+            60.36,
+            45.7191
+          ],
+          [
+            55.5643,
+            46.314
+          ],
+          [
+            54.6089,
+            43.7494
+          ],
+          [
+            52.5265,
+            41.38
+          ],
+          [
+            54.569,
+            39.4556
+          ],
+          [
+            57.7303,
+            37.3997
+          ],
+          [
+            60.36,
+            35.0364
+          ],
+          [
+            65.297,
+            36.0168
+          ],
+          [
+            66.0383,
+            38.45
+          ],
+          [
+            68.2112,
+            41.38
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Chagatai Turkic. ETHICS-002: The Khanate of Khiva was a major center of the Central Asian slave trade, holding tens of thousands of Persian and Russian captives. Russian expeditions to 'free Russian slaves' served as pretexts for military conquest. The 1873 Russian conquest and the 1920 Soviet overthrow must be documented from both Russian/Soviet and Khivan perspectives. ETHICS-003: The Aral Sea disaster — caused by Soviet cotton irrigation policies diverting the Amu Darya — devastated the former Khivan heartland. What was one of the world's largest inland seas has largely disappeared, causing ecological catastrophe, public health crises, and economic devastation that persists today. This is one of the worst environmental disasters in human history.",
     "name_variants": [
       {
@@ -1181,7 +1888,8 @@
         "citation": "Morrison, A. Russian Rule in Samarkand 1868–1910: A Comparison with British India (2008)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "قوقند خانلیگی",
@@ -1192,9 +1900,67 @@
     "capital_name": "Kokand (Qo'qon)",
     "capital_lat": 40.53,
     "capital_lon": 70.94,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.423,
+            40.53
+          ],
+          [
+            82.066,
+            45.2287
+          ],
+          [
+            74.803,
+            45.153
+          ],
+          [
+            70.94,
+            47.6738
+          ],
+          [
+            66.4759,
+            47.0399
+          ],
+          [
+            62.8161,
+            44.6783
+          ],
+          [
+            61.3147,
+            40.53
+          ],
+          [
+            62.0125,
+            36.5766
+          ],
+          [
+            67.6556,
+            35.6462
+          ],
+          [
+            70.94,
+            31.8065
+          ],
+          [
+            77.1102,
+            32.7177
+          ],
+          [
+            77.6972,
+            37.1178
+          ],
+          [
+            78.423,
+            40.53
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Chagatai Turkic. ETHICS-002: The Russian conquest of the Khanate of Kokand (1876) completed the Russian takeover of Central Asia. General Skobelev's campaign involved massacres of the civilian population, particularly during the suppression of the 1875-76 Kokand uprising. The Andijan Uprising of 1898 was another major resistance event brutally suppressed. ETHICS-003: The Fergana Valley, the khanate's heartland, remains divided today between Uzbekistan, Kyrgyzstan, and Tajikistan — arbitrary Soviet borders that have caused recurring ethnic violence (Osh 2010, Andijan 2005).",
     "name_variants": [
       {
@@ -1253,7 +2019,8 @@
         "citation": "Khalid, A. The Politics of Muslim Cultural Reform: Jadidism in Central Asia (1998)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Қазақ хандығы",
@@ -1264,9 +2031,67 @@
     "capital_name": "Turkestan (Yası)",
     "capital_lat": 43.3,
     "capital_lon": 68.25,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            75.5027,
+            43.3
+          ],
+          [
+            74.7808,
+            46.822
+          ],
+          [
+            72.8788,
+            49.9662
+          ],
+          [
+            68.25,
+            52.2542
+          ],
+          [
+            62.6773,
+            48.9338
+          ],
+          [
+            58.6634,
+            46.4874
+          ],
+          [
+            62.9239,
+            43.3
+          ],
+          [
+            61.88,
+            40.741
+          ],
+          [
+            62.4977,
+            36.1201
+          ],
+          [
+            68.25,
+            34.9282
+          ],
+          [
+            71.013,
+            39.3816
+          ],
+          [
+            78.0074,
+            39.0817
+          ],
+          [
+            75.5027,
+            43.3
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Kazakh (Cyrillic script). The ethnonym 'Kazakh' (Қазақ) means 'free person/wanderer' and was adopted to distinguish the Kazakh tribal confederation from the Uzbek confederation. Not to be confused with 'Cossack' (same Turkic root). ETHICS-002: Russian colonization of the Kazakh Steppe proceeded through the systematic destruction of the three Kazakh zhuz (hordes) between 1731 and 1847. ETHICS-003: CRITICAL — The 1931-1933 Soviet famine in Kazakhstan (Asharshylyk/Ашаршылық) killed an estimated 1.5 million ethnic Kazakhs — roughly 38% of the entire Kazakh population. This was caused by forced collectivization and sedentarization of nomads under Filipp Goloshchyokin's policies. It shares characteristics with the Holodomor in Ukraine and is increasingly recognized as a deliberate act of colonial violence against nomadic peoples. Kazakhstan also suffered from Soviet nuclear testing at Semipalatinsk (1949-1989), with devastating health consequences for surrounding populations.",
     "name_variants": [
       {
@@ -1345,7 +2170,8 @@
         "citation": "Pianciola, N. 'Famine in the Steppe: The Collectivization of Agriculture and the Kazak Herdsmen, 1928–1934', Cahiers du Monde russe 45:1-2 (2004)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Ногай Ордасы",
@@ -1432,9 +2258,67 @@
     "capital_name": "Almaliq",
     "capital_lat": 43.97,
     "capital_lon": 82.08,
-    "confidence_score": 0.5,
+    "confidence_score": 0.4,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            90.8031,
+            43.97
+          ],
+          [
+            88.7797,
+            47.0284
+          ],
+          [
+            87.5031,
+            49.9964
+          ],
+          [
+            82.08,
+            49.6148
+          ],
+          [
+            78.2989,
+            48.1156
+          ],
+          [
+            72.4463,
+            47.8636
+          ],
+          [
+            70.722,
+            43.97
+          ],
+          [
+            76.4119,
+            41.1307
+          ],
+          [
+            78.211,
+            39.3829
+          ],
+          [
+            82.08,
+            40.089
+          ],
+          [
+            86.0606,
+            38.7163
+          ],
+          [
+            89.491,
+            40.4456
+          ],
+          [
+            90.8031,
+            43.97
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Chagatai Turkic meaning 'land of the Moghuls/Mongols'. The rulers claimed Chinggisid legitimacy through the Chagatai line. ETHICS-002: Despite the name, Moghulistan was predominantly Turkic-speaking by this period; the 'Moghul' designation referred to political identity, not ethnic composition. The Islamization of the eastern Chagatai successor states was slower and more contested than in western Transoxiana. ETHICS-003: The territory corresponds roughly to modern Xinjiang/East Turkestan — now the site of Chinese state repression of the Uyghur population. Historical context matters for understanding contemporary claims.",
     "name_variants": [
       {
@@ -1489,7 +2373,8 @@
         "citation": "Kim, H. 'The Early History of the Moghul Nomads: The Legacy of the Chaghatai Khanate', in Di Cosmo, N. et al. The Cambridge History of Inner Asia: The Chinggisid Age (2009)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "صفاریان",
@@ -1500,9 +2385,67 @@
     "capital_name": "Zaranj",
     "capital_lat": 30.96,
     "capital_lon": 61.87,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            65.8911,
+            30.96
+          ],
+          [
+            64.3542,
+            32.0952
+          ],
+          [
+            63.5244,
+            32.974
+          ],
+          [
+            61.87,
+            33.5537
+          ],
+          [
+            60.2922,
+            32.9516
+          ],
+          [
+            58.1489,
+            32.4709
+          ],
+          [
+            59.3147,
+            30.96
+          ],
+          [
+            58.6831,
+            29.2722
+          ],
+          [
+            60.2622,
+            28.6689
+          ],
+          [
+            61.87,
+            27.6344
+          ],
+          [
+            63.0462,
+            28.7376
+          ],
+          [
+            65.3396,
+            29.2825
+          ],
+          [
+            65.8911,
+            30.96
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Persian (صفاریان, 'Saffarids'). The Saffarids are significant as the first indigenous Iranian dynasty to challenge Abbasid authority after the Arab conquest. Ya'qub ibn al-Layth al-Saffar rose from a coppersmith (saffar) to empire-builder — one of the great social mobility stories of the Islamic world. ETHICS-002: The Saffarids represent the reassertion of Persian cultural and political identity within the Islamic world, beginning the 'Iranian intermezzo' that would culminate in the Samanids.",
     "name_variants": [
       {
@@ -1569,7 +2512,8 @@
         "citation": "Tarikh-i Sistan (History of Sistan), anonymous, c. 1060 CE",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "سامانیان",
@@ -1580,9 +2524,67 @@
     "capital_name": "Bukhara (Bukhoro)",
     "capital_lat": 39.77,
     "capital_lon": 64.42,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            77.8905,
+            39.77
+          ],
+          [
+            75.8934,
+            45.0927
+          ],
+          [
+            70.6999,
+            46.7219
+          ],
+          [
+            64.42,
+            49.1073
+          ],
+          [
+            56.1874,
+            50.4737
+          ],
+          [
+            51.9642,
+            45.7663
+          ],
+          [
+            50.957,
+            39.77
+          ],
+          [
+            55.3893,
+            36.1701
+          ],
+          [
+            57.8386,
+            32.2852
+          ],
+          [
+            64.42,
+            32.7901
+          ],
+          [
+            70.4384,
+            31.4031
+          ],
+          [
+            74.1554,
+            34.8247
+          ],
+          [
+            77.8905,
+            39.77
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Persian (سامانیان, 'Samanids'). The Samanids presided over the Persian cultural renaissance (the 'Iranian intermezzo'), patronizing Ferdowsi's Shahnameh, Rudaki's poetry, and Avicenna's early education. Bukhara under the Samanids was one of the great centers of Islamic civilization. ETHICS-002: The Samanid era is foundational to modern Tajik, Persian, and Afghan national identity. The claim to Samanid heritage is contested between Tajikistan, Iran, and Afghanistan — each framing the dynasty within its own national narrative. The database must present all perspectives without adjudicating.",
     "name_variants": [
       {
@@ -1657,7 +2659,8 @@
         "citation": "Narshakhi. Tarikh-i Bukhara (History of Bukhara), c. 943 CE, trans. R.N. Frye (1954)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "غوریان",
@@ -1668,9 +2671,67 @@
     "capital_name": "Firuzkuh (فیروزکوه)",
     "capital_lat": 34.7,
     "capital_lon": 65.5,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            81.7579,
+            34.7
+          ],
+          [
+            71.9414,
+            37.6603
+          ],
+          [
+            71.5156,
+            42.7776
+          ],
+          [
+            65.5,
+            42.5786
+          ],
+          [
+            58.5715,
+            45.4422
+          ],
+          [
+            52.1965,
+            40.2788
+          ],
+          [
+            52.9084,
+            34.7
+          ],
+          [
+            51.9336,
+            29.5834
+          ],
+          [
+            61.0193,
+            28.3657
+          ],
+          [
+            65.5,
+            25.8617
+          ],
+          [
+            70.3246,
+            27.1495
+          ],
+          [
+            78.9068,
+            28.0202
+          ],
+          [
+            81.7579,
+            34.7
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Persian (غوریان, 'Ghurids'). The Ghurids were of Eastern Iranian (possibly Tajik) origin from the mountainous Ghur region of central Afghanistan. ETHICS-002: The Ghurid sack of Ghazni (1149-1150) was so devastating that the city was nicknamed 'Jahansoz' ('World-Burner') after Sultan Ala al-Din. The dynasty's conquest of northern India established the Delhi Sultanate, fundamentally transforming the subcontinent. As with the Ghaznavids, Indian historiography is divided on the Ghurid legacy. ETHICS-003: The legendary capital Firuzkuh ('Turquoise Mountain') has never been conclusively located archaeologically; coordinates are approximate.",
     "name_variants": [
       {
@@ -1737,7 +2798,8 @@
         "citation": "Thomas, D. 'The Ebb and Flow of the Ghurids', Afghanistan 25:2 (1972)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "هوتکیان",
@@ -1748,9 +2810,67 @@
     "capital_name": "Kandahar (کندهار)",
     "capital_lat": 31.61,
     "capital_lon": 65.71,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            69.9547,
+            31.61
+          ],
+          [
+            70.8662,
+            34.064
+          ],
+          [
+            67.9632,
+            34.3484
+          ],
+          [
+            65.71,
+            34.2992
+          ],
+          [
+            63.0401,
+            35.7194
+          ],
+          [
+            60.1977,
+            33.9084
+          ],
+          [
+            60.8391,
+            31.61
+          ],
+          [
+            61.5974,
+            29.974
+          ],
+          [
+            63.4412,
+            27.8043
+          ],
+          [
+            65.71,
+            27.2185
+          ],
+          [
+            67.5351,
+            29.1079
+          ],
+          [
+            69.8055,
+            29.3356
+          ],
+          [
+            69.9547,
+            31.61
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Pashto (هوتکیان, 'Hotakis'), the language of the Ghilzai Pashtun founders. ETHICS-002: Mirwais Hotak's 1709 revolt against Safavid Iran is celebrated in Afghan national historiography as a founding moment of Afghan independence. The Hotaki invasion of Iran under Mahmud (1722, fall of Isfahan) involved significant civilian casualties and sectarian violence against Shia populations. The siege and famine of Isfahan killed an estimated 80,000 people. ETHICS-003: The Hotaki dynasty shows the Pashtun tribal confederation's first assertion of imperial ambitions, prefiguring the Durrani Empire.",
     "name_variants": [
       {
@@ -1817,7 +2937,8 @@
         "citation": "Gankovskii, Yu.V. Imperiia Durrani: Ocherki administrativnoi i voennoi sistemy (1958)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "د درانیانو ټولواکمني",
@@ -1828,9 +2949,67 @@
     "capital_name": "Kandahar (کندهار)",
     "capital_lat": 31.61,
     "capital_lon": 65.71,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            76.1897,
+            31.61
+          ],
+          [
+            73.1596,
+            35.1911
+          ],
+          [
+            73.5045,
+            41.8199
+          ],
+          [
+            65.71,
+            44.1982
+          ],
+          [
+            60.4206,
+            39.6103
+          ],
+          [
+            51.79,
+            37.0441
+          ],
+          [
+            55.3674,
+            31.61
+          ],
+          [
+            51.9402,
+            24.8435
+          ],
+          [
+            58.9558,
+            22.9152
+          ],
+          [
+            65.71,
+            21.5726
+          ],
+          [
+            72.0545,
+            23.2788
+          ],
+          [
+            73.8896,
+            27.8671
+          ],
+          [
+            76.1897,
+            31.61
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Pashto. Ahmad Shah Durrani (Ahmad Shah Abdali) is the 'Father of Afghanistan' in Afghan national mythology. The name 'Durrani' replaced 'Abdali' after Ahmad Shah received the title 'Durr-i-Durran' ('Pearl of Pearls'). ETHICS-002: Ahmad Shah's empire was the second-largest Muslim empire of its time after the Ottomans. His sack of Delhi (1757) and the Battle of Panipat (1761, where he defeated the Marathas) are foundational events in South Asian history. The Panipat campaign involved significant civilian casualties and plunder. ETHICS-003: The Durrani Empire's disintegration created the fragmented Afghanistan that would become the focus of the Great Game between the British and Russian empires.",
     "name_variants": [
       {
@@ -1917,7 +3096,8 @@
         "citation": "Mahmud al-Husayni. Tarikh-e Ahmad Shahi, c. 1753 CE",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "امارت بخارا",
@@ -1928,9 +3108,67 @@
     "capital_name": "Bukhara (Bukhoro)",
     "capital_lat": 39.77,
     "capital_lon": 64.42,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            72.3185,
+            39.77
+          ],
+          [
+            68.6965,
+            41.9284
+          ],
+          [
+            68.5844,
+            46.2233
+          ],
+          [
+            64.42,
+            47.5895
+          ],
+          [
+            61.9254,
+            43.5508
+          ],
+          [
+            57.0427,
+            43.1281
+          ],
+          [
+            58.1406,
+            39.77
+          ],
+          [
+            59.8596,
+            37.4185
+          ],
+          [
+            60.9052,
+            34.6638
+          ],
+          [
+            64.42,
+            33.0244
+          ],
+          [
+            67.44,
+            35.9923
+          ],
+          [
+            72.5259,
+            36.679
+          ],
+          [
+            72.3185,
+            39.77
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Chagatai Turkic. The Emirate of Bukhara was the last traditional Central Asian Islamic state, ruled by the Manghit dynasty. ETHICS-002: The 1868 Russian conquest made Bukhara a protectorate while the emir retained nominal authority. Russian colonialism in Central Asia systematically extracted resources (cotton monoculture), destroyed local industries, suppressed political reform movements (Jadidism), and imposed European administrative structures. ETHICS-003: The 1920 Soviet overthrow of the emir was presented as 'liberation' but replaced one colonial system with another. The Bolsheviks' deliberate drawing of national boundaries (Uzbek, Tajik, Turkmen SSRs) divided historically unified Central Asian communities to prevent pan-Turkic or pan-Islamic solidarity — a classic divide-and-rule strategy with consequences that persist today.",
     "name_variants": [
       {
@@ -2001,7 +3239,8 @@
         "citation": "Becker, S. Russia's Protectorates in Central Asia: Bukhara and Khiva, 1865–1924 (1968)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "د افغانستان امارت",
@@ -2012,9 +3251,67 @@
     "capital_name": "Kabul (کابل)",
     "capital_lat": 34.53,
     "capital_lon": 69.17,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            74.6113,
+            34.53
+          ],
+          [
+            74.4049,
+            37.1117
+          ],
+          [
+            71.0867,
+            38.0228
+          ],
+          [
+            69.17,
+            40.0458
+          ],
+          [
+            66.8214,
+            37.6283
+          ],
+          [
+            62.6523,
+            37.5331
+          ],
+          [
+            63.3043,
+            34.53
+          ],
+          [
+            62.2595,
+            31.8595
+          ],
+          [
+            65.4448,
+            28.5093
+          ],
+          [
+            69.17,
+            29.1934
+          ],
+          [
+            71.7802,
+            30.8143
+          ],
+          [
+            72.8696,
+            32.7744
+          ],
+          [
+            74.6113,
+            34.53
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Pashto. ETHICS-002: The Emirate of Afghanistan was shaped by the Great Game between the British and Russian empires. The three Anglo-Afghan Wars (1839-42, 1878-80, 1919) reflect Afghanistan's resistance to imperial domination, but also the devastating cost of being a buffer state. The Durand Line (1893), imposed by the British, divided the Pashtun population between Afghanistan and British India (now Pakistan) — a border Afghanistan has never formally recognized. ETHICS-003: British imperial violence in Afghanistan included the 1842 retreat from Kabul (destruction of a British army), the burning of the Kabul bazaar (1842), and the sacking of Ghazni. Afghan resistance to British colonialism cost tens of thousands of Afghan lives and should be documented alongside the British military perspective that dominates English-language sources.",
     "name_variants": [
       {
@@ -2093,7 +3390,8 @@
         "citation": "Dalrymple, W. Return of a King: The Battle for Afghanistan (2013)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Κουσανο-Σασσανιδαι",
@@ -2104,9 +3402,67 @@
     "capital_name": "Balkh (Bactra)",
     "capital_lat": 36.76,
     "capital_lon": 66.9,
-    "confidence_score": 0.45,
+    "confidence_score": 0.35,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            72.3874,
+            36.76
+          ],
+          [
+            70.5103,
+            38.4247
+          ],
+          [
+            68.898,
+            39.9154
+          ],
+          [
+            66.9,
+            39.115
+          ],
+          [
+            64.368,
+            40.2913
+          ],
+          [
+            62.9819,
+            38.5937
+          ],
+          [
+            62.7603,
+            36.76
+          ],
+          [
+            62.0053,
+            34.496
+          ],
+          [
+            64.8393,
+            33.8173
+          ],
+          [
+            66.9,
+            34.1485
+          ],
+          [
+            68.9984,
+            33.4231
+          ],
+          [
+            69.3095,
+            35.4246
+          ],
+          [
+            72.3874,
+            36.76
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The entity's self-designation is unknown. Greek form used as a conventional scholarly label; the rulers used Bactrian script (modified Greek alphabet) on their coinage. ETHICS-002: The Kushano-Sasanians represent the intersection of Iranian, Indian, and Hellenistic cultural traditions in Central Asia. Their coinage shows Hindu deities (Shiva, Nandi), Buddhist symbols, and Zoroastrian fire temples — evidence of remarkable religious pluralism. ETHICS-003: The entity is poorly attested; most knowledge comes from numismatics (coins). Boundaries and exact dates are highly uncertain.",
     "name_variants": [
       {
@@ -2165,7 +3521,8 @@
         "citation": "Zeimal, E.V. 'The Kidarite Kingdom in Central Asia', in Litvinsky, B.A. (ed.) History of Civilizations of Central Asia, vol. 3 (1996)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "هپتالیان / Ηφθαλιται",
@@ -2176,9 +3533,67 @@
     "capital_name": "Bactria region (uncertain)",
     "capital_lat": 36.76,
     "capital_lon": 66.9,
-    "confidence_score": 0.45,
+    "confidence_score": 0.35,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.5465,
+            36.76
+          ],
+          [
+            73.8564,
+            40.0442
+          ],
+          [
+            71.9162,
+            44.6446
+          ],
+          [
+            66.9,
+            49.9845
+          ],
+          [
+            60.2694,
+            47.6196
+          ],
+          [
+            56.3977,
+            40.5703
+          ],
+          [
+            56.7126,
+            36.76
+          ],
+          [
+            54.2633,
+            31.7475
+          ],
+          [
+            61.1717,
+            28.9275
+          ],
+          [
+            66.9,
+            25.709
+          ],
+          [
+            71.502,
+            30.9978
+          ],
+          [
+            75.3242,
+            32.6151
+          ],
+          [
+            78.5465,
+            36.76
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original given in both Bactrian/Persian (هپتالیان) and Byzantine Greek (Ηφθαλιται) forms. The Hephthalites' self-designation and language are debated — they may have spoken an Iranian or Turkic language or both. Chinese sources call them 嚈噠. ETHICS-002: The Hephthalites' ethnic identity is one of the most contested questions in Central Asian studies. They have been variously classified as Turkic, Iranian, Xionite, or mixed. The database should not arbitrate this debate. ETHICS-003: The Hephthalite destruction of the Gupta Empire and the devastation of Buddhist monasteries in Gandhara (particularly under Mihirakula, c. 520) had lasting civilizational consequences for South and Central Asia.",
     "name_variants": [
       {
@@ -2273,7 +3688,8 @@
         "citation": "Litvinsky, B.A. (ed.) History of Civilizations of Central Asia, vol. 3 (1996)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Σογδιανή / سغد",
@@ -2284,9 +3700,67 @@
     "capital_name": "Samarkand (Marakanda)",
     "capital_lat": 39.65,
     "capital_lon": 66.96,
-    "confidence_score": 0.55,
+    "confidence_score": 0.45,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            71.7077,
+            39.65
+          ],
+          [
+            70.7766,
+            41.355
+          ],
+          [
+            68.9506,
+            42.8628
+          ],
+          [
+            66.96,
+            44.0424
+          ],
+          [
+            64.6894,
+            42.9456
+          ],
+          [
+            62.6526,
+            41.4795
+          ],
+          [
+            63.166,
+            39.65
+          ],
+          [
+            62.6011,
+            37.5861
+          ],
+          [
+            63.5497,
+            35.1573
+          ],
+          [
+            66.96,
+            36.9732
+          ],
+          [
+            69.2934,
+            36.8636
+          ],
+          [
+            71.3564,
+            37.5176
+          ],
+          [
+            71.7077,
+            39.65
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in both Greek (Σογδιανή, from Achaemenid-era sources) and Arabic (سغد, from Islamic-era sources). The Sogdian language is an extinct Eastern Iranian language known from manuscript fragments and inscriptions. ETHICS-002: Sogdiana was never a unified state but rather a network of city-states (Samarkand, Bukhara, Panjikent, etc.) connected by trade. Representing it as a single entity is a scholarly convenience. The Sogdians were the paramount merchant people of the Silk Road — their commercial network stretched from Constantinople to Chang'an. ETHICS-003: The Arab conquest of Sogdiana (early 8th century) under Qutayba ibn Muslim involved massive destruction, forced conversions, and the suppression of Zoroastrian, Buddhist, Manichaean, and Christian religious traditions. The destruction of Panjikent's murals and the loss of Sogdian literature represent a major cultural erasure.",
     "name_variants": [
       {
@@ -2373,7 +3847,8 @@
         "citation": "al-Tabari. Tarikh al-Rusul wa'l-Muluk (History of the Prophets and Kings)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Βακτριανή / باختر",
@@ -2384,9 +3859,67 @@
     "capital_name": "Bactra (Balkh)",
     "capital_lat": 36.76,
     "capital_lon": 66.9,
-    "confidence_score": 0.55,
+    "confidence_score": 0.45,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            71.1329,
+            36.76
+          ],
+          [
+            70.7575,
+            38.5853
+          ],
+          [
+            68.2801,
+            38.9125
+          ],
+          [
+            66.9,
+            40.0
+          ],
+          [
+            65.0067,
+            39.0044
+          ],
+          [
+            62.9021,
+            38.7175
+          ],
+          [
+            63.7566,
+            36.76
+          ],
+          [
+            63.1805,
+            34.962
+          ],
+          [
+            65.5147,
+            34.7151
+          ],
+          [
+            66.9,
+            33.5364
+          ],
+          [
+            69.0633,
+            34.1056
+          ],
+          [
+            70.122,
+            35.3542
+          ],
+          [
+            71.1329,
+            36.76
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Greek (Βακτριανή) and Bactrian (باختر). This entity covers the Greco-Bactrian Kingdom (c. -250 to -130) and its Indo-Greek successors. The Bactrian language (an Eastern Iranian language written in modified Greek script) is distinct from Greek. ETHICS-002: Greco-Bactria represents one of the most remarkable cultural fusions in ancient history — Greek, Iranian, Indian, and Central Asian traditions merged to create Gandhara art, which would profoundly influence Buddhist visual culture across Asia. The entity challenges simplistic East-West dichotomies. ETHICS-003: Knowledge of Greco-Bactria comes primarily from numismatics (coins) and fragmentary classical texts. The kingdom was called 'the land of a thousand cities' by Justin, but archaeological evidence is limited. Ai-Khanoum is the only extensively excavated Greco-Bactrian city.",
     "name_variants": [
       {
@@ -2481,6 +4014,7 @@
         "citation": "Milinda Panha (Questions of King Milinda), c. 100 BCE",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   }
 ]

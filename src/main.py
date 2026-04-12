@@ -7,26 +7,31 @@ from pathlib import Path
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 from slowapi.util import get_remote_address
 
 from src.api.errors import register_error_handlers
+from src.api.middleware import (
+    RateLimitMiddleware,  # noqa: F401 — disponibile per uso futuro
+    RequestLoggingMiddleware,
+    SecurityHeadersMiddleware,
+)
 from src.api.routes import entities, export, health, relations
 from src.config import (
     APP_TITLE,
     APP_VERSION,
-    AUTO_SEED,
     CORS_ORIGINS,
+    ENVIRONMENT,
+    HOST,
+    PORT,
     RATE_LIMIT,
 )
 from src.db.database import Base, engine
 from src.db.seed import seed_database
 from src.logging_config import setup_logging
-from src.middleware.request_logging import RequestLoggingMiddleware
-from src.middleware.security import SecurityHeadersMiddleware
 
 # Logging prima di tutto
 setup_logging()
@@ -38,12 +43,43 @@ STATIC_DIR = Path(__file__).resolve().parent.parent / "static"
 limiter = Limiter(key_func=get_remote_address, default_limits=[RATE_LIMIT])
 
 
+def _run_alembic_migrations():
+    """Esegui migrazioni Alembic (solo per PostgreSQL in produzione).
+
+    Per SQLite in sviluppo, usa create_all() che e' piu' semplice e veloce.
+    Per PostgreSQL, le migrazioni Alembic garantiscono upgrade incrementali sicuri.
+    """
+    try:
+        from alembic import command
+        from alembic.config import Config
+
+        alembic_cfg = Config("alembic.ini")
+        command.upgrade(alembic_cfg, "head")
+        logger.info("Migrazioni Alembic applicate con successo")
+    except Exception:
+        logger.error("Errore durante le migrazioni Alembic", exc_info=True)
+        raise
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Crea tabelle e popola dati demo all'avvio."""
-    logger.info("Inizializzazione AtlasPI v%s...", APP_VERSION)
+    from src.config import AUTO_SEED
+    from src.db.database import is_postgres, is_sqlite
 
-    Base.metadata.create_all(bind=engine)
+    logger.info("Inizializzazione AtlasPI v%s [%s]...", APP_VERSION, ENVIRONMENT)
+
+    if is_sqlite:
+        # Dev: crea tabelle direttamente dal metadata dei modelli
+        Base.metadata.create_all(bind=engine)
+        logger.info("SQLite: tabelle create/verificate con create_all()")
+    elif is_postgres:
+        # Prod: usa migrazioni Alembic per upgrade incrementali sicuri
+        _run_alembic_migrations()
+    else:
+        # Fallback per database non riconosciuti
+        Base.metadata.create_all(bind=engine)
+        logger.warning("Database non riconosciuto: tabelle create con create_all()")
 
     if AUTO_SEED:
         seed_database()
@@ -128,7 +164,7 @@ app = FastAPI(
 # GZip compression (min 500 bytes)
 app.add_middleware(GZipMiddleware, minimum_size=500)
 
-# CORS
+# CORS — legge origini da configurazione, supporta domini di produzione
 app.add_middleware(
     CORSMiddleware,
     allow_origins=CORS_ORIGINS,
@@ -137,13 +173,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Security headers
+# Security headers (include X-Process-Time)
 app.add_middleware(SecurityHeadersMiddleware)
 
-# Request logging
+# Request logging (include X-Request-ID)
 app.add_middleware(RequestLoggingMiddleware)
 
-# Rate limiting
+# Rate limiting (slowapi)
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
@@ -167,6 +203,23 @@ async def serve_ui():
 async def serve_embed():
     """Serve la versione embed (UI minimale per iframe)."""
     return FileResponse(STATIC_DIR / "embed.html")
+
+
+@app.get("/v1/openapi.json", include_in_schema=False)
+async def openapi_override():
+    """Override OpenAPI spec con server URL per produzione."""
+    schema = app.openapi()
+    # In produzione, aggiungi il server URL reale
+    if ENVIRONMENT != "development":
+        schema["servers"] = [
+            {"url": f"https://{HOST}:{PORT}" if PORT != 443 else f"https://{HOST}",
+             "description": f"AtlasPI {ENVIRONMENT}"},
+        ]
+    else:
+        schema["servers"] = [
+            {"url": f"http://{HOST}:{PORT}", "description": "AtlasPI development"},
+        ]
+    return JSONResponse(content=schema)
 
 
 app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")

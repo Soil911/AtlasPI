@@ -8,9 +8,67 @@
     "capital_name": "Koumbi Saleh",
     "capital_lat": 15.7667,
     "capital_lon": -7.9833,
-    "confidence_score": 0.55,
+    "confidence_score": 0.45,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            5.418,
+            15.7667
+          ],
+          [
+            0.0442,
+            19.8803
+          ],
+          [
+            -2.9957,
+            24.1214
+          ],
+          [
+            -7.9833,
+            25.7164
+          ],
+          [
+            -12.9871,
+            22.9967
+          ],
+          [
+            -16.9864,
+            20.9698
+          ],
+          [
+            -21.5353,
+            15.7667
+          ],
+          [
+            -19.3473,
+            9.5255
+          ],
+          [
+            -14.4103,
+            6.1563
+          ],
+          [
+            -7.9833,
+            3.8329
+          ],
+          [
+            -2.8695,
+            7.871
+          ],
+          [
+            2.338,
+            9.0254
+          ],
+          [
+            5.418,
+            15.7667
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in Soninke. 'Ghana' era il titolo del sovrano, non il nome del territorio — gli abitanti lo chiamavano Wagadou. La denominazione 'Ghana Empire' e' una convenzione storiografica occidentale. ETHICS-002: la caduta dell'impero e' tradizionalmente attribuita all'invasione almoravide (1076), ma la storiografia recente (Masonen, Levtzion) ritiene che il declino sia stato piu' graduale e multifattoriale. Il commercio trans-sahariano dell'oro fu il fondamento economico dell'impero.",
     "name_variants": [
       {
@@ -81,7 +139,8 @@
         "citation": "Mauny, R. Tableau geographique de l'Ouest africain au Moyen Age (1961)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kanem-Bornu",
@@ -92,9 +151,67 @@
     "capital_name": "Njimi",
     "capital_lat": 13.5,
     "capital_lon": 15.0,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            28.2989,
+            13.5
+          ],
+          [
+            21.3459,
+            17.0413
+          ],
+          [
+            19.3728,
+            20.531
+          ],
+          [
+            15.0,
+            20.2672
+          ],
+          [
+            10.867,
+            20.8605
+          ],
+          [
+            7.3208,
+            17.5467
+          ],
+          [
+            4.9467,
+            13.5
+          ],
+          [
+            3.7558,
+            8.2672
+          ],
+          [
+            10.4848,
+            5.8107
+          ],
+          [
+            15.0,
+            3.1226
+          ],
+          [
+            18.7342,
+            6.4621
+          ],
+          [
+            24.3179,
+            7.418
+          ],
+          [
+            28.2989,
+            13.5
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in Kanuri. L'impero e' uno dei piu' longevi della storia africana (~1200 anni). ETHICS-002: la fine dell'impero avvenne per conquista britannica e francese nel quadro della spartizione coloniale dell'Africa. La tratta schiavista trans-sahariana fu parte dell'economia dell'impero — questo dato non deve essere omesso per correttezza storica. ETHICS-003: le fonti pre-islamiche sono estremamente scarse; il confidence_score riflette questa lacuna.",
     "name_variants": [
       {
@@ -153,7 +270,8 @@
         "citation": "Ibn Furtu, Ghazawat Barnu (XVI sec.)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Asante",
@@ -164,9 +282,67 @@
     "capital_name": "Kumasi",
     "capital_lat": 6.6885,
     "capital_lon": -1.6244,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            1.565,
+            6.6885
+          ],
+          [
+            0.9958,
+            7.9716
+          ],
+          [
+            0.4123,
+            10.0839
+          ],
+          [
+            -1.6244,
+            10.2203
+          ],
+          [
+            -3.6286,
+            9.6822
+          ],
+          [
+            -5.2787,
+            8.7303
+          ],
+          [
+            -3.9794,
+            6.6885
+          ],
+          [
+            -3.5654,
+            5.5485
+          ],
+          [
+            -2.7211,
+            4.7451
+          ],
+          [
+            -1.6244,
+            4.5336
+          ],
+          [
+            -0.3099,
+            4.5076
+          ],
+          [
+            1.2842,
+            5.1565
+          ],
+          [
+            1.565,
+            6.6885
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in Akan/Twi. 'Ashanti' e' la versione anglicizzata imposta durante il periodo coloniale. ETHICS-002: l'impero Asante fu coinvolto nel commercio di schiavi atlantico sia come fornitore che come intermediario — questo aspetto non deve essere minimizzato. La resistenza militare Asante contro i britannici fu una delle piu' tenaci in Africa, con quattro guerre anglo-ashanti (1824-1900). Lo Sgabello d'Oro (Sika Dwa Kofi) rimane un simbolo sacro della nazione Asante. Il tentativo britannico di sequestrarlo nel 1900 scateno' la Guerra dello Sgabello d'Oro guidata da Yaa Asantewaa.",
     "name_variants": [
       {
@@ -233,7 +409,8 @@
         "citation": "Adu Boahen, A. Yaa Asantewaa and the Asante-British War of 1900 (2003)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Danhome",
@@ -244,9 +421,67 @@
     "capital_name": "Abomey",
     "capital_lat": 7.1824,
     "capital_lon": 1.9912,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            4.6208,
+            7.1824
+          ],
+          [
+            4.6443,
+            8.5229
+          ],
+          [
+            3.7623,
+            10.1774
+          ],
+          [
+            1.9912,
+            10.3825
+          ],
+          [
+            0.8242,
+            9.0316
+          ],
+          [
+            -1.3105,
+            9.3825
+          ],
+          [
+            -1.0241,
+            7.1824
+          ],
+          [
+            -0.4062,
+            5.5735
+          ],
+          [
+            -0.374,
+            3.1042
+          ],
+          [
+            1.9912,
+            3.5952
+          ],
+          [
+            3.514,
+            4.5533
+          ],
+          [
+            5.004,
+            5.653
+          ],
+          [
+            4.6208,
+            7.1824
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in Fon. 'Dahomey' e' la forma francese coloniale. ETHICS-002: il regno del Dahomey fu uno dei principali fornitori della tratta atlantica degli schiavi — questo fatto storico va documentato senza minimizzazione. Le Mino (le 'Amazzoni del Dahomey') erano un corpo militare femminile unico nella storia africana. La conquista francese (1892-1894) distrusse un sistema politico sofisticato. I tesori reali saccheggiati dalla Francia sono oggetto di richieste di restituzione (26 opere restituite nel 2021).",
     "name_variants": [
       {
@@ -313,7 +548,8 @@
         "citation": "Alpern, S.B. Amazons of Black Sparta: The Women Warriors of Dahomey (2011)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "خلافة سكتو",
@@ -324,9 +560,67 @@
     "capital_name": "Sokoto",
     "capital_lat": 13.0622,
     "capital_lon": 5.2339,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            13.537,
+            13.0622
+          ],
+          [
+            14.0336,
+            18.2168
+          ],
+          [
+            8.5946,
+            19.4123
+          ],
+          [
+            5.2339,
+            24.9731
+          ],
+          [
+            1.6784,
+            20.0656
+          ],
+          [
+            -4.3661,
+            19.2437
+          ],
+          [
+            -5.2812,
+            13.0622
+          ],
+          [
+            -1.3811,
+            9.1817
+          ],
+          [
+            -1.3785,
+            2.8197
+          ],
+          [
+            5.2339,
+            3.7194
+          ],
+          [
+            11.2898,
+            2.9013
+          ],
+          [
+            12.3552,
+            8.1898
+          ],
+          [
+            13.537,
+            13.0622
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in Hausa/Arabo. Il Califfato di Sokoto fu il piu' grande stato dell'Africa subsahariana del XIX secolo. ETHICS-002: il jihad di Usman dan Fodio (1804) fu una rivoluzione religiosa e sociale che rovescio' le elites Hausa esistenti. L'economia includeva la schiavitu' su larga scala — si stima che fino a un terzo della popolazione fosse ridotta in schiavitu'. La conquista britannica (1903) smantello' l'autorita' politica ma mantenne le strutture sociali islamiche attraverso l'indirect rule.",
     "name_variants": [
       {
@@ -385,7 +679,8 @@
         "citation": "Lovejoy, P.E. Jihad in West Africa during the Age of Revolutions (2016)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Ọyọ́",
@@ -396,9 +691,67 @@
     "capital_name": "Oyo-Ile",
     "capital_lat": 8.9,
     "capital_lon": 3.9167,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            20.1045,
+            8.9
+          ],
+          [
+            14.4393,
+            15.3625
+          ],
+          [
+            9.552,
+            19.3095
+          ],
+          [
+            3.9167,
+            17.0142
+          ],
+          [
+            -1.6937,
+            18.4432
+          ],
+          [
+            -8.3466,
+            16.7129
+          ],
+          [
+            -7.9171,
+            8.9
+          ],
+          [
+            -5.7579,
+            3.0178
+          ],
+          [
+            -2.1837,
+            0.9002
+          ],
+          [
+            3.9167,
+            -1.2429
+          ],
+          [
+            10.3834,
+            -0.6867
+          ],
+          [
+            15.7862,
+            1.5569
+          ],
+          [
+            20.1045,
+            8.9
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in Yoruba con segni diacritici corretti. ETHICS-002: l'Impero Oyo fu uno dei piu' potenti dell'Africa occidentale, con una cavalleria formidabile. Partecipo' attivamente alla tratta atlantica degli schiavi, specialmente attraverso il porto di Porto-Novo. Il declino inizio' con guerre civili interne (Owu War, 1821) e culmino' con la colonizzazione britannica. La cultura Yoruba e il sistema religioso Ifa sono patrimoni culturali di importanza mondiale.",
     "name_variants": [
       {
@@ -457,7 +810,8 @@
         "citation": "Falola, T. & Ogundiran, A. Archaeology of Atlantic Africa and the African Diaspora (2007)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Buluba",
@@ -468,9 +822,67 @@
     "capital_name": "Mwibele",
     "capital_lat": -7.0,
     "capital_lon": 26.0,
-    "confidence_score": 0.5,
+    "confidence_score": 0.4,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            28.88,
+            -7.0
+          ],
+          [
+            29.6075,
+            -5.1206
+          ],
+          [
+            28.3669,
+            -2.7312
+          ],
+          [
+            26.0,
+            -1.8372
+          ],
+          [
+            24.4945,
+            -4.3648
+          ],
+          [
+            22.1644,
+            -4.8269
+          ],
+          [
+            21.2564,
+            -7.0
+          ],
+          [
+            22.511,
+            -8.9337
+          ],
+          [
+            24.3832,
+            -9.7528
+          ],
+          [
+            26.0,
+            -10.3707
+          ],
+          [
+            28.0289,
+            -10.586
+          ],
+          [
+            28.8313,
+            -8.4104
+          ],
+          [
+            28.88,
+            -7.0
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in Luba. ETHICS-002: l'Impero Luba sviluppo' un sofisticato sistema politico (il Bambudye) che influenzo' ampiamente l'Africa centrale. Il sistema di memoria (lukasa) rappresenta una forma unica di registrazione storica. La colonizzazione belga del Congo distrusse le strutture politiche Luba con violenza estrema — il regime di Leopoldo II causo' milioni di morti nell'intera regione. ETHICS-003: le date sono incerte; la tradizione orale e' la fonte principale.",
     "name_variants": [
       {
@@ -521,7 +933,8 @@
         "citation": "Vansina, J. Kingdoms of the Savanna (1966)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Lunda",
@@ -532,9 +945,67 @@
     "capital_name": "Musumba",
     "capital_lat": -9.5,
     "capital_lon": 24.0,
-    "confidence_score": 0.5,
+    "confidence_score": 0.4,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            33.4818,
+            -9.5
+          ],
+          [
+            32.5934,
+            -3.4961
+          ],
+          [
+            31.4814,
+            3.7512
+          ],
+          [
+            24.0,
+            5.0694
+          ],
+          [
+            18.6565,
+            0.7138
+          ],
+          [
+            15.3018,
+            -3.5356
+          ],
+          [
+            12.4668,
+            -9.5
+          ],
+          [
+            12.1399,
+            -15.7418
+          ],
+          [
+            18.2726,
+            -19.2451
+          ],
+          [
+            24.0,
+            -21.8729
+          ],
+          [
+            29.4501,
+            -18.0783
+          ],
+          [
+            33.1096,
+            -15.2656
+          ],
+          [
+            33.4818,
+            -9.5
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in Lunda. ETHICS-002: l'Impero Lunda si estendeva su vaste aree dell'Africa centrale. Il commercio di schiavi verso la costa atlantica e orientale fu parte significativa dell'economia — un aspetto che non va omesso. La colonizzazione belga e portoghese frammentò l'impero tra Congo, Angola e Zambia attuali. ETHICS-003: la cronologia si basa principalmente su tradizioni orali raccolte da ricercatori coloniali, con i conseguenti problemi di mediazione culturale.",
     "name_variants": [
       {
@@ -589,7 +1060,8 @@
         "citation": "Schecter, R.E. 'History and Historiography on a Frontier of Lunda Expansion' (1980)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Mutapa",
@@ -600,9 +1072,67 @@
     "capital_name": "Zvongombe",
     "capital_lat": -16.1,
     "capital_lon": 31.5,
-    "confidence_score": 0.55,
+    "confidence_score": 0.45,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            44.1065,
+            -16.1
+          ],
+          [
+            41.492,
+            -10.4344
+          ],
+          [
+            41.2299,
+            -2.6228
+          ],
+          [
+            31.5,
+            -6.1238
+          ],
+          [
+            23.7593,
+            -5.2339
+          ],
+          [
+            18.5298,
+            -6.7884
+          ],
+          [
+            20.6489,
+            -16.1
+          ],
+          [
+            20.5429,
+            -22.2341
+          ],
+          [
+            25.9432,
+            -25.7343
+          ],
+          [
+            31.5,
+            -33.2531
+          ],
+          [
+            35.8686,
+            -24.5706
+          ],
+          [
+            39.3017,
+            -20.0658
+          ],
+          [
+            44.1065,
+            -16.1
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in Shona. Il titolo completo 'Mwene Mutapa' significa 'conquistatore delle terre'. ETHICS-002: l'impero Mutapa eredito' la tradizione dello Zimbabwe e controllo' le rotte commerciali dell'oro verso la costa dell'Oceano Indiano. I Portoghesi tentarono ripetutamente di controllarlo attraverso interventi militari e missionari — questo rappresenta una delle prime forme di ingerenza coloniale europea in Africa australe. ETHICS-003: la storiografia coloniale ha a lungo minimizzato la sofisticazione politica dell'impero.",
     "name_variants": [
       {
@@ -677,7 +1207,8 @@
         "citation": "Barros, J. Decadas da Asia (1552)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Rozwi",
@@ -688,9 +1219,67 @@
     "capital_name": "Danangombe",
     "capital_lat": -20.2667,
     "capital_lon": 29.95,
-    "confidence_score": 0.5,
+    "confidence_score": 0.4,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            42.468,
+            -20.2667
+          ],
+          [
+            41.0581,
+            -14.805
+          ],
+          [
+            36.0272,
+            -12.0666
+          ],
+          [
+            29.95,
+            -10.8224
+          ],
+          [
+            25.1499,
+            -10.1632
+          ],
+          [
+            22.8981,
+            -16.28
+          ],
+          [
+            19.852,
+            -20.2667
+          ],
+          [
+            20.6129,
+            -24.9105
+          ],
+          [
+            24.7033,
+            -29.5704
+          ],
+          [
+            29.95,
+            -29.8246
+          ],
+          [
+            36.1269,
+            -30.2336
+          ],
+          [
+            40.0988,
+            -26.3474
+          ],
+          [
+            42.468,
+            -20.2667
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in Shona. 'Rozwi' significa 'distruttori', riferito alla loro potenza militare. ETHICS-002: l'Impero Rozwi caccio' i Portoghesi dall'altopiano dello Zimbabwe, rappresentando un caso significativo di resistenza africana al colonialismo europeo nel XVII secolo. La loro tradizione architettonica in pietra continuo' quella del Grande Zimbabwe. ETHICS-003: le fonti sono limitate; la storiografia coloniale ha trascurato questo impero.",
     "name_variants": [
       {
@@ -745,7 +1334,8 @@
         "citation": "Pikirayi, I. The Zimbabwe Culture: Origins and Decline of Southern Zambezian States (2001)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Buganda",
@@ -756,9 +1346,67 @@
     "capital_name": "Kampala",
     "capital_lat": 0.3476,
     "capital_lon": 32.5825,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            35.2219,
+            0.3476
+          ],
+          [
+            35.1013,
+            1.6633
+          ],
+          [
+            33.9909,
+            3.1258
+          ],
+          [
+            32.5825,
+            3.3359
+          ],
+          [
+            30.244,
+            4.604
+          ],
+          [
+            28.6177,
+            2.2665
+          ],
+          [
+            29.8236,
+            0.3476
+          ],
+          [
+            29.8989,
+            -1.2083
+          ],
+          [
+            30.801,
+            -2.1956
+          ],
+          [
+            32.5825,
+            -3.3981
+          ],
+          [
+            34.0393,
+            -2.3539
+          ],
+          [
+            36.4499,
+            -1.9894
+          ],
+          [
+            35.2219,
+            0.3476
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in Luganda. 'Uganda' moderna prende il nome dal regno di Buganda (nella forma Swahili). ETHICS-002: il Kabaka (re) governava con un sistema politico centralizzato e sofisticato. La competizione tra cattolici, protestanti e musulmani nella corte fu strumentalizzata dalle potenze coloniali. Il trattato del 1894 con i britannici distrusse l'indipendenza del regno. L'Uganda Agreement del 1900 formalizzo' il controllo coloniale.",
     "name_variants": [
       {
@@ -809,7 +1457,8 @@
         "citation": "Roscoe, J. The Baganda: An Account of Their Native Customs and Beliefs (1911)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "u Rwanda",
@@ -820,9 +1469,67 @@
     "capital_name": "Nyanza",
     "capital_lat": -2.3594,
     "capital_lon": 29.7389,
-    "confidence_score": 0.55,
+    "confidence_score": 0.45,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            33.6494,
+            -2.3594
+          ],
+          [
+            32.4481,
+            -0.5784
+          ],
+          [
+            31.5802,
+            1.5904
+          ],
+          [
+            29.7389,
+            -0.0396
+          ],
+          [
+            27.5778,
+            1.2642
+          ],
+          [
+            27.1561,
+            -0.5716
+          ],
+          [
+            26.8218,
+            -2.3594
+          ],
+          [
+            27.5467,
+            -3.6316
+          ],
+          [
+            28.09,
+            -5.6502
+          ],
+          [
+            29.7389,
+            -6.5026
+          ],
+          [
+            31.2617,
+            -5.0831
+          ],
+          [
+            31.8383,
+            -3.9021
+          ],
+          [
+            33.6494,
+            -2.3594
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in Kinyarwanda. ETHICS-002: il sistema sociale del Rwanda precoloniale e' stato profondamente distorto dalla storiografia coloniale belga, che rigidifico' e razzializzo' le categorie Hutu/Tutsi/Twa — originariamente piu' fluide e basate su status socioeconomico piuttosto che su 'razza'. Questa distorsione coloniale e' stata una delle cause strutturali del genocidio del 1994. La data di fondazione (1081) e' convenzionale e basata su tradizioni orali. ETHICS-003: qualsiasi rappresentazione di questo regno deve esplicitare il ruolo del colonialismo belga nella manipolazione delle identita' etniche.",
     "name_variants": [
       {
@@ -889,7 +1596,8 @@
         "citation": "Des Forges, A. Leave None to Tell the Story (1999)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Jolof",
@@ -900,9 +1608,67 @@
     "capital_name": "Linguere",
     "capital_lat": 15.3956,
     "capital_lon": -15.1144,
-    "confidence_score": 0.5,
+    "confidence_score": 0.4,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -2.4654,
+            15.3956
+          ],
+          [
+            -5.2712,
+            21.6503
+          ],
+          [
+            -10.1607,
+            22.6543
+          ],
+          [
+            -15.1144,
+            26.2738
+          ],
+          [
+            -21.1175,
+            23.1154
+          ],
+          [
+            -23.3064,
+            20.4889
+          ],
+          [
+            -29.1629,
+            15.3956
+          ],
+          [
+            -27.4547,
+            8.5191
+          ],
+          [
+            -20.974,
+            7.5758
+          ],
+          [
+            -15.1144,
+            5.2367
+          ],
+          [
+            -10.6292,
+            8.0576
+          ],
+          [
+            -6.4833,
+            10.753
+          ],
+          [
+            -2.4654,
+            15.3956
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in Wolof. 'Wolof Empire' e' la denominazione inglese. ETHICS-002: l'impero fu uno dei primi stati dell'Africa occidentale a subire l'impatto della tratta atlantica degli schiavi e del commercio europeo sulla costa. La frammentazione dell'impero fu in parte accelerata dalla competizione per il controllo del commercio con i Portoghesi. ETHICS-003: le fonti sono limitate, combinando tradizioni orali e fonti portoghesi con evidenti bias coloniali.",
     "name_variants": [
       {
@@ -961,7 +1727,8 @@
         "citation": "Ca da Mosto, A. Navigationi (1507)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Moose",
@@ -972,9 +1739,67 @@
     "capital_name": "Ouagadougou",
     "capital_lat": 12.3714,
     "capital_lon": -1.5197,
-    "confidence_score": 0.55,
+    "confidence_score": 0.45,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            1.1544,
+            12.3714
+          ],
+          [
+            2.2381,
+            14.4913
+          ],
+          [
+            1.034,
+            16.9083
+          ],
+          [
+            -1.5197,
+            16.4524
+          ],
+          [
+            -3.9878,
+            16.9775
+          ],
+          [
+            -5.4136,
+            14.6232
+          ],
+          [
+            -5.9441,
+            12.3714
+          ],
+          [
+            -4.1428,
+            10.8872
+          ],
+          [
+            -3.7125,
+            9.3785
+          ],
+          [
+            -1.5197,
+            9.2741
+          ],
+          [
+            0.0658,
+            9.7088
+          ],
+          [
+            2.6888,
+            10.0116
+          ],
+          [
+            1.1544,
+            12.3714
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in Moore (lingua Mossi). 'Mossi' e' la forma francese. ETHICS-002: i regni Mossi resistettero alle espansioni islamiche del Mali e del Songhai, mantenendo le religioni tradizionali. Questa resistenza e' significativa nella storia della pluralita' religiosa africana. La conquista francese (1896-1897) distrusse l'indipendenza dei regni, ma il Mogho Naaba (re di Ouagadougou) mantiene ancora oggi un ruolo cerimoniale importante.",
     "name_variants": [
       {
@@ -1029,7 +1854,8 @@
         "citation": "Skinner, E.P. The Mossi of the Upper Volta (1964)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Hausa Bakwai",
@@ -1040,9 +1866,67 @@
     "capital_name": "Kano",
     "capital_lat": 12.0022,
     "capital_lon": 8.5919,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            9.1714,
+            12.0022
+          ],
+          [
+            8.9175,
+            12.182
+          ],
+          [
+            8.8584,
+            12.4925
+          ],
+          [
+            8.5919,
+            12.5175
+          ],
+          [
+            8.3735,
+            12.4179
+          ],
+          [
+            8.0486,
+            12.3711
+          ],
+          [
+            8.0688,
+            12.0022
+          ],
+          [
+            8.2389,
+            11.7863
+          ],
+          [
+            8.2192,
+            11.4381
+          ],
+          [
+            8.5919,
+            11.4457
+          ],
+          [
+            8.8031,
+            11.6057
+          ],
+          [
+            9.0589,
+            11.761
+          ],
+          [
+            9.1714,
+            12.0022
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in Hausa. I 'Bakwai' (sette) sono i sette stati Hausa originali della leggenda di Bayajidda. ETHICS-002: le citta'-stato Hausa furono centri di commercio, artigianato e cultura islamica. Kano era una delle citta' piu' grandi dell'Africa subsahariana. Il sistema includeva la schiavitu' e il commercio di schiavi. Gli stati furono conquistati dal jihad di Usman dan Fodio (1804), che li incorporo' nel Califfato di Sokoto. ETHICS-003: la 'Kano Chronicle' e' una fonte primaria importante ma riflette la prospettiva della corte reale.",
     "name_variants": [
       {
@@ -1101,7 +1985,8 @@
         "citation": "Paden, J.N. Religion and Political Culture in Kano (1973)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "سلطنة زنجبار",
@@ -1112,9 +1997,67 @@
     "capital_name": "Zanzibar City",
     "capital_lat": -6.1659,
     "capital_lon": 39.2026,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            42.4361,
+            -6.1659
+          ],
+          [
+            41.8064,
+            -4.9758
+          ],
+          [
+            41.4245,
+            -2.8917
+          ],
+          [
+            39.2026,
+            -3.0348
+          ],
+          [
+            36.6809,
+            -2.2505
+          ],
+          [
+            36.8801,
+            -4.8834
+          ],
+          [
+            36.53,
+            -6.1659
+          ],
+          [
+            35.3707,
+            -8.0819
+          ],
+          [
+            37.8779,
+            -8.3069
+          ],
+          [
+            39.2026,
+            -8.5484
+          ],
+          [
+            41.1555,
+            -9.8057
+          ],
+          [
+            42.2322,
+            -7.8823
+          ],
+          [
+            42.4361,
+            -6.1659
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in Arabo, la lingua ufficiale del sultanato, sebbene lo Swahili fosse la lingua della popolazione. ETHICS-002: Zanzibar fu il piu' grande mercato di schiavi dell'Africa orientale. Decine di migliaia di persone dall'interno dell'Africa venivano vendute annualmente. Questo orrore va documentato senza minimizzazione. La rivoluzione del 1964 rovescio' il sultanato con violenza significativa contro la comunita' araba e asiatica — evento complesso che richiede attenzione ai diritti umani di tutte le parti. ETHICS-003: la 'guerra piu' breve della storia' (38 minuti, bombardamento britannico del 1896) fu un atto di imperialismo militare.",
     "name_variants": [
       {
@@ -1177,7 +2120,8 @@
         "citation": "Lofchie, M.F. Zanzibar: Background to Revolution (1965)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Imerina",
@@ -1188,9 +2132,67 @@
     "capital_name": "Antananarivo",
     "capital_lat": -18.8792,
     "capital_lon": 47.5079,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            51.0107,
+            -18.8792
+          ],
+          [
+            51.0321,
+            -17.1199
+          ],
+          [
+            49.0195,
+            -16.4105
+          ],
+          [
+            47.5079,
+            -14.8305
+          ],
+          [
+            45.0477,
+            -15.4814
+          ],
+          [
+            44.9671,
+            -17.3257
+          ],
+          [
+            43.3033,
+            -18.8792
+          ],
+          [
+            44.3212,
+            -20.9866
+          ],
+          [
+            44.8383,
+            -22.2574
+          ],
+          [
+            47.5079,
+            -22.7831
+          ],
+          [
+            49.1343,
+            -21.268
+          ],
+          [
+            51.455,
+            -20.912
+          ],
+          [
+            51.0107,
+            -18.8792
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in Malgascio. ETHICS-002: il Regno Merina unifico' gran parte del Madagascar sotto una monarchia centralizzata. Il sistema fanompoana (lavoro obbligatorio) fu una forma di servitu' interna. La conquista francese (1896-1897) distrusse un regno indipendente e sofisticato. La regina Ranavalona I (r. 1828-1861) e' stata demonizzata dalla storiografia coloniale come 'la Caligola al femminile' — una caratterizzazione sessista e razzista di una sovrana che difese l'indipendenza del suo paese. La regina Ranavalona III, ultima sovrana, fu deportata in Algeria dai francesi.",
     "name_variants": [
       {
@@ -1257,7 +2259,8 @@
         "citation": "Ellis, S. The Rising of the Red Shawls: A Revolt in Madagascar (1985)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Numidia",
@@ -1268,9 +2271,67 @@
     "capital_name": "Cirta",
     "capital_lat": 36.365,
     "capital_lon": 6.6147,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            10.8636,
+            36.365
+          ],
+          [
+            8.9161,
+            37.3218
+          ],
+          [
+            7.7011,
+            38.3269
+          ],
+          [
+            6.6147,
+            38.4807
+          ],
+          [
+            4.8791,
+            39.0997
+          ],
+          [
+            4.3038,
+            37.4808
+          ],
+          [
+            3.7405,
+            36.365
+          ],
+          [
+            3.9068,
+            35.1051
+          ],
+          [
+            5.116,
+            34.5129
+          ],
+          [
+            6.6147,
+            33.5748
+          ],
+          [
+            8.1849,
+            33.9271
+          ],
+          [
+            8.6437,
+            35.3795
+          ],
+          [
+            10.8636,
+            36.365
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in Latino/Berbero. Le iscrizioni numide in Tifinagh rappresentano una tradizione di scrittura nordafricana indigena. ETHICS-002: Massinissa unifico' la Numidia come stato cliente di Roma, ma Giugurta tento' di liberarla dal dominio romano. La guerra giugurtina (112-106 a.C.) fu documentata da Sallustio con un bias chiaramente romano. Dopo Tapso (46 a.C.) la Numidia fu annessa come provincia romana, cancellando l'ultimo grande stato berbero indipendente dell'antichita'.",
     "name_variants": [
       {
@@ -1337,7 +2398,8 @@
         "citation": "Decret, F. & Fantar, M. L'Afrique du Nord dans l'Antiquite (1981)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kilwa",
@@ -1348,9 +2410,67 @@
     "capital_name": "Kilwa Kisiwani",
     "capital_lat": -8.9573,
     "capital_lon": 39.5226,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            41.7559,
+            -8.9573
+          ],
+          [
+            42.3882,
+            -7.4075
+          ],
+          [
+            41.4549,
+            -5.7136
+          ],
+          [
+            39.5226,
+            -6.7055
+          ],
+          [
+            38.2323,
+            -6.6112
+          ],
+          [
+            35.6602,
+            -7.0249
+          ],
+          [
+            35.8882,
+            -8.9573
+          ],
+          [
+            37.1494,
+            -10.2928
+          ],
+          [
+            37.6168,
+            -11.9695
+          ],
+          [
+            39.5226,
+            -12.4421
+          ],
+          [
+            40.9305,
+            -11.7553
+          ],
+          [
+            41.8163,
+            -10.2308
+          ],
+          [
+            41.7559,
+            -8.9573
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in Swahili. Il sultanato fu parte della civilta' Swahili costiera, un sistema urbano e commerciale sofisticato. ETHICS-002: Ibn Battuta (1331) descrisse Kilwa come una delle citta' piu' belle del mondo. La distruzione del sultanato da parte dei Portoghesi (1505) fu un atto di brutale colonialismo: Francisco d'Almeida saccheggio' e incendio' la citta'. Questo episodio e' emblematico della violenza coloniale portoghese nell'Oceano Indiano. ETHICS-003: l'archeologia ha confermato la sofisticazione urbana di Kilwa, smentendo le narrazioni coloniali che negavano l'urbanizzazione africana.",
     "name_variants": [
       {
@@ -1401,7 +2521,8 @@
         "citation": "Horton, M. & Middleton, J. The Swahili: The Social Landscape of a Mercantile Society (2000)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Ajuuraan",
@@ -1412,9 +2533,67 @@
     "capital_name": "Mogadishu",
     "capital_lat": 2.0469,
     "capital_lon": 45.3182,
-    "confidence_score": 0.45,
+    "confidence_score": 0.35,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            53.9148,
+            2.0469
+          ],
+          [
+            55.1745,
+            6.6374
+          ],
+          [
+            52.2693,
+            13.3161
+          ],
+          [
+            45.3182,
+            9.3457
+          ],
+          [
+            39.057,
+            12.1948
+          ],
+          [
+            34.6188,
+            8.4366
+          ],
+          [
+            36.3691,
+            2.0469
+          ],
+          [
+            36.7628,
+            -2.7171
+          ],
+          [
+            39.7086,
+            -7.4458
+          ],
+          [
+            45.3182,
+            -9.3034
+          ],
+          [
+            51.0802,
+            -9.4201
+          ],
+          [
+            56.4336,
+            -3.6561
+          ],
+          [
+            53.9148,
+            2.0469
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in Somalo. ETHICS-002: l'Ajuran sviluppo' un sistema idraulico sofisticato (qanat) e controllo' il commercio nell'Oceano Indiano. Resistette ai Portoghesi nella battaglia di Barawa (1507), un episodio importante della resistenza africana/islamica al colonialismo. ETHICS-003: le fonti sono estremamente limitate, combinando tradizioni orali somale e fonti portoghesi/arabe. Il confidence_score basso riflette questa incertezza. La storiografia sulla Somalia precoloniale e' stata gravemente danneggiata dalla guerra civile.",
     "name_variants": [
       {
@@ -1469,7 +2648,8 @@
         "citation": "Luling, V. Somali Sultanate: The Geledi City-State over 150 Years (2002)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Bornu",
@@ -1480,9 +2660,67 @@
     "capital_name": "Birni Gazargamu",
     "capital_lat": 12.9,
     "capital_lon": 12.35,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            23.7428,
+            12.9
+          ],
+          [
+            21.9973,
+            18.8188
+          ],
+          [
+            19.1185,
+            23.252
+          ],
+          [
+            12.35,
+            25.9307
+          ],
+          [
+            5.9682,
+            23.1366
+          ],
+          [
+            0.3825,
+            19.6651
+          ],
+          [
+            3.0872,
+            12.9
+          ],
+          [
+            3.3769,
+            7.9408
+          ],
+          [
+            7.4288,
+            4.0626
+          ],
+          [
+            12.35,
+            0.4699
+          ],
+          [
+            16.6398,
+            5.732
+          ],
+          [
+            19.62,
+            8.7218
+          ],
+          [
+            23.7428,
+            12.9
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in Kanuri. Il Bornu e' la fase tardiva dell'impero Kanem-Bornu, quando la capitale si sposto' a sud-ovest del Lago Ciad. ETHICS-002: sotto Idris Alauma (r. 1564-1596) il Bornu raggiunse il suo apogeo, con diplomazia attiva con l'Impero Ottomano e le potenze nordafricane. L'economia includeva la tratta degli schiavi trans-sahariana. La conquista da parte di Rabih az-Zubayr (1893), seguita dalla spartizione coloniale, pose fine a uno degli stati piu' longevi dell'Africa. Relazione con Kanem-Bornu: questo record copre la fase 'Bornu' specifica dopo il trasferimento della capitale.",
     "name_variants": [
       {
@@ -1541,7 +2779,8 @@
         "citation": "Ibn Furtu, Ghazawat Barnu (XVI sec.)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kaabu",
@@ -1552,9 +2791,67 @@
     "capital_name": "Kansala",
     "capital_lat": 12.35,
     "capital_lon": -14.15,
-    "confidence_score": 0.45,
+    "confidence_score": 0.35,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -10.7132,
+            12.35
+          ],
+          [
+            -11.9931,
+            13.7932
+          ],
+          [
+            -12.5525,
+            15.1448
+          ],
+          [
+            -14.15,
+            15.9643
+          ],
+          [
+            -16.4264,
+            16.2467
+          ],
+          [
+            -16.8267,
+            13.7642
+          ],
+          [
+            -18.0452,
+            12.35
+          ],
+          [
+            -16.689,
+            11.1227
+          ],
+          [
+            -15.7898,
+            9.3628
+          ],
+          [
+            -14.15,
+            9.3705
+          ],
+          [
+            -12.5139,
+            9.887
+          ],
+          [
+            -12.0069,
+            11.0625
+          ],
+          [
+            -10.7132,
+            12.35
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in Mandinka. ETHICS-002: Kaabu era un regno successore dell'Impero del Mali nella regione senegambiana. L'economia includeva il commercio di schiavi, arachidi e cera. La caduta di Kansala (1867) nella battaglia contro il jihadista Alfa Molo e' un episodio commemorato nella tradizione orale Mandinka come un momento di eroismo tragico — i difensori fecero esplodere le riserve di polvere da sparo piuttosto che arrendersi. ETHICS-003: le fonti sono quasi esclusivamente orali (griot mandinka), il che rende la cronologia incerta.",
     "name_variants": [
       {
@@ -1609,7 +2906,8 @@
         "citation": "Niane, D.T. Histoire des Mandingues de l'Ouest (1989)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "𒆠𒂗𒄀",
@@ -1620,9 +2918,67 @@
     "capital_name": "Ur",
     "capital_lat": 30.9625,
     "capital_lon": 46.1031,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            46.354,
+            30.9625
+          ],
+          [
+            46.4831,
+            31.1831
+          ],
+          [
+            46.3025,
+            31.2889
+          ],
+          [
+            46.1031,
+            31.2342
+          ],
+          [
+            45.9086,
+            31.3059
+          ],
+          [
+            45.8703,
+            31.0787
+          ],
+          [
+            45.6938,
+            30.9625
+          ],
+          [
+            45.7798,
+            30.7909
+          ],
+          [
+            45.9562,
+            30.7118
+          ],
+          [
+            46.1031,
+            30.5739
+          ],
+          [
+            46.2629,
+            30.6727
+          ],
+          [
+            46.4934,
+            30.8005
+          ],
+          [
+            46.354,
+            30.9625
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in cuneiforme sumerico. Sumer e' considerata la prima civilta' urbana conosciuta. ETHICS-002: la civilta' sumerica praticava la schiavitu' e la guerra di conquista, come documentato da iscrizioni reali (es. Stele degli Avvoltoi). Questi aspetti vanno documentati insieme alle straordinarie conquiste culturali (scrittura cuneiforme, diritto codificato, astronomia, letteratura — l'Epopea di Gilgamesh e' il piu' antico poema narrativo conosciuto). ETHICS-003: la cronologia del periodo piu' antico (Uruk, -4500) e' basata su evidenze archeologiche con margini di incertezza significativi.",
     "name_variants": [
       {
@@ -1689,7 +3045,8 @@
         "citation": "Woolley, L. Ur Excavations (1934-1955)",
         "source_type": "archaeological"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "𒀀𒅗𒁲𒆠",
@@ -1700,9 +3057,67 @@
     "capital_name": "Akkad",
     "capital_lat": 33.1,
     "capital_lon": 44.1,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            52.7309,
+            33.1
+          ],
+          [
+            53.3982,
+            37.3958
+          ],
+          [
+            47.0166,
+            37.166
+          ],
+          [
+            44.1,
+            38.5625
+          ],
+          [
+            40.9998,
+            37.6306
+          ],
+          [
+            39.2836,
+            35.7561
+          ],
+          [
+            35.2036,
+            33.1
+          ],
+          [
+            38.5035,
+            30.4991
+          ],
+          [
+            38.431,
+            26.146
+          ],
+          [
+            44.1,
+            24.5591
+          ],
+          [
+            48.432,
+            27.5787
+          ],
+          [
+            49.5252,
+            30.8253
+          ],
+          [
+            52.7309,
+            33.1
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in cuneiforme accadico. L'Impero Accadico e' considerato il primo impero della storia (nel senso di stato multietnico centralizzato). ETHICS-002: Sargon di Akkad creo' l'impero con conquiste militari brutali, come documentato dalle iscrizioni reali. Il nipote Naram-Sin si proclamo' dio, il che genero' resistenza e ribellioni. Le iscrizioni di vittoria celebrano distruzione e sottomissione — la retorica imperiale nasce qui. ETHICS-003: la posizione esatta della capitale Akkad non e' stata ancora identificata archeologicamente; le coordinate sono una stima approssimativa.",
     "name_variants": [
       {
@@ -1761,7 +3176,8 @@
         "citation": "Cooper, J.S. The Curse of Agade (1983)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "𒀸𒋩",
@@ -1772,9 +3188,67 @@
     "capital_name": "Nineveh",
     "capital_lat": 36.3586,
     "capital_lon": 43.1528,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            51.5761,
+            36.3586
+          ],
+          [
+            50.2696,
+            40.2217
+          ],
+          [
+            46.8455,
+            40.8371
+          ],
+          [
+            43.1528,
+            43.1849
+          ],
+          [
+            39.2723,
+            40.7791
+          ],
+          [
+            36.2819,
+            39.2379
+          ],
+          [
+            36.4667,
+            36.3586
+          ],
+          [
+            36.8025,
+            33.2628
+          ],
+          [
+            37.613,
+            28.5211
+          ],
+          [
+            43.1528,
+            29.4849
+          ],
+          [
+            46.0695,
+            32.668
+          ],
+          [
+            50.5465,
+            33.0131
+          ],
+          [
+            51.5761,
+            36.3586
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in cuneiforme accadico (Ashur). ETHICS-002: l'Impero Assiro pratico' deportazioni di massa sistematiche come strumento di controllo imperiale — centinaia di migliaia di persone trasferite forzatamente. Le iscrizioni reali celebrano apertamente la brutalita' (scorticamento dei prigionieri, impalamento). Questi atti vanno documentati senza sanitizzazione. Allo stesso tempo, l'Assiria produsse biblioteche (Biblioteca di Ashurbanipal), ingegneria idraulica avanzata e arte monumentale. La caduta di Ninive (612 a.C.) fu celebrata dai popoli sottomessi (Libro di Nahum).",
     "name_variants": [
       {
@@ -1841,7 +3315,8 @@
         "citation": "Oded, B. Mass Deportations and Deportees in the Neo-Assyrian Empire (1979)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "𒆍𒀭𒊏𒆠",
@@ -1852,9 +3327,67 @@
     "capital_name": "Babylon",
     "capital_lat": 32.5427,
     "capital_lon": 44.4209,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            52.6192,
+            32.5427
+          ],
+          [
+            50.5526,
+            35.5949
+          ],
+          [
+            50.7017,
+            42.0849
+          ],
+          [
+            44.4209,
+            41.2341
+          ],
+          [
+            39.1266,
+            40.8071
+          ],
+          [
+            37.2279,
+            35.6461
+          ],
+          [
+            37.7685,
+            32.5427
+          ],
+          [
+            33.9601,
+            26.9006
+          ],
+          [
+            41.1332,
+            27.5993
+          ],
+          [
+            44.4209,
+            26.016
+          ],
+          [
+            48.7011,
+            26.9545
+          ],
+          [
+            53.3565,
+            27.8049
+          ],
+          [
+            52.6192,
+            32.5427
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in cuneiforme accadico (Bab-ilani, 'Porta degli dei'). ETHICS-002: la civilta' babilonese produsse il Codice di Hammurabi (~1754 a.C.), i Giardini Pensili (una delle Sette Meraviglie) e la torre-ziggurat Etemenanki (probabile ispirazione della Torre di Babele biblica). Nabucodonosor II distrusse Gerusalemme e deporto' la popolazione giudaica (586 a.C.) — evento fondante della memoria ebraica (la 'Cattivita' Babilonese'). La caduta per mano di Ciro il Grande (539 a.C.) e' documentata nel Cilindro di Ciro, considerato da alcuni un precursore dei diritti umani.",
     "name_variants": [
       {
@@ -1921,7 +3454,8 @@
         "citation": "Cilindro di Ciro (British Museum)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "𒄩𒀜𒌅𒊭",
@@ -1932,9 +3466,67 @@
     "capital_name": "Hattusa",
     "capital_lat": 40.0197,
     "capital_lon": 34.6153,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            44.0183,
+            40.0197
+          ],
+          [
+            44.5726,
+            44.2824
+          ],
+          [
+            38.2817,
+            46.0457
+          ],
+          [
+            34.6153,
+            46.9967
+          ],
+          [
+            31.159,
+            45.634
+          ],
+          [
+            23.136,
+            44.4279
+          ],
+          [
+            25.5721,
+            40.0197
+          ],
+          [
+            26.5983,
+            36.7713
+          ],
+          [
+            28.6141,
+            31.0478
+          ],
+          [
+            34.6153,
+            29.2199
+          ],
+          [
+            40.7034,
+            31.8189
+          ],
+          [
+            44.0425,
+            35.6912
+          ],
+          [
+            44.0183,
+            40.0197
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in cuneiforme ittita. Gli Ittiti chiamavano la loro terra 'Hatti'. ETHICS-002: l'Impero Ittita fu una delle grandi potenze del Tardo Bronzo, rivale dell'Egitto. Il Trattato di Qadesh (~1259 a.C.) tra Ittiti ed Egizi e' il piu' antico trattato di pace conservato in entrambe le versioni. Il collasso del Tardo Bronzo (~1178 a.C.) distrusse l'impero — le cause sono ancora dibattute (Popoli del Mare, carestie, terremoti, guerre civili). ETHICS-003: la lingua ittita fu decifrata solo nel 1915 da Hrozny; prima di allora, gli Ittiti erano conosciuti quasi esclusivamente dalle fonti bibliche ed egizie.",
     "name_variants": [
       {
@@ -2001,7 +3593,8 @@
         "citation": "Cline, E.H. 1177 B.C.: The Year Civilization Collapsed (2014)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "الدولة الأموية",
@@ -2012,9 +3605,67 @@
     "capital_name": "Damascus",
     "capital_lat": 33.5138,
     "capital_lon": 36.2765,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            47.3345,
+            33.5138
+          ],
+          [
+            50.4571,
+            40.3483
+          ],
+          [
+            41.0307,
+            40.0648
+          ],
+          [
+            36.2765,
+            45.7542
+          ],
+          [
+            30.8418,
+            40.9151
+          ],
+          [
+            25.7756,
+            38.6488
+          ],
+          [
+            25.4779,
+            33.5138
+          ],
+          [
+            27.4425,
+            29.169
+          ],
+          [
+            31.3886,
+            26.794
+          ],
+          [
+            36.2765,
+            26.0826
+          ],
+          [
+            41.3428,
+            25.8509
+          ],
+          [
+            46.1423,
+            29.0644
+          ],
+          [
+            47.3345,
+            33.5138
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in Arabo. ETHICS-002: il Califfato Omayyade fu il piu' grande impero della storia fino a quel momento per estensione territoriale (dalla Spagna all'Indo). L'arabizzazione e l'islamizzazione delle regioni conquistate trasformo' profondamente culture preesistenti — un processo che va documentato riconoscendo sia le conquiste culturali che le perdite. La discriminazione contro i mawali (musulmani non-arabi) fu una tensione strutturale dell'impero. La rivoluzione abbaside (750) porto' al massacro quasi totale della famiglia omayyade.",
     "name_variants": [
       {
@@ -2081,7 +3732,8 @@
         "citation": "Al-Tabari, Tarikh al-Rusul wa al-Muluk",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "الدولة الفاطمية",
@@ -2092,9 +3744,67 @@
     "capital_name": "Cairo",
     "capital_lat": 30.0444,
     "capital_lon": 31.2357,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            40.4984,
+            30.0444
+          ],
+          [
+            44.9166,
+            35.3335
+          ],
+          [
+            38.6434,
+            40.0137
+          ],
+          [
+            31.2357,
+            39.427
+          ],
+          [
+            24.521,
+            41.1739
+          ],
+          [
+            23.5365,
+            33.7976
+          ],
+          [
+            22.3614,
+            30.0444
+          ],
+          [
+            22.1588,
+            26.4331
+          ],
+          [
+            25.8848,
+            22.3319
+          ],
+          [
+            31.2357,
+            20.3282
+          ],
+          [
+            38.8268,
+            20.9716
+          ],
+          [
+            42.0106,
+            24.518
+          ],
+          [
+            40.4984,
+            30.0444
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in Arabo. I Fatimidi si dichiaravano discendenti di Fatima, figlia del Profeta Muhammad. ETHICS-002: il Califfato Fatimide fu la piu' grande potenza islamica sciita della storia. Fondo' il Cairo (al-Qahira, 'la Vittoriosa') e l'universita' di al-Azhar, ancora oggi uno dei centri piu' importanti dell'apprendimento islamico. Il periodo fu caratterizzato da relativa tolleranza religiosa, con eccezioni (persecuzioni sotto al-Hakim bi-Amr Allah). La caduta per mano di Saladino (1171) segno' la fine del potere sciita in Egitto. ETHICS-003: la legittimita' della discendenza fatimide da Ali e' contestata nella storiografia sunnita.",
     "name_variants": [
       {
@@ -2153,7 +3863,8 @@
         "citation": "Al-Maqrizi, Itti'az al-Hunafa",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "الدولة الأيوبية",
@@ -2164,9 +3875,67 @@
     "capital_name": "Cairo",
     "capital_lat": 30.0444,
     "capital_lon": 31.2357,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            47.1507,
+            30.0444
+          ],
+          [
+            44.8075,
+            35.7383
+          ],
+          [
+            37.3959,
+            39.0341
+          ],
+          [
+            31.2357,
+            37.6146
+          ],
+          [
+            22.5833,
+            42.9511
+          ],
+          [
+            18.9843,
+            36.969
+          ],
+          [
+            20.0187,
+            30.0444
+          ],
+          [
+            22.2027,
+            26.4592
+          ],
+          [
+            22.7656,
+            18.5615
+          ],
+          [
+            31.2357,
+            21.4931
+          ],
+          [
+            38.369,
+            20.4486
+          ],
+          [
+            43.8446,
+            22.9502
+          ],
+          [
+            47.1507,
+            30.0444
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in Arabo. La dinastia Ayyubide prende il nome da Ayyub, padre di Saladino. ETHICS-002: Saladino (Salah al-Din al-Ayyubi) e' celebre in Occidente per la riconquista di Gerusalemme (1187) e la sua cavalleria nella Terza Crociata. Nella storiografia araba e' un eroe dell'Islam. E' importante presentare entrambe le prospettive senza esaltare o demonizzare la guerra religiosa. La dinastia era di origine curda — un fatto spesso omesso nella storiografia araba nazionalista. ETHICS-003: la rappresentazione di Saladino come 'cavaliere nobile' e' in parte un mito costruito da entrambe le storiografie.",
     "name_variants": [
       {
@@ -2233,7 +4002,8 @@
         "citation": "Ibn al-Athir, al-Kamil fi al-Tarikh",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "سلطنة المماليك",
@@ -2244,9 +4014,67 @@
     "capital_name": "Cairo",
     "capital_lat": 30.0444,
     "capital_lon": 31.2357,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            43.2096,
+            30.0444
+          ],
+          [
+            41.1484,
+            34.6058
+          ],
+          [
+            39.1126,
+            40.1111
+          ],
+          [
+            31.2357,
+            38.7915
+          ],
+          [
+            24.6776,
+            39.5235
+          ],
+          [
+            23.5102,
+            33.5422
+          ],
+          [
+            20.9433,
+            30.0444
+          ],
+          [
+            18.2344,
+            24.6484
+          ],
+          [
+            26.3027,
+            23.3885
+          ],
+          [
+            31.2357,
+            20.3079
+          ],
+          [
+            37.3404,
+            20.9484
+          ],
+          [
+            37.9782,
+            26.604
+          ],
+          [
+            43.2096,
+            30.0444
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in Arabo. 'Mamelucco' (mamluk) significa letteralmente 'posseduto/schiavo'. ETHICS-002: il Sultanato Mamelucco e' un caso unico nella storia: uno stato governato da ex-schiavi militari che si auto-perpetuava attraverso l'acquisto di nuovi schiavi. Questo paradosso — schiavi che governano uno dei piu' potenti stati del mondo medievale — richiede una trattazione attenta e non semplificatoria. I Mamelucchi fermarono i Mongoli ad Ayn Jalut (1260), salvando probabilmente il mondo islamico dalla distruzione. Sotto di loro il Cairo divenne la piu' grande citta' del mondo islamico.",
     "name_variants": [
       {
@@ -2305,7 +4133,8 @@
         "citation": "Al-Maqrizi, Kitab al-Suluk li-Ma'rifat Duwal al-Muluk",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Αὐτοκρατορία τῶν Σελευκιδῶν",
@@ -2316,9 +4145,67 @@
     "capital_name": "Antioch",
     "capital_lat": 36.2,
     "capital_lon": 36.15,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            46.3543,
+            36.2
+          ],
+          [
+            46.205,
+            40.9618
+          ],
+          [
+            42.0578,
+            43.7012
+          ],
+          [
+            36.15,
+            45.0618
+          ],
+          [
+            30.5265,
+            43.9474
+          ],
+          [
+            28.5491,
+            40.1734
+          ],
+          [
+            22.2755,
+            36.2
+          ],
+          [
+            25.952,
+            32.0373
+          ],
+          [
+            31.304,
+            28.6362
+          ],
+          [
+            36.15,
+            29.6809
+          ],
+          [
+            40.6802,
+            28.9977
+          ],
+          [
+            47.2169,
+            30.3608
+          ],
+          [
+            46.3543,
+            36.2
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in Greco antico. ETHICS-002: l'Impero Seleucide fu il piu' grande degli stati successori di Alessandro Magno. L'ellenizzazione del Vicino Oriente fu un processo complesso: porto' scambi culturali ma anche imposizione culturale. La persecuzione religiosa sotto Antioco IV Epifane (la rivolta dei Maccabei, 167 a.C.) e' un evento fondante nella storia ebraica. ETHICS-003: la storiografia tende a privilegiare le fonti greche e romane; le prospettive locali (babilonesi, iraniche, ebraiche) vanno integrate.",
     "name_variants": [
       {
@@ -2377,7 +4264,8 @@
         "citation": "Grainger, J.D. The Rise of the Seleukid Empire (2014)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Βασίλειον τῶν Πτολεμαίων",
@@ -2388,9 +4276,67 @@
     "capital_name": "Alexandria",
     "capital_lat": 31.2001,
     "capital_lon": 29.9187,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            35.1211,
+            31.2001
+          ],
+          [
+            33.9227,
+            33.2351
+          ],
+          [
+            32.1459,
+            34.1356
+          ],
+          [
+            29.9187,
+            34.209
+          ],
+          [
+            28.2771,
+            33.9625
+          ],
+          [
+            26.9891,
+            32.9669
+          ],
+          [
+            26.7106,
+            31.2001
+          ],
+          [
+            27.4648,
+            29.8048
+          ],
+          [
+            27.8225,
+            28.3842
+          ],
+          [
+            29.9187,
+            28.7602
+          ],
+          [
+            31.7143,
+            28.401
+          ],
+          [
+            33.5821,
+            29.2448
+          ],
+          [
+            35.1211,
+            31.2001
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in Greco antico. L'Egitto tolemaico fu governato da una dinastia greca su una popolazione prevalentemente egizia. ETHICS-002: Alessandria divenne il centro culturale del Mediterraneo (Biblioteca, Faro). Ma il sistema sociale era stratificato su base etnica: i Greci occupavano le posizioni di potere, gli Egizi erano in gran parte esclusi. Cleopatra VII (l'ultima sovrana) fu la prima dei Tolomei a parlare egiziano. ETHICS-003: la rappresentazione di Cleopatra nella storiografia occidentale e' stata pesantemente sessualizzata e orientalizzata — un bias da esplicitare.",
     "name_variants": [
       {
@@ -2449,7 +4395,8 @@
         "citation": "Manning, J.G. The Last Pharaohs: Egypt Under the Ptolemies (2010)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "مملكة الأنباط",
@@ -2460,9 +4407,67 @@
     "capital_name": "Petra",
     "capital_lat": 30.3285,
     "capital_lon": 35.4414,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            40.4502,
+            30.3285
+          ],
+          [
+            38.9596,
+            32.0319
+          ],
+          [
+            37.6418,
+            33.7482
+          ],
+          [
+            35.4414,
+            33.3912
+          ],
+          [
+            34.0671,
+            32.6561
+          ],
+          [
+            32.0068,
+            32.071
+          ],
+          [
+            30.6596,
+            30.3285
+          ],
+          [
+            33.1322,
+            28.922
+          ],
+          [
+            33.3829,
+            26.3657
+          ],
+          [
+            35.4414,
+            26.7852
+          ],
+          [
+            37.2161,
+            27.9794
+          ],
+          [
+            39.2036,
+            28.5613
+          ],
+          [
+            40.4502,
+            30.3285
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in Arabo, sebbene la lingua originale dei Nabatei fosse una forma di Aramaico/Arabo antico. ETHICS-002: i Nabatei svilupparono una civilta' sofisticata nel deserto, con ingegneria idraulica straordinaria e Petra come centro commerciale di importanza mondiale. L'annessione romana (106 d.C.) sotto Traiano pose fine a un regno indipendente di oltre quattro secoli. ETHICS-003: la scrittura nabatea e' considerata l'antenata della scrittura araba moderna — un collegamento culturale di grande importanza.",
     "name_variants": [
       {
@@ -2513,7 +4518,8 @@
         "citation": "Taylor, J. Petra and the Lost Kingdom of the Nabataeans (2001)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Tadmor",
@@ -2524,9 +4530,67 @@
     "capital_name": "Palmyra",
     "capital_lat": 34.5503,
     "capital_lon": 38.2667,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            41.2787,
+            34.5503
+          ],
+          [
+            42.3268,
+            36.3002
+          ],
+          [
+            39.6461,
+            36.6526
+          ],
+          [
+            38.2667,
+            36.9886
+          ],
+          [
+            36.7623,
+            36.5413
+          ],
+          [
+            35.7844,
+            35.8225
+          ],
+          [
+            35.0815,
+            34.5503
+          ],
+          [
+            35.9166,
+            33.3641
+          ],
+          [
+            36.0413,
+            31.6252
+          ],
+          [
+            38.2667,
+            31.3235
+          ],
+          [
+            40.0898,
+            31.692
+          ],
+          [
+            41.4636,
+            32.9941
+          ],
+          [
+            41.2787,
+            34.5503
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale 'Tadmor' e' in Aramaico. 'Palmyra' e' la forma greca/latina. ETHICS-002: Palmira fu un crocevia commerciale tra Roma e la Persia. La regina Zenobia (r. 267-272) sfido' l'Impero Romano creando un impero indipendente — un atto di resistenza che le e' costato la liberta'. ETHICS-003: la distruzione di parti del sito archeologico di Palmira da parte dell'ISIS nel 2015 (inclusa l'uccisione dell'archeologo Khaled al-Asaad) e' un crimine contro il patrimonio dell'umanita' che va ricordato. La cronologia copre la storia del sito dalla fondazione alla distruzione romana (273).",
     "name_variants": [
       {
@@ -2593,7 +4657,8 @@
         "citation": "Smith, A.M. Roman Palmyra: Identity, Community, and State Formation (2013)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "حِمْيَر",
@@ -2604,9 +4669,67 @@
     "capital_name": "Zafar",
     "capital_lat": 14.2133,
     "capital_lon": 44.3928,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            48.5427,
+            14.2133
+          ],
+          [
+            47.483,
+            16.0107
+          ],
+          [
+            46.3175,
+            18.2953
+          ],
+          [
+            44.3928,
+            17.8186
+          ],
+          [
+            42.2233,
+            18.2316
+          ],
+          [
+            41.0703,
+            15.7687
+          ],
+          [
+            40.5127,
+            14.2133
+          ],
+          [
+            41.7203,
+            12.566
+          ],
+          [
+            42.1488,
+            11.2939
+          ],
+          [
+            44.3928,
+            12.0518
+          ],
+          [
+            46.3608,
+            10.1477
+          ],
+          [
+            47.4067,
+            12.5822
+          ],
+          [
+            48.5427,
+            14.2133
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in Arabo. La lingua originale era il sabeo/himyaritico, scritto in Musnad (alfabeto sudarabico). ETHICS-002: Himyar fu l'ultimo grande regno dell'Arabia meridionale preislamica. Adotto' il giudaismo come religione di stato (fine IV secolo) — un fatto che sfida le narrazioni semplicistiche sulla storia religiosa del Medio Oriente. Il re Dhu Nuwas perseguito' i cristiani di Najran (523 d.C.), provocando l'invasione aksumita. La caduta di Himyar segno' la fine dell'indipendenza dell'Arabia meridionale prima dell'Islam.",
     "name_variants": [
       {
@@ -2657,7 +4780,8 @@
         "citation": "Bowersock, G.W. The Throne of Adulis: Red Sea Wars on the Eve of Islam (2013)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "مملکت میتانی",
@@ -2668,9 +4792,67 @@
     "capital_name": "Washukanni",
     "capital_lat": 36.9,
     "capital_lon": 40.0,
-    "confidence_score": 0.5,
+    "confidence_score": 0.4,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            42.1983,
+            36.9
+          ],
+          [
+            42.0362,
+            37.7837
+          ],
+          [
+            41.2444,
+            38.745
+          ],
+          [
+            40.0,
+            39.4341
+          ],
+          [
+            38.578,
+            39.3081
+          ],
+          [
+            36.9823,
+            38.0878
+          ],
+          [
+            37.3549,
+            36.9
+          ],
+          [
+            37.7929,
+            35.9432
+          ],
+          [
+            38.9835,
+            35.5487
+          ],
+          [
+            40.0,
+            34.5391
+          ],
+          [
+            41.4879,
+            34.7319
+          ],
+          [
+            43.2928,
+            35.6828
+          ],
+          [
+            42.1983,
+            36.9
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' stato traslitterato in Persiano; la lingua della popolazione era prevalentemente hurrita, con un'elite che parlava una lingua indo-aria (miglior evidenza delle prime migrazioni indo-ariane nel Vicino Oriente). ETHICS-002: il Mitanni fu una grande potenza del Tardo Bronzo, rivale dell'Egitto e dell'Assiria. Le lettere di Amarna documentano relazioni diplomatiche internazionali. ETHICS-003: la capitale Washukanni non e' stata ancora identificata archeologicamente — le coordinate sono una stima. Il confidence_score basso riflette questa incertezza.",
     "name_variants": [
       {
@@ -2729,7 +4911,8 @@
         "citation": "Novak, M. 'The Change of Upper Mesopotamian Urbanism' in Urbanization and Land Ownership in the Ancient Near East (1999)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "𒌨𒀀𒊒𒂗",
@@ -2740,9 +4923,67 @@
     "capital_name": "Tushpa",
     "capital_lat": 38.4891,
     "capital_lon": 43.3795,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            46.568,
+            38.4891
+          ],
+          [
+            45.7255,
+            39.412
+          ],
+          [
+            45.2563,
+            40.5953
+          ],
+          [
+            43.3795,
+            41.0247
+          ],
+          [
+            41.4653,
+            41.0096
+          ],
+          [
+            41.0196,
+            39.6247
+          ],
+          [
+            41.1296,
+            38.4891
+          ],
+          [
+            41.6135,
+            37.7109
+          ],
+          [
+            41.4692,
+            36.088
+          ],
+          [
+            43.3795,
+            36.4368
+          ],
+          [
+            44.789,
+            36.8397
+          ],
+          [
+            45.1248,
+            37.5853
+          ],
+          [
+            46.568,
+            38.4891
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in cuneiforme urarteo. 'Urartu' e' il nome assiro; nella propria lingua, il paese era chiamato 'Biainili'. ETHICS-002: Urartu fu il principale rivale dell'Assiria nel IX-VII secolo a.C. Gli Urartei svilupparono un'ingegneria idraulica avanzata (canali, acquedotti) e una metallurgia sofisticata. La relazione tra Urartu e l'Armenia storica e' significativa: gli Armeni moderni considerano Urartu un predecessore culturale, sebbene la questione sia accademicamente complessa. ETHICS-003: la lingua urartea e' imparentata con l'hurritico ma non completamente decifrata.",
     "name_variants": [
       {
@@ -2809,7 +5050,8 @@
         "citation": "Piotrovsky, B.B. The Ancient Civilization of Urartu (1969)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ایلام",
@@ -2820,9 +5062,67 @@
     "capital_name": "Susa",
     "capital_lat": 32.1877,
     "capital_lon": 48.2436,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            50.9872,
+            32.1877
+          ],
+          [
+            50.2903,
+            33.0712
+          ],
+          [
+            49.5238,
+            34.2901
+          ],
+          [
+            48.2436,
+            34.1703
+          ],
+          [
+            46.8993,
+            34.1107
+          ],
+          [
+            46.1173,
+            33.3145
+          ],
+          [
+            46.2297,
+            32.1877
+          ],
+          [
+            46.1624,
+            31.0789
+          ],
+          [
+            46.8746,
+            30.6246
+          ],
+          [
+            48.2436,
+            30.1848
+          ],
+          [
+            49.2907,
+            30.7898
+          ],
+          [
+            50.9254,
+            30.9349
+          ],
+          [
+            50.9872,
+            32.1877
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' stato traslitterato in Persiano moderno. In elamita la terra era chiamata 'Haltamti'. ETHICS-002: l'Elam fu una delle piu' antiche civilta' del mondo, contemporanea di Sumer e dell'Egitto. Sviluppo' un sistema di scrittura indipendente (proto-elamita, ancora indecifrato). La rivalita' con la Mesopotamia duro' millenni — gli Elamiti saccheggiarono Babilonia e portarono via la Stele di Hammurabi (oggi al Louvre). La conquista persiana (539 a.C.) assimilo' la cultura elamita in quella achemenide. ETHICS-003: la scrittura proto-elamita non e' stata decifrata — una delle grandi sfide dell'epigrafia antica.",
     "name_variants": [
       {
@@ -2889,7 +5189,8 @@
         "citation": "Carter, E. & Stolper, M. Elam: Surveys of Political History and Archaeology (1984)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "المرابطون",
@@ -2900,9 +5201,67 @@
     "capital_name": "Marrakesh",
     "capital_lat": 31.6295,
     "capital_lon": -7.9811,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            1.9745,
+            31.6295
+          ],
+          [
+            1.7099,
+            36.9633
+          ],
+          [
+            -1.3194,
+            40.6292
+          ],
+          [
+            -7.9811,
+            40.3553
+          ],
+          [
+            -13.5157,
+            39.9263
+          ],
+          [
+            -19.6027,
+            36.3514
+          ],
+          [
+            -19.0897,
+            31.6295
+          ],
+          [
+            -17.7124,
+            26.3892
+          ],
+          [
+            -14.9718,
+            22.4629
+          ],
+          [
+            -7.9811,
+            17.813
+          ],
+          [
+            -3.3796,
+            25.593
+          ],
+          [
+            1.099,
+            25.8787
+          ],
+          [
+            1.9745,
+            31.6295
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in Arabo ('al-Murabitun', quelli del ribat/fortezza di confine). 'Almoravid' e' la forma occidentalizzata. ETHICS-002: gli Almoravidi erano Berberi Sanhaja del Sahara che crearono un impero che si estendeva dalla Spagna al Senegal. Il loro ruolo nella storia africana include la (presunta) distruzione dell'Impero del Ghana — un evento la cui realta' e' dibattuta nella storiografia recente. In al-Andalus, intervennero per difendere i musulmani contro la Reconquista cristiana (Sagrajas, 1086). ETHICS-003: la rappresentazione degli Almoravidi come 'fanatici religiosi' e' un bias della storiografia cristiana medievale.",
     "name_variants": [
       {
@@ -2969,7 +5328,8 @@
         "citation": "Levtzion, N. & Hopkins, J.F.P. Corpus of Early Arabic Sources for West African History (2000)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "الموحدون",
@@ -2980,9 +5340,67 @@
     "capital_name": "Marrakesh",
     "capital_lat": 31.6295,
     "capital_lon": -7.9811,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            6.7411,
+            31.6295
+          ],
+          [
+            6.7864,
+            39.1372
+          ],
+          [
+            -1.183,
+            44.3581
+          ],
+          [
+            -7.9811,
+            47.5757
+          ],
+          [
+            -13.4108,
+            38.9884
+          ],
+          [
+            -19.6556,
+            37.7455
+          ],
+          [
+            -23.5227,
+            31.6295
+          ],
+          [
+            -21.2904,
+            23.8569
+          ],
+          [
+            -14.4079,
+            22.7741
+          ],
+          [
+            -7.9811,
+            19.016
+          ],
+          [
+            -3.0435,
+            23.6223
+          ],
+          [
+            4.0361,
+            25.8586
+          ],
+          [
+            6.7411,
+            31.6295
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in Arabo ('al-Muwahhidun', gli unitari/monoteisti). 'Almohad' e' la forma occidentalizzata. ETHICS-002: gli Almohadi erano Berberi Masmuda dell'Atlante guidati da Ibn Tumart, che si proclamo' Mahdi. Il loro impero si estendeva dalla Libia alla Spagna. Praticarono intolleranza religiosa verso cristiani, ebrei e musulmani che non aderivano alla dottrina almohade — forzando conversioni di massa. Maimonide dovette fuggire da Cordova a causa delle persecuzioni almohadi. La sconfitta a Las Navas de Tolosa (1212) fu un punto di svolta nella Reconquista.",
     "name_variants": [
       {
@@ -3049,7 +5467,8 @@
         "citation": "Ibn Khaldun, Kitab al-Ibar",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "الدولة المرينية",
@@ -3060,9 +5479,67 @@
     "capital_name": "Fez",
     "capital_lat": 34.0331,
     "capital_lon": -5.0003,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -1.1428,
+            34.0331
+          ],
+          [
+            -1.2434,
+            36.0166
+          ],
+          [
+            -3.1836,
+            36.8055
+          ],
+          [
+            -5.0003,
+            36.5537
+          ],
+          [
+            -7.084,
+            37.2614
+          ],
+          [
+            -7.9824,
+            35.4415
+          ],
+          [
+            -9.013,
+            34.0331
+          ],
+          [
+            -8.1933,
+            32.3085
+          ],
+          [
+            -7.047,
+            31.0172
+          ],
+          [
+            -5.0003,
+            31.6641
+          ],
+          [
+            -3.0876,
+            31.3694
+          ],
+          [
+            -2.2517,
+            32.8993
+          ],
+          [
+            -1.1428,
+            34.0331
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in Arabo. I Marinidi erano Berberi Zenata. ETHICS-002: il Sultanato Marinide sviluppo' Fez come centro intellettuale con la madrasa Bou Inania e altre istituzioni educative straordinarie. I Marinidi tentarono senza successo di riconquistare al-Andalus (sconfitta alla battaglia del Rio Salado, 1340). L'economia includeva il commercio trans-sahariano, compresa la tratta degli schiavi. ETHICS-003: la storiografia coloniale francese ha spesso minimizzato le conquiste culturali del periodo marinide.",
     "name_variants": [
       {
@@ -3129,7 +5606,8 @@
         "citation": "Kably, M. Societe, pouvoir et religion au Maroc a la fin du Moyen-Age (1986)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "سبأ",
@@ -3140,9 +5618,67 @@
     "capital_name": "Marib",
     "capital_lat": 15.4543,
     "capital_lon": 45.3265,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            49.9295,
+            15.4543
+          ],
+          [
+            48.9608,
+            17.448
+          ],
+          [
+            46.877,
+            18.0629
+          ],
+          [
+            45.3265,
+            19.1428
+          ],
+          [
+            43.893,
+            17.3899
+          ],
+          [
+            42.7504,
+            17.1853
+          ],
+          [
+            42.0739,
+            15.4543
+          ],
+          [
+            42.6255,
+            13.8969
+          ],
+          [
+            43.9854,
+            12.8156
+          ],
+          [
+            45.3265,
+            13.0391
+          ],
+          [
+            46.8881,
+            12.4618
+          ],
+          [
+            48.3873,
+            13.3999
+          ],
+          [
+            49.9295,
+            15.4543
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in Arabo/Sabeo. La lingua sabea era scritta in Musnad (alfabeto sudarabico). ETHICS-002: il Regno di Saba e' famoso nella tradizione biblica e coranica per la regina di Saba (Bilqis). Il commercio dell'incenso e della mirra fu la base economica del regno. La grande diga di Marib fu una meraviglia dell'ingegneria antica. Il suo crollo (circa 575 d.C., dopo la fine del regno) e' menzionato nel Corano (Sura 34:15-17) e simboleggia la caduta di una civilta'. ETHICS-003: la cronologia alta (prima del -800) e' basata quasi esclusivamente su fonti archeologiche ed epigrafiche con margini di incertezza significativi.",
     "name_variants": [
       {
@@ -3201,7 +5737,8 @@
         "citation": "Robin, C.J. 'Les inscriptions de l'Arabie antique et les etudes arabes' in Arabica (1991)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "لیدیا",
@@ -3212,9 +5749,67 @@
     "capital_name": "Sardis",
     "capital_lat": 38.4893,
     "capital_lon": 28.0403,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            31.4941,
+            38.4893
+          ],
+          [
+            31.1401,
+            39.8261
+          ],
+          [
+            30.0628,
+            41.1464
+          ],
+          [
+            28.0403,
+            42.4503
+          ],
+          [
+            26.1361,
+            40.7007
+          ],
+          [
+            24.2188,
+            40.0158
+          ],
+          [
+            23.8061,
+            38.4893
+          ],
+          [
+            25.2727,
+            37.4508
+          ],
+          [
+            25.7111,
+            35.7289
+          ],
+          [
+            28.0403,
+            35.9235
+          ],
+          [
+            29.3706,
+            36.7472
+          ],
+          [
+            32.2023,
+            36.9868
+          ],
+          [
+            31.4941,
+            38.4893
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' stato traslitterato in Persiano; la lingua originale era il lidio, una lingua anatolica indoeuropea. ETHICS-002: la Lidia e' nota come il primo stato ad aver coniato monete in elettro (~600 a.C.), un'innovazione che trasformo' l'economia globale. Il re Creso e' sinonimo di ricchezza proverbiale. La famosa risposta dell'oracolo di Delfi ('Se attraversi l'Halys, distruggerai un grande impero') e' un monito sulla hybris del potere. La conquista persiana di Ciro il Grande (546 a.C.) segno' la fine dell'indipendenza anatolica.",
     "name_variants": [
       {
@@ -3273,7 +5868,8 @@
         "citation": "Gusmani, R. Lydisches Worterbuch (1964)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "مادها",
@@ -3284,9 +5880,67 @@
     "capital_name": "Ecbatana",
     "capital_lat": 34.7987,
     "capital_lon": 48.5146,
-    "confidence_score": 0.55,
+    "confidence_score": 0.45,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            58.4064,
+            34.7987
+          ],
+          [
+            55.0285,
+            37.5014
+          ],
+          [
+            54.0039,
+            43.4132
+          ],
+          [
+            48.5146,
+            42.9968
+          ],
+          [
+            43.2886,
+            41.7485
+          ],
+          [
+            40.0347,
+            39.0218
+          ],
+          [
+            38.488,
+            34.7987
+          ],
+          [
+            43.3344,
+            31.8866
+          ],
+          [
+            42.8981,
+            25.8466
+          ],
+          [
+            48.5146,
+            28.6582
+          ],
+          [
+            53.1298,
+            28.3488
+          ],
+          [
+            54.5707,
+            31.7641
+          ],
+          [
+            58.4064,
+            34.7987
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' stato traslitterato in Persiano; la lingua mediana non e' attestata in forma scritta propria. 'Media' e' la forma greca/latina. ETHICS-002: i Medi furono il primo grande impero iranico, predecessore degli Achemenidi. Parteciparono alla distruzione dell'Impero Assiro (612 a.C.) — un evento di liberazione per molti popoli del Vicino Oriente. ETHICS-003: la realta' storica dell'Impero Medo come entita' centralizzata e' stata messa in discussione dalla storiografia recente (Sancisi-Weerdenburg). Potrebbe essere stato piu' una confederazione tribale che un impero strutturato. Il confidence_score riflette questo dibattito.",
     "name_variants": [
       {
@@ -3353,6 +6007,7 @@
         "citation": "Liverani, M. The Ancient Near East: History, Society and Economy (2014)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   }
 ]

@@ -332,7 +332,8 @@
         "url": "https://www.treccani.it",
         "source_type": "secondary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Osmanlı İmparatorluğu",
@@ -594,7 +595,8 @@
         "citation": "Encyclopaedia Britannica, voce 'Ottoman Empire'",
         "source_type": "secondary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "İstanbul",
@@ -605,13 +607,65 @@
     "capital_name": "İstanbul",
     "capital_lat": 41.0082,
     "capital_lon": 28.9784,
-    "confidence_score": 0.95,
+    "confidence_score": 0.85,
     "status": "confirmed",
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        28.9784,
-        41.0082
+        [
+          [
+            29.1817,
+            41.0082
+          ],
+          [
+            29.1206,
+            41.0801
+          ],
+          [
+            29.0556,
+            41.1176
+          ],
+          [
+            28.9784,
+            41.1092
+          ],
+          [
+            28.9076,
+            41.1148
+          ],
+          [
+            28.8449,
+            41.0819
+          ],
+          [
+            28.7841,
+            41.0082
+          ],
+          [
+            28.8584,
+            40.9644
+          ],
+          [
+            28.904,
+            40.9172
+          ],
+          [
+            28.9784,
+            40.9008
+          ],
+          [
+            29.0314,
+            40.9385
+          ],
+          [
+            29.1451,
+            40.9368
+          ],
+          [
+            29.1817,
+            41.0082
+          ]
+        ]
       ]
     },
     "ethical_notes": "ETHICS-001: il nome primario è quello locale attuale (İstanbul). I nomi storici Byzantium e Constantinopolis sono varianti con contesto temporale esplicito. Nessun nome è 'più corretto' di un altro — ciascuno riflette un'epoca diversa.",
@@ -689,7 +743,8 @@
         "citation": "Freely, J. Istanbul: The Imperial City (1996)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Tawantinsuyu",
@@ -895,7 +950,8 @@
         "citation": "Garcilaso de la Vega, Comentarios Reales de los Incas (1609)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "British Raj",
@@ -1143,7 +1199,8 @@
         "citation": "Tharoor, S. Inglorious Empire (2017)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "فلسطين / ישראל",
@@ -1353,7 +1410,8 @@
         "citation": "Nazioni Unite, Risoluzione 242 (1967)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Republika e Kosovës",
@@ -1552,7 +1610,8 @@
         "citation": "Judah, T. Kosovo: What Everyone Needs to Know (2008)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Ἀθῆναι",
@@ -1706,7 +1765,8 @@
         "citation": "Hansen, M.H. The Athenian Democracy in the Age of Demosthenes (1991)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "ᠶᠡᠬᠡ ᠮᠣᠩᠭᠣᠯ ᠤᠯᠤᠰ",
@@ -1970,7 +2030,8 @@
         "citation": "Rashid al-Din, Jami' al-Tawarikh (1307)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Kongo dia Ntotila",
@@ -2149,7 +2210,8 @@
         "citation": "Vansina, J. Kingdoms of the Savanna (1966)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Βασιλεία Ῥωμαίων",
@@ -2275,7 +2337,8 @@
         "citation": "Norwich, J.J. Byzantium (1988-1995)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "مغلیہ سلطنت",
@@ -2399,7 +2462,8 @@
         "citation": "Dalrymple, W. The Last Mughal (2006)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "دولت صفویه",
@@ -2512,7 +2576,8 @@
         "citation": "Matthee, R. Persia in Crisis: Safavid Decline (2012)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "徳川幕府",
@@ -2668,7 +2733,8 @@
         "citation": "Jansen, M. The Making of Modern Japan (2000)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "大清帝國",
@@ -2823,7 +2889,8 @@
         "citation": "Rowe, W. China's Last Empire: The Great Qing (2009)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Российская Империя",
@@ -2996,7 +3063,8 @@
         "citation": "Richmond, W. The Circassian Genocide (2013)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Ēxcān Tlahtōlōyān",
@@ -3108,7 +3176,8 @@
         "citation": "León-Portilla, M. Visión de los Vencidos (1959)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Manden Kurufaba",
@@ -3217,7 +3286,8 @@
         "citation": "Niane, D.T. Sundiata: An Epic of Old Mali (1960)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "អាណាចក្រខ្មែរ",
@@ -3320,7 +3390,8 @@
         "citation": "Coe, M. Angkor and the Khmer Civilization (2003)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "臺灣 / Taiwan",
@@ -3417,7 +3488,8 @@
         "citation": "Bush, R. Uncharted Strait: The Future of China-Taiwan Relations (2013)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "الصحراء الغربية / Sahara Occidental",
@@ -3521,7 +3593,8 @@
         "citation": "Nazioni Unite, Risoluzione 690 (1991)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Songhai",
@@ -3625,7 +3698,8 @@
         "citation": "al-Sadi, Tarikh al-Sudan (~1655)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Serenìsima Repùblega de Venèsia",
@@ -3636,13 +3710,65 @@
     "capital_name": "Venèsia",
     "capital_lat": 45.4408,
     "capital_lon": 12.3155,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        12.3155,
-        45.4408
+        [
+          [
+            14.7272,
+            45.4408
+          ],
+          [
+            15.5748,
+            46.5099
+          ],
+          [
+            13.8474,
+            47.3024
+          ],
+          [
+            12.3155,
+            46.8759
+          ],
+          [
+            11.1002,
+            47.3032
+          ],
+          [
+            9.5093,
+            46.5124
+          ],
+          [
+            10.2663,
+            45.4408
+          ],
+          [
+            9.4051,
+            43.9939
+          ],
+          [
+            10.8161,
+            43.8852
+          ],
+          [
+            12.3155,
+            43.3593
+          ],
+          [
+            13.6907,
+            43.7206
+          ],
+          [
+            14.4985,
+            44.5861
+          ],
+          [
+            14.7272,
+            45.4408
+          ]
+        ]
       ]
     },
     "ethical_notes": "La Serenissima era una repubblica oligarchica, non democratica nel senso moderno. Solo i patrizi avevano diritto di voto. Venezia fu una potenza coloniale nel Mediterraneo orientale (Creta, Cipro, Dalmazia) e giocò un ruolo chiave nella Quarta Crociata che saccheggiò Costantinopoli nel 1204.",
@@ -3685,7 +3811,8 @@
         "citation": "Madden, T. Venice: A New History (2012)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "የኢትዮጵያ ንጉሠ ነገሥት መንግሥት",
@@ -3812,7 +3939,8 @@
         "citation": "Pankhurst, R. The Ethiopians: A History (2001)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Крим / Крым",
@@ -3929,7 +4057,8 @@
         "citation": "Plokhy, S. The Gates of Europe: A History of Ukraine (2015)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Kemet",
@@ -4047,7 +4176,8 @@
         "citation": "Erodoto, Storie, Libro II",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Xšāça",
@@ -4185,7 +4315,8 @@
         "citation": "Erodoto, Storie, Libri I-VII",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Imperio Español",
@@ -4196,13 +4327,65 @@
     "capital_name": "Madrid",
     "capital_lat": 40.4168,
     "capital_lon": -3.7038,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        -3.7038,
-        40.4168
+        [
+          [
+            9.771,
+            40.4168
+          ],
+          [
+            5.3785,
+            45.0561
+          ],
+          [
+            5.5605,
+            54.7844
+          ],
+          [
+            -3.7038,
+            54.4578
+          ],
+          [
+            -11.0253,
+            50.4762
+          ],
+          [
+            -21.4946,
+            46.9091
+          ],
+          [
+            -20.9718,
+            40.4168
+          ],
+          [
+            -15.5534,
+            34.3386
+          ],
+          [
+            -10.6015,
+            30.7664
+          ],
+          [
+            -3.7038,
+            30.5526
+          ],
+          [
+            3.251,
+            31.9074
+          ],
+          [
+            13.6884,
+            34.1482
+          ],
+          [
+            9.771,
+            40.4168
+          ]
+        ]
       ]
     },
     "ethical_notes": "ETHICS-002: il piu' grande impero coloniale della storia pre-britannica. La conquista delle Americhe causo' il crollo demografico piu' catastrofico della storia: si stima 90% della popolazione indigena morta in un secolo per malattie, guerra e sfruttamento. Il sistema delle encomiendas fu schiavitu' de facto. I confini non sono mostrati come poligono per la vastita' e dispersione dell'impero (4 continenti).",
@@ -4253,7 +4436,8 @@
         "citation": "Las Casas, B. Brevísima Relación de la Destruición de las Indias (1552)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "British Empire",
@@ -4264,13 +4448,65 @@
     "capital_name": "London",
     "capital_lat": 51.5074,
     "capital_lon": -0.1278,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        -0.1278,
-        51.5074
+        [
+          [
+            19.5942,
+            51.5074
+          ],
+          [
+            12.6833,
+            56.4184
+          ],
+          [
+            9.1396,
+            59.3314
+          ],
+          [
+            -0.1278,
+            62.255
+          ],
+          [
+            -9.2761,
+            61.9342
+          ],
+          [
+            -16.2784,
+            57.6744
+          ],
+          [
+            -21.2584,
+            51.5074
+          ],
+          [
+            -11.1956,
+            48.0654
+          ],
+          [
+            -8.6205,
+            42.0668
+          ],
+          [
+            -0.1278,
+            39.0334
+          ],
+          [
+            7.2193,
+            42.7308
+          ],
+          [
+            10.7832,
+            46.4662
+          ],
+          [
+            19.5942,
+            51.5074
+          ]
+        ]
       ]
     },
     "ethical_notes": "ETHICS-002: il piu' grande impero della storia per estensione (~35 milioni km²). Responsabile di colonizzazione, schiavitu' transatlantica, carestie indotte (Bengala 1943: 2-3 milioni di morti), repressione di movimenti indipendentisti. I confini non sono mostrati come poligono per la vastita' (tutti i continenti). Il British Raj (India) e' un'entita' separata nel database.",
@@ -4307,7 +4543,8 @@
         "citation": "Tharoor, S. Inglorious Empire (2017)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Sacrum Imperium Romanum",
@@ -4441,7 +4678,8 @@
         "citation": "Whaley, J. Germany and the Holy Roman Empire (2012)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "الخلافة العباسية",
@@ -4574,7 +4812,8 @@
         "citation": "al-Tabari, Tarikh al-Rusul wa al-Muluk",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "大日本帝國",
@@ -4696,7 +4935,8 @@
         "citation": "Chang, I. The Rape of Nanking (1997)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Lietuvos Didžioji Kunigaikštystė",
@@ -4804,7 +5044,8 @@
         "citation": "Stone, D. The Polish-Lithuanian State, 1386-1795 (2001)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "KwaZulu",
@@ -4897,7 +5138,8 @@
         "citation": "Morris, D. The Washing of the Spears (1965)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "བོད",
@@ -5018,7 +5260,8 @@
         "citation": "Shakya, T. The Dragon in the Land of Snows (1999)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Qart-ḥadašt",
@@ -5126,7 +5369,8 @@
         "citation": "Polibio, Storie, Libri I-III",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "मौर्य साम्राज्य",
@@ -5228,7 +5472,8 @@
         "citation": "Editti di Ashoka (III secolo a.C.)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Gran Colombia",
@@ -5348,7 +5593,8 @@
         "citation": "Arana, M. Bolivar: American Liberator (2013)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Kuzey Kıbrıs Türk Cumhuriyeti",
@@ -5442,7 +5688,8 @@
         "citation": "Nazioni Unite, Risoluzione 541 (1983)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Haudenosaunee",
@@ -5542,7 +5789,8 @@
         "citation": "Mann, C.C. 1491: New Revelations of the Americas Before Columbus (2005)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Majapahit",
@@ -5720,7 +5968,8 @@
         "citation": "Muljana, S. Runtuhnya Kerajaan Hindu-Jawa dan Timbulnya Negara-Negara Islam di Nusantara (2005)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "ศรีวิชัย",
@@ -5870,7 +6119,8 @@
         "citation": "Zhao Rugua, Zhufanzhi [Descrizione dei Popoli Barbari] (1225)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Aupuni Mōʻī o Hawaiʻi",
@@ -6023,7 +6273,8 @@
         "citation": "Silva, N.K. Aloha Betrayed: Native Hawaiian Resistance to American Colonialism (2004)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Tu'i Tonga",
@@ -6135,7 +6386,8 @@
         "citation": "Mahina, O. Ko e Ngaahi 'Ata mei he Hisitolia mo e Kalatua 'o Tonga (1992)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Wallmapu",
@@ -6290,7 +6542,8 @@
         "citation": "Parlamento de Quillin (1641)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Cahokia",
@@ -6414,7 +6667,8 @@
         "citation": "Mann, C.C. 1491: New Revelations of the Americas Before Columbus (2005)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Dzimba dza mabwe",
@@ -6548,7 +6802,8 @@
         "citation": "Huffman, T.N. Snakes and Crocodiles: Power and Symbolism in Ancient Zimbabwe (1996)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Edo",
@@ -6683,7 +6938,8 @@
         "citation": "Connah, G. The Archaeology of Benin (1975)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "신라",
@@ -6827,7 +7083,8 @@
         "citation": "Seth, M.J. A History of Korea: From Antiquity to the Present (2010)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Campā",
@@ -6983,7 +7240,8 @@
         "citation": "Dai Viet Su Ky Toan Thu [Annali Completi del Grande Viet]",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "መንግሥተ አክሱም",
@@ -7137,7 +7395,8 @@
         "citation": "Periplus Maris Erythraei (I sec. d.C.)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Kush",
@@ -7295,7 +7554,8 @@
         "citation": "Stele di Ezana (IV sec. d.C.)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "خوارزمشاهیان",
@@ -7486,7 +7746,8 @@
         "citation": "Barthold, V.V. Turkestan Down to the Mongol Invasion (1928)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "อาณาจักรอยุธยา",
@@ -7665,7 +7926,8 @@
         "citation": "Royal Chronicles of Ayutthaya (Phongsawadan)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Aotearoa",
@@ -7840,6 +8102,7 @@
         "citation": "Te Tiriti o Waitangi / Treaty of Waitangi (1840)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   }
 ]

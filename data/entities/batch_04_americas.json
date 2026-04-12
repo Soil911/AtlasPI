@@ -8,9 +8,67 @@
     "capital_name": "San Lorenzo Tenochtitlán",
     "capital_lat": 17.755,
     "capital_lon": -94.767,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -92.1675,
+            17.755
+          ],
+          [
+            -91.8716,
+            19.5069
+          ],
+          [
+            -93.2428,
+            20.2393
+          ],
+          [
+            -94.767,
+            20.9426
+          ],
+          [
+            -96.2363,
+            20.7184
+          ],
+          [
+            -97.2603,
+            18.8797
+          ],
+          [
+            -97.5765,
+            17.755
+          ],
+          [
+            -96.5852,
+            16.8112
+          ],
+          [
+            -95.884,
+            15.6549
+          ],
+          [
+            -94.767,
+            14.437
+          ],
+          [
+            -93.7541,
+            15.9486
+          ],
+          [
+            -92.8409,
+            16.6531
+          ],
+          [
+            -92.1675,
+            17.755
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The Olmec endonym is unknown; 'Olmec' is a Nahuatl term meaning 'rubber people' applied retroactively by the Aztecs centuries later. The Olmec script remains undeciphered, so all knowledge comes from archaeological evidence. ETHICS-003: The framing of Olmec as 'mother culture of Mesoamerica' oversimplifies complex multi-directional cultural exchange among coeval peoples.",
     "name_variants": [
       {
@@ -80,7 +138,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kʼuhul Ajaw",
@@ -91,9 +150,67 @@
     "capital_name": "Tikal",
     "capital_lat": 17.222,
     "capital_lon": -89.6237,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -85.148,
+            17.222
+          ],
+          [
+            -86.0959,
+            19.4167
+          ],
+          [
+            -88.1141,
+            20.3081
+          ],
+          [
+            -89.6237,
+            20.5543
+          ],
+          [
+            -92.2222,
+            21.3525
+          ],
+          [
+            -92.2705,
+            18.7512
+          ],
+          [
+            -95.2935,
+            17.222
+          ],
+          [
+            -92.2087,
+            15.6121
+          ],
+          [
+            -91.9917,
+            13.0786
+          ],
+          [
+            -89.6237,
+            12.4526
+          ],
+          [
+            -88.0684,
+            14.5871
+          ],
+          [
+            -85.9797,
+            14.9172
+          ],
+          [
+            -85.148,
+            17.222
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The Maya were never a single unified empire but a network of competing city-states sharing language, writing, and cosmology. 'Kʼuhul Ajaw' (Divine Lord) refers to the title of rulers, not a polity name. ETHICS-002: Spanish conquest involved systematic destruction of Maya codices by Bishop Diego de Landa (1562), destroying incalculable cultural knowledge. Forced conversion and encomienda labor imposed. ETHICS-003: The 'Maya collapse' narrative is oversimplified in Western scholarship; Maya peoples and languages persist today with over 6 million speakers. The Classic Period end was a political reorganization, not an extinction.",
     "name_variants": [
       {
@@ -176,7 +293,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Teotihuacan",
@@ -187,9 +305,67 @@
     "capital_name": "Teotihuacan",
     "capital_lat": 19.6925,
     "capital_lon": -98.8438,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -98.2927,
+            19.6925
+          ],
+          [
+            -98.4063,
+            19.9351
+          ],
+          [
+            -98.5272,
+            20.2352
+          ],
+          [
+            -98.8438,
+            20.0741
+          ],
+          [
+            -99.0437,
+            20.0552
+          ],
+          [
+            -99.3052,
+            19.9397
+          ],
+          [
+            -99.1596,
+            19.6925
+          ],
+          [
+            -99.2308,
+            19.4845
+          ],
+          [
+            -99.028,
+            19.4074
+          ],
+          [
+            -98.8438,
+            19.3561
+          ],
+          [
+            -98.6086,
+            19.3973
+          ],
+          [
+            -98.2795,
+            19.3859
+          ],
+          [
+            -98.2927,
+            19.6925
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The original name of this city is unknown; 'Teotihuacan' is the Nahuatl name given centuries later by the Aztecs, meaning 'place where the gods were created.' The ethnic identity and language of its builders remain debated. At its height (c. 450 CE), with 100,000-200,000 inhabitants, it was one of the largest cities in the world. Evidence of human sacrifice is present but its scale and meaning are debated.",
     "name_variants": [
       {
@@ -251,7 +427,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Tōllān",
@@ -262,9 +439,67 @@
     "capital_name": "Tula",
     "capital_lat": 20.065,
     "capital_lon": -99.3406,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -96.1977,
+            20.065
+          ],
+          [
+            -96.2828,
+            21.6382
+          ],
+          [
+            -97.4915,
+            23.854
+          ],
+          [
+            -99.3406,
+            23.0404
+          ],
+          [
+            -100.4216,
+            21.9338
+          ],
+          [
+            -102.5172,
+            21.7667
+          ],
+          [
+            -102.1317,
+            20.065
+          ],
+          [
+            -101.4239,
+            19.0487
+          ],
+          [
+            -100.4794,
+            18.011
+          ],
+          [
+            -99.3406,
+            17.5712
+          ],
+          [
+            -97.8235,
+            17.0286
+          ],
+          [
+            -96.4765,
+            18.5862
+          ],
+          [
+            -96.1977,
+            20.065
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-003: The Toltecs occupy a liminal space between history and myth. Much of what is 'known' comes from Aztec accounts that mythologized Toltec rulers (especially Ce Acatl Topiltzin Quetzalcoatl). Archaeological evidence at Tula de Allende confirms a significant urban center, but the extent of a Toltec 'empire' is debated. Care must be taken to distinguish archaeological evidence from later mythological elaboration.",
     "name_variants": [
       {
@@ -318,7 +553,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Bēnizàa",
@@ -329,9 +565,67 @@
     "capital_name": "Monte Albán",
     "capital_lat": 17.0436,
     "capital_lon": -96.7675,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -92.9486,
+            17.0436
+          ],
+          [
+            -93.1138,
+            18.9573
+          ],
+          [
+            -94.9128,
+            20.1221
+          ],
+          [
+            -96.7675,
+            21.0981
+          ],
+          [
+            -98.4104,
+            19.7186
+          ],
+          [
+            -99.1027,
+            18.3059
+          ],
+          [
+            -101.4794,
+            17.0436
+          ],
+          [
+            -99.557,
+            15.5099
+          ],
+          [
+            -98.1531,
+            14.3102
+          ],
+          [
+            -96.7675,
+            14.5897
+          ],
+          [
+            -94.6027,
+            13.9308
+          ],
+          [
+            -94.9434,
+            15.8111
+          ],
+          [
+            -92.9486,
+            17.0436
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: Bēnizàa means 'Cloud People' in Zapotec, the endonym for this civilization. The Zapotec developed one of the earliest writing systems in Mesoamerica. Monte Albán's 'Danzantes' carvings likely depict tortured/sacrificed captives, not dancers as the colonial-era misnomer implies. ETHICS-002: Spanish colonization imposed the encomienda system on surviving populations. Zapotec peoples and language persist today with approximately 500,000 speakers.",
     "name_variants": [
       {
@@ -393,7 +687,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Ñuu Dzahui",
@@ -404,9 +699,67 @@
     "capital_name": "Tilantongo",
     "capital_lat": 17.2825,
     "capital_lon": -97.3031,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -92.7646,
+            17.2825
+          ],
+          [
+            -94.6686,
+            18.9124
+          ],
+          [
+            -95.8051,
+            19.7842
+          ],
+          [
+            -97.3031,
+            21.6008
+          ],
+          [
+            -98.6928,
+            19.7196
+          ],
+          [
+            -99.2958,
+            18.7426
+          ],
+          [
+            -99.8853,
+            17.2825
+          ],
+          [
+            -99.2731,
+            16.0885
+          ],
+          [
+            -98.6303,
+            15.1537
+          ],
+          [
+            -97.3031,
+            13.7996
+          ],
+          [
+            -96.1316,
+            15.1104
+          ],
+          [
+            -94.5813,
+            16.0703
+          ],
+          [
+            -92.7646,
+            17.2825
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: Ñuu Dzahui means 'Nation of the Rain' in Mixtec, the endonym for this civilization. 'Mixtec' is an exonym from Nahuatl; the endonym should be preferred. The Mixtec produced extraordinary codices (screenfold books) that are among the few pre-Columbian manuscripts to survive Spanish destruction. These codices document genealogies, conquests, and rituals from the indigenous perspective, making them invaluable primary sources.",
     "name_variants": [
       {
@@ -468,7 +821,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Muyska",
@@ -479,9 +833,67 @@
     "capital_name": "Bacatá",
     "capital_lat": 4.711,
     "capital_lon": -74.0721,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -69.2159,
+            4.711
+          ],
+          [
+            -69.5209,
+            7.1724
+          ],
+          [
+            -71.8083,
+            9.697
+          ],
+          [
+            -74.0721,
+            8.7736
+          ],
+          [
+            -75.8868,
+            8.2741
+          ],
+          [
+            -78.0271,
+            7.268
+          ],
+          [
+            -77.0808,
+            4.711
+          ],
+          [
+            -76.7132,
+            3.066
+          ],
+          [
+            -76.815,
+            0.6295
+          ],
+          [
+            -74.0721,
+            -0.0547
+          ],
+          [
+            -71.5716,
+            -0.0398
+          ],
+          [
+            -71.1316,
+            3.0031
+          ],
+          [
+            -69.2159,
+            4.711
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The Muisca are central to the European myth of 'El Dorado,' which was a distortion of the Muisca investiture ceremony at Lake Guatavita into a justification for conquest and plunder. This myth drove devastating Spanish expeditions across South America. ETHICS-002: The Muisca had a sophisticated confederation with two main leaders (Zipa and Zaque) and a complex legal code. The Spanish conquest under Gonzalo Jiménez de Quesada destroyed this political structure. Muisca descendants continue to seek recognition of their cultural heritage.",
     "name_variants": [
       {
@@ -543,7 +955,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Wari",
@@ -554,9 +967,67 @@
     "capital_name": "Huari",
     "capital_lat": -13.0583,
     "capital_lon": -74.2167,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -64.0862,
+            -13.0583
+          ],
+          [
+            -66.7614,
+            -8.6866
+          ],
+          [
+            -68.5925,
+            -4.8273
+          ],
+          [
+            -74.2167,
+            -3.4554
+          ],
+          [
+            -80.2437,
+            -4.3128
+          ],
+          [
+            -84.2242,
+            -7.9741
+          ],
+          [
+            -85.6805,
+            -13.0583
+          ],
+          [
+            -83.828,
+            -19.1545
+          ],
+          [
+            -78.6358,
+            -19.5656
+          ],
+          [
+            -74.2167,
+            -21.0073
+          ],
+          [
+            -68.9087,
+            -23.8027
+          ],
+          [
+            -61.2339,
+            -19.8792
+          ],
+          [
+            -64.0862,
+            -13.0583
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The name 'Wari' comes from the archaeological site; the people's own name for their state is unknown. Evidence suggests both military conquest and diplomatic/economic integration. Wari administrative techniques (including possible quipu usage) may have been precursors to Inca methods. A pre-Inca Andean empire that established administrative centers across a vast territory.",
     "name_variants": [
       {
@@ -618,7 +1089,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Chimor",
@@ -629,9 +1101,67 @@
     "capital_name": "Chan Chan",
     "capital_lat": -8.1058,
     "capital_lon": -79.0747,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -74.9996,
+            -8.1058
+          ],
+          [
+            -76.8282,
+            -6.8392
+          ],
+          [
+            -77.4851,
+            -4.8241
+          ],
+          [
+            -79.0747,
+            -5.3911
+          ],
+          [
+            -80.7047,
+            -5.8324
+          ],
+          [
+            -81.7773,
+            -6.4116
+          ],
+          [
+            -81.1094,
+            -8.1058
+          ],
+          [
+            -82.1015,
+            -9.6908
+          ],
+          [
+            -81.12,
+            -11.4764
+          ],
+          [
+            -79.0747,
+            -11.7282
+          ],
+          [
+            -77.2729,
+            -11.1242
+          ],
+          [
+            -76.2242,
+            -9.4994
+          ],
+          [
+            -74.9996,
+            -8.1058
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The Chimú kingdom (self-named Chimor) built Chan Chan, the largest adobe city in the Americas, a UNESCO World Heritage Site now threatened by climate change and erosion. ETHICS-002: The Chimú language (Quingnam/Muchik) is extinct, a direct consequence of Inca and then Spanish conquest that suppressed local languages. Inca conquest involved forced resettlement of Chimú artisans and elites. Evidence of large-scale child sacrifice at Huanchaquito (over 140 children) has been documented archaeologically.",
     "name_variants": [
       {
@@ -693,7 +1223,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Moche",
@@ -704,9 +1235,67 @@
     "capital_name": "Cerro Blanco",
     "capital_lat": -8.16,
     "capital_lon": -78.9983,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -75.7606,
+            -8.16
+          ],
+          [
+            -75.5107,
+            -6.2958
+          ],
+          [
+            -78.0014,
+            -6.285
+          ],
+          [
+            -78.9983,
+            -4.3819
+          ],
+          [
+            -80.18,
+            -6.2369
+          ],
+          [
+            -82.1584,
+            -6.4814
+          ],
+          [
+            -81.6901,
+            -8.16
+          ],
+          [
+            -82.2984,
+            -9.8221
+          ],
+          [
+            -80.3376,
+            -11.0543
+          ],
+          [
+            -78.9983,
+            -11.0668
+          ],
+          [
+            -77.3827,
+            -10.859
+          ],
+          [
+            -75.9693,
+            -9.8015
+          ],
+          [
+            -75.7606,
+            -8.16
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The Moche name is a modern archaeological designation; the people's own name for themselves is unknown. Their language is extinct. The Moche produced extraordinary ceramic art depicting warfare, ritual sacrifice, and sexuality with remarkable realism. Colonial-era biases have historically distorted understanding of Moche ritual practices. Evidence of human sacrifice at Huaca de la Luna is well documented archaeologically.",
     "name_variants": [
       {
@@ -760,7 +1349,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Caral-Supe",
@@ -771,9 +1361,67 @@
     "capital_name": "Caral",
     "capital_lat": -10.8925,
     "capital_lon": -77.5206,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -77.2612,
+            -10.8925
+          ],
+          [
+            -77.1749,
+            -10.7071
+          ],
+          [
+            -77.3847,
+            -10.6832
+          ],
+          [
+            -77.5206,
+            -10.6097
+          ],
+          [
+            -77.6857,
+            -10.5689
+          ],
+          [
+            -77.7677,
+            -10.7479
+          ],
+          [
+            -77.7321,
+            -10.8925
+          ],
+          [
+            -77.7913,
+            -11.0586
+          ],
+          [
+            -77.6865,
+            -11.1471
+          ],
+          [
+            -77.5206,
+            -11.2525
+          ],
+          [
+            -77.3716,
+            -11.1647
+          ],
+          [
+            -77.2583,
+            -11.0447
+          ],
+          [
+            -77.2612,
+            -10.8925
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: Caral is the oldest known urban center in the Americas, contemporaneous with ancient Egyptian pyramids. The original name is unknown; 'Caral' is the modern Quechua name. ETHICS-003: Remarkably, no evidence of warfare, weapons, or fortifications has been found, challenging narratives that assume complex societies require militarism. The site was nearly destroyed by modern development before archaeological recognition.",
     "name_variants": [
       {
@@ -827,7 +1475,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Tiwanaku",
@@ -838,9 +1487,67 @@
     "capital_name": "Tiwanaku",
     "capital_lat": -16.5546,
     "capital_lon": -68.6734,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -60.0718,
+            -16.5546
+          ],
+          [
+            -57.0516,
+            -11.3181
+          ],
+          [
+            -64.3569,
+            -9.4639
+          ],
+          [
+            -68.6734,
+            -7.3406
+          ],
+          [
+            -73.0977,
+            -9.2354
+          ],
+          [
+            -75.9781,
+            -13.1104
+          ],
+          [
+            -82.3964,
+            -16.5546
+          ],
+          [
+            -74.5515,
+            -20.3567
+          ],
+          [
+            -74.8912,
+            -25.9524
+          ],
+          [
+            -68.6734,
+            -28.4322
+          ],
+          [
+            -61.995,
+            -26.4276
+          ],
+          [
+            -61.7835,
+            -20.6121
+          ],
+          [
+            -60.0718,
+            -16.5546
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The endonym for this state is uncertain; 'Tiwanaku' may derive from Aymara. The site was heavily looted during the colonial period and stones were used for church construction. Inca and later Spanish accounts mythologized the site. ETHICS-003: Modern Bolivia has adopted Tiwanaku iconography as a national symbol, raising questions about whose heritage it represents given the complex ethnic history of the altiplano.",
     "name_variants": [
       {
@@ -902,7 +1609,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Iréchecua Tzintzuntzáni",
@@ -913,9 +1621,67 @@
     "capital_name": "Tzintzuntzan",
     "capital_lat": 19.6272,
     "capital_lon": -101.5764,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -98.6362,
+            19.6272
+          ],
+          [
+            -98.2717,
+            21.3616
+          ],
+          [
+            -99.4778,
+            23.0357
+          ],
+          [
+            -101.5764,
+            24.4207
+          ],
+          [
+            -103.1675,
+            22.6639
+          ],
+          [
+            -104.4309,
+            21.3654
+          ],
+          [
+            -104.3765,
+            19.6272
+          ],
+          [
+            -103.8124,
+            18.346
+          ],
+          [
+            -103.4592,
+            17.1471
+          ],
+          [
+            -101.5764,
+            16.582
+          ],
+          [
+            -99.5238,
+            16.4523
+          ],
+          [
+            -98.7545,
+            18.0807
+          ],
+          [
+            -98.6362,
+            19.6272
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The Purépecha (also called Tarascan, an exonym possibly of Spanish origin) maintained independence from the Aztec Empire, one of the few Mesoamerican states to resist Aztec expansion. Their language is a language isolate with no known relatives. ETHICS-002: Spanish conquest under Nuño de Guzmán was particularly brutal — Guzmán tortured and executed the last cazonci (ruler) Tangáxuan II and was recalled to Spain for his atrocities. The Relación de Michoacán (1541) is a crucial indigenous source written shortly after conquest.",
     "name_variants": [
       {
@@ -985,7 +1751,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Ancestral Puebloans",
@@ -996,9 +1763,67 @@
     "capital_name": "Pueblo Bonito, Chaco Canyon",
     "capital_lat": 36.0608,
     "capital_lon": -107.9612,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -102.6669,
+            36.0608
+          ],
+          [
+            -104.4798,
+            37.3455
+          ],
+          [
+            -105.4171,
+            39.6794
+          ],
+          [
+            -107.9612,
+            39.4327
+          ],
+          [
+            -110.2062,
+            39.7302
+          ],
+          [
+            -112.0655,
+            38.2154
+          ],
+          [
+            -111.8676,
+            36.0608
+          ],
+          [
+            -110.8643,
+            34.5197
+          ],
+          [
+            -109.9518,
+            33.1683
+          ],
+          [
+            -107.9612,
+            32.0439
+          ],
+          [
+            -105.6002,
+            32.1181
+          ],
+          [
+            -104.9927,
+            34.769
+          ],
+          [
+            -102.6669,
+            36.0608
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: Previously known as 'Anasazi,' a Navajo word sometimes interpreted as 'ancient enemies.' The term is rejected by many Pueblo peoples as disrespectful, hence the shift to 'Ancestral Puebloans' in academic usage. However, this term is also imperfect as it implies a direct linear ancestry that oversimplifies complex migrations. ETHICS-003: The 'mystery of the disappearance' narrative is misleading; the people migrated to the Rio Grande, Zuni, and Hopi areas — they did not vanish. Modern Pueblo peoples maintain oral traditions about these ancestors.",
     "name_variants": [
       {
@@ -1060,7 +1885,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Nueva España",
@@ -1071,9 +1897,67 @@
     "capital_name": "Ciudad de México",
     "capital_lat": 19.4326,
     "capital_lon": -99.1332,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -94.1096,
+            19.4326
+          ],
+          [
+            -95.3795,
+            21.8588
+          ],
+          [
+            -95.6517,
+            25.7074
+          ],
+          [
+            -99.1332,
+            27.5964
+          ],
+          [
+            -101.9095,
+            24.2848
+          ],
+          [
+            -105.7168,
+            22.7395
+          ],
+          [
+            -104.811,
+            19.4326
+          ],
+          [
+            -104.4557,
+            15.7688
+          ],
+          [
+            -101.6499,
+            14.4402
+          ],
+          [
+            -99.1332,
+            11.4805
+          ],
+          [
+            -95.5051,
+            14.0139
+          ],
+          [
+            -91.8578,
+            15.5307
+          ],
+          [
+            -94.1096,
+            19.4326
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-002: Nueva España was built on the destruction of indigenous civilizations. The encomienda and repartimiento systems constituted forced labor regimes. The population of central Mexico collapsed from an estimated 25 million in 1519 to approximately 1 million by 1620 — one of the greatest demographic catastrophes in human history, caused by European diseases (smallpox, measles, typhus) combined with exploitation and social disruption. The casta system institutionalized racial hierarchy. Silver mining relied on devastating forced indigenous labor (mita). Indigenous languages, religions, and cultural practices were systematically suppressed.",
     "name_variants": [
       {
@@ -1140,7 +2024,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Virreinato del Perú",
@@ -1151,9 +2036,67 @@
     "capital_name": "Lima",
     "capital_lat": -12.0464,
     "capital_lon": -77.0428,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -73.6326,
+            -12.0464
+          ],
+          [
+            -72.2277,
+            -9.3774
+          ],
+          [
+            -75.295,
+            -8.6478
+          ],
+          [
+            -77.0428,
+            -8.718
+          ],
+          [
+            -80.4156,
+            -7.4342
+          ],
+          [
+            -81.1456,
+            -9.825
+          ],
+          [
+            -81.2676,
+            -12.0464
+          ],
+          [
+            -81.7803,
+            -14.51
+          ],
+          [
+            -79.0572,
+            -15.7245
+          ],
+          [
+            -77.0428,
+            -17.2392
+          ],
+          [
+            -74.8008,
+            -16.5784
+          ],
+          [
+            -74.1353,
+            -13.6386
+          ],
+          [
+            -73.6326,
+            -12.0464
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-002: Built on the destruction of the Inca Empire and the exploitation of indigenous peoples through the mita system (forced labor, especially in the silver mines of Potosi where millions died). Mercury amalgamation process used in mining caused mass poisoning. Encomienda system reduced indigenous peoples to near-slavery. Tupac Amaru II's rebellion (1780-1781) was a major indigenous uprising, brutally suppressed — the rebel leader publicly tortured and dismembered. Population of the Inca realm estimated at 10-12 million in 1520 collapsed to approximately 600,000 by 1620.",
     "name_variants": [
       {
@@ -1220,7 +2163,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Brasil Colônia",
@@ -1231,9 +2175,67 @@
     "capital_name": "Salvador",
     "capital_lat": -12.9714,
     "capital_lon": -38.5124,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -32.7853,
+            -12.9714
+          ],
+          [
+            -34.0866,
+            -10.3994
+          ],
+          [
+            -35.955,
+            -9.4477
+          ],
+          [
+            -38.5124,
+            -9.0772
+          ],
+          [
+            -42.2804,
+            -6.5639
+          ],
+          [
+            -44.753,
+            -9.9183
+          ],
+          [
+            -43.5839,
+            -12.9714
+          ],
+          [
+            -43.7432,
+            -16.7365
+          ],
+          [
+            -41.9578,
+            -19.0983
+          ],
+          [
+            -38.5124,
+            -19.7714
+          ],
+          [
+            -36.6277,
+            -16.7901
+          ],
+          [
+            -33.681,
+            -16.2847
+          ],
+          [
+            -32.7853,
+            -12.9714
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-002: Colonial Brazil was the largest single destination of the transatlantic slave trade, receiving approximately 4.9 million enslaved Africans — more than any other country in the Americas. The sugar plantation (engenho) system was built entirely on enslaved African labor. Indigenous populations were also enslaved through bandeirante expeditions until Pombal's reforms (1755-1758). The indigenous population, estimated at 2-4 million at contact, was devastated by disease, slavery, and displacement. Brazil was the last country in the Western Hemisphere to abolish slavery (1888).",
     "name_variants": [
       {
@@ -1300,7 +2302,8 @@
         "source_type": "primary",
         "url": "https://www.slavevoyages.org"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Thirteen Colonies",
@@ -1311,9 +2314,67 @@
     "capital_name": "Philadelphia",
     "capital_lat": 39.9526,
     "capital_lon": -75.1652,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -67.0474,
+            39.9526
+          ],
+          [
+            -71.0989,
+            41.757
+          ],
+          [
+            -72.7379,
+            43.6915
+          ],
+          [
+            -75.1652,
+            44.7186
+          ],
+          [
+            -77.6167,
+            43.749
+          ],
+          [
+            -80.8658,
+            42.3543
+          ],
+          [
+            -80.8629,
+            39.9526
+          ],
+          [
+            -81.0737,
+            37.1204
+          ],
+          [
+            -77.8925,
+            36.1629
+          ],
+          [
+            -75.1652,
+            35.4193
+          ],
+          [
+            -72.2072,
+            36.0711
+          ],
+          [
+            -68.7703,
+            36.996
+          ],
+          [
+            -67.0474,
+            39.9526
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-002: Established on land taken from indigenous peoples through coerced or fraudulent treaties, warfare, and displacement. The colonies became major participants in the Atlantic slave trade; by 1776, approximately 500,000 enslaved Africans lived in the colonies, forming the economic foundation of the Southern colonies. The Declaration of Independence (1776) proclaimed 'all men are created equal' while excluding enslaved people, indigenous peoples, and women. ETHICS-003: Colonization involved the systematic dispossession of indigenous nations including the Powhatan, Wampanoag, Lenape, and many others.",
     "name_variants": [
       {
@@ -1375,7 +2436,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Républik Ayiti",
@@ -1386,9 +2448,67 @@
     "capital_name": "Port-au-Prince",
     "capital_lat": 18.5944,
     "capital_lon": -72.3074,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -70.7888,
+            18.5944
+          ],
+          [
+            -70.8546,
+            19.4252
+          ],
+          [
+            -71.1006,
+            20.3972
+          ],
+          [
+            -72.3074,
+            20.2077
+          ],
+          [
+            -73.5072,
+            20.3876
+          ],
+          [
+            -74.0484,
+            19.4716
+          ],
+          [
+            -74.4863,
+            18.5944
+          ],
+          [
+            -73.8113,
+            17.69
+          ],
+          [
+            -73.38,
+            16.9525
+          ],
+          [
+            -72.3074,
+            16.5767
+          ],
+          [
+            -70.9349,
+            16.4735
+          ],
+          [
+            -70.2328,
+            17.5523
+          ],
+          [
+            -70.7888,
+            18.5944
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-002: Haiti was the first successful slave revolution in history and the first Black republic (1804). France's Saint-Domingue was the most profitable slave colony in history, where enslaved people were literally worked to death (average life expectancy on sugar plantations was 7 years after arrival). ETHICS-003: After independence, France extorted 150 million francs (later reduced to 90 million) in 1825 as 'indemnity' for lost slave property, forcing Haiti to pay for its own freedom. This debt, not fully repaid until 1947, crippled Haiti's economy for over a century. The USA did not recognize Haiti until 1862. Western historiography has systematically undervalued the Haitian Revolution's significance.",
     "name_variants": [
       {
@@ -1463,7 +2583,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Primer Imperio Mexicano",
@@ -1474,9 +2595,67 @@
     "capital_name": "Ciudad de México",
     "capital_lat": 19.4326,
     "capital_lon": -99.1332,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -90.3194,
+            19.4326
+          ],
+          [
+            -90.307,
+            24.1091
+          ],
+          [
+            -95.8935,
+            24.9983
+          ],
+          [
+            -99.1332,
+            32.4456
+          ],
+          [
+            -103.852,
+            27.8587
+          ],
+          [
+            -110.285,
+            25.7762
+          ],
+          [
+            -106.0014,
+            19.4326
+          ],
+          [
+            -109.9913,
+            13.3429
+          ],
+          [
+            -105.1243,
+            8.3979
+          ],
+          [
+            -99.1332,
+            8.0625
+          ],
+          [
+            -94.9395,
+            11.4464
+          ],
+          [
+            -92.0454,
+            15.7469
+          ],
+          [
+            -90.3194,
+            19.4326
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-003: The First Mexican Empire under Agustín de Iturbide was a brief monarchical experiment following independence from Spain. While independence ended formal colonial rule, the social and racial hierarchies of the colonial casta system largely persisted. Indigenous and mixed-race populations remained marginalized. The vast territory claimed (from Oregon to Central America) was largely nominal and quickly fragmented.",
     "name_variants": [
       {
@@ -1525,7 +2704,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Confederate States of America",
@@ -1536,9 +2716,67 @@
     "capital_name": "Richmond",
     "capital_lat": 37.5407,
     "capital_lon": -77.436,
-    "confidence_score": 0.95,
+    "confidence_score": 0.85,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -74.9241,
+            37.5407
+          ],
+          [
+            -75.2365,
+            38.7048
+          ],
+          [
+            -76.2197,
+            38.9509
+          ],
+          [
+            -77.436,
+            39.8221
+          ],
+          [
+            -78.2534,
+            38.7901
+          ],
+          [
+            -79.5053,
+            38.4696
+          ],
+          [
+            -79.232,
+            37.5407
+          ],
+          [
+            -79.198,
+            36.755
+          ],
+          [
+            -78.5451,
+            36.0127
+          ],
+          [
+            -77.436,
+            36.211
+          ],
+          [
+            -76.4426,
+            35.6967
+          ],
+          [
+            -75.6689,
+            36.8029
+          ],
+          [
+            -74.9241,
+            37.5407
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-003: The Confederate States of America was explicitly founded to preserve and expand race-based chattel slavery. Vice President Alexander Stephens stated in his 'Cornerstone Speech' (1861) that the Confederacy rested 'upon the great truth that the negro is not equal to the white man; that slavery subordination to the superior race is his natural and normal condition.' Multiple state secession declarations explicitly cite slavery as the primary cause. Post-war 'Lost Cause' mythology attempted to reframe the war as about 'states' rights,' but the historical record is unambiguous: it was about the right to own human beings. Approximately 4 million people were enslaved in the Confederate states.",
     "name_variants": [
       {
@@ -1605,7 +2843,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Virreinato de Nueva Granada",
@@ -1616,9 +2855,67 @@
     "capital_name": "Santa Fe de Bogotá",
     "capital_lat": 4.711,
     "capital_lon": -74.0721,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -69.2658,
+            4.711
+          ],
+          [
+            -69.5046,
+            7.6634
+          ],
+          [
+            -70.8874,
+            9.5042
+          ],
+          [
+            -74.0721,
+            10.2248
+          ],
+          [
+            -76.481,
+            8.2367
+          ],
+          [
+            -77.0643,
+            6.3678
+          ],
+          [
+            -79.1591,
+            4.711
+          ],
+          [
+            -77.8739,
+            2.541
+          ],
+          [
+            -77.1205,
+            -0.0371
+          ],
+          [
+            -74.0721,
+            0.5781
+          ],
+          [
+            -72.1436,
+            0.8233
+          ],
+          [
+            -69.9668,
+            1.9428
+          ],
+          [
+            -69.2658,
+            4.711
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-002: The Viceroyalty of Nueva Granada encompassed present-day Colombia, Ecuador, Venezuela, and Panama. It was built on the subjugation of indigenous peoples (including the Muisca) and the importation of enslaved Africans, particularly for gold mining in the Chocó and plantation agriculture. Cartagena de Indias was one of the major slave ports of the Americas. Indigenous peoples were subjected to the mita system of forced labor. The Comunero Revolt of 1781 was an early expression of resistance to colonial exploitation.",
     "name_variants": [
       {
@@ -1667,7 +2964,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Virreinato del Río de la Plata",
@@ -1678,9 +2976,67 @@
     "capital_name": "Buenos Aires",
     "capital_lat": -34.6037,
     "capital_lon": -58.3816,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -54.1243,
+            -34.6037
+          ],
+          [
+            -53.7527,
+            -32.7431
+          ],
+          [
+            -54.7539,
+            -29.2619
+          ],
+          [
+            -58.3816,
+            -31.5723
+          ],
+          [
+            -60.8805,
+            -30.5916
+          ],
+          [
+            -62.9706,
+            -32.8256
+          ],
+          [
+            -64.4877,
+            -34.6037
+          ],
+          [
+            -62.2607,
+            -36.4439
+          ],
+          [
+            -61.4012,
+            -39.7378
+          ],
+          [
+            -58.3816,
+            -37.5446
+          ],
+          [
+            -55.3976,
+            -40.0304
+          ],
+          [
+            -53.3625,
+            -37.4419
+          ],
+          [
+            -54.1243,
+            -34.6037
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-002: The last major Spanish colonial administrative unit created in the Americas. While it had a smaller enslaved population than Brazil or the Caribbean, slavery existed in Buenos Aires and the interior. The territory encompassed indigenous lands of the Guaraní, Mapuche, Pampa, and Patagonian peoples who were progressively dispossessed. The Bourbon Reforms that created the viceroyalty intensified exploitation of the Potosi silver mines.",
     "name_variants": [
       {
@@ -1721,7 +3077,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Capitanía General de Guatemala",
@@ -1732,9 +3089,67 @@
     "capital_name": "Santiago de los Caballeros de Guatemala",
     "capital_lat": 14.5586,
     "capital_lon": -90.7295,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -85.3626,
+            14.5586
+          ],
+          [
+            -85.9865,
+            16.8166
+          ],
+          [
+            -87.497,
+            19.1484
+          ],
+          [
+            -90.7295,
+            19.7427
+          ],
+          [
+            -93.8096,
+            19.0286
+          ],
+          [
+            -94.6098,
+            16.8111
+          ],
+          [
+            -94.6676,
+            14.5586
+          ],
+          [
+            -94.6364,
+            12.8835
+          ],
+          [
+            -92.9179,
+            10.8285
+          ],
+          [
+            -90.7295,
+            8.6445
+          ],
+          [
+            -88.3053,
+            10.5167
+          ],
+          [
+            -85.3621,
+            11.1766
+          ],
+          [
+            -85.3626,
+            14.5586
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-002: The Captaincy General of Guatemala encompassed all of Central America. Indigenous Maya peoples were subjected to forced labor through repartimiento and encomienda systems. Cochineal and indigo production relied on exploited indigenous labor. The colonial-era racial hierarchy (sistema de castas) persisted long after independence. Maya peoples constituted the majority of the population but were systematically marginalized. The legacy of colonial land distribution continues to drive inequality in Guatemala and Central America.",
     "name_variants": [
       {
@@ -1783,7 +3198,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Capitanía General de Chile",
@@ -1794,9 +3210,67 @@
     "capital_name": "Santiago",
     "capital_lat": -33.4489,
     "capital_lon": -70.6693,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -64.3567,
+            -33.4489
+          ],
+          [
+            -63.7719,
+            -29.449
+          ],
+          [
+            -67.2484,
+            -27.8856
+          ],
+          [
+            -70.6693,
+            -27.2552
+          ],
+          [
+            -74.1158,
+            -28.2323
+          ],
+          [
+            -75.4882,
+            -30.4748
+          ],
+          [
+            -75.9799,
+            -33.4489
+          ],
+          [
+            -77.1587,
+            -37.1752
+          ],
+          [
+            -74.1885,
+            -38.4682
+          ],
+          [
+            -70.6693,
+            -40.9151
+          ],
+          [
+            -66.509,
+            -39.6333
+          ],
+          [
+            -63.1476,
+            -36.5818
+          ],
+          [
+            -64.3567,
+            -33.4489
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-002: Notable for the Arauco War (1536-1883), one of the longest conflicts in the Americas, in which the Mapuche people successfully resisted Spanish colonization south of the Biobío River for over 300 years. The Treaty of Quillin (1641) recognized Mapuche sovereignty — one of the few instances where a European colonial power formally recognized indigenous sovereignty. The encomienda system was imposed on indigenous peoples in the conquered territories north of the Biobío.",
     "name_variants": [
       {
@@ -1850,7 +3324,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Comancheria",
@@ -1861,9 +3336,67 @@
     "capital_name": null,
     "capital_lat": 34.5,
     "capital_lon": -100.0,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -94.8066,
+            34.5
+          ],
+          [
+            -93.7724,
+            37.6409
+          ],
+          [
+            -96.8994,
+            39.1242
+          ],
+          [
+            -100.0,
+            39.2877
+          ],
+          [
+            -102.8113,
+            38.763
+          ],
+          [
+            -104.107,
+            36.1654
+          ],
+          [
+            -105.8063,
+            34.5
+          ],
+          [
+            -105.7058,
+            31.8438
+          ],
+          [
+            -104.0135,
+            29.2105
+          ],
+          [
+            -100.0,
+            28.3105
+          ],
+          [
+            -97.5237,
+            31.2928
+          ],
+          [
+            -94.0126,
+            31.2028
+          ],
+          [
+            -94.8066,
+            34.5
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: Hamalainen's revisionist scholarship challenges the narrative that Native peoples were merely victims of European expansion, showing the Comanche as empire-builders who dominated trade, diplomacy, and warfare across a vast region. However, the Comanche also engaged in slave-raiding and captive-taking. ETHICS-002: Their defeat came through deliberate US Army campaigns of buffalo extermination (destroying the economic base) and forced relocation to reservations. The Comanche had no fixed capital; 'Nʉmʉnʉʉ' is the endonym meaning 'the people.'",
     "name_variants": [
       {
@@ -1925,7 +3458,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Lakȟóta Oyáte",
@@ -1936,9 +3470,67 @@
     "capital_name": null,
     "capital_lat": 43.5,
     "capital_lon": -102.0,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -95.72,
+            43.5
+          ],
+          [
+            -96.1179,
+            46.1185
+          ],
+          [
+            -99.4185,
+            46.9219
+          ],
+          [
+            -102.0,
+            48.639
+          ],
+          [
+            -106.0009,
+            47.7671
+          ],
+          [
+            -107.6702,
+            45.8699
+          ],
+          [
+            -106.2718,
+            43.5
+          ],
+          [
+            -109.0982,
+            41.0485
+          ],
+          [
+            -104.9498,
+            39.7378
+          ],
+          [
+            -102.0,
+            37.7915
+          ],
+          [
+            -98.1261,
+            39.3326
+          ],
+          [
+            -98.1326,
+            41.586
+          ],
+          [
+            -95.72,
+            43.5
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: 'Sioux' is a French corruption of an Ojibwe exonym sometimes considered pejorative; the endonym 'Lakȟóta' should be preferred. ETHICS-002: The US government's response to Lakota resistance included targeted destruction of buffalo herds (40-60 million bison reduced to near extinction), the forcible taking of the Black Hills (Paha Sapa) in violation of the Fort Laramie Treaty of 1868, and the Wounded Knee Massacre (1890) where US soldiers killed approximately 250-300 Lakota men, women, and children. The US Supreme Court ruled in 1980 that the taking of the Black Hills was illegal; the Lakota have refused monetary compensation, demanding land return.",
     "name_variants": [
       {
@@ -2021,7 +3613,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ᏣᎳᎩ",
@@ -2032,9 +3625,67 @@
     "capital_name": "Echota",
     "capital_lat": 35.5333,
     "capital_lon": -84.3036,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -80.3917,
+            35.5333
+          ],
+          [
+            -80.688,
+            37.3909
+          ],
+          [
+            -81.6778,
+            39.1004
+          ],
+          [
+            -84.3036,
+            39.2258
+          ],
+          [
+            -86.397,
+            38.4453
+          ],
+          [
+            -87.7997,
+            37.2199
+          ],
+          [
+            -89.6126,
+            35.5333
+          ],
+          [
+            -89.2881,
+            33.3617
+          ],
+          [
+            -87.3282,
+            31.4391
+          ],
+          [
+            -84.3036,
+            31.2057
+          ],
+          [
+            -82.409,
+            32.5258
+          ],
+          [
+            -78.9831,
+            33.5902
+          ],
+          [
+            -80.3917,
+            35.5333
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-002: The Cherokee Nation exemplifies the devastation of US Indian removal policy. Despite adopting Western institutions (written constitution, newspaper in Sequoyah's syllabary, settled agriculture), the Cherokee were forcibly removed under the Indian Removal Act of 1830. The Trail of Tears (1838-1839) resulted in approximately 4,000-8,000 deaths during forced marches. This occurred despite the Supreme Court ruling in Worcester v. Georgia (1832) that Cherokee sovereignty was legally valid. ETHICS-003: The Cherokee Nation persists today as a federally recognized sovereign nation.",
     "name_variants": [
       {
@@ -2101,7 +3752,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Mvskoke",
@@ -2112,9 +3764,67 @@
     "capital_name": null,
     "capital_lat": 32.5,
     "capital_lon": -85.5,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -79.7905,
+            32.5
+          ],
+          [
+            -81.032,
+            35.0864
+          ],
+          [
+            -82.7153,
+            36.8567
+          ],
+          [
+            -85.5,
+            35.569
+          ],
+          [
+            -88.3545,
+            37.856
+          ],
+          [
+            -90.8591,
+            34.8217
+          ],
+          [
+            -91.4171,
+            32.5
+          ],
+          [
+            -89.8232,
+            30.2796
+          ],
+          [
+            -88.3779,
+            28.0936
+          ],
+          [
+            -85.5,
+            28.1142
+          ],
+          [
+            -82.917,
+            29.0515
+          ],
+          [
+            -80.8313,
+            30.4933
+          ],
+          [
+            -79.7905,
+            32.5
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: 'Creek' is an English colonial exonym derived from the waterways in their territory; the endonym 'Mvskoke' should be preferred. ETHICS-002: Like the Cherokee, the Muscogee were subjected to forced removal under the Indian Removal Act. The Creek War (1813-1814) resulted in the loss of 23 million acres. Andrew Jackson, aided by Creek allies (Lower Creeks), then also subjected those allies to removal — a betrayal of alliance. ETHICS-003: The Muscogee (Creek) Nation persists today as a federally recognized sovereign nation in Oklahoma. The confederacy had no single capital; it was organized around tribal towns (talwa).",
     "name_variants": [
       {
@@ -2176,7 +3886,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Wendat",
@@ -2187,9 +3898,67 @@
     "capital_name": "Ossossané",
     "capital_lat": 44.7333,
     "capital_lon": -80.0333,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -74.7784,
+            44.7333
+          ],
+          [
+            -71.2607,
+            47.9036
+          ],
+          [
+            -76.3725,
+            48.5686
+          ],
+          [
+            -80.0333,
+            48.2219
+          ],
+          [
+            -83.6975,
+            49.3395
+          ],
+          [
+            -84.7074,
+            47.006
+          ],
+          [
+            -87.8444,
+            44.7333
+          ],
+          [
+            -84.7966,
+            42.658
+          ],
+          [
+            -82.9368,
+            41.3667
+          ],
+          [
+            -80.0333,
+            40.4467
+          ],
+          [
+            -76.3564,
+            40.2744
+          ],
+          [
+            -73.7143,
+            42.1119
+          ],
+          [
+            -74.7784,
+            44.7333
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: 'Huron' is a French exonym possibly meaning 'boar's head' or 'ruffian'; the endonym 'Wendat' should be preferred. ETHICS-002: The Wendat were devastated by European diseases (particularly smallpox in the 1630s-1640s) and the Haudenosaunee (Iroquois) Beaver Wars, reducing their population from approximately 20,000-40,000 to a few hundred survivors. Jesuit missionary records, while valuable as historical sources, also represent the project of cultural and religious destruction. ETHICS-003: Wendat descendants persist today as the Wyandotte Nation (Oklahoma) and the Wendat Nation (Wendake, Quebec).",
     "name_variants": [
       {
@@ -2243,7 +4012,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Tsenacommacah",
@@ -2254,9 +4024,67 @@
     "capital_name": "Werowocomoco",
     "capital_lat": 37.3897,
     "capital_lon": -76.5556,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -72.501,
+            37.3897
+          ],
+          [
+            -72.7378,
+            39.1014
+          ],
+          [
+            -73.9192,
+            41.1843
+          ],
+          [
+            -76.5556,
+            40.5431
+          ],
+          [
+            -79.682,
+            41.0348
+          ],
+          [
+            -80.8508,
+            39.5227
+          ],
+          [
+            -82.9696,
+            37.3897
+          ],
+          [
+            -80.8322,
+            35.0052
+          ],
+          [
+            -78.4027,
+            34.4516
+          ],
+          [
+            -76.5556,
+            34.9601
+          ],
+          [
+            -74.7931,
+            34.9655
+          ],
+          [
+            -72.8354,
+            35.9326
+          ],
+          [
+            -72.501,
+            37.3897
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The Powhatan Confederacy (self-named Tsenacommacah) is known primarily through the Jamestown encounter. ETHICS-003: The dominant Pocahontas narrative has been heavily romanticized and distorted. Pocahontas (Amonute/Matoaka) was kidnapped, held hostage, converted, and married to John Rolfe as a political tool — the 'love story' obscures colonial violence. Wahunsenacah (Chief Powhatan) built a complex political alliance of approximately 30 tributary peoples. Powhatan descendants continue to live in Virginia; the Pamunkey and Mattaponi reservations are the oldest in the United States.",
     "name_variants": [
       {
@@ -2318,7 +4146,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Wôpanâak",
@@ -2329,9 +4158,67 @@
     "capital_name": null,
     "capital_lat": 41.75,
     "capital_lon": -70.6,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -65.756,
+            41.75
+          ],
+          [
+            -67.029,
+            43.4635
+          ],
+          [
+            -68.1691,
+            44.2093
+          ],
+          [
+            -70.6,
+            45.3301
+          ],
+          [
+            -73.706,
+            45.0707
+          ],
+          [
+            -77.0232,
+            44.5643
+          ],
+          [
+            -76.9814,
+            41.75
+          ],
+          [
+            -76.3818,
+            39.669
+          ],
+          [
+            -72.3911,
+            39.2885
+          ],
+          [
+            -70.6,
+            38.3808
+          ],
+          [
+            -68.3043,
+            38.4929
+          ],
+          [
+            -67.1691,
+            39.9553
+          ],
+          [
+            -65.756,
+            41.75
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-002: The Wampanoag ('People of the First Light') have inhabited southeastern New England for at least 12,000 years. Their encounter with the Pilgrims at Plymouth (1620) has been mythologized in the American Thanksgiving narrative, which obscures the reality: the Wampanoag were devastated by a European-introduced epidemic (1616-1619) killing approximately 90% of the population before the Pilgrims arrived. Massasoit's alliance was strategic, not naive generosity. King Philip's War (1675-1676) was one of the deadliest per capita in American history. Metacom's head was displayed on a pike at Plymouth for 20 years. ETHICS-003: The Wampanoag persist today as the Mashpee Wampanoag Tribe and the Wampanoag Tribe of Gay Head (Aquinnah).",
     "name_variants": [
       {
@@ -2393,7 +4280,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Pueblo",
@@ -2404,9 +4292,67 @@
     "capital_name": null,
     "capital_lat": 35.0,
     "capital_lon": -106.0,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -102.5272,
+            35.0
+          ],
+          [
+            -102.4421,
+            36.7663
+          ],
+          [
+            -104.2151,
+            37.4947
+          ],
+          [
+            -106.0,
+            37.6595
+          ],
+          [
+            -107.7258,
+            37.7678
+          ],
+          [
+            -109.7679,
+            36.6452
+          ],
+          [
+            -110.5076,
+            35.0
+          ],
+          [
+            -109.6833,
+            33.3352
+          ],
+          [
+            -108.3274,
+            31.187
+          ],
+          [
+            -106.0,
+            32.0498
+          ],
+          [
+            -103.47,
+            31.6717
+          ],
+          [
+            -103.4009,
+            33.7451
+          ],
+          [
+            -102.5272,
+            35.0
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: 'Pueblo' is a Spanish exonym meaning 'village/people,' applied to diverse indigenous groups (Hopi, Zuni, Acoma, Laguna, Taos, and others) who share architectural and agricultural traditions but speak different languages from multiple language families. Using a single designation risks erasing their diversity. ETHICS-002: Juan de Onate's colonization (1598) was brutal — at Acoma Pueblo (1599), men over 25 had one foot amputated; women and children were enslaved. ETHICS-003: The Pueblo Revolt of 1680, led by Po'pay of Ohkay Owingeh, was the most successful indigenous uprising against European colonialism in North America, expelling the Spanish for 12 years. Pueblo peoples persist today across 19 pueblos in New Mexico and the Hopi reservation.",
     "name_variants": [
       {
@@ -2460,7 +4406,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Estado Oriental del Uruguay",
@@ -2471,9 +4418,67 @@
     "capital_name": "Montevideo",
     "capital_lat": -34.9011,
     "capital_lon": -56.1645,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -53.3126,
+            -34.9011
+          ],
+          [
+            -54.698,
+            -34.1873
+          ],
+          [
+            -54.6841,
+            -33.0563
+          ],
+          [
+            -56.1645,
+            -32.7573
+          ],
+          [
+            -57.1988,
+            -33.053
+          ],
+          [
+            -57.859,
+            -34.2848
+          ],
+          [
+            -59.0399,
+            -34.9011
+          ],
+          [
+            -58.9011,
+            -35.9828
+          ],
+          [
+            -57.1227,
+            -36.6154
+          ],
+          [
+            -56.1645,
+            -36.6154
+          ],
+          [
+            -55.2665,
+            -36.6096
+          ],
+          [
+            -53.6884,
+            -36.0279
+          ],
+          [
+            -53.3126,
+            -34.9011
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-002: The Charrúa indigenous people, who originally inhabited the territory, were largely exterminated during the colonial and early republican periods. The Massacre of Salsipuedes (1831), ordered by President Fructuoso Rivera, killed most remaining Charrúa. Surviving Charrúa were distributed as servants, and four were taken to Paris to be exhibited as curiosities. ETHICS-003: Uruguay's national identity has historically been constructed as 'European' while erasing indigenous and African contributions. Independence was achieved as a buffer state between Argentina and Brazil, brokered by British diplomacy.",
     "name_variants": [
       {
@@ -2527,7 +4532,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "República del Paraguay",
@@ -2538,9 +4544,67 @@
     "capital_name": "Asunción",
     "capital_lat": -25.2637,
     "capital_lon": -57.5759,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -54.8329,
+            -25.2637
+          ],
+          [
+            -55.1382,
+            -24.1869
+          ],
+          [
+            -56.8544,
+            -24.0981
+          ],
+          [
+            -57.5759,
+            -23.5503
+          ],
+          [
+            -58.6966,
+            -23.0695
+          ],
+          [
+            -59.2371,
+            -24.5314
+          ],
+          [
+            -59.4961,
+            -25.2637
+          ],
+          [
+            -59.0395,
+            -26.1158
+          ],
+          [
+            -58.7923,
+            -27.3802
+          ],
+          [
+            -57.5759,
+            -26.5916
+          ],
+          [
+            -56.5063,
+            -27.1226
+          ],
+          [
+            -55.4418,
+            -26.1236
+          ],
+          [
+            -54.8329,
+            -25.2637
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-003: Paraguay is notable for maintaining the Guarani language as a co-official national language alongside Spanish — a rare case of an indigenous language achieving official status. ETHICS-002: The War of the Triple Alliance (1864-1870) was one of the most devastating conflicts in modern history: Paraguay lost approximately 60-90% of its male population and large portions of its territory to the combined forces of Argentina, Brazil, and Uruguay. This war is often overlooked in global historical narratives. Some scholars describe the destruction as genocidal.",
     "name_variants": [
       {
@@ -2594,7 +4658,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Quilombo dos Palmares",
@@ -2605,9 +4670,67 @@
     "capital_name": "Macaco",
     "capital_lat": -9.5833,
     "capital_lon": -36.4167,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -33.6377,
+            -9.5833
+          ],
+          [
+            -33.1723,
+            -7.8269
+          ],
+          [
+            -34.7965,
+            -7.3001
+          ],
+          [
+            -36.4167,
+            -5.7829
+          ],
+          [
+            -38.0326,
+            -6.8707
+          ],
+          [
+            -39.0829,
+            -7.9936
+          ],
+          [
+            -39.3635,
+            -9.5833
+          ],
+          [
+            -38.7039,
+            -11.0608
+          ],
+          [
+            -38.1582,
+            -13.0762
+          ],
+          [
+            -36.4167,
+            -13.2984
+          ],
+          [
+            -35.0127,
+            -12.3151
+          ],
+          [
+            -34.0524,
+            -11.1204
+          ],
+          [
+            -33.6377,
+            -9.5833
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-003: Quilombo dos Palmares was the largest and longest-lasting community of escaped enslaved Africans (maroons) in the Americas, surviving for nearly a century. At its height, it had an estimated 20,000-30,000 inhabitants. It represents the most successful sustained resistance to the Atlantic slave trade system. Its leader Zumbi dos Palmares (d. 1695) is a national hero in Brazil; November 20 (the date of his death) is Black Consciousness Day. ETHICS-001: Palmares was not merely a refuge but a functioning political entity with its own governance, agriculture, and defense systems, drawing on both African and indigenous Brazilian traditions. Its destruction required repeated military campaigns by Dutch and Portuguese forces.",
     "name_variants": [
       {
@@ -2669,7 +4792,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Misiones Guaraníes",
@@ -2680,9 +4804,67 @@
     "capital_name": null,
     "capital_lat": -27.25,
     "capital_lon": -55.5,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -52.2205,
+            -27.25
+          ],
+          [
+            -51.4512,
+            -24.8584
+          ],
+          [
+            -54.0934,
+            -24.8805
+          ],
+          [
+            -55.5,
+            -22.8315
+          ],
+          [
+            -57.7885,
+            -23.5235
+          ],
+          [
+            -58.56,
+            -25.4471
+          ],
+          [
+            -59.0101,
+            -27.25
+          ],
+          [
+            -58.427,
+            -28.9377
+          ],
+          [
+            -57.9457,
+            -31.2147
+          ],
+          [
+            -55.5,
+            -31.5407
+          ],
+          [
+            -52.5963,
+            -30.9778
+          ],
+          [
+            -52.3293,
+            -28.8939
+          ],
+          [
+            -52.2205,
+            -27.25
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-003: The Guarani Jesuit Missions present a complex ethical case. On one hand, they protected Guarani peoples from the worst abuses of colonial slave-raiders (bandeirantes). On the other, they imposed European religious conversion and cultural transformation. The missions combined Guarani communal traditions with Jesuit organization. At their height, approximately 140,000 Guarani lived in 30 missions. The Guarani were armed to defend against slave raids — an unusual case of indigenous-European military cooperation. ETHICS-002: The expulsion of the Jesuits (1767) left the Guarani vulnerable to exploitation. The ruins are now UNESCO World Heritage Sites in Argentina, Brazil, and Paraguay.",
     "name_variants": [
       {
@@ -2752,7 +4934,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Reino de la Araucanía y Patagonia",
@@ -2763,9 +4946,67 @@
     "capital_name": "Perquenco",
     "capital_lat": -38.4167,
     "capital_lon": -72.3833,
-    "confidence_score": 0.4,
+    "confidence_score": 0.3,
     "status": "disputed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -68.2791,
+            -38.4167
+          ],
+          [
+            -69.352,
+            -36.8389
+          ],
+          [
+            -70.5434,
+            -36.2784
+          ],
+          [
+            -72.3833,
+            -34.901
+          ],
+          [
+            -73.7909,
+            -36.5693
+          ],
+          [
+            -74.9642,
+            -36.9545
+          ],
+          [
+            -76.8123,
+            -38.4167
+          ],
+          [
+            -75.8843,
+            -39.9772
+          ],
+          [
+            -73.861,
+            -40.282
+          ],
+          [
+            -72.3833,
+            -42.5986
+          ],
+          [
+            -70.5217,
+            -40.8482
+          ],
+          [
+            -69.0585,
+            -39.9772
+          ],
+          [
+            -68.2791,
+            -38.4167
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-003: This 'kingdom' was declared by Orélie-Antoine de Tounens, a French lawyer, who claimed election by Mapuche chiefs. The claim is highly contested and may represent a European colonial fantasy. Some Mapuche leaders may have seen strategic advantage in a European alliance against Chile, while others never recognized Tounens. The episode risks trivializing both Mapuche sovereignty and the violence of Chilean/Argentine conquest. Tounens was arrested by Chile in 1862 and declared insane. ETHICS-001: This entity has no serious scholarly support as a legitimate state. It is included as an instructive example of colonial-era claims and contested sovereignty.",
     "name_variants": [
       {
@@ -2814,6 +5055,7 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   }
 ]

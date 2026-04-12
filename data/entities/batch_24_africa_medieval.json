@@ -1,5 +1,133 @@
 [
   {
+    "name_original": "Siin",
+    "name_original_lang": "srr",
+    "entity_type": "kingdom",
+    "year_start": 1300,
+    "year_end": 1969,
+    "capital_name": "Diakhao",
+    "capital_lat": 14.38,
+    "capital_lon": -16.33,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -13.5468,
+            14.38
+          ],
+          [
+            -12.9664,
+            16.5308
+          ],
+          [
+            -14.8789,
+            16.8664
+          ],
+          [
+            -16.33,
+            18.5777
+          ],
+          [
+            -18.2781,
+            18.0569
+          ],
+          [
+            -19.9763,
+            16.44
+          ],
+          [
+            -19.5246,
+            14.38
+          ],
+          [
+            -18.7672,
+            13.2506
+          ],
+          [
+            -18.1805,
+            11.7675
+          ],
+          [
+            -16.33,
+            10.4329
+          ],
+          [
+            -14.4794,
+            11.2778
+          ],
+          [
+            -13.823,
+            13.0263
+          ],
+          [
+            -13.5468,
+            14.38
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "ethical_notes": "The Kingdom of Sine (Siin in Serer language) was one of the most enduring pre-colonial Serer kingdoms in Senegal. Its history has been transmitted primarily through Serer oral tradition, which colonial French ethnographers often misinterpreted or dismissed. The kingdom’s political structure—with its Maad Siin (king) selected through a matrilineal system—challenges Eurocentric assumptions about African governance. French colonial conquest in 1871 reduced the Maad Siin to a figurehead, but the institution persisted until the post-independence Senegalese state abolished it in 1969. The Serer people’s resistance to both Islamization and French colonization is often underrepresented in Francophone West African historiography.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Sine",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Siin",
+        "lang": "srr",
+        "context": "Serer name, the indigenous form"
+      },
+      {
+        "name": "Royaume du Sine",
+        "lang": "fr",
+        "context": "French colonial-era designation"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1300,
+        "region": "Sine-Saloum region, modern Senegal",
+        "change_type": "independence",
+        "description": "Traditional founding of the Sine kingdom by the Guelowar dynasty, migrants from the collapsing Kaabu Empire. The Guelowar established a new dynasty over the existing Serer population, integrating with indigenous political traditions including matrilineal succession.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1494,
+        "region": "Sine territory",
+        "change_type": "expansion",
+        "description": "Following the disintegration of the Jolof Empire after the Battle of Danki, Sine consolidated its independence and expanded its territory. The kingdom maintained its autonomy while neighboring states fell under growing Islamic influence.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1871,
+        "region": "Sine territory",
+        "change_type": "colonization",
+        "description": "French colonial forces imposed a protectorate over Sine. The Maad Siin was retained as a figurehead but stripped of real political power. The kingdom’s land tenure and social systems were progressively dismantled under French administration.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Klein, Martin A. Islam and Imperialism in Senegal: Sine-Saloum, 1847–1914. Stanford University Press, 1968",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Gravrand, Henri. La Civilisation Sereer, vol. 2: Pangool. Les Nouvelles Éditions Africaines du Sénégal, 1990",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
+  },
+  {
     "name_original": "Saalum",
     "name_original_lang": "srr",
     "entity_type": "kingdom",
@@ -8,8 +136,66 @@
     "capital_name": "Kahone",
     "capital_lat": 14.1,
     "capital_lon": -16.07,
-    "boundary_geojson": null,
-    "confidence_score": 0.55,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -13.0777,
+            14.1
+          ],
+          [
+            -13.7616,
+            15.4616
+          ],
+          [
+            -14.6756,
+            17.0942
+          ],
+          [
+            -16.07,
+            17.3526
+          ],
+          [
+            -18.0314,
+            17.7083
+          ],
+          [
+            -19.2408,
+            16.0359
+          ],
+          [
+            -19.8573,
+            14.1
+          ],
+          [
+            -18.9235,
+            12.109
+          ],
+          [
+            -17.1612,
+            11.9626
+          ],
+          [
+            -16.07,
+            10.661
+          ],
+          [
+            -14.946,
+            12.2261
+          ],
+          [
+            -13.5938,
+            13.0074
+          ],
+          [
+            -13.0777,
+            14.1
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
     "status": "uncertain",
     "ethical_notes": "The Kingdom of Saloum (Saalum) was a Serer-Mandinka state in the Sine-Saloum region of modern Senegal. Unlike neighboring Sine, Saloum experienced greater Islamic influence and a more complex ethnic composition. The kingdom's involvement in the Atlantic slave trade, particularly through coastal commerce with Portuguese and later French traders, is a critical but sensitive aspect of its history. Saloum's rulers (Bur Saalum) participated in the slave trade while also losing subjects to it, illustrating the complex agency of African states in the transatlantic slave economy. French colonization systematically undermined Saloum's sovereignty from the 1860s onward.",
     "name_variants": [
@@ -63,7 +249,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Wasulu",
@@ -74,8 +261,66 @@
     "capital_name": "Bissandugu",
     "capital_lat": 9.17,
     "capital_lon": -9.23,
-    "boundary_geojson": null,
-    "confidence_score": 0.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            3.5252,
+            9.17
+          ],
+          [
+            1.3415,
+            15.3156
+          ],
+          [
+            -4.4551,
+            17.5016
+          ],
+          [
+            -9.23,
+            23.0744
+          ],
+          [
+            -16.0834,
+            18.7711
+          ],
+          [
+            -21.7912,
+            15.6522
+          ],
+          [
+            -18.0458,
+            9.17
+          ],
+          [
+            -18.2187,
+            4.3657
+          ],
+          [
+            -15.7927,
+            -0.7978
+          ],
+          [
+            -9.23,
+            1.5829
+          ],
+          [
+            -3.1848,
+            0.9684
+          ],
+          [
+            -1.307,
+            5.185
+          ],
+          [
+            3.5252,
+            9.17
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "The Wassoulou Empire of Samori Ture represents one of the most significant African resistance movements against European colonialism. Samori built a sophisticated state with a modern army, diplomatic networks, and administrative systems that challenged French imperial expansion for two decades. His scorched-earth resistance strategy, while militarily rational, caused immense civilian suffering. French colonial accounts demonized Samori as a 'savage warlord,' while post-colonial African historiography celebrates him as an anti-colonial hero. Both narratives oversimplify a complex figure who was simultaneously a state-builder, military innovator, slave-raider, and resistance leader. His capture in 1898 and exile to Gabon, where he died in 1900, remains a symbol of colonial brutality.",
     "name_variants": [
@@ -137,7 +382,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Fuuta Tooro",
@@ -148,8 +394,66 @@
     "capital_name": "Ségou",
     "capital_lat": 13.44,
     "capital_lon": -5.45,
-    "boundary_geojson": null,
-    "confidence_score": 0.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            3.8741,
+            13.44
+          ],
+          [
+            4.7354,
+            19.0742
+          ],
+          [
+            -0.6548,
+            20.3882
+          ],
+          [
+            -5.45,
+            24.8747
+          ],
+          [
+            -9.5349,
+            20.5097
+          ],
+          [
+            -15.8102,
+            18.1537
+          ],
+          [
+            -17.2394,
+            13.44
+          ],
+          [
+            -11.7311,
+            8.9356
+          ],
+          [
+            -8.6717,
+            8.2377
+          ],
+          [
+            -5.45,
+            -0.1772
+          ],
+          [
+            0.0946,
+            5.2464
+          ],
+          [
+            3.037,
+            9.2405
+          ],
+          [
+            3.8741,
+            13.44
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "The Toucouleur Empire (also called the Tukulor Empire) was founded by El Hadj Umar Tall through a series of jihads that conquered vast territories across the western Sudan. The empire's expansion involved significant violence against both non-Muslim and Muslim populations, including the destruction of the Bambara kingdoms of Segou and Kaarta and conflict with the Caliphate of Hamdallahi. Umar Tall's jihadist ideology blended Tijaniyya Sufi theology with political ambition. French colonial conquest of the empire under Archinard (1890–1893) was itself brutal, but colonial propaganda portrayed it as 'liberation' of peoples oppressed by Toucouleur rule. The reality is that both the Toucouleur and French regimes imposed foreign rule on diverse populations. The empire's legacy is contested between those who see it as Islamic state-building and those who view it as Fulani/Toucouleur imperialism over Bambara, Soninke, and other peoples.",
     "name_variants": [
@@ -211,7 +515,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Nsi a Luangu",
@@ -222,8 +527,66 @@
     "capital_name": "Buali",
     "capital_lat": -4.27,
     "capital_lon": 11.83,
-    "boundary_geojson": null,
-    "confidence_score": 0.55,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            14.9855,
+            -4.27
+          ],
+          [
+            14.4423,
+            -2.5915
+          ],
+          [
+            13.4224,
+            -1.7799
+          ],
+          [
+            11.83,
+            -1.2516
+          ],
+          [
+            9.8542,
+            -0.6387
+          ],
+          [
+            8.5023,
+            -2.1037
+          ],
+          [
+            9.4241,
+            -4.27
+          ],
+          [
+            10.1582,
+            -5.2671
+          ],
+          [
+            10.1117,
+            -7.0429
+          ],
+          [
+            11.83,
+            -6.9372
+          ],
+          [
+            13.8255,
+            -7.2002
+          ],
+          [
+            15.2317,
+            -6.1408
+          ],
+          [
+            14.9855,
+            -4.27
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
     "status": "uncertain",
     "ethical_notes": "The Kingdom of Loango, located along the coast of modern Republic of Congo, was a major participant in the Atlantic slave trade. At its peak, the port of Loango was one of the largest slave-trading ports on the West-Central African coast, exporting tens of thousands of enslaved people to the Americas. However, Loango's history cannot be reduced to the slave trade alone: it was a sophisticated maritime trading state with complex political institutions, textile production, and long-distance trade networks predating European contact. European sources (Portuguese, Dutch, French) dominate the written record, and the kingdom's own perspective is primarily preserved through oral tradition. French colonization in the 1880s destroyed Loango's remaining political autonomy.",
     "name_variants": [
@@ -285,7 +648,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Imbangala",
@@ -296,8 +660,66 @@
     "capital_name": "Kasanje",
     "capital_lat": -9.57,
     "capital_lon": 17.62,
-    "boundary_geojson": null,
-    "confidence_score": 0.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            21.8374,
+            -9.57
+          ],
+          [
+            20.2759,
+            -7.9852
+          ],
+          [
+            19.4367,
+            -6.3923
+          ],
+          [
+            17.62,
+            -5.4433
+          ],
+          [
+            14.2152,
+            -3.6274
+          ],
+          [
+            12.0987,
+            -6.4071
+          ],
+          [
+            14.1501,
+            -9.57
+          ],
+          [
+            13.3465,
+            -12.281
+          ],
+          [
+            15.3824,
+            -13.6231
+          ],
+          [
+            17.62,
+            -13.7367
+          ],
+          [
+            19.7706,
+            -13.2314
+          ],
+          [
+            23.313,
+            -12.5305
+          ],
+          [
+            21.8374,
+            -9.57
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "The Imbangala (also known as Jaga) were itinerant warrior bands in Central Africa who became deeply entangled with the Portuguese slave trade. Their origins are debated: some scholars see them as displaced peoples from the Lunda diaspora, others as an ideologically-driven military movement. The Imbangala practiced extreme rituals including reported cannibalism and infanticide, though the extent to which these accounts reflect reality versus Portuguese propaganda is disputed. They were instrumental in the Portuguese conquest of Ndongo and the expansion of the Angolan slave trade, serving as intermediaries and raiders. The kingdom of Kasanje, founded by Imbangala leader Kasanje ka Imba around 1630, became a major slave-trading polity. Representing the Imbangala requires acknowledging both their agency as historical actors and the devastating role they played in the slave trade, without reducing them to colonial stereotypes of African savagery.",
     "name_variants": [
@@ -359,7 +781,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Karagwe",
@@ -370,8 +793,66 @@
     "capital_name": "Bweranyange",
     "capital_lat": -1.55,
     "capital_lon": 31.55,
-    "boundary_geojson": null,
-    "confidence_score": 0.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            34.5376,
+            -1.55
+          ],
+          [
+            34.4726,
+            0.2418
+          ],
+          [
+            33.4281,
+            2.0018
+          ],
+          [
+            31.55,
+            1.8976
+          ],
+          [
+            30.0223,
+            0.6154
+          ],
+          [
+            28.356,
+            0.4704
+          ],
+          [
+            27.5144,
+            -1.55
+          ],
+          [
+            29.018,
+            -3.2802
+          ],
+          [
+            30.1527,
+            -3.4585
+          ],
+          [
+            31.55,
+            -3.9336
+          ],
+          [
+            33.4452,
+            -5.0992
+          ],
+          [
+            33.9657,
+            -2.9159
+          ],
+          [
+            34.5376,
+            -1.55
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "The Kingdom of Karagwe was a major Haya kingdom in northwestern Tanzania, part of the interlacustrine political tradition. Its history is primarily known through oral traditions collected by 19th-century European travelers (Speke, Stanley) and later ethnographers, whose accounts are colored by racial theories of 'Hamitic' origins for Great Lakes kingdoms. Modern scholarship rejects these racial frameworks and understands Karagwe as an indigenous African state-building achievement. The kingdom's complex cattle-based economy and tributary system demonstrate sophisticated political organization. German colonial conquest destroyed Karagwe's autonomy and restructured its society.",
     "name_variants": [
@@ -428,7 +909,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Nkore",
@@ -439,8 +921,66 @@
     "capital_name": "Mbarara",
     "capital_lat": -0.61,
     "capital_lon": 30.66,
-    "boundary_geojson": null,
-    "confidence_score": 0.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            33.5658,
+            -0.61
+          ],
+          [
+            34.5126,
+            1.843
+          ],
+          [
+            31.8708,
+            2.1752
+          ],
+          [
+            30.66,
+            4.2042
+          ],
+          [
+            28.7691,
+            3.2001
+          ],
+          [
+            28.3983,
+            0.6901
+          ],
+          [
+            26.6544,
+            -0.61
+          ],
+          [
+            28.2889,
+            -2.1144
+          ],
+          [
+            28.8199,
+            -3.5851
+          ],
+          [
+            30.66,
+            -3.7254
+          ],
+          [
+            32.8086,
+            -3.8491
+          ],
+          [
+            33.5089,
+            -2.326
+          ],
+          [
+            33.5658,
+            -0.61
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "The Kingdom of Ankole (historically Nkore) was a Hima-Iru kingdom in southwestern Uganda. Its history has been deeply affected by colonial racial ideologies: British administrators and early anthropologists imposed a 'Hamitic hypothesis' framework that portrayed the pastoral Hima as racially superior Hamitic conquerors ruling over the agricultural Iru. This racial narrative, which has no basis in genetic or archaeological evidence, was used to justify colonial indirect rule through the Hima aristocracy and had devastating consequences when similar ideas fueled genocide in neighboring Rwanda. Representing Ankole's history requires explicitly rejecting the Hamitic hypothesis while acknowledging the real (non-racial) social stratification that existed between pastoral and agricultural groups.",
     "name_variants": [
@@ -497,7 +1037,279 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
+  },
+  {
+    "name_original": "U Rwanda",
+    "name_original_lang": "rw",
+    "entity_type": "kingdom",
+    "year_start": 1400,
+    "year_end": 1961,
+    "capital_name": "Nyanza",
+    "capital_lat": -2.35,
+    "capital_lon": 29.75,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            32.4204,
+            -2.35
+          ],
+          [
+            32.9399,
+            -0.5873
+          ],
+          [
+            30.9406,
+            -0.2423
+          ],
+          [
+            29.75,
+            0.3936
+          ],
+          [
+            28.129,
+            0.5389
+          ],
+          [
+            27.7871,
+            -0.9933
+          ],
+          [
+            26.6714,
+            -2.35
+          ],
+          [
+            26.3276,
+            -4.2897
+          ],
+          [
+            27.993,
+            -4.9385
+          ],
+          [
+            29.75,
+            -4.6708
+          ],
+          [
+            31.1016,
+            -4.6064
+          ],
+          [
+            32.9083,
+            -4.1287
+          ],
+          [
+            32.4204,
+            -2.35
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "ethical_notes": "The Kingdom of Rwanda (Nyiginya dynasty) is one of the most politically sensitive historical entities in African history due to the 1994 genocide. Colonial racial ideology—German and then Belgian—transformed fluid pre-colonial social identities (Hutu, Tutsi, Twa) into rigid ethnic categories through identity cards and preferential policies. The pre-colonial kingdom had a complex social system that cannot be accurately described through the colonial ethnic lens. Belgian colonial rule systematically privileged Tutsi elites and then abruptly switched to supporting Hutu power in the 1959 revolution, contributing directly to the cycle of violence that culminated in genocide. Any representation of Rwandan history must explicitly reject the colonial 'Hamitic hypothesis,' acknowledge the constructedness of ethnic categories, and avoid language that naturalizes the divisions that enabled genocide. The Nyiginya dynasty's own expansion involved the subjugation of neighboring Hutu kingdoms, a history that both complicates and is complicated by later political narratives.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Rwanda",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "U Rwanda",
+        "lang": "rw",
+        "context": "Kinyarwanda name"
+      },
+      {
+        "name": "Nyiginya Kingdom",
+        "lang": "en",
+        "context": "Named after the ruling dynasty, preferred in some academic contexts to distinguish from modern state"
+      },
+      {
+        "name": "Royaume du Rwanda",
+        "lang": "fr",
+        "context": "French colonial-era designation"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1400,
+        "region": "Central Rwanda highlands",
+        "change_type": "independence",
+        "description": "Traditional founding of the Nyiginya dynasty under Mwami (king) Ruganzu I Bwimba. The early kingdom was a small polity centered around the Nyanza court, one of many competing kingdoms and chieftaincies in the region. Oral traditions place the founding earlier, but archaeological evidence supports the 15th century.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1796,
+        "region": "Rwanda and neighboring territories",
+        "change_type": "expansion",
+        "description": "Under Mwami Kigeli IV Rwabugiri (r. 1853–1895), Rwanda reached its greatest territorial extent, conquering neighboring kingdoms and establishing a centralized administrative system with appointed chiefs. Rwabugiri's expansion also intensified the corvée labor system (ubuhake/uburetwa) that particularly burdened Hutu agriculturalists.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1961,
+        "region": "Entire kingdom",
+        "change_type": "independence",
+        "description": "The 1959 Hutu Revolution overthrew Mwami Kigeli V, and a 1961 referendum abolished the monarchy. Belgium, which had ruled Rwanda as a League of Nations/UN mandate since 1916, supported the transition. Tens of thousands of Tutsi were killed or forced into exile, beginning the cycle of violence that would culminate in the 1994 genocide.",
+        "population_affected": 150000,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Vansina, Jan. Antecedents to Modern Rwanda: The Nyiginya Kingdom. Madison: University of Wisconsin Press, 2004",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Newbury, Catharine. The Cohesion of Oppression: Clientship and Ethnicity in Rwanda, 1860–1960. New York: Columbia University Press, 1988",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Des Forges, Alison. Leave None to Tell the Story: Genocide in Rwanda. New York: Human Rights Watch, 1999",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
+  },
+  {
+    "name_original": "Ingoma y’Uburundi",
+    "name_original_lang": "rn",
+    "entity_type": "kingdom",
+    "year_start": 1680,
+    "year_end": 1966,
+    "capital_name": "Muramvya",
+    "capital_lat": -3.27,
+    "capital_lon": 29.61,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            32.9145,
+            -3.27
+          ],
+          [
+            32.8007,
+            -1.8028
+          ],
+          [
+            31.2129,
+            -0.6837
+          ],
+          [
+            29.61,
+            0.1785
+          ],
+          [
+            27.8801,
+            0.0969
+          ],
+          [
+            27.5021,
+            -2.0582
+          ],
+          [
+            26.639,
+            -3.27
+          ],
+          [
+            27.3096,
+            -4.8366
+          ],
+          [
+            27.9275,
+            -6.2066
+          ],
+          [
+            29.61,
+            -5.8807
+          ],
+          [
+            31.1862,
+            -5.9666
+          ],
+          [
+            32.2166,
+            -4.9586
+          ],
+          [
+            32.9145,
+            -3.27
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "ethical_notes": "The Kingdom of Burundi shares with Rwanda the tragic legacy of colonial ethnic manipulation, though its history followed a distinct trajectory. German and then Belgian colonial rule imposed rigid Hutu-Tutsi categories on a society where these identities were more fluid and less politically determinative than in Rwanda. The Ganwa (princely) class, distinct from both Hutu and Tutsi, dominated pre-colonial politics. Belgian indirect rule restructured Burundian society along ethnic lines imported from the Rwandan model, distorting indigenous political structures. Post-independence Burundi experienced multiple cycles of ethnic violence and genocide (1972, 1993) rooted in colonial-era ethnic engineering. Representing Burundian history requires distinguishing between pre-colonial social complexity and colonial/post-colonial ethnic rigidity.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Burundi",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Ingoma y’Uburundi",
+        "lang": "rn",
+        "context": "Kirundi name, 'Ingoma' refers to the sacred drum institution"
+      },
+      {
+        "name": "Royaume du Burundi",
+        "lang": "fr",
+        "context": "French colonial-era designation"
+      },
+      {
+        "name": "Urundi",
+        "lang": "de",
+        "context": "German colonial-era form, from Deutsch-Ostafrika period"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1680,
+        "region": "Central Burundi highlands",
+        "change_type": "independence",
+        "description": "Traditional founding attributed to Mwami Ntare Rushatsi, who unified several smaller chieftaincies into the Burundian kingdom. The sacred drum (karyenda) became the symbol of royal authority. Earlier dates are claimed in oral tradition but are not archaeologically verified.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1850,
+        "region": "Burundi and borderlands",
+        "change_type": "expansion",
+        "description": "Under Mwami Ntare IV Rutaganzwa Rugamba, Burundi reached its greatest territorial extent through military campaigns and diplomatic marriages. The kingdom developed a complex administrative system with appointed chiefs (Ganwa princes) governing provinces.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1966,
+        "region": "Entire kingdom",
+        "change_type": "independence",
+        "description": "Captain Michel Micombero overthrew Mwami Ntare V in a coup and proclaimed a republic. This followed Burundi's independence from Belgian trusteeship in 1962. The abolition of the monarchy removed the last pre-colonial institution and was followed by increasing ethnic violence, culminating in the 1972 genocide against Hutu populations.",
+        "population_affected": 200000,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Chrétien, Jean-Pierre. The Great Lakes of Africa: Two Thousand Years of History. New York: Zone Books, 2003",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Lemarchand, René. Burundi: Ethnic Conflict and Genocide. Cambridge: Cambridge University Press, 1996",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Dawla al-Mahdiyya",
@@ -508,8 +1320,66 @@
     "capital_name": "Omdurman",
     "capital_lat": 15.64,
     "capital_lon": 32.48,
-    "boundary_geojson": null,
-    "confidence_score": 0.8,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            39.6282,
+            15.64
+          ],
+          [
+            40.0632,
+            20.6402
+          ],
+          [
+            36.8117,
+            24.5106
+          ],
+          [
+            32.48,
+            24.3374
+          ],
+          [
+            27.2574,
+            25.016
+          ],
+          [
+            27.9268,
+            18.2244
+          ],
+          [
+            21.9068,
+            15.64
+          ],
+          [
+            25.0072,
+            11.9455
+          ],
+          [
+            27.6277,
+            7.3895
+          ],
+          [
+            32.48,
+            5.5289
+          ],
+          [
+            36.659,
+            6.5141
+          ],
+          [
+            42.137,
+            11.3435
+          ],
+          [
+            39.6282,
+            15.64
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.7,
     "status": "confirmed",
     "ethical_notes": "The Mahdist State was one of the most successful anti-colonial resistance movements in African history. Muhammad Ahmad's declaration as the Mahdi (guided one) combined Islamic messianic theology with anti-imperialist politics, uniting diverse Sudanese peoples against Turco-Egyptian colonial rule. The destruction of General Gordon at Khartoum (1885) became a defining event in British imperial mythology, used to justify the brutal reconquest under Kitchener (1896–1898). The Battle of Omdurman (1898), in which British forces killed approximately 12,000 Mahdist fighters with modern weapons while suffering minimal casualties, exemplifies the technological asymmetry of late colonial warfare. British accounts consistently portrayed the Mahdists as 'fanatical dervishes,' a characterization that must be recognized as colonial propaganda. The Mahdist State's administrative achievements—including a functioning postal system, taxation, and courts—are often ignored in favor of sensationalized accounts of religious extremism.",
     "name_variants": [
@@ -576,7 +1446,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Wadai",
@@ -587,8 +1458,66 @@
     "capital_name": "Abéché",
     "capital_lat": 13.83,
     "capital_lon": 20.83,
-    "boundary_geojson": null,
-    "confidence_score": 0.55,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            33.9493,
+            13.83
+          ],
+          [
+            30.4561,
+            19.4942
+          ],
+          [
+            27.2803,
+            23.3574
+          ],
+          [
+            20.83,
+            25.9143
+          ],
+          [
+            14.7899,
+            23.3148
+          ],
+          [
+            6.7081,
+            21.5509
+          ],
+          [
+            8.7397,
+            13.83
+          ],
+          [
+            9.2257,
+            7.8842
+          ],
+          [
+            14.1447,
+            0.5621
+          ],
+          [
+            20.83,
+            4.3158
+          ],
+          [
+            27.1688,
+            3.6496
+          ],
+          [
+            31.5584,
+            6.4703
+          ],
+          [
+            33.9493,
+            13.83
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
     "status": "uncertain",
     "ethical_notes": "The Wadai Empire (also Ouaddai) was a major Sahelo-Sudanic state in eastern Chad. Its history is poorly represented in Western historiography compared to its western neighbors (Kanem-Bornu, Sokoto), reflecting a persistent geographic bias in African studies. Wadai was deeply involved in the trans-Saharan slave trade, raiding southern non-Muslim populations and exporting enslaved people northward through Fezzan to Tripoli and the Ottoman Empire. The kingdom's Islamization process was itself complex, involving both voluntary conversion and forced imposition on conquered animist peoples. French colonial conquest (1909–1912) was resisted fiercely and was among the last territories to be 'pacified' in French Equatorial Africa.",
     "name_variants": [
@@ -650,7 +1579,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Dar Fur",
@@ -661,8 +1591,66 @@
     "capital_name": "El Fasher",
     "capital_lat": 13.63,
     "capital_lon": 25.35,
-    "boundary_geojson": null,
-    "confidence_score": 0.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            28.1132,
+            13.63
+          ],
+          [
+            27.8362,
+            15.1435
+          ],
+          [
+            26.4041,
+            15.2997
+          ],
+          [
+            25.35,
+            16.1187
+          ],
+          [
+            23.6575,
+            16.6647
+          ],
+          [
+            23.2454,
+            14.7374
+          ],
+          [
+            21.9373,
+            13.63
+          ],
+          [
+            23.2651,
+            12.6418
+          ],
+          [
+            23.7899,
+            11.2177
+          ],
+          [
+            25.35,
+            11.5703
+          ],
+          [
+            26.4348,
+            11.7934
+          ],
+          [
+            27.9854,
+            11.799
+          ],
+          [
+            28.1132,
+            13.63
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
     "status": "confirmed",
     "ethical_notes": "The Sultanate of Darfur's history has gained tragic contemporary relevance due to the Darfur conflict (2003–present). Pre-colonial Darfur was a multi-ethnic sultanate where the Fur, Zaghawa, Masalit, Arab, and other groups coexisted under the Keira dynasty, albeit with significant power inequalities. The modern narrative of 'Arab vs. African' conflict in Darfur grossly oversimplifies centuries of complex ethnic, economic, and political relationships. The sultanate's involvement in the trans-Saharan slave trade particularly targeted non-Muslim populations to the south, a history that continues to affect inter-communal relations. British colonial policy of 'Closed Districts' in Darfur (1922–1946) further marginalized the region, contributing to the underdevelopment that fuels contemporary conflict.",
     "name_variants": [
@@ -724,7 +1712,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kaffa",
@@ -735,8 +1724,66 @@
     "capital_name": "Bonga",
     "capital_lat": 7.28,
     "capital_lon": 36.24,
-    "boundary_geojson": null,
-    "confidence_score": 0.55,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            38.7293,
+            7.28
+          ],
+          [
+            38.8371,
+            8.7199
+          ],
+          [
+            37.8542,
+            10.6421
+          ],
+          [
+            36.24,
+            9.3632
+          ],
+          [
+            34.0327,
+            10.8391
+          ],
+          [
+            34.0662,
+            8.5546
+          ],
+          [
+            33.3124,
+            7.28
+          ],
+          [
+            33.2431,
+            5.1347
+          ],
+          [
+            34.1638,
+            4.181
+          ],
+          [
+            36.24,
+            5.3435
+          ],
+          [
+            37.7721,
+            4.5736
+          ],
+          [
+            38.2876,
+            5.9611
+          ],
+          [
+            38.7293,
+            7.28
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
     "status": "uncertain",
     "ethical_notes": "The Kingdom of Kaffa in southwestern Ethiopia is the etymological origin of the word 'coffee' (though this is debated), reflecting the region's significance in global commodity history. Kaffa maintained independence from the Ethiopian Solomonic dynasty for five centuries, developing a distinct culture, language (Kafa), and political system with a divine kingship (tato). Ethiopian Emperor Menelik II's conquest of Kaffa in 1897 was one of the final acts of Ethiopian imperial expansion and involved significant violence, including the enslavement of Kaffa's population. This conquest is sometimes characterized as 'unification' in Ethiopian nationalist historiography, but from the Kaffa perspective it was a foreign conquest that destroyed an independent kingdom. The Kafa people's perspective on their incorporation into Ethiopia must be represented alongside the dominant Ethiopian national narrative.",
     "name_variants": [
@@ -798,7 +1845,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Alodia",
@@ -809,8 +1857,66 @@
     "capital_name": "Soba",
     "capital_lat": 15.55,
     "capital_lon": 32.67,
-    "boundary_geojson": null,
-    "confidence_score": 0.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            35.6015,
+            15.55
+          ],
+          [
+            36.2148,
+            17.4891
+          ],
+          [
+            33.6604,
+            17.5828
+          ],
+          [
+            32.67,
+            17.8125
+          ],
+          [
+            30.901,
+            18.7973
+          ],
+          [
+            30.3517,
+            16.8703
+          ],
+          [
+            30.192,
+            15.55
+          ],
+          [
+            29.5121,
+            13.9468
+          ],
+          [
+            31.055,
+            12.4568
+          ],
+          [
+            32.67,
+            13.087
+          ],
+          [
+            34.1994,
+            12.9821
+          ],
+          [
+            35.2545,
+            14.2205
+          ],
+          [
+            35.6015,
+            15.55
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "The Kingdom of Alodia (also Alwa) was the southernmost and longest-surviving of the medieval Nubian Christian kingdoms, lasting nearly a millennium. Its history is poorly documented compared to its northern neighbor Makuria, largely because Arabic sources focused on the more accessible north and because Soba, Alodia's capital, was thoroughly destroyed and has been inadequately excavated. The Christianization of Nubia and the eventual Islamization of the region involve complex processes of cultural transformation that should not be reduced to simple conquest narratives. The decline and fall of Alodia likely involved a combination of Arab immigration, internal fragmentation, and attacks by the Funj Sultanate, but the exact sequence remains debated.",
     "name_variants": [
@@ -872,7 +1978,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Maqdishaw",
@@ -883,8 +1990,66 @@
     "capital_name": "Mogadishu",
     "capital_lat": 2.05,
     "capital_lon": 45.32,
-    "boundary_geojson": null,
-    "confidence_score": 0.55,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            48.4353,
+            2.05
+          ],
+          [
+            47.1866,
+            3.1436
+          ],
+          [
+            46.6711,
+            4.4078
+          ],
+          [
+            45.32,
+            4.769
+          ],
+          [
+            44.0615,
+            4.286
+          ],
+          [
+            42.7626,
+            3.6632
+          ],
+          [
+            43.354,
+            2.05
+          ],
+          [
+            43.1526,
+            0.9455
+          ],
+          [
+            44.2336,
+            0.3145
+          ],
+          [
+            45.32,
+            -0.6307
+          ],
+          [
+            46.3698,
+            0.4666
+          ],
+          [
+            47.0764,
+            0.9896
+          ],
+          [
+            48.4353,
+            2.05
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
     "status": "uncertain",
     "ethical_notes": "The Sultanate of Mogadishu was a major Somali trading state on the Indian Ocean coast. Its history illustrates the deep integration of the East African coast into Indian Ocean trade networks, challenging narratives that portray Africa as isolated from global commerce. The sultanate's ruling Fakhr al-Din dynasty and its successor the Muzaffar dynasty reflect the complex interplay of Arab, Persian, and Somali identities on the Swahili coast. Ibn Battuta's 1331 account is the most detailed contemporary description but represents a brief visitor's perspective. Archaeological evidence from Mogadishu, including Chinese ceramics and Indian coins, confirms its cosmopolitan character. The role of Mogadishu and other coastal cities in the Indian Ocean slave trade must also be acknowledged.",
     "name_variants": [
@@ -946,7 +2111,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kayor",
@@ -957,8 +2123,66 @@
     "capital_name": "Mboul",
     "capital_lat": 14.78,
     "capital_lon": -16.97,
-    "boundary_geojson": null,
-    "confidence_score": 0.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -14.0542,
+            14.78
+          ],
+          [
+            -13.4983,
+            16.7221
+          ],
+          [
+            -14.6133,
+            18.5676
+          ],
+          [
+            -16.97,
+            17.1983
+          ],
+          [
+            -18.8506,
+            18.8554
+          ],
+          [
+            -20.7636,
+            16.7304
+          ],
+          [
+            -21.4376,
+            14.78
+          ],
+          [
+            -19.0283,
+            13.5142
+          ],
+          [
+            -18.7877,
+            11.8126
+          ],
+          [
+            -16.97,
+            10.5565
+          ],
+          [
+            -15.5222,
+            11.9972
+          ],
+          [
+            -13.3214,
+            12.6266
+          ],
+          [
+            -14.0542,
+            14.78
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
     "status": "confirmed",
     "ethical_notes": "The Kingdom of Cayor was the most powerful of the Wolof successor states following the dissolution of the Jolof Empire. Its Damel (rulers) navigated the complex pressures of the Atlantic slave trade, Islamic reform movements, and French colonialism. Lat Dior Ngoné Latyr Diop, the last great Damel, is celebrated as a hero of Senegalese anti-colonial resistance for his opposition to the French railroad across Cayor, which he correctly perceived as a tool of imperial domination. His death in battle in 1886 ended Cayor's independence. However, Cayor's rulers were also significant participants in the Atlantic slave trade, exporting enslaved people through Gorée and Saint-Louis. This dual role as both victims and agents of the slave trade must be represented honestly.",
     "name_variants": [
@@ -1020,7 +2244,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Denkyira",
@@ -1031,8 +2256,66 @@
     "capital_name": "Jukwa",
     "capital_lat": 5.33,
     "capital_lon": -1.47,
-    "boundary_geojson": null,
-    "confidence_score": 0.55,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            1.8217,
+            5.33
+          ],
+          [
+            1.5222,
+            6.9471
+          ],
+          [
+            0.4132,
+            8.717
+          ],
+          [
+            -1.47,
+            8.4735
+          ],
+          [
+            -2.8792,
+            8.0071
+          ],
+          [
+            -4.3561,
+            7.1033
+          ],
+          [
+            -5.4578,
+            5.33
+          ],
+          [
+            -4.5493,
+            3.142
+          ],
+          [
+            -3.1134,
+            2.3361
+          ],
+          [
+            -1.47,
+            1.6715
+          ],
+          [
+            0.4031,
+            1.9056
+          ],
+          [
+            1.8341,
+            3.2553
+          ],
+          [
+            1.8217,
+            5.33
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
     "status": "uncertain",
     "ethical_notes": "The Kingdom of Denkyira was the dominant Akan state of the Gold Coast before the rise of Asante. Its defeat by Asante at the Battle of Feyiase (1701) is a foundational event in Asante history and is often told from the Asante victors' perspective. Denkyira's control of the gold trade and its relationship with European (particularly Dutch) traders on the coast illustrates the complexity of African agency in the Atlantic economy. Denkyira's rulers used their commercial power to dominate neighboring states and were themselves involved in the slave trade. The kingdom's history has been overshadowed by Asante's subsequent dominance, and Denkyira oral traditions offer important alternative perspectives on the period.",
     "name_variants": [
@@ -1081,7 +2364,136 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
+  },
+  {
+    "name_original": "Dagbon",
+    "name_original_lang": "dag",
+    "entity_type": "kingdom",
+    "year_start": 1409,
+    "year_end": 1900,
+    "capital_name": "Yendi",
+    "capital_lat": 9.44,
+    "capital_lon": -0.01,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            2.6031,
+            9.44
+          ],
+          [
+            2.9114,
+            10.8927
+          ],
+          [
+            1.2705,
+            11.7371
+          ],
+          [
+            -0.01,
+            12.9491
+          ],
+          [
+            -1.3783,
+            11.7858
+          ],
+          [
+            -2.545,
+            10.7376
+          ],
+          [
+            -2.5241,
+            9.44
+          ],
+          [
+            -3.1261,
+            7.12
+          ],
+          [
+            -1.5392,
+            6.6549
+          ],
+          [
+            -0.01,
+            6.1393
+          ],
+          [
+            1.1605,
+            7.3841
+          ],
+          [
+            2.8183,
+            7.7965
+          ],
+          [
+            2.6031,
+            9.44
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "ethical_notes": "The Kingdom of Dagbon is one of the oldest and most organized traditional states of northern Ghana, with a succession system that continues to be politically significant today. The Dagbon succession crisis (culminating in the murder of Ya-Na Yakubu Andani II in 2002) demonstrates how pre-colonial political structures remain living political realities, not merely historical artifacts. British colonial 'indirect rule' manipulated the Dagbon chieftaincy system for administrative convenience, creating succession disputes that persist into the present. Representing Dagbon requires acknowledging that this is not a 'dead' historical entity but a continuing institution with contemporary political stakes.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Dagbon",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Dagbon",
+        "lang": "dag",
+        "context": "Dagbani indigenous form"
+      },
+      {
+        "name": "Dagomba Kingdom",
+        "lang": "en",
+        "context": "Older English form using the ethnic group name"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1409,
+        "region": "Northern Ghana, Volta basin",
+        "change_type": "independence",
+        "description": "Traditional founding attributed to Na Nyagsi, who established the Dagbon kingdom and the chieftaincy system based at Yendi. The dating is approximate and based on king lists preserved in oral tradition. Dagbon developed a sophisticated political system with hierarchically organized sub-chiefs.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1713,
+        "region": "Northern Gold Coast",
+        "change_type": "contraction",
+        "description": "Asante expansion northward brought Dagbon into Asante's sphere of influence. After military defeats, Dagbon became a tributary state of Asante, paying annual tribute while maintaining internal autonomy under its Ya-Na (paramount chief).",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1900,
+        "region": "Dagbon territory",
+        "change_type": "colonization",
+        "description": "British forces established control over the Northern Territories of the Gold Coast, incorporating Dagbon into the colonial administration. The British initially preserved the Ya-Na's authority under indirect rule but manipulated succession disputes to maintain control, creating lasting political divisions.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Staniland, Martin. The Lions of Dagbon: Political Change in Northern Ghana. Cambridge: Cambridge University Press, 1975",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Wilks, Ivor. Wa and the Wala: Islam and Polity in Northwestern Ghana. Cambridge: Cambridge University Press, 1989",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Bamana ka Faama",
@@ -1092,8 +2504,66 @@
     "capital_name": "Ségou",
     "capital_lat": 13.44,
     "capital_lon": -5.45,
-    "boundary_geojson": null,
-    "confidence_score": 0.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -1.8397,
+            13.44
+          ],
+          [
+            -2.6326,
+            15.571
+          ],
+          [
+            -3.7105,
+            16.6691
+          ],
+          [
+            -5.45,
+            17.391
+          ],
+          [
+            -7.208,
+            16.5891
+          ],
+          [
+            -8.8025,
+            15.3384
+          ],
+          [
+            -9.0017,
+            13.44
+          ],
+          [
+            -7.7418,
+            12.2874
+          ],
+          [
+            -6.7574,
+            10.9917
+          ],
+          [
+            -5.45,
+            9.5941
+          ],
+          [
+            -4.3659,
+            11.5611
+          ],
+          [
+            -2.1504,
+            11.9134
+          ],
+          [
+            -1.8397,
+            13.44
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
     "status": "confirmed",
     "ethical_notes": "The Bambara Kingdom of Ségou (Bamana Empire) was one of the major pre-colonial states of the western Sudan. Its founding by Biton Coulibaly involved the transformation of a ton-jon (youth association/military brotherhood) into a state apparatus, a process that involved significant violence and slave-raiding. The kingdom was explicitly non-Muslim in its origins, deriving political legitimacy from Bamana religious traditions, which made it a target of Islamic jihads by El Hadj Umar Tall's Toucouleur forces. The Toucouleur conquest of Ségou in 1861 and the subsequent French conquest in 1890 represent successive waves of external domination. Bambara oral traditions (preserved in the epic of Da Monzon) provide a rich indigenous perspective on this history that must be valued alongside Arabic and French written sources.",
     "name_variants": [
@@ -1155,7 +2625,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Sultanat Awsa",
@@ -1166,8 +2637,66 @@
     "capital_name": "Aussa",
     "capital_lat": 11.45,
     "capital_lon": 41.41,
-    "boundary_geojson": null,
-    "confidence_score": 0.55,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            43.2625,
+            11.45
+          ],
+          [
+            43.2084,
+            12.5396
+          ],
+          [
+            42.5736,
+            13.5589
+          ],
+          [
+            41.41,
+            14.5064
+          ],
+          [
+            40.4478,
+            13.1963
+          ],
+          [
+            39.52,
+            12.3939
+          ],
+          [
+            39.0921,
+            11.45
+          ],
+          [
+            38.864,
+            10.1167
+          ],
+          [
+            40.3548,
+            9.9979
+          ],
+          [
+            41.41,
+            9.0265
+          ],
+          [
+            43.0416,
+            8.5122
+          ],
+          [
+            43.5391,
+            10.1688
+          ],
+          [
+            43.2625,
+            11.45
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
     "status": "uncertain",
     "ethical_notes": "The Sultanate of Aussa (Awsa) was the most important of the Afar sultanates, controlling the strategically vital Afar Triangle at the junction of modern Ethiopia, Eritrea, and Djibouti. The Afar people's pastoral nomadic lifestyle has made their political institutions less visible in historical records oriented toward sedentary states. The Aussa sultanate's history is intertwined with the broader Afar struggle for autonomy against Ethiopian imperial expansion, Italian colonialism, and post-colonial state-building. The Afar's cross-border existence—divided among Ethiopia, Eritrea, and Djibouti—reflects arbitrary colonial boundary-making that ignored pre-existing political and ethnic realities.",
     "name_variants": [
@@ -1229,7 +2758,141 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
+  },
+  {
+    "name_original": "Bunyoro-Kitara",
+    "name_original_lang": "nyn",
+    "entity_type": "kingdom",
+    "year_start": 1400,
+    "year_end": 1899,
+    "capital_name": "Masindi",
+    "capital_lat": 1.68,
+    "capital_lon": 31.71,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            35.0061,
+            1.68
+          ],
+          [
+            35.6799,
+            3.9508
+          ],
+          [
+            33.5555,
+            5.2293
+          ],
+          [
+            31.71,
+            6.543
+          ],
+          [
+            29.464,
+            5.4077
+          ],
+          [
+            28.6331,
+            3.5714
+          ],
+          [
+            26.577,
+            1.68
+          ],
+          [
+            27.2203,
+            -0.7848
+          ],
+          [
+            30.0174,
+            -1.4844
+          ],
+          [
+            31.71,
+            -1.9078
+          ],
+          [
+            33.9517,
+            -2.5602
+          ],
+          [
+            34.5287,
+            0.1228
+          ],
+          [
+            35.0061,
+            1.68
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "ethical_notes": "The Kingdom of Bunyoro-Kitara was historically the most powerful of the interlacustrine kingdoms of Uganda, claiming descent from the mythical Kitara empire. Its history has been systematically marginalized in colonial and post-colonial narratives in favor of Buganda, which allied with the British. The British-Buganda alliance deliberately weakened Bunyoro, transferring the 'Lost Counties' to Buganda in 1900—a territorial injustice not partially redressed until a 1964 referendum. Colonial and missionary sources overwhelmingly reflect the Buganda perspective, portraying Bunyoro as hostile and backward. This representational bias must be corrected by centering Bunyoro's own oral traditions and perspective. The kingdom's Babiito dynasty and the earlier Bachwezi traditions represent important indigenous African historiographical frameworks.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Bunyoro",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Bunyoro-Kitara",
+        "lang": "nyn",
+        "context": "Full indigenous name linking to the Kitara heritage"
+      },
+      {
+        "name": "Bunyoro",
+        "lang": "nyn",
+        "context": "Short form of the kingdom name"
+      },
+      {
+        "name": "Kitara Empire",
+        "lang": "en",
+        "context": "Legendary predecessor empire claimed in Bunyoro traditions"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1400,
+        "region": "Western Uganda, Lake Albert region",
+        "change_type": "independence",
+        "description": "The Babiito dynasty was established by Rukidi Mpuuga, traditionally succeeding the legendary Bachwezi dynasty. Bunyoro-Kitara controlled a vast territory encompassing much of modern Uganda, with influence over neighboring kingdoms that acknowledged Kitara's cultural and political primacy.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1830,
+        "region": "Eastern territories",
+        "change_type": "contraction",
+        "description": "Bunyoro lost significant territory to the expanding Kingdom of Buganda, which had gradually shifted the balance of power in the interlacustrine region. Under Omukama Kabalega (r. 1870–1899), Bunyoro attempted to reverse these losses through military modernization, including the creation of the Abarusura standing army.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1899,
+        "region": "Entire kingdom including 'Lost Counties'",
+        "change_type": "colonization",
+        "description": "British forces, allied with Buganda, defeated Omukama Kabalega and captured him in 1899. He was exiled to the Seychelles. The 1900 Uganda Agreement transferred Bunyoro's southern counties to Buganda as a reward for Buganda's collaboration with the British—a territorial transfer still resented as a colonial injustice.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Nyakatura, J.W. Anatomy of an African Kingdom: A History of Bunyoro-Kitara. Edited by Godfrey N. Uzoigwe. New York: NOK Publishers, 1973",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Doyle, Shane. Crisis and Decline in Bunyoro: Population and Environment in Western Uganda 1860–1955. Oxford: James Currey, 2006",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Harer Ge",
@@ -1240,8 +2903,66 @@
     "capital_name": "Harar",
     "capital_lat": 9.31,
     "capital_lon": 42.12,
-    "boundary_geojson": null,
-    "confidence_score": 0.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            46.2625,
+            9.31
+          ],
+          [
+            44.7357,
+            10.6349
+          ],
+          [
+            43.6402,
+            12.5069
+          ],
+          [
+            42.12,
+            13.4633
+          ],
+          [
+            41.1238,
+            10.8477
+          ],
+          [
+            39.7706,
+            10.7067
+          ],
+          [
+            39.1107,
+            9.31
+          ],
+          [
+            39.9203,
+            7.9607
+          ],
+          [
+            40.2261,
+            6.4498
+          ],
+          [
+            42.12,
+            6.1727
+          ],
+          [
+            43.422,
+            6.9479
+          ],
+          [
+            44.2575,
+            8.0052
+          ],
+          [
+            46.2625,
+            9.31
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
     "status": "confirmed",
     "ethical_notes": "The Sultanate (later Emirate) of Harar was the most important center of Islamic learning and commerce in the Horn of Africa. The walled city of Harar, now a UNESCO World Heritage Site, represents a distinct urban Islamic culture in eastern Ethiopia. Harar's incorporation into the Ethiopian Empire by Menelik II in 1887 is viewed differently by Harari and Ethiopian narratives: Ethiopian historiography frames it as national unification, while Harari traditions experience it as the conquest and subjugation of an independent Islamic state. The city's unique Harari language and architectural tradition demonstrate the existence of a distinct political and cultural entity. The representation of Harar must acknowledge both its significance in Islamic African history and the impact of its forcible incorporation into Christian-dominated Ethiopia.",
     "name_variants": [
@@ -1303,7 +3024,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Bazin",
@@ -1314,8 +3036,66 @@
     "capital_name": "Am Timan",
     "capital_lat": 11.04,
     "capital_lon": 20.28,
-    "boundary_geojson": null,
-    "confidence_score": 0.35,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            25.8056,
+            11.04
+          ],
+          [
+            24.4605,
+            13.3667
+          ],
+          [
+            22.5034,
+            15.1532
+          ],
+          [
+            20.28,
+            16.1659
+          ],
+          [
+            17.5269,
+            14.7125
+          ],
+          [
+            17.4483,
+            12.7065
+          ],
+          [
+            15.6867,
+            11.04
+          ],
+          [
+            16.6653,
+            8.5258
+          ],
+          [
+            17.7857,
+            7.2195
+          ],
+          [
+            20.28,
+            8.5298
+          ],
+          [
+            21.6773,
+            7.9512
+          ],
+          [
+            23.0367,
+            9.7126
+          ],
+          [
+            25.8056,
+            11.04
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.25,
     "status": "disputed",
     "ethical_notes": "The Kingdom of Bazin (also Bagirmi or a predecessor/rival state in the Chad basin) is extremely poorly documented. Much of what is known comes from oral traditions recorded by colonial-era French officers and from Arabic chronicles that focus on the Bornu and Wadai empires. Bazin represents the broader problem of representing Central African states whose histories were systematically unrecorded by literate neighbors and subsequently ignored by colonial ethnographers. The low confidence score reflects the genuine uncertainty about this polity's exact boundaries, chronology, and political structure. Including Bazin with appropriate uncertainty markers is more honest than excluding it from the historical record.",
     "name_variants": [
@@ -1364,7 +3144,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Bagirmi",
@@ -1375,15 +3156,89 @@
     "capital_name": "Massenya",
     "capital_lat": 11.4,
     "capital_lon": 16.17,
-    "boundary_geojson": null,
-    "confidence_score": 0.55,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            19.9501,
+            11.4
+          ],
+          [
+            19.3081,
+            13.0717
+          ],
+          [
+            17.9311,
+            14.248
+          ],
+          [
+            16.17,
+            15.2531
+          ],
+          [
+            14.2608,
+            14.1294
+          ],
+          [
+            13.2392,
+            12.9518
+          ],
+          [
+            14.0046,
+            11.4
+          ],
+          [
+            14.3635,
+            10.3893
+          ],
+          [
+            15.1894,
+            9.7093
+          ],
+          [
+            16.17,
+            7.3978
+          ],
+          [
+            17.7772,
+            8.6347
+          ],
+          [
+            18.5744,
+            10.1487
+          ],
+          [
+            19.9501,
+            11.4
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
     "status": "uncertain",
     "ethical_notes": "The Sultanate of Bagirmi was a major Sahelo-Sudanic state in the Chad basin, caught between the larger empires of Bornu to the west and Wadai to the east. Bagirmi's history exemplifies the complex political dynamics of the central Sahel, where smaller states navigated between powerful neighbors through diplomacy, tribute, and shifting alliances. The sultanate was deeply involved in the trans-Saharan slave trade, raiding non-Muslim Sara and other southern populations. This raiding created lasting ethnic and religious divisions that persist in modern Chad. German explorer Gustav Nachtigal's detailed 1870s account provides the most comprehensive European description but reflects the biases of a 19th-century European observer. Rabih az-Zubayr's conquest (1893) and subsequent French colonization (1897) ended Bagirmi's sovereignty, though the sultanate title persists as a traditional institution.",
     "name_variants": [
-      {"name": "Sultanate of Bagirmi", "lang": "en", "context": "English academic designation"},
-      {"name": "Bagirmi", "lang": "bmi", "context": "Indigenous Bagirmi language form"},
-      {"name": "Baguirmi", "lang": "fr", "context": "French colonial-era spelling"},
-      {"name": "Dar Bagirmi", "lang": "ar", "context": "Arabic form, 'land of Bagirmi'"}
+      {
+        "name": "Sultanate of Bagirmi",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Bagirmi",
+        "lang": "bmi",
+        "context": "Indigenous Bagirmi language form"
+      },
+      {
+        "name": "Baguirmi",
+        "lang": "fr",
+        "context": "French colonial-era spelling"
+      },
+      {
+        "name": "Dar Bagirmi",
+        "lang": "ar",
+        "context": "Arabic form, 'land of Bagirmi'"
+      }
     ],
     "territory_changes": [
       {
@@ -1412,8 +3267,17 @@
       }
     ],
     "sources": [
-      {"citation": "Nachtigal, Gustav. Sahara and Sudan, vol. 3: The Chad Basin and Bagirmi. London: C. Hurst, 1987 (trans. of 1889 German original)", "source_type": "primary", "url": null},
-      {"citation": "Reyna, Stephen P. Wars Without End: The Political Economy of a Precolonial African State. Hanover: University Press of New England, 1990", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Nachtigal, Gustav. Sahara and Sudan, vol. 3: The Chad Basin and Bagirmi. London: C. Hurst, 1987 (trans. of 1889 German original)",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Reyna, Stephen P. Wars Without End: The Political Economy of a Precolonial African State. Hanover: University Press of New England, 1990",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   }
 ]

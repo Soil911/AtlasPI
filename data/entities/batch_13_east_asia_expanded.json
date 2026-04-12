@@ -8,9 +8,67 @@
     "capital_name": "飛鳥",
     "capital_lat": 34.4747,
     "capital_lon": 135.82,
-    "confidence_score": 0.55,
+    "confidence_score": 0.45,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            139.0652,
+            34.4747
+          ],
+          [
+            138.12,
+            35.5801
+          ],
+          [
+            137.1237,
+            36.4987
+          ],
+          [
+            135.82,
+            38.0825
+          ],
+          [
+            134.6655,
+            36.5452
+          ],
+          [
+            132.3057,
+            36.6303
+          ],
+          [
+            132.4551,
+            34.4747
+          ],
+          [
+            131.7626,
+            32.4102
+          ],
+          [
+            134.6419,
+            32.3167
+          ],
+          [
+            135.82,
+            30.6151
+          ],
+          [
+            138.3073,
+            31.1766
+          ],
+          [
+            139.8768,
+            32.7006
+          ],
+          [
+            139.0652,
+            34.4747
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in giapponese classico. Il periodo Yamato rappresenta la formazione dello stato giapponese, ma la cronologia prima del V secolo e' fortemente dibattuta. Le fonti primarie (Kojiki, Nihon Shoki) mescolano mito e storia. ETHICS-002: la relazione tra Yamato e gli stati coreani (Gaya, Baekje) e' oggetto di dispute nazionalistiche tra storici giapponesi e coreani, particolarmente riguardo alla presunta colonia giapponese di Mimana. Il database presenta entrambe le interpretazioni senza privilegiarne una. ETHICS-004: il trattamento delle popolazioni Emishi e Kumaso come 'barbari' nella storiografia giapponese tradizionale riflette un bias etnocentrico.",
     "name_variants": [
       {
@@ -77,7 +135,8 @@
         "citation": "Nihon Shoki (Cronache del Giappone, 720 d.C.)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "奈良時代",
@@ -88,9 +147,67 @@
     "capital_name": "平城京",
     "capital_lat": 34.6851,
     "capital_lon": 135.8048,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            139.8304,
+            34.6851
+          ],
+          [
+            138.7511,
+            36.043
+          ],
+          [
+            138.1528,
+            37.9671
+          ],
+          [
+            135.8048,
+            38.7785
+          ],
+          [
+            134.3442,
+            36.7245
+          ],
+          [
+            132.268,
+            36.684
+          ],
+          [
+            131.8177,
+            34.6851
+          ],
+          [
+            131.1815,
+            32.6291
+          ],
+          [
+            133.4349,
+            32.0751
+          ],
+          [
+            135.8048,
+            31.3307
+          ],
+          [
+            137.7811,
+            32.0073
+          ],
+          [
+            138.3826,
+            33.4772
+          ],
+          [
+            139.8304,
+            34.6851
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in giapponese. Il periodo Nara vide la compilazione delle storie ufficiali (Kojiki, Nihon Shoki) che costruirono la narrativa dell'origine divina della dinastia imperiale. ETHICS-002: queste narrazioni mitologiche furono usate per legittimare il dominio Yamato e successivamente strumentalizzate dal nazionalismo giapponese moderno. La coesistenza con le popolazioni Emishi nelle regioni settentrionali comporto' campagne militari documentate con eufemismi nella storiografia ufficiale.",
     "name_variants": [
       {
@@ -141,7 +258,8 @@
         "citation": "Piggott, J. (ed.) Capital and Countryside in Japan, 300-1180 (2006)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "平安時代",
@@ -152,9 +270,67 @@
     "capital_name": "平安京",
     "capital_lat": 35.0116,
     "capital_lon": 135.7681,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            139.1205,
+            35.0116
+          ],
+          [
+            138.1741,
+            36.2869
+          ],
+          [
+            137.4605,
+            37.7178
+          ],
+          [
+            135.7681,
+            37.354
+          ],
+          [
+            134.4626,
+            36.9669
+          ],
+          [
+            133.0885,
+            36.4981
+          ],
+          [
+            132.4314,
+            35.0116
+          ],
+          [
+            132.6826,
+            33.5115
+          ],
+          [
+            134.0304,
+            32.5152
+          ],
+          [
+            135.7681,
+            31.4543
+          ],
+          [
+            138.0587,
+            32.2162
+          ],
+          [
+            137.9433,
+            34.0443
+          ],
+          [
+            139.1205,
+            35.0116
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in giapponese. Il periodo Heian e' considerato l'apice della cultura classica giapponese, ma questa narrativa privilegia l'elite di corte e ignora la condizione dei contadini e delle classi subalterne. ETHICS-002: il sistema shoen (possedimenti privati) creo' disuguaglianze fondiarie estreme. Le campagne militari contro gli Emishi culminarono nella sottomissione definitiva del nord-est, con conseguenze durature per le popolazioni indigene.",
     "name_variants": [
       {
@@ -213,7 +389,8 @@
         "citation": "Heike Monogatari (Racconto dei Taira, XIII secolo)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "鎌倉幕府",
@@ -224,9 +401,67 @@
     "capital_name": "鎌倉",
     "capital_lat": 35.3192,
     "capital_lon": 139.5467,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            142.2579,
+            35.3192
+          ],
+          [
+            142.6274,
+            36.6734
+          ],
+          [
+            141.8246,
+            38.3925
+          ],
+          [
+            139.5467,
+            38.7987
+          ],
+          [
+            137.2185,
+            38.7904
+          ],
+          [
+            135.6807,
+            37.4944
+          ],
+          [
+            135.9846,
+            35.3192
+          ],
+          [
+            136.7296,
+            33.9671
+          ],
+          [
+            137.5515,
+            32.6732
+          ],
+          [
+            139.5467,
+            32.0746
+          ],
+          [
+            141.7463,
+            32.2056
+          ],
+          [
+            142.7168,
+            33.8506
+          ],
+          [
+            142.2579,
+            35.3192
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in giapponese. Lo shogunato di Kamakura introdusse il governo militare (bakufu) che caratterizzera' il Giappone per sette secoli. ETHICS-002: la classe guerriera (bushi) imponeva un sistema feudale con servitu' contadina. Le invasioni mongole del 1274 e 1281 coinvolsero combattenti coreani forzati a partecipare dall'occupazione Yuan della Corea.",
     "name_variants": [
       {
@@ -293,7 +528,8 @@
         "citation": "Conlan, T. In Little Need of Divine Intervention: Takezaki Suenaga's Scrolls of the Mongol Invasions of Japan (2001)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "室町幕府",
@@ -304,9 +540,67 @@
     "capital_name": "京都",
     "capital_lat": 35.0116,
     "capital_lon": 135.7681,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            139.6746,
+            35.0116
+          ],
+          [
+            140.4399,
+            37.3184
+          ],
+          [
+            137.3342,
+            37.0516
+          ],
+          [
+            135.7681,
+            37.9658
+          ],
+          [
+            133.8374,
+            37.5229
+          ],
+          [
+            133.0166,
+            36.2573
+          ],
+          [
+            131.3356,
+            35.0116
+          ],
+          [
+            132.0589,
+            33.2392
+          ],
+          [
+            133.5984,
+            32.1023
+          ],
+          [
+            135.7681,
+            32.5683
+          ],
+          [
+            137.9409,
+            31.8472
+          ],
+          [
+            139.2091,
+            33.4195
+          ],
+          [
+            139.6746,
+            35.0116
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in giapponese. Il periodo Muromachi/Ashikaga include il Sengoku (Stati Combattenti), un'era di guerra civile con milioni di vittime e devastazioni. ETHICS-002: il commercio con la Cina Ming (tally trade) prevedeva una relazione tributaria che la storiografia nazionalista giapponese ha spesso minimizzato. La pirateria wako causava sofferenze lungo le coste cinesi e coreane.",
     "name_variants": [
       {
@@ -373,7 +667,8 @@
         "citation": "Sansom, G. A History of Japan, 1334-1615 (1961)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "安土桃山時代",
@@ -384,9 +679,67 @@
     "capital_name": "安土城",
     "capital_lat": 35.1547,
     "capital_lon": 136.1356,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            139.257,
+            35.1547
+          ],
+          [
+            140.0228,
+            36.9613
+          ],
+          [
+            138.4636,
+            38.4062
+          ],
+          [
+            136.1356,
+            38.6158
+          ],
+          [
+            134.2596,
+            37.4109
+          ],
+          [
+            132.0168,
+            36.7824
+          ],
+          [
+            132.7403,
+            35.1547
+          ],
+          [
+            133.2895,
+            33.6751
+          ],
+          [
+            134.8757,
+            33.1908
+          ],
+          [
+            136.1356,
+            32.8788
+          ],
+          [
+            138.0241,
+            32.5364
+          ],
+          [
+            140.3367,
+            33.4978
+          ],
+          [
+            139.257,
+            35.1547
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in giapponese. Il periodo Azuchi-Momoyama include le invasioni giapponesi della Corea (1592-1598) di Toyotomi Hideyoshi, che causarono devastazioni immense in Corea: centinaia di migliaia di morti, deportazione di artigiani coreani, distruzione di patrimonio culturale. ETHICS-002: queste invasioni sono un tema estremamente sensibile nelle relazioni coreano-giapponesi. Il database documenta le prospettive coreane e giapponesi. La pratica della raccolta di orecchie/nasi (mimizuka) dei nemici uccisi e' documentata ed esposta onestamente.",
     "name_variants": [
       {
@@ -445,7 +798,8 @@
         "citation": "Swope, K. A Dragon's Head and a Serpent's Tail: Ming China and the First Great East Asian War, 1592-1598 (2009)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "隋朝",
@@ -456,9 +810,67 @@
     "capital_name": "大興城",
     "capital_lat": 34.265,
     "capital_lon": 108.9422,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            117.9296,
+            34.265
+          ],
+          [
+            118.217,
+            39.2402
+          ],
+          [
+            115.1278,
+            42.6552
+          ],
+          [
+            108.9422,
+            43.1089
+          ],
+          [
+            104.7835,
+            40.189
+          ],
+          [
+            98.5302,
+            38.1324
+          ],
+          [
+            96.8947,
+            34.265
+          ],
+          [
+            97.1924,
+            29.736
+          ],
+          [
+            102.244,
+            24.4196
+          ],
+          [
+            108.9422,
+            24.9216
+          ],
+          [
+            113.8888,
+            28.3151
+          ],
+          [
+            121.2872,
+            28.4359
+          ],
+          [
+            117.9296,
+            34.265
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in cinese. La dinastia Sui riunifico' la Cina dopo quasi quattro secoli di divisione, ma il suo secondo imperatore (Yang Di) e' ricordato per la coscrizione di massa e la brutalita'. ETHICS-002: la costruzione del Grande Canale e le campagne militari contro Goguryeo costarono milioni di vite. Le fonti ufficiali Tang tendono a esagerare la tirannia dei Sui per giustificare il cambio di dinastia (narrativa del 'Mandato del Cielo').",
     "name_variants": [
       {
@@ -517,7 +929,8 @@
         "citation": "Suishu (Libro dei Sui), storia ufficiale compilata sotto i Tang",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "北魏",
@@ -528,9 +941,67 @@
     "capital_name": "平城",
     "capital_lat": 40.0764,
     "capital_lon": 113.2979,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            125.2456,
+            40.0764
+          ],
+          [
+            124.1444,
+            45.2029
+          ],
+          [
+            121.6308,
+            52.4337
+          ],
+          [
+            113.2979,
+            52.6202
+          ],
+          [
+            105.7483,
+            51.0123
+          ],
+          [
+            100.8127,
+            45.28
+          ],
+          [
+            96.5472,
+            40.0764
+          ],
+          [
+            101.4411,
+            35.8561
+          ],
+          [
+            106.0415,
+            27.6204
+          ],
+          [
+            113.2979,
+            31.1381
+          ],
+          [
+            120.8862,
+            29.7918
+          ],
+          [
+            124.317,
+            34.9258
+          ],
+          [
+            125.2456,
+            40.0764
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in cinese, ma la dinastia fu fondata dai Tuoba, un popolo Xianbei (proto-mongolo/turco). ETHICS-002: la sinizzazione dei Tuoba sotto l'imperatore Xiaowen (riforma del 494: cambio di cognomi, abbigliamento, lingua) e' un caso emblematico di assimilazione culturale volontaria dall'alto, ma forzata sulla popolazione Xianbei. Questo processo va presentato nella sua complessita': non fu ne' una semplice 'civilizzazione' ne' una mera perdita identitaria. ETHICS-004: le Grotte di Yungang e Longmen testimoniano la fusione culturale sino-steppica.",
     "name_variants": [
       {
@@ -597,7 +1068,8 @@
         "citation": "Weishu (Libro dei Wei), storia ufficiale compilata da Wei Shou (554)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "南宋",
@@ -608,9 +1080,67 @@
     "capital_name": "臨安",
     "capital_lat": 30.2741,
     "capital_lon": 120.1551,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            124.7803,
+            30.2741
+          ],
+          [
+            122.9278,
+            31.735
+          ],
+          [
+            122.7857,
+            34.1435
+          ],
+          [
+            120.1551,
+            34.0905
+          ],
+          [
+            117.5822,
+            34.2177
+          ],
+          [
+            115.8636,
+            32.1742
+          ],
+          [
+            116.0057,
+            30.2741
+          ],
+          [
+            115.3245,
+            28.1994
+          ],
+          [
+            117.301,
+            25.9268
+          ],
+          [
+            120.1551,
+            26.4088
+          ],
+          [
+            123.3419,
+            26.2841
+          ],
+          [
+            123.5805,
+            28.46
+          ],
+          [
+            124.7803,
+            30.2741
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in cinese. La Song del Sud e' distinta dalla Song (del Nord) gia' presente nel database. ETHICS-002: la caduta dei Song del Nord (1127) comporto' la cattura dell'imperatore e della famiglia imperiale da parte dei Jurchen Jin (Incidente di Jingkang), un evento traumatico nella memoria storica cinese. Il generale Yue Fei, eroe nazionale cinese, fu giustiziato dalla fazione pacifista — la sua figura e' stata strumentalizzata da narrativi nazionalistiche in epoche diverse. ETHICS-003: la conquista mongola di Xiangyang (1273) e la resa finale furono accompagnate da distruzioni e massacri.",
     "name_variants": [
       {
@@ -669,7 +1199,8 @@
         "citation": "Songshi (Storia dei Song), storia ufficiale compilata sotto gli Yuan",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "五代",
@@ -680,9 +1211,67 @@
     "capital_name": "開封",
     "capital_lat": 34.7972,
     "capital_lon": 114.3075,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            119.6227,
+            34.7972
+          ],
+          [
+            119.4379,
+            36.8805
+          ],
+          [
+            116.8068,
+            38.9897
+          ],
+          [
+            114.3075,
+            37.9548
+          ],
+          [
+            112.3528,
+            37.8176
+          ],
+          [
+            109.6877,
+            36.9688
+          ],
+          [
+            111.1627,
+            34.7972
+          ],
+          [
+            111.3022,
+            33.0557
+          ],
+          [
+            111.8555,
+            30.9487
+          ],
+          [
+            114.3075,
+            31.4196
+          ],
+          [
+            116.1563,
+            31.4548
+          ],
+          [
+            117.5201,
+            33.399
+          ],
+          [
+            119.6227,
+            34.7972
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in cinese. Le Cinque Dinastie (Liang Posteriore, Tang Posteriore, Jin Posteriore, Han Posteriore, Zhou Posteriore) controllavano solo il nord della Cina. ETHICS-002: questo e' un periodo di frammentazione e guerra continua. I Dieci Regni (十國) nel sud non sono inclusi individualmente ma la loro esistenza va riconosciuta. Alcune dinastie furono fondate da generali di origine turca Shatuo (Tang Posteriore, Jin Posteriore, Han Posteriore), un aspetto spesso minimizzato dalla storiografia tradizionale cinese che privilegia la narrativa di continuita' dinastica cinese.",
     "name_variants": [
       {
@@ -749,7 +1338,8 @@
         "citation": "Standen, N. Unbounded Loyalty: Frontier Crossings in Liao China (2007)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "太平天國",
@@ -760,9 +1350,67 @@
     "capital_name": "天京",
     "capital_lat": 32.0603,
     "capital_lon": 118.7969,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            123.5708,
+            32.0603
+          ],
+          [
+            123.2112,
+            33.9456
+          ],
+          [
+            120.241,
+            34.1423
+          ],
+          [
+            118.7969,
+            35.7163
+          ],
+          [
+            116.7092,
+            35.5231
+          ],
+          [
+            115.399,
+            33.7532
+          ],
+          [
+            113.571,
+            32.0603
+          ],
+          [
+            116.09,
+            30.7894
+          ],
+          [
+            116.6326,
+            28.8325
+          ],
+          [
+            118.7969,
+            29.888
+          ],
+          [
+            120.1088,
+            30.1675
+          ],
+          [
+            122.8837,
+            30.2034
+          ],
+          [
+            123.5708,
+            32.0603
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in cinese (Taiping Tianguo, 'Regno Celeste della Grande Pace'). ETHICS-002: la Ribellione Taiping fu il conflitto piu' mortale del XIX secolo, con stime di 20-30 milioni di morti (alcune stime arrivano a 70 milioni). Il leader Hong Xiuquan affermava di essere il fratello di Gesu' Cristo. La guerra coinvolse violenze di massa da entrambe le parti: i Taiping massacrarono manchu e buddisti, le forze Qing compirono rappresaglie indiscriminate. ETHICS-003: il coinvolgimento occidentale (Charles Gordon, Frederick Ward) a supporto dei Qing va documentato come intervento coloniale nei conflitti interni cinesi.",
     "name_variants": [
       {
@@ -829,7 +1477,8 @@
         "citation": "Reilly, T. The Taiping Heavenly Kingdom: Rebellion and the Blasphemy of Empire (2004)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "大理國",
@@ -840,9 +1489,67 @@
     "capital_name": "大理",
     "capital_lat": 25.6065,
     "capital_lon": 100.2679,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            102.6874,
+            25.6065
+          ],
+          [
+            103.6818,
+            27.5333
+          ],
+          [
+            102.4495,
+            28.5487
+          ],
+          [
+            100.2679,
+            28.1222
+          ],
+          [
+            97.7803,
+            30.0425
+          ],
+          [
+            96.6944,
+            27.5204
+          ],
+          [
+            97.3312,
+            25.6065
+          ],
+          [
+            97.0055,
+            23.7492
+          ],
+          [
+            98.2361,
+            21.611
+          ],
+          [
+            100.2679,
+            21.1111
+          ],
+          [
+            102.2203,
+            23.1256
+          ],
+          [
+            103.3277,
+            23.7342
+          ],
+          [
+            102.6874,
+            25.6065
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome cinese e' la forma piu' attestata nelle fonti storiche, ma il regno era multietnico con popolazione prevalentemente Bai. Il nome nella lingua Bai non e' attestato con certezza. ETHICS-002: il regno di Dali era uno stato multietnico (Bai, Yi, Dai, Naxi e altri) nella regione dell'attuale Yunnan. La storiografia cinese tende a presentarlo come stato periferico, ma era un regno sofisticato con propria cultura buddista. La conquista mongola (1253) porto' alla distruzione di questo sistema politico autonomo. ETHICS-004: le minoranze etniche dello Yunnan odierno discendono in parte dalle popolazioni di Dali.",
     "name_variants": [
       {
@@ -901,7 +1608,8 @@
         "citation": "Yuanshi (Storia degli Yuan), capitoli sullo Yunnan",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "南詔",
@@ -912,9 +1620,67 @@
     "capital_name": "太和城",
     "capital_lat": 25.689,
     "capital_lon": 100.1575,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            102.5518,
+            25.689
+          ],
+          [
+            102.0161,
+            26.4659
+          ],
+          [
+            101.7759,
+            28.2822
+          ],
+          [
+            100.1575,
+            28.4131
+          ],
+          [
+            98.7054,
+            27.9374
+          ],
+          [
+            96.9263,
+            27.3459
+          ],
+          [
+            96.4376,
+            25.689
+          ],
+          [
+            98.1402,
+            24.7905
+          ],
+          [
+            98.6909,
+            23.913
+          ],
+          [
+            100.1575,
+            23.6886
+          ],
+          [
+            101.2241,
+            23.9169
+          ],
+          [
+            102.2191,
+            24.523
+          ],
+          [
+            102.5518,
+            25.689
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome cinese 南詔 (Nanzhao) e' il piu' attestato, ma il regno era fondato dal popolo Bai/Mengshe-zhao. Le fonti in lingua locale non sono sopravvissute. ETHICS-002: Nanzhao fu un attore regionale potente che sconfisse ripetutamente gli eserciti Tang, ma la storiografia cinese tende a rappresentarlo come stato 'barbaro' periferico. Le campagne Tang contro Nanzhao (751, 754) furono disastri militari con centinaia di migliaia di morti cinesi. Il poeta Bai Juyi denuncio' la sofferenza dei coscritti nelle guerre Nanzhao.",
     "name_variants": [
       {
@@ -981,7 +1747,8 @@
         "citation": "Luce, G.H. The Early Syam in Burma's History. A Supplement. Journal of the Siam Society, Vol. 47, Part 1 (1959)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "楚國",
@@ -992,9 +1759,67 @@
     "capital_name": "郢",
     "capital_lat": 30.3267,
     "capital_lon": 112.2339,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            115.0839,
+            30.3267
+          ],
+          [
+            114.3611,
+            31.382
+          ],
+          [
+            114.2889,
+            32.9518
+          ],
+          [
+            112.2339,
+            32.3566
+          ],
+          [
+            110.4928,
+            32.927
+          ],
+          [
+            109.8414,
+            31.5849
+          ],
+          [
+            110.0544,
+            30.3267
+          ],
+          [
+            109.5402,
+            29.1831
+          ],
+          [
+            110.7747,
+            27.5425
+          ],
+          [
+            112.2339,
+            28.5999
+          ],
+          [
+            113.8046,
+            27.9907
+          ],
+          [
+            114.9943,
+            29.0755
+          ],
+          [
+            115.0839,
+            30.3267
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in cinese. Lo Stato di Chu e' un caso importante di 'alterita'' nella storia cinese antica: considerato semi-barbaro dagli stati del nord (Zhongyuan), Chu aveva una cultura distintiva (lingua, religione, arte) che fu in parte assimilata dopo la conquista Qin. ETHICS-002: la distruzione di Chu da parte di Qin fu accompagnata dalla soppressione della sua tradizione culturale. Il poeta Qu Yuan, che si suicido' per la caduta di Chu, e' commemorato nella Festa delle Barche Drago — ma la sua figura e' stata strumentalizzata da narrative nazionaliste diverse.",
     "name_variants": [
       {
@@ -1061,7 +1886,8 @@
         "citation": "Shiji (Memorie dello Storico) di Sima Qian, capitoli 39-40 (Casa di Chu)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "통일신라",
@@ -1072,9 +1898,67 @@
     "capital_name": "금성 (경주)",
     "capital_lat": 35.8562,
     "capital_lon": 129.2249,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            131.7816,
+            35.8562
+          ],
+          [
+            131.5343,
+            37.2651
+          ],
+          [
+            131.1767,
+            38.101
+          ],
+          [
+            129.2249,
+            38.9028
+          ],
+          [
+            127.6142,
+            38.0048
+          ],
+          [
+            125.5109,
+            37.3093
+          ],
+          [
+            126.0686,
+            35.8562
+          ],
+          [
+            126.9194,
+            34.8128
+          ],
+          [
+            127.6878,
+            33.1383
+          ],
+          [
+            129.2249,
+            33.8964
+          ],
+          [
+            131.0615,
+            33.5981
+          ],
+          [
+            133.1682,
+            34.1037
+          ],
+          [
+            131.7816,
+            35.8562
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in coreano (Tongil Silla). Il concetto di 'Silla Unificata' e' una costruzione storiografica: Silla non unifico' tutta la penisola coreana, poiche' il nord rimase sotto Balhae. ETHICS-002: l'unificazione fu ottenuta con l'aiuto decisivo della Cina Tang, che intendeva controllare la penisola. Silla dovette combattere contro i Tang per mantenere l'indipendenza (guerre Silla-Tang, 670-676). La distruzione di Baekje e Goguryeo comporto' la perdita di tradizioni culturali distinte. ETHICS-003: il termine 'unificazione' e' contestato dagli storici che evidenziano come la Corea settentrionale (Balhae) restasse fuori dal controllo di Silla.",
     "name_variants": [
       {
@@ -1141,7 +2025,8 @@
         "citation": "Samguk Sagi (Cronache dei Tre Regni) di Kim Bu-sik (1145)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "가야",
@@ -1152,9 +2037,67 @@
     "capital_name": "금관가야 (김해)",
     "capital_lat": 35.2285,
     "capital_lon": 128.8894,
-    "confidence_score": 0.55,
+    "confidence_score": 0.45,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            135.2125,
+            35.2285
+          ],
+          [
+            133.4455,
+            37.2931
+          ],
+          [
+            131.0379,
+            38.0253
+          ],
+          [
+            128.8894,
+            39.0529
+          ],
+          [
+            126.6599,
+            39.3394
+          ],
+          [
+            124.8795,
+            37.2668
+          ],
+          [
+            123.5858,
+            35.2285
+          ],
+          [
+            124.8382,
+            33.0589
+          ],
+          [
+            126.1359,
+            30.9968
+          ],
+          [
+            128.8894,
+            30.0999
+          ],
+          [
+            131.3353,
+            31.9731
+          ],
+          [
+            133.1072,
+            33.2442
+          ],
+          [
+            135.2125,
+            35.2285
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in coreano. La Confederazione di Gaya e' al centro di una delle dispute storiografiche piu' intense tra Corea e Giappone. ETHICS-002: la storiografia giapponese tradizionale identifica Gaya con la colonia giapponese 'Mimana' (任那), descritta nel Nihon Shoki. La storiografia coreana moderna rigetta completamente questa interpretazione, sostenendo che Gaya era una confederazione coreana indipendente con possibili influenze sul Giappone. Il database presenta entrambe le interpretazioni senza arbitrare la disputa. ETHICS-003: la mancanza di fonti scritte proprie di Gaya rende la ricostruzione dipendente da fonti coreane (Samguk Sagi), cinesi e giapponesi, tutte con bias propri.",
     "name_variants": [
       {
@@ -1221,7 +2164,8 @@
         "citation": "Samguk Sagi (Cronache dei Tre Regni) di Kim Bu-sik (1145)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "北元",
@@ -1232,9 +2176,67 @@
     "capital_name": "哈拉和林",
     "capital_lat": 47.1967,
     "capital_lon": 102.8303,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            111.8122,
+            47.1967
+          ],
+          [
+            108.459,
+            50.0255
+          ],
+          [
+            106.2264,
+            51.1464
+          ],
+          [
+            102.8303,
+            55.5999
+          ],
+          [
+            97.8084,
+            53.9616
+          ],
+          [
+            94.3696,
+            50.9595
+          ],
+          [
+            95.5803,
+            47.1967
+          ],
+          [
+            96.3153,
+            44.7386
+          ],
+          [
+            98.3508,
+            42.8996
+          ],
+          [
+            102.8303,
+            39.2587
+          ],
+          [
+            106.275,
+            41.9257
+          ],
+          [
+            113.3123,
+            43.6906
+          ],
+          [
+            111.8122,
+            47.1967
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome cinese 北元 (Bei Yuan) e' la designazione cinese; i mongoli continuavano a chiamarsi semplicemente 'Yeke Mongghol Ulus' (Grande Stato Mongolo). ETHICS-002: lo Yuan del Nord rappresenta la continuazione della dinastia Yuan dopo l'espulsione dalla Cina. La storiografia cinese tende a minimizzare la legittimita' di questo stato, trattandolo come un'entita' residuale. In realta' i khan di Chinggisid mantennero autorita' nominale sulla steppa mongolica per quasi tre secoli. ETHICS-004: le relazioni tra lo Yuan del Nord e la dinastia Ming furono caratterizzate da conflitti, commercio e diplomazia complessi che non si riducono alla narrativa sinocentrica della 'difesa dai barbari'.",
     "name_variants": [
       {
@@ -1301,7 +2303,8 @@
         "citation": "Erdeni-yin Tobci (Storia Preziosa), cronaca mongola del XVII secolo",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ᠣᠢᠷᠠᠳ ᠬᠣᠯᠪᠣᠭ᠎ᠠ",
@@ -1312,9 +2315,67 @@
     "capital_name": "Kobdo",
     "capital_lat": 48.0042,
     "capital_lon": 91.6389,
-    "confidence_score": 0.55,
+    "confidence_score": 0.45,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            99.1443,
+            48.0042
+          ],
+          [
+            96.8718,
+            50.5197
+          ],
+          [
+            96.0536,
+            52.1822
+          ],
+          [
+            91.6389,
+            51.6431
+          ],
+          [
+            88.5202,
+            51.8987
+          ],
+          [
+            86.5785,
+            50.1335
+          ],
+          [
+            86.7562,
+            48.0042
+          ],
+          [
+            84.9338,
+            44.9032
+          ],
+          [
+            86.6222,
+            42.1277
+          ],
+          [
+            91.6389,
+            43.0837
+          ],
+          [
+            95.2317,
+            42.3742
+          ],
+          [
+            98.2335,
+            45.1585
+          ],
+          [
+            99.1443,
+            48.0042
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome in scrittura mongola tradizionale e' la forma piu' appropriata. Gli Oirat erano una confederazione di tribu' mongole occidentali (Choros, Torghut, Dorbet, Khoshut). ETHICS-002: la storiografia cinese tende a trattare gli Oirat come 'barbari' del nord, mentre la storiografia mongola li considera parte della tradizione mongola. La Confederazione Oirat e' distinta dal Khanato Dzungar (gia' nel database), che ne fu il successore piu' potente. L'espansione Oirat coinvolse conflitti con i Mongoli orientali, i Ming e le popolazioni dell'Asia Centrale.",
     "name_variants": [
       {
@@ -1381,7 +2442,8 @@
         "citation": "Mingshi (Storia dei Ming), capitoli sugli Oirat",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "後金",
@@ -1392,9 +2454,67 @@
     "capital_name": "赫圖阿拉",
     "capital_lat": 41.8,
     "capital_lon": 124.85,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            130.9714,
+            41.8
+          ],
+          [
+            133.8113,
+            45.107
+          ],
+          [
+            127.9455,
+            45.0645
+          ],
+          [
+            124.85,
+            47.9027
+          ],
+          [
+            121.4217,
+            45.5778
+          ],
+          [
+            116.8914,
+            44.8873
+          ],
+          [
+            114.977,
+            41.8
+          ],
+          [
+            118.7967,
+            38.922
+          ],
+          [
+            121.7388,
+            37.5899
+          ],
+          [
+            124.85,
+            36.4008
+          ],
+          [
+            129.4,
+            36.6507
+          ],
+          [
+            133.2504,
+            38.8472
+          ],
+          [
+            130.9714,
+            41.8
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome cinese 後金 (Hou Jin, 'Jin Posteriore') e' la designazione cinese. In mancese lo stato era chiamato Aisin Gurun (Stato d'Oro). ETHICS-002: il Later Jin/Hou Jin e' il precursore diretto della dinastia Qing (gia' nel database). Nurhaci unifico' le tribu' Jurchen con campagne militari che comportarono la sottomissione forzata e la deportazione di popolazioni rivali. Il sistema delle Otto Bandiere (baqi) era una struttura militare-sociale che incorporava forzatamente prigionieri di guerra cinesi e mongoli. ETHICS-003: la transizione Later Jin-Qing nel 1636 fu un cambio di nome ma la continuita' di governo e' diretta.",
     "name_variants": [
       {
@@ -1461,7 +2581,8 @@
         "citation": "Manwen Laodang (Vecchi Archivi Mancesi), documenti di stato del periodo Nurhaci-Huang Taiji",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "アイヌモシㇼ",
@@ -1472,9 +2593,67 @@
     "capital_name": null,
     "capital_lat": 43.0621,
     "capital_lon": 141.3544,
-    "confidence_score": 0.45,
+    "confidence_score": 0.35,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            145.9936,
+            43.0621
+          ],
+          [
+            145.5802,
+            44.7911
+          ],
+          [
+            144.2227,
+            46.3195
+          ],
+          [
+            141.3544,
+            46.4097
+          ],
+          [
+            139.1494,
+            46.3929
+          ],
+          [
+            137.2896,
+            44.5053
+          ],
+          [
+            135.7593,
+            43.0621
+          ],
+          [
+            136.9895,
+            40.6073
+          ],
+          [
+            137.8618,
+            38.8249
+          ],
+          [
+            141.3544,
+            39.7534
+          ],
+          [
+            144.0692,
+            39.8233
+          ],
+          [
+            147.0393,
+            41.0459
+          ],
+          [
+            145.9936,
+            43.0621
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in lingua Ainu ('Ainu Mosir' = 'Terra degli Esseri Umani'). Non esisteva uno stato centralizzato Ainu ma una rete di comunita' autonome (kotan). ETHICS-002: gli Ainu sono un popolo indigeno che ha subito colonizzazione giapponese progressiva, culminata nell'annessione formale di Hokkaido (1869). La politica di assimilazione forzata (Former Aborigines Protection Act, 1899) comporto' la perdita della lingua, della cultura e delle terre. Il Giappone ha riconosciuto gli Ainu come popolo indigeno solo nel 2008. ETHICS-004: il confidence_score basso riflette l'assenza di fonti scritte Ainu (tradizione orale) e il fatto che le informazioni provengono prevalentemente da fonti giapponesi con bias coloniale. La datazione dell'inizio (-200) e' approssimativa, basata sull'archeologia della cultura di Okhotsk e Satsumon.",
     "name_variants": [
       {
@@ -1541,7 +2720,8 @@
         "citation": "Howell, D. Geographies of Identity in Nineteenth-Century Japan (2005)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "隋以前北朝",
@@ -1552,9 +2732,67 @@
     "capital_name": "鄴",
     "capital_lat": 36.3333,
     "capital_lon": 114.6,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            120.6026,
+            36.3333
+          ],
+          [
+            117.6295,
+            37.5936
+          ],
+          [
+            116.8055,
+            39.3662
+          ],
+          [
+            114.6,
+            40.5103
+          ],
+          [
+            112.6796,
+            39.1186
+          ],
+          [
+            110.2636,
+            38.3494
+          ],
+          [
+            109.5786,
+            36.3333
+          ],
+          [
+            112.0146,
+            35.1647
+          ],
+          [
+            112.8504,
+            33.7001
+          ],
+          [
+            114.6,
+            33.0971
+          ],
+          [
+            116.33,
+            33.9776
+          ],
+          [
+            118.2473,
+            34.7947
+          ],
+          [
+            120.6026,
+            36.3333
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: questa entita' rappresenta i Qi del Nord (北齊), una delle dinastie del periodo di divisione Nord-Sud. Il nome e' in cinese. ETHICS-002: i Qi del Nord furono fondati da Gao Yang, di stirpe mista cinese-Xianbei, e la corte mostrava una sintesi culturale sino-steppica. La storiografia tradizionale cinese tende a presentare questo periodo come un'interregno caotico, ma le dinastie del Nord furono centri di innovazione culturale e religiosa (buddismo).",
     "name_variants": [
       {
@@ -1613,7 +2851,8 @@
         "citation": "Graff, D. Medieval Chinese Warfare, 300-900 (2002)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "北周",
@@ -1624,9 +2863,67 @@
     "capital_name": "長安",
     "capital_lat": 34.265,
     "capital_lon": 108.9422,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            113.5398,
+            34.265
+          ],
+          [
+            112.0304,
+            35.4521
+          ],
+          [
+            111.4632,
+            38.0026
+          ],
+          [
+            108.9422,
+            38.4688
+          ],
+          [
+            106.1947,
+            37.8358
+          ],
+          [
+            105.5044,
+            35.8292
+          ],
+          [
+            103.8847,
+            34.265
+          ],
+          [
+            105.7925,
+            32.9379
+          ],
+          [
+            107.3112,
+            31.8368
+          ],
+          [
+            108.9422,
+            32.1563
+          ],
+          [
+            110.5349,
+            32.0004
+          ],
+          [
+            112.9429,
+            31.9123
+          ],
+          [
+            113.5398,
+            34.265
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in cinese. I Zhou del Nord (Northern Zhou) furono fondati dalla famiglia Yuwen di origine Xianbei. ETHICS-002: la dinastia e' notevole per la persecuzione del buddismo (574-577) sotto l'imperatore Wu, che confisco' le proprieta' monastiche e forzo' monaci e monache a tornare alla vita laica. Questo va documentato nel contesto delle tensioni tra potere secolare e istituzione religiosa, non come semplice intolleranza. Yang Jian, fondatore della dinastia Sui, usurpo' il trono Zhou nel 581.",
     "name_variants": [
       {
@@ -1685,7 +2982,8 @@
         "citation": "Dien, A. Six Dynasties Civilization (2007)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "陳朝",
@@ -1696,9 +2994,67 @@
     "capital_name": "建康",
     "capital_lat": 32.0603,
     "capital_lon": 118.7969,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            122.9864,
+            32.0603
+          ],
+          [
+            121.7593,
+            33.5548
+          ],
+          [
+            120.6591,
+            34.6182
+          ],
+          [
+            118.7969,
+            34.409
+          ],
+          [
+            117.1298,
+            34.3139
+          ],
+          [
+            115.6987,
+            33.5102
+          ],
+          [
+            115.3432,
+            32.0603
+          ],
+          [
+            115.4426,
+            30.4688
+          ],
+          [
+            117.0731,
+            29.5466
+          ],
+          [
+            118.7969,
+            29.1367
+          ],
+          [
+            121.2737,
+            28.5729
+          ],
+          [
+            121.1586,
+            30.9113
+          ],
+          [
+            122.9864,
+            32.0603
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in cinese. La dinastia Chen fu l'ultima delle dinastie del Sud durante il periodo di divisione Nord-Sud. ETHICS-002: la fine dei Chen (589) segna la riunificazione della Cina sotto i Sui, ponendo fine a quasi quattro secoli di divisione. La storiografia tradizionale presenta l'ultimo imperatore Chen Shubao come un sovrano dissoluto, ma questa narrativa e' influenzata dalla propaganda Sui che doveva giustificare la conquista. Il sud aveva sviluppato tradizioni culturali e letterarie proprie che la riunificazione rischio' di marginalizzare.",
     "name_variants": [
       {
@@ -1749,7 +3105,8 @@
         "citation": "Dien, A. Six Dynasties Civilization (2007)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "吐谷渾",
@@ -1760,9 +3117,67 @@
     "capital_name": "伏俟城",
     "capital_lat": 36.8,
     "capital_lon": 99.7,
-    "confidence_score": 0.55,
+    "confidence_score": 0.45,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.9369,
+            36.8
+          ],
+          [
+            104.2242,
+            39.0983
+          ],
+          [
+            103.3491,
+            42.37
+          ],
+          [
+            99.7,
+            43.8696
+          ],
+          [
+            96.6897,
+            41.5438
+          ],
+          [
+            93.0935,
+            39.7135
+          ],
+          [
+            90.4636,
+            36.8
+          ],
+          [
+            91.9831,
+            33.602
+          ],
+          [
+            95.7663,
+            30.5872
+          ],
+          [
+            99.7,
+            32.2648
+          ],
+          [
+            102.5912,
+            32.6946
+          ],
+          [
+            103.4787,
+            34.6607
+          ],
+          [
+            106.9369,
+            36.8
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome cinese 吐谷渾 (Tuyuhun) e' la forma piu' attestata. Il Tuyuhun era uno stato fondato da un ramo dei Murong Xianbei nella regione del Kokonor (Qinghai). ETHICS-002: la storiografia cinese tende a classificare il Tuyuhun come semplice entita' tribale, ma fu un regno strutturato che controllo' importanti sezioni della Via della Seta. La conquista Tang (663) cancello' questa entita' politica autonoma. Le popolazioni del Qinghai odierno (tibetani, mongoli) hanno connessioni complesse con il territorio Tuyuhun.",
     "name_variants": [
       {
@@ -1829,7 +3244,8 @@
         "citation": "Jiu Tangshu (Vecchio Libro dei Tang), capitoli sui Tuyuhun",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "百濟復興運動",
@@ -1840,9 +3256,67 @@
     "capital_name": "주류성",
     "capital_lat": 36.06,
     "capital_lon": 126.75,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            130.9265,
+            36.06
+          ],
+          [
+            129.7424,
+            37.3133
+          ],
+          [
+            129.0667,
+            38.7616
+          ],
+          [
+            126.75,
+            40.5113
+          ],
+          [
+            124.8397,
+            38.4266
+          ],
+          [
+            123.041,
+            37.8947
+          ],
+          [
+            123.1757,
+            36.06
+          ],
+          [
+            123.3931,
+            34.2006
+          ],
+          [
+            124.7215,
+            33.2956
+          ],
+          [
+            126.75,
+            31.8363
+          ],
+          [
+            128.1022,
+            33.8985
+          ],
+          [
+            129.5768,
+            34.7838
+          ],
+          [
+            130.9265,
+            36.06
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in coreano (Baekje Restoration Movement). Questo evento rappresenta la resistenza di Baekje dopo la conquista Silla-Tang. ETHICS-002: la battaglia di Baekgang/Hakusonko (663) fu un evento internazionale: Giappone (Yamato) invia una flotta in aiuto di Baekje contro l'alleanza Silla-Tang. La distruzione della flotta giapponese segno' un punto di svolta nelle relazioni est-asiatiche. La prospettiva dei guerrieri Baekje che resistettero alla conquista e' spesso marginalizzata nella narrativa della 'unificazione' di Silla.",
     "name_variants": [
       {
@@ -1893,7 +3367,8 @@
         "citation": "Samguk Sagi (Cronache dei Tre Regni) di Kim Bu-sik (1145)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "梁朝",
@@ -1904,9 +3379,67 @@
     "capital_name": "建康",
     "capital_lat": 32.0603,
     "capital_lon": 118.7969,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            122.2424,
+            32.0603
+          ],
+          [
+            122.7597,
+            33.9389
+          ],
+          [
+            120.5294,
+            34.6403
+          ],
+          [
+            118.7969,
+            36.2515
+          ],
+          [
+            116.6006,
+            35.0753
+          ],
+          [
+            116.5012,
+            33.3344
+          ],
+          [
+            115.5746,
+            32.0603
+          ],
+          [
+            115.6439,
+            30.5886
+          ],
+          [
+            116.5307,
+            29.2103
+          ],
+          [
+            118.7969,
+            29.1075
+          ],
+          [
+            120.7397,
+            29.1963
+          ],
+          [
+            121.1981,
+            30.8325
+          ],
+          [
+            122.2424,
+            32.0603
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in cinese. La dinastia Liang (del Sud) fu l'ultima dinastia meridionale stabile prima della riunificazione Sui. ETHICS-002: il lungo regno dell'imperatore Wu (502-549) vide una fioritura culturale e buddista, ma la ribellione di Hou Jing (548-552) causo' una delle peggiori catastrofi demografiche della storia cinese, con la distruzione di Jiankang e la morte di centinaia di migliaia di persone per carestia, malattia e violenza. La storiografia tradizionale incolpa la devozione buddista dell'imperatore Wu, ma le cause erano strutturali.",
     "name_variants": [
       {
@@ -1965,7 +3498,8 @@
         "citation": "Pearce, S., Spiro, A. & Ebrey, P. (eds.) Culture and Power in the Reconstitution of the Chinese Realm, 200-600 (2001)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "後趙",
@@ -1976,9 +3510,67 @@
     "capital_name": "襄國",
     "capital_lat": 37.0689,
     "capital_lon": 114.5048,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            118.1468,
+            37.0689
+          ],
+          [
+            117.3984,
+            38.3072
+          ],
+          [
+            116.2411,
+            39.5778
+          ],
+          [
+            114.5048,
+            40.6504
+          ],
+          [
+            112.7382,
+            39.8804
+          ],
+          [
+            111.1029,
+            38.5213
+          ],
+          [
+            109.2448,
+            37.0689
+          ],
+          [
+            110.0057,
+            35.2018
+          ],
+          [
+            112.8661,
+            34.3157
+          ],
+          [
+            114.5048,
+            34.2161
+          ],
+          [
+            116.9726,
+            33.8723
+          ],
+          [
+            118.4983,
+            35.1656
+          ],
+          [
+            118.1468,
+            37.0689
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in cinese. Il Later Zhao fu fondato da Shi Le, un ex schiavo di etnia Jie (probabilmente di origine centroasiatica). ETHICS-002: la storia di Shi Le — da schiavo a imperatore — e' una delle piu' notevoli della storia cinese, ma la sua dinastia e' anche associata a Shi Hu, il cui regno di terrore comporto' atrocita' di massa. La successione dopo Shi Hu porto' al massacro quasi totale dell'etnia Jie (350), uno dei primi genocidi etnici documentati nella storia cinese. ETHICS-004: il 'Decreto di Sterminio dei Jie' di Ran Min va documentato come evento di pulizia etnica.",
     "name_variants": [
       {
@@ -2037,7 +3629,8 @@
         "citation": "Barfield, T. The Perilous Frontier: Nomadic Empires and China (1989)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "前秦",
@@ -2048,9 +3641,67 @@
     "capital_name": "長安",
     "capital_lat": 34.265,
     "capital_lon": 108.9422,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            118.1031,
+            34.265
+          ],
+          [
+            119.2439,
+            39.0774
+          ],
+          [
+            115.5475,
+            42.7774
+          ],
+          [
+            108.9422,
+            42.6839
+          ],
+          [
+            103.4542,
+            42.3309
+          ],
+          [
+            99.1598,
+            38.5037
+          ],
+          [
+            97.3294,
+            34.265
+          ],
+          [
+            99.5941,
+            30.1252
+          ],
+          [
+            100.628,
+            23.5371
+          ],
+          [
+            108.9422,
+            23.1226
+          ],
+          [
+            114.0419,
+            27.5562
+          ],
+          [
+            119.8304,
+            29.4544
+          ],
+          [
+            118.1031,
+            34.265
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in cinese. Il Former Qin fu fondato dalla famiglia Fu di etnia Di (un popolo tibeto-birmano). ETHICS-002: il sovrano Fu Jian e' una figura complessa nella storiografia cinese: governante tollerante che promosse l'integrazione multietnica nel nord, ma la sua sconfitta nella Battaglia del fiume Fei (383) contro i Jin Orientali e' uno degli eventi militari piu' celebri della storia cinese. La sua politica di inclusione etnica e' spesso presentata come causa della fragilita' dell'impero — un'interpretazione che va problematizzata.",
     "name_variants": [
       {
@@ -2109,6 +3760,7 @@
         "citation": "Graff, D. Medieval Chinese Warfare, 300-900 (2002)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   }
 ]

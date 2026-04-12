@@ -139,7 +139,8 @@
         "citation": "Ezana of Aksum, victory inscription (c. 350 CE), DAE 11 / RIE 189",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Eze Nri",
@@ -262,7 +263,8 @@
         "citation": "Afigbo, A.E. The Warrant Chiefs: Indirect Rule in Southeastern Nigeria 1891-1929. London: Longman, 1972",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Faama-dugu",
@@ -400,7 +402,8 @@
         "citation": "Monteil, Charles. Les Bambara du Segou et du Kaarta. Paris: Larose, 1924",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Bagirmi",
@@ -523,7 +526,8 @@
         "citation": "Reyna, Stephen P. Wars Without End: The Political Economy of a Precolonial African State. Hanover, NH: University Press of New England, 1990",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Toro",
@@ -650,7 +654,8 @@
         "citation": "Uganda Protectorate, Toro Agreement of 1900 (official colonial document)",
         "source_type": "official"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Bunyoro-Kitara",
@@ -789,7 +794,8 @@
         "citation": "Uzoigwe, Godfrey N. 'Kabalega and the Making of a New Kitara' in Tarikh, 3.2, 1970",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "U Rwanda",
@@ -928,7 +934,8 @@
         "citation": "Newbury, Catharine. The Cohesion of Oppression: Clientship and Ethnicity in Rwanda 1860-1960. New York: Columbia University Press, 1988",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Ingoma y'Uburundi",
@@ -1067,7 +1074,8 @@
         "citation": "Lemarchand, René. Burundi: Ethnic Conflict and Genocide. Cambridge University Press, 1996",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Kano",
@@ -1190,7 +1198,8 @@
         "citation": "Last, Murray. The Sokoto Caliphate. London: Longman, 1967",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Dagbon",
@@ -1313,7 +1322,8 @@
         "citation": "Rattray, R.S. The Tribes of the Ashanti Hinterland. 2 vols. Oxford: Clarendon Press, 1932",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Igbo-Ukwu",
@@ -1325,13 +1335,65 @@
     "capital_lat": 6.0167,
     "capital_lon": 7.0167,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        7.0167,
-        6.0167
+        [
+          [
+            7.1301,
+            6.0167
+          ],
+          [
+            7.1675,
+            6.1049
+          ],
+          [
+            7.0786,
+            6.1094
+          ],
+          [
+            7.0167,
+            6.1225
+          ],
+          [
+            6.9603,
+            6.1081
+          ],
+          [
+            6.8965,
+            6.0879
+          ],
+          [
+            6.8994,
+            6.0167
+          ],
+          [
+            6.8643,
+            5.926
+          ],
+          [
+            6.9344,
+            5.8774
+          ],
+          [
+            7.0167,
+            5.8445
+          ],
+          [
+            7.1142,
+            5.8375
+          ],
+          [
+            7.1729,
+            5.9427
+          ],
+          [
+            7.1301,
+            6.0167
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.5,
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "ETHICS: Igbo-Ukwu is an archaeological site rather than a conventional political entity. Its inclusion documents a 9th-century civilization that produced sophisticated bronze castings using the lost-wax technique, demonstrating advanced metallurgical technology in West Africa centuries before European contact. The site was excavated by Thurstan Shaw (1959-1964) and revealed a burial chamber with elaborate regalia and thousands of glass beads indicating long-distance trade connections (possibly to Egypt, Venice, or India). The significance of Igbo-Ukwu is frequently underrepresented in global history: it challenges narratives that advanced metallurgy in sub-Saharan Africa was always derived from external sources. The political organization associated with the site is debated -- it may represent an early manifestation of the Nri kingdom's ritual authority or a distinct polity. Confidence is lower due to the limited extent of excavation and ongoing debates about the site's dating (radiocarbon dates of the 9th century have been questioned by some scholars).",
     "name_variants": [
@@ -1381,7 +1443,8 @@
         "citation": "Insoll, Timothy and Shaw, Thurstan. 'Gao and Igbo-Ukwu: Beads, Inter-Regional Trade, and Beyond' in African Archaeological Review, 14.1, 1997",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Siin",
@@ -1500,7 +1563,8 @@
         "citation": "Becker, Charles and Martin, Victor. 'Les tenc du Siin' in Bulletin de l'IFAN, serie B, 44.3-4, 1982",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "Imamat Fuuta Jaloo",
@@ -1627,7 +1691,8 @@
         "citation": "McGowan, Winston. 'The Establishment of Long-Distance Trade between Sierra Leone and Its Hinterland, 1787-1821' in Journal of African History, 31.1, 1990",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   },
   {
     "name_original": "eSwatini",
@@ -1761,6 +1826,7 @@
         "citation": "Macmillan, Hugh. 'Swaziland: Decolonisation and the Triumph of Tradition' in Journal of Modern African Studies, 23.4, 1985",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "historical_map"
   }
 ]

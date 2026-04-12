@@ -8,14 +8,84 @@
     "capital_name": "Ta'ū",
     "capital_lat": -14.23,
     "capital_lon": -169.51,
-    "boundary_geojson": null,
-    "confidence_score": 0.45,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -166.467,
+            -14.23
+          ],
+          [
+            -165.7913,
+            -12.5425
+          ],
+          [
+            -167.2912,
+            -10.8472
+          ],
+          [
+            -169.51,
+            -9.7351
+          ],
+          [
+            -171.4445,
+            -11.1745
+          ],
+          [
+            -173.3344,
+            -11.8103
+          ],
+          [
+            -171.947,
+            -14.23
+          ],
+          [
+            -173.4952,
+            -16.0469
+          ],
+          [
+            -171.01,
+            -16.5339
+          ],
+          [
+            -169.51,
+            -18.0807
+          ],
+          [
+            -167.4834,
+            -16.9886
+          ],
+          [
+            -165.5782,
+            -16.2276
+          ],
+          [
+            -166.467,
+            -14.23
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.35,
     "status": "uncertain",
     "ethical_notes": "The Tu'i Manu'a title is among the oldest in Polynesia, with oral traditions claiming divine origin from Tagaloa. The date of founding is highly uncertain, derived from genealogical reckoning. The last Tu'i Manu'a, Elisala, ceded sovereignty to the United States in 1904 under significant external pressure. Samoan oral history considers Manu'a the sacred origin point of Polynesian civilization; this view is not universally accepted by archaeologists but must be represented. The entity's dissolution through U.S. annexation represents the erasure of one of the Pacific's oldest continuous political institutions.",
     "name_variants": [
-      {"name": "Kingdom of Manu'a", "lang": "en", "context": "English designation for the paramount chiefdom centered on the Manu'a island group"},
-      {"name": "Tui Manu'a Confederacy", "lang": "en", "context": "Alternative English scholarly term emphasizing the confederate nature of the polity"},
-      {"name": "Malo o Manu'a", "lang": "sm", "context": "Samoan term for the government/authority of Manu'a"}
+      {
+        "name": "Kingdom of Manu'a",
+        "lang": "en",
+        "context": "English designation for the paramount chiefdom centered on the Manu'a island group"
+      },
+      {
+        "name": "Tui Manu'a Confederacy",
+        "lang": "en",
+        "context": "Alternative English scholarly term emphasizing the confederate nature of the polity"
+      },
+      {
+        "name": "Malo o Manu'a",
+        "lang": "sm",
+        "context": "Samoan term for the government/authority of Manu'a"
+      }
     ],
     "territory_changes": [
       {
@@ -36,10 +106,23 @@
       }
     ],
     "sources": [
-      {"citation": "Mead, Margaret. Social Organization of Manu'a. Honolulu: Bishop Museum, 1930", "source_type": "academic", "url": null},
-      {"citation": "Krämer, Augustin. Die Samoa-Inseln. Stuttgart: E. Schweizerbart, 1902-1903", "source_type": "academic", "url": null},
-      {"citation": "Tuiteleleapaga, Napoleone. Samoa: Yesterday, Today, and Tomorrow. New York: Todd & Honeywell, 1980", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Mead, Margaret. Social Organization of Manu'a. Honolulu: Bishop Museum, 1930",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Krämer, Augustin. Die Samoa-Inseln. Stuttgart: E. Schweizerbart, 1902-1903",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Tuiteleleapaga, Napoleone. Samoa: Yesterday, Today, and Tomorrow. New York: Todd & Honeywell, 1980",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Ralik-Ratak",
@@ -50,14 +133,84 @@
     "capital_name": "Majuro",
     "capital_lat": 7.09,
     "capital_lon": 171.38,
-    "boundary_geojson": null,
-    "confidence_score": 0.4,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            175.2779,
+            7.09
+          ],
+          [
+            174.1665,
+            8.8723
+          ],
+          [
+            174.0938,
+            12.1045
+          ],
+          [
+            171.38,
+            12.2876
+          ],
+          [
+            169.1285,
+            10.7254
+          ],
+          [
+            167.5702,
+            9.2506
+          ],
+          [
+            167.1561,
+            7.09
+          ],
+          [
+            166.5421,
+            4.2414
+          ],
+          [
+            169.7982,
+            4.0266
+          ],
+          [
+            171.38,
+            3.0062
+          ],
+          [
+            173.6574,
+            2.9732
+          ],
+          [
+            174.9491,
+            4.5166
+          ],
+          [
+            175.2779,
+            7.09
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.3,
     "status": "uncertain",
     "ethical_notes": "ETHICS: The Marshallese iroij (chief) system organized the atolls into two parallel chains — Ralik (sunset/western) and Ratak (sunrise/eastern) — each governed by paramount chiefs (iroijlaplap). This political structure predates European contact by millennia and persists in modified form in the modern Republic of the Marshall Islands. Marshallese navigational knowledge, using stick charts (rebbelib, meddo, mattang) to encode wave patterns and currents, represents one of the most sophisticated non-instrument navigation systems ever developed. The islands were claimed by Spain (1592), then Germany (1885), Japan (1914), and the United States (1944). U.S. nuclear testing at Bikini and Enewetak atolls (1946-1958) rendered entire islands uninhabitable and caused ongoing health consequences for Marshallese people — one of the gravest environmental injustices of the nuclear age.",
     "name_variants": [
-      {"name": "Marshall Islands chiefdoms", "lang": "en", "context": "English designation for the pre-colonial political system"},
-      {"name": "Aelōn̄ in M̧ajeļ", "lang": "mh", "context": "Marshallese name for the Marshall Islands archipelago"},
-      {"name": "Iroij system", "lang": "mh", "context": "Reference to the chiefly governance system that organized the atolls"}
+      {
+        "name": "Marshall Islands chiefdoms",
+        "lang": "en",
+        "context": "English designation for the pre-colonial political system"
+      },
+      {
+        "name": "Aelōn̄ in M̧ajeļ",
+        "lang": "mh",
+        "context": "Marshallese name for the Marshall Islands archipelago"
+      },
+      {
+        "name": "Iroij system",
+        "lang": "mh",
+        "context": "Reference to the chiefly governance system that organized the atolls"
+      }
     ],
     "territory_changes": [
       {
@@ -78,9 +231,18 @@
       }
     ],
     "sources": [
-      {"citation": "Spennemann, Dirk H.R. 'Traditional and Nineteenth Century Communication Patterns in the Marshall Islands.' Micronesian Journal of the Humanities and Social Sciences 4(1), 2005", "source_type": "academic", "url": null},
-      {"citation": "Tobin, Jack A. Stories from the Marshall Islands. Honolulu: University of Hawai'i Press, 2002", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Spennemann, Dirk H.R. 'Traditional and Nineteenth Century Communication Patterns in the Marshall Islands.' Micronesian Journal of the Humanities and Social Sciences 4(1), 2005",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Tobin, Jack A. Stories from the Marshall Islands. Honolulu: University of Hawai'i Press, 2002",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Maui Nui",
@@ -90,15 +252,85 @@
     "year_end": 1795,
     "capital_name": "Wailuku",
     "capital_lat": 20.89,
-    "capital_lon": -156.50,
-    "boundary_geojson": null,
-    "confidence_score": 0.5,
+    "capital_lon": -156.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -153.8791,
+            20.89
+          ],
+          [
+            -153.8,
+            22.3891
+          ],
+          [
+            -154.1925,
+            23.9938
+          ],
+          [
+            -156.5,
+            23.7861
+          ],
+          [
+            -158.3038,
+            23.9109
+          ],
+          [
+            -160.0098,
+            22.4714
+          ],
+          [
+            -160.229,
+            20.89
+          ],
+          [
+            -160.4402,
+            18.6296
+          ],
+          [
+            -158.0662,
+            18.4428
+          ],
+          [
+            -156.5,
+            18.0647
+          ],
+          [
+            -154.7278,
+            17.5921
+          ],
+          [
+            -152.671,
+            18.7416
+          ],
+          [
+            -153.8791,
+            20.89
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "ETHICS: Maui Nui refers to the pre-unification Hawaiian kingdom centered on the island of Maui and its politically connected islands (Moloka'i, Lāna'i, Kaho'olawe). Prior to Kamehameha I's unification of the Hawaiian Islands (already in the database as 'Aupuni Mōʻī o Hawaiʻi'), Maui was a powerful independent polity with its own line of ali'i nui (paramount chiefs). The Battle of Kepaniwai (1790) in 'Īao Valley, where Kamehameha's forces devastated the Maui warriors, was one of the bloodiest battles in Hawaiian history — the stream was said to be dammed with bodies. This entity represents the independent Maui polity before absorption into the unified kingdom.",
     "name_variants": [
-      {"name": "Kingdom of Maui", "lang": "en", "context": "English designation for the independent Maui chiefdom before unification"},
-      {"name": "Moku o Maui", "lang": "haw", "context": "Hawaiian designation meaning 'district/island of Maui'"},
-      {"name": "Maui chiefdom", "lang": "en", "context": "Anthropological designation for the pre-contact Hawaiian polity"}
+      {
+        "name": "Kingdom of Maui",
+        "lang": "en",
+        "context": "English designation for the independent Maui chiefdom before unification"
+      },
+      {
+        "name": "Moku o Maui",
+        "lang": "haw",
+        "context": "Hawaiian designation meaning 'district/island of Maui'"
+      },
+      {
+        "name": "Maui chiefdom",
+        "lang": "en",
+        "context": "Anthropological designation for the pre-contact Hawaiian polity"
+      }
     ],
     "territory_changes": [
       {
@@ -119,9 +351,18 @@
       }
     ],
     "sources": [
-      {"citation": "Kamakau, Samuel Mānaiakalani. Ruling Chiefs of Hawaii. Revised edition. Honolulu: Kamehameha Schools Press, 1992", "source_type": "primary", "url": null},
-      {"citation": "Kirch, Patrick V. How Chiefs Became Kings: Divine Kingship and the Rise of Archaic States in Ancient Hawai'i. Berkeley: University of California Press, 2010", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Kamakau, Samuel Mānaiakalani. Ruling Chiefs of Hawaii. Revised edition. Honolulu: Kamehameha Schools Press, 1992",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Kirch, Patrick V. How Chiefs Became Kings: Divine Kingship and the Rise of Archaic States in Ancient Hawai'i. Berkeley: University of California Press, 2010",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Tūhoe",
@@ -132,14 +373,84 @@
     "capital_name": "Maungapōhatu",
     "capital_lat": -38.56,
     "capital_lon": 177.07,
-    "boundary_geojson": null,
-    "confidence_score": 0.55,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -177.351,
+            -38.56
+          ],
+          [
+            -178.2839,
+            -36.4876
+          ],
+          [
+            179.7779,
+            -34.9706
+          ],
+          [
+            177.07,
+            -35.3943
+          ],
+          [
+            175.4858,
+            -35.9478
+          ],
+          [
+            172.7311,
+            -36.8971
+          ],
+          [
+            172.5598,
+            -38.56
+          ],
+          [
+            171.9182,
+            -40.8865
+          ],
+          [
+            175.1724,
+            -41.6181
+          ],
+          [
+            177.07,
+            -41.8575
+          ],
+          [
+            179.5253,
+            -42.2636
+          ],
+          [
+            -178.6174,
+            -40.1599
+          ],
+          [
+            -177.351,
+            -38.56
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
     "status": "confirmed",
     "ethical_notes": "ETHICS: Tūhoe (the 'Children of the Mist') are a Māori iwi of Te Urewera who never signed the Treaty of Waitangi and have consistently maintained that they never ceded sovereignty to the British Crown. The 1916 Crown invasion of the Urewera to arrest the prophet Rua Kēnana was a violent assault on an autonomous community. The 2014 Te Urewera Act, which gave legal personhood to the former national park (the ancestral Tūhoe homeland), represents a partial but incomplete recognition of Tūhoe rights. This entity challenges Western state-centric models of political organization; their mana (authority) is rooted in whakapapa (genealogy) and connection to the land, not territorial statehood.",
     "name_variants": [
-      {"name": "Children of the Mist", "lang": "en", "context": "English poetic translation of Tūhoe's self-designation, referencing their mountain homeland's frequent mists"},
-      {"name": "Ngāi Tūhoe", "lang": "mi", "context": "Full iwi designation with the prefix Ngāi indicating descent group"},
-      {"name": "Te Urewera people", "lang": "en", "context": "English geographic designation referencing their ancestral territory"}
+      {
+        "name": "Children of the Mist",
+        "lang": "en",
+        "context": "English poetic translation of Tūhoe's self-designation, referencing their mountain homeland's frequent mists"
+      },
+      {
+        "name": "Ngāi Tūhoe",
+        "lang": "mi",
+        "context": "Full iwi designation with the prefix Ngāi indicating descent group"
+      },
+      {
+        "name": "Te Urewera people",
+        "lang": "en",
+        "context": "English geographic designation referencing their ancestral territory"
+      }
     ],
     "territory_changes": [
       {
@@ -160,9 +471,18 @@
       }
     ],
     "sources": [
-      {"citation": "Binney, Judith. Encircled Lands: Te Urewera, 1820-1921. Wellington: Bridget Williams Books, 2009", "source_type": "academic", "url": null},
-      {"citation": "Webster, Steven. Patrons of Maori Culture: Power, Theory and Ideology in the Maori Renaissance. Dunedin: University of Otago Press, 1998", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Binney, Judith. Encircled Lands: Te Urewera, 1820-1921. Wellington: Bridget Williams Books, 2009",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Webster, Steven. Patrons of Maori Culture: Power, Theory and Ideology in the Maori Renaissance. Dunedin: University of Otago Press, 1998",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Mata-nitu o Viti",
@@ -173,14 +493,84 @@
     "capital_name": "Bau",
     "capital_lat": -17.98,
     "capital_lon": 178.58,
-    "boundary_geojson": null,
-    "confidence_score": 0.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -176.6762,
+            -17.98
+          ],
+          [
+            -178.3416,
+            -16.2003
+          ],
+          [
+            -178.6764,
+            -13.9996
+          ],
+          [
+            178.58,
+            -14.0564
+          ],
+          [
+            176.696,
+            -14.187
+          ],
+          [
+            175.2893,
+            -16.4709
+          ],
+          [
+            175.5413,
+            -17.98
+          ],
+          [
+            174.89,
+            -19.8776
+          ],
+          [
+            176.3801,
+            -22.0077
+          ],
+          [
+            178.58,
+            -22.5726
+          ],
+          [
+            -179.2796,
+            -21.5423
+          ],
+          [
+            -176.8218,
+            -21.0286
+          ],
+          [
+            -176.6762,
+            -17.98
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "ETHICS: The Fijian confederacies (matanitu) were complex political systems based on chiefly hierarchies and inter-island alliances. Bau, under the Vunivalu (war chief) Cakobau, became the most powerful chiefdom in the mid-19th century but never unified all of Fiji. The cession of Fiji to Britain in 1874 was orchestrated partly by Cakobau to resolve debts imposed by American settlers (the dubious 'Ovalau fire claims') and inter-chiefly warfare. British colonial rule imposed the system of indirect rule through 'traditional' chiefs, paradoxically freezing and distorting pre-colonial political dynamics. The introduction of indentured Indian laborers (girmitiya, 1879-1916) created a demographic and political legacy that continues to shape Fijian politics and ethnic relations.",
     "name_variants": [
-      {"name": "Fijian Confederacies", "lang": "en", "context": "English designation for the network of competing matanitu (chiefdoms/confederacies)"},
-      {"name": "Bau Confederacy", "lang": "en", "context": "English name for the most powerful of the Fijian chiefdoms in the 19th century"},
-      {"name": "Confédération fidjienne", "lang": "fr", "context": "French designation"}
+      {
+        "name": "Fijian Confederacies",
+        "lang": "en",
+        "context": "English designation for the network of competing matanitu (chiefdoms/confederacies)"
+      },
+      {
+        "name": "Bau Confederacy",
+        "lang": "en",
+        "context": "English name for the most powerful of the Fijian chiefdoms in the 19th century"
+      },
+      {
+        "name": "Confédération fidjienne",
+        "lang": "fr",
+        "context": "French designation"
+      }
     ],
     "territory_changes": [
       {
@@ -201,9 +591,18 @@
       }
     ],
     "sources": [
-      {"citation": "Sahlins, Marshall. Moala: Culture and Nature on a Fijian Island. Ann Arbor: University of Michigan Press, 1962", "source_type": "academic", "url": null},
-      {"citation": "Routledge, David. Matanitu: The Struggle for Power in Early Fiji. Suva: University of the South Pacific, 1985", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Sahlins, Marshall. Moala: Culture and Nature on a Fijian Island. Ann Arbor: University of Michigan Press, 1962",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Routledge, David. Matanitu: The Struggle for Power in Early Fiji. Suva: University of the South Pacific, 1985",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Nazca",
@@ -214,14 +613,84 @@
     "capital_name": "Cahuachi",
     "capital_lat": -14.82,
     "capital_lon": -75.12,
-    "boundary_geojson": null,
-    "confidence_score": 0.55,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -71.7757,
+            -14.82
+          ],
+          [
+            -71.1834,
+            -12.5713
+          ],
+          [
+            -72.5092,
+            -10.7723
+          ],
+          [
+            -75.12,
+            -11.7985
+          ],
+          [
+            -77.4096,
+            -10.6826
+          ],
+          [
+            -77.8354,
+            -13.3574
+          ],
+          [
+            -79.0471,
+            -14.82
+          ],
+          [
+            -77.7014,
+            -16.2505
+          ],
+          [
+            -77.4925,
+            -18.5847
+          ],
+          [
+            -75.12,
+            -19.1148
+          ],
+          [
+            -72.2708,
+            -19.1182
+          ],
+          [
+            -71.1688,
+            -17.1082
+          ],
+          [
+            -71.7757,
+            -14.82
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Nazca civilization is best known for its geoglyphs (the 'Nazca Lines'), which have been the subject of numerous pseudoarchaeological claims attributing them to extraterrestrial beings or lost advanced civilizations. These claims are racist in their implication that indigenous South American peoples were incapable of such achievements. Archaeological evidence clearly demonstrates that the lines were created by Nazca people using simple tools and techniques. The name 'Nazca' is a Spanish colonial rendering; the people's own name for themselves is unknown. Cahuachi was a pilgrimage and ceremonial center rather than a residential capital in the Western sense.",
     "name_variants": [
-      {"name": "Nazca culture", "lang": "en", "context": "Standard English archaeological designation"},
-      {"name": "Nasca", "lang": "es", "context": "Modern Peruvian Spanish spelling used in official Peruvian archaeological publications"},
-      {"name": "Cultura Nasca", "lang": "es", "context": "Full Spanish archaeological term used by Peru's Ministry of Culture"}
+      {
+        "name": "Nazca culture",
+        "lang": "en",
+        "context": "Standard English archaeological designation"
+      },
+      {
+        "name": "Nasca",
+        "lang": "es",
+        "context": "Modern Peruvian Spanish spelling used in official Peruvian archaeological publications"
+      },
+      {
+        "name": "Cultura Nasca",
+        "lang": "es",
+        "context": "Full Spanish archaeological term used by Peru's Ministry of Culture"
+      }
     ],
     "territory_changes": [
       {
@@ -242,10 +711,23 @@
       }
     ],
     "sources": [
-      {"citation": "Silverman, Helaine, and Donald A. Proulx. The Nasca. Oxford: Blackwell, 2002", "source_type": "academic", "url": null},
-      {"citation": "Orefici, Giuseppe. Cahuachi: Capital Teocrática Nasca. Lima: Universidad de San Martín de Porres, 2012", "source_type": "archaeological", "url": null},
-      {"citation": "Beresford-Jones, David, et al. 'South Coast Peru: A Survey of the Post-Formative Archaeology.' Journal of World Prehistory 22, 2009", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Silverman, Helaine, and Donald A. Proulx. The Nasca. Oxford: Blackwell, 2002",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Orefici, Giuseppe. Cahuachi: Capital Teocrática Nasca. Lima: Universidad de San Martín de Porres, 2012",
+        "source_type": "archaeological",
+        "url": null
+      },
+      {
+        "citation": "Beresford-Jones, David, et al. 'South Coast Peru: A Survey of the Post-Formative Archaeology.' Journal of World Prehistory 22, 2009",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Chavín",
@@ -256,14 +738,84 @@
     "capital_name": "Chavín de Huántar",
     "capital_lat": -9.59,
     "capital_lon": -77.18,
-    "boundary_geojson": null,
-    "confidence_score": 0.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -73.5143,
+            -9.59
+          ],
+          [
+            -73.9335,
+            -7.9662
+          ],
+          [
+            -75.6539,
+            -7.1095
+          ],
+          [
+            -77.18,
+            -6.0424
+          ],
+          [
+            -78.4598,
+            -7.1568
+          ],
+          [
+            -80.539,
+            -7.1575
+          ],
+          [
+            -80.6821,
+            -9.59
+          ],
+          [
+            -80.7792,
+            -11.2079
+          ],
+          [
+            -78.3288,
+            -11.7971
+          ],
+          [
+            -77.18,
+            -12.657
+          ],
+          [
+            -74.9057,
+            -13.1367
+          ],
+          [
+            -74.2865,
+            -11.074
+          ],
+          [
+            -73.5143,
+            -9.59
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
     "status": "confirmed",
     "ethical_notes": "ETHICS: Chavín de Huántar was long considered the 'mother culture' of Andean civilization by Julio C. Tello (himself a Quechua-speaking archaeologist — one of the first indigenous scholars in Latin American archaeology). More recent research has shown that Chavín was one of several contemporary complex societies, not the sole origin. The site's monumental architecture and iconography suggest it functioned as a pan-regional religious oracle and pilgrimage center. The name 'Chavín' derives from the modern village; the ancient people's self-designation is unknown.",
     "name_variants": [
-      {"name": "Chavín culture", "lang": "en", "context": "Standard English archaeological designation"},
-      {"name": "Cultura Chavín", "lang": "es", "context": "Spanish archaeological term"},
-      {"name": "Chavín horizon", "lang": "en", "context": "Archaeological periodization term for the Early Horizon in Andean chronology, when Chavín influence was widespread"}
+      {
+        "name": "Chavín culture",
+        "lang": "en",
+        "context": "Standard English archaeological designation"
+      },
+      {
+        "name": "Cultura Chavín",
+        "lang": "es",
+        "context": "Spanish archaeological term"
+      },
+      {
+        "name": "Chavín horizon",
+        "lang": "en",
+        "context": "Archaeological periodization term for the Early Horizon in Andean chronology, when Chavín influence was widespread"
+      }
     ],
     "territory_changes": [
       {
@@ -284,9 +836,18 @@
       }
     ],
     "sources": [
-      {"citation": "Rick, John W. 'The Evolution of Authority and Power at Chavín de Huántar, Peru.' In Foundations of Power in the Prehispanic Andes, edited by K. Vaughn et al., 2006", "source_type": "archaeological", "url": null},
-      {"citation": "Burger, Richard L. Chavin and the Origins of Andean Civilization. London: Thames and Hudson, 1992", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Rick, John W. 'The Evolution of Authority and Power at Chavín de Huántar, Peru.' In Foundations of Power in the Prehispanic Andes, edited by K. Vaughn et al., 2006",
+        "source_type": "archaeological",
+        "url": null
+      },
+      {
+        "citation": "Burger, Richard L. Chavin and the Origins of Andean Civilization. London: Thames and Hudson, 1992",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Sicán",
@@ -297,14 +858,84 @@
     "capital_name": "Batán Grande",
     "capital_lat": -6.49,
     "capital_lon": -79.57,
-    "boundary_geojson": null,
-    "confidence_score": 0.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -75.4783,
+            -6.49
+          ],
+          [
+            -77.5259,
+            -5.0941
+          ],
+          [
+            -78.4554,
+            -4.0069
+          ],
+          [
+            -79.57,
+            -4.2908
+          ],
+          [
+            -81.1814,
+            -3.329
+          ],
+          [
+            -82.2745,
+            -4.8511
+          ],
+          [
+            -83.0497,
+            -6.49
+          ],
+          [
+            -83.4993,
+            -8.7033
+          ],
+          [
+            -81.59,
+            -10.6016
+          ],
+          [
+            -79.57,
+            -9.7422
+          ],
+          [
+            -77.3663,
+            -9.8824
+          ],
+          [
+            -76.9581,
+            -7.9184
+          ],
+          [
+            -75.4783,
+            -6.49
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Sicán (Lambayeque) civilization is named using the Muchik language term for the site. It succeeded the Moche culture in the Lambayeque valley and produced some of the finest metalwork in pre-Columbian history. The gold funerary masks and tumbaga (gold-copper alloy) work demonstrate sophisticated metallurgical knowledge. Much of Sicán's archaeological heritage has been severely damaged by industrial-scale huaquero (tomb robber) activity over centuries. Spanish colonial treasure hunters melted down massive quantities of Sicán goldwork. The civilization was conquered by the Chimú Kingdom around 1375.",
     "name_variants": [
-      {"name": "Lambayeque culture", "lang": "en", "context": "Alternate English name derived from the modern valley name"},
-      {"name": "Cultura Sicán", "lang": "es", "context": "Spanish archaeological designation, 'Sicán' means 'house/temple of the moon' in Muchik"},
-      {"name": "Sicán-Lambayeque", "lang": "en", "context": "Combined scholarly designation used to distinguish from the modern region"}
+      {
+        "name": "Lambayeque culture",
+        "lang": "en",
+        "context": "Alternate English name derived from the modern valley name"
+      },
+      {
+        "name": "Cultura Sicán",
+        "lang": "es",
+        "context": "Spanish archaeological designation, 'Sicán' means 'house/temple of the moon' in Muchik"
+      },
+      {
+        "name": "Sicán-Lambayeque",
+        "lang": "en",
+        "context": "Combined scholarly designation used to distinguish from the modern region"
+      }
     ],
     "territory_changes": [
       {
@@ -325,9 +956,18 @@
       }
     ],
     "sources": [
-      {"citation": "Shimada, Izumi. Pampa Grande and the Mochica Culture. Austin: University of Texas Press, 1994", "source_type": "archaeological", "url": null},
-      {"citation": "Shimada, Izumi, et al. 'The Sicán Archaeological Project: Its First Ten Years.' Pre-Columbian Research Institute, 1994", "source_type": "archaeological", "url": null}
-    ]
+      {
+        "citation": "Shimada, Izumi. Pampa Grande and the Mochica Culture. Austin: University of Texas Press, 1994",
+        "source_type": "archaeological",
+        "url": null
+      },
+      {
+        "citation": "Shimada, Izumi, et al. 'The Sicán Archaeological Project: Its First Ten Years.' Pre-Columbian Research Institute, 1994",
+        "source_type": "archaeological",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kaminaljuyú",
@@ -338,14 +978,84 @@
     "capital_name": "Kaminaljuyú",
     "capital_lat": 14.63,
     "capital_lon": -90.56,
-    "boundary_geojson": null,
-    "confidence_score": 0.55,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -89.9928,
+            14.63
+          ],
+          [
+            -90.1022,
+            14.8682
+          ],
+          [
+            -90.3418,
+            14.9722
+          ],
+          [
+            -90.56,
+            15.1648
+          ],
+          [
+            -90.719,
+            14.899
+          ],
+          [
+            -90.9916,
+            14.8935
+          ],
+          [
+            -90.9781,
+            14.63
+          ],
+          [
+            -90.8933,
+            14.4148
+          ],
+          [
+            -90.8775,
+            14.199
+          ],
+          [
+            -90.56,
+            14.2719
+          ],
+          [
+            -90.3553,
+            14.2868
+          ],
+          [
+            -90.087,
+            14.3453
+          ],
+          [
+            -89.9928,
+            14.63
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
     "status": "confirmed",
     "ethical_notes": "ETHICS: Kaminaljuyú (K'iche' Maya for 'Hill of the Dead') was one of the most important pre-Classic Maya cities, located in the highland Valley of Guatemala where modern Guatemala City now stands. Much of the site has been destroyed by urban expansion — an ongoing tragedy of archaeological heritage loss. Of an estimated 200+ mounds, most have been bulldozed for residential development since the 1940s. The site demonstrates early Maya monumental architecture, writing, and long-distance trade (particularly obsidian and jade). Its relationship with Teotihuacan (c. 400 CE) suggests either direct colonization, elite emulation, or diplomatic partnership — the interpretation has political implications for understanding Mesoamerican interaction spheres.",
     "name_variants": [
-      {"name": "Kaminaljuyú", "lang": "en", "context": "Standard archaeological designation, from K'iche' Maya meaning 'Hill of the Dead'"},
-      {"name": "Kaminaljuyu", "lang": "es", "context": "Spanish orthographic variant without accents, commonly used in Guatemalan publications"},
-      {"name": "KJ", "lang": "en", "context": "Common archaeological abbreviation used in site reports"}
+      {
+        "name": "Kaminaljuyú",
+        "lang": "en",
+        "context": "Standard archaeological designation, from K'iche' Maya meaning 'Hill of the Dead'"
+      },
+      {
+        "name": "Kaminaljuyu",
+        "lang": "es",
+        "context": "Spanish orthographic variant without accents, commonly used in Guatemalan publications"
+      },
+      {
+        "name": "KJ",
+        "lang": "en",
+        "context": "Common archaeological abbreviation used in site reports"
+      }
     ],
     "territory_changes": [
       {
@@ -366,9 +1076,18 @@
       }
     ],
     "sources": [
-      {"citation": "Shook, Edwin M., and Marion Popenoe de Hatch. 'The Ruins of El Naranjo, Guatemala.' Ancient Mesoamerica 10, 1999", "source_type": "archaeological", "url": null},
-      {"citation": "Hatch, Marion Popenoe de. Kaminaljuyú/San Jorge: Evidencia Arqueológica de la Actividad Económica en el Valle de Guatemala 300 a.C. a 300 d.C. Guatemala: Universidad del Valle de Guatemala, 1997", "source_type": "archaeological", "url": null}
-    ]
+      {
+        "citation": "Shook, Edwin M., and Marion Popenoe de Hatch. 'The Ruins of El Naranjo, Guatemala.' Ancient Mesoamerica 10, 1999",
+        "source_type": "archaeological",
+        "url": null
+      },
+      {
+        "citation": "Hatch, Marion Popenoe de. Kaminaljuyú/San Jorge: Evidencia Arqueológica de la Actividad Económica en el Valle de Guatemala 300 a.C. a 300 d.C. Guatemala: Universidad del Valle de Guatemala, 1997",
+        "source_type": "archaeological",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Cantona",
@@ -379,14 +1098,84 @@
     "capital_name": "Cantona",
     "capital_lat": 19.55,
     "capital_lon": -97.49,
-    "boundary_geojson": null,
-    "confidence_score": 0.45,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -96.8965,
+            19.55
+          ],
+          [
+            -96.8514,
+            19.8943
+          ],
+          [
+            -97.2715,
+            19.8877
+          ],
+          [
+            -97.49,
+            20.268
+          ],
+          [
+            -97.7149,
+            19.9023
+          ],
+          [
+            -98.0536,
+            19.83
+          ],
+          [
+            -98.167,
+            19.55
+          ],
+          [
+            -97.8606,
+            19.3743
+          ],
+          [
+            -97.7699,
+            19.0459
+          ],
+          [
+            -97.49,
+            19.1402
+          ],
+          [
+            -97.2222,
+            19.15
+          ],
+          [
+            -97.0388,
+            19.2776
+          ],
+          [
+            -96.8965,
+            19.55
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.35,
     "status": "uncertain",
     "ethical_notes": "ETHICS: Cantona, located in the Puebla-Tlaxcala highlands of central Mexico, was one of the largest cities in pre-Columbian Mesoamerica — at its peak larger than contemporary Teotihuacan — yet it remains remarkably unknown outside specialist archaeological circles. The city had over 24 ball courts (more than any other Mesoamerican site), a sophisticated internal road network, and a defensive architecture suggesting chronic warfare. Its near-total absence from popular narratives of Mesoamerican civilization illustrates how archaeological fame is shaped by proximity to modern cities, colonial-era attention, and the politics of heritage promotion rather than historical significance.",
     "name_variants": [
-      {"name": "Cantona archaeological site", "lang": "en", "context": "English archaeological designation"},
-      {"name": "Zona Arqueológica de Cantona", "lang": "es", "context": "Official Mexican INAH designation"},
-      {"name": "City of Cantona", "lang": "en", "context": "Alternative English designation; the original name is unknown, 'Cantona' is modern"}
+      {
+        "name": "Cantona archaeological site",
+        "lang": "en",
+        "context": "English archaeological designation"
+      },
+      {
+        "name": "Zona Arqueológica de Cantona",
+        "lang": "es",
+        "context": "Official Mexican INAH designation"
+      },
+      {
+        "name": "City of Cantona",
+        "lang": "en",
+        "context": "Alternative English designation; the original name is unknown, 'Cantona' is modern"
+      }
     ],
     "territory_changes": [
       {
@@ -407,9 +1196,18 @@
       }
     ],
     "sources": [
-      {"citation": "García Cook, Ángel. 'Cantona: The City.' In Twin Tollans: Chichén Itzá, Tula, and the Epiclassic to Early Postclassic Mesoamerican World, edited by J.K. Kowalski and C. Kristan-Graham, 2007", "source_type": "archaeological", "url": null},
-      {"citation": "García Cook, Ángel, and Beatriz Leonor Merino Carrión. 'Cantona: A Pre-Columbian City in Central Mexico.' Latin American Antiquity 9(3), 1998", "source_type": "archaeological", "url": null}
-    ]
+      {
+        "citation": "García Cook, Ángel. 'Cantona: The City.' In Twin Tollans: Chichén Itzá, Tula, and the Epiclassic to Early Postclassic Mesoamerican World, edited by J.K. Kowalski and C. Kristan-Graham, 2007",
+        "source_type": "archaeological",
+        "url": null
+      },
+      {
+        "citation": "García Cook, Ángel, and Beatriz Leonor Merino Carrión. 'Cantona: A Pre-Columbian City in Central Mexico.' Latin American Antiquity 9(3), 1998",
+        "source_type": "archaeological",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Tlaxcallan",
@@ -420,14 +1218,84 @@
     "capital_name": "Tlaxcala",
     "capital_lat": 19.31,
     "capital_lon": -98.24,
-    "boundary_geojson": null,
-    "confidence_score": 0.65,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -95.8651,
+            19.31
+          ],
+          [
+            -96.1052,
+            20.5281
+          ],
+          [
+            -97.2937,
+            20.8882
+          ],
+          [
+            -98.24,
+            22.1026
+          ],
+          [
+            -99.192,
+            20.9929
+          ],
+          [
+            -100.1968,
+            20.3624
+          ],
+          [
+            -100.6777,
+            19.31
+          ],
+          [
+            -100.0025,
+            18.4427
+          ],
+          [
+            -99.3995,
+            17.3595
+          ],
+          [
+            -98.24,
+            16.5523
+          ],
+          [
+            -96.7362,
+            17.1811
+          ],
+          [
+            -96.7813,
+            18.5351
+          ],
+          [
+            -95.8651,
+            19.31
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
     "status": "confirmed",
     "ethical_notes": "ETHICS: Tlaxcala represents a rare example of a pre-Columbian collective republic, governed by a council of tlatoque (rulers) rather than a single monarch. Its alliance with Hernán Cortés against the Aztec Triple Alliance is one of the most consequential and morally complex events in American history. Tlaxcalteca leaders made a strategic calculation to ally with the Spanish against their Aztec enemies — a decision that had catastrophic long-term consequences for all Mesoamerican peoples, including the Tlaxcalteca themselves. Colonial sources often portray the Tlaxcalteca as willing collaborators; a more accurate framing recognizes their agency as political actors operating under extreme duress (Aztec economic blockade and constant military pressure).",
     "name_variants": [
-      {"name": "Tlaxcala Republic", "lang": "en", "context": "English designation emphasizing the collective governance structure"},
-      {"name": "República de Tlaxcala", "lang": "es", "context": "Spanish colonial designation acknowledging its non-monarchical government"},
-      {"name": "Texcalticpac", "lang": "nah", "context": "Alternative Nahuatl name meaning 'on the crag'"}
+      {
+        "name": "Tlaxcala Republic",
+        "lang": "en",
+        "context": "English designation emphasizing the collective governance structure"
+      },
+      {
+        "name": "República de Tlaxcala",
+        "lang": "es",
+        "context": "Spanish colonial designation acknowledging its non-monarchical government"
+      },
+      {
+        "name": "Texcalticpac",
+        "lang": "nah",
+        "context": "Alternative Nahuatl name meaning 'on the crag'"
+      }
     ],
     "territory_changes": [
       {
@@ -448,9 +1316,18 @@
       }
     ],
     "sources": [
-      {"citation": "Fargher, Lane F., et al. 'Tlaxcallan: The Archaeology of an Ancient Republic in the New World.' Antiquity 85 (327), 2011", "source_type": "academic", "url": null},
-      {"citation": "Gibson, Charles. Tlaxcala in the Sixteenth Century. New Haven: Yale University Press, 1952", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Fargher, Lane F., et al. 'Tlaxcallan: The Archaeology of an Ancient Republic in the New World.' Antiquity 85 (327), 2011",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Gibson, Charles. Tlaxcala in the Sixteenth Century. New Haven: Yale University Press, 1952",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Cacicazgo de Coclé",
@@ -461,14 +1338,84 @@
     "capital_name": "El Caño / Sitio Conte",
     "capital_lat": 8.58,
     "capital_lon": -80.24,
-    "boundary_geojson": null,
-    "confidence_score": 0.4,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -77.1404,
+            8.58
+          ],
+          [
+            -76.2737,
+            11.4329
+          ],
+          [
+            -77.7063,
+            13.2543
+          ],
+          [
+            -80.24,
+            12.839
+          ],
+          [
+            -82.0099,
+            11.8294
+          ],
+          [
+            -83.8705,
+            10.4554
+          ],
+          [
+            -84.0389,
+            8.58
+          ],
+          [
+            -83.9263,
+            6.6969
+          ],
+          [
+            -82.011,
+            5.522
+          ],
+          [
+            -80.24,
+            4.7157
+          ],
+          [
+            -78.8568,
+            6.3039
+          ],
+          [
+            -77.8399,
+            7.1638
+          ],
+          [
+            -77.1404,
+            8.58
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.3,
     "status": "uncertain",
     "ethical_notes": "ETHICS: The Coclé chiefdoms of central Panama are known primarily through spectacular gold and polychrome ceramic grave goods from the sites of Sitio Conte and El Caño. The original name of this polity and its people is lost — 'Coclé' is a colonial-era provincial name. The elaborate gold funerary traditions suggest a highly stratified society with powerful caciques (chiefs). The goldwork was heavily looted in the colonial period; major archaeological finds at Sitio Conte (1930s-1940s) were excavated by foreign institutions (University of Pennsylvania, Peabody Museum) and removed from Panama, representing a continuation of colonial extraction of indigenous heritage.",
     "name_variants": [
-      {"name": "Gran Coclé cultural area", "lang": "en", "context": "Archaeological designation for the broader cultural sphere in central Pacific Panama"},
-      {"name": "Sitio Conte chiefdom", "lang": "en", "context": "Name derived from the principal archaeological site"},
-      {"name": "Señorío de Coclé", "lang": "es", "context": "Spanish archaeological term using 'señorío' (lordship/chiefdom)"}
+      {
+        "name": "Gran Coclé cultural area",
+        "lang": "en",
+        "context": "Archaeological designation for the broader cultural sphere in central Pacific Panama"
+      },
+      {
+        "name": "Sitio Conte chiefdom",
+        "lang": "en",
+        "context": "Name derived from the principal archaeological site"
+      },
+      {
+        "name": "Señorío de Coclé",
+        "lang": "es",
+        "context": "Spanish archaeological term using 'señorío' (lordship/chiefdom)"
+      }
     ],
     "territory_changes": [
       {
@@ -489,9 +1436,18 @@
       }
     ],
     "sources": [
-      {"citation": "Lothrop, Samuel K. Coclé: An Archaeological Study of Central Panama. 2 vols. Cambridge: Peabody Museum of Archaeology and Ethnology, 1937-1942", "source_type": "archaeological", "url": null},
-      {"citation": "Mayo, Julia, and Richard Cooke. 'El Caño: Elite Burials and a New Chapter in Central Panama Archaeology.' Archaeology Magazine 66(3), 2013", "source_type": "archaeological", "url": null}
-    ]
+      {
+        "citation": "Lothrop, Samuel K. Coclé: An Archaeological Study of Central Panama. 2 vols. Cambridge: Peabody Museum of Archaeology and Ethnology, 1937-1942",
+        "source_type": "archaeological",
+        "url": null
+      },
+      {
+        "citation": "Mayo, Julia, and Richard Cooke. 'El Caño: Elite Burials and a New Chapter in Central Panama Archaeology.' Archaeology Magazine 66(3), 2013",
+        "source_type": "archaeological",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Nsi a Teke",
@@ -502,15 +1458,89 @@
     "capital_name": "Mbé",
     "capital_lat": -3.38,
     "capital_lon": 15.58,
-    "boundary_geojson": null,
-    "confidence_score": 0.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            21.1227,
+            -3.38
+          ],
+          [
+            19.1104,
+            -1.4752
+          ],
+          [
+            17.9001,
+            0.3771
+          ],
+          [
+            15.58,
+            1.0313
+          ],
+          [
+            13.3521,
+            -0.2941
+          ],
+          [
+            13.0123,
+            -1.6719
+          ],
+          [
+            12.3162,
+            -3.38
+          ],
+          [
+            11.1438,
+            -5.5051
+          ],
+          [
+            14.1171,
+            -5.8974
+          ],
+          [
+            15.58,
+            -7.4988
+          ],
+          [
+            17.7882,
+            -7.1361
+          ],
+          [
+            19.4534,
+            -5.4242
+          ],
+          [
+            21.1227,
+            -3.38
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Teke Kingdom (Anziku/Tio Kingdom) controlled trade on the upper Congo River for centuries before European colonization. The Makoko (king) Iloo I signed a treaty with Pierre Savorgnan de Brazza in 1880 that ostensibly placed the kingdom under French 'protection' but was used by France to claim sovereignty over the entire region — founding what became French Congo (later Republic of Congo). The treaty's terms were not accurately communicated to the Makoko, who understood it as a limited commercial agreement, not a cession of sovereignty. Brazzaville, the colonial capital built on Teke land, is named after the French colonizer rather than any African figure.",
     "name_variants": [
-      {"name": "Teke Kingdom", "lang": "en", "context": "Standard English designation"},
-      {"name": "Anziku Kingdom", "lang": "en", "context": "Older English name derived from Portuguese 'Anzico' (corruption of local name)"},
-      {"name": "Royaume Téké", "lang": "fr", "context": "French colonial and academic designation"},
-      {"name": "Tio Kingdom", "lang": "en", "context": "Alternative name used in some academic sources"}
+      {
+        "name": "Teke Kingdom",
+        "lang": "en",
+        "context": "Standard English designation"
+      },
+      {
+        "name": "Anziku Kingdom",
+        "lang": "en",
+        "context": "Older English name derived from Portuguese 'Anzico' (corruption of local name)"
+      },
+      {
+        "name": "Royaume Téké",
+        "lang": "fr",
+        "context": "French colonial and academic designation"
+      },
+      {
+        "name": "Tio Kingdom",
+        "lang": "en",
+        "context": "Alternative name used in some academic sources"
+      }
     ],
     "territory_changes": [
       {
@@ -531,9 +1561,18 @@
       }
     ],
     "sources": [
-      {"citation": "Vansina, Jan. The Tio Kingdom of the Middle Congo, 1880-1892. London: Oxford University Press, 1973", "source_type": "academic", "url": null},
-      {"citation": "Martin, Phyllis M. The External Trade of the Loango Coast, 1576-1870. Oxford: Clarendon Press, 1972", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Vansina, Jan. The Tio Kingdom of the Middle Congo, 1880-1892. London: Oxford University Press, 1973",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Martin, Phyllis M. The External Trade of the Loango Coast, 1576-1870. Oxford: Clarendon Press, 1972",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Garenganze",
@@ -544,15 +1583,89 @@
     "capital_name": "Bunkeya",
     "capital_lat": -10.38,
     "capital_lon": 26.96,
-    "boundary_geojson": null,
-    "confidence_score": 0.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            29.6656,
+            -10.38
+          ],
+          [
+            29.9172,
+            -8.8294
+          ],
+          [
+            28.821,
+            -7.775
+          ],
+          [
+            26.96,
+            -5.4632
+          ],
+          [
+            25.0771,
+            -7.1492
+          ],
+          [
+            24.2103,
+            -8.9401
+          ],
+          [
+            23.3386,
+            -10.38
+          ],
+          [
+            24.4983,
+            -11.7688
+          ],
+          [
+            24.7431,
+            -13.9763
+          ],
+          [
+            26.96,
+            -13.3649
+          ],
+          [
+            28.8804,
+            -14.7102
+          ],
+          [
+            29.7866,
+            -12.115
+          ],
+          [
+            29.6656,
+            -10.38
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Yeke Kingdom (Garenganze) was founded by Msiri, a Nyamwezi-Sumbwa trader from eastern Congo/Tanzania who carved out a powerful state in Katanga through military force and control of copper and ivory trade. Msiri was shot and killed by a Belgian officer, Captain Omer Bodson, during an encounter in 1891 — an act of colonial violence that opened Katanga's immense mineral wealth to Leopold II's Congo Free State. Bodson was also killed in the encounter. The circumstances of Msiri's death remain contested: Belgian sources claim self-defense; African oral traditions describe deliberate assassination. Msiri's kingdom, while relatively short-lived, demonstrates the dynamism of 19th-century African state-building that the 'Scramble for Africa' narrative often ignores.",
     "name_variants": [
-      {"name": "Yeke Kingdom", "lang": "en", "context": "English designation using the ethnic name of Msiri's followers"},
-      {"name": "Royaume du Garenganze", "lang": "fr", "context": "French colonial designation using the kingdom's geographic name"},
-      {"name": "Msiri's Kingdom", "lang": "en", "context": "Common English reference emphasizing the founder"},
-      {"name": "Ugarenganze", "lang": "sw", "context": "Swahili form of the kingdom name"}
+      {
+        "name": "Yeke Kingdom",
+        "lang": "en",
+        "context": "English designation using the ethnic name of Msiri's followers"
+      },
+      {
+        "name": "Royaume du Garenganze",
+        "lang": "fr",
+        "context": "French colonial designation using the kingdom's geographic name"
+      },
+      {
+        "name": "Msiri's Kingdom",
+        "lang": "en",
+        "context": "Common English reference emphasizing the founder"
+      },
+      {
+        "name": "Ugarenganze",
+        "lang": "sw",
+        "context": "Swahili form of the kingdom name"
+      }
     ],
     "territory_changes": [
       {
@@ -573,9 +1686,18 @@
       }
     ],
     "sources": [
-      {"citation": "Legros, Hugues. Chasseurs d'Ivoire: Une Histoire du Royaume Yeke du Shaba (Zaïre). Brussels: Éditions de l'Université de Bruxelles, 1996", "source_type": "academic", "url": null},
-      {"citation": "Verbeken, Auguste. Msiri, Roi du Garenganze. Brussels: L. Cuypers, 1956", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Legros, Hugues. Chasseurs d'Ivoire: Une Histoire du Royaume Yeke du Shaba (Zaïre). Brussels: Éditions de l'Université de Bruxelles, 1996",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Verbeken, Auguste. Msiri, Roi du Garenganze. Brussels: L. Cuypers, 1956",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kanem",
@@ -586,14 +1708,84 @@
     "capital_name": "Njimi",
     "capital_lat": 14.33,
     "capital_lon": 16.5,
-    "boundary_geojson": null,
-    "confidence_score": 0.55,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            28.164,
+            14.33
+          ],
+          [
+            25.3915,
+            19.2214
+          ],
+          [
+            21.045,
+            21.2581
+          ],
+          [
+            16.5,
+            25.419
+          ],
+          [
+            10.3733,
+            24.1495
+          ],
+          [
+            6.9541,
+            19.7152
+          ],
+          [
+            5.5144,
+            14.33
+          ],
+          [
+            4.8391,
+            8.6345
+          ],
+          [
+            11.9747,
+            7.0071
+          ],
+          [
+            16.5,
+            2.3563
+          ],
+          [
+            21.0505,
+            7.3173
+          ],
+          [
+            23.5027,
+            10.4283
+          ],
+          [
+            28.164,
+            14.33
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Kanem Empire (distinct from the later Kanem-Bornu which is already in the database) represents the earlier phase of the Sayfawa dynasty's rule, centered northeast of Lake Chad. It was one of the earliest sub-Saharan African states to adopt Islam (c. 1085) and maintained trans-Saharan trade links with North Africa and Egypt. Arab geographers (al-Muhallabi, al-Bakri, al-Idrisi) provide contemporary descriptions, but these reflect external perspectives that may distort indigenous political realities. The Sayfawa dynasty's claim to be the longest-reigning dynasty in African history (spanning from the 9th to the 19th century) is significant but should be noted as applying to the combined Kanem and Bornu periods.",
     "name_variants": [
-      {"name": "Kanem Empire", "lang": "en", "context": "Standard English designation for the pre-Bornu phase of Sayfawa rule"},
-      {"name": "Empire du Kanem", "lang": "fr", "context": "French academic designation"},
-      {"name": "Sultanat Kanim", "lang": "ar", "context": "Arabic designation from medieval geographic sources"}
+      {
+        "name": "Kanem Empire",
+        "lang": "en",
+        "context": "Standard English designation for the pre-Bornu phase of Sayfawa rule"
+      },
+      {
+        "name": "Empire du Kanem",
+        "lang": "fr",
+        "context": "French academic designation"
+      },
+      {
+        "name": "Sultanat Kanim",
+        "lang": "ar",
+        "context": "Arabic designation from medieval geographic sources"
+      }
     ],
     "territory_changes": [
       {
@@ -614,9 +1806,18 @@
       }
     ],
     "sources": [
-      {"citation": "Lange, Dierk. Le Dīwān des Sultans du Kanem-Bornu: Chronologie et Histoire d'un Royaume Africain. Wiesbaden: Franz Steiner, 1977", "source_type": "academic", "url": null},
-      {"citation": "Levtzion, Nehemia, and J.F.P. Hopkins, eds. Corpus of Early Arabic Sources for West African History. Cambridge: Cambridge University Press, 1981", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "Lange, Dierk. Le Dīwān des Sultans du Kanem-Bornu: Chronologie et Histoire d'un Royaume Africain. Wiesbaden: Franz Steiner, 1977",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Levtzion, Nehemia, and J.F.P. Hopkins, eds. Corpus of Early Arabic Sources for West African History. Cambridge: Cambridge University Press, 1981",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Mangbetu",
@@ -627,14 +1828,84 @@
     "capital_name": "Nabiembali",
     "capital_lat": 2.77,
     "capital_lon": 28.06,
-    "boundary_geojson": null,
-    "confidence_score": 0.55,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            31.7095,
+            2.77
+          ],
+          [
+            30.6048,
+            4.2751
+          ],
+          [
+            29.7837,
+            6.3352
+          ],
+          [
+            28.06,
+            6.8173
+          ],
+          [
+            26.5909,
+            5.8942
+          ],
+          [
+            23.7556,
+            4.8332
+          ],
+          [
+            24.8797,
+            2.77
+          ],
+          [
+            25.691,
+            1.5388
+          ],
+          [
+            26.6928,
+            -0.3557
+          ],
+          [
+            28.06,
+            0.152
+          ],
+          [
+            29.9404,
+            -0.4867
+          ],
+          [
+            31.5931,
+            0.5411
+          ],
+          [
+            31.7095,
+            2.77
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Mangbetu Kingdom in the northeastern Congo basin is notable for its distinctive artistic traditions, including head elongation (lipombo) practiced through cranial binding in infancy. European travelers like Georg Schweinfurth (1870) and later colonial-era exhibitions exoticized Mangbetu culture, particularly portraying head elongation as 'barbaric' while simultaneously collecting and displaying Mangbetu art in European museums. The Mangbetu court's sophisticated artistic production (pottery, metalwork, architecture) was used selectively by colonial propagandists — praised when it suited narratives of 'civilizable' Africans, ignored when it contradicted racist assumptions. King Mbunza welcomed Schweinfurth's expedition but could not have anticipated how his hospitality would contribute to European territorial claims.",
     "name_variants": [
-      {"name": "Mangbetu Kingdom", "lang": "en", "context": "Standard English designation"},
-      {"name": "Royaume Mangbetu", "lang": "fr", "context": "French colonial and academic designation"},
-      {"name": "Manbettu", "lang": "en", "context": "19th-century European rendering from Schweinfurth's accounts"}
+      {
+        "name": "Mangbetu Kingdom",
+        "lang": "en",
+        "context": "Standard English designation"
+      },
+      {
+        "name": "Royaume Mangbetu",
+        "lang": "fr",
+        "context": "French colonial and academic designation"
+      },
+      {
+        "name": "Manbettu",
+        "lang": "en",
+        "context": "19th-century European rendering from Schweinfurth's accounts"
+      }
     ],
     "territory_changes": [
       {
@@ -655,9 +1926,18 @@
       }
     ],
     "sources": [
-      {"citation": "Schweinfurth, Georg. The Heart of Africa: Three Years' Travels and Adventures in the Unexplored Regions of Central Africa. 2 vols. London: Sampson Low, 1873", "source_type": "primary", "url": null},
-      {"citation": "Schildkrout, Enid, and Curtis A. Keim. African Reflections: Art from Northeastern Zaire. Seattle: University of Washington Press, 1990", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Schweinfurth, Georg. The Heart of Africa: Three Years' Travels and Adventures in the Unexplored Regions of Central Africa. 2 vols. London: Sampson Low, 1873",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Schildkrout, Enid, and Curtis A. Keim. African Reflections: Art from Northeastern Zaire. Seattle: University of Washington Press, 1990",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Bamum",
@@ -667,15 +1947,85 @@
     "year_end": 1924,
     "capital_name": "Foumban",
     "capital_lat": 5.73,
-    "capital_lon": 10.90,
-    "boundary_geojson": null,
-    "confidence_score": 0.6,
+    "capital_lon": 10.9,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            14.31,
+            5.73
+          ],
+          [
+            14.1443,
+            7.1521
+          ],
+          [
+            12.5497,
+            8.7563
+          ],
+          [
+            10.9,
+            8.2145
+          ],
+          [
+            9.2461,
+            8.4904
+          ],
+          [
+            8.6848,
+            7.161
+          ],
+          [
+            7.3467,
+            5.73
+          ],
+          [
+            8.8063,
+            4.6178
+          ],
+          [
+            9.1398,
+            3.2374
+          ],
+          [
+            10.9,
+            3.3052
+          ],
+          [
+            12.3351,
+            2.9163
+          ],
+          [
+            13.1671,
+            4.6692
+          ],
+          [
+            14.31,
+            5.73
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Bamum Kingdom of western Cameroon is remarkable for King Njoya's invention of an original writing system (Shu Mom / Bamum script) around 1896 — one of the very few independently created scripts in sub-Saharan Africa. Njoya also reformed the kingdom's legal code, created a pharmacopoeia, and designed a printing press. French colonial administrators suppressed the Bamum script in favor of French and Latin-based writing, and confiscated Njoya's printing equipment — a deliberate act of cultural destruction targeting African intellectual achievement. Njoya was deposed and exiled by the French in 1931, dying in exile in 1933. The Bamum script has experienced a modern revival and is now encoded in Unicode.",
     "name_variants": [
-      {"name": "Bamum Kingdom", "lang": "en", "context": "Standard English designation"},
-      {"name": "Royaume Bamoun", "lang": "fr", "context": "French colonial and modern Cameroonian designation"},
-      {"name": "Mfon Bamoun", "lang": "bax", "context": "Bamum designation using mfon (king/chief) title"}
+      {
+        "name": "Bamum Kingdom",
+        "lang": "en",
+        "context": "Standard English designation"
+      },
+      {
+        "name": "Royaume Bamoun",
+        "lang": "fr",
+        "context": "French colonial and modern Cameroonian designation"
+      },
+      {
+        "name": "Mfon Bamoun",
+        "lang": "bax",
+        "context": "Bamum designation using mfon (king/chief) title"
+      }
     ],
     "territory_changes": [
       {
@@ -696,9 +2046,18 @@
       }
     ],
     "sources": [
-      {"citation": "Geary, Christraud M. Things of the Palace: A Catalogue of the Bamum Palace Museum in Foumban (Cameroon). Wiesbaden: Franz Steiner, 1983", "source_type": "academic", "url": null},
-      {"citation": "Njoya, Sultan Ibrahim. Histoire et Coutumes des Bamum. Trans. Henri Martin. Yaoundé: Mémoires IFAN, 1952", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "Geary, Christraud M. Things of the Palace: A Catalogue of the Bamum Palace Museum in Foumban (Cameroon). Wiesbaden: Franz Steiner, 1983",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Njoya, Sultan Ibrahim. Histoire et Coutumes des Bamum. Trans. Henri Martin. Yaoundé: Mémoires IFAN, 1952",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Þjóðveldið íslensku",
@@ -709,14 +2068,84 @@
     "capital_name": "Þingvellir",
     "capital_lat": 64.26,
     "capital_lon": -21.13,
-    "boundary_geojson": null,
-    "confidence_score": 0.75,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -16.2496,
+            64.26
+          ],
+          [
+            -17.6358,
+            65.1649
+          ],
+          [
+            -18.8753,
+            66.2803
+          ],
+          [
+            -21.13,
+            66.4134
+          ],
+          [
+            -23.2045,
+            65.8503
+          ],
+          [
+            -25.2191,
+            65.1579
+          ],
+          [
+            -26.3173,
+            64.26
+          ],
+          [
+            -25.8323,
+            63.2207
+          ],
+          [
+            -23.1246,
+            62.8186
+          ],
+          [
+            -21.13,
+            62.4092
+          ],
+          [
+            -19.3135,
+            62.9063
+          ],
+          [
+            -16.5202,
+            63.2042
+          ],
+          [
+            -16.2496,
+            64.26
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.65,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Icelandic Commonwealth is often romanticized as an early example of democratic governance, but the Althing (parliament, established 930) was a gathering of goðar (chieftains) — not a democratic assembly in the modern sense. Only free property-holding men had political participation rights; thralls (slaves, many of them Irish and Scottish captives) had none. The adoption of Christianity in 1000 CE was a pragmatic political decision taken at the Althing to avoid civil war, not a free exercise of religious liberty. The Commonwealth ended when Icelandic chieftains, unable to resolve escalating feuds (the Sturlung Age), accepted Norwegian sovereignty through the Gamli sáttmáli (Old Covenant) of 1262-1264.",
     "name_variants": [
-      {"name": "Icelandic Commonwealth", "lang": "en", "context": "Standard English designation for the Althing-governed polity"},
-      {"name": "Icelandic Free State", "lang": "en", "context": "Alternative English term emphasizing its non-monarchical character"},
-      {"name": "République islandaise", "lang": "fr", "context": "French designation"}
+      {
+        "name": "Icelandic Commonwealth",
+        "lang": "en",
+        "context": "Standard English designation for the Althing-governed polity"
+      },
+      {
+        "name": "Icelandic Free State",
+        "lang": "en",
+        "context": "Alternative English term emphasizing its non-monarchical character"
+      },
+      {
+        "name": "République islandaise",
+        "lang": "fr",
+        "context": "French designation"
+      }
     ],
     "territory_changes": [
       {
@@ -737,9 +2166,18 @@
       }
     ],
     "sources": [
-      {"citation": "Byock, Jesse L. Viking Age Iceland. London: Penguin, 2001", "source_type": "academic", "url": null},
-      {"citation": "Jóhannesson, Jón. A History of the Old Icelandic Commonwealth: Íslendinga saga. Trans. Haraldur Bessason. Winnipeg: University of Manitoba Press, 1974", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Byock, Jesse L. Viking Age Iceland. London: Penguin, 2001",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Jóhannesson, Jón. A History of the Old Icelandic Commonwealth: Íslendinga saga. Trans. Haraldur Bessason. Winnipeg: University of Manitoba Press, 1974",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Duché de Normandie",
@@ -749,15 +2187,85 @@
     "year_end": 1204,
     "capital_name": "Rouen",
     "capital_lat": 49.44,
-    "capital_lon": 1.10,
-    "boundary_geojson": null,
-    "confidence_score": 0.8,
+    "capital_lon": 1.1,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            2.1769,
+            49.44
+          ],
+          [
+            2.2416,
+            49.8737
+          ],
+          [
+            1.6778,
+            50.0677
+          ],
+          [
+            1.1,
+            50.3438
+          ],
+          [
+            0.3076,
+            50.4604
+          ],
+          [
+            0.3587,
+            49.739
+          ],
+          [
+            -0.4493,
+            49.44
+          ],
+          [
+            0.3191,
+            49.0892
+          ],
+          [
+            0.2136,
+            48.4361
+          ],
+          [
+            1.1,
+            48.3754
+          ],
+          [
+            1.6341,
+            48.8126
+          ],
+          [
+            2.3918,
+            49.066
+          ],
+          [
+            2.1769,
+            49.44
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.7,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Duchy of Normandy was established when the Viking leader Rollo (Hrólfr) was granted territory by the Frankish king Charles the Simple through the Treaty of Saint-Clair-sur-Epte (911). The Norse settlers rapidly adopted Frankish language, Christianity, and political structures while maintaining distinctive legal and military traditions. The Norman Conquest of England (1066) was one of the most transformative events in English history, replacing the Anglo-Saxon ruling class and reshaping English language, law, and culture. Norman expansion also reached southern Italy, Sicily, and the Holy Land. The duchy's history illustrates how 'Viking' identity was fluid and context-dependent, not a fixed ethnic category.",
     "name_variants": [
-      {"name": "Duchy of Normandy", "lang": "en", "context": "Standard English designation"},
-      {"name": "Ducatus Normanniae", "lang": "la", "context": "Latin form used in medieval diplomatic documents and papal correspondence"},
-      {"name": "Hertugedømmet Normandiet", "lang": "non", "context": "Old Norse approximate rendering, reflecting the duchy's Viking origins"}
+      {
+        "name": "Duchy of Normandy",
+        "lang": "en",
+        "context": "Standard English designation"
+      },
+      {
+        "name": "Ducatus Normanniae",
+        "lang": "la",
+        "context": "Latin form used in medieval diplomatic documents and papal correspondence"
+      },
+      {
+        "name": "Hertugedømmet Normandiet",
+        "lang": "non",
+        "context": "Old Norse approximate rendering, reflecting the duchy's Viking origins"
+      }
     ],
     "territory_changes": [
       {
@@ -786,9 +2294,18 @@
       }
     ],
     "sources": [
-      {"citation": "Bates, David. Normandy Before 1066. London: Longman, 1982", "source_type": "academic", "url": null},
-      {"citation": "Crouch, David. The Normans: The History of a Dynasty. London: Hambledon Continuum, 2002", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Bates, David. Normandy Before 1066. London: Longman, 1982",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Crouch, David. The Normans: The History of a Dynasty. London: Hambledon Continuum, 2002",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Livländischer Orden",
@@ -799,15 +2316,89 @@
     "capital_name": "Cēsis (Wenden)",
     "capital_lat": 57.31,
     "capital_lon": 25.27,
-    "boundary_geojson": null,
-    "confidence_score": 0.75,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            33.9853,
+            57.31
+          ],
+          [
+            33.9029,
+            59.5738
+          ],
+          [
+            28.6829,
+            60.7196
+          ],
+          [
+            25.27,
+            60.708
+          ],
+          [
+            20.7313,
+            61.7492
+          ],
+          [
+            20.0919,
+            59.0738
+          ],
+          [
+            16.5152,
+            57.31
+          ],
+          [
+            19.4638,
+            55.8045
+          ],
+          [
+            20.4104,
+            53.1611
+          ],
+          [
+            25.27,
+            54.046
+          ],
+          [
+            29.4262,
+            53.6724
+          ],
+          [
+            34.0979,
+            55.09
+          ],
+          [
+            33.9853,
+            57.31
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.65,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Livonian Order was the Baltic branch of the Teutonic Order that conquered and Christianized the indigenous Livonian, Latvian, and Estonian peoples through military crusade (the Northern Crusades / Baltic Crusades). The conquest involved systematic destruction of indigenous pagan cultures, forced conversions, and establishment of a German-speaking ruling class (Baltic Germans) over subjugated native populations who were reduced to serfdom. The Livonian Crusade is less well-known than the Holy Land crusades but was equally devastating for the affected peoples. Indigenous Baltic and Finnic populations lost political sovereignty, religious freedom, and land rights. The German-dominated social order persisted until the 20th century.",
     "name_variants": [
-      {"name": "Livonian Order", "lang": "en", "context": "Standard English designation"},
-      {"name": "Livonijas ordenis", "lang": "lv", "context": "Latvian designation; Latvians were among the peoples subjugated by the Order"},
-      {"name": "Liivi ordu", "lang": "et", "context": "Estonian designation; Estonians were conquered during the Northern Crusades"},
-      {"name": "Ordo Fratrum Militiae Christi Livoniae", "lang": "la", "context": "Full Latin name: Order of the Brothers of the Sword of Livonia (original, before merger with Teutonic Order)"}
+      {
+        "name": "Livonian Order",
+        "lang": "en",
+        "context": "Standard English designation"
+      },
+      {
+        "name": "Livonijas ordenis",
+        "lang": "lv",
+        "context": "Latvian designation; Latvians were among the peoples subjugated by the Order"
+      },
+      {
+        "name": "Liivi ordu",
+        "lang": "et",
+        "context": "Estonian designation; Estonians were conquered during the Northern Crusades"
+      },
+      {
+        "name": "Ordo Fratrum Militiae Christi Livoniae",
+        "lang": "la",
+        "context": "Full Latin name: Order of the Brothers of the Sword of Livonia (original, before merger with Teutonic Order)"
+      }
     ],
     "territory_changes": [
       {
@@ -828,9 +2419,18 @@
       }
     ],
     "sources": [
-      {"citation": "Urban, William. The Livonian Crusade. 2nd ed. Chicago: Lithuanian Research and Studies Center, 2004", "source_type": "academic", "url": null},
-      {"citation": "Christiansen, Eric. The Northern Crusades. 2nd ed. London: Penguin, 1997", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Urban, William. The Livonian Crusade. 2nd ed. Chicago: Lithuanian Research and Studies Center, 2004",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Christiansen, Eric. The Northern Crusades. 2nd ed. London: Penguin, 1997",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Великое княжество Литовское",
@@ -841,15 +2441,89 @@
     "capital_name": "Vilnius",
     "capital_lat": 54.69,
     "capital_lon": 25.28,
-    "boundary_geojson": null,
-    "confidence_score": 0.8,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            27.182,
+            54.69
+          ],
+          [
+            26.6921,
+            55.1728
+          ],
+          [
+            26.3565,
+            55.5247
+          ],
+          [
+            25.28,
+            55.4639
+          ],
+          [
+            24.6247,
+            55.316
+          ],
+          [
+            23.7922,
+            55.2798
+          ],
+          [
+            24.0545,
+            54.69
+          ],
+          [
+            23.6225,
+            54.1857
+          ],
+          [
+            24.3996,
+            53.751
+          ],
+          [
+            25.28,
+            53.7192
+          ],
+          [
+            26.1141,
+            53.9191
+          ],
+          [
+            26.4335,
+            54.2093
+          ],
+          [
+            27.182,
+            54.69
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.7,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Grand Duchy of Lithuania was at its peak the largest state in Europe, stretching from the Baltic to the Black Sea. Its history is claimed by multiple modern national narratives — Lithuanian, Belarusian, Polish, and Ukrainian — each emphasizing different aspects. Belarusians argue the Duchy was essentially a Belarusian state (the chancery language was Ruthenian/Old Belarusian); Lithuanians emphasize the Lithuanian ruling dynasty and pagan heritage; Poles highlight the later Commonwealth partnership. This database must not privilege any single national narrative. The Duchy's early religious tolerance (accommodating pagans, Orthodox Christians, Catholics, Jews, and Muslims) contrasts with the later forced Catholicization after the Union of Krewo (1385).",
     "name_variants": [
-      {"name": "Grand Duchy of Lithuania", "lang": "en", "context": "Standard English designation"},
-      {"name": "Lietuvos Didžioji Kunigaikštystė", "lang": "lt", "context": "Lithuanian designation, emphasizing Lithuanian national heritage"},
-      {"name": "Вялікае Княства Літоўскае", "lang": "be", "context": "Belarusian designation; Belarusians consider the Duchy a Belarusian state as Ruthenian was its chancery language"},
-      {"name": "Magnus Ducatus Lithuaniae", "lang": "la", "context": "Latin diplomatic form used in official documents"}
+      {
+        "name": "Grand Duchy of Lithuania",
+        "lang": "en",
+        "context": "Standard English designation"
+      },
+      {
+        "name": "Lietuvos Didžioji Kunigaikštystė",
+        "lang": "lt",
+        "context": "Lithuanian designation, emphasizing Lithuanian national heritage"
+      },
+      {
+        "name": "Вялікае Княства Літоўскае",
+        "lang": "be",
+        "context": "Belarusian designation; Belarusians consider the Duchy a Belarusian state as Ruthenian was its chancery language"
+      },
+      {
+        "name": "Magnus Ducatus Lithuaniae",
+        "lang": "la",
+        "context": "Latin diplomatic form used in official documents"
+      }
     ],
     "territory_changes": [
       {
@@ -878,9 +2552,18 @@
       }
     ],
     "sources": [
-      {"citation": "Rowell, S.C. Lithuania Ascending: A Pagan Empire within East-Central European Christendom, 1295-1345. Cambridge: Cambridge University Press, 1994", "source_type": "academic", "url": null},
-      {"citation": "Frost, Robert I. The Oxford History of Poland-Lithuania. Vol. I: The Making of the Polish-Lithuanian Union, 1385-1569. Oxford: Oxford University Press, 2015", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Rowell, S.C. Lithuania Ascending: A Pagan Empire within East-Central European Christendom, 1295-1345. Cambridge: Cambridge University Press, 1994",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Frost, Robert I. The Oxford History of Poland-Lithuania. Vol. I: The Making of the Polish-Lithuanian Union, 1385-1569. Oxford: Oxford University Press, 2015",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Konungsveldið Noregs",
@@ -891,14 +2574,84 @@
     "capital_name": "Bergen",
     "capital_lat": 60.39,
     "capital_lon": 5.32,
-    "boundary_geojson": null,
-    "confidence_score": 0.8,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            10.9213,
+            60.39
+          ],
+          [
+            12.65,
+            62.1871
+          ],
+          [
+            9.0336,
+            63.4378
+          ],
+          [
+            5.32,
+            63.9456
+          ],
+          [
+            1.2399,
+            63.8375
+          ],
+          [
+            0.2548,
+            61.5561
+          ],
+          [
+            -1.4982,
+            60.39
+          ],
+          [
+            -2.4849,
+            58.1797
+          ],
+          [
+            1.1553,
+            56.9423
+          ],
+          [
+            5.32,
+            57.5469
+          ],
+          [
+            9.3893,
+            57.4909
+          ],
+          [
+            10.9301,
+            58.6204
+          ],
+          [
+            10.9213,
+            60.39
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.7,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Norwegian Kingdom at its medieval height controlled an extensive maritime empire including Iceland, Greenland, the Faroe Islands, Orkney, Shetland, the Hebrides, and the Isle of Man. The incorporation of Iceland (1262-64) and Greenland (1261) through the Old Covenant involved significant economic coercion, as Norway controlled the vital trade that island communities depended on. The Norse Greenland settlements ultimately collapsed (c. 1350-1500) from a combination of climatic deterioration (Little Ice Age), trade disruption, and possible conflict with Inuit populations — representing one of the few examples of European colonial failure before the modern era. The Haakon IV period represents Norway's peak before its decline under the Kalmar Union.",
     "name_variants": [
-      {"name": "Kingdom of Norway (High Medieval)", "lang": "en", "context": "English designation specifying the high medieval peak period"},
-      {"name": "Kongeriket Norge", "lang": "no", "context": "Modern Norwegian form"},
-      {"name": "Regnum Norvegiae", "lang": "la", "context": "Latin form used in papal and diplomatic correspondence"}
+      {
+        "name": "Kingdom of Norway (High Medieval)",
+        "lang": "en",
+        "context": "English designation specifying the high medieval peak period"
+      },
+      {
+        "name": "Kongeriket Norge",
+        "lang": "no",
+        "context": "Modern Norwegian form"
+      },
+      {
+        "name": "Regnum Norvegiae",
+        "lang": "la",
+        "context": "Latin form used in papal and diplomatic correspondence"
+      }
     ],
     "territory_changes": [
       {
@@ -919,9 +2672,18 @@
       }
     ],
     "sources": [
-      {"citation": "Helle, Knut, ed. The Cambridge History of Scandinavia. Vol. 1: Prehistory to 1520. Cambridge: Cambridge University Press, 2003", "source_type": "academic", "url": null},
-      {"citation": "Bagge, Sverre. From Viking Stronghold to Christian Kingdom: State Formation in Norway, c. 900-1350. Copenhagen: Museum Tusculanum Press, 2010", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Helle, Knut, ed. The Cambridge History of Scandinavia. Vol. 1: Prehistory to 1520. Cambridge: Cambridge University Press, 2003",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Bagge, Sverre. From Viking Stronghold to Christian Kingdom: State Formation in Norway, c. 900-1350. Copenhagen: Museum Tusculanum Press, 2010",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Hertugdømmet Slesvig",
@@ -932,14 +2694,84 @@
     "capital_name": "Slesvig (Schleswig)",
     "capital_lat": 54.52,
     "capital_lon": 9.57,
-    "boundary_geojson": null,
-    "confidence_score": 0.75,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            11.1427,
+            54.52
+          ],
+          [
+            11.5027,
+            55.1108
+          ],
+          [
+            10.5012,
+            55.7806
+          ],
+          [
+            9.57,
+            55.2811
+          ],
+          [
+            8.874,
+            55.16
+          ],
+          [
+            8.3071,
+            54.9267
+          ],
+          [
+            7.6455,
+            54.52
+          ],
+          [
+            8.391,
+            54.146
+          ],
+          [
+            8.6587,
+            53.3683
+          ],
+          [
+            9.57,
+            53.7314
+          ],
+          [
+            10.3325,
+            53.8065
+          ],
+          [
+            11.0636,
+            54.0025
+          ],
+          [
+            11.1427,
+            54.52
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.65,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Duchy of Schleswig is one of the most consequential disputed territories in Northern European history, with Danish and German national movements both claiming it as integral to their nation. The Schleswig-Holstein Question — famously described by Lord Palmerston as so complicated that only three people understood it — led to the Danish-German wars of 1848-1851 and 1864, reshaping the political map of Northern Europe and contributing directly to German unification under Prussia. The territory's population was mixed Danish-German-Frisian, and both national movements sought to impose monoethnic identity on a multilingual region. The 1920 plebiscite that partitioned Schleswig left minorities on both sides of the border. This entity must present both Danish and German perspectives without privileging either national narrative.",
     "name_variants": [
-      {"name": "Duchy of Schleswig", "lang": "en", "context": "Standard English designation using the German-derived form"},
-      {"name": "Herzogtum Schleswig", "lang": "de", "context": "German designation, reflecting the duchy's role in German national history"},
-      {"name": "Ducatus Slesvicensis", "lang": "la", "context": "Latin form used in medieval documents"}
+      {
+        "name": "Duchy of Schleswig",
+        "lang": "en",
+        "context": "Standard English designation using the German-derived form"
+      },
+      {
+        "name": "Herzogtum Schleswig",
+        "lang": "de",
+        "context": "German designation, reflecting the duchy's role in German national history"
+      },
+      {
+        "name": "Ducatus Slesvicensis",
+        "lang": "la",
+        "context": "Latin form used in medieval documents"
+      }
     ],
     "territory_changes": [
       {
@@ -960,9 +2792,18 @@
       }
     ],
     "sources": [
-      {"citation": "Scharff, Alexander. Schleswig-Holstein in der deutschen und nordeuropäischen Geschichte. Stuttgart: Klett, 1969", "source_type": "academic", "url": null},
-      {"citation": "Bregnsbo, Michael, and Kurt Villads Jensen. The Rise and Fall of the Danish Empire. Cambridge: Cambridge University Press, 2004", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Scharff, Alexander. Schleswig-Holstein in der deutschen und nordeuropäischen Geschichte. Stuttgart: Klett, 1969",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Bregnsbo, Michael, and Kurt Villads Jensen. The Rise and Fall of the Danish Empire. Cambridge: Cambridge University Press, 2004",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Recuay",
@@ -973,14 +2814,84 @@
     "capital_name": "Pashash",
     "capital_lat": -8.39,
     "capital_lon": -77.85,
-    "boundary_geojson": null,
-    "confidence_score": 0.45,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -72.4448,
+            -8.39
+          ],
+          [
+            -75.1262,
+            -6.4586
+          ],
+          [
+            -76.0229,
+            -5.6786
+          ],
+          [
+            -77.85,
+            -4.2858
+          ],
+          [
+            -79.7316,
+            -4.6416
+          ],
+          [
+            -81.9432,
+            -6.4654
+          ],
+          [
+            -83.7477,
+            -8.39
+          ],
+          [
+            -82.1384,
+            -10.8761
+          ],
+          [
+            -80.4876,
+            -13.1155
+          ],
+          [
+            -77.85,
+            -13.1702
+          ],
+          [
+            -76.1286,
+            -11.2898
+          ],
+          [
+            -73.6649,
+            -11.3375
+          ],
+          [
+            -72.4448,
+            -8.39
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.35,
     "status": "uncertain",
     "ethical_notes": "ETHICS: The Recuay culture of the Ancash highlands in Peru developed a sophisticated artistic tradition notable for its distinctive stone sculpture and three-dimensional modeled ceramics. The name 'Recuay' is taken from the modern province; the ancient people's self-designation is unknown. Recuay art depicts warriors, elite women, and camelid-herding scenes that provide rare insight into highland Andean social organization during the Early Intermediate Period. The culture developed alongside the coastal Moche civilization, and their interactions (trade, warfare, artistic exchange) demonstrate the highland-coast dynamics fundamental to Andean civilization. Much Recuay material was looted before systematic archaeological study began.",
     "name_variants": [
-      {"name": "Recuay culture", "lang": "en", "context": "Standard English archaeological designation"},
-      {"name": "Cultura Recuay", "lang": "es", "context": "Spanish archaeological term"},
-      {"name": "Pashash tradition", "lang": "en", "context": "Alternative designation referencing the principal archaeological site of Pashash (Cabana)"}
+      {
+        "name": "Recuay culture",
+        "lang": "en",
+        "context": "Standard English archaeological designation"
+      },
+      {
+        "name": "Cultura Recuay",
+        "lang": "es",
+        "context": "Spanish archaeological term"
+      },
+      {
+        "name": "Pashash tradition",
+        "lang": "en",
+        "context": "Alternative designation referencing the principal archaeological site of Pashash (Cabana)"
+      }
     ],
     "territory_changes": [
       {
@@ -1001,9 +2912,18 @@
       }
     ],
     "sources": [
-      {"citation": "Lau, George F. Andean Expressions: Art and Archaeology of the Recuay Culture. Iowa City: University of Iowa Press, 2011", "source_type": "academic", "url": null},
-      {"citation": "Grieder, Terence. Art and Archaeology of Pashash. Austin: University of Texas Press, 1978", "source_type": "archaeological", "url": null}
-    ]
+      {
+        "citation": "Lau, George F. Andean Expressions: Art and Archaeology of the Recuay Culture. Iowa City: University of Iowa Press, 2011",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Grieder, Terence. Art and Archaeology of Pashash. Austin: University of Texas Press, 1978",
+        "source_type": "archaeological",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Chimor Ñisqap Llaqtan",
@@ -1014,14 +2934,84 @@
     "capital_name": "Chan Chan",
     "capital_lat": -8.11,
     "capital_lon": -79.07,
-    "boundary_geojson": null,
-    "confidence_score": 0.65,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -70.1506,
+            -8.11
+          ],
+          [
+            -70.6234,
+            -2.5648
+          ],
+          [
+            -74.932,
+            -1.476
+          ],
+          [
+            -79.07,
+            0.7666
+          ],
+          [
+            -84.0309,
+            -1.2893
+          ],
+          [
+            -90.4985,
+            -2.9121
+          ],
+          [
+            -86.9077,
+            -8.11
+          ],
+          [
+            -88.0153,
+            -12.0608
+          ],
+          [
+            -83.4453,
+            -15.2298
+          ],
+          [
+            -79.07,
+            -18.3976
+          ],
+          [
+            -74.0974,
+            -18.5348
+          ],
+          [
+            -68.5019,
+            -13.64
+          ],
+          [
+            -70.1506,
+            -8.11
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
     "status": "confirmed",
     "ethical_notes": "ETHICS: Note: batch_04 contains 'Chimor' as a brief entry. This is a distinct, expanded entity using the full Quechua designation 'Chimor Ñisqap Llaqtan' (Land of the Chimor) and focusing on the imperial administrative system and its conquest by the Inca. The Chimú Empire built Chan Chan, the largest adobe city in the world (20 sq km), whose monumental ciudadelas (royal compounds) were each sealed upon the ruler's death — a practice of Split Inheritance that drove continuous imperial expansion. The 1470 Inca conquest under Tupac Inca Yupanqui involved cutting off Chan Chan's water supply — an act of hydraulic warfare that exploited the arid coast's vulnerability. Chimú artisans were forcibly relocated to Cusco, representing cultural extraction by conquest.",
     "name_variants": [
-      {"name": "Chimú Empire", "lang": "en", "context": "Standard English archaeological designation"},
-      {"name": "Imperio Chimú", "lang": "es", "context": "Spanish designation used in Peruvian archaeology"},
-      {"name": "Kingdom of Chimor", "lang": "en", "context": "Alternative English rendering from ethnohistoric sources (Chimor being the indigenous state name)"}
+      {
+        "name": "Chimú Empire",
+        "lang": "en",
+        "context": "Standard English archaeological designation"
+      },
+      {
+        "name": "Imperio Chimú",
+        "lang": "es",
+        "context": "Spanish designation used in Peruvian archaeology"
+      },
+      {
+        "name": "Kingdom of Chimor",
+        "lang": "en",
+        "context": "Alternative English rendering from ethnohistoric sources (Chimor being the indigenous state name)"
+      }
     ],
     "territory_changes": [
       {
@@ -1042,8 +3032,17 @@
       }
     ],
     "sources": [
-      {"citation": "Moseley, Michael E., and Alana Cordy-Collins, eds. The Northern Dynasties: Kingship and Statecraft in Chimor. Washington, D.C.: Dumbarton Oaks, 1990", "source_type": "academic", "url": null},
-      {"citation": "Moore, Jerry D., and Carol J. Mackey. 'The Chimú Empire.' In The Handbook of South American Archaeology, edited by H. Silverman and W. Isbell. New York: Springer, 2008", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Moseley, Michael E., and Alana Cordy-Collins, eds. The Northern Dynasties: Kingship and Statecraft in Chimor. Washington, D.C.: Dumbarton Oaks, 1990",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Moore, Jerry D., and Carol J. Mackey. 'The Chimú Empire.' In The Handbook of South American Archaeology, edited by H. Silverman and W. Isbell. New York: Springer, 2008",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   }
 ]

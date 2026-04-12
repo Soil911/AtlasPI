@@ -7,132 +7,148 @@
 - scope limitato per ogni release
 - prima la base etica e architetturale, poi il codice applicativo
 - nessuna feature fuori roadmap senza aggiornamento esplicito di questo file
-
-## Versioni previste
-
-### v0.0.1
-Fondazione del progetto:
-- CLAUDE.md
-- README.md
-- LICENSE.md
-- ROADMAP.md
-- CHANGELOG.md
-- docs/adr/
-- docs/ethics/
-- docs/TEMPLATES.md
-- struttura repository iniziale
-
-### v0.0.2
-Bootstrap tecnico minimo:
-- pyproject o requirements
-- configurazione base FastAPI
-- struttura iniziale src/
-- struttura iniziale tests/
-- .gitignore
-- convenzioni base di progetto
-
-### v0.1.0
-Primo scheletro applicativo:
-- endpoint healthcheck
-- configurazione database
-- modello iniziale entità geografica
-- schema risposta API iniziale
-- prime validazioni di struttura
-
-### v0.2.0
-Primo flusso dati:
-- pipeline importazione dataset demo
-- normalizzazione minima
-- primo record interrogabile via API
-- primi test tecnici ed etici
-
-### v0.3.0
-Primo nucleo storico:
-- supporto year nelle query
-- supporto name_original e name_variants
-- supporto confidence_score
-- supporto sources
-
-### v0.4.0
-Primo nucleo geopolitico:
-- boundary_geojson
-- capital
-- territory_changes
-- status confirmed|uncertain|disputed
-
-### v0.5.0
-Primo dataset demo coerente:
-- piccola collezione di entità storiche
-- validazione documentata
-- note etiche nei casi sensibili
-
-### v0.6.0
-Preparazione alpha pubblica:
-- documentazione migliorata
-- quality pass
-- review etica
-- review architetturale
-- definizione licenza core
-
-### v1.0.0
-Prima release pubblica stabile del core.
+- "se non e' online, non esiste"
 
 ---
 
-## Roadmap post-v4.5 — Verso il prodotto completo
+## Versioni completate
 
-### v4.6 — UX Polish & Deep Linking
-Come utente: "Ho trovato un'entità interessante, voglio condividerla" / "Voglio usare la tastiera"
-- Sezioni dettaglio collassabili (click per espandere/chiudere)
-- Scorciatoie tastiera (Esc chiude dettaglio, ↑↓ naviga risultati)
-- URL state management (?entity=5&year=1500&lang=en)
-- Tooltip mappa arricchiti (tipo, confidence bar, periodo)
+### v0.0.1 → v0.6.0 — Fondazione (completate)
+- Struttura progetto, CLAUDE.md, governance etica, ADR
+- FastAPI + SQLAlchemy + SQLite bootstrap
+- Modello dati completo: entita', fonti, varianti nome, cambi territoriali
+- Pipeline seed da JSON, confidence scoring, status management
 
-### v4.7 — Filtro Continente & Contemporanei in UI
-Come utente: "Studio la storia africana, mostrami solo l'Africa" / "Chi c'era ai tempi dei Romani?"
-- Filtro per continente/regione
-- Tab contemporanei nel pannello dettaglio
-- Icone tipo entità nei risultati e sulla mappa
-- Mini-preview al hover sulla mappa
+### v1.0.0 → v4.5 — Prima release e iterazioni (completate)
+- 16 endpoint REST, mappa Leaflet interattiva
+- Dark theme, slider temporale, autocomplete
+- Dataset iniziale 40+ entita', test suite 100+
+- Export GeoJSON/CSV/Timeline
 
-### v4.8 — Tema & Raffinamento Visivo
-Come utente: "Presento questo a lezione, serve il light mode" / "Serve più contrasto"
-- Toggle dark/light mode con localStorage
-- Contrasto colori migliorato (WCAG AAA dove possibile)
-- Label mappa scalati per zoom
-- Print stylesheet
+### v4.6 → v4.8 — UX Polish (completate)
+- Sezioni collassabili, keyboard shortcuts, deep linking URL
+- Filtro continente, contemporanei, icone tipo
+- Toggle dark/light mode, WCAG migliorato
 
-### v5.0 — Timeline Interattiva & Confronto (major)
-Come storico: "Voglio vedere la storia scorrere" / "Confronta Impero Romano e Ottomano"
-- Timeline clickabile (click su barra → dettaglio)
-- Endpoint /v1/compare/{id1}/{id2}
-- Modalità confronto in UI (fianco a fianco)
-- Playback temporale (animazione attraverso gli anni)
+### v5.0 → v5.4 — Feature expansion (completate)
+- Timeline interattiva, /v1/compare endpoint, confronto UI
+- Condivisione, embed mode, meta OG
+- /v1/random, developer experience
+- Espansione a 55+ entita', diversita' geografica
+- 130+ test, security hardening
 
-### v5.1 — Condivisione & Embedding
-Come blogger/docente: "Voglio incorporare questa mappa nel mio sito"
-- Pulsante condivisione (copia URL con stato)
-- Modalità embed (/embed?year=1500 — UI minimale)
-- Permalink per entità
-- Meta OG dinamici per entità
+### v5.5 → v5.8 — Scaling massivo (completate)
+- Espansione da 55 a **746 entita'** con 25 batch files
+- 2,200+ fonti accademiche, 2,000+ cambi territoriali
+- 21 endpoint API (nearby, snapshot, evolution, aggregation)
+- Marker clustering, mini-timeline canvas, filtri avanzati
+- **208 test** passano, dedup cross-batch automatizzato
 
-### v5.2 — Developer Experience
-Come sviluppatore AI: "Dammi esempi di come usare l'API"
-- Endpoint /v1/random (entità casuale)
-- Snippets codice nelle docs OpenAPI (Python, JS, curl)
-- Messaggi errore migliorati
-- API changelog endpoint
+---
 
-### v5.3 — Espansione Dati
-Come istituzione: "40 entità non bastano, serve più copertura"
-- Espansione a 55+ entità
-- Migliore diversità geografica (Oceania, Sudest Asiatico, America precolombiana)
-- Più cambi territoriali e fonti per entità esistenti
+## Roadmap attiva — Verso il lancio pubblico
 
-### v5.4 — Hardening Produzione
-Come CTO: "È pronto per la produzione? Posso fidarmi?"
-- 130+ test (nuovi edge case, integration, a11y)
-- Ottimizzazione performance
-- Security hardening
-- Documentazione finale
-- Rilancio server
+### v6.0 — DEPLOY ONLINE (priorita' assoluta)
+Come co-fondatore: "Se non e' online, non esiste come prodotto"
+
+**Obiettivo**: AtlasPI accessibile da qualsiasi browser nel mondo.
+
+- [ ] Dockerfile multi-stage (build + runtime)
+- [ ] Configurazione Railway/Render con PostgreSQL
+- [ ] Gunicorn/Uvicorn production server
+- [ ] Variabili ambiente per produzione (DATABASE_URL, SECRET_KEY, etc.)
+- [ ] CORS configurato per dominio reale
+- [ ] Health check endpoint ottimizzato per monitoring
+- [ ] Dominio personalizzato (atlaspi.dev o simile)
+- [ ] HTTPS automatico
+- [ ] Seed automatico al primo deploy
+- [ ] README con "Try it live" badge
+
+**Criterio di completamento**: `curl https://atlaspi.dev/health` risponde `200 OK`.
+
+### v6.1 — POSTGRESQL + POSTGIS
+Come CTO: "SQLite non scala e non fa query spaziali"
+
+**Obiettivo**: database di produzione con query geospaziali native.
+
+- [ ] Migrazione schema a PostgreSQL (Alembic)
+- [ ] PostGIS per query spaziali (ST_Contains, ST_DWithin, ST_Distance)
+- [ ] /v1/nearby riscitto con PostGIS (da O(n) a O(log n))
+- [ ] Indici GiST su boundary_geojson
+- [ ] Connection pooling (SQLAlchemy pool + pgbouncer)
+- [ ] Seed compatibile PostgreSQL
+- [ ] SQLite mantenuto per sviluppo locale
+- [ ] Benchmark: nearby sotto 50ms con 1000+ entita'
+
+### v6.2 — BOUNDARY COVERAGE
+Come utente: "La mappa e' piena di puntini, dov'e' la geografia?"
+
+**Obiettivo**: almeno 60% delle entita' con confini poligonali reali.
+
+Stato attuale: solo 174/746 (23%) hanno boundary Polygon.
+
+- [ ] Pipeline import da Natural Earth (paesi moderni → entita' corrispondenti)
+- [ ] Simplified GeoJSON per entita' storiche (da fonti OSM/wikimedia)
+- [ ] Tool semi-automatico: dato un'entita', genera boundary approssimato
+- [ ] Validazione: ogni boundary deve avere fonte e confidence
+- [ ] Target: 450+ entita' con Polygon (60%+)
+- [ ] ETHICS: i confini contestati mantengono versioni multiple
+
+### v6.3 — API AUTHENTICATION
+Come business: "Per il modello open core serve il gate"
+
+- [ ] Sistema API key (generazione, validazione, revoca)
+- [ ] Tier gratuito: 1000 req/giorno, 20 req/minuto
+- [ ] Tier premium: 50000 req/giorno, 100 req/minuto
+- [ ] Rate limiting reale (Redis-backed, non solo header)
+- [ ] Dashboard sviluppatore (registrazione, uso, chiave)
+- [ ] Header X-RateLimit-Remaining, X-RateLimit-Reset
+- [ ] Documentazione per sviluppatori AI
+
+### v6.4 — LANDING PAGE & DOCS
+Come marketing: "Il prodotto si vende se lo vedono"
+
+- [ ] Landing page statica con demo interattiva embed
+- [ ] Documentazione API (non solo Swagger, ma guida narrativa)
+- [ ] Esempi codice: Python, JavaScript, curl
+- [ ] Sezione "For AI Agents" con use case specifici
+- [ ] Blog/changelog pubblico
+- [ ] SEO per "historical geographic API"
+
+---
+
+## Visione post-v6 — Crescita
+
+### v7.0 — LANCIO PUBBLICO
+- Product Hunt / Hacker News launch
+- 1000+ entita', 80%+ con boundary
+- Free tier generoso, premium per volume
+- Primo feedback utenti reali
+
+### v7.x — Funzionalita' avanzate
+- Playback temporale animato (storia che scorre sulla mappa)
+- API GraphQL come alternativa a REST
+- Webhook per notifiche su nuove entita'
+- Community contribution system (correzioni, nuove entita')
+- Integrazioni: Wikidata sync, Natural Earth auto-update
+
+### v8.0 — Enterprise
+- Multi-tenancy per istituzioni accademiche
+- Dataset curati premium (es. "Colonialismo completo", "Guerre mondiali")
+- SLA garantito, supporto dedicato
+- Audit log per compliance accademica
+
+---
+
+## Metriche di successo per il lancio (v7.0)
+
+| Metrica | Target |
+|---------|--------|
+| Entita' | 1,000+ |
+| Boundary coverage | 80%+ |
+| Uptime | 99.5% |
+| Latenza API p95 | < 200ms |
+| Test coverage | 250+ test |
+| Endpoint | 25+ |
+| Utenti registrati | 100+ (primo mese) |
+| Stelle GitHub | 50+ (primo mese) |

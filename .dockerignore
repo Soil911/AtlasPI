@@ -1,6 +1,8 @@
 __pycache__
 *.pyc
+*.pyo
 .git
+.gitignore
 .env
 .venv
 venv
@@ -8,8 +10,14 @@ venv
 .mypy_cache
 .ruff_cache
 *.db
+*.db-shm
+*.db-wal
 tests/
 docs/
 .github/
+.claude/
+node_modules/
 *.md
 !README.md
+server.log
+*.log

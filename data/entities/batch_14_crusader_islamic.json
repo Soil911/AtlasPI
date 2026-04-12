@@ -9,13 +9,65 @@
     "capital_lat": 31.7683,
     "capital_lon": 35.2137,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        35.2137,
-        31.7683
+        [
+          [
+            37.6068,
+            31.7683
+          ],
+          [
+            38.4765,
+            33.26
+          ],
+          [
+            36.3838,
+            33.6252
+          ],
+          [
+            35.2137,
+            34.3029
+          ],
+          [
+            33.8477,
+            33.7071
+          ],
+          [
+            31.5925,
+            33.4768
+          ],
+          [
+            31.5327,
+            31.7683
+          ],
+          [
+            32.8055,
+            30.2661
+          ],
+          [
+            34.1792,
+            30.238
+          ],
+          [
+            35.2137,
+            28.5956
+          ],
+          [
+            36.7746,
+            29.6541
+          ],
+          [
+            38.5717,
+            30.1894
+          ],
+          [
+            37.6068,
+            31.7683
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "disputed",
     "ethical_notes": "ETHICS: The Kingdom of Jerusalem was established through the First Crusade (1099), during which Crusaders massacred the Muslim and Jewish inhabitants of Jerusalem. Contemporary sources (both Latin and Arabic) describe the slaughter of thousands of civilians in the al-Aqsa mosque and throughout the city. The kingdom imposed a feudal system that displaced or subordinated the existing Muslim, Jewish, and Eastern Christian populations. Local communities were subject to discriminatory laws, forced conversions, and periodic violence. The 'Crusader states' narrative often centres European perspectives; Arab/Muslim sources (Ibn al-Athir, Usama ibn Munqidh) describe the same events as an invasion (al-hurub al-salibiyya). Both perspectives must be represented. The kingdom's boundaries shifted constantly and are inherently disputed.",
     "name_variants": [
@@ -99,7 +151,8 @@
         "citation": "Fulcher of Chartres, Historia Hierosolymitana (c. 1127)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Comitatus Tripolitanus",
@@ -111,13 +164,65 @@
     "capital_lat": 34.4367,
     "capital_lon": 35.8497,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        35.8497,
-        34.4367
+        [
+          [
+            38.7553,
+            34.4367
+          ],
+          [
+            38.4746,
+            35.5617
+          ],
+          [
+            37.7216,
+            37.1121
+          ],
+          [
+            35.8497,
+            38.0948
+          ],
+          [
+            33.8056,
+            37.3391
+          ],
+          [
+            33.4583,
+            35.5594
+          ],
+          [
+            33.3156,
+            34.4367
+          ],
+          [
+            32.2603,
+            32.7035
+          ],
+          [
+            33.7118,
+            31.054
+          ],
+          [
+            35.8497,
+            31.9464
+          ],
+          [
+            37.0298,
+            32.3294
+          ],
+          [
+            38.5671,
+            32.9438
+          ],
+          [
+            38.7553,
+            34.4367
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "disputed",
     "ethical_notes": "ETHICS: The County of Tripoli was established through military conquest by Raymond IV of Toulouse during the First Crusade. The siege of Tripoli (1102-1109) caused severe suffering to the local Muslim population. The county displaced and subordinated indigenous Muslim, Druze, and Maronite Christian communities. Maronite Christians had a complex relationship with the Crusaders — often allied but not treated as equals. The county's entity_type is listed as 'kingdom' since 'county' is not in the allowed types; it was technically a feudal county vassal to Jerusalem. Boundaries are approximate and heavily contested in scholarship.",
     "name_variants": [
@@ -182,7 +287,8 @@
         "citation": "William of Tyre, Historia rerum in partibus transmarinis gestarum (c. 1170-1184)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Principatus Antiochenus",
@@ -194,13 +300,65 @@
     "capital_lat": 36.2025,
     "capital_lon": 36.1564,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        36.1564,
-        36.2025
+        [
+          [
+            37.9193,
+            36.2025
+          ],
+          [
+            37.2518,
+            36.6312
+          ],
+          [
+            36.9735,
+            37.2502
+          ],
+          [
+            36.1564,
+            37.272
+          ],
+          [
+            35.4301,
+            37.2282
+          ],
+          [
+            35.0915,
+            36.7223
+          ],
+          [
+            34.7856,
+            36.2025
+          ],
+          [
+            35.2527,
+            35.698
+          ],
+          [
+            35.6351,
+            35.5571
+          ],
+          [
+            36.1564,
+            35.2634
+          ],
+          [
+            36.8343,
+            35.219
+          ],
+          [
+            37.3729,
+            35.6134
+          ],
+          [
+            37.9193,
+            36.2025
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "disputed",
     "ethical_notes": "ETHICS: The Principality of Antioch was established by Bohemond I of Taranto after the siege of Antioch (1098), during which both the Crusader besiegers and the Muslim defenders suffered enormous casualties. The city had been part of the Byzantine Empire and its seizure by the Normans created lasting conflict with Byzantium. The principality subordinated a diverse population including Greek Orthodox Christians, Armenian Christians, Syriac Christians, and Muslims. The Crusader elite imposed Latin religious authority, marginalizing Eastern Christian churches. The destruction of Antioch by the Mongols (1260) and final conquest by Baybars (1268) effectively destroyed one of the oldest continuously inhabited cities of the ancient world.",
     "name_variants": [
@@ -272,7 +430,8 @@
         "citation": "Cahen, C. La Syrie du Nord a l'époque des Croisades (1940)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Comitatus Edessanus",
@@ -284,13 +443,65 @@
     "capital_lat": 37.1591,
     "capital_lon": 38.7955,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        38.7955,
-        37.1591
+        [
+          [
+            44.6099,
+            37.1591
+          ],
+          [
+            42.5457,
+            38.9887
+          ],
+          [
+            40.6242,
+            39.7353
+          ],
+          [
+            38.7955,
+            40.1992
+          ],
+          [
+            36.6029,
+            40.6207
+          ],
+          [
+            36.1866,
+            38.1722
+          ],
+          [
+            34.6561,
+            37.1591
+          ],
+          [
+            35.1738,
+            35.722
+          ],
+          [
+            36.3982,
+            34.5443
+          ],
+          [
+            38.7955,
+            32.8736
+          ],
+          [
+            41.2775,
+            34.0068
+          ],
+          [
+            42.4312,
+            35.2823
+          ],
+          [
+            44.6099,
+            37.1591
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "disputed",
     "ethical_notes": "ETHICS: The County of Edessa was the first Crusader state established and the first to fall. Baldwin of Boulogne exploited local Armenian Christian political rivalries to seize power. He was adopted by the Armenian ruler Thoros, who was subsequently murdered in a popular uprising that Baldwin may have instigated. The county was unique among Crusader states for its significant Armenian Christian population, who served as intermediaries but were not treated as equals by the Frankish elite. Its fall to Zengi in 1144 triggered the Second Crusade. entity_type is 'kingdom' as 'county' is not in the allowed types; this was a feudal county. Modern Urfa (Sanliurfa), Turkey, preserves some Crusader-era remains.",
     "name_variants": [
@@ -362,7 +573,8 @@
         "citation": "Runciman, S. A History of the Crusades, vol. 2 (1952)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "الحمدانيون",
@@ -374,13 +586,65 @@
     "capital_lat": 36.2021,
     "capital_lon": 37.1343,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        37.1343,
-        36.2021
+        [
+          [
+            40.9044,
+            36.2021
+          ],
+          [
+            40.6925,
+            37.8153
+          ],
+          [
+            39.3751,
+            39.9719
+          ],
+          [
+            37.1343,
+            40.1259
+          ],
+          [
+            34.144,
+            39.7492
+          ],
+          [
+            31.9118,
+            38.391
+          ],
+          [
+            33.4328,
+            36.2021
+          ],
+          [
+            34.1105,
+            34.872
+          ],
+          [
+            34.9694,
+            33.8361
+          ],
+          [
+            37.1343,
+            32.743
+          ],
+          [
+            39.9908,
+            32.6723
+          ],
+          [
+            40.3372,
+            35.0064
+          ],
+          [
+            40.9044,
+            36.2021
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Hamdanids were an Arab Shi'a dynasty during the fragmentation of the Abbasid Caliphate. They ruled two branches: Mosul and Aleppo. Sayf al-Dawla's court in Aleppo was a major centre of Arabic literature and philosophy, patronizing the poet al-Mutanabbi and the philosopher al-Farabi. The Hamdanids fought continuous frontier warfare (thughur) against the Byzantine Empire, which involved raids, enslavement, and destruction on both sides. Their Shi'a identity in a predominantly Sunni region creates competing sectarian narratives in historical sources.",
     "name_variants": [
@@ -445,7 +709,8 @@
         "citation": "al-Mutanabbi, Diwan (collected poems), 10th century",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "آل بویه",
@@ -457,13 +722,65 @@
     "capital_lat": 29.5918,
     "capital_lon": 52.5837,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        52.5837,
-        29.5918
+        [
+          [
+            56.2547,
+            29.5918
+          ],
+          [
+            55.312,
+            30.8241
+          ],
+          [
+            54.9271,
+            32.6078
+          ],
+          [
+            52.5837,
+            32.8455
+          ],
+          [
+            51.3614,
+            31.8997
+          ],
+          [
+            48.6374,
+            31.5441
+          ],
+          [
+            48.4486,
+            29.5918
+          ],
+          [
+            49.9471,
+            27.9916
+          ],
+          [
+            51.1871,
+            27.3246
+          ],
+          [
+            52.5837,
+            26.4995
+          ],
+          [
+            54.4726,
+            26.3657
+          ],
+          [
+            55.0085,
+            28.4756
+          ],
+          [
+            56.2547,
+            29.5918
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Buyids (Buwayhids) were a Daylamite Shi'a dynasty from northern Iran who conquered Baghdad in 945, effectively becoming the military patrons of the Sunni Abbasid caliph — a remarkable sectarian inversion. They maintained the Abbasid caliph as a figurehead while wielding actual power, establishing a precedent for Shi'a-Sunni political coexistence (or domination, depending on perspective). Their patronage of scholarship, including the founding of hospitals and libraries, should be noted alongside their military conquests. Sectarian framing of this dynasty varies significantly between Shi'a and Sunni historical traditions.",
     "name_variants": [
@@ -543,7 +860,8 @@
         "citation": "Kabir, M. The Buwayhid Dynasty of Baghdad (1964)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "الزنكيون",
@@ -555,13 +873,65 @@
     "capital_lat": 36.2021,
     "capital_lon": 37.1343,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        37.1343,
-        36.2021
+        [
+          [
+            40.5796,
+            36.2021
+          ],
+          [
+            41.419,
+            38.3137
+          ],
+          [
+            38.6325,
+            38.2287
+          ],
+          [
+            37.1343,
+            39.7698
+          ],
+          [
+            35.3943,
+            38.3889
+          ],
+          [
+            32.1937,
+            38.097
+          ],
+          [
+            33.9427,
+            36.2021
+          ],
+          [
+            34.3725,
+            35.0251
+          ],
+          [
+            34.7329,
+            32.5372
+          ],
+          [
+            37.1343,
+            32.1703
+          ],
+          [
+            38.8362,
+            33.8657
+          ],
+          [
+            40.7734,
+            34.6361
+          ],
+          [
+            40.5796,
+            36.2021
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Zengids were a Turkic Sunni dynasty that played a central role in the Muslim counter-crusade (jihad). Imad al-Din Zengi captured Edessa in 1144, triggering the Second Crusade. His son Nur al-Din unified Muslim Syria and promoted the ideology of jihad against the Crusaders — a framing that was both a genuine religious movement and a political tool to legitimise Zengid authority over rival Muslim states. The Zengid narrative of jihad was later appropriated and expanded by Saladin. Western historiography has traditionally focused on the Crusader perspective; the Zengid role as defenders of the Islamic world receives different emphasis in Arabic sources.",
     "name_variants": [
@@ -634,7 +1004,8 @@
         "citation": "Hillenbrand, C. The Crusades: Islamic Perspectives (1999)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "دولت غزنویان",
@@ -646,13 +1017,65 @@
     "capital_lat": 33.5469,
     "capital_lon": 68.4208,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        68.4208,
-        33.5469
+        [
+          [
+            83.0349,
+            33.5469
+          ],
+          [
+            85.7393,
+            40.5895
+          ],
+          [
+            75.5637,
+            45.6628
+          ],
+          [
+            68.4208,
+            47.7679
+          ],
+          [
+            61.1985,
+            44.7736
+          ],
+          [
+            54.2099,
+            41.075
+          ],
+          [
+            54.1338,
+            33.5469
+          ],
+          [
+            53.2085,
+            27.1747
+          ],
+          [
+            63.2922,
+            25.6197
+          ],
+          [
+            68.4208,
+            22.403
+          ],
+          [
+            74.6307,
+            24.4916
+          ],
+          [
+            77.3715,
+            29.6602
+          ],
+          [
+            83.0349,
+            33.5469
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Ghaznavid Empire was a Persianate Turkic dynasty whose most famous ruler, Mahmud of Ghazni, conducted 17 campaigns into the Indian subcontinent (1001-1027). These campaigns involved systematic looting of Hindu temples (notably Somnath in 1026), mass enslavement, and destruction of religious sites. Indian and Pakistani nationalist historiographies present starkly different interpretations of these invasions: some celebrate Mahmud as a champion of Islam, while others condemn him as a destroyer of indigenous culture. The database must present both perspectives. The Ghaznavids were also major patrons of Persian literature and culture — Ferdowsi composed the Shahnameh at Mahmud's court (though was reportedly poorly rewarded).",
     "name_variants": [
@@ -732,7 +1155,8 @@
         "citation": "Nazim, M. The Life and Times of Sultan Mahmud of Ghazna (1931)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "الأدارسة",
@@ -744,13 +1168,65 @@
     "capital_lat": 34.0181,
     "capital_lon": -5.0078,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        -5.0078,
-        34.0181
+        [
+          [
+            -0.858,
+            34.0181
+          ],
+          [
+            -2.9209,
+            35.239
+          ],
+          [
+            -2.886,
+            37.281
+          ],
+          [
+            -5.0078,
+            38.0696
+          ],
+          [
+            -6.9905,
+            36.9832
+          ],
+          [
+            -7.785,
+            35.4331
+          ],
+          [
+            -8.6612,
+            34.0181
+          ],
+          [
+            -7.7509,
+            32.5973
+          ],
+          [
+            -6.71,
+            31.6433
+          ],
+          [
+            -5.0078,
+            31.4202
+          ],
+          [
+            -3.7384,
+            31.9201
+          ],
+          [
+            -2.9042,
+            32.8251
+          ],
+          [
+            -0.858,
+            34.0181
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Idrisids were the first major Muslim dynasty in Morocco and are traditionally considered the founders of the Moroccan state. Idris I was a descendant of the Prophet Muhammad (an Alid) who fled the Abbasid massacre of Alids at the Battle of Fakh (786). The Idrisids founded the city of Fes, which became a major centre of Islamic learning (the University of al-Qarawiyyin, founded 859, is sometimes claimed as the world's oldest university). The dynasty's Sharifian (prophetic) lineage remains politically significant in Morocco today, where the ruling Alaouite dynasty also claims descent from the Prophet. Competing claims of Idrisid legitimacy from Berber and Arab perspectives should be noted.",
     "name_variants": [
@@ -815,7 +1291,8 @@
         "citation": "Benchekroun, M.B.A. La vie intellectuelle marocaine sous les Merinides et les Wattasides (1974)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "الأغالبة",
@@ -827,13 +1304,65 @@
     "capital_lat": 35.6781,
     "capital_lon": 10.0963,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        10.0963,
-        35.6781
+        [
+          [
+            14.2924,
+            35.6781
+          ],
+          [
+            14.4324,
+            38.2086
+          ],
+          [
+            12.1495,
+            38.7757
+          ],
+          [
+            10.0963,
+            40.0121
+          ],
+          [
+            7.9542,
+            38.6628
+          ],
+          [
+            6.2182,
+            37.5145
+          ],
+          [
+            6.5722,
+            35.6781
+          ],
+          [
+            5.8395,
+            33.3637
+          ],
+          [
+            7.249,
+            32.511
+          ],
+          [
+            10.0963,
+            31.0104
+          ],
+          [
+            11.8615,
+            33.1074
+          ],
+          [
+            13.1884,
+            34.0575
+          ],
+          [
+            14.2924,
+            35.6781
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Aghlabids were a nominally Abbasid-vassal dynasty in Ifriqiya (modern Tunisia, eastern Algeria, western Libya). They are most notable for the conquest of Sicily (827-902), which transformed the island culturally and economically. The Aghlabid conquest of Sicily involved prolonged warfare, enslavement, and displacement of the local Christian population, though Muslim rule also brought agricultural innovation, architectural achievements, and cultural exchange. The Great Mosque of Kairouan, largely rebuilt under Aghlabid patronage, remains one of the most important mosques in North Africa. Christian and Muslim accounts of the Sicilian conquest differ markedly in emphasis.",
     "name_variants": [
@@ -898,7 +1427,8 @@
         "citation": "Ibn al-Athir, al-Kamil fi al-Tarikh (The Complete History), 13th century",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "الطولونيون",
@@ -910,13 +1440,65 @@
     "capital_lat": 30.0288,
     "capital_lon": 31.2625,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        31.2625,
-        30.0288
+        [
+          [
+            35.1744,
+            30.0288
+          ],
+          [
+            34.5526,
+            31.8253
+          ],
+          [
+            33.0686,
+            32.2374
+          ],
+          [
+            31.2625,
+            33.1138
+          ],
+          [
+            30.0428,
+            32.247
+          ],
+          [
+            28.1991,
+            31.3285
+          ],
+          [
+            28.4701,
+            30.0288
+          ],
+          [
+            28.9011,
+            28.7695
+          ],
+          [
+            28.8771,
+            27.0984
+          ],
+          [
+            31.2625,
+            27.0555
+          ],
+          [
+            33.3265,
+            27.4158
+          ],
+          [
+            33.4844,
+            29.0504
+          ],
+          [
+            35.1744,
+            30.0288
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Tulunids were the first independent dynasty to rule Egypt since the Ptolemies, breaking Abbasid direct control. Ahmad ibn Tulun was of Turkic slave (ghulam) origin — his rise illustrates the critical role of enslaved peoples in Islamic political history. The Mosque of Ibn Tulun in Cairo, one of the oldest intact mosques in Egypt, is the dynasty's most enduring legacy. The Tulunids exploited Egypt's agricultural wealth while nominally acknowledging Abbasid suzerainty. Their rule established Egypt as an autonomous political entity, a pattern that would persist through the Ikhshidids, Fatimids, Ayyubids, and Mamluks.",
     "name_variants": [
@@ -981,7 +1563,8 @@
         "citation": "Bianquis, T. 'Autonomous Egypt from Ibn Tulun to Kafur' in Cambridge History of Egypt, vol. 1 (1998)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "الإخشيديون",
@@ -993,13 +1576,65 @@
     "capital_lat": 30.01,
     "capital_lon": 31.235,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        31.235,
-        30.01
+        [
+          [
+            35.3935,
+            30.01
+          ],
+          [
+            34.5665,
+            31.7389
+          ],
+          [
+            32.9591,
+            32.9041
+          ],
+          [
+            31.235,
+            33.7076
+          ],
+          [
+            29.1372,
+            34.1884
+          ],
+          [
+            28.6101,
+            31.1588
+          ],
+          [
+            26.8768,
+            30.01
+          ],
+          [
+            26.6756,
+            28.0289
+          ],
+          [
+            29.4473,
+            26.7165
+          ],
+          [
+            31.235,
+            27.0227
+          ],
+          [
+            32.6295,
+            27.7591
+          ],
+          [
+            35.1703,
+            28.413
+          ],
+          [
+            35.3935,
+            30.01
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Ikhshidid dynasty continued Egypt's pattern of autonomous rule under nominal Abbasid suzerainty. The dynasty's most remarkable figure was Abu al-Misk Kafur, an Abyssinian (Ethiopian) eunuch slave who rose to become the effective ruler of Egypt (966-968). Kafur's story illustrates both the extraordinary social mobility possible in medieval Islamic societies and the centrality of slavery to political systems. The poet al-Mutanabbi, who initially praised Kafur, later wrote viciously racist satires about him — these poems remain controversial and illuminate medieval attitudes toward race and enslaved peoples. The Ikhshidid period is often overshadowed by the Tulunids before and Fatimids after.",
     "name_variants": [
@@ -1064,7 +1699,8 @@
         "citation": "Bacharach, J.L. 'The Career of Muhammad ibn Tughj al-Ikhshid', Speculum 50/4 (1975)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "المرينيون",
@@ -1076,13 +1712,65 @@
     "capital_lat": 34.0181,
     "capital_lon": -5.0078,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        -5.0078,
-        34.0181
+        [
+          [
+            -0.5652,
+            34.0181
+          ],
+          [
+            -1.0177,
+            36.4829
+          ],
+          [
+            -3.373,
+            36.4873
+          ],
+          [
+            -5.0078,
+            37.8542
+          ],
+          [
+            -7.9699,
+            37.5953
+          ],
+          [
+            -9.7642,
+            36.6745
+          ],
+          [
+            -8.4773,
+            34.0181
+          ],
+          [
+            -10.6608,
+            31.2455
+          ],
+          [
+            -7.5578,
+            30.9981
+          ],
+          [
+            -5.0078,
+            30.9871
+          ],
+          [
+            -2.3201,
+            29.8657
+          ],
+          [
+            -1.649,
+            32.1725
+          ],
+          [
+            -0.5652,
+            34.0181
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Marinids were a Zenata Berber dynasty that replaced the Almohads in Morocco. Unlike the Almohads, they did not claim religious legitimacy through a mahdi figure but relied on tribal solidarity and military power. They are notable for founding the madrasa system in Morocco (Bou Inania, al-Attarine) and for their support of the Nasrid Kingdom of Granada against Castilian expansion. The Marinids participated in the Battle of Rio Salado (1340) against Castile, a significant moment in the Reconquista. Their treatment of Jewish communities in Morocco was complex — periods of protection alternated with episodes of violence, particularly during the merinid succession crises.",
     "name_variants": [
@@ -1162,7 +1850,8 @@
         "citation": "Abun-Nasr, J.M. A History of the Maghrib in the Islamic Period (1987)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "الحفصيون",
@@ -1174,13 +1863,65 @@
     "capital_lat": 36.8065,
     "capital_lon": 10.1815,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        10.1815,
-        36.8065
+        [
+          [
+            14.921,
+            36.8065
+          ],
+          [
+            14.3924,
+            38.9976
+          ],
+          [
+            11.8961,
+            39.2059
+          ],
+          [
+            10.1815,
+            41.9816
+          ],
+          [
+            8.1446,
+            39.3741
+          ],
+          [
+            4.6963,
+            39.4223
+          ],
+          [
+            6.4505,
+            36.8065
+          ],
+          [
+            5.9847,
+            34.7393
+          ],
+          [
+            7.9568,
+            33.6713
+          ],
+          [
+            10.1815,
+            31.6594
+          ],
+          [
+            12.2474,
+            34.4129
+          ],
+          [
+            13.7195,
+            35.1275
+          ],
+          [
+            14.921,
+            36.8065
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Hafsids were an Almohad successor dynasty in Ifriqiya (Tunisia) who claimed the caliphal title, making Tunis a rival centre to other claimants. They maintained a complex relationship with Christian Mediterranean powers (Aragon, Genoa, Venice) involving both commerce and conflict. The Hafsids participated in and profited from the trans-Saharan slave trade. Ibn Khaldun, one of history's greatest social thinkers, was born and initially worked under Hafsid patronage in Tunis. The dynasty's fall to the Ottomans in 1574 marked the incorporation of the Maghreb into the Ottoman sphere — a transition with competing nationalist narratives in modern Tunisia.",
     "name_variants": [
@@ -1253,7 +1994,8 @@
         "citation": "Julien, C.-A. History of North Africa (1970)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "الزيانيون",
@@ -1265,13 +2007,65 @@
     "capital_lat": 34.8828,
     "capital_lon": -1.3167,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        -1.3167,
-        34.8828
+        [
+          [
+            1.7024,
+            34.8828
+          ],
+          [
+            3.0848,
+            36.9635
+          ],
+          [
+            1.396,
+            38.3764
+          ],
+          [
+            -1.3167,
+            37.4864
+          ],
+          [
+            -3.3397,
+            38.1371
+          ],
+          [
+            -4.1177,
+            36.3675
+          ],
+          [
+            -5.5181,
+            34.8828
+          ],
+          [
+            -5.3047,
+            32.6607
+          ],
+          [
+            -3.1538,
+            32.311
+          ],
+          [
+            -1.3167,
+            30.2254
+          ],
+          [
+            0.3878,
+            32.091
+          ],
+          [
+            3.2764,
+            32.8746
+          ],
+          [
+            1.7024,
+            34.8828
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Zayyanid Kingdom of Tlemcen was a Zenata Berber dynasty that ruled the central Maghreb (modern western Algeria). Tlemcen was a major centre of trans-Saharan trade and Islamic scholarship, but the kingdom was frequently caught between the larger Marinid (Morocco) and Hafsid (Tunisia) states, suffering repeated invasions from both sides. The Zayyanid period saw significant Jewish-Muslim coexistence in Tlemcen, with Jewish scholars contributing to the city's intellectual life. The kingdom's absorption by the Ottomans (1556) is part of the larger pattern of Ottoman expansion in the Maghreb, which modern Algerian nationalism interprets through varying lenses.",
     "name_variants": [
@@ -1343,7 +2137,8 @@
         "citation": "Abun-Nasr, J.M. A History of the Maghrib in the Islamic Period (1987)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "سلاجقه روم",
@@ -1355,13 +2150,65 @@
     "capital_lat": 37.8746,
     "capital_lon": 32.4932,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        32.4932,
-        37.8746
+        [
+          [
+            34.7502,
+            37.8746
+          ],
+          [
+            35.1771,
+            38.9457
+          ],
+          [
+            34.1471,
+            39.8178
+          ],
+          [
+            32.4932,
+            40.4833
+          ],
+          [
+            30.61,
+            40.4249
+          ],
+          [
+            30.0194,
+            38.8318
+          ],
+          [
+            28.9859,
+            37.8746
+          ],
+          [
+            29.7526,
+            36.8328
+          ],
+          [
+            31.167,
+            36.06
+          ],
+          [
+            32.4932,
+            35.0424
+          ],
+          [
+            34.0494,
+            35.5733
+          ],
+          [
+            34.3532,
+            36.9687
+          ],
+          [
+            34.7502,
+            37.8746
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Sultanate of Rum (Rum = Rome/Roman, referring to former Roman/Byzantine territories) was a Seljuk successor state in Anatolia. The Turkification of Anatolia — the gradual displacement or assimilation of Greek, Armenian, and other Christian populations — is one of the most significant demographic transformations in Near Eastern history. This process was neither instantaneous nor uniformly violent; it involved settlement, intermarriage, conversion, and cultural absorption over centuries, alongside periodic massacres and forced displacement. The sultanate was also a centre of Sufi mysticism — Jalal al-Din Rumi (from whom the dynasty takes its modern fame) lived in Konya under Seljuk patronage. Greek and Turkish nationalist narratives present sharply different accounts of this period.",
     "name_variants": [
@@ -1441,7 +2288,8 @@
         "citation": "Peacock, A.C.S. and Yildiz, S.N. (eds.) The Seljuks of Anatolia: Court and Society in the Medieval Middle East (2013)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "خلافة قرطبة",
@@ -1453,13 +2301,65 @@
     "capital_lat": 37.8882,
     "capital_lon": -4.7794,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        -4.7794,
-        37.8882
+        [
+          [
+            5.0533,
+            37.8882
+          ],
+          [
+            1.9666,
+            41.1099
+          ],
+          [
+            -0.0842,
+            44.5191
+          ],
+          [
+            -4.7794,
+            43.5102
+          ],
+          [
+            -8.187,
+            43.2957
+          ],
+          [
+            -11.9829,
+            41.4302
+          ],
+          [
+            -11.7199,
+            37.8882
+          ],
+          [
+            -11.0941,
+            35.2363
+          ],
+          [
+            -9.5001,
+            32.5888
+          ],
+          [
+            -4.7794,
+            32.9504
+          ],
+          [
+            -0.9749,
+            32.5923
+          ],
+          [
+            4.3043,
+            34.3778
+          ],
+          [
+            5.0533,
+            37.8882
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Caliphate of Cordoba represented the peak of Islamic civilization in Europe. Under Abd al-Rahman III and al-Hakam II, Cordoba was arguably the most advanced city in Europe: a centre of learning, tolerance (convivencia), and architectural achievement (the Great Mosque of Cordoba). However, the convivencia narrative can be romanticized — religious minorities (dhimmis) faced legal restrictions and periodic persecution. The Umayyad Emirate preceded the Caliphate (756-929) but this entry covers only the caliphal period. The sack of Santiago de Compostela by al-Mansur (997) and his destruction of the cathedral represent the darker side of Muslim-Christian relations in al-Andalus. Spanish and Arab nationalist historiographies frame this period very differently.",
     "name_variants": [
@@ -1539,7 +2439,8 @@
         "citation": "Fierro, M. Abd al-Rahman III: The First Cordoban Caliph (2005)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ملوك الطوائف",
@@ -1551,13 +2452,65 @@
     "capital_lat": 37.3891,
     "capital_lon": -5.9845,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        -5.9845,
-        37.3891
+        [
+          [
+            -1.594,
+            37.3891
+          ],
+          [
+            -1.9016,
+            39.2053
+          ],
+          [
+            -3.7351,
+            40.3623
+          ],
+          [
+            -5.9845,
+            39.6813
+          ],
+          [
+            -7.9406,
+            40.0
+          ],
+          [
+            -10.2051,
+            39.0755
+          ],
+          [
+            -8.9777,
+            37.3891
+          ],
+          [
+            -9.4805,
+            35.7661
+          ],
+          [
+            -7.9396,
+            34.7167
+          ],
+          [
+            -5.9845,
+            33.7704
+          ],
+          [
+            -4.5812,
+            35.0311
+          ],
+          [
+            -2.3868,
+            36.023
+          ],
+          [
+            -1.594,
+            37.3891
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.55,
+    "confidence_score": 0.45,
     "status": "disputed",
     "ethical_notes": "ETHICS: This is a GENERIC REPRESENTATIVE entry for the Taifa period, which actually comprised dozens of independent kingdoms. The Taifas illustrate the political fragmentation of al-Andalus after the fall of the Cordoba Caliphate. The Seville coordinates represent the most powerful taifa (the Abbadids), but other major taifas included Toledo, Zaragoza, Badajoz, Granada, Denia, and Valencia. The Taifa period saw both cultural flourishing (poetry, philosophy) and the exploitation of inter-Muslim rivalries by Christian kingdoms through the parias (tribute) system. The collapse of unified Muslim power enabled the Christian Reconquista to accelerate. The confidence score is low because this single entry cannot adequately represent dozens of distinct political entities.",
     "name_variants": [
@@ -1622,7 +2575,8 @@
         "citation": "Ibn Hayyan, al-Muqtabas (selections), 11th century",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "مملكة غرناطة",
@@ -1634,13 +2588,65 @@
     "capital_lat": 37.1773,
     "capital_lon": -3.5986,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        -3.5986,
-        37.1773
+        [
+          [
+            -0.4587,
+            37.1773
+          ],
+          [
+            0.7738,
+            38.895
+          ],
+          [
+            -1.5174,
+            40.0477
+          ],
+          [
+            -3.5986,
+            40.1944
+          ],
+          [
+            -5.0051,
+            39.2887
+          ],
+          [
+            -6.2549,
+            38.3711
+          ],
+          [
+            -8.2533,
+            37.1773
+          ],
+          [
+            -6.2101,
+            35.7433
+          ],
+          [
+            -5.3764,
+            34.3167
+          ],
+          [
+            -3.5986,
+            34.2567
+          ],
+          [
+            -0.8551,
+            33.6412
+          ],
+          [
+            0.691,
+            35.1419
+          ],
+          [
+            -0.4587,
+            37.1773
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Nasrid Kingdom of Granada was the last Muslim state in Iberia, and its fall in 1492 to Ferdinand and Isabella marks the end of al-Andalus — a civilizational transformation with profound consequences. The Alhambra palace complex, the Nasrids' greatest architectural legacy, represents one of the finest achievements of Islamic art. The fall of Granada was followed by broken promises: the Treaty of Granada (1491) guaranteed Muslim rights, but within a decade forced conversions began, culminating in the forced conversion or expulsion of all Muslims (1502) and eventually the expulsion of the Moriscos (1609-1614). The Spanish Inquisition targeted converted Muslims (and Jews). This represents cultural erasure on a massive scale. Both Spanish and Arab/Muslim historiographies carry deep emotional investments in this narrative.",
     "name_variants": [
@@ -1712,7 +2718,8 @@
         "citation": "Fernández-Puertas, A. The Alhambra (2 vols., 1997)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "المملكة الحجازية الهاشمية",
@@ -1724,13 +2731,65 @@
     "capital_lat": 21.4225,
     "capital_lon": 39.8262,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        39.8262,
-        21.4225
+        [
+          [
+            42.64,
+            21.4225
+          ],
+          [
+            42.2485,
+            22.5454
+          ],
+          [
+            41.6202,
+            25.0229
+          ],
+          [
+            39.8262,
+            24.8492
+          ],
+          [
+            38.1696,
+            23.8037
+          ],
+          [
+            37.1007,
+            23.0017
+          ],
+          [
+            35.5667,
+            21.4225
+          ],
+          [
+            36.4964,
+            19.0875
+          ],
+          [
+            38.1055,
+            18.6164
+          ],
+          [
+            39.8262,
+            18.4082
+          ],
+          [
+            41.0972,
+            19.1631
+          ],
+          [
+            43.2027,
+            19.2782
+          ],
+          [
+            42.64,
+            21.4225
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Hashemite Kingdom of Hejaz was established during the Arab Revolt (1916-1918), one of the most mythologized episodes of WWI, shaped by both Arab nationalist aspirations and British imperial manipulation. Sharif Hussein bin Ali proclaimed the revolt against Ottoman rule with British support, but the Sykes-Picot Agreement (1916) simultaneously divided the promised Arab territories between Britain and France — a betrayal that remains central to Arab political consciousness. T.E. Lawrence's ('Lawrence of Arabia') romanticized narrative has often overshadowed Arab agency in the revolt. The kingdom's conquest by Ibn Saud in 1925 created modern Saudi Arabia and marginalized the Hashemites, who were compensated with British-created kingdoms in Iraq and Transjordan. This entry touches on colonialism, broken promises, and the artificial creation of modern Middle Eastern states.",
     "name_variants": [
@@ -1795,7 +2854,8 @@
         "citation": "Hussein-McMahon Correspondence (1915-1916)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "𒆳𒆍𒀭𒊏𒆠",
@@ -1807,13 +2867,65 @@
     "capital_lat": 32.5363,
     "capital_lon": 44.4209,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        44.4209,
-        32.5363
+        [
+          [
+            54.1494,
+            32.5363
+          ],
+          [
+            52.4872,
+            36.2717
+          ],
+          [
+            48.9287,
+            38.3335
+          ],
+          [
+            44.4209,
+            41.4028
+          ],
+          [
+            40.3064,
+            37.0662
+          ],
+          [
+            36.9964,
+            35.9935
+          ],
+          [
+            37.2865,
+            32.5363
+          ],
+          [
+            35.891,
+            28.9763
+          ],
+          [
+            40.4209,
+            26.0717
+          ],
+          [
+            44.4209,
+            21.8237
+          ],
+          [
+            49.5171,
+            26.1608
+          ],
+          [
+            52.252,
+            29.3038
+          ],
+          [
+            54.1494,
+            32.5363
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Neo-Babylonian Empire, also known as the Chaldean Empire, is most famously associated with Nebuchadnezzar II, who destroyed the Temple of Solomon in Jerusalem (586 BCE) and deported the Jewish population to Babylon (the 'Babylonian Captivity'). This event is foundational to Jewish historical consciousness and religious identity. The biblical narrative presents Babylon as a symbol of tyranny and exile; Babylonian sources present Nebuchadnezzar as a great builder and restorer. Both perspectives must be represented. The Ishtar Gate, the Hanging Gardens (whose existence is disputed), and the ziggurat Etemenanki (possible inspiration for the Tower of Babel) represent the empire's cultural achievements. The empire's fall to Cyrus the Great of Persia (539 BCE) is celebrated in both Jewish and Persian traditions as liberation.",
     "name_variants": [
@@ -1897,7 +3009,8 @@
         "citation": "Cyrus Cylinder, c. 539 BCE (British Museum)",
         "source_type": "archaeological"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ዛግዌ",
@@ -1909,13 +3022,65 @@
     "capital_lat": 12.0319,
     "capital_lon": 39.0474,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        39.0474,
-        12.0319
+        [
+          [
+            43.4895,
+            12.0319
+          ],
+          [
+            41.6064,
+            13.3707
+          ],
+          [
+            40.7583,
+            15.0497
+          ],
+          [
+            39.0474,
+            16.3677
+          ],
+          [
+            37.4892,
+            14.1369
+          ],
+          [
+            35.705,
+            13.6969
+          ],
+          [
+            35.6231,
+            12.0319
+          ],
+          [
+            36.1614,
+            10.714
+          ],
+          [
+            37.8195,
+            10.0537
+          ],
+          [
+            39.0474,
+            9.9317
+          ],
+          [
+            40.443,
+            9.6624
+          ],
+          [
+            41.3924,
+            10.7424
+          ],
+          [
+            43.4895,
+            12.0319
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.5,
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "ETHICS: The Zagwe Dynasty ruled the Ethiopian highlands between the fall of Aksum and the rise of the Solomonic Dynasty. King Lalibela (r. c. 1181-1221) is credited with commissioning the rock-hewn churches of Lalibela, one of the greatest architectural achievements in Africa. The dynasty's exact dates are deeply uncertain — Ethiopian traditional chronology differs significantly from modern scholarly estimates. The Solomonic Dynasty, which overthrew the Zagwe, deliberately delegitimized them in official histories (the Kebra Nagast) by claiming they were usurpers who broke the line of descent from King Solomon. This dynastic propaganda has shaped Ethiopian historiography for centuries. Agaw/Agew ethnic identity of the Zagwe is sometimes downplayed in Amhara-centric national narratives. The confidence_score is low due to the severe lack of contemporary written sources.",
     "name_variants": [
@@ -1980,7 +3145,8 @@
         "citation": "Kebra Nagast (Glory of Kings), 14th century compilation",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "الخلافة الراشدة",
@@ -1992,13 +3158,65 @@
     "capital_lat": 24.4672,
     "capital_lon": 39.6024,
     "boundary_geojson": {
-      "type": "Point",
+      "type": "Polygon",
       "coordinates": [
-        39.6024,
-        24.4672
+        [
+          [
+            49.4367,
+            24.4672
+          ],
+          [
+            50.1537,
+            29.682
+          ],
+          [
+            43.8328,
+            30.5794
+          ],
+          [
+            39.6024,
+            31.697
+          ],
+          [
+            34.8632,
+            32.0326
+          ],
+          [
+            32.9624,
+            27.1894
+          ],
+          [
+            29.3997,
+            24.4672
+          ],
+          [
+            34.4035,
+            21.2802
+          ],
+          [
+            35.6313,
+            19.1315
+          ],
+          [
+            39.6024,
+            18.348
+          ],
+          [
+            45.1253,
+            17.7037
+          ],
+          [
+            46.6627,
+            20.7019
+          ],
+          [
+            49.4367,
+            24.4672
+          ]
+        ]
       ]
     },
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "disputed",
     "ethical_notes": "ETHICS: The Rashidun ('Rightly Guided') Caliphate represents one of the most religiously sensitive entities in this database. For Sunni Muslims, the four Rashidun caliphs (Abu Bakr, Umar, Uthman, Ali) represent the ideal Islamic governance. For Shi'a Muslims, only Ali was the legitimate successor to Muhammad; the first three caliphs are considered usurpers. This fundamental disagreement has shaped Islamic history for 1,400 years and continues to drive sectarian conflict. The Rashidun conquests (Ridda wars, conquest of Persia, Egypt, the Levant) were among the most rapid and consequential military campaigns in world history, permanently transforming the religious and cultural landscape of the Near East and North Africa. The database must present both Sunni and Shi'a perspectives on legitimacy without privileging either. The status is 'disputed' because Sunni and Shi'a traditions disagree fundamentally about the nature and legitimacy of this state.",
     "name_variants": [
@@ -2090,7 +3308,8 @@
         "citation": "Hinds, M. 'The Siffin Arbitration Agreement' in Journal of Semitic Studies 17/1 (1972)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Regnum Cypri",
@@ -2101,9 +3320,67 @@
     "capital_name": "Nicosia",
     "capital_lat": 35.1856,
     "capital_lon": 33.3823,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            37.1702,
+            35.1856
+          ],
+          [
+            35.7664,
+            36.2072
+          ],
+          [
+            35.0489,
+            37.9791
+          ],
+          [
+            33.3823,
+            37.5939
+          ],
+          [
+            31.3397,
+            37.6943
+          ],
+          [
+            30.6545,
+            36.2387
+          ],
+          [
+            30.2463,
+            35.1856
+          ],
+          [
+            29.9759,
+            33.311
+          ],
+          [
+            31.938,
+            33.6509
+          ],
+          [
+            33.3823,
+            31.9689
+          ],
+          [
+            35.4311,
+            32.3808
+          ],
+          [
+            35.9785,
+            33.9543
+          ],
+          [
+            37.1702,
+            35.1856
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome ufficiale era in latino; la corte usava il francese. La popolazione locale era greco-cipriota e parlava greco. Il nome greco dell'isola e' Κυπρος (Kypros). ETHICS-002: la conquista dell'isola da parte di Riccardo Cuor di Leone nel 1191 e la successiva vendita a Guido di Lusignano rappresentano un atto di colonialismo feudale. La Chiesa ortodossa cipriota fu subordinata alla Chiesa latina. I contadini greci (parici) furono ridotti a una condizione semi-servile sotto i signori franchi. ETHICS-003: il regno dei Lusignano fu anche un rifugio per i crociati in fuga dal Levante dopo il 1291 e un importante centro commerciale nel Mediterraneo orientale.",
     "name_variants": [
       {
@@ -2178,7 +3455,8 @@
         "citation": "Mas Latrie, L. Histoire de l'ile de Chypre sous le regne des princes de la maison de Lusignan (1852-61)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "آل بويه",
@@ -2189,9 +3467,67 @@
     "capital_name": "Shiraz / Baghdad",
     "capital_lat": 29.5918,
     "capital_lon": 52.5837,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            56.2547,
+            29.5918
+          ],
+          [
+            55.312,
+            30.8241
+          ],
+          [
+            54.9271,
+            32.6078
+          ],
+          [
+            52.5837,
+            32.8455
+          ],
+          [
+            51.3614,
+            31.8997
+          ],
+          [
+            48.6374,
+            31.5441
+          ],
+          [
+            48.4486,
+            29.5918
+          ],
+          [
+            49.9471,
+            27.9916
+          ],
+          [
+            51.1871,
+            27.3246
+          ],
+          [
+            52.5837,
+            26.4995
+          ],
+          [
+            54.4726,
+            26.3657
+          ],
+          [
+            55.0085,
+            28.4756
+          ],
+          [
+            56.2547,
+            29.5918
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome arabo e' Al Buyah (آل بويه), talvolta traslitterato Buwayhid. Il nome persiano e' آل بویه (Al-e Buye). La dinastia era di origine persiana daylamita (regione del Daylam, sul Caspio meridionale). ETHICS-002: i Buyidi, sciiti zaiditi, controllavano il califfo abbaside sunnita come 'protettori', creando la situazione paradossale di un califfato sunnita dominato da una dinastia sciita. Questo e' fondamentale per comprendere la complessita' settaria del periodo. ETHICS-003: sotto i Buyidi fiorirono le scienze e la filosofia islamica. Il loro mecenatismo permise il lavoro di studiosi come al-Biruni e Ibn Sina (Avicenna).",
     "name_variants": [
       {
@@ -2258,7 +3594,8 @@
         "citation": "Miskawayh, Tajarib al-Umam (X-XI sec.)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "بنو رسول",
@@ -2269,9 +3606,67 @@
     "capital_name": "Ta'izz",
     "capital_lat": 13.5789,
     "capital_lon": 44.0219,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            46.3637,
+            13.5789
+          ],
+          [
+            45.3417,
+            14.3445
+          ],
+          [
+            44.8661,
+            14.8626
+          ],
+          [
+            44.0219,
+            15.9452
+          ],
+          [
+            42.8562,
+            15.2753
+          ],
+          [
+            41.7804,
+            14.7267
+          ],
+          [
+            42.1744,
+            13.5789
+          ],
+          [
+            42.8271,
+            12.831
+          ],
+          [
+            42.4432,
+            11.4929
+          ],
+          [
+            44.0219,
+            11.8914
+          ],
+          [
+            44.9659,
+            12.1771
+          ],
+          [
+            45.8146,
+            12.461
+          ],
+          [
+            46.3637,
+            13.5789
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in arabo. I Rasulidi erano di possibile origine turcomanna (Oghuz), ma la dinastia si era completamente arabizzata. Il nome Rasul ('messaggero') si riferiva al capostipite che era stato ambasciatore ayyubide. ETHICS-002: il sultanato rasulide fu uno dei piu' prosperi e culturalmente vivaci della storia yemenita. Ta'izz divenne un importante centro di sapere islamico. Il sultano al-Ashraf Umar II (r. 1295-96) scrisse un trattato di agricoltura (al-Mu'tamad). ETHICS-003: la storia dello Yemen e' spesso marginalizzata nella storiografia del Medio Oriente. I Rasulidi dimostrano la complessita' e l'importanza della storia yemenita autonoma.",
     "name_variants": [
       {
@@ -2338,7 +3733,8 @@
         "citation": "Vallet, E. L'Arabie marchande: Etat et commerce sous les sultans rasulides du Yemen (2010)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "بنو زيري",
@@ -2349,9 +3745,67 @@
     "capital_name": "al-Mansuriyya / Mahdia",
     "capital_lat": 36.36,
     "capital_lon": 10.17,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            15.4895,
+            36.36
+          ],
+          [
+            14.5194,
+            38.0776
+          ],
+          [
+            12.1565,
+            38.9062
+          ],
+          [
+            10.17,
+            40.5814
+          ],
+          [
+            8.4902,
+            38.7857
+          ],
+          [
+            6.9937,
+            37.8562
+          ],
+          [
+            5.2311,
+            36.36
+          ],
+          [
+            7.0436,
+            35.1297
+          ],
+          [
+            8.7181,
+            33.9328
+          ],
+          [
+            10.17,
+            33.8753
+          ],
+          [
+            13.0228,
+            33.1492
+          ],
+          [
+            13.0276,
+            34.9343
+          ],
+          [
+            15.4895,
+            36.36
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in arabo. Gli Ziridi erano Berberi Sanhaja. Il loro capostipite Ziri ibn Manad era stato un fedele comandante militare dei Fatimidi. ETHICS-002: la rottura degli Ziridi con i Fatimidi (1048) e la conseguente invasione dei Banu Hilal — tribu' arabe nomadi inviate dai Fatimidi come rappresaglia — e' uno degli eventi piu' discussi della storia nordafricana. Ibn Khaldun la definisce una devastazione comparabile a un'invasione di cavallette. La storiografia moderna dibatte se la migrazione hilaliana abbia realmente causato la desertificazione e il declino urbano tradizionalmente attribuitigli. ETHICS-003: la rotta verso il sunnismo degli Ziridi e il riconoscimento del califfato abbaside rappresentano una complessa dinamica di identita' religiosa e politica berbera.",
     "name_variants": [
       {
@@ -2418,7 +3872,8 @@
         "citation": "Brett, M. The Rise of the Fatimids (2001)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "الإمبراطورية البابلية الحديثة",
@@ -2429,9 +3884,67 @@
     "capital_name": "Babylon",
     "capital_lat": 32.5363,
     "capital_lon": 44.4209,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            54.1494,
+            32.5363
+          ],
+          [
+            52.4872,
+            36.2717
+          ],
+          [
+            48.9287,
+            38.3335
+          ],
+          [
+            44.4209,
+            41.4028
+          ],
+          [
+            40.3064,
+            37.0662
+          ],
+          [
+            36.9964,
+            35.9935
+          ],
+          [
+            37.2865,
+            32.5363
+          ],
+          [
+            35.891,
+            28.9763
+          ],
+          [
+            40.4209,
+            26.0717
+          ],
+          [
+            44.4209,
+            21.8237
+          ],
+          [
+            49.5171,
+            26.1608
+          ],
+          [
+            52.252,
+            29.3038
+          ],
+          [
+            54.1494,
+            32.5363
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: la lingua della corte era l'accadico-babilonese (cuneiforme). Il nome 'Neo-Babilonese' e' una convenzione storiografica moderna; i babilonesi non si definivano cosi'. In accadico il territorio era Babili / mat Akkadi. ETHICS-002: Nabucodonosor II (Nebuchadnezzar) e' una figura la cui rappresentazione varia radicalmente tra le fonti babilonesi (re costruttore e restauratore dei templi) e la tradizione biblica (distruttore di Gerusalemme e del Tempio, deportatore degli ebrei). Entrambe le prospettive devono essere documentate. La distruzione del Tempio di Gerusalemme (-586) e l'esilio babilonese sono eventi di enorme conseguenza per la storia delle religioni. ETHICS-003: il codice di Nabonido e le Cronache Babilonesi sono fonti primarie fondamentali per questo periodo.",
     "name_variants": [
       {
@@ -2510,7 +4023,8 @@
         "citation": "Cilindro di Ciro (British Museum, c. -539)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "𐎜𐎂𐎗𐎚 / Ugarit",
@@ -2521,9 +4035,67 @@
     "capital_name": "Ugarit (Ras Shamra)",
     "capital_lat": 35.6006,
     "capital_lon": 35.7847,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            36.3485,
+            35.6006
+          ],
+          [
+            36.2456,
+            35.8233
+          ],
+          [
+            36.0249,
+            35.912
+          ],
+          [
+            35.7847,
+            35.9522
+          ],
+          [
+            35.4731,
+            35.9454
+          ],
+          [
+            35.3313,
+            35.8222
+          ],
+          [
+            35.3639,
+            35.6006
+          ],
+          [
+            35.426,
+            35.3926
+          ],
+          [
+            35.5715,
+            35.3187
+          ],
+          [
+            35.7847,
+            35.1321
+          ],
+          [
+            35.9312,
+            35.3366
+          ],
+          [
+            36.192,
+            35.4468
+          ],
+          [
+            36.3485,
+            35.6006
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in ugaritico, scritto in un alfabeto cuneiforme unico scoperto nel 1929 a Ras Shamra (Siria). L'ugaritico e' una lingua semitica nordoccidentale strettamente imparentata con l'ebraico e il fenicio. ETHICS-002: Ugarit e' di importanza capitale per la storia delle religioni: i testi mitologici ugaritici (Ciclo di Baal, Epopea di Keret) rivelano il contesto religioso cananeo da cui emerse la religione israelitica. Questo dato e' fondamentale e non deve essere edulcorato per sensibilita' religiose contemporanee. ETHICS-003: la distruzione di Ugarit intorno al -1185 e' uno degli episodi meglio documentati del Collasso dell'Eta' del Bronzo. L'ultima lettera del re di Ugarit (RS 20.238) e' un documento straordinario di una civilta' sul punto dell'annientamento.",
     "name_variants": [
       {
@@ -2586,7 +4158,8 @@
         "citation": "RS 20.238 — ultima lettera di Ugarit (Musee du Louvre)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "אדום / 𐤀𐤃𐤌",
@@ -2597,9 +4170,67 @@
     "capital_name": "Bozrah (Busayra)",
     "capital_lat": 30.7333,
     "capital_lon": 35.6167,
-    "confidence_score": 0.55,
+    "confidence_score": 0.45,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            38.136,
+            30.7333
+          ],
+          [
+            38.1934,
+            31.7869
+          ],
+          [
+            36.8749,
+            32.7913
+          ],
+          [
+            35.6167,
+            32.3983
+          ],
+          [
+            34.242,
+            32.9815
+          ],
+          [
+            33.1386,
+            31.7782
+          ],
+          [
+            32.0463,
+            30.7333
+          ],
+          [
+            33.1475,
+            29.705
+          ],
+          [
+            34.0168,
+            28.6596
+          ],
+          [
+            35.6167,
+            28.5411
+          ],
+          [
+            37.2473,
+            28.8895
+          ],
+          [
+            37.2554,
+            29.7313
+          ],
+          [
+            38.136,
+            30.7333
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in edomita (lingua semitica nordoccidentale estinta). La principale fonte scritta su Edom e' la Bibbia ebraica, che presenta gli Edomiti come discendenti di Esau e spesso in conflitto con Israele. Le fonti edomite indipendenti sono rarissime. ETHICS-002: la conquista del territorio edomita da parte dei Nabatei e la successiva 'conversione forzata' degli Idumei (discendenti degli Edomiti) da parte di Giovanni Ircano I (-125) sono eventi eticamente significativi. Erode il Grande era di origine idumea — un fatto che influenzo' la sua ricezione nella tradizione ebraica. ETHICS-003: la storia edomita e' conosciuta quasi esclusivamente da fonti esterne (bibliche, assire); questo bias documentario deve essere esplicitato.",
     "name_variants": [
       {
@@ -2666,7 +4297,8 @@
         "citation": "Giuseppe Flavio, Antichita' Giudaiche, XIII.9.1",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "المملكة الهاشمية الحجازية",
@@ -2677,9 +4309,67 @@
     "capital_name": "Mecca",
     "capital_lat": 21.4225,
     "capital_lon": 39.8262,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            42.64,
+            21.4225
+          ],
+          [
+            42.2485,
+            22.5454
+          ],
+          [
+            41.6202,
+            25.0229
+          ],
+          [
+            39.8262,
+            24.8492
+          ],
+          [
+            38.1696,
+            23.8037
+          ],
+          [
+            37.1007,
+            23.0017
+          ],
+          [
+            35.5667,
+            21.4225
+          ],
+          [
+            36.4964,
+            19.0875
+          ],
+          [
+            38.1055,
+            18.6164
+          ],
+          [
+            39.8262,
+            18.4082
+          ],
+          [
+            41.0972,
+            19.1631
+          ],
+          [
+            43.2027,
+            19.2782
+          ],
+          [
+            42.64,
+            21.4225
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in arabo. Il Regno dell'Hejaz nacque dalla Grande Rivolta Araba del 1916 contro l'Impero Ottomano, orchestrata con il sostegno britannico (T.E. Lawrence, McMahon-Hussein Correspondence). ETHICS-002: la promessa britannica di un grande stato arabo indipendente (corrispondenza McMahon-Hussein 1915-16) fu tradita dalla contemporanea negoziazione degli accordi Sykes-Picot (1916) e dalla Dichiarazione Balfour (1917). Questo triplo gioco britannico e' alla radice di molti conflitti mediorientali contemporanei. ETHICS-003: la conquista saudita dell'Hejaz (1924-25) estinse l'ultimo stato hashemita nella penisola arabica. La distruzione di siti storici a Mecca e Medina da parte dei Sauditi wahhabiti e' un tema eticamente sensibile.",
     "name_variants": [
       {
@@ -2746,7 +4436,8 @@
         "citation": "McMahon-Hussein Correspondence (1915-16)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "إمارة شرق الأردن",
@@ -2757,9 +4448,67 @@
     "capital_name": "Amman",
     "capital_lat": 31.9454,
     "capital_lon": 35.9284,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            39.5413,
+            31.9454
+          ],
+          [
+            39.8486,
+            33.4957
+          ],
+          [
+            39.1517,
+            37.2446
+          ],
+          [
+            35.9284,
+            36.0433
+          ],
+          [
+            33.416,
+            36.2074
+          ],
+          [
+            29.538,
+            34.7844
+          ],
+          [
+            31.1213,
+            31.9454
+          ],
+          [
+            32.4688,
+            30.2643
+          ],
+          [
+            32.0559,
+            27.191
+          ],
+          [
+            35.9284,
+            26.0705
+          ],
+          [
+            38.3761,
+            27.5779
+          ],
+          [
+            41.627,
+            29.6542
+          ],
+          [
+            39.5413,
+            31.9454
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in arabo. L'Emirato di Transgiordania fu creato come entita' separata dal Mandato Britannico della Palestina nel 1921, con Abdullah ibn Hussein (figlio dello Sharif Hussein) come emiro sotto supervisione britannica. ETHICS-002: la separazione della Transgiordania dalla Palestina fu una decisione coloniale britannica motivata da calcoli geopolitici (compensare gli Hashemiti per la perdita della Siria a favore della Francia). I confini furono tracciati arbitrariamente senza consultare le popolazioni locali — beduini, circassi, armeni, palestinesi. ETHICS-003: l'entity_type 'colony' riflette la realta' del controllo britannico, nonostante la formale autonomia interna dell'emiro. La Legione Araba era comandata da ufficiali britannici (Glubb Pasha).",
     "name_variants": [
       {
@@ -2810,7 +4559,8 @@
         "citation": "Churchill White Paper on Palestine (1922)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Mandat francais pour la Syrie et le Liban",
@@ -2821,9 +4571,67 @@
     "capital_name": "Beirut",
     "capital_lat": 33.8938,
     "capital_lon": 35.5018,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            41.94,
+            33.8938
+          ],
+          [
+            39.8293,
+            35.7588
+          ],
+          [
+            38.1004,
+            38.1855
+          ],
+          [
+            35.5018,
+            38.4865
+          ],
+          [
+            33.2103,
+            36.927
+          ],
+          [
+            30.9072,
+            36.213
+          ],
+          [
+            30.9285,
+            33.8938
+          ],
+          [
+            30.4137,
+            31.5134
+          ],
+          [
+            33.1176,
+            29.6625
+          ],
+          [
+            35.5018,
+            30.0315
+          ],
+          [
+            38.6332,
+            30.1254
+          ],
+          [
+            41.3863,
+            30.8386
+          ],
+          [
+            41.94,
+            33.8938
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome ufficiale era in francese, la lingua della potenza mandataria. In arabo الانتداب الفرنسي على سوريا ولبنان. ETHICS-002: il mandato francese fu un atto coloniale mascherato da missione civilizzatrice sotto l'egida della Societa' delle Nazioni. La Francia utilizzo' sistematicamente la strategia del 'divide et impera', frammentando il territorio in stati confessionali (Stato di Damasco, Stato di Aleppo, Stato degli Alawiti, Jabal Druze, Grande Libano) per impedire l'unita' araba. Questa frammentazione e' alla radice delle tensioni settarie contemporanee in Siria e Libano. ETHICS-003: la resistenza siriana al mandato fu violenta e repressa con brutalita'. La Grande Rivolta Siriana (1925-27) fu soppressa con bombardamenti di Damasco. La creazione del Grande Libano (1920) con confini che includevano aree a maggioranza musulmana scontente fu un atto di ingegneria demografica a favore della comunita' maronita alleata della Francia.",
     "name_variants": [
       {
@@ -2898,7 +4706,8 @@
         "citation": "League of Nations Mandate for Syria and the Lebanon (1922)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "الغساسنة",
@@ -2909,9 +4718,67 @@
     "capital_name": "Jabiyah",
     "capital_lat": 32.9333,
     "capital_lon": 36.0833,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            38.6201,
+            32.9333
+          ],
+          [
+            38.3842,
+            33.9189
+          ],
+          [
+            38.3325,
+            35.8664
+          ],
+          [
+            36.0833,
+            35.1185
+          ],
+          [
+            33.8268,
+            35.7179
+          ],
+          [
+            32.5462,
+            34.419
+          ],
+          [
+            33.5359,
+            32.9333
+          ],
+          [
+            33.473,
+            31.4405
+          ],
+          [
+            34.983,
+            30.9233
+          ],
+          [
+            36.0833,
+            30.3722
+          ],
+          [
+            38.4093,
+            29.7238
+          ],
+          [
+            38.7396,
+            31.8322
+          ],
+          [
+            38.6201,
+            32.9333
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in arabo. I Ghassanidi erano arabi cristiani (monofisiti/miafisiti) che fungevano da stato-cuscinetto dell'Impero Bizantino contro i Sasanidi e i loro clienti Lakhmidi. ETHICS-002: i Ghassanidi rappresentano un caso fondamentale di cristianesimo arabo pre-islamico, un fatto spesso trascurato nelle narrative che identificano il mondo arabo esclusivamente con l'Islam. La loro confessione monofisita li metteva in conflitto dottrinale con Costantinopoli. ETHICS-003: le fonti sono quasi esclusivamente esterne (bizantine, siriache, arabe islamiche). La voce ghassanide e' praticamente assente dal record storico. Le iscrizioni in arabo pre-islamico sono estremamente rare.",
     "name_variants": [
       {
@@ -2978,7 +4845,8 @@
         "citation": "Procopio di Cesarea, Le Guerre (VI sec.)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "اللخميون",
@@ -2989,9 +4857,67 @@
     "capital_name": "al-Hira",
     "capital_lat": 31.8833,
     "capital_lon": 44.4333,
-    "confidence_score": 0.55,
+    "confidence_score": 0.45,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            47.8694,
+            31.8833
+          ],
+          [
+            48.3756,
+            33.6337
+          ],
+          [
+            46.2892,
+            34.488
+          ],
+          [
+            44.4333,
+            36.2344
+          ],
+          [
+            42.7428,
+            34.6628
+          ],
+          [
+            41.18,
+            33.4543
+          ],
+          [
+            41.0956,
+            31.8833
+          ],
+          [
+            41.5695,
+            30.517
+          ],
+          [
+            42.2216,
+            28.5028
+          ],
+          [
+            44.4333,
+            28.3205
+          ],
+          [
+            45.813,
+            29.4205
+          ],
+          [
+            47.596,
+            30.3431
+          ],
+          [
+            47.8694,
+            31.8833
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in arabo. I Lakhmidi erano arabi cristiani (nestoriani) e pre-islamici che fungevano da stato-cuscinetto dell'Impero Sasanide contro Bisanzio e i suoi clienti Ghassanidi. ETHICS-002: al-Hira fu un importante centro del cristianesimo nestoriano arabo e della cultura letteraria araba pre-islamica. La poesia pre-islamica associata alla corte lakhmide (Imru' al-Qays, al-Nabigha) e' fondamentale per la letteratura araba. ETHICS-003: come per i Ghassanidi, le fonti dirette lakhmidi sono quasi inesistenti. La storia lakhmide e' ricostruita da fonti arabe islamiche posteriori, siriache e persiane. Il confidence_score riflette questa dipendenza da fonti indirette.",
     "name_variants": [
       {
@@ -3058,7 +4984,8 @@
         "citation": "al-Tabari, Tarikh al-Rusul wa-l-Muluk (X sec.)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "قاجاریه",
@@ -3069,9 +4996,67 @@
     "capital_name": "Tehran",
     "capital_lat": 35.6892,
     "capital_lon": 51.389,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            54.4036,
+            35.6892
+          ],
+          [
+            54.2754,
+            37.1177
+          ],
+          [
+            53.2967,
+            38.8394
+          ],
+          [
+            51.389,
+            39.5711
+          ],
+          [
+            49.0568,
+            38.2985
+          ],
+          [
+            47.9277,
+            37.6858
+          ],
+          [
+            47.6906,
+            35.6892
+          ],
+          [
+            47.4383,
+            34.0735
+          ],
+          [
+            49.1859,
+            33.0863
+          ],
+          [
+            51.389,
+            33.2915
+          ],
+          [
+            53.4807,
+            32.7337
+          ],
+          [
+            55.4211,
+            33.5806
+          ],
+          [
+            54.4036,
+            35.6892
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in persiano. I Qajar erano una tribu' turcomanna Oghuz. Il nome della dinastia in persiano moderno e' Qajariyye (قاجاریه). ETHICS-002: il periodo Qajar e' segnato dalla progressiva perdita di sovranita' dell'Iran a favore di Russia e Gran Bretagna ('Grande Gioco'). I trattati di Golestan (1813) e Turkmenchay (1828) imposero la cessione del Caucaso alla Russia. La Concessione del Tabacco (1890) e la Rivoluzione Costituzionale (1905-11) mostrano la tensione tra imperialismo straniero e aspirazioni democratiche iraniane. ETHICS-003: la storiografia Pahlavi ha sistematicamente denigrato i Qajar per legittimare il colpo di stato di Reza Khan (1921/1925). Una rappresentazione equilibrata richiede fonti non-Pahlavi.",
     "name_variants": [
       {
@@ -3146,7 +5131,8 @@
         "citation": "Treaty of Golestan (1813) and Treaty of Turkmenchay (1828)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Ṣūr / 𐤑𐤓",
@@ -3157,9 +5143,67 @@
     "capital_name": "Tyre",
     "capital_lat": 33.2705,
     "capital_lon": 35.2038,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            35.553,
+            33.2705
+          ],
+          [
+            35.4876,
+            33.4022
+          ],
+          [
+            35.3449,
+            33.48
+          ],
+          [
+            35.2038,
+            33.6421
+          ],
+          [
+            34.9578,
+            33.6195
+          ],
+          [
+            34.8271,
+            33.4435
+          ],
+          [
+            34.764,
+            33.2705
+          ],
+          [
+            34.9539,
+            33.1243
+          ],
+          [
+            35.0304,
+            33.0241
+          ],
+          [
+            35.2038,
+            32.9726
+          ],
+          [
+            35.4745,
+            32.9414
+          ],
+          [
+            35.6386,
+            33.1019
+          ],
+          [
+            35.553,
+            33.2705
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in fenicio (Ṣūr, 'roccia'). Il nome greco Τυρος e l'italiano Tiro sono esonimi. La citta' era originariamente su un'isola, poi collegata alla terraferma dalla diga costruita da Alessandro Magno durante l'assedio del -332. ETHICS-002: l'assedio di Tiro da parte di Alessandro (-332) fu uno degli episodi piu' violenti della conquista macedone: la citta' resistette sette mesi; alla caduta, 8.000 tiriani furono uccisi e 30.000 venduti come schiavi (Arriano, Diodoro Siculo). Questo massacro e' spesso minimizzato nella storiografia che celebra Alessandro. ETHICS-003: Tiro era la madrepatria di Cartagine e la citta' fenicia piu' potente. La sua storia non deve essere ridotta a un capitolo della storia greca o romana.",
     "name_variants": [
       {
@@ -3226,7 +5270,8 @@
         "citation": "Arriano, Anabasi di Alessandro, II.15-24",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Ṣīdūn / 𐤑𐤃𐤍",
@@ -3237,9 +5282,67 @@
     "capital_name": "Sidon",
     "capital_lat": 33.56,
     "capital_lon": 35.3714,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            35.6307,
+            33.56
+          ],
+          [
+            35.7257,
+            33.7191
+          ],
+          [
+            35.547,
+            33.7971
+          ],
+          [
+            35.3714,
+            33.8018
+          ],
+          [
+            35.1509,
+            33.9249
+          ],
+          [
+            35.1452,
+            33.679
+          ],
+          [
+            35.0872,
+            33.56
+          ],
+          [
+            35.0505,
+            33.4065
+          ],
+          [
+            35.2011,
+            33.2473
+          ],
+          [
+            35.3714,
+            33.2141
+          ],
+          [
+            35.5332,
+            33.336
+          ],
+          [
+            35.609,
+            33.4361
+          ],
+          [
+            35.6307,
+            33.56
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in fenicio (Ṣīdūn, probabilmente 'luogo di pesca'). Il nome greco Σιδων e l'italiano Sidone sono esonimi. Nella Bibbia ebraica (Genesi 10:15), Sidon e' il primogenito di Canaan. ETHICS-002: Sidone fu la citta' fenicia piu' antica e importante prima di essere eclissata da Tiro. La competizione tra le due citta' e' un tema centrale della storia fenicia. Le sarcofagi reali di Sidone (incluso il cosiddetto 'Sarcofago di Alessandro', oggi al Museo Archeologico di Istanbul) furono portati via sotto l'Impero Ottomano — un caso di patrimonio culturale contestato. ETHICS-003: le fonti sulla storia indipendente di Sidone sono scarse; gran parte e' nota attraverso fonti assire, babilonesi, bibliche e greche.",
     "name_variants": [
       {
@@ -3314,7 +5417,8 @@
         "citation": "Annali di Esarhaddon (British Museum)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Karkamış / 𔐀𔐬𔑣𔗢𔐖𔗐",
@@ -3325,9 +5429,67 @@
     "capital_name": "Carchemish",
     "capital_lat": 36.8283,
     "capital_lon": 38.0083,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            41.4565,
+            36.8283
+          ],
+          [
+            40.2193,
+            37.8883
+          ],
+          [
+            39.4768,
+            39.4965
+          ],
+          [
+            38.0083,
+            38.964
+          ],
+          [
+            36.684,
+            39.0564
+          ],
+          [
+            34.9809,
+            38.3163
+          ],
+          [
+            35.164,
+            36.8283
+          ],
+          [
+            35.1407,
+            35.5102
+          ],
+          [
+            36.9975,
+            35.333
+          ],
+          [
+            38.0083,
+            34.9325
+          ],
+          [
+            39.6309,
+            34.7111
+          ],
+          [
+            40.4337,
+            35.9087
+          ],
+          [
+            41.4565,
+            36.8283
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in luvio geroglifico (la lingua scritta dei regni neo-ittiti). 'Neo-Hittite' e' una convenzione storiografica moderna; i popoli di questi stati non si definivano cosi'. Carchemish e' il piu' importante dei regni neo-ittiti sopravvissuti al collasso dell'impero ittita. ETHICS-002: Carchemish e' qui usata come rappresentante degli stati neo-ittiti (Kummuh, Sam'al/Ya'diya, Patina/Unqi, Tabal, Que, Hilakku), ciascuno dei quali aveva identita' distinta. Questa semplificazione e' documentata. ETHICS-003: i regni neo-ittiti sono spesso trascurati tra la caduta dell'Impero Ittita e l'espansione assira. Rappresentano una continuita' culturale anatolico-siriana fondamentale e un periodo di innovazione nell'arte e nella scrittura.",
     "name_variants": [
       {
@@ -3394,7 +5556,8 @@
         "citation": "Annali di Sargon II d'Assiria",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "الدولة الغورية",
@@ -3405,9 +5568,67 @@
     "capital_name": "Firuzkuh",
     "capital_lat": 34.7,
     "capital_lon": 65.2333,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            67.74,
+            34.7
+          ],
+          [
+            66.9919,
+            35.5261
+          ],
+          [
+            67.087,
+            37.3418
+          ],
+          [
+            65.2333,
+            37.624
+          ],
+          [
+            63.247,
+            37.5776
+          ],
+          [
+            63.3301,
+            35.6525
+          ],
+          [
+            63.1565,
+            34.7
+          ],
+          [
+            63.071,
+            33.859
+          ],
+          [
+            63.9955,
+            33.3275
+          ],
+          [
+            65.2333,
+            32.3511
+          ],
+          [
+            66.553,
+            33.0548
+          ],
+          [
+            67.3313,
+            33.7165
+          ],
+          [
+            67.74,
+            34.7
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in persiano (Ghuriyyan). I Ghuridi erano originari della regione montana del Ghur (Afghanistan centrale). Parlavano probabilmente una varieta' di persiano orientale. ETHICS-002: la conquista ghuride dell'India settentrionale sotto Muhammad di Ghur (Battaglia di Tarain II, 1192) segno' l'inizio del dominio islamico persistente nell'India del nord. La distruzione del monastero buddista di Nalanda (circa 1193) e di templi hindu e' uno degli episodi piu' controversi della storia dell'Asia meridionale. Le fonti indiane, persiane e le interpretazioni storiografiche moderne divergono profondamente. ETHICS-003: la storiografia nazionalista indiana e quella islamista tendono a strumentalizzare questi eventi. Una rappresentazione equilibrata richiede fonti molteplici.",
     "name_variants": [
       {
@@ -3474,7 +5695,8 @@
         "citation": "Thomas, D. 'The Ghurid Sultans and the Islamicization of South Asia', in Flood, F.B. (ed.) Piety and Politics in the Early Indian Mosque (2009)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "الدولة الأيوبية في اليمن",
@@ -3485,9 +5707,67 @@
     "capital_name": "Zabid",
     "capital_lat": 14.195,
     "capital_lon": 43.3153,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            45.7025,
+            14.195
+          ],
+          [
+            44.73,
+            15.1754
+          ],
+          [
+            44.1701,
+            15.5503
+          ],
+          [
+            43.3153,
+            16.2048
+          ],
+          [
+            42.3593,
+            15.778
+          ],
+          [
+            41.6214,
+            15.1717
+          ],
+          [
+            41.4918,
+            14.195
+          ],
+          [
+            41.0562,
+            13.1369
+          ],
+          [
+            42.1229,
+            12.0514
+          ],
+          [
+            43.3153,
+            11.9808
+          ],
+          [
+            44.5785,
+            12.1354
+          ],
+          [
+            45.1986,
+            13.1397
+          ],
+          [
+            45.7025,
+            14.195
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in arabo. Il ramo ayyubide dello Yemen e' distinto dalla casa ayyubide principale di Egitto e Siria. Lo Yemen era governato da fratelli e nipoti di Saladino. ETHICS-002: l'invasione ayyubide dello Yemen (1174) estinse la dinastia sciita isma'ilita dei Fatimidi yemeniti (Sulayhidi) e i loro successori. La transizione al dominio sunnita-ayyubide ebbe conseguenze durature sulla composizione settaria dello Yemen. ETHICS-003: la storia dello Yemen medievale e' spesso trascurata nella storiografia mediorientale centrata su Egitto e Levante. Aden era uno dei porti piu' importanti del mondo per il commercio tra Oceano Indiano e Mediterraneo.",
     "name_variants": [
       {
@@ -3538,7 +5818,8 @@
         "citation": "Vallet, E. L'Arabie marchande (2010)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "مملكة بيت المقدس العربية",
@@ -3549,9 +5830,67 @@
     "capital_name": "Jerusalem",
     "capital_lat": 31.7683,
     "capital_lon": 35.2137,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            37.8961,
+            31.7683
+          ],
+          [
+            38.2392,
+            33.2997
+          ],
+          [
+            36.9225,
+            34.0502
+          ],
+          [
+            35.2137,
+            34.0623
+          ],
+          [
+            33.9783,
+            33.4588
+          ],
+          [
+            32.7456,
+            33.1934
+          ],
+          [
+            32.169,
+            31.7683
+          ],
+          [
+            32.2784,
+            30.0851
+          ],
+          [
+            33.4342,
+            29.5855
+          ],
+          [
+            35.2137,
+            28.6836
+          ],
+          [
+            37.0849,
+            28.7949
+          ],
+          [
+            37.4137,
+            30.5774
+          ],
+          [
+            37.8961,
+            31.7683
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: questa entita' rappresenta il controllo ayyubide su Gerusalemme dopo la riconquista di Saladino (1187) fino alla cessione crociata del 1229 tramite il trattato tra Federico II e al-Kamil. Il nome e' una designazione storica convenzionale. ETHICS-002: il trattato di Giaffa (1229) in cui al-Kamil cedette Gerusalemme a Federico II senza combattere fu enormemente controverso nel mondo islamico. I cronisti arabi lo condannarono come un tradimento. La citta' ritorno' sotto controllo musulmano nel 1244 con la conquista dei Khwarezmiani. ETHICS-003: Gerusalemme nel periodo ayyubide ospitava musulmani, cristiani ed ebrei in una coesistenza che, pur non essendo idilliaca, contrasta con la violenza della conquista crociata del 1099.",
     "name_variants": [
       {
@@ -3602,7 +5941,8 @@
         "citation": "Hillenbrand, C. The Crusades: Islamic Perspectives (1999)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "سلطنة عدن",
@@ -3613,9 +5953,67 @@
     "capital_name": "Aden",
     "capital_lat": 12.7855,
     "capital_lon": 45.0187,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            48.0381,
+            12.7855
+          ],
+          [
+            46.7222,
+            13.9551
+          ],
+          [
+            45.8634,
+            14.3662
+          ],
+          [
+            45.0187,
+            15.3224
+          ],
+          [
+            43.757,
+            14.8939
+          ],
+          [
+            43.6977,
+            13.6448
+          ],
+          [
+            42.8748,
+            12.7855
+          ],
+          [
+            42.5027,
+            11.5594
+          ],
+          [
+            44.0094,
+            10.829
+          ],
+          [
+            45.0187,
+            10.6195
+          ],
+          [
+            45.8235,
+            11.3521
+          ],
+          [
+            46.853,
+            11.7273
+          ],
+          [
+            48.0381,
+            12.7855
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in arabo. I Tahiridi erano una dinastia yemenita locale che succedette ai Rasulidi. Il loro breve periodo di potere e' spesso trascurato nella storiografia. ETHICS-002: la conquista mamelucca e poi portoghese di Aden (tentativo del 1513) e infine l'invasione ottomana (1517) rappresentano l'intrusione di potenze esterne nel sistema commerciale dell'Oceano Indiano, con conseguenze devastanti per l'economia yemenita e indiana. ETHICS-003: la storia dei Tahiridi illustra come le dinamiche locali yemenite siano spesso oscurate dalla storiografia centrata sulle grandi potenze (Mamelucchi, Ottomani, Portoghesi).",
     "name_variants": [
       {
@@ -3674,6 +6072,7 @@
         "citation": "Vallet, E. L'Arabie marchande (2010)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   }
 ]

@@ -8,9 +8,67 @@
     "capital_name": "Paris",
     "capital_lat": 48.8566,
     "capital_lon": 2.3522,
-    "confidence_score": 0.95,
+    "confidence_score": 0.85,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            6.3055,
+            48.8566
+          ],
+          [
+            7.5124,
+            50.9008
+          ],
+          [
+            4.5413,
+            51.0676
+          ],
+          [
+            2.3522,
+            52.049
+          ],
+          [
+            -0.1671,
+            51.6172
+          ],
+          [
+            -1.4957,
+            50.4783
+          ],
+          [
+            -1.2194,
+            48.8566
+          ],
+          [
+            -1.7664,
+            46.9495
+          ],
+          [
+            -0.4225,
+            45.631
+          ],
+          [
+            2.3522,
+            45.8679
+          ],
+          [
+            4.5511,
+            46.4023
+          ],
+          [
+            6.6703,
+            47.222
+          ],
+          [
+            6.3055,
+            48.8566
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in French as used by the monarchy itself. ETHICS-002: French territorial expansion involved systematic suppression of regional cultures (Occitan, Breton, Basque) and forced linguistic unification. The monarchy's colonial enterprises (from 16th century) involved enslavement and exploitation overseas. The Albigensian Crusade (1209-1229) constituted genocide against Cathar communities in southern France. Religious persecution of Huguenots culminated in the St. Bartholomew's Day massacre (1572) and the Revocation of the Edict of Nantes (1685).",
     "name_variants": [
       {
@@ -73,7 +131,8 @@
         "citation": "Duby, G. Histoire de la France des origines a nos jours (1987)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kingdom of England",
@@ -84,9 +143,67 @@
     "capital_name": "London",
     "capital_lat": 51.5074,
     "capital_lon": -0.1278,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            5.0493,
+            51.5074
+          ],
+          [
+            4.2586,
+            53.0421
+          ],
+          [
+            2.1559,
+            53.4687
+          ],
+          [
+            -0.1278,
+            53.9641
+          ],
+          [
+            -2.5692,
+            53.7489
+          ],
+          [
+            -2.8243,
+            52.4858
+          ],
+          [
+            -3.5729,
+            51.5074
+          ],
+          [
+            -5.074,
+            50.1157
+          ],
+          [
+            -2.0645,
+            49.3337
+          ],
+          [
+            -0.1278,
+            47.682
+          ],
+          [
+            2.1355,
+            49.0895
+          ],
+          [
+            3.2047,
+            50.2213
+          ],
+          [
+            5.0493,
+            51.5074
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in English, the language of the ruling class after the Norman Conquest (1066), though Old English was the original language. The kingdom was built on the subjugation of earlier Anglo-Saxon kingdoms and the dispossession of Celtic Britons. ETHICS-002: The Harrying of the North (1069-1070) constituted deliberate genocide. English colonial expansion into Wales and Ireland involved systematic violence and cultural suppression. ETHICS-003: The date 927 (Athelstan's unification) is conventional but disputed; some historians argue for earlier or later dates.",
     "name_variants": [
       {
@@ -149,7 +266,8 @@
         "citation": "Anglo-Saxon Chronicle (various manuscripts, 9th-12th century)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Konungariket Sverige",
@@ -160,9 +278,67 @@
     "capital_name": "Stockholm",
     "capital_lat": 59.3293,
     "capital_lon": 18.0686,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            24.1152,
+            59.3293
+          ],
+          [
+            23.696,
+            61.1358
+          ],
+          [
+            22.3549,
+            62.8826
+          ],
+          [
+            18.0686,
+            62.0608
+          ],
+          [
+            15.3579,
+            61.3015
+          ],
+          [
+            12.8929,
+            60.8177
+          ],
+          [
+            10.2364,
+            59.3293
+          ],
+          [
+            10.4831,
+            57.3812
+          ],
+          [
+            13.4745,
+            55.0655
+          ],
+          [
+            18.0686,
+            56.711
+          ],
+          [
+            21.8586,
+            55.9214
+          ],
+          [
+            22.4468,
+            57.7961
+          ],
+          [
+            24.1152,
+            59.3293
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Swedish. Year_start 1523 marks Gustav Vasa's election as king and formal independence from the Kalmar Union. Earlier Swedish kingdoms existed but the continuous modern state dates from this point. ETHICS-002: Swedish imperial expansion in the Baltic (1560s-1721) involved significant violence against Finnish, Estonian, Latvian, and German-speaking populations. The Thirty Years' War devastation of Germany by Swedish forces was catastrophic. ETHICS-003: Sweden's colonization of Sapmi (Sami territories) and forced assimilation of Sami people constitutes an ongoing human rights issue that the Swedish state has only recently begun to acknowledge.",
     "name_variants": [
       {
@@ -217,7 +393,8 @@
         "citation": "Nordstrom, B. The History of Sweden (2002)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kongeriget Danmark",
@@ -228,9 +405,67 @@
     "capital_name": "Kobenhavn",
     "capital_lat": 55.6761,
     "capital_lon": 12.5683,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            16.9323,
+            55.6761
+          ],
+          [
+            17.6373,
+            57.2098
+          ],
+          [
+            15.6105,
+            59.4226
+          ],
+          [
+            12.5683,
+            58.1401
+          ],
+          [
+            10.1569,
+            58.3537
+          ],
+          [
+            8.6056,
+            57.3387
+          ],
+          [
+            6.2893,
+            55.6761
+          ],
+          [
+            7.2482,
+            54.0587
+          ],
+          [
+            10.067,
+            53.4495
+          ],
+          [
+            12.5683,
+            51.9692
+          ],
+          [
+            15.512,
+            53.1154
+          ],
+          [
+            15.949,
+            54.3062
+          ],
+          [
+            16.9323,
+            55.6761
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Danish. ETHICS-003: The date 935 (Gorm the Old) is conventional but archaeological evidence is debated. Earlier rulers may have unified Denmark. The Jelling stones provide the earliest self-designation. ETHICS-002: Denmark's medieval expansion involved conquest of the Wends (Slavic peoples) and forcible Christianization of Scandinavia. Danish colonial empire included exploitation of Greenlandic Inuit, Caribbean slavery (Danish West Indies), and trading posts in India and Africa. Denmark was among the last European nations to abolish the slave trade (1803, effective 1848 in colonies).",
     "name_variants": [
       {
@@ -277,7 +512,8 @@
         "citation": "Saxo Grammaticus, Gesta Danorum (c. 1200)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kongeriket Noreg",
@@ -288,9 +524,67 @@
     "capital_name": "Oslo",
     "capital_lat": 59.9139,
     "capital_lon": 10.7522,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            17.6704,
+            59.9139
+          ],
+          [
+            17.0105,
+            61.7558
+          ],
+          [
+            13.338,
+            62.4648
+          ],
+          [
+            10.7522,
+            62.0013
+          ],
+          [
+            8.952,
+            61.6221
+          ],
+          [
+            7.1922,
+            60.9378
+          ],
+          [
+            5.9719,
+            59.9139
+          ],
+          [
+            4.6522,
+            58.2192
+          ],
+          [
+            7.5946,
+            56.9907
+          ],
+          [
+            10.7522,
+            57.6807
+          ],
+          [
+            13.239,
+            57.8605
+          ],
+          [
+            15.7603,
+            58.4559
+          ],
+          [
+            17.6704,
+            59.9139
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Nynorsk (Norwegian New Norwegian), reflecting the indigenous linguistic tradition. ETHICS-003: The date 872 (Battle of Hafrsfjord, Harald Fairhair's unification) is traditional but highly uncertain. Modern archaeology and historiography question whether a unified kingdom truly existed at this date. The sagas describing unification were written centuries later and mix myth with history. Confidence score reflects this uncertainty. ETHICS-002: Viking-era Norwegian expansion involved raiding, enslavement, and colonization of the North Atlantic, including forcible displacement of indigenous populations in the Faroe Islands and possibly Iceland.",
     "name_variants": [
       {
@@ -337,7 +631,8 @@
         "citation": "Helle, K. (ed.) Cambridge History of Scandinavia, Vol. 1 (2003)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Reino de Portugal",
@@ -348,9 +643,67 @@
     "capital_name": "Lisboa",
     "capital_lat": 38.7223,
     "capital_lon": -9.1393,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -5.1289,
+            38.7223
+          ],
+          [
+            -5.7955,
+            40.2425
+          ],
+          [
+            -7.3666,
+            41.2261
+          ],
+          [
+            -9.1393,
+            41.2572
+          ],
+          [
+            -11.0556,
+            41.5031
+          ],
+          [
+            -12.5532,
+            40.6053
+          ],
+          [
+            -12.9302,
+            38.7223
+          ],
+          [
+            -11.8904,
+            37.5812
+          ],
+          [
+            -10.657,
+            36.4598
+          ],
+          [
+            -9.1393,
+            34.6643
+          ],
+          [
+            -6.9081,
+            35.8794
+          ],
+          [
+            -5.4236,
+            37.332
+          ],
+          [
+            -5.1289,
+            38.7223
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Portuguese. ETHICS-002: Portugal pioneered the Atlantic slave trade, beginning in 1444. The Portuguese colonial empire was built on enslavement, exploitation, and violence across Africa, Asia, and South America. An estimated 5.8 million enslaved Africans were transported to Brazil alone. The destruction of indigenous civilizations, forced labor systems, and cultural erasure were systematic features of Portuguese colonialism. ETHICS-003: Portugal's borders (established by the Treaty of Alcanices, 1297) are among Europe's oldest stable frontiers, but were formed through the Reconquista, which involved both military conquest and cultural/religious cleansing of Muslim and Jewish populations.",
     "name_variants": [
       {
@@ -405,7 +758,8 @@
         "citation": "Zurara, G.E. Cronica dos feitos notaveis que se passaram na conquista de Guine (1453)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Rzeczpospolita Obojga Narodow",
@@ -416,9 +770,67 @@
     "capital_name": "Warszawa",
     "capital_lat": 52.2297,
     "capital_lon": 21.0122,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            28.5438,
+            52.2297
+          ],
+          [
+            26.1205,
+            54.047
+          ],
+          [
+            24.5557,
+            55.9455
+          ],
+          [
+            21.0122,
+            57.5385
+          ],
+          [
+            18.0461,
+            55.26
+          ],
+          [
+            15.4916,
+            54.3925
+          ],
+          [
+            11.6577,
+            52.2297
+          ],
+          [
+            14.1474,
+            49.8597
+          ],
+          [
+            17.9942,
+            49.188
+          ],
+          [
+            21.0122,
+            47.13
+          ],
+          [
+            26.1486,
+            47.428
+          ],
+          [
+            25.9842,
+            50.584
+          ],
+          [
+            28.5438,
+            52.2297
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Polish as the dominant political language of the Commonwealth, though the state was officially bilingual (Polish-Lithuanian). ETHICS-003: The entity was a unique dual state and should not be reduced to 'Poland'. Lithuanian, Ruthenian (Ukrainian/Belarusian), and other perspectives must be represented. ETHICS-002: The Commonwealth practiced relative religious tolerance (Warsaw Confederation, 1573), but this coexisted with the enserfment of peasants and the political marginalization of Ruthenian/Ukrainian populations, contributing to the Khmelnytsky Uprising (1648). The Partitions (1772-1795) by Russia, Prussia, and Austria constitute one of the most significant state destructions in European history.",
     "name_variants": [
       {
@@ -473,7 +885,8 @@
         "citation": "Lukowski, J. & Zawadzki, H. A Concise History of Poland (2006)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Krolestwo Polskie",
@@ -484,9 +897,67 @@
     "capital_name": "Krakow",
     "capital_lat": 50.0647,
     "capital_lon": 19.945,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            25.5746,
+            50.0647
+          ],
+          [
+            24.2354,
+            51.7518
+          ],
+          [
+            21.6898,
+            51.6505
+          ],
+          [
+            19.945,
+            52.9552
+          ],
+          [
+            17.4484,
+            52.4953
+          ],
+          [
+            16.325,
+            51.4426
+          ],
+          [
+            16.7108,
+            50.0647
+          ],
+          [
+            16.8605,
+            48.9025
+          ],
+          [
+            18.0401,
+            48.1711
+          ],
+          [
+            19.945,
+            46.5079
+          ],
+          [
+            21.6926,
+            48.4001
+          ],
+          [
+            24.2383,
+            48.3206
+          ],
+          [
+            25.5746,
+            50.0647
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Polish. ETHICS-003: The date 1025 marks the coronation of Boleslaw I Chrobry, but the Piast dynasty ruled earlier without a royal title. The Kingdom of Poland underwent periods of fragmentation (1138-1320) when it effectively ceased to exist as a unified state, making continuous dating problematic. ETHICS-002: Polish medieval expansion involved Christianization campaigns against pagan Baltic peoples and complex interactions with German settlers (Ostsiedlung) that created ethnically mixed societies.",
     "name_variants": [
       {
@@ -533,7 +1004,8 @@
         "citation": "Knoll, P.W. The Rise of the Polish Monarchy (1972)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Magyar Kiralysag",
@@ -544,9 +1016,67 @@
     "capital_name": "Buda",
     "capital_lat": 47.4979,
     "capital_lon": 19.0402,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            25.8536,
+            47.4979
+          ],
+          [
+            24.4755,
+            49.5588
+          ],
+          [
+            21.2121,
+            50.2327
+          ],
+          [
+            19.0402,
+            50.5502
+          ],
+          [
+            16.426,
+            50.5581
+          ],
+          [
+            15.0193,
+            49.2581
+          ],
+          [
+            12.9588,
+            47.4979
+          ],
+          [
+            14.5699,
+            45.7101
+          ],
+          [
+            15.986,
+            43.9117
+          ],
+          [
+            19.0402,
+            44.1856
+          ],
+          [
+            21.3606,
+            45.2487
+          ],
+          [
+            22.1363,
+            46.3932
+          ],
+          [
+            25.8536,
+            47.4979
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Hungarian. ETHICS-003: The capital changed multiple times: Esztergom, Szekesfehervar, Buda, Bratislava/Pozsony (during Ottoman occupation), then Buda again. Listed as Buda as the most historically significant seat. ETHICS-002: The medieval Hungarian kingdom was multiethnic (Hungarians, Slovaks, Romanians, Serbs, Croats, Germans, Ruthenians). Hungarian nationalist historiography often minimizes the distinct identities and contributions of non-Magyar populations. The Magyarization policies of the 19th century constituted cultural suppression of minorities. The Treaty of Trianon (1920) partitioned historical Hungary, but the preceding minority oppression is often omitted from Hungarian national narratives.",
     "name_variants": [
       {
@@ -601,7 +1131,8 @@
         "citation": "Anonymous, Gesta Hungarorum (c. 1200)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Βασίλειον τῆς Μακεδονίας",
@@ -612,9 +1143,67 @@
     "capital_name": "Pella",
     "capital_lat": 40.7611,
     "capital_lon": 22.5217,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            26.014,
+            40.7611
+          ],
+          [
+            25.6864,
+            42.2559
+          ],
+          [
+            24.5047,
+            43.4966
+          ],
+          [
+            22.5217,
+            43.6052
+          ],
+          [
+            20.9798,
+            42.5415
+          ],
+          [
+            19.2638,
+            42.2196
+          ],
+          [
+            19.3433,
+            40.7611
+          ],
+          [
+            20.0493,
+            39.7356
+          ],
+          [
+            20.4541,
+            38.3443
+          ],
+          [
+            22.5217,
+            37.5969
+          ],
+          [
+            24.1489,
+            38.0774
+          ],
+          [
+            25.7527,
+            39.1244
+          ],
+          [
+            26.014,
+            40.7611
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Ancient Greek, though the Macedonians' own language and ethnic identity are subjects of intense modern political dispute (see ETHICS-003). ETHICS-003: The identity of ancient Macedonians is one of the most politically contested topics in Southeastern European historiography. Modern Greece and North Macedonia both claim heritage. The database presents the ancient entity neutrally without endorsing either modern national claim. Alexander the Great's campaigns are often romanticized in Western historiography while their devastating impact on conquered peoples is minimized. ETHICS-002: Alexander's conquests caused massive destruction and population displacement across the eastern Mediterranean and Near East. The destruction of Thebes (335 BCE) and Tyre (332 BCE) were acts of deliberate mass violence.",
     "name_variants": [
       {
@@ -669,7 +1258,8 @@
         "citation": "Arrian, Anabasis of Alexander (2nd century CE)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Λακεδαίμων",
@@ -680,9 +1270,67 @@
     "capital_name": "Sparta",
     "capital_lat": 37.0755,
     "capital_lon": 22.4303,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            23.0182,
+            37.0755
+          ],
+          [
+            22.7745,
+            37.2448
+          ],
+          [
+            22.6211,
+            37.3334
+          ],
+          [
+            22.4303,
+            37.4475
+          ],
+          [
+            22.1803,
+            37.3671
+          ],
+          [
+            22.0314,
+            37.2678
+          ],
+          [
+            22.0524,
+            37.0755
+          ],
+          [
+            22.0984,
+            36.9369
+          ],
+          [
+            22.1435,
+            36.6548
+          ],
+          [
+            22.4303,
+            36.7081
+          ],
+          [
+            22.6618,
+            36.7219
+          ],
+          [
+            22.8875,
+            36.85
+          ],
+          [
+            23.0182,
+            37.0755
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Ancient Greek (Lakedaimon was the formal name; Sparta referred to the settlement). ETHICS-003: Early dates are highly uncertain; the Spartan state as described by classical sources may not have existed in its idealized form before the 7th century BCE. The 'Lycurgan reforms' are possibly mythological. ETHICS-002: Spartan society was built on the systematic enslavement and terror of the helot population (Messenians and Laconians). The krypteia (secret police) conducted annual ritualized killings of helots. Spartan militarism should not be romanticized; it was maintained through one of the most brutal systems of chattel slavery in the ancient world. Modern pop-culture glorification of Sparta obscures this reality.",
     "name_variants": [
       {
@@ -729,7 +1377,8 @@
         "citation": "Plutarch, Life of Lycurgus (c. 100 CE)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Koenigreich Preussen",
@@ -740,9 +1389,67 @@
     "capital_name": "Berlin",
     "capital_lat": 52.52,
     "capital_lon": 13.405,
-    "confidence_score": 0.95,
+    "confidence_score": 0.85,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            17.9101,
+            52.52
+          ],
+          [
+            17.2795,
+            53.9003
+          ],
+          [
+            17.1123,
+            55.9646
+          ],
+          [
+            13.405,
+            54.9501
+          ],
+          [
+            10.9778,
+            55.4608
+          ],
+          [
+            9.0452,
+            54.2757
+          ],
+          [
+            6.72,
+            52.52
+          ],
+          [
+            8.1859,
+            50.7632
+          ],
+          [
+            11.165,
+            49.965
+          ],
+          [
+            13.405,
+            49.258
+          ],
+          [
+            15.8041,
+            50.2629
+          ],
+          [
+            18.0134,
+            50.9309
+          ],
+          [
+            17.9101,
+            52.52
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in German. ETHICS-003: The name 'Prussia' derives from the Baltic Prussians, a people who were conquered and culturally annihilated by the Teutonic Order in the 13th century. The Germanic state that took their name bears no ethnic connection to the original Prussians. This represents one of history's most complete cases of cultural erasure through naming appropriation. ETHICS-002: Prussian militarism contributed directly to the culture that enabled German aggression in both World Wars. The Prussian state's conquest of Silesia, its role in the Partitions of Poland, and its policies of Germanization against Polish and other Slavic populations constitute systematic cultural oppression.",
     "name_variants": [
       {
@@ -797,7 +1504,8 @@
         "citation": "Friedrich II, Histoire de mon temps (1746)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Erzherzogtum Oesterreich",
@@ -808,9 +1516,67 @@
     "capital_name": "Wien",
     "capital_lat": 48.2082,
     "capital_lon": 16.3738,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            31.6276,
+            48.2082
+          ],
+          [
+            30.8796,
+            54.047
+          ],
+          [
+            23.7938,
+            55.4398
+          ],
+          [
+            16.3738,
+            57.784
+          ],
+          [
+            7.6124,
+            57.788
+          ],
+          [
+            2.9816,
+            54.6301
+          ],
+          [
+            0.5648,
+            48.2082
+          ],
+          [
+            2.0113,
+            42.7404
+          ],
+          [
+            9.0017,
+            39.8161
+          ],
+          [
+            16.3738,
+            33.9135
+          ],
+          [
+            22.0048,
+            41.2062
+          ],
+          [
+            29.0063,
+            43.8395
+          ],
+          [
+            31.6276,
+            48.2082
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in German. The entity evolved through multiple forms: Duchy, Archduchy, Austrian Empire (1804), Austria-Hungary (1867). The entry covers the Habsburg lands from their acquisition of Austria until dissolution. ETHICS-003: The entity_type 'empire' is used because the Habsburgs ruled a multiethnic empire, though the formal title varied. ETHICS-002: Habsburg rule over non-German populations (Czechs, Hungarians, Poles, Italians, Slovenes, Croats, Romanians, Ukrainians, Serbs) involved varying degrees of cultural domination. While the late Habsburg Empire granted some autonomy to its peoples, centuries of German cultural hegemony preceded this. The Counter-Reformation involved religious persecution. The Habsburgs' role in the Thirty Years' War contributed to the devastation of Central Europe.",
     "name_variants": [
       {
@@ -865,7 +1631,8 @@
         "citation": "Privilegium Maius (1358/1453, forged document establishing archducal status)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Српска деспотовина",
@@ -876,9 +1643,67 @@
     "capital_name": "Krusevac",
     "capital_lat": 43.5842,
     "capital_lon": 21.3269,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            25.5153,
+            43.5842
+          ],
+          [
+            25.8402,
+            45.0437
+          ],
+          [
+            24.4791,
+            47.4029
+          ],
+          [
+            21.3269,
+            46.45
+          ],
+          [
+            19.1295,
+            46.3841
+          ],
+          [
+            18.3576,
+            44.6822
+          ],
+          [
+            16.6201,
+            43.5842
+          ],
+          [
+            18.2748,
+            42.0398
+          ],
+          [
+            18.6328,
+            40.5854
+          ],
+          [
+            21.3269,
+            40.6436
+          ],
+          [
+            22.7877,
+            41.6685
+          ],
+          [
+            25.1555,
+            42.2035
+          ],
+          [
+            25.5153,
+            43.5842
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Serbian Cyrillic. The entity went through several phases: Grand Principality, Kingdom (1217), Empire under Dusan (1346), then fragmented into a Despotate until Ottoman conquest. ETHICS-003: The capital changed frequently: Ras, Pristina, Skopje, Krusevac, Smederevo. Krusevac is listed as the late medieval capital. The Battle of Kosovo (1389) is central to Serbian national mythology but its historical significance has been heavily mythologized and politicized, particularly regarding claims to Kosovo. ETHICS-002: Stefan Dusan's empire was built through conquest of Byzantine, Bulgarian, and Albanian territories. Serbian national narratives about Kosovo must be balanced against Albanian and other perspectives.",
     "name_variants": [
       {
@@ -933,7 +1758,8 @@
         "citation": "Zakonik Cara Dusana (Dusan's Code, 1349)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Първо Българско царство",
@@ -944,9 +1770,67 @@
     "capital_name": "Pliska",
     "capital_lat": 43.3889,
     "capital_lon": 27.125,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            39.9721,
+            43.3889
+          ],
+          [
+            33.3835,
+            46.5502
+          ],
+          [
+            31.4359,
+            48.2072
+          ],
+          [
+            27.125,
+            52.3432
+          ],
+          [
+            23.4069,
+            48.413
+          ],
+          [
+            14.7098,
+            48.4339
+          ],
+          [
+            18.789,
+            43.3889
+          ],
+          [
+            20.9768,
+            40.5428
+          ],
+          [
+            22.9912,
+            37.8846
+          ],
+          [
+            27.125,
+            35.4467
+          ],
+          [
+            33.4817,
+            36.1609
+          ],
+          [
+            33.1556,
+            40.3072
+          ],
+          [
+            39.9721,
+            43.3889
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Bulgarian Cyrillic. ETHICS-003: The capital moved from Pliska to Preslav (893) to Ohrid (under Samuel). The ethnic origin of the Bulgars (Turkic steppe nomads) who merged with Slavic and Thracian populations is a complex topic in Bulgarian national identity debates. Some nationalist historiography minimizes the Turkic origins. ETHICS-002: The expansion of the First Bulgarian Empire under Krum (conquering Avars and Byzantine territories) and Simeon I involved significant military violence. The Byzantine Emperor Basil II ('the Bulgar Slayer') conducted a campaign of extraordinary cruelty to destroy the empire, including allegedly blinding 15,000 Bulgarian prisoners after the Battle of Kleidion (1014).",
     "name_variants": [
       {
@@ -993,7 +1877,8 @@
         "citation": "Theophanes the Confessor, Chronographia (early 9th century)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Stato Pontificio",
@@ -1004,9 +1889,67 @@
     "capital_name": "Roma",
     "capital_lat": 41.9028,
     "capital_lon": 12.4964,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            16.9169,
+            41.9028
+          ],
+          [
+            16.8124,
+            43.3942
+          ],
+          [
+            15.7058,
+            45.9019
+          ],
+          [
+            12.4964,
+            44.9348
+          ],
+          [
+            10.2497,
+            44.9417
+          ],
+          [
+            8.3326,
+            44.015
+          ],
+          [
+            7.9557,
+            41.9028
+          ],
+          [
+            6.8947,
+            39.619
+          ],
+          [
+            10.2467,
+            39.4016
+          ],
+          [
+            12.4964,
+            37.6666
+          ],
+          [
+            14.095,
+            39.2792
+          ],
+          [
+            17.1435,
+            39.7043
+          ],
+          [
+            16.9169,
+            41.9028
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Italian. ETHICS-003: The Donation of Constantine, long used to justify papal temporal authority, was proven a forgery by Lorenzo Valla in 1440. The entity_type 'theocracy' reflects the unique nature of papal governance combining spiritual and temporal authority. ETHICS-002: The Papal States exercised religious persecution, including the Roman Inquisition, forced ghettoization of Jews (from 1555), censorship (Index Librorum Prohibitorum), and violent suppression of reform movements. The papacy's role in authorizing colonialism (Inter caetera, 1493) and the Crusades contributed to massive human suffering worldwide.",
     "name_variants": [
       {
@@ -1061,7 +2004,8 @@
         "citation": "Collins, R. Keepers of the Keys of Heaven: A History of the Papacy (2009)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Corona d'Arago",
@@ -1072,9 +2016,67 @@
     "capital_name": "Zaragoza",
     "capital_lat": 41.6488,
     "capital_lon": -0.8891,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            2.2917,
+            41.6488
+          ],
+          [
+            1.7354,
+            42.7758
+          ],
+          [
+            1.2259,
+            44.3926
+          ],
+          [
+            -0.8891,
+            44.8092
+          ],
+          [
+            -3.0399,
+            44.6828
+          ],
+          [
+            -3.9091,
+            42.9053
+          ],
+          [
+            -3.5629,
+            41.6488
+          ],
+          [
+            -4.3052,
+            40.1194
+          ],
+          [
+            -2.5817,
+            39.2139
+          ],
+          [
+            -0.8891,
+            39.3205
+          ],
+          [
+            1.6621,
+            38.3003
+          ],
+          [
+            3.2269,
+            40.1298
+          ],
+          [
+            2.2917,
+            41.6488
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Catalan, reflecting the composite nature of the Crown which included Aragon, Catalonia, Valencia, Mallorca, and Mediterranean territories. The use of Catalan rather than Aragonese or Castilian reflects the Crown's multilingual character. ETHICS-003: The Crown of Aragon was a composite monarchy, not a unitary state. Catalan, Aragonese, and Valencian perspectives on the entity differ. ETHICS-002: The Crown's Mediterranean expansion involved conquest of Mallorca (1229, with massacre of Muslim population), Sardinia, Sicily, and Naples. The expulsion of Moriscos from Valencia (1609) forcibly displaced approximately 120,000 people. The Nueva Planta decrees (1707-1716) abolished Aragonese and Catalan institutions.",
     "name_variants": [
       {
@@ -1129,7 +2131,8 @@
         "citation": "Muntaner, R. Cronica (c. 1325)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Corona de Castilla",
@@ -1140,9 +2143,67 @@
     "capital_name": "Valladolid",
     "capital_lat": 41.6523,
     "capital_lon": -4.7245,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -1.9419,
+            41.6523
+          ],
+          [
+            -2.0699,
+            43.0841
+          ],
+          [
+            -2.9656,
+            43.9576
+          ],
+          [
+            -4.7245,
+            43.748
+          ],
+          [
+            -6.2928,
+            43.5861
+          ],
+          [
+            -7.4702,
+            42.7872
+          ],
+          [
+            -7.4896,
+            41.6523
+          ],
+          [
+            -8.947,
+            39.943
+          ],
+          [
+            -6.9599,
+            38.9315
+          ],
+          [
+            -4.7245,
+            38.7618
+          ],
+          [
+            -3.2321,
+            39.876
+          ],
+          [
+            -2.1143,
+            40.5869
+          ],
+          [
+            -1.9419,
+            41.6523
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Castilian Spanish. ETHICS-003: The capital was itinerant for much of the medieval period; Valladolid became the de facto seat by the 15th century before Madrid replaced it (1561). ETHICS-002: Castile drove the Reconquista, which involved the conquest and ethnic/religious cleansing of Muslim-ruled territories. The expulsion of Jews (1492) and Moriscos (1609) constituted large-scale religious persecution. The Castilian-led conquest and colonization of the Americas caused the death of an estimated 90% of indigenous populations through violence, disease, and forced labor. The encomienda and mita systems constituted slavery in all but name.",
     "name_variants": [
       {
@@ -1197,7 +2258,8 @@
         "citation": "Las Casas, B. Brevisima relacion de la destruccion de las Indias (1552)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Regnum Visigothorum",
@@ -1208,9 +2270,67 @@
     "capital_name": "Toletum",
     "capital_lat": 39.8628,
     "capital_lon": -4.0273,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -1.2751,
+            39.8628
+          ],
+          [
+            0.845,
+            41.6575
+          ],
+          [
+            -1.8825,
+            42.106
+          ],
+          [
+            -4.0273,
+            43.815
+          ],
+          [
+            -5.9113,
+            42.5067
+          ],
+          [
+            -7.7252,
+            41.2698
+          ],
+          [
+            -9.1308,
+            39.8628
+          ],
+          [
+            -8.4523,
+            38.1383
+          ],
+          [
+            -6.3407,
+            36.2297
+          ],
+          [
+            -4.0273,
+            37.4812
+          ],
+          [
+            -2.5219,
+            37.7416
+          ],
+          [
+            0.3071,
+            37.8417
+          ],
+          [
+            -1.2751,
+            39.8628
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Latin, the administrative language. The Visigoths spoke Gothic but Latin was the language of governance and law. ETHICS-003: The capital moved from Toulouse to Toledo after the Battle of Vouille (507). Earlier phase centered in Gaul is included in this entry. ETHICS-002: Visigothic rule involved religious persecution, particularly of Jews. The Councils of Toledo imposed increasingly harsh anti-Jewish legislation, including forced conversions, enslavement, and separation of Jewish children from their parents. This persecution contributed to Jewish communities welcoming the Muslim conquest in 711. The Visigothic legal tradition influenced later Iberian anti-Semitism.",
     "name_variants": [
       {
@@ -1257,7 +2377,8 @@
         "citation": "Isidore of Seville, Historia Gothorum (c. 624)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Ostrogotenreich",
@@ -1268,9 +2389,67 @@
     "capital_name": "Ravenna",
     "capital_lat": 44.4184,
     "capital_lon": 12.2035,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            16.37,
+            44.4184
+          ],
+          [
+            16.6864,
+            46.0346
+          ],
+          [
+            14.8865,
+            47.3111
+          ],
+          [
+            12.2035,
+            48.1662
+          ],
+          [
+            9.6776,
+            47.7665
+          ],
+          [
+            9.3505,
+            45.6067
+          ],
+          [
+            6.8108,
+            44.4184
+          ],
+          [
+            8.6154,
+            42.8596
+          ],
+          [
+            9.4793,
+            40.9835
+          ],
+          [
+            12.2035,
+            42.1016
+          ],
+          [
+            13.9081,
+            42.2414
+          ],
+          [
+            15.3153,
+            43.2543
+          ],
+          [
+            16.37,
+            44.4184
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The Ostrogoths spoke Gothic, a now-extinct language; 'Ostrogotenreich' is the conventional German scholarly term. No native Gothic name survives in sources. Using a modern German reconstruction is a pragmatic choice. ETHICS-003: The name 'Ostrogothic Kingdom' is the conventional English term; the Ostrogoths themselves likely called their ruler 'thiudans' (king). ETHICS-002: Theodoric the Great's conquest of Italy involved the murder of Odoacer and his followers at a banquet (493), an act of political treachery. However, Theodoric's subsequent rule was notably tolerant for the era, preserving Roman institutions and allowing religious coexistence. The destruction of the kingdom by Justinian's forces (535-553) caused devastating depopulation of Italy.",
     "name_variants": [
       {
@@ -1317,7 +2496,8 @@
         "citation": "Cassiodorus, Variae (c. 537)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Regnum Langobardorum",
@@ -1328,9 +2508,67 @@
     "capital_name": "Papia",
     "capital_lat": 45.1847,
     "capital_lon": 9.1582,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            11.7438,
+            45.1847
+          ],
+          [
+            11.7748,
+            46.0642
+          ],
+          [
+            10.6554,
+            47.1941
+          ],
+          [
+            9.1582,
+            48.5205
+          ],
+          [
+            7.8274,
+            47.0939
+          ],
+          [
+            6.4567,
+            46.2062
+          ],
+          [
+            6.2191,
+            45.1847
+          ],
+          [
+            5.7306,
+            43.6339
+          ],
+          [
+            6.7053,
+            42.245
+          ],
+          [
+            9.1582,
+            42.704
+          ],
+          [
+            10.7979,
+            42.6981
+          ],
+          [
+            11.967,
+            44.0512
+          ],
+          [
+            11.7438,
+            45.1847
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Latin, the administrative language. The Lombards spoke a Germanic language that did not survive; Latin was used for governance. ETHICS-003: The capital 'Papia' is the Latin name for Pavia. The kingdom never controlled all of Italy; Byzantine territories persisted in the south and around Ravenna. ETHICS-002: The Lombard invasion of Italy (568) caused significant destruction and population displacement. Paul the Deacon records massacres and the enslavement of Roman populations. The Lombard conquest deepened the fragmentation of Italy that would persist for over a millennium. The Kingdom's fall to Charlemagne (774) transferred Italian populations to Frankish imperial rule without consultation.",
     "name_variants": [
       {
@@ -1377,7 +2615,8 @@
         "citation": "Wickham, C. Early Medieval Italy: Central Power and Local Society 400-1000 (1981)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Новгородская республика",
@@ -1388,9 +2627,67 @@
     "capital_name": "Novgorod",
     "capital_lat": 58.5215,
     "capital_lon": 31.2755,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            33.949,
+            58.5215
+          ],
+          [
+            34.9864,
+            59.6943
+          ],
+          [
+            33.0673,
+            60.364
+          ],
+          [
+            31.2755,
+            60.7636
+          ],
+          [
+            28.6057,
+            60.7875
+          ],
+          [
+            28.707,
+            59.4263
+          ],
+          [
+            27.6177,
+            58.5215
+          ],
+          [
+            27.9631,
+            57.5756
+          ],
+          [
+            29.3241,
+            56.6555
+          ],
+          [
+            31.2755,
+            56.7352
+          ],
+          [
+            33.6432,
+            56.1551
+          ],
+          [
+            35.6599,
+            57.3843
+          ],
+          [
+            33.949,
+            58.5215
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Russian Cyrillic. Medieval Novgorodians used Old East Slavic. ETHICS-003: The entity_type 'republic' reflects Novgorod's unique political system (veche assembly, elected posadnik) which was genuinely oligarchic-republican, though only the propertied class had political voice. ETHICS-002: Novgorod's vast commercial empire in the north was built partly on the exploitation and colonization of Finno-Ugric peoples (Karelians, Veps, Komi, Nenets). The fur trade that enriched Novgorod involved extracting tribute from indigenous northern peoples. The republic's destruction by Ivan III of Moscow (1478) ended Russia's most significant experiment with self-governance.",
     "name_variants": [
       {
@@ -1437,7 +2734,8 @@
         "citation": "Birnbaum, H. Lord Novgorod the Great (1981)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Великое княжество Московское",
@@ -1448,9 +2746,67 @@
     "capital_name": "Moskva",
     "capital_lat": 55.7558,
     "capital_lon": 37.6173,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            41.7959,
+            55.7558
+          ],
+          [
+            42.2534,
+            57.1105
+          ],
+          [
+            39.4389,
+            57.5405
+          ],
+          [
+            37.6173,
+            58.4704
+          ],
+          [
+            35.2915,
+            57.7221
+          ],
+          [
+            34.1675,
+            57.1256
+          ],
+          [
+            32.2636,
+            55.7558
+          ],
+          [
+            33.7956,
+            54.6167
+          ],
+          [
+            35.8104,
+            53.919
+          ],
+          [
+            37.6173,
+            52.9833
+          ],
+          [
+            39.874,
+            53.3617
+          ],
+          [
+            40.4399,
+            54.7842
+          ],
+          [
+            41.7959,
+            55.7558
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Russian Cyrillic. ETHICS-003: The entity_type 'kingdom' is approximate; 'Grand Duchy' is the more precise designation, but the schema does not include this category. The Grand Duchy was nominally a vassal of the Golden Horde until 1480. ETHICS-002: Moscow's rise to power involved collaboration with the Mongol Golden Horde against other Russian principalities. Moscow used Mongol backing to crush rival principalities and accumulate territory. The destruction of Novgorod (1478) and Tver (1485) eliminated alternative political models. Ivan III and Ivan IV's expansion eastward began the colonization of non-Russian peoples.",
     "name_variants": [
       {
@@ -1505,7 +2861,8 @@
         "citation": "Halperin, C. Russia and the Golden Horde (1985)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Βασίλειον τοῦ Πόντου",
@@ -1516,9 +2873,67 @@
     "capital_name": "Amasya",
     "capital_lat": 40.6499,
     "capital_lon": 35.8353,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            38.2091,
+            40.6499
+          ],
+          [
+            38.7829,
+            41.8692
+          ],
+          [
+            37.2011,
+            42.7138
+          ],
+          [
+            35.8353,
+            42.9988
+          ],
+          [
+            34.6131,
+            42.3128
+          ],
+          [
+            32.5188,
+            42.3499
+          ],
+          [
+            30.9547,
+            40.6499
+          ],
+          [
+            31.7035,
+            38.9308
+          ],
+          [
+            34.4916,
+            38.6975
+          ],
+          [
+            35.8353,
+            37.8421
+          ],
+          [
+            37.4562,
+            38.4668
+          ],
+          [
+            39.801,
+            38.8974
+          ],
+          [
+            38.2091,
+            40.6499
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Ancient Greek, the language of the ruling dynasty and administration, though the population was ethnically diverse (Anatolian, Persian, Greek, Galatian). ETHICS-003: The dynasty was of Persian origin (claiming descent from the Achaemenids), ruling a predominantly Anatolian population using Greek culture as a legitimation tool. This hybrid identity challenges simple ethnic categorization. ETHICS-002: Mithridates VI's wars against Rome included the Asiatic Vespers (88 BCE), a coordinated massacre of Roman and Italian residents of Asia Minor (estimated 80,000-150,000 killed). While responding to Roman exploitation, this constituted mass ethnic violence. Rome's subsequent punishment of Pontic territories was equally devastating.",
     "name_variants": [
       {
@@ -1565,7 +2980,8 @@
         "citation": "Mayor, A. The Poison King: The Life and Legend of Mithradates (2010)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Δεσποτάτον τῆς Ἠπείρου",
@@ -1576,9 +2992,67 @@
     "capital_name": "Arta",
     "capital_lat": 39.16,
     "capital_lon": 20.9853,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            23.9572,
+            39.16
+          ],
+          [
+            24.0697,
+            40.6703
+          ],
+          [
+            22.5916,
+            41.1382
+          ],
+          [
+            20.9853,
+            42.8243
+          ],
+          [
+            18.6727,
+            41.7496
+          ],
+          [
+            17.7999,
+            40.6745
+          ],
+          [
+            18.0651,
+            39.16
+          ],
+          [
+            16.8658,
+            37.2374
+          ],
+          [
+            18.709,
+            36.3277
+          ],
+          [
+            20.9853,
+            36.7267
+          ],
+          [
+            23.1071,
+            36.7093
+          ],
+          [
+            25.8517,
+            37.2149
+          ],
+          [
+            23.9572,
+            39.16
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Medieval Greek. The title 'Despotate' does not carry the pejorative connotation of the English word 'despot'; it was a formal Byzantine court title. ETHICS-003: The entity_type 'kingdom' is approximate; 'despotate' is the correct term but not in the schema. The state went through various periods of fragmentation and reunion. ETHICS-002: The Despotate of Epirus was one of several successor states to the Byzantine Empire following the catastrophic Fourth Crusade (1204), which represents one of the most significant acts of Christian-on-Christian violence in history. The region's complex ethnic composition (Greek, Albanian, Vlach) is often simplified in nationalist historiographies.",
     "name_variants": [
       {
@@ -1625,7 +3099,8 @@
         "citation": "Fine, J.V.A. The Late Medieval Balkans: A Critical Survey (1987)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Republique de Genes",
@@ -1636,9 +3111,67 @@
     "capital_name": "Genova",
     "capital_lat": 44.4056,
     "capital_lon": 8.9463,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            11.4132,
+            44.4056
+          ],
+          [
+            11.038,
+            45.2114
+          ],
+          [
+            10.2062,
+            45.9563
+          ],
+          [
+            8.9463,
+            45.9962
+          ],
+          [
+            7.6523,
+            45.8778
+          ],
+          [
+            5.9093,
+            45.6685
+          ],
+          [
+            6.603,
+            44.4056
+          ],
+          [
+            7.3991,
+            43.6342
+          ],
+          [
+            7.4396,
+            42.7208
+          ],
+          [
+            8.9463,
+            42.2967
+          ],
+          [
+            10.3524,
+            42.2353
+          ],
+          [
+            10.8156,
+            43.6274
+          ],
+          [
+            11.4132,
+            44.4056
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original given in French per specification. The Genoese would have used the Ligurian form 'Repubbrica de Zena' or Latin 'Respublica Ianuensis'. ETHICS-003: Despite the name 'republic', Genoa was an oligarchic merchant state where political power was restricted to a narrow elite of commercial families. ETHICS-002: Genoa was a major participant in the Mediterranean slave trade, selling Slavic, Circassian, and other peoples. Genoese commercial colonies in the Black Sea (Caffa, now Feodosia) were major slave-trading centers. Christopher Columbus, a Genoese, initiated the European colonization of the Americas. The Genoese banking system (including the Bank of Saint George) financed colonial ventures and the slave trade across the Atlantic.",
     "name_variants": [
       {
@@ -1685,7 +3218,8 @@
         "citation": "Epstein, S.A. Genoa and the Genoese, 958-1528 (1996)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Repubblica di Firenze",
@@ -1696,9 +3230,67 @@
     "capital_name": "Firenze",
     "capital_lat": 43.7696,
     "capital_lon": 11.2558,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            13.9718,
+            43.7696
+          ],
+          [
+            13.78,
+            45.0819
+          ],
+          [
+            13.0492,
+            45.847
+          ],
+          [
+            11.2558,
+            45.883
+          ],
+          [
+            10.3304,
+            45.1116
+          ],
+          [
+            9.6322,
+            44.5081
+          ],
+          [
+            8.8967,
+            43.7696
+          ],
+          [
+            9.5584,
+            42.9769
+          ],
+          [
+            10.2271,
+            42.4938
+          ],
+          [
+            11.2558,
+            42.4076
+          ],
+          [
+            12.5799,
+            42.3025
+          ],
+          [
+            13.3144,
+            43.0299
+          ],
+          [
+            13.9718,
+            43.7696
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Italian (Tuscan dialect). ETHICS-003: The 'republic' label is complicated by the de facto Medici control from 1434 onward. While republican institutions formally existed, the Medici manipulated elections and patronage networks to maintain control. The 1494-1512 and 1527-1530 periods saw genuine republican restoration. ETHICS-002: Florence's wealth was built on banking (including papal finances), wool trade, and the exploitation of contado (rural hinterland) populations. The Ciompi Revolt (1378) highlighted class tensions between wealthy merchants and impoverished wool workers. The Medici-dominated republic engaged in wars of conquest against neighboring cities (Pisa, Volterra).",
     "name_variants": [
       {
@@ -1745,7 +3337,8 @@
         "citation": "Villani, G. Nuova Cronica (c. 1348)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Schweizerische Eidgenossenschaft",
@@ -1756,9 +3349,67 @@
     "capital_name": "Bern",
     "capital_lat": 46.948,
     "capital_lon": 7.4474,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            11.8401,
+            46.948
+          ],
+          [
+            13.2191,
+            48.9141
+          ],
+          [
+            9.8499,
+            49.7144
+          ],
+          [
+            7.4474,
+            50.155
+          ],
+          [
+            4.2974,
+            49.8986
+          ],
+          [
+            3.981,
+            48.5578
+          ],
+          [
+            1.0275,
+            46.948
+          ],
+          [
+            2.7066,
+            45.4976
+          ],
+          [
+            4.2636,
+            43.2371
+          ],
+          [
+            7.4474,
+            43.2061
+          ],
+          [
+            10.1932,
+            43.5332
+          ],
+          [
+            10.9021,
+            45.6805
+          ],
+          [
+            11.8401,
+            46.948
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in German, the most widely spoken language, though Switzerland is officially quadrilingual (German, French, Italian, Romansh). The French form 'Confederation suisse', Italian 'Confederazione Svizzera', and Romansh 'Confederaziun svizra' are equally valid. ETHICS-003: The founding date of 1291 (Federal Charter) is traditional but debated; the Swiss Confederation evolved gradually. The founding myth (William Tell, Rutli Oath) is largely legendary. ETHICS-002: Swiss mercenaries were a major European export, fighting in foreign wars for pay, contributing to violence across the continent. Switzerland's neutrality in modern times coexisted with profiting from wartime finance, including handling Nazi-era gold and assets stolen from Holocaust victims.",
     "name_variants": [
       {
@@ -1805,7 +3456,8 @@
         "citation": "Steinberg, J. Why Switzerland? (3rd ed., 2015)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Duche de Bourgogne",
@@ -1816,9 +3468,67 @@
     "capital_name": "Dijon",
     "capital_lat": 47.322,
     "capital_lon": 5.0415,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            9.2504,
+            47.322
+          ],
+          [
+            7.5776,
+            48.4238
+          ],
+          [
+            7.2565,
+            50.5055
+          ],
+          [
+            5.0415,
+            50.0998
+          ],
+          [
+            3.2946,
+            49.2411
+          ],
+          [
+            1.3506,
+            48.7152
+          ],
+          [
+            2.1387,
+            47.322
+          ],
+          [
+            0.8059,
+            45.8937
+          ],
+          [
+            3.4726,
+            45.3059
+          ],
+          [
+            5.0415,
+            44.5189
+          ],
+          [
+            7.0648,
+            45.2061
+          ],
+          [
+            7.9467,
+            46.2125
+          ],
+          [
+            9.2504,
+            47.322
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in French. ETHICS-003: The entity_type 'kingdom' is approximate; the Duchy of Burgundy was technically a fief of the French crown, though under the Valois dukes (1363-1477) it functioned as a virtually independent state controlling territory from the Netherlands to Switzerland. The Burgundian State was a complex of territories without a single legal identity. ETHICS-002: The Burgundian court's role in the Hundred Years' War included the Treaty of Troyes (1420), which disinherited the French dauphin. The assassination of John the Fearless (1419) and the earlier assassination of Louis of Orleans (1407) exemplify the political violence of the period. The Burgundian Netherlands were prosperous but taxation was heavy on the common population.",
     "name_variants": [
       {
@@ -1865,7 +3575,8 @@
         "citation": "Commynes, P. Memoires (c. 1490)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Regnum Siciliae",
@@ -1876,9 +3587,67 @@
     "capital_name": "Palermo",
     "capital_lat": 38.1157,
     "capital_lon": 13.3615,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            17.7429,
+            38.1157
+          ],
+          [
+            17.4967,
+            39.7636
+          ],
+          [
+            15.2401,
+            40.937
+          ],
+          [
+            13.3615,
+            40.6443
+          ],
+          [
+            10.8058,
+            40.7429
+          ],
+          [
+            11.181,
+            39.1838
+          ],
+          [
+            10.4426,
+            38.1157
+          ],
+          [
+            10.8351,
+            36.8348
+          ],
+          [
+            12.0038,
+            35.7514
+          ],
+          [
+            13.3615,
+            35.9048
+          ],
+          [
+            15.0687,
+            35.959
+          ],
+          [
+            16.309,
+            36.5918
+          ],
+          [
+            17.7429,
+            38.1157
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Latin, the administrative language under the Normans. The kingdom was multilingual (Latin, Greek, Arabic, Norman French, Sicilian). ETHICS-003: The 'Kingdom of Sicily' refers to different entities over time: the Norman kingdom (Sicily + southern Italy), the island kingdom after the Vespers (1282), and the reunified Kingdom of the Two Sicilies (1816). This entry covers the entity from Norman foundation. ETHICS-002: The Norman conquest of southern Italy and Sicily (11th century) involved displacement of Muslim, Greek, and Lombard populations. While Roger II's court was famously multicultural, subsequent rulers (especially Frederick II's campaigns against Muslim communities in Lucera) were less tolerant. The feudal system in southern Italy perpetuated extreme inequality that affected the region for centuries.",
     "name_variants": [
       {
@@ -1925,7 +3694,8 @@
         "citation": "Hugo Falcandus, Liber de Regno Siciliae (c. 1170)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Republica Ragusina",
@@ -1936,9 +3706,67 @@
     "capital_name": "Ragusa",
     "capital_lat": 42.6507,
     "capital_lon": 18.0944,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            20.8777,
+            42.6507
+          ],
+          [
+            19.6081,
+            43.385
+          ],
+          [
+            19.4705,
+            44.5262
+          ],
+          [
+            18.0944,
+            44.1262
+          ],
+          [
+            16.8234,
+            44.4368
+          ],
+          [
+            15.0164,
+            43.8669
+          ],
+          [
+            14.9469,
+            42.6507
+          ],
+          [
+            15.8743,
+            41.8856
+          ],
+          [
+            16.6334,
+            40.608
+          ],
+          [
+            18.0944,
+            41.2163
+          ],
+          [
+            19.4482,
+            40.6927
+          ],
+          [
+            21.0668,
+            41.4455
+          ],
+          [
+            20.8777,
+            42.6507
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Latin, the language of official documents. The local Dalmatian Romance language was declining; Croatian/Serbian and Italian were the main spoken languages. The modern city name is Dubrovnik (Croatian). ETHICS-003: Ragusa navigated between major powers (Hungary, Ottoman Empire, Venice) through diplomacy and tribute payment. While celebrated as a haven of liberty, it was an oligarchy where only noble families held political power. ETHICS-002: Ragusa was involved in the slave trade, particularly in the early medieval period. The republic's motto 'Libertas' (Freedom) applied primarily to the noble class. The earthquake of 1667 devastated the city and killed an estimated 5,000 people, fundamentally weakening the republic.",
     "name_variants": [
       {
@@ -1985,7 +3813,8 @@
         "citation": "Liber Statutorum Civitatis Ragusii (1272, revised)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Hanse",
@@ -1996,9 +3825,67 @@
     "capital_name": "Lubeck",
     "capital_lat": 53.8655,
     "capital_lon": 10.6866,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            17.4441,
+            53.8655
+          ],
+          [
+            16.2304,
+            56.1879
+          ],
+          [
+            14.163,
+            58.4966
+          ],
+          [
+            10.6866,
+            57.796
+          ],
+          [
+            7.3357,
+            57.8393
+          ],
+          [
+            4.147,
+            56.858
+          ],
+          [
+            5.3045,
+            53.8655
+          ],
+          [
+            2.973,
+            51.87
+          ],
+          [
+            6.7287,
+            50.062
+          ],
+          [
+            10.6866,
+            50.6741
+          ],
+          [
+            14.0185,
+            50.3786
+          ],
+          [
+            17.4305,
+            51.8801
+          ],
+          [
+            17.4441,
+            53.8655
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Middle Low German, the lingua franca of the Hanseatic merchants. ETHICS-003: The Hanseatic League was not a state but a commercial confederation of merchant cities, making it difficult to assign precise dates and boundaries. The 'capital' Lubeck was the leading city but had no formal authority over other members. The start date 1356 (first general diet) is conventional; Hanseatic cooperation predates it. ETHICS-002: The Hanse operated as a commercial monopoly that used economic coercion, blockades, and occasionally military force to maintain trading privileges. Hanseatic merchants in foreign cities (kontore) operated as extraterritorial enclaves with privileges that excluded local merchants. The League's dominance suppressed the commercial development of Scandinavian and Baltic peoples.",
     "name_variants": [
       {
@@ -2045,7 +3932,8 @@
         "citation": "Hanserezesse (Records of Hanseatic Diets, 14th-16th centuries)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Republiek der Zeven Verenigde Nederlanden",
@@ -2056,9 +3944,67 @@
     "capital_name": "Den Haag",
     "capital_lat": 52.0705,
     "capital_lon": 4.3007,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            8.8582,
+            52.0705
+          ],
+          [
+            6.7033,
+            52.9952
+          ],
+          [
+            6.1801,
+            53.9249
+          ],
+          [
+            4.3007,
+            53.7627
+          ],
+          [
+            2.9109,
+            53.9401
+          ],
+          [
+            1.0431,
+            53.3212
+          ],
+          [
+            0.093,
+            52.0705
+          ],
+          [
+            0.8445,
+            50.7859
+          ],
+          [
+            2.1482,
+            50.0205
+          ],
+          [
+            4.3007,
+            50.2096
+          ],
+          [
+            6.8024,
+            49.655
+          ],
+          [
+            8.1873,
+            50.546
+          ],
+          [
+            8.8582,
+            52.0705
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Dutch. The full name translates to 'Republic of the Seven United Netherlands'. ETHICS-003: The Hague was the seat of government but Amsterdam was the de facto commercial capital and the most important city. The republic was technically a confederation of seven sovereign provinces, not a unitary state. ETHICS-002: The Dutch Republic built one of the world's most extensive colonial empires, driven by the VOC (Dutch East India Company) and WIC (West India Company). Dutch colonialism involved the Atlantic slave trade (an estimated 600,000 enslaved people transported), the exploitation and violence of the spice trade in Indonesia (Banda Islands massacre, 1621), and the establishment of apartheid's precursor in South Africa. The 'Golden Age' was funded by global exploitation.",
     "name_variants": [
       {
@@ -2113,7 +4059,8 @@
         "citation": "Plakkaat van Verlatinghe (Act of Abjuration, 1581)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Imperium Francorum",
@@ -2124,9 +4071,67 @@
     "capital_name": "Aachen",
     "capital_lat": 50.7753,
     "capital_lon": 6.0839,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            22.4631,
+            50.7753
+          ],
+          [
+            21.5431,
+            55.5273
+          ],
+          [
+            15.2368,
+            60.3413
+          ],
+          [
+            6.0839,
+            58.2451
+          ],
+          [
+            -2.2805,
+            58.5824
+          ],
+          [
+            -9.7393,
+            57.4184
+          ],
+          [
+            -8.5785,
+            50.7753
+          ],
+          [
+            -5.8314,
+            46.0318
+          ],
+          [
+            -2.5895,
+            40.7498
+          ],
+          [
+            6.0839,
+            40.622
+          ],
+          [
+            12.4011,
+            42.7593
+          ],
+          [
+            15.5505,
+            46.9092
+          ],
+          [
+            22.4631,
+            50.7753
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Latin, the administrative language. The Frankish language was Germanic but Latin was used for all official purposes. ETHICS-003: The dates 800-888 cover the Carolingian Empire from Charlemagne's imperial coronation to the deposition of Charles the Fat. Some scholars include earlier Carolingian rule (from 751 or even the Merovingian period). The entity was the ideological predecessor of both France and the Holy Roman Empire, a contested legacy. ETHICS-002: Charlemagne's conquest of Saxony (772-804) involved systematic violence, including the Massacre of Verden (782, execution of reportedly 4,500 Saxon prisoners) and forced Christianization. The Carolingian empire was built through military conquest that destroyed existing Germanic pagan cultures.",
     "name_variants": [
       {
@@ -2173,7 +4178,8 @@
         "citation": "McKitterick, R. Charlemagne: The Formation of a European Identity (2008)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Rioghachd na h-Alba",
@@ -2184,9 +4190,67 @@
     "capital_name": "Edinburgh",
     "capital_lat": 55.9533,
     "capital_lon": -3.1883,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            0.542,
+            55.9533
+          ],
+          [
+            0.3969,
+            57.0123
+          ],
+          [
+            0.2576,
+            58.683
+          ],
+          [
+            -3.1883,
+            58.616
+          ],
+          [
+            -6.7861,
+            59.3705
+          ],
+          [
+            -8.3998,
+            57.5692
+          ],
+          [
+            -9.6422,
+            55.9533
+          ],
+          [
+            -6.5565,
+            54.8129
+          ],
+          [
+            -6.6825,
+            52.7887
+          ],
+          [
+            -3.1883,
+            52.959
+          ],
+          [
+            -1.1415,
+            53.9468
+          ],
+          [
+            1.9473,
+            54.6305
+          ],
+          [
+            0.542,
+            55.9533
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Scottish Gaelic. The Latin form 'Regnum Scotorum' (Kingdom of the Scots) was used in official documents. Edinburgh became the effective capital in the 15th century; earlier seats included Scone and Perth. ETHICS-003: The date 843 (Kenneth MacAlpin's unification of Picts and Scots) is traditional but debated. The process of unification was gradual and the Pictish perspective is largely lost due to lack of surviving Pictish written records. This represents a significant historiographical gap. ETHICS-002: The formation of Scotland involved the cultural assimilation and eventual disappearance of the Picts as a distinct identity. Later Scottish history includes the Highland Clearances (18th-19th century), though these occurred after the union with England.",
     "name_variants": [
       {
@@ -2241,7 +4305,8 @@
         "citation": "Lynch, M. Scotland: A New History (1991)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Rioghacht na hEireann",
@@ -2252,9 +4317,67 @@
     "capital_name": "Teamhair",
     "capital_lat": 53.579,
     "capital_lon": -6.6114,
-    "confidence_score": 0.5,
+    "confidence_score": 0.4,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -3.4111,
+            53.579
+          ],
+          [
+            -3.6025,
+            54.5176
+          ],
+          [
+            -4.8098,
+            55.4911
+          ],
+          [
+            -6.6114,
+            55.3534
+          ],
+          [
+            -8.354,
+            55.3728
+          ],
+          [
+            -9.4703,
+            54.5742
+          ],
+          [
+            -10.0751,
+            53.579
+          ],
+          [
+            -9.5624,
+            52.643
+          ],
+          [
+            -8.053,
+            51.9126
+          ],
+          [
+            -6.6114,
+            51.6303
+          ],
+          [
+            -4.7489,
+            51.4981
+          ],
+          [
+            -3.5168,
+            52.7093
+          ],
+          [
+            -3.4111,
+            53.579
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Irish (Gaeilge). ETHICS-003: This entity is highly problematic to define. Ireland was never a unified kingdom in the modern sense. The High Kingship (Ard Ri) was a contested title among competing provincial kings. Tara (Teamhair) was a ceremonial site, not a capital in the administrative sense. The start date -500 is extremely uncertain; it represents the approximate beginning of the La Tene period in Ireland. The confidence score reflects these deep uncertainties. ETHICS-002: English/Norman colonization of Ireland (from 1169) constitutes one of Europe's longest colonial occupations, involving land confiscation, cultural suppression, the Penal Laws, and the catastrophic Great Famine (1845-1852) during which approximately 1 million died and 1 million emigrated under British governance that prioritized exports over Irish lives.",
     "name_variants": [
       {
@@ -2309,7 +4432,8 @@
         "citation": "Foster, R.F. Modern Ireland 1600-1972 (1988)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Tywysogaeth Cymru",
@@ -2320,9 +4444,67 @@
     "capital_name": "Aberffraw",
     "capital_lat": 53.193,
     "capital_lon": -4.461,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -0.7535,
+            53.193
+          ],
+          [
+            0.8635,
+            55.1136
+          ],
+          [
+            -2.6556,
+            55.2304
+          ],
+          [
+            -4.461,
+            55.6457
+          ],
+          [
+            -6.3809,
+            55.2774
+          ],
+          [
+            -7.7777,
+            54.5582
+          ],
+          [
+            -9.1724,
+            53.193
+          ],
+          [
+            -7.3851,
+            51.9113
+          ],
+          [
+            -7.6713,
+            49.8926
+          ],
+          [
+            -4.461,
+            50.8228
+          ],
+          [
+            -1.9009,
+            50.8504
+          ],
+          [
+            -0.9068,
+            52.2412
+          ],
+          [
+            -0.7535,
+            53.193
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Welsh (Cymraeg), the language of the native population. 'Principality of Wales' is the English colonial designation. ETHICS-003: The entity_type 'kingdom' is approximate; the Welsh used the title 'Tywysog' (prince/leader) rather than 'Brenin' (king). The principality only united most of Wales briefly under Llywelyn ab Iorwerth and Llywelyn ap Gruffudd. Earlier Welsh kingdoms (Gwynedd, Powys, Deheubarth) existed independently. ETHICS-002: The English conquest of Wales (1282-1283) destroyed Welsh political independence. Edward I's castle-building program was an instrument of colonial domination. The Statute of Rhuddlan (1284) imposed English law. Welsh language and culture survived despite centuries of suppression, including laws specifically targeting the Welsh language.",
     "name_variants": [
       {
@@ -2369,7 +4551,8 @@
         "citation": "Brut y Tywysogion (Chronicle of the Princes, medieval Welsh chronicle)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Tara Romaneasca",
@@ -2380,9 +4563,67 @@
     "capital_name": "Targoviste",
     "capital_lat": 44.9256,
     "capital_lon": 25.4573,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            30.4322,
+            44.9256
+          ],
+          [
+            29.7094,
+            46.8359
+          ],
+          [
+            27.6962,
+            47.7632
+          ],
+          [
+            25.4573,
+            48.3062
+          ],
+          [
+            22.0709,
+            48.9677
+          ],
+          [
+            20.8885,
+            47.1303
+          ],
+          [
+            18.8978,
+            44.9256
+          ],
+          [
+            19.8982,
+            42.6844
+          ],
+          [
+            23.3407,
+            42.1196
+          ],
+          [
+            25.4573,
+            40.8039
+          ],
+          [
+            27.9696,
+            40.9287
+          ],
+          [
+            31.2525,
+            42.2421
+          ],
+          [
+            30.4322,
+            44.9256
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Romanian. ETHICS-003: The entity_type 'kingdom' is approximate; the correct term is 'Principality'. The capital moved from Campulung to Curtea de Arges to Targoviste to Bucharest. The start date 1330 marks the Battle of Posada (independence from Hungary), though the principality may have existed earlier. ETHICS-002: Wallachia's history is often dominated by the figure of Vlad III (Vlad the Impaler), whose extreme violence against Ottoman prisoners and domestic opponents has been both condemned and mythologized. Wallachia existed in a difficult position between Ottoman and Hungarian pressure, with the common population bearing the heaviest burden of warfare and tribute payments.",
     "name_variants": [
       {
@@ -2437,7 +4678,8 @@
         "citation": "Laonikos Chalkokondyles, Historiarum Demonstrationes (c. 1480)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Principatul Moldovei",
@@ -2448,9 +4690,67 @@
     "capital_name": "Suceava",
     "capital_lat": 47.6344,
     "capital_lon": 26.2558,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            30.6627,
+            47.6344
+          ],
+          [
+            29.119,
+            48.7111
+          ],
+          [
+            29.1272,
+            50.6437
+          ],
+          [
+            26.2558,
+            50.3709
+          ],
+          [
+            23.2013,
+            51.0099
+          ],
+          [
+            23.2089,
+            48.7297
+          ],
+          [
+            20.105,
+            47.6344
+          ],
+          [
+            22.4872,
+            46.2687
+          ],
+          [
+            24.2027,
+            45.6107
+          ],
+          [
+            26.2558,
+            44.2943
+          ],
+          [
+            28.4403,
+            45.2699
+          ],
+          [
+            29.5938,
+            46.3779
+          ],
+          [
+            30.6627,
+            47.6344
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Romanian. ETHICS-003: The entity_type 'kingdom' is approximate; the correct term is 'Principality'. The capital moved from Baia to Suceava to Iasi. The start date 1346 is approximate; the legendary founding by Dragos (c. 1346-1347) may be partly mythological. ETHICS-002: Moldavia's territory included what is now the Republic of Moldova, and the competing national narratives (Romanian unionist vs. Moldovan separatist identity) are politically sensitive. The eastern part (Bessarabia) was annexed by Russia in 1812 and remains a source of identity disputes. The northern part (Bukovina) was seized by Austria in 1775. These partitions affected distinct populations who did not consent to their transfer.",
     "name_variants": [
       {
@@ -2505,7 +4805,8 @@
         "citation": "Grigore Ureche, Letopisetul Tarii Moldovei (Chronicle of Moldavia, c. 1642)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Кнежевина Црна Гора",
@@ -2516,9 +4817,67 @@
     "capital_name": "Cetinje",
     "capital_lat": 42.3931,
     "capital_lon": 18.9236,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            23.4786,
+            42.3931
+          ],
+          [
+            21.7217,
+            43.8406
+          ],
+          [
+            21.539,
+            45.3792
+          ],
+          [
+            18.9236,
+            45.7189
+          ],
+          [
+            17.2092,
+            44.5993
+          ],
+          [
+            16.0341,
+            43.5919
+          ],
+          [
+            15.8441,
+            42.3931
+          ],
+          [
+            14.9236,
+            40.762
+          ],
+          [
+            17.0539,
+            40.1129
+          ],
+          [
+            18.9236,
+            37.4256
+          ],
+          [
+            21.2585,
+            39.284
+          ],
+          [
+            23.3638,
+            40.4827
+          ],
+          [
+            23.4786,
+            42.3931
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Serbian/Montenegrin Cyrillic. The Montenegrin language debate (whether Montenegrin is a separate language from Serbian) is politically sensitive and ongoing. ETHICS-003: The entity_type 'kingdom' is approximate; Montenegro was a prince-bishopric (vladika) under the Petrovic-Njegos dynasty from 1515, then a secular principality from 1851, and formally a kingdom from 1910. The start date reflects the beginning of the theocratic state. Montenegro's exact relationship with the Ottoman Empire (varying degrees of autonomy vs. independence) is debated. ETHICS-002: Montenegrin history involves complex inter-ethnic and inter-clan violence, as well as the broader context of Ottoman-Christian conflict in the Balkans.",
     "name_variants": [
       {
@@ -2565,7 +4924,8 @@
         "citation": "Njegos, P. Gorski Vijenac (The Mountain Wreath, 1847)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Principata e Arberit",
@@ -2576,9 +4936,67 @@
     "capital_name": "Kruja",
     "capital_lat": 41.5111,
     "capital_lon": 19.7928,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            25.9471,
+            41.5111
+          ],
+          [
+            24.6086,
+            43.3616
+          ],
+          [
+            21.7889,
+            44.2941
+          ],
+          [
+            19.7928,
+            45.5549
+          ],
+          [
+            18.0094,
+            43.6122
+          ],
+          [
+            16.2506,
+            42.8317
+          ],
+          [
+            15.8201,
+            41.5111
+          ],
+          [
+            16.0348,
+            40.1044
+          ],
+          [
+            17.4294,
+            38.2783
+          ],
+          [
+            19.7928,
+            39.2336
+          ],
+          [
+            21.6391,
+            39.368
+          ],
+          [
+            24.5882,
+            39.6067
+          ],
+          [
+            25.9471,
+            41.5111
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Albanian. ETHICS-003: This entry covers multiple Albanian political entities, from the Principality of Arbanon (1190) through various Albanian lordships to the League of Lezhe under Skanderbeg (1444-1479). There was no single continuous Albanian state; rather, a series of principalities, lordships, and resistance movements. The confidence score reflects this complexity. The identification of Skanderbeg as a national hero is central to Albanian identity but the historical record is complicated by his service in the Ottoman military before his revolt. ETHICS-002: The Albanian lands were contested between Byzantine, Serbian, Angevin, and Ottoman powers, with the Albanian population often caught between competing empires. Ottoman conquest led to significant islamization of the Albanian population, creating lasting religious divisions.",
     "name_variants": [
       {
@@ -2625,7 +5043,8 @@
         "citation": "Barleti, M. Historia de vita et gestis Scanderbegi (1508-1510)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kralovstvi ceske",
@@ -2636,9 +5055,67 @@
     "capital_name": "Praha",
     "capital_lat": 50.0755,
     "capital_lon": 14.4378,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            20.5477,
+            50.0755
+          ],
+          [
+            20.7692,
+            51.9616
+          ],
+          [
+            16.9963,
+            52.5722
+          ],
+          [
+            14.4378,
+            53.4879
+          ],
+          [
+            12.0086,
+            52.4942
+          ],
+          [
+            10.7334,
+            51.5705
+          ],
+          [
+            9.5426,
+            50.0755
+          ],
+          [
+            10.5444,
+            48.606
+          ],
+          [
+            11.5817,
+            47.2054
+          ],
+          [
+            14.4378,
+            45.4501
+          ],
+          [
+            16.8485,
+            47.2887
+          ],
+          [
+            19.2726,
+            48.0955
+          ],
+          [
+            20.5477,
+            50.0755
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Czech. ETHICS-003: The Kingdom of Bohemia maintained formal continuity from 1198 to 1918, but its actual sovereignty varied enormously: from a major European power under the Premyslids and Luxembourgs to a largely subordinate part of the Habsburg lands after 1620. The entry covers this entire span. ETHICS-002: The Hussite Wars (1419-1434) were a crucial early Reformation conflict; the Catholic crusades against the Hussites caused massive destruction. The Battle of White Mountain (1620) and subsequent Habsburg repression devastated Czech culture, language, and Protestant communities. The forcible re-Catholicization and Germanization of Bohemia after 1620 constituted systematic cultural suppression.",
     "name_variants": [
       {
@@ -2685,7 +5162,8 @@
         "citation": "Cosmas of Prague, Chronica Boemorum (c. 1125)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Deutsches Kaiserreich",
@@ -2696,9 +5174,67 @@
     "capital_name": "Berlin",
     "capital_lat": 52.52,
     "capital_lon": 13.405,
-    "confidence_score": 0.95,
+    "confidence_score": 0.85,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            34.9735,
+            52.52
+          ],
+          [
+            26.6267,
+            56.6825
+          ],
+          [
+            26.2823,
+            65.3927
+          ],
+          [
+            13.405,
+            62.4578
+          ],
+          [
+            3.6488,
+            62.9219
+          ],
+          [
+            1.4986,
+            56.3324
+          ],
+          [
+            -1.8716,
+            52.52
+          ],
+          [
+            -1.0921,
+            47.6408
+          ],
+          [
+            3.7391,
+            44.1041
+          ],
+          [
+            13.405,
+            35.0922
+          ],
+          [
+            25.2461,
+            39.867
+          ],
+          [
+            30.1749,
+            44.9973
+          ],
+          [
+            34.9735,
+            52.52
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in German. ETHICS-002: The German Empire pursued aggressive colonial policies in Africa, including the genocide of the Herero and Nama peoples in German South-West Africa (1904-1908, estimated 65,000-100,000 killed). Domestically, the Kulturkampf targeted Catholics, and anti-Polish policies (Germanization) suppressed Polish language and culture in the eastern provinces. Anti-Semitism grew as a political force. The empire's militarism and alliance system contributed directly to World War I, which killed approximately 17 million people. ETHICS-003: The empire was proclaimed in Versailles (1871), a deliberately humiliating location for France, illustrating the nationalist aggression embedded in the state's founding.",
     "name_variants": [
       {
@@ -2753,7 +5289,8 @@
         "citation": "Verfassung des Deutschen Reiches (Constitution of the German Empire, 1871)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Oesterreich-Ungarn",
@@ -2764,9 +5301,67 @@
     "capital_name": "Wien",
     "capital_lat": 48.2082,
     "capital_lon": 16.3738,
-    "confidence_score": 0.95,
+    "confidence_score": 0.85,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            38.157,
+            48.2082
+          ],
+          [
+            29.7665,
+            53.161
+          ],
+          [
+            23.3941,
+            55.9492
+          ],
+          [
+            16.3738,
+            59.6961
+          ],
+          [
+            9.3912,
+            56.2582
+          ],
+          [
+            2.3603,
+            53.345
+          ],
+          [
+            -4.7662,
+            48.2082
+          ],
+          [
+            2.8289,
+            44.052
+          ],
+          [
+            6.7416,
+            38.7198
+          ],
+          [
+            16.3738,
+            35.469
+          ],
+          [
+            24.2572,
+            38.5046
+          ],
+          [
+            33.4654,
+            41.1281
+          ],
+          [
+            38.157,
+            48.2082
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in German. The Hungarian name 'Osztrak-Magyar Monarchia' is equally valid as the state was officially bilingual at the imperial level. ETHICS-003: The dual monarchy had two capitals (Vienna and Budapest), two parliaments, and two governments, making it uniquely complex. The entry lists Vienna as the primary capital as seat of the emperor and shared foreign ministry. ETHICS-002: While the Compromise of 1867 granted Hungary autonomy, it left the Slavic, Romanian, and other minorities of both halves without comparable political representation. Hungarian Magyarization and Austrian Germanization policies suppressed minority languages and cultures. The empire's annexation of Bosnia-Herzegovina (1908) contributed to the tensions that triggered World War I, which killed approximately 17 million people.",
     "name_variants": [
       {
@@ -2813,7 +5408,8 @@
         "citation": "Ausgleich (Austro-Hungarian Compromise, 1867)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Regno d'Italia",
@@ -2824,9 +5420,67 @@
     "capital_name": "Roma",
     "capital_lat": 41.9028,
     "capital_lon": 12.4964,
-    "confidence_score": 0.95,
+    "confidence_score": 0.85,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            16.5977,
+            41.9028
+          ],
+          [
+            17.386,
+            43.8898
+          ],
+          [
+            15.6434,
+            45.2774
+          ],
+          [
+            12.4964,
+            45.7039
+          ],
+          [
+            10.203,
+            45.2413
+          ],
+          [
+            7.9871,
+            44.0905
+          ],
+          [
+            8.2821,
+            41.9028
+          ],
+          [
+            8.5332,
+            40.1472
+          ],
+          [
+            10.4514,
+            39.1452
+          ],
+          [
+            12.4964,
+            37.3778
+          ],
+          [
+            15.118,
+            38.4122
+          ],
+          [
+            17.3513,
+            39.6429
+          ],
+          [
+            16.5977,
+            41.9028
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Italian. ETHICS-002: Italian unification (Risorgimento) is often romanticized but involved the military conquest of the Kingdom of the Two Sicilies, which experienced the Risorgimento as a northern invasion. The subsequent suppression of southern Italian resistance ('brigandage') involved summary executions, village destruction, and the internment of thousands. Italy's colonial empire involved atrocities in Libya (1911-1943, including concentration camps and chemical weapons), Ethiopia (1935-1941, use of mustard gas, massacre of Addis Ababa), Eritrea, and Somalia. The fascist period (1922-1943) saw the empire at its most brutal. ETHICS-003: Rome was the capital from 1871; before that Turin (1861-1865) and Florence (1865-1871) served as capital.",
     "name_variants": [
       {
@@ -2881,6 +5535,7 @@
         "citation": "Statuto Albertino (1848, constitutional basis of the Kingdom)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   }
 ]

@@ -8,15 +8,89 @@
     "capital_name": "Debarwa",
     "capital_lat": 15.08,
     "capital_lon": 38.84,
-    "boundary_geojson": null,
-    "confidence_score": 0.55,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            43.6137,
+            15.08
+          ],
+          [
+            42.3507,
+            17.489
+          ],
+          [
+            40.5398,
+            18.5128
+          ],
+          [
+            38.84,
+            18.2055
+          ],
+          [
+            36.6941,
+            17.984
+          ],
+          [
+            36.0176,
+            16.3629
+          ],
+          [
+            35.0982,
+            15.08
+          ],
+          [
+            35.8404,
+            13.2589
+          ],
+          [
+            35.9746,
+            10.2443
+          ],
+          [
+            38.84,
+            10.6482
+          ],
+          [
+            40.6649,
+            11.3427
+          ],
+          [
+            43.0899,
+            12.9067
+          ],
+          [
+            43.6137,
+            15.08
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
     "status": "uncertain",
     "ethical_notes": "Medri Bahri ('Land of the Sea' in Tigrinya) occupied roughly the territory of modern Eritrea. Its history is often subsumed into Ethiopian imperial narratives, obscuring its distinct political identity. The kingdom's rulers (Bahr Negash, 'Kings of the Sea') maintained varying degrees of independence from the Ethiopian Solomonic dynasty. Ottoman, Portuguese, and Egyptian interference further complicates sovereignty claims. Eritrean nationalist historiography emphasizes Medri Bahri's independence as evidence of a distinct Eritrean political tradition, while Ethiopian historiography treats it as a vassal province. Both perspectives must be represented.",
     "name_variants": [
-      {"name": "Medri Bahri", "lang": "ti", "context": "Tigrinya: 'Land of the Sea', the indigenous name"},
-      {"name": "Kingdom of the Sea", "lang": "en", "context": "English literal translation"},
-      {"name": "Bahr Negash Province", "lang": "en", "context": "Named after its rulers, the Bahr Negash ('King of the Sea')"},
-      {"name": "Mareb Mellash", "lang": "am", "context": "Amharic: 'Beyond the Mareb River', Ethiopian perspective name"}
+      {
+        "name": "Medri Bahri",
+        "lang": "ti",
+        "context": "Tigrinya: 'Land of the Sea', the indigenous name"
+      },
+      {
+        "name": "Kingdom of the Sea",
+        "lang": "en",
+        "context": "English literal translation"
+      },
+      {
+        "name": "Bahr Negash Province",
+        "lang": "en",
+        "context": "Named after its rulers, the Bahr Negash ('King of the Sea')"
+      },
+      {
+        "name": "Mareb Mellash",
+        "lang": "am",
+        "context": "Amharic: 'Beyond the Mareb River', Ethiopian perspective name"
+      }
     ],
     "territory_changes": [
       {
@@ -45,10 +119,23 @@
       }
     ],
     "sources": [
-      {"citation": "Conti Rossini, Carlo. 'Historia regis Sarsa Dengel (Malak Sagad).' Corpus Scriptorum Christianorum Orientalium, 1907", "source_type": "primary", "url": null},
-      {"citation": "Pankhurst, Richard. The Ethiopian Borderlands: Essays in Regional History from Ancient Times to the End of the 18th Century. Lawrenceville: Red Sea Press, 1997", "source_type": "academic", "url": null},
-      {"citation": "Erlich, Haggai. The Cross and the River: Ethiopia, Egypt and the Nile. Boulder: Lynne Rienner, 2002", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Conti Rossini, Carlo. 'Historia regis Sarsa Dengel (Malak Sagad).' Corpus Scriptorum Christianorum Orientalium, 1907",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Pankhurst, Richard. The Ethiopian Borderlands: Essays in Regional History from Ancient Times to the End of the 18th Century. Lawrenceville: Red Sea Press, 1997",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Erlich, Haggai. The Cross and the River: Ethiopia, Egypt and the Nile. Boulder: Lynne Rienner, 2002",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Suldaanaddii Warsangeli",
@@ -59,14 +146,84 @@
     "capital_name": "Las Khorey",
     "capital_lat": 11.16,
     "capital_lon": 48.19,
-    "boundary_geojson": null,
-    "confidence_score": 0.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            51.4625,
+            11.16
+          ],
+          [
+            50.0519,
+            12.2458
+          ],
+          [
+            49.2636,
+            12.9477
+          ],
+          [
+            48.19,
+            13.9903
+          ],
+          [
+            46.7866,
+            13.3862
+          ],
+          [
+            45.373,
+            12.6132
+          ],
+          [
+            46.2744,
+            11.16
+          ],
+          [
+            45.245,
+            9.372
+          ],
+          [
+            47.1138,
+            9.4796
+          ],
+          [
+            48.19,
+            9.1989
+          ],
+          [
+            49.8499,
+            8.0124
+          ],
+          [
+            51.5694,
+            9.6913
+          ],
+          [
+            51.4625,
+            11.16
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "The Warsangali Sultanate is one of the oldest Somali sultanates, but its history is poorly documented in written sources and relies heavily on oral tradition. Colonial-era boundaries imposed by British and Italian administrations fragmented Warsangali territory and clan structures. The sultanate's territory now spans the disputed regions of Puntland and Somaliland, making its historical claims politically sensitive in ongoing Somali state-formation debates.",
     "name_variants": [
-      {"name": "Warsangali Sultanate", "lang": "en", "context": "English academic designation"},
-      {"name": "Suldaanaddii Warsangeli", "lang": "so", "context": "Somali name using clan designation"},
-      {"name": "Sultanato dei Warsangali", "lang": "it", "context": "Italian colonial-era designation"}
+      {
+        "name": "Warsangali Sultanate",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Suldaanaddii Warsangeli",
+        "lang": "so",
+        "context": "Somali name using clan designation"
+      },
+      {
+        "name": "Sultanato dei Warsangali",
+        "lang": "it",
+        "context": "Italian colonial-era designation"
+      }
     ],
     "territory_changes": [
       {
@@ -95,9 +252,18 @@
       }
     ],
     "sources": [
-      {"citation": "Lewis, I.M. A Modern History of the Somali: Nation and State in the Horn of Africa. Oxford: James Currey, 2002", "source_type": "academic", "url": null},
-      {"citation": "Cassanelli, Lee V. The Shaping of Somali Society: Reconstructing the History of a Pastoral People, 1600-1900. Philadelphia: University of Pennsylvania Press, 1982", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Lewis, I.M. A Modern History of the Somali: Nation and State in the Horn of Africa. Oxford: James Currey, 2002",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Cassanelli, Lee V. The Shaping of Somali Society: Reconstructing the History of a Pastoral People, 1600-1900. Philadelphia: University of Pennsylvania Press, 1982",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Imaaraadkii Harar",
@@ -108,15 +274,89 @@
     "capital_name": "Harar",
     "capital_lat": 9.31,
     "capital_lon": 42.12,
-    "boundary_geojson": null,
-    "confidence_score": 0.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            44.4003,
+            9.31
+          ],
+          [
+            44.5337,
+            10.8784
+          ],
+          [
+            43.4151,
+            11.4892
+          ],
+          [
+            42.12,
+            12.2583
+          ],
+          [
+            40.6947,
+            12.3557
+          ],
+          [
+            39.088,
+            10.8235
+          ],
+          [
+            38.3955,
+            9.31
+          ],
+          [
+            39.4677,
+            7.811
+          ],
+          [
+            40.6342,
+            6.1013
+          ],
+          [
+            42.12,
+            5.9955
+          ],
+          [
+            43.4416,
+            7.3656
+          ],
+          [
+            44.6718,
+            7.4548
+          ],
+          [
+            44.4003,
+            9.31
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "The Emirate of Harar succeeded the Adal Sultanate and served as one of the most important Islamic centers in the Horn of Africa. Its walled city (Jugol) is a UNESCO World Heritage Site. Ethiopian imperial conquest under Menelik II in 1887 ended Harari independence and is viewed by Harari people as colonial subjugation. The city's multiethnic character (Harari, Oromo, Somali, Amhara) complicates simple nationalist narratives. Richard Burton's controversial 1855 account is a widely cited but culturally biased source.",
     "name_variants": [
-      {"name": "Emirate of Harar", "lang": "en", "context": "English academic designation"},
-      {"name": "Gey Harar", "lang": "har", "context": "Harari language name for the city-state"},
-      {"name": "Hararge", "lang": "om", "context": "Oromo name for the broader Harar region"},
-      {"name": "Harer Emirliyi", "lang": "tr", "context": "Ottoman Turkish designation during period of suzerainty"}
+      {
+        "name": "Emirate of Harar",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Gey Harar",
+        "lang": "har",
+        "context": "Harari language name for the city-state"
+      },
+      {
+        "name": "Hararge",
+        "lang": "om",
+        "context": "Oromo name for the broader Harar region"
+      },
+      {
+        "name": "Harer Emirliyi",
+        "lang": "tr",
+        "context": "Ottoman Turkish designation during period of suzerainty"
+      }
     ],
     "territory_changes": [
       {
@@ -145,10 +385,23 @@
       }
     ],
     "sources": [
-      {"citation": "Ahmed, Hussein. Islam in Nineteenth-Century Wallo, Ethiopia: Revival, Reform and Reaction. Leiden: Brill, 2001", "source_type": "academic", "url": null},
-      {"citation": "Burton, Richard Francis. First Footsteps in East Africa. London: Longman, 1856", "source_type": "primary", "url": null},
-      {"citation": "Wagner, Ewald. Legende und Geschichte: Der Fath Madinat Harar von Yahya Nasrallah. Wiesbaden: Steiner, 1978", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Ahmed, Hussein. Islam in Nineteenth-Century Wallo, Ethiopia: Revival, Reform and Reaction. Leiden: Brill, 2001",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Burton, Richard Francis. First Footsteps in East Africa. London: Longman, 1856",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Wagner, Ewald. Legende und Geschichte: Der Fath Madinat Harar von Yahya Nasrallah. Wiesbaden: Steiner, 1978",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kafecho Bonga",
@@ -159,14 +412,84 @@
     "capital_name": "Bonga",
     "capital_lat": 7.28,
     "capital_lon": 36.23,
-    "boundary_geojson": null,
-    "confidence_score": 0.55,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            39.639,
+            7.28
+          ],
+          [
+            39.2197,
+            9.1192
+          ],
+          [
+            37.8765,
+            9.6029
+          ],
+          [
+            36.23,
+            10.9721
+          ],
+          [
+            34.1008,
+            10.5555
+          ],
+          [
+            34.0013,
+            8.5425
+          ],
+          [
+            32.0954,
+            7.28
+          ],
+          [
+            32.4855,
+            5.015
+          ],
+          [
+            34.4124,
+            3.8512
+          ],
+          [
+            36.23,
+            3.5322
+          ],
+          [
+            38.1954,
+            4.1201
+          ],
+          [
+            39.3908,
+            5.4841
+          ],
+          [
+            39.639,
+            7.28
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
     "status": "uncertain",
     "ethical_notes": "The Kingdom of Kaffa is the origin of the word 'coffee' (from the Kaffa region where Coffea arabica originated as a wild plant). Kaffa's sophisticated political system and forest-based economy are often overlooked in Ethiopian historiography, which centers on the Solomonic highland state. Menelik II's conquest of Kaffa (1897) was one of the final acts of Ethiopian imperial expansion and resulted in significant population displacement, enslavement, and cultural suppression of Kaffa people. This conquest is described as 'unification' in Ethiopian state narratives but as colonization by Kaffa descendants.",
     "name_variants": [
-      {"name": "Kingdom of Kaffa", "lang": "en", "context": "English academic designation"},
-      {"name": "Gonga Kingdom", "lang": "en", "context": "Alternative name referencing the Gonga/Kafa people"},
-      {"name": "Kaffa Kingship", "lang": "en", "context": "Used in anthropological literature referencing the tato (king) system"}
+      {
+        "name": "Kingdom of Kaffa",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Gonga Kingdom",
+        "lang": "en",
+        "context": "Alternative name referencing the Gonga/Kafa people"
+      },
+      {
+        "name": "Kaffa Kingship",
+        "lang": "en",
+        "context": "Used in anthropological literature referencing the tato (king) system"
+      }
     ],
     "territory_changes": [
       {
@@ -195,10 +518,23 @@
       }
     ],
     "sources": [
-      {"citation": "Orent, Amnon. Lineage Structure and the Supernatural: The Kafa of Ethiopia. PhD dissertation, Boston University, 1969", "source_type": "academic", "url": null},
-      {"citation": "Huntingford, G.W.B. The Galla of Ethiopia: The Kingdoms of Kafa and Janjero. London: International African Institute, 1955", "source_type": "academic", "url": null},
-      {"citation": "Lange, Werner J. History of the Southern Gonga (Southwestern Ethiopia). Wiesbaden: Franz Steiner, 1982", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Orent, Amnon. Lineage Structure and the Supernatural: The Kafa of Ethiopia. PhD dissertation, Boston University, 1969",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Huntingford, G.W.B. The Galla of Ethiopia: The Kingdoms of Kafa and Janjero. London: International African Institute, 1955",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Lange, Werner J. History of the Southern Gonga (Southwestern Ethiopia). Wiesbaden: Franz Steiner, 1982",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Reth e Collo",
@@ -209,15 +545,89 @@
     "capital_name": "Fashoda",
     "capital_lat": 9.89,
     "capital_lon": 32.12,
-    "boundary_geojson": null,
-    "confidence_score": 0.55,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            36.0539,
+            9.89
+          ],
+          [
+            35.3333,
+            12.2115
+          ],
+          [
+            33.7818,
+            12.9485
+          ],
+          [
+            32.12,
+            13.6697
+          ],
+          [
+            30.09,
+            13.3517
+          ],
+          [
+            28.9114,
+            11.6152
+          ],
+          [
+            27.7099,
+            9.89
+          ],
+          [
+            29.4396,
+            8.2005
+          ],
+          [
+            29.6759,
+            5.9922
+          ],
+          [
+            32.12,
+            4.763
+          ],
+          [
+            34.1756,
+            6.5418
+          ],
+          [
+            34.5622,
+            8.1331
+          ],
+          [
+            36.0539,
+            9.89
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
     "status": "uncertain",
     "ethical_notes": "The Shilluk Kingdom was one of the most organized pre-colonial states in the Upper Nile region. Its political system centered on the reth (divine king) represents one of the classic examples of sacred kingship studied in African political anthropology (notably by Evans-Pritchard). The kingdom's decline was accelerated by Egyptian-Ottoman slave raiding and the Mahdist revolution. British colonial administration preserved the reth as a figurehead while stripping the institution of political power. The Shilluk people continue to maintain the reth institution in contemporary South Sudan.",
     "name_variants": [
-      {"name": "Shilluk Kingdom", "lang": "en", "context": "English academic designation using anglicized ethnonym"},
-      {"name": "Chollo Kingdom", "lang": "en", "context": "Using the people's self-designation (Chollo/Collo)"},
-      {"name": "Royaume Shilluk", "lang": "fr", "context": "French colonial designation"},
-      {"name": "Ocolo", "lang": "shk", "context": "Shilluk self-name for their people and territory"}
+      {
+        "name": "Shilluk Kingdom",
+        "lang": "en",
+        "context": "English academic designation using anglicized ethnonym"
+      },
+      {
+        "name": "Chollo Kingdom",
+        "lang": "en",
+        "context": "Using the people's self-designation (Chollo/Collo)"
+      },
+      {
+        "name": "Royaume Shilluk",
+        "lang": "fr",
+        "context": "French colonial designation"
+      },
+      {
+        "name": "Ocolo",
+        "lang": "shk",
+        "context": "Shilluk self-name for their people and territory"
+      }
     ],
     "territory_changes": [
       {
@@ -246,9 +656,18 @@
       }
     ],
     "sources": [
-      {"citation": "Evans-Pritchard, E.E. The Divine Kingship of the Shilluk of the Nilotic Sudan. Cambridge: Cambridge University Press, 1948", "source_type": "academic", "url": null},
-      {"citation": "Schnepel, Burkhard. Twinned Beings: Kings and Effigies in Southern Sudan, East India and Renaissance France. Goteborg: Institute for Advanced Studies in Social Anthropology, 1995", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Evans-Pritchard, E.E. The Divine Kingship of the Shilluk of the Nilotic Sudan. Cambridge: Cambridge University Press, 1948",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Schnepel, Burkhard. Twinned Beings: Kings and Effigies in Southern Sudan, East India and Renaissance France. Goteborg: Institute for Advanced Studies in Social Anthropology, 1995",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kraljevina Bosna",
@@ -259,15 +678,89 @@
     "capital_name": "Bobovac",
     "capital_lat": 44.15,
     "capital_lon": 17.87,
-    "boundary_geojson": null,
-    "confidence_score": 0.75,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            22.0494,
+            44.15
+          ],
+          [
+            21.6967,
+            45.5684
+          ],
+          [
+            20.134,
+            46.7688
+          ],
+          [
+            17.87,
+            46.2428
+          ],
+          [
+            16.1132,
+            45.9515
+          ],
+          [
+            14.1026,
+            46.0046
+          ],
+          [
+            14.2951,
+            44.15
+          ],
+          [
+            15.1024,
+            42.6733
+          ],
+          [
+            15.9597,
+            41.5397
+          ],
+          [
+            17.87,
+            41.6898
+          ],
+          [
+            19.8593,
+            41.6348
+          ],
+          [
+            22.1464,
+            42.2693
+          ],
+          [
+            22.0494,
+            44.15
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.65,
     "status": "confirmed",
     "ethical_notes": "The Kingdom of Bosnia's religious character remains deeply contested. The Bosnian Church (Crkva Bosanska) has been variously interpreted as a neo-Manichean heresy (Bogomil), a schismatic Catholic institution, or an indigenous Christian tradition. Serbian, Croatian, and Bosniak nationalist historiographies each claim medieval Bosnian identity as 'really' Serbian, Croatian, or proto-Bosniak respectively. Ottoman conquest (1463) and subsequent Islamization of much of the population added further layers of contested identity that remain politically explosive in modern Bosnia and Herzegovina. The database represents all scholarly interpretations without favoring any national narrative.",
     "name_variants": [
-      {"name": "Kingdom of Bosnia", "lang": "en", "context": "English academic designation"},
-      {"name": "Regnum Bosnae", "lang": "la", "context": "Latin designation in papal and Hungarian documents"},
-      {"name": "Kraljevstvo Bosansko", "lang": "bs", "context": "Bosnian medieval form"},
-      {"name": "Bosna Kralligi", "lang": "tr", "context": "Ottoman Turkish designation post-conquest"}
+      {
+        "name": "Kingdom of Bosnia",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Regnum Bosnae",
+        "lang": "la",
+        "context": "Latin designation in papal and Hungarian documents"
+      },
+      {
+        "name": "Kraljevstvo Bosansko",
+        "lang": "bs",
+        "context": "Bosnian medieval form"
+      },
+      {
+        "name": "Bosna Kralligi",
+        "lang": "tr",
+        "context": "Ottoman Turkish designation post-conquest"
+      }
     ],
     "territory_changes": [
       {
@@ -296,10 +789,23 @@
       }
     ],
     "sources": [
-      {"citation": "Fine, John V.A. The Late Medieval Balkans: A Critical Survey from the Late Twelfth Century to the Ottoman Conquest. Ann Arbor: University of Michigan Press, 1987", "source_type": "academic", "url": null},
-      {"citation": "Malcolm, Noel. Bosnia: A Short History. New York: NYU Press, 1994", "source_type": "academic", "url": null},
-      {"citation": "Orbini, Mauro. Il Regno degli Slavi. Pesaro, 1601", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "Fine, John V.A. The Late Medieval Balkans: A Critical Survey from the Late Twelfth Century to the Ottoman Conquest. Ann Arbor: University of Michigan Press, 1987",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Malcolm, Noel. Bosnia: A Short History. New York: NYU Press, 1994",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Orbini, Mauro. Il Regno degli Slavi. Pesaro, 1601",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Tsarstvo Vidinsko",
@@ -310,15 +816,89 @@
     "capital_name": "Vidin",
     "capital_lat": 43.99,
     "capital_lon": 22.87,
-    "boundary_geojson": null,
-    "confidence_score": 0.75,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            25.9025,
+            43.99
+          ],
+          [
+            26.3904,
+            45.4021
+          ],
+          [
+            24.7168,
+            46.111
+          ],
+          [
+            22.87,
+            46.7436
+          ],
+          [
+            21.1702,
+            46.1443
+          ],
+          [
+            19.1984,
+            45.6984
+          ],
+          [
+            19.0754,
+            43.99
+          ],
+          [
+            19.619,
+            42.5113
+          ],
+          [
+            21.0258,
+            42.2587
+          ],
+          [
+            22.87,
+            40.2741
+          ],
+          [
+            25.2312,
+            41.5163
+          ],
+          [
+            25.4386,
+            42.655
+          ],
+          [
+            25.9025,
+            43.99
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.65,
     "status": "confirmed",
     "ethical_notes": "The Tsardom of Vidin represents the fragmentation of the Second Bulgarian Empire. Its brief independent existence under Ivan Sratsimir is sometimes downplayed in Bulgarian national historiography, which prefers to emphasize Bulgarian political unity. Hungarian suzerainty over Vidin and the complex relations between the rival Bulgarian tsardoms (Tarnovo and Vidin) reveal the contested nature of late medieval Bulgarian sovereignty. The Vidin crusade of 1396 (Battle of Nicopolis) was the last major Western European crusade.",
     "name_variants": [
-      {"name": "Tsardom of Vidin", "lang": "en", "context": "English academic designation"},
-      {"name": "Vidin Kingdom", "lang": "en", "context": "Alternative English designation"},
-      {"name": "Царство Видинско", "lang": "bg", "context": "Bulgarian Cyrillic original"},
-      {"name": "Vidin Carligi", "lang": "tr", "context": "Ottoman Turkish designation"}
+      {
+        "name": "Tsardom of Vidin",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Vidin Kingdom",
+        "lang": "en",
+        "context": "Alternative English designation"
+      },
+      {
+        "name": "Царство Видинско",
+        "lang": "bg",
+        "context": "Bulgarian Cyrillic original"
+      },
+      {
+        "name": "Vidin Carligi",
+        "lang": "tr",
+        "context": "Ottoman Turkish designation"
+      }
     ],
     "territory_changes": [
       {
@@ -347,9 +927,18 @@
       }
     ],
     "sources": [
-      {"citation": "Fine, John V.A. The Late Medieval Balkans: A Critical Survey from the Late Twelfth Century to the Ottoman Conquest. Ann Arbor: University of Michigan Press, 1987", "source_type": "academic", "url": null},
-      {"citation": "Atanasov, Georgi. Inscriptions and Representations from the Period of Ivan Sratsimir. Vidin, 2007", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Fine, John V.A. The Late Medieval Balkans: A Critical Survey from the Late Twelfth Century to the Ottoman Conquest. Ann Arbor: University of Michigan Press, 1987",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Atanasov, Georgi. Inscriptions and Representations from the Period of Ivan Sratsimir. Vidin, 2007",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Zeta",
@@ -360,15 +949,89 @@
     "capital_name": "Zabljak Crnojevica",
     "capital_lat": 42.34,
     "capital_lon": 19.07,
-    "boundary_geojson": null,
-    "confidence_score": 0.65,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            19.9296,
+            42.34
+          ],
+          [
+            20.0,
+            42.6757
+          ],
+          [
+            19.839,
+            43.3858
+          ],
+          [
+            19.07,
+            43.267
+          ],
+          [
+            18.4866,
+            43.1011
+          ],
+          [
+            17.5683,
+            42.8814
+          ],
+          [
+            18.1499,
+            42.34
+          ],
+          [
+            18.2986,
+            42.029
+          ],
+          [
+            18.3039,
+            41.3257
+          ],
+          [
+            19.07,
+            41.2984
+          ],
+          [
+            19.7046,
+            41.4604
+          ],
+          [
+            19.9617,
+            41.9155
+          ],
+          [
+            19.9296,
+            42.34
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
     "status": "confirmed",
     "ethical_notes": "The Principality of Zeta under the Balsic and Crnojevic dynasties is a key entity in Montenegrin national identity formation. Serbian historiography often treats Zeta as a Serbian vassal state, while Montenegrin historiography emphasizes its independence as evidence of a distinct Montenegrin national tradition predating Serbian identity. The principality's shifting allegiances between Venice, the Ottoman Empire, and the Serbian Despotate make it a contested entity in South Slavic identity politics. Albanian historiography also emphasizes the Albanian ethnic character of parts of the Balsic realm.",
     "name_variants": [
-      {"name": "Principality of Zeta", "lang": "en", "context": "English academic designation"},
-      {"name": "Кнежевина Зета", "lang": "sr", "context": "Serbian Cyrillic form"},
-      {"name": "Zetsko Vojvodstvo", "lang": "sr", "context": "Alternative designation as Duchy of Zeta"},
-      {"name": "Zeta under Balsici", "lang": "en", "context": "Period-specific designation for Balsic dynasty rule (1356-1421)"}
+      {
+        "name": "Principality of Zeta",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Кнежевина Зета",
+        "lang": "sr",
+        "context": "Serbian Cyrillic form"
+      },
+      {
+        "name": "Zetsko Vojvodstvo",
+        "lang": "sr",
+        "context": "Alternative designation as Duchy of Zeta"
+      },
+      {
+        "name": "Zeta under Balsici",
+        "lang": "en",
+        "context": "Period-specific designation for Balsic dynasty rule (1356-1421)"
+      }
     ],
     "territory_changes": [
       {
@@ -397,9 +1060,18 @@
       }
     ],
     "sources": [
-      {"citation": "Fine, John V.A. The Late Medieval Balkans: A Critical Survey from the Late Twelfth Century to the Ottoman Conquest. Ann Arbor: University of Michigan Press, 1987", "source_type": "academic", "url": null},
-      {"citation": "Malovic, Zarko. Balsici: Drzava i Porodica. Podgorica: Istorijski Institut, 2000", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Fine, John V.A. The Late Medieval Balkans: A Critical Survey from the Late Twelfth Century to the Ottoman Conquest. Ann Arbor: University of Michigan Press, 1987",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Malovic, Zarko. Balsici: Drzava i Porodica. Podgorica: Istorijski Institut, 2000",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Banatus Zewrinensis",
@@ -410,15 +1082,89 @@
     "capital_name": "Severin",
     "capital_lat": 44.63,
     "capital_lon": 22.66,
-    "boundary_geojson": null,
-    "confidence_score": 0.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            24.0542,
+            44.63
+          ],
+          [
+            23.8184,
+            45.0559
+          ],
+          [
+            23.1234,
+            45.3312
+          ],
+          [
+            22.66,
+            45.8708
+          ],
+          [
+            22.179,
+            45.2543
+          ],
+          [
+            21.4258,
+            45.0804
+          ],
+          [
+            21.2591,
+            44.63
+          ],
+          [
+            21.7085,
+            44.2694
+          ],
+          [
+            21.9482,
+            43.7569
+          ],
+          [
+            22.66,
+            43.3321
+          ],
+          [
+            23.4383,
+            43.476
+          ],
+          [
+            24.2027,
+            44.1179
+          ],
+          [
+            24.0542,
+            44.63
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
     "status": "confirmed",
     "ethical_notes": "The Banate of Severin was a Hungarian frontier march controlling the Iron Gates region of the Danube, situated between Hungary, Wallachia, Serbia, and the Bulgarian polities. Its history illuminates the fluid borderlands of medieval Southeastern Europe where Hungarian, Romanian, Serbian, and Bulgarian populations overlapped. Both Romanian and Hungarian historiographies claim the region's medieval population as 'their own', making demographic characterizations politically charged.",
     "name_variants": [
-      {"name": "Banate of Severin", "lang": "en", "context": "English academic designation"},
-      {"name": "Banatul Severinului", "lang": "ro", "context": "Romanian designation"},
-      {"name": "Szoreny banato", "lang": "hu", "context": "Hungarian designation"},
-      {"name": "Banatus Bulgariae", "lang": "la", "context": "Earlier Latin designation referencing Bulgarian connections"}
+      {
+        "name": "Banate of Severin",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Banatul Severinului",
+        "lang": "ro",
+        "context": "Romanian designation"
+      },
+      {
+        "name": "Szoreny banato",
+        "lang": "hu",
+        "context": "Hungarian designation"
+      },
+      {
+        "name": "Banatus Bulgariae",
+        "lang": "la",
+        "context": "Earlier Latin designation referencing Bulgarian connections"
+      }
     ],
     "territory_changes": [
       {
@@ -447,9 +1193,18 @@
       }
     ],
     "sources": [
-      {"citation": "Engel, Pal. The Realm of St Stephen: A History of Medieval Hungary, 895-1526. London: I.B. Tauris, 2001", "source_type": "academic", "url": null},
-      {"citation": "Pall, Francisc. 'Le Condizioni e gli Echi Internazionali della Lotta Antiottomana.' Revue des Etudes Sud-Est Europeennes, 1965", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Engel, Pal. The Realm of St Stephen: A History of Medieval Hungary, 895-1526. London: I.B. Tauris, 2001",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Pall, Francisc. 'Le Condizioni e gli Echi Internazionali della Lotta Antiottomana.' Revue des Etudes Sud-Est Europeennes, 1965",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Raska",
@@ -460,15 +1215,89 @@
     "capital_name": "Ras",
     "capital_lat": 43.12,
     "capital_lon": 20.42,
-    "boundary_geojson": null,
-    "confidence_score": 0.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            21.6473,
+            43.12
+          ],
+          [
+            21.7651,
+            43.6355
+          ],
+          [
+            21.0398,
+            43.9095
+          ],
+          [
+            20.42,
+            43.7462
+          ],
+          [
+            19.8623,
+            43.9169
+          ],
+          [
+            19.4357,
+            43.5178
+          ],
+          [
+            19.2468,
+            43.12
+          ],
+          [
+            19.5476,
+            42.7237
+          ],
+          [
+            19.8176,
+            42.3378
+          ],
+          [
+            20.42,
+            42.2856
+          ],
+          [
+            21.0973,
+            42.1534
+          ],
+          [
+            21.1352,
+            42.75
+          ],
+          [
+            21.6473,
+            43.12
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "Rascia (Grand Principality of Serbia) is the foundational state of medieval Serbian identity and the Nemanjic dynasty. Its name 'Raska' is the root of later European designations for Serbia. The relationship between Rascia and Byzantium involved complex vassal-sovereign dynamics that Serbian nationalist historiography tends to minimize in favor of narratives of unbroken independence. Kosovo Serb identity claims draw heavily on the Nemanjic legacy in this region, making its history directly relevant to contemporary political disputes.",
     "name_variants": [
-      {"name": "Grand Principality of Serbia / Rascia", "lang": "en", "context": "English academic designation"},
-      {"name": "Велики Жупанат Рашка", "lang": "sr", "context": "Serbian Cyrillic: Grand Zupanate of Raska"},
-      {"name": "Rascia / Raxia", "lang": "la", "context": "Latin form used in Western European documents"},
-      {"name": "Ρασία", "lang": "el", "context": "Byzantine Greek designation"}
+      {
+        "name": "Grand Principality of Serbia / Rascia",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Велики Жупанат Рашка",
+        "lang": "sr",
+        "context": "Serbian Cyrillic: Grand Zupanate of Raska"
+      },
+      {
+        "name": "Rascia / Raxia",
+        "lang": "la",
+        "context": "Latin form used in Western European documents"
+      },
+      {
+        "name": "Ρασία",
+        "lang": "el",
+        "context": "Byzantine Greek designation"
+      }
     ],
     "territory_changes": [
       {
@@ -497,10 +1326,23 @@
       }
     ],
     "sources": [
-      {"citation": "Fine, John V.A. The Early Medieval Balkans: A Critical Survey from the Sixth to the Late Twelfth Century. Ann Arbor: University of Michigan Press, 1983", "source_type": "academic", "url": null},
-      {"citation": "Kalic, Jovanka. 'Rascia: The Nucleus of the Medieval Serbian State.' Serbian Studies, vol. 1, 1980", "source_type": "academic", "url": null},
-      {"citation": "Stefan Nemanja, Charter of the Monastery of Studenica, c. 1196", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "Fine, John V.A. The Early Medieval Balkans: A Critical Survey from the Sixth to the Late Twelfth Century. Ann Arbor: University of Michigan Press, 1983",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Kalic, Jovanka. 'Rascia: The Nucleus of the Medieval Serbian State.' Serbian Studies, vol. 1, 1980",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Stefan Nemanja, Charter of the Monastery of Studenica, c. 1196",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kerajaan Kediri",
@@ -511,15 +1353,89 @@
     "capital_name": "Daha (Kediri)",
     "capital_lat": -7.82,
     "capital_lon": 112.02,
-    "boundary_geojson": null,
-    "confidence_score": 0.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            116.6545,
+            -7.82
+          ],
+          [
+            114.3013,
+            -6.6022
+          ],
+          [
+            113.6884,
+            -5.1685
+          ],
+          [
+            112.02,
+            -4.6671
+          ],
+          [
+            110.3384,
+            -4.228
+          ],
+          [
+            108.4394,
+            -5.5799
+          ],
+          [
+            109.4667,
+            -7.82
+          ],
+          [
+            108.5955,
+            -9.4819
+          ],
+          [
+            110.2547,
+            -10.4543
+          ],
+          [
+            112.02,
+            -10.4875
+          ],
+          [
+            114.0816,
+            -11.0141
+          ],
+          [
+            115.608,
+            -9.8425
+          ],
+          [
+            116.6545,
+            -7.82
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
     "status": "confirmed",
     "ethical_notes": "The Kingdom of Kediri is known primarily through inscriptions and later literary tradition (kakawin poetry). The Javanese literary golden age under Kediri produced works like the Bharatayuddha and Smaradahana that are foundational to Javanese cultural identity. The kingdom's history is sometimes romanticized in Javanese nationalist narratives. Archaeological evidence is limited compared to the rich literary tradition, creating uncertainty about political realities versus literary idealization.",
     "name_variants": [
-      {"name": "Kingdom of Kediri", "lang": "en", "context": "English academic designation"},
-      {"name": "Kadiri / Panjalu", "lang": "jv", "context": "Old Javanese names; Panjalu was the eastern successor of Mataram"},
-      {"name": "Daha", "lang": "jv", "context": "Name of the capital, sometimes used for the kingdom itself"},
-      {"name": "Kerajaan Kadiri", "lang": "id", "context": "Modern Indonesian designation"}
+      {
+        "name": "Kingdom of Kediri",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Kadiri / Panjalu",
+        "lang": "jv",
+        "context": "Old Javanese names; Panjalu was the eastern successor of Mataram"
+      },
+      {
+        "name": "Daha",
+        "lang": "jv",
+        "context": "Name of the capital, sometimes used for the kingdom itself"
+      },
+      {
+        "name": "Kerajaan Kadiri",
+        "lang": "id",
+        "context": "Modern Indonesian designation"
+      }
     ],
     "territory_changes": [
       {
@@ -548,10 +1464,23 @@
       }
     ],
     "sources": [
-      {"citation": "Coedes, George. The Indianized States of Southeast Asia. Trans. Susan Brown Cowing. Honolulu: University of Hawaii Press, 1968", "source_type": "academic", "url": null},
-      {"citation": "Kieven, Lydia. Following the Cap-Figure in Majapahit Temple Reliefs. Leiden: Brill, 2013", "source_type": "academic", "url": null},
-      {"citation": "Bharatayuddha Kakawin. Old Javanese court poem composed under Kediri patronage, c. 1157 CE", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "Coedes, George. The Indianized States of Southeast Asia. Trans. Susan Brown Cowing. Honolulu: University of Hawaii Press, 1968",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Kieven, Lydia. Following the Cap-Figure in Majapahit Temple Reliefs. Leiden: Brill, 2013",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Bharatayuddha Kakawin. Old Javanese court poem composed under Kediri patronage, c. 1157 CE",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Butuan",
@@ -562,15 +1491,89 @@
     "capital_name": "Butuan",
     "capital_lat": 8.95,
     "capital_lon": 125.54,
-    "boundary_geojson": null,
-    "confidence_score": 0.55,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            130.2461,
+            8.95
+          ],
+          [
+            127.7557,
+            10.2804
+          ],
+          [
+            127.8322,
+            12.7248
+          ],
+          [
+            125.54,
+            11.7773
+          ],
+          [
+            123.8144,
+            12.664
+          ],
+          [
+            123.4471,
+            10.4466
+          ],
+          [
+            122.1541,
+            8.95
+          ],
+          [
+            122.3384,
+            6.7735
+          ],
+          [
+            123.9074,
+            5.8723
+          ],
+          [
+            125.54,
+            4.6303
+          ],
+          [
+            127.4849,
+            5.5123
+          ],
+          [
+            128.8595,
+            7.5198
+          ],
+          [
+            130.2461,
+            8.95
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
     "status": "uncertain",
     "ethical_notes": "The Rajahnate of Butuan is among the earliest documented polities in the Philippines, attested by Chinese Song Dynasty records (1001 CE). Its existence challenges colonial-era narratives that pre-Hispanic Philippines lacked organized states. The balangay boats found in Butuan (some dating to 320 CE) are among the oldest watercraft discovered in Southeast Asia, supporting evidence of sophisticated maritime technology. The 'rajahnate' designation may impose Indianized political concepts on an indigenous Philippine political organization (barangay-based system) that operated differently.",
     "name_variants": [
-      {"name": "Rajahnate of Butuan", "lang": "en", "context": "English academic designation"},
-      {"name": "Kingdom of Butuan", "lang": "en", "context": "Alternative English designation"},
-      {"name": "P'u-tuan", "lang": "zh", "context": "Chinese Song Dynasty designation from Zhufanzhi (1225)"},
-      {"name": "Kaharian ng Butuan", "lang": "fil", "context": "Filipino designation"}
+      {
+        "name": "Rajahnate of Butuan",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Kingdom of Butuan",
+        "lang": "en",
+        "context": "Alternative English designation"
+      },
+      {
+        "name": "P'u-tuan",
+        "lang": "zh",
+        "context": "Chinese Song Dynasty designation from Zhufanzhi (1225)"
+      },
+      {
+        "name": "Kaharian ng Butuan",
+        "lang": "fil",
+        "context": "Filipino designation"
+      }
     ],
     "territory_changes": [
       {
@@ -599,10 +1602,23 @@
       }
     ],
     "sources": [
-      {"citation": "Scott, William Henry. Barangay: Sixteenth-Century Philippine Culture and Society. Manila: Ateneo de Manila University Press, 1994", "source_type": "academic", "url": null},
-      {"citation": "Zhao Rugua. Zhufanzhi (Description of Barbarian Peoples). Song Dynasty, c. 1225", "source_type": "primary", "url": null},
-      {"citation": "Junker, Laura Lee. Raiding, Trading, and Feasting: The Political Economy of Philippine Chiefdoms. Honolulu: University of Hawaii Press, 1999", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Scott, William Henry. Barangay: Sixteenth-Century Philippine Culture and Society. Manila: Ateneo de Manila University Press, 1994",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Zhao Rugua. Zhufanzhi (Description of Barbarian Peoples). Song Dynasty, c. 1225",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Junker, Laura Lee. Raiding, Trading, and Feasting: The Political Economy of Philippine Chiefdoms. Honolulu: University of Hawaii Press, 1999",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Tarumanagara",
@@ -613,15 +1629,89 @@
     "capital_name": "Taruma",
     "capital_lat": -6.72,
     "capital_lon": 106.85,
-    "boundary_geojson": null,
-    "confidence_score": 0.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            109.8395,
+            -6.72
+          ],
+          [
+            108.7408,
+            -5.6062
+          ],
+          [
+            108.7585,
+            -3.2997
+          ],
+          [
+            106.85,
+            -4.2569
+          ],
+          [
+            105.8906,
+            -4.6703
+          ],
+          [
+            104.0769,
+            -5.0287
+          ],
+          [
+            104.365,
+            -6.72
+          ],
+          [
+            104.7474,
+            -7.6738
+          ],
+          [
+            105.716,
+            -8.394
+          ],
+          [
+            106.85,
+            -9.6236
+          ],
+          [
+            108.3014,
+            -9.1123
+          ],
+          [
+            109.9627,
+            -8.3069
+          ],
+          [
+            109.8395,
+            -6.72
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "Tarumanagara is one of the earliest known Indianized kingdoms in the Indonesian archipelago, documented through stone inscriptions of King Purnavarman. The 'Indianization' model has been critiqued for implying passive Southeast Asian adoption of Indian culture, when the evidence suggests selective and creative local adaptation. Sundanese cultural identity claims draw on Tarumanagara as a foundational state, but the relationship between this early polity and later Sundanese culture is uncertain. Archaeological investigation is limited by modern urban development in the Jakarta-Bogor area.",
     "name_variants": [
-      {"name": "Kingdom of Tarumanagara", "lang": "en", "context": "English academic designation"},
-      {"name": "Taruma", "lang": "su", "context": "Shortened form in Sundanese tradition"},
-      {"name": "Kerajaan Tarumanagara", "lang": "id", "context": "Modern Indonesian designation"},
-      {"name": "To-lo-mo / Duo-luo-mo", "lang": "zh", "context": "Chinese transcription in Sui and Tang dynasty records"}
+      {
+        "name": "Kingdom of Tarumanagara",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Taruma",
+        "lang": "su",
+        "context": "Shortened form in Sundanese tradition"
+      },
+      {
+        "name": "Kerajaan Tarumanagara",
+        "lang": "id",
+        "context": "Modern Indonesian designation"
+      },
+      {
+        "name": "To-lo-mo / Duo-luo-mo",
+        "lang": "zh",
+        "context": "Chinese transcription in Sui and Tang dynasty records"
+      }
     ],
     "territory_changes": [
       {
@@ -650,10 +1740,23 @@
       }
     ],
     "sources": [
-      {"citation": "Coedes, George. The Indianized States of Southeast Asia. Trans. Susan Brown Cowing. Honolulu: University of Hawaii Press, 1968", "source_type": "academic", "url": null},
-      {"citation": "Purnavarman Inscriptions (Ciaruteun, Tugu, etc.). Stone inscriptions in Sanskrit, c. 450 CE", "source_type": "primary", "url": null},
-      {"citation": "Marwati Djoened Poesponegoro and Nugroho Notosusanto (eds.). Sejarah Nasional Indonesia, vol. 2. Jakarta: Balai Pustaka, 2008", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Coedes, George. The Indianized States of Southeast Asia. Trans. Susan Brown Cowing. Honolulu: University of Hawaii Press, 1968",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Purnavarman Inscriptions (Ciaruteun, Tugu, etc.). Stone inscriptions in Sanskrit, c. 450 CE",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Marwati Djoened Poesponegoro and Nugroho Notosusanto (eds.). Sejarah Nasional Indonesia, vol. 2. Jakarta: Balai Pustaka, 2008",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kalingga",
@@ -663,16 +1766,90 @@
     "year_end": 750,
     "capital_name": "Keling",
     "capital_lat": -6.72,
-    "capital_lon": 110.60,
-    "boundary_geojson": null,
-    "confidence_score": 0.4,
+    "capital_lon": 110.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            114.4093,
+            -6.72
+          ],
+          [
+            113.4332,
+            -5.239
+          ],
+          [
+            112.6917,
+            -3.715
+          ],
+          [
+            110.6,
+            -3.4512
+          ],
+          [
+            109.3301,
+            -4.7174
+          ],
+          [
+            107.6376,
+            -5.0132
+          ],
+          [
+            106.5101,
+            -6.72
+          ],
+          [
+            107.169,
+            -8.5959
+          ],
+          [
+            108.8543,
+            -9.7333
+          ],
+          [
+            110.6,
+            -9.4264
+          ],
+          [
+            112.3489,
+            -9.5778
+          ],
+          [
+            112.6302,
+            -8.0634
+          ],
+          [
+            114.4093,
+            -6.72
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.3,
     "status": "uncertain",
     "ethical_notes": "Kalingga (also Ho-ling in Chinese sources) is a poorly documented early Javanese kingdom known primarily from Chinese Tang Dynasty records and the account of the Chinese Buddhist monk Yijing. Queen Sima, mentioned in Chinese sources as an exceptionally just ruler, is one of the few named female rulers in early Southeast Asian history. The kingdom's name suggests connections to Kalinga in India, but the nature of this connection (migration, cultural influence, or simply a borrowed name) is debated. The limited evidence makes many claims about Kalingga speculative.",
     "name_variants": [
-      {"name": "Kingdom of Kalingga", "lang": "en", "context": "English academic designation"},
-      {"name": "Ho-ling", "lang": "zh", "context": "Chinese Tang Dynasty designation"},
-      {"name": "Kerajaan Kalingga", "lang": "id", "context": "Modern Indonesian designation"},
-      {"name": "She-po / Dvipantara", "lang": "zh", "context": "Alternative Chinese designation, possibly referring to broader Java"}
+      {
+        "name": "Kingdom of Kalingga",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Ho-ling",
+        "lang": "zh",
+        "context": "Chinese Tang Dynasty designation"
+      },
+      {
+        "name": "Kerajaan Kalingga",
+        "lang": "id",
+        "context": "Modern Indonesian designation"
+      },
+      {
+        "name": "She-po / Dvipantara",
+        "lang": "zh",
+        "context": "Alternative Chinese designation, possibly referring to broader Java"
+      }
     ],
     "territory_changes": [
       {
@@ -701,9 +1878,18 @@
       }
     ],
     "sources": [
-      {"citation": "Coedes, George. The Indianized States of Southeast Asia. Trans. Susan Brown Cowing. Honolulu: University of Hawaii Press, 1968", "source_type": "academic", "url": null},
-      {"citation": "Yijing (I-Tsing). A Record of the Buddhist Religion as Practised in India and the Malay Archipelago. Trans. Junjiro Takakusu. Oxford, 1896", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "Coedes, George. The Indianized States of Southeast Asia. Trans. Susan Brown Cowing. Honolulu: University of Hawaii Press, 1968",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Yijing (I-Tsing). A Record of the Buddhist Religion as Practised in India and the Malay Archipelago. Trans. Junjiro Takakusu. Oxford, 1896",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kutai Martadipura",
@@ -714,14 +1900,84 @@
     "capital_name": "Muara Kaman",
     "capital_lat": -0.34,
     "capital_lon": 116.56,
-    "boundary_geojson": null,
-    "confidence_score": 0.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            118.6839,
+            -0.34
+          ],
+          [
+            118.4118,
+            0.7392
+          ],
+          [
+            117.9149,
+            2.2738
+          ],
+          [
+            116.56,
+            1.8549
+          ],
+          [
+            114.8302,
+            2.5414
+          ],
+          [
+            114.0682,
+            1.4679
+          ],
+          [
+            113.6582,
+            -0.34
+          ],
+          [
+            113.4722,
+            -2.0892
+          ],
+          [
+            114.8872,
+            -3.5707
+          ],
+          [
+            116.56,
+            -2.4955
+          ],
+          [
+            117.8101,
+            -2.2109
+          ],
+          [
+            119.3349,
+            -1.9142
+          ],
+          [
+            118.6839,
+            -0.34
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "The Yupa inscriptions of Kutai (c. 4th-5th century CE) are the oldest known stone inscriptions in the Indonesian archipelago, making Kutai foundational to Indonesian historiography. The Hindu-Sanskrit inscriptions honoring King Mulavarman suggest early Indianization of Borneo. However, the relationship between the ancient Hindu Kutai Martadipura and the later Islamic Kutai Kartanegara sultanate involves a complex transition that is not fully understood. Dayak indigenous perspectives on the Hindu and Islamic states that dominated the Mahakam River basin are underrepresented in the historical record.",
     "name_variants": [
-      {"name": "Kingdom of Kutai", "lang": "en", "context": "English academic designation"},
-      {"name": "Kerajaan Kutai Martadipura", "lang": "id", "context": "Modern Indonesian: 'Martadipura' distinguishes from later Kutai Kartanegara"},
-      {"name": "K'un-tun / Kuntala", "lang": "zh", "context": "Possible Chinese identification (debated)"}
+      {
+        "name": "Kingdom of Kutai",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Kerajaan Kutai Martadipura",
+        "lang": "id",
+        "context": "Modern Indonesian: 'Martadipura' distinguishes from later Kutai Kartanegara"
+      },
+      {
+        "name": "K'un-tun / Kuntala",
+        "lang": "zh",
+        "context": "Possible Chinese identification (debated)"
+      }
     ],
     "territory_changes": [
       {
@@ -750,9 +2006,18 @@
       }
     ],
     "sources": [
-      {"citation": "Vogel, J.Ph. 'The Yupa Inscriptions of King Mulavarman from Koetei (East Borneo).' Bijdragen tot de Taal-, Land- en Volkenkunde, vol. 74, 1918", "source_type": "academic", "url": null},
-      {"citation": "Coedes, George. The Indianized States of Southeast Asia. Trans. Susan Brown Cowing. Honolulu: University of Hawaii Press, 1968", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Vogel, J.Ph. 'The Yupa Inscriptions of King Mulavarman from Koetei (East Borneo).' Bijdragen tot de Taal-, Land- en Volkenkunde, vol. 74, 1918",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Coedes, George. The Indianized States of Southeast Asia. Trans. Susan Brown Cowing. Honolulu: University of Hawaii Press, 1968",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Lingit Aani",
@@ -763,15 +2028,89 @@
     "capital_name": "Sitka",
     "capital_lat": 57.05,
     "capital_lon": -135.33,
-    "boundary_geojson": null,
-    "confidence_score": 0.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -130.0844,
+            57.05
+          ],
+          [
+            -126.7566,
+            59.3972
+          ],
+          [
+            -130.6177,
+            61.8946
+          ],
+          [
+            -135.33,
+            61.445
+          ],
+          [
+            -138.4724,
+            59.5613
+          ],
+          [
+            -141.7213,
+            58.718
+          ],
+          [
+            -141.2888,
+            57.05
+          ],
+          [
+            -140.9361,
+            55.2182
+          ],
+          [
+            -138.407,
+            53.8287
+          ],
+          [
+            -135.33,
+            52.6291
+          ],
+          [
+            -130.2913,
+            53.1218
+          ],
+          [
+            -127.4465,
+            54.3846
+          ],
+          [
+            -130.0844,
+            57.05
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "The Tlingit ('Lingit' in the indigenous language) maintained a sophisticated clan-based society with complex trade networks, monumental art, and potlatch ceremonies along the northwest coast. Russian colonization from the 1740s and the 1867 sale of Alaska to the United States were conducted without Tlingit consent or compensation. The Tlingit fought the Battle of Sitka (1804) against Russian colonists. The Alaska Native Claims Settlement Act (1971) was a partial resolution of land claims but was imposed on indigenous terms unfamiliar to Tlingit governance. Characterizing Tlingit polity as a single entity simplifies what was actually a complex system of autonomous kwaan (regional groups).",
     "name_variants": [
-      {"name": "Tlingit", "lang": "en", "context": "English anglicization of Lingit"},
-      {"name": "Lingit", "lang": "tli", "context": "Tlingit self-designation meaning 'human being' or 'people of the tides'"},
-      {"name": "Koloshi / Kolushes", "lang": "ru", "context": "Russian colonial-era designation"},
-      {"name": "Tlingit Nation", "lang": "en", "context": "Contemporary political designation"}
+      {
+        "name": "Tlingit",
+        "lang": "en",
+        "context": "English anglicization of Lingit"
+      },
+      {
+        "name": "Lingit",
+        "lang": "tli",
+        "context": "Tlingit self-designation meaning 'human being' or 'people of the tides'"
+      },
+      {
+        "name": "Koloshi / Kolushes",
+        "lang": "ru",
+        "context": "Russian colonial-era designation"
+      },
+      {
+        "name": "Tlingit Nation",
+        "lang": "en",
+        "context": "Contemporary political designation"
+      }
     ],
     "territory_changes": [
       {
@@ -800,10 +2139,23 @@
       }
     ],
     "sources": [
-      {"citation": "Emmons, George T. The Tlingit Indians. Edited by Frederica de Laguna. Seattle: University of Washington Press, 1991", "source_type": "academic", "url": null},
-      {"citation": "Dauenhauer, Nora Marks and Richard Dauenhauer. Haa Shuka, Our Ancestors: Tlingit Oral Narratives. Seattle: University of Washington Press, 1987", "source_type": "primary", "url": null},
-      {"citation": "Dean, Jonathan R. 'Rich Men, Big Powers and Wasteful Potlatch: Tlingit-European Trade and the Meaning of Wealth.' PhD diss., University of Chicago, 1993", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Emmons, George T. The Tlingit Indians. Edited by Frederica de Laguna. Seattle: University of Washington Press, 1991",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Dauenhauer, Nora Marks and Richard Dauenhauer. Haa Shuka, Our Ancestors: Tlingit Oral Narratives. Seattle: University of Washington Press, 1987",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Dean, Jonathan R. 'Rich Men, Big Powers and Wasteful Potlatch: Tlingit-European Trade and the Meaning of Wealth.' PhD diss., University of Chicago, 1993",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Theloal",
@@ -814,14 +2166,84 @@
     "capital_name": "Grand Village of the Natchez",
     "capital_lat": 31.56,
     "capital_lon": -91.39,
-    "boundary_geojson": null,
-    "confidence_score": 0.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -88.8246,
+            31.56
+          ],
+          [
+            -88.2026,
+            33.3991
+          ],
+          [
+            -89.8733,
+            34.1469
+          ],
+          [
+            -91.39,
+            33.8497
+          ],
+          [
+            -93.1691,
+            33.876
+          ],
+          [
+            -94.9338,
+            33.8264
+          ],
+          [
+            -96.4873,
+            31.56
+          ],
+          [
+            -94.9994,
+            29.6179
+          ],
+          [
+            -92.791,
+            29.4945
+          ],
+          [
+            -91.39,
+            29.1212
+          ],
+          [
+            -90.1459,
+            29.3375
+          ],
+          [
+            -87.7252,
+            29.5365
+          ],
+          [
+            -88.8246,
+            31.56
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "The Natchez are notable for their complex chiefdom with a hereditary 'Great Sun' ruler and rigid social hierarchy, unique among North American indigenous societies. French colonists documented Natchez society in detail but also systematically destroyed it. The Natchez Revolt of 1729 against French colonial exploitation was brutally suppressed, and survivors were sold into slavery in Saint-Domingue (Haiti). The near-total destruction of the Natchez people represents one of the lesser-known genocidal episodes in colonial North American history. Surviving Natchez descendants are enrolled primarily with the Cherokee and Muscogee (Creek) nations.",
     "name_variants": [
-      {"name": "Natchez", "lang": "en", "context": "English designation from French adaptation"},
-      {"name": "Theloal", "lang": "ncz", "context": "Possible Natchez self-designation (reconstructed)"},
-      {"name": "Natchez / Naktche", "lang": "fr", "context": "French colonial designation"}
+      {
+        "name": "Natchez",
+        "lang": "en",
+        "context": "English designation from French adaptation"
+      },
+      {
+        "name": "Theloal",
+        "lang": "ncz",
+        "context": "Possible Natchez self-designation (reconstructed)"
+      },
+      {
+        "name": "Natchez / Naktche",
+        "lang": "fr",
+        "context": "French colonial designation"
+      }
     ],
     "territory_changes": [
       {
@@ -850,9 +2272,18 @@
       }
     ],
     "sources": [
-      {"citation": "Le Page du Pratz, Antoine-Simon. Histoire de la Louisiane. Paris, 1758", "source_type": "primary", "url": null},
-      {"citation": "Barnett, James F. The Natchez Indians: A History to 1735. Jackson: University Press of Mississippi, 2007", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Le Page du Pratz, Antoine-Simon. Histoire de la Louisiane. Paris, 1758",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Barnett, James F. The Natchez Indians: A History to 1735. Jackson: University Press of Mississippi, 2007",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Niitsitapi",
@@ -863,15 +2294,89 @@
     "capital_name": "Head-Smashed-In Buffalo Jump",
     "capital_lat": 49.74,
     "capital_lon": -113.63,
-    "boundary_geojson": null,
-    "confidence_score": 0.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -106.0019,
+            49.74
+          ],
+          [
+            -108.838,
+            51.2119
+          ],
+          [
+            -109.2808,
+            53.8979
+          ],
+          [
+            -113.63,
+            54.7171
+          ],
+          [
+            -117.0307,
+            53.3819
+          ],
+          [
+            -121.0216,
+            52.3688
+          ],
+          [
+            -121.0974,
+            49.74
+          ],
+          [
+            -119.6769,
+            47.0813
+          ],
+          [
+            -116.0705,
+            47.2685
+          ],
+          [
+            -113.63,
+            45.6066
+          ],
+          [
+            -111.4885,
+            46.8399
+          ],
+          [
+            -108.7775,
+            48.0374
+          ],
+          [
+            -106.0019,
+            49.74
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "The Niitsitapi (Blackfoot Confederacy) comprised four allied nations: Siksika (Blackfoot proper), Kainai (Blood), Piikani (Peigan/Piegan), and later the Tsuu T'ina (Sarcee). They controlled an enormous territory on the Northern Plains. The introduction of horses (c. 1730) and firearms transformed Blackfoot society and warfare. Treaty 7 (1877) confined the Blackfoot to reservations under conditions of near-starvation after the deliberate destruction of the buffalo herds. The residential school system inflicted multi-generational trauma on Blackfoot communities. Describing a decentralized band society as a single 'confederation' with a 'capital' imposes European political categories; Head-Smashed-In is listed as a significant cultural site, not a capital in the European sense.",
     "name_variants": [
-      {"name": "Blackfoot Confederacy", "lang": "en", "context": "English academic designation"},
-      {"name": "Niitsitapi", "lang": "bla", "context": "Blackfoot self-designation meaning 'the Real People'"},
-      {"name": "Siksikawa", "lang": "bla", "context": "Blackfoot language name for the Blackfoot nation specifically"},
-      {"name": "Pieds-Noirs", "lang": "fr", "context": "French fur-trade era designation"}
+      {
+        "name": "Blackfoot Confederacy",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Niitsitapi",
+        "lang": "bla",
+        "context": "Blackfoot self-designation meaning 'the Real People'"
+      },
+      {
+        "name": "Siksikawa",
+        "lang": "bla",
+        "context": "Blackfoot language name for the Blackfoot nation specifically"
+      },
+      {
+        "name": "Pieds-Noirs",
+        "lang": "fr",
+        "context": "French fur-trade era designation"
+      }
     ],
     "territory_changes": [
       {
@@ -900,10 +2405,23 @@
       }
     ],
     "sources": [
-      {"citation": "Dempsey, Hugh A. Firewater: The Impact of the Whisky Trade on the Blackfoot Nation. Calgary: Fifth House, 2002", "source_type": "academic", "url": null},
-      {"citation": "Ewers, John C. The Blackfeet: Raiders on the Northwestern Plains. Norman: University of Oklahoma Press, 1958", "source_type": "academic", "url": null},
-      {"citation": "Treaty 7 Elders and Tribal Council. The True Spirit and Original Intent of Treaty 7. Montreal: McGill-Queen's University Press, 1996", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "Dempsey, Hugh A. Firewater: The Impact of the Whisky Trade on the Blackfoot Nation. Calgary: Fifth House, 2002",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Ewers, John C. The Blackfeet: Raiders on the Northwestern Plains. Norman: University of Oklahoma Press, 1958",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Treaty 7 Elders and Tribal Council. The True Spirit and Original Intent of Treaty 7. Montreal: McGill-Queen's University Press, 1996",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Nuuchahnulth",
@@ -914,15 +2432,89 @@
     "capital_name": "Yuquot (Friendly Cove)",
     "capital_lat": 49.59,
     "capital_lon": -126.61,
-    "boundary_geojson": null,
-    "confidence_score": 0.45,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -121.1141,
+            49.59
+          ],
+          [
+            -121.6813,
+            51.6051
+          ],
+          [
+            -124.0277,
+            52.1709
+          ],
+          [
+            -126.61,
+            52.7944
+          ],
+          [
+            -129.4034,
+            53.6699
+          ],
+          [
+            -131.8095,
+            51.2461
+          ],
+          [
+            -130.1684,
+            49.59
+          ],
+          [
+            -131.0427,
+            47.8471
+          ],
+          [
+            -129.9625,
+            46.3017
+          ],
+          [
+            -126.61,
+            46.0138
+          ],
+          [
+            -123.5328,
+            45.3437
+          ],
+          [
+            -122.2546,
+            48.2232
+          ],
+          [
+            -121.1141,
+            49.59
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.35,
     "status": "uncertain",
     "ethical_notes": "The Nuu-chah-nulth ('Nootka' in colonial terminology) peoples of Vancouver Island's west coast were skilled whalers and maritime traders. The name 'Nootka' is a colonial misnomer (possibly a directional term misunderstood by Captain Cook). 'Nuu-chah-nulth' ('all along the mountains and the sea') is the collective self-designation adopted in 1978. The Nootka Convention (1790) between Spain and Britain was negotiated over Nuu-chah-nulth territory without their participation, setting a precedent for European sovereignty claims over indigenous lands. Maquinna, chief of the Mowachaht, is a key historical figure whose diplomatic sophistication is often underestimated in colonial accounts.",
     "name_variants": [
-      {"name": "Nuu-chah-nulth", "lang": "en", "context": "Collective self-designation adopted 1978, meaning 'all along the mountains and the sea'"},
-      {"name": "Nootka", "lang": "en", "context": "Colonial misnomer from Captain Cook's 1778 contact; considered outdated and inaccurate"},
-      {"name": "Nuuchahnulth", "lang": "nuk", "context": "Indigenous language form without hyphens"},
-      {"name": "Aht", "lang": "nuk", "context": "Historical collective suffix meaning 'people of' used in many Nuu-chah-nulth group names"}
+      {
+        "name": "Nuu-chah-nulth",
+        "lang": "en",
+        "context": "Collective self-designation adopted 1978, meaning 'all along the mountains and the sea'"
+      },
+      {
+        "name": "Nootka",
+        "lang": "en",
+        "context": "Colonial misnomer from Captain Cook's 1778 contact; considered outdated and inaccurate"
+      },
+      {
+        "name": "Nuuchahnulth",
+        "lang": "nuk",
+        "context": "Indigenous language form without hyphens"
+      },
+      {
+        "name": "Aht",
+        "lang": "nuk",
+        "context": "Historical collective suffix meaning 'people of' used in many Nuu-chah-nulth group names"
+      }
     ],
     "territory_changes": [
       {
@@ -951,9 +2543,18 @@
       }
     ],
     "sources": [
-      {"citation": "Marshall, Yvonne. 'A Political History of the Nuu-chah-nulth People: A Case Study of the Mowachaht and Muchalaht Tribes.' PhD diss., Simon Fraser University, 1993", "source_type": "academic", "url": null},
-      {"citation": "Jewitt, John R. A Narrative of the Adventures and Sufferings of John R. Jewitt. Middletown, CT, 1815", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "Marshall, Yvonne. 'A Political History of the Nuu-chah-nulth People: A Case Study of the Mowachaht and Muchalaht Tribes.' PhD diss., Simon Fraser University, 1993",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Jewitt, John R. A Narrative of the Adventures and Sufferings of John R. Jewitt. Middletown, CT, 1815",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Haida Gwaii",
@@ -962,17 +2563,91 @@
     "year_start": 500,
     "year_end": 1876,
     "capital_name": "SG'ang Gwaay (Ninstints)",
-    "capital_lat": 52.10,
+    "capital_lat": 52.1,
     "capital_lon": -131.22,
-    "boundary_geojson": null,
-    "confidence_score": 0.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -124.2036,
+            52.1
+          ],
+          [
+            -126.0466,
+            53.6869
+          ],
+          [
+            -128.2586,
+            55.3781
+          ],
+          [
+            -131.22,
+            56.3262
+          ],
+          [
+            -134.5718,
+            55.5395
+          ],
+          [
+            -135.5268,
+            53.5787
+          ],
+          [
+            -135.9124,
+            52.1
+          ],
+          [
+            -135.8427,
+            50.7404
+          ],
+          [
+            -134.0021,
+            49.3664
+          ],
+          [
+            -131.22,
+            48.5506
+          ],
+          [
+            -127.9503,
+            49.0468
+          ],
+          [
+            -125.3969,
+            49.7042
+          ],
+          [
+            -124.2036,
+            52.1
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "The Haida people of Haida Gwaii (formerly Queen Charlotte Islands) are renowned for their monumental art, including totem poles and ocean-going canoes, and their complex matrilineal clan system. European contact brought devastating smallpox epidemics that reduced the population by an estimated 90%. The colonial renaming of Haida Gwaii as 'Queen Charlotte Islands' (1787) was reversed only in 2010 by the BC government, acknowledging Haida sovereignty claims. SG'ang Gwaay (Ninstints) is a UNESCO World Heritage Site. The Haida Nation has never signed a treaty and maintains an active sovereignty claim over Haida Gwaii. Describing Haida political organization as a single 'confederation' oversimplifies what was a system of autonomous villages under hereditary chiefs.",
     "name_variants": [
-      {"name": "Haida", "lang": "en", "context": "English designation from the Haida self-name"},
-      {"name": "Xaadaa", "lang": "hai", "context": "Haida self-designation meaning 'the people'"},
-      {"name": "Queen Charlotte Islands", "lang": "en", "context": "Colonial name (1787-2010), named after a British ship; no longer official"},
-      {"name": "Haida Gwaii", "lang": "hai", "context": "Haida name meaning 'Islands of the People'; restored as official name in 2010"}
+      {
+        "name": "Haida",
+        "lang": "en",
+        "context": "English designation from the Haida self-name"
+      },
+      {
+        "name": "Xaadaa",
+        "lang": "hai",
+        "context": "Haida self-designation meaning 'the people'"
+      },
+      {
+        "name": "Queen Charlotte Islands",
+        "lang": "en",
+        "context": "Colonial name (1787-2010), named after a British ship; no longer official"
+      },
+      {
+        "name": "Haida Gwaii",
+        "lang": "hai",
+        "context": "Haida name meaning 'Islands of the People'; restored as official name in 2010"
+      }
     ],
     "territory_changes": [
       {
@@ -1001,10 +2676,23 @@
       }
     ],
     "sources": [
-      {"citation": "MacDonald, George F. Haida Art. Seattle: University of Washington Press, 1996", "source_type": "academic", "url": null},
-      {"citation": "Stearns, Mary Lee. Haida Culture in Custody: The Masset Band. Seattle: University of Washington Press, 1981", "source_type": "academic", "url": null},
-      {"citation": "Swanton, John R. Contributions to the Ethnology of the Haida. Leiden: Brill, 1905", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "MacDonald, George F. Haida Art. Seattle: University of Washington Press, 1996",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Stearns, Mary Lee. Haida Culture in Custody: The Masset Band. Seattle: University of Washington Press, 1981",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Swanton, John R. Contributions to the Ethnology of the Haida. Leiden: Brill, 1905",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Hetmanshchyna",
@@ -1015,16 +2703,94 @@
     "capital_name": "Chyhyryn",
     "capital_lat": 49.08,
     "capital_lon": 32.66,
-    "boundary_geojson": null,
-    "confidence_score": 0.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            35.627,
+            49.08
+          ],
+          [
+            35.5682,
+            50.5172
+          ],
+          [
+            34.5968,
+            50.9639
+          ],
+          [
+            32.66,
+            51.1214
+          ],
+          [
+            30.7842,
+            51.5896
+          ],
+          [
+            29.8369,
+            50.1156
+          ],
+          [
+            28.9413,
+            49.08
+          ],
+          [
+            30.1282,
+            47.9773
+          ],
+          [
+            30.7917,
+            47.3205
+          ],
+          [
+            32.66,
+            47.0818
+          ],
+          [
+            34.7786,
+            46.9201
+          ],
+          [
+            36.7096,
+            47.7177
+          ],
+          [
+            35.627,
+            49.08
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "The Cossack Hetmanate (Hetmanshchyna) is a foundational entity in Ukrainian national identity, representing the first large-scale Ukrainian state. Russian imperial historiography consistently minimized or denied Ukrainian political distinctiveness, treating the Hetmanate as a Russian borderland rather than a sovereign polity. The Treaty of Pereyaslav (1654) between Hetman Bohdan Khmelnytsky and Tsar Alexis is interpreted diametrically: Ukrainian historiography views it as an alliance between equals, while Russian historiography treats it as voluntary reunification of 'Little Russia' with 'Great Russia.' This dispute has direct bearing on the contemporary Russo-Ukrainian conflict. The Khmelnytsky uprising also involved devastating pogroms against Jews (Khmelnytsky massacres, 1648-1649), one of the worst anti-Jewish atrocities before the Holocaust.",
     "name_variants": [
-      {"name": "Cossack Hetmanate", "lang": "en", "context": "English academic designation"},
-      {"name": "Гетьманщина", "lang": "uk", "context": "Ukrainian: Hetmanshchyna"},
-      {"name": "Hetmanat / Hetmanstvo", "lang": "uk", "context": "Alternative Ukrainian forms"},
-      {"name": "Malorossiya / Little Russia", "lang": "ru", "context": "Russian imperial designation; considered offensive in Ukrainian context as it denies Ukrainian distinct identity"},
-      {"name": "Wojsko Zaporoskie", "lang": "pl", "context": "Polish: 'Zaporozhian Host', the name used in the Treaty of Hadiach (1658)"}
+      {
+        "name": "Cossack Hetmanate",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Гетьманщина",
+        "lang": "uk",
+        "context": "Ukrainian: Hetmanshchyna"
+      },
+      {
+        "name": "Hetmanat / Hetmanstvo",
+        "lang": "uk",
+        "context": "Alternative Ukrainian forms"
+      },
+      {
+        "name": "Malorossiya / Little Russia",
+        "lang": "ru",
+        "context": "Russian imperial designation; considered offensive in Ukrainian context as it denies Ukrainian distinct identity"
+      },
+      {
+        "name": "Wojsko Zaporoskie",
+        "lang": "pl",
+        "context": "Polish: 'Zaporozhian Host', the name used in the Treaty of Hadiach (1658)"
+      }
     ],
     "territory_changes": [
       {
@@ -1053,10 +2819,23 @@
       }
     ],
     "sources": [
-      {"citation": "Plokhy, Serhii. The Cossacks and Religion in Early Modern Ukraine. Oxford: Oxford University Press, 2001", "source_type": "academic", "url": null},
-      {"citation": "The Litopys Samovidets (Eyewitness Chronicle). Ukrainian Cossack chronicle, late 17th century", "source_type": "primary", "url": null},
-      {"citation": "Kohut, Zenon E. Russian Centralism and Ukrainian Autonomy: Imperial Absorption of the Hetmanate, 1760s-1830s. Cambridge, MA: Harvard Ukrainian Research Institute, 1988", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Plokhy, Serhii. The Cossacks and Religion in Early Modern Ukraine. Oxford: Oxford University Press, 2001",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "The Litopys Samovidets (Eyewitness Chronicle). Ukrainian Cossack chronicle, late 17th century",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Kohut, Zenon E. Russian Centralism and Ukrainian Autonomy: Imperial Absorption of the Hetmanate, 1760s-1830s. Cambridge, MA: Harvard Ukrainian Research Institute, 1988",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Polatskaye Knyastva",
@@ -1066,16 +2845,90 @@
     "year_end": 1397,
     "capital_name": "Polotsk",
     "capital_lat": 55.49,
-    "capital_lon": 28.80,
-    "boundary_geojson": null,
-    "confidence_score": 0.6,
+    "capital_lon": 28.8,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            30.9321,
+            55.49
+          ],
+          [
+            29.8694,
+            55.8762
+          ],
+          [
+            29.5772,
+            56.2087
+          ],
+          [
+            28.8,
+            56.2185
+          ],
+          [
+            27.966,
+            56.2509
+          ],
+          [
+            27.6948,
+            55.8541
+          ],
+          [
+            27.0638,
+            55.49
+          ],
+          [
+            27.1941,
+            55.0469
+          ],
+          [
+            27.9631,
+            54.6394
+          ],
+          [
+            28.8,
+            54.391
+          ],
+          [
+            29.4243,
+            54.8167
+          ],
+          [
+            30.096,
+            54.9998
+          ],
+          [
+            30.9321,
+            55.49
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
     "status": "confirmed",
     "ethical_notes": "The Principality of Polotsk is foundational to Belarusian national identity, often cited as the first distinctly Belarusian state. Russian historiography traditionally treats Polotsk as a minor Rus' principality within the broader Russian historical narrative, while Belarusian historiography emphasizes its independence from Kyiv and distinctive character. Lithuanian historiography focuses on the incorporation of Polotsk into the Grand Duchy of Lithuania. This three-way historiographical contest directly mirrors contemporary geopolitical tensions regarding Belarusian sovereignty and identity.",
     "name_variants": [
-      {"name": "Principality of Polotsk", "lang": "en", "context": "English academic designation"},
-      {"name": "Полацкае княства", "lang": "be", "context": "Belarusian Cyrillic form"},
-      {"name": "Полоцкое княжество", "lang": "ru", "context": "Russian designation"},
-      {"name": "Polocko kunigaikstija", "lang": "lt", "context": "Lithuanian designation"}
+      {
+        "name": "Principality of Polotsk",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Полацкае княства",
+        "lang": "be",
+        "context": "Belarusian Cyrillic form"
+      },
+      {
+        "name": "Полоцкое княжество",
+        "lang": "ru",
+        "context": "Russian designation"
+      },
+      {
+        "name": "Polocko kunigaikstija",
+        "lang": "lt",
+        "context": "Lithuanian designation"
+      }
     ],
     "territory_changes": [
       {
@@ -1104,9 +2957,18 @@
       }
     ],
     "sources": [
-      {"citation": "Duk, Dzmitry. Polatsk i Polatskaya zyamlya u XII-XIII st. (Polotsk and the Polotsk Land in the 12th-13th Centuries). Navapolack, 2009", "source_type": "academic", "url": null},
-      {"citation": "Primary Chronicle (Povest' vremennykh let). Compiled by Nestor, c. 1113", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "Duk, Dzmitry. Polatsk i Polatskaya zyamlya u XII-XIII st. (Polotsk and the Polotsk Land in the 12th-13th Centuries). Navapolack, 2009",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Primary Chronicle (Povest' vremennykh let). Compiled by Nestor, c. 1113",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Markgrafschaft Maehren",
@@ -1117,15 +2979,89 @@
     "capital_name": "Bruenn (Brno)",
     "capital_lat": 49.19,
     "capital_lon": 16.61,
-    "boundary_geojson": null,
-    "confidence_score": 0.75,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            18.4564,
+            49.19
+          ],
+          [
+            18.1548,
+            49.6997
+          ],
+          [
+            17.3521,
+            50.0258
+          ],
+          [
+            16.61,
+            49.932
+          ],
+          [
+            15.9194,
+            49.9034
+          ],
+          [
+            15.4813,
+            49.6466
+          ],
+          [
+            15.4556,
+            49.19
+          ],
+          [
+            15.2515,
+            48.6943
+          ],
+          [
+            15.7581,
+            48.1914
+          ],
+          [
+            16.61,
+            48.1817
+          ],
+          [
+            17.2865,
+            48.2954
+          ],
+          [
+            17.8916,
+            48.7013
+          ],
+          [
+            18.4564,
+            49.19
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.65,
     "status": "confirmed",
     "ethical_notes": "The Margraviate of Moravia was a constituent land of the Bohemian Crown with its own diet and administration. Czech and German-speaking populations coexisted for centuries, with tensions escalating in the 19th century during national awakening movements. The post-1945 expulsion of approximately 2-3 million Sudeten Germans from Moravia and Bohemia remains a sensitive topic in Czech-German-Austrian relations. Czech historiography emphasizes Moravia's Slavic character and connection to the Great Moravian Empire, while German-Austrian historiography emphasizes centuries of German cultural presence. The Moravian regional identity (distinct from both Czech and Slovak) is an additional complicating factor.",
     "name_variants": [
-      {"name": "Margraviate of Moravia", "lang": "en", "context": "English academic designation"},
-      {"name": "Markrabstvi moravske", "lang": "cs", "context": "Czech designation"},
-      {"name": "Markgrafschaft Maehren", "lang": "de", "context": "German designation"},
-      {"name": "Marchionatus Moraviae", "lang": "la", "context": "Latin form in imperial documents"}
+      {
+        "name": "Margraviate of Moravia",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Markrabstvi moravske",
+        "lang": "cs",
+        "context": "Czech designation"
+      },
+      {
+        "name": "Markgrafschaft Maehren",
+        "lang": "de",
+        "context": "German designation"
+      },
+      {
+        "name": "Marchionatus Moraviae",
+        "lang": "la",
+        "context": "Latin form in imperial documents"
+      }
     ],
     "territory_changes": [
       {
@@ -1154,9 +3090,18 @@
       }
     ],
     "sources": [
-      {"citation": "Wihoda, Martin. Morava v dobe knizeci, 906-1197. Prague: Nakladatelstvi Lidove Noviny, 2010", "source_type": "academic", "url": null},
-      {"citation": "Panek, Jaroslav and Oldrich Tuma (eds.). A History of the Czech Lands. Prague: Karolinum Press, 2009", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Wihoda, Martin. Morava v dobe knizeci, 906-1197. Prague: Nakladatelstvi Lidove Noviny, 2010",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Panek, Jaroslav and Oldrich Tuma (eds.). A History of the Czech Lands. Prague: Karolinum Press, 2009",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Herzogtum Pommern",
@@ -1167,15 +3112,89 @@
     "capital_name": "Stettin (Szczecin)",
     "capital_lat": 53.43,
     "capital_lon": 14.55,
-    "boundary_geojson": null,
-    "confidence_score": 0.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            16.3208,
+            53.43
+          ],
+          [
+            16.091,
+            54.0591
+          ],
+          [
+            15.4222,
+            54.2343
+          ],
+          [
+            14.55,
+            54.2474
+          ],
+          [
+            13.9437,
+            54.0142
+          ],
+          [
+            13.166,
+            53.8555
+          ],
+          [
+            12.6043,
+            53.43
+          ],
+          [
+            12.6604,
+            52.8173
+          ],
+          [
+            13.7214,
+            52.4628
+          ],
+          [
+            14.55,
+            52.3469
+          ],
+          [
+            15.5752,
+            52.3854
+          ],
+          [
+            15.6326,
+            53.0702
+          ],
+          [
+            16.3208,
+            53.43
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "The Duchy of Pomerania exemplifies the complex Slavic-Germanic cultural frontier. The original Slavic Pomeranian population was gradually Germanized through Ostsiedlung (German eastward settlement) from the 12th century. Polish historiography emphasizes the Slavic (Pomeranian) character of the region, while German historiography emphasizes centuries of German rule and culture. The post-1945 expulsion of the German population and the territory's transfer to Poland reversed 800 years of German settlement. The name 'Pomerania' itself derives from Slavic 'po more' (by the sea), reflecting its original Slavic character.",
     "name_variants": [
-      {"name": "Duchy of Pomerania", "lang": "en", "context": "English academic designation"},
-      {"name": "Ksiestwo Pomorskie", "lang": "pl", "context": "Polish designation using Slavic form"},
-      {"name": "Herzogtum Pommern", "lang": "de", "context": "German designation"},
-      {"name": "Ducatus Pomeraniae", "lang": "la", "context": "Latin form in imperial and papal documents"}
+      {
+        "name": "Duchy of Pomerania",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Ksiestwo Pomorskie",
+        "lang": "pl",
+        "context": "Polish designation using Slavic form"
+      },
+      {
+        "name": "Herzogtum Pommern",
+        "lang": "de",
+        "context": "German designation"
+      },
+      {
+        "name": "Ducatus Pomeraniae",
+        "lang": "la",
+        "context": "Latin form in imperial and papal documents"
+      }
     ],
     "territory_changes": [
       {
@@ -1204,9 +3223,18 @@
       }
     ],
     "sources": [
-      {"citation": "Buchholz, Werner (ed.). Pommern: Deutsche Geschichte im Osten Europas. Berlin: Siedler, 1999", "source_type": "academic", "url": null},
-      {"citation": "Kantzow, Thomas. Pomerania: A Chronicle of the Pomeranian Duchy. c. 1540", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "Buchholz, Werner (ed.). Pommern: Deutsche Geschichte im Osten Europas. Berlin: Siedler, 1999",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Kantzow, Thomas. Pomerania: A Chronicle of the Pomeranian Duchy. c. 1540",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Chinook Illahee",
@@ -1217,15 +3245,89 @@
     "capital_name": "Station Camp (Chinook village)",
     "capital_lat": 46.26,
     "capital_lon": -123.93,
-    "boundary_geojson": null,
-    "confidence_score": 0.45,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -118.7858,
+            46.26
+          ],
+          [
+            -119.6461,
+            48.4508
+          ],
+          [
+            -120.5312,
+            49.7304
+          ],
+          [
+            -123.93,
+            49.705
+          ],
+          [
+            -127.031,
+            49.54
+          ],
+          [
+            -128.7937,
+            48.6277
+          ],
+          [
+            -128.1671,
+            46.26
+          ],
+          [
+            -129.1139,
+            44.4985
+          ],
+          [
+            -126.4571,
+            43.2725
+          ],
+          [
+            -123.93,
+            42.3834
+          ],
+          [
+            -121.3969,
+            43.3691
+          ],
+          [
+            -118.0031,
+            44.3643
+          ],
+          [
+            -118.7858,
+            46.26
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.35,
     "status": "uncertain",
     "ethical_notes": "The Chinook peoples controlled the lower Columbia River and its mouth, occupying one of the richest salmon fishery environments in North America. The Chinook Jargon (a trade pidgin language) became the lingua franca of the Pacific Northwest, demonstrating Chinook economic dominance. European-introduced diseases devastated the Chinook population by over 90% in the early 19th century. Remarkably, the Chinook Indian Nation (as distinct from the Confederated Tribes of Grand Ronde and Shoalwater Bay Tribe) has repeatedly been denied federal recognition by the US government despite extensive documentation of their historical sovereignty. The term 'Chinook' is an outsiders' name; individual groups had their own names (Shoalwater, Clatsop, Kathlamet, Wahkiakum, Willapa).",
     "name_variants": [
-      {"name": "Chinook", "lang": "en", "context": "English designation from neighboring Chehalis word for the people"},
-      {"name": "Chinook Illahee", "lang": "chn", "context": "Chinook Jargon: 'Chinook homeland'"},
-      {"name": "Tshinuk", "lang": "chh", "context": "Chinook proper name (approximated, as the language is nearly extinct)"},
-      {"name": "Lower Chinook", "lang": "en", "context": "Distinguishes from Upper Chinookan-speaking peoples further upriver"}
+      {
+        "name": "Chinook",
+        "lang": "en",
+        "context": "English designation from neighboring Chehalis word for the people"
+      },
+      {
+        "name": "Chinook Illahee",
+        "lang": "chn",
+        "context": "Chinook Jargon: 'Chinook homeland'"
+      },
+      {
+        "name": "Tshinuk",
+        "lang": "chh",
+        "context": "Chinook proper name (approximated, as the language is nearly extinct)"
+      },
+      {
+        "name": "Lower Chinook",
+        "lang": "en",
+        "context": "Distinguishes from Upper Chinookan-speaking peoples further upriver"
+      }
     ],
     "territory_changes": [
       {
@@ -1254,9 +3356,22 @@
       }
     ],
     "sources": [
-      {"citation": "Boyd, Robert. The Coming of the Spirit of Pestilence: Introduced Infectious Diseases and Population Decline among Northwest Coast Indians, 1774-1874. Seattle: University of Washington Press, 1999", "source_type": "academic", "url": null},
-      {"citation": "Lewis, Meriwether and William Clark. The Journals of Lewis and Clark Expedition. 1805-1806", "source_type": "primary", "url": null},
-      {"citation": "Silverstein, Michael. 'Chinookans of the Lower Columbia.' In Handbook of North American Indians, vol. 7. Washington: Smithsonian, 1990", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Boyd, Robert. The Coming of the Spirit of Pestilence: Introduced Infectious Diseases and Population Decline among Northwest Coast Indians, 1774-1874. Seattle: University of Washington Press, 1999",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Lewis, Meriwether and William Clark. The Journals of Lewis and Clark Expedition. 1805-1806",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Silverstein, Michael. 'Chinookans of the Lower Columbia.' In Handbook of North American Indians, vol. 7. Washington: Smithsonian, 1990",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated"
   }
 ]

@@ -8,9 +8,67 @@
     "capital_name": "Naoned",
     "capital_lat": 47.2184,
     "capital_lon": -1.5536,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -0.5286,
+            47.2184
+          ],
+          [
+            -0.4179,
+            47.6797
+          ],
+          [
+            -1.0553,
+            47.8896
+          ],
+          [
+            -1.5536,
+            48.2013
+          ],
+          [
+            -1.9996,
+            47.8175
+          ],
+          [
+            -2.9164,
+            47.6939
+          ],
+          [
+            -2.524,
+            47.2184
+          ],
+          [
+            -2.3721,
+            46.8982
+          ],
+          [
+            -1.9952,
+            46.7305
+          ],
+          [
+            -1.5536,
+            46.0943
+          ],
+          [
+            -0.8509,
+            46.5654
+          ],
+          [
+            -0.3413,
+            46.7175
+          ],
+          [
+            -0.5286,
+            47.2184
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Breton (Brezhoneg), the indigenous Celtic language of Brittany, rather than French. The French name 'Duche de Bretagne' reflects the political dominance of French culture that ultimately absorbed the duchy. ETHICS-002: The absorption of Brittany into France (1532 Edict of Union, fully effective by 1547) began a long process of cultural suppression of the Breton language and identity. The French state systematically discouraged and later actively repressed Breton language use, particularly from the 19th century onward. This cultural erasure is ongoing and contested.",
     "name_variants": [
       {
@@ -80,7 +138,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Comune di Pisa",
@@ -91,9 +150,67 @@
     "capital_name": "Pisa",
     "capital_lat": 43.7228,
     "capital_lon": 10.4017,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            13.8143,
+            43.7228
+          ],
+          [
+            12.4936,
+            44.6256
+          ],
+          [
+            11.9735,
+            45.5573
+          ],
+          [
+            10.4017,
+            45.4355
+          ],
+          [
+            8.6681,
+            45.5983
+          ],
+          [
+            8.1898,
+            44.5326
+          ],
+          [
+            7.114,
+            43.7228
+          ],
+          [
+            8.3065,
+            42.9136
+          ],
+          [
+            8.7778,
+            41.839
+          ],
+          [
+            10.4017,
+            42.3129
+          ],
+          [
+            11.6737,
+            42.241
+          ],
+          [
+            12.2488,
+            42.7732
+          ],
+          [
+            13.8143,
+            43.7228
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Italian; the commune used both 'Comune' and 'Respublica Pisana' in Latin documents. ETHICS-002: Pisa was a major maritime republic whose wealth was built substantially on Mediterranean trade, including the slave trade. Pisan merchants traded in enslaved people across the Mediterranean. The Pisan conquest of the Balearic Islands (1113-1115) and campaigns in North Africa involved violence against Muslim populations. ETHICS-003: The year 1000 is approximate for the emergence of communal self-government; the process was gradual.",
     "name_variants": [
       {
@@ -158,7 +275,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Mark Brandenburg",
@@ -169,9 +287,67 @@
     "capital_name": "Brandenburg an der Havel",
     "capital_lat": 52.4125,
     "capital_lon": 12.5316,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            13.9086,
+            52.4125
+          ],
+          [
+            14.0765,
+            52.9824
+          ],
+          [
+            13.3405,
+            53.2075
+          ],
+          [
+            12.5316,
+            53.3212
+          ],
+          [
+            11.5828,
+            53.3173
+          ],
+          [
+            10.7993,
+            53.0224
+          ],
+          [
+            11.1221,
+            52.4125
+          ],
+          [
+            11.1799,
+            51.9711
+          ],
+          [
+            11.8332,
+            51.5217
+          ],
+          [
+            12.5316,
+            51.5412
+          ],
+          [
+            13.449,
+            51.4258
+          ],
+          [
+            13.6526,
+            52.0585
+          ],
+          [
+            13.9086,
+            52.4125
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in German, the language of the ruling class. The Slavic population of the region (Wends/Sorbs) called it differently. ETHICS-002: The March of Brandenburg was created through the violent German eastward expansion (Ostsiedlung/Drang nach Osten) that dispossessed and assimilated Slavic populations (Wends, Sorbs, Hevelli). Albert the Bear's conquest (1157) and subsequent colonization systematically replaced Slavic place names, institutions, and populations with German ones. This constitutes cultural genocide of the Polabian Slavic peoples. The indigenous Slavic population was either assimilated, marginalized, or driven out. ETHICS-003: entity_type is 'principality' as 'march/margraviate' is not in the schema but the March was technically a frontier territory.",
     "name_variants": [
       {
@@ -236,7 +412,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Herzogtum Sachsen",
@@ -247,9 +424,67 @@
     "capital_name": "Magdeburg",
     "capital_lat": 52.1205,
     "capital_lon": 11.6276,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            13.4908,
+            52.1205
+          ],
+          [
+            12.7909,
+            52.5446
+          ],
+          [
+            12.3699,
+            52.7202
+          ],
+          [
+            11.6276,
+            52.9079
+          ],
+          [
+            10.7984,
+            53.0009
+          ],
+          [
+            9.7267,
+            52.8738
+          ],
+          [
+            9.6696,
+            52.1205
+          ],
+          [
+            10.5402,
+            51.7558
+          ],
+          [
+            10.6211,
+            51.14
+          ],
+          [
+            11.6276,
+            51.0017
+          ],
+          [
+            12.2986,
+            51.368
+          ],
+          [
+            12.7001,
+            51.6826
+          ],
+          [
+            13.4908,
+            52.1205
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in German (Middle High German period). ETHICS-002: The Duchy of Saxony originated from the Carolingian conquest and forced Christianization of the Saxons (772-804), one of the most brutal campaigns of the early medieval period. The Massacre of Verden (782), where Charlemagne allegedly ordered the execution of 4,500 Saxon prisoners, constitutes an act of mass violence, though the historical reliability of the number is debated. Subsequent Saxon expansion eastward involved the conquest and forcible Christianization of Slavic peoples (Wends, Obodrites, Sorbs). ETHICS-003: The 'Duchy of Saxony' refers to a shifting geographic and political concept; the duchy fragmented repeatedly and the name 'Saxony' eventually migrated eastward. The dates 804-1296 cover the stem duchy period.",
     "name_variants": [
       {
@@ -306,7 +541,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Herzogtum Baiern",
@@ -317,9 +553,67 @@
     "capital_name": "Regensburg",
     "capital_lat": 49.0134,
     "capital_lon": 12.1016,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            13.359,
+            49.0134
+          ],
+          [
+            13.506,
+            49.5707
+          ],
+          [
+            12.8282,
+            50.0135
+          ],
+          [
+            12.1016,
+            49.8039
+          ],
+          [
+            11.3991,
+            49.6909
+          ],
+          [
+            10.8158,
+            49.4032
+          ],
+          [
+            10.6678,
+            49.0134
+          ],
+          [
+            10.4862,
+            48.4726
+          ],
+          [
+            11.5391,
+            48.3699
+          ],
+          [
+            12.1016,
+            48.2473
+          ],
+          [
+            12.7338,
+            48.2372
+          ],
+          [
+            13.3428,
+            48.5328
+          ],
+          [
+            13.359,
+            49.0134
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Middle High German form 'Baiern', preserving the historical spelling. The capital shifted from Regensburg to Munich (Munchen) in 1255 under the Wittelsbachs. ETHICS-002: Bavarian expansion involved the subjugation of Slavic populations in the eastern Alps and along the Danube. The Bavarian church played a major role in the forced Christianization of neighboring peoples, including Avars and Slavs in the Danube basin.",
     "name_variants": [
       {
@@ -384,7 +678,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Regnum Neapolitanum",
@@ -395,9 +690,67 @@
     "capital_name": "Napoli",
     "capital_lat": 40.8518,
     "capital_lon": 14.2681,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            19.4307,
+            40.8518
+          ],
+          [
+            18.638,
+            43.0472
+          ],
+          [
+            17.4729,
+            44.5561
+          ],
+          [
+            14.2681,
+            43.8947
+          ],
+          [
+            12.0739,
+            43.6794
+          ],
+          [
+            9.3898,
+            42.9524
+          ],
+          [
+            10.1936,
+            40.8518
+          ],
+          [
+            9.2997,
+            38.8899
+          ],
+          [
+            12.1304,
+            38.659
+          ],
+          [
+            14.2681,
+            37.6993
+          ],
+          [
+            16.6659,
+            37.9311
+          ],
+          [
+            16.8611,
+            39.5982
+          ],
+          [
+            19.4307,
+            40.8518
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Latin, the administrative language of the Angevin court. The kingdom was colloquially known in Italian as 'Regno di Napoli'. ETHICS-002: The Kingdom of Naples was characterized by extreme feudal inequality. The latifondo system concentrated vast estates in the hands of a small aristocratic elite while the peasantry lived in conditions of near-serfdom. Foreign domination (Angevin, Aragonese, Spanish, Austrian) extracted wealth from southern Italy for centuries, contributing to the economic underdevelopment that persists as the 'Southern Question' (Questione meridionale) in modern Italy. ETHICS-003: The kingdom is distinct from the earlier Norman Kingdom of Sicily (1130-1282), which included both the island of Sicily and the mainland. After the War of the Vespers (1282), the mainland portion became the Kingdom of Naples under the Angevins.",
     "name_variants": [
       {
@@ -467,7 +820,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Regno delle Due Sicilie",
@@ -478,9 +832,67 @@
     "capital_name": "Napoli",
     "capital_lat": 40.8518,
     "capital_lon": 14.2681,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            19.2618,
+            40.8518
+          ],
+          [
+            17.6359,
+            42.5434
+          ],
+          [
+            16.2825,
+            43.8607
+          ],
+          [
+            14.2681,
+            43.7129
+          ],
+          [
+            12.0858,
+            44.038
+          ],
+          [
+            10.2467,
+            42.7327
+          ],
+          [
+            10.4412,
+            40.8518
+          ],
+          [
+            8.7842,
+            38.4755
+          ],
+          [
+            11.2077,
+            36.4158
+          ],
+          [
+            14.2681,
+            37.0945
+          ],
+          [
+            15.9278,
+            38.3267
+          ],
+          [
+            17.7435,
+            39.5679
+          ],
+          [
+            19.2618,
+            40.8518
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Italian, the official language of the restored Bourbon state. ETHICS-002: The conquest of the Two Sicilies by Garibaldi (1860) and its incorporation into the Kingdom of Italy is celebrated in Italian nationalist historiography as 'liberation' but experienced by many southern Italians as a northern conquest. The subsequent decade of the Brigands' War (1861-1870) saw Italian state repression of southern resistance that killed tens of thousands, including civilians, and involved mass executions, internment camps, and destruction of villages. Southern Italian ('neo-Bourbon') historiography views the unification as a colonial conquest that stripped the south of its industry and institutions. This perspective has gained increasing academic legitimacy. ETHICS-003: The Kingdom of the Two Sicilies was more industrialized than often portrayed in pro-unification narratives; it had Italy's first railway, first iron bridge, and largest merchant fleet.",
     "name_variants": [
       {
@@ -542,7 +954,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Duche de Savoie",
@@ -553,9 +966,67 @@
     "capital_name": "Chambery",
     "capital_lat": 45.5646,
     "capital_lon": 5.9178,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            7.4293,
+            45.5646
+          ],
+          [
+            6.7595,
+            45.9454
+          ],
+          [
+            6.5402,
+            46.3129
+          ],
+          [
+            5.9178,
+            46.3067
+          ],
+          [
+            5.4779,
+            46.1543
+          ],
+          [
+            5.0091,
+            45.9916
+          ],
+          [
+            4.7333,
+            45.5646
+          ],
+          [
+            4.9971,
+            45.1986
+          ],
+          [
+            5.1649,
+            44.6368
+          ],
+          [
+            5.9178,
+            44.4572
+          ],
+          [
+            6.6136,
+            44.705
+          ],
+          [
+            7.0262,
+            45.101
+          ],
+          [
+            7.4293,
+            45.5646
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in French, the dominant court language. Savoyard (Arpitan/Franco-Provencal) was the language of much of the population; Italian was used in the Piedmontese territories. The multilingual nature of the state is often obscured in both French and Italian national historiographies. ETHICS-002: The Duchy of Savoy occupied a strategic position across the Alps, controlling key passes. Its rulers practiced opportunistic shifting between French and Imperial/Spanish alliances, a pragmatism that often came at the cost of their subjects' lives in recurring wars. The capital moved from Chambery to Turin in 1563, marking the dynasty's pivot toward Italy and the eventual abandonment of the Francophone Savoyard heartland. ETHICS-003: The date 1003 marks the emergence of the County/Duchy under Humbert I Whitehands; the elevation to duchy came in 1416.",
     "name_variants": [
       {
@@ -620,7 +1091,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Herzogtum Kurland und Semgallen",
@@ -631,9 +1103,67 @@
     "capital_name": "Mitau",
     "capital_lat": 56.6511,
     "capital_lon": 23.7239,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            25.9912,
+            56.6511
+          ],
+          [
+            25.4639,
+            57.1579
+          ],
+          [
+            25.0886,
+            57.9632
+          ],
+          [
+            23.7239,
+            57.695
+          ],
+          [
+            23.0407,
+            57.3687
+          ],
+          [
+            21.6826,
+            57.2602
+          ],
+          [
+            21.8268,
+            56.6511
+          ],
+          [
+            22.4532,
+            56.2639
+          ],
+          [
+            22.6573,
+            55.5836
+          ],
+          [
+            23.7239,
+            55.8561
+          ],
+          [
+            24.4365,
+            55.8185
+          ],
+          [
+            25.3518,
+            56.0525
+          ],
+          [
+            25.9912,
+            56.6511
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in German, the language of the ruling Baltic German elite. The indigenous Latvian (Latgalian, Semigallian, Curonian) population spoke Baltic languages and had no representation in the duchy's governance. The modern Latvian name is 'Kurzemes un Zemgales hercogiste.' ETHICS-002: The Duchy of Courland exemplified the colonial relationship between the Baltic German nobility (Ritterschaft) and the indigenous Latvian peasant population, who were enserfed and denied civic rights. The duchy even established overseas colonies (Tobago, 1654; Gambia, 1651), making it one of the smallest European states to engage in transatlantic colonialism and the slave trade. Duke Jacob Kettler's colonial ventures involved the exploitation of enslaved African and indigenous Caribbean peoples. ETHICS-003: The German name reflects the political reality but obscures the Latvian character of the majority population.",
     "name_variants": [
       {
@@ -698,7 +1228,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Principatus Transsilvaniae",
@@ -709,9 +1240,67 @@
     "capital_name": "Gyulafehervar",
     "capital_lat": 46.0667,
     "capital_lon": 23.5833,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            25.2286,
+            46.0667
+          ],
+          [
+            24.9448,
+            46.624
+          ],
+          [
+            24.5708,
+            47.0892
+          ],
+          [
+            23.5833,
+            46.9658
+          ],
+          [
+            23.0072,
+            46.8806
+          ],
+          [
+            22.0776,
+            46.7566
+          ],
+          [
+            21.8448,
+            46.0667
+          ],
+          [
+            22.3425,
+            45.576
+          ],
+          [
+            22.9464,
+            45.1927
+          ],
+          [
+            23.5833,
+            44.6826
+          ],
+          [
+            24.5603,
+            44.9278
+          ],
+          [
+            25.2375,
+            45.3959
+          ],
+          [
+            25.2286,
+            46.0667
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Latin, the administrative language shared by the multiethnic elite. The principality's name and history are deeply contested among Romanian, Hungarian, and German (Saxon) historiographies. Romanian historiography emphasizes the continuous Romanian presence; Hungarian historiography emphasizes the Hungarian political structures; Saxon historiography emphasizes German urban culture. ETHICS-002: Transylvania's three 'recognized nations' (Unio Trium Nationum of 1437: Hungarian nobles, Szekely, Saxons) deliberately excluded the Romanian majority from political rights for centuries. The Romanians, despite being the largest ethnic group, were systematically denied representation, land rights, and religious equality. This constitutes institutionalized ethnic discrimination over hundreds of years. ETHICS-003: The principality was notable for the Edict of Torda (1568), one of the earliest European declarations of religious tolerance, covering Catholicism, Lutheranism, Calvinism, and Unitarianism -- but explicitly not Eastern Orthodoxy, the religion of the Romanian majority.",
     "name_variants": [
       {
@@ -781,7 +1370,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Comtat de Barcelona / Principat de Catalunya",
@@ -792,9 +1382,67 @@
     "capital_name": "Barcelona",
     "capital_lat": 41.3874,
     "capital_lon": 2.1686,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            3.1879,
+            41.3874
+          ],
+          [
+            3.3749,
+            41.9592
+          ],
+          [
+            2.949,
+            42.412
+          ],
+          [
+            2.1686,
+            42.1832
+          ],
+          [
+            1.5908,
+            42.1278
+          ],
+          [
+            1.158,
+            41.8366
+          ],
+          [
+            0.6938,
+            41.3874
+          ],
+          [
+            0.8777,
+            40.8197
+          ],
+          [
+            1.4598,
+            40.3173
+          ],
+          [
+            2.1686,
+            40.4202
+          ],
+          [
+            2.9689,
+            40.5631
+          ],
+          [
+            2.9046,
+            41.0991
+          ],
+          [
+            3.1879,
+            41.3874
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Catalan, the indigenous language. The dual name reflects the evolution from the County of Barcelona (987-1162) to the Principality of Catalonia within the Crown of Aragon (1162-1714). ETHICS-002: The suppression of Catalan institutions after the War of the Spanish Succession (1714) is viewed in Catalonia as a national catastrophe and forms the historical foundation of modern Catalan nationalism and independence movements. The Nueva Planta decrees abolished the Catalan Generalitat, Corts, and legal system, imposing Castilian law and administration. Catalan language was progressively excluded from official use. This constitutes the destruction of a distinct political and cultural identity by military conquest. ETHICS-003: Spanish unionist historiography views 1714 as the necessary consolidation of a unified Spain; Catalan historiography views it as conquest and occupation. Both perspectives are documented here. ETHICS-004: The date 987 marks Borrell II's refusal to renew fealty to the Capetian dynasty, establishing de facto Catalan independence from the Frankish crown.",
     "name_variants": [
       {
@@ -864,7 +1512,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Markgrafschaft Meissen",
@@ -875,9 +1524,67 @@
     "capital_name": "Meissen",
     "capital_lat": 51.1634,
     "capital_lon": 13.4739,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            14.9381,
+            51.1634
+          ],
+          [
+            14.2745,
+            51.4297
+          ],
+          [
+            14.0544,
+            51.7963
+          ],
+          [
+            13.4739,
+            52.1277
+          ],
+          [
+            12.826,
+            52.0637
+          ],
+          [
+            12.3782,
+            51.6133
+          ],
+          [
+            12.4413,
+            51.1634
+          ],
+          [
+            12.2048,
+            50.7036
+          ],
+          [
+            12.8336,
+            50.5085
+          ],
+          [
+            13.4739,
+            50.2933
+          ],
+          [
+            13.9622,
+            50.643
+          ],
+          [
+            14.7923,
+            50.6446
+          ],
+          [
+            14.9381,
+            51.1634
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in German, the language of the conquering elite. The region was originally Slavic (Sorbian) territory. ETHICS-002: The March of Meissen was created through the German conquest and colonization of Sorbian lands. King Henry I established the fortress of Meissen in 929 as a base for subjugating the Glomaci and Daleminzi Slavic peoples. The subsequent Ostsiedlung brought German settlers who displaced and assimilated the indigenous Slavic population. This process constitutes cultural genocide of the Daleminzi and other Sorbian groups in the region. ETHICS-003: entity_type is 'principality' as 'march/margraviate' is not in the schema.",
     "name_variants": [
       {
@@ -934,7 +1641,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Landgrafschaft Hessen",
@@ -945,9 +1653,67 @@
     "capital_name": "Kassel",
     "capital_lat": 51.3127,
     "capital_lon": 9.4797,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            11.2838,
+            51.3127
+          ],
+          [
+            10.9538,
+            51.7504
+          ],
+          [
+            10.1887,
+            51.9741
+          ],
+          [
+            9.4797,
+            52.7215
+          ],
+          [
+            8.8772,
+            51.912
+          ],
+          [
+            8.2958,
+            51.7309
+          ],
+          [
+            8.4311,
+            51.3127
+          ],
+          [
+            8.5396,
+            51.0033
+          ],
+          [
+            8.9463,
+            50.6787
+          ],
+          [
+            9.4797,
+            50.2354
+          ],
+          [
+            10.2563,
+            50.5642
+          ],
+          [
+            10.5502,
+            50.9541
+          ],
+          [
+            11.2838,
+            51.3127
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in German. The landgraviate was one of the most important princely territories in central Germany. ETHICS-002: Landgrave Philip I ('the Magnanimous') was a key figure in the Protestant Reformation, co-founding the Schmalkaldic League. His territory became a center of religious reform but also of the violent suppression of Anabaptists and other radical reformers. The landgraviate's role in the Peasants' War (1524-1525) saw the violent repression of peasant uprisings.",
     "name_variants": [
       {
@@ -996,7 +1762,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Furstentum Walachei",
@@ -1007,9 +1774,67 @@
     "capital_name": "Curtea de Arges",
     "capital_lat": 45.1375,
     "capital_lon": 24.6742,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "disputed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            25.9393,
+            45.1375
+          ],
+          [
+            25.4655,
+            45.5016
+          ],
+          [
+            25.5112,
+            45.9511
+          ],
+          [
+            24.6742,
+            46.0214
+          ],
+          [
+            24.0504,
+            45.8358
+          ],
+          [
+            23.725,
+            45.5261
+          ],
+          [
+            23.3737,
+            45.1375
+          ],
+          [
+            23.8506,
+            44.7231
+          ],
+          [
+            24.0144,
+            44.3636
+          ],
+          [
+            24.6742,
+            44.1901
+          ],
+          [
+            25.1956,
+            44.4202
+          ],
+          [
+            25.462,
+            44.8152
+          ],
+          [
+            25.9393,
+            45.1375
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The early Wallachian voivodates before the Battle of Posada (1330) are poorly documented and historiographically contested. Romanian national historiography emphasizes continuity with Daco-Roman populations; Hungarian historiography emphasizes Hungarian suzerainty over the region. The status 'disputed' reflects genuine scholarly uncertainty. ETHICS-002: The name_original is given in the German form used in contemporary Hungarian royal documents, since the earliest references to organized Wallachian polities come from Hungarian chancery documents (Diploma of the Joannites, 1247). The Romanian self-designation 'Tara Romaneasca' (Romanian Land) reflects the population's own identity but appears in documents only from the 14th century onward. ETHICS-003: This entry covers the proto-state period (1247-1330) before the established Principality of Wallachia (already in the database starting 1330). The dates and political structure of this period are genuinely uncertain.",
     "name_variants": [
       {
@@ -1058,7 +1883,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kurfurstentum Sachsen",
@@ -1069,9 +1895,67 @@
     "capital_name": "Wittenberg",
     "capital_lat": 51.8661,
     "capital_lon": 12.6422,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            14.784,
+            51.8661
+          ],
+          [
+            14.4088,
+            52.443
+          ],
+          [
+            13.4819,
+            52.7388
+          ],
+          [
+            12.6422,
+            53.0936
+          ],
+          [
+            11.5587,
+            52.9971
+          ],
+          [
+            11.1727,
+            52.3448
+          ],
+          [
+            11.3133,
+            51.8661
+          ],
+          [
+            11.2791,
+            51.2962
+          ],
+          [
+            11.7494,
+            50.8953
+          ],
+          [
+            12.6422,
+            50.6144
+          ],
+          [
+            13.4893,
+            50.877
+          ],
+          [
+            14.2021,
+            51.4275
+          ],
+          [
+            14.784,
+            51.8661
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in German. Note that the Electorate of Saxony is geographically distinct from the medieval Duchy of Saxony (also in this database); the name 'Saxony' migrated eastward through dynastic transfers. ETHICS-002: The Electorate of Saxony was the birthplace of the Protestant Reformation (Martin Luther's 95 Theses, Wittenberg 1517). Elector Frederick the Wise's protection of Luther was decisive for the Reformation's survival. However, the subsequent Wars of Religion caused immense suffering: the Schmalkaldic War and especially the Thirty Years' War devastated Saxony, with some regions losing 50-70% of their population.",
     "name_variants": [
       {
@@ -1136,7 +2020,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kurfurstentum Pfalz",
@@ -1147,9 +2032,67 @@
     "capital_name": "Heidelberg",
     "capital_lat": 49.3988,
     "capital_lon": 8.6724,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            9.8028,
+            49.3988
+          ],
+          [
+            10.0751,
+            49.8932
+          ],
+          [
+            9.6304,
+            50.4002
+          ],
+          [
+            8.6724,
+            50.4349
+          ],
+          [
+            8.0533,
+            50.1133
+          ],
+          [
+            7.3803,
+            49.9227
+          ],
+          [
+            7.1017,
+            49.3988
+          ],
+          [
+            7.1737,
+            48.899
+          ],
+          [
+            7.9416,
+            48.6027
+          ],
+          [
+            8.6724,
+            48.3398
+          ],
+          [
+            9.2041,
+            48.7191
+          ],
+          [
+            9.8408,
+            48.9273
+          ],
+          [
+            9.8028,
+            49.3988
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in German; 'Pfalz' derives from Latin 'Palatium' (palace). ETHICS-002: The Electorate Palatinate played a catalytic role in the Thirty Years' War when Elector Frederick V accepted the Bohemian crown in 1619 (the 'Winter King'). The devastating consequences -- the sack of Heidelberg (1622), the transfer of the electoral dignity to Bavaria, and 30 years of war that killed approximately 8 million people in German lands -- can be traced partly to this decision. The later War of the Palatine Succession (1688-1697) saw Louis XIV's armies systematically destroy cities in the Palatinate, including Heidelberg, Mannheim, Speyer, and Worms, as a deliberate scorched-earth policy.",
     "name_variants": [
       {
@@ -1214,7 +2157,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Hertogdom Brabant",
@@ -1225,9 +2169,67 @@
     "capital_name": "Brussel",
     "capital_lat": 50.8476,
     "capital_lon": 4.3572,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            5.3202,
+            50.8476
+          ],
+          [
+            5.4267,
+            51.2245
+          ],
+          [
+            5.0704,
+            51.802
+          ],
+          [
+            4.3572,
+            51.4514
+          ],
+          [
+            3.6671,
+            51.7943
+          ],
+          [
+            3.3633,
+            51.2037
+          ],
+          [
+            3.3307,
+            50.8476
+          ],
+          [
+            3.3793,
+            50.5123
+          ],
+          [
+            3.8093,
+            50.3484
+          ],
+          [
+            4.3572,
+            49.9248
+          ],
+          [
+            5.1007,
+            50.158
+          ],
+          [
+            5.5927,
+            50.4194
+          ],
+          [
+            5.3202,
+            50.8476
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Dutch (Brabantian dialect was one of the dominant literary languages of the medieval Low Countries). The duchy straddled the linguistic frontier between Dutch and French; both 'Hertogdom Brabant' and 'Duche de Brabant' are historically valid. ETHICS-002: The Duchy of Brabant was one of the wealthiest territories in medieval Europe, home to major commercial cities (Brussels, Antwerp, Leuven, Breda). The Joyous Entry (Blijde Inkomst, 1356) was one of the earliest constitutional charters in Europe, guaranteeing rights of the estates against ducal power. The duchy's eventual partition between the Northern Netherlands and Spanish/Austrian/French Southern Netherlands laid the groundwork for the modern Belgium-Netherlands border and the complex cultural politics of the region.",
     "name_variants": [
       {
@@ -1292,7 +2294,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Grevskabet Flandern",
@@ -1303,9 +2306,67 @@
     "capital_name": "Gent",
     "capital_lat": 51.0543,
     "capital_lon": 3.7174,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            5.5446,
+            51.0543
+          ],
+          [
+            4.8693,
+            51.4903
+          ],
+          [
+            4.5011,
+            51.8319
+          ],
+          [
+            3.7174,
+            52.1676
+          ],
+          [
+            2.7074,
+            52.2636
+          ],
+          [
+            1.971,
+            51.6502
+          ],
+          [
+            1.8849,
+            51.0543
+          ],
+          [
+            2.3277,
+            50.4165
+          ],
+          [
+            3.087,
+            50.323
+          ],
+          [
+            3.7174,
+            50.3677
+          ],
+          [
+            4.5257,
+            50.118
+          ],
+          [
+            4.7654,
+            50.6731
+          ],
+          [
+            5.5446,
+            51.0543
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Dutch (Flemish); the county straddled the French-Dutch linguistic frontier and the counts used both languages. 'Comte de Flandre' (French) is equally valid historically. ETHICS-002: Medieval Flanders was one of the most urbanized and commercially advanced regions in Europe. The great cloth cities (Ghent, Bruges, Ypres) had significant worker populations whose revolts (e.g., the Matins of Bruges, 1302; the revolt of Ghent, 1379-1385) were among the most significant class conflicts of the medieval period. The 'Good Friday' massacre of the French garrison in Bruges (1302) and the subsequent Flemish victory at the Battle of the Golden Spurs (Courtrai) are foundational events in Flemish national memory. ETHICS-003: entity_type is 'principality' since 'county' is not in the schema. The county's unique feudal position -- held from both the French crown and the Imperial crown -- made it a persistent source of international conflict.",
     "name_variants": [
       {
@@ -1370,7 +2431,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Despotovina Srbije",
@@ -1381,9 +2443,67 @@
     "capital_name": "Smederevo",
     "capital_lat": 44.6625,
     "capital_lon": 20.9281,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            22.5645,
+            44.6625
+          ],
+          [
+            22.0079,
+            45.1028
+          ],
+          [
+            21.4959,
+            45.2826
+          ],
+          [
+            20.9281,
+            45.8584
+          ],
+          [
+            20.0927,
+            45.9315
+          ],
+          [
+            19.7637,
+            45.148
+          ],
+          [
+            19.1831,
+            44.6625
+          ],
+          [
+            19.5129,
+            44.096
+          ],
+          [
+            20.2113,
+            43.7254
+          ],
+          [
+            20.9281,
+            43.7699
+          ],
+          [
+            21.7924,
+            43.5212
+          ],
+          [
+            21.9198,
+            44.311
+          ],
+          [
+            22.5645,
+            44.6625
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Serbian (Cyrillic original: Деспотовина Србије). The title 'Despot' was a high Byzantine court dignity, not the pejorative English term. ETHICS-002: The Serbian Despotate was the last major Serbian state before Ottoman conquest. Its fall at Smederevo (1459) marked the beginning of nearly four centuries of Ottoman rule over Serbia. The Ottoman conquest involved significant violence, population displacement, and the imposition of the devshirme (child levy) system that forcibly converted Christian boys to Islam for military service. ETHICS-003: entity_type is 'principality' since 'despotate' is not in the schema. The state was technically a vassal of both Hungary and the Ottoman Empire at various points, reflecting the desperate diplomatic balancing of a small state between two empires.",
     "name_variants": [
       {
@@ -1440,7 +2560,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kongerike Skottland / Rioghachd na h-Alba",
@@ -1451,9 +2572,67 @@
     "capital_name": "Edinburgh",
     "capital_lat": 55.9533,
     "capital_lon": -3.1883,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            0.542,
+            55.9533
+          ],
+          [
+            0.3969,
+            57.0123
+          ],
+          [
+            0.2576,
+            58.683
+          ],
+          [
+            -3.1883,
+            58.616
+          ],
+          [
+            -6.7861,
+            59.3705
+          ],
+          [
+            -8.3998,
+            57.5692
+          ],
+          [
+            -9.6422,
+            55.9533
+          ],
+          [
+            -6.5565,
+            54.8129
+          ],
+          [
+            -6.6825,
+            52.7887
+          ],
+          [
+            -3.1883,
+            52.959
+          ],
+          [
+            -1.1415,
+            53.9468
+          ],
+          [
+            1.9473,
+            54.6305
+          ],
+          [
+            0.542,
+            55.9533
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: Dual name_original in Scots and Scottish Gaelic reflecting the two major indigenous languages. English became dominant only later. The kingdom's linguistic diversity (Gaelic, Scots, Norse in the islands, and later English) is often simplified. ETHICS-002: Scotland's absorption into the United Kingdom through the Acts of Union (1707) was deeply contested and remains so. The treaty was negotiated by a Scottish parliament widely perceived as having been bribed by English gold. Popular opposition to the union was widespread. Scottish independence movements draw directly on this history. ETHICS-003: The relationship between Lowland Scots culture and Highland Gaelic culture involved significant internal colonialism. The 'civilizing' of the Highlands by Lowland Scots interests preceded and paralleled English imperialism. The Highland Clearances (18th-19th centuries) constituted ethnic cleansing of Gaelic-speaking populations. NOTE: Scotland already exists in the database; this entry expands the earlier dates to cover the full kingdom from 843, as the existing entry may not cover the pre-union period comprehensively.",
     "name_variants": [
       {
@@ -1523,7 +2702,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kongeriget Bohmen",
@@ -1534,9 +2714,67 @@
     "capital_name": "Praha",
     "capital_lat": 50.0755,
     "capital_lon": 14.4378,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            20.5477,
+            50.0755
+          ],
+          [
+            20.7692,
+            51.9616
+          ],
+          [
+            16.9963,
+            52.5722
+          ],
+          [
+            14.4378,
+            53.4879
+          ],
+          [
+            12.0086,
+            52.4942
+          ],
+          [
+            10.7334,
+            51.5705
+          ],
+          [
+            9.5426,
+            50.0755
+          ],
+          [
+            10.5444,
+            48.606
+          ],
+          [
+            11.5817,
+            47.2054
+          ],
+          [
+            14.4378,
+            45.4501
+          ],
+          [
+            16.8485,
+            47.2887
+          ],
+          [
+            19.2726,
+            48.0955
+          ],
+          [
+            20.5477,
+            50.0755
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original uses the Czech form 'Ceske kralovstvi' would be more accurate; however, the international diplomatic language name is used here. The Czech self-designation is 'Ceske kralovstvi.' ETHICS-002: The Kingdom of Bohemia was a multiethnic state with a significant German-speaking minority, particularly in the border regions (Sudetenland). The complex Czech-German relationship within Bohemia produced both periods of coexistence and violent ethnic conflict, culminating in the expulsion of 2.5-3 million Sudeten Germans in 1945-1946. The Battle of White Mountain (1620) and subsequent forced re-Catholicization and Germanization under Habsburg rule are foundational traumas in Czech national memory. ETHICS-003: The Hussite Wars (1419-1434) were both a religious reformation and a proto-national movement, involving significant violence on all sides including the massacre of German-speaking populations in some Bohemian cities.",
     "name_variants": [
       {
@@ -1601,7 +2839,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Herzogtum Wurttemberg",
@@ -1612,9 +2851,67 @@
     "capital_name": "Stuttgart",
     "capital_lat": 48.7758,
     "capital_lon": 9.1829,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            10.8467,
+            48.7758
+          ],
+          [
+            10.4673,
+            49.4225
+          ],
+          [
+            10.2342,
+            49.8227
+          ],
+          [
+            9.1829,
+            49.615
+          ],
+          [
+            8.4624,
+            49.5705
+          ],
+          [
+            7.9579,
+            49.1545
+          ],
+          [
+            7.7147,
+            48.7758
+          ],
+          [
+            8.1829,
+            48.3256
+          ],
+          [
+            8.4433,
+            47.9118
+          ],
+          [
+            9.1829,
+            47.9568
+          ],
+          [
+            9.8895,
+            47.9099
+          ],
+          [
+            10.2514,
+            48.2926
+          ],
+          [
+            10.8467,
+            48.7758
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in German. The duchy evolved from the earlier County of Wurttemberg (1143-1495). ETHICS-002: Wurttemberg's estates (Landstande) maintained significant constitutional power against the dukes through the Tubingen Treaty (Tubinger Vertrag, 1514), one of the most important constitutional documents in German history. The duchy was the site of the 'Poor Conrad' peasant revolt (1514) and significant participation in the German Peasants' War (1524-1525), both of which were violently suppressed.",
     "name_variants": [
       {
@@ -1671,6 +2968,7 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   }
 ]

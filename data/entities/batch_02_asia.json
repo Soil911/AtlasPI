@@ -7,10 +7,68 @@
     "year_end": -1046,
     "capital_name": "殷",
     "capital_lat": 36.1167,
-    "capital_lon": 114.3500,
-    "confidence_score": 0.55,
+    "capital_lon": 114.35,
+    "confidence_score": 0.45,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            117.1514,
+            36.1167
+          ],
+          [
+            116.3592,
+            37.1619
+          ],
+          [
+            115.6495,
+            37.7487
+          ],
+          [
+            114.35,
+            37.9118
+          ],
+          [
+            113.1261,
+            37.7976
+          ],
+          [
+            112.3174,
+            37.0422
+          ],
+          [
+            111.6786,
+            36.1167
+          ],
+          [
+            111.2454,
+            34.7516
+          ],
+          [
+            112.9581,
+            33.994
+          ],
+          [
+            114.35,
+            33.9737
+          ],
+          [
+            115.5552,
+            34.5851
+          ],
+          [
+            116.6128,
+            35.1606
+          ],
+          [
+            117.1514,
+            36.1167
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in cinese. La dinastia Shang e' la prima dinastia cinese verificata archeologicamente (scavi di Yinxu). Le iscrizioni su ossa oracolari (jiaguwen) sono la piu' antica forma di scrittura cinese. Il confidence_score e' moderato per le date iniziali, poiche' la cronologia pre-841 a.C. resta dibattuta. ETHICS-003: la pratica dei sacrifici umani rituali documentata a Yinxu va riportata senza giudizi anacronistici.",
     "name_variants": [
       {
@@ -77,7 +135,8 @@
         "citation": "Scavi archeologici di Yinxu, Accademia delle Scienze Sociali Cinese",
         "source_type": "archaeological"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "周朝",
@@ -88,9 +147,67 @@
     "capital_name": "鎬京",
     "capital_lat": 34.2667,
     "capital_lon": 108.8667,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            110.6699,
+            34.2667
+          ],
+          [
+            110.8161,
+            35.0633
+          ],
+          [
+            109.7684,
+            35.4446
+          ],
+          [
+            108.8667,
+            37.3056
+          ],
+          [
+            107.4533,
+            36.9142
+          ],
+          [
+            106.6611,
+            35.2704
+          ],
+          [
+            106.0387,
+            34.2667
+          ],
+          [
+            107.2068,
+            33.552
+          ],
+          [
+            107.5906,
+            32.6437
+          ],
+          [
+            108.8667,
+            32.0038
+          ],
+          [
+            110.4998,
+            31.8023
+          ],
+          [
+            111.1588,
+            32.9851
+          ],
+          [
+            110.6699,
+            34.2667
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in cinese. La dinastia Zhou e' la piu' lunga della storia cinese, divisa in Zhou Occidentali (Hao) e Zhou Orientali (Luoyang). Il sistema feudale (fengjian) e il 'Mandato del Cielo' (tianming) come legittimazione del potere hanno influenzato profondamente la filosofia politica cinese. Il periodo degli Stati Combattenti vide guerre devastanti con milioni di vittime.",
     "name_variants": [
       {
@@ -165,7 +282,8 @@
         "citation": "Loewe, M. & Shaughnessy, E. The Cambridge History of Ancient China (1999)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "秦朝",
@@ -175,10 +293,68 @@
     "year_end": -206,
     "capital_name": "咸陽",
     "capital_lat": 34.3329,
-    "capital_lon": 108.7090,
-    "confidence_score": 0.85,
+    "capital_lon": 108.709,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            118.0388,
+            34.3329
+          ],
+          [
+            120.5476,
+            39.9694
+          ],
+          [
+            114.6284,
+            41.8487
+          ],
+          [
+            108.709,
+            41.3303
+          ],
+          [
+            103.4308,
+            41.8611
+          ],
+          [
+            96.4466,
+            39.6566
+          ],
+          [
+            101.0231,
+            34.3329
+          ],
+          [
+            99.0335,
+            30.1913
+          ],
+          [
+            104.103,
+            28.1303
+          ],
+          [
+            108.709,
+            27.2305
+          ],
+          [
+            113.1102,
+            28.6514
+          ],
+          [
+            117.6039,
+            30.8754
+          ],
+          [
+            118.0388,
+            34.3329
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in cinese. La dinastia Qin unifico' la Cina ma con metodi brutali: standardizzazione forzata della scrittura, unita' di misura e legge; rogo dei libri e seppellimento dei letterati (213-212 a.C.); lavoro forzato su scala massiva per la Grande Muraglia e il mausoleo imperiale con migliaia di morti tra i lavoratori. ETHICS-002: il lavoro forzato nella costruzione della Grande Muraglia e' un aspetto fondamentale da documentare onestamente.",
     "name_variants": [
       {
@@ -245,7 +421,8 @@
         "citation": "Sima Qian, Shiji (Memorie di uno storico), cap. 6-8",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "漢朝",
@@ -254,11 +431,69 @@
     "year_start": -206,
     "year_end": 220,
     "capital_name": "長安",
-    "capital_lat": 34.2650,
+    "capital_lat": 34.265,
     "capital_lon": 108.9422,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            125.6092,
+            34.265
+          ],
+          [
+            119.3891,
+            39.3937
+          ],
+          [
+            113.6043,
+            42.3212
+          ],
+          [
+            108.9422,
+            47.0521
+          ],
+          [
+            99.7847,
+            48.1339
+          ],
+          [
+            93.8035,
+            41.0882
+          ],
+          [
+            93.3336,
+            34.265
+          ],
+          [
+            95.109,
+            26.8321
+          ],
+          [
+            98.8924,
+            19.4493
+          ],
+          [
+            108.9422,
+            24.4457
+          ],
+          [
+            115.9318,
+            25.638
+          ],
+          [
+            122.3784,
+            28.4894
+          ],
+          [
+            125.6092,
+            34.265
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in cinese. La dinastia Han e' cosi' fondamentale che il gruppo etnico maggioritario cinese si identifica come 'Han'. Questo legame tra dinastia e identita' etnica va trattato con attenzione. L'espansione verso ovest (Via della Seta) e verso sud comporto' la sottomissione di molti popoli non-Han le cui prospettive sono spesso assenti dalla storiografia tradizionale cinese.",
     "name_variants": [
       {
@@ -349,7 +584,8 @@
         "citation": "Ban Gu, Hanshu (Libro degli Han)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "唐朝",
@@ -358,11 +594,69 @@
     "year_start": 618,
     "year_end": 907,
     "capital_name": "長安",
-    "capital_lat": 34.2650,
+    "capital_lat": 34.265,
     "capital_lon": 108.9422,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            119.2245,
+            34.265
+          ],
+          [
+            121.1859,
+            40.0076
+          ],
+          [
+            116.2582,
+            43.4906
+          ],
+          [
+            108.9422,
+            45.4063
+          ],
+          [
+            103.4112,
+            42.9333
+          ],
+          [
+            97.1748,
+            39.7125
+          ],
+          [
+            96.0814,
+            34.265
+          ],
+          [
+            94.8626,
+            27.7577
+          ],
+          [
+            103.9337,
+            26.456
+          ],
+          [
+            108.9422,
+            25.9446
+          ],
+          [
+            115.0618,
+            24.9965
+          ],
+          [
+            121.2884,
+            29.2518
+          ],
+          [
+            119.2245,
+            34.265
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in cinese. La dinastia Tang e' spesso considerata l'apice della civilta' cinese classica. Il cosmopolitismo di Chang'an includeva comunita' persiane, turche, arabe e giapponesi. Tuttavia, l'espansione militare Tang in Asia Centrale, Corea e Vietnam comporto' la sottomissione di popoli che non si identificavano come cinesi. La ribellione di An Lushan (755-763) causo' una delle peggiori catastrofi demografiche della storia.",
     "name_variants": [
       {
@@ -429,7 +723,8 @@
         "citation": "Pulleyblank, E.G. The Background of the Rebellion of An Lu-shan (1955)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "宋朝",
@@ -440,9 +735,67 @@
     "capital_name": "開封",
     "capital_lat": 34.7972,
     "capital_lon": 114.3073,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            128.2023,
+            34.7972
+          ],
+          [
+            125.1263,
+            39.9374
+          ],
+          [
+            122.8342,
+            46.3537
+          ],
+          [
+            114.3073,
+            43.9584
+          ],
+          [
+            107.2828,
+            45.4892
+          ],
+          [
+            104.0105,
+            39.4398
+          ],
+          [
+            98.9169,
+            34.7972
+          ],
+          [
+            100.0092,
+            28.2046
+          ],
+          [
+            109.426,
+            26.2802
+          ],
+          [
+            114.3073,
+            25.4703
+          ],
+          [
+            122.0537,
+            24.1266
+          ],
+          [
+            126.5384,
+            29.8021
+          ],
+          [
+            128.2023,
+            34.7972
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in cinese. La dinastia Song rappresenta un'epoca di avanzamenti tecnologici e culturali straordinari (stampa a caratteri mobili, bussola, polvere da sparo). Tuttavia, la Song Settentrionale cadde sotto l'invasione Jurchen (1127), e la Song Meridionale sotto quella mongola (1279). La caduta di Xiangyang e la resistenza finale rappresentano episodi di grande sofferenza.",
     "name_variants": [
       {
@@ -517,7 +870,8 @@
         "citation": "Twitchett, D. & Smith, P. (eds.) Cambridge History of China, Vol. V (2009)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "元朝",
@@ -528,9 +882,67 @@
     "capital_name": "大都",
     "capital_lat": 39.9042,
     "capital_lon": 116.4074,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            133.1863,
+            39.9042
+          ],
+          [
+            126.9875,
+            45.4892
+          ],
+          [
+            123.051,
+            49.5981
+          ],
+          [
+            116.4074,
+            49.2957
+          ],
+          [
+            106.8424,
+            51.2749
+          ],
+          [
+            100.1949,
+            46.4796
+          ],
+          [
+            103.8467,
+            39.9042
+          ],
+          [
+            100.3124,
+            33.1733
+          ],
+          [
+            108.6972,
+            27.607
+          ],
+          [
+            116.4074,
+            24.7447
+          ],
+          [
+            124.7365,
+            27.7288
+          ],
+          [
+            128.175,
+            34.6303
+          ],
+          [
+            133.1863,
+            39.9042
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome cinese 元朝 e' la forma usata dalla storiografia cinese, ma l'impero fu fondato da Kublai Khan come continuazione dell'Impero Mongolo. Il nome mongolo era Dai On Yeke Mongghol Ulus. La popolazione cinese era classificata in un sistema gerarchico di quattro classi: Mongoli, Semu (stranieri), Han del nord, Han del sud — un sistema apertamente discriminatorio. ETHICS-003: la conquista mongola della Cina causo' uno dei peggiori cali demografici della storia, con stime di decine di milioni di morti.",
     "name_variants": [
       {
@@ -597,7 +1009,8 @@
         "citation": "Marco Polo, Il Milione (c. 1300)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "明朝",
@@ -608,9 +1021,67 @@
     "capital_name": "北京",
     "capital_lat": 39.9042,
     "capital_lon": 116.4074,
-    "confidence_score": 0.9,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            132.9439,
+            39.9042
+          ],
+          [
+            130.9587,
+            48.0774
+          ],
+          [
+            124.5941,
+            51.9488
+          ],
+          [
+            116.4074,
+            51.3421
+          ],
+          [
+            106.1035,
+            54.7553
+          ],
+          [
+            102.3421,
+            48.1396
+          ],
+          [
+            98.8861,
+            39.9042
+          ],
+          [
+            101.652,
+            32.3535
+          ],
+          [
+            110.2352,
+            33.0636
+          ],
+          [
+            116.4074,
+            29.9129
+          ],
+          [
+            126.2138,
+            29.0874
+          ],
+          [
+            128.3841,
+            34.5021
+          ],
+          [
+            132.9439,
+            39.9042
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in cinese. La dinastia Ming restauro' il dominio cinese Han dopo il periodo mongolo. Le spedizioni di Zheng He (1405-1433) mostrano una capacita' navale straordinaria ma anche proiezione di potere imperiale. La costruzione della Citta' Proibita e il rifacimento della Grande Muraglia coinvolsero lavoro forzato su scala massiva.",
     "name_variants": [
       {
@@ -677,7 +1148,8 @@
         "citation": "Dreyer, E.L. Zheng He: China and the Oceans in the Early Ming Dynasty (2007)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "गुप्त साम्राज्य",
@@ -687,10 +1159,68 @@
     "year_end": 550,
     "capital_name": "पाटलिपुत्र",
     "capital_lat": 25.6115,
-    "capital_lon": 85.1440,
-    "confidence_score": 0.7,
+    "capital_lon": 85.144,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            94.212,
+            25.6115
+          ],
+          [
+            93.1399,
+            30.5127
+          ],
+          [
+            89.0409,
+            31.9625
+          ],
+          [
+            85.144,
+            35.8493
+          ],
+          [
+            81.0711,
+            31.2278
+          ],
+          [
+            76.2063,
+            29.8281
+          ],
+          [
+            76.3402,
+            25.6115
+          ],
+          [
+            77.9327,
+            20.8404
+          ],
+          [
+            81.7054,
+            19.1811
+          ],
+          [
+            85.144,
+            17.7532
+          ],
+          [
+            89.7853,
+            18.8872
+          ],
+          [
+            92.4391,
+            21.0511
+          ],
+          [
+            94.212,
+            25.6115
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in sanscrito. L'era Gupta e' spesso chiamata 'eta' dell'oro dell'India' nella storiografia, ma questa narrativa puo' oscurare le disuguaglianze sociali del sistema delle caste, che durante il periodo Gupta venne codificato piu' rigidamente. La fioritura culturale (Kalidasa, Aryabhata, Varahamihira) riguardava principalmente le elite. ETHICS-003: il sistema castale rafforzato durante questo periodo ha avuto conseguenze durature sulle popolazioni Dalit e subalterne.",
     "name_variants": [
       {
@@ -749,7 +1279,8 @@
         "citation": "Iscrizione del Pilastro di Allahabad (Prayagraj Prashasti)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "சோழ நாடு",
@@ -758,11 +1289,69 @@
     "year_start": -300,
     "year_end": 1279,
     "capital_name": "தஞ்சாவூர்",
-    "capital_lat": 10.7870,
+    "capital_lat": 10.787,
     "capital_lon": 79.1378,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            88.1195,
+            10.787
+          ],
+          [
+            89.3248,
+            16.822
+          ],
+          [
+            82.9748,
+            17.1929
+          ],
+          [
+            79.1378,
+            23.0648
+          ],
+          [
+            74.1101,
+            19.3646
+          ],
+          [
+            72.3547,
+            14.9256
+          ],
+          [
+            71.2065,
+            10.787
+          ],
+          [
+            69.7012,
+            4.9029
+          ],
+          [
+            73.6462,
+            -0.8598
+          ],
+          [
+            79.1378,
+            -0.3629
+          ],
+          [
+            84.4989,
+            1.9074
+          ],
+          [
+            88.0795,
+            5.8057
+          ],
+          [
+            88.1195,
+            10.787
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in tamil. I Chola sono tra le dinastie piu' longeve della storia, con il periodo imperiale (850-1279) distinto dal periodo antico. La talassocrazia Chola si estese fino al Sud-est asiatico, con la spedizione navale di Rajendra I contro Srivijaya (1025). ETHICS-003: le campagne navali nel Sud-est asiatico comportarono saccheggi e imposizione di tributi su popolazioni straniere.",
     "name_variants": [
       {
@@ -829,7 +1418,8 @@
         "citation": "Iscrizioni del tempio di Brihadishvara, Thanjavur",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "मराठा साम्राज्य",
@@ -840,9 +1430,67 @@
     "capital_name": "रायगड",
     "capital_lat": 18.2362,
     "capital_lon": 73.4491,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            81.8477,
+            18.2362
+          ],
+          [
+            85.445,
+            23.7773
+          ],
+          [
+            77.7426,
+            25.7626
+          ],
+          [
+            73.4491,
+            26.7865
+          ],
+          [
+            68.3259,
+            25.6698
+          ],
+          [
+            60.9116,
+            23.9614
+          ],
+          [
+            64.0302,
+            18.2362
+          ],
+          [
+            66.3828,
+            14.1612
+          ],
+          [
+            69.3646,
+            11.1236
+          ],
+          [
+            73.4491,
+            6.0916
+          ],
+          [
+            77.9611,
+            11.1286
+          ],
+          [
+            81.0245,
+            14.0755
+          ],
+          [
+            81.8477,
+            18.2362
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in marathi. L'Impero Maratha rappresenta la principale sfida Hindu al dominio Mughal e poi al colonialismo britannico in India. Shivaji e' una figura fondamentale dell'identita' Maratha, ma anche soggetto di appropriazione nazionalista Hindu moderna. ETHICS-003: le campagne Maratha, incluse quelle nel Bengala e nel sud, comportarono saccheggi e sofferenze per le popolazioni locali. La Terza Battaglia di Panipat (1761) fu una catastrofe umana.",
     "name_variants": [
       {
@@ -909,7 +1557,8 @@
         "citation": "Sen, S. Military System of the Marathas (1958)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "دلّی سلطنت",
@@ -919,10 +1568,68 @@
     "year_end": 1526,
     "capital_name": "دهلی",
     "capital_lat": 28.6139,
-    "capital_lon": 77.2090,
-    "confidence_score": 0.8,
+    "capital_lon": 77.209,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            88.4373,
+            28.6139
+          ],
+          [
+            87.0387,
+            35.2439
+          ],
+          [
+            83.7373,
+            40.6632
+          ],
+          [
+            77.209,
+            42.3214
+          ],
+          [
+            69.9392,
+            39.6495
+          ],
+          [
+            69.2191,
+            32.6805
+          ],
+          [
+            66.3376,
+            28.6139
+          ],
+          [
+            66.1752,
+            22.815
+          ],
+          [
+            70.9687,
+            19.9578
+          ],
+          [
+            77.209,
+            19.9447
+          ],
+          [
+            82.8154,
+            20.5536
+          ],
+          [
+            90.6941,
+            22.7751
+          ],
+          [
+            88.4373,
+            28.6139
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in persiano, lingua della corte. Il Sultanato di Delhi fu governato da cinque dinastie successive (Mamelucca, Khalji, Tughlaq, Sayyid, Lodi). ETHICS-002: la conquista islamica dell'India settentrionale comporto' distruzione di templi Hindu e buddisti, conversioni forzate e massacri documentati. Questi fatti vanno riportati con precisione storica, evitando sia l'apologia sia la strumentalizzazione anti-islamica. La distruzione dell'universita' di Nalanda (1193) rappresenta una perdita culturale incalcolabile. ETHICS-003: entita' che polarizza ancora oggi il dibattito tra nazionalismo Hindu e storiografia islamica.",
     "name_variants": [
       {
@@ -989,7 +1696,8 @@
         "citation": "Ibn Battuta, Rihla (c. 1355)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "విజయనగర సామ్రాజ్యం",
@@ -998,11 +1706,69 @@
     "year_start": 1336,
     "year_end": 1646,
     "capital_name": "విజయనగరము",
-    "capital_lat": 15.3350,
-    "capital_lon": 76.4600,
-    "confidence_score": 0.8,
+    "capital_lat": 15.335,
+    "capital_lon": 76.46,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            87.382,
+            15.335
+          ],
+          [
+            85.8165,
+            21.3763
+          ],
+          [
+            80.516,
+            24.1397
+          ],
+          [
+            76.46,
+            21.8453
+          ],
+          [
+            71.7854,
+            22.1678
+          ],
+          [
+            69.7367,
+            19.8112
+          ],
+          [
+            67.105,
+            15.335
+          ],
+          [
+            67.0775,
+            10.2252
+          ],
+          [
+            71.9566,
+            7.4065
+          ],
+          [
+            76.46,
+            1.6405
+          ],
+          [
+            82.9897,
+            6.5766
+          ],
+          [
+            87.9249,
+            8.918
+          ],
+          [
+            87.382,
+            15.335
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in telugu, una delle lingue principali dell'impero. Vijayanagara fu fondato come baluardo Hindu contro l'espansione dei sultanati islamici del Deccan. La citta' di Hampi era una delle piu' grandi del mondo nel XV-XVI secolo. ETHICS-002: la Battaglia di Talikota (1565) e la successiva distruzione sistematica di Hampi da parte dei sultanati del Deccan rappresentano una delle piu' grandi distruzioni urbane della storia medievale.",
     "name_variants": [
       {
@@ -1069,7 +1835,8 @@
         "citation": "Abdur Razzaq, resoconto dell'ambasciata timuride (1442-1443)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "कुषाण साम्राज्य",
@@ -1080,9 +1847,67 @@
     "capital_name": "पुरुषपुर",
     "capital_lat": 34.0151,
     "capital_lon": 71.5249,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            83.0287,
+            34.0151
+          ],
+          [
+            82.0287,
+            38.5118
+          ],
+          [
+            78.1876,
+            43.3164
+          ],
+          [
+            71.5249,
+            45.2871
+          ],
+          [
+            63.1719,
+            47.0332
+          ],
+          [
+            58.3982,
+            41.4633
+          ],
+          [
+            51.9303,
+            34.0151
+          ],
+          [
+            58.8509,
+            27.9403
+          ],
+          [
+            63.2846,
+            23.4468
+          ],
+          [
+            71.5249,
+            20.0642
+          ],
+          [
+            78.8103,
+            23.2429
+          ],
+          [
+            85.4373,
+            27.038
+          ],
+          [
+            83.0287,
+            34.0151
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' dato in sanscrito, una delle lingue dell'impero. I Kushan erano originariamente nomadi Yuezhi dall'Asia Centrale. L'impero fu un crocevia di culture greca, indiana, persiana e centroasiatica. ETHICS-003: sotto Kanishka, il buddhismo Mahayana ricevette un enorme impulso, ma la patronage reale potrebbe aver marginalizzato tradizioni buddhiste precedenti. Le date di Kanishka restano tra le piu' dibattute della cronologia asiatica.",
     "name_variants": [
       {
@@ -1149,7 +1974,8 @@
         "citation": "Iscrizione di Rabatak, Afghanistan (scoperta 1993)",
         "source_type": "archaeological"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "고구려",
@@ -1160,9 +1986,67 @@
     "capital_name": "평양",
     "capital_lat": 39.0392,
     "capital_lon": 125.7625,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            129.2394,
+            39.0392
+          ],
+          [
+            128.0071,
+            40.2035
+          ],
+          [
+            127.4303,
+            41.3904
+          ],
+          [
+            125.7625,
+            42.3952
+          ],
+          [
+            124.0776,
+            41.2658
+          ],
+          [
+            123.1373,
+            40.1214
+          ],
+          [
+            121.5198,
+            39.0392
+          ],
+          [
+            121.8856,
+            37.2767
+          ],
+          [
+            123.3605,
+            36.1706
+          ],
+          [
+            125.7625,
+            36.4042
+          ],
+          [
+            127.3207,
+            36.7404
+          ],
+          [
+            129.9477,
+            37.3485
+          ],
+          [
+            129.2394,
+            39.0392
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in coreano. Goguryeo e' oggetto di una disputa storiografica attiva tra Corea (Nord e Sud) e Cina. La Cina nel 'Progetto sulla storia del nord-est' (2002-2007) ha classificato Goguryeo come stato locale cinese, mentre entrambe le Coree lo considerano fondamentale per l'identita' coreana. Questo database presenta Goguryeo come entita' indipendente documentando il dibattito senza prendere posizione. ETHICS-003: la disputa storiografica ha implicazioni geopolitiche contemporanee.",
     "name_variants": [
       {
@@ -1229,7 +2113,8 @@
         "citation": "Samguk Sagi (Storia dei Tre Regni, Kim Busik, 1145)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "백제",
@@ -1240,9 +2125,67 @@
     "capital_name": "위례성",
     "capital_lat": 37.5172,
     "capital_lon": 126.9784,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            131.0349,
+            37.5172
+          ],
+          [
+            129.7553,
+            38.6981
+          ],
+          [
+            128.3109,
+            39.341
+          ],
+          [
+            126.9784,
+            40.0515
+          ],
+          [
+            125.2742,
+            40.1718
+          ],
+          [
+            123.6811,
+            39.1385
+          ],
+          [
+            122.9907,
+            37.5172
+          ],
+          [
+            123.1745,
+            35.7382
+          ],
+          [
+            125.2261,
+            34.3567
+          ],
+          [
+            126.9784,
+            34.564
+          ],
+          [
+            128.84,
+            35.0487
+          ],
+          [
+            130.4634,
+            35.8801
+          ],
+          [
+            131.0349,
+            37.5172
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in coreano. Baekje fu uno dei Tre Regni di Corea, con forti legami culturali con il Giappone (Wa). La trasmissione del buddhismo e della cultura cinese al Giappone attraverso Baekje e' un legame storico significativo. La caduta di Baekje nel 660 rappresenta un trauma della memoria coreana. ETHICS-003: la data di fondazione (-18) e' tradizionale e incerta.",
     "name_variants": [
       {
@@ -1309,7 +2252,8 @@
         "citation": "Aree storiche di Baekje, Patrimonio UNESCO (2015)",
         "source_type": "archaeological"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "고려",
@@ -1318,11 +2262,69 @@
     "year_start": 918,
     "year_end": 1392,
     "capital_name": "개경",
-    "capital_lat": 37.9710,
-    "capital_lon": 126.5630,
-    "confidence_score": 0.85,
+    "capital_lat": 37.971,
+    "capital_lon": 126.563,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            130.6725,
+            37.971
+          ],
+          [
+            129.1972,
+            39.2001
+          ],
+          [
+            128.3304,
+            40.3614
+          ],
+          [
+            126.563,
+            40.2617
+          ],
+          [
+            125.131,
+            40.0044
+          ],
+          [
+            124.0591,
+            39.1081
+          ],
+          [
+            121.6605,
+            37.971
+          ],
+          [
+            123.0902,
+            36.7632
+          ],
+          [
+            124.4414,
+            35.2582
+          ],
+          [
+            126.563,
+            35.2894
+          ],
+          [
+            128.4672,
+            35.4115
+          ],
+          [
+            129.3387,
+            36.7298
+          ],
+          [
+            130.6725,
+            37.971
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in coreano. Goryeo (da cui 'Korea'/'Corea') fu il primo stato coreano unificato riconosciuto internazionalmente. La ceramica celadon Goryeo e la prima stampa a caratteri mobili metallici (Jikji, 1377) sono contributi culturali straordinari. ETHICS-002: le invasioni mongole (1231-1270) causarono devastazione massiva della penisola coreana, con centinaia di migliaia di vittime e deportazioni.",
     "name_variants": [
       {
@@ -1397,7 +2399,8 @@
         "citation": "Henthorn, W.E. Korea: The Mongol Invasions (1963)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "조선",
@@ -1407,10 +2410,68 @@
     "year_end": 1897,
     "capital_name": "한양",
     "capital_lat": 37.5665,
-    "capital_lon": 126.9780,
-    "confidence_score": 0.9,
+    "capital_lon": 126.978,
+    "confidence_score": 0.8,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            132.7578,
+            37.5665
+          ],
+          [
+            131.3903,
+            39.3325
+          ],
+          [
+            128.9139,
+            40.223
+          ],
+          [
+            126.978,
+            40.534
+          ],
+          [
+            125.2985,
+            40.0019
+          ],
+          [
+            123.0099,
+            39.8068
+          ],
+          [
+            121.5721,
+            37.5665
+          ],
+          [
+            122.6205,
+            35.6191
+          ],
+          [
+            125.111,
+            34.6851
+          ],
+          [
+            126.978,
+            34.0036
+          ],
+          [
+            128.9171,
+            34.5082
+          ],
+          [
+            129.1791,
+            36.454
+          ],
+          [
+            132.7578,
+            37.5665
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in coreano (Joseon). La dinastia Joseon duro' oltre 500 anni. Sotto il re Sejong fu creato l'alfabeto hangul (1443), uno dei sistemi di scrittura piu' scientifici al mondo. ETHICS-002: le invasioni giapponesi (Imjin War, 1592-1598) causarono devastazione immensa, inclusa la deportazione forzata di artigiani coreani in Giappone. Le invasioni mancesi (1627, 1636) imposero la vassallita' ai Qing. La colonizzazione giapponese (1905-1910) fu la fine traumatica di Joseon.",
     "name_variants": [
       {
@@ -1493,7 +2554,8 @@
         "citation": "Joseon Wangjo Sillok (Annali della Dinastia Joseon), Patrimonio UNESCO",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "تیموریان",
@@ -1504,9 +2566,67 @@
     "capital_name": "سمرقند",
     "capital_lat": 39.6542,
     "capital_lon": 66.9597,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.018,
+            39.6542
+          ],
+          [
+            76.7733,
+            43.9825
+          ],
+          [
+            74.4673,
+            48.4845
+          ],
+          [
+            66.9597,
+            50.2741
+          ],
+          [
+            60.6172,
+            47.2592
+          ],
+          [
+            58.2621,
+            44.2626
+          ],
+          [
+            53.0243,
+            39.6542
+          ],
+          [
+            53.4251,
+            33.4602
+          ],
+          [
+            58.4222,
+            26.2068
+          ],
+          [
+            66.9597,
+            27.2407
+          ],
+          [
+            76.0602,
+            29.5386
+          ],
+          [
+            81.5603,
+            33.8769
+          ],
+          [
+            78.018,
+            39.6542
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in persiano, lingua della cultura e amministrazione timuride. Timur (Tamerlano) e' una delle figure piu' controverse della storia: genio militare e patrono delle arti, ma anche responsabile di massacri di portata genocida. ETHICS-002: le campagne di Timur causarono la morte stimata di 17 milioni di persone (5% della popolazione mondiale dell'epoca). Piramidi di teschi, distruzione di citta', deportazioni di massa. ETHICS-003: Timur e' venerato come eroe nazionale in Uzbekistan — la molteplicita' delle interpretazioni va preservata.",
     "name_variants": [
       {
@@ -1581,7 +2701,8 @@
         "citation": "Ibn Arabshah, Ajaib al-Maqdur fi Nawa'ib al-Timur (c. 1435)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "اشکانیان",
@@ -1592,9 +2713,67 @@
     "capital_name": "تیسفون",
     "capital_lat": 33.0925,
     "capital_lon": 44.5814,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            58.7644,
+            33.0925
+          ],
+          [
+            55.697,
+            38.5748
+          ],
+          [
+            52.9698,
+            44.909
+          ],
+          [
+            44.5814,
+            44.7607
+          ],
+          [
+            38.3484,
+            41.7875
+          ],
+          [
+            30.6319,
+            39.6283
+          ],
+          [
+            30.7761,
+            33.0925
+          ],
+          [
+            32.6377,
+            27.083
+          ],
+          [
+            37.7807,
+            24.5039
+          ],
+          [
+            44.5814,
+            22.2182
+          ],
+          [
+            50.4213,
+            26.2224
+          ],
+          [
+            56.6444,
+            26.5983
+          ],
+          [
+            58.7644,
+            33.0925
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in persiano moderno (Ashkanian). In partico si chiamavano Arshakuniani. L'impero partico e' meno documentato degli Achemenidi e dei Sasanidi perche' gran parte delle fonti sono greco-romane e di parte. La storiografia partica e' in gran parte perduta. ETHICS-003: la rappresentazione dei Parti come 'nemici di Roma' nella storiografia occidentale oscura la complessita' della loro civilta'.",
     "name_variants": [
       {
@@ -1669,7 +2848,8 @@
         "citation": "Plutarco, Vita di Crasso",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ساسانیان",
@@ -1680,9 +2860,67 @@
     "capital_name": "تیسفون",
     "capital_lat": 33.0925,
     "capital_lon": 44.5814,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            56.2585,
+            33.0925
+          ],
+          [
+            54.6344,
+            37.11
+          ],
+          [
+            50.2168,
+            40.3188
+          ],
+          [
+            44.5814,
+            44.0526
+          ],
+          [
+            37.6104,
+            44.0043
+          ],
+          [
+            34.2487,
+            38.6946
+          ],
+          [
+            33.0268,
+            33.0925
+          ],
+          [
+            27.8884,
+            26.8113
+          ],
+          [
+            39.2358,
+            26.8297
+          ],
+          [
+            44.5814,
+            20.7785
+          ],
+          [
+            52.7763,
+            21.4394
+          ],
+          [
+            55.6223,
+            27.4802
+          ],
+          [
+            56.2585,
+            33.0925
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in persiano moderno. In pahlavi era Eranshahr. L'impero Sasanide fu l'ultimo grande impero persiano pre-islamico e rivale di Roma/Bisanzio per quattro secoli. ETHICS-002: la conquista araba (636-651) pose fine a una civilta' millenaria, ma va anche notato che molti Iraniani si convertirono all'Islam gradualmente e non solo per coercizione.",
     "name_variants": [
       {
@@ -1757,7 +2995,8 @@
         "citation": "Iscrizione di Shapur I a Naqsh-e Rostam (Res Gestae Divi Saporis)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "سلجوقیان",
@@ -1767,10 +3006,68 @@
     "year_end": 1194,
     "capital_name": "اصفهان",
     "capital_lat": 32.6546,
-    "capital_lon": 51.6680,
-    "confidence_score": 0.8,
+    "capital_lon": 51.668,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            65.1647,
+            32.6546
+          ],
+          [
+            63.4922,
+            38.8155
+          ],
+          [
+            55.887,
+            40.1995
+          ],
+          [
+            51.668,
+            40.8177
+          ],
+          [
+            45.0632,
+            44.3727
+          ],
+          [
+            41.6191,
+            37.1566
+          ],
+          [
+            38.3551,
+            32.6546
+          ],
+          [
+            43.603,
+            28.2768
+          ],
+          [
+            43.7555,
+            21.1163
+          ],
+          [
+            51.668,
+            22.6338
+          ],
+          [
+            58.3386,
+            22.3258
+          ],
+          [
+            61.6671,
+            27.9063
+          ],
+          [
+            65.1647,
+            32.6546
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in persiano, lingua della cultura e amministrazione Selgiuchide, sebbene i Selgiuchidi fossero Turchi Oghuz. La conquista selgiuchide trasformo' il Medio Oriente, portando alla turchizzazione dell'Anatolia e indirettamente provocando le Crociate. ETHICS-002: la Battaglia di Manzicerta (1071) apri' l'Anatolia ai Turchi, con progressiva trasformazione demografica e culturale della regione a spese delle popolazioni greche, armene e siriache.",
     "name_variants": [
       {
@@ -1845,7 +3142,8 @@
         "citation": "Nizam al-Mulk, Siyasat-nameh (Libro del Governo, c. 1091)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "遼朝",
@@ -1854,11 +3152,69 @@
     "year_start": 916,
     "year_end": 1125,
     "capital_name": "上京",
-    "capital_lat": 43.9800,
-    "capital_lon": 118.9500,
-    "confidence_score": 0.75,
+    "capital_lat": 43.98,
+    "capital_lon": 118.95,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            135.8459,
+            43.98
+          ],
+          [
+            130.7431,
+            47.8815
+          ],
+          [
+            129.4798,
+            55.1076
+          ],
+          [
+            118.95,
+            54.7438
+          ],
+          [
+            110.9674,
+            56.4266
+          ],
+          [
+            108.9197,
+            49.0394
+          ],
+          [
+            103.1239,
+            43.98
+          ],
+          [
+            105.0078,
+            37.59
+          ],
+          [
+            110.1992,
+            34.2904
+          ],
+          [
+            118.95,
+            35.6305
+          ],
+          [
+            125.1764,
+            36.497
+          ],
+          [
+            135.7559,
+            37.9264
+          ],
+          [
+            135.8459,
+            43.98
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome cinese 遼朝 e' la designazione della storiografia cinese. I Khitan erano un popolo nomade distinto dai cinesi Han. ETHICS-003: la dualita' amministrativa Liao (sistema settentrionale per i nomadi, meridionale per i cinesi sedentari) e' un esempio significativo di governance multietnica. Il nome 'Cina' in russo (Kitay) e in molte lingue turche e mongole deriva da 'Khitan'.",
     "name_variants": [
       {
@@ -1925,7 +3281,8 @@
         "citation": "Liaoshi (Storia dei Liao, compilata 1344)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "金朝",
@@ -1936,9 +3293,67 @@
     "capital_name": "中都",
     "capital_lat": 39.9042,
     "capital_lon": 116.4074,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            125.8719,
+            39.9042
+          ],
+          [
+            129.3532,
+            45.3455
+          ],
+          [
+            124.0226,
+            50.1305
+          ],
+          [
+            116.4074,
+            46.1596
+          ],
+          [
+            110.1531,
+            48.2579
+          ],
+          [
+            109.0706,
+            43.2071
+          ],
+          [
+            98.6148,
+            39.9042
+          ],
+          [
+            108.6229,
+            35.6699
+          ],
+          [
+            109.8529,
+            31.2939
+          ],
+          [
+            116.4074,
+            28.7674
+          ],
+          [
+            123.285,
+            30.1795
+          ],
+          [
+            129.388,
+            35.3016
+          ],
+          [
+            125.8719,
+            39.9042
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome cinese 金朝 e' la denominazione della storiografia cinese. I Jurchen sono gli antenati dei Mancesi. ETHICS-002: la caduta della Song Settentrionale (Incidente di Jingkang, 1127) e' uno dei traumi della storia cinese, con la cattura e l'umiliazione della famiglia imperiale Song.",
     "name_variants": [
       {
@@ -2005,7 +3420,8 @@
         "citation": "Jinshi (Storia dei Jin, compilata 1344)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "西夏",
@@ -2016,9 +3432,67 @@
     "capital_name": "興慶",
     "capital_lat": 38.4872,
     "capital_lon": 106.2309,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            109.7742,
+            38.4872
+          ],
+          [
+            108.6962,
+            39.5906
+          ],
+          [
+            108.3893,
+            41.4932
+          ],
+          [
+            106.2309,
+            41.2118
+          ],
+          [
+            104.5613,
+            40.5739
+          ],
+          [
+            101.8808,
+            40.1593
+          ],
+          [
+            103.8206,
+            38.4872
+          ],
+          [
+            102.8614,
+            36.9979
+          ],
+          [
+            104.1842,
+            36.0063
+          ],
+          [
+            106.2309,
+            35.8914
+          ],
+          [
+            108.3016,
+            35.6424
+          ],
+          [
+            108.9408,
+            37.362
+          ],
+          [
+            109.7742,
+            38.4872
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome cinese 西夏 e' l'esonimo cinese. I Tangut avevano una propria scrittura (oggi quasi completamente decifrata). ETHICS-002: la distruzione dei Xia Occidentali da parte di Gengis Khan (1227) fu quasi genocida: le citta' furono rase al suolo e gran parte della popolazione massacrata. La cultura tangut sopravvive solo nei manoscritti ritrovati nelle rovine di Khara-Khoto. Questo e' un caso di cancellazione culturale quasi completa.",
     "name_variants": [
       {
@@ -2077,7 +3551,8 @@
         "citation": "Kychanov, E.I. History of the Tangut State (1968)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "琉球國",
@@ -2088,9 +3563,67 @@
     "capital_name": "首里",
     "capital_lat": 26.2172,
     "capital_lon": 127.7194,
-    "confidence_score": 0.8,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            130.6376,
+            26.2172
+          ],
+          [
+            130.9787,
+            28.4281
+          ],
+          [
+            129.1263,
+            28.4349
+          ],
+          [
+            127.7194,
+            30.5898
+          ],
+          [
+            125.8931,
+            29.9759
+          ],
+          [
+            125.5604,
+            27.3214
+          ],
+          [
+            124.4784,
+            26.2172
+          ],
+          [
+            125.4164,
+            24.9022
+          ],
+          [
+            125.2978,
+            22.8285
+          ],
+          [
+            127.7194,
+            23.9739
+          ],
+          [
+            129.108,
+            23.7974
+          ],
+          [
+            131.8643,
+            24.3762
+          ],
+          [
+            130.6376,
+            26.2172
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome puo' essere reso anche in lingua ryukyuana (Ruuchuu). Le isole Ryukyu avevano una cultura distinta sia da quella giapponese che da quella cinese, con proprie lingue (oggi a rischio di estinzione). ETHICS-002: l'annessione forzata da parte del Giappone (1879) e la successiva politica di assimilazione che soppresse la lingua e la cultura ryukyuana rappresentano un caso di colonizzazione interna. ETHICS-003: la Battaglia di Okinawa (1945) causo' la morte di un quarto della popolazione civile. L'identita' ryukyuana resta un tema sensibile in Giappone.",
     "name_variants": [
       {
@@ -2149,7 +3682,8 @@
         "citation": "Castello di Shuri, Patrimonio UNESCO",
         "source_type": "archaeological"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ล้านนา",
@@ -2160,9 +3694,67 @@
     "capital_name": "เชียงใหม่",
     "capital_lat": 18.7883,
     "capital_lon": 98.9853,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            101.7797,
+            18.7883
+          ],
+          [
+            103.3955,
+            20.818
+          ],
+          [
+            100.306,
+            20.8389
+          ],
+          [
+            98.9853,
+            21.6007
+          ],
+          [
+            96.9809,
+            22.9509
+          ],
+          [
+            94.5139,
+            21.2892
+          ],
+          [
+            95.1553,
+            18.7883
+          ],
+          [
+            96.3163,
+            17.5418
+          ],
+          [
+            97.197,
+            15.839
+          ],
+          [
+            98.9853,
+            14.8126
+          ],
+          [
+            101.1347,
+            14.7757
+          ],
+          [
+            102.7168,
+            16.8417
+          ],
+          [
+            101.7797,
+            18.7883
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in tai (Lanna, 'un milione di risaie'). Il regno di Lan Na era culturalmente distinto dal Siam/Ayutthaya, con propria scrittura (Tai Tham) e identita' regionale che persiste oggi nella Thailandia settentrionale. ETHICS-003: la sottomissione birma (1558-1775) e poi l'integrazione nel Siam hanno progressivamente marginalizzato l'identita' Lanna come entita' distinta.",
     "name_variants": [
       {
@@ -2221,7 +3813,8 @@
         "citation": "Lieberman, V. Strange Parallels: Southeast Asia in Global Context (2003)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ล้านช้าง",
@@ -2232,9 +3825,67 @@
     "capital_name": "ຫລວງພະບາງ",
     "capital_lat": 19.8856,
     "capital_lon": 102.1347,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            105.775,
+            19.8856
+          ],
+          [
+            105.622,
+            21.6109
+          ],
+          [
+            104.2645,
+            23.5089
+          ],
+          [
+            102.1347,
+            22.2408
+          ],
+          [
+            99.6461,
+            23.5118
+          ],
+          [
+            99.5887,
+            21.3264
+          ],
+          [
+            98.4521,
+            19.8856
+          ],
+          [
+            98.7735,
+            18.08
+          ],
+          [
+            99.9619,
+            16.9065
+          ],
+          [
+            102.1347,
+            15.6721
+          ],
+          [
+            104.1429,
+            17.109
+          ],
+          [
+            105.7988,
+            18.1378
+          ],
+          [
+            105.775,
+            19.8856
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in lao (Lan Xang, 'un milione di elefanti'). Lan Xang fu il primo grande stato unitario lao. ETHICS-003: la storia di Lan Xang e' spesso raccontata attraverso fonti thai e vietnamite; le fonti lao sono piu' scarse e meritano attenzione.",
     "name_variants": [
       {
@@ -2285,7 +3936,8 @@
         "citation": "Cronache di Luang Prabang (Phongsawadan)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ပုဂံ ခေတ်",
@@ -2296,9 +3948,67 @@
     "capital_name": "ပုဂံ",
     "capital_lat": 21.1717,
     "capital_lon": 94.8585,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            97.6919,
+            21.1717
+          ],
+          [
+            97.8739,
+            22.9604
+          ],
+          [
+            96.3403,
+            23.7078
+          ],
+          [
+            94.8585,
+            24.3629
+          ],
+          [
+            93.1024,
+            23.7825
+          ],
+          [
+            90.7996,
+            23.049
+          ],
+          [
+            90.0716,
+            21.1717
+          ],
+          [
+            92.3995,
+            19.8575
+          ],
+          [
+            92.7719,
+            18.0667
+          ],
+          [
+            94.8585,
+            17.8581
+          ],
+          [
+            96.2974,
+            19.1528
+          ],
+          [
+            97.757,
+            19.4158
+          ],
+          [
+            97.6919,
+            21.1717
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in birmano. Il regno di Pagan (Bagan) fu il primo stato unificato birmano. ETHICS-002: l'unificazione birmana sotto Anawrahta comporto' la conquista del regno Mon di Thaton (1057), con deportazione di monaci, artigiani e popolazione Mon. I Mon contribuirono in modo determinante alla cultura e al buddhismo birmano, ma questa appropriazione culturale e' spesso minimizzata.",
     "name_variants": [
       {
@@ -2365,7 +4075,8 @@
         "citation": "Iscrizioni in pietra di Bagan, Patrimonio UNESCO",
         "source_type": "archaeological"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "大越",
@@ -2376,9 +4087,67 @@
     "capital_name": "昇龍",
     "capital_lat": 21.0285,
     "capital_lon": 105.8542,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            108.6036,
+            21.0285
+          ],
+          [
+            108.7218,
+            22.6063
+          ],
+          [
+            107.1696,
+            23.4901
+          ],
+          [
+            105.8542,
+            24.7267
+          ],
+          [
+            103.542,
+            24.2029
+          ],
+          [
+            102.4347,
+            22.7727
+          ],
+          [
+            103.3668,
+            21.0285
+          ],
+          [
+            103.5288,
+            19.839
+          ],
+          [
+            103.4566,
+            17.5229
+          ],
+          [
+            105.8542,
+            18.3647
+          ],
+          [
+            107.4613,
+            17.7505
+          ],
+          [
+            108.5112,
+            19.6775
+          ],
+          [
+            108.6036,
+            21.0285
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome 大越 (Dai Viet) e' in caratteri cinesi (chu Han) ma rappresenta uno stato vietnamita distinto dalla Cina. ETHICS-002: la storia di Dai Viet e' segnata dalla resistenza alla dominazione cinese e dalla progressiva espansione verso sud (Nam Tien) a spese del regno di Champa e dei Khmer, un processo coloniale interno che va documentato onestamente. ETHICS-003: il Nam Tien e' celebrato nel nazionalismo vietnamita ma fu devastante per Champa e i Khmer del Mekong.",
     "name_variants": [
       {
@@ -2445,7 +4214,8 @@
         "citation": "Lieberman, V. Strange Parallels, Vol. I (2003)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "పల్లవ",
@@ -2456,9 +4226,67 @@
     "capital_name": "కాంచీపురం",
     "capital_lat": 12.8342,
     "capital_lon": 79.7036,
-    "confidence_score": 0.65,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            82.6729,
+            12.8342
+          ],
+          [
+            82.8988,
+            14.6465
+          ],
+          [
+            81.4008,
+            15.4223
+          ],
+          [
+            79.7036,
+            16.164
+          ],
+          [
+            77.4936,
+            16.3708
+          ],
+          [
+            77.1803,
+            14.2577
+          ],
+          [
+            76.2171,
+            12.8342
+          ],
+          [
+            77.5497,
+            11.468
+          ],
+          [
+            77.9062,
+            9.3019
+          ],
+          [
+            79.7036,
+            10.7624
+          ],
+          [
+            81.5383,
+            9.4247
+          ],
+          [
+            82.1626,
+            11.5217
+          ],
+          [
+            82.6729,
+            12.8342
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' dato in telugu, sebbene i Pallava governassero un territorio prevalentemente di lingua tamil. I templi rupestri di Mahabalipuram (patrimonio UNESCO) sono il contributo architettonico piu' noto. ETHICS-003: la rivalita' secolare Pallava-Chalukya rappresenta uno schema ricorrente della storia indiana meridionale.",
     "name_variants": [
       {
@@ -2525,7 +4353,8 @@
         "citation": "Iscrizioni Pallava su rame e pietra",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "राष्ट्रकूट",
@@ -2536,9 +4365,67 @@
     "capital_name": "मान्यखेट",
     "capital_lat": 16.0544,
     "capital_lon": 76.5194,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            85.6258,
+            16.0544
+          ],
+          [
+            84.3135,
+            20.3456
+          ],
+          [
+            82.1934,
+            23.7961
+          ],
+          [
+            76.5194,
+            23.7065
+          ],
+          [
+            71.9018,
+            24.1199
+          ],
+          [
+            68.335,
+            20.4318
+          ],
+          [
+            68.2189,
+            16.0544
+          ],
+          [
+            70.3577,
+            12.2101
+          ],
+          [
+            71.1552,
+            8.874
+          ],
+          [
+            76.5194,
+            6.5822
+          ],
+          [
+            79.742,
+            10.7577
+          ],
+          [
+            82.5972,
+            12.9271
+          ],
+          [
+            85.6258,
+            16.0544
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in sanscrito. I Rashtrakuta governarono un impero vasto e multiculturale. I templi di Ellora (Kailasanatha, tempio monolitico piu' grande del mondo) sono patrimonio UNESCO. ETHICS-003: i Rashtrakuta praticavano tolleranza religiosa, patrocinando sia templi Hindu che Jain. Le fonti arabe li descrivono come uno dei quattro grandi imperi del mondo dell'epoca.",
     "name_variants": [
       {
@@ -2597,7 +4484,8 @@
         "citation": "Al-Masudi, Muruj adh-Dhahab (Prati d'Oro, c. 947)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "पाल राजवंश",
@@ -2607,10 +4495,68 @@
     "year_end": 1161,
     "capital_name": "पाटलिपुत्र",
     "capital_lat": 25.6115,
-    "capital_lon": 85.1440,
-    "confidence_score": 0.65,
+    "capital_lon": 85.144,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            88.0615,
+            25.6115
+          ],
+          [
+            89.05,
+            27.6599
+          ],
+          [
+            87.1389,
+            28.6437
+          ],
+          [
+            85.144,
+            29.0182
+          ],
+          [
+            82.63,
+            29.1123
+          ],
+          [
+            81.8191,
+            27.4124
+          ],
+          [
+            81.9255,
+            25.6115
+          ],
+          [
+            82.0464,
+            23.8352
+          ],
+          [
+            83.3358,
+            23.0748
+          ],
+          [
+            85.144,
+            22.9499
+          ],
+          [
+            87.0712,
+            21.7222
+          ],
+          [
+            88.3752,
+            23.7472
+          ],
+          [
+            88.0615,
+            25.6115
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in sanscrito. I Pala furono l'ultima grande dinastia buddhista dell'India e fondarono le universita' di Vikramashila e Odantapuri. ETHICS-003: il ruolo dei Pala nella trasmissione del buddhismo in Tibet e nel Sud-est asiatico e' fondamentale. La distruzione delle universita' buddhiste durante le conquiste islamiche rappresenta una perdita culturale inestimabile.",
     "name_variants": [
       {
@@ -2669,7 +4615,8 @@
         "citation": "Taranatha, History of Buddhism in India (1608, tradotto 1970)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ಹೊಯ್ಸಳ",
@@ -2680,9 +4627,67 @@
     "capital_name": "ಹಳೇಬೀಡು",
     "capital_lat": 13.2113,
     "capital_lon": 75.9933,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.4598,
+            13.2113
+          ],
+          [
+            79.3805,
+            15.3855
+          ],
+          [
+            77.5209,
+            15.5339
+          ],
+          [
+            75.9933,
+            15.4963
+          ],
+          [
+            74.1837,
+            16.3421
+          ],
+          [
+            73.4903,
+            14.4036
+          ],
+          [
+            72.3775,
+            13.2113
+          ],
+          [
+            73.2365,
+            11.9508
+          ],
+          [
+            74.2714,
+            9.8393
+          ],
+          [
+            75.9933,
+            10.4029
+          ],
+          [
+            77.9768,
+            9.7249
+          ],
+          [
+            77.8944,
+            12.1638
+          ],
+          [
+            78.4598,
+            13.2113
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in kannada. Gli Hoysala sono noti per i templi decorati di Belur e Halebidu (candidatura patrimonio UNESCO). ETHICS-003: la distruzione di Halebidu da parte delle forze del Sultanato di Delhi sotto Malik Kafur (1311) e' un esempio di devastazione militare contro il patrimonio culturale.",
     "name_variants": [
       {
@@ -2741,7 +4746,8 @@
         "citation": "Iscrizioni su pietra Hoysala, Karnataka",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "चालुक्य",
@@ -2752,9 +4758,67 @@
     "capital_name": "वातापी",
     "capital_lat": 15.9196,
     "capital_lon": 75.6836,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            84.1382,
+            15.9196
+          ],
+          [
+            84.1522,
+            21.7417
+          ],
+          [
+            81.1489,
+            25.3832
+          ],
+          [
+            75.6836,
+            26.2625
+          ],
+          [
+            70.6728,
+            22.7712
+          ],
+          [
+            67.7995,
+            20.7945
+          ],
+          [
+            65.8198,
+            15.9196
+          ],
+          [
+            63.0516,
+            9.8828
+          ],
+          [
+            70.2143,
+            6.9233
+          ],
+          [
+            75.6836,
+            3.1525
+          ],
+          [
+            80.0479,
+            9.3617
+          ],
+          [
+            85.9813,
+            9.6733
+          ],
+          [
+            84.1382,
+            15.9196
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in sanscrito. I Chalukya di Badami sono la prima delle tre linee Chalukya (Badami, Kalyani, Vengi). ETHICS-003: i Chalukya contribuirono significativamente all'architettura templare (Pattadakal, patrimonio UNESCO) e alla tradizione letteraria in kannada e sanscrito.",
     "name_variants": [
       {
@@ -2821,7 +4885,8 @@
         "citation": "Aihole Inscription di Pulakeshin II (634 d.C.)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "吐蕃",
@@ -2830,11 +4895,69 @@
     "year_start": 618,
     "year_end": 842,
     "capital_name": "ལྷ་ས",
-    "capital_lat": 29.6520,
+    "capital_lat": 29.652,
     "capital_lon": 91.1721,
-    "confidence_score": 0.7,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            101.7574,
+            29.652
+          ],
+          [
+            105.8139,
+            35.4968
+          ],
+          [
+            97.3746,
+            38.0963
+          ],
+          [
+            91.1721,
+            38.0518
+          ],
+          [
+            84.9879,
+            38.8294
+          ],
+          [
+            78.7346,
+            35.5711
+          ],
+          [
+            79.7817,
+            29.652
+          ],
+          [
+            79.2988,
+            24.6924
+          ],
+          [
+            84.795,
+            19.1049
+          ],
+          [
+            91.1721,
+            17.0187
+          ],
+          [
+            96.8099,
+            21.0904
+          ],
+          [
+            101.6822,
+            24.26
+          ],
+          [
+            101.7574,
+            29.652
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome 吐蕃 e' l'esonimo cinese. In tibetano l'impero era Bod. ETHICS-002: l'Impero Tibetano fu una potenza militare maggiore che conquisto' brevemente Chang'an (capitale Tang) nel 763. ETHICS-003: la rappresentazione dell'Impero Tibetano come entita' sovrana e' politicamente sensibile nel contesto della disputa sul Tibet. Questo database documenta l'impero come entita' indipendente sulla base delle evidenze storiche.",
     "name_variants": [
       {
@@ -2901,7 +5024,8 @@
         "citation": "Pilastro di Zhol, Lhasa (trattato sino-tibetano dell'821/823)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ئۇيغۇر خانلىقى",
@@ -2910,11 +5034,69 @@
     "year_start": 744,
     "year_end": 840,
     "capital_name": "Ordu-Baliq",
-    "capital_lat": 47.9000,
-    "capital_lon": 102.8000,
-    "confidence_score": 0.6,
+    "capital_lat": 47.9,
+    "capital_lon": 102.8,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            114.5984,
+            47.9
+          ],
+          [
+            115.9167,
+            53.6901
+          ],
+          [
+            107.7757,
+            53.5938
+          ],
+          [
+            102.8,
+            55.544
+          ],
+          [
+            93.6413,
+            58.2989
+          ],
+          [
+            93.7707,
+            51.7166
+          ],
+          [
+            89.0826,
+            47.9
+          ],
+          [
+            95.0355,
+            45.1838
+          ],
+          [
+            97.1683,
+            39.9426
+          ],
+          [
+            102.8,
+            41.379
+          ],
+          [
+            110.3887,
+            39.7273
+          ],
+          [
+            111.0568,
+            45.0912
+          ],
+          [
+            114.5984,
+            47.9
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in uiguro moderno. Il Khaganato Uiguro fu un impero nomade che adotto' il manicheismo come religione di stato — l'unico stato a farlo. ETHICS-003: la storia del Khaganato Uiguro e' sensibile nel contesto della situazione attuale degli Uiguri nello Xinjiang. L'uso del termine 'Uiguro' per questo khaganato medievale non implica continuita' diretta con gli Uiguri moderni, sebbene la connessione culturale sia rivendicata.",
     "name_variants": [
       {
@@ -2981,7 +5163,8 @@
         "citation": "Iscrizioni di Karabalgasun (bilingue turco antico-sogdiano-cinese)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Đại Nam",
@@ -2992,9 +5175,67 @@
     "capital_name": "Huế",
     "capital_lat": 16.4637,
     "capital_lon": 107.5909,
-    "confidence_score": 0.85,
+    "confidence_score": 0.75,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            122.33,
+            16.4637
+          ],
+          [
+            118.3102,
+            21.4921
+          ],
+          [
+            112.7343,
+            24.9059
+          ],
+          [
+            107.5909,
+            27.211
+          ],
+          [
+            100.5962,
+            28.4678
+          ],
+          [
+            97.5383,
+            21.8088
+          ],
+          [
+            99.097,
+            16.4637
+          ],
+          [
+            96.4405,
+            10.1941
+          ],
+          [
+            100.3911,
+            4.6634
+          ],
+          [
+            107.5909,
+            2.8291
+          ],
+          [
+            114.4179,
+            4.7464
+          ],
+          [
+            118.5826,
+            10.1344
+          ],
+          [
+            122.33,
+            16.4637
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in vietnamita (quoc ngu). La dinastia Nguyen e' l'ultima dinastia vietnamita. ETHICS-002: la colonizzazione francese dell'Indocina (1858-1884) ridusse progressivamente i Nguyen a sovrani fantoccio. La citta' imperiale di Hue' fu gravemente danneggiata durante l'Offensiva del Tet (1968). ETHICS-003: la dinastia Nguyen e' controversa in Vietnam: vista sia come unificatrice del paese che come responsabile dell'apertura al colonialismo francese.",
     "name_variants": [
       {
@@ -3069,7 +5310,8 @@
         "citation": "Citta' imperiale di Hue', Patrimonio UNESCO",
         "source_type": "archaeological"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ហ្វូណន",
@@ -3078,11 +5320,69 @@
     "year_start": 50,
     "year_end": 550,
     "capital_name": "Oc Eo",
-    "capital_lat": 10.2530,
-    "capital_lon": 105.1540,
-    "confidence_score": 0.45,
+    "capital_lat": 10.253,
+    "capital_lon": 105.154,
+    "confidence_score": 0.35,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            107.4649,
+            10.253
+          ],
+          [
+            107.9347,
+            11.8579
+          ],
+          [
+            106.7207,
+            12.9106
+          ],
+          [
+            105.154,
+            12.3239
+          ],
+          [
+            103.656,
+            12.8408
+          ],
+          [
+            102.7773,
+            11.7281
+          ],
+          [
+            103.2336,
+            10.253
+          ],
+          [
+            102.9402,
+            9.2539
+          ],
+          [
+            103.5949,
+            7.7301
+          ],
+          [
+            105.154,
+            7.8165
+          ],
+          [
+            106.5071,
+            7.751
+          ],
+          [
+            106.8936,
+            9.1116
+          ],
+          [
+            107.4649,
+            10.253
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome 'Funan' e' l'esonimo cinese (扶南). Il nome originale e' incerto — potrebbe derivare dal khmer antico 'bnam' (montagna). Le fonti sono quasi esclusivamente cinesi. ETHICS-003: Funan e' il primo stato indianizzato documentato del Sud-est asiatico. La sua esistenza come entita' politica unitaria e' dibattuta: alcuni lo vedono come una rete commerciale. Il confidence_score e' basso per riflettere questa incertezza.",
     "name_variants": [
       {
@@ -3141,7 +5441,8 @@
         "citation": "Scavi archeologici di Oc Eo, Vietnam",
         "source_type": "archaeological"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ทวารวดี",
@@ -3151,10 +5452,68 @@
     "year_end": 1050,
     "capital_name": "นครปฐม",
     "capital_lat": 13.8199,
-    "capital_lon": 100.0650,
-    "confidence_score": 0.45,
+    "capital_lon": 100.065,
+    "confidence_score": 0.35,
     "status": "uncertain",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            102.0877,
+            13.8199
+          ],
+          [
+            102.3537,
+            14.8507
+          ],
+          [
+            101.4627,
+            16.4811
+          ],
+          [
+            100.065,
+            16.2167
+          ],
+          [
+            98.6274,
+            16.2643
+          ],
+          [
+            96.7476,
+            15.6416
+          ],
+          [
+            96.7541,
+            13.8199
+          ],
+          [
+            98.2082,
+            12.7586
+          ],
+          [
+            98.3366,
+            11.1056
+          ],
+          [
+            100.065,
+            11.1103
+          ],
+          [
+            101.5316,
+            11.2947
+          ],
+          [
+            102.5697,
+            12.5543
+          ],
+          [
+            102.0877,
+            13.8199
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome e' in thai moderno, derivato dal sanscrito Dvaravati. La popolazione era principalmente Mon, non Thai. L'uso del nome thai per un regno Mon e' una forma di appropriazione storiografica. ETHICS-003: Dvaravati e' noto principalmente da fonti archeologiche e numismatiche. La sua struttura politica e' dibattuta. Il confidence_score e' basso per riflettere l'incertezza.",
     "name_variants": [
       {
@@ -3205,7 +5564,8 @@
         "citation": "Monete di Dvaravati con iscrizioni in sanscrito e mon antico",
         "source_type": "archaeological"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "渤海國",
@@ -3214,11 +5574,69 @@
     "year_start": 698,
     "year_end": 926,
     "capital_name": "上京龍泉府",
-    "capital_lat": 44.0500,
-    "capital_lon": 128.7500,
-    "confidence_score": 0.65,
+    "capital_lat": 44.05,
+    "capital_lon": 128.75,
+    "confidence_score": 0.55,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            134.2207,
+            44.05
+          ],
+          [
+            132.919,
+            45.985
+          ],
+          [
+            130.647,
+            46.7671
+          ],
+          [
+            128.75,
+            46.1966
+          ],
+          [
+            127.2478,
+            45.8581
+          ],
+          [
+            124.5266,
+            45.678
+          ],
+          [
+            123.8081,
+            44.05
+          ],
+          [
+            125.1563,
+            42.7368
+          ],
+          [
+            126.7778,
+            41.2541
+          ],
+          [
+            128.75,
+            40.5062
+          ],
+          [
+            131.1186,
+            41.5857
+          ],
+          [
+            133.8776,
+            41.9496
+          ],
+          [
+            134.2207,
+            44.05
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome cinese 渤海國 e' la forma piu' attestata. Balhae e' oggetto di una disputa storiografica simile a Goguryeo: la Corea lo rivendica come stato coreano, la Cina come stato locale cinese. ETHICS-003: questo database presenta Balhae come entita' multietnica (Mohe/Malgal e Goguryeo) senza risolvere la disputa.",
     "name_variants": [
       {
@@ -3277,7 +5695,8 @@
         "citation": "Xin Tangshu (Nuovo Libro dei Tang), capitoli su Balhae",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "මහා විජයබාහු",
@@ -3288,9 +5707,67 @@
     "capital_name": "අනුරාධපුරය",
     "capital_lat": 8.3114,
     "capital_lon": 80.4037,
-    "confidence_score": 0.6,
+    "confidence_score": 0.5,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            83.1283,
+            8.3114
+          ],
+          [
+            82.9047,
+            9.7385
+          ],
+          [
+            81.5669,
+            10.1708
+          ],
+          [
+            80.4037,
+            11.0231
+          ],
+          [
+            79.6581,
+            9.6865
+          ],
+          [
+            78.7328,
+            9.3476
+          ],
+          [
+            78.3686,
+            8.3114
+          ],
+          [
+            78.5053,
+            7.2008
+          ],
+          [
+            79.3602,
+            6.6166
+          ],
+          [
+            80.4037,
+            5.6371
+          ],
+          [
+            81.842,
+            6.357
+          ],
+          [
+            83.1488,
+            6.583
+          ],
+          [
+            83.1283,
+            8.3114
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in singalese. La data di fondazione (-543 a.C.) e' basata sulla tradizione del Mahavamsa e non e' confermata archeologicamente. ETHICS-002: la storia di Sri Lanka e' segnata dalla tensione tra la maggioranza singalese buddhista e la minoranza tamil Hindu, un conflitto con radici storiche profonde. Il Mahavamsa presenta una narrazione etnocentrica che ha influenzato il nazionalismo singalese moderno. ETHICS-003: la rappresentazione di Sri Lanka come 'isola buddhista singalese' ignora la presenza tamil millenaria.",
     "name_variants": [
       {
@@ -3365,7 +5842,8 @@
         "citation": "Citta' sacra di Anuradhapura, Patrimonio UNESCO",
         "source_type": "archaeological"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "غزنویان",
@@ -3375,10 +5853,68 @@
     "year_end": 1186,
     "capital_name": "غزنی",
     "capital_lat": 33.5531,
-    "capital_lon": 68.4200,
-    "confidence_score": 0.8,
+    "capital_lon": 68.42,
+    "confidence_score": 0.7,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            86.8458,
+            33.5531
+          ],
+          [
+            78.5443,
+            38.5438
+          ],
+          [
+            74.4546,
+            41.7191
+          ],
+          [
+            68.42,
+            41.6244
+          ],
+          [
+            60.5515,
+            43.3125
+          ],
+          [
+            58.3614,
+            38.359
+          ],
+          [
+            53.645,
+            33.5531
+          ],
+          [
+            57.9709,
+            27.9441
+          ],
+          [
+            62.9887,
+            26.1521
+          ],
+          [
+            68.42,
+            20.0704
+          ],
+          [
+            73.9099,
+            24.1806
+          ],
+          [
+            81.9309,
+            26.5212
+          ],
+          [
+            86.8458,
+            33.5531
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in persiano. I Ghaznavidi erano di origine turca ma adottarono la cultura persiana. ETHICS-002: Mahmud di Ghazni condusse 17 campagne in India (1001-1027). Il saccheggio del tempio di Somnath (1025) e' un evento-simbolo del trauma Hindu. I raid coinvolsero distruzione di templi, saccheggio e massacri. ETHICS-003: Mahmud e' visto come eroe nell'Islam sunnita e come distruttore nella storiografia Hindu — entrambe le prospettive vanno documentate.",
     "name_variants": [
       {
@@ -3437,7 +5973,8 @@
         "citation": "Eaton, R. Temple Desecration and Muslim States in Medieval India (2000)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "سلطنت ملایو ملاکا",
@@ -3448,9 +5985,67 @@
     "capital_name": "Melaka",
     "capital_lat": 2.1896,
     "capital_lon": 102.2501,
-    "confidence_score": 0.75,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            105.4411,
+            2.1896
+          ],
+          [
+            105.3412,
+            3.8515
+          ],
+          [
+            104.1156,
+            5.6943
+          ],
+          [
+            102.2501,
+            6.0083
+          ],
+          [
+            100.9919,
+            4.6849
+          ],
+          [
+            99.1833,
+            3.8358
+          ],
+          [
+            98.9233,
+            2.1896
+          ],
+          [
+            100.0752,
+            0.9085
+          ],
+          [
+            101.1738,
+            0.0669
+          ],
+          [
+            102.2501,
+            -0.1874
+          ],
+          [
+            103.519,
+            -0.2207
+          ],
+          [
+            104.5257,
+            0.7242
+          ],
+          [
+            105.4411,
+            2.1896
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in malese (jawi). Il Sultanato di Malacca e' fondamentale per l'identita' malese e per la diffusione dell'Islam nel Sud-est asiatico. ETHICS-002: la conquista portoghese di Malacca (1511) e' l'inizio del colonialismo europeo nel Sud-est asiatico. ETHICS-003: la narrativa del 'sultanato ideale' nel nazionalismo malese va bilanciata con la realta' della schiavitu' e delle gerarchie sociali rigide.",
     "name_variants": [
       {
@@ -3509,7 +6104,8 @@
         "citation": "Tome Pires, Suma Oriental (c. 1515)",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "ᠵᠡᠭᠦᠨᠭᠠᠷ",
@@ -3518,11 +6114,69 @@
     "year_start": 1634,
     "year_end": 1755,
     "capital_name": "Ghulja",
-    "capital_lat": 43.9170,
-    "capital_lon": 81.3240,
-    "confidence_score": 0.75,
+    "capital_lat": 43.917,
+    "capital_lon": 81.324,
+    "confidence_score": 0.65,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            98.7026,
+            43.917
+          ],
+          [
+            92.3108,
+            48.1119
+          ],
+          [
+            89.6257,
+            52.9452
+          ],
+          [
+            81.324,
+            54.6988
+          ],
+          [
+            75.8347,
+            50.8386
+          ],
+          [
+            69.0404,
+            48.3716
+          ],
+          [
+            68.1055,
+            43.917
+          ],
+          [
+            65.9915,
+            38.3423
+          ],
+          [
+            72.5918,
+            31.5187
+          ],
+          [
+            81.324,
+            34.5695
+          ],
+          [
+            88.7894,
+            34.3981
+          ],
+          [
+            92.6359,
+            39.0612
+          ],
+          [
+            98.7026,
+            43.917
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: il nome originale e' in mongolo (Zuungar/Dzungar, 'mano sinistra'). Gli Dzungari erano mongoli Oirati. ETHICS-002: il genocidio degli Dzungari perpetrato dalla dinastia Qing (1755-1758) e' uno degli episodi piu' gravi della storia dell'Asia Centrale. Circa il 80% della popolazione Dzungara fu sterminata — circa 500.000-800.000 persone. Questo va documentato come genocidio. ETHICS-003: il genocidio Dzungaro e' un precedente storico significativo nella regione dello Xinjiang/Turkestan Orientale. La sostituzione demografica e' un fatto documentato.",
     "name_variants": [
       {
@@ -3589,6 +6243,7 @@
         "citation": "Qing Shilu (Annali Veritieri dei Qing), capitoli sull'imperatore Qianlong",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   }
 ]

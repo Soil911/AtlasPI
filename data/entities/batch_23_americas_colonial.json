@@ -8,8 +8,66 @@
     "capital_name": "Lima",
     "capital_lat": -12.046,
     "capital_lon": -77.043,
-    "boundary_geojson": null,
-    "confidence_score": 0.85,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -71.4483,
+            -12.046
+          ],
+          [
+            -72.2992,
+            -9.2029
+          ],
+          [
+            -74.394,
+            -7.4148
+          ],
+          [
+            -77.043,
+            -7.3588
+          ],
+          [
+            -79.6777,
+            -6.9803
+          ],
+          [
+            -80.1259,
+            -10.1945
+          ],
+          [
+            -82.4927,
+            -12.046
+          ],
+          [
+            -82.1038,
+            -15.2383
+          ],
+          [
+            -78.9661,
+            -16.2763
+          ],
+          [
+            -77.043,
+            -15.882
+          ],
+          [
+            -75.3812,
+            -15.2841
+          ],
+          [
+            -71.9484,
+            -15.3056
+          ],
+          [
+            -71.4483,
+            -12.046
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.75,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Viceroyalty of Peru was the principal Spanish colonial administration in South America, built on the conquered territories of the Inca Empire (Tawantinsuyu) and dozens of other indigenous polities. The encomienda and mita systems constituted forced labor regimes that devastated indigenous populations. The mercury mining at Huancavelica and silver mining at Potosi killed hundreds of thousands of indigenous and enslaved African workers. Indigenous population collapse from disease, overwork, and violence reduced the pre-contact population of the Andean region by an estimated 80-90% within the first century of colonization. The viceroyalty's administrative boundaries were imposed without regard for pre-existing indigenous territorial organization.",
     "name_variants": [
@@ -71,7 +129,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Virreinato del Rio de la Plata",
@@ -82,8 +141,66 @@
     "capital_name": "Buenos Aires",
     "capital_lat": -34.604,
     "capital_lon": -58.382,
-    "boundary_geojson": null,
-    "confidence_score": 0.85,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -51.2764,
+            -34.604
+          ],
+          [
+            -53.8936,
+            -32.7503
+          ],
+          [
+            -55.7331,
+            -29.8078
+          ],
+          [
+            -58.382,
+            -30.3286
+          ],
+          [
+            -61.6421,
+            -29.0306
+          ],
+          [
+            -64.6134,
+            -32.2521
+          ],
+          [
+            -64.1654,
+            -34.604
+          ],
+          [
+            -64.6228,
+            -37.616
+          ],
+          [
+            -62.0948,
+            -38.6779
+          ],
+          [
+            -58.382,
+            -39.3212
+          ],
+          [
+            -55.9867,
+            -38.4698
+          ],
+          [
+            -53.0086,
+            -36.5957
+          ],
+          [
+            -51.2764,
+            -34.604
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.75,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Viceroyalty of the Rio de la Plata was created from territories previously under the Viceroyalty of Peru. Its establishment served Spanish mercantilist interests and the defense against Portuguese/Brazilian expansion. The territory encompassed lands of numerous indigenous peoples including the Guarani, Mapuche, Charrua, Diaguita, and Tehuelche, whose territorial sovereignty was not recognized. The Jesuit missions (reducciones) among the Guarani, while offering some protection from enslavement, also constituted a form of cultural transformation. The Spanish silver trade from Potosi, which economically justified the viceroyalty, was built on coerced indigenous labor under the mita system.",
     "name_variants": [
@@ -140,7 +257,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Capitania General de Guatemala",
@@ -151,8 +269,66 @@
     "capital_name": "Santiago de los Caballeros de Guatemala",
     "capital_lat": 14.561,
     "capital_lon": -90.734,
-    "boundary_geojson": null,
-    "confidence_score": 0.8,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -85.8541,
+            14.561
+          ],
+          [
+            -84.333,
+            18.1478
+          ],
+          [
+            -88.3776,
+            18.4057
+          ],
+          [
+            -90.734,
+            18.7761
+          ],
+          [
+            -94.3826,
+            20.1439
+          ],
+          [
+            -96.3921,
+            17.5428
+          ],
+          [
+            -96.0519,
+            14.561
+          ],
+          [
+            -94.5705,
+            12.004
+          ],
+          [
+            -93.2342,
+            10.3458
+          ],
+          [
+            -90.734,
+            9.6323
+          ],
+          [
+            -86.8673,
+            8.4818
+          ],
+          [
+            -86.2126,
+            12.0841
+          ],
+          [
+            -85.8541,
+            14.561
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.7,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Captaincy General of Guatemala administered the territories of numerous Maya peoples (K'iche', Kaqchikel, Tz'utujil, Mam, Q'eqchi', and many others), as well as Lenca, Pipil, Chorotega, and other indigenous nations. The Spanish conquest of Guatemala under Pedro de Alvarado (1524) was exceptionally brutal. Forced labor under the repartimiento system, disease epidemics, and cultural suppression through the extirpation of indigenous religion devastated these communities. The capital was destroyed by earthquakes multiple times, reflecting the hazardous geography. Maya resistance continued throughout the colonial period, including the long-unconquered Itza Maya of Tayasal (not conquered until 1697).",
     "name_variants": [
@@ -209,7 +385,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Capitania General de Cuba",
@@ -220,8 +397,66 @@
     "capital_name": "La Habana",
     "capital_lat": 23.136,
     "capital_lon": -82.359,
-    "boundary_geojson": null,
-    "confidence_score": 0.85,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -77.3191,
+            23.136
+          ],
+          [
+            -78.3411,
+            25.4242
+          ],
+          [
+            -78.9731,
+            28.0099
+          ],
+          [
+            -82.359,
+            29.1174
+          ],
+          [
+            -85.6936,
+            28.7968
+          ],
+          [
+            -85.6043,
+            25.0574
+          ],
+          [
+            -86.6618,
+            23.136
+          ],
+          [
+            -88.5186,
+            20.0566
+          ],
+          [
+            -84.4171,
+            20.0739
+          ],
+          [
+            -82.359,
+            18.5348
+          ],
+          [
+            -80.4866,
+            19.9771
+          ],
+          [
+            -77.8973,
+            20.7882
+          ],
+          [
+            -77.3191,
+            23.136
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.75,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Captaincy General of Cuba was Spain's longest-held American colony. The indigenous Taino and Ciboney populations were effectively annihilated within decades of Spanish arrival through disease, enslavement, and violence. The colonial economy was subsequently built on the massive importation of enslaved Africans for sugar and tobacco production. Cuba became the world's largest sugar producer in the 19th century through slave labor, with an estimated 800,000 Africans forcibly brought to the island. Slavery was not abolished in Cuba until 1886. The Ten Years' War (1868-1878) and the War of Independence (1895-1898) resulted in massive civilian casualties and Spain's use of reconcentracion camps, a precursor to 20th-century concentration camps.",
     "name_variants": [
@@ -278,7 +513,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Province of Carolina",
@@ -289,8 +525,66 @@
     "capital_name": "Charles Town",
     "capital_lat": 32.776,
     "capital_lon": -79.931,
-    "boundary_geojson": null,
-    "confidence_score": 0.8,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -73.9564,
+            32.776
+          ],
+          [
+            -73.821,
+            35.6398
+          ],
+          [
+            -76.8001,
+            36.6513
+          ],
+          [
+            -79.931,
+            38.8961
+          ],
+          [
+            -83.0417,
+            37.4757
+          ],
+          [
+            -85.2635,
+            35.5073
+          ],
+          [
+            -83.4637,
+            32.776
+          ],
+          [
+            -83.9873,
+            30.5896
+          ],
+          [
+            -82.7219,
+            28.7802
+          ],
+          [
+            -79.931,
+            28.2816
+          ],
+          [
+            -77.6468,
+            28.7575
+          ],
+          [
+            -74.5066,
+            29.4336
+          ],
+          [
+            -73.9564,
+            32.776
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.7,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Province of Carolina was established on lands inhabited by the Catawba, Cherokee, Tuscarora, Yamasee, Waccamaw, and other indigenous nations. English colonization involved treaties that were systematically violated, armed conquest, and the deliberate use of inter-tribal conflicts. The Carolina colony was heavily involved in the indigenous slave trade; an estimated 30,000-50,000 indigenous people were enslaved and exported to the Caribbean and other colonies between 1670 and 1715. The colony also became a major center of African chattel slavery, particularly for rice cultivation in the Lowcountry. The Yamasee War (1715-1717) was a direct response to English abuses including enslavement, trade fraud, and land encroachment.",
     "name_variants": [
@@ -347,7 +641,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Nouvelle-France",
@@ -358,8 +653,66 @@
     "capital_name": "Quebec",
     "capital_lat": 46.814,
     "capital_lon": -71.208,
-    "boundary_geojson": null,
-    "confidence_score": 0.85,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -61.3136,
+            46.814
+          ],
+          [
+            -63.6469,
+            49.1948
+          ],
+          [
+            -68.4685,
+            50.6232
+          ],
+          [
+            -71.208,
+            51.8666
+          ],
+          [
+            -75.8048,
+            52.1596
+          ],
+          [
+            -78.2813,
+            49.3524
+          ],
+          [
+            -79.295,
+            46.814
+          ],
+          [
+            -79.0116,
+            44.1216
+          ],
+          [
+            -75.7651,
+            40.7824
+          ],
+          [
+            -71.208,
+            40.7955
+          ],
+          [
+            -66.3952,
+            41.4543
+          ],
+          [
+            -63.1438,
+            44.2124
+          ],
+          [
+            -61.3136,
+            46.814
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.75,
     "status": "confirmed",
     "ethical_notes": "ETHICS: New France encompassed the territories of hundreds of indigenous nations including the Wendat (Huron), Algonquin, Innu (Montagnais), Mi'kmaq, Ojibwe, Odawa, Potawatomi, Illinois, and many others. While French colonial relations with indigenous peoples involved more diplomatic alliance and trade partnership than the English model of settlement displacement, the French also introduced devastating epidemic diseases, disrupted indigenous political systems through the fur trade, and employed Jesuit missionaries whose explicit goal was the destruction of indigenous spiritual practices. The French-allied destruction of the Wendat Confederacy by the Haudenosaunee (1649) was partly a consequence of French-driven competition for fur trade access. The deportation of the Acadians (1755-1764) by the British after conquest constitutes an act of ethnic cleansing.",
     "name_variants": [
@@ -421,7 +774,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Nieuw-Holland",
@@ -432,8 +786,66 @@
     "capital_name": "Mauritsstad",
     "capital_lat": -8.054,
     "capital_lon": -34.871,
-    "boundary_geojson": null,
-    "confidence_score": 0.8,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -30.9597,
+            -8.054
+          ],
+          [
+            -31.2641,
+            -6.0999
+          ],
+          [
+            -32.8054,
+            -4.9399
+          ],
+          [
+            -34.871,
+            -3.6574
+          ],
+          [
+            -36.958,
+            -3.6504
+          ],
+          [
+            -39.3945,
+            -5.658
+          ],
+          [
+            -39.7913,
+            -8.054
+          ],
+          [
+            -38.8955,
+            -10.6501
+          ],
+          [
+            -37.5482,
+            -12.8918
+          ],
+          [
+            -34.871,
+            -12.2415
+          ],
+          [
+            -31.3636,
+            -14.5856
+          ],
+          [
+            -29.4932,
+            -10.7702
+          ],
+          [
+            -30.9597,
+            -8.054
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.7,
     "status": "confirmed",
     "ethical_notes": "ETHICS: Dutch Brazil was established through military conquest of Portuguese colonial territory in northeastern Brazil. The colony's economy was entirely dependent on enslaved African labor in sugar production. Under Johan Maurits van Nassau-Siegen (1637-1644), the colony experienced relative religious tolerance (including for Jews and Catholics) and scientific/artistic patronage, but this coexisted with the continuation and expansion of the sugar plantation slave economy. The Dutch West India Company was simultaneously one of the largest slave-trading enterprises in the Atlantic world. After the Dutch were expelled, Portuguese authorities persecuted the Sephardic Jewish community that had flourished under Dutch rule, many of whom fled to Dutch colonies in the Caribbean and to New Amsterdam.",
     "name_variants": [
@@ -490,7 +902,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Confederacion Peru-Boliviana",
@@ -501,8 +914,66 @@
     "capital_name": "Tacna",
     "capital_lat": -18.006,
     "capital_lon": -70.248,
-    "boundary_geojson": null,
-    "confidence_score": 0.8,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -66.4735,
+            -18.006
+          ],
+          [
+            -67.301,
+            -16.3657
+          ],
+          [
+            -67.8961,
+            -13.6052
+          ],
+          [
+            -70.248,
+            -13.0839
+          ],
+          [
+            -72.6416,
+            -14.2095
+          ],
+          [
+            -75.8758,
+            -15.08
+          ],
+          [
+            -73.7096,
+            -18.006
+          ],
+          [
+            -73.6213,
+            -19.9499
+          ],
+          [
+            -71.9437,
+            -20.8869
+          ],
+          [
+            -70.248,
+            -22.4372
+          ],
+          [
+            -68.3153,
+            -21.4073
+          ],
+          [
+            -64.7526,
+            -20.4105
+          ],
+          [
+            -66.4735,
+            -18.006
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.7,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Peru-Bolivia Confederation represented an attempt by Andres de Santa Cruz to reunite territories that had been part of the Inca Empire and the Viceroyalty of Peru. The confederation was seen as a threat to regional power balances by Chile and Argentina, who waged the War of the Confederation (1836-1839) to destroy it. The indigenous Quechua and Aymara populations, who constituted the majority in both Peru and Bolivia, were largely excluded from the political process that created and destroyed the confederation. Santa Cruz himself was of mixed Aymara-Spanish descent, making him one of the few non-white heads of state in 19th-century South America.",
     "name_variants": [
@@ -551,7 +1022,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Provincias Unidas del Rio de la Plata",
@@ -562,8 +1034,66 @@
     "capital_name": "Buenos Aires",
     "capital_lat": -34.604,
     "capital_lon": -58.382,
-    "boundary_geojson": null,
-    "confidence_score": 0.75,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -52.9277,
+            -34.604
+          ],
+          [
+            -54.1644,
+            -32.2672
+          ],
+          [
+            -55.2888,
+            -30.9127
+          ],
+          [
+            -58.382,
+            -32.1926
+          ],
+          [
+            -60.0528,
+            -31.7441
+          ],
+          [
+            -62.7573,
+            -31.8663
+          ],
+          [
+            -64.8188,
+            -34.604
+          ],
+          [
+            -62.3891,
+            -36.4533
+          ],
+          [
+            -60.2118,
+            -36.717
+          ],
+          [
+            -58.382,
+            -37.2347
+          ],
+          [
+            -56.3167,
+            -37.5872
+          ],
+          [
+            -54.5999,
+            -36.7023
+          ],
+          [
+            -52.9277,
+            -34.604
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.65,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The United Provinces emerged from the independence movement against Spanish colonial rule but inherited the colonial territory's disregard for indigenous sovereignty. The independence-era campaigns in the Chaco, Patagonia, and the Pampas represented the continuation of territorial expansion at the expense of indigenous peoples. Internal conflicts between Buenos Aires centralists (unitarios) and provincial federalists reflected deep economic and political inequalities. The territories of Paraguay and the Banda Oriental (Uruguay) rejected Buenos Aires's authority, and their independence represents the failure of the unitary project. Indigenous peoples such as the Ranquel, Mapuche, and Charrua were not represented in the independence process.",
     "name_variants": [
@@ -620,7 +1150,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Kitu",
@@ -631,8 +1162,66 @@
     "capital_name": "Quito",
     "capital_lat": -0.18,
     "capital_lon": -78.468,
-    "boundary_geojson": null,
-    "confidence_score": 0.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -74.8202,
+            -0.18
+          ],
+          [
+            -75.3255,
+            1.5477
+          ],
+          [
+            -76.4572,
+            3.8445
+          ],
+          [
+            -78.468,
+            2.2412
+          ],
+          [
+            -80.198,
+            2.2069
+          ],
+          [
+            -81.8726,
+            1.7945
+          ],
+          [
+            -81.7656,
+            -0.18
+          ],
+          [
+            -80.6955,
+            -1.5858
+          ],
+          [
+            -80.1684,
+            -3.3396
+          ],
+          [
+            -78.468,
+            -2.786
+          ],
+          [
+            -76.2207,
+            -3.8532
+          ],
+          [
+            -75.3855,
+            -2.084
+          ],
+          [
+            -74.8202,
+            -0.18
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
     "status": "disputed",
     "ethical_notes": "ETHICS: The Kingdom of Quito is a contested historical concept. The 18th-century Jesuit historian Juan de Velasco described it as a pre-Inca polity that was conquered by the Inca through marriage alliance and then warfare. Modern archaeologists and historians (Frank Salomon, Tamara Bray) have questioned whether a unified 'Kingdom of Quito' existed, arguing that the pre-Inca highlands of Ecuador were organized into smaller chiefdoms (seniorios) such as the Cara, Panzaleo, and Puruhae, rather than a centralized state. The concept of a unified Kingdom of Quito has been important to Ecuadorian national identity, and rejecting it outright risks dismissing indigenous political complexity, while accepting it uncritically perpetuates potentially fabricated history. Both perspectives must be represented.",
     "name_variants": [
@@ -686,7 +1275,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Muzo",
@@ -697,8 +1287,66 @@
     "capital_name": "Muzo",
     "capital_lat": 5.533,
     "capital_lon": -74.1,
-    "boundary_geojson": null,
-    "confidence_score": 0.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -69.1327,
+            5.533
+          ],
+          [
+            -69.1043,
+            8.4108
+          ],
+          [
+            -71.6674,
+            10.1738
+          ],
+          [
+            -74.1,
+            9.391
+          ],
+          [
+            -76.7779,
+            9.1618
+          ],
+          [
+            -78.1874,
+            7.9544
+          ],
+          [
+            -77.8269,
+            5.533
+          ],
+          [
+            -77.9758,
+            2.9087
+          ],
+          [
+            -75.9468,
+            1.8225
+          ],
+          [
+            -74.1,
+            2.2098
+          ],
+          [
+            -72.5477,
+            2.4579
+          ],
+          [
+            -70.6874,
+            3.0292
+          ],
+          [
+            -69.1327,
+            5.533
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "ETHICS: The Muzo people of the Magdalena River valley in central Colombia are poorly documented in pre-colonial sources, and much of what is recorded comes from Spanish colonial accounts written by their conquerors, who characterized them as especially fierce and 'uncivilized' to justify violent subjugation. The Muzo controlled the world's most significant emerald deposits (Boyaca region), which made their territory a target for Spanish conquest. The Muzo resisted Spanish colonization longer than most Colombian indigenous groups, fighting a series of wars from the 1530s to the 1550s. Their ultimate defeat led to enslavement in emerald mines and near-total population destruction. The Muzo language is now extinct.",
     "name_variants": [
@@ -747,7 +1395,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Irecha Irechekwa",
@@ -758,8 +1407,66 @@
     "capital_name": "Tzintzuntzan",
     "capital_lat": 19.626,
     "capital_lon": -101.577,
-    "boundary_geojson": null,
-    "confidence_score": 0.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -98.4023,
+            19.626
+          ],
+          [
+            -98.5137,
+            21.2734
+          ],
+          [
+            -99.5934,
+            22.8639
+          ],
+          [
+            -101.577,
+            24.6903
+          ],
+          [
+            -103.5215,
+            22.8197
+          ],
+          [
+            -105.1415,
+            21.7113
+          ],
+          [
+            -105.0149,
+            19.626
+          ],
+          [
+            -104.159,
+            18.2006
+          ],
+          [
+            -103.7083,
+            16.5463
+          ],
+          [
+            -101.577,
+            16.3961
+          ],
+          [
+            -99.6904,
+            17.0961
+          ],
+          [
+            -98.1007,
+            17.7358
+          ],
+          [
+            -98.4023,
+            19.626
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Tarascan State (Purepecha Empire) was the second-largest polity in Mesoamerica at the time of European contact and the only state that successfully resisted Aztec (Mexica) expansion. The Purepecha people have their own distinct language, unrelated to any other known language family, and a distinct cultural tradition. Spanish colonial and Mexica/Aztec sources both carry significant biases: Aztec accounts vilify the Tarascan as rivals, while Spanish accounts were written to justify conquest. The Spanish conquest under Nuno de Guzman (1530) was exceptionally brutal, including the torture and execution of the last cazonci (king) Tangaxoan II. The modern Purepecha community continues to maintain its language and cultural identity. Using the term 'Tarascan' is debated, as it may derive from a Spanish misunderstanding; 'Purepecha' is preferred by the community.",
     "name_variants": [
@@ -826,7 +1533,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Qusqu",
@@ -837,8 +1545,66 @@
     "capital_name": "Cusco",
     "capital_lat": -13.532,
     "capital_lon": -71.967,
-    "boundary_geojson": null,
-    "confidence_score": 0.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -67.281,
+            -13.532
+          ],
+          [
+            -68.4967,
+            -11.819
+          ],
+          [
+            -70.2556,
+            -11.2805
+          ],
+          [
+            -71.967,
+            -10.2889
+          ],
+          [
+            -74.6187,
+            -10.018
+          ],
+          [
+            -74.6354,
+            -12.3616
+          ],
+          [
+            -75.4669,
+            -13.532
+          ],
+          [
+            -74.3734,
+            -14.943
+          ],
+          [
+            -73.7968,
+            -16.0861
+          ],
+          [
+            -71.967,
+            -15.7832
+          ],
+          [
+            -69.7956,
+            -17.0989
+          ],
+          [
+            -69.1873,
+            -15.0534
+          ],
+          [
+            -67.281,
+            -13.532
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
     "status": "uncertain",
     "ethical_notes": "ETHICS: The Kingdom of Cusco represents the formative period of Inca civilization before its imperial expansion under Pachacuti. Much of the early history is derived from Inca oral traditions recorded by Spanish chroniclers (Garcilaso de la Vega, Cieza de Leon, Betanzos), which blend mythological and historical elements. The traditional list of eight pre-imperial sinkchi (war leaders) and sapa incas before Pachacuti is difficult to verify archaeologically. Distinguishing historical from mythological rulers is a matter of ongoing scholarly debate. The early Cusco polity engaged in localized warfare and alliance-building with neighboring groups in the Cusco Valley.",
     "name_variants": [
@@ -892,7 +1658,8 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Confederacao do Equador",
@@ -903,8 +1670,66 @@
     "capital_name": "Recife",
     "capital_lat": -8.054,
     "capital_lon": -34.871,
-    "boundary_geojson": null,
-    "confidence_score": 0.8,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -33.0009,
+            -8.054
+          ],
+          [
+            -33.2209,
+            -7.0388
+          ],
+          [
+            -34.1117,
+            -6.5433
+          ],
+          [
+            -34.871,
+            -5.2047
+          ],
+          [
+            -36.1537,
+            -5.8737
+          ],
+          [
+            -36.6253,
+            -6.9409
+          ],
+          [
+            -37.2925,
+            -8.054
+          ],
+          [
+            -36.8317,
+            -9.1774
+          ],
+          [
+            -35.8993,
+            -10.0266
+          ],
+          [
+            -34.871,
+            -10.2059
+          ],
+          [
+            -33.7685,
+            -9.9112
+          ],
+          [
+            -33.2756,
+            -8.9343
+          ],
+          [
+            -33.0009,
+            -8.054
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.7,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Confederation of the Equator was a short-lived republican revolt in northeastern Brazil against the centralizing tendencies of Emperor Pedro I. The movement drew on earlier republican traditions (the 1817 Pernambucan Revolt) and was driven by provincial elites, liberal intellectuals, and urban populations frustrated by imperial authoritarianism. The revolt was brutally suppressed; leader Frei Caneca was executed by firing squad after the hangman refused to execute him. While the revolt expressed legitimate demands for federalism and constitutional governance, its leadership remained within the slaveholding planter class and did not challenge the institution of slavery that sustained the regional economy.",
     "name_variants": [
@@ -953,7 +1778,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Republica de Colombia",
@@ -964,8 +1790,66 @@
     "capital_name": "Bogota",
     "capital_lat": 4.711,
     "capital_lon": -74.072,
-    "boundary_geojson": null,
-    "confidence_score": 0.85,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -72.6228,
+            4.711
+          ],
+          [
+            -72.8158,
+            5.5091
+          ],
+          [
+            -72.879,
+            6.6712
+          ],
+          [
+            -74.072,
+            6.5999
+          ],
+          [
+            -74.8205,
+            6.3248
+          ],
+          [
+            -75.5541,
+            5.5094
+          ],
+          [
+            -75.9139,
+            4.711
+          ],
+          [
+            -75.1872,
+            3.9138
+          ],
+          [
+            -75.2906,
+            3.1191
+          ],
+          [
+            -74.072,
+            3.1269
+          ],
+          [
+            -73.0485,
+            2.8965
+          ],
+          [
+            -72.4182,
+            3.9171
+          ],
+          [
+            -72.6228,
+            4.711
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.75,
     "status": "confirmed",
     "ethical_notes": "ETHICS: Gran Colombia was Simon Bolivar's most ambitious political project, uniting the former Viceroyalty of New Granada into a single republic. The state was founded on Enlightenment ideals of republicanism but maintained significant social hierarchies. Slavery was not immediately abolished; Bolivar's free-womb law (1821) freed children born to enslaved mothers but maintained adult slavery. Indigenous communities were granted nominal citizenship but lost communal land protections. The republic's dissolution into Venezuela, Ecuador, and New Granada reflected deep regional, economic, and political divisions that Bolivar's centralizing vision could not overcome. Bolivar's dictatorship in his final years remains a subject of intense historical debate.",
     "name_variants": [
@@ -1022,7 +1906,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Republica Federal de Centro America",
@@ -1033,8 +1918,66 @@
     "capital_name": "Ciudad de Guatemala",
     "capital_lat": 14.634,
     "capital_lon": -90.549,
-    "boundary_geojson": null,
-    "confidence_score": 0.8,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -85.9859,
+            14.634
+          ],
+          [
+            -87.2552,
+            16.2441
+          ],
+          [
+            -88.481,
+            19.053
+          ],
+          [
+            -90.549,
+            18.8065
+          ],
+          [
+            -92.4903,
+            18.4034
+          ],
+          [
+            -94.4029,
+            17.0244
+          ],
+          [
+            -93.3511,
+            14.634
+          ],
+          [
+            -93.08,
+            13.1635
+          ],
+          [
+            -92.5026,
+            11.1701
+          ],
+          [
+            -90.549,
+            10.0537
+          ],
+          [
+            -89.2434,
+            12.5101
+          ],
+          [
+            -87.9326,
+            13.0313
+          ],
+          [
+            -85.9859,
+            14.634
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.7,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Federal Republic of Central America was an attempt to maintain the unity of the former Captaincy General of Guatemala as an independent federal state. The federation was dominated by criollo and ladino (mestizo) elites; indigenous Maya, Lenca, Garifuna, and other peoples constituted the demographic majority but were excluded from political participation. The liberal-conservative civil wars that tore the federation apart were fought largely by indigenous and mestizo soldiers conscripted by both sides. Rafael Carrera's revolt (1837), which eventually destroyed the federation, drew significant support from indigenous communities opposed to liberal reforms that threatened communal lands and traditional structures. The federation's failure shaped the political fragmentation of Central America that persists today.",
     "name_variants": [
@@ -1091,7 +2034,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Numunuu",
@@ -1102,8 +2046,66 @@
     "capital_name": "Comanche Peak area",
     "capital_lat": 32.35,
     "capital_lon": -97.75,
-    "boundary_geojson": null,
-    "confidence_score": 0.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -91.3327,
+            32.35
+          ],
+          [
+            -94.2153,
+            34.0203
+          ],
+          [
+            -95.0192,
+            36.6146
+          ],
+          [
+            -97.75,
+            36.7146
+          ],
+          [
+            -100.7108,
+            36.2881
+          ],
+          [
+            -103.6126,
+            34.9518
+          ],
+          [
+            -104.3589,
+            32.35
+          ],
+          [
+            -103.2255,
+            29.6809
+          ],
+          [
+            -100.727,
+            28.9333
+          ],
+          [
+            -97.75,
+            26.7017
+          ],
+          [
+            -94.4451,
+            27.8681
+          ],
+          [
+            -92.5018,
+            29.307
+          ],
+          [
+            -91.3327,
+            32.35
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Comanche Empire (Comancheria) was one of the most powerful indigenous polities in North American history, dominating the southern Great Plains for over a century. The Comanche disrupted Spanish colonial expansion, defeated the Apache from the southern plains, and forced Mexican, Texan, and American states into diplomatic accommodation. The term 'empire' is used by historian Pekka Hamalainen to challenge the narrative that only European-derived states could exercise imperial power. The Comanche economy included raiding for horses and captives from Mexican and other indigenous settlements; captive-taking and slavery were integral parts of Comanche society, though captives could also be adopted. The Comanche were ultimately devastated by the deliberate U.S. military destruction of the bison herds, epidemic disease (especially cholera and smallpox), and relentless military campaigns that constitute genocide. The Red River War (1874-1875) forced the last free Comanche bands onto reservations.",
     "name_variants": [
@@ -1160,7 +2162,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Muscogee",
@@ -1171,8 +2174,66 @@
     "capital_name": "Coweta",
     "capital_lat": 32.46,
     "capital_lon": -85.0,
-    "boundary_geojson": null,
-    "confidence_score": 0.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -79.4367,
+            32.46
+          ],
+          [
+            -82.263,
+            33.7975
+          ],
+          [
+            -82.1297,
+            36.0625
+          ],
+          [
+            -85.0,
+            36.166
+          ],
+          [
+            -87.8527,
+            36.22
+          ],
+          [
+            -89.9156,
+            34.6208
+          ],
+          [
+            -88.5338,
+            32.46
+          ],
+          [
+            -87.79,
+            30.8635
+          ],
+          [
+            -88.0844,
+            28.8885
+          ],
+          [
+            -85.0,
+            28.8526
+          ],
+          [
+            -83.1388,
+            29.3683
+          ],
+          [
+            -81.0211,
+            30.1385
+          ],
+          [
+            -79.4367,
+            32.46
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.6,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Muscogee (Creek) Confederacy was one of the largest and most politically sophisticated indigenous polities in southeastern North America. The confederacy was a voluntary union of diverse towns (talwa) that maintained significant internal autonomy while cooperating in diplomacy and war. English, French, and Spanish colonizers all attempted to manipulate Creek diplomacy for their own purposes, and the Muscogee skillfully played European powers against each other. The Creek War (1813-1814), often framed in U.S. history as a minor conflict, was a devastating civil war within the confederacy catalyzed by pressures of American expansion. Andrew Jackson's subsequent forced removal of the Creek people to Indian Territory (Trail of Tears, 1836-1837) constitutes an act of ethnic cleansing. Thousands of Creek people died during and after removal. The Muscogee (Creek) Nation continues as a federally recognized tribal nation in Oklahoma.",
     "name_variants": [
@@ -1234,7 +2295,8 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Oceti Sakowin",
@@ -1245,8 +2307,66 @@
     "capital_name": "Paha Sapa (Black Hills region)",
     "capital_lat": 43.879,
     "capital_lon": -103.459,
-    "boundary_geojson": null,
-    "confidence_score": 0.65,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -94.6234,
+            43.879
+          ],
+          [
+            -97.8225,
+            46.1776
+          ],
+          [
+            -99.8462,
+            48.3487
+          ],
+          [
+            -103.459,
+            46.6505
+          ],
+          [
+            -106.0219,
+            46.5702
+          ],
+          [
+            -111.1635,
+            46.6651
+          ],
+          [
+            -108.3992,
+            43.879
+          ],
+          [
+            -108.5426,
+            41.849
+          ],
+          [
+            -105.92,
+            40.6468
+          ],
+          [
+            -103.459,
+            39.0132
+          ],
+          [
+            -99.6535,
+            40.232
+          ],
+          [
+            -98.1539,
+            41.9756
+          ],
+          [
+            -94.6234,
+            43.879
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Oceti Sakowin (Seven Council Fires), encompassing the Dakota, Lakota, and Nakota peoples, constituted one of the most powerful indigenous political formations in North American history. The term 'Sioux' is an exonym derived from an Ojibwe pejorative and is rejected by many community members, though it remains in official usage (e.g., 'Great Sioux Nation'). The Lakota sacred relationship to the Black Hills (Paha Sapa) is central to their spiritual and cultural identity. The U.S. seizure of the Black Hills in 1877, in violation of the 1868 Fort Laramie Treaty, remains one of the most significant unresolved indigenous land claims. The U.S. Supreme Court ruled in United States v. Sioux Nation (1980) that the seizure was illegal and offered monetary compensation, but the Lakota have refused payment, demanding return of the land. The Wounded Knee Massacre (1890), in which U.S. soldiers killed approximately 250-300 Lakota men, women, and children, constitutes an act of genocide. The ongoing assertion of treaty rights and sovereignty by the Oceti Sakowin nations must be documented.",
     "name_variants": [
@@ -1313,6 +2433,7 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   }
 ]
