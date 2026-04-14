@@ -35212,79 +35212,65 @@
     "capital_lat": 20.5958,
     "capital_lon": 93.2047,
     "boundary_geojson": {
-      "type": "MultiPolygon",
+      "type": "Polygon",
       "coordinates": [
         [
           [
-            [
-              1.176365408507568,
-              6.084084115937991
-            ],
-            [
-              1.165727171508056,
-              6.066323839143557
-            ],
-            [
-              0.939379486647827,
-              5.759484849885744
-            ],
-            [
-              0.802637848464233,
-              5.714715085939211
-            ],
-            [
-              0.536134216395599,
-              5.720493398622317
-            ],
-            [
-              0.089773598519546,
-              5.655979238466067
-            ],
-            [
-              -0.11885101029517,
-              5.572919450715823
-            ],
-            [
-              -0.203663793,
-              5.528644166902346
-            ],
-            [
-              -0.300653104314346,
-              5.478011885646904
-            ],
-            [
-              -0.502442446312809,
-              5.966210700950271
-            ],
-            [
-              -1.172564294695594,
-              7.300090916929681
-            ],
-            [
-              -1.172564294695594,
-              8.18697846516574
-            ],
-            [
-              -0.745778554651586,
-              8.480683820450949
-            ],
-            [
-              -0.015770229635258,
-              8.642907892676801
-            ],
-            [
-              0.55201402315522,
-              8.237347712112173
-            ],
-            [
-              1.176365408507568,
-              6.084084115937991
-            ]
+            96.7709,
+            21.7549
+          ],
+          [
+            96.0822,
+            23.5201
+          ],
+          [
+            93.9905,
+            24.589
+          ],
+          [
+            91.6567,
+            24.3385
+          ],
+          [
+            90.0872,
+            22.5584
+          ],
+          [
+            89.3932,
+            21.2361
+          ],
+          [
+            89.6306,
+            19.1553
+          ],
+          [
+            91.2083,
+            18.5854
+          ],
+          [
+            92.6998,
+            17.4362
+          ],
+          [
+            94.4777,
+            17.2653
+          ],
+          [
+            95.8747,
+            18.2001
+          ],
+          [
+            96.4708,
+            20.1247
+          ],
+          [
+            96.7709,
+            21.7549
           ]
         ]
       ]
     },
-    "confidence_score": 0.725,
+    "confidence_score": 0.4,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Kingdom of Mrauk U (Arakan) was an independent Arakanese/Rakhine Buddhist kingdom with strong ties to the Bengal Sultanate and Mughal India. Arakan's history is highly contested in the context of the modern Rohingya crisis. Mrauk U's rulers used both Buddhist and Islamic titles, employed Muslim courtiers, and minted coins with Arabic inscriptions, reflecting a multicultural polity. The question of whether Muslims in historical Arakan were 'indigenous' or 'settlers' is politically charged and instrumentalized by multiple sides. This database records the documented historical evidence without adjudicating modern ethnic claims. Boundary da aourednik/historical-basemaps (1600, strategy=fuzzy_name, precision=1). CC BY 4.0.",
     "name_variants": [
@@ -35347,10 +35333,11 @@
         "url": null
       }
     ],
-    "boundary_source": "aourednik",
-    "boundary_aourednik_name": "Akan",
-    "boundary_aourednik_year": 1600,
-    "boundary_aourednik_precision": 1
+    "boundary_source": "approximate_generated",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null
   },
   {
     "name_original": "ปาตานี",

@@ -76,6 +76,124 @@ class TestDataCompleteness:
             )
 
 
+class TestEthics006GeographicGuard:
+    """Audit di integrita' geografica su tutto il dataset (ETHICS-006).
+
+    Regressione guard: ogni entita' con `boundary_source = 'natural_earth'`
+    deve avere la capitale DENTRO il poligono. Se fallisce, il matcher NE
+    ha accettato un match sbagliato (tipo Garenganze → Russia).
+
+    Nota: aourednik e historical_map possono avere piccole discrepanze
+    ai margini del poligono (p.es. Istanbul sul Bosforo, Stoccolma su
+    isola esterna a un poligono semplificato). Questi casi richiedono
+    una tolleranza buffer o un'analisi caso-per-caso, rimandata a v6.2.
+    """
+
+    def test_natural_earth_boundaries_contain_capital(self, db):
+        import json
+
+        from shapely.geometry import Point, shape
+
+        from src.db.models import GeoEntity
+
+        rows = (
+            db.query(GeoEntity)
+            .filter(GeoEntity.boundary_source == "natural_earth")
+            .filter(GeoEntity.boundary_geojson.isnot(None))
+            .filter(GeoEntity.capital_lat.isnot(None))
+            .filter(GeoEntity.capital_lon.isnot(None))
+            .all()
+        )
+
+        violations: list[str] = []
+        for row in rows:
+            try:
+                geom = json.loads(row.boundary_geojson)
+                poly = shape(geom)
+                point = Point(float(row.capital_lon), float(row.capital_lat))
+                if not poly.contains(point):
+                    violations.append(
+                        f"{row.name_original!r} (id={row.id}): capital "
+                        f"({row.capital_lat:.2f}, {row.capital_lon:.2f}) "
+                        f"not inside NE polygon"
+                    )
+            except Exception as exc:  # malformed polygon etc.
+                violations.append(
+                    f"{row.name_original!r} (id={row.id}): geometry error {exc}"
+                )
+
+        assert not violations, (
+            f"ETHICS-006 regression: {len(violations)} Natural Earth "
+            f"match con capitale fuori dal poligono (tipo Garenganze→RUS):\n"
+            + "\n".join(violations[:10])
+            + (f"\n  ... +{len(violations) - 10} altri" if len(violations) > 10 else "")
+        )
+
+    def test_catastrophic_displacement_caught(self, db):
+        """Guard contro displacement catastrofici (>8000 km, mezzo pianeta)
+        anche su source non-NE. Il threshold e' volutamente alto: permette
+        imperi continentali legittimi (Russia → Siberia, Denmark → Groenlandia)
+        ma blocca errori tipo 'Kerajaan Kediri in Caucasus' o 'Ghurids in
+        Peru' che sarebbero match cross-dataset cross-continente sbagliati.
+
+        Casi piu' fini (2000–8000 km, ambigui) sono da risolvere con un
+        audit manuale caso-per-caso; rimandato a v6.2."""
+        import json
+        import math
+
+        from shapely.geometry import shape
+
+        from src.db.models import GeoEntity
+
+        rows = (
+            db.query(GeoEntity)
+            .filter(GeoEntity.boundary_source.in_(["aourednik", "historical_map"]))
+            .filter(GeoEntity.boundary_geojson.isnot(None))
+            .filter(GeoEntity.capital_lat.isnot(None))
+            .filter(GeoEntity.capital_lon.isnot(None))
+            .all()
+        )
+
+        MAX_DIST_KM = 8000.0  # half-way around the planet as hard cutoff
+
+        def haversine_km(lat1, lon1, lat2, lon2):
+            R = 6371.0
+            p1, p2 = math.radians(lat1), math.radians(lat2)
+            dp = math.radians(lat2 - lat1)
+            dl = math.radians(lon2 - lon1)
+            a = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
+            return 2 * R * math.asin(math.sqrt(a))
+
+        violations: list[str] = []
+        for row in rows:
+            try:
+                geom = json.loads(row.boundary_geojson)
+                centroid = shape(geom).centroid
+                dist = haversine_km(
+                    row.capital_lat, row.capital_lon,
+                    centroid.y, centroid.x,
+                )
+                if dist > MAX_DIST_KM:
+                    violations.append(
+                        f"{row.name_original!r} (id={row.id}, "
+                        f"source={row.boundary_source}): capital "
+                        f"({row.capital_lat:.1f}, {row.capital_lon:.1f}) "
+                        f"is {dist:.0f}km from polygon centroid "
+                        f"({centroid.y:.1f}, {centroid.x:.1f})"
+                    )
+            except Exception as exc:
+                violations.append(
+                    f"{row.name_original!r} (id={row.id}): error {exc}"
+                )
+
+        assert not violations, (
+            f"CATASTROPHIC displacement: {len(violations)} match con "
+            f"capitale a >8000km dal centroide del poligono (match "
+            f"cross-continente, quasi certamente errato):\n"
+            + "\n".join(violations[:10])
+        )
+
+
 class TestEthicsExtended:
     def test_colonial_entities_have_ethics_notes(self, client):
         """Entita' di tipo colony devono avere note etiche."""

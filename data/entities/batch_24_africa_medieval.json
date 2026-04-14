@@ -7138,151 +7138,65 @@
     "capital_lat": -9.57,
     "capital_lon": 17.62,
     "boundary_geojson": {
-      "type": "MultiPolygon",
+      "type": "Polygon",
       "coordinates": [
         [
           [
-            [
-              122.843627,
-              -18.536908
-            ],
-            [
-              122.931518,
-              -18.448346
-            ],
-            [
-              123.140258,
-              -18.437924
-            ],
-            [
-              123.321533,
-              -18.443135
-            ],
-            [
-              123.464355,
-              -18.510865
-            ],
-            [
-              123.651123,
-              -18.677471
-            ],
-            [
-              123.876342,
-              -18.802318
-            ],
-            [
-              124.013671,
-              -18.698285
-            ],
-            [
-              124.052124,
-              -18.516074
-            ],
-            [
-              124.145507,
-              -18.344097
-            ],
-            [
-              124.354248,
-              -18.20848
-            ],
-            [
-              124.458618,
-              -18.245003
-            ],
-            [
-              124.590454,
-              -18.349311
-            ],
-            [
-              124.645385,
-              -18.432713
-            ],
-            [
-              124.700317,
-              -18.557739
-            ],
-            [
-              124.859619,
-              -18.588982
-            ],
-            [
-              124.859619,
-              -18.698285
-            ],
-            [
-              124.804687,
-              -18.781516
-            ],
-            [
-              124.799194,
-              -18.958246
-            ],
-            [
-              124.859619,
-              -19.222989
-            ],
-            [
-              124.963989,
-              -19.316327
-            ],
-            [
-              125.112304,
-              -19.875225
-            ],
-            [
-              125.002441,
-              -20.148784
-            ],
-            [
-              124.848632,
-              -20.303417
-            ],
-            [
-              124.639892,
-              -20.463042
-            ],
-            [
-              124.381713,
-              -20.663626
-            ],
-            [
-              123.83789,
-              -20.679044
-            ],
-            [
-              123.601684,
-              -20.143627
-            ],
-            [
-              123.370971,
-              -19.668452
-            ],
-            [
-              123.046874,
-              -19.28522
-            ],
-            [
-              122.876586,
-              -19.181489
-            ],
-            [
-              122.739257,
-              -18.999802
-            ],
-            [
-              122.810668,
-              -18.755511
-            ],
-            [
-              122.843627,
-              -18.536908
-            ]
+            21.0267,
+            -8.3044
+          ],
+          [
+            20.2604,
+            -6.2298
+          ],
+          [
+            18.0974,
+            -6.4541
+          ],
+          [
+            16.5429,
+            -6.5588
+          ],
+          [
+            14.8038,
+            -6.9616
+          ],
+          [
+            14.8228,
+            -9.0075
+          ],
+          [
+            14.7323,
+            -10.7955
+          ],
+          [
+            15.648,
+            -12.5339
+          ],
+          [
+            16.8024,
+            -13.8852
+          ],
+          [
+            18.6257,
+            -11.9725
+          ],
+          [
+            20.2209,
+            -11.287
+          ],
+          [
+            21.721,
+            -10.4002
+          ],
+          [
+            21.0267,
+            -8.3044
           ]
         ]
       ]
     },
-    "confidence_score": 0.662,
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "The Imbangala (also known as Jaga) were itinerant warrior bands in Central Africa who became deeply entangled with the Portuguese slave trade. Their origins are debated: some scholars see them as displaced peoples from the Lunda diaspora, others as an ideologically-driven military movement. The Imbangala practiced extreme rituals including reported cannibalism and infanticide, though the extent to which these accounts reflect reality versus Portuguese propaganda is disputed. They were instrumental in the Portuguese conquest of Ndongo and the expansion of the Angolan slave trade, serving as intermediaries and raiders. The kingdom of Kasanje, founded by Imbangala leader Kasanje ka Imba around 1630, became a major slave-trading polity. Representing the Imbangala requires acknowledging both their agency as historical actors and the devastating role they played in the slave trade, without reducing them to colonial stereotypes of African savagery. Boundary da aourednik/historical-basemaps (1650, strategy=fuzzy_name, precision=3). CC BY 4.0.",
     "name_variants": [
@@ -7345,10 +7259,11 @@
         "url": null
       }
     ],
-    "boundary_source": "aourednik",
-    "boundary_aourednik_name": "Mangala",
-    "boundary_aourednik_year": 1650,
-    "boundary_aourednik_precision": 3
+    "boundary_source": "approximate_generated",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null
   },
   {
     "name_original": "Karagwe",

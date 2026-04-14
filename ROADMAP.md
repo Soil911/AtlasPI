@@ -97,21 +97,50 @@ Nessuno si fida di un servizio che si rompe silenziosamente.
 - [x] ETHICS-005 per gestione confini contestati moderni
 - [x] Esecuzione pipeline su tutto il dataset → **93.0% real boundary coverage** (v6.1.1)
 - [x] Matcher aourednik/historical-basemaps per entita' pre-1800 (v6.1.1)
+- [x] **ETHICS-006** — guardia geografica (capital-in-polygon) sul fuzzy
+      matcher NE. Cleanup di 133 match displaced (Garenganze→RUS, CSA→ITA,
+      Mapuche→AUS, ...). Coverage 93% → 72% (regressione volontaria:
+      correctness > cosmetic coverage). (v6.1.2)
 
 #### Academic credibility
 - [x] CITATION.cff per citazione formale (v6.1.1)
 - [x] .zenodo.json per DOI mint (v6.1.1)
 
-### v6.2 — POSTGRESQL + POSTGIS (rinviata da v6.1 originale)
-**Quando**: appena il traffico richiede query spaziali < 50ms.
-SQLite oggi tiene 747 entita' con 2 worker senza problemi.
+#### Ops hardening
+- [x] **ADR-003** — `/app/data` non e' piu' un named volume, bakata
+      nell'immagine via `COPY data/` nel Dockerfile. Previene il bug del
+      volume-masks-fresh-image emerso durante il sync v6.1.1. (v6.1.2)
 
-- [ ] Migrazione schema completata via Alembic
-- [ ] PostGIS per ST_Contains, ST_DWithin, ST_Distance
-- [ ] /v1/nearby riscritto con PostGIS (da O(n) a O(log n))
-- [ ] Indici GiST su boundary_geojson
-- [ ] Connection pooling tuning
+### v6.2 — POSTGIS DEEP WORK + RE-MATCHING POST ETHICS-006
+**Quando**: dopo v6.1.2 stabilizzato in produzione.
+
+PostgreSQL + PostGIS e' ufficialmente il backend di produzione da v6.1.1.
+I task PostGIS-native (query spaziali, indici GiST) possono ora procedere
+direttamente senza la migrazione SQLite → PG.
+
+#### Query spatial native
+- [x] Migrazione schema completata via Alembic (v6.1.1)
+- [x] PostGIS abilitato (postgis/postgis:16-3.4 image) (v6.1.1)
+- [ ] /v1/nearby riscritto con ST_DWithin (da O(n) a indicizzato)
+- [ ] /v1/entities con filtro spaziale (bbox, contains) usando ST_Intersects
+- [ ] Indici GiST su `ST_GeomFromGeoJSON(boundary_geojson)` materializzata
 - [ ] Benchmark: nearby sotto 50ms con 1000+ entita'
+
+#### Data quality — seconda iterazione post ETHICS-006
+- [ ] **Centroid-distance soft check** come secondo filtro nel fuzzy
+      matcher: oltre a capital-in-polygon, richiedere che `|capital −
+      centroid_poligono|` ≤ 500 km. Riduce falsi positivi dove NE ha
+      poligoni enormi e la capitale e' per caso dentro il bordo.
+- [ ] **Re-matching conservativo** delle 209 entita' in
+      `approximate_generated`: tentare nuova passata SOLO con strategie
+      non-fuzzy (exact name, alias ISO espliciti, aourednik), senza
+      riaprire la strada al pattern-matching dei token generici.
+- [ ] **Audit automatico nel CI**: test che fallisce se alcuna entita'
+      con `boundary_source != "approximate_generated"` ha capitale fuori
+      dal poligono. Blocca regressioni simili a ETHICS-006.
+- [ ] Valutare se estendere la guardia anche al matching aourednik
+      (attualmente aourednik usa capital-in-polygon come strategia
+      esplicita, ma non come guardia per exact/fuzzy name).
 
 ### v6.3 — DISTRIBUZIONE E LANCIO
 **Obiettivo**: il prodotto si vende solo se lo vedono.
