@@ -2,6 +2,78 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.1.2] - 2026-04-14
+
+**Tema**: Correctness-over-coverage — fix ETHICS-006 (displacement geografico
+fuzzy matcher) + hardening del deploy (rimozione volume stale).
+
+### ETHICS-006 — Guardia geografica sul fuzzy matcher
+
+- **Incidente**: audit post-sync v6.1.1 ha trovato **133 su 211** match
+  Natural Earth (63%) con la capitale dell'entita' FUORI dal poligono
+  assegnato. Esempi catastrofici:
+  - Garenganze (regno africano 1856-1891, capitale Bunkeya in DR Congo)
+    → matchato a RUS con centroide in Siberia
+  - Primer Imperio Mexicano (1821-1823, capitale Ciudad de México)
+    → matchato a BEL (Belgio)
+  - Mapuche/Reche (popolo indigeno del Cile meridionale)
+    → matchato a AUS (Australia)
+  - Confederate States of America (1861-1865, Richmond VA)
+    → matchato a ITA (Italia)
+- **Root cause**: `rapidfuzz.partial_ratio` al 85% faceva pattern-matching
+  su token generici ("Kingdom", "Empire", "Republic", "General") e su
+  stringhe corte post-normalization di nomi non-latini.
+- **Fix** (`src/ingestion/boundary_match.py`): aggiunta guardia
+  `_capital_in_geojson()` che rigetta ogni match fuzzy O exact-name se
+  la capitale dell'entita' non e' contenuta nel poligono candidato. Se
+  l'entita' non ha coordinate di capitale, il fuzzy viene rifiutato
+  conservativamente (non si puo' validare geograficamente).
+- **Cleanup** (`src/ingestion/cleanup_displaced_ne_matches.py`, nuovo):
+  script idempotente che ricostruisce i 133 poligoni errati con
+  `name_seeded_boundary()` (ETHICS-004), resettando `boundary_source =
+  "approximate_generated"`, azzerando i campi NE/aourednik e cappando
+  il confidence a 0.4. Default dry-run per sicurezza.
+- **Impact data** (v6.1.1 → v6.1.2):
+  - natural_earth: 212 → 78 (solo quelli con capitale nel poligono)
+  - aourednik: 290 (invariato)
+  - historical_map: 168 (invariato)
+  - approximate_generated: 76 → 209 (+133 dall'escalation dal NE errato)
+  - Coverage "real boundaries": 93% → **72%** — *volontaria regressione*:
+    l'integrita' geografica vince sulla coverage cosmetica.
+- **Test** (`tests/test_boundary_match_geographic_guard.py`, 8 nuovi):
+  - Predicato puro `_capital_in_geojson` (4 test: inside/outside/
+    missing coords/malformed geometry)
+  - Regressione Garenganze → RUS rigettato
+  - Russian Empire → RUS accettato (plausible + geografic sound)
+  - Exact-name match rispetta la guardia (entita' fake "Russia" con
+    capitale in Congo rigettata)
+  - Fuzzy rifiutato se l'entita' non ha capital coords
+- **Documentazione etica**: `docs/ethics/ETHICS-006-natural-earth-fuzzy-displacement.md`
+  con incidente, causa, decisione, impatto, lezione ("ogni match
+  cross-dataset basato su nomi ha bisogno di un controllo fisico").
+  Roadmap v6.2: centroid-distance soft-check come secondo filtro.
+
+### Ops hardening — `/app/data` non e' piu' un volume (ADR-003)
+
+- **Bug osservato**: durante il sync post-v6.1.1 `cra-deploy` faceva
+  correttamente `git pull` + `docker compose build` (nuovi JSON nel
+  layer immagine), ma il named-volume `atlaspi-appdata:/app/data`
+  mascherava il contenuto image con i file stali del primo `up`.
+  Il sync in produzione non vedeva gli aggiornamenti finche' non si
+  `docker cp`-pava manualmente i file nel volume.
+- **Fix**: rimosso il mount `atlaspi-appdata:/app/data` (prod) e
+  `app-data:/app/data` (repo standalone). I batch JSON e i dataset
+  raw (Natural Earth, historical-basemaps) vivono esclusivamente nel
+  layer immagine via `COPY --chown=atlaspi:atlaspi data/ data/` nel
+  `Dockerfile`. Il volume `cra_atlaspi-appdata` e' stato rimosso dal
+  daemon produzione dopo tarball di backup.
+- **Deploy idempotente**: ogni `docker compose up -d atlaspi` dopo
+  rebuild garantisce che `/app/data/` rifletta il commit deployato.
+  Tag immagine == stato dataset. Rollback atomico.
+- **Documentazione**: `docs/adr/ADR-003-bake-data-in-image.md` con
+  contesto, problema, alternative scartate (entrypoint-rsync, bind
+  mount host, riscrittura volume al deploy), conseguenze.
+
 ## [v6.1.1] - 2026-04-14
 
 **Tema**: Boundary coverage jump (23% → 93%) via matcher aourednik + fix

@@ -11,10 +11,10 @@
 
 <p align="center">
   <a href="https://atlaspi.cra-srl.com"><img alt="Try it live" src="https://img.shields.io/badge/try%20it-live-58a6ff?style=flat-square&logo=globe&logoColor=white"></a>
-  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.1.1-blue?style=flat-square"></a>
+  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.1.2-blue?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-747-green?style=flat-square"></a>
-  <a href="#-dataset-overview"><img alt="Coverage" src="https://img.shields.io/badge/real%20boundaries-93%25-green?style=flat-square"></a>
-  <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-260%20passing-brightgreen?style=flat-square"></a>
+  <a href="#-dataset-overview"><img alt="Coverage" src="https://img.shields.io/badge/real%20boundaries-72%25-green?style=flat-square"></a>
+  <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-272%20passing-brightgreen?style=flat-square"></a>
   <a href="#-license"><img alt="License" src="https://img.shields.io/badge/license-MIT-orange?style=flat-square"></a>
   <a href="#-api-documentation"><img alt="API" src="https://img.shields.io/badge/API-21%20endpoints-purple?style=flat-square"></a>
   <a href="mcp-server/README.md"><img alt="MCP" src="https://img.shields.io/badge/MCP-ready-9d4edd?style=flat-square"></a>
@@ -336,7 +336,7 @@ If you use AtlasPI in academic work, teaching, or derivative datasets, please ci
 
 ### Suggested citation (software)
 
-> Ramadani, C. (2026). *AtlasPI: A structured historical geographic database for AI agents* (Version 6.1.1) [Software]. CRA. https://github.com/Soil911/AtlasPI
+> Ramadani, C. (2026). *AtlasPI: A structured historical geographic database for AI agents* (Version 6.1.2) [Software]. CRA. https://github.com/Soil911/AtlasPI
 
 ### BibTeX
 
@@ -344,7 +344,7 @@ If you use AtlasPI in academic work, teaching, or derivative datasets, please ci
 @software{ramadani_atlaspi_2026,
   author       = {Ramadani, Clirim},
   title        = {AtlasPI: A structured historical geographic database for AI agents},
-  version      = {6.1.1},
+  version      = {6.1.2},
   year         = {2026},
   publisher    = {CRA},
   url          = {https://github.com/Soil911/AtlasPI},

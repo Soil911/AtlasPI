@@ -53,8 +53,11 @@ services:
       - SENTRY_TRACES_SAMPLE_RATE=${SENTRY_TRACES_SAMPLE_RATE:-0.1}
       - PUBLIC_BASE_URL=${PUBLIC_BASE_URL:-https://atlaspi.cra-srl.com}
       - RATE_LIMIT=${RATE_LIMIT:-60/minute}
+    # NOTE (ETHICS-006 follow-up): /app/data is intentionally NOT a named volume.
+    # Le batch JSON e i dataset raw vengono "bakati" nell'immagine al build
+    # (Dockerfile `COPY data/ data/`). Un volume named lo maschererebbe e ogni
+    # deploy vedrebbe dati stali dal primo `up`. Vedi docs/adr/ADR-003.
     volumes:
-      - app-data:/app/data
       - app-backup:/app/backup
     logging:
       driver: json-file
@@ -86,7 +89,6 @@ services:
         done
       '
     volumes:
-      - app-data:/data:ro
       - app-backup:/backup
       - ./scripts:/scripts:ro
     environment:
@@ -100,5 +102,4 @@ services:
 volumes:
   pgdata:
   redisdata:
-  app-data:
   app-backup:
