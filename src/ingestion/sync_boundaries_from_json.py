@@ -64,6 +64,11 @@ class SyncStats:
     skipped_db_already_better: int = 0
     skipped_equal: int = 0
     confidence_capped_disputed: int = 0
+    # ETHICS-005: provenance metadata (boundary_source, boundary_ne_iso_a3,
+    # boundary_aourednik_*) is propagated even when the geometry itself is
+    # not upgraded — long-running DBs enriched before migration 002 have
+    # correct polygons but NULL provenance, and the JSONs hold the truth.
+    provenance_backfilled: int = 0
 
     def as_dict(self) -> dict:
         return self.__dict__.copy()
@@ -157,6 +162,40 @@ def _should_upgrade(db_geom_str: str | None, batch_entity: dict) -> bool:
     return batch_v >= db_v * 1.2
 
 
+# ETHICS-005: the five provenance fields that describe *where* a boundary
+# came from. Independent from the geometry — can be backfilled on a
+# previously-enriched DB without touching the polygon itself.
+_PROVENANCE_FIELDS = (
+    "boundary_source",
+    "boundary_aourednik_name",
+    "boundary_aourednik_year",
+    "boundary_aourednik_precision",
+    "boundary_ne_iso_a3",
+)
+
+
+def _backfill_provenance(
+    entity: GeoEntity, batch_entity: dict, *, dry_run: bool
+) -> bool:
+    """Copy missing provenance metadata from the batch JSON onto the DB row.
+
+    Returns True iff at least one field transitioned from NULL/None on the
+    DB to a non-None value from the batch. Never overwrites an existing
+    non-None DB value — that would cross from "backfill" into "revision"
+    territory, which a sync run is not entitled to do without explicit
+    reason (the batch could be older than the DB for that specific field).
+    """
+    touched = False
+    for field in _PROVENANCE_FIELDS:
+        db_value = getattr(entity, field, None)
+        batch_value = batch_entity.get(field)
+        if db_value is None and batch_value is not None:
+            if not dry_run:
+                setattr(entity, field, batch_value)
+            touched = True
+    return touched
+
+
 def sync_boundaries_from_json(
     dry_run: bool = False, session: Session | None = None
 ) -> SyncStats:
@@ -198,6 +237,14 @@ def sync_boundaries_from_json(
                     stats.skipped_db_already_better += 1
                 else:
                     stats.skipped_equal += 1
+                # ETHICS-005: even when we don't touch the geometry, we may
+                # still need to backfill provenance metadata. A polygon is
+                # a fact; saying where it came from is a separate fact.
+                # Missing provenance is strictly worse than present
+                # provenance, so copying from the batch JSON when the DB
+                # field is NULL is always a monotonic improvement.
+                if _backfill_provenance(entity, batch_entity, dry_run=dry_run):
+                    stats.provenance_backfilled += 1
                 continue
 
             # Upgrade!
@@ -227,16 +274,16 @@ def sync_boundaries_from_json(
 
             stats.upgraded += 1
 
-        if not dry_run and stats.upgraded > 0:
+        if not dry_run and (stats.upgraded > 0 or stats.provenance_backfilled > 0):
             db.commit()
             logger.info(
-                "Sync committed: %d entities upgraded out of %d matched (%d total in DB)",
-                stats.upgraded, stats.matched_in_batch, stats.total_db,
+                "Sync committed: %d entities upgraded, %d provenance backfilled out of %d matched (%d total in DB)",
+                stats.upgraded, stats.provenance_backfilled, stats.matched_in_batch, stats.total_db,
             )
         elif dry_run:
             logger.info(
-                "DRY-RUN: would upgrade %d entities out of %d matched (%d total in DB)",
-                stats.upgraded, stats.matched_in_batch, stats.total_db,
+                "DRY-RUN: would upgrade %d entities and backfill %d provenance fields out of %d matched (%d total in DB)",
+                stats.upgraded, stats.provenance_backfilled, stats.matched_in_batch, stats.total_db,
             )
             db.rollback()
 

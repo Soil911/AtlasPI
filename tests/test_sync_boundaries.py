@@ -14,6 +14,7 @@ import pytest
 
 from src.db.models import GeoEntity
 from src.ingestion.sync_boundaries_from_json import (
+    _backfill_provenance,
     _count_vertices,
     _should_upgrade,
     sync_boundaries_from_json,
@@ -175,6 +176,84 @@ def test_sync_is_idempotent(stale_db):
 
     assert first.upgraded >= 3
     assert second.upgraded == 0, f"second run must be a no-op, got {second.upgraded}"
+
+
+def test_backfill_provenance_copies_when_db_null(setup_test_db):
+    """When DB has NULL provenance but the batch has a value, backfill copies."""
+    session = TestSession()
+    try:
+        entity = session.query(GeoEntity).first()
+        entity.boundary_source = None
+        entity.boundary_ne_iso_a3 = None
+        entity.boundary_aourednik_precision = None
+
+        batch = {
+            "boundary_source": "natural_earth",
+            "boundary_ne_iso_a3": "ITA",
+            "boundary_aourednik_precision": 3,
+        }
+        touched = _backfill_provenance(entity, batch, dry_run=False)
+        assert touched is True
+        assert entity.boundary_source == "natural_earth"
+        assert entity.boundary_ne_iso_a3 == "ITA"
+        assert entity.boundary_aourednik_precision == 3
+    finally:
+        session.rollback()
+        session.close()
+
+
+def test_backfill_provenance_never_overwrites_existing(setup_test_db):
+    """When DB already has a provenance value, backfill must not touch it."""
+    session = TestSession()
+    try:
+        entity = session.query(GeoEntity).first()
+        entity.boundary_source = "academic_source"  # already set
+        entity.boundary_ne_iso_a3 = None  # missing, should backfill
+
+        batch = {
+            "boundary_source": "natural_earth",  # different from DB
+            "boundary_ne_iso_a3": "ITA",
+        }
+        touched = _backfill_provenance(entity, batch, dry_run=False)
+        assert touched is True  # because ne_iso_a3 was NULL
+        # But boundary_source was preserved
+        assert entity.boundary_source == "academic_source"
+        assert entity.boundary_ne_iso_a3 == "ITA"
+    finally:
+        session.rollback()
+        session.close()
+
+
+def test_backfill_provenance_dry_run_does_not_mutate(setup_test_db):
+    """Dry-run returns True for 'would touch' but does not set attributes."""
+    session = TestSession()
+    try:
+        entity = session.query(GeoEntity).first()
+        entity.boundary_source = None
+
+        batch = {"boundary_source": "natural_earth"}
+        touched = _backfill_provenance(entity, batch, dry_run=True)
+        assert touched is True
+        # But the attribute was NOT written.
+        assert entity.boundary_source is None
+    finally:
+        session.rollback()
+        session.close()
+
+
+def test_backfill_provenance_noop_when_batch_has_nothing(setup_test_db):
+    """If the batch has no provenance fields, backfill is a clean no-op."""
+    session = TestSession()
+    try:
+        entity = session.query(GeoEntity).first()
+        entity.boundary_source = None
+
+        touched = _backfill_provenance(entity, {}, dry_run=False)
+        assert touched is False
+        assert entity.boundary_source is None
+    finally:
+        session.rollback()
+        session.close()
 
 
 def test_sync_respects_ethics_003_cap(setup_test_db):
