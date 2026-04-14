@@ -15,7 +15,9 @@ pytest.importorskip("rapidfuzz", reason="fuzzy tests need rapidfuzz")
 pytest.importorskip("shapely", reason="geographic guard needs shapely")
 
 from src.ingestion.boundary_match import (
+    FUZZY_CENTROID_MAX_KM,
     _capital_in_geojson,
+    _capital_to_centroid_km,
     match_entity,
 )
 
@@ -183,3 +185,103 @@ def test_fuzzy_match_rejected_when_entity_has_no_capital(ne_fake):
         "Fuzzy match accepted for entity without capital coords — "
         "the geographic guard cannot validate, so it must refuse."
     )
+
+
+# ─── Centroid-distance soft check (v6.2) ────────────────────────────────────
+
+def test_capital_to_centroid_km_basic():
+    """Centroid of a square at (0, 0) -> capital at (1, 1) ≈ 157 km."""
+    poly = _square(0.0, 0.0, 5.0)
+    d = _capital_to_centroid_km(
+        {"capital_lat": 1.0, "capital_lon": 1.0}, poly
+    )
+    assert d is not None
+    # Point at (1°, 1°) from (0,0) ≈ 157 km
+    assert 150 < d < 170, f"Expected ~157 km, got {d}"
+
+
+def test_capital_to_centroid_km_missing():
+    poly = _square(0.0, 0.0, 5.0)
+    assert _capital_to_centroid_km({}, poly) is None
+    assert _capital_to_centroid_km({"capital_lat": 0.0, "capital_lon": 0.0}, None) is None
+
+
+def test_fuzzy_match_rejected_when_centroid_too_far():
+    """Simulate an NE polygon with exclave: capital falls inside an
+    outlier patch but polygon centroid is >500 km away — fuzzy must
+    refuse even if capital-in-polygon passes."""
+    # Polygon as MultiPolygon: main body in Europe + tiny pocket in Africa.
+    # Centroid ends up in Europe, but capital sits inside the African pocket.
+    exclave_poly = {
+        "type": "MultiPolygon",
+        "coordinates": [
+            # Europe main body (approx France area)
+            [[
+                [0.0, 45.0], [4.0, 45.0], [4.0, 49.0],
+                [0.0, 49.0], [0.0, 45.0],
+            ]],
+            # Africa pocket (approx Guyane Française size, but in W Africa)
+            [[
+                [10.0, 5.0], [11.0, 5.0], [11.0, 6.0],
+                [10.0, 6.0], [10.0, 5.0],
+            ]],
+        ],
+    }
+    ne = {
+        "FAK": {
+            "name": "Fakeland",
+            "name_long": "Kingdom of Fakeland",
+            "iso_a3": "FAK",
+            "sovereign": "Fakeland",
+            "names_alt": {},
+            "geojson": exclave_poly,
+        },
+    }
+    # Entity whose name fuzzy-matches "Fakeland" (share Kingdom token)
+    # and whose capital is inside the African pocket.
+    entity = {
+        "name_original": "Kingdom of Makeland",
+        "entity_type": "kingdom",
+        "year_start": 1900,
+        "year_end": None,
+        "capital_lat": 5.5,
+        "capital_lon": 10.5,  # inside African pocket
+        "name_variants": [],
+    }
+    result = match_entity(entity, ne)
+    # Either not matched or matched via non-fuzzy strategy. What we must
+    # forbid is: fuzzy match to Fakeland when capital is in an exclave
+    # far from the polygon centroid.
+    assert not (result.matched and result.strategy == "fuzzy" and result.ne_iso_a3 == "FAK"), (
+        "Centroid-distance soft check failed: entity in African exclave "
+        "fuzzy-matched to Fakeland despite centroid being in Europe "
+        f"(threshold {FUZZY_CENTROID_MAX_KM} km)."
+    )
+
+
+def test_fuzzy_match_accepted_when_centroid_close():
+    """Capital inside polygon AND within 500 km of centroid → accept."""
+    # Single square, capital near centroid
+    poly = _square(10.0, 10.0, 5.0)  # square around (10°E, 10°N), ~550 km side
+    ne = {
+        "CTR": {
+            "name": "Centerland",
+            "name_long": "Republic of Centerland",
+            "iso_a3": "CTR",
+            "sovereign": "Centerland",
+            "names_alt": {},
+            "geojson": poly,
+        },
+    }
+    entity = {
+        "name_original": "Republic of Centrolandia",
+        "entity_type": "republic",
+        "year_start": 1900,
+        "year_end": None,
+        "capital_lat": 11.0,  # ~111 km from centroid (10, 10)
+        "capital_lon": 10.5,
+        "name_variants": [{"name": "Centerland", "lang": "en"}],
+    }
+    result = match_entity(entity, ne)
+    assert result.matched is True
+    assert result.ne_iso_a3 == "CTR"

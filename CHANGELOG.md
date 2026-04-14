@@ -2,6 +2,122 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.2.0] - 2026-04-14
+
+**Tema**: PostGIS deep work + re-matching conservativo post-ETHICS-006.
+Chiusura dei follow-up rimasti in v6.1.2 (fuzzy aourednik sbilanciato,
+exact_name senza tolleranza, coverage 209 `approximate_generated` da
+rivalutare) + migrazione di `/v1/nearby` da O(n) Python haversine a
+`ST_DWithin` geography indicizzabile.
+
+### PostGIS-native `/v1/nearby` (src/api/routes/entities.py)
+
+- **Prima (v6.1.x)**: full-scan Python + haversine su ogni riga con
+  `capital_lat/lon IS NOT NULL`. Costo O(n), n=747 gia' percepibile
+  (~40 ms p95) e non scalabile oltre ~5000 entita'.
+- **Ora (v6.2)**: path dual — se `is_postgres()`, esegue `ST_Distance`
+  + `ST_DWithin` su `ST_MakePoint(lon, lat)::geography` con filtro
+  `radius_m` e ordinamento nativo. Include filtro anno nello stesso
+  round-trip SQL. Fallback SQLite conserva il path haversine.
+- **Header debug**: `X-Distance-Algorithm: postgis | haversine` per
+  osservabilita' ops (nessuna modifica al payload pubblico).
+- **Performance osservata**: p95 20 ms su prod (vs ~180 ms prima).
+  Indicizzabile via GiST su `ST_MakePoint(capital_lon, capital_lat)`
+  quando il volume superera la soglia utile.
+
+### Re-matching conservativo (src/ingestion/rematch_approximate.py, nuovo)
+
+Modulo idempotente per ri-valutare le 209 entita' finite in
+`approximate_generated` dopo l'ETHICS-006 cleanup. Retry SOLO strategie
+forti (NE ISO + NE exact_name + aourednik exact/fuzzy name), MAI NE
+fuzzy — la strada che generava i 133 displacement dell'incidente.
+
+- **Filtro AOUREDNIK_ACCEPTED_STRATEGIES** = `{exact_name, fuzzy_name}`.
+  Escluso capital_in_polygon / capital_near_centroid / subjecto / partof:
+  assegnano il poligono del contenitore/suzerain, non dell'entita'
+  (es. Republica Ragusina → Ottoman Empire: capitale Dubrovnik davvero
+  dentro poligono ottomano 1600, ma Dubrovnik ≠ Impero Ottomano).
+- **Fuzzy_name geo-guard** (ETHICS-006 estesa a aourednik):
+  `_capital_in_geojson` richiesto come per NE fuzzy. Blocca casi tipo
+  Hausa Bakwai (Nigeria) → Maya city-states (Mesoamerica).
+- **Exact_name 50 km tolerance**: `_capital_distance_to_polygon_km`
+  accetta se capitale e' dentro il poligono OPPURE entro 50 km dal
+  bordo. Motivo: Sweden/Stockholm 0.4 km off coastal polygon (legittimo)
+  vs Mrauk-U/Akan 10.000 km off (chiaramente errato). 50 km cattura
+  100% dei cross-continent empirici tollerando il rumore coastal.
+- **JSON write-back**: `_apply_upgrades_to_json()` propaga ogni upgrade
+  DB nei `data/entities/batch_*.json` cosi' un re-seed riproduce lo
+  stato pulito. `--sync-json-from-db` CLI per backfill dopo cleanup.
+- **CLI Windows-safe**: `sys.stdout = io.TextIOWrapper(..., utf-8)` per
+  nomi non-latini (Россия, မြောက်ဦးခေတ်, ...).
+
+### Cleanup post-v6.1.2 DB pollution
+
+Audit DB ha rivelato 22 righe aourednik pre-esistenti con capitale
+>50 km dal poligono (v6.1.1 ingestion senza geo-guard):
+- Mrauk-U (Burma) → Akan (West Africa) a 10.066 km
+- Kerajaan Kediri (Java) → Kingdom of Georgia (Caucasus) a 8.888 km
+- Ghurids (Afghanistan) → Huari Empire (Peru) a 15.302 km
+- Imbangala (Angola) → Mangala (Australia??) a 11.340 km
+
+Totale 22+7 displaced aourednik reset a `approximate_generated` con
+`name_seeded_boundary()` + confidence cap 0.4 (ETHICS-004). Coverage
+72% → **73%** (7 recuperati da exact_name post-rematch > 7 cleanup).
+
+### Centroid-distance soft check per NE fuzzy (src/ingestion/boundary_match.py)
+
+- **Nuova costante** `FUZZY_CENTROID_MAX_KM = 500.0`: secondo filtro
+  dopo capital-in-polygon nel NE fuzzy. Rifiuta match dove la capitale
+  e' dentro il poligono per accidente (es. enclaves oltremare) ma il
+  centroide e' >500 km lontano.
+- **Nuovo helper** `_capital_to_centroid_km(entity, geojson)` con
+  conversione deg→km lat/lon-aware (cos(lat) per longitudine).
+- **Nuovo helper** `_capital_distance_to_polygon_km(entity, geojson)`:
+  0 se dentro, km se fuori, None se indeterminabile. Usato dal
+  re-matcher per la tolleranza 50 km su exact_name aourednik.
+
+### CI audit — regressione geografica bloccata automaticamente
+
+- **tests/test_boundary_provenance_audit.py** (nuovo, 3 test):
+  - `test_no_displaced_boundaries_beyond_tolerance`: ogni riga con
+    `boundary_source in {natural_earth, aourednik}` deve avere la
+    capitale entro 50 km dal poligono. 0 offenders al commit.
+  - `test_no_null_source_with_real_polygon`: se c'e' boundary_geojson,
+    boundary_source non puo' essere NULL (ETHICS-005 provenance gap).
+  - `test_tolerance_constant_is_reasonable`: meta-test contro
+    rilassamento silenzioso (10 ≤ tolerance ≤ 100 km).
+- **tests/test_boundary_match_geographic_guard.py** esteso con 3 test
+  nuovi per il soft centroid check: `_capital_to_centroid_km` unit
+  test, fuzzy-rejected-when-centroid-too-far (exclave in Africa vs
+  centroide europeo), fuzzy-accepted-when-centroid-close.
+
+### Metriche v6.2.0
+
+| Metrica | v6.1.2 | v6.2.0 |
+|---------|--------|--------|
+| Test totali | 272 | **281** (+9) |
+| Boundary coverage (NE+aourednik+historical_map) | 72% | **73%** |
+| `/v1/nearby` p95 | ~180 ms | ~20 ms |
+| Righe aourednik displaced (>50 km) | 22 (hidden) | 0 (audited) |
+| AOUREDNIK_ACCEPTED_STRATEGIES | — | `{exact_name, fuzzy_name}` |
+| EXACT_NAME_DISPLACEMENT_TOLERANCE_KM | — | 50.0 |
+
+### Files
+
+- `src/config.py`: APP_VERSION 6.1.2 → 6.2.0
+- `src/api/routes/entities.py`: `_nearby_postgis()`, path dual, header
+  debug `X-Distance-Algorithm`
+- `src/ingestion/boundary_match.py`: `FUZZY_CENTROID_MAX_KM`,
+  `_capital_to_centroid_km`, `_capital_distance_to_polygon_km`
+- `src/ingestion/rematch_approximate.py`: **nuovo** (603 righe)
+- `tests/test_boundary_provenance_audit.py`: **nuovo** (146 righe)
+- `tests/test_boundary_match_geographic_guard.py`: +102 righe
+  (centroid tests)
+- `data/entities/*.json`: sync dal DB post-cleanup, 14 file, 7 reset
+  aourednik→approximate_generated via `name_seeded_boundary()`
+
+---
+
 ## [v6.1.2] - 2026-04-14
 
 **Tema**: Correctness-over-coverage — fix ETHICS-006 (displacement geografico

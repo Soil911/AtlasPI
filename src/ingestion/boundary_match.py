@@ -49,6 +49,18 @@ MIN_YEAR_START_FOR_LIVE_NE_MATCH = 1700
 # Soglia minima per il fuzzy match (0-100, scala rapidfuzz)
 FUZZY_THRESHOLD = 85
 
+# ETHICS-006 v6.2: soglia in km per la distanza tra capitale dell'entita'
+# e centroide del polygon NE candidato, applicata come *secondo* filtro
+# dopo capital-in-polygon nel fuzzy match. Motivazione: i poligoni NE
+# possono essere enormi (Russia, Canada, ...) o contenere enclaves
+# geograficamente disperse (es. dipartimenti d'oltremare): capital-in-polygon
+# puo' passare per accidenti geografici. 500 km e' il compromesso tra
+# "niente falsi positivi africani su poligoni europei con enclaves oltremare"
+# e "accettare varianti plausibili dove la capitale e' lontana dal centroide
+# di uno Stato con forma allungata (Cile, Indonesia)". Si applica SOLO al
+# fuzzy match — exact_name e ISO sono segnali piu' forti.
+FUZZY_CENTROID_MAX_KM = 500.0
+
 # ETHICS: territori contestati che richiedono ethical_notes esplicite.
 # Vedi ETHICS-005. Quando viene fatto un match con uno di questi, lo
 # segnaliamo nel risultato per gestione manuale a valle.
@@ -284,6 +296,86 @@ def _capital_in_geojson(entity: dict, geojson: dict | None) -> bool:
         return False
 
 
+def _capital_distance_to_polygon_km(
+    entity: dict, geojson: dict | None
+) -> float | None:
+    """Distance in km from the entity's capital to the polygon boundary.
+
+    Returns 0.0 if the capital is strictly inside the polygon, a positive
+    float (km) if outside, or None if shapely is missing, the geometry is
+    malformed, or the capital coords are missing.
+
+    ETHICS-006 v6.2: used as a tolerance check for exact-name matches
+    where a small offset between capital and digitized polygon boundary
+    is expected (coast precision, simplified geometry). A hard
+    capital-in-polygon guard would reject correct matches like
+    Sweden/Stockholm (0.4 km off the simplified coast polygon).
+    The threshold DISPLACEMENT_TOLERANCE_KM (50 km) separates "digitization
+    noise" from "semantic displacement" (Mrauk-U -> Akan at 10,000 km).
+    """
+    lat = entity.get("capital_lat")
+    lon = entity.get("capital_lon")
+    if lat is None or lon is None or not geojson:
+        return None
+    try:
+        import math as _math
+
+        from shapely.geometry import Point, shape
+    except ImportError:
+        return None
+    try:
+        poly = shape(geojson)
+        pt = Point(float(lon), float(lat))
+        if poly.contains(pt):
+            return 0.0
+        d_deg = poly.distance(pt)
+        # Convert degrees to km using the mean of lat/lon scale at the point.
+        # 111 km/deg latitude, 111*cos(lat) km/deg longitude.
+        km_per_deg_lat = 111.0
+        km_per_deg_lon = 111.0 * max(0.1, _math.cos(_math.radians(float(lat))))
+        return d_deg * (km_per_deg_lat + km_per_deg_lon) / 2
+    except Exception:
+        return None
+
+
+def _capital_to_centroid_km(entity: dict, geojson: dict | None) -> float | None:
+    """Distanza haversine in km tra capitale dell'entita' e centroide del polygon.
+
+    ETHICS-006 v6.2: usato come secondo filtro per il fuzzy match. Se la
+    capitale e' dentro al poligono ma il centroide e' a oltre
+    FUZZY_CENTROID_MAX_KM (tipicamente 500 km), il match e' sospetto
+    (poligono enorme o con enclaves oltremare).
+
+    Restituisce None se shapely non e' disponibile, se il geojson e'
+    malformato, o se mancano le coordinate capitale.
+    """
+    lat = entity.get("capital_lat")
+    lon = entity.get("capital_lon")
+    if lat is None or lon is None or not geojson:
+        return None
+    try:
+        from shapely.geometry import shape
+        import math
+    except ImportError:
+        return None
+    try:
+        centroid = shape(geojson).centroid
+        c_lat, c_lon = float(centroid.y), float(centroid.x)
+        # Haversine inline (evita di importare helper API)
+        earth_r = 6371.0
+        dlat = math.radians(c_lat - float(lat))
+        dlon = math.radians(c_lon - float(lon))
+        a = (
+            math.sin(dlat / 2) ** 2
+            + math.cos(math.radians(float(lat)))
+            * math.cos(math.radians(c_lat))
+            * math.sin(dlon / 2) ** 2
+        )
+        return earth_r * 2 * math.asin(math.sqrt(a))
+    except Exception:
+        return None
+
+
 def _try_fuzzy_match(
     entity: dict, ne_records: list[dict], threshold: int = FUZZY_THRESHOLD
 ) -> Optional[MatchResult]:
@@ -358,6 +450,20 @@ def _try_fuzzy_match(
         )
         return None
 
+    # ETHICS-006 v6.2: centroid-distance soft check. Anche se la capitale
+    # e' dentro al poligono, se il centroide e' lontano piu' di
+    # FUZZY_CENTROID_MAX_KM il match e' sospetto (polygon NE enorme, o
+    # con exclaves oltremare che catturano punti per accidente).
+    # Applicato SOLO al fuzzy — exact_name e ISO sono segnali piu' forti.
+    centroid_km = _capital_to_centroid_km(entity, rec.get("geojson"))
+    if centroid_km is not None and centroid_km > FUZZY_CENTROID_MAX_KM:
+        logger.debug(
+            "Fuzzy match rejected (centroid-distance %.0f km > %.0f): %s -> %s (%s)",
+            centroid_km, FUZZY_CENTROID_MAX_KM,
+            entity.get("name_original"), ne_name, iso,
+        )
+        return None
+
     return MatchResult(
         entity_key=entity_key(entity),
         matched=True,
@@ -368,7 +474,9 @@ def _try_fuzzy_match(
         geojson=rec.get("geojson"),
         is_disputed=(iso in DISPUTED_ISO_CODES) if iso else False,
         notes=[
-            f"Fuzzy match {score}%: '{en}' ~ '{ne_name}' (capital in polygon: validated)"
+            f"Fuzzy match {score}%: '{en}' ~ '{ne_name}' "
+            f"(capital in polygon, centroid-dist="
+            f"{'n/a' if centroid_km is None else f'{centroid_km:.0f}km'})"
         ],
     )
 

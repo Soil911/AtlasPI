@@ -15,7 +15,7 @@ from typing import Literal
 
 from fastapi import APIRouter, Depends, Query, Response
 from pydantic import BaseModel
-from sqlalchemy import desc, func, or_, select
+from sqlalchemy import desc, func, or_, select, text
 from sqlalchemy.orm import Session, joinedload
 
 from src.api.errors import EntityNotFoundError
@@ -24,7 +24,7 @@ from src.api.schemas import (
     EntityResponse,
     PaginatedEntityResponse,
 )
-from src.db.database import get_db
+from src.db.database import get_db, is_postgres
 from src.db.models import GeoEntity, NameVariant, Source, TerritoryChange
 
 logger = logging.getLogger(__name__)
@@ -416,6 +416,110 @@ def random_entity(
     return _entity_to_response(entity)
 
 
+def _nearby_postgis(
+    db: Session,
+    lat: float,
+    lon: float,
+    radius_km: float,
+    year: int | None,
+    limit: int,
+) -> list[tuple[GeoEntity, float]]:
+    """PostGIS-native nearby query usando ST_DWithin su geography.
+
+    Indicizzabile via GiST su `ST_MakePoint(capital_lon, capital_lat)::geography`
+    se il volume di entita' cresce oltre la soglia O(n) utile. A 747 righe
+    l'index non e' necessario ma il percorso nativo e' comunque piu' veloce
+    del Python haversine + full scan.
+
+    Ritorna lista di tuple (GeoEntity, distance_km) gia' ordinata per
+    distanza crescente e tagliata a `limit`.
+    """
+    radius_m = radius_km * 1000.0
+
+    sql_parts = [
+        "SELECT id,",
+        "       ST_Distance(",
+        "           ST_MakePoint(capital_lon, capital_lat)::geography,",
+        "           ST_MakePoint(:lon, :lat)::geography",
+        "       ) / 1000.0 AS dist_km",
+        "  FROM geo_entities",
+        " WHERE capital_lat IS NOT NULL AND capital_lon IS NOT NULL",
+        "   AND ST_DWithin(",
+        "           ST_MakePoint(capital_lon, capital_lat)::geography,",
+        "           ST_MakePoint(:lon, :lat)::geography,",
+        "           :radius_m",
+        "       )",
+    ]
+    params: dict = {"lat": lat, "lon": lon, "radius_m": radius_m, "limit": limit}
+
+    if year is not None:
+        sql_parts.append("   AND year_start <= :year AND (year_end IS NULL OR year_end >= :year)")
+        params["year"] = year
+
+    sql_parts.append(" ORDER BY dist_km ASC LIMIT :limit")
+    sql = "\n".join(sql_parts)
+
+    rows = db.execute(text(sql), params).all()
+    if not rows:
+        return []
+
+    ids_dists: list[tuple[int, float]] = [(row.id, float(row.dist_km)) for row in rows]
+    ids = [i for i, _ in ids_dists]
+
+    entities_map = {
+        e.id: e
+        for e in db.query(GeoEntity).filter(GeoEntity.id.in_(ids)).all()
+    }
+    # Preserve PostGIS ordering (by dist_km) while pairing with ORM instances.
+    return [(entities_map[i], round(d, 1)) for i, d in ids_dists if i in entities_map]
+
+
+def _nearby_python_haversine(
+    db: Session,
+    lat: float,
+    lon: float,
+    radius_km: float,
+    year: int | None,
+    limit: int,
+) -> list[tuple[GeoEntity, float]]:
+    """Fallback Python haversine per SQLite (no PostGIS).
+
+    O(n) su tutte le entita' con capitale — accettabile fino a qualche
+    migliaio di righe. Per scala maggiore in dev, usare Postgres locale.
+    """
+    import math
+
+    def haversine(lat1, lon1, lat2, lon2):
+        earth_r = 6371  # km
+        dlat = math.radians(lat2 - lat1)
+        dlon = math.radians(lon2 - lon1)
+        a = (
+            math.sin(dlat / 2) ** 2
+            + math.cos(math.radians(lat1))
+            * math.cos(math.radians(lat2))
+            * math.sin(dlon / 2) ** 2
+        )
+        return earth_r * 2 * math.asin(math.sqrt(a))
+
+    q = db.query(GeoEntity).filter(
+        GeoEntity.capital_lat.isnot(None),
+        GeoEntity.capital_lon.isnot(None),
+    )
+    if year is not None:
+        q = q.filter(GeoEntity.year_start <= year)
+        q = q.filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= year))
+
+    entities = q.all()
+    results: list[tuple[GeoEntity, float]] = []
+    for e in entities:
+        dist = haversine(lat, lon, e.capital_lat, e.capital_lon)
+        if dist <= radius_km:
+            results.append((e, round(dist, 1)))
+
+    results.sort(key=lambda x: x[1])
+    return results[:limit]
+
+
 @router.get(
     "/v1/nearby",
     summary="Entit\u00e0 vicine a coordinate date",
@@ -433,39 +537,22 @@ def nearby_entities(
     response: Response = None,
     db: Session = Depends(get_db),
 ):
-    """Trova entit\u00e0 vicine usando distanza euclidea sulle coordinate capitali.
+    """Trova entit\u00e0 vicine a (lat, lon) entro `radius` km.
 
     ETHICS: la prossimit\u00e0 geografica \u00e8 calcolata dalla capitale,
     non dai confini reali. Per entit\u00e0 estese (es. Impero Romano)
     il risultato \u00e8 approssimativo.
+
+    v6.2.0: in produzione (PostgreSQL+PostGIS) la query usa ST_DWithin
+    nativo su ::geography — accurato su grande scala (distanze su
+    sferoide WGS84) e indicizzabile via GiST. In sviluppo (SQLite)
+    ripiega su haversine Python, semanticamente equivalente entro
+    l'errore tipico ST_Distance vs haversine (~0.3%).
     """
-    import math
-
-    def haversine(lat1, lon1, lat2, lon2):
-        earth_r = 6371  # km
-        dlat = math.radians(lat2 - lat1)
-        dlon = math.radians(lon2 - lon1)
-        a = math.sin(dlat/2)**2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dlon/2)**2
-        return earth_r * 2 * math.asin(math.sqrt(a))
-
-    q = db.query(GeoEntity).filter(
-        GeoEntity.capital_lat.isnot(None),
-        GeoEntity.capital_lon.isnot(None),
-    )
-
-    if year is not None:
-        q = q.filter(GeoEntity.year_start <= year)
-        q = q.filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= year))
-
-    entities = q.all()
-    results = []
-    for e in entities:
-        dist = haversine(lat, lon, e.capital_lat, e.capital_lon)
-        if dist <= radius:
-            results.append((e, round(dist, 1)))
-
-    results.sort(key=lambda x: x[1])
-    results = results[:limit]
+    if is_postgres:
+        results = _nearby_postgis(db, lat, lon, radius, year, limit)
+    else:
+        results = _nearby_python_haversine(db, lat, lon, radius, year, limit)
 
     response.headers["Cache-Control"] = "public, max-age=3600"
 

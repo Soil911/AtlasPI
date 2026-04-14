@@ -11,10 +11,10 @@
 
 <p align="center">
   <a href="https://atlaspi.cra-srl.com"><img alt="Try it live" src="https://img.shields.io/badge/try%20it-live-58a6ff?style=flat-square&logo=globe&logoColor=white"></a>
-  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.1.2-blue?style=flat-square"></a>
-  <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-747-green?style=flat-square"></a>
-  <a href="#-dataset-overview"><img alt="Coverage" src="https://img.shields.io/badge/real%20boundaries-72%25-green?style=flat-square"></a>
-  <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-272%20passing-brightgreen?style=flat-square"></a>
+  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.2.0-blue?style=flat-square"></a>
+  <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-752-green?style=flat-square"></a>
+  <a href="#-dataset-overview"><img alt="Coverage" src="https://img.shields.io/badge/real%20boundaries-73%25-green?style=flat-square"></a>
+  <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-281%20passing-brightgreen?style=flat-square"></a>
   <a href="#-license"><img alt="License" src="https://img.shields.io/badge/license-Apache--2.0-orange?style=flat-square"></a>
   <a href="#-api-documentation"><img alt="API" src="https://img.shields.io/badge/API-21%20endpoints-purple?style=flat-square"></a>
   <a href="mcp-server/README.md"><img alt="MCP" src="https://img.shields.io/badge/MCP-ready-9d4edd?style=flat-square"></a>
@@ -165,7 +165,7 @@ curl "http://localhost:10100/v1/compare/1/5"
 
 ## Dataset Overview
 
-**747 historical entities** spanning 6,500 years of human civilization, backed by **2,200+ academic sources** and documenting **2,000+ territory changes**.
+**752 historical entities** spanning 6,500 years of human civilization, backed by **2,200+ academic sources** and documenting **2,000+ territory changes**.
 
 ### Coverage by Region
 

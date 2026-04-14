@@ -12623,65 +12623,51 @@
     "capital_lat": 13.83,
     "capital_lon": 20.83,
     "boundary_geojson": {
-      "type": "Polygon",
+      "type": "MultiPolygon",
       "coordinates": [
         [
           [
-            27.2321,
-            15.1667
-          ],
-          [
-            25.312,
-            17.7921
-          ],
-          [
-            22.9371,
-            19.3018
-          ],
-          [
-            19.5553,
-            21.7776
-          ],
-          [
-            15.2171,
-            20.152
-          ],
-          [
-            11.7771,
-            16.1599
-          ],
-          [
-            12.919,
-            12.1526
-          ],
-          [
-            16.0832,
-            9.2012
-          ],
-          [
-            18.4536,
-            6.3229
-          ],
-          [
-            22.6674,
-            5.709
-          ],
-          [
-            25.2453,
-            8.9255
-          ],
-          [
-            26.0074,
-            11.8768
-          ],
-          [
-            27.2321,
-            15.1667
+            [
+              20.515311459352628,
+              16.476281702350597
+            ],
+            [
+              21.541861125204445,
+              16.597052251274338
+            ],
+            [
+              22.326869693208767,
+              15.328961487575047
+            ],
+            [
+              22.80995188890374,
+              13.758944351566388
+            ],
+            [
+              22.628796065518124,
+              13.215476881409547
+            ],
+            [
+              19.911458714733918,
+              12.611624136790837
+            ],
+            [
+              19.367991244577077,
+              13.396632704795163
+            ],
+            [
+              19.790688165810174,
+              14.966649840803818
+            ],
+            [
+              20.515311459352628,
+              16.476281702350597
+            ]
           ]
         ]
       ]
     },
-    "confidence_score": 0.4,
+    "confidence_score": 0.925,
     "status": "uncertain",
     "ethical_notes": "The Wadai Empire (also Ouaddai) was a major Sahelo-Sudanic state in eastern Chad. Its history is poorly represented in Western historiography compared to its western neighbors (Kanem-Bornu, Sokoto), reflecting a persistent geographic bias in African studies. Wadai was deeply involved in the trans-Saharan slave trade, raiding southern non-Muslim populations and exporting enslaved people northward through Fezzan to Tripoli and the Ottoman Empire. The kingdom's Islamization process was itself complex, involving both voluntary conversion and forced imposition on conquered animist peoples. French colonial conquest (1909–1912) was resisted fiercely and was among the last territories to be 'pacified' in French Equatorial Africa.",
     "name_variants": [
@@ -12744,11 +12730,10 @@
         "url": null
       }
     ],
-    "boundary_source": "approximate_generated",
-    "boundary_ne_iso_a3": null,
-    "boundary_aourednik_name": null,
-    "boundary_aourednik_year": null,
-    "boundary_aourednik_precision": null
+    "boundary_source": "aourednik",
+    "boundary_aourednik_name": "Wadai",
+    "boundary_aourednik_year": 1783,
+    "boundary_aourednik_precision": 3
   },
   {
     "name_original": "Dar Fur",
@@ -12760,65 +12745,51 @@
     "capital_lat": 13.63,
     "capital_lon": 25.35,
     "boundary_geojson": {
-      "type": "Polygon",
+      "type": "MultiPolygon",
       "coordinates": [
         [
           [
-            29.5224,
-            14.4216
-          ],
-          [
-            28.164,
-            15.9333
-          ],
-          [
-            26.3786,
-            16.3842
-          ],
-          [
-            24.5225,
-            17.1677
-          ],
-          [
-            22.7668,
-            16.0873
-          ],
-          [
-            22.4149,
-            14.5558
-          ],
-          [
-            22.5156,
-            13.1113
-          ],
-          [
-            22.9928,
-            11.68
-          ],
-          [
-            24.4656,
-            11.2423
-          ],
-          [
-            25.9598,
-            10.7674
-          ],
-          [
-            27.4307,
-            11.3663
-          ],
-          [
-            28.0296,
-            12.6966
-          ],
-          [
-            29.5224,
-            14.4216
+            [
+              22.689181339979996,
+              15.328961487575047
+            ],
+            [
+              23.111878261213096,
+              16.597052251274338
+            ],
+            [
+              27.45961802246783,
+              18.167069387282993
+            ],
+            [
+              29.15040570740022,
+              17.92552828943551
+            ],
+            [
+              29.99579954986642,
+              14.24202654726136
+            ],
+            [
+              29.09002043293835,
+              13.155091606947678
+            ],
+            [
+              24.31958375045052,
+              12.792779960176453
+            ],
+            [
+              23.17226353567497,
+              13.577788528180776
+            ],
+            [
+              22.689181339979996,
+              15.328961487575047
+            ]
           ]
         ]
       ]
     },
-    "confidence_score": 0.4,
+    "confidence_score": 0.887,
     "status": "confirmed",
     "ethical_notes": "The Sultanate of Darfur's history has gained tragic contemporary relevance due to the Darfur conflict (2003–present). Pre-colonial Darfur was a multi-ethnic sultanate where the Fur, Zaghawa, Masalit, Arab, and other groups coexisted under the Keira dynasty, albeit with significant power inequalities. The modern narrative of 'Arab vs. African' conflict in Darfur grossly oversimplifies centuries of complex ethnic, economic, and political relationships. The sultanate's involvement in the trans-Saharan slave trade particularly targeted non-Muslim populations to the south, a history that continues to affect inter-communal relations. British colonial policy of 'Closed Districts' in Darfur (1922–1946) further marginalized the region, contributing to the underdevelopment that fuels contemporary conflict.",
     "name_variants": [
@@ -12881,11 +12852,10 @@
         "url": null
       }
     ],
-    "boundary_source": "approximate_generated",
-    "boundary_ne_iso_a3": null,
-    "boundary_aourednik_name": null,
-    "boundary_aourednik_year": null,
-    "boundary_aourednik_precision": null
+    "boundary_source": "aourednik",
+    "boundary_aourednik_name": "Darfur",
+    "boundary_aourednik_year": 1783,
+    "boundary_aourednik_precision": 3
   },
   {
     "name_original": "Kaffa",
@@ -13687,87 +13657,65 @@
     "capital_lat": 5.33,
     "capital_lon": -1.47,
     "boundary_geojson": {
-      "type": "MultiPolygon",
+      "type": "Polygon",
       "coordinates": [
         [
           [
-            [
-              1.176365408507568,
-              6.084084115937991
-            ],
-            [
-              1.165727171508056,
-              6.066323839143557
-            ],
-            [
-              0.939379486647827,
-              5.759484849885744
-            ],
-            [
-              0.802637848464233,
-              5.714715085939211
-            ],
-            [
-              0.536134216395599,
-              5.720493398622317
-            ],
-            [
-              0.089773598519546,
-              5.655979238466067
-            ],
-            [
-              -0.11885101029517,
-              5.572919450715823
-            ],
-            [
-              -0.203663793,
-              5.528644166902346
-            ],
-            [
-              -0.300653104314346,
-              5.478011885646904
-            ],
-            [
-              -0.502442446312809,
-              5.966210700950271
-            ],
-            [
-              -1.719122988006689,
-              5.966210700950271
-            ],
-            [
-              -2.286907240797163,
-              6.209546809289046
-            ],
-            [
-              -2.449131313023013,
-              7.020667170418296
-            ],
-            [
-              -1.881347060232535,
-              7.912899567660475
-            ],
-            [
-              -0.745778554651586,
-              8.480683820450949
-            ],
-            [
-              -0.015770229635258,
-              8.642907892676801
-            ],
-            [
-              0.55201402315522,
-              8.237347712112173
-            ],
-            [
-              1.176365408507568,
-              6.084084115937991
-            ]
+            2.4628,
+            6.4939
+          ],
+          [
+            0.7411,
+            7.4427
+          ],
+          [
+            -0.3492,
+            10.0281
+          ],
+          [
+            -2.3152,
+            9.2065
+          ],
+          [
+            -4.0252,
+            8.3459
+          ],
+          [
+            -4.1488,
+            6.1131
+          ],
+          [
+            -4.0688,
+            4.6378
+          ],
+          [
+            -3.6229,
+            3.3127
+          ],
+          [
+            -2.4683,
+            1.652
+          ],
+          [
+            -0.295,
+            1.4269
+          ],
+          [
+            1.0728,
+            3.1709
+          ],
+          [
+            2.3621,
+            4.03
+          ],
+          [
+            2.4628,
+            6.4939
           ]
         ]
       ]
     },
-    "confidence_score": 0.45,
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "The Kingdom of Denkyira was the dominant Akan state of the Gold Coast before the rise of Asante. Its defeat by Asante at the Battle of Feyiase (1701) is a foundational event in Asante history and is often told from the Asante victors' perspective. Denkyira's control of the gold trade and its relationship with European (particularly Dutch) traders on the coast illustrates the complexity of African agency in the Atlantic economy. Denkyira's rulers used their commercial power to dominate neighboring states and were themselves involved in the slave trade. The kingdom's history has been overshadowed by Asante's subsequent dominance, and Denkyira oral traditions offer important alternative perspectives on the period. Boundary da aourednik/historical-basemaps (1650, strategy=capital_near_centroid, precision=3). CC BY 4.0.",
     "name_variants": [
@@ -13817,10 +13765,12 @@
         "url": null
       }
     ],
-    "boundary_source": "aourednik",
-    "boundary_aourednik_name": "Akan",
-    "boundary_aourednik_year": 1650,
-    "boundary_aourednik_precision": 3
+    "boundary_source": "approximate_generated",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "boundary_ne_match_strategy": null
   },
   {
     "name_original": "Dagbon",
