@@ -17,7 +17,7 @@ from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker
 
 from src.db.database import Base, get_db
-from src.db.seed import seed_database
+from src.db.seed import seed_database, seed_events_database
 from src.main import app
 
 TEST_DATABASE_URL = "sqlite:///./data/test.db"
@@ -47,13 +47,16 @@ def setup_test_db():
     """Crea le tabelle e popola i dati demo per tutta la sessione di test."""
     Base.metadata.create_all(bind=test_engine)
 
-    from src.db.models import GeoEntity
+    from src.db.models import GeoEntity, HistoricalEvent
     db = TestSession()
     if db.query(GeoEntity).count() == 0:
         from src.db import seed as seed_module
         original = seed_module.SessionLocal
         seed_module.SessionLocal = TestSession
         seed_database()
+        # v6.3: seed eventi storici (ETHICS-007 + ETHICS-008)
+        if db.query(HistoricalEvent).count() == 0:
+            seed_events_database()
         seed_module.SessionLocal = original
     db.close()
 

@@ -15,11 +15,21 @@ from pathlib import Path
 from sqlalchemy.orm import Session
 
 from src.db.database import SessionLocal
-from src.db.models import GeoEntity, NameVariant, Source, TerritoryChange
+from src.db.models import (
+    EventEntityLink,
+    EventSource,
+    GeoEntity,
+    HistoricalEvent,
+    NameVariant,
+    Source,
+    TerritoryChange,
+)
 
 logger = logging.getLogger(__name__)
 
 ENTITIES_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "entities"
+# v6.3: separate directory for historical events — ETHICS-007 + ETHICS-008.
+EVENTS_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "events"
 
 
 def load_all_entities() -> list[dict]:
@@ -122,6 +132,135 @@ def seed_database():
     except Exception:
         db.rollback()
         logger.error("Errore durante il seed", exc_info=True)
+        raise
+    finally:
+        db.close()
+
+
+# ─── v6.3: eventi storici ──────────────────────────────────────────────────
+
+
+def load_all_events() -> list[dict]:
+    """Carica tutti gli eventi storici dai file JSON in data/events/*.json.
+
+    ETHICS-007: nessuna sostituzione di termini (GENOCIDE, COLONIAL_VIOLENCE,
+    ETHNIC_CLEANSING, DEPORTATION, FAMINE restano quelli).
+    ETHICS-008: campo `known_silence` propagato così com'è.
+    """
+    all_events: list[dict] = []
+    if not EVENTS_DIR.exists():
+        logger.info("Directory eventi non trovata (normale in dev): %s", EVENTS_DIR)
+        return all_events
+
+    json_files = sorted(EVENTS_DIR.glob("batch_*.json"))
+    for json_file in json_files:
+        try:
+            with open(json_file, encoding="utf-8") as f:
+                events = json.load(f)
+            if isinstance(events, list):
+                all_events.extend(events)
+                logger.info("Caricato %s: %d eventi", json_file.name, len(events))
+            else:
+                logger.warning("File eventi %s non e' una lista", json_file.name)
+        except (json.JSONDecodeError, OSError) as e:
+            logger.error("Errore caricamento %s: %s", json_file.name, e)
+
+    # Dedup per (name_original, year): un evento stesso anno/nome è duplicato.
+    seen = set()
+    unique: list[dict] = []
+    for ev in all_events:
+        key = (ev.get("name_original", ""), ev.get("year"))
+        if key not in seen:
+            seen.add(key)
+            unique.append(ev)
+        else:
+            logger.warning("Evento duplicato ignorato: %s (%s)", key[0], key[1])
+    return unique
+
+
+def seed_events_database():
+    """Popola la tabella historical_events se è vuota.
+
+    ETHICS-007: i link evento ↔ entità sono creati tramite name_original
+    (ground truth), con ruolo esplicito nel payload JSON. Un evento che
+    referenzia un'entità inesistente è loggato ma non blocca il seed.
+    """
+    db: Session = SessionLocal()
+    try:
+        count = db.query(HistoricalEvent).count()
+        if count > 0:
+            logger.info("Tabella eventi già popolata (%d eventi). Skip seed.", count)
+            return
+
+        all_events = load_all_events()
+        if not all_events:
+            logger.info("Nessun evento da seed.")
+            return
+
+        logger.info("Seeding eventi storici: %d da inserire...", len(all_events))
+
+        # Costruiamo una mappa name_original → entity_id per i link.
+        entity_map = {e.name_original: e.id for e in db.query(GeoEntity).all()}
+
+        inserted = 0
+        missing_refs: list[str] = []
+        for ev_data in all_events:
+            event = HistoricalEvent(
+                name_original=ev_data["name_original"],
+                name_original_lang=ev_data["name_original_lang"],
+                event_type=ev_data["event_type"],
+                year=ev_data["year"],
+                year_end=ev_data.get("year_end"),
+                location_name=ev_data.get("location_name"),
+                location_lat=ev_data.get("location_lat"),
+                location_lon=ev_data.get("location_lon"),
+                main_actor=ev_data.get("main_actor"),
+                description=ev_data["description"],
+                casualties_low=ev_data.get("casualties_low"),
+                casualties_high=ev_data.get("casualties_high"),
+                casualties_source=ev_data.get("casualties_source"),
+                confidence_score=ev_data.get("confidence_score", 0.7),
+                status=ev_data.get("status", "confirmed"),
+                known_silence=ev_data.get("known_silence", False),
+                silence_reason=ev_data.get("silence_reason"),
+                ethical_notes=ev_data.get("ethical_notes"),
+            )
+            # Sorgenti
+            for src in ev_data.get("sources", []):
+                event.sources.append(EventSource(**src))
+            # Link a entità (se esistono nel DB)
+            for link in ev_data.get("entity_links", []):
+                ent_name = link.get("entity_name_original")
+                entity_id = entity_map.get(ent_name) if ent_name else None
+                if entity_id is None:
+                    # L'evento è valido anche se non tutti i link risolvono:
+                    # un evento può coinvolgere entità non (ancora) seedate.
+                    missing_refs.append(f"{ev_data['name_original']} → {ent_name}")
+                    continue
+                event.entity_links.append(
+                    EventEntityLink(
+                        entity_id=entity_id,
+                        role=link.get("role", "AFFECTED"),
+                        notes=link.get("notes"),
+                    )
+                )
+            db.add(event)
+            inserted += 1
+
+        db.commit()
+        logger.info(
+            "Seed eventi completato: %d eventi inseriti; %d link a entità mancanti",
+            inserted,
+            len(missing_refs),
+        )
+        if missing_refs:
+            # Log solo i primi 5 per non inondare.
+            for ref in missing_refs[:5]:
+                logger.debug("link evento→entita mancante: %s", ref)
+
+    except Exception:
+        db.rollback()
+        logger.error("Errore durante il seed eventi", exc_info=True)
         raise
     finally:
         db.close()

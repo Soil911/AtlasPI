@@ -11,12 +11,12 @@
 
 <p align="center">
   <a href="https://atlaspi.cra-srl.com"><img alt="Try it live" src="https://img.shields.io/badge/try%20it-live-58a6ff?style=flat-square&logo=globe&logoColor=white"></a>
-  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.2.0-blue?style=flat-square"></a>
-  <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-752-green?style=flat-square"></a>
-  <a href="#-dataset-overview"><img alt="Coverage" src="https://img.shields.io/badge/real%20boundaries-73%25-green?style=flat-square"></a>
-  <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-281%20passing-brightgreen?style=flat-square"></a>
+  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.3.0-blue?style=flat-square"></a>
+  <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-846-green?style=flat-square"></a>
+  <a href="#-dataset-overview"><img alt="Events" src="https://img.shields.io/badge/events-30%2B-green?style=flat-square"></a>
+  <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-308%20passing-brightgreen?style=flat-square"></a>
   <a href="#-license"><img alt="License" src="https://img.shields.io/badge/license-Apache--2.0-orange?style=flat-square"></a>
-  <a href="#-api-documentation"><img alt="API" src="https://img.shields.io/badge/API-21%20endpoints-purple?style=flat-square"></a>
+  <a href="#-api-documentation"><img alt="API" src="https://img.shields.io/badge/API-23%20endpoints-purple?style=flat-square"></a>
   <a href="mcp-server/README.md"><img alt="MCP" src="https://img.shields.io/badge/MCP-ready-9d4edd?style=flat-square"></a>
   <a href="https://doi.org/10.5281/zenodo.19581784"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.19581784.svg"></a>
 </p>
@@ -74,7 +74,7 @@ docker compose up --build
 
 ## API Documentation
 
-AtlasPI exposes 21 REST endpoints under `/v1/`. Full interactive documentation is available at `/docs` (Swagger UI) and `/redoc` when the server is running.
+AtlasPI exposes 23 REST endpoints under `/v1/`. Full interactive documentation is available at `/docs` (Swagger UI) and `/redoc` when the server is running.
 
 ### Core Endpoints
 
@@ -165,7 +165,7 @@ curl "http://localhost:10100/v1/compare/1/5"
 
 ## Dataset Overview
 
-**752 historical entities** spanning 6,500 years of human civilization, backed by **2,200+ academic sources** and documenting **2,000+ territory changes**.
+**846 historical entities + 30+ historical events** spanning 6,500 years of human civilization, backed by **2,400+ academic sources** and documenting **2,000+ territory changes**. Events include battles, treaties, epidemies, genocides, famines and natural disasters — with ETHICS-007 (no euphemisms) and ETHICS-008 (`known_silence` flag for erased/suppressed records).
 
 ### Coverage by Region
 

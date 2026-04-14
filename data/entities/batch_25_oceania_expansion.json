@@ -1,0 +1,3299 @@
+[
+  {
+    "name_original": "Pulotu",
+    "name_original_lang": "ton",
+    "entity_type": "cultural_region",
+    "year_start": -1500,
+    "year_end": 1000,
+    "capital_name": "Pulotu (mythic isle, oral tradition locates west of Tonga)",
+    "capital_lat": -19.5,
+    "capital_lon": -178.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -175.3468,
+            -19.5
+          ],
+          [
+            -175.7693,
+            -17.9234
+          ],
+          [
+            -176.9234,
+            -16.7693
+          ],
+          [
+            -178.5,
+            -16.3468
+          ],
+          [
+            -180.0766,
+            -16.7693
+          ],
+          [
+            -181.2307,
+            -17.9234
+          ],
+          [
+            -181.6532,
+            -19.5
+          ],
+          [
+            -181.2307,
+            -21.0766
+          ],
+          [
+            -180.0766,
+            -22.2307
+          ],
+          [
+            -178.5,
+            -22.6532
+          ],
+          [
+            -176.9234,
+            -22.2307
+          ],
+          [
+            -175.7693,
+            -21.0766
+          ],
+          [
+            -175.3468,
+            -19.5
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Pulotu is a mythic-historical homeland in Polynesian (especially Tongan, Samoan and Fijian) cosmology, often identified by linguists and archaeologists with the Lapita-era cultural sphere of western Polynesia and eastern Fiji. Indigenous oral tradition treats Pulotu both as a real ancestral place and as the abode of ancestors, a distinction Western academic frameworks tend to flatten. The polygon reflects a speculative geographic core in eastern Fiji-western Polynesia consistent with Lapita ceramic distribution; it is a stylised marker, not a precise boundary. European missionary sources from the 19th century routinely dismissed Pulotu as 'pagan superstition', erasing its function as a memory of deep maritime history. Treating Pulotu only as 'myth' risks reproducing this colonial dismissal.",
+    "name_variants": [
+      {
+        "name": "Pulotu",
+        "lang": "ton",
+        "context": "Tongan name for the ancestral homeland and afterworld"
+      },
+      {
+        "name": "Pulotu",
+        "lang": "smo",
+        "context": "Samoan cognate referring to the same cosmological place"
+      },
+      {
+        "name": "Burotu",
+        "lang": "fij",
+        "context": "Fijian cognate, often associated with Matuku Island in Lau"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -1500,
+        "region": "Western Polynesia and eastern Fiji",
+        "change_type": "independence",
+        "description": "Approximate emergence of the Lapita cultural complex which oral tradition retroactively identifies with Pulotu, including settlement of Tonga, Samoa and the Lau group of Fiji.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1000,
+        "region": "Western Polynesia",
+        "change_type": "contraction",
+        "description": "Pulotu transitions in oral tradition from a remembered place to a primarily mythic homeland as new political centres (Tu'i Tonga) consolidate.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Geraghty, Paul. Pulotu, Polynesian Homeland. Journal of the Polynesian Society 102(4), 1993",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Burley, David V., and William R. Dickinson. Origin and Significance of a Founding Settlement in Polynesia. PNAS 98(20), 2001",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Mōʻī o Maui",
+    "name_original_lang": "haw",
+    "entity_type": "chiefdom",
+    "year_start": 1300,
+    "year_end": 1795,
+    "capital_name": "Wailuku",
+    "capital_lat": 20.89,
+    "capital_lon": -156.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -155.8694,
+            20.89
+          ],
+          [
+            -155.9539,
+            21.2053
+          ],
+          [
+            -156.1847,
+            21.4361
+          ],
+          [
+            -156.5,
+            21.5206
+          ],
+          [
+            -156.8153,
+            21.4361
+          ],
+          [
+            -157.0461,
+            21.2053
+          ],
+          [
+            -157.1306,
+            20.89
+          ],
+          [
+            -157.0461,
+            20.5747
+          ],
+          [
+            -156.8153,
+            20.3439
+          ],
+          [
+            -156.5,
+            20.2594
+          ],
+          [
+            -156.1847,
+            20.3439
+          ],
+          [
+            -155.9539,
+            20.5747
+          ],
+          [
+            -155.8694,
+            20.89
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "confirmed",
+    "ethical_notes": "The Mōʻī o Maui (paramount chiefdom of Maui) was one of four major pre-unification Hawaiian polities, ruled by the Piʻilani lineage from circa 1300 until conquest by Kamehameha I in 1795. Hawaiian historiography written in 'ōlelo Hawaiʻi (notably by Samuel Kamakau and David Malo) preserves a detailed mōʻī genealogy that 19th-century missionary historians often abridged or moralised. The polygon covers Maui Nui (Maui, Lānaʻi, Molokaʻi, Kahoʻolawe) which were politically integrated under Maui paramountcy during much of this period; the circular approximation extends slightly into ocean. Framing pre-contact Hawaiian society as an undifferentiated 'kingdom' obscures the long history of inter-island warfare and shifting alliances among the Mōʻī.",
+    "name_variants": [
+      {
+        "name": "Maui paramountcy",
+        "lang": "en",
+        "context": "English academic designation covering Maui Nui (Maui, Lānaʻi, Molokaʻi, Kahoʻolawe)"
+      },
+      {
+        "name": "Aupuni Maui",
+        "lang": "haw",
+        "context": "Hawaiian-language reference to the pre-Kamehameha Maui polity"
+      },
+      {
+        "name": "Piʻilani lineage",
+        "lang": "haw",
+        "context": "Ruling chiefly line from circa the 16th century"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1300,
+        "region": "Maui Nui",
+        "change_type": "independence",
+        "description": "Approximate consolidation of Maui paramountcy by ancestors of the Piʻilani lineage according to Hawaiian moʻokūʻauhau (genealogical) tradition.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1570,
+        "region": "Maui Nui",
+        "change_type": "expansion",
+        "description": "Reign of Piʻilani unifies Maui Nui (Maui, Lānaʻi, Molokaʻi, Kahoʻolawe) and the alaloa o Maui (around-island trail) is built, marking a peak of Maui power.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1795,
+        "region": "Maui Nui",
+        "change_type": "conquest",
+        "description": "Kamehameha I defeats Maui forces at the Battle of Kepaniwai and incorporates Maui into the unified Kingdom of Hawaiʻi.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Kamakau, Samuel M. Ruling Chiefs of Hawaii. Kamehameha Schools Press, revised edition 1992",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Kirch, Patrick V. A Shark Going Inland Is My Chief: The Island Civilization of Ancient Hawaii. University of California Press, 2012",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Tūmua ma Pule",
+    "name_original_lang": "smo",
+    "entity_type": "confederation",
+    "year_start": 1250,
+    "year_end": 1899,
+    "capital_name": "Lufilufi (Tūmua) and Safotulafai (Pule)",
+    "capital_lat": -13.83,
+    "capital_lon": -171.77,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -169.9682,
+            -13.83
+          ],
+          [
+            -170.2096,
+            -12.9291
+          ],
+          [
+            -170.8691,
+            -12.2696
+          ],
+          [
+            -171.77,
+            -12.0282
+          ],
+          [
+            -172.6709,
+            -12.2696
+          ],
+          [
+            -173.3304,
+            -12.9291
+          ],
+          [
+            -173.5718,
+            -13.83
+          ],
+          [
+            -173.3304,
+            -14.7309
+          ],
+          [
+            -172.6709,
+            -15.3904
+          ],
+          [
+            -171.77,
+            -15.6318
+          ],
+          [
+            -170.8691,
+            -15.3904
+          ],
+          [
+            -170.2096,
+            -14.7309
+          ],
+          [
+            -169.9682,
+            -13.83
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "confirmed",
+    "ethical_notes": "Tūmua ma Pule are the two traditional political confederations of Samoa: Tūmua centred on the orator villages of ʻUpolu (Lufilufi, Leulumoega, Afega) and Pule centred on Savaiʻi (Safotulafai, Saleʻaula, Asau and others). Together they conferred the four highest matai (papa) titles that constituted the Tafaʻifa, the closest pre-colonial Samoan equivalent of paramount sovereignty. European observers and later the Berlin Conference of 1899 mistreated this layered, distributed system as a single 'kingship' — an interpretive distortion that legitimised partition between Germany (Western Samoa) and the United States (American Samoa). The polygon spans both Savaiʻi and ʻUpolu including some surrounding ocean but excludes the Manuʻa group, which had its own independent Tuʻi Manuʻa lineage.",
+    "name_variants": [
+      {
+        "name": "Tumua and Pule",
+        "lang": "en",
+        "context": "English academic transliteration"
+      },
+      {
+        "name": "Le Tumua ma le Pule",
+        "lang": "smo",
+        "context": "Full Samoan form referring to the two orator confederations"
+      },
+      {
+        "name": "Faʻamatai system",
+        "lang": "smo",
+        "context": "Encompassing chiefly system of which Tumua and Pule are the political apex"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1250,
+        "region": "ʻUpolu and Savaiʻi",
+        "change_type": "independence",
+        "description": "Approximate emergence of the Tūmua and Pule orator confederations as the institutional framework for distributing the four papa titles of the Tafaʻifa, following the expulsion of Tuʻi Tonga overlordship.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1830,
+        "region": "ʻUpolu and Savaiʻi",
+        "change_type": "expansion",
+        "description": "Malietoa Vainuʻupō converts to Christianity (London Missionary Society), beginning intense missionary involvement in matai politics and reshaping the role of Tumua and Pule.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1899,
+        "region": "Samoan archipelago",
+        "change_type": "colonization",
+        "description": "The Tripartite Convention partitions Samoa between Germany (Savaiʻi and ʻUpolu) and the United States (Tutuila and Manuʻa), formally ending the autonomous functioning of Tumua ma Pule as a sovereign body.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Meleisea, Malama. The Making of Modern Samoa: Traditional Authority and Colonial Administration in the History of Western Samoa. Institute of Pacific Studies, USP, 1987",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Tcherkézoff, Serge. Polynésie/Mélanésie: l'invention française des races et des régions de l'Océanie. Au Vent des Îles, 2008",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Patuiki o Niue",
+    "name_original_lang": "niu",
+    "entity_type": "kingdom",
+    "year_start": 1700,
+    "year_end": 1900,
+    "capital_name": "Alofi",
+    "capital_lat": -19.05,
+    "capital_lon": -169.92,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -169.7218,
+            -19.05
+          ],
+          [
+            -169.7484,
+            -18.9509
+          ],
+          [
+            -169.8209,
+            -18.8784
+          ],
+          [
+            -169.92,
+            -18.8518
+          ],
+          [
+            -170.0191,
+            -18.8784
+          ],
+          [
+            -170.0916,
+            -18.9509
+          ],
+          [
+            -170.1182,
+            -19.05
+          ],
+          [
+            -170.0916,
+            -19.1491
+          ],
+          [
+            -170.0191,
+            -19.2216
+          ],
+          [
+            -169.92,
+            -19.2482
+          ],
+          [
+            -169.8209,
+            -19.2216
+          ],
+          [
+            -169.7484,
+            -19.1491
+          ],
+          [
+            -169.7218,
+            -19.05
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Patuiki was the title of the elected paramount of Niue, a small Polynesian island traditionally divided between Motu (north) and Tafiti (south) districts. Unlike most Polynesian polities, Niue had no continuous hereditary high chiefly lineage; the Patuiki was elected from among traditional chiefs, a fact that 19th-century LMS missionaries used to legitimise their own influence over the title. The polygon necessarily encompasses some ocean since Niue is a single small raised coral island. Calling Niue a 'kingdom' adopts a European-style framing for what was a more situational political institution; the indigenous fakaalofa social ethic structured everyday authority more than the Patuiki did.",
+    "name_variants": [
+      {
+        "name": "Patu-iki",
+        "lang": "niu",
+        "context": "Niuean transcription of the paramount title"
+      },
+      {
+        "name": "Niue",
+        "lang": "niu",
+        "context": "Indigenous name of the island, meaning 'behold the coconut'"
+      },
+      {
+        "name": "Savage Island",
+        "lang": "en",
+        "context": "Pejorative name imposed by Captain Cook in 1774, now rejected"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1700,
+        "region": "Niue island",
+        "change_type": "independence",
+        "description": "Approximate institutionalisation of the Patuiki title; oral tradition records a sequence of about six Patuiki before the colonial era.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1846,
+        "region": "Niue island",
+        "change_type": "expansion",
+        "description": "Arrival of Samoan LMS missionary Peniamina; Christianity reshapes Niuean political authority and the Patuiki increasingly serves as a Christian leader.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1900,
+        "region": "Niue island",
+        "change_type": "colonization",
+        "description": "Patuiki Tongia signs deed of cession to Britain; the following year Niue is annexed to New Zealand, ending independent Patuiki authority.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Loeb, Edwin M. History and Traditions of Niue. Bernice P. Bishop Museum Bulletin 32, 1926",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Pollock, Nancy J., and Ron Crocombe (eds). French Polynesia: A Book of Selected Readings. Institute of Pacific Studies, USP, 1988 (chapters on Niue governance)",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Taupulega o Tokelau",
+    "name_original_lang": "tkl",
+    "entity_type": "confederation",
+    "year_start": 1000,
+    "year_end": 1889,
+    "capital_name": "Fakaofo (paramount atoll)",
+    "capital_lat": -9.38,
+    "capital_lon": -171.21,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -170.5794,
+            -9.38
+          ],
+          [
+            -170.6639,
+            -9.0647
+          ],
+          [
+            -170.8947,
+            -8.8339
+          ],
+          [
+            -171.21,
+            -8.7494
+          ],
+          [
+            -171.5253,
+            -8.8339
+          ],
+          [
+            -171.7561,
+            -9.0647
+          ],
+          [
+            -171.8406,
+            -9.38
+          ],
+          [
+            -171.7561,
+            -9.6953
+          ],
+          [
+            -171.5253,
+            -9.9261
+          ],
+          [
+            -171.21,
+            -10.0106
+          ],
+          [
+            -170.8947,
+            -9.9261
+          ],
+          [
+            -170.6639,
+            -9.6953
+          ],
+          [
+            -170.5794,
+            -9.38
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Each of Tokelau's three atolls (Atafu, Nukunonu, Fakaofo) was governed by a Taupulega, a council of male elders ('toeaina') heading extended families ('kāiga'). Fakaofo historically claimed loose paramountcy over the other two atolls, collecting tribute and orchestrating raids — a hierarchy 19th-century European observers frequently overstated. Peruvian slave raiders ('blackbirders') deported nearly half of Tokelau's adult male population in 1863, a catastrophe that dismantled traditional governance more than any subsequent colonial act, and which is rarely placed at the centre of Tokelauan political history. The polygon encompasses the three atolls plus surrounding ocean used for traditional fishing.",
+    "name_variants": [
+      {
+        "name": "Taupulega",
+        "lang": "tkl",
+        "context": "Council of elders, the indigenous governing body of each atoll"
+      },
+      {
+        "name": "Tokelau Islands",
+        "lang": "en",
+        "context": "English colonial designation"
+      },
+      {
+        "name": "Union Islands",
+        "lang": "en",
+        "context": "Earlier English name (19th century), now obsolete"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1000,
+        "region": "Tokelau atolls",
+        "change_type": "independence",
+        "description": "Approximate Polynesian settlement of Tokelau from Samoa and the Cook Islands; the Taupulega system develops over the following centuries.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1863,
+        "region": "Tokelau atolls",
+        "change_type": "contraction",
+        "description": "Peruvian blackbirding raids deport approximately 250 Tokelauan men (about half of the adult male population) to work in Peruvian guano mines and plantations; almost none return. The Taupulega councils are demographically gutted.",
+        "population_affected": 250,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1889,
+        "region": "Tokelau atolls",
+        "change_type": "colonization",
+        "description": "British protectorate proclaimed over Tokelau; administration later transferred to New Zealand, with Taupulega retained as local-government bodies in subordinated form.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Huntsman, Judith, and Antony Hooper. Tokelau: A Historical Ethnography. Auckland University Press, 1996",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Maude, H. E. Slavers in Paradise: The Peruvian Slave Trade in Polynesia, 1862–1864. ANU Press / Stanford University Press, 1981",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Hau o ʻUvea",
+    "name_original_lang": "wls",
+    "entity_type": "kingdom",
+    "year_start": 1500,
+    "year_end": 1961,
+    "capital_name": "Matāʻutu",
+    "capital_lat": -13.28,
+    "capital_lon": -176.18,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -175.9548,
+            -13.28
+          ],
+          [
+            -175.9849,
+            -13.1674
+          ],
+          [
+            -176.0674,
+            -13.0849
+          ],
+          [
+            -176.18,
+            -13.0548
+          ],
+          [
+            -176.2926,
+            -13.0849
+          ],
+          [
+            -176.3751,
+            -13.1674
+          ],
+          [
+            -176.4052,
+            -13.28
+          ],
+          [
+            -176.3751,
+            -13.3926
+          ],
+          [
+            -176.2926,
+            -13.4751
+          ],
+          [
+            -176.18,
+            -13.5052
+          ],
+          [
+            -176.0674,
+            -13.4751
+          ],
+          [
+            -175.9849,
+            -13.3926
+          ],
+          [
+            -175.9548,
+            -13.28
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "confirmed",
+    "ethical_notes": "The kingdom of ʻUvea (Wallis Island) is the senior of the three customary chieftainships that France today recognises in Wallis-and-Futuna. Indigenous oral tradition traces the Hau (king) lineage to a 15th-century Tongan invasion that reshaped local hierarchies, leaving a layered society of indigenous kutuga (clans) under a Tongan-derived royal house. French Marist missionaries from 1837 progressively fused Catholicism with the Hau's authority, producing the unusual present-day arrangement in which the Catholic Church is constitutionally entwined with the indigenous monarchy. The polygon covers Wallis and Nukuatea but not Futuna, which was a distinct polity (Sigave / Alo).",
+    "name_variants": [
+      {
+        "name": "Uvea",
+        "lang": "wls",
+        "context": "Indigenous name of the island"
+      },
+      {
+        "name": "Wallis",
+        "lang": "fr",
+        "context": "European name from British navigator Samuel Wallis (1767), used in French administration"
+      },
+      {
+        "name": "Royaume d'Uvea",
+        "lang": "fr",
+        "context": "French designation of the customary kingdom"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1500,
+        "region": "Uvea (Wallis)",
+        "change_type": "conquest",
+        "description": "Approximate Tongan invasion under Tuʻi Tonga influence reshapes Uvean hierarchy and installs a royal house with Tongan affinities.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1842,
+        "region": "Uvea",
+        "change_type": "expansion",
+        "description": "Hau Lavelua converts to Catholicism under Marist missionary Pierre Bataillon; the kingdom becomes formally Catholic and missionary authority is integrated into traditional governance.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1961,
+        "region": "Uvea, Futuna and Alo",
+        "change_type": "colonization",
+        "description": "Wallis and Futuna become a French overseas territory; the Hau o ʻUvea retains customary authority but loses sovereignty.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Rensch, Karl H. Tikisionalio Fakauvea-Fakafalani / Dictionnaire wallisien-français. Pacific Linguistics, ANU, 1984 (introduction on Uvean polity)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Roux, Jean-Claude. Wallis et Futuna: espaces et temps recomposés. Presses Universitaires de Bordeaux, 1995",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Sau o Futuna",
+    "name_original_lang": "fud",
+    "entity_type": "confederation",
+    "year_start": 1500,
+    "year_end": 1961,
+    "capital_name": "Sigave (Leava) and Alo (Mala'e)",
+    "capital_lat": -14.3,
+    "capital_lon": -178.16,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -177.9618,
+            -14.3
+          ],
+          [
+            -177.9884,
+            -14.2009
+          ],
+          [
+            -178.0609,
+            -14.1284
+          ],
+          [
+            -178.16,
+            -14.1018
+          ],
+          [
+            -178.2591,
+            -14.1284
+          ],
+          [
+            -178.3316,
+            -14.2009
+          ],
+          [
+            -178.3582,
+            -14.3
+          ],
+          [
+            -178.3316,
+            -14.3991
+          ],
+          [
+            -178.2591,
+            -14.4716
+          ],
+          [
+            -178.16,
+            -14.4982
+          ],
+          [
+            -178.0609,
+            -14.4716
+          ],
+          [
+            -177.9884,
+            -14.3991
+          ],
+          [
+            -177.9618,
+            -14.3
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Futuna island has historically been divided between two kingdoms — Sigave on the western coast and Alo (also called Tuʻa) on the east — together with the small uninhabited island of Alofi which falls under Alo. Each is led by a Sau (king) chosen from a defined set of noble lineages, in a more openly elective system than Uvea's Hau. Marist missionary Pierre Chanel was killed at Pōʻī in 1841 by order of king Niuliki of Alo; he was later canonised, and his death is cited by colonial-era French sources as moral pretext for protectorate. The polygon covers Futuna and Alofi only and necessarily includes some ocean. Calling these polities 'tribal' as some 19th-century French sources did effaces real institutional continuity over centuries.",
+    "name_variants": [
+      {
+        "name": "Royaumes de Futuna",
+        "lang": "fr",
+        "context": "French designation of the Sigave and Alo kingdoms"
+      },
+      {
+        "name": "Tuʻa",
+        "lang": "fud",
+        "context": "Alternative name for the Alo kingdom"
+      },
+      {
+        "name": "Horn Islands",
+        "lang": "en",
+        "context": "European name (from 1616 Dutch encounter), now obsolete"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1500,
+        "region": "Futuna and Alofi",
+        "change_type": "independence",
+        "description": "Approximate consolidation of the Sigave and Alo (Tuʻa) kingdoms following a period of conflict between Futunan groups and Tongan influence comparable to that on Uvea.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1841,
+        "region": "Alo",
+        "change_type": "conquest",
+        "description": "King Niuliki of Alo orders the killing of Marist missionary Pierre Chanel at Pōʻī, an event later weaponised by France to justify a protectorate.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1961,
+        "region": "Futuna and Alofi",
+        "change_type": "colonization",
+        "description": "Futuna is incorporated, with Wallis, into the French overseas territory of Wallis-and-Futuna; the two Sau retain customary authority only.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Burrows, Edwin G. Ethnology of Futuna. Bernice P. Bishop Museum Bulletin 138, 1936",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Chave-Dartoen, Sophie. Uvea (Wallis): une société de Polynésie occidentale. PhD thesis, EHESS Paris, 2002 (chapters on Futuna comparison)",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Roviana",
+    "name_original_lang": "rug",
+    "entity_type": "chiefdom",
+    "year_start": 1600,
+    "year_end": 1900,
+    "capital_name": "Munda (Nusa Roviana)",
+    "capital_lat": -8.33,
+    "capital_lon": 157.27,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            157.8105,
+            -8.33
+          ],
+          [
+            157.7381,
+            -8.0597
+          ],
+          [
+            157.5403,
+            -7.8619
+          ],
+          [
+            157.27,
+            -7.7895
+          ],
+          [
+            156.9997,
+            -7.8619
+          ],
+          [
+            156.8019,
+            -8.0597
+          ],
+          [
+            156.7295,
+            -8.33
+          ],
+          [
+            156.8019,
+            -8.6003
+          ],
+          [
+            156.9997,
+            -8.7981
+          ],
+          [
+            157.27,
+            -8.8705
+          ],
+          [
+            157.5403,
+            -8.7981
+          ],
+          [
+            157.7381,
+            -8.6003
+          ],
+          [
+            157.8105,
+            -8.33
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Roviana was a powerful chiefdom in the New Georgia group of the western Solomon Islands, organised around the Roviana lagoon and the fortified centre at Nusa Roviana. It became a major hub of headhunting raids ('hope') in the 18th and 19th centuries, partly as a ritual practice and partly driven by demand for human heads in the construction of new chiefly canoes ('tomako'). European labour-trade ships supplied steel weapons that intensified raiding, a colonial entanglement often elided when Roviana is presented merely as 'savage' headhunters. Methodist missionaries from 1902 and the British Solomon Islands Protectorate (declared 1893) ended the raiding. The polygon covers the Roviana lagoon, the surrounding New Georgia coast and offshore raiding zones; surrounding ocean is necessarily included.",
+    "name_variants": [
+      {
+        "name": "Roviana lagoon polity",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Nusa Roviana",
+        "lang": "rug",
+        "context": "Fortified island that was the chiefly seat"
+      },
+      {
+        "name": "New Georgia headhunters",
+        "lang": "en",
+        "context": "Colonial-era European designation, now considered reductive"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1600,
+        "region": "New Georgia, western Solomons",
+        "change_type": "independence",
+        "description": "Approximate consolidation of Roviana as a regional chiefdom centred on the lagoon and the fortified Nusa Roviana.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1840,
+        "region": "Western Solomons and beyond",
+        "change_type": "expansion",
+        "description": "Steel weapons obtained through European labour-trade and the trade in turtle shell (bekko) intensify Roviana headhunting raids as far as Choiseul, Isabel and Guadalcanal.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1900,
+        "region": "Western Solomons",
+        "change_type": "colonization",
+        "description": "British Solomon Islands Protectorate authorities, with the Methodist Mission, suppress headhunting; Roviana chiefly authority is incorporated into colonial indirect rule.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Aswani, Shankar. Patterns of Marine Harvest Effort in Southwestern New Georgia, Solomon Islands. Coastal Management 30(3), 2002 (with extensive historical introduction)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Sheppard, Peter J., Richard Walter and Takuya Nagaoka. The Archaeology of Head-Hunting in Roviana Lagoon, New Georgia. Journal of the Polynesian Society 109(1), 2000",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Marovo",
+    "name_original_lang": "mvo",
+    "entity_type": "chiefdom",
+    "year_start": 1700,
+    "year_end": 1900,
+    "capital_name": "Chea (Marovo Lagoon)",
+    "capital_lat": -8.5,
+    "capital_lon": 158.1,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            158.5505,
+            -8.5
+          ],
+          [
+            158.4901,
+            -8.2748
+          ],
+          [
+            158.3252,
+            -8.1099
+          ],
+          [
+            158.1,
+            -8.0495
+          ],
+          [
+            157.8748,
+            -8.1099
+          ],
+          [
+            157.7099,
+            -8.2748
+          ],
+          [
+            157.6495,
+            -8.5
+          ],
+          [
+            157.7099,
+            -8.7252
+          ],
+          [
+            157.8748,
+            -8.8901
+          ],
+          [
+            158.1,
+            -8.9505
+          ],
+          [
+            158.3252,
+            -8.8901
+          ],
+          [
+            158.4901,
+            -8.7252
+          ],
+          [
+            158.5505,
+            -8.5
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Marovo refers to the chiefdoms surrounding Marovo Lagoon in the New Georgia group, ethnically and politically distinct from but partly subordinate to Roviana during periods of Roviana ascendancy. Bilua-, Hoava- and Marovo-speaking communities maintained their own butubutu (clan) hierarchies and were both raiders and victims in regional headhunting. As with Roviana, late-19th-century European demand for shell and copra accelerated the cycle of raiding and consolidation that earlier Eurocentric ethnography depicted as timeless 'savagery'. The polygon covers the lagoon, the bordering Vangunu and New Georgia coastlines, and immediate raiding range, including some open water.",
+    "name_variants": [
+      {
+        "name": "Marovo Lagoon polity",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Butubutu Marovo",
+        "lang": "mvo",
+        "context": "Indigenous designation referring to the lineage groups of Marovo"
+      },
+      {
+        "name": "Marovo-Hoava chiefdoms",
+        "lang": "en",
+        "context": "Compound English designation reflecting linguistic diversity"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1700,
+        "region": "Marovo Lagoon",
+        "change_type": "independence",
+        "description": "Approximate consolidation of butubutu hierarchies in the Marovo, Hoava and Bareke regions of the lagoon.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1850,
+        "region": "New Georgia group",
+        "change_type": "contraction",
+        "description": "Marovo communities suffer repeated raids from Roviana, leading to depopulation of some coastal villages and fortification of inland sites.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1900,
+        "region": "Marovo Lagoon",
+        "change_type": "colonization",
+        "description": "Methodist mission and British Solomon Islands Protectorate authority ends raiding and reorganises butubutu under colonial indirect rule.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hviding, Edvard. Guardians of Marovo Lagoon: Practice, Place, and Politics in Maritime Melanesia. University of Hawai'i Press, 1996",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Bayliss-Smith, Tim, Edvard Hviding and Tim Whitmore. Rainforest Composition and Histories of Human Disturbance in Solomon Islands. Ambio 32(5), 2003",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Kiriwina",
+    "name_original_lang": "kij",
+    "entity_type": "chiefdom",
+    "year_start": 1300,
+    "year_end": 1900,
+    "capital_name": "Omarakana",
+    "capital_lat": -8.5,
+    "capital_lon": 151.05,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            151.5455,
+            -8.5
+          ],
+          [
+            151.4791,
+            -8.2523
+          ],
+          [
+            151.2977,
+            -8.0709
+          ],
+          [
+            151.05,
+            -8.0045
+          ],
+          [
+            150.8023,
+            -8.0709
+          ],
+          [
+            150.6209,
+            -8.2523
+          ],
+          [
+            150.5545,
+            -8.5
+          ],
+          [
+            150.6209,
+            -8.7477
+          ],
+          [
+            150.8023,
+            -8.9291
+          ],
+          [
+            151.05,
+            -8.9955
+          ],
+          [
+            151.2977,
+            -8.9291
+          ],
+          [
+            151.4791,
+            -8.7477
+          ],
+          [
+            151.5455,
+            -8.5
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "confirmed",
+    "ethical_notes": "Kiriwina is the largest of the Trobriand Islands and the seat of the paramount chief ('Paramount Tabalu') from the Tabalu sub-clan, who claimed precedence over other dala (matrilineages) across the archipelago. The Trobriand polity became famous in Western anthropology through Bronisław Malinowski's fieldwork during the First World War — but Malinowski's framing of Trobriand society as a 'primitive' counterpoint to European modernity has been criticised by later Trobriand scholars and by Annette Weiner for downplaying women's wealth and chiefly authority. The polygon covers Kiriwina plus immediately surrounding islands of the Trobriand group involved in the Kula ring of ceremonial exchange; some surrounding ocean is included.",
+    "name_variants": [
+      {
+        "name": "Trobriand Islands",
+        "lang": "en",
+        "context": "English colonial designation, after French navigator Denis de Trobriand"
+      },
+      {
+        "name": "Kiriwina paramount chiefdom",
+        "lang": "en",
+        "context": "Anthropological designation"
+      },
+      {
+        "name": "Tabalu",
+        "lang": "kij",
+        "context": "Ruling matrilineal sub-clan"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1300,
+        "region": "Trobriand Islands",
+        "change_type": "independence",
+        "description": "Approximate consolidation of the Tabalu paramountcy over Kiriwina and the establishment of the Kula ring linking Trobriand, Marshall Bennett and other Massim islands.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1894,
+        "region": "Trobriand Islands",
+        "change_type": "colonization",
+        "description": "Trobriand Islands annexed to British New Guinea (later Australian Papua); the Tabalu paramount chief is retained as a recognised authority in colonial indirect rule.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1915,
+        "region": "Kiriwina",
+        "change_type": "expansion",
+        "description": "Bronisław Malinowski begins fieldwork at Omarakana, producing the body of work that makes Trobriand society a central case in 20th-century anthropology — for better and for worse.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Weiner, Annette B. Women of Value, Men of Renown: New Perspectives in Trobriand Exchange. University of Texas Press, 1976",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Lepani, Katherine. Islands of Love, Islands of Risk: Culture and HIV in the Trobriands. Vanderbilt University Press, 2012 (introduction with critique of Malinowski)",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Me'ekamui",
+    "name_original_lang": "tpi",
+    "entity_type": "cultural_region",
+    "year_start": 1500,
+    "year_end": 1899,
+    "capital_name": "Buin region (southern Bougainville) and Buka",
+    "capital_lat": -6.2,
+    "capital_lon": 155.4,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            156.391,
+            -6.2
+          ],
+          [
+            156.2582,
+            -5.7045
+          ],
+          [
+            155.8955,
+            -5.3418
+          ],
+          [
+            155.4,
+            -5.209
+          ],
+          [
+            154.9045,
+            -5.3418
+          ],
+          [
+            154.5418,
+            -5.7045
+          ],
+          [
+            154.409,
+            -6.2
+          ],
+          [
+            154.5418,
+            -6.6955
+          ],
+          [
+            154.9045,
+            -7.0582
+          ],
+          [
+            155.4,
+            -7.191
+          ],
+          [
+            155.8955,
+            -7.0582
+          ],
+          [
+            156.2582,
+            -6.6955
+          ],
+          [
+            156.391,
+            -6.2
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Bougainville island (with Buka and adjacent atolls) was not a single polity but a mosaic of matrilineal clan-based societies — Buin, Nasioi, Nagovisi, Siwai, Eivo, Telei in the south and centre; Halia and Hahon in the north — speaking Papuan and Austronesian languages. The unifying contemporary indigenous concept 'Me'ekamui' ('sacred land') is largely a 20th-century political construct of the Bougainville independence movement, retrospectively projecting a unity that pre-colonial polities did not formally possess. German annexation in 1899 placed the islands inside the German New Guinea protectorate, separating them administratively from the Solomons despite cultural continuity. The polygon covers Bougainville, Buka and immediately associated islands, including some surrounding ocean.",
+    "name_variants": [
+      {
+        "name": "Bougainville chiefdoms",
+        "lang": "en",
+        "context": "English academic designation for the pre-colonial polities collectively"
+      },
+      {
+        "name": "North Solomons societies",
+        "lang": "en",
+        "context": "Geographic designation reflecting cultural ties with the Solomons archipelago"
+      },
+      {
+        "name": "Me'ekamui",
+        "lang": "tpi",
+        "context": "Tok Pisin / Bougainvillean political term meaning 'sacred land', adopted by independence movement"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1500,
+        "region": "Bougainville and Buka",
+        "change_type": "independence",
+        "description": "Approximate ethnographic consolidation of the Buin, Nasioi, Halia and other clan polities; matrilineal land tenure characterises most groups.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1768,
+        "region": "Bougainville",
+        "change_type": "expansion",
+        "description": "Louis Antoine de Bougainville sights and names the island; sustained European contact does not begin for another century.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1899,
+        "region": "Bougainville and Buka",
+        "change_type": "colonization",
+        "description": "Anglo-German Convention places Bougainville and Buka within German New Guinea, separating the islands administratively from the British Solomon Islands Protectorate despite shared cultural background.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Regan, Anthony J., and Helga M. Griffin (eds). Bougainville Before the Conflict. Pandanus Books, ANU, 2005",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Ogan, Eugene. The Cultural Background to the Bougainville Crisis. Journal de la Société des Océanistes 92–93, 1991",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Tui Nayau",
+    "name_original_lang": "fij",
+    "entity_type": "chiefdom",
+    "year_start": 1700,
+    "year_end": 1874,
+    "capital_name": "Tubou (Lakeba)",
+    "capital_lat": -18.22,
+    "capital_lon": -178.83,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -176.848,
+            -18.22
+          ],
+          [
+            -177.1136,
+            -17.229
+          ],
+          [
+            -177.839,
+            -16.5036
+          ],
+          [
+            -178.83,
+            -16.238
+          ],
+          [
+            -179.821,
+            -16.5036
+          ],
+          [
+            -180.5464,
+            -17.229
+          ],
+          [
+            -180.812,
+            -18.22
+          ],
+          [
+            -180.5464,
+            -19.211
+          ],
+          [
+            -179.821,
+            -19.9364
+          ],
+          [
+            -178.83,
+            -20.202
+          ],
+          [
+            -177.839,
+            -19.9364
+          ],
+          [
+            -177.1136,
+            -19.211
+          ],
+          [
+            -176.848,
+            -18.22
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "confirmed",
+    "ethical_notes": "Tui Nayau is the title of the paramount chief of the Lau Islands of eastern Fiji, traditionally based at Tubou on Lakeba. The Lau group lies at the cultural interface between Fiji and Tonga, and the Tui Nayau lineage has substantial Tongan ancestry through Maʻafu (a Tongan prince who established political dominance in Lau in the 1850s). British framing of Maʻafu's career sometimes presents him as an 'invader' opposed to Cakobau, while Tongan and Fijian sources see him as a legitimate dynastic actor. The polygon covers the Lau group spanning roughly 300 km north-south and includes substantial open water. The Tui Nayau title still exists today; colonial cession in 1874 ended its independent sovereignty.",
+    "name_variants": [
+      {
+        "name": "Roko Tui Lau",
+        "lang": "fij",
+        "context": "Alternative title used in colonial-era documents"
+      },
+      {
+        "name": "Lau Confederacy",
+        "lang": "en",
+        "context": "English academic designation for the Tui Nayau-led polity"
+      },
+      {
+        "name": "Tui Lau",
+        "lang": "fij",
+        "context": "Variant title held jointly with Tui Nayau in 19th-century arrangements"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1700,
+        "region": "Lau Islands",
+        "change_type": "independence",
+        "description": "Approximate consolidation of Tui Nayau paramountcy over Lakeba and dependent islands of the Lau group.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1855,
+        "region": "Lau Islands",
+        "change_type": "expansion",
+        "description": "Maʻafu, Tongan prince and Methodist convert, takes effective control of much of Lau and is eventually recognised as Tui Lau, integrating Tongan and Fijian political traditions.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1874,
+        "region": "Fiji including Lau",
+        "change_type": "colonization",
+        "description": "Cakobau and other chiefs cede Fiji to Britain; Maʻafu signs as Tui Lau. The Tui Nayau title is retained as customary office under colonial indirect rule.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Routledge, David. Matanitū: The Struggle for Power in Early Fiji. Institute of Pacific Studies, USP, 1985",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Spurway, John. Maʻafu, Prince of Tonga, Chief of Fiji: The Life and Times of Fiji's First Tui Lau. ANU Press, 2015",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Tui Cakau",
+    "name_original_lang": "fij",
+    "entity_type": "chiefdom",
+    "year_start": 1700,
+    "year_end": 1874,
+    "capital_name": "Somosomo (Taveuni) and later Wairiki",
+    "capital_lat": -16.77,
+    "capital_lon": -179.83,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -178.839,
+            -16.77
+          ],
+          [
+            -178.9718,
+            -16.2745
+          ],
+          [
+            -179.3345,
+            -15.9118
+          ],
+          [
+            -179.83,
+            -15.779
+          ],
+          [
+            -180.3255,
+            -15.9118
+          ],
+          [
+            -180.6882,
+            -16.2745
+          ],
+          [
+            -180.821,
+            -16.77
+          ],
+          [
+            -180.6882,
+            -17.2655
+          ],
+          [
+            -180.3255,
+            -17.6282
+          ],
+          [
+            -179.83,
+            -17.761
+          ],
+          [
+            -179.3345,
+            -17.6282
+          ],
+          [
+            -178.9718,
+            -17.2655
+          ],
+          [
+            -178.839,
+            -16.77
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "confirmed",
+    "ethical_notes": "Tui Cakau is the paramount title of the Cakaudrove confederacy of north-eastern Fiji, encompassing parts of Vanua Levu (Cakaudrove and Buca districts) and the island of Taveuni. In 19th-century Fijian politics, Cakaudrove under Tui Cakau Tui Kilakila and his successors stood among the great matanitū (confederacies) competing with Bau and Rewa. The lineage allied at various times with Maʻafu's Tongan-led Lau grouping and with Cakobau's Bau, complicating the Eurocentric narrative of a single 'Fijian unification'. The polygon covers Taveuni, the Cakaudrove side of Vanua Levu and intermediate waters. Use of 'kingdom' for Cakaudrove flattens its layered, vanua-based authority structure.",
+    "name_variants": [
+      {
+        "name": "Cakaudrove",
+        "lang": "fij",
+        "context": "Indigenous name of the confederacy"
+      },
+      {
+        "name": "Cakaudrove Confederacy",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Somosomo paramountcy",
+        "lang": "en",
+        "context": "Reference to the Tui Cakau's traditional seat"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1700,
+        "region": "Cakaudrove (Vanua Levu, Taveuni)",
+        "change_type": "independence",
+        "description": "Approximate consolidation of Tui Cakau paramountcy with seat at Somosomo on Taveuni.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1855,
+        "region": "Eastern Fiji",
+        "change_type": "expansion",
+        "description": "Cakaudrove allies with Maʻafu and Tongan forces during the Battle of Kaba supporting Cakobau against rebel chiefs, contributing to the temporary Fijian political settlement.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1874,
+        "region": "Fiji",
+        "change_type": "colonization",
+        "description": "Tui Cakau Ratu Golea Saukimoce signs the Deed of Cession of Fiji to Britain; Cakaudrove becomes a province under colonial indirect rule.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Routledge, David. Matanitū: The Struggle for Power in Early Fiji. Institute of Pacific Studies, USP, 1985",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Sahlins, Marshall. Apologies to Thucydides: Understanding History as Culture and Vice Versa. University of Chicago Press, 2004 (chapters on Fijian war and politics)",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Vanua ko Verata",
+    "name_original_lang": "fij",
+    "entity_type": "chiefdom",
+    "year_start": 1500,
+    "year_end": 1839,
+    "capital_name": "Verata (Tailevu coast)",
+    "capital_lat": -17.71,
+    "capital_lon": 178.65,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            179.0554,
+            -17.71
+          ],
+          [
+            179.0011,
+            -17.5073
+          ],
+          [
+            178.8527,
+            -17.3589
+          ],
+          [
+            178.65,
+            -17.3046
+          ],
+          [
+            178.4473,
+            -17.3589
+          ],
+          [
+            178.2989,
+            -17.5073
+          ],
+          [
+            178.2446,
+            -17.71
+          ],
+          [
+            178.2989,
+            -17.9127
+          ],
+          [
+            178.4473,
+            -18.0611
+          ],
+          [
+            178.65,
+            -18.1154
+          ],
+          [
+            178.8527,
+            -18.0611
+          ],
+          [
+            179.0011,
+            -17.9127
+          ],
+          [
+            179.0554,
+            -17.71
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Vanua ko Verata, the chiefdom of Verata on the Tailevu coast of Viti Levu, was widely remembered in 19th-century Fijian oral tradition as the senior matanitū of eastern Viti Levu before its eclipse by Bau in the late 18th and early 19th centuries. Verata's Tui Verata lineage claimed precedence on grounds of antiquity, a claim Bau-aligned narratives dismissed and which European observers (relying mainly on Bau informants such as William Cross and David Cargill) tended to discount. Around 1839 Bau's Cakobau decisively destroyed Verata as an independent power, killing many and dispersing its people. The polygon covers Verata district and immediately tributary villages along the Tailevu coast.",
+    "name_variants": [
+      {
+        "name": "Verata",
+        "lang": "fij",
+        "context": "Indigenous name"
+      },
+      {
+        "name": "Verata paramountcy",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Tui Verata",
+        "lang": "fij",
+        "context": "Title of the paramount of Verata"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1500,
+        "region": "Tailevu (eastern Viti Levu)",
+        "change_type": "independence",
+        "description": "Approximate consolidation of Verata paramountcy claiming senior status among eastern Viti Levu polities.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1760,
+        "region": "Eastern Viti Levu",
+        "change_type": "contraction",
+        "description": "Rise of Bau under the Tui Kaba lineage progressively erodes Verata's paramountcy as tributary villages defect or are coerced.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1839,
+        "region": "Verata",
+        "change_type": "conquest",
+        "description": "Bau forces under Tanoa and his son Cakobau destroy Verata as a polity; surviving population is dispersed or absorbed.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Sahlins, Marshall. Islands of History. University of Chicago Press, 1985 (chapters on Fijian polities)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Routledge, David. Matanitū: The Struggle for Power in Early Fiji. Institute of Pacific Studies, USP, 1985",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Burebasaga / Rewa",
+    "name_original_lang": "fij",
+    "entity_type": "chiefdom",
+    "year_start": 1600,
+    "year_end": 1874,
+    "capital_name": "Rewa (Lomanikoro)",
+    "capital_lat": -18.13,
+    "capital_lon": 178.49,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            178.9405,
+            -18.13
+          ],
+          [
+            178.8801,
+            -17.9048
+          ],
+          [
+            178.7152,
+            -17.7399
+          ],
+          [
+            178.49,
+            -17.6795
+          ],
+          [
+            178.2648,
+            -17.7399
+          ],
+          [
+            178.0999,
+            -17.9048
+          ],
+          [
+            178.0395,
+            -18.13
+          ],
+          [
+            178.0999,
+            -18.3552
+          ],
+          [
+            178.2648,
+            -18.5201
+          ],
+          [
+            178.49,
+            -18.5805
+          ],
+          [
+            178.7152,
+            -18.5201
+          ],
+          [
+            178.8801,
+            -18.3552
+          ],
+          [
+            178.9405,
+            -18.13
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "confirmed",
+    "ethical_notes": "Rewa was one of the three great matanitū of pre-cession Fiji alongside Bau and Cakaudrove, with its paramountcy held by the Roko Tui Dreketi and its political system known today as the Burebasaga confederacy. The Rewa-Bau war of 1843–1855 devastated southern Viti Levu and culminated in Cakobau's victory at Kaba — but Rewan oral tradition emphasises that Bau's success owed substantially to Tongan military aid under Maʻafu, complicating the Bau-centric account that Western missionary sources promoted. The Roko Tui Dreketi remains today one of three traditional paramountcies recognised by the Great Council of Chiefs. The polygon covers the lower Rewa River delta and immediate inland districts.",
+    "name_variants": [
+      {
+        "name": "Burebasaga",
+        "lang": "fij",
+        "context": "Name of the Rewa-led confederacy"
+      },
+      {
+        "name": "Roko Tui Dreketi",
+        "lang": "fij",
+        "context": "Title of the paramount chief of Rewa"
+      },
+      {
+        "name": "Rewa Kingdom",
+        "lang": "en",
+        "context": "English designation, common in 19th-century missionary sources"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1600,
+        "region": "Rewa River delta",
+        "change_type": "independence",
+        "description": "Approximate consolidation of Burebasaga / Rewa as a major matanitū with paramountcy held by the Roko Tui Dreketi.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1843,
+        "region": "Southern Viti Levu",
+        "change_type": "conquest",
+        "description": "Outbreak of the Rewa-Bau war, in which Rewa under Roko Tui Dreketi Banuve and his successors fights Bau in a destructive twelve-year conflict.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1874,
+        "region": "Fiji",
+        "change_type": "colonization",
+        "description": "Rewa signs the Deed of Cession of Fiji to Britain; Burebasaga is incorporated into colonial Fiji as one of three great confederacies of the Great Council of Chiefs.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Routledge, David. Matanitū: The Struggle for Power in Early Fiji. Institute of Pacific Studies, USP, 1985",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Derrick, R. A. A History of Fiji, vol. 1. Government Press, Suva, revised edition 1950",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Nakauvadra",
+    "name_original_lang": "fij",
+    "entity_type": "cultural_region",
+    "year_start": 1200,
+    "year_end": 1876,
+    "capital_name": "Nakauvadra range (Ra Province)",
+    "capital_lat": -17.42,
+    "capital_lon": 178.2,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            178.6054,
+            -17.42
+          ],
+          [
+            178.5511,
+            -17.2173
+          ],
+          [
+            178.4027,
+            -17.0689
+          ],
+          [
+            178.2,
+            -17.0146
+          ],
+          [
+            177.9973,
+            -17.0689
+          ],
+          [
+            177.8489,
+            -17.2173
+          ],
+          [
+            177.7946,
+            -17.42
+          ],
+          [
+            177.8489,
+            -17.6227
+          ],
+          [
+            177.9973,
+            -17.7711
+          ],
+          [
+            178.2,
+            -17.8254
+          ],
+          [
+            178.4027,
+            -17.7711
+          ],
+          [
+            178.5511,
+            -17.6227
+          ],
+          [
+            178.6054,
+            -17.42
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "The Nakauvadra range in Ra Province on northern Viti Levu is the mythic-historical homeland of many Fijian iTaukei groups: oral tradition holds that ancestors descended from Nakauvadra to settle the rest of Fiji, and the snake-god Degei is said to dwell in the range's caves. Politically, the highland clans (kai colo) of Nakauvadra and surrounding ranges remained outside the coastal matanitū system through the 19th century and were not represented at the 1874 Cession. The 1876 Little War of British colonial 'pacification' (Kai Colo War) crushed highland resistance and is rarely centred in either British or coastal-Fijian historiography. Polygon covers the Nakauvadra range and immediate uplands.",
+    "name_variants": [
+      {
+        "name": "Kai Colo (highland clans)",
+        "lang": "fij",
+        "context": "Fijian designation for the inland peoples"
+      },
+      {
+        "name": "Nakauvadra Range",
+        "lang": "en",
+        "context": "English geographic designation"
+      },
+      {
+        "name": "Highland Viti Levu polities",
+        "lang": "en",
+        "context": "Academic designation for the non-coastal political traditions"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1200,
+        "region": "Northern Viti Levu highlands",
+        "change_type": "independence",
+        "description": "Approximate ethnogenesis of the highland clans associated with Nakauvadra in indigenous oral tradition.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1874,
+        "region": "Viti Levu interior",
+        "change_type": "expansion",
+        "description": "Coastal cession of Fiji to Britain leaves the highland clans formally outside the cession but de facto targeted by colonial expansion.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1876,
+        "region": "Viti Levu interior",
+        "change_type": "conquest",
+        "description": "Colonial Fiji's Little War (Kai Colo War) crushes highland resistance under Bisiki and other leaders; many highland villages are destroyed and inhabitants relocated.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Nicole, Robert. Disturbing History: Resistance in Early Colonial Fiji. University of Hawai'i Press, 2010",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Sahlins, Marshall. Apologies to Thucydides: Understanding History as Culture and Vice Versa. University of Chicago Press, 2004 (chapters on Kai Colo War)",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Wa'ab",
+    "name_original_lang": "yap",
+    "entity_type": "confederation",
+    "year_start": 1400,
+    "year_end": 1899,
+    "capital_name": "Wa'ab (Gagil-Tomil)",
+    "capital_lat": 9.55,
+    "capital_lon": 138.13,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            144.4363,
+            9.55
+          ],
+          [
+            143.5914,
+            12.7032
+          ],
+          [
+            141.2832,
+            15.0114
+          ],
+          [
+            138.13,
+            15.8563
+          ],
+          [
+            134.9768,
+            15.0114
+          ],
+          [
+            132.6686,
+            12.7032
+          ],
+          [
+            131.8237,
+            9.55
+          ],
+          [
+            132.6686,
+            6.3968
+          ],
+          [
+            134.9768,
+            4.0886
+          ],
+          [
+            138.13,
+            3.2437
+          ],
+          [
+            141.2832,
+            4.0886
+          ],
+          [
+            143.5914,
+            6.3968
+          ],
+          [
+            144.4363,
+            9.55
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "confirmed",
+    "ethical_notes": "Wa'ab is the indigenous Yapese name for Yap and for the chiefly political-tribute sphere historically organised by the Gagil district of Yap. Through the rai (stone money) system Yapese chiefs maintained influence over outer islands of the present-day Caroline Islands as far east as Chuuk lagoon — a network sometimes called the 'Yap Empire' in Western anthropological literature, although it functioned more through ritual-tribute relationships and navigational expertise (the sawei system) than through direct administration. Spanish (1885), German (1899) and Japanese (1914) colonial regimes successively dismantled this network. The polygon covers Yap proper and the western Caroline atolls historically tied to the sawei tribute circuit; calling it an 'empire' is a useful but partly misleading shorthand.",
+    "name_variants": [
+      {
+        "name": "Yap Empire",
+        "lang": "en",
+        "context": "English academic designation, somewhat misleading"
+      },
+      {
+        "name": "Wa'ab",
+        "lang": "yap",
+        "context": "Indigenous Yapese name"
+      },
+      {
+        "name": "Sawei system",
+        "lang": "yap",
+        "context": "Indigenous tribute and exchange network linking Yap with outer Carolines"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1400,
+        "region": "Yap and central Caroline Islands",
+        "change_type": "expansion",
+        "description": "Approximate consolidation of the sawei tribute network linking Gagil district of Yap with outer Caroline atolls eastward to the Mortlock Islands.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1885,
+        "region": "Caroline Islands including Yap",
+        "change_type": "colonization",
+        "description": "Following Pope Leo XIII's arbitration over Spanish-German rival claims, Yap and the Carolines are confirmed as Spanish territory; Capuchin missionaries and Spanish officials begin to disrupt the sawei system.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1899,
+        "region": "Caroline Islands including Yap",
+        "change_type": "colonization",
+        "description": "After defeat in the Spanish-American War, Spain sells the Carolines (including Yap) to Imperial Germany; the rai stone money sphere of Yapese influence is further weakened.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Lingenfelter, Sherwood G. Yap: Political Leadership and Culture Change in an Island Society. University Press of Hawaii, 1975",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Hezel, Francis X. The First Taint of Civilization: A History of the Caroline and Marshall Islands in Pre-Colonial Days, 1521–1885. University of Hawai'i Press, 1983",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Chuuk",
+    "name_original_lang": "chk",
+    "entity_type": "confederation",
+    "year_start": 1500,
+    "year_end": 1899,
+    "capital_name": "Weno (Moen)",
+    "capital_lat": 7.45,
+    "capital_lon": 151.86,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            152.5807,
+            7.45
+          ],
+          [
+            152.4842,
+            7.8104
+          ],
+          [
+            152.2204,
+            8.0742
+          ],
+          [
+            151.86,
+            8.1707
+          ],
+          [
+            151.4996,
+            8.0742
+          ],
+          [
+            151.2358,
+            7.8104
+          ],
+          [
+            151.1393,
+            7.45
+          ],
+          [
+            151.2358,
+            7.0896
+          ],
+          [
+            151.4996,
+            6.8258
+          ],
+          [
+            151.86,
+            6.7293
+          ],
+          [
+            152.2204,
+            6.8258
+          ],
+          [
+            152.4842,
+            7.0896
+          ],
+          [
+            152.5807,
+            7.45
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Chuuk lagoon (until the 1990s spelled 'Truk' in English under Japanese-derived romanisation) hosted a stratified society of matrilineal clans (eterekes) without a single paramountcy: each island and district had its own itang (orator-leader) and elite lineages. The lagoon's political pattern of competing chiefdoms is sometimes labelled by Western scholars as 'fragmented' — an evaluative term that imports a state-centric bias. Chuuk lay at the eastern edge of the Yapese sawei sphere through the Mortlock Islands. German (1899), Japanese (1914) and US (1945) administrations successively imposed centralised structures alien to the indigenous clan federation. The polygon covers Chuuk lagoon and immediately associated outer islands, plus surrounding ocean.",
+    "name_variants": [
+      {
+        "name": "Truk",
+        "lang": "en",
+        "context": "English colonial designation derived from Japanese 'Toraku'"
+      },
+      {
+        "name": "Hogoleu",
+        "lang": "chk",
+        "context": "Older indigenous name for the lagoon group"
+      },
+      {
+        "name": "Chuuk lagoon polities",
+        "lang": "en",
+        "context": "English academic designation"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1500,
+        "region": "Chuuk lagoon",
+        "change_type": "independence",
+        "description": "Approximate ethnographic consolidation of the eterekes clan system across the lagoon islands and the Mortlocks.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1885,
+        "region": "Caroline Islands",
+        "change_type": "colonization",
+        "description": "Pope Leo XIII's arbitration places the Carolines, including Chuuk, under Spain.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1899,
+        "region": "Caroline Islands",
+        "change_type": "colonization",
+        "description": "German Empire purchases the Carolines from Spain after the Spanish-American War; Chuuk becomes part of German New Guinea protectorate.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Goodenough, Ward H. Under Heaven's Brow: Pre-Christian Religious Tradition in Chuuk. American Philosophical Society, 2002",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Hezel, Francis X. The First Taint of Civilization: A History of the Caroline and Marshall Islands in Pre-Colonial Days, 1521–1885. University of Hawai'i Press, 1983",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Wehin Pohnpei (Nahnmwarki system)",
+    "name_original_lang": "pon",
+    "entity_type": "confederation",
+    "year_start": 1628,
+    "year_end": 1885,
+    "capital_name": "Madolenihmw / Kolonia",
+    "capital_lat": 6.85,
+    "capital_lon": 158.21,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            158.6605,
+            6.85
+          ],
+          [
+            158.6001,
+            7.0752
+          ],
+          [
+            158.4352,
+            7.2401
+          ],
+          [
+            158.21,
+            7.3005
+          ],
+          [
+            157.9848,
+            7.2401
+          ],
+          [
+            157.8199,
+            7.0752
+          ],
+          [
+            157.7595,
+            6.85
+          ],
+          [
+            157.8199,
+            6.6248
+          ],
+          [
+            157.9848,
+            6.4599
+          ],
+          [
+            158.21,
+            6.3995
+          ],
+          [
+            158.4352,
+            6.4599
+          ],
+          [
+            158.6001,
+            6.6248
+          ],
+          [
+            158.6605,
+            6.85
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Following the legendary overthrow of the Saudeleur dynasty by Isohkelekel around 1628, Pohnpei was reorganised into five autonomous polities (wehi): Madolenihmw, U, Kitti, Sokehs and Nett, each headed by a paramount chief titled Nahnmwarki and a parallel ritual line under the Nahnken. This decentralised order replaced the centralised Saudeleur regime. 19th-century European whalers and traders, then Spanish, German and Japanese colonisers, often misread the Nahnmwarki system as five 'tribes', an unhelpful flattening. Madolenihmw is treated as senior. The polygon covers Pohnpei island and immediate offshore islets; ritual tributary links extended to the Mwoakilloa and Pingelap atolls but those are not included.",
+    "name_variants": [
+      {
+        "name": "Nahnmwarki system",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Wehin Pohnpei",
+        "lang": "pon",
+        "context": "Indigenous designation of the five chiefdoms ('wehi')"
+      },
+      {
+        "name": "Ponape",
+        "lang": "en",
+        "context": "Older English / Spanish-era spelling, now obsolete"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1628,
+        "region": "Pohnpei",
+        "change_type": "independence",
+        "description": "Approximate date of the legendary defeat of the Saudeleur by Isohkelekel and his warriors from the east; Pohnpei is restructured into the five Nahnmwarki polities.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1828,
+        "region": "Pohnpei",
+        "change_type": "expansion",
+        "description": "Sustained European contact begins with whalers and traders, especially at Madolenihmw harbour; introduced diseases reduce the population by an estimated 50% over the following half-century.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1885,
+        "region": "Caroline Islands",
+        "change_type": "colonization",
+        "description": "Spanish formally claim Pohnpei after Pope's arbitration; armed Pohnpeian resistance follows, culminating in the killing of Spanish Governor Posadillo in 1887.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Petersen, Glenn. Lost in the Weeds: Theme and Variation in Pohnpei Political Mythology. CIPMS Occasional Paper 35, University of Hawaii, 1990",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Hanlon, David. Upon a Stone Altar: A History of the Island of Pohnpei to 1890. University of Hawai'i Press, 1988",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Beluu er a Belau",
+    "name_original_lang": "pau",
+    "entity_type": "confederation",
+    "year_start": 1000,
+    "year_end": 1885,
+    "capital_name": "Koror (Oreor) and Melekeok",
+    "capital_lat": 7.5,
+    "capital_lon": 134.62,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            135.4308,
+            7.5
+          ],
+          [
+            135.3222,
+            7.9054
+          ],
+          [
+            135.0254,
+            8.2022
+          ],
+          [
+            134.62,
+            8.3108
+          ],
+          [
+            134.2146,
+            8.2022
+          ],
+          [
+            133.9178,
+            7.9054
+          ],
+          [
+            133.8092,
+            7.5
+          ],
+          [
+            133.9178,
+            7.0946
+          ],
+          [
+            134.2146,
+            6.7978
+          ],
+          [
+            134.62,
+            6.6892
+          ],
+          [
+            135.0254,
+            6.7978
+          ],
+          [
+            135.3222,
+            7.0946
+          ],
+          [
+            135.4308,
+            7.5
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Pre-colonial Palau (Belau) was organised through the beluu — autonomous village-states each governed by a council of ten clan elders (rubak) — clustered into two great confederations: the southern alliance led by Oreor (Koror) and the northern alliance led by Melekeok, locked in a centuries-long rivalry that British naval visitor Captain Henry Wilson tried to manipulate from the 1780s. Subsequent Spanish, German and Japanese colonial regimes consistently attempted to reduce the rubak system to a single 'paramount chief', distorting Palauan politics. The polygon covers the inhabited Palau archipelago. Indigenous matrilineal clan ('kebliil') authority, particularly that of senior women (mechas), is often invisible in colonial sources but central to Palauan governance.",
+    "name_variants": [
+      {
+        "name": "Palau beluu confederacies",
+        "lang": "en",
+        "context": "English academic designation for the pre-1885 village-state alliances of Koror and Melekeok"
+      },
+      {
+        "name": "Beluu system",
+        "lang": "pau",
+        "context": "Indigenous designation of the village-state polities"
+      },
+      {
+        "name": "Pelew",
+        "lang": "en",
+        "context": "Older English colonial spelling used in 18th-19th century sources, now obsolete"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1000,
+        "region": "Palauan archipelago",
+        "change_type": "independence",
+        "description": "Approximate ethnographic consolidation of the beluu / rubak village-state system and the southern (Oreor) and northern (Melekeok) confederacies.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1783,
+        "region": "Palauan archipelago",
+        "change_type": "expansion",
+        "description": "Captain Henry Wilson's wreck of the Antelope at Koror initiates sustained European contact; Wilson sides with Oreor in its rivalry with Melekeok, supplying firearms.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1885,
+        "region": "Palau",
+        "change_type": "colonization",
+        "description": "Following Pope Leo XIII's arbitration, Palau is confirmed as Spanish territory; the Spanish governor in Manila imposes nominal sovereignty and Capuchin missionaries arrive in 1891.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hezel, Francis X. Strangers in Their Own Land: A Century of Colonial Rule in the Caroline and Marshall Islands. University of Hawai'i Press, 1995",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Smith, DeVerne Reed. Palauan Social Structure. Rutgers University Press, 1983",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Kosrae (Tokosra)",
+    "name_original_lang": "kos",
+    "entity_type": "kingdom",
+    "year_start": 1400,
+    "year_end": 1874,
+    "capital_name": "Lelu (Insaru)",
+    "capital_lat": 5.32,
+    "capital_lon": 163.03,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            163.3003,
+            5.32
+          ],
+          [
+            163.2641,
+            5.4551
+          ],
+          [
+            163.1651,
+            5.5541
+          ],
+          [
+            163.03,
+            5.5903
+          ],
+          [
+            162.8949,
+            5.5541
+          ],
+          [
+            162.7959,
+            5.4551
+          ],
+          [
+            162.7597,
+            5.32
+          ],
+          [
+            162.7959,
+            5.1849
+          ],
+          [
+            162.8949,
+            5.0859
+          ],
+          [
+            163.03,
+            5.0497
+          ],
+          [
+            163.1651,
+            5.0859
+          ],
+          [
+            163.2641,
+            5.1849
+          ],
+          [
+            163.3003,
+            5.32
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Pre-contact Kosrae (called Kusaie in 19th-century English) had a centralised stratified polity under the Tokosra (paramount king), with its capital at Lelu — a megalithic island settlement comparable in scale and basalt-prismatic-column construction to Nan Madol on Pohnpei. The Kosraean population collapsed by an estimated 90% in the 19th century from introduced diseases brought by whalers, missionaries and traders, with the population falling from perhaps 3,000–6,000 to around 300 by the 1880s. This demographic catastrophe, more than any colonial decree, broke the Tokosra system. Polygon covers Kosrae island only and necessarily includes some surrounding ocean. Romanticised images of Kosrae as a 'lost civilisation' often elide the role of European disease and labour-trade in causing that loss.",
+    "name_variants": [
+      {
+        "name": "Kusaie",
+        "lang": "en",
+        "context": "Older English colonial spelling, now obsolete"
+      },
+      {
+        "name": "Strong's Island",
+        "lang": "en",
+        "context": "English name imposed in 1804 after captain Crozer of the brig Nautilus, now obsolete"
+      },
+      {
+        "name": "Tokosra",
+        "lang": "kos",
+        "context": "Title of the Kosraean paramount king"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1400,
+        "region": "Kosrae",
+        "change_type": "independence",
+        "description": "Approximate consolidation of the Tokosra polity centred on the megalithic complex at Lelu (Insaru).",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1824,
+        "region": "Kosrae",
+        "change_type": "expansion",
+        "description": "First documented European contact (French expedition of Louis Duperrey aboard La Coquille); within a generation, whaler visits introduce devastating epidemics.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1874,
+        "region": "Kosrae",
+        "change_type": "contraction",
+        "description": "Demographic collapse from introduced diseases reduces the population by an estimated 90%; the Tokosra system is effectively broken before formal Spanish sovereignty is asserted in 1885.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Cordy, Ross H. The Lelu Stone Ruins (Kosrae, Micronesia): 1978–1981 Historical and Archaeological Research. Asian and Pacific Archaeology Series 10, University of Hawaii, 1993",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Hezel, Francis X. The First Taint of Civilization: A History of the Caroline and Marshall Islands in Pre-Colonial Days, 1521–1885. University of Hawai'i Press, 1983",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Tuanga ni Butaritari",
+    "name_original_lang": "gil",
+    "entity_type": "chiefdom",
+    "year_start": 1500,
+    "year_end": 1892,
+    "capital_name": "Butaritari",
+    "capital_lat": 3.07,
+    "capital_lon": 172.79,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            173.5107,
+            3.07
+          ],
+          [
+            173.4142,
+            3.4304
+          ],
+          [
+            173.1504,
+            3.6942
+          ],
+          [
+            172.79,
+            3.7907
+          ],
+          [
+            172.4296,
+            3.6942
+          ],
+          [
+            172.1658,
+            3.4304
+          ],
+          [
+            172.0693,
+            3.07
+          ],
+          [
+            172.1658,
+            2.7096
+          ],
+          [
+            172.4296,
+            2.4458
+          ],
+          [
+            172.79,
+            2.3493
+          ],
+          [
+            173.1504,
+            2.4458
+          ],
+          [
+            173.4142,
+            2.7096
+          ],
+          [
+            173.5107,
+            3.07
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Butaritari and the neighbouring atoll of Makin (often paired as 'Butaritari-Makin') in the northern Kiribati group differed from southern Kiribati atolls in being ruled by a hereditary high chief (uea or 'tuanga'), whereas southern atolls used the more egalitarian unimwane (council of elders) system. This northern-southern political contrast complicates the way colonial British and later academic literature has treated 'Gilbertese' society as homogenous. Robert Louis Stevenson visited Butaritari in 1889 and described the uea Tebureimoa II's court in 'In the South Seas'. The polygon covers Butaritari and Makin atolls and some surrounding ocean. Calling Butaritari a 'kingdom' borrows European categories; it was a hereditary chiefdom embedded in atoll-scale ecology.",
+    "name_variants": [
+      {
+        "name": "Butaritari-Makin chiefdom",
+        "lang": "en",
+        "context": "English academic designation"
+      },
+      {
+        "name": "Uea",
+        "lang": "gil",
+        "context": "I-Kiribati title meaning 'high chief' / 'king'"
+      },
+      {
+        "name": "Makin",
+        "lang": "gil",
+        "context": "Companion atoll often paired with Butaritari under the same uea"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1500,
+        "region": "Northern Kiribati",
+        "change_type": "independence",
+        "description": "Approximate consolidation of hereditary uea authority on Butaritari and Makin, distinguishing the northern atolls from the egalitarian unimwane system of the south.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1850,
+        "region": "Butaritari and Makin",
+        "change_type": "expansion",
+        "description": "European whalers and traders establish a base on Butaritari; the uea profits from copra and tobacco trade and acquires firearms.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1892,
+        "region": "Gilbert Islands",
+        "change_type": "colonization",
+        "description": "British proclaim a protectorate over the Gilbert (and Ellice) Islands; the uea of Butaritari is incorporated into colonial indirect rule and progressively stripped of substantive authority.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Macdonald, Barrie. Cinderellas of the Empire: Towards a History of Kiribati and Tuvalu. ANU Press, 1982",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Lambert, Bernd. The Economic Activities of a Gilbertese Chief. In: Political Anthropology, M. J. Swartz et al. (eds), Aldine, 1966",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Taotao Tano",
+    "name_original_lang": "ch",
+    "entity_type": "cultural_region",
+    "year_start": -1500,
+    "year_end": 1668,
+    "capital_name": "Hagåtña (Guåhan)",
+    "capital_lat": 13.475,
+    "capital_lon": 144.75,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            146.8221,
+            13.475
+          ],
+          [
+            146.5445,
+            14.511
+          ],
+          [
+            145.786,
+            15.2695
+          ],
+          [
+            144.75,
+            15.5471
+          ],
+          [
+            143.714,
+            15.2695
+          ],
+          [
+            142.9555,
+            14.511
+          ],
+          [
+            142.6779,
+            13.475
+          ],
+          [
+            142.9555,
+            12.439
+          ],
+          [
+            143.714,
+            11.6805
+          ],
+          [
+            144.75,
+            11.4029
+          ],
+          [
+            145.786,
+            11.6805
+          ],
+          [
+            146.5445,
+            12.439
+          ],
+          [
+            146.8221,
+            13.475
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "confirmed",
+    "ethical_notes": "The pre-Spanish Mariana Islands were inhabited by the Chamorro (Taotao Tano, 'people of the land'), with a stratified matrilineal society of three classes — matua (high), achaot (middle) and manachang (low) — organised across the major inhabited islands of Guåhan (Guam), Luta (Rota), Tinian and Saipan. The latte stone foundations marking residences of the elite remain visible across the archipelago. Spanish colonisation under Padre San Vitores from 1668 produced the Chamorro-Spanish Wars (1668–1695), Spanish reducción of the population to Guåhan and Rota, and a demographic collapse from perhaps 50,000 to under 5,000 by 1700 — a loss often softened in older Spanish-language historiography by the term 'pacification'. The polygon covers Guam through Saipan and immediate surroundings.",
+    "name_variants": [
+      {
+        "name": "Taotao Tano",
+        "lang": "ch",
+        "context": "Indigenous Chamorro self-designation, 'people of the land'"
+      },
+      {
+        "name": "Pre-reducción Chamorro polities",
+        "lang": "en",
+        "context": "English academic designation focusing specifically on political organisation before Spanish reducción"
+      },
+      {
+        "name": "Islas de los Ladrones",
+        "lang": "es",
+        "context": "Pejorative Spanish name imposed by Magellan ('islands of thieves'), now rejected"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -1500,
+        "region": "Marianas archipelago",
+        "change_type": "independence",
+        "description": "Approximate first settlement of the Marianas by Austronesian voyagers from island Southeast Asia; the latte stone tradition emerges much later, around 900 CE.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1521,
+        "region": "Guåhan",
+        "change_type": "expansion",
+        "description": "Magellan's expedition reaches Guåhan; a violent encounter prompts Magellan to name the islands 'Islas de los Ladrones'.",
+        "population_affected": null,
+        "confidence_score": 0.95
+      },
+      {
+        "year": 1668,
+        "region": "Marianas archipelago",
+        "change_type": "colonization",
+        "description": "Jesuit missionary Diego Luis de San Vitores establishes the first Spanish mission on Guåhan, igniting the Chamorro-Spanish Wars (1668–1695); Spanish reducción concentrates survivors on Guåhan and Rota and depopulates the northern islands. Estimated Chamorro population falls from c. 50,000 to under 5,000.",
+        "population_affected": 45000,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Cunningham, Lawrence J. Ancient Chamorro Society. Bess Press, 1992",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Hezel, Francis X. From Conquest to Colonization: Spain in the Mariana Islands, 1690–1740. CNMI Division of Historic Preservation, 1989",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Noongar boodja",
+    "name_original_lang": "nys",
+    "entity_type": "tribal_nation",
+    "year_start": -40000,
+    "year_end": 1829,
+    "capital_name": "Boorloo (modern Perth)",
+    "capital_lat": -31.95,
+    "capital_lon": 115.86,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            119.9141,
+            -31.95
+          ],
+          [
+            119.3709,
+            -29.923
+          ],
+          [
+            117.887,
+            -28.4391
+          ],
+          [
+            115.86,
+            -27.8959
+          ],
+          [
+            113.833,
+            -28.4391
+          ],
+          [
+            112.3491,
+            -29.923
+          ],
+          [
+            111.8059,
+            -31.95
+          ],
+          [
+            112.3491,
+            -33.977
+          ],
+          [
+            113.833,
+            -35.4609
+          ],
+          [
+            115.86,
+            -36.0041
+          ],
+          [
+            117.887,
+            -35.4609
+          ],
+          [
+            119.3709,
+            -33.977
+          ],
+          [
+            119.9141,
+            -31.95
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "confirmed",
+    "ethical_notes": "Noongar (also spelled Nyungar, Nyoongar, Nyungah) is the collective name for the Aboriginal people of the south-west of Western Australia, comprising fourteen language groups (including Whadjuk, Bindjareb, Wardandi, Minang, Yued and others) sharing a common cultural framework and country known as Noongar boodja. Pre-colonial Noongar society had complex political institutions including elder councils and intergroup law-meetings; intergroup conflict and displacement existed alongside cooperation. British colonisation from 1829 and the foundation of the Swan River Colony brought dispossession, frontier killings (notably the 1834 Pinjarra massacre by Captain Stirling), and the post-1905 'Aborigines Act' policies of forced removal of children. Polygon spans approximately the agreed Noongar Native Title claim area (Federal Court 2006); a circular approximation will inevitably extend over ocean to the west.",
+    "name_variants": [
+      {
+        "name": "Nyoongar",
+        "lang": "nys",
+        "context": "Alternative orthographic form"
+      },
+      {
+        "name": "Nyungar",
+        "lang": "nys",
+        "context": "Alternative orthographic form preferred by some communities"
+      },
+      {
+        "name": "Bibbulmun",
+        "lang": "nys",
+        "context": "Older designation used by some 19th-century sources, now less common"
+      },
+      {
+        "name": "South-West people",
+        "lang": "en",
+        "context": "English geographic designation"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -40000,
+        "region": "South-west Western Australia",
+        "change_type": "independence",
+        "description": "Approximate lower bound for Aboriginal occupation of south-western Australia based on archaeological evidence (e.g. Devil's Lair site near Margaret River).",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1829,
+        "region": "Swan River basin",
+        "change_type": "colonization",
+        "description": "British establish the Swan River Colony at Boorloo (Perth); within five years the colony expands across Whadjuk and adjacent Noongar country, leading to violent dispossession.",
+        "population_affected": null,
+        "confidence_score": 0.95
+      },
+      {
+        "year": 1834,
+        "region": "Pinjarra (Bindjareb country)",
+        "change_type": "conquest",
+        "description": "Captain James Stirling leads a punitive expedition that kills an estimated 15–80 Bindjareb Noongar at Pinjarra; remembered as the Pinjarra massacre, it broke organised Noongar resistance in the south-west.",
+        "population_affected": 50,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Host, John, with Chris Owen. It's Still in My Heart, This is My Country: The Single Noongar Claim History. UWA Publishing, 2009",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Reynolds, Henry. The Other Side of the Frontier: Aboriginal Resistance to the European Invasion of Australia. UNSW Press, revised edition 2006",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Wiradjuri",
+    "name_original_lang": "wrh",
+    "entity_type": "tribal_nation",
+    "year_start": -20000,
+    "year_end": 1840,
+    "capital_name": "Wagga Wagga (Wiradjuri country, central NSW)",
+    "capital_lat": -35.12,
+    "capital_lon": 147.37,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            150.5232,
+            -35.12
+          ],
+          [
+            150.1007,
+            -33.5434
+          ],
+          [
+            148.9466,
+            -32.3893
+          ],
+          [
+            147.37,
+            -31.9668
+          ],
+          [
+            145.7934,
+            -32.3893
+          ],
+          [
+            144.6393,
+            -33.5434
+          ],
+          [
+            144.2168,
+            -35.12
+          ],
+          [
+            144.6393,
+            -36.6966
+          ],
+          [
+            145.7934,
+            -37.8507
+          ],
+          [
+            147.37,
+            -38.2732
+          ],
+          [
+            148.9466,
+            -37.8507
+          ],
+          [
+            150.1007,
+            -36.6966
+          ],
+          [
+            150.5232,
+            -35.12
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "confirmed",
+    "ethical_notes": "Wiradjuri are the Aboriginal people of the three rivers country (Wambuul / Macquarie, Kalari / Lachlan, Murrumbidgee) of central inland New South Wales — geographically the largest Aboriginal nation in NSW. Wiradjuri society was organised through patrilineal moieties and burbangs (initiation gatherings), with intergroup law-meetings linking neighbouring nations such as the Kamilaroi to the north and the Ngunawal to the east. Resistance leader Windradyne fought a sustained campaign against pastoral invasion from 1822 to 1824, prompting Governor Brisbane to declare martial law west of the Blue Mountains in August 1824 — one of the few times martial law was used against Aboriginal peoples and yet routinely omitted from older settler historiography. Polygon covers the central Wiradjuri country; the circular approximation extends slightly into neighbouring nations' country.",
+    "name_variants": [
+      {
+        "name": "Wiradhuri",
+        "lang": "wrh",
+        "context": "Alternative spelling reflecting older orthography"
+      },
+      {
+        "name": "Wiradyuri",
+        "lang": "wrh",
+        "context": "Alternative spelling"
+      },
+      {
+        "name": "Three Rivers people",
+        "lang": "en",
+        "context": "English designation referring to the Macquarie, Lachlan and Murrumbidgee rivers"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -20000,
+        "region": "Central inland New South Wales",
+        "change_type": "independence",
+        "description": "Approximate lower bound for Wiradjuri occupation based on archaeological evidence in the central western NSW slopes.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1822,
+        "region": "Bathurst Plains and central Wiradjuri country",
+        "change_type": "colonization",
+        "description": "Pastoral expansion across the Blue Mountains intensifies; Wiradjuri leader Windradyne organises sustained resistance to settler encroachment, leading to the Bathurst War.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1824,
+        "region": "Wiradjuri country west of the Blue Mountains",
+        "change_type": "conquest",
+        "description": "Governor Brisbane proclaims martial law over country west of Mount York (14 August 1824); the ensuing punitive campaign kills an estimated several hundred Wiradjuri before Windradyne's people surrender in December.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Read, Peter. A Hundred Years War: The Wiradjuri People and the State. ANU Press, 1988",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Salisbury, Thomas, and Patricia J. Gresser. Windradyne of the Wiradjuri: Martial Law at Bathurst in 1824. Wentworth Books, 1971",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  }
+]

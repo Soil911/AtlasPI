@@ -1,0 +1,1344 @@
+[
+  {
+    "name_original": "𐩣𐩲𐩬",
+    "name_original_lang": "xsa",
+    "entity_type": "kingdom",
+    "year_start": -800,
+    "year_end": -100,
+    "capital_name": "Qarnāwu",
+    "capital_lat": 15.5,
+    "capital_lon": 45.35,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [47.0, 15.5],
+          [46.6488, 16.625],
+          [45.6993, 17.4244],
+          [44.35, 17.7172],
+          [43.0007, 17.4244],
+          [42.0512, 16.625],
+          [41.7, 15.5],
+          [42.0512, 14.375],
+          [43.0007, 13.5756],
+          [44.35, 13.2828],
+          [45.6993, 13.5756],
+          [46.6488, 14.375],
+          [47.0, 15.5]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "ethical_notes": "The Minaean Kingdom (Maʿīn) was a South Arabian polity centered on the Wadi Madhab, primarily known through its own epigraphic record in Ancient South Arabian script — yet the corpus is fragmentary because later Sabaean and Himyarite expansion absorbed and partially erased Minaean institutions. Most modern reconstructions rely on caravan inscriptions left at Minaean trade colonies (notably Dedan in the Hijaz and the Egyptian Delta), which biases interpretation toward commercial/elite life and obscures the lives of agricultural commoners and enslaved laborers who built the irrigation works. The polygon below is a generous approximation: Minaean political control was discontinuous, structured around oasis nodes and caravan routes rather than a contiguous border. The dating is debated by ±200 years — the chronological framework was largely built by 19th- and 20th-century European Sabaeists (Hommel, Beeston) who imposed Mediterranean periodization on a different system.",
+    "name_variants": [
+      {"name": "Maʿīn", "lang": "ar", "context": "Modern Arabic transliteration"},
+      {"name": "Minaean Kingdom", "lang": "en", "context": "English academic"},
+      {"name": "Μιναῖοι", "lang": "grc", "context": "Greek geographers (Eratosthenes, Strabo)"},
+      {"name": "Minaei", "lang": "lat", "context": "Latin classical sources"},
+      {"name": "Maʿīn", "lang": "xsa", "context": "Sabaic/Minaic self-designation"}
+    ],
+    "territory_changes": [
+      {"year": -700, "region": "Wadi Madhab and Jawf", "change_type": "consolidation", "description": "Consolidation of the Minaean kingdom around Qarnawu and Yathill, with control over the incense road northward.", "population_affected": null, "confidence_score": 0.4},
+      {"year": -400, "region": "Hijaz (Dedan)", "change_type": "colonization", "description": "Establishment of the Minaean trade colony at Dedan (al-ʿUlā), attested by Minaic inscriptions at Hegra and Dedan. This represents commercial diaspora rather than military annexation.", "population_affected": null, "confidence_score": 0.5},
+      {"year": -100, "region": "Wadi Madhab", "change_type": "absorption", "description": "Absorbed by the expanding Sabaean kingdom; Minaean elite institutions were dismantled and the script gradually displaced. Local populations continued but lost political autonomy.", "population_affected": null, "confidence_score": 0.4}
+    ],
+    "sources": [
+      {"citation": "Hoyland, Robert. Arabia and the Arabs: From the Bronze Age to the Coming of Islam. Routledge, 2001.", "source_type": "academic", "url": null},
+      {"citation": "Robin, Christian Julien. 'South Arabia, History of Pre-Islamic.' Encyclopaedia of Islam, 3rd ed. Brill, 2018.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "ደዐመተ",
+    "name_original_lang": "gez",
+    "entity_type": "kingdom",
+    "year_start": -800,
+    "year_end": -400,
+    "capital_name": "Yeha",
+    "capital_lat": 14.3,
+    "capital_lon": 39.04,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [41.29, 14.3],
+          [41.0855, 15.425],
+          [40.5316, 16.2244],
+          [39.7468, 16.5172],
+          [38.9621, 16.2244],
+          [38.4082, 15.425],
+          [38.2037, 14.3],
+          [38.4082, 13.175],
+          [38.9621, 12.3756],
+          [39.7468, 12.0828],
+          [40.5316, 12.3756],
+          [41.0855, 13.175],
+          [41.29, 14.3]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Daʿamat (D'mt) is the earliest known organized state on the Ethiopian–Eritrean plateau, attested through monumental inscriptions in a script ancestral to Geʿez and through the temple complex at Yeha. The relationship with South Arabian kingdoms — once interpreted by colonial-era scholars (Conti Rossini) as Sabaean colonization of 'primitive' Africa — is now read by scholars like Rodolfo Fattovich and Jacqueline Phillips as a more reciprocal exchange in which an indigenous African polity adopted and transformed South Arabian elements. The 'Sabaean colonization' narrative was politically convenient for both Italian colonialism and pan-Arabist framings; it underplayed African agency. The polygon is highly approximate — D'mt's territorial structure is essentially unknown beyond a few sites (Yeha, Hawelti, Matara). The name 'D'mt' itself is a modern reconstruction from the consonantal inscription DʿMT.",
+    "name_variants": [
+      {"name": "Daʿamat", "lang": "en", "context": "Standard scholarly transliteration"},
+      {"name": "D'mt", "lang": "en", "context": "Consonantal form from inscriptions"},
+      {"name": "ዳዕማት", "lang": "gez", "context": "Geʿez script reconstruction"},
+      {"name": "Damat", "lang": "ar", "context": "Arabic"}
+    ],
+    "territory_changes": [
+      {"year": -700, "region": "Tigray and Eritrean highlands", "change_type": "consolidation", "description": "Emergence of a centralized polity associated with the Yeha temple, the Almaqah cult, and Sabaic-script royal inscriptions naming the ruler 'mukarrib of Daʿamat'.", "population_affected": null, "confidence_score": 0.4},
+      {"year": -500, "region": "Tigray", "change_type": "decline", "description": "Decline of monumental inscriptions and the Almaqah cult; transition to localized chiefdoms preceding the rise of Aksum centuries later. The mechanism is unknown — climatic, political, or both.", "population_affected": null, "confidence_score": 0.3}
+    ],
+    "sources": [
+      {"citation": "Phillipson, David W. Foundations of an African Civilisation: Aksum and the Northern Horn 1000 BC – AD 1300. James Currey, 2012.", "source_type": "academic", "url": null},
+      {"citation": "Fattovich, Rodolfo. 'The Pre-Aksumite State in Northern Ethiopia and Eritrea Reconsidered.' In Pwiti & Soper (eds.), Aspects of African Archaeology, 1996.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𐪁𐪈𐪕𐪌",
+    "name_original_lang": "xna",
+    "entity_type": "kingdom",
+    "year_start": -600,
+    "year_end": -100,
+    "capital_name": "Dadan",
+    "capital_lat": 26.62,
+    "capital_lon": 37.92,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [40.16, 26.62],
+          [39.8839, 27.745],
+          [39.1359, 28.5444],
+          [38.0769, 28.8372],
+          [37.0179, 28.5444],
+          [36.2699, 27.745],
+          [35.994, 26.62],
+          [36.2699, 25.495],
+          [37.0179, 24.6956],
+          [38.0769, 24.4028],
+          [39.1359, 24.6956],
+          [39.8839, 25.495],
+          [40.16, 26.62]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "ethical_notes": "The Kingdom of Lihyan succeeded an earlier Dedanite polity in the oasis of al-ʿUlā (ancient Dadan) in northwest Arabia. It is documented almost entirely through its own monumental inscriptions in the Dadanitic script, which were systematically catalogued only in the 20th century — earlier travellers (Doughty, Huber) sometimes destroyed inscriptions to make squeezes. The kingdom's chronology is contested: dates here follow the conventional Macdonald/Hidalgo-Chacón sequence, but some scholars (Rohmer) push the upper bound earlier. The polygon excludes Minaean and later Nabataean overlap zones, but in reality the Hijaz oases were a mosaic of overlapping jurisdictions and tribal allegiances. The Lihyanite-period inhabitants were progressively absorbed by the Nabataeans and later the Roman annexation of Arabia Petraea (106 CE), which displaced the local elite.",
+    "name_variants": [
+      {"name": "Lihyan", "lang": "ar", "context": "Modern Arabic"},
+      {"name": "Dedan", "lang": "en", "context": "Earlier name for the kingdom and its capital"},
+      {"name": "דְּדָן", "lang": "hbo", "context": "Biblical Hebrew (Genesis 10:7, Ezekiel 27:20)"},
+      {"name": "Λεχιηνοί", "lang": "grc", "context": "Greek (Strabo)"},
+      {"name": "Lihyanites", "lang": "en", "context": "English collective"}
+    ],
+    "territory_changes": [
+      {"year": -500, "region": "Al-ʿUlā oasis", "change_type": "independence", "description": "Establishment of the Lihyanite dynasty at Dadan, succeeding the earlier Dedanite kings. Monumental sculpture and inscriptions in the Dadanitic script flourish.", "population_affected": null, "confidence_score": 0.4},
+      {"year": -100, "region": "Hijaz", "change_type": "absorption", "description": "Gradual absorption by the expanding Nabataean kingdom; the Lihyanite script disappears, replaced by Nabataean Aramaic. No evidence of mass violence, but the local elite is displaced.", "population_affected": null, "confidence_score": 0.4}
+    ],
+    "sources": [
+      {"citation": "Macdonald, M.C.A. (ed.). The Development of Arabic as a Written Language. Supplement to Proceedings of the Seminar for Arabian Studies 40. Archaeopress, 2010.", "source_type": "academic", "url": null},
+      {"citation": "Rohmer, Jérôme. 'De Dédan à Hégra: une approche archéologique du royaume de Liḥyān.' Topoi Suppl. 2, 2017.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𐪉𐪃𐪙𐪕",
+    "name_original_lang": "xna",
+    "entity_type": "tribal_federation",
+    "year_start": -800,
+    "year_end": 300,
+    "capital_name": "Qaryat al-Faw region",
+    "capital_lat": 27.5,
+    "capital_lon": 37.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [40.3027, 27.5],
+          [39.94, 28.85],
+          [39.0578, 29.8093],
+          [37.6, 30.16],
+          [36.1422, 29.8093],
+          [35.26, 28.85],
+          [34.8973, 27.5],
+          [35.26, 26.15],
+          [36.1422, 25.1907],
+          [37.6, 24.84],
+          [39.0578, 25.1907],
+          [39.94, 26.15],
+          [40.3027, 27.5]
+        ]
+      ]
+    },
+    "confidence_score": 0.35,
+    "status": "uncertain",
+    "ethical_notes": "Thamud (Thamūd) is the standard label for a North Arabian tribal confederation attested across nearly a millennium in Assyrian, Greek, Latin, and Arabic sources, in the Quran (al-Aʿrāf, al-Ḥijr), and in their own Thamudic graffiti. The conflation of these very different attestations into a single 'kingdom' is itself an oversimplification — Thamud was probably a loose social/linguistic category encompassing many groups, and the polygon below is therefore a coverage zone rather than a state boundary. Thamud appears in Sargon II's annals (715 BCE) as deportees, then in Roman-era inscriptions as auxiliary cavalry. The Quranic narrative of divine destruction is a religious tradition, not a contemporary historical record; Western scholarship long privileged biblical/classical accounts over Arabic ones, while traditional Islamic historiography treated the Quranic account as definitive — both framings need to be flagged.",
+    "name_variants": [
+      {"name": "Thamūd", "lang": "ar", "context": "Quranic Arabic"},
+      {"name": "Tamudi", "lang": "akk", "context": "Akkadian (Sargon II annals)"},
+      {"name": "Θαμουδηνοί", "lang": "grc", "context": "Greek (Diodorus, Ptolemy)"},
+      {"name": "Thamudeni", "lang": "lat", "context": "Latin (Pliny, Notitia Dignitatum)"},
+      {"name": "Thamud", "lang": "en", "context": "English standard"}
+    ],
+    "territory_changes": [
+      {"year": -715, "region": "Northern Hijaz", "change_type": "deportation", "description": "Sargon II of Assyria records deporting Tamudi populations alongside other Arab groups — an early case of the systematic Assyrian practice of mass population transfer that erased communities from the historical record.", "population_affected": null, "confidence_score": 0.5},
+      {"year": 169, "region": "Hegra/Madāʾin Ṣāliḥ", "change_type": "incorporation", "description": "Roman-era inscription at Ruwwafa records a 'shirkat' (federation) of Thamud building a temple under Marcus Aurelius, indicating integration as Roman federate auxiliaries.", "population_affected": null, "confidence_score": 0.55}
+    ],
+    "sources": [
+      {"citation": "Hoyland, Robert. Arabia and the Arabs. Routledge, 2001.", "source_type": "academic", "url": null},
+      {"citation": "Macdonald, M.C.A. 'Trade Routes and Trade Goods at the Northern End of the Incense Road in the First Millennium BC.' In Avanzini (ed.), Profumi d'Arabia, 1997.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Γέρρα",
+    "name_original_lang": "grc",
+    "entity_type": "city-state",
+    "year_start": -650,
+    "year_end": -150,
+    "capital_name": "Gerrha (probably near Thaj)",
+    "capital_lat": 26.86,
+    "capital_lon": 48.72,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [49.5402, 26.86],
+          [49.3158, 27.625],
+          [48.7077, 28.1684],
+          [47.83, 28.367],
+          [46.9523, 28.1684],
+          [46.3442, 27.625],
+          [46.1198, 26.86],
+          [46.3442, 26.095],
+          [46.9523, 25.5516],
+          [47.83, 25.353],
+          [48.7077, 25.5516],
+          [49.3158, 26.095],
+          [49.5402, 26.86]
+        ]
+      ]
+    },
+    "confidence_score": 0.3,
+    "status": "uncertain",
+    "ethical_notes": "Gerrha is the Hellenistic name for a wealthy commercial polity on the Arabian Gulf coast known almost exclusively through second-hand Greek and Latin sources (Strabo, Pliny, Agatharchides) — its inhabitants left no surviving self-description, and its precise location is still archaeologically debated (Thaj, al-ʿUqayr, and al-Jubayl have all been proposed). The polygon is therefore a best-guess centered on Thaj, the most likely candidate based on recent excavations. The standard accounts emphasize Gerrha's mercantile wealth (incense, spices, pearls re-exported to Mesopotamia), but Greek geographers tended to exoticize Arabian wealth; the actual political structure, language, and population are unknown. Hellenistic and Roman sources also project a 'caravan-republic' framework that may be anachronistic. The end date corresponds to its disappearance from Roman-period sources, with no recorded violent conquest — suggesting trade reorganization rather than destruction.",
+    "name_variants": [
+      {"name": "Γέρρα", "lang": "grc", "context": "Greek (Strabo, Eratosthenes, Agatharchides)"},
+      {"name": "Gerrha", "lang": "lat", "context": "Latin (Pliny)"},
+      {"name": "Hagar", "lang": "ar", "context": "Possible later Arabic name for the region"},
+      {"name": "Gerrhaeans", "lang": "en", "context": "English ethnonym"},
+      {"name": "Thaj", "lang": "ar", "context": "Modern Arabic name of the leading candidate site"}
+    ],
+    "territory_changes": [
+      {"year": -550, "region": "Eastern Arabian coast", "change_type": "consolidation", "description": "Emergence of Gerrha as a major caravan and maritime entrepôt linking South Arabia, India, and Mesopotamia. Possibly founded by Chaldean refugees, per Strabo — but the claim is contested.", "population_affected": null, "confidence_score": 0.3},
+      {"year": -205, "region": "Eastern Arabian coast", "change_type": "tribute", "description": "Antiochus III of the Seleucid Empire campaigns against Gerrha and extracts 500 talents of silver, 1000 talents of frankincense, 200 of myrrh — recorded by Polybius. The episode shows Gerrha was wealthy enough to be worth attacking but not annexed.", "population_affected": null, "confidence_score": 0.55}
+    ],
+    "sources": [
+      {"citation": "Potts, D.T. The Arabian Gulf in Antiquity, vol. II: From Alexander the Great to the Coming of Islam. Clarendon Press, 1990.", "source_type": "academic", "url": null},
+      {"citation": "Salles, Jean-François. 'Gerrha, une cité phénicienne en Arabie?' Topoi 6/2, 1996.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𒈣𒃶𒀭",
+    "name_original_lang": "akk",
+    "entity_type": "kingdom",
+    "year_start": -2500,
+    "year_end": -1700,
+    "capital_name": "Magan (likely al-Ṣufūḥ / Maysar region)",
+    "capital_lat": 22.3,
+    "capital_lon": 57.8,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [60.5046, 22.3],
+          [60.2614, 23.575],
+          [59.6022, 24.4806],
+          [58.65, 24.7117],
+          [57.6978, 24.4806],
+          [57.0386, 23.575],
+          [56.7954, 22.3],
+          [57.0386, 21.025],
+          [57.6978, 20.1194],
+          [58.65, 19.8883],
+          [59.6022, 20.1194],
+          [60.2614, 21.025],
+          [60.5046, 22.3]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Magan (Sumerian Magan, Akkadian Makan) is the Mesopotamian designation for the polity (or polities) of the Oman peninsula that supplied copper and diorite to Sumer and Akkad in the third millennium BCE. We have abundant Mesopotamian textual references but no contemporary local writing system survives, so 'Magan' is necessarily an outside view; the local self-designation is unknown. The polygon approximates the modern Oman/UAE archaeological province (Hafit, Umm al-Nar, Wadi Suq cultures), but Magan was not a unified state — likely a network of chiefdoms organized around oases and copper sources. The dating reflects Mesopotamian textual mentions; archaeologically, organized copper production starts earlier and continues later. Sargon of Akkad and Naram-Sin both claim military expeditions against Magan — these claims may exaggerate Mesopotamian penetration into a peripheral region.",
+    "name_variants": [
+      {"name": "Magan", "lang": "sux", "context": "Sumerian"},
+      {"name": "Makkan / Makan", "lang": "akk", "context": "Akkadian"},
+      {"name": "Oman", "lang": "en", "context": "Modern English name of the region"},
+      {"name": "مَجَّان", "lang": "ar", "context": "Arabic reflex of the ancient name"},
+      {"name": "Umm al-Nar / Hafit", "lang": "en", "context": "Modern archaeological culture names"}
+    ],
+    "territory_changes": [
+      {"year": -2300, "region": "Oman peninsula", "change_type": "tribute", "description": "Sargon of Akkad's inscriptions claim that ships from Magan, Meluhha, and Dilmun docked at Akkad; Naram-Sin claims a military campaign against the king of Magan, Mannium. These are imperial Mesopotamian framings.", "population_affected": null, "confidence_score": 0.45},
+      {"year": -2000, "region": "Oman peninsula", "change_type": "decline", "description": "Decline of direct Magan-Mesopotamia trade, partly due to Dilmun's emergence as the major intermediary; copper trade reorients to Dilmun-mediated routes.", "population_affected": null, "confidence_score": 0.45}
+    ],
+    "sources": [
+      {"citation": "Potts, D.T. The Arabian Gulf in Antiquity, vol. I: From Prehistory to the Fall of the Achaemenid Empire. Clarendon Press, 1990.", "source_type": "academic", "url": null},
+      {"citation": "Cleuziou, Serge & Tosi, Maurizio. In the Shadow of the Ancestors: The Prehistoric Foundations of the Early Arabian Civilization in Oman. Ministry of Heritage and Culture, 2007.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𒋫𒄿𒈠",
+    "name_original_lang": "akk",
+    "entity_type": "city-state",
+    "year_start": -1500,
+    "year_end": -550,
+    "capital_name": "Tayma",
+    "capital_lat": 27.63,
+    "capital_lon": 38.55,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [39.6708, 27.63],
+          [39.5285, 28.2675],
+          [39.143, 28.7204],
+          [38.55, 28.8862],
+          [37.957, 28.7204],
+          [37.5715, 28.2675],
+          [37.4292, 27.63],
+          [37.5715, 26.9925],
+          [37.957, 26.5396],
+          [38.55, 26.3738],
+          [39.143, 26.5396],
+          [39.5285, 26.9925],
+          [39.6708, 27.63]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "ethical_notes": "Tayma (Tēmā) is one of the major oases of northwestern Arabia, attested in Assyrian annals (Tiglath-Pileser III) and famously chosen by the last Neo-Babylonian king Nabonidus as his ten-year residence in exile (553–543 BCE). The Babylonian sources frame Nabonidus's stay as a religious eccentricity — but a more material reading, advanced by Beaulieu and Schaudig, sees an attempt to control the incense trade route. Local Taymanitic inscriptions in a North Arabian script offer an indigenous counterweight to the Mesopotamian record but are largely undecipherable at the level of historical narrative. The polygon represents the oasis hinterland; Tayma's actual political reach probably extended along the trade route to Dūmat al-Jandal but was nodal rather than territorial. The Quranic and later Jewish-Arabic traditions about Jewish presence at Tayma are post-classical and should not be retrojected.",
+    "name_variants": [
+      {"name": "Tayma", "lang": "ar", "context": "Modern Arabic"},
+      {"name": "Tēmā", "lang": "akk", "context": "Akkadian (neo-Babylonian)"},
+      {"name": "תֵּימָא", "lang": "hbo", "context": "Biblical Hebrew (Job 6:19, Isaiah 21:14)"},
+      {"name": "Tayma", "lang": "xna", "context": "Local Taymanitic self-designation"},
+      {"name": "Θαιμα", "lang": "grc", "context": "Greek transliteration"}
+    ],
+    "territory_changes": [
+      {"year": -733, "region": "Northwest Arabia", "change_type": "tribute", "description": "Tiglath-Pileser III lists Tayma among Arab polities paying tribute to Assyria. The Assyrian framing of 'tribute' often masks coercion; the actual relationship was likely more reciprocal commercial interaction.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -553, "region": "Tayma oasis", "change_type": "occupation", "description": "Nabonidus relocates the Neo-Babylonian royal court to Tayma for ten years, builds a palace, and reportedly suppresses local opposition (Verse Account of Nabonidus, a hostile Persian-era text). The local population's experience is largely absent from the record.", "population_affected": null, "confidence_score": 0.55}
+    ],
+    "sources": [
+      {"citation": "Beaulieu, Paul-Alain. The Reign of Nabonidus, King of Babylon 556-539 B.C. Yale Near Eastern Researches 10. Yale University Press, 1989.", "source_type": "academic", "url": null},
+      {"citation": "Eichmann, Ricardo, Schaudig, Hanspeter & Hausleiter, Arnulf. 'Archaeology and Epigraphy at Tayma (Saudi Arabia).' Arabian Archaeology and Epigraphy 17, 2006.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𒈠𒌷𒆠",
+    "name_original_lang": "akk",
+    "entity_type": "kingdom",
+    "year_start": -2900,
+    "year_end": -1759,
+    "capital_name": "Mari (Tell Hariri)",
+    "capital_lat": 34.55,
+    "capital_lon": 40.89,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [43.5953, 34.55],
+          [43.391, 35.6075],
+          [42.8378, 36.3587],
+          [42.0497, 36.6336],
+          [41.2615, 36.3587],
+          [40.7083, 35.6075],
+          [40.504, 34.55],
+          [40.7083, 33.4925],
+          [41.2615, 32.7413],
+          [42.0497, 32.4664],
+          [42.8378, 32.7413],
+          [43.391, 33.4925],
+          [43.5953, 34.55]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "ethical_notes": "Mari was a major city-state on the middle Euphrates (modern Syria), exceptionally well-documented thanks to the discovery of c. 25,000 cuneiform tablets in the palace of Zimri-Lim, sacked and burned by Hammurabi of Babylon in 1759 BCE. The destruction by Hammurabi was thorough: the city was never reoccupied as a major center, and its archive — paradoxically preserved by the burning — gives us perhaps the most detailed view we have of Bronze Age Near Eastern diplomacy. The polygon underrepresents the polity's reach during Zimri-Lim's reign, when Mari extended influence up the Khabur and Euphrates. Mari's population included Amorite (Mariote), Akkadian, and Hurrian speakers — the city was multilingual long before its destruction. The Syrian civil war (since 2011) has caused renewed looting at Tell Hariri, an ongoing erasure of the archaeological record.",
+    "name_variants": [
+      {"name": "Mari", "lang": "akk", "context": "Akkadian"},
+      {"name": "Tell Hariri", "lang": "ar", "context": "Modern Arabic site name"},
+      {"name": "𒈠𒌷𒆠", "lang": "sux", "context": "Sumerian cuneiform writing"},
+      {"name": "Maritu", "lang": "akk", "context": "Akkadian variant"}
+    ],
+    "territory_changes": [
+      {"year": -2300, "region": "Middle Euphrates", "change_type": "conquest", "description": "Sargon of Akkad campaigns against Mari and incorporates it into the Akkadian empire. Mari recovers as a major regional power after Akkad's collapse.", "population_affected": null, "confidence_score": 0.5},
+      {"year": -1810, "region": "Middle Euphrates", "change_type": "occupation", "description": "Mari falls under the Upper Mesopotamian Kingdom of Shamshi-Adad I; his son Yasmah-Adad rules as viceroy until ousted by the Mariote claimant Zimri-Lim around 1776 BCE.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -1759, "region": "Middle Euphrates", "change_type": "destruction", "description": "Hammurabi of Babylon sacks and burns Mari, destroying the palace and the city walls. Mari ceases to function as an independent center and is gradually abandoned. The palace fire ironically preserved the cuneiform archive.", "population_affected": null, "confidence_score": 0.7}
+    ],
+    "sources": [
+      {"citation": "Liverani, Mario. The Ancient Near East: History, Society and Economy. Routledge, 2014.", "source_type": "academic", "url": null},
+      {"citation": "Heimpel, Wolfgang. Letters to the King of Mari: A New Translation, with Historical Introduction, Notes, and Commentary. Eisenbrauns, 2003.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𒅁𒆷",
+    "name_original_lang": "akk",
+    "entity_type": "kingdom",
+    "year_start": -3000,
+    "year_end": -1600,
+    "capital_name": "Ebla (Tell Mardikh)",
+    "capital_lat": 35.8,
+    "capital_lon": 36.8,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [38.4319, 35.8],
+          [38.2502, 36.5113],
+          [37.7585, 37.0163],
+          [37.0577, 37.2008],
+          [36.357, 37.0163],
+          [35.8652, 36.5113],
+          [35.6836, 35.8],
+          [35.8652, 35.0887],
+          [36.357, 34.5837],
+          [37.0577, 34.3992],
+          [37.7585, 34.5837],
+          [38.2502, 35.0887],
+          [38.4319, 35.8]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "ethical_notes": "Ebla (Tell Mardikh, northwestern Syria) was a major Bronze Age commercial empire whose existence was unknown until the 1968 discovery of the site and the 1974–1976 discovery of c. 17,000 cuneiform tablets in the Royal Palace G. The tablets are written in Sumerian and in a previously unknown Semitic language (Eblaite). Early sensational claims (Pettinato) of patriarchal-biblical names in the tablets were largely retracted under more sober readings (Archi); the affair illustrates how readily ancient sources are mined for modern theological agendas. Ebla was destroyed twice (c. 2300 BCE, debated as Sargon or Naram-Sin; and c. 1600 BCE by Hittite forces under Mursili I or earlier). The polygon roughly reflects the kingdom's height under Ar-Ennum and Ibrium. Tell Mardikh has been damaged by the post-2011 Syrian conflict and looting.",
+    "name_variants": [
+      {"name": "Ebla", "lang": "akk", "context": "Akkadian/Eblaite name"},
+      {"name": "Tell Mardikh", "lang": "ar", "context": "Modern Arabic site name"},
+      {"name": "𒌈𒆷", "lang": "sux", "context": "Sumerian cuneiform"},
+      {"name": "Ibla", "lang": "en", "context": "Alternative transliteration"}
+    ],
+    "territory_changes": [
+      {"year": -2400, "region": "Northwestern Syria", "change_type": "consolidation", "description": "Ebla emerges as a regional commercial power under kings Ar-Ennum, Ibrium, and Ibbi-Sipish; the palace archive shows extensive trade and treaty relations from Egypt to the Iranian plateau.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -2300, "region": "Northwestern Syria", "change_type": "destruction", "description": "First major destruction of Ebla, traditionally attributed to Sargon of Akkad or to his grandson Naram-Sin (both claim the deed in their inscriptions — perhaps a propagandistic exaggeration of an event in which only one was involved).", "population_affected": null, "confidence_score": 0.45},
+      {"year": -1600, "region": "Northwestern Syria", "change_type": "destruction", "description": "Final destruction of Ebla, traditionally attributed to the Hittite king Mursili I or his predecessor Hattusili I during their campaign against Yamhad. Ebla never recovers as an urban center.", "population_affected": null, "confidence_score": 0.5}
+    ],
+    "sources": [
+      {"citation": "Archi, Alfonso. Ebla and Its Archives: Texts, History, and Society. De Gruyter, 2015.", "source_type": "academic", "url": null},
+      {"citation": "Matthiae, Paolo. Ebla: An Empire Rediscovered. Hodder & Stoughton, 1980.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𒄿𒄠𒄩𒀜",
+    "name_original_lang": "akk",
+    "entity_type": "kingdom",
+    "year_start": -1810,
+    "year_end": -1517,
+    "capital_name": "Halab (Aleppo)",
+    "capital_lat": 36.2,
+    "capital_lon": 37.16,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [38.7825, 36.2],
+          [38.5984, 36.9438],
+          [38.0998, 37.4719],
+          [37.39, 37.665],
+          [36.6802, 37.4719],
+          [36.1816, 36.9438],
+          [35.9975, 36.2],
+          [36.1816, 35.4562],
+          [36.6802, 34.9281],
+          [37.39, 34.735],
+          [38.0998, 34.9281],
+          [38.5984, 35.4562],
+          [38.7825, 36.2]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "ethical_notes": "Yamhad (Akkadian Yamḫad) was an Amorite kingdom centered on Halab (modern Aleppo) that became the dominant power in northern Syria for almost three centuries, until its destruction by the Hittite Mursili I (c. 1595 BCE in the conventional Middle Chronology, here adjusted to 1517 BCE by the Low Chronology often used by Anatolian specialists; the absolute dates are contested by ±60 years depending on chronology). Most of what we know about Yamhad comes from outside archives — Mari, Alalakh — because Halab itself remains buried under the modern city of Aleppo and cannot be excavated. The Hittite sack was thorough; the city's archive is lost. The Syrian civil war damaged Aleppo's Old City and the citadel which sits atop the ancient mound, further compromising future archaeological recovery.",
+    "name_variants": [
+      {"name": "Yamhad / Yamḫad", "lang": "akk", "context": "Akkadian (Mari and Alalakh archives)"},
+      {"name": "Halab", "lang": "akk", "context": "Akkadian name of the capital"},
+      {"name": "Aleppo", "lang": "en", "context": "Modern English name of the capital"},
+      {"name": "حلب", "lang": "ar", "context": "Modern Arabic"},
+      {"name": "Halpa", "lang": "hit", "context": "Hittite designation"}
+    ],
+    "territory_changes": [
+      {"year": -1780, "region": "Northern Syria", "change_type": "expansion", "description": "Under Yarim-Lim I and Hammurabi I (of Yamhad, not Babylon), Yamhad becomes the leading north Syrian power, with vassals including Alalakh, Tuttul, and Carchemish.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -1600, "region": "Northern Syria", "change_type": "occupation", "description": "Hittite king Hattusili I campaigns against Yamhad and sacks Alalakh; his successor Mursili I sacks Halab itself. The kingdom collapses; its territory is fought over by Hittites, Mittani, and Egypt for the next two centuries.", "population_affected": null, "confidence_score": 0.55}
+    ],
+    "sources": [
+      {"citation": "Klengel, Horst. Syria: 3000 to 300 B.C. A Handbook of Political History. Akademie Verlag, 1992.", "source_type": "academic", "url": null},
+      {"citation": "Bryce, Trevor. The Routledge Handbook of the Peoples and Places of Ancient Western Asia. Routledge, 2009.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𒅖𒂊𒀭𒈾𒆠",
+    "name_original_lang": "sux",
+    "entity_type": "city-state",
+    "year_start": -2017,
+    "year_end": -1794,
+    "capital_name": "Isin (Ishan al-Bahriyat)",
+    "capital_lat": 31.89,
+    "capital_lon": 45.27,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [46.3286, 31.89],
+          [46.1672, 32.685],
+          [45.7299, 33.2434],
+          [45.0992, 33.487],
+          [44.4685, 33.2434],
+          [44.0312, 32.685],
+          [43.8698, 31.89],
+          [44.0312, 31.095],
+          [44.4685, 30.5366],
+          [45.0992, 30.293],
+          [45.7299, 30.5366],
+          [46.1672, 31.095],
+          [46.3286, 31.89]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "ethical_notes": "The First Dynasty of Isin (founded by Ishbi-Erra, c. 2017 BCE) emerged from the collapse of the Third Dynasty of Ur and claimed continuity with Sumerian royal tradition, even using Sumerian as a literary and administrative language long after spoken Sumerian had effectively died out. This Sumerian revival was an elite/scribal phenomenon — the actual population of southern Mesopotamia was largely Akkadian-speaking, with significant Amorite migration. The dynasty competed with Larsa for control of Sumer and was finally absorbed by Hammurabi of Babylon in 1794 BCE (Middle Chronology). The polygon represents core territory; at its height under Ishme-Dagan, Isin claimed Ur and Uruk as well. The Old Babylonian destruction did not erase Isin's literary corpus, which survived in scribal copies.",
+    "name_variants": [
+      {"name": "Isin", "lang": "sux", "context": "Sumerian"},
+      {"name": "Išin", "lang": "akk", "context": "Akkadian"},
+      {"name": "Ishan al-Bahriyat", "lang": "ar", "context": "Modern Arabic site name"},
+      {"name": "Isin", "lang": "en", "context": "English standard"}
+    ],
+    "territory_changes": [
+      {"year": -2017, "region": "Southern Mesopotamia", "change_type": "independence", "description": "Ishbi-Erra, originally an official under Ibbi-Sin of Ur, declares independence at Isin during the collapse of Ur III caused by Amorite migration and famine. Claims the Ur III mantle of legitimate kingship.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -1932, "region": "Southern Mesopotamia", "change_type": "loss", "description": "Larsa, under Gungunum, captures Ur and breaks Isin's monopoly on the south. Isin gradually loses territory in a long competition with Larsa.", "population_affected": null, "confidence_score": 0.5},
+      {"year": -1794, "region": "Southern Mesopotamia", "change_type": "absorption", "description": "Hammurabi of Babylon absorbs Isin into the Old Babylonian kingdom. Local administration continues under Babylonian governors.", "population_affected": null, "confidence_score": 0.55}
+    ],
+    "sources": [
+      {"citation": "Van De Mieroop, Marc. A History of the Ancient Near East, ca. 3000-323 BC. 3rd ed. Wiley-Blackwell, 2015.", "source_type": "academic", "url": null},
+      {"citation": "Charpin, Dominique. Reading and Writing in Babylon. Harvard University Press, 2010.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𒌓𒀕𒆠",
+    "name_original_lang": "sux",
+    "entity_type": "kingdom",
+    "year_start": -2025,
+    "year_end": -1763,
+    "capital_name": "Larsa (Tell as-Senkereh)",
+    "capital_lat": 31.29,
+    "capital_lon": 45.85,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [46.9047, 31.29],
+          [46.7467, 32.085],
+          [46.3187, 32.6434],
+          [45.7016, 32.887],
+          [45.0844, 32.6434],
+          [44.6564, 32.085],
+          [44.4983, 31.29],
+          [44.6564, 30.495],
+          [45.0844, 29.9366],
+          [45.7016, 29.693],
+          [46.3187, 29.9366],
+          [46.7467, 30.495],
+          [46.9047, 31.29]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "ethical_notes": "Larsa, contemporary rival of Isin, was an Amorite-led city-state that controlled lower Mesopotamia for much of the early second millennium BCE. Its most famous king, Rim-Sin I, ruled an exceptionally long reign of 60 years until defeated and captured by Hammurabi of Babylon in 1763 BCE. The Babylonian conquest is recorded in royal Babylonian inscriptions from the conqueror's perspective; Larsa's own perspective is preserved mainly in administrative tablets, not in narrative form. The polygon represents core lower Mesopotamian territory; at its peak Larsa controlled Ur, Eridu, and reached toward Elamite borders. The site was looted significantly during and after the 2003 Iraq war.",
+    "name_variants": [
+      {"name": "Larsa", "lang": "sux", "context": "Sumerian"},
+      {"name": "Larsam", "lang": "akk", "context": "Akkadian"},
+      {"name": "Tell as-Senkereh", "lang": "ar", "context": "Modern Arabic site name"},
+      {"name": "Ellasar", "lang": "hbo", "context": "Possible biblical reference (Genesis 14:1, contested)"}
+    ],
+    "territory_changes": [
+      {"year": -1932, "region": "Southern Mesopotamia", "change_type": "expansion", "description": "Gungunum of Larsa captures Ur from Isin, beginning Larsa's century-long ascendancy over the south.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -1822, "region": "Southern Mesopotamia", "change_type": "occupation", "description": "Elamite-backed coup brings Kudur-Mabuk and his sons Warad-Sin and Rim-Sin I to the Larsa throne. The dynasty's Elamite background is acknowledged in royal names but downplayed in domestic propaganda — a recurrent pattern in ancient legitimation.", "population_affected": null, "confidence_score": 0.5},
+      {"year": -1763, "region": "Southern Mesopotamia", "change_type": "conquest", "description": "Hammurabi of Babylon defeats Rim-Sin I and absorbs Larsa into the Old Babylonian empire. Rim-Sin's fate is unclear; some sources suggest he was paraded captive in Babylon, others that he died in a later revolt.", "population_affected": null, "confidence_score": 0.55}
+    ],
+    "sources": [
+      {"citation": "Van De Mieroop, Marc. A History of the Ancient Near East, ca. 3000-323 BC. 3rd ed. Wiley-Blackwell, 2015.", "source_type": "academic", "url": null},
+      {"citation": "Charpin, Dominique. Hammu-rabi de Babylone. Presses Universitaires de France, 2003.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𒌔𒂊𒂗𒈾",
+    "name_original_lang": "sux",
+    "entity_type": "kingdom",
+    "year_start": -2000,
+    "year_end": -1762,
+    "capital_name": "Eshnunna (Tell Asmar)",
+    "capital_lat": 33.5,
+    "capital_lon": 44.74,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [45.788, 33.5],
+          [45.6263, 34.295],
+          [45.1881, 34.8534],
+          [44.5562, 35.097],
+          [43.9243, 34.8534],
+          [43.4861, 34.295],
+          [43.3245, 33.5],
+          [43.4861, 32.705],
+          [43.9243, 32.1466],
+          [44.5562, 31.903],
+          [45.1881, 32.1466],
+          [45.6263, 32.705],
+          [45.788, 33.5]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "ethical_notes": "Eshnunna (modern Tell Asmar, in the Diyala river basin north-east of Baghdad) was a major Old Babylonian-period kingdom, important for its Laws of Eshnunna — a legal compilation predating Hammurabi's by several decades and providing a key comparative document for the development of cuneiform law. Eshnunna's polity is sometimes underrepresented in Mesopotamian narratives that focus on Babylon-Mari-Larsa; this is partly an artifact of which archives have been excavated. The kingdom was conquered first by Elam (1766 BCE) and then absorbed by Hammurabi in 1762 BCE; Hammurabi's destruction of the city is documented in his own annals. The polygon roughly approximates the Diyala basin core. The Iraq war and subsequent looting damaged Tell Asmar and nearby Diyala sites significantly.",
+    "name_variants": [
+      {"name": "Eshnunna", "lang": "akk", "context": "Akkadian"},
+      {"name": "Ešnunna", "lang": "akk", "context": "Standard transliteration"},
+      {"name": "Tell Asmar", "lang": "ar", "context": "Modern Arabic site name"},
+      {"name": "Tupliash", "lang": "akk", "context": "Akkadian name for the kingdom's territory"}
+    ],
+    "territory_changes": [
+      {"year": -1900, "region": "Diyala basin", "change_type": "expansion", "description": "Under Naram-Sin (of Eshnunna, not Akkad) and Dadusha, Eshnunna becomes the leading power on the middle Tigris with influence into the Khabur region.", "population_affected": null, "confidence_score": 0.5},
+      {"year": -1766, "region": "Diyala basin", "change_type": "conquest", "description": "Elamite armies under Siwepalarhuhpak overrun Eshnunna; the kingdom briefly comes under Elamite dominance.", "population_affected": null, "confidence_score": 0.5},
+      {"year": -1762, "region": "Diyala basin", "change_type": "destruction", "description": "Hammurabi of Babylon destroys Eshnunna; his year-name records the diversion of the Tigris to flood the city — a deliberate hydraulic destruction of a major urban center.", "population_affected": null, "confidence_score": 0.55}
+    ],
+    "sources": [
+      {"citation": "Roth, Martha. Law Collections from Mesopotamia and Asia Minor. SBL Writings from the Ancient World 6. Scholars Press, 1995.", "source_type": "academic", "url": null},
+      {"citation": "Charpin, Dominique. Hammu-rabi de Babylone. Presses Universitaires de France, 2003.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𒌭𒀸𒋗",
+    "name_original_lang": "akk",
+    "entity_type": "kingdom",
+    "year_start": -1595,
+    "year_end": -1155,
+    "capital_name": "Babylon (Kassite period)",
+    "capital_lat": 32.54,
+    "capital_lon": 44.42,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [46.7522, 32.54],
+          [46.4527, 33.7975],
+          [45.6422, 34.6917],
+          [44.42, 35.0184],
+          [43.1978, 34.6917],
+          [42.3873, 33.7975],
+          [42.0878, 32.54],
+          [42.3873, 31.2825],
+          [43.1978, 30.3883],
+          [44.42, 30.0616],
+          [45.6422, 30.3883],
+          [46.4527, 31.2825],
+          [46.7522, 32.54]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "ethical_notes": "The Kassite (Akkadian Kaššû) dynasty ruled Babylonia for nearly four and a half centuries — the longest single dynasty in Babylonian history — yet has been chronically underrepresented because its archives are smaller than those of preceding or following periods, and its kings used Akkadian rather than developing a distinct literary identity. The Kassite language itself is virtually unknown except for a few hundred names and technical terms. Older scholarship treated the Kassite period as a 'dark age' (Brinkman has criticized this); the framing reflects a Western preference for periods rich in monumental literature. The Kassites stabilized post-Hammurabi Babylonia and were eventually destroyed by an Elamite invasion in 1155 BCE that carried off the statue of Marduk and the Code of Hammurabi to Susa — both examples of the systematic erasure that war inflicts on a culture's record.",
+    "name_variants": [
+      {"name": "Kaššû", "lang": "akk", "context": "Akkadian"},
+      {"name": "Kassite Babylonia", "lang": "en", "context": "English standard"},
+      {"name": "Karduniash", "lang": "akk", "context": "Kassite term for Babylonia, used in international correspondence"},
+      {"name": "Cossaei", "lang": "lat", "context": "Latin (Pliny, applied to descendant Zagros mountain people)"},
+      {"name": "Kossaioi", "lang": "grc", "context": "Greek (Strabo)"}
+    ],
+    "territory_changes": [
+      {"year": -1595, "region": "Babylonia", "change_type": "occupation", "description": "Following the Hittite sack of Babylon under Mursili I, the Kassites — likely originally from the Zagros — establish themselves on the Babylonian throne. The transition is poorly documented; chronologies disagree by ±60 years.", "population_affected": null, "confidence_score": 0.4},
+      {"year": -1380, "region": "Babylonia", "change_type": "diplomacy", "description": "Kassite kings exchange letters and gifts with Egypt (Amarna correspondence) on equal-king terms, evidencing Babylonia's full membership in the late Bronze Age 'club of great powers'.", "population_affected": null, "confidence_score": 0.7},
+      {"year": -1155, "region": "Babylonia", "change_type": "destruction", "description": "Elamite king Shutruk-Nahhunte and his son Kutir-Nahhunte invade Babylonia, sack Babylon, end the Kassite dynasty, and remove the Marduk statue and the Code of Hammurabi to Susa. Babylonia falls into a Second Dynasty of Isin transition.", "population_affected": null, "confidence_score": 0.6}
+    ],
+    "sources": [
+      {"citation": "Brinkman, J.A. A Political History of Post-Kassite Babylonia, 1158-722 B.C. Pontifical Biblical Institute, 1968.", "source_type": "academic", "url": null},
+      {"citation": "Bartelmus, Alexa & Sternitzke, Katja (eds.). Karduniaš. Babylonia under the Kassites. De Gruyter, 2017.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𒅈𒍝𒉿",
+    "name_original_lang": "hit",
+    "entity_type": "confederation",
+    "year_start": -1500,
+    "year_end": -1320,
+    "capital_name": "Apasa (probably Ephesus)",
+    "capital_lat": 37.95,
+    "capital_lon": 27.36,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [29.4108, 37.95],
+          [29.2348, 38.7575],
+          [28.7589, 39.3247],
+          [28.0723, 39.5722],
+          [27.3858, 39.3247],
+          [26.9098, 38.7575],
+          [26.7338, 37.95],
+          [26.9098, 37.1425],
+          [27.3858, 36.5753],
+          [28.0723, 36.3278],
+          [28.7589, 36.5753],
+          [29.2348, 37.1425],
+          [29.4108, 37.95]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Arzawa was the Hittite term for a major Luwian-speaking polity (or coalition of polities) in western Anatolia, including subordinate kingdoms such as Mira, Hapalla, and the Seha River Land. Almost all our knowledge comes from the perspective of the Hittite enemy archive at Hattusa; Arzawan documents are essentially absent. The capital Apasa is generally identified with classical Ephesus on the basis of the Karabel relief and the Hittite Tawagalawa letter, but the equation is not unanimously accepted. The polygon is therefore a best-guess sphere rather than a documented boundary. The Hittite king Mursili II conquered and dismembered Arzawa around 1320 BCE, deporting an enormous population (claimed at 66,000 in his annals — Hittite annal numbers are propaganda but the deportation is real). This deliberate dismemberment of a Luwian power is part of why western Anatolia's Bronze Age remains so opaque.",
+    "name_variants": [
+      {"name": "Arzawa", "lang": "hit", "context": "Hittite"},
+      {"name": "Arzawiya", "lang": "luw", "context": "Luwian-language form (reconstructed)"},
+      {"name": "Asia (early Greek)", "lang": "grc", "context": "Possible etymological precursor of the term 'Asia'"},
+      {"name": "Arzawa lands", "lang": "en", "context": "English collective designation"}
+    ],
+    "territory_changes": [
+      {"year": -1400, "region": "Western Anatolia", "change_type": "diplomacy", "description": "Arzawan king Tarhundaradu corresponds with Pharaoh Amenhotep III in Hittite (Amarna letters EA 31-32), demonstrating Arzawa's standing as a Late Bronze Age power independent of Hatti.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -1320, "region": "Western Anatolia", "change_type": "conquest", "description": "Mursili II of Hatti conquers Arzawa, deporting (per his annals) tens of thousands and breaking the polity into vassal states (Mira, Seha River Land, Hapalla). The deportation policy was Hittite standard practice and erased the local political order.", "population_affected": null, "confidence_score": 0.55}
+    ],
+    "sources": [
+      {"citation": "Bryce, Trevor. The Kingdom of the Hittites. New ed. Oxford University Press, 2005.", "source_type": "academic", "url": null},
+      {"citation": "Hawkins, J.D. 'Tarkasnawa King of Mira: 'Tarkondemos', Boğazköy Sealings and Karabel.' Anatolian Studies 48, 1998.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𐤌𐤓𐤊𐤔",
+    "name_original_lang": "xpg",
+    "entity_type": "kingdom",
+    "year_start": -1200,
+    "year_end": -547,
+    "capital_name": "Gordion",
+    "capital_lat": 39.65,
+    "capital_lon": 31.99,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [33.9352, 39.65],
+          [33.7363, 40.4825],
+          [33.1986, 41.067],
+          [32.4225, 41.322],
+          [31.6464, 41.067],
+          [31.1087, 40.4825],
+          [30.9098, 39.65],
+          [31.1087, 38.8175],
+          [31.6464, 38.233],
+          [32.4225, 37.978],
+          [33.1986, 38.233],
+          [33.7363, 38.8175],
+          [33.9352, 39.65]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "ethical_notes": "Phrygia (Phrygian Mrkš via the inscription at Midas City; the language is Indo-European, distinct from Anatolian) emerged in central Anatolia after the collapse of the Hittite empire, with its capital at Gordion. The kingdom is dominated in popular imagination by the figure of Midas (Phrygian Mita), partly historical (attested in Assyrian sources of Sargon II) and partly Greek-mythological — care is needed not to conflate the two. Most of what we know archaeologically comes from Gordion excavations; Phrygian inscriptions are short and the language is partially understood. The kingdom was sacked around 700 BCE traditionally by the Cimmerians (Gimirri) — although recent radiocarbon redating (Voigt, Rose) pushes the destruction back by a generation and weakens the Cimmerian connection. Phrygia was finally absorbed by Lydia and then by the Achaemenid Persians in 547 BCE.",
+    "name_variants": [
+      {"name": "Phrygia", "lang": "lat", "context": "Latin classical"},
+      {"name": "Φρυγία", "lang": "grc", "context": "Greek classical"},
+      {"name": "Mušku / Muški", "lang": "akk", "context": "Assyrian designation, equating Phrygians with the Mushki"},
+      {"name": "Phryges", "lang": "lat", "context": "Latin ethnonym"}
+    ],
+    "territory_changes": [
+      {"year": -800, "region": "Central Anatolia", "change_type": "expansion", "description": "Under Midas (Mita of Mushki in Assyrian sources), Phrygia becomes the leading Anatolian power, dealing on equal terms with Sargon II's Assyria.", "population_affected": null, "confidence_score": 0.5},
+      {"year": -700, "region": "Central Anatolia", "change_type": "destruction", "description": "Major destruction of Gordion, traditionally attributed to a Cimmerian invasion. Recent re-dating of the destruction layer pushes it back, weakening the Cimmerian narrative; the cause is currently under revision.", "population_affected": null, "confidence_score": 0.4},
+      {"year": -547, "region": "Central Anatolia", "change_type": "conquest", "description": "Cyrus II of Persia conquers Lydia and incorporates already-Lydianized Phrygia into the Achaemenid empire. Phrygian language and onomastics persist locally for several more centuries before being displaced by Greek and Aramaic.", "population_affected": null, "confidence_score": 0.5}
+    ],
+    "sources": [
+      {"citation": "Roller, Lynn. In Search of God the Mother: The Cult of Anatolian Cybele. University of California Press, 1999.", "source_type": "academic", "url": null},
+      {"citation": "Voigt, Mary M. & Henrickson, Robert C. 'Formation of the Phrygian State: The Early Iron Age at Gordion.' Anatolian Studies 50, 2000.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𐊜𐊨𐊠",
+    "name_original_lang": "xcr",
+    "entity_type": "confederation",
+    "year_start": -1100,
+    "year_end": -129,
+    "capital_name": "Mylasa",
+    "capital_lat": 37.3,
+    "capital_lon": 27.78,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [29.6427, 37.3],
+          [29.4814, 37.945],
+          [29.0438, 38.4984],
+          [28.4129, 38.742],
+          [27.7821, 38.4984],
+          [27.3445, 37.945],
+          [27.1832, 37.3],
+          [27.3445, 36.655],
+          [27.7821, 36.1016],
+          [28.4129, 35.858],
+          [29.0438, 36.1016],
+          [29.4814, 36.655],
+          [29.6427, 37.3]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "ethical_notes": "Karia (Latin Caria) was a culturally distinct region of southwestern Anatolia inhabited by the Carians, an indigenous people speaking a non-Greek, non-Anatolian-branch Indo-European language written in their own alphabet (deciphered substantially only since the 1980s by Adiego). For centuries Carians were treated as a 'barbarian' fringe of Greek civilization; recent scholarship recognizes them as their own cultural sphere. Persian satrapal rule under the Hekatomnid dynasty (Mausolus, Artemisia II, Idrieus, Pixodarus, c. 392–334 BCE) introduced a hybrid Greek/Carian/Persian elite culture exemplified by the Mausoleum at Halicarnassus. Karia was conquered by Alexander, fought over by his successors, and finally absorbed by Rome (Mithridatic settlement, 129 BCE). The polygon represents the ethnogeographic core; Carians also served as mercenaries far afield (Egyptian Saite period).",
+    "name_variants": [
+      {"name": "Karia", "lang": "grc", "context": "Greek classical"},
+      {"name": "Caria", "lang": "lat", "context": "Latin classical"},
+      {"name": "Karka", "lang": "akk", "context": "Achaemenid imperial designation"},
+      {"name": "𐎣𐎼𐎣", "lang": "peo", "context": "Old Persian (Karkâ, in DBb tribute lists)"},
+      {"name": "Karuwa", "lang": "xcr", "context": "Carian self-designation, reconstructed"}
+    ],
+    "territory_changes": [
+      {"year": -546, "region": "Southwest Anatolia", "change_type": "conquest", "description": "Following Cyrus's defeat of Lydia, Karia comes under Achaemenid rule as part of the satrapy of Sparda/Lydia. Persian framings of 'tolerance' often obscure the heavy tribute burden.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -392, "region": "Southwest Anatolia", "change_type": "consolidation", "description": "Hekatomnos of Mylasa is appointed satrap and founds the Hekatomnid dynasty, which rules Karia in a Persian-Greek hybrid style for two generations.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -334, "region": "Southwest Anatolia", "change_type": "conquest", "description": "Alexander the Great conquers Karia with the cooperation of Ada, the dispossessed Hekatomnid queen. Halicarnassus is sacked after a long siege.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -129, "region": "Southwest Anatolia", "change_type": "incorporation", "description": "Roman annexation as part of the province of Asia after the Aristonicus revolt. Carian language declines and disappears in the early Roman period.", "population_affected": null, "confidence_score": 0.5}
+    ],
+    "sources": [
+      {"citation": "Adiego, Ignacio J. The Carian Language. Brill, 2007.", "source_type": "academic", "url": null},
+      {"citation": "Hornblower, Simon. Mausolus. Clarendon Press, 1982.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𐊗𐊕𐊐𐊎𐊆𐊍𐊆",
+    "name_original_lang": "xlc",
+    "entity_type": "confederation",
+    "year_start": -1400,
+    "year_end": -43,
+    "capital_name": "Xanthos",
+    "capital_lat": 36.36,
+    "capital_lon": 29.32,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [31.0383, 36.36],
+          [30.8853, 36.95],
+          [30.4703, 37.4561],
+          [29.8718, 37.679],
+          [29.2733, 37.4561],
+          [28.8583, 36.95],
+          [28.7053, 36.36],
+          [28.8583, 35.77],
+          [29.2733, 35.2639],
+          [29.8718, 35.041],
+          [30.4703, 35.2639],
+          [30.8853, 35.77],
+          [31.0383, 36.36]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "ethical_notes": "Lykia (Lycia, self-designation Trm̃mili — 'the Trmmili') was a federation of mountain city-states in southwest Anatolia speaking the Lycian language, an Anatolian-branch Indo-European language descended from Luwian. Lycians appear already in the Hittite-period Lukka lands and as Lukki sea raiders alongside the Sea Peoples — though identifying classical Lycians with Bronze Age Lukka is plausible but not certain. The Lycian language is documented in c. 200 inscriptions and decoded only partially. Major episodes of resistance to outside conquest — the Persian sack of Xanthos (546 BCE) where the Xanthians reportedly burned themselves and their families rather than surrender (Herodotus 1.176), and the Brutus/Roman siege of Xanthos (42 BCE) with a similar mass suicide tradition — illustrate both genuine indigenous agency and the rhetorical reuse of the same trope by Greek and Roman writers, requiring care.",
+    "name_variants": [
+      {"name": "Trm̃mili", "lang": "xlc", "context": "Lycian self-designation"},
+      {"name": "Λυκία", "lang": "grc", "context": "Greek classical"},
+      {"name": "Lycia", "lang": "lat", "context": "Latin classical"},
+      {"name": "Lukka", "lang": "hit", "context": "Hittite-era designation (likely ancestral)"},
+      {"name": "Termilae", "lang": "lat", "context": "Latin variant ethnonym"}
+    ],
+    "territory_changes": [
+      {"year": -546, "region": "Southwest Anatolia", "change_type": "conquest", "description": "Persian general Harpagus conquers Lycia for Cyrus; Herodotus reports the mass self-immolation of the Xanthian aristocracy.", "population_affected": null, "confidence_score": 0.5},
+      {"year": -333, "region": "Southwest Anatolia", "change_type": "occupation", "description": "Alexander the Great traverses Lycia, accepting submission of most cities. Lycia passes through Ptolemaic, Seleucid, and Rhodian rule before forming the Lycian League under Roman protection.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -43, "region": "Southwest Anatolia", "change_type": "incorporation", "description": "Brutus's Roman force besieges and destroys Xanthos, with the famous mass suicide. Emperor Claudius incorporates Lycia into the Roman empire as a province (43 CE), ending the autonomous League. Lycian language disappears in the early Roman period under Greek pressure.", "population_affected": null, "confidence_score": 0.55}
+    ],
+    "sources": [
+      {"citation": "Bryce, Trevor R. The Lycians, vol. 1: The Lycians in Literary and Epigraphic Sources. Museum Tusculanum Press, 1986.", "source_type": "academic", "url": null},
+      {"citation": "Keen, Antony G. Dynastic Lycia: A Political History of the Lycians and Their Relations with Foreign Powers, c. 545-362 B.C. Brill, 1998.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𐤊𐤋𐤊",
+    "name_original_lang": "phn",
+    "entity_type": "kingdom",
+    "year_start": -1200,
+    "year_end": -67,
+    "capital_name": "Tarsos",
+    "capital_lat": 36.92,
+    "capital_lon": 34.9,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [36.7257, 36.92],
+          [36.5666, 37.6325],
+          [36.135, 38.1442],
+          [35.5125, 38.367],
+          [34.89, 38.1442],
+          [34.4584, 37.6325],
+          [34.2993, 36.92],
+          [34.4584, 36.2075],
+          [34.89, 35.6958],
+          [35.5125, 35.473],
+          [36.135, 35.6958],
+          [36.5666, 36.2075],
+          [36.7257, 36.92]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "ethical_notes": "Kilikia (Cilicia) was the southeastern coastal region of Anatolia, with a distinct identity reaching back to the Hittite-era kingdom of Kizzuwatna. After the Hittite collapse, it was home to a series of Neo-Hittite/Luwian kingdoms — Que/Hiyawa with capital at Adana, ruled by the Mopsos dynasty attested in the bilingual Karatepe inscription — and to Greek-speaking colonies on the coast (Cilicia Tracheia/Pedias). The polygon represents the lowland (Cilicia Pedias) which was the political core; the rugged 'Rough Cilicia' (Tracheia) escaped state control until Roman times and was a notorious base for piracy systematically destroyed by Pompey in 67 BCE. The Karatepe bilingual is one of our few sources giving an indigenous Luwian voice (Azatiwada) to a region usually known through outside chroniclers (Assyrian, Greek). Phoenician trading colonies on the coast contributed to a multilingual environment.",
+    "name_variants": [
+      {"name": "Kilikia", "lang": "grc", "context": "Greek classical"},
+      {"name": "Cilicia", "lang": "lat", "context": "Latin classical"},
+      {"name": "Khilakku", "lang": "akk", "context": "Assyrian designation (rough/upland Cilicia)"},
+      {"name": "Que / Quwê", "lang": "akk", "context": "Assyrian designation (lowland Cilicia)"},
+      {"name": "Hiyawa", "lang": "luw", "context": "Luwian self-designation (linked etymologically to Achaeans)"},
+      {"name": "Kizzuwatna", "lang": "hit", "context": "Hittite-era predecessor name"}
+    ],
+    "territory_changes": [
+      {"year": -1200, "region": "Cilicia", "change_type": "consolidation", "description": "Following the Hittite collapse, Luwian-speaking Neo-Hittite kingdoms emerge in Cilicia, with the dynasty of Mopsos (Muksas in Karatepe) ruling Hiyawa/Que from Adana area.", "population_affected": null, "confidence_score": 0.4},
+      {"year": -713, "region": "Cilicia", "change_type": "incorporation", "description": "Sargon II of Assyria conquers Que/lowland Cilicia and reduces it to a province; Khilakku/upland Cilicia remains contested. Assyrian deportations affected local elites.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -67, "region": "Cilicia", "change_type": "incorporation", "description": "Pompey's campaign against Cilician pirates ends with Roman annexation of Cilicia as a province; he resettles the captured pirates as agriculturalists at Soli (renamed Pompeiopolis) — an interesting case of mass population transfer in Roman policy.", "population_affected": null, "confidence_score": 0.6}
+    ],
+    "sources": [
+      {"citation": "Hawkins, J.D. Corpus of Hieroglyphic Luwian Inscriptions, vol. I: Inscriptions of the Iron Age. De Gruyter, 2000.", "source_type": "academic", "url": null},
+      {"citation": "Casabonne, Olivier. La Cilicie à l'époque achéménide. Persika 3. De Boccard, 2004.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𒈠𒀭𒈾𒀀𒀀",
+    "name_original_lang": "akk",
+    "entity_type": "kingdom",
+    "year_start": -850,
+    "year_end": -616,
+    "capital_name": "Izirtu",
+    "capital_lat": 36.1,
+    "capital_lon": 46.1,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [48.0207, 36.1],
+          [47.8472, 36.985],
+          [47.3766, 37.6079],
+          [46.6979, 37.879],
+          [46.0192, 37.6079],
+          [45.5486, 36.985],
+          [45.3751, 36.1],
+          [45.5486, 35.215],
+          [46.0192, 34.5921],
+          [46.6979, 34.321],
+          [47.3766, 34.5921],
+          [47.8472, 35.215],
+          [48.0207, 36.1]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Mannae (Mannean Kingdom; Akkadian Mannāya, Urartian Mana) was a kingdom in northwestern Iran (modern Iranian Kurdistan / West Azerbaijan) caught between the rival expansions of Assyria and Urartu in the 9th–7th centuries BCE. Documentation is overwhelmingly external (Assyrian and Urartian royal inscriptions); Mannean inscriptions are minimal. The kingdom appears in the Bible (Jeremiah 51:27 as Minni). Mannean political structure and language remain unclear — possibly Hurrian-related or a separate language. The polygon is approximate; Mannean territory shifted with Assyro-Urartian pressure. The kingdom finally fell c. 616 BCE to Median expansion under Cyaxares — an end documented only obliquely in Babylonian chronicles. Soviet-era and Iranian nationalist scholarship have at various times tried to claim Mannae as proto-Iranian or proto-Azerbaijani, both readings are anachronistic.",
+    "name_variants": [
+      {"name": "Mannāya", "lang": "akk", "context": "Akkadian (Assyrian inscriptions)"},
+      {"name": "Mana", "lang": "xur", "context": "Urartian"},
+      {"name": "מִנִּי", "lang": "hbo", "context": "Biblical Hebrew (Jeremiah 51:27)"},
+      {"name": "Mannaeans", "lang": "en", "context": "English collective"},
+      {"name": "Mannai", "lang": "en", "context": "Older transliteration"}
+    ],
+    "territory_changes": [
+      {"year": -828, "region": "Northwest Iran", "change_type": "consolidation", "description": "Shalmaneser III of Assyria's annals first explicitly mention 'Munna' as a kingdom paying tribute, indicating Mannean state formation around the southern shore of Lake Urmia.", "population_affected": null, "confidence_score": 0.5},
+      {"year": -714, "region": "Lake Urmia basin", "change_type": "tribute", "description": "Sargon II's Eighth Campaign passes through Mannean territory en route to crushing Urartu. The Mannean king Ullusunu is depicted as an Assyrian client, and a portion of the kingdom is annexed.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -616, "region": "Northwest Iran", "change_type": "absorption", "description": "Mannae is absorbed by the expanding Median kingdom under Cyaxares; the polity disappears from the historical record. Cultural continuity into the Median period is plausible but archaeologically unconfirmed.", "population_affected": null, "confidence_score": 0.4}
+    ],
+    "sources": [
+      {"citation": "Postgate, J.N. & Reade, J.E. (eds.). Mesopotamian Civilization (relevant chapters). Cambridge, various.", "source_type": "academic", "url": null},
+      {"citation": "Salvini, Mirjo. 'The Historical Background of the Urartian Monument of Meher Kapısı.' In Çilingiroğlu & French (eds.), Anatolian Iron Ages 3, BIAA, 1994.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𐌀𐌋𐌖𐌀𐌍𐌊𐌀",
+    "name_original_lang": "xag",
+    "entity_type": "kingdom",
+    "year_start": -300,
+    "year_end": 705,
+    "capital_name": "Qabala",
+    "capital_lat": 40.98,
+    "capital_lon": 47.84,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [50.821, 40.98],
+          [50.642, 42.105],
+          [50.158, 42.9044],
+          [49.4825, 43.1972],
+          [48.807, 42.9044],
+          [48.323, 42.105],
+          [48.144, 40.98],
+          [48.323, 39.855],
+          [48.807, 39.0556],
+          [49.4825, 38.7628],
+          [50.158, 39.0556],
+          [50.642, 39.855],
+          [50.821, 40.98]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Caucasian Albania (not to be confused with Balkan Albania) was a kingdom in the eastern South Caucasus (modern Azerbaijan and southern Daghestan) speaking a Northeast Caucasian language ancestral to modern Udi. Its own literature is preserved only fragmentarily in palimpsests rediscovered at Sinai in 1996, after centuries of presumed total loss — a vivid example of how thoroughly Christian Armenian and later Islamic regional dominance can erase a lesser power's voice. Most narrative sources are Armenian (Movses Daskhurantsi's History of the Caucasian Albanians, 10th c. compilation of older material) and Greek/Roman, both filtering Albania through their own preoccupations. Soviet-era Azerbaijani historiography has at times instrumentalized Albania to claim ethnic continuity with modern Azerbaijani Turks; this is a 20th-century political construction. The kingdom converted to Christianity in the 4th century and was progressively absorbed by the Arab Caliphate after 705 CE.",
+    "name_variants": [
+      {"name": "Aluank", "lang": "xcl", "context": "Classical Armenian (Movses Daskhurantsi)"},
+      {"name": "Ἀλβανία", "lang": "grc", "context": "Greek classical"},
+      {"name": "Albania", "lang": "lat", "context": "Latin classical"},
+      {"name": "Aran / Arran", "lang": "pal", "context": "Middle Persian / Arabic geographers"},
+      {"name": "أران", "lang": "ar", "context": "Arabic"},
+      {"name": "Alvan", "lang": "xag", "context": "Albanian self-designation, reconstructed"}
+    ],
+    "territory_changes": [
+      {"year": -65, "region": "Eastern South Caucasus", "change_type": "tribute", "description": "Pompey's campaign against Mithridates brings Roman armies into Albania; King Oroezes is defeated and forced into a tributary relationship that lapses under successors.", "population_affected": null, "confidence_score": 0.5},
+      {"year": 313, "region": "Caucasian Albania", "change_type": "religious", "description": "Conversion of King Urnayr to Christianity under Armenian missionary influence (Gregory the Illuminator's grandson Grigoris); a distinct Albanian Church and alphabet (Mesrop Mashtots tradition) develop, only fragmentarily preserved.", "population_affected": null, "confidence_score": 0.5},
+      {"year": 705, "region": "Caucasian Albania", "change_type": "absorption", "description": "Umayyad annexation under Caliph al-Walid I; the Mihranid dynasty is eliminated. Christian Albania persists for centuries in the church but progressively assimilates to surrounding Armenian Christianity and Muslim Arab/Turkic populations.", "population_affected": null, "confidence_score": 0.5}
+    ],
+    "sources": [
+      {"citation": "Gippert, Jost et al. The Caucasian Albanian Palimpsests of Mt. Sinai. 2 vols. Brepols, 2008.", "source_type": "academic", "url": null},
+      {"citation": "Greenwood, Tim. 'Movses Dasxuranci.' In David Thomas et al. (eds.), Christian-Muslim Relations: A Bibliographical History 1, Brill, 2009.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𒆥𒁮",
+    "name_original_lang": "akk",
+    "entity_type": "tribal_federation",
+    "year_start": -800,
+    "year_end": -100,
+    "capital_name": "Dūmat al-Jandal",
+    "capital_lat": 29.81,
+    "capital_lon": 39.87,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [42.5739, 29.81],
+          [42.3413, 31.16],
+          [41.7755, 32.1193],
+          [40.5421, 32.476],
+          [39.3088, 32.1193],
+          [38.7429, 31.16],
+          [38.5104, 29.81],
+          [38.7429, 28.46],
+          [39.3088, 27.5007],
+          [40.5421, 27.144],
+          [41.7755, 27.5007],
+          [42.3413, 28.46],
+          [42.5739, 29.81]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "The Qedarites (Akkadian Qidri/Qadri, biblical Qēḏār) were the largest and most politically organized of the North Arabian Arab confederations of the 8th–4th centuries BCE, with a base around Dūmat al-Jandal and a sphere reaching from the Wadi Sirhan to the Egyptian-Levantine border. They are documented in Assyrian (Ashurbanipal's annals), Babylonian (Nabonidus), Achaemenid (Herodotus's account of Cambyses's Egyptian campaign), and biblical sources (Isaiah 21, Jeremiah 49, Psalm 120) — but never in their own preserved writing, although a silver bowl from Tell el-Maskhuta names a Qedarite king Qaynu son of Geshem. Notably, Qedarite queens (Zabibe, Samsi, Yatie, Te'elhunu) are repeatedly named in Assyrian sources, evidencing a tradition of female royal authority that contradicts later stereotypes of Arabian patriarchy. Ashurbanipal's campaign against Uate' (652–648 BCE) involved deportation, herd-killing, and famine — the explicit Assyrian goal was to break the confederation.",
+    "name_variants": [
+      {"name": "Qedar", "lang": "ar", "context": "Arabic"},
+      {"name": "Qidri / Qadri", "lang": "akk", "context": "Akkadian (Assyrian)"},
+      {"name": "קֵדָר", "lang": "hbo", "context": "Biblical Hebrew"},
+      {"name": "Qedarites", "lang": "en", "context": "English collective"},
+      {"name": "Κεδρηνοί", "lang": "grc", "context": "Greek (Pliny gives Cedrei)"}
+    ],
+    "territory_changes": [
+      {"year": -738, "region": "Northern Arabia", "change_type": "tribute", "description": "Tiglath-Pileser III lists the Qedarite queen Zabibe as paying tribute. Assyrian sources begin a long sequence of campaigns and treaties against Qedar.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -650, "region": "Northern Arabia", "change_type": "war", "description": "Ashurbanipal's campaigns against the Qedarite king Uate' involve deliberate famine warfare — Assyrian texts boast of camels and people dying of thirst — and mass deportation. The episode is one of the best-documented Assyrian atrocities against an Arab population.", "population_affected": null, "confidence_score": 0.55},
+      {"year": -400, "region": "Sinai/Negev", "change_type": "expansion", "description": "Under Persian rule, the Qedarite king Geshem (Gashmu, biblical opponent of Nehemiah) controls trade routes through the Negev and Sinai, with vassal status under the Achaemenid satrap of Arabia.", "population_affected": null, "confidence_score": 0.5},
+      {"year": -100, "region": "Northern Arabia", "change_type": "absorption", "description": "Qedar fades from the historical record, gradually absorbed by the rising Nabataean kingdom and later Arab tribal reorganizations.", "population_affected": null, "confidence_score": 0.4}
+    ],
+    "sources": [
+      {"citation": "Eph'al, Israel. The Ancient Arabs: Nomads on the Borders of the Fertile Crescent, 9th-5th Centuries B.C. Magnes Press / Brill, 1982.", "source_type": "academic", "url": null},
+      {"citation": "Retsö, Jan. The Arabs in Antiquity: Their History from the Assyrians to the Umayyads. Routledge, 2003.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𐡀𐡅𐡓𐡄𐡉",
+    "name_original_lang": "arc",
+    "entity_type": "kingdom",
+    "year_start": -132,
+    "year_end": 244,
+    "capital_name": "Edessa (Urhay)",
+    "capital_lat": 37.16,
+    "capital_lon": 38.79,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [40.6422, 37.16],
+          [40.4738, 37.83],
+          [40.0167, 38.3563],
+          [39.3924, 38.591],
+          [38.7682, 38.3563],
+          [38.3111, 37.83],
+          [38.1427, 37.16],
+          [38.3111, 36.49],
+          [38.7682, 35.9637],
+          [39.3924, 35.729],
+          [40.0167, 35.9637],
+          [40.4738, 36.49],
+          [40.6422, 37.16]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "ethical_notes": "Osroene (named for the Aramaic toponym Urhay = Edessa, modern Şanlıurfa) was a small kingdom in upper Mesopotamia ruled by the Aramaic-speaking Abgarid dynasty for over three centuries. It was a buffer state perpetually negotiating between Parthia and Rome, eventually absorbed by Caracalla in 213–214 CE and finally dissolved as a kingdom under Gordian III in 244 CE. Osroene is significant as the first state to (allegedly) adopt Christianity at a royal level — the Abgar/Jesus correspondence tradition — though modern scholarship (Drijvers, Brock) treats this as a 4th-century legend retrojected. The polygon represents a typical Abgarid sphere; the actual border with Parthian Adiabene and Roman Syria was negotiated and shifted constantly. Edessa later became a major center of Syriac Christian literature; the Syriac corpus, although ecclesiastical, gives us a rare indigenous Aramaic voice from the region.",
+    "name_variants": [
+      {"name": "Urhay", "lang": "arc", "context": "Aramaic (local self-designation)"},
+      {"name": "ܐܘܪܗܝ", "lang": "syc", "context": "Syriac script form"},
+      {"name": "Ὀσροηνή", "lang": "grc", "context": "Greek classical"},
+      {"name": "Osroene / Osrhoene", "lang": "lat", "context": "Latin classical"},
+      {"name": "Edessa", "lang": "lat", "context": "Greek-Latin name of the capital"},
+      {"name": "ܐܘܪܗܝ / الرها", "lang": "ar", "context": "Arabic al-Ruha"}
+    ],
+    "territory_changes": [
+      {"year": -132, "region": "Upper Mesopotamia", "change_type": "independence", "description": "Founding of the Abgarid dynasty at Edessa, in the political vacuum left by the decline of Seleucid power and prior to Parthian consolidation.", "population_affected": null, "confidence_score": 0.5},
+      {"year": 116, "region": "Upper Mesopotamia", "change_type": "occupation", "description": "Roman emperor Trajan briefly annexes Osroene; reversed under Hadrian, Abgar VII restored. The episode shows the kingdom's structural fragility between Roman and Parthian poles.", "population_affected": null, "confidence_score": 0.55},
+      {"year": 214, "region": "Upper Mesopotamia", "change_type": "incorporation", "description": "Caracalla deposes Abgar IX, annexes Osroene as a Roman colony. Brief revival under Abgar X (Severus Alexander), then final dissolution by Gordian III in 244.", "population_affected": null, "confidence_score": 0.55}
+    ],
+    "sources": [
+      {"citation": "Ross, Steven K. Roman Edessa: Politics and Culture on the Eastern Fringes of the Roman Empire, 114-242 CE. Routledge, 2001.", "source_type": "academic", "url": null},
+      {"citation": "Drijvers, H.J.W. Cults and Beliefs at Edessa. Brill, 1980.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "𐡇𐡃𐡉𐡁",
+    "name_original_lang": "arc",
+    "entity_type": "kingdom",
+    "year_start": -69,
+    "year_end": 226,
+    "capital_name": "Arbela (Arbil)",
+    "capital_lat": 36.19,
+    "capital_lon": 44.0,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [45.9255, 36.19],
+          [45.7522, 37.075],
+          [45.2823, 37.6979],
+          [44.6049, 37.969],
+          [43.9276, 37.6979],
+          [43.4577, 37.075],
+          [43.2844, 36.19],
+          [43.4577, 35.305],
+          [43.9276, 34.6821],
+          [44.6049, 34.411],
+          [45.2823, 34.6821],
+          [45.7522, 35.305],
+          [45.9255, 36.19]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "ethical_notes": "Adiabene (Aramaic Ḥadyab) was a vassal kingdom of the Parthian empire in the heart of former Assyria, with capital at Arbela (modern Erbil). Its most famous episode — the conversion of Queen Helena and King Izates to Judaism in the 1st century CE (Josephus, Antiquities 20.17–96) — is one of the best-attested cases of voluntary mass royal conversion to Judaism, complicating the assumption that ancient Judaism was exclusively ethnic. After the fall of the Parthians (224 CE), Adiabene was incorporated into the Sasanian empire (formally by 226 CE) and became a major center of the East Syriac (Church of the East) tradition. The polygon represents the kingdom's heartland in the Trans-Tigris; it sometimes extended further north and east. Documentation is mostly Josephus, the Babylonian Talmud, Roman sources (Tacitus), and later Syriac chronicles — no royal inscriptions survive. The Iraqi Kurdistan region preserves Erbil's archaeological mound and the Helena-era Jewish memory.",
+    "name_variants": [
+      {"name": "Ḥadyab", "lang": "arc", "context": "Aramaic / Syriac"},
+      {"name": "ܚܕܝܒ", "lang": "syc", "context": "Syriac script"},
+      {"name": "Ἀδιαβηνή", "lang": "grc", "context": "Greek (Strabo, Josephus)"},
+      {"name": "Adiabene", "lang": "lat", "context": "Latin"},
+      {"name": "حدياب", "lang": "ar", "context": "Arabic"},
+      {"name": "Erbil / Arbil", "lang": "en", "context": "Modern name of the capital"}
+    ],
+    "territory_changes": [
+      {"year": -69, "region": "Trans-Tigris", "change_type": "independence", "description": "Establishment of an Adiabenian dynasty as a Parthian vassal kingdom in the former Assyrian core after the collapse of Seleucid power following Tigranes II of Armenia's defeat by Lucullus.", "population_affected": null, "confidence_score": 0.4},
+      {"year": 36, "region": "Trans-Tigris", "change_type": "religious", "description": "Conversion of Queen Helena and King Izates II to Judaism (per Josephus); Helena famously contributes to famine relief at Jerusalem and is buried there. The episode is a major case of voluntary mass royal conversion outside Roman territory.", "population_affected": null, "confidence_score": 0.55},
+      {"year": 116, "region": "Trans-Tigris", "change_type": "occupation", "description": "Brief Roman annexation under Trajan (as the province of Assyria); Hadrian quickly relinquishes the territory.", "population_affected": null, "confidence_score": 0.55},
+      {"year": 226, "region": "Trans-Tigris", "change_type": "absorption", "description": "Sasanian conquest under Ardashir I formally ends Adiabene as an autonomous polity; it becomes the province of Nōd-Ardashīragān within the Sasanian empire.", "population_affected": null, "confidence_score": 0.5}
+    ],
+    "sources": [
+      {"citation": "Marciak, Michał. Sophene, Gordyene, and Adiabene: Three Regna Minora of Northern Mesopotamia between East and West. Brill, 2017.", "source_type": "academic", "url": null},
+      {"citation": "Neusner, Jacob. 'The Conversion of Adiabene to Judaism: A New Perspective.' JBL 83/1, 1964.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Ⲙⲁⲕⲟⲩⲣⲓⲁ",
+    "name_original_lang": "cop",
+    "entity_type": "kingdom",
+    "year_start": 340,
+    "year_end": 1312,
+    "capital_name": "Old Dongola",
+    "capital_lat": 18.22,
+    "capital_lon": 30.74,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [34.5263, 18.22],
+          [34.2884, 19.795],
+          [33.7095, 20.9144],
+          [32.8463, 21.327],
+          [31.9831, 20.9144],
+          [31.4042, 19.795],
+          [31.1663, 18.22],
+          [31.4042, 16.645],
+          [31.9831, 15.5256],
+          [32.8463, 15.113],
+          [33.7095, 15.5256],
+          [34.2884, 16.645],
+          [34.5263, 18.22]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "ethical_notes": "Makuria was a medieval Christian Nubian kingdom on the middle Nile (modern northern Sudan), capital at Old Dongola, that absorbed Nobadia in the 7th century to control all of Christian Nubia. After the Arab invasion of Egypt, Makuria signed the Baqt treaty (652 CE) with the Caliphate — a treaty unique in Islamic legal history for being neither dhimmi nor jizya, but a slave-tribute exchange with explicit Nubian sovereignty recognized. This treaty held for c. 600 years and is a major counter-example to the Eurocentric narrative that the Islamic conquest immediately swallowed all neighbors. Most sources are Arabic-Egyptian (Ibn Selim al-Aswani, al-Maqrizi); Nubian Old Nubian sources exist but are mainly liturgical. Polish-led excavations at Dongola since the 1960s have revolutionized our understanding. The kingdom slowly Islamized after 1276 (Mamluk intervention) and was effectively dissolved by 1312.",
+    "name_variants": [
+      {"name": "Makuria / Maquria", "lang": "en", "context": "English standard"},
+      {"name": "Ⲙⲁⲕⲟⲩⲣⲓⲁ", "lang": "cop", "context": "Coptic-script attestations"},
+      {"name": "المقرة / Muqurra", "lang": "ar", "context": "Arabic"},
+      {"name": "Dotawo", "lang": "onw", "context": "Old Nubian successor designation in late period"},
+      {"name": "Mαϰούρια", "lang": "grc", "context": "Greek (Byzantine sources)"}
+    ],
+    "territory_changes": [
+      {"year": 543, "region": "Middle Nile", "change_type": "religious", "description": "Christianization of Makuria, traditionally by Byzantine missionaries sent by Empress Theodora (Miaphysite) ahead of Justinian's (Chalcedonian) embassy — the dynastic religious choice has long-term consequences for alignment with Coptic Christianity.", "population_affected": null, "confidence_score": 0.5},
+      {"year": 652, "region": "Middle Nile and Lower Nubia", "change_type": "treaty", "description": "After two failed Arab invasions, Makuria and the Caliphate sign the Baqt: an annual exchange of slaves for grain/cloth, with mutual non-aggression. Almost unique status as a non-dhimmi Christian polity adjacent to Dar al-Islam for six centuries.", "population_affected": null, "confidence_score": 0.6},
+      {"year": 707, "region": "Lower Nubia", "change_type": "absorption", "description": "Makuria absorbs the Christian kingdom of Nobadia, unifying Christian Nubia from the First to (briefly) the Sixth Cataract.", "population_affected": null, "confidence_score": 0.5},
+      {"year": 1276, "region": "Middle Nile", "change_type": "occupation", "description": "Mamluk Sultan Baybars's invasion installs a Muslim puppet king at Dongola, beginning the long collapse of Christian Nubia. Slow Islamization continues for centuries; the kingdom continues nominally as Dotawo until c. 1485.", "population_affected": null, "confidence_score": 0.55}
+    ],
+    "sources": [
+      {"citation": "Welsby, Derek A. The Medieval Kingdoms of Nubia: Pagans, Christians and Muslims along the Middle Nile. British Museum Press, 2002.", "source_type": "academic", "url": null},
+      {"citation": "Ruffini, Giovanni R. Medieval Nubia: A Social and Economic History. Oxford University Press, 2012.", "source_type": "academic", "url": null}
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  }
+]

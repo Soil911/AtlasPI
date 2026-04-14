@@ -33,7 +33,73 @@ class ChangeType(enum.StrEnum):
 
 
 class SourceType(enum.StrEnum):
-    """Tipo di fonte bibliografica."""
+    """Tipo di fonte bibliografica.
+
+    ETHICS-008: oral_tradition e archaeological NON sono inferiori
+    ad academic — sono evidence diverse ma di pari dignità.
+    """
     PRIMARY = "primary"
     SECONDARY = "secondary"
     ACADEMIC = "academic"
+    # ETHICS-008: fonti non scritte, fondamentali per storie coperte
+    # solo da tradizioni orali o evidenze materiali.
+    ORAL_TRADITION = "oral_tradition"
+    ARCHAEOLOGICAL = "archaeological"
+    INDIRECT_REFERENCE = "indirect_reference"
+
+
+class EventType(enum.StrEnum):
+    """Tipi di evento storico — vedi ETHICS-007.
+
+    NON usare linguaggio eufemistico: GENOCIDE, non "conflict";
+    COLONIAL_VIOLENCE, non "pacification"; FAMINE, non "food crisis".
+    """
+    # Eventi militari / politici
+    BATTLE = "BATTLE"
+    SIEGE = "SIEGE"
+    TREATY = "TREATY"
+    REBELLION = "REBELLION"
+    REVOLUTION = "REVOLUTION"
+    CORONATION = "CORONATION"
+    DEATH_OF_RULER = "DEATH_OF_RULER"
+    MARRIAGE_DYNASTIC = "MARRIAGE_DYNASTIC"
+    FOUNDING_CITY = "FOUNDING_CITY"
+    FOUNDING_STATE = "FOUNDING_STATE"
+    DISSOLUTION_STATE = "DISSOLUTION_STATE"
+    CONQUEST = "CONQUEST"
+    # ETHICS-007: termini scomodi, voluti espliciti
+    COLONIAL_VIOLENCE = "COLONIAL_VIOLENCE"
+    GENOCIDE = "GENOCIDE"
+    ETHNIC_CLEANSING = "ETHNIC_CLEANSING"
+    MASSACRE = "MASSACRE"
+    DEPORTATION = "DEPORTATION"
+    # Disastri / crisi
+    FAMINE = "FAMINE"
+    EPIDEMIC = "EPIDEMIC"
+    EARTHQUAKE = "EARTHQUAKE"
+    VOLCANIC_ERUPTION = "VOLCANIC_ERUPTION"
+    TSUNAMI = "TSUNAMI"
+    FLOOD = "FLOOD"
+    DROUGHT = "DROUGHT"
+    FIRE = "FIRE"
+    # Altri
+    EXPLORATION = "EXPLORATION"
+    TRADE_AGREEMENT = "TRADE_AGREEMENT"
+    RELIGIOUS_EVENT = "RELIGIOUS_EVENT"
+    INTELLECTUAL_EVENT = "INTELLECTUAL_EVENT"
+    TECHNOLOGICAL_EVENT = "TECHNOLOGICAL_EVENT"
+    OTHER = "OTHER"
+
+
+class EventRole(enum.StrEnum):
+    """Ruolo di un'entità geopolitica in un evento storico — ETHICS-007.
+
+    Esplicita CHI ha fatto cosa a chi: la voce attiva è obbligatoria.
+    """
+    MAIN_ACTOR = "MAIN_ACTOR"
+    VICTIM = "VICTIM"
+    PARTICIPANT = "PARTICIPANT"
+    AFFECTED = "AFFECTED"
+    WITNESS = "WITNESS"
+    FOUNDED = "FOUNDED"          # l'evento ha fondato questa entità
+    DISSOLVED = "DISSOLVED"      # l'evento ha dissolto questa entità

@@ -2,6 +2,101 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.3.0] - 2026-04-15
+
+**Tema**: Events layer + entity expansion 747→846. Da database di *entità*
+geopolitiche a database di *entità + eventi storici*, con ETHICS-007 e
+ETHICS-008 come contratto semantico. L'obiettivo: dare agli agenti AI
+accesso strutturato non solo a *dove esistevano* gli imperi, ma *cosa è
+successo dentro e tra di loro* — incluso ciò che è stato cancellato.
+
+### v6.3 Events layer (NEW)
+
+Tre nuove tabelle (migrazione Alembic `003_historical_events`):
+
+- **`historical_events`** — eventi discreti (battaglie, trattati, epidemie,
+  genocidi, eruzioni, carestie). Campi obbligatori: `name_original` (ETHICS-001),
+  `event_type`, `year`, `description`. Campi ETHICS: `main_actor` (voce attiva,
+  richiesto per tipologie violente), `casualties_low`/`casualties_high` con
+  `casualties_source`, `known_silence` + `silence_reason`, `ethical_notes`,
+  `confidence_score`, `status`.
+- **`event_entity_links`** — junction N:M evento↔entità con ruolo esplicito
+  (MAIN_ACTOR, VICTIM, PARTICIPANT, AFFECTED, WITNESS, FOUNDED, DISSOLVED).
+- **`event_sources`** — bibliografia per evento (incluso ORAL_TRADITION,
+  ARCHAEOLOGICAL, INDIRECT_REFERENCE oltre ai tipi esistenti).
+
+**EventType enum (31 valori, ETHICS-007)**: nessun eufemismo. I termini usati
+dalla storiografia accademica sono mantenuti letteralmente: GENOCIDE,
+COLONIAL_VIOLENCE, ETHNIC_CLEANSING, MASSACRE, DEPORTATION, FAMINE —
+e NON "pacification", "incident", "population exchange", "food crisis".
+
+**ETHICS-008 known_silence**: flag booleano per eventi la cui documentazione
+contemporanea è assente, cancellata o deliberatamente soppressa (Operation
+Legacy britannico, Herero-Nama con diari tedeschi distrutti, Holodomor con
+statistiche URSS soppresse). Gli agenti AI possono filtrare esplicitamente
+questi casi via `?known_silence=true` per ricerca sui silenzi archivistici.
+
+### Nuovi endpoint `/v1/events/*` (4)
+
+- `GET /v1/events` — lista con filtri year_min/year_max/event_type/status/known_silence + paginazione
+- `GET /v1/events/{id}` — detail con entity_links, sources, ethical_notes
+- `GET /v1/events/types` — enumera EventType + EventRole con descrizioni ETHICS-007
+- `GET /v1/entities/{id}/events` — reverse lookup eventi di un'entità, filtro per role
+
+Tutti con Cache-Control pubblico (30min lista, 1h detail, 24h types).
+
+### Seed eventi `data/events/batch_01_core.json` (30 eventi)
+
+Copertura di 17 EventType distinti con 7 casi `known_silence=true`.
+Esempi selezionati per dimostrare ogni categoria + forzare compliance
+ETHICS-007 sul seed stesso:
+
+- Violenza organizzata nominata: Genocidio armeno, Holodomor, Shoah,
+  Genocidio ruandese, Genocidio Herero-Nama, Massacro di Nanchino
+- Silenzi documentati: Library of Alexandria, Operation Legacy,
+  Herero-Nama (diari distrutti), Holodomor (statistiche soppresse),
+  Bengal Famine 1943, Armenian Genocide (archivi ottomani purged)
+- Catastrofi naturali: Tambora 1815, Lisbon 1755, Jōgan tsunami 869
+- Eventi positivi: Dichiarazione diritti 1789, Rivoluzione haitiana,
+  Westphalia 1648 (con contesto: "end of religious wars for Europe,
+  start of Westphalian sovereignty exported coercively worldwide")
+
+### Entity expansion: 747 → 846 (+99 net, +100 lordi, 6 dedup)
+
+Quattro batch tematici generati da agenti paralleli con istruzioni ETHICS:
+
+- `batch_25_oceania_expansion.json` (25): Tonga, Samoa, Hawaii, Aotearoa,
+  Rapa Nui, Marshall Is., Guam/Chamorro, Tahiti, Fiji, Papua, Vanuatu, ...
+- `batch_26_precolumbian_expansion.json` (25): Muisca, Mapuche, Tiwanaku,
+  Chimú, Moche, Taíno, Pueblos, Iroquois Conf., Mississippian, Zapotec, ...
+- `batch_27_me_preislamic_expansion.json` (25): Ebla, Mari, Elam, Urartu,
+  Lydia, Nabataeans, Parthia, Palmyra, Hatra, Kingdom of Aksum, ...
+- `batch_28_africa_expansion.json` (25): Kanem-Bornu, Benin, Dahomey,
+  Luba, Lunda, Ashanti, Sokoto Caliphate, Adal Sultanate, Ajuran, ...
+
+Tutti i batch applicano ETHICS-002 (conquiste documentate), ETHICS-004
+(nomi indigeni come primari, coloniali come varianti), con sorgenti
+accademiche primarie (Thornton 1992, Mann 2005, Reid 2012, Iliffe 2017, ...).
+
+### Test suite 283 → 308 (+25 v6.3)
+
+`tests/test_v63_events.py` copre:
+- Seed popola tabella eventi + link entità risolti
+- Filtri API: year, event_type, status, known_silence (true/false), paginazione
+- Enum completezza: tutti gli EventType presenti, nessun eufemismo
+- ETHICS-007: ogni evento violento ha `main_actor`; ruoli esplicitati nei link
+- ETHICS-008: ogni `known_silence=true` ha `silence_reason` non vuoto
+- Integrità: confidence in [0,1], casualties_low <= casualties_high
+- Seed idempotente (doppia chiamata non duplica)
+
+### Compatibilità
+
+Nessun breaking change. Tutte le tabelle v6.x pre-esistenti restano
+identiche. Migrazione Alembic 003 è additiva (tre CREATE TABLE + indici).
+Downgrade disponibile.
+
+---
+
 ## [v6.2.0] - 2026-04-14
 
 **Tema**: PostGIS deep work + re-matching conservativo post-ETHICS-006.

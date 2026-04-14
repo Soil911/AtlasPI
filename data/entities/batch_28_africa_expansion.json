@@ -1,0 +1,3357 @@
+[
+  {
+    "name_original": "Malindi",
+    "name_original_lang": "swa",
+    "entity_type": "sultanate",
+    "year_start": 1100,
+    "year_end": 1593,
+    "capital_name": "Malindi",
+    "capital_lat": -3.2175,
+    "capital_lon": 40.1167,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            40.9275,
+            -3.2175
+          ],
+          [
+            40.8189,
+            -2.8121
+          ],
+          [
+            40.5221,
+            -2.5153
+          ],
+          [
+            40.1167,
+            -2.4067
+          ],
+          [
+            39.7113,
+            -2.5153
+          ],
+          [
+            39.4145,
+            -2.8121
+          ],
+          [
+            39.3059,
+            -3.2175
+          ],
+          [
+            39.4145,
+            -3.6229
+          ],
+          [
+            39.7113,
+            -3.9197
+          ],
+          [
+            40.1167,
+            -4.0283
+          ],
+          [
+            40.5221,
+            -3.9197
+          ],
+          [
+            40.8189,
+            -3.6229
+          ],
+          [
+            40.9275,
+            -3.2175
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "ethical_notes": "Malindi was a Swahili coast city-state whose Muslim merchant elite traded ivory, gold, and enslaved people across the western Indian Ocean - the East African slave trade was a structural pillar of Swahili coastal economies and must not be downplayed. Knowledge of the polity comes from Arabic chronicles (al-Idrisi, Ibn Battuta), Portuguese accounts after 1498, and Swahili oral and chronicle traditions (Kilwa Chronicle and local versions). Malindi allied with the Portuguese against Mombasa, hosted Vasco da Gama in 1498, and ultimately lost autonomy when Portugal moved its East African base to Mombasa in 1593. The polygon is a coastal approximation centred on the city; effective control extended only a short distance inland.",
+    "name_variants": [
+      {
+        "name": "Malindi",
+        "lang": "swa",
+        "context": "Swahili autonym"
+      },
+      {
+        "name": "Malindi",
+        "lang": "ar",
+        "context": "Arabic chronicles"
+      },
+      {
+        "name": "Melinde",
+        "lang": "pt",
+        "context": "Portuguese 16th-century usage"
+      },
+      {
+        "name": "Malindi",
+        "lang": "en",
+        "context": "modern English"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1100,
+        "region": "Kenyan coast",
+        "change_type": "foundation",
+        "description": "Earliest documented occupation of Malindi as a substantial Swahili trading town engaged in the western Indian Ocean network.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1498,
+        "region": "coastal Kenya",
+        "change_type": "diplomatic_realignment",
+        "description": "Sultan of Malindi welcomes Vasco da Gama's fleet, allies with Portugal against rival Mombasa, and provides the pilot Ahmad ibn Majid (traditional attribution) to guide the Portuguese to India.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1593,
+        "region": "Swahili coast",
+        "change_type": "absorption",
+        "description": "Portugal completes Fort Jesus at Mombasa and transfers its East African capital there; Malindi loses its privileged status and declines into a minor settlement under Portuguese authority.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Kusimba, Chapurukha M. The Rise and Fall of Swahili States. AltaMira Press, 1999.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Horton, Mark, and John Middleton. The Swahili: The Social Landscape of a Mercantile Society. Blackwell, 2000.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Mvita",
+    "name_original_lang": "swa",
+    "entity_type": "city-state",
+    "year_start": 900,
+    "year_end": 1837,
+    "capital_name": "Mombasa",
+    "capital_lat": -4.0435,
+    "capital_lon": 39.6682,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            40.5691,
+            -4.0435
+          ],
+          [
+            40.4484,
+            -3.593
+          ],
+          [
+            40.1187,
+            -3.2633
+          ],
+          [
+            39.6682,
+            -3.1426
+          ],
+          [
+            39.2177,
+            -3.2633
+          ],
+          [
+            38.888,
+            -3.593
+          ],
+          [
+            38.7673,
+            -4.0435
+          ],
+          [
+            38.888,
+            -4.494
+          ],
+          [
+            39.2177,
+            -4.8237
+          ],
+          [
+            39.6682,
+            -4.9444
+          ],
+          [
+            40.1187,
+            -4.8237
+          ],
+          [
+            40.4484,
+            -4.494
+          ],
+          [
+            40.5691,
+            -4.0435
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "ethical_notes": "Mvita (Mombasa) was a Swahili coastal city-state whose elite, like other Swahili port polities, relied heavily on the trans-Indian-Ocean slave trade - caravan routes brought enslaved Africans from the interior for export to Arabia, Persia, and India. Sources include Arabic geographies, the Mombasa and Kilwa chronicles, Swahili oral tradition, and Portuguese records after 1498. Portugal sacked the city repeatedly (1505, 1528, 1589) and built Fort Jesus in 1593; Omani forces took the fort in 1698 ending Portuguese rule, after which Mombasa was governed by the Mazrui dynasty until Sayyid Said of Oman/Zanzibar absorbed it in 1837. The polygon approximates the immediate hinterland; mainland claims fluctuated with relations to Mijikenda neighbours.",
+    "name_variants": [
+      {
+        "name": "Mvita",
+        "lang": "swa",
+        "context": "Swahili autonym, 'island of war'"
+      },
+      {
+        "name": "Mombasa",
+        "lang": "en",
+        "context": "standard English"
+      },
+      {
+        "name": "Manbasa",
+        "lang": "ar",
+        "context": "Arabic geographers"
+      },
+      {
+        "name": "Mombaca",
+        "lang": "pt",
+        "context": "Portuguese colonial spelling"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1505,
+        "region": "Mombasa island",
+        "change_type": "sack",
+        "description": "Portuguese fleet under Francisco de Almeida sacks Mombasa, killing thousands and looting the city.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1593,
+        "region": "Mombasa island",
+        "change_type": "colonization",
+        "description": "Portugal completes Fort Jesus and makes Mombasa its East African headquarters, imposing tribute on the Swahili coast.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1698,
+        "region": "Mombasa",
+        "change_type": "conquest",
+        "description": "Omani Arab forces, after a 33-month siege, capture Fort Jesus and end Portuguese rule on the northern Swahili coast.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1837,
+        "region": "Mombasa",
+        "change_type": "absorption",
+        "description": "Sayyid Said of Oman and Zanzibar deposes the local Mazrui dynasty and incorporates Mombasa into the Omani-Zanzibari realm.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1895,
+        "region": "Mombasa",
+        "change_type": "colonization",
+        "description": "British declare the East Africa Protectorate with Mombasa as initial capital; the city becomes the principal port of British colonial Kenya.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Berg, F. J. 'The Swahili Community of Mombasa, 1500-1900.' Journal of African History 9, no. 1 (1968): 35-56.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Pouwels, Randall L. Horn and Crescent: Cultural Change and Traditional Islam on the East African Coast, 800-1900. Cambridge University Press, 1987.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Pate",
+    "name_original_lang": "swa",
+    "entity_type": "sultanate",
+    "year_start": 1200,
+    "year_end": 1895,
+    "capital_name": "Pate Town",
+    "capital_lat": -2.0833,
+    "capital_lon": 41.05,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            41.7707,
+            -2.0833
+          ],
+          [
+            41.6742,
+            -1.7229
+          ],
+          [
+            41.4104,
+            -1.4591
+          ],
+          [
+            41.05,
+            -1.3626
+          ],
+          [
+            40.6896,
+            -1.4591
+          ],
+          [
+            40.4258,
+            -1.7229
+          ],
+          [
+            40.3293,
+            -2.0833
+          ],
+          [
+            40.4258,
+            -2.4437
+          ],
+          [
+            40.6896,
+            -2.7075
+          ],
+          [
+            41.05,
+            -2.804
+          ],
+          [
+            41.4104,
+            -2.7075
+          ],
+          [
+            41.6742,
+            -2.4437
+          ],
+          [
+            41.7707,
+            -2.0833
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Pate was a Swahili sultanate on Pate Island in the Lamu archipelago whose Nabhani dynasty ruled much of the northern Swahili coast in the 17th-18th centuries. Pate's wealth came from ivory, mangrove timber, cotton cloth, and the Indian Ocean slave trade - Pate merchants supplied enslaved labour to Arabia and to Pemba's clove plantations. Primary written source is the Pate Chronicle, an Arabic-script Swahili text whose chronology is contested by historians (Wilson, Tolmacheva). Portuguese punitive raids and Omani interventions repeatedly subjugated Pate; British forces ended remaining political autonomy when they established the East Africa Protectorate (1895). The polygon approximates the archipelagic hinterland.",
+    "name_variants": [
+      {
+        "name": "Pate",
+        "lang": "swa",
+        "context": "Swahili autonym"
+      },
+      {
+        "name": "Bate",
+        "lang": "ar",
+        "context": "Arabic chronicles"
+      },
+      {
+        "name": "Pate",
+        "lang": "pt",
+        "context": "Portuguese records"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1652,
+        "region": "Lamu archipelago",
+        "change_type": "rebellion",
+        "description": "Pate leads a Swahili revolt against Portuguese authority, prompting punitive expeditions from Mombasa.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1813,
+        "region": "northern Swahili coast",
+        "change_type": "conquest",
+        "description": "Battle of Shela: Lamu, backed by Oman, decisively defeats Pate's Mazrui-allied forces, reducing Pate's regional dominance.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1895,
+        "region": "Lamu archipelago",
+        "change_type": "colonization",
+        "description": "British East Africa Protectorate established; Pate's residual sultanate is dissolved into colonial administration.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Tolmacheva, Marina. The Pate Chronicle: Edited and Translated from MSS 177, 321, 344, and 358 of the Library of the University of Dar es Salaam. Michigan State University Press, 1993.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Allen, James de Vere. Swahili Origins: Swahili Culture and the Shungwaya Phenomenon. James Currey, 1993.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Amu",
+    "name_original_lang": "swa",
+    "entity_type": "city-state",
+    "year_start": 1370,
+    "year_end": 1895,
+    "capital_name": "Lamu",
+    "capital_lat": -2.2697,
+    "capital_lon": 40.902,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            41.5326,
+            -2.2697
+          ],
+          [
+            41.4481,
+            -1.9544
+          ],
+          [
+            41.2173,
+            -1.7236
+          ],
+          [
+            40.902,
+            -1.6391
+          ],
+          [
+            40.5867,
+            -1.7236
+          ],
+          [
+            40.3559,
+            -1.9544
+          ],
+          [
+            40.2714,
+            -2.2697
+          ],
+          [
+            40.3559,
+            -2.585
+          ],
+          [
+            40.5867,
+            -2.8158
+          ],
+          [
+            40.902,
+            -2.9003
+          ],
+          [
+            41.2173,
+            -2.8158
+          ],
+          [
+            41.4481,
+            -2.585
+          ],
+          [
+            41.5326,
+            -2.2697
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "ethical_notes": "Amu (Lamu) was a Swahili city-state in the Lamu archipelago governed for much of its history by an oligarchic council of leading lineages (the Yumbe) rather than a hereditary sultan. Its prosperity rested on Indian Ocean trade including the export of enslaved Africans captured or purchased in the interior - historians (Cooper, Glassman) have documented Lamu's role in the 19th-century coastal slave economy. Sources include the Lamu Chronicle, Swahili poetic tradition (utenzi), Arabic and Portuguese accounts, and ethnographic fieldwork. Lamu defeated Pate at Shela (1813) but was absorbed by Zanzibar in 1840 and folded into the British East Africa Protectorate in 1895. The polygon is a small coastal hinterland.",
+    "name_variants": [
+      {
+        "name": "Amu",
+        "lang": "swa",
+        "context": "Swahili autonym"
+      },
+      {
+        "name": "Lamu",
+        "lang": "en",
+        "context": "standard English"
+      },
+      {
+        "name": "al-Amu",
+        "lang": "ar",
+        "context": "Arabic"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1813,
+        "region": "Lamu archipelago",
+        "change_type": "victory",
+        "description": "Battle of Shela: Lamu militia defeats a coalition of Pate and Mazrui Mombasa forces, securing regional autonomy.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1840,
+        "region": "Lamu",
+        "change_type": "absorption",
+        "description": "Sayyid Said relocates the Omani capital from Muscat to Zanzibar and incorporates Lamu into the Zanzibar Sultanate.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1895,
+        "region": "Lamu",
+        "change_type": "colonization",
+        "description": "British East Africa Protectorate proclaimed; Lamu is administered as a British protectorate town, ending sultanate autonomy.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Romero, Patricia W. Lamu: History, Society, and Family in an East African Port City. Markus Wiener, 1997.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Glassman, Jonathon. Feasts and Riot: Revelry, Rebellion, and Popular Consciousness on the Swahili Coast, 1856-1888. Heinemann, 1995.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Pemba",
+    "name_original_lang": "swa",
+    "entity_type": "city-state",
+    "year_start": 900,
+    "year_end": 1822,
+    "capital_name": "Chwaka",
+    "capital_lat": -5.1167,
+    "capital_lon": 39.7833,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            40.3238,
+            -5.1167
+          ],
+          [
+            40.2514,
+            -4.8464
+          ],
+          [
+            40.0536,
+            -4.6486
+          ],
+          [
+            39.7833,
+            -4.5762
+          ],
+          [
+            39.513,
+            -4.6486
+          ],
+          [
+            39.3152,
+            -4.8464
+          ],
+          [
+            39.2428,
+            -5.1167
+          ],
+          [
+            39.3152,
+            -5.387
+          ],
+          [
+            39.513,
+            -5.5848
+          ],
+          [
+            39.7833,
+            -5.6572
+          ],
+          [
+            40.0536,
+            -5.5848
+          ],
+          [
+            40.2514,
+            -5.387
+          ],
+          [
+            40.3238,
+            -5.1167
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Pemba was an archipelago of Swahili polities (Chwaka, Mkumbuu, Pujini, Ras Mkumbuu) that flourished from the 10th century, evidenced by Mkumbuu's coral-stone mosque of c. 1100. After Omani-Zanzibari takeover (definitively from c. 1822) Pemba became the centre of the East African clove plantation economy, worked overwhelmingly by enslaved Africans imported through the Zanzibar slave market - by the 1860s a majority of Pemba's population was enslaved (Cooper). British abolition pressure ended the legal slave trade in 1873 but plantation slavery persisted into the 1900s. Sources: Arabic chroniclers, archaeology (Horton, LaViolette), and Omani and British archival records. The polygon covers Pemba island and a coastal margin.",
+    "name_variants": [
+      {
+        "name": "Pemba",
+        "lang": "swa",
+        "context": "Swahili autonym"
+      },
+      {
+        "name": "al-Khadra",
+        "lang": "ar",
+        "context": "Arabic, 'the green island'"
+      },
+      {
+        "name": "Ilha Verde",
+        "lang": "pt",
+        "context": "Portuguese, 'green island'"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1503,
+        "region": "Pemba",
+        "change_type": "tribute",
+        "description": "Portuguese impose tribute on Pemba's town rulers as part of their Swahili coast extraction system.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1698,
+        "region": "Pemba",
+        "change_type": "conquest",
+        "description": "Pemba shifts from Portuguese to Omani influence following the fall of Fort Jesus.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1822,
+        "region": "Pemba",
+        "change_type": "absorption",
+        "description": "Pemba is fully integrated into the Omani-Zanzibari realm; clove plantation economy expands using enslaved labour from the East African mainland.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1890,
+        "region": "Pemba",
+        "change_type": "colonization",
+        "description": "British protectorate over Zanzibar (and Pemba) declared; British administration replaces sultan's autonomy in many domains.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "LaViolette, Adria, and Jeffrey B. Fleisher. 'The Urban History of a Rural Place: Swahili Archaeology on Pemba Island, Tanzania, 700-1500.' International Journal of African Historical Studies 42, no. 3 (2009): 433-455.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Cooper, Frederick. Plantation Slavery on the East Coast of Africa. Yale University Press, 1977.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Sofala",
+    "name_original_lang": "swa",
+    "entity_type": "city-state",
+    "year_start": 950,
+    "year_end": 1898,
+    "capital_name": "Sofala",
+    "capital_lat": -20.1667,
+    "capital_lon": 34.7333,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            35.7243,
+            -20.1667
+          ],
+          [
+            35.5915,
+            -19.6712
+          ],
+          [
+            35.2288,
+            -19.3085
+          ],
+          [
+            34.7333,
+            -19.1757
+          ],
+          [
+            34.2378,
+            -19.3085
+          ],
+          [
+            33.8751,
+            -19.6712
+          ],
+          [
+            33.7423,
+            -20.1667
+          ],
+          [
+            33.8751,
+            -20.6622
+          ],
+          [
+            34.2378,
+            -21.0249
+          ],
+          [
+            34.7333,
+            -21.1577
+          ],
+          [
+            35.2288,
+            -21.0249
+          ],
+          [
+            35.5915,
+            -20.6622
+          ],
+          [
+            35.7243,
+            -20.1667
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "ethical_notes": "Sofala was the southernmost major Swahili port and the principal outlet for gold mined in the Mutapa hinterland. Knowledge derives from Arabic geographers (al-Mas'udi, al-Idrisi), the Kilwa chronicle, Portuguese accounts after 1505, and archaeology. Sofala's economy participated in the Indian Ocean trade in ivory, gold, and enslaved people, though its slaving role remained smaller than Kilwa's. Portugal seized the town in 1505 and built a fort, choking trade and fostering decline; the site was effectively engulfed by silt and the Buzi River by the 19th century, and the Portuguese colonial administration of Mozambique formalised control of the region by 1898. The polygon is a coastal approximation; functional reach inland depended on Mutapa relations.",
+    "name_variants": [
+      {
+        "name": "Sofala",
+        "lang": "swa",
+        "context": "Swahili autonym"
+      },
+      {
+        "name": "Sufala",
+        "lang": "ar",
+        "context": "Arabic geographers"
+      },
+      {
+        "name": "Cefala",
+        "lang": "pt",
+        "context": "early Portuguese spelling"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1505,
+        "region": "southern Mozambique coast",
+        "change_type": "colonization",
+        "description": "Pero de Anaia builds Portuguese fort Sao Caetano at Sofala, monopolising the gold trade and undermining Swahili merchants.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1700,
+        "region": "Sofala",
+        "change_type": "decline",
+        "description": "Trade collapses as Portugal shifts to Mozambique Island and the Zambezi prazos; Sofala dwindles to a minor settlement.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1898,
+        "region": "central Mozambique",
+        "change_type": "colonization",
+        "description": "Portuguese colonial reorganisation makes Beira (north of old Sofala) capital of Mozambique; the surrounding territory is administered by the Companhia de Mocambique under Portuguese sovereignty.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Newitt, Malyn. A History of Mozambique. Indiana University Press, 1995.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Sinclair, Paul J.J. 'Chibuene - An Early Trading Site in Southern Mozambique.' Paideuma 28 (1982): 149-164.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Angoche",
+    "name_original_lang": "swa",
+    "entity_type": "sultanate",
+    "year_start": 1490,
+    "year_end": 1910,
+    "capital_name": "Angoche",
+    "capital_lat": -16.2333,
+    "capital_lon": 39.9,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            41.0712,
+            -16.2333
+          ],
+          [
+            40.9143,
+            -15.6477
+          ],
+          [
+            40.4856,
+            -15.219
+          ],
+          [
+            39.9,
+            -15.0621
+          ],
+          [
+            39.3144,
+            -15.219
+          ],
+          [
+            38.8857,
+            -15.6477
+          ],
+          [
+            38.7288,
+            -16.2333
+          ],
+          [
+            38.8857,
+            -16.8189
+          ],
+          [
+            39.3144,
+            -17.2476
+          ],
+          [
+            39.9,
+            -17.4045
+          ],
+          [
+            40.4856,
+            -17.2476
+          ],
+          [
+            40.9143,
+            -16.8189
+          ],
+          [
+            41.0712,
+            -16.2333
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Angoche was a Swahili sultanate founded by emigrants from Kilwa around 1490 on the northern Mozambican coast. It deliberately developed as a contraband alternative to Portuguese-controlled Sofala and Mozambique Island, channelling gold, ivory, and enslaved Africans inland from the Zambezi region into the Indian Ocean trade. Angoche's slaving role intensified in the 19th century supplying French Mascarenes and Brazilian buyers - historians (Capela, Newitt) document the sultanate's central role in the East African slave trade. Portuguese campaigns of 1860-1861 broke Angoche's autonomy, and the final 'pacification' war ended in 1910 under Joao de Azevedo Coutinho. Sources include Portuguese military and administrative records, Swahili oral tradition, and Arabic-script local chronicles. The polygon is approximate.",
+    "name_variants": [
+      {
+        "name": "Angoche",
+        "lang": "swa",
+        "context": "Swahili/local autonym"
+      },
+      {
+        "name": "Angoxa",
+        "lang": "pt",
+        "context": "Portuguese 16th-century spelling"
+      },
+      {
+        "name": "Antonges",
+        "lang": "pt",
+        "context": "alternative Portuguese form"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1490,
+        "region": "northern Mozambique coast",
+        "change_type": "foundation",
+        "description": "Migrants from Kilwa establish Angoche, swiftly becoming a contraband hub for the inland gold and ivory trade of the lower Zambezi.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1861,
+        "region": "Angoche coast",
+        "change_type": "conquest",
+        "description": "Portuguese forces under Vasco Guedes de Carvalho e Meneses occupy Angoche town, beginning systematic dismantling of the sultanate.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1910,
+        "region": "northern Mozambique",
+        "change_type": "colonization",
+        "description": "Final 'pacification' campaign of Joao de Azevedo Coutinho ends Angoche resistance; the territory is formally absorbed into Portuguese Mozambique.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Capela, Jose. O Trafico de Escravos nos Portos de Mocambique, 1733-1904. Edicoes Afrontamento, 2002.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Newitt, Malyn. 'Angoche, the Slave Trade and the Portuguese, c.1844-1910.' Journal of African History 13, no. 4 (1972): 659-672.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Torwa",
+    "name_original_lang": "sna",
+    "entity_type": "kingdom",
+    "year_start": 1450,
+    "year_end": 1683,
+    "capital_name": "Khami",
+    "capital_lat": -20.1556,
+    "capital_lon": 28.4147,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            30.9372,
+            -20.1556
+          ],
+          [
+            30.5993,
+            -18.8943
+          ],
+          [
+            29.676,
+            -17.971
+          ],
+          [
+            28.4147,
+            -17.6331
+          ],
+          [
+            27.1534,
+            -17.971
+          ],
+          [
+            26.2301,
+            -18.8943
+          ],
+          [
+            25.8922,
+            -20.1556
+          ],
+          [
+            26.2301,
+            -21.4169
+          ],
+          [
+            27.1534,
+            -22.3402
+          ],
+          [
+            28.4147,
+            -22.6781
+          ],
+          [
+            29.676,
+            -22.3402
+          ],
+          [
+            30.5993,
+            -21.4169
+          ],
+          [
+            30.9372,
+            -20.1556
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Torwa (or Butua) was a Shona-speaking successor kingdom to Great Zimbabwe centred on Khami in modern southwestern Zimbabwe. Knowledge comes mainly from archaeology (Khami's drystone walls), oral traditions of the Kalanga and Karanga, and Portuguese reports recorded by missionaries (Antonio Gomes, 17th c.) and chroniclers (Joao dos Santos). The kingdom was overthrown around 1683 by the Rozvi mambo Changamire Dombo, who had earlier expelled the Portuguese from the highveld; Torwa survivors merged into the new Rozvi confederation. The polygon is a generous archaeological estimate of Khami's tribute area. Atlantic-style chattel slavery did not characterise Torwa, but Portuguese prazo violence and slave raids penetrated the wider region.",
+    "name_variants": [
+      {
+        "name": "Torwa",
+        "lang": "sna",
+        "context": "Shona dynastic name"
+      },
+      {
+        "name": "Butua",
+        "lang": "sna",
+        "context": "Karanga/Kalanga regional name"
+      },
+      {
+        "name": "Butwa",
+        "lang": "pt",
+        "context": "Portuguese chronicle spelling"
+      },
+      {
+        "name": "Khami Kingdom",
+        "lang": "en",
+        "context": "archaeological designation"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1450,
+        "region": "southwestern Zimbabwe plateau",
+        "change_type": "foundation",
+        "description": "Khami emerges as the centre of the Torwa polity following the decline of Great Zimbabwe; massive terraced stone architecture built over the next two centuries.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1644,
+        "region": "Butua",
+        "change_type": "civil_conflict",
+        "description": "Portuguese-supported faction intervenes in a Torwa succession dispute, briefly extending Portuguese influence into the southwestern plateau.",
+        "population_affected": null,
+        "confidence_score": 0.45
+      },
+      {
+        "year": 1683,
+        "region": "Butua",
+        "change_type": "conquest",
+        "description": "Changamire Dombo's Rozvi forces overthrow Torwa rule; Khami is abandoned as the capital and the new Rozvi state takes power.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Beach, David N. The Shona and Zimbabwe 900-1850: An Outline of Shona History. Mambo Press, 1980.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Pikirayi, Innocent. The Zimbabwe Culture: Origins and Decline of Southern Zambezian States. AltaMira Press, 2001.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Rozvi",
+    "name_original_lang": "sna",
+    "entity_type": "empire",
+    "year_start": 1684,
+    "year_end": 1866,
+    "capital_name": "Danamombe",
+    "capital_lat": -20.4833,
+    "capital_lon": 29.5333,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            32.9567,
+            -20.4833
+          ],
+          [
+            32.4981,
+            -18.7716
+          ],
+          [
+            31.245,
+            -17.5185
+          ],
+          [
+            29.5333,
+            -17.0599
+          ],
+          [
+            27.8216,
+            -17.5185
+          ],
+          [
+            26.5685,
+            -18.7716
+          ],
+          [
+            26.1099,
+            -20.4833
+          ],
+          [
+            26.5685,
+            -22.195
+          ],
+          [
+            27.8216,
+            -23.4481
+          ],
+          [
+            29.5333,
+            -23.9067
+          ],
+          [
+            31.245,
+            -23.4481
+          ],
+          [
+            32.4981,
+            -22.195
+          ],
+          [
+            32.9567,
+            -20.4833
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "ethical_notes": "Rozvi (officially Wurozwi or Mambo state) was the dominant Shona polity on the Zimbabwean plateau from the late 17th century, founded by Changamire Dombo who decisively expelled the Portuguese in 1693. Its rulers held the title Mambo and built or refurbished drystone capitals (Danamombe, Manyanga, Naletale). Sources: oral traditions of Karanga lineages, Portuguese chronicles, and archaeology. Rozvi did engage in tribute-extraction and captive-taking but did not run a major Atlantic-facing slave trade; nonetheless its territory was raided by Portuguese prazeros for slaves. The kingdom was shattered by Nguni invasions during the Mfecane (1830s) and finally absorbed into Mzilikazi's Ndebele state and later British South Africa Company territory after 1893. The polygon approximates plateau tributary reach.",
+    "name_variants": [
+      {
+        "name": "Wurozwi",
+        "lang": "sna",
+        "context": "Shona/Karanga form"
+      },
+      {
+        "name": "Rozwi",
+        "lang": "en",
+        "context": "common English spelling"
+      },
+      {
+        "name": "Mambo Empire",
+        "lang": "en",
+        "context": "by ruler title"
+      },
+      {
+        "name": "Changamire",
+        "lang": "pt",
+        "context": "Portuguese sources, by dynastic title"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1693,
+        "region": "Mutapa frontier",
+        "change_type": "victory",
+        "description": "Changamire Dombo defeats Portuguese forces at Maungwe and burns the feira of Dambarare, expelling Portuguese settlers from the highveld.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1836,
+        "region": "southwestern plateau",
+        "change_type": "invasion",
+        "description": "Nguni groups (Ngoni, later Ndebele under Mzilikazi) sweep across Rozvi territory during the Mfecane, killing the last Mambo and shattering centralised Rozvi authority.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 1893,
+        "region": "Matabeleland",
+        "change_type": "colonization",
+        "description": "British South Africa Company forces defeat the Ndebele successor state in the First Matabele War; the former Rozvi heartland becomes part of Rhodesia.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Mudenge, S. I. G. A Political History of Munhumutapa c.1400-1902. Zimbabwe Publishing House, 1988.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Beach, David N. The Shona and Zimbabwe 900-1850: An Outline of Shona History. Mambo Press, 1980.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Damot",
+    "name_original_lang": "amh",
+    "entity_type": "kingdom",
+    "year_start": 1100,
+    "year_end": 1316,
+    "capital_name": "Damot",
+    "capital_lat": 9.85,
+    "capital_lon": 37.7,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            39.682,
+            9.85
+          ],
+          [
+            39.4164,
+            10.841
+          ],
+          [
+            38.691,
+            11.5664
+          ],
+          [
+            37.7,
+            11.832
+          ],
+          [
+            36.709,
+            11.5664
+          ],
+          [
+            35.9836,
+            10.841
+          ],
+          [
+            35.718,
+            9.85
+          ],
+          [
+            35.9836,
+            8.859
+          ],
+          [
+            36.709,
+            8.1336
+          ],
+          [
+            37.7,
+            7.868
+          ],
+          [
+            38.691,
+            8.1336
+          ],
+          [
+            39.4164,
+            8.859
+          ],
+          [
+            39.682,
+            9.85
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.35,
+    "status": "uncertain",
+    "ethical_notes": "Damot was a powerful non-Christian kingdom south of the Abay (Blue Nile) in what is now west-central Ethiopia, ruled in the 13th century by king Motalami. It is referenced in Ge'ez royal chronicles of the Solomonic dynasty (notably the chronicle of Amde Tsion) and in Arabic accounts; modern reconstructions rely heavily on Tadesse Tamrat. Damot was absorbed by the Solomonic emperor Amde Tsion around 1316-1317; surviving Damot populations migrated south, possibly contributing to the formation of later Wolayta and other Omotic polities. The polygon is a rough estimate of pre-conquest extent; precise boundaries are uncertain. Damot did not participate in the Atlantic slave trade, but Ethiopian highland-lowland slave raiding was a long-running practice.",
+    "name_variants": [
+      {
+        "name": "Damot",
+        "lang": "amh",
+        "context": "Amharic / Ge'ez form"
+      },
+      {
+        "name": "Damut",
+        "lang": "ar",
+        "context": "Arabic chronicles"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1316,
+        "region": "south of Abay river",
+        "change_type": "conquest",
+        "description": "Solomonic emperor Amde Tsion conquers Damot under king Motalami, forcibly Christianising elements of the population and incorporating the territory into the expanding Christian highland empire.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1500,
+        "region": "former Damot territory",
+        "change_type": "migration",
+        "description": "Following Oromo expansion northward, surviving Damot populations relocate further south; the Damot label persists as a regional designation rather than a polity.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Tamrat, Taddesse. Church and State in Ethiopia 1270-1527. Oxford University Press, 1972.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Pankhurst, Richard. The Ethiopian Borderlands: Essays in Regional History from Ancient Times to the End of the 18th Century. Red Sea Press, 1997.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Shewa",
+    "name_original_lang": "amh",
+    "entity_type": "kingdom",
+    "year_start": 1270,
+    "year_end": 1889,
+    "capital_name": "Ankober",
+    "capital_lat": 9.5833,
+    "capital_lon": 39.7333,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            42.3459,
+            9.5833
+          ],
+          [
+            41.9959,
+            10.8896
+          ],
+          [
+            41.0396,
+            11.8459
+          ],
+          [
+            39.7333,
+            12.1959
+          ],
+          [
+            38.427,
+            11.8459
+          ],
+          [
+            37.4707,
+            10.8896
+          ],
+          [
+            37.1207,
+            9.5833
+          ],
+          [
+            37.4707,
+            8.277
+          ],
+          [
+            38.427,
+            7.3207
+          ],
+          [
+            39.7333,
+            6.9707
+          ],
+          [
+            41.0396,
+            7.3207
+          ],
+          [
+            41.9959,
+            8.277
+          ],
+          [
+            42.3459,
+            9.5833
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "ethical_notes": "Shewa (pre-imperial Amhara polity) was the cradle of the restored Solomonic dynasty after 1270 and again, after centuries of intermittent autonomy and the disruptions of the 16th-century jihad of Ahmad Gragn and the 18th-century Zemene Mesafint, the base from which Sahle Selassie (r. 1813-47) and Menelik II (negus from 1865) reunified Ethiopia. Sources include Ge'ez royal chronicles, the Futuh al-Habasha by Arab Faqih, European missionary accounts (Krapf, Harris), and Amharic oral tradition. Shewan armies engaged in slave raiding against southern peoples (Oromo, Sidama, Wolayta) - slavery and slave-trading remained legal in Ethiopia until 1942. With Menelik's coronation as negusa nagast in 1889 Shewa fused into the modern Ethiopian Empire. The polygon approximates the kingdom around 1880.",
+    "name_variants": [
+      {
+        "name": "Shewa",
+        "lang": "amh",
+        "context": "Amharic"
+      },
+      {
+        "name": "Shoa",
+        "lang": "en",
+        "context": "19th-century English usage"
+      },
+      {
+        "name": "Choa",
+        "lang": "fr",
+        "context": "French missionary spelling"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1530,
+        "region": "Shewan plateau",
+        "change_type": "invasion",
+        "description": "Imam Ahmad ibn Ibrahim al-Ghazi (Gragn) of Adal devastates Shewa during the Ethiopian-Adal war, burning churches and forcibly converting populations.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1813,
+        "region": "Shewa",
+        "change_type": "consolidation",
+        "description": "Sahle Selassie consolidates an autonomous Shewan kingdom under Solomonic legitimacy during the Zemene Mesafint, expanding south against Oromo polities.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1889,
+        "region": "Ethiopian highlands",
+        "change_type": "unification",
+        "description": "Menelik II of Shewa is crowned negusa nagast, formally merging Shewa into the Ethiopian Empire and launching expansion into the south.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1896,
+        "region": "Tigray, Ethiopia",
+        "change_type": "defensive_victory",
+        "description": "Battle of Adwa: Menelik's forces defeat invading Italian colonial army, preserving Ethiopian sovereignty.",
+        "population_affected": null,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Marcus, Harold G. The Life and Times of Menelik II: Ethiopia 1844-1913. Clarendon Press, 1975.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Crummey, Donald. Land and Society in the Christian Kingdom of Ethiopia: From the Thirteenth to the Twentieth Century. University of Illinois Press, 2000.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Jimma",
+    "name_original_lang": "oro",
+    "entity_type": "kingdom",
+    "year_start": 1830,
+    "year_end": 1932,
+    "capital_name": "Jiren",
+    "capital_lat": 7.6667,
+    "capital_lon": 36.8333,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            38.4549,
+            7.6667
+          ],
+          [
+            38.2377,
+            8.4775
+          ],
+          [
+            37.6441,
+            9.0711
+          ],
+          [
+            36.8333,
+            9.2883
+          ],
+          [
+            36.0225,
+            9.0711
+          ],
+          [
+            35.4289,
+            8.4775
+          ],
+          [
+            35.2117,
+            7.6667
+          ],
+          [
+            35.4289,
+            6.8559
+          ],
+          [
+            36.0225,
+            6.2623
+          ],
+          [
+            36.8333,
+            6.0451
+          ],
+          [
+            37.6441,
+            6.2623
+          ],
+          [
+            38.2377,
+            6.8559
+          ],
+          [
+            38.4549,
+            7.6667
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "ethical_notes": "Jimma (or Jimma Abba Jifar) was one of five Gibe Oromo kingdoms (Jimma, Limmu-Ennarea, Gera, Gomma, Gumma) that emerged in the early 19th century as Islamic monarchies replacing the older gadaa republican system. Coffee, gold and slaves were Jimma's principal exports - the kingdom was a major node in the southwestern Ethiopian slave trade supplying captives via Gondar to Sudan and Arabia. Sources: Mohammed Hassen, Lewis, oral traditions collected from Jimma Oromo elders, plus European travellers (Cecchi, Borelli). Jimma submitted peacefully to Menelik II in 1884 and retained internal autonomy until Haile Selassie abolished the kingdom in 1932. The polygon approximates extent under Sultan Abba Jifar II.",
+    "name_variants": [
+      {
+        "name": "Jimma",
+        "lang": "oro",
+        "context": "Oromo autonym"
+      },
+      {
+        "name": "Jimma Abba Jifar",
+        "lang": "oro",
+        "context": "by founding ruler"
+      },
+      {
+        "name": "Djimma",
+        "lang": "fr",
+        "context": "French explorers"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1830,
+        "region": "Gibe river basin",
+        "change_type": "foundation",
+        "description": "Sanna Abba Jifar establishes the centralised Islamic kingdom of Jimma, displacing the earlier gadaa system among the Macha Oromo.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1884,
+        "region": "Jimma",
+        "change_type": "vassalage",
+        "description": "Sultan Abba Jifar II accepts vassalage to Menelik II of Shewa in exchange for internal autonomy, sparing the kingdom direct conquest.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1932,
+        "region": "Jimma",
+        "change_type": "absorption",
+        "description": "Emperor Haile Selassie abolishes the autonomous sultanate after the death of Abba Jifar II and integrates Jimma into the centralised Ethiopian state administration.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1936,
+        "region": "Jimma",
+        "change_type": "occupation",
+        "description": "Italian forces occupy southwestern Ethiopia during the Italo-Ethiopian War; Jimma comes under Italian East Africa administration until 1941.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hassen, Mohammed. The Oromo of Ethiopia: A History 1570-1860. Cambridge University Press, 1990.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Lewis, Herbert S. A Galla Monarchy: Jimma Abba Jifar, Ethiopia, 1830-1932. University of Wisconsin Press, 1965.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Sidaama",
+    "name_original_lang": "sid",
+    "entity_type": "confederation",
+    "year_start": 1500,
+    "year_end": 1893,
+    "capital_name": "Hawassa region",
+    "capital_lat": 7.05,
+    "capital_lon": 38.4667,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            40.2685,
+            7.05
+          ],
+          [
+            40.0271,
+            7.9509
+          ],
+          [
+            39.3676,
+            8.6104
+          ],
+          [
+            38.4667,
+            8.8518
+          ],
+          [
+            37.5658,
+            8.6104
+          ],
+          [
+            36.9063,
+            7.9509
+          ],
+          [
+            36.6649,
+            7.05
+          ],
+          [
+            36.9063,
+            6.1491
+          ],
+          [
+            37.5658,
+            5.4896
+          ],
+          [
+            38.4667,
+            5.2482
+          ],
+          [
+            39.3676,
+            5.4896
+          ],
+          [
+            40.0271,
+            6.1491
+          ],
+          [
+            40.2685,
+            7.05
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.35,
+    "status": "uncertain",
+    "ethical_notes": "Sidaama refers to a cluster of Cushitic-speaking polities of southern Ethiopia organised around the gadaa-influenced mote (king) and lineage-based councils, including the Aleta, Hadicho, Holo, Garbicho, and Yanase clans. Pre-conquest political organisation is reconstructed from Hudson, Hamer, and Sidama oral traditions, with limited written record before Menelik's conquest. Sidama populations suffered massive demographic collapse during Menelik II's southern campaigns of 1891-1893 - Donald Donham, Charles McClellan and Bahru Zewde document widespread killings, slave-taking, and the imposition of the gabbar system that turned much of the population into tribute-paying serfs of northern settlers (neftegna). The polygon approximates the Sidama heartland on the eastern shore of Lake Hawassa.",
+    "name_variants": [
+      {
+        "name": "Sidaama",
+        "lang": "sid",
+        "context": "Sidaama autonym"
+      },
+      {
+        "name": "Sidamo",
+        "lang": "it",
+        "context": "Italian colonial usage"
+      },
+      {
+        "name": "Sidama",
+        "lang": "en",
+        "context": "common English"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1700,
+        "region": "southern Ethiopia",
+        "change_type": "migration",
+        "description": "Sidama clans consolidate territories on the eastern Rift around Lake Hawassa amid Oromo expansion, organising under mote rulers and clan councils.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1893,
+        "region": "Sidama country",
+        "change_type": "conquest",
+        "description": "Menelik II's armies under Ras Lul Seged subjugate Sidama after fierce resistance, killing or enslaving large numbers and imposing the gabbar tribute-labour system.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1936,
+        "region": "Sidama",
+        "change_type": "occupation",
+        "description": "Italian forces occupy southern Ethiopia during the Italo-Ethiopian War, briefly restructuring administration of the Sidama region.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hamer, John H. Humane Development: Participation and Change among the Sadama of Ethiopia. University of Alabama Press, 1987.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "McClellan, Charles W. State Transformation and National Integration: Gedeo and the Ethiopian Empire, 1895-1935. African Studies Center, Michigan State University, 1988.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Gurage",
+    "name_original_lang": "amh",
+    "entity_type": "tribal_nation",
+    "year_start": 1300,
+    "year_end": 1889,
+    "capital_name": "Cheha highlands",
+    "capital_lat": 8.1667,
+    "capital_lon": 38.0,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            39.1712,
+            8.1667
+          ],
+          [
+            39.0143,
+            8.7523
+          ],
+          [
+            38.5856,
+            9.181
+          ],
+          [
+            38.0,
+            9.3379
+          ],
+          [
+            37.4144,
+            9.181
+          ],
+          [
+            36.9857,
+            8.7523
+          ],
+          [
+            36.8288,
+            8.1667
+          ],
+          [
+            36.9857,
+            7.5811
+          ],
+          [
+            37.4144,
+            7.1524
+          ],
+          [
+            38.0,
+            6.9955
+          ],
+          [
+            38.5856,
+            7.1524
+          ],
+          [
+            39.0143,
+            7.5811
+          ],
+          [
+            39.1712,
+            8.1667
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.35,
+    "status": "uncertain",
+    "ethical_notes": "Gurage refers to a Semitic-speaking cluster of segmentary polities (Sebat Bet, Kistane, Silt'e, Mesqan, Dobi) in the southwest Shewan highlands, governed traditionally by clan councils (yajoka) and ad hoc warleaders rather than a single kingdom. Some sub-groups were Christian, others Muslim, others followed the Bozha and Wak indigenous religions. Sources: Shack (1966), Worku Nida, Gurage oral tradition, and 19th-century traveller accounts. Gurage territory was conquered by Menelik II between 1875 and 1889 with substantial enslavement and imposition of the gabbar system; many Gurage subsequently migrated to Addis Ababa where they became a major commercial diaspora. The polygon covers the heartland between the Awash and Gibe rivers.",
+    "name_variants": [
+      {
+        "name": "Gurage",
+        "lang": "amh",
+        "context": "Amharic exonym used as ethnonym"
+      },
+      {
+        "name": "Gwerage",
+        "lang": "sgw",
+        "context": "Sebat Bet local form"
+      },
+      {
+        "name": "Gurague",
+        "lang": "fr",
+        "context": "French sources"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1531,
+        "region": "Gurage highlands",
+        "change_type": "invasion",
+        "description": "Imam Ahmad Gragn's forces sweep through Gurage territory during the Ethiopian-Adal war, accelerating the spread of Islam among some Gurage groups.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1889,
+        "region": "Gurage country",
+        "change_type": "conquest",
+        "description": "Menelik II completes the conquest of the Gurage region; northern settlers (neftegna) are awarded gabbar tributaries and Gurage commoners become subject to forced labour.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1936,
+        "region": "Gurage",
+        "change_type": "occupation",
+        "description": "Italian East Africa administration controls the Gurage region until 1941.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Shack, William A. The Gurage: A People of the Ensete Culture. Oxford University Press, 1966.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Worku Nida. 'Gurage Studies: Collected Articles.' Aethiopistische Forschungen series. Harrassowitz, 2014.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Soyo",
+    "name_original_lang": "kon",
+    "entity_type": "kingdom",
+    "year_start": 1500,
+    "year_end": 1859,
+    "capital_name": "Mbanza Soyo",
+    "capital_lat": -6.1333,
+    "capital_lon": 12.3667,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            13.8081,
+            -6.1333
+          ],
+          [
+            13.615,
+            -5.4126
+          ],
+          [
+            13.0874,
+            -4.885
+          ],
+          [
+            12.3667,
+            -4.6919
+          ],
+          [
+            11.646,
+            -4.885
+          ],
+          [
+            11.1184,
+            -5.4126
+          ],
+          [
+            10.9253,
+            -6.1333
+          ],
+          [
+            11.1184,
+            -6.854
+          ],
+          [
+            11.646,
+            -7.3816
+          ],
+          [
+            12.3667,
+            -7.5747
+          ],
+          [
+            13.0874,
+            -7.3816
+          ],
+          [
+            13.615,
+            -6.854
+          ],
+          [
+            13.8081,
+            -6.1333
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "ethical_notes": "Soyo (or Sonyo) was originally a coastal province of the Kingdom of Kongo, becoming a de facto independent principality from the mid-17th century. Soyo was deeply implicated in the Atlantic slave trade - its port of Mpinda on the Zaire/Congo estuary was one of the principal embarkation points for enslaved Central Africans transported to Brazil and the Caribbean from the late 16th to 19th centuries. The Mwene Soyo's forces participated in the battle that killed king Antonio I of Kongo at Mbwila (1665) but soon rebuffed Portuguese ambitions in 1670 at Kitombo. Documentation is exceptionally rich thanks to Capuchin missionary records (Cavazzi, Cuvelier-Jadin) and Portuguese archives. Portuguese forces formally absorbed Soyo into the colony of Angola in 1859 after the count's last attempt at autonomy. The polygon approximates 17th-century extent.",
+    "name_variants": [
+      {
+        "name": "Soyo",
+        "lang": "kon",
+        "context": "Kikongo autonym"
+      },
+      {
+        "name": "Sonyo",
+        "lang": "kon",
+        "context": "older Kikongo form"
+      },
+      {
+        "name": "Sogno",
+        "lang": "it",
+        "context": "Italian Capuchin sources"
+      },
+      {
+        "name": "Sonho",
+        "lang": "pt",
+        "context": "Portuguese spelling"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1665,
+        "region": "central Kongo",
+        "change_type": "victory",
+        "description": "Soyo forces participate in the battle of Mbwila that kills king Antonio I of Kongo, accelerating Soyo's de facto independence.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1670,
+        "region": "Soyo coast",
+        "change_type": "defensive_victory",
+        "description": "Battle of Kitombo: Mwene Soyo's forces, including African musketeers, defeat the Portuguese expedition of Captain Joao Soares de Almeida, halting Portuguese expansion north of the Dande for two centuries.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1859,
+        "region": "Soyo",
+        "change_type": "colonization",
+        "description": "Portugal forcibly annexes Soyo into the colony of Angola after a final military expedition; the count's authority is dissolved.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Thornton, John. Africa and Africans in the Making of the Atlantic World, 1400-1800. Cambridge University Press, 1998.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Thornton, John. 'The Kingdom of Kongo and the Counter-Reformation.' Social Sciences and Missions 26, no. 1 (2013): 40-58.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Ngoyo",
+    "name_original_lang": "kon",
+    "entity_type": "kingdom",
+    "year_start": 1600,
+    "year_end": 1885,
+    "capital_name": "Mbanza Ngoyo",
+    "capital_lat": -4.8,
+    "capital_lon": 12.0,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            12.991,
+            -4.8
+          ],
+          [
+            12.8582,
+            -4.3045
+          ],
+          [
+            12.4955,
+            -3.9418
+          ],
+          [
+            12.0,
+            -3.809
+          ],
+          [
+            11.5045,
+            -3.9418
+          ],
+          [
+            11.1418,
+            -4.3045
+          ],
+          [
+            11.009,
+            -4.8
+          ],
+          [
+            11.1418,
+            -5.2955
+          ],
+          [
+            11.5045,
+            -5.6582
+          ],
+          [
+            12.0,
+            -5.791
+          ],
+          [
+            12.4955,
+            -5.6582
+          ],
+          [
+            12.8582,
+            -5.2955
+          ],
+          [
+            12.991,
+            -4.8
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "ethical_notes": "Ngoyo was a small Kongo-related kingdom on the right bank of the Zaire/Congo estuary (Cabinda enclave today), formed by separation from the Kingdom of Kakongo in the 17th century. Its port of Cabinda was one of the busiest slave-trade embarkation points in West Central Africa, supplying captives to Brazilian and Cuban traders especially in the 18th-19th centuries - historians (Martin, Birmingham) document slaving as the kingdom's primary fiscal foundation. Knowledge derives from Portuguese, French, English and Dutch trade records, missionary accounts, and Vili-Yombe oral tradition. Portugal asserted sovereignty over Ngoyo via the Treaty of Simulambuco (1885), and Cabinda was incorporated into Portuguese Congo. The polygon covers the Cabinda enclave and adjoining coast.",
+    "name_variants": [
+      {
+        "name": "Ngoyo",
+        "lang": "kon",
+        "context": "Kikongo autonym"
+      },
+      {
+        "name": "Goy",
+        "lang": "pt",
+        "context": "Portuguese 17th-century"
+      },
+      {
+        "name": "Cabinda",
+        "lang": "pt",
+        "context": "port name used as colonial designation"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1700,
+        "region": "north of Zaire estuary",
+        "change_type": "expansion",
+        "description": "Ngoyo's port of Cabinda becomes one of the principal Atlantic slave-trade embarkation points, surpassing Loango by the 18th century.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1783,
+        "region": "Cabinda",
+        "change_type": "foreign_intervention",
+        "description": "Portuguese force builds a fort at Cabinda; a French naval expedition expels the Portuguese the following year, returning the port to Ngoyo authority and open trade.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1885,
+        "region": "Cabinda enclave",
+        "change_type": "colonization",
+        "description": "Treaty of Simulambuco places Ngoyo under Portuguese protection; the kingdom is effectively absorbed into Portuguese colonial Cabinda.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Martin, Phyllis M. The External Trade of the Loango Coast 1576-1870. Clarendon Press, 1972.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Vansina, Jan. Paths in the Rainforests: Toward a History of Political Tradition in Equatorial Africa. University of Wisconsin Press, 1990.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Bushoong",
+    "name_original_lang": "lua",
+    "entity_type": "kingdom",
+    "year_start": 1625,
+    "year_end": 1900,
+    "capital_name": "Nsheng",
+    "capital_lat": -4.5833,
+    "capital_lon": 21.6,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            23.4018,
+            -4.5833
+          ],
+          [
+            23.1604,
+            -3.6824
+          ],
+          [
+            22.5009,
+            -3.0229
+          ],
+          [
+            21.6,
+            -2.7815
+          ],
+          [
+            20.6991,
+            -3.0229
+          ],
+          [
+            20.0396,
+            -3.6824
+          ],
+          [
+            19.7982,
+            -4.5833
+          ],
+          [
+            20.0396,
+            -5.4842
+          ],
+          [
+            20.6991,
+            -6.1437
+          ],
+          [
+            21.6,
+            -6.3851
+          ],
+          [
+            22.5009,
+            -6.1437
+          ],
+          [
+            23.1604,
+            -5.4842
+          ],
+          [
+            23.4018,
+            -4.5833
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "ethical_notes": "Bushoong (Kuba Kingdom) was a federation of about eighteen Bantu chiefdoms in the Kasai region of Central Africa, dominated by the Bushoong, whose nyim (king) ruled from Nsheng. Reorganised under Shyaam aMbul aNgoong c. 1625, the kingdom developed elaborate court arts, a complex tax system, and a council-based political structure. Sources: Jan Vansina's pioneering oral-historical work (1978), Emil Torday's 1907-09 ethnography for the British Museum, and Kuba royal histories transmitted by official memorisers. Kuba largely escaped the worst of the Atlantic slave trade because of inland location, but was raided heavily by the Cokwe (Chokwe) in the 1880s and incorporated into the Belgian Congo Free State after 1900, where rubber-collection violence and forced labour by Leopold II's regime devastated the population.",
+    "name_variants": [
+      {
+        "name": "Bushoong",
+        "lang": "lua",
+        "context": "dominant clan and royal autonym"
+      },
+      {
+        "name": "Kuba",
+        "lang": "lua",
+        "context": "federation name in Lulua/Luba"
+      },
+      {
+        "name": "Bakuba",
+        "lang": "lua",
+        "context": "Bantu plural form"
+      },
+      {
+        "name": "Royaume Kuba",
+        "lang": "fr",
+        "context": "Belgian colonial usage"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1625,
+        "region": "Kasai-Sankuru basin",
+        "change_type": "unification",
+        "description": "Shyaam aMbul aNgoong unifies Bushoong-led federation, establishing centralised royal court at Nsheng with formal officials and tax system.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1885,
+        "region": "Kasai region",
+        "change_type": "raid",
+        "description": "Cokwe (Chokwe) raiders, armed with European firearms via Angola, pillage Kuba villages capturing slaves and ivory.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1900,
+        "region": "Kasai",
+        "change_type": "colonization",
+        "description": "Belgian Congo Free State imposes administrative control over Kuba; rubber requisitions and forced labour follow, with documented atrocities under Leopold II's regime.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Vansina, Jan. The Children of Woot: A History of the Kuba Peoples. University of Wisconsin Press, 1978.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Vansina, Jan. Paths in the Rainforests: Toward a History of Political Tradition in Equatorial Africa. University of Wisconsin Press, 1990.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Kel Ahaggar",
+    "name_original_lang": "tmh",
+    "entity_type": "confederation",
+    "year_start": 1750,
+    "year_end": 1903,
+    "capital_name": "Abalessa",
+    "capital_lat": 22.85,
+    "capital_lon": 4.83,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            10.2354,
+            22.85
+          ],
+          [
+            9.5112,
+            25.5527
+          ],
+          [
+            7.5327,
+            27.5312
+          ],
+          [
+            4.83,
+            28.2554
+          ],
+          [
+            2.1273,
+            27.5312
+          ],
+          [
+            0.1488,
+            25.5527
+          ],
+          [
+            -0.5754,
+            22.85
+          ],
+          [
+            0.1488,
+            20.1473
+          ],
+          [
+            2.1273,
+            18.1688
+          ],
+          [
+            4.83,
+            17.4446
+          ],
+          [
+            7.5327,
+            18.1688
+          ],
+          [
+            9.5112,
+            20.1473
+          ],
+          [
+            10.2354,
+            22.85
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Kel Ahaggar was the Tuareg confederation of the Hoggar massif in the central Sahara, led by an amenokal of the Kel Rela noble drum group. The confederation organised trans-Saharan caravan trade between Air, the Niger bend, and the Mediterranean, and held stratified social classes including imghad (vassal Tuareg), inadan (smiths), and iklan (enslaved Black African captives) - Tuareg society was deeply structured by slavery, and the trans-Saharan slave trade involved the capture and trafficking of Black populations from the Sahel. Sources: Henri Lhote, Helene Claudot-Hawad, oral traditions of the Kel Rela, and French military records. The French defeated Kel Ahaggar at Tit (7 May 1902) and forced the amenokal Moussa ag Amastan to submit in 1903. The polygon covers the broad pastoralist range.",
+    "name_variants": [
+      {
+        "name": "Kel Ahaggar",
+        "lang": "tmh",
+        "context": "Tamasheq autonym, 'people of the Hoggar'"
+      },
+      {
+        "name": "Touaregs du Hoggar",
+        "lang": "fr",
+        "context": "French colonial administration"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1881,
+        "region": "central Sahara",
+        "change_type": "defensive_victory",
+        "description": "Kel Ahaggar warriors annihilate the French Flatters mission in the In-Azaoua region, halting French penetration of the Sahara for two decades.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1902,
+        "region": "Hoggar",
+        "change_type": "defeat",
+        "description": "Battle of Tit: French Mehariste cavalry defeats the Kel Ahaggar, killing many noble warriors and breaking Tuareg military supremacy in the central Sahara.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1903,
+        "region": "Hoggar",
+        "change_type": "colonization",
+        "description": "Amenokal Moussa ag Amastan accepts French protectorate; Kel Ahaggar becomes part of French Algerian Sahara, the trans-Saharan slave trade is legally suppressed, and pastoral economies are progressively destabilised.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Keenan, Jeremy. The Tuareg: People of Ahaggar. Allen Lane, 1977.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Claudot-Hawad, Helene. Touaregs: Apprivoiser le desert. Decouvertes Gallimard, 2002.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Kel Adagh",
+    "name_original_lang": "tmh",
+    "entity_type": "confederation",
+    "year_start": 1770,
+    "year_end": 1916,
+    "capital_name": "Kidal region",
+    "capital_lat": 18.4333,
+    "capital_lon": 1.4,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            5.4541,
+            18.4333
+          ],
+          [
+            4.9109,
+            20.4603
+          ],
+          [
+            3.427,
+            21.9442
+          ],
+          [
+            1.4,
+            22.4874
+          ],
+          [
+            -0.627,
+            21.9442
+          ],
+          [
+            -2.1109,
+            20.4603
+          ],
+          [
+            -2.6541,
+            18.4333
+          ],
+          [
+            -2.1109,
+            16.4063
+          ],
+          [
+            -0.627,
+            14.9224
+          ],
+          [
+            1.4,
+            14.3792
+          ],
+          [
+            3.427,
+            14.9224
+          ],
+          [
+            4.9109,
+            16.4063
+          ],
+          [
+            5.4541,
+            18.4333
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.35,
+    "status": "uncertain",
+    "ethical_notes": "Kel Adagh (or Kel Adrar) was the Tuareg confederation of the Adrar des Ifoghas in the eastern Sahel, with its centre in the Kidal massif of present-day northern Mali. The Ifoghas noble drum group led an alliance of vassal imghad and dependent communities, controlling caravan routes from Timbuktu and Gao toward Algeria. Tuareg society included slavery, with iklan (Black captive descendants) performing agricultural and household labour. Sources: Pierre Boilley, Aboubacar Adamou, and Tamasheq oral histories. The French conquered the region after the fall of the Songhai successor states; the major Tuareg revolt of 1916 (Kaocen revolt, with Kel Air) was suppressed by 1917 with severe French reprisals. The polygon approximates pastoralist range.",
+    "name_variants": [
+      {
+        "name": "Kel Adagh",
+        "lang": "tmh",
+        "context": "Tamasheq autonym, 'people of the Adrar'"
+      },
+      {
+        "name": "Kel Adrar",
+        "lang": "tmh",
+        "context": "alternative Tamasheq form"
+      },
+      {
+        "name": "Touaregs de l'Adrar",
+        "lang": "fr",
+        "context": "French colonial usage"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1894,
+        "region": "Niger bend",
+        "change_type": "colonization",
+        "description": "French forces occupy Timbuktu, beginning encroachment on Kel Adagh trade and territory.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1916,
+        "region": "Sahara-Sahel",
+        "change_type": "revolt",
+        "description": "Tuareg insurgency under Kaocen and allied confederations including Kel Adagh contests French authority across the central Sahara.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1917,
+        "region": "Adrar des Ifoghas",
+        "change_type": "repression",
+        "description": "French Saharan companies crush the Tuareg revolt with severe reprisals; Kel Adagh leadership is dispersed and the confederation incorporated into the Cercle de Kidal.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Boilley, Pierre. Les Touaregs Kel Adagh: Dependances et revoltes du Soudan francais au Mali contemporain. Karthala, 1999.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Lecocq, Baz. Disputed Desert: Decolonisation, Competing Nationalisms and Tuareg Rebellions in Northern Mali. Brill, 2010.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Teda",
+    "name_original_lang": "tuq",
+    "entity_type": "confederation",
+    "year_start": 1500,
+    "year_end": 1929,
+    "capital_name": "Bardai",
+    "capital_lat": 21.35,
+    "capital_lon": 16.9667,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            21.4712,
+            21.35
+          ],
+          [
+            20.8677,
+            23.6023
+          ],
+          [
+            19.219,
+            25.251
+          ],
+          [
+            16.9667,
+            25.8545
+          ],
+          [
+            14.7144,
+            25.251
+          ],
+          [
+            13.0657,
+            23.6023
+          ],
+          [
+            12.4622,
+            21.35
+          ],
+          [
+            13.0657,
+            19.0977
+          ],
+          [
+            14.7144,
+            17.449
+          ],
+          [
+            16.9667,
+            16.8455
+          ],
+          [
+            19.219,
+            17.449
+          ],
+          [
+            20.8677,
+            19.0977
+          ],
+          [
+            21.4712,
+            21.35
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.35,
+    "status": "uncertain",
+    "ethical_notes": "Teda (also Tubu, Toubou) were Saharan pastoralists and caravaneers of the Tibesti, Borkou and Erdi massifs, organised as a loose confederation of clans (Tomagra, Arna, Gunda, Erdiha) under the symbolic authority of the derde of Zouar. The Teda controlled the Bilma-Fezzan caravan route and historically participated in trans-Saharan trade including the slave trade - captives from Bornu, Wadai and Bagirmi passed through Teda lands toward Murzuk. Sources: Jean Chapelle, Catherine Baroin, and Italian/French colonial military records. Italy conquered Tibesti by 1929 after fierce resistance, attaching it to Italian Libya; France then administered the region from 1934 within French Equatorial Africa. The polygon covers the broad Tibesti-Borkou range.",
+    "name_variants": [
+      {
+        "name": "Teda",
+        "lang": "tuq",
+        "context": "Tedaga autonym"
+      },
+      {
+        "name": "Tubu",
+        "lang": "tuq",
+        "context": "older Western literature spelling"
+      },
+      {
+        "name": "Toubou",
+        "lang": "fr",
+        "context": "French colonial usage"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1899,
+        "region": "Tibesti",
+        "change_type": "contact",
+        "description": "Ottoman administration of Fezzan asserts nominal suzerainty over Tibesti via the Senussi order; Teda derde acknowledges loose ties.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1914,
+        "region": "Tibesti",
+        "change_type": "resistance",
+        "description": "Senussi-led Teda resistance fights French and Italian incursions into the Tibesti throughout the 1910s-1920s.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1929,
+        "region": "Tibesti",
+        "change_type": "colonization",
+        "description": "Italian forces complete the occupation of Tibesti, attaching it to Italian Libya; France takes over administration in 1934 within French Equatorial Africa (Chad).",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Chapelle, Jean. Nomades noirs du Sahara: Les Toubous. L'Harmattan, 1982.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Baroin, Catherine. Anarchie et cohesion sociale chez les Toubou: Les Daza Keserda (Niger). Cambridge University Press / Maison des Sciences de l'Homme, 1985.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Takrur",
+    "name_original_lang": "ful",
+    "entity_type": "kingdom",
+    "year_start": 800,
+    "year_end": 1456,
+    "capital_name": "Takrur",
+    "capital_lat": 16.6,
+    "capital_lon": -14.5,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -12.2477,
+            16.6
+          ],
+          [
+            -12.5495,
+            17.7261
+          ],
+          [
+            -13.3739,
+            18.5505
+          ],
+          [
+            -14.5,
+            18.8523
+          ],
+          [
+            -15.6261,
+            18.5505
+          ],
+          [
+            -16.4505,
+            17.7261
+          ],
+          [
+            -16.7523,
+            16.6
+          ],
+          [
+            -16.4505,
+            15.4739
+          ],
+          [
+            -15.6261,
+            14.6495
+          ],
+          [
+            -14.5,
+            14.3477
+          ],
+          [
+            -13.3739,
+            14.6495
+          ],
+          [
+            -12.5495,
+            15.4739
+          ],
+          [
+            -12.2477,
+            16.6
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "ethical_notes": "Takrur (Tekrur) was a Fulani-Soninke kingdom on the middle Senegal river, the first major West African polity to convert to Islam under War Jabi around 1040. Knowledge comes principally from Arabic geographers - al-Bakri (1068), al-Idrisi (1154), al-Umari (14th c.) and Ibn Battuta (1352) - supplemented by archaeology and Pulaar/Fulani oral tradition (the founding ancestor narrative of the Toucouleur). Takrur participated in the trans-Saharan trade including slave caravans toward North Africa. The kingdom was absorbed into Mali in the 13th century, then into Jolof, and was supplanted in the mid-15th century by the rise of the Denyanke (Denianke) Fulani dynasty under Koli Tenguella. The polygon approximates the middle Senegal valley.",
+    "name_variants": [
+      {
+        "name": "Takrur",
+        "lang": "ful",
+        "context": "Fulani/Pulaar autonym"
+      },
+      {
+        "name": "Tekrur",
+        "lang": "en",
+        "context": "common English transliteration"
+      },
+      {
+        "name": "Tukulor",
+        "lang": "fr",
+        "context": "French derivative ethnonym"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1040,
+        "region": "middle Senegal valley",
+        "change_type": "religious_change",
+        "description": "King War Jabi converts to Islam, making Takrur the earliest documented Muslim kingdom in West Africa; Almoravids draw recruits from Takrur for their Saharan jihad.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1240,
+        "region": "middle Senegal",
+        "change_type": "vassalage",
+        "description": "Takrur is incorporated into the Mali Empire as a tributary province under Sundiata Keita's expansion.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1456,
+        "region": "middle Senegal",
+        "change_type": "absorption",
+        "description": "Koli Tenguella's Denyanke Fulani dynasty conquers the region; Takrur's identity is subsumed into the new Futa Toro polity.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Levtzion, Nehemia. Ancient Ghana and Mali. Methuen, 1973.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Levtzion, Nehemia, and J. F. P. Hopkins, eds. Corpus of Early Arabic Sources for West African History. Cambridge University Press, 1981.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Waalo",
+    "name_original_lang": "wol",
+    "entity_type": "kingdom",
+    "year_start": 1287,
+    "year_end": 1855,
+    "capital_name": "Nder",
+    "capital_lat": 16.13,
+    "capital_lon": -15.92,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -14.2984,
+            16.13
+          ],
+          [
+            -14.5156,
+            16.9408
+          ],
+          [
+            -15.1092,
+            17.5344
+          ],
+          [
+            -15.92,
+            17.7516
+          ],
+          [
+            -16.7308,
+            17.5344
+          ],
+          [
+            -17.3244,
+            16.9408
+          ],
+          [
+            -17.5416,
+            16.13
+          ],
+          [
+            -17.3244,
+            15.3192
+          ],
+          [
+            -16.7308,
+            14.7256
+          ],
+          [
+            -15.92,
+            14.5084
+          ],
+          [
+            -15.1092,
+            14.7256
+          ],
+          [
+            -14.5156,
+            15.3192
+          ],
+          [
+            -14.2984,
+            16.13
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "ethical_notes": "Waalo (Walo) was the northernmost of the Wolof kingdoms, situated in the lower Senegal river delta. Its ruling brak was selected from three matrilineal lineages (Joos, Tedyek, Loggar) - a system documented by Boubacar Barry. Waalo participated in the Atlantic slave trade through French traders at Saint-Louis from the 17th century, and slaving wars devastated parts of the kingdom. Resistance against French expansion is famously commemorated by the Talatay Nder (1819-20) - a mass suicide of Waalo women rather than capture by raiders. The kingdom was conquered by French forces under General Faidherbe in 1855, the first West African state to fall to French direct colonial rule. Sources: Barry's Le Royaume du Waalo, French archival records, and Wolof oral tradition.",
+    "name_variants": [
+      {
+        "name": "Waalo",
+        "lang": "wol",
+        "context": "Wolof autonym"
+      },
+      {
+        "name": "Walo",
+        "lang": "en",
+        "context": "common English transliteration"
+      },
+      {
+        "name": "Royaume du Walo",
+        "lang": "fr",
+        "context": "French colonial designation"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1287,
+        "region": "lower Senegal valley",
+        "change_type": "foundation",
+        "description": "Traditional founding of the Waalo kingdom under the first Brak Barka Mbodj as a constituent of the wider Jolof sphere.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1819,
+        "region": "Waalo",
+        "change_type": "raid",
+        "description": "Talatay Nder: Trarza Moor raiders attack Nder; Waalo women collectively set fire to themselves rather than be enslaved, an event memorialised in Wolof historical consciousness.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1855,
+        "region": "lower Senegal",
+        "change_type": "colonization",
+        "description": "French general Louis Faidherbe annexes Waalo to the colony of Senegal, deposing the last brak; Waalo becomes the first sub-Saharan African kingdom subjected to direct French rule.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Barry, Boubacar. Le Royaume du Waalo: Le Senegal avant la conquete. Karthala, 1985.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Klein, Martin A. Slavery and Colonial Rule in French West Africa. Cambridge University Press, 1998.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Yatenga",
+    "name_original_lang": "mos",
+    "entity_type": "kingdom",
+    "year_start": 1540,
+    "year_end": 1895,
+    "capital_name": "Ouahigouya",
+    "capital_lat": 13.5833,
+    "capital_lon": -2.4167,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -0.4347,
+            13.5833
+          ],
+          [
+            -0.7003,
+            14.5743
+          ],
+          [
+            -1.4257,
+            15.2997
+          ],
+          [
+            -2.4167,
+            15.5653
+          ],
+          [
+            -3.4077,
+            15.2997
+          ],
+          [
+            -4.1331,
+            14.5743
+          ],
+          [
+            -4.3987,
+            13.5833
+          ],
+          [
+            -4.1331,
+            12.5923
+          ],
+          [
+            -3.4077,
+            11.8669
+          ],
+          [
+            -2.4167,
+            11.6013
+          ],
+          [
+            -1.4257,
+            11.8669
+          ],
+          [
+            -0.7003,
+            12.5923
+          ],
+          [
+            -0.4347,
+            13.5833
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "ethical_notes": "Yatenga was one of the major Mossi kingdoms of the upper Volta basin (modern northern Burkina Faso), founded around 1540 by Naaba Yadega. The Yatenga Naaba ruled through a hierarchy of district chiefs and a ministerial council; succession alternated among royal segments, frequently producing civil wars. Yatenga raided neighbouring Songhai/Dogon and Fulani settlements for captives and participated in the Sahelian slave trade. Sources: Michel Izard's foundational ethnohistorical work, Mossi oral traditions transmitted by professional griots, and French colonial reports. French colonial forces under Louis Voulet and Charles Chanoine occupied Ouahigouya in 1895, and Yatenga was incorporated into the colony of Haute-Volta. The polygon approximates the late-19th-century kingdom.",
+    "name_variants": [
+      {
+        "name": "Yatenga",
+        "lang": "mos",
+        "context": "Moore autonym"
+      },
+      {
+        "name": "Yadega Yatenga",
+        "lang": "mos",
+        "context": "by founder"
+      },
+      {
+        "name": "Royaume de Yatenga",
+        "lang": "fr",
+        "context": "French colonial usage"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1540,
+        "region": "upper Volta basin",
+        "change_type": "foundation",
+        "description": "Naaba Yadega secedes from Wagadugu (Ouagadougou) and founds the Yatenga kingdom centred on Gourcy and later Ouahigouya.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1850,
+        "region": "Yatenga",
+        "change_type": "civil_conflict",
+        "description": "Recurring civil wars between royal segments destabilise the kingdom; raids against Dogon, Fulani, and Samo communities for captives intensify.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1895,
+        "region": "Yatenga",
+        "change_type": "colonization",
+        "description": "French expedition under Lieutenants Voulet and Chanoine occupies Ouahigouya; Naaba Bulli is deposed and Yatenga incorporated into the French Sudan, later Haute-Volta.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Izard, Michel. Gens du pouvoir, gens de la terre: Les institutions politiques de l'ancien royaume du Yatenga (Bassin de la Volta Blanche). Cambridge University Press / Maison des Sciences de l'Homme, 1985.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Skinner, Elliott P. The Mossi of the Upper Volta: The Political Development of a Sudanese People. Stanford University Press, 1964.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Menabe",
+    "name_original_lang": "mlg",
+    "entity_type": "kingdom",
+    "year_start": 1685,
+    "year_end": 1897,
+    "capital_name": "Bengy",
+    "capital_lat": -20.2833,
+    "capital_lon": 44.3167,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            46.8392,
+            -20.2833
+          ],
+          [
+            46.5013,
+            -19.022
+          ],
+          [
+            45.578,
+            -18.0987
+          ],
+          [
+            44.3167,
+            -17.7608
+          ],
+          [
+            43.0554,
+            -18.0987
+          ],
+          [
+            42.1321,
+            -19.022
+          ],
+          [
+            41.7942,
+            -20.2833
+          ],
+          [
+            42.1321,
+            -21.5446
+          ],
+          [
+            43.0554,
+            -22.4679
+          ],
+          [
+            44.3167,
+            -22.8058
+          ],
+          [
+            45.578,
+            -22.4679
+          ],
+          [
+            46.5013,
+            -21.5446
+          ],
+          [
+            46.8392,
+            -20.2833
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "ethical_notes": "Menabe was the southern Sakalava kingdom of western Madagascar, founded c. 1685 by Andriamandazoala (or Andriandahifotsy) of the Maroserana dynasty. Menabe and the northern Boina kingdom together dominated western Madagascar through the 18th century, exporting cattle, rice, and enslaved Africans (sometimes captured on the East African mainland and trans-shipped) to Mascarene Islands plantations and Arab dhows. Sources: oral traditions of the Sakalava ampanjaka and ombiasy, French missionary and merchant records, and works by Hubert Deschamps and Stephen Ellis. Menabe resisted Merina conquest of the early 19th century but fell to French colonial forces under General Joseph Gallieni in 1897 along with the rest of Madagascar. The polygon approximates 18th-century territorial reach.",
+    "name_variants": [
+      {
+        "name": "Menabe",
+        "lang": "mlg",
+        "context": "Sakalava autonym"
+      },
+      {
+        "name": "Royaume Sakalava du Menabe",
+        "lang": "fr",
+        "context": "French colonial usage"
+      },
+      {
+        "name": "Sakalava Menabe",
+        "lang": "en",
+        "context": "academic usage"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1685,
+        "region": "western Madagascar",
+        "change_type": "foundation",
+        "description": "Andriamandazoala of the Maroserana dynasty unifies western coastal communities into the Menabe kingdom, expanding through cattle-raiding alliances.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1820,
+        "region": "western Madagascar",
+        "change_type": "resistance",
+        "description": "Menabe resists Merina military expansion under Radama I; punitive campaigns devastate parts of the kingdom but Menabe retains autonomy.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1897,
+        "region": "Madagascar",
+        "change_type": "colonization",
+        "description": "French general Joseph Gallieni's pacification of Madagascar dissolves the Menabe kingdom; the queen of Madagascar Ranavalona III is exiled, and all Sakalava kingdoms are absorbed into the French colony.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Deschamps, Hubert. Histoire de Madagascar. Berger-Levrault, 1972.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Lombard, Jacques. Le Royaume Sakalava du Menabe: Essai d'analyse d'un systeme politique a Madagascar, 17e-20e siecles. ORSTOM, 1988.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  },
+  {
+    "name_original": "Betsimisaraka",
+    "name_original_lang": "mlg",
+    "entity_type": "confederation",
+    "year_start": 1712,
+    "year_end": 1817,
+    "capital_name": "Foulpointe",
+    "capital_lat": -17.6833,
+    "capital_lon": 49.5167,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            52.3996,
+            -17.6833
+          ],
+          [
+            52.0133,
+            -16.2419
+          ],
+          [
+            50.9581,
+            -15.1867
+          ],
+          [
+            49.5167,
+            -14.8004
+          ],
+          [
+            48.0753,
+            -15.1867
+          ],
+          [
+            47.0201,
+            -16.2419
+          ],
+          [
+            46.6338,
+            -17.6833
+          ],
+          [
+            47.0201,
+            -19.1247
+          ],
+          [
+            48.0753,
+            -20.1799
+          ],
+          [
+            49.5167,
+            -20.5662
+          ],
+          [
+            50.9581,
+            -20.1799
+          ],
+          [
+            52.0133,
+            -19.1247
+          ],
+          [
+            52.3996,
+            -17.6833
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "ethical_notes": "Betsimisaraka ('the many inseparable') was a confederation of the eastern coastal Malagasy people unified around 1712 by Ratsimilaho (Tom Tsimila), reportedly the son of an English pirate (Thomas White) and a Malagasy princess. The confederation grew rich raiding for captives, organising slave-trading expeditions even as far as the Comoros (raids known as 'sakalava raids' though Betsimisaraka-led), supplying enslaved people to French Mascarene plantations and pirate communities at Ile Sainte-Marie. Primary sources: French East India Company records, Dutch and pirate reports, and Betsimisaraka oral tradition collected by Etienne de Flacourt and later ethnographers. The confederation fragmented after Ratsimilaho's death (1750), was conquered by the Merina kingdom under Radama I in 1817, and finally absorbed into French Madagascar (1896). The polygon approximates the eastern coastal range.",
+    "name_variants": [
+      {
+        "name": "Betsimisaraka",
+        "lang": "mlg",
+        "context": "Malagasy autonym, 'the many inseparable'"
+      },
+      {
+        "name": "Confederation Betsimisaraka",
+        "lang": "fr",
+        "context": "French colonial designation"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1712,
+        "region": "eastern Madagascar coast",
+        "change_type": "unification",
+        "description": "Ratsimilaho unifies the eastern coastal communities into the Betsimisaraka confederation, with capital at Foulpointe (Mahavelona).",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1750,
+        "region": "eastern Madagascar",
+        "change_type": "fragmentation",
+        "description": "Ratsimilaho dies; the confederation gradually splinters as successor leaders fight over slave-trade revenues and Mascarene contracts.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1817,
+        "region": "eastern Madagascar",
+        "change_type": "conquest",
+        "description": "Merina king Radama I, supplied with British arms, conquers the Betsimisaraka territory and incorporates it into the unified Kingdom of Madagascar.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1896,
+        "region": "Madagascar",
+        "change_type": "colonization",
+        "description": "French annexation of Madagascar dissolves all remaining Malagasy autonomies including residual Betsimisaraka structures.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Ellis, Stephen. 'Tom and Toakafo: The Betsimisaraka Kingdom and State Formation in Madagascar, 1715-1750.' Journal of African History 48, no. 3 (2007): 439-455.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Campbell, Gwyn. An Economic History of Imperial Madagascar, 1750-1895: The Rise and Fall of an Island Empire. Cambridge University Press, 2005.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  }
+]

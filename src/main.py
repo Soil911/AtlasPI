@@ -20,7 +20,7 @@ from src.api.middleware import (
     RequestLoggingMiddleware,
     SecurityHeadersMiddleware,
 )
-from src.api.routes import entities, export, health, relations
+from src.api.routes import entities, events, export, health, relations
 from src.config import (
     APP_TITLE,
     APP_VERSION,
@@ -31,7 +31,7 @@ from src.config import (
     RATE_LIMIT,
 )
 from src.db.database import Base, engine
-from src.db.seed import seed_database
+from src.db.seed import seed_database, seed_events_database
 from src.logging_config import setup_logging
 from src.monitoring import init_sentry
 
@@ -92,6 +92,12 @@ async def lifespan(app: FastAPI):
             update_all_boundaries()
         except Exception:
             logger.warning("Aggiornamento confini fallito — i dati demo avranno confini approssimativi", exc_info=True)
+        # v6.3: seed eventi storici (separato dal seed entità — l'uno può
+        # esistere senza l'altro, per dev locale senza dataset eventi)
+        try:
+            seed_events_database()
+        except Exception:
+            logger.warning("Seed eventi fallito — v6.3 events layer non disponibile", exc_info=True)
 
     logger.info("AtlasPI pronto")
     yield
@@ -198,6 +204,7 @@ app.include_router(health.router)
 app.include_router(entities.router)
 app.include_router(export.router)
 app.include_router(relations.router)
+app.include_router(events.router)
 
 
 @app.get("/", include_in_schema=False)
