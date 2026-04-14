@@ -182,13 +182,13 @@ For a single entity, its `boundary_aourednik_name` and `boundary_aourednik_year`
 
 AtlasPI's methodology is bound by five documented ethics records:
 
-- **ETHICS-001** — Contested names and original-language primacy ([IT](ethics/ETHICS-001-nomi-contestati.md))
-- **ETHICS-002** — Representation of conquest and territorial acquisition ([IT](ethics/ETHICS-002-confini-e-conquiste.md))
+- **ETHICS-001** — Contested names and original-language primacy ([IT](ethics/ETHICS-001-nomi-contestati.md) · [EN](ethics/ETHICS-001-contested-names.en.md))
+- **ETHICS-002** — Representation of conquest and territorial acquisition ([IT](ethics/ETHICS-002-confini-e-conquiste.md) · [EN](ethics/ETHICS-002-boundaries-and-conquests.en.md))
 - **ETHICS-003** — Contemporary disputed territories (confidence cap ≤ 0.70) ([IT](ethics/ETHICS-003-territori-contestati-attuali.md) · [EN](ethics/ETHICS-003-disputed-territories.en.md))
-- **ETHICS-004** — Approximate generated boundaries (disclaimer, confidence ≤ 0.40) ([IT](ethics/ETHICS-004-confini-generati-approssimativi.md))
+- **ETHICS-004** — Approximate generated boundaries (disclaimer, confidence ≤ 0.40) ([IT](ethics/ETHICS-004-confini-generati-approssimativi.md) · [EN](ethics/ETHICS-004-generated-boundaries.en.md))
 - **ETHICS-005** — Natural Earth matching and modern-only gating ([IT](ethics/ETHICS-005-boundary-natural-earth.md) · [EN](ethics/ETHICS-005-natural-earth-boundaries.en.md))
 
-Each is published under `docs/ethics/` and is enforced by both automated tests and pipeline-level code paths. The authoritative version of every ethics record is Italian per the project's documentation policy; English translations are provided for ETHICS-003 and ETHICS-005 (the most operationally load-bearing).
+Each is published under `docs/ethics/` and is enforced by both automated tests and pipeline-level code paths. The authoritative version of every ethics record is Italian per the project's documentation policy; English translations are provided for all five records to support non-Italian-reading reviewers.
 
 ---
 
