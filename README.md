@@ -334,6 +334,41 @@ See [ROADMAP.md](ROADMAP.md) for the full development plan. Key upcoming milesto
 
 ---
 
+## How to Cite
+
+If you use AtlasPI in academic work, teaching, or derivative datasets, please cite it. A machine-readable [`CITATION.cff`](CITATION.cff) is provided in the repository root and is recognized by GitHub, Zenodo, Zotero, and most reference managers.
+
+### Suggested citation (software)
+
+> Riza, C. (2026). *AtlasPI: A structured historical geographic database for AI agents* (Version 6.1.1) [Software]. CRA. https://github.com/Soil911/AtlasPI
+
+### BibTeX
+
+```bibtex
+@software{riza_atlaspi_2026,
+  author       = {Riza, Clirim},
+  title        = {AtlasPI: A structured historical geographic database for AI agents},
+  version      = {6.1.1},
+  year         = {2026},
+  publisher    = {CRA},
+  url          = {https://github.com/Soil911/AtlasPI},
+  note         = {Live instance: https://atlaspi.cra-srl.com}
+}
+```
+
+### Citing the underlying boundary sources
+
+AtlasPI derives its geographic boundaries from two upstream datasets. If your work depends on spatial precision, please also cite them directly:
+
+- **Natural Earth** (public domain) — post-1800 modern administrative boundaries. https://www.naturalearthdata.com/
+- **aourednik/historical-basemaps** (CC BY 4.0) — pre-1800 historical world timestamps. Ourednik, A. *historical-basemaps*. https://github.com/aourednik/historical-basemaps
+
+For full methodology on how boundaries are assigned, matched, and confidence-scored, see [docs/METHODOLOGY.md](docs/METHODOLOGY.md).
+
+A DOI for the versioned dataset will be minted via Zenodo on the first tagged release; see [`.zenodo.json`](.zenodo.json) for deposition metadata.
+
+---
+
 ## License
 
 AtlasPI follows an **open core** model.
