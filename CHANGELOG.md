@@ -66,11 +66,20 @@ ETHICS-003 compliance su entita' contestate + performance export.
 
 ### Test
 
-- **234 test totali** (da 233). Aggiunto `test_geojson_export_full_under_15s`
+- **245 test totali** (da 233). Aggiunto `test_geojson_export_full_under_15s`
   e riadattato `test_geojson_export_centroid_under_500ms` per riflettere
   la nuova API dell'export.
 - Fix 3 regressioni: ETHICS-003 disputed confidence, export performance,
   random performance — tutti i nuovi test verdi.
+- Nuova **spot-check regression suite** (`tests/test_spotcheck_top10.py`,
+  11 test): blocca le soglie di qualita' boundary per le 10 entita' ad
+  alta visibilita' accademica (Roma, Ottomani, Mongoli, Incas, Tokugawa,
+  Mughal, Bizantino, Qing, Abbasidi, Azteco). Floor di vertici e
+  confidence conservativi — un bug della pipeline che declassasse un
+  MultiPolygon a 18 vertici fallirebbe immediatamente il CI. Fixture
+  `_enrich_test_boundaries` replica il comportamento di produzione
+  (lifespan `update_all_boundaries()`) nel test DB.
+- Fix `test_health.py`: assertion versione allineata a 6.1.1 (era stale 6.1.0).
 
 ### File modificati (principali)
 
