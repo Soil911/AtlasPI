@@ -145,20 +145,109 @@ direttamente senza la migrazione SQLite → PG.
       (attualmente aourednik usa capital-in-polygon come strategia
       esplicita, ma non come guardia per exact/fuzzy name).
 
-### v6.3 — DISTRIBUZIONE E LANCIO
-**Obiettivo**: il prodotto si vende solo se lo vedono.
+### v6.3 — EVENTS LAYER (nuovo livello dati)
+**Idea di Clirim (2026-04-14)**: "avvenimenti piu' importanti per ogni anno".
+Oggi AtlasPI risponde "cosa esisteva nel 1453?". Dopo v6.3 rispondera' anche
+"cosa e' **successo** nel 1453?" — con eventi datati, geolocalizzati e linkati
+alle entita' coinvolte.
+
+#### Modello dati
+- [ ] Nuovo modello `HistoricalEvent`: `id`, `event_type`, `year`,
+      `year_precision` (exact/approximate/range), `location_lat/lon`,
+      `entities_involved[]` (FK), `description`, `sources[]`,
+      `confidence_score`, `impact_level` (local/regional/global)
+- [ ] `event_type` enum: `battle`, `treaty`, `foundation`, `fall`,
+      `revolution`, `discovery`, `epidemic`, `natural_disaster`,
+      `cultural`, `dynastic_change`
+- [ ] Relazione many-to-many events ↔ entities con ruolo
+      (aggressor/defender/signatory/observer/affected)
+
+#### API
+- [ ] `/v1/events` con filtri year, year_range, event_type, entity_id, bbox
+- [ ] `/v1/events/{id}` detail con entita' collegate
+- [ ] `/v1/snapshot/{year}` esteso: aggiungere `events` con eventi di quell'anno
+- [ ] `/v1/entities/{id}/events` timeline eventi legati a un'entita'
+
+#### Governance etica
+- [ ] **ETHICS-007** — narrativa degli eventi. Chi "inizia" una guerra?
+      Chi e' "aggressore"? Regola: usare i ruoli minimi fattuali
+      (es. "invading_party") ed evitare giudizio morale nel dato.
+- [ ] **ETHICS-008** — eventi coloniali / genocidi / deportazioni.
+      Regola: usare terminologia accademica (es. "forced_displacement",
+      "population_decline"), non termini minimizzanti (es. "transition").
+
+#### Dati di seed
+- [ ] Batch iniziale: 300+ eventi "must-have" coprendo le entita' top-50
+      (es. caduta Costantinopoli 1453, Traktat Tordesillas 1494, Rivoluzione
+      francese 1789, trattato Waitangi 1840, ecc.)
+
+### v6.4 — CITIES + TRADE ROUTES (reti e nodi)
+**Obiettivo**: aggiungere la dimensione **urbana** e quella **commerciale**,
+che oggi mancano completamente.
+
+#### Cities layer
+- [ ] Modello `HistoricalCity`: distinta da capitali di entita'. Inglobare
+      il dato capital gia' presente su `GeoEntity` ma permettere citta'
+      indipendenti (es. Venezia come entita' autonoma, ma anche Alessandria,
+      Timbuctu, Samarcanda come hub commerciali/culturali).
+- [ ] `founded_year`, `abandoned_year`, `peak_population`, `peak_population_year`
+- [ ] `city_type` enum: `capital`, `trade_hub`, `religious_center`,
+      `fortress`, `port`, `mining`, `crossroads`
+- [ ] `/v1/cities` + filtri year, city_type, bbox, population_threshold
+- [ ] Link bidirezionale citta' ↔ entita' attiva in un dato anno
+
+#### Trade routes layer
+- [ ] Modello `TradeRoute`: polilinea GeoJSON + anni attivi + citta' attraversate
+- [ ] `route_type`: `silk_road_primary`, `silk_road_maritime`,
+      `trans_saharan`, `amber_road`, `spice_route`, `fur_route`,
+      `triangular_atlantic` (coloniale), ecc.
+- [ ] `goods_traded[]`, `peak_period` (year_start, year_end)
+- [ ] `/v1/routes` + filtri year, route_type, bbox, city_id
+- [ ] Render distinto sulla mappa (linee tratteggiate, non poligoni)
+
+#### Dati di seed
+- [ ] 100+ citta' storiche chiave
+- [ ] 20+ rotte commerciali principali
+- [ ] ETHICS record per rotte coloniali (schiavismo, oppio)
+
+### v6.5 — DYNASTY CHAINS + MCP ADVANCED
+**Obiettivo**: la dimensione **temporale di continuita'**, cioe' collegare
+entita' che sono successioni politico-dinastiche (Impero Romano →
+Bizantino → Ottomano nell'area anatolica; Han → Sui → Tang in Cina).
+
+#### Dynasty chains
+- [ ] Modello `DynastyChain`: catena ordinata di entita' che si
+      succedono nello stesso "spazio di legittimita'"
+- [ ] `successor_relation` type: `direct_succession`, `conquest`,
+      `fragmentation`, `fusion`, `revival`, `exile_continuation`
+- [ ] `/v1/chains/{id}` restituisce timeline completa
+- [ ] `/v1/entities/{id}/predecessors` e `/successors`
+
+#### MCP tools avanzati
+- [ ] `get_events` MCP tool
+- [ ] `get_cities_nearby` MCP tool
+- [ ] `get_trade_routes_through` MCP tool
+- [ ] `get_dynasty_chain` MCP tool
+- [ ] `what_changed_between(year1, year2, region)` — differenza politica
+      tra due anni in una regione (entita' nate / scomparse / espanse)
+- [ ] Bump `atlaspi-mcp` a v0.2.0 con nuovi tool
+
+### v6.6 — DISTRIBUZIONE E LANCIO
+**Obiettivo**: il prodotto si vende solo se lo vedono. Rimandato post-v6.5
+perche' vogliamo lanciare con il prodotto **completo** (entita' + eventi +
+citta' + rotte + dinastie), non la meta'.
 
 - [ ] Submit a Postman Public Network
 - [ ] Submit a RapidAPI Hub
 - [ ] Submit a public-apis/public-apis (GitHub)
 - [ ] Submit a apilist.fun
 - [ ] Show HN ("Show HN: AtlasPI — Historical geography API + MCP for AI agents")
-- [ ] Post su r/datasets, r/GIS, r/MachineLearning
+- [ ] Post su r/datasets, r/GIS, r/MachineLearning, r/history
 - [ ] Twitter/X thread, LinkedIn post
 - [ ] Blog post di lancio sul nostro dominio
 - [ ] Documentazione: "For AI Agent developers" con use case concreti
 
-### v6.4 — API AUTHENTICATION + MONETIZATION
+### v6.7 — API AUTHENTICATION + MONETIZATION
 **Quando**: dopo aver dimostrato che esiste domanda d'uso.
 
 - [ ] Sistema API key (generazione, validazione, revoca)
@@ -176,8 +265,12 @@ direttamente senza la migrazione SQLite → PG.
 
 ### v7.0 — LANCIO PUBBLICO UFFICIALE
 - Product Hunt launch coordinato con HN
-- 1000+ entita', 80%+ con boundary
-- MCP server stabile, pubblicato su PyPI
+- **1000+ entita'**, 80%+ con boundary
+- **300+ eventi storici** documentati
+- **100+ citta' storiche**
+- **20+ rotte commerciali**
+- **Catene dinastiche** per le 50 principali successioni
+- MCP server stabile, pubblicato su PyPI, v0.2.0+ con tool eventi/citta'
 - Free tier generoso, premium per volume
 - Primo feedback utenti reali
 - Metriche utenti tracciate (registrazioni, query/giorno, retention)
@@ -207,10 +300,15 @@ direttamente senza la migrazione SQLite → PG.
 | Uptime | 99.5% | da misurare (UptimeRobot non ancora attivo) |
 | Latenza API p95 | < 200ms | ~180ms (verificato live) |
 | Entita' | 1,000+ | 747 |
-| Boundary coverage | 80%+ | **93.0%** (NE 28% + aourednik 42% + historical 23%) ✓ superato |
-| Test coverage | 250+ test | **260 ✓** (208 v5.8 + 25 v6.1 + 1 v6.1.1 + 11 spot-check top-10 + 11 sync reconciliation + 4 boundary provenance) |
-| Endpoint | 25+ | 21 + 2 SEO |
-| MCP server | pubblicato su PyPI | pacchetto pronto, da pubblicare |
+| Eventi storici | 300+ | 0 (v6.3) |
+| Citta' storiche | 100+ | 0 (v6.4) |
+| Rotte commerciali | 20+ | 0 (v6.4) |
+| Dynasty chains | 50+ | 0 (v6.5) |
+| Boundary coverage | 80%+ | **72%** (post ETHICS-006, 209 approximate da rimatchare in v6.2) |
+| Test coverage | 250+ test | **272 ✓** (260 v6.1 + 12 ETHICS-006 audit + sync) |
+| Endpoint | 30+ | 21 + 2 SEO (eventi/citta'/rotte in v6.3-v6.4) |
+| MCP server | pubblicato su PyPI, tools avanzati | pacchetto pronto, da pubblicare |
 | Stelle GitHub | 50+ (primo mese) | 0 (repo appena migrato a Soil911) |
 | Utenti registrati | 100+ (primo mese) | 0 (no auth ancora) |
 | Mention in directory API | 5+ | 0 |
+| DOI Zenodo | mintato | ✓ 10.5281/zenodo.19581784 (v6.1.2) |
