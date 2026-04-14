@@ -36,7 +36,7 @@ I have been following your work on *[project / toolkit / post]* and suspect Atla
 
 It is a 747-entity structured historical geographic dataset, released under Apache-2.0, with an explicit ethics framework baked in: contested names carry the original-language form as primary, disputed territories are capped at confidence ≤ 0.70 regardless of source quality, generated polygons are tagged and capped at 0.40, and every record has source citations. The API is live at https://atlaspi.cra-srl.com; a JOHD-style data paper draft is in the repo.
 
-The short version of the ask: do you think the ethics framework is honest, or is it performing honesty? Specifically — would you look at `docs/ethics/ETHICS-003-territori-contestati-attuali.md` (currently Italian — English translation available on request) and tell me whether the confidence cap mechanism is sufficient for what it claims to do?
+The short version of the ask: do you think the ethics framework is honest, or is it performing honesty? Specifically — would you look at `docs/ethics/ETHICS-003-disputed-territories.en.md` and tell me whether the confidence cap mechanism is sufficient for what it claims to do?
 
 I am at a stage where negative feedback is more useful than positive.
 
