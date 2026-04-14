@@ -222,11 +222,28 @@ def _try_exact_name_match(
     if not entity_names_norm:
         return None
 
+    has_capital = (
+        entity.get("capital_lat") is not None
+        and entity.get("capital_lon") is not None
+    )
+
     for rec in ne_records:
         for n in _gather_ne_names(rec):
             nn = _normalize(n)
             if nn and nn in entity_names_norm:
                 iso = rec.get("iso_a3")
+                geo = rec.get("geojson")
+                # ETHICS-006: even exact-name matches require geographic
+                # consistency. Colonial-era entities often share names
+                # with modern countries whose borders are irrelevant
+                # (e.g., "Nueva España" vs Spain). If we have a capital,
+                # the NE polygon must contain it; otherwise reject.
+                if has_capital and not _capital_in_geojson(entity, geo):
+                    logger.debug(
+                        "Exact-name match rejected (capital outside polygon): %s -> %s",
+                        entity.get("name_original"), rec.get("name"),
+                    )
+                    continue
                 return MatchResult(
                     entity_key=entity_key(entity),
                     matched=True,
@@ -234,11 +251,37 @@ def _try_exact_name_match(
                     confidence=1.0,
                     ne_iso_a3=iso,
                     ne_name=rec.get("name"),
-                    geojson=rec.get("geojson"),
+                    geojson=geo,
                     is_disputed=(iso in DISPUTED_ISO_CODES) if iso else False,
                     notes=[f"Match esatto sul nome: '{n}' == '{entity_names_norm[nn]}'"],
                 )
     return None
+
+
+def _capital_in_geojson(entity: dict, geojson: dict | None) -> bool:
+    """Return True iff the entity's capital coordinates fall inside geojson.
+
+    ETHICS-006: used as a geographic sanity check for fuzzy matches.
+    Protects against catastrophic name-based false positives (e.g.
+    Garenganze -> Russia, Primer Imperio Mexicano -> Belgium) where the
+    fuzzy scorer pattern-matches on generic tokens like "Kingdom" or
+    "Empire" and picks a geographically unrelated country.
+    """
+    lat = entity.get("capital_lat")
+    lon = entity.get("capital_lon")
+    if lat is None or lon is None or not geojson:
+        return False
+    if not (-90 <= lat <= 90 and -180 <= lon <= 180):
+        return False
+    try:
+        from shapely.geometry import Point, shape
+    except ImportError:
+        # Without shapely we can't validate geometrically; fail safe.
+        return False
+    try:
+        return shape(geojson).contains(Point(float(lon), float(lat)))
+    except Exception:
+        return False
 
 
 def _try_fuzzy_match(
@@ -253,6 +296,18 @@ def _try_fuzzy_match(
     entity_names = _gather_entity_names(entity)
     if not entity_names:
         return None
+
+    # ETHICS-006: fuzzy match is dangerous without a geographic guard.
+    # If the entity carries capital coordinates we use them to filter
+    # candidates up front: a record whose polygon does NOT contain the
+    # capital cannot be a valid fuzzy match, regardless of how high the
+    # name score is. An entity without capital coordinates is treated
+    # conservatively — we still compute a best name match but reject if
+    # we cannot verify geographic consistency.
+    has_capital = (
+        entity.get("capital_lat") is not None
+        and entity.get("capital_lon") is not None
+    )
 
     best: tuple[int, dict, str, str] | None = None  # (score, ne_record, ne_name, entity_name)
 
@@ -281,6 +336,28 @@ def _try_fuzzy_match(
 
     score, rec, ne_name, en = best
     iso = rec.get("iso_a3")
+
+    # ETHICS-006: geographic guard. Fuzzy is only trusted when the
+    # capital of the entity actually falls inside the matched NE
+    # polygon. Without this check we produced 133 displaced matches
+    # (Garenganze -> Russia, Mapuche -> Australia, CSA -> Italy, ...).
+    if has_capital:
+        if not _capital_in_geojson(entity, rec.get("geojson")):
+            logger.debug(
+                "Fuzzy match rejected (capital outside polygon): %s -> %s (%s)",
+                entity.get("name_original"), ne_name, iso,
+            )
+            return None
+    else:
+        # No capital to validate against — refuse the fuzzy match.
+        # Conservative: a name-only match with no geographic evidence
+        # is the exact class of bug that produced ETHICS-006.
+        logger.debug(
+            "Fuzzy match rejected (no capital to validate): %s -> %s",
+            entity.get("name_original"), ne_name,
+        )
+        return None
+
     return MatchResult(
         entity_key=entity_key(entity),
         matched=True,
@@ -290,7 +367,9 @@ def _try_fuzzy_match(
         ne_name=rec.get("name"),
         geojson=rec.get("geojson"),
         is_disputed=(iso in DISPUTED_ISO_CODES) if iso else False,
-        notes=[f"Fuzzy match {score}%: '{en}' ~ '{ne_name}'"],
+        notes=[
+            f"Fuzzy match {score}%: '{en}' ~ '{ne_name}' (capital in polygon: validated)"
+        ],
     )
 
 
