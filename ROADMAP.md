@@ -95,7 +95,12 @@ Nessuno si fida di un servizio che si rompe silenziosamente.
 - [x] Pipeline Natural Earth → boundary import per stati moderni
 - [x] Tool semi-automatico per boundary approssimato (entita' antiche)
 - [x] ETHICS-005 per gestione confini contestati moderni
-- [ ] Esecuzione pipeline su tutto il dataset → target 60%+ Polygon coverage
+- [x] Esecuzione pipeline su tutto il dataset → **93.0% real boundary coverage** (v6.1.1)
+- [x] Matcher aourednik/historical-basemaps per entita' pre-1800 (v6.1.1)
+
+#### Academic credibility
+- [x] CITATION.cff per citazione formale (v6.1.1)
+- [x] .zenodo.json per DOI mint (v6.1.1)
 
 ### v6.2 — POSTGRESQL + POSTGIS (rinviata da v6.1 originale)
 **Quando**: appena il traffico richiede query spaziali < 50ms.
@@ -170,8 +175,8 @@ SQLite oggi tiene 747 entita' con 2 worker senza problemi.
 | Uptime | 99.5% | da misurare (UptimeRobot non ancora attivo) |
 | Latenza API p95 | < 200ms | ~180ms (verificato live) |
 | Entita' | 1,000+ | 747 |
-| Boundary coverage | 80%+ | 23% (target v6.1: 60%+) |
-| Test coverage | 250+ test | 233 (208 v5.8 + 25 v6.1) |
+| Boundary coverage | 80%+ | **93.0%** (NE 28% + aourednik 42% + historical 23%) ✓ superato |
+| Test coverage | 250+ test | 234 (208 v5.8 + 25 v6.1 + 1 v6.1.1) |
 | Endpoint | 25+ | 21 + 2 SEO |
 | MCP server | pubblicato su PyPI | pacchetto pronto, da pubblicare |
 | Stelle GitHub | 50+ (primo mese) | 0 (repo appena migrato a Soil911) |

@@ -375,27 +375,37 @@ def random_entity(
 ):
     import random as rnd
 
-    q = _eager_query(db)
+    # PERF: selezioniamo prima solo gli ID + (se serve) capital_lat/lon per il
+    # filtro continente, poi carichiamo eagerly SOLO l'entita' scelta. Con 700+
+    # entita' ognuna con 60-200KB di boundary, q.all() su _eager_query
+    # trasferisce decine di MB e impiega secondi.
+    id_q = db.query(
+        GeoEntity.id, GeoEntity.capital_lat, GeoEntity.capital_lon
+    )
 
     if type:
-        q = q.filter(GeoEntity.entity_type == type)
+        id_q = id_q.filter(GeoEntity.entity_type == type)
     if status:
-        q = q.filter(GeoEntity.status == status)
+        id_q = id_q.filter(GeoEntity.status == status)
     if year is not None:
-        q = q.filter(GeoEntity.year_start <= year)
-        q = q.filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= year))
+        id_q = id_q.filter(GeoEntity.year_start <= year)
+        id_q = id_q.filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= year))
 
-    candidates = q.all()
+    candidates = id_q.all()
 
     # Filtro continente post-query (calcolato da coordinate)
     if continent:
-        candidates = [e for e in candidates if _get_continent(e.capital_lat, e.capital_lon).lower() == continent.lower()]
+        candidates = [
+            c for c in candidates
+            if _get_continent(c.capital_lat, c.capital_lon).lower() == continent.lower()
+        ]
 
     if not candidates:
         from src.api.errors import AtlasError
         raise AtlasError(status_code=404, detail="Nessuna entit\u00e0 corrisponde ai filtri")
 
-    entity = rnd.choice(candidates)
+    chosen_id = rnd.choice(candidates).id
+    entity = _eager_query(db).filter(GeoEntity.id == chosen_id).one()
     response.headers["Cache-Control"] = "no-cache"
     return _entity_to_response(entity)
 

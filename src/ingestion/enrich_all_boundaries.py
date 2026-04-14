@@ -6,15 +6,18 @@ Per ogni entita' nei file batch_*.json:
      (boundary_source != 'approximate_generated'), SKIP.
   2. Se e' eligibile per Natural Earth (year_end > 1800 o year_start > 1700)
      e c'e' un match valido, usa quello (boundary_source = 'natural_earth').
-  3. Altrimenti, genera un boundary approssimativo via name_seeded_boundary
+  3. Altrimenti, tenta aourednik/historical-basemaps (CC BY 4.0) per un
+     boundary storico coerente all'epoca (boundary_source = 'aourednik').
+  4. Altrimenti, genera un boundary approssimativo via name_seeded_boundary
      (boundary_source = 'approximate_generated', confidence_score = 0.4).
 
 ETHICS:
   - Idempotente: rieseguire lo script non corrompe nulla. I boundary
-    'historical_map'/'natural_earth'/'academic_source' sono intoccabili.
+    'historical_map'/'natural_earth'/'aourednik'/'academic_source' sono
+    intoccabili nei run successivi.
   - Solo i boundary 'approximate_generated' possono essere upgradati a
-    'natural_earth' se viene trovato un match valido (questo migliora
-    la qualita' del dato).
+    'natural_earth' o 'aourednik' se viene trovato un match valido
+    (questo migliora la qualita' del dato).
   - Boundary mancanti o di tipo Point sono sempre rigenerati.
   - I file batch vengono backuppati in .bak prima di ogni modifica.
   - Vedi ETHICS-004 e ETHICS-005.
@@ -23,6 +26,7 @@ Uso:
     python -m src.ingestion.enrich_all_boundaries --dry-run
     python -m src.ingestion.enrich_all_boundaries
     python -m src.ingestion.enrich_all_boundaries --skip-natural-earth
+    python -m src.ingestion.enrich_all_boundaries --skip-aourednik
 """
 
 from __future__ import annotations
@@ -36,6 +40,11 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Optional
 
+from src.ingestion.aourednik_match import (
+    AourednikMatch,
+    list_snapshots as list_aourednik_snapshots,
+    match_entity_aourednik,
+)
 from src.ingestion.boundary_generator import name_seeded_boundary
 from src.ingestion.boundary_match import (
     MatchResult,
@@ -57,7 +66,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 BATCHES_DIR = ROOT_DIR / "data" / "entities"
 
 # Sorgenti boundary considerate "reali" (non generate)
-REAL_SOURCES = {"historical_map", "natural_earth", "academic_source"}
+REAL_SOURCES = {"historical_map", "natural_earth", "aourednik", "academic_source"}
 
 
 # ─── Helpers ────────────────────────────────────────────────────────────────
@@ -130,7 +139,12 @@ def _backup_file(filepath: Path) -> Path:
 
 
 def _apply_natural_earth_match(entity: dict, match: MatchResult) -> None:
-    """Applica un match Natural Earth all'entita' (mutazione in-place)."""
+    """Applica un match Natural Earth all'entita' (mutazione in-place).
+
+    ETHICS-003: entita' con status 'disputed' non possono avere
+    confidence > 0.7 anche se il boundary match e' eccellente. La
+    certezza geografica non risolve la disputa storica.
+    """
     entity["boundary_geojson"] = match.geojson
     entity["boundary_source"] = "natural_earth"
     if match.ne_iso_a3:
@@ -138,19 +152,17 @@ def _apply_natural_earth_match(entity: dict, match: MatchResult) -> None:
         entity["boundary_ne_iso_a3"] = match.ne_iso_a3
     # Confidence: alta se ISO/exact, media se fuzzy/capital
     if match.strategy in ("iso_a3", "exact_name"):
-        entity["confidence_score"] = max(
-            entity.get("confidence_score", 0.5), 0.85
-        )
+        proposed = 0.85
     elif match.strategy == "fuzzy":
-        # Boost modesto, capped
-        entity["confidence_score"] = max(
-            entity.get("confidence_score", 0.5),
-            min(0.85, 0.6 + 0.25 * match.confidence),
-        )
+        proposed = min(0.85, 0.6 + 0.25 * match.confidence)
     else:  # capital_in_polygon
-        entity["confidence_score"] = max(
-            entity.get("confidence_score", 0.5), 0.6
-        )
+        proposed = 0.6
+
+    # ETHICS-003: cap per entita' contestate
+    if entity.get("status") == "disputed":
+        proposed = min(proposed, 0.7)
+
+    entity["confidence_score"] = max(entity.get("confidence_score", 0.5), proposed)
 
     # ETHICS: nota per territori contestati
     if match.is_disputed:
@@ -160,6 +172,46 @@ def _apply_natural_earth_match(entity: dict, match: MatchResult) -> None:
             entity["ethical_notes"] = (
                 f"{existing_note} {disputed_note}".strip()
             )
+
+
+def _apply_aourednik_match(entity: dict, match: AourednikMatch) -> None:
+    """Applica un match aourednik all'entita' (mutazione in-place).
+
+    ETHICS:
+      - La confidence di aourednik e' gia' mediata con BORDERPRECISION
+        (vedi aourednik_match.py). Qui la usiamo per impostare lo score
+        dell'entita', senza mai degradare uno score gia' piu' alto.
+      - I nomi/anno del match sono tracciati in boundary_aourednik_{name,year}
+        per audit retroattivo e per mostrare la fonte in UI.
+      - I territori contestati storici non hanno un flag esplicito in
+        aourednik (solo BORDERPRECISION), ma lasciamo il campo
+        ethical_notes invariato: lo status dell'entita' resta autorevole.
+    """
+    entity["boundary_geojson"] = match.geojson
+    entity["boundary_source"] = "aourednik"
+    if match.aourednik_name:
+        entity["boundary_aourednik_name"] = match.aourednik_name
+    if match.aourednik_year is not None:
+        entity["boundary_aourednik_year"] = match.aourednik_year
+    if match.border_precision is not None:
+        entity["boundary_aourednik_precision"] = match.border_precision
+    # Aggiorna confidence solo se il match e' migliore di quello attuale.
+    # ETHICS-003: cap a 0.7 per entita' contestate (disputed).
+    proposed = match.confidence
+    if entity.get("status") == "disputed":
+        proposed = min(proposed, 0.7)
+    entity["confidence_score"] = max(
+        entity.get("confidence_score", 0.4), proposed
+    )
+    # Annota la strategia in ethical_notes (append, non overwrite)
+    existing = entity.get("ethical_notes", "") or ""
+    note = (
+        f"Boundary da aourednik/historical-basemaps ({match.aourednik_year}, "
+        f"strategy={match.strategy}, precision={match.border_precision}). "
+        f"CC BY 4.0."
+    )
+    if "aourednik" not in existing:
+        entity["ethical_notes"] = f"{existing} {note}".strip()
 
 
 def _apply_generated_boundary(entity: dict) -> None:
@@ -198,8 +250,11 @@ def _tag_existing_real_polygon(entity: dict) -> bool:
 def process_file(
     filepath: Path,
     ne_by_iso: dict[str, dict],
+    aourednik_snapshots: list,
+    aourednik_cache: dict,
     dry_run: bool = False,
     skip_natural_earth: bool = False,
+    skip_aourednik: bool = False,
 ) -> dict:
     """Processa un singolo file batch.
 
@@ -210,10 +265,12 @@ def process_file(
     stats = {
         "total": len(entities),
         "skipped_real": 0,
-        "ne_matched_new": 0,        # Point/None -> NE
-        "ne_matched_upgrade": 0,    # generated -> NE
-        "generated_new": 0,         # Point/None -> generated
-        "generated_kept": 0,        # generated rimasto generated
+        "ne_matched_new": 0,            # Point/None -> NE
+        "ne_matched_upgrade": 0,        # generated -> NE
+        "aou_matched_new": 0,           # Point/None -> aourednik
+        "aou_matched_upgrade": 0,       # generated -> aourednik
+        "generated_new": 0,             # Point/None -> generated
+        "generated_kept": 0,            # generated rimasto generated
         "missing_capital": 0,
         "tagged_existing": 0,
         "by_strategy": Counter(),
@@ -232,7 +289,7 @@ def process_file(
             stats["skipped_real"] += 1
             continue
 
-        # 2. Tenta Natural Earth (per generated-upgrade o per missing/point)
+        # 2. Tenta Natural Earth (confini moderni, ottimo per post-1800)
         match: Optional[MatchResult] = None
         if not skip_natural_earth and ne_by_iso:
             match = match_entity(entity, ne_by_iso)
@@ -251,7 +308,26 @@ def process_file(
                 stats["disputed_matches"] += 1
             continue
 
-        # 3. Nessun NE match: genera approssimativo (solo se ha capitale)
+        # 3. Tenta aourednik/historical-basemaps (confini storici, pre-1800)
+        aou_match: Optional[AourednikMatch] = None
+        if not skip_aourednik and aourednik_snapshots:
+            aou_match = match_entity_aourednik(
+                entity, aourednik_snapshots, aourednik_cache
+            )
+
+        if aou_match and aou_match.matched and aou_match.geojson:
+            was_generated = _is_generated_polygon(entity)
+            _apply_aourednik_match(entity, aou_match)
+            modified = True
+            if was_generated:
+                stats["aou_matched_upgrade"] += 1
+            else:
+                stats["aou_matched_new"] += 1
+            stats["by_strategy"][f"aou_{aou_match.strategy}"] += 1
+            stats["by_type_enriched"][entity.get("entity_type", "?")] += 1
+            continue
+
+        # 4. Nessun match: genera approssimativo (solo se ha capitale)
         if _is_missing_or_point(entity):
             if not _has_valid_capital(entity):
                 stats["missing_capital"] += 1
@@ -267,7 +343,7 @@ def process_file(
             stats["by_strategy"]["generated"] += 1
             stats["by_type_enriched"][entity.get("entity_type", "?")] += 1
         else:
-            # Era gia' un poligono generato e non c'e' match NE: lascio com'e'
+            # Era gia' un poligono generato e non c'e' match: lascio com'e'
             stats["generated_kept"] += 1
 
     # Scrivi (se non dry-run e qualcosa e' cambiato)
@@ -288,6 +364,7 @@ def process_file(
 def process_all(
     dry_run: bool = False,
     skip_natural_earth: bool = False,
+    skip_aourednik: bool = False,
     ne_processed_path: Path = NE_PROCESSED_JSON,
 ) -> dict:
     """Processa tutti i file batch in data/entities/.
@@ -317,11 +394,25 @@ def process_all(
                 ne_by_iso = {}
         logger.info("Caricate %d entita' Natural Earth", len(ne_by_iso))
 
+    # Carica aourednik snapshots (lazy: le feature le leggeremo on-demand)
+    aourednik_snapshots: list = []
+    aourednik_cache: dict = {}
+    if not skip_aourednik:
+        aourednik_snapshots = list_aourednik_snapshots()
+        logger.info(
+            "Caricati %d snapshot aourednik (range: %s - %s)",
+            len(aourednik_snapshots),
+            aourednik_snapshots[0][0] if aourednik_snapshots else "n/a",
+            aourednik_snapshots[-1][0] if aourednik_snapshots else "n/a",
+        )
+
     print()
     print("=" * 78)
     print(f"  AtlasPI — Boundary Enrichment Pipeline {'[DRY RUN]' if dry_run else ''}")
     if skip_natural_earth:
-        print("  Modalita': solo generazione (Natural Earth disabilitato)")
+        print("  Modalita': Natural Earth disabilitato")
+    if skip_aourednik:
+        print("  Modalita': aourednik disabilitato")
     print("=" * 78)
     print()
 
@@ -330,6 +421,8 @@ def process_all(
         "skipped_real": 0,
         "ne_matched_new": 0,
         "ne_matched_upgrade": 0,
+        "aou_matched_new": 0,
+        "aou_matched_upgrade": 0,
         "generated_new": 0,
         "generated_kept": 0,
         "missing_capital": 0,
@@ -342,10 +435,17 @@ def process_all(
 
     for filepath in batch_files:
         stats = process_file(
-            filepath, ne_by_iso, dry_run=dry_run, skip_natural_earth=skip_natural_earth
+            filepath,
+            ne_by_iso,
+            aourednik_snapshots,
+            aourednik_cache,
+            dry_run=dry_run,
+            skip_natural_earth=skip_natural_earth,
+            skip_aourednik=skip_aourednik,
         )
         for k in (
             "total","skipped_real","ne_matched_new","ne_matched_upgrade",
+            "aou_matched_new","aou_matched_upgrade",
             "generated_new","generated_kept","missing_capital","tagged_existing",
             "disputed_matches",
         ):
@@ -357,9 +457,9 @@ def process_all(
         print(
             f"  {filepath.name:35s} "
             f"total={stats['total']:>3} "
-            f"skip_real={stats['skipped_real']:>3} "
-            f"ne_new={stats['ne_matched_new']:>3} "
-            f"ne_upg={stats['ne_matched_upgrade']:>3} "
+            f"real={stats['skipped_real']:>3} "
+            f"ne={stats['ne_matched_new']+stats['ne_matched_upgrade']:>3} "
+            f"aou={stats['aou_matched_new']+stats['aou_matched_upgrade']:>3} "
             f"gen_new={stats['generated_new']:>3} "
             f"gen_kept={stats['generated_kept']:>3}"
         )
@@ -368,37 +468,45 @@ def process_all(
     print("=" * 78)
     print("  AGGREGATE SUMMARY")
     print("=" * 78)
-    print(f"  Files processed:           {aggregate['files_processed']}")
-    print(f"  Total entities:            {aggregate['total']}")
-    print(f"  Skipped (real polygon):    {aggregate['skipped_real']}")
-    print(f"  Tagged-only (legacy real): {aggregate['tagged_existing']}")
-    print(f"  NE matched (new boundary): {aggregate['ne_matched_new']}")
-    print(f"  NE matched (upgrade gen):  {aggregate['ne_matched_upgrade']}")
-    print(f"  Generated (new boundary):  {aggregate['generated_new']}")
-    print(f"  Generated (kept as-is):    {aggregate['generated_kept']}")
-    print(f"  Missing capital (skip):    {aggregate['missing_capital']}")
-    print(f"  Disputed matches (ETHICS): {aggregate['disputed_matches']}")
+    print(f"  Files processed:             {aggregate['files_processed']}")
+    print(f"  Total entities:              {aggregate['total']}")
+    print(f"  Skipped (real polygon):      {aggregate['skipped_real']}")
+    print(f"  Tagged-only (legacy real):   {aggregate['tagged_existing']}")
+    print(f"  NE matched (new boundary):   {aggregate['ne_matched_new']}")
+    print(f"  NE matched (upgrade gen):    {aggregate['ne_matched_upgrade']}")
+    print(f"  aourednik matched (new):     {aggregate['aou_matched_new']}")
+    print(f"  aourednik matched (upgrade): {aggregate['aou_matched_upgrade']}")
+    print(f"  Generated (new boundary):    {aggregate['generated_new']}")
+    print(f"  Generated (kept as-is):      {aggregate['generated_kept']}")
+    print(f"  Missing capital (skip):      {aggregate['missing_capital']}")
+    print(f"  Disputed matches (ETHICS):   {aggregate['disputed_matches']}")
     print()
     print("  By strategy (this run):")
     for strat, n in aggregate["by_strategy"].most_common():
-        print(f"    {strat:25s} {n}")
+        print(f"    {strat:28s} {n}")
     print()
     print("  By entity type (enriched/upgraded):")
     for et, n in aggregate["by_type_enriched"].most_common():
-        print(f"    {et:25s} {n}")
+        print(f"    {et:28s} {n}")
     print()
 
     # Coverage projection
-    real_total = aggregate["skipped_real"] + aggregate["ne_matched_new"] + aggregate["ne_matched_upgrade"]
+    real_total = (
+        aggregate["skipped_real"]
+        + aggregate["ne_matched_new"]
+        + aggregate["ne_matched_upgrade"]
+        + aggregate["aou_matched_new"]
+        + aggregate["aou_matched_upgrade"]
+    )
     gen_total = aggregate["generated_new"] + aggregate["generated_kept"]
     if aggregate["total"] > 0:
         real_pct = real_total / aggregate["total"] * 100
         gen_pct = gen_total / aggregate["total"] * 100
         none_pct = aggregate["missing_capital"] / aggregate["total"] * 100
         print(f"  COVERAGE (after this run):")
-        print(f"    Real boundaries:         {real_total} ({real_pct:.1f}%)")
-        print(f"    Generated boundaries:    {gen_total} ({gen_pct:.1f}%)")
-        print(f"    No boundary (no capital): {aggregate['missing_capital']} ({none_pct:.1f}%)")
+        print(f"    Real boundaries:           {real_total} ({real_pct:.1f}%)")
+        print(f"    Generated boundaries:      {gen_total} ({gen_pct:.1f}%)")
+        print(f"    No boundary (no capital):  {aggregate['missing_capital']} ({none_pct:.1f}%)")
     print("=" * 78)
 
     if dry_run:
@@ -421,7 +529,12 @@ def main() -> int:
     parser.add_argument(
         "--skip-natural-earth",
         action="store_true",
-        help="Non usa Natural Earth (solo generated).",
+        help="Non usa Natural Earth (solo aourednik + generated).",
+    )
+    parser.add_argument(
+        "--skip-aourednik",
+        action="store_true",
+        help="Non usa aourednik/historical-basemaps (solo NE + generated).",
     )
     parser.add_argument(
         "--ne-processed",
@@ -435,6 +548,7 @@ def main() -> int:
         process_all(
             dry_run=args.dry_run,
             skip_natural_earth=args.skip_natural_earth,
+            skip_aourednik=args.skip_aourednik,
             ne_processed_path=args.ne_processed,
         )
     except Exception:

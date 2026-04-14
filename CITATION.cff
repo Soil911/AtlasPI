@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+message: "If you use AtlasPI in academic work, please cite it as below."
+title: "AtlasPI: A structured historical geographic database for AI agents"
+abstract: >-
+  AtlasPI is an open-source REST API and dataset of 747 historical
+  geopolitical entities from 4500 BCE to 2024, with coordinates,
+  GeoJSON boundaries, confidence scores, and 2,200+ academic sources.
+  Designed to be consumed by AI agents and machine learning pipelines,
+  it bridges the gap between fragmented geographic primary sources
+  (Natural Earth, historical basemaps, Wikidata) and the structured,
+  contextualized format required for automated historical reasoning.
+  The dataset documents conquest, displacement, and contested
+  borders without sanitization, applying an explicit ethical framework
+  (transparency of uncertainty, no single version of history, no
+  geographic or cultural bias).
+authors:
+  - family-names: "Riza"
+    given-names: "Clirim"
+    affiliation: "CRA (Cra Srl)"
+version: "6.1.1"
+date-released: "2026-04-14"
+license: "Apache-2.0"
+repository-code: "https://github.com/Soil911/AtlasPI"
+url: "https://atlaspi.cra-srl.com"
+type: software
+keywords:
+  - historical-geography
+  - historical-gis
+  - rest-api
+  - ai-agents
+  - mcp-server
+  - geojson
+  - digital-humanities
+  - open-data
+references:
+  - type: data
+    title: "Natural Earth"
+    authors:
+      - name: "Natural Earth"
+    url: "https://www.naturalearthdata.com/"
+    notes: "Public domain vector basemaps used for post-1800 administrative boundaries."
+  - type: data
+    title: "historical-basemaps"
+    authors:
+      - family-names: "Ourednik"
+        given-names: "André"
+    repository-code: "https://github.com/aourednik/historical-basemaps"
+    license: "CC-BY-4.0"
+    notes: >-
+      Timestamped world boundary geojson snapshots used for pre-1800
+      historical entity matching.

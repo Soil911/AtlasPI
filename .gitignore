@@ -15,6 +15,19 @@ data/*.db
 data/*.db-shm
 data/*.db-wal
 
+# Backup files created by ingestion pipelines
+*.bak
+data/entities/*.bak
+
+# Raw external datasets (downloaded at setup time, too large to commit)
+# - aourednik/historical-basemaps (~140MB, CC BY 4.0)
+# - Natural Earth 10m shapefiles (~14MB, CC0)
+# Re-fetch with: bash scripts/fetch_raw_data.sh
+data/raw/aourednik-historical-basemaps/
+data/raw/natural_earth/
+data/raw/historical-basemaps/
+data/processed/natural_earth_boundaries.json
+
 # Runtime
 *.log
 server.log

@@ -2,6 +2,87 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.1.1] - 2026-04-14
+
+**Tema**: Boundary coverage jump (23% → 93%) via matcher aourednik + fix
+ETHICS-003 compliance su entita' contestate + performance export.
+
+### Boundary enrichment — salto di qualita' dati
+
+- Nuovo modulo **`src/ingestion/aourednik_match.py`** per il matching
+  contro **aourednik/historical-basemaps** (CC BY 4.0, 53 snapshot
+  timestamped da -123000 a 2010 CE). Risolve il gap pre-1800 che
+  Natural Earth non puo' coprire.
+- Matching rigoroso a 5 livelli: `exact_name` → `SUBJECTO` (suzerain) →
+  `PARTOF` → `fuzzy_name` (soglia 80%) → `capital_in_polygon`
+  (point-in-polygon ray casting, prefer smallest container) →
+  `capital_near_centroid` (stretto, 250km — solo fallback estremo).
+- **Point-in-polygon implementato senza shapely** (ray casting + bbox
+  pre-filter + hole exclusion). ETHICS: la capitale dentro il poligono
+  e' una prova geografica reale, non un'approssimazione.
+- **Pipeline arricchimento** (`enrich_all_boundaries.py`): ordine ora
+  NE → aourednik → generated. Idempotente, con `.bak` per ogni file.
+  Flag `--skip-aourednik` per test isolati.
+- **Tracciamento fonte** per ogni match aourednik: campi
+  `boundary_aourednik_name`, `boundary_aourednik_year`,
+  `boundary_aourednik_precision` + annotazione `ethical_notes`.
+- **313 entita'** arricchite con boundary aourednik (41.6% del dataset).
+- **Coverage totale**: 699/752 boundary reali (**93.0%**, da 23%):
+  - natural_earth: 212 (28.2%)
+  - aourednik: 313 (41.6%)
+  - historical_map (manuali): 174 (23.1%)
+  - approximate_generated: 51 (6.8%)
+  - nessun boundary (manca capitale): 2 (0.3%)
+
+### Fix ETHICS-003 (territori contestati)
+
+- **BUG risolto**: `_apply_natural_earth_match` e `_apply_aourednik_match`
+  potevano alzare il `confidence_score` sopra 0.7 anche per entita'
+  `status = "disputed"`. Violava ETHICS-003. Ora e' cappato
+  esplicitamente: la certezza geografica non risolve la disputa storica.
+- Tre entita' gia' salvate con conf > 0.7 sono state riallineate a 0.7:
+  Reino de la Araucania y Patagonia (e altre 2 modern disputed).
+
+### Performance
+
+- **`/v1/export/geojson`** riscritto per evitare double-JSON-encoding.
+  Il boundary nel DB e' gia' una stringa JSON valida: ora viene embedded
+  direttamente nella FeatureCollection invece di `json.loads` + `json.dumps`.
+- Nuovi parametri: `?geometry=full|centroid|none`:
+  - `full` (default) — poligoni completi, bulk export (~10s per 48MB)
+  - `centroid` — Point delle capitali, 200x piu' veloce (<500ms)
+  - `none` — solo properties, ideale per indicizzazione
+- **`/v1/random` ottimizzato**: prima selezionava TUTTI i candidati con
+  eager-loading (48MB di boundary!), poi pickava uno. Ora query ID-only,
+  selezione random, eager-load del solo scelto. Da ~3s a <300ms.
+
+### Academic credibility
+
+- **`CITATION.cff`**: metadata di citazione formale per GitHub/Zenodo.
+  Autore, versione, licenza, keyword, referenze dataset (Natural Earth +
+  aourednik) con attribuzione CC BY 4.0.
+- **`.zenodo.json`**: config per archivio Zenodo DOI-minted. Rende
+  AtlasPI citabile in letteratura accademica.
+
+### Test
+
+- **234 test totali** (da 233). Aggiunto `test_geojson_export_full_under_15s`
+  e riadattato `test_geojson_export_centroid_under_500ms` per riflettere
+  la nuova API dell'export.
+- Fix 3 regressioni: ETHICS-003 disputed confidence, export performance,
+  random performance — tutti i nuovi test verdi.
+
+### File modificati (principali)
+
+- `src/ingestion/aourednik_match.py` (nuovo, ~450 righe)
+- `src/ingestion/enrich_all_boundaries.py` (pipeline estesa)
+- `src/api/routes/export.py` (perf + nuovi flag)
+- `src/api/routes/entities.py` (random perf)
+- `src/config.py` (version 6.1.1)
+- `tests/test_performance.py`
+- Tutti i `data/entities/batch_*.json` (boundary arricchiti con .bak)
+- `CITATION.cff`, `.zenodo.json` (nuovi)
+
 ## [v6.1.0] - 2026-04-14
 
 **Tema**: Reliability + Discoverability post-deploy. Il sito e' online su

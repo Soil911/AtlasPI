@@ -24,46 +24,77 @@ router = APIRouter(tags=["esportazione"])
 @router.get(
     "/v1/export/geojson",
     summary="Esporta tutte le entità come GeoJSON FeatureCollection",
-    description="Standard GeoJSON — importabile in QGIS, Leaflet, Mapbox, etc.",
+    description=(
+        "Standard GeoJSON — importabile in QGIS, Leaflet, Mapbox, etc. "
+        "Usa `geometry=none` per esportare solo le proprieta' (molto piu' veloce) "
+        "o `geometry=centroid` per esportare solo le capitali come Point."
+    ),
 )
 def export_geojson(
     year: int | None = Query(None, ge=-4000, le=2100),
+    geometry: str = Query(
+        "full",
+        pattern="^(full|centroid|none)$",
+        description="full = poligoni completi (default); centroid = Point capitali; none = solo properties",
+    ),
     db: Session = Depends(get_db),
 ):
-    q = db.query(GeoEntity).options(joinedload(GeoEntity.name_variants))
+    q = db.query(GeoEntity)
 
     if year is not None:
         from sqlalchemy import or_
         q = q.filter(GeoEntity.year_start <= year)
         q = q.filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= year))
 
-    features = []
+    # PERF: costruiamo il JSON a mano per evitare json.loads + json.dumps
+    # sulle MultiPolygon (che sono gia' stringhe JSON valide nel DB).
+    # Con 700+ boundary MultiPolygon il risparmio e' dell'ordine di secondi.
+    buf = io.StringIO()
+    buf.write('{"type":"FeatureCollection","features":[')
+    first = True
     for e in q.all():
-        geom = None
-        if e.boundary_geojson:
-            try:
-                geom = json.loads(e.boundary_geojson)
-            except (json.JSONDecodeError, TypeError):
-                pass
+        if not first:
+            buf.write(",")
+        first = False
 
-        features.append({
-            "type": "Feature",
-            "id": e.id,
-            "geometry": geom,
-            "properties": {
-                "name_original": e.name_original,
-                "name_original_lang": e.name_original_lang,
-                "entity_type": e.entity_type,
-                "year_start": e.year_start,
-                "year_end": e.year_end,
-                "status": e.status,
-                "confidence_score": e.confidence_score,
-            },
-        })
+        # Properties — piccole, jsonifichiamo normalmente
+        props = {
+            "name_original": e.name_original,
+            "name_original_lang": e.name_original_lang,
+            "entity_type": e.entity_type,
+            "year_start": e.year_start,
+            "year_end": e.year_end,
+            "status": e.status,
+            "confidence_score": e.confidence_score,
+        }
+        props_json = json.dumps(props, ensure_ascii=False)
 
-    collection = {"type": "FeatureCollection", "features": features}
+        # Geometry — in base alla modalita' richiesta
+        if geometry == "none":
+            geom_json = "null"
+        elif geometry == "centroid":
+            if e.capital_lat is not None and e.capital_lon is not None:
+                geom_json = (
+                    '{"type":"Point","coordinates":['
+                    f'{e.capital_lon},{e.capital_lat}]}}'
+                )
+            else:
+                geom_json = "null"
+        else:  # full
+            if e.boundary_geojson:
+                # E' gia' una stringa JSON valida nel DB: embed direttamente.
+                geom_json = e.boundary_geojson
+            else:
+                geom_json = "null"
+
+        buf.write(
+            f'{{"type":"Feature","id":{e.id},'
+            f'"geometry":{geom_json},"properties":{props_json}}}'
+        )
+    buf.write("]}")
+
     return Response(
-        content=json.dumps(collection, ensure_ascii=False),
+        content=buf.getvalue(),
         media_type="application/geo+json",
         headers={
             "Content-Disposition": "attachment; filename=atlaspi_entities.geojson",
