@@ -1,0 +1,680 @@
+[
+  {
+    "name_original": "وفاة النبي محمد",
+    "name_original_lang": "ara",
+    "event_type": "DEATH_OF_RULER",
+    "year": 632,
+    "year_end": null,
+    "location_name": "Medina, Hejaz",
+    "location_lat": 24.47,
+    "location_lon": 39.61,
+    "main_actor": "Muhammad ibn Abdullah (subject of the event, natural death)",
+    "description": "Muhammad died at Medina on 8 June 632 CE after a brief illness, having unified most of the Arabian Peninsula under the nascent umma. His death precipitated an immediate succession crisis between the Ansar and Muhajirun at the Saqifat Bani Sa'ida, resolved in favour of Abu Bakr as the first caliph, and left latent the Sunni-Shia dispute over rightful succession that would produce centuries of political and theological conflict.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Sunni and Shia traditions present incompatible accounts of events at Saqifa and the Prophet's intended succession. This entry records the death and the fact of the succession crisis without arbitrating the doctrinal dispute.",
+    "sources": [
+      {"citation": "Ibn Sa'd, Kitab al-Tabaqat al-Kubra (c. 845 CE).", "url": null, "source_type": "primary"},
+      {"citation": "Madelung, W. (1997). The Succession to Muhammad: A Study of the Early Caliphate. Cambridge University Press.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": []
+  },
+  {
+    "name_original": "معركة كربلاء",
+    "name_original_lang": "ara",
+    "event_type": "MASSACRE",
+    "year": 680,
+    "year_end": null,
+    "location_name": "Karbala, Iraq",
+    "location_lat": 32.61,
+    "location_lon": 44.02,
+    "main_actor": "Umayyad caliphal forces under Umar ibn Sa'd on orders of governor Ubayd Allah ibn Ziyad and Caliph Yazid I",
+    "description": "An Umayyad force of approximately four thousand surrounded and killed Husayn ibn Ali, grandson of Muhammad, together with most of his seventy-two companions and male relatives at Karbala on 10 Muharram 61 AH. The surviving women and children, including Husayn's sister Zaynab and son Ali Zayn al-Abidin, were taken as captives to Kufa and Damascus. The killing consolidated Umayyad control but produced the foundational martyrdom narrative of Shia Islam.",
+    "casualties_low": 72,
+    "casualties_high": 90,
+    "casualties_source": "al-Tabari, Tarikh al-Rusul wa al-Muluk, vol. 19 (trans. I.K.A. Howard, 1990)",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Labelled MASSACRE per ETHICS-007: the killing of a small, partly non-combatant party by a force of thousands after denial of water is not a 'battle' in the symmetric sense, even though Husayn's companions were armed. Umayyad-aligned later chronicles attempt to reframe responsibility; this entry names the chain of command.",
+    "sources": [
+      {"citation": "al-Tabari, Tarikh al-Rusul wa al-Muluk (c. 915 CE), vol. 19, trans. I.K.A. Howard (1990). SUNY Press.", "url": null, "source_type": "primary"},
+      {"citation": "Hyder, S.A. (2006). Reliving Karbala: Martyrdom in South Asian Memory. Oxford University Press.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "الدولة الأموية", "role": "MAIN_ACTOR", "notes": "Umayyad Caliphate as state actor"}
+    ]
+  },
+  {
+    "name_original": "سقوط الدولة الأموية",
+    "name_original_lang": "ara",
+    "event_type": "DISSOLUTION_STATE",
+    "year": 750,
+    "year_end": null,
+    "location_name": "Great Zab River, northern Mesopotamia",
+    "location_lat": 36.10,
+    "location_lon": 43.30,
+    "main_actor": "Abbasid revolutionary coalition under Abu al-Abbas al-Saffah and the general Abu Muslim al-Khurasani",
+    "description": "The Abbasid Revolution, mobilising Khurasani Arabs, mawali converts and Shia sympathisers, defeated the last Umayyad caliph Marwan II at the Battle of the Zab and hunted down the Umayyad family. A surviving prince, Abd al-Rahman I, escaped to al-Andalus and founded the Emirate of Cordoba. The revolution shifted the caliphate's capital east to Baghdad and ended Arab aristocratic dominance in favour of a multi-ethnic imperial elite.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The 'Banquet of Jaffa' — the Abbasid massacre of surviving Umayyad family members invited under safe-conduct — is well-attested but often softened in general histories. It is part of the same event complex.",
+    "sources": [
+      {"citation": "al-Tabari, Tarikh al-Rusul wa al-Muluk, vol. 27 (trans. J.A. Williams, 1985).", "url": null, "source_type": "primary"},
+      {"citation": "Kennedy, H. (2004). The Prophet and the Age of the Caliphates (2nd ed.). Routledge.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "الدولة الأموية", "role": "DISSOLVED"},
+      {"entity_name_original": "الخلافة العباسية", "role": "FOUNDED"}
+    ]
+  },
+  {
+    "name_original": "安史之亂",
+    "name_original_lang": "lzh",
+    "event_type": "REBELLION",
+    "year": 755,
+    "year_end": 763,
+    "location_name": "North China, Tang Empire",
+    "location_lat": 34.27,
+    "location_lon": 108.93,
+    "main_actor": "An Lushan and Shi Siming, Tang frontier military commanders of Sogdian-Turkic origin",
+    "description": "An Lushan, a jiedushi (military governor) of mixed Sogdian-Turkic origin commanding three northeastern commands, rebelled against Emperor Xuanzong in December 755 and proclaimed the Yan dynasty. The eight-year war culminated with Tang forces, reinforced by Uighur cavalry and at catastrophic fiscal cost, retaking Chang'an and Luoyang. Tang census figures drop from roughly 52.9 million (754) to 16.9 million (764); historians debate how much reflects actual mortality versus administrative collapse and tax evasion, but excess deaths from direct violence, starvation and epidemic plausibly ran into the tens of millions.",
+    "casualties_low": 13000000,
+    "casualties_high": 36000000,
+    "casualties_source": "Durand, J.D. (1960). The Population Statistics of China, A.D. 2-1953. Population Studies 13(3).",
+    "confidence_score": 0.6,
+    "status": "disputed",
+    "known_silence": true,
+    "silence_reason": "Tang census records collapsed during and after the rebellion. The drop of ~36 million registered persons cannot be interpreted cleanly as deaths — it also reflects refugees, desertion of the taxable register, and loss of administrative control in peripheral zones. Specific mortality in non-Chinese ethnic groups within Tang borders is particularly poorly recorded.",
+    "ethical_notes": "Frequently cited as 'possibly the deadliest conflict in human history before World War II' based on census delta, but the interpretation is contested. Entry flags the uncertainty rather than endorsing either the maximalist or minimalist reading.",
+    "sources": [
+      {"citation": "Sima Guang, Zizhi Tongjian (c. 1084), chapters 217-222.", "url": null, "source_type": "primary"},
+      {"citation": "Pulleyblank, E.G. (1955). The Background of the Rebellion of An Lu-shan. Oxford University Press.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": []
+  },
+  {
+    "name_original": "Coronatio Karoli Magni",
+    "name_original_lang": "lat",
+    "event_type": "CORONATION",
+    "year": 800,
+    "year_end": null,
+    "location_name": "Old St. Peter's Basilica, Rome",
+    "location_lat": 41.90,
+    "location_lon": 12.45,
+    "main_actor": "Pope Leo III (crowning) and Charlemagne (crowned)",
+    "description": "On Christmas Day 800, Pope Leo III placed an imperial crown on the head of the Frankish king Karl (Charlemagne) in Old St. Peter's, proclaiming him Imperator Romanorum. The act revived the Western Roman imperial title after 324 years and placed the papacy in the position of empire-maker, but was regarded by the Byzantine court at Constantinople as usurpation — the empress Irene was the legitimate Roman ruler in eastern eyes. The coronation underpins the later construction of the Sacrum Imperium Romanum.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Einhard reports Charlemagne was surprised; modern scholarship generally treats this as diplomatic staging. The 'two emperors problem' is not a footnote but the central geopolitical consequence.",
+    "sources": [
+      {"citation": "Einhard, Vita Karoli Magni (c. 830 CE), ch. 28.", "url": null, "source_type": "primary"},
+      {"citation": "Costambeys, M., Innes, M., & MacLean, S. (2011). The Carolingian World. Cambridge University Press.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "Sacrum Imperium Romanum", "role": "FOUNDED", "notes": "Proto-founding; the continuous institution is conventionally dated from Otto I 962"}
+    ]
+  },
+  {
+    "name_original": "سومناته",
+    "name_original_lang": "san",
+    "event_type": "MASSACRE",
+    "year": 1024,
+    "year_end": 1025,
+    "location_name": "Somnath, Saurashtra, Gujarat",
+    "location_lat": 20.89,
+    "location_lon": 70.40,
+    "main_actor": "Mahmud of Ghazni and the Ghaznavid army",
+    "description": "Mahmud of Ghazni led a winter campaign across the Thar Desert and attacked the Shaiva temple of Somnath, destroying the jyotirlinga shrine, looting its treasury, and killing the garrison and pilgrims. Persian panegyric sources give 50,000 defenders and pilgrims killed; the figure is conventional and probably inflated, but substantial loss of life is not disputed. The raid is the sixteenth and most famous of Mahmud's campaigns into the Indian subcontinent and became a site of colonial-era and post-colonial identity politics.",
+    "casualties_low": 5000,
+    "casualties_high": 50000,
+    "casualties_source": "al-Utbi, Tarikh-i Yamini (c. 1036); Thapar, R. (2004). Somanatha: The Many Voices of a History. Viking.",
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Thapar (2004) documents how the event was constructed differently in Jain merchant chronicles, Persian court historiography and 19th-century British accounts. The basic fact of a Ghaznavid attack destroying the temple is secure; the mythologised versions on all sides require deconstruction.",
+    "sources": [
+      {"citation": "al-Utbi, Kitab al-Yamini (c. 1036 CE).", "url": null, "source_type": "primary"},
+      {"citation": "Thapar, R. (2004). Somanatha: The Many Voices of a History. Viking.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "دولت غزنویان", "role": "MAIN_ACTOR"}
+    ]
+  },
+  {
+    "name_original": "Ἅλωσις τῆς Κωνσταντινουπόλεως 1204",
+    "name_original_lang": "grc",
+    "event_type": "SIEGE",
+    "year": 1204,
+    "year_end": null,
+    "location_name": "Constantinople",
+    "location_lat": 41.02,
+    "location_lon": 28.98,
+    "main_actor": "Venetian fleet under Doge Enrico Dandolo and Frankish crusaders under Boniface of Montferrat",
+    "description": "The Fourth Crusade, diverted from Egypt by Venetian debt and Byzantine succession politics, stormed Constantinople on 12 April 1204 and subjected the city to three days of sack. Relics, bronze statuary, manuscripts and liturgical treasures were looted; the Hagia Sophia was desecrated and a prostitute seated on the patriarchal throne per Nicetas Choniates. The Crusaders partitioned the empire and established the Latin Empire, a lasting rupture in Eastern and Western Christianity apologised for by John Paul II in 2001.",
+    "casualties_low": 2000,
+    "casualties_high": null,
+    "casualties_source": "Nicetas Choniates, Historia (c. 1215); Queller, D.E., & Madden, T.F. (1997).",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Traditionally catalogued as SIEGE; the sustained sack of a Christian imperial capital by a papally-blessed Crusade is also COLONIAL_VIOLENCE in substance. Entry uses SIEGE as the primary type and names the actors explicitly.",
+    "sources": [
+      {"citation": "Nicetas Choniates, Historia (c. 1215), trans. H.J. Magoulias (1984).", "url": null, "source_type": "primary"},
+      {"citation": "Queller, D.E., & Madden, T.F. (1997). The Fourth Crusade: The Conquest of Constantinople (2nd ed.). University of Pennsylvania Press.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": []
+  },
+  {
+    "name_original": "دهلی سلطنت",
+    "name_original_lang": "fas",
+    "event_type": "FOUNDING_STATE",
+    "year": 1206,
+    "year_end": null,
+    "location_name": "Delhi, northern India",
+    "location_lat": 28.61,
+    "location_lon": 77.23,
+    "main_actor": "Qutb al-Din Aibak, former Mamluk slave-general of Muhammad of Ghor",
+    "description": "After the assassination of Muhammad of Ghor in 1206, his Mamluk general Qutb al-Din Aibak declared independent rule at Lahore and later Delhi, founding what became the Delhi Sultanate. Over the next three centuries five successive dynasties (Mamluk, Khalji, Tughluq, Sayyid, Lodi) ruled from Delhi, introducing Persianate administration and Turko-Afghan military aristocracies to the northern subcontinent, and reshaping the region's linguistic, religious and architectural landscape.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": null,
+    "sources": [
+      {"citation": "Minhaj-i-Siraj, Tabaqat-i-Nasiri (c. 1260 CE), trans. H.G. Raverty (1881).", "url": null, "source_type": "primary"},
+      {"citation": "Jackson, P. (1999). The Delhi Sultanate: A Political and Military History. Cambridge University Press.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": []
+  },
+  {
+    "name_original": "حصار بغداد",
+    "name_original_lang": "ara",
+    "event_type": "SIEGE",
+    "year": 1258,
+    "year_end": null,
+    "location_name": "Baghdad, Iraq",
+    "location_lat": 33.33,
+    "location_lon": 44.43,
+    "main_actor": "Mongol army under Hülegü Khan, grandson of Chinggis Khan",
+    "description": "A Mongol force under Hülegü besieged and took Baghdad on 10 February 1258, ending the Abbasid caliphate after five centuries. The last caliph al-Musta'sim was executed by being rolled in a carpet and trampled by horses (to shed no caliphal blood). The city's population was massacred across approximately a week; contemporaneous estimates range from 200,000 to 2,000,000 dead. The House of Wisdom (Bayt al-Hikma) and its libraries were destroyed — books thrown into the Tigris reputedly blackened the river for days — and the sophisticated Iraqi hydraulic irrigation system never fully recovered.",
+    "casualties_low": 200000,
+    "casualties_high": 800000,
+    "casualties_source": "Morgan, D. (2007). The Mongols (2nd ed.). Blackwell; figures drawn from Rashid al-Din and later Persian chronicles.",
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "The libraries of Baghdad — including the Bayt al-Hikma, private collections, madrasa libraries, and the Abbasid archives — were destroyed or dispersed. Arabic-language scientific, philosophical and administrative texts that were not already copied in al-Andalus, Cairo, or Khurasan were simply lost. There is no recoverable index of what was destroyed.",
+    "ethical_notes": "Recorded as SIEGE per enum; the killing of civilians and destruction of knowledge institutions is equally a MASSACRE and loss of documentation. Multiple frames apply; no frame is softened.",
+    "sources": [
+      {"citation": "Rashid al-Din, Jami' al-Tawarikh (c. 1310 CE).", "url": null, "source_type": "primary"},
+      {"citation": "Morgan, D. (2007). The Mongols (2nd ed.). Blackwell.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "الخلافة العباسية", "role": "DISSOLVED"},
+      {"entity_name_original": "ᠶᠡᠬᠡ ᠮᠣᠩᠭᠣᠯ ᠤᠯᠤᠰ", "role": "MAIN_ACTOR"}
+    ]
+  },
+  {
+    "name_original": "Samalas ᬲᬫᬮᬲ᭄",
+    "name_original_lang": "ban",
+    "event_type": "VOLCANIC_ERUPTION",
+    "year": 1257,
+    "year_end": null,
+    "location_name": "Mount Samalas, Rinjani complex, Lombok",
+    "location_lat": -8.42,
+    "location_lon": 116.47,
+    "main_actor": null,
+    "description": "A cataclysmic eruption of Mount Samalas on Lombok in mid-1257 ejected an estimated 40 cubic kilometres of material (VEI 7), making it one of the largest eruptions of the Common Era. Sulphate and tephra signatures appear in Greenland and Antarctic ice cores; European, Arabic and Chinese sources record the subsequent 'year without summer' with anomalous cold, crop failure and elevated mortality in 1258. The Old Javanese Babad Lombok preserves indigenous memory of the mountain's destruction.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": "Global famine/mortality attribution to the eruption is plausible but quantitatively unresolved.",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "The specific source volcano was unknown to Western science until 2013, when Lavigne et al. correlated the ice core sulphate spike with the Babad Lombok oral-textual tradition and the Samalas caldera. For seven and a half centuries an eruption with global climatic consequences had no identified source — a paradigmatic case of archival/European silence about a non-European event.",
+    "ethical_notes": "Attribution to Samalas rests on combined glaciochemistry, tephrochronology and reading of the Babad Lombok — an indigenous chronicle long dismissed as myth. Entry credits the Javanese textual tradition as evidentiary.",
+    "sources": [
+      {"citation": "Lavigne, F. et al. (2013). Source of the great A.D. 1257 mystery eruption unveiled, Samalas volcano, Rinjani Volcanic Complex, Indonesia. PNAS 110(42): 16742-16747.", "url": "https://doi.org/10.1073/pnas.1307520110", "source_type": "academic"},
+      {"citation": "Babad Lombok (Old Javanese chronicle, Lombok palm-leaf manuscript tradition).", "url": null, "source_type": "oral_tradition"}
+    ],
+    "entity_links": []
+  },
+  {
+    "name_original": "大明",
+    "name_original_lang": "lzh",
+    "event_type": "FOUNDING_STATE",
+    "year": 1368,
+    "year_end": null,
+    "location_name": "Yingtian (Nanjing), China",
+    "location_lat": 32.06,
+    "location_lon": 118.80,
+    "main_actor": "Zhu Yuanzhang, proclaimed as the Hongwu Emperor",
+    "description": "Zhu Yuanzhang, a former Buddhist novice and Red Turban rebel commander, proclaimed the Ming dynasty at Yingtian (Nanjing) on 23 January 1368 and within months drove the last Yuan emperor Toghon Temür out of Dadu (Beijing). Hongwu's reign restored Han Chinese imperial rule after 89 years of Mongol Yuan government, rebuilt the examination system and the tax cadaster, and initiated population registers (huangce) that structured Chinese fiscal governance for centuries.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Hongwu's regime consolidated power partly through large-scale purges (Hu Weiyong, Lan Yu cases); the founding is celebratory in Chinese historiography but was demographically violent in its first three decades.",
+    "sources": [
+      {"citation": "Ming Shilu (Veritable Records of the Ming), Taizu reign.", "url": null, "source_type": "primary"},
+      {"citation": "Mote, F.W. (1999). Imperial China 900-1800. Harvard University Press.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "明朝", "role": "FOUNDED"},
+      {"entity_name_original": "元朝", "role": "DISSOLVED", "notes": "Northern Yuan continued as rump state on the steppe until 1635"}
+    ]
+  },
+  {
+    "name_original": "لشکرکشی تیمور به دهلی",
+    "name_original_lang": "fas",
+    "event_type": "MASSACRE",
+    "year": 1398,
+    "year_end": 1399,
+    "location_name": "Delhi, northern India",
+    "location_lat": 28.61,
+    "location_lon": 77.23,
+    "main_actor": "Temür (Tamerlane) and the Timurid army",
+    "description": "Temür invaded the faltering Tughluq Sultanate in winter 1398, defeated Sultan Mahmud Shah at the Battle of Delhi on 17 December, and sacked the capital across three days. In his own memoirs (Tuzuk-i-Timuri), Temür records ordering the massacre of approximately 100,000 prisoners before the assault to prevent their revolt, and the subsequent plunder of Delhi's population — craftsmen deported to Samarkand to build the Bibi-Khanym mosque, the remainder killed or enslaved. Delhi took decades to repopulate; the Tughluq dynasty never recovered.",
+    "casualties_low": 100000,
+    "casualties_high": 300000,
+    "casualties_source": "Tuzuk-i-Timuri (autobiographical, c. 1399); Manz, B.F. (1989). The Rise and Rule of Tamerlane. Cambridge University Press.",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "One of the relatively rare cases where the perpetrator's own record corroborates the scale of the killing. Temür's autobiography is the primary source for his own figures; independent Indian and Persian sources confirm the order of magnitude.",
+    "sources": [
+      {"citation": "Tuzuk-i-Timuri (Memoirs of Temür), trans. M. Stewart (1830).", "url": null, "source_type": "primary"},
+      {"citation": "Manz, B.F. (1989). The Rise and Rule of Tamerlane. Cambridge University Press.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "تغلق", "role": "VICTIM"},
+      {"entity_name_original": "تیموریان", "role": "MAIN_ACTOR"}
+    ]
+  },
+  {
+    "name_original": "鄭和下西洋",
+    "name_original_lang": "lzh",
+    "event_type": "EXPLORATION",
+    "year": 1405,
+    "year_end": 1433,
+    "location_name": "Indian Ocean and East African coast",
+    "location_lat": 1.29,
+    "location_lon": 103.85,
+    "main_actor": "Admiral Zheng He under commission of the Yongle and Xuande emperors of Ming",
+    "description": "Between 1405 and 1433 the Ming Chinese admiral Zheng He — a Muslim eunuch of Hui-Central Asian origin — led seven state-organised maritime expeditions through the South China Sea, across the Indian Ocean, to Arabia and the Swahili coast. The fleets reached Malacca, Calicut, Hormuz, Aden, Mogadishu, Malindi and perhaps beyond; the largest expedition comprised roughly 200 ships and 27,000 personnel. The voyages projected Ming tributary diplomacy and maritime sophistication decades before Portuguese Atlantic exploration but were terminated by the Ming court on fiscal-ideological grounds; the shipyards were dismantled and many records burned.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "After 1433 the Confucian literati faction at court suppressed the treasure-voyage programme; Ming naval records, sailing charts and shipbuilding expertise were deliberately destroyed. Precise construction details of the baochuan ('treasure ships') — whose reported dimensions (~120m length) are disputed — cannot now be verified against original plans.",
+    "ethical_notes": "The voyages are sometimes romanticised as peaceful compared to later European expansion. They did involve military force (Zheng He deposed a king of Sri Lanka, intervened in Palembang succession) — not innocent, but structurally different from Atlantic slave trade or Iberian colonial conquest.",
+    "sources": [
+      {"citation": "Ma Huan, Yingya Shenglan (c. 1433 CE), trans. J.V.G. Mills (1970).", "url": null, "source_type": "primary"},
+      {"citation": "Dreyer, E.L. (2007). Zheng He: China and the Oceans in the Early Ming Dynasty. Pearson Longman.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "明朝", "role": "MAIN_ACTOR"}
+    ]
+  },
+  {
+    "name_original": "سقوط غرناطة",
+    "name_original_lang": "ara",
+    "event_type": "CONQUEST",
+    "year": 1492,
+    "year_end": null,
+    "location_name": "Granada, al-Andalus",
+    "location_lat": 37.18,
+    "location_lon": -3.60,
+    "main_actor": "Isabella I of Castile and Ferdinand II of Aragon (Reyes Católicos)",
+    "description": "On 2 January 1492 Muhammad XII (Boabdil) surrendered the keys of the Alhambra to Isabella and Ferdinand, ending the Emirate of Granada and seven centuries of Muslim political presence in Iberia. The Capitulations of Granada initially guaranteed religious freedom, property and language to the city's Muslim population; these guarantees were systematically violated from 1499 (Cisneros' forced conversions) onwards. The conquest was ideologically packaged as Reconquista and immediately leveraged to fund the Atlantic voyages of that same year.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Entry distinguishes the 1492 surrender (relatively bloodless, with binding capitulations) from the subsequent ETHNIC_CLEANSING of Mudéjares and Moriscos (1499-1614). Treating the conquest as a clean 'liberation' obscures the deliberate erasure of a civilisation that followed.",
+    "sources": [
+      {"citation": "Capitulaciones de Santa Fe (25 November 1491, surrender treaty).", "url": null, "source_type": "primary"},
+      {"citation": "Harvey, L.P. (1990). Islamic Spain, 1250 to 1500. University of Chicago Press.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "مملكة غرناطة", "role": "DISSOLVED"},
+      {"entity_name_original": "Corona de Castilla", "role": "MAIN_ACTOR"},
+      {"entity_name_original": "Corona d'Arago", "role": "MAIN_ACTOR"}
+    ]
+  },
+  {
+    "name_original": "גירוש ספרד",
+    "name_original_lang": "heb",
+    "event_type": "ETHNIC_CLEANSING",
+    "year": 1492,
+    "year_end": null,
+    "location_name": "Kingdom of Castile and Crown of Aragon",
+    "location_lat": 40.42,
+    "location_lon": -3.70,
+    "main_actor": "Isabella I of Castile and Ferdinand II of Aragon, advised by Inquisitor General Tomás de Torquemada",
+    "description": "The Edict of Expulsion (Alhambra Decree), promulgated 31 March 1492, ordered all Jews in Castile and Aragon to convert to Catholicism or leave within four months, forbidden to take gold, silver or coined money. Between 40,000 and 200,000 Sephardic Jews departed for North Africa, the Ottoman Empire, Portugal (expelled again 1496) and Italy; those who remained as conversos faced Inquisitorial scrutiny for generations. The expulsion terminated an eight-century Jewish presence in the Iberian peninsula and produced the Sephardic diaspora.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": "Mortality during forced migration is not systematically recorded; Ottoman and North African admissions records partial.",
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Labelled ETHNIC_CLEANSING per ETHICS-007. 'Expulsion' is the neutral term of the edict itself; the act — forced conversion or exile under capital penalty, confiscation of movable wealth, violence during flight — meets the modern definition of ethnic cleansing.",
+    "sources": [
+      {"citation": "Edicto de Granada (Alhambra Decree), 31 March 1492, text in Baer, Y. (1961). A History of the Jews in Christian Spain. JPS.", "url": null, "source_type": "primary"},
+      {"citation": "Kamen, H. (1988). The Spanish Inquisition: A Historical Revision. Yale University Press.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "Corona de Castilla", "role": "MAIN_ACTOR"},
+      {"entity_name_original": "Corona d'Arago", "role": "MAIN_ACTOR"}
+    ]
+  },
+  {
+    "name_original": "Genocidio de los Taínos",
+    "name_original_lang": "spa",
+    "event_type": "GENOCIDE",
+    "year": 1492,
+    "year_end": 1550,
+    "location_name": "Hispaniola, Cuba, Puerto Rico, Jamaica (Greater Antilles)",
+    "location_lat": 18.50,
+    "location_lon": -69.98,
+    "main_actor": "Spanish colonial administration, encomenderos, and successive governors (Columbus, Bobadilla, Ovando, Diego Colón)",
+    "description": "The Taíno population of the Greater Antilles, estimated at 250,000 to 1,000,000 on Hispaniola alone at first contact in 1492, collapsed to a few thousand within fifty years. Mortality combined Old World epidemic disease (smallpox from 1518), the encomienda labour regime of mining and cassava cultivation, systematic violence documented by Bartolomé de las Casas (Brevísima relación, 1552), famine from disrupted subsistence, and dispersal. By the 1550s the cédulas speak of the Taíno as effectively extinct, though recent genetic and cultural studies confirm surviving descent.",
+    "casualties_low": 250000,
+    "casualties_high": 1000000,
+    "casualties_source": "Cook, N.D. (1998). Born to Die: Disease and New World Conquest 1492-1650. Cambridge University Press.",
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "Taíno demography prior to contact is reconstructed indirectly; their own writing systems and oral archives were destroyed, their chieftains (caciques) killed, their cosmology (zemi cult) criminalised. Las Casas is the primary documentary witness, but he is a Spanish friar, not a Taíno voice. The Taíno perspective on their own annihilation exists only in fragments — petroglyphs, archaeology, surviving linguistic loans, recent descendant testimony.",
+    "ethical_notes": "Labelled GENOCIDE per ETHICS-007. Las Casas uses the vocabulary of 'destruction' (destrucción) from 1542. The debate whether 16th-century mortality met the Lemkin definition is a 20th-century academic argument; the demographic outcome is not disputed.",
+    "sources": [
+      {"citation": "Las Casas, B. de (1552). Brevísima relación de la destrucción de las Indias.", "url": null, "source_type": "primary"},
+      {"citation": "Cook, N.D. (1998). Born to Die: Disease and New World Conquest 1492-1650. Cambridge University Press.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "Taíno", "role": "VICTIM"},
+      {"entity_name_original": "Imperio Español", "role": "MAIN_ACTOR"}
+    ]
+  },
+  {
+    "name_original": "كيلوة كسوانى",
+    "name_original_lang": "swa",
+    "event_type": "COLONIAL_VIOLENCE",
+    "year": 1505,
+    "year_end": null,
+    "location_name": "Kilwa Kisiwani, Swahili coast",
+    "location_lat": -8.96,
+    "location_lon": 39.50,
+    "main_actor": "Portuguese armada under Dom Francisco de Almeida, first Viceroy of Portuguese India",
+    "description": "On 24 July 1505 a Portuguese fleet of eight ships under Dom Francisco de Almeida attacked and sacked the Swahili city-state of Kilwa Kisiwani, deposed Sultan Ibrahim, installed the puppet Muhammad Ankoni, and built the Fort Gereza. Two weeks later Almeida's fleet sacked Mombasa more destructively. Kilwa's subjection opened Portuguese control of East African Indian Ocean trade (gold from Mutapa, ivory, slaves); the Swahili mercantile-scholarly civilisation of stone towns entered a two-century decline.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Swahili coast had a centuries-old Indian Ocean trading economy linking Zanj, Arabia, Persia, India and China. Portuguese 'arrival' is often narrated as 'opening' East Africa; in fact it replaced an existing cosmopolitan order with a coercive monopoly.",
+    "sources": [
+      {"citation": "Duarte Barbosa, O Livro (c. 1518 CE).", "url": null, "source_type": "primary"},
+      {"citation": "Pouwels, R.L. (2002). Eastern Africa and the Indian Ocean to 1800. International Journal of African Historical Studies 35(2-3).", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "Kilwa", "role": "VICTIM"},
+      {"entity_name_original": "Reino de Portugal", "role": "MAIN_ACTOR"}
+    ]
+  },
+  {
+    "name_original": "Cajamarca",
+    "name_original_lang": "que",
+    "event_type": "MASSACRE",
+    "year": 1532,
+    "year_end": 1533,
+    "location_name": "Cajamarca, northern Peru",
+    "location_lat": -7.16,
+    "location_lon": -78.52,
+    "main_actor": "Spanish expedition under Francisco Pizarro",
+    "description": "On 16 November 1532 Francisco Pizarro's expedition of 168 Spaniards, with cannon and 62 cavalry, ambushed the Inca Sapa Atahualpa and his unarmed retinue of approximately 6,000 in the plaza of Cajamarca. Spanish sources report 2,000 to 7,000 Andean dead in a two-hour action, no Spanish fatalities. Atahualpa was held for a ransom of gold and silver filling a room, delivered in full, then garrotted on 26 July 1533. Cuzco was taken the following November; the conquest of Tawantinsuyu was effective by 1572 with the execution of Túpac Amaru I.",
+    "casualties_low": 2000,
+    "casualties_high": 7000,
+    "casualties_source": "Hemming, J. (1970). The Conquest of the Incas. Macmillan; based on Jerez, Estete, Mena accounts.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Standard narratives credit Pizarro's 'genius'; the encounter was a premeditated ambush of an unarmed party under pretext of diplomatic audience. Entry names the massacre for what it was. Guaman Poma de Ayala (c. 1615) provides a surviving indigenous account.",
+    "sources": [
+      {"citation": "Jerez, F. de (1534). Verdadera relación de la conquista del Perú.", "url": null, "source_type": "primary"},
+      {"citation": "Guaman Poma de Ayala, F. (c. 1615). El primer nueva corónica y buen gobierno.", "url": null, "source_type": "primary"},
+      {"citation": "Hemming, J. (1970). The Conquest of the Incas. Macmillan.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "Tawantinsuyu", "role": "VICTIM"},
+      {"entity_name_original": "Imperio Español", "role": "MAIN_ACTOR"}
+    ]
+  },
+  {
+    "name_original": "Disputa de Valladolid",
+    "name_original_lang": "spa",
+    "event_type": "INTELLECTUAL_EVENT",
+    "year": 1550,
+    "year_end": 1551,
+    "location_name": "Colegio de San Gregorio, Valladolid",
+    "location_lat": 41.66,
+    "location_lon": -4.72,
+    "main_actor": "Crown-appointed junta convened by Emperor Charles V; protagonists Bartolomé de las Casas and Juan Ginés de Sepúlveda",
+    "description": "Charles V suspended new conquests in the Indies in 1550 and convened a theological-legal debate at Valladolid. Sepúlveda argued, from Aristotelian natural-slavery theory, that American Indians were rationally inferior and legitimately subject to war and forced labour; Las Casas argued, from Thomist universalism, that they were fully rational human beings entitled to protection. The junta issued no formal verdict; practical outcomes (New Laws of 1542, abolition of the personal encomienda in 1549) nonetheless trended toward Las Casas. The debate is a foundational moment in the European construction of human-rights discourse and its colonial limits.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Often cited as the 'first human rights debate'; entry records that it was a debate between European clerics about indigenous peoples, not a forum in which indigenous voices were heard.",
+    "sources": [
+      {"citation": "Las Casas, B. de (1552). Aquí se contiene una disputa o controversia (published account of the Valladolid debate).", "url": null, "source_type": "primary"},
+      {"citation": "Hanke, L. (1974). All Mankind is One: A Study of the Disputation between Bartolomé de las Casas and Juan Ginés de Sepúlveda. Northern Illinois University Press.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "Imperio Español", "role": "MAIN_ACTOR"}
+    ]
+  },
+  {
+    "name_original": "Massacre de la Saint-Barthélemy",
+    "name_original_lang": "fra",
+    "event_type": "MASSACRE",
+    "year": 1572,
+    "year_end": null,
+    "location_name": "Paris and provincial cities, France",
+    "location_lat": 48.85,
+    "location_lon": 2.35,
+    "main_actor": "Catholic royal council (Charles IX, Catherine de Medici, Duke of Guise), ducal retinues and Parisian Catholic mobs",
+    "description": "Starting in the early hours of 24 August 1572 (the feast of Saint Bartholomew), French royal guards and Catholic ligueurs assassinated the Huguenot nobleman Gaspard de Coligny and other Protestant leaders gathered in Paris for the royal wedding of Marguerite de Valois and Henri de Navarre. The killing spread to the Parisian population over five days and to provincial cities (Lyon, Rouen, Toulouse, Bordeaux, Orléans) over the following weeks. Total mortality is estimated at 5,000 to 30,000; the massacre radicalised the French Wars of Religion and prompted Huguenot migration.",
+    "casualties_low": 5000,
+    "casualties_high": 30000,
+    "casualties_source": "Diefendorf, B.B. (1991). Beneath the Cross: Catholics and Huguenots in Sixteenth-Century Paris. Oxford University Press.",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Chain of authorisation remains partially contested — whether Catherine de Medici ordered the general massacre or only the elite assassinations that triggered it. Pope Gregory XIII celebrated the event with a Te Deum and a commemorative medal; the Vatican did not formally retract the celebration.",
+    "sources": [
+      {"citation": "Agrippa d'Aubigné, Histoire universelle (c. 1616-1630).", "url": null, "source_type": "primary"},
+      {"citation": "Diefendorf, B.B. (1991). Beneath the Cross. Oxford University Press.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "Royaume de France", "role": "MAIN_ACTOR"}
+    ]
+  },
+  {
+    "name_original": "معركة تونديبي",
+    "name_original_lang": "ara",
+    "event_type": "CONQUEST",
+    "year": 1591,
+    "year_end": null,
+    "location_name": "Tondibi, near Gao, Middle Niger",
+    "location_lat": 16.60,
+    "location_lon": -0.50,
+    "main_actor": "Sa'did Moroccan expeditionary force under Judar Pasha on orders of Sultan Ahmad al-Mansur",
+    "description": "A Sa'did Moroccan army of approximately 4,000 — many of them Iberian converts and renegades, equipped with arquebuses and light cannon — crossed the Sahara and defeated the cavalry-based Songhai army of Askia Ishaq II at Tondibi on 13 March 1591. Gao and Timbuktu were occupied; the Songhai state fragmented. Moroccan control, exercised through a pashalik, proved brittle within decades, but the polity that had sustained the Timbuktu scholarly tradition of Sankoré and the Middle Niger trans-Saharan gold trade was destroyed. Ahmad Baba of Timbuktu was among the scholars deported to Marrakech.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The defeat of Songhai by a smaller but firearm-equipped force is sometimes framed as a technological morality tale; in fact the Moroccan expedition lost most of its force crossing the Sahara, and Tondibi itself was decided by coordinated arquebus volleys against cavalry. Sankoré manuscripts survived partly because they were hidden; what Judar's expedition looted is unrecoverable.",
+    "sources": [
+      {"citation": "al-Sa'di, Tarikh al-Sudan (c. 1655 CE).", "url": null, "source_type": "primary"},
+      {"citation": "Hunwick, J.O. (1999). Timbuktu and the Songhay Empire. Brill.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "Songhai", "role": "VICTIM"}
+    ]
+  },
+  {
+    "name_original": "임진왜란",
+    "name_original_lang": "kor",
+    "event_type": "CONQUEST",
+    "year": 1592,
+    "year_end": 1598,
+    "location_name": "Korean peninsula",
+    "location_lat": 37.57,
+    "location_lon": 126.98,
+    "main_actor": "Toyotomi Hideyoshi, Kampaku of Japan, directing a Japanese invasion force of approximately 158,000",
+    "description": "Toyotomi Hideyoshi twice invaded Joseon Korea (Bunroku no eki 1592, Keichō no eki 1597), landing at Busan with the strategic aim of conquering Ming China via the peninsula. Initial Japanese advance reached Pyongyang; Joseon naval campaigns under Admiral Yi Sun-sin (Hansando, Myeongnyang, Noryang) and massive Ming intervention (~100,000 troops across the war) contained and reversed the invasion. Total Korean mortality is estimated at 1 million across the peninsula (combat, famine, massacres, Japanese deportation of craftsmen and slaves); cultural losses include the burning of the Sillok archives at Chunchugwan and the Gyeongbokgung palace.",
+    "casualties_low": 1000000,
+    "casualties_high": 2000000,
+    "casualties_source": "Turnbull, S. (2002). Samurai Invasion: Japan's Korean War 1592-1598. Cassell.",
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "Japanese forces systematically severed noses and ears of Korean dead and civilians as war trophies; approximately 40,000 Korean ears remain buried at the Mimizuka ('Ear Mound') in Kyoto. Korean regional records, village-level demography, and the documentation of deported Korean potters who founded Satsuma and Arita ceramic traditions were partly destroyed with the Sillok archive burning in 1592 and never fully reconstituted.",
+    "ethical_notes": "The Japanese historiographical framing as 'Bunroku-Keichō no eki' (campaign) euphemises; the Korean 'Imjin waeran' (Japanese invasion disturbance) and Chinese 'Wanli Chaoxian zhi yi' (Wanli Korea campaign) are more accurate. Hideyoshi is named explicitly per ETHICS-007.",
+    "sources": [
+      {"citation": "Yu Seong-ryong, Jingbirok (c. 1604 CE).", "url": null, "source_type": "primary"},
+      {"citation": "Swope, K.M. (2009). A Dragon's Head and a Serpent's Tail: Ming China and the First Great East Asian War, 1592-1598. University of Oklahoma Press.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "조선", "role": "VICTIM"},
+      {"entity_name_original": "明朝", "role": "PARTICIPANT", "notes": "Ming relief force intervened in support of Joseon"}
+    ]
+  },
+  {
+    "name_original": "Pequot War — Mystic Massacre",
+    "name_original_lang": "eng",
+    "event_type": "GENOCIDE",
+    "year": 1636,
+    "year_end": 1638,
+    "location_name": "Mystic, Pequot territory, southern New England",
+    "location_lat": 41.35,
+    "location_lon": -71.97,
+    "main_actor": "Massachusetts Bay and Connecticut colonial militias under Captain John Mason and Captain John Underhill, with Mohegan and Narragansett auxiliaries",
+    "description": "On 26 May 1637, approximately 90 English militiamen with Mohegan and Narragansett allies surrounded the Pequot fortified village at Mystic before dawn, set it ablaze, and shot or cut down those attempting to flee. Between 400 and 700 Pequot — principally women, children and elders, the warriors being absent at another fort — died in the fire or the cordon. The subsequent Treaty of Hartford (1638) formally dissolved the Pequot as a people, forbade use of the name 'Pequot', partitioned survivors among allied tribes, and sold some into Caribbean slavery. John Underhill's account openly celebrates the killing of women and children as divine retribution.",
+    "casualties_low": 400,
+    "casualties_high": 700,
+    "casualties_source": "Cave, A.A. (1996). The Pequot War. University of Massachusetts Press.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Labelled GENOCIDE per ETHICS-007. The Treaty of Hartford explicitly aimed at the destruction of the Pequot as a group — criminalising the name, partitioning survivors, prohibiting reconstitution — which fits the Lemkin/UN 1948 definition. 19th- and 20th-century US historiography minimised the event; it is now standardly treated as genocide in Indigenous studies.",
+    "sources": [
+      {"citation": "Underhill, J. (1638). Newes from America. London.", "url": null, "source_type": "primary"},
+      {"citation": "Mason, J. (c. 1670, published 1736). A Brief History of the Pequot War. Boston.", "url": null, "source_type": "primary"},
+      {"citation": "Cave, A.A. (1996). The Pequot War. University of Massachusetts Press.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": []
+  },
+  {
+    "name_original": "明末大饑饉",
+    "name_original_lang": "lzh",
+    "event_type": "FAMINE",
+    "year": 1638,
+    "year_end": 1644,
+    "location_name": "Shaanxi, Henan, North China",
+    "location_lat": 34.27,
+    "location_lon": 108.93,
+    "main_actor": null,
+    "description": "From the late 1630s north and central China suffered compounding drought, locust swarms, and plague during the Little Ice Age climatic downturn; Shaanxi and Henan experienced catastrophic harvest failures, cannibalism is recorded in gazetteers, and excess mortality in the tens of millions is plausible. Fiscal collapse and a mutinous, underpaid military fed Li Zicheng's peasant rebellion, which took Beijing on 25 April 1644 and precipitated the Chongzhen emperor's suicide. The Manchu Qing exploited the vacuum, entering Beijing six weeks later. The famine is inseparable from the Ming-Qing transition.",
+    "casualties_low": 25000000,
+    "casualties_high": null,
+    "casualties_source": "Brook, T. (2010). The Troubled Empire: China in the Yuan and Ming Dynasties. Harvard University Press.",
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "Ming-era county gazetteer records for the 1640s are fragmentary: many district-level yamen archives burned during the 1644 Qing conquest and the subsequent Three Feudatories war (1673-1681). Mortality figures are reconstructed from later Qing population registers minus the Ming base — a method with large uncertainty.",
+    "ethical_notes": "The famine is not an act of a named perpetrator but the compound outcome of climate, fiscal failure, and state collapse; hence no main_actor. Listed as FAMINE (primary), with DROUGHT as the proximate driver.",
+    "sources": [
+      {"citation": "Chongzhen Shilu (Veritable Records of the Chongzhen reign, reconstructed).", "url": null, "source_type": "primary"},
+      {"citation": "Brook, T. (2010). The Troubled Empire. Harvard University Press.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "明朝", "role": "AFFECTED"}
+    ]
+  },
+  {
+    "name_original": "甲申之變",
+    "name_original_lang": "lzh",
+    "event_type": "DISSOLUTION_STATE",
+    "year": 1644,
+    "year_end": null,
+    "location_name": "Beijing and Shanhai Pass",
+    "location_lat": 39.90,
+    "location_lon": 116.41,
+    "main_actor": "Li Zicheng (Shun dynasty), Wu Sangui (Ming general defecting), and Dorgon commanding the Qing Eight Banners",
+    "description": "On 25 April 1644 (17th day, 3rd lunar month, 17th year of Chongzhen) the Chongzhen emperor hanged himself on Coal Hill after Li Zicheng's rebel army entered Beijing. Six weeks later, Ming general Wu Sangui opened Shanhai Pass to the Qing regent Dorgon; combined Qing-Wu forces defeated Li Zicheng at the Battle of Shanhai Pass (27 May 1644) and occupied Beijing on 6 June. The Ming dynasty was formally succeeded by the Qing (Manchu Aisin Gioro) although southern Ming loyalist regimes persisted until 1662 (Zhu Youlang) and the Ming cause on Taiwan until 1683 (Koxinga's grandson).",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Qing imposition of the queue (braided hairstyle) under pain of death, and the associated Yangzhou massacre (1645, 800,000 reported dead, heavily disputed figures), mean the 1644 transition is not a clean 'dynastic handover' but a multi-year conquest with large-scale violence. Entry focuses on the decisive year; the Yangzhou massacre would warrant its own entry.",
+    "sources": [
+      {"citation": "Tan Qian, Guoque (c. 1653 CE, Ming loyalist chronicle).", "url": null, "source_type": "primary"},
+      {"citation": "Wakeman, F. (1985). The Great Enterprise: The Manchu Reconstruction of Imperial Order in Seventeenth-Century China. University of California Press.", "url": null, "source_type": "academic"}
+    ],
+    "entity_links": [
+      {"entity_name_original": "明朝", "role": "DISSOLVED"},
+      {"entity_name_original": "大清帝國", "role": "FOUNDED", "notes": "Qing dynasty formally established 1636 in Mukden; Beijing conquest 1644 marks effective succession"},
+      {"entity_name_original": "後金", "role": "PARTICIPANT", "notes": "Earlier Later Jin renamed Qing in 1636"}
+    ]
+  }
+]

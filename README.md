@@ -11,9 +11,9 @@
 
 <p align="center">
   <a href="https://atlaspi.cra-srl.com"><img alt="Try it live" src="https://img.shields.io/badge/try%20it-live-58a6ff?style=flat-square&logo=globe&logoColor=white"></a>
-  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.3.0-blue?style=flat-square"></a>
+  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.3.1-blue?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-846-green?style=flat-square"></a>
-  <a href="#-dataset-overview"><img alt="Events" src="https://img.shields.io/badge/events-30%2B-green?style=flat-square"></a>
+  <a href="#-dataset-overview"><img alt="Events" src="https://img.shields.io/badge/events-106-green?style=flat-square"></a>
   <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-308%20passing-brightgreen?style=flat-square"></a>
   <a href="#-license"><img alt="License" src="https://img.shields.io/badge/license-Apache--2.0-orange?style=flat-square"></a>
   <a href="#-api-documentation"><img alt="API" src="https://img.shields.io/badge/API-23%20endpoints-purple?style=flat-square"></a>
@@ -165,7 +165,7 @@ curl "http://localhost:10100/v1/compare/1/5"
 
 ## Dataset Overview
 
-**846 historical entities + 30+ historical events** spanning 6,500 years of human civilization, backed by **2,400+ academic sources** and documenting **2,000+ territory changes**. Events include battles, treaties, epidemies, genocides, famines and natural disasters — with ETHICS-007 (no euphemisms) and ETHICS-008 (`known_silence` flag for erased/suppressed records).
+**846 historical entities + 106 historical events** spanning 6,500 years of human civilization, backed by **2,400+ academic sources** and documenting **2,000+ territory changes**. Events include battles, treaties, epidemies, genocides, famines and natural disasters — with ETHICS-007 (no euphemisms) and ETHICS-008 (`known_silence` flag for erased/suppressed records).
 
 ### Coverage by Region
 

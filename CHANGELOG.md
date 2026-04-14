@@ -2,6 +2,82 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.3.1] - 2026-04-15
+
+**Tema**: Expansion eventi storici 31 → 106, chiudendo il gap tra "scheletro
+v6.3" (batch_01_core) e la copertura tematica prevista dalla roadmap.
+La governance ETHICS-007/008 è già codificata in v6.3.0; questa patch
+aggiunge dati all'interno dello stesso contratto.
+
+### Nuovi batch di eventi storici (+75 eventi)
+
+- **`batch_02_ancient.json`** — 25 eventi, 9 `known_silence`, 14 `event_type`
+  distinti, range -2560 → -216 (Great Pyramid, Sea Peoples, Kadesh, Qin
+  book-burning, Kalinga, Cartago `GENOCIDE`, Meroë fall, Pompeii).
+- **`batch_03_medieval.json`** — 25 eventi, 7 `known_silence`, 15 tipi
+  distinti, range 632 → 1644 (morte di Muhammad, Karbala, Baghdad 1258 con
+  perdita Bayt al-Hikma, Samalas 1257, Zheng He, An Lushan, Taíno genocide,
+  Alhambra Decree come `ETHNIC_CLEANSING`, Valladolid debate, Imjin War).
+- **`batch_04_modern.json`** — 25 eventi, 9 `known_silence`, 11 tipi
+  distinti, range 1757 → 2004 (Plassey, Bastille, Trail of Tears, genocidio
+  Tasmaniano, An Gorta Mór, genocidio circasso, Congo Free State, Katyn,
+  Hiroshima-Nagasaki come `MASSACRE`, Indonesia 1965-66 `GENOCIDE`,
+  Cambogia, East Timor, Srebrenica, WWW proposal, tsunami 2004).
+
+### ETHICS-007 judgment calls esplicitati nei batch
+
+- Cartago -146 come `GENOCIDE` (non "distruzione"): intento senatoriale
+  documentato, scala proporzionale, eliminazione culturale/demografica.
+  Frame tradizionale flaggato come "solo prospettiva romana".
+- Alhambra Decree 1492 come `ETHNIC_CLEANSING` con `main_actor` = Isabella
+  + Ferdinand (ordine di stato, non migrazione spontanea).
+- Hiroshima/Nagasaki 1945 come `MASSACRE` per targeting civile;
+  `TECHNOLOGICAL_EVENT` menzionato in `ethical_notes`.
+- Trail of Tears come `ETHNIC_CLEANSING` (non `DEPORTATION`) con governo
+  federale USA come `main_actor` esplicito.
+- An Gorta Mór con governo UK come `main_actor` (causazione politica
+  documentata in Parliamentary Papers).
+- Indonesia 1965-66 `GENOCIDE` con targeting etnico-cinese + politicida PKI.
+
+### Tooling idempotente per produzione
+
+- **`src/ingestion/ingest_new_events.py`** — mirror di `ingest_new_entities.py`
+  per la tabella `historical_events`. Chiave dedup `(name_original, year)`.
+  Inserisce solo eventi nuovi, log dei link a entità irrisolte (senza
+  bloccare). Sicuro per esecuzione ripetuta su DB produzione.
+
+### Deploy workflow (invariato)
+
+```bash
+# 1. push
+git push origin main
+
+# 2. deploy
+cra-deploy atlaspi
+
+# 3. backfill eventi (seed_events_database skippa se tabella non vuota)
+ssh -i ~/.ssh/cra_vps root@77.81.229.242 \
+  "cd /opt/cra && docker compose exec atlaspi python -m src.ingestion.ingest_new_events"
+```
+
+### Stats
+
+- **Eventi**: 31 → 106 (+242%)
+- **known_silence=true**: 7 → ~28
+- **Regioni coperte**: estensione a Americhe pre-colombiane, Africa
+  sub-sahariana, SE asiatico, Pacifico — già presenti nelle entità,
+  ora anche negli eventi
+- **Test**: 308 (invariato, stessi 25 test v6.3 verificano la nuova scala)
+- **Schema / migrations / API**: nessun cambiamento — solo dati aggiuntivi
+
+### Known issues
+
+- 2 `entity_name_original` references nei nuovi batch non risolvono contro
+  il DB (eventi che coinvolgono entità storiche minori non ancora seedate).
+  Loggato come debug, non bloccante per ingest.
+
+---
+
 ## [v6.3.0] - 2026-04-15
 
 **Tema**: Events layer + entity expansion 747→846. Da database di *entità*
