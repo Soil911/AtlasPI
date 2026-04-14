@@ -156,6 +156,12 @@ def _entity_to_response(entity: GeoEntity) -> EntityResponse:
         name_variants=entity.name_variants,
         capital=capital,
         boundary_geojson=geojson,
+        # ETHICS-005: provenance tracking fields.
+        boundary_source=entity.boundary_source,
+        boundary_aourednik_name=entity.boundary_aourednik_name,
+        boundary_aourednik_year=entity.boundary_aourednik_year,
+        boundary_aourednik_precision=entity.boundary_aourednik_precision,
+        boundary_ne_iso_a3=entity.boundary_ne_iso_a3,
         confidence_score=entity.confidence_score,
         status=entity.status,
         territory_changes=entity.territory_changes,

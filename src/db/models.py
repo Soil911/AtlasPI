@@ -53,6 +53,19 @@ class GeoEntity(Base):
     # Vedi ADR-001 per il piano di migrazione PostGIS.
     boundary_geojson: Mapped[str | None] = mapped_column(Text, nullable=True)
 
+    # ETHICS-005: il campo boundary_source documenta la tier di origine del
+    # poligono (historical_map / natural_earth / aourednik / academic_source /
+    # approximate_generated). Un utente accademico DEVE poter distinguere un
+    # confine reale da uno generato senza aprire il boundary_geojson.
+    # Migration 002_boundary_provenance.
+    boundary_source: Mapped[str | None] = mapped_column(String(50), nullable=True)
+    # Tracciamento aourednik per riproducibilita' scientifica (ETHICS-005 §3.2).
+    boundary_aourednik_name: Mapped[str | None] = mapped_column(String(500), nullable=True)
+    boundary_aourednik_year: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    boundary_aourednik_precision: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    # Tracciamento Natural Earth: ISO_A3 del paese matchato.
+    boundary_ne_iso_a3: Mapped[str | None] = mapped_column(String(3), nullable=True)
+
     confidence_score: Mapped[float] = mapped_column(Float, nullable=False, default=0.5)
     # ETHICS: i territori contestati devono avere status='disputed' (ETHICS-003)
     status: Mapped[str] = mapped_column(String(20), nullable=False, default=EntityStatus.CONFIRMED.value)

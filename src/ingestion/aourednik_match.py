@@ -25,9 +25,12 @@ Strategia di match:
        Usato solo se name-match fallisce e la distanza < 1000 km.
 
 ETHICS:
-  - BORDERPRECISION (0-2) in aourednik influenza il confidence_score:
-    2 -> 0.80, 1 -> 0.65, 0 -> 0.45. I poligoni con precision=0 sono
-    approssimazioni dichiarate dall'autore, lo rispettiamo.
+  - BORDERPRECISION (1-3) in aourednik influenza il confidence_score.
+    Semantica upstream (README del repo historical-basemaps):
+    1 = approssimato, 2 = moderatamente preciso, 3 = determinato da
+    legge internazionale. Mapping a confidence: 1 -> 0.55, 2 -> 0.70,
+    3 -> 0.85. Il valore 0 (raro, 4 feature totali) e' trattato come
+    approssimazione ereditata (0.45).
   - Per territori contestati storici (Kashmir medievale, Palestina storica,
     etc.) il match e' ammesso ma viene flagged in ethical_notes.
   - Vedi ETHICS-005-boundary-natural-earth.md per la metodologia
@@ -72,11 +75,24 @@ MAX_FALLBACK_DIST_KM = 250
 # Questo boost aiuta il match quando il name-match fallisce.
 PREFER_SMALLER_POLYGON = True
 
-# BORDERPRECISION -> confidence
+# BORDERPRECISION -> confidence.
+# Scala aourednik (README historical-basemaps):
+#   1 = approssimato, 2 = moderatamente preciso, 3 = determinato da
+#   legge internazionale. Il valore 0 e' presente in sole 4 feature
+#   upstream (legacy / edge cases) e lo trattiamo come la tier piu'
+#   bassa.
+# PRIMA DI v6.1.1 questo dict era invertito (2=0.80 top, 1=0.65 mid,
+# 0=0.45 bottom) e il valore 3 — che e' in realta' la tier piu' alta
+# e riguarda ~6468 feature — finiva nel fallback a 0.45. Questo
+# rendeva precision=3 indistinguibile da precision=0 nella
+# confidence finale, con la conseguenza che 17 entita' (es.
+# Rzeczpospolita, Republiek der Zeven Verenigde Nederlanden) erano
+# sotto-stimate in confidence. Fix: 1 -> 0.55, 2 -> 0.70, 3 -> 0.85.
 PRECISION_CONFIDENCE = {
-    2: 0.80,
-    1: 0.65,
-    0: 0.45,
+    3: 0.85,  # determinato da legge internazionale
+    2: 0.70,  # moderatamente preciso
+    1: 0.55,  # approssimato
+    0: 0.45,  # legacy / edge case (4 feature upstream)
 }
 
 # Candidate terms to skip (None features, plates, oceans)

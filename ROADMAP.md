@@ -176,7 +176,7 @@ SQLite oggi tiene 747 entita' con 2 worker senza problemi.
 | Latenza API p95 | < 200ms | ~180ms (verificato live) |
 | Entita' | 1,000+ | 747 |
 | Boundary coverage | 80%+ | **93.0%** (NE 28% + aourednik 42% + historical 23%) ✓ superato |
-| Test coverage | 250+ test | **256 ✓** (208 v5.8 + 25 v6.1 + 1 v6.1.1 + 11 spot-check top-10 + 11 sync reconciliation) |
+| Test coverage | 250+ test | **260 ✓** (208 v5.8 + 25 v6.1 + 1 v6.1.1 + 11 spot-check top-10 + 11 sync reconciliation + 4 boundary provenance) |
 | Endpoint | 25+ | 21 + 2 SEO |
 | MCP server | pubblicato su PyPI | pacchetto pronto, da pubblicare |
 | Stelle GitHub | 50+ (primo mese) | 0 (repo appena migrato a Soil911) |

@@ -83,6 +83,12 @@ def seed_database():
                 capital_lat=data.get("capital_lat"),
                 capital_lon=data.get("capital_lon"),
                 boundary_geojson=json.dumps(data["boundary_geojson"]) if data.get("boundary_geojson") else None,
+                # ETHICS-005: boundary provenance tracking.
+                boundary_source=data.get("boundary_source"),
+                boundary_aourednik_name=data.get("boundary_aourednik_name"),
+                boundary_aourednik_year=data.get("boundary_aourednik_year"),
+                boundary_aourednik_precision=data.get("boundary_aourednik_precision"),
+                boundary_ne_iso_a3=data.get("boundary_ne_iso_a3"),
                 confidence_score=data.get("confidence_score", 0.5),
                 status=data.get("status", "confirmed"),
                 ethical_notes=data.get("ethical_notes"),

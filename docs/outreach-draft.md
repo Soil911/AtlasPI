@@ -12,7 +12,7 @@ Each template is short by design — a busy academic should be able to decide in
 
 Dear Prof. *[surname]*,
 
-I am Clirim Riza (CRA, Italy). I am writing because your work on *[concrete paper / dataset / tool]* sits very close to a project I have just put online and would benefit from your critical reading before I take it further.
+I am Clirim Ramadani (CRA, Italy). I am writing because your work on *[concrete paper / dataset / tool]* sits very close to a project I have just put online and would benefit from your critical reading before I take it further.
 
 AtlasPI (https://atlaspi.cra-srl.com, https://github.com/Soil911/AtlasPI) is an Apache-2.0 structured dataset of 747 historical polities from 4500 BCE to 2024, exposed via a REST API and an MCP server intended for AI-agent consumption. Boundaries are assembled through a documented three-tier pipeline (Natural Earth for modern states, Ourednik's *historical-basemaps* for pre-1800, a deterministic fallback otherwise) and every record carries an explicit confidence score and source citations. The methodology is written up in `docs/METHODOLOGY.md`, and a data-paper draft targeting JOHD is in `docs/paper-draft.md`.
 
@@ -21,7 +21,7 @@ I am not asking for co-authorship or a formal review. I am asking whether you wo
 If useful, I am happy to pre-load a short call (15 min) or simply send the two files as PDFs.
 
 With thanks,
-Clirim Riza
+Clirim Ramadani
 CRA — clirim@cra-srl.com
 
 ---
@@ -41,7 +41,7 @@ The short version of the ask: do you think the ethics framework is honest, or is
 I am at a stage where negative feedback is more useful than positive.
 
 Cheers,
-Clirim Riza
+Clirim Ramadani
 CRA — clirim@cra-srl.com
 https://github.com/Soil911/AtlasPI
 
@@ -70,7 +70,7 @@ Methodology: `docs/METHODOLOGY.md`
 
 Thank you for considering.
 
-Clirim Riza
+Clirim Ramadani
 CRA — clirim@cra-srl.com
 
 ---
@@ -93,7 +93,7 @@ Would you be willing to look at the entity page (https://atlaspi.cra-srl.com/v1/
 No deadline, no formal review, no commitment beyond one short reply. I will acknowledge your input in the project's `ACKNOWLEDGMENTS.md` unless you prefer anonymity.
 
 With thanks,
-Clirim Riza
+Clirim Ramadani
 CRA — clirim@cra-srl.com
 
 ---

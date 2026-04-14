@@ -8,11 +8,11 @@
 
 ## Authors
 
-Clirim Riza<sup>1</sup>
+Clirim Ramadani<sup>1</sup>
 
 <sup>1</sup> CRA (Cra Srl), Italy — clirim@cra-srl.com — ORCID: *(to be provided before submission)*
 
-**Corresponding author**: Clirim Riza
+**Corresponding author**: Clirim Ramadani
 
 ---
 
@@ -123,7 +123,7 @@ Measured against the live production instance at https://atlaspi.cra-srl.com:
 | **Data type** | Structured historical geographic database |
 | **Format names and versions** | JSON (entity records), GeoJSON (boundaries), SQLite / PostgreSQL (runtime), CSV (export), OpenAPI 3.1 (API schema) |
 | **Creation dates** | 2025-11 (v0.0.1) → 2026-04-14 (v6.1.1) |
-| **Dataset creators** | Clirim Riza (curation, architecture); derived geometries from Natural Earth and Ourednik's *historical-basemaps* |
+| **Dataset creators** | Clirim Ramadani (curation, architecture); derived geometries from Natural Earth and Ourednik's *historical-basemaps* |
 | **Language** | English (API, code, schema); Italian (internal documentation and ethics records); entity names in the original local language with variant translations |
 | **License** | Apache-2.0 (source code and API); entity records CC BY 4.0; derived geometries inherit upstream licenses (Natural Earth public domain; Ourednik CC BY 4.0) |
 | **Repository** | https://github.com/Soil911/AtlasPI |

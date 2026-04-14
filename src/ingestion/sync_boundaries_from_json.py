@@ -215,6 +215,15 @@ def sync_boundaries_from_json(
                 # different operation and could mask an unrelated downgrade.
                 if new_confidence > entity.confidence_score:
                     entity.confidence_score = new_confidence
+                # ETHICS-005: sync provenance metadata alongside the geometry.
+                # These fields are informational — they document where the
+                # upgraded polygon came from, which is essential for
+                # reproducibility and academic citability.
+                entity.boundary_source = batch_entity.get("boundary_source")
+                entity.boundary_aourednik_name = batch_entity.get("boundary_aourednik_name")
+                entity.boundary_aourednik_year = batch_entity.get("boundary_aourednik_year")
+                entity.boundary_aourednik_precision = batch_entity.get("boundary_aourednik_precision")
+                entity.boundary_ne_iso_a3 = batch_entity.get("boundary_ne_iso_a3")
 
             stats.upgraded += 1
 

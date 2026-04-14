@@ -54,6 +54,30 @@ class EntityResponse(BaseModel):
     name_variants: list[NameVariantResponse] = Field(default_factory=list, description="Nomi in altre lingue con contesto")
     capital: CapitalResponse | None = None
     boundary_geojson: dict | None = Field(None, description="Confini GeoJSON (Polygon o MultiPolygon)")
+    # ETHICS-005: la tier di provenienza del confine. Permette al consumatore
+    # di distinguere un poligono reale da uno generato senza ispezionare il
+    # geojson. Valori: historical_map, natural_earth, aourednik,
+    # academic_source, approximate_generated.
+    boundary_source: str | None = Field(
+        None,
+        description="Tier di provenienza del confine (ETHICS-005): historical_map, natural_earth, aourednik, academic_source, approximate_generated",
+    )
+    boundary_aourednik_name: str | None = Field(
+        None,
+        description="Nome esatto della feature matchata in aourednik/historical-basemaps (riproducibilita' scientifica)",
+    )
+    boundary_aourednik_year: int | None = Field(
+        None,
+        description="Anno dello snapshot aourednik usato (uno dei 53 disponibili, -123000..2010)",
+    )
+    boundary_aourednik_precision: int | None = Field(
+        None,
+        description="Precisione BORDERPRECISION dell'upstream aourednik (README historical-basemaps): 1=approssimato, 2=moderatamente preciso, 3=determinato da legge internazionale. Il valore 0 e' un edge-case legacy (4 feature upstream). Converte in confidence via PRECISION_CONFIDENCE (3->0.85, 2->0.70, 1->0.55, 0->0.45).",
+    )
+    boundary_ne_iso_a3: str | None = Field(
+        None,
+        description="ISO_A3 del paese Natural Earth quando il match passa per NE",
+    )
     confidence_score: float = Field(description="Affidabilità complessiva 0.0-1.0")
     status: str = Field(description="confirmed, uncertain, o disputed")
     territory_changes: list[TerritoryChangeResponse] = Field(default_factory=list, description="Cambi territoriali (ETHICS-002)")

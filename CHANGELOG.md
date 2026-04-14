@@ -66,7 +66,7 @@ ETHICS-003 compliance su entita' contestate + performance export.
 
 ### Test
 
-- **256 test totali** (da 233). Aggiunto `test_geojson_export_full_under_15s`
+- **260 test totali** (da 233). Aggiunto `test_geojson_export_full_under_15s`
   e riadattato `test_geojson_export_centroid_under_500ms` per riflettere
   la nuova API dell'export.
 - Fix 3 regressioni: ETHICS-003 disputed confidence, export performance,
@@ -100,14 +100,62 @@ ETHICS-003 compliance su entita' contestate + performance export.
 - **Documentazione operativa** in `docs/OPERATIONS.md` con ricetta
   completa (backup Postgres + dry-run + sync).
 
+### Boundary provenance — esposizione schema (ETHICS-005)
+
+- **Gap diagnosticato**: i campi `boundary_source`, `boundary_aourednik_*`,
+  `boundary_ne_iso_a3` esistevano nei batch JSON ma non erano persistiti
+  nel DB ne' esposti dall'API. Un consumatore non poteva distinguere un
+  poligono reale da uno generato senza ispezionare il GeoJSON.
+- **Migration `002_boundary_provenance`** (Alembic): aggiunge 5 colonne
+  nullable a `geo_entities` (`boundary_source`, `boundary_aourednik_name`,
+  `boundary_aourednik_year`, `boundary_aourednik_precision`,
+  `boundary_ne_iso_a3`). Puramente additiva, downgrade testato.
+- **Modello SQLAlchemy** esteso (`src/db/models.py`).
+- **Seeder** (`src/db/seed.py`) ora popola le 5 colonne dai batch JSON
+  in fase di seed iniziale.
+- **Sync reconciliation** (`sync_boundaries_from_json.py`) propaga
+  i 5 campi insieme alla geometria upgrade.
+- **Schema Pydantic** (`EntityResponse`) espone i 5 campi con
+  description ETHICS-005 esplicita.
+- **Serializer** (`_entity_to_response`) passa i 5 campi al Response.
+- **4 nuovi test** (`tests/test_boundary_provenance.py`):
+  presenza dei campi nella response, valori `boundary_source` nell'enum
+  ETHICS-005, scala `boundary_aourednik_precision` (0-3, vedi sotto),
+  consistenza metadata aourednik.
+
+### Bug fix — PRECISION_CONFIDENCE invertito
+
+- **Bug latente scoperto** durante la stesura dei test boundary provenance.
+  Il dict `PRECISION_CONFIDENCE` in `aourednik_match.py` mappava
+  `2 -> 0.80, 1 -> 0.65, 0 -> 0.45`, ignorando completamente il valore 3
+  (che e' la **tier piu' alta** dello scale aourednik upstream secondo
+  il README di `historical-basemaps`: `1 = approssimato, 2 = moderatamente
+  preciso, 3 = determinato da legge internazionale`). I valori 3 finivano
+  nel fallback a 0.45 (lo stesso di precision=0), facendo apparire 17
+  entita' nel dataset (es. Rzeczpospolita Obojga Narodow, Republiek der
+  Zeven Verenigde Nederlanden) come confidence-equivalenti a poligoni
+  approssimati quando in realta' avevano la precisione massima.
+- **Fix**: dict ribilanciato correttamente: `3 -> 0.85, 2 -> 0.70,
+  1 -> 0.55, 0 -> 0.45`. Applicabile alle entita' arricchite in futuro;
+  i valori esistenti nel DB di produzione restano stale finche' non si
+  rilancia `enrich_all_boundaries`. Documentato in CHANGELOG perche'
+  riguarda la trasparenza dell'incertezza (ETHICS).
+
 ### File modificati (principali)
 
-- `src/ingestion/aourednik_match.py` (nuovo, ~450 righe)
+- `src/ingestion/aourednik_match.py` (nuovo, ~450 righe; PRECISION_CONFIDENCE fix)
 - `src/ingestion/enrich_all_boundaries.py` (pipeline estesa)
+- `src/ingestion/sync_boundaries_from_json.py` (nuovo, riconciliazione monotona)
 - `src/api/routes/export.py` (perf + nuovi flag)
-- `src/api/routes/entities.py` (random perf)
+- `src/api/routes/entities.py` (random perf + serializer provenance)
+- `src/api/schemas.py` (EntityResponse + 5 campi provenance)
+- `src/db/models.py` (5 colonne provenance)
+- `src/db/seed.py` (seeder provenance-aware)
+- `alembic/versions/002_boundary_provenance.py` (nuovo, additive)
 - `src/config.py` (version 6.1.1)
 - `tests/test_performance.py`
+- `tests/test_boundary_provenance.py` (nuovo, 4 test)
+- `tests/test_sync_boundaries.py` (nuovo, 11 test)
 - Tutti i `data/entities/batch_*.json` (boundary arricchiti con .bak)
 - `CITATION.cff`, `.zenodo.json` (nuovi)
 

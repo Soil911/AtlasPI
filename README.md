@@ -14,7 +14,7 @@
   <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.1.1-blue?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-747-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Coverage" src="https://img.shields.io/badge/real%20boundaries-93%25-green?style=flat-square"></a>
-  <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-256%20passing-brightgreen?style=flat-square"></a>
+  <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-260%20passing-brightgreen?style=flat-square"></a>
   <a href="#-license"><img alt="License" src="https://img.shields.io/badge/license-MIT-orange?style=flat-square"></a>
   <a href="#-api-documentation"><img alt="API" src="https://img.shields.io/badge/API-21%20endpoints-purple?style=flat-square"></a>
   <a href="mcp-server/README.md"><img alt="MCP" src="https://img.shields.io/badge/MCP-ready-9d4edd?style=flat-square"></a>
@@ -246,7 +246,7 @@ atlaspi/
     entities/       # Source entity data (JSON)
     raw/            # Original unmodified source data
     processed/      # Normalized data
-  tests/            # 256 tests: technical, ethical, security, performance, data quality
+  tests/            # 260 tests: technical, ethical, security, performance, data quality
   docs/
     adr/            # Architecture Decision Records
     ethics/         # Documented ethical decisions (ETHICS-001, 002, 003...)
@@ -340,13 +340,13 @@ If you use AtlasPI in academic work, teaching, or derivative datasets, please ci
 
 ### Suggested citation (software)
 
-> Riza, C. (2026). *AtlasPI: A structured historical geographic database for AI agents* (Version 6.1.1) [Software]. CRA. https://github.com/Soil911/AtlasPI
+> Ramadani, C. (2026). *AtlasPI: A structured historical geographic database for AI agents* (Version 6.1.1) [Software]. CRA. https://github.com/Soil911/AtlasPI
 
 ### BibTeX
 
 ```bibtex
-@software{riza_atlaspi_2026,
-  author       = {Riza, Clirim},
+@software{ramadani_atlaspi_2026,
+  author       = {Ramadani, Clirim},
   title        = {AtlasPI: A structured historical geographic database for AI agents},
   version      = {6.1.1},
   year         = {2026},
