@@ -551,8 +551,10 @@ def nearby_entities(
     """
     if is_postgres:
         results = _nearby_postgis(db, lat, lon, radius, year, limit)
+        response.headers["X-Distance-Algorithm"] = "postgis"
     else:
         results = _nearby_python_haversine(db, lat, lon, radius, year, limit)
+        response.headers["X-Distance-Algorithm"] = "haversine"
 
     response.headers["Cache-Control"] = "public, max-age=3600"
 

@@ -69,9 +69,22 @@ class SyncStats:
     # not upgraded — long-running DBs enriched before migration 002 have
     # correct polygons but NULL provenance, and the JSONs hold the truth.
     provenance_backfilled: int = 0
+    # ETHICS-006 v6.2: DB row had aourednik/NE polygon with capital displaced
+    # >DISPLACEMENT_TOLERANCE_KM from the polygon. The JSON (post-cleanup)
+    # says approximate_generated. This is a legitimate "downgrade" because
+    # the higher-provenance polygon was geographically wrong.
+    displacement_downgraded: int = 0
 
     def as_dict(self) -> dict:
         return self.__dict__.copy()
+
+
+# ETHICS-006 v6.2: if the DB row carries a higher-provenance polygon but the
+# capital is displaced more than this distance from the polygon, the match
+# is likely a semantic error (see Mrauk-U -> Akan at 10,000 km or Kongeriket
+# Noreg -> Kingdom of Georgia at 2,660 km). In those cases we accept a JSON
+# downgrade to approximate_generated as a correction.
+DISPLACEMENT_TOLERANCE_KM = 50.0
 
 
 def _count_vertices(geom: dict | None) -> int:
@@ -196,6 +209,34 @@ def _backfill_provenance(
     return touched
 
 
+def _db_capital_displaced(entity: GeoEntity) -> bool:
+    """ETHICS-006: return True iff the DB row's capital is >50 km from its
+    own polygon. Used to decide whether a JSON downgrade is justified."""
+    if entity.capital_lat is None or entity.capital_lon is None:
+        return False
+    if not entity.boundary_geojson:
+        return False
+    try:
+        import math
+        from shapely.geometry import Point, shape
+    except ImportError:
+        return False  # Without shapely we can't check — default to "no downgrade".
+    try:
+        geo = json.loads(entity.boundary_geojson)
+        poly = shape(geo)
+        pt = Point(float(entity.capital_lon), float(entity.capital_lat))
+        if poly.contains(pt):
+            return False
+        d_deg = poly.distance(pt)
+        lat = float(entity.capital_lat)
+        km_per_lat = 111.0
+        km_per_lon = 111.0 * max(0.1, math.cos(math.radians(lat)))
+        d_km = d_deg * (km_per_lat + km_per_lon) / 2
+        return d_km > DISPLACEMENT_TOLERANCE_KM
+    except Exception:  # noqa: BLE001
+        return False
+
+
 def sync_boundaries_from_json(
     dry_run: bool = False, session: Session | None = None
 ) -> SyncStats:
@@ -229,6 +270,36 @@ def sync_boundaries_from_json(
             batch_geom = batch_entity.get("boundary_geojson")
             if not isinstance(batch_geom, dict) or batch_geom.get("type") not in ("Polygon", "MultiPolygon"):
                 stats.skipped_batch_has_no_boundary += 1
+                continue
+
+            # ETHICS-006 v6.2 displacement correction: if the DB holds a
+            # higher-provenance polygon whose capital is outside by more
+            # than DISPLACEMENT_TOLERANCE_KM, AND the batch JSON now says
+            # approximate_generated (i.e. we've cleaned up that
+            # displacement in the source-of-truth), accept the downgrade.
+            # This is the one case where the "never downgrade" rule has
+            # to yield to geographic reality.
+            batch_source = batch_entity.get("boundary_source")
+            db_source = entity.boundary_source
+            if (
+                db_source in ("aourednik", "natural_earth")
+                and batch_source == "approximate_generated"
+                and _db_capital_displaced(entity)
+            ):
+                if not dry_run:
+                    entity.boundary_geojson = json.dumps(batch_geom)
+                    entity.boundary_source = "approximate_generated"
+                    entity.boundary_aourednik_name = None
+                    entity.boundary_aourednik_year = None
+                    entity.boundary_aourednik_precision = None
+                    entity.boundary_ne_iso_a3 = None
+                    # Confidence: accept the batch cap (0.4 typical for
+                    # approximate_generated per ETHICS-004). This IS a
+                    # legitimate downgrade — we were lying before.
+                    batch_conf = batch_entity.get("confidence_score")
+                    if isinstance(batch_conf, (int, float)):
+                        entity.confidence_score = batch_conf
+                stats.displacement_downgraded += 1
                 continue
 
             if not _should_upgrade(entity.boundary_geojson, batch_entity):
@@ -274,11 +345,20 @@ def sync_boundaries_from_json(
 
             stats.upgraded += 1
 
-        if not dry_run and (stats.upgraded > 0 or stats.provenance_backfilled > 0):
+        if not dry_run and (
+            stats.upgraded > 0
+            or stats.provenance_backfilled > 0
+            or stats.displacement_downgraded > 0
+        ):
             db.commit()
             logger.info(
-                "Sync committed: %d entities upgraded, %d provenance backfilled out of %d matched (%d total in DB)",
-                stats.upgraded, stats.provenance_backfilled, stats.matched_in_batch, stats.total_db,
+                "Sync committed: %d upgraded, %d provenance backfilled, "
+                "%d displacement-corrected out of %d matched (%d total in DB)",
+                stats.upgraded,
+                stats.provenance_backfilled,
+                stats.displacement_downgraded,
+                stats.matched_in_batch,
+                stats.total_db,
             )
         elif dry_run:
             logger.info(

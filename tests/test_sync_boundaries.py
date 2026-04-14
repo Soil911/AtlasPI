@@ -178,6 +178,126 @@ def test_sync_is_idempotent(stale_db):
     assert second.upgraded == 0, f"second run must be a no-op, got {second.upgraded}"
 
 
+# ─── ETHICS-006 displacement-correction path ───────────────────────────────
+
+def test_db_capital_displaced_detects_gross_displacement():
+    """Unit test: capital very far from polygon -> True; inside -> False."""
+    from src.ingestion.sync_boundaries_from_json import _db_capital_displaced
+
+    class FakeEntity:
+        def __init__(self, lat, lon, geom):
+            self.capital_lat = lat
+            self.capital_lon = lon
+            self.boundary_geojson = json.dumps(geom) if geom else None
+
+    # Polygon around (0, 0) with half-side 1 deg (~111 km)
+    square = {
+        "type": "Polygon",
+        "coordinates": [[
+            [-1, -1], [1, -1], [1, 1], [-1, 1], [-1, -1],
+        ]],
+    }
+    # Inside -> False
+    assert _db_capital_displaced(FakeEntity(0.0, 0.0, square)) is False
+    # ~111 km south, just outside -> distance ~0 km -> False (within tolerance)
+    assert _db_capital_displaced(FakeEntity(-1.0, 0.0, square)) is False
+    # 5 deg south, ~555 km away -> True
+    assert _db_capital_displaced(FakeEntity(-6.0, 0.0, square)) is True
+    # Cross-continent (Africa vs Europe polygon) -> True
+    assert _db_capital_displaced(FakeEntity(-20.0, 30.0, square)) is True
+
+
+def test_sync_accepts_displacement_downgrade():
+    """If DB has aourednik polygon but capital is way outside and JSON now
+    says approximate_generated, the sync should downgrade — one legitimate
+    exception to the monotonic-upgrade rule (ETHICS-006 v6.2)."""
+    from tempfile import TemporaryDirectory
+    import pathlib as _pl
+    from unittest.mock import patch
+
+    # Create a test DB row with a catastrophically displaced aourednik polygon
+    session = TestSession()
+    try:
+        # Pick a known entity and force displacement
+        ent = session.query(GeoEntity).filter(
+            GeoEntity.name_original == "Imperium Romanum"
+        ).first()
+        if not ent:
+            pytest.skip("Imperium Romanum not seeded — cannot run test")
+
+        original_geom = ent.boundary_geojson
+        original_source = ent.boundary_source
+        original_conf = ent.confidence_score
+
+        # Plant a displaced aourednik polygon: square in Antarctica while
+        # capital (Rome) stays at 41.9N, 12.5E.
+        antarctica = {
+            "type": "Polygon",
+            "coordinates": [[
+                [-10, -75], [10, -75], [10, -70], [-10, -70], [-10, -75],
+            ]],
+        }
+        ent.boundary_geojson = json.dumps(antarctica)
+        ent.boundary_source = "aourednik"
+        ent.boundary_aourednik_name = "Imposter"
+        ent.confidence_score = 0.8
+        session.commit()
+    finally:
+        session.close()
+
+    # Build a fake batch JSON dir where Imperium Romanum is approximate_generated
+    with TemporaryDirectory() as td:
+        tdp = _pl.Path(td)
+        fake_batch = [
+            {
+                "name_original": "Imperium Romanum",
+                "boundary_geojson": _poly(20),  # valid 20-vertex polygon
+                "boundary_source": "approximate_generated",
+                "confidence_score": 0.4,
+            }
+        ]
+        (tdp / "batch_00_test.json").write_text(json.dumps(fake_batch), encoding="utf-8")
+
+        with patch(
+            "src.ingestion.sync_boundaries_from_json.ENTITIES_DIR", tdp
+        ):
+            session = TestSession()
+            try:
+                stats = sync_boundaries_from_json(dry_run=False, session=session)
+            finally:
+                session.close()
+
+    assert stats.displacement_downgraded >= 1, (
+        f"expected ≥1 displacement downgrade, got {stats.displacement_downgraded}"
+    )
+
+    # Verify DB was actually corrected
+    verify = TestSession()
+    try:
+        ent = verify.query(GeoEntity).filter(
+            GeoEntity.name_original == "Imperium Romanum"
+        ).first()
+        assert ent.boundary_source == "approximate_generated"
+        assert ent.boundary_aourednik_name is None
+        assert ent.confidence_score == 0.4
+    finally:
+        verify.close()
+
+    # Restore original state so other tests aren't affected
+    restore = TestSession()
+    try:
+        ent = restore.query(GeoEntity).filter(
+            GeoEntity.name_original == "Imperium Romanum"
+        ).first()
+        ent.boundary_geojson = original_geom
+        ent.boundary_source = original_source
+        ent.confidence_score = original_conf
+        ent.boundary_aourednik_name = None
+        restore.commit()
+    finally:
+        restore.close()
+
+
 def test_backfill_provenance_copies_when_db_null(setup_test_db):
     """When DB has NULL provenance but the batch has a value, backfill copies."""
     session = TestSession()
