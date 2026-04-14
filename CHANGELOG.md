@@ -74,6 +74,21 @@ fuzzy matcher) + hardening del deploy (rimozione volume stale).
   contesto, problema, alternative scartate (entrypoint-rsync, bind
   mount host, riscrittura volume al deploy), conseguenze.
 
+### Academic credibility — Zenodo DOI mintato
+
+- **Repo reso pubblico** (`github.com/Soil911/AtlasPI`) + toggle Zenodo
+  attivato su `https://zenodo.org/account/settings/github/`.
+- **GitHub Release v6.1.2** ricreata per triggare il webhook Zenodo
+  post-attivazione (la prima Release era stata creata prima del
+  webhook e non era stata catturata).
+- **DOI mintato**: concept `10.5281/zenodo.19581784` (tutte le versioni,
+  risolve sempre all'ultima), version v6.1.2 `10.5281/zenodo.19581785`.
+- **Aggiornamenti di citazione**: `CITATION.cff` con campo `identifiers`,
+  `README.md` con badge DOI Zenodo + BibTeX aggiornato, `docs/paper-draft.md`
+  con DOI in tabella dataset + submission checklist aggiornata.
+- **Submission JOHD**: il blocker "DOI minted via Zenodo for cited dataset
+  version" nella checklist interna e' ora spuntato.
+
 ## [v6.1.1] - 2026-04-14
 
 **Tema**: Boundary coverage jump (23% → 93%) via matcher aourednik + fix

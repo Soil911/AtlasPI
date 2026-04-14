@@ -2,7 +2,7 @@
 
 **Status**: pre-submission draft — targeting the [Journal of Open Humanities Data](https://openhumanitiesdata.metajnl.com/) (JOHD) *data paper* format. Not yet submitted. This file is intentionally kept in the repository so reviewers can track its provenance.
 
-**Version referenced**: AtlasPI 6.1.1 (2026-04-14)
+**Version referenced**: AtlasPI 6.1.2 (2026-04-14) — DOI [10.5281/zenodo.19581784](https://doi.org/10.5281/zenodo.19581784)
 
 ---
 
@@ -122,7 +122,7 @@ Measured against the live production instance at https://atlaspi.cra-srl.com:
 | **Object name** | AtlasPI |
 | **Data type** | Structured historical geographic database |
 | **Format names and versions** | JSON (entity records), GeoJSON (boundaries), SQLite / PostgreSQL (runtime), CSV (export), OpenAPI 3.1 (API schema) |
-| **Creation dates** | 2025-11 (v0.0.1) → 2026-04-14 (v6.1.1) |
+| **Creation dates** | 2025-11 (v0.0.1) → 2026-04-14 (v6.1.2) |
 | **Dataset creators** | Clirim Ramadani (curation, architecture); derived geometries from Natural Earth and Ourednik's *historical-basemaps* |
 | **Language** | English (API, code, schema); Italian (internal documentation and ethics records); entity names in the original local language with variant translations |
 | **License** | Apache-2.0 (source code and API); entity records CC BY 4.0; derived geometries inherit upstream licenses (Natural Earth public domain; Ourednik CC BY 4.0) |
@@ -130,8 +130,8 @@ Measured against the live production instance at https://atlaspi.cra-srl.com:
 | **Live instance** | https://atlaspi.cra-srl.com |
 | **API docs** | https://atlaspi.cra-srl.com/docs (OpenAPI), https://atlaspi.cra-srl.com/redoc |
 | **MCP server** | Python package `atlaspi-mcp`, 8 tools (to be published to PyPI) |
-| **DOI** | To be minted via Zenodo on first tagged release; `.zenodo.json` included in repository |
-| **Publication date** | 2026-04-14 (v6.1.1 production deploy) |
+| **DOI** | Concept: [10.5281/zenodo.19581784](https://doi.org/10.5281/zenodo.19581784) (all versions) — Version v6.1.2: [10.5281/zenodo.19581785](https://doi.org/10.5281/zenodo.19581785) |
+| **Publication date** | 2026-04-14 (v6.1.2 production deploy) |
 
 ### Record structure
 
@@ -228,7 +228,7 @@ AtlasPI is self-funded by CRA. No external grants have been received to date.
 Before submitting to JOHD:
 
 - [ ] ORCID assigned and added to author block
-- [ ] DOI minted via Zenodo for cited dataset version
+- [x] DOI minted via Zenodo for cited dataset version (concept 10.5281/zenodo.19581784, v6.1.2 10.5281/zenodo.19581785)
 - [ ] Full bibliography formatted in target journal style (APA)
 - [ ] Screenshot figure added (web UI + API response JSON side by side)
 - [ ] Peer review by ≥ 1 digital humanities scholar before submission

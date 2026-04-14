@@ -18,6 +18,7 @@
   <a href="#-license"><img alt="License" src="https://img.shields.io/badge/license-MIT-orange?style=flat-square"></a>
   <a href="#-api-documentation"><img alt="API" src="https://img.shields.io/badge/API-21%20endpoints-purple?style=flat-square"></a>
   <a href="mcp-server/README.md"><img alt="MCP" src="https://img.shields.io/badge/MCP-ready-9d4edd?style=flat-square"></a>
+  <a href="https://doi.org/10.5281/zenodo.19581784"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.19581784.svg"></a>
 </p>
 
 <p align="center">
@@ -336,7 +337,7 @@ If you use AtlasPI in academic work, teaching, or derivative datasets, please ci
 
 ### Suggested citation (software)
 
-> Ramadani, C. (2026). *AtlasPI: A structured historical geographic database for AI agents* (Version 6.1.2) [Software]. CRA. https://github.com/Soil911/AtlasPI
+> Ramadani, C. (2026). *AtlasPI: A structured historical geographic database for AI agents* (Version 6.1.2) [Software]. CRA. https://doi.org/10.5281/zenodo.19581784
 
 ### BibTeX
 
@@ -347,8 +348,9 @@ If you use AtlasPI in academic work, teaching, or derivative datasets, please ci
   version      = {6.1.2},
   year         = {2026},
   publisher    = {CRA},
-  url          = {https://github.com/Soil911/AtlasPI},
-  note         = {Live instance: https://atlaspi.cra-srl.com}
+  doi          = {10.5281/zenodo.19581784},
+  url          = {https://doi.org/10.5281/zenodo.19581784},
+  note         = {Live instance: https://atlaspi.cra-srl.com. Concept DOI (all versions): 10.5281/zenodo.19581784. Version v6.1.2 DOI: 10.5281/zenodo.19581785.}
 }
 ```
 
@@ -361,7 +363,7 @@ AtlasPI derives its geographic boundaries from two upstream datasets. If your wo
 
 For full methodology on how boundaries are assigned, matched, and confidence-scored, see [docs/METHODOLOGY.md](docs/METHODOLOGY.md).
 
-A DOI for the versioned dataset will be minted via Zenodo on the first tagged release; see [`.zenodo.json`](.zenodo.json) for deposition metadata.
+The dataset has a permanent DOI minted by Zenodo: [10.5281/zenodo.19581784](https://doi.org/10.5281/zenodo.19581784) (concept DOI, always resolves to the latest version). Every tagged release mints a new version DOI; see the [Zenodo record](https://zenodo.org/records/19581785) for v6.1.2 specifically. Deposition metadata is in [`.zenodo.json`](.zenodo.json).
 
 ---
 

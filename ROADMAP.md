@@ -105,6 +105,9 @@ Nessuno si fida di un servizio che si rompe silenziosamente.
 #### Academic credibility
 - [x] CITATION.cff per citazione formale (v6.1.1)
 - [x] .zenodo.json per DOI mint (v6.1.1)
+- [x] **Zenodo DOI mintato** (v6.1.2) — concept `10.5281/zenodo.19581784`,
+      version v6.1.2 `10.5281/zenodo.19581785`. Repo pubblico +
+      webhook Zenodo attivo + GitHub Release v6.1.2 → mint automatico.
 
 #### Ops hardening
 - [x] **ADR-003** — `/app/data` non e' piu' un named volume, bakata
