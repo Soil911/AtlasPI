@@ -24,6 +24,8 @@ COPY --chown=atlaspi:atlaspi static/ static/
 COPY --chown=atlaspi:atlaspi data/ data/
 COPY --chown=atlaspi:atlaspi run.py .
 COPY --chown=atlaspi:atlaspi requirements.txt .
+COPY --chown=atlaspi:atlaspi alembic/ alembic/
+COPY --chown=atlaspi:atlaspi alembic.ini .
 
 # Environment defaults for production
 ENV HOST=0.0.0.0
