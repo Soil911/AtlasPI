@@ -9,6 +9,13 @@ RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
 # ─── Stage 2: Production runtime ────────────────────────────────
 FROM python:3.13-slim
 
+# System utilities: per backup/restore scripts + smoke_test.sh
+# sqlite3 per .backup, pg client per pg_dump/psql, jq per asserzioni smoke test
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+         sqlite3 postgresql-client curl jq \
+    && rm -rf /var/lib/apt/lists/*
+
 # Security: non-root user
 RUN groupadd --gid 1000 atlaspi \
     && useradd --uid 1000 --gid atlaspi --shell /bin/bash --create-home atlaspi
@@ -22,10 +29,14 @@ COPY --from=builder /install /usr/local
 COPY --chown=atlaspi:atlaspi src/ src/
 COPY --chown=atlaspi:atlaspi static/ static/
 COPY --chown=atlaspi:atlaspi data/ data/
+COPY --chown=atlaspi:atlaspi scripts/ scripts/
 COPY --chown=atlaspi:atlaspi run.py .
 COPY --chown=atlaspi:atlaspi requirements.txt .
 COPY --chown=atlaspi:atlaspi alembic/ alembic/
 COPY --chown=atlaspi:atlaspi alembic.ini .
+
+# Make operational scripts executable
+RUN chmod +x scripts/*.sh
 
 # Environment defaults for production
 ENV HOST=0.0.0.0

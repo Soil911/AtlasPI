@@ -7,6 +7,9 @@ os.environ["DATABASE_URL"] = "sqlite:///./data/test.db"
 os.environ["LOG_LEVEL"] = "WARNING"
 os.environ["LOG_FORMAT"] = "text"
 os.environ["AUTO_SEED"] = "false"
+# Rate limit alto per i test (i 60/min di prod farebbero scattare 429
+# quando i test fanno molte richieste in pochi secondi)
+os.environ.setdefault("RATE_LIMIT", "100000/minute")
 
 import pytest
 from fastapi.testclient import TestClient

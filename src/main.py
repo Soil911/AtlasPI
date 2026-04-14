@@ -11,6 +11,7 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
+from slowapi.middleware import SlowAPIMiddleware
 from slowapi.util import get_remote_address
 
 from src.api.errors import register_error_handlers
@@ -32,9 +33,12 @@ from src.config import (
 from src.db.database import Base, engine
 from src.db.seed import seed_database
 from src.logging_config import setup_logging
+from src.monitoring import init_sentry
 
-# Logging prima di tutto
+# Logging prima di tutto (Sentry si aggancia poi al logger root)
 setup_logging()
+# Sentry init prima dell'app: cosi' cattura anche errori di startup
+init_sentry()
 logger = logging.getLogger(__name__)
 
 STATIC_DIR = Path(__file__).resolve().parent.parent / "static"
@@ -179,9 +183,11 @@ app.add_middleware(SecurityHeadersMiddleware)
 # Request logging (include X-Request-ID)
 app.add_middleware(RequestLoggingMiddleware)
 
-# Rate limiting (slowapi)
+# Rate limiting (slowapi) — middleware applica i default_limits globali
+# senza bisogno di decorator @limiter.limit() su ogni endpoint.
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+app.add_middleware(SlowAPIMiddleware)
 
 # Error handling
 register_error_handlers(app)
@@ -195,7 +201,18 @@ app.include_router(relations.router)
 
 
 @app.get("/", include_in_schema=False)
-async def serve_ui():
+async def serve_landing():
+    """Landing page inglese (target: developer / agent AI). Migliora SEO e conversione."""
+    landing = STATIC_DIR / "landing" / "index.html"
+    if landing.exists():
+        return FileResponse(landing)
+    # Fallback: se la landing non e' deployata, serve la mappa
+    return FileResponse(STATIC_DIR / "index.html")
+
+
+@app.get("/app", include_in_schema=False)
+async def serve_app():
+    """Mappa interattiva italiana (l'app vera e propria)."""
     return FileResponse(STATIC_DIR / "index.html")
 
 
@@ -203,6 +220,24 @@ async def serve_ui():
 async def serve_embed():
     """Serve la versione embed (UI minimale per iframe)."""
     return FileResponse(STATIC_DIR / "embed.html")
+
+
+@app.get("/robots.txt", include_in_schema=False)
+async def serve_robots():
+    """Directive per crawler SEO."""
+    return FileResponse(
+        STATIC_DIR / "robots.txt",
+        media_type="text/plain",
+    )
+
+
+@app.get("/sitemap.xml", include_in_schema=False)
+async def serve_sitemap():
+    """Sitemap XML con le route indicizzabili."""
+    return FileResponse(
+        STATIC_DIR / "sitemap.xml",
+        media_type="application/xml",
+    )
 
 
 @app.get("/v1/openapi.json", include_in_schema=False)

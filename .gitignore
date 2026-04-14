@@ -12,3 +12,12 @@ dist/
 build/
 *.db
 data/*.db
+data/*.db-shm
+data/*.db-wal
+
+# Runtime
+*.log
+server.log
+
+# Claude Code local
+.claude/

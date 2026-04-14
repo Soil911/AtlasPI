@@ -1,0 +1,28 @@
+# AtlasPI — robots policy
+# Public, indexable, structured for crawlers and AI agents alike.
+
+User-agent: *
+Allow: /
+
+# Avoid crawling internal API endpoints that return large JSON payloads
+Disallow: /v1/entities/
+Disallow: /v1/snapshot/
+Disallow: /v1/compare/
+Disallow: /v1/nearby
+Disallow: /v1/export/
+
+# Friendly hints for AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemap
+Sitemap: https://atlaspi.cra-srl.com/sitemap.xml

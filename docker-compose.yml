@@ -45,16 +45,60 @@ services:
       - LOG_FORMAT=json
       - LOG_LEVEL=INFO
       - AUTO_SEED=true
+      # In produzione restringere: CORS_ORIGINS=https://atlaspi.cra-srl.com
       - CORS_ORIGINS=*
+      # Observability — passati se presenti nel .env del server
+      - SENTRY_DSN=${SENTRY_DSN:-}
+      - SENTRY_ENVIRONMENT=${SENTRY_ENVIRONMENT:-production}
+      - SENTRY_TRACES_SAMPLE_RATE=${SENTRY_TRACES_SAMPLE_RATE:-0.1}
+      - PUBLIC_BASE_URL=${PUBLIC_BASE_URL:-https://atlaspi.cra-srl.com}
+      - RATE_LIMIT=${RATE_LIMIT:-60/minute}
     volumes:
       - app-data:/app/data
+      - app-backup:/app/backup
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
     depends_on:
       db:
         condition: service_healthy
       redis:
         condition: service_healthy
 
+  # ─── Backup sidecar (daily at 03:00) ────────────────────────────
+  # Esegue scripts/backup.sh ogni 24h tramite sleep + loop.
+  # Alternativa piu' pulita: usare host cron che invoca `docker exec app scripts/backup.sh`.
+  backup:
+    image: alpine:3.19
+    restart: unless-stopped
+    command: |
+      sh -c '
+        apk add --no-cache bash sqlite postgresql-client gzip coreutils;
+        while true; do
+          # attende fino alle 03:00 poi esegue backup
+          NOW=$$(date +%H%M);
+          SLEEP=$$((((3 - 10#$${NOW:0:2} + 24) % 24) * 3600 + (60 - 10#$${NOW:2:2}) * 60));
+          echo "[backup-sidecar] next run in $${SLEEP}s";
+          sleep $$SLEEP;
+          bash /scripts/backup.sh /backup || echo "[backup-sidecar] backup fallito";
+        done
+      '
+    volumes:
+      - app-data:/data:ro
+      - app-backup:/backup
+      - ./scripts:/scripts:ro
+    environment:
+      - DATABASE_URL=postgresql://atlaspi:atlaspi_dev@db:5432/atlaspi
+      - BACKUP_DIR=/backup
+      - BACKUP_RETAIN=14
+    depends_on:
+      db:
+        condition: service_healthy
+
 volumes:
   pgdata:
   redisdata:
   app-data:
+  app-backup:

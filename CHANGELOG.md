@@ -2,6 +2,122 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.1.0] - 2026-04-14
+
+**Tema**: Reliability + Discoverability post-deploy. Il sito e' online su
+https://atlaspi.cra-srl.com — questa release lo rende **affidabile** e
+**scopribile dagli agenti AI**.
+
+### Reliability — Production hardening
+
+- **Sentry SDK** integrato (opt-in via `SENTRY_DSN`). Cattura eccezioni
+  FastAPI/SQLAlchemy/Starlette + log >= ERROR. Modulo `src/monitoring.py`
+  con interfaccia idempotente. Inattivo by default (zero overhead in dev).
+- **Health check esteso** (`/health`):
+  - status: `ok` | `degraded` | `down` (era solo "ok")
+  - sotto-checks: database, seed, sentry
+  - uptime_seconds, check_duration_ms, sentry_active, environment
+  - HTTP 503 se database down (le altre situazioni restano 200 per non
+    confondere monitoring tools che leggono `status` dal body)
+- **Backup automatico**:
+  - `scripts/backup.sh` — auto-detect SQLite vs PostgreSQL, retention 14gg
+  - `scripts/restore.sh` — ripristino con conferma + safe-copy del DB corrente
+  - Sidecar Docker Compose schedulato 03:00 daily
+- **Smoke test post-deploy** (`scripts/smoke_test.sh`): 14 endpoint critici
+  verificati con curl + jq, exit code 0/1 per CI/CD
+- **Operations runbook** (`docs/OPERATIONS.md`): quick actions per incident,
+  setup UptimeRobot/Sentry, troubleshooting comuni, baseline performance
+- **Logging rotation** in docker-compose: 10MB x 3 file
+- **Rate limiting davvero attivo**: aggiunto `SlowAPIMiddleware` (prima
+  configurato ma non applicato — bug silenzioso scoperto in audit)
+
+### SEO base
+
+- **`/robots.txt`** con allow esplicito per AI crawler (GPTBot, ClaudeBot,
+  anthropic-ai, Google-Extended, PerplexityBot, CCBot)
+- **`/sitemap.xml`** con priorita' per homepage, app, docs, embed
+- **`PUBLIC_BASE_URL`** configurabile via env (default
+  `https://atlaspi.cra-srl.com`)
+
+### Discoverability — MCP Server
+
+Nuovo pacchetto Python **`atlaspi-mcp`** in `mcp-server/`:
+
+- 8 tools MCP che wrappano l'API REST: `search_entities`, `get_entity`,
+  `snapshot_at_year`, `nearby_entities`, `compare_entities`,
+  `random_entity`, `get_evolution`, `dataset_stats`
+- Configurabile via `ATLASPI_API_URL` (default produzione)
+- Compatibile con **Claude Desktop** e **Claude Code**
+- README con quick start, badge PyPI/Python/License, esempi prompt
+- 10 test pytest, 1 di integrazione live opzionale
+- Pronto per pubblicazione su PyPI
+
+### Landing page inglese
+
+- **`static/landing/index.html`** — landing dedicata in inglese, separata
+  dalla mappa interattiva italiana (`/app`)
+- 9 sezioni: hero, why, demo embed, MCP setup, API examples (curl/Python/JS
+  con copy-to-clipboard), use cases, stats, for AI agents, footer
+- SEO completo: 10 OG tags, Twitter card, JSON-LD `WebApplication` +
+  `Dataset` (per Google Dataset Search), hreflang, canonical
+- Vanilla HTML/CSS/JS — zero dipendenze, zero tracker, zero CDN esterni
+- Atteso Lighthouse: SEO 100, Performance 95+, Accessibility 95+
+- Routing: `/` → landing, `/app` → mappa (la vecchia root e' ora a `/app`)
+
+### Boundary coverage — Pipeline pronta
+
+Infrastruttura per portare la coverage dal 23% al 60%+ in v6.1.1:
+
+- **`src/ingestion/natural_earth_import.py`** — carica shapefile NE 10m
+  (fallback a 110m gia' nel repo) e produce mapping name → polygon
+- **`src/ingestion/boundary_match.py`** — 4 strategie:
+  ISO_A3 → exact name multilingua → fuzzy rapidfuzz>=85% → capital-in-polygon
+- **`src/ingestion/enrich_all_boundaries.py`** — pipeline end-to-end
+  idempotente con dry-run e backup `.bak`. Non sovrascrive boundary
+  `historical_map`/`academic_source` mai
+- **ETHICS-005** documenta il rischio di anacronismo (boundary moderno su
+  entita' antica) e la gestione di confini contestati (Taiwan, Western
+  Sahara, Palestina, Kosovo, Cipro Nord, Kashmir, Somaliland)
+- Coverage proiettata: 40-50% dopo prima esecuzione, 60%+ con NE 10m + tutti
+  i match installati. **Esecuzione rinviata** a v6.1.1 per separare commit
+  di codice da commit di dati.
+
+### Test
+
+- **233 test totali** (208 v5.8 + 25 nuovi v6.1)
+- Nuovo file `tests/test_v61_features.py`:
+  - `TestExtendedHealthCheck` (8 test) — campi nuovi, sotto-checks, status
+  - `TestSEOEndpoints` (4 test) — robots.txt e sitemap.xml serviti
+  - `TestMonitoringModule` (4 test) — Sentry off-by-default, no raise
+  - `TestBackupScripts` (5 test) — script presenti, contenuto corretto
+  - `TestConfigDefaults` (3 test) — Sentry DSN sicuro, base URL HTTPS
+- Conftest aggiornato: `RATE_LIMIT=100000/minute` per evitare 429 in test
+
+### Dipendenze
+
+- Aggiunte: `sentry-sdk[fastapi]>=2.0.0`, `geopandas>=0.14.0`,
+  `shapely>=2.0.0`, `rapidfuzz>=3.0.0`
+- Dockerfile aggiunge `sqlite3`, `postgresql-client`, `curl`, `jq`
+  per gli script operativi
+
+### Documentazione
+
+- `docs/OPERATIONS.md` — runbook operativo
+- `docs/ethics/ETHICS-005-boundary-natural-earth.md` — anacronismo e contesi
+- `docs/boundary_coverage_report.md` — analisi attuale + scenari proiettati
+- `scripts/README.md` — istruzioni per backup/restore/smoke
+- `mcp-server/README.md` — quick start integrazione Claude
+- `ROADMAP.md` riorganizzata: v6.0 deploy completato, v6.1 in corso,
+  v6.2 PostgreSQL (rinviata), v6.3 distribuzione, v6.4 monetization
+
+### Bugfix
+
+- `SlowAPIMiddleware` mancante: rate limiting non era applicato a nessuna
+  route (silently broken). Ora i `60/minute` di default funzionano davvero.
+- `static/index.html` footer mostrava ancora v5.8.0 dopo bump.
+
+---
+
 ## [v5.8.0] - 2026-04-12
 
 ### API — Nuovi endpoint e filtri avanzati

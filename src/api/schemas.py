@@ -88,7 +88,15 @@ class PaginatedEntityResponse(BaseModel):
 
 class HealthResponse(BaseModel):
     """Stato di salute del servizio."""
-    status: str
+    status: str = Field(description="'ok' | 'degraded' | 'down'")
     version: str
+    environment: str = Field(default="unknown", description="development, staging, production")
     database: str = Field(description="Tipo e stato del database")
     entity_count: int
+    uptime_seconds: float = Field(default=0.0, description="Secondi dall'avvio del processo")
+    check_duration_ms: float = Field(default=0.0, description="Tempo speso in questo health check")
+    sentry_active: bool = Field(default=False, description="Se Sentry sta catturando errori")
+    checks: dict[str, str] = Field(
+        default_factory=dict,
+        description="Esito delle sotto-verifiche (database, seed, rate_limit, ...)",
+    )

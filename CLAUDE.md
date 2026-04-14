@@ -199,3 +199,102 @@ Claude deve:
 Prima di scrivere codice chiedi: "questo dato, in questo formato,
 potrebbe essere usato per distorcere la comprensione storica?"
 Se la risposta è sì, apri un ETHICS record prima di procedere.
+
+---
+
+## Deploy in produzione
+
+### ⚠️ HAI ACCESSO SSH AL VPS
+La chiave privata `~/.ssh/cra_vps` è autorizzata come root sul VPS. Puoi eseguire **qualsiasi** comando sul server di produzione via:
+```bash
+ssh -i ~/.ssh/cra_vps root@77.81.229.242 "<comando>"
+```
+Usalo per: ispezionare container, leggere log, fare backup del DB Postgres, eseguire Alembic manualmente, ecc. Esempi pratici:
+```bash
+# Backup DB Postgres prima di una migration
+ssh -i ~/.ssh/cra_vps root@77.81.229.242 \
+  "docker exec cra-atlaspi-db pg_dump -U atlaspi atlaspi > /root/atlaspi-backup-\$(date +%Y%m%d-%H%M%S).sql"
+# Esegui query ad-hoc
+ssh -i ~/.ssh/cra_vps root@77.81.229.242 \
+  "docker exec cra-atlaspi-db psql -U atlaspi -d atlaspi -c 'SELECT count(*) FROM some_table'"
+# Alembic downgrade manuale
+ssh -i ~/.ssh/cra_vps root@77.81.229.242 \
+  "cd /opt/cra && docker compose exec atlaspi alembic downgrade -1"
+```
+Operazioni irreversibili (DROP TABLE, docker compose down -v, alembic downgrade oltre -1) vanno confermate con Clirim prima.
+
+### Topologia
+- **Produzione**: Aruba VPS `77.81.229.242` (Ubuntu 24.04 + Docker)
+- **Dominio pubblico**: https://atlaspi.cra-srl.com (Nginx + Let's Encrypt)
+- **Porta interna container**: 10100
+- **Stack**: 3 container — `cra-atlaspi` (app), `cra-atlaspi-db` (Postgres), `cra-atlaspi-redis`
+- **Path sul server**: `/opt/cra/atlaspi` (git repo)
+- **Repo GitHub**: `Soil911/AtlasPI` branch `main`
+- **Env**: `/opt/cra/.env.atlaspi` (DATABASE_URL postgres, REDIS_URL, CORS_ORIGINS)
+- **DB**: PostgreSQL dedicato su `cra-atlaspi-db` (volume persistente), migrazioni Alembic automatiche al startup
+
+### Quando Clirim dice "aggiorna sul server" / "deploy" / "pusha in produzione"
+Esegui **in sequenza**:
+
+```bash
+# 1. Tutto committato e pushato
+git status              # clean
+git push origin main
+
+# 2. Deploy sul VPS (pull + rebuild + healthcheck)
+cra-deploy atlaspi
+```
+
+Lo script `cra-deploy` (in `~/bin/`) esegue sul VPS: `git pull` → `docker compose build atlaspi` → `docker compose up -d atlaspi` → healthcheck su `http://127.0.0.1:10100/health` (timeout 60s).
+
+### ⚠️ Migrazioni Alembic
+Le migrazioni girano automaticamente allo startup del container tramite `run.py`. Quando aggiungi una nuova migration:
+1. Genera in locale: `alembic revision --autogenerate -m "..."`
+2. **Testa in locale** contro un DB di test prima di pushare
+3. Commit del file in `alembic/versions/`
+4. Push + deploy — parte al prossimo startup del container
+5. Verifica post-deploy: `cra-logs atlaspi 100` — cerca righe Alembic "Running upgrade..."
+
+Il Dockerfile fa `COPY alembic/ alembic/` e `COPY alembic.ini .` — se sposti la cartella Alembic, aggiorna il Dockerfile.
+
+### Verifica post-deploy
+```bash
+cra-health
+curl -sS https://atlaspi.cra-srl.com/health | python -m json.tool
+```
+
+### Se il deploy fallisce
+```bash
+cra-logs atlaspi 100
+cra-logs atlaspi-db 50        # errori Postgres (es. migration fallita)
+```
+
+Errori tipici:
+- Migration fallisce → il container si riavvia in loop. Fixa la migration in locale, push, re-deploy
+- DB non connette → verifica `cra-atlaspi-db` sia `healthy`: `ssh ... docker ps`
+- `CORS_ORIGINS` manca → aggiorna `/opt/cra/.env.atlaspi` e `docker compose restart atlaspi`
+
+**Mai toccare il codice sul VPS**: `git reset --hard origin/main` cancella tutto.
+
+### Rollback (⚠️ attento con le migrazioni)
+Rollback del codice:
+```bash
+git revert HEAD
+git push
+cra-deploy atlaspi
+```
+
+Se il commit revertato includeva una migration Alembic **già applicata in produzione**, devi anche downgradare il DB manualmente:
+```bash
+ssh -i ~/.ssh/cra_vps root@77.81.229.242 \
+  "cd /opt/cra && docker compose exec atlaspi alembic downgrade -1"
+```
+Prima di farlo: **fai un backup del DB** (`pg_dump`) perché i downgrade possono perdere dati.
+
+### NON deployare se:
+- Test falliscono
+- Ci sono modifiche non committate
+- Migration non testata in locale
+- Clirim ha detto "solo locale" / "non deployare"
+
+Per workflow completo dello sviluppo in parallelo delle 3 app (CRAgent, CRApp, AtlasPI) vedi la memoria Claude in `~/.claude/projects/C--Users-cliri-Documents-CRA-AGENT/memory/deploy_workflow.md`.

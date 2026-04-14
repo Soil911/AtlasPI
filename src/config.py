@@ -16,7 +16,7 @@ DEBUG = ENVIRONMENT == "development"
 SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret-change-in-production")
 
 # ─── Applicazione ────────────────────────────────────────────────
-APP_VERSION = "5.8.0"
+APP_VERSION = "6.1.0"
 APP_TITLE = "AtlasPI"
 APP_DESCRIPTION = "Database geografico storico strutturato per agenti AI"
 
@@ -56,3 +56,20 @@ RATE_LIMIT = os.getenv("RATE_LIMIT", "60/minute")
 
 # ─── Seed ────────────────────────────────────────────────────────
 AUTO_SEED = os.getenv("AUTO_SEED", "true").lower() == "true"
+
+# ─── Observability: Sentry ───────────────────────────────────────
+# Vuoto in sviluppo (nessun invio). In produzione impostare DSN reale
+# via env var SENTRY_DSN. Sample rate di default basso per risparmiare quota.
+SENTRY_DSN = os.getenv("SENTRY_DSN", "").strip()
+SENTRY_ENVIRONMENT = os.getenv("SENTRY_ENVIRONMENT", ENVIRONMENT)
+SENTRY_TRACES_SAMPLE_RATE = float(os.getenv("SENTRY_TRACES_SAMPLE_RATE", "0.1"))
+SENTRY_PROFILES_SAMPLE_RATE = float(os.getenv("SENTRY_PROFILES_SAMPLE_RATE", "0.0"))
+SENTRY_RELEASE = os.getenv("SENTRY_RELEASE", f"atlaspi@{APP_VERSION}")
+
+# ─── Observability: Uptime / misc ───────────────────────────────
+# Timestamp di avvio del processo per calcolare uptime in /health.
+import time as _time  # noqa: E402 (import localizzato per evitare dipendenze al top)
+PROCESS_START_TIME = _time.time()
+
+# URL pubblico canonico del servizio (usato in sitemap.xml, OG tags, docs).
+PUBLIC_BASE_URL = os.getenv("PUBLIC_BASE_URL", "https://atlaspi.cra-srl.com")

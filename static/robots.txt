@@ -1,0 +1,35 @@
+# AtlasPI — Historical Geography for AI Agents
+# https://atlaspi.cra-srl.com
+
+User-agent: *
+Allow: /
+Allow: /v1/
+Allow: /docs
+Allow: /redoc
+Allow: /embed
+
+# Impedisce crawling di endpoint costosi o senza valore SEO
+Disallow: /v1/export/
+Disallow: /health
+
+# AI crawler (GPTBot, ClaudeBot, etc.) — esplicitamente permessi.
+# AtlasPI e' progettato per agenti AI: vogliamo che ci scoprano.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://atlaspi.cra-srl.com/sitemap.xml

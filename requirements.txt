@@ -12,3 +12,7 @@ gunicorn>=22.0.0
 psycopg2-binary>=2.9.9
 redis>=5.0.0
 alembic>=1.13.0
+sentry-sdk[fastapi]>=2.0.0
+geopandas>=0.14.0
+shapely>=2.0.0
+rapidfuzz>=3.0.0

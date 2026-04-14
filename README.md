@@ -10,11 +10,20 @@
 </p>
 
 <p align="center">
-  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-5.8.0-blue?style=flat-square"></a>
-  <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-746-green?style=flat-square"></a>
-  <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-208%20passing-brightgreen?style=flat-square"></a>
-  <a href="#-license"><img alt="License" src="https://img.shields.io/badge/license-Apache%202.0-orange?style=flat-square"></a>
+  <a href="https://atlaspi.cra-srl.com"><img alt="Try it live" src="https://img.shields.io/badge/try%20it-live-58a6ff?style=flat-square&logo=globe&logoColor=white"></a>
+  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.1.0-blue?style=flat-square"></a>
+  <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-747-green?style=flat-square"></a>
+  <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-233%20passing-brightgreen?style=flat-square"></a>
+  <a href="#-license"><img alt="License" src="https://img.shields.io/badge/license-MIT-orange?style=flat-square"></a>
   <a href="#-api-documentation"><img alt="API" src="https://img.shields.io/badge/API-21%20endpoints-purple?style=flat-square"></a>
+  <a href="mcp-server/README.md"><img alt="MCP" src="https://img.shields.io/badge/MCP-ready-9d4edd?style=flat-square"></a>
+</p>
+
+<p align="center">
+  <strong>Live: <a href="https://atlaspi.cra-srl.com">atlaspi.cra-srl.com</a></strong> &middot;
+  <a href="https://atlaspi.cra-srl.com/docs">API Docs</a> &middot;
+  <a href="https://atlaspi.cra-srl.com/app">Map App</a> &middot;
+  <a href="mcp-server/README.md">MCP Server</a>
 </p>
 
 ---
@@ -158,7 +167,7 @@ curl "http://localhost:10100/v1/compare/1/5"
 
 ## Dataset Overview
 
-**746 historical entities** spanning 6,500 years of human civilization, backed by **2,200+ academic sources** and documenting **2,000+ territory changes**.
+**747 historical entities** spanning 6,500 years of human civilization, backed by **2,200+ academic sources** and documenting **2,000+ territory changes**.
 
 ### Coverage by Region
 
@@ -236,7 +245,7 @@ atlaspi/
     entities/       # Source entity data (JSON)
     raw/            # Original unmodified source data
     processed/      # Normalized data
-  tests/            # 208 tests: technical, ethical, security, performance, data quality
+  tests/            # 233 tests: technical, ethical, security, performance, data quality
   docs/
     adr/            # Architecture Decision Records
     ethics/         # Documented ethical decisions (ETHICS-001, 002, 003...)

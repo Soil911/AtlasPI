@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d1117">
+
+  <title>AtlasPI — Historical Geography API for AI Agents</title>
+  <meta name="description" content="The first REST API and MCP server for historical geography. 747 entities, 2,200+ academic sources, real boundaries from 4500 BCE to 2024. Built for AI agents.">
+  <meta name="keywords" content="historical geography api, AI agents, MCP server, REST API, GeoJSON, historical data, digital humanities, boundaries, empires, kingdoms">
+  <meta name="author" content="AtlasPI">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://atlaspi.cra-srl.com/">
+  <link rel="icon" type="image/svg+xml" href="/static/landing/assets/favicon.svg">
+  <link rel="alternate" hreflang="en" href="https://atlaspi.cra-srl.com/">
+  <link rel="alternate" hreflang="it" href="https://atlaspi.cra-srl.com/it/app">
+  <link rel="alternate" hreflang="x-default" href="https://atlaspi.cra-srl.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://atlaspi.cra-srl.com/">
+  <meta property="og:title" content="AtlasPI — Historical Geography API for AI Agents">
+  <meta property="og:description" content="747 historical entities, real boundaries, academic sources. From 4500 BCE to 2024. Available as REST API and MCP server.">
+  <meta property="og:image" content="https://atlaspi.cra-srl.com/static/landing/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AtlasPI — Historical Geography API for AI Agents">
+  <meta property="og:site_name" content="AtlasPI">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://atlaspi.cra-srl.com/">
+  <meta name="twitter:title" content="AtlasPI — Historical Geography API for AI Agents">
+  <meta name="twitter:description" content="747 historical entities, real boundaries, academic sources. From 4500 BCE to 2024. REST API + MCP server.">
+  <meta name="twitter:image" content="https://atlaspi.cra-srl.com/static/landing/assets/og-image.png">
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AtlasPI",
+    "alternateName": "AtlasPI Historical Geography API",
+    "description": "Structured historical geographic database for AI agents. REST API and MCP server with 747 entities, real boundaries, and academic sources from 4500 BCE to 2024.",
+    "url": "https://atlaspi.cra-srl.com/",
+    "applicationCategory": "DeveloperApplication",
+    "applicationSubCategory": "API",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "softwareVersion": "5.8.0",
+    "license": "https://opensource.org/licenses/MIT",
+    "codeRepository": "https://github.com/Soil911/AtlasPI",
+    "programmingLanguage": ["Python", "JavaScript"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "AtlasPI",
+      "url": "https://atlaspi.cra-srl.com/"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "AtlasPI Historical Geography Dataset",
+    "description": "747 historical geopolitical entities with boundaries, names, and metadata from 4500 BCE to 2024. Includes confidence scores and 2,200+ academic citations.",
+    "url": "https://atlaspi.cra-srl.com/",
+    "license": "https://opensource.org/licenses/MIT",
+    "creator": {
+      "@type": "Organization",
+      "name": "AtlasPI"
+    },
+    "distribution": [
+      {
+        "@type": "DataDownload",
+        "encodingFormat": "application/json",
+        "contentUrl": "https://atlaspi.cra-srl.com/v1/entities"
+      },
+      {
+        "@type": "DataDownload",
+        "encodingFormat": "application/geo+json",
+        "contentUrl": "https://atlaspi.cra-srl.com/v1/export/geojson"
+      }
+    ],
+    "temporalCoverage": "-4500/2024",
+    "keywords": ["historical geography", "boundaries", "empires", "GeoJSON", "AI training data"]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/static/landing/style.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo" aria-label="AtlasPI home">
+      <svg width="28" height="28" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <ellipse cx="32" cy="32" rx="28" ry="11" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+        <line x1="32" y1="4" x2="32" y2="60" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+        <ellipse cx="32" cy="32" rx="14" ry="28" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+        <circle cx="32" cy="32" r="3" fill="currentColor"/>
+      </svg>
+      <span>Atlas<strong>PI</strong></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#features">Why</a>
+      <a href="#mcp">MCP</a>
+      <a href="#api">API</a>
+      <a href="#use-cases">Use cases</a>
+      <a href="https://github.com/Soil911/AtlasPI" target="_blank" rel="noopener" class="nav-github">GitHub</a>
+      <a href="/app" class="nav-cta">Open app</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <svg viewBox="0 0 800 400" preserveAspectRatio="none" class="hero-globe">
+      <defs>
+        <radialGradient id="globeGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#58a6ff" stop-opacity="0.18"/>
+          <stop offset="60%" stop-color="#58a6ff" stop-opacity="0.05"/>
+          <stop offset="100%" stop-color="#58a6ff" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="400" cy="200" r="200" fill="url(#globeGlow)"/>
+      <g stroke="#58a6ff" stroke-width="0.6" fill="none" opacity="0.35">
+        <ellipse cx="400" cy="200" rx="200" ry="60"/>
+        <ellipse cx="400" cy="200" rx="200" ry="120"/>
+        <ellipse cx="400" cy="200" rx="200" ry="180"/>
+        <ellipse cx="400" cy="200" rx="60" ry="200"/>
+        <ellipse cx="400" cy="200" rx="120" ry="200"/>
+        <ellipse cx="400" cy="200" rx="180" ry="200"/>
+        <line x1="200" y1="200" x2="600" y2="200"/>
+        <line x1="400" y1="0" x2="400" y2="400"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="container hero-inner">
+    <div class="hero-tag">
+      <span class="dot-live" aria-hidden="true"></span>
+      Live now &middot; v5.8.0 &middot; 747 entities indexed
+    </div>
+    <h1 class="hero-title">
+      Historical Geography <span class="grad">for AI Agents</span>
+    </h1>
+    <p class="hero-sub">
+      The first REST API and MCP server with <strong>747 historical entities</strong>,
+      real boundaries, and academic sources. From <strong>4500 BCE to 2024</strong>.
+    </p>
+    <div class="hero-ctas">
+      <a href="/app" class="btn btn-primary">
+        Try the live map
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/docs" class="btn btn-ghost">View API docs</a>
+      <a href="#mcp" class="btn btn-ghost">Use with Claude</a>
+    </div>
+    <div class="hero-meta">
+      <span><code>GET</code> /v1/snapshot/<span class="meta-year">1500</span></span>
+      <span class="meta-sep">&middot;</span>
+      <span>JSON &middot; GeoJSON &middot; OpenAPI 3.1</span>
+      <span class="meta-sep">&middot;</span>
+      <span>MIT licensed</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY / PILLARS -->
+<section id="features" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why AtlasPI</span>
+      <h2>Built for machines first.<br>Honest with humans.</h2>
+    </div>
+    <div class="pillars">
+
+      <article class="pillar">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <path d="M16 18l6-6-6-6"/>
+            <path d="M8 6l-6 6 6 6"/>
+            <path d="M14.5 4l-5 16"/>
+          </svg>
+        </div>
+        <h3>Structured for agents</h3>
+        <p>Predictable JSON responses, OpenAPI 3.1 spec, and a native MCP server. Your agent stops scraping and starts reasoning.</p>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <path d="M4 19V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14"/>
+            <path d="M4 19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2"/>
+            <path d="M8 7h8M8 11h8M8 15h5"/>
+          </svg>
+        </div>
+        <h3>Academically sourced</h3>
+        <p>Over 2,200 academic citations. Every record carries a confidence score and a status: <code>confirmed</code>, <code>uncertain</code>, or <code>disputed</code>.</p>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <h3>Ethically designed</h3>
+        <p>Contested territories show every version. Colonial names coexist with original ones. We document history — we don't arbitrate it.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- LIVE DEMO -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">See it live</span>
+      <h2>Drag the year. Watch civilizations breathe.</h2>
+      <p class="section-lead">A 5,000-year timeline rendered from real boundary data. No mockup.</p>
+    </div>
+    <div class="demo-frame">
+      <div class="demo-frame-bar" aria-hidden="true">
+        <span class="dot-r"></span>
+        <span class="dot-y"></span>
+        <span class="dot-g"></span>
+        <span class="demo-url">atlaspi.cra-srl.com/embed</span>
+      </div>
+      <iframe
+        src="/embed"
+        title="AtlasPI live interactive map"
+        loading="lazy"
+        referrerpolicy="no-referrer"
+        sandbox="allow-scripts allow-same-origin allow-popups"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- MCP SERVER -->
+<section id="mcp" class="section">
+  <div class="container">
+    <div class="mcp-grid">
+      <div>
+        <span class="eyebrow">Model Context Protocol</span>
+        <h2>Native MCP server.<br>Plug it into Claude.</h2>
+        <p class="lede">
+          AtlasPI ships as an MCP server. Add it to your Claude config and your AI
+          agent can query historical geographic data natively — no custom integration,
+          no glue code, no scraping.
+        </p>
+        <ul class="check-list">
+          <li>Works with Claude Desktop, Claude Code, and any MCP client</li>
+          <li>Tools for snapshots, comparisons, nearby search, and entity detail</li>
+          <li>Returns structured JSON with sources and confidence scores intact</li>
+          <li>Open source under MIT — fork, audit, self-host</li>
+        </ul>
+        <div class="mcp-ctas">
+          <a href="https://github.com/Soil911/AtlasPI/tree/main/mcp-server" class="btn btn-primary" target="_blank" rel="noopener">View MCP source</a>
+          <a href="/docs" class="btn btn-ghost">REST API docs</a>
+        </div>
+      </div>
+
+      <div class="mcp-code">
+        <div class="code-card">
+          <div class="code-card-head">
+            <span class="code-file">claude_desktop_config.json</span>
+            <button class="copy-btn" data-copy-target="mcp-snippet" aria-label="Copy configuration">Copy</button>
+          </div>
+<pre><code id="mcp-snippet">{
+  <span class="tk-key">"mcpServers"</span>: {
+    <span class="tk-key">"atlaspi"</span>: {
+      <span class="tk-key">"command"</span>: <span class="tk-str">"python"</span>,
+      <span class="tk-key">"args"</span>: [<span class="tk-str">"-m"</span>, <span class="tk-str">"atlaspi_mcp"</span>]
+    }
+  }
+}</code></pre>
+        </div>
+        <p class="mcp-hint">Restart Claude. Ask: <em>"What empires existed in Anatolia in 1200 BCE?"</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- API EXAMPLES -->
+<section id="api" class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">REST API</span>
+      <h2>Three lines to query 5,000 years.</h2>
+      <p class="section-lead">21 endpoints. JSON in, JSON out. No auth required for the open tier.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="API examples">
+      <button class="tab active" role="tab" aria-selected="true" aria-controls="tab-curl" id="tablbl-curl" data-tab="curl">curl</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-py" id="tablbl-py" data-tab="py">Python</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-js" id="tablbl-js" data-tab="js">JavaScript</button>
+    </div>
+
+    <div class="tab-panels">
+      <div class="tab-panel active" id="tab-curl" role="tabpanel" aria-labelledby="tablbl-curl">
+        <div class="code-card">
+          <div class="code-card-head">
+            <span class="code-file">snapshot.sh</span>
+            <button class="copy-btn" data-copy-target="snippet-curl" aria-label="Copy command">Copy</button>
+          </div>
+<pre><code id="snippet-curl"><span class="tk-com"># Get every entity that existed in the year 1500</span>
+curl https://atlaspi.cra-srl.com/v1/snapshot/1500 | jq <span class="tk-str">'.summary'</span>
+
+<span class="tk-com"># Compare two empires side by side</span>
+curl https://atlaspi.cra-srl.com/v1/compare/1/2
+
+<span class="tk-com"># Find what existed near a coordinate at a given year</span>
+curl <span class="tk-str">"https://atlaspi.cra-srl.com/v1/nearby?lat=41.9&amp;lon=12.5&amp;year=100"</span></code></pre>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-py" role="tabpanel" aria-labelledby="tablbl-py" hidden>
+        <div class="code-card">
+          <div class="code-card-head">
+            <span class="code-file">atlaspi_demo.py</span>
+            <button class="copy-btn" data-copy-target="snippet-py" aria-label="Copy command">Copy</button>
+          </div>
+<pre><code id="snippet-py"><span class="tk-key">import</span> requests
+
+<span class="tk-com"># What existed near Rome in the year 100 CE?</span>
+r = requests.get(
+    <span class="tk-str">"https://atlaspi.cra-srl.com/v1/nearby"</span>,
+    params={<span class="tk-str">"lat"</span>: 41.9, <span class="tk-str">"lon"</span>: 12.5, <span class="tk-str">"year"</span>: 100},
+)
+
+<span class="tk-key">for</span> entity <span class="tk-key">in</span> r.json()[<span class="tk-str">"results"</span>]:
+    print(entity[<span class="tk-str">"name"</span>], entity[<span class="tk-str">"confidence_score"</span>])</code></pre>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-js" role="tabpanel" aria-labelledby="tablbl-js" hidden>
+        <div class="code-card">
+          <div class="code-card-head">
+            <span class="code-file">atlaspi-demo.js</span>
+            <button class="copy-btn" data-copy-target="snippet-js" aria-label="Copy command">Copy</button>
+          </div>
+<pre><code id="snippet-js"><span class="tk-com">// Compare two historical entities by ID</span>
+<span class="tk-key">const</span> r = <span class="tk-key">await</span> fetch(
+  <span class="tk-str">'https://atlaspi.cra-srl.com/v1/compare/1/2'</span>
+);
+<span class="tk-key">const</span> data = <span class="tk-key">await</span> r.json();
+
+console.log(data.entity_a.name, <span class="tk-str">'vs'</span>, data.entity_b.name);
+console.log(<span class="tk-str">'Overlap years:'</span>, data.temporal_overlap);</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <p class="api-foot">
+      Full reference at <a href="/docs">/docs</a> (Swagger UI) and <a href="/redoc">/redoc</a>.
+    </p>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section id="use-cases" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Who is it for</span>
+      <h2>Built for builders who care about facts.</h2>
+    </div>
+
+    <div class="cases">
+
+      <article class="case">
+        <h3>AI Agents</h3>
+        <p>Historical reasoning without hallucination. Cite sources, surface confidence, refuse to invent borders that never existed.</p>
+      </article>
+
+      <article class="case">
+        <h3>Digital Humanities</h3>
+        <p>Timeline analysis, cross-cultural research, reproducible queries. Export GeoJSON or CSV with full citation chains intact.</p>
+      </article>
+
+      <article class="case">
+        <h3>EdTech</h3>
+        <p>Drop the interactive map into your learning platform with a single iframe. Time slider included. No license fees.</p>
+      </article>
+
+      <article class="case">
+        <h3>Game Design</h3>
+        <p>Realistic historical map generation, faction boundaries by era, period-accurate place names in their original languages.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section section-stats">
+  <div class="container">
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">747</div>
+        <div class="stat-lbl">historical entities</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">2,200<span class="plus">+</span></div>
+        <div class="stat-lbl">academic sources</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4,500<span class="plus">+</span></div>
+        <div class="stat-lbl">years covered</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">21</div>
+        <div class="stat-lbl">REST endpoints</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">208</div>
+        <div class="stat-lbl">tests passing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENT DEVELOPER PITCH -->
+<section class="section">
+  <div class="container narrow">
+    <span class="eyebrow">For AI agent developers</span>
+    <h2>Why your agent can't just scrape Wikipedia.</h2>
+    <p>
+      An agent reasoning about history is an agent reasoning under deep uncertainty.
+      Sources contradict. Borders shift mid-sentence. The same city has four names
+      depending on who you ask and when. Web scraping flattens all of this into prose
+      that <em>looks</em> authoritative — and that is exactly how hallucinations enter
+      pipelines that should know better.
+    </p>
+    <p>
+      AtlasPI returns structured records. Each one carries an explicit
+      <code>confidence_score</code>, a <code>status</code> field, and a
+      <code>sources[]</code> array of academic citations. When the data is contested,
+      the API says so. When a boundary is approximated, the metadata flags it. Your
+      agent can finally hedge correctly, cite properly, and refuse to fabricate the
+      borders of an empire that ended 800 years before the year you asked about.
+    </p>
+    <p>
+      The same information is also available via the MCP server, so an agent
+      running in Claude Desktop or Claude Code can call AtlasPI tools directly —
+      no custom function definitions required.
+    </p>
+    <div class="cta-row">
+      <a href="/docs" class="btn btn-primary">Read the API spec</a>
+      <a href="https://github.com/Soil911/AtlasPI" class="btn btn-ghost" target="_blank" rel="noopener">Star on GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- OPEN SOURCE / PRICING -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Open core</span>
+      <h2>Free forever. Premium when you scale.</h2>
+    </div>
+
+    <div class="pricing">
+
+      <article class="price-card">
+        <div class="price-badge">Open source</div>
+        <h3>Core</h3>
+        <p class="price">$0<span>/month</span></p>
+        <ul>
+          <li>Full REST API access</li>
+          <li>MCP server included</li>
+          <li>Self-host from GitHub</li>
+          <li>MIT licensed</li>
+          <li>All 747 entities</li>
+        </ul>
+        <a href="https://github.com/Soil911/AtlasPI" class="btn btn-ghost btn-block" target="_blank" rel="noopener">Get on GitHub</a>
+      </article>
+
+      <article class="price-card price-card-premium">
+        <div class="price-badge premium">Coming soon</div>
+        <h3>Premium</h3>
+        <p class="price">Custom<span>&nbsp;</span></p>
+        <ul>
+          <li>High-volume API access</li>
+          <li>Curated regional datasets</li>
+          <li>Enterprise SLAs</li>
+          <li>Hosted MCP infrastructure</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="mailto:hello@cra-srl.com?subject=AtlasPI%20Premium" class="btn btn-primary btn-block">Get notified</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="foot-brand">
+      <a href="/" class="logo logo-foot" aria-label="AtlasPI home">
+        <svg width="22" height="22" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2.5"/>
+          <ellipse cx="32" cy="32" rx="28" ry="11" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+          <line x1="32" y1="4" x2="32" y2="60" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+          <ellipse cx="32" cy="32" rx="14" ry="28" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+          <circle cx="32" cy="32" r="3" fill="currentColor"/>
+        </svg>
+        <span>Atlas<strong>PI</strong></span>
+      </a>
+      <p class="foot-tag">
+        Structured historical geography for AI agents.<br>
+        Built with FastAPI, Python, Leaflet. Hosted on Aruba Cloud.
+      </p>
+    </div>
+
+    <div class="foot-cols">
+      <div class="foot-col">
+        <h4>Product</h4>
+        <a href="/app">Map app</a>
+        <a href="/docs">API docs</a>
+        <a href="/embed">Embed view</a>
+        <a href="https://github.com/Soil911/AtlasPI/tree/main/mcp-server" target="_blank" rel="noopener">MCP server</a>
+      </div>
+      <div class="foot-col">
+        <h4>Project</h4>
+        <a href="https://github.com/Soil911/AtlasPI" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/Soil911/AtlasPI/blob/main/ROADMAP.md" target="_blank" rel="noopener">Roadmap</a>
+        <a href="https://github.com/Soil911/AtlasPI/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Changelog</a>
+        <a href="https://github.com/Soil911/AtlasPI/blob/main/LICENSE.md" target="_blank" rel="noopener">License</a>
+      </div>
+      <div class="foot-col">
+        <h4>Ethics</h4>
+        <a href="https://github.com/Soil911/AtlasPI/tree/main/docs/ethics" target="_blank" rel="noopener">Ethics records</a>
+        <a href="https://github.com/Soil911/AtlasPI/blob/main/docs/ethics/ETHICS-001-nomi-contestati.md" target="_blank" rel="noopener">Contested names</a>
+        <a href="https://github.com/Soil911/AtlasPI/blob/main/docs/ethics/ETHICS-002-confini-e-conquiste.md" target="_blank" rel="noopener">Borders &amp; conquest</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container foot-bottom">
+    <span>&copy; <span id="year"></span> AtlasPI &middot; MIT licensed core &middot; <a href="https://atlaspi.cra-srl.com/">atlaspi.cra-srl.com</a></span>
+    <span class="foot-version">v5.8.0</span>
+  </div>
+</footer>
+
+<script src="/static/landing/script.js" defer></script>
+</body>
+</html>

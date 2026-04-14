@@ -110,6 +110,106 @@ def _clamp_longitude(lon: float) -> float:
     return lon
 
 
+# ETHICS: raggi "spec v6.1" — calibrati esplicitamente sulla nuova specifica
+# di boundary enrichment. Sono mediani per tipo, usati quando l'entita' ha
+# year_end < 1800 e nessun match Natural Earth.
+# Vedi ETHICS-004 e ETHICS-005.
+SPEC_RADIUS_KM = {
+    "empire": 800,
+    "kingdom": 400,
+    "sultanate": 350,
+    "caliphate": 700,
+    "khanate": 600,
+    "city-state": 50,
+    "city": 25,
+    "duchy": 100,
+    "principality": 100,
+    "republic": 250,
+    "confederation": 400,
+    "federation": 400,
+    "colony": 500,
+    "dynasty": 400,
+    "disputed_territory": 150,
+}
+
+
+def name_seeded_boundary(
+    name: str,
+    lat: float,
+    lon: float,
+    entity_type: str,
+    num_vertices: int = 12,
+    radius_km: Optional[float] = None,
+) -> dict:
+    """Genera un poligono GeoJSON con seed deterministico basato sul NOME.
+
+    Differente da generate_approximate_boundary() in due modi:
+    1. Il seed deriva dall'hash del nome (non da lat/lon/anno) — cosi'
+       entita' con stessa capitale ma nome diverso hanno boundary distinti.
+    2. Usa la tabella SPEC_RADIUS_KM (specifica v6.1) invece dei range
+       ENTITY_TYPE_RADIUS_KM, ottenendo poligoni piu' uniformi per tipo.
+
+    ETHICS: il boundary generato deve essere marcato boundary_source =
+    "approximate_generated" e confidence_score ridotto a 0.4.
+    Vedi ETHICS-004.
+
+    Args:
+        name: name_original dell'entita' (usato per il seed deterministico).
+        lat, lon: coordinate del centro (capitale).
+        entity_type: tipo dell'entita' (empire, kingdom, ...).
+        num_vertices: numero vertici del poligono (8-16).
+        radius_km: raggio in km. Se None, usa SPEC_RADIUS_KM[entity_type].
+
+    Returns:
+        Dict GeoJSON di tipo Polygon, sempre chiuso (primo == ultimo vertice).
+    """
+    num_vertices = max(8, min(16, num_vertices))
+    if radius_km is None:
+        radius_km = SPEC_RADIUS_KM.get(entity_type, 200)
+
+    # Seed deterministico stabile (Python hash() randomizza tra processi).
+    # Usiamo un hash semplice dei codepoint UTF-8.
+    seed_str = f"{name}|{entity_type}|{lat:.4f}|{lon:.4f}"
+    seed = 0
+    for ch in seed_str:
+        seed = (seed * 131 + ord(ch)) & 0xFFFFFFFF
+    rng = random.Random(seed)
+
+    radius_lat_deg = radius_km / KM_PER_DEG_LAT
+    km_per_lon = max(_km_per_deg_lon(lat), 1.0)
+    radius_lon_deg = radius_km / km_per_lon
+
+    vertices = []
+    angle_step = 2 * math.pi / num_vertices
+    # Rotazione iniziale randomica per evitare l'allineamento N/S/E/W
+    base_angle = rng.uniform(0, angle_step)
+
+    for i in range(num_vertices):
+        angle = base_angle + i * angle_step
+        # Variazione +-25% sul raggio per evitare cerchi geometrici
+        variation = rng.uniform(0.75, 1.25)
+        # Tendenza ellittica leggera
+        ellipse_lon = rng.uniform(0.85, 1.15)
+        ellipse_lat = rng.uniform(0.85, 1.15)
+
+        r_lon = radius_lon_deg * variation * ellipse_lon
+        r_lat = radius_lat_deg * variation * ellipse_lat
+
+        v_lon = lon + r_lon * math.cos(angle)
+        v_lat = lat + r_lat * math.sin(angle)
+        v_lat = _clamp_latitude(v_lat)
+        v_lon = _clamp_longitude(v_lon)
+        vertices.append([round(v_lon, 4), round(v_lat, 4)])
+
+    # Chiusura del poligono
+    vertices.append(vertices[0][:])
+
+    return {
+        "type": "Polygon",
+        "coordinates": [vertices],
+    }
+
+
 def generate_approximate_boundary(
     lat: float,
     lon: float,
