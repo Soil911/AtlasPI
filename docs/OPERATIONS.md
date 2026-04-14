@@ -178,7 +178,7 @@ HTTP code: 200 per `ok` e `degraded`, 503 per `down` → così UptimeRobot capis
    SENTRY_DSN=https://xxx@oOOOO.ingest.sentry.io/PPPP
    SENTRY_ENVIRONMENT=production
    SENTRY_TRACES_SAMPLE_RATE=0.1
-   SENTRY_RELEASE=atlaspi@6.1.0
+   SENTRY_RELEASE=atlaspi@6.1.1
    ```
 5. Restart container: `docker restart atlaspi`
 6. Verifica: `curl https://atlaspi.cra-srl.com/health | jq .sentry_active` → deve essere `true`

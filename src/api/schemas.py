@@ -97,6 +97,13 @@ class EntityResponse(BaseModel):
                 "name_original_lang": "la",
                 "confidence_score": 0.90,
                 "status": "confirmed",
+                "capital": {"name": "Roma", "lat": 41.9028, "lon": 12.4964},
+                "boundary_source": "natural_earth",
+                "boundary_ne_iso_a3": "ITA",
+                "boundary_aourednik_name": None,
+                "boundary_aourednik_year": None,
+                "boundary_aourednik_precision": None,
+                "continent": "Europe",
             }
         },
     }

@@ -41,13 +41,9 @@ Historical data is never neutral. Borders were drawn through conquest, names wer
 
 ## Screenshot
 
-> **Coming soon** -- interactive web UI with Leaflet map, dark/light mode, entity timeline, and comparison view.
->
-> The UI supports keyboard shortcuts, deep linking, continent filtering, time playback animation, and full i18n (English/Italian).
+![AtlasPI Web UI — the world in 1000 CE, 146 historical entities rendered from primary-source boundaries](docs/screenshot.png)
 
-<!-- Replace with actual screenshot:
-![AtlasPI Web UI](docs/screenshot.png)
--->
+The web UI supports keyboard shortcuts, deep linking (`/app?year=1000`), continent filtering, time playback animation, dark/light mode, and full i18n (English/Italian). Try it live at **[atlaspi.cra-srl.com](https://atlaspi.cra-srl.com/app)**.
 
 ---
 
@@ -55,8 +51,8 @@ Historical data is never neutral. Borders were drawn through conquest, names wer
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/atlaspi.git
-cd atlaspi
+git clone https://github.com/Soil911/AtlasPI.git
+cd AtlasPI
 
 # Install dependencies
 pip install -r requirements.txt
