@@ -64,7 +64,8 @@ certo inventato.
 .
 ├── CLAUDE.md              ← questo file
 ├── README.md
-├── LICENSE.md
+├── LICENSE                ← Apache License 2.0 (testo ufficiale)
+├── NOTICE                 ← attribuzioni terze parti (Natural Earth, aourednik, ...)
 ├── ROADMAP.md
 ├── CHANGELOG.md
 ├── .gitignore

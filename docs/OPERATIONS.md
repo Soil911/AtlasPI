@@ -375,7 +375,7 @@ idempotenza, rispetto ETHICS-003 cap.
 ## Contatti e governance
 
 - Repo: https://github.com/Soil911/AtlasPI
-- License: MIT (core open source)
+- License: Apache-2.0 (core open source)
 - Ethics records: `docs/ethics/ETHICS-*.md`
 - Decisioni architetturali: `docs/adr/`
 

@@ -2,7 +2,7 @@
 
 [![PyPI version](https://img.shields.io/pypi/v/atlaspi-mcp.svg)](https://pypi.org/project/atlaspi-mcp/)
 [![Python versions](https://img.shields.io/pypi/pyversions/atlaspi-mcp.svg)](https://pypi.org/project/atlaspi-mcp/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 The **first MCP server for historical geography**. Wraps
 [AtlasPI](https://atlaspi.cra-srl.com), a structured historical-geographic
@@ -175,7 +175,7 @@ python -m atlaspi_mcp
 
 ## License
 
-MIT — see [LICENSE](./LICENSE).
+Apache-2.0 — see [LICENSE](./LICENSE).
 
 The AtlasPI dataset itself follows an open-core model; check the main repo
 for dataset licenses and attribution requirements.

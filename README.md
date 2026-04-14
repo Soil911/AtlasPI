@@ -375,7 +375,7 @@ The core project -- API, data models, ethical framework, and documentation -- is
 
 Imported datasets retain their original licenses. Every source is tracked and attributed. Premium components (hosted services, curated datasets, enterprise features) are maintained separately from the open source core.
 
-See [LICENSE.md](LICENSE.md) for details.
+See [LICENSE](LICENSE) for the full Apache License 2.0 text and [NOTICE](NOTICE) for third-party attributions.
 
 ---
 
