@@ -302,6 +302,76 @@ E ridurre i workers modificando `Dockerfile` CMD: `--workers 1`.
 
 ---
 
+## Riconciliazione dei confini (v6.1.1+)
+
+Il pipeline di arricchimento v6.1.1 aggiorna i boundary nei file batch
+`data/entities/batch_*.json`. In produzione il `seed_database()` gira solo
+su un DB vuoto, quindi un database di lunga durata conserva i confini
+pre-arricchimento anche dopo che le nuove versioni sono state committate.
+
+Il modulo `src/ingestion/sync_boundaries_from_json.py` fa la
+**riconciliazione monotona** tra JSON e DB. Solo upgrade, mai downgrade.
+Idempotente.
+
+### Comando
+
+Dry-run (raccomandato prima di qualsiasi modifica):
+
+```bash
+ssh -i ~/.ssh/cra_vps root@77.81.229.242 \
+  "cd /opt/cra && docker compose exec atlaspi python -m src.ingestion.sync_boundaries_from_json --dry-run"
+```
+
+Output tipico:
+
+```
+Sync stats
+  total_db                                  747
+  matched_in_batch                          747
+  upgraded                                  419
+  skipped_no_batch_entry                    0
+  skipped_batch_has_no_boundary             44
+  skipped_db_already_better                 284
+  skipped_equal                             0
+  confidence_capped_disputed                5
+```
+
+Esecuzione effettiva (committa le modifiche al DB):
+
+```bash
+# PRIMA: backup del DB Postgres
+ssh -i ~/.ssh/cra_vps root@77.81.229.242 \
+  "docker exec cra-atlaspi-db pg_dump -U atlaspi atlaspi > /root/atlaspi-backup-\$(date +%Y%m%d-%H%M%S).sql"
+
+# Sync
+ssh -i ~/.ssh/cra_vps root@77.81.229.242 \
+  "cd /opt/cra && docker compose exec atlaspi python -m src.ingestion.sync_boundaries_from_json"
+```
+
+### Garanzie
+
+1. **Monotona**: un poligono con 1000 vertici nel DB non viene mai sostituito
+   con uno a 100 vertici dal batch. Guardrail nel predicato `_should_upgrade`.
+2. **ETHICS-003**: entita' `status == "disputed"` vengono sempre cappate a
+   `confidence ≤ 0.70`, anche se il batch dichiara 0.85.
+3. **Idempotenza**: eseguire due volte restituisce `upgraded: 0` alla seconda.
+4. **Dry-run safe**: nessuna scrittura, la transazione viene rolled back
+   esplicitamente.
+
+### Quando eseguirlo
+
+- Dopo un commit che aggiorna i batch JSON con nuovi boundary enrichment.
+- Dopo una release che bumpa il dataset (es. v6.1.1 → v6.2.0).
+- **NON** serve eseguirlo ad ogni deploy: se non ci sono drift tra JSON e DB
+  il comando e' un no-op.
+
+### Test di copertura
+
+`tests/test_sync_boundaries.py` (11 test): predicati puri, dry-run,
+idempotenza, rispetto ETHICS-003 cap.
+
+---
+
 ## Contatti e governance
 
 - Repo: https://github.com/Soil911/AtlasPI

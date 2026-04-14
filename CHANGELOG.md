@@ -66,7 +66,7 @@ ETHICS-003 compliance su entita' contestate + performance export.
 
 ### Test
 
-- **245 test totali** (da 233). Aggiunto `test_geojson_export_full_under_15s`
+- **256 test totali** (da 233). Aggiunto `test_geojson_export_full_under_15s`
   e riadattato `test_geojson_export_centroid_under_500ms` per riflettere
   la nuova API dell'export.
 - Fix 3 regressioni: ETHICS-003 disputed confidence, export performance,
@@ -80,6 +80,25 @@ ETHICS-003 compliance su entita' contestate + performance export.
   `_enrich_test_boundaries` replica il comportamento di produzione
   (lifespan `update_all_boundaries()`) nel test DB.
 - Fix `test_health.py`: assertion versione allineata a 6.1.1 (era stale 6.1.0).
+- Nuova **sync regression suite** (`tests/test_sync_boundaries.py`, 11 test):
+  copre i predicati puri di riconciliazione (count vertices, should_upgrade),
+  la modalita' dry-run, l'idempotenza, e il rispetto di ETHICS-003 cap.
+
+### Boundary reconciliation (post-seed fix)
+
+- **Diagnosi**: audit prod-vs-batch rivela che **419/747 entita' (56%)**
+  in produzione conservano confini seeded pre-v6.1.1 (13 vertici) anche
+  se i batch JSON contengono poligoni reali multi-centinaia di vertici.
+  Root cause: `seed_database()` gira solo su DB vuoto e `update_all_boundaries()`
+  copre solo la narrow ENTITY_MAPPINGS (~10 entita'). I 313 arricchimenti
+  aourednik non propagano al DB in esecuzione.
+- Nuovo modulo **`src/ingestion/sync_boundaries_from_json.py`** +
+  CLI `python -m src.ingestion.sync_boundaries_from_json [--dry-run]`.
+  Riconciliazione monotona: solo upgrade, mai downgrade. Idempotente.
+  Rispetta ETHICS-003 (disputed ≤ 0.70) e richiede un guadagno ≥ 20%
+  in vertici per evitare churn da differenze di simplification.
+- **Documentazione operativa** in `docs/OPERATIONS.md` con ricetta
+  completa (backup Postgres + dry-run + sync).
 
 ### File modificati (principali)
 
