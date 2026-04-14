@@ -15,7 +15,7 @@
   <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-747-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Coverage" src="https://img.shields.io/badge/real%20boundaries-72%25-green?style=flat-square"></a>
   <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-272%20passing-brightgreen?style=flat-square"></a>
-  <a href="#-license"><img alt="License" src="https://img.shields.io/badge/license-MIT-orange?style=flat-square"></a>
+  <a href="#-license"><img alt="License" src="https://img.shields.io/badge/license-Apache--2.0-orange?style=flat-square"></a>
   <a href="#-api-documentation"><img alt="API" src="https://img.shields.io/badge/API-21%20endpoints-purple?style=flat-square"></a>
   <a href="mcp-server/README.md"><img alt="MCP" src="https://img.shields.io/badge/MCP-ready-9d4edd?style=flat-square"></a>
   <a href="https://doi.org/10.5281/zenodo.19581784"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.19581784.svg"></a>
