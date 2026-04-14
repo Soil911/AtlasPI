@@ -49,7 +49,9 @@ def upgrade() -> None:
         sa.Column("casualties_source", sa.String(length=1000), nullable=True),
         sa.Column("confidence_score", sa.Float(), nullable=False, server_default="0.5"),
         sa.Column("status", sa.String(length=20), nullable=False, server_default="confirmed"),
-        sa.Column("known_silence", sa.Boolean(), nullable=False, server_default=sa.text("0")),
+        # PostgreSQL è rigido sul casting: "0" non è un BOOLEAN valido.
+        # SQLite accetta entrambi. Usiamo sa.false() per portabilità cross-DB.
+        sa.Column("known_silence", sa.Boolean(), nullable=False, server_default=sa.false()),
         sa.Column("silence_reason", sa.Text(), nullable=True),
         sa.Column("ethical_notes", sa.Text(), nullable=True),
         sa.CheckConstraint(
