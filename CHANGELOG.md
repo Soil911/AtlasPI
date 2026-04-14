@@ -141,6 +141,32 @@ ETHICS-003 compliance su entita' contestate + performance export.
   rilancia `enrich_all_boundaries`. Documentato in CHANGELOG perche'
   riguarda la trasparenza dell'incertezza (ETHICS).
 
+### Community & academic infrastructure
+
+- **`CONTRIBUTING.md`** (nuovo): guida specifica per segnalare errori
+  di boundary/nome/data, proporre correzioni schema, contribuire batch
+  entita' regionali. Esplicita la policy ETHICS-003 (disputed cap) e la
+  policy ETHICS-001/002 (no revisionismo su nomi e conquiste).
+- **`ACKNOWLEDGMENTS.md`** (nuovo): scaffolding per i reviewer academic
+  che forniranno feedback pre-submission. Chiude la promessa gia'
+  presente in `docs/outreach-draft.md` template D.
+- **`CODE_OF_CONDUCT.md`** (nuovo): Contributor Covenant v2.1 standard +
+  addendum academic integrity (no citation hallucination, disagreement
+  with evidence only, rispetto per storie contese).
+- **GitHub issue templates** (`.github/ISSUE_TEMPLATE/`):
+  - `boundary-correction.md` (entity/boundary corrections con policy
+    esplicita su fonti primarie e ETHICS-003)
+  - `bug-report.md` (repro + ambiente)
+  - `config.yml` (disabilita issue vuote, punta a email per domande
+    metodologiche e a Discussions per conversazioni aperte)
+- **`docs/paper-draft.md`** aggiornato:
+  - Test count 234 -> 260
+  - Pipeline Ourednik riscritta per riflettere i 5 matcher reali
+    (exact/SUBJECTO/PARTOF/fuzzy/capital-in-polygon) invece del
+    modello semplificato "3 matchers" che era inaccurato
+  - Precision scale allineata al README upstream aourednik (1=approx,
+    2=moderate, 3=international law) invece dello 0/1/2 sbagliato
+
 ### File modificati (principali)
 
 - `src/ingestion/aourednik_match.py` (nuovo, ~450 righe; PRECISION_CONFIDENCE fix)
@@ -158,6 +184,9 @@ ETHICS-003 compliance su entita' contestate + performance export.
 - `tests/test_sync_boundaries.py` (nuovo, 11 test)
 - Tutti i `data/entities/batch_*.json` (boundary arricchiti con .bak)
 - `CITATION.cff`, `.zenodo.json` (nuovi)
+- `CONTRIBUTING.md`, `ACKNOWLEDGMENTS.md`, `CODE_OF_CONDUCT.md` (nuovi)
+- `.github/ISSUE_TEMPLATE/{boundary-correction,bug-report}.md` + `config.yml` (nuovi)
+- `docs/paper-draft.md` (aggiornamenti test count + metodologia aourednik)
 
 ## [v6.1.0] - 2026-04-14
 
