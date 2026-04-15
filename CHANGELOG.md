@@ -2,6 +2,109 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.10.0] - 2026-04-15
+
+**Tema**: *Caliphate and Korean dynastic trunks* — aggiunti due catene
+dinastiche di alta densità etica: la successione sunnita centrale
+(Rashidun → Umayyad → Abbasid → Mamluk → Ottoman, 632–1922) e la
+successione coreana (Silla → Silla Unificata → Goryeo → Joseon → ROK,
+57 BCE – oggi). Catene 12 → 14, chain_links 52 → 62 (+10). Test 527 → 566+ (+39).
+
+### Nuove catene
+
+**Islamic central lands — 5 link** (`data/chains/batch_05_islamic_central_lands.json`):
+- الخلافة الراشدة (Rashidun, 632–661) — primo link
+- الدولة الأموية (Umayyad, 661 CONQUEST) — First Fitna, assassinio di Ali,
+  abdicazione forzata di al-Hasan, Karbala 680 (trauma fondatore dello sciismo)
+- الخلافة العباسية (Abbasid, 750 REVOLUTION) — Battaglia dello Zab,
+  Banchetto di Abu Futrus (massacro degli Umayyadi), fuga di Abd al-Rahman I
+  in al-Andalus, fondazione di Baghdad 762
+- سلطنة المماليك (Mamluk, 1258 CONQUEST) — Sacco mongolo di Baghdad
+  (al-Musta'sim ucciso, 200k-800k vittime), califfato-ombra Abbaside al Cairo
+  dal 1261, Ain Jalut 1260 e fine dell'espansione mongola verso ovest
+- Osmanlı İmparatorluğu (Ottoman, 1517 CONQUEST) — Marj Dabiq 1516
+  (Qansuh al-Ghawri ucciso), Ridaniya 1517 (Tumanbay II impiccato a
+  Bab Zuwayla), trasferimento di al-Mutawakkil III a Istanbul, abolizione
+  del califfato da parte di Atatürk il 3 marzo 1924 (fine di 1,292 anni di
+  successione califfale)
+
+**Korean state forms — 5 link** (`data/chains/batch_06_korea.json`):
+- 신라 (Silla, -57/668) — primo link
+- 통일신라 (Unified Silla, 668 UNIFICATION) — alleanza Silla-Tang sconfigge
+  Baekje (660) e Goguryeo (668); guerra Silla-Tang (670-676) espelle i Tang
+- 고려 (Goryeo, 918 REVOLUTION) — Wang Geon rovescia Gung Ye; assorbimento
+  dei Later Three Kingdoms; invasioni Khitan (993, 1010-19) e mongole (1231-59,
+  con sistema delle tribute-women gongnyeo)
+- 조선 (Joseon, 1392 REVOLUTION) — golpe Yi Seong-gye (Wihwa-do turnaround
+  1388), esecuzione dell'ultimo re Goryeo Gongyang, ortodossia neoconfuciana,
+  abolizione del buddhismo di stato, status rigido yangban-cheonmin (30% della
+  popolazione schiava), invasioni giapponesi 1592-98, umiliazione di Samjeondo
+  1637
+- 대한민국 (ROK, 1948 PARTITION) — 38° parallelo (linea tracciata da Rusk e
+  Bonesteel il 10 agosto 1945), rivolta e massacro di Jeju (1948-49, ~30k
+  civili uccisi — riconosciuto ufficialmente solo nel 2003), Guerra di Corea
+  1950-53 (2.5-4 milioni di morti, bombardamento US di ~85% degli edifici
+  nordcoreani), dittature militari Park Chung-hee 1961-79 e Chun Doo-hwan
+  1980-88, massacro di Gwangju 1980 (200-2000 vittime), transizione
+  democratica 1987
+
+### Nuovi test (39) — `tests/test_v6100_chain_expansion.py`
+
+- Struttura file (esistono, 1 catena ciascuno, chiavi richieste)
+- Validazione enum (ChainType, TransitionType)
+- Endpoint chain: Rashidun→Ottoman per l'islamica, Silla→ROK per la coreana
+- ETHICS obbligatori:
+  - Abbasid: deve essere REVOLUTION con riferimento a Abu Futrus/Umayyad/Abd al-Rahman
+  - Umayyad: deve menzionare Karbala o Husayn
+  - Mamluk: deve menzionare Hulagu/Baghdad/1258/al-Musta'sim
+  - Ottoman: deve menzionare al-Mutawakkil o Atatürk o 1924
+  - ROK: deve essere PARTITION violenta con Jeju o Gwangju
+  - Korea chain: deve riconoscere il gap 1897-1948 (Korean Empire + colonia
+    giapponese + comfort women)
+- Soft-check DB landing
+
+### ETHICS framework applicato
+
+Questa release rappresenta il primo "doppio-chain ad alta densità etica":
+ogni transizione è un regicidio, massacro, o evento-trauma documentato.
+La catena islamica centra la **violenza della successione califfale sunnita**
+(Karbala, Abu Futrus, Baghdad 1258, Cairo 1517) — il narrativo del "Secolo
+d'Oro" storicamente compresente con la tratta Zanj-Mesopotamia e la rivolta
+di schiavi di 869-883. La catena coreana centra la **violenza della
+frammentazione 1945-53** (Jeju, Guerra di Corea, DMZ) che le narrazioni
+ufficiali ROK hanno negato fino al 2003.
+
+Le catene *non* rappresentano:
+- I rami paralleli sciiti, Ibaditi, e i califfati Cordobese e Fatimide
+  dell'Islam (presenti come entity-level records ma non in questa catena
+  "trunk sunnita centrale")
+- Il Balhae (698-926, stato coreano-manciuriano settentrionale) non è sul
+  trunk per contestazione storiografica sulla sua "koreanità"
+- La DPRK (조선민주주의인민공화국, #248) richiede un branch-chain parallelo
+  per rappresentare propriamente la successione nord-coreana
+- Il Korean Empire (대한제국, 1897-1910) NON è un'entità nel DB; il chain
+  dichiara apertamente questa lacuna per future batch
+
+### Bilancio dataset
+
+| Metrica                  | Pre v6.10.0 | Post v6.10.0 | Δ        |
+|--------------------------|------------:|-------------:|---------:|
+| Eventi totali            |         250 |          250 |      =   |
+| Catene dinastiche        |          12 |           14 |      +2  |
+| Chain links totali       |          52 |           62 |     +10  |
+| Test passanti            |         527 |         566+ |     +39  |
+
+### File modificati
+
+- `data/chains/batch_05_islamic_central_lands.json` (new, 1 chain / 5 links)
+- `data/chains/batch_06_korea.json` (new, 1 chain / 5 links)
+- `tests/test_v6100_chain_expansion.py` (new, 39 tests)
+- `src/config.py` — APP_VERSION 6.9.0 → 6.10.0
+- `tests/test_health.py` — version 6.10.0
+- `static/index.html`, `static/landing/index.html` — v6.10.0, 14 chains
+- `README.md` — badges, BibTeX, citation
+- `CHANGELOG.md` — questa sezione
+
 ## [v6.9.0] - 2026-04-15
 
 **Tema**: *Medieval events gap + Chinese dynastic trunk* — colmato il vuoto

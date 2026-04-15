@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Korean state forms: Silla → Unified Silla → Goryeo → Joseon → Republic of Korea (57 BCE – present)",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Korean peninsula",
+    "description": "Five-link trunk of sovereign state forms on the Korean peninsula, from Silla (traditional founding 57 BCE at Saro, in the southeast Jinhan region) through the Three-Kingdom-era Silla, the Unified Silla that absorbed Baekje (660) and Goguryeo (668) with Tang Chinese military assistance (668–935), the Goryeo dynasty (918–1392) founded by Wang Geon during the Later Three Kingdoms fragmentation, the Joseon dynasty (1392–1897) founded by the Yi house under Neo-Confucian Zhu Xi orthodoxy, and (after the 51-year hiatus of the Korean Empire 1897–1910 and Japanese colonial rule 1910–1945) the Republic of Korea (1948–present) founded in the southern zone after US/USSR partition. The chain tracks Korean sovereign continuity; it does not represent the parallel Democratic People's Republic of Korea (1948–present) which is an entity-level record and which branches at the 1948 partition. Users navigating Korean history should consult both successor entities.",
+    "confidence_score": 0.88,
+    "ethical_notes": "Four points of care. (a) The Korean Empire (대한제국 Daehan Jeguk, 1897–1910) is a sovereign state form between Joseon and ROK that is NOT currently an entity-level record in AtlasPI and therefore not on this chain — this is a gap that the chain flags honestly and that a future entity batch should fill. Proclaimed by Gojong in response to the 1894–95 Sino-Japanese War and the power vacuum after Qing withdrawal, the Empire ended with the Japan–Korea Treaty of 1910 (forced annexation signed by Prime Minister Lee Wan-yong under duress). (b) The 1910–1945 Japanese colonial period is represented in AtlasPI via the 大日本帝國 (Empire of Japan, #444 in the Japanese dynasty trunk) entity, not as a Korean state. The 35 years of colonial rule included systematic cultural suppression (Korean-language ban 1938, Japanese-name compulsion sōshi-kaimei 1940), economic extraction, the comfort-women system (200,000+ Korean women forced into military sexual slavery), forced conscription (4.1 million Korean labourers, ~200,000 Korean soldiers), and the Gando massacre (1920), Gwangju Uprising (1929), and the 1923 Kantō massacre of Koreans after the Tokyo earthquake (~6,000 killed). None of this is captured by marking the Joseon → ROK transition as a single PARTITION; users must consult the colonial-period event records. (c) The 1948 partition is recorded as PARTITION with is_violent=true because it includes the Jeju Uprising and Massacre (April 1948 – May 1949, ~30,000 Jeju civilians killed by ROK security forces suppressing a left-wing uprising — the deadliest civilian massacre in ROK history, officially acknowledged only in 2003 by President Roh Moo-hyun's apology), the subsequent Korean War (1950–53, estimates 2.5–4 million deaths including ~1 million civilians, massive destruction), and the permanent division of a culturally-linguistically unified population. The chain terminates with ROK as one of two successor states; the parallel DPRK (조선민주주의인민공화국, #248) requires a separate branch-chain to be represented properly. (d) Every major transition in this chain (Silla unification, Goryeo foundation, Joseon foundation) was a military coup or civil war, not peaceful succession. The Korean trunk's dynastic stability narrative (often cited as exemplifying East Asian succession-harmony) is historically false; Korean political transitions were as violent as Chinese or Japanese ones.",
+    "sources": [
+      {
+        "citation": "Seth, M.J. (2010). A History of Korea: From Antiquity to the Present. Rowman & Littlefield.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Eckert, C.J., et al. (1990). Korea Old and New: A History. Ilchokak / Harvard UP.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Cumings, B. (2005). Korea's Place in the Sun: A Modern History. Norton — esp. for 1945–53 partition and war.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Cumings, B. (1981, 1990). The Origins of the Korean War, 2 vols. Princeton UP.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Lee, K. (1984). A New History of Korea. Harvard UP.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Samguk Sagi 三國史記 (1145, Kim Busik) — primary for Three Kingdoms and Silla periods.",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Goryeosa 高麗史 (1451, Jeong Inji et al.) — primary for Goryeo dynasty.",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Joseon Wangjo Sillok 朝鮮王朝實錄 (Veritable Records of the Joseon Dynasty, 1413–1865) — primary, UNESCO Memory of the World 1997.",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Jeju 4·3 Truth Commission Report (2003) — official ROK acknowledgement of the 1948–49 Jeju massacre.",
+        "url": null,
+        "source_type": "primary"
+      }
+    ],
+    "links": [
+      {
+        "entity_name": "신라",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Silla, one of the Three Kingdoms of ancient Korea (with Goguryeo in the north and Baekje in the southwest). Traditional founding in 57 BCE by Pak Hyeokgeose at Saro (modern Gyeongju) in the southeastern Jinhan confederacy; archaeological state-formation probably mid-4th century CE. Silla's fifth king Beopheung (r. 514–540) adopted Buddhism as state religion (527). Queens Seondeok (r. 632–647) and Jindeok (r. 647–654) rule during the period of Silla-Tang alliance-building against Baekje and Goguryeo.",
+        "ethical_notes": "The Samguk Sagi's traditional 57 BCE founding is legendary; archaeological and epigraphic evidence places state-formation in the mid-4th century CE. Silla's bone-rank (golpum) caste system rigidly fixed royal-lineage access to office; it produced political stability at the cost of aristocratic exclusivism that would later destabilise Unified Silla. Silla's queen-regnant periods (Seondeok, Jindeok, Jinseong) are often cited as evidence of Korean women's historical political access — this is true but also exceptional, and should not be read as normal succession practice."
+      },
+      {
+        "entity_name": "통일신라",
+        "transition_year": 668,
+        "transition_type": "UNIFICATION",
+        "is_violent": true,
+        "description": "Unified Silla: after decades of warfare, a Silla-Tang military alliance defeats Baekje at the Battle of Hwangsanbeol (660, Silla general Kim Yu-shin defeats Baekje commander Gyebaek) and conquers the Baekje capital Sabi; the Baekje king Uija surrenders and is deported to Chang'an. In 668 the same alliance defeats Goguryeo under King Munmu of Silla and Tang general Li Ji; the Goguryeo capital Pyongyang falls. Silla then fights a protracted war (670–676) against Tang efforts to establish Tang prefectures over the former Baekje-Goguryeo territories, expelling Tang forces to north of the Taedong River in 676 and unifying most of the peninsula south of Pyongyang under Silla rule. Capital at Gyeongju; the Unified Silla period (668–935) sees the construction of Bulguksa and Seokguram, woodblock-printed Buddhist sutra production (Pure Light Dharani Sutra c. 751, world's oldest extant woodblock print), and flowering of Seon (Zen) Buddhism.",
+        "ethical_notes": "The 'unification' required the destruction of two Korean kingdoms (Baekje and Goguryeo) with significant civilian mortality — Baekje's capital Sabi was sacked; Goguryeo's Pyongyang region was depopulated. The Baekje Restoration Movement (660–663, an entity-level record at #466) shows the extent of Baekje resistance, including a Japanese (Yamato) expeditionary force destroyed at the naval battle of Baekgang (663). Unified Silla's territorial claim excluded much of former Goguryeo in the north, which was reconstituted as the Balhae kingdom (698–926) by Dae Jo-yeong — Balhae is a legitimate claimant to Korean historical continuity but is NOT on this trunk chain (nationalist historiography disputes whether Balhae is 'Korean' or 'Manchurian'). The chain's decision to treat Unified Silla as the sole continuity point is itself a historiographical choice aligned with the South Korean Samguk Sagi tradition."
+      },
+      {
+        "entity_name": "고려",
+        "transition_year": 918,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Goryeo foundation during the Later Three Kingdoms period (892–936): as Silla's bone-rank aristocracy fragments from the late 9th century, Gyeon Hwon founds Later Baekje (892) at Wansan (modern Jeonju) and Gung Ye founds Later Goguryeo (901) at Songak (modern Kaesong). Wang Geon, Gung Ye's general, overthrows Gung Ye in 918 (charging him with tyranny and megalomania — Gung Ye had proclaimed himself a maitreya-buddha) and renames his state Goryeo. By 936, Wang Geon has absorbed Later Baekje (after defeating Gyeon Hwon's renegade son Gyeon Sin-geom at the battle of Ilnichon) and received the peaceful abdication of King Gyeongsun of Silla (935). Goryeo (918–1392) moves the capital to Kaesong (Songak), institutes the gwageo civil examination (958, adapted from Tang and Song models), and produces the Tripitaka Koreana (the massive woodblock-printed Buddhist canon, 1236–51, at Haeinsa — UNESCO 1995). Goryeo survives two Khitan invasions (993, 1010–19) and six Mongol invasions (1231–1259), the last of which results in vassalage under the Mongol Yuan and a century of partial Mongol integration (royal marriages, campaigns into Japan 1274 and 1281).",
+        "ethical_notes": "Wang Geon's revolution against Gung Ye was violent (Gung Ye assassinated or executed, 918) and his unification wars against Later Baekje and Silla involved major battles. The Mongol invasions (1231–1259) killed hundreds of thousands; the 1254 invasion alone is reported to have enslaved 206,800 Koreans (Goryeosa figure) and killed countless more. Women were systematically raped and enslaved by Mongol armies; the tribute women (gongnyeo) system instituted after 1231 forcibly shipped Korean women to the Mongol capital at Khanbaliq. The Goryeo 'Buddhist flourishing' (Tripitaka Koreana) coincided with this catastrophe; the Tripitaka was itself commissioned as a prayer for Mongol withdrawal after the 1231 invasion destroyed the earlier woodblocks at Buinsa."
+      },
+      {
+        "entity_name": "조선",
+        "transition_year": 1392,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Joseon foundation: Yi Seong-gye (Taejo of Joseon), a senior Goryeo general, defies orders to attack Ming China at the Yalu river and executes the Wihwa-do turnaround (위화도 회군, 1388), marching his army back to Kaesong to depose U of Goryeo and install the puppet Gongyang. In July 1392 Yi deposes Gongyang and proclaims himself king, founding the Joseon dynasty (1392–1897) and the Yi house. Capital moved from Kaesong to Hanseong (modern Seoul, 1394). Joseon institutes Neo-Confucian (Zhu Xi, Cheng-Zhu) state orthodoxy, the gwageo examination system at full rigour, the Hangul alphabet (promulgated by Sejong the Great in 1446), the Joseon Wangjo Sillok veritable records (continuous 1413–1865, UNESCO 1997), and the Turtle Ship and victories of Admiral Yi Sun-sin during the Imjin War (Japanese invasions of 1592–98).",
+        "ethical_notes": "The Wihwa-do turnaround was a military coup; Yi Seong-gye's consolidation required the murder of the last Goryeo king Gongyang (deposed 1392, strangled 1394 with his sons) and the purge of Goryeo's pro-Mongol and pro-Buddhist aristocracy. Neo-Confucian orthodoxy instituted the suppression of Buddhism (state persecution of monasteries, confiscation of monastic lands, ban on Buddhist monks entering the capital — persisted with varying intensity throughout Joseon), the tightening of Confucian patriarchal family law (women lost rights of inheritance and remarriage over the 15th–17th centuries), and the rigid yangban–sangmin–cheonmin status hierarchy with the cheonmin (including nobi slaves, who were up to 30% of the population in the 15th century) legally trapped. The Imjin War (1592–98) Japanese invasions killed an estimated 500,000–1 million Koreans and caused massive cultural extraction (books, artisans — especially potters — forcibly deported to Japan; the Satsuma potter communities trace to this). The Qing invasions (1627, 1636–37) forced Joseon into Qing tributary vassalage after King Injo surrendered at Samjeondo (24 January 1637 kowtow in the snow to Hong Taiji — the Samjeondo humiliation 삼전도의 굴욕). The Donghak Peasant Revolution (1894) killed tens of thousands and triggered the First Sino-Japanese War on Korean soil. Joseon's 505-year duration does not signal peace — it signals a stable orthodoxy that persecuted dissent."
+      },
+      {
+        "entity_name": "대한민국",
+        "transition_year": 1948,
+        "transition_type": "PARTITION",
+        "is_violent": true,
+        "description": "The 1948 partition of Korea: after the Japanese surrender on 15 August 1945 ends 35 years of colonial rule, the Korean peninsula is divided at the 38th parallel between a US military occupation (south) and a Soviet military occupation (north) — a line drawn hastily by US Army colonels Dean Rusk and Charles Bonesteel on 10 August 1945. Separate elections (UN-observed in the south, under Soviet auspices in the north) produce two states in 1948: the Republic of Korea (대한민국, proclaimed 15 August 1948, Syngman Rhee as first president, capital Seoul) and the Democratic People's Republic of Korea (조선민주주의인민공화국, proclaimed 9 September 1948, Kim Il-sung as leader, capital Pyongyang). The Korean War (25 June 1950 – 27 July 1953 armistice) sees North Korean invasion, near-collapse of the south, UN (US-led) intervention with MacArthur's Incheon landing, Chinese People's Volunteer Army counter-intervention, and stabilisation near the original partition line. The 1953 armistice is not a peace treaty; the two states remain technically at war. This chain terminates with ROK on the southern trunk; DPRK (#248) requires a parallel chain to be represented.",
+        "ethical_notes": "The 1948 partition and the Korean War were catastrophic. The Jeju Uprising and Massacre (April 1948 – May 1949): ~30,000 Jeju civilians killed by ROK security forces, US-backed paramilitaries, and the Northwest Youth League, suppressing a left-wing uprising that resisted the UN-supervised southern-only election. Jeju's population dropped ~10% in a year. The 2003 Jeju 4·3 Truth Commission Report officially acknowledged the massacre; President Roh Moo-hyun issued a formal apology. The Korean War (1950–53): estimates 2.5–4 million dead including ~1 million civilians; US bombing destroyed ~85% of North Korean buildings and killed an estimated 1.5 million North Korean civilians (General Curtis LeMay: 'we burned down just about every city in North Korea and South Korea both'). The armistice line (DMZ) remains; two states have developed along opposite ideological paths. The democratic development of the south included decades of military dictatorship (Park Chung-hee 1961–79 via coup, Chun Doo-hwan 1980–88 via the Gwangju massacre of 18–27 May 1980 — ~200–2,000 civilian casualties, officially 193, academically contested higher). Full democratic transition completed only with the 1987 direct presidential elections. The ROK's economic miracle (han-gang no gijeok 한강의 기적, 1961–97) is real but was politically authoritarian for most of that period. DPRK developed into a totalitarian hereditary state under the Kim dynasty (Kim Il-sung 1948–94, Kim Jong-il 1994–2011, Kim Jong-un 2011–) with estimated famine deaths of 600,000–2.5 million during the Arduous March of 1994–98 (Haggard & Noland 2007). The chain records the 1948 partition moment; users must consult entity-level and event-level records for the divergent trajectories."
+      }
+    ]
+  }
+]
