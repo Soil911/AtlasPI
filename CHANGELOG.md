@@ -2,6 +2,119 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.6.0] - 2026-04-15
+
+**Tema**: Espansione degli eventi storici da 106 → 211 con quattro batch
+tematici che coprono vuoti geografici/cronologici: Africa (tratta
+atlantica, colonizzazione, apartheid, Rwanda, Congo), Asia-Pacifico
+(partizione dell'India, Guerra civile cinese, Corea, Vietnam, genocidio
+cambogiano, Bangladesh 1971, Tienanmen, Xinjiang), Americhe (conquista
+dell'Impero azteco e inca, resistenza indigena, Rivoluzione haitiana,
+Guerra della Triplice Alleanza, Trail of Tears, genocidio della
+California, dittature del Cono Sud, Piano Cóndor), e lungo Novecento
+globale (genocidio armeno/assiro/pontico, Holodomor, Shoah, Nakba,
+dissoluzioni URSS e Jugoslavia, Srebrenica, Halabja, guerre del Golfo,
+Primavera Araba, invasione russa dell'Ucraina). Rispetto integrale di
+ETHICS-007 (niente eufemismi) ed ETHICS-008 (`known_silence=true` su
+eventi sistematicamente negati).
+
+### Numeri
+
+- **105 nuovi eventi storici** inseriti idempotentemente senza modificare
+  i 106 preesistenti (dedup key `(name_original, year)`).
+- **Totale eventi DB**: 211 (ordine di grandezza 2x).
+- **Nessun riferimento `entity_links` irrisolto**: tutti i 105 eventi
+  inseriti hanno legato i loro attori alle entità canoniche già nel DB
+  (846 entità disponibili come ground truth).
+
+### Batch aggiunti
+
+- `data/events/batch_05_africa.json` — 26 eventi 1652–2003 (11 tipi,
+  9 `known_silence`).
+- `data/events/batch_06_asia_pacific.json` — 25 eventi 1904–2014
+  (13 tipi, 12 `known_silence`).
+- `data/events/batch_07_americas.json` — 26 eventi 1494–1976
+  (9 tipi, 5 `known_silence`).
+- `data/events/batch_08_modern.json` — 28 eventi 1914–2022
+  (11 tipi, 10 `known_silence`).
+
+### ETHICS-007 labels applicate esplicitamente
+
+- **GENOCIDE** (8 eventi nuovi): genocidio assiro (Seyfo) 1914–1924,
+  genocidio pontico 1914–1922, genocidio della California 1846–1873
+  (Madley), genocidio Selk'nam 1884–1910, Triple Alliance Paraguay
+  1864–1870, guerra di Bangladesh 1971, Darfur 2003+, campagna Anfal /
+  Halabja 1988 (chemical weapons). Ognuno con `ethical_notes` che
+  documentano la designazione legale, le controversie accademiche e
+  le eventuali negazioni statali (Turchia, Cina, Pakistan, Russia).
+- **COLONIAL_VIOLENCE**: Congo Free State 1885–1908, Maji Maji
+  1905–1907, Italo-Etiopica 1935–1937 (uso di armi chimiche),
+  sistema "donne di conforto" giapponese 1932–1945 (schiavismo
+  sessuale sistemico), Xinjiang Uyghur 2017+ (`disputed` status
+  perché il label legale GENOCIDE è contestato — entrambi i lati
+  documentati come da ETHICS).
+- **MASSACRE**: Nanjing già presente in batch_01, aggiunti Sand Creek
+  1864, Sharpeville 1960, Soweto 1976, Jallianwala Bagh 1919, My Lai
+  1968, Tokyo firebombing 1945, Srebrenica 1995, Katyn 1940, Sabra
+  e Shatila 1982, Ghouta chemical attack 2013.
+- **DEPORTATION**: Trail of Tears 1830–1838, scambio di popolazione
+  greco-turco 1923, Nakba 1948, Mfecane 1815 (reclassed from
+  MIGRATION), Partition of India 1947 (come evento di forced
+  displacement distinto dalla partizione politica già in DB).
+
+### ETHICS-008 `known_silence` (36 nuovi eventi flaggati)
+
+Eventi con record sistematicamente silenziato/negato: Putumayo rubber
+atrocities, genocidio dei Selk'nam, genocidio californiano,
+Operation Condor, Congo Free State, Xhosa cattle-killing 1856,
+Biafra famine 1967, Lumumba assassination 1961, Darfur, Armenian
+genocide (Turkey denial), Uyghur detention, Holodomor, Bengal
+famine 1943, Nanjing (Japanese denial — nota aggiunta), Tiananmen
+1989, Great Leap Forward famine, comfort women system, My Lai
+cover-up, Ghouta chemical attack (Russian denial), Katyn (Soviet
+denial), ecc.
+
+### Remap di compatibilità enum
+
+Gli agenti generatori avevano prodotto alcune label non presenti
+nell'enum `EventType` canonico. Remapping deterministico applicato
+prima dell'ingest:
+
+- `FOUNDATION_STATE` → `FOUNDING_STATE` (5 eventi) — Kolonie aan die
+  Kaap, Asante, Proklamasi Indonesia, PRC, Timor-Leste 1999.
+- `FOUNDATION_STATE` (Berliner Mauer 1961) → `OTHER` — non è una
+  fondazione statale.
+- `MIGRATION` → `DEPORTATION` (2 eventi) — Mfecane, Partition 1947
+  (entrambi trattamenti di spostamento forzato).
+- `SLAVE_TRADE` → `TREATY` (2 eventi) — Asiento 1713 e abolizione
+  Zanzibar 1873 sono trattati politici.
+- `SLAVE_TRADE` → `COLONIAL_VIOLENCE` — comfort women system
+  giapponese (schiavismo sessuale sistemico).
+
+### Ingest
+
+- Pipeline invariata: `python -m src.ingestion.ingest_new_events`
+  (idempotente, dedup `(name_original, year)`).
+- Eseguito in produzione dopo il deploy: 105 inseriti, 106 saltati,
+  0 link irrisolti.
+
+### Test
+
+- 355 test verdi (suite stabile — nessun test nuovo necessario:
+  la pipeline di ingest ha già coverage e il nuovo contenuto è
+  solo dataset additivo).
+
+### Deploy
+
+```bash
+git push origin main
+cra-deploy atlaspi   # o ssh + docker compose build/up
+ssh -i ~/.ssh/cra_vps root@77.81.229.242 \
+  "docker exec cra-atlaspi python -m src.ingestion.ingest_new_events"
+curl https://atlaspi.cra-srl.com/health  # expect 6.6.0
+curl https://atlaspi.cra-srl.com/v1/events | jq .total  # expect 211
+```
+
 ## [v6.5.0] - 2026-04-15
 
 **Tema**: DynastyChain / SuccessionChain layer + MCP tools v0.2.0. Le

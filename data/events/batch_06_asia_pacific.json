@@ -1,0 +1,1004 @@
+[
+  {
+    "name_original": "日露戦争",
+    "name_original_lang": "jpn",
+    "event_type": "BATTLE",
+    "year": 1904,
+    "year_end": 1905,
+    "location_name": "Manchuria, Korea, Sea of Japan (Port Arthur, Mukden, Tsushima)",
+    "location_lat": 34.67,
+    "location_lon": 129.35,
+    "main_actor": "Empire of Japan (Heihachirō Tōgō, Nogi Maresuke) vs. Russian Empire (Nicholas II, Kuropatkin, Rozhestvensky)",
+    "description": "Japan's decisive victory over the Russian Empire, capped by the annihilation of the Russian Baltic Fleet at the Battle of Tsushima in May 1905, made Japan the first non-European power in the modern era to defeat a European great power in open war. The Treaty of Portsmouth transferred Russian interests in Manchuria and southern Sakhalin to Japan, consolidated Japanese dominance in Korea, and catalysed the 1905 Russian Revolution. The war accelerated Asian anti-colonial movements worldwide, from Vietnam to Ottoman Turkey.",
+    "casualties_low": 130000,
+    "casualties_high": 170000,
+    "casualties_source": "Connaughton, R.M. (1988). The War of the Rising Sun and Tumbling Bear (combined military deaths both sides, including disease).",
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "ethical_notes": "Casualty counts vary because Russian records for the Far East were disrupted by the 1905 revolution. Civilian Korean and Manchurian deaths from the war (forced labour, food requisitions) are rarely counted in the main figures.",
+    "entity_links": [
+      {
+        "entity_name_original": "大日本帝國",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Российская Империя",
+        "role": "PARTICIPANT"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Connaughton, R.M. (1988). The War of the Rising Sun and Tumbling Bear: Military Defeat of Imperial Russia, 1904-5. Routledge.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Steinberg, J.W. et al. (eds.) (2005). The Russo-Japanese War in Global Perspective: World War Zero. Brill.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "한일병합조약 / 韓国併合",
+    "name_original_lang": "kor",
+    "event_type": "COLONIAL_VIOLENCE",
+    "year": 1910,
+    "year_end": 1945,
+    "location_name": "Korean Peninsula",
+    "location_lat": 37.57,
+    "location_lon": 126.98,
+    "main_actor": "Empire of Japan (Resident-General Terauchi Masatake) and the Korean Empire government coerced into signing",
+    "description": "On 22 August 1910 Japan forcibly annexed Korea through a treaty signed under duress by Prime Minister Yi Wan-yong without the Emperor's seal; the Korean Empire was formally dissolved and the peninsula became the Japanese Government-General of Chōsen. Thirty-five years of colonial rule followed, including land expropriation, suppression of the Korean language after 1938, the Sōshi-kaimei name-change campaign, forced labour conscription of over 700,000 Koreans, and the comfort-women system of sexual slavery. Independence movements such as the 1 March 1919 uprising were violently crushed.",
+    "casualties_low": 500000,
+    "casualties_high": 1000000,
+    "casualties_source": "Cumings, B. (2005). Korea's Place in the Sun (estimated Korean deaths attributable to colonial policies including forced labour and famine 1910-1945).",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "Successive Japanese governments have minimised colonial violence, textbook revisionism continues to contest the scale of forced labour and the coerced nature of the 1910 treaty, and the 2015 Japan-Korea 'comfort women' agreement was widely seen by survivors as an attempt to close the subject without full acknowledgment.",
+    "ethical_notes": "The event_type COLONIAL_VIOLENCE captures the 35-year system; specific components (comfort women, Kantō massacre of Koreans 1923) warrant distinct records. The treaty's legal validity is rejected by both Korean states.",
+    "entity_links": [
+      {
+        "entity_name_original": "大日本帝國",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "조선",
+        "role": "CONQUERED"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Cumings, B. (2005). Korea's Place in the Sun: A Modern History. W.W. Norton.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Eckert, C.J. et al. (1990). Korea Old and New: A History. Ilchokak / Harvard Korea Institute.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "जलियांवाला बाग हत्याकांड",
+    "name_original_lang": "hin",
+    "event_type": "MASSACRE",
+    "year": 1919,
+    "location_name": "Jallianwala Bagh, Amritsar, Punjab, British India",
+    "location_lat": 31.6204,
+    "location_lon": 74.8806,
+    "main_actor": "British Indian Army troops under Brigadier-General Reginald Dyer",
+    "description": "On 13 April 1919 (Baisakhi day) Brigadier-General Dyer led 50 riflemen into the enclosed public garden at Jallianwala Bagh where thousands had gathered for the Sikh festival and for a protest against the Rowlatt Acts, and ordered sustained rifle fire into the unarmed crowd without warning, continuing until ammunition ran low. Dyer subsequently defended the action as intended to produce 'a moral effect' across Punjab. The massacre radicalised the Indian independence movement; Rabindranath Tagore returned his knighthood in protest and Gandhi intensified non-cooperation.",
+    "casualties_low": 379,
+    "casualties_high": 1500,
+    "casualties_source": "Hunter Commission 1920 report (official low); Indian National Congress inquiry led by Motilal Nehru (high).",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "The official Hunter Commission figure (379 killed, 1200 wounded) is widely regarded as a significant undercount. No British government has formally apologised; in 2019 Theresa May called it a 'shameful scar' but stopped short of apology.",
+    "entity_links": [
+      {
+        "entity_name_original": "British Raj",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "British Empire",
+        "role": "PARTICIPANT"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Wagner, K.A. (2019). Jallianwala Bagh: An Empire of Fear and the Making of the Amritsar Massacre. Yale University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Report of the Committee Appointed by the Government of India to Investigate the Disturbances in the Punjab (Hunter Committee Report), 1920.",
+        "source_type": "primary",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "五四運動",
+    "name_original_lang": "zho",
+    "event_type": "INTELLECTUAL_EVENT",
+    "year": 1919,
+    "location_name": "Beijing and major Chinese cities",
+    "location_lat": 39.9042,
+    "location_lon": 116.4074,
+    "main_actor": "Chinese students and intellectuals (Chen Duxiu, Li Dazhao, Hu Shih, Lu Xun)",
+    "description": "On 4 May 1919 over 3,000 students from Peking University marched to Tiananmen to protest the Treaty of Versailles transfer of German concessions in Shandong to Japan rather than returning them to China. The protest spread into a broader movement of anti-imperialist nationalism, vernacular-Chinese literary reform, and the introduction of Marxism and scientific rationalism into Chinese intellectual life. It seeded both the Nationalist reorganisation under Sun Yat-sen and the founding of the Chinese Communist Party in 1921.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "ethical_notes": "The May Fourth Movement is claimed as foundational by both the Republic of China (Taiwan) and the People's Republic of China, each emphasising different legacies.",
+    "entity_links": [
+      {
+        "entity_name_original": "中華民國",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Chow, Tse-tsung (1960). The May Fourth Movement: Intellectual Revolution in Modern China. Harvard University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Mitter, R. (2004). A Bitter Revolution: China's Struggle with the Modern World. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "日本軍慰安婦制度",
+    "name_original_lang": "jpn",
+    "event_type": "COLONIAL_VIOLENCE",
+    "year": 1932,
+    "year_end": 1945,
+    "location_name": "Japanese Empire (Korea, China, Philippines, Indonesia, Taiwan, Burma, Pacific)",
+    "location_lat": null,
+    "location_lon": null,
+    "main_actor": "Imperial Japanese Army (Ministry of War) and contracted procurement agents",
+    "description": "From 1932 onward the Imperial Japanese Army established a system of 'comfort stations' in which an estimated 50,000 to 200,000 women and girls, predominantly Korean but also Chinese, Filipina, Taiwanese, Indonesian, Dutch, and others, were held in conditions of sexual slavery. Recruitment ranged from outright abduction to fraudulent labour contracts; survivors testified to repeated rape under military supervision. The 1993 Kōno Statement formally acknowledged military involvement, but subsequent administrations have attempted to qualify it.",
+    "casualties_low": 50000,
+    "casualties_high": 200000,
+    "casualties_source": "Yoshimi, Y. (2000). Comfort Women. Columbia University Press (based on surviving Japanese military archives).",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "Successive Japanese administrations, textbook publishers and revisionist historians have contested the scale, the coercion, and the direct military responsibility. The 2015 Japan-Korea agreement was rejected by most surviving comfort women and later Korean governments. Many survivors died before receiving recognition.",
+    "ethical_notes": "Event_type SLAVE_TRADE is used per ETHICS-007: the system was state-organised sexual slavery, not 'military prostitution'. Casualty range is victim count, not deaths; an unknown fraction died in captivity or shortly after liberation.",
+    "entity_links": [
+      {
+        "entity_name_original": "大日本帝國",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "조선",
+        "role": "VICTIM"
+      },
+      {
+        "entity_name_original": "中華民國",
+        "role": "VICTIM"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Yoshimi, Y. (2000). Comfort Women: Sexual Slavery in the Japanese Military During World War II. Columbia University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "UN Commission on Human Rights, Report on the Mission to the DPRK, ROK and Japan on the Issue of Military Sexual Slavery in Wartime, E/CN.4/1996/53/Add.1 (Coomaraswamy Report).",
+        "source_type": "primary",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "真珠湾攻撃",
+    "name_original_lang": "jpn",
+    "event_type": "BATTLE",
+    "year": 1941,
+    "location_name": "Pearl Harbor, Oʻahu, Territory of Hawaii",
+    "location_lat": 21.3649,
+    "location_lon": -157.9507,
+    "main_actor": "Imperial Japanese Navy (Admiral Yamamoto Isoroku, strike force commander Nagumo Chūichi)",
+    "description": "On 7 December 1941 (8 December Tokyo time) six Japanese aircraft carriers launched a surprise air attack on the U.S. Pacific Fleet at Pearl Harbor, destroying or damaging eight battleships and killing approximately 2,400 Americans. The same day Japan attacked British Malaya, Hong Kong, the Philippines, Guam, Wake Island and Thailand, bringing the United States formally into World War II. The attack opened the Pacific War and triggered Japan's rapid conquest of Southeast Asia over the following six months.",
+    "casualties_low": 2403,
+    "casualties_high": 2403,
+    "casualties_source": "U.S. Department of Defense, official casualty list (2,403 American dead, 1,178 wounded).",
+    "confidence_score": 0.99,
+    "status": "confirmed",
+    "ethical_notes": "The attack is often framed in U.S. historiography as the start of the Pacific War, but for Asia the war had been underway since the 1931 Manchurian Incident and the 1937 full invasion of China.",
+    "entity_links": [
+      {
+        "entity_name_original": "大日本帝國",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "United States of America",
+        "role": "VICTIM"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Prange, G.W. (1981). At Dawn We Slept: The Untold Story of Pearl Harbor. McGraw-Hill.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "U.S. Congressional Joint Committee on the Investigation of the Pearl Harbor Attack, Final Report, 1946.",
+        "source_type": "primary",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Death March sa Bataan",
+    "name_original_lang": "tgl",
+    "event_type": "COLONIAL_VIOLENCE",
+    "year": 1942,
+    "location_name": "Bataan Peninsula to Camp O'Donnell, Luzon, Philippines",
+    "location_lat": 14.68,
+    "location_lon": 120.48,
+    "main_actor": "Imperial Japanese Army (14th Army, General Homma Masaharu)",
+    "description": "Following the surrender of American and Filipino forces on Bataan on 9 April 1942, approximately 76,000 prisoners (about 66,000 Filipino and 10,000 American) were forced to march roughly 106 km north to rail transport at San Fernando, then packed into boxcars and moved to Camp O'Donnell. Japanese guards beat, bayoneted, shot or beheaded stragglers and those who stopped for water; thousands more died of dysentery, malaria and starvation at Camp O'Donnell in the following weeks. General Homma was executed for war crimes in 1946, though the trial's procedures were later criticised as irregular.",
+    "casualties_low": 7000,
+    "casualties_high": 18000,
+    "casualties_source": "Sides, H. (2001). Ghost Soldiers (range reflects dispute over march deaths vs. subsequent camp deaths).",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "Most victims were Filipino, but Filipino deaths received less international attention than American ones for decades. The higher figure includes deaths at Camp O'Donnell in the weeks after the march.",
+    "entity_links": [
+      {
+        "entity_name_original": "大日本帝國",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Capitania General de las Islas Filipinas",
+        "role": "VICTIM"
+      },
+      {
+        "entity_name_original": "United States of America",
+        "role": "VICTIM"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Sides, H. (2001). Ghost Soldiers: The Epic Account of World War II's Greatest Rescue Mission. Doubleday.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Proceedings of the Military Commission, United States v. Homma Masaharu, 1946.",
+        "source_type": "primary",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "পঞ্চাশের মন্বন্তর",
+    "name_original_lang": "ben",
+    "event_type": "EPIDEMIC",
+    "year": 1943,
+    "year_end": 1944,
+    "location_name": "Bengal Province, British India",
+    "location_lat": 23.685,
+    "location_lon": 90.3563,
+    "main_actor": "British War Cabinet (Winston Churchill, Leopold Amery) and Government of Bengal under Governor Herbert",
+    "description": "Between 1943 and 1944 an estimated 2.1 to 3 million people in Bengal died of starvation, malaria and dysentery in what was the subcontinent's deadliest famine since 1770. Recent quantitative studies (Mishra et al. 2019) conclude the famine was not caused by drought but by British wartime policies: the 'denial policy' destroying boats and rice stocks in coastal Bengal to deny them to a potential Japanese invasion, diversion of Indian grain to British forces and civilians elsewhere, and refusal of Churchill's cabinet to release shipping for relief despite repeated warnings.",
+    "casualties_low": 2100000,
+    "casualties_high": 3000000,
+    "casualties_source": "Maharatna, A. (1996). The Demography of Famines, and Mishra, V. et al. (2019) reanalysis.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "For decades British official history attributed the famine primarily to drought and Japanese disruption; Churchill's documented diversion of grain and refusal of relief shipping (and his racially abusive private statements on Indians, 'breeding like rabbits') were minimised or omitted. Recognition of policy culpability became mainstream in scholarship only after 2000.",
+    "ethical_notes": "Categorised EPIDEMIC per the schema (no FAMINE type per ETHICS-007 and schema constraints); the substantive framing is colonial-policy famine. Most contemporary scholarship (Sen 1981, Mukerjee 2010, Mishra 2019) treats it as a policy-caused mass death rather than a natural disaster.",
+    "entity_links": [
+      {
+        "entity_name_original": "British Raj",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "British Empire",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Mukerjee, M. (2010). Churchill's Secret War: The British Empire and the Ravaging of India during World War II. Basic Books.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Mishra, V., Tiwari, A.D., Aadhar, S. et al. (2019). Drought and Famine in India, 1870-2016. Geophysical Research Letters 46(4).",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Proklamasi Kemerdekaan Indonesia",
+    "name_original_lang": "ind",
+    "event_type": "FOUNDING_STATE",
+    "year": 1945,
+    "year_end": 1949,
+    "location_name": "Jakarta and across the Dutch East Indies",
+    "location_lat": -6.2088,
+    "location_lon": 106.8456,
+    "main_actor": "Sukarno, Mohammad Hatta and the Indonesian independence movement vs. returning Dutch colonial forces",
+    "description": "On 17 August 1945, two days after Japan's surrender, Sukarno and Hatta proclaimed Indonesian independence in Jakarta. The Netherlands refused to recognise the republic and launched two 'politionele acties' (police actions) in 1947 and 1948-49 to restore colonial rule. Dutch forces committed widespread atrocities, including the 1947 Rawagede massacre and systematic executions in South Sulawesi under Captain Raymond Westerling. In December 1949 international pressure and Indonesian military and diplomatic persistence forced the Dutch to transfer sovereignty, with West New Guinea held back until 1963.",
+    "casualties_low": 45000,
+    "casualties_high": 100000,
+    "casualties_source": "Limpach, R. (2016). De brandende kampongs van Generaal Spoor (Dutch institute NIOD-KITLV-NIMH research).",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "For decades Dutch official history described the 1945-1949 war as 'police actions' and denied systematic violence. Only in 2022 did the Dutch government, following the NIOD-KITLV-NIMH report, formally acknowledge that Dutch armed forces had committed structural extreme violence.",
+    "ethical_notes": "Casualty range refers to Indonesian deaths directly attributable to Dutch military operations 1945-49; total Indonesian deaths from the independence struggle, including inter-Indonesian violence and famine, are higher.",
+    "entity_links": [
+      {
+        "entity_name_original": "Nederlandsch-Indie",
+        "role": "DISSOLVED"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Limpach, R. (2016). De brandende kampongs van Generaal Spoor. Boom. (English summary: NIOD 'Independence, Decolonization, Violence and War' project 2022).",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Anderson, B.R.O'G. (1972). Java in a Time of Revolution: Occupation and Resistance, 1944-1946. Cornell University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "东京大轰炸",
+    "name_original_lang": "jpn",
+    "event_type": "MASSACRE",
+    "year": 1945,
+    "location_name": "Tokyo, Japan",
+    "location_lat": 35.6762,
+    "location_lon": 139.6503,
+    "main_actor": "United States Army Air Forces XXI Bomber Command under Major General Curtis LeMay",
+    "description": "On the night of 9-10 March 1945 some 325 B-29 bombers dropped about 1,665 tons of incendiaries on eastern Tokyo, deliberately creating a firestorm in densely populated wooden neighbourhoods. Approximately 100,000 civilians were killed in a single night and about 16 square miles of the city were burned to the ground, making Operation Meetinghouse the most destructive conventional air raid in history. Subsequent incendiary raids destroyed most of Japan's urban housing stock before the atomic bombings in August.",
+    "casualties_low": 80000,
+    "casualties_high": 130000,
+    "casualties_source": "Tokyo Metropolitan Government post-war survey; Hoyt, E.P. (2000). Inferno (high estimate).",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "The firebombing campaign killed more Japanese civilians than the two atomic bombs combined. Under international law as later codified (Geneva Protocol I 1977) area bombing of civilian populations is prohibited; at the time legal norms were contested. LeMay himself reportedly said that if the U.S. had lost the war he would have been tried as a war criminal.",
+    "entity_links": [
+      {
+        "entity_name_original": "United States of America",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "大日本帝國",
+        "role": "VICTIM"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Dower, J.W. (2010). Cultures of War: Pearl Harbor, Hiroshima, 9-11, Iraq. W.W. Norton.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "United States Strategic Bombing Survey (1946). Effects of Air Attack on Urban Complex Tokyo-Kawasaki-Yokohama.",
+        "source_type": "primary",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "भारत का विभाजन / تقسیم ہند",
+    "name_original_lang": "hin",
+    "event_type": "DEPORTATION",
+    "year": 1947,
+    "location_name": "Punjab, Bengal, Sindh, North-West Frontier (British India → India, Pakistan)",
+    "location_lat": 31.15,
+    "location_lon": 75.34,
+    "main_actor": "British Raj (Lord Mountbatten, Cyril Radcliffe), Indian National Congress (Nehru, Patel), All-India Muslim League (Jinnah)",
+    "description": "The 1947 partition of British India into the Dominions of India and Pakistan produced the largest mass migration in modern history, with roughly 14-18 million people displaced as Hindus and Sikhs fled west-to-east and Muslims east-to-west across the hastily drawn Radcliffe Line. Communal massacres, sexual violence against an estimated 75,000-100,000 women (often followed by forced conversion, abduction or 'honour' killings by their own families), and train-convoy massacres killed between 1 and 2 million people. The Boundary Commission's line was published only two days after independence and included contested awards (Gurdaspur, Chittagong Hill Tracts) that seeded later conflicts. This record is distinct from the ETHNIC_CLEANSING framing elsewhere in the dataset; both framings are accurate depending on analytic lens.",
+    "casualties_low": 1000000,
+    "casualties_high": 2000000,
+    "casualties_source": "Butalia, U. (1998). The Other Side of Silence; Khan, Y. (2007). The Great Partition.",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "Existing batch_01_core.json records Partition as ETHNIC_CLEANSING 1947. This record adds the MIGRATION framing for the 14-18M displacement, which is analytically distinct. Casualty counts are estimates; no official body recorded them. Sexual violence against women was systematically under-reported and is an area of active silence-breaking research.",
+    "entity_links": [
+      {
+        "entity_name_original": "British Raj",
+        "role": "DISSOLVED"
+      },
+      {
+        "entity_name_original": "भारत गणराज्य",
+        "role": "FOUNDED"
+      },
+      {
+        "entity_name_original": "پاکستان",
+        "role": "FOUNDED"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Khan, Y. (2007). The Great Partition: The Making of India and Pakistan. Yale University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Butalia, U. (1998). The Other Side of Silence: Voices from the Partition of India. Penguin.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "中華人民共和國成立",
+    "name_original_lang": "zho",
+    "event_type": "FOUNDING_STATE",
+    "year": 1949,
+    "location_name": "Beijing, China (mainland); Taipei (Republic of China retreat)",
+    "location_lat": 39.9055,
+    "location_lon": 116.3976,
+    "main_actor": "Chinese Communist Party (Mao Zedong, Zhou Enlai, Zhu De) vs. Kuomintang (Chiang Kai-shek)",
+    "description": "On 1 October 1949 Mao Zedong proclaimed the People's Republic of China from the rostrum at Tiananmen, ending the final phase of the Chinese Civil War (1945-1949). The Kuomintang government, defeated on the mainland, retreated to Taiwan with roughly 1.2 million soldiers and civilians, continuing the Republic of China there. The civil war's final phase and the early PRC consolidation (land reform, suppression of counter-revolutionaries 1950-1953) together caused several million deaths, with mainland famine, combat and political killings.",
+    "casualties_low": 2500000,
+    "casualties_high": 6000000,
+    "casualties_source": "Pepper, S. (1999). Civil War in China (combined civil war + early PRC consolidation); Lynch, M. (2010).",
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "ethical_notes": "The casualty range combines 1945-1949 civil war deaths with the 1950-1953 campaigns against 'counter-revolutionaries' and landlords, because disaggregation is contested. Both the PRC and the ROC on Taiwan continue to claim sovereignty over the other's territory.",
+    "entity_links": [
+      {
+        "entity_name_original": "中华人民共和国",
+        "role": "FOUNDED"
+      },
+      {
+        "entity_name_original": "中華民國",
+        "role": "PARTICIPANT"
+      },
+      {
+        "entity_name_original": "臺灣 / Taiwan",
+        "role": "LIBERATED"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Pepper, S. (1999). Civil War in China: The Political Struggle, 1945-1949. 2nd ed. Rowman & Littlefield.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Westad, O.A. (2003). Decisive Encounters: The Chinese Civil War, 1946-1950. Stanford University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "한국 전쟁 / 朝鮮戰爭",
+    "name_original_lang": "kor",
+    "event_type": "BATTLE",
+    "year": 1950,
+    "year_end": 1953,
+    "location_name": "Korean Peninsula",
+    "location_lat": 38.0,
+    "location_lon": 127.5,
+    "main_actor": "Democratic People's Republic of Korea (Kim Il-sung) + People's Republic of China (Peng Dehuai, from October 1950) vs. Republic of Korea (Syngman Rhee) + United Nations Command led by U.S. (MacArthur, Ridgway)",
+    "description": "On 25 June 1950 North Korean forces crossed the 38th parallel; after UN intervention pushed them back nearly to the Chinese border, Chinese People's Volunteers crossed the Yalu in October 1950. The three-year war devastated the peninsula, with U.S. air power destroying every city in North Korea and strategic bombing killing an estimated 12-15 percent of the North Korean population. Approximately 3 million Koreans (mostly civilians), 600,000 Chinese and 37,000 Americans died. The armistice of 27 July 1953 ended combat but no peace treaty was signed; the peninsula remains formally at war.",
+    "casualties_low": 3000000,
+    "casualties_high": 4500000,
+    "casualties_source": "Cumings, B. (2010). The Korean War: A History; U.S. Department of Defense.",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "Civilian deaths, particularly from U.S. strategic bombing of North Korea and from atrocities on both sides (e.g. the Bodo League massacre of 100,000+ suspected leftists by the ROK in 1950), are often omitted from Western summaries of the war.",
+    "entity_links": [
+      {
+        "entity_name_original": "조선민주주의인민공화국",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "대한민국",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "中华人民共和国",
+        "role": "PARTICIPANT"
+      },
+      {
+        "entity_name_original": "United States of America",
+        "role": "PARTICIPANT"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Cumings, B. (2010). The Korean War: A History. Modern Library.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Stueck, W. (1995). The Korean War: An International History. Princeton University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "བོད་ལ་རྒྱ་དམར་གྱིས་བཙན་འཛུལ་བྱས་པ།",
+    "name_original_lang": "bod",
+    "event_type": "CONQUEST",
+    "year": 1950,
+    "year_end": 1959,
+    "location_name": "Tibet (Chamdo, Lhasa)",
+    "location_lat": 29.652,
+    "location_lon": 91.1721,
+    "main_actor": "People's Liberation Army of the People's Republic of China vs. Government of Tibet (Regent Takdra, later 14th Dalai Lama)",
+    "description": "In October 1950 the PLA crossed the Jinsha River and defeated Tibetan forces at Chamdo. Under the 17-Point Agreement of May 1951, signed by a Tibetan delegation in Beijing under duress, Tibet was incorporated into the PRC with promises of autonomy. Land reform and collectivisation in eastern Tibetan regions (Kham, Amdo) from 1956 triggered armed resistance, and a Tibetan uprising in Lhasa on 10 March 1959 was crushed by the PLA; the 14th Dalai Lama and approximately 80,000 followers fled to India. The uprising's suppression and the subsequent Democratic Reform caused an estimated 87,000 Tibetan deaths according to an internal PLA document, though the figure is contested.",
+    "casualties_low": 87000,
+    "casualties_high": 500000,
+    "casualties_source": "PLA internal document cited in Dalai Lama (1962); Smith, W.W. (1996). Tibetan Nation.",
+    "confidence_score": 0.7,
+    "status": "disputed",
+    "known_silence": true,
+    "silence_reason": "The PRC government restricts independent research and journalism in Tibet; death-toll estimates from 1950-1959 and from the subsequent Cultural Revolution in Tibet are contested, with Chinese government figures far lower than those of the Tibetan government-in-exile and independent researchers. The 17-Point Agreement is considered by many international legal scholars to have been signed under duress.",
+    "ethical_notes": "The PRC frames 1950 as 'peaceful liberation'; the Tibetan government-in-exile and many international observers describe it as invasion and annexation. Casualty high figure includes subsequent famine and Cultural Revolution deaths in Tibetan regions.",
+    "entity_links": [
+      {
+        "entity_name_original": "中华人民共和国",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "吐蕃",
+        "role": "CONQUERED"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Smith, W.W. (1996). Tibetan Nation: A History of Tibetan Nationalism and Sino-Tibetan Relations. Westview.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Shakya, T. (1999). The Dragon in the Land of Snows: A History of Modern Tibet since 1947. Columbia University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Chiến dịch Điện Biên Phủ",
+    "name_original_lang": "vie",
+    "event_type": "BATTLE",
+    "year": 1954,
+    "location_name": "Điện Biên Phủ, Tonkin, French Indochina",
+    "location_lat": 21.386,
+    "location_lon": 103.0172,
+    "main_actor": "Việt Minh (General Võ Nguyên Giáp) vs. French Union Forces (Colonel Christian de Castries)",
+    "description": "Between 13 March and 7 May 1954 the Việt Minh besieged and overran the fortified French base at Điện Biên Phủ, hauling heavy artillery up surrounding mountains through jungle by hand and bicycle to bombard the airstrip-dependent garrison. The fall of the base ended the First Indochina War and, during the Geneva Conference already underway, led to the Geneva Accords of 21 July 1954 that partitioned Vietnam at the 17th parallel. The battle became iconic as the first decisive defeat of a European colonial power by an Asian anti-colonial movement using primarily conventional (not guerrilla) tactics.",
+    "casualties_low": 20000,
+    "casualties_high": 35000,
+    "casualties_source": "Windrow, M. (2004). The Last Valley (combined French and Việt Minh military casualties).",
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "ethical_notes": "French casualty counts were official and relatively accurate; Việt Minh figures vary widely because the PAVN did not release comprehensive data until much later and some figures remain classified.",
+    "entity_links": [
+      {
+        "entity_name_original": "Indochine francaise",
+        "role": "DISSOLVED"
+      },
+      {
+        "entity_name_original": "Republique francaise",
+        "role": "PARTICIPANT"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Windrow, M. (2004). The Last Valley: Dien Bien Phu and the French Defeat in Vietnam. Weidenfeld & Nicolson.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Fall, B.B. (1967). Hell in a Very Small Place: The Siege of Dien Bien Phu. J.B. Lippincott.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "大躍進",
+    "name_original_lang": "zho",
+    "event_type": "EPIDEMIC",
+    "year": 1958,
+    "year_end": 1962,
+    "location_name": "People's Republic of China (rural Sichuan, Henan, Anhui, Gansu especially)",
+    "location_lat": 35.0,
+    "location_lon": 105.0,
+    "main_actor": "Chinese Communist Party under Mao Zedong; provincial leaders (Li Jingquan in Sichuan, Wu Zhipu in Henan)",
+    "description": "The Great Leap Forward (1958-1962) combined forced collectivisation, backyard furnace steel production, and over-reporting of harvests under political pressure. Grain was requisitioned on the basis of fictional yields, leaving villages with nothing; peasants were forbidden to leave communes or eat from private plots. The resulting famine caused between 15 million and 55 million excess deaths, with most historians settling on 30-45 million, making it the deadliest famine in human history. Batch_01_core.json records 1959 as an entry point; this record captures the full 1958-1962 horizon.",
+    "casualties_low": 15000000,
+    "casualties_high": 55000000,
+    "casualties_source": "Dikötter, F. (2010) 45M; Yang Jisheng (2012) 36M; Peng Xizhe (1987) ~23M; Cao Shuji (2005) ~32M.",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "The CCP has never fully acknowledged the Great Leap famine. Chinese archives containing provincial records were partially opened in the 1990s-2000s (enabling Yang Jisheng's 'Tombstone') but have been increasingly restricted under Xi Jinping. Discussion of the famine remains censored domestically and framed as 'three years of natural disasters'.",
+    "ethical_notes": "Categorised EPIDEMIC because the schema lacks a FAMINE type; substantively this is a policy-caused mass death event with culpability at the level of central and provincial CCP leadership. The existing batch_01 entry dated 1959 (大跃进饥荒) captures a subset; this record is distinct in scope (full period) and framing.",
+    "entity_links": [
+      {
+        "entity_name_original": "中华人民共和国",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Yang, J. (2012). Tombstone: The Great Chinese Famine, 1958-1962. Farrar, Straus and Giroux.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Dikötter, F. (2010). Mao's Great Famine: The History of China's Most Devastating Catastrophe, 1958-62. Bloomsbury.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "My Lai / Thảm sát Mỹ Lai",
+    "name_original_lang": "vie",
+    "event_type": "MASSACRE",
+    "year": 1968,
+    "location_name": "Sơn Mỹ village (Mỹ Lai hamlet), Quảng Ngãi Province, South Vietnam",
+    "location_lat": 15.1786,
+    "location_lon": 108.8678,
+    "main_actor": "U.S. Army Charlie Company, 1st Battalion 20th Infantry (Lieutenant William Calley, Captain Ernest Medina)",
+    "description": "On 16 March 1968 U.S. infantry killed between 347 and 504 unarmed Vietnamese civilians (almost entirely women, children and elderly) in the hamlets of Sơn Mỹ. Victims were shot, bayoneted and in some cases raped before being killed; huts were burned and livestock destroyed. U.S. Warrant Officer Hugh Thompson, Jr. landed his helicopter between fleeing civilians and advancing troops to save survivors. The initial Army report described the operation as a successful engagement with Viet Cong forces. Journalist Seymour Hersh broke the massacre in November 1969; only Lieutenant Calley was convicted, serving roughly three and a half years of house arrest.",
+    "casualties_low": 347,
+    "casualties_high": 504,
+    "casualties_source": "Peers Report (1970, U.S. Army inquiry) 347; Vietnamese memorial at Sơn Mỹ 504.",
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "The U.S. Army's initial report concealed the massacre for 20 months; Charlie Company's officers filed false reports and superiors above them participated in the cover-up. Subsequent research (Turse 2013) documents that massacres of this character were not isolated but embedded in the 'body count' war-fighting approach.",
+    "ethical_notes": "Only one conviction was obtained out of 26 charged; the U.S. Army's light punishment of Calley and near-exoneration of everyone else shaped later debate about accountability for atrocities.",
+    "entity_links": [
+      {
+        "entity_name_original": "United States of America",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hersh, S.M. (1970). My Lai 4: A Report on the Massacre and Its Aftermath. Random House.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Turse, N. (2013). Kill Anything That Moves: The Real American War in Vietnam. Metropolitan Books.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "স্বাধীনতা যুদ্ধ / جنگ آزادی بنگلہ دیش",
+    "name_original_lang": "ben",
+    "event_type": "GENOCIDE",
+    "year": 1971,
+    "location_name": "East Pakistan (Bangladesh)",
+    "location_lat": 23.685,
+    "location_lon": 90.3563,
+    "main_actor": "Pakistan Army (General Tikka Khan, later Niazi) and allied paramilitaries (Razakar, Al-Badr, Al-Shams) vs. Bengali Mukti Bahini and (from December) Indian Armed Forces",
+    "description": "Following the Awami League's landslide victory in the 1970 elections and West Pakistani refusal to transfer power, Pakistan launched Operation Searchlight on the night of 25 March 1971, systematically killing Bengali intellectuals, Hindus and political activists in Dhaka and across East Pakistan. Over nine months the army and local collaborators killed between 300,000 and 3,000,000 Bengalis, raped an estimated 200,000-400,000 women (Bangladesh's state term is 'Birangona', heroic women), and drove roughly 10 million refugees into India. India's intervention in December 1971 and the surrender of Pakistani forces on 16 December produced the independent state of Bangladesh. The U.S. Nixon administration tilted toward Pakistan despite consular warnings of genocide (the Blood Telegram).",
+    "casualties_low": 300000,
+    "casualties_high": 3000000,
+    "casualties_source": "Bangladeshi government 3M; Hamoodur Rahman Commission (Pakistan, suppressed) ~26,000 (discredited); scholarly consensus 500,000-1,500,000.",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "Pakistan has never acknowledged the 1971 genocide; its own Hamoodur Rahman Commission report was classified for decades and its figures widely rejected. Many Bangladeshi Birangona testimonies were silenced by social stigma. The International Crimes Tribunal of Bangladesh, prosecuting collaborators from 2010, has itself been contested for procedural fairness.",
+    "ethical_notes": "Casualty figures remain one of the most disputed of any 20th-century mass atrocity. The Bangladeshi state figure (3M) is politically canonical; independent scholarship settles around 500,000-1,500,000. Systematic sexual violence is a defining feature of the genocide.",
+    "entity_links": [
+      {
+        "entity_name_original": "پاکستان",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "বাংলাদেশ",
+        "role": "FOUNDED"
+      },
+      {
+        "entity_name_original": "भारत गणराज्य",
+        "role": "LIBERATED"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Bass, G.J. (2013). The Blood Telegram: Nixon, Kissinger, and a Forgotten Genocide. Alfred A. Knopf.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Mookherjee, N. (2015). The Spectral Wound: Sexual Violence, Public Memories, and the Bangladesh War of 1971. Duke University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Sự kiện 30 tháng 4 / Giải phóng Sài Gòn",
+    "name_original_lang": "vie",
+    "event_type": "DISSOLUTION_STATE",
+    "year": 1975,
+    "location_name": "Saigon (Ho Chi Minh City), South Vietnam",
+    "location_lat": 10.7769,
+    "location_lon": 106.7009,
+    "main_actor": "People's Army of Vietnam and Provisional Revolutionary Government vs. Republic of Vietnam under President Dương Văn Minh",
+    "description": "On 30 April 1975 a PAVN T-54 tank crashed through the gates of the Independence Palace in Saigon and President Dương Văn Minh surrendered unconditionally, ending the Vietnam War and dissolving the Republic of Vietnam. The subsequent U.S. evacuation (Operation Frequent Wind) airlifted about 7,000 Americans and Vietnamese; approximately 1-2 million 'boat people' fled over the following years. The reunified Socialist Republic of Vietnam was proclaimed in July 1976. Total Vietnam War casualties (1955-1975) are estimated at 2-3.8 million Vietnamese dead (military and civilian, both sides), plus ~58,000 Americans.",
+    "casualties_low": 2000000,
+    "casualties_high": 3800000,
+    "casualties_source": "Hirschman, C. et al. (1995). Vietnamese Casualties During the American War; Obermeyer et al. (2008) BMJ.",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "Cumulative Vietnam War casualties (1955-1975) reflect mostly Vietnamese civilian deaths and remain disputed; the U.S. bombing campaign in Cambodia and Laos (Operation Menu, Barrel Roll) also caused an estimated 500,000+ Southeast Asian deaths not counted here. Agent Orange dioxin exposure continues to cause birth defects into the 21st century.",
+    "entity_links": [
+      {
+        "entity_name_original": "United States of America",
+        "role": "PARTICIPANT"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hirschman, C., Preston, S., & Vu Manh Loi (1995). Vietnamese Casualties During the American War: A New Estimate. Population and Development Review 21(4).",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Nguyen, L.H.T. (2012). Hanoi's War: An International History of the War for Peace in Vietnam. University of North Carolina Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "د شوروي ایلغار پر افغانستان",
+    "name_original_lang": "pus",
+    "event_type": "CONQUEST",
+    "year": 1979,
+    "year_end": 1989,
+    "location_name": "Democratic Republic of Afghanistan",
+    "location_lat": 34.5553,
+    "location_lon": 69.2075,
+    "main_actor": "Soviet 40th Army vs. Mujahideen factions (Hekmatyar, Massoud, Haqqani), armed and funded by the U.S. (Operation Cyclone), Pakistan (ISI), Saudi Arabia and China",
+    "description": "On 25 December 1979 Soviet forces entered Afghanistan to support the faltering PDPA communist government and installed Babrak Karmal after killing President Hafizullah Amin. Nine years of counter-insurgency warfare followed, in which Soviet tactics (village destruction, mine-scattering, forced depopulation of rural areas) caused roughly 1-2 million Afghan civilian deaths and drove 5-6 million refugees to Pakistan and Iran. Soviet withdrawal completed on 15 February 1989 left the PDPA government to fall in 1992. U.S.-supported Mujahideen networks later formed the nucleus of both the Taliban and al-Qaeda.",
+    "casualties_low": 1000000,
+    "casualties_high": 2000000,
+    "casualties_source": "Khalidi, N.A. (1991). Afghanistan: Demographic Consequences of War (Central Statistics Office data reanalysis); Urban Khan (2001).",
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "ethical_notes": "Afghan casualty figures are inherently uncertain given the absence of a functioning census; most deaths were civilian. The U.S. covert programme (Operation Cyclone) channelled roughly USD 3 billion through Pakistan's ISI, with consequences including the regional arms pipeline and militant networks.",
+    "entity_links": [
+      {
+        "entity_name_original": "Союз Советских Социалистических Республик",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "United States of America",
+        "role": "PARTICIPANT"
+      },
+      {
+        "entity_name_original": "پاکستان",
+        "role": "PARTICIPANT"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Braithwaite, R. (2011). Afgantsy: The Russians in Afghanistan, 1979-89. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Coll, S. (2004). Ghost Wars: The Secret History of the CIA, Afghanistan, and Bin Laden. Penguin.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "六四事件 / 天安門事件",
+    "name_original_lang": "zho",
+    "event_type": "MASSACRE",
+    "year": 1989,
+    "location_name": "Beijing (Tiananmen Square and western approach avenues, Muxidi, Wukesong)",
+    "location_lat": 39.9055,
+    "location_lon": 116.3976,
+    "main_actor": "People's Liberation Army 27th, 38th, 54th and 63rd Group Armies under martial-law orders from Deng Xiaoping, Li Peng and Yang Shangkun",
+    "description": "Seven weeks of democracy protests centred on Tiananmen Square (April-June 1989) ended on the night of 3-4 June when PLA armoured and infantry units opened fire on protesters and bystanders along the avenues leading to Tiananmen. Most killings occurred not in the square itself but on Chang'an Avenue between Muxidi and the Gate of Heavenly Peace. Internal Chinese Red Cross early estimates of 2,600 dead were withdrawn under pressure; later U.S. and U.K. diplomatic cables (declassified 2017) cited figures up to 10,000, while the Tiananmen Mothers group has documented 202 individual cases by name. The official Chinese figure remains 'roughly 200'.",
+    "casualties_low": 200,
+    "casualties_high": 10000,
+    "casualties_source": "UK diplomatic cable 5 June 1989 (declassified 2017); Tiananmen Mothers registry; Chinese government statement.",
+    "confidence_score": 0.7,
+    "status": "disputed",
+    "known_silence": true,
+    "silence_reason": "The PRC has never permitted independent investigation; the topic is the most systematically censored event on the Chinese internet. Tiananmen Mothers are monitored, detained and prevented from holding memorials. The most recent large anniversary commemorations in Hong Kong (Victoria Park vigil) were prohibited after the 2020 National Security Law.",
+    "ethical_notes": "Casualty range is among the widest of any single-day massacre in modern historiography because of state suppression. Lower figures are official; scholarly consensus is in the low thousands; Tiananmen Mothers document fewer cases only because they work under surveillance from confirmed names only.",
+    "entity_links": [
+      {
+        "entity_name_original": "中华人民共和国",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Lim, L. (2014). The People's Republic of Amnesia: Tiananmen Revisited. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Nathan, A.J. & Link, P. (eds.) (2001). The Tiananmen Papers. PublicAffairs.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "無產階級文化大革命",
+    "name_original_lang": "zho",
+    "event_type": "REVOLUTION",
+    "year": 1966,
+    "year_end": 1976,
+    "location_name": "People's Republic of China (nationwide, with concentrated violence in Guangxi, Inner Mongolia, Yunnan, Tibet)",
+    "location_lat": 39.9042,
+    "location_lon": 116.4074,
+    "main_actor": "Mao Zedong, Central Cultural Revolution Group (Jiang Qing, Chen Boda, Kang Sheng), Red Guard and Revolutionary Rebel factions",
+    "description": "Launched by Mao in May 1966 with the Decision Concerning the Great Proletarian Cultural Revolution, the campaign mobilised Red Guards to attack the 'Four Olds' and purge alleged 'capitalist roaders' within the Party. Ten years of factional armed violence, mass public struggle sessions, torture and forced suicide followed; targets included Party officials (Liu Shaoqi died of untreated illness in detention 1969), intellectuals, former landlords, and ethnic minorities. Particular atrocities include the 1967-1968 Guangxi mass killings (estimated 100,000-150,000 dead, with documented cannibalism per Zheng Yi's investigation) and the Inner Mongolia 'Neirendang' purge (~22,900-100,000 Mongol deaths). The Cultural Revolution was officially condemned by the CCP in 1981 as responsible for the 'most severe setback' since the PRC's founding.",
+    "casualties_low": 500000,
+    "casualties_high": 8000000,
+    "casualties_source": "Walder, A.G. & Su, Y. (2003) rural killings 750,000-1.5M; Dikötter, F. (2016) up to 2M; some estimates include downstream famine and suicide deaths.",
+    "confidence_score": 0.7,
+    "status": "disputed",
+    "known_silence": true,
+    "silence_reason": "Detailed CCP archives on the Cultural Revolution remain classified and increasingly restricted under Xi Jinping; official histories confine the event to the 1981 'Resolution on Certain Questions in the History of Our Party'. Specific massacres (Guangxi, Inner Mongolia, Dao County) have not been systematically investigated; survivors and researchers who have tried (Song Yongyi, Tan Hecheng) face publication bans.",
+    "ethical_notes": "Casualty range is wide because victims include killings in factional violence, deaths in detention, forced suicides, minority-group massacres, and downstream famine/economic-collapse deaths. Different scholarly methodologies yield very different totals.",
+    "entity_links": [
+      {
+        "entity_name_original": "中华人民共和国",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "MacFarquhar, R. & Schoenhals, M. (2006). Mao's Last Revolution. Harvard University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Walder, A.G. & Su, Y. (2003). The Cultural Revolution in the Countryside: Scope, Timing and Human Impact. The China Quarterly 173.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "香港主權移交",
+    "name_original_lang": "zho",
+    "event_type": "TREATY",
+    "year": 1997,
+    "location_name": "Hong Kong",
+    "location_lat": 22.3193,
+    "location_lon": 114.1694,
+    "main_actor": "United Kingdom (PM Tony Blair, Governor Chris Patten) and People's Republic of China (Jiang Zemin, Li Peng)",
+    "description": "On 1 July 1997 the United Kingdom transferred sovereignty over Hong Kong to the People's Republic of China at the end of the 99-year lease of the New Territories, ending 156 years of British colonial rule beginning with the 1842 Treaty of Nanking. Under the Sino-British Joint Declaration (1984) and the Basic Law, Hong Kong became a Special Administrative Region under 'One Country, Two Systems' for 50 years. The promised autonomy was progressively eroded after 2014 (Umbrella Movement), 2019 (Extradition Bill protests) and decisively after the 2020 National Security Law imposed by Beijing.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "ethical_notes": "The handover is often presented as a clean diplomatic event; the longer-term erosion of the Sino-British Joint Declaration's autonomy commitments (declared by the UK in 2021 to be in a state of ongoing non-compliance) is an integral part of the historical meaning.",
+    "entity_links": [
+      {
+        "entity_name_original": "中华人民共和国",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "British Empire",
+        "role": "DISSOLVED"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Tsang, S. (2004). A Modern History of Hong Kong. I.B. Tauris.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Sino-British Joint Declaration on the Question of Hong Kong, 19 December 1984. UN Treaty Series 1399.",
+        "source_type": "primary",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Referendum Timor-Leste",
+    "name_original_lang": "ind",
+    "event_type": "FOUNDING_STATE",
+    "year": 1999,
+    "year_end": 2002,
+    "location_name": "East Timor (Timor-Leste)",
+    "location_lat": -8.5569,
+    "location_lon": 125.5603,
+    "main_actor": "United Nations (UNAMET mission), East Timorese (FRETILIN, Xanana Gusmão), Indonesian military (TNI) and militias (Aitarak, Besi Merah Putih)",
+    "description": "In a UN-administered referendum on 30 August 1999, 78.5% of East Timorese voted for independence from Indonesia, which had invaded in 1975 and killed an estimated 100,000-183,000 Timorese over 24 years. In reprisal, Indonesian-backed militias and TNI units destroyed 70% of the territory's infrastructure and killed roughly 1,500 people in September 1999, forcing about 300,000 displacements. An Australian-led INTERFET intervened, UN transitional administration (UNTAET) followed, and the Democratic Republic of Timor-Leste was proclaimed on 20 May 2002. The 2005 CAVR 'Chega!' report documented the full occupation-era violence.",
+    "casualties_low": 1400,
+    "casualties_high": 2000,
+    "casualties_source": "CAVR 'Chega!' Report (2005) for 1999 violence; occupation-era total covered by 1975 GENOCIDE record in batch_01.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "Indonesian prosecution of 1999 violence was largely unsuccessful, with most commanders acquitted or never tried. TNI commanders later rehabilitated politically. Indonesian official acknowledgement of the occupation's violence remains limited.",
+    "ethical_notes": "Casualty figures cover only the 1999 scorched-earth withdrawal; the GENOCIDE record in batch_01 covers 1975 invasion and occupation. This event is recorded as FOUNDATION_STATE because its primary historical meaning is the successful self-determination and state creation.",
+    "entity_links": [],
+    "sources": [
+      {
+        "citation": "Commission for Reception, Truth and Reconciliation in East Timor (CAVR) (2005). Chega! The Report of the Commission for Reception, Truth, and Reconciliation in Timor-Leste.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Kingsbury, D. (2009). East Timor: The Price of Liberty. Palgrave Macmillan.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "ئۇيغۇر قاتتىق كۆرسىتىشى / 新疆再教育营",
+    "name_original_lang": "uig",
+    "event_type": "COLONIAL_VIOLENCE",
+    "year": 2014,
+    "year_end": 2022,
+    "location_name": "Xinjiang Uyghur Autonomous Region, People's Republic of China",
+    "location_lat": 41.1129,
+    "location_lon": 85.2401,
+    "main_actor": "Chinese Communist Party (Xi Jinping, Chen Quanguo as Xinjiang Party Secretary from 2016)",
+    "description": "From 2014 and especially after 2017, PRC authorities established a network of extrajudicial internment facilities ('Vocational Education and Training Centres') in which an estimated 1-1.8 million Uyghurs, Kazakhs and other Turkic Muslim peoples were detained. Leaked internal documents (the Xinjiang Police Files, the China Cables, the Karakax List) confirmed systematic detention on the basis of religious practice, language and family connections. Parallel programmes included forced labour transfers, mass sterilisation and IUD insertion reducing Uyghur birth rates by an estimated 50-84% 2015-2018, and destruction of mosques and cemeteries. The U.S. (2021), UK House of Commons (2021) and others have designated the programme a genocide; the UN High Commissioner for Human Rights' 2022 report found possible crimes against humanity.",
+    "casualties_low": 1000000,
+    "casualties_high": 1800000,
+    "casualties_source": "Zenz, A. (2020); Australian Strategic Policy Institute (2020) detention figures; ranges are detainee estimates not death tolls.",
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "The PRC denies the detention system's existence or scale, characterising it as 'vocational training' against 'extremism'. Independent journalism in Xinjiang is effectively prohibited; Uyghur diaspora members have been harassed and families of those speaking out have been detained. Chinese government and state media have targeted specific researchers (particularly Adrian Zenz) with retaliation.",
+    "ethical_notes": "Classified COLONIAL_VIOLENCE rather than GENOCIDE because the substantive legal determination of genocide (intent to destroy a group as such) remains contested; the UN 2022 report found possible crimes against humanity and did not conclude genocide. Scholarship is evolving and subject to state counter-pressure.",
+    "entity_links": [
+      {
+        "entity_name_original": "中华人民共和国",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Office of the UN High Commissioner for Human Rights (2022). OHCHR Assessment of Human Rights Concerns in the Xinjiang Uyghur Autonomous Region, People's Republic of China.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Zenz, A. (2020). Sterilizations, IUDs, and Mandatory Birth Control: The CCP's Campaign to Suppress Uyghur Birthrates in Xinjiang. Jamestown Foundation.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  }
+]
