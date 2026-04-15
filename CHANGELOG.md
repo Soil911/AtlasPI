@@ -2,12 +2,124 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.9.0] - 2026-04-15
+
+**Tema**: *Medieval events gap + Chinese dynastic trunk* — colmato il vuoto
+500–1000 CE (7 → 22 eventi, +15 nuovi) e aggiunta la catena dinastica cinese
+completa (12 link, Shang → PRC, con ogni transizione esplicitamente tipizzata
+e annotata). Catene 11 → 12, eventi 235 → 250. Test 486 → 527 (+41).
+
+### Nuovi eventi (15) — `data/events/batch_10_medieval_expansion.json`
+
+Il millennio 500–1000 CE era sotto-rappresentato: prima di v6.9.0
+contava solo 7 eventi nel DB. Questa batch aggiunge 15 eventi spanning
+la tarda antichità, la nascita dell'Islam, la sintesi carolingia, la
+riunificazione Sui-Tang, la persecuzione buddhista Huichang, la missione
+bizantina in Moravia, la fondazione Song, il battesimo della Rus', e
+l'incoronazione di Santo Stefano.
+
+| Anno | Tipo              | Evento                                           |
+|-----:|-------------------|--------------------------------------------------|
+|  541 | EPIDEMIC          | Ἰουστινιάνειος λοιμός (Justinianic Plague)       |
+|  610 | RELIGIOUS_EVENT   | اقرأ (Muhammad's first revelation at Hira)       |
+|  636 | BATTLE            | معركة اليرموك (Yarmouk)                          |
+|  651 | DEATH_OF_RULER    | Yazdegerd III murder / Sasanian extinction       |
+|  711 | CONQUEST          | فتح الأندلس (Umayyad conquest of Iberia)         |
+|  732 | BATTLE            | Battle of Tours / Poitiers                       |
+|  751 | BATTLE            | معركة نهر طلاس (Talas)                           |
+|  762 | FOUNDING_STATE    | مدينة السلام (Baghdad founded)                   |
+|  793 | MASSACRE          | Lindisfarne raid                                 |
+|  843 | TREATY            | Foedus Virodunense (Treaty of Verdun)            |
+|  845 | RELIGIOUS_EVENT   | 會昌毀佛 (Huichang persecution of Buddhism)      |
+|  863 | RELIGIOUS_EVENT   | Cyril & Methodius mission to Moravia             |
+|  960 | FOUNDING_STATE    | 陳橋兵變 (Chenqiao mutiny / Song founded)        |
+|  988 | RELIGIOUS_EVENT   | Крещеніе Руси (Baptism of Rus')                  |
+| 1000 | CORONATION        | Szent István koronázása (Stephen I crowned)      |
+
+Ogni evento ha `ethical_notes` estese (>80 caratteri, spesso >400),
+≥1 fonte primaria + ≥1 accademica, e `entity_links` risolti contro
+il DB reale (0 reference pendenti al seed).
+
+### Nuova catena — `data/chains/batch_04_china.json`
+
+**Cinese dinastico (DYNASTY, 12 link, 1600 BCE – presente)**:
+商朝 → 周朝 (−1046 CONQUEST, Muye) → 秦朝 (−221 CONQUEST, guerre di
+unificazione Qin) → 漢朝 (−202 REVOLUTION, Chu-Han/Gaixia) → 隋朝 (581
+SUCCESSION — ponte su 360 anni di frammentazione Three Kingdoms→N&S
+Dynasties, *silenzio esplicitato negli ethical_notes*) → 唐朝 (618
+REVOLUTION, ribellione Li Yuan contro Sui) → 宋朝 (960 SUCCESSION,
+ammutinamento Chenqiao bloodless, ma le Cinque Dinastie erano
+violentissime e Liao/Jin/Xia coesistenti — flaggati) → 元朝 (1271 CONQUEST,
+conquista mongola 30-60M morti) → 明朝 (1368 REVOLUTION, Zhu Yuanzhang e
+Red Turbans) → 大清帝國 (1644 CONQUEST, conquista manciù con massacro di
+Yangzhou e editto del codino) → 中華民國 (1912 REVOLUTION, rivoluzione
+Xinhai) → 中华人民共和国 (1949 REVOLUTION, guerra civile + Grande Carestia
++ Rivoluzione Culturale).
+
+**ETHICS nella catena cinese**:
+- La forma "trunk" elude decine di polities simultanei (Wei/Shu/Wu, Liao,
+  Jin, Xia, Five Dynasties, Ten Kingdoms) — il documento lo dichiara
+  apertamente: la narrativa di lineage imperiale unica è una costruzione
+  storiografica di epoca Qing.
+- Il gap Han→Sui (220→581) è marcato SUCCESSION ma lo `ethical_notes`
+  esplicita il collasso demografico da 60M→16M registrati.
+- An Lushan (755-763, ~36M morti) è dentro il link Tang, non separato.
+- Conquista mongola (Jin 1211, Xia 1227, Song 1279) marcata CONQUEST con
+  stime 30-60M morti; genocidio Zungar 1755-59 citato nel link Qing.
+- Massacro di Yangzhou 1645 (Wang Xiuchu primary), editto del codino,
+  genocidio Zungar tutti citati nel link Qing.
+- PRC 1949 marcato REVOLUTION con riferimenti espliciti a Grande Carestia
+  (15-45M), Rivoluzione Culturale (500k-2M), Tiananmen, Xinjiang.
+- Dikötter, Yang Jisheng, Cambridge History of China, Ge Jianxiong
+  citati come fonti chiave.
+
+### Nuovi test (23) — `tests/test_v690_medieval_expansion.py`
+
+- Struttura file batch_10 (file esiste, lista di 15+, chiavi richieste)
+- Validazione enum (EventType, ChainType, TransitionType)
+- Gate cronologico: ogni evento ∈ [500, 1000]
+- Copertura linguistica multi-regionale (arabo, greco, latino, cinese, slavo)
+- Coverage ETHICS obbligatoria (>80 char per evento)
+- DB landing: ≥80% eventi, gap 500-1000 CE ≥20
+- Spot-check Talas 751, Verdun 843
+- Catena Cina: 12 link endpoint Shang→PRC
+- Yuan deve essere CONQUEST (no "succession"), Qing deve essere CONQUEST
+  (con keyword Yangzhou/queue/Zunghar obbligatoria nei notes), PRC deve
+  essere REVOLUTION violenta
+- `ethical_notes` catena deve citare Three Kingdoms/Liao/Jin/Xia/Five Dynasties
+
+### Bilancio dataset
+
+| Metrica                  | Pre v6.9.0 | Post v6.9.0 | Δ        |
+|--------------------------|-----------:|------------:|---------:|
+| Eventi totali            |        235 |         250 |     +15  |
+| Eventi 500-1000 CE       |          7 |          22 |     +15  |
+| Catene dinastiche        |         11 |          12 |      +1  |
+| Chain links totali       |         40 |          52 |     +12  |
+| Test passanti            |        486 |         527 |     +41  |
+
+### File modificati
+
+- `data/events/batch_10_medieval_expansion.json` (new, 15 events)
+- `data/chains/batch_04_china.json` (new, 1 chain / 12 links)
+- `tests/test_v690_medieval_expansion.py` (new, 23 tests)
+- `src/config.py` — APP_VERSION 6.8.0 → 6.9.0
+- `tests/test_health.py` — version assertion 6.9.0
+- `static/index.html` — footer v6.9.0
+- `static/landing/index.html` — hero tag + foot-version v6.9.0
+  (250 events, 12 chains)
+- `README.md` — badges (version, events 250, chains 12, tests 527), BibTeX, citation
+- `CHANGELOG.md` — questa sezione
+
 ## [v6.8.0] - 2026-04-15
 
 **Tema**: *Ancient events gap + Asian dynasty chains* — colmato il buco
 pre-500 CE (29 → 53 eventi, +24 nuovi) e aggiunte due catene dinastiche
 asiatiche (Giappone 7-link Nara→Meiji, India classica 5-link
 Shishunaga→Kanva). Catene 9 → 11, eventi 211 → 235. Test 442 → 486 (+44).
+
+*(Nota retrospettiva: in v6.9.0 il suite cresce a 527 passing grazie
+all'espansione parametrizzata della test-matrix.)*
 
 ### Nuovi eventi (24) — `data/events/batch_09_ancient_expansion.json`
 

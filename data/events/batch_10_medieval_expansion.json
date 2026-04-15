@@ -1,0 +1,431 @@
+[
+  {
+    "name_original": "Pandemia Iustinianea",
+    "name_original_lang": "lat",
+    "event_type": "EPIDEMIC",
+    "year": 541,
+    "year_end": 549,
+    "location_name": "Constantinople, Mediterranean world",
+    "location_lat": 41.0082,
+    "location_lon": 28.9784,
+    "main_actor": "Yersinia pestis (bubonic plague) + imperial Roman/Sasanian trade networks",
+    "description": "The first attested pandemic of bubonic plague (Yersinia pestis confirmed from ancient-DNA of sixth-century graves at Aschheim, Bavaria). Reached Pelusium on the Nile in 541 and Constantinople by spring 542. Procopius (Bellum Persicum II.22-23, eyewitness) reports at peak of the epidemic 5,000-10,000 died daily in the capital; the emperor Justinian contracted but survived. Demographic impact across the Byzantine, Sasanian, Frankish, and Anglo-Saxon worlds is estimated variously at 15-40% of Mediterranean population over the full first-wave period. Recurrent outbreaks continued until c. 750.",
+    "casualties_low": 15000000,
+    "casualties_high": 50000000,
+    "casualties_source": "Procopius; modern estimates Harper (2017), Stathakopoulos (2004)",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Casualty estimates for the Justinianic pandemic have been contested. A revisionist school (Mordechai, Eisenberg et al. 2019) argues the demographic impact was much smaller and the collapse-of-Rome narrative is retrospective. The maximalist position (Harper 2017, Little 2007) holds the pandemic was a central driver of late-antique Mediterranean demographic retreat. AtlasPI presents the wider range and flags the disagreement. The aDNA confirmation of Y. pestis at Aschheim (Wagner et al. 2014) and other sites is not in dispute — the pathogen is securely identified.",
+    "entity_links": [
+      {"entity_name_original": "Βασιλεία Ῥωμαίων", "role": "AFFECTED", "notes": "Byzantine empire hit hardest at Constantinople and Mediterranean littoral"},
+      {"entity_name_original": "ساسانیان", "role": "AFFECTED", "notes": "Sasanian Iran also affected via trade routes"}
+    ],
+    "sources": [
+      {"citation": "Procopius, Bellum Persicum II.22-23 (primary, ~550 CE).", "source_type": "primary", "url": null},
+      {"citation": "John of Ephesus, Historia Ecclesiastica (fragments) (primary, ~585 CE).", "source_type": "primary", "url": null},
+      {"citation": "Harper, K. (2017). The Fate of Rome: Climate, Disease, and the End of an Empire. Princeton UP.", "source_type": "academic", "url": null},
+      {"citation": "Wagner, D.M. et al. (2014). 'Yersinia pestis and the Plague of Justinian 541-543 AD.' Lancet Infectious Diseases 14/4.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "غار حراء",
+    "name_original_lang": "ara",
+    "event_type": "RELIGIOUS_EVENT",
+    "year": 610,
+    "year_end": null,
+    "location_name": "Cave of Hira (Jabal al-Nūr), near Mecca",
+    "location_lat": 21.458,
+    "location_lon": 39.859,
+    "main_actor": "Muḥammad ibn ʿAbd Allāh",
+    "description": "According to Islamic tradition, in the month of Ramaḍān of the year 610 CE, Muḥammad ibn ʿAbd Allāh (age ~40) received the first revelation of the Qurʾān — the opening verses of Sūrat al-ʿAlaq (Q 96:1-5: 'Read, in the name of thy Lord who created') — from the angel Jibrīl in the Cave of Ḥirāʾ on Jabal al-Nūr, north-east of Mecca. This is recorded by the canonical Sīra tradition (Ibn Isḥāq via Ibn Hishām; ʿUrwa ibn al-Zubayr's Maghāzī) and by the ḥadīth compilations (al-Bukhārī, Muslim). The event marks the beginning of Muḥammad's prophetic mission and of the Qurʾānic revelation, which continued in stages for twenty-three years (610-632 CE).",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The historicity of Muḥammad as a seventh-century prophetic figure in Arabia is accepted by academic historiography (Robinson, Donner, Shoemaker); the first-revelation narrative is preserved exclusively in Islamic internal sources (Qurʾān, Sīra, ḥadīth) written down a century or more after the event. Revisionist scholars (Crone, Cook 1977) questioned large parts of the traditional narrative; subsequent work (Donner 2010, Anthony 2020) has substantially rehabilitated early Islamic sources while acknowledging the gap between event and redaction. Theological claims about the nature of revelation are outside historiographic method. AtlasPI records the event as the traditional starting-point of Muḥammad's prophetic mission, with confidence 0.75 reflecting the source-lag.",
+    "entity_links": [],
+    "sources": [
+      {"citation": "Qurʾān, Sūra 96:1-5 (primary, Revelation to Muḥammad, 610 CE by tradition).", "source_type": "primary", "url": null},
+      {"citation": "Ibn Isḥāq (d. 767), Sīrat Rasūl Allāh, via Ibn Hishām (d. 833) (primary, ~750 CE).", "source_type": "primary", "url": null},
+      {"citation": "al-Bukhārī, Ṣaḥīḥ, Kitāb Badʾ al-Waḥy (primary compilation, ~870 CE).", "source_type": "primary", "url": null},
+      {"citation": "Donner, F.M. (2010). Muhammad and the Believers: At the Origins of Islam. Harvard UP.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "معركة اليرموك",
+    "name_original_lang": "ara",
+    "event_type": "BATTLE",
+    "year": 636,
+    "year_end": null,
+    "location_name": "Yarmūk river (modern Jordan/Syria/Israel border)",
+    "location_lat": 32.71,
+    "location_lon": 35.98,
+    "main_actor": "Khālid ibn al-Walīd (Rāshidūn caliphate) against Theodore Trithyrius (Byzantine)",
+    "description": "Over six days in mid-August 636 CE the Rāshidūn Arab army under Khālid ibn al-Walīd (nominal overall command with Abū ʿUbayda) destroyed the assembled Byzantine field army under Theodore Trithyrius and Vahan on the Yarmūk plateau. The Byzantine force (40,000-100,000 by varying sources) was annihilated or scattered; the Arab force (~25,000-40,000) captured the Levant up to the Taurus mountains within months. The emperor Heraclius abandoned Syria, reportedly crying 'Farewell, O Syria' at Antioch. Jerusalem surrendered in 637 under terms (the ʿUmar Covenant). Yarmūk is the decisive battle of the Arab conquest of the Byzantine East and permanently shifted the Levant out of Greco-Roman political-cultural hegemony.",
+    "casualties_low": 30000,
+    "casualties_high": 80000,
+    "casualties_source": "al-Ṭabarī, al-Balādhurī; Theophanes Confessor (Byzantine); modern Kennedy (2007)",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Arab conquest of the Byzantine Levant has been historiographically freighted in multiple directions. Early modern and Orientalist narratives portrayed it as a 'sudden cataclysm' of Islamic fanaticism; revisionist work (Donner 1981, Hoyland 2014) shows a more complex process combining demoralised post-plague Byzantine defensive capacity, local Christian populations often indifferent or positively disposed toward Arab rule (lower taxation than Byzantine), and a steady rather than miraculous military campaign. Syriac Christian sources (Pseudo-Sebeos, Chronicle of 1234) record the event without Islamic-religious framing since their authors were often not yet aware of Islam as a distinct religion. AtlasPI records the military outcome and demographic displacement (Byzantine Greek-speaking administrators retreating with Heraclius) without the Orientalist frame.",
+    "entity_links": [
+      {"entity_name_original": "Βασιλεία Ῥωμαίων", "role": "VICTIM", "notes": "Byzantine field army destroyed; Levant lost"}
+    ],
+    "sources": [
+      {"citation": "al-Ṭabarī, Tārīkh al-Rusul wa'l-Mulūk, Yarmūk campaign narrative (primary, ~915 CE).", "source_type": "primary", "url": null},
+      {"citation": "al-Balādhurī, Futūḥ al-Buldān (primary, ~860 CE).", "source_type": "primary", "url": null},
+      {"citation": "Theophanes Confessor, Chronographia A.M. 6126-6128 (primary, ~815 CE).", "source_type": "primary", "url": null},
+      {"citation": "Kennedy, H. (2007). The Great Arab Conquests. Da Capo.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "قتل يزدجرد الثالث",
+    "name_original_lang": "ara",
+    "event_type": "DEATH_OF_RULER",
+    "year": 651,
+    "year_end": null,
+    "location_name": "Marv (modern Mary, Turkmenistan)",
+    "location_lat": 37.65,
+    "location_lon": 61.83,
+    "main_actor": "Yazdegerd III, last Sasanian shāhanshāh; killed by a local miller near Marv",
+    "description": "After the catastrophic defeat at Nihāwand (642, the 'Victory of Victories' in Arabic sources — the destruction of the Sasanian field army), Yazdegerd III fled eastward through Khorāsān pursuing dwindling support. In 651 CE he arrived at Marv hoping for aid from the local marzbān Māhūya but was betrayed, fled to a miller's house, and was killed — according to al-Ṭabarī for his jewels, according to al-Dīnawarī at the instigation of Māhūya himself. His death without a legitimate successor ends the Sasanian dynasty after four centuries and completes the Arab conquest of the Iranian plateau. Yazdegerd's son Pērōz III fled to Tang China and died there in exile.",
+    "casualties_low": 1,
+    "casualties_high": 1,
+    "casualties_source": "al-Ṭabarī, al-Dīnawarī, Bundahišn",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The fall of the Sasanian empire has two surviving narratives that converge on the outcome but diverge in emphasis. (a) The Arab sources (al-Ṭabarī, al-Balādhurī) frame the conquests as the realisation of Islamic-providential history. (b) The Zoroastrian Middle Persian sources (Bundahišn, Arda Viraz-nāmag) frame them as a cosmic catastrophe — the loss of the last Zoroastrian imperial state and the extended forcible conversion, fiscal pressure (jizya), and demographic decline of Zoroastrians in Iran. The Parsi diaspora in India (traditional arrival at Sanjān, Gujarat, c. 8th-10th CE) preserves the memory of refugees from this transition. Both readings are in the record; the conversion of Iranian society to Islam took roughly three centuries and was not monocausal or purely forcible.",
+    "entity_links": [
+      {"entity_name_original": "ساسانیان", "role": "DISSOLVED", "notes": "Sasanian dynasty extinct; Iranian plateau absorbed by Rāshidūn caliphate"}
+    ],
+    "sources": [
+      {"citation": "al-Ṭabarī, Tārīkh al-Rusul wa'l-Mulūk, I.2872-2885 (primary, ~915 CE).", "source_type": "primary", "url": null},
+      {"citation": "al-Dīnawarī, Kitāb al-Akhbār al-Ṭiwāl (primary, ~895 CE).", "source_type": "primary", "url": null},
+      {"citation": "Bundahišn, Greater Iranian creation text, final redaction c. 9th CE (primary).", "source_type": "primary", "url": null},
+      {"citation": "Pourshariati, P. (2008). Decline and Fall of the Sasanian Empire. I.B. Tauris.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "فتح الأندلس",
+    "name_original_lang": "ara",
+    "event_type": "CONQUEST",
+    "year": 711,
+    "year_end": null,
+    "location_name": "Guadalete river (modern Cadiz province, Spain)",
+    "location_lat": 36.69,
+    "location_lon": -6.18,
+    "main_actor": "Ṭāriq ibn Ziyād (Berber, client of the Umayyad governor Mūsā ibn Nuṣayr)",
+    "description": "In April-July 711 CE a Berber-Arab force of ~7,000-12,000 under Ṭāriq ibn Ziyād crossed the strait that now bears his name (Jabal Ṭāriq / Gibraltar) from Tangier and defeated the last Visigothic king Roderic at the battle of Guadalete (or Wādī Lakka). Roderic disappeared in the rout. Within four years (711-715) almost the whole Iberian peninsula fell to the Umayyads, who established the province of al-Andalus under the Caliphate of Damascus. The conquest inaugurated seven centuries of Islamic political presence in Iberia, which would end with the fall of Granada in 1492. The last Visigothic resistance in the northern mountains (Pelayo at Covadonga, c. 722) would seed the later Christian Reconquista.",
+    "casualties_low": 10000,
+    "casualties_high": 30000,
+    "casualties_source": "Akhbār Majmūʿa, Ibn ʿAbd al-Ḥakam; Chronicle of 754; modern estimates",
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The fall of the Visigothic kingdom had multiple precipitating factors beyond Arab military capacity: the preceding civil war between supporters of Roderic and the sons of Wittiza, the Visigothic state's extreme social stratification with a large coerced peasantry, and Jewish communities who had been targeted for forced conversion under Visigothic law (XII Council of Toledo, 681) and welcomed the Umayyads as liberators. The 'Moorish invasion' narrative of 19th-20th century Spanish nationalism flattens this complexity into a civilisational-clash story; academic work (Collins 1989, Glick 2005) documents the rapid local accommodations and the retrospective construction of both the Reconquista and the 'Moor' category.",
+    "entity_links": [
+      {"entity_name_original": "Regnum Visigothorum", "role": "DISSOLVED", "notes": "Visigothic Hispania falls"},
+      {"entity_name_original": "الدولة الأموية", "role": "MAIN_ACTOR", "notes": "Umayyad caliphate conquers Iberia"}
+    ],
+    "sources": [
+      {"citation": "Akhbār Majmūʿa fī Fatḥ al-Andalus (primary, ~950 CE, anonymous).", "source_type": "primary", "url": null},
+      {"citation": "Chronicle of 754 (Continuatio Hispana) (primary, ~754 CE).", "source_type": "primary", "url": null},
+      {"citation": "Collins, R. (1989). The Arab Conquest of Spain, 710-797. Blackwell.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Bellum Pictaviense",
+    "name_original_lang": "lat",
+    "event_type": "BATTLE",
+    "year": 732,
+    "year_end": null,
+    "location_name": "Poitiers / Moussais-la-Bataille, Aquitaine",
+    "location_lat": 46.66,
+    "location_lon": 0.33,
+    "main_actor": "Charles Martel (Frankish majordomus) against ʿAbd al-Raḥmān al-Ghāfiqī (Umayyad governor of al-Andalus)",
+    "description": "In October 732 (or possibly 733) CE the Frankish majordomus Charles Martel defeated a raiding Umayyad force under ʿAbd al-Raḥmān al-Ghāfiqī, governor of al-Andalus, between Tours and Poitiers. ʿAbd al-Raḥmān was killed; the Umayyad army withdrew southwards. The battle was one of multiple Frankish-Muslim confrontations in the 720s-730s and not by itself the decisive end of Umayyad expansion (Arab raids continued across the Pyrenees for another three decades). But the traditional reading — originating with Christian chroniclers (Continuator of Fredegar, ~760s) and amplified by Carolingian propagandists and then by Edward Gibbon ('the Koran would now be taught in the schools of Oxford') — has made it the symbolic high-water mark of Islamic expansion in western Europe.",
+    "casualties_low": 5000,
+    "casualties_high": 20000,
+    "casualties_source": "Continuator of Fredegar; Chronicle of 754; modern estimates highly uncertain",
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Poitiers/Tours is the paradigmatic case of an overweighted battle in European historiography. The Umayyad force was a raid expedition, not a conquest army. The Frankish kingdom itself was unstable and Charles Martel's legitimacy would only be secured by his son Pépin's coup against the Merovingian king in 751. The 'saving Christian Europe' narrative is an 18th-19th century construction; modern historiography (Bachrach, Collins) treats the battle as significant but not civilisationally decisive. The battle is also entangled with 20th-21st century political uses — Charles Martel as mascot of the French far right, named units in the 2019 Christchurch mosque shootings manifesto — which AtlasPI neither endorses nor launders: the record should include the battle as it was, not as it is currently weaponised.",
+    "entity_links": [
+      {"entity_name_original": "الدولة الأموية", "role": "PARTICIPANT", "notes": "Umayyad raid force; governor ʿAbd al-Raḥmān al-Ghāfiqī killed"}
+    ],
+    "sources": [
+      {"citation": "Continuator of Fredegar, Chronica (primary, ~760s CE).", "source_type": "primary", "url": null},
+      {"citation": "Chronicle of 754 (Continuatio Hispana) s.a. 732 (primary, ~754 CE).", "source_type": "primary", "url": null},
+      {"citation": "Collins, R. (1983). Early Medieval Spain: Unity in Diversity, 400-1000. Macmillan.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "معركة طلاس",
+    "name_original_lang": "ara",
+    "event_type": "BATTLE",
+    "year": 751,
+    "year_end": null,
+    "location_name": "Talas river, modern Kyrgyzstan-Kazakhstan border",
+    "location_lat": 42.52,
+    "location_lon": 72.24,
+    "main_actor": "Ziyād ibn Ṣāliḥ (Abbasid, with Qarluq Turkic allies) against Gao Xianzhi 高仙芝 (Tang general)",
+    "description": "In July 751 CE the newly founded Abbasid caliphate, through its Khorāsān governor Abū Muslim and his commander Ziyād ibn Ṣāliḥ, defeated the Tang expeditionary army of Gao Xianzhi on the Talas river in modern Kyrgyzstan. The Qarluq Turkic contingent in the Tang army defected mid-battle and joined the Abbasids, sealing the Tang defeat. The battle halted Tang expansion into Central Asia; the region's political and commercial gravitation shifted irreversibly towards the Islamic world over the following century. An often-cited secondary consequence — the transfer of Chinese paper-making technology to the Islamic world via captured Tang artisans at Samarqand — is historically plausible (Samarqand paper mills are attested by the 790s) though the direct Talas-to-Samarqand lineage is partly legendary.",
+    "casualties_low": 40000,
+    "casualties_high": 70000,
+    "casualties_source": "New Book of Tang (新唐書) 221; al-Ṭabarī, III.79; modern estimates Beckwith (1993)",
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Qarluq defection recorded in both Chinese and Arabic sources is politically embarrassing for both sides' received narratives (a Tang coalition partner betrays Tang; a Muslim-Turkic conversion before formal Islamisation of the Turks) and therefore unusually credible as a non-laundered detail. The Abbasid-Tang cultural exchange through captured artisans (paper, silk, knowledge of Chinese administration) is genuine but was continuous and multidirectional before and after Talas; dramatising the battle as the single transfer-point is a modernist simplification. Beckwith's Tibetan Empire in Central Asia (1987) places Talas in the wider three-way Tibetan-Tang-Arab contest over the Silk Road — usefully decentreing the traditional bilateral frame.",
+    "entity_links": [
+      {"entity_name_original": "الخلافة العباسية", "role": "MAIN_ACTOR", "notes": "Abbasid victory under Ziyād ibn Ṣāliḥ"},
+      {"entity_name_original": "唐朝", "role": "VICTIM", "notes": "Tang expeditionary army defeated; Central Asia expansion ends"}
+    ],
+    "sources": [
+      {"citation": "New Book of Tang 新唐書 221 (primary, ~1060 CE).", "source_type": "primary", "url": null},
+      {"citation": "al-Ṭabarī, Tārīkh al-Rusul wa'l-Mulūk III.79 (primary, ~915 CE).", "source_type": "primary", "url": null},
+      {"citation": "Beckwith, C.I. (1993). The Tibetan Empire in Central Asia. Princeton UP.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "تأسيس بغداد / مدينة السلام",
+    "name_original_lang": "ara",
+    "event_type": "FOUNDING_STATE",
+    "year": 762,
+    "year_end": null,
+    "location_name": "Baghdad (banks of the Tigris, near ancient Seleucia-Ctesiphon)",
+    "location_lat": 33.34,
+    "location_lon": 44.40,
+    "main_actor": "Abū Jaʿfar al-Manṣūr, second Abbasid caliph",
+    "description": "On 30 July 762 CE the Abbasid caliph al-Manṣūr laid the foundations of a new round-city capital on the west bank of the Tigris, named Madīnat al-Salām (the City of Peace), which rapidly became known by its pre-existing local name Baghdad. Designed with four gates aligned to the cardinal directions and a double ring of walls, the city centred on the caliphal palace and Great Mosque. Within a generation Baghdad became the largest city in the world outside Tang Chang'an, the cosmopolitan hub of the Islamic Golden Age, and the home of the Bayt al-Ḥikma (House of Wisdom) and the 8th-10th century translation movement that preserved and developed Greek, Persian, and Indian scientific learning. The city would remain capital until the Mongol sack of 1258.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Abbasid revolution (747-750) that replaced the Umayyads at Damascus with the Abbasids at Baghdad involved mass killings of Umayyad princes (the 'banquet of Abū al-ʿAbbās al-Saffāḥ' in 750 at which remaining Umayyads were reportedly beaten to death). The foundation of Baghdad was simultaneously a transfer of the Islamic political centre from the Mediterranean-facing Umayyad world to a Persianate-Mesopotamian frame — a shift that durably reshaped the cultural composition of Islamic civilisation (Persian bureaucratic forms, Persian and Syriac scholarly influence, translation of Greek and Indian works). The translation movement is one of the world's most important intellectual transfers and is AtlasPI-worthy in itself; the political violence of the Abbasid founding should not be erased to tell the intellectual story.",
+    "entity_links": [
+      {"entity_name_original": "الخلافة العباسية", "role": "FOUNDED", "notes": "Abbasid capital founded, shifting Islamic political-cultural centre eastward"}
+    ],
+    "sources": [
+      {"citation": "al-Ṭabarī, Tārīkh al-Rusul wa'l-Mulūk III.272-280 (primary, ~915 CE).", "source_type": "primary", "url": null},
+      {"citation": "al-Yaʿqūbī, Kitāb al-Buldān (primary, ~891 CE).", "source_type": "primary", "url": null},
+      {"citation": "Kennedy, H. (2004). The Court of the Caliphs. Weidenfeld & Nicolson.", "source_type": "academic", "url": null},
+      {"citation": "Gutas, D. (1998). Greek Thought, Arabic Culture: The Graeco-Arabic Translation Movement in Baghdad. Routledge.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Lindisfarnense excidium",
+    "name_original_lang": "lat",
+    "event_type": "MASSACRE",
+    "year": 793,
+    "year_end": null,
+    "location_name": "Lindisfarne monastery (Holy Island, Northumbria)",
+    "location_lat": 55.679,
+    "location_lon": -1.802,
+    "main_actor": "Scandinavian raiders (Norse, composition uncertain)",
+    "description": "On 8 June 793 CE a Scandinavian raiding party attacked the monastery of Lindisfarne off the Northumbrian coast, killing several monks, enslaving others, and looting the shrine of St Cuthbert. The attack was recorded contemporaneously in the Anglo-Saxon Chronicle (MS D, s.a. 793) and in letters by Alcuin of York, then at Charlemagne's court, who wrote to King Æthelred and Bishop Higbald lamenting that 'the heathen desecrated the holy places of God'. Lindisfarne is the conventional starting-point of the Viking Age (late 8th-mid 11th century) — a roughly three-century period of Scandinavian raiding, trading, and settlement across the North Sea, Atlantic, Baltic, and Mediterranean, with lasting consequences for the peoples of the British Isles, Normandy, Kievan Rus', Iceland, and Vinland.",
+    "casualties_low": 20,
+    "casualties_high": 100,
+    "casualties_source": "Simeon of Durham; Anglo-Saxon Chronicle; modern estimates for monastic casualties",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Lindisfarne raid is documented almost exclusively from the Christian monastic victim perspective; no contemporary Scandinavian written sources exist for this event (the Icelandic sagas are 12th-13th century literary compositions with complex relations to actual 8th-9th century events). The raiders are often called 'Vikings' as if they were an ethnic group; academic use prefers 'Norse' or 'Scandinavian' and treats vikingr as a profession (raiding-trader). Earlier raids on monastic coasts (Portland, 789) probably preceded Lindisfarne; the date's symbolic weight comes from the religious shock of targeting an intellectual-spiritual centre of English Christianity rather than from military exceptionality. The full Viking Age is a multidirectional phenomenon — raid, trade, settlement, assimilation — and the monastery-burning image is a real but partial piece of it.",
+    "entity_links": [],
+    "sources": [
+      {"citation": "Anglo-Saxon Chronicle MS D, s.a. 793 (primary, ~890 CE compilation).", "source_type": "primary", "url": null},
+      {"citation": "Alcuin of York, Letter to Bishop Higbald (primary, ~793 CE, MGH Epistolae IV).", "source_type": "primary", "url": null},
+      {"citation": "Simeon of Durham, Historia Regum (primary, ~1125 CE, incorporating earlier Northumbrian annals).", "source_type": "primary", "url": null},
+      {"citation": "Abrams, L. (2012). 'Diaspora and Identity in the Viking Age.' Early Medieval Europe 20.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Tractatus Virdunensis",
+    "name_original_lang": "lat",
+    "event_type": "TREATY",
+    "year": 843,
+    "year_end": null,
+    "location_name": "Verdun (Francia Media)",
+    "location_lat": 49.16,
+    "location_lon": 5.39,
+    "main_actor": "Lothair I, Louis the German, Charles the Bald (sons of Louis the Pious)",
+    "description": "In August 843 CE the three surviving sons of Louis the Pious partitioned the Carolingian Empire. Charles the Bald received Francia Occidentalis (the nucleus of later France); Louis the German received Francia Orientalis (the nucleus of later Germany); Lothair I retained the imperial title and the central middle strip (Francia Media — roughly modern Benelux, Lotharingia, Burgundy, and northern Italy). The treaty followed three years of fratricidal civil war (840-843) that had included the Battle of Fontenoy-en-Puisaye (25 June 841) in which approximately 40,000 Franks killed each other. Verdun is the conventional starting-point of the distinct polities of France and Germany, although contemporaries did not experience it as the birth of nations — they experienced it as a dynastic property partition.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The 'Verdun = birth of France and Germany' reading is a retrospective 19th-century national-historiographic construction. Contemporaries saw property shares of a single res publica Christiana under three co-rulers; the Latinate populace of all three shares continued to call itself Franci. The earlier Strasbourg Oaths of February 842, where Louis the German and Charles the Bald swore mutual support in each other's vernaculars (Old High German and Old French respectively), are the earliest preserved written documents in both languages and are conventionally invoked to argue for linguistic divergence; this divergence predated the Oaths and was not caused by them. The fratricidal violence of 840-843 is often glossed over in the 'constitutional' reading of Verdun.",
+    "entity_links": [
+      {"entity_name_original": "Imperium Francorum", "role": "DISSOLVED", "notes": "Carolingian imperial unity ends"},
+      {"entity_name_original": "Regnum Francorum", "role": "AFFECTED", "notes": "Western Frankish kingdom consolidates under Charles the Bald"}
+    ],
+    "sources": [
+      {"citation": "Annales Bertiniani s.a. 843 (primary, ~860 CE).", "source_type": "primary", "url": null},
+      {"citation": "Nithard, Historiarum Libri IV (primary, ~843 CE, eyewitness).", "source_type": "primary", "url": null},
+      {"citation": "Strasbourg Oaths, Nithard III.5 (primary, February 842).", "source_type": "primary", "url": null},
+      {"citation": "Nelson, J.L. (1992). Charles the Bald. Longman.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "會昌毀佛",
+    "name_original_lang": "lzh",
+    "event_type": "RELIGIOUS_EVENT",
+    "year": 845,
+    "year_end": null,
+    "location_name": "Tang imperial capital Chang'an 長安",
+    "location_lat": 34.27,
+    "location_lon": 108.95,
+    "main_actor": "Tang emperor Wuzong 武宗 (Li Yan 李炎)",
+    "description": "The Huichang suppression of Buddhism (会昌灭佛 / 会昌毁佛), ordered by the Tang emperor Wuzong in 842-845 CE at the climax of a decade of anti-clerical and anti-foreign policy. Approximately 4,600 monasteries and 40,000 smaller shrines were dismantled, their bronze melted for coinage. According to the Tang shi-lu (偘会要 / Tang Huiyao), 260,500 monks and nuns were forcibly returned to lay life; temple lands (fiscally exempt) were confiscated; statues of bronze and precious metal melted. Foreign religions associated with Buddhist temples — Nestorian Christianity, Zoroastrianism/Mazdeism, Manichaeism — were also suppressed. The Japanese pilgrim Ennin 圓仁 (Nittō guhō junrei gyōki 入唐求法巡礼行記) provides an eyewitness account. Wuzong's death in 846 and the accession of Xuānzong (宣宗) allowed Buddhism to recover but the Tang monastic-economic autonomy was permanently reduced.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": "Tang Huiyao 50; Ennin's Nittō guhō junrei gyōki; monks returned to lay life, not killed",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Huichang persecution was primarily fiscal-political rather than doctrinal: Tang state finances were overstretched after An Lushan's rebellion (755-763) and its aftermath, and the exempt monastic estates were a rational target for confiscation. Wuzong was also a Daoist enthusiast who died drinking Daoist elixirs in 846 at age 32, likely of heavy-metal poisoning. The simultaneous suppression of Nestorian Christianity ended the first Christian community in China (the Jingjiao community at Chang'an, attested by the Xi'an stele of 781) as a continuous presence; it would not return until the Franciscan mission under John of Montecorvino in 1294. AtlasPI records the event without softening — 'suppression' and 'persecution' are both accurate — and notes that the received Buddhist narrative of the event (the 'destruction of the Dharma') is historically grounded but partial.",
+    "entity_links": [
+      {"entity_name_original": "唐朝", "role": "MAIN_ACTOR", "notes": "Tang imperial decree under Wuzong"}
+    ],
+    "sources": [
+      {"citation": "Wang Pu 王溥, Tang Huiyao 唐會要 50 (primary, ~961 CE).", "source_type": "primary", "url": null},
+      {"citation": "Ennin 圓仁, Nittō guhō junrei gyōki 入唐求法巡礼行記 (primary, ~840-847 CE, eyewitness).", "source_type": "primary", "url": null},
+      {"citation": "Weinstein, S. (1987). Buddhism under the T'ang. Cambridge UP.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Ἀποστολὴ Κυρίλλου καὶ Μεθοδίου",
+    "name_original_lang": "grc",
+    "event_type": "RELIGIOUS_EVENT",
+    "year": 863,
+    "year_end": null,
+    "location_name": "Great Moravia (modern Czech Republic, Slovakia, Hungary)",
+    "location_lat": 49.03,
+    "location_lon": 17.37,
+    "main_actor": "Constantine (in religion Cyril) and Methodius, Byzantine missionaries sent by Patriarch Photius",
+    "description": "In 863 CE the two Thessalonian Greek brothers Constantine (who took the name Cyril on his monastic tonsure shortly before his death in 869) and Methodius were dispatched by the Byzantine emperor Michael III and patriarch Photius to Great Moravia at the request of the Moravian prince Rastislav, who sought missionaries who could preach in the local Slavonic language rather than Latin. Before departing, Constantine devised the Glagolitic alphabet (later developed into Cyrillic by his students in Bulgaria) and translated the Gospels, Psalter, and liturgy into Old Church Slavonic. The mission created the third liturgical language of medieval Christendom (alongside Latin and Greek), made Slavic peoples literate in their own tongue, and is foundational for Bulgarian, Russian, Ukrainian, Serbian, and other Slavic Orthodox cultures. The brothers are jointly venerated as 'Apostles of the Slavs' in both Catholic and Orthodox calendars.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The mission was politically entangled with the ninth-century struggle between Rome and Constantinople over jurisdiction of Slavic lands (the 'Photian schism' 863-867). After Methodius's death (885), his Glagolitic-using disciples were persecuted and expelled from Moravia by German-Frankish clergy; they found refuge in Bulgaria where the Glagolitic script was adapted into Cyrillic. The Slavic liturgical book tradition thus survived in Orthodox Bulgaria, Serbia, and Rus', not in Catholic Moravia-Bohemia (which eventually Latinised). The event is a rare case where linguistic-literary empowerment, rather than repression, is the central historical fact — but the political displacement of the disciples is real and should be in the record.",
+    "entity_links": [
+      {"entity_name_original": "Βασιλεία Ῥωμαίων", "role": "MAIN_ACTOR", "notes": "Byzantine patriarchate of Constantinople dispatches mission"}
+    ],
+    "sources": [
+      {"citation": "Vita Constantini / Vita Methodii (primary, ~880s CE, Old Church Slavonic).", "source_type": "primary", "url": null},
+      {"citation": "Annals of Fulda s.a. 863 (primary, ~900 CE).", "source_type": "primary", "url": null},
+      {"citation": "Dvornik, F. (1970). Byzantine Missions among the Slavs. Rutgers UP.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "陳橋兵變",
+    "name_original_lang": "lzh",
+    "event_type": "FOUNDING_STATE",
+    "year": 960,
+    "year_end": null,
+    "location_name": "Chenqiao 陳橋, near Kaifeng",
+    "location_lat": 34.96,
+    "location_lon": 114.59,
+    "main_actor": "Zhao Kuangyin 趙匡胤 (later Song Taizu 宋太祖)",
+    "description": "On 4 February 960 CE (first day of the lunar new year) the senior general Zhao Kuangyin, commander of the palace army of the Later Zhou dynasty, was proclaimed emperor by his troops at Chenqiao during what was supposed to be a defensive expedition against rumoured Khitan invasion. He returned to the capital Kaifeng, accepted the abdication of the seven-year-old emperor Gongdi, and founded the Song dynasty. The bloodless coup — enabled by the preceding decades of unstable Five Dynasties militarism and by Zhao's skill at pensioning off rival generals ('releasing military authority over a cup of wine', bēi jiǔ shì bīng quán 杯酒釋兵權, 961) — inaugurated three centuries of Song rule (960-1279). The Song presided over a commercial revolution, maritime expansion, gunpowder weaponry, movable-type printing, Neo-Confucian philosophical synthesis, and dense urban culture.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Chenqiao 'mutiny' has been scrutinised as possibly pre-arranged by Zhao Kuangyin himself — the Khitan invasion rumour appears to have been confected, and Zhao's mother is recorded as calmly telling his agitated sister-in-law 'my son has always been extraordinary; this is what was destined'. Later Song historiography (the Xù Zīzhì Tōngjiàn Chángbiān) softens the usurpation by emphasising the abdication ritual and Zhao's subsequent kindness to the deposed Zhou imperial house. But the foundation was a military coup — bloodless, calculated, successful — not a constitutional succession, and AtlasPI records it as such. The Song subsequently waged long wars against the Liao and Jin Khitan/Jurchen states to the north with heavy civilian casualties on all sides, and eventually fell to Mongol conquest (1279) at catastrophic cost.",
+    "entity_links": [
+      {"entity_name_original": "宋朝", "role": "FOUNDED", "notes": "Song dynasty founded by Zhao Kuangyin"}
+    ],
+    "sources": [
+      {"citation": "Sima Guang 司馬光, Zizhi Tongjian 資治通鑑 j.294 (primary, ~1084 CE).", "source_type": "primary", "url": null},
+      {"citation": "Li Tao 李燾, Xù Zīzhì Tōngjiàn Chángbiān 續資治通鑑長編 j.1 (primary, ~1183 CE).", "source_type": "primary", "url": null},
+      {"citation": "Lorge, P. (2015). The Reunification of China: Peace through War under the Song Dynasty. Cambridge UP.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Крещение Руси",
+    "name_original_lang": "chu",
+    "event_type": "RELIGIOUS_EVENT",
+    "year": 988,
+    "year_end": null,
+    "location_name": "Kyiv / Dnipro river",
+    "location_lat": 50.45,
+    "location_lon": 30.52,
+    "main_actor": "Grand Prince Volodymyr I (Vladimir I) of Kievan Rus'",
+    "description": "In 988 CE (the date is conventional; sources suggest 987-989) Grand Prince Volodymyr I of Kievan Rus' accepted Byzantine Christianity, married the Byzantine princess Anna Porphyrogenita (sister of emperor Basil II), and ordered the mass baptism of the inhabitants of Kyiv in the Dnipro river. The Primary Chronicle (Povest' vremennykh let, ~1113) preserves the famous passage of Volodymyr sending envoys to investigate Judaism, Islam, Latin Christianity, and Greek Christianity, with the envoys reporting from Hagia Sophia 'we knew not whether we were in heaven or on earth'. The conversion of Kievan Rus' entrenched Byzantine rite Christianity as the spiritual-political frame of the East Slavic cultural sphere — Ukraine, Belarus, Russia — and shaped the Cyrillic-Slavonic literary canon for the following millennium.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Baptism of Rus' is claimed as foundational by both Ukrainian and Russian Orthodox traditions and by the Russian state's post-Soviet civil religion (Putin's 2013 addresses explicitly invoking it). The historiographic claim that this makes Kyivan Rus' an 'ancient Russian' state and therefore Ukraine legitimately part of Russia is a modern political construction and not a conclusion follow-able from the medieval sources — Kyiv was the centre of a distinct East Slavic polity from which both Muscovite Russia and Ruthenian Ukraine-Belarus later emerged. The conversion itself was partly coerced from below (Volodymyr reportedly ordered forced baptism in Novgorod with military backing) and from above (Byzantine political price for Anna's hand was the conversion). The event's religious-cultural reality is not in doubt; its political deployment in 21st-century wars of aggression is contested and AtlasPI records the event without endorsing that deployment.",
+    "entity_links": [
+      {"entity_name_original": "Rus' Kyivska", "role": "MAIN_ACTOR", "notes": "Kievan Rus' converts to Byzantine Christianity under Volodymyr I"},
+      {"entity_name_original": "Βασιλεία Ῥωμαίων", "role": "PARTICIPANT", "notes": "Byzantine dynastic marriage and ecclesiastical transfer"}
+    ],
+    "sources": [
+      {"citation": "Povest' vremennykh let (Primary Chronicle) s.a. 6496 (primary, ~1113 CE compilation).", "source_type": "primary", "url": null},
+      {"citation": "Yaḥyā of Antioch, Chronicle (primary, ~1040 CE — Arabic Christian, independent witness).", "source_type": "primary", "url": null},
+      {"citation": "Shepard, J. (1992). 'Byzantine Diplomacy, A.D. 800-1204.' in Byzantine Diplomacy, Ashgate.", "source_type": "academic", "url": null}
+    ]
+  },
+  {
+    "name_original": "Szent István koronázása",
+    "name_original_lang": "hun",
+    "event_type": "CORONATION",
+    "year": 1000,
+    "year_end": null,
+    "location_name": "Esztergom, Kingdom of Hungary",
+    "location_lat": 47.79,
+    "location_lon": 18.74,
+    "main_actor": "István I (Stephen I) of Hungary",
+    "description": "On 25 December 1000 or 1 January 1001 CE, István I (Vajk by birth name, baptised Stephen) was crowned king of Hungary at Esztergom, having received the royal crown from Pope Sylvester II with the approval of the Holy Roman emperor Otto III. The coronation completed the conversion of the Magyar people from traditional religion to Latin Christianity and anchored the Kingdom of Hungary as a Christian European polity on the Pannonian plain, ending the Magyar raiding era (895-955) that had culminated in the Battle of Lechfeld (955) where Otto I defeated the Magyar incursion into Bavaria. Stephen is venerated as the principal patron saint of Hungary (canonised 1083) and his purported crown (the Holy Crown of Hungary) became the political-legal symbol of Hungarian statehood, still used in national symbolism today.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Christianisation of the Magyars was a multi-generation process combining royal coercion (Stephen's Admonitions to Prince Imre, his lawcode prescribing penalties for pagan practice) and bottom-up accommodation. The defeat of Stephen's pagan Hungarian rival Koppány in 997 — Koppány was killed, his body quartered and nailed to the walls of four towns as warning — records the violence of the dynastic consolidation that the coronation crowned. The claim that the received Holy Crown of Hungary is the actual crown given by Sylvester II is contested by art-historical analysis; the upper Latin cross is 11th century but the lower Byzantine corona graeca is later (likely ~1070s). AtlasPI records the coronation as the formal foundation of the Christian Kingdom of Hungary while noting the preceding violence and the post-hoc construction of some of its symbols.",
+    "entity_links": [
+      {"entity_name_original": "Magyar Kiralysag", "role": "FOUNDED", "notes": "Kingdom of Hungary founded under Stephen I"},
+      {"entity_name_original": "Sacrum Imperium Romanum", "role": "PARTICIPANT", "notes": "HRE approves royal title via Otto III"}
+    ],
+    "sources": [
+      {"citation": "Hartvik, Vita sancti Stephani regis (primary, ~1116 CE).", "source_type": "primary", "url": null},
+      {"citation": "Thietmar of Merseburg, Chronicon IV.59 (primary, ~1018 CE).", "source_type": "primary", "url": null},
+      {"citation": "Engel, P. (2001). The Realm of St Stephen: A History of Medieval Hungary 895-1526. I.B. Tauris.", "source_type": "academic", "url": null}
+    ]
+  }
+]
