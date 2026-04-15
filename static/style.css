@@ -1897,3 +1897,586 @@ button:focus-visible {
   .detail-section { break-inside: avoid; }
   .status-badge { border: 1px solid #999; }
 }
+
+/* ─── v6.7: Trade routes overlay (Feature 1) ──────────────────── */
+
+.overlay-control .overlay-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78em;
+  cursor: pointer;
+  padding: 2px 0;
+}
+
+.overlay-control .overlay-hint {
+  font-size: 0.68em;
+  color: var(--text-muted);
+  margin-top: 2px;
+  line-height: 1.3;
+}
+
+.trade-routes-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 6px;
+  padding: 6px 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.68em;
+  color: var(--text-muted);
+}
+
+.trade-routes-legend.hidden { display: none; }
+
+.tr-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tr-legend-line {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  flex-shrink: 0;
+}
+
+.tr-legend-line.tr-maritime {
+  background: transparent;
+  height: 0;
+  border-top: 2px dashed #2188ff;
+}
+.tr-legend-line.tr-overland { background: #8b4513; }
+.tr-legend-line.tr-river    { background: #00bcd4; }
+.tr-legend-line.tr-mixed {
+  background: transparent;
+  height: 0;
+  border-top: 2px dashed #8b5cf6;
+}
+.tr-legend-line.tr-slavery  { background: #dc2626; height: 3px; }
+
+/* Trade route popup content */
+.trade-route-popup .leaflet-popup-content-wrapper {
+  background: var(--bg-sidebar);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.trade-route-popup .leaflet-popup-tip {
+  background: var(--bg-sidebar);
+}
+
+.trade-route-popup-body {
+  font-size: 0.82em;
+  line-height: 1.45;
+  max-width: 300px;
+}
+
+.tr-popup-title {
+  font-size: 1.05em;
+  margin-bottom: 4px;
+}
+
+.tr-slavery-tag {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 1px 6px;
+  background: rgba(220, 38, 38, 0.15);
+  color: #dc2626;
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  border-radius: 4px;
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.tr-popup-meta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 0.82em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.tr-popup-type {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 0.85em;
+  font-weight: 600;
+  background: rgba(88, 166, 255, 0.12);
+  color: var(--accent);
+  text-transform: capitalize;
+}
+
+.tr-popup-type.tr-type-maritime { background: rgba(33, 136, 255, 0.15); color: #2188ff; }
+.tr-popup-type.tr-type-overland { background: rgba(139, 69, 19, 0.18); color: #c58a5a; }
+.tr-popup-type.tr-type-river    { background: rgba(0, 188, 212, 0.15); color: #00bcd4; }
+.tr-popup-type.tr-type-mixed    { background: rgba(139, 92, 246, 0.15); color: #8b5cf6; }
+
+.tr-popup-row {
+  margin-top: 3px;
+  font-size: 0.82em;
+}
+
+.tr-popup-row span {
+  color: var(--text-muted);
+  margin-right: 3px;
+}
+
+.tr-ethics-box {
+  margin-top: 8px;
+  padding: 6px 8px;
+  background: rgba(220, 38, 38, 0.06);
+  border: 1px solid rgba(220, 38, 38, 0.25);
+  border-radius: 4px;
+  font-size: 0.8em;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.tr-ethics-box strong { color: #dc2626; }
+
+.tr-ethics-box.tr-ethics-neutral {
+  background: rgba(88, 166, 255, 0.06);
+  border-color: rgba(88, 166, 255, 0.2);
+}
+
+.tr-ethics-box.tr-ethics-neutral strong { color: var(--accent); }
+
+/* ─── v6.7: Dynasty chains sidebar (Feature 2) ────────────────── */
+
+.chains-section {
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+  background: var(--bg-sidebar);
+  max-height: 40vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chains-summary {
+  padding: 10px 14px;
+  font-size: 0.82em;
+  color: var(--text-muted);
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+.chains-summary::-webkit-details-marker { display: none; }
+.chains-summary { list-style: none; }
+
+.chains-summary::before {
+  content: '▸';
+  font-size: 0.7em;
+  color: var(--accent);
+  transition: transform 0.2s;
+}
+
+.chains-section[open] .chains-summary::before {
+  transform: rotate(90deg);
+}
+
+.chains-summary:hover { color: var(--text); }
+
+.chains-summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.chains-label { flex: 1; }
+
+.chains-count {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.chains-list {
+  padding: 6px 10px 10px;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+.chains-placeholder {
+  font-size: 0.78em;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 10px 4px;
+}
+
+.chain-card {
+  padding: 8px 10px;
+  margin-bottom: 4px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.chain-card:hover {
+  background: var(--bg-card-hover);
+  transform: translateX(2px);
+}
+
+.chain-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.chain-card.chain-ideological {
+  border-left-color: var(--uncertain);
+}
+
+.chain-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 3px;
+}
+
+.chain-card-name {
+  font-size: 0.88em;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.chain-ideo-badge {
+  flex-shrink: 0;
+  padding: 1px 5px;
+  background: rgba(210, 153, 34, 0.15);
+  border: 1px solid rgba(210, 153, 34, 0.3);
+  border-radius: 3px;
+  font-size: 0.62em;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: var(--uncertain);
+}
+
+.chain-card-meta {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-size: 0.7em;
+  color: var(--text-muted);
+}
+
+.chain-type-tag {
+  display: inline-block;
+  padding: 1px 6px;
+  background: rgba(88, 166, 255, 0.12);
+  color: var(--accent);
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.chain-link-count,
+.chain-region {
+  padding: 1px 0;
+}
+
+/* Chain detail panel view */
+
+.chain-detail-title {
+  color: var(--text);
+  font-size: 1.15em;
+  margin-bottom: 4px;
+}
+
+.chain-ethics-banner {
+  background: rgba(210, 153, 34, 0.1);
+  border: 1px solid rgba(210, 153, 34, 0.35);
+  border-left: 3px solid var(--uncertain);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.8em;
+  line-height: 1.45;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.chain-ethics-banner strong { color: var(--uncertain); }
+
+.chain-description {
+  font-size: 0.85em;
+  color: var(--text);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.chain-timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.chain-timeline::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--border);
+}
+
+.chain-timeline-item {
+  position: relative;
+  padding: 4px 0 10px 38px;
+}
+
+.chain-timeline-item:last-child { padding-bottom: 0; }
+
+.chain-timeline-marker {
+  position: absolute;
+  left: 4px;
+  top: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.72em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.chain-ideological .chain-timeline-marker,
+.detail-section .chain-timeline-item .chain-timeline-marker {
+  /* keep accent default; markers stay consistent */
+}
+
+.chain-link-entity {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--text);
+  padding: 2px 0;
+}
+
+.chain-link-entity.clickable {
+  cursor: pointer;
+  color: var(--accent-light);
+  transition: color 0.15s;
+}
+
+.chain-link-entity.clickable:hover { color: var(--accent); text-decoration: underline; }
+
+.chain-link-entity.clickable:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.chain-link-meta {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-size: 0.72em;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.chain-link-year {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.chain-link-type {
+  padding: 0 5px;
+  background: rgba(139, 148, 158, 0.15);
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  font-size: 0.95em;
+}
+
+.chain-link-desc {
+  font-size: 0.78em;
+  color: var(--text);
+  margin-top: 3px;
+  line-height: 1.45;
+}
+
+/* ─── v6.7: Detail panel tabs + unified timeline (Feature 3) ─── */
+
+.detail-tabs {
+  display: flex;
+  gap: 4px;
+  margin: 6px 0 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-muted);
+  font-size: 0.82em;
+  font-weight: 500;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: all 0.15s;
+  margin-bottom: -1px;
+}
+
+.detail-tab:hover { color: var(--text); }
+
+.detail-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  font-weight: 600;
+}
+
+.detail-tab:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.detail-tab-panel.hidden { display: none; }
+
+.unified-timeline-heading {
+  font-size: 0.78em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+}
+
+.unified-timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.unified-timeline::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background: var(--border);
+}
+
+.utl-item {
+  position: relative;
+  padding: 2px 0 12px 36px;
+}
+
+.utl-marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85em;
+  z-index: 1;
+}
+
+.utl-event .utl-marker { border-color: var(--accent); }
+.utl-territory_change .utl-marker { border-color: var(--uncertain); }
+.utl-chain_transition .utl-marker { border-color: #8b5cf6; }
+
+.utl-header {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
+
+.utl-year {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.85em;
+}
+
+.utl-kind {
+  padding: 1px 5px;
+  background: rgba(139, 148, 158, 0.15);
+  color: var(--text-muted);
+  border-radius: 3px;
+  font-size: 0.68em;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+}
+
+.utl-title {
+  font-size: 0.88em;
+  font-weight: 600;
+  color: var(--text);
+  text-transform: capitalize;
+}
+
+.utl-desc {
+  font-size: 0.8em;
+  color: var(--text);
+  line-height: 1.45;
+  margin-top: 2px;
+}
+
+.utl-extra {
+  font-size: 0.72em;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.unified-timeline-unavailable {
+  text-align: center;
+  padding: 24px 12px;
+  color: var(--text-muted);
+  font-size: 0.85em;
+  background: var(--bg-card);
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .chains-section { max-height: 30vh; }
+
+  .detail-tab {
+    padding: 8px 10px;
+    min-height: 44px;
+  }
+
+  .chain-card {
+    padding: 10px;
+    min-height: 44px;
+  }
+
+  .trade-routes-legend { font-size: 0.72em; }
+}

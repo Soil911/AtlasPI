@@ -50,6 +50,10 @@ EXPECTED_TOOL_NAMES = {
     "entity_successors",
     # v0.2 composite
     "what_changed_between",
+    # v0.3 unified timeline + fuzzy search
+    "full_timeline_for_entity",
+    "fuzzy_search",
+    "nearest_historical_city",
 }
 
 
@@ -116,13 +120,15 @@ def test_base_url_default_when_env_empty(monkeypatch: pytest.MonkeyPatch) -> Non
 
 
 def test_tool_list_complete() -> None:
-    """Tutti e 19 i tools canonici v0.2 sono registrati."""
+    """Tutti e 23 i tools canonici v0.3 sono registrati."""
     names = {t.name for t in get_tools()}
     assert names == EXPECTED_TOOL_NAMES, (
         f"Missing or unexpected tools: {names ^ EXPECTED_TOOL_NAMES}"
     )
     # Bonus: nessun duplicato
     assert len(get_tools()) == len(EXPECTED_TOOL_NAMES)
+    # v0.3 additions: esattamente 23 tools
+    assert len(names) == 23
 
 
 def test_search_entities_tool_schema() -> None:
@@ -162,6 +168,12 @@ def test_required_params_for_path_tools() -> None:
     assert get_tool("events_for_entity").input_schema["required"] == ["entity_id"]
     assert set(get_tool("what_changed_between").input_schema["required"]) == {
         "year1", "year2",
+    }
+    # v0.3
+    assert get_tool("full_timeline_for_entity").input_schema["required"] == ["entity_id"]
+    assert get_tool("fuzzy_search").input_schema["required"] == ["q"]
+    assert set(get_tool("nearest_historical_city").input_schema["required"]) == {
+        "lat", "lon",
     }
 
 
@@ -382,6 +394,140 @@ async def test_what_changed_between_rejects_equal_years() -> None:
             )
     finally:
         await client.aclose()
+
+
+@pytest.mark.asyncio
+async def test_full_timeline_handler() -> None:
+    """full_timeline_for_entity chiama /v1/entities/{id}/timeline."""
+    captured: dict[str, object] = {}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        captured["path"] = request.url.path
+        captured["url"] = str(request.url)
+        return httpx.Response(
+            200,
+            json={
+                "entity_id": 42,
+                "entity_name": "Test",
+                "entity_type": "empire",
+                "counts": {
+                    "events": 0,
+                    "territory_changes": 0,
+                    "chain_transitions": 0,
+                    "total": 0,
+                },
+                "timeline": [],
+            },
+        )
+
+    client = _client_with_handler(handler)
+    try:
+        result = await get_tool("full_timeline_for_entity").handler(
+            client, {"entity_id": 42}
+        )
+    finally:
+        await client.aclose()
+
+    assert captured["path"] == "/v1/entities/42/timeline"
+    assert result["timeline"] == []
+
+
+@pytest.mark.asyncio
+async def test_fuzzy_search_handler() -> None:
+    """fuzzy_search chiama /v1/search/fuzzy con la query e i filtri."""
+    captured: dict[str, object] = {}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        captured["path"] = request.url.path
+        captured["url"] = str(request.url)
+        return httpx.Response(
+            200,
+            json={
+                "query": "safavid",
+                "count": 1,
+                "results": [
+                    {
+                        "id": 1,
+                        "name_original": "دولت صفویه",
+                        "matched_name": "دولت صفویه",
+                        "matched_is_original": True,
+                        "score": 0.817,
+                    }
+                ],
+            },
+        )
+
+    client = _client_with_handler(handler)
+    try:
+        result = await get_tool("fuzzy_search").handler(
+            client, {"q": "safavid", "limit": 5, "min_score": 0.4}
+        )
+    finally:
+        await client.aclose()
+
+    assert captured["path"] == "/v1/search/fuzzy"
+    url = str(captured["url"])
+    assert "q=safavid" in url
+    assert "limit=5" in url
+    assert "min_score=0.4" in url
+    assert result["count"] == 1
+
+
+@pytest.mark.asyncio
+async def test_nearest_historical_city_sorts_by_distance() -> None:
+    """nearest_historical_city calcola haversine e ordina per distanza."""
+    # Roma: 41.9, 12.5
+    # Candidati: Napoli (40.85, 14.26), Milano (45.46, 9.19), Firenze (43.77, 11.25)
+    # Distanza attesa da Roma: Napoli (~190km) < Firenze (~230km) < Milano (~480km)
+    def handler(request: httpx.Request) -> httpx.Response:
+        assert request.url.path == "/v1/cities"
+        return httpx.Response(
+            200,
+            json={
+                "total": 3,
+                "cities": [
+                    {
+                        "id": 1,
+                        "name_original": "Neapolis",
+                        "lat": 40.85,
+                        "lon": 14.26,
+                        "city_type": "PORT",
+                    },
+                    {
+                        "id": 2,
+                        "name_original": "Mediolanum",
+                        "lat": 45.46,
+                        "lon": 9.19,
+                        "city_type": "CAPITAL",
+                    },
+                    {
+                        "id": 3,
+                        "name_original": "Florentia",
+                        "lat": 43.77,
+                        "lon": 11.25,
+                        "city_type": "TRADE_HUB",
+                    },
+                ],
+            },
+        )
+
+    client = _client_with_handler(handler)
+    try:
+        result = await get_tool("nearest_historical_city").handler(
+            client, {"lat": 41.9, "lon": 12.5, "year": 100, "limit": 3}
+        )
+    finally:
+        await client.aclose()
+
+    assert result["count"] == 3
+    names = [c["name_original"] for c in result["cities"]]
+    # Napoli è la più vicina a Roma, Milano la più lontana
+    assert names == ["Neapolis", "Florentia", "Mediolanum"]
+    assert result["cities"][0]["distance_km"] < result["cities"][1]["distance_km"]
+    assert result["cities"][1]["distance_km"] < result["cities"][2]["distance_km"]
+    # Tutte le distanze devono essere in km sensati (<1000 km per Italia centrale)
+    for c in result["cities"]:
+        assert 0 < c["distance_km"] < 1000
 
 
 @pytest.mark.asyncio

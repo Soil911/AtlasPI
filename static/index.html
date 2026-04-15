@@ -121,8 +121,37 @@
           </select>
         </div>
 
+        <fieldset class="filter-control overlay-control">
+          <legend>Overlay:</legend>
+          <label class="overlay-toggle">
+            <input type="checkbox" id="trade-routes-toggle" aria-describedby="trade-routes-hint" />
+            <span>Mostra rotte commerciali</span>
+          </label>
+          <div id="trade-routes-hint" class="overlay-hint" aria-hidden="true">
+            Linee commerciali attive nell'anno selezionato.
+          </div>
+          <div id="trade-routes-legend" class="trade-routes-legend hidden" aria-hidden="true">
+            <span class="tr-legend-item"><span class="tr-legend-line tr-maritime"></span> Marittima</span>
+            <span class="tr-legend-item"><span class="tr-legend-line tr-overland"></span> Terrestre</span>
+            <span class="tr-legend-item"><span class="tr-legend-line tr-river"></span> Fluviale</span>
+            <span class="tr-legend-item"><span class="tr-legend-line tr-mixed"></span> Mista</span>
+            <span class="tr-legend-item"><span class="tr-legend-line tr-slavery"></span> Schiavit&ugrave; (ETHICS-010)</span>
+          </div>
+        </fieldset>
+
         <button id="reset-btn" class="btn-secondary" aria-label="Azzera tutti i filtri">Reset filtri</button>
       </div>
+
+      <!-- Dynasty chains section (v6.7) -->
+      <details id="chains-section" class="chains-section" aria-label="Catene dinastiche">
+        <summary class="chains-summary">
+          <span class="chains-label">Catene dinastiche</span>
+          <span id="chains-count" class="chains-count" aria-live="polite"></span>
+        </summary>
+        <div id="chains-list" class="chains-list" role="list" aria-label="Elenco catene dinastiche">
+          <div class="chains-placeholder">Caricamento catene...</div>
+        </div>
+      </details>
 
       <!-- Stats bar -->
       <div id="stats-bar" class="stats-bar" aria-label="Statistiche dataset"></div>
@@ -193,7 +222,7 @@
       <span class="legend-item" aria-hidden="true">&#9473; Reale</span>
       <span class="legend-item" aria-hidden="true">&#9476; Approssimato</span>
     </div>
-    <span class="footer-note">AtlasPI v6.6.0 &mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie</span>
+    <span class="footer-note">AtlasPI v6.7.0 &mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie &middot; 23 tools MCP</span>
   </footer>
 
   <noscript>

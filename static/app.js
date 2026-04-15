@@ -1,4 +1,4 @@
-/* AtlasPI v5.7.0 — Capital markers, evolution endpoint, UI polish */
+/* AtlasPI v6.7.0 — Trade routes overlay, dynasty chains sidebar, unified timeline */
 
 const API = '';
 const COLORS = {
@@ -6,6 +6,15 @@ const COLORS = {
   uncertain: '#d29922',
   disputed: '#f85149',
 };
+
+// Trade route styling (Feature 1)
+const ROUTE_STYLES = {
+  maritime: { color: '#2188ff', weight: 2, opacity: 0.6, dashArray: '6,4' },
+  overland: { color: '#8b4513', weight: 2, opacity: 0.6, dashArray: null },
+  river:    { color: '#00bcd4', weight: 2, opacity: 0.6, dashArray: null },
+  mixed:    { color: '#8b5cf6', weight: 2, opacity: 0.6, dashArray: '6,4' },
+};
+const SLAVERY_OUTLINE = { color: '#dc2626', weight: 4, opacity: 0.4, dashArray: null };
 
 const TYPE_ICONS = {
   empire: '👑',
@@ -38,6 +47,19 @@ let acSelectedIndex = -1;
 let playbackInterval = null;
 let compareEntityId = null;
 
+// v6.7 — Trade routes overlay state
+let tradeRoutesLayer = null;   // Leaflet layerGroup for routes
+let tradeRoutesData = null;    // Cached raw routes list
+let tradeRoutesEnabled = false;
+
+// v6.7 — Chains sidebar state
+let chainsData = null;         // Cached chain index
+let chainDetailCache = {};     // Full chain details keyed by id
+
+// v6.7 — Current entity being viewed in detail panel (for tab switching)
+let currentDetailEntity = null;
+let currentDetailTab = 'overview'; // 'overview' | 'timeline'
+
 const CONTINENT_ICONS = {
   'Europe': '🇪🇺',
   'Asia': '🌏',
@@ -58,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loadContinents();
   loadStats();
   loadTimeline();
+  loadChains();
   bindEvents();
   initLang();
 });
@@ -95,6 +118,8 @@ function initMap() {
     subdomains: 'abcd', maxZoom: 19,
   }).addTo(map);
   layerGroup = L.layerGroup().addTo(map);
+  // Trade routes live in a dedicated layer sitting above entities (Feature 1)
+  tradeRoutesLayer = L.layerGroup();
 
   // Right-click on map → find nearby entities
   map.on('contextmenu', async (e) => {
@@ -352,6 +377,361 @@ async function loadSnapshotSummary(year) {
       <span class="stat-item">${topTypes}</span>
     `;
   } catch (_) {}
+}
+
+// ─── Trade Routes overlay (v6.7, Feature 1) ────────────────────
+
+// ETHICS-010: slavery routes get a thicker red outline layered beneath
+// the normal line to signal the human cost without sensationalizing —
+// the visual cue is a hint that the route has `ethical_notes`, which
+// the user must actively open to read.
+async function loadTradeRoutes() {
+  if (tradeRoutesData) return tradeRoutesData;
+  try {
+    const res = await fetch(`${API}/v1/trade-routes`, { cache: 'no-cache' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    // Response may be { routes: [...] } or a bare array
+    tradeRoutesData = Array.isArray(data) ? data : (data.routes || data.items || []);
+    return tradeRoutesData;
+  } catch (err) {
+    showError(lang === 'it' ? 'Impossibile caricare le rotte commerciali.' : 'Unable to load trade routes.');
+    return [];
+  }
+}
+
+function extractRouteCoords(route) {
+  // Builds an ordered list of [lat, lon] points from start → waypoints → end
+  const pts = [];
+  const pushPoint = (p) => {
+    if (!p) return;
+    if (Array.isArray(p) && p.length >= 2 && typeof p[0] === 'number') {
+      // GeoJSON-style [lon, lat]
+      pts.push([p[1], p[0]]);
+      return;
+    }
+    if (typeof p === 'object') {
+      const lat = p.lat ?? p.latitude;
+      const lon = p.lon ?? p.lng ?? p.longitude;
+      if (typeof lat === 'number' && typeof lon === 'number') pts.push([lat, lon]);
+    }
+  };
+
+  pushPoint(route.start || route.start_point || route.origin);
+  const waypoints = route.waypoints || route.intermediate_points || [];
+  if (Array.isArray(waypoints)) waypoints.forEach(pushPoint);
+  pushPoint(route.end || route.end_point || route.destination);
+
+  // Fallback: some payloads may provide a precomputed `path` as [[lon,lat],...]
+  if (!pts.length && Array.isArray(route.path)) {
+    route.path.forEach(p => pushPoint(p));
+  }
+  return pts;
+}
+
+function routeActiveInYear(route, year) {
+  const s = route.active_period_start;
+  const e = route.active_period_end;
+  if (typeof s === 'number' && s > year) return false;
+  if (typeof e === 'number' && e < year) return false;
+  return true;
+}
+
+function renderTradeRoutes() {
+  if (!tradeRoutesLayer) return;
+  tradeRoutesLayer.clearLayers();
+  if (!tradeRoutesEnabled || !tradeRoutesData) return;
+
+  const year = parseInt(document.getElementById('year-slider').value, 10);
+  let rendered = 0;
+
+  tradeRoutesData.forEach(route => {
+    if (!routeActiveInYear(route, year)) return;
+    const coords = extractRouteCoords(route);
+    if (coords.length < 2) return;
+
+    const type = (route.route_type || route.type || 'overland').toLowerCase();
+    const style = ROUTE_STYLES[type] || ROUTE_STYLES.overland;
+
+    // ETHICS-010: slavery outline rendered first so it sits beneath
+    if (route.involves_slavery) {
+      const outline = L.polyline(coords, {
+        color: SLAVERY_OUTLINE.color,
+        weight: SLAVERY_OUTLINE.weight,
+        opacity: SLAVERY_OUTLINE.opacity,
+        interactive: false,
+        className: 'trade-route-slavery-outline',
+      });
+      outline.bindTooltip(
+        lang === 'it'
+          ? 'Rotta associata alla tratta schiavistica — vedi ETHICS-010'
+          : 'Route linked to slave trade — see ETHICS-010',
+        { sticky: true, direction: 'top' }
+      );
+      tradeRoutesLayer.addLayer(outline);
+    }
+
+    const line = L.polyline(coords, {
+      color: style.color,
+      weight: style.weight,
+      opacity: style.opacity,
+      dashArray: style.dashArray,
+      className: `trade-route trade-route-${type}${route.involves_slavery ? ' trade-route-slavery' : ''}`,
+    });
+
+    line.bindTooltip(tradeRouteTooltip(route), { sticky: true, direction: 'top' });
+    line.on('click', (ev) => {
+      // Open detailed popup at click point
+      L.popup({ maxWidth: 320, className: 'trade-route-popup' })
+        .setLatLng(ev.latlng)
+        .setContent(tradeRoutePopup(route))
+        .openOn(map);
+    });
+
+    tradeRoutesLayer.addLayer(line);
+    rendered += 1;
+  });
+
+  // Ensure the layer is attached to the map
+  if (!map.hasLayer(tradeRoutesLayer)) tradeRoutesLayer.addTo(map);
+  return rendered;
+}
+
+function tradeRouteTooltip(route) {
+  const name = esc(route.name || (lang === 'it' ? 'Rotta senza nome' : 'Unnamed route'));
+  const s = route.active_period_start;
+  const e = route.active_period_end;
+  const period = (s != null || e != null)
+    ? `${s != null ? fmtY(s) : '?'}–${e != null ? fmtY(e) : (lang === 'it' ? 'oggi' : 'today')}`
+    : '';
+  const commodities = Array.isArray(route.commodities_primary)
+    ? route.commodities_primary.slice(0, 4).map(esc).join(', ')
+    : (route.commodities_primary ? esc(String(route.commodities_primary)) : '');
+
+  return `
+    <div style="min-width:180px">
+      <strong>${name}</strong>${route.involves_slavery ? ' <span style="color:#dc2626;font-size:0.82em">&#x26A0; ETHICS-010</span>' : ''}<br>
+      ${period ? `<span style="font-size:0.82em;opacity:0.85">${period}</span><br>` : ''}
+      ${commodities ? `<span style="font-size:0.78em;opacity:0.75">${commodities}</span>` : ''}
+    </div>`;
+}
+
+function tradeRoutePopup(route) {
+  const name = esc(route.name || (lang === 'it' ? 'Rotta senza nome' : 'Unnamed route'));
+  const type = (route.route_type || route.type || '—');
+  const s = route.active_period_start;
+  const e = route.active_period_end;
+  const period = `${s != null ? fmtY(s) : '?'} – ${e != null ? fmtY(e) : (lang === 'it' ? 'oggi' : 'today')}`;
+  const commodities = Array.isArray(route.commodities_primary)
+    ? route.commodities_primary.map(esc).join(', ')
+    : (route.commodities_primary ? esc(String(route.commodities_primary)) : '—');
+  const notes = route.ethical_notes ? esc(route.ethical_notes) : '';
+  const conf = (typeof route.confidence_score === 'number')
+    ? ` · ${Math.round(route.confidence_score * 100)}%` : '';
+
+  return `
+    <div class="trade-route-popup-body">
+      <div class="tr-popup-title"><strong>${name}</strong>${route.involves_slavery ? ' <span class="tr-slavery-tag">ETHICS-010</span>' : ''}</div>
+      <div class="tr-popup-meta">
+        <span class="tr-popup-type tr-type-${type}">${esc(type)}</span>
+        <span>${period}${conf}</span>
+      </div>
+      <div class="tr-popup-row"><span>${lang === 'it' ? 'Merci' : 'Commodities'}:</span> ${commodities}</div>
+      ${route.involves_slavery ? `
+        <div class="tr-ethics-box">
+          <strong>${lang === 'it' ? 'Nota etica (ETHICS-010)' : 'Ethical note (ETHICS-010)'}:</strong>
+          ${notes || (lang === 'it'
+            ? 'Questa rotta &egrave; stata associata alla tratta schiavistica. La sua rappresentazione serve a documentare, non a celebrare.'
+            : 'This route was associated with the slave trade. It is documented, not celebrated.')}
+        </div>` : (notes ? `<div class="tr-ethics-box tr-ethics-neutral">${notes}</div>` : '')}
+    </div>`;
+}
+
+function toggleTradeRoutes(enabled) {
+  tradeRoutesEnabled = !!enabled;
+  const legend = document.getElementById('trade-routes-legend');
+  if (legend) legend.classList.toggle('hidden', !tradeRoutesEnabled);
+
+  if (!tradeRoutesEnabled) {
+    if (tradeRoutesLayer) tradeRoutesLayer.clearLayers();
+    return;
+  }
+
+  // Lazy-load on first activation
+  loadTradeRoutes().then(() => renderTradeRoutes());
+}
+
+// ─── Dynasty Chains sidebar (v6.7, Feature 2) ─────────────────
+
+async function loadChains() {
+  const listEl = document.getElementById('chains-list');
+  const countEl = document.getElementById('chains-count');
+  try {
+    const res = await fetch(`${API}/v1/chains`, { cache: 'no-cache' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    chainsData = Array.isArray(data) ? data : (data.chains || data.items || []);
+    if (countEl) countEl.textContent = `(${chainsData.length})`;
+    renderChainsList();
+  } catch (err) {
+    if (listEl) listEl.innerHTML = `<div class="chains-placeholder">${lang === 'it' ? 'Catene non disponibili.' : 'Chains not available.'}</div>`;
+    if (countEl) countEl.textContent = '';
+  }
+}
+
+function renderChainsList() {
+  const listEl = document.getElementById('chains-list');
+  if (!listEl || !chainsData) return;
+  if (!chainsData.length) {
+    listEl.innerHTML = `<div class="chains-placeholder">${lang === 'it' ? 'Nessuna catena.' : 'No chains.'}</div>`;
+    return;
+  }
+
+  listEl.innerHTML = chainsData.map(c => {
+    const name = esc(c.name || '—');
+    const ctype = esc(c.chain_type || '—');
+    const links = (typeof c.link_count === 'number') ? c.link_count
+      : (Array.isArray(c.links) ? c.links.length : '?');
+    const region = esc(c.region || '—');
+    const isIdeological = (c.chain_type || '').toUpperCase() === 'IDEOLOGICAL';
+    return `
+    <div class="chain-card${isIdeological ? ' chain-ideological' : ''}" data-id="${c.id}" role="listitem" tabindex="0"
+         aria-label="Catena ${name}, tipo ${ctype}, ${links} link">
+      <div class="chain-card-header">
+        <span class="chain-card-name">${name}</span>
+        ${isIdeological ? '<span class="chain-ideo-badge" title="Continuità self-proclaimed — vedi ETHICS-003">ETHICS-003</span>' : ''}
+      </div>
+      <div class="chain-card-meta">
+        <span class="chain-type-tag">${ctype}</span>
+        <span class="chain-link-count">${links} link</span>
+        <span class="chain-region">${region}</span>
+      </div>
+    </div>`;
+  }).join('');
+
+  listEl.querySelectorAll('.chain-card').forEach(card => {
+    const handler = () => showChainDetail(card.dataset.id);
+    card.addEventListener('click', handler);
+    card.addEventListener('keydown', ev => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); handler(); } });
+  });
+}
+
+async function loadChainDetail(id) {
+  if (chainDetailCache[id]) return chainDetailCache[id];
+  try {
+    const res = await fetch(`${API}/v1/chains/${id}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    chainDetailCache[id] = data;
+    return data;
+  } catch (err) {
+    showError(lang === 'it' ? 'Errore nel caricamento della catena.' : 'Error loading chain.');
+    return null;
+  }
+}
+
+async function showChainDetail(id) {
+  const panel = document.getElementById('detail-panel');
+  const content = document.getElementById('detail-content');
+  panel.classList.remove('hidden');
+  content.innerHTML = '<div class="detail-spinner"><div class="spinner"></div></div>';
+
+  // Clear entity context — we're showing a chain, not an entity
+  currentDetailEntity = null;
+  currentDetailTab = 'overview';
+
+  if (window.innerWidth <= 768) {
+    document.getElementById('sidebar').classList.add('collapsed');
+  }
+  const info = document.getElementById('map-info');
+  if (info) info.style.display = 'none';
+
+  const chain = await loadChainDetail(id);
+  if (!chain) { panel.classList.add('hidden'); return; }
+
+  const isIdeological = (chain.chain_type || '').toUpperCase() === 'IDEOLOGICAL';
+  const links = chain.links || chain.sequence || [];
+
+  // ETHICS-003: self-proclaimed ideological continuity must show a
+  // warning banner; otherwise the UI would endorse the myth as fact.
+  const banner = isIdeological ? `
+    <div class="chain-ethics-banner" role="note">
+      <strong>${lang === 'it' ? 'Continuità self-proclaimed' : 'Self-proclaimed continuity'}</strong>
+      ${lang === 'it'
+        ? ' — questa catena è una rivendicazione ideologica di continuità, non una discendenza storica verificata. Vedi ETHICS-003.'
+        : ' — this chain represents a self-proclaimed ideological continuity, not a verified historical lineage. See ETHICS-003.'}
+    </div>` : '';
+
+  let html = `
+    <h2 class="chain-detail-title">${esc(chain.name || '—')}</h2>
+    <div class="detail-tags">
+      <span class="chain-type-tag">${esc(chain.chain_type || '—')}</span>
+      ${chain.region ? `<span class="continent-tag">${esc(chain.region)}</span>` : ''}
+      <span class="lang-tag">${links.length} link</span>
+    </div>
+    ${banner}
+    ${chain.description ? `<p class="chain-description">${esc(chain.description)}</p>` : ''}
+
+    <div class="detail-section">
+      <h3 class="collapsible" tabindex="0">${lang === 'it' ? 'Sequenza di link' : 'Link sequence'} <span class="collapse-icon">▾</span></h3>
+      <div class="section-body">
+        ${renderChainTimeline(links)}
+      </div>
+    </div>
+    ${chain.ethical_notes ? `
+      <div class="detail-section">
+        <h3 class="collapsible" tabindex="0">${lang === 'it' ? 'Governance etica' : 'Ethical governance'} <span class="collapse-icon">▾</span></h3>
+        <div class="section-body">
+          <div class="ethics-box">${esc(chain.ethical_notes)}</div>
+        </div>
+      </div>` : ''}
+  `;
+
+  content.innerHTML = html;
+
+  content.querySelectorAll('.collapsible').forEach(h3 => {
+    h3.addEventListener('click', () => toggleSection(h3));
+    h3.addEventListener('keydown', ev => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); toggleSection(h3); } });
+  });
+
+  content.querySelectorAll('.chain-link-entity[data-entity-id]').forEach(el => {
+    const eid = +el.dataset.entityId;
+    if (!eid) return;
+    const handler = () => showDetail(eid);
+    el.addEventListener('click', handler);
+    el.addEventListener('keydown', ev => { if (ev.key === 'Enter') handler(); });
+  });
+}
+
+function renderChainTimeline(links) {
+  if (!Array.isArray(links) || !links.length) {
+    return `<p class="placeholder">${lang === 'it' ? 'Nessun link disponibile.' : 'No links available.'}</p>`;
+  }
+  return `
+    <ol class="chain-timeline">
+      ${links.map((l, i) => {
+        const eid = l.entity_id || (l.entity && l.entity.id);
+        const ename = l.entity_name || (l.entity && l.entity.name_original) || l.name || `#${eid || i + 1}`;
+        const ttype = l.transition_type ? esc(l.transition_type.replace(/_/g, ' ')) : '';
+        const tyear = (l.transition_year != null) ? fmtY(l.transition_year) : '';
+        const desc = l.description || l.transition_description || '';
+        const clickable = !!eid;
+        return `
+        <li class="chain-timeline-item">
+          <div class="chain-timeline-marker" aria-hidden="true">${i + 1}</div>
+          <div class="chain-timeline-content">
+            <div class="chain-link-entity${clickable ? ' clickable' : ''}" ${clickable ? `data-entity-id="${eid}" tabindex="0" role="button"` : ''}>
+              ${esc(ename)}
+            </div>
+            <div class="chain-link-meta">
+              ${tyear ? `<span class="chain-link-year">${tyear}</span>` : ''}
+              ${ttype ? `<span class="chain-link-type">${ttype}</span>` : ''}
+            </div>
+            ${desc ? `<div class="chain-link-desc">${esc(desc)}</div>` : ''}
+          </div>
+        </li>`;
+      }).join('')}
+    </ol>`;
 }
 
 // ─── Autocomplete ──────────────────────────────────────────────
@@ -654,6 +1034,10 @@ async function showDetail(id) {
   const e = await loadDetail(id);
   if (!e) { panel.classList.add('hidden'); return; }
 
+  // v6.7 — remember current entity for tab switching (Feature 3)
+  currentDetailEntity = e;
+  currentDetailTab = 'overview';
+
   const pct = Math.round(e.confidence_score * 100);
   const sc = COLORS[e.status] || '#8b949e';
   const real = isReal(e);
@@ -683,6 +1067,17 @@ async function showDetail(id) {
       <span class="status-badge ${e.status}">${t(e.status)}</span>
       <span class="continent-tag">${cIcon} ${e.continent || '?'}</span>
     </div>
+
+    <div class="detail-tabs" role="tablist" aria-label="${lang === 'it' ? 'Viste dettaglio entit\u00e0' : 'Entity detail views'}">
+      <button class="detail-tab active" role="tab" aria-selected="true" aria-controls="detail-tab-overview" data-tab="overview">
+        ${lang === 'it' ? 'Panoramica' : 'Overview'}
+      </button>
+      <button class="detail-tab" role="tab" aria-selected="false" aria-controls="detail-tab-timeline" data-tab="timeline">
+        ${lang === 'it' ? 'Timeline unificata' : 'Unified timeline'}
+      </button>
+    </div>
+
+    <div class="detail-tab-panel" id="detail-tab-overview" role="tabpanel" aria-labelledby="overview">
 
     <div class="detail-section" data-section="info">
       <h3 class="collapsible" tabindex="0">${t('info')} <span class="collapse-icon">▾</span></h3>
@@ -812,7 +1207,24 @@ async function showDetail(id) {
       </button>
     </div>`;
 
+  // Close overview tab panel and add timeline tab panel (hidden until selected)
+  html += `
+    </div><!-- /#detail-tab-overview -->
+    <div class="detail-tab-panel hidden" id="detail-tab-timeline" role="tabpanel" aria-labelledby="timeline">
+      <div class="unified-timeline-loading">
+        <div class="detail-spinner" style="height:100px"><div class="spinner" style="width:24px;height:24px"></div></div>
+      </div>
+    </div>`;
+
   content.innerHTML = html;
+
+  // Bind tab switching
+  content.querySelectorAll('.detail-tab').forEach(tab => {
+    tab.addEventListener('click', () => switchDetailTab(tab.dataset.tab));
+    tab.addEventListener('keydown', ev => {
+      if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); switchDetailTab(tab.dataset.tab); }
+    });
+  });
 
   // Draw mini-timeline canvas (v5.8)
   drawMiniTimeline(e);
@@ -859,6 +1271,160 @@ async function showDetail(id) {
       }
     } catch (_) {}
   }
+}
+
+// ─── Detail panel tab switching + unified timeline (v6.7, Feature 3) ──
+
+function switchDetailTab(tab) {
+  if (!tab) return;
+  currentDetailTab = tab;
+
+  const content = document.getElementById('detail-content');
+  if (!content) return;
+
+  content.querySelectorAll('.detail-tab').forEach(t => {
+    const active = t.dataset.tab === tab;
+    t.classList.toggle('active', active);
+    t.setAttribute('aria-selected', active ? 'true' : 'false');
+  });
+
+  content.querySelectorAll('.detail-tab-panel').forEach(p => {
+    p.classList.toggle('hidden', p.id !== `detail-tab-${tab}`);
+  });
+
+  if (tab === 'timeline' && currentDetailEntity) {
+    loadUnifiedTimeline(currentDetailEntity.id);
+  }
+}
+
+async function loadUnifiedTimeline(entityId) {
+  const panel = document.getElementById('detail-tab-timeline');
+  if (!panel) return;
+
+  // If we've already rendered for this entity, don't refetch
+  if (panel.dataset.loadedFor === String(entityId)) return;
+
+  panel.innerHTML = `<div class="detail-spinner" style="height:100px"><div class="spinner" style="width:24px;height:24px"></div></div>`;
+
+  try {
+    const res = await fetch(`${API}/v1/entities/${entityId}/timeline`);
+    if (res.status === 404) {
+      panel.innerHTML = `
+        <div class="unified-timeline-unavailable">
+          <p>${lang === 'it'
+            ? 'Timeline endpoint non disponibile su questa versione.'
+            : 'Timeline endpoint not available on this version.'}</p>
+          <p style="font-size:0.78em;color:var(--text-muted);margin-top:6px">
+            ${lang === 'it'
+              ? 'La timeline unificata sar\u00e0 disponibile in una versione futura (v6.8+).'
+              : 'The unified timeline will be available in a future version (v6.8+).'}
+          </p>
+        </div>`;
+      panel.dataset.loadedFor = String(entityId);
+      return;
+    }
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    renderUnifiedTimeline(panel, data);
+    panel.dataset.loadedFor = String(entityId);
+  } catch (err) {
+    panel.innerHTML = `
+      <div class="unified-timeline-unavailable">
+        <p>${lang === 'it' ? 'Errore nel caricamento della timeline.' : 'Error loading timeline.'}</p>
+        <p style="font-size:0.78em;color:var(--text-muted);margin-top:6px">${esc(err.message || '')}</p>
+      </div>`;
+  }
+}
+
+function renderUnifiedTimeline(panel, data) {
+  // Accept multiple response shapes:
+  //   { events: [...], territory_changes: [...], chain_transitions: [...] }
+  //   { items: [{kind, year, ...}] }  (pre-merged)
+  let items = [];
+  if (Array.isArray(data)) {
+    items = data.slice();
+  } else if (Array.isArray(data.items)) {
+    items = data.items.slice();
+  } else {
+    (data.events || []).forEach(ev => items.push({
+      kind: 'event',
+      year: ev.year ?? ev.start_year ?? ev.date,
+      title: ev.name || ev.title,
+      description: ev.description,
+      event_type: ev.event_type || ev.type,
+      raw: ev,
+    }));
+    (data.territory_changes || []).forEach(tc => items.push({
+      kind: 'territory_change',
+      year: tc.year,
+      title: tc.change_type ? tc.change_type.replace(/_/g, ' ') : 'Territory change',
+      description: tc.description,
+      region: tc.region,
+      population_affected: tc.population_affected,
+      raw: tc,
+    }));
+    (data.chain_transitions || []).forEach(ct => items.push({
+      kind: 'chain_transition',
+      year: ct.transition_year ?? ct.year,
+      title: ct.transition_type ? ct.transition_type.replace(/_/g, ' ') : 'Chain transition',
+      description: ct.description,
+      chain_name: ct.chain_name,
+      chain_id: ct.chain_id,
+      raw: ct,
+    }));
+  }
+
+  // Sort chronologically (null years pushed to the end)
+  items.sort((a, b) => {
+    if (a.year == null && b.year == null) return 0;
+    if (a.year == null) return 1;
+    if (b.year == null) return -1;
+    return a.year - b.year;
+  });
+
+  if (!items.length) {
+    panel.innerHTML = `<p class="placeholder">${lang === 'it' ? 'Nessun evento storico registrato.' : 'No historical events recorded.'}</p>`;
+    return;
+  }
+
+  const kindIcon = {
+    event: '📅',
+    territory_change: '🗺️',
+    chain_transition: '🔗',
+  };
+  const kindLabel = lang === 'it'
+    ? { event: 'Evento', territory_change: 'Territorio', chain_transition: 'Catena' }
+    : { event: 'Event', territory_change: 'Territory', chain_transition: 'Chain' };
+
+  panel.innerHTML = `
+    <h3 class="unified-timeline-heading">${lang === 'it' ? 'Eventi, territorio e transizioni' : 'Events, territory and transitions'}</h3>
+    <ol class="unified-timeline">
+      ${items.map(it => {
+        const icon = kindIcon[it.kind] || '•';
+        const label = kindLabel[it.kind] || it.kind;
+        const year = it.year != null ? fmtY(it.year) : '?';
+        const title = esc(it.title || label);
+        const desc = it.description ? esc(it.description) : '';
+        const extra = [];
+        if (it.region) extra.push(esc(it.region));
+        if (it.population_affected) extra.push(`~${Number(it.population_affected).toLocaleString('it-IT')} ${lang === 'it' ? 'persone' : 'people'}`);
+        if (it.chain_name) extra.push(`${lang === 'it' ? 'Catena' : 'Chain'}: ${esc(it.chain_name)}`);
+
+        return `
+        <li class="utl-item utl-${it.kind}">
+          <div class="utl-marker" aria-hidden="true">${icon}</div>
+          <div class="utl-body">
+            <div class="utl-header">
+              <span class="utl-year">${year}</span>
+              <span class="utl-kind">${label}</span>
+              <span class="utl-title">${title}</span>
+            </div>
+            ${desc ? `<div class="utl-desc">${desc}</div>` : ''}
+            ${extra.length ? `<div class="utl-extra">${extra.join(' · ')}</div>` : ''}
+          </div>
+        </li>`;
+      }).join('')}
+    </ol>`;
 }
 
 function drawMiniTimeline(e) {
@@ -1092,7 +1658,13 @@ function bindEvents() {
       yearEra.value = 'ad';
     }
   });
-  yearSlider.addEventListener('change', () => { applyFilters(); pushUrlState(); loadSnapshotSummary(+yearSlider.value); });
+  yearSlider.addEventListener('change', () => {
+    applyFilters();
+    pushUrlState();
+    loadSnapshotSummary(+yearSlider.value);
+    // v6.7 — refresh trade routes if active (they're year-filtered)
+    if (tradeRoutesEnabled) renderTradeRoutes();
+  });
 
   function applyYearInput() {
     let val = parseInt(yearInput.value, 10) || 0;
@@ -1102,6 +1674,7 @@ function bindEvents() {
     yearDisplay.textContent = fmtY(val);
     applyFilters();
     pushUrlState();
+    if (tradeRoutesEnabled) renderTradeRoutes();
   }
 
   document.getElementById('year-go').addEventListener('click', applyYearInput);
@@ -1122,6 +1695,7 @@ function bindEvents() {
       }
       applyFilters();
       pushUrlState();
+      if (tradeRoutesEnabled) renderTradeRoutes();
     });
   });
 
@@ -1130,6 +1704,12 @@ function bindEvents() {
   });
 
   document.getElementById('sort-select').addEventListener('change', applyFilters);
+
+  // v6.7 — Trade routes toggle (Feature 1)
+  const tradeToggle = document.getElementById('trade-routes-toggle');
+  if (tradeToggle) {
+    tradeToggle.addEventListener('change', () => toggleTradeRoutes(tradeToggle.checked));
+  }
 
   // Timeline toggle
   const tlToggle = document.getElementById('timeline-toggle');
@@ -1160,6 +1740,9 @@ function bindEvents() {
     document.querySelectorAll('#continent-chips .chip').forEach(c => c.classList.remove('active'));
     const allContChip = document.querySelector('#continent-chips .chip[data-continent=""]');
     if (allContChip) allContChip.classList.add('active');
+    // v6.7 — also clear trade routes overlay
+    const trToggle = document.getElementById('trade-routes-toggle');
+    if (trToggle && trToggle.checked) { trToggle.checked = false; toggleTradeRoutes(false); }
     applyFilters();
     closeDetail();
     pushUrlState();
@@ -1531,6 +2114,8 @@ function applyLangUI() {
   if (info) info.textContent = t('map_hint');
   applyFilters();
   loadStats();
+  // v6.7 — re-render chain list with updated labels
+  if (chainsData) renderChainsList();
 }
 
 // ─── Playback ───────────────────────────────────────────────────
@@ -1575,6 +2160,7 @@ function togglePlayback() {
     }
     applyFilters();
     if (timelineData) drawTimeline();
+    if (tradeRoutesEnabled) renderTradeRoutes();
   }, speed);
 }
 

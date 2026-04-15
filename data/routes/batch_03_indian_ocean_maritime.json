@@ -1,0 +1,570 @@
+[
+  {
+    "name_original": "Calicut–Muscat Malabar-Oman Monsoon Route",
+    "name_original_lang": "ar",
+    "route_type": "SEA",
+    "start_year": 800,
+    "end_year": 1507,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [75.78, 11.26],
+        [74.85, 12.87],
+        [73.83, 15.49],
+        [68.57, 22.25],
+        [59.50, 22.56],
+        [58.54, 23.61]
+      ]
+    },
+    "commodities": [
+      "black-pepper",
+      "cardamom",
+      "ginger",
+      "teak",
+      "coir",
+      "pearls",
+      "Arabian-horses",
+      "frankincense",
+      "dates",
+      "copper",
+      "Chinese-porcelain"
+    ],
+    "description": "Core sector of the pre-Portuguese western-Indian-Ocean monsoon system, linking the Malabar black-pepper coast of Kerala (Kozhikode/Calicut, the largest pepper entrepôt in the world in the 14th and 15th centuries) with the Omani port of Muscat and its Gulf hinterland via the Arabian Sea monsoon. Outbound from Malabar April-May with the southwest monsoon to the Gulf; return August-September with the northeast monsoon. The 9th–15th-century traffic was carried by Gujarati, Malabari Mappila, Omani, Hadhrami and Persian merchants in stitched-plank dhows (baghla, boom, sambuq). Calicut under the Zamorins (Samoothiris) was a free port with a large Muslim Mappila merchant class; Ibn Battuta (1342) and Ma Huan (1410s, with Zheng He's voyages) both describe it. Muscat was the bottleneck on the Arabian coast, controlling entry into the Gulf for the onward trade to Hormuz, Basra and the Persian interior. The route was disrupted after Vasco da Gama's 1498 arrival at Calicut and the Portuguese seizure of Muscat in 1507 under Afonso de Albuquerque, which imposed the cartaz licensing system and taxed the pre-existing Arab-Indian traffic; the monsoon traffic continued under Portuguese, Omani and later Dutch and British overlays, but the period 800–1507 is the coherent 'pre-Portuguese' phase represented here.",
+    "involves_slavery": false,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "Enslaved East Africans were a minor but continuous part of the Arabian Sea traffic during this period (see the entity-level Indian Ocean Slave Route for the dedicated record, ETHICS-010). The present entry does not flag involves_slavery=true because the defining trade of Calicut–Muscat was the pepper-horse exchange, not human trafficking, and the Indian Ocean Slave Route entry carries the dedicated slavery record for the region. Portuguese secondary literature has traditionally framed da Gama's arrival as 'opening' the Indian Ocean; the preceding thousand years of Swahili, Arab, Persian, Indian and Malay oceanic commerce document the opposite, and the framing is itself an ETHICS flag.",
+    "sources": [
+      {
+        "citation": "Chaudhuri, K. N. Trade and Civilisation in the Indian Ocean: An Economic History from the Rise of Islam to 1750. Cambridge University Press, 1985.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Margariti, Roxani Eleni. Aden and the Indian Ocean Trade: 150 Years in the Life of a Medieval Arabian Port. University of North Carolina Press, 2007.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Bouchon, Geneviève. Regent of the Sea: Cannanore's Response to Portuguese Expansion, 1507-1528. Oxford University Press, 1988.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Calicut",
+      "Mangalore",
+      "Goa",
+      "Diu",
+      "Masira",
+      "Muscat"
+    ]
+  },
+  {
+    "name_original": "Swahili Coast–Gujarat Monsoon Route",
+    "name_original_lang": "sw",
+    "route_type": "SEA",
+    "start_year": 900,
+    "end_year": 1500,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [40.19, -2.27],
+        [39.68, -4.05],
+        [39.20, -6.17],
+        [45.33, 2.04],
+        [51.53, 12.79],
+        [56.27, 26.57],
+        [68.97, 23.02],
+        [70.22, 22.47],
+        [72.83, 18.96]
+      ]
+    },
+    "commodities": [
+      "gold",
+      "ivory",
+      "rock-crystal",
+      "tortoiseshell",
+      "ambergris",
+      "mangrove-poles",
+      "humans_enslaved",
+      "cotton-cloth",
+      "Indian-beads",
+      "Chinese-porcelain",
+      "rice",
+      "ghee"
+    ],
+    "description": "Core pre-Portuguese monsoon line linking the Swahili coast city-states (Mogadishu, Malindi, Mombasa, Pemba, Zanzibar, Kilwa Kisiwani, Sofala) with Cambay, Surat and Diu in Gujarat, with secondary legs to Aden and Hormuz. The classical Swahili maritime urban culture (c. 900–1500 CE) — Islamicised, Bantu-speaking, with its own Swahili (Kiswahili) trade language fusing Bantu, Arabic and Persian lexica — was built on this exchange. Outbound from East Africa with the kaskazi (northeast monsoon) January-March carrying Zimbabwean gold (via Sofala and Kilwa), elephant ivory, rock crystal, tortoiseshell, mangrove poles (boriti, structural timber for the stone-and-coral urbanism of Hormuz and Basra), ambergris, and enslaved Africans. Return with the kusi (southwest monsoon) August-October carrying Gujarati cotton cloth, Indian glass beads (Khambhat-produced beads reached southern Zimbabwe in large quantities by 1100 CE), Chinese porcelain trans-shipped at Gujarati ports, rice and ghee. The route was fundamental to the formation of both Swahili and Gujarati merchant networks; it was violently disrupted by the Portuguese after 1500 (Kilwa sacked 1505, Mombasa sacked 1505 and 1528) though the underlying monsoon exchange continued under new political tutelage.",
+    "involves_slavery": true,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-010: Enslaved East Africans were one among many commodities on this route, not its dominant cargo — which is why the entry is flagged involves_slavery=true (humans_enslaved appears in the commodity list) but does not carry the full dedicated slavery-route treatment reserved for the Omani Zanzibar entry and the aggregated Indian Ocean Slave Route. SCALE — estimates for the pre-1500 Swahili/Gujarati traffic are much lower than the 19th-century Zanzibar peak: Paul Lovejoy estimates a few hundred enslaved people per year to Gujarat and further east across the 10th–15th centuries, in the tens of thousands cumulatively. African-descended communities in Gujarat and the Deccan (Siddis, Habshis) attest to the traffic; the Siddi sultans of Janjira (15th–19th centuries) were themselves descendants of East African enslaved immigrants who converted, allied with the Mughals and held the Arabian Sea fortress of Murud-Janjira. The integration pattern differs sharply from the Atlantic: enslaved East Africans in the western Indian Ocean world frequently converted to Islam, became soldiers and sailors and bureaucrats, and achieved social mobility unavailable in the Atlantic system — though this should not sanitise the original violence.",
+    "sources": [
+      {
+        "citation": "Horton, Mark, and John Middleton. The Swahili: The Social Landscape of a Mercantile Society. Blackwell, 2000.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Pearson, Michael N. Port Cities and Intruders: The Swahili Coast, India, and Portugal in the Early Modern Era. Johns Hopkins University Press, 1998.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Alpers, Edward A. The Indian Ocean in World History. Oxford University Press, 2014.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Campbell, Gwyn, ed. The Structure of Slavery in Indian Ocean Africa and Asia. Routledge, 2004.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Malindi",
+      "Mombasa",
+      "Zanzibar",
+      "Mogadishu",
+      "Aden",
+      "Hormuz",
+      "Diu",
+      "Cambay",
+      "Surat"
+    ]
+  },
+  {
+    "name_original": "Quanzhou–Aden Song-Yuan Ceramic Route",
+    "name_original_lang": "zh",
+    "route_type": "SEA",
+    "start_year": 960,
+    "end_year": 1368,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [118.68, 24.87],
+        [114.16, 22.29],
+        [109.22, 13.77],
+        [106.70, 10.77],
+        [103.85, 1.29],
+        [98.68, 3.85],
+        [79.85, 6.93],
+        [75.78, 11.26],
+        [51.53, 12.79],
+        [45.03, 12.78]
+      ]
+    },
+    "commodities": [
+      "Longquan-celadon",
+      "Jingdezhen-qingbai",
+      "Dehua-blanc-de-chine",
+      "silk",
+      "copper-coinage",
+      "Chinese-iron",
+      "lacquerware",
+      "frankincense",
+      "myrrh",
+      "horses",
+      "aromatic-woods",
+      "pearls",
+      "cotton"
+    ],
+    "description": "Maritime Silk Road flagship corridor of the Song and Yuan dynasties (960-1368), linking the southern-Chinese 'ocean emporium' of Quanzhou (Zaitun, Zaytun in Arab and Marco Polo's usage) with Aden at the mouth of the Red Sea, with principal intermediate nodes at Guangzhou, Champa (coastal Vietnam), Srivijaya/Singapura (Singapore/Sumatra), Kollam and Calicut on Malabar, and Ceylon. The Song state after 1087 operated a Maritime Trade Bureau (Shibosi 市舶司) at Quanzhou, regularising customs and foreign-merchant jurisdiction; the Yuan continued and expanded the system. Chinese-made celadon (Longquan kilns) and qingbai porcelain (Jingdezhen) became the premier high-status tableware of the western Indian Ocean world, reaching Aden, Cairo (Fustat), Kilwa and Mogadishu in such quantity that the Arab adjective 'ṣīnī' meaning 'Chinese porcelain' displaced earlier words for fine tableware in Arabic. Return cargoes included frankincense, myrrh, Arabian horses for the Chinese and south Indian cavalry markets, pearls, and aromatic woods. The Quanzhou-Aden 'great route' was the longest regular commercial sea-lane in the pre-modern world. It contracted after the late-Yuan disorders of the 1350s and the Hongwu Ming Emperor's 1371 maritime bans (haijin 海禁); the Zheng He voyages (1405-1433) were a Ming state reassertion on the corridor, not a new opening.",
+    "involves_slavery": false,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "Quanzhou in the Song-Yuan was one of the most religiously cosmopolitan cities in the world: Muslim (Arab and Persian), Nestorian Christian, Manichaean, Hindu, and Buddhist communities were all documented, with surviving epigraphy. Contemporary Chinese historiography since the 1950s has at times downplayed the foreign-merchant contribution to the city's prosperity; recent scholarship (Clark, So, Chaffee) has restored the picture of a genuinely plural emporium. The 1357-1366 Ispah Rebellion at Quanzhou, an armed rising of Persian/Arab foreign-merchant soldiery against the late Yuan, ended with massacres of the Muslim population and marks the city's precipitous decline; Ming maritime closure completed the process.",
+    "sources": [
+      {
+        "citation": "So, Billy K. L. Prosperity, Region, and Institutions in Maritime China: The South Fukien Pattern, 946-1368. Harvard University Press, 2000.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Chaffee, John W. The Muslim Merchants of Premodern China: The History of a Maritime Asian Trade Diaspora, 750-1400. Cambridge University Press, 2018.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Clark, Hugh R. Community, Trade, and Networks: Southern Fujian Province from the Third to the Thirteenth Century. Cambridge University Press, 1991.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Quanzhou",
+      "Guangzhou",
+      "Champa",
+      "Srivijaya",
+      "Singapura",
+      "Kollam",
+      "Calicut",
+      "Aden"
+    ]
+  },
+  {
+    "name_original": "Malacca–Ming China Spice Entrepôt Route",
+    "name_original_lang": "ms",
+    "route_type": "SEA",
+    "start_year": 1402,
+    "end_year": 1511,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [102.25, 2.20],
+        [104.00, 1.30],
+        [106.80, 10.77],
+        [109.22, 13.77],
+        [114.16, 22.29],
+        [118.68, 24.87],
+        [121.50, 31.23]
+      ]
+    },
+    "commodities": [
+      "cloves",
+      "nutmeg",
+      "mace",
+      "sandalwood",
+      "camphor",
+      "pepper",
+      "tin",
+      "gold",
+      "Chinese-silk",
+      "Chinese-porcelain",
+      "copper-cash",
+      "cotton-cloth"
+    ],
+    "description": "Entrepôt line of the 15th-century Malay emporium of Malacca (Melaka, founded c. 1400 by the Srivijaya-descended prince Parameswara / Iskandar Shah) to the Ming court at Nanjing and (after 1421) Beijing via Guangzhou. Malacca was the pivot of the 15th-century archipelagic spice economy: Banda nutmeg and Maluku (Moluccan) cloves, trans-shipped through Javanese ports and the Malay peninsular entrepôts, reached Malacca's godowns and were redistributed north to China, west to Calicut and Gujarat and onward to the Middle East. The Chinese connection was uniquely formalised: Parameswara converted to Islam (taking the name Iskandar Shah) and made a celebrated tributary visit to the Ming in 1411, one of a sequence of Malacca missions to Nanjing/Beijing in 1414, 1419 and 1424. Malacca was a regular stop on Zheng He's voyages (at least five between 1405 and 1433) and functioned as a Ming-protected polity, shielded from Siamese encroachment by the implicit Ming guarantee. Outbound to China: cloves, nutmeg, mace, sandalwood, camphor, Sumatran pepper, tin. Return: Chinese silk, blue-and-white porcelain, copper cash (which circulated as the effective currency of the Malay archipelago into the 17th century). The Portuguese conquest of Malacca in August 1511 under Afonso de Albuquerque shattered the entrepôt and redirected the spice traffic by force; Albuquerque was explicit (in his Commentaries) that the objective was to break the Muslim-merchant network and redirect the rent to Lisbon.",
+    "involves_slavery": false,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "The 1511 Portuguese conquest of Malacca — including three days of sack and the expulsion or massacre of the Muslim merchant population — is often narrated in Portuguese and older anglophone historiography as the 'fall of Malacca' or as a founding moment of European Asian commerce. Malay and Malaysian historiography treat it as a violent rupture of a functioning Islamic commercial civilisation. Both framings are real; AtlasPI flags the latter because it is less globally represented. The Maluku clove and Banda nutmeg upstream segments of this supply chain had their own coercive regimes under both Muslim and later Dutch overlordship; the 1621 Banda massacre (under Jan Pieterszoon Coen) is treated in the entity record for the VOC, not here.",
+    "sources": [
+      {
+        "citation": "Reid, Anthony. Southeast Asia in the Age of Commerce, 1450-1680. Yale University Press, 1988-1993 (2 vols.).",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Thomaz, Luís Filipe. 'Malaka et ses communautés marchandes au tournant du XVIe siècle'. In Marchands et hommes d'affaires asiatiques, EHESS, 1988.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Wade, Geoff. 'Melaka in Ming Dynasty Texts'. Journal of the Malaysian Branch of the Royal Asiatic Society, 1997.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Malacca",
+      "Singapura",
+      "Champa",
+      "Guangzhou",
+      "Quanzhou",
+      "Nanjing"
+    ]
+  },
+  {
+    "name_original": "Carreira da Índia (Lisboa–Goa)",
+    "name_original_lang": "pt",
+    "route_type": "SEA",
+    "start_year": 1498,
+    "end_year": 1833,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [-9.14, 38.71],
+        [-16.91, 32.75],
+        [-25.43, 37.74],
+        [-23.51, 14.91],
+        [-14.50, -7.87],
+        [14.27, -22.60],
+        [18.42, -33.92],
+        [32.57, -25.97],
+        [39.20, -6.17],
+        [55.45, -4.62],
+        [73.83, 15.49]
+      ]
+    },
+    "commodities": [
+      "black-pepper",
+      "cinnamon",
+      "cloves",
+      "nutmeg",
+      "mace",
+      "ginger",
+      "Indian-textiles",
+      "indigo",
+      "saltpetre",
+      "Chinese-porcelain",
+      "silver",
+      "copper",
+      "Gujarati-cotton"
+    ],
+    "description": "The 'Carreira da Índia' (India Run) of the Portuguese Estado da Índia: the annual round-trip carrack and later nau and galleon fleet from Lisbon, south along the West African coast, across to Brazil and back to catch the south-east trades, round the Cape of Good Hope and north across the western Indian Ocean to Goa — seat of the Portuguese Viceroy of India from 1510 to 1961. Outbound ('viagem') March-April, in order to round the Cape and catch the south-west monsoon into Goa in August-September. Return ('torna-viagem') January with the north-east monsoon, rounding the Cape by April-May and arriving Lisbon by July-August. The full round-trip took 18 months, and of c. 800 ships dispatched between 1497 and 1650, about a quarter were lost (Boxer's count). The Carreira monopolised Portuguese Asian commerce until the 1580 Iberian Union and the Dutch East India Company's (VOC) displacement of Portuguese primacy in the first third of the 17th century. Goa itself — 'Goa Dourada', Golden Goa — was wrested by Afonso de Albuquerque from the Sultanate of Bijapur on 25 November 1510 and remained in Portuguese hands continuously until Indian military annexation on 19 December 1961. The Carreira formally ended with the 1833 Portuguese liberal reforms that broke up the old royal monopoly.",
+    "involves_slavery": false,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "The Carreira da Índia was an armed commercial monopoly enforced by the cartaz licensing system, which required Indian Ocean vessels to purchase Portuguese passes or face seizure and crew execution — a protection-racket extraction from the pre-existing Arab-Indian-Malay commerce. The Portuguese Inquisition was established at Goa in 1560 and operated until 1812, persecuting converted Hindus and Jews; Christian missionary activity in western India was coercive in significant measure (mass conversions, temple destruction in the Old Conquests of Goa, Bardez and Salcete). Portuguese historiography under the Estado Novo (1933-1974) mythologised the Carreira as civilising enterprise; independent Indian historiography since 1961 has corrected the picture. The 1510 conquest of Goa included the massacre of Muslim defenders and residents, estimated by Albuquerque himself at c. 6,000.",
+    "sources": [
+      {
+        "citation": "Boxer, C. R. The Portuguese Seaborne Empire, 1415-1825. Hutchinson, 1969.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Subrahmanyam, Sanjay. The Portuguese Empire in Asia, 1500-1700: A Political and Economic History. Longman, 1993.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Pearson, M. N. The Portuguese in India. Cambridge University Press, 1987 (New Cambridge History of India).",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Disney, A. R. A History of Portugal and the Portuguese Empire, Vol. 2: The Portuguese Empire. Cambridge University Press, 2009.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Lisboa",
+      "Madeira",
+      "Cabo Verde",
+      "Luanda",
+      "Cabo da Boa Esperança",
+      "Moçambique",
+      "Zanzibar",
+      "Seychelles",
+      "Goa"
+    ]
+  },
+  {
+    "name_original": "Retourvloot Batavia–Amsterdam (VOC Return Fleet)",
+    "name_original_lang": "nl",
+    "route_type": "SEA",
+    "start_year": 1619,
+    "end_year": 1799,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [106.83, -6.13],
+        [105.00, -6.10],
+        [57.55, -20.17],
+        [47.51, -18.91],
+        [18.42, -33.92],
+        [-5.71, 16.45],
+        [-25.43, 37.74],
+        [4.90, 52.37]
+      ]
+    },
+    "commodities": [
+      "nutmeg",
+      "mace",
+      "cloves",
+      "black-pepper",
+      "cinnamon",
+      "Chinese-tea",
+      "Chinese-porcelain",
+      "Japanese-copper",
+      "Indian-textiles",
+      "coffee",
+      "sugar",
+      "saltpetre",
+      "Bengal-silk"
+    ],
+    "description": "Return-fleet line of the Vereenigde Oostindische Compagnie (VOC, Dutch East India Company, chartered 1602) from its Asian capital Batavia (founded 1619 by Jan Pieterszoon Coen on the ruins of Jayakarta / Jakarta) to Amsterdam via the Cape of Good Hope and the Dutch refreshment station at Cape Town (founded 1652). Annual return-fleets (retourvloten) departed Batavia October-January and arrived Texel June-August of the following year, a circuit of roughly 8 months outbound and 8 months return (reverse direction; see Heren XVII departure schedule). Over its 197-year charter the VOC dispatched approximately 4,700 ships from Europe to Asia and 3,400 from Asia to Europe. Batavia's commercial position rested on Dutch military dominance of the Moluccan cloves and Banda nutmeg monopolies (the 1621 Banda genocide under Coen, destroying the Bandanese population and replacing it with Dutch-controlled perkeniers using enslaved labour), the Ceylon cinnamon monopoly (after 1658), the Japan trade (Deshima, exclusive European access after 1641), and Coromandel and Bengal textiles. Return cargoes were predominantly spices by value in the 17th century, and from c. 1720 increasingly Chinese tea, reflecting European taste and the Canton system. The VOC went bankrupt in 1796 and was liquidated 31 December 1799; the Batavia–Amsterdam trade continued under the Nederlandse Handel-Maatschappij from 1824 onward on different terms.",
+    "involves_slavery": false,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "ethical_notes": "The return-fleet itself was not a slave-trade route; the VOC's Asian plantation and urban economy, however, was extensively reliant on enslaved labour — at Batavia's peak perhaps half its population were enslaved, drawn from Bali, Sulawesi, the Bandanese remnants, the Malabar coast, Bengal and Madagascar. The 1621 Banda massacre (c. 2,500 Bandanese killed, hundreds enslaved and deported, the survivors dispersed) under Coen is now recognised in Dutch scholarship as genocide in the technical sense. The VOC's operating method combined joint-stock commercial rationality with state-delegated sovereign violence; the 1669 VOC claim to have become 'the greatest commercial power on earth' is true but inseparable from these foundations. Long-suppressed in Dutch commemorative culture, the Banda and VOC slavery records are now centrally documented (Rijksmuseum 2021 Slavery exhibition).",
+    "sources": [
+      {
+        "citation": "Gaastra, Femme S. The Dutch East India Company: Expansion and Decline. Walburg Pers, 2003.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Boxer, C. R. The Dutch Seaborne Empire, 1600-1800. Hutchinson, 1965.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "van Rossum, Matthias. Kleurrijke Tragiek: De geschiedenis van slavernij in Azië onder de VOC. Uitgeverij Verloren, 2015.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Vink, Markus. 'The World's Oldest Trade: Dutch Slavery and Slave Trade in the Indian Ocean in the Seventeenth Century'. Journal of World History 14 (2), 2003.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Batavia",
+      "Sunda Strait",
+      "Mauritius",
+      "Madagascar",
+      "Kaapstad",
+      "Sint-Helena",
+      "Azoren",
+      "Amsterdam"
+    ]
+  },
+  {
+    "name_original": "Muscat–Zanzibar Omani Slave and Clove Route",
+    "name_original_lang": "ar",
+    "route_type": "SEA",
+    "start_year": 1698,
+    "end_year": 1873,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [58.54, 23.61],
+        [56.27, 26.57],
+        [55.30, 25.26],
+        [45.03, 12.78],
+        [43.24, 11.59],
+        [44.81, 1.42],
+        [40.19, -2.27],
+        [39.68, -4.05],
+        [39.20, -6.17]
+      ]
+    },
+    "commodities": [
+      "humans_enslaved",
+      "ivory",
+      "cloves",
+      "copal",
+      "sesame",
+      "coconut-oil",
+      "gum-copal",
+      "dates",
+      "Indian-textiles",
+      "firearms",
+      "American-cotton-cloth"
+    ],
+    "description": "Flagship line of the 18th- and 19th-century Omani Arab commercial empire, linking Muscat in Oman with Zanzibar in East Africa. After the Omani Yaruba dynasty expelled the Portuguese from Fort Jesus at Mombasa (1698), the western Indian Ocean coast from Warsheikh to Cape Delgado came under successive Omani overlordship; Said bin Sultan al-Busaid (r. 1804-1856) transferred his capital from Muscat to Zanzibar in 1840, unifying a composite Omani-Zanzibari sultanate spanning both shores of the western Indian Ocean. Zanzibar became the pivot of a triangular system: captured or purchased East Africans from the interior (trafficked via Bagamoyo, Kilwa Kivinje and Quelimane) were worked on the new Zanzibar and Pemba clove plantations (Said bin Sultan introduced commercial clove cultivation in the 1820s) or re-exported via Muscat to Oman, the Persian Gulf, Ottoman Iraq, Persia and India. Ivory and gum copal were the secondary exports; firearms, American cotton ('merikani'), Indian textiles, dates and rice were imported. The route was formally contracted by Britain under the 1822 Moresby Treaty (forbidding sale of enslaved people to Christian buyers), the 1845 Hamerton Treaty (forbidding their export north of Cape Delgado) and definitively by the 1873 Bartle Frere Treaty under which Sultan Barghash closed the Zanzibar slave market.",
+    "involves_slavery": true,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-010: This is explicitly a slave-trade route and is flagged involves_slavery=true with humans_enslaved as a primary commodity. SCALE — 1698 to 1873 aggregate estimates of East Africans trafficked via the Omani-Zanzibari network run from c. 1.0 million (Lovejoy 2012, conservative) to c. 1.6 million (Sheriff 1987) exported from the coast; with 19th-century peak decades (1830-1873) accounting for the majority, at 15,000-50,000 annually passing through Zanzibar. Caravan-to-coast mortality in the East African interior was catastrophic — Livingstone, Cameron and Johnston agreed on multipliers of c. 4 dead in the capture-raid and march for every 1 reaching the coast, implying total upstream deaths in the interior of the order of 4-6 million over the period. PERPETRATORS — the Omani Al-Busaid dynasty (Ahmed bin Said, Said bin Sultan, Barghash); Omani Arab plantation owners on Zanzibar and Pemba; Kachchhi Bhatia, Ismaili Khoja and Banyan Indian financiers resident in Zanzibar who underwrote the caravans on credit (commonly 50-100% interest) and provided the American cotton and Indian textiles used as currency; Swahili and Yao caravan leaders in the interior (Tippu Tip, Mohammed bin Khalfan); British and American merchants who purchased ivory and clove products knowing their production context. DO NOT EUPHEMISE — the 1867 Majidiyye dhow arrived in Muscat with 500 enslaved East Africans packed into a vessel of 180 tons; the contemporary written record, the British Royal Navy's Indian Ocean patrol (East Indies Station, 1808-1885) and the photographs of Sultan Barghash's seized slave-dhows at Aden in 1873 document the human cost directly. DESCENDANT COMMUNITIES — a substantial African-descended population in contemporary Oman, Yemen, Qatar, the UAE, Iran and India descends from this traffic; their history is one of integration, partial social mobility (especially into military and administrative roles in Oman) but also of persistent racial stratification documented by Matthew Hopper (2015) and Behnaz Mirzai (2017). HISTORIOGRAPHY — the Omani Zanzibar slave trade is the least publicly recognised of the major oceanic slave systems; this is itself an ethical problem AtlasPI documents. Contemporary Omani state commemoration emphasises the 19th-century Sultanate's role as a cosmopolitan mercantile power; the slave-labour foundation of that mercantile power is typically omitted from the official narrative. The record should be complete.",
+    "sources": [
+      {
+        "citation": "Sheriff, Abdul. Slaves, Spices and Ivory in Zanzibar: Integration of an East African Commercial Empire into the World Economy, 1770-1873. Ohio University Press, 1987.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Bennett, Norman Robert. A History of the Arab State of Zanzibar. Methuen, 1978.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Hopper, Matthew S. Slaves of One Master: Globalization and Slavery in Arabia in the Age of Empire. Yale University Press, 2015.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Mirzai, Behnaz A. A History of Slavery and Emancipation in Iran, 1800-1929. University of Texas Press, 2017.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Cooper, Frederick. Plantation Slavery on the East Coast of Africa. Yale University Press, 1977.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Lovejoy, Paul E. Transformations in Slavery: A History of Slavery in Africa. 3rd ed., Cambridge University Press, 2012.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Muscat",
+      "Sohar",
+      "Khor Fakkan",
+      "Aden",
+      "Socotra",
+      "Mogadishu",
+      "Lamu",
+      "Mombasa",
+      "Zanzibar"
+    ]
+  },
+  {
+    "name_original": "Kilwa–Mogadishu Swahili Coastal Route",
+    "name_original_lang": "sw",
+    "route_type": "SEA",
+    "start_year": 1000,
+    "end_year": 1505,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [39.50, -8.96],
+        [40.68, -10.64],
+        [39.20, -6.17],
+        [39.68, -4.05],
+        [40.19, -2.27],
+        [41.30, -2.29],
+        [45.33, 2.04]
+      ]
+    },
+    "commodities": [
+      "gold",
+      "ivory",
+      "rock-crystal",
+      "iron",
+      "ambergris",
+      "mangrove-poles",
+      "tortoiseshell",
+      "cotton-cloth",
+      "glass-beads",
+      "Chinese-porcelain",
+      "rice",
+      "dates"
+    ],
+    "description": "Inshore coastal leg of the pre-Portuguese Swahili commercial system linking the southernmost major Swahili stone-town — Kilwa Kisiwani on its island off southern Tanzania — northward through Zanzibar, Pemba, Mombasa (Mvita), Malindi, Lamu and the Benadir coast (Brava, Merca) to Mogadishu (Muqdisho) at the Somali northern terminus. This is the 'feeder' circulation of the Swahili coast, complementing the ocean-crossing Gujarat-Malabar and Hormuz-Aden legs. Kilwa rose to dominance c. 1100-1300 as the monopoly northern outlet of the Zimbabwean gold produced in the Great Zimbabwe hinterland and shipped via Sofala and Kilwa Kisiwani; Ibn Battuta (1331) called Kilwa 'one of the most beautiful and well-constructed towns in the world'. Mogadishu, founded c. 900 CE, was the Banadir's principal port and an older Swahili node than the southern cities, with strong Yemeni and Persian merchant communities. The coastal line carried gold upstream from Kilwa to Mogadishu and onward, redistributed the imported textiles and beads downstream, and functioned as the cultural-political axis of the Swahili world: a zone of shared Islamic-African urbanism, a common literary-religious Swahili language, and distinctive coral stone architecture. The route was violently disrupted after 1500 by the Portuguese: Kilwa sacked by Francisco de Almeida 1505 (and destroyed 1512); Mombasa sacked 1505 and 1528; Mogadishu bombarded 1499 but not taken. The political centre of the Swahili world did not recover, though the commerce continued under new overlords.",
+    "involves_slavery": false,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "Minor slave trade was part of this corridor throughout the period (see Swahili Coast-Gujarat entry for the regional treatment, ETHICS-010) but was not the defining commerce; the defining commerce was gold-ivory-cotton-porcelain. The Kilwa gold monopoly over the Zimbabwean trade is one of the best examples of pre-modern Indian-Ocean African urban-commercial achievement; Portuguese and colonial-era historiography long downplayed its sophistication (e.g. attributing Great Zimbabwe itself to non-African builders — a 19th-century colonial myth now thoroughly dismantled). 'Swahili' as an ethnonym was for much of the 20th century dismissed by European scholars as 'merely Arab' or 'merely African'; current scholarship (Horton, Fleisher, Wynne-Jones, LaViolette) documents the Swahili as an authentic coastal Bantu-African civilisation that was also Islamic, maritime, literate, and internationally connected — all simultaneously.",
+    "sources": [
+      {
+        "citation": "Horton, Mark, and John Middleton. The Swahili: The Social Landscape of a Mercantile Society. Blackwell, 2000.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Fleisher, Jeffrey, and Stephanie Wynne-Jones, eds. Theory in Africa, Africa in Theory: Locating Meaning in Archaeology. Routledge, 2015.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Pouwels, Randall L. Horn and Crescent: Cultural Change and Traditional Islam on the East African Coast, 800-1900. Cambridge University Press, 1987.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Chittick, H. Neville. Kilwa: An Islamic Trading City on the East African Coast. British Institute in Eastern Africa, 1974.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Kilwa Kisiwani",
+      "Mafia",
+      "Zanzibar",
+      "Pemba",
+      "Mombasa",
+      "Malindi",
+      "Lamu",
+      "Brava",
+      "Merca",
+      "Mogadishu"
+    ]
+  }
+]

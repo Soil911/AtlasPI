@@ -17,7 +17,7 @@ import httpx
 
 DEFAULT_BASE_URL = "https://atlaspi.cra-srl.com"
 DEFAULT_TIMEOUT = 30.0
-USER_AGENT = "atlaspi-mcp/0.2.0 (+https://github.com/Soil911/AtlasPI)"
+USER_AGENT = "atlaspi-mcp/0.3.0 (+https://github.com/Soil911/AtlasPI)"
 
 
 class AtlasPIClientError(RuntimeError):
@@ -378,3 +378,75 @@ class AtlasPIClient:
     async def entity_successors(self, entity_id: int) -> Any:
         """GET /v1/entities/{id}/successors — successori nelle catene."""
         return await self._get(f"/v1/entities/{int(entity_id)}/successors")
+
+    # -- v6.7 unified timeline + fuzzy search --------------------------
+
+    async def full_timeline(
+        self,
+        entity_id: int,
+        *,
+        include_entity_links: bool | None = None,
+    ) -> Any:
+        """GET /v1/entities/{id}/timeline — stream unificato.
+
+        Combina territory_changes + HistoricalEvent (via EventEntityLink) +
+        transizioni ChainLink in un unico stream ordinato cronologicamente.
+        """
+        return await self._get(
+            f"/v1/entities/{int(entity_id)}/timeline",
+            {"include_entity_links": include_entity_links},
+        )
+
+    async def fuzzy_search(
+        self,
+        q: str,
+        *,
+        limit: int | None = None,
+        min_score: float | None = None,
+    ) -> Any:
+        """GET /v1/search/fuzzy — ricerca approssimata cross-script.
+
+        Usa difflib.SequenceMatcher per match tolleranti a errori di
+        spelling, translitterazioni diverse e script differenti (latino,
+        cirillico, arabo, cinese, devanagari...).
+        """
+        return await self._get(
+            "/v1/search/fuzzy",
+            {"q": q, "limit": limit, "min_score": min_score},
+        )
+
+    # -- v6.7 composite: nearest historical city -----------------------
+
+    async def nearest_historical_city(
+        self,
+        *,
+        lat: float,
+        lon: float,
+        year: int | None = None,
+        city_type: str | None = None,
+        limit: int | None = None,
+        max_candidates: int = 500,
+    ) -> Any:
+        """Ricerca la citta' storica piu' vicina a (lat, lon) in un dato anno.
+
+        Composizione client-side: non c'e' un endpoint /v1/cities/nearest.
+        Scarica fino a ``max_candidates`` citta' attive nell'anno e calcola
+        la distanza haversine in Python per ordinarle.
+        """
+        data = await self.list_cities(
+            year=year,
+            city_type=city_type,
+            limit=max_candidates,
+        )
+        cities = data.get("cities") or data.get("items") or []
+        return {
+            "query": {
+                "lat": float(lat),
+                "lon": float(lon),
+                "year": year,
+                "city_type": city_type,
+                "limit": limit,
+            },
+            "candidates_considered": len(cities),
+            "cities": cities,
+        }

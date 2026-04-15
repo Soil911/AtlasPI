@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Imperium Romaniae → Osmanlı İmparatorluğu",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Eastern Mediterranean / Anatolia / Balkans",
+    "description": "Political-capital continuity from the Eastern Roman (Byzantine) Empire to the Ottoman Empire via the 1453 conquest of Constantinople. Mehmed II took the Greek title Καῖσαρ Ῥωμαίων (Kayser-i Rûm, 'Caesar of the Romans') and made Konstantinopolis his new capital, reframing the Ottoman polity as the legitimate continuator of Rome.",
+    "confidence_score": 0.7,
+    "ethical_notes": "Two views must coexist. (a) Mehmed II's self-proclamation of Kayser-i Rûm is a historical fact: he kept the Ecumenical Patriarchate, appointed Gennadios Scholarios, and cultivated a Roman imperial self-image alongside Islamic caliphal claims; large parts of the Ottoman administrative-fiscal fabric in Rumelia were direct continuations of Byzantine praxis. (b) Modern historiography treats this as strategic political branding, not institutional/legal succession: Ottoman sovereignty rested on Islamic caliphal legitimacy, Turkic steppe tradition, and ghaza ideology, not on Roman law. Including this chain as SUCCESSION (rather than only CONQUEST) documents claim (a) without endorsing it; the transition_type CONQUEST and is_violent=true record the actual mode of transfer, including the sack of Constantinople (29 May 1453), the three-day pillage, enslavement of surviving inhabitants, and conversion of Hagia Sophia into a mosque.",
+    "sources": [
+      {"citation": "Kafadar, C. 'Between Two Worlds: The Construction of the Ottoman State' (1995)", "url": null, "source_type": "academic"},
+      {"citation": "Babinger, F. 'Mehmed the Conqueror and His Time' (1978)", "url": null, "source_type": "academic"},
+      {"citation": "Kaldellis, A. 'Romanland: Ethnicity and Empire in Byzantium' (2019)", "url": null, "source_type": "academic"},
+      {"citation": "Necipoğlu, N. 'Byzantium Between the Ottomans and the Latins' (2009)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "Imperium Romaniae", "transition_year": null, "transition_type": null, "is_violent": false},
+      {"entity_name": "Osmanlı İmparatorluğu", "transition_year": 1453, "transition_type": "CONQUEST", "is_violent": true, "description": "Sack of Constantinople by Mehmed II's forces on 29 May 1453 ends the last remnant of the Eastern Roman Empire; the city becomes Ottoman capital (Konstantiniyye / later İstanbul). Mehmed II assumes the title Kayser-i Rûm alongside his Islamic sovereign titles.", "ethical_notes": "The three-day sack, mass enslavement of survivors (estimates 30,000-50,000), and conversion of Hagia Sophia into a mosque are part of the transition, not post-hoc additions. The Kayser-i Rûm claim is a real historical self-designation but does not constitute legal/institutional succession in modern historiographic terms — both readings coexist deliberately in this chain."}
+    ]
+  },
+  {
+    "name": "French state forms: Regnum Francorum → Republique francaise",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Western Europe / France",
+    "description": "Trunk of French state forms seeded in AtlasPI: Merovingian Regnum Francorum → Carolingian Imperium Francorum → medieval/early-modern Royaume de France → Republique francaise (1792 onward). The intermediate Napoleonic empires (Premier Empire 1804-14, Second Empire 1852-70), the Bourbon Restoration (1815-30), the July Monarchy (1830-48), and the Second/Third/Fourth/Fifth Republics are not yet separate entities in the DB and are therefore discussed in description and ethical_notes rather than as link nodes.",
+    "confidence_score": 0.75,
+    "ethical_notes": "This chain is deliberately shortened because several canonical sub-entities (Premier Empire, Restauration, Second Empire, Troisième République as distinct polities) are not yet present in AtlasPI (as of this batch). Presenting the full chain without them would force us either to invent entity names — forbidden by the project — or to collapse revolutionary/imperial/restoration episodes into a single 'Royaume→République' jump, which obscures the bloodshed and contested legitimacy of each transition: the 1789-99 revolutionary violence (including the Terror and Vendée), Napoleon's 1804 self-coronation and 1815 Waterloo collapse, the 1848 February Revolution, Louis-Napoléon's 1851 coup d'état, and the 1870-71 collapse of the Second Empire with the Paris Commune (~20,000 dead in the Semaine sanglante). A richer chain should be emitted in a later batch once those entities are seeded.",
+    "sources": [
+      {"citation": "Furet, F. 'Revolutionary France 1770-1880' (1992)", "url": null, "source_type": "academic"},
+      {"citation": "Jones, C. 'The Cambridge Illustrated History of France' (1994)", "url": null, "source_type": "academic"},
+      {"citation": "Price, R. 'A Concise History of France' (3rd ed., 2014)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "Regnum Francorum", "transition_year": null, "transition_type": null, "is_violent": false},
+      {"entity_name": "Imperium Francorum", "transition_year": 800, "transition_type": "REFORM", "is_violent": false, "description": "Charlemagne crowned Imperator Romanorum by Pope Leo III on 25 December 800; the Frankish kingdom is reframed as a Carolingian empire. Continuity in dynastic line (Carolingians), discontinuity in imperial titulature and in relation to the papacy and the Eastern Roman Empire.", "ethical_notes": "The imperial title was not recognized by Constantinople (the Eastern emperors regarded themselves as the only legitimate Romanorum imperator). The coronation is partly a papal political move to anchor Western Christianity to a Frankish protector."},
+      {"entity_name": "Royaume de France", "transition_year": 843, "transition_type": "PARTITION", "is_violent": true, "description": "Treaty of Verdun (843) partitions the Carolingian empire among Louis the Pious's sons; Charles the Bald receives Francia Occidentalis, which evolves into the Royaume de France. The Capetian accession in 987 consolidates the distinct French monarchy.", "ethical_notes": "Verdun follows three years of civil war among the Carolingian heirs (840-43). The 'France' label is retrospective; contemporary sources speak of Francia Occidentalis."},
+      {"entity_name": "Republique francaise", "transition_year": 1792, "transition_type": "REVOLUTION", "is_violent": true, "description": "Proclamation of the First Republic on 21-22 September 1792 by the National Convention, abolishing the monarchy after the storming of the Tuileries (10 August 1792) and the September Massacres. Louis XVI executed 21 January 1793.", "ethical_notes": "This single link collapses the full 1789-1958 sequence (First Republic → Consulate → First Empire → Bourbon Restoration → July Monarchy → Second Republic → Second Empire → Third Republic → Vichy/Free France → Fourth Republic → Fifth Republic). Each transition involved violence (Terror, Napoleonic wars, 1830, 1848, 1851 coup, 1870 collapse, Paris Commune 1871, WWII collaboration and resistance, decolonization wars). Treating it as one jump is a deliberate data-coverage choice, not a historiographic claim of continuity."}
+    ]
+  },
+  {
+    "name": "Iranian state forms: Safavid → Qajar → Pahlavi → Islamic Republic",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Iran / Persia",
+    "description": "Modern Iranian state succession from the Safavid dynasty (which consolidated Twelver Shi'ism as state religion) through the Qajar dynasty, the Pahlavi imperial state, to the Islamic Republic. The Afsharid dynasty (1736-96, Nader Shah) and the Zand dynasty (1751-94, Karim Khan) are historically part of this trunk but are not yet separate entities in AtlasPI, so they are discussed here rather than included as link nodes — this is a DB-coverage limitation, not a historiographic claim that those dynasties were marginal.",
+    "confidence_score": 0.8,
+    "ethical_notes": "Two points of care. (a) The 1979 transition from the Pahlavi imperial state to the Islamic Republic is marked REVOLUTION with is_violent=true and the deposition of Mohammad Reza Shah is stated plainly — no euphemism. The subsequent consolidation (1979-83) included political executions, the hostage crisis, and the onset of the Iran-Iraq war (1980-88, ~1M dead combined), none of which are softened here. (b) The omission of Afsharid and Zand is a DB-coverage gap: historically, after the Safavid collapse (1722, Ghilzai Afghan invasion and sack of Isfahan), Nader Shah (Afsharid) reunified much of the territory (1736-47) and the Zand dynasty (principally Karim Khan, 1751-79) ruled southern/central Iran before the Qajar (Agha Mohammad Khan) reunification in 1796. Treating Safavid → Qajar as a single SUCCESSION link compresses ~74 years of fragmentation and warfare and should be refined in a later batch once Afsharid and Zand entities exist.",
+    "sources": [
+      {"citation": "Matthee, R. 'Persia in Crisis: Safavid Decline and the Fall of Isfahan' (2012)", "url": null, "source_type": "academic"},
+      {"citation": "Abrahamian, E. 'A History of Modern Iran' (2nd ed., 2018)", "url": null, "source_type": "academic"},
+      {"citation": "Amanat, A. 'Iran: A Modern History' (2017)", "url": null, "source_type": "academic"},
+      {"citation": "Axworthy, M. 'The Sword of Persia: Nader Shah' (2006)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "دولت صفویه", "transition_year": null, "transition_type": null, "is_violent": false},
+      {"entity_name": "قاجاریه", "transition_year": 1796, "transition_type": "CONQUEST", "is_violent": true, "description": "Agha Mohammad Khan Qajar crowned Shah in 1796 after decades of warfare, completing the reunification of Iran after the Safavid collapse (1722), the Afsharid interregnum (1736-96), and the Zand ascendancy (1751-94). This link compresses that fragmentation because Afsharid and Zand are not yet separate entities in the DB.", "ethical_notes": "Agha Mohammad Khan's campaigns included the 1795 sack of Tiflis (modern Tbilisi) with large-scale massacres and enslavements of Georgian Christians — a detail that should not be dropped from the founding narrative of the Qajar state. The 1722 Ghilzai Afghan sack of Isfahan (end of the Safavid capital as political center) should likewise be recorded even though this chain does not have an intermediate node for it."},
+      {"entity_name": "دولت شاهنشاهی ایران", "transition_year": 1925, "transition_type": "REVOLUTION", "is_violent": true, "description": "Reza Khan deposes the last Qajar shah (Ahmad Shah) via parliamentary vote on 31 October 1925 and is crowned as Reza Shah Pahlavi on 15 December 1925, founding the Pahlavi dynasty and the modern imperial Iranian state.", "ethical_notes": "The Pahlavi state was marked by forced modernization (unveiling 1936 — kashf-e hijab, with coercion against religious women), suppression of tribal autonomies (Qashqai, Lur, Kurdish), and after the 1953 CIA/MI6-backed coup against Mohammad Mossadegh, by SAVAK repression (~1957-79). These are part of the record, not ornamental detail."},
+      {"entity_name": "جمهوری اسلامی ایران", "transition_year": 1979, "transition_type": "REVOLUTION", "is_violent": true, "description": "The 1979 Iranian Revolution: Mohammad Reza Shah flees Iran on 16 January 1979, Ayatollah Khomeini returns from exile on 1 February 1979, and the Islamic Republic is proclaimed by referendum on 1 April 1979. The Shah is deposed, not 'transitioned out' — the event is recorded as such without euphemism.", "ethical_notes": "The revolution's post-1979 consolidation included the US embassy hostage crisis (4 Nov 1979 - 20 Jan 1981), political purges and executions of leftist, monarchist, and Mujahedin-e Khalq opponents (large-scale in 1981-82 and again in the 1988 prison massacres, ~2,800-5,000 killed), and the Iran-Iraq war (Sept 1980 - Aug 1988) with combined casualties around one million. Suppression of the Baháʼí community as a non-recognized religious minority is a continuing pattern and must be part of any honest record of the Islamic Republic."}
+    ]
+  }
+]

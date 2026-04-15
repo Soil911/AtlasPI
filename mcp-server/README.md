@@ -54,7 +54,7 @@ Windows: `%APPDATA%\Claude\claude_desktop_config.json`):
 }
 ```
 
-Restart Claude Desktop. The 19 AtlasPI tools will appear in the tools menu.
+Restart Claude Desktop. The 23 AtlasPI tools will appear in the tools menu.
 
 ### Claude Code
 
@@ -130,6 +130,14 @@ set the `ATLASPI_API_URL` environment variable:
 | `entity_predecessors` | Predecessors of an entity in chains (who came before, via which transition)         |
 | `entity_successors`   | Successors of an entity in chains (who came after, via which transition)            |
 | `what_changed_between`| Diff two world snapshots: entities appeared / disappeared / persisted               |
+
+**v0.3 — unified timeline + fuzzy search**
+
+| Tool                       | What it does                                                                                     |
+|----------------------------|--------------------------------------------------------------------------------------------------|
+| `full_timeline_for_entity` | Merged chronological stream of events + territory_changes + chain transitions for one entity    |
+| `fuzzy_search`             | Cross-script approximate name search (difflib) — robust to spelling variants and transliteration |
+| `nearest_historical_city`  | Find historical cities nearest to (lat, lon) in a given year (haversine, composite client-side)  |
 
 ---
 

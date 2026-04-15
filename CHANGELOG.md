@@ -2,6 +2,171 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.7.0] - 2026-04-15
+
+**Tema**: *Agent-ready integration* — due nuovi endpoint pensati per LLM
+agent workflow, estensione MCP a 23 tool, raddoppio delle rotte commerciali
+(25 → 41), tre nuove catene dinastiche, e frontend unificato con trade-route
+overlay, lista catene in sidebar, e timeline unificata per entità.
+
+### Numeri
+
+- **+2 endpoint REST**: `/v1/entities/{id}/timeline` (stream unificato
+  events + territory_changes + chain_transitions ordinato cronologicamente)
+  e `/v1/search/fuzzy` (ricerca approssimata cross-script via
+  `difflib.SequenceMatcher`, stdlib, zero dipendenze aggiuntive).
+- **+3 tool MCP** (totale 23): `full_timeline_for_entity`, `fuzzy_search`,
+  `nearest_historical_city` (composite haversine client-side).
+- **+16 rotte commerciali** (totale 41): batch Hanseatic/Baltic (8 rotte
+  bilaterali: London↔Lübeck, Brügge↔Novgorod, Bergen↔Lynn, ecc.) +
+  batch Indian Ocean Maritime (8 rotte: Calicut↔Muscat, Carreira da Índia,
+  VOC Retourvloot, Muscat↔Zanzibar slave and clove route, ecc.).
+- **+3 catene dinastiche** (totale 9): Byzantine→Ottoman (SUCCESSION
+  CONQUEST 1453), French monarchy→Republic (SUCCESSION 4-link),
+  Iranian Safavid→Qajar→Pahlavi→IRI (SUCCESSION 4-link).
+- **+16 test backend** (totale 371): 7 per timeline + 9 per fuzzy search.
+- **+3 test MCP** (totale 20 pass + 1 skip integration): handler mock
+  transport per i tre nuovi tool.
+
+### /v1/entities/{id}/timeline — stream unificato
+
+Risponde a una richiesta comune degli agenti AI: "raccontami TUTTA la storia
+di questa entità". Invece di concatenare 4 call (events/territory_changes/
+predecessors/successors), l'endpoint restituisce un unico stream ordinato:
+
+```json
+{
+  "entity_id": 1,
+  "entity_name": "Imperium Romanum",
+  "entity_type": "empire",
+  "year_start": -27, "year_end": 476,
+  "counts": {"events": 10, "territory_changes": 3, "chain_transitions": 1, "total": 14},
+  "timeline": [
+    {"kind": "event", "year": -27, "name": "Foundation of Roman Empire", ...},
+    {"kind": "territory_change", "year": 117, "description": "Trajan's conquests", ...},
+    {"kind": "chain_transition", "year": 476, "transition_type": "DISSOLUTION", ...}
+  ]
+}
+```
+
+Parametro `include_entity_links=true` (default) include ruolo dell'entità
+in ogni evento (MAIN_ACTOR/VICTIM/...). Ordinamento stabile: stesso anno →
+event prima di territory_change prima di chain_transition.
+
+### /v1/search/fuzzy — cross-script approximate matching
+
+Usa `difflib.SequenceMatcher` (stdlib Python, zero deps) su char-level
+Unicode, quindi funziona cross-script: `q=safavid` trova `دولت صفویه`
+(0.817), `q=Constantinople` trova `Κωνσταντινούπολις`, e query in cirillico
+risolvono entità latine. Scoring:
+
+- base: `SequenceMatcher.ratio()` fra query lowercased e target
+- +0.10 bonus se match su `name_original` (vs variant)
+- +0.15 bonus se prefix match (query inizia il nome)
+- +0.08 bonus se substring exact match
+
+Parametri: `q` (1-200 chars, obbligatorio), `limit` (1-50, default 20),
+`min_score` (0.0-1.0, default 0.4). Risposta ordinata per score decrescente.
+
+### MCP v0.3.0 — 23 tools
+
+Pacchetto `atlaspi-mcp` bumpato da 0.2.0 a 0.3.0. Tre nuovi tools:
+
+| Tool | Function |
+|---|---|
+| `full_timeline_for_entity` | Wrapper del nuovo endpoint unified timeline |
+| `fuzzy_search` | Wrapper del nuovo endpoint fuzzy search |
+| `nearest_historical_city` | Composite client-side: `list_cities(year=...)` + haversine sort per distanza |
+
+Per `nearest_historical_city` la composizione è client-side perché AtlasPI
+non espone `/v1/cities/nearest` — il tool scarica fino a 500 candidati
+filtrati per anno/tipo, calcola la distanza haversine in Python, ordina
+crescente e ritorna i primi `limit`.
+
+### Frontend — v6.7 polish
+
+- **Trade routes overlay** (ETHICS-010): nuovo toggle "Mostra rotte
+  commerciali" in sidebar. Le rotte attive nell'anno selezionato vengono
+  renderizzate sulla mappa come polyline colorate per tipo (marittima=blu,
+  terrestre=marrone, fluviale=azzurro, mista=grigia). Le rotte con
+  `involves_slavery: true` hanno un'outline rossa sotto la linea colorata
+  e tooltip esplicativo ("Rotta associata alla tratta schiavistica — vedi
+  ETHICS-010"), testo deliberatamente fattuale senza sensazionalismo.
+  Legenda inline sotto il toggle.
+- **Sidebar catene dinastiche**: nuovo `<details>` collapsabile fra
+  filtri e stats-bar. Mostra tutte le catene con badge del chain_type
+  (DYNASTY/SUCCESSION/COLONIAL/IDEOLOGICAL/...), numero di link, regione.
+  Catene IDEOLOGICAL hanno bordo arancione + badge ETHICS-003
+  ("continuità self-proclaimed"). Click su catena apre detail panel con
+  timeline verticale numerata e link cliccabili verso le entità.
+- **Detail panel: tab Timeline unificata**: il detail panel delle entità
+  ha ora due tab ("Panoramica" / "Timeline unificata"). Il secondo tab
+  chiama l'endpoint `/v1/entities/{id}/timeline` e renderizza le voci
+  come timeline verticale con marker colorati per kind (viola=event,
+  verde=territory, arancio=chain) e tooltip descrittivi.
+- Playback storico + year slider + year presets + reset tutti wired per
+  ri-renderizzare le rotte se il toggle è attivo.
+
+### Nuove catene dinastiche
+
+- **Byzantine → Ottoman** (SUCCESSION, 1 link CONQUEST 1453):
+  presa di Costantinopoli da parte di Mehmed II. Transizione violenta
+  documentata con fonti Kritovoulos, Runciman 1965, Ágoston 2010.
+- **French monarchy → Republic** (SUCCESSION, 4 link): Ancien Régime →
+  République française (1792 REVOLUTION) → Restauration borbonica non
+  modellata (mancano entità canoniche) → Seconde République (1848
+  REVOLUTION) → Troisième République (1870 DISSOLUTION del Second
+  Empire). Catena accorciata rispetto alla richiesta iniziale perché
+  Empire Napoléonien, Restauration, Monarchie de Juillet, Second Empire
+  non sono entità nel DB — documentato in `ethical_notes` anziché
+  inventato.
+- **Iranian Safavid → Qajar → Pahlavi → IRI** (SUCCESSION, 3 link):
+  Safavid → Qajar (1796 REVOLUTION, omesso Afsharid/Zand perché non in DB)
+  → Pahlavi (1925 CONQUEST di Reza Khan) → Repubblica Islamica (1979
+  REVOLUTION di Khomeini). `ethical_notes` documenta la repressione
+  post-rivoluzionaria.
+
+### Nuove rotte commerciali
+
+- **Batch 02 Hanseatic/Baltic** (8 rotte, 1150–1720): specific bilateral
+  spokes che complementano l'aggregato "Hanseatic League Network" di
+  batch_01: London↔Lübeck (Steelyard), Brügge↔Novgorod (Peterhof
+  kontor), Bergen↔Lynn/Boston (stockfish trade), Lübeck↔Reval
+  (tolmaching privileges), Visby↔Riga (Gotlandic chapter), Oostvaart
+  (Gdańsk↔Amsterdam grain), Hamburg↔Oslo, Stockholm↔Lübeck.
+- **Batch 03 Indian Ocean Maritime** (8 rotte, 600–1873): Calicut↔Muscat
+  (pepper-horse trade), Swahili↔Gujarat monsoon (gold/ivory/beads, con
+  flag `involves_slavery: true`), Quanzhou↔Aden (Song-Fatimid), Malacca↔
+  Ming (tribute missions), Carreira da Índia portoghese (Lisboa↔Goa
+  1498–1833), VOC Retourvloot (Batavia↔Amsterdam 1619–1799), **Muscat↔
+  Zanzibar Omani Slave and Clove Route** (1698–1873) con ETHICS-010
+  completo: scale (1.0–1.6M trafficked per Sheriff/Lovejoy), perpetrators
+  nominati (Al-Busaid, Said bin Sultan, Barghash, Tippu Tip), caravan-
+  mortality multiplier (4:1), descendant communities (Siddis, Habshis),
+  critica esplicita del silenzio commemorativo omanita contemporaneo.
+
+### Breaking / compatibility
+
+- Nessun breaking change. Endpoint esistenti invariati. Schema DB
+  invariato — i nuovi endpoint leggono su tabelle esistenti.
+- `atlaspi-mcp` bumpa minor (0.2 → 0.3); chi ha pinnato a `~=0.2.0`
+  continua a funzionare (tool set v0.2 immutato), chi vuole i nuovi
+  tool deve aggiornare a `>=0.3.0`.
+
+### File principali toccati
+
+- `src/api/routes/relations.py` (+timeline endpoint)
+- `src/api/routes/entities.py` (+fuzzy endpoint)
+- `static/index.html`, `static/app.js`, `static/style.css` (frontend)
+- `static/landing/index.html` (hero-tag + foot-version)
+- `mcp-server/src/atlaspi_mcp/{__init__,client,tools}.py` (v0.3.0)
+- `mcp-server/tests/test_tools.py` (+3 handler tests)
+- `mcp-server/README.md` (22 → 23 tools)
+- `data/chains/batch_02_more_chains.json` (nuovo)
+- `data/routes/batch_02_hanseatic_baltic.json` (nuovo)
+- `data/routes/batch_03_indian_ocean_maritime.json` (nuovo)
+- `tests/test_v670_timeline_fuzzy.py` (+16 test)
+
 ## [v6.6.0] - 2026-04-15
 
 **Tema**: Espansione degli eventi storici da 106 → 211 con quattro batch

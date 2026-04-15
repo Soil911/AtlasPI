@@ -14,6 +14,7 @@ geografiche: l'agente puo' combinarli per costruire risposte ricche
 
 from __future__ import annotations
 
+import math
 from collections.abc import Awaitable, Callable
 from dataclasses import dataclass
 from typing import Any
@@ -223,6 +224,110 @@ async def _h_successors(client: AtlasPIClient, args: dict[str, Any]) -> Any:
 
 
 # -- composite ---------------------------------------------------
+
+
+async def _h_full_timeline_for_entity(
+    client: AtlasPIClient, args: dict[str, Any]
+) -> Any:
+    """Restituisce la timeline unificata (eventi + territory + catene) di un'entità."""
+    return await client.full_timeline(
+        int(args["entity_id"]),
+        include_entity_links=args.get("include_entity_links"),
+    )
+
+
+async def _h_fuzzy_search(client: AtlasPIClient, args: dict[str, Any]) -> Any:
+    """Ricerca approssimata cross-script sui nomi delle entità."""
+    return await client.fuzzy_search(
+        str(args["q"]),
+        limit=args.get("limit"),
+        min_score=args.get("min_score"),
+    )
+
+
+def _haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    """Distanza geodetica (km) tra due coppie di coordinate (WGS84)."""
+    r = 6371.0  # raggio medio della Terra in km
+    phi1 = math.radians(lat1)
+    phi2 = math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dlam = math.radians(lon2 - lon1)
+    a = (
+        math.sin(dphi / 2) ** 2
+        + math.cos(phi1) * math.cos(phi2) * math.sin(dlam / 2) ** 2
+    )
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    return r * c
+
+
+async def _h_nearest_historical_city(
+    client: AtlasPIClient, args: dict[str, Any]
+) -> Any:
+    """Trova le città storiche più vicine a una coppia di coordinate.
+
+    Composizione client-side: non esiste un endpoint /v1/cities/nearest.
+    Scarica fino a ``max_candidates`` città (filtrate per anno e tipo se
+    specificati), calcola la distanza haversine in Python, ordina per
+    distanza crescente e ritorna le prime ``limit``.
+    """
+    lat = float(args["lat"])
+    lon = float(args["lon"])
+    year = args.get("year")
+    city_type = args.get("city_type")
+    limit = int(args.get("limit", 5) or 5)
+    max_candidates = int(args.get("max_candidates", 500) or 500)
+
+    payload = await client.nearest_historical_city(
+        lat=lat,
+        lon=lon,
+        year=year,
+        city_type=city_type,
+        limit=limit,
+        max_candidates=max_candidates,
+    )
+
+    results: list[dict[str, Any]] = []
+    for city in payload.get("cities", []):
+        if not isinstance(city, dict):
+            continue
+        c_lat = city.get("lat") or city.get("latitude")
+        c_lon = city.get("lon") or city.get("longitude")
+        if c_lat is None or c_lon is None:
+            continue
+        try:
+            dist = _haversine_km(lat, lon, float(c_lat), float(c_lon))
+        except (TypeError, ValueError):
+            continue
+        results.append(
+            {
+                "id": city.get("id"),
+                "name_original": city.get("name_original"),
+                "name_original_lang": city.get("name_original_lang"),
+                "city_type": city.get("city_type"),
+                "lat": float(c_lat),
+                "lon": float(c_lon),
+                "year_founded": city.get("year_founded"),
+                "year_abandoned": city.get("year_abandoned"),
+                "status": city.get("status"),
+                "distance_km": round(dist, 2),
+            }
+        )
+
+    results.sort(key=lambda r: r["distance_km"])
+    top = results[:limit]
+
+    return {
+        "query": {
+            "lat": lat,
+            "lon": lon,
+            "year": year,
+            "city_type": city_type,
+            "limit": limit,
+        },
+        "candidates_considered": payload.get("candidates_considered", len(results)),
+        "count": len(top),
+        "cities": top,
+    }
 
 
 async def _h_what_changed_between(
@@ -865,6 +970,155 @@ TOOLS: list[ToolDefinition] = [
             "additionalProperties": False,
         },
         handler=_h_successors,
+    ),
+    # ─── v6.7 unified timeline + fuzzy search ───────────────────────
+    ToolDefinition(
+        name="full_timeline_for_entity",
+        description=(
+            "Restituisce la timeline unificata di un'entità: eventi storici "
+            "(via EventEntityLink), cambi territoriali e transizioni di "
+            "catene successorie (predecessori + successori) in un unico "
+            "stream ordinato cronologicamente. Ogni voce ha un campo "
+            "discriminatore 'kind' fra 'event', 'territory_change' e "
+            "'chain_transition'. Usa questo tool invece di chiamare "
+            "get_evolution + events_for_entity + entity_predecessors + "
+            "entity_successors separatamente quando l'utente chiede la "
+            "storia completa di un'entità (es. 'raccontami tutta la storia "
+            "dell'Impero Romano d'Oriente'). Ritorna counts per ogni kind "
+            "piu' lo stream unificato."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {
+                "entity_id": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "ID dell'entità di cui ricostruire la timeline completa.",
+                },
+                "include_entity_links": {
+                    "type": "boolean",
+                    "description": (
+                        "Se true (default), include nei risultati i link "
+                        "EventEntityLink per ogni evento (ruolo dell'entità: "
+                        "MAIN_ACTOR, VICTIM, ecc.). Se false, ritorna solo "
+                        "i metadati base degli eventi."
+                    ),
+                },
+            },
+            "required": ["entity_id"],
+            "additionalProperties": False,
+        },
+        handler=_h_full_timeline_for_entity,
+    ),
+    ToolDefinition(
+        name="fuzzy_search",
+        description=(
+            "Ricerca approssimata (fuzzy) sui nomi delle entità storiche — "
+            "tollera errori di spelling, trascrizioni diverse e script "
+            "differenti. Usa difflib.SequenceMatcher a livello di caratteri "
+            "Unicode, quindi funziona anche cross-script (latino, cirillico, "
+            "arabo, cinese, devanagari, ecc.). Esempio: q='safavid' trova "
+            "'دولت صفویه' (script arabo), q='Constantinople' trova "
+            "'Κωνσταντινούπολις' (script greco). Preferisci questo tool "
+            "quando search_entities non trova risultati per via di "
+            "translitterazione non standard o spelling approssimativo."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {
+                "q": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200,
+                    "description": (
+                        "Query di ricerca. Può essere in qualsiasi script; "
+                        "l'algoritmo confronta char-by-char quindi è "
+                        "robusto anche a omissioni e refusi."
+                    ),
+                },
+                "limit": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 50,
+                    "description": "Numero massimo di risultati (default: 20).",
+                },
+                "min_score": {
+                    "type": "number",
+                    "minimum": 0.0,
+                    "maximum": 1.0,
+                    "description": (
+                        "Soglia minima di similarità (0.0-1.0, default 0.4). "
+                        "Valori bassi (<0.4) producono match rumorosi; "
+                        "valori alti (>0.7) richiedono match quasi esatti."
+                    ),
+                },
+            },
+            "required": ["q"],
+            "additionalProperties": False,
+        },
+        handler=_h_fuzzy_search,
+    ),
+    ToolDefinition(
+        name="nearest_historical_city",
+        description=(
+            "Trova le città storiche più vicine a una coppia di coordinate "
+            "(latitudine, longitudine), opzionalmente filtrate per anno di "
+            "attività e tipo (CAPITAL, TRADE_HUB, ecc.). Calcola la "
+            "distanza haversine client-side e ordina per distanza "
+            "crescente. Usa per domande tipo 'che città c'erano vicino a "
+            "41.9, 12.5 nel 100 d.C.?' (città vicino Roma) o 'qual è il "
+            "trade hub più vicino a Venezia nel 1400?'. Nota: questo tool "
+            "trova CITTÀ storiche (dataset separato da GeoEntity) — per "
+            "capitali di imperi/regni usa nearby_entities."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {
+                "lat": {
+                    "type": "number",
+                    "minimum": -90,
+                    "maximum": 90,
+                    "description": "Latitudine in gradi decimali (WGS84).",
+                },
+                "lon": {
+                    "type": "number",
+                    "minimum": -180,
+                    "maximum": 180,
+                    "description": "Longitudine in gradi decimali (WGS84).",
+                },
+                "year": {
+                    **_YEAR_SCHEMA,
+                    "description": _YEAR_SCHEMA["description"]
+                    + " Filtra città attive (year_founded <= anno <= year_abandoned).",
+                },
+                "city_type": {
+                    "type": "string",
+                    "description": (
+                        "CAPITAL / TRADE_HUB / RELIGIOUS_CENTER / FORTRESS / "
+                        "PORT / ACADEMIC_CENTER / INDUSTRIAL_CENTER / "
+                        "MULTI_PURPOSE / OTHER."
+                    ),
+                },
+                "limit": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 50,
+                    "description": "Numero massimo di città da ritornare (default: 5).",
+                },
+                "max_candidates": {
+                    "type": "integer",
+                    "minimum": 10,
+                    "maximum": 1000,
+                    "description": (
+                        "Numero massimo di candidati da scaricare prima "
+                        "del sort client-side (default: 500)."
+                    ),
+                },
+            },
+            "required": ["lat", "lon"],
+            "additionalProperties": False,
+        },
+        handler=_h_nearest_historical_city,
     ),
     # ─── composite tools ────────────────────────────────────────────
     ToolDefinition(

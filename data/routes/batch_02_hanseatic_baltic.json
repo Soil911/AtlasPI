@@ -1,0 +1,480 @@
+[
+  {
+    "name_original": "London–Lübeck Wool and Cloth Route",
+    "name_original_lang": "en",
+    "route_type": "SEA",
+    "start_year": 1266,
+    "end_year": 1598,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [-0.08, 51.51],
+        [1.30, 51.38],
+        [4.48, 51.92],
+        [7.14, 53.32],
+        [8.80, 53.08],
+        [10.69, 53.87],
+        [10.68, 53.87]
+      ]
+    },
+    "commodities": [
+      "raw-wool",
+      "English-broadcloth",
+      "Flemish-cloth",
+      "tin",
+      "lead",
+      "Baltic-wax",
+      "Baltic-furs",
+      "Rhenish-wine",
+      "stockfish"
+    ],
+    "description": "Core North Sea artery of the Hanseatic League linking the London Steelyard (Stalhof) on the Thames with the Hanseatic head-city of Lübeck via the Wadden Sea and the Elbe-Trave portage (later the Stecknitz Canal, 1398, the first watershed-crossing canal in Europe). The route carried English raw wool and, from the late 14th century, finished English broadcloth eastward, and returned Baltic furs, wax, stockfish from Bergen, and Rhenish wine to the London market. The Steelyard was granted its charter of privileges by Henry III in 1266 and confirmed by Edward I in 1303 (the Carta Mercatoria); Hanseatic merchants enjoyed tax privileges there until Elizabeth I revoked the charter in 1598 under pressure from the Merchant Adventurers. The London–Lübeck line was the principal commercial sinew of Anglo-German trade for over three centuries and its revocation marks the effective end of Hanseatic primacy in the western reach.",
+    "involves_slavery": false,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "The Steelyard enjoyed extraterritorial privileges (own jurisdiction, own weights and measures, exemption from certain English tolls) that were a continuous source of friction with English merchants. The Merchant Adventurers' agitation against the Hansa from the 15th century onward is sometimes romanticised as 'English commercial nationalism'; it was also a straightforward guild rent-seeking campaign. Both framings belong in the record.",
+    "sources": [
+      {
+        "citation": "Lloyd, T. H. England and the German Hanse, 1157-1611: A Study of Their Trade and Commercial Diplomacy. Cambridge University Press, 1991.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Dollinger, Philippe. The German Hansa. Macmillan, 1970.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Jenks, Stuart. 'A Capital Without a State: Lübeck caput tocius hanze (to 1474)'. Historical Research 65, 1992.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "London",
+      "Sluys",
+      "Bruges",
+      "Emden",
+      "Bremen",
+      "Hamburg",
+      "Lübeck"
+    ]
+  },
+  {
+    "name_original": "Brügge–Novgorod Fur, Amber and Wax Route",
+    "name_original_lang": "de",
+    "route_type": "SEA",
+    "start_year": 1229,
+    "end_year": 1494,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [3.22, 51.21],
+        [4.48, 51.92],
+        [8.80, 53.08],
+        [10.69, 53.87],
+        [13.07, 54.31],
+        [18.65, 54.35],
+        [19.95, 54.70],
+        [24.10, 56.95],
+        [24.75, 59.43],
+        [28.19, 59.38],
+        [31.28, 58.52]
+      ]
+    },
+    "commodities": [
+      "Russian-furs",
+      "sable",
+      "squirrel-pelts",
+      "beeswax",
+      "Baltic-amber",
+      "honey",
+      "hemp",
+      "flax",
+      "Flemish-cloth",
+      "silver"
+    ],
+    "description": "Longest single-direction Hanseatic corridor, running over 2,500 km from the Flemish kontor at Bruges (Hansakontor zu Brügge, effectively from the 1252 privileges granted by Countess Margaret) via Lübeck, Gdańsk and Reval to the Peterhof at Novgorod. The 1229 treaty between Smolensk and the Gotland merchants ('Smolensk Peace Treaty') is the earliest surviving document of the commercial diplomacy that underpinned the traffic. Westbound cargoes were Russian furs (especially sable from the Novgorod-tributary Finno-Ugric north), beeswax for Catholic liturgical candles, Baltic amber, honey, and hemp/flax for North Sea naval rope and sailcloth. Eastbound cargoes were Flemish fine cloth, silver specie, Mediterranean luxury goods trans-shipped at Bruges, and (from the 14th century) Lüneburg salt. The Peterhof closed in 1494 when Ivan III arrested the 49 Hanseatic merchants resident in Novgorod and seized their goods, a date conventionally marking the beginning of the Hansa's decline in the eastern trade.",
+    "involves_slavery": false,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "The Novgorod fur trade depended on a tributary (yasak) system imposed by the Novgorod republic on Finno-Ugric and Samoyedic peoples of the Dvina, Pechora and trans-Uralic north. Although the Hanseatic merchants did not themselves collect the tribute, the commodity chain as a whole rested on a coercive extraction regime whose victims (Karelians, Komi, Nenets, Khanty, Mansi) are rarely named in Western sources. For a specific route entry the Hansa segment is well-documented; the upstream extraction should be treated in a separate entity record.",
+    "sources": [
+      {
+        "citation": "Rybina, E. A. Novgorod i Ganza [Novgorod and the Hansa]. Rukopisnye pamiatniki Drevnei Rusi, 2009.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Martin, Janet. Treasure of the Land of Darkness: The Fur Trade and Its Significance for Medieval Russia. Cambridge University Press, 1986.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Angermann, Norbert, and Klaus Friedland, eds. Novgorod: Markt und Kontor der Hanse. Böhlau, 2002.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Brügge",
+      "Antwerpen",
+      "Hamburg",
+      "Lübeck",
+      "Stralsund",
+      "Danzig",
+      "Königsberg",
+      "Riga",
+      "Reval",
+      "Narva",
+      "Novgorod"
+    ]
+  },
+  {
+    "name_original": "Bergen–Lynn/Boston Stockfish Route",
+    "name_original_lang": "non",
+    "route_type": "SEA",
+    "start_year": 1247,
+    "end_year": 1559,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [14.40, 68.10],
+        [5.34, 60.39],
+        [-1.70, 58.00],
+        [0.40, 52.75],
+        [-0.12, 52.57]
+      ]
+    },
+    "commodities": [
+      "stockfish",
+      "klippfish",
+      "cod-liver-oil",
+      "train-oil",
+      "walrus-ivory",
+      "skreid",
+      "English-broadcloth",
+      "grain",
+      "beer"
+    ],
+    "description": "Annual convoy route carrying dried cod (tørrfisk, 'stockfish') from the Lofoten archipelago via the Bergen kontor (Bryggen / Tyskebryggen, the 'German Wharf') to the east-coast English ports of Boston, King's Lynn (Bishop's Lynn, in medieval spelling 'Lenne'), and Hull. Stockfish — air-dried Atlantic cod, light, nearly imperishable, high in protein — was the staple Lenten and shipboard protein of late-medieval Catholic Europe; the Lofoten fishery supplied most of the continental market between the 13th and 16th centuries. Håkon IV Håkonsson's 1247 privileges at Bergen opened the trade to German merchants; the Bergen kontor was formally constituted in 1366. Lynn and Boston were Hanseatic 'outport' partners with their own Steelyards (the Hanse House at Lynn, built 1475, still stands). The trade declined as English fisheries developed on the Icelandic and later Newfoundland banks, and finally closed when Frederik II expelled the Hanseatic privileges from Bergen in the 1550s; the Bergen kontor formally dissolved in 1754 but had ceased to be commercially significant 200 years earlier.",
+    "involves_slavery": false,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "The Bergen kontor was notoriously hermetic: the German merchants lived in sworn bachelor communities (the 'Bryggen rules' forbade marriage, Norwegian-speaking, and many forms of social integration) in order to keep Hanseatic capital and Hanseatic people legally separable from the Norwegian crown's jurisdiction. Norwegian historiography has at times treated the Bergen Hansa as an oppressive occupier; German historiography has preferred the language of commercial partnership. Both are partially right; the record should show the privileges, the violence (notably the 1455 murder of Bishop Thorleif Olafsson), and the economic dependence of coastal Norway on German capital.",
+    "sources": [
+      {
+        "citation": "Nedkvitne, Arnved. The German Hansa and Bergen, 1100-1600. Böhlau, 2014.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Helle, Knut. Bergen bys historie, Bind I: Kongssete og kjøpstad fra opphavet til 1536. Universitetsforlaget, 1982.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Burkhardt, Mike. 'One Hundred Years of Thriving Commerce at a Major English Sea Port – the Hanseatic Trade at Boston Between 1370 and 1470'. In The Hanse in Medieval and Early Modern Europe, Brill, 2013.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Vágar",
+      "Bergen",
+      "Shetland",
+      "Boston",
+      "Bishop's Lynn"
+    ]
+  },
+  {
+    "name_original": "Lübeck–Reval Grain and Salt Route",
+    "name_original_lang": "de",
+    "route_type": "SEA",
+    "start_year": 1280,
+    "end_year": 1630,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [10.69, 53.87],
+        [10.60, 53.97],
+        [13.07, 54.31],
+        [18.65, 54.35],
+        [19.95, 54.70],
+        [24.10, 56.95],
+        [24.75, 59.43]
+      ]
+    },
+    "commodities": [
+      "Lüneburg-salt",
+      "Baltic-grain",
+      "rye",
+      "beer",
+      "cloth",
+      "iron",
+      "herring",
+      "flax",
+      "hemp"
+    ],
+    "description": "Short-sea workhorse route of the Baltic Hanseatic economy, carrying Lüneburg rock salt (hauled to Lübeck via the Stecknitz Canal from 1398) eastward to Reval (Tallinn) and returning with Baltic grain — principally Livonian and Estonian rye — for the salt-and-fish economies of the western kontore. The 1285 recognition of Reval as a Hansestadt formalised the connection, and the 1346 sale of the Danish Duchy of Estonia to the Teutonic Order by Valdemar IV stabilised Reval's governance under the Order while preserving Hanseatic commercial primacy. The route was the throughput trade of the late-medieval Baltic: salt (northern Europe's only meat-preservation technology) for grain (its only large-scale calorie source). The two-way salt-grain symmetry is the single best-studied commodity chain of the pre-industrial North, thanks to Lübeck's unusually complete Pfundzollbücher customs records (1368 onward).",
+    "involves_slavery": false,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "The Livonian grain that reached Lübeck was produced on manorial estates whose labour regime was increasingly coerced after c. 1500 (the 'second serfdom' / Gutsherrschaft of the Baltic German nobility over Estonian and Latvian peasants). The commodity chain therefore rests on a coercive rural labour regime whose victims are the indigenous Estonian- and Latvian-speaking populations; this is documented in the entity records for the Livonian Confederation and the Duchy of Estonia, not repeated here.",
+    "sources": [
+      {
+        "citation": "Jahnke, Carsten. Das Silber des Meeres: Fang und Vertrieb von Ostseehering zwischen Norwegen und Italien (12.-16. Jahrhundert). Böhlau, 2000.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Kreem, Juhan. The Town and Its Lord: Reval and the Teutonic Order in the Fifteenth Century. Tallinna Linnaarhiiv, 2002.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Hammel-Kiesow, Rolf. Die Hanse. C. H. Beck, 6th ed., 2014.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Lübeck",
+      "Travemünde",
+      "Stralsund",
+      "Danzig",
+      "Königsberg",
+      "Riga",
+      "Reval"
+    ]
+  },
+  {
+    "name_original": "Visby–Riga Gotland Baltic Route",
+    "name_original_lang": "non",
+    "route_type": "SEA",
+    "start_year": 1160,
+    "end_year": 1361,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [18.29, 57.64],
+        [21.00, 57.40],
+        [24.10, 56.95]
+      ]
+    },
+    "commodities": [
+      "Russian-furs",
+      "beeswax",
+      "amber",
+      "silver",
+      "Flemish-cloth",
+      "salt",
+      "walrus-ivory",
+      "honey"
+    ],
+    "description": "12th- and 13th-century high-water route across the open Baltic linking the cosmopolitan Gotlandic staple of Visby with the Livonian river-mouth of the Düna (Daugava) at Riga. Visby in the 1100s was the pivotal emporium of the northern-European fur-and-wax trade, a joint Gotlandic, Low German and Rus' market before the rise of continental Lübeck; the 1161 Artlenburg Privilege issued by Henry the Lion granted German and Gotlandic merchants reciprocal rights, a foundational moment of Hanseatic prehistory. Riga was founded by Bishop Albert of Buxhoeveden in 1201 as the forward base of the German crusading penetration of Livonia; it immediately became the western terminus of the Düna/Dnieper-to-Byzantium riverine system and the Livonian outlet of the Russian (Polotsk, Smolensk, Novgorod) trades. The Visby–Riga leg was the Gotlandic hub's single most important line for half a century. The route lost primacy after Valdemar IV of Denmark sacked Visby in 1361 and Lübeck replaced Gotland as the Baltic pivot.",
+    "involves_slavery": false,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "ethical_notes": "The foundation of Riga (1201) is part of the Baltic Crusade (Livonian Crusade); the 'trade route' framing should not obscure the fact that German commercial penetration of Livonia was accompanied and enabled by military conquest of the indigenous Livs, Latgalians, Selonians and Semigallians and their forcible Christianisation. The Livonian Brothers of the Sword (founded 1202, absorbed into the Teutonic Order 1237) were both a military and a commercial infrastructure. The Visby–Riga commercial route cannot be cleanly separated from the violence that produced its eastern terminus.",
+    "sources": [
+      {
+        "citation": "Yrwing, Hugo. Visby – Hansestad på Gotland. Gidlunds, 1986.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Selart, Anti. Livonia, Rus' and the Baltic Crusades in the Thirteenth Century. Brill, 2015.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Blomkvist, Nils. The Discovery of the Baltic: The Reception of a Catholic World-System in the European North (AD 1075-1225). Brill, 2005.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Visby",
+      "Ösel",
+      "Riga"
+    ]
+  },
+  {
+    "name_original": "Gdańsk–Amsterdam Grain and Timber Route (Oostvaart)",
+    "name_original_lang": "nl",
+    "route_type": "SEA",
+    "start_year": 1441,
+    "end_year": 1795,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [18.65, 54.35],
+        [14.55, 53.43],
+        [12.54, 55.67],
+        [12.10, 55.87],
+        [8.15, 56.00],
+        [4.90, 52.37]
+      ]
+    },
+    "commodities": [
+      "rye",
+      "wheat",
+      "Polish-grain",
+      "timber",
+      "oak",
+      "pine-deals",
+      "pitch",
+      "tar",
+      "flax",
+      "potash",
+      "hemp"
+    ],
+    "description": "Sea artery of the Dutch 'Oostvaart' (eastern voyage), a.k.a. the 'mother trade' (moedernegotie) of the Amsterdam commercial empire. From the mid-15th century Amsterdam shippers bypassed the Lübeck-centred Hanseatic monopoly and bought Polish rye and wheat directly at Danzig (Gdańsk), then the greatest grain port in Europe, supplied by the Vistula raft-trade from the szlachta latifundia of Mazovia, Kujawy and Wielkopolska. Return cargoes were Dutch herring, textiles and specie. The 1441 Treaty of Copenhagen guaranteed Dutch ships passage of the Øresund, and by 1600 Dutch bottoms carried c. 70% of the Øresund grain traffic (as the Sundtoldregnskaber / Sound Toll Registers at Helsingør record in extraordinary serial detail through 1857). This route fed the urban populations of Holland, enabling the specialised commercial-horticultural Dutch agriculture that underwrote the Dutch Golden Age. The trade declined after the Second Partition of Poland (1793) and the French occupation of the Netherlands (1795) disrupted Amsterdam's commercial freedom.",
+    "involves_slavery": false,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "ethical_notes": "The Polish grain shipped from Danzig was produced on manorial estates under the Polish 'second serfdom' (pańszczyzna) of the 16th–18th centuries. The cheap urban bread of Amsterdam and Leiden that underpinned Dutch Golden Age prosperity rested on increasingly coerced peasant labour in the Commonwealth. Dutch historiography has traditionally foregrounded commercial innovation and foreign-policy shrewdness; Polish historiography the exploitative export-agrarian turn that arrested Polish urban development. Both are components of the same phenomenon.",
+    "sources": [
+      {
+        "citation": "de Vries, Jan, and Ad van der Woude. The First Modern Economy: Success, Failure, and Perseverance of the Dutch Economy, 1500-1815. Cambridge University Press, 1997.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Bogucka, Maria. Baltic Commerce and Urban Society, 1500-1700: Gdańsk/Danzig and Its Polish Context. Ashgate, 2003.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Unger, Richard W. 'Dutch Grain Trade in the Seventeenth Century'. In Shipping and Economic Growth 1350-1850, Brill, 2011.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Danzig",
+      "Stettin",
+      "Copenhagen",
+      "Helsingør",
+      "Skagen",
+      "Amsterdam"
+    ]
+  },
+  {
+    "name_original": "Hamburg–Oslo Norwegian Trade Route",
+    "name_original_lang": "de",
+    "route_type": "SEA",
+    "start_year": 1250,
+    "end_year": 1700,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [9.99, 53.55],
+        [8.80, 53.08],
+        [8.15, 56.00],
+        [10.73, 59.91]
+      ]
+    },
+    "commodities": [
+      "timber",
+      "deals",
+      "iron",
+      "copper",
+      "tar",
+      "pitch",
+      "hides",
+      "cloth",
+      "grain",
+      "beer",
+      "Lüneburg-salt"
+    ],
+    "description": "Secondary Hanseatic line running up the North Sea and through the Skagerrak to the Oslofjord, complementing the primary Bergen stockfish route by serving south-east Norway (Oslo, Tønsberg) with manufactured goods, grain and beer and carrying back timber (oak and pine deals for shipbuilding and house-construction in the treeless Low Countries and Denmark) together with Kongsberg silver and Røros copper after 1623/1644. Oslo (known as Christiania from 1624 after a fire) had a German kontor through the 14th and 15th centuries, smaller than Bergen's but commercially significant. The route intensified in the 16th–17th centuries as Dutch and English shipbuilding demand for Norwegian timber grew; after 1600 the leg became as much a Dutch trade as a Hanseatic one, and the 'trelasthandel' (timber trade) became the defining economic activity of south-eastern Norway.",
+    "involves_slavery": false,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "ethical_notes": "Norwegian historiography after 1814 has often framed Hanseatic and later Dutch commercial primacy in Norway as a foreign-capital siphon that inhibited local bourgeois formation. The framing is partially correct (much timber-trade surplus accumulated outside Norway) and partially nationalist reading-backward; both interpretations belong in the historiographic record.",
+    "sources": [
+      {
+        "citation": "Bjørkvik, Halvard. 'Norges handel med Hansaen'. In Norges økonomiske historie, Universitetsforlaget, 1996.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Sicking, Louis. Neptune and the Netherlands: State, Economy, and War at Sea in the Renaissance. Brill, 2004.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Hamburg",
+      "Bremen",
+      "Skagen",
+      "Oslo"
+    ]
+  },
+  {
+    "name_original": "Stockholm–Lübeck Iron and Copper Route",
+    "name_original_lang": "sv",
+    "route_type": "SEA",
+    "start_year": 1252,
+    "end_year": 1720,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [18.07, 59.33],
+        [17.62, 59.26],
+        [16.20, 58.60],
+        [18.29, 57.64],
+        [14.69, 55.26],
+        [11.84, 54.57],
+        [11.41, 53.90],
+        [10.69, 53.87]
+      ]
+    },
+    "commodities": [
+      "osmund-iron",
+      "bar-iron",
+      "Swedish-copper",
+      "Falun-copper",
+      "silver",
+      "Lüneburg-salt",
+      "cloth",
+      "beer",
+      "wine",
+      "grain"
+    ],
+    "description": "Core line of the Swedish metal export trade, linking Stockholm — founded c. 1252 by Birger Jarl in part to control the outflow of Bergslagen metals — with Lübeck via Kalmar and Gotland. Stockholm's Hanseatic German merchant community was large and politically active through the 14th and 15th centuries; the 1471 Battle of Brunkeberg and the 1520 Stockholm Bloodbath are both episodes in the long-running contest over how Swedish crown, Danish union (Kalmar Union 1397-1523) and German commercial interests would share the rents of Swedish metal exports. Swedish 'osmund' iron (hammered into 300-gram balls for easy transport), and from the 16th century bar-iron and Falun copper, were among Europe's most important strategic commodities — Swedish copper roofs cover much of 17th-century baroque Europe, and Swedish bar-iron became the raw input of the English gun- and tool-making industries. Gustav Vasa (r. 1523-1560) progressively broke the German commercial monopoly after Sweden's break with the Kalmar Union, and by the Great Northern War's end (1721) Stockholm–Lübeck was a bilateral trade among many rather than a Hanseatic privileged line.",
+    "involves_slavery": false,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "The 1520 Stockholm Bloodbath (Stockholms blodbad) — in which Christian II of Denmark-Norway executed approximately 80-90 Swedish nobles, bishops and burghers — was partly a contest over commercial alignment (which merchant network would control the Bergslagen output). It is often framed in Swedish national historiography as simple tyrannical outrage; the commercial dimension is equally real. Sami populations in the northern Bergslagen periphery (Lappmarken) were also subject to Swedish crown taxation (birkarlar and later lappskatteland) that contributed to the metal economy; this is recorded in the Sami entity entries and not repeated here.",
+    "sources": [
+      {
+        "citation": "Heckscher, Eli F. An Economic History of Sweden. Harvard University Press, 1954.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Sandström, Åke. Plöjande borgare och handlande bönder: Mötet mellan den europeiska marknaden och 1500-talets svenska bondesamhälle. Uppsala University, 1996.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Myrdal, Janken, and Mats Morell, eds. The Agrarian History of Sweden: From 4000 BC to AD 2000. Nordic Academic Press, 2011.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Stockholm",
+      "Södertälje",
+      "Söderköping",
+      "Visby",
+      "Kalmar",
+      "Rostock",
+      "Wismar",
+      "Lübeck"
+    ]
+  }
+]

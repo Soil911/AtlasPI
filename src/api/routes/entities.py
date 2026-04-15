@@ -440,6 +440,111 @@ def search_entities(
 
 
 @router.get(
+    "/v1/search/fuzzy",
+    summary="Ricerca fuzzy multi-script su name_original + name_variants",
+    description=(
+        "Ranking per similarità (SequenceMatcher ratio) sul nome originale e "
+        "sulle varianti. Funziona cross-script (Greek, Persian, Chinese, "
+        "Cyrillic) perché la metrica è character-level. Utile per agenti AI "
+        "che ricevono nomi approssimati o in trascrizione errata."
+    ),
+)
+def search_entities_fuzzy(
+    q: str = Query(..., min_length=1, max_length=200, description="Testo da cercare (fuzzy)"),
+    limit: int = Query(10, ge=1, le=50, description="Max risultati"),
+    min_score: float = Query(
+        0.4,
+        ge=0.0,
+        le=1.0,
+        description="Soglia minima di similarità (0.0=tutto, 1.0=solo match esatti)",
+    ),
+    db: Session = Depends(get_db),
+):
+    """Ricerca fuzzy su tutti i nomi (originale + varianti).
+
+    ETHICS-001 rispettato: match sul name_original (lingua locale) come
+    priorità, con bonus di ranking per match esatto/prefisso sul nome
+    originale rispetto ai variants (che possono essere trascrizioni
+    coloniali).
+
+    Algoritmo:
+    - Per ogni entità carica name_original + tutti i name_variants.
+    - Calcola SequenceMatcher ratio sul lowercase-stripped candidate.
+    - Bonus di +0.10 se il match è sul name_original (non su una variant).
+    - Bonus di +0.15 se il match è un prefisso case-insensitive.
+    - Risultati filtrati per min_score, ordinati per score discendente.
+    """
+    from difflib import SequenceMatcher
+
+    q_norm = q.strip().lower()
+    if not q_norm:
+        return {"query": q, "count": 0, "results": []}
+
+    # Carica tutte le entità + varianti (N=~850 è fattibile in memoria
+    # senza indici trigram PostgreSQL).
+    entities = (
+        db.query(GeoEntity)
+        .options(joinedload(GeoEntity.name_variants))
+        .all()
+    )
+
+    scored: list[tuple[float, GeoEntity, str, bool]] = []
+    for e in entities:
+        candidates: list[tuple[str, bool]] = [(e.name_original, True)]
+        for v in e.name_variants:
+            candidates.append((v.name, False))
+
+        best_score = 0.0
+        best_matched_name = e.name_original
+        best_is_original = True
+        for cand_name, is_original in candidates:
+            if not cand_name:
+                continue
+            cand_norm = cand_name.strip().lower()
+            ratio = SequenceMatcher(None, q_norm, cand_norm).ratio()
+            # ETHICS-001: bonus per match sul name_original.
+            if is_original:
+                ratio += 0.10
+            # Prefix bonus (parziale ma solido).
+            if cand_norm.startswith(q_norm) or q_norm.startswith(cand_norm):
+                ratio += 0.15
+            # Substring fallback (handles acronyms like "URSS" in longer forms).
+            elif q_norm in cand_norm or cand_norm in q_norm:
+                ratio += 0.08
+            if ratio > best_score:
+                best_score = ratio
+                best_matched_name = cand_name
+                best_is_original = is_original
+
+        if best_score >= min_score:
+            scored.append((best_score, e, best_matched_name, best_is_original))
+
+    scored.sort(key=lambda t: -t[0])
+    top = scored[:limit]
+
+    return {
+        "query": q,
+        "count": len(top),
+        "results": [
+            {
+                "id": e.id,
+                "name_original": e.name_original,
+                "name_original_lang": e.name_original_lang,
+                "matched_name": matched,
+                "matched_is_original": is_original,
+                "score": round(min(score, 1.0), 4),  # cap display at 1.0
+                "entity_type": e.entity_type,
+                "year_start": e.year_start,
+                "year_end": e.year_end,
+                "status": e.status,
+                "confidence_score": e.confidence_score,
+            }
+            for score, e, matched, is_original in top
+        ],
+    }
+
+
+@router.get(
     "/v1/types",
     response_model=list[TypeInfo],
     summary="Elenco tipi di entità disponibili",

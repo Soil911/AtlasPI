@@ -3,6 +3,7 @@
 GET /v1/entities/{id}/related          entità correlate
 GET /v1/entities/{id}/contemporaries   entità attive nello stesso periodo
 GET /v1/entities/{id}/evolution        evoluzione temporale dell'entità
+GET /v1/entities/{id}/timeline         timeline unificata (eventi + territory + chain)
 GET /v1/compare/{id1}/{id2}            confronto tra due entità
 """
 
@@ -15,7 +16,13 @@ from sqlalchemy.orm import Session, joinedload
 
 from src.api.errors import EntityNotFoundError
 from src.db.database import get_db
-from src.db.models import GeoEntity
+from src.db.models import (
+    ChainLink,
+    DynastyChain,
+    EventEntityLink,
+    GeoEntity,
+    HistoricalEvent,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -201,6 +208,200 @@ def get_evolution(
             }
             for tc in changes
         ],
+    }
+
+
+# ─── Unified Timeline (v6.7) ────────────────────────────────────
+
+
+@router.get(
+    "/v1/entities/{entity_id}/timeline",
+    summary="Timeline unificata di un'entità",
+    description=(
+        "Fonde in un unico stream cronologico: "
+        "(1) territory_changes dell'entità, "
+        "(2) historical_events che coinvolgono l'entità (via event_entity_links), "
+        "(3) chain_transitions dove l'entità entra/esce da una catena dinastica. "
+        "Ogni evento ha un campo `kind` (territory_change|event|chain_transition) "
+        "per disambiguare la sorgente. Utile per agenti AI che devono "
+        "ricostruire la traiettoria completa di un'entità storica senza "
+        "fare 3-4 chiamate separate."
+    ),
+)
+def get_entity_timeline(
+    entity_id: int,
+    response: Response,
+    include_entity_links: bool = Query(
+        True,
+        description=(
+            "Se True include tutti gli eventi con un link all'entità (MAIN_ACTOR, "
+            "VICTIM, PARTICIPANT, AFFECTED, WITNESS, FOUNDED, DISSOLVED). "
+            "Se False include solo eventi dove l'entità è MAIN_ACTOR o FOUNDED/DISSOLVED."
+        ),
+    ),
+    db: Session = Depends(get_db),
+):
+    """Timeline unificata — events + territory_changes + chain_transitions.
+
+    ETHICS-007: event_type e change_type preservati letteralmente (GENOCIDE,
+    COLONIAL_VIOLENCE, CONQUEST) senza eufemismi. role preservato (VICTIM non
+    viene softened in "affected").
+    """
+    entity = (
+        db.query(GeoEntity)
+        .options(joinedload(GeoEntity.territory_changes))
+        .filter(GeoEntity.id == entity_id)
+        .first()
+    )
+    if not entity:
+        raise EntityNotFoundError(entity_id)
+
+    timeline: list[dict] = []
+
+    # 1) Territory changes (ordered by year).
+    for tc in entity.territory_changes:
+        timeline.append(
+            {
+                "kind": "territory_change",
+                "year": tc.year,
+                "change_type": tc.change_type,
+                "region": tc.region,
+                "description": tc.description,
+                "population_affected": tc.population_affected,
+                "confidence_score": tc.confidence_score,
+            }
+        )
+
+    # 2) Historical events linked to this entity.
+    q_events = (
+        db.query(HistoricalEvent, EventEntityLink.role, EventEntityLink.notes)
+        .join(EventEntityLink, EventEntityLink.event_id == HistoricalEvent.id)
+        .filter(EventEntityLink.entity_id == entity_id)
+    )
+    if not include_entity_links:
+        q_events = q_events.filter(
+            EventEntityLink.role.in_(["MAIN_ACTOR", "FOUNDED", "DISSOLVED"])
+        )
+    for ev, role, notes in q_events.all():
+        timeline.append(
+            {
+                "kind": "event",
+                "year": ev.year,
+                "year_end": ev.year_end,
+                "event_id": ev.id,
+                "name_original": ev.name_original,
+                "name_original_lang": ev.name_original_lang,
+                "event_type": ev.event_type,  # ETHICS-007: preserved verbatim.
+                "role": role,  # ETHICS-007: VICTIM stays VICTIM.
+                "link_notes": notes,
+                "main_actor": ev.main_actor,
+                "known_silence": ev.known_silence,
+                "confidence_score": ev.confidence_score,
+                "status": ev.status,
+            }
+        )
+
+    # 3) Chain transitions involving this entity.
+    # For each chain_link with entity_id = X, include the transition INTO X
+    # (from sequence_order-1) if it exists, and the transition OUT OF X
+    # (the next link with sequence_order+1) if it exists.
+    my_links = (
+        db.query(ChainLink)
+        .options(joinedload(ChainLink.chain))
+        .filter(ChainLink.entity_id == entity_id)
+        .all()
+    )
+    for ml in my_links:
+        chain = ml.chain
+        # Incoming transition (if this entity is not the first in the chain).
+        if ml.transition_year is not None and ml.transition_type is not None:
+            # Find the predecessor entity (sequence_order - 1).
+            predecessor = (
+                db.query(ChainLink)
+                .options(joinedload(ChainLink.entity))
+                .filter(
+                    ChainLink.chain_id == chain.id,
+                    ChainLink.sequence_order == ml.sequence_order - 1,
+                )
+                .first()
+            )
+            timeline.append(
+                {
+                    "kind": "chain_transition",
+                    "year": ml.transition_year,
+                    "chain_id": chain.id,
+                    "chain_name": chain.name,
+                    "chain_type": chain.chain_type,
+                    "transition_type": ml.transition_type,  # ETHICS-002 preserved.
+                    "is_violent": ml.is_violent,
+                    "direction": "inbound",
+                    "from_entity_id": predecessor.entity_id if predecessor else None,
+                    "from_entity_name": (
+                        predecessor.entity.name_original if predecessor else None
+                    ),
+                    "to_entity_id": entity_id,
+                    "to_entity_name": entity.name_original,
+                    "description": ml.description,
+                    "ethical_notes": ml.ethical_notes,
+                }
+            )
+        # Outgoing transition (if a successor exists in the same chain).
+        successor = (
+            db.query(ChainLink)
+            .options(joinedload(ChainLink.entity))
+            .filter(
+                ChainLink.chain_id == chain.id,
+                ChainLink.sequence_order == ml.sequence_order + 1,
+            )
+            .first()
+        )
+        if (
+            successor is not None
+            and successor.transition_year is not None
+            and successor.transition_type is not None
+        ):
+            timeline.append(
+                {
+                    "kind": "chain_transition",
+                    "year": successor.transition_year,
+                    "chain_id": chain.id,
+                    "chain_name": chain.name,
+                    "chain_type": chain.chain_type,
+                    "transition_type": successor.transition_type,
+                    "is_violent": successor.is_violent,
+                    "direction": "outbound",
+                    "from_entity_id": entity_id,
+                    "from_entity_name": entity.name_original,
+                    "to_entity_id": successor.entity_id,
+                    "to_entity_name": successor.entity.name_original,
+                    "description": successor.description,
+                    "ethical_notes": successor.ethical_notes,
+                }
+            )
+
+    # Sort merged stream chronologically — ties resolved by kind priority
+    # (events before territory_changes before chain_transitions of same year,
+    # purely for stable rendering; no semantic meaning).
+    kind_rank = {"event": 0, "territory_change": 1, "chain_transition": 2}
+    timeline.sort(key=lambda e: (e["year"], kind_rank.get(e["kind"], 9)))
+
+    counts = {
+        "events": sum(1 for e in timeline if e["kind"] == "event"),
+        "territory_changes": sum(1 for e in timeline if e["kind"] == "territory_change"),
+        "chain_transitions": sum(1 for e in timeline if e["kind"] == "chain_transition"),
+        "total": len(timeline),
+    }
+
+    response.headers["Cache-Control"] = "public, max-age=3600"
+
+    return {
+        "entity_id": entity_id,
+        "entity_name": entity.name_original,
+        "entity_type": entity.entity_type,
+        "year_start": entity.year_start,
+        "year_end": entity.year_end,
+        "counts": counts,
+        "timeline": timeline,
     }
 
 
