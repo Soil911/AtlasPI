@@ -13,9 +13,9 @@ import json
 import logging
 from typing import Literal
 
-from fastapi import APIRouter, Depends, Query, Response
+from fastapi import APIRouter, Depends, HTTPException, Query, Response
 from pydantic import BaseModel
-from sqlalchemy import desc, func, or_, select, text
+from sqlalchemy import and_, desc, func, or_, select, text
 from sqlalchemy.orm import Session, joinedload
 
 from src.api.errors import EntityNotFoundError
@@ -193,6 +193,98 @@ def _apply_sort(q, sort: SortField, order: str = "asc"):
     return q.order_by(desc(col) if order == "desc" else col)
 
 
+def _parse_bbox(bbox: str | None) -> tuple[float, float, float, float] | None:
+    """Parse bbox string 'min_lon,min_lat,max_lon,max_lat' into a tuple.
+
+    Convenzione standard (Mapbox/OpenStreetMap/GeoJSON RFC 7946):
+    `min_lon, min_lat, max_lon, max_lat` (longitudine prima!).
+
+    Raises HTTPException 422 se il formato è invalido o le coordinate
+    sono fuori range geografico.
+    """
+    if not bbox:
+        return None
+    try:
+        parts = [float(x.strip()) for x in bbox.split(",")]
+    except ValueError:
+        raise HTTPException(
+            status_code=422,
+            detail="bbox deve essere 'min_lon,min_lat,max_lon,max_lat' (4 float separati da virgola)",
+        )
+    if len(parts) != 4:
+        raise HTTPException(
+            status_code=422,
+            detail=f"bbox richiede esattamente 4 valori, ricevuti {len(parts)}",
+        )
+    min_lon, min_lat, max_lon, max_lat = parts
+    if not (-180.0 <= min_lon <= 180.0 and -180.0 <= max_lon <= 180.0):
+        raise HTTPException(status_code=422, detail="Longitudine fuori range [-180, 180]")
+    if not (-90.0 <= min_lat <= 90.0 and -90.0 <= max_lat <= 90.0):
+        raise HTTPException(status_code=422, detail="Latitudine fuori range [-90, 90]")
+    if min_lon > max_lon or min_lat > max_lat:
+        raise HTTPException(
+            status_code=422,
+            detail="bbox: min_lon/min_lat devono essere <= max_lon/max_lat",
+        )
+    return (min_lon, min_lat, max_lon, max_lat)
+
+
+def _apply_bbox_filter(q, bbox: str | None):
+    """Filtra entità per bounding box geografico.
+
+    PostgreSQL+PostGIS (prod):
+        ST_Intersects(ST_GeomFromGeoJSON(boundary_geojson), bbox_envelope)
+        OR fallback al capital-point se l'entità non ha boundary_geojson.
+        Sfrutta l'indice GiST `ix_geo_entities_boundary_geom` se presente.
+
+    SQLite (dev):
+        Filtro approssimato sul solo capital-point (lat/lon BETWEEN bbox).
+        Più rapido del calcolo Shapely su tutte le righe; perde le entità
+        con boundary che intersecano il bbox ma con capitale fuori. Usare
+        Postgres locale per accuratezza piena in dev.
+
+    Args:
+        q: SQLAlchemy query su GeoEntity.
+        bbox: stringa "min_lon,min_lat,max_lon,max_lat" oppure None.
+
+    Returns:
+        Query filtrata (no-op se bbox è None).
+    """
+    parsed = _parse_bbox(bbox)
+    if parsed is None:
+        return q
+    min_lon, min_lat, max_lon, max_lat = parsed
+
+    if is_postgres:
+        # PostGIS: spatial intersection sull'envelope. SRID 4326 = WGS84.
+        # OR sul capitale per entità prive di boundary_geojson.
+        envelope = func.ST_MakeEnvelope(min_lon, min_lat, max_lon, max_lat, 4326)
+        return q.filter(
+            or_(
+                and_(
+                    GeoEntity.boundary_geojson.isnot(None),
+                    func.ST_Intersects(
+                        func.ST_GeomFromGeoJSON(GeoEntity.boundary_geojson),
+                        envelope,
+                    ),
+                ),
+                and_(
+                    GeoEntity.boundary_geojson.is_(None),
+                    GeoEntity.capital_lat.between(min_lat, max_lat),
+                    GeoEntity.capital_lon.between(min_lon, max_lon),
+                ),
+            )
+        )
+
+    # SQLite fallback: solo capital-point.
+    return q.filter(
+        GeoEntity.capital_lat.isnot(None),
+        GeoEntity.capital_lon.isnot(None),
+        GeoEntity.capital_lat.between(min_lat, max_lat),
+        GeoEntity.capital_lon.between(min_lon, max_lon),
+    )
+
+
 # ─── Endpoints ───────────────────────────────────────────────────
 
 @router.get(
@@ -211,6 +303,16 @@ def query_entity(
     status: StatusFilter = Query(None, description="Filtra per status"),
     type: str | None = Query(None, max_length=50, description="Filtra per entity_type (empire, kingdom, city, etc.)"),
     continent: str | None = Query(None, max_length=50, description="Filtra per continente (Europe, Asia, Africa, Americas, Middle East, Oceania)"),
+    bbox: str | None = Query(
+        None,
+        max_length=80,
+        description=(
+            "Bounding box geografico 'min_lon,min_lat,max_lon,max_lat' (RFC 7946). "
+            "Restituisce entità il cui boundary_geojson interseca il bbox; per entità "
+            "senza boundary, fallback alla capitale dentro il bbox. PostGIS in prod, "
+            "approssimato in dev SQLite."
+        ),
+    ),
     sort: SortField = Query(None, description="Ordina per: name, year_start, confidence, year_end"),
     order: Literal["asc", "desc"] = Query("asc", description="Direzione ordinamento"),
     limit: int = Query(20, ge=1, le=100, description="Risultati per pagina"),
@@ -239,6 +341,9 @@ def query_entity(
     if type:
         q = q.filter(GeoEntity.entity_type == type)
 
+    # bbox filter (PostGIS ST_Intersects in prod, capital-point in SQLite)
+    q = _apply_bbox_filter(q, bbox)
+
     total = q.count()
     q = _apply_sort(q, sort, order)
     results = q.offset(offset).limit(limit).all()
@@ -260,14 +365,20 @@ def query_entity(
 )
 def list_entities(
     response: Response,
+    bbox: str | None = Query(
+        None,
+        max_length=80,
+        description="Bounding box 'min_lon,min_lat,max_lon,max_lat' (vedi /v1/entity).",
+    ),
     sort: SortField = Query(None, description="Ordina per: name, year_start, confidence, year_end"),
     order: Literal["asc", "desc"] = Query("asc", description="Direzione ordinamento"),
     limit: int = Query(20, ge=1, le=100, description="Risultati per pagina"),
     offset: int = Query(0, ge=0, description="Offset"),
     db: Session = Depends(get_db),
 ):
-    total = db.query(GeoEntity).count()
     q = _eager_query(db)
+    q = _apply_bbox_filter(q, bbox)
+    total = q.count()
     q = _apply_sort(q, sort, order)
     results = q.offset(offset).limit(limit).all()
     entities = [_entity_to_response(e) for e in results]

@@ -2,6 +2,90 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.3.2] - 2026-04-15
+
+**Tema**: PostGIS deep work — indici spaziali GiST, bbox filter
+geograficamente corretto su `/v1/entity` e `/v1/entities`, e una seconda
+linea di difesa ETHICS-006 contro regressioni del fuzzy matcher.
+
+### PostGIS deep work — indici spaziali
+
+- **Alembic `004_postgis_indexes`** — aggiunge due indici GiST funzionali:
+  - `ix_geo_entities_capital_geog` su `ST_MakePoint(capital_lon, capital_lat)::geography`
+    con `WHERE capital_lat IS NOT NULL AND capital_lon IS NOT NULL`.
+    Accelera `ST_DWithin()` su `/v1/nearby` da full-scan a lookup indicizzato.
+  - `ix_geo_entities_boundary_geom` su `ST_GeomFromGeoJSON(boundary_geojson)`
+    con `WHERE boundary_geojson IS NOT NULL`. Accelera `ST_Intersects()` su
+    bbox query.
+  - Entrambi gli indici sono **espression indexes**: la query DEVE usare
+    la stessa espressione per poter usare l'indice.
+- **Compatibilità SQLite**: la migration skippa silenziosamente sul dialetto
+  `sqlite`. Niente PostGIS, niente indici, nessun errore in dev.
+- **Rollback**: `alembic downgrade -1` droppa entrambi gli indici (su
+  Postgres) o è no-op (su SQLite).
+
+### Bbox filter su `/v1/entity` e `/v1/entities`
+
+Nuovo query parameter opzionale `bbox=min_lon,min_lat,max_lon,max_lat`
+(formato Mapbox / OSM / RFC 7946).
+
+- **PostGIS path** (prod): `ST_Intersects(ST_GeomFromGeoJSON(boundary_geojson),
+  ST_MakeEnvelope(...,4326))` con OR fallback su capital-point per entità
+  senza boundary. Usa gli indici GiST appena creati per query
+  sub-millisecondo.
+- **SQLite path** (dev/CI): pure capital-point `BETWEEN` filter. Meno
+  accurato (non include entità il cui polygon interseca il bbox ma la
+  cui capitale è fuori), ma sufficiente per test logici e deduplicazione.
+- **Validazione**: formato malformato, arity sbagliata, lat fuori [-90,90],
+  lon fuori [-180,180], min>max → tutti restituiscono `422` con messaggio
+  chiaro. 10 test nuovi in `tests/test_v632_bbox.py`.
+- **Componibilità**: bbox si combina con `year`, `type`, `status`, `limit`
+  — è un ulteriore filtro, non un override.
+
+### ETHICS-006 — CI guardia capital-in-polygon
+
+Nuovo test in `tests/test_ethics_006_audit.py` — seconda linea di difesa
+contro regressioni del fuzzy matcher (v6.1.2 risolse 133 displaced matches
+eliminando Garenganze→Russia, CSA→Italia, Mapuche→Australia, ma non c'era
+nulla che impedisse a un futuro batch di re-introdurli).
+
+- Scansiona tutte le entità con `boundary_source != "approximate_generated"`
+  e verifica che la capitale dichiarata cada dentro (o entro tolleranza)
+  il poligono assegnato.
+- **Tolleranza a due livelli documentata**:
+  - `boundary_match.py`: 50 km (soft, durante il match).
+  - `test_ethics_006_audit.py`: 400 km (hard, post-fact audit). Il ruolo
+    dell'audit è catturare regressioni catastrofiche (wrong-continent
+    copy-paste, 1000+ km), non simplification noise (empire su 4000 km
+    rappresentato con 35 vertici → capitale 300 km fuori dal poligono
+    semplificato).
+- Skippa entità senza `shapely` (graceful), senza capitale, senza boundary.
+- Failure mode verbose: lista ID + nome + source + distanza per le prime
+  20 violazioni, istruzioni di fix.
+
+### Test suite
+
+- **+13 test** (308 → 321): 10 bbox + 2 ETHICS-006 audit + 1 sanity check.
+- Full suite pulita su SQLite in ~43s.
+
+### Deploy workflow
+
+```bash
+# 1. push
+git push origin main
+
+# 2. deploy (migration 004 gira automaticamente al boot)
+cra-deploy atlaspi
+
+# 3. verifica indici (Postgres only)
+ssh -i ~/.ssh/cra_vps root@77.81.229.242 \
+  "docker exec cra-atlaspi-db psql -U atlaspi -d atlaspi -c '\\di ix_geo_entities_*'"
+```
+
+Nessun backfill di dati — solo index creation (idempotente via `IF NOT EXISTS`).
+
+---
+
 ## [v6.3.1] - 2026-04-15
 
 **Tema**: Expansion eventi storici 31 → 106, chiudendo il gap tra "scheletro
