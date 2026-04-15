@@ -2,6 +2,94 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.7.2] - 2026-04-15
+
+**Tema**: *Boundary honesty, pass 2* — seconda passata di fix mirati sulle
+polygon sproporzionate rispetto all'estensione storica attesa. 11 entità
+con polygon 10x-200x la dimensione reale sono state riportate a forme
+`approximate_generated` ancorate al proprio capital, con raggio calibrato
+per tipo di polity. Test 386 → 426 (+40). Nessun cambiamento di API.
+
+### Entità corrette (11)
+
+| ID  | Entità                        | Prima      | Dopo (bbox)   | Radius km |
+|-----|-------------------------------|-----------:|--------------:|----------:|
+| 282 | Κομμαγηνή (Commagene kingdom) | 20 M km²  | 33 k km²      | 70        |
+| 227 | Misiones Guaraníes (confed.)  | 20 M km²  | 286 k km²     | 250       |
+| 727 | Oceti Sakowin (Sioux)         | 232 M km² | 2.9 M km²     | 700       |
+| 705 | Lanfang Gongheguo             | 9.5 M km² | 90 k km²      | 125       |
+| 454 | 南詔 (Nanzhao kingdom)          | 7.8 M km² | 716 k km²     | 400       |
+| 575 | Principatus Transsilvaniae    | 25 M km²  | 147 k km²     | 140       |
+| 679 | Polatskaye Knyastva           | 1.5 M km² | 250 k km²     | 180       |
+| 651 | Duché de Normandie            | 1.5 M km² | 78 k km²      | 100       |
+| 566 | Dugelezh Breizh (Brittany)    | 1.3 M km² | 60 k km²      | 100       |
+| 427 | Suomen suuriruhtinaskunta     | 1.4 M km² | 660 k km²     | 350       |
+| 653 | Великое княжество Литовское   | 3 M km²   | 1.9 M km²     | 500       |
+
+I valori "Prima" sono bounding-box km² da polygon effettivi aourednik/NE;
+i "Dopo" sono bbox delle forme `name_seeded_boundary` a 13 vertici
+generate dal capital. Non sono perfetti (il generatore produce blob
+tondeggianti anziché contorni reali), ma sono **evidentemente approssimati**
+e capped a `confidence_score ≤ 0.4` (ETHICS-004).
+
+### Perché questi 11
+
+L'audit rigoroso v6.7.2 ha incrociato due metriche sulle 661 entità
+`confirmed` con polygon e capital:
+
+1. **Capital displacement > 500 km dal centroid del polygon**: 108 match.
+   Dopo aver filtrato i falsi positivi legittimi (Fiji antimeridian, USSR/
+   Russia/USA/Brazil giganti, Umayyad/Mongol/Timurid/Danish-Norway
+   storicamente immensi) restano 9 mismatch reali (Commagene, Misiones,
+   Oceti Sakowin, Lanfang, Nanzhao, Normandy, Brittany, Finland, GDL).
+2. **Area > 1M km² per city/duchy/principality**: 6 match, tutti o duchies
+   francesi (Normandy, Brittany) o principati dell'est europeo
+   (Transylvania, Polatsk, GDL) o Finland GD.
+
+Gli 11 fix intersecano/sommano entrambe le liste. La causa più frequente:
+polygon aourednik matchato per token-overlap a un'entità con nome simile
+ma estensione molto più grande (Polatsk → all-Rus scope; Normandy →
+Plantagenet empire scope; Transylvania → continental Habsburg/Ottoman scope).
+
+### Nuovi moduli
+
+- **`src/ingestion/fix_bad_boundaries_v672.py`** (~180 righe). Riusa
+  l'engine di v6.7.1 (`run_fixes`) via monkey-swap della `FIXES`
+  globale, aggiungendo una lista `FIXES_V672` con 11 `EntityFix`
+  entry. Ogni entry porta un `append_note` che termina con
+  `[v6.7.2] ... Vedi ETHICS-006`.
+
+### Test
+
+- **`tests/test_v672_boundary_cleanup.py`** — 40 nuovi test:
+  - struttura FIXES_V672 (5 test): count=11, regenerate_geometry=True
+    ovunque, note-annotated ovunque, no-duplicate-ids, no-overlap con
+    FIXES_V671
+  - idempotency (1 test): re-run è no-op
+  - classi per-entity (8 test): Commagene/OcetiSakowin/Transylvania/
+    Normandy verificano `boundary_source=approximate_generated` e range
+    area bbox
+  - capital anchoring (4 test parametrizzati): centroid entro
+    `max_offset_km` dal capital per ognuno dei 4 campioni
+  - confidence capping (11 test parametrizzati): ogni entità ha
+    `confidence_score ≤ 0.4`
+  - ethical_notes presence (11 test parametrizzati): ogni entità ha
+    `[v6.7.2]` nel campo `ethical_notes`
+
+Totale test backend: **386 → 426** (+40), tutti passing.
+
+### Etica
+
+Stesso pattern di v6.7.1: nessuna cancellazione di dato storico, solo
+sostituzione di polygon sbagliato con polygon generato deterministicamente
+dal capital. Ogni entità fixata ha ora nell'`ethical_notes` una riga
+`[v6.7.2] boundary precedente era un mismatch geografico (polygon >10x
+l'estensione storica attesa). Sostituito con name_seeded_boundary ancorato
+alla capital. Vedi ETHICS-006.` — così chiunque interroghi l'API sa che
+il poligono è una stima deliberata, non un confine rilevato.
+
+---
+
 ## [v6.7.1] - 2026-04-15
 
 **Tema**: *Boundary honesty* — patch release che elimina i confini condivisi

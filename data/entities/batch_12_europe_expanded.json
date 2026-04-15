@@ -956,84 +956,68 @@
     "capital_name": "Helsinki",
     "capital_lat": 60.1699,
     "capital_lon": 24.9384,
-    "confidence_score": 0.9,
+    "confidence_score": 0.4,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "Polygon",
       "coordinates": [
         [
           [
-            20.5,
-            60.0
+            29.462,
+            61.1334
           ],
           [
-            21.5,
-            59.8
+            28.3389,
+            61.8968
           ],
           [
-            23.0,
-            59.8
+            25.6334,
+            62.8826
           ],
           [
-            25.0,
-            60.0
+            22.8072,
+            62.7843
           ],
           [
-            27.0,
-            60.5
+            19.9941,
+            62.8993
           ],
           [
-            29.5,
-            61.5
+            19.3663,
+            60.7046
           ],
           [
-            31.5,
-            63.0
+            19.7341,
+            59.202
           ],
           [
-            30.0,
-            65.0
+            20.585,
+            57.9139
           ],
           [
-            29.0,
-            67.0
+            24.0617,
+            57.6801
           ],
           [
-            28.0,
-            69.0
+            26.6695,
+            57.9418
           ],
           [
-            26.0,
-            70.0
+            29.479,
+            58.4367
           ],
           [
-            24.0,
-            69.5
+            29.637,
+            59.7428
           ],
           [
-            21.0,
-            68.5
-          ],
-          [
-            20.0,
-            66.0
-          ],
-          [
-            20.0,
-            63.5
-          ],
-          [
-            20.0,
-            61.5
-          ],
-          [
-            20.5,
-            60.0
+            29.462,
+            61.1334
           ]
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: Finnish name used as primary. The Swedish name Storfurstendoet Finland reflects the Swedish-speaking minority's perspective and the legacy of centuries of Swedish rule prior to Russian acquisition. ETHICS-002: Finland was transferred from Sweden to Russia by military conquest (Treaty of Fredrikshamn 1809) without consulting the Finnish population. However, the Grand Duchy enjoyed considerable autonomy within the Russian Empire, and Finnish national identity crystallized during this period. Russian Russification policies in the late 19th century suppressed Finnish autonomy.",
+    "ethical_notes": "ETHICS-001: Finnish name used as primary. The Swedish name Storfurstendoet Finland reflects the Swedish-speaking minority's perspective and the legacy of centuries of Swedish rule prior to Russian acquisition. ETHICS-002: Finland was transferred from Sweden to Russia by military conquest (Treaty of Fredrikshamn 1809) without consulting the Finnish population. However, the Grand Duchy enjoyed considerable autonomy within the Russian Empire, and Finnish national identity crystallized during this period. Russian Russification policies in the late 19th century suppressed Finnish autonomy.\n\n[v6.7.2] boundary precedente era un mismatch geografico (polygon >10x l'estensione storica attesa). Sostituito con name_seeded_boundary ancorato alla capital. Vedi ETHICS-006.",
     "name_variants": [
       {
         "name": "Grand Duchy of Finland",
@@ -1090,7 +1074,7 @@
         "url": null
       }
     ],
-    "boundary_source": "historical_map"
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Staat des Deutschen Ordens",

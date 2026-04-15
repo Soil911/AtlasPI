@@ -11133,129 +11133,67 @@
     "capital_lat": 55.49,
     "capital_lon": 28.8,
     "boundary_geojson": {
-      "type": "MultiPolygon",
+      "type": "Polygon",
       "coordinates": [
         [
           [
-            [
-              38.36969888667825,
-              58.263552240375645
-            ],
-            [
-              39.2256574335408,
-              56.95923445468031
-            ],
-            [
-              39.307177295146786,
-              55.77719646139393
-            ],
-            [
-              39.2125455651848,
-              55.56900665547755
-            ],
-            [
-              39.208903620417914,
-              55.5609943769904
-            ],
-            [
-              38.899577987116984,
-              54.88047798372838
-            ],
-            [
-              37.83981978623952,
-              53.98375950606285
-            ],
-            [
-              37.75829992463356,
-              53.16856089000328
-            ],
-            [
-              37.06538110098292,
-              53.16856089000328
-            ],
-            [
-              36.657781792953145,
-              51.9457629659139
-            ],
-            [
-              36.209422554120366,
-              51.78272324270199
-            ],
-            [
-              32.13342947382246,
-              50.64144518021857
-            ],
-            [
-              31.65373257823021,
-              50.340739663578645
-            ],
-            [
-              31.62158343003146,
-              50.36080218980981
-            ],
-            [
-              31.58626364503149,
-              51.29774467207855
-            ],
-            [
-              28.58408192003391,
-              51.076367937962196
-            ],
-            [
-              27.418529015034846,
-              50.8539269669962
-            ],
-            [
-              26.501085209675946,
-              52.736435959876296
-            ],
-            [
-              24.45009903032854,
-              52.95762873333644
-            ],
-            [
-              24.268093555681954,
-              52.97003143511491
-            ],
-            [
-              24.169444165923593,
-              54.280238884479104
-            ],
-            [
-              27.690597016297787,
-              54.88047798372838
-            ],
-            [
-              28.42427577075138,
-              55.65491666898498
-            ],
-            [
-              28.54655556316034,
-              56.71467486986245
-            ],
-            [
-              28.58774318744843,
-              56.77645630629459
-            ],
-            [
-              36.62212728756457,
-              58.60439070426882
-            ],
-            [
-              37.137197576191454,
-              58.721576376029525
-            ],
-            [
-              38.36969888667825,
-              58.263552240375645
-            ]
+            31.2621,
+            55.9114
+          ],
+          [
+            31.4932,
+            56.8721
+          ],
+          [
+            29.6034,
+            57.1635
+          ],
+          [
+            28.1534,
+            57.476
+          ],
+          [
+            26.4769,
+            56.8017
+          ],
+          [
+            26.4608,
+            55.8188
+          ],
+          [
+            26.2048,
+            55.1087
+          ],
+          [
+            26.9913,
+            54.4393
+          ],
+          [
+            28.052,
+            53.6834
+          ],
+          [
+            29.4025,
+            54.0887
+          ],
+          [
+            31.5465,
+            54.1235
+          ],
+          [
+            31.2285,
+            55.0432
+          ],
+          [
+            31.2621,
+            55.9114
           ]
         ]
       ]
     },
-    "confidence_score": 0.6,
+    "confidence_score": 0.4,
     "status": "confirmed",
-    "ethical_notes": "The Principality of Polotsk is foundational to Belarusian national identity, often cited as the first distinctly Belarusian state. Russian historiography traditionally treats Polotsk as a minor Rus' principality within the broader Russian historical narrative, while Belarusian historiography emphasizes its independence from Kyiv and distinctive character. Lithuanian historiography focuses on the incorporation of Polotsk into the Grand Duchy of Lithuania. This three-way historiographical contest directly mirrors contemporary geopolitical tensions regarding Belarusian sovereignty and identity. Boundary da aourednik/historical-basemaps (1200, strategy=capital_in_polygon, precision=1). CC BY 4.0.",
+    "ethical_notes": "The Principality of Polotsk is foundational to Belarusian national identity, often cited as the first distinctly Belarusian state. Russian historiography traditionally treats Polotsk as a minor Rus' principality within the broader Russian historical narrative, while Belarusian historiography emphasizes its independence from Kyiv and distinctive character. Lithuanian historiography focuses on the incorporation of Polotsk into the Grand Duchy of Lithuania. This three-way historiographical contest directly mirrors contemporary geopolitical tensions regarding Belarusian sovereignty and identity. Boundary da aourednik/historical-basemaps (1200, strategy=capital_in_polygon, precision=1). CC BY 4.0.\n\n[v6.7.2] boundary precedente era un mismatch geografico (polygon >10x l'estensione storica attesa). Sostituito con name_seeded_boundary ancorato alla capital. Vedi ETHICS-006.",
     "name_variants": [
       {
         "name": "Principality of Polotsk",
@@ -11316,10 +11254,7 @@
         "url": null
       }
     ],
-    "boundary_source": "aourednik",
-    "boundary_aourednik_name": "Other Rus Principalities",
-    "boundary_aourednik_year": 1200,
-    "boundary_aourednik_precision": 1
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Markgrafschaft Maehren",
