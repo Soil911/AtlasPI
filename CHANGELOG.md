@@ -2,6 +2,68 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.7.3] - 2026-04-15
+
+**Tema**: *Boundary honesty, pass 3* — rifinitura di 4 polygon che erano
+ancora oversized anche dopo il pass 2 una volta misurati con area geodesica
+reale (non bounding-box). Batch minimalista: solo le entità con area reale
+>2x il picco storico documentato. Test 426 → 442 (+16).
+
+### Entità corrette (4)
+
+| ID  | Entità                   | Post-v672 real area | Post-v673 real area | Picco storico atteso |
+|-----|--------------------------|--------------------:|--------------------:|---------------------:|
+| 604 | Kalmyk Khanate (labeled Mongolian Hajar) | 13.3 M km² | 981 k km²  | ~1 M km²  |
+| 343 | هوتکیان (Hotaki dynasty) | 2.5 M km²           | 1.39 M km² | ~1.5 M km² |
+| 350 | Βακτριανή (Bactria)      | 2.8 M km²           | 866 k km²  | ~1 M km²   |
+| 330 | Казан ханлыгы (Kazan)    | 1.2 M km²           | 859 k km²  | ~700 k km² |
+
+Nota: entità 604 ha `name_original` in scrittura mongola ma
+`capital_name="Sarai-on-the-Volga"` con anni 1634-1771 — indice che è in
+realtà il **Kalmyk Khanate**, non il Khazar Khaganate (650-969). Il
+polygon aourednik codificava un'estensione steppica composita che non
+corrispondeva al controllo effettivo kalmyk.
+
+### Metodologia
+
+L'audit v6.7.3 ha sostituito la stima bbox con area geodesica reale via
+`shapely.geometry.shape` + `pyproj.Geod` su ellipsoide WGS84. Sorprendentemente:
+
+- **Ming 4.2M km²** (bbox 10M) — in target (peak ~6.5M km²) ✓
+- **Venezia 19k km²** (bbox 1.9M) — in target (peak ~40k) ✓
+- **Uyghur Khaganate 3.8M km²** (bbox 9.3M) — in target (peak ~2.8M) ✓
+- **Maurya 3.4M km²** (bbox 6.5M) — in target (peak ~5M) ✓
+- **Former Qin 2.8M km²** (bbox 5.6M) — in target (peak ~3M) ✓
+
+Solo i 4 sopra avevano area *reale* ancora oltre 2x il picco. Gli altri
+13 candidati erano falsi positivi della metrica bbox.
+
+### Nuovi moduli
+
+- **`src/ingestion/fix_bad_boundaries_v673.py`** (~120 righe). Stessa
+  struttura di v672 con 4 `EntityFix` entries e radius calibrati al
+  1.2x del picco storico (conservativo — il polygon visibilmente più
+  piccolo del picco è preferibile al polygon eccessivo).
+
+### Test
+
+- **`tests/test_v673_boundary_cleanup.py`** — 16 nuovi test:
+  struttura FIXES_V673 (4 test), real-area in range via pyproj.Geod
+  (4 test parametrizzati), ethical_notes presence (4 test),
+  confidence capping (4 test).
+
+Totale test backend: **426 → 442** (+16).
+
+### Etica
+
+Ogni entità porta `[v6.7.3]` nell'`ethical_notes` con la spiegazione:
+"aourednik polygon codificava estensione nominale composita (o dinastia
+successiva), >2x l'area effettiva storica. Sostituito con
+name_seeded_boundary ancorato al capital, radius calibrato al 1.2-1.5x
+del picco storico. Vedi ETHICS-006."
+
+---
+
 ## [v6.7.2] - 2026-04-15
 
 **Tema**: *Boundary honesty, pass 2* — seconda passata di fix mirati sulle
