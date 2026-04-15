@@ -103,3 +103,38 @@ class EventRole(enum.StrEnum):
     WITNESS = "WITNESS"
     FOUNDED = "FOUNDED"          # l'evento ha fondato questa entità
     DISSOLVED = "DISSOLVED"      # l'evento ha dissolto questa entità
+
+
+# ─── v6.4: Cities + Trade Routes ────────────────────────────────────────────
+
+
+class CityType(enum.StrEnum):
+    """Tipo funzionale di una città storica.
+
+    ETHICS: una città può avere più funzioni in epoche diverse (Venezia
+    come trade_hub + capital + religious_center). Se una funzione è
+    dominante nel periodo rappresentato, usa quella. Altrimenti
+    MULTI_PURPOSE con note esplicite.
+    """
+    CAPITAL = "CAPITAL"
+    TRADE_HUB = "TRADE_HUB"
+    RELIGIOUS_CENTER = "RELIGIOUS_CENTER"
+    FORTRESS = "FORTRESS"
+    PORT = "PORT"
+    ACADEMIC_CENTER = "ACADEMIC_CENTER"
+    INDUSTRIAL_CENTER = "INDUSTRIAL_CENTER"
+    MULTI_PURPOSE = "MULTI_PURPOSE"
+    OTHER = "OTHER"
+
+
+class RouteType(enum.StrEnum):
+    """Tipo geografico di una rotta commerciale.
+
+    CARAVAN è distinto da LAND perché implica carovane (cammelli, yak)
+    e infrastrutture specifiche (caravanserragli), non semplice strada.
+    """
+    LAND = "LAND"
+    SEA = "SEA"
+    RIVER = "RIVER"
+    CARAVAN = "CARAVAN"
+    MIXED = "MIXED"

@@ -2,6 +2,150 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.4.0] - 2026-04-15
+
+**Tema**: HistoricalCity + TradeRoute layer. Le città storiche e le rotte
+commerciali diventano oggetti di prima classe — separati dalle entità
+politiche perché hanno una vita propria (Costantinopoli sopravvive a
+4+ imperi). 110 città + 25 rotte commerciali, governance etica esplicita
+su rinominazioni coloniali (ETHICS-009) e tratta degli esseri umani
+(ETHICS-010).
+
+### Modelli nuovi
+
+- **`HistoricalCity`** — centri urbani storici con name_original (lingua
+  locale come dato primario), coordinate, founded_year/abandoned_year,
+  city_type (CityType enum: CAPITAL, TRADE_HUB, RELIGIOUS_CENTER, FORTRESS,
+  PORT, ACADEMIC_CENTER, INDUSTRIAL_CENTER, MULTI_PURPOSE, OTHER),
+  population_peak, FK opzionale a `geo_entities`, ethical_notes, sources
+  e name_variants (JSON array di {name, lang, period_start, period_end,
+  context}).
+- **`TradeRoute`** — rotte commerciali con name_original, route_type
+  (RouteType enum: LAND, SEA, RIVER, CARAVAN, MIXED), start/end_year,
+  geometry_geojson (LineString o MultiLineString), commodities (JSON
+  array), `involves_slavery` Boolean denormalizzato per filtro esplicito
+  ETHICS-010, ethical_notes obbligatorie per rotte schiaviste con scala +
+  main_actors + Middle Passage mortality.
+- **`RouteCityLink`** — junction m:n route ↔ city con sequence_order +
+  is_terminal per rappresentare i waypoint nell'ordine giusto.
+
+### Migration Alembic 005
+
+- Crea `historical_cities`, `trade_routes`, `route_city_links` con tutti
+  gli indici, check constraint, FK.
+- Su PostgreSQL aggiunge due indici GiST funzionali analoghi a 004:
+  - `ix_historical_cities_point_geog` su `ST_MakePoint(longitude, latitude)::geography`
+  - `ix_trade_routes_geom` su `ST_GeomFromGeoJSON(geometry_geojson)` (where not null)
+- Su SQLite skippa la sezione PostGIS — niente errori in dev.
+
+### Endpoint nuovi
+
+- `GET /v1/cities` — lista paginata con filtri `year` (active-in-year),
+  `city_type`, `entity_id`, `bbox` (min_lon,min_lat,max_lon,max_lat con
+  validazione 422), `status`. Bbox usa BETWEEN sui punti (le città hanno
+  sempre coordinate).
+- `GET /v1/cities/{id}` — dettaglio con name_variants completi (ETHICS-009),
+  sources academic, link all'entità di appartenenza.
+- `GET /v1/cities/types` — enumera CityType con descrizione human-readable.
+- `GET /v1/routes` — lista paginata con filtri `year`, `route_type`,
+  `involves_slavery` (ETHICS-010 esplicito), `status`.
+- `GET /v1/routes/{id}` — dettaglio completo con geometry GeoJSON,
+  commodities, waypoints ordinati (con city_name + lat/lon).
+- `GET /v1/routes/types` — enumera RouteType.
+
+### Dati seedati (110 città + 25 rotte)
+
+Le 110 città sono distribuite su tre batch tematici:
+- **`batch_01_mediterranean_mena.json`** (35 città) — Mediterraneo & MENA:
+  Roma, Atene, Konstantinoupolis, Alessandria, Cartagine, Damasco,
+  Baghdad, Cordova, Granada, Venezia, ecc.
+- **`batch_02_asia.json`** (35 città) — Asia: Beijing/Khanbaliq/Peking,
+  Chang'an, Nanjing (con nota sul massacro 1937), Edo/Tokyo (con nota sul
+  massacro coreano 1923), Hanyang/Seoul (con nota Keijō 1910), Pataliputra,
+  Vijayanagara, Angkor, Bagan, Samarqand, Bukhārā, Persepolis, ecc.
+- **`batch_03_americas_africa_europe.json`** (40 città) — Americhe (12),
+  Africa subsahariana (14), Europa nord-orientale (14): Mēxihco-Tenōchtitlan
+  (con nota distruzione Cortés 1521), Qusqu, Caral, Machu Picchu,
+  Dzimba-dza-mabwe (Great Zimbabwe), Tumbutu (Timbuctù), Ẹ̀dó (Benin City,
+  con nota saccheggio 1897), Kꙑѥвъ (Kyiv), Twangste (Königsberg/Kaliningrad,
+  con nota deportazione tedeschi 1945), Lwów/Lviv, Gdańsk/Danzig, ecc.
+
+Le 25 rotte commerciali in `batch_01_major_routes.json` coprono:
+- Continentali (6): Silk Road, Royal Persian Road, Tea Horse Road, ecc.
+- Trans-sahariane (3): Gold & Salt, Bornu-Fezzan slave route, Trans-Saharan
+- Indian Ocean (4): Maritime Silk Road, Spice Route, Swahili Coast, slave route
+- Atlantiche (3): Trans-Atlantic Slave Trade, Triangle Trade, Cape Route
+- Asia-Pacific (3) + Europa (4) + River (2)
+
+### ETHICS-009 — Rinominazioni & cancellazione culturale
+
+Ogni rinominazione coloniale/imperiale è documentata in `name_variants`
+con `period_start`/`period_end` + `context`. Esempi:
+- Konstantinoupolis → Istanbul (1453, "Ottoman name imposed after conquest")
+- Calcutta → Kolkata (2001, decolonizzazione linguistica)
+- Edo → Tokyo (1868, riforma Meiji)
+- Königsberg → Kaliningrad (1946, deportazione popolazione tedesca)
+- Mexico City sopra Tenochtitlan (1521, Templo Mayor demolito + Catedral
+  Metropolitana costruita sopra come atto di cancellazione)
+- Lwów (PL) → Lvov (RU) → Lviv (UA), con popolazione ebraica sterminata 1941-44
+- Danzig (DE) → Gdańsk (PL) 1945, espulsione tedeschi
+- Twangste (Old Prussian) → Königsberg → Kaliningrad
+
+### ETHICS-010 — Tratta degli esseri umani come categoria di prima classe
+
+Cinque rotte hanno `involves_slavery=True` e `"humans_enslaved"` in
+commodities (mai "slaves" come termine — riduce la persona alla categoria):
+- Trans-Saharan Slave Route, Bornu-Fezzan, Indian Ocean Slave Route,
+  Trans-Atlantic Slave Trade, Triangle Trade.
+
+`Trans-Atlantic Slave Trade` ethical_notes (604 parole, fonte Eltis &
+Richardson SlaveVoyages) include: scala (12.5M imbarcati / 10.7M sbarcati /
+~1.8M morti nel Middle Passage), date (1501-1866, picco anni 1780),
+totali per nazione (Portoghese ~5.8M, Britannico ~3.3M, ecc.),
+compagnie nominate (Royal African Company, WIC, Companhia do Grão-Pará),
+cause di mortalità, polities africane partecipanti, conseguenze
+demografiche/economiche/razziali a lungo termine, movimento per le
+riparazioni.
+
+`?involves_slavery=true` filtra esattamente queste 5 rotte. Routes con
+slave content secondario (Volga, Stato da Mar, Nile, Via Appia, Varangian)
+documentano la tratta in ethical_notes ma NON sono flaggate per evitare
+diluizione della categoria.
+
+### Test
+
+- **+19 test** in `tests/test_v640_cities_and_routes.py` (321 → 340).
+- Coverage: list/filter (year, type, bbox, involves_slavery, entity_id),
+  detail, 404, ETHICS-009 name_variants su Konstantinoupolis, ETHICS-010
+  Trans-Atlantic ethical_notes (Middle Passage + millions), OpenAPI doc.
+- Full suite verde su SQLite in ~54s.
+
+### Naming transparency (Silk Road & co.)
+
+Silk Road, Grand Trunk Road, Columbian Exchange, Tea Horse Road, Maritime
+Silk Road hanno `ethical_notes` che documentano l'origine moderna del nome
+(Richthofen 1877, British colonial, Crosby 1972, ecc.) — i partecipanti
+storici NON usavano queste etichette. Evita confusione tra storiografia
+moderna e auto-designazione storica.
+
+### Deploy
+
+```bash
+git push origin main
+cra-deploy atlaspi
+ssh -i ~/.ssh/cra_vps root@77.81.229.242 \
+  "cd /opt/cra && docker compose exec atlaspi python -m src.ingestion.ingest_cities_and_routes"
+```
+
+L'ingestione su prod parte vuota (tabelle create dalla migration 005),
+quindi inserisce 110+25 senza skip. Verifica:
+```bash
+curl -s https://atlaspi.cra-srl.com/v1/cities?limit=1 | jq .total
+curl -s https://atlaspi.cra-srl.com/v1/routes?involves_slavery=true | jq '.total, .routes[].name_original'
+```
+
+---
+
 ## [v6.3.2] - 2026-04-15
 
 **Tema**: PostGIS deep work — indici spaziali GiST, bbox filter

@@ -1,0 +1,3160 @@
+[
+  {
+    "name_original": "Silk Road",
+    "name_original_lang": "en",
+    "route_type": "CARAVAN",
+    "start_year": -130,
+    "end_year": 1453,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          108.95,
+          34.27
+        ],
+        [
+          103.83,
+          36.06
+        ],
+        [
+          94.66,
+          40.14
+        ],
+        [
+          89.18,
+          42.95
+        ],
+        [
+          87.62,
+          43.83
+        ],
+        [
+          75.99,
+          39.47
+        ],
+        [
+          72.58,
+          40.52
+        ],
+        [
+          66.97,
+          39.65
+        ],
+        [
+          64.42,
+          39.77
+        ],
+        [
+          62.19,
+          37.6
+        ],
+        [
+          59.6,
+          36.3
+        ],
+        [
+          51.42,
+          35.69
+        ],
+        [
+          44.4,
+          38.08
+        ],
+        [
+          40.68,
+          39.93
+        ],
+        [
+          36.3,
+          36.2
+        ],
+        [
+          28.98,
+          41.01
+        ]
+      ]
+    },
+    "commodities": [
+      "silk",
+      "porcelain",
+      "jade",
+      "horses",
+      "paper-technology",
+      "spices",
+      "religion-buddhism",
+      "religion-manichaeism",
+      "religion-nestorianism",
+      "diseases",
+      "glassware",
+      "precious-metals"
+    ],
+    "description": "Overland caravan network connecting Chang'an in Han China to Constantinople via the Tarim Basin oases, Ferghana Valley, Transoxiana, the Iranian Plateau, and Anatolia. Active from roughly the Han embassy of Zhang Qian (c. 130 BCE) through the fall of Constantinople in 1453. The 'road' was in practice a shifting braided network of caravan tracks linking oasis cities, monasteries, and caravanserais. It carried not only silk and luxury commodities but also technologies (paper, the stirrup, silkworm cultivation smuggled westward) and religions (Buddhism, Manichaeism, Nestorian Christianity, later Islam) and pathogens — most catastrophically the second plague pandemic of the 14th century.",
+    "involves_slavery": false,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "NAMING: The term 'Silk Road' (Seidenstraße) was coined by the German geographer Ferdinand von Richthofen in 1877. The network was never known by that name to the people who used it; contemporary Chinese, Sogdian, Persian, Arabic and Greek sources refer only to specific segments or to the destinations. The singular 'Silk Road' is a retrospective European cartographic abstraction. AtlasPI retains the name for findability but users should treat it as a convenience label for a heterogeneous, multilingual, shifting corridor of exchange. SLAVERY: Although this route is not flagged as a slavery route, Central Asian markets (notably Bukhara, Samarqand, Khwarezm) trafficked enslaved people — Turkic, Slavic, Caucasian — throughout much of this period. A dedicated Central Asian slave-market entry may be added in a future batch.",
+    "sources": [
+      {
+        "citation": "Hansen, Valerie. The Silk Road: A New History. Oxford University Press, 2012.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Whitfield, Susan. Life Along the Silk Road. University of California Press, 2015.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Frankopan, Peter. The Silk Roads: A New History of the World. Bloomsbury, 2015.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Chang'an",
+      "Dunhuang",
+      "Turpan",
+      "Kashgar",
+      "Samarqand",
+      "Bukhara",
+      "Merv",
+      "Rhagae",
+      "Tabriz",
+      "Antioch",
+      "Kōnstantinoupolis"
+    ]
+  },
+  {
+    "name_original": "Amber Road",
+    "name_original_lang": "en",
+    "route_type": "LAND",
+    "start_year": -1900,
+    "end_year": 400,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          19.95,
+          54.7
+        ],
+        [
+          18.65,
+          54.35
+        ],
+        [
+          19.0,
+          53.0
+        ],
+        [
+          19.45,
+          51.76
+        ],
+        [
+          16.93,
+          50.07
+        ],
+        [
+          16.61,
+          49.2
+        ],
+        [
+          17.11,
+          48.14
+        ],
+        [
+          16.37,
+          48.21
+        ],
+        [
+          15.44,
+          47.07
+        ],
+        [
+          13.77,
+          45.64
+        ],
+        [
+          12.33,
+          45.44
+        ],
+        [
+          12.48,
+          43.92
+        ],
+        [
+          12.51,
+          41.89
+        ]
+      ]
+    },
+    "commodities": [
+      "amber",
+      "tin",
+      "bronze",
+      "furs",
+      "wine",
+      "oil",
+      "bronze-artifacts",
+      "glass-beads"
+    ],
+    "description": "Ancient trade corridor carrying Baltic amber (succinite) from the southeastern Baltic coast (roughly Sambian Peninsula, modern Kaliningrad Oblast) southward across Central Europe to the Adriatic and on to the Italian peninsula and eventually Rome and Greece. The route used combinations of river valleys (Vistula, Morava, Danube tributaries) and Alpine passes. Amber beads of Baltic origin have been recovered from Mycenaean shaft graves (c. 1600 BCE) and Egyptian tombs, attesting to the antiquity of the exchange. Under Roman rule the Amber Road was formalised; Pliny the Elder describes a Roman knight dispatched by Nero to procure amber from the Baltic in quantities sufficient to decorate the nets of the amphitheatre.",
+    "involves_slavery": false,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "ethical_notes": "The conventional single-line 'Amber Road' is a modern didactic simplification; archaeologically the trade took multiple branches and intermediary hubs. Names and confederations of peoples along the corridor (Aestii, Venedi, Scirii, later Slavs and Balts) are known largely through external (Roman, Greek) sources whose ethnographic reliability is contested.",
+    "sources": [
+      {
+        "citation": "Beck, Curt W., and Joan Bouzek, eds. Amber in Archaeology. Czech Academy of Sciences, 1993.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Kaul, Flemming. 'The Nordic Bronze Age and Amber'. In Acta Archaeologica, 2013.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Truso",
+      "Kalisz",
+      "Carnuntum",
+      "Aquileia",
+      "Roma"
+    ]
+  },
+  {
+    "name_original": "Incense Route",
+    "name_original_lang": "en",
+    "route_type": "CARAVAN",
+    "start_year": -700,
+    "end_year": 500,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          54.01,
+          17.02
+        ],
+        [
+          52.71,
+          15.35
+        ],
+        [
+          48.52,
+          15.56
+        ],
+        [
+          44.19,
+          15.35
+        ],
+        [
+          43.77,
+          17.53
+        ],
+        [
+          42.55,
+          20.13
+        ],
+        [
+          40.41,
+          21.42
+        ],
+        [
+          39.82,
+          21.43
+        ],
+        [
+          40.02,
+          22.91
+        ],
+        [
+          39.61,
+          24.47
+        ],
+        [
+          39.77,
+          26.12
+        ],
+        [
+          37.13,
+          28.38
+        ],
+        [
+          36.82,
+          30.49
+        ],
+        [
+          35.44,
+          31.72
+        ],
+        [
+          35.21,
+          31.77
+        ],
+        [
+          35.48,
+          33.89
+        ],
+        [
+          36.3,
+          33.51
+        ]
+      ]
+    },
+    "commodities": [
+      "frankincense",
+      "myrrh",
+      "spices",
+      "gold",
+      "gemstones",
+      "textiles",
+      "ivory",
+      "pearls"
+    ],
+    "description": "Overland and partly maritime trade corridor carrying frankincense (Boswellia sacra) and myrrh (Commiphora) from the monsoon-watered highlands of Dhofar (modern Oman) and Hadhramaut (Yemen) northward through the Hejaz to Petra and the Mediterranean ports. At its peak from the Iron Age through the Roman period, the trade supplied the temples of Babylon, Jerusalem, Greece, Rome and Egypt with the aromatic resins required for virtually every cult. The Nabataean kingdom at Petra grew wealthy as a tax node on the route; Palmyra and various South Arabian polities (Saba, Qataban, Hadramawt) derived their revenues from the same traffic. Decline followed the shift to maritime routes via the Red Sea and the Christianisation of the Mediterranean (sharply reducing temple demand for incense).",
+    "involves_slavery": false,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "The route passed through territories of peoples (Minaeans, Sabaeans, Qatabanians, Nabataeans, Lihyanites, Thamudic and early Arab tribal federations) whose own epigraphic and oral traditions are only partially recovered. Greek and Roman accounts should not be read as neutral; Strabo and Pliny are hostile witnesses to South Arabian wealth they considered a drain on Roman specie.",
+    "sources": [
+      {
+        "citation": "Groom, Nigel. Frankincense and Myrrh: A Study of the Arabian Incense Trade. Longman, 1981.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Young, Gary K. Rome's Eastern Trade: International Commerce and Imperial Policy 31 BC-AD 305. Routledge, 2001.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Sumhuram",
+      "Shabwah",
+      "Ma'rib",
+      "Najran",
+      "Yathrib",
+      "Hegra",
+      "Petra",
+      "Gaza",
+      "Damascus"
+    ]
+  },
+  {
+    "name_original": "Uttarapatha (Grand Trunk Road)",
+    "name_original_lang": "sa",
+    "route_type": "LAND",
+    "start_year": -300,
+    "end_year": 2025,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          90.41,
+          23.81
+        ],
+        [
+          88.36,
+          22.57
+        ],
+        [
+          85.33,
+          23.38
+        ],
+        [
+          84.99,
+          25.59
+        ],
+        [
+          83.0,
+          25.32
+        ],
+        [
+          82.0,
+          26.77
+        ],
+        [
+          80.35,
+          26.46
+        ],
+        [
+          78.03,
+          27.17
+        ],
+        [
+          77.23,
+          28.61
+        ],
+        [
+          76.81,
+          30.74
+        ],
+        [
+          74.87,
+          31.63
+        ],
+        [
+          73.08,
+          33.72
+        ],
+        [
+          72.49,
+          34.08
+        ],
+        [
+          71.58,
+          34.01
+        ],
+        [
+          69.19,
+          34.53
+        ]
+      ]
+    },
+    "commodities": [
+      "textiles",
+      "cotton",
+      "spices",
+      "rice",
+      "horses",
+      "gems",
+      "steel",
+      "dyes",
+      "religious-pilgrims"
+    ],
+    "description": "South Asia's longest and oldest continuously used overland route, running from the Ganges delta through the Indo-Gangetic plain and across the Punjab to the Khyber Pass and Kabul. Under the Mauryas (c. 300 BCE onward) it was known as the Uttarapatha ('Northern Road') and functioned as the administrative and commercial spine of the empire; Megasthenes describes its maintenance by a dedicated bureaucracy. Rebuilt and extended by Sher Shah Suri in the 16th century and again by the British as the 'Grand Trunk Road' in the 19th, the alignment remains in use today as National Highway 1/2/3 (India) and N-5 (Pakistan). The route transmitted Buddhism to Central Asia, moved Mughal armies, carried pilgrims to Varanasi and Mecca, and today moves a substantial fraction of South Asian road freight.",
+    "involves_slavery": false,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "The 'Grand Trunk Road' designation is British colonial; the Uttarapatha predates the British by two millennia. Sher Shah Suri's 16th-century Sadak-e-Azam ('Great Road') is the direct predecessor of the British alignment. AtlasPI flags this because the anglophone naming obscures the South Asian provenance of both the route and its long-distance logistics.",
+    "sources": [
+      {
+        "citation": "Deloche, Jean. Transport and Communications in India Prior to Steam Locomotion, Volume 1: Land Transport. Oxford University Press, 1993.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Thapar, Romila. The Penguin History of Early India. Penguin, 2002.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Sonargaon",
+      "Kolkata",
+      "Patna",
+      "Varanasi",
+      "Prayag",
+      "Agra",
+      "Delhi",
+      "Lahore",
+      "Peshawar",
+      "Kabul"
+    ]
+  },
+  {
+    "name_original": "Royal Road",
+    "name_original_lang": "en",
+    "route_type": "LAND",
+    "start_year": -500,
+    "end_year": -330,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          27.15,
+          38.46
+        ],
+        [
+          30.54,
+          37.86
+        ],
+        [
+          32.85,
+          39.93
+        ],
+        [
+          35.83,
+          38.37
+        ],
+        [
+          37.06,
+          37.07
+        ],
+        [
+          39.78,
+          37.08
+        ],
+        [
+          41.12,
+          37.17
+        ],
+        [
+          43.14,
+          36.34
+        ],
+        [
+          44.62,
+          35.47
+        ],
+        [
+          45.04,
+          35.52
+        ],
+        [
+          46.07,
+          34.3
+        ],
+        [
+          48.52,
+          34.77
+        ],
+        [
+          49.78,
+          34.65
+        ],
+        [
+          50.89,
+          32.64
+        ],
+        [
+          52.23,
+          30.2
+        ],
+        [
+          53.13,
+          30.67
+        ]
+      ]
+    },
+    "commodities": [
+      "royal-couriers",
+      "administrative-messages",
+      "tribute",
+      "textiles",
+      "silver",
+      "spices",
+      "horses"
+    ],
+    "description": "Imperial highway of the Achaemenid Persian Empire, rebuilt by Darius I (r. 522-486 BCE) largely over earlier Assyrian and Elamite road segments. Herodotus (Histories 5.52-53) describes the route in detail: 111 royal stations (stathmoi) with fresh horses, covering some 2,700 km from Sardis in Lydia to Susa, with extensions to Persepolis, Ecbatana and Bactria. Mounted royal couriers (angaroi, Old Persian pirradaziš) covered the distance in seven to nine days — the origin of the oft-cited passage about 'neither snow, nor rain, nor heat, nor darkness of night' (paraphrased centuries later on a New York post office). The road was primarily administrative rather than commercial, but merchants used it under licence. It was the backbone of Alexander's 330 BCE conquest itinerary.",
+    "involves_slavery": false,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "Much of what we know about the Royal Road comes from Herodotus, writing from a Greek perspective during and after the Greco-Persian Wars. Achaemenid royal inscriptions (Behistun, Persepolis) describe imperial infrastructure in monumental terms; the two sources should be cross-read rather than collapsed into the Greek narrative.",
+    "sources": [
+      {
+        "citation": "Briant, Pierre. From Cyrus to Alexander: A History of the Persian Empire. Eisenbrauns, 2002.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Graf, David F. 'The Persian Royal Road System'. In Achaemenid History VIII, 1994.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Sardis",
+      "Gordion",
+      "Ancyra",
+      "Melitene",
+      "Nineveh",
+      "Arbela",
+      "Ecbatana",
+      "Susa",
+      "Persepolis"
+    ]
+  },
+  {
+    "name_original": "Via Appia + Roman Road Network",
+    "name_original_lang": "la",
+    "route_type": "LAND",
+    "start_year": -312,
+    "end_year": 500,
+    "geometry_geojson": {
+      "type": "MultiLineString",
+      "coordinates": [
+        [
+          [
+            12.51,
+            41.89
+          ],
+          [
+            13.36,
+            41.47
+          ],
+          [
+            13.84,
+            41.3
+          ],
+          [
+            14.78,
+            40.91
+          ],
+          [
+            14.78,
+            40.64
+          ],
+          [
+            15.8,
+            40.64
+          ],
+          [
+            16.6,
+            40.75
+          ],
+          [
+            17.29,
+            40.46
+          ],
+          [
+            18.17,
+            40.14
+          ]
+        ],
+        [
+          [
+            12.51,
+            41.89
+          ],
+          [
+            11.86,
+            42.42
+          ],
+          [
+            10.77,
+            42.47
+          ],
+          [
+            10.4,
+            43.71
+          ],
+          [
+            8.93,
+            44.41
+          ],
+          [
+            7.68,
+            45.07
+          ],
+          [
+            5.73,
+            45.19
+          ],
+          [
+            4.84,
+            45.76
+          ],
+          [
+            2.35,
+            48.86
+          ],
+          [
+            -0.37,
+            49.18
+          ]
+        ],
+        [
+          [
+            12.51,
+            41.89
+          ],
+          [
+            11.25,
+            43.77
+          ],
+          [
+            10.4,
+            43.71
+          ],
+          [
+            8.78,
+            44.41
+          ]
+        ]
+      ]
+    },
+    "commodities": [
+      "grain",
+      "olive-oil",
+      "wine",
+      "marble",
+      "lead",
+      "tin",
+      "silver",
+      "garum",
+      "slaves",
+      "legions",
+      "administration"
+    ],
+    "description": "The Roman viae — some 400,000 km of road at the empire's peak, of which 80,500 km was paved — was the densest, most durable pre-industrial road network ever built. The Via Appia ('Regina Viarum'), begun by the censor Appius Claudius Caecus in 312 BCE, ran from Rome to Capua and eventually Brundisium. Subsequent trunk routes (Aurelia, Flaminia, Aemilia, Cassia, Salaria, Egnatia) integrated the peninsula and the provinces. Built primarily for legionary mobility, the viae were dual-use: they carried annona grain to Rome, olive oil from Baetica, tin from Britain, garum from Lusitania, and the extensive traffic in enslaved persons that staffed Roman estates and mines. The network outlasted the Western Empire by centuries; many medieval pilgrim routes and modern highways follow Roman alignments.",
+    "involves_slavery": false,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "ethical_notes": "This entry is NOT flagged involves_slavery=true because the viae were general-purpose infrastructure, not a dedicated slave-trafficking corridor. However, the commodities list includes 'slaves' because the road network was a critical logistic for the Roman slave economy: war captives from Gaul, Germania, Dacia and the east were marched along the viae to Italian markets (Delos, Puteoli, Capua) and thence to estates. At the empire's peak perhaps 10-15 percent of the imperial population was enslaved. A dedicated entry on Mediterranean slave markets may be added in a future batch.",
+    "sources": [
+      {
+        "citation": "Laurence, Ray. The Roads of Roman Italy: Mobility and Cultural Change. Routledge, 1999.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Chevallier, Raymond. Roman Roads. University of California Press, 1989.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Roma",
+      "Capua",
+      "Beneventum",
+      "Tarentum",
+      "Brundisium",
+      "Florentia",
+      "Mediolanum",
+      "Lugdunum",
+      "Lutetia"
+    ]
+  },
+  {
+    "name_original": "Trans-Saharan Gold and Salt Route",
+    "name_original_lang": "en",
+    "route_type": "CARAVAN",
+    "start_year": 700,
+    "end_year": 1900,
+    "geometry_geojson": {
+      "type": "MultiLineString",
+      "coordinates": [
+        [
+          [
+            -4.27,
+            31.28
+          ],
+          [
+            -3.53,
+            27.88
+          ],
+          [
+            -3.01,
+            25.92
+          ],
+          [
+            -3.5,
+            23.52
+          ],
+          [
+            -3.0,
+            16.77
+          ],
+          [
+            -4.19,
+            16.27
+          ],
+          [
+            -2.11,
+            14.44
+          ],
+          [
+            -0.0,
+            16.26
+          ]
+        ],
+        [
+          [
+            10.1,
+            36.8
+          ],
+          [
+            9.4,
+            32.93
+          ],
+          [
+            9.5,
+            27.04
+          ],
+          [
+            10.18,
+            25.92
+          ],
+          [
+            10.45,
+            21.45
+          ],
+          [
+            8.08,
+            16.97
+          ],
+          [
+            3.4,
+            13.51
+          ]
+        ],
+        [
+          [
+            5.28,
+            36.75
+          ],
+          [
+            5.73,
+            31.7
+          ],
+          [
+            5.77,
+            26.5
+          ],
+          [
+            0.16,
+            19.75
+          ],
+          [
+            -3.0,
+            16.77
+          ]
+        ]
+      ]
+    },
+    "commodities": [
+      "gold",
+      "salt",
+      "copper",
+      "kola-nuts",
+      "leather",
+      "textiles",
+      "dates",
+      "manuscripts",
+      "religion-islam"
+    ],
+    "description": "Caravan network crossing the Sahara between the Mediterranean/Maghreb littoral and the Sudanic belt of West Africa, active from roughly the Arab conquest of North Africa (7th-8th century) through the French colonial period. The classic exchange was West African gold (from the Bambuk, Buré and later Akan fields) and kola nuts against Saharan rock salt (especially from Taghaza and Taoudenni), Mediterranean cloth, metalware, horses and North African manuscripts. The route sustained successive Sudanic empires — Ghana (c. 700-1240), Mali (1240-1500), Songhai (1464-1591) — and the Saharan termini of Sijilmasa, Ouargla, Ghadames and Tripoli. The 1324 hajj of Mansa Musa of Mali, which depressed the Cairo gold price for a decade, is the single most celebrated episode of the traffic. Decline followed Atlantic competition after 1500 and was completed by French colonial diversion of West African commerce seaward in the 19th century.",
+    "involves_slavery": false,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "This entry covers the gold-salt-goods dimension of Trans-Saharan commerce. A SEPARATE entry (Trans-Saharan Slave Route) covers the enslavement dimension, which used many of the same caravan tracks and intermediaries. The two are analytically and ethically distinct and are separated here so that the scale and horror of the slave trade is not absorbed into the category of 'commerce'. Readers should consult both entries for a complete picture of Trans-Saharan exchange.",
+    "sources": [
+      {
+        "citation": "Austen, Ralph A. Trans-Saharan Africa in World History. Oxford University Press, 2010.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Levtzion, Nehemia, and J.F.P. Hopkins, eds. Corpus of Early Arabic Sources for West African History. Cambridge University Press, 1981.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Lydon, Ghislaine. On Trans-Saharan Trails: Islamic Law, Trade Networks, and Cross-Cultural Exchange in Nineteenth-Century Western Africa. Cambridge University Press, 2009.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Sijilmasa",
+      "Taghaza",
+      "Taoudenni",
+      "Walata",
+      "Timbuktu",
+      "Djenné",
+      "Gao",
+      "Ghadames",
+      "Tripoli"
+    ]
+  },
+  {
+    "name_original": "Trans-Saharan Slave Route",
+    "name_original_lang": "en",
+    "route_type": "CARAVAN",
+    "start_year": 700,
+    "end_year": 1900,
+    "geometry_geojson": {
+      "type": "MultiLineString",
+      "coordinates": [
+        [
+          [
+            -4.19,
+            16.27
+          ],
+          [
+            -3.0,
+            16.77
+          ],
+          [
+            -3.5,
+            23.52
+          ],
+          [
+            -3.53,
+            27.88
+          ],
+          [
+            -4.27,
+            31.28
+          ],
+          [
+            -7.62,
+            33.59
+          ]
+        ],
+        [
+          [
+            3.4,
+            13.51
+          ],
+          [
+            8.08,
+            16.97
+          ],
+          [
+            10.45,
+            21.45
+          ],
+          [
+            10.18,
+            25.92
+          ],
+          [
+            9.5,
+            27.04
+          ],
+          [
+            10.1,
+            36.8
+          ]
+        ],
+        [
+          [
+            14.97,
+            12.88
+          ],
+          [
+            14.22,
+            14.98
+          ],
+          [
+            13.18,
+            21.46
+          ],
+          [
+            14.28,
+            27.04
+          ],
+          [
+            13.18,
+            32.88
+          ]
+        ],
+        [
+          [
+            15.28,
+            13.61
+          ],
+          [
+            19.17,
+            16.43
+          ],
+          [
+            24.04,
+            19.43
+          ],
+          [
+            27.45,
+            23.52
+          ],
+          [
+            30.83,
+            26.56
+          ],
+          [
+            31.25,
+            30.04
+          ]
+        ]
+      ]
+    },
+    "commodities": [
+      "humans_enslaved",
+      "gold",
+      "salt",
+      "eunuchs",
+      "concubines",
+      "domestic-servants",
+      "soldiers"
+    ],
+    "description": "Trans-Saharan trafficking of enslaved sub-Saharan Africans into North Africa, the Maghreb, Egypt, the Ottoman empire and onward into the Mediterranean and Islamic world. Active from at least the 8th century CE through the beginning of the 20th, following the same caravan corridors as the gold-salt trade but constituting a distinct and much longer-duration commerce in human beings. Principal routes ran from the Niger Bend (Timbuktu, Gao) northward through Taghaza and Sijilmasa to Morocco and Ifriqiya; from Hausaland and Bornu through Agades, the Fezzan and Ghadames to Tripoli; and from Darfur, Wadai and Kordofan along the Darb al-Arba'in ('Forty Days Road') to Asyut and Cairo. Enslaved people were typically captured in raids on non-Muslim populations of the Sahelian and sub-Sahelian zones, marched north under brutal conditions across the desert, sold in Saharan entrepots, and resold in Mediterranean markets.",
+    "involves_slavery": true,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-010: SCALE — Ralph Austen's widely cited estimates give roughly 9-11 million enslaved Africans trafficked north across the Sahara between 650 and 1900 CE; Paul Lovejoy's synthesis gives a comparable range. Counting the Red Sea and Indian Ocean oriental trades together with the Saharan, the total trans-Saharan + oriental slave trade reached approximately 17 million people over roughly 1200 years — of comparable order of magnitude to, but spread over a far longer period than, the Atlantic trade. DATE RANGE — c. 650 to c. 1900 CE, with peaks in the 9th-10th centuries (Abbasid demand), the 15th-16th (Songhai, Ottoman, Moroccan), and the 19th (Sokoto Caliphate raiding, Egyptian demand, late Ottoman markets). PERPETRATOR ENTITIES — successive Berber and Arab caravan merchants of Sijilmasa, Ghadames and Awjila; the states of Morocco, Tunis, Tripoli, Egypt and the Ottoman empire as purchasers and taxers; Sudanic states including the Songhai, Kanem-Bornu, Sokoto Caliphate and the Sennar Sultanate as raiders and suppliers; the Oulad Mbarek, Kunta and other Saharan confederations as transporters. MORTALITY — desert crossing mortality rates are estimated at 10-20 percent (Austen), with women and children (who were the majority of northbound captives, unlike the Atlantic trade which was majority male) particularly vulnerable. A disproportionate number of enslaved males were castrated at waystations such as Abéché and Asyut, with castration mortality of 60-90 percent. LONG-TERM CONSEQUENCES — demographic drain on the Sahel over a millennium; entrenchment of racial hierarchies in the Maghreb and Arab world that persist; formation of communities of enslaved descent (haratin, 'abid, zanj) whose legal and social status remained degraded long after abolition. Slavery was not formally abolished in Morocco until 1922, in Saudi Arabia until 1962, in Mauritania until 1981 (with criminalisation only in 2007). The trans-Saharan trade is frequently minimised in both North African and European historiography; AtlasPI names it as what it was — the kidnap and sale of human beings at continental scale over twelve centuries.",
+    "sources": [
+      {
+        "citation": "Austen, Ralph A. 'The Trans-Saharan Slave Trade: A Tentative Census'. In Gemery and Hogendorn, eds., The Uncommon Market, Academic Press, 1979.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Lovejoy, Paul E. Transformations in Slavery: A History of Slavery in Africa. 3rd ed., Cambridge University Press, 2012.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Wright, John. The Trans-Saharan Slave Trade. Routledge, 2007.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "El Hamel, Chouki. Black Morocco: A History of Slavery, Race, and Islam. Cambridge University Press, 2013.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Timbuktu",
+      "Gao",
+      "Agadez",
+      "Bilma",
+      "Murzuk",
+      "Ghadames",
+      "Tripoli",
+      "Kano",
+      "Asyut",
+      "Cairo"
+    ]
+  },
+  {
+    "name_original": "Bornu-Fezzan Route",
+    "name_original_lang": "en",
+    "route_type": "CARAVAN",
+    "start_year": 1300,
+    "end_year": 1800,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          13.68,
+          12.14
+        ],
+        [
+          14.97,
+          12.88
+        ],
+        [
+          14.22,
+          14.98
+        ],
+        [
+          13.9,
+          17.98
+        ],
+        [
+          13.18,
+          21.46
+        ],
+        [
+          14.28,
+          27.04
+        ],
+        [
+          13.18,
+          32.88
+        ]
+      ]
+    },
+    "commodities": [
+      "humans_enslaved",
+      "ivory",
+      "ostrich-feathers",
+      "gold",
+      "natron",
+      "horses",
+      "firearms",
+      "textiles",
+      "kola-nuts"
+    ],
+    "description": "Caravan corridor between the Kanem-Bornu Empire in the central Sudan (Lake Chad basin) and the Fezzan oases of southern Libya, connecting onward to Tripoli and the Mediterranean. Active from the flowering of Bornu under Mai Idris Alooma (r. 1571-1603) through the 18th century, though with earlier Kanem-era antecedents. The principal northbound cargoes were enslaved people raided from the non-Muslim peoples of the Lake Chad hinterland (Sao, Kotoko, Gamergu, etc.) together with ivory and ostrich feathers; southbound came horses (crucial for the Bornu cavalry state), firearms, copper and Mediterranean textiles. The Awlad Sulayman, Tubu and Kel Ajjer confederations controlled the Saharan passage. This entry's primary traffic was slavery; it is flagged involves_slavery=true.",
+    "involves_slavery": true,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-010: SCALE — Estimates by Paul Lovejoy and Humphrey Fisher give roughly 1-2 million enslaved persons trafficked along the Bornu-Fezzan corridor between 1300 and 1800, peaking in the 16th-17th centuries. DATE RANGE — c. 1300-1800 CE. PERPETRATOR ENTITIES — Kanem-Bornu state (as raider and tax-taker); Awlad Sulayman Arab confederation (as transporters); Karamanli dynasty of Tripoli (as purchasers and re-exporters to the Ottoman empire); Kel Ajjer Tuareg (as intermediaries). MORTALITY — desert crossing mortality 10-20 percent. LONG-TERM CONSEQUENCES — demographic drain on the southern Lake Chad basin; communities of Bornu-descended enslaved people in the Fezzan (Shuwashna, Murzuk Haratin) whose descendants remain socially marked.",
+    "sources": [
+      {
+        "citation": "Lovejoy, Paul E. 'The Central Sudan and the Atlantic Slave Trade'. In Harms, Miller et al., eds., Paths Toward the Past, Africa World Press, 1994.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Fisher, Humphrey J. Slavery in the History of Muslim Black Africa. New York University Press, 2001.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Wright, John. Libya, Chad and the Central Sahara. Hurst, 1989.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Ngazargamu",
+      "Kano",
+      "Agadez",
+      "Bilma",
+      "Murzuk",
+      "Tripoli"
+    ]
+  },
+  {
+    "name_original": "Swahili Coast Monsoon Network",
+    "name_original_lang": "en",
+    "route_type": "SEA",
+    "start_year": 800,
+    "end_year": 1700,
+    "geometry_geojson": {
+      "type": "MultiLineString",
+      "coordinates": [
+        [
+          [
+            40.19,
+            -2.27
+          ],
+          [
+            39.67,
+            -4.05
+          ],
+          [
+            39.2,
+            -6.17
+          ],
+          [
+            39.27,
+            -6.83
+          ],
+          [
+            39.55,
+            -8.94
+          ],
+          [
+            40.68,
+            -10.64
+          ],
+          [
+            35.33,
+            -20.15
+          ]
+        ],
+        [
+          [
+            39.2,
+            -6.17
+          ],
+          [
+            43.24,
+            11.59
+          ],
+          [
+            45.03,
+            12.78
+          ],
+          [
+            50.79,
+            12.45
+          ],
+          [
+            58.54,
+            23.61
+          ],
+          [
+            56.27,
+            26.57
+          ]
+        ],
+        [
+          [
+            39.2,
+            -6.17
+          ],
+          [
+            72.83,
+            18.96
+          ],
+          [
+            73.03,
+            15.5
+          ]
+        ]
+      ]
+    },
+    "commodities": [
+      "gold",
+      "ivory",
+      "mangrove-poles",
+      "iron",
+      "rock-crystal",
+      "cowrie-shells",
+      "textiles",
+      "porcelain",
+      "glass-beads",
+      "islamic-scholarship",
+      "dates"
+    ],
+    "description": "Maritime commercial and cultural network linking the East African coast from Mogadishu to Sofala with southern Arabia, the Persian Gulf, western India and — through intermediaries — China. Structured by the monsoon wind system: ships sailed northeast from East Africa November-March on the kaskazi winds and returned April-September on the kusi. Active from approximately the 8th-9th centuries (first Islamic coastal settlements) through the Portuguese irruption of 1498-1505 and its aftermath. The Swahili city-states (Kilwa, Mombasa, Malindi, Lamu, Zanzibar, Pate, Sofala) were autonomous merchant polities, Islamic and Bantu-speaking, that combined African hinterland trade (Zimbabwe gold via Sofala, ivory from the interior) with Indian Ocean networks. Kilwa controlled the Sofala gold trade at its 13th-14th century peak and issued its own coinage; Chinese porcelain sherds and Persian blue-and-white are found in quantity at every major Swahili site.",
+    "involves_slavery": false,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "This entry covers the broader Swahili-Indian Ocean commercial and cultural network. A SEPARATE entry (Indian Ocean Slave Route) specifically addresses the trafficking of enslaved East Africans, which was one strand of this network but is separately catalogued to prevent absorption into the general category of 'commerce'. Portuguese sources from Vasco da Gama and Duarte Barbosa are rich but hostile witnesses to Swahili prosperity; Swahili chronicles (Kilwa Chronicle) and Arabic geographical literature (Ibn Battuta, Al-Idrisi, Al-Mas'udi) provide indispensable counterweights.",
+    "sources": [
+      {
+        "citation": "Horton, Mark, and John Middleton. The Swahili: The Social Landscape of a Mercantile Society. Blackwell, 2000.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Pearson, Michael N. Port Cities and Intruders: The Swahili Coast, India, and Portugal in the Early Modern Era. Johns Hopkins University Press, 1998.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Sheriff, Abdul. Dhow Cultures of the Indian Ocean: Cosmopolitanism, Commerce, and Islam. Columbia University Press, 2010.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Mogadishu",
+      "Mvita",
+      "Malindi",
+      "Unguja",
+      "Kilwa",
+      "Sofala",
+      "Aden",
+      "Zufar",
+      "Hormuz",
+      "Cambay"
+    ]
+  },
+  {
+    "name_original": "Indian Ocean Spice Route",
+    "name_original_lang": "en",
+    "route_type": "SEA",
+    "start_year": 100,
+    "end_year": 1600,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          31.25,
+          30.04
+        ],
+        [
+          32.58,
+          29.97
+        ],
+        [
+          38.51,
+          19.6
+        ],
+        [
+          45.03,
+          12.78
+        ],
+        [
+          56.27,
+          26.57
+        ],
+        [
+          69.66,
+          22.82
+        ],
+        [
+          72.83,
+          18.96
+        ],
+        [
+          73.03,
+          15.5
+        ],
+        [
+          75.96,
+          10.89
+        ],
+        [
+          79.85,
+          6.93
+        ],
+        [
+          80.2,
+          13.08
+        ],
+        [
+          98.3,
+          7.88
+        ],
+        [
+          103.85,
+          1.29
+        ],
+        [
+          112.8,
+          -7.25
+        ],
+        [
+          118.11,
+          5.55
+        ],
+        [
+          114.16,
+          22.29
+        ],
+        [
+          120.97,
+          14.58
+        ],
+        [
+          121.47,
+          31.22
+        ]
+      ]
+    },
+    "commodities": [
+      "pepper",
+      "cinnamon",
+      "cloves",
+      "nutmeg",
+      "mace",
+      "cardamom",
+      "ginger",
+      "turmeric",
+      "textiles",
+      "porcelain",
+      "silk",
+      "sandalwood",
+      "pearls",
+      "horses"
+    ],
+    "description": "Maritime spice trade network connecting Red Sea/Mediterranean ports with the Malabar Coast, Ceylon, the Indonesian archipelago (particularly the Moluccas — the original 'Spice Islands'), and Chinese entrepots. Active from the Roman-era exploitation of monsoon winds (described in the Periplus Maris Erythraei, c. 50 CE) through the Portuguese disruption of 1498-1515 and the VOC's 17th-century monopoly. The route was the commercial spine of the old world; Pliny complained that the empire spent 100 million sesterces a year on Indian and Arabian luxuries. Pre-Portuguese structure was segmented — Arab, Gujarati, Tamil, Malay and Chinese merchants handled successive legs — with Muslim-run entrepots (Malacca, Cambay, Calicut, Hormuz, Aden) as clearinghouses. Portuguese and then Dutch naval violence after 1498 attempted to monopolise the trade; they captured its fiscal returns but never fully controlled production.",
+    "involves_slavery": false,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "The standard European narrative credits the Portuguese with 'opening' the Indian Ocean in 1498; in fact the network had been integrated for 1500 years before their arrival and their contribution was predominantly coercive. The 'cruzada' violence of the Estado da Índia — bombardment of Calicut (1502, 1510), extortion of cartazes — inflicted substantial harm on pre-existing Asian commercial systems. AtlasPI records this route as an Asian-run network that Europeans entered, not as a European 'discovery'.",
+    "sources": [
+      {
+        "citation": "Chaudhuri, K.N. Trade and Civilisation in the Indian Ocean: An Economic History from the Rise of Islam to 1750. Cambridge University Press, 1985.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Prange, Sebastian R. Monsoon Islam: Trade and Faith on the Medieval Malabar Coast. Cambridge University Press, 2018.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Subrahmanyam, Sanjay. The Political Economy of Commerce: Southern India, 1500-1650. Cambridge University Press, 1990.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Alexandria",
+      "Berenike",
+      "Aden",
+      "Hormuz",
+      "Cambay",
+      "Calicut",
+      "Kollam",
+      "Anuradhapura",
+      "Malacca",
+      "Guangzhou"
+    ]
+  },
+  {
+    "name_original": "Indian Ocean Slave Route",
+    "name_original_lang": "en",
+    "route_type": "SEA",
+    "start_year": 800,
+    "end_year": 1900,
+    "geometry_geojson": {
+      "type": "MultiLineString",
+      "coordinates": [
+        [
+          [
+            40.68,
+            -10.64
+          ],
+          [
+            39.2,
+            -6.17
+          ],
+          [
+            40.19,
+            -2.27
+          ],
+          [
+            45.33,
+            2.04
+          ],
+          [
+            43.24,
+            11.59
+          ],
+          [
+            45.03,
+            12.78
+          ],
+          [
+            50.13,
+            26.27
+          ],
+          [
+            56.27,
+            26.57
+          ]
+        ],
+        [
+          [
+            39.2,
+            -6.17
+          ],
+          [
+            72.83,
+            18.96
+          ],
+          [
+            73.03,
+            15.5
+          ],
+          [
+            75.96,
+            10.89
+          ]
+        ],
+        [
+          [
+            47.51,
+            -18.91
+          ],
+          [
+            57.55,
+            -20.17
+          ],
+          [
+            55.54,
+            -21.11
+          ],
+          [
+            72.83,
+            18.96
+          ]
+        ]
+      ]
+    },
+    "commodities": [
+      "humans_enslaved",
+      "ivory",
+      "cloves",
+      "dates"
+    ],
+    "description": "Maritime trafficking of enslaved East Africans (and, in smaller numbers, enslaved Malagasy) across the western Indian Ocean to Arabia, the Persian Gulf, Ottoman Iraq, western India, and the Mascarene plantation islands. Active from the 9th-century Zanj demand of the Abbasid Caliphate (culminating in the Zanj Revolt of 869-883 in the salt marshes of southern Iraq) through the 19th-century clove plantation economy of Zanzibar under Omani rule. Principal embarkation points were the Swahili coast ports (Kilwa, Zanzibar after c. 1700, Bagamoyo, Mozambique Island) and Mozambique's Quelimane; destinations included Muscat, Basra, Bushehr, Bombay, Surat, and (after 1735) the French Mascarenes (Mauritius, Réunion). The traffic intensified sharply after 1810 as Said bin Sultan of Oman moved his capital to Zanzibar (1840) and developed clove plantations worked by enslaved labour, and as closing Atlantic markets redirected European demand eastward.",
+    "involves_slavery": true,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-010: SCALE — Abdul Sheriff, Paul Lovejoy and Gwyn Campbell give estimates of 4-6 million enslaved East Africans trafficked across the western Indian Ocean between 800 and 1900 CE. Peak decades were 1830-1873, with Zanzibar's annual clove-plantation import reaching c. 20,000-50,000 people; the Bombay consul estimated in 1870 that some 15,000 enslaved people a year were still reaching Arabia despite the 1845 Moresby and 1873 Frere treaties nominally suppressing the trade. DATE RANGE — c. 800-1900 CE, with a clear 19th-century intensification. PERPETRATOR ENTITIES — Abbasid Caliphate (as original mass purchaser); Omani Sultanate and its Zanzibar successor (Said bin Sultan, Barghash, Tippu Tip); Indian financiers (Kachchhi Bhatias, Banyans) who underwrote the caravans; European plantation owners on Mauritius, Réunion and the Seychelles; the Portuguese colonial government of Mozambique. MORTALITY — caravan-to-coast mortality in the East African interior was catastrophic; Henry Morton Stanley, David Livingstone and H.H. Johnston estimated that for every person sold in Zanzibar, four to five others died in the capture raids or the march to the coast. Overseas crossing mortality was lower than the Middle Passage (shorter voyages) but still significant. LONG-TERM CONSEQUENCES — depopulation of eastern Congo, Malawi, northern Mozambique and southern Tanzania; formation of communities of African-descended enslaved people (Siddis, Habshis) in India and the Gulf whose descendants remain socially marginalised; foundation of the 19th-century European colonial intervention under the cover of 'suppression of the slave trade' (Brussels Conference 1889-1890) whose actual consequences included German, British and Belgian conquest of the regions devastated. The Indian Ocean slave trade is the least publicly known of the major oceanic slave systems; its erasure is itself an ethical problem AtlasPI seeks to correct.",
+    "sources": [
+      {
+        "citation": "Sheriff, Abdul. Slaves, Spices and Ivory in Zanzibar: Integration of an East African Commercial Empire into the World Economy, 1770-1873. Ohio University Press, 1987.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Campbell, Gwyn, ed. The Structure of Slavery in Indian Ocean Africa and Asia. Routledge, 2004.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Alpers, Edward A. Ivory and Slaves: Changing Pattern of International Trade in East Central Africa to the Later Nineteenth Century. University of California Press, 1975.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Lovejoy, Paul E. Transformations in Slavery: A History of Slavery in Africa. 3rd ed., Cambridge University Press, 2012.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Kilwa",
+      "Unguja",
+      "Bagamoyo",
+      "Mvita",
+      "Mogadishu",
+      "Aden",
+      "Muscat",
+      "Bandar Abbas",
+      "Basra",
+      "Bombay"
+    ]
+  },
+  {
+    "name_original": "Cape Route",
+    "name_original_lang": "en",
+    "route_type": "SEA",
+    "start_year": 1498,
+    "end_year": 1869,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -9.14,
+          38.71
+        ],
+        [
+          -17.42,
+          14.67
+        ],
+        [
+          -14.5,
+          -7.87
+        ],
+        [
+          13.24,
+          -8.84
+        ],
+        [
+          18.42,
+          -33.92
+        ],
+        [
+          31.02,
+          -29.86
+        ],
+        [
+          39.2,
+          -6.17
+        ],
+        [
+          55.45,
+          -4.62
+        ],
+        [
+          72.83,
+          18.96
+        ],
+        [
+          75.96,
+          10.89
+        ],
+        [
+          79.85,
+          6.93
+        ],
+        [
+          103.85,
+          1.29
+        ],
+        [
+          114.16,
+          22.29
+        ],
+        [
+          139.69,
+          35.69
+        ]
+      ]
+    },
+    "commodities": [
+      "spices",
+      "textiles",
+      "porcelain",
+      "silk",
+      "silver",
+      "gold",
+      "tea",
+      "coffee",
+      "opium",
+      "indigo",
+      "saltpeter"
+    ],
+    "description": "Maritime route from European Atlantic ports around the Cape of Good Hope to Indian Ocean and East Asian destinations, used from Vasco da Gama's 1497-1499 voyage until the opening of the Suez Canal in 1869. The Cape Route was the backbone of early-modern European commercial and imperial expansion in Asia: the Portuguese Carreira da Índia (1500-1640s), the Dutch VOC's thrice-yearly Batavia fleets (1602-1799), the English East India Company's China runs (1600-1834), and the French Compagnie des Indes. Typical round-trip times were 18-30 months; the Cape of Good Hope and Saint Helena were obligatory provisioning stops. The route enabled the spice monopolies of the 16th-17th centuries, the textile trades of the 18th, the opium-tea-silver triangle of the early 19th, and the East India Companies' conquest of India. Displaced by the Suez shortcut after 1869.",
+    "involves_slavery": false,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "The Cape Route's 'commerce' is inextricable from coercion: Portuguese cartazes, Dutch destruction of competing spice cultivation (most notoriously the 1621 Banda massacre, c. 14,000 Bandanese killed or enslaved), British opium coercion of China, and slave labour on the Cape itself (the VOC imported enslaved people from Madagascar, Mozambique and the Indonesian archipelago to work the Cape from 1658). This entry is not flagged involves_slavery=true because the route's primary function was spice/textile/tea trade, but the slave-labour foundation at the Cape station and the Dutch-Portuguese entanglement with Indian Ocean trafficking should be acknowledged.",
+    "sources": [
+      {
+        "citation": "Boxer, Charles R. The Portuguese Seaborne Empire, 1415-1825. Hutchinson, 1969.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Parthasarathi, Prasannan. Why Europe Grew Rich and Asia Did Not: Global Economic Divergence, 1600-1850. Cambridge University Press, 2011.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Gaastra, Femme S. The Dutch East India Company: Expansion and Decline. Walburg Pers, 2003.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Lisboa",
+      "Ilha de São Vicente",
+      "Luanda",
+      "Cape Town",
+      "Mozambique Island",
+      "Kolkata",
+      "Guangzhou",
+      "Edo"
+    ]
+  },
+  {
+    "name_original": "Trans-Atlantic Slave Trade",
+    "name_original_lang": "en",
+    "route_type": "SEA",
+    "start_year": 1500,
+    "end_year": 1866,
+    "geometry_geojson": {
+      "type": "MultiLineString",
+      "coordinates": [
+        [
+          [
+            -1.35,
+            5.08
+          ],
+          [
+            -38.51,
+            -12.97
+          ],
+          [
+            -43.18,
+            -22.9
+          ]
+        ],
+        [
+          [
+            5.08,
+            5.52
+          ],
+          [
+            -38.51,
+            -12.97
+          ],
+          [
+            -43.18,
+            -22.9
+          ]
+        ],
+        [
+          [
+            13.24,
+            -8.84
+          ],
+          [
+            -38.51,
+            -12.97
+          ],
+          [
+            -43.18,
+            -22.9
+          ]
+        ],
+        [
+          [
+            -17.04,
+            14.76
+          ],
+          [
+            -60.64,
+            14.65
+          ],
+          [
+            -59.54,
+            13.19
+          ],
+          [
+            -61.74,
+            12.05
+          ]
+        ],
+        [
+          [
+            -1.35,
+            5.08
+          ],
+          [
+            -76.8,
+            18.0
+          ],
+          [
+            -82.38,
+            23.13
+          ]
+        ],
+        [
+          [
+            5.08,
+            5.52
+          ],
+          [
+            -79.96,
+            32.78
+          ],
+          [
+            -75.97,
+            36.9
+          ]
+        ],
+        [
+          [
+            13.24,
+            -8.84
+          ],
+          [
+            -43.18,
+            -22.9
+          ],
+          [
+            -48.55,
+            -27.59
+          ]
+        ]
+      ]
+    },
+    "commodities": [
+      "humans_enslaved",
+      "sugar",
+      "cotton",
+      "tobacco",
+      "rum",
+      "rice",
+      "indigo",
+      "coffee",
+      "gold"
+    ],
+    "description": "Maritime trafficking of enslaved Africans from the West and West-Central African coasts to the Americas, conducted between the early 16th and late 19th centuries. Most comprehensively documented in the Trans-Atlantic Slave Trade Database (SlaveVoyages.org, directed by David Eltis and colleagues), which catalogues some 36,000 individual voyages. African embarkation regions were predominantly Senegambia, the Gold Coast, the Bight of Benin (the 'Slave Coast'), the Bight of Biafra, and West-Central Africa (Kongo, Angola). Principal American destinations were Brazil (~46 percent of total), the Caribbean (~37 percent: Jamaica, Saint-Domingue, Cuba, Barbados, Martinique), and Spanish and English mainland North America (~8 percent, of which ~389,000 reached British North America / the United States). The route is commonly schematised as a 'triangle' (Europe → Africa → Americas → Europe), but many voyages were bilateral or multilateral; a parallel 'South Atlantic' circuit between Brazil and Angola operated largely outside the European-flagged triangle.",
+    "involves_slavery": true,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-010: This is the single most important ethical entry in the batch. SCALE — The Trans-Atlantic Slave Trade Database (Eltis et al.) documents 12,521,336 people embarked from Africa between 1501 and 1866, of whom 10,702,654 disembarked alive in the Americas. Approximately 1,818,682 people — the shortfall between embarkation and arrival — died during the Middle Passage, a mortality rate of approximately 14.5 percent. Uncounted additional millions died in the capture raids, the coffle marches to the coast, and in the holding barracoons before embarkation; estimates of total African mortality associated with the Atlantic trade (capture, march, barracoon, Middle Passage, seasoning) commonly range from 20 to 40 million lives over 366 years. DATE RANGE — 1501 (first documented voyage, Portuguese) to 1866 (last documented voyage, Brazilian). Peak decade: 1780-1789, with c. 880,000 people embarked. Abolition proceeded unevenly — Denmark (1803), Britain (1807), US (1808, trade only), France (1815), Netherlands (1814), Spain (1817, effective 1820), Brazil (1850, effective c. 1856), Cuba (1867) — but trafficking continued long after national prohibitions. PERPETRATOR ENTITIES — Portugal and Brazil embarked c. 5.8 million people (the largest national total by a wide margin); Britain c. 3.3 million; France c. 1.4 million; Spain/Uruguay c. 1.1 million; Netherlands c. 555,000; United States c. 305,000; Denmark c. 112,000. Joint-stock chartered monopolies — the Royal African Company (British, 1672-1750s), the Companhia de Cacheu and Companhia de Pernambuco e Paraíba (Portuguese), the West India Company (Dutch WIC, 1621), the Compagnie de Guinée (French), the Royal Danish Guinea Company — formalised state backing for the trade. Private merchants (Liverpool, Bristol, Nantes, Bordeaux, Rhode Island, Newport, Havana, Bahia, Rio) conducted the majority of voyages after the decline of the chartered monopolies. African polities and elites — Kingdom of Kongo, Ndongo, Oyo, Dahomey, Asante, the Aro Confederacy, the Efik of Old Calabar — participated as suppliers, captors and middlemen; they are not exculpated, but neither was their role symmetrical with that of the European buyers who created the continental-scale demand. MIDDLE PASSAGE MORTALITY — the 14.5 percent mean conceals enormous variance: early voyages (1500s) and tightly packed 'loose' slavers saw mortality of 25-50 percent; later, better-provisioned voyages approached 5-10 percent. Cause of death was overwhelmingly dehydration and dysentery (the 'bloody flux'), followed by smallpox, scurvy, measles and suicide (refusal to eat, jumping overboard). Enslaved people resisted throughout: the SlaveVoyages database records 500+ documented shipboard insurrections. LONG-TERM CONSEQUENCES — (1) Demographic: Africa's population stagnated or declined over 1600-1900 while every other continent's grew; West-Central Africa is estimated to have lost 20-40 percent of its population-at-risk cohort. (2) Political-economic: Atlantic capitalism's foundational industries — sugar, tobacco, cotton — were built on coerced African labour; London, Liverpool, Bristol, Glasgow, Nantes, Bordeaux, Rio, Salvador and Havana derived substantial fractions of their 18th-century wealth from the trade or the products it produced. Eric Williams's 'Capitalism and Slavery' thesis (1944) — that slave trade profits helped capitalise the British Industrial Revolution — is contested in strict quantitative terms but broadly supported in more recent literature (Beckert, Baptist, Berry). (3) Demographic-political legacy: African-descended populations of the Americas (some 200+ million people in 2024) are the direct demographic inheritance of the trade; the social construction of 'race' as a hereditary legal category was invented to justify it. (4) Reparations claims: contemporary reparations movements (CARICOM Ten-Point Plan 2013; US H.R. 40) are direct descendants of this historical record. AtlasPI records this route as what it was: the largest forced migration in human history, a crime of continental scale sustained over 366 years by the coordinated action of European states, chartered companies, private merchants and collaborating African political elites, whose consequences shape the Atlantic world to this day.",
+    "sources": [
+      {
+        "citation": "Eltis, David, and David Richardson. Atlas of the Transatlantic Slave Trade. Yale University Press, 2010. See also SlaveVoyages.org.",
+        "url": "https://www.slavevoyages.org/",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Lovejoy, Paul E. Transformations in Slavery: A History of Slavery in Africa. 3rd ed., Cambridge University Press, 2012.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Williams, Eric. Capitalism and Slavery. University of North Carolina Press, 1944.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Beckert, Sven. Empire of Cotton: A Global History. Knopf, 2014.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Thornton, John K. Africa and Africans in the Making of the Atlantic World, 1400-1800. 2nd ed., Cambridge University Press, 1998.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Rediker, Marcus. The Slave Ship: A Human History. Viking, 2007.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Elmina",
+      "Ouidah",
+      "Bonny",
+      "Luanda",
+      "Salvador",
+      "Rio de Janeiro",
+      "Kingston",
+      "Bridgetown",
+      "Havana",
+      "Charleston"
+    ]
+  },
+  {
+    "name_original": "Triangle Trade",
+    "name_original_lang": "en",
+    "route_type": "SEA",
+    "start_year": 1600,
+    "end_year": 1807,
+    "geometry_geojson": {
+      "type": "MultiLineString",
+      "coordinates": [
+        [
+          [
+            -2.99,
+            53.4
+          ],
+          [
+            -17.04,
+            14.76
+          ],
+          [
+            -1.35,
+            5.08
+          ],
+          [
+            5.08,
+            5.52
+          ]
+        ],
+        [
+          [
+            -1.35,
+            5.08
+          ],
+          [
+            -76.8,
+            18.0
+          ],
+          [
+            -77.01,
+            18.48
+          ],
+          [
+            -64.62,
+            32.31
+          ]
+        ],
+        [
+          [
+            -77.01,
+            18.48
+          ],
+          [
+            -71.38,
+            41.49
+          ],
+          [
+            -71.06,
+            42.36
+          ],
+          [
+            -2.99,
+            53.4
+          ]
+        ],
+        [
+          [
+            -1.55,
+            47.22
+          ],
+          [
+            -17.04,
+            14.76
+          ],
+          [
+            5.08,
+            5.52
+          ]
+        ],
+        [
+          [
+            5.08,
+            5.52
+          ],
+          [
+            -60.96,
+            14.6
+          ],
+          [
+            -1.55,
+            47.22
+          ]
+        ]
+      ]
+    },
+    "commodities": [
+      "humans_enslaved",
+      "sugar",
+      "rum",
+      "molasses",
+      "textiles",
+      "firearms",
+      "iron-bars",
+      "cowrie-shells",
+      "brandy",
+      "tobacco"
+    ],
+    "description": "The commonly schematised three-legged Atlantic circuit: Leg 1 — European ports (Liverpool, Bristol, Nantes, Bordeaux, Rhode Island/Newport) outbound with manufactured goods (textiles, firearms, iron bars, cowrie shells, brandy) to West African coastal factories (Elmina, Cape Coast Castle, Anomabo, Ouidah, Bonny); Leg 2 — the Middle Passage, from African coast to American plantations, trafficking enslaved people; Leg 3 — American ports (Jamaica, Barbados, Saint-Domingue, Charleston, Virginia) back to Europe with sugar, rum, molasses, tobacco and cotton. Effectively a subset/schematisation of the Trans-Atlantic Slave Trade (entry 14), this entry is catalogued separately because the three-legged pattern is a distinct analytical frame in economic and maritime history, and because it illuminates the reciprocal profitability that drove British, French and New England merchant investment across four centuries. A parallel South Atlantic 'triangle' (Brazil-Angola-Brazil) operated largely outside the European legs and accounted for most of the Portuguese/Brazilian traffic.",
+    "involves_slavery": true,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-010: This entry overlaps substantively with entry 14 (Trans-Atlantic Slave Trade); readers should consult that entry for full scale, mortality and consequences. SCALE — the European-leg triangle accounts for roughly the British (3.3 million), French (1.4 million), Dutch (555,000), US/North American (305,000) and Danish (112,000) portions of the total 12.5 million people embarked; Portuguese/Brazilian bilateral South Atlantic traffic (c. 5.8 million) is traditionally excluded from the classic 'triangle' schema. DATE RANGE — c. 1600 (English and French entry into the trade) to 1807 (British slave trade abolition, which effectively dismantled the Liverpool-centred triangle) with some continuation to 1820s (French and US). PERPETRATOR ENTITIES — the Royal African Company (chartered 1672); Liverpool and Bristol merchant syndicates; the French Compagnie de Guinée and Nantes slavers; the Rhode Island merchant dynasties (DeWolf, Brown, Malbone) whose New England rum-to-Africa voyages were the foundation of North American participation; the planter classes of the British, French and Dutch West Indies who were the ultimate consignees. LONG-TERM CONSEQUENCES — the rum-sugar-slave-cotton vertical integration that structured the Atlantic economy from 1650 to 1850 is the single most studied case of early-modern capital accumulation; Eric Williams, Sven Beckert, Joseph Inikori and others argue the accumulated profits helped capitalise British industrialisation. See entry 14 for full treatment.",
+    "sources": [
+      {
+        "citation": "Morgan, Kenneth. Slavery, Atlantic Trade and the British Economy, 1660-1800. Cambridge University Press, 2000.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Inikori, Joseph E. Africans and the Industrial Revolution in England. Cambridge University Press, 2002.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Rawley, James A., with Stephen D. Behrendt. The Transatlantic Slave Trade: A History. Revised ed., University of Nebraska Press, 2005.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Liverpool",
+      "Bristol",
+      "Nantes",
+      "Elmina",
+      "Ouidah",
+      "Bonny",
+      "Kingston",
+      "Bridgetown",
+      "Charleston",
+      "Newport"
+    ]
+  },
+  {
+    "name_original": "Columbian Exchange",
+    "name_original_lang": "en",
+    "route_type": "SEA",
+    "start_year": 1492,
+    "end_year": 1800,
+    "geometry_geojson": {
+      "type": "MultiLineString",
+      "coordinates": [
+        [
+          [
+            -6.3,
+            36.53
+          ],
+          [
+            -17.92,
+            27.99
+          ],
+          [
+            -69.93,
+            18.47
+          ],
+          [
+            -82.38,
+            23.13
+          ],
+          [
+            -99.13,
+            19.43
+          ]
+        ],
+        [
+          [
+            -99.13,
+            19.43
+          ],
+          [
+            -70.67,
+            -33.45
+          ],
+          [
+            -77.04,
+            -12.05
+          ]
+        ],
+        [
+          [
+            -43.18,
+            -22.9
+          ],
+          [
+            -9.14,
+            38.71
+          ],
+          [
+            -6.3,
+            36.53
+          ]
+        ],
+        [
+          [
+            -99.13,
+            19.43
+          ],
+          [
+            120.97,
+            14.58
+          ]
+        ]
+      ]
+    },
+    "commodities": [
+      "maize",
+      "potato",
+      "sweet-potato",
+      "tomato",
+      "cacao",
+      "tobacco",
+      "manioc",
+      "capsicum",
+      "vanilla",
+      "silver",
+      "horses",
+      "cattle",
+      "pigs",
+      "wheat",
+      "sugar-cane",
+      "coffee",
+      "diseases"
+    ],
+    "description": "The biological and commercial exchange initiated by the 1492 Columbus voyages and sustained through the Spanish and Portuguese Atlantic systems, transferring plants, animals, peoples and pathogens between the Americas, Europe, Africa and Asia. Named by the historian Alfred W. Crosby (1972) for Columbus but the term designates a process, not a single route. Eastward (Americas to Old World): maize, potatoes, sweet potatoes, tomatoes, cassava, cacao, tobacco, capsicum, vanilla, rubber, silver (the Potosí-Manila-Seville silver cycle); many of these fundamentally restructured Afro-Eurasian agriculture (potato in Ireland and northern Europe; maize in China, Africa and southern Europe; cassava in West and Central Africa). Westward (Old World to Americas): wheat, rice, sugarcane, coffee, bananas, citrus, horses, cattle, pigs, sheep, chickens, and — catastrophically — smallpox, measles, influenza, typhus, yellow fever, falciparum malaria.",
+    "involves_slavery": false,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "NAMING: The label 'Columbian Exchange' centres a single European navigator at the head of a genocidal process and is itself an ethical problem. AtlasPI retains the term because it is the canonical scholarly label (Crosby 1972), but documents the naming concern here. DEMOGRAPHIC CATASTROPHE: The westward transfer of Eurasian pathogens to previously unexposed American populations produced what is now considered one of the largest demographic catastrophes in human history. Estimates of pre-Columbian Americas population range from 50 to 100 million (Denevan, Dobyns, Mann); by 1600 the population had fallen by 70-90 percent in most regions, with local collapses (Hispaniola, central Mexico valley of Mexico, Peru coastal) of over 95 percent within a century. Smallpox alone is estimated to have killed tens of millions; measles, influenza, typhus and malaria accounted for additional millions. Koch and Brierley (2019) modelled the resulting carbon drawdown from forest regrowth on abandoned American farmland as a contributing cause of the Little Ice Age temperature dip c. 1610. While the virgin-soil epidemics were not in themselves intentional, Spanish, Portuguese, English, Dutch and French colonial practices actively exacerbated them (encomienda forced labour, mission concentration, warfare). This entry is not flagged involves_slavery=true because slave trafficking is separately catalogued, but the depopulation created the labour shortage that drove the trans-Atlantic slave trade.",
+    "sources": [
+      {
+        "citation": "Crosby, Alfred W. The Columbian Exchange: Biological and Cultural Consequences of 1492. Greenwood, 1972.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Mann, Charles C. 1491: New Revelations of the Americas Before Columbus. Knopf, 2005.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Nunn, Nathan, and Nancy Qian. 'The Columbian Exchange: A History of Disease, Food, and Ideas'. Journal of Economic Perspectives 24(2), 2010.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Koch, Alexander, et al. 'Earth system impacts of the European arrival and Great Dying in the Americas after 1492'. Quaternary Science Reviews 207, 2019.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Sevilla",
+      "Santo Domingo",
+      "La Habana",
+      "Ciudad de México",
+      "Lima",
+      "Potosí",
+      "Lisboa",
+      "Salvador"
+    ]
+  },
+  {
+    "name_original": "Manila Galleon",
+    "name_original_lang": "en",
+    "route_type": "SEA",
+    "start_year": 1565,
+    "end_year": 1815,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          120.97,
+          14.58
+        ],
+        [
+          128.0,
+          20.0
+        ],
+        [
+          145.0,
+          28.0
+        ],
+        [
+          165.0,
+          35.0
+        ],
+        [
+          180.0,
+          40.0
+        ],
+        [
+          -170.0,
+          42.0
+        ],
+        [
+          -150.0,
+          40.0
+        ],
+        [
+          -130.0,
+          35.0
+        ],
+        [
+          -115.0,
+          28.0
+        ],
+        [
+          -105.0,
+          22.0
+        ],
+        [
+          -99.89,
+          16.86
+        ]
+      ]
+    },
+    "commodities": [
+      "silver",
+      "silk",
+      "porcelain",
+      "cotton-textiles",
+      "spices",
+      "ivory",
+      "lacquerware",
+      "mercury",
+      "wax",
+      "cochineal"
+    ],
+    "description": "Annual (later biannual) Spanish galleon service between Manila in the Philippines and Acapulco in New Spain (Mexico), operated from 1565 to 1815. The eastbound leg carried Mexican silver (principally from Zacatecas and Potosí, reshipped via Acapulco) to Manila, where it was exchanged with Chinese merchants from Fujian for silk, porcelain, cotton textiles and spices; the westbound leg returned Asian goods to Acapulco for onward transit by mule train to Veracruz and thence by the Spanish treasure fleets to Seville and the European market. At its peak the galleon carried 1-2 million pesos of silver per year; cumulative silver flow over 250 years is estimated at c. 170,000 metric tons. The Manila-Acapulco run was the world's longest regular shipping line for most of its duration (6-9 months Manila to Acapulco against prevailing winds; 3-4 months on the return). Ended by Mexican independence in 1815.",
+    "involves_slavery": false,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "ethical_notes": "The galleon trade was not itself a slave-trafficking route, but it operated atop coerced labour systems: Mexican silver was extracted through the mita forced-labour levy of indigenous Andean and Mexican populations (Potosí, Zacatecas); Filipino polos y servicios forced labour supported Cavite shipyard construction; and the Manila trade depended on Chinese (Sangley) merchants who were periodically massacred by Spanish colonial authorities (most infamously 1603, c. 20,000 killed; 1639; 1662; 1686; 1762).",
+    "sources": [
+      {
+        "citation": "Schurz, William Lytle. The Manila Galleon. E.P. Dutton, 1939.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Flynn, Dennis O., and Arturo Giráldez. 'Born with a Silver Spoon: The Origin of World Trade in 1571'. Journal of World History 6(2), 1995.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Giráldez, Arturo. The Age of Trade: The Manila Galleons and the Dawn of the Global Economy. Rowman & Littlefield, 2015.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Manila",
+      "Cavite",
+      "Acapulco",
+      "Ciudad de México",
+      "Veracruz",
+      "Sevilla"
+    ]
+  },
+  {
+    "name_original": "Maritime Silk Road",
+    "name_original_lang": "en",
+    "route_type": "SEA",
+    "start_year": 100,
+    "end_year": 1500,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          121.47,
+          31.22
+        ],
+        [
+          118.78,
+          32.06
+        ],
+        [
+          119.3,
+          26.08
+        ],
+        [
+          118.11,
+          24.48
+        ],
+        [
+          114.16,
+          22.29
+        ],
+        [
+          113.54,
+          22.19
+        ],
+        [
+          110.38,
+          20.02
+        ],
+        [
+          109.2,
+          12.24
+        ],
+        [
+          107.2,
+          10.0
+        ],
+        [
+          103.85,
+          1.29
+        ],
+        [
+          98.3,
+          7.88
+        ],
+        [
+          96.16,
+          16.8
+        ],
+        [
+          92.35,
+          23.13
+        ],
+        [
+          88.36,
+          22.57
+        ],
+        [
+          80.2,
+          13.08
+        ],
+        [
+          79.85,
+          6.93
+        ],
+        [
+          76.22,
+          9.94
+        ],
+        [
+          75.96,
+          10.89
+        ],
+        [
+          72.83,
+          18.96
+        ],
+        [
+          69.66,
+          22.82
+        ],
+        [
+          56.27,
+          26.57
+        ],
+        [
+          50.79,
+          12.45
+        ],
+        [
+          32.58,
+          29.97
+        ],
+        [
+          31.25,
+          30.04
+        ]
+      ]
+    },
+    "commodities": [
+      "silk",
+      "porcelain",
+      "tea",
+      "spices",
+      "sandalwood",
+      "camphor",
+      "aloeswood",
+      "pearls",
+      "tortoise-shell",
+      "incense"
+    ],
+    "description": "Seaborne counterpart to the overland Silk Roads, linking Chinese ports (Guangzhou, Quanzhou, Ningbo) through the South China Sea, Strait of Malacca, Bay of Bengal, Arabian Sea, and Red Sea to the Mediterranean. Active from at least the Han dynasty (documented by Roman sources — a 'Roman' embassy reached Han China by sea in 166 CE per Hou Hanshu) through the Tang (the 'porcelain road' supplying Abbasid Iraq with Changsha wares), the Song (expansion of Fujianese and Cantonese shipping), and the early Ming (Zheng He's seven voyages 1405-1433 reached as far as the East African coast). After c. 1500 the route was partially supplanted by European-flagged shipping on the same sea lanes; this entry's terminal date marks the shift from Asian-led to Asian+European shipping. At its peak Quanzhou, called Zayton by Marco Polo and Ibn Battuta, was described by both as one of the two greatest ports in the world.",
+    "involves_slavery": false,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "The label 'Maritime Silk Road' is — like 'Silk Road' itself — a modern (late 20th-century) coinage, partly promoted by the People's Republic of China's 21st-century 'Belt and Road Initiative' branding. The underlying network is real and well-attested in Chinese, Arabic, Tamil, Malay and European sources, but the single-label framing should be treated with the same skepticism as 'Silk Road' (see entry 1 ethical notes).",
+    "sources": [
+      {
+        "citation": "Schottenhammer, Angela, ed. The East Asian Mediterranean: Maritime Crossroads of Culture, Commerce and Human Migration. Harrassowitz, 2008.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Wade, Geoff. 'An Early Age of Commerce in Southeast Asia, 900-1300 CE'. Journal of Southeast Asian Studies 40(2), 2009.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Sen, Tansen. Buddhism, Diplomacy, and Trade: The Realignment of Sino-Indian Relations, 600-1400. University of Hawaii Press, 2003.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Guangzhou",
+      "Quanzhou",
+      "Ningbo",
+      "Malacca",
+      "Śrīvijaya",
+      "Kollam",
+      "Calicut",
+      "Cambay",
+      "Hormuz",
+      "Aden",
+      "Alexandria"
+    ]
+  },
+  {
+    "name_original": "Tea Horse Road",
+    "name_original_lang": "en",
+    "route_type": "CARAVAN",
+    "start_year": 700,
+    "end_year": 1950,
+    "geometry_geojson": {
+      "type": "MultiLineString",
+      "coordinates": [
+        [
+          [
+            102.72,
+            25.04
+          ],
+          [
+            100.23,
+            25.59
+          ],
+          [
+            100.19,
+            27.81
+          ],
+          [
+            99.7,
+            31.01
+          ],
+          [
+            97.17,
+            31.14
+          ],
+          [
+            94.35,
+            29.65
+          ],
+          [
+            91.13,
+            29.65
+          ],
+          [
+            88.89,
+            29.27
+          ]
+        ],
+        [
+          [
+            103.25,
+            30.0
+          ],
+          [
+            103.0,
+            30.7
+          ],
+          [
+            101.96,
+            30.06
+          ],
+          [
+            100.33,
+            30.05
+          ],
+          [
+            98.52,
+            29.98
+          ],
+          [
+            94.35,
+            29.65
+          ],
+          [
+            91.13,
+            29.65
+          ]
+        ]
+      ]
+    },
+    "commodities": [
+      "tea",
+      "horses",
+      "salt",
+      "wool",
+      "yak-butter",
+      "musk",
+      "medicinal-herbs",
+      "silver"
+    ],
+    "description": "Caravan network linking the tea-producing areas of Yunnan (Pu'er) and Sichuan with the Tibetan plateau and onward to Nepal, Bhutan and northern India. The principal exchange was Chinese compressed brick tea (aged Pu'er from Xishuangbanna, Ya'an tea from Sichuan) against Tibetan highland horses and wool; secondary goods included Chinese silver, silk, Tibetan medicinal herbs and musk. Tibetan demand for tea (a caloric and nutritional staple in a meat-and-barley diet) and Chinese demand for Tibetan warhorses (sustained by successive dynasties from the Tang onward) drove the traffic. Active from the Tang (formal Tang-Tibetan 'Tea-Horse Trade' bureau established c. 730 CE) through the Ming and Qing state tea monopolies and into the mid-20th century; caravan transport survived the 1950 PLA occupation of Tibet only briefly and was effectively terminated by the 1954 Qinghai-Tibet highway. The chama gudao (literally 'tea-horse ancient road') label was popularised by Chinese scholarship from the 1990s.",
+    "involves_slavery": false,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "ethical_notes": "Contemporary Chinese promotion of the Tea Horse Road label has occasionally been mobilised in narratives emphasising historical Chinese-Tibetan integration, in the context of present-day Tibet policy. AtlasPI records the route as a commercial network, historical and well-attested, while noting that its contemporary political uses are distinct from its historical character.",
+    "sources": [
+      {
+        "citation": "Freeman, Michael, and Selena Ahmed. Tea Horse Road: China's Ancient Trade Road to Tibet. River Books, 2011.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Yang, Bin. 'Horses, Silver, and Cowries: Yunnan in Global Perspective'. Journal of World History 15(3), 2004.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Pu'er",
+      "Dali",
+      "Lijiang",
+      "Shangri-La",
+      "Chamdo",
+      "Lhasa",
+      "Shigatse",
+      "Ya'an",
+      "Kangding"
+    ]
+  },
+  {
+    "name_original": "Hanseatic League Network",
+    "name_original_lang": "de",
+    "route_type": "SEA",
+    "start_year": 1150,
+    "end_year": 1670,
+    "geometry_geojson": {
+      "type": "MultiLineString",
+      "coordinates": [
+        [
+          [
+            -3.0,
+            58.0
+          ],
+          [
+            -1.08,
+            53.96
+          ],
+          [
+            0.4,
+            51.53
+          ],
+          [
+            4.48,
+            51.92
+          ],
+          [
+            6.55,
+            53.55
+          ],
+          [
+            8.8,
+            53.08
+          ],
+          [
+            10.69,
+            53.87
+          ],
+          [
+            11.41,
+            53.63
+          ],
+          [
+            11.84,
+            53.52
+          ],
+          [
+            13.07,
+            54.31
+          ],
+          [
+            14.55,
+            53.43
+          ],
+          [
+            18.65,
+            54.35
+          ],
+          [
+            19.95,
+            54.7
+          ],
+          [
+            21.0,
+            55.7
+          ],
+          [
+            24.1,
+            56.95
+          ],
+          [
+            24.75,
+            59.43
+          ]
+        ],
+        [
+          [
+            30.31,
+            59.94
+          ],
+          [
+            28.99,
+            59.23
+          ],
+          [
+            24.75,
+            59.43
+          ]
+        ],
+        [
+          [
+            8.8,
+            53.08
+          ],
+          [
+            8.32,
+            60.0
+          ],
+          [
+            10.73,
+            59.91
+          ],
+          [
+            5.34,
+            60.39
+          ]
+        ]
+      ]
+    },
+    "commodities": [
+      "grain",
+      "fish",
+      "salt",
+      "timber",
+      "pitch",
+      "tar",
+      "furs",
+      "wax",
+      "amber",
+      "beer",
+      "wool",
+      "cloth",
+      "iron",
+      "copper"
+    ],
+    "description": "Confederation of North German and Low Country merchant cities (Lübeck as principal node; Hamburg, Bremen, Rostock, Wismar, Stralsund, Greifswald, Danzig, Riga, Reval, Visby, and kontore at Bergen, Bruges, London and Novgorod) that dominated Baltic and North Sea commerce from the mid-12th century to the mid-17th. The Hansa emerged from cooperative ventures of Low German merchants and by c. 1400 counted some 200 affiliated cities at its peak. Core commodities: Baltic/Scandinavian grain, salt fish (Bergen stockfish, Skåne herring), Lüneburg salt, Baltic timber and naval stores to feed the fleets of western Europe; English and Flemish cloth, Rhineland wine and beer eastward. The Hansa maintained privileged quarters (kontore) with extraterritorial jurisdiction in partner cities; the Steelyard in London and the Peterhof in Novgorod were notable. Decline followed the Northern Wars, the rise of the Dutch as competitors, and the closure of the Novgorod kontor in 1494 by Ivan III. The last Hanseatic diet met in 1669.",
+    "involves_slavery": false,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": null,
+    "sources": [
+      {
+        "citation": "Dollinger, Philippe. The German Hansa. Macmillan, 1970.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Harreld, Donald J., ed. A Companion to the Hanseatic League. Brill, 2015.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Lübeck",
+      "Hamburg",
+      "Bremen",
+      "Bergen",
+      "Visby",
+      "Danzig",
+      "Riga",
+      "Reval",
+      "Novgorod",
+      "Bruges",
+      "London"
+    ]
+  },
+  {
+    "name_original": "Varangian Route (From the Varangians to the Greeks)",
+    "name_original_lang": "en",
+    "route_type": "MIXED",
+    "start_year": 800,
+    "end_year": 1100,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          18.07,
+          59.33
+        ],
+        [
+          30.31,
+          59.94
+        ],
+        [
+          31.27,
+          58.52
+        ],
+        [
+          34.11,
+          58.53
+        ],
+        [
+          30.33,
+          55.19
+        ],
+        [
+          32.05,
+          54.78
+        ],
+        [
+          30.52,
+          50.45
+        ],
+        [
+          30.72,
+          47.85
+        ],
+        [
+          30.93,
+          46.48
+        ],
+        [
+          29.0,
+          44.17
+        ],
+        [
+          28.98,
+          41.01
+        ]
+      ]
+    },
+    "commodities": [
+      "furs",
+      "amber",
+      "honey",
+      "wax",
+      "slaves",
+      "silver-coins-dirham",
+      "silk",
+      "wine",
+      "oil",
+      "glassware",
+      "weapons"
+    ],
+    "description": "Riverine and portage route connecting Scandinavia and the eastern Baltic with Constantinople via the Volkhov, Lovat, the Dnieper portages, and the Dnieper itself to the Black Sea. Named in the Primary Chronicle ('the way from the Varangians to the Greeks'); used by Scandinavian Rus' merchants and warriors (Varangians in Byzantine/Greek usage, Væringar in Old Norse) from c. 800 to c. 1100. Key nodes: Sigtuna/Birka, Ladoga, Novgorod, Smolensk, Lyubech, Kiev, and the Black Sea emporium of Constantinople. Sviatoslav I's 10th-century campaigns and the Rus'-Byzantine trade treaties (911, 945, 971) formalised Varangian commercial rights at Constantinople. The Varangian Guard of the Byzantine emperors was recruited along the same corridor. Decline followed the Pecheneg and Cuman pressure on the Dnieper steppe, the fall of Kiev to the Mongols (1240), and the rise of overland German-Hanseatic alternatives.",
+    "involves_slavery": false,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "The Varangian route carried enslaved people (Slavs, Finns, Balts captured by Rus' and Varangian raiders) to Black Sea markets, principally Constantinople and (via intermediaries) the Abbasid Caliphate. This is acknowledged in the commodities list with 'slaves' as a historical term-of-art for the period sources; the route is not flagged involves_slavery=true because the slavery dimension, while real, was one strand among many. A separate entry specifically on medieval eastern European slaving networks may be added in a future batch; the 9th-10th century Rus'-Volga 'saqaliba' trade is principally treated in entry 22 (Volga trade route).",
+    "sources": [
+      {
+        "citation": "Duczko, Wladyslaw. Viking Rus: Studies on the Presence of Scandinavians in Eastern Europe. Brill, 2004.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Franklin, Simon, and Jonathan Shepard. The Emergence of Rus 750-1200. Longman, 1996.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Noonan, Thomas S. 'The Islamic World, Russia and the Vikings, 750-900'. Variorum Collected Studies, 1998.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Birka",
+      "Staraya Ladoga",
+      "Novgorod",
+      "Smolensk",
+      "Kiev",
+      "Kōnstantinoupolis"
+    ]
+  },
+  {
+    "name_original": "Volga Trade Route",
+    "name_original_lang": "en",
+    "route_type": "RIVER",
+    "start_year": 700,
+    "end_year": 1500,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          30.31,
+          59.94
+        ],
+        [
+          31.27,
+          58.52
+        ],
+        [
+          35.9,
+          58.55
+        ],
+        [
+          38.28,
+          57.62
+        ],
+        [
+          38.85,
+          54.78
+        ],
+        [
+          44.03,
+          56.33
+        ],
+        [
+          49.12,
+          55.79
+        ],
+        [
+          48.78,
+          54.77
+        ],
+        [
+          49.26,
+          53.53
+        ],
+        [
+          46.03,
+          51.53
+        ],
+        [
+          44.42,
+          48.71
+        ],
+        [
+          46.3,
+          47.23
+        ],
+        [
+          47.95,
+          46.34
+        ],
+        [
+          49.65,
+          45.04
+        ],
+        [
+          50.05,
+          40.38
+        ],
+        [
+          53.03,
+          36.75
+        ]
+      ]
+    },
+    "commodities": [
+      "furs",
+      "amber",
+      "honey",
+      "wax",
+      "silver-dirhams",
+      "textiles",
+      "weapons",
+      "glassware",
+      "beads"
+    ],
+    "description": "Riverine trade corridor linking the Baltic and Scandinavian world with the Caspian Sea and the Abbasid Caliphate via the Volga, Oka and Kama river systems. Active from c. 700 through the 15th century; principal node was the Khazar capital Atil (at the Volga mouth) in the 8th-10th centuries and — after the Khazar collapse c. 965 — the Volga Bulgar capital Bolghar. Scandinavian (Rus') merchants brought northern forest products (furs, amber, honey, wax) and enslaved people (saqaliba — captured Slavs and Balts) down the Volga in exchange for Abbasid silver dirhams, textiles, glassware and Islamic-world prestige goods. The single largest documented silver flow in early-medieval Europe came up this route: some 200-400 million dirhams deposited in Scandinavian hoards 800-1000 CE. Ibn Fadlan's 922 CE eyewitness account of the Rus on the Volga (including the ship-burial cremation at Bolghar) is the single most vivid contemporary source. The route's slavery dimension is explicit: Ibn Fadlan and other Arab geographers describe the enslaved people (mostly women) the Rus brought south.",
+    "involves_slavery": false,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "This route carried significant numbers of enslaved people — principally Slavs, Finns and Balts captured by Varangian and Rus' raiders and sold south to the Islamic world; the Arabic term saqaliba ('Slavs') became the generic term for enslaved Europeans in the Caliphate. Scale estimates are uncertain but Michael McCormick proposes hundreds of thousands over the 9th-11th centuries; other scholars give lower figures. The route is NOT flagged involves_slavery=true in this batch because slavery was one strand alongside furs, wax, honey and silver; a dedicated future entry on medieval Slavic slave trafficking networks (including the western-European leg via Verdun, Prague and Venice to al-Andalus) may be warranted. The etymological history — Latin sclavus ← saqaliba ← Slav — records how one medieval trafficking system embedded itself in every major European language's word for 'slave'.",
+    "sources": [
+      {
+        "citation": "Noonan, Thomas S. The Islamic World, Russia and the Vikings, 750-900. Variorum, 1998.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Lunde, Paul, and Caroline Stone, trans. Ibn Fadlan and the Land of Darkness: Arab Travellers in the Far North. Penguin, 2012.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "McCormick, Michael. Origins of the European Economy: Communications and Commerce, AD 300-900. Cambridge University Press, 2001.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Staraya Ladoga",
+      "Novgorod",
+      "Rostov",
+      "Bolghar",
+      "Atil",
+      "Derbent"
+    ]
+  },
+  {
+    "name_original": "Stato da Mar",
+    "name_original_lang": "it",
+    "route_type": "SEA",
+    "start_year": 1100,
+    "end_year": 1797,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          12.33,
+          45.44
+        ],
+        [
+          13.84,
+          44.87
+        ],
+        [
+          15.23,
+          44.12
+        ],
+        [
+          16.44,
+          43.51
+        ],
+        [
+          18.09,
+          42.64
+        ],
+        [
+          19.5,
+          42.0
+        ],
+        [
+          19.82,
+          41.33
+        ],
+        [
+          19.63,
+          39.62
+        ],
+        [
+          20.74,
+          38.37
+        ],
+        [
+          20.9,
+          37.0
+        ],
+        [
+          23.16,
+          35.52
+        ],
+        [
+          25.72,
+          35.34
+        ],
+        [
+          28.22,
+          36.45
+        ],
+        [
+          27.43,
+          37.97
+        ],
+        [
+          26.69,
+          38.48
+        ],
+        [
+          28.98,
+          41.01
+        ],
+        [
+          33.45,
+          35.17
+        ],
+        [
+          34.78,
+          32.07
+        ]
+      ]
+    },
+    "commodities": [
+      "spices",
+      "silk",
+      "cotton",
+      "salt",
+      "sugar",
+      "wheat",
+      "wine",
+      "glass",
+      "salt",
+      "timber",
+      "alum"
+    ],
+    "description": "Venetian maritime empire, comprising Venice's overseas possessions and bases from the Dalmatian coast through the Ionian islands, the Greek mainland (Nauplion, Modon, Coron), Crete (Candia), Cyprus, and the Aegean (Negroponte, Tinos, various Cycladic islands). Built principally on three foundations: (1) the 1082 chrysobull from Byzantine Emperor Alexios I granting tax-free trading privileges; (2) the 1204 Fourth Crusade sack of Constantinople which carved up the Byzantine empire and handed Venice key Aegean and Cretan possessions; (3) the convoy system of state-owned galleys (muda) that structured Venetian trade with the Levant, Black Sea, Flanders and Southampton. The Stato da Mar provided the military and logistic infrastructure that allowed Venice, with a population of around 100,000-150,000, to dominate Mediterranean long-distance commerce from c. 1100 until Ottoman conquests progressively stripped the overseas possessions (Negroponte 1470, Modon 1500, Cyprus 1571, Crete 1669). The Republic itself fell to Napoleon in 1797.",
+    "involves_slavery": false,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "Venetian commerce included a non-trivial trade in enslaved people — Circassians, Tatars, Black Sea Slavs — purchased at Kaffa and Tana and resold in the Mediterranean and Muslim markets. The 'humans_enslaved' commodity is included in the list because this traffic was substantial (Hannah Barker estimates tens of thousands over the 13th-15th centuries) but the Stato da Mar is not flagged involves_slavery=true because its primary function was a broader commercial-imperial system. AtlasPI records the Venetian slave trade as a distinct historical fact while not making it the dominant frame for the maritime empire as a whole. Separate entries on Black Sea slave markets may be added.",
+    "sources": [
+      {
+        "citation": "Lane, Frederic C. Venice: A Maritime Republic. Johns Hopkins University Press, 1973.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "O'Connell, Monique. Men of Empire: Power and Negotiation in Venice's Maritime State. Johns Hopkins University Press, 2009.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Barker, Hannah. That Most Precious Merchandise: The Mediterranean Trade in Black Sea Slaves, 1260-1500. University of Pennsylvania Press, 2019.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Venezia",
+      "Zadar",
+      "Ragusa",
+      "Durrës",
+      "Corfù",
+      "Modone",
+      "Candia",
+      "Negroponte",
+      "Famagusta",
+      "Kōnstantinoupolis"
+    ]
+  },
+  {
+    "name_original": "Nile Commercial Corridor",
+    "name_original_lang": "en",
+    "route_type": "RIVER",
+    "start_year": -3100,
+    "end_year": 2025,
+    "geometry_geojson": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          30.4,
+          31.4
+        ],
+        [
+          31.25,
+          30.04
+        ],
+        [
+          30.73,
+          29.3
+        ],
+        [
+          31.19,
+          27.18
+        ],
+        [
+          32.73,
+          24.09
+        ],
+        [
+          32.9,
+          24.1
+        ],
+        [
+          31.13,
+          21.83
+        ],
+        [
+          31.35,
+          19.5
+        ],
+        [
+          30.82,
+          18.33
+        ],
+        [
+          32.53,
+          15.6
+        ],
+        [
+          33.52,
+          13.6
+        ],
+        [
+          36.38,
+          11.59
+        ]
+      ]
+    },
+    "commodities": [
+      "grain",
+      "papyrus",
+      "gold",
+      "ivory",
+      "ebony",
+      "incense",
+      "leopard-skins",
+      "cattle",
+      "linen",
+      "stone"
+    ],
+    "description": "The Nile has been the single most continuously used commercial corridor in the world. Active from at least the predynastic period (c. 3500 BCE) to the present, it integrates Nubia, Upper Egypt, Lower Egypt and the Mediterranean in a single riverine economy. The prevailing north-flowing current and south-blowing Etesian winds (June-September) make the Nile uniquely navigable in both directions under sail, a fact which the hieroglyphic writing system recorded in the verbs 'to go upstream' (sail-sign) and 'to go downstream' (oar-sign). Principal commodities over five millennia: Nubian gold, ivory, ebony and leopard-skins (including the C-Group and Kerma trade from Lower Nubia, the New Kingdom's Nubian tribute, and the medieval Christian Nubian state commerce with Fatimid and Mamluk Egypt); Egyptian grain (the annona that fed imperial Rome; still the breadbasket metaphor); papyrus (the medium of Mediterranean literate culture for 3000 years); and — during the Islamic and Ottoman centuries — enslaved people trafficked north from Darfur, Kordofan, the White Nile and (after Muhammad Ali's 1820 conquest) the southern Sudan.",
+    "involves_slavery": false,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "ethical_notes": "The Nile corridor carried enslaved people for most of its 5000-year history — from pharaonic-era Nubian captives, through the Arab-Islamic bilad al-sudan trade, to the industrial-scale 19th-century Egyptian jallaba traffic from the southern Sudan which reached c. 15-30,000 people per year at peak (before the Mahdist disruption of 1881). The 'humans_enslaved' commodity is included to record this; the route itself is not flagged involves_slavery=true because slavery was one commodity among many across five millennia of mixed use. Specific slave-route entries for the Darfur Jallaba and the Sennar-Sinnar route may be added in a future batch.",
+    "sources": [
+      {
+        "citation": "Wengrow, David. The Archaeology of Early Egypt: Social Transformations in North-East Africa, 10,000 to 2,650 BC. Cambridge University Press, 2006.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Cooper, John P. The Medieval Nile: Route, Navigation, and Landscape in Islamic Egypt. American University in Cairo Press, 2014.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Spaulding, Jay. The Heroic Age in Sinnar. Red Sea Press, 2007.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Alexandria",
+      "Cairo",
+      "Memphis",
+      "Waset",
+      "Aswan",
+      "Meroe",
+      "Khartoum",
+      "Sennar"
+    ]
+  },
+  {
+    "name_original": "Mississippian Trade Network",
+    "name_original_lang": "en",
+    "route_type": "RIVER",
+    "start_year": 1000,
+    "end_year": 1600,
+    "geometry_geojson": {
+      "type": "MultiLineString",
+      "coordinates": [
+        [
+          [
+            -94.72,
+            46.8
+          ],
+          [
+            -93.09,
+            44.94
+          ],
+          [
+            -90.19,
+            38.63
+          ],
+          [
+            -90.07,
+            38.65
+          ],
+          [
+            -90.05,
+            35.15
+          ],
+          [
+            -90.06,
+            32.3
+          ],
+          [
+            -90.07,
+            30.45
+          ],
+          [
+            -89.96,
+            29.24
+          ]
+        ],
+        [
+          [
+            -105.0,
+            40.0
+          ],
+          [
+            -95.0,
+            39.1
+          ],
+          [
+            -90.07,
+            38.65
+          ]
+        ],
+        [
+          [
+            -82.99,
+            39.96
+          ],
+          [
+            -85.31,
+            38.25
+          ],
+          [
+            -86.77,
+            36.16
+          ],
+          [
+            -90.07,
+            38.65
+          ]
+        ],
+        [
+          [
+            -86.3,
+            32.37
+          ],
+          [
+            -88.4,
+            33.19
+          ],
+          [
+            -90.05,
+            35.15
+          ]
+        ]
+      ]
+    },
+    "commodities": [
+      "copper",
+      "shell",
+      "mica",
+      "galena",
+      "chert",
+      "salt",
+      "marine-shell-beads",
+      "hematite",
+      "freshwater-pearls",
+      "effigy-pipes"
+    ],
+    "description": "Pre-Columbian exchange network structured around the Mississippi, Missouri, Ohio, Arkansas and Tennessee river systems, active from c. 800-1000 CE through the catastrophic early-contact collapse (1540s De Soto entrada and the virgin-soil epidemics it seeded). The network linked the great Mississippian ceremonial-civic centres — Cahokia (c. 1050-1350, at its peak the largest city north of Mesoamerica with 15-20,000 residents), Etowah, Moundville, Spiro, Emerald, Angel — through a web of riverborne canoe exchanges. Characteristic commodities: Lake Superior native copper, Great Plains Knife River chert and catlinite, Gulf Coast whelk and conch shell (especially for the prestigious engraved gorgets and cups of the Southeastern Ceremonial Complex), Appalachian mica, Illinois/Missouri galena, Ozark bauxite. The Spiro grave goods, the Cahokian craft districts, and the 'long-nosed god' maskettes found from Wisconsin to Louisiana all attest to continental-scale exchange. This is one of the best-documented pre-industrial exchange systems in the Western Hemisphere.",
+    "involves_slavery": false,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "ethical_notes": "The conventional early-20th-century European-American historiography treated pre-Columbian North America as economically primitive; archaeological work since the 1970s (Brown, Milner, Pauketat, Cobb) has demonstrated a sophisticated continental exchange network. AtlasPI records this network because its omission from older 'trade route' compilations was itself a form of historical erasure. Dating: the upper bound of 1600 CE is approximate — by that date disease and social collapse following de Soto (1539-1543) had dismantled most of the major Mississippian polities. Some of the exchange networks were carried forward by successor peoples (Natchez, Tunica, Quapaw) but at greatly reduced scale.",
+    "sources": [
+      {
+        "citation": "Pauketat, Timothy R. Cahokia: Ancient America's Great City on the Mississippi. Viking, 2009.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Milner, George R. The Moundbuilders: Ancient Peoples of Eastern North America. Thames & Hudson, 2004.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Cobb, Charles R. 'Mississippian Chiefdoms: How Complex?' Annual Review of Anthropology 32, 2003.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Brown, James A. The Spiro Ceremonial Center. University of Michigan, 1996.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "waypoint_city_names": [
+      "Cahokia",
+      "Spiro",
+      "Moundville",
+      "Etowah",
+      "Emerald",
+      "Angel"
+    ]
+  }
+]
