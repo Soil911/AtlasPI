@@ -2,6 +2,125 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.8.0] - 2026-04-15
+
+**Tema**: *Ancient events gap + Asian dynasty chains* — colmato il buco
+pre-500 CE (29 → 53 eventi, +24 nuovi) e aggiunte due catene dinastiche
+asiatiche (Giappone 7-link Nara→Meiji, India classica 5-link
+Shishunaga→Kanva). Catene 9 → 11, eventi 211 → 235. Test 442 → 486 (+44).
+
+### Nuovi eventi (24) — `data/events/batch_09_ancient_expansion.json`
+
+Eventi scelti per rappresentazione geografica/cronologica dove la copertura
+esistente era povera: Vicino Oriente antico (Assyria, Babilonia, Giuda,
+Persia achemenide), Grecia classica (Parthenon, processo a Socrate),
+Ellenismo (Gaugamela, morte di Alessandro), Maurya (conversione di Aśoka),
+Cina (battaglia di Gaixia e fondazione Han), Roma tardo-repubblicana
+(assassinio Cesare), Roma imperiale (Teutoburgo, crocifissione di Yeshua
+di Nazareth, rivolta di Bar Kokhba, Editti di Milano e Tessalonica,
+fondazione di Costantinopoli, Adrianopoli, Campi Catalaunici, deposizione
+di Romolo Augusto).
+
+| Anno | Tipo                  | Evento                                       |
+|-----:|-----------------------|----------------------------------------------|
+| -722 | DEPORTATION           | גלות עשרת השבטים (Assyrian deportation of Israel) |
+| -689 | MASSACRE              | Sennacherib's sack of Babylon                |
+| -612 | CONQUEST              | Fall of Nineveh                              |
+| -586 | DEPORTATION           | חורבן בית ראשון (Babylonian captivity)       |
+| -539 | CONQUEST              | 𐎤𐎢𐎽𐎢𐏁 (Cyrus captures Babylon)              |
+| -525 | CONQUEST              | Cambyses conquers Egypt                      |
+| -447 | TECHNOLOGICAL_EVENT   | Parthenon begun                              |
+| -399 | INTELLECTUAL_EVENT    | Θάνατος Σωκράτους                            |
+| -331 | BATTLE                | Μάχη τῶν Γαυγαμήλων                          |
+| -323 | DEATH_OF_RULER        | Death of Alexander / Wars of Diadochi        |
+| -260 | RELIGIOUS_EVENT       | अशोक का धर्म-परिवर्तन (Aśoka adopts dharma)  |
+| -218 | CONQUEST              | Hannibal trans Alpes                         |
+| -202 | BATTLE                | 垓下之戰 (Gaixia, founding of Han)           |
+| -44  | DEATH_OF_RULER        | Caedes C. Iulii Caesaris                     |
+|   9  | BATTLE                | Clades Variana (Teutoburg Forest)            |
+|  33  | RELIGIOUS_EVENT       | צליבת ישוע הנצרי (Crucifixion)               |
+| 132  | REBELLION             | מרד בר כוכבא (Bar Kokhba revolt)             |
+| 313  | RELIGIOUS_EVENT       | Edictum Mediolanense                         |
+| 330  | FOUNDING_STATE        | Νέα Ῥώμη / Κωνσταντινούπολις                 |
+| 378  | BATTLE                | Μάχη τῆς Ἀδριανουπόλεως                      |
+| 380  | RELIGIOUS_EVENT       | Edictum Thessalonicense 'Cunctos populos'    |
+| 395  | DISSOLUTION_STATE     | Divisio Imperii (permanent East/West split)  |
+| 451  | BATTLE                | Bellum Campi Catalaunici                     |
+| 476  | DISSOLUTION_STATE     | Depositio Romuli Augustuli                   |
+
+Ogni evento ha: ≥1 fonte primaria + ≥1 accademica, `ethical_notes`
+estese (>80 caratteri, in molti casi >500), `entity_links` risolti
+verso entità DB reali (zero reference pendenti al seed).
+
+### Nuove catene dinastiche (2) — `data/chains/batch_03_asia.json`
+
+**Giappone (SUCCESSION, 7 link)**: 奈良時代 (710) → 平安時代 (794 REFORM)
+→ 鎌倉幕府 (1185 REVOLUTION — Gempei War) → 室町幕府 (1336 REVOLUTION —
+Ashikaga vs. Kemmu Restoration) → 安土桃山時代 (1568 UNIFICATION — Nobunaga
++ Hideyoshi, inclusi Imjin Korea e massacro Ikkō-ikki) → 徳川幕府 (1603
+SUCCESSION — Sekigahara + Osaka + Shimabara) → 大日本帝國 (1868 REVOLUTION
+— Meiji come REVOLUTION e non RESTORATION, con Boshin, Ainu, Ryūkyū).
+
+**India classica (DYNASTY, 5 link)**: शिशुनाग (-413) → नन्द (-345
+REVOLUTION — Mahapadma śūdra usurper) → मौर्य साम्राज्य (-322 CONQUEST —
+Chandragupta+Chanakya) → शुंग (-185 REVOLUTION — Pushyamitra regicide di
+Brihadratha) → कण्व (-73 REVOLUTION — Vasudeva regicide di Devabhuti).
+ETHICS: ogni transizione è regicidio o conquista — zero "succession"
+pacifiche. La pace ashokiana è l'anomalia, non la norma.
+
+### Test nuovi (44) — `tests/test_v680_content_expansion.py`
+
+- **Events file structure** (8 test): existence, lista >=20, required
+  keys parametrized (10 chiavi), enum validation, pre-500 CE gate,
+  multi-region language coverage, sources obbligatori, ethical_notes
+  obbligatori, confidence in [0,1].
+- **Events DB-layer** (3 test): 24 inseriti, gap pre-500 chiuso
+  (29 → 53+), spot-check su link Cesare→Roma e Cyrus→Giuda.
+- **Chains file structure** (7 test): file esiste, 2 chain, required
+  keys parametrized (8 chiavi), ChainType enum, TransitionType enum.
+- **Japan chain** (3 test): 7 link, endpoints Nara/Meiji, Meiji è
+  REVOLUTION (non RESTORATION) e ethical_notes menziona Boshin/Ainu/Ryūkyū.
+- **India chain** (3 test): 5 link, Shunga è REVOLUTION violenta (non
+  SUCCESSION), tutte le transizioni sono `is_violent=true`.
+- **Chains DB-layer** (3 test): Japan 7 link, India 5 link, totale ≥11.
+- **Meta** (10 test parametrized su keys + 7 enum coverage).
+
+Totale test backend: **442 → 486** (+44).
+
+### Dataset stats post-v6.8.0
+
+| Layer                | Pre-v6.8.0 | Post-v6.8.0 | Δ     |
+|---------------------|-----------:|------------:|------:|
+| Eventi storici      | 211        | 235         | +24   |
+| Catene dinastiche   | 9          | 11          | +2    |
+| Chain links         | 56         | 68          | +12   |
+| Eventi pre-500 CE   | 29         | 53          | +24   |
+| Test backend        | 442        | 486         | +44   |
+
+### Etica
+
+Ogni evento nuovo porta ETHICS note esplicite su: inflazione delle
+casualties antiche (Arriano/Diodoro), bias dei Roman sources sui Punici
+(fonti cartaginesi perdute dopo -146), Herodotean polemica anti-Cambyses
+smontata da Udjahorresnet, letture anti-giudaiche della crocifissione
+ripudiate da Nostra Aetate 1965, Gibbon's "barbarians vs civilization"
+frame criticato per Catalaunian Plains, Hadrian rename Iudaea→Syria
+Palaestina come cancellazione politica, 476 come convenzione storiografica
+e non evento vissuto come "caduta" dai contemporanei.
+
+Per le catene: Meiji Restoration come REVOLUTION (non RESTORATION —
+rottura costituzionale totale con colonizzazione Hokkaido/Ainu e
+annessione Ryūkyū). Classical India dynastic trunk con tutte le
+transizioni `is_violent=true` — nessuna successione pacifica.
+
+### File aggiunti
+
+- `data/events/batch_09_ancient_expansion.json` — 24 eventi
+- `data/chains/batch_03_asia.json` — 2 catene, 12 link
+- `tests/test_v680_content_expansion.py` — 44 test
+
+---
+
 ## [v6.7.3] - 2026-04-15
 
 **Tema**: *Boundary honesty, pass 3* — rifinitura di 4 polygon che erano
