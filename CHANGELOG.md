@@ -2,6 +2,102 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.7.1] - 2026-04-15
+
+**Tema**: *Boundary honesty* — patch release che elimina i confini condivisi
+falsi e i placeholder rettangolari, e riconduce ogni entità senza dato geografico
+affidabile a un polygon onesto generato dal proprio capital con raggio adeguato
+al tipo. Nessun cambiamento di API. Test saliti da 371 → 386.
+
+### Numeri
+
+- **-61 entità con boundary condivisi falsi** — distribuiti su 17 cluster di
+  omonimia (Holy Roman Empire × 14 drop, Kingdom of David and Solomon × 6,
+  Greek city-states × 5, Byzantine × 5, Fatimid × 5, "minor states" × 4,
+  …). Il dato del cluster viene preservato solo sulla variante con il nome
+  più simile al label del poligono aourednik (similarity score rapidfuzz
+  token-set ≥ 0.80); le altre vengono regenerate onestamente col raggio
+  capital-based e bollate `approximate_generated`.
+- **-5 placeholder rettangolari** — i 5 bounding-box visibili (entità
+  `524 525 528 530 531`) sono stati annotati in `ethical_notes` con spiega
+  esplicita ("polygon approssimato, NON confine storico") e retrocessi a
+  `status: uncertain` con `confidence_score` capped a 0.4 (ETHICS-004).
+- **+6 entità con polygon corretto** — Pechenegs (id 325) e Nogai Horde
+  (id 338) hanno ora capital backfillato (rispettivamente 47.5,34.5 Ukrainian
+  steppe e 47.5,51.5 Lower Volga) e boundary a raggio steppe (700 km).
+  Istanbul (id 3) e Igbo-Ukwu (id 562) scalate a raggio urbano (20 km).
+  Cherokee (id 218) e Seminole (id 545) riportate a raggio native-confederation
+  (250 km) dopo aver eliminato i polygon Natural Earth che rappresentavano
+  gli intero territorio moderno US/Mexico.
+- **+15 test backend** (totale 386/386 passing): 15 nuovi in
+  `test_v671_boundary_cleanup.py` coprono cluster-analysis idempotency,
+  strip_generic_tokens, rapidfuzz scoring, FIXES coverage, Pechenegs
+  capital backfill, Istanbul small polygon, placeholder ethical notes,
+  dry-run no-op. Una fixture (`stale_db` in test_sync_boundaries) ridefinita
+  per selezionare entità con ≥50 vertici da fonti trusted anziché prime 3
+  by id.
+- **atlaspi-mcp 0.3.0 → PyPI**: pubblicato su https://pypi.org/project/atlaspi-mcp/0.3.0/
+  (`pip install atlaspi-mcp`).
+
+### Perché era necessario
+
+L'audit `docs/boundary_audit_2026_04_15.md` aveva rivelato:
+
+- **166 entità con GeoJSON binariamente identico** ad almeno un'altra entità
+  (= stessa fingerprint hash) — questi cluster rappresentano successioni
+  dinastiche diverse che condividevano lo stesso polygon aourednik perché il
+  matcher di ingestione faceva token-overlap su nomi generici come "Empire",
+  "Kingdom", "Dynasty". Risultato: il Sacro Romano Impero e 13 sue incarnazioni
+  discontinue mostravano lo stesso confine (drop: 13).
+- **9 entità Natural Earth con centroide displaced >2000 km** dalla capital —
+  indice che il polygon NE era stato matchato a un'entità storica sbagliata.
+  Tre reali (Pechenegs, Cherokee, Seminole) corrette; le altre 6 (USSR,
+  Russia imperial, USA, Brazil, Fiji) sono legittimamente giganti o soffrono
+  di antimeridian artifact — lasciate volutamente intatte.
+- **5 rettangoli placeholder** rimasti da import legacy.
+- **2 entità con `boundary_geojson: NULL`** — Pechenegs e Nogai Horde,
+  appunto.
+
+### Nuovi moduli
+
+- **`src/ingestion/cleanup_shared_polygons.py`** (~300 righe). Entry point
+  `run_cleanup(dry_run=False, json_only=False, db_only=False)`. Stripa
+  `GENERIC_TOKENS` ({empire, kingdom, dynasty, sultanate, caliphate,
+  khanate, principality, republic, duchy, earldom, confederacy, …})
+  prima di fare rapidfuzz `token_set_ratio`. Un cluster ≥3 entità con stessa
+  boundary fingerprint viene valutato contro il label del poligono aourednik:
+  l'entità con score ≥ 0.80 viene tenuta, le altre regenerate. Se il cluster
+  non ha label chiaro (happens for CITIES vs STATES with same SHAPE), solo
+  l'entità col capital più centrato nel polygon viene tenuta.
+- **`src/ingestion/fix_bad_boundaries_v671.py`** (~350 righe). Dataclass
+  `EntityFix(entity_id, reason, regenerate_with_radius_km,
+  demote_status_to, append_note, clear_aourednik, clear_ne, keep_geometry,
+  backfill_capital_lat, backfill_capital_lon, backfill_capital_name)`.
+  FIXES list con 11 entry. Costanti `CITY_RADIUS_KM = 20`,
+  `STEPPE_RADIUS_KM = 700`, `NATIVE_CONFEDERATION_RADIUS_KM = 250`.
+  Applica sia al DB SQLAlchemy sia ai JSON in `data/entities/` per
+  mantenere idempotenza al prossimo reseed.
+
+### Etica
+
+Tutti i drop di shared-polygon e tutte le sostituzioni di placeholder
+lasciano una traccia in `ethical_notes` dell'entità risultante, con
+puntatore a ETHICS-004 (approximate_generated) o ETHICS-006 (displacement
+correction). Nessun dato storico è stato **cancellato**: solo i poligoni
+sbagliati sono stati sostituiti con poligoni generati deterministicamente
+dal capital (hash-based `name_seeded_boundary`) che sono evidentemente
+approssimati (8-32 vertici tondeggianti) e capped a
+`confidence_score ≤ 0.4`.
+
+### Note di rilascio PyPI
+
+Il pacchetto `atlaspi-mcp` versione 0.3.0 (wheel + sdist) è ora disponibile
+su PyPI. Il token di upload è stato usato una volta e revocato lato utente
+subito dopo. `pip install atlaspi-mcp` installerà 23 tool MCP pronti a
+puntare a qualsiasi istanza AtlasPI (default `https://atlaspi.cra-srl.com`).
+
+---
+
 ## [v6.7.0] - 2026-04-15
 
 **Tema**: *Agent-ready integration* — due nuovi endpoint pensati per LLM

@@ -86,10 +86,33 @@ def stale_db(setup_test_db, tmp_path, monkeypatch):
     # The real batch index is loaded by the function from data/entities/*.json,
     # which the test_db already seeds into the DB. For this test we simulate
     # drift by directly mutating the DB's boundary_geojson *after* seeding.
+    # v6.7.1 fix: pick 3 entities whose batch-JSON boundary is meaningfully
+    # larger than the 13-vertex stub — after the v6.7.1 boundary cleanup,
+    # many entities carry `approximate_generated` 13-vertex polygons and
+    # would NOT be upgradable by definition. We need entities with
+    # provenance=historical_map/natural_earth/aourednik whose real polygon
+    # has many vertices.
     session = TestSession()
     try:
-        # Pick three known entities and downgrade their boundaries to Point-like stubs.
-        targets = session.query(GeoEntity).limit(3).all()
+        targets: list[GeoEntity] = []
+        candidates = session.query(GeoEntity).filter(
+            GeoEntity.boundary_geojson.isnot(None),
+            GeoEntity.boundary_source.in_(
+                ["historical_map", "natural_earth", "aourednik"]
+            ),
+        ).limit(200).all()
+        for e in candidates:
+            if len(targets) >= 3:
+                break
+            try:
+                geom = json.loads(e.boundary_geojson)
+            except (ValueError, TypeError):
+                continue
+            if _count_vertices(geom) >= 50:
+                targets.append(e)
+        assert len(targets) == 3, (
+            f"Not enough large-polygon entities seeded; got {len(targets)}"
+        )
         original = []
         for e in targets:
             original.append((e.id, e.boundary_geojson, e.confidence_score))

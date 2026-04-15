@@ -1759,12 +1759,70 @@
     "entity_type": "confederation",
     "year_start": 860,
     "year_end": 1091,
-    "capital_name": null,
-    "capital_lat": null,
-    "capital_lon": null,
-    "confidence_score": 0.45,
+    "capital_name": "(stepa pontica)",
+    "capital_lat": 47.5,
+    "capital_lon": 34.5,
+    "confidence_score": 0.4,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            47.1212,
+            48.2236
+          ],
+          [
+            43.0882,
+            51.1239
+          ],
+          [
+            37.6126,
+            51.8593
+          ],
+          [
+            33.5138,
+            53.1896
+          ],
+          [
+            28.3681,
+            53.7952
+          ],
+          [
+            25.2328,
+            50.6921
+          ],
+          [
+            25.031,
+            46.8493
+          ],
+          [
+            27.6973,
+            43.9332
+          ],
+          [
+            30.4525,
+            41.3049
+          ],
+          [
+            35.8074,
+            39.0265
+          ],
+          [
+            39.4722,
+            43.1151
+          ],
+          [
+            43.0198,
+            45.1197
+          ],
+          [
+            47.1212,
+            48.2236
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: The Pechenegs left no written records in their own language; all sources are external (Byzantine, Arabic, Slavic). The name 'Pecheneg' is a Slavicized form; the self-designation was likely Beçenek or Bajanaq. ETHICS-002: As a nomadic confederation without fixed capitals or territorial boundaries, imposing state-like categories on the Pechenegs is a distortion. They controlled movement corridors and seasonal pastures, not contiguous territory. ETHICS-003: The Pechenegs were ultimately destroyed as a distinct people at the Battle of Levounion (1091), a rare case of total annihilation of a nomadic confederation by Byzantine forces.",
     "name_variants": [
       {
@@ -1831,7 +1889,8 @@
         "citation": "Anna Komnene. Alexiad, c. 1148 CE",
         "source_type": "primary"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "Кыпчак / Куман",
@@ -8342,12 +8401,70 @@
     "entity_type": "confederation",
     "year_start": 1390,
     "year_end": 1634,
-    "capital_name": null,
-    "capital_lat": null,
-    "capital_lon": null,
-    "confidence_score": 0.5,
+    "capital_name": "Saray-Jük",
+    "capital_lat": 47.5,
+    "capital_lon": 51.5,
+    "confidence_score": 0.4,
     "status": "confirmed",
-    "boundary_geojson": null,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            61.9244,
+            47.8724
+          ],
+          [
+            58.6512,
+            51.6498
+          ],
+          [
+            55.6117,
+            53.2072
+          ],
+          [
+            50.8703,
+            54.1597
+          ],
+          [
+            46.0099,
+            53.3171
+          ],
+          [
+            43.3093,
+            50.3237
+          ],
+          [
+            42.065,
+            47.0173
+          ],
+          [
+            46.0909,
+            44.8025
+          ],
+          [
+            47.0338,
+            41.3252
+          ],
+          [
+            52.0345,
+            40.5619
+          ],
+          [
+            57.7862,
+            40.7028
+          ],
+          [
+            59.6632,
+            44.6815
+          ],
+          [
+            61.9244,
+            47.8724
+          ]
+        ]
+      ]
+    },
     "ethical_notes": "ETHICS-001: name_original in Nogai, though the Nogai Horde predates the modern Nogai language's standardization. ETHICS-002: The Nogais were progressively squeezed between Russian, Kalmyk, and Crimean expansion. The Russian colonization of the Nogai steppe in the 18th-19th centuries led to mass displacement and demographic collapse. Today Nogais are a small, dispersed minority in southern Russia (Dagestan, Stavropol, Karachay-Cherkessia) with limited cultural autonomy.",
     "name_variants": [
       {
@@ -8410,7 +8527,8 @@
         "citation": "Golden, P.B. Nomads and Sedentary Societies in Medieval Eurasia (1998)",
         "source_type": "academic"
       }
-    ]
+    ],
+    "boundary_source": "approximate_generated"
   },
   {
     "name_original": "مغولستان",
