@@ -2,6 +2,130 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.5.0] - 2026-04-15
+
+**Tema**: DynastyChain / SuccessionChain layer + MCP tools v0.2.0. Le
+catene successorie diventano un layer esplicito con `transition_type`
+obbligatorio per ogni transizione — conquiste, rivoluzioni e riforme non
+vengono più appiattite in "successioni" generiche (ETHICS-002). Include
+un tipo `IDEOLOGICAL` con avvertimento forte (ETHICS-003: continuità
+self-proclaimed ≠ legittimità storica — es. Sacrum Imperium Romanum →
+Deutsches Kaiserreich → Deutsches Reich). Il server MCP passa a 0.2.0
+con 11 nuovi tool che espongono eventi, città, rotte, catene e un diff
+macro-storico `what_changed_between(year1, year2)`.
+
+### Modelli nuovi
+
+- **`DynastyChain`** — catena successoria che lega più entità geopolitiche
+  con `chain_type` (ChainType enum: DYNASTY, SUCCESSION, RESTORATION,
+  COLONIAL, IDEOLOGICAL, OTHER), region opzionale, description,
+  confidence_score, status, ethical_notes (obbligatorie per IDEOLOGICAL),
+  sources (JSON array di academic citations).
+- **`ChainLink`** — junction chain ↔ geo_entity con sequence_order (0 =
+  prima entità, senza predecessore), `transition_year`, `transition_type`
+  (TransitionType enum: CONQUEST, REVOLUTION, REFORM, SUCCESSION,
+  RESTORATION, DECOLONIZATION, PARTITION, UNIFICATION, DISSOLUTION,
+  ANNEXATION, OTHER), `is_violent` Bool, description e ethical_notes
+  specifiche della singola transizione.
+
+### Migration Alembic 006
+
+- Crea `dynasty_chains` + `chain_links` con indici su name, chain_type,
+  region, status e sui pattern di query di junction (chain_id,
+  entity_id, sequence_order, transition_type).
+- Check constraint su `confidence_score ∈ [0.0, 1.0]`.
+- Additivo: niente impatto su tabelle esistenti.
+
+### Endpoint nuovi
+
+- `GET /v1/chains` — lista paginata con filtri `chain_type`, `region`
+  (ilike substring), `year` (almeno un'entità della catena attiva),
+  `status`, limit/offset.
+- `GET /v1/chains/{id}` — dettaglio con tutti i link in ordine
+  cronologico, transition_type esplicito su ogni link, ethical_notes
+  specifiche della transizione.
+- `GET /v1/chains/types` — enumera ChainType + TransitionType con
+  descrizioni human-readable (es. "CONQUEST: Conquista militare violenta.
+  ETHICS-002: NON usare 'succession' generico.").
+- `GET /v1/entities/{id}/predecessors` — catene in cui l'entità ha un
+  predecessore, ritorna il predecessore immediato + transition metadata.
+- `GET /v1/entities/{id}/successors` — simmetrico: successore immediato
+  di un'entità attraverso le catene di cui fa parte.
+
+### Seed iniziale (data/chains/batch_01_major_chains.json)
+
+6 catene-archetipo che esercitano ogni ChainType:
+
+1. **Roman Power Center** (SUCCESSION): Imperium Romanum → Imperium
+   Romaniae (330 REFORM). La Republic Roman non è ancora una entità
+   separata nel DB — discussa solo nella description.
+2. **Chinese Imperial Dynasties** (DYNASTY): 漢朝 → 唐朝 → 宋朝 → 元朝 →
+   明朝 → 大清帝國. Ogni transizione etichettata CONQUEST (618, 1271, 1644)
+   vs REVOLUTION (960, 1368), con ethical_notes sulle vittime (conquista
+   mongola, Yangzhou 1645).
+3. **Tawantinsuyu → Virreinato del Perú** (COLONIAL, CONQUEST 1542):
+   ethical_notes esplicite su crollo demografico 50-90%, Atahualpa 1533,
+   Túpac Amaru I 1572.
+4. **Sacrum Imperium Romanum → Deutsches Kaiserreich → Deutsches Reich**
+   (IDEOLOGICAL): avvertimento esplicito che la self-proclaimed continuità
+   è stata strumentalizzata per il genocidio — inclusa per rendere
+   visibile l'appropriazione, NON per legittimare la pretesa.
+5. **Ottoman → Republic of Turkey** (SUCCESSION): foundational era
+   include genocidio armeno/greco/assiro 1915-23 (~1.5M+ morti) e
+   negazione turca contemporanea (ETHICS-008).
+6. **Российская Империя → СССР → Российская Федерация** (RESTORATION):
+   continuità contesa; Soviet esplicitamente rifiutava il lascito
+   zarista ideologicamente mentre ne ereditava territorio e posture.
+
+### Ingestion idempotente
+
+- `src/ingestion/ingest_chains.py` — dedupkey = `name`; risolve
+  `entity_name` → `entity_id` via `GeoEntity.name_original`; ETHICS-002
+  soft-warn su link non-iniziali senza `transition_type`; ETHICS-003
+  soft-warn su chain_type=IDEOLOGICAL senza `ethical_notes`; link con
+  entity non risolti vengono skippati ma la catena parziale viene
+  inserita comunque (warning loggato).
+
+### MCP server v0.2.0 — 11 nuovi tool
+
+Nuovo set che espone i layer v6.3–v6.5 agli agenti AI:
+
+- `search_events`, `get_event`, `events_for_entity` (ETHICS-007/008)
+- `search_cities`, `get_city` (ETHICS-009)
+- `search_routes`, `get_route` (ETHICS-010: `involves_slavery` surface)
+- `search_chains`, `get_chain`, `entity_predecessors`, `entity_successors`
+  (ETHICS-002/003)
+- `what_changed_between(year1, year2, type?, continent?)` — composizione
+  client-side di due snapshot che ritorna {appeared, disappeared,
+  persisted_ids} per diff macro-storici efficienti.
+
+Totale tool esposti: 8 (v0.1) + 11 (v0.2) = **19**. Descrizioni
+guidate agli ETHICS-* rilevanti. Test MCP: 17 passing + 1 integration
+opt-in.
+
+### Test suite
+
+- 15 nuovi test in `tests/test_v650_chains.py` (fixture function-scoped
+  `seeded_chain` con 3 entità TEST_* + chain "TEST_Roman_Power_Center"),
+  coprono list+filtri, detail con link ordinati, predecessori,
+  successori, 404, OpenAPI coverage, ETHICS-002 trasparenza.
+- Suite totale: 340 → **355 passing**.
+
+### Deploy
+
+```bash
+# push + deploy
+git push origin main
+cra-deploy atlaspi
+
+# ingestione chain su produzione (dopo che la migration 006 è applicata)
+ssh -i ~/.ssh/cra_vps root@77.81.229.242 \
+  "cd /opt/cra && docker compose exec atlaspi python -m src.ingestion.ingest_chains"
+
+# pubblica MCP 0.2.0 su PyPI (opzionale, repo separato)
+cd mcp-server && python -m build && twine upload dist/*
+```
+
 ## [v6.4.0] - 2026-04-15
 
 **Tema**: HistoricalCity + TradeRoute layer. Le città storiche e le rotte

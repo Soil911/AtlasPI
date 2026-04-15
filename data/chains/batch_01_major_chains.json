@@ -1,0 +1,121 @@
+[
+  {
+    "name": "Roman Power Center",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Mediterranean",
+    "description": "Power center evolution from the Roman Empire (27 BCE) to the legal end of the Eastern Roman (Byzantine) Empire in 1453. The Roman Republic (509-27 BCE) is not yet a separate entity in the DB — it is discussed in description only. The continuity from Western Rome to Byzantium is contested in Western historiography but Byzantines themselves used the demonym Ῥωμαῖοι (Romans).",
+    "confidence_score": 0.85,
+    "ethical_notes": "The 476 'fall of Rome' is a Western European historiographic frame: the Eastern Roman Empire continued for another 977 years. Calling that empire 'Byzantine' (a 16th-c. Western coinage) implies a discontinuity that its inhabitants did not recognize. Conversely, treating Ottoman conquest 1453 as a 'continuation' would be the opposite mistake.",
+    "sources": [
+      {"citation": "Cambridge Ancient History vols. X-XIV; Cambridge Medieval History", "url": null, "source_type": "academic"},
+      {"citation": "Kaldellis, A. 'Romanland: Ethnicity and Empire in Byzantium' (2019)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Imperium Romanum",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Augustus assumes principate after civil wars (27 BCE). Formally 'res publica restituta' but de facto monarchical reform — the Republic framing is itself imperial propaganda."
+      },
+      {
+        "entity_name": "Imperium Romaniae",
+        "transition_year": 330,
+        "transition_type": "REFORM",
+        "is_violent": false,
+        "description": "Constantine refounds Byzantium as Constantinople; gradual transformation through Theodosius I division of the empire (395)."
+      }
+    ]
+  },
+  {
+    "name": "Chinese Imperial Dynasties",
+    "name_lang": "en",
+    "chain_type": "DYNASTY",
+    "region": "East Asia",
+    "description": "Major dynasties of imperial China (Han → Tang → Song → Yuan → Ming → Qing), with explicit transition_type per change. Sui (581-618) and intermediate dynasties omitted because not yet seeded; this is a highlighted trunk, not a complete dynastic tree.",
+    "confidence_score": 0.9,
+    "ethical_notes": "The traditional dynastic-cycle framework (heaven's mandate / 天命) is itself a piece of Chinese political theology. Transitions classified as REFORM or REVOLUTION here use modern historiographic categories; contemporaries would have framed the same events through 天命.",
+    "sources": [
+      {"citation": "Cambridge History of China vols. 1-15", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "漢朝", "transition_year": null, "transition_type": null, "is_violent": false},
+      {"entity_name": "唐朝", "transition_year": 618, "transition_type": "CONQUEST", "is_violent": true, "description": "Li Yuan founds Tang after Sui collapse and civil war."},
+      {"entity_name": "宋朝", "transition_year": 960, "transition_type": "REVOLUTION", "is_violent": true, "description": "Zhao Kuangyin's military coup (Chenqiao Mutiny)."},
+      {"entity_name": "元朝", "transition_year": 1271, "transition_type": "CONQUEST", "is_violent": true, "description": "Mongol conquest (Kublai Khan); Song formally ends 1279.", "ethical_notes": "Mongol conquest involved mass casualties in northern China; exact estimates contested but Sichuan and Gansu populations collapsed dramatically."},
+      {"entity_name": "明朝", "transition_year": 1368, "transition_type": "REVOLUTION", "is_violent": true, "description": "Zhu Yuanzhang's Red Turban rebellion expels Mongols."},
+      {"entity_name": "大清帝國", "transition_year": 1644, "transition_type": "CONQUEST", "is_violent": true, "description": "Manchu conquest of Ming China.", "ethical_notes": "Conquest accompanied by Yangzhou massacre (1645) and forced queue hairstyle (1645+) as sign of submission."}
+    ]
+  },
+  {
+    "name": "Tawantinsuyu → Virreinato del Perú",
+    "name_lang": "es",
+    "chain_type": "COLONIAL",
+    "region": "Andes / South America",
+    "description": "Inca empire → Spanish viceroyalty. Republic of Peru (1821-) is discussed in ethical_notes but not yet a separate entity in the DB, so it's not a link node.",
+    "confidence_score": 0.9,
+    "ethical_notes": "The Spanish 'conquest' of Tawantinsuyu (1532-72) involved smallpox-driven demographic collapse (50-90% population loss), execution of Atahualpa (1533) and Túpac Amaru I (1572), forced labor (mita), and systematic destruction of khipu records. The Peruvian Republic of 1821 was founded by criollo elites with limited indigenous representation; the Túpac Amaru II rebellion (1780-83) had been brutally suppressed. To call the colonial transition 'SUCCESSION' would be euphemism — hence COLONIAL chain with CONQUEST transition_type.",
+    "sources": [
+      {"citation": "Hemming, J. 'The Conquest of the Incas' (1970/2003)", "url": null, "source_type": "academic"},
+      {"citation": "Mumford, J. 'Vertical Empire: The General Resettlement of Indians in the Colonial Andes' (2012)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "Tawantinsuyu", "transition_year": null, "transition_type": null, "is_violent": false},
+      {"entity_name": "Virreinato del Peru", "transition_year": 1542, "transition_type": "CONQUEST", "is_violent": true, "description": "Spanish viceroyalty formally established 1542 after a decade of conquest, civil wars, and Inca resistance.", "ethical_notes": "Pizarro's expedition reached Cajamarca 1532; Atahualpa executed 1533; Cusco sacked. The neo-Inca state at Vilcabamba resisted until 1572 when Túpac Amaru I was beheaded."}
+    ]
+  },
+  {
+    "name": "Sacrum Imperium Romanum → Deutsches Kaiserreich → Deutsches Reich",
+    "name_lang": "de",
+    "chain_type": "IDEOLOGICAL",
+    "region": "Central Europe",
+    "description": "Self-proclaimed German imperial continuity. Each successor explicitly invoked the 'Reich' lineage.",
+    "confidence_score": 0.7,
+    "ethical_notes": "WARNING: this chain reflects SELF-PROCLAIMED ideological continuity, not legal/political legitimacy. The Holy Roman Empire (962-1806) was a multi-ethnic feudal/elective construct dominated but not exclusively German. The German Empire (1871-1918) consciously invoked 'Second Reich' framing to claim succession. The Third Reich (1933-45) claimed 'Tausendjähriges Reich' and weaponized the ideological lineage for racial-totalitarian ends; this chain is included precisely to expose how ideological continuity claims can be instrumentalized for genocide. Modern Germany (FRG) explicitly REJECTS the 'Reich' lineage.",
+    "sources": [
+      {"citation": "Wilson, P. 'The Holy Roman Empire: A Thousand Years of Europe's History' (2016)", "url": null, "source_type": "academic"},
+      {"citation": "Evans, R. 'The Third Reich in Power' (2005)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "Sacrum Imperium Romanum", "transition_year": null, "transition_type": null, "is_violent": false},
+      {"entity_name": "Deutsches Kaiserreich", "transition_year": 1871, "transition_type": "UNIFICATION", "is_violent": true, "description": "Bismarck's unification via wars 1864/1866/1870-71; HRE had been dissolved 1806 — 65-year gap. The 'Second Reich' framing is retrospective.", "ethical_notes": "1806→1871 gap means this is ideological invocation, not formal succession."},
+      {"entity_name": "Deutsches Reich", "transition_year": 1933, "transition_type": "REVOLUTION", "is_violent": true, "description": "Nazi seizure of power; Weimar Republic skipped in this chain because the Nazis explicitly framed themselves as restoring 'Reich' lineage.", "ethical_notes": "The Holocaust (~6M Jews + ~5M others murdered), WWII (~70M deaths), and systematic atrocities (Generalplan Ost, Lebensborn) make this 'continuation' a moral obscenity. Included in the chain to make ideological appropriation visible, NOT to legitimize the lineage claim."}
+    ]
+  },
+  {
+    "name": "Ottoman → Republic of Turkey",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Middle East / Balkans",
+    "description": "Ottoman Empire dissolution after WWI (Sevres 1920, Lausanne 1923) into the Turkish Republic. Mandate-era Arab states are successor states but not included here pending richer entity coverage.",
+    "confidence_score": 0.85,
+    "ethical_notes": "The 'successor states' frame elides the Sykes-Picot 1916 colonial division of Arab lands by France/UK. The Treaty of Lausanne 1923 also legitimized the post-Armenian-Genocide demographic reality (1915-23 Armenian, Greek, Assyrian genocides ~1.5M+ killed). Republic of Turkey continues to deny the Armenian Genocide as such — this is itself a piece of ETHICS-008 silenced history.",
+    "sources": [
+      {"citation": "Findley, C. 'Turkey, Islam, Nationalism, and Modernity' (2010)", "url": null, "source_type": "academic"},
+      {"citation": "Akçam, T. 'A Shameful Act: The Armenian Genocide and the Question of Turkish Responsibility' (2006)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "Osmanlı İmparatorluğu", "transition_year": null, "transition_type": null, "is_violent": false},
+      {"entity_name": "Turkiye Cumhuriyeti", "transition_year": 1923, "transition_type": "REVOLUTION", "is_violent": true, "description": "Atatürk's Turkish War of Independence; sultanate abolished 1922, republic proclaimed 1923 (Lausanne).", "ethical_notes": "Foundational era includes the conclusion of Armenian/Greek/Assyrian genocides (1915-23) and the Greco-Turkish population exchange (~1.6M displaced)."}
+    ]
+  },
+  {
+    "name": "Российская Империя → СССР → Российская Федерация",
+    "name_lang": "ru",
+    "chain_type": "RESTORATION",
+    "region": "Eurasia",
+    "description": "Russian state continuity through the 1917 revolution and 1991 dissolution.",
+    "confidence_score": 0.85,
+    "ethical_notes": "The USSR 'continuity' from the Russian Empire is contested: Soviets explicitly REJECTED the Tsarist legacy ideologically while inheriting most of its territory and great-power posture. The Russian Federation 1991 was recognized as the USSR's juridical continuator at the UN (kept Security Council seat, debt obligations, treaty commitments) — but other 14 republics were treated as successor states, not continuators. Calling this a 'restoration' chain is itself contested.",
+    "sources": [
+      {"citation": "Pipes, R. 'Russia under the Bolshevik Regime' (1994)", "url": null, "source_type": "academic"},
+      {"citation": "Suny, R. 'The Soviet Experiment' (2010)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "Российская Империя", "transition_year": null, "transition_type": null, "is_violent": false},
+      {"entity_name": "Союз Советских Социалистических Республик", "transition_year": 1922, "transition_type": "REVOLUTION", "is_violent": true, "description": "Russian Revolution (Feb/Oct 1917) → civil war (1918-22) → USSR formally constituted Dec 1922.", "ethical_notes": "Civil war ~7-12M deaths; 1921-22 famine ~5M; Red Terror; Polish-Soviet War 1919-21. The 'continuity' includes brutal Sovietization of non-Russian republics (Caucasus, Central Asia, Ukraine)."},
+      {"entity_name": "Российская Федерация", "transition_year": 1991, "transition_type": "DISSOLUTION", "is_violent": false, "description": "Belovezha Accords Dec 1991 dissolved USSR. Russia recognized as juridical continuator (UN seat, debts, treaties)."}
+    ]
+  }
+]

@@ -17,7 +17,7 @@ import httpx
 
 DEFAULT_BASE_URL = "https://atlaspi.cra-srl.com"
 DEFAULT_TIMEOUT = 30.0
-USER_AGENT = "atlaspi-mcp/0.1.0 (+https://github.com/Soil911/AtlasPI)"
+USER_AGENT = "atlaspi-mcp/0.2.0 (+https://github.com/Soil911/AtlasPI)"
 
 
 class AtlasPIClientError(RuntimeError):
@@ -227,3 +227,154 @@ class AtlasPIClient:
     async def health(self) -> Any:
         """GET /health — stato di salute del servizio (debug)."""
         return await self._get("/health")
+
+    # -- v6.3 events ---------------------------------------------------
+
+    async def list_events(
+        self,
+        *,
+        year_min: int | None = None,
+        year_max: int | None = None,
+        event_type: str | None = None,
+        status: str | None = None,
+        known_silence: bool | None = None,
+        limit: int | None = None,
+        offset: int | None = None,
+    ) -> Any:
+        """GET /v1/events — lista filtrata di eventi storici."""
+        return await self._get(
+            "/v1/events",
+            {
+                "year_min": year_min,
+                "year_max": year_max,
+                "event_type": event_type,
+                "status": status,
+                "known_silence": known_silence,
+                "limit": limit,
+                "offset": offset,
+            },
+        )
+
+    async def get_event(self, event_id: int) -> Any:
+        """GET /v1/events/{event_id} — dettaglio evento storico."""
+        return await self._get(f"/v1/events/{int(event_id)}")
+
+    async def event_types(self) -> Any:
+        """GET /v1/events/types — enum EventType + EventRole."""
+        return await self._get("/v1/events/types")
+
+    async def events_for_entity(
+        self, entity_id: int, *, role: str | None = None
+    ) -> Any:
+        """GET /v1/entities/{id}/events — eventi in cui l'entità compare."""
+        return await self._get(
+            f"/v1/entities/{int(entity_id)}/events",
+            {"role": role},
+        )
+
+    # -- v6.4 cities & routes ------------------------------------------
+
+    async def list_cities(
+        self,
+        *,
+        year: int | None = None,
+        city_type: str | None = None,
+        entity_id: int | None = None,
+        bbox: str | None = None,
+        status: str | None = None,
+        limit: int | None = None,
+        offset: int | None = None,
+    ) -> Any:
+        """GET /v1/cities — lista filtrata di città storiche."""
+        return await self._get(
+            "/v1/cities",
+            {
+                "year": year,
+                "city_type": city_type,
+                "entity_id": entity_id,
+                "bbox": bbox,
+                "status": status,
+                "limit": limit,
+                "offset": offset,
+            },
+        )
+
+    async def get_city(self, city_id: int) -> Any:
+        """GET /v1/cities/{city_id} — dettaglio città storica."""
+        return await self._get(f"/v1/cities/{int(city_id)}")
+
+    async def city_types(self) -> Any:
+        """GET /v1/cities/types — enum CityType."""
+        return await self._get("/v1/cities/types")
+
+    async def list_routes(
+        self,
+        *,
+        year: int | None = None,
+        route_type: str | None = None,
+        involves_slavery: bool | None = None,
+        status: str | None = None,
+        limit: int | None = None,
+        offset: int | None = None,
+    ) -> Any:
+        """GET /v1/routes — lista filtrata di rotte commerciali."""
+        return await self._get(
+            "/v1/routes",
+            {
+                "year": year,
+                "route_type": route_type,
+                "involves_slavery": involves_slavery,
+                "status": status,
+                "limit": limit,
+                "offset": offset,
+            },
+        )
+
+    async def get_route(self, route_id: int) -> Any:
+        """GET /v1/routes/{route_id} — dettaglio rotta con waypoints."""
+        return await self._get(f"/v1/routes/{int(route_id)}")
+
+    async def route_types(self) -> Any:
+        """GET /v1/routes/types — enum RouteType."""
+        return await self._get("/v1/routes/types")
+
+    # -- v6.5 chains ---------------------------------------------------
+
+    async def list_chains(
+        self,
+        *,
+        chain_type: str | None = None,
+        region: str | None = None,
+        year: int | None = None,
+        status: str | None = None,
+        limit: int | None = None,
+        offset: int | None = None,
+    ) -> Any:
+        """GET /v1/chains — lista filtrata di catene successorie."""
+        return await self._get(
+            "/v1/chains",
+            {
+                "chain_type": chain_type,
+                "region": region,
+                "year": year,
+                "status": status,
+                "limit": limit,
+                "offset": offset,
+            },
+        )
+
+    async def get_chain(self, chain_id: int) -> Any:
+        """GET /v1/chains/{chain_id} — dettaglio catena con link ordinati."""
+        return await self._get(f"/v1/chains/{int(chain_id)}")
+
+    async def chain_types(self) -> Any:
+        """GET /v1/chains/types — enum ChainType + TransitionType."""
+        return await self._get("/v1/chains/types")
+
+    async def entity_predecessors(self, entity_id: int) -> Any:
+        """GET /v1/entities/{id}/predecessors — predecessori nelle catene."""
+        return await self._get(f"/v1/entities/{int(entity_id)}/predecessors")
+
+    async def entity_successors(self, entity_id: int) -> Any:
+        """GET /v1/entities/{id}/successors — successori nelle catene."""
+        return await self._get(f"/v1/entities/{int(entity_id)}/successors")

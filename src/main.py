@@ -20,7 +20,7 @@ from src.api.middleware import (
     RequestLoggingMiddleware,
     SecurityHeadersMiddleware,
 )
-from src.api.routes import cities_routes, entities, events, export, health, relations
+from src.api.routes import chains, cities_routes, entities, events, export, health, relations
 from src.config import (
     APP_TITLE,
     APP_VERSION,
@@ -206,6 +206,7 @@ app.include_router(export.router)
 app.include_router(relations.router)
 app.include_router(events.router)
 app.include_router(cities_routes.router)
+app.include_router(chains.router)
 
 
 @app.get("/", include_in_schema=False)

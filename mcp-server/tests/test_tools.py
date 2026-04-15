@@ -25,6 +25,7 @@ from atlaspi_mcp.client import (
 from atlaspi_mcp.tools import get_tool, get_tools
 
 EXPECTED_TOOL_NAMES = {
+    # v0.1 core
     "search_entities",
     "get_entity",
     "snapshot_at_year",
@@ -33,6 +34,22 @@ EXPECTED_TOOL_NAMES = {
     "random_entity",
     "get_evolution",
     "dataset_stats",
+    # v0.2 events (ETHICS-007/008)
+    "search_events",
+    "get_event",
+    "events_for_entity",
+    # v0.2 cities & routes (ETHICS-009/010)
+    "search_cities",
+    "get_city",
+    "search_routes",
+    "get_route",
+    # v0.2 chains (ETHICS-002/003)
+    "search_chains",
+    "get_chain",
+    "entity_predecessors",
+    "entity_successors",
+    # v0.2 composite
+    "what_changed_between",
 }
 
 
@@ -99,7 +116,7 @@ def test_base_url_default_when_env_empty(monkeypatch: pytest.MonkeyPatch) -> Non
 
 
 def test_tool_list_complete() -> None:
-    """Tutti e 8 i tools canonici sono registrati."""
+    """Tutti e 19 i tools canonici v0.2 sono registrati."""
     names = {t.name for t in get_tools()}
     assert names == EXPECTED_TOOL_NAMES, (
         f"Missing or unexpected tools: {names ^ EXPECTED_TOOL_NAMES}"
@@ -135,6 +152,17 @@ def test_required_params_for_path_tools() -> None:
     assert get_tool("get_evolution").input_schema["required"] == ["entity_id"]
     assert set(get_tool("compare_entities").input_schema["required"]) == {"id1", "id2"}
     assert set(get_tool("nearby_entities").input_schema["required"]) == {"lat", "lon"}
+    # v0.2 additions
+    assert get_tool("get_event").input_schema["required"] == ["event_id"]
+    assert get_tool("get_city").input_schema["required"] == ["city_id"]
+    assert get_tool("get_route").input_schema["required"] == ["route_id"]
+    assert get_tool("get_chain").input_schema["required"] == ["chain_id"]
+    assert get_tool("entity_predecessors").input_schema["required"] == ["entity_id"]
+    assert get_tool("entity_successors").input_schema["required"] == ["entity_id"]
+    assert get_tool("events_for_entity").input_schema["required"] == ["entity_id"]
+    assert set(get_tool("what_changed_between").input_schema["required"]) == {
+        "year1", "year2",
+    }
 
 
 def test_descriptions_are_substantial() -> None:
@@ -200,6 +228,160 @@ async def test_dataset_stats_handler() -> None:
         await client.aclose()
 
     assert result == payload
+
+
+@pytest.mark.asyncio
+async def test_search_events_handler_calls_correct_endpoint() -> None:
+    """search_events chiama /v1/events con i filtri corretti."""
+    captured: dict[str, object] = {}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        captured["url"] = str(request.url)
+        return httpx.Response(200, json={"total": 0, "events": []})
+
+    client = _client_with_handler(handler)
+    try:
+        result = await get_tool("search_events").handler(
+            client,
+            {"event_type": "GENOCIDE", "year_min": 1900, "year_max": 2000},
+        )
+    finally:
+        await client.aclose()
+
+    url = captured["url"]
+    assert "/v1/events" in url
+    assert "event_type=GENOCIDE" in url
+    assert "year_min=1900" in url
+    assert "year_max=2000" in url
+    assert result["events"] == []
+
+
+@pytest.mark.asyncio
+async def test_search_chains_handler() -> None:
+    """search_chains chiama /v1/chains con chain_type filter."""
+    captured: dict[str, object] = {}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        captured["url"] = str(request.url)
+        return httpx.Response(200, json={"total": 0, "chains": []})
+
+    client = _client_with_handler(handler)
+    try:
+        result = await get_tool("search_chains").handler(
+            client,
+            {"chain_type": "IDEOLOGICAL"},
+        )
+    finally:
+        await client.aclose()
+
+    assert "/v1/chains" in str(captured["url"])
+    assert "chain_type=IDEOLOGICAL" in str(captured["url"])
+    assert result["chains"] == []
+
+
+@pytest.mark.asyncio
+async def test_entity_predecessors_handler() -> None:
+    """entity_predecessors mappa sul path corretto."""
+    captured: dict[str, object] = {}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        captured["path"] = request.url.path
+        return httpx.Response(
+            200,
+            json={"entity_id": 42, "entity_name": "X", "predecessors": []},
+        )
+
+    client = _client_with_handler(handler)
+    try:
+        result = await get_tool("entity_predecessors").handler(
+            client, {"entity_id": 42}
+        )
+    finally:
+        await client.aclose()
+
+    assert captured["path"] == "/v1/entities/42/predecessors"
+    assert result["predecessors"] == []
+
+
+@pytest.mark.asyncio
+async def test_search_routes_involves_slavery_filter() -> None:
+    """search_routes propaga il flag involves_slavery (ETHICS-010)."""
+    captured: dict[str, object] = {}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        captured["url"] = str(request.url)
+        return httpx.Response(200, json={"total": 0, "routes": []})
+
+    client = _client_with_handler(handler)
+    try:
+        await get_tool("search_routes").handler(
+            client, {"involves_slavery": True, "route_type": "SEA"}
+        )
+    finally:
+        await client.aclose()
+
+    url = str(captured["url"])
+    assert "/v1/routes" in url
+    # httpx serialises bool as "True"/"False" — accept either casing
+    assert "involves_slavery=" in url
+    assert "route_type=SEA" in url
+
+
+@pytest.mark.asyncio
+async def test_what_changed_between_composes_two_snapshots() -> None:
+    """what_changed_between chiama snapshot(year1) e snapshot(year2) e diffa."""
+    seen_years: list[int] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        # Path atteso: /v1/snapshot/{year}
+        parts = request.url.path.strip("/").split("/")
+        year = int(parts[-1])
+        seen_years.append(year)
+        if year == 100:
+            entities = [
+                {"id": 1, "name_original": "Imperium Romanum"},
+                {"id": 2, "name_original": "漢朝"},
+            ]
+        else:  # year 500
+            entities = [
+                {"id": 1, "name_original": "Imperium Romanum"},
+                {"id": 3, "name_original": "Imperium Romaniae"},
+            ]
+        return httpx.Response(200, json={"year": year, "entities": entities})
+
+    client = _client_with_handler(handler)
+    try:
+        result = await get_tool("what_changed_between").handler(
+            client, {"year1": 100, "year2": 500}
+        )
+    finally:
+        await client.aclose()
+
+    assert sorted(seen_years) == [100, 500]
+    appeared_ids = [e["id"] for e in result["appeared"]]
+    disappeared_ids = [e["id"] for e in result["disappeared"]]
+    assert appeared_ids == [3]
+    assert disappeared_ids == [2]
+    assert result["persisted_ids"] == [1]
+    assert result["count"]["appeared"] == 1
+    assert result["count"]["disappeared"] == 1
+    assert result["count"]["persisted"] == 1
+
+
+@pytest.mark.asyncio
+async def test_what_changed_between_rejects_equal_years() -> None:
+    """year1 == year2 deve essere rifiutato."""
+    def handler(request: httpx.Request) -> httpx.Response:  # pragma: no cover
+        return httpx.Response(200, json={"entities": []})
+
+    client = _client_with_handler(handler)
+    try:
+        with pytest.raises(ValueError):
+            await get_tool("what_changed_between").handler(
+                client, {"year1": 100, "year2": 100}
+            )
+    finally:
+        await client.aclose()
 
 
 @pytest.mark.asyncio

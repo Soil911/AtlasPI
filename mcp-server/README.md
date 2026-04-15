@@ -54,7 +54,7 @@ Windows: `%APPDATA%\Claude\claude_desktop_config.json`):
 }
 ```
 
-Restart Claude Desktop. The 8 AtlasPI tools will appear in the tools menu.
+Restart Claude Desktop. The 19 AtlasPI tools will appear in the tools menu.
 
 ### Claude Code
 
@@ -101,6 +101,8 @@ set the `ATLASPI_API_URL` environment variable:
 
 ## Tools exposed
 
+**v0.1 — core entities**
+
 | Tool                | What it does                                                          |
 |---------------------|-----------------------------------------------------------------------|
 | `search_entities`   | Filter entities by name, year, type, continent, status                |
@@ -111,6 +113,23 @@ set the `ATLASPI_API_URL` environment variable:
 | `random_entity`     | Random entity, with optional filters (great for exploration)          |
 | `get_evolution`     | Timeline of territorial changes for an entity                         |
 | `dataset_stats`     | Aggregate stats: totals per type, continent, status, year coverage    |
+
+**v0.2 — events, cities, routes, chains**
+
+| Tool                  | What it does                                                                        |
+|-----------------------|-------------------------------------------------------------------------------------|
+| `search_events`       | Filter historical events (ETHICS-007: GENOCIDE, COLONIAL_VIOLENCE, no euphemisms)   |
+| `get_event`           | Event detail with entity roles (MAIN_ACTOR, VICTIM, ...) and sources                |
+| `events_for_entity`   | All events where a given entity appears, with optional role filter                  |
+| `search_cities`       | Filter cities by year, type (TRADE_HUB, CAPITAL, ...), entity, bbox                 |
+| `get_city`            | City detail with name_variants (ETHICS-009: colonial renames documented)            |
+| `search_routes`       | Filter trade routes; `involves_slavery` surfaces slave-trade routes (ETHICS-010)    |
+| `get_route`           | Route detail with waypoints, commodities, geometry                                  |
+| `search_chains`       | Find dynasty/succession/colonial/ideological chains, filter by region/year/type     |
+| `get_chain`           | Chain detail with ordered links + explicit transition_type per link (ETHICS-002)    |
+| `entity_predecessors` | Predecessors of an entity in chains (who came before, via which transition)         |
+| `entity_successors`   | Successors of an entity in chains (who came after, via which transition)            |
+| `what_changed_between`| Diff two world snapshots: entities appeared / disappeared / persisted               |
 
 ---
 

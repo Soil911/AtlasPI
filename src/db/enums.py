@@ -138,3 +138,50 @@ class RouteType(enum.StrEnum):
     RIVER = "RIVER"
     CARAVAN = "CARAVAN"
     MIXED = "MIXED"
+
+
+# ─── v6.5: Dynasty / Succession Chains ─────────────────────────────────────
+
+
+class ChainType(enum.StrEnum):
+    """Tipo di catena successoria che lega più entità geopolitiche.
+
+    Distingue tra:
+      * DYNASTY: stessa entità politica con dinastie consecutive (es. Cina:
+        Han→Tang→Song→Yuan→Ming→Qing).
+      * SUCCESSION: una entità succede a un'altra su tema territoriale
+        (es. Western Roman → Byzantine → Ottoman su core mediterraneo).
+      * RESTORATION: entità formalmente restaurata dopo interruzione
+        (es. Ancien Régime → Restoration France 1814).
+      * COLONIAL: catena coloniale (Inca → Viceroyalty of Peru → Republic
+        of Peru — l'oppressione coloniale è dato di prima classe ETHICS-002).
+      * IDEOLOGICAL: linea di continuità ideologica anche con cesura statale
+        (Holy Roman Empire → German Empire → Third Reich, NB: la self-
+        proclaimed continuità non implica legittimità storica).
+    """
+    DYNASTY = "DYNASTY"
+    SUCCESSION = "SUCCESSION"
+    RESTORATION = "RESTORATION"
+    COLONIAL = "COLONIAL"
+    IDEOLOGICAL = "IDEOLOGICAL"
+    OTHER = "OTHER"
+
+
+class TransitionType(enum.StrEnum):
+    """Modalità di transizione da un'entità all'altra in una catena.
+
+    ETHICS: il transition_type DEVE essere esplicito. CONQUEST e
+    REVOLUTION non sono sostituibili da "succession" o "transition".
+    Una conquista violenta non è una "successione" pacifica.
+    """
+    CONQUEST = "CONQUEST"           # militare, violenta
+    REVOLUTION = "REVOLUTION"       # interna, regime change
+    REFORM = "REFORM"               # legale/amministrativa (es. Diocletian 285)
+    SUCCESSION = "SUCCESSION"       # dinastica/legittima
+    RESTORATION = "RESTORATION"     # dopo interruzione
+    DECOLONIZATION = "DECOLONIZATION"  # indipendenza da potenza coloniale
+    PARTITION = "PARTITION"         # divisione (es. India 1947)
+    UNIFICATION = "UNIFICATION"     # fusione (es. Italia 1861)
+    DISSOLUTION = "DISSOLUTION"     # collasso (es. URSS 1991)
+    ANNEXATION = "ANNEXATION"       # incorporazione formale
+    OTHER = "OTHER"
