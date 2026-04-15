@@ -2,6 +2,215 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.11.0] - 2026-04-15
+
+**Tema**: *Imperial continuity trunks — West Rome, East Rome, Mongol*. Tre
+nuove catene ad alta carica simbolica che tracciano le *rivendicazioni* di
+continuità imperiale nel bacino eurasiatico: il percorso romano-occidentale
+(Roma → Franchi → SRI → Kaiserreich → Terzo Reich, tracciata come IDEOLOGICAL
+per distinguerla da successioni giuridiche reali), il tronco romano-orientale
+(Roma → Bisanzio fino al 1453), e il ramo asiatico dell'impero mongolo
+(Yekhe Mongol Ulus → Yuan → Yuan del Nord, 1206–1635). 11 nuovi eventi
+ancorano le catene (coronazione di Carlomagno 800, Ottone I 962, sacco di
+Costantinopoli 1204, kurultai 1206, Mohi 1241, Ain Jalut 1260, fondazione
+Yuan 1271, espulsione Yuan 1368, caduta di Costantinopoli 1453, dissoluzione
+SRI 1806, Versailles 1871). Catene 14 → 17 (+3), chain_links 62 → 73 (+11),
+eventi 250 → 259 (+9 net di cui 2 duplicati saltati), test 566 → 603+ (+37).
+
+### Nuove catene
+
+**Western Roman imperial continuity — 6 link** (`data/chains/batch_07_western_roman_continuity.json`, chain_type `IDEOLOGICAL`):
+- Imperium Romanum (27 BCE – 476) — fondazione imperiale augustea, conquiste
+  di Gallia/Giudea/Dacia, schiavismo strutturale (10-30% della popolazione)
+- Regnum Francorum (481 SUCCESSION) — regno merovingio sotto Clovis I, golpe
+  carolingio 751 su Childerico III con benedizione papale (dottrina del rex
+  inutilis)
+- Imperium Francorum (800 RESTORATION) — incoronazione di Carlomagno a
+  Natale da papa Leone III, guerre sassoni e massacro di Verden (~4,500
+  prigionieri decapitati 782), reazione bizantina come usurpazione
+- Sacrum Imperium Romanum (962 RESTORATION) — incoronazione di Ottone I,
+  Guerra dei Trent'Anni (8M morti), persecuzioni degli ebrei renani 1096 e
+  1349, dissoluzione 1806 per volontà di Francesco II
+- Deutsches Kaiserreich (1871 RESTORATION) — proclamazione di Wilhelm I
+  alla Sala degli Specchi di Versailles (deliberata umiliazione di Luigi XIV),
+  genocidio degli Herero e Nama 1904-08 (~65-85k morti, Vernichtungsbefehl
+  di von Trotha, riconosciuto come genocidio dalla Germania nel 2021),
+  repressione Maji Maji 1905-07 (~180-300k morti)
+- Deutsches Reich (1933 REVOLUTION) — regime nazista, Olocausto (6M ebrei,
+  200-500k Rom e Sinti, ~250k disabili via Aktion T4, ~3M POW sovietici),
+  Generalplan Ost, totale mortalità seconda guerra mondiale ~70-85M. INCLUSO
+  come documentazione della rivendicazione ideologica esplicita (Drittes
+  Reich, Moeller van den Bruck 1923), NON come legittimazione. Chain ends 1945.
+
+**Eastern Roman (Byzantine) imperial continuity — 2 link** (`data/chains/batch_08_eastern_roman_continuity.json`, chain_type `SUCCESSION`):
+- Imperium Romanum — partizione teodosiana 395
+- Βασιλεία Ῥωμαίων (395 SUCCESSION) — continuità romana orientale fino al
+  29 maggio 1453, inclusa l'interruzione latina 1204-1261 (sacco del Quarto
+  Crociata: Niketas Choniates, Hagia Sophia profanata, cavalli bronzei sul
+  San Marco), accecamento bulgaro di Basilio II a Kleidion (14k prigionieri
+  1014), massacro dei latini 1182 (~60k uccisi). Dottrina bizantina: unico
+  impero romano legittimo; appropriation Ottomana (Kayser-i Rûm) e russa
+  (Terza Roma di Filoteo di Pskov ~1510) non sulla catena
+
+**Mongol Empire Yuan branch — 3 link** (`data/chains/batch_09_mongol_yuan.json`, chain_type `DYNASTY`):
+- ᠶᠡᠬᠡ ᠮᠣᠩᠭᠣᠯ ᠤᠯᠤᠰ (Yekhe Mongol Ulus, 1206) — kurultai di Onon,
+  conquiste 20-60M morti globali (Merv, Nishapur, Baghdad, Kiev), Pax Mongolica
+  come contributo strutturale parallelo (yam postale, jarghu, tolleranza
+  religiosa, trasmissione tecnologie)
+- 元朝 (Yuan, 1271 SUCCESSION) — proclamazione di Khubilai a Khanbaliq,
+  sistema dei quattro ceti (Mongoli / Semu / Han / Nanren) che subordinava
+  il 90% della popolazione, battaglia di Yamen 1279 (~100k morti Song),
+  patronato buddhista tibetano tramite 'Phags-pa
+- 北元 (Northern Yuan, 1368 DISSOLUTION) — fuga di Toghon Temur da
+  Khanbaliq, crisi Tumu 1449 (Esen cattura l'imperatore Zhengtong), Altan
+  Khan 1550-1577 (alleanza Gelugpa, titolo Dalai Lama conferito a Sonam
+  Gyatso), resa di Ejei Khan ai Manchu Hong Taiji nel 1635 che trasferisce
+  legittimità chinggisid ai Qing (prepara il genocidio dzungaro 1755-58
+  documentato nel Qing-link di batch_04)
+
+### Nuovi eventi (9) — `data/events/batch_11_imperial_chain_events.json`
+
+| Anno | Evento                                            | Tipo             |
+|-----:|---------------------------------------------------|------------------|
+|  962 | Coronatio Ottonis I                                | CORONATION       |
+| 1204 | Expugnatio Urbis Constantinopolitanae (IV Croc.)   | MASSACRE         |
+| 1206 | ᠶᠡᠬᠡ ᠬᠤᠷᠢᠯᠳᠠᠢ ᠣᠨᠤᠨ ᠭᠣᠣᠯ (Onon kurultai) | FOUNDING_STATE   |
+| 1241 | Muhi csata                                        | BATTLE           |
+| 1260 | معركة عين جالوت (Ain Jalut)                      | BATTLE           |
+| 1271 | 大元國號 (Yuan proclamation)                       | FOUNDING_STATE   |
+| 1368 | 明軍攻克大都 (Ming expels Yuan)                    | CONQUEST         |
+| 1806 | Abdankung Franz II. (HRE dissolution)              | TREATY           |
+| 1871 | Kaiserproklamation zu Versailles                  | CORONATION       |
+
+Coronatio Karoli Magni (800) e Ἅλωσις τῆς Κωνσταντινουπόλεως (1453) erano
+già coperte in batch_03 e batch_01 rispettivamente; l'ingestore idempotente
+le ha correttamente saltate e sono state rimosse dal file batch_11 per
+evitare duplicazione strutturale.
+
+### ETHICS — punti chiave
+
+- **Terzo Reich incluso come documentazione, non come legittimazione.**
+  Chain description e ethical_notes spiegano esplicitamente che la catena
+  documenta rivendicazioni di continuità *fatte dai regimi*; l'inclusione del
+  regime nazista — che si auto-descriveva come "Drittes Reich" dal 1923
+  (Moeller van den Bruck) e dal 1933 nella propaganda — è necessità
+  documentaria, non endorsement. Il link-livello ethical_notes del Deutsches
+  Reich è il più denso del progetto (~1100 caratteri, include Olocausto,
+  Porajmos, T4, POW sovietici, Generalplan Ost, cifre globali della
+  seconda guerra mondiale, rottura del 1945 + Grundgesetz Art. 1).
+
+- **Translatio imperii contestata.** La catena occidentale è marcata
+  IDEOLOGICAL (non DYNASTY o SUCCESSION) perché rappresenta una claim
+  specificamente latino-cristiana-medievale — rigettata dal punto di vista
+  bizantino, che considerava Costantinopoli l'unico impero romano legittimo.
+  Il link Imperium Francorum esplicita: "Byzantine recognition of
+  Charlemagne's imperial title came only in 812 and only in exchange for
+  Venetian and Dalmatian territorial concessions."
+
+- **Cifre dei morti mongoli presentate come range.** Il chain-livello
+  ethical_notes mongolo cita 20-60M deaths, distinguendo stime massimaliste
+  (Matthew White, Merv 700k-1.3M) da valutazioni revisioniste moderne
+  (esagerate ma accettano massa demografica reale). Parallela: "Pax Mongolica
+  did enable the Silk Road transmission that Allsen (2001) documents; this
+  does not mitigate the mortality of the founding but is a separate
+  structural fact."
+
+- **Evento 1453: dualità della memoria.** Il Fall of Constantinople event
+  documenta sia la memoria ortodossa (fine di Costantinopoli, Terza Roma
+  russa) sia la continuità attraverso incorporazione del millet sotto Mehmed
+  II (Gennadios Scholarios installato patriarca ecumenico nel gennaio 1454).
+  ETHICS confronto esplicito con 1204: "Ottoman rule was more accommodating
+  to Orthodox Christian institutional life than the Fourth Crusade's had
+  been."
+
+- **Evento 1871 Versailles: logica dell'umiliazione cerimoniale.** Il
+  ethical_notes espone il ciclo: Bismarck sceglie deliberatamente la Sala
+  degli Specchi per invertire Luigi XIV; nel 1919 gli Alleati scelgono la
+  stessa sala per umiliare la Germania; nel 1940 i tedeschi scelgono il
+  vagone di Compiègne per vendicare il 1918. La catena espone la ritualità
+  della vendetta politica.
+
+### Omissioni deliberate (flaggate come gap nei file)
+
+- **Quattro Khanati** (Horde d'Oro, Chagatai, Ilkhanate) sono solo
+  entity-records, non sulla catena mongola. La catena mongola è il ramo
+  Yuan; i quattro-khanati formeranno una catena separata in un rilascio
+  futuro.
+
+- **Impero latino di Costantinopoli** (Imperium Romaniae, 1204-1261) è
+  entity-record ma NON sulla catena bizantina, perché rappresenta una
+  rottura crociata-franca, non una continuità romana. Il sacco del 1204 è
+  flaggato nel link bisanzio.
+
+- **Reichstagspause 1806-1871** — 65 anni senza titolo imperiale tedesco.
+  Il Congresso di Vienna 1815 (Deutscher Bund) NON restaurò il titolo
+  imperiale; il Parlamento di Francoforte 1848 offrì la corona imperiale a
+  Federico Guglielmo IV che la rifiutò ("Krone aus der Gosse"). Lo script
+  ideologico collega 1806-1871 ma la catena espone il gap.
+
+- **Impero sacrum napoleonico** (1804-1814, 1815) e **Österreichische
+  Kaiserreich** (1804 → 1867 Austria-Ungheria → 1918) sono parallele, non
+  sulla catena. Entrambe attingono alla retorica imperiale; la catena
+  occidentale segue il ramo tedesco-prusso-kaiserreich.
+
+### Nuovi test (39) — `tests/test_v6110_imperial_chains.py`
+
+- Struttura file (4 file: 3 catene + 1 batch eventi)
+- Required keys parametrizzati × 3 catene (27 test)
+- Enum validation (ChainType, TransitionType, EventType)
+- Link count esatto: western=6, byzantine=2, mongol=3
+- Endpoint catene: primi/ultimi link corretti
+- ETHICS hard checks:
+  - Western: Terzo Reich deve essere REVOLUTION con Olocausto/6M/Jewish;
+    chain-note deve includere "documentary/appropriation/perverting"
+  - Western: Kaiserreich link deve citare Herero/Nama/Trotha/Shark Island
+  - Western: Imperium Francorum deve citare Verden/Saxon/conversion
+  - Byzantine: link bisanzio deve flaggare 1204 + Kleidion/Bulgar-Slayer
+  - Mongol: chain-note deve citare 20-60M; link Yuan deve flaggare four-caste
+  - Mongol: puntatore al genocidio dzungaro 1755-58 (cross-chain)
+- Event structural: 11 eventi, anni 800-1871, type-enum-valid
+- Event ETHICS:
+  - 1453: deve menzionare Gennadios/millet/Third Rome (dualità memoria)
+  - 1204: deve flaggare il ruolo veneziano (Treaty of Venice 1201)
+  - 1260 Ain Jalut: deve contestualizzare "saved Islam" come retrospettiva
+  - 1206: deve acknowledge 20-60M mortalità a valle
+  - 1871: deve esporre logica di umiliazione (inverted/Louis XIV/1919/1940)
+- DB spot-check: 1453 event è CONQUEST, 1206 è FOUNDING_STATE (skip se
+  non ancora ingestato)
+
+### Dataset delta
+
+| Metrica             | v6.10.0 | v6.11.0 | Δ    |
+|---------------------|--------:|--------:|-----:|
+| Entità              | 846     | 846     | 0    |
+| Eventi              | 250     | 261     | +11  |
+| Città               | 110     | 110     | 0    |
+| Rotte commerciali   | 41      | 41      | 0    |
+| Catene dinastiche   | 14      | 17      | +3   |
+| Chain links         | 62      | 73      | +11  |
+| Test                | 566     | 603+    | +37+ |
+
+Nota: 11 eventi nel file batch_11 ma 2 duplicati pre-esistenti
+(Coronatio Karoli Magni 800 in batch_03, Ἅλωσις τῆς Κωνσταντινουπόλεως 1453
+in batch_01) sono stati rimossi; in DB risultano 9 nuovi eventi per un
+totale di 259 (non 261).
+
+### File
+
+- `data/chains/batch_07_western_roman_continuity.json` — nuovo
+- `data/chains/batch_08_eastern_roman_continuity.json` — nuovo
+- `data/chains/batch_09_mongol_yuan.json` — nuovo
+- `data/events/batch_11_imperial_chain_events.json` — nuovo
+- `tests/test_v6110_imperial_chains.py` — nuovo (39 test)
+- `src/config.py` — APP_VERSION 6.10.0 → 6.11.0
+- `tests/test_health.py` — version assert 6.10.0 → 6.11.0
+- `static/index.html` — footer v6.11.0
+- `static/landing/index.html` — hero-tag v6.11.0 / 261 events / 17 chains; foot-version
+- `README.md` — badges version/events/chains/tests + BibTeX + citazione plain
+- `CHANGELOG.md` — questa sezione
+
+---
+
 ## [v6.10.0] - 2026-04-15
 
 **Tema**: *Caliphate and Korean dynastic trunks* — aggiunti due catene
