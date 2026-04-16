@@ -1,0 +1,2272 @@
+[
+  {
+    "name_original": "Çatalhöyük",
+    "name_original_lang": "tr",
+    "entity_type": "city-state",
+    "year_start": -7500,
+    "year_end": -5700,
+    "capital_name": "Çatalhöyük",
+    "capital_lat": 37.6661,
+    "capital_lon": 32.8278,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            33.7404,
+            37.6661
+          ],
+          [
+            33.6234,
+            38.0554
+          ],
+          [
+            33.1203,
+            38.0463
+          ],
+          [
+            32.8278,
+            38.1472
+          ],
+          [
+            32.4907,
+            38.122
+          ],
+          [
+            32.2158,
+            38.0298
+          ],
+          [
+            32.077,
+            37.6661
+          ],
+          [
+            32.0821,
+            37.3894
+          ],
+          [
+            32.4222,
+            37.1508
+          ],
+          [
+            32.8278,
+            37.1805
+          ],
+          [
+            33.2637,
+            37.1148
+          ],
+          [
+            33.4918,
+            37.3418
+          ],
+          [
+            33.7404,
+            37.6661
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: 'Çatalhöyük' is a modern Turkish name meaning 'forked mound'. The original inhabitants' language is unknown — they predate all known Anatolian languages by millennia. ETHICS-003: Çatalhöyük is one of the most thoroughly excavated Neolithic sites in the world, investigated by James Mellaart (1961–1965) and by Ian Hodder's Stanford-led Çatalhöyük Research Project (1993–2018), producing over 25 seasons of stratigraphic excavation. The site was NOT a 'city-state' in any conventional political-science sense: it was a large Neolithic settlement covering ~13 hectares with an estimated peak population of 3,500–8,000. There is no evidence of social hierarchy, centralised authority, defensive walls, or administrative structures. Hodder interprets the social organisation as 'aggressively egalitarian', with house-based ritual practice replacing what later societies institutionalised as temples and government. The entity_type 'city-state' is a schema limitation — a more accurate designation would be 'proto-urban settlement'. Earlier interpretations by Mellaart positing a 'Mother Goddess' cult have been substantially revised by Hodder's contextual archaeology. UNESCO inscribed the site as a World Heritage Site in 2012 (criteria iii, iv).",
+    "name_variants": [
+      {
+        "name": "Catalhoyuk",
+        "lang": "en",
+        "period_start": -7500,
+        "period_end": -5700,
+        "context": "English ASCII transliteration of Turkish Çatalhöyük",
+        "source": "Hodder, I. The Leopard's Tale: Revealing the Mysteries of Çatalhöyük (2006)"
+      },
+      {
+        "name": "Çatal Hüyük",
+        "lang": "tr",
+        "period_start": -7500,
+        "period_end": -5700,
+        "context": "Older Turkish spelling used in Mellaart's publications",
+        "source": "Mellaart, J. Çatal Hüyük: A Neolithic Town in Anatolia (1967)"
+      },
+      {
+        "name": "Çatalhöyük",
+        "lang": "it",
+        "period_start": -7500,
+        "period_end": -5700,
+        "context": "Italian scholarly name (same)",
+        "source": "Hodder, I. (2006)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -7500,
+        "region": "Konya Plain (Anatolia)",
+        "change_type": "INDEPENDENCE",
+        "description": "Earliest occupation of the East Mound. Settlement grew to cover 13 hectares, making it one of the largest known Neolithic settlements. Houses were tightly packed with roof access and no streets — a unique urban form. Evidence of agriculture (wheat, barley) and animal husbandry (cattle, sheep, goats).",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": -6500,
+        "region": "Çatalhöyük",
+        "change_type": "INDEPENDENCE",
+        "description": "Peak occupation period. Rich symbolic culture including wall paintings, figurines, cattle skulls (bucrania) installed in houses, and elaborate burial practices (bodies interred under house floors). Obsidian trade networks extended to eastern Anatolia and beyond.",
+        "population_affected": 8000,
+        "confidence_score": 0.55
+      },
+      {
+        "year": -5700,
+        "region": "Çatalhöyük",
+        "change_type": "DISSOLUTION",
+        "description": "Abandonment of the site. Occupation shifted briefly to the smaller West Mound before the location was entirely abandoned. Reasons unknown — possibly soil exhaustion, climate change, or shifting social patterns. There was no violent destruction.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hodder, I. The Leopard's Tale: Revealing the Mysteries of Çatalhöyük. Thames & Hudson, 2006",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Hodder, I. (ed.) Çatalhöyük Excavations: The 2000–2008 Seasons. Çatalhöyük Research Project vol. 7. British Institute at Ankara Monograph 46, 2013",
+        "source_type": "archaeological"
+      },
+      {
+        "citation": "Mellaart, J. Çatal Hüyük: A Neolithic Town in Anatolia. Thames & Hudson, 1967",
+        "source_type": "archaeological"
+      },
+      {
+        "citation": "Hodder, I. (ed.) Religion at Work in a Neolithic Society: Vital Matters. Cambridge University Press, 2014",
+        "source_type": "academic"
+      },
+      {
+        "citation": "UNESCO World Heritage Centre. 'Neolithic Site of Çatalhöyük', nomination dossier and advisory body evaluation, 2012",
+        "source_type": "primary",
+        "url": "https://whc.unesco.org/en/list/1405"
+      },
+      {
+        "citation": "Düring, B.S. The Prehistory of Asia Minor: From Complex Hunter-Gatherers to Early Urban Societies. Cambridge University Press, 2011",
+        "source_type": "academic"
+      }
+    ],
+    "boundary_source": "approximate_generated"
+  },
+  {
+    "name_original": "Σκυθία",
+    "name_original_lang": "grc",
+    "entity_type": "confederation",
+    "year_start": -900,
+    "year_end": -200,
+    "capital_name": "Kamenskoe Gorodishche",
+    "capital_lat": 47.57,
+    "capital_lon": 34.39,
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            40.9197,
+            47.57
+          ],
+          [
+            38.8174,
+            49.2877
+          ],
+          [
+            37.6398,
+            50.8477
+          ],
+          [
+            34.39,
+            50.2786
+          ],
+          [
+            31.3291,
+            51.0147
+          ],
+          [
+            30.9555,
+            49.0899
+          ],
+          [
+            30.7128,
+            47.57
+          ],
+          [
+            30.6747,
+            45.7525
+          ],
+          [
+            31.8238,
+            44.6207
+          ],
+          [
+            34.39,
+            45.2139
+          ],
+          [
+            36.8838,
+            44.6522
+          ],
+          [
+            39.0737,
+            45.7169
+          ],
+          [
+            40.9197,
+            47.57
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: 'Scythia' (Σκυθία) is a Greek exonym. The Scythians were Iranian-speaking nomads who left no written records of their own. Our knowledge comes almost entirely from Greek (Herodotus) and Achaemenid sources, supplemented by spectacular kurgan archaeology. ETHICS-003: The Scythians had no fixed capital or borders in the conventional sense. Kamenskoe is the largest known Scythian settlement but 'capital' is misleading for a nomadic confederation. The boundaries of 'Scythia' shifted constantly.",
+    "name_variants": [
+      {
+        "name": "Scythia",
+        "lang": "en",
+        "period_start": -900,
+        "period_end": -200,
+        "context": "English name from Greek Σκυθία",
+        "source": "Herodotus, Histories IV"
+      },
+      {
+        "name": "Sakā",
+        "lang": "peo",
+        "period_start": -600,
+        "period_end": -300,
+        "context": "Old Persian name used in Achaemenid inscriptions (Behistun)",
+        "source": "Darius I, Behistun inscription"
+      },
+      {
+        "name": "Iškuzaya",
+        "lang": "akk",
+        "period_start": -700,
+        "period_end": -600,
+        "context": "Assyrian name for Scythians encountered during their incursion into the Near East",
+        "source": "Esarhaddon's treaty texts, ANET"
+      },
+      {
+        "name": "Scizia",
+        "lang": "it",
+        "period_start": -900,
+        "period_end": -200,
+        "context": "Italian scholarly name",
+        "source": "Melyukova, A.I. in Cambridge Ancient History (1982)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -700,
+        "region": "Pontic Steppe",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Scythians displace the Cimmerians from the Pontic-Caspian steppe, as reported by Herodotus. Archaeological evidence (weapon types, horse gear) supports a major cultural change in the region. The Scythians may have originated further east in Central Asia.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": -512,
+        "region": "Scythia",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Darius I of Persia invades Scythia and is forced to retreat. Herodotus provides a detailed (if embellished) account. This event demonstrated the difficulty of conquering nomadic peoples and is one of the few Scythian 'events' with textual corroboration.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": -200,
+        "region": "Pontic Steppe",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Sarmatian tribes gradually displace the Scythians from the steppe. The process was probably gradual rather than a single event. Remnant Scythian populations persisted in Crimea into the Roman period.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Herodotus, Histories, Book IV (c. 440 BCE) — primary account of Scythian customs, territory, and the failed Persian invasion under Darius I",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Rolle, R. The World of the Scythians. University of California Press, 1989",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Cunliffe, B. The Scythians: Nomad Warriors of the Steppe. Oxford University Press, 2019",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Darius I, Behistun Inscription (c. 520 BCE) — lists 'Saka' among peoples of the Achaemenid Empire",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Parzinger, H. Die Skythen. C.H. Beck, 2004 (3rd ed. 2007)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Alekseev, A.Yu. et al. 'A Chronology of the Scythian Antiquities of Eurasia Based on New Archaeological and 14C Data', Radiocarbon 43(2B), 2001, pp. 1085–1107",
+        "source_type": "academic"
+      }
+    ],
+    "boundary_source": "approximate_generated"
+  },
+  {
+    "name_original": "Σαρματία",
+    "name_original_lang": "grc",
+    "entity_type": "confederation",
+    "year_start": -500,
+    "year_end": 400,
+    "capital_name": null,
+    "capital_lat": 50.45,
+    "capital_lon": 40.5,
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            46.0278,
+            50.45
+          ],
+          [
+            43.5928,
+            51.4863
+          ],
+          [
+            42.3579,
+            52.9026
+          ],
+          [
+            40.5,
+            52.6732
+          ],
+          [
+            38.1493,
+            53.0997
+          ],
+          [
+            36.7423,
+            52.079
+          ],
+          [
+            35.4362,
+            50.45
+          ],
+          [
+            36.7404,
+            49.0158
+          ],
+          [
+            37.1686,
+            47.0178
+          ],
+          [
+            40.5,
+            47.6448
+          ],
+          [
+            42.4326,
+            48.3548
+          ],
+          [
+            44.6575,
+            48.6984
+          ],
+          [
+            46.0278,
+            50.45
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: 'Sarmatia' is a Greek/Roman exonym. The Sarmatians were Iranian-speaking nomadic peoples (Roxolani, Iazyges, Alans, Aorsi) who left no written records. ETHICS-003: Even more than the Scythians, the Sarmatians were a loose grouping of distinct tribes rather than a political entity. There was no 'Sarmatian state'. The capital_lat/lon represent a rough center of the Pontic-Caspian steppe, not any actual settlement. Representing Sarmatia as a single entity is a significant scholarly simplification.",
+    "name_variants": [
+      {
+        "name": "Sarmatia",
+        "lang": "en",
+        "period_start": -500,
+        "period_end": 400,
+        "context": "English name from Greek/Latin Sarmatia",
+        "source": "Ptolemy, Geography III.5"
+      },
+      {
+        "name": "Sauromatae",
+        "lang": "grc",
+        "period_start": -500,
+        "period_end": -200,
+        "context": "Earlier Greek name used by Herodotus",
+        "source": "Herodotus, Histories IV.21"
+      },
+      {
+        "name": "Sarmazia",
+        "lang": "it",
+        "period_start": -500,
+        "period_end": 400,
+        "context": "Italian scholarly name",
+        "source": "Sulimirski, T. The Sarmatians (1970)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -300,
+        "region": "Pontic Steppe",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Sarmatian tribes progressively displace Scythians from the western steppe. Archaeological evidence shows replacement of Scythian-type burials with Sarmatian ones (characterized by different weapon types, mirror types, and tamga symbols). The process was gradual, not a single event.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 375,
+        "region": "Pontic Steppe",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Hunnic invasion destroys Sarmatian dominance on the steppe. The Alans (a Sarmatian subgroup) are scattered — some join the Huns, others flee westward (reaching as far as North Africa with the Vandals). Ammianus Marcellinus provides a near-contemporary account.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Sulimirski, T. The Sarmatians. Thames & Hudson (Ancient Peoples and Places), 1970",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Herodotus, Histories IV.21, IV.110–117 (c. 440 BCE) — earliest description of Sauromatae, including the famous passage linking them to the Amazons",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Ammianus Marcellinus, Res Gestae XXXI (c. 390 CE) — late Roman account of Sarmatian and Alan involvement in the Gothic wars",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Ptolemy, Geography III.5 (c. 150 CE) — defines 'European Sarmatia' and 'Asiatic Sarmatia' as geographic regions",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Brzezinski, R. & Mielczarek, M. The Sarmatians 600 BC–AD 450. Osprey Publishing, 2002",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Mordvintseva, V. 'Barbarians of the North Pontic Region and Their Contacts with the Graeco-Roman World', in Oxford Handbook of the Roman World. Oxford, 2022",
+        "source_type": "academic"
+      }
+    ],
+    "boundary_source": "approximate_generated"
+  },
+  {
+    "name_original": "鲜卑",
+    "name_original_lang": "zh",
+    "entity_type": "confederation",
+    "year_start": 93,
+    "year_end": 234,
+    "capital_name": null,
+    "capital_lat": 48.5,
+    "capital_lon": 115.0,
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            120.0415,
+            48.5
+          ],
+          [
+            120.3038,
+            50.5626
+          ],
+          [
+            117.3673,
+            51.1315
+          ],
+          [
+            115.0,
+            53.7963
+          ],
+          [
+            112.0156,
+            51.2666
+          ],
+          [
+            110.2887,
+            50.2624
+          ],
+          [
+            109.4305,
+            48.5
+          ],
+          [
+            108.7472,
+            46.0444
+          ],
+          [
+            112.7169,
+            46.2949
+          ],
+          [
+            115.0,
+            45.4676
+          ],
+          [
+            118.6883,
+            44.7316
+          ],
+          [
+            118.737,
+            46.9592
+          ],
+          [
+            120.0415,
+            48.5
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: Like the Xiongnu, the Xianbei name is known only in Chinese transcription (鲜卑, Xiānbēi). Their language is classified as Mongolic or para-Mongolic, but this is uncertain. ETHICS-003: The Xianbei confederation was extremely diverse and fragmented. The 'peak' under Tanshihuai was brief. The Xianbei are more significant for what they became — their descendants include the founders of several Chinese dynasties (Northern Wei, Sui, Tang all had Xianbei ancestry). Capital coordinates are approximate for the steppe center, as there was no fixed capital.",
+    "name_variants": [
+      {
+        "name": "Xianbei",
+        "lang": "en",
+        "period_start": 93,
+        "period_end": 234,
+        "context": "Modern Mandarin romanization",
+        "source": "Barfield, T.J. The Perilous Frontier (1989)"
+      },
+      {
+        "name": "Hsien-pi",
+        "lang": "en",
+        "period_start": 93,
+        "period_end": 234,
+        "context": "Older Wade-Giles romanization",
+        "source": "Gardiner, K.H.J. The Early History of Korea (1969)"
+      },
+      {
+        "name": "Xianbei",
+        "lang": "it",
+        "period_start": 93,
+        "period_end": 234,
+        "context": "Italian scholarly name (same romanization)",
+        "source": "Di Cosmo, N. et al. The Cambridge History of Inner Asia (2009)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 93,
+        "region": "Mongolian Steppe",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Following the Han-Xiongnu war that shattered the Northern Xiongnu, the Xianbei rapidly expand into the power vacuum on the steppe. The Hou Hanshu (Book of Later Han) records this transition. Many former Xiongnu subjects simply adopted the Xianbei identity.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 156,
+        "region": "Central and Eastern Steppe",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Under Tanshihuai, the Xianbei briefly unite into a powerful confederation stretching from Manchuria to the Ili Valley. Tanshihuai defeated both the Xiongnu remnants and repulsed Han Chinese attacks. However, the confederation fragmented after his death in 181.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 234,
+        "region": "Xianbei territory",
+        "change_type": "DISSOLUTION",
+        "description": "The Xianbei confederation fully fragments into competing groups (Murong, Tuoba, Khitan ancestors, etc.). This date is approximate — the fragmentation was a process, not a single event. These successor groups would profoundly shape Chinese history in subsequent centuries.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Fan Ye, Hou Hanshu (Book of Later Han), ch. 90 — 'Account of the Wuhuan and Xianbei' (5th-century compilation of earlier sources)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Barfield, T.J. The Perilous Frontier: Nomadic Empires and China, 221 BC – AD 1757. Blackwell, 1989",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Di Cosmo, N., Frank, A.J. & Golden, P.B. (eds.) The Cambridge History of Inner Asia: The Chinggisid Age. Cambridge University Press, 2009",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Holcombe, C. 'The Xianbei in Chinese History', Early Medieval China 19, 2013, pp. 1–38",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Schreiber, G. 'The History of the Former Yan Dynasty', Monumenta Serica 15, 1956, pp. 1–141",
+        "source_type": "academic"
+      }
+    ],
+    "boundary_source": "approximate_generated"
+  },
+  {
+    "name_original": "تلمون / Dilmun",
+    "name_original_lang": "ar",
+    "entity_type": "kingdom",
+    "year_start": -3000,
+    "year_end": -538,
+    "capital_name": "Qal'at al-Bahrain",
+    "capital_lat": 26.2336,
+    "capital_lon": 50.52,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            52.4274,
+            26.2336
+          ],
+          [
+            52.3259,
+            27.3614
+          ],
+          [
+            51.4664,
+            27.469
+          ],
+          [
+            50.52,
+            27.9683
+          ],
+          [
+            49.4678,
+            28.059
+          ],
+          [
+            47.7016,
+            27.5009
+          ],
+          [
+            48.1756,
+            26.2336
+          ],
+          [
+            47.9711,
+            24.9115
+          ],
+          [
+            49.7095,
+            24.9071
+          ],
+          [
+            50.52,
+            24.04
+          ],
+          [
+            51.8516,
+            24.2107
+          ],
+          [
+            52.1488,
+            25.2436
+          ],
+          [
+            52.4274,
+            26.2336
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: The name 'Dilmun' comes from Sumerian/Akkadian cuneiform texts. The native language of Dilmun's population is unknown; it is possible they spoke an early Semitic language related to later Gulf Arabic, but no indigenous Dilmunite texts have been found. Arabic is used here as the modern language of the region but is anachronistic. ETHICS-003: Dilmun is exceptionally well-attested for a Bronze Age Gulf polity: it appears in Sumerian literary texts (Enki and Ninhursag), Akkadian royal inscriptions (Sargon of Akkad), and extensive cuneiform commercial correspondence from Ur III and Old Babylonian periods. The archaeological site of Qal'at al-Bahrain (UNESCO World Heritage, 2005) provides direct physical evidence of an urban trading centre spanning the entire period. Burial mounds in Bahrain number over 100,000 — one of the largest ancient burial complexes in the world (UNESCO World Heritage, 2019). The raised confidence score reflects the depth of both textual and archaeological evidence.",
+    "name_variants": [
+      {
+        "name": "Dilmun",
+        "lang": "en",
+        "period_start": -3000,
+        "period_end": -538,
+        "context": "English scholarly name from Sumerian/Akkadian",
+        "source": "Potts, D.T. The Arabian Gulf in Antiquity (1990)"
+      },
+      {
+        "name": "NI.TUK.KI / Tilmun",
+        "lang": "sux",
+        "period_start": -3000,
+        "period_end": -2000,
+        "context": "Sumerian cuneiform name",
+        "source": "Crawford, H. Dilmun and Its Gulf Neighbours (1998)"
+      },
+      {
+        "name": "Dilmun",
+        "lang": "it",
+        "period_start": -3000,
+        "period_end": -538,
+        "context": "Italian scholarly name (same)",
+        "source": "Potts, D.T. (1990)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -2050,
+        "region": "Bahrain and Eastern Arabia",
+        "change_type": "INDEPENDENCE",
+        "description": "Peak of Dilmun's commercial importance as an entrepôt between Mesopotamia and the Indus Valley. Ur III texts record extensive trade with Dilmun. Circular 'Dilmun seals' are found across the Gulf region and in Indus Valley sites, attesting to long-distance trade networks.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": -600,
+        "region": "Dilmun",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Under Neo-Babylonian influence. Inscription of Uperi, king of Dilmun, paying tribute to Sargon II of Assyria (c. -709) shows earlier Assyrian domination. Dilmun's independence was effectively lost long before the formal end.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": -538,
+        "region": "Dilmun",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Absorbed into the Achaemenid Persian Empire following Cyrus the Great's conquest of Babylon. Dilmun ceased to exist as an independent entity, becoming part of the satrapy system. The name survived in later texts but as a geographical rather than political designation.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Potts, D.T. The Arabian Gulf in Antiquity, 2 vols. Clarendon Press, 1990",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Crawford, H. Dilmun and Its Gulf Neighbours. Cambridge University Press, 1998",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Enki and Ninhursag (Sumerian literary composition, c. 2100 BCE) — describes Dilmun as a paradise land",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Epic of Gilgamesh, Tablet X (Standard Babylonian version, c. 7th century BCE) — identifies Dilmun with the abode of Utnapishtim",
+        "source_type": "primary"
+      },
+      {
+        "citation": "UNESCO World Heritage Centre. 'Qal'at al-Bahrain — Ancient Harbour and Capital of Dilmun', 2005",
+        "source_type": "primary",
+        "url": "https://whc.unesco.org/en/list/1192"
+      },
+      {
+        "citation": "UNESCO World Heritage Centre. 'Dilmun Burial Mounds', 2019",
+        "source_type": "primary",
+        "url": "https://whc.unesco.org/en/list/1542"
+      },
+      {
+        "citation": "Laursen, S. & Steinkeller, P. Babylonia, the Gulf Region, and the Indus: Archaeological and Textual Evidence for Contact in the Third and Early Second Millennia B.C. Eisenbrauns, 2017",
+        "source_type": "academic"
+      }
+    ],
+    "boundary_source": "approximate_generated"
+  },
+  {
+    "name_original": "吐谷浑",
+    "name_original_lang": "zh",
+    "entity_type": "kingdom",
+    "year_start": 285,
+    "year_end": 670,
+    "capital_name": "Fuqi (near Qinghai Lake)",
+    "capital_lat": 36.88,
+    "capital_lon": 100.15,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            103.5947,
+            36.88
+          ],
+          [
+            103.5063,
+            38.1243
+          ],
+          [
+            101.9396,
+            39.4015
+          ],
+          [
+            100.15,
+            40.6203
+          ],
+          [
+            97.3166,
+            40.0332
+          ],
+          [
+            96.0721,
+            39.1137
+          ],
+          [
+            95.7756,
+            36.88
+          ],
+          [
+            95.1543,
+            34.9979
+          ],
+          [
+            98.6147,
+            34.6254
+          ],
+          [
+            100.15,
+            33.7067
+          ],
+          [
+            102.3114,
+            33.6025
+          ],
+          [
+            103.9756,
+            35.2126
+          ],
+          [
+            103.5947,
+            36.88
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: The Chinese name 吐谷浑 (Tǔyùhún) represents a Chinese transcription of the founder's name. The Tuyuhun were originally a Xianbei (proto-Mongolic) people who migrated to the Qinghai-Tibetan Plateau and intermarried with local Qiang populations. ETHICS-003: Knowledge comes primarily from Chinese dynastic histories (Jin Shu, Wei Shu, Sui Shu, etc.). The Tuyuhun perspective is not directly preserved. The kingdom occupied a strategically vital position on the Silk Road and between the Chinese, Tibetan, and Turkic spheres of influence.",
+    "name_variants": [
+      {
+        "name": "Tuyuhun",
+        "lang": "en",
+        "period_start": 285,
+        "period_end": 670,
+        "context": "Modern Mandarin romanization of the Chinese name",
+        "source": "Molè, G. The T'u-yü-hun from the Northern Wei to the Time of the Five Dynasties (1970)"
+      },
+      {
+        "name": "T'u-yü-hun",
+        "lang": "en",
+        "period_start": 285,
+        "period_end": 670,
+        "context": "Older Wade-Giles romanization used in earlier scholarship",
+        "source": "Molè, G. (1970)"
+      },
+      {
+        "name": "Azha",
+        "lang": "bo",
+        "period_start": 285,
+        "period_end": 670,
+        "context": "Tibetan name for the Tuyuhun",
+        "source": "Beckwith, C.I. The Tibetan Empire in Central Asia (1987)"
+      },
+      {
+        "name": "Tuyuhun",
+        "lang": "it",
+        "period_start": 285,
+        "period_end": 670,
+        "context": "Italian scholarly name (same romanization)",
+        "source": "Molè, G. (1970)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 285,
+        "region": "Qinghai region",
+        "change_type": "INDEPENDENCE",
+        "description": "Murong Tuyuhun, elder son of the Murong Xianbei chieftain, leads his followers westward from Manchuria to the Qinghai-Gansu border region following a succession dispute. The migration covered over 2,000 km. The kingdom that bears his name gradually formed as these Xianbei settlers established dominance over local Qiang and Di populations.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 445,
+        "region": "Tuyuhun",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Northern Wei dynasty campaigns against the Tuyuhun, forcing them to temporarily flee westward. The Tuyuhun proved remarkably resilient, repeatedly recovering from military defeats due to their control of difficult terrain (high altitude, arid steppe) inhospitable to lowland Chinese armies.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 670,
+        "region": "Tuyuhun",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "The Tibetan Empire (Bod/Tubo) conquers the Tuyuhun kingdom, absorbing it into the expanding Tibetan state. The Tuyuhun royal family fled to Tang China. Some Tuyuhun populations were assimilated into the Tibetan population; others maintained a distinct identity for centuries under Tang protection. The Monguor/Tu people of modern Qinghai are sometimes identified as their descendants.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Molè, G. The T'u-yü-hun from the Northern Wei to the Time of the Five Dynasties. Istituto Italiano per il Medio ed Estremo Oriente (IsMEO), 1970",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Beckwith, C.I. The Tibetan Empire in Central Asia. Princeton University Press, 1987",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Fang Xuanling et al., Jin Shu (Book of Jin), ch. 97 — 'Biography of Tuyuhun' (648 CE official dynastic history)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Wei Shou, Wei Shu (Book of Wei), ch. 101 — 'Account of the Tuyuhun' (554 CE official dynastic history)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Li Yanshou, Bei Shi (History of the Northern Dynasties), ch. 96 (659 CE)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Xu, E. Historical Development of the Pre-Dynastic Khitan. Institute of Inner Asian Studies, University of Helsinki, 2005",
+        "source_type": "academic"
+      }
+    ],
+    "boundary_source": "approximate_generated"
+  },
+  {
+    "name_original": "ហ្វូណន",
+    "name_original_lang": "km",
+    "entity_type": "kingdom",
+    "year_start": 50,
+    "year_end": 550,
+    "capital_name": "Oc Eo",
+    "capital_lat": 10.253,
+    "capital_lon": 105.154,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            107.4649,
+            10.253
+          ],
+          [
+            107.9347,
+            11.8579
+          ],
+          [
+            106.7207,
+            12.9106
+          ],
+          [
+            105.154,
+            12.3239
+          ],
+          [
+            103.656,
+            12.8408
+          ],
+          [
+            102.7773,
+            11.7281
+          ],
+          [
+            103.2336,
+            10.253
+          ],
+          [
+            102.9402,
+            9.2539
+          ],
+          [
+            103.5949,
+            7.7301
+          ],
+          [
+            105.154,
+            7.8165
+          ],
+          [
+            106.5071,
+            7.751
+          ],
+          [
+            106.8936,
+            9.1116
+          ],
+          [
+            107.4649,
+            10.253
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: The name 'Funan' is the Chinese exonym (扶南, Fúnán), which may derive from Old Khmer *bnaṃ ('mountain'). The entity's self-designation is unknown. The primary sources are Chinese dynastic histories (Liangshu, Jinshu); no indigenous Funanese texts survive. ETHICS-003: Funan is the earliest documented Indianised state in mainland Southeast Asia, but its nature as a unified political entity is debated. Michael Vickery (1998) argued it was not a single polity but a network of trading communities, while Claude Jacques and others maintain it was a genuine though loosely structured kingdom. The archaeological site of Óc Eo (excavated by Louis Malleret, 1942–1944; Vietnamese campaigns 1975–present) has produced Roman gold medallions, Indian seals, and Chinese ceramics, confirming its role as a major Indian Ocean trading hub. The raised confidence score reflects substantial archaeological corroboration of the Chinese textual accounts, even though political structure remains uncertain.",
+    "name_variants": [
+      {
+        "name": "Funan",
+        "lang": "en",
+        "period_start": 50,
+        "period_end": 550,
+        "context": "denominazione inglese standard (dall'esonimo cinese)",
+        "source": "Vickery, Society, Economics, and Politics in Pre-Angkor Cambodia (1998)"
+      },
+      {
+        "name": "扶南",
+        "lang": "zh",
+        "period_start": 50,
+        "period_end": 550,
+        "context": "esonimo cinese",
+        "source": "Liangshu (Libro dei Liang)"
+      },
+      {
+        "name": "Funan",
+        "lang": "it",
+        "period_start": 50,
+        "period_end": 550,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 50,
+        "region": "Delta del Mekong",
+        "change_type": "UNIFICATION",
+        "description": "Fondazione tradizionale del regno di Funan, probabilmente un sistema di citta'-stato collegate dal commercio marittimo. Il sito di Oc Eo mostra contatti con Roma, India e Cina. La data e' molto approssimativa.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 550,
+        "region": "Cambogia",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Il regno di Chenla (predecessore dell'Impero Khmer) assorbe Funan. La transizione potrebbe essere stata graduale. Gli studiosi dibattono se Chenla fosse un vassallo ribelle o un'entita' separata.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Vickery, M. Society, Economics, and Politics in Pre-Angkor Cambodia: The 7th–8th Centuries. Centre for East Asian Cultural Studies, 1998",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Coedès, G. The Indianized States of Southeast Asia (trans. S.B. Cowing). University of Hawai'i Press, 1968",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Malleret, L. L'Archéologie du delta du Mékong, 4 vols. École française d'Extrême-Orient, 1959–1963",
+        "source_type": "archaeological"
+      },
+      {
+        "citation": "Liang Shu (Book of Liang), ch. 54 — 'Account of Funan' (635 CE official dynastic history)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Jacques, C. 'Funan, Zhenla: The Reality Concealed by These Chinese Views of Indochina', in Glover, I. & Bellwood, P. (eds.) Southeast Asia: From Prehistory to History. Routledge, 2004",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Stark, M.T. 'Pre-Angkorian and Angkorian Cambodia', in Glover, I. & Bellwood, P. (eds.) Southeast Asia: From Prehistory to History. Routledge, 2004",
+        "source_type": "academic"
+      }
+    ],
+    "boundary_source": "approximate_generated"
+  },
+  {
+    "name_original": "Ajuuraan",
+    "name_original_lang": "so",
+    "entity_type": "empire",
+    "year_start": 1300,
+    "year_end": 1700,
+    "capital_name": "Mogadishu",
+    "capital_lat": 2.0469,
+    "capital_lon": 45.3182,
+    "confidence_score": 0.5,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            53.9148,
+            2.0469
+          ],
+          [
+            55.1745,
+            6.6374
+          ],
+          [
+            52.2693,
+            13.3161
+          ],
+          [
+            45.3182,
+            9.3457
+          ],
+          [
+            39.057,
+            12.1948
+          ],
+          [
+            34.6188,
+            8.4366
+          ],
+          [
+            36.3691,
+            2.0469
+          ],
+          [
+            36.7628,
+            -2.7171
+          ],
+          [
+            39.7086,
+            -7.4458
+          ],
+          [
+            45.3182,
+            -9.3034
+          ],
+          [
+            51.0802,
+            -9.4201
+          ],
+          [
+            56.4336,
+            -3.6561
+          ],
+          [
+            53.9148,
+            2.0469
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: The name 'Ajuuraan' is in Somali. ETHICS-002: The Ajuuraan Sultanate developed a sophisticated hydraulic infrastructure (qanat/ceel systems) in the Jubba and Shabelle river valleys and controlled Indian Ocean trade routes from Mogadishu to the Swahili coast. It resisted Portuguese colonial expansion at the Battle of Barawa (1507), one of the earliest documented episodes of East African maritime resistance to European colonialism. ETHICS-003: Sources remain extremely limited, combining Somali oral traditions (genealogies, clan histories), Portuguese naval chronicles (Barros, Couto), and Arabic geographic/commercial texts (Ibn Battuta's 14th-century account of Mogadishu likely describes Ajuuraan-era governance). The historiography of precolonial Somalia was severely damaged by the post-1991 civil war, which destroyed archives and dispersed scholars. Cassanelli (1982) and Luling (2002) remain the foundational English-language works, supplemented by Italian colonial-era studies (Ferrandi, Cerulli). The confidence score has been raised from 0.35 to 0.50 to reflect the convergence of oral, textual, and archaeological evidence, while acknowledging the ongoing scarcity of primary sources.",
+    "name_variants": [
+      {
+        "name": "Ajuran Sultanate",
+        "lang": "en",
+        "period_start": 1300,
+        "period_end": 1700,
+        "context": "denominazione inglese",
+        "source": "Cassanelli, L.V. The Shaping of Somali Society (1982)"
+      },
+      {
+        "name": "Sultanato Ajuran",
+        "lang": "it",
+        "period_start": 1300,
+        "period_end": 1700,
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      },
+      {
+        "name": "Dawladdii Ajuuraan",
+        "lang": "so",
+        "period_start": 1300,
+        "period_end": 1700,
+        "context": "nome completo in Somalo",
+        "source": "Cassanelli, L.V. The Shaping of Somali Society (1982)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1300,
+        "region": "Corno d'Africa (odierna Somalia/Etiopia orientale)",
+        "change_type": "INDEPENDENCE",
+        "description": "Emergere dell'Ajuran come potenza dominante nel Corno d'Africa. Controllo delle rotte commerciali dell'Oceano Indiano e sviluppo di sistemi di irrigazione.",
+        "population_affected": null,
+        "confidence_score": 0.47
+      },
+      {
+        "year": 1700,
+        "region": "Somalia",
+        "change_type": "DISSOLUTION",
+        "description": "Ribellioni interne e frammentazione. Emergono gli stati successori Geledi, Majeerteen e Sultanato di Hobyo.",
+        "population_affected": null,
+        "confidence_score": 0.52
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Cassanelli, L.V. The Shaping of Somali Society: Reconstructing the History of a Pastoral People, 1600–1900. University of Pennsylvania Press, 1982",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Luling, V. Somali Sultanate: The Geledi City-State over 150 Years. Transaction Publishers, 2002",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Reese, S.S. (ed.) The Somali Sultanate: City, State and Nation in the Horn of Africa. Ohio University Press, 2008",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ferrandi, U. Lugh: Emporio commerciale sul Giuba. Società Geografica Italiana, 1903 — Italian colonial-era account of Jubba River trade",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Ibn Battuta, Rihlat Ibn Battuta (c. 1355) — describes Mogadishu's trade and governance, likely under Ajuuraan-era administration",
+        "source_type": "primary"
+      }
+    ],
+    "boundary_source": "approximate_generated"
+  },
+  {
+    "name_original": "Крим / Крым",
+    "name_original_lang": "uk",
+    "entity_type": "disputed_territory",
+    "year_start": 2014,
+    "year_end": null,
+    "capital_name": "Simferopol",
+    "capital_lat": 44.9521,
+    "capital_lon": 34.1024,
+    "confidence_score": 0.65,
+    "status": "disputed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            32.5,
+            44.4
+          ],
+          [
+            32.8,
+            45.2
+          ],
+          [
+            33.5,
+            45.8
+          ],
+          [
+            34.5,
+            45.6
+          ],
+          [
+            35.2,
+            45.4
+          ],
+          [
+            36.0,
+            45.5
+          ],
+          [
+            36.6,
+            45.2
+          ],
+          [
+            36.5,
+            44.8
+          ],
+          [
+            35.8,
+            44.4
+          ],
+          [
+            35.0,
+            44.3
+          ],
+          [
+            34.0,
+            44.4
+          ],
+          [
+            33.0,
+            44.4
+          ],
+          [
+            32.5,
+            44.4
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-003: Crimea is an actively contested territory between Ukraine and Russia. Following the 2014 Russian military intervention and a referendum not recognised by the international community (UN General Assembly Resolution 68/262, adopted 100-11 with 58 abstentions), Russia annexed the peninsula. Ukraine and the majority of UN member states consider Crimea Ukrainian territory under Russian military occupation. The name_original includes both the Ukrainian form (Крим) and Russian form (Крым). ETHICS-001: The Crimean Tatars (Qırımtatarlar) are the indigenous people of Crimea who were subjected to total deportation (sürgün) by Stalin in May 1944. An estimated 18–46% died during transport or in the first years of exile. Those who returned after 1989 faced systematic discrimination. The 2014 annexation has brought renewed pressure on the Tatar community. This record does not arbitrate the sovereignty dispute — it documents all perspectives with sources.",
+    "name_variants": [
+      {
+        "name": "Crimea",
+        "lang": "en",
+        "context": "denominazione internazionale",
+        "source": "Nazioni Unite"
+      },
+      {
+        "name": "Qırım",
+        "lang": "crh",
+        "context": "nome in lingua tartara di Crimea — popolazione indigena deportata in massa nel 1944",
+        "source": "Williams, The Crimean Tatars (2001)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1944,
+        "region": "Crimea",
+        "change_type": "ETHNIC_CLEANSING",
+        "description": "Stalin ordina la deportazione totale dei Tartari di Crimea in Asia Centrale. Si stima che il 18-46% sia morto durante il trasferimento o subito dopo.",
+        "population_affected": 200000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 2014,
+        "region": "Crimea",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Annessione russa della Crimea dopo l'intervento militare e un referendum contestato. Condannata come violazione del diritto internazionale dalla Risoluzione ONU 68/262.",
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Williams, B.G. The Crimean Tatars: The Diaspora Experience and the Forging of a Nation. Brill, 2001",
+        "source_type": "academic"
+      },
+      {
+        "citation": "United Nations General Assembly Resolution 68/262, 'Territorial Integrity of Ukraine', 27 March 2014",
+        "source_type": "primary",
+        "url": "https://undocs.org/A/RES/68/262"
+      },
+      {
+        "citation": "Plokhy, S. The Gates of Europe: A History of Ukraine. Basic Books, 2015",
+        "source_type": "academic"
+      },
+      {
+        "citation": "International Court of Justice, 'Legal Consequences of the Separation of the Chagos Archipelago from Mauritius in 1965', Advisory Opinion, 2019 — relevant precedent on territorial integrity and self-determination",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Grant, T.D. 'Annexation of Crimea', American Journal of International Law 109(1), 2015, pp. 68–95",
+        "source_type": "academic"
+      }
+    ],
+    "boundary_source": "historical_map"
+  },
+  {
+    "name_original": "Kuzey Kıbrıs Türk Cumhuriyeti",
+    "name_original_lang": "tr",
+    "entity_type": "disputed_territory",
+    "year_start": 1983,
+    "year_end": null,
+    "capital_name": "Lefkoşa",
+    "capital_lat": 35.1856,
+    "capital_lon": 33.3823,
+    "confidence_score": 0.6,
+    "status": "disputed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            32.3,
+            35.05
+          ],
+          [
+            33.0,
+            35.1
+          ],
+          [
+            33.6,
+            35.2
+          ],
+          [
+            34.1,
+            35.5
+          ],
+          [
+            34.6,
+            35.6
+          ],
+          [
+            34.6,
+            35.35
+          ],
+          [
+            34.0,
+            35.1
+          ],
+          [
+            33.5,
+            34.95
+          ],
+          [
+            32.8,
+            34.95
+          ],
+          [
+            32.3,
+            35.05
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-003: The TRNC is recognised as a sovereign state only by Turkey. All other UN member states and the UN itself consider it occupied territory of the Republic of Cyprus. UN Security Council Resolutions 541 (1983) and 550 (1984) call the declaration of independence 'legally invalid' and call for its withdrawal. ETHICS-001: The 1974 Turkish military intervention followed a Greek-junta-backed coup aimed at enosis (union with Greece). Both Greek Cypriot and Turkish Cypriot communities suffered casualties and displacement: approximately 160,000 Greek Cypriots were displaced from the north and approximately 50,000 Turkish Cypriots from the south. The Committee on Missing Persons in Cyprus continues to exhume and identify victims from both communities. This record documents the dispute; it does not take a position on sovereignty.",
+    "name_variants": [
+      {
+        "name": "Northern Cyprus",
+        "lang": "en",
+        "context": "denominazione internazionale comune",
+        "source": "Nazioni Unite"
+      },
+      {
+        "name": "Cipro del Nord",
+        "lang": "it",
+        "context": "denominazione italiana",
+        "source": "Enciclopedia Treccani"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1974,
+        "region": "Cipro settentrionale",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Invasione turca di Cipro dopo il colpo di stato greco-cipriota. Circa 200.000 greco-ciprioti sfollati dal nord.",
+        "population_affected": 200000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Ker-Lindsay, J. The Cyprus Problem: What Everyone Needs to Know. Oxford University Press, 2011",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Hitchens, C. Hostage to History: Cyprus from the Ottomans to Kissinger. Verso, 1997 (3rd ed.)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "UN Security Council Resolution 541 (1983)",
+        "source_type": "primary",
+        "url": "https://undocs.org/S/RES/541(1983)"
+      },
+      {
+        "citation": "UN Security Council Resolution 550 (1984)",
+        "source_type": "primary",
+        "url": "https://undocs.org/S/RES/550(1984)"
+      },
+      {
+        "citation": "European Court of Human Rights, Loizidou v. Turkey (Application no. 15318/89), Judgment, 18 December 1996",
+        "source_type": "primary"
+      }
+    ],
+    "boundary_source": "historical_map"
+  },
+  {
+    "name_original": "Saudeleur",
+    "name_original_lang": "pon",
+    "entity_type": "kingdom",
+    "year_start": 1100,
+    "year_end": 1628,
+    "capital_name": "Nan Madol",
+    "capital_lat": 6.8444,
+    "capital_lon": 158.3347,
+    "confidence_score": 0.4,
+    "status": "uncertain",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            160.9949,
+            6.8444
+          ],
+          [
+            160.5258,
+            8.0311
+          ],
+          [
+            160.0384,
+            9.9257
+          ],
+          [
+            158.3347,
+            10.127
+          ],
+          [
+            155.9812,
+            10.7646
+          ],
+          [
+            155.4101,
+            8.6197
+          ],
+          [
+            153.695,
+            6.8444
+          ],
+          [
+            155.6017,
+            5.3022
+          ],
+          [
+            156.7243,
+            4.0789
+          ],
+          [
+            158.3347,
+            2.0305
+          ],
+          [
+            160.5807,
+            2.8506
+          ],
+          [
+            161.783,
+            4.7428
+          ],
+          [
+            160.9949,
+            6.8444
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-007: The Saudeleur dynasty of Pohnpei built Nan Madol, one of the most remarkable archaeological sites in the Pacific — a city of 92+ artificial islets and megalithic basalt structures built on a coral reef flat. The site is a UNESCO World Heritage Site (2016, also on the Danger List due to environmental threats). ETHICS-001: Knowledge of the Saudeleur comes primarily from Pohnpeian oral traditions (especially the Nahnmwarki system) and from archaeological investigation. The chronology has been refined by McCoy et al. (2016), who used uranium-thorium dating of coral to establish earliest monument construction at Nan Madol to c. 1180 CE. The low confidence reflects the absence of written records and dependence on oral tradition for political history, counterbalanced by strong archaeological evidence for the physical infrastructure.",
+    "name_variants": [
+      {
+        "name": "Saudeleur Dynasty",
+        "lang": "en",
+        "period_start": 1100,
+        "period_end": 1628,
+        "context": "English scholarly name for the ruling dynasty of Pohnpei",
+        "source": "Hanlon, D. Upon a Stone Altar: A History of the Island of Pohnpei to 1890 (1988)"
+      },
+      {
+        "name": "Sau Deleur",
+        "lang": "pon",
+        "period_start": 1100,
+        "period_end": 1628,
+        "context": "Pohnpeian title meaning 'Lord of Deleur'; Deleur may derive from a place name",
+        "source": "Bernart, L. The Book of Luelen (1977)"
+      },
+      {
+        "name": "Nan Madol polity",
+        "lang": "en",
+        "period_start": 1100,
+        "period_end": 1628,
+        "context": "Named after the capital complex",
+        "source": "Athens, J.S. 'Nan Madol: Archaeology of Pohnpei', in Oceania (1985)"
+      },
+      {
+        "name": "Dinastia Saudeleur",
+        "lang": "it",
+        "period_start": 1100,
+        "period_end": 1628,
+        "context": "Italian scholarly name",
+        "source": "Ferraro, G. Oceania: Popoli e culture (2005)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1100,
+        "region": "Pohnpei",
+        "change_type": "INDEPENDENCE",
+        "description": "Approximate beginning of the Saudeleur centralized rule over Pohnpei, based on archaeological dating of Nan Madol's earliest megalithic construction phases. Radiocarbon dates range from the 8th to 13th centuries for different construction phases. Oral traditions describe the Saudeleurs as coming from a western land (Katau).",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1400,
+        "region": "Nan Madol",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Peak period of Nan Madol construction. The complex eventually comprised approximately 92 artificial islets covering 75 hectares, with basalt columns weighing up to 50 tonnes transported from quarries across the island. This represents one of the most ambitious construction projects in pre-contact Pacific history.",
+        "population_affected": 25000,
+        "confidence_score": 0.45
+      },
+      {
+        "year": 1628,
+        "region": "Pohnpei",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "According to Pohnpeian oral tradition, the semi-mythical warrior Isokelekel arrives from Kosrae and overthrows the last Saudeleur. He establishes the Nahnmwarki system of paramount chiefs, which continues to govern Pohnpei's traditional society to this day. The date is approximate.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hanlon, D. Upon a Stone Altar: A History of the Island of Pohnpei to 1890. University of Hawai'i Press, 1988",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Bernart, L. The Book of Luelen (trans. J.L. Fischer, S.H. Riesenberg & M.G. Whiting). University of Hawai'i Press, 1977",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Athens, J.S. 'The Rise of the Saudeleur: Dating the Nan Madol Complex', in Pohnpei Archaeology. Pacific Studies Institute, 1985",
+        "source_type": "archaeological"
+      },
+      {
+        "citation": "McCoy, M.D. et al. 'Earliest Direct Evidence of Monument Building at the Archaeological Site of Nan Madol (Pohnpei, Micronesia) Identified Using 230Th/U Coral Dating', Quaternary Research 86(3), 2016, pp. 295–303",
+        "source_type": "academic"
+      },
+      {
+        "citation": "UNESCO World Heritage Centre. 'Nan Madol: Ceremonial Centre of Eastern Micronesia', 2016",
+        "source_type": "primary",
+        "url": "https://whc.unesco.org/en/list/1503"
+      },
+      {
+        "citation": "Ayres, W.S. & Mauricio, R. 'Nan Madol Archaeology: Definition of Major Islet Use', Micronesica Supplement 3, 1997",
+        "source_type": "archaeological"
+      }
+    ],
+    "boundary_source": "approximate_generated"
+  },
+  {
+    "name_original": "Lapita",
+    "name_original_lang": "und",
+    "entity_type": "confederation",
+    "year_start": -1600,
+    "year_end": -500,
+    "capital_name": "various (no single capital)",
+    "capital_lat": -17.7333,
+    "capital_lon": 168.3167,
+    "confidence_score": 0.45,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            171.1176,
+            -17.7333
+          ],
+          [
+            171.4762,
+            -15.837
+          ],
+          [
+            170.2161,
+            -15.0262
+          ],
+          [
+            168.3167,
+            -15.2741
+          ],
+          [
+            166.9262,
+            -15.2019
+          ],
+          [
+            165.1365,
+            -16.1705
+          ],
+          [
+            164.9269,
+            -17.7333
+          ],
+          [
+            165.548,
+            -19.5712
+          ],
+          [
+            167.1876,
+            -19.5916
+          ],
+          [
+            168.3167,
+            -20.975
+          ],
+          [
+            169.6027,
+            -20.032
+          ],
+          [
+            171.4122,
+            -19.8502
+          ],
+          [
+            171.1176,
+            -17.7333
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-007: The Lapita cultural complex is an archaeological construct identified primarily through a distinctive dentate-stamped pottery tradition found across a vast arc from the Bismarck Archipelago to Samoa/Tonga (c. 1600–500 BCE). It is NOT a single polity, ethnic group, or language community, but rather a shared cultural tradition associated with the ancestral Austronesian-speaking peoples who colonised Remote Oceania. The entity_type 'confederation' is a schema approximation. ETHICS-001: 'Lapita' is a modern name derived from the archaeological site of Lapita (site 13A) in New Caledonia, excavated by E.W. Gifford and R. Shutler in 1952. The original peoples' self-designation is unknown. Their descendants include modern Polynesians, and some Melanesian coastal populations. ETHICS-003: The raised confidence reflects the extensive and well-dated archaeological record across hundreds of sites, even though political organisation is by definition unknowable for a pre-literate cultural complex.",
+    "name_variants": [
+      {
+        "name": "Lapita culture",
+        "lang": "en",
+        "period_start": -1600,
+        "period_end": -500,
+        "context": "Named after the type site at Lapita, New Caledonia, excavated in 1952",
+        "source": "Kirch, P.V. The Lapita Peoples: Ancestors of the Oceanic World (1997)"
+      },
+      {
+        "name": "Lapita cultural complex",
+        "lang": "en",
+        "period_start": -1600,
+        "period_end": -500,
+        "context": "More precise academic term emphasizing it is a cultural complex, not a polity",
+        "source": "Spriggs, M. The Island Melanesians (1997)"
+      },
+      {
+        "name": "Cultura Lapita",
+        "lang": "it",
+        "period_start": -1600,
+        "period_end": -500,
+        "context": "Italian scholarly name",
+        "source": "Ferraro, G. Oceania: Popoli e culture (2005)"
+      },
+      {
+        "name": "Proto-Polynesian ancestors",
+        "lang": "en",
+        "period_start": -1600,
+        "period_end": -500,
+        "context": "Linguistic designation linking Lapita to the ancestral Polynesian population",
+        "source": "Bellwood, P. The Polynesians (1987)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -1600,
+        "region": "Bismarck Archipelago",
+        "change_type": "INDEPENDENCE",
+        "description": "Earliest Lapita pottery appears in the Bismarck Archipelago (Papua New Guinea). The Lapita cultural complex likely emerged from an Austronesian-speaking population that mixed with existing Papuan-speaking inhabitants. The distinctive pottery, obsidian trade networks, and stilt-house settlements define the archaeological culture.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": -1200,
+        "region": "Melanesia (Solomons, Vanuatu, New Caledonia, Fiji)",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Rapid Lapita expansion eastward through the Solomon Islands chain, reaching Vanuatu, New Caledonia, and Fiji within a few centuries. This represents the first human settlement of Remote Oceania — one of the last great episodes of human colonization of uninhabited lands.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": -900,
+        "region": "Tonga and Samoa",
+        "change_type": "CONQUEST_DIPLOMATIC",
+        "description": "Lapita settlers reach Tonga and Samoa, the easternmost extent of the Lapita expansion. Here, Lapita pottery traditions gradually transform into the distinctively Polynesian Plainware tradition, marking the emergence of the ancestral Polynesian culture. This is the 'Polynesian homeland' (Hawaiki) of later tradition.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Kirch, P.V. The Lapita Peoples: Ancestors of the Oceanic World. Blackwell, 1997",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Spriggs, M. The Island Melanesians. Blackwell, 1997",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Bellwood, P. First Farmers: The Origins of Agricultural Societies. Blackwell, 2005",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Sheppard, P.J. 'Lapita Colonization across the Near/Remote Oceania Boundary', Current Anthropology 52(6), 2011, pp. 799–840",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Skoglund, P. et al. 'Genomic Insights into the Peopling of the Southwest Pacific', Nature 538, 2016, pp. 510–513",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Bedford, S. & Sand, C. 'New Data from the Western Province of the Lapita Cultural Complex', in Oxford Handbook of the Archaeology of the Contemporary World. Oxford University Press, 2013",
+        "source_type": "academic"
+      }
+    ],
+    "boundary_source": "approximate_generated"
+  },
+  {
+    "name_original": "Κουσανο-Σασσανιδαι",
+    "name_original_lang": "grc",
+    "entity_type": "kingdom",
+    "year_start": 230,
+    "year_end": 365,
+    "capital_name": "Balkh (Bactra)",
+    "capital_lat": 36.76,
+    "capital_lon": 66.9,
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            72.3874,
+            36.76
+          ],
+          [
+            70.5103,
+            38.4247
+          ],
+          [
+            68.898,
+            39.9154
+          ],
+          [
+            66.9,
+            39.115
+          ],
+          [
+            64.368,
+            40.2913
+          ],
+          [
+            62.9819,
+            38.5937
+          ],
+          [
+            62.7603,
+            36.76
+          ],
+          [
+            62.0053,
+            34.496
+          ],
+          [
+            64.8393,
+            33.8173
+          ],
+          [
+            66.9,
+            34.1485
+          ],
+          [
+            68.9984,
+            33.4231
+          ],
+          [
+            69.3095,
+            35.4246
+          ],
+          [
+            72.3874,
+            36.76
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-001: The entity's self-designation is unknown. The Greek form 'Κουσανο-Σασσανιδαι' is a modern scholarly convention. The rulers used Bactrian script (modified Greek alphabet) on their coinage, with the title KOSHANO SHAHO ('Kushan Shah'). ETHICS-002: The Kushano-Sasanian kingdom represents the easternmost extension of Sasanian Iranian power into Central Asia and the Indus valley. It was governed by Sasanian princes who adopted Kushan titulature and iconography, creating a hybrid political-cultural entity. The numismatic evidence (gold and copper coins) is the primary source for political chronology, supplemented by a handful of Bactrian inscriptions. The raised confidence reflects the strong numismatic evidence compiled by Cribb (2010) and Alram et al. (2012), which has clarified the dynastic sequence.",
+    "name_variants": [
+      {
+        "name": "Kushano-Sasanian Kingdom",
+        "lang": "en",
+        "period_start": 230,
+        "period_end": 365,
+        "context": "English scholarly name based on their dual Kushan-Sasanian identity",
+        "source": "Cribb, J. 'The Kidarites, the Numismatic Evidence', in Alram, M. et al. Coins, Art and Chronology II (2010)"
+      },
+      {
+        "name": "Indo-Sasanians",
+        "lang": "en",
+        "period_start": 230,
+        "period_end": 365,
+        "context": "Alternative English scholarly name",
+        "source": "Bivar, A.D.H. 'The History of Eastern Iran', Cambridge History of Iran, vol. 3 (1983)"
+      },
+      {
+        "name": "Кушано-Сасаниды",
+        "lang": "ru",
+        "period_start": 230,
+        "period_end": 365,
+        "context": "Russian scholarly name",
+        "source": "Zeimal, E.V. 'The Kidarite Kingdom in Central Asia', in Litvinsky, B.A. (ed.) History of Civilizations of Central Asia, vol. 3 (1996)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 230,
+        "region": "Bactria",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Sasanian king Ardashir I or Shapur I established a branch dynasty in the former Kushan territories of Bactria and Gandhara, creating a hybrid Kushan-Sasanian administration.",
+        "population_affected": null,
+        "confidence_score": 0.52
+      },
+      {
+        "year": 365,
+        "region": "Bactria and Gandhara",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Kidarite Huns displaced the Kushano-Sasanian rulers, ending their control over Bactria and the Hindu Kush region.",
+        "population_affected": null,
+        "confidence_score": 0.52
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Cribb, J. 'The Kidarites, the Numismatic Evidence', in Alram, M. et al. (eds.) Coins, Art and Chronology II: The First Millennium C.E. in the Indo-Iranian Borderlands. Austrian Academy of Sciences Press, 2010",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Bivar, A.D.H. 'The History of Eastern Iran', in Yarshater, E. (ed.) The Cambridge History of Iran, vol. 3(1). Cambridge University Press, 1983",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Zeimal, E.V. 'The Kidarite Kingdom in Central Asia', in Litvinsky, B.A. (ed.) History of Civilizations of Central Asia, vol. 3. UNESCO, 1996",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Alram, M. et al. (eds.) The Kushano-Sasanian Coinage. Austrian Academy of Sciences Press, 2012",
+        "source_type": "archaeological"
+      },
+      {
+        "citation": "Rezakhani, K. ReOrienting the Sasanians: East Iran in Late Antiquity. Edinburgh University Press, 2017",
+        "source_type": "academic"
+      }
+    ],
+    "boundary_source": "approximate_generated"
+  },
+  {
+    "name_original": "Quitu-Cara",
+    "name_original_lang": "qu",
+    "entity_type": "kingdom",
+    "year_start": 1000,
+    "year_end": 1470,
+    "capital_name": "Quitu (present-day Quito)",
+    "capital_lat": -0.1807,
+    "capital_lon": -78.4678,
+    "confidence_score": 0.45,
+    "status": "disputed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -79.5,
+            1.0
+          ],
+          [
+            -77.5,
+            1.0
+          ],
+          [
+            -77.5,
+            -2.0
+          ],
+          [
+            -79.5,
+            -2.0
+          ],
+          [
+            -79.5,
+            1.0
+          ]
+        ]
+      ]
+    },
+    "ethical_notes": "ETHICS-002: The 'Kingdom of Quito' is one of the most contested entities in South American historiography. The traditional narrative, originating with the colonial-era Jesuit historian Juan de Velasco (Historia del Reino de Quito, 1789), describes a pre-Inca kingdom of the Quitu-Cara people ruled by the 'Shyri' dynasty. Modern archaeology has found no evidence supporting Velasco's account of a unified kingdom. The narrative likely served Ecuadorian nationalist purposes, providing a pre-Inca legitimating origin story. However, dismissing the concept entirely risks erasing genuine pre-Inca political complexity. Archaeological evidence (Frank Salomon, 1986; J. Stephen Athens, 1992) confirms the existence of complex chiefdoms (señoríos) in the northern Andes before the Inca conquest, including the Caranqui, Cayambe, Otavalo, and Panzaleo. The Battle of Yahuarcocha (c. 1487) and fierce Caranqui resistance are attested in multiple independent sources. ETHICS-001: The raised confidence (0.35 to 0.45) reflects not validation of Velasco's narrative but recognition that some form of pre-Inca complex polity existed in the region, even if not matching the 'Kingdom of Quito' as traditionally described. The entity documents the historiographic controversy itself.\n\n[v6.7.1] boundary_geojson is a rectangular placeholder, not the actual entity boundary. The effective extent is uncertain and requires historiographic revision.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Quito",
+        "lang": "en",
+        "period_start": 1000,
+        "period_end": 1470,
+        "context": "English translation of the traditional (and disputed) narrative of a pre-Inca kingdom",
+        "source": "Velasco, Juan de. Historia del Reino de Quito en la América Meridional (1789)"
+      },
+      {
+        "name": "Reino de Quito",
+        "lang": "es",
+        "period_start": 1000,
+        "period_end": 1470,
+        "context": "Spanish designation from colonial-era histories; the primary source is Juan de Velasco's 1789 account",
+        "source": "Velasco, Juan de. Historia del Reino de Quito en la América Meridional (1789)"
+      },
+      {
+        "name": "Señorío de los Quitu-Cara / Shyri",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "Alternative designation; 'Shyri' was the title attributed to the rulers of Quito in Velasco's account. The historicity of the Shyri dynasty is rejected by modern archaeology",
+        "source": "Salomon, Frank. Native Lords of Quito in the Age of the Incas (1986)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1000,
+        "region": "Northern Andean highlands (present-day Ecuador)",
+        "change_type": "CULTURAL",
+        "description": "Traditional narrative: emergence of the Quitu-Cara polity through merger of coastal Cara people and highland Quitu. Modern archaeology: the northern Ecuadorian highlands hosted multiple complex chiefdoms (señoríos) including the Caranqui, Cayambe, Otavalo, Panzaleo, and Puruhá. These were independent polities, not a unified kingdom. Archaeological evidence shows monumental mound construction, intensive agriculture, and long-distance trade.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1470,
+        "region": "Northern Andes (present-day Ecuador)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Inca expansion under Tupac Inca Yupanqui and later Huayna Capac conquered the northern Andean chiefdoms. The Caranqui and Cayambe peoples resisted fiercely; the Battle of Yahuarcocha ('Blood Lake,' ca. 1487) reportedly ended with thousands of Cayambe-Caranqui warriors massacred on the shores of the lake. Huayna Capac established Quito as a secondary Inca capital and married local nobility.",
+        "population_affected": 300000,
+        "confidence_score": 0.55
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Salomon, F. Native Lords of Quito in the Age of the Incas: The Political Economy of North Andean Chiefdoms. Cambridge University Press, 1986",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Velasco, J. de. Historia del Reino de Quito en la América Meridional, 1789 — primary source for the traditional narrative, now considered largely mythological",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Athens, J.S. 'Ethnicity and Adaptation: The Late Period–Cara Occupation in Northern Highland Ecuador'. PhD dissertation, University of New Mexico, 1992",
+        "source_type": "archaeological"
+      },
+      {
+        "citation": "Bray, T.L. (ed.) The Archaeology of Wak'as: Explorations of the Sacred in the Pre-Columbian Andes. University Press of Colorado, 2015",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ogburn, D.E. 'Evidence for Long-Distance Transportation of Building Stones in the Inka Empire', Latin American Antiquity 15(4), 2004, pp. 419–439",
+        "source_type": "academic"
+      }
+    ],
+    "boundary_source": "historical_map"
+  },
+  {
+    "name_original": "Bazin",
+    "name_original_lang": "ar",
+    "entity_type": "kingdom",
+    "year_start": 1500,
+    "year_end": 1800,
+    "capital_name": "Am Timan",
+    "capital_lat": 11.04,
+    "capital_lon": 20.28,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            25.8056,
+            11.04
+          ],
+          [
+            24.4605,
+            13.3667
+          ],
+          [
+            22.5034,
+            15.1532
+          ],
+          [
+            20.28,
+            16.1659
+          ],
+          [
+            17.5269,
+            14.7125
+          ],
+          [
+            17.4483,
+            12.7065
+          ],
+          [
+            15.6867,
+            11.04
+          ],
+          [
+            16.6653,
+            8.5258
+          ],
+          [
+            17.7857,
+            7.2195
+          ],
+          [
+            20.28,
+            8.5298
+          ],
+          [
+            21.6773,
+            7.9512
+          ],
+          [
+            23.0367,
+            9.7126
+          ],
+          [
+            25.8056,
+            11.04
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.4,
+    "status": "disputed",
+    "ethical_notes": "ETHICS-003: The Kingdom of Bazin is extremely poorly documented, representing the broader problem of representing Central African states whose histories were systematically unrecorded by literate neighbours and subsequently marginalised by colonial ethnographers. Much of what is known comes from oral traditions recorded by late-19th-century European travellers (especially Gustav Nachtigal, who visited the region in 1870–1874) and from Arabic chronicles that focus on the larger Bornu and Wadai empires. The existence of a distinct Bazin polity in the Guéra region of southern Chad is plausible but not firmly established. ETHICS-001: The raised confidence (0.25 to 0.40) reflects the addition of Nachtigal's primary account and Cordell's corroborating analysis, which together provide convergent (if limited) evidence. Including Bazin with appropriate uncertainty markers is more historically honest than excluding it from the record.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Bazin",
+        "lang": "en",
+        "context": "English academic designation, used in French colonial ethnography"
+      },
+      {
+        "name": "Bazin",
+        "lang": "ar",
+        "context": "Arabic/local form from oral traditions"
+      },
+      {
+        "name": "Pays Bazin",
+        "lang": "fr",
+        "context": "French colonial geographic term"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1500,
+        "region": "Southern Chad, Guéra region",
+        "change_type": "independence",
+        "description": "Bazin emerged as a distinct polity in the Chad basin, likely as one of several small non-Muslim kingdoms south of the Sahelo-Sudanic empires. Its political organization and extent are poorly understood due to limited documentary evidence.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1800,
+        "region": "Bazin territory",
+        "change_type": "conquest",
+        "description": "Bazin was absorbed by the expanding Wadai Empire and/or Bagirmi, losing its political independence. The process of absorption likely involved a combination of military pressure, tribute extraction, and the gradual Islamization of the ruling elite.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Nachtigal, G. Sahara and Sudan, vol. 4: Wadai and Darfur (trans. A.G.B. Fisher & H.J. Fisher). C. Hurst, 1971 (orig. German 1889)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Cordell, D.D. Dar al-Kuti and the Last Years of the Trans-Saharan Slave Trade. University of Wisconsin Press, 1985",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Reyna, S.P. Wars Without End: The Political Economy of a Precolonial African State. University Press of New England, 1990",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Decalo, S. Historical Dictionary of Chad. Scarecrow Press, 3rd ed., 1997",
+        "source_type": "secondary"
+      }
+    ],
+    "boundary_source": "approximate_generated"
+  },
+  {
+    "name_original": "Γέρρα",
+    "name_original_lang": "grc",
+    "entity_type": "city-state",
+    "year_start": -650,
+    "year_end": -150,
+    "capital_name": "Gerrha (probably near Thaj)",
+    "capital_lat": 26.86,
+    "capital_lon": 48.72,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            49.5402,
+            26.86
+          ],
+          [
+            49.3158,
+            27.625
+          ],
+          [
+            48.7077,
+            28.1684
+          ],
+          [
+            47.83,
+            28.367
+          ],
+          [
+            46.9523,
+            28.1684
+          ],
+          [
+            46.3442,
+            27.625
+          ],
+          [
+            46.1198,
+            26.86
+          ],
+          [
+            46.3442,
+            26.095
+          ],
+          [
+            46.9523,
+            25.5516
+          ],
+          [
+            47.83,
+            25.353
+          ],
+          [
+            48.7077,
+            25.5516
+          ],
+          [
+            49.3158,
+            26.095
+          ],
+          [
+            49.5402,
+            26.86
+          ]
+        ]
+      ]
+    },
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "ethical_notes": "ETHICS-001: 'Gerrha' (Γέρρα) is the Hellenistic Greek name for a wealthy commercial polity on the Arabian Gulf coast, known almost exclusively through second-hand Greek and Latin sources (Strabo XVI.3.3, Pliny NH VI.32, Agatharchides). Its inhabitants' self-designation and language are unknown. The site is probably identifiable with Thaj in modern Saudi Arabia, where Saudi–French archaeological missions (2006–present) have uncovered a large walled settlement with monumental architecture. ETHICS-003: The raised confidence (0.30 to 0.45) reflects the significant progress of the Thaj excavations under the Saudi Commission for Tourism and National Heritage / CNRS joint mission, which has strengthened the Thaj–Gerrha identification proposed by Potts and others, though it remains debated.",
+    "name_variants": [
+      {
+        "name": "Γέρρα",
+        "lang": "grc",
+        "context": "Greek (Strabo, Eratosthenes, Agatharchides)"
+      },
+      {
+        "name": "Gerrha",
+        "lang": "lat",
+        "context": "Latin (Pliny)"
+      },
+      {
+        "name": "Hagar",
+        "lang": "ar",
+        "context": "Possible later Arabic name for the region"
+      },
+      {
+        "name": "Gerrhaeans",
+        "lang": "en",
+        "context": "English ethnonym"
+      },
+      {
+        "name": "Thaj",
+        "lang": "ar",
+        "context": "Modern Arabic name of the leading candidate site"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -550,
+        "region": "Eastern Arabian coast",
+        "change_type": "consolidation",
+        "description": "Emergence of Gerrha as a major caravan and maritime entrepôt linking South Arabia, India, and Mesopotamia. Possibly founded by Chaldean refugees, per Strabo — but the claim is contested.",
+        "population_affected": null,
+        "confidence_score": 0.42
+      },
+      {
+        "year": -205,
+        "region": "Eastern Arabian coast",
+        "change_type": "tribute",
+        "description": "Antiochus III of the Seleucid Empire campaigns against Gerrha and extracts 500 talents of silver, 1000 talents of frankincense, 200 of myrrh — recorded by Polybius. The episode shows Gerrha was wealthy enough to be worth attacking but not annexed.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Potts, D.T. The Arabian Gulf in Antiquity, vol. II: From Alexander the Great to the Coming of Islam. Clarendon Press, 1990",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Salles, J.-F. 'The Arab-Persian Gulf Under the Seleucids', in Kuhrt, A. & Sherwin-White, S. (eds.) Hellenism in the East. Duckworth, 1987",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Strabo, Geographica XVI.3.3 (c. 23 CE) — describes Gerrha as a prosperous trading city inhabited by 'Chaldaean exiles from Babylon'",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Pliny the Elder, Naturalis Historia VI.32 (c. 77 CE) — mentions Gerrha's enormous wealth from the incense and spice trade",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Al-Saud, A. & Robin, C.J. 'Thaj: A Pre-Islamic Site in North-Eastern Arabia', Arabian Archaeology and Epigraphy 28(1), 2017, pp. 35–49",
+        "source_type": "archaeological"
+      }
+    ],
+    "boundary_source": "approximate_generated",
+    "boundary_ne_iso_a3": null,
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null
+  }
+]

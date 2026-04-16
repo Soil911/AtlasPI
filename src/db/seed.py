@@ -52,16 +52,21 @@ def load_all_entities() -> list[dict]:
         except (json.JSONDecodeError, OSError) as e:
             logger.error("Errore caricamento %s: %s", json_file.name, e)
 
-    # Deduplicazione per name_original
-    seen = set()
-    unique = []
+    # Deduplicazione per name_original — l'ultima occorrenza vince.
+    # I file sono caricati in ordine alfabetico (batch_00, batch_01, ...),
+    # quindi un batch successivo puo' sovrascrivere un'entita' precedente.
+    # Questo consente batch correttivi (es. batch_32_confidence_boost).
+    seen: dict[str, int] = {}
+    unique: list[dict] = []
     for ent in all_entities:
         name = ent.get("name_original", "")
-        if name not in seen:
-            seen.add(name)
-            unique.append(ent)
+        if name in seen:
+            idx = seen[name]
+            logger.info("Entita' '%s' sovrascritta da batch successivo", name)
+            unique[idx] = ent
         else:
-            logger.warning("Entita' duplicata ignorata: %s", name)
+            seen[name] = len(unique)
+            unique.append(ent)
 
     return unique
 

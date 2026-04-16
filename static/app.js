@@ -579,6 +579,7 @@ const EVENT_TYPE_ICONS = {
   DEPORTATION: '🚶', FAMINE: '🌾', EPIDEMIC: '🦠',
   EARTHQUAKE: '🌍', VOLCANIC_ERUPTION: '🌋', TSUNAMI: '🌊',
   FLOOD: '💧', DROUGHT: '☀️', FIRE: '🔥',
+  MIGRATION: '🚶‍♂️', COLLAPSE: '📉',
   EXPLORATION: '🧭', TRADE_AGREEMENT: '🤝', RELIGIOUS_EVENT: '⛪',
   INTELLECTUAL_EVENT: '📖', TECHNOLOGICAL_EVENT: '⚙️', OTHER: '📌',
 };
@@ -586,10 +587,11 @@ const EVENT_TYPE_ICONS = {
 function eventTypeClass(eventType) {
   if (!eventType) return 'ev-other';
   const t = eventType.toUpperCase();
-  if (['BATTLE', 'SIEGE', 'REBELLION', 'REVOLUTION'].includes(t)) return 'ev-battle';
+  if (['BATTLE', 'SIEGE', 'REBELLION', 'REVOLUTION', 'COLLAPSE'].includes(t)) return 'ev-battle';
   if (['TREATY', 'TRADE_AGREEMENT', 'MARRIAGE_DYNASTIC', 'CORONATION'].includes(t)) return 'ev-treaty';
   if (['FOUNDING_CITY', 'FOUNDING_STATE', 'EXPLORATION'].includes(t)) return 'ev-founding';
   if (['GENOCIDE', 'ETHNIC_CLEANSING', 'MASSACRE', 'COLONIAL_VIOLENCE', 'DEPORTATION'].includes(t)) return 'ev-violence';
+  if (t === 'MIGRATION') return 'ev-culture';
   if (['EARTHQUAKE', 'VOLCANIC_ERUPTION', 'TSUNAMI', 'FLOOD', 'DROUGHT', 'FIRE', 'FAMINE', 'EPIDEMIC'].includes(t)) return 'ev-disaster';
   if (['RELIGIOUS_EVENT', 'INTELLECTUAL_EVENT', 'TECHNOLOGICAL_EVENT'].includes(t)) return 'ev-culture';
   return 'ev-other';

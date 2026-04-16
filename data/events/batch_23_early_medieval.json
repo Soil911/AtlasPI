@@ -1,0 +1,675 @@
+[
+  {
+    "name_original": "Bellum Gothicum Iustiniani",
+    "name_original_lang": "lat",
+    "event_type": "CONQUEST",
+    "year": 535,
+    "year_end": 554,
+    "month": null,
+    "day": null,
+    "date_precision": "YEAR",
+    "location_name": "Italian peninsula (Ravenna, Rome, Naples)",
+    "location_lat": 41.9,
+    "location_lon": 12.5,
+    "main_actor": "Byzantine Empire under Emperor Justinian I; generals Belisarius (535-540, 544-548) and Narses (551-554); Ostrogothic kings Witigis, Totila, Teia",
+    "description": "Justinian I launched the reconquest of Italy from the Ostrogothic kingdom in 535, initially under Belisarius who took Naples and Rome by 536. The war became a twenty-year catastrophe for the Italian peninsula: Rome changed hands five times, its aqueducts were cut (some never repaired), and the population of the city fell from perhaps 100,000 to under 30,000. The Ostrogothic king Totila recaptured most of Italy in the 540s before Narses defeated and killed him at Busta Gallorum (552) and the last Gothic king Teia at Mons Lactarius (553). The Pragmatic Sanction of 554 restored imperial administration, but within fourteen years the Lombards invaded (568) and seized most of the peninsula. The Gothic War, combined with the Plague of Justinian (541 onwards), left Italy economically and demographically devastated for generations.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": "Civilian mortality is unquantified but immense; Procopius describes depopulated cities and famine cannibalism in Emilia. No reliable aggregate figure exists.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "The Italian civilian population left almost no direct testimony of the war. Procopius (a Byzantine insider) and Jordanes (a Gothic-allied chronicler) are the principal narrators; Italian peasant and urban experience is archaeologically attested (destruction layers, demographic collapse in osteoarchaeology) but textually silent.",
+    "ethical_notes": "Justinian's reconquest is traditionally framed as 'restoration of Roman legitimacy' (renovatio imperii). In practice it destroyed the relatively stable Ostrogothic-Roman coexistence that Theoderic had built and left Italy in worse condition than before the invasion. The label 'reconquest' accepts the Byzantine self-framing; 'invasion' is equally accurate from the Italian-Gothic perspective.",
+    "sources": [
+      {
+        "citation": "Procopius, Bellum Gothicum (De Bellis V-VIII), ~550 CE.",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Heather, P. (2013). The Restoration of Rome: Barbarian Popes and Imperial Pretenders. Oxford University Press.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "entity_links": [
+      {
+        "entity_name_original": "Regnum Ostrogothorum",
+        "role": "DISSOLVED",
+        "notes": "Ostrogothic kingdom of Italy destroyed"
+      },
+      {
+        "entity_name_original": "Imperium Romanum Orientale",
+        "role": "MAIN_ACTOR",
+        "notes": "Byzantine reconquest under Justinian I"
+      }
+    ]
+  },
+  {
+    "name_original": "唐朝建立",
+    "name_original_lang": "lzh",
+    "event_type": "FOUNDING_STATE",
+    "year": 618,
+    "year_end": null,
+    "month": 6,
+    "day": 18,
+    "date_precision": "DAY",
+    "location_name": "Chang'an (modern Xi'an), China",
+    "location_lat": 34.27,
+    "location_lon": 108.93,
+    "main_actor": "Li Yuan (Emperor Gaozu of Tang), assisted by his sons Li Shimin (later Emperor Taizong) and Li Jiancheng",
+    "description": "Li Yuan, Duke of Tang and military governor of Taiyuan, seized Chang'an in November 617 during the collapse of the Sui dynasty and on 18 June 618 accepted the abdication of the last Sui puppet emperor, proclaiming the Tang dynasty. The Tang would rule China for nearly three centuries (618-907), presiding over what is conventionally regarded as a golden age of Chinese civilisation: the cosmopolitan culture of Chang'an (the world's largest city at approximately one million inhabitants), the mature examination system, the poetry of Li Bai and Du Fu, expansion into Central Asia and Korea, and the integration of Buddhist, Daoist and Confucian traditions. Li Yuan's son Li Shimin (Taizong, r. 626-649), who seized power by killing his brothers at the Xuanwu Gate incident, is credited with establishing the institutional foundations of Tang governance.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Tang founding involved fratricidal violence: Li Shimin killed his elder brother Li Jiancheng and younger brother Li Yuanji at the Xuanwu Gate in 626 and pressured his father into abdicating. Tang official histories (compiled under Taizong's supervision) systematically denigrated the Sui dynasty and Li Yuan's own role to aggrandise Taizong. The Tang also inherited and expanded Sui forced-labour institutions, particularly in canal and palace construction.",
+    "sources": [
+      {
+        "citation": "Liu Xu et al., Jiu Tangshu (Old Book of Tang), ~945 CE.",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Lewis, M.E. (2009). China's Cosmopolitan Empire: The Tang Dynasty. Harvard University Press.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "entity_links": [
+      {
+        "entity_name_original": "唐朝",
+        "role": "FOUNDED",
+        "notes": "Tang dynasty founded by Li Yuan"
+      },
+      {
+        "entity_name_original": "隋朝",
+        "role": "DISSOLVED",
+        "notes": "Sui dynasty collapses"
+      }
+    ]
+  },
+  {
+    "name_original": "Σλαβικὴ κάθοδος εἰς τὴν Βαλκανικήν",
+    "name_original_lang": "grc",
+    "event_type": "MIGRATION",
+    "year": 580,
+    "year_end": 700,
+    "month": null,
+    "day": null,
+    "date_precision": "CENTURY",
+    "location_name": "Balkans (modern Greece, Serbia, North Macedonia, Bulgaria, Albania)",
+    "location_lat": 41.0,
+    "location_lon": 22.0,
+    "main_actor": "Slavic tribal groups (Sclaveni, Antes); Avar khaganate as military catalyst",
+    "description": "Between the late sixth and early eighth centuries, Slavic-speaking populations settled across the Balkans, fundamentally transforming the region's ethnic, linguistic and demographic character. The process accelerated after the Avar-Slavic siege of Constantinople in 626 failed but left Byzantine control of the interior effectively destroyed. By the mid-seventh century, Slavic settlements reached deep into the Peloponnese (the Melingoi and Ezeritai are attested there into the tenth century). Byzantine re-Hellenisation of Greece from the ninth century onward was partial and protracted. The settlement permanently ended the Latin-Greek linguistic continuity of the Balkans outside coastal enclaves and created the demographic basis for the later Slavic-speaking states of Serbia, Croatia, Bulgaria, and eventually the South Slavic nations.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "The Slavic settlers left no written records; evidence is archaeological (Penkovka and Prague-Korchak ceramic cultures), toponymic (dense Slavic place-names across the Balkans including Greece), and from Byzantine sources (Miracles of St. Demetrius, Theophylact Simocatta, Chronicle of Monemvasia). The indigenous Romanised and Hellenised populations left minimal testimony of the displacement process.",
+    "ethical_notes": "Greek national historiography long minimised the Slavic settlement of Greece (Jakob Philipp Fallmerayer's 1830s thesis that the modern Greeks were largely of Slavic descent provoked intense nationalist reaction). Modern scholarship (Curta 2001, Laiou & Morrisson 2007) treats the settlement as a demographic fact without the ethnic-purity anxieties of 19th-century nationalism. The Slavic settlers were not a unified invasion force but heterogeneous groups moving into depopulated territories.",
+    "sources": [
+      {
+        "citation": "Miracles of St. Demetrius, Books I-II (primary, ~620s-680s CE).",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Curta, F. (2001). The Making of the Slavs: History and Archaeology of the Lower Danube Region, c. 500-700. Cambridge University Press.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "entity_links": [
+      {
+        "entity_name_original": "Imperium Romanum Orientale",
+        "role": "AFFECTED",
+        "notes": "Byzantine Balkans largely lost to Slavic settlement"
+      }
+    ]
+  },
+  {
+    "name_original": "Асъпъруховата България",
+    "name_original_lang": "chu",
+    "event_type": "FOUNDING_STATE",
+    "year": 681,
+    "year_end": null,
+    "month": null,
+    "day": null,
+    "date_precision": "YEAR",
+    "location_name": "Pliska, northeast of the Danube (modern northeastern Bulgaria)",
+    "location_lat": 43.39,
+    "location_lon": 27.13,
+    "main_actor": "Khan Asparuh of the Bulgars (Dulo clan); defeated Byzantine emperor Constantine IV",
+    "description": "In 680-681 CE the Bulgar khan Asparuh crossed the Danube with his Turkic-Bulgar horde and defeated the Byzantine emperor Constantine IV in the marshes of the Danube delta. The resulting treaty (681) ceded the territory between the Danube and the Balkan mountains to Asparuh and obligated Byzantium to pay annual tribute. Asparuh established his capital at Pliska and consolidated control over the local Slavic population, creating a Bulgar-Slavic state that would become the First Bulgarian Empire. This polity would produce the Cyrillic alphabet (through the disciples of Cyril and Methodius at Preslav and Ohrid in the 890s), convert to Christianity under Boris I (864), and under Tsar Simeon I (893-927) rival Byzantium as the dominant Balkan power.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The relationship between the Turkic Bulgar ruling elite and the Slavic majority population is debated. Bulgarian national historiography tends to emphasise Slavic continuity and the rapid assimilation of the Bulgars; Turkic-studies scholars emphasise the steppe-nomadic character of the early state. The Nominalia of the Bulgarian Khans (preserved in a later Slavonic copy) records a Turkic-language list of rulers and is the principal non-Byzantine source for early Bulgar history.",
+    "sources": [
+      {
+        "citation": "Theophanes Confessor, Chronographia A.M. 6171 (primary, ~815 CE).",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Curta, F. (2006). Southeastern Europe in the Middle Ages, 500-1250. Cambridge University Press.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "entity_links": [
+      {
+        "entity_name_original": "Βουλγαρία",
+        "role": "FOUNDED",
+        "notes": "First Bulgarian Empire founded by Asparuh"
+      },
+      {
+        "entity_name_original": "Imperium Romanum Orientale",
+        "role": "VICTIM",
+        "notes": "Byzantine defeat and loss of territory south of the Danube"
+      }
+    ]
+  },
+  {
+    "name_original": "平城京遷都",
+    "name_original_lang": "lzh",
+    "event_type": "FOUNDING_CITY",
+    "year": 710,
+    "year_end": null,
+    "month": 3,
+    "day": null,
+    "date_precision": "MONTH",
+    "location_name": "Nara (Heijo-kyo), Yamato Province, Japan",
+    "location_lat": 34.685,
+    "location_lon": 135.805,
+    "main_actor": "Empress Genmei of Japan",
+    "description": "In 710 CE Empress Genmei moved the Japanese imperial capital from Fujiwara-kyo to the newly constructed Heijo-kyo (Nara), modelled on the Tang Chinese capital Chang'an in a grid pattern. The Nara period (710-794) saw the compilation of Japan's earliest surviving historical chronicles (Kojiki, 712; Nihon Shoki, 720), the consolidation of the ritsuryo centralised legal-bureaucratic state on Chinese models, the flourishing of Buddhist temple construction (Todai-ji and the Great Buddha, 752), and the first systematic land survey (handen system). The period ended when Emperor Kanmu moved the capital to Heian-kyo (Kyoto) in 794, inaugurating the Heian period (794-1185) and the dominance of the Fujiwara regency.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "The Nara-period ritsuryo state systematically adopted Chinese-style historiographic practices, but the perspectives of the Emishi (Ainu-related peoples of northern Honshu) against whom the Yamato state waged frontier wars, and of the Korean immigrant communities (toraijin) who transmitted much of the continental culture, are largely absent from the official chronicles.",
+    "ethical_notes": "The Nara and Heian periods are often presented as purely Japanese cultural achievements. In fact, the entire institutional, literary and religious framework was a conscious adaptation of Tang Chinese and Korean (Baekje, Silla) models, and Korean and Chinese immigrant families held high positions at court. The ritsuryo state also waged sustained campaigns against the Emishi peoples of the Tohoku frontier, a process of colonisation that is underrepresented in standard accounts.",
+    "sources": [
+      {
+        "citation": "Shoku Nihongi (primary, ~797 CE), Wadoken 3.3 entry on capital transfer.",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Piggott, J.R. (1997). The Emergence of Japanese Kingship. Stanford University Press.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "entity_links": [
+      {
+        "entity_name_original": "日本国",
+        "role": "MAIN_ACTOR",
+        "notes": "Japanese imperial state establishes permanent capital at Nara"
+      }
+    ]
+  },
+  {
+    "name_original": "བོད་ཆེན་པོའི་རྒྱལ་ཁམས།",
+    "name_original_lang": "bod",
+    "event_type": "OTHER",
+    "year": 780,
+    "year_end": 840,
+    "month": null,
+    "day": null,
+    "date_precision": "DECADE",
+    "location_name": "Lhasa, central Tibet (empire extending to Dunhuang, Nepal, parts of Yunnan and Central Asia)",
+    "location_lat": 29.65,
+    "location_lon": 91.1,
+    "main_actor": "Trisong Detsen (r. ~755-797) and subsequent btsan-po (emperors) of the Yarlung dynasty",
+    "description": "The Tibetan Empire reached its greatest extent under Trisong Detsen and his successors, controlling territory from the Tarim Basin and Dunhuang in the northeast to Nepal and parts of Bengal in the south, and from the Pamirs to Gansu. In 763 the Tibetans briefly captured the Tang capital Chang'an. Trisong Detsen hosted the Council of Samye (~792-794), which established Indian Madhyamaka Buddhism over Chinese Chan Buddhism as the official form of Tibetan Buddhism, a doctrinal decision with consequences lasting to the present. The empire collapsed after the assassination of Emperor Langdarma (~842) and the subsequent civil war, fragmenting Tibet into competing principalities for four centuries. At its peak, the Tibetan Empire was one of the three great powers of Inner Asia alongside Tang China and the Abbasid caliphate.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "Tibetan imperial-period inscriptions (Zhol pillar, Samye inscription) survive but the bulk of Tibetan historical writing dates from the later diffusion period (11th century onwards) and retrospectively constructs the imperial age through a Buddhist lens. The Old Tibetan Annals (Dunhuang manuscripts P.T. 1288-1290) are the closest to contemporary records but are terse administrative texts, not narrative history.",
+    "ethical_notes": "The Tibetan Empire is systematically underrepresented in world history textbooks, which typically treat Tibet only as a subject of Chinese or British imperialism. The empire was a major military and diplomatic actor that defeated Tang armies, negotiated treaties with the Abbasids, and shaped the religious landscape of Central and South Asia. Its erasure from standard narratives reinforces the modern Chinese state claim that Tibet has 'always been part of China' -- a claim contradicted by the imperial-period evidence.",
+    "sources": [
+      {
+        "citation": "Old Tibetan Annals (P.T. 1288), Dunhuang manuscripts (primary, ~9th century CE).",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Beckwith, C.I. (1987). The Tibetan Empire in Central Asia: A History of the Struggle for Great Power among Tibetans, Turks, Arabs, and Chinese during the Early Middle Ages. Princeton University Press.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "entity_links": [
+      {
+        "entity_name_original": "བོད་ཆེན་པོ",
+        "role": "MAIN_ACTOR",
+        "notes": "Tibetan Empire at territorial peak"
+      },
+      {
+        "entity_name_original": "唐朝",
+        "role": "PARTICIPANT",
+        "notes": "Tang China as rival and treaty partner"
+      }
+    ]
+  },
+  {
+    "name_original": "ក្រុងអង្គរ",
+    "name_original_lang": "khm",
+    "event_type": "FOUNDING_STATE",
+    "year": 802,
+    "year_end": null,
+    "month": null,
+    "day": null,
+    "date_precision": "YEAR",
+    "location_name": "Phnom Kulen / Mahendraparvata, near Angkor, Cambodia",
+    "location_lat": 13.44,
+    "location_lon": 103.86,
+    "main_actor": "Jayavarman II, proclaimed as chakravartin (universal monarch)",
+    "description": "In 802 CE Jayavarman II performed a ceremony on Phnom Kulen (Mount Mahendra) in which a Brahmin priest consecrated him as chakravartin and established the devaraja cult (god-king institution), unifying the Khmer polities and founding what would become the Khmer Empire. Jayavarman II had previously spent time at the Sailendra court of Java and drew on Javanese and Indian political-religious models. The empire he founded would build Angkor Wat (early 12th century), Angkor Thom, and the Bayon, develop one of the most sophisticated hydraulic engineering systems of the pre-modern world (the baray reservoir network), and control much of mainland Southeast Asia until its gradual decline after the 13th century. At its peak in the 12th-13th centuries, Angkor was arguably the largest pre-industrial urban complex in the world.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "Pre-Angkorian and early Angkorian Khmer history is reconstructed primarily from Sanskrit and Old Khmer inscriptions on stone (K-numbered corpus). Perishable materials (palm-leaf manuscripts, wooden records) have not survived the tropical climate. Chinese dynastic histories (Sui shu, Tang shu, Song shi) provide external attestation but from an outsider perspective.",
+    "ethical_notes": "The Khmer Empire has been subjected to two forms of historical distortion: (1) French colonial archaeologists (particularly the EFEO) framed Angkor as a 'lost civilisation' disconnected from the living Khmer population, implying the modern Cambodians were incapable of such achievement; (2) the Khmer Rouge regime (1975-1979) instrumentalised Angkor as justification for its Year Zero nationalism. Both distortions are rejected. The builders of Angkor are the ancestors of the modern Khmer people, and the empire's achievements belong to a continuous civilisational tradition.",
+    "sources": [
+      {
+        "citation": "Sdok Kok Thom inscription K. 235 (primary, 1052 CE, retrospective account of the devaraja foundation).",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Higham, C. (2001). The Civilization of Angkor. Weidenfeld & Nicolson.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "entity_links": [
+      {
+        "entity_name_original": "ចក្រភពខ្មែរ",
+        "role": "FOUNDED",
+        "notes": "Khmer Empire founded by Jayavarman II"
+      }
+    ]
+  },
+  {
+    "name_original": "Ælfredes cyninges sige",
+    "name_original_lang": "ang",
+    "event_type": "TREATY",
+    "year": 886,
+    "year_end": null,
+    "month": null,
+    "day": null,
+    "date_precision": "YEAR",
+    "location_name": "London, Wessex / Danelaw border, England",
+    "location_lat": 51.51,
+    "location_lon": -0.12,
+    "main_actor": "Alfred the Great, King of Wessex (r. 871-899); Guthrum, Danish king of East Anglia",
+    "description": "In 886 CE King Alfred of Wessex captured London from Danish control and negotiated the Treaty of Alfred and Guthrum, which established a formal boundary between English Wessex and the Danish-controlled Danelaw along the rivers Thames and Lea and Watling Street. The Anglo-Saxon Chronicle records that 'all the English people (Angelcyn) that were not under subjection to the Danes submitted to him.' Alfred's achievement was military (victory at Edington, 878), administrative (the Burghal Hidage fortification system, legal codification, naval reform), and cultural (translation of Latin works into English, foundation of a court school). Alfred is the only English monarch styled 'the Great', and his unification of non-Danish England laid the foundation for the Kingdom of England completed by his grandson Athelstan (927-939).",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Alfred's 'unification' was of the English-speaking territories only; the Danelaw remained under Scandinavian law and settlement, and the Britons of Wales and Cornwall were subordinated rather than incorporated as equals. The Anglo-Saxon Chronicle, compiled under Alfred's patronage, is the principal source and naturally aggrandises his role. Asser's Life of Alfred (~893) is the other key text and has been questioned (though most scholars accept its authenticity).",
+    "sources": [
+      {
+        "citation": "Anglo-Saxon Chronicle MS A, s.a. 886 (primary, ~890s CE compilation).",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Keynes, S. & Lapidge, M. (1983). Alfred the Great: Asser's Life of King Alfred and Other Contemporary Sources. Penguin.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "entity_links": []
+  },
+  {
+    "name_original": "خلافة قرطبة",
+    "name_original_lang": "ara",
+    "event_type": "FOUNDING_STATE",
+    "year": 929,
+    "year_end": null,
+    "month": 1,
+    "day": 16,
+    "date_precision": "DAY",
+    "location_name": "Cordoba, al-Andalus (modern Spain)",
+    "location_lat": 37.88,
+    "location_lon": -4.77,
+    "main_actor": "Abd al-Rahman III, Umayyad emir of Cordoba, self-proclaimed caliph",
+    "description": "On 16 January 929 CE the Umayyad emir of Cordoba, Abd al-Rahman III (r. 912-961), declared himself caliph and Commander of the Faithful (Amir al-Mu'minin), challenging the legitimacy of both the Abbasid caliphate in Baghdad and the Fatimid caliphate in Ifriqiya. The Caliphate of Cordoba became the wealthiest and most culturally dynamic polity in tenth-century Europe: Cordoba's population reached perhaps 100,000-500,000 (estimates vary enormously), its library at al-Hakam II's court reportedly held 400,000 volumes, and the city's scholars (including Ibn Rushd's predecessors, Jewish intellectuals like Hasdai ibn Shaprut, and the Mozarab Christian community) made it a centre of trilingual learning in Arabic, Hebrew and Latin. The caliphate fragmented into taifa kingdoms after the Berber revolt of 1009-1013.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The 'Convivencia' (coexistence) of Muslims, Christians and Jews in al-Andalus is real but romanticised in some popular accounts. Dhimmi populations faced legal subordination (jizya tax, restrictions on public worship, sumptuary laws) alongside genuine intellectual collaboration. Modern historiography (Menocal 2002, Catlos 2018) treats Convivencia as a complex, hierarchical coexistence, not an egalitarian paradise. The Reconquista narrative that frames Muslim Iberia as an 'occupation' to be reversed is equally distortive.",
+    "sources": [
+      {
+        "citation": "Ibn Hayyan, al-Muqtabas (primary, ~1076 CE, using earlier sources).",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Menocal, M.R. (2002). The Ornament of the World: How Muslims, Jews, and Christians Created a Culture of Tolerance in Medieval Spain. Little, Brown.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "entity_links": [
+      {
+        "entity_name_original": "خلافة قرطبة",
+        "role": "FOUNDED",
+        "notes": "Caliphate of Cordoba proclaimed by Abd al-Rahman III"
+      }
+    ]
+  },
+  {
+    "name_original": "K'atun terminal Classic Maya collapse",
+    "name_original_lang": "myn",
+    "event_type": "COLLAPSE",
+    "year": 800,
+    "year_end": 1000,
+    "month": null,
+    "day": null,
+    "date_precision": "CENTURY",
+    "location_name": "Southern Maya lowlands (Tikal, Calakmul, Copan, Palenque; modern Guatemala, Belize, Honduras, Mexico)",
+    "location_lat": 17.22,
+    "location_lon": -89.61,
+    "main_actor": null,
+    "description": "Between approximately 800 and 1000 CE the Classic Maya civilisation of the southern lowlands experienced a catastrophic demographic and political collapse. Major cities including Tikal, Calakmul, Copan, and Palenque ceased erecting dated stone monuments (the last Long Count date at most sites falls between 800 and 910), monumental construction halted, and populations declined by 90-99% in some areas as documented by settlement surveys. The collapse was multi-causal: prolonged drought cycles confirmed by speleothem and lake-sediment data (Medina-Elizalde & Rohling 2012), intensified interstate warfare, ecological degradation from deforestation and soil exhaustion, and political fragmentation of the divine-kingship (k'uhul ajaw) system. Maya civilisation did not end: northern Yucatan centres like Chichen Itza and Uxmal flourished during and after the southern collapse, and the Postclassic Maya states persisted until Spanish contact.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": "Population estimates for the Classic Maya range from 3-15 million; southern lowland depopulation of 80-95% is archaeologically supported but figures are extrapolations from settlement density.",
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "Maya hieroglyphic texts record political events (wars, accessions, rituals) but not the mechanisms of demographic collapse. The final inscriptions at many sites do not describe the end; the cities simply fall silent. Archaeological and palaeoclimatic evidence fills the gap but cannot recover individual or community experience.",
+    "ethical_notes": "The Maya 'collapse' has been instrumentalised in environmental-determinist narratives (Diamond 2005) as a cautionary tale about ecological overshoot. While environmental factors were real, the framing risks presenting the Maya as a cautionary 'failed civilisation' rather than acknowledging (a) the multi-causal complexity, (b) the continuation of Maya civilisation in the north and Postclassic, and (c) the survival of millions of Maya-speaking people today. The 'collapse' was regional and political, not civilisational extinction.",
+    "sources": [
+      {
+        "citation": "Medina-Elizalde, M. & Rohling, E.J. (2012). 'Collapse of Classic Maya Civilization Related to Modest Reduction in Precipitation.' Science 335(6071): 956-959.",
+        "url": "https://doi.org/10.1126/science.1216629",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Demarest, A.A. (2004). Ancient Maya: The Rise and Fall of a Rainforest Civilization. Cambridge University Press.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "entity_links": []
+  },
+  {
+    "name_original": "ንግስና ኢትዮጵያ ዛጉዌ",
+    "name_original_lang": "gez",
+    "event_type": "FOUNDING_STATE",
+    "year": 900,
+    "year_end": null,
+    "month": null,
+    "day": null,
+    "date_precision": "CENTURY",
+    "location_name": "Lalibela region, Ethiopian highlands (Lasta/Zagwe heartland)",
+    "location_lat": 12.03,
+    "location_lon": 39.05,
+    "main_actor": "Zagwe dynasty rulers (Agaw-speaking), culminating in King Gebre Mesqel Lalibela (~1181-1221)",
+    "description": "The Zagwe dynasty emerged in the Ethiopian highlands around the 10th century, succeeding the declining Aksumite state and ruling from the Lasta region. The Zagwe, of Agaw (Cushitic) rather than Semitic linguistic origin, maintained the Christian Ethiopian state tradition and produced one of Africa's most remarkable architectural achievements: the eleven rock-hewn churches of Lalibela, carved from solid volcanic tuff during the reign of King Lalibela (~1181-1221) and designed as a symbolic 'New Jerusalem.' The dynasty was overthrown by the Solomonic dynasty under Yekuno Amlak in 1270, which claimed descent from Solomon and Sheba and systematically denigrated the Zagwe as usurpers.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.6,
+    "status": "uncertain",
+    "known_silence": true,
+    "silence_reason": "Almost no contemporary documents survive from the Zagwe period. The Solomonic dynasty that overthrew the Zagwe deliberately suppressed or destroyed Zagwe-era records to delegitimise them. Dating of the Zagwe dynasty is uncertain: the conventional 1137-1270 range is now questioned, with some scholars placing the dynasty's origins in the 10th century. The rock churches of Lalibela were built across a longer period than the hagiographic tradition assigns to a single king.",
+    "ethical_notes": "The Zagwe represent a case of deliberate historiographic erasure by their successors. The Solomonic dynasty's Kebra Nagast (Glory of Kings, ~1322) constructed a continuous Solomonic lineage from biblical times, writing the Zagwe out as interlopers. This narrative dominated Ethiopian historiography for seven centuries and has only been critically deconstructed in modern scholarship.",
+    "sources": [
+      {
+        "citation": "Gadla Lalibela (Hagiography of King Lalibela), ~14th-15th century Ge'ez text (primary, but retrospective and hagiographic).",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Phillipson, D.W. (2012). Foundations of an African Civilisation: Aksum and the Northern Horn, 1000 BC - AD 1300. James Currey.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "entity_links": []
+  },
+  {
+    "name_original": "Lex Burgundionum / Gundovaldus rex",
+    "name_original_lang": "lat",
+    "event_type": "INTELLECTUAL_EVENT",
+    "year": 529,
+    "year_end": null,
+    "month": 4,
+    "day": null,
+    "date_precision": "MONTH",
+    "location_name": "Constantinople",
+    "location_lat": 41.01,
+    "location_lon": 28.98,
+    "main_actor": "Emperor Justinian I and the jurist Tribonian",
+    "description": "In April 529 CE the first edition of the Codex Justinianus was promulgated, followed by the Digest (Pandects, December 533), the Institutes (November 533), and the revised Codex (534), collectively known as the Corpus Iuris Civilis. This codification of Roman law, directed by the quaestor Tribonian, systematised a millennium of Roman legal development into a coherent body of statute, jurisprudential commentary, and teaching text. Virtually unknown in Western Europe during the early Middle Ages, the Corpus was rediscovered at Bologna around 1070 and became the foundation of the medieval ius commune, the Napoleonic Code (1804), and ultimately the civil law tradition governing most of continental Europe, Latin America, East Asia, and much of Africa today. It is arguably the most influential single act of intellectual codification in Western civilisational history.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Corpus Iuris Civilis codified Roman slavery law (including the categories of servus and libertus) and the legal subordination of women. Its modern reception selectively absorbed principles of contract, property and procedure while discarding the most brutal provisions. The codification also reflected Justinian's authoritarian Christian politics: the same legal programme that produced the Corpus also closed the Academy of Athens (529) and persecuted pagans, Samaritans, and heterodox Christians.",
+    "sources": [
+      {
+        "citation": "Corpus Iuris Civilis, ed. Krueger, Mommsen, Schoell & Kroll (primary, 529-534 CE, standard modern edition 1872-1895).",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Honore, T. (1978). Tribonian. Cornell University Press.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "entity_links": [
+      {
+        "entity_name_original": "Imperium Romanum Orientale",
+        "role": "MAIN_ACTOR",
+        "notes": "Justinianic codification of Roman law"
+      }
+    ]
+  },
+  {
+    "name_original": "الفتح الإسلامي لمصر",
+    "name_original_lang": "ara",
+    "event_type": "CONQUEST",
+    "year": 639,
+    "year_end": 642,
+    "month": null,
+    "day": null,
+    "date_precision": "YEAR",
+    "location_name": "Pelusium, Heliopolis, Babylon (Old Cairo), Alexandria, Egypt",
+    "location_lat": 30.05,
+    "location_lon": 31.24,
+    "main_actor": "Amr ibn al-As, Rashidun general, under Caliph Umar ibn al-Khattab",
+    "description": "In late 639 CE the Rashidun general Amr ibn al-As crossed into Egypt from Palestine with approximately 4,000 troops, later reinforced to 12,000. The Byzantine garrison at Babylon (Old Cairo) fell after a seven-month siege in April 641; Alexandria, the great Mediterranean port and centre of Greek learning, surrendered by treaty in September 642. The conquest ended a millennium of Greco-Roman rule over Egypt and initiated the Arabisation and eventual Islamisation of the Nile Valley. The native Coptic Christian population, which had suffered Byzantine persecution for its Monophysite theology, initially experienced the conquest as a relief from the Chalcedonian imperial church. The transformation of Egypt from a Greek-speaking Christian province to an Arabic-speaking Muslim-majority society took roughly five centuries.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Arab conquest of Egypt is narrated by Arabic sources (al-Tabari, Ibn Abd al-Hakam) as a liberation from Byzantine oppression and by later Coptic sources with increasing ambivalence as Coptic social position declined under the Umayyad and Abbasid fiscal system (jizya, administrative Arabisation). The famous tradition that Amr burned the Library of Alexandria on Umar's orders is a late legend (first attested in Ibn al-Qifti, ~1227) and is rejected by modern scholarship; the Library had effectively ceased to exist centuries earlier. AtlasPI records the conquest without the legend.",
+    "sources": [
+      {
+        "citation": "Ibn Abd al-Hakam, Futuh Misr (primary, ~870 CE).",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Kennedy, H. (1998). 'Egypt as a Province in the Islamic Caliphate.' In The Cambridge History of Egypt, vol. 1. Cambridge University Press.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "entity_links": [
+      {
+        "entity_name_original": "Imperium Romanum Orientale",
+        "role": "VICTIM",
+        "notes": "Byzantine Egypt lost to Arab conquest"
+      }
+    ]
+  },
+  {
+    "name_original": "Sri Vijaya / ศรีวิชัย",
+    "name_original_lang": "san",
+    "event_type": "OTHER",
+    "year": 683,
+    "year_end": 775,
+    "month": null,
+    "day": null,
+    "date_precision": "CENTURY",
+    "location_name": "Palembang, Sumatra (with maritime reach across the Strait of Malacca, Malay Peninsula, and western Java)",
+    "location_lat": -2.99,
+    "location_lon": 104.76,
+    "main_actor": "Srivijayan maharajas (names known primarily from inscriptions: Jayanasa from the Srivijayan inscriptions of 683-686 CE)",
+    "description": "The Srivijayan thalassocracy, centred on Palembang in southeastern Sumatra, dominated the maritime trade routes of the Strait of Malacca, the South China Sea, and the Java Sea from the late seventh through the eleventh century. The Kedukan Bukit inscription (683 CE, Old Malay in Pallava script) records a military expedition by the Srivijayan ruler. The Chinese pilgrim Yijing (671-695) describes Srivijaya as a major centre of Buddhist learning with over a thousand monks, recommending it as a study destination before proceeding to Nalanda in India. Srivijaya controlled the trade in camphor, sandalwood, cloves, and resins from the Indonesian archipelago to China, India, and the Arab world, and maintained diplomatic relations with the Tang, Song, and Chola dynasties.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "Srivijaya left remarkably few physical remains for an empire of its scale and duration: it was a thalassocratic trading state built largely of perishable materials (wood, bamboo) in a tropical river-delta environment. The inscriptions are few (seven from the 680s, then a long gap). Evidence is overwhelmingly external: Chinese dynastic histories, Yijing's travel account, Arab geographies (Ibn Khurdadhbih, Abu Zayd al-Sirafi), and Chola inscriptions recording their 1025 raid on Srivijaya. The identification of Palembang as the capital was contested until archaeological work in the 1980s-2000s.",
+    "ethical_notes": "Srivijaya is a paradigmatic case of a major maritime civilisation invisible to land-focused and literate-archive-focused historiography. Its omission from most world history textbooks reflects the Eurasian continental bias of the discipline. The Indonesian and Malaysian states have selectively invoked Srivijaya for modern nationalist purposes (as a proto-Indonesian or proto-Malay empire), which flattens the complex multi-ethnic and multilingual character of the polity.",
+    "sources": [
+      {
+        "citation": "Kedukan Bukit inscription (primary, 683 CE, Old Malay in Pallava script).",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Yijing, Nanhai jigui neifa zhuan (Record of Buddhist Practices Sent Home from the Southern Sea) (primary, ~692 CE).",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Manguin, P.-Y. (2009). 'The Archaeology of the Early Maritime Polities of Southeast Asia.' In Bellwood, P. (ed.), The Spice Islands. ANU Press.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "entity_links": []
+  },
+  {
+    "name_original": "Consilium Nicaenum Secundum",
+    "name_original_lang": "lat",
+    "event_type": "RELIGIOUS_EVENT",
+    "year": 787,
+    "year_end": null,
+    "month": 10,
+    "day": null,
+    "date_precision": "MONTH",
+    "location_name": "Nicaea (modern Iznik), Byzantine Empire",
+    "location_lat": 40.43,
+    "location_lon": 29.72,
+    "main_actor": "Empress Irene (regent for Constantine VI) and Patriarch Tarasios of Constantinople",
+    "description": "The Second Council of Nicaea (October 787), the seventh and last ecumenical council recognised by both Catholic and Orthodox Churches, restored the veneration of icons after sixty years of Byzantine iconoclasm (726-787). The council, convened by the empress-regent Irene, distinguished between latreia (worship, due to God alone) and proskunesis/timia (veneration, due to icons as representations of sacred persons), and anathematised the iconoclast councils of 754 and 815. The theological settlement established that images transmit holiness through resemblance and that their destruction constitutes heresy. The council's decisions shaped the visual culture of Eastern Orthodox Christianity permanently and influenced the Catholic theology of sacred images, though Charlemagne's court initially rejected the council's findings (Libri Carolini, ~790s).",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The iconoclasm controversy was not merely a theological dispute: it involved state-sponsored destruction of religious art, persecution of icon-venerating monks (particularly under Constantine V, who executed the monk Stephen the Younger in 764), and the political-military entanglement of imperial policy with frontier defense and Arab cultural challenge. The restoration of icons under Irene was also a political act -- Irene subsequently blinded and deposed her own son Constantine VI to secure power.",
+    "sources": [
+      {
+        "citation": "Acta Conciliorum Oecumenicorum, Series Secunda, vol. III (Concilium Nicaenum II), ed. Lamberz (2008) (primary, 787 CE).",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Brubaker, L. & Haldon, J. (2011). Byzantium in the Iconoclast Era, c. 680-850: A History. Cambridge University Press.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "entity_links": [
+      {
+        "entity_name_original": "Imperium Romanum Orientale",
+        "role": "MAIN_ACTOR",
+        "notes": "Byzantine imperial-ecclesiastical council restores icon veneration"
+      }
+    ]
+  },
+  {
+    "name_original": "Lex Salica et Lex Visigothorum",
+    "name_original_lang": "lat",
+    "event_type": "FOUNDING_STATE",
+    "year": 568,
+    "year_end": null,
+    "month": null,
+    "day": null,
+    "date_precision": "YEAR",
+    "location_name": "Cividale del Friuli, then Pavia; northern Italy",
+    "location_lat": 45.19,
+    "location_lon": 9.16,
+    "main_actor": "Alboin, king of the Lombards, with allied Gepid, Saxon, and Avar contingents",
+    "description": "In spring 568 CE the Lombard king Alboin led his people, together with Gepid remnants, Saxon bands, and other groups, from Pannonia across the Julian Alps into northern Italy, exploiting the power vacuum left by the devastating Gothic War (535-554). Within three years the Lombards controlled most of the Po Valley and established a kingdom with its capital eventually at Pavia. The invasion permanently fractured the political unity of Italy: the Lombard kingdom in the north, the Duchy of Benevento in the south, and the Byzantine Exarchate of Ravenna and Duchy of Rome in between. This tripartite division shaped Italian political geography until unification in 1861. Paul the Deacon (Historia Langobardorum, ~790s) is the principal narrative source.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Lombard invasion is sometimes softened as a 'migration' in Italian historiography to avoid the implication of violence against the Italic Roman population. Archaeological evidence (abandoned villas, destruction layers, disruption of settlement patterns) and textual evidence (Gregory the Great's letters, Paul the Deacon) confirm substantial violence and displacement, particularly in the initial decades. The distinction between 'migration' and 'invasion' is a loaded historiographic choice.",
+    "sources": [
+      {
+        "citation": "Paul the Deacon, Historia Langobardorum (primary, ~790s CE).",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Christie, N. (1995). The Lombards: The Ancient Longobards. Blackwell.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "entity_links": [
+      {
+        "entity_name_original": "Regnum Langobardorum",
+        "role": "FOUNDED",
+        "notes": "Lombard Kingdom of Italy founded by Alboin"
+      }
+    ]
+  }
+]

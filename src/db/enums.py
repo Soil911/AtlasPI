@@ -73,6 +73,9 @@ class EventType(enum.StrEnum):
     ETHNIC_CLEANSING = "ETHNIC_CLEANSING"
     MASSACRE = "MASSACRE"
     DEPORTATION = "DEPORTATION"
+    # Transizioni di stato / demografiche
+    MIGRATION = "MIGRATION"
+    COLLAPSE = "COLLAPSE"
     # Disastri / crisi
     FAMINE = "FAMINE"
     EPIDEMIC = "EPIDEMIC"

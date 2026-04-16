@@ -58,10 +58,12 @@ class TestDataCompleteness:
         assert span >= 3000, f"Copertura temporale solo {span} anni"
 
     def test_all_sources_have_type(self, client):
+        from src.db.enums import SourceType
+        valid_types = {st.value for st in SourceType}
         r = client.get("/v1/entities?limit=100")
         for e in r.json()["entities"]:
             for s in e["sources"]:
-                assert s["source_type"] in ("primary", "secondary", "academic"), (
+                assert s["source_type"] in valid_types, (
                     f"'{e['name_original']}': fonte '{s['citation'][:30]}...' "
                     f"con tipo invalido '{s['source_type']}'"
                 )
