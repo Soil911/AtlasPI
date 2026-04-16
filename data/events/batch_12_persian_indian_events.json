@@ -1,6 +1,6 @@
 [
   {
-    "name_original": "\u0645\u0639\u0631\u06a9\u0647\u0654 \u06af\u0627\u0648\u06af\u0627\u0645\u0644",
+    "name_original": "معرکهٔ گاوگامل",
     "name_original_lang": "fa",
     "event_type": "BATTLE",
     "year": -331,
@@ -17,10 +17,10 @@
     "status": "confirmed",
     "known_silence": false,
     "silence_reason": null,
-    "ethical_notes": "The burning of Persepolis (330 BCE) \u2014 whether a drunken act or deliberate policy \u2014 destroyed irreplaceable Achaemenid archives, art, and administrative records. Greek sources frame the destruction as revenge for Xerxes' burning of Athens (480 BCE); Persian and modern Iranian historiography treats it as cultural vandalism. Alexander's conquest is often romanticized in Western tradition ('Alexander the Great'); Iranian tradition remembers him as Iskandar-e Gojastak ('the accursed Alexander'). Both framings are present in AtlasPI.",
+    "ethical_notes": "The burning of Persepolis (330 BCE) — whether a drunken act or deliberate policy — destroyed irreplaceable Achaemenid archives, art, and administrative records. Greek sources frame the destruction as revenge for Xerxes' burning of Athens (480 BCE); Persian and modern Iranian historiography treats it as cultural vandalism. Alexander's conquest is often romanticized in Western tradition ('Alexander the Great'); Iranian tradition remembers him as Iskandar-e Gojastak ('the accursed Alexander'). Both framings are present in AtlasPI.",
     "entity_links": [
       {
-        "entity_name_original": "\u0647\u062e\u0627\u0645\u0646\u0634\u06cc\u0627\u0646",
+        "entity_name_original": "هخامنشیان",
         "role": "DISSOLVED",
         "notes": "Effective end of Achaemenid military resistance; Darius III murdered 330 BCE"
       }
@@ -36,10 +36,15 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "month": 10,
+    "day": 1,
+    "date_precision": "DAY",
+    "iso_date": "-0331-10-01",
+    "calendar_note": "Proleptic Gregorian; original calendar uncertain"
   },
   {
-    "name_original": "\u0646\u0628\u0631\u062f \u0647\u0631\u0645\u0632\u062f\u06af\u0627\u0646",
+    "name_original": "نبرد هرمزدگان",
     "name_original_lang": "fa",
     "event_type": "BATTLE",
     "year": 224,
@@ -59,12 +64,12 @@
     "ethical_notes": "Sasanian sources (the Karnamag-i Ardashir-i Papakan, a later romance) frame the transition as legitimate restoration of 'true' Iranian kingship after Arsacid 'decline.' Arsacid-period sources are almost entirely lost; we depend on Sasanian propaganda and later Islamic-era compilations (al-Tabari). The Arsacid perspective on their own overthrow is a known silence in the historical record.",
     "entity_links": [
       {
-        "entity_name_original": "\u0627\u0634\u06a9\u0627\u0646\u06cc\u0627\u0646",
+        "entity_name_original": "اشکانیان",
         "role": "DISSOLVED",
         "notes": "End of the Arsacid/Parthian dynasty after 470 years"
       },
       {
-        "entity_name_original": "\u0633\u0627\u0633\u0627\u0646\u06cc\u0627\u0646",
+        "entity_name_original": "ساسانیان",
         "role": "RESULTANT",
         "notes": "Sasanian Empire founded; Ardashir crowned shahanshah at Ctesiphon"
       }
@@ -76,14 +81,19 @@
         "url": null
       },
       {
-        "citation": "Wieseh\u00f6fer, J. (2001). Ancient Persia from 550 BC to 650 AD. Trans. A. Azodi. I.B. Tauris.",
+        "citation": "Wiesehöfer, J. (2001). Ancient Persia from 550 BC to 650 AD. Trans. A. Azodi. I.B. Tauris.",
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "month": 4,
+    "day": 28,
+    "date_precision": "DAY",
+    "iso_date": "0224-04-28",
+    "calendar_note": "Julian calendar; Gregorian equivalent may differ"
   },
   {
-    "name_original": "\u0645\u0639\u0631\u0643\u0629 \u0627\u0644\u0642\u0627\u062f\u0633\u064a\u0629",
+    "name_original": "معركة القادسية",
     "name_original_lang": "ar",
     "event_type": "CONQUEST",
     "year": 636,
@@ -96,26 +106,26 @@
     "casualties_low": 8000,
     "casualties_high": 30000,
     "casualties_source": "al-Tabari, History of the Prophets and Kings (primary, with typical inflation of enemy losses). Rostam Farrokhzad killed in the battle. Modern estimates vary widely.",
-    "confidence_score": 0.80,
+    "confidence_score": 0.8,
     "status": "confirmed",
     "known_silence": false,
     "silence_reason": null,
     "ethical_notes": "The Arab conquest of Iran (636-651) ended Zoroastrian political sovereignty and began a gradual but coerced Islamization process. Zoroastrian temples were destroyed or converted; the jizya tax on non-Muslims created sustained economic pressure to convert. The Zoroastrian community declined from a majority to a small minority over 300 years. Modern Iranian nationalism (especially under the Pahlavis) framed al-Qadisiyyah as a national catastrophe; Saddam Hussein instrumentalized the same battle name during the Iran-Iraq War (1980-88, 'Qadisiyyat Saddam'), weaponizing Arab-Persian ethnic framing. Both instrumentalizations are documented here.",
     "entity_links": [
       {
-        "entity_name_original": "\u0633\u0627\u0633\u0627\u0646\u06cc\u0627\u0646",
+        "entity_name_original": "ساسانیان",
         "role": "DISSOLVED",
         "notes": "Effective end of Sasanian control of Mesopotamia; dynasty falls by 651"
       },
       {
-        "entity_name_original": "\u0627\u0644\u062e\u0644\u0627\u0641\u0629 \u0627\u0644\u0631\u0627\u0634\u062f\u0629",
+        "entity_name_original": "الخلافة الراشدة",
         "role": "MAIN_ACTOR",
         "notes": "Rashidun caliphate conquers the Sasanian heartland"
       }
     ],
     "sources": [
       {
-        "citation": "al-Tabari (d. 923). \u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0631\u0633\u0644 \u0648\u0627\u0644\u0645\u0644\u0648\u0643 (History of the Prophets and Kings), vol. XII. Eng. tr. Y. Friedmann, SUNY Press 1992.",
+        "citation": "al-Tabari (d. 923). تاريخ الرسل والملوك (History of the Prophets and Kings), vol. XII. Eng. tr. Y. Friedmann, SUNY Press 1992.",
         "source_type": "primary",
         "url": null
       },
@@ -124,10 +134,14 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "month": 11,
+    "date_precision": "MONTH",
+    "iso_date": "0636-11-00",
+    "calendar_note": "Julian calendar; Gregorian equivalent may differ"
   },
   {
-    "name_original": "\u0ca4\u0cbe\u0cb3\u0cbf\u0c95\u0ccb\u0c9f\u0cc6 \u0caf\u0cc1\u0ca6\u0ccd\u0ca7",
+    "name_original": "ತಾಳಿಕೋಟೆ ಯುದ್ಧ",
     "name_original_lang": "kn",
     "event_type": "BATTLE",
     "year": 1565,
@@ -136,7 +150,7 @@
     "location_lat": 16.4,
     "location_lon": 76.3,
     "main_actor": "Allied Deccan Sultanates (Bijapur, Ahmadnagar, Golconda, Bidar)",
-    "description": "On 23 January 1565, the allied forces of the Deccan Sultanates (Adil Shahi of Bijapur, Nizam Shahi of Ahmadnagar, Qutb Shahi of Golconda, and Barid Shahi of Bidar) defeated the Vijayanagara Empire at the Battle of Talikota (Rakkasa-Tangadi). The Vijayanagara king Aliya Rama Raya was captured and beheaded on the battlefield. The allied armies subsequently sacked Hampi, the Vijayanagara capital, in a destruction lasting months \u2014 temples, palaces, and markets were systematically demolished.",
+    "description": "On 23 January 1565, the allied forces of the Deccan Sultanates (Adil Shahi of Bijapur, Nizam Shahi of Ahmadnagar, Qutb Shahi of Golconda, and Barid Shahi of Bidar) defeated the Vijayanagara Empire at the Battle of Talikota (Rakkasa-Tangadi). The Vijayanagara king Aliya Rama Raya was captured and beheaded on the battlefield. The allied armies subsequently sacked Hampi, the Vijayanagara capital, in a destruction lasting months — temples, palaces, and markets were systematically demolished.",
     "casualties_low": 100000,
     "casualties_high": 200000,
     "casualties_source": "Robert Sewell, A Forgotten Empire (1900), drawing on Portuguese sources (Fernao Nuniz, Domingo Paes). Figures likely exaggerated but the scale of destruction at Hampi is archaeologically attested.",
@@ -144,7 +158,7 @@
     "status": "confirmed",
     "known_silence": false,
     "silence_reason": null,
-    "ethical_notes": "The destruction of Hampi \u2014 one of the largest cities in the world at the time, with a population estimated at 500,000 \u2014 is sometimes framed in Hindu-nationalist historiography as a purely religious conflict (Muslim vs. Hindu). The reality is more complex: Vijayanagara employed Muslim generals and administrators; the Deccan Sultanates had Hindu vassals and commanders. The alliance was political-territorial, not purely confessional. However, the scale of destruction of Hindu temples at Hampi is undeniable and archaeologically documented. Both the sectarian oversimplification and the denial of religious dimension are distortions.",
+    "ethical_notes": "The destruction of Hampi — one of the largest cities in the world at the time, with a population estimated at 500,000 — is sometimes framed in Hindu-nationalist historiography as a purely religious conflict (Muslim vs. Hindu). The reality is more complex: Vijayanagara employed Muslim generals and administrators; the Deccan Sultanates had Hindu vassals and commanders. The alliance was political-territorial, not purely confessional. However, the scale of destruction of Hindu temples at Hampi is undeniable and archaeologically documented. Both the sectarian oversimplification and the denial of religious dimension are distortions.",
     "entity_links": [],
     "sources": [
       {
@@ -153,14 +167,19 @@
         "url": null
       },
       {
-        "citation": "Eaton, R. (2005). A Social History of the Deccan, 1300\u20131761. Cambridge University Press.",
+        "citation": "Eaton, R. (2005). A Social History of the Deccan, 1300–1761. Cambridge University Press.",
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "month": 1,
+    "day": 23,
+    "date_precision": "DAY",
+    "iso_date": "1565-01-23",
+    "calendar_note": "Julian calendar; Gregorian equivalent may differ"
   },
   {
-    "name_original": "\u092a\u093e\u0928\u0940\u092a\u0924 \u0915\u093e \u0924\u0940\u0938\u0930\u093e \u092f\u0941\u0926\u094d\u0927",
+    "name_original": "पानीपत का तीसरा युद्ध",
     "name_original_lang": "hi",
     "event_type": "BATTLE",
     "year": 1761,
@@ -177,10 +196,10 @@
     "status": "confirmed",
     "known_silence": false,
     "silence_reason": null,
-    "ethical_notes": "The battle was followed by mass enslavement of Maratha camp followers, women, and children by Afghan forces. Afghan cavalry pursuit of fleeing Marathas continued for days. The battle is instrumentalized in modern Indian politics: Hindu nationalists frame it as a Muslim-Hindu conflict (ignoring that Muslim Rohilla and Awadh forces fought on the Afghan side, and the Maratha army included Muslim artilleryman Ibrahim Khan Gardi). The Maratha defeat opened India to British colonial conquest \u2014 a consequence neither side intended or foresaw.",
+    "ethical_notes": "The battle was followed by mass enslavement of Maratha camp followers, women, and children by Afghan forces. Afghan cavalry pursuit of fleeing Marathas continued for days. The battle is instrumentalized in modern Indian politics: Hindu nationalists frame it as a Muslim-Hindu conflict (ignoring that Muslim Rohilla and Awadh forces fought on the Afghan side, and the Maratha army included Muslim artilleryman Ibrahim Khan Gardi). The Maratha defeat opened India to British colonial conquest — a consequence neither side intended or foresaw.",
     "entity_links": [
       {
-        "entity_name_original": "\u092e\u0930\u093e\u0920\u093e \u0938\u093e\u092e\u094d\u0930\u093e\u091c\u094d\u092f",
+        "entity_name_original": "मराठा साम्राज्य",
         "role": "PARTICIPANT",
         "notes": "Catastrophic defeat ending Maratha bid for pan-Indian hegemony"
       }
@@ -196,10 +215,14 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "month": 1,
+    "day": 14,
+    "date_precision": "DAY",
+    "iso_date": "1761-01-14"
   },
   {
-    "name_original": "\u09aa\u09b2\u09be\u09b6\u09c0\u09b0 \u09af\u09c1\u09a6\u09cd\u09a7",
+    "name_original": "পলাশীর যুদ্ধ",
     "name_original_lang": "bn",
     "event_type": "BATTLE",
     "year": 1757,
@@ -212,11 +235,11 @@
     "casualties_low": 50,
     "casualties_high": 500,
     "casualties_source": "Clive's dispatches and Orme, R. (1763). History of the Military Transactions of the British Nation in Indostan. Company losses: 22 killed, ~50 wounded. Nawab's army losses minimal due to non-engagement of most units.",
-    "confidence_score": 0.90,
+    "confidence_score": 0.9,
     "status": "confirmed",
     "known_silence": false,
     "silence_reason": null,
-    "ethical_notes": "Plassey was less a battle than a corporate coup enabled by bribery and betrayal. Clive's subsequent plunder of Bengal's treasury (estimated at \u00a32.5 million in 1757 currency, equivalent to hundreds of millions today) and the Company's extractive revenue policies directly contributed to the Bengal Famine of 1770 (estimated 10 million dead, ~one-third of Bengal's population). The Company's 'diwani' revenue collection rights obtained in 1765 formalized colonial extraction. Plassey marks the beginning of British colonial domination of the Indian subcontinent \u2014 a process that would last 190 years and affect over 300 million people.",
+    "ethical_notes": "Plassey was less a battle than a corporate coup enabled by bribery and betrayal. Clive's subsequent plunder of Bengal's treasury (estimated at £2.5 million in 1757 currency, equivalent to hundreds of millions today) and the Company's extractive revenue policies directly contributed to the Bengal Famine of 1770 (estimated 10 million dead, ~one-third of Bengal's population). The Company's 'diwani' revenue collection rights obtained in 1765 formalized colonial extraction. Plassey marks the beginning of British colonial domination of the Indian subcontinent — a process that would last 190 years and affect over 300 million people.",
     "entity_links": [],
     "sources": [
       {
@@ -229,7 +252,11 @@
         "source_type": "primary",
         "url": null
       }
-    ]
+    ],
+    "month": 6,
+    "day": 23,
+    "date_precision": "DAY",
+    "iso_date": "1757-06-23"
   },
   {
     "name_original": "Delhi Durbar of 1877",
@@ -258,14 +285,18 @@
         "url": null
       },
       {
-        "citation": "Davis, M. (2001). Late Victorian Holocausts: El Ni\u00f1o Famines and the Making of the Third World. Verso.",
+        "citation": "Davis, M. (2001). Late Victorian Holocausts: El Niño Famines and the Making of the Third World. Verso.",
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "month": 1,
+    "day": 1,
+    "date_precision": "DAY",
+    "iso_date": "1877-01-01"
   },
   {
-    "name_original": "\u0a1c\u0a32\u0a3f\u0a06\u0a02\u0a35\u0a3e\u0a32\u0a3e \u0a2c\u0a3e\u0a17\u0a3c \u0a15\u0a24\u0a32\u0a47\u0a06\u0a2e",
+    "name_original": "ਜਲਿਆਂਵਾਲਾ ਬਾਗ਼ ਕਤਲੇਆਮ",
     "name_original_lang": "pa",
     "event_type": "MASSACRE",
     "year": 1919,
@@ -282,7 +313,7 @@
     "status": "confirmed",
     "known_silence": false,
     "silence_reason": null,
-    "ethical_notes": "Dyer later testified to the Hunter Commission that he intended to produce a 'moral effect' and would have used machine guns if he could have got them into the garden. He was censured but not court-martialed; the Morning Post newspaper raised \u00a326,000 for him as 'the man who saved India.' The massacre radicalized a generation of Indian nationalists \u2014 Jawaharlal Nehru, Rabindranath Tagore (who returned his knighthood), and Udham Singh (who assassinated Michael O'Dwyer, the Lieutenant Governor of Punjab, in London in 1940) all cited Jallianwala Bagh as a turning point. The British government expressed 'regret' (Theresa May, 2019) but has never formally apologized. Sikh memory is particularly acute: the massacre occurred during the Baisakhi festival, adjacent to the Harmandir Sahib (Golden Temple).",
+    "ethical_notes": "Dyer later testified to the Hunter Commission that he intended to produce a 'moral effect' and would have used machine guns if he could have got them into the garden. He was censured but not court-martialed; the Morning Post newspaper raised £26,000 for him as 'the man who saved India.' The massacre radicalized a generation of Indian nationalists — Jawaharlal Nehru, Rabindranath Tagore (who returned his knighthood), and Udham Singh (who assassinated Michael O'Dwyer, the Lieutenant Governor of Punjab, in London in 1940) all cited Jallianwala Bagh as a turning point. The British government expressed 'regret' (Theresa May, 2019) but has never formally apologized. Sikh memory is particularly acute: the massacre occurred during the Baisakhi festival, adjacent to the Harmandir Sahib (Golden Temple).",
     "entity_links": [],
     "sources": [
       {
@@ -295,10 +326,14 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "month": 4,
+    "day": 13,
+    "date_precision": "DAY",
+    "iso_date": "1919-04-13"
   },
   {
-    "name_original": "\u0627\u0646\u0642\u0644\u0627\u0628 \u0627\u0633\u0644\u0627\u0645\u06cc \u0627\u06cc\u0631\u0627\u0646",
+    "name_original": "انقلاب اسلامی ایران",
     "name_original_lang": "fa",
     "event_type": "REVOLUTION",
     "year": 1979,
@@ -311,19 +346,19 @@
     "casualties_low": 2500,
     "casualties_high": 60000,
     "casualties_source": "Abrahamian, E. (2008). A History of Modern Iran. Low estimate: deaths during the revolution itself (1978-79). High estimate includes post-revolution executions (1979-1988), particularly the 1988 prison massacres.",
-    "confidence_score": 0.90,
+    "confidence_score": 0.9,
     "status": "confirmed",
     "known_silence": false,
     "silence_reason": null,
     "ethical_notes": "The revolution was a broad coalition (Islamist, Marxist, liberal-nationalist) that Khomeini's faction subsequently monopolized by violent purge: mass executions of Mojahedin-e Khalq, Tudeh Party, Kurdish separatists, and Baha'is in 1981-88. The 1988 prison massacres (estimated 4,000-30,000 executed per Amnesty International and UN Special Rapporteur) remain officially unacknowledged by the Islamic Republic. The revolution's aftermath includes the hostage crisis (1979-81), the Iran-Iraq War (1980-88, ~500,000 Iranian dead), and ongoing systematic suppression of women's rights, religious minorities (especially Baha'i), ethnic minorities (Kurds, Baluch, Arabs), and political dissent. The Mahsa Amini protests of 2022-23 demonstrated continued popular resistance to theocratic rule.",
     "entity_links": [
       {
-        "entity_name_original": "\u062f\u0648\u0644\u062a \u0634\u0627\u0647\u0646\u0634\u0627\u0647\u06cc \u0627\u06cc\u0631\u0627\u0646",
+        "entity_name_original": "دولت شاهنشاهی ایران",
         "role": "DISSOLVED",
         "notes": "Pahlavi monarchy ended; Shah fled 16 January 1979"
       },
       {
-        "entity_name_original": "\u062c\u0645\u0647\u0648\u0631\u06cc \u0627\u0633\u0644\u0627\u0645\u06cc \u0627\u06cc\u0631\u0627\u0646",
+        "entity_name_original": "جمهوری اسلامی ایران",
         "role": "RESULTANT",
         "notes": "Islamic Republic proclaimed 1 April 1979 by referendum"
       }
@@ -339,6 +374,10 @@
         "source_type": "academic",
         "url": null
       }
-    ]
+    ],
+    "month": 1,
+    "day": 16,
+    "date_precision": "DAY",
+    "iso_date": "1979-01-16"
   }
 ]

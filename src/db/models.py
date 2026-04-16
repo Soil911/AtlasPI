@@ -21,6 +21,7 @@ from src.db.database import Base
 from src.db.enums import (  # noqa: F401
     ChainType,
     CityType,
+    DatePrecision,
     EntityStatus,
     EventRole,
     EventType,
@@ -127,12 +128,28 @@ class TerritoryChange(Base):
         Index("ix_territory_changes_entity_id", "entity_id"),
         Index("ix_territory_changes_year", "year"),
         Index("ix_territory_changes_change_type", "change_type"),
+        # v6.14: date precision constraints.
+        CheckConstraint(
+            "month IS NULL OR (month >= 1 AND month <= 12)",
+            name="ck_tc_month_range",
+        ),
+        CheckConstraint(
+            "day IS NULL OR (day >= 1 AND day <= 31)",
+            name="ck_tc_day_range",
+        ),
     )
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     entity_id: Mapped[int] = mapped_column(Integer, ForeignKey("geo_entities.id"), nullable=False)
 
     year: Mapped[int] = mapped_column(Integer, nullable=False)
+    # ─── v6.14: date precision layer ─────────────────────────────────────
+    month: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    day: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    date_precision: Mapped[str | None] = mapped_column(String(20), nullable=True)
+    iso_date: Mapped[str | None] = mapped_column(String(20), nullable=True)
+    calendar_note: Mapped[str | None] = mapped_column(String(500), nullable=True)
+
     region: Mapped[str] = mapped_column(String(500), nullable=False)
     # ETHICS: tipi definiti in ETHICS-002 — vedi src/db/enums.py
     change_type: Mapped[str] = mapped_column(String(30), nullable=False)
@@ -185,6 +202,8 @@ class HistoricalEvent(Base):
         Index("ix_historical_events_status", "status"),
         Index("ix_historical_events_confidence", "confidence_score"),
         Index("ix_historical_events_known_silence", "known_silence"),
+        # v6.14: composite index for "on this day" queries.
+        Index("ix_historical_events_month_day", "month", "day"),
         CheckConstraint(
             "confidence_score >= 0.0 AND confidence_score <= 1.0",
             name="ck_events_confidence_range",
@@ -192,6 +211,15 @@ class HistoricalEvent(Base):
         CheckConstraint(
             "casualties_low IS NULL OR casualties_high IS NULL OR casualties_low <= casualties_high",
             name="ck_events_casualties_range",
+        ),
+        # v6.14: date precision constraints.
+        CheckConstraint(
+            "month IS NULL OR (month >= 1 AND month <= 12)",
+            name="ck_events_month_range",
+        ),
+        CheckConstraint(
+            "day IS NULL OR (day >= 1 AND day <= 31)",
+            name="ck_events_day_range",
         ),
     )
 
@@ -206,6 +234,17 @@ class HistoricalEvent(Base):
 
     year: Mapped[int] = mapped_column(Integer, nullable=False)
     year_end: Mapped[int | None] = mapped_column(Integer, nullable=True)
+
+    # ─── v6.14: date precision layer ─────────────────────────────────────
+    # Granularità sub-annuale opzionale. month/day nullable — se NULL,
+    # l'evento ha solo precisione annuale (backward-compatible).
+    month: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    day: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    # ETHICS: per BCE, date_precision + calendar_note esplicitano
+    # che si usa il prolettico gregoriano e il calendario originale è diverso.
+    date_precision: Mapped[str | None] = mapped_column(String(20), nullable=True)
+    iso_date: Mapped[str | None] = mapped_column(String(20), nullable=True)
+    calendar_note: Mapped[str | None] = mapped_column(String(500), nullable=True)
 
     location_name: Mapped[str | None] = mapped_column(String(500), nullable=True)
     location_lat: Mapped[float | None] = mapped_column(Float, nullable=True)

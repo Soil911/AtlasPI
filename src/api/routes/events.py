@@ -1,9 +1,11 @@
-"""Endpoint per eventi storici — v6.3.
+"""Endpoint per eventi storici — v6.3 + v6.14 date precision.
 
-GET  /v1/events                     list + filter (year, event_type, status, known_silence)
-GET  /v1/events/{id}                detail
-GET  /v1/entities/{id}/events       events linked to an entity
-GET  /v1/events/types               enumera EventType (descrizione per ciascuno)
+GET  /v1/events                          list + filter (year, event_type, status, known_silence, month, day)
+GET  /v1/events/types                    enumera EventType
+GET  /v1/events/on-this-day/{mm_dd}      eventi che cadono in un dato giorno/mese
+GET  /v1/events/at-date/{date_str}       eventi in una data esatta (supporta BCE)
+GET  /v1/events/{id}                     detail
+GET  /v1/entities/{id}/events            events linked to an entity
 
 ETHICS-007: ogni evento espone main_actor + event_entity_links.role in
 voce attiva. Terminologia accademica (GENOCIDE, COLONIAL_VIOLENCE)
@@ -18,7 +20,9 @@ from __future__ import annotations
 
 import logging
 
-from fastapi import APIRouter, Depends, Query, Response
+import re
+
+from fastapi import APIRouter, Depends, HTTPException, Path, Query, Response
 from sqlalchemy import or_
 from sqlalchemy.orm import Session, joinedload
 
@@ -38,7 +42,12 @@ class EventNotFoundError(AtlasError):
 
 
 def _event_summary(e: HistoricalEvent) -> dict:
-    """Rappresentazione compatta di un evento (usata nelle liste)."""
+    """Rappresentazione compatta di un evento (usata nelle liste).
+
+    v6.14: include i campi di date precision (month, day, date_precision,
+    iso_date) anche nel summary — consente al client di ordinare/filtrare
+    senza fetch del detail.
+    """
     return {
         "id": e.id,
         "name_original": e.name_original,
@@ -46,6 +55,11 @@ def _event_summary(e: HistoricalEvent) -> dict:
         "event_type": e.event_type,
         "year": e.year,
         "year_end": e.year_end,
+        # v6.14 date precision fields.
+        "month": e.month,
+        "day": e.day,
+        "date_precision": e.date_precision,
+        "iso_date": e.iso_date,
         "location_name": e.location_name,
         "main_actor": e.main_actor,
         "status": e.status,
@@ -55,10 +69,16 @@ def _event_summary(e: HistoricalEvent) -> dict:
 
 
 def _event_detail(e: HistoricalEvent) -> dict:
-    """Rappresentazione completa di un evento (singola entità)."""
+    """Rappresentazione completa di un evento (singola entità).
+
+    v6.14: aggiunge calendar_note al detail (non nel summary perché è
+    potenzialmente lungo e serve solo a chi ispeziona un singolo evento).
+    """
     base = _event_summary(e)
     base.update(
         {
+            # v6.14: calendar_note solo nel detail.
+            "calendar_note": e.calendar_note,
             "location_lat": e.location_lat,
             "location_lon": e.location_lon,
             "description": e.description,
@@ -106,6 +126,9 @@ def list_events(
     event_type: str | None = Query(None, description="Filtra per EventType (es. BATTLE, GENOCIDE)"),
     status: str | None = Query(None, description="confirmed / uncertain / disputed"),
     known_silence: bool | None = Query(None, description="Solo eventi con silenzio documentato"),
+    # v6.14: date precision filters.
+    month: int | None = Query(None, ge=1, le=12, description="Filtra per mese (1-12)"),
+    day: int | None = Query(None, ge=1, le=31, description="Filtra per giorno (1-31)"),
     limit: int = Query(50, ge=1, le=500),
     offset: int = Query(0, ge=0),
     db: Session = Depends(get_db),
@@ -125,6 +148,11 @@ def list_events(
         q = q.filter(HistoricalEvent.status == status)
     if known_silence is not None:
         q = q.filter(HistoricalEvent.known_silence == known_silence)
+    # v6.14: sub-annual filters.
+    if month is not None:
+        q = q.filter(HistoricalEvent.month == month)
+    if day is not None:
+        q = q.filter(HistoricalEvent.day == day)
 
     total = q.count()
     results = q.order_by(HistoricalEvent.year, HistoricalEvent.id).offset(offset).limit(limit).all()
@@ -195,6 +223,117 @@ def list_event_types(response: Response):
         "event_roles": [
             {"role": r.value} for r in EventRole
         ],
+    }
+
+
+# ─── v6.14: Date Precision endpoints ────────────────────────────────────────
+
+_MM_DD_RE = re.compile(r"^\d{2}-\d{2}$")
+_DATE_RE = re.compile(r"^-?\d{4}-\d{2}-\d{2}$")
+
+
+@router.get(
+    "/v1/events/on-this-day/{mm_dd}",
+    summary="Eventi accaduti in un giorno dell'anno",
+    description=(
+        "Restituisce gli eventi storici con month/day corrispondenti, ordinati per anno. "
+        "Formato path: MM-DD (es. 07-14 per il 14 luglio). "
+        "Restituisce lista vuota (non 404) se nessun evento coincide."
+    ),
+)
+def events_on_this_day(
+    mm_dd: str = Path(..., description="Mese-giorno in formato MM-DD", pattern=r"^\d{2}-\d{2}$"),
+    response: Response = None,
+    db: Session = Depends(get_db),
+):
+    if not _MM_DD_RE.match(mm_dd):
+        raise HTTPException(status_code=422, detail="Formato richiesto: MM-DD (es. 07-14)")
+
+    parts = mm_dd.split("-")
+    m, d = int(parts[0]), int(parts[1])
+
+    if m < 1 or m > 12:
+        raise HTTPException(status_code=422, detail=f"Mese non valido: {m} (1-12)")
+    if d < 1 or d > 31:
+        raise HTTPException(status_code=422, detail=f"Giorno non valido: {d} (1-31)")
+
+    results = (
+        db.query(HistoricalEvent)
+        .filter(HistoricalEvent.month == m, HistoricalEvent.day == d)
+        .order_by(HistoricalEvent.year)
+        .all()
+    )
+
+    response.headers["Cache-Control"] = "public, max-age=3600"
+
+    return {
+        "month": m,
+        "day": d,
+        "total": len(results),
+        "events": [_event_summary(e) for e in results],
+    }
+
+
+@router.get(
+    "/v1/events/at-date/{date_str}",
+    summary="Eventi in una data esatta",
+    description=(
+        "Restituisce gli eventi in una data esatta ISO-like. "
+        "Formato: YYYY-MM-DD (es. 1789-07-14) o -YYYY-MM-DD per BCE "
+        "(es. -0331-10-01 per il 1 ottobre 331 a.C.). "
+        "Restituisce lista vuota (non 404) se nessun evento coincide."
+    ),
+)
+def events_at_date(
+    date_str: str = Path(..., description="Data in formato [-]YYYY-MM-DD"),
+    response: Response = None,
+    db: Session = Depends(get_db),
+):
+    if not _DATE_RE.match(date_str):
+        raise HTTPException(
+            status_code=422,
+            detail="Formato richiesto: YYYY-MM-DD o -YYYY-MM-DD per BCE (es. -0331-10-01)",
+        )
+
+    # Parse year (may be negative for BCE), month, day.
+    if date_str.startswith("-"):
+        # BCE: e.g. "-0331-10-01" → year=-331, month=10, day=1
+        rest = date_str[1:]  # "0331-10-01"
+        parts = rest.split("-")
+        year = -int(parts[0])
+        m = int(parts[1])
+        d = int(parts[2])
+    else:
+        parts = date_str.split("-")
+        year = int(parts[0])
+        m = int(parts[1])
+        d = int(parts[2])
+
+    if m < 1 or m > 12:
+        raise HTTPException(status_code=422, detail=f"Mese non valido: {m} (1-12)")
+    if d < 1 or d > 31:
+        raise HTTPException(status_code=422, detail=f"Giorno non valido: {d} (1-31)")
+
+    results = (
+        db.query(HistoricalEvent)
+        .filter(
+            HistoricalEvent.year == year,
+            HistoricalEvent.month == m,
+            HistoricalEvent.day == d,
+        )
+        .order_by(HistoricalEvent.id)
+        .all()
+    )
+
+    response.headers["Cache-Control"] = "public, max-age=3600"
+
+    return {
+        "date": date_str,
+        "year": year,
+        "month": m,
+        "day": d,
+        "total": len(results),
+        "events": [_event_summary(e) for e in results],
     }
 
 

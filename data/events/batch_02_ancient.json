@@ -19,12 +19,25 @@
     "silence_reason": null,
     "ethical_notes": "Cuneiform records of the sack survive mostly from Hittite royal inscriptions and later Babylonian chronicles written centuries after the event; the Babylonian perspective on the loss of Marduk's statue is preserved only in ritual laments.",
     "sources": [
-      {"citation": "Beckman, G. (2000). Hittite Chronology. Akkadica 119-120, 19-32.", "source_type": "academic", "url": null},
-      {"citation": "Telipinu Proclamation (CTH 19), Hittite royal edict (~1500 BCE).", "source_type": "primary", "url": null}
+      {
+        "citation": "Beckman, G. (2000). Hittite Chronology. Akkadica 119-120, 19-32.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Telipinu Proclamation (CTH 19), Hittite royal edict (~1500 BCE).",
+        "source_type": "primary",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "𒀀𒈬𒊒𒌝", "role": "AFFECTED", "notes": "Amurru/Babylonian sphere"}
-    ]
+      {
+        "entity_name_original": "𒀀𒈬𒊒𒌝",
+        "role": "AFFECTED",
+        "notes": "Amurru/Babylonian sphere"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "𒅀𒀸𒈠𒀜 𒄩𒄠𒈬𒊏𒁉",
@@ -46,10 +59,19 @@
     "silence_reason": null,
     "ethical_notes": "The code's explicit hierarchy of human worth by legal class is often softened in popular summaries; a slave's life was compensated monetarily while a free man's demanded retaliation.",
     "sources": [
-      {"citation": "Roth, M.T. (1997). Law Collections from Mesopotamia and Asia Minor. 2nd ed. SBL.", "source_type": "academic", "url": null},
-      {"citation": "Code of Hammurabi stele, Louvre Sb 8 (primary artifact).", "source_type": "primary", "url": null}
+      {
+        "citation": "Roth, M.T. (1997). Law Collections from Mesopotamia and Asia Minor. 2nd ed. SBL.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Code of Hammurabi stele, Louvre Sb 8 (primary artifact).",
+        "source_type": "primary",
+        "url": null
+      }
     ],
-    "entity_links": []
+    "entity_links": [],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "nꜣ n mrw Ḫwfw",
@@ -71,12 +93,25 @@
     "silence_reason": null,
     "ethical_notes": "Popular narratives of slave-built pyramids originate with Herodotus and were amplified in 19th-century biblical exegesis; current archaeological consensus points to rotational corvée labour from across Egypt.",
     "sources": [
-      {"citation": "Lehner, M. & Hawass, Z. (2017). Giza and the Pyramids. University of Chicago Press.", "source_type": "academic", "url": null},
-      {"citation": "Tallet, P. (2017). Les papyrus de la mer Rouge I: Le journal de Merer. IFAO.", "source_type": "primary", "url": null}
+      {
+        "citation": "Lehner, M. & Hawass, Z. (2017). Giza and the Pyramids. University of Chicago Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Tallet, P. (2017). Les papyrus de la mer Rouge I: Le journal de Merer. IFAO.",
+        "source_type": "primary",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Kemet", "role": "FOUNDED", "notes": "Monument of Old Kingdom state"}
-    ]
+      {
+        "entity_name_original": "Kemet",
+        "role": "FOUNDED",
+        "notes": "Monument of Old Kingdom state"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "हड़प्पा सभ्यता का पतन",
@@ -98,12 +133,24 @@
     "silence_reason": "The Indus script is undeciphered, so no indigenous textual record of the decline survives. All reconstructions depend on archaeology and paleoclimate proxies, leaving the lived experience of the collapse structurally silent.",
     "ethical_notes": "The 19th- and 20th-century Aryan-invasion framing served colonial-era racial categorisation; current scholarship has moved on but popular understanding still lags.",
     "sources": [
-      {"citation": "Giosan, L. et al. (2012). Fluvial landscapes of the Harappan civilization. PNAS 109(26).", "source_type": "academic", "url": "https://doi.org/10.1073/pnas.1112743109"},
-      {"citation": "Kenoyer, J.M. (1998). Ancient Cities of the Indus Valley Civilization. Oxford UP.", "source_type": "academic", "url": null}
+      {
+        "citation": "Giosan, L. et al. (2012). Fluvial landscapes of the Harappan civilization. PNAS 109(26).",
+        "source_type": "academic",
+        "url": "https://doi.org/10.1073/pnas.1112743109"
+      },
+      {
+        "citation": "Kenoyer, J.M. (1998). Ancient Cities of the Indus Valley Civilization. Oxford UP.",
+        "source_type": "academic",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "हड़प्पा / सिन्धु सभ्यता", "role": "DISSOLVED"}
-    ]
+      {
+        "entity_name_original": "हड़प्पा / सिन्धु सभ्यता",
+        "role": "DISSOLVED"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "aamu ḫꜣstjw / Sea Peoples",
@@ -125,12 +172,24 @@
     "silence_reason": "The Sea Peoples left no writing of their own; their identities, origins, and motives survive only through Egyptian propagandistic reliefs at Medinet Habu and a few Ugaritic letters written just before destruction. The collapse destroyed the very archives that could have explained it.",
     "ethical_notes": "The name 'Sea Peoples' is a modern scholarly construct coined by Emmanuel de Rougé in 1855; no ancient source uses a collective term. Using it risks reifying a heterogeneous phenomenon.",
     "sources": [
-      {"citation": "Cline, E.H. (2014). 1177 B.C.: The Year Civilization Collapsed. Princeton UP.", "source_type": "academic", "url": null},
-      {"citation": "Medinet Habu inscriptions of Ramesses III (Year 8, ~1177 BCE).", "source_type": "primary", "url": null}
+      {
+        "citation": "Cline, E.H. (2014). 1177 B.C.: The Year Civilization Collapsed. Princeton UP.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Medinet Habu inscriptions of Ramesses III (Year 8, ~1177 BCE).",
+        "source_type": "primary",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Kemet", "role": "VICTIM"}
-    ]
+      {
+        "entity_name_original": "Kemet",
+        "role": "VICTIM"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Πτῶσις Ἰλίου",
@@ -152,12 +211,24 @@
     "silence_reason": "The Trojan side of the conflict is entirely silent: no Wilusan archive has been recovered, and the Iliad is a Greek composition several centuries after the events, filtered through oral tradition. What the defenders thought, said, or recorded is lost.",
     "ethical_notes": "The romanticisation of the Trojan War in Western canon obscures that, archaeologically, we are looking at the extinction of a Bronze Age city whose population was killed, enslaved, or displaced.",
     "sources": [
-      {"citation": "Korfmann, M. (2004). Troia / Wilusa: General Background. Verlag Philipp von Zabern.", "source_type": "academic", "url": null},
-      {"citation": "Hittite text KUB 14.3 (Tawagalawa Letter), referencing Wilusa and Ahhiyawa.", "source_type": "primary", "url": null}
+      {
+        "citation": "Korfmann, M. (2004). Troia / Wilusa: General Background. Verlag Philipp von Zabern.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Hittite text KUB 14.3 (Tawagalawa Letter), referencing Wilusa and Ahhiyawa.",
+        "source_type": "primary",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Τροία / Wilusa", "role": "VICTIM"}
-    ]
+      {
+        "entity_name_original": "Τροία / Wilusa",
+        "role": "VICTIM"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "𓆎𓅱𓎡 𓈎𓂧𓈙",
@@ -179,12 +250,24 @@
     "silence_reason": null,
     "ethical_notes": "The Egyptian account is among the earliest documented examples of state victory-propaganda; reading only Ramesses' reliefs would give a wholly inverted picture of the actual outcome.",
     "sources": [
-      {"citation": "Kitchen, K.A. (1982). Pharaoh Triumphant: The Life and Times of Ramesses II. Aris & Phillips.", "source_type": "academic", "url": null},
-      {"citation": "Treaty of Kadesh, Egyptian and Hittite versions (c. 1259 BCE).", "source_type": "primary", "url": null}
+      {
+        "citation": "Kitchen, K.A. (1982). Pharaoh Triumphant: The Life and Times of Ramesses II. Aris & Phillips.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Treaty of Kadesh, Egyptian and Hittite versions (c. 1259 BCE).",
+        "source_type": "primary",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Kemet", "role": "MAIN_ACTOR"}
-    ]
+      {
+        "entity_name_original": "Kemet",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Conquista de Kemet por Kušu",
@@ -206,13 +289,28 @@
     "silence_reason": null,
     "ethical_notes": "19th- and early 20th-century European scholarship minimised the 25th Dynasty as an 'interruption'; current Nubiology (Török, Morkot) treats it as a fully legitimate pharaonic dynasty with Kush as the political centre.",
     "sources": [
-      {"citation": "Török, L. (1997). The Kingdom of Kush: Handbook of the Napatan-Meroitic Civilization. Brill.", "source_type": "academic", "url": null},
-      {"citation": "Victory Stele of Piye, Cairo Museum JE 48862 (c. -727).", "source_type": "primary", "url": null}
+      {
+        "citation": "Török, L. (1997). The Kingdom of Kush: Handbook of the Napatan-Meroitic Civilization. Brill.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Victory Stele of Piye, Cairo Museum JE 48862 (c. -727).",
+        "source_type": "primary",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Napata", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Kemet", "role": "VICTIM"}
-    ]
+      {
+        "entity_name_original": "Napata",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Kemet",
+        "role": "VICTIM"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Nabûna'id ana Tēma",
@@ -234,10 +332,19 @@
     "silence_reason": "The Marduk priesthood of Babylon effectively curated and suppressed records favourable to Nabonidus after his fall; the surviving Babylonian account is a hostile palimpsest written under Persian patronage, and Nabonidus's own perspective survives only in stelae recovered at Harran and Tayma.",
     "ethical_notes": "The Nabonidus case is a textbook example of damnatio memoriae preceded by political regime change and religious realignment; historiography must triangulate against non-Babylonian sources.",
     "sources": [
-      {"citation": "Beaulieu, P.-A. (1989). The Reign of Nabonidus, King of Babylon 556-539 B.C. Yale UP.", "source_type": "academic", "url": null},
-      {"citation": "Harran stelae H1 and H2 of Nabonidus (mid-6th century BCE).", "source_type": "primary", "url": null}
+      {
+        "citation": "Beaulieu, P.-A. (1989). The Reign of Nabonidus, King of Babylon 556-539 B.C. Yale UP.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Harran stelae H1 and H2 of Nabonidus (mid-6th century BCE).",
+        "source_type": "primary",
+        "url": null
+      }
     ],
-    "entity_links": []
+    "entity_links": [],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Θερμοπύλαι καὶ Σαλαμίς",
@@ -259,13 +366,28 @@
     "silence_reason": null,
     "ethical_notes": "The Persian perspective on the campaign is almost entirely absent from surviving records; Herodotus wrote for a Greek audience and the Achaemenid royal inscriptions do not dwell on the defeat.",
     "sources": [
-      {"citation": "Herodotus, Histories, Books VII-VIII. Loeb Classical Library.", "source_type": "primary", "url": null},
-      {"citation": "Strauss, B. (2004). The Battle of Salamis. Simon & Schuster.", "source_type": "academic", "url": null}
+      {
+        "citation": "Herodotus, Histories, Books VII-VIII. Loeb Classical Library.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Strauss, B. (2004). The Battle of Salamis. Simon & Schuster.",
+        "source_type": "academic",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Ἀθῆναι", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Xšāça", "role": "PARTICIPANT"}
-    ]
+      {
+        "entity_name_original": "Ἀθῆναι",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Xšāça",
+        "role": "PARTICIPANT"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Κατακτήσεις Ἀλεξάνδρου",
@@ -287,13 +409,28 @@
     "silence_reason": null,
     "ethical_notes": "Western historiography traditionally frames Alexander as civiliser; Persian and Zoroastrian tradition (preserved in later Pahlavi texts such as the Ardā Wīrāz-nāmag) remembers him as Alexander the Accursed (Gujastag) who burned the Avesta and killed the magi.",
     "sources": [
-      {"citation": "Bosworth, A.B. (1988). Conquest and Empire: The Reign of Alexander the Great. Cambridge UP.", "source_type": "academic", "url": null},
-      {"citation": "Arrian, Anabasis of Alexander. Loeb Classical Library.", "source_type": "primary", "url": null}
+      {
+        "citation": "Bosworth, A.B. (1988). Conquest and Empire: The Reign of Alexander the Great. Cambridge UP.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Arrian, Anabasis of Alexander. Loeb Classical Library.",
+        "source_type": "primary",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Xšāça", "role": "VICTIM"},
-      {"entity_name_original": "Kemet", "role": "AFFECTED"}
-    ]
+      {
+        "entity_name_original": "Xšāça",
+        "role": "VICTIM"
+      },
+      {
+        "entity_name_original": "Kemet",
+        "role": "AFFECTED"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "मौर्य साम्राज्य की स्थापना",
@@ -315,13 +452,28 @@
     "silence_reason": null,
     "ethical_notes": null,
     "sources": [
-      {"citation": "Thapar, R. (1961). Asoka and the Decline of the Mauryas. Oxford UP.", "source_type": "academic", "url": null},
-      {"citation": "Megasthenes, Indica (fragments preserved in Strabo, Arrian, Diodorus).", "source_type": "indirect_reference", "url": null}
+      {
+        "citation": "Thapar, R. (1961). Asoka and the Decline of the Mauryas. Oxford UP.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Megasthenes, Indica (fragments preserved in Strabo, Arrian, Diodorus).",
+        "source_type": "indirect_reference",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "मौर्य साम्राज्य", "role": "FOUNDED"},
-      {"entity_name_original": "मगध", "role": "AFFECTED"}
-    ]
+      {
+        "entity_name_original": "मौर्य साम्राज्य",
+        "role": "FOUNDED"
+      },
+      {
+        "entity_name_original": "मगध",
+        "role": "AFFECTED"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "कलिङ्ग युद्ध",
@@ -343,12 +495,24 @@
     "silence_reason": "The Kalingan perspective on the conquest is entirely absent; no Kalingan-authored account of the war survives, and the only narrative source is the victor's own retrospective edict.",
     "ethical_notes": "Ashoka's figures come from an imperial edict meant to dramatise his moral transformation; the numbers may be both real and rhetorical. Even so, the scale qualifies as a state-perpetrated mass killing.",
     "sources": [
-      {"citation": "Ashoka, Major Rock Edict XIII (Girnar, Shahbazgarhi and other copies, c. -256).", "source_type": "primary", "url": null},
-      {"citation": "Thapar, R. (1961). Asoka and the Decline of the Mauryas. Oxford UP.", "source_type": "academic", "url": null}
+      {
+        "citation": "Ashoka, Major Rock Edict XIII (Girnar, Shahbazgarhi and other copies, c. -256).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Thapar, R. (1961). Asoka and the Decline of the Mauryas. Oxford UP.",
+        "source_type": "academic",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "मौर्य साम्राज्य", "role": "MAIN_ACTOR"}
-    ]
+      {
+        "entity_name_original": "मौर्य साम्राज्य",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "秦統一",
@@ -370,13 +534,28 @@
     "silence_reason": null,
     "ethical_notes": "Han-dynasty sources (notably Sima Qian) are hostile to Qin and likely exaggerate its cruelty to justify their own legitimacy; recent archaeology at Liye and Shuihudi has complicated the pure-tyranny narrative.",
     "sources": [
-      {"citation": "Sima Qian, Shiji, Basic Annals of Qin (史記·秦本紀). Han-era compilation.", "source_type": "primary", "url": null},
-      {"citation": "Lewis, M.E. (2007). The Early Chinese Empires: Qin and Han. Harvard UP.", "source_type": "academic", "url": null}
+      {
+        "citation": "Sima Qian, Shiji, Basic Annals of Qin (史記·秦本紀). Han-era compilation.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Lewis, M.E. (2007). The Early Chinese Empires: Qin and Han. Harvard UP.",
+        "source_type": "academic",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "秦朝", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "周朝", "role": "DISSOLVED"}
-    ]
+      {
+        "entity_name_original": "秦朝",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "周朝",
+        "role": "DISSOLVED"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "焚書坑儒",
@@ -398,12 +577,24 @@
     "silence_reason": "The targeted works were systematically destroyed; what we have of pre-Qin literature survived only through state archives, oral transmission, and later reconstruction. The epistemic scale of what was lost cannot be measured, because we cannot know what we cannot read.",
     "ethical_notes": "Book-burnings are framed by the succeeding Han as the defining Qin crime; the real scholarly consensus is that the text destruction was real but less comprehensive than the propaganda suggests, and the scholar-killing is likely exaggerated.",
     "sources": [
-      {"citation": "Sima Qian, Shiji, chapter 6 (秦始皇本紀).", "source_type": "primary", "url": null},
-      {"citation": "Petersen, J.O. (1995). Which Books Did the First Emperor of Ch'in Burn? Monumenta Serica 43.", "source_type": "academic", "url": null}
+      {
+        "citation": "Sima Qian, Shiji, chapter 6 (秦始皇本紀).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Petersen, J.O. (1995). Which Books Did the First Emperor of Ch'in Burn? Monumenta Serica 43.",
+        "source_type": "academic",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "秦朝", "role": "MAIN_ACTOR"}
-    ]
+      {
+        "entity_name_original": "秦朝",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Cannae",
@@ -425,13 +616,28 @@
     "silence_reason": null,
     "ethical_notes": "Carthaginian sources on Cannae do not survive; our narrative depends entirely on the culture that lost the battle but won the war and subsequently erased the other side.",
     "sources": [
-      {"citation": "Polybius, Histories, Book III. Loeb Classical Library.", "source_type": "primary", "url": null},
-      {"citation": "Daly, G. (2002). Cannae: The Experience of Battle in the Second Punic War. Routledge.", "source_type": "academic", "url": null}
+      {
+        "citation": "Polybius, Histories, Book III. Loeb Classical Library.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Daly, G. (2002). Cannae: The Experience of Battle in the Second Punic War. Routledge.",
+        "source_type": "academic",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Imperium Romanum", "role": "VICTIM"},
-      {"entity_name_original": "Qart-ḥadašt", "role": "MAIN_ACTOR"}
-    ]
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "VICTIM"
+      },
+      {
+        "entity_name_original": "Qart-ḥadašt",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Eversio Carthaginis",
@@ -453,14 +659,33 @@
     "silence_reason": "The destruction was total enough that almost no Punic literature, historiography, religious texts, or administrative records survived; what we know of Carthage was written by those who destroyed it. This is a textbook case of ETHICS-008 structural silence imposed by the victor.",
     "ethical_notes": "Classifying this as genocide rather than the traditional 'destruction of Carthage' aligns with the explicit senatorial intent to eliminate Carthage as a people and with the scale of killing and enslavement. The traditional framing as a 'victory' reflects the survival of only the Roman perspective.",
     "sources": [
-      {"citation": "Appian, Roman History, Book 8 (Libyca/Punica). Loeb Classical Library.", "source_type": "primary", "url": null},
-      {"citation": "Hoyos, D. (2010). The Carthaginians. Routledge.", "source_type": "academic", "url": null},
-      {"citation": "Le Bohec, Y. (2014). La troisième guerre punique. Ausonius.", "source_type": "academic", "url": null}
+      {
+        "citation": "Appian, Roman History, Book 8 (Libyca/Punica). Loeb Classical Library.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Hoyos, D. (2010). The Carthaginians. Routledge.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Le Bohec, Y. (2014). La troisième guerre punique. Ausonius.",
+        "source_type": "academic",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Qart-ḥadašt", "role": "VICTIM"},
-      {"entity_name_original": "Imperium Romanum", "role": "MAIN_ACTOR"}
-    ]
+      {
+        "entity_name_original": "Qart-ḥadašt",
+        "role": "VICTIM"
+      },
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Κορίνθου ἀνάστασις",
@@ -482,13 +707,28 @@
     "silence_reason": null,
     "ethical_notes": "Pausanias's later account (2nd c. CE) mourns the lost Corinthian art as aesthetic tragedy; the human toll was barely registered by the sources that survived.",
     "sources": [
-      {"citation": "Pausanias, Description of Greece 7.16.", "source_type": "primary", "url": null},
-      {"citation": "Wiseman, J. (1979). Corinth and Rome I: 228 B.C.-A.D. 267. ANRW II.7.1.", "source_type": "academic", "url": null}
+      {
+        "citation": "Pausanias, Description of Greece 7.16.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Wiseman, J. (1979). Corinth and Rome I: 228 B.C.-A.D. 267. ANRW II.7.1.",
+        "source_type": "academic",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Κόρινθος", "role": "VICTIM"},
-      {"entity_name_original": "Imperium Romanum", "role": "MAIN_ACTOR"}
-    ]
+      {
+        "entity_name_original": "Κόρινθος",
+        "role": "VICTIM"
+      },
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Ἅλωσις Ἱεροσολύμων",
@@ -510,13 +750,28 @@
     "silence_reason": null,
     "ethical_notes": "Josephus wrote under Flavian patronage and his numbers serve partly as triumphal rhetoric; nonetheless the archaeological destruction layer and the collapse of Temple Judaism are unambiguous.",
     "sources": [
-      {"citation": "Flavius Josephus, The Jewish War, Books V-VI. Loeb Classical Library.", "source_type": "primary", "url": null},
-      {"citation": "Goodman, M. (2007). Rome and Jerusalem: The Clash of Ancient Civilizations. Allen Lane.", "source_type": "academic", "url": null}
+      {
+        "citation": "Flavius Josephus, The Jewish War, Books V-VI. Loeb Classical Library.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Goodman, M. (2007). Rome and Jerusalem: The Clash of Ancient Civilizations. Allen Lane.",
+        "source_type": "academic",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Imperium Romanum", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "ממלכת יהודה", "role": "AFFECTED"}
-    ]
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "ממלכת יהודה",
+        "role": "AFFECTED"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Eruptio Vesuvii",
@@ -538,12 +793,28 @@
     "silence_reason": null,
     "ethical_notes": null,
     "sources": [
-      {"citation": "Pliny the Younger, Letters 6.16 and 6.20 (to Tacitus).", "source_type": "primary", "url": null},
-      {"citation": "Sigurdsson, H. et al. (2002). The Archaeology of Vesuvius. In Encyclopedia of Volcanoes.", "source_type": "academic", "url": null}
+      {
+        "citation": "Pliny the Younger, Letters 6.16 and 6.20 (to Tacitus).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Sigurdsson, H. et al. (2002). The Archaeology of Vesuvius. In Encyclopedia of Volcanoes.",
+        "source_type": "academic",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Imperium Romanum", "role": "AFFECTED"}
-    ]
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "AFFECTED"
+      }
+    ],
+    "month": 10,
+    "day": 25,
+    "date_precision": "DAY",
+    "iso_date": "0079-10-25",
+    "calendar_note": "Julian calendar; Gregorian equivalent may differ"
   },
   {
     "name_original": "Pestis Antonina",
@@ -565,12 +836,24 @@
     "silence_reason": null,
     "ethical_notes": "The pathogen identification is inferred from Galen's clinical descriptions (no aDNA confirmation); smallpox is most probable but measles and other agents have been proposed.",
     "sources": [
-      {"citation": "Galen, De methodo medendi and scattered clinical references.", "source_type": "primary", "url": null},
-      {"citation": "Harper, K. (2017). The Fate of Rome: Climate, Disease, and the End of an Empire. Princeton UP.", "source_type": "academic", "url": null}
+      {
+        "citation": "Galen, De methodo medendi and scattered clinical references.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Harper, K. (2017). The Fate of Rome: Climate, Disease, and the End of an Empire. Princeton UP.",
+        "source_type": "academic",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Imperium Romanum", "role": "AFFECTED"}
-    ]
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "AFFECTED"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "黃巾之亂",
@@ -592,12 +875,24 @@
     "silence_reason": null,
     "ethical_notes": "The Taiping Dao's own writings are lost; the rebellion is known almost entirely through the hostile lens of Fan Ye's Hou Hanshu and later Three Kingdoms historiography.",
     "sources": [
-      {"citation": "Fan Ye, Hou Hanshu, 後漢書·皇甫嵩列傳. 5th c. compilation.", "source_type": "primary", "url": null},
-      {"citation": "de Crespigny, R. (2007). A Biographical Dictionary of Later Han to the Three Kingdoms. Brill.", "source_type": "academic", "url": null}
+      {
+        "citation": "Fan Ye, Hou Hanshu, 後漢書·皇甫嵩列傳. 5th c. compilation.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "de Crespigny, R. (2007). A Biographical Dictionary of Later Han to the Three Kingdoms. Brill.",
+        "source_type": "academic",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "漢朝", "role": "VICTIM"}
-    ]
+      {
+        "entity_name_original": "漢朝",
+        "role": "VICTIM"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Σύνοδος τῆς Νικαίας",
@@ -619,12 +914,24 @@
     "silence_reason": "Arius's own writings and those of the condemned minority were ordered destroyed by imperial edict; Arian theology survives largely through the polemics of its opponents (Athanasius, Socrates Scholasticus), a classic ETHICS-008 suppression.",
     "ethical_notes": "The council is typically narrated from the winning Nicene perspective; the losing parties (Arius, Eusebius of Nicomedia) are voiced only through hostile paraphrase.",
     "sources": [
-      {"citation": "Eusebius of Caesarea, Vita Constantini, Book III.", "source_type": "primary", "url": null},
-      {"citation": "Ayres, L. (2004). Nicaea and Its Legacy. Oxford UP.", "source_type": "academic", "url": null}
+      {
+        "citation": "Eusebius of Caesarea, Vita Constantini, Book III.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Ayres, L. (2004). Nicaea and Its Legacy. Oxford UP.",
+        "source_type": "academic",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Imperium Romanum", "role": "MAIN_ACTOR"}
-    ]
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Meroë dhamare",
@@ -646,12 +953,24 @@
     "silence_reason": "Meroitic script remains only partially deciphered; the Kushite/Meroitic side of the account is structurally silent. Reconstruction depends on Ezana's own trilingual inscription and on archaeology, not on any indigenous narrative.",
     "ethical_notes": "Historiography long conflated the end of Meroitic political independence with civilisational collapse; recent work (Edwards, Welsby) shows continuity of Nubian population and culture into the post-Meroitic kingdoms of Nobatia, Makuria and Alodia.",
     "sources": [
-      {"citation": "Ezana Stone trilingual inscription, Aksum (c. 350 CE).", "source_type": "primary", "url": null},
-      {"citation": "Welsby, D. (1998). The Kingdom of Kush: The Napatan and Meroitic Empires. British Museum Press.", "source_type": "academic", "url": null}
+      {
+        "citation": "Ezana Stone trilingual inscription, Aksum (c. 350 CE).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Welsby, D. (1998). The Kingdom of Kush: The Napatan and Meroitic Empires. British Museum Press.",
+        "source_type": "academic",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Meroe", "role": "VICTIM"}
-    ]
+      {
+        "entity_name_original": "Meroe",
+        "role": "VICTIM"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Direptio Romae",
@@ -673,11 +992,27 @@
     "silence_reason": null,
     "ethical_notes": "The Visigothic perspective is preserved only through Greek and Latin authors (Olympiodorus, Orosius, Jordanes); Alaric's diplomatic grievances (land and grain for his foederati) are legible in these hostile sources but were not recorded by Gothic authors contemporaneously.",
     "sources": [
-      {"citation": "Orosius, Historiae adversum Paganos 7.39.", "source_type": "primary", "url": null},
-      {"citation": "Heather, P. (2005). The Fall of the Roman Empire. Macmillan.", "source_type": "academic", "url": null}
+      {
+        "citation": "Orosius, Historiae adversum Paganos 7.39.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Heather, P. (2005). The Fall of the Roman Empire. Macmillan.",
+        "source_type": "academic",
+        "url": null
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Imperium Romanum", "role": "VICTIM"}
-    ]
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "VICTIM"
+      }
+    ],
+    "month": 8,
+    "day": 24,
+    "date_precision": "DAY",
+    "iso_date": "0410-08-24",
+    "calendar_note": "Julian calendar; Gregorian equivalent may differ"
   }
 ]

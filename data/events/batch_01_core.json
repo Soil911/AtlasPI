@@ -16,13 +16,28 @@
     "status": "confirmed",
     "ethical_notes": "Casualty figures come primarily from Herodotus, writing a generation later; modern estimates vary. The Persian force size is particularly debated — Herodotus' 'numberless ships' is clearly rhetorical.",
     "entity_links": [
-      {"entity_name_original": "Ἀθῆναι", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Xšāça", "role": "PARTICIPANT"}
+      {
+        "entity_name_original": "Ἀθῆναι",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Xšāça",
+        "role": "PARTICIPANT"
+      }
     ],
     "sources": [
-      {"citation": "Herodotus, Histories, Book VI. (Loeb Classical Library edition, trans. A.D. Godley, 1922).", "source_type": "primary", "url": null},
-      {"citation": "Krentz, P. (2010). The Battle of Marathon. Yale University Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Herodotus, Histories, Book VI. (Loeb Classical Library edition, trans. A.D. Godley, 1922).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Krentz, P. (2010). The Battle of Marathon. Yale University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Ἀποκάλυψις τοῦ Ἀλεξανδρείας Βιβλιοθήκης",
@@ -31,7 +46,7 @@
     "year": -48,
     "year_end": 642,
     "location_name": "Alexandria, Ptolemaic Egypt",
-    "location_lat": 31.20,
+    "location_lat": 31.2,
     "location_lon": 29.92,
     "main_actor": "Multiple actors across centuries (Julius Caesar 48 BCE fire, Aurelian 273 CE, Theophilus 391 CE, Amr ibn al-As 642 CE)",
     "description": "The Library of Alexandria was progressively destroyed across six centuries through a series of distinct events: the fire during Caesar's siege of Alexandria in 48 BCE, Aurelian's suppression of the Brucheion in 273 CE, the Christian destruction of the Serapeum in 391 CE, and the Arab conquest in 642 CE. Ancient sources attribute the loss to one or another of these events depending on the author's agenda. The compound result was the irrecoverable loss of classical Mediterranean scholarship.",
@@ -45,9 +60,18 @@
     "ethical_notes": "Treating this as a single event is a simplification accepted here because the cumulative result — loss of classical scholarship — was historically real, even if the mechanism was multi-step and disputed. Use this event as a linking anchor; the detail work belongs in specialized scholarship.",
     "entity_links": [],
     "sources": [
-      {"citation": "El-Abbadi, M. (1990). The Life and Fate of the Ancient Library of Alexandria. UNESCO.", "source_type": "academic", "url": null},
-      {"citation": "Plutarch, Life of Caesar 49 (primary attribution to the 48 BCE fire).", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "El-Abbadi, M. (1990). The Life and Fate of the Ancient Library of Alexandria. UNESCO.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Plutarch, Life of Caesar 49 (primary attribution to the 48 BCE fire).",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Bellum Actiacum",
@@ -65,13 +89,29 @@
     "confidence_score": 0.9,
     "status": "confirmed",
     "entity_links": [
-      {"entity_name_original": "Imperium Romanum", "role": "FOUNDED", "notes": "Actium is the practical founding moment of the Augustan Principate, though Octavian did not formally assume the title Augustus until 27 BCE."},
-      {"entity_name_original": "Βασίλειον τῶν Πτολεμαίων", "role": "DISSOLVED"}
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "FOUNDED",
+        "notes": "Actium is the practical founding moment of the Augustan Principate, though Octavian did not formally assume the title Augustus until 27 BCE."
+      },
+      {
+        "entity_name_original": "Βασίλειον τῶν Πτολεμαίων",
+        "role": "DISSOLVED"
+      }
     ],
     "sources": [
-      {"citation": "Plutarch, Life of Antony. (Loeb Classical Library edition).", "source_type": "primary", "url": null},
-      {"citation": "Gurval, R.A. (1995). Actium and Augustus: The Politics and Emotions of Civil War. University of Michigan Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Plutarch, Life of Antony. (Loeb Classical Library edition).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Gurval, R.A. (1995). Actium and Augustus: The Politics and Emotions of Civil War. University of Michigan Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Damnatio memoriae Getae",
@@ -90,12 +130,24 @@
     "silence_reason": "The event itself is well-documented because the erasure was so systematic that the absences are visible on physical monuments. But the intellectual content Geta may have produced, any writings by his supporters, and much of his reign's administrative record were permanently lost.",
     "ethical_notes": "Damnatio memoriae is included as an event type because the act of erasure is itself a historical fact with downstream epistemic consequences. Other Roman emperors subjected to it (Domitian, Commodus formally rescinded) are candidates for similar entries.",
     "entity_links": [
-      {"entity_name_original": "Imperium Romanum", "role": "MAIN_ACTOR"}
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "MAIN_ACTOR"
+      }
     ],
     "sources": [
-      {"citation": "Cassius Dio, Roman History, Book 77.", "source_type": "primary", "url": null},
-      {"citation": "Varner, E.R. (2004). Mutilation and Transformation: Damnatio Memoriae and Roman Imperial Portraiture. Brill.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Cassius Dio, Roman History, Book 77.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Varner, E.R. (2004). Mutilation and Transformation: Damnatio Memoriae and Roman Imperial Portraiture. Brill.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Hijrah / الهجرة",
@@ -111,9 +163,18 @@
     "status": "confirmed",
     "entity_links": [],
     "sources": [
-      {"citation": "Ibn Ishaq / Ibn Hisham, Sirat Rasul Allah (trans. A. Guillaume, 1955).", "source_type": "primary", "url": null},
-      {"citation": "Watt, W.M. (1956). Muhammad at Medina. Oxford University Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Ibn Ishaq / Ibn Hisham, Sirat Rasul Allah (trans. A. Guillaume, 1955).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Watt, W.M. (1956). Muhammad at Medina. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Malazgirt Muharebesi",
@@ -131,12 +192,24 @@
     "confidence_score": 0.9,
     "status": "confirmed",
     "entity_links": [
-      {"entity_name_original": "Βασιλεία Ῥωμαίων", "role": "AFFECTED"}
+      {
+        "entity_name_original": "Βασιλεία Ῥωμαίων",
+        "role": "AFFECTED"
+      }
     ],
     "sources": [
-      {"citation": "Attaleiates, Michael. History. (CFHB edition).", "source_type": "primary", "url": null},
-      {"citation": "Vryonis, S. (1971). The Decline of Medieval Hellenism in Asia Minor. University of California Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Attaleiates, Michael. History. (CFHB edition).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Vryonis, S. (1971). The Decline of Medieval Hellenism in Asia Minor. University of California Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Mors Nigra",
@@ -155,9 +228,18 @@
     "ethical_notes": "Casualty range is genuinely large because regional demographic records are uneven. Central Asian and sub-Saharan mortality estimates are the least certain.",
     "entity_links": [],
     "sources": [
-      {"citation": "Benedictow, O.J. (2004). The Black Death 1346-1353: The Complete History. Boydell Press.", "source_type": "academic", "url": null},
-      {"citation": "Green, M.H. (ed.) (2015). Pandemic Disease in the Medieval World. ARC Medieval Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Benedictow, O.J. (2004). The Black Death 1346-1353: The Complete History. Boydell Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Green, M.H. (ed.) (2015). Pandemic Disease in the Medieval World. ARC Medieval Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Ἅλωσις τῆς Κωνσταντινουπόλεως",
@@ -176,14 +258,33 @@
     "status": "confirmed",
     "ethical_notes": "Name and framing vary radically: 'Fall' (Western Christian), 'Fetih' / Conquest (Ottoman/Turkish), 'Ἅλωσις' / capture (Greek). All three names refer to the same event but carry opposite valences.",
     "entity_links": [
-      {"entity_name_original": "Βασιλεία Ῥωμαίων", "role": "DISSOLVED"},
-      {"entity_name_original": "Osmanlı İmparatorluğu", "role": "MAIN_ACTOR"}
+      {
+        "entity_name_original": "Βασιλεία Ῥωμαίων",
+        "role": "DISSOLVED"
+      },
+      {
+        "entity_name_original": "Osmanlı İmparatorluğu",
+        "role": "MAIN_ACTOR"
+      }
     ],
     "sources": [
-      {"citation": "Kritoboulos of Imbros, History of Mehmed the Conqueror (trans. Riggs, 1954).", "source_type": "primary", "url": null},
-      {"citation": "Runciman, S. (1965). The Fall of Constantinople 1453. Cambridge University Press.", "source_type": "academic", "url": null},
-      {"citation": "Philippides, M. & Hanak, W. (2011). The Siege and the Fall of Constantinople in 1453. Ashgate.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Kritoboulos of Imbros, History of Mehmed the Conqueror (trans. Riggs, 1954).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Runciman, S. (1965). The Fall of Constantinople 1453. Cambridge University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Philippides, M. & Hanak, W. (2011). The Siege and the Fall of Constantinople in 1453. Ashgate.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Huey Tlacohcholōliztli",
@@ -203,14 +304,33 @@
     "status": "confirmed",
     "ethical_notes": "The framing as solely a 'Spanish conquest' is Eurocentric. The event was a multi-front indigenous war in which the Spanish were one of many actors — Tlaxcalteca casualties and choices are essential to the history.",
     "entity_links": [
-      {"entity_name_original": "Ēxcān Tlahtōlōyān", "role": "DISSOLVED"},
-      {"entity_name_original": "Imperio Español", "role": "MAIN_ACTOR"}
+      {
+        "entity_name_original": "Ēxcān Tlahtōlōyān",
+        "role": "DISSOLVED"
+      },
+      {
+        "entity_name_original": "Imperio Español",
+        "role": "MAIN_ACTOR"
+      }
     ],
     "sources": [
-      {"citation": "Sahagún, B. de, Historia general de las cosas de Nueva España (Florentine Codex), Book 12.", "source_type": "primary", "url": null},
-      {"citation": "Restall, M. (2003). Seven Myths of the Spanish Conquest. Oxford University Press.", "source_type": "academic", "url": null},
-      {"citation": "Townsend, C. (2019). Fifth Sun: A New History of the Aztecs. Oxford University Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Sahagún, B. de, Historia general de las cosas de Nueva España (Florentine Codex), Book 12.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Restall, M. (2003). Seven Myths of the Spanish Conquest. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Townsend, C. (2019). Fifth Sun: A New History of the Aztecs. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Instrumentum Pacis Osnabrugensis et Monasteriensis",
@@ -226,12 +346,24 @@
     "status": "confirmed",
     "ethical_notes": "The 'Westphalian system' is often projected backward — modern IR theory exaggerated the immediate 1648 impact. Many of the attributed principles developed gradually across the 17th and 18th centuries.",
     "entity_links": [
-      {"entity_name_original": "Sacrum Imperium Romanum", "role": "PARTICIPANT"}
+      {
+        "entity_name_original": "Sacrum Imperium Romanum",
+        "role": "PARTICIPANT"
+      }
     ],
     "sources": [
-      {"citation": "Treaty of Osnabrück and Treaty of Münster, 1648 (Latin originals, Diplomatic Archive of the Treaty of Westphalia).", "source_type": "primary", "url": null},
-      {"citation": "Wilson, P.H. (2009). The Thirty Years War: Europe's Tragedy. Belknap / Harvard.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Treaty of Osnabrück and Treaty of Münster, 1648 (Latin originals, Diplomatic Archive of the Treaty of Westphalia).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Wilson, P.H. (2009). The Thirty Years War: Europe's Tragedy. Belknap / Harvard.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "تجربة البنغال",
@@ -250,12 +382,25 @@
     "status": "confirmed",
     "ethical_notes": "This famine is one of the earliest clearly documented cases of colonial-administration-induced mass starvation. The English-language historiography has at times minimized the Company's causal role; use 'FAMINE' here without the euphemism 'food crisis'.",
     "entity_links": [
-      {"entity_name_original": "British Raj", "role": "MAIN_ACTOR", "notes": "Formally the East India Company, precursor to the Raj (established 1858)."}
+      {
+        "entity_name_original": "British Raj",
+        "role": "MAIN_ACTOR",
+        "notes": "Formally the East India Company, precursor to the Raj (established 1858)."
+      }
     ],
     "sources": [
-      {"citation": "Datta, R. (2000). Society, Economy and the Market: Commercialization in Rural Bengal, c. 1760-1800. Manohar.", "source_type": "academic", "url": null},
-      {"citation": "Sen, A. (1981). Poverty and Famines: An Essay on Entitlement and Deprivation. Oxford University Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Datta, R. (2000). Society, Economy and the Market: Commercialization in Rural Bengal, c. 1760-1800. Manohar.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Sen, A. (1981). Poverty and Famines: An Essay on Entitlement and Deprivation. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Tambora 1815",
@@ -264,7 +409,7 @@
     "year": 1815,
     "location_name": "Mount Tambora, Sumbawa, Dutch East Indies",
     "location_lat": -8.25,
-    "location_lon": 118.00,
+    "location_lon": 118.0,
     "main_actor": null,
     "description": "The largest volcanic eruption in recorded human history, with a VEI of 7. The eruption killed approximately 10,000 people directly through pyroclastic flows on Sumbawa, and an estimated 70,000-120,000 globally through the subsequent 'Year Without a Summer' (1816) — crop failures, famine, and epidemics in Europe, North America, and China.",
     "casualties_low": 80000,
@@ -274,9 +419,18 @@
     "status": "confirmed",
     "entity_links": [],
     "sources": [
-      {"citation": "Oppenheimer, C. (2003). 'Climatic, environmental and human consequences of the largest known historic eruption: Tambora volcano (Indonesia) 1815.' Progress in Physical Geography 27(2).", "source_type": "academic", "url": null},
-      {"citation": "Wood, G.D. (2014). Tambora: The Eruption That Changed the World. Princeton University Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Oppenheimer, C. (2003). 'Climatic, environmental and human consequences of the largest known historic eruption: Tambora volcano (Indonesia) 1815.' Progress in Physical Geography 27(2).",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Wood, G.D. (2014). Tambora: The Eruption That Changed the World. Princeton University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Vernichtungsbefehl gegen die Herero und Nama",
@@ -299,10 +453,23 @@
     "ethical_notes": "Germany formally recognized the genocide in May 2021 and agreed to pay 1.1 billion euros in development aid over 30 years. Recognition does NOT retroactively fix the century-long silence of official sources, nor does the 'aid' framing constitute legal reparations.",
     "entity_links": [],
     "sources": [
-      {"citation": "Zimmerer, J. (2004). 'The birth of the Ostland out of the spirit of colonialism.' Patterns of Prejudice 38(1).", "source_type": "academic", "url": null},
-      {"citation": "Olusoga, D. & Erichsen, C.W. (2010). The Kaiser's Holocaust: Germany's Forgotten Genocide. Faber & Faber.", "source_type": "academic", "url": null},
-      {"citation": "Oral testimony collected by UN Special Rapporteur on racism, 2015-2019.", "source_type": "oral_tradition", "url": null}
-    ]
+      {
+        "citation": "Zimmerer, J. (2004). 'The birth of the Ostland out of the spirit of colonialism.' Patterns of Prejudice 38(1).",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Olusoga, D. & Erichsen, C.W. (2010). The Kaiser's Holocaust: Germany's Forgotten Genocide. Faber & Faber.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Oral testimony collected by UN Special Rapporteur on racism, 2015-2019.",
+        "source_type": "oral_tradition",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Հայոց ցեղասպանություն",
@@ -322,13 +489,32 @@
     "silence_reason": "The Republic of Turkey officially denies the genocide classification and criminalizes (Article 301) descriptions calling it 'genocide'. The Ottoman-era archival record was selectively destroyed or remains inaccessible. Armenian documentation was lost with Armenian populations.",
     "ethical_notes": "The 'disputed' status here reflects the political controversy with the Turkish state, NOT the historical-academic consensus. The IAGS (1997), most US universities, and most Western governments classify the event as genocide. This field models the distinction: confidence_score 0.95 reflects academic certainty; status 'disputed' reflects the live political contestation.",
     "entity_links": [
-      {"entity_name_original": "Osmanlı İmparatorluğu", "role": "MAIN_ACTOR"}
+      {
+        "entity_name_original": "Osmanlı İmparatorluğu",
+        "role": "MAIN_ACTOR"
+      }
     ],
     "sources": [
-      {"citation": "Akçam, T. (2012). The Young Turks' Crime against Humanity: The Armenian Genocide and Ethnic Cleansing in the Ottoman Empire. Princeton University Press.", "source_type": "academic", "url": null},
-      {"citation": "Suny, R.G. (2015). 'They Can Live in the Desert but Nowhere Else': A History of the Armenian Genocide. Princeton University Press.", "source_type": "academic", "url": null},
-      {"citation": "IAGS Resolution on the Armenian Genocide, 1997.", "source_type": "secondary", "url": null}
-    ]
+      {
+        "citation": "Akçam, T. (2012). The Young Turks' Crime against Humanity: The Armenian Genocide and Ethnic Cleansing in the Ottoman Empire. Princeton University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Suny, R.G. (2015). 'They Can Live in the Desert but Nowhere Else': A History of the Armenian Genocide. Princeton University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "IAGS Resolution on the Armenian Genocide, 1997.",
+        "source_type": "secondary",
+        "url": null
+      }
+    ],
+    "month": 4,
+    "day": 24,
+    "date_precision": "DAY",
+    "iso_date": "1915-04-24"
   },
   {
     "name_original": "Голодомор",
@@ -349,10 +535,23 @@
     "ethical_notes": "Ukraine classifies the event as genocide (Golodomor is Ukrainian for 'killing by hunger'). Russian official historiography disputes the genocide classification while acknowledging the famine. This entry uses event_type FAMINE because the mechanism (starvation from policy) is factual; the distinct question of 'genocide' vs 'policy-induced mass death' is genuinely debated among historians and is reflected in status=disputed.",
     "entity_links": [],
     "sources": [
-      {"citation": "Conquest, R. (1986). The Harvest of Sorrow: Soviet Collectivization and the Terror-Famine. Oxford University Press.", "source_type": "academic", "url": null},
-      {"citation": "Snyder, T. (2010). Bloodlands: Europe Between Hitler and Stalin. Basic Books.", "source_type": "academic", "url": null},
-      {"citation": "Ukrainian oral history collected by the Holodomor Research and Education Consortium (ongoing).", "source_type": "oral_tradition", "url": null}
-    ]
+      {
+        "citation": "Conquest, R. (1986). The Harvest of Sorrow: Soviet Collectivization and the Terror-Famine. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Snyder, T. (2010). Bloodlands: Europe Between Hitler and Stalin. Basic Books.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Ukrainian oral history collected by the Holodomor Research and Education Consortium (ongoing).",
+        "source_type": "oral_tradition",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "השואה",
@@ -371,10 +570,23 @@
     "ethical_notes": "Holocaust denial is illegal in many jurisdictions and is not an academic position. The name 'Shoah' (Hebrew: 'catastrophe') is preferred by many Jewish scholars over the etymologically-religious 'Holocaust' (Greek: 'burnt offering'). Both names are in wide academic use.",
     "entity_links": [],
     "sources": [
-      {"citation": "Hilberg, R. (1985). The Destruction of the European Jews, 3rd ed. Holmes & Meier.", "source_type": "academic", "url": null},
-      {"citation": "Longerich, P. (2010). Holocaust: The Nazi Persecution and Murder of the Jews. Oxford University Press.", "source_type": "academic", "url": null},
-      {"citation": "Yad Vashem archival documentation (ongoing).", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "Hilberg, R. (1985). The Destruction of the European Jews, 3rd ed. Holmes & Meier.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Longerich, P. (2010). Holocaust: The Nazi Persecution and Murder of the Jews. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Yad Vashem archival documentation (ongoing).",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Gkasaya ya Rwanda / Jenoside yakorewe Abatutsi",
@@ -395,10 +607,25 @@
     "ethical_notes": "The UN and many governments acknowledged the genocide as it was happening but did not intervene. This failure of international responsibility is itself part of the event's historical record. The RPF's post-1994 government has also been documented as committing war crimes during and after the genocide (Mapping Report, OHCHR 2010) — this is a separate set of events not covered here.",
     "entity_links": [],
     "sources": [
-      {"citation": "Des Forges, A. (1999). Leave None to Tell the Story: Genocide in Rwanda. Human Rights Watch.", "source_type": "academic", "url": null},
-      {"citation": "Prunier, G. (1995). The Rwanda Crisis: History of a Genocide. Columbia University Press.", "source_type": "academic", "url": null},
-      {"citation": "ICTR (International Criminal Tribunal for Rwanda) trial records, 1995-2015.", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "Des Forges, A. (1999). Leave None to Tell the Story: Genocide in Rwanda. Human Rights Watch.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Prunier, G. (1995). The Rwanda Crisis: History of a Genocide. Columbia University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "ICTR (International Criminal Tribunal for Rwanda) trial records, 1995-2015.",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "month": 7,
+    "date_precision": "MONTH",
+    "iso_date": "1994-07-00"
   },
   {
     "name_original": "Operation Legacy",
@@ -414,14 +641,34 @@
     "known_silence": false,
     "ethical_notes": "Although this event itself is now well-documented (post-2011), it CAUSED the silencing of many other colonial-era events. Entities and events downstream of 1948-1966 British colonial administration carry partial-archive risk: their 'confidence_score' may be depressed not because the event is doubtful but because primary documentation was destroyed.",
     "entity_links": [
-      {"entity_name_original": "British Empire", "role": "MAIN_ACTOR"}
+      {
+        "entity_name_original": "British Empire",
+        "role": "MAIN_ACTOR"
+      }
     ],
     "sources": [
-      {"citation": "Elkins, C. (2005). Imperial Reckoning: The Untold Story of Britain's Gulag in Kenya. Henry Holt.", "source_type": "academic", "url": null},
-      {"citation": "Anderson, D. (2011). Histories of the Hanged. W.W. Norton.", "source_type": "academic", "url": null},
-      {"citation": "FCO Migrated Archives, partially released by UK High Court order 2011-2013.", "source_type": "primary", "url": null},
-      {"citation": "Mau Mau veterans' testimony, collected 2003-2013.", "source_type": "oral_tradition", "url": null}
-    ]
+      {
+        "citation": "Elkins, C. (2005). Imperial Reckoning: The Untold Story of Britain's Gulag in Kenya. Henry Holt.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Anderson, D. (2011). Histories of the Hanged. W.W. Norton.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "FCO Migrated Archives, partially released by UK High Court order 2011-2013.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Mau Mau veterans' testimony, collected 2003-2013.",
+        "source_type": "oral_tradition",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "1918 Influenza Pandemic",
@@ -440,9 +687,19 @@
     "ethical_notes": "The wide casualty range reflects genuine uncertainty: wartime censorship, colonial under-reporting, and the 'ordinary flu death' coding problem mean national figures are unreliable. India alone lost an estimated 13-18 million.",
     "entity_links": [],
     "sources": [
-      {"citation": "Johnson, N.P.A.S. & Mueller, J. (2002). 'Updating the Accounts: Global Mortality of the 1918-1920 Spanish Influenza Pandemic.' Bulletin of the History of Medicine 76.", "source_type": "academic", "url": null},
-      {"citation": "Barry, J.M. (2005). The Great Influenza. Penguin.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Johnson, N.P.A.S. & Mueller, J. (2002). 'Updating the Accounts: Global Mortality of the 1918-1920 Spanish Influenza Pandemic.' Bulletin of the History of Medicine 76.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Barry, J.M. (2005). The Great Influenza. Penguin.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "SEASON",
+    "iso_date": "1918-00-00"
   },
   {
     "name_original": "Terremoto di Lisbona",
@@ -461,9 +718,21 @@
     "status": "confirmed",
     "entity_links": [],
     "sources": [
-      {"citation": "Paice, E. (2008). Wrath of God: The Great Lisbon Earthquake of 1755. Quercus.", "source_type": "academic", "url": null},
-      {"citation": "Voltaire (1756). Poème sur le désastre de Lisbonne.", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "Paice, E. (2008). Wrath of God: The Great Lisbon Earthquake of 1755. Quercus.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Voltaire (1756). Poème sur le désastre de Lisbonne.",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "month": 11,
+    "day": 1,
+    "date_precision": "DAY",
+    "iso_date": "1755-11-01"
   },
   {
     "name_original": "大津波 Jōgan 貞観地震",
@@ -482,9 +751,22 @@
     "status": "confirmed",
     "entity_links": [],
     "sources": [
-      {"citation": "Nihon Sandai Jitsuroku (Japanese imperial chronicle, completed 901 CE).", "source_type": "primary", "url": null},
-      {"citation": "Minoura, K. et al. (2001). 'The 869 Jōgan tsunami deposit and recurrence interval of large-scale tsunami on the Pacific coast of northeast Japan.' Journal of Natural Disaster Science 23(2).", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Nihon Sandai Jitsuroku (Japanese imperial chronicle, completed 901 CE).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Minoura, K. et al. (2001). 'The 869 Jōgan tsunami deposit and recurrence interval of large-scale tsunami on the Pacific coast of northeast Japan.' Journal of Natural Disaster Science 23(2).",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 7,
+    "day": 13,
+    "date_precision": "DAY",
+    "iso_date": "0869-07-13",
+    "calendar_note": "Julian calendar; Gregorian equivalent may differ"
   },
   {
     "name_original": "Déclaration des Droits de l'Homme et du Citoyen",
@@ -501,9 +783,21 @@
     "ethical_notes": "The declaration's universal language is contradicted by its contemporaries' refusal to extend rights to enslaved people (explicitly excluded from the French colonies) and women (Olympe de Gouges' 1791 'Declaration of the Rights of Woman' was a direct protest). Include both the text's significance AND its exclusions.",
     "entity_links": [],
     "sources": [
-      {"citation": "Déclaration des Droits de l'Homme et du Citoyen (original text, 1789).", "source_type": "primary", "url": null},
-      {"citation": "Hunt, L. (2007). Inventing Human Rights: A History. W.W. Norton.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Déclaration des Droits de l'Homme et du Citoyen (original text, 1789).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Hunt, L. (2007). Inventing Human Rights: A History. W.W. Norton.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 8,
+    "day": 26,
+    "date_precision": "DAY",
+    "iso_date": "1789-08-26"
   },
   {
     "name_original": "Haitian Revolution / Revolisyon Ayisyen",
@@ -524,10 +818,26 @@
     "ethical_notes": "The Haitian Revolution was systematically excluded from standard histories of 'the Age of Revolutions' for two centuries — a silence that itself is a fact about historiography. The post-1825 indemnity debt is a central cause of modern Haiti's economic underdevelopment and belongs in any history of the event.",
     "entity_links": [],
     "sources": [
-      {"citation": "James, C.L.R. (1938). The Black Jacobins: Toussaint L'Ouverture and the San Domingo Revolution. Secker & Warburg.", "source_type": "academic", "url": null},
-      {"citation": "Popkin, J. (2010). You Are All Free: The Haitian Revolution and the Abolition of Slavery. Cambridge University Press.", "source_type": "academic", "url": null},
-      {"citation": "Dubois, L. (2004). Avengers of the New World: The Story of the Haitian Revolution. Harvard University Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "James, C.L.R. (1938). The Black Jacobins: Toussaint L'Ouverture and the San Domingo Revolution. Secker & Warburg.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Popkin, J. (2010). You Are All Free: The Haitian Revolution and the Abolition of Slavery. Cambridge University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Dubois, L. (2004). Avengers of the New World: The Story of the Haitian Revolution. Harvard University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 8,
+    "day": 22,
+    "date_precision": "DAY",
+    "iso_date": "1791-08-22"
   },
   {
     "name_original": "Die Berliner Konferenz",
@@ -537,7 +847,7 @@
     "year_end": 1885,
     "location_name": "Berlin, German Empire",
     "location_lat": 52.52,
-    "location_lon": 13.40,
+    "location_lon": 13.4,
     "main_actor": "German Chancellor Otto von Bismarck; 14 European powers + United States + Ottoman Empire",
     "description": "Fourteen European states, the United States, and the Ottoman Empire met in Berlin between November 1884 and February 1885 to regulate European colonization of Africa. No African representatives were present. The General Act formalized the 'effective occupation' principle, authorized King Leopold II's personal rule over the 'Congo Free State', and is retrospectively recognized as the legal framework for the Scramble for Africa — the 1880s-1910s colonization of ~90% of the continent.",
     "confidence_score": 0.95,
@@ -545,10 +855,23 @@
     "ethical_notes": "The absence of any African participant is the single most salient fact about this event. The polite diplomatic framing ('regulating colonization') is euphemistic; the outcome was the legal template for genocidal violence (Leopold's Congo) and dispossession of >200 million Africans.",
     "entity_links": [],
     "sources": [
-      {"citation": "General Act of the Berlin Conference, 26 February 1885 (original text).", "source_type": "primary", "url": null},
-      {"citation": "Hochschild, A. (1998). King Leopold's Ghost. Houghton Mifflin.", "source_type": "academic", "url": null},
-      {"citation": "Pakenham, T. (1991). The Scramble for Africa. Weidenfeld & Nicolson.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "General Act of the Berlin Conference, 26 February 1885 (original text).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Hochschild, A. (1998). King Leopold's Ghost. Houghton Mifflin.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Pakenham, T. (1991). The Scramble for Africa. Weidenfeld & Nicolson.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Partition of India / ਭਾਰਤ ਦੀ ਵੰਡ / भारत का विभाजन",
@@ -565,13 +888,32 @@
     "status": "confirmed",
     "ethical_notes": "The event belongs under ETHNIC_CLEANSING per academic consensus on bilateral population transfers under violence; some scholars (Brass, 2003) further argue for specific GENOCIDE classifications of local incidents. This entry defers to the widely-used ETHNIC_CLEANSING framing while acknowledging the debate. Archival silences remain severe — Radcliffe destroyed his working papers after completing the border.",
     "entity_links": [
-      {"entity_name_original": "British Raj", "role": "MAIN_ACTOR"}
+      {
+        "entity_name_original": "British Raj",
+        "role": "MAIN_ACTOR"
+      }
     ],
     "sources": [
-      {"citation": "Talbot, I. & Singh, G. (2009). The Partition of India. Cambridge University Press.", "source_type": "academic", "url": null},
-      {"citation": "Butalia, U. (1998). The Other Side of Silence: Voices from the Partition of India. Penguin India.", "source_type": "academic", "url": null},
-      {"citation": "Oral histories collected by the 1947 Partition Archive (ongoing).", "source_type": "oral_tradition", "url": null}
-    ]
+      {
+        "citation": "Talbot, I. & Singh, G. (2009). The Partition of India. Cambridge University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Butalia, U. (1998). The Other Side of Silence: Voices from the Partition of India. Penguin India.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Oral histories collected by the 1947 Partition Archive (ongoing).",
+        "source_type": "oral_tradition",
+        "url": null
+      }
+    ],
+    "month": 8,
+    "day": 15,
+    "date_precision": "DAY",
+    "iso_date": "1947-08-15"
   },
   {
     "name_original": "COVID-19 pandemic",
@@ -581,7 +923,7 @@
     "year_end": 2023,
     "location_name": "Global (emergent in Wuhan, Hubei Province, China)",
     "location_lat": 30.59,
-    "location_lon": 114.30,
+    "location_lon": 114.3,
     "main_actor": "SARS-CoV-2 virus (Sarbecovirus, Coronaviridae)",
     "description": "The COVID-19 pandemic, caused by SARS-CoV-2, was first detected in Wuhan in late 2019 and declared a pandemic by the WHO on 11 March 2020. Official confirmed global deaths reached approximately 7 million by 2024; excess-mortality estimates (accounting for undercounting) reached 18-28 million. The pandemic triggered the most extensive worldwide lockdowns in history, massive fiscal/monetary intervention, and accelerated structural shifts (remote work, e-commerce, mRNA vaccine platforms).",
     "casualties_low": 7000000,
@@ -592,10 +934,23 @@
     "ethical_notes": "The official confirmed-deaths figure (~7M) substantially undercounts true mortality due to testing gaps, capacity-exceeded hospitals, and deliberate under-reporting in some jurisdictions. Excess-mortality estimates (18-28M) are more accurate but less certain. The origin debate (natural spillover vs. lab leak) remains politically contested and empirically unresolved at the time of this record.",
     "entity_links": [],
     "sources": [
-      {"citation": "WHO Global Excess Deaths Associated with COVID-19 Report, 2022.", "source_type": "primary", "url": null},
-      {"citation": "Wang, H. et al. (2022). 'Estimating excess mortality due to the COVID-19 pandemic.' The Lancet 399(10334).", "source_type": "academic", "url": null},
-      {"citation": "Economist excess mortality tracker (ongoing).", "source_type": "secondary", "url": null}
-    ]
+      {
+        "citation": "WHO Global Excess Deaths Associated with COVID-19 Report, 2022.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Wang, H. et al. (2022). 'Estimating excess mortality due to the COVID-19 pandemic.' The Lancet 399(10334).",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Economist excess mortality tracker (ongoing).",
+        "source_type": "secondary",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Invention of the Printing Press",
@@ -612,9 +967,18 @@
     "ethical_notes": "The 'Gutenberg as sole inventor' narrative is Eurocentric. Korean Jikji (1377) predates the Gutenberg Bible by ~80 years. The event is included here as a major technological inflection point for European historiography; a parallel entry for Jikji or Bi Sheng should be created to correct the imbalance.",
     "entity_links": [],
     "sources": [
-      {"citation": "Eisenstein, E. (1979). The Printing Press as an Agent of Change. Cambridge University Press.", "source_type": "academic", "url": null},
-      {"citation": "Füssel, S. (2005). Gutenberg and the Impact of Printing. Ashgate.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Eisenstein, E. (1979). The Printing Press as an Agent of Change. Cambridge University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Füssel, S. (2005). Gutenberg and the Impact of Printing. Ashgate.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "The September Attacks / أحداث الحادي عشر من سبتمبر",
@@ -634,9 +998,21 @@
     "ethical_notes": "The downstream US response (Afghanistan 2001-2021, Iraq 2003-2011+, expanded surveillance regimes) killed hundreds of thousands of civilians across multiple countries; those events require separate entries and are not absorbed into this one. Framing the attacks as a turning point without accounting for the response is incomplete history.",
     "entity_links": [],
     "sources": [
-      {"citation": "National Commission on Terrorist Attacks Upon the United States (2004). The 9/11 Commission Report.", "source_type": "primary", "url": null},
-      {"citation": "Wright, L. (2006). The Looming Tower: Al-Qaeda and the Road to 9/11. Alfred A. Knopf.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "National Commission on Terrorist Attacks Upon the United States (2004). The 9/11 Commission Report.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Wright, L. (2006). The Looming Tower: Al-Qaeda and the Road to 9/11. Alfred A. Knopf.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 9,
+    "day": 11,
+    "date_precision": "DAY",
+    "iso_date": "2001-09-11"
   },
   {
     "name_original": "Fall of the Berlin Wall / Fall der Berliner Mauer",
@@ -652,9 +1028,21 @@
     "status": "confirmed",
     "entity_links": [],
     "sources": [
-      {"citation": "Sarotte, M.E. (2014). The Collapse: The Accidental Opening of the Berlin Wall. Basic Books.", "source_type": "academic", "url": null},
-      {"citation": "Mary Elise Sarotte interviews with Schabowski and border guards, 2009-2014 (oral history).", "source_type": "oral_tradition", "url": null}
-    ]
+      {
+        "citation": "Sarotte, M.E. (2014). The Collapse: The Accidental Opening of the Berlin Wall. Basic Books.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Mary Elise Sarotte interviews with Schabowski and border guards, 2009-2014 (oral history).",
+        "source_type": "oral_tradition",
+        "url": null
+      }
+    ],
+    "month": 11,
+    "day": 9,
+    "date_precision": "DAY",
+    "iso_date": "1989-11-09"
   },
   {
     "name_original": "Discovery of the Americas by Columbus / Llegada de Colón",
@@ -672,14 +1060,38 @@
     "silence_reason": "Indigenous naming (e.g., Guanahani) and Taíno cosmological accounts of 1492-1550 were systematically displaced by the Columbus-centric narrative preserved in Spanish sources. Taíno languages and ritual records were suppressed and largely lost by c. 1550; reconstruction depends on later ethnography, archaeology, and the few Spanish sources sympathetic enough to record indigenous accounts (Las Casas).",
     "ethical_notes": "The word 'discovery' (descubrimiento) is the contested Spanish-tradition term. Indigenous and decolonial historians use 'invasion', 'contact', 'encounter', or refuse a single label. This entry uses the Spanish-language title for searchability but the description makes the framing explicit. Columbus himself carried out documented atrocities (forced gold quotas, enslavement) in Hispaniola; the record is in his own lettersand Bobadilla's 1500 investigation.",
     "entity_links": [
-      {"entity_name_original": "Imperio Español", "role": "MAIN_ACTOR"}
+      {
+        "entity_name_original": "Imperio Español",
+        "role": "MAIN_ACTOR"
+      }
     ],
     "sources": [
-      {"citation": "Columbus, C. Diario del Primer Viaje (1492-1493, as abstracted by Las Casas).", "source_type": "primary", "url": null},
-      {"citation": "Las Casas, B. de (c. 1550). Historia de las Indias.", "source_type": "primary", "url": null},
-      {"citation": "Restall, M. (2003). Seven Myths of the Spanish Conquest. Oxford University Press.", "source_type": "academic", "url": null},
-      {"citation": "Cook, N.D. (1998). Born to Die: Disease and New World Conquest. Cambridge University Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Columbus, C. Diario del Primer Viaje (1492-1493, as abstracted by Las Casas).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Las Casas, B. de (c. 1550). Historia de las Indias.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Restall, M. (2003). Seven Myths of the Spanish Conquest. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Cook, N.D. (1998). Born to Die: Disease and New World Conquest. Cambridge University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 10,
+    "day": 12,
+    "date_precision": "DAY",
+    "iso_date": "1492-10-12",
+    "calendar_note": "Julian calendar; Gregorian equivalent may differ"
   },
   {
     "name_original": "Nanjing Massacre / 南京大屠殺",
@@ -689,7 +1101,7 @@
     "year_end": 1938,
     "location_name": "Nanjing (then capital of the Republic of China)",
     "location_lat": 32.06,
-    "location_lon": 118.80,
+    "location_lon": 118.8,
     "main_actor": "Imperial Japanese Army (Central China Area Army, commanded by Prince Yasuhiko Asaka and General Iwane Matsui)",
     "description": "After capturing Nanjing on 13 December 1937, Imperial Japanese Army troops killed an estimated 100,000-300,000 Chinese civilians and disarmed combatants over six weeks. Documented methods included mass executions, bayonet contests, and systematic sexual violence against an estimated 20,000-80,000 women. The massacre is documented in diaries of German businessman John Rabe (who led the Nanking Safety Zone), missionary Minnie Vautrin, and surviving Chinese witnesses. The International Military Tribunal for the Far East (1948) convicted General Matsui of war crimes.",
     "casualties_low": 100000,
@@ -702,10 +1114,30 @@
     "ethical_notes": "'Disputed' here reflects the Japanese-nationalist denial position, not academic consensus. IMTFE (1948) conviction of Matsui for war crimes is a legal finding of fact.",
     "entity_links": [],
     "sources": [
-      {"citation": "Chang, I. (1997). The Rape of Nanking: The Forgotten Holocaust of World War II. Basic Books.", "source_type": "academic", "url": null},
-      {"citation": "Rabe, J. (ed. Wickert, 1997). The Good Man of Nanking: The Diaries of John Rabe.", "source_type": "primary", "url": null},
-      {"citation": "Wakabayashi, B.T. (ed.) (2007). The Nanking Atrocity, 1937-38: Complicating the Picture. Berghahn Books.", "source_type": "academic", "url": null},
-      {"citation": "International Military Tribunal for the Far East, Judgment (1948).", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "Chang, I. (1997). The Rape of Nanking: The Forgotten Holocaust of World War II. Basic Books.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Rabe, J. (ed. Wickert, 1997). The Good Man of Nanking: The Diaries of John Rabe.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Wakabayashi, B.T. (ed.) (2007). The Nanking Atrocity, 1937-38: Complicating the Picture. Berghahn Books.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "International Military Tribunal for the Far East, Judgment (1948).",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "month": 12,
+    "day": 13,
+    "date_precision": "DAY",
+    "iso_date": "1937-12-13"
   }
 ]

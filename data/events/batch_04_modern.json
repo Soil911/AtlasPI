@@ -16,13 +16,31 @@
     "status": "confirmed",
     "ethical_notes": "Referred to as 'battle' in contemporary US sources and on some surviving monuments; US Army terminology officially reclassified as 'massacre' only progressively in the twentieth century. Forsyth was initially relieved of command by General Miles but reinstated after a court of inquiry.",
     "sources": [
-      {"citation": "Utley, R.M. (1963). The Last Days of the Sioux Nation. Yale University Press.", "url": null, "source_type": "academic"},
-      {"citation": "Jensen, R.E., Paul, R.E., & Carter, J.E. (1991). Eyewitness at Wounded Knee. University of Nebraska Press.", "url": null, "source_type": "academic"}
+      {
+        "citation": "Utley, R.M. (1963). The Last Days of the Sioux Nation. Yale University Press.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Jensen, R.E., Paul, R.E., & Carter, J.E. (1991). Eyewitness at Wounded Knee. University of Nebraska Press.",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "United States of America", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Lakȟóta Oyáte", "role": "VICTIM"}
-    ]
+      {
+        "entity_name_original": "United States of America",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Lakȟóta Oyáte",
+        "role": "VICTIM"
+      }
+    ],
+    "month": 12,
+    "day": 29,
+    "date_precision": "DAY",
+    "iso_date": "1890-12-29"
   },
   {
     "name_original": "পলাশীর যুদ্ধ",
@@ -30,7 +48,7 @@
     "event_type": "CONQUEST",
     "year": 1757,
     "location_name": "Palashi, Bengal",
-    "location_lat": 23.80,
+    "location_lat": 23.8,
     "location_lon": 88.25,
     "main_actor": "English East India Company force under Robert Clive",
     "description": "On 23 June 1757 a small Company force under Robert Clive defeated the army of Nawab Siraj-ud-Daulah of Bengal, largely through prior subornation of the Nawab's commander Mir Jafar. The outcome transferred de facto political and fiscal authority over Bengal — the wealthiest province of the Mughal Empire — to the East India Company, initiating Company rule on the Indian subcontinent. The engagement was militarily minor but politically decisive.",
@@ -41,12 +59,28 @@
     "status": "confirmed",
     "ethical_notes": "Classified CONQUEST rather than BATTLE because the effective outcome was transfer of sovereignty; the word 'battle' is standard English-language usage but understates the political character.",
     "sources": [
-      {"citation": "Dalrymple, W. (2019). The Anarchy: The Relentless Rise of the East India Company. London: Bloomsbury.", "url": null, "source_type": "academic"},
-      {"citation": "Bayly, C.A. (1988). Indian Society and the Making of the British Empire. Cambridge University Press.", "url": null, "source_type": "academic"}
+      {
+        "citation": "Dalrymple, W. (2019). The Anarchy: The Relentless Rise of the East India Company. London: Bloomsbury.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Bayly, C.A. (1988). Indian Society and the Making of the British Empire. Cambridge University Press.",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Kingdom of England", "role": "MAIN_ACTOR", "notes": "via EIC"}
-    ]
+      {
+        "entity_name_original": "Kingdom of England",
+        "role": "MAIN_ACTOR",
+        "notes": "via EIC"
+      }
+    ],
+    "month": 6,
+    "day": 23,
+    "date_precision": "DAY",
+    "iso_date": "1757-06-23"
   },
   {
     "name_original": "Prise de la Bastille",
@@ -64,13 +98,33 @@
     "confidence_score": 0.95,
     "status": "confirmed",
     "sources": [
-      {"citation": "Godechot, J. (1965). La prise de la Bastille, 14 juillet 1789. Paris: Gallimard.", "url": null, "source_type": "academic"},
-      {"citation": "Doyle, W. (2002). The Oxford History of the French Revolution. Oxford University Press.", "url": null, "source_type": "academic"}
+      {
+        "citation": "Godechot, J. (1965). La prise de la Bastille, 14 juillet 1789. Paris: Gallimard.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Doyle, W. (2002). The Oxford History of the French Revolution. Oxford University Press.",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Royaume de France", "role": "AFFECTED", "notes": "Ancien Régime collapsing"},
-      {"entity_name_original": "Republique francaise", "role": "FOUNDED", "notes": "republican trajectory initiated, First Republic proclaimed 1792"}
-    ]
+      {
+        "entity_name_original": "Royaume de France",
+        "role": "AFFECTED",
+        "notes": "Ancien Régime collapsing"
+      },
+      {
+        "entity_name_original": "Republique francaise",
+        "role": "FOUNDED",
+        "notes": "republican trajectory initiated, First Republic proclaimed 1792"
+      }
+    ],
+    "month": 7,
+    "day": 14,
+    "date_precision": "DAY",
+    "iso_date": "1789-07-14"
   },
   {
     "name_original": "Trail of Tears — ᏅᎾᏓᎤᎳ ᏨᏒ",
@@ -90,15 +144,41 @@
     "status": "confirmed",
     "ethical_notes": "Classified ETHNIC_CLEANSING + DEPORTATION per ETHICS-007; the 19th-century US legal euphemism 'removal' is rejected. Main actor is the US federal government (not 'policy' or 'circumstances') because forced deportation was enacted by federal law, executed by federal troops, and carried out against the explicit 1832 Supreme Court ruling Worcester v. Georgia.",
     "sources": [
-      {"citation": "Thornton, R. (1990). The Cherokee: A Population History since 1500. University of Oklahoma Press.", "url": null, "source_type": "academic"},
-      {"citation": "Perdue, T. & Green, M.D. (2007). The Cherokee Nation and the Trail of Tears. Viking.", "url": null, "source_type": "academic"},
-      {"citation": "Indian Removal Act of 1830, 4 Stat. 411.", "url": null, "source_type": "primary"}
+      {
+        "citation": "Thornton, R. (1990). The Cherokee: A Population History since 1500. University of Oklahoma Press.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Perdue, T. & Green, M.D. (2007). The Cherokee Nation and the Trail of Tears. Viking.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Indian Removal Act of 1830, 4 Stat. 411.",
+        "url": null,
+        "source_type": "primary"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "United States of America", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "ᏣᎳᎩ", "role": "VICTIM", "notes": "Cherokee Nation"},
-      {"entity_name_original": "Mvskoke", "role": "VICTIM", "notes": "Muscogee (Creek)"}
-    ]
+      {
+        "entity_name_original": "United States of America",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "ᏣᎳᎩ",
+        "role": "VICTIM",
+        "notes": "Cherokee Nation"
+      },
+      {
+        "entity_name_original": "Mvskoke",
+        "role": "VICTIM",
+        "notes": "Muscogee (Creek)"
+      }
+    ],
+    "month": 5,
+    "date_precision": "MONTH",
+    "iso_date": "1830-05-00"
   },
   {
     "name_original": "Tasmanian Aboriginal Genocide",
@@ -118,14 +198,35 @@
     "status": "confirmed",
     "ethical_notes": "Classified GENOCIDE per ETHICS-007, not 'decline', 'disappearance', or 'extinction' — these euphemisms erase the specific perpetrators. The British colonial administration is named as main actor because the Black Line of 1830 was an official military operation commanded by the Lieutenant-Governor. The framing 'the last Tasmanian died in 1876' is itself part of the erasure: Palawa descendants are present to this day.",
     "sources": [
-      {"citation": "Ryan, L. (2012). Tasmanian Aborigines: A History since 1803. Allen & Unwin.", "url": null, "source_type": "academic"},
-      {"citation": "Clements, N. (2014). The Black War: Fear, Sex and Resistance in Tasmania. University of Queensland Press.", "url": null, "source_type": "academic"},
-      {"citation": "Reynolds, H. (2001). An Indelible Stain? The Question of Genocide in Australia's History. Viking.", "url": null, "source_type": "academic"}
+      {
+        "citation": "Ryan, L. (2012). Tasmanian Aborigines: A History since 1803. Allen & Unwin.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Clements, N. (2014). The Black War: Fear, Sex and Resistance in Tasmania. University of Queensland Press.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Reynolds, H. (2001). An Indelible Stain? The Question of Genocide in Australia's History. Viking.",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Kingdom of England", "role": "MAIN_ACTOR", "notes": "via British colonial administration; United Kingdom after 1801 Act of Union"},
-      {"entity_name_original": "Aboriginal Australian Nations", "role": "VICTIM", "notes": "specifically the Palawa peoples of lutruwita"}
-    ]
+      {
+        "entity_name_original": "Kingdom of England",
+        "role": "MAIN_ACTOR",
+        "notes": "via British colonial administration; United Kingdom after 1801 Act of Union"
+      },
+      {
+        "entity_name_original": "Aboriginal Australian Nations",
+        "role": "VICTIM",
+        "notes": "specifically the Palawa peoples of lutruwita"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "ᱥᱮᱯᱟᱭ ᱵᱤᱫᱨᱳᱦ ᱑᱘᱕᱗",
@@ -145,13 +246,33 @@
     "status": "confirmed",
     "ethical_notes": "Described as 'Sepoy Mutiny' in British sources, 'First War of Independence' in Indian nationalist historiography, and more neutrally as the Indian Rebellion of 1857. Included here as REBELLION per EventType enum. The scale of civilian reprisals is underrepresented in 19th-century sources; the figures in the Delhi sack alone are drawn from Dalrymple's Urdu-source research.",
     "sources": [
-      {"citation": "Dalrymple, W. (2006). The Last Mughal: The Fall of a Dynasty, Delhi 1857. Bloomsbury.", "url": null, "source_type": "academic"},
-      {"citation": "Roy, T. (2014). The Politics of a Popular Uprising: Bundelkhand in 1857. Oxford University Press.", "url": null, "source_type": "academic"}
+      {
+        "citation": "Dalrymple, W. (2006). The Last Mughal: The Fall of a Dynasty, Delhi 1857. Bloomsbury.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Roy, T. (2014). The Politics of a Popular Uprising: Bundelkhand in 1857. Oxford University Press.",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Kingdom of England", "role": "MAIN_ACTOR", "notes": "EIC/Crown suppressing the rebellion"},
-      {"entity_name_original": "दलّی सلतनत", "role": "PARTICIPANT", "notes": "formal end of the Mughal Sultanate"}
-    ]
+      {
+        "entity_name_original": "Kingdom of England",
+        "role": "MAIN_ACTOR",
+        "notes": "EIC/Crown suppressing the rebellion"
+      },
+      {
+        "entity_name_original": "दलّی सلतनत",
+        "role": "PARTICIPANT",
+        "notes": "formal end of the Mughal Sultanate"
+      }
+    ],
+    "month": 5,
+    "day": 10,
+    "date_precision": "DAY",
+    "iso_date": "1857-05-10"
   },
   {
     "name_original": "第一次鴉片戰爭",
@@ -171,13 +292,30 @@
     "status": "confirmed",
     "ethical_notes": "Classified CONQUEST because the operational goal and outcome was territorial and juridical seizure (Hong Kong, treaty ports, extraterritoriality). The moral asymmetry — a drug-smuggling war waged to protect narcotics commerce — is often softened in British textbooks as a 'trade war'.",
     "sources": [
-      {"citation": "Platt, S.R. (2018). Imperial Twilight: The Opium War and the End of China's Last Golden Age. Knopf.", "url": null, "source_type": "academic"},
-      {"citation": "Fay, P.W. (1975). The Opium War, 1840-1842. University of North Carolina Press.", "url": null, "source_type": "academic"}
+      {
+        "citation": "Platt, S.R. (2018). Imperial Twilight: The Opium War and the End of China's Last Golden Age. Knopf.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Fay, P.W. (1975). The Opium War, 1840-1842. University of North Carolina Press.",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Kingdom of England", "role": "MAIN_ACTOR", "notes": "United Kingdom of Great Britain and Ireland"},
-      {"entity_name_original": "中華人民共和國", "role": "AFFECTED", "notes": "territorial successor; actual belligerent was 大清 Qing Empire"}
-    ]
+      {
+        "entity_name_original": "Kingdom of England",
+        "role": "MAIN_ACTOR",
+        "notes": "United Kingdom of Great Britain and Ireland"
+      },
+      {
+        "entity_name_original": "中華人民共和國",
+        "role": "AFFECTED",
+        "notes": "territorial successor; actual belligerent was 大清 Qing Empire"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "An Gorta Mór",
@@ -197,14 +335,35 @@
     "status": "confirmed",
     "ethical_notes": "Classified FAMINE with the UK government named as main actor because policy causation is documented in Parliamentary records: food exports continued, poor-law relief was placed on Irish landlords, and Trevelyan treated the famine as a providential corrective. British historiography long treated the famine as a natural disaster; Irish historiography from Mitchel (1861) forward has framed it as policy-driven.",
     "sources": [
-      {"citation": "Ó Gráda, C. (1999). Black '47 and Beyond: The Great Irish Famine in History, Economy, and Memory. Princeton University Press.", "url": null, "source_type": "academic"},
-      {"citation": "Kinealy, C. (1994). This Great Calamity: The Irish Famine 1845-52. Gill & Macmillan.", "url": null, "source_type": "academic"},
-      {"citation": "Mitchel, J. (1861). The Last Conquest of Ireland (Perhaps).", "url": null, "source_type": "primary"}
+      {
+        "citation": "Ó Gráda, C. (1999). Black '47 and Beyond: The Great Irish Famine in History, Economy, and Memory. Princeton University Press.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Kinealy, C. (1994). This Great Calamity: The Irish Famine 1845-52. Gill & Macmillan.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Mitchel, J. (1861). The Last Conquest of Ireland (Perhaps).",
+        "url": null,
+        "source_type": "primary"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Kingdom of England", "role": "MAIN_ACTOR", "notes": "United Kingdom of Great Britain and Ireland"},
-      {"entity_name_original": "Eire", "role": "VICTIM", "notes": "successor state"}
-    ]
+      {
+        "entity_name_original": "Kingdom of England",
+        "role": "MAIN_ACTOR",
+        "notes": "United Kingdom of Great Britain and Ireland"
+      },
+      {
+        "entity_name_original": "Eire",
+        "role": "VICTIM",
+        "notes": "successor state"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Адыгэ Цӏыфым Зауэ",
@@ -226,13 +385,33 @@
     "silence_reason": "Russian and Soviet state archives on the expulsion remain largely closed to independent researchers; the event has never been officially acknowledged by the Russian Federation (the Duma in 2014 explicitly refused a Circassian-parliament request for recognition). The 2014 Sochi Winter Olympics were held on the ground of the 1864 Kbaada final parade — widely interpreted by Circassian diaspora organisations as denial. Circassian oral tradition, Ottoman Ministry records in Istanbul, and a small body of Russian military correspondence are the main sources.",
     "ethical_notes": "Recognised as genocide by Georgia (2011) and by a growing body of scholarship (Shenfield 1999, Richmond 2013). Russian and much Western historiography still frame it as 'migration' or 'resettlement' — these are euphemisms per ETHICS-007.",
     "sources": [
-      {"citation": "Richmond, W. (2013). The Circassian Genocide. Rutgers University Press.", "url": null, "source_type": "academic"},
-      {"citation": "Shenfield, S. (1999). 'The Circassians: A Forgotten Genocide?' in Levene & Roberts, The Massacre in History.", "url": null, "source_type": "academic"}
+      {
+        "citation": "Richmond, W. (2013). The Circassian Genocide. Rutgers University Press.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Shenfield, S. (1999). 'The Circassians: A Forgotten Genocide?' in Levene & Roberts, The Massacre in History.",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Российская Федерация", "role": "MAIN_ACTOR", "notes": "Российская империя under Alexander II"},
-      {"entity_name_original": "Osmanlı İmparatorluğu", "role": "AFFECTED", "notes": "destination of deportees"}
-    ]
+      {
+        "entity_name_original": "Российская Федерация",
+        "role": "MAIN_ACTOR",
+        "notes": "Российская империя under Alexander II"
+      },
+      {
+        "entity_name_original": "Osmanlı İmparatorluğu",
+        "role": "AFFECTED",
+        "notes": "destination of deportees"
+      }
+    ],
+    "month": 5,
+    "day": 21,
+    "date_precision": "DAY",
+    "iso_date": "1864-05-21"
   },
   {
     "name_original": "Krakatau",
@@ -251,12 +430,27 @@
     "status": "confirmed",
     "ethical_notes": "The official Dutch colonial casualty figure of 36,417 rests on undercounting of coastal Javanese populations; revisionist estimates based on oral tradition run substantially higher. Recorded as uncertainty in casualty range.",
     "sources": [
-      {"citation": "Simkin, T. & Fiske, R.S. (1983). Krakatau 1883: The Volcanic Eruption and Its Effects. Smithsonian Institution Press.", "url": null, "source_type": "academic"},
-      {"citation": "Winchester, S. (2003). Krakatoa: The Day the World Exploded. HarperCollins.", "url": null, "source_type": "secondary"}
+      {
+        "citation": "Simkin, T. & Fiske, R.S. (1983). Krakatau 1883: The Volcanic Eruption and Its Effects. Smithsonian Institution Press.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Winchester, S. (2003). Krakatoa: The Day the World Exploded. HarperCollins.",
+        "url": null,
+        "source_type": "secondary"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Nederlandsch-Indie", "role": "AFFECTED"}
-    ]
+      {
+        "entity_name_original": "Nederlandsch-Indie",
+        "role": "AFFECTED"
+      }
+    ],
+    "month": 8,
+    "day": 27,
+    "date_precision": "DAY",
+    "iso_date": "1883-08-27"
   },
   {
     "name_original": "État Indépendant du Congo",
@@ -278,13 +472,29 @@
     "silence_reason": "On transfer of sovereignty from Leopold to Belgium in 1908, large quantities of EIC (État Indépendant du Congo) archives were burnt at Leopold's direction. Belgian state historiography until the 1990s downplayed Congolese mortality. The 1904 Casement Report (British) and 1905 Belgian Commission provided the main contemporary documentation; Congolese oral testimony (the Kuba and Mongo testimonies collected by Vansina) was excluded from metropolitan sources for most of the twentieth century.",
     "ethical_notes": "Classified COLONIAL_VIOLENCE per ETHICS-007; death toll 8-10M. Leopold II named explicitly as main actor because the state was constitutionally his personal property 1885-1908. The Belgian government's 2020 statement of 'profound regret' remains short of recognising genocide.",
     "sources": [
-      {"citation": "Hochschild, A. (1998). King Leopold's Ghost: A Story of Greed, Terror, and Heroism in Colonial Africa. Houghton Mifflin.", "url": null, "source_type": "academic"},
-      {"citation": "Nzongola-Ntalaja, G. (2002). The Congo from Leopold to Kabila: A People's History. Zed Books.", "url": null, "source_type": "academic"},
-      {"citation": "Casement, R. (1904). Report on the Administration of the Congo Free State. UK Parliamentary Papers.", "url": null, "source_type": "primary"}
+      {
+        "citation": "Hochschild, A. (1998). King Leopold's Ghost: A Story of Greed, Terror, and Heroism in Colonial Africa. Houghton Mifflin.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Nzongola-Ntalaja, G. (2002). The Congo from Leopold to Kabila: A People's History. Zed Books.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Casement, R. (1904). Report on the Administration of the Congo Free State. UK Parliamentary Papers.",
+        "url": null,
+        "source_type": "primary"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Etat independant du Congo", "role": "MAIN_ACTOR"}
-    ]
+      {
+        "entity_name_original": "Etat independant du Congo",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Reconcentración de Weyler",
@@ -306,12 +516,24 @@
     "silence_reason": "Spanish colonial archives in Havana were partially destroyed or removed on evacuation in 1898; US occupation records treated the dead as 'casualties of Spanish misgovernment' without independent audit. Cuban census figures for 1899 relative to 1887 show the population deficit but the geographic and ethnic distribution of losses is reconstructed rather than directly recorded.",
     "ethical_notes": "The Weyler reconcentration is the direct conceptual predecessor of the British concentration camps in the Second Boer War and of the US reconcentrados in the Philippines. Classified COLONIAL_VIOLENCE.",
     "sources": [
-      {"citation": "Tone, J.L. (2006). War and Genocide in Cuba, 1895-1898. University of North Carolina Press.", "url": null, "source_type": "academic"},
-      {"citation": "Pérez, L.A. (1998). The War of 1898: The United States and Cuba in History and Historiography. University of North Carolina Press.", "url": null, "source_type": "academic"}
+      {
+        "citation": "Tone, J.L. (2006). War and Genocide in Cuba, 1895-1898. University of North Carolina Press.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Pérez, L.A. (1998). The War of 1898: The United States and Cuba in History and Historiography. University of North Carolina Press.",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Cuba", "role": "VICTIM"}
-    ]
+      {
+        "entity_name_original": "Cuba",
+        "role": "VICTIM"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Filipino-American War",
@@ -320,8 +542,8 @@
     "year": 1899,
     "year_end": 1913,
     "location_name": "Philippines",
-    "location_lat": 14.60,
-    "location_lon": 121.00,
+    "location_lat": 14.6,
+    "location_lon": 121.0,
     "main_actor": "United States Army under Generals Elwell Otis, Arthur MacArthur, Jacob Smith (Samar); civilian administration under William Howard Taft",
     "description": "Following the 1898 US purchase of the Philippines from Spain, Filipino forces under Emilio Aguinaldo — who had already declared independence — fought a three-year war of resistance. US tactics included reconcentration on the Weyler model, particularly in Batangas and Samar. On Samar in 1901 Gen. Jacob Smith ordered 'kill everyone over ten' and 'make Samar a howling wilderness' (documented in his court-martial). The Moro campaigns on Mindanao and Sulu extended through 1913; the Bud Dajo massacre of March 1906 killed an estimated 800-1,000 Moro civilians sheltering in a volcanic crater. Filipino civilian deaths are most plausibly 200,000-600,000.",
     "casualties_low": 200000,
@@ -333,12 +555,24 @@
     "silence_reason": "US army records of the pacification campaigns were heavily sanitised before archiving; congressional inquiries (the Lodge Committee 1902) were partly held in executive session with classified transcripts released only in the 1970s. Filipino casualty figures rely on reconstruction from 1903 census anomalies and from Spanish-language local histories that US-trained Filipino historiography of the 1920s-50s tended to discount. The Bud Dajo and Bud Bagsak events remain absent from most US textbooks.",
     "ethical_notes": "Termed 'Philippine Insurrection' in US military usage until 1999 (renamed 'Philippine-American War' by Library of Congress). Classified COLONIAL_VIOLENCE per ETHICS-007. Main actor named in active voice.",
     "sources": [
-      {"citation": "Kramer, P.A. (2006). The Blood of Government: Race, Empire, the United States, and the Philippines. University of North Carolina Press.", "url": null, "source_type": "academic"},
-      {"citation": "Gates, J.M. (1973). Schoolbooks and Krags: The United States Army in the Philippines, 1898-1902. Greenwood.", "url": null, "source_type": "academic"}
+      {
+        "citation": "Kramer, P.A. (2006). The Blood of Government: Race, Empire, the United States, and the Philippines. University of North Carolina Press.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Gates, J.M. (1973). Schoolbooks and Krags: The United States Army in the Philippines, 1898-1902. Greenwood.",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "United States of America", "role": "MAIN_ACTOR"}
-    ]
+      {
+        "entity_name_original": "United States of America",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "明治維新",
@@ -357,12 +591,25 @@
     "confidence_score": 0.95,
     "status": "confirmed",
     "sources": [
-      {"citation": "Jansen, M. (2000). The Making of Modern Japan. Belknap/Harvard University Press.", "url": null, "source_type": "academic"},
-      {"citation": "Gordon, A. (2003). A Modern History of Japan. Oxford University Press.", "url": null, "source_type": "academic"}
+      {
+        "citation": "Jansen, M. (2000). The Making of Modern Japan. Belknap/Harvard University Press.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Gordon, A. (2003). A Modern History of Japan. Oxford University Press.",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "大日本帝國", "role": "FOUNDED", "notes": "Empire of Japan, formalised 1889"}
-    ]
+      {
+        "entity_name_original": "大日本帝國",
+        "role": "FOUNDED",
+        "notes": "Empire of Japan, formalised 1889"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Октябрьская революция",
@@ -381,12 +628,28 @@
     "status": "confirmed",
     "ethical_notes": "The October Revolution itself produced few immediate deaths in Petrograd; the historic weight lies in the civil war and the Soviet state that followed. The Russian state under Putin officially reclassifies 1917 as a 'catastrophe' rather than a revolution; Soviet-era hagiographic accounts in the opposite direction are equally unreliable. The date convention used here is Julian as per contemporary usage.",
     "sources": [
-      {"citation": "Figes, O. (1996). A People's Tragedy: The Russian Revolution 1891-1924. Jonathan Cape.", "url": null, "source_type": "academic"},
-      {"citation": "Rabinowitch, A. (2007). The Bolsheviks in Power: The First Year of Soviet Rule in Petrograd. Indiana University Press.", "url": null, "source_type": "academic"}
+      {
+        "citation": "Figes, O. (1996). A People's Tragedy: The Russian Revolution 1891-1924. Jonathan Cape.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Rabinowitch, A. (2007). The Bolsheviks in Power: The First Year of Soviet Rule in Petrograd. Indiana University Press.",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Союз Советских Социалистических Республик", "role": "FOUNDED", "notes": "USSR formally constituted December 1922"}
-    ]
+      {
+        "entity_name_original": "Союз Советских Социалистических Республик",
+        "role": "FOUNDED",
+        "notes": "USSR formally constituted December 1922"
+      }
+    ],
+    "month": 10,
+    "day": 25,
+    "date_precision": "DAY",
+    "iso_date": "1917-10-25"
   },
   {
     "name_original": "広島・長崎への原子爆弾投下",
@@ -405,14 +668,36 @@
     "status": "confirmed",
     "ethical_notes": "Classified MASSACRE per ETHICS-007 because civilian targets were selected; also has TECHNOLOGICAL_EVENT character for the first operational use of nuclear fission weapons. US historiography remains divided on military necessity; Japanese sources (hibakusha testimony, municipal and RERF records) foreground civilian targeting and radiation effects. Main actor is named in active voice including explicit presidential authorisation.",
     "sources": [
-      {"citation": "Committee for the Compilation of Materials on Damage Caused by the Atomic Bombs in Hiroshima and Nagasaki (1981). Hiroshima and Nagasaki: The Physical, Medical, and Social Effects of the Atomic Bombings. Basic Books.", "url": null, "source_type": "academic"},
-      {"citation": "Hasegawa, T. (2005). Racing the Enemy: Stalin, Truman, and the Surrender of Japan. Harvard University Press.", "url": null, "source_type": "academic"},
-      {"citation": "Radiation Effects Research Foundation. Life Span Study cohort data.", "url": "https://www.rerf.or.jp/en/", "source_type": "primary"}
+      {
+        "citation": "Committee for the Compilation of Materials on Damage Caused by the Atomic Bombs in Hiroshima and Nagasaki (1981). Hiroshima and Nagasaki: The Physical, Medical, and Social Effects of the Atomic Bombings. Basic Books.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Hasegawa, T. (2005). Racing the Enemy: Stalin, Truman, and the Surrender of Japan. Harvard University Press.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Radiation Effects Research Foundation. Life Span Study cohort data.",
+        "url": "https://www.rerf.or.jp/en/",
+        "source_type": "primary"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "United States of America", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "大日本帝國", "role": "VICTIM"}
-    ]
+      {
+        "entity_name_original": "United States of America",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "大日本帝國",
+        "role": "VICTIM"
+      }
+    ],
+    "month": 8,
+    "day": 6,
+    "date_precision": "DAY",
+    "iso_date": "1945-08-06"
   },
   {
     "name_original": "大跃进饥荒",
@@ -421,8 +706,8 @@
     "year": 1959,
     "year_end": 1961,
     "location_name": "People's Republic of China",
-    "location_lat": 35.00,
-    "location_lon": 105.00,
+    "location_lat": 35.0,
+    "location_lon": 105.0,
     "main_actor": "People's Republic of China leadership under Mao Zedong; Chinese Communist Party Politburo Standing Committee",
     "description": "The Great Leap Forward (1958-62) imposed forced agricultural collectivisation, mass requisition of village grain, impossible production quotas, and the diversion of peasant labour into backyard-furnace steel production. The result was the largest famine in recorded history: excess mortality estimates converge on 30-45 million between 1959 and 1961. Grain was exported during the famine peak; internal dissent by Peng Dehuai at Lushan (1959) was denounced as right-deviationism. The famine was officially denied under the term sannian ziran zaihai ('Three Years of Natural Disasters') until at least the 1980s.",
     "casualties_low": 30000000,
@@ -434,13 +719,29 @@
     "silence_reason": "PRC state archives on the 1959-61 famine remain partially classified; the euphemism sannian ziran zaihai ('Three Years of Natural Disasters') was official state framing into the 1980s and remains current in popular usage. Yang Jisheng (former Xinhua journalist) accessed provincial archives in the 1990s-2000s and documented the figures; his work Tombstone is banned in mainland China.",
     "ethical_notes": "Classified FAMINE per ETHICS-007, not 'three difficult years' or 'natural disasters'. Main actor named explicitly; the causal chain from collectivisation, to grain requisition, to continued exports during mass starvation, is documented in provincial records accessed by Yang Jisheng and Dikötter.",
     "sources": [
-      {"citation": "Yang Jisheng (2012, English trans.). Tombstone: The Great Chinese Famine, 1958-1962. Farrar, Straus and Giroux.", "url": null, "source_type": "academic"},
-      {"citation": "Dikötter, F. (2010). Mao's Great Famine: The History of China's Most Devastating Catastrophe, 1958-62. Bloomsbury.", "url": null, "source_type": "academic"},
-      {"citation": "Becker, J. (1996). Hungry Ghosts: Mao's Secret Famine. Free Press.", "url": null, "source_type": "academic"}
+      {
+        "citation": "Yang Jisheng (2012, English trans.). Tombstone: The Great Chinese Famine, 1958-1962. Farrar, Straus and Giroux.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Dikötter, F. (2010). Mao's Great Famine: The History of China's Most Devastating Catastrophe, 1958-62. Bloomsbury.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Becker, J. (1996). Hungry Ghosts: Mao's Secret Famine. Free Press.",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "中华人民共和国", "role": "MAIN_ACTOR"}
-    ]
+      {
+        "entity_name_original": "中华人民共和国",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Pembunuhan Massal 1965-1966",
@@ -462,13 +763,33 @@
     "silence_reason": "New Order state archives remain substantially closed; the Indonesian state has never carried out a truth-and-reconciliation process and the 2012 Komnas HAM findings were suppressed. US diplomatic cables from Jakarta (partially released via National Security Archive FOIA) document the Embassy providing names to the Indonesian Army. UK Foreign Office propaganda operations (IRD) remained classified until the 2010s. The 2015 presidential apology proposal was blocked.",
     "ethical_notes": "Classified GENOCIDE per ETHICS-007 recognition and per the 2016 International People's Tribunal finding (non-binding). The ethnicity component — targeted killing of ethnic Chinese — meets the UN Genocide Convention definition; the political-group component (PKI) does not under the Convention but is often classed as 'politicide'. Main actor explicitly named with Western complicity.",
     "sources": [
-      {"citation": "Robinson, G. (2018). The Killing Season: A History of the Indonesian Massacres, 1965-66. Princeton University Press.", "url": null, "source_type": "academic"},
-      {"citation": "Melvin, J. (2018). The Army and the Indonesian Genocide. Routledge.", "url": null, "source_type": "academic"},
-      {"citation": "National Security Archive (George Washington University). Indonesia 1965 cable collection.", "url": "https://nsarchive.gwu.edu/briefing-book/indonesia/2017-10-17/indonesia-mass-killings", "source_type": "primary"}
+      {
+        "citation": "Robinson, G. (2018). The Killing Season: A History of the Indonesian Massacres, 1965-66. Princeton University Press.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Melvin, J. (2018). The Army and the Indonesian Genocide. Routledge.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "National Security Archive (George Washington University). Indonesia 1965 cable collection.",
+        "url": "https://nsarchive.gwu.edu/briefing-book/indonesia/2017-10-17/indonesia-mass-killings",
+        "source_type": "primary"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "United States of America", "role": "PARTICIPANT", "notes": "CIA operational support and names provision"}
-    ]
+      {
+        "entity_name_original": "United States of America",
+        "role": "PARTICIPANT",
+        "notes": "CIA operational support and names provision"
+      }
+    ],
+    "month": 9,
+    "day": 30,
+    "date_precision": "DAY",
+    "iso_date": "1965-09-30"
   },
   {
     "name_original": "Timór-Leste — Indonéziár invasaun",
@@ -490,13 +811,32 @@
     "silence_reason": "Indonesian military records for the occupation period were substantially destroyed or remain classified. The 2005 CAVR Chega! Report was formally submitted to the UN Security Council but its implementation recommendations — including reparations from Indonesia and its foreign backers — have not been pursued; the report is not widely disseminated in Indonesia. US and Australian diplomatic records from the crucial December 1975 period were partially released only after decades (the 'Ford-Kissinger cable' of 6 December 1975 confirming US green light was declassified in 2001).",
     "ethical_notes": "The CAVR specifically found that the Indonesian military committed acts of extermination, enslavement, deportation, torture, rape, and persecution constituting crimes against humanity; characterisation as genocide rests on the proportion of population killed and on specific targeting patterns. Main actor explicitly named with foreign complicity.",
     "sources": [
-      {"citation": "Commission for Reception, Truth and Reconciliation in East Timor (2005). Chega! Final Report. Dili.", "url": "https://www.etan.org/etanpdf/2006/CAVR/", "source_type": "primary"},
-      {"citation": "Kiernan, B. (2003). 'The Demography of Genocide in Southeast Asia'. Critical Asian Studies 35(4).", "url": null, "source_type": "academic"}
+      {
+        "citation": "Commission for Reception, Truth and Reconciliation in East Timor (2005). Chega! Final Report. Dili.",
+        "url": "https://www.etan.org/etanpdf/2006/CAVR/",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Kiernan, B. (2003). 'The Demography of Genocide in Southeast Asia'. Critical Asian Studies 35(4).",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "United States of America", "role": "PARTICIPANT"},
-      {"entity_name_original": "Kingdom of England", "role": "PARTICIPANT", "notes": "United Kingdom"}
-    ]
+      {
+        "entity_name_original": "United States of America",
+        "role": "PARTICIPANT"
+      },
+      {
+        "entity_name_original": "Kingdom of England",
+        "role": "PARTICIPANT",
+        "notes": "United Kingdom"
+      }
+    ],
+    "month": 12,
+    "day": 7,
+    "date_precision": "DAY",
+    "iso_date": "1975-12-07"
   },
   {
     "name_original": "ការ​ឃាត​ប្រល័យ​ពូជ​សាសន៍​ខ្មែរ",
@@ -516,14 +856,38 @@
     "status": "confirmed",
     "ethical_notes": "The Extraordinary Chambers in the Courts of Cambodia (ECCC) convicted Nuon Chea and Khieu Samphan of genocide (against Cham and ethnic Vietnamese) in 2018; broader convictions for crimes against humanity include the non-minority killings. Pol Pot died in 1998 without trial. China and the United States continued to recognise Democratic Kampuchea's UN seat until 1993.",
     "sources": [
-      {"citation": "Kiernan, B. (2008). The Pol Pot Regime: Race, Power, and Genocide in Cambodia under the Khmer Rouge, 1975-79 (3rd ed.). Yale University Press.", "url": null, "source_type": "academic"},
-      {"citation": "Extraordinary Chambers in the Courts of Cambodia. Case 002/02 Judgment (2018).", "url": "https://www.eccc.gov.kh/en", "source_type": "primary"},
-      {"citation": "Chandler, D. (1999). Voices from S-21: Terror and History in Pol Pot's Secret Prison. University of California Press.", "url": null, "source_type": "academic"}
+      {
+        "citation": "Kiernan, B. (2008). The Pol Pot Regime: Race, Power, and Genocide in Cambodia under the Khmer Rouge, 1975-79 (3rd ed.). Yale University Press.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Extraordinary Chambers in the Courts of Cambodia. Case 002/02 Judgment (2018).",
+        "url": "https://www.eccc.gov.kh/en",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Chandler, D. (1999). Voices from S-21: Terror and History in Pol Pot's Secret Prison. University of California Press.",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "សាធារណរដ្ឋខ្មែរ", "role": "AFFECTED", "notes": "predecessor Khmer Republic; Democratic Kampuchea was the formal state name"},
-      {"entity_name_original": "ព្រះរាជាណាចក្រកម្ពុជា", "role": "AFFECTED", "notes": "successor Kingdom of Cambodia from 1993"}
-    ]
+      {
+        "entity_name_original": "សាធារណរដ្ឋខ្មែរ",
+        "role": "AFFECTED",
+        "notes": "predecessor Khmer Republic; Democratic Kampuchea was the formal state name"
+      },
+      {
+        "entity_name_original": "ព្រះរាជាណាចក្រកម្ពុជា",
+        "role": "AFFECTED",
+        "notes": "successor Kingdom of Cambodia from 1993"
+      }
+    ],
+    "month": 4,
+    "day": 17,
+    "date_precision": "DAY",
+    "iso_date": "1975-04-17"
   },
   {
     "name_original": "Genocidio Maya / Silent Holocaust",
@@ -545,14 +909,34 @@
     "silence_reason": "Guatemalan military archives of Plan Victoria 82 and Plan Sofía were partially surrendered to the CEH in 1999 but substantial portions remain missing; the Archivo Histórico de la Policía Nacional discovered in 2005 filled significant gaps but the armed-forces archives remain largely sealed. US CIA records on the Reagan-era support have been only partially declassified. Ríos Montt's 2013 genocide conviction was annulled and he died in 2018 before retrial; a final Guatemalan-state acknowledgement of genocide has not been issued.",
     "ethical_notes": "The CEH explicitly found acts of genocide under the UN Convention definition against four Maya groups. The 'Silent Holocaust' term is Cahuec-Montt's rendering. Main actor is named with explicit US support per CIA records released through the National Security Archive.",
     "sources": [
-      {"citation": "Commission for Historical Clarification (CEH) (1999). Guatemala: Memoria del Silencio. UN/Guatemala.", "url": "https://www.aaas.org/resources/guatemala-memory-silence", "source_type": "primary"},
-      {"citation": "Sanford, V. (2003). Buried Secrets: Truth and Human Rights in Guatemala. Palgrave.", "url": null, "source_type": "academic"},
-      {"citation": "Schirmer, J. (1998). The Guatemalan Military Project: A Violence Called Democracy. University of Pennsylvania Press.", "url": null, "source_type": "academic"}
+      {
+        "citation": "Commission for Historical Clarification (CEH) (1999). Guatemala: Memoria del Silencio. UN/Guatemala.",
+        "url": "https://www.aaas.org/resources/guatemala-memory-silence",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Sanford, V. (2003). Buried Secrets: Truth and Human Rights in Guatemala. Palgrave.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Schirmer, J. (1998). The Guatemalan Military Project: A Violence Called Democracy. University of Pennsylvania Press.",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Capitanía General de Guatemala", "role": "AFFECTED", "notes": "via successor Republic of Guatemala"},
-      {"entity_name_original": "United States of America", "role": "PARTICIPANT"}
-    ]
+      {
+        "entity_name_original": "Capitanía General de Guatemala",
+        "role": "AFFECTED",
+        "notes": "via successor Republic of Guatemala"
+      },
+      {
+        "entity_name_original": "United States of America",
+        "role": "PARTICIPANT"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Masacră la Srebrenica / Геноцид у Сребреници",
@@ -560,8 +944,8 @@
     "event_type": "GENOCIDE",
     "year": 1995,
     "location_name": "Srebrenica, eastern Bosnia and Herzegovina",
-    "location_lat": 44.10,
-    "location_lon": 19.30,
+    "location_lat": 44.1,
+    "location_lon": 19.3,
     "main_actor": "Army of Republika Srpska (VRS) under General Ratko Mladić; paramilitary Scorpions; with complicity of Radovan Karadžić's civilian leadership",
     "description": "Between 11 and 22 July 1995 Bosnian Serb forces under General Mladić overran the UN-declared 'safe area' of Srebrenica (garrisoned by a lightly armed Dutch UNPROFOR battalion) and systematically executed 8,372 identified Bosniak men and boys aged roughly 12-77. The bodies were buried, then disinterred by bulldozer weeks later and reburied in scattered secondary graves to conceal the crime — a feature unique among modern genocides that has enabled DNA-based identification across decades by the International Commission on Missing Persons. The ICJ (2007) and the ICTY/MICT (Mladić conviction 2017, Karadžić 2016) ruled the event genocide under the UN Genocide Convention.",
     "casualties_low": 8372,
@@ -571,13 +955,33 @@
     "status": "confirmed",
     "ethical_notes": "Classified GENOCIDE per ETHICS-007 per ICJ and ICTY rulings. Republika Srpska's own 2004 Srebrenica Commission confirmed the facts; subsequent RS leadership has oscillated between acknowledgement and denial — current Bosnian Serb leadership (2023-24) has withdrawn from the 2004 report. The Dutch UNPROFOR and UN command failures are secondary but documented in the 1999 UN Secretary-General's Report.",
     "sources": [
-      {"citation": "ICTY. Prosecutor v. Krstić (IT-98-33), Trial Judgment (2001) and Appeal Judgment (2004).", "url": "https://www.icty.org/case/krstic/", "source_type": "primary"},
-      {"citation": "ICJ. Application of the Convention on the Prevention and Punishment of the Crime of Genocide (Bosnia v. Serbia) Judgment (2007).", "url": null, "source_type": "primary"},
-      {"citation": "Honig, J.W. & Both, N. (1996). Srebrenica: Record of a War Crime. Penguin.", "url": null, "source_type": "academic"}
+      {
+        "citation": "ICTY. Prosecutor v. Krstić (IT-98-33), Trial Judgment (2001) and Appeal Judgment (2004).",
+        "url": "https://www.icty.org/case/krstic/",
+        "source_type": "primary"
+      },
+      {
+        "citation": "ICJ. Application of the Convention on the Prevention and Punishment of the Crime of Genocide (Bosnia v. Serbia) Judgment (2007).",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Honig, J.W. & Both, N. (1996). Srebrenica: Record of a War Crime. Penguin.",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Социјалистичка Федеративна Република Југославија", "role": "AFFECTED", "notes": "successor post-Yugoslav conflict"}
-    ]
+      {
+        "entity_name_original": "Социјалистичка Федеративна Република Југославија",
+        "role": "AFFECTED",
+        "notes": "successor post-Yugoslav conflict"
+      }
+    ],
+    "month": 7,
+    "day": 22,
+    "date_precision": "DAY",
+    "iso_date": "1995-07-22"
   },
   {
     "name_original": "Катынское убийство",
@@ -598,14 +1002,33 @@
     "silence_reason": "Soviet denial from 1943 to 1990 was maintained across seven general secretaries; the 1944 Burdenko Commission falsely attributed the killings to German forces. Numbering approximately 22,000 executions the event was one of the best-documented silences of the twentieth century: signed Politburo documents existed throughout but were held in the Presidential (former CPSU) archive. Polish-language scholarship (Madajczyk, Zawodny) reconstructed the event from German-occupation exhumations and from the 1959 Shelepin memorandum only after partial 1990-92 declassification. Contemporary Russian state education under Putin has again begun to minimise Soviet responsibility.",
     "ethical_notes": "Classified MASSACRE per ETHICS-007. Polish scholarship and the Polish state have pursued genocide classification; Russia rejects this. The 2010 Smolensk air disaster killed much of the Polish state leadership while flying to the Katyn commemoration. Primary sources here are the Politburo protocol signed by Stalin and the 1959 Shelepin memorandum requesting destruction of the files (preserved precisely because it had not been acted on).",
     "sources": [
-      {"citation": "Cienciala, A., Lebedeva, N., & Materski, W. (eds) (2007). Katyn: A Crime Without Punishment. Yale University Press.", "url": null, "source_type": "academic"},
-      {"citation": "Politburo of the CPSU Central Committee, Protocol P13/144 of 5 March 1940. Russian State Archive of Socio-Political History.", "url": null, "source_type": "primary"},
-      {"citation": "Shelepin, A. Memorandum to Khrushchev, 3 March 1959. Declassified 1992.", "url": null, "source_type": "primary"}
+      {
+        "citation": "Cienciala, A., Lebedeva, N., & Materski, W. (eds) (2007). Katyn: A Crime Without Punishment. Yale University Press.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Politburo of the CPSU Central Committee, Protocol P13/144 of 5 March 1940. Russian State Archive of Socio-Political History.",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Shelepin, A. Memorandum to Khrushchev, 3 March 1959. Declassified 1992.",
+        "url": null,
+        "source_type": "primary"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "Союз Советских Социалистических Республик", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Rzeczpospolita Polska", "role": "VICTIM"}
-    ]
+      {
+        "entity_name_original": "Союз Советских Социалистических Республик",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Rzeczpospolita Polska",
+        "role": "VICTIM"
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "World Wide Web proposal",
@@ -625,11 +1048,26 @@
     "status": "confirmed",
     "ethical_notes": "The WWW is often conflated with the internet (ARPANET 1969, TCP/IP 1983). Recorded here as TECHNOLOGICAL_EVENT distinct from the underlying network.",
     "sources": [
-      {"citation": "Berners-Lee, T. (1989). Information Management: A Proposal. CERN internal circulation.", "url": "https://www.w3.org/History/1989/proposal.html", "source_type": "primary"},
-      {"citation": "Berners-Lee, T. (1999). Weaving the Web. HarperSanFrancisco.", "url": null, "source_type": "secondary"},
-      {"citation": "Gillies, J. & Cailliau, R. (2000). How the Web Was Born. Oxford University Press.", "url": null, "source_type": "academic"}
+      {
+        "citation": "Berners-Lee, T. (1989). Information Management: A Proposal. CERN internal circulation.",
+        "url": "https://www.w3.org/History/1989/proposal.html",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Berners-Lee, T. (1999). Weaving the Web. HarperSanFrancisco.",
+        "url": null,
+        "source_type": "secondary"
+      },
+      {
+        "citation": "Gillies, J. & Cailliau, R. (2000). How the Web Was Born. Oxford University Press.",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
-    "entity_links": []
+    "entity_links": [],
+    "month": 3,
+    "date_precision": "MONTH",
+    "iso_date": "1989-03-00"
   },
   {
     "name_original": "2004 Indian Ocean tsunami",
@@ -648,11 +1086,26 @@
     "status": "confirmed",
     "ethical_notes": "Casualty figures for Aceh in particular were initially undercounted because of prior conflict conditions (GAM insurgency) that had restricted journalistic and census access. Indonesian official figure of 167,799 is widely cited; true Aceh toll may exceed 200,000.",
     "sources": [
-      {"citation": "Lay, T. et al. (2005). 'The great Sumatra-Andaman earthquake of 26 December 2004'. Science 308: 1127-1133.", "url": "https://doi.org/10.1126/science.1112250", "source_type": "academic"},
-      {"citation": "Athukorala, P. & Resosudarmo, B. (2005). 'The Indian Ocean Tsunami: Economic Impact, Disaster Management and Lessons'. Asian Economic Papers 4(1).", "url": null, "source_type": "academic"}
+      {
+        "citation": "Lay, T. et al. (2005). 'The great Sumatra-Andaman earthquake of 26 December 2004'. Science 308: 1127-1133.",
+        "url": "https://doi.org/10.1126/science.1112250",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Athukorala, P. & Resosudarmo, B. (2005). 'The Indian Ocean Tsunami: Economic Impact, Disaster Management and Lessons'. Asian Economic Papers 4(1).",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "entity_links": [
-      {"entity_name_original": "भारत गणराज्य", "role": "AFFECTED"}
-    ]
+      {
+        "entity_name_original": "भारत गणराज्य",
+        "role": "AFFECTED"
+      }
+    ],
+    "month": 12,
+    "day": 26,
+    "date_precision": "DAY",
+    "iso_date": "2004-12-26"
   }
 ]

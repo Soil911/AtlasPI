@@ -211,6 +211,12 @@ def seed_events_database():
                 event_type=ev_data["event_type"],
                 year=ev_data["year"],
                 year_end=ev_data.get("year_end"),
+                # v6.14: date precision fields (optional in JSON).
+                month=ev_data.get("month"),
+                day=ev_data.get("day"),
+                date_precision=ev_data.get("date_precision"),
+                iso_date=ev_data.get("iso_date"),
+                calendar_note=ev_data.get("calendar_note"),
                 location_name=ev_data.get("location_name"),
                 location_lat=ev_data.get("location_lat"),
                 location_lon=ev_data.get("location_lon"),

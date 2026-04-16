@@ -2,6 +2,62 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.14.0] - 2026-04-16
+
+**Tema**: *Date Precision Layer — granularita' sub-annuale per eventi storici*
+
+### Schema
+
+- Nuovo enum `DatePrecision` (DAY, MONTH, SEASON, YEAR, DECADE, CENTURY) in `src/db/enums.py`
+- 5 nuove colonne nullable su `HistoricalEvent`: `month`, `day`, `date_precision`, `iso_date`, `calendar_note`
+- 5 nuove colonne nullable su `TerritoryChange`: stessi campi
+- Indice composito `ix_historical_events_month_day` per query "on this day"
+- Check constraints su month (1-12) e day (1-31) per entrambe le tabelle
+- Migration Alembic `008_date_precision.py`
+
+### Nuovi endpoint API
+
+- `GET /v1/events/on-this-day/{MM-DD}` — eventi accaduti in un dato giorno/mese, ordinati per anno
+- `GET /v1/events/at-date/{YYYY-MM-DD}` — eventi in una data esatta (supporta anni negativi BCE: `-0331-10-01`)
+- `GET /v1/events` — nuovi filtri opzionali `month` (1-12) e `day` (1-31)
+- Event summary e detail includono i 5 nuovi campi di date precision
+- `calendar_note` nel detail spiega conversioni calendario (prolettico gregoriano per BCE, giuliano pre-1582)
+
+### Dati
+
+- 278 eventi processati dallo script `scripts/populate_date_fields.py`:
+  - **138 eventi** con precisione giornaliera (DAY) — data estratta dalle descrizioni
+  - **21 eventi** con precisione mensile (MONTH)
+  - **4 eventi** con precisione stagionale (SEASON)
+  - **115 eventi** con precisione annuale (YEAR) — nessuna data sub-annuale disponibile
+- Tutti i JSON in `data/events/batch_*.json` aggiornati con campi date precision
+- `src/db/seed.py` e `src/ingestion/ingest_new_events.py` leggono i nuovi campi da JSON
+
+### Test
+
+- `tests/test_v614_date_precision.py` — 30 nuovi test:
+  - Enum: 2 test (6 valori, StrEnum)
+  - Model: 4 test (colonne, roundtrip, nullable)
+  - Constraints: 3 test (month=13, day=32, month=0 → IntegrityError)
+  - List filters: 3 test (month, month+day, summary fields)
+  - On This Day: 5 test (match, empty, invalid month/day/format → 422)
+  - At Date: 4 test (CE, BCE, empty, bad format)
+  - Detail: 1 test (calendar_note in response)
+  - Backward compat: 2 test (old events, no filter)
+  - Script extraction: 6 test (DMY, MDY, no match, year mismatch, Julian note, post-1582)
+
+### Delta
+
+| Metrica | v6.13.0 | v6.14.0 | Delta |
+|---------|---------|---------|-------|
+| Entita' | 850 | 850 | +0 |
+| Eventi | 275 | 275 | +0 |
+| Eventi con data giornaliera | 0 | 138 | +138 |
+| Endpoint API | ~30 | ~32 | +2 |
+| Test | 719 | 749 | +30 |
+
+---
+
 ## [v6.13.0] - 2026-04-16
 
 **Tema**: *Content expansion — Persian & Indian subcontinent deep chains*

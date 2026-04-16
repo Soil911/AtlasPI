@@ -167,6 +167,28 @@ class ChainType(enum.StrEnum):
     OTHER = "OTHER"
 
 
+# ─── v6.14: Date Precision ────────────────────────────────────────────────
+
+
+class DatePrecision(enum.StrEnum):
+    """Precisione della data associata a un evento o territory_change.
+
+    Permette granularità sub-annuale: da giornaliera (DAY) a secolo (CENTURY).
+    Valori più precisi non garantiscono accuratezza — il confidence_score
+    dell'evento resta il giudizio di affidabilità complessivo.
+
+    ETHICS: per date BCE, il campo calendar_note deve specificare che si
+    usa il calendario prolettico gregoriano e che il calendario originale
+    era diverso (es. lunare, egiziano, giuliano pre-riforma).
+    """
+    DAY = "DAY"           # Es. 14 luglio 1789
+    MONTH = "MONTH"       # Es. ottobre 331 a.C.
+    SEASON = "SEASON"     # Es. estate 410 (sacco di Roma)
+    YEAR = "YEAR"         # Solo anno (default attuale)
+    DECADE = "DECADE"     # Es. "anni 1340" (Peste Nera)
+    CENTURY = "CENTURY"   # Es. "III secolo" (crisi del III secolo)
+
+
 class TransitionType(enum.StrEnum):
     """Modalità di transizione da un'entità all'altra in una catena.
 

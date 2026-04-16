@@ -5,8 +5,8 @@
     "event_type": "TREATY",
     "year": 1494,
     "location_name": "Tordesillas, Castile",
-    "location_lat": 41.50,
-    "location_lon": -5.00,
+    "location_lat": 41.5,
+    "location_lon": -5.0,
     "main_actor": "Crowns of Castile (Isabel I and Fernando II) and Portugal (João II), mediated by Pope Alexander VI",
     "description": "Signed on 7 June 1494, the treaty divided the newly contacted lands outside Europe between Castile and Portugal along a meridian 370 leagues west of the Cape Verde islands. Portugal received territory east of the line (eventually including Brazil), Castile everything to the west. The agreement was made without consultation of, or knowledge by, the tens of millions of Indigenous people whose lands and lives it partitioned. It is the documentary foundation of the Iberian colonial enterprise in the Americas.",
     "casualties_low": null,
@@ -16,14 +16,37 @@
     "status": "confirmed",
     "ethical_notes": "Treated as TREATY because it is a bilateral Iberian agreement, but the event's primary historical meaning is the legal-diplomatic authorization of what became a hemispheric conquest. Indigenous American polities were never notified and never consented. The Papal bulls Inter caetera (1493) form its juridical premise and are themselves a foundational document of colonial racism.",
     "entity_links": [
-      {"entity_name_original": "Corona de Castilla", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Reino de Portugal", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Imperio Español", "role": "FOUNDED", "notes": "juridical foundation of the Spanish overseas empire"}
+      {
+        "entity_name_original": "Corona de Castilla",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Reino de Portugal",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Imperio Español",
+        "role": "FOUNDED",
+        "notes": "juridical foundation of the Spanish overseas empire"
+      }
     ],
     "sources": [
-      {"citation": "Davenport, F.G. (ed.) (1917). European Treaties bearing on the History of the United States and its Dependencies to 1648. Carnegie Institution, vol. I, pp. 84-100 (text of the treaty).", "source_type": "primary", "url": null},
-      {"citation": "Parry, J.H. (1966). The Spanish Seaborne Empire. London: Hutchinson.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Davenport, F.G. (ed.) (1917). European Treaties bearing on the History of the United States and its Dependencies to 1648. Carnegie Institution, vol. I, pp. 84-100 (text of the treaty).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Parry, J.H. (1966). The Spanish Seaborne Empire. London: Hutchinson.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 6,
+    "day": 7,
+    "date_precision": "DAY",
+    "iso_date": "1494-06-07",
+    "calendar_note": "Julian calendar; Gregorian equivalent may differ"
   },
   {
     "name_original": "Huey Cocoliztli de 1520 / Cocoliztli huēyi",
@@ -43,14 +66,37 @@
     "status": "confirmed",
     "ethical_notes": "Recorded as EPIDEMIC but inseparable from CONQUEST: the European invasion introduced the pathogen, and the pathogen was indispensable to the conquest's success. Mexica narrators in the Florentine Codex (Book XII) describe the epidemic in their own voice; this is one of the best-documented Indigenous accounts of an early colonial disease catastrophe.",
     "entity_links": [
-      {"entity_name_original": "Ēxcān Tlahtōlōyān", "role": "VICTIM"},
-      {"entity_name_original": "Imperio Español", "role": "MAIN_ACTOR", "notes": "as vector of introduction via Narváez expedition"}
+      {
+        "entity_name_original": "Ēxcān Tlahtōlōyān",
+        "role": "VICTIM"
+      },
+      {
+        "entity_name_original": "Imperio Español",
+        "role": "MAIN_ACTOR",
+        "notes": "as vector of introduction via Narváez expedition"
+      }
     ],
     "sources": [
-      {"citation": "Sahagún, B. de (c. 1575-77). Historia General de las Cosas de Nueva España (Florentine Codex), Book XII (ed. Dibble & Anderson, University of Utah Press, 1975).", "source_type": "primary", "url": null},
-      {"citation": "Prem, H.J. (1991). 'Disease outbreaks in Central Mexico during the Sixteenth Century', in N.D. Cook & W.G. Lovell (eds.), Secret Judgments of God. University of Oklahoma Press.", "source_type": "academic", "url": null},
-      {"citation": "Acuna-Soto, R. et al. (2002). 'Megadrought and Megadeath in 16th Century Mexico'. Emerging Infectious Diseases, 8(4): 360-362.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Sahagún, B. de (c. 1575-77). Historia General de las Cosas de Nueva España (Florentine Codex), Book XII (ed. Dibble & Anderson, University of Utah Press, 1975).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Prem, H.J. (1991). 'Disease outbreaks in Central Mexico during the Sixteenth Century', in N.D. Cook & W.G. Lovell (eds.), Secret Judgments of God. University of Oklahoma Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Acuna-Soto, R. et al. (2002). 'Megadrought and Megadeath in 16th Century Mexico'. Emerging Infectious Diseases, 8(4): 360-362.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 4,
+    "date_precision": "MONTH",
+    "iso_date": "1520-04-00",
+    "calendar_note": "Julian calendar; Gregorian equivalent may differ"
   },
   {
     "name_original": "Caída de Tenochtitlan / Tenōchtitlān īpoliuhyān",
@@ -58,8 +104,8 @@
     "event_type": "CONQUEST",
     "year": 1521,
     "location_name": "México-Tenochtitlan, Basin of Mexico",
-    "location_lat": 19.4340,
-    "location_lon": -99.1400,
+    "location_lat": 19.434,
+    "location_lon": -99.14,
     "main_actor": "Hernán Cortés with Tlaxcalteca, Cempoaltec, Texcocan and other Mesoamerican allies against the Mexica under Cuauhtémoc",
     "description": "After the failed Noche Triste retreat (30 June 1520) and a reconsolidation at Tlaxcallan, a Castilian-Indigenous allied army besieged Tenochtitlán from 26 May 1521. On 13 August 1521 the city fell; the tlahtoani Cuauhtémoc was captured and later tortured and executed (1525). An estimated 100,000-240,000 Mexica died during the three-month siege from combat, starvation, and smallpox. The allied coalition was overwhelmingly Indigenous — perhaps 200,000 Tlaxcalteca, Texcocan and others — acting on their own political calculations against Mexica hegemony; the Spanish contingent numbered under 1,000.",
     "casualties_low": 100000,
@@ -69,17 +115,47 @@
     "status": "confirmed",
     "ethical_notes": "Classified CONQUEST per ETHICS-007 with explicit acknowledgment of the violence and the smallpox cascade (see the EPIDEMIC event 1520). The 'noble Cortés vs. barbaric Aztecs' narrative is rejected: the outcome was an Indigenous civil-strategic realignment in which Tlaxcalteca elites chose a Castilian alliance against Mexica imperial extraction, not a European triumph over a continent. Cuauhtémoc's subsequent torture (1525) is documented in Spanish sources and must not be omitted.",
     "entity_links": [
-      {"entity_name_original": "Ēxcān Tlahtōlōyān", "role": "DISSOLVED"},
-      {"entity_name_original": "Tlaxcallan", "role": "MAIN_ACTOR", "notes": "decisive Indigenous ally of the Castilian expedition"},
-      {"entity_name_original": "Imperio Español", "role": "CONQUERED"},
-      {"entity_name_original": "Nueva España", "role": "FOUNDED"}
+      {
+        "entity_name_original": "Ēxcān Tlahtōlōyān",
+        "role": "DISSOLVED"
+      },
+      {
+        "entity_name_original": "Tlaxcallan",
+        "role": "MAIN_ACTOR",
+        "notes": "decisive Indigenous ally of the Castilian expedition"
+      },
+      {
+        "entity_name_original": "Imperio Español",
+        "role": "CONQUERED"
+      },
+      {
+        "entity_name_original": "Nueva España",
+        "role": "FOUNDED"
+      }
     ],
     "sources": [
-      {"citation": "Sahagún, B. de (c. 1575-77). Florentine Codex, Book XII (Nahuatl-language Mexica account of the conquest).", "source_type": "primary", "url": null},
-      {"citation": "Hassig, R. (2006). Mexico and the Spanish Conquest, 2nd ed. University of Oklahoma Press.", "source_type": "academic", "url": null},
-      {"citation": "Restall, M. (2003). Seven Myths of the Spanish Conquest. Oxford University Press.", "source_type": "academic", "url": null},
-      {"citation": "Townsend, C. (2019). Fifth Sun: A New History of the Aztecs. Oxford University Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Sahagún, B. de (c. 1575-77). Florentine Codex, Book XII (Nahuatl-language Mexica account of the conquest).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Hassig, R. (2006). Mexico and the Spanish Conquest, 2nd ed. University of Oklahoma Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Restall, M. (2003). Seven Myths of the Spanish Conquest. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Townsend, C. (2019). Fifth Sun: A New History of the Aztecs. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Qhapaq Ataw Wallpaq hap'iyninkuna / Captura de Atahualpa",
@@ -98,17 +174,50 @@
     "status": "confirmed",
     "ethical_notes": "Per ETHICS-007 the Cajamarca ambush is treated as part of a CONQUEST event but described with the violence intact: an unarmed retinue, a ransom paid, and then the execution anyway. No 'civilizing mission' framing. The execution of Atawallpa on the Catholic charge of idolatry and fratricide despite the paid ransom is foundational to the event's ethical meaning.",
     "entity_links": [
-      {"entity_name_original": "Tawantinsuyu", "role": "VICTIM"},
-      {"entity_name_original": "Tawantinsuyu", "role": "DISSOLVED", "notes": "effective dissolution; a rump Neo-Inka state survives at Vilcabamba until 1572"},
-      {"entity_name_original": "Qusqu", "role": "CONQUERED"},
-      {"entity_name_original": "Imperio Español", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Virreinato del Peru", "role": "FOUNDED", "notes": "formally erected 1542"}
+      {
+        "entity_name_original": "Tawantinsuyu",
+        "role": "VICTIM"
+      },
+      {
+        "entity_name_original": "Tawantinsuyu",
+        "role": "DISSOLVED",
+        "notes": "effective dissolution; a rump Neo-Inka state survives at Vilcabamba until 1572"
+      },
+      {
+        "entity_name_original": "Qusqu",
+        "role": "CONQUERED"
+      },
+      {
+        "entity_name_original": "Imperio Español",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Virreinato del Peru",
+        "role": "FOUNDED",
+        "notes": "formally erected 1542"
+      }
     ],
     "sources": [
-      {"citation": "Xerez, F. de (1534). Verdadera relación de la conquista del Perú. Seville. (eyewitness account by Pizarro's secretary).", "source_type": "primary", "url": null},
-      {"citation": "Guaman Poma de Ayala, F. (c. 1615). Nueva crónica y buen gobierno. (Indigenous Andean account).", "source_type": "primary", "url": null},
-      {"citation": "Hemming, J. (1970). The Conquest of the Incas. London: Macmillan.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Xerez, F. de (1534). Verdadera relación de la conquista del Perú. Seville. (eyewitness account by Pizarro's secretary).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Guaman Poma de Ayala, F. (c. 1615). Nueva crónica y buen gobierno. (Indigenous Andean account).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Hemming, J. (1970). The Conquest of the Incas. London: Macmillan.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 11,
+    "date_precision": "MONTH",
+    "iso_date": "1533-11-00",
+    "calendar_note": "Julian calendar; Gregorian equivalent may differ"
   },
   {
     "name_original": "Sullqaymaki Tupaq Amaru",
@@ -127,15 +236,42 @@
     "status": "confirmed",
     "ethical_notes": "Classified DISSOLUTION_STATE for the termination of the Neo-Inka state. The execution was a public political act carried out over objections from Cuzco's royal and ecclesiastical officials, several of whom appealed to Philip II; the king later reprimanded Toledo but did not punish him. The event is the symbolic terminus of the Inka civilisation as a self-governing political entity.",
     "entity_links": [
-      {"entity_name_original": "Tawantinsuyu", "role": "DISSOLVED", "notes": "formal end of the Neo-Inka state at Vilcabamba"},
-      {"entity_name_original": "Virreinato del Peru", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Qusqu", "role": "PARTICIPANT"}
+      {
+        "entity_name_original": "Tawantinsuyu",
+        "role": "DISSOLVED",
+        "notes": "formal end of the Neo-Inka state at Vilcabamba"
+      },
+      {
+        "entity_name_original": "Virreinato del Peru",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Qusqu",
+        "role": "PARTICIPANT"
+      }
     ],
     "sources": [
-      {"citation": "Titu Cusi Yupanqui (1570). Instrucción del Inca Don Diego de Castro Titu Cussi Yupangui. (contemporary Neo-Inka account).", "source_type": "primary", "url": null},
-      {"citation": "Hemming, J. (1970). The Conquest of the Incas. London: Macmillan, chs. 20-21.", "source_type": "academic", "url": null},
-      {"citation": "Mumford, J.R. (2012). Vertical Empire: The General Resettlement of Indians in the Colonial Andes. Duke University Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Titu Cusi Yupanqui (1570). Instrucción del Inca Don Diego de Castro Titu Cussi Yupangui. (contemporary Neo-Inka account).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Hemming, J. (1970). The Conquest of the Incas. London: Macmillan, chs. 20-21.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Mumford, J.R. (2012). Vertical Empire: The General Resettlement of Indians in the Colonial Andes. Duke University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 9,
+    "day": 24,
+    "date_precision": "DAY",
+    "iso_date": "1572-09-24",
+    "calendar_note": "Julian calendar; Gregorian equivalent may differ"
   },
   {
     "name_original": "Anglo-Powhatan Wars / Tsenacommacah resistance",
@@ -155,14 +291,33 @@
     "status": "confirmed",
     "ethical_notes": "The English colonial archive dominates; this entry follows Rountree's reconstruction centred on Powhatan agency. The English colonial use of scorched-earth tactics and deliberate destruction of food supplies is documented in Virginia Company records themselves (notably Governor Wyatt's orders, 1622).",
     "entity_links": [
-      {"entity_name_original": "Tsenacommacah", "role": "VICTIM"},
-      {"entity_name_original": "Kingdom of England", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Thirteen Colonies", "role": "FOUNDED", "notes": "Virginia, the first successful English colony on the mainland"}
+      {
+        "entity_name_original": "Tsenacommacah",
+        "role": "VICTIM"
+      },
+      {
+        "entity_name_original": "Kingdom of England",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Thirteen Colonies",
+        "role": "FOUNDED",
+        "notes": "Virginia, the first successful English colony on the mainland"
+      }
     ],
     "sources": [
-      {"citation": "Rountree, H.C. (1990). Pocahontas's People: The Powhatan Indians of Virginia Through Four Centuries. University of Oklahoma Press.", "source_type": "academic", "url": null},
-      {"citation": "Gleach, F.W. (1997). Powhatan's World and Colonial Virginia: A Conflict of Cultures. University of Nebraska Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Rountree, H.C. (1990). Pocahontas's People: The Powhatan Indians of Virginia Through Four Centuries. University of Oklahoma Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Gleach, F.W. (1997). Powhatan's World and Colonial Virginia: A Conflict of Cultures. University of Nebraska Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Metacom's Rebellion / Wampanoag Matu'ayôkanûmuk",
@@ -182,15 +337,40 @@
     "status": "confirmed",
     "ethical_notes": "The colonial name 'King Philip's War' centres the English grievance; the Wampanoag name and leadership are restored here as the primary frame. The Great Swamp Fight of December 1675 meets the definition of MASSACRE under contemporary standards; English colonial records themselves acknowledge the fort contained mainly women, children and elders.",
     "entity_links": [
-      {"entity_name_original": "Wôpanâak", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Thirteen Colonies", "role": "PARTICIPANT"},
-      {"entity_name_original": "Kingdom of England", "role": "MAIN_ACTOR"}
+      {
+        "entity_name_original": "Wôpanâak",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Thirteen Colonies",
+        "role": "PARTICIPANT"
+      },
+      {
+        "entity_name_original": "Kingdom of England",
+        "role": "MAIN_ACTOR"
+      }
     ],
     "sources": [
-      {"citation": "Lepore, J. (1998). The Name of War: King Philip's War and the Origins of American Identity. Alfred A. Knopf.", "source_type": "academic", "url": null},
-      {"citation": "Drake, J.D. (1999). King Philip's War: Civil War in New England, 1675-1676. University of Massachusetts Press.", "source_type": "academic", "url": null},
-      {"citation": "Church, B. (1716). Entertaining Passages Relating to Philip's War. (colonial primary).", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "Lepore, J. (1998). The Name of War: King Philip's War and the Origins of American Identity. Alfred A. Knopf.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Drake, J.D. (1999). King Philip's War: Civil War in New England, 1675-1676. University of Massachusetts Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Church, B. (1716). Entertaining Passages Relating to Philip's War. (colonial primary).",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "month": 12,
+    "day": 19,
+    "date_precision": "DAY",
+    "iso_date": "1675-12-19"
   },
   {
     "name_original": "Po'pay Pueblo Revolt / Popay Popehuno",
@@ -209,18 +389,52 @@
     "status": "confirmed",
     "ethical_notes": "Classified REVOLUTION to underline that the rebellion established an independent Pueblo political order for twelve years, not merely a violent incident. The name 'Pueblo Revolt' remains historically common; Po'pay's name is now inscribed on his statue in the US Capitol (contributed by New Mexico 2005).",
     "entity_links": [
-      {"entity_name_original": "Pueblo", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Hopituh Shi-nu-mu", "role": "PARTICIPANT"},
-      {"entity_name_original": "Haak'u", "role": "PARTICIPANT"},
-      {"entity_name_original": "A:shiwi", "role": "PARTICIPANT"},
-      {"entity_name_original": "Nueva España", "role": "VICTIM"},
-      {"entity_name_original": "Imperio Español", "role": "VICTIM"}
+      {
+        "entity_name_original": "Pueblo",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Hopituh Shi-nu-mu",
+        "role": "PARTICIPANT"
+      },
+      {
+        "entity_name_original": "Haak'u",
+        "role": "PARTICIPANT"
+      },
+      {
+        "entity_name_original": "A:shiwi",
+        "role": "PARTICIPANT"
+      },
+      {
+        "entity_name_original": "Nueva España",
+        "role": "VICTIM"
+      },
+      {
+        "entity_name_original": "Imperio Español",
+        "role": "VICTIM"
+      }
     ],
     "sources": [
-      {"citation": "Knaut, A.L. (1995). The Pueblo Revolt of 1680: Conquest and Resistance in Seventeenth-Century New Mexico. University of Oklahoma Press.", "source_type": "academic", "url": null},
-      {"citation": "Weber, D.J. (ed.) (1999). What Caused the Pueblo Revolt of 1680? Bedford/St. Martin's.", "source_type": "academic", "url": null},
-      {"citation": "Otermín, A. de (1681). Declaration of Pedro Naranjo of San Felipe (Spanish interrogation transcripts of Pueblo informants; in Hackett & Shelby, eds., 1942).", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "Knaut, A.L. (1995). The Pueblo Revolt of 1680: Conquest and Resistance in Seventeenth-Century New Mexico. University of Oklahoma Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Weber, D.J. (ed.) (1999). What Caused the Pueblo Revolt of 1680? Bedford/St. Martin's.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Otermín, A. de (1681). Declaration of Pedro Naranjo of San Felipe (Spanish interrogation transcripts of Pueblo informants; in Hackett & Shelby, eds., 1942).",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "month": 8,
+    "day": 10,
+    "date_precision": "DAY",
+    "iso_date": "1680-08-10"
   },
   {
     "name_original": "Jatun Ataw Tupaq Amaru II / Rebelión de Túpac Amaru II",
@@ -242,15 +456,40 @@
     "known_silence": true,
     "silence_reason": "After 1781 the Spanish administration formally banned Quechua-language publications, performance of the Inka play Ollantay, and the wearing of Inka royal dress. These bans targeted the rebellion's cultural memory specifically and were partially respected until the 1810s.",
     "entity_links": [
-      {"entity_name_original": "Virreinato del Peru", "role": "PARTICIPANT"},
-      {"entity_name_original": "Imperio Español", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Qusqu", "role": "PARTICIPANT"}
+      {
+        "entity_name_original": "Virreinato del Peru",
+        "role": "PARTICIPANT"
+      },
+      {
+        "entity_name_original": "Imperio Español",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Qusqu",
+        "role": "PARTICIPANT"
+      }
     ],
     "sources": [
-      {"citation": "O'Phelan Godoy, S. (1985). Rebellions and Revolts in Eighteenth-Century Peru and Upper Peru. Böhlau Verlag.", "source_type": "academic", "url": null},
-      {"citation": "Stavig, W. (1999). The World of Tupac Amaru: Conflict, Community, and Identity in Colonial Peru. University of New Mexico Press.", "source_type": "academic", "url": null},
-      {"citation": "Thomson, S. (2002). We Alone Will Rule: Native Andean Politics in the Age of Insurgency. University of Wisconsin Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "O'Phelan Godoy, S. (1985). Rebellions and Revolts in Eighteenth-Century Peru and Upper Peru. Böhlau Verlag.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Stavig, W. (1999). The World of Tupac Amaru: Conflict, Community, and Identity in Colonial Peru. University of New Mexico Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Thomson, S. (2002). We Alone Will Rule: Native Andean Politics in the Age of Insurgency. University of Wisconsin Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 11,
+    "day": 4,
+    "date_precision": "DAY",
+    "iso_date": "1780-11-04"
   },
   {
     "name_original": "Louisiana Purchase / Vente de la Louisiane",
@@ -269,17 +508,51 @@
     "status": "confirmed",
     "ethical_notes": "Classified TREATY but documented with the crucial qualifier: the territory was inhabited by sovereign Indigenous nations who were neither consulted nor compensated. The entire subsequent 19th-century US continental expansion — Trail of Tears, Great Plains wars, California genocide — is juridically downstream of this sale between two European-descent states negotiating over someone else's homelands.",
     "entity_links": [
-      {"entity_name_original": "United States of America", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Republique francaise", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Oceti Sakowin", "role": "VICTIM", "notes": "not consulted"},
-      {"entity_name_original": "Numunuu", "role": "VICTIM", "notes": "not consulted"},
-      {"entity_name_original": "Chaticks-si-Chaticks", "role": "VICTIM", "notes": "Pawnee, not consulted"}
+      {
+        "entity_name_original": "United States of America",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Republique francaise",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Oceti Sakowin",
+        "role": "VICTIM",
+        "notes": "not consulted"
+      },
+      {
+        "entity_name_original": "Numunuu",
+        "role": "VICTIM",
+        "notes": "not consulted"
+      },
+      {
+        "entity_name_original": "Chaticks-si-Chaticks",
+        "role": "VICTIM",
+        "notes": "Pawnee, not consulted"
+      }
     ],
     "sources": [
-      {"citation": "Treaty Between the United States of America and the French Republic (30 April 1803). (text in Miller's Treaties, vol. 2).", "source_type": "primary", "url": null},
-      {"citation": "Kastor, P.J. (2004). The Nation's Crucible: The Louisiana Purchase and the Creation of America. Yale University Press.", "source_type": "academic", "url": null},
-      {"citation": "Kukla, J. (2003). A Wilderness So Immense: The Louisiana Purchase and the Destiny of America. Alfred A. Knopf.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Treaty Between the United States of America and the French Republic (30 April 1803). (text in Miller's Treaties, vol. 2).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Kastor, P.J. (2004). The Nation's Crucible: The Louisiana Purchase and the Creation of America. Yale University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Kukla, J. (2003). A Wilderness So Immense: The Louisiana Purchase and the Destiny of America. Alfred A. Knopf.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 4,
+    "day": 30,
+    "date_precision": "DAY",
+    "iso_date": "1803-04-30"
   },
   {
     "name_original": "Primer Grito de Dolores",
@@ -299,15 +572,40 @@
     "status": "confirmed",
     "ethical_notes": "The Grito is conventionally celebrated as the founding of Mexico. Hidalgo's and Morelos's original programmes — abolition of slavery, abolition of the caste system, return of land to Indigenous communities — were quietly abandoned by the Iturbidist settlement of 1821, which preserved creole property and the Catholic Church. This gap between founding rhetoric and founding settlement is itself part of the event.",
     "entity_links": [
-      {"entity_name_original": "Nueva España", "role": "DISSOLVED"},
-      {"entity_name_original": "Imperio Español", "role": "VICTIM"},
-      {"entity_name_original": "Primer Imperio Mexicano", "role": "FOUNDED"}
+      {
+        "entity_name_original": "Nueva España",
+        "role": "DISSOLVED"
+      },
+      {
+        "entity_name_original": "Imperio Español",
+        "role": "VICTIM"
+      },
+      {
+        "entity_name_original": "Primer Imperio Mexicano",
+        "role": "FOUNDED"
+      }
     ],
     "sources": [
-      {"citation": "Tutino, J. (1986). From Insurrection to Revolution in Mexico: Social Bases of Agrarian Violence, 1750-1940. Princeton University Press.", "source_type": "academic", "url": null},
-      {"citation": "Van Young, E. (2001). The Other Rebellion: Popular Violence, Ideology, and the Mexican Struggle for Independence, 1810-1821. Stanford University Press.", "source_type": "academic", "url": null},
-      {"citation": "Rodríguez O., J.E. (1998). The Independence of Spanish America. Cambridge University Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Tutino, J. (1986). From Insurrection to Revolution in Mexico: Social Bases of Agrarian Violence, 1750-1940. Princeton University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Van Young, E. (2001). The Other Rebellion: Popular Violence, Ideology, and the Mexican Struggle for Independence, 1810-1821. Stanford University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Rodríguez O., J.E. (1998). The Independence of Spanish America. Cambridge University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 9,
+    "day": 16,
+    "date_precision": "DAY",
+    "iso_date": "1810-09-16"
   },
   {
     "name_original": "Revolución de Mayo",
@@ -315,7 +613,7 @@
     "event_type": "REVOLUTION",
     "year": 1810,
     "location_name": "Buenos Aires, Viceroyalty of the Río de la Plata",
-    "location_lat": -34.60,
+    "location_lat": -34.6,
     "location_lon": -58.38,
     "main_actor": "Primera Junta de gobierno de Buenos Aires (Cornelio Saavedra, Mariano Moreno, Manuel Belgrano)",
     "description": "Between 18 and 25 May 1810 a series of open town-council meetings (cabildos abiertos) in Buenos Aires deposed Viceroy Cisneros and established the Primera Junta, nominally in the name of the captive Ferdinand VII but effectively an independent government of the Río de la Plata. The move was enabled by the British blockade of Spain and by the 1808 Napoleonic seizure of the peninsula. The event inaugurated a 15-year war of independence that would splinter the viceroyalty into modern Argentina, Uruguay, Paraguay and Bolivia; independence from Spain was formally declared at Tucumán in 1816.",
@@ -326,14 +624,35 @@
     "status": "confirmed",
     "ethical_notes": "Paired with the Grito de Dolores as a foundational event of Spanish American independence. The Revolución de Mayo is often narrated as a liberal patriotic triumph; in practice the creole elites who made it had no programme for the Indigenous population of the interior or for the enslaved African-descended population of the coastal cities, which was not emancipated in Argentina until 1853.",
     "entity_links": [
-      {"entity_name_original": "Virreinato del Rio de la Plata", "role": "DISSOLVED"},
-      {"entity_name_original": "Provincias Unidas del Rio de la Plata", "role": "FOUNDED"},
-      {"entity_name_original": "Imperio Español", "role": "VICTIM"}
+      {
+        "entity_name_original": "Virreinato del Rio de la Plata",
+        "role": "DISSOLVED"
+      },
+      {
+        "entity_name_original": "Provincias Unidas del Rio de la Plata",
+        "role": "FOUNDED"
+      },
+      {
+        "entity_name_original": "Imperio Español",
+        "role": "VICTIM"
+      }
     ],
     "sources": [
-      {"citation": "Chiaramonte, J.C. (1997). Ciudades, provincias, Estados: Orígenes de la Nación Argentina (1800-1846). Ariel.", "source_type": "academic", "url": null},
-      {"citation": "Goldman, N. (ed.) (1998). Nueva Historia Argentina, tomo III: Revolución, república, confederación (1806-1852). Sudamericana.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Chiaramonte, J.C. (1997). Ciudades, provincias, Estados: Orígenes de la Nación Argentina (1800-1846). Ariel.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Goldman, N. (ed.) (1998). Nueva Historia Argentina, tomo III: Revolución, república, confederación (1806-1852). Sudamericana.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 5,
+    "day": 25,
+    "date_precision": "DAY",
+    "iso_date": "1810-05-25"
   },
   {
     "name_original": "Batalla de Ayacucho",
@@ -352,15 +671,41 @@
     "status": "confirmed",
     "ethical_notes": "Both armies were overwhelmingly composed of Indigenous and mestizo Andean soldiers conscripted by rival creole officer corps; the patriot-royalist split cut across, not along, ethnic lines. This is often obscured in nationalist narratives.",
     "entity_links": [
-      {"entity_name_original": "Imperio Español", "role": "DISSOLVED", "notes": "effective end of continental Spanish American empire"},
-      {"entity_name_original": "Virreinato del Peru", "role": "DISSOLVED"},
-      {"entity_name_original": "Gran Colombia", "role": "MAIN_ACTOR"}
+      {
+        "entity_name_original": "Imperio Español",
+        "role": "DISSOLVED",
+        "notes": "effective end of continental Spanish American empire"
+      },
+      {
+        "entity_name_original": "Virreinato del Peru",
+        "role": "DISSOLVED"
+      },
+      {
+        "entity_name_original": "Gran Colombia",
+        "role": "MAIN_ACTOR"
+      }
     ],
     "sources": [
-      {"citation": "Sucre, A.J. de (1824). Parte oficial de la Batalla de Ayacucho. (primary).", "source_type": "primary", "url": null},
-      {"citation": "Lynch, J. (2006). Simón Bolívar: A Life. Yale University Press.", "source_type": "academic", "url": null},
-      {"citation": "Méndez, C. (2005). The Plebeian Republic: The Huanta Rebellion and the Making of the Peruvian State. Duke University Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Sucre, A.J. de (1824). Parte oficial de la Batalla de Ayacucho. (primary).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Lynch, J. (2006). Simón Bolívar: A Life. Yale University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Méndez, C. (2005). The Plebeian Republic: The Huanta Rebellion and the Making of the Peruvian State. Duke University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 12,
+    "day": 9,
+    "date_precision": "DAY",
+    "iso_date": "1824-12-09"
   },
   {
     "name_original": "Treaty of Guadalupe Hidalgo / Tratado de Guadalupe Hidalgo",
@@ -380,18 +725,51 @@
     "status": "confirmed",
     "ethical_notes": "Classified TREATY per the formal settlement but the underlying event is a war of territorial conquest. The treaty's Article IX property guarantees for Mexican nationals in the ceded territories were violated in practice, a well-documented pattern. The Indigenous nations of the ceded land — Comanche, Navajo, Apache, Ute, Pueblo, Tongva, Chumash, Yokuts — were not parties and received no protection; the US proceeded to wage separate wars against each.",
     "entity_links": [
-      {"entity_name_original": "United States of America", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Primer Imperio Mexicano", "role": "VICTIM", "notes": "successor Mexican Republic"},
-      {"entity_name_original": "Numunuu", "role": "VICTIM"},
-      {"entity_name_original": "Diné Bikéyah", "role": "VICTIM"},
-      {"entity_name_original": "Ndé / Inde", "role": "VICTIM", "notes": "Apache"},
-      {"entity_name_original": "Tongva", "role": "VICTIM"}
+      {
+        "entity_name_original": "United States of America",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Primer Imperio Mexicano",
+        "role": "VICTIM",
+        "notes": "successor Mexican Republic"
+      },
+      {
+        "entity_name_original": "Numunuu",
+        "role": "VICTIM"
+      },
+      {
+        "entity_name_original": "Diné Bikéyah",
+        "role": "VICTIM"
+      },
+      {
+        "entity_name_original": "Ndé / Inde",
+        "role": "VICTIM",
+        "notes": "Apache"
+      },
+      {
+        "entity_name_original": "Tongva",
+        "role": "VICTIM"
+      }
     ],
     "sources": [
-      {"citation": "Treaty of Peace, Friendship, Limits, and Settlement between the United States of America and the Mexican Republic (2 February 1848).", "source_type": "primary", "url": null},
-      {"citation": "Henderson, T.J. (2007). A Glorious Defeat: Mexico and Its War with the United States. Hill and Wang.", "source_type": "academic", "url": null},
-      {"citation": "Greenberg, A. (2012). A Wicked War: Polk, Clay, Lincoln, and the 1846 US Invasion of Mexico. Alfred A. Knopf.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Treaty of Peace, Friendship, Limits, and Settlement between the United States of America and the Mexican Republic (2 February 1848).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Henderson, T.J. (2007). A Glorious Defeat: Mexico and Its War with the United States. Hill and Wang.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Greenberg, A. (2012). A Wicked War: Polk, Clay, Lincoln, and the 1846 US Invasion of Mexico. Alfred A. Knopf.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "California Indian Genocide",
@@ -400,8 +778,8 @@
     "year": 1846,
     "year_end": 1873,
     "location_name": "California, USA",
-    "location_lat": 37.50,
-    "location_lon": -120.00,
+    "location_lat": 37.5,
+    "location_lon": -120.0,
     "main_actor": "State of California, United States Army, state militia campaigns (Bald Hills War, Bloody Island Massacre 1850, Round Valley, Modoc War)",
     "description": "Between the US conquest of 1846 and the end of the Modoc War in 1873, the Indigenous population of California collapsed from an estimated 150,000 to about 30,000. The State of California and US Army conducted, sponsored, or tacitly permitted a sustained campaign of killings, forced labour, child abduction, and systematic destruction of food supplies. The California legislature appropriated at least $1.5 million between 1851 and 1859 to reimburse volunteer militias for hunting Indigenous people; Governor Peter Burnett declared in 1851 that 'a war of extermination will continue to be waged between the races, until the Indian race becomes extinct.' The 1850 'Act for the Government and Protection of Indians' legalised the kidnapping of Indigenous children as 'apprentices'. In 2019 California Governor Gavin Newsom formally apologised for the genocide.",
     "casualties_low": 100000,
@@ -413,15 +791,38 @@
     "silence_reason": "For most of the twentieth century California textbooks and state public discourse denied the genocidal character of this period, describing the population collapse as 'decline', 'assimilation' or the consequence of 'disease and dislocation'. Madley's 2016 monograph, drawing on archival documentation of state funding for militia killings, ended plausible denial; formal state acknowledgment followed in 2019.",
     "ethical_notes": "Classified GENOCIDE per ETHICS-007 following Madley's decisive 2016 reconstruction, which established that the California state government knowingly financed a campaign meeting the Genocide Convention's definition. Euphemism ('decline', 'disappearance') is rejected.",
     "entity_links": [
-      {"entity_name_original": "United States of America", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "California Republic", "role": "MAIN_ACTOR", "notes": "US state after 1850"},
-      {"entity_name_original": "Tongva", "role": "VICTIM"}
+      {
+        "entity_name_original": "United States of America",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "California Republic",
+        "role": "MAIN_ACTOR",
+        "notes": "US state after 1850"
+      },
+      {
+        "entity_name_original": "Tongva",
+        "role": "VICTIM"
+      }
     ],
     "sources": [
-      {"citation": "Madley, B. (2016). An American Genocide: The United States and the California Indian Catastrophe, 1846-1873. Yale University Press.", "source_type": "academic", "url": null},
-      {"citation": "Castillo, E.D. (1978). 'The Impact of Euro-American Exploration and Settlement', in Handbook of North American Indians, vol. 8: California. Smithsonian Institution.", "source_type": "academic", "url": null},
-      {"citation": "Newsom, G. (2019). Executive Order N-15-19, Apology for the State's Historical Relationship with California Native Americans.", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "Madley, B. (2016). An American Genocide: The United States and the California Indian Catastrophe, 1846-1873. Yale University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Castillo, E.D. (1978). 'The Impact of Euro-American Exploration and Settlement', in Handbook of North American Indians, vol. 8: California. Smithsonian Institution.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Newsom, G. (2019). Executive Order N-15-19, Apology for the State's Historical Relationship with California Native Americans.",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Sand Creek Massacre",
@@ -440,13 +841,32 @@
     "status": "confirmed",
     "ethical_notes": "Classified MASSACRE. The 1865 Congressional investigation (Report on the Conduct of the War) itself concluded that the attack was a massacre and recommended prosecution. Chivington was allowed to resign and faced no charges. The National Park Service in 2007 designated the site a National Historic Site, explicitly using the term 'massacre'.",
     "entity_links": [
-      {"entity_name_original": "United States of America", "role": "MAIN_ACTOR"}
+      {
+        "entity_name_original": "United States of America",
+        "role": "MAIN_ACTOR"
+      }
     ],
     "sources": [
-      {"citation": "US Congress, Joint Committee on the Conduct of the War (1865). 'Massacre of the Cheyenne Indians'.", "source_type": "primary", "url": null},
-      {"citation": "Kelman, A. (2013). A Misplaced Massacre: Struggling over the Memory of Sand Creek. Harvard University Press.", "source_type": "academic", "url": null},
-      {"citation": "Hoig, S. (1961). The Sand Creek Massacre. University of Oklahoma Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "US Congress, Joint Committee on the Conduct of the War (1865). 'Massacre of the Cheyenne Indians'.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Kelman, A. (2013). A Misplaced Massacre: Struggling over the Memory of Sand Creek. Harvard University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Hoig, S. (1961). The Sand Creek Massacre. University of Oklahoma Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 11,
+    "day": 29,
+    "date_precision": "DAY",
+    "iso_date": "1864-11-29"
   },
   {
     "name_original": "Guerra de la Triple Alianza / Guasu Ñorairõ",
@@ -466,15 +886,37 @@
     "status": "confirmed",
     "ethical_notes": "Classified GENOCIDE because of the final-phase Brazilian scorched-earth campaign and the intentionality of destroying the Paraguayan male population; multiple recent scholars (including Whigham 2002, Doratioto 2002) argue this threshold was crossed. An alternative classification as interstate war (OTHER) would understate the demographic targeting. The figure is among the most contested in Latin American demographic history.",
     "entity_links": [
-      {"entity_name_original": "República del Paraguay", "role": "VICTIM"},
-      {"entity_name_original": "Império do Brasil", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Estado Oriental del Uruguay", "role": "PARTICIPANT"}
+      {
+        "entity_name_original": "República del Paraguay",
+        "role": "VICTIM"
+      },
+      {
+        "entity_name_original": "Império do Brasil",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Estado Oriental del Uruguay",
+        "role": "PARTICIPANT"
+      }
     ],
     "sources": [
-      {"citation": "Whigham, T.L. (2002). The Paraguayan War, vol. 1: Causes and Early Conduct. University of Nebraska Press.", "source_type": "academic", "url": null},
-      {"citation": "Whigham, T.L. & Potthast, B. (1999). 'The Paraguayan Rosetta Stone: New Insights into the Demographics of the Paraguayan War'. Latin American Research Review 34(1): 174-186.", "source_type": "academic", "url": null},
-      {"citation": "Doratioto, F. (2002). Maldita Guerra: Nova História da Guerra do Paraguai. Companhia das Letras.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Whigham, T.L. (2002). The Paraguayan War, vol. 1: Causes and Early Conduct. University of Nebraska Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Whigham, T.L. & Potthast, B. (1999). 'The Paraguayan Rosetta Stone: New Insights into the Demographics of the Paraguayan War'. Latin American Research Review 34(1): 174-186.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Doratioto, F. (2002). Maldita Guerra: Nova História da Guerra do Paraguai. Companhia das Letras.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Selk'nam Genocide / Haruwenh chiñ",
@@ -483,8 +925,8 @@
     "year": 1884,
     "year_end": 1910,
     "location_name": "Isla Grande de Tierra del Fuego, Argentina and Chile",
-    "location_lat": -54.00,
-    "location_lon": -68.50,
+    "location_lat": -54.0,
+    "location_lon": -68.5,
     "main_actor": "Sheep estancia companies (Sociedad Explotadora de Tierra del Fuego, José Menéndez, Mauricio Braun), their hired 'Indian hunters' (Alexander McLennan, Sam Hyslop), and the Argentine and Chilean governments",
     "description": "Between the establishment of the first large-scale Patagonian sheep estancias in 1884 and ~1910 the Selk'nam (Ona) people of Tierra del Fuego were reduced from an estimated 3,000-4,000 to under 350 by a deliberate extermination campaign financed by the sheep companies, which paid bounties (reportedly £1 per pair of ears, later per head) to hired gunmen. Survivors were deported to Dawson Island missions where tuberculosis killed the majority. The last fluent Selk'nam speaker who learned the language as a mother tongue, Ángela Loij, died in 1974. The neighbouring Aónikenk and Yámana peoples suffered comparable collapses. The Selk'nam were officially declared extinct by the Argentine state; the modern Covadonga Ona community's recognition as an Indigenous people was granted by Argentina only in 2023.",
     "casualties_low": 3000,
@@ -496,14 +938,33 @@
     "silence_reason": "Throughout the twentieth century the Selk'nam genocide was absent from Argentine and Chilean national historiographies and school curricula. The 'extinction' of the Selk'nam was framed as a tragic loss of an archaic people rather than as a commercial extermination financed by named companies. Bascopé's 2008 archival work and the 2023 Argentine recognition are reversing this silence.",
     "ethical_notes": "Classified GENOCIDE per ETHICS-007 and ETHICS-008. The companies' bounty system is documented in estancia ledgers preserved at the Museo Regional de Magallanes in Punta Arenas. The 2023 Argentine recognition of the Selk'nam people reverses the state's prior 'extinct' classification and enables contemporary Selk'nam descendants' land and political claims.",
     "entity_links": [
-      {"entity_name_original": "Selk'nam", "role": "VICTIM"},
-      {"entity_name_original": "Aonikenk", "role": "VICTIM"}
+      {
+        "entity_name_original": "Selk'nam",
+        "role": "VICTIM"
+      },
+      {
+        "entity_name_original": "Aonikenk",
+        "role": "VICTIM"
+      }
     ],
     "sources": [
-      {"citation": "Martinic, M. (2003). La Tierra de los Fuegos. Museo Regional de Magallanes.", "source_type": "academic", "url": null},
-      {"citation": "Bascopé, J. (2008). En un area de tránsito: comerciantes, cazadores y trabajadores en la Patagonia austral (1874-1910). Santiago: Ocho Libros.", "source_type": "academic", "url": null},
-      {"citation": "Chapman, A. (1982). Drama and Power in a Hunting Society: The Selk'nam of Tierra del Fuego. Cambridge University Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Martinic, M. (2003). La Tierra de los Fuegos. Museo Regional de Magallanes.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Bascopé, J. (2008). En un area de tránsito: comerciantes, cazadores y trabajadores en la Patagonia austral (1874-1910). Santiago: Ocho Libros.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Chapman, A. (1982). Drama and Power in a Hunting Society: The Selk'nam of Tierra del Fuego. Cambridge University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Atrocidades del Putumayo / Huitoto-Bora putumayo sufíriénai",
@@ -513,7 +974,7 @@
     "year_end": 1912,
     "location_name": "Putumayo river basin, upper Amazon (Peru-Colombia frontier)",
     "location_lat": -2.97,
-    "location_lon": -72.00,
+    "location_lon": -72.0,
     "main_actor": "Peruvian Amazon Company (Casa Arana) and its local overseers (Miguel Loaysa, Armando Normand), armed 'muchachos' of mixed indigenous auxiliaries, under Julio César Arana",
     "description": "Between approximately 1900 and the collapse of Andean rubber prices in 1912, the Peruvian Amazon Company — a London-listed extractive firm controlled by Julio César Arana — imposed a regime of forced labour, torture, sexual slavery and systematic murder on the Huitoto (Murui-Muina), Bora, Andoke, Ocaina, and Resígaro peoples of the Putumayo. An estimated 30,000-40,000 Indigenous people were killed or died from forced labour; the local population fell from ~50,000 pre-1900 to ~8,000-10,000 by 1912. The British consul Roger Casement's 1910-11 investigation, commissioned because the company was incorporated in London and employed Barbadian workers, exposed the scale internationally; the company collapsed commercially with the Asian rubber crash but no perpetrator was convicted in Peru.",
     "casualties_low": 30000,
@@ -525,14 +986,35 @@
     "silence_reason": "The Putumayo atrocities were broadly known in 1912 but were subsequently written out of Peruvian and Colombian national historiographies. No Peruvian judicial accounting was completed; the principal perpetrator Arana served in the Peruvian Senate. The Huitoto and Bora survivors' testimonies were systematically discounted until the 1980s.",
     "ethical_notes": "Classified COLONIAL_VIOLENCE (near-GENOCIDE threshold for specific communities). Per ETHICS-008 the known_silence field is set because the official Peruvian record actively protected Arana and no reparation was ever provided to Indigenous descendants. Indigenous oral testimonies collected by Pineda (1985) and others are the primary sources for community-level detail.",
     "entity_links": [
-      {"entity_name_original": "Virreinato del Peru", "role": "PARTICIPANT", "notes": "successor Peruvian Republic"},
-      {"entity_name_original": "British Empire", "role": "PARTICIPANT", "notes": "via Casement investigation and London incorporation of the company"}
+      {
+        "entity_name_original": "Virreinato del Peru",
+        "role": "PARTICIPANT",
+        "notes": "successor Peruvian Republic"
+      },
+      {
+        "entity_name_original": "British Empire",
+        "role": "PARTICIPANT",
+        "notes": "via Casement investigation and London incorporation of the company"
+      }
     ],
     "sources": [
-      {"citation": "Casement, R. (1912). Correspondence respecting the treatment of British colonial subjects and native Indians employed in the collection of rubber in the Putumayo district (Cmd. 6266). HMSO (the 'Blue Book').", "source_type": "primary", "url": null},
-      {"citation": "Taussig, M. (1987). Shamanism, Colonialism, and the Wild Man: A Study in Terror and Healing. University of Chicago Press.", "source_type": "academic", "url": null},
-      {"citation": "Pineda Camacho, R. (2003). La Casa Arana en el Putumayo: El caucho y el proceso esclavista. Bogotá: Universidad Nacional de Colombia.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Casement, R. (1912). Correspondence respecting the treatment of British colonial subjects and native Indians employed in the collection of rubber in the Putumayo district (Cmd. 6266). HMSO (the 'Blue Book').",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Taussig, M. (1987). Shamanism, Colonialism, and the Wild Man: A Study in Terror and Healing. University of Chicago Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Pineda Camacho, R. (2003). La Casa Arana en el Putumayo: El caucho y el proceso esclavista. Bogotá: Universidad Nacional de Colombia.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR"
   },
   {
     "name_original": "Revolución Mexicana",
@@ -552,13 +1034,33 @@
     "status": "confirmed",
     "ethical_notes": "The Zapatista programme of communal land restitution for Indigenous and peasant villages (Plan de Ayala) was the most radical agrarian programme achieved by any early-20th-century revolution, though its implementation was partial. The 1910-20 period also saw large-scale displacement of Yaqui and Mayo Indigenous peoples from Sonora to Yucatán, which is itself a documented forced-deportation campaign begun under Díaz.",
     "entity_links": [
-      {"entity_name_original": "Primer Imperio Mexicano", "role": "PARTICIPANT", "notes": "successor Mexican Republic"}
+      {
+        "entity_name_original": "Primer Imperio Mexicano",
+        "role": "PARTICIPANT",
+        "notes": "successor Mexican Republic"
+      }
     ],
     "sources": [
-      {"citation": "Knight, A. (1986). The Mexican Revolution, 2 vols. Cambridge University Press.", "source_type": "academic", "url": null},
-      {"citation": "Womack, J. (1969). Zapata and the Mexican Revolution. Alfred A. Knopf.", "source_type": "academic", "url": null},
-      {"citation": "McCaa, R. (2003). 'Missing Millions: The Human Cost of the Mexican Revolution'. Mexican Studies/Estudios Mexicanos 19(2): 367-400.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Knight, A. (1986). The Mexican Revolution, 2 vols. Cambridge University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Womack, J. (1969). Zapata and the Mexican Revolution. Alfred A. Knopf.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "McCaa, R. (2003). 'Missing Millions: The Human Cost of the Mexican Revolution'. Mexican Studies/Estudios Mexicanos 19(2): 367-400.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 10,
+    "day": 5,
+    "date_precision": "DAY",
+    "iso_date": "1910-10-05"
   },
   {
     "name_original": "Okipasyon ameriken d Ayiti / US Occupation of Haiti",
@@ -578,14 +1080,35 @@
     "status": "confirmed",
     "ethical_notes": "Classified COLONIAL_VIOLENCE. The occupation's economic programme — financial receivership, forced corvée labour, constitutional revision permitting foreign ownership — is the paradigm case for US early-20th-century interventions across the Caribbean ('Banana Wars'). The crucifixion-style photograph of Péralte was itself a political message understood at the time as a racially-coded warning.",
     "entity_links": [
-      {"entity_name_original": "United States of America", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Repiblik Dayiti", "role": "VICTIM"},
-      {"entity_name_original": "Républik Ayiti", "role": "VICTIM"}
+      {
+        "entity_name_original": "United States of America",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Repiblik Dayiti",
+        "role": "VICTIM"
+      },
+      {
+        "entity_name_original": "Républik Ayiti",
+        "role": "VICTIM"
+      }
     ],
     "sources": [
-      {"citation": "Renda, M.A. (2001). Taking Haiti: Military Occupation and the Culture of U.S. Imperialism, 1915-1940. University of North Carolina Press.", "source_type": "academic", "url": null},
-      {"citation": "Schmidt, H. (1971). The United States Occupation of Haiti, 1915-1934. Rutgers University Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Renda, M.A. (2001). Taking Haiti: Military Occupation and the Culture of U.S. Imperialism, 1915-1940. University of North Carolina Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Schmidt, H. (1971). The United States Occupation of Haiti, 1915-1934. Rutgers University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 7,
+    "day": 28,
+    "date_precision": "DAY",
+    "iso_date": "1915-07-28"
   },
   {
     "name_original": "Operación PBSUCCESS — golpe de Guatemala",
@@ -604,14 +1127,37 @@
     "status": "confirmed",
     "ethical_notes": "The immediate 1954 coup killed few people; its full casualty burden must be counted as the subsequent 36-year civil war, which the CEH concluded was directly enabled by the 1954 reversal of land reform and democratic institutions. The 'domino theory' and 'communist threat' framing that justified the coup is documented in CIA internal records as retrofitted to already-operational plans.",
     "entity_links": [
-      {"entity_name_original": "United States of America", "role": "MAIN_ACTOR"},
-      {"entity_name_original": "Capitania General de Guatemala", "role": "VICTIM", "notes": "successor Republic of Guatemala"}
+      {
+        "entity_name_original": "United States of America",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Capitania General de Guatemala",
+        "role": "VICTIM",
+        "notes": "successor Republic of Guatemala"
+      }
     ],
     "sources": [
-      {"citation": "Comisión para el Esclarecimiento Histórico (1999). Guatemala: Memoria del Silencio. UN.", "source_type": "primary", "url": null},
-      {"citation": "Cullather, N. (1999). Secret History: The CIA's Classified Account of its Operations in Guatemala, 1952-1954. Stanford University Press.", "source_type": "academic", "url": null},
-      {"citation": "Gleijeses, P. (1991). Shattered Hope: The Guatemalan Revolution and the United States, 1944-1954. Princeton University Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Comisión para el Esclarecimiento Histórico (1999). Guatemala: Memoria del Silencio. UN.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Cullather, N. (1999). Secret History: The CIA's Classified Account of its Operations in Guatemala, 1952-1954. Stanford University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Gleijeses, P. (1991). Shattered Hope: The Guatemalan Revolution and the United States, 1944-1954. Princeton University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 6,
+    "day": 27,
+    "date_precision": "DAY",
+    "iso_date": "1954-06-27"
   },
   {
     "name_original": "Revolución Cubana",
@@ -631,13 +1177,32 @@
     "status": "confirmed",
     "ethical_notes": "The Revolution's social achievements (literacy, healthcare, infant mortality reduction) and its repression of dissent (political prisoners, suppression of LGBT people under the UMAP camps 1965-68, emigration restrictions) are both part of its historical record and both documented here in principle. Cuban and Cuban-exile historiographies remain sharply divided on casualty estimates, especially for the immediate post-1959 revolutionary tribunals.",
     "entity_links": [
-      {"entity_name_original": "Cuba", "role": "PARTICIPANT"},
-      {"entity_name_original": "Capitania General de Cuba", "role": "PARTICIPANT", "notes": "successor Republic of Cuba"}
+      {
+        "entity_name_original": "Cuba",
+        "role": "PARTICIPANT"
+      },
+      {
+        "entity_name_original": "Capitania General de Cuba",
+        "role": "PARTICIPANT",
+        "notes": "successor Republic of Cuba"
+      }
     ],
     "sources": [
-      {"citation": "Pérez-Stable, M. (2012). The Cuban Revolution: Origins, Course, and Legacy, 3rd ed. Oxford University Press.", "source_type": "academic", "url": null},
-      {"citation": "Guerra, L. (2012). Visions of Power in Cuba: Revolution, Redemption, and Resistance, 1959-1971. University of North Carolina Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Pérez-Stable, M. (2012). The Cuban Revolution: Origins, Course, and Legacy, 3rd ed. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Guerra, L. (2012). Visions of Power in Cuba: Revolution, Redemption, and Resistance, 1959-1971. University of North Carolina Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 7,
+    "day": 26,
+    "date_precision": "DAY",
+    "iso_date": "1953-07-26"
   },
   {
     "name_original": "Golpe de Estado en Chile / Wingka trafkintu Txipanga",
@@ -657,14 +1222,37 @@
     "status": "confirmed",
     "ethical_notes": "Classified COLONIAL_VIOLENCE because of the external sponsorship (US) and the state-terrorist character of the regime. A separate GENOCIDE classification for Mapuche-targeted repression in specific regions has been argued by Chilean legal scholars but is not consensus. The National Stadium used as a detention/torture centre in the first weeks is one of the best-documented such facilities of the Cold War.",
     "entity_links": [
-      {"entity_name_original": "Capitanía General de Chile", "role": "VICTIM", "notes": "successor Republic of Chile"},
-      {"entity_name_original": "United States of America", "role": "PARTICIPANT"}
+      {
+        "entity_name_original": "Capitanía General de Chile",
+        "role": "VICTIM",
+        "notes": "successor Republic of Chile"
+      },
+      {
+        "entity_name_original": "United States of America",
+        "role": "PARTICIPANT"
+      }
     ],
     "sources": [
-      {"citation": "Comisión Nacional de Verdad y Reconciliación (1991). Informe Rettig. Santiago.", "source_type": "primary", "url": null},
-      {"citation": "Kornbluh, P. (2003). The Pinochet File: A Declassified Dossier on Atrocity and Accountability. The New Press.", "source_type": "academic", "url": null},
-      {"citation": "Stern, S.J. (2006). Battling for Hearts and Minds: Memory Struggles in Pinochet's Chile, 1973-1988. Duke University Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Comisión Nacional de Verdad y Reconciliación (1991). Informe Rettig. Santiago.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Kornbluh, P. (2003). The Pinochet File: A Declassified Dossier on Atrocity and Accountability. The New Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Stern, S.J. (2006). Battling for Hearts and Minds: Memory Struggles in Pinochet's Chile, 1973-1988. Duke University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 9,
+    "day": 11,
+    "date_precision": "DAY",
+    "iso_date": "1973-09-11"
   },
   {
     "name_original": "Operación Cóndor",
@@ -673,7 +1261,7 @@
     "year": 1975,
     "year_end": 1983,
     "location_name": "Argentina, Chile, Uruguay, Paraguay, Bolivia, Brazil; operations in US, Italy, France",
-    "location_lat": -34.60,
+    "location_lat": -34.6,
     "location_lon": -58.38,
     "main_actor": "Intelligence services of Argentina (SIDE), Chile (DINA), Uruguay, Paraguay, Bolivia, Brazil; United States CIA as facilitator",
     "description": "Operation Condor was a formalised transnational counterinsurgency network agreed in Santiago in November 1975 between the intelligence services of six South American military regimes. Its three phases coordinated information exchange, cross-border kidnapping and assassination of political opponents (notably the 1976 Washington car-bomb murder of Orlando Letelier), and external operations reaching Europe. Estimated cross-border 'Condor' victims range 402-672, including Chilean, Uruguayan, Bolivian, Paraguayan and Argentine exiles disappeared in third countries. The operation was exposed by the accidental 1992 discovery of the 'Archives of Terror' in Asunción, Paraguay (~700,000 documents). Argentine courts convicted Argentine and Uruguayan officers for Condor participation in 2016.",
@@ -686,15 +1274,41 @@
     "silence_reason": "The full extent of Condor remained secret from 1975 until the 1992 discovery of the Archives of Terror. Specific cross-border disappearances were long attributed to 'common crime' or denied outright by the intelligence services involved. US declassification of State Department cables (2000-2015) continues to fill archival gaps.",
     "ethical_notes": "Classified COLONIAL_VIOLENCE given the US CIA facilitation role and the state-terror character of the operation across borders. Per ETHICS-008, the long institutional silence is recorded; several specific victim cases remain 'disappeared' pending archival confirmation.",
     "entity_links": [
-      {"entity_name_original": "United States of America", "role": "PARTICIPANT"},
-      {"entity_name_original": "Capitanía General de Chile", "role": "MAIN_ACTOR", "notes": "successor Republic of Chile"},
-      {"entity_name_original": "Provincias Unidas del Rio de la Plata", "role": "MAIN_ACTOR", "notes": "successor Argentine Republic"}
+      {
+        "entity_name_original": "United States of America",
+        "role": "PARTICIPANT"
+      },
+      {
+        "entity_name_original": "Capitanía General de Chile",
+        "role": "MAIN_ACTOR",
+        "notes": "successor Republic of Chile"
+      },
+      {
+        "entity_name_original": "Provincias Unidas del Rio de la Plata",
+        "role": "MAIN_ACTOR",
+        "notes": "successor Argentine Republic"
+      }
     ],
     "sources": [
-      {"citation": "McSherry, J.P. (2005). Predatory States: Operation Condor and Covert War in Latin America. Rowman & Littlefield.", "source_type": "academic", "url": null},
-      {"citation": "Dinges, J. (2004). The Condor Years: How Pinochet and His Allies Brought Terrorism to Three Continents. The New Press.", "source_type": "academic", "url": null},
-      {"citation": "Archivo del Terror (1992). Centro de Documentación y Archivo para la Defensa de los Derechos Humanos, Asunción.", "source_type": "primary", "url": null}
-    ]
+      {
+        "citation": "McSherry, J.P. (2005). Predatory States: Operation Condor and Covert War in Latin America. Rowman & Littlefield.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Dinges, J. (2004). The Condor Years: How Pinochet and His Allies Brought Terrorism to Three Continents. The New Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Archivo del Terror (1992). Centro de Documentación y Archivo para la Defensa de los Derechos Humanos, Asunción.",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "month": 11,
+    "date_precision": "MONTH",
+    "iso_date": "1975-11-00"
   },
   {
     "name_original": "Dictadura cívico-militar argentina / Proceso de Reorganización Nacional",
@@ -703,7 +1317,7 @@
     "year": 1976,
     "year_end": 1983,
     "location_name": "Argentina",
-    "location_lat": -34.60,
+    "location_lat": -34.6,
     "location_lon": -58.38,
     "main_actor": "Argentine armed forces junta under Jorge Rafael Videla, Emilio Massera, Orlando Agosti, Roberto Viola, Leopoldo Galtieri, Reynaldo Bignone",
     "description": "On 24 March 1976 a military junta deposed President Isabel Perón and initiated the 'Proceso de Reorganización Nacional'. Over seven years approximately 30,000 people — the figure endorsed by successor Argentine truth commissions and by the courts — were 'disappeared' (detained, tortured and killed without acknowledgment) in a network of ~500 clandestine detention centres (notably ESMA in Buenos Aires). Systematic stealing of ~500 children born in captivity to detained women, who were then killed, was documented by the Abuelas de Plaza de Mayo and has led to ~130 identifications to date (2023). The 1984 CONADEP report (Nunca Más) established the official record; the 1985 Juicio a las Juntas tried and convicted the commanders; subsequent amnesty laws (1986-87) were nullified in 2005, and trials of hundreds of perpetrators continue. Multiple Argentine federal courts have ruled that the Proceso was a genocide under the Genocide Convention's definition.",
@@ -714,12 +1328,32 @@
     "status": "confirmed",
     "ethical_notes": "Classified GENOCIDE per ETHICS-007 consistent with multiple Argentine federal court rulings (notably the 2006 conviction of Etchecolatz where the court wrote that the crimes were 'committed in the context of the genocide that took place in the Republic of Argentina'). The political-group targeting basis distinguishes this from some narrower international definitions; Argentine jurisprudence has accepted genocide as a legal classification.",
     "entity_links": [
-      {"entity_name_original": "Provincias Unidas del Rio de la Plata", "role": "PARTICIPANT", "notes": "successor Argentine Republic"}
+      {
+        "entity_name_original": "Provincias Unidas del Rio de la Plata",
+        "role": "PARTICIPANT",
+        "notes": "successor Argentine Republic"
+      }
     ],
     "sources": [
-      {"citation": "Comisión Nacional sobre la Desaparición de Personas (CONADEP) (1984). Nunca Más: Informe de la CONADEP. EUDEBA.", "source_type": "primary", "url": null},
-      {"citation": "Feierstein, D. (2007). El genocidio como práctica social: entre el nazismo y la experiencia argentina. Fondo de Cultura Económica.", "source_type": "academic", "url": null},
-      {"citation": "Robben, A.C.G.M. (2005). Political Violence and Trauma in Argentina. University of Pennsylvania Press.", "source_type": "academic", "url": null}
-    ]
+      {
+        "citation": "Comisión Nacional sobre la Desaparición de Personas (CONADEP) (1984). Nunca Más: Informe de la CONADEP. EUDEBA.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Feierstein, D. (2007). El genocidio como práctica social: entre el nazismo y la experiencia argentina. Fondo de Cultura Económica.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Robben, A.C.G.M. (2005). Political Violence and Trauma in Argentina. University of Pennsylvania Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 3,
+    "day": 24,
+    "date_precision": "DAY",
+    "iso_date": "1976-03-24"
   }
 ]
