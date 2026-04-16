@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="theme-color" content="#0d1117">
+  <title>Timeline — AtlasPI</title>
+  <meta name="description" content="Interactive timeline visualization of 850 historical entities, 275+ events, and 21 dynasty chains. From 5000 BCE to 2024.">
+  <link rel="icon" type="image/svg+xml" href="/static/landing/assets/favicon.svg">
+  <link rel="stylesheet" href="/static/timeline/style.css">
+</head>
+<body>
+
+<div class="tl-app">
+
+  <!-- Header -->
+  <header class="tl-header">
+    <div class="tl-header-left">
+      <a href="/" class="tl-logo">Atlas<strong>PI</strong></a>
+      <span class="tl-title">Timeline Visualization</span>
+    </div>
+    <div class="tl-header-right">
+      <a href="/app" class="tl-nav-link">Map</a>
+      <a href="/docs" class="tl-nav-link">API</a>
+      <a href="https://github.com/Soil911/AtlasPI" class="tl-nav-link" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <!-- Controls bar -->
+  <div class="tl-controls">
+    <!-- Era quick-jump -->
+    <div class="tl-btn-group">
+      <button class="tl-btn active" data-era="all">All</button>
+      <button class="tl-btn" data-era="ancient">Ancient</button>
+      <button class="tl-btn" data-era="medieval">Medieval</button>
+      <button class="tl-btn" data-era="modern">Modern</button>
+    </div>
+
+    <div class="tl-separator"></div>
+
+    <!-- Layer toggles -->
+    <label class="tl-check"><input type="checkbox" id="layer-entities" checked> Entities</label>
+    <label class="tl-check"><input type="checkbox" id="layer-events" checked> Events</label>
+    <label class="tl-check"><input type="checkbox" id="layer-chains" checked> Chains</label>
+
+    <div class="tl-separator"></div>
+
+    <!-- Search -->
+    <div class="tl-search">
+      <span class="tl-search-icon">&#128269;</span>
+      <input type="search" id="tl-search-input" placeholder="Search entities or events..." autocomplete="off">
+    </div>
+
+    <div class="tl-separator"></div>
+
+    <!-- Zoom slider -->
+    <div class="tl-zoom-wrap">
+      <span>-</span>
+      <input type="range" id="zoom-slider" min="0" max="100" value="15" aria-label="Zoom level">
+      <span>+</span>
+    </div>
+  </div>
+
+  <!-- Main timeline area -->
+  <div class="tl-main" id="tl-main">
+    <svg class="tl-canvas" id="tl-svg" xmlns="http://www.w3.org/2000/svg"></svg>
+
+    <!-- Loading overlay -->
+    <div class="tl-loading" id="tl-loading">
+      <div class="tl-spinner"></div>
+      <div class="tl-loading-text">Loading timeline data...</div>
+    </div>
+  </div>
+
+  <!-- Tooltip -->
+  <div class="tl-tooltip" id="tl-tooltip"></div>
+
+  <!-- Status bar -->
+  <footer class="tl-status">
+    <span id="tl-status-left">Loading...</span>
+    <div class="tl-legend">
+      <div class="tl-legend-item"><div class="tl-legend-swatch" style="background:#f85149"></div>Empire</div>
+      <div class="tl-legend-item"><div class="tl-legend-swatch" style="background:#58a6ff"></div>Kingdom</div>
+      <div class="tl-legend-item"><div class="tl-legend-swatch" style="background:#3fb950"></div>Republic</div>
+      <div class="tl-legend-item"><div class="tl-legend-swatch" style="background:#bc8cff"></div>Dynasty</div>
+      <div class="tl-legend-item"><div class="tl-legend-swatch" style="background:#d29922"></div>Caliphate</div>
+      <div class="tl-legend-item"><div class="tl-legend-swatch" style="background:#76e3ea"></div>Confederation</div>
+      <div class="tl-legend-item"><div class="tl-legend-swatch" style="background:#f778ba"></div>City-state</div>
+    </div>
+    <span id="tl-status-right">...</span>
+  </footer>
+
+</div>
+
+<script src="/static/timeline/timeline.js"></script>
+</body>
+</html>

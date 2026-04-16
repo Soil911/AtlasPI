@@ -2,6 +2,50 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.17.0] - 2026-04-16
+
+**Tema**: *Interactive Timeline Visualization — esplorazione visiva dei dati temporali di AtlasPI*
+
+### Nuovo endpoint API
+
+- `GET /v1/timeline-data` — payload ottimizzato che combina entita', eventi e catene successorie in un unico JSON leggero. Nessuna descrizione, nessun GeoJSON — solo i campi temporali necessari per il rendering SVG. Cache aggressiva (1 ora)
+
+### Nuova pagina: /timeline
+
+- Timeline interattiva SVG pura (zero dipendenze esterne)
+- **Entita'**: barre orizzontali colorate per tipo (empire=rosso, kingdom=blu, republic=verde, ecc.) con etichette e tooltip
+- **Eventi**: marker verticali con simboli Unicode per tipo (battaglia, trattato, coronazione, ecc.). Supporta date precision v6.14 (DAY/MONTH/YEAR)
+- **Catene successorie**: barre collegate con marker di transizione colorati (verde=pacifico, rosso=violento)
+- **Zoom**: rotella del mouse + slider + pinch-to-zoom mobile
+- **Pan**: drag orizzontale (mouse e touch)
+- **Era quick-jump**: bottoni Ancient / Medieval / Modern / All
+- **Layer toggles**: checkbox per Entities / Events / Chains
+- **Ricerca**: campo di ricerca con highlight in tempo reale
+- **Legenda**: barra di stato con conteggi e swatch colore
+- Dark theme (#0d1117, #161b22, accent #58a6ff) coerente con il resto di AtlasPI
+- Mobile responsive (minimo 360px)
+- Performance: gestisce 850+ entita' + 275+ eventi senza lag
+
+### Files creati
+
+- `src/api/routes/timeline.py` — router con endpoint /v1/timeline-data + serve /timeline
+- `static/timeline/index.html` — pagina HTML
+- `static/timeline/style.css` — stili CSS
+- `static/timeline/timeline.js` — logica timeline SVG completa
+- `tests/test_v617_timeline.py` — 15 test per endpoint e pagina
+
+### Files modificati
+
+- `src/main.py` — registrazione timeline.router
+- `src/config.py` — versione 6.17.0
+- `static/index.html` — link Timeline nel header
+- `static/landing/index.html` — link Timeline nella nav, versione aggiornata
+- `README.md` — badge versione aggiornato
+- `CHANGELOG.md` — questa sezione
+- `tests/test_health.py` — asserzione versione 6.17.0
+
+---
+
 ## [v6.16.0] - 2026-04-16
 
 **Tema**: *AI Co-Founder Dashboard — interfaccia strutturata per accettare, rifiutare e analizzare suggerimenti AI*
