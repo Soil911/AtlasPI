@@ -1,0 +1,804 @@
+[
+  {
+    "name_original": "غزوة بدر",
+    "name_original_lang": "ar",
+    "event_type": "BATTLE",
+    "year": 624,
+    "year_end": null,
+    "location_name": "Badr, Hejaz (modern Saudi Arabia)",
+    "location_lat": 23.7815,
+    "location_lon": 38.7953,
+    "main_actor": "Prophet Muhammad and the Muslim community of Medina vs. Quraysh of Mecca",
+    "description": "The Battle of Badr (17 Ramadan 2 AH / 13 March 624 CE) was the first major military engagement between the nascent Muslim community and the Quraysh of Mecca. Approximately 313 Muslims defeated a Meccan force of around 1,000, killing 70 Quraysh (including Abu Jahl) and capturing 70. The victory was interpreted as divine validation of Muhammad's mission and proved decisive for the survival and expansion of Islam. It established the Muslim community as a military force in the Hejaz and shattered the prestige of the Quraysh as the dominant Arabian power.",
+    "casualties_low": 84,
+    "casualties_high": 84,
+    "casualties_source": "Ibn Ishaq, Sirat Rasul Allah (c. 767 CE); 14 Muslims and ~70 Quraysh killed. Figures are traditional and may be approximate.",
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Badr is a foundational event in Islamic self-understanding, regarded by Muslims as a miracle and divine intervention. Academic historians treat the battle as a historical event shaped by the conventions of early Arabic historiography (written down over a century after the events). The Quraysh perspective is preserved only through Islamic sources. The treatment of prisoners (some executed, most ransomed) reflects 7th-century Arabian warfare norms.",
+    "entity_links": [
+      {
+        "entity_name_original": "الخلافة الراشدة",
+        "role": "MAIN_ACTOR",
+        "notes": "The Muslim community that would become the Rashidun Caliphate"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Ibn Ishaq/Ibn Hisham, Sirat Rasul Allah (The Life of Muhammad). Trans. A. Guillaume (1955), Oxford University Press.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Watt, W.M. (1956). Muhammad at Medina. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 3,
+    "day": 13,
+    "date_precision": "DAY",
+    "iso_date": "0624-03-13",
+    "calendar_note": "17 Ramadan 2 AH (Hijri calendar); Gregorian equivalent approximate. Islamic sources use the Hijri lunar calendar."
+  },
+  {
+    "name_original": "تأسيس الدولة الأموية",
+    "name_original_lang": "ar",
+    "event_type": "FOUNDING_STATE",
+    "year": 661,
+    "year_end": null,
+    "location_name": "Damascus, Syria",
+    "location_lat": 33.5138,
+    "location_lon": 36.2765,
+    "main_actor": "Muawiya ibn Abi Sufyan, founder of the Umayyad dynasty",
+    "description": "Following the assassination of Caliph Ali ibn Abi Talib (January 661 CE) and the abdication of his son Hasan, Muawiya ibn Abi Sufyan established the Umayyad Caliphate with its capital in Damascus. This marked the transformation of the caliphate from an elective institution (the Rashidun period) to a hereditary dynasty and the first major Sunni-Shia schism in Islamic history. The Umayyads would rule for nearly a century (661–750), expanding the Islamic empire from the Iberian Peninsula to Central Asia, creating the largest empire the world had yet seen. They established Arabic as the administrative language, built the Dome of the Rock in Jerusalem, and created a distinctive Islamic art and architecture.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Umayyad succession is the foundational event of the Sunni-Shia divide. Shia Muslims regard Muawiya as a usurper who stole the caliphate from Ali's family. Sunni tradition acknowledges the legitimacy question but accepts Muawiya's rule as historical reality. This database does not adjudicate theological legitimacy — it records the political fact of dynastic establishment and notes the contested nature of the succession.",
+    "entity_links": [
+      {
+        "entity_name_original": "الدولة الأموية",
+        "role": "FOUNDED"
+      },
+      {
+        "entity_name_original": "الخلافة الراشدة",
+        "role": "DISSOLVED",
+        "notes": "The era of the 'Rightly Guided Caliphs' ended with Ali's death"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Kennedy, H. (2004). The Prophet and the Age of the Caliphates: The Islamic Near East from the 6th to the 11th Century. 2nd ed. Pearson.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "al-Tabari, Ta'rikh al-Rusul wa'l-Muluk (History of Prophets and Kings). Trans. G.R. Hawting (1989), SUNY Press, Vol. XVIII.",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "41 AH (Hijri calendar)"
+  },
+  {
+    "name_original": "بيت الحكمة",
+    "name_original_lang": "ar",
+    "event_type": "INTELLECTUAL_EVENT",
+    "year": 832,
+    "year_end": 1258,
+    "location_name": "Baghdad, Abbasid Caliphate (modern Iraq)",
+    "location_lat": 33.3152,
+    "location_lon": 44.3661,
+    "main_actor": "Caliph al-Ma'mun (institutionalized), with scholars including al-Khwarizmi, al-Kindi, Hunayn ibn Ishaq",
+    "description": "The House of Wisdom (Bayt al-Hikma) was a major intellectual institution in Baghdad that became the center of the Islamic Golden Age's translation movement. While scholarly activity in Baghdad predated al-Ma'mun, his caliphate (813–833) saw the systematic institutionalization of the translation of Greek, Persian, Indian, and Syriac scientific and philosophical works into Arabic. Scholars including al-Khwarizmi (algebra, algorithms), al-Kindi (philosophy), Hunayn ibn Ishaq (medical translation), and later al-Biruni and Ibn Sina worked within this intellectual ecosystem. The House of Wisdom and Baghdad's scholarly culture were destroyed during the Mongol sack of Baghdad in 1258.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The House of Wisdom is sometimes romanticized in popular narratives as a single library-like institution. Recent scholarship (Gutas 1998) emphasizes that it was part of a broader translation movement involving Christians (particularly Syriac Christians like Hunayn ibn Ishaq), Jews, Zoroastrians, and others — not exclusively Muslim scholars. The multicultural character of this intellectual achievement should not be erased by framing it as solely 'Islamic.' The destruction by the Mongols in 1258 is separately recorded.",
+    "entity_links": [
+      {
+        "entity_name_original": "الخلافة العباسية",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Gutas, D. (1998). Greek Thought, Arabic Culture: The Graeco-Arabic Translation Movement in Baghdad and Early Abbasid Society. Routledge.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "al-Khalili, J. (2011). The House of Wisdom: How Arabic Science Saved Ancient Knowledge and Gave Us the Renaissance. Penguin.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "c. 217 AH (Hijri); exact founding date uncertain"
+  },
+  {
+    "name_original": "فتح بيت المقدس / تحرير القدس",
+    "name_original_lang": "ar",
+    "event_type": "CONQUEST",
+    "year": 1187,
+    "year_end": null,
+    "location_name": "Jerusalem",
+    "location_lat": 31.7683,
+    "location_lon": 35.2137,
+    "main_actor": "Salah ad-Din Yusuf ibn Ayyub (Saladin), Sultan of Egypt and Syria",
+    "description": "On 2 October 1187, Saladin captured Jerusalem from the Crusader Kingdom of Jerusalem after the decisive Muslim victory at the Battle of Hattin (4 July 1187). Unlike the First Crusade's conquest of Jerusalem in 1099, which involved the massacre of the city's Muslim and Jewish inhabitants, Saladin's capture was notably restrained: the population was allowed to ransom themselves, and those who could not pay were generally enslaved rather than killed. Saladin restored Muslim worship at al-Aqsa Mosque and the Dome of the Rock, which the Crusaders had converted to Christian use. The fall of Jerusalem triggered the Third Crusade (1189–1192) led by Richard I of England, Philip II of France, and Frederick Barbarossa.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.88,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Saladin's treatment of Jerusalem's population, while merciful by medieval standards, still involved the enslavement of those unable to pay ransom (estimated 15,000 people). The comparison with the 1099 Crusader massacre is legitimate but should not obscure this. Both Muslim and Christian sources idealize their respective narratives — Saladin as chivalric hero (Ibn al-Athir) and the Crusaders as defenders of Christendom (William of Tyre's continuators). Neither account is neutral.",
+    "entity_links": [
+      {
+        "entity_name_original": "الدولة الأيوبية",
+        "role": "MAIN_ACTOR",
+        "notes": "Saladin's Ayyubid sultanate captured Jerusalem"
+      },
+      {
+        "entity_name_original": "Regnum Hierosolymitanum",
+        "role": "VICTIM",
+        "notes": "The Crusader Kingdom lost Jerusalem, its capital and raison d'être"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Ibn al-Athir, al-Kamil fi al-Tarikh (The Complete History). Trans. D.S. Richards (2007), Ashgate, Vol. 2.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Lyons, M.C. & Jackson, D.E.P. (1982). Saladin: The Politics of the Holy War. Cambridge University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 10,
+    "day": 2,
+    "date_precision": "DAY",
+    "iso_date": "1187-10-02",
+    "calendar_note": "Julian calendar (pre-Gregorian); 27 Rajab 583 AH in Islamic calendar"
+  },
+  {
+    "name_original": "الفتوحات الإسلامية في شمال أفريقيا",
+    "name_original_lang": "ar",
+    "event_type": "CONQUEST",
+    "year": 647,
+    "year_end": 709,
+    "location_name": "North Africa (Ifriqiya, Maghreb)",
+    "location_lat": 34.0,
+    "location_lon": 9.0,
+    "main_actor": "Arab Muslim armies under successive commanders: Uqba ibn Nafi, Hassan ibn al-Nu'man, Musa ibn Nusayr",
+    "description": "The Islamic conquest of North Africa (647–709 CE) was a prolonged military campaign that transformed the region from a Byzantine/Berber/Roman cultural zone to an Arab-Islamic one. Key events include the founding of Kairouan (670 CE) by Uqba ibn Nafi as a permanent military base, the fierce Berber resistance under Kusayla (who defeated and killed Uqba, 683) and the legendary queen Dihya/Kahina of the Aurès (defeated c. 702), and the final conquest of Carthage (698) and the Maghreb. The Berber population largely converted to Islam but maintained distinct cultural identities. The conquest opened the path for the Muslim invasion of Iberia in 711.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "Berber perspectives on the conquest are almost entirely absent from the written record. Arabic sources dominate, and they portray Berber resistance primarily as an obstacle to be overcome. The legendary Berber queen Dihya/Kahina is known almost exclusively through Arab accounts that may reflect stereotyping. Indigenous Berber oral traditions were not systematically recorded until much later.",
+    "ethical_notes": "The conquest was not a single event but decades of warfare, negotiation, and resistance. Berber resistance was formidable — the conquest took over 60 years, longer than the initial Muslim conquests of the entire Levant and Persia. The Arabization and Islamization of North Africa, while eventually embraced by most of the population, involved initial coercion. The destruction of Carthage (698 CE) by Hassan ibn al-Nu'man marked the final end of classical Mediterranean urbanism in Tunisia.",
+    "entity_links": [
+      {
+        "entity_name_original": "الدولة الأموية",
+        "role": "MAIN_ACTOR",
+        "notes": "Later phase of the conquest was under Umayyad authority"
+      },
+      {
+        "entity_name_original": "الخلافة الراشدة",
+        "role": "MAIN_ACTOR",
+        "notes": "Early phase under Rashidun caliphate"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Brett, M. & Fentress, E. (1996). The Berbers. Blackwell.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "al-Baladhuri, Futuh al-Buldan (Conquest of Lands). Trans. P.K. Hitti (1916), Columbia University Press.",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "27–90 AH (Hijri calendar)"
+  },
+  {
+    "name_original": "الحروب الصليبية — الحملة الأولى",
+    "name_original_lang": "ar",
+    "event_type": "CONQUEST",
+    "year": 1096,
+    "year_end": 1099,
+    "location_name": "Levant (Palestine, Syria)",
+    "location_lat": 31.7683,
+    "location_lon": 35.2137,
+    "main_actor": "Western European Crusader armies responding to Pope Urban II's call at Clermont (1095)",
+    "description": "The First Crusade (1096–1099) was a military expedition called by Pope Urban II at the Council of Clermont (27 November 1095), officially to aid the Byzantine Empire and recover Jerusalem from Muslim control. Crusader armies, primarily French and Norman, crossed Anatolia, captured Antioch (June 1098), and took Jerusalem on 15 July 1099. The conquest of Jerusalem was accompanied by a massive massacre: Muslim and Jewish inhabitants were slaughtered indiscriminately, with contemporary sources (both Christian and Muslim) describing streets running with blood. Estimates of the dead range from several thousand to tens of thousands. The Crusaders established four Crusader states: the Kingdom of Jerusalem, County of Tripoli, Principality of Antioch, and County of Edessa.",
+    "casualties_low": 10000,
+    "casualties_high": 70000,
+    "casualties_source": "Fulcher of Chartres, Historia Hierosolymitana; Ibn al-Athir, al-Kamil fi al-Tarikh. Range reflects debate between sources.",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Jerusalem massacre of 1099 is documented by both Christian and Muslim sources and cannot be minimized. The Crusade also included the massacres of Jews in the Rhineland (1096) by Popular Crusade forces — pogroms that devastated Ashkenazi Jewish communities. The Crusades are remembered very differently across cultures: as holy liberation (traditional Western Christian), as invasion and colonial occupation (Muslim and Eastern Christian), and as catastrophe (Jewish). This database records all perspectives.",
+    "entity_links": [
+      {
+        "entity_name_original": "Regnum Hierosolymitanum",
+        "role": "FOUNDED"
+      },
+      {
+        "entity_name_original": "Principatus Antiochenus",
+        "role": "FOUNDED"
+      },
+      {
+        "entity_name_original": "Comitatus Edessanus",
+        "role": "FOUNDED"
+      },
+      {
+        "entity_name_original": "Comitatus Tripolitanus",
+        "role": "FOUNDED"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Asbridge, T. (2004). The First Crusade: A New History. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Ibn al-Athir, al-Kamil fi al-Tarikh. Trans. D.S. Richards (2006), Ashgate, Vol. 1.",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "month": 7,
+    "day": 15,
+    "date_precision": "DAY",
+    "iso_date": "1099-07-15",
+    "calendar_note": "Julian calendar (pre-Gregorian reform)"
+  },
+  {
+    "name_original": "المرابطون — يوسف بن تاشفين",
+    "name_original_lang": "ar",
+    "event_type": "FOUNDING_STATE",
+    "year": 1040,
+    "year_end": null,
+    "location_name": "Saharan West Africa / Mauritania",
+    "location_lat": 18.0,
+    "location_lon": -12.0,
+    "main_actor": "Abdallah ibn Yasin and Yahya ibn Ibrahim (spiritual founders); Yusuf ibn Tashfin (political/military leader)",
+    "description": "The Almoravid movement began around 1040 CE as a religious reform movement among the Sanhaja Berbers of the western Sahara, led by the theologian Abdallah ibn Yasin. Under Yusuf ibn Tashfin, the Almoravids built an empire stretching from Senegal to central Spain. They founded Marrakesh (1070) as their capital, conquered Ghana (1076), and crossed into Iberia where they defeated Alfonso VI of Castile at the Battle of Sagrajas/Zallaqa (1086), halting the Reconquista for a century. The Almoravid state represents one of the most significant Saharan-origin empires, linking sub-Saharan Africa with the Mediterranean world.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.78,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "The sub-Saharan African communities conquered by the Almoravids (Ghana/Wagadu and others) left limited written records of their experience of the conquest. Arabic sources emphasize the Islamic reformist narrative. Oral traditions of the Soninke and other West African peoples preserve alternative memories.",
+    "ethical_notes": "The Almoravid conquest of the Ghana Empire (Wagadu) and its impact on West African societies is often minimized in narratives that focus on the Iberian front. The Almoravids' strict Maliki Islamic reform involved the destruction of non-Islamic religious practices and imposed orthodoxy on diverse Muslim communities. Their conquest of Ghana contributed to the decline of one of Africa's great pre-Islamic states.",
+    "entity_links": [
+      {
+        "entity_name_original": "المرابطون",
+        "role": "FOUNDED"
+      },
+      {
+        "entity_name_original": "Wagadou",
+        "role": "VICTIM",
+        "notes": "Ghana Empire was conquered by the Almoravids"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Messier, R.A. (2010). The Almoravids and the Meanings of Jihad. Praeger.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Ibn Khaldun, Kitab al-Ibar (Book of Lessons). Trans. F. Rosenthal (1958), Princeton University Press.",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "date_precision": "DECADE",
+    "calendar_note": "c. 430 AH (Hijri calendar); exact founding date uncertain"
+  },
+  {
+    "name_original": "الموحدون — ابن تومرت",
+    "name_original_lang": "ar",
+    "event_type": "FOUNDING_STATE",
+    "year": 1121,
+    "year_end": null,
+    "location_name": "Atlas Mountains, Morocco",
+    "location_lat": 31.5,
+    "location_lon": -7.5,
+    "main_actor": "Ibn Tumart (Mahdi, spiritual founder); Abd al-Mu'min (first caliph, military leader)",
+    "description": "The Almohad movement was founded around 1121 by Ibn Tumart, a Berber religious reformer who proclaimed himself the Mahdi and preached a strict monotheistic theology (tawhid, hence 'al-Muwahhidun' = Almohads, 'the Unitarians'). After Ibn Tumart's death (1130), his successor Abd al-Mu'min built a vast empire that by 1172 controlled all of North Africa from the Atlantic to Tripolitania and Muslim Iberia. The Almohads defeated the Almoravids, repressed heterodox Islamic practices, and persecuted Jewish and Christian communities (forced conversions of Jews and Christians, a departure from the usual dhimmi protections). Their empire declined after the Battle of Las Navas de Tolosa (1212), which opened Iberia to Christian reconquest.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.80,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Almohad persecution of Jews and Christians was unusually harsh for the medieval Islamic world, which generally maintained the dhimmi system of protected but subordinate non-Muslim communities. The forced conversions and expulsions drove prominent Jewish scholars including Maimonides's family to flee from Córdoba. This persecution must be recorded without euphemism even though it contradicts the sometimes-idealized narrative of Islamic tolerance in medieval Iberia.",
+    "entity_links": [
+      {
+        "entity_name_original": "الموحدون",
+        "role": "FOUNDED"
+      },
+      {
+        "entity_name_original": "المرابطون",
+        "role": "DISSOLVED",
+        "notes": "The Almohads conquered and replaced the Almoravid state"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Fromherz, A.J. (2010). The Almohads: The Rise of an Islamic Empire. I.B. Tauris.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Huici Miranda, A. (1956–1957). Historia política del Imperio Almohade. 2 vols. Tetuán.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "c. 515 AH (Hijri calendar)"
+  },
+  {
+    "name_original": "سلطنة المماليك — قطز وبيبرس",
+    "name_original_lang": "ar",
+    "event_type": "FOUNDING_STATE",
+    "year": 1250,
+    "year_end": null,
+    "location_name": "Cairo, Egypt",
+    "location_lat": 30.0444,
+    "location_lon": 31.2357,
+    "main_actor": "Mamluk (slave-soldier) military elite, initially under Sultan Aybak",
+    "description": "The Mamluk Sultanate was established in 1250 when the Mamluks — a military caste of enslaved soldiers, predominantly Turkic and later Circassian — overthrew the Ayyubid dynasty in Egypt. The last Ayyubid sultan, Turanshah, was murdered by his own Mamluk bodyguard. The Mamluks created one of medieval history's most remarkable political systems: a state run by former slaves who could not pass their status to their children (each generation of rulers was recruited anew from enslaved youth). The Mamluks defeated the Mongols at Ain Jalut (1260, already in the database), expelled the last Crusaders from the Levant (Fall of Acre, 1291), and ruled Egypt and Syria until the Ottoman conquest in 1517.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Mamluk system was built on the systematic enslavement of children from the Eurasian steppe and Caucasus, who were converted to Islam, trained as soldiers, and could rise to the highest positions of power. This was slavery, even though it led to political power for the enslaved. The paradox — a state of ex-slaves perpetuating the enslavement system that produced them — must be stated clearly. The Mamluk purchase of boys from impoverished families or their capture in raids caused immense suffering in source regions.",
+    "entity_links": [
+      {
+        "entity_name_original": "سلطنة المماليك",
+        "role": "FOUNDED"
+      },
+      {
+        "entity_name_original": "الدولة الأيوبية",
+        "role": "DISSOLVED",
+        "notes": "The Ayyubid dynasty was overthrown by its own Mamluk soldiers"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Irwin, R. (1986). The Middle East in the Middle Ages: The Early Mamluk Sultanate 1250–1382. Croom Helm.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Northrup, L.S. (1998). From Slave to Sultan: The Career of al-Mansur Qalawun. Franz Steiner Verlag.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "648 AH (Hijri calendar)"
+  },
+  {
+    "name_original": "العصر الذهبي الإسلامي — ابن سينا",
+    "name_original_lang": "ar",
+    "event_type": "INTELLECTUAL_EVENT",
+    "year": 1025,
+    "year_end": null,
+    "location_name": "Hamadan, Persia (modern Iran)",
+    "location_lat": 34.7992,
+    "location_lon": 48.5146,
+    "main_actor": "Abu Ali al-Husayn ibn Sina (Avicenna)",
+    "description": "Around 1025 CE, Ibn Sina (Avicenna) completed his 'al-Qanun fi al-Tibb' (The Canon of Medicine), a medical encyclopedia that systematized Greco-Roman, Persian, and Arabic medical knowledge into five comprehensive volumes. The Canon became the standard medical textbook in both the Islamic world and European universities for over 500 years (used at Montpellier and Louvain until the 17th century). This event represents the broader Islamic Golden Age of scientific achievement, during which scholars working in Arabic made foundational contributions to medicine, optics (Ibn al-Haytham), algebra (al-Khwarizmi), chemistry (Jabir ibn Hayyan), and philosophy (al-Farabi, Ibn Rushd).",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.88,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The term 'Islamic Golden Age' is itself debated: these scholars worked in Arabic but came from diverse religious and ethnic backgrounds (Persian, Central Asian, Andalusian, Christian, Jewish). The label 'Islamic' refers to the civilizational context, not the personal faith of every contributor. Eurocentrism in the history of science has long minimized the role of Arabic-language scholarship in preserving and advancing Greek knowledge, and in making original contributions that European science built upon.",
+    "entity_links": [
+      {
+        "entity_name_original": "الخلافة العباسية",
+        "role": "AFFECTED",
+        "notes": "The broader Abbasid cultural sphere, though politically fragmented by this date"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Pormann, P.E. & Savage-Smith, E. (2007). Medieval Islamic Medicine. Georgetown University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Gutas, D. (2014). Avicenna and the Aristotelian Tradition. 2nd ed. Brill.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "c. 415 AH (Hijri calendar); approximate completion date of the Canon"
+  },
+  {
+    "name_original": "الفتح الإسلامي لبلاد فارس",
+    "name_original_lang": "ar",
+    "event_type": "CONQUEST",
+    "year": 633,
+    "year_end": 654,
+    "location_name": "Iran / Sassanid Empire",
+    "location_lat": 32.6546,
+    "location_lon": 51.6680,
+    "main_actor": "Arab Muslim armies under Khalid ibn al-Walid, Sa'd ibn Abi Waqqas, and others",
+    "description": "The Islamic conquest of Persia (633–654 CE) destroyed the Sassanid Empire, one of the two great powers of late antiquity. Key battles include Qadisiyyah (636, already in the database) and Nihavand (642, 'Conquest of Conquests'). The last Sassanid emperor Yazdegerd III fled eastward and was murdered in Merv (651, already in the database). The conquest transformed Iran from a Zoroastrian empire into an Islamic society, though the conversion of the Persian population was gradual (taking several centuries) and Persians retained and adapted their cultural identity, eventually creating a distinctively Perso-Islamic civilization that profoundly influenced the broader Islamic world. Persian language and administrative traditions were absorbed into the caliphal system.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.80,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "Sassanid/Zoroastrian perspectives on the conquest are extremely limited. The Bundahishn and other Zoroastrian texts allude to the conquest as a catastrophe but were composed or redacted much later. Arabic sources dominate the narrative. The experience of Zoroastrian communities — their gradual marginalization, conversion incentives (jizya tax), and eventual minority status — is told primarily through the conquerors' records.",
+    "ethical_notes": "The conquest destroyed one of the world's oldest continuous civilizations and led to the eventual near-extinction of Zoroastrianism in its homeland (surviving primarily in the Parsi community of India). While the Arab conquerors generally offered the choice of conversion, dhimmi status, or resistance, the jizya tax and social pressures created powerful conversion incentives. The burning and destruction of Zoroastrian fire temples and libraries (though debated in scale) represents cultural loss. The eventual Perso-Islamic synthesis was brilliant but was built on the ruins of Sassanid civilization.",
+    "entity_links": [
+      {
+        "entity_name_original": "ساسانیان",
+        "role": "DISSOLVED",
+        "notes": "The Sassanid Empire was destroyed by the conquest"
+      },
+      {
+        "entity_name_original": "الخلافة الراشدة",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Morony, M.G. (1984). Iraq After the Muslim Conquest. Princeton University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Pourshariati, P. (2008). Decline and Fall of the Sasanian Empire. I.B. Tauris.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "11–34 AH (Hijri calendar)"
+  },
+  {
+    "name_original": "معركة لاس نافاس دي تولوسا / معركة العقاب",
+    "name_original_lang": "ar",
+    "event_type": "BATTLE",
+    "year": 1212,
+    "year_end": null,
+    "location_name": "Las Navas de Tolosa, Jaén, Spain",
+    "location_lat": 38.3013,
+    "location_lon": -3.5818,
+    "main_actor": "Coalition of Castile (Alfonso VIII), Aragon, Navarre, and Portuguese forces vs. Almohad Caliph Muhammad al-Nasir",
+    "description": "The Battle of Las Navas de Tolosa (16 July 1212), known in Arabic sources as the Battle of al-Uqab, was the most decisive battle of the Reconquista. A combined Christian army of approximately 60,000–80,000 defeated the Almohad army of comparable size. The Almohad caliph Muhammad al-Nasir fled the battlefield, and his empire never recovered. The battle opened Andalusia to Christian conquest: Córdoba fell in 1236, Seville in 1248, and only the emirate of Granada survived as a Muslim state in Iberia until 1492. The battle was proclaimed a crusade by Pope Innocent III, and volunteers from across Europe participated.",
+    "casualties_low": 20000,
+    "casualties_high": 100000,
+    "casualties_source": "Christian and Arabic sources give wildly different figures. Rodrigo Jiménez de Rada (De rebus Hispaniae) claims 200,000 Muslim dead (certainly exaggerated). Modern estimates suggest 20,000-60,000 total casualties on both sides.",
+    "confidence_score": 0.82,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The battle is celebrated in Spanish national mythology as a turning point in the Christian 'reconquest' — a framing that implies prior Islamic presence was illegitimate. From the Muslim perspective, al-Andalus had been a home for eight centuries, and its destruction involved not 'reconquest' but conquest and cultural destruction. Both narratives are present in the sources and neither should be privileged.",
+    "entity_links": [
+      {
+        "entity_name_original": "Corona de Castilla",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Corona d'Arago",
+        "role": "PARTICIPANT"
+      },
+      {
+        "entity_name_original": "الموحدون",
+        "role": "VICTIM",
+        "notes": "The Almohad empire was fatally weakened by the defeat"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Alvira Cabrer, M. (2012). Las Navas de Tolosa 1212: Idea, liturgia y memoria de la batalla. Silex.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Rodrigo Jiménez de Rada, De rebus Hispaniae (c. 1243). Primary account from the Archbishop of Toledo.",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "month": 7,
+    "day": 16,
+    "date_precision": "DAY",
+    "iso_date": "1212-07-16",
+    "calendar_note": "Julian calendar (pre-Gregorian); 9 Safar 609 AH in Islamic calendar"
+  },
+  {
+    "name_original": "ابن بطوطة — الرحلة",
+    "name_original_lang": "ar",
+    "event_type": "EXPLORATION",
+    "year": 1325,
+    "year_end": 1354,
+    "location_name": "Tangier, Morocco (departure) to China, West Africa, and beyond",
+    "location_lat": 35.7595,
+    "location_lon": -5.8340,
+    "main_actor": "Abu Abdullah Muhammad ibn Battuta, Moroccan scholar-explorer",
+    "description": "Ibn Battuta's travels (1325–1354) constitute the longest pre-modern journey by a single individual, covering approximately 120,000 km across nearly the entire Islamic world and beyond. Beginning from Tangier at age 21, he visited North Africa, the Horn of Africa, West Africa, the Middle East, Central Asia, India (where he served as a qadi in Delhi for seven years), Southeast Asia, and China. His Rihla (travelogue), dictated to Ibn Juzayy in 1355, is one of the most important primary sources for 14th-century Islamic civilization, providing eyewitness accounts of societies from the Mali Empire to the Maldives.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.80,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Ibn Battuta's account, while invaluable, reflects the perspectives and prejudices of a 14th-century Maliki scholar. He expressed disapproval of practices that deviated from his understanding of Islamic orthodoxy, was dismissive of some non-Islamic cultures, and his account of sub-Saharan Africa reflects the racial attitudes of his era. His descriptions of slavery (he owned enslaved people during his travels) are presented matter-of-factly. The Rihla's reliability has been debated — some scholars question whether he actually visited all the places he claims.",
+    "entity_links": [],
+    "sources": [
+      {
+        "citation": "Ibn Battuta, Rihla. Trans. H.A.R. Gibb (1958–2000), Hakluyt Society, 5 volumes.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Dunn, R.E. (2005). The Adventures of Ibn Battuta: A Muslim Traveler of the Fourteenth Century. Revised edition. University of California Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "725–755 AH (Hijri calendar)"
+  },
+  {
+    "name_original": "سلطنة سلاجقة الروم — معركة ملاذكرد",
+    "name_original_lang": "ar",
+    "event_type": "BATTLE",
+    "year": 1071,
+    "year_end": null,
+    "location_name": "Manzikert (Malazgirt), Eastern Anatolia",
+    "location_lat": 39.1436,
+    "location_lon": 42.5422,
+    "main_actor": "Seljuk Sultan Alp Arslan vs. Byzantine Emperor Romanos IV Diogenes",
+    "description": "The Battle of Manzikert (26 August 1071) was one of the most consequential battles in medieval history. The Seljuk Turks under Sultan Alp Arslan decisively defeated the Byzantine army, capturing Emperor Romanos IV. Although the Seljuks treated Romanos honorably and released him, the Byzantine defeat opened Anatolia — the empire's heartland and primary source of soldiers — to Turkish migration and settlement. Within a decade, the Seljuk Sultanate of Rum was established in central Anatolia. The loss of Anatolia was the wound from which Byzantium never recovered and was a primary catalyst for the First Crusade (1095). The Turkification of Anatolia, beginning after Manzikert, laid the foundation for modern Turkey.",
+    "casualties_low": 8000,
+    "casualties_high": 40000,
+    "casualties_source": "Matthew of Edessa, Michael Attaleiates; estimates vary widely between sources.",
+    "confidence_score": 0.82,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Manzikert is foundational to both Turkish and Byzantine (and by extension, modern Greek) national narratives. Turkish historiography treats it as the beginning of Turkification of Anatolia; Greek and Byzantine historiography treats it as a catastrophe. The battle's long-term consequences — the displacement of Greek, Armenian, and Syriac Christian populations over subsequent centuries — represent profound demographic and cultural transformation. The existing Armenian, Syriac, and Greek populations of Anatolia were gradually reduced to minorities under Turkic rule.",
+    "entity_links": [
+      {
+        "entity_name_original": "Βασιλεία Ῥωμαίων",
+        "role": "VICTIM"
+      },
+      {
+        "entity_name_original": "سلاجقه روم",
+        "role": "FOUNDED",
+        "notes": "The Sultanate of Rum was established in the aftermath of Manzikert"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Friendly, A. (1981). The Dreadful Day: The Battle of Manzikert, 1071. Hutchinson.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Michael Attaleiates, The History. Trans. A. Kaldellis & D. Krallis (2012), Harvard University Press.",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "month": 8,
+    "day": 26,
+    "date_precision": "DAY",
+    "iso_date": "1071-08-26",
+    "calendar_note": "Julian calendar; 9 Dhu al-Qi'dah 463 AH in Islamic calendar"
+  },
+  {
+    "name_original": "الخلافة العثمانية — سليمان القانوني",
+    "name_original_lang": "ar",
+    "event_type": "OTHER",
+    "year": 1520,
+    "year_end": 1566,
+    "location_name": "Istanbul, Ottoman Empire",
+    "location_lat": 41.0082,
+    "location_lon": 28.9784,
+    "main_actor": "Sultan Suleiman I (the Magnificent / the Lawgiver)",
+    "description": "The reign of Suleiman I (1520–1566) represented the apex of Ottoman power. The empire stretched from Hungary to Yemen, from Algeria to Iraq, controlling the eastern Mediterranean, the Red Sea, and the Persian Gulf. Suleiman's conquests included Belgrade (1521), Rhodes (1522), and most of Hungary (Battle of Mohács, 1526). His legal reforms (Kanun-i Osmani) earned him the title 'Kanuni' (Lawgiver) among his subjects. The empire's population was approximately 25–30 million, making it one of the largest states in the world. Suleiman's court patronized architecture (Sinan's masterpieces), literature, and the arts.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.90,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Ottoman Empire under Suleiman practiced a relatively tolerant millet system that allowed religious minorities (Christians, Jews) to govern their own communities — but as subordinate groups paying the jizya tax. The devshirme system (recruiting Christian boys from the Balkans for conversion and service as Janissaries or officials) was both a path to power and a form of forced assimilation. Suleiman's execution of his son Mustafa (1553) and the harem politics that influenced succession demonstrate that absolute power generates its own atrocities even in 'golden ages.'",
+    "entity_links": [
+      {
+        "entity_name_original": "Osmanlı İmparatorluğu",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Imber, C. (2002). The Ottoman Empire, 1300–1650: The Structure of Power. Palgrave Macmillan.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Kafadar, C. (1995). Between Two Worlds: The Construction of the Ottoman State. University of California Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "926–974 AH (Hijri calendar)"
+  },
+  {
+    "name_original": "ابن خلدون — المقدمة",
+    "name_original_lang": "ar",
+    "event_type": "INTELLECTUAL_EVENT",
+    "year": 1377,
+    "year_end": null,
+    "location_name": "Qalat Ibn Salama, Algeria",
+    "location_lat": 34.8,
+    "location_lon": 1.3,
+    "main_actor": "Abd al-Rahman ibn Khaldun, Tunisian historian and social theorist",
+    "description": "In 1377, Ibn Khaldun completed the Muqaddimah (Prolegomena), widely regarded as the founding work of historiography, sociology, economics, and demography. Writing in a castle in rural Algeria, he developed the concept of asabiyyah (group solidarity/social cohesion) as the driving force of civilizational rise and decline. He argued that dynasties have natural lifespans (approximately three generations), that nomadic peoples conquer settled civilizations through superior asabiyyah, and that luxury eventually corrupts conquering groups. His cyclical theory of history anticipated modern social science by centuries.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.90,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Ibn Khaldun's work contains observations about race and climate that reflect 14th-century prejudices, including disparaging remarks about sub-Saharan Africans. These passages have been used by some to justify racism, despite being peripheral to his central theoretical contributions. His analysis of how power operates — through social cohesion, economic production, and institutional decay — remains remarkably relevant. Western historiography long ignored Ibn Khaldun; his recognition as a founder of social science is relatively recent.",
+    "entity_links": [],
+    "sources": [
+      {
+        "citation": "Ibn Khaldun, al-Muqaddimah. Trans. F. Rosenthal (1958, abridged N.J. Dawood 1969), Princeton University Press.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Irwin, R. (2018). Ibn Khaldun: An Intellectual Biography. Princeton University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "779 AH (Hijri calendar)"
+  },
+  {
+    "name_original": "سقوط عكا / Fall of Acre",
+    "name_original_lang": "ar",
+    "event_type": "SIEGE",
+    "year": 1291,
+    "year_end": null,
+    "location_name": "Acre (Akko), Levant",
+    "location_lat": 32.9273,
+    "location_lon": 35.0765,
+    "main_actor": "Mamluk Sultan al-Ashraf Khalil",
+    "description": "The Siege and Fall of Acre (5 April – 18 May 1291) was the final major engagement of the Crusades. Mamluk Sultan al-Ashraf Khalil besieged Acre, the last significant Crusader stronghold, with an army of approximately 100,000. After a six-week siege involving massive siege engines, the Mamluks breached the walls on 18 May 1291. The city fell amid massacre and chaos; thousands of inhabitants were killed or enslaved. The remaining Crusader fortresses (Tyre, Sidon, Beirut) surrendered or were abandoned within months. The fall of Acre ended nearly 200 years of Crusader presence in the Levant.",
+    "casualties_low": 10000,
+    "casualties_high": 30000,
+    "casualties_source": "Abu al-Fida, Kitab al-Mukhtasar; Templar of Tyre chronicle. Exact figures debated.",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The fall of Acre marked the definitive end of the Crusading project in the Levant. The massacre of the city's population was brutal but followed medieval conventions of siege warfare (cities that resisted were subject to sack). The Mamluk victory ended foreign colonial presence in the Levant that had lasted since 1099. European historiography long framed the fall of Acre as a 'tragedy'; from the perspective of the region's inhabitants, it was liberation from occupation.",
+    "entity_links": [
+      {
+        "entity_name_original": "سلطنة المماليك",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Regnum Hierosolymitanum",
+        "role": "DISSOLVED",
+        "notes": "The Kingdom of Jerusalem ceased to exist with the fall of Acre"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Nicolle, D. (2011). The Fall of Acre 1291. Osprey Publishing.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Abu al-Fida, al-Mukhtasar fi Akhbar al-Bashar. Trans. P.M. Holt (1987), Ibn Khallikan's Biographical Dictionary.",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "month": 5,
+    "day": 18,
+    "date_precision": "DAY",
+    "iso_date": "1291-05-18",
+    "calendar_note": "Julian calendar; 17 Jumada al-Ula 690 AH in Islamic calendar"
+  },
+  {
+    "name_original": "الفتنة الكبرى — مقتل عثمان",
+    "name_original_lang": "ar",
+    "event_type": "REBELLION",
+    "year": 656,
+    "year_end": null,
+    "location_name": "Medina, Arabian Peninsula",
+    "location_lat": 24.4672,
+    "location_lon": 39.6024,
+    "main_actor": "Rebel soldiers from Egypt, Kufa, and Basra",
+    "description": "The assassination of Caliph Uthman ibn Affan on 17 June 656 CE was the pivotal event of the First Fitna (Islamic Civil War, 656–661). Uthman, the third Rashidun caliph, was murdered in his home in Medina by rebels who accused him of nepotism (appointing Umayyad relatives to governorships) and corruption. His assassination plunged the Muslim community into civil war: Ali ibn Abi Talib became caliph but faced immediate challenges from Uthman's relatives (the Umayyads) and from Aisha, Muhammad's widow, who fought Ali at the Battle of the Camel (656). The Fitna's unresolved tensions directly produced the Sunni-Shia schism.",
+    "casualties_low": 1,
+    "casualties_high": 1,
+    "casualties_source": "al-Tabari, Ta'rikh al-Rusul wa'l-Muluk.",
+    "confidence_score": 0.80,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The First Fitna is the most sensitive event in Islamic sectarian history. Sunni and Shia traditions offer fundamentally different interpretations of who was right and who was wrong. This database records the event factually without adjudicating theological legitimacy. The assassination of Uthman is acknowledged as murder by all Islamic traditions; the debate concerns whether the grievances against him were legitimate and whether Ali should have pursued the assassins more vigorously.",
+    "entity_links": [
+      {
+        "entity_name_original": "الخلافة الراشدة",
+        "role": "AFFECTED",
+        "notes": "The assassination destroyed the unity of the early Muslim community"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "al-Tabari, Ta'rikh al-Rusul wa'l-Muluk. Trans. G.R. Hawting (1989), SUNY Press, Vol. XV.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Madelung, W. (1997). The Succession to Muhammad: A Study of the Early Caliphate. Cambridge University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 6,
+    "day": 17,
+    "date_precision": "DAY",
+    "iso_date": "0656-06-17",
+    "calendar_note": "18 Dhu al-Hijjah 35 AH (Hijri calendar); Gregorian equivalent approximate"
+  }
+]

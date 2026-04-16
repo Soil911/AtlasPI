@@ -1,0 +1,694 @@
+[
+  {
+    "name_original": "Πελοποννησιακὸς Πόλεμος",
+    "name_original_lang": "grc",
+    "event_type": "BATTLE",
+    "year": -431,
+    "year_end": -404,
+    "location_name": "Greece and the Aegean",
+    "location_lat": 37.9715,
+    "location_lon": 23.7267,
+    "main_actor": "Athens (Delian League) vs. Sparta (Peloponnesian League)",
+    "description": "The Peloponnesian War (431–404 BCE) was a protracted conflict between Athens and its Delian League allies and Sparta and its Peloponnesian League allies. The war, documented in extraordinary detail by Thucydides (himself an Athenian general), destroyed Athenian imperial power and ended the golden age of Periclean democracy. Key phases include the Archidamian War (431–421), the Sicilian Expedition disaster (415–413), and the Decelean War (413–404). Athens surrendered in 404 BCE after its fleet was destroyed at Aegospotami. The war introduced total warfare to the Greek world, including the massacre of the entire male population of Melos (416 BCE), documented by Thucydides in the Melian Dialogue as a cold exercise of imperial logic.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.88,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Thucydides' account, our primary source, is an Athenian perspective (though remarkably self-critical). The Melian Dialogue (Thuc. 5.84–116) is one of the earliest recorded analyses of imperial logic: Athens argued that the strong do what they can and the weak suffer what they must, then massacred the Melians. This genocide is explicit in our primary source and must not be euphemized. Spartan perspectives are poorly preserved.",
+    "entity_links": [
+      {
+        "entity_name_original": "Ἀθῆναι",
+        "role": "MAIN_ACTOR",
+        "notes": "Athens was defeated, lost its empire and briefly its democracy"
+      },
+      {
+        "entity_name_original": "Λακεδαίμων",
+        "role": "MAIN_ACTOR",
+        "notes": "Sparta won the war but its hegemony proved short-lived"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Thucydides, History of the Peloponnesian War. Trans. R. Warner (1954), Penguin.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Kagan, D. (2003). The Peloponnesian War. Viking.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "Proleptic Gregorian calendar; Athenian dates used the archon calendar"
+  },
+  {
+    "name_original": "Bellum Punicum Secundum / Hannibal trans Alpes",
+    "name_original_lang": "lat",
+    "event_type": "BATTLE",
+    "year": -218,
+    "year_end": -201,
+    "location_name": "Mediterranean: Iberia, Italy, North Africa",
+    "location_lat": 36.8065,
+    "location_lon": 10.1815,
+    "main_actor": "Carthage under Hannibal Barca vs. Roman Republic",
+    "description": "The Second Punic War (218–201 BCE) was the decisive conflict between Rome and Carthage for Mediterranean supremacy. Hannibal Barca's legendary crossing of the Alps with war elephants and his devastating victories at Trebia (218), Lake Trasimene (217), and Cannae (216 — the worst military defeat in Roman history, with 50,000–70,000 Roman dead) brought Rome to the brink of destruction. However, Rome's superior manpower reserves and alliance system, combined with Scipio Africanus's invasion of North Africa, forced Hannibal's recall and decisive defeat at Zama (202 BCE). The war transformed Rome from an Italian power into a Mediterranean empire and condemned Carthage to eventual destruction.",
+    "casualties_low": 300000,
+    "casualties_high": 500000,
+    "casualties_source": "Briscoe, J. (1989). The Second Punic War. Cambridge Ancient History VIII. (Combined casualties across 17 years of warfare)",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Our primary sources (Polybius, Livy) are pro-Roman. Carthaginian records were systematically destroyed after 146 BCE. Hannibal's perspective survives only through his enemies' accounts. The massive casualties at Cannae and other battles involved citizen-soldier armies; the human cost to Italian communities was devastating. Roman scorched-earth tactics in Africa during the war's final phase caused famine and civilian deaths that Roman sources minimize. Note: the events for Hannibal's Alpine crossing and Cannae specifically already exist; this records the war as a whole.",
+    "entity_links": [
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "MAIN_ACTOR",
+        "notes": "Rome survived near-destruction and emerged as dominant Mediterranean power"
+      },
+      {
+        "entity_name_original": "Qart-ḥadašt",
+        "role": "VICTIM",
+        "notes": "Carthage was forced into punitive peace terms"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Polybius, The Histories. Trans. R. Waterfield (2010), Oxford World's Classics.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Goldsworthy, A. (2000). The Punic Wars. Cassell.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "Proleptic Gregorian; Roman Republican calendar was irregular"
+  },
+  {
+    "name_original": "Bellum Spartacium",
+    "name_original_lang": "lat",
+    "event_type": "REBELLION",
+    "year": -73,
+    "year_end": -71,
+    "location_name": "Italy",
+    "location_lat": 40.7340,
+    "location_lon": 14.4899,
+    "main_actor": "Spartacus, Thracian gladiator leading enslaved people",
+    "description": "The Third Servile War (73–71 BCE) was the largest slave rebellion in Roman history. Spartacus, a Thracian gladiator, escaped from a gladiatorial school in Capua with approximately 70 followers. The revolt grew to an army of 60,000–120,000 escaped slaves and rural poor that defeated multiple Roman legions. After two years, Marcus Licinius Crassus cornered Spartacus's forces in southern Italy. Spartacus died in the final battle (71 BCE). Crassus crucified 6,000 captured rebels along the Appian Way from Capua to Rome, their bodies left to rot as a warning. Pompey's forces killed an additional 5,000 fugitives in northern Italy.",
+    "casualties_low": 6000,
+    "casualties_high": 100000,
+    "casualties_source": "Appian, Civil Wars 1.120 (6,000 crucified); total rebel deaths across the war are estimated at several tens of thousands. Plutarch, Life of Crassus.",
+    "confidence_score": 0.80,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "The enslaved people who formed Spartacus's army left no written records. All accounts come from Roman slaveholders and historians sympathetic to the Roman state. Spartacus's actual motivations and plans (escape from Italy? social revolution? return to Thrace?) are debated because his voice survives only through hostile sources.",
+    "ethical_notes": "The crucifixion of 6,000 people along the Appian Way was state terrorism against enslaved people asserting their humanity. Roman sources treat the rebellion primarily as a military problem rather than a moral indictment of slavery. The rebellion is one of the few documented cases where enslaved people in the ancient world organized large-scale armed resistance. Spartacus's later symbolic adoption by Marxist movements (Spartacist League, etc.) reflects modern political appropriation of an ancient figure whose actual political views are unknown.",
+    "entity_links": [
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "MAIN_ACTOR",
+        "notes": "Rome suppressed the rebellion with extreme violence"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Appian, Civil Wars, Book I. (Loeb Classical Library edition).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Strauss, B. (2009). The Spartacus War. Simon & Schuster.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "Proleptic Gregorian; Roman Republican calendar"
+  },
+  {
+    "name_original": "Pax Romana",
+    "name_original_lang": "lat",
+    "event_type": "OTHER",
+    "year": -27,
+    "year_end": 180,
+    "location_name": "Roman Empire",
+    "location_lat": 41.9028,
+    "location_lon": 12.4964,
+    "main_actor": "Augustus (27 BCE) through Marcus Aurelius (180 CE)",
+    "description": "The Pax Romana ('Roman Peace') refers to the approximately 207-year period from Augustus's establishment of the Principate (27 BCE) to the death of Marcus Aurelius (180 CE), during which the Roman Empire experienced relative internal peace and stability. The empire reached its maximum territorial extent under Trajan (117 CE), encompassing approximately 5 million km² and 60–70 million people. The period saw major infrastructure development (roads, aqueducts, public buildings), legal codification, and cultural flourishing. However, 'peace' applied primarily to the empire's core; frontier warfare was continuous, and the period included the brutal suppression of the Jewish revolts (66–73, 132–135 CE) and the conquest of Dacia (101–106 CE).",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.82,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The concept of 'Pax Romana' is itself ideological — it describes internal stability maintained through military dominance, slavery, and the suppression of dissent. The 'peace' was experienced very differently by Roman citizens, provincial subjects, enslaved people (estimated at 10–20% of the population), and frontier peoples subjected to continuous warfare. The destruction of Jerusalem (70 CE) and the Bar Kokhba revolt's aftermath (135 CE, with the renaming of Judea to Syria Palaestina as cultural erasure) occurred during this 'peace.'",
+    "entity_links": [
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Goldsworthy, A. (2016). Pax Romana: War, Peace and Conquest in the Roman World. Weidenfeld & Nicolson.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Woolf, G. (2012). Rome: An Empire's Story. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "Julian calendar; transition from Republic to Empire dating"
+  },
+  {
+    "name_original": "Θάνατος Περικλέους καὶ λοιμός",
+    "name_original_lang": "grc",
+    "event_type": "EPIDEMIC",
+    "year": -430,
+    "year_end": -426,
+    "location_name": "Athens, Greece",
+    "location_lat": 37.9715,
+    "location_lon": 23.7267,
+    "main_actor": "Natural disaster — unidentified pathogen (typhoid fever, typhus, smallpox, or Ebola-like hemorrhagic fever have all been proposed)",
+    "description": "The Plague of Athens struck the city in 430 BCE during the second year of the Peloponnesian War, when Athenian refugees from the countryside were crowded within the Long Walls. Thucydides, who survived the plague himself, left a clinical description (2.47–54) that remains one of the earliest epidemiological reports in history. The plague killed an estimated 75,000–100,000 people, approximately one-quarter to one-third of the Athenian population, including Pericles himself in 429 BCE. The epidemic devastated Athenian military capability and civic morale, contributing to the erosion of democratic norms and Athens's eventual defeat.",
+    "casualties_low": 75000,
+    "casualties_high": 100000,
+    "casualties_source": "Thucydides 2.47–54; 3.87. Modern estimates from Littman, R.J. (2009). The Plague of Athens: Epidemiology and Paleopathology. Mount Sinai Journal of Medicine.",
+    "confidence_score": 0.80,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The pathogen responsible has never been conclusively identified despite DNA analysis of remains from the Kerameikos cemetery. Confident modern diagnoses (typhoid fever per Papagrigorakis et al. 2006) are contested. The plague's social effects — Thucydides describes the breakdown of religious observance, legal norms, and social bonds — anticipate patterns seen in later pandemics.",
+    "entity_links": [
+      {
+        "entity_name_original": "Ἀθῆναι",
+        "role": "VICTIM"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Thucydides, History of the Peloponnesian War, 2.47–54; 3.87. Trans. R. Crawley (1874, revised).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Littman, R.J. (2009). The Plague of Athens: Epidemiology and Paleopathology. Mount Sinai Journal of Medicine 76(5): 456–467.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": null,
+    "day": null,
+    "date_precision": "YEAR",
+    "calendar_note": "Proleptic Gregorian; the Athenian calendar was lunisolar"
+  },
+  {
+    "name_original": "Ἀλέξανδρος ἐν Ἰνδικῇ",
+    "name_original_lang": "grc",
+    "event_type": "BATTLE",
+    "year": -326,
+    "year_end": null,
+    "location_name": "Hydaspes (Jhelum) River, Punjab",
+    "location_lat": 32.9266,
+    "location_lon": 73.7321,
+    "main_actor": "Alexander the Great of Macedon vs. King Porus (Paurava)",
+    "description": "The Battle of the Hydaspes (May 326 BCE) was Alexander's last major pitched battle, fought against King Porus of the Paurava kingdom along the Jhelum River in modern Punjab. Despite monsoon conditions and Porus's war elephants, Alexander achieved victory through tactical river crossing at night. Porus, captured and brought before Alexander wounded, reportedly demanded to be treated 'like a king' and was reinstated as a vassal ruler. However, Alexander's army mutinied at the Hyphasis (Beas) River shortly after, refusing to advance further into the Indian subcontinent. This 'mutiny of the Beas' marked the eastern limit of Alexander's conquests and the beginning of the Macedonian retreat.",
+    "casualties_low": 4000,
+    "casualties_high": 23000,
+    "casualties_source": "Arrian, Anabasis 5.18 (Indian casualties c. 20,000+; Macedonian losses modest). Indian sources do not preserve independent casualty figures.",
+    "confidence_score": 0.78,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "Indian sources from this period are largely non-extant. The battle is known almost exclusively through Greek and later Roman accounts (Arrian, Plutarch, Diodorus), which center Alexander's perspective. Porus's own account, the Paurava kingdom's records, and the broader Indian experience of the invasion are lost.",
+    "ethical_notes": "Greek sources present this as a heroic encounter between two noble warriors. The reality was an invasion that disrupted the political order of the Punjab and caused significant civilian suffering during Alexander's subsequent Indus valley campaign (the massacre at Multan, the destruction of Brahmin communities). Indian historiography rightly treats Alexander's campaign as an invasion, not a 'visit.'",
+    "entity_links": [
+      {
+        "entity_name_original": "Βασίλειον τῆς Μακεδονίας",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Arrian, Anabasis of Alexander, Book V. Trans. P. Brunt (1976), Loeb Classical Library.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Bosworth, A.B. (1996). Alexander and the East: The Tragedy of Triumph. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 5,
+    "day": null,
+    "date_precision": "MONTH",
+    "calendar_note": "Proleptic Gregorian; Macedonian calendar month Artemisios"
+  },
+  {
+    "name_original": "Leges XII Tabularum",
+    "name_original_lang": "lat",
+    "event_type": "INTELLECTUAL_EVENT",
+    "year": -449,
+    "year_end": null,
+    "location_name": "Rome, Roman Republic",
+    "location_lat": 41.8933,
+    "location_lon": 12.4831,
+    "main_actor": "Decemviri legibus scribundis (Commission of Ten)",
+    "description": "The Twelve Tables (c. 449 BCE) were the first written codification of Roman law, enacted after plebeian agitation for legal transparency against arbitrary patrician judicial power. A commission of ten men (decemviri) was appointed to draft the laws, which were inscribed on bronze tablets and publicly displayed in the Forum. The Tables covered civil procedure, property, family law, inheritance, and criminal offenses. Though the original tablets were destroyed in the Gallic sack of Rome (390 BCE), their content was preserved through legal commentary and became the foundation of the entire Roman legal tradition, which in turn underpins Western legal systems.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.72,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Twelve Tables included provisions that were oppressive by any standard: debt bondage (nexum), execution for theft at night, restrictions on intermarriage between patricians and plebeians (Lex Canuleia overturned this in 445 BCE). They are foundational to Western legal tradition but also codified class inequality. Their significance as a step toward legal transparency must be balanced against their substantive content.",
+    "entity_links": [
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "AFFECTED",
+        "notes": "Foundation of Roman legal tradition"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Crawford, M.H. (ed.) (1996). Roman Statutes. Volume II. Bulletin of the Institute of Classical Studies, Supplement 64.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Watson, A. (1975). Rome of the XII Tables: Persons and Property. Princeton University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "Proleptic Gregorian; Roman Ab Urbe Condita dating places this c. 305 AUC"
+  },
+  {
+    "name_original": "Incendium Romae sub Nerone",
+    "name_original_lang": "lat",
+    "event_type": "FIRE",
+    "year": 64,
+    "year_end": null,
+    "location_name": "Rome, Roman Empire",
+    "location_lat": 41.8933,
+    "location_lon": 12.4831,
+    "main_actor": "Natural or deliberate fire; Emperor Nero scapegoated Christians",
+    "description": "The Great Fire of Rome broke out on 19 July 64 CE near the Circus Maximus and burned for six days, destroying or severely damaging 10 of Rome's 14 districts. Emperor Nero, who was at Antium (Anzio) when the fire started, returned and organized relief efforts including opening public buildings and his own gardens as shelters. Nevertheless, the persistent rumor that Nero himself ordered the fire (Tacitus reports it neutrally; Suetonius and Cassius Dio assert it) led Nero to deflect blame onto the Christian community. The subsequent persecution — including public executions by burning, crucifixion, and exposure to animals — is the first documented Roman state persecution of Christians.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.82,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Nero's persecution of Christians as scapegoats for the fire is one of the earliest documented cases of a state deflecting responsibility for disaster onto a religious minority. Whether Nero actually started the fire is unknown and probably unknowable — Tacitus (writing 50 years later) presents both possibilities without resolving them. The fire did allow Nero to rebuild Rome with wider streets and his elaborate Domus Aurea, giving him motive.",
+    "entity_links": [
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "AFFECTED"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Tacitus, Annales XV.38–44. (Loeb Classical Library edition).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Champlin, E. (2003). Nero. Harvard University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 7,
+    "day": 19,
+    "date_precision": "DAY",
+    "iso_date": "0064-07-19",
+    "calendar_note": "Julian calendar"
+  },
+  {
+    "name_original": "Lex Civis Romanus / Constitutio Antoniniana",
+    "name_original_lang": "lat",
+    "event_type": "OTHER",
+    "year": 212,
+    "year_end": null,
+    "location_name": "Rome, Roman Empire",
+    "location_lat": 41.8933,
+    "location_lon": 12.4831,
+    "main_actor": "Emperor Caracalla (Marcus Aurelius Antoninus)",
+    "description": "The Constitutio Antoniniana (Edict of Caracalla), issued in 212 CE, extended Roman citizenship to virtually all free inhabitants of the Roman Empire. Previously, citizenship had been a privileged status granted selectively. The edict's motivation is debated: Cassius Dio claims it was primarily fiscal (expanding the tax base by making more people liable for inheritance and manumission taxes); modern historians also see administrative simplification and a response to the increasingly multiethnic character of the empire. The edict effectively transformed Roman identity from an ethnic/civic concept to a universal legal status.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.80,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The edict is sometimes celebrated as a moment of universal inclusion, but it explicitly excluded dediticii (peoples who had surrendered unconditionally, possibly including many recently conquered groups). Its practical impact on enslaved people was nil — only free persons were affected. The fiscal motive (expanding the tax base) tempers any reading of pure universalism.",
+    "entity_links": [
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "AFFECTED"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Cassius Dio, Roman History 78.9. (Loeb Classical Library edition).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Buraselis, K. (2007). Theia Dorea: Das göttlich-kaiserliche Geschenk. Studien zur Politik der Severer und zur Constitutio Antoniniana. Verlag der Österreichischen Akademie der Wissenschaften.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "Julian calendar"
+  },
+  {
+    "name_original": "Κρίσις τοῦ Τρίτου Αἰῶνος",
+    "name_original_lang": "grc",
+    "event_type": "OTHER",
+    "year": 235,
+    "year_end": 284,
+    "location_name": "Roman Empire",
+    "location_lat": 41.9028,
+    "location_lon": 12.4964,
+    "main_actor": "Multiple competing emperors, usurpers, and breakaway states",
+    "description": "The Crisis of the Third Century (235–284 CE) was a period of political, military, and economic collapse that nearly destroyed the Roman Empire. Following the assassination of Severus Alexander (235), the empire endured approximately 50 years of civil war, with over 25 claimants to the imperial throne, most dying violently. The empire fragmented into three competing states: the Gallic Empire (260–274), the Palmyrene Empire under Queen Zenobia (267–273), and the central Roman Empire. Simultaneously, the empire faced Persian invasion under the Sassanids (Emperor Valerian was captured at Edessa in 260), Gothic and other Germanic incursions, plague (Plague of Cyprian, 249–262), hyperinflation, and depopulation. The crisis was resolved by the military emperors Aurelian (who reunified the empire) and Diocletian (who restructured it as the Tetrarchy in 284).",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.80,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Third Century Crisis demonstrates how imperial systems can fail catastrophically when succession mechanisms break down. The Palmyrene Empire under Zenobia represents one of the rare instances of a woman ruling a major ancient state — her suppression by Aurelian erased an alternative political model. The crisis accelerated the militarization of Roman society and the erosion of senatorial governance.",
+    "entity_links": [
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "AFFECTED"
+      },
+      {
+        "entity_name_original": "Tadmor",
+        "role": "PARTICIPANT",
+        "notes": "Palmyrene Empire under Zenobia broke away during the crisis"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Potter, D.S. (2004). The Roman Empire at Bay, AD 180–395. Routledge.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Hekster, O., de Kleijn, G. & Slootjes, D. (eds.) (2007). Crises and the Roman Empire. Brill.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "Julian calendar"
+  },
+  {
+    "name_original": "Ὀλυμπιακοὶ Ἀγῶνες",
+    "name_original_lang": "grc",
+    "event_type": "OTHER",
+    "year": -776,
+    "year_end": 393,
+    "location_name": "Olympia, Elis, Peloponnese",
+    "location_lat": 37.6386,
+    "location_lon": 21.6300,
+    "main_actor": "Greek city-states (pan-Hellenic)",
+    "description": "The ancient Olympic Games were held every four years at Olympia from traditionally 776 BCE (though archaeological evidence suggests athletic competition at the site from at least the 10th century BCE) until their abolition by the Christian Emperor Theodosius I in 393 CE. The games were a pan-Hellenic religious festival honoring Zeus, featuring athletic competitions (stadion race, wrestling, boxing, chariot racing, pentathlon), and a sacred truce (ekecheiria) that suspended warfare between Greek states during the festival period. Victory brought immense prestige to athletes and their cities. The games served as a common cultural institution binding the Greek world despite its political fragmentation.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Olympic Games were exclusively male and exclusively Greek (barbarians were excluded). Married women were forbidden from attending (under penalty of death); unmarried girls could attend but not compete. The athletic ideal celebrated by the games coexisted with slavery, warfare, and patriarchal social structures. The 776 BCE 'founding date' (based on victor lists compiled centuries later) is a convention, not an established historical fact.",
+    "entity_links": [
+      {
+        "entity_name_original": "Ἀθῆναι",
+        "role": "PARTICIPANT"
+      },
+      {
+        "entity_name_original": "Λακεδαίμων",
+        "role": "PARTICIPANT"
+      },
+      {
+        "entity_name_original": "Κόρινθος",
+        "role": "PARTICIPANT"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Finley, M.I. & Pleket, H.W. (1976). The Olympic Games: The First Thousand Years. Chatto & Windus.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Pausanias, Description of Greece, Books V–VI. (Loeb Classical Library edition).",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "Proleptic Gregorian; ancient Greek Olympiad dating system"
+  },
+  {
+    "name_original": "Δημοκρατία ἐν Ἀθήναις — Κλεισθένης",
+    "name_original_lang": "grc",
+    "event_type": "REFORM",
+    "year": -508,
+    "year_end": null,
+    "location_name": "Athens, Attica, Greece",
+    "location_lat": 37.9715,
+    "location_lon": 23.7267,
+    "main_actor": "Cleisthenes of Athens",
+    "description": "In 508/507 BCE, Cleisthenes enacted a series of constitutional reforms that established Athenian democracy. He reorganized the citizen body into ten new tribes (phylai) based on geography rather than kinship, breaking the power of aristocratic clans. He created the Council of Five Hundred (Boule) chosen by lot, established the deme (local township) as the basic unit of political identity, and may have introduced ostracism (the power to exile citizens deemed a threat to democracy). These reforms created the institutional framework for the radical direct democracy that would characterize Athens for nearly two centuries, in which citizens (adult free males of Athenian parentage) participated directly in legislative and judicial decisions.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.82,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Athenian 'democracy' excluded women, enslaved people (estimated 30-40% of the population), and resident foreigners (metics) from political participation. Only adult males of Athenian citizen parentage — perhaps 10-15% of the total population — were full citizens. The democratic ideal coexisted with slavery, imperial domination of allied states (Delian League), and severe restrictions on women's public roles. Recognizing these exclusions does not diminish the significance of the innovation; it contextualizes it.",
+    "entity_links": [
+      {
+        "entity_name_original": "Ἀθῆναι",
+        "role": "AFFECTED"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Aristotle, Constitution of Athens (Athenaion Politeia), chs. 20–22. Trans. P.J. Rhodes (1984), Penguin.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Ober, J. (1989). Mass and Elite in Democratic Athens: Rhetoric, Ideology, and the Power of the People. Princeton University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "Proleptic Gregorian; archon-year dating in Athenian system"
+  },
+  {
+    "name_original": "Bellum Sociale",
+    "name_original_lang": "lat",
+    "event_type": "REBELLION",
+    "year": -91,
+    "year_end": -87,
+    "location_name": "Central and Southern Italy",
+    "location_lat": 41.50,
+    "location_lon": 14.00,
+    "main_actor": "Italic allies (socii) — Marsi, Samnites, Lucanians, and others — rebelling against Rome",
+    "description": "The Social War (91–87 BCE, bellum Marsicum/bellum sociale) was a rebellion by Rome's Italian allies (socii), who had fought in Rome's armies for centuries but were denied Roman citizenship and its legal protections. The rebels, predominantly Marsi and Samnites, formed a rival confederation called 'Italia' with its own capital at Corfinium, senate, and coinage. Rome won militarily but conceded the fundamental demand: the Lex Julia (90 BCE) and Lex Plautia Papiria (89 BCE) extended citizenship to virtually all free Italians south of the Po. The war killed an estimated 300,000 and permanently transformed the Roman Republic by making 'Roman' an Italian rather than merely urban identity.",
+    "casualties_low": 100000,
+    "casualties_high": 300000,
+    "casualties_source": "Appian, Civil Wars 1.39–53; Velleius Paterculus 2.15. Estimates vary widely.",
+    "confidence_score": 0.78,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Social War reveals that Rome's power rested on the exploitation of allies who bore military burdens without political rights — a pattern repeated in later empires. The rebels' demand for citizenship was fundamentally just. Rome's 'victory' consisted of granting what it should have conceded peacefully. The war's devastation of central Italy (Samnium never fully recovered) demonstrates the cost of resisting justified demands for inclusion.",
+    "entity_links": [
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Safineis / Safinium",
+        "role": "MAIN_ACTOR",
+        "notes": "Samnites were among the leading rebel peoples"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Appian, Civil Wars, Book I. (Loeb Classical Library edition).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Mouritsen, H. (1998). Italian Unification: A Study in Ancient and Modern Historiography. Bulletin of the Institute of Classical Studies, Supplement 70.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "Proleptic Gregorian; Roman Republican calendar"
+  },
+  {
+    "name_original": "Ἀρχιμήδης ἐν Συρακούσαις",
+    "name_original_lang": "grc",
+    "event_type": "INTELLECTUAL_EVENT",
+    "year": -287,
+    "year_end": -212,
+    "location_name": "Syracuse, Sicily",
+    "location_lat": 37.0755,
+    "location_lon": 15.2866,
+    "main_actor": "Archimedes of Syracuse",
+    "description": "Archimedes (c. 287–212 BCE) was arguably the greatest mathematician and engineer of antiquity. Working in Syracuse, he made fundamental contributions to mathematics (pi approximation, infinitesimals, area and volume calculations), physics (Archimedes' principle of buoyancy, lever mechanics), and military engineering (defensive machines against the Roman siege of Syracuse). He was killed by a Roman soldier during the capture of Syracuse in 212 BCE, despite orders from General Marcellus to spare him. His death during Rome's conquest of Syracuse symbolizes the destruction of Greek scientific culture by Roman military power.",
+    "casualties_low": 1,
+    "casualties_high": 1,
+    "casualties_source": "Plutarch, Life of Marcellus, ch. 19.",
+    "confidence_score": 0.82,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Archimedes' life and death illustrate the tension between intellectual achievement and military power. His defensive machines may have prolonged the siege of Syracuse, but the city was ultimately conquered. The Roman willingness to kill a genius whose work they later celebrated demonstrates that military conquest does not respect intellectual value. Many of Archimedes' works survived only through Arabic translations, highlighting the Islamic world's role in preserving classical knowledge.",
+    "entity_links": [
+      {
+        "entity_name_original": "Συράκουσαι",
+        "role": "AFFECTED"
+      },
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "MAIN_ACTOR",
+        "notes": "Rome conquered Syracuse in 212 BCE"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Plutarch, Life of Marcellus. (Loeb Classical Library edition).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Netz, R. & Noel, W. (2007). The Archimedes Codex. Weidenfeld & Nicolson.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "Proleptic Gregorian"
+  },
+  {
+    "name_original": "Κατάλυσις τῶν Ἀθηνῶν — Τυραννία τῶν Τριάκοντα",
+    "name_original_lang": "grc",
+    "event_type": "CONQUEST",
+    "year": -404,
+    "year_end": -403,
+    "location_name": "Athens, Greece",
+    "location_lat": 37.9715,
+    "location_lon": 23.7267,
+    "main_actor": "Sparta under Lysander; Thirty Tyrants (Critias, Theramenes)",
+    "description": "Following Athens' defeat in the Peloponnesian War (404 BCE), Sparta imposed an oligarchic regime known as the Thirty Tyrants (Hoi Triakonta), led by Critias and Theramenes. The Thirty abolished democratic institutions, conducted political purges, killed an estimated 1,500 Athenians, exiled 5,000 others, and confiscated property from wealthy metics (resident foreigners). The regime lasted only eight months before being overthrown by a democratic resistance led by Thrasybulus, who marched from Phyle to the Piraeus and defeated the oligarchs. The restored democracy enacted a remarkable amnesty (amnestia, literally 'not-remembering'), forgiving all but the Thirty themselves — one of history's earliest transitional justice mechanisms.",
+    "casualties_low": 1500,
+    "casualties_high": 1500,
+    "casualties_source": "Xenophon, Hellenica 2.4; Aristotle, Constitution of Athens 35.",
+    "confidence_score": 0.82,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Thirty Tyrants' brief rule demonstrates how quickly democratic institutions can be destroyed by authoritarian forces. The subsequent democratic restoration and amnesty offer a counter-example of reconciliation over revenge. Socrates' association with members of the Thirty (Critias was his former student) contributed to his trial and execution in 399 BCE.",
+    "entity_links": [
+      {
+        "entity_name_original": "Ἀθῆναι",
+        "role": "VICTIM"
+      },
+      {
+        "entity_name_original": "Λακεδαίμων",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Xenophon, Hellenica, Book II. Trans. R. Warner (1966), Penguin.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Wolpert, A. (2002). Remembering Defeat: Civil War and Civic Memory in Ancient Athens. Johns Hopkins University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "Proleptic Gregorian; Athenian archon-year calendar"
+  },
+  {
+    "name_original": "Rubicon transitus / Bellum Civile Caesaris",
+    "name_original_lang": "lat",
+    "event_type": "REBELLION",
+    "year": -49,
+    "year_end": -45,
+    "location_name": "Rubicon River (modern Uso/Fiumicino), Northern Italy",
+    "location_lat": 44.0725,
+    "location_lon": 12.4267,
+    "main_actor": "Gaius Julius Caesar vs. Gnaeus Pompeius Magnus and the Roman Senate",
+    "description": "On 10 January 49 BCE, Julius Caesar crossed the Rubicon River with his Thirteenth Legion, entering Italy under arms — an act of treason under Roman law that precipitated civil war. Caesar's famous declaration 'alea iacta est' (the die is cast) marked the point of no return. The ensuing civil war (49–45 BCE) was fought across the Roman world: Italy, Spain, Greece (Battle of Pharsalus, 48 BCE, where Caesar defeated Pompey), Egypt (where Pompey was murdered and Caesar met Cleopatra), Africa, and Spain again. Caesar's victory ended the Roman Republic as a functioning oligarchy and established one-man rule, though he was assassinated on the Ides of March (15 March 44 BCE) before he could formalize a new political order.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.88,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Caesar is often presented as a populist champion against a corrupt Senate. While the late Republic was dysfunctional and the senatorial oligarchy self-serving, Caesar's solution — one-man rule — destroyed constitutional governance. His clementia (clemency toward defeated enemies) was politically calculated rather than purely magnanimous. The assassination of Caesar, already in the database, followed from the tensions his dictatorship created.",
+    "entity_links": [
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "AFFECTED",
+        "notes": "The Republic was effectively ended by Caesar's civil war"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Caesar, G.J. De Bello Civili (On the Civil War). (Loeb Classical Library edition).",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Goldsworthy, A. (2006). Caesar: Life of a Colossus. Yale University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 1,
+    "day": 10,
+    "date_precision": "DAY",
+    "iso_date": "-0049-01-10",
+    "calendar_note": "Proleptic Gregorian; Roman Republican calendar (pre-Julian reform)"
+  }
+]

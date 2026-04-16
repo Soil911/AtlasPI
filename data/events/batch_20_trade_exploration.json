@@ -1,0 +1,741 @@
+[
+  {
+    "name_original": "Chegada de Vasco da Gama à Índia",
+    "name_original_lang": "pt",
+    "event_type": "EXPLORATION",
+    "year": 1498,
+    "year_end": null,
+    "location_name": "Calicut (Kozhikode), India",
+    "location_lat": 11.2588,
+    "location_lon": 75.7804,
+    "main_actor": "Vasco da Gama, Portuguese explorer",
+    "description": "On 20 May 1498, Vasco da Gama landed at Calicut (Kozhikode) on India's Malabar Coast, completing the first direct European sea voyage to India via the Cape of Good Hope. The voyage opened a maritime route that bypassed the Ottoman-controlled overland trade routes, fundamentally disrupting centuries-old Indian Ocean trade networks. Da Gama's expedition carried limited trade goods (the Zamorin of Calicut reportedly laughed at the poverty of Portuguese offerings compared to Arab merchants' wares) but enormous destructive potential. The Portuguese quickly established naval dominance through superior gunship technology, bombardment of Calicut (1500, 1502), and the construction of fortified trading posts (Estado da Índia).",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.92,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Da Gama's voyage is celebrated in Portuguese national mythology (Camões's Os Lusíadas). However, the Portuguese arrival inaugurated centuries of colonial violence in the Indian Ocean world. Da Gama's second voyage (1502) included the bombardment of Calicut and the burning of a Muslim merchant ship (the Miri) with all passengers aboard — an act of terrorism designed to establish Portuguese dominance through fear. The disruption of existing trade networks controlled by Arab, Indian, and Chinese merchants caused economic devastation for communities that had prospered for centuries.",
+    "entity_links": [
+      {
+        "entity_name_original": "Reino de Portugal",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Subrahmanyam, S. (1997). The Career and Legend of Vasco da Gama. Cambridge University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Roteiro da Viagem de Vasco da Gama (Logbook of Vasco da Gama's Voyage). Álvaro Velho, c. 1499.",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "month": 5,
+    "day": 20,
+    "date_precision": "DAY",
+    "iso_date": "1498-05-20",
+    "calendar_note": "Julian calendar (pre-Gregorian reform; Portugal adopted Gregorian in 1582)"
+  },
+  {
+    "name_original": "Circunnavegación de Magallanes-Elcano",
+    "name_original_lang": "es",
+    "event_type": "EXPLORATION",
+    "year": 1519,
+    "year_end": 1522,
+    "location_name": "Global circumnavigation: Seville → Atlantic → Pacific → Indian Ocean → Seville",
+    "location_lat": 37.3891,
+    "location_lon": -5.9845,
+    "main_actor": "Ferdinand Magellan (Portuguese, serving Spain) and Juan Sebastián Elcano (Basque navigator who completed the voyage)",
+    "description": "The Magellan-Elcano expedition (20 September 1519 – 6 September 1522) achieved the first circumnavigation of the Earth. Five ships with approximately 270 men departed Seville; only one ship (Victoria) with 18 survivors returned. Magellan was killed in the Philippines on 27 April 1521 in a battle with forces of Lapulapu, chief of Mactan Island. The Basque navigator Juan Sebastián Elcano completed the voyage. The expedition proved conclusively that the Earth was round and the Pacific Ocean was far larger than anyone had imagined. It also revealed the scale of the Americas as a continental barrier and established Spain's claim to the Philippines.",
+    "casualties_low": 252,
+    "casualties_high": 252,
+    "casualties_source": "Approximately 252 of 270 crew members died from scurvy, starvation, combat, disease, and shipwreck. Pigafetta's journal and ship records.",
+    "confidence_score": 0.90,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "The perspective of indigenous peoples encountered during the voyage — particularly the people of Mactan (who killed Magellan in defense of their sovereignty), the Patagonian Tehuelche, and the peoples of the Moluccas — is almost entirely absent from European accounts. Antonio Pigafetta's journal, while invaluable, presents a European perspective. Filipino oral tradition and historiography celebrates Lapulapu as a defender against colonial intrusion.",
+    "ethical_notes": "The expedition was motivated by commercial greed (access to the spice trade) and imperial competition with Portugal. Magellan's death in the Philippines resulted from his attempts to impose Christianity and Spanish authority on sovereign indigenous communities. The expedition's legacy includes the beginning of Spanish colonization of the Philippines (completed by Legazpi in 1565), which lasted over 300 years. Elcano, not Magellan, completed the circumnavigation — the conventional naming obscures this.",
+    "entity_links": [
+      {
+        "entity_name_original": "Imperio Español",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Pigafetta, A. (c. 1525). Relazione del primo viaggio intorno al mondo. Trans. R.A. Skelton (1969), Yale University Press.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Bergreen, L. (2003). Over the Edge of the World: Magellan's Terrifying Circumnavigation of the Globe. William Morrow.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 9,
+    "day": 20,
+    "date_precision": "DAY",
+    "iso_date": "1519-09-20",
+    "calendar_note": "Julian calendar (Spain adopted Gregorian in 1582)"
+  },
+  {
+    "name_original": "Vereenigde Oost-Indische Compagnie (VOC)",
+    "name_original_lang": "nl",
+    "event_type": "FOUNDING_STATE",
+    "year": 1602,
+    "year_end": 1799,
+    "location_name": "Amsterdam, Dutch Republic",
+    "location_lat": 52.3676,
+    "location_lon": 4.9041,
+    "main_actor": "States-General of the Netherlands, merging pre-existing trading companies",
+    "description": "The Dutch East India Company (VOC), chartered on 20 March 1602, was the world's first multinational corporation and the first company to issue stock shares on a public exchange. Granted a 21-year monopoly on Dutch trade east of the Cape of Good Hope and west of the Strait of Magellan, the VOC effectively functioned as a state within a state: it could wage war, negotiate treaties, establish colonies, and administer justice. At its peak, the VOC employed over 50,000 people and operated more than 150 merchant ships. It dominated the spice trade (nutmeg, cloves, pepper) through a combination of commercial acumen and extreme violence, particularly in the Banda Islands (1621, where the population was massacred or enslaved to secure the nutmeg monopoly).",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.92,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The VOC is celebrated in Dutch national history as an entrepreneurial achievement. In Southeast Asian memory, it represents colonial exploitation, the destruction of indigenous trade networks, and acts of genocide (the Banda massacre of 1621, where approximately 15,000 of 16,000 Bandanese were killed, enslaved, or expelled to secure the nutmeg monopoly). The VOC's plantation system in the Banda Islands, worked by enslaved people, was a proto-colonial model. The company's records are extensive but reflect exclusively the colonizer's perspective.",
+    "entity_links": [
+      {
+        "entity_name_original": "Republiek der Zeven Verenigde Nederlanden",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Gaastra, F.S. (2003). The Dutch East India Company: Expansion and Decline. Walburg Pers.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Loth, V.C. (1995). 'Pioneers and Perkeniers: The Banda Islands in the 17th Century.' Cakalele 6: 13–35.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 3,
+    "day": 20,
+    "date_precision": "DAY",
+    "iso_date": "1602-03-20",
+    "calendar_note": "Gregorian calendar (Dutch Republic adopted Gregorian between 1582–1700 depending on province)"
+  },
+  {
+    "name_original": "Atlantic Slave Trade — Middle Passage peak",
+    "name_original_lang": "en",
+    "event_type": "COLONIAL_VIOLENCE",
+    "year": 1700,
+    "year_end": 1808,
+    "location_name": "West Africa to Americas (Atlantic Ocean)",
+    "location_lat": 10.0,
+    "location_lon": -30.0,
+    "main_actor": "European slave-trading nations: Britain, Portugal, France, Netherlands, Spain, Denmark",
+    "description": "The peak period of the trans-Atlantic slave trade (c. 1700–1808) saw the forced transportation of approximately 6–7 million enslaved Africans across the Atlantic, out of a total of 12.5 million over the trade's entire duration (c. 1501–1867). The Middle Passage — the sea crossing from West Africa to the Americas — had mortality rates of 10–20%, meaning over 1–2 million people died at sea. The enslaved were transported in horrific conditions: shackled, packed in holds with minimal headroom, subjected to disease, violence, sexual abuse, and forced feeding. Britain was the dominant slaver nation during this peak period (transporting approximately 3.1 million people), followed by Portugal/Brazil. The trade was sustained by complex networks of African, Arab, and European actors, including African kingdoms that profited from selling war captives.",
+    "casualties_low": 1000000,
+    "casualties_high": 2500000,
+    "casualties_source": "Trans-Atlantic Slave Trade Database (slavevoyages.org); Eltis, D. & Richardson, D. (2010). Atlas of the Transatlantic Slave Trade. Yale University Press. (Middle Passage deaths during peak period)",
+    "confidence_score": 0.90,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "The enslaved themselves left almost no written records of the Middle Passage. The trade is documented overwhelmingly through the records of slave traders, ship captains, and colonial administrators. The handful of published slave narratives (Equiano, 1789) are exceptional. Oral traditions in African diaspora communities preserve memories but were not systematically recorded until the 20th century.",
+    "ethical_notes": "The trans-Atlantic slave trade was one of the largest forced migrations and sustained acts of dehumanization in human history. This record covers the peak period; the overall trade has broader temporal bounds. The role of African polities in supplying enslaved people (through war, debt, and judicial processes) must be acknowledged without using it to deflect responsibility from the European demand that drove the system. Britain's 1807 abolition, often celebrated, came after British ships had transported more people into slavery than any other nation. The economic foundations of Western industrialization — capital accumulation, plantation profits, insurance markets — were deeply entangled with the slave trade.",
+    "entity_links": [
+      {
+        "entity_name_original": "British Empire",
+        "role": "MAIN_ACTOR",
+        "notes": "Britain was the dominant slave-trading nation during this period"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Eltis, D. & Richardson, D. (2010). Atlas of the Transatlantic Slave Trade. Yale University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Rediker, M. (2007). The Slave Ship: A Human History. Viking.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Trans-Atlantic Slave Trade Database. www.slavevoyages.org",
+        "source_type": "academic",
+        "url": "https://www.slavevoyages.org"
+      }
+    ],
+    "date_precision": "DECADE",
+    "calendar_note": null
+  },
+  {
+    "name_original": "افتتاح قناة السويس / Inauguration du Canal de Suez",
+    "name_original_lang": "ar",
+    "event_type": "TECHNOLOGICAL_EVENT",
+    "year": 1869,
+    "year_end": null,
+    "location_name": "Suez Canal, Egypt",
+    "location_lat": 30.4574,
+    "location_lon": 32.3499,
+    "main_actor": "Compagnie universelle du canal maritime de Suez (Ferdinand de Lesseps); Khedive Isma'il Pasha of Egypt",
+    "description": "The Suez Canal opened on 17 November 1869, creating a 164-kilometer waterway connecting the Mediterranean and Red Seas, eliminating the need to circumnavigate Africa. Construction took ten years (1859–1869) and employed between 30,000 and 120,000 workers (initially using corvée — forced labor — of Egyptian peasants, later replaced by mechanized dredging after international pressure). An estimated 20,000–120,000 workers died during construction from cholera, dysentery, and other diseases. The canal immediately transformed global trade, reducing the London-Mumbai voyage from 12,000 nautical miles (via the Cape) to 6,400. Egypt's massive debt from the canal's construction costs led to British financial control (purchase of Egyptian shares, 1875) and eventual British occupation (1882).",
+    "casualties_low": 20000,
+    "casualties_high": 120000,
+    "casualties_source": "Egyptian government estimates (lower bound); international humanitarian reports of the era (upper bound). Exact figures are not available due to poor record-keeping for corvée laborers.",
+    "confidence_score": 0.88,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "The Egyptian forced laborers (fellahin) who dug the canal left no written records. Their experience — forced conscription, brutal working conditions, disease, separation from families — is known primarily through European observers' accounts and retrospective Egyptian national histories. The celebration narratives of the canal's opening focus on European engineering achievement and diplomatic spectacle (Verdi's Aida was commissioned for the occasion, though not completed in time).",
+    "ethical_notes": "The Suez Canal is one of history's great infrastructure achievements, but it was built on forced labor and imperial exploitation. The corvée system effectively enslaved Egyptian peasants for canal construction. The canal's completion led directly to Egypt's financial subjugation and colonial occupation by Britain (1882–1956). Nasser's nationalization of the canal in 1956 (Suez Crisis, already in the database) was explicitly framed as correcting this historical injustice.",
+    "entity_links": [],
+    "sources": [
+      {
+        "citation": "Karabell, Z. (2003). Parting the Desert: The Creation of the Suez Canal. Alfred A. Knopf.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Piquet, C. (2009). Histoire du Canal de Suez. Perrin.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 11,
+    "day": 17,
+    "date_precision": "DAY",
+    "iso_date": "1869-11-17",
+    "calendar_note": null
+  },
+  {
+    "name_original": "Inauguración del Canal de Panamá",
+    "name_original_lang": "es",
+    "event_type": "TECHNOLOGICAL_EVENT",
+    "year": 1914,
+    "year_end": null,
+    "location_name": "Panama Canal Zone, Panama",
+    "location_lat": 9.0801,
+    "location_lon": -79.6803,
+    "main_actor": "United States Army Corps of Engineers (completed); Ferdinand de Lesseps / French company (failed first attempt)",
+    "description": "The Panama Canal opened on 15 August 1914, connecting the Atlantic and Pacific Oceans through a 77-kilometer lock-based waterway across the Isthmus of Panama. The French attempt (1881–1889) under Ferdinand de Lesseps failed catastrophically, with an estimated 20,000 workers dying (primarily West Indian laborers and Europeans) from malaria, yellow fever, and accidents. The US took over the project in 1904 after engineering Panama's secession from Colombia (1903), and completed the canal using 75,000 workers, predominantly West Indian (Barbadian, Jamaican, Trinidadian). An additional 5,600 workers died during the US construction phase. The canal reduced the New York-to-San Francisco sea voyage from 13,000 to 5,000 miles.",
+    "casualties_low": 25000,
+    "casualties_high": 30000,
+    "casualties_source": "McCullough, D. (1977). The Path Between the Seas. (Combined French and American construction deaths; majority were West Indian workers)",
+    "confidence_score": 0.92,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "The West Indian workers — predominantly Black men from Caribbean islands — who built the canal under horrific conditions are almost entirely absent from the heroic engineering narrative. Their names, experiences, and grievances are poorly documented. The Canal Zone was racially segregated ('gold roll' for white Americans, 'silver roll' for non-white workers) with dramatic pay and living condition disparities.",
+    "ethical_notes": "The US engineered Panama's independence from Colombia specifically to secure canal rights (Hay-Bunau-Varilla Treaty, 1903, negotiated without Panamanian representatives). The Canal Zone (1903–1999) was a US-controlled colonial enclave within a sovereign nation. The racial hierarchy of the construction era — white American engineers as heroes, invisible Black Caribbean laborers as expendable — mirrors broader patterns of erasure in infrastructure narratives. Panama's eventual recovery of sovereignty over the canal (Torrijos-Carter Treaties, 1977; full transfer 31 December 1999) was a major decolonization achievement.",
+    "entity_links": [
+      {
+        "entity_name_original": "United States of America",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "McCullough, D. (1977). The Path Between the Seas: The Creation of the Panama Canal, 1870–1914. Simon & Schuster.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Greene, J. (2009). The Canal Builders: Making America's Empire at the Panama Canal. Penguin.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 8,
+    "day": 15,
+    "date_precision": "DAY",
+    "iso_date": "1914-08-15",
+    "calendar_note": null
+  },
+  {
+    "name_original": "Inauguração da Estrada de Ferro Madeira-Mamoré / Devil's Railroad",
+    "name_original_lang": "pt",
+    "event_type": "TECHNOLOGICAL_EVENT",
+    "year": 1912,
+    "year_end": null,
+    "location_name": "Rondônia, Brazil (Amazon basin)",
+    "location_lat": -8.7619,
+    "location_lon": -63.9039,
+    "main_actor": "Brazilian government; Percival Farquhar (American financier); workers from over 50 nations",
+    "description": "The Madeira-Mamoré Railway (366 km, inaugurated 1 August 1912) was built through the Amazon rainforest to transport Bolivian rubber to navigable waterways. Known as the 'Devil's Railroad' (Ferrovia do Diabo), it killed an estimated 6,000–30,000 workers during three construction attempts (1878–1879, 1883–1884, 1907–1912), primarily from malaria, dysentery, beriberi, and violence. Workers were recruited from dozens of countries, including many Caribbean and Mediterranean immigrants who were unprepared for Amazonian conditions. The railway was economically obsolete almost immediately — Southeast Asian rubber plantations (established with smuggled Brazilian seeds) collapsed world rubber prices by the 1910s. The railway operated until 1972.",
+    "casualties_low": 6000,
+    "casualties_high": 30000,
+    "casualties_source": "Ferreira, M. (2005). Madeira-Mamoré: A Ferrovia do Diabo. Multiple construction attempts. Exact toll uncertain due to incomplete records.",
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "The workers who died building the railway — many of them immigrants, indigenous people, and contract laborers from the Caribbean — are largely unnamed in the historical record. Company records focused on progress reports and engineering challenges, not worker welfare. Indigenous communities displaced or employed (often coerced) during construction left no written accounts.",
+    "ethical_notes": "The Madeira-Mamoré exemplifies how infrastructure projects in colonial and neo-colonial contexts treated non-white workers as expendable. The combination of extreme mortality, worker recruitment based on deceptive promises, and the economic futility of the completed project makes it one of history's most tragic infrastructure stories. The rubber boom that motivated construction was itself based on the exploitation of indigenous Amazonian populations (the Putumayo atrocities, already in the database).",
+    "entity_links": [],
+    "sources": [
+      {
+        "citation": "Hardman, F.F. (1988). Trem Fantasma: A Ferrovia Madeira-Mamoré e a Modernidade na Selva. Companhia das Letras.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Craig, N.B. (1907). Recollections of an Ill-Fated Expedition to the Headwaters of the Madeira River in Brazil. J.B. Lippincott.",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "month": 8,
+    "day": 1,
+    "date_precision": "DAY",
+    "iso_date": "1912-08-01",
+    "calendar_note": null
+  },
+  {
+    "name_original": "Tratado de Tordesillas",
+    "name_original_lang": "es",
+    "event_type": "TREATY",
+    "year": 1494,
+    "year_end": null,
+    "location_name": "Tordesillas, Castile, Spain",
+    "location_lat": 41.5013,
+    "location_lon": -5.0000,
+    "main_actor": "Ferdinand II of Aragon & Isabella I of Castile; João II of Portugal; mediated by Pope Alexander VI",
+    "description": "The Treaty of Tordesillas, signed on 7 June 1494, divided the newly discovered lands outside Europe between the Crown of Castile and the Crown of Portugal along a meridian 370 leagues west of the Cape Verde islands (approximately 46° 37' W). Portugal received rights to lands east of the line (including what would become Brazil, as well as Africa and Asia), while Castile received lands to the west (most of the Americas). The treaty, following the papal bull Inter caetera (1493), presumed the right of two European powers and the Pope to divide the entire non-Christian world between them — a foundational document of the colonial era and the Doctrine of Discovery.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Treaty of Tordesillas is one of the most consequential assertions of European supremacy in history. It divided the world between two empires without any consideration of the sovereignty, rights, or existence of the peoples living in the 'divided' territories. The theological basis — that non-Christian lands were available for Christian appropriation — underpins the Doctrine of Discovery, which was cited as recently as 2005 in a US Supreme Court decision (City of Sherrill v. Oneida Indian Nation). The Vatican formally repudiated the Doctrine of Discovery in 2023, 529 years after Tordesillas.",
+    "entity_links": [
+      {
+        "entity_name_original": "Corona de Castilla",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Reino de Portugal",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Imperio Español",
+        "role": "FOUNDED",
+        "notes": "The treaty provided the legal framework for the Spanish colonial empire"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Marques, A.H. de Oliveira (1972). History of Portugal. Vol. 1. Columbia University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Original treaty text. Archivo General de Indias, Seville. (Patronato, 170, R.1).",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "month": 6,
+    "day": 7,
+    "date_precision": "DAY",
+    "iso_date": "1494-06-07",
+    "calendar_note": "Julian calendar (Spain adopted Gregorian in 1582)"
+  },
+  {
+    "name_original": "Silk Road peak / 丝绸之路鼎盛期",
+    "name_original_lang": "en",
+    "event_type": "TRADE_AGREEMENT",
+    "year": 100,
+    "year_end": 300,
+    "location_name": "Central Asia, from Chang'an (Xi'an) to Rome",
+    "location_lat": 39.0,
+    "location_lon": 72.0,
+    "main_actor": "Han Dynasty China, Kushan Empire, Parthian/Sassanid Persia, Roman Empire",
+    "description": "The peak period of Silk Road trade (approximately 1st–3rd centuries CE) connected the Han Dynasty in China to the Roman Empire through a network of overland caravan routes traversing Central Asia. The primary commodities — silk from China, spices from India, glass and gold from Rome, horses from Central Asia — traveled through a chain of intermediaries (Sogdian, Parthian, and Kushan merchants). The routes facilitated not only trade but the transmission of religions (Buddhism spread from India to China via the Silk Road), technologies (papermaking, gunpowder, compass), diseases (the Antonine Plague may have traveled this route), and artistic influences. No single trader traveled the entire route; goods passed through multiple hands across thousands of kilometers.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.80,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The term 'Silk Road' (Seidenstraße) was coined by German geographer Ferdinand von Richthofen in 1877 and imposes a European-centric framework on trade networks that existed for millennia before European awareness. The routes were known to Central Asian, Chinese, Persian, and Indian civilizations long before Europe took notice. The romantic 'Silk Road' narrative can also obscure the coercion, slavery, and violence that accompanied trade — caravan workers were often enslaved, and control of trade routes was a major cause of warfare.",
+    "entity_links": [
+      {
+        "entity_name_original": "漢朝",
+        "role": "PARTICIPANT",
+        "notes": "Han Dynasty China was the primary silk producer"
+      },
+      {
+        "entity_name_original": "Imperium Romanum",
+        "role": "PARTICIPANT",
+        "notes": "Rome was the primary Western consumer of silk and eastern goods"
+      },
+      {
+        "entity_name_original": "कुषाण साम्राज्य",
+        "role": "PARTICIPANT",
+        "notes": "The Kushan Empire controlled key Central Asian trade routes"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hansen, V. (2012). The Silk Road: A New History. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Liu, X. (2010). The Silk Road in World History. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "CENTURY",
+    "calendar_note": "Approximate peak period; trade along these routes existed for millennia before and after"
+  },
+  {
+    "name_original": "British East India Company / East India Company",
+    "name_original_lang": "en",
+    "event_type": "FOUNDING_STATE",
+    "year": 1600,
+    "year_end": 1874,
+    "location_name": "London, England",
+    "location_lat": 51.5074,
+    "location_lon": -0.1278,
+    "main_actor": "English merchants granted royal charter by Queen Elizabeth I",
+    "description": "The East India Company (EIC), chartered on 31 December 1600, began as a trading company and evolved into the most powerful corporation in history, effectively ruling large parts of India with its own army, taxation system, and judicial authority. The EIC defeated Indian regional powers (Battle of Plassey, 1757; Battle of Buxar, 1764), extracting enormous wealth from the subcontinent. Its mismanagement contributed to famines that killed millions (Bengal Famine, 1770). The company's rule was replaced by direct British Crown control (Government of India Act, 1858) after the Indian Rebellion of 1857.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.92,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The EIC was the instrument of one of history's most extensive colonial extractions. The Bengal Famine of 1770 killed an estimated 10 million people under EIC administration. The company's opium trade to China (leading to the Opium Wars) was state-backed narco-trafficking. The EIC model — corporate colonialism — set patterns replicated globally. Indian perspectives on EIC rule uniformly describe it as exploitation and destruction of indigenous industry.",
+    "entity_links": [
+      {
+        "entity_name_original": "British Empire",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Dalrymple, W. (2019). The Anarchy: The East India Company, Corporate Violence, and the Pillage of an Empire. Bloomsbury.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 12,
+    "day": 31,
+    "date_precision": "DAY",
+    "iso_date": "1600-12-31",
+    "calendar_note": "Julian calendar (England adopted Gregorian in 1752)"
+  },
+  {
+    "name_original": "Trans-Saharan trade / تجارة عبر الصحراء",
+    "name_original_lang": "ar",
+    "event_type": "TRADE_AGREEMENT",
+    "year": 300,
+    "year_end": 1600,
+    "location_name": "Sahara Desert — connecting West Africa to North Africa",
+    "location_lat": 23.0,
+    "location_lon": 2.0,
+    "main_actor": "Berber, Tuareg, Hausa, Songhai, and Arab merchants",
+    "description": "The trans-Saharan trade routes connected West African gold, salt, and enslaved people markets to North African and Mediterranean economies over a period of at least 1,300 years. Camel caravans (introduced to the Sahara c. 3rd century CE) traveled routes linking Timbuktu, Gao, and Djenné to Sijilmasa, Fez, and Tunis. The trade was the economic foundation of the great West African empires (Ghana, Mali, Songhai) and a major source of gold for the Islamic world and medieval Europe. Mansa Musa's hajj (1324), distributing so much gold that he depressed Cairo's gold price for a decade, demonstrated the scale of West African wealth.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.80,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "The merchants, porters, guides, and enslaved people who traveled these routes left almost no written records. Arabic geographic accounts (al-Bakri, Ibn Battuta, Leo Africanus) provide external perspectives. Oral traditions of Tuareg, Hausa, and Mande peoples preserve alternative knowledge that has been insufficiently incorporated into written historiography.",
+    "ethical_notes": "The trans-Saharan trade included a massive slave trade — an estimated 6–9 million enslaved sub-Saharan Africans were transported across the Sahara over the trade's duration. This slave trade predates and parallels the trans-Atlantic trade and must be acknowledged alongside the trade's cultural and economic achievements. African agency in this trade network is essential to recognize — West African states were participants and beneficiaries, not merely passive sources of commodities.",
+    "entity_links": [
+      {
+        "entity_name_original": "Manden Kurufaba",
+        "role": "PARTICIPANT",
+        "notes": "Mali Empire was a major participant in trans-Saharan trade"
+      },
+      {
+        "entity_name_original": "Songhai",
+        "role": "PARTICIPANT"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Austen, R.A. (2010). Trans-Saharan Africa in World History. Oxford University Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Lydon, G. (2009). On Trans-Saharan Trails: Islamic Law, Trade Networks, and Cross-Cultural Exchange in Nineteenth-Century Western Africa. Cambridge University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "CENTURY",
+    "calendar_note": "Approximate period of major camel-based trade; pre-camel trade existed earlier"
+  },
+  {
+    "name_original": "Indian Ocean trade network peak / التجارة في المحيط الهندي",
+    "name_original_lang": "en",
+    "event_type": "TRADE_AGREEMENT",
+    "year": 800,
+    "year_end": 1500,
+    "location_name": "Indian Ocean — from East Africa to China",
+    "location_lat": -5.0,
+    "location_lon": 65.0,
+    "main_actor": "Arab, Persian, Indian, Chinese, Malay, and Swahili merchants",
+    "description": "The Indian Ocean trade network, peaking between roughly 800 and 1500 CE, was the world's most extensive and diverse commercial system before the European Age of Exploration. Monsoon winds enabled predictable seasonal sailing between East Africa, the Arabian Peninsula, India, Southeast Asia, and China. The network traded spices, textiles, precious metals, ivory, porcelain, and enslaved people. It produced cosmopolitan port cities (Kilwa, Aden, Calicut, Malacca, Quanzhou) and the Swahili civilization. The Portuguese disruption of this network after 1498 represented a fundamental break in Indian Ocean history.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.82,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Indian Ocean trade network demonstrates that long-distance commerce, cultural exchange, and cosmopolitanism existed independently of European influence for centuries. The European narrative of 'discovering' or 'opening' trade routes to the East erases the pre-existing network. The trade also included the East African slave trade, with enslaved people shipped from East Africa to the Persian Gulf and India — a trade that must be acknowledged alongside the network's cultural achievements.",
+    "entity_links": [
+      {
+        "entity_name_original": "Kilwa",
+        "role": "PARTICIPANT"
+      },
+      {
+        "entity_name_original": "Maqdishaw",
+        "role": "PARTICIPANT"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Beaujard, P. (2012). Les mondes de l'océan Indien. 2 vols. Armand Colin.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Chaudhuri, K.N. (1985). Trade and Civilisation in the Indian Ocean: An Economic History from the Rise of Islam to 1750. Cambridge University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "CENTURY",
+    "calendar_note": "Approximate peak period"
+  },
+  {
+    "name_original": "Scramble for Africa / Conférence de Berlin",
+    "name_original_lang": "en",
+    "event_type": "TREATY",
+    "year": 1884,
+    "year_end": 1885,
+    "location_name": "Berlin, Germany",
+    "location_lat": 52.5200,
+    "location_lon": 13.4050,
+    "main_actor": "European colonial powers — primarily Britain, France, Germany, Portugal, Belgium, Italy, Spain",
+    "description": "The Berlin Conference (15 November 1884 – 26 February 1885), convened by Otto von Bismarck, established the rules by which European powers would divide Africa among themselves. No African representatives were invited. The conference legitimized the 'effective occupation' principle, requiring colonial powers to demonstrate actual control of claimed territories. Within 30 years, virtually the entire African continent was under European colonial rule. The borders drawn — cutting through ethnic groups, kingdoms, and ecological zones — remain the state boundaries of modern Africa, a source of ongoing conflict.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "No African voice was present at the conference. The decisions that would reshape the lives of hundreds of millions of people were made entirely by Europeans, about territories most of the delegates had never visited. African resistance to the subsequent colonial conquest was massive and prolonged but systematically underrepresented in European accounts.",
+    "ethical_notes": "The Berlin Conference is one of the clearest examples of imperial arrogance in recorded history: fourteen European nations and the United States divided an entire continent without consulting a single one of its inhabitants. The conference's legacy — arbitrary borders, colonial extraction, cultural destruction — continues to shape African politics, economics, and identity. Leopold II's personal claim to the Congo Free State, recognized at the conference, led to one of history's worst colonial atrocities.",
+    "entity_links": [
+      {
+        "entity_name_original": "Deutsches Kaiserreich",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "British Empire",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Etat independant du Congo",
+        "role": "FOUNDED",
+        "notes": "Leopold II's personal colony was recognized at the conference"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Pakenham, T. (1991). The Scramble for Africa, 1876–1912. Random House.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Crowe, S.E. (1942). The Berlin West African Conference, 1884–1885. Longmans.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "month": 11,
+    "day": 15,
+    "date_precision": "DAY",
+    "iso_date": "1884-11-15",
+    "calendar_note": null
+  },
+  {
+    "name_original": "Opium Wars / 鴉片戰爭",
+    "name_original_lang": "en",
+    "event_type": "BATTLE",
+    "year": 1839,
+    "year_end": 1860,
+    "location_name": "China — Canton (Guangzhou), Nanjing, Beijing",
+    "location_lat": 23.1291,
+    "location_lon": 113.2644,
+    "main_actor": "British Empire (First Opium War 1839–42); Britain and France (Second Opium War 1856–60) vs. Qing Dynasty China",
+    "description": "The First Opium War (already partially in the DB as 第一次鴉片戰爭) and Second Opium War (1856–1860) were conflicts in which Western powers forced China to accept the opium trade and open its markets. The First Opium War ended with the Treaty of Nanjing (1842), ceding Hong Kong to Britain and opening five treaty ports. The Second Opium War culminated in the burning of the Old Summer Palace (Yuanming Yuan) by Anglo-French forces in October 1860, one of the most notorious acts of cultural destruction in modern history. Together, the wars inaugurated China's 'Century of Humiliation' (百年国耻) and profoundly shaped Chinese nationalism.",
+    "casualties_low": 20000,
+    "casualties_high": 50000,
+    "casualties_source": "Combined military casualties across both wars. Chinese civilian casualties from opium addiction numbered in the millions over subsequent decades.",
+    "confidence_score": 0.90,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Opium Wars were fought by Britain to protect its right to sell narcotics to Chinese people against the will of the Chinese government. This is state-backed narco-trafficking defended by military force. The burning of the Yuanming Yuan destroyed irreplaceable cultural treasures and was described even by contemporaries as vandalism. The 'unequal treaties' imposed on China established a semi-colonial system that lasted until 1943. This event covers the Second Opium War specifically as the First is already in the database.",
+    "entity_links": [
+      {
+        "entity_name_original": "British Empire",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "大清帝國",
+        "role": "VICTIM"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Lovell, J. (2011). The Opium War: Drugs, Dreams, and the Making of Modern China. Picador.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Platt, S.R. (2018). Imperial Twilight: The Opium War and the End of China's Last Golden Age. Knopf.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": null
+  },
+  {
+    "name_original": "Portuguese slave trade begins / Tráfico negreiro",
+    "name_original_lang": "pt",
+    "event_type": "COLONIAL_VIOLENCE",
+    "year": 1441,
+    "year_end": null,
+    "location_name": "Cape Blanc (Ras Nouadhibou), modern Mauritania",
+    "location_lat": 20.7692,
+    "location_lon": -17.0460,
+    "main_actor": "Antão Gonçalves and Nuno Tristão, Portuguese explorers",
+    "description": "In 1441, Portuguese captains Antão Gonçalves and Nuno Tristão captured approximately 12 Africans on the coast of modern Mauritania and brought them to Portugal as enslaved people — the first documented European slave raid on the West African coast. By 1444, the Portuguese were conducting organized slave raids, landing 235 captives at Lagos, Portugal, in a public auction. This inaugurated the trans-Atlantic slave trade that would ultimately transport over 12.5 million Africans to the Americas. Prince Henry 'the Navigator' sanctioned and profited from the trade, which was legitimized by papal bulls Dum Diversas (1452) and Romanus Pontifex (1455).",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "The enslaved Africans captured in these early raids are known to us only through Portuguese records. Their names, languages, communities of origin, and experiences survive only through the filter of their captors' accounts. Zurara's Chronicle of Guinea (1453) describes the Lagos auction with disturbing detail but from the perspective of a chronicler who viewed the trade as divinely sanctioned.",
+    "ethical_notes": "The beginning of the European trans-Atlantic slave trade is a turning point in world history. The papal bulls that legitimized it (Dum Diversas, Romanus Pontifex) explicitly authorized the enslavement of non-Christians and the seizure of their lands — theological justification for centuries of atrocity. The Vatican did not formally repudiate the Doctrine of Discovery until 2023. Prince Henry 'the Navigator,' celebrated in Portuguese national mythology, was a slave trader.",
+    "entity_links": [
+      {
+        "entity_name_original": "Reino de Portugal",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Zurara, G.E. de (1453). Crónica dos feitos da Guiné. Trans. C.R. Beazley & E. Prestage (1896), Hakluyt Society.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Thornton, J. (1998). Africa and Africans in the Making of the Atlantic World, 1400–1800. 2nd ed. Cambridge University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "Julian calendar"
+  },
+  {
+    "name_original": "Hanseatic League peak / Hanse",
+    "name_original_lang": "de",
+    "event_type": "TRADE_AGREEMENT",
+    "year": 1356,
+    "year_end": 1669,
+    "location_name": "Lübeck, Germany (de facto capital)",
+    "location_lat": 53.8655,
+    "location_lon": 10.6866,
+    "main_actor": "Alliance of merchant guilds and market towns in Northern Europe",
+    "description": "The Hanseatic League, formalized at the first general Hansetag in Lübeck in 1356, was a commercial confederation of merchant guilds and trading cities that dominated Baltic and North Sea trade from the 13th to 17th centuries. At its peak, the League included approximately 200 cities from Novgorod to London, with major kontors (trading posts) in Bergen, Bruges, London, and Novgorod. The League monopolized trade in herring, grain, timber, furs, salt, and cloth. It maintained its own navy, waged war against sovereign states (including Denmark), and negotiated treaties as a de facto political entity. Its decline was accelerated by the rise of national states and the shift of trade routes to the Atlantic.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Hanseatic League was a commercial oligarchy that concentrated wealth among merchant elites while exploiting artisans, fishermen, and agricultural laborers. Its monopolistic practices raised prices for consumers and suppressed competition. The League's treatment of non-German merchants in its kontors was discriminatory. Nevertheless, it represents a remarkable example of supranational economic cooperation predating the modern state system.",
+    "entity_links": [
+      {
+        "entity_name_original": "Hanse",
+        "role": "MAIN_ACTOR"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Dollinger, P. (1970). The German Hansa. Trans. D.S. Ault & S.H. Steinberg. Stanford University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "Julian calendar"
+  },
+  {
+    "name_original": "Colombo's first sugarcane plantations / Encomienda",
+    "name_original_lang": "es",
+    "event_type": "COLONIAL_VIOLENCE",
+    "year": 1503,
+    "year_end": null,
+    "location_name": "Hispaniola (modern Haiti/Dominican Republic)",
+    "location_lat": 19.0,
+    "location_lon": -70.0,
+    "main_actor": "Spanish colonial administration under Governor Nicolás de Ovando",
+    "description": "The encomienda system, formalized in Hispaniola from 1503, granted Spanish colonists the labor of indigenous Taíno people in exchange for religious instruction. In practice, it was a forced labor system that, combined with epidemic disease, reduced the Taíno population of Hispaniola from an estimated 250,000–1,000,000 in 1492 to fewer than 500 by 1548. The system's brutality was documented by Bartolomé de las Casas in his 'Brevísima relación de la destrucción de las Indias' (1552). The near-extinction of the Taíno led directly to the importation of enslaved Africans, inaugurating Caribbean plantation slavery.",
+    "casualties_low": 250000,
+    "casualties_high": 1000000,
+    "casualties_source": "Cook, N.D. (1998). Born to Die: Disease and New World Conquest, 1492–1650. (Demographic collapse figures for Hispaniola, combining disease, forced labor, and violence)",
+    "confidence_score": 0.82,
+    "status": "confirmed",
+    "known_silence": true,
+    "silence_reason": "The Taíno left no written records; their experience of colonization is known almost entirely through Spanish sources. Las Casas is the primary witness to Spanish atrocities, but he wrote to persuade the Spanish Crown to reform, not to document indigenous perspectives on their own terms. Taíno oral traditions were effectively destroyed along with the population.",
+    "ethical_notes": "The destruction of the Taíno is one of the first documented genocides of the colonial era. The combination of forced labor, deliberate violence, and epidemic disease (to which the Taíno had no immunity) reduced a thriving population to near-extinction within 50 years. The encomienda system's formal abolition (mid-16th century) did not end forced indigenous labor — it was replaced by other coercive systems (mita, repartimiento).",
+    "entity_links": [
+      {
+        "entity_name_original": "Imperio Español",
+        "role": "MAIN_ACTOR"
+      },
+      {
+        "entity_name_original": "Taíno",
+        "role": "VICTIM"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Las Casas, B. de (1552). Brevísima relación de la destrucción de las Indias. Modern edition trans. H. Briffault (1971), Johns Hopkins University Press.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Cook, N.D. (1998). Born to Die: Disease and New World Conquest, 1492–1650. Cambridge University Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "date_precision": "YEAR",
+    "calendar_note": "Julian calendar"
+  }
+]
