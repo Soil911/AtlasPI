@@ -1,0 +1,118 @@
+[
+  {
+    "name": "Japanese state-formation deep trunk: Yamato court \u2192 post-war Japan (8 links, ~250 CE \u2013 present)",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Japanese Archipelago",
+    "description": "The full arc of Japanese state formation from the proto-state Yamato court (~250 CE) to the post-1947 constitutional state. This chain extends the existing batch_03 chain (which covers Nara \u2192 Meiji Empire) backward to the Yamato period and forward to the present. Unlike the batch_03 chain, this deep trunk includes the Yamato court as the foundational polity and omits the Azuchi-Momoyama interlude (1568-1600) to focus on the eight major state-form transitions. The chain tracks sovereignty-holding polities: the imperial institution persisted nominally throughout, but actual sovereign power shifted repeatedly \u2014 from the Yamato court aristocracy to Fujiwara regents, to successive military governments (bakufu), and finally to the modern constitutional apparatus. The post-1947 link uses the Empire of Japan entity (which covers 1868-1947) as a stand-in because no separate post-1947 entity exists in the database; the transition note documents the 1947 constitutional break.",
+    "confidence_score": 0.80,
+    "status": "confirmed",
+    "ethical_notes": "This chain compresses 1,700 years of political history into eight links, necessarily omitting significant discontinuities: the Nanboku-cho schism (1336-1392, two rival imperial courts), the Sengoku fragmentation (1467-1568, effective dissolution of central authority), and the Azuchi-Momoyama reunification (1568-1603). Each omission is a scope decision, not a significance judgment. The chain's apparent continuity should not be read as validating the modern Japanese nationalist myth of 'unbroken imperial lineage' (bansei ikkei) \u2014 a construct formalized under Meiji ideologues (Kokutai no Hongi, 1937) to legitimate imperial authority and militarism. In reality, the imperial house was politically powerless for most of the period 1185-1868, and the chain's transitions are overwhelmingly violent. The chain also omits Ainu Mosir (Hokkaido), the Ryukyu Kingdom, and other polities that were forcibly incorporated into the Japanese state at various points \u2014 their erasure from the 'trunk' narrative is itself a form of historiographic violence that this note makes explicit. Additionally, the Yamato court's early chronology (before ~500 CE) is highly uncertain; the traditional Nihon Shoki chronology placing the founding in 660 BCE is mythological, and archaeological dating suggests state consolidation no earlier than the 3rd-4th century CE.",
+    "sources": [
+      {
+        "citation": "Totman, C. (2000). A History of Japan. Blackwell.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Hall, J.W. (ed.) (1988-99). The Cambridge History of Japan, 6 vols. Cambridge UP.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Jansen, M.B. (2000). The Making of Modern Japan. Harvard UP.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Piggott, J. (1997). The Emergence of Japanese Kingship. Stanford UP.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Friday, K. (2004). Samurai, Warfare and the State in Early Medieval Japan. Routledge.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Dower, J. (1999). Embracing Defeat: Japan in the Wake of World War II. Norton.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "links": [
+      {
+        "entity_name": "\u5927\u548c\u738b\u6a29",
+        "sequence_order": 0,
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "The Yamato court (\u5927\u548c\u738b\u6a29, ~250-710 CE) consolidated control over central and western Honshu during the Kofun period (c.250-538). Giant keyhole-shaped burial mounds (kofun) attest to the emergence of a paramount chieftaincy that gradually acquired state-like characteristics. Chinese Wei dynasty records (Wajinden, c.297) describe the polity of Wa ruled by Queen Himiko, though the relationship between Himiko's Yamatai and the later Yamato court remains debated. The Yamato state adopted Buddhism (traditionally 538 or 552 CE), Chinese writing, and the ritsuryo bureaucratic system. The Taika Reform (645) and subsequent Taih\u014d Code (701) formalized the transition from clan-based to bureaucratic governance.",
+        "ethical_notes": "The Yamato court's origins are shrouded in mytho-historical sources (Kojiki 712, Nihon Shoki 720) that were compiled under the Nara court to legitimate the ruling dynasty. The traditional founding date of 660 BCE (Emperor Jimmu) is mythological and was instrumentalized by Meiji-era and wartime ideologues to claim unbroken imperial lineage. Archaeological evidence places state formation no earlier than the mid-3rd century CE. The Yamato court's expansion involved the subjugation of regional polities (Izumo, Kibi, Tsukushi) and the Emishi peoples of northeastern Honshu, whose independent political traditions were erased by the centralizing state."
+      },
+      {
+        "entity_name": "\u5948\u826f\u6642\u4ee3",
+        "sequence_order": 1,
+        "transition_year": 710,
+        "transition_type": "REFORM",
+        "is_violent": false,
+        "description": "The Nara period (\u5948\u826f\u6642\u4ee3, 710-794) begins with Empress Genmei's establishment of Heij\u014d-ky\u014d (Nara) as the first permanent capital, modeled on Tang dynasty Chang'an. The ritsury\u014d system reached its fullest institutional expression: centralized land allocation (handen system), provincial governance through appointed officials (kokushi), population registers, and a bureaucracy organized by Chinese-style ranks. Six great Buddhist temples (Nanto Rokush\u016b) wielded enormous political influence.",
+        "ethical_notes": "The transition from Yamato to Nara is administrative rather than violent, but the ritsuryo state's intensified taxation and corvee labor systems imposed heavy burdens on the peasantry. The handen land-allocation system, while equalizing in theory, was undermined by aristocratic and monastic land accumulation (shoen estates) from the very beginning. The Nara court's adoption of Chinese models extended to historical falsification: the Nihon Shoki (720) was compiled in this period specifically to project the imperial house's authority back to mythological antiquity."
+      },
+      {
+        "entity_name": "\u5e73\u5b89\u6642\u4ee3",
+        "sequence_order": 2,
+        "transition_year": 794,
+        "transition_type": "REFORM",
+        "is_violent": false,
+        "description": "Emperor Kanmu moved the capital to Heian-ky\u014d (Kyoto) in 794, inaugurating the Heian period (\u5e73\u5b89\u6642\u4ee3, 794-1185). The move was driven by the need to escape the political stranglehold of the great Nara Buddhist monasteries. The Heian period saw the Fujiwara clan's rise to dominance through the regent system (sekkan), the flourishing of court culture (The Tale of Genji, c.1008), and the gradual privatization of the ritsuryo state through the expansion of tax-exempt shoen estates. Real military power devolved to provincial warrior families (bushi), setting the stage for the rise of the samurai.",
+        "ethical_notes": "The capital move is bloodless at the court level but is preceded by the Hoki purges and the Dokyo affair (764-770). Kanmu's military campaigns against the Emishi peoples of northeastern Honshu (under generals such as Sakanoue no Tamuramaro, 780s-810s) caused heavy casualties and led to the forced relocation and assimilation of Emishi communities \u2014 an early Japanese frontier colonization that prefigures the later Hokkaido colonization of the Ainu. The Fujiwara regency concentrated wealth and power among a single aristocratic lineage, producing extreme inequality between the Kyoto court elite and the provincial population."
+      },
+      {
+        "entity_name": "\u938c\u5009\u5e55\u5e9c",
+        "sequence_order": 3,
+        "transition_year": 1185,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "The Genpei War (1180-1185) between the Taira and Minamoto clans ended at the naval battle of Dan-no-ura (25 April 1185), where the child emperor Antoku drowned and the Taira were annihilated. Minamoto no Yoritomo established the Kamakura shogunate (\u938c\u5009\u5e55\u5e9c, 1185-1333) as the first military government (bakufu), receiving the title of sei-i taishogun in 1192. The Kamakura system created dual governance: the imperial court retained ceremonial authority in Kyoto while real power resided in Kamakura. The Hojo regents (shikken) controlled the shogunate from 1203 onward after Yoritomo's death.",
+        "ethical_notes": "The Genpei War involved mass violence against the Taira nobility, including the drowning of the child emperor Antoku and the execution of captured Taira at Rokuj\u014d riverbed (1185). Yoritomo subsequently purged his own brothers: Yoshitsune was hunted across Japan and driven to suicide at Koromogawa (1189), and Noriyori was also eliminated. The shogunal order was consolidated through fratricide and political terror, not constitutional succession. The Kamakura period also saw the Mongol invasion attempts of 1274 and 1281, which mobilized mass conscription of Kyushu populations."
+      },
+      {
+        "entity_name": "\u5ba4\u753a\u5e55\u5e9c",
+        "sequence_order": 4,
+        "transition_year": 1336,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "After the brief Kenmu Restoration of Emperor Go-Daigo (1333-1336), Ashikaga Takauji seized power and established the Muromachi shogunate (\u5ba4\u753a\u5e55\u5e9c, 1336-1573) in Kyoto. Takauji installed a rival Northern Court emperor, producing the Nanboku-cho schism (1336-1392) with two simultaneously claiming imperial legitimacy. The shogunate's effective authority weakened progressively, culminating in the catastrophic Onin War (1467-1477) that destroyed much of Kyoto and triggered the Sengoku period of fragmented civil war lasting a century.",
+        "ethical_notes": "The Muromachi period's violence is pervasive: the Nanboku-cho schism involved 56 years of civil war; the Onin War killed an estimated 100,000-120,000 and reduced Kyoto to ashes; the subsequent Sengoku period (1467-1568) saw the effective dissolution of central authority and millions of casualties from continuous inter-domain warfare, famine, and epidemic. The 'two emperors' problem of 1336-1392 is a permanent crack in the official narrative of unbroken imperial lineage \u2014 in 1911, the Meiji government declared the Southern Court the 'legitimate' line, a retrospective political judgment. The wako pirate raids along the Chinese and Korean coasts during this period caused widespread suffering that Japanese nationalist historiography has often minimized."
+      },
+      {
+        "entity_name": "\u5fb3\u5ddd\u5e55\u5e9c",
+        "sequence_order": 5,
+        "transition_year": 1603,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "After Oda Nobunaga's reunification campaigns (1568-1582) and Toyotomi Hideyoshi's completion of national unification (1582-1598), Tokugawa Ieyasu's decisive victory at the battle of Sekigahara (21 October 1600, ~30,000-40,000 killed) established Tokugawa supremacy. Ieyasu was named sei-i taishogun in 1603, founding the Tokugawa shogunate (\u5fb3\u5ddd\u5e55\u5e9c, 1603-1868) at Edo (modern Tokyo). The sieges of Osaka (1614-1615) exterminated the Toyotomi house and consolidated Tokugawa dominance. The ensuing 250-year Pax Tokugawa (1615-1853) was the longest period of internal peace in Japanese history.",
+        "ethical_notes": "This link skips the Azuchi-Momoyama period (1568-1603, covered as a separate entity in the database) for chain-level simplification. The omission elides Nobunaga's massacres of the Ikko-ikki at Nagashima (1574, ~20,000 killed) and the burning of Enryakuji (1571, ~3,000-4,000 killed), and Hideyoshi's devastating invasions of Korea (Imjin War 1592-1598, estimated 1-2 million Korean civilian dead, mass abduction of Korean artisans). The Tokugawa period itself involved the suppression of Christianity (Shimabara Rebellion 1637-1638, ~37,000 Christian peasants massacred), the sakoku isolation policy, the rigid caste system confining eta/hinin outcastes and Ainu to hereditary degradation, and the forced subordination of the Ryukyu Kingdom through the Satsuma clan (1609). Internal 'peace' was maintained through structural violence against religious, ethnic, and social minorities."
+      },
+      {
+        "entity_name": "\u5927\u65e5\u672c\u5e1d\u570b",
+        "sequence_order": 6,
+        "transition_year": 1868,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "The Meiji Restoration: Satsuma and Choshu domain forces overthrew the Tokugawa shogunate after Tokugawa Yoshinobu's formal resignation (November 1867) and the Boshin War (January 1868 - June 1869, ~8,000 combat dead). The 15-year-old Emperor Meiji was restored to nominal direct rule on 3 January 1868. The Empire of Japan (\u5927\u65e5\u672c\u5e1d\u570b, 1868-1947) launched rapid industrialization and military modernization, annexed the Ryukyu Kingdom (1879) and Hokkaido (1869, with systematic Ainu dispossession), and built a colonial empire encompassing Taiwan (1895), Korea (1910), Manchuria (1931), and much of East and Southeast Asia (1937-1945).",
+        "ethical_notes": "The Meiji transition is recorded as REVOLUTION, not RESTORATION, because the constitutional, fiscal, and military break was total. The Empire of Japan's record includes: the colonization of Hokkaido with Ainu land dispossession and forced assimilation (Former Aborigines Protection Act, 1899); the annexation and cultural suppression of the Ryukyu Kingdom; the brutal colonization of Korea (1910-1945, including forced labor, comfort women system, and cultural erasure); the Nanjing Massacre (1937, 200,000-300,000 civilian dead); the comfort women system (estimated 200,000 women from Korea, China, Philippines, Indonesia and other occupied territories forced into sexual slavery); the biological warfare experiments of Unit 731; the Bataan Death March; and the systematic mistreatment of prisoners of war. Japan's wartime responsibility remains contested in Japanese domestic politics, with periodic revisionist attempts to minimize these atrocities in textbooks and public discourse."
+      },
+      {
+        "entity_name": "\u5927\u65e5\u672c\u5e1d\u570b",
+        "sequence_order": 7,
+        "transition_year": 1947,
+        "transition_type": "REFORM",
+        "is_violent": false,
+        "description": "The post-1947 constitutional state of Japan (Nihon-koku, \u65e5\u672c\u570b) was established under Allied (primarily American) occupation following Japan's unconditional surrender on 15 August 1945. The new Constitution of Japan, effective 3 May 1947, transformed the state from an imperial autocracy to a parliamentary democracy with a symbolic emperor. Article 9 renounced war and the maintenance of armed forces (though the Self-Defense Forces were established in 1954). Note: this link reuses the \u5927\u65e5\u672c\u5e1d\u570b entity because no separate post-1947 entity exists in the database; the 1947 transition is the relevant break point.",
+        "ethical_notes": "The 1947 constitutional transition, while formally peaceful, followed the atomic bombings of Hiroshima (6 August 1945, ~80,000-140,000 dead) and Nagasaki (9 August 1945, ~40,000-80,000 dead), the firebombing of Tokyo (9-10 March 1945, ~80,000-100,000 dead), and the Soviet invasion of Manchuria (9 August 1945). The Allied occupation (1945-1952) under General MacArthur imposed a constitution drafted primarily by American officials \u2014 the degree to which this represents genuine Japanese democratic choice versus imposed reform remains debated. The Tokyo War Crimes Tribunal (IMTFE, 1946-1948) prosecuted some war criminals but excluded Emperor Hirohito from prosecution for political reasons (the 'reverse course' policy), creating a fundamental ambiguity in Japan's reckoning with wartime responsibility that persists to the present. The post-war economic miracle (1955-1990) is sometimes used to minimize the wartime past; the Yasukuni Shrine controversy, textbook disputes, and comfort women issue demonstrate unresolved tensions."
+      }
+    ]
+  }
+]

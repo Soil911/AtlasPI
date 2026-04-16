@@ -1,0 +1,427 @@
+[
+  {
+    "name_original": "大化の改新",
+    "name_original_lang": "ja",
+    "event_type": "REFORM",
+    "year": 645,
+    "year_end": null,
+    "location_name": "Asuka, Yamato Province, Japan",
+    "location_lat": 34.4747,
+    "location_lon": 135.82,
+    "main_actor": "Prince Naka no Ōe (later Emperor Tenji) and Nakatomi no Kamatari",
+    "description": "On 10 July 645 (traditional date), Prince Naka no Ōe and Nakatomi no Kamatari (founder of the Fujiwara clan) staged a coup d'état at the Asuka court, assassinating Soga no Iruka during an audience with Empress Kōgyoku. The Soga clan, which had dominated court politics for decades, was destroyed. The new regime, under the enthronement of Emperor Kōtoku, proclaimed the Taika Reform (大化の改新), the first systematic attempt to restructure the Yamato state along Chinese (Tang dynasty) bureaucratic lines. Reforms included: nationalization of all land (abolishing clan-held territories), establishment of provincial government districts (kuni and kōri), creation of a household registration system, and standardization of taxation. While the actual implementation of the reforms was gradual and incomplete (the Taihō Code of 701 represents their mature form), the Taika Reform marks the decisive transition from clan-based to bureaucratic governance in Japan.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.72,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Taika Reform is traditionally presented in Japanese historiography as a progressive modernization modeled on Tang China. However, the 'reform' began with political assassination (the killing of Soga no Iruka in front of the empress), and the subsequent centralization of land and labor under state control imposed heavy corvee labor burdens on the peasantry. The Nihon Shoki (720), our primary source for the reform, was compiled 75 years later under the very regime the reform established, making it a self-legitimating narrative. Modern scholarship (Inoue 1965, Piggott 1997) questions whether the 'Taika Reform Edict' as presented in the Nihon Shoki accurately reflects what actually occurred in 645-646, or is a retrospective projection of later ritsuryo legislation. The destruction of the Soga clan erased their perspective from the historical record.",
+    "entity_links": [
+      {
+        "entity_name_original": "大和王権",
+        "role": "MAIN_ACTOR",
+        "notes": "The Yamato court was fundamentally restructured by the reform from clan-based to bureaucratic governance"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Nihon Shoki (日本書紀, 720 CE). Chronicles of Japan. Trans. W.G. Aston (1896), Tuttle reprint 1972. Primary source for the Taika Reform.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Piggott, J. (1997). The Emergence of Japanese Kingship. Stanford UP.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "壇ノ浦の戦い",
+    "name_original_lang": "ja",
+    "event_type": "BATTLE",
+    "year": 1185,
+    "year_end": null,
+    "location_name": "Dan-no-ura, Shimonoseki Strait, Japan",
+    "location_lat": 33.9589,
+    "location_lon": 130.9425,
+    "main_actor": "Minamoto no Yoshitsune, commander of the Minamoto (Genji) naval forces",
+    "description": "On 25 April 1185, the Minamoto (Genji) fleet under Minamoto no Yoshitsune decisively defeated the Taira (Heike) fleet at the naval battle of Dan-no-ura in the Shimonoseki Strait. The battle was the final engagement of the five-year Genpei War (1180-1185). As the Taira position collapsed, the child Emperor Antoku (aged 6 or 7), held by the Taira as their claim to legitimacy, was taken by his grandmother Taira no Tokiko, who leaped into the sea with the emperor and the imperial regalia (the sacred sword Kusanagi no Tsurugi was lost). Numerous Taira warriors and courtiers followed in mass suicide. The surviving Taira leaders were captured and executed. The victory established Minamoto no Yoritomo's unchallenged military supremacy, leading to the founding of the Kamakura shogunate in 1192 — the first military government in Japanese history.",
+    "casualties_low": 3000,
+    "casualties_high": 10000,
+    "casualties_source": "Heike Monogatari (c. 1240) and Azuma Kagami (1266), the primary literary and chronicle sources. Exact figures are not available; estimates based on fleet sizes described in the sources (Taira ~500 ships, Minamoto ~800 ships).",
+    "confidence_score": 0.78,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Dan-no-ura ended the Taira as a political force through a combination of military defeat and mass suicide (including the drowning of a child emperor). The Heike Monogatari, our most vivid source, is a literary epic composed decades later with the explicit purpose of memorializing the Taira fall as Buddhist tragedy (mujo, impermanence) — its narrative framing shapes but also distorts the historical record. The subsequent Minamoto consolidation involved the elimination of Yoshitsune himself (hunted by his brother Yoritomo and driven to suicide in 1189) and systematic purges of potential rivals. The Genpei War's conclusion marks the beginning of 700 years of military government in Japan, during which the imperial institution was preserved as a legitimating fiction while power resided with warrior elites — a structural arrangement that has no exact parallel in world history.",
+    "entity_links": [
+      {
+        "entity_name_original": "平安時代",
+        "role": "DISSOLVED",
+        "notes": "End of the Heian aristocratic order; effective power passes from court to military government"
+      },
+      {
+        "entity_name_original": "鎌倉幕府",
+        "role": "RESULTANT",
+        "notes": "Minamoto victory leads directly to establishment of the Kamakura shogunate (1192)"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Heike Monogatari (平家物語, c. 1240). The Tale of the Heike. Trans. R. Tyler (2012), Viking/Penguin.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Friday, K. (2004). Samurai, Warfare and the State in Early Medieval Japan. Routledge.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "文永の役",
+    "name_original_lang": "ja",
+    "event_type": "BATTLE",
+    "year": 1274,
+    "year_end": null,
+    "location_name": "Hakata Bay, Kyushu, Japan",
+    "location_lat": 33.61,
+    "location_lon": 130.35,
+    "main_actor": "Kublai Khan / Yuan Dynasty invasion force",
+    "description": "In November 1274, a Yuan dynasty invasion fleet of approximately 900 ships carrying 23,000-40,000 Mongol, Chinese, and Korean troops landed at Hakata Bay (modern Fukuoka), Kyushu. The invasion force, assembled under Kublai Khan's orders after Japan refused tributary demands, overcame initial Japanese resistance on the beaches using unfamiliar tactics (massed infantry formations, gunpowder weapons, poisoned arrows). However, after a single day of fighting, the fleet withdrew overnight — either due to storm damage, supply concerns, or Korean navigators' warnings. The withdrawal was later mythologized as divine intervention (kamikaze, 'divine wind'). Japanese casualties were significant, with samurai forces from Kyushu bearing the brunt. The invasion prompted the Kamakura shogunate to construct a stone defensive wall (genko borui) along Hakata Bay and to mobilize Kyushu's warrior population for ongoing defense.",
+    "casualties_low": 3000,
+    "casualties_high": 13500,
+    "casualties_source": "Hachiman Gudokun (c. 1300s), Yuan Shi (official Yuan dynasty history), and Korai-sa (Korean court records). Japanese and Korean sources give conflicting figures. Conlan (2001) estimates combined casualties in the thousands on both sides.",
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The 1274 invasion must be understood in the context of Kublai Khan's broader imperial strategy: Japan was one of multiple targets (along with Vietnam, Burma, Java) for Yuan expansion. The invasion's failure is often attributed solely to the 'kamikaze' (divine wind) in Japanese nationalist historiography, a narrative later weaponized by the imperial Japanese military in WWII to name suicide pilots. Modern scholarship (Conlan 2001, Delgado 2009) emphasizes the role of Japanese military resistance and Yuan logistical overextension alongside weather factors. The Koryo kingdom of Korea was a reluctant participant, forced to provide ships and troops as a Yuan vassal — Korean suffering in the Mongol invasions of Korea (1231-1270) and the forced contribution to the Japan campaigns receives insufficient attention in Japanese-centered accounts. The Tsushima and Iki island populations were massacred by the invasion force before the landing at Hakata.",
+    "entity_links": [
+      {
+        "entity_name_original": "鎌倉幕府",
+        "role": "PARTICIPANT",
+        "notes": "The Kamakura shogunate organized the defense of Kyushu against the Mongol invasion"
+      },
+      {
+        "entity_name_original": "元朝",
+        "role": "MAIN_ACTOR",
+        "notes": "The Yuan Dynasty launched the invasion under Kublai Khan's orders"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Conlan, T. (2001). In Little Need of Divine Intervention: Takezaki Suenaga's Scrolls of the Mongol Invasions of Japan. Cornell UP.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Delgado, J. (2009). Khubilai Khan's Lost Fleet: In Search of a Legendary Armada. University of California Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "弘安の役",
+    "name_original_lang": "ja",
+    "event_type": "BATTLE",
+    "year": 1281,
+    "year_end": null,
+    "location_name": "Hakata Bay and Takashima, Kyushu, Japan",
+    "location_lat": 33.61,
+    "location_lon": 130.35,
+    "main_actor": "Kublai Khan / Yuan Dynasty invasion force (second attempt)",
+    "description": "In the summer of 1281, Kublai Khan launched a second, vastly larger invasion of Japan. A two-pronged force — an Eastern Route Army from Korea (~40,000 troops, 900 ships) and a Southern Route Army from southern China (~100,000 troops, 3,500 ships) — converged on Hakata Bay. The total invasion force of approximately 140,000 men made it the largest amphibious operation in world history until the 20th century. Japanese defenders, now protected by the stone wall (genko borui) built after 1274, held the beachhead for weeks. On approximately 15 August 1281, a massive typhoon struck the invasion fleet anchored off Takashima island, destroying an estimated 70-80% of the ships and drowning tens of thousands of troops. The surviving invasion force, stranded and demoralized, was annihilated by Japanese counterattacks. The typhoon was attributed to divine intervention (kamikaze) and permanently ended Mongol attempts to conquer Japan.",
+    "casualties_low": 60000,
+    "casualties_high": 120000,
+    "casualties_source": "Yuan Shi records approximately 100,000 men lost from the Southern Route Army alone. Korai-sa records ~13,000 survivors of the Eastern Route Army (of ~40,000). Modern estimates (Delgado 2009): 60,000-120,000 total Yuan force killed, mostly by drowning. Japanese casualties in the weeks of fighting before the typhoon: several thousand.",
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The 1281 invasion's catastrophic failure shaped Japanese self-conception for centuries. The 'kamikaze' narrative — that Japan was divinely protected — became central to Japanese exceptionalist ideology and was explicitly revived during WWII for the suicide pilot program (October 1944 onward), directly linking medieval mythology to 20th-century mass death. The invasion also devastated the Kamakura shogunate's finances: the enormous cost of defense mobilization could not be rewarded through the normal mechanism of granting confiscated lands (since there were no lands to confiscate from an external invader), contributing to the warrior class's disillusionment with the Hojo regents and ultimately to the shogunate's fall in 1333. The human cost on the invasion force side was borne disproportionately by conscripted Chinese and Korean soldiers and sailors, not Mongol elites — a class and ethnic dimension that neither Japanese nor Chinese nationalist narratives adequately address. Underwater archaeology at Takashima (Delgado, Kimura) has recovered extensive material evidence confirming the fleet's destruction.",
+    "entity_links": [
+      {
+        "entity_name_original": "鎌倉幕府",
+        "role": "PARTICIPANT",
+        "notes": "Japanese defense held the beachhead until the typhoon destroyed the invasion fleet"
+      },
+      {
+        "entity_name_original": "元朝",
+        "role": "MAIN_ACTOR",
+        "notes": "The largest amphibious invasion in pre-modern history; catastrophic failure ended Mongol designs on Japan"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Delgado, J. (2009). Khubilai Khan's Lost Fleet: In Search of a Legendary Armada. University of California Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Conlan, T. (2001). In Little Need of Divine Intervention: Takezaki Suenaga's Scrolls of the Mongol Invasions of Japan. Cornell UP.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "応仁の乱",
+    "name_original_lang": "ja",
+    "event_type": "CIVIL_WAR",
+    "year": 1467,
+    "year_end": 1477,
+    "location_name": "Kyoto, Japan",
+    "location_lat": 35.0116,
+    "location_lon": 135.7681,
+    "main_actor": "Hosokawa Katsumoto (Eastern Army) and Yamana Sozen (Western Army)",
+    "description": "The Onin War (1467-1477) erupted from a succession dispute within the Ashikaga shogunal house, compounded by rivalry between the powerful shugo daimyo Hosokawa Katsumoto and Yamana Sozen. Fighting began in Kyoto in January 1467, with the city divided between the Eastern Army (Hosokawa coalition, ~161,000 troops) and the Western Army (Yamana coalition, ~116,000 troops). Over ten years of urban warfare, Kyoto — Japan's imperial capital, the seat of the shogunate, and the cultural center of the nation — was reduced to ashes. Temples, palaces, libraries, and entire neighborhoods were systematically destroyed. Both original protagonists died during the war (Yamana in 1473, Hosokawa in 1473) without resolution. The war's inconclusive end in 1477 left the Muromachi shogunate fatally weakened and triggered the Sengoku period (1467-1568), a century of fragmented civil war across Japan.",
+    "casualties_low": 100000,
+    "casualties_high": 200000,
+    "casualties_source": "Oninki (Record of the Onin War, contemporary chronicle). Exact figures unavailable; the 100,000-200,000 range encompasses combat dead plus civilian deaths from the decade of urban warfare, famine, and displacement in and around Kyoto.",
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Onin War is often underestimated in world-historical accounts but represents one of the most destructive urban conflicts of the 15th century. The destruction of Kyoto's cultural patrimony — including irreplaceable manuscripts, temple archives, and artistic works accumulated over 700 years — constitutes a cultural catastrophe comparable to the sack of Baghdad (1258) in terms of lost literary and artistic heritage. The war's causes were fundamentally feudal-aristocratic (succession disputes among a tiny warrior elite), but its consequences were borne by the urban civilian population of Kyoto and surrounding provinces. The subsequent Sengoku period (1467-1568) produced an estimated 1-3 million additional deaths from continuous inter-domain warfare, famine, and epidemic over the following century. The Onin War also triggered the diffusion of power to provincial warrior lords (sengoku daimyo), making Japan essentially ungovernable from the center for a hundred years.",
+    "entity_links": [
+      {
+        "entity_name_original": "室町幕府",
+        "role": "PARTICIPANT",
+        "notes": "The Muromachi shogunate was fatally weakened by the war, losing effective authority over Japan"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Varley, P. (1967). The Onin War: History of Its Origins and Background. Columbia UP.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Berry, M.E. (1994). The Culture of Civil War in Kyoto. University of California Press.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "関が原の戦い",
+    "name_original_lang": "ja",
+    "event_type": "BATTLE",
+    "year": 1600,
+    "year_end": null,
+    "location_name": "Sekigahara, Mino Province (modern Gifu Prefecture), Japan",
+    "location_lat": 35.3656,
+    "location_lon": 136.4608,
+    "main_actor": "Tokugawa Ieyasu, commander of the Eastern Army",
+    "description": "On 21 October 1600, the forces of Tokugawa Ieyasu (Eastern Army, ~74,000-89,000 troops) defeated the western coalition led by Ishida Mitsunari (Western Army, ~80,000-120,000 troops) at the Battle of Sekigahara in Mino Province. The battle lasted approximately six hours and was decided by the defection of Kobayakawa Hideaki and several other western daimyo during the fighting. An estimated 30,000-40,000 were killed on both sides. The decisive victory established Tokugawa supremacy over Japan, leading to Ieyasu's appointment as shogun in 1603. The battle is sometimes called 'Tenka Wakeme' (天下分け目, 'the battle that decided the realm') and is considered the most consequential single military engagement in Japanese history, ending the Sengoku period and inaugurating 265 years of Tokugawa peace.",
+    "casualties_low": 30000,
+    "casualties_high": 40000,
+    "casualties_source": "Sekigahara Kassen-ki (Battle Account of Sekigahara) and various daimyo records. Bryant (1995) and Turnbull (1998) estimate 30,000-40,000 total dead. Precise figures are uncertain due to conflicting domain-level reports.",
+    "confidence_score": 0.82,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Sekigahara was followed by massive redistribution of domains (han): 90 daimyo houses were abolished and their territories confiscated, displacing tens of thousands of samurai families. The subsequent siege of Osaka Castle (1614-1615) exterminated the Toyotomi house, including women and children. The Tokugawa consolidation established a rigid social order (shi-no-ko-sho caste system) that would endure for 265 years, confining entire populations to hereditary status — including the systematic degradation of eta and hinin outcaste communities. The 'peace' of the Tokugawa era was real but was purchased through structural violence: the suppression of Christianity (Shimabara 1637-1638, ~37,000 massacred), the sakoku closure of Japan to most foreign contact, and the formalization of hierarchical subordination. Sekigahara's victor-centric narrative should not obscure that the battle decided which warrior elite would impose order, not whether order would be imposed by force.",
+    "entity_links": [
+      {
+        "entity_name_original": "徳川幕府",
+        "role": "RESULTANT",
+        "notes": "Tokugawa Ieyasu's victory at Sekigahara directly led to his appointment as shogun (1603)"
+      },
+      {
+        "entity_name_original": "安土桃山時代",
+        "role": "DISSOLVED",
+        "notes": "The Azuchi-Momoyama period's Toyotomi political order was broken by the battle"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Bryant, A. (1995). Sekigahara 1600: The Final Struggle for Power. Osprey.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Jansen, M.B. (2000). The Making of Modern Japan. Harvard UP.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "明治維新",
+    "name_original_lang": "ja",
+    "event_type": "REVOLUTION",
+    "year": 1868,
+    "year_end": 1869,
+    "location_name": "Kyoto / Edo (Tokyo), Japan",
+    "location_lat": 35.6762,
+    "location_lon": 139.6503,
+    "main_actor": "Satsuma-Choshu coalition (Saigo Takamori, Okubo Toshimichi, Kido Takayoshi)",
+    "description": "The Meiji Restoration (明治維新, 1868-1869) overthrew the 265-year Tokugawa shogunate and nominally restored direct imperial rule under Emperor Meiji (aged 15). The political crisis began with the shogunate's forced opening of Japan to Western trade (1853-1858, the 'unequal treaties'), which discredited the Tokugawa regime. Tokugawa Yoshinobu formally resigned the shogunal office on 9 November 1867, but Satsuma-Choshu forces seized the imperial palace on 3 January 1868 and declared the Restoration. The ensuing Boshin War (January 1868 - June 1869) included the battles of Toba-Fushimi (January 1868), Ueno (July 1868), and the siege of Hakodate (the Republic of Ezo, May-June 1869). Total combat deaths were approximately 8,000. The Meiji government subsequently abolished the domain system, created a conscript army, dismantled the samurai class, and launched rapid industrialization modeled on Western powers.",
+    "casualties_low": 8000,
+    "casualties_high": 12000,
+    "casualties_source": "Beasley, W.G. (1972). The Meiji Restoration. Stanford UP. Combat deaths of the Boshin War: ~3,500 killed on the Tokugawa side, ~4,500 on the imperial side. Additional civilian casualties are poorly documented.",
+    "confidence_score": 0.88,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The term 'Restoration' (ishin) is itself ideological: the Meiji state was a revolutionary regime that dismantled every institution of the Tokugawa order, not a restoration of pre-existing imperial governance. The 'restoration of imperial rule' narrative was constructed by the Satsuma-Choshu oligarchs to legitimate their seizure of power through the mystique of the imperial institution — Emperor Meiji himself was a teenager manipulated by adult power-brokers. The Meiji state's subsequent trajectory included the forced annexation of the Ryukyu Kingdom (1879, ending 450 years of independent existence), the systematic colonization of Hokkaido with dispossession and forced assimilation of the Ainu people, the Sino-Japanese War (1894-95), the Russo-Japanese War (1904-05), the colonization of Taiwan (1895) and Korea (1910-1945), and the construction of the ideological apparatus (State Shinto, imperial cult, kokutai doctrine) that would drive Japan's WWII-era militarism and atrocities. The Meiji Restoration cannot be understood solely as 'modernization' without acknowledging that it also produced the institutional framework for imperialism and colonial violence.",
+    "entity_links": [
+      {
+        "entity_name_original": "徳川幕府",
+        "role": "DISSOLVED",
+        "notes": "The Tokugawa shogunate was abolished; Yoshinobu's resignation and the Boshin War ended 265 years of military government"
+      },
+      {
+        "entity_name_original": "大日本帝國",
+        "role": "RESULTANT",
+        "notes": "The Empire of Japan was proclaimed under Emperor Meiji; rapid modernization and imperial expansion began"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Beasley, W.G. (1972). The Meiji Restoration. Stanford UP.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Jansen, M.B. (2000). The Making of Modern Japan. Harvard UP.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "玉音放送",
+    "name_original_lang": "ja",
+    "event_type": "SURRENDER",
+    "year": 1945,
+    "year_end": null,
+    "location_name": "Tokyo, Japan (broadcast from the Imperial Palace)",
+    "location_lat": 35.6852,
+    "location_lon": 139.7528,
+    "main_actor": "Emperor Hirohito (Showa Emperor)",
+    "description": "On 15 August 1945, Emperor Hirohito broadcast the Gyokuon-hōsō (玉音放送, 'Jewel Voice Broadcast') to the Japanese nation, announcing Japan's acceptance of the Potsdam Declaration and unconditional surrender. The broadcast, the first time most Japanese had heard the emperor's voice, used archaic court Japanese that many listeners initially could not understand. The surrender followed the atomic bombings of Hiroshima (6 August 1945, ~80,000-140,000 dead) and Nagasaki (9 August 1945, ~40,000-80,000 dead), the Soviet declaration of war and invasion of Manchuria (9 August 1945), and the firebombing campaign that had already destroyed most of Japan's major cities (the Tokyo firebombing of 9-10 March 1945 alone killed ~80,000-100,000). The formal instrument of surrender was signed on USS Missouri on 2 September 1945. The surrender ended the Second World War and initiated the Allied (predominantly American) occupation of Japan (1945-1952), leading to the 1947 constitution and the transformation of the Empire into a constitutional democracy.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The surrender event cannot be separated from its context: the atomic bombings of Hiroshima and Nagasaki, which killed an estimated 120,000-220,000 people (mostly civilians), remain the only use of nuclear weapons in warfare and are among the most ethically contested acts in modern history. The American decision to use atomic weapons against civilian population centers is defended by some as shortening the war and preventing larger casualties from a planned invasion of Japan; it is condemned by others as a war crime and a demonstration directed at the Soviet Union rather than a military necessity. Japanese wartime atrocities — the Nanjing Massacre (1937, ~200,000-300,000 dead), the comfort women system (~200,000 women enslaved), Unit 731 biological warfare experiments, the Bataan Death March, the Manila Massacre (1945, ~100,000 Filipino civilians killed) — provide essential context for understanding the war's escalation but do not justify the targeting of Japanese civilians. The decision to exempt Emperor Hirohito from prosecution at the Tokyo Tribunal (1946-1948) was a political calculation by MacArthur that facilitated the occupation but prevented a full reckoning with imperial war responsibility, creating ambiguities that persist in Japanese politics today (the Yasukuni Shrine controversy, textbook disputes, Article 9 revisionism).",
+    "entity_links": [
+      {
+        "entity_name_original": "大日本帝國",
+        "role": "DISSOLVED",
+        "notes": "The Empire of Japan effectively ended with the surrender; the 1947 constitution formally transformed the state"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Dower, J. (1999). Embracing Defeat: Japan in the Wake of World War II. Norton/New Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Frank, R. (1999). Downfall: The End of the Imperial Japanese Empire. Random House.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "معركة عين جالوت",
+    "name_original_lang": "ar",
+    "event_type": "BATTLE",
+    "year": 1260,
+    "year_end": null,
+    "location_name": "Ain Jalut (Ein Harod / 'Ayn Jalut), Jezreel Valley, Palestine",
+    "location_lat": 32.5547,
+    "location_lon": 35.3972,
+    "main_actor": "Sultan Qutuz and commander Baybars, Mamluk Sultanate of Egypt",
+    "description": "On 3 September 1260, the Mamluk army of Egypt under Sultan Qutuz and his general Baybars decisively defeated a Mongol force under Kitbuqa Noyan at Ain Jalut (the 'Spring of Goliath') in the Jezreel Valley of Palestine. The battle is widely considered the first major Mongol defeat in open pitched battle and halted the westward advance of the Mongol Empire into Africa and the eastern Mediterranean. The Mongol force was a rearguard left by Hulagu after the main Ilkhanid army withdrew eastward following Möngke Khan's death (1259) and the brewing Toluid Civil War. Kitbuqa was captured and executed. The Mamluk victory preserved the Abbasid caliphate in exile (transplanted to Cairo), saved Egypt from Mongol conquest, and established the Mamluk Sultanate as the dominant power in the Levant and Egypt for the next 250 years.",
+    "casualties_low": 3000,
+    "casualties_high": 15000,
+    "casualties_source": "Mamluk sources (al-Maqrizi, Baybars al-Mansuri) claim a great victory; Ilkhanid sources minimize the engagement. Modern estimates (Amitai-Preiss 1995): Mongol force of ~10,000-20,000, Mamluk force of ~12,000-20,000. Combined casualties several thousand.",
+    "confidence_score": 0.82,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "Ain Jalut's significance is contested in multiple ways. (a) Its characterization as the 'first Mongol defeat' is debated: the Mongols had suffered tactical setbacks before (e.g., Parwan 1221, Homs 1260), but Ain Jalut was the first decisive strategic defeat that permanently halted Mongol expansion in a theater. (b) The battle is often instrumentalized in pan-Islamic and Arab nationalist narratives as a civilizational turning point ('Islam saved from the Mongol flood'); this framing ignores that the Mamluk army itself was composed largely of enslaved Turkic-Circassian warriors (mamluks), that Mongol princes served in the Mamluk army, and that the Crusader states of Acre and Sidon provided the Mamluks passage through their territory. (c) Qutuz was murdered by Baybars shortly after the victory (October 1260), and the subsequent Mamluk state was a military autocracy built on slavery and conquest — it was not a democratic or egalitarian alternative to Mongol rule. (d) The Mongol force at Ain Jalut was significantly reduced from Hulagu's full strength; whether a full-strength Ilkhanid army would have been defeated is unknowable. The battle's actual significance lies in its timing: it occurred during the Mongol imperial succession crisis, and the Mamluk victory ensured that the Mongols never returned to the Levant in force.",
+    "entity_links": [
+      {
+        "entity_name_original": "ایلخانان",
+        "role": "PARTICIPANT",
+        "notes": "Ilkhanid rearguard force defeated; the battle set the permanent western boundary of the Ilkhanate"
+      },
+      {
+        "entity_name_original": "ᠶᠡᠬᠡ ᠮᠣᠩᠭᠣᠯ ᠤᠯᠤᠰ",
+        "role": "PARTICIPANT",
+        "notes": "The battle occurred during the Mongol succession crisis following Mongke Khan's death, contributing to the empire's permanent fragmentation"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Amitai-Preiss, R. (1995). Mongols and Mamluks: The Mamluk-Ilkhanid War, 1260-1281. Cambridge UP.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Jackson, P. (2005). The Mongols and the West, 1221-1410. Pearson Longman.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "مرگ مونگکە خان و جەنگی تولوید",
+    "name_original_lang": "fa",
+    "event_type": "CIVIL_WAR",
+    "year": 1259,
+    "year_end": 1264,
+    "location_name": "Karakorum / Kaiping (Shangdu), Mongolia / North China",
+    "location_lat": 47.1986,
+    "location_lon": 102.831,
+    "main_actor": "Kublai Khan and Ariq Böke, grandsons of Genghis Khan",
+    "description": "The death of Great Khan Möngke on 11 August 1259 during the siege of Diaoyu Castle in Sichuan triggered the Toluid Civil War (1260-1264), the succession crisis that permanently fractured the unified Mongol Empire. Two rival kurultais were held simultaneously: Kublai was proclaimed Great Khan at Kaiping (Shangdu) in June 1260 by his supporters, while Ariq Böke was elected at Karakorum by the traditional Mongol steppe aristocracy. The four-year civil war ended with Ariq Böke's surrender to Kublai in 1264, but the damage was irreversible: the Chagatai Khanate under Alghu and the Golden Horde under Berke Khan had backed Ariq Böke, and their subsequent independence from the Great Khan's authority was permanent. The civil war transformed the Mongol Empire from a unified imperial structure into four effectively sovereign successor states, though nominal unity was maintained in diplomatic correspondence for decades afterward.",
+    "casualties_low": null,
+    "casualties_high": null,
+    "casualties_source": null,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "known_silence": false,
+    "silence_reason": null,
+    "ethical_notes": "The Toluid Civil War is the political event that transformed the Mongol Empire from a unified conquering machine into four separate khanates, fundamentally reshaping Eurasian geopolitics for the next two centuries. The succession dispute exposed the structural tension within the Mongol system between Genghis Khan's original steppe-nomadic political culture (represented by Ariq Böke's faction, based at Karakorum) and the sinicized-sedentary imperial model adopted by Kublai (who would proclaim the Yuan dynasty in 1271). The civil war itself caused famine in the Karakorum region as Kublai cut off Chinese grain shipments, affecting not only combatants but the civilian population of the Mongol heartland. Ariq Böke's mysterious death in 1266 (two years after his surrender) was widely attributed to poisoning by Kublai, though no definitive evidence survives. The permanent fracture of the empire also initiated the Berke-Hulagu war (1262-1266) between the Golden Horde and the Ilkhanate — the first Mongol-on-Mongol war between khanates, which caused further devastation in the Caucasus and Azerbaijan.",
+    "entity_links": [
+      {
+        "entity_name_original": "ᠶᠡᠬᠡ ᠮᠣᠩᠭᠣᠯ ᠤᠯᠤᠰ",
+        "role": "DISSOLVED",
+        "notes": "The unified Mongol Empire effectively ended as a single political entity with this succession crisis"
+      },
+      {
+        "entity_name_original": "元朝",
+        "role": "RESULTANT",
+        "notes": "Kublai's victory led directly to the proclamation of the Yuan Dynasty (1271)"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Rossabi, M. (1988). Khubilai Khan: His Life and Times. University of California Press.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "May, T. (2012). The Mongol Conquests in World History. Reaktion.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  }
+]
