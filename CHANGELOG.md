@@ -2,6 +2,42 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.18.0] - 2026-04-16
+
+**Tema**: *Entity Comparison Tool — confronto side-by-side di 2-4 entita' storiche*
+
+### Nuovo endpoint API
+
+- `GET /v1/compare?ids=1,2,3` — confronto multi-entita' strutturato (2-4 entita'). Restituisce dettagli completi per ogni entita', eventi collegati per entita', catene successorie con contesto, calcolo overlap temporale (globale + pairwise), e eventi condivisi. Cache aggressiva (1 ora). Estende il precedente `/v1/compare/{id1}/{id2}` con dati piu' ricchi
+
+### Nuova pagina: /compare
+
+- Entity Comparison Tool interattivo (zero dipendenze esterne)
+- **Selezione**: campo di ricerca con autocomplete (usa /v1/search), chip/tag per entita' selezionate (2-4)
+- **Preset rapidi**: "Roman Empire vs Persian Empire", "British vs Mongol Empire", "Ottoman vs Byzantine" — caricano e confrontano automaticamente
+- **Panoramica**: card side-by-side con nome (originale + inglese), tipo, durata, capitale, confidence score, status, fonti
+- **Timeline**: barre SVG orizzontali colorate per entita' con asse temporale e etichette
+- **Overlap temporale**: calcolo globale + pairwise con anni di coesistenza
+- **Eventi**: timeline combinata degli eventi collegati, con marker "shared" per eventi che coinvolgono piu' entita'
+- **Catene successorie**: visualizzazione delle catene dinastiche con highlight delle entita' confrontate, transizioni violente marcate
+- **Tabella dati**: confronto raw di tutti i campi, righe con differenze evidenziate
+- **Deep linking**: URL con parametro `?ids=1,2,3` per link diretti a confronti specifici
+- Dark theme (#0d1117, #161b22, accent #58a6ff) coerente con il resto di AtlasPI
+- Responsive (mobile-friendly)
+
+### Navigazione
+
+- Aggiunto link "Compare" nella navbar della mappa interattiva (/app)
+- Aggiunto link "Compare" nella navigazione della landing page
+- Cross-navigation completa: /app, /timeline, /compare, /docs, GitHub
+
+### Test
+
+- 14 nuovi test in `tests/test_v618_compare.py`
+- Test API: validazione IDs, 404 per IDs inesistenti, 422 per troppi/pochi IDs, struttura risposta, overlap, eventi, catene, cache headers, deduplicazione
+- Test pagina HTML: /compare serve HTML valido, carica compare.js
+- Conteggio test totale: 841 -> 855
+
 ## [v6.17.0] - 2026-04-16
 
 **Tema**: *Interactive Timeline Visualization — esplorazione visiva dei dati temporali di AtlasPI*

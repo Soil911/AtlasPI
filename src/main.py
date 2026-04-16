@@ -20,7 +20,7 @@ from src.api.middleware import (
     RequestLoggingMiddleware,
     SecurityHeadersMiddleware,
 )
-from src.api.routes import admin_cofounder, admin_insights, analytics, chains, cities_routes, entities, events, export, health, relations, timeline
+from src.api.routes import admin_cofounder, admin_insights, analytics, chains, cities_routes, compare, entities, events, export, health, relations, timeline
 from src.config import (
     APP_TITLE,
     APP_VERSION,
@@ -211,6 +211,7 @@ app.include_router(analytics.router)
 app.include_router(admin_insights.router)
 app.include_router(admin_cofounder.router)
 app.include_router(timeline.router)
+app.include_router(compare.router)
 
 
 @app.get("/", include_in_schema=False)

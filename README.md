@@ -11,15 +11,15 @@
 
 <p align="center">
   <a href="https://atlaspi.cra-srl.com"><img alt="Try it live" src="https://img.shields.io/badge/try%20it-live-58a6ff?style=flat-square&logo=globe&logoColor=white"></a>
-  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.17.0-blue?style=flat-square"></a>
+  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.18.0-blue?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-850-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Events" src="https://img.shields.io/badge/events-297-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Cities" src="https://img.shields.io/badge/cities-110-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Routes" src="https://img.shields.io/badge/trade%20routes-41-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Chains" src="https://img.shields.io/badge/dynasty%20chains-21-green?style=flat-square"></a>
-  <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-841%20passing-brightgreen?style=flat-square"></a>
+  <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-855%20passing-brightgreen?style=flat-square"></a>
   <a href="#-license"><img alt="License" src="https://img.shields.io/badge/license-Apache--2.0-orange?style=flat-square"></a>
-  <a href="#-api-documentation"><img alt="API" src="https://img.shields.io/badge/API-48%20endpoints-purple?style=flat-square"></a>
+  <a href="#-api-documentation"><img alt="API" src="https://img.shields.io/badge/API-50%20endpoints-purple?style=flat-square"></a>
   <a href="mcp-server/README.md"><img alt="MCP" src="https://img.shields.io/badge/MCP-ready-9d4edd?style=flat-square"></a>
   <a href="https://doi.org/10.5281/zenodo.19581784"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.19581784.svg"></a>
 </p>
@@ -95,6 +95,7 @@ AtlasPI exposes 23 REST endpoints under `/v1/`. Full interactive documentation i
 | `GET` | `/v1/nearby?lat=&lon=` | Find entities near coordinates (with distance) |
 | `GET` | `/v1/snapshot/{year}` | World state at a given year (summary + entities) |
 | `GET` | `/v1/compare/{id1}/{id2}` | Structured comparison of two entities |
+| `GET` | `/v1/compare?ids=1,2,3` | Multi-entity comparison (2-4) with events, chains, overlap |
 | `GET` | `/v1/entities/{id}/contemporaries` | Entities with overlapping time periods |
 | `GET` | `/v1/entities/{id}/related` | Related entities by type or region |
 | `GET` | `/v1/entities/{id}/evolution` | Full chronological evolution of an entity |
@@ -103,6 +104,7 @@ AtlasPI exposes 23 REST endpoints under `/v1/`. Full interactive documentation i
 | `GET` | `/v1/export/timeline` | Export timeline data |
 | `GET` | `/health` | Service health check |
 | `GET` | `/embed` | Embeddable map view for iframes |
+| `GET` | `/compare` | Interactive entity comparison page |
 
 ### Examples
 

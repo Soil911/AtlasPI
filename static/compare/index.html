@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="theme-color" content="#0d1117">
+  <title>Compare Entities — AtlasPI</title>
+  <meta name="description" content="Compare 2-4 historical entities side by side. Timelines, events, dynasty chains, and data tables.">
+  <link rel="icon" type="image/svg+xml" href="/static/landing/assets/favicon.svg">
+  <link rel="stylesheet" href="/static/compare/style.css">
+</head>
+<body>
+
+<header class="cp-header">
+  <div class="cp-header-left">
+    <a href="/" class="cp-logo">Atlas<strong>PI</strong></a>
+    <span class="cp-title">Entity Comparison</span>
+  </div>
+  <div class="cp-header-right">
+    <a href="/app" class="cp-nav-link">Map</a>
+    <a href="/timeline" class="cp-nav-link">Timeline</a>
+    <a href="/docs" class="cp-nav-link">API</a>
+    <a href="https://github.com/Soil911/AtlasPI" class="cp-nav-link" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</header>
+
+<!-- Entity selector -->
+<div class="cp-selector" id="cp-selector">
+  <div class="cp-selector-card">
+    <div class="cp-selector-title">Compare Historical Entities</div>
+
+    <!-- Selected chips -->
+    <div class="cp-chips" id="cp-chips"></div>
+
+    <!-- Search + button -->
+    <div class="cp-search-row">
+      <div class="cp-search-wrap">
+        <input type="search" id="cp-search" class="cp-search-input"
+               placeholder="Search entities by name..." autocomplete="off"
+               aria-label="Search entities for comparison">
+        <div class="cp-autocomplete" id="cp-autocomplete"></div>
+      </div>
+      <button id="cp-compare-btn" class="cp-compare-btn" disabled>Select at least 2 entities</button>
+    </div>
+
+    <!-- Quick presets -->
+    <div class="cp-presets">
+      <div class="cp-presets-label">Quick comparisons</div>
+      <div class="cp-preset-btns" id="cp-presets"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Loading -->
+<div class="cp-loading" id="cp-loading">
+  <div class="cp-spinner"></div>
+  <div>Loading comparison data...</div>
+</div>
+
+<!-- Results -->
+<div class="cp-results" id="cp-results">
+
+  <!-- Overview cards -->
+  <div class="cp-section">
+    <div class="cp-section-title">Overview</div>
+    <div class="cp-cards" id="cp-overview"></div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="cp-section">
+    <div class="cp-section-title">Timeline</div>
+    <div id="cp-timeline"></div>
+  </div>
+
+  <!-- Temporal overlap -->
+  <div class="cp-section">
+    <div class="cp-section-title">Temporal Overlap</div>
+    <div id="cp-overlap"></div>
+  </div>
+
+  <!-- Events -->
+  <div class="cp-section">
+    <div class="cp-section-title">Events</div>
+    <div id="cp-events"></div>
+  </div>
+
+  <!-- Dynasty chains -->
+  <div class="cp-section">
+    <div class="cp-section-title">Dynasty Chain Context</div>
+    <div id="cp-chains"></div>
+  </div>
+
+  <!-- Data table -->
+  <div class="cp-section">
+    <div class="cp-section-title">Data Comparison</div>
+    <div id="cp-table"></div>
+  </div>
+
+</div>
+
+<script src="/static/compare/compare.js"></script>
+</body>
+</html>
