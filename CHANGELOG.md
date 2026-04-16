@@ -2,6 +2,31 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.24.0] - 2026-04-16
+
+**Tema**: *Entity Similarity + MCP v0.5.0*
+
+### New Endpoint: Entity Similarity
+
+- **`GET /v1/entities/{id}/similar`** — finds entities most similar to a given one, ordered by 0.0-1.0 score
+  - Weighted algorithm: entity_type (35%), temporal overlap (30%), duration similarity (15%), confidence similarity (10%), same status (10%)
+  - Parameters: `limit` (1-50, default 10), `min_score` (0.0-1.0, default 0.3)
+  - Cached for 1 hour
+  - Useful for "which empires were like Rome?" or "suggest historical parallels"
+
+### MCP Server v0.5.0
+
+- **New tool: `find_similar_entities`** — wraps the similarity endpoint for AI agents
+- **26 total MCP tools** (up from 25)
+- 21 MCP tests (+ 1 handler test for similarity)
+
+### Stats
+
+- **961 test** (up from 951): 10 new similarity tests + 1 MCP handler test
+- **26 MCP tools** (up from 25)
+
+---
+
 ## [v6.23.1] - 2026-04-16
 
 **Tema**: *Data Integrity + Incremental Sync + Bronze Age Events*

@@ -133,6 +133,14 @@ async def _h_evolution(client: AtlasPIClient, args: dict[str, Any]) -> Any:
     return await client.evolution(int(args["entity_id"]))
 
 
+async def _h_similar(client: AtlasPIClient, args: dict[str, Any]) -> Any:
+    return await client.similar(
+        int(args["entity_id"]),
+        limit=int(args.get("limit", 10)),
+        min_score=float(args.get("min_score", 0.3)),
+    )
+
+
 async def _h_stats(client: AtlasPIClient, args: dict[str, Any]) -> Any:
     return await client.stats()
 
@@ -635,6 +643,47 @@ TOOLS: list[ToolDefinition] = [
             "additionalProperties": False,
         },
         handler=_h_evolution,
+    ),
+    ToolDefinition(
+        name="find_similar_entities",
+        description=(
+            "Trova entita' storiche simili a quella specificata, ordinate per "
+            "punteggio di similarita' (0.0-1.0). Il punteggio considera: tipo di "
+            "entita' (35%), sovrapposizione temporale (30%), durata simile (15%), "
+            "confidence simile (10%), stesso status (10%). "
+            "Usa questo tool quando l'utente chiede 'quali imperi erano simili a "
+            "Roma?' o 'trova stati paragonabili al Sacro Romano Impero' o "
+            "'suggerisci paralleli storici per l'Impero Mongolo'. "
+            "Il risultato include id, nome, tipo, periodo e punteggio per ogni "
+            "entita' simile."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {
+                "entity_id": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "ID dell'entita' di riferimento.",
+                },
+                "limit": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 50,
+                    "default": 10,
+                    "description": "Numero massimo di risultati.",
+                },
+                "min_score": {
+                    "type": "number",
+                    "minimum": 0.0,
+                    "maximum": 1.0,
+                    "default": 0.3,
+                    "description": "Punteggio minimo di similarita'.",
+                },
+            },
+            "required": ["entity_id"],
+            "additionalProperties": False,
+        },
+        handler=_h_similar,
     ),
     ToolDefinition(
         name="dataset_stats",

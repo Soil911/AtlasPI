@@ -57,6 +57,8 @@ EXPECTED_TOOL_NAMES = {
     # v0.4 events for map + on this day
     "events_for_map",
     "on_this_day",
+    # v0.5 similarity
+    "find_similar_entities",
 }
 
 
@@ -123,15 +125,15 @@ def test_base_url_default_when_env_empty(monkeypatch: pytest.MonkeyPatch) -> Non
 
 
 def test_tool_list_complete() -> None:
-    """Tutti e 25 i tools canonici v0.4 sono registrati."""
+    """Tutti e 26 i tools canonici v0.5 sono registrati."""
     names = {t.name for t in get_tools()}
     assert names == EXPECTED_TOOL_NAMES, (
         f"Missing or unexpected tools: {names ^ EXPECTED_TOOL_NAMES}"
     )
     # Bonus: nessun duplicato
     assert len(get_tools()) == len(EXPECTED_TOOL_NAMES)
-    # v0.4 additions: esattamente 25 tools
-    assert len(names) == 25
+    # v0.5 additions: esattamente 26 tools
+    assert len(names) == 26
 
 
 def test_search_entities_tool_schema() -> None:
@@ -178,6 +180,8 @@ def test_required_params_for_path_tools() -> None:
     assert set(get_tool("nearest_historical_city").input_schema["required"]) == {
         "lat", "lon",
     }
+    # v0.5
+    assert get_tool("find_similar_entities").input_schema["required"] == ["entity_id"]
 
 
 def test_descriptions_are_substantial() -> None:
@@ -548,6 +552,67 @@ async def test_client_raises_on_http_error() -> None:
         await client.aclose()
 
     assert excinfo.value.status_code == 404
+
+
+@pytest.mark.asyncio
+async def test_find_similar_entities_handler() -> None:
+    """find_similar_entities chiama /v1/entities/{id}/similar con limit e min_score."""
+    captured: dict[str, object] = {}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        captured["path"] = request.url.path
+        captured["url"] = str(request.url)
+        return httpx.Response(
+            200,
+            json={
+                "entity_id": 1,
+                "entity_name": "Imperium Romanum",
+                "entity_type": "empire",
+                "year_start": -753,
+                "year_end": 476,
+                "total_similar": 2,
+                "similar": [
+                    {
+                        "id": 2,
+                        "name_original": "Αρχή Μακεδονίας",
+                        "entity_type": "empire",
+                        "year_start": -808,
+                        "year_end": -168,
+                        "status": "confirmed",
+                        "confidence_score": 0.85,
+                        "similarity_score": 0.78,
+                    },
+                    {
+                        "id": 3,
+                        "name_original": "Βασιλεία Ῥωμαίων",
+                        "entity_type": "empire",
+                        "year_start": 330,
+                        "year_end": 1453,
+                        "status": "confirmed",
+                        "confidence_score": 0.90,
+                        "similarity_score": 0.71,
+                    },
+                ],
+            },
+        )
+
+    client = _client_with_handler(handler)
+    try:
+        result = await get_tool("find_similar_entities").handler(
+            client, {"entity_id": 1, "limit": 5, "min_score": 0.5}
+        )
+    finally:
+        await client.aclose()
+
+    assert captured["path"] == "/v1/entities/1/similar"
+    url = str(captured["url"])
+    assert "limit=5" in url
+    assert "min_score=0.5" in url
+    assert result["total_similar"] == 2
+    assert len(result["similar"]) == 2
+    # Scores sorted descending
+    scores = [s["similarity_score"] for s in result["similar"]]
+    assert scores == sorted(scores, reverse=True)
 
 
 # ------------------------------------------------------------------ #

@@ -2,6 +2,7 @@
 
 GET /v1/entities/{id}/related          entità correlate
 GET /v1/entities/{id}/contemporaries   entità attive nello stesso periodo
+GET /v1/entities/{id}/similar          entità più simili (scored)
 GET /v1/entities/{id}/evolution        evoluzione temporale dell'entità
 GET /v1/entities/{id}/timeline         timeline unificata (eventi + territory + chain)
 GET /v1/compare/{id1}/{id2}            confronto tra due entità
@@ -15,6 +16,7 @@ from sqlalchemy import or_
 from sqlalchemy.orm import Session, joinedload
 
 from src.api.errors import EntityNotFoundError
+from src.cache import cache_response
 from src.db.database import get_db
 from src.db.models import (
     ChainLink,
@@ -129,6 +131,109 @@ def get_related(
         "temporal_overlap": [
             {**_mini(e), "overlap_years": ov}
             for e, ov in scored[:5]
+        ],
+    }
+
+
+# ─── Similarity ──────────────────────────────────────────────
+
+
+def _similarity_score(source: GeoEntity, candidate: GeoEntity) -> float:
+    """Compute a 0.0-1.0 similarity score between two entities.
+
+    Factors (weighted):
+    - Same entity_type: +0.35
+    - Temporal overlap ratio: +0.30 (proportion of overlapping years)
+    - Duration similarity: +0.15 (how close lifespans are)
+    - Similar confidence: +0.10
+    - Same status: +0.10
+    """
+    score = 0.0
+
+    # Type match (0.35)
+    if source.entity_type == candidate.entity_type:
+        score += 0.35
+
+    # Temporal overlap (0.30)
+    s_end = source.year_end or 2025
+    c_end = candidate.year_end or 2025
+    overlap = max(0, min(s_end, c_end) - max(source.year_start, candidate.year_start))
+    s_dur = max(1, s_end - source.year_start)
+    c_dur = max(1, c_end - candidate.year_start)
+    max_dur = max(s_dur, c_dur)
+    if max_dur > 0:
+        score += 0.30 * (overlap / max_dur)
+
+    # Duration similarity (0.15) — how similar the lifespans are
+    dur_ratio = min(s_dur, c_dur) / max(s_dur, c_dur) if max(s_dur, c_dur) > 0 else 1.0
+    score += 0.15 * dur_ratio
+
+    # Confidence similarity (0.10)
+    s_conf = source.confidence_score or 0.5
+    c_conf = candidate.confidence_score or 0.5
+    score += 0.10 * (1.0 - abs(s_conf - c_conf))
+
+    # Same status (0.10)
+    if source.status == candidate.status:
+        score += 0.10
+
+    return round(score, 3)
+
+
+@router.get(
+    "/v1/entities/{entity_id}/similar",
+    summary="Entità più simili",
+    description=(
+        "Trova entità simili a quella data, ordinate per punteggio di similarità "
+        "(0.0-1.0). Il punteggio considera: tipo di entità (35%), sovrapposizione "
+        "temporale (30%), durata simile (15%), confidence simile (10%), stesso "
+        "status (10%). Utile per agenti AI che cercano paragoni storici."
+    ),
+)
+@cache_response(ttl_seconds=3600)
+def get_similar(
+    entity_id: int,
+    limit: int = Query(10, ge=1, le=50, description="Max results"),
+    min_score: float = Query(0.3, ge=0.0, le=1.0, description="Minimum similarity score"),
+    response: Response = None,
+    db: Session = Depends(get_db),
+):
+    entity = db.query(GeoEntity).filter(GeoEntity.id == entity_id).first()
+    if not entity:
+        raise EntityNotFoundError(entity_id)
+
+    # Score all candidates (excluding self)
+    candidates = db.query(GeoEntity).filter(GeoEntity.id != entity_id).all()
+    scored = []
+    for c in candidates:
+        s = _similarity_score(entity, c)
+        if s >= min_score:
+            scored.append((c, s))
+
+    scored.sort(key=lambda x: x[1], reverse=True)
+    top = scored[:limit]
+
+    response.headers["Cache-Control"] = "public, max-age=3600"
+
+    return {
+        "entity_id": entity_id,
+        "entity_name": entity.name_original,
+        "entity_type": entity.entity_type,
+        "year_start": entity.year_start,
+        "year_end": entity.year_end,
+        "total_similar": len(scored),
+        "similar": [
+            {
+                "id": c.id,
+                "name_original": c.name_original,
+                "entity_type": c.entity_type,
+                "year_start": c.year_start,
+                "year_end": c.year_end,
+                "status": c.status,
+                "confidence_score": c.confidence_score,
+                "similarity_score": s,
+            }
+            for c, s in top
         ],
     }
 

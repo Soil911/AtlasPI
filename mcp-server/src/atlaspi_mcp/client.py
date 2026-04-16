@@ -17,7 +17,7 @@ import httpx
 
 DEFAULT_BASE_URL = "https://atlaspi.cra-srl.com"
 DEFAULT_TIMEOUT = 30.0
-USER_AGENT = "atlaspi-mcp/0.4.0 (+https://github.com/Soil911/AtlasPI)"
+USER_AGENT = "atlaspi-mcp/0.5.0 (+https://github.com/Soil911/AtlasPI)"
 
 
 class AtlasPIClientError(RuntimeError):
@@ -215,6 +215,15 @@ class AtlasPIClient:
     async def evolution(self, entity_id: int) -> Any:
         """GET /v1/entities/{entity_id}/evolution — timeline cambi territoriali."""
         return await self._get(f"/v1/entities/{int(entity_id)}/evolution")
+
+    async def similar(
+        self, entity_id: int, *, limit: int = 10, min_score: float = 0.3,
+    ) -> Any:
+        """GET /v1/entities/{entity_id}/similar — entities most similar to this one."""
+        return await self._get(
+            f"/v1/entities/{int(entity_id)}/similar",
+            params={"limit": limit, "min_score": min_score},
+        )
 
     async def stats(self) -> Any:
         """GET /v1/stats — statistiche aggregate del dataset."""
