@@ -15,7 +15,6 @@ from slowapi.middleware import SlowAPIMiddleware
 from slowapi.util import get_remote_address
 
 from src.api.errors import register_error_handlers
-from src.api.analytics_middleware import AnalyticsMiddleware
 from src.api.middleware import (
     RateLimitMiddleware,  # noqa: F401 — disponibile per uso futuro
     RequestLoggingMiddleware,
@@ -187,11 +186,8 @@ app.add_middleware(
 # Security headers (include X-Process-Time)
 app.add_middleware(SecurityHeadersMiddleware)
 
-# Request logging (include X-Request-ID)
+# Request logging (include X-Request-ID) + analytics DB write (v6.12)
 app.add_middleware(RequestLoggingMiddleware)
-
-# Analytics: log API requests to DB (pure ASGI middleware + background thread)
-app.add_middleware(AnalyticsMiddleware)
 
 # Rate limiting (slowapi) — middleware applica i default_limits globali
 # senza bisogno di decorator @limiter.limit() su ogni endpoint.

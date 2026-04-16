@@ -45,42 +45,42 @@ class TestMiddlewarePathFilter:
     """Verifica che _is_api_relevant filtri correttamente."""
 
     def test_api_v1_paths_included(self):
-        from src.api.analytics_middleware import _is_api_relevant
+        from src.middleware.request_logging import _is_api_relevant
         assert _is_api_relevant("/v1/entities") is True
         assert _is_api_relevant("/v1/stats") is True
         assert _is_api_relevant("/v1/chains") is True
 
     def test_health_included(self):
-        from src.api.analytics_middleware import _is_api_relevant
+        from src.middleware.request_logging import _is_api_relevant
         assert _is_api_relevant("/health") is True
 
     def test_admin_included(self):
-        from src.api.analytics_middleware import _is_api_relevant
+        from src.middleware.request_logging import _is_api_relevant
         assert _is_api_relevant("/admin/analytics") is True
         assert _is_api_relevant("/admin/analytics/data") is True
 
     def test_static_excluded(self):
-        from src.api.analytics_middleware import _is_api_relevant
+        from src.middleware.request_logging import _is_api_relevant
         assert _is_api_relevant("/static/app.js") is False
         assert _is_api_relevant("/static/style.css") is False
 
     def test_favicon_excluded(self):
-        from src.api.analytics_middleware import _is_api_relevant
+        from src.middleware.request_logging import _is_api_relevant
         assert _is_api_relevant("/favicon.ico") is False
         assert _is_api_relevant("/favicon.svg") is False
 
     def test_robots_sitemap_excluded(self):
-        from src.api.analytics_middleware import _is_api_relevant
+        from src.middleware.request_logging import _is_api_relevant
         assert _is_api_relevant("/robots.txt") is False
         assert _is_api_relevant("/sitemap.xml") is False
 
     def test_root_excluded(self):
-        from src.api.analytics_middleware import _is_api_relevant
+        from src.middleware.request_logging import _is_api_relevant
         # Root landing page is NOT an API path
         assert _is_api_relevant("/") is False
 
     def test_docs_included(self):
-        from src.api.analytics_middleware import _is_api_relevant
+        from src.middleware.request_logging import _is_api_relevant
         assert _is_api_relevant("/docs") is True
         assert _is_api_relevant("/redoc") is True
 
