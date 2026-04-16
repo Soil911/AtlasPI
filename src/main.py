@@ -15,12 +15,13 @@ from slowapi.middleware import SlowAPIMiddleware
 from slowapi.util import get_remote_address
 
 from src.api.errors import register_error_handlers
+from src.api.analytics_middleware import AnalyticsMiddleware
 from src.api.middleware import (
     RateLimitMiddleware,  # noqa: F401 — disponibile per uso futuro
     RequestLoggingMiddleware,
     SecurityHeadersMiddleware,
 )
-from src.api.routes import chains, cities_routes, entities, events, export, health, relations
+from src.api.routes import analytics, chains, cities_routes, entities, events, export, health, relations
 from src.config import (
     APP_TITLE,
     APP_VERSION,
@@ -189,6 +190,9 @@ app.add_middleware(SecurityHeadersMiddleware)
 # Request logging (include X-Request-ID)
 app.add_middleware(RequestLoggingMiddleware)
 
+# Analytics: log API requests to DB (fire-and-forget background thread)
+app.add_middleware(AnalyticsMiddleware)
+
 # Rate limiting (slowapi) — middleware applica i default_limits globali
 # senza bisogno di decorator @limiter.limit() su ogni endpoint.
 app.state.limiter = limiter
@@ -207,6 +211,7 @@ app.include_router(relations.router)
 app.include_router(events.router)
 app.include_router(cities_routes.router)
 app.include_router(chains.router)
+app.include_router(analytics.router)
 
 
 @app.get("/", include_in_schema=False)

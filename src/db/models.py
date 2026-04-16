@@ -604,3 +604,35 @@ class ChainLink(Base):
 
     chain: Mapped[DynastyChain] = relationship("DynastyChain", back_populates="links")
     entity: Mapped[GeoEntity] = relationship("GeoEntity")
+
+
+# ─── v6.12: API Analytics ─────────────────────────────────────────────
+
+
+class ApiRequestLog(Base):
+    """Log entry for every API request. Used by /admin/analytics dashboard.
+
+    Only logs API paths (/v1/*, /health, /admin/*) — static file requests
+    are excluded by the middleware to keep the table lean.
+    """
+
+    __tablename__ = "api_request_logs"
+    __table_args__ = (
+        Index("ix_api_logs_timestamp", "timestamp"),
+        Index("ix_api_logs_path", "path"),
+        Index("ix_api_logs_client_ip", "client_ip"),
+        Index("ix_api_logs_status_code", "status_code"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+
+    timestamp: Mapped[str] = mapped_column(String(30), nullable=False)  # ISO 8601
+    method: Mapped[str] = mapped_column(String(10), nullable=False)
+    path: Mapped[str] = mapped_column(String(2000), nullable=False)
+    query_string: Mapped[str | None] = mapped_column(String(2000), nullable=True)
+    status_code: Mapped[int] = mapped_column(Integer, nullable=False)
+    response_time_ms: Mapped[float] = mapped_column(Float, nullable=False)
+
+    client_ip: Mapped[str] = mapped_column(String(45), nullable=False)  # IPv6 max 45 chars
+    user_agent: Mapped[str | None] = mapped_column(String(1000), nullable=True)
+    referer: Mapped[str | None] = mapped_column(String(2000), nullable=True)

@@ -2,6 +2,60 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.12.0] - 2026-04-16
+
+**Tema**: *API analytics layer — chi usa AtlasPI?*
+
+### Nuovo: dashboard analytics
+
+- **`ApiRequestLog`** — nuovo modello ORM + tabella `api_request_logs`
+  con 9 campi: `timestamp`, `method`, `path`, `query_string`,
+  `status_code`, `response_time_ms`, `client_ip`, `user_agent`, `referer`.
+  4 indici (timestamp, path, client_ip, status_code).
+- **`AnalyticsMiddleware`** — middleware Starlette che logga ogni
+  richiesta API (esclude `/static/*`, favicon, robots, sitemap) con
+  write fire-and-forget in thread background per non rallentare le response.
+- **`GET /admin/analytics`** — dashboard HTML interattiva con:
+  - 4 card riassuntive (total requests, unique IPs, top endpoint, avg ms)
+  - Grafico bar chart canvas per richieste/giorno (ultimi 30 giorni)
+  - Tabelle top 20 endpoint, top 20 IP, top 15 user agent, ultime 50 richieste
+  - Auto-refresh ogni 60 secondi, dark theme, mobile-responsive
+- **`GET /admin/analytics/data`** — endpoint JSON raw per programmatic access
+- **Alembic migration 007** — crea tabella `api_request_logs` su PostgreSQL
+
+### Test
+
+- `tests/test_v6120_analytics.py` — 24 nuovi test:
+  - TestApiRequestLogModel: 3 (tablename, columns, indexes)
+  - TestMiddlewarePathFilter: 8 (API incluse, static escluse, root esclusa)
+  - TestAnalyticsDashboard: 7 (HTML 200, title, canvas, auto-refresh,
+    JSON structure, summary fields)
+  - TestMiddlewareWrites: 4 (health logged, v1 logged, field correctness,
+    data reflects requests)
+  - TestAlembicMigration: 2 (file exists, revision chain)
+
+### File aggiunti/modificati
+
+| File | Azione |
+|------|--------|
+| `src/db/models.py` | Aggiunto `ApiRequestLog` |
+| `src/api/analytics_middleware.py` | Nuovo: `AnalyticsMiddleware` |
+| `src/api/routes/analytics.py` | Nuovo: dashboard + data endpoint |
+| `alembic/versions/007_api_request_logs.py` | Nuova migration |
+| `src/main.py` | Registrato middleware + router |
+| `tests/test_v6120_analytics.py` | 24 nuovi test |
+
+### Delta dataset
+
+| metrica | v6.11.0 | v6.12.0 | Δ |
+|---------|--------:|--------:|----:|
+| entities | 846 | 846 | — |
+| events | 259 | 259 | — |
+| chains | 17 | 17 | — |
+| test passanti | 646 | 670 | +24 |
+
+---
+
 ## [v6.11.0] - 2026-04-15
 
 **Tema**: *Imperial continuity trunks — West Rome, East Rome, Mongol*. Tre
