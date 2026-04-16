@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="theme-color" content="#0d1117">
+  <title>Search — AtlasPI</title>
+  <meta name="description" content="Search across 850+ historical entities, 297 events, 110 cities, and 41 trade routes. Filter by type, year, confidence, and more.">
+  <link rel="icon" type="image/svg+xml" href="/static/landing/assets/favicon.svg">
+  <link rel="stylesheet" href="/static/search/style.css">
+</head>
+<body>
+
+<header class="s-header">
+  <div class="s-header-left">
+    <a href="/" class="s-logo">Atlas<strong>PI</strong></a>
+    <span class="s-title">Advanced Search</span>
+  </div>
+  <div class="s-header-right">
+    <a href="/app" class="s-nav-link">Map</a>
+    <a href="/timeline" class="s-nav-link">Timeline</a>
+    <a href="/compare" class="s-nav-link">Compare</a>
+    <a href="/docs" class="s-nav-link">API</a>
+    <a href="https://github.com/Soil911/AtlasPI" class="s-nav-link" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</header>
+
+<div class="s-layout">
+
+  <!-- Sidebar filters -->
+  <aside class="s-sidebar">
+
+    <!-- Search -->
+    <div class="s-search-box">
+      <span class="s-search-icon">&#128269;</span>
+      <input type="search" id="s-search-input" class="s-search-input"
+             placeholder="Search entities, events, cities..." autocomplete="off"
+             aria-label="Search the dataset">
+    </div>
+
+    <!-- Entity type -->
+    <div class="s-filter-section">
+      <div class="s-filter-title">Entity Type</div>
+      <div class="s-filter-group">
+        <button class="s-chip s-entity-type-chip" data-etype="empire">Empire</button>
+        <button class="s-chip s-entity-type-chip" data-etype="kingdom">Kingdom</button>
+        <button class="s-chip s-entity-type-chip" data-etype="republic">Republic</button>
+        <button class="s-chip s-entity-type-chip" data-etype="sultanate">Sultanate</button>
+        <button class="s-chip s-entity-type-chip" data-etype="caliphate">Caliphate</button>
+        <button class="s-chip s-entity-type-chip" data-etype="city_state">City-state</button>
+        <button class="s-chip s-entity-type-chip" data-etype="dynasty">Dynasty</button>
+        <button class="s-chip s-entity-type-chip" data-etype="confederation">Confed.</button>
+        <button class="s-chip s-entity-type-chip" data-etype="colonial_territory">Colonial</button>
+      </div>
+    </div>
+
+    <!-- Time range -->
+    <div class="s-filter-section">
+      <div class="s-filter-title">Time Range</div>
+      <div class="s-range-row">
+        <input type="number" id="s-year-min" class="s-range-input" placeholder="-5000" aria-label="Year from">
+        <span class="s-range-sep">to</span>
+        <input type="number" id="s-year-max" class="s-range-input" placeholder="2024" aria-label="Year to">
+      </div>
+    </div>
+
+    <!-- Status -->
+    <div class="s-filter-section">
+      <div class="s-filter-title">Status</div>
+      <div class="s-filter-group">
+        <button class="s-chip s-status-chip confirmed" data-status="confirmed">Confirmed</button>
+        <button class="s-chip s-status-chip uncertain" data-status="uncertain">Uncertain</button>
+        <button class="s-chip s-status-chip disputed" data-status="disputed">Disputed</button>
+      </div>
+    </div>
+
+    <!-- Confidence -->
+    <div class="s-filter-section">
+      <div class="s-filter-title">Confidence Score</div>
+      <div class="s-range-row">
+        <input type="number" id="s-conf-min" class="s-range-input" placeholder="0.0" min="0" max="1" step="0.1" aria-label="Min confidence">
+        <span class="s-range-sep">to</span>
+        <input type="number" id="s-conf-max" class="s-range-input" placeholder="1.0" min="0" max="1" step="0.1" aria-label="Max confidence">
+      </div>
+    </div>
+
+    <!-- Export -->
+    <div class="s-export-bar">
+      <div class="s-export-title">Data Export</div>
+      <div class="s-export-btns">
+        <button class="s-export-btn" id="s-export-entities-csv">Entities CSV</button>
+        <button class="s-export-btn" id="s-export-entities-geojson">Entities GeoJSON</button>
+        <button class="s-export-btn" id="s-export-events-csv">Events CSV</button>
+        <button class="s-export-btn" id="s-export-events-json">Events JSON</button>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- Main content -->
+  <div class="s-main">
+
+    <!-- Tabs -->
+    <div class="s-tabs">
+      <button class="s-tab active" data-type="all">All <span class="s-tab-count">(0)</span></button>
+      <button class="s-tab" data-type="entity">Entities <span class="s-tab-count">(0)</span></button>
+      <button class="s-tab" data-type="event">Events <span class="s-tab-count">(0)</span></button>
+      <button class="s-tab" data-type="city">Cities <span class="s-tab-count">(0)</span></button>
+      <button class="s-tab" data-type="route">Routes <span class="s-tab-count">(0)</span></button>
+    </div>
+
+    <!-- Results meta -->
+    <div class="s-results-meta">
+      <span id="s-results-count" class="s-results-count"></span>
+      <div class="s-results-controls">
+        <select id="s-sort" class="s-sort-select" aria-label="Sort results">
+          <option value="relevance">Sort: Relevance</option>
+          <option value="name">Sort: Name</option>
+          <option value="year">Sort: Year</option>
+          <option value="confidence">Sort: Confidence</option>
+        </select>
+        <button class="s-view-btn active" data-view="cards" title="Card view" aria-label="Card view">&#9638;</button>
+        <button class="s-view-btn" data-view="list" title="List view" aria-label="List view">&#9776;</button>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div id="s-results">
+      <!-- Cards -->
+      <div id="s-cards" class="s-cards active"></div>
+
+      <!-- List -->
+      <div id="s-list-wrapper" class="s-list" style="display:none">
+        <table class="s-list-table">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Name</th>
+              <th>Subtype</th>
+              <th>Period</th>
+              <th>Status</th>
+              <th>Confidence</th>
+            </tr>
+          </thead>
+          <tbody id="s-list-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Empty -->
+    <div id="s-empty" class="s-empty" style="display:block">
+      <div class="s-empty-icon">&#128270;</div>
+      <div class="s-empty-text">Type a search query to explore the dataset</div>
+      <div class="s-empty-hint">Search across entities, events, cities, and trade routes. Press / to focus search.</div>
+    </div>
+
+    <!-- Loading -->
+    <div id="s-loading" class="s-loading" style="display:none">
+      <div class="s-spinner"></div>
+      <div>Searching...</div>
+    </div>
+
+    <!-- Pagination -->
+    <div id="s-pagination" class="s-pagination"></div>
+
+  </div>
+</div>
+
+<script src="/static/search/search.js"></script>
+</body>
+</html>

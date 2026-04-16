@@ -11,13 +11,13 @@
 
 <p align="center">
   <a href="https://atlaspi.cra-srl.com"><img alt="Try it live" src="https://img.shields.io/badge/try%20it-live-58a6ff?style=flat-square&logo=globe&logoColor=white"></a>
-  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.18.0-blue?style=flat-square"></a>
+  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.19.0-blue?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-850-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Events" src="https://img.shields.io/badge/events-297-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Cities" src="https://img.shields.io/badge/cities-110-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Routes" src="https://img.shields.io/badge/trade%20routes-41-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Chains" src="https://img.shields.io/badge/dynasty%20chains-21-green?style=flat-square"></a>
-  <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-855%20passing-brightgreen?style=flat-square"></a>
+  <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-876%20passing-brightgreen?style=flat-square"></a>
   <a href="#-license"><img alt="License" src="https://img.shields.io/badge/license-Apache--2.0-orange?style=flat-square"></a>
   <a href="#-api-documentation"><img alt="API" src="https://img.shields.io/badge/API-50%20endpoints-purple?style=flat-square"></a>
   <a href="mcp-server/README.md"><img alt="MCP" src="https://img.shields.io/badge/MCP-ready-9d4edd?style=flat-square"></a>

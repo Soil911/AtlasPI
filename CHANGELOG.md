@@ -2,6 +2,47 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.19.0] - 2026-04-16
+
+**Tema**: *Advanced Search Page + Data Export — ricerca unificata e esportazione dati*
+
+### Nuovo endpoint API
+
+- `GET /v1/search/advanced?q=...` — ricerca unificata su tutte le tipologie di dati (entities, events, cities, trade routes). Ranking per rilevanza (exact match > starts with > contains). Filtri combinabili: data_type, entity_type, year_min, year_max, status, confidence_min/max. Sort per relevance/name/year/confidence. Paginazione completa
+- `GET /v1/export/entities?format=csv|geojson` — export entita' con filtri (entity_type, year_min/max, status, confidence). CSV con BOM UTF-8 per Excel. GeoJSON come FeatureCollection valido. Max 1000 righe per export
+- `GET /v1/export/events?format=csv|json` — export eventi con filtri (event_type, year_min/max, status, confidence). CSV con BOM UTF-8. JSON come array. Max 1000 righe per export
+
+### Nuova pagina: /search
+
+- Advanced Search interattiva (zero dipendenze esterne)
+- **Ricerca full-text** su name_original, name_variants, descrizioni
+- **Filtri combinabili**: entity type (multi-chip), time range, status, confidence score range
+- **Tabs** per tipo di dato: All, Entities, Events, Cities, Routes — con conteggi
+- **Due viste**: Card view (default, con highlight e confidence bar) e List view (tabellare compatta)
+- **Sort**: per relevance, name, year, confidence
+- **Paginazione** completa con conteggio risultati totali
+- **Highlight** dei termini di ricerca nei risultati
+- **Export integrato**: pulsanti diretti per scaricare CSV/GeoJSON/JSON dalla sidebar
+- **Deep linking**: URL con parametri di ricerca (/search?q=roman&type=entity)
+- **Keyboard shortcut**: / per focus sulla ricerca
+- Dark theme (#0d1117, #161b22, accent #58a6ff) coerente con il resto di AtlasPI
+- Responsive (mobile-friendly)
+
+### Navigazione
+
+- Aggiunto link "Search" nella navbar della mappa interattiva (/app)
+- Aggiunto link "Search" nella navigazione della landing page
+- Cross-navigation completa: /app, /search, /timeline, /compare, /docs, GitHub
+
+### Test
+
+- 21 nuovi test in `tests/test_v619_search_export.py`
+- Test ricerca: query con risultati, query vuota, parametro mancante (422), struttura risultati, tipi multipli, filtro per data_type, filtro per status, filtro per anno, sort, paginazione
+- Test export entita': CSV con headers, CSV con BOM UTF-8, GeoJSON valido, filtri applicati
+- Test export eventi: CSV con headers, JSON array valido, BOM UTF-8, Content-Disposition
+- Test pagina HTML: /search serve HTML, carica search.js, contiene controlli filtro
+- Conteggio test totale: 855 -> 876
+
 ## [v6.18.0] - 2026-04-16
 
 **Tema**: *Entity Comparison Tool — confronto side-by-side di 2-4 entita' storiche*
