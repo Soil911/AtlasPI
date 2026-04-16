@@ -646,9 +646,9 @@ function renderEventsOverlay() {
     if (badge && events.length > 0) {
       const existing = badge.innerHTML;
       if (!existing.includes('ev-count')) {
-        badge.innerHTML += ` · <span class="ev-count">${events.length} ${lang === 'it' ? 'eventi' : 'events'}</span>`;
+        badge.innerHTML += ` · <span class="ev-count">${events.length} ${t('events')}</span>`;
       } else {
-        badge.querySelector('.ev-count').textContent = `${events.length} ${lang === 'it' ? 'eventi' : 'events'}`;
+        badge.querySelector('.ev-count').textContent = `${events.length} ${t('events')}`;
       }
     }
   });
@@ -676,8 +676,8 @@ function showEventPopup(ev) {
         <span>${fmtY(ev.year)}</span>
         ${ev.location_name ? `<span>${esc(ev.location_name)}</span>` : ''}
       </div>
-      ${ev.main_actor ? `<div class="ev-popup-actor">${lang === 'it' ? 'Attore' : 'Actor'}: ${esc(ev.main_actor)}</div>` : ''}
-      <div class="ev-popup-link" onclick="showEventDetail(${ev.id})">${lang === 'it' ? 'Vedi dettaglio completo →' : 'View full detail →'}</div>
+      ${ev.main_actor ? `<div class="ev-popup-actor">${t('event_actor')}: ${esc(ev.main_actor)}</div>` : ''}
+      <div class="ev-popup-link" onclick="showEventDetail(${ev.id})">${t('event_detail')} →</div>
     </div>`;
 
   L.popup({ maxWidth: 300, className: 'event-popup' })
@@ -712,21 +712,21 @@ async function showEventDetail(eventId) {
       </div>
 
       <div class="detail-section">
-        <div class="detail-row"><span class="label">${lang === 'it' ? 'Anno' : 'Year'}:</span> ${fmtY(ev.year)}${ev.year_end ? ' – ' + fmtY(ev.year_end) : ''}</div>
-        ${ev.month ? `<div class="detail-row"><span class="label">${lang === 'it' ? 'Data' : 'Date'}:</span> ${ev.day || '?'}/${ev.month}/${Math.abs(ev.year)} ${ev.year < 0 ? 'BCE' : 'CE'}</div>` : ''}
-        ${ev.location_name ? `<div class="detail-row"><span class="label">${lang === 'it' ? 'Luogo' : 'Location'}:</span> ${esc(ev.location_name)}</div>` : ''}
-        ${ev.main_actor ? `<div class="detail-row"><span class="label">${lang === 'it' ? 'Attore principale' : 'Main actor'}:</span> ${esc(ev.main_actor)}</div>` : ''}
+        <div class="detail-row"><span class="label">${t('event_year')}:</span> ${fmtY(ev.year)}${ev.year_end ? ' – ' + fmtY(ev.year_end) : ''}</div>
+        ${ev.month ? `<div class="detail-row"><span class="label">${t('event_date')}:</span> ${ev.day || '?'}/${ev.month}/${Math.abs(ev.year)} ${ev.year < 0 ? 'BCE' : 'CE'}</div>` : ''}
+        ${ev.location_name ? `<div class="detail-row"><span class="label">${t('event_location')}:</span> ${esc(ev.location_name)}</div>` : ''}
+        ${ev.main_actor ? `<div class="detail-row"><span class="label">${t('event_main_actor')}:</span> ${esc(ev.main_actor)}</div>` : ''}
       </div>
 
       ${ev.description ? `
       <div class="detail-section">
-        <h3>${lang === 'it' ? 'Descrizione' : 'Description'}</h3>
+        <h3>${t('event_description')}</h3>
         <p style="font-size:0.85em;line-height:1.55;color:var(--text-muted)">${esc(ev.description)}</p>
       </div>` : ''}
 
       ${ev.casualties_low || ev.casualties_high ? `
       <div class="detail-section">
-        <h3>${lang === 'it' ? 'Vittime stimate' : 'Estimated casualties'}</h3>
+        <h3>${t('event_casualties')}</h3>
         <div class="detail-row">
           ${ev.casualties_low ? ev.casualties_low.toLocaleString() : '?'} – ${ev.casualties_high ? ev.casualties_high.toLocaleString() : '?'}
           ${ev.casualties_source ? `<span style="font-size:0.75em;color:var(--text-muted)"> (${esc(ev.casualties_source)})</span>` : ''}
@@ -735,7 +735,7 @@ async function showEventDetail(eventId) {
 
       ${ev.entity_links && ev.entity_links.length ? `
       <div class="detail-section">
-        <h3>${lang === 'it' ? 'Entità collegate' : 'Linked entities'}</h3>
+        <h3>${t('event_linked_entities')}</h3>
         ${ev.entity_links.map(link => `
           <div class="detail-row" style="cursor:pointer" onclick="showDetail(${link.entity_id})">
             <span class="label">${link.role ? link.role.replace(/_/g, ' ') : ''}:</span>
@@ -760,7 +760,7 @@ async function showEventDetail(eventId) {
       </div>` : ''}
     `;
   } catch (err) {
-    content.innerHTML = `<p class="placeholder">${lang === 'it' ? 'Errore nel caricamento dell\'evento' : 'Error loading event'}</p>`;
+    content.innerHTML = `<p class="placeholder">${t('event_error')}</p>`;
   }
 }
 
@@ -2285,6 +2285,19 @@ const I18N = {
     distance: 'Distanza',
     snapshot: 'Snapshot',
     active_in: 'Attive nel',
+    events: 'eventi',
+    events_overlay: 'Mostra eventi storici',
+    events_hint: "Battaglie, trattati, fondazioni e altri eventi nell'anno selezionato.",
+    event_actor: 'Attore',
+    event_detail: 'Vedi dettaglio completo',
+    event_year: 'Anno',
+    event_date: 'Data',
+    event_location: 'Luogo',
+    event_main_actor: 'Attore principale',
+    event_description: 'Descrizione',
+    event_casualties: 'Vittime stimate',
+    event_linked_entities: 'Entit\u00e0 collegate',
+    event_error: "Errore nel caricamento dell'evento",
   },
   en: {
     search: 'Search by name, including variants...',
@@ -2326,6 +2339,19 @@ const I18N = {
     distance: 'Distance',
     snapshot: 'Snapshot',
     active_in: 'Active in',
+    events: 'events',
+    events_overlay: 'Show historical events',
+    events_hint: 'Battles, treaties, foundations and other events in the selected year.',
+    event_actor: 'Actor',
+    event_detail: 'View full detail',
+    event_year: 'Year',
+    event_date: 'Date',
+    event_location: 'Location',
+    event_main_actor: 'Main actor',
+    event_description: 'Description',
+    event_casualties: 'Estimated casualties',
+    event_linked_entities: 'Linked entities',
+    event_error: 'Error loading event',
   },
 };
 
