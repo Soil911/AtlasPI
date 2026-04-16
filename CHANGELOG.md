@@ -2,6 +2,51 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.15.0] - 2026-04-16
+
+**Tema**: *AI Co-Founder Intelligence Layer — analisi automatica di traffico, qualita' dati e suggerimenti*
+
+### Nuovi endpoint API (3)
+
+- `GET /admin/insights` — analisi traffico: volume 24h/7d/30d, IP unici, top endpoint, breakdown errori 4xx/5xx, classificazione user-agent (bot/browser/API client), utenti esterni (esclude IP interni VPS/Docker/localhost), ore di punta UTC
+- `GET /admin/coverage-report` — report qualita' dati: distribuzione entita' per regione e per era, istogramma confidence_score, copertura confini (% con boundary_geojson), copertura date precision sub-annuale (v6.14), copertura catene, punteggio completezza 0-100
+- `GET /admin/suggestions` — suggerimenti intelligenti: ricerche fallite (query con 0 risultati = domanda senza offerta), gap geografici (regioni sotto la media), gap temporali (ere con pochi eventi), entita' orfane (non in nessuna catena), entita'/eventi a bassa confidenza, entita' senza confini
+
+### Nuovo script
+
+- `scripts/generate_daily_brief.py` — genera un brief Markdown giornaliero con: panoramica dataset, highlights traffico, visitatori esterni, top ricerche, metriche qualita', suggerimenti principali. Output su stdout, utilizzabile via pipe o cron
+
+### Architettura
+
+- Nuovo modulo `src/api/routes/admin_insights.py` con 3 endpoint + funzioni helper
+- Registrazione in `src/main.py` tramite `admin_insights.router`
+- Tutti gli endpoint restituiscono `JSONResponse` con header `Cache-Control` (300s insights, 600s coverage/suggestions)
+- Classificazione user-agent tramite regex pattern matching (bot/crawler, browser, API client)
+- Assegnazione continente approssimativa da coordinate capitali (8 macro-regioni)
+- Punteggio completezza pesato: boundary 20%, confidence 20%, catene 15%, date precision 15%, bilanciamento regionale 15%, bilanciamento temporale 15%
+- Nessuna migrazione Alembic necessaria (solo query su tabelle esistenti)
+
+### Test
+
+- `tests/test_v615_insights.py` — 49 nuovi test:
+  - Helper functions: 23 test (UA classification 8, continent mapping 8, era mapping 7)
+  - /admin/insights: 4 test (200 OK, struttura, campi summary, cache header)
+  - /admin/coverage-report: 9 test (200 OK, struttura, totali positivi, score 0-100, boundary, ere, confidence, catene, cache)
+  - /admin/suggestions: 5 test (200 OK, struttura, missing connections, low confidence, cache)
+  - INTERNAL_IPS: 5 test (localhost, VPS, Docker, testclient, IP esterno)
+  - Daily brief script: 3 test (generazione, conteggi, metriche)
+
+### Delta
+
+| Metrica | v6.14.0 | v6.15.0 | Delta |
+|---------|---------|---------|-------|
+| Entita' | 850 | 850 | +0 |
+| Eventi | 275 | 275 | +0 |
+| Endpoint API | ~38 | ~41 | +3 |
+| Test | 749 | 798 | +49 |
+
+---
+
 ## [v6.14.0] - 2026-04-16
 
 **Tema**: *Date Precision Layer — granularita' sub-annuale per eventi storici*
