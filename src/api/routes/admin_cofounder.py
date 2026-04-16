@@ -1,10 +1,11 @@
-"""AI Co-Founder Dashboard — v6.16.
+"""AI Co-Founder Dashboard — v6.16 + v6.25.
 
 GET  /admin/brief                        — HTML dashboard page
 GET  /admin/ai/suggestions               — list suggestions (filterable)
 POST /admin/ai/suggestions/{id}/accept   — accept a suggestion
 POST /admin/ai/suggestions/{id}/reject   — reject a suggestion
 POST /admin/ai/suggestions/{id}/implement — mark as implemented
+POST /admin/ai/analyze                   — trigger analysis + generate suggestions
 GET  /admin/ai/status                    — dashboard summary counts
 """
 
@@ -165,7 +166,37 @@ def implement_suggestion(
 
 
 # ═══════════════════════════════════════════════════════════════════
-# 3. Status Summary
+# 3. Trigger Analysis
+# ═══════════════════════════════════════════════════════════════════
+
+@router.post(
+    "/admin/ai/analyze",
+    summary="Run AI analysis and generate suggestions",
+    description=(
+        "Triggers the full AI co-founder analysis pipeline: geographic gaps, "
+        "temporal gaps, low confidence entities, missing boundaries, orphan "
+        "entities, failed search patterns (404s + zero-result queries), and "
+        "date coverage gaps (on-this-day feature). New suggestions are created "
+        "in 'pending' status. Existing pending/accepted suggestions are "
+        "not duplicated."
+    ),
+    include_in_schema=False,
+)
+def trigger_analysis(db: Session = Depends(get_db)):
+    """Run AI analysis pipeline and return summary."""
+    from scripts.ai_cofounder_analyze import run_analysis
+
+    try:
+        results = run_analysis(db=db)
+    except Exception as e:
+        logger.error("AI analysis failed: %s", e)
+        raise HTTPException(status_code=500, detail=f"Analysis failed: {e}")
+
+    return JSONResponse(content=results)
+
+
+# ═══════════════════════════════════════════════════════════════════
+# 4. Status Summary
 # ═══════════════════════════════════════════════════════════════════
 
 @router.get(

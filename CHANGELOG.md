@@ -2,6 +2,33 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.26.0] - 2026-04-16
+
+**Tema**: *AI Co-Founder Analysis Engine v2 — smarter suggestions*
+
+### Enhanced AI Analysis Engine (7 analyzers, up from 6)
+
+- **Zero-result search detection** — `analyze_failed_searches` now detects both
+  404s AND likely-empty search queries (fast 200 responses on search endpoints).
+  This captures demand signals from users who search for data we don't have.
+- **New analyzer: `analyze_date_coverage_gaps`** — flags months with fewer than 5
+  covered days in the on-this-day feature, guiding date-precise event additions.
+- Categories now: geographic_gaps, temporal_gaps, low_confidence, missing_boundaries,
+  orphan_entities, failed_searches (404 + zero-result), date_coverage_gaps.
+
+### New Endpoint: Trigger Analysis via API
+
+- **`POST /admin/ai/analyze`** — triggers the full AI analysis pipeline via API.
+  Returns summary of new suggestions generated per category.
+  Enables programmatic analysis runs (scheduled or manual).
+
+### Stats
+
+- **7 analysis categories** (up from 6)
+- **27 MCP tools** (unchanged)
+
+---
+
 ## [v6.25.0] - 2026-04-17
 
 **Tema**: *Date Coverage + Enhanced Stats + 14 Verified Events*

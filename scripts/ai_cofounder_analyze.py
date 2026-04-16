@@ -1,7 +1,16 @@
-"""AI Co-Founder Analysis Agent — v6.16.
+"""AI Co-Founder Analysis Agent — v6.26.
 
 Analyses the AtlasPI database for coverage gaps, quality issues, and
 actionable suggestions. Inserts results into the ai_suggestions table.
+
+Analysis categories:
+  1. Geographic gaps     — regions with few entities vs average
+  2. Temporal gaps       — eras with sparse events or entities
+  3. Low confidence      — entities/events with confidence < 0.4
+  4. Missing boundaries  — entities without boundary GeoJSON
+  5. Orphan entities     — entities not in any dynasty chain
+  6. Failed searches     — 404s + zero-result search queries (demand signals)
+  7. Date coverage gaps  — months with sparse on-this-day coverage
 
 SMART noise reduction: if everything is fine, this script says "all good"
 and creates NO suggestions. Only genuinely actionable items are flagged.
@@ -335,7 +344,13 @@ def analyze_orphan_entities(db, existing_titles: set[str]) -> int:
 
 
 def analyze_failed_searches(db, existing_titles: set[str]) -> int:
-    """Look for patterns in failed/empty API searches that signal demand."""
+    """Look for patterns in failed/empty API searches that signal demand.
+
+    Two signals:
+    1. Repeated 404s on /v1/* paths → entity/event doesn't exist
+    2. Repeated search queries with fast response (< 100ms) → likely empty results
+       (heuristic: fast response on search endpoints = empty DB hit)
+    """
     month_ago = (datetime.now(timezone.utc) - timedelta(days=30)).isoformat()
 
     # Check if we have any request logs at all
@@ -347,7 +362,9 @@ def analyze_failed_searches(db, existing_titles: set[str]) -> int:
     if log_count < 10:
         return 0
 
-    # Look for 404s on entity-related paths
+    count = 0
+
+    # ── Signal 1: Repeated 404s on entity-related paths ──────────
     not_found_rows = (
         db.query(
             ApiRequestLog.path,
@@ -364,7 +381,6 @@ def analyze_failed_searches(db, existing_titles: set[str]) -> int:
         .all()
     )
 
-    count = 0
     for r in not_found_rows:
         if r.times >= 3:  # Only if queried multiple times
             added = _add_suggestion(
@@ -377,6 +393,124 @@ def analyze_failed_searches(db, existing_titles: set[str]) -> int:
             )
             if added:
                 count += 1
+
+    # ── Signal 2: Likely-empty search queries (200 + fast response) ──
+    # Heuristic: search endpoints returning 200 with response_time < 100ms
+    # and query_string present usually means the DB hit was empty.
+    search_paths = ("/v1/entities", "/v1/events", "/v1/search")
+    empty_search_rows = (
+        db.query(
+            ApiRequestLog.path,
+            ApiRequestLog.query_string,
+            func.count(ApiRequestLog.id).label("times"),
+        )
+        .filter(
+            ApiRequestLog.timestamp >= month_ago,
+            ApiRequestLog.query_string.isnot(None),
+            ApiRequestLog.query_string != "",
+            or_(
+                *[ApiRequestLog.path.like(f"{p}%") for p in search_paths]
+            ),
+            ApiRequestLog.status_code == 200,
+            ApiRequestLog.response_time_ms < 100,
+        )
+        .group_by(ApiRequestLog.path, ApiRequestLog.query_string)
+        .having(func.count(ApiRequestLog.id) >= 2)  # At least 2 identical queries
+        .order_by(func.count(ApiRequestLog.id).desc())
+        .limit(10)
+        .all()
+    )
+
+    for r in empty_search_rows:
+        # Extract human-readable query from query_string
+        qs_display = r.query_string[:80] + ("…" if len(r.query_string) > 80 else "")
+        added = _add_suggestion(
+            db, existing_titles,
+            category="search_demand",
+            title=f"Empty search: {r.path}?{qs_display} ({r.times}x)",
+            description=(
+                f"The query '{r.path}?{r.query_string}' was made {r.times} times "
+                f"in the last 30 days with fast response times (likely zero results). "
+                f"This indicates demand for data we may not have."
+            ),
+            priority=3,
+            detail_json=json.dumps({
+                "path": r.path,
+                "query_string": r.query_string,
+                "times": r.times,
+                "signal": "fast_200_likely_empty",
+            }),
+        )
+        if added:
+            count += 1
+
+    return count
+
+
+def analyze_date_coverage_gaps(db, existing_titles: set[str]) -> int:
+    """Flag months with poor event date coverage for on-this-day feature.
+
+    The on-this-day endpoint needs events with month+day populated.
+    This analyzer flags months with fewer than 5 covered days, signaling
+    the need for more date-precise events in those months.
+    """
+    # Count unique (month, day) pairs with events
+    date_rows = (
+        db.query(
+            HistoricalEvent.month,
+            func.count(distinct(HistoricalEvent.day)).label("unique_days"),
+        )
+        .filter(
+            HistoricalEvent.month.isnot(None),
+            HistoricalEvent.day.isnot(None),
+        )
+        .group_by(HistoricalEvent.month)
+        .all()
+    )
+
+    month_coverage = {r.month: r.unique_days for r in date_rows}
+    total_days_covered = sum(month_coverage.values())
+    count = 0
+
+    # Only analyze if we already have SOME date coverage (avoid noise in early stage)
+    if total_days_covered < 30:
+        return 0
+
+    MONTH_NAMES = [
+        "", "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December",
+    ]
+
+    sparse_months = []
+    for m in range(1, 13):
+        days = month_coverage.get(m, 0)
+        if days < 5:
+            sparse_months.append({"month": m, "name": MONTH_NAMES[m], "covered_days": days})
+
+    if not sparse_months:
+        return 0
+
+    # Create one suggestion summarizing sparse months
+    names = [f"{s['name']} ({s['covered_days']} days)" for s in sparse_months]
+    added = _add_suggestion(
+        db, existing_titles,
+        category="date_coverage",
+        title=f"Sparse date coverage: {len(sparse_months)} months below 5 days",
+        description=(
+            f"The on-this-day feature relies on events with month+day data. "
+            f"These months have fewer than 5 covered days: {', '.join(names)}. "
+            f"Adding events with precise dates in these months would improve "
+            f"the daily historical content feature."
+        ),
+        priority=3,
+        detail_json=json.dumps({
+            "sparse_months": sparse_months,
+            "total_days_covered": total_days_covered,
+            "coverage_pct": round(total_days_covered / 366 * 100, 1),
+        }),
+    )
+    if added:
+        count += 1
 
     return count
 
@@ -405,6 +539,7 @@ def run_analysis(db=None) -> dict:
             "missing_boundaries": analyze_missing_boundaries(db, existing),
             "orphan_entities": analyze_orphan_entities(db, existing),
             "failed_searches": analyze_failed_searches(db, existing),
+            "date_coverage_gaps": analyze_date_coverage_gaps(db, existing),
         }
 
         db.commit()
