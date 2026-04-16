@@ -20,7 +20,7 @@ from src.api.middleware import (
     RequestLoggingMiddleware,
     SecurityHeadersMiddleware,
 )
-from src.api.routes import admin_cache, admin_cofounder, admin_insights, analytics, chains, cities_routes, compare, docs_ui, entities, events, export, health, relations, search, timeline, widgets
+from src.api.routes import admin_cache, admin_cofounder, admin_insights, analytics, chains, cities_routes, compare, docs_ui, entities, events, export, health, periods, relations, search, timeline, widgets
 from src.config import (
     APP_TITLE,
     APP_VERSION,
@@ -31,7 +31,7 @@ from src.config import (
     RATE_LIMIT,
 )
 from src.db.database import Base, engine
-from src.db.seed import seed_database, seed_events_database
+from src.db.seed import seed_database, seed_events_database, seed_periods_database
 from src.logging_config import setup_logging
 from src.monitoring import init_sentry
 
@@ -102,6 +102,11 @@ async def lifespan(app: FastAPI):
             seed_events_database()
         except Exception:
             logger.warning("Seed eventi fallito — v6.3 events layer non disponibile", exc_info=True)
+        # v6.27: seed historical periods (independent from entities/events)
+        try:
+            seed_periods_database()
+        except Exception:
+            logger.warning("Seed periods fallito — v6.27 periods layer non disponibile", exc_info=True)
 
     logger.info("AtlasPI pronto")
     yield
@@ -211,6 +216,7 @@ app.include_router(relations.router)
 app.include_router(events.router)
 app.include_router(cities_routes.router)
 app.include_router(chains.router)
+app.include_router(periods.router)
 app.include_router(analytics.router)
 app.include_router(admin_insights.router)
 app.include_router(admin_cache.router)

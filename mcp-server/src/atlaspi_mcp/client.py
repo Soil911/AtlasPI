@@ -17,7 +17,7 @@ import httpx
 
 DEFAULT_BASE_URL = "https://atlaspi.cra-srl.com"
 DEFAULT_TIMEOUT = 30.0
-USER_AGENT = "atlaspi-mcp/0.5.0 (+https://github.com/Soil911/AtlasPI)"
+USER_AGENT = "atlaspi-mcp/0.6.0 (+https://github.com/Soil911/AtlasPI)"
 
 
 class AtlasPIClientError(RuntimeError):
@@ -311,6 +311,48 @@ class AtlasPIClient:
     async def date_coverage(self) -> Any:
         """GET /v1/events/date-coverage — quali date MM-DD hanno eventi."""
         return await self._get("/v1/events/date-coverage")
+
+    # -- v6.27 historical periods ---------------------------------------
+
+    async def list_periods(
+        self,
+        *,
+        region: str | None = None,
+        period_type: str | None = None,
+        year: int | None = None,
+        status: str | None = None,
+        limit: int | None = None,
+        offset: int | None = None,
+    ) -> Any:
+        """GET /v1/periods — filtered list of historical epochs/periods."""
+        return await self._get(
+            "/v1/periods",
+            {
+                "region": region,
+                "period_type": period_type,
+                "year": year,
+                "status": status,
+                "limit": limit,
+                "offset": offset,
+            },
+        )
+
+    async def get_period(self, period_id: int) -> Any:
+        """GET /v1/periods/{period_id} — period detail by numeric ID."""
+        return await self._get(f"/v1/periods/{int(period_id)}")
+
+    async def get_period_by_slug(self, slug: str) -> Any:
+        """GET /v1/periods/by-slug/{slug} — period detail by slug."""
+        return await self._get(f"/v1/periods/by-slug/{slug}")
+
+    async def periods_at_year(
+        self, year: int, *, region: str | None = None,
+    ) -> Any:
+        """GET /v1/periods/at-year/{year} — periods that include a given year."""
+        return await self._get(
+            f"/v1/periods/at-year/{int(year)}",
+            {"region": region},
+        )
 
     # -- v6.4 cities & routes ------------------------------------------
 

@@ -2,6 +2,47 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.27.0] - 2026-04-17
+
+**Tema**: *Historical Periods — epoche storiche strutturate*
+
+### New Resource: Historical Periods/Epochs
+
+- **33 seeded periods**: Paleolithic through Cold War, spanning all major
+  world regions (europe, asia_east, asia_south, near_east, americas, global)
+- Every period has `region` scope — no Eurocentric defaults
+- Historiographic notes capture scholarly debates (e.g., "Dark Ages" as
+  deprecated alt for Early Middle Ages; Eurocentric framing of "Pre-Columbian
+  Era"; colonial critique of "Age of Discovery")
+
+### New Endpoints
+
+- **`GET /v1/periods`** — filtered list (region, period_type, year, status)
+- **`GET /v1/periods/types`** — enumerate period_type values
+- **`GET /v1/periods/regions`** — enumerate regions
+- **`GET /v1/periods/at-year/{year}`** — find periods containing a year
+- **`GET /v1/periods/by-slug/{slug}`** — lookup by URL-friendly slug
+- **`GET /v1/periods/{id}`** — detail by ID
+
+### MCP Server v0.6.0
+
+- **4 new tools**: `list_historical_periods`, `get_historical_period`,
+  `get_historical_period_by_slug`, `periods_at_year`
+- **31 total MCP tools** (up from 27)
+
+### Database
+
+- New `historical_periods` table (Alembic migration 010)
+- Indexes on year_range, region, period_type, slug
+- CheckConstraints on year ordering and confidence range
+
+### Stats
+
+- **1024 tests** (up from 995): 29 new periods tests + 3 new MCP handler tests
+- **33 historical periods** seeded with academic sources
+
+---
+
 ## [v6.26.0] - 2026-04-16
 
 **Tema**: *AI Co-Founder Analysis Engine v2 — smarter suggestions*

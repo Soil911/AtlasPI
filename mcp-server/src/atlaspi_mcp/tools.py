@@ -190,6 +190,35 @@ async def _h_date_coverage(client: AtlasPIClient, args: dict[str, Any]) -> Any:
     return await client.date_coverage()
 
 
+# -- v6.27 historical periods --------------------------------------
+
+
+async def _h_list_periods(client: AtlasPIClient, args: dict[str, Any]) -> Any:
+    return await client.list_periods(
+        region=args.get("region"),
+        period_type=args.get("period_type"),
+        year=args.get("year"),
+        status=args.get("status"),
+        limit=args.get("limit"),
+        offset=args.get("offset"),
+    )
+
+
+async def _h_get_period(client: AtlasPIClient, args: dict[str, Any]) -> Any:
+    return await client.get_period(int(args["period_id"]))
+
+
+async def _h_get_period_by_slug(client: AtlasPIClient, args: dict[str, Any]) -> Any:
+    return await client.get_period_by_slug(str(args["slug"]))
+
+
+async def _h_periods_at_year(client: AtlasPIClient, args: dict[str, Any]) -> Any:
+    return await client.periods_at_year(
+        int(args["year"]),
+        region=args.get("region"),
+    )
+
+
 # -- v6.4 cities & routes ------------------------------------------
 
 
@@ -896,6 +925,134 @@ TOOLS: list[ToolDefinition] = [
             "additionalProperties": False,
         },
         handler=_h_date_coverage,
+    ),
+    # ─── v6.27 historical periods ────────────────────────────────────
+    ToolDefinition(
+        name="list_historical_periods",
+        description=(
+            "Lista epoche storiche strutturate (Bronze Age, Classical Antiquity, "
+            "Edo Period, Cold War, ecc.). Ogni periodo ha scope regionale "
+            "esplicito (es. 'Middle Ages' è europeo, non globale) e "
+            "confidence_score. Filtrabile per region, period_type (age/era/"
+            "period/dynasty/epoch), anno (ritorna periodi che includono "
+            "quell'anno), status. USA per: inquadrare un anno o entità nel "
+            "contesto storico, rispondere a domande tipo 'In che epoca era "
+            "il 1200 in Europa?', 'Quali periodi esistono in Giappone?'. "
+            "ETHICS: le periodizzazioni sono costrutti storiografici; il "
+            "campo historiographic_note documenta controversie accademiche."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {
+                "region": {
+                    "type": "string",
+                    "description": (
+                        "Filtra per regione: global, europe, asia_east, "
+                        "asia_south, near_east, africa, americas, oceania."
+                    ),
+                },
+                "period_type": {
+                    "type": "string",
+                    "enum": ["age", "era", "period", "dynasty", "epoch"],
+                    "description": (
+                        "Tipo di periodo. 'age' = età preistoriche (Bronze, "
+                        "Iron), 'era' = periodi lunghi (Classical Antiquity), "
+                        "'period' = periodi specifici (Hellenistic, Heian), "
+                        "'dynasty' = basato su governance (Ottoman Classical), "
+                        "'epoch' = scientifico."
+                    ),
+                },
+                "year": {
+                    **_YEAR_SCHEMA,
+                    "description": _YEAR_SCHEMA["description"]
+                    + " Ritorna solo periodi che includono questo anno.",
+                },
+                "status": {
+                    "type": "string",
+                    "enum": ["confirmed", "debated", "deprecated"],
+                },
+                "limit": {"type": "integer", "minimum": 1, "maximum": 500},
+                "offset": {"type": "integer", "minimum": 0},
+            },
+            "additionalProperties": False,
+        },
+        handler=_h_list_periods,
+    ),
+    ToolDefinition(
+        name="get_historical_period",
+        description=(
+            "Dettaglio completo di un periodo storico dato il suo ID numerico. "
+            "Include description, historiographic_note (controversie "
+            "accademiche), alternative_names (es. 'Dark Ages' per 'Early "
+            "Middle Ages') e sources bibliografiche."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {
+                "period_id": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "ID numerico del periodo.",
+                },
+            },
+            "required": ["period_id"],
+            "additionalProperties": False,
+        },
+        handler=_h_get_period,
+    ),
+    ToolDefinition(
+        name="get_historical_period_by_slug",
+        description=(
+            "Dettaglio di un periodo dato lo slug URL-friendly (es. "
+            "'bronze-age', 'edo-period', 'islamic-golden-age'). Più "
+            "leggibile di get_historical_period quando l'ID non è noto."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {
+                "slug": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200,
+                    "pattern": r"^[a-z0-9-]+$",
+                    "description": (
+                        "Slug URL-friendly (lowercase, hyphens). Esempi: "
+                        "'bronze-age', 'hellenistic-period', 'cold-war'."
+                    ),
+                },
+            },
+            "required": ["slug"],
+            "additionalProperties": False,
+        },
+        handler=_h_get_period_by_slug,
+    ),
+    ToolDefinition(
+        name="periods_at_year",
+        description=(
+            "Ritorna tutte le epoche storiche che includono un dato anno, "
+            "across regioni. ESSENZIALE per contestualizzare un evento o "
+            "entità storica. Es. year=1500 → ritorna [Renaissance (europe), "
+            "Late Middle Ages (europe), Edo Period NO (inizia nel 1603), "
+            "Ottoman Classical Age (near_east)...]. Opzionale filtro per "
+            "regione."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {
+                "year": {
+                    **_YEAR_SCHEMA,
+                    "description": _YEAR_SCHEMA["description"]
+                    + " Anno da contestualizzare.",
+                },
+                "region": {
+                    "type": "string",
+                    "description": "Filtro opzionale per regione (vedi list_historical_periods).",
+                },
+            },
+            "required": ["year"],
+            "additionalProperties": False,
+        },
+        handler=_h_periods_at_year,
     ),
     # ─── v6.4 cities ────────────────────────────────────────────────
     ToolDefinition(

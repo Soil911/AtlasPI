@@ -20,6 +20,7 @@ from src.db.models import (
     EventSource,
     GeoEntity,
     HistoricalEvent,
+    HistoricalPeriod,
     NameVariant,
     Source,
     TerritoryChange,
@@ -30,6 +31,8 @@ logger = logging.getLogger(__name__)
 ENTITIES_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "entities"
 # v6.3: separate directory for historical events — ETHICS-007 + ETHICS-008.
 EVENTS_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "events"
+# v6.27: structured historical periods/epochs.
+PERIODS_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "periods"
 
 
 def load_all_entities() -> list[dict]:
@@ -365,3 +368,85 @@ def sync_new_events() -> dict:
     finally:
         db.close()
     return result
+
+
+# ─── v6.27: Historical Periods seed ──────────────────────────────────
+
+
+def load_all_periods() -> list[dict]:
+    """Load all historical periods from JSON files in data/periods/."""
+    all_periods: list[dict] = []
+    if not PERIODS_DIR.exists():
+        logger.warning("Periods directory not found: %s", PERIODS_DIR)
+        return all_periods
+
+    for json_file in sorted(PERIODS_DIR.glob("*.json")):
+        try:
+            with open(json_file, encoding="utf-8") as f:
+                periods = json.load(f)
+            if isinstance(periods, list):
+                all_periods.extend(periods)
+                logger.info("Loaded %s: %d periods", json_file.name, len(periods))
+        except (json.JSONDecodeError, OSError) as e:
+            logger.error("Error loading %s: %s", json_file.name, e)
+
+    return all_periods
+
+
+def seed_periods_database():
+    """Populate historical_periods table if empty.
+
+    ETHICS: periodizations are historiographic constructs. Each period
+    declares its `region` scope and optionally a `historiographic_note`
+    documenting scholarly debates.
+    """
+    db: Session = SessionLocal()
+    try:
+        count = db.query(HistoricalPeriod).count()
+        if count > 0:
+            logger.info("Periods table already populated (%d). Skip seed.", count)
+            return
+
+        all_periods = load_all_periods()
+        if not all_periods:
+            logger.info("No periods to seed.")
+            return
+
+        logger.info("Seeding historical periods: %d to insert...", len(all_periods))
+
+        inserted = 0
+        for p_data in all_periods:
+            period = HistoricalPeriod(
+                name=p_data["name"],
+                name_lang=p_data.get("name_lang", "en"),
+                slug=p_data["slug"],
+                name_native=p_data.get("name_native"),
+                name_native_lang=p_data.get("name_native_lang"),
+                period_type=p_data.get("period_type", "period"),
+                region=p_data.get("region", "global"),
+                year_start=p_data["year_start"],
+                year_end=p_data.get("year_end"),
+                description=p_data["description"],
+                historiographic_note=p_data.get("historiographic_note"),
+                alternative_names=(
+                    json.dumps(p_data["alternative_names"], ensure_ascii=False)
+                    if p_data.get("alternative_names") else None
+                ),
+                confidence_score=p_data.get("confidence_score", 0.8),
+                status=p_data.get("status", "confirmed"),
+                sources=(
+                    json.dumps(p_data["sources"], ensure_ascii=False)
+                    if p_data.get("sources") else None
+                ),
+            )
+            db.add(period)
+            inserted += 1
+
+        db.commit()
+        logger.info("Period seed complete: %d periods inserted.", inserted)
+    except Exception:
+        db.rollback()
+        logger.error("Error during period seed", exc_info=True)
+        raise
+    finally:
+        db.close()

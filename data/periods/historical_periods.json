@@ -1,0 +1,522 @@
+[
+  {
+    "name": "Paleolithic",
+    "name_lang": "en",
+    "slug": "paleolithic",
+    "period_type": "age",
+    "region": "global",
+    "year_start": -3300000,
+    "year_end": -10000,
+    "description": "The Old Stone Age, characterized by the earliest known use of stone tools by hominids (Homo habilis) through the end of the Pleistocene. Includes the emergence of Homo sapiens ~300,000 years ago and the Upper Paleolithic cultural revolution (~50,000-10,000 BCE).",
+    "historiographic_note": "Traditional division into Lower, Middle, and Upper Paleolithic. The exact start depends on hominid/tool definitions.",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Klein, R. G. (2009). The Human Career: Human Biological and Cultural Origins. University of Chicago Press."}
+    ]
+  },
+  {
+    "name": "Mesolithic",
+    "name_lang": "en",
+    "slug": "mesolithic",
+    "period_type": "age",
+    "region": "global",
+    "year_start": -10000,
+    "year_end": -5000,
+    "description": "Middle Stone Age, a transitional period between the Paleolithic and Neolithic, spanning the Holocene climate warming. Characterized by microliths, domestication of the dog, and proto-agricultural experimentation.",
+    "historiographic_note": "Used primarily in European archaeology. In some regions (e.g. Near East) the term 'Epipaleolithic' is preferred. Dates vary significantly by region.",
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Bailey, G., & Spikins, P. (2008). Mesolithic Europe. Cambridge University Press."}
+    ]
+  },
+  {
+    "name": "Neolithic",
+    "name_lang": "en",
+    "slug": "neolithic",
+    "period_type": "age",
+    "region": "global",
+    "year_start": -10000,
+    "year_end": -3300,
+    "description": "New Stone Age, defined by the Neolithic Revolution: the transition to agriculture, sedentism, pottery, and animal domestication. Began in the Fertile Crescent and independently in China, Mesoamerica, and the Andes.",
+    "historiographic_note": "The Neolithic started at very different times in different regions. The Near East ~10,000 BCE, Europe ~7,000 BCE, Mesoamerica ~8,000 BCE. 'Neolithic' is less meaningful as a single global period.",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Bellwood, P. (2005). First Farmers: The Origins of Agricultural Societies. Wiley-Blackwell."}
+    ]
+  },
+  {
+    "name": "Chalcolithic",
+    "name_lang": "en",
+    "slug": "chalcolithic",
+    "period_type": "age",
+    "region": "near_east",
+    "year_start": -5000,
+    "year_end": -3300,
+    "description": "Copper Age, transition period between the Neolithic and Bronze Age. Characterized by the first use of native copper, precursor to true bronze metallurgy.",
+    "alternative_names": [{"name": "Copper Age", "context": "English equivalent"}, {"name": "Eneolithic", "context": "European archaeology usage"}],
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Roberts, B. W., & Thornton, C. P. (2014). Archaeometallurgy in Global Perspective. Springer."}
+    ]
+  },
+  {
+    "name": "Bronze Age",
+    "name_lang": "en",
+    "slug": "bronze-age",
+    "period_type": "age",
+    "region": "global",
+    "year_start": -3300,
+    "year_end": -1200,
+    "description": "Characterized by the use of bronze (copper-tin alloy), the emergence of early civilizations in Mesopotamia, Egypt, Indus Valley, and China, the development of writing systems, and the rise of the first empires. Ended with the Bronze Age Collapse (~1200 BCE) in the Eastern Mediterranean.",
+    "historiographic_note": "Dates vary by region. The Near Eastern Bronze Age (~3300-1200 BCE) differs from the Chinese Bronze Age (~2000-771 BCE during the Shang-Western Zhou). Sub-Saharan Africa largely skipped the Bronze Age.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Cline, E. H. (2014). 1177 B.C.: The Year Civilization Collapsed. Princeton University Press."}
+    ]
+  },
+  {
+    "name": "Iron Age",
+    "name_lang": "en",
+    "slug": "iron-age",
+    "period_type": "age",
+    "region": "global",
+    "year_start": -1200,
+    "year_end": -550,
+    "description": "Period defined by widespread iron smelting and tool production. Began in Anatolia, spread across Europe, the Near East, and Asia. Saw the rise of Assyria, the Neo-Babylonian empire, the Achaemenid Persian Empire, the Greek Archaic Period, and the foundation of Rome.",
+    "historiographic_note": "Highly region-dependent. Sub-Saharan Africa developed iron metallurgy independently around 1000 BCE (Nok culture). The Americas entered an Iron Age only after European contact.",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Collis, J. (2003). The European Iron Age. Routledge."}
+    ]
+  },
+  {
+    "name": "Archaic Period (Greece)",
+    "name_lang": "en",
+    "slug": "archaic-greece",
+    "period_type": "period",
+    "region": "europe",
+    "year_start": -800,
+    "year_end": -480,
+    "description": "Greek Archaic Period: the rise of the polis (city-state), Greek colonization across the Mediterranean and Black Sea, the development of Greek alphabet from Phoenician, the first Olympic Games (776 BCE), and the emergence of philosophy and the beginning of recorded history.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Osborne, R. (2009). Greece in the Making, 1200-479 BC. Routledge."}
+    ]
+  },
+  {
+    "name": "Classical Antiquity",
+    "name_lang": "en",
+    "slug": "classical-antiquity",
+    "period_type": "era",
+    "region": "europe",
+    "year_start": -510,
+    "year_end": 476,
+    "description": "Broad era spanning Classical Greece, the Hellenistic period, and the Roman Republic and Empire. Saw the rise of Athenian democracy, the conquests of Alexander the Great, the Roman Empire at its apex, and ends with the fall of the Western Roman Empire.",
+    "historiographic_note": "The term is Eurocentric. The same dates encompass the Han Dynasty in China, the Gupta Empire in India, and many other civilizations that are not part of 'Classical Antiquity'.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Cartledge, P. (2002). The Greeks: A Portrait of Self and Others. Oxford University Press."}
+    ]
+  },
+  {
+    "name": "Classical Period (Greece)",
+    "name_lang": "en",
+    "slug": "classical-greece",
+    "period_type": "period",
+    "region": "europe",
+    "year_start": -480,
+    "year_end": -323,
+    "description": "Greek Classical Period: from the end of the Greco-Persian Wars (Battle of Salamis, 480 BCE) to the death of Alexander the Great (323 BCE). The age of Periclean Athens, the Peloponnesian War, Plato, Aristotle, and the conquests of Alexander.",
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Hornblower, S. (2011). The Greek World 479-323 BC. Routledge."}
+    ]
+  },
+  {
+    "name": "Hellenistic Period",
+    "name_lang": "en",
+    "slug": "hellenistic-period",
+    "period_type": "period",
+    "region": "europe",
+    "year_start": -323,
+    "year_end": -31,
+    "description": "From the death of Alexander the Great (323 BCE) to the Roman annexation of Ptolemaic Egypt after the Battle of Actium (31 BCE). Saw Greek culture spread across the Mediterranean, Near East, and Central Asia through the successor kingdoms (Ptolemaic, Seleucid, Antigonid).",
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Walbank, F. W. (1993). The Hellenistic World. Harvard University Press."}
+    ]
+  },
+  {
+    "name": "Roman Republic",
+    "name_lang": "en",
+    "slug": "roman-republic",
+    "period_type": "period",
+    "region": "europe",
+    "year_start": -509,
+    "year_end": -27,
+    "description": "From the overthrow of the Roman monarchy (509 BCE traditional) to the establishment of the principate under Augustus (27 BCE). Saw Rome expand from an Italian city-state to a Mediterranean empire through the Punic Wars and civil wars.",
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Scullard, H. H. (1982). From the Gracchi to Nero. Routledge."}
+    ]
+  },
+  {
+    "name": "Roman Empire (Principate)",
+    "name_lang": "en",
+    "slug": "roman-empire-principate",
+    "period_type": "period",
+    "region": "europe",
+    "year_start": -27,
+    "year_end": 284,
+    "description": "From Augustus' settlement (27 BCE) establishing the principate to the accession of Diocletian (284 CE). The classical Roman Empire at its territorial apex under Trajan, followed by the Crisis of the Third Century.",
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Beard, M. (2015). SPQR: A History of Ancient Rome. Profile Books."}
+    ]
+  },
+  {
+    "name": "Late Antiquity",
+    "name_lang": "en",
+    "slug": "late-antiquity",
+    "period_type": "era",
+    "region": "europe",
+    "year_start": 284,
+    "year_end": 641,
+    "description": "Period from Diocletian's reforms (284 CE) to the early Islamic conquests (ending with the Arab-Sasanian Wars and death of Heraclius, 641 CE). Saw the Christianization of the Roman Empire, the fall of the Western Empire, and the transformation into the Byzantine and Islamic worlds.",
+    "historiographic_note": "Coined by Peter Brown (1971) as a positive alternative to 'Decline and Fall' narratives. Now the standard periodization for this transitional period.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Brown, P. (1971). The World of Late Antiquity. Thames & Hudson."}
+    ]
+  },
+  {
+    "name": "Early Middle Ages",
+    "name_lang": "en",
+    "slug": "early-middle-ages",
+    "period_type": "period",
+    "region": "europe",
+    "year_start": 500,
+    "year_end": 1000,
+    "description": "European period from the fall of the Western Roman Empire to approximately 1000 CE. Saw the rise of successor kingdoms (Frankish, Visigothic, Ostrogothic), Byzantine consolidation, Islamic expansion, Charlemagne's coronation (800 CE), and Viking activity.",
+    "alternative_names": [{"name": "Dark Ages", "context": "Older historiographic term now considered pejorative and inaccurate"}],
+    "historiographic_note": "The term 'Dark Ages' has been largely abandoned in scholarship because it reflects Renaissance prejudice. 'Early Middle Ages' is the preferred neutral term.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Wickham, C. (2009). The Inheritance of Rome: Illuminating the Dark Ages 400-1000. Allen Lane."}
+    ]
+  },
+  {
+    "name": "High Middle Ages",
+    "name_lang": "en",
+    "slug": "high-middle-ages",
+    "period_type": "period",
+    "region": "europe",
+    "year_start": 1000,
+    "year_end": 1300,
+    "description": "European period characterized by population growth, urbanization, founding of universities, Gothic architecture, the Crusades, the rise of the High Medieval papacy, and the development of feudalism and the three-field system.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Bartlett, R. (1993). The Making of Europe: Conquest, Colonization and Cultural Change, 950-1350. Penguin."}
+    ]
+  },
+  {
+    "name": "Late Middle Ages",
+    "name_lang": "en",
+    "slug": "late-middle-ages",
+    "period_type": "period",
+    "region": "europe",
+    "year_start": 1300,
+    "year_end": 1500,
+    "description": "European period marked by the Black Death (1347-1351), the Hundred Years' War, the Western Schism, the fall of Constantinople (1453), and the early Italian Renaissance. Ended approximately with the European discovery of the Americas (1492).",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Allmand, C. (Ed.). (1998). The New Cambridge Medieval History, Volume 7. Cambridge University Press."}
+    ]
+  },
+  {
+    "name": "Islamic Golden Age",
+    "name_lang": "en",
+    "slug": "islamic-golden-age",
+    "period_type": "era",
+    "region": "near_east",
+    "year_start": 750,
+    "year_end": 1258,
+    "description": "Period of cultural, economic, and scientific flourishing in Islamic history, traditionally dated from the Abbasid Caliphate's rise (750) to the Mongol sack of Baghdad (1258). Saw major advances in mathematics, astronomy, medicine, philosophy, and the preservation and translation of Greek learning.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Lyons, J. (2010). The House of Wisdom: How the Arabs Transformed Western Civilization. Bloomsbury."}
+    ]
+  },
+  {
+    "name": "Renaissance",
+    "name_lang": "en",
+    "slug": "renaissance",
+    "period_type": "era",
+    "region": "europe",
+    "year_start": 1300,
+    "year_end": 1600,
+    "description": "Cultural, artistic, political, and economic rebirth that began in late medieval Italy and spread across Europe. Characterized by the rediscovery of classical antiquity, humanism, scientific innovation, and artistic masters like Leonardo, Michelangelo, and Raphael.",
+    "historiographic_note": "The term 'Renaissance' (rinascimento) was popularized by Jacob Burckhardt (1860). Some historians challenge the 'rebirth' framing as underselling medieval continuity.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Burke, P. (2014). The Italian Renaissance: Culture and Society in Italy. Princeton University Press."}
+    ]
+  },
+  {
+    "name": "Early Modern Period",
+    "name_lang": "en",
+    "slug": "early-modern-period",
+    "period_type": "era",
+    "region": "europe",
+    "year_start": 1500,
+    "year_end": 1800,
+    "description": "European period from the end of the Middle Ages to the French Revolution. Saw the Reformation, the Scientific Revolution, the Age of Discovery, the rise of absolutist monarchies, the Thirty Years' War, and the Enlightenment.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Parker, G. (2013). Global Crisis: War, Climate Change and Catastrophe in the Seventeenth Century. Yale University Press."}
+    ]
+  },
+  {
+    "name": "Age of Discovery",
+    "name_lang": "en",
+    "slug": "age-of-discovery",
+    "period_type": "era",
+    "region": "global",
+    "year_start": 1418,
+    "year_end": 1620,
+    "description": "Period of extensive European maritime exploration, beginning with Portuguese voyages along the African coast (1418) and including Columbus (1492), Vasco da Gama (1498), Magellan (1519-1522). Led to the establishment of European colonial empires and the Columbian Exchange.",
+    "historiographic_note": "ETHICS: the term centers the European perspective. For indigenous peoples in the Americas, Africa, Asia, and Oceania, this period represents conquest, genocide, slavery, and cultural destruction — see the 'Age of Colonialism' framing.",
+    "alternative_names": [{"name": "Age of Exploration", "context": "Common English alternative"}, {"name": "Age of Colonialism", "context": "Critical historiography framing"}],
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Parry, J. H. (1981). The Age of Reconnaissance: Discovery, Exploration and Settlement 1450-1650. University of California Press."}
+    ]
+  },
+  {
+    "name": "Age of Enlightenment",
+    "name_lang": "en",
+    "slug": "age-of-enlightenment",
+    "period_type": "era",
+    "region": "europe",
+    "year_start": 1685,
+    "year_end": 1815,
+    "description": "Intellectual and philosophical movement centered on reason, science, liberty, constitutional government, and separation of church and state. Key figures: Locke, Voltaire, Rousseau, Kant, Hume, Smith. Catalyzed the American and French Revolutions.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Israel, J. I. (2001). Radical Enlightenment: Philosophy and the Making of Modernity 1650-1750. Oxford University Press."}
+    ]
+  },
+  {
+    "name": "Industrial Revolution",
+    "name_lang": "en",
+    "slug": "industrial-revolution",
+    "period_type": "era",
+    "region": "europe",
+    "year_start": 1760,
+    "year_end": 1840,
+    "description": "Transition to new manufacturing processes in Britain and Europe, characterized by the steam engine, mechanized textile production, iron and steel industries, railway expansion, and urbanization. Fundamentally transformed global economy, society, and environment.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Allen, R. C. (2009). The British Industrial Revolution in Global Perspective. Cambridge University Press."}
+    ]
+  },
+  {
+    "name": "Victorian Era",
+    "name_lang": "en",
+    "slug": "victorian-era",
+    "period_type": "period",
+    "region": "europe",
+    "year_start": 1837,
+    "year_end": 1901,
+    "description": "Period of Queen Victoria's reign in the United Kingdom and British Empire. Characterized by industrial expansion, colonial empire at its apex, scientific advances (Darwin), significant social reform movements, and distinctive cultural output.",
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Hobsbawm, E. (1975). The Age of Capital: 1848-1875. Weidenfeld & Nicolson."}
+    ]
+  },
+  {
+    "name": "Belle Époque",
+    "name_lang": "fr",
+    "slug": "belle-epoque",
+    "name_native": "Belle Époque",
+    "name_native_lang": "fr",
+    "period_type": "period",
+    "region": "europe",
+    "year_start": 1871,
+    "year_end": 1914,
+    "description": "French historiographic term for the period between the end of the Franco-Prussian War and the outbreak of World War I. Characterized by peace among great powers, technological progress, artistic flourishing (Impressionism, Art Nouveau), and growing colonial empires.",
+    "historiographic_note": "A retrospective idealization — the period was 'beautiful' primarily for the European bourgeoisie and saw accelerating colonial violence in Africa and Asia.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Nord, P. (2002). The Republican Moment: Struggles for Democracy in Nineteenth-Century France. Harvard University Press."}
+    ]
+  },
+  {
+    "name": "Interwar Period",
+    "name_lang": "en",
+    "slug": "interwar-period",
+    "period_type": "period",
+    "region": "global",
+    "year_start": 1918,
+    "year_end": 1939,
+    "description": "Period between World War I (ended 1918) and World War II (began 1939). Characterized by the Treaty of Versailles, Weimar Germany, the Russian Revolution's aftermath, the Great Depression (1929), the rise of fascism in Italy and Germany, and colonial independence movements.",
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Overy, R. (2009). The Twilight Years: The Paradox of Britain Between the Wars. Viking."}
+    ]
+  },
+  {
+    "name": "Cold War",
+    "name_lang": "en",
+    "slug": "cold-war",
+    "period_type": "era",
+    "region": "global",
+    "year_start": 1947,
+    "year_end": 1991,
+    "description": "Geopolitical tension between the United States and Soviet Union (and their respective allies) following WWII, ending with the dissolution of the USSR. Characterized by ideological conflict, nuclear arms race, proxy wars (Korea, Vietnam, Afghanistan), and decolonization.",
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Gaddis, J. L. (2005). The Cold War: A New History. Penguin Press."}
+    ]
+  },
+  {
+    "name": "Spring and Autumn Period",
+    "name_lang": "en",
+    "slug": "spring-and-autumn-period",
+    "name_native": "春秋時代",
+    "name_native_lang": "zh",
+    "period_type": "period",
+    "region": "asia_east",
+    "year_start": -771,
+    "year_end": -476,
+    "description": "Period of the Eastern Zhou dynasty in China, named after the Spring and Autumn Annals chronicle. Characterized by fragmentation into competing states, the emergence of Confucianism and Daoism, and technological advances.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Hsu, C. Y. (1999). 'The Spring and Autumn Period'. In The Cambridge History of Ancient China. Cambridge University Press."}
+    ]
+  },
+  {
+    "name": "Warring States Period",
+    "name_lang": "en",
+    "slug": "warring-states-period",
+    "name_native": "戰國時代",
+    "name_native_lang": "zh",
+    "period_type": "period",
+    "region": "asia_east",
+    "year_start": -475,
+    "year_end": -221,
+    "description": "Chinese period of intense warfare among seven major states (Qin, Zhao, Wei, Han, Chu, Yan, Qi), ending with Qin's unification under Shi Huangdi. Saw the flourishing of the Hundred Schools of Thought (philosophy) and the creation of the Art of War by Sun Tzu.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Lewis, M. E. (1999). 'Warring States Political History'. In The Cambridge History of Ancient China. Cambridge University Press."}
+    ]
+  },
+  {
+    "name": "Heian Period",
+    "name_lang": "en",
+    "slug": "heian-period",
+    "name_native": "平安時代",
+    "name_native_lang": "ja",
+    "period_type": "period",
+    "region": "asia_east",
+    "year_start": 794,
+    "year_end": 1185,
+    "description": "Japanese period named after the capital Heian-kyō (modern Kyoto). Peak of Japanese imperial court, emergence of unique Japanese aesthetics (kana writing, The Tale of Genji), and the rise of the samurai class. Ended with the Genpei War and the establishment of the Kamakura shogunate.",
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Shively, D. H., & McCullough, W. H. (Eds.). (1999). The Cambridge History of Japan, Volume 2: Heian Japan. Cambridge University Press."}
+    ]
+  },
+  {
+    "name": "Edo Period",
+    "name_lang": "en",
+    "slug": "edo-period",
+    "name_native": "江戸時代",
+    "name_native_lang": "ja",
+    "period_type": "period",
+    "region": "asia_east",
+    "year_start": 1603,
+    "year_end": 1868,
+    "description": "Japanese period of Tokugawa shogunate rule, characterized by the policy of sakoku (national isolation), a rigid four-class social system, economic growth, urbanization of Edo (Tokyo), and flourishing urban culture (kabuki, ukiyo-e, haiku). Ended with the Meiji Restoration.",
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Jansen, M. B. (Ed.). (1989). The Cambridge History of Japan, Volume 5: The Nineteenth Century. Cambridge University Press."}
+    ]
+  },
+  {
+    "name": "Mughal Era",
+    "name_lang": "en",
+    "slug": "mughal-era",
+    "period_type": "era",
+    "region": "asia_south",
+    "year_start": 1526,
+    "year_end": 1857,
+    "description": "Period of Mughal imperial rule in South Asia, from Babur's victory at Panipat (1526) to the deposition of Bahadur Shah II after the 1857 rebellion. Peak under Akbar (r. 1556-1605), Jahangir, Shah Jahan, and Aurangzeb. Saw architectural wonders (Taj Mahal), syncretic culture, and eventual decline before British ascendancy.",
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Richards, J. F. (1993). The Mughal Empire. Cambridge University Press."}
+    ]
+  },
+  {
+    "name": "Ottoman Classical Age",
+    "name_lang": "en",
+    "slug": "ottoman-classical-age",
+    "period_type": "period",
+    "region": "near_east",
+    "year_start": 1453,
+    "year_end": 1606,
+    "description": "Peak of Ottoman imperial power, from the conquest of Constantinople (1453) to the Treaty of Zsitvatorok (1606) which marked the end of Habsburg inferiority. Includes the reigns of Mehmed II, Selim I, and Suleiman the Magnificent.",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Imber, C. (2002). The Ottoman Empire, 1300-1650: The Structure of Power. Palgrave Macmillan."}
+    ]
+  },
+  {
+    "name": "Pre-Columbian Era",
+    "name_lang": "en",
+    "slug": "pre-columbian-era",
+    "period_type": "era",
+    "region": "americas",
+    "year_start": -15000,
+    "year_end": 1492,
+    "description": "Era of the Americas before Columbus's arrival in 1492. Encompasses the entire span from the peopling of the Americas (~15,000 BCE) through the Classical Maya, Aztec, Inca, Mississippian cultures, and all other indigenous civilizations.",
+    "historiographic_note": "ETHICS: the term 'Pre-Columbian' centers European contact as the defining event. Indigenous American historiography increasingly uses region-specific periodizations that don't frame indigenous history around European arrival.",
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "sources": [
+      {"type": "ACADEMIC", "citation": "Mann, C. C. (2005). 1491: New Revelations of the Americas Before Columbus. Knopf."}
+    ]
+  }
+]

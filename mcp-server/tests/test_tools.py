@@ -60,6 +60,11 @@ EXPECTED_TOOL_NAMES = {
     # v0.5 similarity + date coverage
     "find_similar_entities",
     "events_date_coverage",
+    # v0.6 historical periods
+    "list_historical_periods",
+    "get_historical_period",
+    "get_historical_period_by_slug",
+    "periods_at_year",
 }
 
 
@@ -126,15 +131,15 @@ def test_base_url_default_when_env_empty(monkeypatch: pytest.MonkeyPatch) -> Non
 
 
 def test_tool_list_complete() -> None:
-    """Tutti e 27 i tools canonici v0.5 sono registrati."""
+    """Tutti e 31 i tools canonici v0.6 sono registrati."""
     names = {t.name for t in get_tools()}
     assert names == EXPECTED_TOOL_NAMES, (
         f"Missing or unexpected tools: {names ^ EXPECTED_TOOL_NAMES}"
     )
     # Bonus: nessun duplicato
     assert len(get_tools()) == len(EXPECTED_TOOL_NAMES)
-    # v0.5 additions: esattamente 27 tools
-    assert len(names) == 27
+    # v0.6 additions: esattamente 31 tools (was 27 in v0.5)
+    assert len(names) == 31
 
 
 def test_search_entities_tool_schema() -> None:
@@ -183,6 +188,10 @@ def test_required_params_for_path_tools() -> None:
     }
     # v0.5
     assert get_tool("find_similar_entities").input_schema["required"] == ["entity_id"]
+    # v0.6 periods
+    assert get_tool("get_historical_period").input_schema["required"] == ["period_id"]
+    assert get_tool("get_historical_period_by_slug").input_schema["required"] == ["slug"]
+    assert get_tool("periods_at_year").input_schema["required"] == ["year"]
 
 
 def test_descriptions_are_substantial() -> None:
@@ -614,6 +623,71 @@ async def test_find_similar_entities_handler() -> None:
     # Scores sorted descending
     scores = [s["similarity_score"] for s in result["similar"]]
     assert scores == sorted(scores, reverse=True)
+
+
+@pytest.mark.asyncio
+async def test_list_historical_periods_handler() -> None:
+    """list_historical_periods passes filters as query params."""
+    captured: dict[str, object] = {}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        captured["path"] = request.url.path
+        captured["url"] = str(request.url)
+        return httpx.Response(200, json={"total": 0, "periods": []})
+
+    client = _client_with_handler(handler)
+    try:
+        await get_tool("list_historical_periods").handler(
+            client,
+            {"region": "europe", "period_type": "era", "year": 1500},
+        )
+    finally:
+        await client.aclose()
+
+    assert captured["path"] == "/v1/periods"
+    url = str(captured["url"])
+    assert "region=europe" in url
+    assert "period_type=era" in url
+    assert "year=1500" in url
+
+
+@pytest.mark.asyncio
+async def test_periods_at_year_handler() -> None:
+    """periods_at_year hits /v1/periods/at-year/{year}."""
+    captured: dict[str, object] = {}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        captured["path"] = request.url.path
+        return httpx.Response(200, json={"year": 1500, "total": 0, "periods": []})
+
+    client = _client_with_handler(handler)
+    try:
+        await get_tool("periods_at_year").handler(client, {"year": 1500})
+    finally:
+        await client.aclose()
+
+    assert captured["path"] == "/v1/periods/at-year/1500"
+
+
+@pytest.mark.asyncio
+async def test_get_historical_period_by_slug_handler() -> None:
+    """get_historical_period_by_slug uses the slug in the path."""
+    captured: dict[str, object] = {}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        captured["path"] = request.url.path
+        return httpx.Response(200, json={"slug": "bronze-age", "name": "Bronze Age"})
+
+    client = _client_with_handler(handler)
+    try:
+        result = await get_tool("get_historical_period_by_slug").handler(
+            client, {"slug": "bronze-age"}
+        )
+    finally:
+        await client.aclose()
+
+    assert captured["path"] == "/v1/periods/by-slug/bronze-age"
+    assert result["slug"] == "bronze-age"
 
 
 # ------------------------------------------------------------------ #

@@ -723,3 +723,84 @@ class AiSuggestion(Base):
     created_at: Mapped[str] = mapped_column(String(50), nullable=False)
     reviewed_at: Mapped[str | None] = mapped_column(String(50), nullable=True)
     review_note: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+
+# ─── v6.27: Historical Periods (Epochs) ─────────────────────────────
+
+
+class HistoricalPeriod(Base):
+    """Structured historical period / epoch.
+
+    Esempi:
+      * "Bronze Age" (global, 3300-1200 BCE)
+      * "Classical Antiquity" (Mediterranean, 8th c. BCE - 5th c. CE)
+      * "Medieval Period" (Europe, 500-1500)
+      * "Edo Period" (Japan, 1603-1868)
+      * "Warring States Period" (China, -475 - -221)
+
+    ETHICS: le periodizzazioni sono costrutti storiografici, non fatti
+    oggettivi. Ogni periodo dichiara `region` (non globale di default),
+    `historiographic_note` con le controversie, e `confidence_score`.
+    La stessa epoca puo' avere definizioni diverse per regioni diverse
+    (es. "Middle Ages" in Europa vs "Heian Period" in Giappone).
+    """
+
+    __tablename__ = "historical_periods"
+    __table_args__ = (
+        Index("ix_periods_year_range", "year_start", "year_end"),
+        Index("ix_periods_region", "region"),
+        Index("ix_periods_period_type", "period_type"),
+        Index("ix_periods_slug", "slug"),
+        CheckConstraint(
+            "confidence_score >= 0.0 AND confidence_score <= 1.0",
+            name="ck_periods_confidence_range",
+        ),
+        CheckConstraint(
+            "year_end IS NULL OR year_end >= year_start",
+            name="ck_periods_year_order",
+        ),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+
+    # ETHICS: primary name is the commonly accepted English historiographic
+    # name for searchability; original_name_native preserves local form.
+    name: Mapped[str] = mapped_column(String(200), nullable=False, index=True)
+    name_lang: Mapped[str] = mapped_column(String(10), nullable=False, default="en")
+    # URL-friendly unique slug (e.g., "bronze-age", "edo-period")
+    slug: Mapped[str] = mapped_column(String(200), nullable=False, unique=True)
+
+    # Native-language name if different (e.g., "江戸時代" for Edo Period)
+    name_native: Mapped[str | None] = mapped_column(String(200), nullable=True)
+    name_native_lang: Mapped[str | None] = mapped_column(String(10), nullable=True)
+
+    # Period type: age (prehistoric), era (classical), period (specific),
+    # dynasty (rule-based), epoch (scientific). Used for filtering.
+    period_type: Mapped[str] = mapped_column(String(50), nullable=False, default="period")
+
+    # Region scope: "global", "europe", "asia_east", "asia_south", "mesoamerica",
+    # "near_east", "africa", "oceania", "americas", etc. "global" for planet-wide
+    # periods (e.g., Bronze Age broadly).
+    region: Mapped[str] = mapped_column(String(50), nullable=False, default="global")
+
+    year_start: Mapped[int] = mapped_column(Integer, nullable=False)
+    year_end: Mapped[int | None] = mapped_column(Integer, nullable=True)
+
+    description: Mapped[str] = mapped_column(Text, nullable=False)
+
+    # ETHICS: periodization disputes go here. "The term 'Dark Ages' is now
+    # contested in scholarship; this period uses the neutral 'Early Medieval
+    # Period'. For the Islamic Golden Age perspective see ..."
+    historiographic_note: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+    # Alternative names / competing periodizations: JSON list of dicts
+    # [{"name": "Dark Ages", "context": "older historiography, now contested"}]
+    alternative_names: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+    confidence_score: Mapped[float] = mapped_column(Float, nullable=False, default=0.8)
+    # confirmed (well-established), debated (boundaries contested),
+    # deprecated (older term superseded)
+    status: Mapped[str] = mapped_column(String(20), nullable=False, default="confirmed")
+
+    # JSON array of source citations
+    sources: Mapped[str | None] = mapped_column(Text, nullable=True)

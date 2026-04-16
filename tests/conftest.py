@@ -17,7 +17,7 @@ from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker
 
 from src.db.database import Base, get_db
-from src.db.seed import seed_database, seed_events_database
+from src.db.seed import seed_database, seed_events_database, seed_periods_database
 from src.main import app
 
 TEST_DATABASE_URL = "sqlite:///./data/test.db"
@@ -47,7 +47,7 @@ def setup_test_db():
     """Crea le tabelle e popola i dati demo per tutta la sessione di test."""
     Base.metadata.create_all(bind=test_engine)
 
-    from src.db.models import DynastyChain, GeoEntity, HistoricalEvent
+    from src.db.models import DynastyChain, GeoEntity, HistoricalEvent, HistoricalPeriod
     db = TestSession()
     if db.query(GeoEntity).count() == 0:
         from src.db import seed as seed_module
@@ -57,6 +57,9 @@ def setup_test_db():
         # v6.3: seed eventi storici (ETHICS-007 + ETHICS-008)
         if db.query(HistoricalEvent).count() == 0:
             seed_events_database()
+        # v6.27: seed historical periods
+        if db.query(HistoricalPeriod).count() == 0:
+            seed_periods_database()
         seed_module.SessionLocal = original
 
     # v6.5+: ingest chains (separate from seed — chains reference entities
