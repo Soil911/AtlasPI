@@ -675,3 +675,51 @@ class ApiRequestLog(Base):
     client_ip: Mapped[str] = mapped_column(String(45), nullable=False)  # IPv6 max 45 chars
     user_agent: Mapped[str | None] = mapped_column(String(1000), nullable=True)
     referer: Mapped[str | None] = mapped_column(String(2000), nullable=True)
+
+
+# ─── v6.16: AI Co-Founder Dashboard ─────────────────────────────────
+
+
+class AiSuggestion(Base):
+    """AI-generated suggestion for the co-founder dashboard.
+
+    The AI analysis agent populates this table with actionable suggestions
+    (geographic gaps, temporal gaps, low-confidence entities, missing chains,
+    etc.). The founder reviews and accepts/rejects/implements each suggestion
+    via the /admin/brief dashboard.
+
+    ETHICS: suggestions about adding entities or events must NOT bias the
+    dataset toward any particular cultural perspective. Geographic and
+    temporal gaps are identified objectively by comparing coverage across
+    ALL regions and eras equally.
+    """
+
+    __tablename__ = "ai_suggestions"
+    __table_args__ = (
+        Index("ix_ai_suggestions_status", "status"),
+        Index("ix_ai_suggestions_priority", "priority"),
+        Index("ix_ai_suggestions_category", "category"),
+        Index("ix_ai_suggestions_created", "created_at"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+
+    # Category: geographic_gap, temporal_gap, quality, traffic_pattern,
+    # missing_entity, missing_chain, low_confidence
+    category: Mapped[str] = mapped_column(String(50), nullable=False)
+    title: Mapped[str] = mapped_column(String(500), nullable=False)
+    description: Mapped[str] = mapped_column(Text, nullable=False)
+    detail_json: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+    # 1=critical, 2=high, 3=medium, 4=low, 5=info
+    priority: Mapped[int] = mapped_column(Integer, nullable=False, default=3)
+
+    # pending, accepted, rejected, implemented
+    status: Mapped[str] = mapped_column(String(20), nullable=False, default="pending")
+
+    # auto (from analysis agent), manual (from human)
+    source: Mapped[str] = mapped_column(String(20), nullable=False, default="auto")
+
+    created_at: Mapped[str] = mapped_column(String(50), nullable=False)
+    reviewed_at: Mapped[str | None] = mapped_column(String(50), nullable=True)
+    review_note: Mapped[str | None] = mapped_column(Text, nullable=True)

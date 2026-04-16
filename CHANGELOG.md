@@ -2,6 +2,82 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.16.0] - 2026-04-16
+
+**Tema**: *AI Co-Founder Dashboard — interfaccia strutturata per accettare, rifiutare e analizzare suggerimenti AI*
+
+### Nuova tabella DB
+
+- `ai_suggestions` — tabella persistente per suggerimenti generati dall'agente AI. Colonne: category, title, description, detail_json, priority (1-5), status (pending/accepted/rejected/implemented), source (auto/manual), created_at, reviewed_at, review_note. 4 indici per query efficienti
+- Migrazione Alembic `009_ai_suggestions` (revises 008_date_precision)
+
+### Nuovi endpoint API (6)
+
+- `GET /admin/brief` — dashboard HTML Co-Founder Brief (pagina singola, puro HTML/CSS/JS, dark theme)
+- `GET /admin/ai/suggestions` — lista suggerimenti con filtro opzionale per status, limit/offset, ordinamento per priorita'
+- `POST /admin/ai/suggestions/{id}/accept` — accetta un suggerimento (imposta status=accepted, reviewed_at=now)
+- `POST /admin/ai/suggestions/{id}/reject` — rifiuta un suggerimento (con nota opzionale)
+- `POST /admin/ai/suggestions/{id}/implement` — segna come implementato
+- `GET /admin/ai/status` — conteggi per status, health_summary (all_good / needs_attention / issues_found)
+
+### Dashboard HTML: /admin/brief
+
+- Pagina singola con dark theme (#0d1117, #161b22, accent #58a6ff)
+- Header con badge status dinamico (verde/giallo/rosso) e link navigazione
+- 4 KPI cards: entities, events, data completeness score, pending suggestions
+- Traffic Overview: richieste 24h/7d/30d, avg response time, top 5 endpoint, visitatori esterni
+- Data Quality: progress bars per boundary coverage, date precision, chain coverage
+- Geographic Coverage: tabella regioni con conteggio entita'
+- Confidence Distribution: istogrammi entita' + eventi per fascia di confidenza
+- **Sezione Suggestions (il cuore)**: tab-filter (All/Pending/Accepted/Rejected/Implemented), card per ogni suggerimento con badge priorita' colorato, tag categoria, bottoni Accept/Reject/Implement. Le azioni chiamano l'API via fetch() e aggiornano la UI senza reload
+- Agent Activity: timestamp ultima analisi, conteggi per status
+- Auto-refresh ogni 2 minuti
+- Mobile responsive (flexbox/grid)
+- Zero dipendenze esterne (puro HTML/CSS/JS)
+
+### Nuovo script
+
+- `scripts/ai_cofounder_analyze.py` — agente di analisi che genera suggerimenti intelligenti:
+  - Gap geografici (regioni sotto il 40% della media)
+  - Gap temporali (ere con 0 eventi o sotto il 30% della media)
+  - Entita'/eventi con confidence < 0.4
+  - Entita' senza confini (boundary_geojson)
+  - Entita' orfane (non in nessuna catena, solo se > 85% orfane)
+  - Pattern di traffico (404 ripetuti)
+  - **Deduplicazione**: non ricrea suggerimenti gia' pending/accepted con lo stesso titolo
+  - **Riduzione rumore**: se tutto va bene, produce 0 suggerimenti
+  - Uso: `python -m scripts.ai_cofounder_analyze`
+
+### Architettura
+
+- Nuovo modello `AiSuggestion` in `src/db/models.py`
+- Nuovo modulo `src/api/routes/admin_cofounder.py` con 6 endpoint
+- Registrazione in `src/main.py` tramite `admin_cofounder.router`
+- Nuovo file statico `static/admin/brief.html`
+- Dashboard serve via `FileResponse` (non HTML inline come analytics)
+
+### Test
+
+- `tests/test_v616_cofounder.py` — 29 nuovi test:
+  - Model CRUD: 4 test (create, update, detail_json, delete)
+  - API list/filter: 7 test (200 OK, campi, filtro pending/accepted/rejected, ordinamento priorita', limit/offset)
+  - API actions: 4 test (accept, reject, implement, 404 su inesistente)
+  - API status: 3 test (200 OK, valori health_summary, tipi conteggi)
+  - HTML dashboard: 3 test (200, content-type HTML, contiene titolo)
+  - Script analisi: 5 test (esecuzione, dedup, categorie, helper continent, helper era)
+  - Edge cases: 3 test (categorie valide, status validi, priorita' 1-5)
+
+### Delta
+
+| Metrica | v6.15.0 | v6.16.0 | Delta |
+|---------|---------|---------|-------|
+| Entita' | 850 | 850 | +0 |
+| Eventi | 275 | 275 | +0 |
+| Endpoint API | ~41 | ~47 | +6 |
+| Test | 798 | 827 | +29 |
+
+---
+
 ## [v6.15.0] - 2026-04-16
 
 **Tema**: *AI Co-Founder Intelligence Layer — analisi automatica di traffico, qualita' dati e suggerimenti*

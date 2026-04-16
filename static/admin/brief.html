@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AtlasPI Co-Founder Brief</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+<style>
+  /* ─── Reset & Base ──────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background: #0d1117; color: #c9d1d9; line-height: 1.6;
+    min-height: 100vh;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ─── Layout ────────────────────────────────────────────── */
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+  /* ─── Header ────────────────────────────────────────────── */
+  .header {
+    background: #161b22; border-bottom: 1px solid #30363d;
+    padding: 20px 0;
+  }
+  .header-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .header-left { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .header h1 {
+    font-size: 1.5rem; font-weight: 700; color: #f0f6fc;
+    letter-spacing: -0.5px;
+  }
+  .header h1 span { color: #58a6ff; }
+  .header-meta { font-size: 0.8rem; color: #8b949e; }
+  .header-right { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+
+  /* Status badge */
+  .status-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 14px; border-radius: 20px;
+    font-size: 0.8rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .status-badge .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .status-all-good { background: rgba(63,185,80,0.15); color: #3fb950; }
+  .status-all-good .dot { background: #3fb950; }
+  .status-needs-attention { background: rgba(210,153,34,0.15); color: #d29922; }
+  .status-needs-attention .dot { background: #d29922; }
+  .status-issues-found { background: rgba(248,81,73,0.15); color: #f85149; }
+  .status-issues-found .dot { background: #f85149; }
+
+  .nav-links { display: flex; gap: 8px; }
+  .nav-link {
+    font-size: 0.75rem; color: #8b949e; padding: 4px 10px;
+    border: 1px solid #30363d; border-radius: 6px; transition: all 0.2s;
+  }
+  .nav-link:hover { color: #58a6ff; border-color: #58a6ff; text-decoration: none; }
+
+  /* ─── Main ──────────────────────────────────────────────── */
+  .main { padding: 24px 0 60px; }
+
+  /* ─── KPI Cards ─────────────────────────────────────────── */
+  .kpi-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px; margin-bottom: 28px;
+  }
+  .kpi-card {
+    background: #161b22; border: 1px solid #30363d; border-radius: 8px;
+    padding: 20px; transition: border-color 0.2s;
+  }
+  .kpi-card:hover { border-color: #58a6ff; }
+  .kpi-label {
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.8px;
+    color: #8b949e; margin-bottom: 6px;
+  }
+  .kpi-value {
+    font-size: 1.8rem; font-weight: 700; color: #f0f6fc;
+    font-variant-numeric: tabular-nums;
+  }
+  .kpi-sub { font-size: 0.75rem; color: #8b949e; margin-top: 4px; }
+
+  /* ─── Section ───────────────────────────────────────────── */
+  .section {
+    background: #161b22; border: 1px solid #30363d; border-radius: 8px;
+    margin-bottom: 24px; overflow: hidden;
+  }
+  .section-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 20px; border-bottom: 1px solid #30363d;
+  }
+  .section-title {
+    font-size: 0.95rem; font-weight: 600; color: #f0f6fc;
+  }
+  .section-body { padding: 20px; }
+
+  /* ─── Progress bars ─────────────────────────────────────── */
+  .progress-row {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 14px;
+  }
+  .progress-label {
+    min-width: 160px; font-size: 0.8rem; color: #c9d1d9;
+  }
+  .progress-bar-track {
+    flex: 1; height: 8px; background: #21262d; border-radius: 4px;
+    overflow: hidden;
+  }
+  .progress-bar-fill {
+    height: 100%; border-radius: 4px; transition: width 0.6s ease;
+  }
+  .progress-pct {
+    min-width: 50px; text-align: right; font-size: 0.8rem;
+    font-weight: 600; color: #f0f6fc;
+    font-variant-numeric: tabular-nums;
+  }
+  .bar-green { background: #3fb950; }
+  .bar-yellow { background: #d29922; }
+  .bar-red { background: #f85149; }
+  .bar-blue { background: #58a6ff; }
+
+  /* ─── Tables ────────────────────────────────────────────── */
+  .data-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+  .data-table th {
+    text-align: left; padding: 8px 12px; color: #8b949e;
+    font-weight: 600; font-size: 0.7rem; text-transform: uppercase;
+    letter-spacing: 0.5px; border-bottom: 1px solid #30363d;
+  }
+  .data-table td {
+    padding: 8px 12px; border-bottom: 1px solid #21262d;
+    color: #c9d1d9;
+  }
+  .data-table tr:hover td { background: rgba(88,166,255,0.04); }
+  .data-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .mono { font-family: 'SFMono-Regular', 'Consolas', 'Monaco', monospace; font-size: 0.78rem; }
+
+  /* ─── Suggestion Cards ──────────────────────────────────── */
+  .suggestion-tabs {
+    display: flex; gap: 4px; padding: 12px 20px; border-bottom: 1px solid #30363d;
+    overflow-x: auto;
+  }
+  .tab-btn {
+    padding: 6px 14px; border-radius: 6px; border: 1px solid transparent;
+    background: transparent; color: #8b949e; font-size: 0.78rem;
+    cursor: pointer; transition: all 0.2s; white-space: nowrap;
+  }
+  .tab-btn:hover { color: #c9d1d9; background: #21262d; }
+  .tab-btn.active {
+    color: #f0f6fc; background: #21262d; border-color: #30363d;
+  }
+  .tab-count {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 18px; height: 18px; padding: 0 5px;
+    border-radius: 10px; font-size: 0.65rem; font-weight: 600;
+    margin-left: 4px;
+  }
+  .tab-count-pending { background: rgba(210,153,34,0.2); color: #d29922; }
+  .tab-count-default { background: rgba(139,148,158,0.15); color: #8b949e; }
+
+  .suggestion-list { padding: 16px 20px; }
+  .suggestion-empty {
+    text-align: center; padding: 40px 20px; color: #8b949e;
+  }
+  .suggestion-empty-icon { font-size: 2rem; margin-bottom: 8px; display: block; }
+
+  .sug-card {
+    display: flex; gap: 14px; padding: 16px;
+    border: 1px solid #30363d; border-radius: 8px;
+    margin-bottom: 12px; transition: border-color 0.2s;
+    align-items: flex-start;
+  }
+  .sug-card:hover { border-color: #484f58; }
+  .sug-card.status-accepted { border-left: 3px solid #3fb950; }
+  .sug-card.status-rejected { border-left: 3px solid #f85149; opacity: 0.7; }
+  .sug-card.status-implemented { border-left: 3px solid #58a6ff; opacity: 0.8; }
+
+  .sug-priority {
+    width: 10px; height: 10px; border-radius: 50%;
+    flex-shrink: 0; margin-top: 6px;
+  }
+  .prio-1 { background: #f85149; }
+  .prio-2 { background: #db6d28; }
+  .prio-3 { background: #d29922; }
+  .prio-4 { background: #58a6ff; }
+  .prio-5 { background: #8b949e; }
+
+  .sug-content { flex: 1; min-width: 0; }
+  .sug-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
+  .sug-title { font-weight: 600; color: #f0f6fc; font-size: 0.88rem; }
+  .sug-tag {
+    font-size: 0.65rem; padding: 2px 8px; border-radius: 10px;
+    background: rgba(88,166,255,0.12); color: #58a6ff;
+    text-transform: uppercase; letter-spacing: 0.3px;
+  }
+  .sug-status-tag {
+    font-size: 0.65rem; padding: 2px 8px; border-radius: 10px;
+    text-transform: uppercase; letter-spacing: 0.3px;
+  }
+  .sug-status-accepted { background: rgba(63,185,80,0.12); color: #3fb950; }
+  .sug-status-rejected { background: rgba(248,81,73,0.12); color: #f85149; }
+  .sug-status-implemented { background: rgba(88,166,255,0.12); color: #58a6ff; }
+  .sug-desc { font-size: 0.8rem; color: #8b949e; margin-bottom: 8px; line-height: 1.5; }
+  .sug-meta { font-size: 0.7rem; color: #484f58; }
+
+  .sug-actions { display: flex; gap: 6px; flex-shrink: 0; align-items: flex-start; }
+  .sug-btn {
+    padding: 5px 12px; border-radius: 6px; border: 1px solid #30363d;
+    background: #21262d; color: #c9d1d9; font-size: 0.75rem;
+    cursor: pointer; transition: all 0.2s; white-space: nowrap;
+  }
+  .sug-btn:hover { border-color: #58a6ff; color: #f0f6fc; }
+  .sug-btn-accept:hover { border-color: #3fb950; color: #3fb950; }
+  .sug-btn-reject:hover { border-color: #f85149; color: #f85149; }
+  .sug-btn-implement:hover { border-color: #a371f7; color: #a371f7; }
+  .sug-btn:disabled { opacity: 0.4; cursor: default; }
+
+  /* ─── Confidence histogram ──────────────────────────────── */
+  .conf-hist { display: flex; gap: 4px; align-items: flex-end; height: 60px; }
+  .conf-bar {
+    flex: 1; background: #58a6ff; border-radius: 3px 3px 0 0;
+    position: relative; min-height: 2px; transition: height 0.5s ease;
+  }
+  .conf-bar-label {
+    position: absolute; bottom: -18px; left: 50%; transform: translateX(-50%);
+    font-size: 0.6rem; color: #8b949e; white-space: nowrap;
+  }
+  .conf-bar-count {
+    position: absolute; top: -16px; left: 50%; transform: translateX(-50%);
+    font-size: 0.65rem; color: #c9d1d9; font-weight: 600;
+  }
+
+  /* ─── Grid layout for side-by-side sections ─────────────── */
+  .grid-2 {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  }
+
+  /* ─── Loading ───────────────────────────────────────────── */
+  .loading-spinner {
+    display: flex; justify-content: center; padding: 40px;
+  }
+  .spinner {
+    width: 32px; height: 32px; border: 3px solid #30363d;
+    border-top-color: #58a6ff; border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  #loading-overlay {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: #0d1117; z-index: 999;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+  #loading-overlay .spinner { width: 40px; height: 40px; }
+  #loading-overlay p { margin-top: 16px; color: #8b949e; font-size: 0.85rem; }
+
+  /* ─── Toast ─────────────────────────────────────────────── */
+  .toast {
+    position: fixed; bottom: 24px; right: 24px;
+    padding: 12px 20px; border-radius: 8px;
+    font-size: 0.8rem; font-weight: 500; z-index: 100;
+    transform: translateY(80px); opacity: 0;
+    transition: all 0.3s ease;
+  }
+  .toast.show { transform: translateY(0); opacity: 1; }
+  .toast-success { background: #238636; color: #fff; }
+  .toast-error { background: #da3633; color: #fff; }
+
+  /* ─── Responsive ────────────────────────────────────────── */
+  @media (max-width: 768px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .header-inner { flex-direction: column; align-items: flex-start; }
+    .sug-card { flex-direction: column; }
+    .sug-actions { width: 100%; }
+    .progress-label { min-width: 100px; }
+  }
+  @media (max-width: 480px) {
+    .kpi-grid { grid-template-columns: 1fr; }
+    .container { padding: 0 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="loading-overlay">
+  <div class="spinner"></div>
+  <p>Loading Co-Founder Brief...</p>
+</div>
+
+<!-- ─── HEADER ────────────────────────────────────────── -->
+<header class="header">
+  <div class="container header-inner">
+    <div class="header-left">
+      <h1>Atlas<span>PI</span> Co-Founder Brief</h1>
+      <span class="header-meta" id="header-meta">Loading...</span>
+    </div>
+    <div class="header-right">
+      <div id="status-badge" class="status-badge status-all-good">
+        <span class="dot"></span>
+        <span id="status-text">Loading</span>
+      </div>
+      <div class="nav-links">
+        <a href="/admin/analytics" class="nav-link">Analytics</a>
+        <a href="/docs" class="nav-link">API Docs</a>
+        <a href="/" class="nav-link">Home</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ─── MAIN ──────────────────────────────────────────── -->
+<main class="main">
+  <div class="container">
+
+    <!-- KPI Cards -->
+    <div class="kpi-grid" id="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">Entities</div>
+        <div class="kpi-value" id="kpi-entities">--</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Events</div>
+        <div class="kpi-value" id="kpi-events">--</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Data Completeness</div>
+        <div class="kpi-value" id="kpi-completeness">--</div>
+        <div class="kpi-sub" id="kpi-completeness-sub"></div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Pending Suggestions</div>
+        <div class="kpi-value" id="kpi-pending">--</div>
+        <div class="kpi-sub" id="kpi-pending-sub"></div>
+      </div>
+    </div>
+
+    <!-- Traffic + Data Quality side by side -->
+    <div class="grid-2">
+
+      <!-- Traffic Section -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-title">Traffic Overview</span>
+        </div>
+        <div class="section-body" id="traffic-body">
+          <div class="loading-spinner"><div class="spinner"></div></div>
+        </div>
+      </div>
+
+      <!-- Data Quality Section -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-title">Data Quality</span>
+        </div>
+        <div class="section-body" id="quality-body">
+          <div class="loading-spinner"><div class="spinner"></div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Geographic + Temporal Coverage side by side -->
+    <div class="grid-2">
+
+      <div class="section">
+        <div class="section-header">
+          <span class="section-title">Geographic Coverage</span>
+        </div>
+        <div class="section-body" id="geo-body">
+          <div class="loading-spinner"><div class="spinner"></div></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-header">
+          <span class="section-title">Confidence Distribution</span>
+        </div>
+        <div class="section-body" id="conf-body">
+          <div class="loading-spinner"><div class="spinner"></div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Suggestions Section (THE KEY PART) -->
+    <div class="section" id="suggestions-section">
+      <div class="section-header">
+        <span class="section-title">AI Suggestions</span>
+        <span class="header-meta" id="sug-count-header"></span>
+      </div>
+      <div class="suggestion-tabs" id="sug-tabs">
+        <button class="tab-btn active" data-status="all">All</button>
+        <button class="tab-btn" data-status="pending">Pending <span class="tab-count tab-count-pending" id="tab-pending-count">0</span></button>
+        <button class="tab-btn" data-status="accepted">Accepted <span class="tab-count tab-count-default" id="tab-accepted-count">0</span></button>
+        <button class="tab-btn" data-status="rejected">Rejected <span class="tab-count tab-count-default" id="tab-rejected-count">0</span></button>
+        <button class="tab-btn" data-status="implemented">Implemented <span class="tab-count tab-count-default" id="tab-implemented-count">0</span></button>
+      </div>
+      <div class="suggestion-list" id="sug-list">
+        <div class="loading-spinner"><div class="spinner"></div></div>
+      </div>
+    </div>
+
+    <!-- Agent Activity -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Agent Activity</span>
+      </div>
+      <div class="section-body" id="agent-body">
+        <div class="loading-spinner"><div class="spinner"></div></div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════════
+   AtlasPI Co-Founder Brief — Pure JS Dashboard
+   ═══════════════════════════════════════════════════════════════════ */
+
+// ─── State ───────────────────────────────────────────────────────
+let allSuggestions = [];
+let currentTab = 'all';
+let statusData = null;
+
+// ─── Helpers ─────────────────────────────────────────────────────
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+function fmt(n) { return (n || 0).toLocaleString(); }
+function fmtPct(n) { return (n || 0).toFixed(1) + '%'; }
+function timeAgo(iso) {
+  if (!iso) return 'Never';
+  const d = new Date(iso);
+  const diff = Date.now() - d.getTime();
+  const mins = Math.floor(diff / 60000);
+  if (mins < 1) return 'Just now';
+  if (mins < 60) return mins + 'm ago';
+  const hrs = Math.floor(mins / 60);
+  if (hrs < 24) return hrs + 'h ago';
+  const days = Math.floor(hrs / 24);
+  return days + 'd ago';
+}
+function shortDate(iso) {
+  if (!iso) return '-';
+  try { return new Date(iso).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }); }
+  catch(e) { return iso.slice(0, 10); }
+}
+function barColor(pct) {
+  if (pct >= 80) return 'bar-green';
+  if (pct >= 50) return 'bar-yellow';
+  return 'bar-red';
+}
+
+function showToast(msg, type) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast toast-' + type + ' show';
+  setTimeout(() => { t.className = 'toast'; }, 3000);
+}
+
+// ─── API calls ───────────────────────────────────────────────────
+async function fetchJSON(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+  return res.json();
+}
+
+async function postAction(sugId, action, note) {
+  let url = '/admin/ai/suggestions/' + sugId + '/' + action;
+  if (note) url += '?note=' + encodeURIComponent(note);
+  const res = await fetch(url, { method: 'POST' });
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+  return res.json();
+}
+
+// ─── Load all data ───────────────────────────────────────────────
+async function loadDashboard() {
+  try {
+    const [coverage, insights, sugStatus, suggestions] = await Promise.all([
+      fetchJSON('/admin/coverage-report'),
+      fetchJSON('/admin/insights'),
+      fetchJSON('/admin/ai/status'),
+      fetchJSON('/admin/ai/suggestions?limit=500'),
+    ]);
+
+    statusData = sugStatus;
+    allSuggestions = suggestions.suggestions || [];
+
+    renderHeader(sugStatus, coverage);
+    renderKPIs(coverage, sugStatus);
+    renderTraffic(insights);
+    renderQuality(coverage);
+    renderGeo(coverage);
+    renderConfidence(coverage);
+    renderSuggestions();
+    renderAgent(sugStatus);
+
+    document.getElementById('loading-overlay').style.display = 'none';
+  } catch(e) {
+    console.error('Dashboard load error:', e);
+    document.getElementById('loading-overlay').querySelector('p').textContent =
+      'Error loading data. Retrying in 5s...';
+    setTimeout(loadDashboard, 5000);
+  }
+}
+
+// ─── Renderers ───────────────────────────────────────────────────
+
+function renderHeader(status, coverage) {
+  const badge = document.getElementById('status-badge');
+  const txt = document.getElementById('status-text');
+  const meta = document.getElementById('header-meta');
+
+  badge.className = 'status-badge';
+  if (status.health_summary === 'all_good') {
+    badge.classList.add('status-all-good');
+    txt.textContent = 'All Good';
+  } else if (status.health_summary === 'needs_attention') {
+    badge.classList.add('status-needs-attention');
+    txt.textContent = 'Needs Attention';
+  } else {
+    badge.classList.add('status-issues-found');
+    txt.textContent = 'Issues Found';
+  }
+
+  meta.textContent = 'Last analysis: ' + (status.last_analysis_time ? timeAgo(status.last_analysis_time) : 'No analysis yet') +
+    ' | Generated: ' + new Date().toLocaleTimeString();
+}
+
+function renderKPIs(coverage, status) {
+  document.getElementById('kpi-entities').textContent = fmt(coverage.totals.entities);
+  document.getElementById('kpi-events').textContent = fmt(coverage.totals.events);
+
+  const score = coverage.data_completeness_score;
+  document.getElementById('kpi-completeness').textContent = score.toFixed(1) + '/100';
+  document.getElementById('kpi-completeness-sub').textContent =
+    fmt(coverage.totals.chains) + ' chains, ' + fmt(coverage.totals.cities) + ' cities, ' +
+    fmt(coverage.totals.trade_routes) + ' routes';
+
+  document.getElementById('kpi-pending').textContent = fmt(status.pending_count);
+  document.getElementById('kpi-pending-sub').textContent =
+    fmt(status.accepted_count) + ' accepted, ' + fmt(status.implemented_count) + ' implemented';
+}
+
+function renderTraffic(insights) {
+  const ts = insights.traffic_summary;
+  const top5 = (insights.top_endpoints || []).slice(0, 5);
+  const ext = (insights.external_users || []).slice(0, 5);
+
+  let html = '<div style="margin-bottom:16px;">';
+  html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;">';
+  html += '<div><span style="color:#8b949e;font-size:0.7rem;text-transform:uppercase;">24h</span><br><span style="font-size:1.2rem;font-weight:700;color:#f0f6fc;">' + fmt(ts.total_24h) + '</span></div>';
+  html += '<div><span style="color:#8b949e;font-size:0.7rem;text-transform:uppercase;">7d</span><br><span style="font-size:1.2rem;font-weight:700;color:#f0f6fc;">' + fmt(ts.total_7d) + '</span></div>';
+  html += '<div><span style="color:#8b949e;font-size:0.7rem;text-transform:uppercase;">30d</span><br><span style="font-size:1.2rem;font-weight:700;color:#f0f6fc;">' + fmt(ts.total_30d) + '</span></div>';
+  html += '<div><span style="color:#8b949e;font-size:0.7rem;text-transform:uppercase;">Avg Response</span><br><span style="font-size:1.2rem;font-weight:700;color:#f0f6fc;">' + (ts.avg_response_time_ms_30d || 0).toFixed(1) + ' ms</span></div>';
+  html += '</div></div>';
+
+  if (top5.length) {
+    html += '<table class="data-table"><thead><tr><th>Endpoint</th><th class="num">Hits</th><th class="num">Avg ms</th></tr></thead><tbody>';
+    top5.forEach(r => {
+      html += '<tr><td class="mono">' + esc(r.path) + '</td><td class="num">' + fmt(r.hits) + '</td><td class="num">' + (r.avg_ms || 0).toFixed(1) + '</td></tr>';
+    });
+    html += '</tbody></table>';
+  }
+
+  if (ext.length) {
+    html += '<div style="margin-top:12px;font-size:0.7rem;color:#8b949e;text-transform:uppercase;margin-bottom:4px;">External Visitors (30d)</div>';
+    html += '<div style="font-size:0.8rem;color:#c9d1d9;">';
+    ext.forEach(u => {
+      html += '<span class="mono" style="margin-right:12px;">' + esc(u.ip) + '</span> <span style="color:#8b949e;">' + u.hits + ' hits</span><br>';
+    });
+    html += '</div>';
+  }
+
+  document.getElementById('traffic-body').innerHTML = html;
+}
+
+function renderQuality(coverage) {
+  const bc = coverage.boundary_coverage;
+  const dp = coverage.date_precision_coverage;
+  const cc = coverage.chain_coverage;
+
+  let html = '';
+
+  // Boundary coverage
+  html += makeProgress('Boundary Coverage', bc.percentage, bc.with_boundary + '/' + bc.total_entities + ' entities');
+  // Date precision
+  html += makeProgress('Date Precision (sub-annual)', dp.sub_annual_percentage,
+    dp.sub_annual_count + ' events with day/month/season');
+  // Chain coverage
+  html += makeProgress('Chain Coverage', cc.chain_coverage_pct,
+    cc.entities_in_chains + ' entities in chains, ' + cc.orphan_entities + ' orphans');
+
+  document.getElementById('quality-body').innerHTML = html;
+}
+
+function makeProgress(label, pct, subtext) {
+  const cls = barColor(pct);
+  let h = '<div class="progress-row">';
+  h += '<span class="progress-label">' + esc(label) + '</span>';
+  h += '<div class="progress-bar-track"><div class="progress-bar-fill ' + cls + '" style="width:' + Math.min(pct, 100) + '%;"></div></div>';
+  h += '<span class="progress-pct">' + fmtPct(pct) + '</span>';
+  h += '</div>';
+  if (subtext) {
+    h += '<div style="margin-top:-8px;margin-bottom:14px;padding-left:172px;font-size:0.7rem;color:#8b949e;">' + esc(subtext) + '</div>';
+  }
+  return h;
+}
+
+function renderGeo(coverage) {
+  const regions = coverage.by_region || [];
+  if (!regions.length) {
+    document.getElementById('geo-body').innerHTML = '<p style="color:#8b949e;">No geographic data.</p>';
+    return;
+  }
+  let html = '<table class="data-table"><thead><tr><th>Region</th><th class="num">Entities</th></tr></thead><tbody>';
+  regions.forEach(r => {
+    html += '<tr><td>' + esc(r.region) + '</td><td class="num">' + fmt(r.entity_count) + '</td></tr>';
+  });
+  html += '</tbody></table>';
+  document.getElementById('geo-body').innerHTML = html;
+}
+
+function renderConfidence(coverage) {
+  const cd = coverage.confidence_distribution;
+  if (!cd) {
+    document.getElementById('conf-body').innerHTML = '<p style="color:#8b949e;">No confidence data.</p>';
+    return;
+  }
+
+  const buckets = cd.entities || {};
+  const labels = ['0.0-0.3', '0.3-0.5', '0.5-0.7', '0.7-0.9', '0.9-1.0'];
+  const colors = ['#f85149', '#db6d28', '#d29922', '#58a6ff', '#3fb950'];
+  const maxVal = Math.max(1, ...labels.map(l => buckets[l] || 0));
+
+  let html = '<div style="margin-bottom:8px;font-size:0.75rem;color:#8b949e;">Entities by confidence score</div>';
+  html += '<div class="conf-hist" style="padding-top:20px;padding-bottom:24px;">';
+  labels.forEach((l, i) => {
+    const val = buckets[l] || 0;
+    const h = Math.max(2, (val / maxVal) * 60);
+    html += '<div class="conf-bar" style="height:' + h + 'px;background:' + colors[i] + ';">';
+    html += '<span class="conf-bar-count">' + val + '</span>';
+    html += '<span class="conf-bar-label">' + l + '</span>';
+    html += '</div>';
+  });
+  html += '</div>';
+
+  // Events confidence
+  const evBuckets = cd.events || {};
+  html += '<div style="margin-top:16px;margin-bottom:8px;font-size:0.75rem;color:#8b949e;">Events by confidence score</div>';
+  const evMax = Math.max(1, ...labels.map(l => evBuckets[l] || 0));
+  html += '<div class="conf-hist" style="padding-top:20px;padding-bottom:24px;">';
+  labels.forEach((l, i) => {
+    const val = evBuckets[l] || 0;
+    const h = Math.max(2, (val / evMax) * 60);
+    html += '<div class="conf-bar" style="height:' + h + 'px;background:' + colors[i] + ';">';
+    html += '<span class="conf-bar-count">' + val + '</span>';
+    html += '<span class="conf-bar-label">' + l + '</span>';
+    html += '</div>';
+  });
+  html += '</div>';
+
+  document.getElementById('conf-body').innerHTML = html;
+}
+
+function renderSuggestions() {
+  // Update tab counts
+  const counts = { all: allSuggestions.length, pending: 0, accepted: 0, rejected: 0, implemented: 0 };
+  allSuggestions.forEach(s => { if (counts[s.status] !== undefined) counts[s.status]++; });
+
+  document.getElementById('tab-pending-count').textContent = counts.pending;
+  document.getElementById('tab-accepted-count').textContent = counts.accepted;
+  document.getElementById('tab-rejected-count').textContent = counts.rejected;
+  document.getElementById('tab-implemented-count').textContent = counts.implemented;
+  document.getElementById('sug-count-header').textContent = counts.all + ' total';
+
+  // Filter
+  const filtered = currentTab === 'all' ? allSuggestions : allSuggestions.filter(s => s.status === currentTab);
+
+  const list = document.getElementById('sug-list');
+
+  if (!filtered.length) {
+    if (currentTab === 'all' || currentTab === 'pending') {
+      list.innerHTML = '<div class="suggestion-empty"><span class="suggestion-empty-icon">&#10003;</span>All good! No pending suggestions.</div>';
+    } else {
+      list.innerHTML = '<div class="suggestion-empty">No ' + currentTab + ' suggestions.</div>';
+    }
+    return;
+  }
+
+  let html = '';
+  filtered.forEach(s => {
+    const prioLabels = { 1: 'Critical', 2: 'High', 3: 'Medium', 4: 'Low', 5: 'Info' };
+    html += '<div class="sug-card status-' + esc(s.status) + '" data-id="' + s.id + '">';
+    html += '<div class="sug-priority prio-' + s.priority + '" title="Priority: ' + prioLabels[s.priority] + '"></div>';
+    html += '<div class="sug-content">';
+    html += '<div class="sug-top">';
+    html += '<span class="sug-title">' + esc(s.title) + '</span>';
+    html += '<span class="sug-tag">' + esc(s.category.replace(/_/g, ' ')) + '</span>';
+    if (s.status !== 'pending') {
+      const stCls = 'sug-status-' + s.status;
+      html += '<span class="sug-status-tag ' + stCls + '">' + esc(s.status) + '</span>';
+    }
+    html += '</div>';
+    html += '<div class="sug-desc">' + esc(s.description) + '</div>';
+    html += '<div class="sug-meta">' + shortDate(s.created_at);
+    if (s.reviewed_at) html += ' | Reviewed: ' + shortDate(s.reviewed_at);
+    if (s.review_note) html += ' | Note: ' + esc(s.review_note);
+    html += '</div>';
+    html += '</div>';
+
+    // Action buttons
+    html += '<div class="sug-actions">';
+    if (s.status === 'pending') {
+      html += '<button class="sug-btn sug-btn-accept" onclick="doAction(' + s.id + ',\'accept\')" title="Accept">&#10003; Accept</button>';
+      html += '<button class="sug-btn sug-btn-reject" onclick="doAction(' + s.id + ',\'reject\')" title="Reject">&#10007; Reject</button>';
+    } else if (s.status === 'accepted') {
+      html += '<button class="sug-btn sug-btn-implement" onclick="doAction(' + s.id + ',\'implement\')" title="Mark Implemented">&#9733; Implement</button>';
+    }
+    html += '</div>';
+    html += '</div>';
+  });
+  list.innerHTML = html;
+}
+
+function renderAgent(status) {
+  let html = '';
+  if (status.last_analysis_time) {
+    html += '<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">';
+    html += '<div style="width:8px;height:8px;border-radius:50%;background:#3fb950;"></div>';
+    html += '<span style="font-size:0.85rem;color:#c9d1d9;">Last analysis: <strong>' + shortDate(status.last_analysis_time) + '</strong> (' + timeAgo(status.last_analysis_time) + ')</span>';
+    html += '</div>';
+  } else {
+    html += '<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">';
+    html += '<div style="width:8px;height:8px;border-radius:50%;background:#8b949e;"></div>';
+    html += '<span style="font-size:0.85rem;color:#8b949e;">No analysis has been run yet. Run: <code style="background:#21262d;padding:2px 6px;border-radius:4px;font-size:0.8rem;">python -m scripts.ai_cofounder_analyze</code></span>';
+    html += '</div>';
+  }
+
+  html += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-top:12px;">';
+  html += '<div style="background:#21262d;padding:12px;border-radius:6px;text-align:center;">';
+  html += '<div style="font-size:1.2rem;font-weight:700;color:#f0f6fc;">' + fmt(status.total_count) + '</div>';
+  html += '<div style="font-size:0.7rem;color:#8b949e;text-transform:uppercase;">Total</div></div>';
+  html += '<div style="background:#21262d;padding:12px;border-radius:6px;text-align:center;">';
+  html += '<div style="font-size:1.2rem;font-weight:700;color:#d29922;">' + fmt(status.pending_count) + '</div>';
+  html += '<div style="font-size:0.7rem;color:#8b949e;text-transform:uppercase;">Pending</div></div>';
+  html += '<div style="background:#21262d;padding:12px;border-radius:6px;text-align:center;">';
+  html += '<div style="font-size:1.2rem;font-weight:700;color:#3fb950;">' + fmt(status.accepted_count) + '</div>';
+  html += '<div style="font-size:0.7rem;color:#8b949e;text-transform:uppercase;">Accepted</div></div>';
+  html += '<div style="background:#21262d;padding:12px;border-radius:6px;text-align:center;">';
+  html += '<div style="font-size:1.2rem;font-weight:700;color:#58a6ff;">' + fmt(status.implemented_count) + '</div>';
+  html += '<div style="font-size:0.7rem;color:#8b949e;text-transform:uppercase;">Implemented</div></div>';
+  html += '</div>';
+
+  document.getElementById('agent-body').innerHTML = html;
+}
+
+// ─── Actions ─────────────────────────────────────────────────────
+
+async function doAction(id, action) {
+  try {
+    await postAction(id, action);
+    // Update local state
+    const s = allSuggestions.find(x => x.id === id);
+    if (s) {
+      s.status = (action === 'accept') ? 'accepted' : (action === 'reject') ? 'rejected' : 'implemented';
+      s.reviewed_at = new Date().toISOString();
+    }
+    renderSuggestions();
+
+    // Refresh status
+    statusData = await fetchJSON('/admin/ai/status');
+    renderHeader(statusData, null);
+    renderAgent(statusData);
+    document.getElementById('kpi-pending').textContent = fmt(statusData.pending_count);
+    document.getElementById('kpi-pending-sub').textContent =
+      fmt(statusData.accepted_count) + ' accepted, ' + fmt(statusData.implemented_count) + ' implemented';
+
+    const labels = { accept: 'accepted', reject: 'rejected', implement: 'implemented' };
+    showToast('Suggestion ' + labels[action], 'success');
+  } catch(e) {
+    console.error('Action error:', e);
+    showToast('Failed to ' + action + ' suggestion', 'error');
+  }
+}
+
+// ─── Tab switching ───────────────────────────────────────────────
+document.getElementById('sug-tabs').addEventListener('click', (e) => {
+  const btn = e.target.closest('.tab-btn');
+  if (!btn) return;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentTab = btn.dataset.status;
+  renderSuggestions();
+});
+
+// ─── renderHeader: handle coverage being null on subsequent calls
+const _origRenderHeader = renderHeader;
+renderHeader = function(status, coverage) {
+  if (!coverage) {
+    // Only update status badge, not coverage-dependent stuff
+    const badge = document.getElementById('status-badge');
+    const txt = document.getElementById('status-text');
+    badge.className = 'status-badge';
+    if (status.health_summary === 'all_good') {
+      badge.classList.add('status-all-good');
+      txt.textContent = 'All Good';
+    } else if (status.health_summary === 'needs_attention') {
+      badge.classList.add('status-needs-attention');
+      txt.textContent = 'Needs Attention';
+    } else {
+      badge.classList.add('status-issues-found');
+      txt.textContent = 'Issues Found';
+    }
+    return;
+  }
+  _origRenderHeader(status, coverage);
+};
+
+// ─── Initial load + auto-refresh ─────────────────────────────────
+loadDashboard();
+setInterval(loadDashboard, 120000); // Refresh every 2 minutes
+</script>
+</body>
+</html>
