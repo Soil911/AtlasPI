@@ -128,6 +128,22 @@
         <fieldset class="filter-control overlay-control">
           <legend>Overlay:</legend>
           <label class="overlay-toggle">
+            <input type="checkbox" id="events-overlay-toggle" aria-describedby="events-overlay-hint" />
+            <span>Mostra eventi storici</span>
+          </label>
+          <div id="events-overlay-hint" class="overlay-hint" aria-hidden="true">
+            Battaglie, trattati, fondazioni e altri eventi nell'anno selezionato.
+          </div>
+          <div id="events-overlay-legend" class="events-overlay-legend hidden" aria-hidden="true">
+            <span class="ev-legend-item"><span class="ev-legend-dot ev-battle"></span> Battaglia/Assedio</span>
+            <span class="ev-legend-item"><span class="ev-legend-dot ev-treaty"></span> Trattato/Diplomazia</span>
+            <span class="ev-legend-item"><span class="ev-legend-dot ev-founding"></span> Fondazione</span>
+            <span class="ev-legend-item"><span class="ev-legend-dot ev-violence"></span> Violenza/Genocidio</span>
+            <span class="ev-legend-item"><span class="ev-legend-dot ev-disaster"></span> Disastro naturale</span>
+            <span class="ev-legend-item"><span class="ev-legend-dot ev-culture"></span> Cultura/Religione</span>
+            <span class="ev-legend-item"><span class="ev-legend-dot ev-other"></span> Altro</span>
+          </div>
+          <label class="overlay-toggle">
             <input type="checkbox" id="trade-routes-toggle" aria-describedby="trade-routes-hint" />
             <span>Mostra rotte commerciali</span>
           </label>
@@ -226,7 +242,7 @@
       <span class="legend-item" aria-hidden="true">&#9473; Reale</span>
       <span class="legend-item" aria-hidden="true">&#9476; Approssimato</span>
     </div>
-    <span class="footer-note">AtlasPI v6.16.0 &mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie &middot; 23 tools MCP</span>
+    <span class="footer-note">AtlasPI v6.23.0 &mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie &middot; 23 tools MCP</span>
   </footer>
 
   <noscript>

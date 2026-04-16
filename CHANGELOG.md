@@ -2,6 +2,56 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.23.0] - 2026-04-16
+
+**Tema**: *Events on Map + Ancient Data Expansion*
+
+### Events Overlay on Map
+
+- **Nuovo toggle "Mostra eventi storici"** nella sidebar overlay — attiva/disattiva marker eventi sulla mappa Leaflet
+- **Marker per tipo di evento**: icone e colori distinti per battaglie (rosso ⚔️), trattati (blu 📜), fondazioni (verde 🏛️), violenze (rosso scuro ☠️), disastri naturali (giallo 🌋), cultura/religione (viola ⛪), altro (grigio)
+- **Popup evento on click** — mostra nome, tipo, anno, luogo, attore principale + link "Vedi dettaglio completo"
+- **Detail panel per eventi** — pannello laterale completo con descrizione, vittime stimate, entita' collegate (cliccabili), note etiche, fonti accademiche
+- **Auto-refresh su cambio anno** — i marker si aggiornano automaticamente quando si muove lo slider, si usano i preset o il playback
+- **Legenda overlay** — 7 categorie con colori/icone per orientare la lettura della mappa
+- **Finestra temporale adattiva** — ±50 anni per epoche antiche (< -1000), ±25 per classicita', ±10 per eta' moderna
+
+### New API Endpoint
+
+- **`GET /v1/events/map`** — endpoint leggero ottimizzato per rendering mappa
+  - Parametri: `year` (richiesto), `window` (default 10, auto-espanso), `limit` (default 200)
+  - Restituisce solo eventi con coordinate non-null
+  - Payload minimo: 10 campi (no description, sources, entity_links, casualties)
+  - Auto-window expansion per epoche antiche
+
+### Ancient Data Expansion: 401 -> 429 events
+
+- **`data/events/batch_21_iron_age.json`** — 16 eventi (1000-400 a.C.): Fondazione di Roma, Fondazione di Cartagine, Assedio di Lachish, Colonizzazione fenicia, Zhou Orientali, Riforme di Solone, Tirannia di Pisistrato, Compilazione della Bibbia ebraica, Espansione scitica, Cultura Nok, Collasso olmeco, Neo-elamiti, Regno dei Medi, Riforme spartane, Zarathustra, Transizione all'Eta' del Ferro
+- **`data/events/batch_22_early_civilizations.json`** — 12 eventi (3200-2112 a.C.): Espansione di Uruk, Antico Regno egizio, Valle dell'Indo, Proto-elamiti, Troia arcaica, Stonehenge, Primo Periodo Intermedio, Ur III, Creta minoica, Periodo Protodinastico sumero, Caduta dell'Impero accadico, Archivi di Ebla
+
+### ROADMAP Update
+
+- **ROADMAP.md completamente riscritto** per riflettere lo stato reale del progetto (v6.22 completate, roadmap attiva v6.23-v6.26)
+
+### File aggiunti/modificati
+
+- `src/api/routes/events.py` — `_event_map_marker()` + `events_for_map()` endpoint
+- `static/app.js` — events overlay: toggle, load, render, popup, detail panel
+- `static/index.html` — toggle checkbox + legenda eventi
+- `static/style.css` — stili marker, legenda, popup, detail eventi
+- `data/events/batch_21_iron_age.json` — 16 eventi Eta' del Ferro
+- `data/events/batch_22_early_civilizations.json` — 12 eventi proto-storici
+- `tests/test_v623_events_map.py` — 20 test
+- `ROADMAP.md` — aggiornamento completo
+
+### Stats
+
+- **937 test** (up from 917)
+- **429 eventi** (up from 401)
+- **50+ endpoint** API
+
+---
+
 ## [v6.22.0] - 2026-04-16
 
 **Tema**: *Major Event Expansion + Embeddable Widgets*

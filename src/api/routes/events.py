@@ -2,6 +2,7 @@
 
 GET  /v1/events                          list + filter (year, event_type, status, known_silence, month, day)
 GET  /v1/events/types                    enumera EventType
+GET  /v1/events/map                      lightweight payload for map marker rendering
 GET  /v1/events/on-this-day/{mm_dd}      eventi che cadono in un dato giorno/mese
 GET  /v1/events/at-date/{date_str}       eventi in una data esatta (supporta BCE)
 GET  /v1/events/{id}                     detail
@@ -226,6 +227,81 @@ def list_event_types(response: Response):
         "event_roles": [
             {"role": r.value} for r in EventRole
         ],
+    }
+
+
+# ─── Map display endpoint ───────────────────────────────────────────────────
+
+
+def _event_map_marker(e: HistoricalEvent) -> dict:
+    """Minimal representation of an event for map marker rendering.
+
+    Only the fields needed to place and label a marker on the map.
+    Heavier fields (description, sources, entity_links, casualties)
+    are excluded — the client fetches /v1/events/{id} on click.
+    """
+    return {
+        "id": e.id,
+        "name_original": e.name_original,
+        "event_type": e.event_type,
+        "year": e.year,
+        "location_lat": e.location_lat,
+        "location_lon": e.location_lon,
+        "location_name": e.location_name,
+        "status": e.status,
+        "confidence_score": e.confidence_score,
+        "main_actor": e.main_actor,
+    }
+
+
+@router.get(
+    "/v1/events/map",
+    summary="Eventi per visualizzazione mappa",
+    description=(
+        "Payload leggero ottimizzato per il rendering di marker su mappa. "
+        "Restituisce solo eventi con coordinate (lat/lon non null) entro "
+        "una finestra temporale centrata su `year`. La finestra si auto-espande "
+        "per epoche antiche: ±50 per anni < -1000, ±25 per anni da -1000 a 0."
+    ),
+)
+def events_for_map(
+    year: int = Query(..., description="Anno centrale della finestra temporale"),
+    window: int = Query(10, ge=1, le=500, description="Semi-ampiezza finestra in anni (auto-espansa per epoche antiche)"),
+    limit: int = Query(200, ge=1, le=500, description="Numero massimo di eventi"),
+    response: Response = None,
+    db: Session = Depends(get_db),
+):
+    # Auto-expand window for ancient periods where data is sparser.
+    effective_window = window
+    if year < -1000:
+        effective_window = max(window, 50)
+    elif year < 0:
+        effective_window = max(window, 25)
+
+    year_min = year - effective_window
+    year_max = year + effective_window
+
+    q = (
+        db.query(HistoricalEvent)
+        .filter(
+            HistoricalEvent.location_lat.isnot(None),
+            HistoricalEvent.location_lon.isnot(None),
+            HistoricalEvent.year >= year_min,
+            HistoricalEvent.year <= year_max,
+        )
+        .order_by(HistoricalEvent.year, HistoricalEvent.id)
+    )
+
+    total = q.count()
+    results = q.limit(limit).all()
+
+    response.headers["Cache-Control"] = "public, max-age=300"
+
+    return {
+        "year": year,
+        "window": effective_window,
+        "total": total,
+        "events": [_event_map_marker(e) for e in results],
     }
 
 

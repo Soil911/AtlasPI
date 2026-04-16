@@ -2479,4 +2479,142 @@ button:focus-visible {
   }
 
   .trade-routes-legend { font-size: 0.72em; }
+  .events-overlay-legend { font-size: 0.72em; }
 }
+
+/* ─── v6.23: Events overlay on map ─────────────────────────────── */
+
+.events-overlay-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 6px;
+  padding: 6px 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.68em;
+  color: var(--text-muted);
+}
+
+.events-overlay-legend.hidden { display: none; }
+
+.ev-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ev-legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 1.5px solid rgba(255,255,255,0.3);
+}
+
+.ev-legend-dot.ev-battle   { background: #f85149; }
+.ev-legend-dot.ev-treaty   { background: #58a6ff; }
+.ev-legend-dot.ev-founding { background: #3fb950; }
+.ev-legend-dot.ev-violence { background: #da3633; }
+.ev-legend-dot.ev-disaster { background: #d29922; }
+.ev-legend-dot.ev-culture  { background: #bc8cff; }
+.ev-legend-dot.ev-other    { background: #8b949e; }
+
+/* Event markers on map */
+.event-marker-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.6);
+  font-size: 11px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.event-marker-icon:hover {
+  transform: scale(1.3);
+  z-index: 1000 !important;
+}
+
+.event-marker-icon.ev-battle   { background: #f85149; }
+.event-marker-icon.ev-treaty   { background: #58a6ff; }
+.event-marker-icon.ev-founding { background: #3fb950; }
+.event-marker-icon.ev-violence { background: #da3633; }
+.event-marker-icon.ev-disaster { background: #d29922; }
+.event-marker-icon.ev-culture  { background: #bc8cff; }
+.event-marker-icon.ev-other    { background: #8b949e; }
+
+/* Event popup on map */
+.event-popup .leaflet-popup-content-wrapper {
+  background: var(--bg-sidebar);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.event-popup .leaflet-popup-tip {
+  background: var(--bg-sidebar);
+}
+
+.event-popup-body {
+  font-size: 0.82em;
+  line-height: 1.45;
+  min-width: 200px;
+  max-width: 280px;
+}
+
+.ev-popup-title {
+  font-size: 1.05em;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.ev-popup-meta {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 0.82em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.ev-popup-type {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 0.85em;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.ev-popup-type.ev-battle   { background: rgba(248, 81, 73, 0.15); color: #f85149; }
+.ev-popup-type.ev-treaty   { background: rgba(88, 166, 255, 0.15); color: #58a6ff; }
+.ev-popup-type.ev-founding { background: rgba(63, 185, 80, 0.15); color: #3fb950; }
+.ev-popup-type.ev-violence { background: rgba(218, 54, 51, 0.15); color: #da3633; }
+.ev-popup-type.ev-disaster { background: rgba(210, 153, 34, 0.15); color: #d29922; }
+.ev-popup-type.ev-culture  { background: rgba(188, 140, 255, 0.15); color: #bc8cff; }
+.ev-popup-type.ev-other    { background: rgba(139, 149, 158, 0.15); color: #8b949e; }
+
+.ev-popup-actor {
+  font-size: 0.8em;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.ev-popup-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.82em;
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.ev-popup-link:hover { color: var(--accent-light); }

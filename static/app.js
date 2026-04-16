@@ -1,4 +1,4 @@
-/* AtlasPI v6.7.0 — Trade routes overlay, dynasty chains sidebar, unified timeline */
+/* AtlasPI v6.23.0 — Events overlay on map, trade routes, dynasty chains, unified timeline */
 
 const API = '';
 const COLORS = {
@@ -51,6 +51,11 @@ let compareEntityId = null;
 let tradeRoutesLayer = null;   // Leaflet layerGroup for routes
 let tradeRoutesData = null;    // Cached raw routes list
 let tradeRoutesEnabled = false;
+
+// v6.23 — Events overlay state
+let eventsOverlayLayer = null;   // Leaflet layerGroup for event markers
+let eventsOverlayEnabled = false;
+let eventsOverlayCache = {};     // keyed by year
 
 // v6.7 — Chains sidebar state
 let chainsData = null;         // Cached chain index
@@ -118,6 +123,8 @@ function initMap() {
     subdomains: 'abcd', maxZoom: 19,
   }).addTo(map);
   layerGroup = L.layerGroup().addTo(map);
+  // v6.23 — Events overlay lives above entities but below trade routes
+  eventsOverlayLayer = L.layerGroup();
   // Trade routes live in a dedicated layer sitting above entities (Feature 1)
   tradeRoutesLayer = L.layerGroup();
 
@@ -559,6 +566,225 @@ function toggleTradeRoutes(enabled) {
 
   // Lazy-load on first activation
   loadTradeRoutes().then(() => renderTradeRoutes());
+}
+
+// ─── Events Overlay on Map (v6.23) ──────────────────────────────
+
+const EVENT_TYPE_ICONS = {
+  BATTLE: '⚔️', SIEGE: '🏰', TREATY: '📜', REBELLION: '🔥',
+  REVOLUTION: '✊', CORONATION: '👑', DEATH_OF_RULER: '💀',
+  MARRIAGE_DYNASTIC: '💍', FOUNDING_CITY: '🏙️', FOUNDING_STATE: '🏛️',
+  DISSOLUTION_STATE: '💔', CONQUEST: '🗡️', COLONIAL_VIOLENCE: '⛓️',
+  GENOCIDE: '☠️', ETHNIC_CLEANSING: '⚠️', MASSACRE: '🩸',
+  DEPORTATION: '🚶', FAMINE: '🌾', EPIDEMIC: '🦠',
+  EARTHQUAKE: '🌍', VOLCANIC_ERUPTION: '🌋', TSUNAMI: '🌊',
+  FLOOD: '💧', DROUGHT: '☀️', FIRE: '🔥',
+  EXPLORATION: '🧭', TRADE_AGREEMENT: '🤝', RELIGIOUS_EVENT: '⛪',
+  INTELLECTUAL_EVENT: '📖', TECHNOLOGICAL_EVENT: '⚙️', OTHER: '📌',
+};
+
+function eventTypeClass(eventType) {
+  if (!eventType) return 'ev-other';
+  const t = eventType.toUpperCase();
+  if (['BATTLE', 'SIEGE', 'REBELLION', 'REVOLUTION'].includes(t)) return 'ev-battle';
+  if (['TREATY', 'TRADE_AGREEMENT', 'MARRIAGE_DYNASTIC', 'CORONATION'].includes(t)) return 'ev-treaty';
+  if (['FOUNDING_CITY', 'FOUNDING_STATE', 'EXPLORATION'].includes(t)) return 'ev-founding';
+  if (['GENOCIDE', 'ETHNIC_CLEANSING', 'MASSACRE', 'COLONIAL_VIOLENCE', 'DEPORTATION'].includes(t)) return 'ev-violence';
+  if (['EARTHQUAKE', 'VOLCANIC_ERUPTION', 'TSUNAMI', 'FLOOD', 'DROUGHT', 'FIRE', 'FAMINE', 'EPIDEMIC'].includes(t)) return 'ev-disaster';
+  if (['RELIGIOUS_EVENT', 'INTELLECTUAL_EVENT', 'TECHNOLOGICAL_EVENT'].includes(t)) return 'ev-culture';
+  return 'ev-other';
+}
+
+async function loadEventsForMap(year) {
+  if (eventsOverlayCache[year]) return eventsOverlayCache[year];
+  try {
+    const res = await fetch(`${API}/v1/events/map?year=${year}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    eventsOverlayCache[year] = data.events || [];
+    return eventsOverlayCache[year];
+  } catch (err) {
+    console.warn('Events overlay load failed:', err);
+    return [];
+  }
+}
+
+function renderEventsOverlay() {
+  if (!eventsOverlayLayer) return;
+  eventsOverlayLayer.clearLayers();
+  if (!eventsOverlayEnabled) return;
+
+  const year = parseInt(document.getElementById('year-slider').value, 10);
+
+  loadEventsForMap(year).then(events => {
+    eventsOverlayLayer.clearLayers();
+    events.forEach(ev => {
+      if (ev.location_lat == null || ev.location_lon == null) return;
+      const cls = eventTypeClass(ev.event_type);
+      const icon = EVENT_TYPE_ICONS[ev.event_type] || '📌';
+
+      const marker = L.marker([ev.location_lat, ev.location_lon], {
+        icon: L.divIcon({
+          className: '',
+          html: `<div class="event-marker-icon ${cls}" title="${esc(ev.name_original)}">${icon}</div>`,
+          iconSize: [22, 22],
+          iconAnchor: [11, 11],
+        }),
+        zIndexOffset: 500,
+      });
+
+      marker.bindTooltip(eventTooltip(ev), { direction: 'top', offset: [0, -14] });
+      marker.on('click', () => showEventPopup(ev));
+      eventsOverlayLayer.addLayer(marker);
+    });
+
+    // Ensure layer is on map
+    if (!map.hasLayer(eventsOverlayLayer)) eventsOverlayLayer.addTo(map);
+
+    // Update count in badge
+    const badge = document.getElementById('map-year-badge');
+    if (badge && events.length > 0) {
+      const existing = badge.innerHTML;
+      if (!existing.includes('ev-count')) {
+        badge.innerHTML += ` · <span class="ev-count">${events.length} ${lang === 'it' ? 'eventi' : 'events'}</span>`;
+      } else {
+        badge.querySelector('.ev-count').textContent = `${events.length} ${lang === 'it' ? 'eventi' : 'events'}`;
+      }
+    }
+  });
+}
+
+function eventTooltip(ev) {
+  const icon = EVENT_TYPE_ICONS[ev.event_type] || '📌';
+  const cls = eventTypeClass(ev.event_type);
+  return `
+    <div style="min-width:160px">
+      <strong>${icon} ${esc(ev.name_original)}</strong><br>
+      <span style="font-size:0.85em;opacity:0.85">${fmtY(ev.year)}${ev.location_name ? ' · ' + esc(ev.location_name) : ''}</span><br>
+      <span style="font-size:0.78em;opacity:0.7">${ev.event_type ? ev.event_type.replace(/_/g, ' ') : ''}</span>
+    </div>`;
+}
+
+function showEventPopup(ev) {
+  const cls = eventTypeClass(ev.event_type);
+  const icon = EVENT_TYPE_ICONS[ev.event_type] || '📌';
+  const html = `
+    <div class="event-popup-body">
+      <div class="ev-popup-title">${icon} ${esc(ev.name_original)}</div>
+      <div class="ev-popup-meta">
+        <span class="ev-popup-type ${cls}">${ev.event_type ? ev.event_type.replace(/_/g, ' ') : ''}</span>
+        <span>${fmtY(ev.year)}</span>
+        ${ev.location_name ? `<span>${esc(ev.location_name)}</span>` : ''}
+      </div>
+      ${ev.main_actor ? `<div class="ev-popup-actor">${lang === 'it' ? 'Attore' : 'Actor'}: ${esc(ev.main_actor)}</div>` : ''}
+      <div class="ev-popup-link" onclick="showEventDetail(${ev.id})">${lang === 'it' ? 'Vedi dettaglio completo →' : 'View full detail →'}</div>
+    </div>`;
+
+  L.popup({ maxWidth: 300, className: 'event-popup' })
+    .setLatLng([ev.location_lat, ev.location_lon])
+    .setContent(html)
+    .openOn(map);
+}
+
+async function showEventDetail(eventId) {
+  map.closePopup();
+  const panel = document.getElementById('detail-panel');
+  const content = document.getElementById('detail-content');
+  panel.classList.remove('hidden');
+  content.innerHTML = '<div class="detail-spinner"><div class="spinner"></div></div>';
+
+  try {
+    const res = await fetch(`${API}/v1/events/${eventId}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const ev = await res.json();
+
+    const cls = eventTypeClass(ev.event_type);
+    const icon = EVENT_TYPE_ICONS[ev.event_type] || '📌';
+    const pct = Math.round((ev.confidence_score || 0) * 100);
+    const statusColor = COLORS[ev.status] || '#8b949e';
+
+    content.innerHTML = `
+      <h2>${icon} ${esc(ev.name_original)}</h2>
+      <div class="detail-meta">
+        <span class="ev-popup-type ${cls}">${ev.event_type ? ev.event_type.replace(/_/g, ' ') : ''}</span>
+        <span class="status-badge ${ev.status}">${t(ev.status || 'confirmed')}</span>
+        <span>${pct}%</span>
+      </div>
+
+      <div class="detail-section">
+        <div class="detail-row"><span class="label">${lang === 'it' ? 'Anno' : 'Year'}:</span> ${fmtY(ev.year)}${ev.year_end ? ' – ' + fmtY(ev.year_end) : ''}</div>
+        ${ev.month ? `<div class="detail-row"><span class="label">${lang === 'it' ? 'Data' : 'Date'}:</span> ${ev.day || '?'}/${ev.month}/${Math.abs(ev.year)} ${ev.year < 0 ? 'BCE' : 'CE'}</div>` : ''}
+        ${ev.location_name ? `<div class="detail-row"><span class="label">${lang === 'it' ? 'Luogo' : 'Location'}:</span> ${esc(ev.location_name)}</div>` : ''}
+        ${ev.main_actor ? `<div class="detail-row"><span class="label">${lang === 'it' ? 'Attore principale' : 'Main actor'}:</span> ${esc(ev.main_actor)}</div>` : ''}
+      </div>
+
+      ${ev.description ? `
+      <div class="detail-section">
+        <h3>${lang === 'it' ? 'Descrizione' : 'Description'}</h3>
+        <p style="font-size:0.85em;line-height:1.55;color:var(--text-muted)">${esc(ev.description)}</p>
+      </div>` : ''}
+
+      ${ev.casualties_low || ev.casualties_high ? `
+      <div class="detail-section">
+        <h3>${lang === 'it' ? 'Vittime stimate' : 'Estimated casualties'}</h3>
+        <div class="detail-row">
+          ${ev.casualties_low ? ev.casualties_low.toLocaleString() : '?'} – ${ev.casualties_high ? ev.casualties_high.toLocaleString() : '?'}
+          ${ev.casualties_source ? `<span style="font-size:0.75em;color:var(--text-muted)"> (${esc(ev.casualties_source)})</span>` : ''}
+        </div>
+      </div>` : ''}
+
+      ${ev.entity_links && ev.entity_links.length ? `
+      <div class="detail-section">
+        <h3>${lang === 'it' ? 'Entità collegate' : 'Linked entities'}</h3>
+        ${ev.entity_links.map(link => `
+          <div class="detail-row" style="cursor:pointer" onclick="showDetail(${link.entity_id})">
+            <span class="label">${link.role ? link.role.replace(/_/g, ' ') : ''}:</span>
+            <span style="color:var(--accent)">${esc(link.entity_name || 'Entity #' + link.entity_id)}</span>
+          </div>
+        `).join('')}
+      </div>` : ''}
+
+      ${ev.ethical_notes ? `
+      <div class="detail-section">
+        <div class="ethics-box">
+          <strong>ETHICS:</strong> ${esc(ev.ethical_notes)}
+        </div>
+      </div>` : ''}
+
+      ${ev.sources && ev.sources.length ? `
+      <div class="detail-section">
+        <h3>${t('sources_section')}</h3>
+        <ul style="font-size:0.78em;color:var(--text-muted);padding-left:16px">
+          ${ev.sources.map(s => `<li>${esc(s.citation)}${s.url ? ` <a href="${esc(s.url)}" target="_blank" rel="noopener" style="color:var(--accent)">↗</a>` : ''}</li>`).join('')}
+        </ul>
+      </div>` : ''}
+    `;
+  } catch (err) {
+    content.innerHTML = `<p class="placeholder">${lang === 'it' ? 'Errore nel caricamento dell\'evento' : 'Error loading event'}</p>`;
+  }
+}
+
+function toggleEventsOverlay(enabled) {
+  eventsOverlayEnabled = !!enabled;
+  const legend = document.getElementById('events-overlay-legend');
+  if (legend) legend.classList.toggle('hidden', !eventsOverlayEnabled);
+
+  if (!eventsOverlayEnabled) {
+    if (eventsOverlayLayer) eventsOverlayLayer.clearLayers();
+    // Remove event count from badge
+    const badge = document.getElementById('map-year-badge');
+    if (badge) {
+      const evCount = badge.querySelector('.ev-count');
+      if (evCount) {
+        // Remove " · " before the span too
+        const text = badge.innerHTML;
+        badge.innerHTML = text.replace(/ · <span class="ev-count">.*?<\/span>/, '');
+      }
+    }
+    return;
+  }
+
+  renderEventsOverlay();
 }
 
 // ─── Dynasty Chains sidebar (v6.7, Feature 2) ─────────────────
@@ -1662,6 +1888,8 @@ function bindEvents() {
     applyFilters();
     pushUrlState();
     loadSnapshotSummary(+yearSlider.value);
+    // v6.23 — refresh events overlay if active
+    if (eventsOverlayEnabled) renderEventsOverlay();
     // v6.7 — refresh trade routes if active (they're year-filtered)
     if (tradeRoutesEnabled) renderTradeRoutes();
   });
@@ -1674,6 +1902,7 @@ function bindEvents() {
     yearDisplay.textContent = fmtY(val);
     applyFilters();
     pushUrlState();
+    if (eventsOverlayEnabled) renderEventsOverlay();
     if (tradeRoutesEnabled) renderTradeRoutes();
   }
 
@@ -1695,6 +1924,7 @@ function bindEvents() {
       }
       applyFilters();
       pushUrlState();
+      if (eventsOverlayEnabled) renderEventsOverlay();
       if (tradeRoutesEnabled) renderTradeRoutes();
     });
   });
@@ -1704,6 +1934,12 @@ function bindEvents() {
   });
 
   document.getElementById('sort-select').addEventListener('change', applyFilters);
+
+  // v6.23 — Events overlay toggle
+  const eventsToggle = document.getElementById('events-overlay-toggle');
+  if (eventsToggle) {
+    eventsToggle.addEventListener('change', () => toggleEventsOverlay(eventsToggle.checked));
+  }
 
   // v6.7 — Trade routes toggle (Feature 1)
   const tradeToggle = document.getElementById('trade-routes-toggle');
@@ -1740,6 +1976,9 @@ function bindEvents() {
     document.querySelectorAll('#continent-chips .chip').forEach(c => c.classList.remove('active'));
     const allContChip = document.querySelector('#continent-chips .chip[data-continent=""]');
     if (allContChip) allContChip.classList.add('active');
+    // v6.23 — clear events overlay on reset
+    const evToggle = document.getElementById('events-overlay-toggle');
+    if (evToggle && evToggle.checked) { evToggle.checked = false; toggleEventsOverlay(false); }
     // v6.7 — also clear trade routes overlay
     const trToggle = document.getElementById('trade-routes-toggle');
     if (trToggle && trToggle.checked) { trToggle.checked = false; toggleTradeRoutes(false); }
@@ -2160,6 +2399,7 @@ function togglePlayback() {
     }
     applyFilters();
     if (timelineData) drawTimeline();
+    if (eventsOverlayEnabled) renderEventsOverlay();
     if (tradeRoutesEnabled) renderTradeRoutes();
   }, speed);
 }
