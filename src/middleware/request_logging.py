@@ -6,7 +6,6 @@ Combina due funzioni:
 """
 
 import logging
-import threading
 import time
 import uuid
 from datetime import datetime, timezone
@@ -120,21 +119,19 @@ class RequestLoggingMiddleware(BaseHTTPMiddleware):
         if _is_api_relevant(path):
             timestamp = datetime.now(timezone.utc).isoformat()
             qs = str(request.url.query) if request.url.query else None
-            thread = threading.Thread(
-                target=_write_analytics_entry,
-                args=(
-                    timestamp,
-                    request.method,
-                    path,
-                    qs,
-                    response.status_code,
-                    duration_ms,
-                    _extract_client_ip(request),
-                    request.headers.get("user-agent"),
-                    request.headers.get("referer"),
-                ),
-                daemon=True,
+            # Synchronous write — fast enough for now (<5ms per INSERT).
+            # If latency becomes an issue, switch to background thread
+            # or async task queue.
+            _write_analytics_entry(
+                timestamp,
+                request.method,
+                path,
+                qs,
+                response.status_code,
+                duration_ms,
+                _extract_client_ip(request),
+                request.headers.get("user-agent"),
+                request.headers.get("referer"),
             )
-            thread.start()
 
         return response

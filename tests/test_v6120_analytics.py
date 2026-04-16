@@ -7,8 +7,6 @@ Verifica:
 - Query aggregate corrette
 """
 
-import time
-
 import pytest
 
 from src.db.models import ApiRequestLog
@@ -149,7 +147,7 @@ class TestMiddlewareWrites:
         assert r.status_code == 200
 
         # Wait briefly for the background thread to write
-        time.sleep(0.5)
+        # Write is synchronous — no sleep needed
 
         after = db.query(ApiRequestLog).filter(
             ApiRequestLog.path == "/health"
@@ -162,7 +160,7 @@ class TestMiddlewareWrites:
         ).count()
 
         client.get("/v1/stats")
-        time.sleep(0.5)
+        # Write is synchronous — no sleep needed
 
         after = db.query(ApiRequestLog).filter(
             ApiRequestLog.path == "/v1/stats"
@@ -172,7 +170,7 @@ class TestMiddlewareWrites:
     def test_logged_entry_has_correct_fields(self, client, db):
         """Verifica che i campi del log siano sensati."""
         client.get("/v1/stats")
-        time.sleep(0.5)
+        # Write is synchronous — no sleep needed
 
         entry = db.query(ApiRequestLog).filter(
             ApiRequestLog.path == "/v1/stats"
@@ -191,7 +189,7 @@ class TestMiddlewareWrites:
         # Make a few requests
         for _ in range(3):
             client.get("/health")
-        time.sleep(0.5)
+        # Write is synchronous — no sleep needed
 
         r = client.get("/admin/analytics/data")
         d = r.json()
