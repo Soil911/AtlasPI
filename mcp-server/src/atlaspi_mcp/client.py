@@ -308,6 +308,10 @@ class AtlasPIClient:
         """
         return await self._get(f"/v1/events/on-this-day/{mm_dd}")
 
+    async def date_coverage(self) -> Any:
+        """GET /v1/events/date-coverage — quali date MM-DD hanno eventi."""
+        return await self._get("/v1/events/date-coverage")
+
     # -- v6.4 cities & routes ------------------------------------------
 
     async def list_cities(

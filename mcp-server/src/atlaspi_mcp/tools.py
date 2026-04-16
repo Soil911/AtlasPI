@@ -186,6 +186,10 @@ async def _h_on_this_day(client: AtlasPIClient, args: dict[str, Any]) -> Any:
     return await client.on_this_day(str(args["mm_dd"]))
 
 
+async def _h_date_coverage(client: AtlasPIClient, args: dict[str, Any]) -> Any:
+    return await client.date_coverage()
+
+
 # -- v6.4 cities & routes ------------------------------------------
 
 
@@ -874,6 +878,24 @@ TOOLS: list[ToolDefinition] = [
             "additionalProperties": False,
         },
         handler=_h_on_this_day,
+    ),
+    ToolDefinition(
+        name="events_date_coverage",
+        description=(
+            "Restituisce le date (MM-DD) che hanno almeno un evento nel dataset. "
+            "Usa PRIMA di on_this_day per sapere se una data restituirà risultati, "
+            "oppure per suggerire date 'interessanti' all'utente (es. 'In quali "
+            "giorni dell'anno ci sono più eventi storici?'). La risposta include "
+            "unique_dates (quante date uniche), coverage_pct (% dell'anno coperta), "
+            "e la lista completa dates con mm_dd + event_count. Non richiede "
+            "parametri — è un metadato del dataset."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {},
+            "additionalProperties": False,
+        },
+        handler=_h_date_coverage,
     ),
     # ─── v6.4 cities ────────────────────────────────────────────────
     ToolDefinition(

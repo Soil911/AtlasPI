@@ -57,8 +57,9 @@ EXPECTED_TOOL_NAMES = {
     # v0.4 events for map + on this day
     "events_for_map",
     "on_this_day",
-    # v0.5 similarity
+    # v0.5 similarity + date coverage
     "find_similar_entities",
+    "events_date_coverage",
 }
 
 
@@ -125,15 +126,15 @@ def test_base_url_default_when_env_empty(monkeypatch: pytest.MonkeyPatch) -> Non
 
 
 def test_tool_list_complete() -> None:
-    """Tutti e 26 i tools canonici v0.5 sono registrati."""
+    """Tutti e 27 i tools canonici v0.5 sono registrati."""
     names = {t.name for t in get_tools()}
     assert names == EXPECTED_TOOL_NAMES, (
         f"Missing or unexpected tools: {names ^ EXPECTED_TOOL_NAMES}"
     )
     # Bonus: nessun duplicato
     assert len(get_tools()) == len(EXPECTED_TOOL_NAMES)
-    # v0.5 additions: esattamente 26 tools
-    assert len(names) == 26
+    # v0.5 additions: esattamente 27 tools
+    assert len(names) == 27
 
 
 def test_search_entities_tool_schema() -> None:

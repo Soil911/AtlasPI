@@ -5,6 +5,7 @@ GET  /v1/events/types                    enumera EventType
 GET  /v1/events/map                      lightweight payload for map marker rendering
 GET  /v1/events/on-this-day/{mm_dd}      eventi che cadono in un dato giorno/mese
 GET  /v1/events/at-date/{date_str}       eventi in una data esatta (supporta BCE)
+GET  /v1/events/date-coverage            quali date MM-DD hanno eventi
 GET  /v1/events/{id}                     detail
 GET  /v1/entities/{id}/events            events linked to an entity
 
@@ -416,6 +417,59 @@ def events_at_date(
         "day": d,
         "total": len(results),
         "events": [_event_summary(e) for e in results],
+    }
+
+
+@router.get(
+    "/v1/events/date-coverage",
+    summary="Copertura date per on-this-day",
+    description=(
+        "Restituisce le date (MM-DD) che hanno almeno un evento nel dataset. "
+        "Utile per un agente AI che vuole sapere prima di chiamare "
+        "on-this-day se quella data avrà risultati, o per suggerire "
+        "date 'interessanti' all'utente."
+    ),
+)
+@cache_response(ttl_seconds=3600)
+def events_date_coverage(
+    request: Request,
+    response: Response,
+    db: Session = Depends(get_db),
+):
+    from sqlalchemy import func, distinct
+
+    rows = (
+        db.query(
+            HistoricalEvent.month,
+            HistoricalEvent.day,
+            func.count(HistoricalEvent.id).label("event_count"),
+        )
+        .filter(HistoricalEvent.month.isnot(None), HistoricalEvent.day.isnot(None))
+        .group_by(HistoricalEvent.month, HistoricalEvent.day)
+        .order_by(HistoricalEvent.month, HistoricalEvent.day)
+        .all()
+    )
+
+    dates = [
+        {
+            "mm_dd": f"{r.month:02d}-{r.day:02d}",
+            "month": r.month,
+            "day": r.day,
+            "event_count": r.event_count,
+        }
+        for r in rows
+    ]
+
+    total_events_with_date = sum(d["event_count"] for d in dates)
+
+    response.headers["Cache-Control"] = "public, max-age=3600"
+
+    return {
+        "unique_dates": len(dates),
+        "total_days_in_year": 366,
+        "coverage_pct": round(len(dates) / 366 * 100, 1),
+        "total_events_with_date": total_events_with_date,
+        "dates": dates,
     }
 
 
