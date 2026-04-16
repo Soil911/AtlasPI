@@ -110,7 +110,7 @@ async def lifespan(app: FastAPI):
 OPENAPI_DESCRIPTION = """
 # AtlasPI — Database Geografico Storico per Agenti AI
 
-**862 entita' storiche + 445 eventi** su 9 regioni, da 4500 a.C. al 2024.
+**862 entita' storiche + 461 eventi** su 9 regioni, da 4500 a.C. al 2024.
 Confini reali da fonti accademiche, governance etica documentata.
 
 ## Quick Start

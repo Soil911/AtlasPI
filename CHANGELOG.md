@@ -2,6 +2,42 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.23.1] - 2026-04-16
+
+**Tema**: *Data Integrity + Incremental Sync + Bronze Age Events*
+
+### New EventType Values
+
+- **MIGRATION** — mass population movements (Slavic settlement, Bantu expansion, Vedic migration)
+- **COLLAPSE** — state/civilizational collapses (Maya Classic Period, Bronze Age Collapse)
+- 33 total EventType values (was 31)
+
+### Data Expansion: 445 -> 461 events
+
+- **`data/events/batch_23_early_medieval.json`** — 16 events (529-929 CE): Corpus Iuris Civilis, Tang Dynasty, Khmer Empire, Caliphate of Cordoba, Maya Collapse, Slavic Balkans, Bulgarian state, Nara Japan, Tibetan Empire, Lombard Italy, Alfred/Danelaw, Second Nicaea, Arab conquest of Egypt, Srivijaya, Zagwe Ethiopia, Gothic War
+- **`data/events/batch_24_bronze_age.json`** — 16 events (3000-1200 BCE): Battle of Megiddo, Bronze Age Collapse, Hittite Empire fall, Shang Dynasty, Mycenaean civilization, Amarna Revolution, Vedic migration, Olmec emergence, Fall of Ur III, 4.2 kiloyear drought event
+- **`data/entities/batch_32_confidence_boost.json`** — 16 low-confidence entities improved with additional academic sources (scores 0.20-0.35 → 0.40-0.65)
+
+### Data Quality Fixes
+
+- Fixed 7 events with invalid event_types: REFORM→OTHER, CIVIL_WAR→REBELLION, SURRENDER→TREATY
+- Fixed Çatalhöyük English variant (was identical to original name)
+- Fixed "Kingdom of Quito" → "Quitu-Cara" (ETHICS-001: use original language name)
+- seed.py dedup changed to "last wins" for corrective batches
+
+### Admin: Incremental Event Sync
+
+- **`POST /admin/sync-events`** — inserts only new events from JSON files (dedup by name+year), flushes cache automatically
+- No more need to wipe DB to add new events
+
+### Stats
+
+- **951 test** (up from 937): 14 new tests for batch_23, MIGRATION/COLLAPSE enum, cross-batch integrity
+- **461 eventi** (up from 429)
+- **862 entita'** (16 confidence-boosted)
+
+---
+
 ## [v6.23.0] - 2026-04-16
 
 **Tema**: *Events on Map + Ancient Data Expansion*
