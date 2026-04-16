@@ -275,3 +275,93 @@ def seed_events_database():
         raise
     finally:
         db.close()
+
+
+def sync_new_events() -> dict:
+    """Inserisci solo eventi nuovi (non già presenti nel DB).
+
+    A differenza di seed_events_database() che opera solo su DB vuoto,
+    questa funzione confronta gli eventi nei file JSON con quelli nel DB
+    e inserisce solo quelli mancanti. Dedup basato su (name_original, year).
+
+    Returns: {"inserted": N, "skipped": N, "errors": [...]}
+    """
+    db: Session = SessionLocal()
+    result = {"inserted": 0, "skipped": 0, "errors": []}
+    try:
+        all_events = load_all_events()
+        if not all_events:
+            return result
+
+        # Mappa entità per i link.
+        entity_map = {e.name_original: e.id for e in db.query(GeoEntity).all()}
+
+        # Indice degli eventi già presenti: (name_original, year).
+        existing = set()
+        for e in db.query(HistoricalEvent).all():
+            existing.add((e.name_original, e.year))
+
+        for ev_data in all_events:
+            key = (ev_data.get("name_original", ""), ev_data.get("year"))
+            if key in existing:
+                result["skipped"] += 1
+                continue
+
+            try:
+                event = HistoricalEvent(
+                    name_original=ev_data["name_original"],
+                    name_original_lang=ev_data["name_original_lang"],
+                    event_type=ev_data["event_type"],
+                    year=ev_data["year"],
+                    year_end=ev_data.get("year_end"),
+                    month=ev_data.get("month"),
+                    day=ev_data.get("day"),
+                    date_precision=ev_data.get("date_precision"),
+                    iso_date=ev_data.get("iso_date"),
+                    calendar_note=ev_data.get("calendar_note"),
+                    location_name=ev_data.get("location_name"),
+                    location_lat=ev_data.get("location_lat"),
+                    location_lon=ev_data.get("location_lon"),
+                    main_actor=ev_data.get("main_actor"),
+                    description=ev_data["description"],
+                    casualties_low=ev_data.get("casualties_low"),
+                    casualties_high=ev_data.get("casualties_high"),
+                    casualties_source=ev_data.get("casualties_source"),
+                    confidence_score=ev_data.get("confidence_score", 0.7),
+                    status=ev_data.get("status", "confirmed"),
+                    known_silence=ev_data.get("known_silence", False),
+                    silence_reason=ev_data.get("silence_reason"),
+                    ethical_notes=ev_data.get("ethical_notes"),
+                )
+                for src in ev_data.get("sources", []):
+                    event.sources.append(EventSource(**src))
+                for link in ev_data.get("entity_links", []):
+                    ent_name = link.get("entity_name_original")
+                    entity_id = entity_map.get(ent_name) if ent_name else None
+                    if entity_id:
+                        event.entity_links.append(
+                            EventEntityLink(
+                                entity_id=entity_id,
+                                role=link.get("role", "AFFECTED"),
+                                notes=link.get("notes"),
+                            )
+                        )
+                db.add(event)
+                result["inserted"] += 1
+            except Exception as exc:
+                result["errors"].append(f"{ev_data.get('name_original', '?')}: {exc}")
+
+        db.commit()
+        logger.info(
+            "Event sync: %d inserted, %d skipped, %d errors",
+            result["inserted"],
+            result["skipped"],
+            len(result["errors"]),
+        )
+    except Exception:
+        db.rollback()
+        logger.error("Error during event sync", exc_info=True)
+        raise
+    finally:
+        db.close()
+    return result

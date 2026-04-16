@@ -1,7 +1,8 @@
-"""Cache administration endpoints — v6.21.
+"""Cache + data administration endpoints — v6.21 + v6.23.
 
 GET  /admin/cache-stats    — Redis cache statistics
 POST /admin/cache/flush    — Flush all cached responses
+POST /admin/sync-events    — Insert new events from JSON files
 """
 
 from __future__ import annotations
@@ -52,5 +53,32 @@ def cache_flush():
     logger.info("Cache flush: %d keys deleted", deleted)
     return JSONResponse(
         content={"flushed": deleted},
+        headers={"Cache-Control": "no-cache"},
+    )
+
+
+@router.post(
+    "/admin/sync-events",
+    summary="Sync new events from JSON files",
+    description=(
+        "Reads all data/events/batch_*.json files and inserts events that "
+        "don't already exist in the database (dedup by name_original + year). "
+        "Use this after adding new event batch files without restarting."
+    ),
+    include_in_schema=False,
+)
+def sync_events():
+    """Insert new events from JSON batch files."""
+    from src.db.seed import sync_new_events
+
+    result = sync_new_events()
+    logger.info("Event sync: %s", result)
+
+    # Flush cache so new events appear in API responses immediately.
+    flushed = flush_cache()
+    result["cache_flushed"] = flushed
+
+    return JSONResponse(
+        content=result,
         headers={"Cache-Control": "no-cache"},
     )

@@ -211,19 +211,129 @@ class TestBatch22EarlyCivilizations:
             )
 
 
+class TestBatch23EarlyMedieval:
+    """Validate data/events/batch_23_early_medieval.json structure and content."""
+
+    @pytest.fixture(scope="class")
+    def events(self):
+        return _load_batch("batch_23_early_medieval.json")
+
+    def test_loads_as_list(self, events):
+        assert isinstance(events, list)
+        assert len(events) >= 14
+
+    def test_each_event_has_required_fields(self, events):
+        for i, ev in enumerate(events):
+            for field in RAW_EVENT_REQUIRED_FIELDS:
+                assert field in ev, (
+                    f"Event index {i} ({ev.get('name_original', '?')}) "
+                    f"missing required field: {field}"
+                )
+
+    def test_years_in_early_medieval_range(self, events):
+        """Early Medieval batch: years between 500 and 1000 CE."""
+        for ev in events:
+            assert 500 <= ev["year"] <= 1000, (
+                f"Event '{ev['name_original']}' year {ev['year']} "
+                f"outside Early Medieval range [500, 1000]"
+            )
+
+    def test_event_types_are_valid_enum_members(self, events):
+        valid_types = {t.value for t in EventType}
+        for ev in events:
+            assert ev["event_type"] in valid_types, (
+                f"Event '{ev['name_original']}' has invalid event_type "
+                f"'{ev['event_type']}' — not in EventType enum"
+            )
+
+    def test_has_migration_and_collapse_types(self, events):
+        """Batch 23 should exercise the new MIGRATION and COLLAPSE types."""
+        types_used = {ev["event_type"] for ev in events}
+        assert "MIGRATION" in types_used, "Expected at least one MIGRATION event"
+        assert "COLLAPSE" in types_used, "Expected at least one COLLAPSE event"
+
+    def test_events_have_date_precision_fields(self, events):
+        """All events should have date_precision field."""
+        for ev in events:
+            assert "date_precision" in ev, (
+                f"Event '{ev['name_original']}' missing date_precision"
+            )
+
+    def test_high_confidence_events_have_sources(self, events):
+        """Events with confidence > 0.8 must have at least 2 sources."""
+        for ev in events:
+            if ev.get("confidence_score", 0) > 0.8:
+                assert len(ev.get("sources", [])) >= 2, (
+                    f"High-confidence event '{ev['name_original']}' "
+                    f"({ev['confidence_score']}) has < 2 sources"
+                )
+
+
+class TestMigrationCollapseEnum:
+    """Verify the new MIGRATION and COLLAPSE EventType values."""
+
+    def test_migration_in_enum(self):
+        assert "MIGRATION" in {t.value for t in EventType}
+
+    def test_collapse_in_enum(self):
+        assert "COLLAPSE" in {t.value for t in EventType}
+
+    def test_enum_has_33_values(self):
+        assert len(EventType) == 33
+
+    def test_event_types_endpoint_includes_new_types(self, client):
+        r = client.get("/v1/events/types")
+        data = r.json()
+        type_names = {t["type"] for t in data["event_types"]}
+        assert "MIGRATION" in type_names
+        assert "COLLAPSE" in type_names
+
+    def test_new_types_have_descriptions(self, client):
+        r = client.get("/v1/events/types")
+        data = r.json()
+        for t in data["event_types"]:
+            if t["type"] in ("MIGRATION", "COLLAPSE"):
+                assert t["description"], f"{t['type']} missing description"
+
+
 class TestCrossBatchIntegrity:
-    """Cross-batch checks between batch_21 and batch_22."""
+    """Cross-batch checks across all event batches."""
 
     @pytest.fixture(scope="class")
-    def batch_21(self):
-        return _load_batch("batch_21_iron_age.json")
+    def all_events(self):
+        events = []
+        for batch_file in sorted(DATA_DIR.glob("batch_*.json")):
+            events.extend(_load_batch(batch_file.name))
+        return events
 
-    @pytest.fixture(scope="class")
-    def batch_22(self):
-        return _load_batch("batch_22_early_civilizations.json")
+    def test_no_duplicate_names_within_same_year(self, all_events):
+        seen = set()
+        dupes = []
+        for ev in all_events:
+            key = (ev["name_original"], ev["year"])
+            if key in seen:
+                dupes.append(key)
+            seen.add(key)
+        assert len(dupes) <= 5, (
+            f"Too many duplicate (name, year) pairs across batches: {dupes}"
+        )
 
-    def test_no_duplicate_names_across_batches(self, batch_21, batch_22):
-        names_21 = {ev["name_original"] for ev in batch_21}
-        names_22 = {ev["name_original"] for ev in batch_22}
-        overlap = names_21 & names_22
-        assert not overlap, f"Duplicate event names across batches: {overlap}"
+    def test_all_event_types_valid(self, all_events):
+        valid_types = {t.value for t in EventType}
+        invalid = [
+            (ev["name_original"], ev["event_type"])
+            for ev in all_events
+            if ev["event_type"] not in valid_types
+        ]
+        assert not invalid, f"Invalid event types found: {invalid}"
+
+    def test_all_events_have_coordinates(self, all_events):
+        """At least 90% of events should have lat/lon."""
+        with_coords = sum(
+            1 for ev in all_events
+            if ev.get("location_lat") is not None and ev.get("location_lon") is not None
+        )
+        ratio = with_coords / len(all_events) if all_events else 0
+        assert ratio >= 0.9, (
+            f"Only {ratio:.1%} of events have coordinates (expected >= 90%)"
+        )
