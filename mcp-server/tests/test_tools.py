@@ -54,6 +54,9 @@ EXPECTED_TOOL_NAMES = {
     "full_timeline_for_entity",
     "fuzzy_search",
     "nearest_historical_city",
+    # v0.4 events for map + on this day
+    "events_for_map",
+    "on_this_day",
 }
 
 
@@ -120,15 +123,15 @@ def test_base_url_default_when_env_empty(monkeypatch: pytest.MonkeyPatch) -> Non
 
 
 def test_tool_list_complete() -> None:
-    """Tutti e 23 i tools canonici v0.3 sono registrati."""
+    """Tutti e 25 i tools canonici v0.4 sono registrati."""
     names = {t.name for t in get_tools()}
     assert names == EXPECTED_TOOL_NAMES, (
         f"Missing or unexpected tools: {names ^ EXPECTED_TOOL_NAMES}"
     )
     # Bonus: nessun duplicato
     assert len(get_tools()) == len(EXPECTED_TOOL_NAMES)
-    # v0.3 additions: esattamente 23 tools
-    assert len(names) == 23
+    # v0.4 additions: esattamente 25 tools
+    assert len(names) == 25
 
 
 def test_search_entities_tool_schema() -> None:

@@ -163,6 +163,21 @@ async def _h_events_for_entity(client: AtlasPIClient, args: dict[str, Any]) -> A
     )
 
 
+# -- v6.23 events for map + on this day ----------------------------
+
+
+async def _h_events_for_map(client: AtlasPIClient, args: dict[str, Any]) -> Any:
+    return await client.events_for_map(
+        year=int(args["year"]),
+        window=args.get("window"),
+        limit=args.get("limit"),
+    )
+
+
+async def _h_on_this_day(client: AtlasPIClient, args: dict[str, Any]) -> Any:
+    return await client.on_this_day(str(args["mm_dd"]))
+
+
 # -- v6.4 cities & routes ------------------------------------------
 
 
@@ -742,6 +757,74 @@ TOOLS: list[ToolDefinition] = [
             "additionalProperties": False,
         },
         handler=_h_events_for_entity,
+    ),
+    # ─── v6.23 events for map + on this day ───────────────────────
+    ToolDefinition(
+        name="events_for_map",
+        description=(
+            "Recupera gli eventi storici geolocalizzati attorno a un dato anno, "
+            "ottimizzato per la visualizzazione su mappa. Restituisce un payload "
+            "leggero (10 campi per evento) con solo eventi che hanno coordinate. "
+            "La finestra temporale si auto-espande per epoche antiche: ±50 anni "
+            "per anni < -1000 a.C., ±25 per il periodo classico, ±10 per l'età "
+            "moderna. Usa questo tool quando l'utente chiede 'cosa è successo "
+            "vicino a [luogo] nel [anno]?' o per popolare una visualizzazione "
+            "mappa con eventi. Non include description/sources — usa get_event "
+            "per i dettagli di un singolo evento."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {
+                "year": _YEAR_SCHEMA,
+                "window": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 500,
+                    "description": (
+                        "Semi-ampiezza della finestra temporale in anni "
+                        "(default: 10, auto-espansa per epoche antiche)."
+                    ),
+                },
+                "limit": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 500,
+                    "description": "Numero massimo di eventi (default: 200).",
+                },
+            },
+            "required": ["year"],
+            "additionalProperties": False,
+        },
+        handler=_h_events_for_map,
+    ),
+    ToolDefinition(
+        name="on_this_day",
+        description=(
+            "Restituisce gli eventi storici avvenuti in una specifica data "
+            "del calendario (mese e giorno), attraverso tutti gli anni nel "
+            "dataset. Formato: MM-DD (es. '07-04' per il 4 luglio, '10-12' "
+            "per il 12 ottobre). Utile per curiosità storiche, efemeridi, "
+            "quiz, contenuti 'accadde oggi'. Esempio: on_this_day('10-12') "
+            "potrebbe restituire lo sbarco di Colombo (1492) e il giorno "
+            "della scoperta del Nuovo Mondo."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {
+                "mm_dd": {
+                    "type": "string",
+                    "pattern": r"^\d{2}-\d{2}$",
+                    "description": (
+                        "Data nel formato MM-DD (es. '12-25' per Natale, "
+                        "'07-14' per il 14 luglio). Il mese è 01-12, il "
+                        "giorno 01-31."
+                    ),
+                },
+            },
+            "required": ["mm_dd"],
+            "additionalProperties": False,
+        },
+        handler=_h_on_this_day,
     ),
     # ─── v6.4 cities ────────────────────────────────────────────────
     ToolDefinition(

@@ -6,7 +6,7 @@
 
 The **first MCP server for historical geography**. Wraps
 [AtlasPI](https://atlaspi.cra-srl.com), a structured historical-geographic
-database (700+ geopolitical entities across 65,000 years), so any MCP-compatible
+database (860+ geopolitical entities, 430+ events, 110+ cities across 65,000 years), so any MCP-compatible
 client — Claude Desktop, Claude Code, Cursor, Zed, etc. — can answer questions
 like *"What empire ruled Egypt in 300 BC?"* with sourced, structured data
 instead of hallucinating.
@@ -54,7 +54,7 @@ Windows: `%APPDATA%\Claude\claude_desktop_config.json`):
 }
 ```
 
-Restart Claude Desktop. The 23 AtlasPI tools will appear in the tools menu.
+Restart Claude Desktop. The 25 AtlasPI tools will appear in the tools menu.
 
 ### Claude Code
 
@@ -139,6 +139,13 @@ set the `ATLASPI_API_URL` environment variable:
 | `fuzzy_search`             | Cross-script approximate name search (difflib) — robust to spelling variants and transliteration |
 | `nearest_historical_city`  | Find historical cities nearest to (lat, lon) in a given year (haversine, composite client-side)  |
 
+**v0.4 — events on map + ephemeris**
+
+| Tool              | What it does                                                                                   |
+|-------------------|-----------------------------------------------------------------------------------------------|
+| `events_for_map`  | Lightweight event payload for map overlay: only events with coordinates, auto-expanding time window |
+| `on_this_day`     | Events that occurred on a specific MM-DD date across all years — great for "on this day" content   |
+
 ---
 
 ## Example prompts
@@ -189,6 +196,25 @@ ATLASPI_RUN_INTEGRATION=1 pytest -k integration
 # launch the server manually (it speaks MCP over stdio)
 python -m atlaspi_mcp
 ```
+
+---
+
+## Publishing to PyPI
+
+```bash
+cd mcp-server
+
+# Build
+python -m build
+
+# Upload to PyPI (requires API token)
+python -m twine upload dist/atlaspi_mcp-0.4.0*
+```
+
+To set up PyPI credentials:
+1. Create an account on https://pypi.org
+2. Create an API token at https://pypi.org/manage/account/token/
+3. Use `python -m twine upload --username __token__ --password pypi-xxx dist/*`
 
 ---
 

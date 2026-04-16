@@ -17,7 +17,7 @@ import httpx
 
 DEFAULT_BASE_URL = "https://atlaspi.cra-srl.com"
 DEFAULT_TIMEOUT = 30.0
-USER_AGENT = "atlaspi-mcp/0.3.0 (+https://github.com/Soil911/AtlasPI)"
+USER_AGENT = "atlaspi-mcp/0.4.0 (+https://github.com/Soil911/AtlasPI)"
 
 
 class AtlasPIClientError(RuntimeError):
@@ -271,6 +271,33 @@ class AtlasPIClient:
             f"/v1/entities/{int(entity_id)}/events",
             {"role": role},
         )
+
+    # -- v6.23 events for map ------------------------------------------
+
+    async def events_for_map(
+        self,
+        *,
+        year: int,
+        window: int | None = None,
+        limit: int | None = None,
+    ) -> Any:
+        """GET /v1/events/map — eventi con coordinate per overlay mappa.
+
+        Payload leggero ottimizzato per rendering marker. La finestra
+        si auto-espande per epoche antiche (±50 per anni < -1000,
+        ±25 per -1000..0, ±10 per moderno).
+        """
+        return await self._get(
+            "/v1/events/map",
+            {"year": year, "window": window, "limit": limit},
+        )
+
+    async def on_this_day(self, mm_dd: str) -> Any:
+        """GET /v1/events/on-this-day/{mm_dd} — eventi avvenuti in questa data.
+
+        Formato mm_dd: MM-DD (es. '07-04' per 4 luglio).
+        """
+        return await self._get(f"/v1/events/on-this-day/{mm_dd}")
 
     # -- v6.4 cities & routes ------------------------------------------
 
