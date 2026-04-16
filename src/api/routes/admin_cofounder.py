@@ -1,12 +1,13 @@
-"""AI Co-Founder Dashboard — v6.16 + v6.25.
+"""AI Co-Founder Dashboard — v6.16 + v6.25 + v6.28.
 
-GET  /admin/brief                        — HTML dashboard page
-GET  /admin/ai/suggestions               — list suggestions (filterable)
-POST /admin/ai/suggestions/{id}/accept   — accept a suggestion
-POST /admin/ai/suggestions/{id}/reject   — reject a suggestion
+GET  /admin/brief                         — HTML dashboard page
+GET  /admin/ai/suggestions                — list suggestions (filterable)
+POST /admin/ai/suggestions/{id}/accept    — accept a suggestion
+POST /admin/ai/suggestions/{id}/reject    — reject a suggestion
 POST /admin/ai/suggestions/{id}/implement — mark as implemented
-POST /admin/ai/analyze                   — trigger analysis + generate suggestions
-GET  /admin/ai/status                    — dashboard summary counts
+POST /admin/ai/analyze                    — trigger analysis + generate suggestions
+POST /admin/ai/implement-accepted         — auto-implement accepted suggestions (v6.28)
+GET  /admin/ai/status                     — dashboard summary counts
 """
 
 from __future__ import annotations
@@ -196,7 +197,42 @@ def trigger_analysis(db: Session = Depends(get_db)):
 
 
 # ═══════════════════════════════════════════════════════════════════
-# 4. Status Summary
+# 4. Auto-implementation of accepted suggestions (v6.28 GAMECHANGER)
+# ═══════════════════════════════════════════════════════════════════
+
+
+@router.post(
+    "/admin/ai/implement-accepted",
+    summary="Auto-implement all accepted AI suggestions",
+    description=(
+        "Closes the feedback loop: fetches all accepted suggestions, "
+        "dispatches each to a category-specific handler, and updates "
+        "status to 'implemented' when automation succeeds. Categories "
+        "that can't be auto-implemented generate a markdown briefing "
+        "in data/briefings/ for manual/Claude Code follow-up.\n\n"
+        "Automated handlers:\n"
+        "- missing_boundaries → runs Natural Earth boundary matcher\n"
+        "- low_confidence → boosts confidence on entities with ≥3 sources\n"
+        "- quality (boundary variant) → same as missing_boundaries\n\n"
+        "All other categories generate a briefing (status stays 'accepted')."
+    ),
+    include_in_schema=False,
+)
+def trigger_implementation(db: Session = Depends(get_db)):
+    """Run the auto-implementation pipeline and return summary."""
+    from scripts.implement_accepted_suggestions import implement_accepted
+
+    try:
+        summary = implement_accepted(db=db)
+    except Exception as e:
+        logger.error("Auto-implementation failed: %s", e)
+        raise HTTPException(status_code=500, detail=f"Implementation failed: {e}")
+
+    return JSONResponse(content=summary)
+
+
+# ═══════════════════════════════════════════════════════════════════
+# 5. Status Summary
 # ═══════════════════════════════════════════════════════════════════
 
 @router.get(

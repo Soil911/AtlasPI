@@ -2,6 +2,54 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.28.0] - 2026-04-17
+
+**Tema**: *GAMECHANGER — auto-implementation dei suggerimenti accettati*
+
+### The Feedback Loop Closes
+
+Clirim's vision: "io accetto 2 suggerimenti e vanno in pending. Alla prossima
+esecuzione del claude code programmato queste vengono implementate e finiscono
+in implemented."
+
+This release closes that loop. When accepted suggestions exist, the system
+can now auto-implement them (for automatable categories) or generate
+structured briefings (for categories requiring human/Claude Code judgment).
+
+### New Endpoint: Auto-Implementation
+
+- **`POST /admin/ai/implement-accepted`** — fetches all accepted suggestions,
+  dispatches each to a category-specific handler, flips status to
+  `implemented` on success, appends auto-implementation note.
+
+### Handler Registry (dispatcher)
+
+**Automated (status flips to implemented):**
+- `missing_boundaries` → runs Natural Earth boundary matcher, counts
+  successful matches
+- `low_confidence` → boosts confidence on entities with ≥3 verified sources
+  (evidence-based automation; caps at 0.6)
+- `quality` (boundary variant) → routes to boundaries handler
+
+**Briefing (markdown file generated in `data/briefings/`, status stays accepted):**
+- `geographic_gap`, `temporal_gap`, `missing_chain`, `traffic_pattern`,
+  `search_demand`, `date_coverage` — all non-automatable categories
+- Briefing includes: category, priority, description, detail_json, and
+  implementation guidance for human/Claude Code follow-up
+- Command snippet for marking as implemented after manual work
+
+### CLI Entry Point
+
+- `python -m scripts.implement_accepted_suggestions` — runs the pipeline
+  outside the API (for scheduled Claude Code runs)
+
+### Stats
+
+- **1035 tests** (up from 1024): 11 new auto-implementation tests
+- **7 handler registry** categories mapped
+
+---
+
 ## [v6.27.0] - 2026-04-17
 
 **Tema**: *Historical Periods — epoche storiche strutturate*
