@@ -13,10 +13,11 @@ from __future__ import annotations
 import logging
 from pathlib import Path
 
-from fastapi import APIRouter, Depends, Response
+from fastapi import APIRouter, Depends, Request, Response
 from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session, joinedload
 
+from src.cache import cache_response
 from src.db.database import get_db
 from src.db.models import ChainLink, DynastyChain, GeoEntity, HistoricalEvent
 
@@ -44,7 +45,9 @@ async def serve_timeline():
         "Cache aggressiva (1 ora)."
     ),
 )
+@cache_response(ttl_seconds=600)
 def get_timeline_data(
+    request: Request,
     response: Response,
     db: Session = Depends(get_db),
 ):

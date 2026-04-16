@@ -23,11 +23,12 @@ import json
 import logging
 from pathlib import Path
 
-from fastapi import APIRouter, Depends, Query, Response
+from fastapi import APIRouter, Depends, Query, Request, Response
 from fastapi.responses import FileResponse
 from sqlalchemy import or_, select
 from sqlalchemy.orm import Session
 
+from src.cache import cache_response
 from src.db.database import get_db
 from src.db.models import (
     GeoEntity,
@@ -100,7 +101,9 @@ def _highlight(text: str, query: str) -> str:
         "status, confidence_min, confidence_max, data_type (entity/event/city/route)."
     ),
 )
+@cache_response(ttl_seconds=120)
 def advanced_search(
+    request: Request,
     q: str = Query(..., min_length=1, max_length=300, description="Search query"),
     data_type: str | None = Query(
         None,

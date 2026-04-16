@@ -21,10 +21,11 @@ from __future__ import annotations
 import json
 import logging
 
-from fastapi import APIRouter, Depends, HTTPException, Query, Response
+from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
 from sqlalchemy.orm import Session, joinedload
 
 from src.api.errors import AtlasError
+from src.cache import cache_response
 from src.db.database import get_db
 from src.db.enums import ChainType, TransitionType
 from src.db.models import ChainLink, DynastyChain, GeoEntity
@@ -109,7 +110,9 @@ def _chain_detail(c: DynastyChain) -> dict:
         "in quell'anno)."
     ),
 )
+@cache_response(ttl_seconds=600)
 def list_chains(
+    request: Request,
     response: Response,
     chain_type: str | None = Query(
         None,

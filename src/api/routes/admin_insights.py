@@ -16,11 +16,12 @@ import re
 from collections import Counter, defaultdict
 from datetime import datetime, timedelta, timezone
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Request
 from fastapi.responses import JSONResponse
 from sqlalchemy import func, distinct, or_
 from sqlalchemy.orm import Session
 
+from src.cache import cache_response
 from src.db.database import get_db
 from src.db.models import (
     ApiRequestLog,
@@ -140,7 +141,8 @@ def _year_to_era(year: int) -> str:
     description="Analisi del traffico API: volume, endpoint, errori, user agent, utenti esterni, ore di punta.",
     include_in_schema=False,
 )
-def insights(db: Session = Depends(get_db)):
+@cache_response(ttl_seconds=300)
+def insights(request: Request, db: Session = Depends(get_db)):
     """Structured traffic insights from api_request_logs."""
 
     now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
@@ -309,7 +311,8 @@ def insights(db: Session = Depends(get_db)):
     description="Analisi della copertura dati: distribuzione geografica, temporale, confidenza, confini, catene.",
     include_in_schema=False,
 )
-def coverage_report(db: Session = Depends(get_db)):
+@cache_response(ttl_seconds=600)
+def coverage_report(request: Request, db: Session = Depends(get_db)):
     """Analyse data quality across entities, events, chains."""
 
     # ── Entity counts ─────────────────────────────────────────

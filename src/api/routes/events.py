@@ -22,11 +22,12 @@ import logging
 
 import re
 
-from fastapi import APIRouter, Depends, HTTPException, Path, Query, Response
+from fastapi import APIRouter, Depends, HTTPException, Path, Query, Request, Response
 from sqlalchemy import or_
 from sqlalchemy.orm import Session, joinedload
 
 from src.api.errors import AtlasError, EntityNotFoundError
+from src.cache import cache_response
 from src.db.database import get_db
 from src.db.enums import EventRole, EventType
 from src.db.models import EventEntityLink, GeoEntity, HistoricalEvent
@@ -119,7 +120,9 @@ def _event_detail(e: HistoricalEvent) -> dict:
         "contemporanea assente/cancellata."
     ),
 )
+@cache_response(ttl_seconds=300)
 def list_events(
+    request: Request,
     response: Response,
     year_min: int | None = Query(None, description="Anno minimo (incluso)"),
     year_max: int | None = Query(None, description="Anno massimo (incluso)"),
@@ -345,7 +348,8 @@ def events_at_date(
         "ogni entità coinvolta) e sources. ETHICS-007: main_actor obbligatorio."
     ),
 )
-def get_event(event_id: int, response: Response, db: Session = Depends(get_db)):
+@cache_response(ttl_seconds=3600)
+def get_event(event_id: int, request: Request, response: Response, db: Session = Depends(get_db)):
     event = (
         db.query(HistoricalEvent)
         .options(

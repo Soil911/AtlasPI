@@ -18,12 +18,13 @@ from __future__ import annotations
 import logging
 from pathlib import Path
 
-from fastapi import APIRouter, Depends, Query, Response
+from fastapi import APIRouter, Depends, Query, Request, Response
 from fastapi.responses import FileResponse
 from sqlalchemy import or_
 from sqlalchemy.orm import Session, joinedload
 
 from src.api.errors import AtlasError, EntityNotFoundError
+from src.cache import cache_response
 from src.db.database import get_db
 from src.db.models import (
     ChainLink,
@@ -111,7 +112,9 @@ def _event_summary(ev: HistoricalEvent) -> dict:
         "dell'overlap temporale. Minimo 2, massimo 4 entita' per richiesta."
     ),
 )
+@cache_response(ttl_seconds=300)
 def compare_entities(
+    request: Request,
     response: Response,
     ids: str = Query(
         ...,

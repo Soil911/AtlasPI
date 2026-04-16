@@ -13,12 +13,13 @@ import json
 import logging
 from typing import Literal
 
-from fastapi import APIRouter, Depends, HTTPException, Query, Response
+from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
 from pydantic import BaseModel
 from sqlalchemy import and_, desc, func, or_, select, text
 from sqlalchemy.orm import Session, joinedload
 
 from src.api.errors import EntityNotFoundError
+from src.cache import cache_response
 from src.api.schemas import (
     CapitalResponse,
     EntityResponse,
@@ -363,7 +364,9 @@ def query_entity(
     response_model=PaginatedEntityResponse,
     summary="Elenco paginato di tutte le entità",
 )
+@cache_response(ttl_seconds=300)
 def list_entities(
+    request: Request,
     response: Response,
     bbox: str | None = Query(
         None,
@@ -392,7 +395,8 @@ def list_entities(
     response_model=EntityResponse,
     summary="Dettaglio di una singola entità",
 )
-def get_entity(entity_id: int, response: Response, db: Session = Depends(get_db)):
+@cache_response(ttl_seconds=3600)
+def get_entity(entity_id: int, request: Request, response: Response, db: Session = Depends(get_db)):
     entity = _eager_query(db).filter(GeoEntity.id == entity_id).first()
     if not entity:
         raise EntityNotFoundError(entity_id)

@@ -2,6 +2,67 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.21.0] - 2026-04-16
+
+**Tema**: *Redis Caching Layer for API Performance*
+
+### Redis Response Cache
+
+- **`src/cache.py`** -- Redis cache utility module with decorator-based caching
+  - `cache_response(ttl_seconds)` decorator for route handlers
+  - Cache key: `cache:{method}:{path}:{sorted_query_params}` (deterministic, param-order independent)
+  - `invalidate_pattern(pattern)` -- clear cache entries matching a glob pattern
+  - `flush_cache()` -- clear all cached responses
+  - `get_cache_stats()` -- hits, misses, hit ratio, key count, memory usage
+  - **Graceful degradation**: if Redis is unavailable (dev mode, connection error), all cache operations are no-ops -- no crashes, handlers run normally
+
+### Cached Endpoints
+
+| Endpoint | TTL |
+|---|---|
+| `GET /v1/entities` | 300s (5 min) |
+| `GET /v1/entities/{id}` | 3600s (1 hour) |
+| `GET /v1/events` | 300s |
+| `GET /v1/events/{id}` | 3600s |
+| `GET /v1/chains` | 600s |
+| `GET /v1/timeline-data` | 600s |
+| `GET /v1/search/advanced` | 120s |
+| `GET /v1/compare` | 300s |
+| `GET /admin/insights` | 300s |
+| `GET /admin/coverage-report` | 600s |
+
+- `/admin/ai/*` endpoints intentionally NOT cached (must be real-time)
+- Cache hit returns `X-Cache: HIT` header + `X-Cache-Key` for debugging
+
+### New Admin Endpoints
+
+- `GET /admin/cache-stats` -- Redis connection status, cached key count, hit/miss ratio, memory usage
+- `POST /admin/cache/flush` -- flush all cached responses (returns count of keys deleted)
+
+### Nuovi file
+
+- `src/cache.py` -- Redis cache utility module
+- `src/api/routes/admin_cache.py` -- cache admin endpoints
+- `tests/test_v621_cache.py` -- 16 tests for cache module
+
+### File modificati
+
+- `src/main.py` -- Redis init on startup, admin_cache router registered
+- `src/api/routes/entities.py` -- `@cache_response` on list_entities, get_entity
+- `src/api/routes/events.py` -- `@cache_response` on list_events, get_event
+- `src/api/routes/chains.py` -- `@cache_response` on list_chains
+- `src/api/routes/timeline.py` -- `@cache_response` on get_timeline_data
+- `src/api/routes/search.py` -- `@cache_response` on advanced_search
+- `src/api/routes/compare.py` -- `@cache_response` on compare_entities
+- `src/api/routes/admin_insights.py` -- `@cache_response` on insights, coverage_report
+- `src/config.py` -- version bump to 6.21.0
+
+### Test
+
+- 16 nuovi test in `tests/test_v621_cache.py`
+- Test: module import, graceful degradation (no Redis), cache key determinism, different params/paths produce different keys, None params excluded, admin endpoints return valid JSON, decorated endpoints work without Redis, version bump
+- Conteggio test totale: 883 -> 899
+
 ## [v6.20.0] - 2026-04-16
 
 **Tema**: *Interactive API Explorer + New dynasty chains for Africa, Americas, Mesoamerica*

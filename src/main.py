@@ -20,7 +20,7 @@ from src.api.middleware import (
     RequestLoggingMiddleware,
     SecurityHeadersMiddleware,
 )
-from src.api.routes import admin_cofounder, admin_insights, analytics, chains, cities_routes, compare, docs_ui, entities, events, export, health, relations, search, timeline
+from src.api.routes import admin_cache, admin_cofounder, admin_insights, analytics, chains, cities_routes, compare, docs_ui, entities, events, export, health, relations, search, timeline
 from src.config import (
     APP_TITLE,
     APP_VERSION,
@@ -72,6 +72,10 @@ async def lifespan(app: FastAPI):
     from src.db.database import is_postgres, is_sqlite
 
     logger.info("Inizializzazione AtlasPI v%s [%s]...", APP_VERSION, ENVIRONMENT)
+
+    # Redis cache (graceful: no-op if REDIS_URL not set or unreachable).
+    from src.cache import init_redis
+    init_redis()
 
     if is_sqlite:
         # Dev: crea tabelle direttamente dal metadata dei modelli
@@ -209,6 +213,7 @@ app.include_router(cities_routes.router)
 app.include_router(chains.router)
 app.include_router(analytics.router)
 app.include_router(admin_insights.router)
+app.include_router(admin_cache.router)
 app.include_router(admin_cofounder.router)
 app.include_router(timeline.router)
 app.include_router(compare.router)
