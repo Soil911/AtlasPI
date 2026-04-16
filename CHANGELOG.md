@@ -2,6 +2,43 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.22.0] - 2026-04-16
+
+**Tema**: *Major Event Expansion + Embeddable Widgets*
+
+### Event Expansion: 312 -> 401 events
+
+- **`data/events/batch_17_modern_20th.json`** -- 38 events: Treaty of Trianon, Spanish Civil War, Indian independence, Israel creation, Cuban Missile Crisis, Moon landing, Stonewall riots, German reunification, dissolution of Yugoslavia, Oslo Accords, Gulf War, Darfur genocide, Indian Ocean tsunami, D-Day, Marshall Plan, Weimar Republic, Nazi seizure of power, Nuremberg Trials, NATO founding, Civil Rights Act, Mandela release, WWW launch, WTO founding, Camp David Accords, Iran-Iraq War, and more
+- **`data/events/batch_18_ancient_rome_greece.json`** -- 16 events: Peloponnesian War, Second Punic War, Spartacus revolt, Pax Romana, Plague of Athens, Alexander at the Hydaspes, Twelve Tables, Great Fire of Rome, Constitutio Antoniniana, Third Century Crisis, Olympic Games, Athenian democracy (Cleisthenes), Social War, Archimedes, Thirty Tyrants, Caesar's civil war
+- **`data/events/batch_19_islamic_world.json`** -- 18 events: Battle of Badr, Umayyad Caliphate founding, Islamic conquest of North Africa, House of Wisdom, Saladin captures Jerusalem, First Crusade, Almoravids, Almohads, Mamluk Sultanate, Ibn Sina Canon of Medicine, Islamic conquest of Persia, Battle of Las Navas de Tolosa, Battle of Manzikert, Suleiman the Magnificent, Ibn Khaldun Muqaddimah, Fall of Acre, First Fitna, Ibn Battuta travels
+- **`data/events/batch_20_trade_exploration.json`** -- 17 events: Vasco da Gama, Magellan-Elcano circumnavigation, VOC founding, Atlantic slave trade peak, Suez Canal, Panama Canal, Treaty of Tordesillas, Silk Road peak, British East India Company, trans-Saharan trade, Indian Ocean trade network, Berlin Conference (Scramble for Africa), Opium Wars, Portuguese slave trade beginning, Hanseatic League, encomienda system, Devil's Railroad
+
+### Embeddable Widgets
+
+- **Entity Card Widget** (`/widget/entity/{id}`) -- embeddable card showing entity name, type, dates, capital, confidence badge
+- **Timeline Widget** (`/widget/timeline?year_min=X&year_max=Y`) -- chronological event list for a date range
+- **On This Day Widget** (`/widget/on-this-day`) -- events that occurred on today's date (or `?date=MM-DD`)
+- **Widget Showcase** (`/widgets`) -- documentation page with live previews and copy-paste embed codes
+- All widgets support `?theme=light` parameter for light theme
+- All widget responses set `X-Frame-Options: ALLOWALL` and `Content-Security-Policy: frame-ancestors *`
+- Self-contained HTML (no nav/footer) with "Powered by AtlasPI" attribution link
+- Dark theme by default, responsive design
+
+### Files Added/Modified
+
+- `src/api/routes/widgets.py` -- widget route handler
+- `static/widgets/entity.html` -- entity card template
+- `static/widgets/timeline.html` -- mini timeline template
+- `static/widgets/on-this-day.html` -- on-this-day template
+- `static/widgets/showcase.html` -- widget showcase page
+- `static/widgets/widget.css` -- shared widget styles (dark/light themes)
+- `static/widgets/widget.js` -- shared widget logic (API fetch, formatting, theming)
+- `src/main.py` -- register widgets router
+- `src/config.py` -- version bump to 6.22.0
+- `tests/test_v622_widgets.py` -- 16 widget tests
+
+---
+
 ## [v6.21.0] - 2026-04-16
 
 **Tema**: *Redis Caching Layer for API Performance*

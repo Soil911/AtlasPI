@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AtlasPI Entity</title>
+  <link rel="stylesheet" href="/static/widgets/widget.css">
+</head>
+<body>
+  <div class="widget-container" id="root">
+    <div class="widget-loading">Loading entity...</div>
+  </div>
+
+  <script src="/static/widgets/widget.js"></script>
+  <script>
+    (async function () {
+      var W = window.AtlasWidget;
+      var root = document.getElementById('root');
+      var path = window.location.pathname;
+      var match = path.match(/\/widget\/entity\/(\d+)/);
+      if (!match) {
+        W.showError(root, 'Invalid entity ID');
+        return;
+      }
+      var entityId = match[1];
+
+      try {
+        var data = await W.apiFetch('/v1/entities/' + entityId);
+
+        var conf = W.confidenceLevel(data.confidence_score || 0);
+        var years = W.formatYearRange(data.year_start, data.year_end);
+
+        var html = '<div class="widget-header">';
+        html += '<h1>' + W.escapeHtml(data.name_original) + '</h1>';
+        if (data.name_english && data.name_english !== data.name_original) {
+          html += '<div class="subtitle">' + W.escapeHtml(data.name_english) + '</div>';
+        }
+        html += '</div>';
+
+        html += '<div class="widget-body">';
+
+        // Info rows
+        html += '<div class="info-row"><span class="info-label">Type</span><span class="info-value">' + W.escapeHtml(data.entity_type || '') + '</span></div>';
+        html += '<div class="info-row"><span class="info-label">Period</span><span class="info-value">' + W.escapeHtml(years) + '</span></div>';
+
+        if (data.capital_name) {
+          html += '<div class="info-row"><span class="info-label">Capital</span><span class="info-value">' + W.escapeHtml(data.capital_name) + '</span></div>';
+        }
+        if (data.status) {
+          html += '<div class="info-row"><span class="info-label">Status</span><span class="info-value">' + W.escapeHtml(data.status) + '</span></div>';
+        }
+
+        html += '<div class="info-row"><span class="info-label">Confidence</span><span class="info-value"><span class="confidence-badge ' + conf.cls + '">' + conf.label + '</span></span></div>';
+
+        if (data.continent) {
+          html += '<div class="info-row"><span class="info-label">Region</span><span class="info-value">' + W.escapeHtml(data.continent) + '</span></div>';
+        }
+
+        // Ethical notes (from description or notes if available)
+        if (data.ethical_notes) {
+          html += '<div class="ethics-box"><div class="ethics-label">Ethical note</div>' + W.escapeHtml(W.truncate(data.ethical_notes, 300)) + '</div>';
+        }
+
+        html += '</div>'; // end widget-body
+
+        html += '<div class="powered-by"><a href="' + W.API_BASE + '" target="_blank">Powered by Atlas<span>PI</span></a></div>';
+
+        root.innerHTML = html;
+      } catch (e) {
+        W.showError(root, 'Entity not found');
+      }
+    })();
+  </script>
+</body>
+</html>

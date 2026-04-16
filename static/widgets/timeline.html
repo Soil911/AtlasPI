@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AtlasPI Timeline</title>
+  <link rel="stylesheet" href="/static/widgets/widget.css">
+</head>
+<body>
+  <div class="widget-container" id="root">
+    <div class="widget-loading">Loading timeline...</div>
+  </div>
+
+  <script src="/static/widgets/widget.js"></script>
+  <script>
+    (async function () {
+      var W = window.AtlasWidget;
+      var root = document.getElementById('root');
+
+      var yearMin = parseInt(W.params.get('year_min') || '-3000', 10);
+      var yearMax = parseInt(W.params.get('year_max') || '2025', 10);
+      var limit = parseInt(W.params.get('limit') || '50', 10);
+
+      try {
+        var data = await W.apiFetch('/v1/events?year_min=' + yearMin + '&year_max=' + yearMax + '&limit=' + limit);
+        var events = data.events || data.items || data;
+        if (Array.isArray(data)) events = data;
+
+        var html = '<div class="widget-header">';
+        html += '<h1>Timeline</h1>';
+        html += '<div class="subtitle">' + W.formatYear(yearMin) + ' \u2013 ' + W.formatYear(yearMax) + '</div>';
+        html += '</div>';
+
+        html += '<div class="widget-body"><div class="timeline-track">';
+
+        if (!events || events.length === 0) {
+          html += '<div class="otd-empty">No events found for this period.</div>';
+        } else {
+          for (var i = 0; i < events.length; i++) {
+            var ev = events[i];
+            html += '<div class="timeline-event">';
+            html += '<div class="timeline-year">' + W.formatYear(ev.year) + '</div>';
+            html += '<div class="timeline-dot"></div>';
+            html += '<div class="timeline-content">';
+            html += '<div class="timeline-name">' + W.escapeHtml(ev.name_original) + '</div>';
+            html += '<div class="timeline-type">' + W.escapeHtml((ev.event_type || '').replace(/_/g, ' ')) + '</div>';
+            html += '</div></div>';
+          }
+        }
+
+        html += '</div></div>';
+        html += '<div class="powered-by"><a href="' + W.API_BASE + '" target="_blank">Powered by Atlas<span>PI</span></a></div>';
+
+        root.innerHTML = html;
+      } catch (e) {
+        W.showError(root, 'Failed to load timeline data');
+      }
+    })();
+  </script>
+</body>
+</html>

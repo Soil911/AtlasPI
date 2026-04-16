@@ -30,7 +30,12 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
         response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
 
         # /embed e' progettato per iframe — permetti SAMEORIGIN
-        if request.url.path.startswith("/embed"):
+        # /widget/ endpoints sono pensati per embed in siti terzi — ALLOWALL
+        path = request.url.path
+        if path.startswith("/widget"):
+            response.headers["X-Frame-Options"] = "ALLOWALL"
+            response.headers["Content-Security-Policy"] = "frame-ancestors *"
+        elif path.startswith("/embed"):
             response.headers["X-Frame-Options"] = "SAMEORIGIN"
         else:
             response.headers["X-Frame-Options"] = "DENY"

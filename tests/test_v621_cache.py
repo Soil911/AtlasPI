@@ -165,6 +165,6 @@ def test_cached_entity_detail_works_without_redis(client):
 
 
 def test_version_is_v621():
-    """APP_VERSION should be 6.21.0."""
+    """APP_VERSION should be >= 6.21.0."""
     from src.config import APP_VERSION
-    assert APP_VERSION == "6.21.0"
+    assert APP_VERSION >= "6.21.0"
