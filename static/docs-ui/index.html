@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AtlasPI API Explorer — Interactive documentation for the historical geography REST API. Try endpoints live.">
+  <title>AtlasPI API Explorer</title>
+  <link rel="icon" type="image/svg+xml" href="/static/landing/assets/favicon.svg">
+  <link rel="stylesheet" href="/static/docs-ui/style.css">
+</head>
+<body>
+
+<!-- ── Header ──────────────────────────────────────── -->
+<header class="docs-header">
+  <a href="/" class="logo">Atlas<strong>PI</strong> Docs</a>
+  <span class="version">v6.20.0</span>
+  <nav>
+    <a href="/app">Map</a>
+    <a href="/timeline">Timeline</a>
+    <a href="/compare">Compare</a>
+    <a href="/search">Search</a>
+    <a href="/docs">OpenAPI</a>
+    <a href="https://github.com/Soil911/AtlasPI" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+
+<!-- ── Layout ──────────────────────────────────────── -->
+<div class="docs-layout">
+
+<!-- ── Sidebar ─────────────────────────────────────── -->
+<aside class="docs-sidebar">
+  <div class="sidebar-section">
+    <span class="sidebar-section-title">Getting Started</span>
+    <a href="#getting-started" class="sidebar-link">Overview</a>
+    <a href="#base-url" class="sidebar-link">Base URL &amp; Format</a>
+  </div>
+  <div class="sidebar-section">
+    <span class="sidebar-section-title">Core API</span>
+    <a href="#entities" class="sidebar-link">Entities</a>
+    <a href="#events" class="sidebar-link">Events</a>
+    <a href="#cities-routes" class="sidebar-link">Cities &amp; Routes</a>
+    <a href="#chains" class="sidebar-link">Dynasty Chains</a>
+  </div>
+  <div class="sidebar-section">
+    <span class="sidebar-section-title">Discovery</span>
+    <a href="#search-export" class="sidebar-link">Search &amp; Export</a>
+    <a href="#timeline-compare" class="sidebar-link">Timeline &amp; Compare</a>
+    <a href="#relations" class="sidebar-link">Relations</a>
+  </div>
+  <div class="sidebar-section">
+    <span class="sidebar-section-title">System</span>
+    <a href="#admin" class="sidebar-link">Admin &amp; Insights</a>
+    <a href="#health" class="sidebar-link">Health</a>
+  </div>
+</aside>
+
+<!-- ── Main Content ────────────────────────────────── -->
+<main class="docs-main">
+
+<!-- ════════════════ GETTING STARTED ════════════════ -->
+<section class="docs-section" id="getting-started">
+  <h2>Getting Started</h2>
+  <p class="section-desc">
+    AtlasPI is a structured historical geographic database designed for AI agents.
+    It provides coordinates, GeoJSON boundaries, and historical metadata for geopolitical
+    entities across all eras — from 4500 BCE to 2024.
+  </p>
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="label">Entities</div>
+      <div class="value">862+</div>
+    </div>
+    <div class="info-card">
+      <div class="label">Events</div>
+      <div class="value">312+</div>
+    </div>
+    <div class="info-card">
+      <div class="label">Dynasty Chains</div>
+      <div class="value">25+</div>
+    </div>
+    <div class="info-card">
+      <div class="label">Academic Sources</div>
+      <div class="value">2,200+</div>
+    </div>
+  </div>
+</section>
+
+<section class="docs-section" id="base-url">
+  <h2>Base URL &amp; Response Format</h2>
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="label">Production URL</div>
+      <div class="value"><code>https://atlaspi.cra-srl.com</code></div>
+    </div>
+    <div class="info-card">
+      <div class="label">Authentication</div>
+      <div class="value">None (public)</div>
+    </div>
+    <div class="info-card">
+      <div class="label">Rate Limit</div>
+      <div class="value">60 req/min</div>
+    </div>
+    <div class="info-card">
+      <div class="label">Format</div>
+      <div class="value">JSON</div>
+    </div>
+  </div>
+  <div class="note-box">
+    <strong>Convention:</strong> All API endpoints are prefixed with <code>/v1/</code>.
+    Years are integers — negative values represent BCE dates (e.g., <code>-500</code> = 500 BCE).
+    Every entity includes a <code>confidence_score</code> (0.0-1.0) and <code>sources</code> array.
+  </div>
+  <div class="code-block">
+    <div class="code-block-header">
+      <span class="label">Example: Quick start with curl</span>
+      <button class="copy-btn">Copy</button>
+    </div>
+    <pre><span class="tok-comment"># Get all empires that existed in 1500 CE</span>
+<span class="tok-cmd">curl</span> -s https://atlaspi.cra-srl.com/v1/entity?year=1500&amp;type=empire
+
+<span class="tok-comment"># World snapshot for a given year</span>
+<span class="tok-cmd">curl</span> -s https://atlaspi.cra-srl.com/v1/snapshot/1500
+
+<span class="tok-comment"># Find entities near Rome</span>
+<span class="tok-cmd">curl</span> -s "https://atlaspi.cra-srl.com/v1/nearby?lat=41.9&amp;lon=12.5&amp;year=100"
+
+<span class="tok-comment"># Random entity</span>
+<span class="tok-cmd">curl</span> -s https://atlaspi.cra-srl.com/v1/random</pre>
+  </div>
+</section>
+
+<!-- ════════════════ ENTITIES ══════════════════════ -->
+<section class="docs-section" id="entities">
+  <h2>Entities API</h2>
+  <p class="section-desc">
+    Query geopolitical entities (empires, kingdoms, city-states, etc.) with filtering by year,
+    type, continent, and more. Each entity has original-language names, coordinates,
+    GeoJSON boundaries, confidence scores, and academic sources.
+  </p>
+
+  <!-- GET /v1/entity -->
+  <div class="endpoint" id="ep-entity-search">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/entity</span>
+      <span class="endpoint-desc">Search entities with filters</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns entities filtered by year, type, continent, status, and confidence. Supports pagination.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>year</td><td><span class="param-type">int</span></td><td>Filter entities that existed in this year (negative = BCE)</td></tr>
+          <tr><td>type</td><td><span class="param-type">string</span></td><td>Entity type: empire, kingdom, city_state, etc.</td></tr>
+          <tr><td>continent</td><td><span class="param-type">string</span></td><td>Filter by continent</td></tr>
+          <tr><td>status</td><td><span class="param-type">string</span></td><td>confirmed, disputed, approximate</td></tr>
+          <tr><td>confidence_min</td><td><span class="param-type">float</span></td><td>Minimum confidence score (0.0-1.0)</td></tr>
+          <tr><td>limit</td><td><span class="param-type">int</span></td><td>Results per page (default 50)</td></tr>
+          <tr><td>offset</td><td><span class="param-type">int</span></td><td>Pagination offset</td></tr>
+        </tbody>
+      </table>
+      <div class="code-block">
+        <div class="code-block-header"><span class="label">Request</span><button class="copy-btn">Copy</button></div>
+        <pre><span class="tok-cmd">curl</span> -s "https://atlaspi.cra-srl.com/v1/entity?year=1200&amp;type=empire&amp;limit=3"</pre>
+      </div>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/entity?year=1200&type=empire&limit=3">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/entities -->
+  <div class="endpoint" id="ep-entities-list">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/entities</span>
+      <span class="endpoint-desc">List all entities (paginated)</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns all entities with pagination support. Lighter than /v1/entity when no filters needed.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>limit</td><td><span class="param-type">int</span></td><td>Results per page (default 50)</td></tr>
+          <tr><td>offset</td><td><span class="param-type">int</span></td><td>Pagination offset</td></tr>
+        </tbody>
+      </table>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/entities?limit=2">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/entities/{id} -->
+  <div class="endpoint" id="ep-entity-detail">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/entities/{entity_id}</span>
+      <span class="endpoint-desc">Get entity by ID</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns full details for a single entity, including GeoJSON boundaries and all metadata.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>entity_id <span class="param-required">required</span></td><td><span class="param-type">int</span></td><td>Entity ID</td></tr>
+        </tbody>
+      </table>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/entities/1">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/snapshot/{year} -->
+  <div class="endpoint" id="ep-snapshot">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/snapshot/{year}</span>
+      <span class="endpoint-desc">World snapshot for a year</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns all entities that existed in the given year, with summary statistics by type and continent.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>year <span class="param-required">required</span></td><td><span class="param-type">int</span></td><td>Year (negative = BCE)</td></tr>
+          <tr><td>type</td><td><span class="param-type">string</span></td><td>Filter by entity type</td></tr>
+        </tbody>
+      </table>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/snapshot/1500">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/nearby -->
+  <div class="endpoint" id="ep-nearby">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/nearby</span>
+      <span class="endpoint-desc">Entities near coordinates</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Find entities near a geographic point, optionally filtered by year.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>lat <span class="param-required">required</span></td><td><span class="param-type">float</span></td><td>Latitude</td></tr>
+          <tr><td>lon <span class="param-required">required</span></td><td><span class="param-type">float</span></td><td>Longitude</td></tr>
+          <tr><td>year</td><td><span class="param-type">int</span></td><td>Filter by year</td></tr>
+          <tr><td>radius_km</td><td><span class="param-type">float</span></td><td>Search radius in km</td></tr>
+        </tbody>
+      </table>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/nearby?lat=41.9&lon=12.5&year=100">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/random -->
+  <div class="endpoint" id="ep-random">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/random</span>
+      <span class="endpoint-desc">Random entity</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns a random entity from the database. Useful for discovery and testing.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/random">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/types -->
+  <div class="endpoint" id="ep-types">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/types</span>
+      <span class="endpoint-desc">List entity types</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns all distinct entity types in the database with counts.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/types">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/continents -->
+  <div class="endpoint" id="ep-continents">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/continents</span>
+      <span class="endpoint-desc">List continents</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns all distinct continents with entity counts.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/continents">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/stats -->
+  <div class="endpoint" id="ep-stats">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/stats</span>
+      <span class="endpoint-desc">Database statistics</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns aggregate statistics about the database: total entities, breakdown by type, continent, temporal coverage.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/stats">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/search -->
+  <div class="endpoint" id="ep-search">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/search</span>
+      <span class="endpoint-desc">Search entities by name</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Search entities by name (original name, English name, or variants). Returns ranked results.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>q <span class="param-required">required</span></td><td><span class="param-type">string</span></td><td>Search query</td></tr>
+          <tr><td>limit</td><td><span class="param-type">int</span></td><td>Max results (default 10)</td></tr>
+        </tbody>
+      </table>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/search?q=roman">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ EVENTS ════════════════════════ -->
+<section class="docs-section" id="events">
+  <h2>Events API</h2>
+  <p class="section-desc">
+    Historical events linked to entities — battles, treaties, conquests, and more.
+    Each event has date precision metadata, geographic coordinates, and ethical annotations.
+  </p>
+
+  <!-- GET /v1/events -->
+  <div class="endpoint" id="ep-events-list">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/events</span>
+      <span class="endpoint-desc">List events with filters</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns historical events filtered by type, year range, entity, and more.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>event_type</td><td><span class="param-type">string</span></td><td>battle, treaty, conquest, founding, etc.</td></tr>
+          <tr><td>year_min</td><td><span class="param-type">int</span></td><td>Start of year range</td></tr>
+          <tr><td>year_max</td><td><span class="param-type">int</span></td><td>End of year range</td></tr>
+          <tr><td>entity_id</td><td><span class="param-type">int</span></td><td>Filter by related entity</td></tr>
+          <tr><td>limit</td><td><span class="param-type">int</span></td><td>Results per page (default 50)</td></tr>
+          <tr><td>offset</td><td><span class="param-type">int</span></td><td>Pagination offset</td></tr>
+        </tbody>
+      </table>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/events?event_type=battle&limit=3">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/events/types -->
+  <div class="endpoint" id="ep-events-types">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/events/types</span>
+      <span class="endpoint-desc">List event types</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns all distinct event types with counts.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/events/types">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/events/{event_id} -->
+  <div class="endpoint" id="ep-event-detail">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/events/{event_id}</span>
+      <span class="endpoint-desc">Get event by ID</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns full details for a single historical event.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>event_id <span class="param-required">required</span></td><td><span class="param-type">int</span></td><td>Event ID</td></tr>
+        </tbody>
+      </table>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/events/1">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/events/on-this-day/{mm_dd} -->
+  <div class="endpoint" id="ep-on-this-day">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/events/on-this-day/{mm_dd}</span>
+      <span class="endpoint-desc">Events on a calendar date</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns events that occurred on a specific month/day across all years.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>mm_dd <span class="param-required">required</span></td><td><span class="param-type">string</span></td><td>Month-day format, e.g. "10-14" for Oct 14</td></tr>
+        </tbody>
+      </table>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/events/on-this-day/10-14">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/entities/{entity_id}/events -->
+  <div class="endpoint" id="ep-entity-events">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/entities/{entity_id}/events</span>
+      <span class="endpoint-desc">Events for an entity</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns all historical events linked to a specific entity.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>entity_id <span class="param-required">required</span></td><td><span class="param-type">int</span></td><td>Entity ID</td></tr>
+        </tbody>
+      </table>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/entities/1/events">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <strong>Date precision:</strong> Events include <code>date_precision</code> field (DAY, MONTH, YEAR, DECADE, CENTURY, APPROXIMATE)
+    indicating how precise the recorded date is. Ancient events often have APPROXIMATE or CENTURY precision.
+  </div>
+</section>
+
+<!-- ════════════════ CITIES & ROUTES ══════════════ -->
+<section class="docs-section" id="cities-routes">
+  <h2>Cities &amp; Trade Routes API</h2>
+  <p class="section-desc">
+    Historical cities and trade routes with geographic coordinates and temporal data.
+  </p>
+
+  <!-- GET /v1/cities -->
+  <div class="endpoint" id="ep-cities">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/cities</span>
+      <span class="endpoint-desc">List historical cities</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns historical cities with coordinates, founding dates, and associated entities.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>city_type</td><td><span class="param-type">string</span></td><td>capital, port, religious, trade_hub, etc.</td></tr>
+          <tr><td>entity_id</td><td><span class="param-type">int</span></td><td>Filter by owning entity</td></tr>
+          <tr><td>limit</td><td><span class="param-type">int</span></td><td>Results per page</td></tr>
+        </tbody>
+      </table>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/cities?limit=3">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/cities/{city_id} -->
+  <div class="endpoint" id="ep-city-detail">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/cities/{city_id}</span>
+      <span class="endpoint-desc">Get city by ID</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns full details for a single city.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/cities/1">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/routes -->
+  <div class="endpoint" id="ep-routes">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/routes</span>
+      <span class="endpoint-desc">List trade routes</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns historical trade routes with waypoints, time periods, and associated entities.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>route_type</td><td><span class="param-type">string</span></td><td>land, sea, river</td></tr>
+          <tr><td>limit</td><td><span class="param-type">int</span></td><td>Results per page</td></tr>
+        </tbody>
+      </table>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/routes?limit=3">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/routes/{route_id} -->
+  <div class="endpoint" id="ep-route-detail">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/routes/{route_id}</span>
+      <span class="endpoint-desc">Get route by ID</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns full details for a single trade route including waypoints.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/routes/1">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ CHAINS ════════════════════════ -->
+<section class="docs-section" id="chains">
+  <h2>Dynasty Chains API</h2>
+  <p class="section-desc">
+    Succession chains linking entities across time — dynasty sequences, colonial chains,
+    ideological lineages. Each chain includes transition metadata (type, violence, ethical notes).
+  </p>
+
+  <!-- GET /v1/chains -->
+  <div class="endpoint" id="ep-chains-list">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/chains</span>
+      <span class="endpoint-desc">List all dynasty chains</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns all dynasty/succession chains with their links. Filterable by type and region.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>chain_type</td><td><span class="param-type">string</span></td><td>SUCCESSION, DYNASTY, COLONIAL, IDEOLOGICAL, RESTORATION</td></tr>
+          <tr><td>region</td><td><span class="param-type">string</span></td><td>Filter by region</td></tr>
+        </tbody>
+      </table>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/chains?chain_type=SUCCESSION">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/chains/types -->
+  <div class="endpoint" id="ep-chains-types">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/chains/types</span>
+      <span class="endpoint-desc">List chain types</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns all distinct chain types with counts.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/chains/types">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/chains/{chain_id} -->
+  <div class="endpoint" id="ep-chain-detail">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/chains/{chain_id}</span>
+      <span class="endpoint-desc">Get chain by ID</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns full chain details including all links with transition metadata and ethical notes.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/chains/1">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/entities/{entity_id}/predecessors -->
+  <div class="endpoint" id="ep-predecessors">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/entities/{entity_id}/predecessors</span>
+      <span class="endpoint-desc">Entity predecessors in chains</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns entities that precede the given entity in any dynasty chain.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/entities/1/predecessors">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/entities/{entity_id}/successors -->
+  <div class="endpoint" id="ep-successors">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/entities/{entity_id}/successors</span>
+      <span class="endpoint-desc">Entity successors in chains</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns entities that follow the given entity in any dynasty chain.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/entities/1/successors">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ SEARCH & EXPORT ══════════════ -->
+<section class="docs-section" id="search-export">
+  <h2>Search &amp; Export API</h2>
+  <p class="section-desc">
+    Unified search across all data types and bulk export in CSV, GeoJSON, and JSON formats.
+  </p>
+
+  <!-- GET /v1/search/advanced -->
+  <div class="endpoint" id="ep-search-advanced">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/search/advanced</span>
+      <span class="endpoint-desc">Unified search across all data</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Search across entities, events, cities, and trade routes. Results ranked by relevance with filters.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>q <span class="param-required">required</span></td><td><span class="param-type">string</span></td><td>Search query (min 2 chars)</td></tr>
+          <tr><td>data_type</td><td><span class="param-type">string</span></td><td>entity, event, city, route</td></tr>
+          <tr><td>entity_type</td><td><span class="param-type">string</span></td><td>Filter entities by type</td></tr>
+          <tr><td>year_min</td><td><span class="param-type">int</span></td><td>Start of year range</td></tr>
+          <tr><td>year_max</td><td><span class="param-type">int</span></td><td>End of year range</td></tr>
+          <tr><td>status</td><td><span class="param-type">string</span></td><td>confirmed, disputed, approximate</td></tr>
+          <tr><td>sort</td><td><span class="param-type">string</span></td><td>relevance, name, year, confidence</td></tr>
+          <tr><td>limit</td><td><span class="param-type">int</span></td><td>Results per page (default 20)</td></tr>
+          <tr><td>offset</td><td><span class="param-type">int</span></td><td>Pagination offset</td></tr>
+        </tbody>
+      </table>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/search/advanced?q=roman&data_type=entity&limit=3">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/search/fuzzy -->
+  <div class="endpoint" id="ep-search-fuzzy">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/search/fuzzy</span>
+      <span class="endpoint-desc">Fuzzy name search</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Tolerant search that handles misspellings and partial matches.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>q <span class="param-required">required</span></td><td><span class="param-type">string</span></td><td>Search query</td></tr>
+          <tr><td>limit</td><td><span class="param-type">int</span></td><td>Max results</td></tr>
+        </tbody>
+      </table>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/search/fuzzy?q=bysantium">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/export/entities -->
+  <div class="endpoint" id="ep-export-entities">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/export/entities</span>
+      <span class="endpoint-desc">Export entities (CSV/GeoJSON)</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Bulk export entities in CSV or GeoJSON format. Max 1000 rows per request.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>format <span class="param-required">required</span></td><td><span class="param-type">string</span></td><td>csv or geojson</td></tr>
+          <tr><td>entity_type</td><td><span class="param-type">string</span></td><td>Filter by type</td></tr>
+          <tr><td>year_min</td><td><span class="param-type">int</span></td><td>Start of year range</td></tr>
+          <tr><td>year_max</td><td><span class="param-type">int</span></td><td>End of year range</td></tr>
+        </tbody>
+      </table>
+      <div class="note-box">
+        <strong>Note:</strong> Export endpoints return file downloads (Content-Disposition: attachment).
+        CSV includes UTF-8 BOM for Excel compatibility.
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/export/events -->
+  <div class="endpoint" id="ep-export-events">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/export/events</span>
+      <span class="endpoint-desc">Export events (CSV/JSON)</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Bulk export events in CSV or JSON format. Max 1000 rows per request.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>format <span class="param-required">required</span></td><td><span class="param-type">string</span></td><td>csv or json</td></tr>
+          <tr><td>event_type</td><td><span class="param-type">string</span></td><td>Filter by event type</td></tr>
+          <tr><td>year_min</td><td><span class="param-type">int</span></td><td>Start of year range</td></tr>
+          <tr><td>year_max</td><td><span class="param-type">int</span></td><td>End of year range</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ TIMELINE & COMPARE ═══════════ -->
+<section class="docs-section" id="timeline-compare">
+  <h2>Timeline &amp; Compare API</h2>
+  <p class="section-desc">
+    Timeline data for visualization and side-by-side entity comparison.
+  </p>
+
+  <!-- GET /v1/timeline-data -->
+  <div class="endpoint" id="ep-timeline-data">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/timeline-data</span>
+      <span class="endpoint-desc">Timeline data for visualization</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns entity data structured for timeline visualization: start/end years, type, region.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>region</td><td><span class="param-type">string</span></td><td>Filter by continent/region</td></tr>
+          <tr><td>type</td><td><span class="param-type">string</span></td><td>Filter by entity type</td></tr>
+          <tr><td>year_min</td><td><span class="param-type">int</span></td><td>Start of year range</td></tr>
+          <tr><td>year_max</td><td><span class="param-type">int</span></td><td>End of year range</td></tr>
+        </tbody>
+      </table>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/timeline-data?region=Europe&year_min=0&year_max=500&limit=5">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/compare -->
+  <div class="endpoint" id="ep-compare">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/compare</span>
+      <span class="endpoint-desc">Compare 2-4 entities</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Side-by-side comparison of 2-4 entities with overlap analysis, shared events, and chain context.</p>
+      <div class="params-title">Parameters</div>
+      <table class="params-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>ids <span class="param-required">required</span></td><td><span class="param-type">string</span></td><td>Comma-separated entity IDs (2-4), e.g. "1,2,3"</td></tr>
+        </tbody>
+      </table>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/compare?ids=1,2">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/compare/{id1}/{id2} -->
+  <div class="endpoint" id="ep-compare-pair">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/compare/{id1}/{id2}</span>
+      <span class="endpoint-desc">Compare two entities (legacy)</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Legacy pair comparison. Use <code>/v1/compare?ids=</code> for the newer multi-entity comparison.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/compare/1/2">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ RELATIONS ════════════════════ -->
+<section class="docs-section" id="relations">
+  <h2>Relations API</h2>
+  <p class="section-desc">
+    Explore relationships between entities: contemporaries, related polities, evolution over time.
+  </p>
+
+  <!-- GET /v1/entities/{id}/contemporaries -->
+  <div class="endpoint" id="ep-contemporaries">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/entities/{entity_id}/contemporaries</span>
+      <span class="endpoint-desc">Entities that existed at the same time</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns entities with overlapping temporal ranges.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/entities/1/contemporaries">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/entities/{id}/related -->
+  <div class="endpoint" id="ep-related">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/entities/{entity_id}/related</span>
+      <span class="endpoint-desc">Related entities</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns entities related through geographic proximity, shared events, or succession chains.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/entities/1/related">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/entities/{id}/evolution -->
+  <div class="endpoint" id="ep-evolution">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/entities/{entity_id}/evolution</span>
+      <span class="endpoint-desc">Entity evolution over time</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns the temporal evolution of an entity: boundary changes, name changes, type transitions.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/entities/1/evolution">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /v1/entities/{id}/timeline -->
+  <div class="endpoint" id="ep-entity-timeline">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/v1/entities/{entity_id}/timeline</span>
+      <span class="endpoint-desc">Entity timeline</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns a timeline of key events and milestones for a specific entity.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/v1/entities/1/timeline">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ ADMIN ════════════════════════ -->
+<section class="docs-section" id="admin">
+  <h2>Admin &amp; Insights API</h2>
+  <p class="section-desc">
+    Traffic analytics, data coverage reports, and smart suggestions for data expansion.
+  </p>
+
+  <!-- GET /admin/insights -->
+  <div class="endpoint" id="ep-admin-insights">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/admin/insights</span>
+      <span class="endpoint-desc">Traffic and usage analytics</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns traffic analytics: request counts, popular endpoints, geographic distribution, user agents.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/admin/insights">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /admin/coverage-report -->
+  <div class="endpoint" id="ep-admin-coverage">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/admin/coverage-report</span>
+      <span class="endpoint-desc">Data quality and coverage</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Comprehensive report on data coverage: temporal gaps, geographic distribution, confidence scores, source quality.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/admin/coverage-report">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /admin/suggestions -->
+  <div class="endpoint" id="ep-admin-suggestions">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/admin/suggestions</span>
+      <span class="endpoint-desc">Smart expansion suggestions</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>AI-generated suggestions for expanding the dataset: missing entities, underrepresented regions, temporal gaps.</p>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/admin/suggestions">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ HEALTH ═══════════════════════ -->
+<section class="docs-section" id="health">
+  <h2>Health Check</h2>
+  <p class="section-desc">
+    System health and diagnostics.
+  </p>
+
+  <!-- GET /health -->
+  <div class="endpoint" id="ep-health">
+    <div class="endpoint-header">
+      <span class="http-method method-get">GET</span>
+      <span class="endpoint-path">/health</span>
+      <span class="endpoint-desc">System health check</span>
+      <span class="endpoint-toggle">&#9660;</span>
+    </div>
+    <div class="endpoint-body">
+      <p>Returns system status, version, entity count, database connection status, and uptime.</p>
+      <div class="code-block">
+        <div class="code-block-header"><span class="label">Example Response</span><button class="copy-btn">Copy</button></div>
+        <pre>{
+  <span class="tok-key">"status"</span>: <span class="tok-str">"ok"</span>,
+  <span class="tok-key">"version"</span>: <span class="tok-str">"6.20.0"</span>,
+  <span class="tok-key">"entity_count"</span>: <span class="tok-num">862</span>,
+  <span class="tok-key">"database"</span>: {
+    <span class="tok-key">"connected"</span>: <span class="tok-bool">true</span>,
+    <span class="tok-key">"type"</span>: <span class="tok-str">"postgresql"</span>
+  }
+}</pre>
+      </div>
+      <div class="try-it-row">
+        <button class="try-btn" data-path="/health">Try it</button>
+        <span class="try-status"></span>
+      </div>
+      <div class="try-response">
+        <div class="code-block">
+          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+
+<script src="/static/docs-ui/docs.js"></script>
+</body>
+</html>

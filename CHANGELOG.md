@@ -2,6 +2,48 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.20.0] - 2026-04-16
+
+**Tema**: *Interactive API Explorer + New dynasty chains for Africa, Americas, Mesoamerica*
+
+### Nuova pagina: /docs-ui
+
+- **API Explorer** interattivo — pagina di documentazione API custom (non Swagger)
+- **Sezioni**: Getting Started, Entities, Events, Cities & Routes, Chains, Search & Export, Timeline & Compare, Relations, Admin, Health
+- Ogni endpoint ha: metodo, path, descrizione, tabella parametri, esempio request, e **pulsante "Try it"** per testare l'endpoint live
+- **Syntax highlighting** CSS-only per risposte JSON (nessuna dipendenza esterna)
+- **Sidebar sticky** con navigazione e scroll-spy per evidenziare la sezione corrente
+- **Dark theme** coerente con AtlasPI (#0d1117, #161b22, accent #58a6ff)
+- Responsive (mobile-friendly, sidebar nascosta sotto 900px)
+- Zero dipendenze esterne
+
+### Nuovi file
+
+- `static/docs-ui/index.html` — pagina HTML con tutti gli endpoint documentati
+- `static/docs-ui/style.css` — dark theme, sidebar, endpoint cards, syntax highlighting
+- `static/docs-ui/docs.js` — toggle, copy, try-it fetch, scroll-spy
+- `src/api/routes/docs_ui.py` — route per servire /docs-ui
+
+### Nuove dynasty chains
+
+- **batch_14_ethiopian_trunk.json** — Ethiopian State Trunk: Aksum -> Zagwe -> Mengist Ityop'p'ya (3 link, SUCCESSION)
+- **batch_15_west_african.json** — Sahel Empire Trunk: Wagadou -> Manden Kurufaba -> Songhai (3 link, SUCCESSION) + Kanem-Bornu Trunk: Kanem -> Bornu -> Kanem-Bornu (3 link, SUCCESSION)
+- **batch_16_andean.json** — Andean Civilization Trunk: Tiwanaku -> Wari -> Chimor -> Tawantinsuyu -> Virreinato del Peru (5 link, SUCCESSION)
+- **batch_17_mesoamerican.json** — Mesoamerican -> Colonial Mexico: Olmeca -> Nueva Espana -> Primer Imperio Mexicano (3 link, COLONIAL)
+- Totale: 5 nuove catene, 17 nuovi link, copertura Africa + Ande + Mesoamerica
+
+### Navigazione
+
+- Aggiunto link "API Docs" nella navbar della mappa (/app) — punta a /docs-ui
+- Aggiunto link "API Docs" nella navigazione della landing page
+- Cross-navigation: /docs-ui <-> /app, /timeline, /compare, /search, /docs, GitHub
+
+### Test
+
+- 7 nuovi test in `tests/test_v620_docs.py`
+- Test: /docs-ui ritorna 200, contiene titolo, sezione Entities, sezione Events, sezione Chains, pulsanti Try It, riferimenti CSS/JS
+- Conteggio test totale: 876 -> 883
+
 ## [v6.19.0] - 2026-04-16
 
 **Tema**: *Advanced Search Page + Data Export — ricerca unificata e esportazione dati*

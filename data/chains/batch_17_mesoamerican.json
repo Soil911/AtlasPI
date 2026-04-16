@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Mesoamerican → Colonial Mexico Trunk",
+    "name_lang": "en",
+    "chain_type": "COLONIAL",
+    "region": "Mesoamerica / North America",
+    "description": "Political succession from the earliest Mesoamerican civilization (Olmeca, c. 1500-400 BCE) through Spanish colonial rule (Nueva Espana, 1521-1821) to independent Mexico. Note: Mesoamerican civilizations did not form a linear chain — the Olmeca, Zapotec, Maya, Toltec, and Mexica (Aztec) were partly overlapping and partly sequential. This chain highlights the Olmeca-to-Nueva Espana trunk to show the colonial rupture. The Primer Imperio Mexicano (1821-23) represents independence.",
+    "confidence_score": 0.7,
+    "ethical_notes": "The linear 'Olmec -> Aztec -> Mexico' narrative is a drastic simplification that erases the complexity of Mesoamerican civilization: the Maya existed independently for millennia, Zapotec Monte Alban flourished for over a thousand years, and hundreds of other polities existed simultaneously. The Mexica themselves were relative newcomers (c. 1325 founding of Tenochtitlan). The Spanish conquest of 1519-21 was enabled by alliances with Tlaxcala and other anti-Mexica polities — it was not simply 'Spain conquers Aztecs' but a complex indigenous political realignment that the Spanish exploited. Colonial-era sources (Sahagun, Duran) were compiled under Spanish supervision and reflect conquest-era biases.",
+    "sources": [
+      {"citation": "Coe, M. and Koontz, R. 'Mexico: From the Olmecs to the Aztecs' (7th ed., 2013)", "url": null, "source_type": "academic"},
+      {"citation": "Restall, M. 'Seven Myths of the Spanish Conquest' (2003)", "url": null, "source_type": "academic"},
+      {"citation": "Townsend, C. 'Fifth Sun: A New History of the Aztecs' (2019)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Olmeca",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "The Olmeca civilization (c. 1500-400 BCE), centered in the Gulf Coast lowlands (modern Veracruz/Tabasco), is considered the 'mother culture' of Mesoamerica. It produced the first complex society in the region, with monumental architecture (La Venta, San Lorenzo), the earliest Mesoamerican writing, and the Long Count calendar.",
+        "ethical_notes": "The 'mother culture' designation is contested: some scholars argue that Mesoamerican complexity emerged simultaneously in multiple regions. The Olmeca label is itself modern — we do not know what they called themselves."
+      },
+      {
+        "entity_name": "Nueva Espana",
+        "transition_year": 1521,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "The Viceroyalty of New Spain was established after the fall of Tenochtitlan (1521). The ~3000-year gap between Olmeca decline and Spanish arrival is bridged by many civilizations not in this chain (Zapotec, Maya, Teotihuacan, Toltec, Mexica). The Spanish colonial period (1521-1821) lasted 300 years.",
+        "ethical_notes": "WARNING: This link spans ~2000 years and many civilizations. It is included to show the colonial rupture, not to imply direct Olmeca-to-Spain succession. The Spanish conquest caused catastrophic population collapse in central Mexico: from an estimated 15-25 million in 1519 to ~1-2 million by 1600 (disease, warfare, forced labor, social disruption). The encomienda and repartimiento systems constituted forced labor regimes. Indigenous codices were systematically burned by friars (e.g., Diego de Landa's auto-da-fe in Yucatan, 1562)."
+      },
+      {
+        "entity_name": "Primer Imperio Mexicano",
+        "transition_year": 1821,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Mexican independence (1821) was achieved by a coalition of criollo elites (Plan de Iguala) after 11 years of insurgency (begun by Hidalgo 1810, continued by Morelos). Agustin de Iturbide proclaimed himself Emperor of the First Mexican Empire (1822-23), which briefly included Central America. The empire collapsed within two years.",
+        "ethical_notes": "Mexican independence was largely a criollo project — indigenous populations saw limited immediate benefit. The 'Mexican' national identity that emerged drew selectively on Aztec imagery (eagle and serpent) while the actual indigenous majority remained marginalized."
+      }
+    ]
+  }
+]

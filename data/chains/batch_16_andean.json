@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Andean Civilization Trunk",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Andes / South America",
+    "description": "Major Andean civilizations succession: Tiwanaku (c. 500-1000 CE) and Wari (c. 500-1000 CE) were contemporaneous 'horizon' states whose collapse led to regional fragmentation; Chimor (Chimu Kingdom, c. 900-1470) dominated the northern coast until Inca conquest; Tawantinsuyu (Inca Empire, c. 1438-1533) unified the Andes before Spanish conquest established the Virreinato del Peru (1542-1824). Note: Tiwanaku and Wari were contemporaneous, not sequential — the chain represents the broader succession of Andean political complexity, not strict linear inheritance.",
+    "confidence_score": 0.75,
+    "ethical_notes": "The 'succession' framing oversimplifies: Tiwanaku and Wari were parallel polities with different organizational principles (Tiwanaku: trade/colonization; Wari: military/administrative). The Inca conquest of Chimor (c. 1470) involved deliberate destruction of Chimu administrative capacity. The Spanish conquest (1532-72) caused catastrophic population collapse (estimated 50-90% mortality, primarily from disease + forced labor). The Virreinato del Peru imposed the encomienda and mita systems — forms of forced labor that continued pre-existing Inca labor obligations but transformed them into extractive colonial exploitation.",
+    "sources": [
+      {"citation": "Kolata, A. 'The Tiwanaku: Portrait of an Andean Civilization' (1993)", "url": null, "source_type": "academic"},
+      {"citation": "Moseley, M. 'The Incas and Their Ancestors' (2001)", "url": null, "source_type": "academic"},
+      {"citation": "Hemming, J. 'The Conquest of the Incas' (1970/2003)", "url": null, "source_type": "academic"},
+      {"citation": "D'Altroy, T. 'The Incas' (2014)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Tiwanaku",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Tiwanaku, centered at Lake Titicaca (modern Bolivia), was one of the two great 'Middle Horizon' states. It exerted influence through trade networks, colonies, and religious prestige rather than military conquest. Collapsed c. 1000 CE, likely due to prolonged drought."
+      },
+      {
+        "entity_name": "Wari",
+        "transition_year": 500,
+        "transition_type": "REFORM",
+        "is_violent": false,
+        "description": "The Wari Empire was contemporaneous with Tiwanaku (c. 500-1000 CE), not its successor. Centered in Ayacucho (modern Peru), Wari developed administrative infrastructure (road networks, storage systems) that the Inca would later adopt. Listed here to represent the parallel Middle Horizon state.",
+        "ethical_notes": "The Wari-Tiwanaku relationship is debated: cooperation, competition, or independent development? The transition_year 500 reflects Wari's emergence, not a succession from Tiwanaku."
+      },
+      {
+        "entity_name": "Chimor",
+        "transition_year": 900,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "After the collapse of both Tiwanaku and Wari (c. 1000 CE), regional polities emerged. Chimor (the Chimu Kingdom) dominated Peru's north coast from its capital Chan Chan — the largest adobe city in the Americas. Conquered by the Inca under Tupac Inca Yupanqui c. 1470.",
+        "ethical_notes": "Chan Chan's destruction and the forced relocation of Chimu artisans to Cusco represent deliberate cultural erasure by the Inca state."
+      },
+      {
+        "entity_name": "Tawantinsuyu",
+        "transition_year": 1438,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Pachacuti Inca Yupanqui transformed the Cusco kingdom into Tawantinsuyu ('Four Parts Together'), conquering from Ecuador to Chile within a century. The Inca absorbed Chimu (c. 1470) and Tiwanaku's former territories. Atahualpa was captured by Pizarro at Cajamarca (1532).",
+        "ethical_notes": "The Inca 'civilizing mission' narrative mirrors later colonial rhetoric. Inca conquest involved forced population transfers (mitmaqkuna), destruction of local shrines, and imposition of Quechua — these are imperial practices, not benevolent unification."
+      },
+      {
+        "entity_name": "Virreinato del Peru",
+        "transition_year": 1542,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "The Virreinato del Peru was formally established in 1542 (New Laws). Pizarro's invasion began in 1532; the neo-Inca state at Vilcabamba resisted until Tupac Amaru I's execution in 1572. The viceroyalty lasted until 1824 (Battle of Ayacucho).",
+        "ethical_notes": "The Spanish conquest caused one of the worst demographic catastrophes in human history: an estimated 50-90% population decline through disease (smallpox, measles, typhus), forced labor (silver mines at Potosi), and cultural destruction (extirpation of idolatries campaigns). The mita system at Potosi alone consumed hundreds of thousands of indigenous lives."
+      }
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Ethiopian State Trunk",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "East Africa",
+    "description": "Political succession of the Ethiopian highland state: the Kingdom of Aksum (c. 100-940 CE) gave way to the Zagwe dynasty (c. 940-1270) and then to the Solomonic dynasty's Mengist Ityop'p'ya (1270-1974). This is a trunk chain covering the three major polities; intermediate fragmentation periods and regional kingdoms are omitted for clarity.",
+    "confidence_score": 0.8,
+    "ethical_notes": "The Solomonic dynasty's claim to descent from King Solomon and the Queen of Sheba (Kebra Nagast narrative) is foundational mythology, not historical fact. The Zagwe are often portrayed as 'usurpers' in Solomonic-era sources — this is winner's historiography. The Zagwe produced the rock-hewn churches of Lalibela and were a legitimate dynasty in their own right. Aksumite-to-Zagwe transition details are poorly documented; the ~940 date is approximate.",
+    "sources": [
+      {"citation": "Munro-Hay, S. 'Aksum: An African Civilisation of Late Antiquity' (1991)", "url": null, "source_type": "academic"},
+      {"citation": "Henze, P. 'Layers of Time: A History of Ethiopia' (2000)", "url": null, "source_type": "academic"},
+      {"citation": "Taddesse Tamrat, 'Church and State in Ethiopia, 1270-1527' (1972)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Aksum",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "The Kingdom of Aksum, one of the great powers of the ancient world, controlling trade routes from the Nile to the Red Sea. Converted to Christianity under King Ezana (c. 340 CE). Declined after the 7th century as Arab expansion cut Red Sea trade routes."
+      },
+      {
+        "entity_name": "Zagwe",
+        "transition_year": 940,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "The Zagwe dynasty seized power from the declining Aksumite state around 940 CE. Details of the transition are obscure — later Solomonic sources portray it as usurpation, but the Zagwe ruled effectively for ~330 years and produced the monumental rock churches of Lalibela.",
+        "ethical_notes": "The characterization of the Zagwe as 'usurpers' comes from pro-Solomonic sources written after 1270. The Zagwe themselves may have claimed Aksumite legitimacy. The ~940 date is conventional; some scholars place it earlier or later."
+      },
+      {
+        "entity_name": "Mengist Ityop'p'ya",
+        "transition_year": 1270,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Yekuno Amlak overthrew the last Zagwe king (c. 1270) and founded the Solomonic dynasty, claiming descent from the Aksumite royal line via King Solomon and the Queen of Sheba. The Kebra Nagast ('Glory of Kings') was compiled to legitimize this claim.",
+        "ethical_notes": "The Solomonic restoration narrative is political theology, not documented genealogy. The dynasty nonetheless ruled Ethiopia until Haile Selassie's deposition in 1974 — over 700 years of claimed continuity."
+      }
+    ]
+  }
+]

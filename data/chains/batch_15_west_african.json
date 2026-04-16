@@ -1,0 +1,78 @@
+[
+  {
+    "name": "Sahel Empire Trunk",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "West Africa",
+    "description": "The three great Sahelian empires that controlled trans-Saharan trade: Wagadou (Ghana Empire, c. 300-1200), Manden Kurufaba (Mali Empire, c. 1235-1600), and Songhai (c. 1430-1591). Each successor empire absorbed the core territories and trade networks of its predecessor while expanding them.",
+    "confidence_score": 0.75,
+    "ethical_notes": "The term 'Ghana Empire' is a misnomer — 'Ghana' was the title of the ruler, not the state's name. The state was Wagadou, centered in modern southeastern Mauritania/western Mali, NOT in modern Ghana (which adopted the name at independence in 1957 as a pan-Africanist gesture). The narrative of 'rise and fall' imposed on these polities often reflects colonial-era historiographic frameworks that underestimated African state complexity. Oral traditions (griots/jeliw) are primary sources alongside Arabic-language accounts (al-Bakri, Ibn Battuta, al-Sa'di).",
+    "sources": [
+      {"citation": "Levtzion, N. 'Ancient Ghana and Mali' (1973)", "url": null, "source_type": "academic"},
+      {"citation": "Gomez, M. 'African Dominion: A New History of Empire in Early and Medieval West Africa' (2018)", "url": null, "source_type": "academic"},
+      {"citation": "Conrad, D. 'Empires of Medieval West Africa' (2005)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Wagadou",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Wagadou (commonly misnamed 'Ghana Empire') controlled trans-Saharan gold and salt trade from its capital Koumbi Saleh. Arabic sources (al-Bakri, 1068) describe it as fabulously wealthy. Declined after the 11th century Almoravid incursions and environmental shifts."
+      },
+      {
+        "entity_name": "Manden Kurufaba",
+        "transition_year": 1235,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Sundiata Keita defeated the Sosso king Sumanguru at the Battle of Kirina (c. 1235), founding the Mali Empire on the former Wagadou's core territories. The Kouroukan Fouga (Manden Charter) established governance principles. Mansa Musa's pilgrimage to Mecca (1324) is legendary for its gold distribution.",
+        "ethical_notes": "The Kouroukan Fouga is sometimes cited as an early human rights charter. While oral tradition preserves its principles, the extent to which it functioned as 'constitutional law' is debated. Sundiata's epic is preserved through the griot tradition — the historical kernel is real but details are mythologized."
+      },
+      {
+        "entity_name": "Songhai",
+        "transition_year": 1468,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Sunni Ali Ber of Songhai captured Timbuktu (1468) and Djenne (1473), absorbing Mali's declining territories. Under Askia Muhammad (r. 1493-1528), Songhai became the largest empire in African history by area. Destroyed by the Moroccan Sa'adi invasion at the Battle of Tondibi (1591).",
+        "ethical_notes": "The Moroccan conquest of 1591, using firearms against Songhai cavalry, ended the Sahelian imperial tradition. The resulting political fragmentation facilitated the Atlantic slave trade's expansion inland in subsequent centuries."
+      }
+    ]
+  },
+  {
+    "name": "Kanem-Bornu Trunk",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Central-West Africa",
+    "description": "Political succession of the Lake Chad basin state: from the Kanem Empire (c. 700-1380) to its continuation as Bornu (c. 1380-1893), with the unified Kanem-Bornu representing the broader polity. This is one of the longest-lasting African dynasties (Sefuwa/Sayfawa dynasty, c. 700-1846).",
+    "confidence_score": 0.75,
+    "ethical_notes": "The Sefuwa dynasty ruled for over 1,000 years — among the longest-reigning dynasties in world history. Colonial-era historiography systematically undervalued the complexity and duration of African state-building; Kanem-Bornu is a corrective example. The transition from Kanem to Bornu involved the Bulala invasions forcing the capital's relocation from Njimi to Ngazargamu — this is a relocation of the same dynasty, not a complete state replacement.",
+    "sources": [
+      {"citation": "Lange, D. 'A Sudanic Chronicle: The Bornu Expeditions of Idris Alauma (1564-1576)' (1987)", "url": null, "source_type": "academic"},
+      {"citation": "Levtzion, N. and Hopkins, J. 'Corpus of Early Arabic Sources for West African History' (1981)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Kanem",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "The Kanem Empire, centered northeast of Lake Chad, was one of the earliest Sahelian states. Under the Sefuwa dynasty (from c. 700), it became a major trans-Saharan trade hub and converted to Islam in the 11th century. Weakened by the Bulala people's expansion."
+      },
+      {
+        "entity_name": "Bornu",
+        "transition_year": 1380,
+        "transition_type": "REFORM",
+        "is_violent": true,
+        "description": "The Sefuwa dynasty relocated west of Lake Chad after Bulala invasions forced them from Njimi. The new capital Ngazargamu became the seat of the Bornu Empire. This is the same dynasty in a new location — a forced relocation rather than a new state, but the political entity shifted its center of gravity significantly.",
+        "ethical_notes": "Classifying this as REFORM rather than CONQUEST reflects the dynastic continuity (same Sefuwa ruling house). Some historians treat Kanem and Bornu as a single continuous polity; others emphasize the discontinuity of the capital shift."
+      },
+      {
+        "entity_name": "Kanem-Bornu",
+        "transition_year": 1564,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Mai Idris Alauma reconquered the original Kanem homeland from the Bulala, reunifying the empire as Kanem-Bornu. His reign (1564-1596) represents the polity's zenith, with diplomatic relations reaching the Ottoman Empire. The Sefuwa dynasty was eventually overthrown in 1846 by al-Kanemi's son."
+      }
+    ]
+  }
+]
