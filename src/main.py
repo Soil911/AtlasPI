@@ -190,7 +190,7 @@ app.add_middleware(SecurityHeadersMiddleware)
 # Request logging (include X-Request-ID)
 app.add_middleware(RequestLoggingMiddleware)
 
-# Analytics: log API requests to DB (fire-and-forget background thread)
+# Analytics: log API requests to DB (pure ASGI middleware + background thread)
 app.add_middleware(AnalyticsMiddleware)
 
 # Rate limiting (slowapi) — middleware applica i default_limits globali
