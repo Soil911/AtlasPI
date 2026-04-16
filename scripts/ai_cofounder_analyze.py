@@ -396,7 +396,10 @@ def analyze_failed_searches(db, existing_titles: set[str]) -> int:
 
     # ── Signal 2: Likely-empty search queries (200 + fast response) ──
     # Heuristic: search endpoints returning 200 with response_time < 100ms
-    # and query_string present usually means the DB hit was empty.
+    # and query_string contains actual SEARCH params (not just pagination).
+    # Pagination-only queries (limit=, offset=) are normal usage, not signals.
+    _SEARCH_PARAMS = ("name=", "q=", "year=", "event_type=", "entity_type=",
+                      "status=", "continent=", "type=", "search=")
     search_paths = ("/v1/entities", "/v1/events", "/v1/search")
     empty_search_rows = (
         db.query(
@@ -410,6 +413,10 @@ def analyze_failed_searches(db, existing_titles: set[str]) -> int:
             ApiRequestLog.query_string != "",
             or_(
                 *[ApiRequestLog.path.like(f"{p}%") for p in search_paths]
+            ),
+            # Must contain at least one real search param (not just limit/offset)
+            or_(
+                *[ApiRequestLog.query_string.contains(p) for p in _SEARCH_PARAMS]
             ),
             ApiRequestLog.status_code == 200,
             ApiRequestLog.response_time_ms < 100,
