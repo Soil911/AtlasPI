@@ -27,7 +27,7 @@ def upgrade() -> None:
     op.create_table(
         "api_request_logs",
         sa.Column("id", sa.Integer(), primary_key=True, autoincrement=True),
-        sa.Column("timestamp", sa.String(length=30), nullable=False),
+        sa.Column("timestamp", sa.String(length=50), nullable=False),
         sa.Column("method", sa.String(length=10), nullable=False),
         sa.Column("path", sa.String(length=2000), nullable=False),
         sa.Column("query_string", sa.String(length=2000), nullable=True),

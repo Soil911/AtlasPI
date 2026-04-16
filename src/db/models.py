@@ -626,7 +626,7 @@ class ApiRequestLog(Base):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
 
-    timestamp: Mapped[str] = mapped_column(String(30), nullable=False)  # ISO 8601
+    timestamp: Mapped[str] = mapped_column(String(50), nullable=False)  # ISO 8601
     method: Mapped[str] = mapped_column(String(10), nullable=False)
     path: Mapped[str] = mapped_column(String(2000), nullable=False)
     query_string: Mapped[str | None] = mapped_column(String(2000), nullable=True)
