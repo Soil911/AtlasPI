@@ -2,7 +2,7 @@
  * AtlasPI Interactive Timeline — v6.17
  *
  * Pure SVG timeline renderer. No external dependencies.
- * Handles 850+ entities, 275+ events, 21 dynasty chains.
+ * Handles 850+ entities, 297+ events, 21 dynasty chains.
  * Supports negative years (BCE), zoom, pan, search, touch.
  */
 

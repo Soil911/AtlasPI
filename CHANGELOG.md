@@ -6,6 +6,31 @@ Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
 **Tema**: *Interactive Timeline Visualization — esplorazione visiva dei dati temporali di AtlasPI*
 
+### AI Co-Founder: implementazione suggerimenti accettati
+
+Implementati i 3 suggerimenti accettati dal dashboard AI Co-Founder:
+
+#### Suggerimento 1: Entita' con confidence < 0.4
+- Analizzate 33 entita' con confidence_score < 0.4
+- Alzata la confidence per 18 entita' ben documentate (Aboriginal Australian Nations, Torres Strait Islander peoples, Yolngu, Kulin Nation, PNG Highlands, Scythia, Sarmatia, Catalhoyuk, Dilmun, Funan, Ajuuraan, Tuyuhun, Chamorro, Saudeleur, Lapita, Naoero, Tonga Ha'atakalaua, Xianbei, Kushano-Sassanid)
+- 13 entita' rimangono giustificatamente sotto 0.4 (Bazin, Gerra, Lihyanite, Damot, Sidaama, Gurage, Kel Adagh, Teda, Cantona, Cacicazgo de Cocle, Northern Cyprus, Crimea, Kingdom of Quito)
+- Aggiornati status a 'confirmed' per Catalhoyuk, Dilmun, Lapita
+
+#### Suggerimento 2: Zero eventi pre-3000 BCE
+- Creato `data/events/batch_14_deep_antiquity.json` con 10 eventi:
+  - Gobekli Tepe (~9500 BCE), Rivoluzione Agricola Fertile Crescent (~9000 BCE), Jericho PPNA (~8000 BCE), Catalhoyuk (~7500 BCE), Kuk Swamp Papua New Guinea (~7000 BCE), Irrigazione Mesopotamica (~6000 BCE), Eridu fondazione (~5400 BCE), Fusione del rame (~5000 BCE), Invenzione scrittura Uruk (~3400 BCE), Unificazione Egitto (~3100 BCE)
+- ETHICS: date approssimate, confidence 0.45-0.60, date_precision CENTURY, calendar_note con incertezza datazione archeologica
+- Ogni evento include fonti archeologiche/accademiche e note etiche su bias eurocentrico
+
+#### Suggerimento 3: Eventi sparsi 3000-1000 BCE
+- Creato `data/events/batch_15_bronze_age.json` con 12 eventi:
+  - Sargon di Akkad (~2334 BCE), Ur III/Shulgi (~2100 BCE), Palazzi minoici (~2000 BCE), Harappa declino (~1900 BCE), Hyksos in Egitto (~1650 BCE), Ittiti fondazione (~1650 BCE), Thutmose III espansione (~1479 BCE), Mitanni (~1500 BCE), Trattato egizio-ittita (~1259 BCE), Shang oracoli (~1250 BCE), Collasso Eta' del Bronzo (~1200 BCE), Eruzione di Thera (~1628 BCE)
+- ETHICS: stesse precauzioni — note su bias storiografico, fonti multiple, date con incertezza esplicita
+
+### Conteggi aggiornati
+- Eventi: 275 -> 297 (+22)
+- Entita' con confidence >= 0.4: da 817 a 837 (+20)
+
 ### Nuovo endpoint API
 
 - `GET /v1/timeline-data` — payload ottimizzato che combina entita', eventi e catene successorie in un unico JSON leggero. Nessuna descrizione, nessun GeoJSON — solo i campi temporali necessari per il rendering SVG. Cache aggressiva (1 ora)

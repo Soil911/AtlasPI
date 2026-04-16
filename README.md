@@ -13,7 +13,7 @@
   <a href="https://atlaspi.cra-srl.com"><img alt="Try it live" src="https://img.shields.io/badge/try%20it-live-58a6ff?style=flat-square&logo=globe&logoColor=white"></a>
   <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.17.0-blue?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-850-green?style=flat-square"></a>
-  <a href="#-dataset-overview"><img alt="Events" src="https://img.shields.io/badge/events-275-green?style=flat-square"></a>
+  <a href="#-dataset-overview"><img alt="Events" src="https://img.shields.io/badge/events-297-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Cities" src="https://img.shields.io/badge/cities-110-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Routes" src="https://img.shields.io/badge/trade%20routes-41-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Chains" src="https://img.shields.io/badge/dynasty%20chains-21-green?style=flat-square"></a>
