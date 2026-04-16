@@ -26,7 +26,7 @@ from src.api.schemas import (
     PaginatedEntityResponse,
 )
 from src.db.database import get_db, is_postgres
-from src.db.models import GeoEntity, NameVariant, Source, TerritoryChange
+from src.db.models import GeoEntity, HistoricalEvent, NameVariant, Source, TerritoryChange
 
 logger = logging.getLogger(__name__)
 
@@ -114,6 +114,16 @@ class ContinentInfo(BaseModel):
     count: int
 
 
+class EventStatsInfo(BaseModel):
+    """Statistiche aggregate eventi storici."""
+    total_events: int
+    events_with_day: int
+    events_with_month: int
+    date_coverage_unique_days: int
+    date_coverage_pct: float
+    date_precision_breakdown: dict[str, int]
+
+
 class StatsResponse(BaseModel):
     total_entities: int
     types: list[TypeInfo]
@@ -124,6 +134,7 @@ class StatsResponse(BaseModel):
     total_territory_changes: int
     disputed_count: int
     continents: list[ContinentInfo] = []
+    events: EventStatsInfo | None = None
 
 
 # ─── Conversione ─────────────────────────────────────────────────
@@ -905,6 +916,40 @@ def dataset_stats(response: Response, db: Session = Depends(get_db)):
         c = _get_continent(ent.capital_lat, ent.capital_lon)
         continent_counts[c] = continent_counts.get(c, 0) + 1
 
+    # ─── Event stats ────────────────────────────────────────────
+    total_events = db.query(HistoricalEvent).count()
+    events_with_day = db.query(HistoricalEvent).filter(
+        HistoricalEvent.day.isnot(None),
+    ).count()
+    events_with_month = db.query(HistoricalEvent).filter(
+        HistoricalEvent.month.isnot(None),
+    ).count()
+    # Unique MM-DD combinations
+    unique_days = (
+        db.query(HistoricalEvent.month, HistoricalEvent.day)
+        .filter(HistoricalEvent.month.isnot(None), HistoricalEvent.day.isnot(None))
+        .distinct()
+        .count()
+    )
+    # Date precision breakdown
+    precision_rows = (
+        db.query(HistoricalEvent.date_precision, func.count(HistoricalEvent.id))
+        .group_by(HistoricalEvent.date_precision)
+        .all()
+    )
+    precision_breakdown = {
+        (p or "UNKNOWN"): c for p, c in precision_rows
+    }
+
+    event_stats = EventStatsInfo(
+        total_events=total_events,
+        events_with_day=events_with_day,
+        events_with_month=events_with_month,
+        date_coverage_unique_days=unique_days,
+        date_coverage_pct=round(unique_days / 366 * 100, 1) if unique_days else 0.0,
+        date_precision_breakdown=precision_breakdown,
+    )
+
     response.headers["Cache-Control"] = "public, max-age=3600"
 
     return StatsResponse(
@@ -920,6 +965,7 @@ def dataset_stats(response: Response, db: Session = Depends(get_db)):
             [ContinentInfo(continent=c, count=n) for c, n in continent_counts.items()],
             key=lambda x: x.count, reverse=True,
         ),
+        events=event_stats,
     )
 
 

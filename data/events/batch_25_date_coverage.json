@@ -1,0 +1,381 @@
+[
+  {
+    "name_original": "Westfalischer Friede",
+    "name_original_lang": "de",
+    "event_type": "TREATY",
+    "year": 1648,
+    "month": 10,
+    "day": 24,
+    "date_precision": "DAY",
+    "iso_date": "1648-10-24",
+    "description": "The Peace of Westphalia was signed on 24 October 1648 in Osnabruck and Munster, ending the Thirty Years' War in the Holy Roman Empire and the Eighty Years' War between Spain and the Dutch Republic. It established the principle of state sovereignty (cuius regio, eius religio) and is considered foundational to the modern international system of nation-states.",
+    "location_name": "Osnabruck/Munster, Westfalen",
+    "location_lat": 52.28,
+    "location_lon": 8.05,
+    "main_actor": "Holy Roman Empire / France / Sweden / Dutch Republic",
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": false,
+    "ethical_notes": "While celebrated as the birth of the sovereign state system, the peace consolidated religious division and the fragmentation of the Holy Roman Empire. It did not end conflict — it formalized a system that would enable centuries of European interstate warfare.",
+    "entity_links": [
+      {"entity_name": "Holy Roman Empire", "role": "MAIN_ACTOR"},
+      {"entity_name": "France", "role": "PARTICIPANT"},
+      {"entity_name": "Dutch Republic", "role": "PARTICIPANT"}
+    ],
+    "sources": [
+      {"citation": "Croxton, D. 'Westphalia: The Last Christian Peace'. Palgrave, 2013.", "source_type": "academic"},
+      {"citation": "Wilson, P.H. 'The Thirty Years War: Europe's Tragedy'. Harvard UP, 2009.", "source_type": "academic"}
+    ]
+  },
+  {
+    "name_original": "Magyar forradalom — szovjet invazio",
+    "name_original_lang": "hu",
+    "event_type": "REVOLUTION",
+    "year": 1956,
+    "month": 11,
+    "day": 4,
+    "date_precision": "DAY",
+    "iso_date": "1956-11-04",
+    "description": "On 4 November 1956 the Soviet Union launched Operation Whirlwind, deploying 31,550 troops and 1,130 tanks to crush the Hungarian Revolution. Over 2,500 Hungarians were killed and 200,000 fled as refugees. Prime Minister Imre Nagy took refuge in the Yugoslav embassy but was lured out, arrested, and executed in 1958.",
+    "location_name": "Budapest, Hungary",
+    "location_lat": 47.50,
+    "location_lon": 19.04,
+    "main_actor": "Soviet Union",
+    "casualties_low": 2500,
+    "casualties_high": 3000,
+    "confidence_score": 0.93,
+    "status": "confirmed",
+    "known_silence": false,
+    "ethical_notes": "ETHICS: the Soviet invasion was an act of military suppression of a popular uprising. The MAIN_ACTOR is the Soviet Union; VICTIM is Hungary. The revolution was a legitimate national uprising, not a 'counter-revolution' as Soviet propaganda framed it. 200,000 refugees fled — one of the largest refugee crises in Cold War Europe.",
+    "entity_links": [
+      {"entity_name": "Soviet Union", "role": "MAIN_ACTOR"},
+      {"entity_name": "Hungary", "role": "VICTIM"}
+    ],
+    "sources": [
+      {"citation": "Gati, C. 'Failed Illusions: Moscow, Washington, Budapest, and the 1956 Hungarian Revolt'. Stanford UP, 2006.", "source_type": "academic"},
+      {"citation": "Litvan, G. 'The Hungarian Revolution of 1956'. Longman, 1996.", "source_type": "academic"}
+    ]
+  },
+  {
+    "name_original": "Gettysburg Address",
+    "name_original_lang": "en",
+    "event_type": "INTELLECTUAL_EVENT",
+    "year": 1863,
+    "month": 11,
+    "day": 19,
+    "date_precision": "DAY",
+    "iso_date": "1863-11-19",
+    "description": "President Abraham Lincoln delivered the Gettysburg Address on 19 November 1863 at the dedication of the Soldiers' National Cemetery in Gettysburg, Pennsylvania. The 272-word speech redefined the purpose of the Civil War as a struggle for equality and government 'of the people, by the people, for the people', invoking 'a new birth of freedom'.",
+    "location_name": "Gettysburg, Pennsylvania, USA",
+    "location_lat": 39.82,
+    "location_lon": -77.23,
+    "main_actor": "Abraham Lincoln / United States",
+    "confidence_score": 0.98,
+    "status": "confirmed",
+    "known_silence": false,
+    "ethical_notes": "The speech reframed the war as being about equality, though Lincoln's evolving views on racial justice remained complex. The address conspicuously omitted mention of slavery by name. The Battle of Gettysburg (July 1-3) killed ~7,000 soldiers.",
+    "entity_links": [
+      {"entity_name": "United States", "role": "MAIN_ACTOR"}
+    ],
+    "sources": [
+      {"citation": "Wills, G. 'Lincoln at Gettysburg: The Words That Remade America'. Simon & Schuster, 1992.", "source_type": "academic"},
+      {"citation": "Boritt, G.S. 'The Gettysburg Gospel'. Simon & Schuster, 2006.", "source_type": "academic"}
+    ]
+  },
+  {
+    "name_original": "Mayflower Compact",
+    "name_original_lang": "en",
+    "event_type": "FOUNDING_STATE",
+    "year": 1620,
+    "month": 11,
+    "day": 21,
+    "date_precision": "DAY",
+    "iso_date": "1620-11-21",
+    "calendar_note": "November 11 Old Style (Julian); November 21 New Style (Gregorian)",
+    "description": "On 21 November 1620 (NS), 41 male passengers of the Mayflower signed the Mayflower Compact in Provincetown Harbor, establishing a self-governing body for Plymouth Colony. It is considered one of the earliest written frameworks of self-government in what became the United States.",
+    "location_name": "Provincetown Harbor, Massachusetts",
+    "location_lat": 42.06,
+    "location_lon": -70.19,
+    "main_actor": "Pilgrim settlers",
+    "confidence_score": 0.90,
+    "status": "confirmed",
+    "known_silence": false,
+    "ethical_notes": "ETHICS: the Compact established English self-government on Wampanoag territory without any indigenous consent. The Wampanoag nation would later suffer devastating population loss from disease and King Philip's War (1675-76). The document represents settler colonial governance, not universal democratic achievement.",
+    "entity_links": [
+      {"entity_name": "English colonies", "role": "MAIN_ACTOR"}
+    ],
+    "sources": [
+      {"citation": "Philbrick, N. 'Mayflower: A Story of Courage, Community, and War'. Viking, 2006.", "source_type": "secondary"},
+      {"citation": "Bradford, W. 'Of Plymouth Plantation, 1620-1647'. Ed. S.E. Morison, Knopf, 1952.", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "Loma Prieta Earthquake",
+    "name_original_lang": "en",
+    "event_type": "EARTHQUAKE",
+    "year": 1989,
+    "month": 10,
+    "day": 17,
+    "date_precision": "DAY",
+    "iso_date": "1989-10-17",
+    "description": "The Loma Prieta earthquake struck the San Francisco Bay Area on 17 October 1989 at 5:04 PM local time, measuring 6.9 on the moment magnitude scale. It killed 63 people, injured 3,757, and caused $6 billion in damage. The earthquake collapsed a section of the Bay Bridge and the Cypress Street Viaduct in Oakland.",
+    "location_name": "Santa Cruz Mountains, California, USA",
+    "location_lat": 37.04,
+    "location_lon": -121.88,
+    "main_actor": "Natural disaster",
+    "casualties_low": 63,
+    "casualties_high": 63,
+    "confidence_score": 0.98,
+    "status": "confirmed",
+    "known_silence": false,
+    "ethical_notes": "The earthquake disproportionately affected low-income communities in the Cypress Viaduct area of West Oakland, where 42 of the 63 deaths occurred.",
+    "entity_links": [
+      {"entity_name": "United States", "role": "AFFECTED"}
+    ],
+    "sources": [
+      {"citation": "USGS. 'The Loma Prieta, California, Earthquake of October 17, 1989'. Professional Paper 1551-A, 1998.", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "Спутник-1",
+    "name_original_lang": "ru",
+    "event_type": "TECHNOLOGICAL_EVENT",
+    "year": 1957,
+    "month": 10,
+    "day": 4,
+    "date_precision": "DAY",
+    "iso_date": "1957-10-04",
+    "description": "On 4 October 1957 the Soviet Union launched Sputnik 1, the first artificial Earth satellite, from Baikonur Cosmodrome in Kazakhstan. The 83.6 kg polished metal sphere orbited Earth every 96.2 minutes, transmitting radio pulses detectable worldwide. It triggered the Space Race and profoundly shocked the United States, leading to the creation of NASA.",
+    "location_name": "Baikonur Cosmodrome, Kazakhstan SSR",
+    "location_lat": 45.92,
+    "location_lon": 63.34,
+    "main_actor": "Soviet Union",
+    "confidence_score": 0.99,
+    "status": "confirmed",
+    "known_silence": false,
+    "ethical_notes": "Sputnik was developed by the same rocket program (led by Sergei Korolev, a former Gulag prisoner) that produced ICBMs. The Space Race had military dimensions that are sometimes sanitized in popular narratives.",
+    "entity_links": [
+      {"entity_name": "Soviet Union", "role": "MAIN_ACTOR"}
+    ],
+    "sources": [
+      {"citation": "Siddiqi, A. 'Sputnik and the Soviet Space Challenge'. UP of Florida, 2003.", "source_type": "academic"},
+      {"citation": "Dickson, P. 'Sputnik: The Shock of the Century'. Walker, 2001.", "source_type": "secondary"}
+    ]
+  },
+  {
+    "name_original": "武昌起義",
+    "name_original_lang": "zh",
+    "event_type": "REVOLUTION",
+    "year": 1911,
+    "month": 10,
+    "day": 10,
+    "date_precision": "DAY",
+    "iso_date": "1911-10-10",
+    "description": "The Wuchang Uprising on 10 October 1911 began when revolutionary soldiers in the New Army garrison of Wuchang seized control of the city. The uprising quickly spread, triggering a chain of provincial secessions from the Qing Dynasty. Within months, the last Chinese dynasty fell and the Republic of China was proclaimed on 1 January 1912. October 10 became the national day of the Republic of China (Taiwan).",
+    "location_name": "Wuchang, Hubei, China",
+    "location_lat": 30.55,
+    "location_lon": 114.35,
+    "main_actor": "Tongmenghui / New Army revolutionaries",
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": false,
+    "ethical_notes": "The revolution ended 2,000+ years of imperial rule but led to decades of warlordism, civil war, and foreign invasion before the People's Republic was established in 1949. The Manchu ruling class faced retaliatory violence in some provinces.",
+    "entity_links": [
+      {"entity_name": "Qing Dynasty", "role": "DISSOLVED"}
+    ],
+    "sources": [
+      {"citation": "Esherick, J.W. 'Reform and Revolution in China: The 1911 Revolution in Hunan and Hubei'. UC Berkeley Press, 1976.", "source_type": "academic"},
+      {"citation": "Rhoads, E.J.M. 'Manchus and Han: Ethnic Relations and Political Power in Late Qing and Early Republican China'. U of Washington Press, 2000.", "source_type": "academic"}
+    ]
+  },
+  {
+    "name_original": "Battle of Trafalgar",
+    "name_original_lang": "en",
+    "event_type": "BATTLE",
+    "year": 1805,
+    "month": 10,
+    "day": 21,
+    "date_precision": "DAY",
+    "iso_date": "1805-10-21",
+    "description": "The Battle of Trafalgar on 21 October 1805 was a decisive naval engagement off Cape Trafalgar, Spain, where the British Royal Navy under Admiral Horatio Nelson destroyed the combined Franco-Spanish fleet. Britain lost no ships while capturing or destroying 22 enemy vessels. Nelson was killed by a French musket ball. The victory secured British naval supremacy for a century and ended Napoleon's invasion plans for Britain.",
+    "location_name": "Cape Trafalgar, Cadiz, Spain",
+    "location_lat": 36.18,
+    "location_lon": -6.04,
+    "main_actor": "British Royal Navy / Admiral Nelson",
+    "casualties_low": 449,
+    "casualties_high": 449,
+    "confidence_score": 0.97,
+    "status": "confirmed",
+    "known_silence": false,
+    "ethical_notes": "British casualties were 449 killed and 1,241 wounded; Franco-Spanish losses were ~4,400 killed and 2,500 wounded, with thousands captured. British naval supremacy enabled the expansion and maintenance of the British Empire.",
+    "entity_links": [
+      {"entity_name": "United Kingdom", "role": "MAIN_ACTOR"},
+      {"entity_name": "France", "role": "PARTICIPANT"},
+      {"entity_name": "Spain", "role": "PARTICIPANT"}
+    ],
+    "sources": [
+      {"citation": "Adkin, M. 'The Trafalgar Companion'. Aurum Press, 2005.", "source_type": "secondary"},
+      {"citation": "Knight, R. 'The Pursuit of Victory: The Life and Achievement of Horatio Nelson'. Penguin, 2005.", "source_type": "academic"}
+    ]
+  },
+  {
+    "name_original": "Surrender at Yorktown",
+    "name_original_lang": "en",
+    "event_type": "BATTLE",
+    "year": 1781,
+    "month": 10,
+    "day": 19,
+    "date_precision": "DAY",
+    "iso_date": "1781-10-19",
+    "description": "On 19 October 1781, British General Cornwallis surrendered 7,087 soldiers to the combined American and French forces at Yorktown, Virginia. The siege, lasting from September 28, was the last major land battle of the American Revolutionary War. The defeat convinced the British Parliament to negotiate peace, leading to the Treaty of Paris (1783) and American independence.",
+    "location_name": "Yorktown, Virginia, USA",
+    "location_lat": 37.24,
+    "location_lon": -76.51,
+    "main_actor": "United States / France",
+    "confidence_score": 0.97,
+    "status": "confirmed",
+    "known_silence": false,
+    "ethical_notes": "The American Revolution's ideals of liberty did not extend to enslaved people. Cornwallis had recruited enslaved Africans with promises of freedom; after surrender, many were recaptured and re-enslaved. The revolution benefited primarily white male property owners.",
+    "entity_links": [
+      {"entity_name": "United States", "role": "MAIN_ACTOR"},
+      {"entity_name": "France", "role": "PARTICIPANT"},
+      {"entity_name": "United Kingdom", "role": "AFFECTED"}
+    ],
+    "sources": [
+      {"citation": "Ketchum, R.M. 'Victory at Yorktown: The Campaign That Won the Revolution'. Henry Holt, 2004.", "source_type": "secondary"},
+      {"citation": "Ferling, J. 'Almost a Miracle: The American Victory in the War of Independence'. Oxford UP, 2007.", "source_type": "academic"}
+    ]
+  },
+  {
+    "name_original": "Executive Order 9066",
+    "name_original_lang": "en",
+    "event_type": "DEPORTATION",
+    "year": 1942,
+    "month": 2,
+    "day": 19,
+    "date_precision": "DAY",
+    "iso_date": "1942-02-19",
+    "description": "On 19 February 1942, President Franklin D. Roosevelt signed Executive Order 9066, authorizing the forced relocation and incarceration of approximately 120,000 Japanese Americans — 62% of whom were US citizens — from the West Coast to internment camps. Families lost homes, businesses, and property. The order was driven by wartime hysteria and racial prejudice, not military necessity.",
+    "location_name": "Washington, D.C., USA",
+    "location_lat": 38.90,
+    "location_lon": -77.04,
+    "main_actor": "United States government",
+    "confidence_score": 0.98,
+    "status": "confirmed",
+    "known_silence": false,
+    "ethical_notes": "ETHICS: this was a racially motivated mass incarceration. The US government formally apologized in 1988 (Civil Liberties Act) and paid $20,000 to each surviving internee. The euphemism 'internment' should be understood as forced incarceration of citizens without due process. German and Italian Americans were not subjected to comparable treatment.",
+    "entity_links": [
+      {"entity_name": "United States", "role": "MAIN_ACTOR"}
+    ],
+    "sources": [
+      {"citation": "Robinson, G. 'By Order of the President: FDR and the Internment of Japanese Americans'. Harvard UP, 2001.", "source_type": "academic"},
+      {"citation": "Commission on Wartime Relocation. 'Personal Justice Denied'. US GPO, 1983.", "source_type": "primary"}
+    ]
+  },
+  {
+    "name_original": "Assassination of JFK",
+    "name_original_lang": "en",
+    "event_type": "DEATH_OF_RULER",
+    "year": 1963,
+    "month": 11,
+    "day": 22,
+    "date_precision": "DAY",
+    "iso_date": "1963-11-22",
+    "description": "President John F. Kennedy was assassinated on 22 November 1963 in Dallas, Texas, shot while riding in an open motorcade. He was pronounced dead at 1:00 PM at Parkland Memorial Hospital. Lee Harvey Oswald was arrested but was killed two days later by Jack Ruby. The Warren Commission concluded Oswald acted alone, though conspiracy theories persist.",
+    "location_name": "Dallas, Texas, USA",
+    "location_lat": 32.78,
+    "location_lon": -96.81,
+    "main_actor": "Lee Harvey Oswald",
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": false,
+    "ethical_notes": "The assassination has generated extensive conspiracy theories. The Warren Commission's 'lone gunman' conclusion is the official finding, but the House Select Committee on Assassinations (1979) concluded there was 'probably' a conspiracy. We present the established facts, not a definitive resolution of the conspiracy question.",
+    "entity_links": [
+      {"entity_name": "United States", "role": "AFFECTED"}
+    ],
+    "sources": [
+      {"citation": "Warren Commission. 'Report of the President's Commission on the Assassination of President Kennedy'. US GPO, 1964.", "source_type": "primary"},
+      {"citation": "Bugliosi, V. 'Reclaiming History: The Assassination of President John F. Kennedy'. Norton, 2007.", "source_type": "academic"}
+    ]
+  },
+  {
+    "name_original": "Pavlimi i Pavaresise",
+    "name_original_lang": "sq",
+    "event_type": "FOUNDING_STATE",
+    "year": 1912,
+    "month": 11,
+    "day": 28,
+    "date_precision": "DAY",
+    "iso_date": "1912-11-28",
+    "description": "Albania declared independence from the Ottoman Empire on 28 November 1912 in Vlore, led by Ismail Qemali. The declaration came during the First Balkan War as Serbia, Greece, and Montenegro threatened to partition Albanian-populated territories. The Great Powers recognized Albanian independence at the London Conference of 1913, though with significantly reduced borders.",
+    "location_name": "Vlore, Albania",
+    "location_lat": 40.47,
+    "location_lon": 19.49,
+    "main_actor": "Ismail Qemali / Albanian national movement",
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "known_silence": false,
+    "ethical_notes": "ETHICS: the borders drawn by the Great Powers in 1913 left large Albanian populations outside Albania (in Kosovo, western Macedonia, Chameria). These 'orphaned' Albanian communities faced discrimination and forced assimilation for a century. The independence was achieved against both Ottoman rule and neighboring states' territorial ambitions.",
+    "entity_links": [
+      {"entity_name": "Ottoman Empire", "role": "AFFECTED"}
+    ],
+    "sources": [
+      {"citation": "Pearson, O. 'Albania in the Twentieth Century: A History'. Vol. 1. I.B. Tauris, 2004.", "source_type": "academic"},
+      {"citation": "Vickers, M. 'The Albanians: A Modern History'. I.B. Tauris, 1999.", "source_type": "academic"}
+    ]
+  },
+  {
+    "name_original": "Bitwa pod Lenino",
+    "name_original_lang": "pl",
+    "event_type": "BATTLE",
+    "year": 1943,
+    "month": 10,
+    "day": 13,
+    "date_precision": "DAY",
+    "iso_date": "1943-10-13",
+    "description": "The Battle of Lenino on 12-13 October 1943 was the first combat action of the 1st Tadeusz Kosciuszko Infantry Division, a Polish unit formed in the Soviet Union. Fighting near Lenino in Belarus, the division suffered 502 killed and 1,776 wounded over two days of intense fighting. The battle held symbolic significance for Polish-Soviet wartime alliance.",
+    "location_name": "Lenino, Belarus",
+    "location_lat": 54.30,
+    "location_lon": 30.87,
+    "main_actor": "1st Polish Division / Soviet Union",
+    "casualties_low": 502,
+    "casualties_high": 502,
+    "confidence_score": 0.88,
+    "status": "confirmed",
+    "known_silence": false,
+    "ethical_notes": "Many soldiers in the division were former Polish POWs who survived Soviet captivity — the same Soviet state that had murdered 22,000 Polish officers at Katyn in 1940. The battle's significance was politically amplified by the post-war communist government.",
+    "entity_links": [
+      {"entity_name": "Poland", "role": "MAIN_ACTOR"},
+      {"entity_name": "Soviet Union", "role": "PARTICIPANT"}
+    ],
+    "sources": [
+      {"citation": "Czarnecki, K. 'The Battle of Lenino, October 1943'. Journal of Slavic Military Studies, 2003.", "source_type": "academic"}
+    ]
+  },
+  {
+    "name_original": "Rosa Parks bus boycott",
+    "name_original_lang": "en",
+    "event_type": "OTHER",
+    "year": 1955,
+    "month": 12,
+    "day": 1,
+    "date_precision": "DAY",
+    "iso_date": "1955-12-01",
+    "description": "On 1 December 1955, Rosa Parks was arrested in Montgomery, Alabama for refusing to give up her bus seat to a white passenger, violating the city's racial segregation laws. Her arrest catalyzed the Montgomery Bus Boycott (December 1955 - December 1956), a 381-day mass protest led by Dr. Martin Luther King Jr. that became a pivotal moment in the American civil rights movement.",
+    "location_name": "Montgomery, Alabama, USA",
+    "location_lat": 32.38,
+    "location_lon": -86.30,
+    "main_actor": "Rosa Parks / African American community of Montgomery",
+    "confidence_score": 0.98,
+    "status": "confirmed",
+    "known_silence": false,
+    "ethical_notes": "ETHICS: Parks' action was not spontaneous but part of a planned civil rights strategy — she was a trained NAACP activist. However, characterizing it as 'only' strategic diminishes the genuine courage required to defy Jim Crow laws. Earlier resisters (Claudette Colvin, March 1955) were strategically passed over as test cases.",
+    "entity_links": [
+      {"entity_name": "United States", "role": "AFFECTED"}
+    ],
+    "sources": [
+      {"citation": "Brinkley, D. 'Rosa Parks: A Life'. Penguin, 2000.", "source_type": "secondary"},
+      {"citation": "Theoharis, J. 'The Rebellious Life of Mrs. Rosa Parks'. Beacon Press, 2013.", "source_type": "academic"}
+    ]
+  }
+]

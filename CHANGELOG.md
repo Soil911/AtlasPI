@@ -2,6 +2,42 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.25.0] - 2026-04-17
+
+**Tema**: *Date Coverage + Enhanced Stats + 14 Verified Events*
+
+### New Endpoint: Date Coverage
+
+- **`GET /v1/events/date-coverage`** — returns which MM-DD dates have events for the on-this-day feature
+  - Shows unique_dates, coverage_pct, and per-date event counts
+  - Cached for 1 hour
+
+### Enhanced Stats
+
+- **`GET /v1/stats`** now includes `events` section with:
+  - total_events, events_with_day, events_with_month
+  - date_coverage_unique_days, date_coverage_pct
+  - date_precision_breakdown (DAY/MONTH/YEAR/DECADE/CENTURY counts)
+
+### MCP Server v0.5.0
+
+- **New tool: `events_date_coverage`** — wraps the date coverage endpoint
+- **27 total MCP tools** (up from 26)
+
+### Data Expansion: 14 Verified Events (batch_25)
+
+- All dates manually verified against academic sources
+- Targets uncovered MM-DD combinations for on-this-day feature
+- Events: Peace of Westphalia (1648), Hungarian Revolution (1956), Gettysburg Address (1863), Mayflower Compact (1620), Loma Prieta Earthquake (1989), Sputnik (1957), Wuchang Uprising (1911), Battle of Trafalgar (1805), Surrender at Yorktown (1781), Executive Order 9066 (1942), JFK Assassination (1963), Albanian Independence (1912), Battle of Lenino (1943), Rosa Parks (1955)
+
+### Stats
+
+- **980 test** (up from 961): 10 date-coverage + 9 event-stats tests
+- **475+ eventi** (14 new verified events)
+- **27 MCP tools**
+
+---
+
 ## [v6.24.0] - 2026-04-16
 
 **Tema**: *Entity Similarity + MCP v0.5.0*
