@@ -294,3 +294,74 @@ def test_warring_states_period_has_chinese_name(client):
     d = r.json()
     assert d["name_native"] == "戰國時代"
     assert d["region"] == "asia_east"
+
+
+# ═══════════════════════════════════════════════════════════════════
+# 9. v6.29: Non-European period diversification
+# ═══════════════════════════════════════════════════════════════════
+
+
+def test_africa_periods_exist(client):
+    """v6.29: Africa periods added."""
+    r = client.get("/v1/periods?region=africa")
+    d = r.json()
+    assert d["total"] >= 3
+    slugs = {p["slug"] for p in d["periods"]}
+    assert "mali-empire-era" in slugs
+    assert "aksumite-empire-era" in slugs
+
+
+def test_southeast_asia_periods_exist(client):
+    """v6.29: Southeast Asia periods added."""
+    r = client.get("/v1/periods?region=asia_southeast")
+    d = r.json()
+    assert d["total"] >= 3
+    slugs = {p["slug"] for p in d["periods"]}
+    assert "angkor-period" in slugs
+    assert "majapahit-period" in slugs
+
+
+def test_americas_periods_expanded(client):
+    """v6.29: Americas now has Classic Maya, Aztec, Inca, Mississippian."""
+    r = client.get("/v1/periods?region=americas")
+    d = r.json()
+    assert d["total"] >= 4
+    slugs = {p["slug"] for p in d["periods"]}
+    assert "classic-maya-period" in slugs
+    assert "aztec-imperial-period" in slugs
+    assert "inca-imperial-period" in slugs
+
+
+def test_aztec_has_nahuatl_name(client):
+    """Aztec period uses Mexica (Nahuatl) as native name."""
+    r = client.get("/v1/periods/by-slug/aztec-imperial-period")
+    d = r.json()
+    assert d["name_native"] == "Mēxihcah"
+    assert d["name_native_lang"] == "nah"
+
+
+def test_angkor_has_khmer_name(client):
+    r = client.get("/v1/periods/by-slug/angkor-period")
+    d = r.json()
+    assert d["name_native"] == "យុគអង្គរ"
+
+
+def test_regions_enum_has_more_regions(client):
+    """v6.29: regions enum now includes africa, asia_southeast."""
+    r = client.get("/v1/periods/regions")
+    d = r.json()
+    assert "africa" in d["regions"]
+    assert "asia_southeast" in d["regions"]
+
+
+def test_periods_more_balanced(client):
+    """v6.29: no single region dominates by 10x; europe share drops."""
+    r = client.get("/v1/periods?limit=500")
+    d = r.json()
+    from collections import Counter
+    regions = Counter(p["region"] for p in d["periods"])
+    total = sum(regions.values())
+    # Europe should be < 50% of periods
+    assert regions.get("europe", 0) / total < 0.5
+    # Total should have grown (v6.27 had 33, v6.29 adds 15)
+    assert total >= 45

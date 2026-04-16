@@ -31,7 +31,7 @@ from src.config import (
     RATE_LIMIT,
 )
 from src.db.database import Base, engine
-from src.db.seed import seed_database, seed_events_database, seed_periods_database
+from src.db.seed import seed_database, seed_events_database, seed_periods_database, sync_new_periods
 from src.logging_config import setup_logging
 from src.monitoring import init_sentry
 
@@ -103,10 +103,14 @@ async def lifespan(app: FastAPI):
         except Exception:
             logger.warning("Seed eventi fallito — v6.3 events layer non disponibile", exc_info=True)
         # v6.27: seed historical periods (independent from entities/events)
+        # v6.29: always run sync after seed so new batch files land in prod.
         try:
             seed_periods_database()
+            sync_result = sync_new_periods()
+            if sync_result.get("inserted", 0) > 0:
+                logger.info("Periods sync: %d new periods added", sync_result["inserted"])
         except Exception:
-            logger.warning("Seed periods fallito — v6.27 periods layer non disponibile", exc_info=True)
+            logger.warning("Seed/sync periods fallito — v6.27 periods layer non disponibile", exc_info=True)
 
     logger.info("AtlasPI pronto")
     yield

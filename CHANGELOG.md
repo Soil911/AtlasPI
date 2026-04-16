@@ -2,6 +2,46 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.29.0] - 2026-04-17
+
+**Tema**: *Period diversification — 15 non-European periods added*
+
+### Eurocentric Bias Correction
+
+v6.27 shipped 33 periods, 48% European. v6.29 adds 15 carefully verified
+periods from Africa, Southeast Asia, Americas, and expands Asia.
+
+### New Periods (batch_02_non_european.json)
+
+- **Africa (5)**: Kingdom of Kush, Aksumite Empire, Mali Empire, Great
+  Zimbabwe, Swahili Coast Golden Age
+- **Southeast Asia (3)**: Angkor Period, Srivijaya Era, Majapahit Period
+- **Americas (4)**: Classic Maya, Aztec Imperial, Inca Imperial (Tawantinsuyu),
+  Mississippian Culture
+- **Asia East (2)**: Tang Dynasty, Song Dynasty
+- **Asia South (1)**: Gupta Empire
+
+### ETHICS framing in added periods
+
+- Great Zimbabwe: notes colonial-era denial of African origins
+- Aztec: uses Mēxihcah (Nahuatl), critiques Spanish conquest narrative
+- Inca: notes ~90% demographic collapse post-contact
+- Kush, Aksum: establishes African civilizations as peers of Rome/China
+
+### Infrastructure
+
+- **`sync_new_periods()`** — incremental seed, picks up new batch files on
+  startup without wiping existing data (same pattern as events sync)
+- Startup now: `seed_periods_database()` + `sync_new_periods()` chained
+
+### Stats
+
+- **48 historical periods** (up from 33)
+- Europe share drops from 48% → 33%
+- **36 periods tests** (7 new diversity tests)
+
+---
+
 ## [v6.28.0] - 2026-04-17
 
 **Tema**: *GAMECHANGER — auto-implementation dei suggerimenti accettati*

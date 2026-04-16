@@ -450,3 +450,76 @@ def seed_periods_database():
         raise
     finally:
         db.close()
+
+
+def sync_new_periods() -> dict:
+    """Add only periods that don't already exist (dedup by slug).
+
+    Unlike seed_periods_database which skips when the table isn't empty,
+    this always runs and adds only new slugs. Used on every startup so
+    new batch files in data/periods/ get picked up without wiping the DB.
+
+    Returns: {"inserted": N, "skipped": N, "errors": [...]}
+    """
+    db: Session = SessionLocal()
+    result = {"inserted": 0, "skipped": 0, "errors": []}
+    try:
+        all_periods = load_all_periods()
+        if not all_periods:
+            return result
+
+        existing_slugs = {p[0] for p in db.query(HistoricalPeriod.slug).all()}
+
+        for p_data in all_periods:
+            slug = p_data.get("slug")
+            if not slug:
+                result["errors"].append(f"{p_data.get('name', '?')}: missing slug")
+                continue
+            if slug in existing_slugs:
+                result["skipped"] += 1
+                continue
+
+            try:
+                period = HistoricalPeriod(
+                    name=p_data["name"],
+                    name_lang=p_data.get("name_lang", "en"),
+                    slug=slug,
+                    name_native=p_data.get("name_native"),
+                    name_native_lang=p_data.get("name_native_lang"),
+                    period_type=p_data.get("period_type", "period"),
+                    region=p_data.get("region", "global"),
+                    year_start=p_data["year_start"],
+                    year_end=p_data.get("year_end"),
+                    description=p_data["description"],
+                    historiographic_note=p_data.get("historiographic_note"),
+                    alternative_names=(
+                        json.dumps(p_data["alternative_names"], ensure_ascii=False)
+                        if p_data.get("alternative_names") else None
+                    ),
+                    confidence_score=p_data.get("confidence_score", 0.8),
+                    status=p_data.get("status", "confirmed"),
+                    sources=(
+                        json.dumps(p_data["sources"], ensure_ascii=False)
+                        if p_data.get("sources") else None
+                    ),
+                )
+                db.add(period)
+                result["inserted"] += 1
+                existing_slugs.add(slug)
+            except Exception as exc:
+                result["errors"].append(f"{p_data.get('name', '?')}: {exc}")
+
+        db.commit()
+        logger.info(
+            "Period sync: %d inserted, %d skipped, %d errors",
+            result["inserted"],
+            result["skipped"],
+            len(result["errors"]),
+        )
+    except Exception:
+        db.rollback()
+        logger.error("Error during period sync", exc_info=True)
+        raise
+    finally:
+        db.close()
+    return result
