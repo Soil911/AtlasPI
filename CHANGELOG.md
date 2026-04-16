@@ -2,6 +2,39 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.30.0] - 2026-04-17
+
+**Tema**: *World snapshot — single-call "what was the world like in year X"*
+
+### New Endpoint: World Snapshot
+
+- **`GET /v1/snapshot/year/{year}`** — rich aggregated view of the world
+  at a given year. Returns in one response:
+  - **periods**: all historical periods in effect, by region
+  - **entities**: total active + top-N by confidence + breakdown by type
+  - **events_that_year**: exact-year events, sorted by month/day
+  - **cities**: total active + top-N + breakdown by city type
+  - **chains**: dynasty chains with at least one link active at year
+- `top_n` parameter (1-50) controls how many top items per category
+
+### Cross-resource period linkage (shipped alongside)
+
+- **`GET /v1/entities/{id}/periods`** — periods overlapping an entity's lifespan
+- **`GET /v1/events/{id}/periods`** — periods containing an event's year
+- Both support `?region=` filter
+
+### MCP Server v0.7.0
+
+- **3 new tools**: `world_snapshot`, `entity_periods`, `event_periods`
+- **34 total MCP tools** (up from 31)
+
+### Stats
+
+- **1063 tests** (16 new snapshot + 5 new period-linkage)
+- Snapshot responds in ~20ms (cached 1h)
+
+---
+
 ## [v6.29.0] - 2026-04-17
 
 **Tema**: *Period diversification — 15 non-European periods added*

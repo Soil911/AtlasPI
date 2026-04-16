@@ -233,6 +233,13 @@ async def _h_event_periods(client: AtlasPIClient, args: dict[str, Any]) -> Any:
     )
 
 
+async def _h_world_snapshot(client: AtlasPIClient, args: dict[str, Any]) -> Any:
+    return await client.world_snapshot(
+        int(args["year"]),
+        top_n=args.get("top_n"),
+    )
+
+
 # -- v6.4 cities & routes ------------------------------------------
 
 
@@ -1106,6 +1113,38 @@ TOOLS: list[ToolDefinition] = [
             "additionalProperties": False,
         },
         handler=_h_event_periods,
+    ),
+    ToolDefinition(
+        name="world_snapshot",
+        description=(
+            "Snapshot aggregato del mondo in un dato anno: epoche attive, "
+            "entità politiche esistenti, eventi di quell'anno, città attive, "
+            "catene dinastiche in corso. Una sola chiamata per rispondere "
+            "a 'Com'era il mondo nel 1250?' o 'Che succedeva nel 500 aC?'. "
+            "Risponde con: periods (per regione), entities (top-N per "
+            "confidence + breakdown per tipo), events_that_year, cities "
+            "(top-N + breakdown), chains attive. Parametro top_n controlla "
+            "quanti elementi top-N per categoria (default 10)."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {
+                "year": {
+                    **_YEAR_SCHEMA,
+                    "description": _YEAR_SCHEMA["description"]
+                    + " Anno per cui generare lo snapshot.",
+                },
+                "top_n": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 50,
+                    "description": "Quante entità/città/eventi top-N per categoria. Default 10.",
+                },
+            },
+            "required": ["year"],
+            "additionalProperties": False,
+        },
+        handler=_h_world_snapshot,
     ),
     # ─── v6.4 cities ────────────────────────────────────────────────
     ToolDefinition(

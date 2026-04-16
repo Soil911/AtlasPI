@@ -68,6 +68,8 @@ EXPECTED_TOOL_NAMES = {
     # v0.6 cross-linkage
     "entity_periods",
     "event_periods",
+    # v0.7 world snapshot
+    "world_snapshot",
 }
 
 
@@ -134,15 +136,15 @@ def test_base_url_default_when_env_empty(monkeypatch: pytest.MonkeyPatch) -> Non
 
 
 def test_tool_list_complete() -> None:
-    """Tutti e 33 i tools canonici v0.6.1 sono registrati."""
+    """Tutti e 34 i tools canonici v0.7.0 sono registrati."""
     names = {t.name for t in get_tools()}
     assert names == EXPECTED_TOOL_NAMES, (
         f"Missing or unexpected tools: {names ^ EXPECTED_TOOL_NAMES}"
     )
     # Bonus: nessun duplicato
     assert len(get_tools()) == len(EXPECTED_TOOL_NAMES)
-    # v0.6.1 additions: 33 tools (was 31 with periods, +2 cross-linkage)
-    assert len(names) == 33
+    # v0.7.0: 34 tools (+world_snapshot)
+    assert len(names) == 34
 
 
 def test_search_entities_tool_schema() -> None:
@@ -198,6 +200,8 @@ def test_required_params_for_path_tools() -> None:
     # v0.6.1 cross-linkage
     assert get_tool("entity_periods").input_schema["required"] == ["entity_id"]
     assert get_tool("event_periods").input_schema["required"] == ["event_id"]
+    # v0.7.0 snapshot
+    assert get_tool("world_snapshot").input_schema["required"] == ["year"]
 
 
 def test_descriptions_are_substantial() -> None:

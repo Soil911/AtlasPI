@@ -17,7 +17,7 @@ import httpx
 
 DEFAULT_BASE_URL = "https://atlaspi.cra-srl.com"
 DEFAULT_TIMEOUT = 30.0
-USER_AGENT = "atlaspi-mcp/0.6.1 (+https://github.com/Soil911/AtlasPI)"
+USER_AGENT = "atlaspi-mcp/0.7.0 (+https://github.com/Soil911/AtlasPI)"
 
 
 class AtlasPIClientError(RuntimeError):
@@ -370,6 +370,15 @@ class AtlasPIClient:
         return await self._get(
             f"/v1/events/{int(event_id)}/periods",
             {"region": region},
+        )
+
+    async def world_snapshot(
+        self, year: int, *, top_n: int | None = None,
+    ) -> Any:
+        """GET /v1/snapshot/year/{year} — rich aggregated view of the world at a year."""
+        return await self._get(
+            f"/v1/snapshot/year/{int(year)}",
+            {"top_n": top_n},
         )
 
     # -- v6.4 cities & routes ------------------------------------------
