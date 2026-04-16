@@ -254,6 +254,7 @@ def _event_map_marker(e: HistoricalEvent) -> dict:
     }
 
 
+@cache_response(ttl_seconds=300)
 @router.get(
     "/v1/events/map",
     summary="Eventi per visualizzazione mappa",
