@@ -1,0 +1,806 @@
+[
+  {
+    "name_original": "\u0917\u0941\u092a\u094d\u0924 \u0938\u093e\u092e\u094d\u0930\u093e\u091c\u094d\u092f",
+    "name_original_lang": "sa",
+    "entity_type": "empire",
+    "year_start": 320,
+    "year_end": 550,
+    "capital_name": "Pataliputra (\u092a\u093e\u091f\u0932\u093f\u092a\u0941\u0924\u094d\u0930)",
+    "capital_lat": 25.61,
+    "capital_lon": 85.14,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [68.5, 28.0],
+          [72.0, 30.5],
+          [76.0, 32.0],
+          [80.0, 30.5],
+          [84.0, 28.5],
+          [88.0, 26.5],
+          [90.0, 24.0],
+          [88.5, 22.0],
+          [85.0, 20.0],
+          [80.0, 18.0],
+          [76.0, 16.5],
+          [73.5, 18.0],
+          [72.0, 20.0],
+          [70.0, 22.0],
+          [68.0, 24.5],
+          [68.5, 28.0]
+        ]
+      ]
+    },
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Gupta period is often called the 'Golden Age of India' in both Indian nationalist and Western historiography. This framing requires critical qualification. The cultural, scientific, and literary achievements (Aryabhata, Kalidasa, Varahamihira, Nalanda) were real but concentrated among elites. The period also saw the further codification and entrenchment of the caste system, influenced by texts like the Manusmriti (Laws of Manu), which systematized hierarchical social stratification and the subordination of women and lower castes. The 'golden age' narrative risks erasing the experiences of Shudras and outcastes for whom this period meant deepened oppression. Archaeological evidence of everyday life is sparse compared to elite cultural production, creating a systematic bias in the historical record.",
+    "name_variants": [
+      {
+        "name": "Gupta Empire",
+        "lang": "en",
+        "context": "Standard English academic designation",
+        "period_start": 320,
+        "period_end": 550
+      },
+      {
+        "name": "\u0917\u0941\u092a\u094d\u0924 \u0935\u0902\u0936",
+        "lang": "sa",
+        "context": "Sanskrit dynastic name (Gupta lineage/clan)",
+        "period_start": 320,
+        "period_end": 550
+      },
+      {
+        "name": "Gupta-samrajya",
+        "lang": "sa",
+        "context": "Romanized Sanskrit form used in numismatic and epigraphic studies",
+        "period_start": 320,
+        "period_end": 550
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 320,
+        "change_type": "formation",
+        "region": "Magadha (Bihar)",
+        "description": "Chandragupta I established the Gupta dynasty by marrying Kumaradevi of the Lichchhavi clan, gaining control of Magadha. Issued gold coins commemorating the Lichchhavi alliance. Capital at Pataliputra.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 335,
+        "change_type": "expansion",
+        "region": "Northern India, Deccan raids",
+        "description": "Samudragupta's digvijaya (conquest of the quarters) as documented on the Allahabad Pillar inscription. Subjugated or extracted tribute from kingdoms across northern India and raided deep into the Deccan, defeating Pallava king Vishnugopa among others. Described as the 'Indian Napoleon' by V.A. Smith, though this comparison is Eurocentric.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 380,
+        "change_type": "expansion",
+        "region": "Western India, Gujarat, Saka territories",
+        "description": "Chandragupta II (Vikramaditya) defeated the Western Kshatrapas (Shakas) and annexed Gujarat and Malwa. The empire reached its maximum extent from the Bay of Bengal to the Arabian Sea. The Chinese pilgrim Faxian visited during this period, describing a prosperous and well-governed land.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 455,
+        "change_type": "contraction",
+        "region": "Northwest frontier",
+        "description": "Hunic (Hephthalite/Alchon) invasions under Toramana and later Mihirakula devastated the northwestern provinces. Skandagupta initially repelled the Huns but at great cost to the treasury. Provincial governors became increasingly autonomous.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 550,
+        "change_type": "dissolution",
+        "region": "North India",
+        "description": "The last recognized Gupta ruler Vishnugupta lost effective control. The empire fragmented into regional kingdoms including the Maukharis, Later Guptas, and Pushyabhuti dynasty. Bengal emerged as a separate power under the Gauda kings.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Allahabad Pillar Inscription of Samudragupta (Prayaga Prashasti), composed by Harishena, c. 350 CE",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Majumdar, R.C. and Altekar, A.S. The Vakataka-Gupta Age (c. 200-550 AD). Motilal Banarsidass, 1946; reprinted 1986",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Faxian (Fa-Hien). A Record of Buddhistic Kingdoms, translated by James Legge, 1886. Original travel c. 399-414 CE",
+        "source_type": "primary"
+      }
+    ],
+    "boundary_source": "historical_map"
+  },
+  {
+    "name_original": "\u0633\u0644\u0637\u0646\u062a \u062f\u06c1\u0644\u06cc",
+    "name_original_lang": "fa",
+    "entity_type": "sultanate",
+    "year_start": 1206,
+    "year_end": 1526,
+    "capital_name": "Delhi (\u062f\u06c1\u0644\u06cc)",
+    "capital_lat": 28.6139,
+    "capital_lon": 77.209,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [68.0, 34.0],
+          [73.0, 35.0],
+          [78.0, 33.0],
+          [82.0, 28.0],
+          [87.0, 26.0],
+          [90.0, 24.0],
+          [88.5, 22.0],
+          [85.0, 20.0],
+          [80.0, 16.0],
+          [76.0, 14.0],
+          [74.0, 16.0],
+          [72.0, 20.0],
+          [70.0, 24.0],
+          [68.0, 28.0],
+          [67.0, 31.0],
+          [68.0, 34.0]
+        ]
+      ]
+    },
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Delhi Sultanate is among the most ideologically contested periods in Indian history. Temple destructions at Somnath, Varanasi, Mathura, and elsewhere are documented in contemporary Persian sources (e.g. Tarikh-i Firoz Shahi) but the scale is debated -- Hindu nationalist historiography tends to maximize destruction counts while revisionist historians contextualize them within medieval norms of conquest. Forced conversions occurred but their extent is disputed: Ibn Battuta and Barani record coerced conversions, while other sources show voluntary conversion driven by social mobility away from caste oppression. The Sultanate also fostered extraordinary Indo-Islamic synthesis in architecture (Qutub Minar, Alai Darwaza), Sufi poetry, and the emergence of Urdu as a lingua franca. Representing only destruction or only cultural synthesis would distort the record. Both aspects must be documented with sources.",
+    "name_variants": [
+      {
+        "name": "Delhi Sultanate",
+        "lang": "en",
+        "context": "Standard English academic designation covering five dynasties (Mamluk, Khalji, Tughlaq, Sayyid, Lodi)",
+        "period_start": 1206,
+        "period_end": 1526
+      },
+      {
+        "name": "\u0938\u0932\u094d\u0924\u0928\u0924-\u090f-\u0926\u093f\u0932\u094d\u0932\u0940",
+        "lang": "hi",
+        "context": "Hindi transliteration of the Persian name",
+        "period_start": 1206,
+        "period_end": 1526
+      },
+      {
+        "name": "Sultanat-e-Dilli",
+        "lang": "fa",
+        "context": "Romanized Persian name",
+        "period_start": 1206,
+        "period_end": 1526
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1206,
+        "change_type": "formation",
+        "region": "Northern India",
+        "description": "Qutb ud-Din Aibak, a Turkic former slave-commander of Muhammad of Ghor, declared independence after his master's assassination. Founded the Mamluk (Slave) Dynasty with capital at Delhi. Began construction of the Quwwat-ul-Islam mosque using materials from demolished Hindu and Jain temples.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1296,
+        "change_type": "expansion",
+        "region": "Deccan, Gujarat, Rajputana",
+        "description": "Alauddin Khalji's conquests massively expanded the Sultanate southward. General Malik Kafur raided as far as Madurai. Alauddin implemented market price controls, a standing army, and intelligence network. His campaigns involved widespread plunder and destruction of Hindu temples at Devagiri, Warangal, and Madurai.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1327,
+        "change_type": "expansion",
+        "region": "Deccan (Daulatabad/Devagiri)",
+        "description": "Muhammad bin Tughlaq controversially shifted the capital from Delhi to Daulatabad (Devagiri) in the Deccan to better control southern territories. The forced mass migration caused enormous suffering and death among the Delhi population. The project was reversed within two years.",
+        "population_affected": "Tens of thousands displaced in forced capital transfer",
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1398,
+        "change_type": "contraction",
+        "region": "Northern India",
+        "description": "Timur (Tamerlane) sacked Delhi, massacring an estimated 50,000-100,000 inhabitants. The Tughlaq dynasty never recovered. Provincial governors in Bengal, Jaunpur, Malwa, and Gujarat declared independence, reducing the Sultanate to a rump state around Delhi.",
+        "population_affected": "Estimated 50,000-100,000 killed in Delhi sack",
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1526,
+        "change_type": "dissolution",
+        "region": "Delhi and surrounds",
+        "description": "Ibrahim Lodi, last Sultan of Delhi, defeated and killed by Babur at the First Battle of Panipat. The Sultanate was replaced by the Mughal Empire. The Lodi dynasty had already been reduced to controlling little beyond the Delhi-Agra region.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Barani, Ziauddin. Tarikh-i Firoz Shahi, c. 1357 CE. Translated by Elliot & Dowson, History of India as Told by Its Own Historians, Vol. III",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Jackson, Peter. The Delhi Sultanate: A Political and Military History. Cambridge University Press, 1999",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Eaton, Richard M. Temple Desecration and Muslim States in Medieval India. Frontline, December 2000; expanded in Essays on Islam and Indian History, Oxford University Press, 2000",
+        "source_type": "academic"
+      }
+    ],
+    "boundary_source": "historical_map"
+  },
+  {
+    "name_original": "\u0633\u0644\u0637\u0646\u062a \u0645\u063a\u0644\u06cc\u06c1",
+    "name_original_lang": "fa",
+    "entity_type": "empire",
+    "year_start": 1526,
+    "year_end": 1857,
+    "capital_name": "Delhi (\u062f\u06c1\u0644\u06cc) / Agra (\u0622\u06af\u0631\u0647)",
+    "capital_lat": 28.6139,
+    "capital_lon": 77.209,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [66.0, 34.5],
+          [70.0, 37.0],
+          [74.0, 36.0],
+          [78.0, 34.0],
+          [82.0, 28.0],
+          [88.0, 26.0],
+          [92.0, 24.5],
+          [92.0, 22.0],
+          [88.0, 21.0],
+          [84.0, 18.0],
+          [80.0, 14.0],
+          [76.0, 12.0],
+          [73.5, 14.0],
+          [72.5, 17.0],
+          [70.0, 20.0],
+          [68.0, 24.0],
+          [66.0, 28.0],
+          [66.0, 34.5]
+        ]
+      ]
+    },
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Mughal Empire presents a complex ethical record that resists simple characterization. Akbar's sulh-i-kul (universal peace) policy, abolition of the jizyah (tax on non-Muslims), and the Din-i Ilahi experiment represent genuine religious pluralism unprecedented in contemporary Europe. However, Aurangzeb's reimposition of the jizyah (1679), destruction of temples at Varanasi (Vishwanath, 1669) and Mathura (Keshavdev, 1670), and execution of Sikh Guru Tegh Bahadur (1675) represent documented religious persecution. The late Mughal period saw Bengal devastated under Company administration -- the Bengal Famine of 1770 killed an estimated 10 million people under East India Company revenue extraction. The Mughal court's extraordinary cultural achievements (Taj Mahal, miniature painting, Mughal gardens) coexisted with absolute monarchy and forced labor. Nationalist narratives on all sides selectively emphasize different aspects of this record.",
+    "name_variants": [
+      {
+        "name": "Mughal Empire",
+        "lang": "en",
+        "context": "Standard English academic designation. 'Mughal' derives from Persian for 'Mongol', reflecting Babur's Timurid-Mongol ancestry",
+        "period_start": 1526,
+        "period_end": 1857
+      },
+      {
+        "name": "\u092e\u0941\u0917\u093c\u0932 \u0938\u093e\u092e\u094d\u0930\u093e\u091c\u094d\u092f",
+        "lang": "hi",
+        "context": "Hindi form used in Indian historiography",
+        "period_start": 1526,
+        "period_end": 1857
+      },
+      {
+        "name": "Gurkaniyan",
+        "lang": "fa",
+        "context": "Persian self-designation meaning 'sons-in-law' (of Genghis Khan, through Timur's marriage alliance)",
+        "period_start": 1526,
+        "period_end": 1857
+      },
+      {
+        "name": "Timurid Empire of India",
+        "lang": "en",
+        "context": "Alternate academic designation emphasizing Timurid lineage",
+        "period_start": 1526,
+        "period_end": 1857
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1526,
+        "change_type": "formation",
+        "region": "Northern India",
+        "description": "Babur, a Timurid prince from Fergana Valley, defeated Ibrahim Lodi at the First Battle of Panipat using gunpowder artillery and cavalry tactics. Established Mughal rule with initial control limited to the Delhi-Agra corridor.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1556,
+        "change_type": "expansion",
+        "region": "Hindustan (North India)",
+        "description": "Akbar's victory at the Second Battle of Panipat against Hemu consolidated Mughal power. Over the next decades, Akbar conquered Rajputana (through both war and alliance), Gujarat, Bengal, and Kashmir. His mansabdari system and policy of sulh-i-kul integrated Hindu Rajput nobles into the imperial administration.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1689,
+        "change_type": "expansion",
+        "region": "Deccan, nearly entire Indian subcontinent",
+        "description": "Under Aurangzeb, the Mughal Empire reached its maximum territorial extent after the conquest of Bijapur (1686) and Golconda (1687). However, the prolonged Deccan campaigns (1681-1707) drained the treasury and alienated the Marathas, Rajputs, Sikhs, and Jats. Aurangzeb's religious policies reversed Akbar's pluralism.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1739,
+        "change_type": "contraction",
+        "region": "Northern India",
+        "description": "Nader Shah of Persia sacked Delhi, plundered the Peacock Throne and Koh-i-Noor diamond, and massacred an estimated 20,000-30,000 inhabitants. The Mughal emperor became a figurehead. Provincial governors in Bengal, Awadh, and Hyderabad became de facto independent.",
+        "population_affected": "20,000-30,000 killed in Delhi sack",
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1857,
+        "change_type": "dissolution",
+        "region": "Delhi",
+        "description": "The Indian Rebellion of 1857 (Sepoy Mutiny) saw the last Mughal emperor Bahadur Shah Zafar proclaimed symbolic leader by the rebels. After British recapture of Delhi, Bahadur Shah was tried, exiled to Rangoon, and died in 1862. The British Crown formally dissolved the Mughal Empire and assumed direct rule (British Raj).",
+        "population_affected": "Estimated 100,000+ killed in British reprisals during 1857-58",
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Baburnama (Memoirs of Babur), written by Zahir-ud-din Muhammad Babur, c. 1530. Translated by Annette Beveridge, 1922",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Richards, John F. The Mughal Empire. The New Cambridge History of India, Vol. I.5, Cambridge University Press, 1993",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Eaton, Richard M. India in the Persianate Age: 1000-1765. University of California Press, 2019",
+        "source_type": "academic"
+      }
+    ],
+    "boundary_source": "historical_map"
+  },
+  {
+    "name_original": "\u092e\u0930\u093e\u0920\u093e \u0938\u093e\u092e\u094d\u0930\u093e\u091c\u094d\u092f",
+    "name_original_lang": "mr",
+    "entity_type": "confederacy",
+    "year_start": 1674,
+    "year_end": 1818,
+    "capital_name": "Pune (\u092a\u0941\u0923\u0947)",
+    "capital_lat": 18.5204,
+    "capital_lon": 73.8567,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [69.0, 28.0],
+          [73.0, 30.0],
+          [78.0, 28.0],
+          [82.0, 26.0],
+          [84.0, 24.0],
+          [85.0, 22.5],
+          [84.0, 20.0],
+          [80.0, 16.0],
+          [76.0, 14.0],
+          [74.0, 15.0],
+          [73.0, 17.0],
+          [72.0, 19.0],
+          [70.0, 22.0],
+          [69.0, 25.0],
+          [69.0, 28.0]
+        ]
+      ]
+    },
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Maratha Confederacy is celebrated in Indian (especially Maharashtrian) nationalism as Hindu resistance to Mughal/Islamic hegemony. This framing is partially accurate -- Shivaji's rebellion had genuine anti-Mughal elements and his coronation (1674) symbolized sovereignty. However, the Maratha expansion was also characterized by predatory revenue extraction: chauth (one-fourth of revenue) and sardeshmukhi (additional 10%) were effectively protection rackets extracted from non-Maratha territories. Maratha raids devastated Bengal (1742-51, the 'Maratha Ditch' of Calcutta), Mysore, and Rajputana. The Peshwa-era Confederacy operated through quasi-feudal Gaekwad, Holkar, Scindia, and Bhonsle houses that frequently fought each other. The narrative of unified Hindu resistance oversimplifies a complex, often internally violent political formation.",
+    "name_variants": [
+      {
+        "name": "Maratha Empire",
+        "lang": "en",
+        "context": "Common English designation, though 'confederacy' is more structurally accurate after 1720",
+        "period_start": 1674,
+        "period_end": 1818
+      },
+      {
+        "name": "Maratha Confederacy",
+        "lang": "en",
+        "context": "Academic designation emphasizing the decentralized Peshwa-era structure (post-1720)",
+        "period_start": 1720,
+        "period_end": 1818
+      },
+      {
+        "name": "\u092e\u0930\u093e\u0920\u093e \u0938\u093e\u092e\u094d\u0930\u093e\u091c\u094d\u092f",
+        "lang": "mr",
+        "context": "Marathi name for the Maratha kingdom/empire",
+        "period_start": 1674,
+        "period_end": 1818
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1674,
+        "change_type": "formation",
+        "region": "Western Deccan (Maharashtra)",
+        "description": "Shivaji Bhonsle crowned himself Chhatrapati (sovereign king) at Raigad fort, establishing an independent Maratha kingdom. He had been building power since the 1640s through guerrilla warfare against the Adil Shahi Sultanate of Bijapur and the Mughals. He established a navy and a decentralized administrative system (Ashtapradhan council).",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1720,
+        "change_type": "expansion",
+        "region": "Central and Western India",
+        "description": "Peshwa Baji Rao I transformed the Maratha state into a confederacy. Through rapid cavalry campaigns, he extended Maratha power to Gujarat, Malwa, and Bundelkhand. His defeat of the Nizam of Hyderabad at Palkhed (1728) and raids to the gates of Delhi (1737) established Maratha supremacy over the declining Mughal Empire.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1761,
+        "change_type": "contraction",
+        "region": "Northern India",
+        "description": "The Third Battle of Panipat (14 January 1761) -- the Maratha Confederacy suffered a catastrophic defeat against Ahmad Shah Durrani's Afghan forces. An estimated 40,000-70,000 Marathas and camp followers were killed. The defeat ended Maratha aspirations of replacing the Mughals as the paramount power and left a power vacuum that the East India Company exploited.",
+        "population_affected": "40,000-70,000 killed",
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1818,
+        "change_type": "dissolution",
+        "region": "Western and Central India",
+        "description": "The Third Anglo-Maratha War ended with the defeat and exile of Peshwa Baji Rao II. The British East India Company dissolved the Peshwa's office, annexed the Peshwa's territories directly, and reduced the remaining Maratha chiefs (Scindia, Holkar, Gaekwad, Bhonsle) to subsidiary alliance vassals.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Sardesai, Govind Sakharam. New History of the Marathas. 3 volumes, Phoenix Publications, 1946-48; reprinted Munshiram Manoharlal, 1986",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Gordon, Stewart. The Marathas 1600-1818. The New Cambridge History of India, Vol. II.4, Cambridge University Press, 1993",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Sabhasad Bakhar (chronicle by Krishnaji Anant Sabhasad), c. 1694. Contemporary Marathi account of Shivaji's reign",
+        "source_type": "primary"
+      }
+    ],
+    "boundary_source": "historical_map"
+  },
+  {
+    "name_original": "\u0a16\u0a3c\u0a3e\u0a32\u0a38\u0a3e \u0a30\u0a3e\u0a1c",
+    "name_original_lang": "pa",
+    "entity_type": "empire",
+    "year_start": 1799,
+    "year_end": 1849,
+    "capital_name": "Lahore (\u0a32\u0a3e\u0a39\u0a4c\u0a30)",
+    "capital_lat": 31.5204,
+    "capital_lon": 74.3587,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [69.0, 36.0],
+          [72.0, 37.0],
+          [75.0, 36.5],
+          [77.0, 35.0],
+          [78.5, 33.0],
+          [77.0, 30.5],
+          [75.0, 29.0],
+          [73.0, 28.5],
+          [71.0, 29.0],
+          [69.5, 30.0],
+          [68.0, 32.0],
+          [68.5, 34.0],
+          [69.0, 36.0]
+        ]
+      ]
+    },
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Sikh Empire under Maharaja Ranjit Singh (r. 1799-1839) is often celebrated for religious tolerance -- Ranjit Singh employed Hindu, Muslim, and European officers and patronized gurudwaras, temples, and mosques. This tolerance was genuine and notable for the period. However, the militaristic expansion involved significant violence: the conquest of Multan (1818), Kashmir (1819), and Peshawar (1834) involved forced subjugation of populations. The Afghan-Sikh wars were particularly brutal. After Ranjit Singh's death, internal succession crises and court assassinations destabilized the state. The two Anglo-Sikh Wars (1845-46, 1848-49) ended in British annexation and the notorious seizure of the Koh-i-Noor diamond from the child Maharaja Duleep Singh -- a cultural theft whose restitution remains demanded today.",
+    "name_variants": [
+      {
+        "name": "Sikh Empire",
+        "lang": "en",
+        "context": "Standard English academic designation",
+        "period_start": 1799,
+        "period_end": 1849
+      },
+      {
+        "name": "Sarkar-e-Khalsa",
+        "lang": "pa",
+        "context": "Romanized Punjabi/Persian form meaning 'Government of the Khalsa'",
+        "period_start": 1799,
+        "period_end": 1849
+      },
+      {
+        "name": "Punjab under Ranjit Singh",
+        "lang": "en",
+        "context": "Regional designation used in some British-era historiography",
+        "period_start": 1799,
+        "period_end": 1839
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1799,
+        "change_type": "formation",
+        "region": "Punjab",
+        "description": "Ranjit Singh captured Lahore from the Bhangi Misl, unifying the twelve Sikh Misls (confederacies) that had controlled Punjab since the collapse of Mughal and Afghan authority. Proclaimed Maharaja of the Punjab. Established a powerful modern army (Khalsa Fauj) with European-trained infantry and artillery.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1819,
+        "change_type": "expansion",
+        "region": "Kashmir, Multan, Peshawar",
+        "description": "Conquered the Kashmir Valley from Afghan Durrani governors (1819), Multan (1818), and later Peshawar (1834). The Kashmir conquest placed the predominantly Muslim Kashmiri population under Sikh rule, a dynamic that would have lasting consequences through the Dogra sale (Treaty of Amritsar 1846) and the modern Kashmir conflict.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1839,
+        "change_type": "contraction",
+        "region": "Punjab",
+        "description": "Death of Ranjit Singh triggered succession crises. Four maharajas in seven years, multiple court assassinations, and the rise of the Khalsa army as a political power destabilized the state. The Dogra ministers Gulab Singh and Dhian Singh maneuvered for power.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1849,
+        "change_type": "dissolution",
+        "region": "Punjab and dependencies",
+        "description": "After the Second Anglo-Sikh War and the decisive British victory at the Battle of Gujrat (1849), the Punjab was formally annexed by the East India Company. The child Maharaja Duleep Singh was deposed, later forcibly converted to Christianity and exiled to Britain. The Koh-i-Noor diamond was seized as part of the Treaty of Lahore.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Singh, Khushwant. A History of the Sikhs, Volume 1: 1469-1839. Oxford University Press, 1963; 2nd edition 2004",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Grewal, J.S. The Sikhs of the Punjab. The New Cambridge History of India, Vol. II.3, Cambridge University Press, 1990",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Sohan Lal Suri. Umdat-ut-Tawarikh (chronicle of the Sikh kingdom), c. 1885. Contemporary court history in Persian",
+        "source_type": "primary"
+      }
+    ],
+    "boundary_source": "historical_map"
+  },
+  {
+    "name_original": "\u092d\u093e\u0930\u0924 \u0917\u0923\u0930\u093e\u091c\u094d\u092f",
+    "name_original_lang": "hi",
+    "entity_type": "republic",
+    "year_start": 1947,
+    "year_end": null,
+    "capital_name": "New Delhi (\u0928\u0908 \u0926\u093f\u0932\u094d\u0932\u0940)",
+    "capital_lat": 28.6139,
+    "capital_lon": 77.209,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [68.7, 23.7],
+          [70.0, 20.7],
+          [72.6, 19.0],
+          [73.0, 17.0],
+          [74.5, 14.5],
+          [74.8, 12.0],
+          [76.0, 8.3],
+          [77.5, 8.1],
+          [79.8, 9.3],
+          [80.2, 13.0],
+          [80.3, 15.5],
+          [82.3, 17.0],
+          [84.0, 18.8],
+          [87.0, 21.7],
+          [88.1, 22.0],
+          [89.0, 26.2],
+          [88.2, 27.5],
+          [85.0, 28.2],
+          [81.0, 28.8],
+          [80.1, 30.5],
+          [77.8, 31.5],
+          [76.0, 33.0],
+          [74.0, 34.5],
+          [73.5, 32.5],
+          [71.0, 28.0],
+          [69.5, 24.5],
+          [68.7, 23.7]
+        ]
+      ]
+    },
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Republic of India was born from the Partition of British India (1947), one of the largest forced population transfers in human history. An estimated 10-20 million people were displaced and 1-2 million killed in communal violence between Hindus, Muslims, and Sikhs. The Kashmir conflict with Pakistan began immediately (First Kashmir War, 1947-48) and remains unresolved -- the Line of Control must be represented as a disputed boundary, not a settled border. Subsequent ethical concerns include: the anti-Sikh riots of 1984 (estimated 3,000+ killed following Indira Gandhi's assassination), the Gujarat riots of 2002 (estimated 1,000-2,000 killed, predominantly Muslims), the Babri Masjid demolition (1992), ongoing conflict in Jammu & Kashmir with documented human rights abuses, and the Armed Forces Special Powers Act (AFSPA) in northeastern states. India's territorial boundaries with China (Aksai Chin, Arunachal Pradesh) and Pakistan (Kashmir) are contested and must be represented with all claims shown.",
+    "name_variants": [
+      {
+        "name": "Republic of India",
+        "lang": "en",
+        "context": "Official English name per the Constitution of India, Article 1",
+        "period_start": 1950,
+        "period_end": null
+      },
+      {
+        "name": "Dominion of India",
+        "lang": "en",
+        "context": "Official designation from independence to republic status",
+        "period_start": 1947,
+        "period_end": 1950
+      },
+      {
+        "name": "India",
+        "lang": "en",
+        "context": "Short form used internationally",
+        "period_start": 1947,
+        "period_end": null
+      },
+      {
+        "name": "\u092d\u093e\u0930\u0924",
+        "lang": "hi",
+        "context": "Hindi short form, constitutionally equivalent to 'India' per Article 1",
+        "period_start": 1947,
+        "period_end": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1947,
+        "change_type": "formation",
+        "region": "Indian subcontinent",
+        "description": "Indian Independence Act 1947 partitioned British India into India and Pakistan. Partition along religious lines caused massive communal violence: an estimated 1-2 million killed and 10-20 million displaced in the largest forced migration in recorded history. Princely states were given the choice to accede to India or Pakistan.",
+        "population_affected": "1-2 million killed, 10-20 million displaced in Partition violence",
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1948,
+        "change_type": "expansion",
+        "region": "Hyderabad, Junagadh, Kashmir",
+        "description": "India integrated princely states through accession, negotiation, and military action. Operation Polo (1948) forcibly annexed the Nizam's Hyderabad after the Razakars' communal violence. Junagadh was annexed via plebiscite. Kashmir's accession remains disputed -- Maharaja Hari Singh's accession instrument signed during Pakistani tribal invasion.",
+        "population_affected": "Estimated 27,000-40,000 killed in Hyderabad police action (Sunderlal Committee report, classified until 2013)",
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1961,
+        "change_type": "expansion",
+        "region": "Goa, Daman, Diu",
+        "description": "Operation Vijay: Indian military annexed Portuguese India (Goa, Daman, Diu), ending 451 years of Portuguese colonial rule. The action was internationally controversial but domestically celebrated.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1975,
+        "change_type": "expansion",
+        "region": "Sikkim",
+        "description": "The Kingdom of Sikkim was annexed via referendum and became India's 22nd state. The referendum was held under Indian military presence; the Chogyal (king) contested its legitimacy. China does not recognize the annexation.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Guha, Ramachandra. India After Gandhi: The History of the World's Largest Democracy. Ecco/HarperCollins, 2007",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Khan, Yasmin. The Great Partition: The Making of India and Pakistan. Yale University Press, 2007",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Constitution of India, adopted 26 November 1949, effective 26 January 1950. Article 1: 'India, that is Bharat, shall be a Union of States'",
+        "source_type": "primary"
+      }
+    ],
+    "boundary_source": "historical_map"
+  },
+  {
+    "name_original": "\u0627\u0633\u0644\u0627\u0645\u06cc \u062c\u0645\u06c1\u0648\u0631\u06cc\u06c2 \u067e\u0627\u06a9\u0633\u062a\u0627\u0646",
+    "name_original_lang": "ur",
+    "entity_type": "republic",
+    "year_start": 1947,
+    "year_end": null,
+    "capital_name": "Islamabad (\u0627\u0633\u0644\u0627\u0645 \u0622\u0628\u0627\u062f)",
+    "capital_lat": 33.6844,
+    "capital_lon": 73.0479,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [61.0, 25.0],
+          [62.5, 25.3],
+          [64.0, 25.5],
+          [66.5, 25.0],
+          [68.5, 23.7],
+          [69.5, 24.5],
+          [71.0, 28.0],
+          [73.5, 32.5],
+          [74.0, 34.5],
+          [75.5, 36.5],
+          [74.5, 37.0],
+          [72.5, 37.0],
+          [71.0, 36.5],
+          [69.5, 37.0],
+          [67.0, 36.5],
+          [64.5, 32.0],
+          [62.0, 29.0],
+          [61.0, 25.0]
+        ]
+      ]
+    },
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: Pakistan was created from the Partition of British India (1947) as a homeland for Muslims of the subcontinent, based on the Two-Nation Theory articulated by Muhammad Ali Jinnah and the All-India Muslim League. Partition violence affected Pakistan equally: an estimated 1-2 million killed and 10-20 million displaced on both sides. The 1971 Bangladesh Liberation War is the most significant ethical issue in Pakistan's history: the Pakistani military's Operation Searchlight and subsequent campaign in East Pakistan (now Bangladesh) constituted a genocide that killed an estimated 300,000-3,000,000 Bengalis (the wide range reflects the politically charged nature of the casualty debate; the Hamoodur Rahman Commission, Pakistan's own inquiry, acknowledged large-scale atrocities). The Balochistan conflict involves documented enforced disappearances and extrajudicial killings by security forces. Pakistan's initial capital was Karachi (1947-1960); Rawalpindi served as interim capital (1960-1966) before Islamabad was completed. The Kashmir conflict and the Durand Line dispute with Afghanistan remain unresolved territorial issues.",
+    "name_variants": [
+      {
+        "name": "Islamic Republic of Pakistan",
+        "lang": "en",
+        "context": "Official English name since 1956 constitution",
+        "period_start": 1956,
+        "period_end": null
+      },
+      {
+        "name": "Dominion of Pakistan",
+        "lang": "en",
+        "context": "Official designation from independence to republic status",
+        "period_start": 1947,
+        "period_end": 1956
+      },
+      {
+        "name": "Pakistan",
+        "lang": "en",
+        "context": "Short form used internationally. Name coined by Choudhry Rahmat Ali in 1933 as an acronym for Punjab, Afghania, Kashmir, Sindh, Balochistan",
+        "period_start": 1947,
+        "period_end": null
+      },
+      {
+        "name": "\u067e\u0627\u06a9\u0633\u062a\u0627\u0646",
+        "lang": "ur",
+        "context": "Urdu short form meaning 'Land of the Pure'",
+        "period_start": 1947,
+        "period_end": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1947,
+        "change_type": "formation",
+        "region": "Western Punjab, Sindh, NWFP, Balochistan, East Bengal",
+        "description": "Created by the Indian Independence Act 1947 as a separate state for Muslims of the subcontinent. Pakistan consisted of two geographically separated wings: West Pakistan and East Pakistan (East Bengal), separated by 1,600 km of Indian territory. The Radcliffe Line boundary was drawn hastily and announced after independence, causing chaos and mass violence.",
+        "population_affected": "1-2 million killed, 10-20 million displaced in Partition violence (shared with India)",
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1948,
+        "change_type": "expansion",
+        "region": "Azad Kashmir, Gilgit-Baltistan",
+        "description": "First Kashmir War (1947-48): Pakistani tribal irregulars and later regular army entered Kashmir after the Maharaja's accession to India was contested. Ceasefire established a Line of Control dividing Kashmir. Pakistan controls Azad Kashmir and Gilgit-Baltistan; India controls Jammu, Kashmir Valley, and Ladakh. Both claim the entire former princely state.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1971,
+        "change_type": "contraction",
+        "region": "East Pakistan (Bangladesh)",
+        "description": "The Bangladesh Liberation War: following East Pakistan's Awami League election victory and West Pakistan's refusal to transfer power, the Pakistani military launched Operation Searchlight (25 March 1971). Systematic killing of Bengali intellectuals, Hindus, and political activists followed. India intervened militarily in December 1971. Pakistan surrendered on 16 December 1971; East Pakistan became independent Bangladesh. The Hamoodur Rahman Commission (Pakistan's own inquiry) acknowledged atrocities. Estimated 300,000-3,000,000 killed; 200,000-400,000 women raped.",
+        "population_affected": "300,000-3,000,000 killed; 200,000-400,000 women raped; 10 million refugees to India",
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Jalal, Ayesha. The Struggle for Pakistan: A Muslim Homeland and Global Politics. Harvard University Press, 2014",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Bass, Gary J. The Blood Telegram: Nixon, Kissinger, and a Forgotten Genocide. Knopf, 2013",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Hamoodur Rahman Commission Report, 1974 (declassified 2000). Pakistan government inquiry into the 1971 war",
+        "source_type": "primary"
+      }
+    ],
+    "boundary_source": "historical_map"
+  }
+]

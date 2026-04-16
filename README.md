@@ -11,13 +11,13 @@
 
 <p align="center">
   <a href="https://atlaspi.cra-srl.com"><img alt="Try it live" src="https://img.shields.io/badge/try%20it-live-58a6ff?style=flat-square&logo=globe&logoColor=white"></a>
-  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.12.0-blue?style=flat-square"></a>
-  <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-846-green?style=flat-square"></a>
-  <a href="#-dataset-overview"><img alt="Events" src="https://img.shields.io/badge/events-259-green?style=flat-square"></a>
+  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.13.0-blue?style=flat-square"></a>
+  <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-850-green?style=flat-square"></a>
+  <a href="#-dataset-overview"><img alt="Events" src="https://img.shields.io/badge/events-267-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Cities" src="https://img.shields.io/badge/cities-110-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Routes" src="https://img.shields.io/badge/trade%20routes-41-green?style=flat-square"></a>
-  <a href="#-dataset-overview"><img alt="Chains" src="https://img.shields.io/badge/dynasty%20chains-17-green?style=flat-square"></a>
-  <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-670%2B%20passing-brightgreen?style=flat-square"></a>
+  <a href="#-dataset-overview"><img alt="Chains" src="https://img.shields.io/badge/dynasty%20chains-19-green?style=flat-square"></a>
+  <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-719%20passing-brightgreen?style=flat-square"></a>
   <a href="#-license"><img alt="License" src="https://img.shields.io/badge/license-Apache--2.0-orange?style=flat-square"></a>
   <a href="#-api-documentation"><img alt="API" src="https://img.shields.io/badge/API-38%20endpoints-purple?style=flat-square"></a>
   <a href="mcp-server/README.md"><img alt="MCP" src="https://img.shields.io/badge/MCP-ready-9d4edd?style=flat-square"></a>
@@ -203,7 +203,7 @@ If you use AtlasPI in research, teaching, or derivative datasets, please cite th
 @software{atlaspi_2026,
   author       = {{AtlasPI Project}},
   title        = {AtlasPI: A structured historical geographic database for AI agents},
-  version      = {6.12.0},
+  version      = {6.13.0},
   year         = {2026},
   doi          = {10.5281/zenodo.19581784},
   url          = {https://doi.org/10.5281/zenodo.19581784}
@@ -212,7 +212,7 @@ If you use AtlasPI in research, teaching, or derivative datasets, please cite th
 
 ### Plain-text citation
 
-AtlasPI Project (2026). *AtlasPI: A structured historical geographic database for AI agents*, version 6.12.0. Zenodo. https://doi.org/10.5281/zenodo.19581784
+AtlasPI Project (2026). *AtlasPI: A structured historical geographic database for AI agents*, version 6.13.0. Zenodo. https://doi.org/10.5281/zenodo.19581784
 
 ---
 

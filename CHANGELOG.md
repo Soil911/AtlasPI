@@ -2,6 +2,81 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.13.0] - 2026-04-16
+
+**Tema**: *Content expansion — Persian & Indian subcontinent deep chains*
+
+### Nuove entita' (4)
+
+- **Achaemenid Empire** (هخامنشیان) — impero persiano, -550/-330, con ethical_notes
+  su deportazioni, Cilindro di Ciro, e la complessita' della "tolleranza" achemenide
+- **Delhi Sultanate** (سلطنت دہلی) — sultanato, 1206-1526, cinque dinastie
+  (Mamluk, Khalji, Tughlaq, Sayyid, Lodi), con ethical_notes su distruzioni dei templi
+  e sintesi culturale indo-islamica
+- **Mughal Empire** (سلطنت مغلیہ) — impero, 1526-1857, da Babur ad Aurangzeb a
+  Bahadur Shah Zafar, con ethical_notes su sulh-i-kul vs jizyah, carestia del Bengala 1770
+- **Islamic Republic of Pakistan** (اسلامی جمہوریۂ پاکستان) — repubblica, 1947-presente,
+  con ethical_notes su Partizione, guerra del Bangladesh 1971, conflitto del Baluchistan
+
+### Nuove catene (2)
+
+- **Chain 18: Iranian state-formation trunk** — 6 link (Achaemenid → Arsacid →
+  Sassanid → Safavid → Pahlavi → Islamic Republic), tipo SUCCESSION, con note
+  sul gap di 850 anni (651-1501) e la conversione forzata sciita
+- **Chain 19: Indian subcontinent paramount power** — 4 link (Delhi Sultanate →
+  Mughal → British Raj → Republic of India), tipo SUCCESSION, con ethical_notes
+  sulla Partizione e sull'omissione deliberata di Maratha/Sikh/principati
+
+### Nuovi eventi (8)
+
+- Battaglia di Gaugamela (-331), Battaglia di Hormozdgan (224),
+  Conquista di al-Qadisiyyah (636), Battaglia di Talikota (1565),
+  Terza Battaglia di Panipat (1761), Delhi Durbar 1877 (con ethical_notes
+  sulla carestia simultanea), Massacro di Jallianwala Bagh (1919),
+  Rivoluzione iraniana (1979)
+
+### Test
+
+- `tests/test_v6130_persian_indian.py` — 41 nuovi test:
+  - TestNewEntities: 7 (existence, boundaries, ethical_notes)
+  - TestNameVariants: 4 (English variants, multiple languages)
+  - TestTerritoryChanges: 3 (conquest of Babylon, Panipat, Timur's sack)
+  - TestNewChains: 8 (existence, link structure, transitions, ethical_notes)
+  - TestNewEvents: 9 (existence, ethical_notes, Delhi Durbar famine)
+  - TestDataFiles: 6 (JSON files exist and valid)
+  - TestAPIEndpoints: 4 (search, chains, stats)
+- `tests/conftest.py` — aggiunto chain seeding per test DB (prima mancava)
+
+### Infrastruttura
+
+- `tests/conftest.py` ora esegue inline chain seeding senza importare
+  `ingest_chains` (il cui stdout redirect rompeva pytest capture su Windows)
+
+### File aggiunti/modificati
+
+| File | Azione |
+|------|--------|
+| `data/entities/batch_25_persian_iranian_entities.json` | Nuovo (3 entita') |
+| `data/entities/batch_26_indian_subcontinent_entities.json` | Nuovo (7 entita', 4 nuove) |
+| `data/chains/batch_10_persian_deep_trunk.json` | Nuovo (1 catena, 6 link) |
+| `data/chains/batch_11_indian_medieval_trunk.json` | Nuovo (1 catena, 4 link) |
+| `data/events/batch_12_persian_indian_events.json` | Nuovo (9 eventi) |
+| `tests/test_v6130_persian_indian.py` | Nuovo (41 test) |
+| `tests/conftest.py` | Chain seeding per test DB |
+| `src/config.py` | `APP_VERSION = "6.13.0"` |
+
+### Conteggi
+
+| Metrica | v6.12.0 | v6.13.0 | Delta |
+|---------|---------|---------|-------|
+| Entita' | 846 | 850 | +4 |
+| Eventi | 259 | 267 | +8 |
+| Catene | 17 | 19 | +2 |
+| Link catena | 73 | 83 | +10 |
+| Test | 678 | 719 | +41 |
+
+---
+
 ## [v6.12.0] - 2026-04-16
 
 **Tema**: *API analytics layer — chi usa AtlasPI?*

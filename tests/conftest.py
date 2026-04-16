@@ -47,7 +47,7 @@ def setup_test_db():
     """Crea le tabelle e popola i dati demo per tutta la sessione di test."""
     Base.metadata.create_all(bind=test_engine)
 
-    from src.db.models import GeoEntity, HistoricalEvent
+    from src.db.models import DynastyChain, GeoEntity, HistoricalEvent
     db = TestSession()
     if db.query(GeoEntity).count() == 0:
         from src.db import seed as seed_module
@@ -58,6 +58,53 @@ def setup_test_db():
         if db.query(HistoricalEvent).count() == 0:
             seed_events_database()
         seed_module.SessionLocal = original
+
+    # v6.5+: ingest chains (separate from seed — chains reference entities
+    # by name_original so must run AFTER entity seed).
+    # NOTE: we inline the chain-seeding logic instead of importing
+    # ingest_chains, because that module replaces sys.stdout on Windows
+    # at import time, which breaks pytest's capture system.
+    if db.query(DynastyChain).count() == 0:
+        import json as _json
+        from pathlib import Path as _Path
+
+        from src.db.models import ChainLink
+
+        _chains_dir = _Path("data") / "chains"
+        entity_map = {e.name_original: e.id for e in db.query(GeoEntity).all()}
+        for fp in sorted(_chains_dir.glob("*.json")):
+            with fp.open(encoding="utf-8") as fh:
+                items = _json.load(fh)
+            for ch in items:
+                chain = DynastyChain(
+                    name=ch["name"],
+                    name_lang=ch.get("name_lang", "en"),
+                    chain_type=ch.get("chain_type", "OTHER"),
+                    region=ch.get("region"),
+                    description=ch.get("description"),
+                    confidence_score=ch.get("confidence_score", 0.7),
+                    status=ch.get("status", "confirmed"),
+                    ethical_notes=ch.get("ethical_notes"),
+                    sources=_json.dumps(ch["sources"], ensure_ascii=False) if ch.get("sources") else None,
+                )
+                db.add(chain)
+                db.flush()
+                for i, lk in enumerate(ch.get("links", [])):
+                    eid = entity_map.get(lk.get("entity_name"))
+                    if eid is None:
+                        continue
+                    db.add(ChainLink(
+                        chain_id=chain.id,
+                        entity_id=eid,
+                        sequence_order=i,
+                        transition_year=lk.get("transition_year"),
+                        transition_type=lk.get("transition_type"),
+                        is_violent=bool(lk.get("is_violent", False)),
+                        description=lk.get("description"),
+                        ethical_notes=lk.get("ethical_notes"),
+                    ))
+        db.commit()
+
     db.close()
 
     yield

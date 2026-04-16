@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Iranian state-formation trunk: Achaemenid \u2192 Islamic Republic (6 links, 550 BCE \u2013 present)",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Iranian Plateau / Greater Iran",
+    "description": "The long-duration sequence of major polities claiming sovereignty over the Iranian heartland. This chain traces state succession (control of the Iranian plateau and its administrative apparatus) rather than dynastic continuity \u2014 major breaks include Alexander's conquest (330 BCE), the Arab conquest (651 CE), and the Mongol invasion (1258). Links represent the polities that most durably held the plateau, not every successor state.",
+    "confidence_score": 0.82,
+    "status": "confirmed",
+    "ethical_notes": "This chain deliberately omits intermediate Islamic-era Iranian dynasties (Samanid, Buyid, Ghaznavid, Seljuk, Ilkhanate, Timurid, Afsharid, Zand) \u2014 each significant but none held enduring pan-Iranian sovereignty comparable to the chain members. Their omission is a scope decision, not a significance judgment. The Arab conquest of 651 CE is a violent discontinuity that must not be glossed as 'succession'. Sasanian Zoroastrian culture was disrupted but not erased; modern Iranian identity partly derives from pre-Islamic memory (Shahnameh).",
+    "sources": [
+      {
+        "citation": "Axworthy, M. (2008). A History of Iran: Empire of the Mind. Basic Books.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Daryaee, T. (2012). The Oxford Handbook of Iranian History. Oxford University Press.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "links": [
+      {
+        "entity_name": "\u0647\u062e\u0627\u0645\u0646\u0634\u06cc\u0627\u0646",
+        "sequence_order": 0,
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Founded by Cyrus the Great (Cyrus II) c.550 BCE after defeating the Median Empire.",
+        "ethical_notes": "Cyrus Cylinder: first charter of human rights (debated). BUT also deportation policies and destruction of cities that resisted (Miletus, Thebes support). The tolerance was selective and strategic."
+      },
+      {
+        "entity_name": "\u0627\u0634\u06a9\u0627\u0646\u06cc\u0627\u0646",
+        "sequence_order": 1,
+        "transition_year": -247,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Arsaces I revolted against Seleucid rule c.247 BCE. Arsacids gradually reconquered the Iranian heartland from Seleucid successors of Alexander.",
+        "ethical_notes": "The Seleucid period (330-247 BCE) is a gap \u2014 Alexander's conquest destroyed the Achaemenid state; the Arsacid reconquest is framed by Iranian historiography as 'restoration' but was a new dynasty, not a restoration."
+      },
+      {
+        "entity_name": "\u0633\u0627\u0633\u0627\u0646\u06cc\u0627\u0646",
+        "sequence_order": 2,
+        "transition_year": 224,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Ardashir I defeated the last Arsacid king Artabanus V at Hormozdgan (224 CE). Claimed Achaemenid lineage (disputed by modern historians).",
+        "ethical_notes": "State Zoroastrianism: persecution of Christians, Manicheans, and Jews at various periods. Forced labor (corv\u00e9e) for irrigation projects. BUT also Academy of Gondishapur (intellectual tolerance). Capture of Roman Emperor Valerian (260 CE) \u2014 humiliation documented in reliefs at Naqsh-e Rostam."
+      },
+      {
+        "entity_name": "\u062f\u0648\u0644\u062a \u0635\u0641\u0648\u06cc\u0647",
+        "sequence_order": 3,
+        "transition_year": 1501,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Ismail I conquered Tabriz (1501) and established Twelver Shi'ism as the state religion \u2014 the decisive confessional break between Iran and the Sunni world. The 850-year gap (651-1501) spans Arab, Turkic, and Mongol rule over the Iranian plateau.",
+        "ethical_notes": "Forced conversion of Sunni Iran to Shi'ism: mass violence, destruction of Sunni mosques and shrines, execution of Sunni ulama. 850-year gap deliberately not bridged \u2014 no single intermediate polity held pan-Iranian sovereignty durably enough to constitute a 'link' in this chain."
+      },
+      {
+        "entity_name": "\u062f\u0648\u0644\u062a \u0634\u0627\u0647\u0646\u0634\u0627\u0647\u06cc \u0627\u06cc\u0631\u0627\u0646",
+        "sequence_order": 4,
+        "transition_year": 1925,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Reza Khan's coup (1921) and deposition of Ahmad Shah Qajar (1925). Qajar link (1789-1925) omitted from this chain but is in chain 9.",
+        "ethical_notes": "Pahlavi modernization involved forced sedentarization of nomadic tribes (Qashqai, Bakhtiari), suppression of Azerbaijani Turkish, SAVAK secret police (1957-79). 1953 CIA/MI6 coup (Operation Ajax) overthrew Mosaddegh \u2014 foreign intervention in Iranian sovereignty."
+      },
+      {
+        "entity_name": "\u062c\u0645\u0647\u0648\u0631\u06cc \u0627\u0633\u0644\u0627\u0645\u06cc \u0627\u06cc\u0631\u0627\u0646",
+        "sequence_order": 5,
+        "transition_year": 1979,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Iranian Revolution (1978-79): Shah fled February 1979, Khomeini returned, Islamic Republic proclaimed April 1979.",
+        "ethical_notes": "Mass executions of political prisoners (1988 prison massacres, ~4,000-30,000 range per Amnesty). Iran-Iraq War (1980-88, ~500K Iranian dead). Ongoing minority suppression (Kurds, Baluch, Baha'i). Green Movement 2009, Mahsa Amini protests 2022."
+      }
+    ]
+  }
+]

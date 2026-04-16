@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Indian subcontinent paramount power: Delhi Sultanate → Mughal → British Raj → Republic of India (4 links, 1206–present)",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Indian subcontinent / South Asia",
+    "description": "The linear succession of recognized paramount powers controlling the northern Indian heartland (the Delhi–Agra corridor) from the medieval Islamic conquests to the modern republic. Each link replaced the previous as the dominant political authority over the subcontinent's most contested strategic zone. This chain does NOT cover the parallel ancient Indian succession (Shishunaga → Nanda → Maurya → Shunga → Kanva, already in chain 11) or the many significant regional powers that coexisted with or challenged each link (Vijayanagara, Maratha Confederacy, Sikh Empire, Hyderabad, Mysore). The Maratha Confederacy in particular was the de facto dominant military power from ~1720–1761/1818, but never established internationally recognized paramount sovereignty over the Delhi–Agra corridor in the way the chain members did.",
+    "confidence_score": 0.78,
+    "status": "confirmed",
+    "ethical_notes": "This chain traces 'paramount power' — the entity with recognized sovereignty over the Delhi political center — not the 'natural' or 'legitimate' ruler of India. The concept of a single legitimate ruler of the subcontinent is itself a political construct, instrumentalized by every chain member (the Delhi Sultans invoked the Caliphate; the Mughals claimed Timurid-Chagatai lineage; the British manufactured 'Crown sovereignty'; the Republic invokes popular sovereignty). Pakistan (1947–present) is a co-successor state from Partition, not a linear continuation of the Delhi paramount power, and is therefore not a link in this chain — but its existence is integral to the story, as the chain's final transition involved a violent partition that killed 1–2 million people and displaced 10–20 million. The omission of the Maratha Confederacy, Sikh Empire, and princely states from the chain is a scope decision: each was a significant power, but none held recognized paramount sovereignty over the Delhi center for more than brief intervals.",
+    "sources": [
+      {
+        "citation": "Metcalf, B. & Metcalf, T. (2012). A Concise History of Modern India. 3rd ed. Cambridge University Press.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Stein, B. (2010). A History of India. 2nd ed., revised by D. Arnold. Wiley-Blackwell.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "links": [
+      {
+        "entity_name": "سلطنت دہلی",
+        "sequence_order": 0,
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Qutb ud-Din Aibak, Turkic slave-commander of Muhammad of Ghor, established independent rule at Delhi in 1206, founding the first of five dynasties (Mamluk, Khalji, Tughlaq, Sayyid, Lodi) collectively known as the Delhi Sultanate.",
+        "ethical_notes": "The Sultanate was established through conquest, destroying or converting Hindu and Jain temples (documented in Persian chronicles like Tarikh-i Firoz Shahi). However, the Sultanate also produced extraordinary Indo-Islamic cultural synthesis. Both aspects must be documented."
+      },
+      {
+        "entity_name": "سلطنت مغلیہ",
+        "sequence_order": 1,
+        "transition_year": 1526,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Babur, a Timurid prince from Fergana, defeated Ibrahim Lodi at the First Battle of Panipat (1526) using gunpowder artillery. The Mughal Empire expanded to control nearly the entire subcontinent under Akbar and Aurangzeb before fragmenting in the 18th century.",
+        "ethical_notes": "The Mughal period spans extremes: Akbar's sulh-i-kul (universal peace) represents genuine religious pluralism, while Aurangzeb's reimposition of the jizyah and temple destructions represent documented persecution. The late Mughal period saw the Bengal Famine of 1770 (est. 10 million dead under East India Company revenue extraction)."
+      },
+      {
+        "entity_name": "British Raj",
+        "sequence_order": 2,
+        "transition_year": 1858,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "After the Indian Rebellion of 1857, the British Crown formally dissolved the Mughal Empire and assumed direct rule via the Government of India Act 1858. The last Mughal emperor Bahadur Shah Zafar was exiled to Rangoon. The Crown had already controlled much of India through the East India Company since 1757 (Plassey).",
+        "ethical_notes": "British colonial rule involved systematic economic extraction (deindustrialization of Indian textiles, forced opium cultivation), engineered famines (Bengal 1770, Orissa 1866, Madras-Bombay 1876-78 killing millions), racial hierarchy (Indian Civil Service restricted, Ilbert Bill controversy), and political repression (Jallianwala Bagh 1919, Rowlatt Acts). The transition from Mughal nominal sovereignty to British actual sovereignty was gradual (1757-1858), not an instantaneous conquest."
+      },
+      {
+        "entity_name": "भारत गणराज्य",
+        "sequence_order": 3,
+        "transition_year": 1947,
+        "transition_type": "DECOLONIZATION",
+        "is_violent": true,
+        "description": "The Indian Independence Act 1947 ended British sovereignty and simultaneously partitioned the subcontinent into India and Pakistan. India inherited the majority of the British Raj's territory, institutions, and international treaty obligations.",
+        "ethical_notes": "Partition was accompanied by communal violence killing 1-2 million people and displacing 10-20 million — one of the largest forced population transfers in history. The Republic of India is a co-successor state of the British Raj alongside Pakistan (and later Bangladesh, 1971). Kashmir's status remains violently contested. The decolonization was 'violent' in this chain because of Partition, not because the British-Indian transfer of power itself involved large-scale combat."
+      }
+    ]
+  }
+]
