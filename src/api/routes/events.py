@@ -203,6 +203,8 @@ def list_event_types(response: Response):
         "ETHNIC_CLEANSING": "Rimozione etnica forzata — NON 'population exchange'.",
         "MASSACRE": "Uccisione di massa a scala sub-genocidale.",
         "DEPORTATION": "Trasferimento forzato di popolazione.",
+        "MIGRATION": "Movimento di massa di popolazione (es. Bantu expansion, Slavic settlement).",
+        "COLLAPSE": "Collasso statale/civile (distinto da dissoluzione deliberata).",
         "FAMINE": "Carestia strutturale — NON 'food crisis'.",
         "EPIDEMIC": "Epidemia o pandemia.",
         "EARTHQUAKE": "Terremoto documentato.",
