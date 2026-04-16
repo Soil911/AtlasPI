@@ -25,7 +25,7 @@ from sqlalchemy.orm import Session
 
 from src.cache import cache_response
 from src.db.database import get_db
-from src.db.models import HistoricalPeriod
+from src.db.models import GeoEntity, HistoricalEvent, HistoricalPeriod
 
 logger = logging.getLogger(__name__)
 
@@ -236,3 +236,104 @@ def period_detail(
     if p is None:
         raise HTTPException(status_code=404, detail=f"Period with id={period_id} not found")
     return _period_detail(p)
+
+
+# ─── v6.29: cross-resource linkage ────────────────────────────────────
+
+
+def _periods_overlapping_range(
+    db: Session,
+    year_start: int,
+    year_end: int | None,
+    region: str | None = None,
+) -> list[HistoricalPeriod]:
+    """Return periods whose year range overlaps with [year_start, year_end].
+
+    Overlap: (A_start <= B_end or B_end is null) AND (A_end >= B_start or A_end is null).
+    """
+    q = db.query(HistoricalPeriod)
+
+    # A_start <= B_end OR B_end is null (entity open-ended)
+    # Period starts on or before the end of the entity's existence
+    if year_end is not None:
+        q = q.filter(HistoricalPeriod.year_start <= year_end)
+    # Period ends on or after the entity's start, OR period is open-ended
+    q = q.filter(
+        or_(
+            HistoricalPeriod.year_end.is_(None),
+            HistoricalPeriod.year_end >= year_start,
+        )
+    )
+
+    if region:
+        q = q.filter(HistoricalPeriod.region == region)
+
+    return q.order_by(HistoricalPeriod.region, HistoricalPeriod.year_start).all()
+
+
+@router.get(
+    "/v1/entities/{entity_id}/periods",
+    summary="Historical periods that overlap with this entity's lifespan",
+    description=(
+        "Returns the historical periods whose year range overlaps with "
+        "this entity's [year_start, year_end]. Useful for contextualizing "
+        "an entity within its historiographic era."
+    ),
+)
+@cache_response(ttl_seconds=3600)
+def entity_periods(
+    request: Request,
+    response: Response,
+    entity_id: int = Path(..., ge=1),
+    region: str | None = Query(None),
+    db: Session = Depends(get_db),
+):
+    """Return periods overlapping with the entity's lifespan."""
+    ent = db.query(GeoEntity).filter(GeoEntity.id == entity_id).first()
+    if ent is None:
+        raise HTTPException(status_code=404, detail=f"Entity with id={entity_id} not found")
+
+    periods = _periods_overlapping_range(db, ent.year_start, ent.year_end, region)
+
+    return {
+        "entity_id": ent.id,
+        "entity_name": ent.name_original,
+        "entity_year_start": ent.year_start,
+        "entity_year_end": ent.year_end,
+        "total": len(periods),
+        "periods": [_period_summary(p) for p in periods],
+    }
+
+
+@router.get(
+    "/v1/events/{event_id}/periods",
+    summary="Historical periods that contain this event's year",
+    description=(
+        "Returns the historical periods whose year range contains this "
+        "event's year. Useful for contextualizing an event (e.g., 'Battle "
+        "of Tours happened during the Early Middle Ages in Europe and "
+        "the Abbasid Caliphate era in the Near East')."
+    ),
+)
+@cache_response(ttl_seconds=3600)
+def event_periods(
+    request: Request,
+    response: Response,
+    event_id: int = Path(..., ge=1),
+    region: str | None = Query(None),
+    db: Session = Depends(get_db),
+):
+    """Return periods containing the event's year."""
+    ev = db.query(HistoricalEvent).filter(HistoricalEvent.id == event_id).first()
+    if ev is None:
+        raise HTTPException(status_code=404, detail=f"Event with id={event_id} not found")
+
+    periods = _periods_overlapping_range(db, ev.year, ev.year_end, region)
+
+    return {
+        "event_id": ev.id,
+        "event_name": ev.name_original,
+        "event_year": ev.year,
+        "total": len(periods),
+        "periods": [_period_summary(p) for p in periods],
+    }

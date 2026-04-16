@@ -219,6 +219,20 @@ async def _h_periods_at_year(client: AtlasPIClient, args: dict[str, Any]) -> Any
     )
 
 
+async def _h_entity_periods(client: AtlasPIClient, args: dict[str, Any]) -> Any:
+    return await client.entity_periods(
+        int(args["entity_id"]),
+        region=args.get("region"),
+    )
+
+
+async def _h_event_periods(client: AtlasPIClient, args: dict[str, Any]) -> Any:
+    return await client.event_periods(
+        int(args["event_id"]),
+        region=args.get("region"),
+    )
+
+
 # -- v6.4 cities & routes ------------------------------------------
 
 
@@ -1053,6 +1067,45 @@ TOOLS: list[ToolDefinition] = [
             "additionalProperties": False,
         },
         handler=_h_periods_at_year,
+    ),
+    ToolDefinition(
+        name="entity_periods",
+        description=(
+            "Ritorna le epoche storiche che si sovrappongono con la "
+            "lifespan di una specifica entità (id entity). Usa per "
+            "contestualizzare un'entità: es. 'Durante quali epoche "
+            "esisteva la Repubblica di Venezia?' → [Early Middle Ages, "
+            "High Middle Ages, Late Middle Ages, Renaissance, Early "
+            "Modern Period, Industrial Revolution...]."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {
+                "entity_id": {"type": "integer", "minimum": 1},
+                "region": {"type": "string"},
+            },
+            "required": ["entity_id"],
+            "additionalProperties": False,
+        },
+        handler=_h_entity_periods,
+    ),
+    ToolDefinition(
+        name="event_periods",
+        description=(
+            "Ritorna le epoche storiche in cui è avvenuto un evento "
+            "specifico. Es. event_id=123 (Battle of Tours, 732) → "
+            "[Early Middle Ages (europe), Islamic Golden Age (near_east)]."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {
+                "event_id": {"type": "integer", "minimum": 1},
+                "region": {"type": "string"},
+            },
+            "required": ["event_id"],
+            "additionalProperties": False,
+        },
+        handler=_h_event_periods,
     ),
     # ─── v6.4 cities ────────────────────────────────────────────────
     ToolDefinition(

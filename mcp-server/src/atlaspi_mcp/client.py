@@ -17,7 +17,7 @@ import httpx
 
 DEFAULT_BASE_URL = "https://atlaspi.cra-srl.com"
 DEFAULT_TIMEOUT = 30.0
-USER_AGENT = "atlaspi-mcp/0.6.0 (+https://github.com/Soil911/AtlasPI)"
+USER_AGENT = "atlaspi-mcp/0.6.1 (+https://github.com/Soil911/AtlasPI)"
 
 
 class AtlasPIClientError(RuntimeError):
@@ -351,6 +351,24 @@ class AtlasPIClient:
         """GET /v1/periods/at-year/{year} — periods that include a given year."""
         return await self._get(
             f"/v1/periods/at-year/{int(year)}",
+            {"region": region},
+        )
+
+    async def entity_periods(
+        self, entity_id: int, *, region: str | None = None,
+    ) -> Any:
+        """GET /v1/entities/{entity_id}/periods — periods overlapping an entity's lifespan."""
+        return await self._get(
+            f"/v1/entities/{int(entity_id)}/periods",
+            {"region": region},
+        )
+
+    async def event_periods(
+        self, event_id: int, *, region: str | None = None,
+    ) -> Any:
+        """GET /v1/events/{event_id}/periods — periods containing an event's year."""
+        return await self._get(
+            f"/v1/events/{int(event_id)}/periods",
             {"region": region},
         )
 

@@ -365,3 +365,57 @@ def test_periods_more_balanced(client):
     assert regions.get("europe", 0) / total < 0.5
     # Total should have grown (v6.27 had 33, v6.29 adds 15)
     assert total >= 45
+
+
+# ═══════════════════════════════════════════════════════════════════
+# 10. v6.29: Cross-resource linkage (/entities/{id}/periods, /events/{id}/periods)
+# ═══════════════════════════════════════════════════════════════════
+
+
+def test_entity_periods_returns_200(client):
+    """GET /v1/entities/{id}/periods returns overlapping periods."""
+    # Get an entity
+    r_list = client.get("/v1/entities?limit=1")
+    eid = r_list.json()["entities"][0]["id"]
+
+    r = client.get(f"/v1/entities/{eid}/periods")
+    assert r.status_code == 200
+    d = r.json()
+    assert d["entity_id"] == eid
+    assert "total" in d
+    assert "periods" in d
+
+
+def test_entity_periods_404_for_nonexistent(client):
+    r = client.get("/v1/entities/9999999/periods")
+    assert r.status_code == 404
+
+
+def test_entity_periods_region_filter(client):
+    """Filter by region returns only matching periods."""
+    r_list = client.get("/v1/entities?limit=1")
+    eid = r_list.json()["entities"][0]["id"]
+
+    r = client.get(f"/v1/entities/{eid}/periods?region=europe")
+    d = r.json()
+    for p in d["periods"]:
+        assert p["region"] == "europe"
+
+
+def test_event_periods_returns_200(client):
+    """GET /v1/events/{id}/periods returns periods containing the year."""
+    r_list = client.get("/v1/events?limit=1")
+    items = r_list.json().get("events") or r_list.json().get("items") or []
+    assert len(items) >= 1
+    event_id = items[0]["id"]
+
+    r = client.get(f"/v1/events/{event_id}/periods")
+    assert r.status_code == 200
+    d = r.json()
+    assert d["event_id"] == event_id
+    assert "event_year" in d
+
+
+def test_event_periods_404_for_nonexistent(client):
+    r = client.get("/v1/events/9999999/periods")
+    assert r.status_code == 404
