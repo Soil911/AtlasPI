@@ -2,6 +2,45 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.45.1] - 2026-04-17
+
+**Sub-release**: espansione rulers dataset da 18 → 105 (agent delivered batch_01).
+
+### +87 historical rulers
+
+`data/rulers/batch_01_global_expansion.json` — 90 rulers prodotti da agent ricercatore (3 duplicati con batch_00 skippati).
+
+**Distribuzione regionale**:
+- Europe: 27.8%
+- East Asia: 18.9%
+- Middle East / N Africa: 14.4%
+- Sub-Saharan Africa: 8.9%
+- Americas: 8.9%
+- South Asia: 7.8%
+- SE Asia: 5.6%
+- Central Asia / Steppe: 4.4%
+- Oceania: 3.3%
+
+**ETHICS-007** — atrocità esplicitate senza eufemismi:
+- **Leopoldo II del Belgio**: "ANY representation that calls this 'colonial administration' rather than genocide is historically false" — Congo Free State 10M deaths
+- **Qianlong**: Dzungar genocide 1755-1758 (80-90% population eliminata)
+- **Pizarro**: "Should be described as a conquistador who conducted the genocide of a civilization, not as an 'explorer'"
+- **Timur**: skull-pyramids, 15-17M total deaths
+- **Genghis Khan**: 10-40M campaign deaths
+- **Napoleone**: restoration of slavery 1802
+
+**Controversie documentate** per entrambi i lati: Shaka/Mfecane, Aurangzeb (Hindutva vs Truschke), Naresuan (Thai nationalism vs revisionism), Cyrus (Pahlavi myth vs Briant), Moctezuma (Quetzalcoatl myth deconstructed Restall).
+
+**Nomi originali in native script**: 武曌, Ḥatšepsut, 𐎣𐎢𐎽𐎢𐏁 (Cyrus), Cuauhtēmōc, 𒊬𒊒𒄀 (Sargon), ਰਣਜੀਤ ਸਿੰਘ, ኃይለ ሥላሴ, ecc.
+
+### Stats
+
+- **105 rulers** totali (was 18 in v6.45.0, +87)
+- Confidence media 0.88 (range 0.70-0.95)
+- Tutti 105 con `ethical_notes` + ≥1 fonte primaria/accademica
+
+---
+
 ## [v6.45.0] - 2026-04-17
 
 **Tema**: *Core rulers dataset — 18 sovrani iconici popolati*

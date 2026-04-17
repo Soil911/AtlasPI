@@ -77,6 +77,15 @@ def ingest_rulers(dry_run: bool = False) -> dict:
                 if isinstance(entity_id, str):
                     entity_id = entity_map.get(entity_id)
 
+                # Support both `entity_name_fallback` (original schema) and
+                # `entity_name` (agent output schema). If entity_name resolves
+                # via entity_map, use it as entity_id; otherwise as fallback.
+                entity_name_input = data.get("entity_name") or data.get("entity_name_fallback")
+                if entity_id is None and entity_name_input:
+                    mapped = entity_map.get(entity_name_input)
+                    if mapped is not None:
+                        entity_id = mapped
+
                 ruler = HistoricalRuler(
                     name_original=name,
                     name_original_lang=data.get("name_original_lang", "en"),
@@ -87,7 +96,7 @@ def ingest_rulers(dry_run: bool = False) -> dict:
                     reign_end=data.get("reign_end"),
                     title=data["title"],
                     entity_id=entity_id,
-                    entity_name_fallback=data.get("entity_name_fallback"),
+                    entity_name_fallback=entity_name_input,
                     region=data["region"],
                     description=data.get("description"),
                     dynasty=data.get("dynasty"),
