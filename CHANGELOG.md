@@ -2,6 +2,62 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.37.0] - 2026-04-17
+
+**Tema**: *ArchaeologicalSite model — UNESCO / ruins / monuments*
+
+### Nuovo modello: `ArchaeologicalSite`
+
+Siti archeologici e culturali puntuali (Pompeii, Stonehenge, Chichen Itza,
+Angkor Wat, Petra, Uluru, ecc.), distinti da:
+- `GeoEntity` (stati politici con boundary)
+- `HistoricalCity` (centri urbani con vita politica)
+
+### Schema
+
+- `name_original` in lingua/cultura originale (ETHICS-009 analog)
+- Coordinate puntuali WGS84
+- `date_start` / `date_end`: periodi di costruzione / uso attestato
+- `site_type`: ruins, monument, sacred_site, burial_site, temple,
+  pyramid, palace, fortification, rock_art, megalithic, ecc.
+- `unesco_id` + `unesco_year`: link al registro UNESCO World Heritage
+- `entity_id` (FK nullable): entità politica principale (nullable per
+  Stonehenge, Gobekli Tepe, pre-statali)
+- `ethical_notes`: danneggiamenti storici (Bamiyan Buddhas, Palmyra),
+  rinominazioni coloniali (Uluru/Ayers Rock), ritorni indigeni
+
+### Nuovi endpoint (5)
+
+- `GET /v1/sites` — list paginato con filtri (year, site_type, entity_id, unesco_only, status)
+- `GET /v1/sites/types` — enum SiteType con counts
+- `GET /v1/sites/unesco` — shortcut per solo UNESCO sites
+- `GET /v1/sites/nearby?lat=&lon=&radius=` — haversine nearby
+- `GET /v1/sites/{id}` — detail
+
+### Migration
+
+- **Alembic 011_archaeological_sites.py**: crea tabella + 5 indici + 3 CheckConstraint (confidence, lat_range, lon_range)
+- `down_revision = "010_historical_periods"` — sicura a incrementale
+
+### Enum nuovo: `SiteType`
+
+16 valori: `ruins`, `monument`, `archaeological_zone`, `sacred_site`,
+`burial_site`, `cave_site`, `rock_art`, `fortification`, `settlement`,
+`temple`, `pyramid`, `palace`, `arena`, `aqueduct`, `megalithic`, `other`.
+
+### Test
+
+- `tests/test_v637_sites.py`: 13 test (model CRUD, check constraints,
+  API endpoints, ETHICS-009 colonial-name variants)
+
+### Note
+
+Questa release contiene **solo il foundation**. Il dataset di UNESCO
+sites (1157 sites registrati) + rovine principali sarà popolato in
+v6.37.1 con un dataset separato (`data/sites/`).
+
+---
+
 ## [v6.36.0] - 2026-04-17
 
 **Tema**: *Expand date-precision coverage — on-this-day engine fuelled*

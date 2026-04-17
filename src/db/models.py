@@ -804,3 +804,108 @@ class HistoricalPeriod(Base):
 
     # JSON array of source citations
     sources: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+
+# ─── v6.37: Archaeological Sites (UNESCO + ruins + monuments) ──────────
+
+
+class ArchaeologicalSite(Base):
+    """Sito archeologico / culturale discreto con coordinate puntuali.
+
+    Distinto da `HistoricalCity` (centro urbano con vita politica) e da
+    `GeoEntity` (stato/regno con boundary). Un sito e' un luogo materiale:
+    Pompeii, Stonehenge, Chichen Itza, Angkor Wat, Petra, Uluru, ecc.
+
+    Design choices:
+      * Coordinate puntuali (lat/lon), non polygon. Se serve area
+        approssimata si puo' derivare da siti UNESCO con buffer radius.
+      * `date_start` / `date_end` sono periodi di costruzione/uso attestato,
+        NON fondazione dell'entita' politica (es. Pompeii date_start = -600
+        VIII sec a.C.? o prima insediamento Osco-Sannita? usiamo la prima
+        evidenza archeologica documentata)
+      * `entity_id` e' nullable: molti siti pre-datano o sopravvivono
+        qualsiasi entita' politica single (es. Gobekli Tepe, Stonehenge)
+      * `unesco_id` e' lo "Ref ID" del sito UNESCO (es. "757" per Pompei)
+
+    ETHICS-005-analogy: confidence_score riflette la qualita' dell'evidenza
+    archeologica, non un giudizio politico. Siti con datazione controversa
+    (es. Gobekli Tepe) hanno status='uncertain' e ethical_notes esplicita.
+
+    ETHICS-009-analogy: i siti storici spesso hanno DUE nomi — quello
+    originale/indigeno e quello coloniale. `name_original` = quello
+    primario-culturale (Uluru, non "Ayers Rock"). `name_variants` JSON
+    array contiene altre forme con context.
+    """
+
+    __tablename__ = "archaeological_sites"
+    __table_args__ = (
+        Index("ix_arch_sites_name", "name_original"),
+        Index("ix_arch_sites_entity_id", "entity_id"),
+        Index("ix_arch_sites_years", "date_start", "date_end"),
+        Index("ix_arch_sites_site_type", "site_type"),
+        Index("ix_arch_sites_unesco", "unesco_id"),
+        CheckConstraint(
+            "confidence_score >= 0.0 AND confidence_score <= 1.0",
+            name="ck_arch_sites_confidence_range",
+        ),
+        CheckConstraint(
+            "latitude >= -90.0 AND latitude <= 90.0",
+            name="ck_arch_sites_lat_range",
+        ),
+        CheckConstraint(
+            "longitude >= -180.0 AND longitude <= 180.0",
+            name="ck_arch_sites_lon_range",
+        ),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+
+    # ETHICS-001: nome originale/locale come chiave primaria.
+    name_original: Mapped[str] = mapped_column(String(500), nullable=False)
+    name_original_lang: Mapped[str] = mapped_column(String(10), nullable=False)
+
+    # Coordinate puntuali WGS84 del centro del sito.
+    latitude: Mapped[float] = mapped_column(Float, nullable=False)
+    longitude: Mapped[float] = mapped_column(Float, nullable=False)
+
+    # Periodo di costruzione / uso attestato. NULL se ignoto.
+    date_start: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    date_end: Mapped[int | None] = mapped_column(Integer, nullable=True)
+
+    # Tipo dominante (vedi src/db/enums.py SiteType).
+    site_type: Mapped[str] = mapped_column(
+        String(50), nullable=False, default="ruins"
+    )
+
+    description: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+    # UNESCO World Heritage Site ID (es. "757" per Pompei area); NULL se non UNESCO.
+    unesco_id: Mapped[str | None] = mapped_column(String(50), nullable=True)
+    # Anno di inscrizione UNESCO.
+    unesco_year: Mapped[int | None] = mapped_column(Integer, nullable=True)
+
+    # Entita' politica di appartenenza principale (pre-classico se necessario).
+    # NULL per siti pre-statali (Gobekli Tepe, Stonehenge).
+    entity_id: Mapped[int | None] = mapped_column(
+        Integer, ForeignKey("geo_entities.id"), nullable=True
+    )
+
+    confidence_score: Mapped[float] = mapped_column(Float, nullable=False, default=0.7)
+    # confirmed / uncertain / disputed — con uncertain di default se
+    # datazione ancora dibattuta o sito contestato
+    status: Mapped[str] = mapped_column(
+        String(20), nullable=False, default=EntityStatus.CONFIRMED.value
+    )
+
+    # ETHICS-009-analogy: colonial renaming (Uluru/Ayers Rock,
+    # Chiang Mai/Lanna), ritorni/rivendicazioni indigene, danneggiamenti
+    # storici (Bamiyan Buddhas, Palmyra).
+    ethical_notes: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+    # JSON-serialized (stesso pattern di HistoricalCity):
+    # [{"citation": "...", "url": "...", "source_type": "academic"}]
+    sources: Mapped[str | None] = mapped_column(Text, nullable=True)
+    # JSON: [{"name": "Ayers Rock", "lang": "en", "context": "colonial"}]
+    name_variants: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+    entity: Mapped[GeoEntity | None] = relationship("GeoEntity")

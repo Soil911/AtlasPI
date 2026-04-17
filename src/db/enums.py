@@ -192,6 +192,33 @@ class DatePrecision(enum.StrEnum):
     CENTURY = "CENTURY"   # Es. "III secolo" (crisi del III secolo)
 
 
+class SiteType(enum.StrEnum):
+    """Tipo di sito archeologico / culturale (v6.37).
+
+    ETHICS: un sito puo' essere contemporaneamente di piu' tipi (es.
+    Teotihuacan e' city + religious_center). In tal caso scegliere il
+    tipo dominante storiograficamente e usare `ethical_notes` per
+    documentare gli altri. UNESCO e' ortogonale (flag `unesco_id` sul
+    modello, non un tipo).
+    """
+    RUINS = "ruins"
+    MONUMENT = "monument"
+    ARCHAEOLOGICAL_ZONE = "archaeological_zone"
+    SACRED_SITE = "sacred_site"
+    BURIAL_SITE = "burial_site"
+    CAVE_SITE = "cave_site"
+    ROCK_ART = "rock_art"
+    FORTIFICATION = "fortification"
+    SETTLEMENT = "settlement"  # distinct from HistoricalCity (unincorporated/pre-urban)
+    TEMPLE = "temple"
+    PYRAMID = "pyramid"
+    PALACE = "palace"
+    ARENA = "arena"
+    AQUEDUCT = "aqueduct"
+    MEGALITHIC = "megalithic"
+    OTHER = "other"
+
+
 class TransitionType(enum.StrEnum):
     """Modalità di transizione da un'entità all'altra in una catena.
 
