@@ -250,6 +250,11 @@ function restoreUrlState() {
 // ─── API ────────────────────────────────────────────────────────
 
 async function loadEntities() {
+  // NOTE: v6.41 aggiunto endpoint /v1/entities/light (no boundary_geojson)
+  // che sarebbe ~200KB vs 17.8MB della paginata qui sotto. Per usarlo serve
+  // ristrutturazione del rendering map (attualmente iteri su allEntities e
+  // mostri polygon inline — light response non ha boundary). Rimasto v6.43
+  // come refactor.
   const loadBar = document.getElementById('loading-bar');
   try {
     allEntities = [];

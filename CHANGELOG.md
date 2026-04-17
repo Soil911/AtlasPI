@@ -2,6 +2,45 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.42.0] - 2026-04-17
+
+**Tema**: *UX improvements da feedback esterno — light endpoint + token search*
+
+### v6.41: `/v1/entities/light` endpoint
+
+Lightweight alternative a `/v1/entities` che **omette `boundary_geojson`** (il dominante del payload). Pensato per AI agents e use case "overview".
+
+- Payload ~200KB (vs ~17MB con 11 chiamate paginate a `/v1/entities`)
+- Singola chiamata ritorna TUTTE le entità con solo campi essenziali
+- Filter opzionali: `year=X`, `bbox=...`
+- Cache 1h
+
+Il frontend mappa interattiva resta su `/v1/entities` paginato (ristrutturazione rendering pending v6.43). Ma AI agents e altri client API ora hanno un endpoint efficiente.
+
+### v6.42: fuzzy search token-level matching
+
+**Problema identificato**: `venice` non matchava `Repubblica di Venezia` perché SequenceMatcher a livello char su stringhe di lunghezza molto diversa ritornava ratio basso (~0.3).
+
+**Fix in `/v1/search/fuzzy`**:
+- Tokenize nome originale + variants (split whitespace/punctuation, lowercase)
+- Per ogni query token, calcola max SequenceMatcher vs tutti i candidate tokens
+- Prendi il massimo tra char-level ratio e token-level ratio
+- Bonus aggiuntivo per token prefix match (`venice` → `venezia`, `florence` → `firenze`, `bizantino` → `Bisanzio`)
+
+Risultato: `venice` → `Repubblica di Venezia` (score ~0.87), `florence` → `Repubblica di Firenze`, `bizantino` → `Bisanzio`.
+
+### Test
+
+- `tests/test_v641_entities_light.py`: 7 test
+- `tests/test_v642_fuzzy_tokens.py`: 4 test
+
+### Stats
+
+- **67 endpoints** (+1 da v6.38)
+- Payload-efficient alternative per AI agents
+
+---
+
 ## [v6.38.0] - 2026-04-17
 
 **Tema**: *HistoricalRuler model — biografie sovrani strutturate*

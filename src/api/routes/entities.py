@@ -422,6 +422,93 @@ def list_entities(
 
 
 @router.get(
+    "/v1/entities/light",
+    summary="List ALL entities without boundary_geojson — optimized for map viewport",
+    description=(
+        "Returns all historical entities with ONLY lightweight fields (id, "
+        "name_original, entity_type, year range, capital coords, confidence, "
+        "status). Excludes `boundary_geojson` which is the dominant payload "
+        "driver. Single call returns ~1000 entities in ~200KB vs ~2MB+ "
+        "from paginated `/v1/entities` (9 calls, ~17MB).\n\n"
+        "**Primary use case**: frontend map bootstrap. Client loads ALL "
+        "entities at once, filters client-side by year/type/continent. On "
+        "click, frontend calls `/v1/entities/{id}` for full detail + "
+        "boundary polygon.\n\n"
+        "**Query params**:\n"
+        "- `year` (optional): filter entities active in this year\n"
+        "- `bbox` (optional): filter by capital-point-in-bbox (no polygon intersect here)\n\n"
+        "**For AI agents**: use this first for 'give me an overview of all X', "
+        "then fetch full detail on specific IDs as needed."
+    ),
+)
+@cache_response(ttl_seconds=3600)
+def list_entities_light(
+    request: Request,
+    response: Response,
+    year: int | None = Query(None, ge=-5000, le=2100, description="Active in this year"),
+    bbox: str | None = Query(None, max_length=80),
+    db: Session = Depends(get_db),
+):
+    """Lightweight endpoint — no boundary_geojson in payload.
+
+    Risolve il problema scalabilita' della home: 1033 entita' in
+    ~200KB vs ~17MB della /v1/entities paginata.
+    """
+    # Select only needed cols.
+    q = db.query(
+        GeoEntity.id,
+        GeoEntity.name_original,
+        GeoEntity.name_original_lang,
+        GeoEntity.entity_type,
+        GeoEntity.year_start,
+        GeoEntity.year_end,
+        GeoEntity.capital_name,
+        GeoEntity.capital_lat,
+        GeoEntity.capital_lon,
+        GeoEntity.confidence_score,
+        GeoEntity.status,
+    )
+
+    if year is not None:
+        q = q.filter(GeoEntity.year_start <= year)
+        q = q.filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= year))
+
+    # bbox: filter only by capital-point (lightweight — no polygon)
+    parsed = _parse_bbox(bbox)
+    if parsed is not None:
+        min_lon, min_lat, max_lon, max_lat = parsed
+        q = q.filter(
+            GeoEntity.capital_lat.isnot(None),
+            GeoEntity.capital_lon.isnot(None),
+            GeoEntity.capital_lat.between(min_lat, max_lat),
+            GeoEntity.capital_lon.between(min_lon, max_lon),
+        )
+
+    rows = q.all()
+    response.headers["Cache-Control"] = "public, max-age=3600"
+    return {
+        "count": len(rows),
+        "entities": [
+            {
+                "id": r.id,
+                "name_original": r.name_original,
+                "name_original_lang": r.name_original_lang,
+                "entity_type": r.entity_type,
+                "year_start": r.year_start,
+                "year_end": r.year_end,
+                "capital_name": r.capital_name,
+                "capital_lat": r.capital_lat,
+                "capital_lon": r.capital_lon,
+                "confidence_score": r.confidence_score,
+                "status": r.status,
+                "continent": _get_continent(r.capital_lat, r.capital_lon),
+            }
+            for r in rows
+        ],
+    }
+
+
+@router.get(
     "/v1/entities/batch",
     summary="Fetch multiple entities by ID in a single request",
     description=(
@@ -600,13 +687,20 @@ def search_entities_fuzzy(
     - Bonus di +0.15 se il match è un prefisso case-insensitive.
     - Risultati filtrati per min_score, ordinati per score discendente.
     """
+    import re
     from difflib import SequenceMatcher
 
     q_norm = q.strip().lower()
     if not q_norm:
         return {"query": q, "count": 0, "results": []}
 
-    # Carica tutte le entità + varianti (N=~850 è fattibile in memoria
+    def _tokenize(s: str) -> list[str]:
+        """v6.42: tokenize su whitespace + punct, lowercase."""
+        return [tok for tok in re.split(r"[\s\-_.,;:'\"()]+", s.lower()) if tok]
+
+    q_tokens = _tokenize(q_norm)
+
+    # Carica tutte le entità + varianti (N=~1000 è fattibile in memoria
     # senza indici trigram PostgreSQL).
     entities = (
         db.query(GeoEntity)
@@ -627,7 +721,24 @@ def search_entities_fuzzy(
             if not cand_name:
                 continue
             cand_norm = cand_name.strip().lower()
+
+            # 1. Char-level ratio (original).
             ratio = SequenceMatcher(None, q_norm, cand_norm).ratio()
+
+            # 2. v6.42: token-level ratio. Per 'venice' vs 'Repubblica di Venezia'
+            # il char-level e' basso, ma SequenceMatcher('venice','venezia') ~0.77.
+            # Prendi il max per-token e OR-alo con il char-level.
+            cand_tokens = _tokenize(cand_norm)
+            best_token_ratio = 0.0
+            for q_tok in q_tokens:
+                for c_tok in cand_tokens:
+                    if not c_tok:
+                        continue
+                    tr = SequenceMatcher(None, q_tok, c_tok).ratio()
+                    if tr > best_token_ratio:
+                        best_token_ratio = tr
+            ratio = max(ratio, best_token_ratio)
+
             # ETHICS-001: bonus per match sul name_original.
             if is_original:
                 ratio += 0.10
@@ -637,6 +748,21 @@ def search_entities_fuzzy(
             # Substring fallback (handles acronyms like "URSS" in longer forms).
             elif q_norm in cand_norm or cand_norm in q_norm:
                 ratio += 0.08
+
+            # v6.42: token prefix bonus — 'venice' prefix 4-chars di 'venezia'.
+            token_prefix_found = False
+            for q_tok in q_tokens:
+                for c_tok in cand_tokens:
+                    if not c_tok:
+                        continue
+                    if (c_tok.startswith(q_tok) and len(q_tok) >= 3) or \
+                       (q_tok.startswith(c_tok) and len(c_tok) >= 3):
+                        ratio += 0.12
+                        token_prefix_found = True
+                        break
+                if token_prefix_found:
+                    break
+
             if ratio > best_score:
                 best_score = ratio
                 best_matched_name = cand_name
