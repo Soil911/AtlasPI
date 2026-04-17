@@ -72,8 +72,10 @@ WRONG_POLYGON_FIXES = {
     },
     326: {  # Cumans / Kipchaks
         "name": "Kipchak-Cuman confederation",
-        "radius_km": 1500,  # Kazakh steppe to Ukrainian steppe
-        "note": "Kipchak-Cuman confederation of nomadic tribes spanning Central Asian steppes ~4M km² (Kazakh to Ukrainian steppe), NOT the 9.4M km² polygon which extends to Europe/Siberia. Reverted.",
+        "radius_km": 1000,  # Kazakh steppe — no single capital for nomads
+        "fallback_lat": 47.0,  # Approximate center of Kazakh-Ukrainian steppe
+        "fallback_lon": 60.0,
+        "note": "Kipchak-Cuman confederation of nomadic tribes spanning Central Asian steppes (~3-4M km² Kazakh to Ukrainian steppe). Nomadic — no fixed capital. Approximated as 1000km circle centered on steppe midpoint. Reverted from 9.4M km² polygon.",
     },
     651: {  # Duché de Normandie
         "name": "Duchy of Normandy",
@@ -300,9 +302,18 @@ def fix_all(dry_run: bool = False) -> dict:
         # Fix 1: reset wrong-polygon inheritors
         for eid, cfg in WRONG_POLYGON_FIXES.items():
             e = db.query(GeoEntity).filter(GeoEntity.id == eid).first()
-            if e is None or e.capital_lat is None or e.capital_lon is None:
+            if e is None:
                 continue
-            new_polygon = _generate_circle(e.capital_lat, e.capital_lon, cfg["radius_km"])
+            # Use fallback coords if entity has no capital (e.g., nomadic peoples)
+            cap_lat = e.capital_lat if e.capital_lat is not None else cfg.get("fallback_lat")
+            cap_lon = e.capital_lon if e.capital_lon is not None else cfg.get("fallback_lon")
+            if cap_lat is None or cap_lon is None:
+                continue  # Still no coords — can't generate circle
+            # If we used fallback, persist to entity for future use
+            if e.capital_lat is None:
+                e.capital_lat = cap_lat
+                e.capital_lon = cap_lon
+            new_polygon = _generate_circle(cap_lat, cap_lon, cfg["radius_km"])
             e.boundary_geojson = json.dumps(new_polygon)
             e.boundary_source = "approximate_generated"
             e.boundary_aourednik_name = None

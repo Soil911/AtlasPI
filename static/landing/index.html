@@ -49,7 +49,7 @@
     "applicationSubCategory": "API",
     "operatingSystem": "Any",
     "browserRequirements": "Requires JavaScript",
-    "softwareVersion": "6.30.0",
+    "softwareVersion": "6.32.0",
     "license": "https://www.apache.org/licenses/LICENSE-2.0",
     "codeRepository": "https://github.com/Soil911/AtlasPI",
     "programmingLanguage": ["Python", "JavaScript"],
@@ -159,7 +159,7 @@
   <div class="container hero-inner">
     <div class="hero-tag">
       <span class="dot-live" aria-hidden="true"></span>
-      Live now &middot; v6.30.0 &middot; 862 entities + 461 events + 110 cities + 41 trade routes + 26 dynasty chains
+      Live now &middot; v6.32.0 &middot; 862 entities + 490 events + 48 periods + 110 cities + 41 trade routes + 94 dynasty chains
     </div>
     <h1 class="hero-title">
       Historical Geography <span class="grad">for AI Agents</span>
@@ -168,18 +168,25 @@
       The first REST API and MCP server with <strong>862 historical entities</strong>,
       real boundaries, and academic sources. From <strong>4500 BCE to 2024</strong>.
     </p>
+    <div class="hero-banner" style="margin: 16px 0; padding: 12px 20px; background: linear-gradient(90deg, rgba(63,185,80,0.1), rgba(88,166,255,0.1)); border: 1px solid rgba(63,185,80,0.4); border-radius: 8px; font-size: 14px; line-height: 1.6;">
+      ✅ <strong>Free public API</strong> — no login, no API key, no registration.
+      Apache 2.0. CORS-enabled. Try it: <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 3px;">curl https://atlaspi.cra-srl.com/v1/snapshot/year/1250</code>
+    </div>
     <div class="hero-ctas">
       <a href="/app" class="btn btn-primary">
         Try the live map
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
       <a href="/docs" class="btn btn-ghost">View API docs</a>
-      <a href="#mcp" class="btn btn-ghost">Use with Claude</a>
+      <a href="/about" class="btn btn-ghost">About</a>
+      <a href="/faq" class="btn btn-ghost">FAQ</a>
     </div>
     <div class="hero-meta">
       <span><code>GET</code> /v1/snapshot/<span class="meta-year">1500</span></span>
       <span class="meta-sep">&middot;</span>
       <span>JSON &middot; GeoJSON &middot; OpenAPI 3.1</span>
+      <span class="meta-sep">&middot;</span>
+      <span>34 MCP tools</span>
       <span class="meta-sep">&middot;</span>
       <span>Apache-2.0</span>
     </div>
@@ -568,7 +575,7 @@ console.log(<span class="tk-str">'Overlap years:'</span>, data.temporal_overlap)
 
   <div class="container foot-bottom">
     <span>&copy; <span id="year"></span> AtlasPI &middot; Apache-2.0 licensed core &middot; <a href="https://atlaspi.cra-srl.com/">atlaspi.cra-srl.com</a></span>
-    <span class="foot-version">v6.30.0</span>
+    <span class="foot-version">v6.32.0</span>
   </div>
 </footer>
 
