@@ -180,8 +180,9 @@ def fix_displaced(dry_run: bool = False) -> dict:
                     note_marker = "[v6.30-displaced-rollback]"
                     rollback_note = (
                         f"{note_marker} Boundary reverted to capital-based approximation: "
-                        f"aourednik fuzzy match placed polygon {dist:.0f}km from capital "
-                        f"(exceeded 3000km threshold). Regenerated as {radius}km radius circle. "
+                        f"aourednik fuzzy match placed polygon centroid={centroid_dist:.0f}km / "
+                        f"edge={edge_dist:.0f}km from capital (exceeded thresholds). "
+                        f"Regenerated as {radius}km radius circle. "
                         f"Reverted {datetime.now(timezone.utc).date().isoformat()}."
                     )
                     if e.ethical_notes:
