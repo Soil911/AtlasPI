@@ -186,8 +186,13 @@ TYPE_MAX_AREA_KM2 = {
     "empire": 40_000_000,
 }
 
-# Fix oversized polygons if they exceed ceiling × this factor
+# Fix oversized polygons if they exceed ceiling × this factor.
+# Stricter factor for small entity types (higher risk of wrong-polygon inheritance)
 AUTO_FIX_OVERSIZE_FACTOR = 3.0
+AUTO_FIX_OVERSIZE_FACTOR_STRICT = 2.5  # for small types that rarely legitimately exceed ceiling
+
+STRICT_TYPES = {"city", "city-state", "principality", "duchy", "chiefdom",
+                "dynasty", "kingdom", "sultanate", "caliphate"}
 
 # Radius (km) to use when regenerating a capital-based circle for an
 # oversized polygon that we can't match to a better source.
@@ -275,7 +280,14 @@ def fix_all(dry_run: bool = False) -> dict:
                 if type_ceiling and e.capital_lat is not None and e.capital_lon is not None:
                     try:
                         area_km2 = _polygon_area_km2(g)
-                        if area_km2 > type_ceiling * AUTO_FIX_OVERSIZE_FACTOR:
+                        # Stricter threshold for small/medieval types (duchy, principality, etc.)
+                        # which rarely legitimately exceed their ceiling
+                        factor = (
+                            AUTO_FIX_OVERSIZE_FACTOR_STRICT
+                            if e.entity_type in STRICT_TYPES
+                            else AUTO_FIX_OVERSIZE_FACTOR
+                        )
+                        if area_km2 > type_ceiling * factor:
                             # Regenerate as type-sized capital circle
                             radius = TYPE_RESET_RADIUS_KM.get(e.entity_type, 200)
                             new_polygon = _generate_circle(e.capital_lat, e.capital_lon, radius)

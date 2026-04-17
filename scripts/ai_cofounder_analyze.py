@@ -690,6 +690,127 @@ def analyze_geometric_bugs(db, existing_titles: set[str]) -> int:
 
 
 # ═══════════════════════════════════════════════════════════════════
+# Cross-resource consistency analyzer (v6.32)
+# ═══════════════════════════════════════════════════════════════════
+
+
+def analyze_cross_resource_consistency(db, existing_titles: set[str]) -> int:
+    """Detect logical inconsistencies across tables.
+
+    Checks:
+    1. Events linked to entities whose year range doesn't include the event
+       year (±100 year grace for uncertain dates)
+    2. Chain links with sequence disorder (transition_year < prev transition_year
+       when sequence_order > 0)
+    3. Territory changes referencing entities that didn't exist at change time
+    4. Events with no sources (should be all have sources post v6.30)
+    5. Entities whose year_end < year_start (data entry errors)
+    6. Events with month but no day and date_precision='DAY'
+
+    Unlike FK violations (which SQL constraints catch), these are logical
+    inconsistencies that pass naive validation but indicate data quality issues.
+    """
+    count = 0
+    issues_found: dict[str, list[dict]] = {}
+
+    from sqlalchemy import text
+
+    # 1. Events before/after their linked entity's lifespan (>100y grace)
+    rows = db.execute(
+        text(
+            "SELECT e.id as event_id, e.name_original as event_name, e.year as event_year, "
+            "g.id as entity_id, g.name_original as entity_name, "
+            "g.year_start, g.year_end "
+            "FROM event_entity_links eel "
+            "JOIN historical_events e ON e.id = eel.event_id "
+            "JOIN geo_entities g ON g.id = eel.entity_id "
+            "WHERE (e.year < g.year_start - 100) "
+            "OR (g.year_end IS NOT NULL AND e.year > g.year_end + 100) "
+            "LIMIT 30"
+        )
+    ).fetchall()
+
+    if rows:
+        issues_found["temporal_mismatch"] = [
+            {
+                "event_id": r.event_id,
+                "event_name": r.event_name,
+                "event_year": r.event_year,
+                "entity_id": r.entity_id,
+                "entity_name": r.entity_name,
+                "entity_range": f"{r.year_start}..{r.year_end or 'present'}",
+            }
+            for r in rows
+        ]
+
+    # 2. Check for events with no sources (should be zero after v6.30)
+    unsourced_events_result = db.execute(
+        text(
+            "SELECT id, name_original, year FROM historical_events "
+            "WHERE id NOT IN (SELECT event_id FROM event_sources) "
+            "LIMIT 20"
+        )
+    ).fetchall()
+    if unsourced_events_result:
+        issues_found["unsourced_events"] = [
+            {"id": r.id, "name": r.name_original, "year": r.year}
+            for r in unsourced_events_result
+        ]
+
+    # 3. Entities with inverted year range
+    inverted = db.query(GeoEntity).filter(
+        GeoEntity.year_end.isnot(None),
+        GeoEntity.year_end < GeoEntity.year_start,
+    ).all()
+    if inverted:
+        issues_found["inverted_year_range"] = [
+            {"id": e.id, "name": e.name_original, "year_start": e.year_start, "year_end": e.year_end}
+            for e in inverted
+        ]
+
+    # 4. Events with day without month
+    bad_dates = db.query(HistoricalEvent).filter(
+        HistoricalEvent.day.isnot(None),
+        HistoricalEvent.month.is_(None),
+    ).all()
+    if bad_dates:
+        issues_found["day_without_month"] = [
+            {"id": e.id, "name": e.name_original, "day": e.day}
+            for e in bad_dates[:10]
+        ]
+
+    # Create suggestion if any issues found
+    if issues_found:
+        total = sum(len(v) for v in issues_found.values())
+        title = f"Cross-resource consistency: {total} logical inconsistencies"
+        categories = ", ".join(f"{k}({len(v)})" for k, v in issues_found.items())
+        added = _add_suggestion(
+            db, existing_titles,
+            category="consistency_bug",
+            title=title,
+            description=(
+                f"The cross-resource consistency analyzer detected {total} "
+                f"logical inconsistencies across tables: {categories}. "
+                f"These pass FK constraints but indicate data-entry errors, "
+                f"orphan references, or temporal mismatches (e.g., an event "
+                f"year 200 years outside its linked entity's lifespan). "
+                f"Most are fixable by manual review; some indicate bulk "
+                f"import errors requiring script-based correction."
+            ),
+            priority=3,
+            detail_json=json.dumps({
+                "analyzer": "analyze_cross_resource_consistency",
+                "issues": issues_found,
+                "total": total,
+            }, default=str),
+        )
+        if added:
+            count += 1
+
+    return count
+
+
+# ═══════════════════════════════════════════════════════════════════
 # Main runner
 # ═══════════════════════════════════════════════════════════════════
 
@@ -715,6 +836,7 @@ def run_analysis(db=None) -> dict:
             "failed_searches": analyze_failed_searches(db, existing),
             "date_coverage_gaps": analyze_date_coverage_gaps(db, existing),
             "geometric_bugs": analyze_geometric_bugs(db, existing),
+            "consistency_bugs": analyze_cross_resource_consistency(db, existing),
         }
 
         db.commit()

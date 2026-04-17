@@ -36,7 +36,8 @@ def test_analyze_endpoint_has_all_categories(client):
     expected_keys = {
         "geographic_gaps", "temporal_gaps", "low_confidence",
         "missing_boundaries", "orphan_entities", "failed_searches",
-        "date_coverage_gaps", "geometric_bugs", "total_new_suggestions",
+        "date_coverage_gaps", "geometric_bugs", "consistency_bugs",
+        "total_new_suggestions",
     }
     assert expected_keys == set(d.keys())
 
