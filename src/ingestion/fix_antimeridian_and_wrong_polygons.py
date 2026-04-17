@@ -97,8 +97,14 @@ def _generate_circle(lat: float, lon: float, radius_km: float, num_points: int =
 
 def _normalize_antimeridian(geom: dict, lat: float | None, lon: float | None) -> dict | None:
     """For MultiPolygons that cross the antimeridian, keep only polygons
-    near the entity's capital. Discards far-flung pieces (e.g. Alaska's
-    Aleutian islands > +170° when the capital is in continental US).
+    in the same hemisphere as the capital. Discards far-flung pieces
+    (Alaska Aleutians in the eastern hemisphere when capital is US mainland,
+    Kamchatka wrapping for Russia, etc.)
+
+    Strategy: keep polygons whose NON-WRAPPED longitude distance from capital
+    is less than 90°. For continental states, this keeps the main landmass
+    and drops antimeridian-crossing island chains. For genuinely bi-hemispheric
+    entities (Fiji, Kiribati), the capital's hemisphere wins.
 
     Returns None if no meaningful fix is possible.
     """
@@ -114,18 +120,26 @@ def _normalize_antimeridian(geom: dict, lat: float | None, lon: float | None) ->
     if (bb[2] - bb[0]) < 180:
         return None  # no antimeridian issue
 
-    # Keep polygons whose own bbox is within ±170° of capital_lon
-    # (i.e., don't take Aleutians wrapped to +179 if capital is at -77)
+    # Keep polygons whose own bbox is on the SAME SIDE of antimeridian
+    # as capital_lon. For USA cap=-77: keep polys entirely in lon<0.
+    # For Russia cap=+37: keep polys with lon<=180 (so Kamchatka stays,
+    # but we drop any wrap-around slivers).
     kept_polys = []
     for p in g.geoms:
         pbb = p.bounds
-        # A polygon is "far" if its center is more than 170° from capital_lon
+        # Reject polygon if it crosses antimeridian (both < -170 AND > 170)
+        if pbb[0] < -170 and pbb[2] > 170:
+            continue  # polygon itself crosses AM — skip
+        # Use NON-WRAPPED longitude distance
         pcenter_lon = (pbb[0] + pbb[2]) / 2
-        # Compute great-circle-ish longitude distance
-        dist_lon = abs(pcenter_lon - lon)
-        if dist_lon > 180:
-            dist_lon = 360 - dist_lon
-        if dist_lon <= 160:  # within 160 degrees of capital
+        non_wrap_dist = abs(pcenter_lon - lon)
+        # Use WRAPPED distance too, but prefer same-hemisphere
+        if non_wrap_dist <= 90:
+            kept_polys.append(p)
+            continue
+        # Tiny polygons within 150° are also kept (tiny islands near
+        # the capital even if across antimeridian)
+        if p.area < 0.5 and non_wrap_dist <= 150:
             kept_polys.append(p)
 
     if not kept_polys:
@@ -133,12 +147,17 @@ def _normalize_antimeridian(geom: dict, lat: float | None, lon: float | None) ->
 
     if len(kept_polys) == 1:
         new_geom = kept_polys[0]
-        # ensure it's still a Polygon/MultiPolygon
         if new_geom.geom_type == "Polygon":
             return mapping(new_geom)
         return mapping(MultiPolygon([new_geom]))
 
     new_geom = MultiPolygon(kept_polys)
+    # Verify the result no longer crosses antimeridian
+    nb = new_geom.bounds
+    if (nb[2] - nb[0]) > 180:
+        # Still problematic — find the largest single polygon, use that
+        largest = max(kept_polys, key=lambda p: p.area)
+        return mapping(largest if largest.geom_type != "Polygon" else largest)
     return mapping(new_geom)
 
 
