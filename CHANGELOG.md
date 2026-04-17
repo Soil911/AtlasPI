@@ -2,6 +2,31 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.48.1] - 2026-04-17
+
+**v6.46 foundation**: extraction di 3 moduli utility da `static/app.js` monolite (2526 → 2348 righe, -178).
+
+### Moduli estratti
+
+- **`static/js/i18n.js`** (164 righe): `I18N` dictionary it/en + `t()` + `lang` + `initLang()` + `switchLang()` + `applyLangUI()`
+- **`static/js/utils.js`** (33 righe): `fmtY()` + `esc()` + `isReal()`
+- **`static/js/theme.js`** (36 righe): `initTheme()` + `toggleTheme()` + `applyTheme()`
+
+### Pattern
+
+Pure IIFE con assignment a `window.*` (no ES6 modules, no bundler required). `static/index.html` carica i 3 moduli PRIMA di `app.js`. Cross-module references dove necessario usano `typeof X !== 'undefined'` guards perché `let/const` globals in separate script files NON sono su `window`.
+
+### Backup
+
+`static/app.js.bak` è l'originale pre-split (2526 righe) preservato per rollback se necessario.
+
+### Next
+
+- **v6.46.0 full**: split aggiuntivi (api, state, map-overlays, detail-panel). Rimandato finché verifica visuale su live non conferma nessuna regressione dal mini-split attuale.
+- **v6.47.0**: home usa `/v1/entities/light` (dipende da v6.46 full).
+
+---
+
 ## [v6.48.0] - 2026-04-17
 
 **Tema**: *Export GeoJSON per resource types puntuali — interoperabilità GIS*

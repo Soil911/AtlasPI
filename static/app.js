@@ -2113,19 +2113,8 @@ function showKeyboardHelp() {
     </div>`;
 }
 
-// ─── Utility ────────────────────────────────────────────────────
-
-function fmtY(y) {
-  if (y < 0) return `${Math.abs(y)} ${t('bc')}`;
-  return String(y);
-}
-
-function esc(s) {
-  if (!s) return '';
-  const d = document.createElement('div');
-  d.textContent = s;
-  return d.innerHTML;
-}
+// ─── Utility ──────────────────────────────────────────────────
+// v6.46: extracted to static/js/utils.js (fmtY, esc, isReal)
 
 // ─── Timeline ───────────────────────────────────────────────────
 
@@ -2248,148 +2237,8 @@ function drawTimeline() {
   canvas.style.cursor = 'crosshair';
 }
 
-// ─── i18n ───────────────────────────────────────────────────────
-
-let lang = localStorage.getItem('atlaspi-lang') || 'it';
-
-const I18N = {
-  it: {
-    search: 'Cerca per nome, anche varianti...',
-    year: 'Anno', status: 'Status',
-    confirmed: 'Confermato', uncertain: 'Incerto', disputed: 'Contestato',
-    type: 'Tipo', sort_label: 'Ordina', sort_default: 'Predefinito',
-    sort_name: 'Nome A-Z', sort_year: 'Anno', sort_conf: 'Affidabilit\u00e0',
-    reset: 'Reset filtri', all: 'Tutti', loading: 'Caricamento...',
-    no_results: 'Nessuna entit\u00e0 trovata', entities: 'entit\u00e0',
-    sources: 'fonti', changes: 'cambi', contested: 'contestati',
-    avg_conf: 'conf. media', info: 'Informazioni', reliability: 'Affidabilit\u00e0',
-    names_section: 'Nomi e varianti (ETHICS-001)',
-    territory_section: 'Cambiamenti territoriali (ETHICS-002)',
-    sources_section: 'Fonti', ethics_section: 'Governance etica',
-    period: 'Periodo', capital: 'Capitale', score: 'Score',
-    today: 'oggi', present: 'presente', bc: 'a.C.',
-    real_boundary: 'Confini da dataset accademici. Verificare le fonti per dettagli.',
-    approx_boundary: 'Confini approssimativi a scopo dimostrativo.',
-    pop_affected: 'Popolazione colpita',
-    banner: 'Confini da fonti accademiche. Dati storici da Natural Earth e aourednik/historical-basemaps.',
-    map_hint: "Seleziona un'entit\u00e0 dalla lista o clicca sulla mappa. Tasto destro per trovare entit\u00e0 vicine.",
-    share: 'Condividi', link_copied: 'Link copiato negli appunti!',
-    partial_data: 'dati parziali o incerti',
-    contemporaries: 'Contemporanei',
-    no_contemporaries: 'Nessun contemporaneo trovato',
-    error_connection: 'Impossibile caricare i dati. Verifica che il server sia attivo.',
-    error_detail: 'Errore nel caricamento dei dettagli.',
-    keyboard_help: 'Scorciatoie tastiera',
-    compare: 'Confronta',
-    compare_select: "Ora clicca su un'altra entit\u00e0 per confrontarle",
-    duration: 'Durata',
-    temporal_overlap: 'Sovrapposizione temporale',
-    years: 'anni',
-    no_overlap: 'Nessuna sovrapposizione',
-    view: 'Vedi',
-    enter_to_search: 'Invio per cercare',
-    navigate: 'naviga',
-    nearby: 'Vicini',
-    distance: 'Distanza',
-    snapshot: 'Snapshot',
-    active_in: 'Attive nel',
-    events: 'eventi',
-    events_overlay: 'Mostra eventi storici',
-    events_hint: "Battaglie, trattati, fondazioni e altri eventi nell'anno selezionato.",
-    event_actor: 'Attore',
-    event_detail: 'Vedi dettaglio completo',
-    event_year: 'Anno',
-    event_date: 'Data',
-    event_location: 'Luogo',
-    event_main_actor: 'Attore principale',
-    event_description: 'Descrizione',
-    event_casualties: 'Vittime stimate',
-    event_linked_entities: 'Entit\u00e0 collegate',
-    event_error: "Errore nel caricamento dell'evento",
-  },
-  en: {
-    search: 'Search by name, including variants...',
-    year: 'Year', status: 'Status',
-    confirmed: 'Confirmed', uncertain: 'Uncertain', disputed: 'Disputed',
-    type: 'Type', sort_label: 'Sort', sort_default: 'Default',
-    sort_name: 'Name A-Z', sort_year: 'Year', sort_conf: 'Reliability',
-    reset: 'Reset filters', all: 'All', loading: 'Loading...',
-    no_results: 'No entities found', entities: 'entities',
-    sources: 'sources', changes: 'changes', contested: 'contested',
-    avg_conf: 'avg conf.', info: 'Information', reliability: 'Reliability',
-    names_section: 'Names & variants (ETHICS-001)',
-    territory_section: 'Territory changes (ETHICS-002)',
-    sources_section: 'Sources', ethics_section: 'Ethical governance',
-    period: 'Period', capital: 'Capital', score: 'Score',
-    today: 'today', present: 'present', bc: 'BC',
-    real_boundary: 'Boundaries from academic datasets. Check sources for details.',
-    approx_boundary: 'Approximate boundaries for demonstration.',
-    pop_affected: 'Population affected',
-    banner: 'Boundaries from academic sources. Data from Natural Earth and aourednik/historical-basemaps.',
-    map_hint: 'Select an entity from the list or click the map. Right-click to find nearby entities.',
-    share: 'Share', link_copied: 'Link copied to clipboard!',
-    partial_data: 'partial or uncertain data',
-    contemporaries: 'Contemporaries',
-    no_contemporaries: 'No contemporaries found',
-    error_connection: 'Unable to load data. Check if the server is running.',
-    error_detail: 'Error loading details.',
-    keyboard_help: 'Keyboard shortcuts',
-    compare: 'Compare',
-    compare_select: 'Now click another entity to compare them',
-    duration: 'Duration',
-    temporal_overlap: 'Temporal overlap',
-    years: 'years',
-    no_overlap: 'No overlap',
-    view: 'View',
-    enter_to_search: 'Enter to search',
-    navigate: 'navigate',
-    nearby: 'Nearby',
-    distance: 'Distance',
-    snapshot: 'Snapshot',
-    active_in: 'Active in',
-    events: 'events',
-    events_overlay: 'Show historical events',
-    events_hint: 'Battles, treaties, foundations and other events in the selected year.',
-    event_actor: 'Actor',
-    event_detail: 'View full detail',
-    event_year: 'Year',
-    event_date: 'Date',
-    event_location: 'Location',
-    event_main_actor: 'Main actor',
-    event_description: 'Description',
-    event_casualties: 'Estimated casualties',
-    event_linked_entities: 'Linked entities',
-    event_error: 'Error loading event',
-  },
-};
-
-function t(key) { return (I18N[lang] || I18N.it)[key] || key; }
-
-function initLang() {
-  document.getElementById('lang-toggle').textContent = lang === 'it' ? 'EN' : 'IT';
-  applyLangUI();
-}
-
-function switchLang() {
-  lang = lang === 'it' ? 'en' : 'it';
-  localStorage.setItem('atlaspi-lang', lang);
-  document.getElementById('lang-toggle').textContent = lang === 'it' ? 'EN' : 'IT';
-  applyLangUI();
-  pushUrlState();
-}
-
-function applyLangUI() {
-  document.getElementById('search-input').placeholder = t('search');
-  document.getElementById('reset-btn').textContent = t('reset');
-  const banner = document.querySelector('.data-banner');
-  if (banner) banner.innerHTML = `<strong>${t('banner').split('.')[0]}.</strong> ${t('banner').split('.').slice(1).join('.')}`;
-  const info = document.getElementById('map-info');
-  if (info) info.textContent = t('map_hint');
-  applyFilters();
-  loadStats();
-  // v6.7 — re-render chain list with updated labels
-  if (chainsData) renderChainsList();
-}
+// ─── i18n ──────────────────────────────────────────────────────
+// v6.46: extracted to static/js/i18n.js (I18N + t + initLang + switchLang + applyLangUI)
 
 // ─── Playback ───────────────────────────────────────────────────
 
@@ -2495,32 +2344,5 @@ async function showCompare(id1, id2) {
 }
 
 // ─── Theme ─────────────────────────────────────────────────────
-
-function initTheme() {
-  const saved = localStorage.getItem('atlaspi-theme') || 'dark';
-  applyTheme(saved);
-}
-
-function toggleTheme() {
-  const current = document.documentElement.getAttribute('data-theme') || 'dark';
-  const next = current === 'dark' ? 'light' : 'dark';
-  applyTheme(next);
-  localStorage.setItem('atlaspi-theme', next);
-}
-
-function applyTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
-  const btn = document.getElementById('theme-toggle');
-  if (btn) btn.textContent = theme === 'dark' ? '☀️' : '🌙';
-  // Invalidate map size after theme change
-  setTimeout(() => { if (map) map.invalidateSize(); }, 100);
-}
-
-function isReal(e) {
-  if (!e.boundary_geojson) return false;
-  const g = e.boundary_geojson;
-  let pts = 0;
-  if (g.type === 'Polygon') pts = g.coordinates.reduce((s, r) => s + r.length, 0);
-  else if (g.type === 'MultiPolygon') pts = g.coordinates.reduce((s, p) => s + p.reduce((s2, r) => s2 + r.length, 0), 0);
-  return pts > 50;
-}
+// v6.46: extracted to static/js/theme.js (initTheme + toggleTheme + applyTheme)
+// isReal() moved to static/js/utils.js
