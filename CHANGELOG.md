@@ -2,6 +2,45 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.49.0] - 2026-04-17
+
+**Tema**: *Analytics dashboard ridisegnata — classificazione semantica, niente IP*
+
+### Change rispetto a v6.48
+
+- **Rimosso "Top IPs"** dalla dashboard (privacy + poco utile)
+- **Rimosso colonna IP** da Recent Requests
+- **Aggiunto 3 breakdown charts**:
+  - By Client Type (human / agent / bot / unknown)
+  - By Device (desktop / mobile / tablet / server / bot)
+  - By Endpoint Category (entities / events / sites / rulers / languages / geo_query / render / export / admin / health / ...)
+- **Nuova tabella "Top Clients"** — label semantico (Chrome, curl, GoogleBot, ChatGPT-User, ClaudeBot, AtlasPI MCP, ecc.) invece di user-agent string raw
+- **Recent Requests** ora mostra: Time / Method / Path / Category / Who (pill colorata) / Device / Status / ms
+
+### Classificazione user-agent
+
+Logic in `classify_user_agent(ua)` — pattern matching ordered bot-first:
+
+- **Bot**: GoogleBot, BingBot, ChatGPT-User, ClaudeBot, Anthropic, GPTBot, PerplexityBot, AhrefsBot, SemrushBot, Twitter/X, Facebook, Slack, Discord, Telegram, Apple, Archive.org, 25+ patterns
+- **Agent**: AtlasPI MCP/SDK, Python requests/httpx/aiohttp, Node fetch/axios, curl/wget, Go HTTP, Java, OkHttp, Insomnia, Postman, HTTPie, Ruby, PHP
+- **Human**: residuo — detected come browser family (Chrome/Firefox/Safari/Edge/Opera/Chromium) + device (desktop/mobile/tablet) da heuristics
+- **Unknown**: empty user-agent
+
+### Endpoint categorization
+
+`classify_endpoint(path)` mappa path a categoria semantica:
+entities, events, sites, rulers, languages, periods, cities_routes_chains, search, geo_query, render, export, compare, timeline, stats, widgets, docs, admin, health, static, landing, other.
+
+### Test
+
+`tests/test_v649_analytics.py`: 24 test — classifier unit tests (14) + endpoint category (8) + dashboard HTML structure (2).
+
+### Note su GeoIP country (non fatto)
+
+User request includeva anche "nazione". Non implementato in questa release perché richiede dipendenza pesante (MaxMind GeoLite2 DB ~70MB + libreria `geoip2`). Valutabile in v6.50 se considerato utile; per ora i breakdown semantici (who/device/category) coprono l'80% del "capire subito chi sta usando l'API" senza privacy concerns.
+
+---
+
 ## [v6.48.1] - 2026-04-17
 
 **v6.46 foundation**: extraction di 3 moduli utility da `static/app.js` monolite (2526 → 2348 righe, -178).
