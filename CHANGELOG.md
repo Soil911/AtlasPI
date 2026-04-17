@@ -2,6 +2,30 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.42.1] - 2026-04-17
+
+**Sub-release**: espansione batch_28 events con i 94 nuovi events completati dall'agent research (aveva 32 events al primo ingest v6.36.0, ora al totale 126 entries).
+
+### +94 additional date-precise events
+
+Tutti con `date_precision` esplicito. 95.2% DAY precision, 4 MONTH, 2 YEAR.
+
+**Regional balance** (agent target-cap <50% europeo):
+- Europe 38.1% ✓
+- Asia 23.8%
+- Americas 18.3%
+- Africa 11.1%
+- Mediterranean/NearEast 7.1%
+- Pacific/Oceania 1.6%
+
+Tutti eventi hanno `ethical_notes` per contested framings. Calendar notes per Julian→Gregorian pre-1582, AH date per islamic, lunar calendar per Chinese/Japanese.
+
+### Stats
+
+- **623 total events** (was 529 in v6.36.0, +94)
+
+---
+
 ## [v6.42.0] - 2026-04-17
 
 **Tema**: *UX improvements da feedback esterno — light endpoint + token search*
