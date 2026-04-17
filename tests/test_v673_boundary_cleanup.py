@@ -62,10 +62,19 @@ class TestV673RealAreaBounds:
         ],
     )
     def test_real_area_in_range(self, db, entity_id, min_km2, max_km2, label):
+        """v6.7.3 fix only applies if entity is still approximate_generated.
+
+        If a later run (e.g. v6.29 boundary enrichment) upgraded the entity
+        to aourednik/natural_earth data, the v6.7.3 fix is no longer needed
+        — the real boundary is trusted. Skip the range check in that case.
+        """
         from src.db.models import GeoEntity
         e = db.query(GeoEntity).filter_by(id=entity_id).first()
         assert e is not None
-        assert e.boundary_source == "approximate_generated"
+        if e.boundary_source != "approximate_generated":
+            pytest.skip(
+                f"{label} upgraded to {e.boundary_source} — v6.7.3 range check not applicable"
+            )
         area = _real_area_km2(e.boundary_geojson)
         assert min_km2 <= area <= max_km2, (
             f"{label} (id={entity_id}) real area {area:.0f} km² "
@@ -86,7 +95,16 @@ class TestV673EthicalNotes:
 class TestV673ConfidenceCapped:
     @pytest.mark.parametrize("entity_id", sorted(V673_IDS))
     def test_confidence_capped_at_04(self, db, entity_id):
+        """Confidence cap only applies if boundary is still approximate_generated.
+
+        When v6.29+ boundary enrichment upgrades the entity to real historical
+        data (aourednik/natural_earth), the confidence is no longer capped.
+        """
         from src.db.models import GeoEntity
         e = db.query(GeoEntity).filter_by(id=entity_id).first()
         assert e is not None
+        if e.boundary_source != "approximate_generated":
+            pytest.skip(
+                f"entity {entity_id} upgraded to {e.boundary_source} — v6.7.3 cap not applicable"
+            )
         assert e.confidence_score <= 0.4

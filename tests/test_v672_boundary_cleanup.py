@@ -119,19 +119,26 @@ class TestCommagenePostFix:
 
 
 class TestOcetiSakowinPostFix:
-    """Oceti Sakowin: Great Plains ~1.5M km², was 232M km² (entire USA)."""
+    """Oceti Sakowin: Great Plains ~1.5M km², was 232M km² (entire USA).
+
+    v6.29+: if the entity was upgraded to real aourednik/NE data, the
+    v6.7.2 fix is no longer needed.
+    """
 
     def test_oceti_sakowin_is_approx_generated(self, db):
         from src.db.models import GeoEntity
         e = db.query(GeoEntity).filter_by(id=727).first()
         assert e is not None
+        if e.boundary_source != "approximate_generated":
+            pytest.skip(f"Upgraded to {e.boundary_source}")
         assert e.boundary_source == "approximate_generated"
 
     def test_oceti_sakowin_polygon_size_reasonable(self, db):
         from src.db.models import GeoEntity
         e = db.query(GeoEntity).filter_by(id=727).first()
+        if e.boundary_source != "approximate_generated":
+            pytest.skip(f"Upgraded to {e.boundary_source}")
         area = _polygon_bbox_area_km2(e.boundary_geojson)
-        # Post-fix: ~2.9M km² bbox (radius=700km), WAY smaller than 232M
         assert 500_000 < area < 10_000_000, f"Oceti Sakowin bbox {area} km²"
 
 
@@ -142,11 +149,15 @@ class TestTransylvaniaPostFix:
         from src.db.models import GeoEntity
         e = db.query(GeoEntity).filter_by(id=575).first()
         assert e is not None
+        if e.boundary_source != "approximate_generated":
+            pytest.skip(f"Upgraded to {e.boundary_source}")
         assert e.boundary_source == "approximate_generated"
 
     def test_transylvania_polygon_size_reasonable(self, db):
         from src.db.models import GeoEntity
         e = db.query(GeoEntity).filter_by(id=575).first()
+        if e.boundary_source != "approximate_generated":
+            pytest.skip(f"Upgraded to {e.boundary_source}")
         area = _polygon_bbox_area_km2(e.boundary_geojson)
         assert 20_000 < area < 500_000, f"Transylvania bbox {area} km²"
 
@@ -158,11 +169,15 @@ class TestNormandyPostFix:
         from src.db.models import GeoEntity
         e = db.query(GeoEntity).filter_by(id=651).first()
         assert e is not None
+        if e.boundary_source != "approximate_generated":
+            pytest.skip(f"Upgraded to {e.boundary_source}")
         assert e.boundary_source == "approximate_generated"
 
     def test_normandy_polygon_size_reasonable(self, db):
         from src.db.models import GeoEntity
         e = db.query(GeoEntity).filter_by(id=651).first()
+        if e.boundary_source != "approximate_generated":
+            pytest.skip(f"Upgraded to {e.boundary_source}")
         area = _polygon_bbox_area_km2(e.boundary_geojson)
         assert 10_000 < area < 300_000, f"Normandy bbox {area} km²"
 
@@ -186,6 +201,8 @@ class TestCapitalAnchoring:
         from src.db.models import GeoEntity
         e = db.query(GeoEntity).filter_by(id=entity_id).first()
         assert e is not None
+        if e.boundary_source != "approximate_generated":
+            pytest.skip(f"Upgraded to {e.boundary_source} — v6.7.2 radius check not applicable")
         assert e.capital_lat is not None
         gj = json.loads(e.boundary_geojson)
         coords: list[tuple[float, float]] = []
@@ -207,13 +224,19 @@ class TestCapitalAnchoring:
 
 
 class TestConfidenceCappedV672:
-    """Post-fix entities should have confidence_score ≤ 0.4 (ETHICS-004)."""
+    """Post-fix entities should have confidence_score ≤ 0.4 (ETHICS-004).
+
+    v6.29+: confidence cap only applies if still approximate_generated.
+    When upgraded to real aourednik/NE data, confidence is trusted higher.
+    """
 
     @pytest.mark.parametrize("entity_id", [282, 227, 727, 705, 454, 575, 679, 651, 566, 427, 653])
     def test_confidence_capped_at_04(self, db, entity_id):
         from src.db.models import GeoEntity
         e = db.query(GeoEntity).filter_by(id=entity_id).first()
         assert e is not None
+        if e.boundary_source != "approximate_generated":
+            pytest.skip(f"Upgraded to {e.boundary_source} — v6.7.2 cap not applicable")
         assert e.confidence_score <= 0.4, (
             f"Entity {entity_id} has confidence={e.confidence_score} > 0.4"
         )
