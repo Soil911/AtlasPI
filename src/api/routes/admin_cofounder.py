@@ -154,7 +154,15 @@ def reject_suggestion(
 
 @router.post(
     "/admin/ai/suggestions/{suggestion_id}/implement",
-    summary="Mark an AI suggestion as implemented",
+    summary="Mark an AI suggestion as implemented (manual override)",
+    description=(
+        "Marks a suggestion's status as 'implemented' — manual override "
+        "used when a human or Claude Code has completed the work outside "
+        "the automated pipeline. Normal workflow: accept → daily cron "
+        "runs /admin/ai/implement-accepted → handler executes → status "
+        "flips automatically. Use this endpoint only when you've done the "
+        "work yourself and want to close the loop manually."
+    ),
     include_in_schema=False,
 )
 def implement_suggestion(
@@ -162,7 +170,13 @@ def implement_suggestion(
     note: str | None = Query(None),
     db: Session = Depends(get_db),
 ):
-    """Mark a suggestion as implemented."""
+    """Mark a suggestion as implemented. Does NOT run the handler.
+
+    The actual handler execution happens via `/admin/ai/implement-accepted`
+    (batch endpoint, normally called by daily cron). This endpoint is for
+    the case where YOU have already done the work manually and just want
+    to close out the suggestion.
+    """
     return _update_suggestion_status(db, suggestion_id, "implemented", note)
 
 

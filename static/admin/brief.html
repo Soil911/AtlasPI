@@ -266,6 +266,16 @@
   .toast.show { transform: translateY(0); opacity: 1; }
   .toast-success { background: #238636; color: #fff; }
   .toast-error { background: #da3633; color: #fff; }
+  .toast-warning { background: #bb8009; color: #fff; }
+  .sug-status-hint {
+    font-size: 0.8rem;
+    color: #8b949e;
+    padding: 4px 10px;
+    border: 1px dashed #30363d;
+    border-radius: 4px;
+    font-style: italic;
+    background: rgba(187, 128, 9, 0.05);
+  }
 
   /* ─── Responsive ────────────────────────────────────────── */
   @media (max-width: 768px) {
@@ -406,6 +416,14 @@
     <div class="section">
       <div class="section-header">
         <span class="section-title">Agent Activity</span>
+        <div style="display:flex; gap:8px; align-items:center;">
+          <button id="btn-run-analyze" onclick="runAnalyze()" class="sug-btn" title="Manually trigger AI analysis now (normally runs daily via cron)">
+            🔍 Run analysis
+          </button>
+          <button id="btn-run-implement" onclick="runImplementAccepted()" class="sug-btn sug-btn-implement" title="Run handlers for all accepted suggestions now (normally runs daily via cron)">
+            ⚙️ Run accepted now
+          </button>
+        </div>
       </div>
       <div class="section-body" id="agent-body">
         <div class="loading-spinner"><div class="spinner"></div></div>
@@ -455,11 +473,11 @@ function barColor(pct) {
   return 'bar-red';
 }
 
-function showToast(msg, type) {
+function showToast(msg, type, durationMs) {
   const t = document.getElementById('toast');
   t.textContent = msg;
   t.className = 'toast toast-' + type + ' show';
-  setTimeout(() => { t.className = 'toast'; }, 3000);
+  setTimeout(() => { t.className = 'toast'; }, durationMs || 3000);
 }
 
 // ─── API calls ───────────────────────────────────────────────────
@@ -469,11 +487,81 @@ async function fetchJSON(url) {
   return res.json();
 }
 
+async function runAnalyze() {
+  const btn = document.getElementById('btn-run-analyze');
+  const orig = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = '⏳ Running...';
+  try {
+    const res = await fetch('/admin/ai/analyze', { method: 'POST' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    const total = data.total_new_suggestions || 0;
+    showToast(
+      total > 0
+        ? 'Analysis complete: ' + total + ' new suggestion' + (total === 1 ? '' : 's')
+        : 'Analysis complete: all good, no new issues found',
+      total > 0 ? 'success' : 'success',
+      5000
+    );
+    await loadDashboard();
+  } catch(e) {
+    console.error(e);
+    showToast('Analysis failed: ' + e.message, 'error', 5000);
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = orig;
+  }
+}
+
+async function runImplementAccepted() {
+  const btn = document.getElementById('btn-run-implement');
+  const orig = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = '⏳ Running handlers...';
+  try {
+    const res = await fetch('/admin/ai/implement-accepted', { method: 'POST' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    const impl = data.implemented || 0;
+    const brief = data.briefing || 0;
+    const failed = data.failed || 0;
+    const total = data.processed || 0;
+    let msg = 'Processed ' + total + ' accepted suggestion' + (total === 1 ? '' : 's') + ': ';
+    const parts = [];
+    if (impl > 0) parts.push(impl + ' implemented');
+    if (brief > 0) parts.push(brief + ' briefing');
+    if (failed > 0) parts.push(failed + ' failed');
+    msg += parts.length ? parts.join(', ') : 'nothing to do';
+    showToast(msg, failed > 0 ? 'warning' : 'success', 8000);
+    await loadDashboard();
+  } catch(e) {
+    console.error(e);
+    showToast('Batch implementation failed: ' + e.message, 'error', 5000);
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = orig;
+  }
+}
+
 async function postAction(sugId, action, note) {
   let url = '/admin/ai/suggestions/' + sugId + '/' + action;
   if (note) url += '?note=' + encodeURIComponent(note);
   const res = await fetch(url, { method: 'POST' });
-  if (!res.ok) throw new Error('HTTP ' + res.status);
+  // 202 Accepted = handler ran but briefing generated (manual work needed)
+  if (res.status === 202) {
+    const data = await res.json();
+    data._needs_manual = true;
+    return data;
+  }
+  if (!res.ok) {
+    let errMsg = 'HTTP ' + res.status;
+    try {
+      const err = await res.json();
+      if (err.detail) errMsg = err.detail;
+    } catch(e) {}
+    throw new Error(errMsg);
+  }
   return res.json();
 }
 
@@ -719,7 +807,7 @@ function renderSuggestions() {
       html += '<button class="sug-btn sug-btn-accept" onclick="doAction(' + s.id + ',\'accept\')" title="Accept">&#10003; Accept</button>';
       html += '<button class="sug-btn sug-btn-reject" onclick="doAction(' + s.id + ',\'reject\')" title="Reject">&#10007; Reject</button>';
     } else if (s.status === 'accepted') {
-      html += '<button class="sug-btn sug-btn-implement" onclick="doAction(' + s.id + ',\'implement\')" title="Mark Implemented">&#9733; Implement</button>';
+      html += '<span class="sug-status-hint" title="Will be processed by the daily AI check (or click \'Run accepted now\' above)">⏳ Awaiting daily run</span>';
     }
     html += '</div>';
     html += '</div>';
@@ -763,11 +851,19 @@ function renderAgent(status) {
 
 async function doAction(id, action) {
   try {
-    await postAction(id, action);
+    const result = await postAction(id, action);
+
     // Update local state
     const s = allSuggestions.find(x => x.id === id);
     if (s) {
-      s.status = (action === 'accept') ? 'accepted' : (action === 'reject') ? 'rejected' : 'implemented';
+      if (action === 'implement' && result._needs_manual) {
+        // Briefing generated — status stays 'accepted'
+        s.status = 'accepted';
+        s.review_note = result.review_note || s.review_note;
+      } else {
+        s.status = (action === 'accept') ? 'accepted' : (action === 'reject') ? 'rejected' : 'implemented';
+        if (result.review_note) s.review_note = result.review_note;
+      }
       s.reviewed_at = new Date().toISOString();
     }
     renderSuggestions();
@@ -780,11 +876,25 @@ async function doAction(id, action) {
     document.getElementById('kpi-pending-sub').textContent =
       fmt(statusData.accepted_count) + ' accepted, ' + fmt(statusData.implemented_count) + ' implemented';
 
-    const labels = { accept: 'accepted', reject: 'rejected', implement: 'implemented' };
-    showToast('Suggestion ' + labels[action], 'success');
+    if (action === 'implement' && result._needs_manual) {
+      showToast(
+        'Handler ran — manual work required. Briefing: ' + (result.summary || 'see data/briefings/'),
+        'warning',
+        8000
+      );
+    } else if (action === 'implement' && result.outcome === 'implemented') {
+      showToast(
+        'Auto-implemented: ' + (result.summary || 'handler succeeded'),
+        'success',
+        6000
+      );
+    } else {
+      const labels = { accept: 'accepted', reject: 'rejected', implement: 'implemented' };
+      showToast('Suggestion ' + labels[action], 'success');
+    }
   } catch(e) {
     console.error('Action error:', e);
-    showToast('Failed to ' + action + ' suggestion', 'error');
+    showToast('Failed to ' + action + ' suggestion: ' + e.message, 'error', 6000);
   }
 }
 
