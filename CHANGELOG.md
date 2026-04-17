@@ -2,6 +2,67 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.44.0] - 2026-04-17
+
+**Tema**: *Historical languages — geocoded linguistic heritage*
+
+### Nuovo modello `HistoricalLanguage` + 29 lingue core
+
+Model + migration + 4 endpoint + dataset iniziale 29 lingue.
+
+### Schema
+
+- `name_original` in native script (Ἑλληνική γλῶσσα, 𓂋, संस्कृतम्, ܐܪܡܝܐ, ꓢ)
+- `iso_code` (ISO 639-3: lat, grc, san, akk, egy, och, lzh, arb, heb, arc, etc.)
+- `family` (Indo-European/Italic, Afro-Asiatic/Semitic, Sino-Tibetan, ecc.)
+- `script` (Latin, Greek, Cuneiform, Hieroglyphic, Hieratic, Arabic, Devanagari, Cyrillic, ecc.)
+- Geocoding: `center_lat`, `center_lon`, `region_name`
+- Period: `period_start`, `period_end` (nullable = ancora viva)
+- `vitality_status`: living, endangered, extinct, reconstructed, classical
+- `ethical_notes`: soppressioni coloniali documentate
+
+### Lingue core (29) per regione
+
+**Europa/Mediterraneo**: Lingua Latina, Ἑλληνική γλῶσσα (Ancient Greek), Etruscan, Celtic/Gaulish, Gotico, Old Norse, Old English, Old Church Slavonic, Polish.
+
+**Medio Oriente**: Akkadian, Hebrew, Aramaic (endangered — Sayfo genocide 1914), Arabic, Avestan, Old Persian, Kurdish (Turkish ban 1923-1991), Coptic/Ancient Egyptian.
+
+**Asia**: Sanskrit, Old Chinese, Classical/Literary Chinese, Tibetan (PRC restrictions).
+
+**Americas**: Classical Nahuatl (Mesoamerican lingua franca post-conquista, poi castellanización), Nahuatl-Pipil (La Matanza genocide 1932 El Salvador), Quechua (Andean), Mayan.
+
+**Oceania/Pacific**: Hawaiian (1896 US linguicide ban, revival 1978+).
+
+**Africa**: Swahili (living, 150M).
+
+**Isolates/Other**: Ainu (Japanese linguicide 1869-1945), Proto-Indo-European (reconstructed).
+
+### ETHICS-009 — soppressioni coloniali documentate
+
+- **Hawaiian**: 1896 US Territory Law banned in schools → 25,000 → <1000 speakers by 1970s. Revival 1978+ successful case.
+- **Kurdish**: Turkey ban 1923-1991 (word 'Kurd' illegal). Iraqi Arabization Halabja 1988 chemical attack.
+- **Aramaic**: Sayfo 1914-1920 genocide, Simele 1933, ISIS 2014+ displacement.
+- **Nahuatl-Pipil**: La Matanza 1932 El Salvador — 25,000-40,000 killed, survival through determined post-genocide generations.
+- **Ainu**: Japan 1869-1945 linguicide (Hokkaido Former Aboriginal Protection Act 1899).
+- **Tibetan**: PRC post-1959 school restrictions, self-immolation protests 2011+.
+
+### 4 nuovi endpoint
+
+- `GET /v1/languages` — list con filtri (family, region, iso_code, vitality, year)
+- `GET /v1/languages/at-year/{year}` — lingue parlate in un dato anno
+- `GET /v1/languages/families` — enum language families con counts
+- `GET /v1/languages/{id}` — detail
+
+### Migration
+
+`013_historical_languages.py`, `down_revision = "012_historical_rulers"`.
+
+### Test
+
+`tests/test_v644_languages.py`: 8 test.
+
+---
+
 ## [v6.43.0] - 2026-04-17
 
 **Tema**: *Server-side PNG map rendering (v6.39 originally planned)*

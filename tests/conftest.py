@@ -117,6 +117,24 @@ def setup_test_db():
                     ))
         db.commit()
 
+    # v6.37.1: seed archaeological sites + v6.44 languages.
+    try:
+        from src.ingestion import ingest_sites as _sites_mod, ingest_languages as _lang_mod
+        for mod in (_sites_mod, _lang_mod):
+            orig = mod.SessionLocal
+            mod.SessionLocal = TestSession
+            try:
+                if mod is _sites_mod:
+                    mod.ingest_sites()
+                else:
+                    mod.ingest_languages()
+            except Exception:
+                pass
+            finally:
+                mod.SessionLocal = orig
+    except Exception:
+        pass
+
     db.close()
 
     yield

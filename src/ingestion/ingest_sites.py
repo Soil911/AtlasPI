@@ -16,12 +16,14 @@ import logging
 import sys
 from pathlib import Path
 
-# Windows cp1252 stdout fix for non-latin names (Arabic, Amharic, Khmer, ecc.)
-if sys.platform == "win32" and isinstance(sys.stdout, io.TextIOWrapper):
-    try:
-        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
-    except AttributeError:
-        pass
+
+def _apply_windows_stdout_fix():
+    """Windows cp1252 stdout fix — only when run as __main__ (not imported)."""
+    if sys.platform == "win32" and isinstance(sys.stdout, io.TextIOWrapper):
+        try:
+            sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+        except AttributeError:
+            pass
 
 from src.db.database import SessionLocal
 from src.db.models import ArchaeologicalSite, GeoEntity
@@ -143,6 +145,7 @@ def ingest_sites(dry_run: bool = False) -> dict:
 
 
 if __name__ == "__main__":
+    _apply_windows_stdout_fix()
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s %(levelname)s %(name)s: %(message)s",

@@ -976,3 +976,90 @@ class HistoricalRuler(Base):
     notable_events: Mapped[str | None] = mapped_column(Text, nullable=True)  # JSON array
 
     entity: Mapped[GeoEntity | None] = relationship("GeoEntity")
+
+
+# ─── v6.44: Historical Languages ────────────────────────────────────────
+
+
+class HistoricalLanguage(Base):
+    """Lingua storica geocoded — area geografica d'uso + periodo.
+
+    Distinta da `GeoEntity` (stato politico) e `HistoricalCity` (urban
+    center). Una lingua puo' coprire multiple entita' politiche
+    (latino sotto Roma e sotto Bizantino) e sopravvivere oltre la
+    fine di uno stato (greco post-conquista romana).
+
+    ETHICS: languages endangered / extinct flaggate. Quando c'e' colonial
+    imposition (es. Nahuatl soppresso da spagnolo, aborigeni AU da inglese),
+    ethical_notes esplicita il processo.
+
+    Design choices:
+      * Geocoding: center point + region_name (string). Polygon optional
+        (pochi casi ben delimitati - es. dialetti chiaramente confinati).
+      * period_start/end: prima attestazione scritta → ultimo parlante
+        native (o 'living' status). Per lingue ricostruite (PIE),
+        confidence_score < 0.5 e status='uncertain'.
+    """
+
+    __tablename__ = "historical_languages"
+    __table_args__ = (
+        Index("ix_lang_name", "name_original"),
+        Index("ix_lang_period", "period_start", "period_end"),
+        Index("ix_lang_region", "region_name"),
+        Index("ix_lang_family", "family"),
+        Index("ix_lang_iso", "iso_code"),
+        CheckConstraint(
+            "confidence_score >= 0.0 AND confidence_score <= 1.0",
+            name="ck_lang_confidence_range",
+        ),
+        CheckConstraint(
+            "center_lat IS NULL OR (center_lat >= -90.0 AND center_lat <= 90.0)",
+            name="ck_lang_lat_range",
+        ),
+        CheckConstraint(
+            "center_lon IS NULL OR (center_lon >= -180.0 AND center_lon <= 180.0)",
+            name="ck_lang_lon_range",
+        ),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    name_original: Mapped[str] = mapped_column(String(200), nullable=False)
+    name_original_lang: Mapped[str] = mapped_column(String(10), nullable=False)
+
+    # ISO 639-3 (3-letter) dove disponibile. Es. "lat" (latino), "grc" (ancient greek).
+    iso_code: Mapped[str | None] = mapped_column(String(10), nullable=True)
+
+    # Language family (Indo-European, Afro-Asiatic, Sino-Tibetan, Austronesian, ecc.)
+    family: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    # Script(s) storicamente usati (latin, greek, cuneiform, hieroglyphic, ecc.)
+    script: Mapped[str | None] = mapped_column(String(100), nullable=True)
+
+    # Geocoding approssimato — center point dell'area storica principale.
+    center_lat: Mapped[float | None] = mapped_column(Float, nullable=True)
+    center_lon: Mapped[float | None] = mapped_column(Float, nullable=True)
+    region_name: Mapped[str] = mapped_column(String(200), nullable=False)
+
+    # Period: prima attestazione → ultimo parlante native (None = ancora parlata)
+    period_start: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    period_end: Mapped[int | None] = mapped_column(Integer, nullable=True)
+
+    # Status vita: living, endangered, extinct, reconstructed, classical (dead-but-literary).
+    vitality_status: Mapped[str] = mapped_column(
+        String(30), nullable=False, default="extinct"
+    )
+
+    description: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+    confidence_score: Mapped[float] = mapped_column(Float, nullable=False, default=0.7)
+    status: Mapped[str] = mapped_column(
+        String(20), nullable=False, default=EntityStatus.CONFIRMED.value
+    )
+
+    # ETHICS: soppressioni coloniali, repressioni linguistiche, revival
+    # movements (Welsh, Maori, Cornish, Hebrew).
+    ethical_notes: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+    # JSON array: fonti accademiche (Ethnologue, Glottolog, academic corpora).
+    sources: Mapped[str | None] = mapped_column(Text, nullable=True)
+    # JSON array: varianti nome (scientific/colonial).
+    name_variants: Mapped[str | None] = mapped_column(Text, nullable=True)

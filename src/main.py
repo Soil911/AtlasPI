@@ -20,7 +20,7 @@ from src.api.middleware import (
     RequestLoggingMiddleware,
     SecurityHeadersMiddleware,
 )
-from src.api.routes import admin_cache, admin_cofounder, admin_insights, analytics, chains, cities_routes, compare, docs_ui, entities, events, export, health, periods, relations, render, rulers, search, sites, snapshot, timeline, widgets
+from src.api.routes import admin_cache, admin_cofounder, admin_insights, analytics, chains, cities_routes, compare, docs_ui, entities, events, export, health, languages, periods, relations, render, rulers, search, sites, snapshot, timeline, widgets
 from src.config import (
     APP_TITLE,
     APP_VERSION,
@@ -126,6 +126,15 @@ async def lifespan(app: FastAPI):
                 logger.info("Sites sync: %d new archaeological sites added", sites_result["inserted"])
         except Exception:
             logger.warning("Sites ingest failed — v6.37 sites layer may be empty", exc_info=True)
+
+        # v6.44: sync historical languages from data/languages/
+        try:
+            from src.ingestion.ingest_languages import ingest_languages
+            langs_result = ingest_languages()
+            if langs_result.get("inserted", 0) > 0:
+                logger.info("Languages sync: %d new historical languages added", langs_result["inserted"])
+        except Exception:
+            logger.warning("Languages ingest failed — v6.44 languages layer may be empty", exc_info=True)
 
         # v6.31: sync dynasty chains from data/chains/ (idempotent, dedup by name)
         try:
@@ -353,6 +362,7 @@ app.include_router(chains.router)
 app.include_router(periods.router)
 app.include_router(sites.router)
 app.include_router(rulers.router)
+app.include_router(languages.router)
 app.include_router(render.router)
 app.include_router(snapshot.router)
 app.include_router(analytics.router)
