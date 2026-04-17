@@ -2,6 +2,48 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.54.0] - 2026-04-17
+
+**Tema**: *AI Co-Founder analyzer — dedup fix + auto-cleanup pending stale*
+
+### Bug identificato dal user
+
+La dashboard `/admin/brief` mostrava pending "vecchi" — suggerimenti di problemi **già risolti in sessione precedente ma ricreati ogni volta che il cron gira**. Esempio: `"Geometric bugs: 14 entities have shape-level issues"` esistente come `implemented` + ricreato come `pending`. Stesso per `"10 entities with confidence < 0.4"` (3 copie implementate!).
+
+**Non è Claude AI** che fa l'analisi — è uno **script Python** (`scripts/ai_cofounder_analyze.py`, cron @ 04:00 UTC) con dedup statico broken.
+
+### Fix #1: dedup include TUTTI gli status
+
+`_existing_pending_titles()` ora include `pending` + `accepted` + `implemented` + `rejected` (prima solo `pending` + `accepted`). Quando analyzer rigira, **non ricrea suggerimenti già chiusi**, in qualsiasi stato.
+
+### Fix #2: auto-close stale pending (nuovo)
+
+Nuova funzione `cleanup_stale_pending(db)` — chiamata all'inizio di `run_analysis()`. Logica:
+
+```python
+# Per ogni pending con titolo uguale a un implemented esistente:
+#   → marca pending come "implemented" con note audit
+```
+
+Questo pulisce automaticamente duplicati creati da run precedenti con il bug.
+
+### Cleanup prod (one-shot)
+
+Dopo deploy, run `run_analysis(cleanup_first=True)` sul VPS chiude i ~3-5 pending duplicati di implemented presenti.
+
+### Opt-out
+
+`run_analysis(cleanup_first=False)` skippa la cleanup (per test/debug).
+
+### Note al user
+
+Dei 10 pending attuali:
+- **Stale (cleanup auto-chiude)**: "Geometric bugs: 14 entities" (dup di implemented)
+- **Genuini ma possibilmente risolti da fix in sessione**: "Empty search /v1/search?q=roma" (potrebbe richiedere rigenerazione post fuzzy token v6.42)
+- **Genuinamente nuovi**: "170 entities without boundaries" (nuove entity v6.35 senza boundary geojson)
+
+---
+
 ## [v6.53.0] - 2026-04-17
 
 **Tema**: *Self-service "Mark my IP as dev" — filtro user-specific*
