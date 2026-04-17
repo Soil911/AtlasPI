@@ -1,0 +1,48 @@
+name: Publish JS SDK to npm
+
+# Triggered on tag like "sdk-js-v0.1.0" or manual dispatch.
+#
+# Requires NPM_TOKEN secret in repo Settings → Secrets → Actions.
+
+on:
+  push:
+    tags:
+      - "sdk-js-v*"
+  workflow_dispatch:
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install dependencies
+        working-directory: sdk-js
+        run: npm install
+
+      - name: Build
+        working-directory: sdk-js
+        run: npm run build
+
+      - name: Check NPM_TOKEN
+        id: check_token
+        run: |
+          if [ -n "${{ secrets.NPM_TOKEN }}" ]; then
+            echo "has_token=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_token=false" >> $GITHUB_OUTPUT
+            echo "::error::NPM_TOKEN secret not configured. Add it at Settings → Secrets → Actions."
+            exit 1
+          fi
+
+      - name: Publish to npm
+        if: steps.check_token.outputs.has_token == 'true'
+        working-directory: sdk-js
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

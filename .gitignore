@@ -43,3 +43,13 @@ scratch/
 # These are operational artefacts, not dataset — regenerated on each run.
 data/briefings/
 sdk-python/src/atlaspi_client.egg-info/
+
+# HF dataset files — regenerable via prepare_export.py, not committed to keep repo light
+hf-dataset/*.jsonl
+hf-dataset/*.jsonl.gz
+
+# SDK build artifacts
+sdk-python/dist/
+sdk-python/build/
+sdk-js/dist/
+sdk-js/node_modules/

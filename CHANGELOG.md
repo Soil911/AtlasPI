@@ -2,6 +2,81 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.33.0] - 2026-04-17
+
+**Tema**: *Growth & tooling — SDKs, metrics, batch endpoint, discoverability*
+
+### New API endpoints
+
+- **`GET /v1/entities/batch?ids=1,2,3`** — fetch multiple entities in a single
+  call (max 100). Reduces N round-trips to 1 for timeline/comparison use cases.
+- **`GET /metrics`** — Prometheus-format operational metrics for scraping:
+  `atlaspi_requests_total{path,method,status}`, `atlaspi_entities_total`,
+  `atlaspi_suggestions_pending`, etc. In-memory counters, no new dependencies.
+
+### Official SDKs
+
+- **`atlaspi-client` (Python)** — `pip install atlaspi-client`. Sync + async,
+  namespaced API (`client.entities`, `.events`, `.periods`, `.chains`, etc.),
+  typed with `py.typed` marker.
+- **`atlaspi-client` (JavaScript/TypeScript)** — `npm install atlaspi-client`.
+  Works in Node 18+, Deno, Bun, browsers. Full TypeScript types included.
+
+### New MCP tool (35 total, was 34)
+
+- `get_entities_batch` — batch entity fetch for timeline/comparison use cases
+
+### AI discoverability
+
+- `/llms.txt` — emerging AI-agent sitemap standard
+- `/.well-known/ai-plugin.json` — OpenAI plugin spec
+- `/.well-known/mcp.json` — MCP server discovery manifest
+- `/about`, `/faq` — public pages with JSON-LD (FAQPage, WebApplication schemas)
+
+### 360° quality assurance
+
+- **`analyze_geometric_bugs`** (8th analyzer) — detects antimeridian-crossing
+  polygons, oversized-for-type polygons, shared polygons between entities.
+  Caught **82 real bugs** at first prod run; 53 auto-fixed by
+  `fix_antimeridian_and_wrong_polygons`, 29 queued for review.
+- **`analyze_cross_resource_consistency`** (9th analyzer) — temporal mismatches,
+  unsourced events, inverted year ranges, orphan FK references.
+- **Fixed visible bug**: USA label was rendering over France because of
+  antimeridian-crossing Alaska polygon. Similar fixes for Russia, Fiji, NZ,
+  Cherokee, Seminole, Oceti Sakowin, USSR, Taiping, Quilombos, etc. (17 total).
+- **`scripts/smoke_test_endpoints.py`** — 52-endpoint smoke test, runs in CI.
+
+### Data enrichment
+
+- +7 new historical periods (Oceania, Africa, Americas)
+- +8 new date-precise events (Constitutio Antoniniana, Hastings, Magna Carta,
+  Adwa, Westphalia, Transatlantic cable, Tordesillas, Lepanto)
+- 862 entities / 497 events / 55 periods / 94 chains
+- Date coverage: 44% → **46.7%**
+
+### Workflow fix (thanks Clirim)
+
+- Dashboard "Implement" button on single accepted cards was misleading — now
+  replaced with `⏳ Awaiting daily run` hint. Two batch buttons in Agent
+  Activity: `🔍 Run analysis` and `⚙️ Run accepted now`.
+- Daily cron installed: `0 4 * * *` runs analyze + implement-accepted + smoke.
+
+### Infrastructure
+
+- GitHub Actions workflows: `publish-mcp.yml` (PyPI trusted publisher on tag),
+  `deploy.yml` (auto-deploy on main to VPS when secrets configured)
+- `mcp-server/PUBLISH.md` — instructions for PyPI publish
+- `hf-dataset/` — HuggingFace dataset card + export script ready to upload
+- `docs/reddit-drafts.md` — 3 ready-to-post launch drafts
+
+### Stats
+
+- **1043 tests** passing (26 skipped, all documented)
+- **57 REST endpoints**, **35 MCP tools**
+- **Zero known bugs** (geometric, consistency, endpoint smoke all green)
+
+---
+
 ## [v6.30.0] - 2026-04-17
 
 **Tema**: *World snapshot — single-call "what was the world like in year X"*

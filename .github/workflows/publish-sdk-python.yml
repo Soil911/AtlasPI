@@ -1,0 +1,40 @@
+name: Publish Python SDK to PyPI
+
+# Triggered on tag like "sdk-py-v0.1.0" or manual dispatch.
+
+on:
+  push:
+    tags:
+      - "sdk-py-v*"
+  workflow_dispatch:
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write  # for trusted publisher
+    environment:
+      name: pypi
+      url: https://pypi.org/p/atlaspi-client
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install build tools
+        run: pip install build twine
+
+      - name: Build sdist and wheel
+        working-directory: sdk-python
+        run: python -m build
+
+      - name: Check distribution
+        working-directory: sdk-python
+        run: twine check dist/*
+
+      - name: Publish via trusted publisher (OIDC)
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: sdk-python/dist/
