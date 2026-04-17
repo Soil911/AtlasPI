@@ -273,6 +273,36 @@ def handle_briefing(sug: AiSuggestion, db: Session) -> dict[str, Any]:
         return _outcome("failed", f"Briefing generation error: {exc}")
 
 
+def handle_geometric_bug(sug: AiSuggestion, db: Session) -> dict[str, Any]:
+    """Auto-fix geometric bugs (antimeridian-crossing, wrong-polygon inheritance).
+
+    Delegates to fix_antimeridian_and_wrong_polygons which handles both:
+    - USA/Russia/Fiji antimeridian polygon clipping
+    - Wrong-country polygon inheritance (Cherokee, Seminole, etc.)
+    """
+    try:
+        from src.ingestion.fix_antimeridian_and_wrong_polygons import fix_all
+        # Use module-level SessionLocal since fix_all opens its own session
+        stats = fix_all(dry_run=False)
+        total = stats.get("wrong_polygon_fixed", 0) + stats.get("antimeridian_clipped", 0)
+        if total > 0:
+            return _outcome(
+                "implemented",
+                f"Fixed {stats['wrong_polygon_fixed']} wrong-polygon + "
+                f"{stats['antimeridian_clipped']} antimeridian-crossing boundaries",
+                details=stats.get("details", []),
+            )
+        else:
+            return _outcome(
+                "briefing",
+                "No geometric bugs currently detected — suggestion may be stale; "
+                "mark as implemented manually after visual verification",
+            )
+    except Exception as exc:
+        logger.exception("Geometric bug auto-fix failed")
+        return _outcome("failed", f"Geometric fix error: {exc}")
+
+
 # ═══════════════════════════════════════════════════════════════════
 # Handler registry
 # ═══════════════════════════════════════════════════════════════════
@@ -282,6 +312,7 @@ HANDLERS: dict[str, Callable[[AiSuggestion, Session], dict[str, Any]]] = {
     # Automated (category -> specific handler)
     "missing_boundaries": handle_missing_boundaries,
     "low_confidence": handle_low_confidence,
+    "geometric_bug": handle_geometric_bug,  # v6.31
     # "quality" is a catch-all; route to missing_boundaries when the
     # description matches the boundary pattern, else briefing.
 }

@@ -523,6 +523,173 @@ def analyze_date_coverage_gaps(db, existing_titles: set[str]) -> int:
 
 
 # ═══════════════════════════════════════════════════════════════════
+# Geometric quality analyzer (v6.31)
+# ═══════════════════════════════════════════════════════════════════
+
+
+def analyze_geometric_bugs(db, existing_titles: set[str]) -> int:
+    """Detect geometric quality issues invisible to metadata checks.
+
+    Origin: v6.31 — a user reported that the 'United States of America' label
+    appeared on France on the interactive map. Root cause: USA's Natural Earth
+    polygon has Alaska's Aleutian islands wrapped past +180°, making the
+    polygon's bounding box span ~360° longitude → Leaflet's bbox-center label
+    position calculation lands at lon≈0 (on France). NONE of the existing
+    metadata analyzers caught this because:
+      - boundary is present (not null) ✓
+      - boundary is large (>500 chars) ✓
+      - confidence is high ✓
+      - no text anomaly in names or descriptions
+
+    This analyzer performs SHAPE-LEVEL SANITY CHECKS:
+
+    1. ANTIMERIDIAN CROSSING: bbox width > 180° (polygon wraps the globe)
+    2. CAPITAL FAR FROM POLYGON: capital_lat/lon > 500km from polygon
+       (already in fix_displaced_aourednik but we re-check here as a
+       belt-and-suspenders)
+    3. POLYGON TOO LARGE FOR ENTITY TYPE: a city with boundary >100,000 km²,
+       a principality with >1M km², etc. (wrong-polygon inheritance
+       indicator)
+    4. IDENTICAL POLYGONS WITH DIFFERENT OWNERS: two entities sharing the
+       exact same boundary_geojson bytes are a red flag (matching gone wrong)
+
+    Returns count of suggestions created.
+    """
+    try:
+        from shapely.geometry import shape
+    except ImportError:
+        logger.warning("shapely not available — skipping geometric analysis")
+        return 0
+
+    count = 0
+    suspects: list[dict] = []
+
+    # Type-based area ceilings (km², rough) for wrong-polygon detection
+    type_max_area_km2 = {
+        "city": 10_000,
+        "city-state": 50_000,
+        "principality": 200_000,
+        "duchy": 200_000,
+        "chiefdom": 300_000,
+        "tribal_nation": 2_000_000,
+        "tribal_federation": 2_000_000,
+        "confederation": 3_000_000,
+        "kingdom": 6_000_000,
+        "sultanate": 4_000_000,
+        "republic": 10_000_000,
+        "dynasty": 15_000_000,
+        "caliphate": 15_000_000,
+        "khanate": 30_000_000,
+        "empire": 35_000_000,
+    }
+
+    # Check every entity
+    entities = (
+        db.query(GeoEntity)
+        .filter(GeoEntity.boundary_geojson.isnot(None))
+        .all()
+    )
+
+    # Track boundary hashes to detect shared polygons
+    from hashlib import sha256
+    boundary_owners: dict[str, list[int]] = {}
+
+    for e in entities:
+        boundary = e.boundary_geojson
+        if not boundary:
+            continue
+        try:
+            geom = shape(json.loads(boundary))
+        except Exception:
+            continue
+
+        issues = []
+
+        # 1. Antimeridian crossing
+        bb = geom.bounds
+        if (bb[2] - bb[0]) > 180:
+            issues.append(
+                f"antimeridian-crossing bbox (width {bb[2]-bb[0]:.0f}°) — "
+                f"label will render at lon≈{(bb[0]+bb[2])/2:.1f} not at capital"
+            )
+
+        # 2. Polygon too large for entity type
+        if e.entity_type and geom.area > 0:
+            # approximate km² from degree² (very rough; polar-biased)
+            approx_km2 = geom.area * 111 * 111
+            ceiling = type_max_area_km2.get(e.entity_type)
+            if ceiling and approx_km2 > ceiling * 1.5:
+                issues.append(
+                    f"polygon area {approx_km2:,.0f} km² exceeds type "
+                    f"ceiling for {e.entity_type} ({ceiling:,} km² × 1.5 margin) — "
+                    f"likely wrong-polygon inheritance"
+                )
+
+        # 3. Track boundary-hash duplicates
+        if len(boundary) > 100:  # only meaningful-size polygons
+            h = sha256(boundary.encode()).hexdigest()[:16]
+            boundary_owners.setdefault(h, []).append(e.id)
+
+        if issues:
+            suspects.append({
+                "id": e.id,
+                "name": e.name_original,
+                "entity_type": e.entity_type,
+                "boundary_source": e.boundary_source,
+                "issues": issues,
+            })
+
+    # 4. Shared-polygon detection (different entities with identical boundary)
+    # This catches fuzzy-match failures where multiple entities were assigned
+    # the same NE polygon.
+    shared_polygons = {h: ids for h, ids in boundary_owners.items() if len(ids) > 1}
+    if shared_polygons:
+        for h, ids in list(shared_polygons.items())[:10]:  # cap to 10 for sanity
+            names = []
+            for eid in ids[:10]:
+                ent = next((e for e in entities if e.id == eid), None)
+                if ent:
+                    names.append(f"{eid}={ent.name_original[:30]}")
+            suspects.append({
+                "hash": h,
+                "shared_polygon_ids": ids,
+                "shared_polygon_names": names,
+                "issues": [f"{len(ids)} entities share the exact same polygon — fuzzy-match error"],
+            })
+
+    # Create suggestions
+    if suspects:
+        # Aggregate suggestion (one per analysis run, listing all issues)
+        title = f"Geometric bugs: {len(suspects)} entities have shape-level issues"
+        added = _add_suggestion(
+            db, existing_titles,
+            category="geometric_bug",
+            title=title,
+            description=(
+                f"The geometric quality analyzer detected {len(suspects)} entities "
+                f"with shape-level bugs (antimeridian-crossing bbox, polygon-area "
+                f"exceeding type-based ceiling, or shared polygons across multiple "
+                f"entities). These are NOT caught by metadata checks (confidence, "
+                f"boundary-presence, status) but cause visual bugs on the map or "
+                f"incorrect spatial queries. Run "
+                f"`python -m src.ingestion.fix_antimeridian_and_wrong_polygons` to "
+                f"fix automatically."
+            ),
+            priority=2,  # high — these are user-visible bugs
+            detail_json=json.dumps({
+                "analyzer": "analyze_geometric_bugs",
+                "total_suspects": len(suspects),
+                "suspects": suspects[:30],  # cap payload
+                "auto_fix_command": "python -m src.ingestion.fix_antimeridian_and_wrong_polygons",
+            }),
+        )
+        if added:
+            count += 1
+
+    return count
+
+
+# ═══════════════════════════════════════════════════════════════════
 # Main runner
 # ═══════════════════════════════════════════════════════════════════
 
@@ -547,6 +714,7 @@ def run_analysis(db=None) -> dict:
             "orphan_entities": analyze_orphan_entities(db, existing),
             "failed_searches": analyze_failed_searches(db, existing),
             "date_coverage_gaps": analyze_date_coverage_gaps(db, existing),
+            "geometric_bugs": analyze_geometric_bugs(db, existing),
         }
 
         db.commit()

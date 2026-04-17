@@ -380,7 +380,7 @@ def test_suggestion_categories_valid(db):
     """All suggestions in DB should have valid categories."""
     valid = {"geographic_gap", "temporal_gap", "quality", "traffic_pattern",
              "missing_entity", "missing_chain", "low_confidence",
-             "search_demand", "date_coverage"}
+             "search_demand", "date_coverage", "geometric_bug"}
     sugs = db.query(AiSuggestion.category).distinct().all()
     for (cat,) in sugs:
         assert cat in valid, f"Invalid category: {cat}"

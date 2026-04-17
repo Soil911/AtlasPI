@@ -195,6 +195,49 @@ Claude deve:
 
 ---
 
+## Controllo qualità a 360° — per agenti AI
+
+Gli agenti AI (AI Co-Founder + Claude Code) devono fare quality check
+su più livelli, non solo metadata:
+
+### Metadata checks (esistenti, 7 analizzatori)
+- `geographic_gaps` / `temporal_gaps` — copertura dataset
+- `low_confidence` — confidence < 0.4
+- `missing_boundaries` — boundary null
+- `orphan_entities` — non in chain
+- `failed_searches` — 404/zero-result patterns
+- `date_coverage_gaps` — on-this-day coverage
+
+### Geometric checks (v6.31, NUOVO)
+Il campo `boundary_geojson` può essere **presente** (passa metadata check)
+ma **geometricamente sbagliato**. Un polygon può:
+- Attraversare l'antimeridian (bbox > 180° → label rende in posto errato)
+- Essere troppo grande per il `entity_type` (city-state con polygon USA)
+- Essere condiviso byte-per-byte con altre entità (fuzzy-match error)
+
+**Analizzatore**: `analyze_geometric_bugs` in `scripts/ai_cofounder_analyze.py`.
+**Auto-fix**: `src/ingestion/fix_antimeridian_and_wrong_polygons.py`.
+**Startup guard**: incluso in `main.py` lifespan, idempotent.
+
+**Se scrivi codice che crea/aggiorna boundary**, verifica SEMPRE dopo:
+```python
+from shapely.geometry import shape
+g = shape(json.loads(entity.boundary_geojson))
+assert g.bounds[2] - g.bounds[0] < 180, "polygon crosses antimeridian!"
+```
+
+### Visual checks (raccomandati per nuove feature)
+Quando aggiungi una feature che altera rendering o dati visibili:
+1. Aprire https://atlaspi.cra-srl.com/app e navigare ad un anno campione
+2. Verificare che labels, boundary, markers siano in posizioni sensate
+3. Screenshotare o descrivere risultato nel commit message
+
+**Lezione imparata dal bug v6.31**: metadata-only checks possono mancare
+classi intere di bug visibili solo su mappa. Integra controlli geometrici
+e visuali nel pipeline.
+
+---
+
 ## Regola d'oro
 
 Prima di scrivere codice chiedi: "questo dato, in questo formato,
