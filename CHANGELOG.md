@@ -2,6 +2,46 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.38.0] - 2026-04-17
+
+**Tema**: *HistoricalRuler model — biografie sovrani strutturate*
+
+### Nuovo modello: `HistoricalRuler`
+
+Imperatori, re, sultani, khagan, presidenti, dittatori. Biografie strutturate per rispondere a "Chi regnava in Cina nel 1200?" in una chiamata.
+
+### Schema
+
+- `name_original` in native script (武曌, Александр II, Σουλεϊμάν)
+- `name_regnal`: nome regnale se diverso (tipico imperatori)
+- `birth_year`, `death_year`, `reign_start`, `reign_end`: con CheckConstraint DB-level (birth <= death, reign_start <= reign_end)
+- `title`: libero (emperor, king, sultan, mansa, khagan, caliph, ecc.) — troppa variazione culturale per enum
+- `entity_id` FK nullable + `entity_name_fallback` text per sovrani pre-entity creation
+- `region`: Europe, East Asia, South Asia, Near East, Africa, Americas, Oceania
+- `dynasty`: stringa libera
+- `ethical_notes` ETHICS-002/007 — violenze esplicitate
+
+### Nuovi endpoint (4)
+
+- `GET /v1/rulers` — list paginato con filtri (region, dynasty, title, entity_id, year, status)
+- `GET /v1/rulers/at-year/{year}` — sovrani in carica in un anno
+- `GET /v1/rulers/by-entity/{entity_id}` — tutti i sovrani di una specifica entità
+- `GET /v1/rulers/{id}` — detail completo
+
+### Migration
+
+`alembic/versions/012_historical_rulers.py` — crea tabella + 4 indexes + 3 CheckConstraint.
+
+### Test
+
+`tests/test_v638_rulers.py`: 10 test — model CRUD, check constraints, at-year lookup, ETHICS-001 native script, ETHICS-002 violence documented (Leopoldo II → "Congo genocide" 10M deaths).
+
+### Foundation
+
+Questa release contiene **solo model + endpoint + test**. Il dataset di 80-120 rulers sarà popolato in **v6.38.1** (agent research in lavoro).
+
+---
+
 ## [v6.37.1] - 2026-04-17
 
 **Sub-release**: popolamento dataset archaeological sites.
