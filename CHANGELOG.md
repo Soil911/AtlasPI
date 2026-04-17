@@ -2,6 +2,39 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.35.0] - 2026-04-17
+
+**Tema**: *Espansione dataset globale — SE Asia + pre-Columbian Americas*
+
+### 109 new historical entities (+12.6%)
+
+Colmata la lacuna eurocentrica (prima ~70% Europa/Mediterraneo):
+
+- **`batch_33_sea_expansion.json`** (44 entità): Lin-Yi, Kahuripan, Malayu/Dharmasraya, Langkasuka, Kedah Tua, Samudera Pasai, Peureulak, Haru, Pyu city-states (Sri Ksetra, Beikthano, Halin) UNESCO-listed, Mon Thaton, Arakan sequence (Dhanyawadi → Vesali → Lemro), dynasties vietnamite Ngô/Đinh/Tiền Lê/Hồ, Champa phases separate (Lin-Yi, Indrapura, Vijaya, Panduranga), Ngoenyang, Phayao, Ma-i, Namayan, Caboloan, Madja-as, Bedulu/Warmadewa, Kyrgyz Khaganate, Qocho, Ganzhou Uyghur.
+- **`batch_34_americas_precolumbian.json`** (65 entità): 14 singole città-stato Maya Classiche con nomi glifici (Yax Mutal, Lakamha', Uxte'tuun, Oxwitzá, Oxwitik, Pa' Chan, Yokib, K'iik'aab, Nojpeten, ecc.), altepemeh pre-Aztechi (Culhuacan, Xochimilco, Chalco, Huexotzinco), cacicazgos caraibici (Borikén, Quisqueya, Cuba, Jamaica, Lucayan, Kalinago), Vinland e Eystribyggð (Norse Americas), Andean deep-time (Paracas, Huarpa, Salinar, Gallinazo, Chiripa, Chorrera, Valdivia).
+
+### ETHICS compliance — violenza coloniale documentata
+
+Nelle entità Americas, `ethical_notes` esplicita dove applicabile:
+- Cholula massacre (1519), Xaragua massacre (1503), Hatuey's execution (1512)
+- Kalinago Genocide (1626), Lucayan extinction (1492-1517)
+- Teenek mass enslavement by Nuño de Guzmán
+- Anacaona hanging, Agüeybaná II's Borinquen revolt
+
+Nelle entità SEA:
+- 1471 Vijaya massacre (90,000), 1057 Thaton deportation (~30,000)
+- 832 Nanzhao-Halin sacco (3,000), 1832 Panduranga abolition
+- 1848 Balanguingui destruction, 1407-1427 Ming book-burning in Đại Ngu
+
+### Stats
+
+- **971 historical entities** (was 862, +109)
+- Copertura globale migliorata: Asia +44, Americas +65
+- **1025 tests** passing
+- Zero breaking change
+
+---
+
 ## [v6.34.0] - 2026-04-17
 
 **Tema**: *Reverse-geocoding temporale — genealogia, diaspora, fact-check*

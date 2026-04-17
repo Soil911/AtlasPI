@@ -1,0 +1,3311 @@
+[
+  {
+    "name_original": "Yax Mutal",
+    "name_original_lang": "myn",
+    "entity_type": "city-state",
+    "year_start": -400,
+    "year_end": 900,
+    "capital_name": "Tikal",
+    "capital_lat": 17.222,
+    "capital_lon": -89.6237,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: Tikal's ancient glyphic name was 'Yax Mutal' ('First Mutal'); 'Tikal' is a later Itza Maya term ('at the waterhole') adopted by 19th-century explorers and now standard in archaeology. The endonym is documented extensively in the site's own hieroglyphic inscriptions. The existing AtlasPI entity 'Kʼuhul Ajaw' treats the Maya lowlands as a unified confederation, but the Classic Maya were a system of sovereign city-states in shifting alliance and war — representing them individually is more historically accurate.",
+    "name_variants": [
+      {
+        "name": "Tikal",
+        "lang": "en",
+        "context": "Modern archaeological name derived from Itzaj Maya 'ti ak'al'"
+      },
+      {
+        "name": "Mutul",
+        "lang": "myn",
+        "context": "Short form of the royal emblem glyph used by the dynasty"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 378,
+        "region": "Petén lowlands",
+        "change_type": "conquest",
+        "description": "The 'Entrada' — Siyaj K'ak' arrives at Tikal on 16 January 378 CE under apparent Teotihuacan sponsorship; king Chak Tok Ich'aak I dies the same day. A new dynasty is installed, linked in monuments to 'Spearthrower Owl' of Teotihuacan. Long-distance imperial/political intervention into Maya affairs.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 562,
+        "region": "Petén",
+        "change_type": "military_defeat",
+        "description": "Tikal defeated by Calakmul and its ally Caracol in the 'Star War' of 562 CE. Beginning of the 'Tikal hiatus' (562-692) with no monuments erected.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 695,
+        "region": "Petén",
+        "change_type": "military_victory",
+        "description": "Jasaw Chan K'awiil I of Tikal defeats Yich'aak K'ahk' of Calakmul on 5 August 695, ending the hiatus. Tikal resurgent through the 8th century.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 869,
+        "region": "Petén",
+        "change_type": "decline",
+        "description": "Final dated monument (Stela 11) erected. Collapse within decades as part of the broader Classic Maya collapse — combination of drought, warfare, soil exhaustion, and political fragmentation.",
+        "population_affected": 60000,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Martin, Simon & Grube, Nikolai. Chronicle of the Maya Kings and Queens, 2nd ed. Thames & Hudson, 2008",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Sharer, Robert J. & Traxler, Loa P. The Ancient Maya, 6th ed. Stanford University Press, 2006",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Stuart, David. 'The Arrival of Strangers' in Mesoamerica's Classic Heritage, ed. Carrasco et al., 2000",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Lakamha'",
+    "name_original_lang": "myn",
+    "entity_type": "city-state",
+    "year_start": 226,
+    "year_end": 799,
+    "capital_name": "Palenque",
+    "capital_lat": 17.4839,
+    "capital_lon": -92.0461,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: 'Lakamha'' ('Big Water') is the glyphic endonym of the city; the emblem-glyph kingdom name was 'B'aakal' ('Bone'). 'Palenque' is Spanish ('palisade'), imposed colonial designation. Primary name should be the original. The site's inscriptions — especially those of K'inich Janaab' Pakal I (r. 615-683) and his sons — are among the richest dynastic records in the Americas.",
+    "name_variants": [
+      {
+        "name": "B'aakal",
+        "lang": "myn",
+        "context": "Emblem glyph name of the polity"
+      },
+      {
+        "name": "Palenque",
+        "lang": "es",
+        "context": "Spanish colonial name, now standard internationally"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 599,
+        "region": "Usumacinta basin",
+        "change_type": "military_defeat",
+        "description": "Palenque sacked by Calakmul under Yuknoom Ch'een II; queen Yohl Ik'nal captured. Major humiliation of the B'aakal dynasty.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 615,
+        "region": "Chiapas lowlands",
+        "change_type": "expansion",
+        "description": "Accession of K'inich Janaab' Pakal I at age 12. Under his 68-year reign and those of his sons K'inich Kan B'alam II and K'inich K'an Joy Chitam II, Palenque reaches its apogee — the Temple of the Inscriptions, Palace, and Cross Group are built.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 799,
+        "region": "Chiapas",
+        "change_type": "decline",
+        "description": "Last dated monument; rapid Terminal Classic abandonment as part of the wider Maya collapse.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Martin, Simon & Grube, Nikolai. Chronicle of the Maya Kings and Queens, 2nd ed., 2008",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Stuart, David & Stuart, George. Palenque: Eternal City of the Maya. Thames & Hudson, 2008",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Uxte'tuun",
+    "name_original_lang": "myn",
+    "entity_type": "city-state",
+    "year_start": -300,
+    "year_end": 900,
+    "capital_name": "Calakmul",
+    "capital_lat": 18.1047,
+    "capital_lon": -89.8125,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "The dynastic name was 'Kaan' (Snake) kingdom; the settlement's glyphic name was 'Uxte'tuun' ('Three Stones'). 'Calakmul' is modern Yucatec Maya. One of the two Maya superpowers of the Late Classic along with Tikal; its alliance network (Caracol, Naranjo, Dos Pilas) encircled Tikal strategically.",
+    "name_variants": [
+      {
+        "name": "Kaan",
+        "lang": "myn",
+        "context": "Dynastic 'Snake Kingdom' emblem glyph (the ruling Kaanu'l dynasty moved from Dzibanche to Calakmul c. 630 CE)"
+      },
+      {
+        "name": "Calakmul",
+        "lang": "en",
+        "context": "Modern archaeological designation ('adjacent mounds' in Yucatec)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 562,
+        "region": "Petén-Campeche",
+        "change_type": "military_victory",
+        "description": "Calakmul and ally Caracol defeat Tikal, beginning Calakmul's Late Classic hegemony.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 636,
+        "region": "Campeche",
+        "change_type": "capital_transfer",
+        "description": "Kaanu'l 'Snake' dynasty under Yuknoom Ch'een II establishes Calakmul as its seat of power after relocation from Dzibanche.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 695,
+        "region": "Petén",
+        "change_type": "military_defeat",
+        "description": "Yich'aak K'ahk' ('Jaguar Paw') of Calakmul defeated by Jasaw Chan K'awiil I of Tikal. End of Kaanu'l dominance.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 909,
+        "region": "Campeche",
+        "change_type": "decline",
+        "description": "Last dated stela; site abandoned during the Terminal Classic collapse.",
+        "population_affected": 50000,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Martin, Simon & Grube, Nikolai. Chronicle of the Maya Kings and Queens, 2nd ed., 2008",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Braswell, Geoffrey E. (ed.) The Maya and Their Central American Neighbors, 2014",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Oxwitzá",
+    "name_original_lang": "myn",
+    "entity_type": "city-state",
+    "year_start": 300,
+    "year_end": 1050,
+    "capital_name": "Caracol",
+    "capital_lat": 16.7631,
+    "capital_lon": -89.1178,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Name 'Oxwitzá' means 'Three-Hills-Water' in Classic Mayan. 'Caracol' is a Spanish colonial term ('snail'). One of the largest Classic Maya cities by area (c. 200 km² with 115,000+ residents at peak), alliance partner of Calakmul against Tikal.",
+    "name_variants": [
+      {
+        "name": "Caracol",
+        "lang": "es",
+        "context": "Spanish colonial name, now standard in archaeology"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 553,
+        "region": "Vaca Plateau",
+        "change_type": "formation",
+        "description": "Accession of Yajaw Te' K'inich II; beginning of Caracol's rise.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 562,
+        "region": "Petén border",
+        "change_type": "military_victory",
+        "description": "Caracol (with Calakmul) defeats Tikal. Caracol-Tikal rivalry dominates Late Classic politics.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1050,
+        "region": "Belize",
+        "change_type": "decline",
+        "description": "Gradual collapse and abandonment during Terminal Classic.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Chase, Arlen F. & Chase, Diane Z. 'Ancient Maya Warfare' in Maya Archaeology 2, 2012",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Martin, Simon & Grube, Nikolai. Chronicle of the Maya Kings and Queens, 2nd ed., 2008",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Oxwitik",
+    "name_original_lang": "myn",
+    "entity_type": "city-state",
+    "year_start": 426,
+    "year_end": 822,
+    "capital_name": "Copán",
+    "capital_lat": 14.8372,
+    "capital_lon": -89.1425,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Oxwitik' ('Three Witik') is the glyphic endonym. The dynasty was founded in 426 CE by K'inich Yax K'uk' Mo', likely of Petén or Teotihuacano origin. UNESCO World Heritage 1980. Copán's Hieroglyphic Stairway is the longest known Maya text (over 2,200 glyphs).",
+    "name_variants": [
+      {
+        "name": "Xukpi",
+        "lang": "myn",
+        "context": "Alternate glyphic reading for the site"
+      },
+      {
+        "name": "Copán",
+        "lang": "es",
+        "context": "Colonial Spanish rendering"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 426,
+        "region": "Copán valley",
+        "change_type": "formation",
+        "description": "K'inich Yax K'uk' Mo' founds the dynasty; isotopic evidence shows he was born in the Maya lowlands but lived in central Mexico before arrival.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 738,
+        "region": "Honduras–Guatemala border",
+        "change_type": "military_defeat",
+        "description": "K'inich Waxaklajuun Ub'aah K'awiil ('18-Rabbit') captured and decapitated by K'ahk' Tiliw Chan Yopaat of vassal Quiriguá — spectacular reversal.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 822,
+        "region": "Copán valley",
+        "change_type": "decline",
+        "description": "Final inscribed monument (unfinished Altar L). Population peaked at ~25,000 in the valley then collapsed by end of 9th century from soil exhaustion and drought.",
+        "population_affected": 25000,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Fash, William L. Scribes, Warriors and Kings: The City of Copán and the Ancient Maya, rev. ed. Thames & Hudson, 2001",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Martin, Simon & Grube, Nikolai. Chronicle of the Maya Kings and Queens, 2nd ed., 2008",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Pa' Chan",
+    "name_original_lang": "myn",
+    "entity_type": "city-state",
+    "year_start": 359,
+    "year_end": 808,
+    "capital_name": "Yaxchilán",
+    "capital_lat": 16.898,
+    "capital_lon": -90.9706,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Pa' Chan' ('Broken Sky') is the glyphic name; a later variant 'Yokib' also appears. 'Yaxchilán' is modern Yucatec. Site famous for its carved lintels (now dispersed between Mexico, London, and the USA — a case of colonial dispersal of cultural heritage) depicting bloodletting rituals and Queen K'ab'al Xook.",
+    "name_variants": [
+      {
+        "name": "Yokib",
+        "lang": "myn",
+        "context": "Alternate emblem glyph reading"
+      },
+      {
+        "name": "Yaxchilán",
+        "lang": "es",
+        "context": "Modern Yucatec-derived Spanish form"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 681,
+        "region": "Usumacinta",
+        "change_type": "expansion",
+        "description": "Accession of Itzamnaaj B'alam II ('Shield Jaguar the Great'); period of major monument building and regional dominance over Piedras Negras, Lacanhá, Bonampak.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 808,
+        "region": "Usumacinta",
+        "change_type": "decline",
+        "description": "Final inscribed lintel under K'inich Tatb'u Skull IV. Collapse within decades.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Tate, Carolyn. Yaxchilán: The Design of a Maya Ceremonial City. University of Texas Press, 1992",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Martin, Simon & Grube, Nikolai. Chronicle of the Maya Kings and Queens, 2nd ed., 2008",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Yokib",
+    "name_original_lang": "myn",
+    "entity_type": "city-state",
+    "year_start": 297,
+    "year_end": 808,
+    "capital_name": "Piedras Negras",
+    "capital_lat": 17.1697,
+    "capital_lon": -91.2653,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Yokib' ('Entrance' or 'Cave') was the emblem glyph polity name. 'Piedras Negras' ('Black Stones') is Spanish. Long rivalry with neighbor Yaxchilán. Tatiana Proskouriakoff's 1960 identification of dynastic sequences here was the breakthrough that showed Maya inscriptions recorded history (not myth), overturning the 'Mayanist peaceful astronomers' myth.",
+    "name_variants": [
+      {
+        "name": "Piedras Negras",
+        "lang": "es",
+        "context": "Spanish colonial name"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 808,
+        "region": "Usumacinta",
+        "change_type": "decline",
+        "description": "Final dated monument under K'inich Yat Ahk II; abandonment during Terminal Classic.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Proskouriakoff, Tatiana. 'Historical Implications of a Pattern of Dates at Piedras Negras.' American Antiquity 25, 1960 — foundational paper for Maya historical decipherment",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Martin, Simon & Grube, Nikolai. Chronicle of the Maya Kings and Queens, 2nd ed., 2008",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Uxmal",
+    "name_original_lang": "myn",
+    "entity_type": "city-state",
+    "year_start": 600,
+    "year_end": 1200,
+    "capital_name": "Uxmal",
+    "capital_lat": 20.3597,
+    "capital_lon": -89.771,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Uxmal' ('Thrice-Built' in Yucatec Maya) is the documented endonym. Leading city of the Puuc region; capital under Lord Chaak c. 890 CE. UNESCO World Heritage 1996. Part of the 'League of Mayapán' in the Postclassic.",
+    "name_variants": [
+      {
+        "name": "Uxmal",
+        "lang": "myn",
+        "context": "canonical form"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 890,
+        "region": "Puuc hills",
+        "change_type": "expansion",
+        "description": "Reign of Lord Chaak (Chan Chak K'ak'nal Ajaw); construction of the Governor's Palace, Nunnery Quadrangle, Pyramid of the Magician.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1200,
+        "region": "Yucatán",
+        "change_type": "decline",
+        "description": "Abandonment as Mayapán assumes regional hegemony.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Kowalski, Jeff Karl. The House of the Governor: A Maya Palace at Uxmal, Yucatan, Mexico. University of Oklahoma Press, 1987",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Chich'en Itza'",
+    "name_original_lang": "myn",
+    "entity_type": "city-state",
+    "year_start": 600,
+    "year_end": 1200,
+    "capital_name": "Chichen Itza",
+    "capital_lat": 20.6843,
+    "capital_lon": -88.5678,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Chich'en Itza'' ('At the Mouth of the Well of the Itza') is the documented Yucatec Maya name. Dominant Postclassic Maya city from c. 900 to 1200 CE, with fusion of Maya and central-Mexican (Toltec) iconography whose mechanism — conquest, elite migration, or shared ideology — remains debated. UNESCO 1988; New7Wonders 2007. Sacred cenote received sacrificial offerings including humans.",
+    "name_variants": [
+      {
+        "name": "Chichén Itzá",
+        "lang": "es",
+        "context": "Standard Spanish spelling"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 987,
+        "region": "Yucatán",
+        "change_type": "transition",
+        "description": "Traditional date for the arrival of Kukulcan / Quetzalcoatl — possibly reflecting Toltec cultural influence or elite migration from Tula, though chronology is hotly debated and may be retrojected.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1200,
+        "region": "Yucatán",
+        "change_type": "decline",
+        "description": "Political collapse; center of power shifts to Mayapán. Site remains a pilgrimage destination into the colonial period.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Kowalski, Jeff K. & Kristan-Graham, Cynthia (eds.) Twin Tollans: Chichén Itzá, Tula, and the Epiclassic to Early Postclassic Mesoamerican World. Dumbarton Oaks, 2007",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Cobos, Rafael. 'Chichén Itzá: Settlement and Hegemony During the Terminal Classic Period.' In The Terminal Classic in the Maya Lowlands, 2004",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Mayapan",
+    "name_original_lang": "myn",
+    "entity_type": "city-state",
+    "year_start": 1220,
+    "year_end": 1441,
+    "capital_name": "Mayapan",
+    "capital_lat": 20.6294,
+    "capital_lon": -89.4597,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Mayapan' ('Banner of the Maya') under the Cocom dynasty was the last major pre-Hispanic Maya capital. Its political system — the 'League of Mayapán' — was a multi-lineage confederation. Destroyed in 1441 by a revolt of the Xiu family who massacred the Cocom, fragmenting Yucatán into 16 squabbling polities (kuchkabaloob) at the time of Spanish contact — which facilitated Spanish conquest (1527–1697).",
+    "name_variants": [
+      {
+        "name": "League of Mayapán",
+        "lang": "en",
+        "context": "Term used for the multi-lineage political confederation centered here"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1220,
+        "region": "Yucatán",
+        "change_type": "formation",
+        "description": "Rise of Mayapán as regional capital under the Cocom dynasty, after collapse of Chichen Itza.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1441,
+        "region": "Yucatán",
+        "change_type": "political_collapse",
+        "description": "Xiu revolt under Ah Xupan Xiu massacres the Cocom ruling family and destroys Mayapán. Yucatán fragments into 16 kuchkabaloob — a condition Spanish conquistadors would exploit from 1527.",
+        "population_affected": 15000,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Masson, Marilyn A. & Peraza Lope, Carlos. Kukulcan's Realm: Urban Life at Ancient Mayapán. University Press of Colorado, 2014",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Roys, Ralph L. The Political Geography of the Yucatan Maya. Carnegie Institution of Washington, 1957",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Dos Pilas",
+    "name_original_lang": "myn",
+    "entity_type": "city-state",
+    "year_start": 629,
+    "year_end": 761,
+    "capital_name": "Dos Pilas",
+    "capital_lat": 16.4433,
+    "capital_lon": -90.2886,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Dos Pilas used the Mutul emblem glyph of Tikal itself — a splinter dynasty founded c. 629 CE by Balaj Chan K'awiil, brother or half-brother of Tikal's king, possibly as a Calakmul-sponsored rival. An exceptionally well-documented example of Maya dynastic warfare. Abandoned in 761 after a desperate rebellion left the population living behind hastily-built defensive walls constructed from temple stones.",
+    "name_variants": [
+      {
+        "name": "Mutul (Petexbatun branch)",
+        "lang": "myn",
+        "context": "Shared the 'Mutul' emblem glyph with Tikal"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 629,
+        "region": "Petexbatun",
+        "change_type": "formation",
+        "description": "Balaj Chan K'awiil installed by Calakmul as rival Mutul king, against Tikal.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 761,
+        "region": "Petexbatun",
+        "change_type": "destruction",
+        "description": "Tamarindito revolt destroys the Dos Pilas dynasty; residents retreat into defensive enclosures. Petexbatun region spirals into endemic warfare.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Demarest, Arthur A. The Petexbatun Regional Archaeological Project: A Multidisciplinary Study of the Maya Collapse. Vanderbilt University Press, 2006",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Fahsen, Federico & Demarest, Arthur. 'The Foundation and Fall of the Dos Pilas Dynasty.' In Foundations of New World Civilization, 2004",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Aguateca",
+    "name_original_lang": "myn",
+    "entity_type": "city-state",
+    "year_start": 700,
+    "year_end": 810,
+    "capital_name": "Aguateca",
+    "capital_lat": 16.3933,
+    "capital_lon": -90.1878,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Twin capital of Dos Pilas during the Petexbatun wars. Famously abandoned c. 810 CE during a violent attack — artifacts left in situ, including elite scribe's tools in burned residences, offer a 'Pompeii'-style archaeological snapshot of Classic Maya collapse-era violence. Provides unusually clear evidence that the Maya collapse involved real warfare, not just gradual decline.",
+    "name_variants": [
+      {
+        "name": "Aguateca",
+        "lang": "myn",
+        "context": "canonical form"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 810,
+        "region": "Petexbatun",
+        "change_type": "destruction",
+        "description": "Violent sack and abandonment; residents fled under attack. Excavations recovered artifacts left in place as residences burned — key evidence that Terminal Classic warfare was real and destructive.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Inomata, Takeshi & Triadan, Daniela. Burned Palaces and Elite Residences of Aguateca. University of Utah Press, 2010",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "K'iik'aab",
+    "name_original_lang": "myn",
+    "entity_type": "city-state",
+    "year_start": 426,
+    "year_end": 810,
+    "capital_name": "Quirigua",
+    "capital_lat": 15.269,
+    "capital_lon": -89.0403,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Vassal of Copán for most of its history. In 738 CE, K'ahk' Tiliw Chan Yopaat captured and decapitated '18-Rabbit' of Copán — a spectacular subordinate-defeats-suzerain moment. The Stela E at Quiriguá is the tallest known Maya freestanding stone monument (10.6 m). UNESCO 1981.",
+    "name_variants": [
+      {
+        "name": "Quiriguá",
+        "lang": "es",
+        "context": "Modern Spanish name of the site"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 738,
+        "region": "Motagua valley",
+        "change_type": "military_victory",
+        "description": "Quiriguá defeats Copán; capture and decapitation of '18-Rabbit'. Independence from Copán and period of major monument construction.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 810,
+        "region": "Motagua valley",
+        "change_type": "decline",
+        "description": "Final dated monument; Terminal Classic abandonment.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Sharer, Robert J. Quiriguá: A Classic Maya Center and Its Sculptures. Carolina Academic Press, 1990",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Looper, Matthew G. Lightning Warrior: Maya Art and Kingship at Quirigua. University of Texas Press, 2003",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Lamanai",
+    "name_original_lang": "myn",
+    "entity_type": "city-state",
+    "year_start": -1500,
+    "year_end": 1680,
+    "capital_name": "Lamanai",
+    "capital_lat": 17.7511,
+    "capital_lon": -88.6525,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Lamanai' ('Submerged Crocodile') — one of the few Maya cities with continuous occupation from Middle Preclassic (c. 1500 BCE) through Spanish contact; unusually survived the Classic collapse. The Spanish built a church over a Maya temple in the 16th century; in 1640 the Maya residents burned it down in a revolt — physical archaeological evidence of anti-colonial resistance.",
+    "name_variants": [
+      {
+        "name": "Lamanai",
+        "lang": "myn",
+        "context": "canonical form"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1544,
+        "region": "Belize",
+        "change_type": "colonization",
+        "description": "Spanish missionaries arrive; church constructed atop pre-existing Maya temple.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1640,
+        "region": "Belize",
+        "change_type": "revolt",
+        "description": "Lamanai Maya burn the Spanish mission church and return to traditional practices — successful anti-colonial revolt.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1680,
+        "region": "Belize",
+        "change_type": "depopulation",
+        "description": "Final abandonment; survivors incorporated into surrounding Maya populations under emerging British presence.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Pendergast, David M. Excavations at Lamanai, Belize. Royal Ontario Museum, 1981–1990",
+        "source_type": "archaeological",
+        "url": null
+      },
+      {
+        "citation": "Graham, Elizabeth. Maya Christians and Their Churches in Sixteenth-Century Belize. University Press of Florida, 2011",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Nojpeten",
+    "name_original_lang": "myn",
+    "entity_type": "city-state",
+    "year_start": 1200,
+    "year_end": 1697,
+    "capital_name": "Nojpeten (Tayasal)",
+    "capital_lat": 16.93,
+    "capital_lon": -89.88,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Nojpetén, capital of the Itza kingdom on an island in Lake Petén Itzá, was the LAST independent pre-Columbian Maya polity — it fell to the Spanish under Martín de Ursúa only in March 1697, 175 years after Tenochtitlan. Its conquest involved cannon bombardment of the island and destruction of temples. Cataloguing this polity is essential to refute the common misconception that indigenous resistance ended in 1521.",
+    "name_variants": [
+      {
+        "name": "Tayasal",
+        "lang": "es",
+        "context": "Spanish form derived from 'Ta Itza' ('Place of the Itza')"
+      },
+      {
+        "name": "Itza Kingdom",
+        "lang": "en",
+        "context": "Political designation of the Petén Itzá polity"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1525,
+        "region": "Petén",
+        "change_type": "contact",
+        "description": "Hernán Cortés passes through en route to Honduras and is received peacefully by Kan Ek'; leaves a lame horse which the Itza would venerate as a deity.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1697,
+        "region": "Petén",
+        "change_type": "conquest",
+        "description": "13 March 1697 — Spanish under Martín de Ursúa y Arizmendi storm Nojpetén with cannon; last Maya king Kan Ek' captured. End of 3,000+ years of independent Maya political existence.",
+        "population_affected": 25000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Jones, Grant D. The Conquest of the Last Maya Kingdom. Stanford University Press, 1998",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "San Lorenzo Tenochtitlán",
+    "name_original_lang": "omq",
+    "entity_type": "city-state",
+    "year_start": -1500,
+    "year_end": -900,
+    "capital_name": "San Lorenzo",
+    "capital_lat": 17.7553,
+    "capital_lon": -94.7678,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "The earliest major Olmec center, predating La Venta. The 10 colossal basalt heads (up to 3.4 m tall, transported 60-90 km from the Tuxtla Mountains) represent individual rulers — the earliest monumental portraiture in the Americas. The indigenous Olmeca name is unknown; 'San Lorenzo Tenochtitlán' is a composite of the modern Spanish rancho and a Nahuatl placename applied retrospectively. Deliberately defaced and buried around 900 BCE in an event whose cause (revolt? ritual decommissioning?) remains debated.",
+    "name_variants": [
+      {
+        "name": "San Lorenzo Tenochtitlán",
+        "lang": "omq",
+        "context": "canonical form"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -1200,
+        "region": "Coatzacoalcos basin",
+        "change_type": "expansion",
+        "description": "Peak of San Lorenzo; earthwork construction and carving of colossal heads.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": -900,
+        "region": "Gulf Coast lowlands",
+        "change_type": "destruction",
+        "description": "Deliberate defacement and burial of monuments; population disperses. Olmec center shifts to La Venta.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Coe, Michael D. & Diehl, Richard A. In the Land of the Olmec. University of Texas Press, 1980",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Cyphers, Ann. Escultura Olmeca de San Lorenzo Tenochtitlán. UNAM, 2004",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "La Venta",
+    "name_original_lang": "omq",
+    "entity_type": "city-state",
+    "year_start": -900,
+    "year_end": -400,
+    "capital_name": "La Venta",
+    "capital_lat": 18.1039,
+    "capital_lon": -94.0331,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Successor Olmec center after the collapse of San Lorenzo. Home to the Great Pyramid (one of the earliest in Mesoamerica, c. 34 m tall) and elaborate 'Massive Offerings' of serpentine blocks buried beneath plazas. Indigenous name unknown. Site partially destroyed in mid-20th century by PEMEX oil installation — a case of 20th-century industrial damage to pre-Columbian heritage.",
+    "name_variants": [
+      {
+        "name": "La Venta",
+        "lang": "omq",
+        "context": "canonical form"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -400,
+        "region": "Tabasco lowlands",
+        "change_type": "abandonment",
+        "description": "Abandoned; end of the Olmec 'mother culture' phase. Olmec stylistic influence continues across Mesoamerica but no paramount center emerges.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Diehl, Richard A. The Olmecs: America's First Civilization. Thames & Hudson, 2004",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "González Lauck, Rebecca. 'La Venta.' In Olmec Art and Archaeology in Mesoamerica, National Gallery of Art, 2000",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Xochicalco",
+    "name_original_lang": "nah",
+    "entity_type": "city-state",
+    "year_start": 650,
+    "year_end": 900,
+    "capital_name": "Xochicalco",
+    "capital_lat": 18.8047,
+    "capital_lon": -99.2956,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Xochicalco' ('Place of the Flower House') is a Nahuatl retrojection — the builders predated Nahua speakers in central Mexico; original endonym unknown. Major Epiclassic hilltop city that flourished after Teotihuacan's fall, trading obsidian, cotton, and ideas between the Maya area, Oaxaca, and central Mexico. UNESCO 1999.",
+    "name_variants": [
+      {
+        "name": "Xochicalco",
+        "lang": "nah",
+        "context": "canonical form"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 650,
+        "region": "Morelos",
+        "change_type": "formation",
+        "description": "Founded after the Teotihuacan collapse; fortified hilltop city with glyphic inscriptions mixing Maya, Zapotec, and central-Mexican conventions.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 900,
+        "region": "Morelos",
+        "change_type": "destruction",
+        "description": "Burned and abandoned c. 900 CE, possibly during broader Epiclassic instability.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hirth, Kenneth G. Ancient Urbanism at Xochicalco: The Evolution and Organization of a Pre-Hispanic Society. University of Utah Press, 2000",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Cacaxtla",
+    "name_original_lang": "nah",
+    "entity_type": "city-state",
+    "year_start": 650,
+    "year_end": 1100,
+    "capital_name": "Cacaxtla",
+    "capital_lat": 19.2436,
+    "capital_lon": -98.3469,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Fortified Epiclassic site (650–1100 CE) famed for its vivid mural program — including the Battle Mural depicting jaguar-warriors defeating bird-warriors in brutal detail — one of the best-preserved pre-Hispanic paintings. Likely seat of an Olmeca-Xicalanca polity; exact ethnicity debated. Rival of nearby Cholula during the Epiclassic.",
+    "name_variants": [
+      {
+        "name": "Cacaxtla",
+        "lang": "nah",
+        "context": "canonical form"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1100,
+        "region": "Tlaxcala",
+        "change_type": "abandonment",
+        "description": "Site abandoned; population likely absorbed into emerging Tlaxcallan and Huexotzinco polities.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Brittenham, Claudia. The Murals of Cacaxtla: The Power of Painting in Ancient Central Mexico. University of Texas Press, 2015",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "El Tajín",
+    "name_original_lang": "toz",
+    "entity_type": "city-state",
+    "year_start": 600,
+    "year_end": 1200,
+    "capital_name": "El Tajín",
+    "capital_lat": 20.4464,
+    "capital_lon": -97.3778,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Capital of a major Classic/Early Postclassic polity in the Gulf Coast, associated with Totonac and Huastec peoples. Over 17 ballcourts — the highest density known in Mesoamerica — indicate ritual ballgame was central to its political system. The Pyramid of the Niches (365 niches for solar calendar) is iconic. 'El Tajín' means 'thunder' in Totonac. UNESCO 1992. Destroyed by fire c. 1200, possibly during Chichimec incursions.",
+    "name_variants": [
+      {
+        "name": "Tajín",
+        "lang": "toz",
+        "context": "'Thunder' in Totonac"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1200,
+        "region": "Veracruz",
+        "change_type": "destruction",
+        "description": "Burned and abandoned; possibly attacked by Chichimec migrants.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Koontz, Rex. Lightning Gods and Feathered Serpents: The Public Sculpture of El Tajín. University of Texas Press, 2009",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Cholōllān (Huēi Cholōllān)",
+    "name_original_lang": "nah",
+    "entity_type": "city-state",
+    "year_start": -500,
+    "year_end": 1519,
+    "capital_name": "Cholula",
+    "capital_lat": 19.0631,
+    "capital_lon": -98.3019,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "NOTE: AtlasPI already has 'Cholōllān' in batch_26 (Postclassic only). This entry extends the timeline back to Preclassic foundation (c. 500 BCE) making Cholula one of the longest continuously inhabited cities in the Americas (~2500 years). Home of the Tlachihualtepetl ('Made-by-Hand Mountain'), the world's largest pyramid by volume (4.45 million m³), which the Spanish CAPPED with a Catholic church in 1594 — a physical act of religious superimposition that remains visible today. ETHICS-002: On 18 October 1519, Cortés and his Tlaxcallan allies massacred 3,000–6,000 unarmed Cholultec nobles gathered in the central plaza (the 'Cholula Massacre'), accusing them of planning an ambush. Eyewitness accounts diverge: Cortés and Bernal Díaz justified it; Bartolomé de las Casas denounced it as unprovoked atrocity.",
+    "name_variants": [
+      {
+        "name": "Huēi Cholōllān",
+        "lang": "nah",
+        "context": "'Great Cholula' — Nahuatl title"
+      },
+      {
+        "name": "Tollān-Chollōllān-Tlachihualtepētl",
+        "lang": "nah",
+        "context": "Full ritual name including the pyramid name"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1519,
+        "region": "Puebla valley",
+        "change_type": "massacre",
+        "description": "18 October 1519 — Spanish-Tlaxcallan forces massacre 3,000-6,000 Cholultec nobles in the central plaza. Bartolomé de las Casas documented this as an unprovoked atrocity.",
+        "population_affected": 6000,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1594,
+        "region": "Puebla",
+        "change_type": "religious_superimposition",
+        "description": "Iglesia de Nuestra Señora de los Remedios completed atop the Tlachihualtepetl pyramid — physical act of Catholic superimposition over indigenous sacred architecture, visible today.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "McCafferty, Geoffrey G. 'Cholula Massacre: Factional Histories and Archaeology of the Spanish Conquest.' In The Entangled Past, 2000",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Las Casas, Bartolomé de. Brevísima relación de la destrucción de las Indias, 1552 — primary denunciation of Cholula massacre",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Plunket, Patricia & Uruñuela, Gabriela. 'Recent Research in Puebla Prehistory.' Journal of Archaeological Research 13, 2005",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Huexotzinco",
+    "name_original_lang": "nah",
+    "entity_type": "city-state",
+    "year_start": 1300,
+    "year_end": 1521,
+    "capital_name": "Huexotzinco",
+    "capital_lat": 19.155,
+    "capital_lon": -98.4069,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Huexotzinco' ('at the little willow') was one of the three major independent altepemeh (along with Tlaxcallan and Cholōllān) that resisted Mexica imperial absorption before 1519. Surrounded and besieged by the Triple Alliance but never fully conquered. Allied early with Cortés. The 'Huexotzinco Codex' (1531), now in the US Library of Congress, is a pictorial petition protesting Spanish colonial tribute demands — early indigenous legal resistance document.",
+    "name_variants": [
+      {
+        "name": "Huejotzingo",
+        "lang": "es",
+        "context": "Modern Spanish spelling"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1519,
+        "region": "Puebla-Tlaxcala valley",
+        "change_type": "alliance",
+        "description": "Allied with Cortés against the Triple Alliance, providing troops for the siege of Tenochtitlan.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1531,
+        "region": "Puebla",
+        "change_type": "colonial_resistance",
+        "description": "Huexotzinco Codex submitted as legal petition protesting Spanish tribute burdens and labor conscription.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Carrasco, Pedro. The Tenochca Empire of Ancient Mexico: The Triple Alliance. University of Oklahoma Press, 1999",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Huexotzinco Codex, 1531, Library of Congress, USA — primary document",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Culhuacan",
+    "name_original_lang": "nah",
+    "entity_type": "city-state",
+    "year_start": 600,
+    "year_end": 1430,
+    "capital_name": "Culhuacan",
+    "capital_lat": 19.334,
+    "capital_lon": -99.1233,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Culhuacan' ('Place of those who have grandfathers') was considered by the Mexica to hold legitimate 'Toltec' descent — the Mexica Tenochca royal line derived its dynastic legitimacy from Culhua marriage alliances (Acamapichtli, the first Mexica tlatoani, was a Culhua noble). Absorbed into the Triple Alliance 1430. The emic concept of 'Culhua' legitimacy drove Mexica imperial ideology.",
+    "name_variants": [
+      {
+        "name": "Culhuacan",
+        "lang": "nah",
+        "context": "canonical form"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1299,
+        "region": "Valley of Mexico",
+        "change_type": "expulsion_event",
+        "description": "Culhua ruler Cocoxtli expels the Mexica after they sacrificed a Culhua princess and flayed her skin in a ritual, leading the Mexica to migrate to Tenochtitlan (founded 1325).",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1430,
+        "region": "Valley of Mexico",
+        "change_type": "incorporation",
+        "description": "Absorbed into the Triple Alliance after the Tepanec War.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Gibson, Charles. The Aztecs Under Spanish Rule: A History of the Indians of the Valley of Mexico, 1519-1810. Stanford University Press, 1964",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Carrasco, Pedro. The Tenochca Empire of Ancient Mexico. 1999",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Xochimilco",
+    "name_original_lang": "nah",
+    "entity_type": "city-state",
+    "year_start": 1100,
+    "year_end": 1430,
+    "capital_name": "Xochimilco",
+    "capital_lat": 19.2569,
+    "capital_lon": -99.1036,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Xochimilco' ('Place of the Flower Field') — one of the Nahua altepemeh of the southern lakes, subjugated by the Triple Alliance in 1430. Famous for its chinampa system (floating agricultural gardens) — an anthropogenic wetland-agriculture technology still functioning today and UNESCO-recognized. The chinampas demonstrate that pre-Columbian Mesoamerica developed highly productive agriculture without plow, wheel, or draft animals.",
+    "name_variants": [
+      {
+        "name": "Xochimilco",
+        "lang": "nah",
+        "context": "canonical form"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1430,
+        "region": "Valley of Mexico",
+        "change_type": "conquest",
+        "description": "Conquered by Itzcoatl and the Triple Alliance; became a major chinampa tribute provider.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Parsons, Jeffrey R. 'The Role of Chinampa Agriculture in the Food Supply of Aztec Tenochtitlan.' In Cultural Change and Continuity, 1976",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Rojas Rabiela, Teresa. Las chinampas de la Cuenca de México. INAH, 1985",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Chalco",
+    "name_original_lang": "nah",
+    "entity_type": "city-state",
+    "year_start": 1200,
+    "year_end": 1465,
+    "capital_name": "Chalco",
+    "capital_lat": 19.2644,
+    "capital_lon": -98.8975,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Confederation of four altepemeh (Acxotlan, Tlacochcalco, Tlalmanalco, Tenanco) on the southeast shore of Lake Chalco. Resisted Mexica absorption longer than most Valley polities; independence ended in 1465 after a brutal war of attrition under Moctezuma I. Chalco was the chief tribute source of maize for imperial Tenochtitlan.",
+    "name_variants": [
+      {
+        "name": "Chalco Confederacy",
+        "lang": "en",
+        "context": "Four-altepetl confederation"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1465,
+        "region": "Valley of Mexico",
+        "change_type": "conquest",
+        "description": "Conquered by Moctezuma Ilhuicamina after a multi-decade war of attrition.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Chimalpahin Cuauhtlehuanitzin, Domingo. Relaciones originales de Chalco Amaquemecan, early 17th c. — primary indigenous chronicle",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Schroeder, Susan. Chimalpahin and the Kingdoms of Chalco. University of Arizona Press, 1991",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Teenek",
+    "name_original_lang": "hus",
+    "entity_type": "confederation",
+    "year_start": -1500,
+    "year_end": 1522,
+    "capital_name": "Tamtok / Tamohi",
+    "capital_lat": 21.8833,
+    "capital_lon": -98.95,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Teenek' (or 'Tének') is the endonym; 'Huastec' is a Nahuatl exonym ('Cuextēcatl'). A northern outlier of the Mayan language family (separated from other Maya ~2000 BCE), the Huasteca region developed a distinct civilization with its own monumental sculpture (smiling figurines, conch-shell carvings). Never conquered by the Triple Alliance despite repeated Mexica campaigns from 1454. Conquered by Francisco de Garay and Nuño de Guzmán 1522–1533; Nuño de Guzmán is documented branding and enslaving Huastecs en masse — one of the worst-documented atrocities of early New Spain.",
+    "name_variants": [
+      {
+        "name": "Huastec",
+        "lang": "es",
+        "context": "Spanish rendering of Nahua exonym 'Cuextēcatl'"
+      },
+      {
+        "name": "Cuextecatl",
+        "lang": "nah",
+        "context": "Nahuatl term"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1454,
+        "region": "Huasteca",
+        "change_type": "military_attempt",
+        "description": "Moctezuma Ilhuicamina's campaign into Huasteca — ambiguous outcome; nominal tribute but real independence retained.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": 1533,
+        "region": "Huasteca",
+        "change_type": "conquest_genocide",
+        "description": "Nuño de Guzmán's Huasteca campaign. He is documented branding and enslaving thousands of Teenek; sent 10,000+ as chattel slaves to the Caribbean. Declared formally illegal in 1536.",
+        "population_affected": 10000,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Stresser-Péan, Guy. The Sun God and the Savior: The Christianization of the Nahua and Totonac in the Sierra Norte de Puebla, Mexico. University Press of Colorado, 2009",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Chipman, Donald E. Nuño de Guzmán and the Province of Pánuco in New Spain, 1518-1533. University of Texas Press, 1967",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Ishtmus Zoque",
+    "name_original_lang": "zoq",
+    "entity_type": "cultural_region",
+    "year_start": -1000,
+    "year_end": 1521,
+    "capital_name": "Tecpatán",
+    "capital_lat": 17.1297,
+    "capital_lon": -93.3086,
+    "confidence_score": 0.5,
+    "status": "uncertain",
+    "boundary_geojson": null,
+    "ethical_notes": "The Mixe-Zoquean speakers of the Isthmus of Tehuantepec region are the likely descendants of the Olmec civilization — Mixe-Zoquean loanwords in other Mesoamerican languages suggest the Olmec spoke a Mixe-Zoquean tongue (Campbell & Kaufman 1976). Suffered Mexica conquest under Ahuitzotl in the 1490s; later ravaged by Spanish cattle-ranching land appropriation. Under-represented in AtlasPI.",
+    "name_variants": [
+      {
+        "name": "Zoque",
+        "lang": "es",
+        "context": "Modern collective name"
+      },
+      {
+        "name": "O'de püt",
+        "lang": "zoq",
+        "context": "Zoque endonym meaning 'people of the language'"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1494,
+        "region": "Isthmus of Tehuantepec",
+        "change_type": "conquest",
+        "description": "Ahuitzotl's conquest incorporates the Zoque region into the Triple Alliance tribute system.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Campbell, Lyle & Kaufman, Terrence. 'A Linguistic Look at the Olmecs.' American Antiquity 41, 1976",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Zeitlin, Judith F. Cultural Politics in Colonial Tehuantepec: Community and State among the Isthmus Zapotec, 1500-1750. Stanford University Press, 2005",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Mitla",
+    "name_original_lang": "zap",
+    "entity_type": "city-state",
+    "year_start": 750,
+    "year_end": 1521,
+    "capital_name": "Mitla (Lyobaa)",
+    "capital_lat": 16.9228,
+    "capital_lon": -96.3597,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Lyobaa' ('Place of Rest / Tombs') is the Zapotec endonym; 'Mitla' is Nahuatl ('Mictlan' — Place of the Dead). The successor religious capital to Monte Albán; its 14th-16th c. geometric friezes ('grecas' made of thousands of small cut stones) are among the most refined architectural decoration in pre-Hispanic America. A Zapotec high priest ('Huijatoo') ruled here into Spanish times.",
+    "name_variants": [
+      {
+        "name": "Lyobaa",
+        "lang": "zap",
+        "context": "Zapotec endonym"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1521,
+        "region": "Oaxaca valley",
+        "change_type": "contact",
+        "description": "Spanish arrival; Zapotec priesthood initially accommodates Dominicans but traditional rites continue into the 17th century.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Pohl, John M.D. The Politics of Symbolism in the Mixtec Codices. Vanderbilt University Press, 1994",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Robles García, Nelly M. The Management of Archaeological Resources in Mexico: Oaxaca as a Case Study. SAA, 2000",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Yucu Dzaa",
+    "name_original_lang": "mix",
+    "entity_type": "city-state",
+    "year_start": 1080,
+    "year_end": 1522,
+    "capital_name": "Tututepec",
+    "capital_lat": 16.1394,
+    "capital_lon": -97.6103,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Yucu Dzaa' ('Hill of the Pipe' or 'Hill of the Bird') — the Mixtec coastal kingdom, founded by Lord Eight Deer Jaguar Claw in 1083 CE (per Codex Nuttall). At its peak controlled ~150 km of Pacific coast. Successfully resisted Mexica tribute demands. Conquered by Pedro de Alvarado in 1522 despite its geographic isolation. Distinct from Tilantongo-centric Mixtec polities already represented in AtlasPI.",
+    "name_variants": [
+      {
+        "name": "Tututepec",
+        "lang": "nah",
+        "context": "Nahuatl name meaning 'Bird Hill'"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1083,
+        "region": "Pacific Oaxaca coast",
+        "change_type": "founding",
+        "description": "Founded by Lord Eight Deer Jaguar Claw (Iya Nacuaa Teyusi Ñaña), documented in Codex Nuttall and Codex Bodley.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1522,
+        "region": "Pacific Oaxaca coast",
+        "change_type": "conquest",
+        "description": "Conquered by Pedro de Alvarado.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Joyce, Arthur A. Mixtecs, Zapotecs, and Chatinos: Ancient Peoples of Southern Mexico. Wiley-Blackwell, 2010",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Codex Nuttall / Codex Zouche-Nuttall (British Museum) — primary Mixtec codex documenting Tututepec dynasty",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Teuchitlán",
+    "name_original_lang": "nah",
+    "entity_type": "cultural_region",
+    "year_start": -300,
+    "year_end": 900,
+    "capital_name": "Los Guachimontones",
+    "capital_lat": 20.6872,
+    "capital_lon": -103.8469,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "West Mexico's most sophisticated pre-Classic/Classic tradition, centered on the circular stepped pyramid complexes ('guachimontones') unique to this area. Its elaborate shaft-tomb burial tradition (which produced the famous ceramic figurines of West Mexico, widely looted and in museums worldwide) was long dismissed by Mesoamericanists as peripheral; Phil Weigand's work from the 1970s rehabilitated it. Indigenous polity name unknown; 'Teuchitlán' is the modern municipality.",
+    "name_variants": [
+      {
+        "name": "Teuchitlán Tradition",
+        "lang": "en",
+        "context": "Archaeological term for the culture"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 900,
+        "region": "Highland Jalisco",
+        "change_type": "decline",
+        "description": "Guachimontón complexes abandoned; population disperses before later Tarascan expansion.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Weigand, Phil C. Evolución de una civilización prehispánica: Arqueología de Jalisco, Nayarit y Zacatecas. El Colegio de Michoacán, 1993",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Beekman, Christopher S. 'Recent Research in Western Mexican Archaeology.' Journal of Archaeological Research 18, 2010",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Paquimé",
+    "name_original_lang": "und",
+    "entity_type": "city-state",
+    "year_start": 1200,
+    "year_end": 1450,
+    "capital_name": "Casas Grandes",
+    "capital_lat": 30.3644,
+    "capital_lon": -107.9636,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Paquimé was the regional center of the Chihuahuan desert 1200–1450 CE, linking Mesoamerica and the US Southwest. Specialized in macaw breeding (brought from tropical Mesoamerica for ceremonial feathers), copper bells, and shell-bead production. Sophisticated hydraulic systems and multi-story adobe architecture. Destroyed by fire c. 1450 with evidence of violence. UNESCO 1998. The Casas Grandes language affiliation is unknown.",
+    "name_variants": [
+      {
+        "name": "Casas Grandes",
+        "lang": "es",
+        "context": "Spanish name meaning 'big houses'"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1450,
+        "region": "Chihuahuan desert",
+        "change_type": "destruction",
+        "description": "Site burned with evidence of massacre; survivors dispersed into surrounding rancherías that would be encountered by the Spanish as Sumas, Mansos, and Jano peoples.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Di Peso, Charles C. Casas Grandes: A Fallen Trading Center of the Gran Chichimeca. 8 vols. Amerind Foundation, 1974",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Whalen, Michael E. & Minnis, Paul E. Casas Grandes and Its Hinterland. University of Arizona Press, 2001",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Hohokam",
+    "name_original_lang": "nev",
+    "entity_type": "cultural_region",
+    "year_start": 300,
+    "year_end": 1450,
+    "capital_name": "Snaketown",
+    "capital_lat": 33.1706,
+    "capital_lon": -111.9294,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Hohokam' ('those who have gone' or 'ancestors who vanished') is the term the O'odham (Akimel O'odham and Tohono O'odham) use for the vanished builders of the monumental canal-and-platform-mound system of the lower Salt and Gila basins in Arizona. The Hohokam built the largest and most sophisticated prehistoric irrigation network north of Peru — over 800 km of canals in Phoenix basin alone, some reused today. Collapsed c. 1450 CE (cause debated: salinization, drought, floods, or social breakdown). The O'odham consider themselves Hohokam descendants, though the relationship is complex.",
+    "name_variants": [
+      {
+        "name": "Hoohoogam",
+        "lang": "nev",
+        "context": "O'odham rendering"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1150,
+        "region": "Phoenix basin",
+        "change_type": "expansion",
+        "description": "Classic period — platform-mound construction, Casa Grande multistory great house, compound-walled villages.",
+        "population_affected": 40000,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1450,
+        "region": "Phoenix basin",
+        "change_type": "collapse",
+        "description": "Abandonment of major centers. O'odham oral tradition refers to social upheaval. Canal system falls into disrepair for centuries until Euro-American revival in the 1860s.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Fish, Suzanne K. & Fish, Paul R. (eds.) The Hohokam Millennium. School for Advanced Research Press, 2008",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Bayman, James M. 'The Hohokam of Southwest North America.' Journal of World Prehistory 15, 2001",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Spiro",
+    "name_original_lang": "cad",
+    "entity_type": "city-state",
+    "year_start": 900,
+    "year_end": 1450,
+    "capital_name": "Spiro Mounds",
+    "capital_lat": 35.3019,
+    "capital_lon": -94.5675,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Major Mississippian ceremonial and trade center at the southwestern edge of the Mississippian world (eastern Oklahoma), linking the Mississippi-basin chiefdoms to the Southern Plains. The Craig Mound's looting in the 1930s by the 'Pocola Mining Company' — which tunneled into the mound and sold thousands of artifacts from what was clearly a royal burial — is one of the worst documented cases of pot-hunting destruction of Native American heritage in US history; it galvanized the 1935 Oklahoma Antiquities Act. Builder population likely Caddoan-speaking.",
+    "name_variants": [
+      {
+        "name": "Spiro Mounds",
+        "lang": "en",
+        "context": "Modern archaeological name"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1450,
+        "region": "Arkansas River valley",
+        "change_type": "decline",
+        "description": "Abandoned before European contact, cause uncertain (climatic stress likely contributor).",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1935,
+        "region": "Oklahoma",
+        "change_type": "looting_atrocity",
+        "description": "Pocola Mining Company tunnels into Craig Mound; thousands of Mississippian ceremonial artifacts sold to collectors. One of the worst post-contact destructions of a Native American heritage site.",
+        "population_affected": null,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Brown, James A. The Spiro Ceremonial Center: The Archaeology of Arkansas Valley Caddoan Culture in Eastern Oklahoma. University of Michigan Museum of Anthropology, 1996",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Haudenosaunee (proto-confederacy)",
+    "name_original_lang": "moh",
+    "entity_type": "city-state",
+    "year_start": 800,
+    "year_end": 1142,
+    "capital_name": "Ganondagan (proto-center)",
+    "capital_lat": 42.9786,
+    "capital_lon": -77.4417,
+    "confidence_score": 0.4,
+    "status": "disputed",
+    "boundary_geojson": null,
+    "ethical_notes": "NOTE: AtlasPI already has 'Haudenosaunee' as a confederation starting 1142 CE. This entry documents the PRE-confederacy Iroquoian proto-state period (c. 800–1142 CE) of chronic inter-village warfare ('Mourning Wars') among the five nations that would become the Haudenosaunee. ETHICS-003 — Chronology dispute: the confederacy's founding date is contested. Iroquois oral tradition and Bradley Hansen's 1997 solar eclipse analysis suggest c. 1142 CE; Mann & Fields (1997) date it to 1450 based on archaeological settlement patterns; Snow proposes 1525-1600. All three estimates are academically defensible. This record uses the 1142 tradition-date as start of formal confederacy, with 800–1142 as the formative pre-confederacy era.",
+    "name_variants": [
+      {
+        "name": "Iroquoian proto-confederacy",
+        "lang": "en",
+        "context": "Archaeological term for the pre-Great-Law period"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1142,
+        "region": "Finger Lakes / Lake Ontario basin",
+        "change_type": "political_union",
+        "description": "Per Iroquois tradition (and Mann-Fields solar-eclipse chronology), Deganawida the Peacemaker and Hiawatha unite the five warring nations (Mohawk, Oneida, Onondaga, Cayuga, Seneca) under the Kaianere'kó:wa (Great Law of Peace). A later reckoning places this event c. 1450 CE.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Mann, Barbara A. & Fields, Jerry L. 'A Sign in the Sky: Dating the League of the Haudenosaunee.' American Indian Culture and Research Journal 21, 1997",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Snow, Dean R. The Iroquois. Wiley-Blackwell, 1994",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Vínland (Norse settlement)",
+    "name_original_lang": "non",
+    "entity_type": "colonial_outpost",
+    "year_start": 1000,
+    "year_end": 1020,
+    "capital_name": "L'Anse aux Meadows",
+    "capital_lat": 51.5975,
+    "capital_lon": -55.5311,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "The earliest documented European presence in the Americas — roughly 500 years before Columbus. L'Anse aux Meadows in northern Newfoundland was a Norse base camp occupied briefly c. 1000–1020 CE, excavated by Helge & Anne Stine Ingstad in the 1960s; UNESCO 1978. Precise tree-ring dating now pinpoints Norse timber-cutting activity to 1021 CE exactly (Kuitems et al., Nature 2021 — based on a cosmic-ray spike in AD 993). ETHICS-001: The Norse sagas record hostile encounters with 'Skrælingar' (their pejorative term, 'wretches'), almost certainly ancestral Beothuk or Innu. The settlement was abandoned after these clashes — a rare example of indigenous resistance successfully terminating European colonization. The Beothuk, however, would be driven to extinction by later European contact (see AtlasPI 'Beothuk' entity).",
+    "name_variants": [
+      {
+        "name": "Leifsbúðir",
+        "lang": "non",
+        "context": "Sagas' term ('Leif's camp') for Norse base in Vinland"
+      },
+      {
+        "name": "L'Anse aux Meadows",
+        "lang": "fr",
+        "context": "Modern French-Canadian place name (possibly from 'méduses' — jellyfish)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1021,
+        "region": "Newfoundland",
+        "change_type": "occupation",
+        "description": "Tree-ring dating confirms Norse timber cutting AD 1021 (tenth century radiocarbon-calibrated).",
+        "population_affected": null,
+        "confidence_score": 0.95
+      },
+      {
+        "year": 1020,
+        "region": "Newfoundland",
+        "change_type": "abandonment",
+        "description": "Abandonment after hostile encounters with 'Skrælingar'. A rare successful indigenous rejection of European colonization.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Ingstad, Helge & Ingstad, Anne Stine. The Viking Discovery of America: The Excavation of a Norse Settlement in L'Anse aux Meadows, Newfoundland. 2000",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Kuitems, M. et al. 'Evidence for European presence in the Americas in AD 1021.' Nature 601, 388–391, 2022",
+        "source_type": "academic",
+        "url": "https://www.nature.com/articles/s41586-021-03972-8"
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Eystribyggð",
+    "name_original_lang": "non",
+    "entity_type": "colonial_outpost",
+    "year_start": 985,
+    "year_end": 1450,
+    "capital_name": "Brattahlíð (Qassiarsuk)",
+    "capital_lat": 61.155,
+    "capital_lon": -45.5167,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Norse Greenland's 'Eastern Settlement' — the larger of the two Norse colonies in Greenland, founded by Erik the Red c. 985 CE. Peak population c. 2,000–5,000. Abandoned in the 15th century due to Little Ice Age cooling, Thule Inuit expansion from the north, trade isolation from Norway, and possibly conflict. The Norse-Inuit (Thule) interactions are poorly documented but included trade and conflict — the Norse called them 'Skrælingar'. The Thule Inuit largely replaced and absorbed the earlier Dorset culture in the same period.",
+    "name_variants": [
+      {
+        "name": "Eastern Settlement",
+        "lang": "en",
+        "context": "English translation"
+      },
+      {
+        "name": "Grœnland",
+        "lang": "non",
+        "context": "Name of the larger colony"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 985,
+        "region": "Southwest Greenland",
+        "change_type": "founding",
+        "description": "Erik the Red founds the Eastern Settlement after exile from Iceland.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1450,
+        "region": "Southwest Greenland",
+        "change_type": "abandonment",
+        "description": "Final abandonment; last recorded ship from Norway arrived 1408 (wedding at Hvalsey Church). Causes: Little Ice Age, Thule expansion, trade decline.",
+        "population_affected": 3000,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Dugmore, A.J. et al. 'Cultural adaptation, compounding vulnerabilities and conjunctures in Norse Greenland.' PNAS 109, 2012",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Arneborg, Jette. 'Norse Greenland: Reflections on Settlement and Depopulation.' In Contact, Continuity, and Collapse, 2003",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Kalinago",
+    "name_original_lang": "crb",
+    "entity_type": "confederation",
+    "year_start": 1200,
+    "year_end": 1800,
+    "capital_name": "Dominica (primary retreat)",
+    "capital_lat": 15.415,
+    "capital_lon": -61.371,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: 'Kalinago' (also 'Karifuna') is the endonym — the self-designation. 'Island Carib' and 'Caribbean' are exonyms derived from this root via Spanish. The English word 'cannibal' is a colonial corruption of 'Carib', part of a systematic campaign by the Spanish Crown (Queen Isabella, 1503) to designate these peoples as 'cannibals' so that legally they could be enslaved — a cruel etymology showing how language was weaponized for colonial violence. ETHICS-002: The Kalinago are NOT the Taíno — they were a distinct Arawakan-Cariban-speaking people of the Lesser Antilles who had themselves displaced earlier Igneri Arawaks. They resisted Spanish, French, and British colonization for three centuries. In 1626 they concluded a joint Kalinago-African alliance that was crushed on St Kitts by the English and French (Kalinago Genocide of 1626). Dominica remained a Kalinago stronghold; 3,400+ Kalinago still live on the Carib Territory in Dominica today.",
+    "name_variants": [
+      {
+        "name": "Island Carib",
+        "lang": "en",
+        "context": "Anglophone colonial term"
+      },
+      {
+        "name": "Caraïbe insulaire",
+        "lang": "fr",
+        "context": "French colonial term"
+      },
+      {
+        "name": "Karifuna",
+        "lang": "crb",
+        "context": "Alternative Kalinago self-designation"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1503,
+        "region": "Caribbean",
+        "change_type": "legal_persecution",
+        "description": "Queen Isabella's decree legally designates 'Caribs' as 'cannibals' enslavable without restriction — origin of the word 'cannibal'.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1626,
+        "region": "St Kitts",
+        "change_type": "genocide",
+        "description": "Kalinago Genocide of 1626 — English and French settlers under Warner and d'Esnambuc massacre the Kalinago population of St Kitts after a joint Kalinago-African conspiracy was betrayed.",
+        "population_affected": 2000,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1796,
+        "region": "St Vincent",
+        "change_type": "deportation",
+        "description": "Second Carib War ends with British deportation of the 'Black Caribs' (Garifuna — Afro-Kalinago) to Roatán, Honduras — origin of the modern Garifuna diaspora across Central America.",
+        "population_affected": 5000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hulme, Peter. Colonial Encounters: Europe and the Native Caribbean, 1492-1797. Routledge, 1986",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Honychurch, Lennox. The Dominica Story: A History of the Island. Macmillan, 1995",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Boucher, Philip P. Cannibal Encounters: Europeans and Island Caribs, 1492-1763. Johns Hopkins University Press, 1992",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Borikén (cacicazgo de)",
+    "name_original_lang": "tnq",
+    "entity_type": "chiefdom",
+    "year_start": 1200,
+    "year_end": 1520,
+    "capital_name": "Guaynia (Agüeybaná's seat)",
+    "capital_lat": 18.0161,
+    "capital_lon": -66.6144,
+    "confidence_score": 0.55,
+    "status": "uncertain",
+    "boundary_geojson": null,
+    "ethical_notes": "'Borikén' (or 'Borinquen' in modern Puerto Rican Spanish) means 'Land of the Great Lord' in Taíno. Puerto Rico's pre-contact Taíno cacicazgo, led by paramount cacique Agüeybaná 'El Bravo', is the origin of Puerto Rican identity today ('boricua'). Agüeybaná II led the 1511 Taíno Rebellion drowning a Spanish soldier in the Guaorabo river to test the Spaniards' immortality; the revolt was crushed and Agüeybaná killed at Yagüecas. Though existing AtlasPI 'Taíno' entity is a pan-Caribbean confederation, the individual Borinquen cacicazgo merits its own record given its distinct identity and colonial resistance.",
+    "name_variants": [
+      {
+        "name": "Borinquen",
+        "lang": "tnq",
+        "context": "Modern Puerto Rican Spanish spelling"
+      },
+      {
+        "name": "San Juan Bautista",
+        "lang": "es",
+        "context": "Spanish colonial name from 1493 (later 'Puerto Rico')"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1493,
+        "region": "Puerto Rico",
+        "change_type": "contact",
+        "description": "Columbus's second voyage encounters Borikén; no settlement established until 1508.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1511,
+        "region": "Puerto Rico",
+        "change_type": "revolt",
+        "description": "Taíno Rebellion of 1511 led by Agüeybaná II. Cacica Guanina (his sister) joined the resistance. The 'immortality test' — drowning Spaniard Diego Salcedo to see if he rose again — is one of the emblematic moments of anti-colonial indigenous reasoning. Crushed by Juan Ponce de León.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1520,
+        "region": "Puerto Rico",
+        "change_type": "depopulation",
+        "description": "Official extinction of the cacicazgo; Taíno encomienda slavery and disease effectively ended Borikén political existence. DNA evidence shows substantial Taíno genetic continuity in modern Puerto Ricans.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Rouse, Irving. The Tainos: Rise and Decline of the People Who Greeted Columbus. Yale UP, 1992",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Sued Badillo, Jalil. Agüeybaná el Bravo. Ediciones Puerto, 2008",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Martínez Cruzado, Juan C. 'Mitochondrial DNA analysis reveals substantial Native American ancestry in Puerto Rico.' Human Biology 73, 2001",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Quisqueya (cacicazgos de)",
+    "name_original_lang": "tnq",
+    "entity_type": "confederation",
+    "year_start": 1200,
+    "year_end": 1505,
+    "capital_name": "Maguana (Caonabo's seat)",
+    "capital_lat": 18.8,
+    "capital_lon": -71.0,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Quisqueya' ('Mother of all Lands') and 'Ayiti' ('Land of High Mountains') are Taíno names for Hispaniola — source of both Dominican and Haitian national names. Five cacicazgos — Marién (Guacanagarix), Magua (Guarionex), Maguana (Caonabo), Xaragua (Bohechío/Anacaona), Higüey (Cayacoa) — divided the island at Spanish contact. ETHICS-002: Ground zero of the post-1492 genocide. Cacique Caonabo destroyed Columbus's La Navidad fort in 1493 (first successful indigenous resistance); later captured and died aboard ship bound for Spain. Anacaona, queen of Xaragua, was hanged by governor Nicolás de Ovando in 1503 after the Xaragua massacre — 40 cacique guests burned alive in a meeting-house. Bartolomé de las Casas, eyewitness, documented the systematic destruction. By 1514 enumerated indigenous population <26,000; by 1548 <500 Taíno survived. AtlasPI already has 'Taíno' and 'Xaragua' entities; this Quisqueya record documents the paramount political structure specifically.",
+    "name_variants": [
+      {
+        "name": "Ayiti",
+        "lang": "tnq",
+        "context": "Alternative Taíno name for Hispaniola — origin of 'Haiti'"
+      },
+      {
+        "name": "Hispaniola / La Española",
+        "lang": "es",
+        "context": "Spanish colonial name"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1493,
+        "region": "Hispaniola",
+        "change_type": "resistance_victory",
+        "description": "Cacique Caonabo destroys La Navidad, killing all 39 Spanish men Columbus had left behind — first major act of indigenous resistance against European colonization in the Americas.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1503,
+        "region": "Xaragua",
+        "change_type": "massacre",
+        "description": "Xaragua Massacre — Governor Nicolás de Ovando lures Anacaona and 40 caciques into a meeting-house, surrounds it with troops, and burns them alive. Anacaona herself hanged days later. Documented by Las Casas.",
+        "population_affected": 40,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1514,
+        "region": "Hispaniola",
+        "change_type": "depopulation",
+        "description": "Repartimiento de 1514 enumerates 26,334 indigenous survivors — a population collapse of >95% in 22 years.",
+        "population_affected": 26334,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Las Casas, Bartolomé de. Historia de las Indias, c. 1527–1561 — primary eyewitness chronicle",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Wilson, Samuel M. Hispaniola: Caribbean Chiefdoms in the Age of Columbus. University of Alabama Press, 1990",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Cook, Noble David. Born to Die: Disease and New World Conquest, 1492-1650. Cambridge UP, 1998",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Cuba (cacicazgos de)",
+    "name_original_lang": "tnq",
+    "entity_type": "confederation",
+    "year_start": 1200,
+    "year_end": 1540,
+    "capital_name": "Bayamo (Hatuey's base)",
+    "capital_lat": 20.379,
+    "capital_lon": -76.645,
+    "confidence_score": 0.55,
+    "status": "uncertain",
+    "boundary_geojson": null,
+    "ethical_notes": "At least 29 cacicazgos divided pre-Hispanic Cuba. The western polities were Taíno; the eastern 'Ciboney' and 'Guanahatabey' were archaic Caribbean Arawakan peoples predating the Taíno. ETHICS-002: The Spanish conquest of Cuba (1511–1515) under Diego Velázquez was particularly brutal. Cacique Hatuey — a refugee from Hispaniola who had led resistance there — fled to Cuba and organized guerrilla resistance; captured in early 1512 and burned at the stake. Famously asked before execution whether Spaniards went to heaven; told yes, replied he preferred hell to spending eternity with them. Cuba's indigenous population collapsed within a generation; modern Cubans retain significant Taíno genetic ancestry.",
+    "name_variants": [
+      {
+        "name": "Cubanacán",
+        "lang": "tnq",
+        "context": "Taíno name meaning 'center of Cuba' — origin of 'Cuba'"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1512,
+        "region": "Cuba",
+        "change_type": "execution",
+        "description": "Cacique Hatuey burned at the stake. His words before execution documented by Las Casas.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1515,
+        "region": "Cuba",
+        "change_type": "conquest",
+        "description": "Diego Velázquez completes military conquest of Cuba. Encomienda system imposed; catastrophic indigenous mortality begins.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Las Casas, Bartolomé de. Historia de las Indias — eyewitness primary account of Hatuey's death",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Valcárcel Rojas, Roberto. Archaeology of Early Colonial Interaction at El Chorro de Maíta, Cuba. University Press of Florida, 2016",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Jamaica (cacicazgos de)",
+    "name_original_lang": "tnq",
+    "entity_type": "chiefdom",
+    "year_start": 1200,
+    "year_end": 1600,
+    "capital_name": "Maima",
+    "capital_lat": 18.413,
+    "capital_lon": -77.263,
+    "confidence_score": 0.45,
+    "status": "uncertain",
+    "boundary_geojson": null,
+    "ethical_notes": "'Xaymaca' (also rendered 'Yamaye') — Taíno for 'Land of Wood and Water' — source of the modern name 'Jamaica'. Pre-contact population estimates range 60,000–100,000 across c. 200 villages. By 1655 (English conquest) the Taíno population of Jamaica was effectively extinct, with some intermixture into the subsequent Maroon population. Jamaican Taíno cacicazgos are less well-documented than Puerto Rican or Hispaniolan; Maima (near Spanish Town) is tentatively identified as a paramount seat. AtlasPI already has 'Maroon Communities of Jamaica' (post-1655) but not the pre-contact polities.",
+    "name_variants": [
+      {
+        "name": "Xaymaca",
+        "lang": "tnq",
+        "context": "Taíno name — origin of 'Jamaica'"
+      },
+      {
+        "name": "Yamaye",
+        "lang": "tnq",
+        "context": "Alternate orthography"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1494,
+        "region": "Jamaica",
+        "change_type": "contact",
+        "description": "Columbus's second voyage makes first European contact with the Xaymaca Taíno. He returned in 1503-1504 marooned for a year after the Battle of Jamaica.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1520,
+        "region": "Jamaica",
+        "change_type": "depopulation",
+        "description": "Taíno population collapses under encomienda, forced labor in sugar and ranching, and disease.",
+        "population_affected": 60000,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Allsworth-Jones, Philip. Pre-Columbian Jamaica. University of Alabama Press, 2008",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Wesler, Kit W. (ed.) Jamaica in the Age of Columbus. National Museums and Galleries of Merseyside, 1995",
+        "source_type": "archaeological",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Paracas",
+    "name_original_lang": "und",
+    "entity_type": "cultural_region",
+    "year_start": -800,
+    "year_end": -100,
+    "capital_name": "Cerro Colorado (Paracas peninsula)",
+    "capital_lat": -13.825,
+    "capital_lon": -76.3,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Paracas was the direct predecessor to Nazca on the south Peruvian coast. Its elaborate textiles — mummy bundles preserved in the dry desert, with over 100 natural dye colors — are among the finest textiles produced anywhere in the ancient world. The 'Paracas candelabra' geoglyph on the peninsula predates the Nazca Lines. Skull trephination (surgical cranial opening) was practiced with documented patient survival rates near 70% — exceptional pre-industrial surgery. Indigenous name unknown.",
+    "name_variants": [
+      {
+        "name": "Paracas",
+        "lang": "und",
+        "context": "canonical form"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -100,
+        "region": "Ica-Nazca valleys",
+        "change_type": "cultural_transition",
+        "description": "Paracas tradition transitions into the Nazca cultural horizon without apparent violent rupture.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Tello, Julio C. Paracas: Primera Parte. Universidad de San Marcos, 1959 — foundational work by the Peruvian archaeologist",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Frame, Mary. Andean Four-Cornered Hats: Ancient Volumes. Metropolitan Museum of Art, 1990",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Chincha",
+    "name_original_lang": "qu",
+    "entity_type": "kingdom",
+    "year_start": 1000,
+    "year_end": 1532,
+    "capital_name": "La Centinela (Chincha)",
+    "capital_lat": -13.4225,
+    "capital_lon": -76.1425,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "The Chincha kingdom dominated Peru's central-south coast 1000–1470 CE; famous for its merchant elite of c. 6,000 professional traders who conducted balsa-raft trading voyages as far north as Ecuador and possibly Mesoamerica. The Chincha lord was one of only two non-Inca nobles permitted to be carried in a litter alongside Atahualpa at Cajamarca in 1532 — he was killed with the Inca emperor. Peak population estimated at 100,000–200,000; collapsed within decades of Spanish contact.",
+    "name_variants": [
+      {
+        "name": "Reino de Chincha",
+        "lang": "es",
+        "context": "Spanish colonial designation"
+      },
+      {
+        "name": "Señorío de Chincha",
+        "lang": "es",
+        "context": "Standard academic Spanish term"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1470,
+        "region": "South-central Peruvian coast",
+        "change_type": "incorporation",
+        "description": "Chincha submits to the Inca Empire under Tupac Inca Yupanqui — preserves its merchant elite and partial autonomy in exchange for tribute.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1532,
+        "region": "Cajamarca",
+        "change_type": "elite_killing",
+        "description": "The Chincha paramount lord, accompanying Atahualpa at Cajamarca, is killed in the Spanish ambush of 16 November 1532.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Sandweiss, Daniel H. The Archaeology of the Chincha Fishermen. Carnegie Museum of Natural History, 1992",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Rostworowski, María. Etnía y sociedad: Costa peruana prehispánica. IEP, 1977",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Ichma (Ychsma)",
+    "name_original_lang": "qu",
+    "entity_type": "kingdom",
+    "year_start": 900,
+    "year_end": 1470,
+    "capital_name": "Pachacamac",
+    "capital_lat": -12.2575,
+    "capital_lon": -76.8994,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Ichma' (also 'Ychsma') was the polity of the Lurín and Rímac valleys (the area of modern Lima) after Wari collapse. Its capital Pachacamac housed a pan-Andean oracle — the god Pachacamac ('earth maker') was revered across the Andes; even the Inca preserved and expanded the shrine after conquest. Francisco Pizarro sent Hernando Pizarro in 1533 to loot the oracle: silver and gold plate from the temple yielded some of the largest bullion seized in the conquest. Cultural and religious continuity over 500 years at this site.",
+    "name_variants": [
+      {
+        "name": "Ychsma",
+        "lang": "qu",
+        "context": "Alternate orthography"
+      },
+      {
+        "name": "Pachacamac (shrine name)",
+        "lang": "qu",
+        "context": "Name of the paramount oracular deity and its temple"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1470,
+        "region": "Lima region",
+        "change_type": "incorporation",
+        "description": "Inca conquest under Tupac Inca Yupanqui; Pachacamac shrine preserved and expanded with Inca architectural additions.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1533,
+        "region": "Pachacamac",
+        "change_type": "looting",
+        "description": "Hernando Pizarro loots the Pachacamac oracle of silver and gold. One of the largest early bullion seizures of the conquest.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Eeckhout, Peter. Pachacamac durant l'Intermédiaire récent. BAR International, 1999",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Rostworowski, María. Señoríos indígenas de Lima y Canta. IEP, 1978",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Chanka",
+    "name_original_lang": "qu",
+    "entity_type": "confederation",
+    "year_start": 1000,
+    "year_end": 1440,
+    "capital_name": "Choqek'iraw / Andahuaylas region",
+    "capital_lat": -13.6625,
+    "capital_lon": -73.3944,
+    "confidence_score": 0.55,
+    "status": "uncertain",
+    "boundary_geojson": null,
+    "ethical_notes": "The Chanka confederation of the Apurímac highlands was the existential rival that nearly destroyed Cuzco c. 1438 CE. Ethnohistorical chronicles (Cieza de León, Sarmiento de Gamboa) relate that under general Anqu Hualloc (or 'Astuhuaraca') the Chanka besieged Cuzco; prince Cusi Yupanqui (later the emperor Pachacuti) defeated them at the Battle of Yahuarpampa — a civilizational founding myth for the Inca Empire. Archaeology shows fortified Chanka hilltop sites but is skeptical of the Inca chronicle's magnitude. Some scholars (Bauer et al. 2010) argue the Chanka threat was Inca imperial propaganda retroactively inflated.",
+    "name_variants": [
+      {
+        "name": "Chanca",
+        "lang": "es",
+        "context": "Spanish colonial spelling"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1438,
+        "region": "Apurímac highlands / Cuzco",
+        "change_type": "military_defeat",
+        "description": "Battle of Yahuarpampa — Chanka confederation defeated by Cusi Yupanqui (future Pachacuti Inca). Foundational event of Inca imperial expansion per chronicles; magnitude debated by modern archaeology.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Bauer, Brian S., Kellett, Lucas C., & Aráoz Silva, Miriam. The Chanka: Archaeological Research in Andahuaylas (Apurimac), Peru. UCLA Cotsen Institute, 2010",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Cieza de León, Pedro de. El Señorío de los Incas, 1553 — primary ethnohistorical source",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Qulla Suyu / Lupaqa",
+    "name_original_lang": "aym",
+    "entity_type": "kingdom",
+    "year_start": 1200,
+    "year_end": 1460,
+    "capital_name": "Chucuito",
+    "capital_lat": -15.895,
+    "capital_lon": -69.887,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Aymara-speaking altiplano kingdoms that succeeded the Tiwanaku collapse c. 1100 CE. The Lupaqa, along with the Qulla and Pacaje, dominated the Lake Titicaca basin and held large camelid herds (800,000+ llamas and alpacas per colonial visita records). Inca conquest under Pachacuti (c. 1460) triggered violent resistance; entire Qulla populations were deported as mitmaq to remote provinces. Aymara identity survived Inca, Spanish, and republican colonization — today ~2 million Aymara speakers in Peru, Bolivia, and Chile. The Túpac Katari revolt of 1781 (Aymara-led) besieged La Paz.",
+    "name_variants": [
+      {
+        "name": "Lupaca",
+        "lang": "es",
+        "context": "Spanish colonial rendering"
+      },
+      {
+        "name": "Qulla",
+        "lang": "qu",
+        "context": "Quechua form; the Inca 'Qulla Suyu' was the entire southeastern quarter of Tawantinsuyu"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1460,
+        "region": "Lake Titicaca basin",
+        "change_type": "conquest",
+        "description": "Pachacuti and subsequently Tupac Inca Yupanqui conquer the Qulla and Lupaqa after prolonged warfare. Mass mitmaq deportations.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Murra, John V. 'An Aymara Kingdom in 1567.' Ethnohistory 15, 1968 — analysis of the Visita de Chucuito (1567)",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Stanish, Charles. Ancient Titicaca: The Evolution of Complex Society in Southern Peru and Northern Bolivia. University of California Press, 2003",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Cañari",
+    "name_original_lang": "qu",
+    "entity_type": "confederation",
+    "year_start": 500,
+    "year_end": 1463,
+    "capital_name": "Guapondelig (Tomebamba)",
+    "capital_lat": -2.897,
+    "capital_lon": -79.005,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "The Cañari confederation of the southern Ecuadorian highlands fought the Inca conquest bitterly (c. 1460–1463) under Duma. After their defeat, Tupac Inca Yupanqui reportedly executed much of the male population and deported survivors as mitmaq; the Cañari capital Guapondelig was rebuilt as the imperial Inca city Tomebamba (birthplace of emperor Huayna Capac). In revenge, Cañari warriors were among the first and most determined indigenous allies of Francisco Pizarro against the Inca (1532 onwards), and remained loyal Spanish auxiliaries throughout the conquest.",
+    "name_variants": [
+      {
+        "name": "Kañari",
+        "lang": "qu",
+        "context": "Quechua variant"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1463,
+        "region": "Southern Ecuadorian Andes",
+        "change_type": "conquest_massacre",
+        "description": "Inca conquest under Tupac Inca Yupanqui. Mass killing of Cañari men and mitmaq deportation. Guapondelig renamed Tomebamba as the northern Inca capital.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1532,
+        "region": "Northern Andes",
+        "change_type": "alliance_switch",
+        "description": "Cañari become principal indigenous allies of Pizarro against the Inca.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Idrovo Urigüen, Jaime. Tomebamba: Arqueología e historia de una ciudad imperial. CIDAP, 2000",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Salomon, Frank. The Cord Keepers: Khipus and Cultural Life in a Peruvian Village. Duke University Press, 2004",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Manteño-Huancavilca",
+    "name_original_lang": "und",
+    "entity_type": "confederation",
+    "year_start": 500,
+    "year_end": 1535,
+    "capital_name": "Jocay / Salangome",
+    "capital_lat": -1.05,
+    "capital_lon": -80.45,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Pacific-coast polities of central-southern Ecuador. The Manteño were the last major pre-Hispanic Ecuadorian coastal culture; their balsa-raft maritime trade (documented by Bartolomé Ruiz's 1526 encounter with a Manteño trading raft carrying 20 tons of goods — gold, silver, textiles) extended from Mesoamerica to Peru, likely facilitating the diffusion of metallurgy. The rafts used centerboard steering. Conquest by Francisco Pizarro 1531–1535. Indigenous paramount name unknown.",
+    "name_variants": [
+      {
+        "name": "Manteño",
+        "lang": "es",
+        "context": "Spanish archaeological term"
+      },
+      {
+        "name": "Huancavilca",
+        "lang": "es",
+        "context": "Related Gulf of Guayaquil people"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1526,
+        "region": "Manabí coast",
+        "change_type": "contact",
+        "description": "Bartolomé Ruiz encounters a Manteño trading balsa off Esmeraldas — first documented European contact with South America's Pacific maritime civilization.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1535,
+        "region": "Pacific Ecuador",
+        "change_type": "conquest",
+        "description": "Spanish conquest completed; Manteño absorbed into Spanish tribute system.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Marcos, Jorge G. Arqueología de la Costa Ecuatoriana: Nuevos Enfoques. ESPOL, 1986",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Sámano-Xerez Relación, 1528 — primary Spanish account of Ruiz's Manteño raft encounter",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Valdivia",
+    "name_original_lang": "und",
+    "entity_type": "cultural_region",
+    "year_start": -3500,
+    "year_end": -1800,
+    "capital_name": "Real Alto",
+    "capital_lat": -1.9667,
+    "capital_lon": -80.7333,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "The Valdivia culture of coastal Ecuador (c. 3500–1800 BCE) is one of the oldest ceramic-producing cultures in the Americas. Its female figurines ('Venus de Valdivia') are among the earliest anthropomorphic sculpture in the New World. The site of Real Alto (occupied c. 3000 BCE) shows early Formative ceremonial architecture and evidence of maize and bean cultivation. Indigenous name unknown — 'Valdivia' is the modern site name from a colonial Spanish town.",
+    "name_variants": [
+      {
+        "name": "Valdivia",
+        "lang": "und",
+        "context": "canonical form"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -1800,
+        "region": "Santa Elena peninsula",
+        "change_type": "cultural_transition",
+        "description": "Valdivia tradition gives way to the Machalilla culture, ancestral to Chorrera.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Lathrap, Donald W., Marcos, Jorge G. & Zeidler, James A. 'Real Alto: An Ancient Ceremonial Center.' Archaeology 30, 1977",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Marcos, Jorge G. Real Alto: La historia de un centro ceremonial Valdivia. ESPOL, 1988",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Chorrera",
+    "name_original_lang": "und",
+    "entity_type": "cultural_region",
+    "year_start": -1300,
+    "year_end": -300,
+    "capital_name": "La Chorrera",
+    "capital_lat": -1.3833,
+    "capital_lon": -79.75,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Formative-period culture of coastal Ecuador (c. 1300–300 BCE), descendant of Machalilla and ancestor to the Manteño-Jama-Coaque-Bahía traditions. Produced iridescent polychrome ceramics including whistle-bottles and zoomorphic vessels. Evidence of long-distance exchange with Mesoamerica in this period. Name is modern — indigenous name unknown.",
+    "name_variants": [
+      {
+        "name": "Chorrera",
+        "lang": "und",
+        "context": "canonical form"
+      }
+    ],
+    "territory_changes": [],
+    "sources": [
+      {
+        "citation": "Estrada, Emilio. Las culturas pre-clásicas, formativas o arcaicas del Ecuador. Museo Víctor Emilio Estrada, 1958",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Zeidler, James A. & Pearsall, Deborah M. (eds.) Regional Archaeology in Northern Manabí, Ecuador. University of Pittsburgh, 1994",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Likan-antay",
+    "name_original_lang": "ckw",
+    "entity_type": "confederation",
+    "year_start": 500,
+    "year_end": 1536,
+    "capital_name": "Tulor / San Pedro de Atacama",
+    "capital_lat": -22.9,
+    "capital_lon": -68.2,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Likan-antay' ('those from the territory') is the endonym of the Atacameño people of northern Chile's Atacama desert. Kunza was their language (now extinct since the early 20th century; revitalization efforts ongoing). Their ayllus (kin-based communities) and pukarás (fortified settlements like Quitor) survived Tiwanaku, Inca (Topa Inca c. 1471), and Spanish conquest. The Atacameño population collapsed under colonial silver-mining labor drafts (the mita de Potosí); their ancestral territory was partitioned between Chile, Bolivia, and Argentina after the War of the Pacific (1879–1884).",
+    "name_variants": [
+      {
+        "name": "Atacameño",
+        "lang": "es",
+        "context": "Spanish colonial-era term"
+      },
+      {
+        "name": "Kunza",
+        "lang": "ckw",
+        "context": "Their own language name — now extinct as daily spoken tongue"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1471,
+        "region": "Atacama highlands",
+        "change_type": "conquest",
+        "description": "Inca conquest under Topa Inca Yupanqui; Atacama integrated into Qulla Suyu.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 1536,
+        "region": "Atacama desert",
+        "change_type": "contact",
+        "description": "First Spanish contact (Diego de Almagro's expedition). Full Spanish occupation 1557 under Francisco de Aguirre.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Llagostera Martínez, Agustín. Antecedentes culturales del pueblo atacameño. IIAM, 1995",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Núñez, Lautaro. Cultura y conflicto en los oasis de San Pedro de Atacama. Editorial Universitaria, 2007",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Norte Chico / Caral-Supe (supra-regional)",
+    "name_original_lang": "und",
+    "entity_type": "cultural_region",
+    "year_start": -3500,
+    "year_end": -1800,
+    "capital_name": "Caral (Supe valley)",
+    "capital_lat": -10.8925,
+    "capital_lon": -77.5206,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "NOTE: AtlasPI already has 'Caral-Supe' as a specific site entity (starts -3000). This record documents the BROADER Norte Chico complex — approximately 30 sites across the Supe, Pativilca, Fortaleza, and Huaura valleys (e.g., Áspero, Bandurria, Vichama, Huaricanga, Miraya) — as a coordinated civilization, one of the world's six pristine pre-Columbian civilizations (along with Mesoamerica, Mesopotamia, Egypt, Indus, China). Monumental architecture (stone platform mounds up to 28 m) predates any ceramic technology here — a unique aceramic urban tradition. Ruth Shady's excavations from 1994 transformed understanding of Andean origins.",
+    "name_variants": [
+      {
+        "name": "Norte Chico civilization",
+        "lang": "en",
+        "context": "Haas-Creamer archaeological term"
+      },
+      {
+        "name": "Civilización Caral",
+        "lang": "es",
+        "context": "Ruth Shady's preferred Spanish term emphasizing Caral as the paramount center"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -1800,
+        "region": "Peru central coast",
+        "change_type": "decline",
+        "description": "Caral and associated sites abandoned; social complexity shifts south to Chavín-precursor polities.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Shady Solís, Ruth. La ciudad sagrada de Caral-Supe: los orígenes de la civilización andina y la formación del Estado prístino en el antiguo Perú. INC, 2003",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Haas, Jonathan & Creamer, Winifred. 'Crucible of Andean Civilization: The Peruvian Coast from 3000 to 1800 BC.' Current Anthropology 47, 2006",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Taíno (Lucayan)",
+    "name_original_lang": "tnq",
+    "entity_type": "chiefdom",
+    "year_start": 600,
+    "year_end": 1520,
+    "capital_name": "Guanahaní (San Salvador)",
+    "capital_lat": 24.05,
+    "capital_lon": -74.5333,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "'Lucayan' derives from 'Lukku-Cairi' ('island people') — the Taíno subgroup who inhabited the Bahamas and Turks & Caicos. Guanahaní (the modern island of San Salvador / Watlings Island) was the first landfall of Columbus on 12 October 1492. ETHICS-002: The Lucayans suffered the fastest genocide in American history — within 25 years (1492–1517) the entire Lucayan population of the Bahamas (estimated 40,000) was abducted to Hispaniola and Cuba as slave labor to replace the dying Taíno, then they themselves perished. By 1520 the Bahamas was uninhabited. Distinct from the general 'Taíno' AtlasPI entity, which focuses on the Greater Antilles.",
+    "name_variants": [
+      {
+        "name": "Lukku-Cairi",
+        "lang": "tnq",
+        "context": "Taíno endonym — 'people of the islands'"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1492,
+        "region": "Guanahaní / Bahamas",
+        "change_type": "contact",
+        "description": "12 October 1492 — Columbus lands at Guanahaní. First documented contact between Europe and indigenous America (excluding Vinland).",
+        "population_affected": null,
+        "confidence_score": 0.95
+      },
+      {
+        "year": 1517,
+        "region": "Bahamas",
+        "change_type": "depopulation_genocide",
+        "description": "Approximate completion of Lucayan slave-raiding. By 1520 the Bahamas was uninhabited. Entire population transferred to Hispaniola, Cuba, and Puerto Rico as replacement slave labor.",
+        "population_affected": 40000,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Keegan, William F. The People Who Discovered Columbus: The Prehistory of the Bahamas. University Press of Florida, 1992",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Sauer, Carl O. The Early Spanish Main. University of California Press, 1966",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Izapa",
+    "name_original_lang": "und",
+    "entity_type": "city-state",
+    "year_start": -1500,
+    "year_end": 1200,
+    "capital_name": "Izapa",
+    "capital_lat": 14.9181,
+    "capital_lon": -92.1833,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Izapa (Soconusco, Chiapas) is the pivotal site linking Olmec to Maya civilizations. Its elaborate carved stelae (c. 700–300 BCE) depict narrative mythology that appears to prefigure the Popol Vuh Hero Twins and other Maya cosmological themes. The Long Count calendar may have originated in the Izapan tradition. Indigenous name unknown; the site was probably Mixe-Zoquean speaking.",
+    "name_variants": [
+      {
+        "name": "Izapa",
+        "lang": "und",
+        "context": "canonical form"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1200,
+        "region": "Chiapas coast",
+        "change_type": "decline",
+        "description": "Site diminished by the Postclassic; incorporated into Soconusco polity.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Lowe, Gareth W., Lee, Thomas A. & Martínez Espinosa, Eduardo. Izapa: An Introduction to the Ruins and Monuments. NWAF Paper 31, 1982",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Tres Zapotes",
+    "name_original_lang": "omq",
+    "entity_type": "city-state",
+    "year_start": -900,
+    "year_end": 300,
+    "capital_name": "Tres Zapotes",
+    "capital_lat": 18.475,
+    "capital_lon": -95.4322,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Last of the three great Olmec centers (after San Lorenzo and La Venta). Continued occupation through the Epi-Olmec period (c. 400 BCE – 300 CE). The Tres Zapotes Stela C fragment bears the earliest certain Long Count date in Mesoamerica (7.16.6.16.18, equivalent to 3 September 32 BCE) — predating Maya uses of the calendar by centuries. Discovery by Matthew Stirling in 1939 transformed understanding of Mesoamerican calendrics.",
+    "name_variants": [
+      {
+        "name": "Tres Zapotes",
+        "lang": "omq",
+        "context": "canonical form"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 300,
+        "region": "Veracruz",
+        "change_type": "abandonment",
+        "description": "Site abandoned by 300 CE; population disperses into surrounding Classic-period polities.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Pool, Christopher A. Olmec Archaeology and Early Mesoamerica. Cambridge University Press, 2007",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Stirling, Matthew W. 'An Initial Series from Tres Zapotes, Vera Cruz, Mexico.' National Geographic Society, 1940",
+        "source_type": "primary",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Chiripa",
+    "name_original_lang": "und",
+    "entity_type": "city-state",
+    "year_start": -1500,
+    "year_end": -100,
+    "capital_name": "Chiripa",
+    "capital_lat": -16.75,
+    "capital_lon": -68.9333,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Early Formative-Yaya-Mama-tradition site on the Taraco peninsula of Lake Titicaca — the principal direct predecessor to Tiwanaku. Its terraced 'Semi-Subterranean Temple' prefigures Tiwanaku's monumental architecture. Part of the wider Yaya-Mama religious tradition of the Lake Titicaca basin.",
+    "name_variants": [
+      {
+        "name": "Yaya-Mama tradition",
+        "lang": "en",
+        "context": "Broader archaeological horizon spanning c. 800 BCE - 200 CE"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -100,
+        "region": "Lake Titicaca",
+        "change_type": "cultural_transition",
+        "description": "Chiripa tradition succeeded by Tiwanaku rise.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hastorf, Christine A. (ed.) Early Settlement at Chiripa, Bolivia. Contributions of the University of California Archaeological Research Facility 57, 1999",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Sapzurro / Kuna (Dulenega)",
+    "name_original_lang": "cuk",
+    "entity_type": "confederation",
+    "year_start": 1000,
+    "year_end": null,
+    "capital_name": "Usdup / Ailigandí (San Blas)",
+    "capital_lat": 9.55,
+    "capital_lon": -78.95,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "The Guna (formerly Kuna) people of the Darién and San Blas / Guna Yala coast are one of the few indigenous Americas peoples to have achieved formal political autonomy in a modern nation-state — the Comarca de Guna Yala (Panama) was granted in 1938 after the Kuna Revolution of 1925 against Panamanian assimilation policies. Pre-Columbian Guna were organized in sakla-led confederations. Their name 'Dule' ('the people') is the endonym; 'Cuna' / 'Kuna' is an exonym. Language: Guna (Chibchan family). Continuous political and cultural continuity from pre-contact times makes this one of the most resilient indigenous polities in the Americas.",
+    "name_variants": [
+      {
+        "name": "Guna / Cuna / Kuna",
+        "lang": "cuk",
+        "context": "Exonym commonly used in scholarship"
+      },
+      {
+        "name": "Dule",
+        "lang": "cuk",
+        "context": "Endonym meaning 'the people'"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1925,
+        "region": "San Blas coast, Panama",
+        "change_type": "revolt_autonomy",
+        "description": "Kuna Revolution (Dule Revolution / Revolución de Tule), led by Nele Kantule and Simral Colman against Panamanian forced-assimilation. Panama recognizes Guna autonomy in 1938 (Comarca de San Blas / Guna Yala).",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Howe, James. A People Who Would Not Kneel: Panama, the United States, and the San Blas Kuna. Smithsonian, 1998",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Quimbaya",
+    "name_original_lang": "und",
+    "entity_type": "confederation",
+    "year_start": 1,
+    "year_end": 1540,
+    "capital_name": "Middle Cauca valley chiefdoms",
+    "capital_lat": 4.55,
+    "capital_lon": -75.68,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "The Quimbaya of the Colombian Middle Cauca valley (Risaralda, Quindío, Caldas) produced some of the finest pre-Columbian gold-working in the Americas — lost-wax castings of extraordinary technical sophistication (the 'Tesoro Quimbaya', 123 pieces, was gifted to Spain in 1893 and is now at the Museo de América, Madrid — a contested example of colonial-era cultural extraction that Colombia has formally requested returned). The Quimbaya cacicazgos resisted Spanish conquest 1536–1542 but were shattered; the Cartago-Quindío Maroon resistance continued into the 1550s.",
+    "name_variants": [
+      {
+        "name": "Quimbaya",
+        "lang": "und",
+        "context": "canonical form"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1542,
+        "region": "Middle Cauca",
+        "change_type": "conquest",
+        "description": "Jorge Robledo's conquest of the Quimbaya region; foundation of Cartago and other Spanish cities on former indigenous settlement sites.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1893,
+        "region": "Museo de América, Madrid",
+        "change_type": "extraction",
+        "description": "Tesoro Quimbaya gifted to Queen María Cristina of Spain by Colombian President Carlos Holguín in disputed circumstances. Object of ongoing repatriation claims by Colombia.",
+        "population_affected": null,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Duque Gómez, Luis. Los Quimbayas: Reseña etno-histórica y arqueológica. Banco de la República, 1970",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Plazas, Clemencia. Tesoro Quimbaya. Museo del Oro, 1994",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Tupinambá",
+    "name_original_lang": "tpw",
+    "entity_type": "confederation",
+    "year_start": 1000,
+    "year_end": 1650,
+    "capital_name": "(village-level; no central capital)",
+    "capital_lat": -22.9068,
+    "capital_lon": -43.1729,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "ETHICS-001: The Tupinambá, Tupiniquim, and related Tupí-Guaraní-speaking peoples occupied nearly all of the Brazilian coast at Portuguese contact (1500). Their extraordinary ethnographic documentation — Hans Staden's captivity narrative (1557), Jean de Léry's 'Histoire d'un voyage' (1578), Claude d'Abbeville's Capuchin mission in Maranhão (1614) — provides more primary European sources on one Native American people of this period than almost any other. The Tupinambá practiced ritual endocannibalism of defeated enemies (documented and contested). ETHICS-002: Portuguese-Tupinambá relations devolved from alliance to genocidal conflict (descimentos — forced 'descents' into slavery); by 1650 the coastal Tupinambá had been largely exterminated. The Eduardo Viveiros de Castro's ethnography of descendants (the Wari') and the Tupinambá Revolt of Olinda (1560) illustrate resistance. Modern Tupí peoples (Tupinambá de Olivença, federal recognition 2001) represent continuity.",
+    "name_variants": [
+      {
+        "name": "Tupí",
+        "lang": "tpw",
+        "context": "Broader linguistic designation"
+      },
+      {
+        "name": "Tupinambás",
+        "lang": "pt",
+        "context": "Portuguese plural"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1500,
+        "region": "Atlantic Brazilian coast",
+        "change_type": "contact",
+        "description": "Pedro Álvares Cabral lands at Monte Pascoal; first formal Portuguese-Tupinikim contact.",
+        "population_affected": null,
+        "confidence_score": 0.95
+      },
+      {
+        "year": 1560,
+        "region": "Pernambuco",
+        "change_type": "revolt",
+        "description": "Tupinambá Revolt of Olinda; ultimately suppressed by the Portuguese.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1650,
+        "region": "Brazilian coast",
+        "change_type": "genocide_depopulation",
+        "description": "Cumulative effect of descimentos, epidemics, and warfare reduces coastal Tupinambá population from an estimated 1-2 million (1500) to near-extinction.",
+        "population_affected": 1000000,
+        "confidence_score": 0.6
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Staden, Hans. Warhaftige Historia, 1557 — primary captivity narrative",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Léry, Jean de. Histoire d'un voyage fait en la terre du Brésil, 1578 — primary French Calvinist chronicle",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Monteiro, John M. Negros da terra: Índios e bandeirantes nas origens de São Paulo. Companhia das Letras, 1994",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Emberá-Wounaan (Darién)",
+    "name_original_lang": "emp",
+    "entity_type": "confederation",
+    "year_start": 1200,
+    "year_end": null,
+    "capital_name": "(autonomous communities; no central capital)",
+    "capital_lat": 7.5,
+    "capital_lon": -77.5,
+    "confidence_score": 0.4,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "The Emberá (formerly 'Chocó') and Wounaan peoples of the Darién (Panama-Colombia border) are among the most successful pre-Columbian peoples in withstanding the Spanish conquest. The Darién jungle defeated Spanish attempts at consolidation; the 1698-1700 Scottish 'Darien scheme' also failed. Emberá-Wounaan semi-subsistence riverine culture continues, and the Comarca Emberá-Wounaan was recognized by Panama in 1983. Pre-contact polity structure was village-chiefdom-level; no pre-Columbian paramount state existed.",
+    "name_variants": [
+      {
+        "name": "Chocó",
+        "lang": "es",
+        "context": "Older Spanish exonym now considered pejorative"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1510,
+        "region": "Darién",
+        "change_type": "contact",
+        "description": "Vasco Núñez de Balboa founds Santa María la Antigua del Darién — first permanent Spanish settlement on American mainland — but the Darién interior remains uncolonizable.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1983,
+        "region": "Darién",
+        "change_type": "autonomy",
+        "description": "Panama creates the Comarca Emberá-Wounaan, formally recognizing indigenous autonomy.",
+        "population_affected": null,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Wassén, S. Henry. The Frog Motif among the South American Indians. Acta Americana, 1934",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Herrera, Francisco & Castillero Calvo, Alfredo. Historia general de Panamá, vol. 1. Comité Nacional del Centenario, 2004",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Milagro-Quevedo",
+    "name_original_lang": "und",
+    "entity_type": "cultural_region",
+    "year_start": 500,
+    "year_end": 1535,
+    "capital_name": "Peñón del Río",
+    "capital_lat": -2.25,
+    "capital_lon": -79.9,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Large late-pre-Hispanic culture of the Guayas basin in Ecuador (500–1535 CE), responsible for most of the monumental tolas (earthen mounds) of the Ecuadorian Costa. Sophisticated metallurgy (copper, silver alloys) including the earliest North Andean platinum working — platinum melting was not achieved in Europe until 1751. Indigenous polity name unknown — 'Milagro-Quevedo' is after two modern Ecuadorian towns. Ancestors of modern Montubio coastal populations.",
+    "name_variants": [
+      {
+        "name": "Milagro-Quevedo",
+        "lang": "und",
+        "context": "canonical form"
+      }
+    ],
+    "territory_changes": [],
+    "sources": [
+      {
+        "citation": "Estrada, Emilio. Arqueología de Manabí Central. Museo Víctor Emilio Estrada, 1962",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Ugalde Mora, María Fernanda. Arqueología del Ecuador: Un enfoque desde las fronteras. UNAM, 2011",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Huarpa",
+    "name_original_lang": "und",
+    "entity_type": "cultural_region",
+    "year_start": 200,
+    "year_end": 550,
+    "capital_name": "Ñawinpukyo",
+    "capital_lat": -13.16,
+    "capital_lon": -74.22,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "The Huarpa culture of the Ayacucho basin (c. 200–550 CE) was the direct local antecedent of the Wari Empire. Understanding Huarpa is essential to recognizing that Wari did not emerge from nothing but from centuries of regional development. Indigenous name unknown — 'Huarpa' is from the modern Huarpa River.",
+    "name_variants": [
+      {
+        "name": "Huarpa",
+        "lang": "und",
+        "context": "canonical form"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 550,
+        "region": "Ayacucho basin",
+        "change_type": "cultural_transition",
+        "description": "Huarpa ceramic tradition transforms into early Wari style; Huarpa population forms the base of the new imperial polity.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Leoni, Juan B. 'Ritual Regeneration at Early Wari Ñawinpukyo.' Ñawpa Pacha 28, 2006",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Knobloch, Patricia J. A Study of the Huarpa Ceramic Style. PhD thesis, SUNY Binghamton, 1983",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Salinar",
+    "name_original_lang": "und",
+    "entity_type": "cultural_region",
+    "year_start": -400,
+    "year_end": 100,
+    "capital_name": "Cerro Arena",
+    "capital_lat": -8.05,
+    "capital_lon": -78.86,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Salinar culture of Peru's north coast (c. 400 BCE – 100 CE) is the transitional tradition between Cupisnique (Chavin horizon) and Moche. The Salinar pioneered irrigation canal systems in the Moche valley that would be expanded by Moche and Chimú civilizations. Indigenous name unknown.",
+    "name_variants": [
+      {
+        "name": "Salinar",
+        "lang": "und",
+        "context": "canonical form"
+      }
+    ],
+    "territory_changes": [],
+    "sources": [
+      {
+        "citation": "Brennan, Curtiss T. 'Cerro Arena: Early Cultural Complexity and Nucleation in North Coastal Peru.' Journal of Field Archaeology 7, 1980",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Gallinazo (Virú)",
+    "name_original_lang": "und",
+    "entity_type": "cultural_region",
+    "year_start": -200,
+    "year_end": 600,
+    "capital_name": "Gallinazo Group (Virú valley)",
+    "capital_lat": -8.42,
+    "capital_lon": -78.72,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "Gallinazo (or Virú) culture occupied Peru's north coast alongside early Moche (c. 200 BCE – 600 CE); the relationship is debated — some scholars see it as a predecessor, others as a contemporary rival polity and still others as a lower-class majority under Moche elite rule. The type-site Gallinazo Group, with 30,000+ rooms across 5 km², may have been the largest urban settlement of the Americas in its time.",
+    "name_variants": [
+      {
+        "name": "Virú culture",
+        "lang": "en",
+        "context": "Alternative name after the Virú valley"
+      }
+    ],
+    "territory_changes": [],
+    "sources": [
+      {
+        "citation": "Millaire, Jean-François & Morlion, Magali (eds.) Gallinazo: An Early Cultural Tradition on the Peruvian North Coast. Cotsen Institute of Archaeology, UCLA, 2009",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  },
+  {
+    "name_original": "Tiahuanaco–Chiripa–Pukara (Yaya-Mama horizon)",
+    "name_original_lang": "aym",
+    "entity_type": "cultural_region",
+    "year_start": -800,
+    "year_end": 200,
+    "capital_name": "Pukara",
+    "capital_lat": -15.05,
+    "capital_lon": -70.37,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "boundary_geojson": null,
+    "ethical_notes": "The Yaya-Mama Religious Tradition of the Lake Titicaca basin (c. 800 BCE – 200 CE) was a shared Formative ceremonial tradition uniting Chiripa (south basin) and Pukara (north basin) sites before the rise of Tiwanaku. It established the iconographic and religious vocabulary that Tiwanaku would later monumentalize. Essential context for understanding Andean civilization's deep roots; complements the existing AtlasPI 'Tiwanaku' entity.",
+    "name_variants": [
+      {
+        "name": "Pukara culture",
+        "lang": "en",
+        "context": "Northern Lake Titicaca Formative culture"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 200,
+        "region": "Lake Titicaca",
+        "change_type": "cultural_transition",
+        "description": "Pukara culture declines; Tiwanaku begins its rise to paramount status on the southern shore.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Chávez, Sergio J. 'The Yaya-Mama Religious Tradition as an Antecedent of Tiwanaku.' In Tiwanaku and Its Hinterland, ed. Kolata, 2003",
+        "source_type": "academic",
+        "url": null
+      }
+    ],
+    "boundary_source": null
+  }
+]
