@@ -263,6 +263,154 @@ body {
 
 .year-presets button:hover { border-color: var(--accent); color: var(--text); }
 
+/* v6.50: era chips — narrative preset buttons with emoji */
+.era-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.era-chip {
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-elevated, rgba(255,255,255,0.02));
+  color: var(--text-muted);
+  font-size: 0.72em;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.era-chip:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(88, 166, 255, 0.15);
+}
+
+.era-chip.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+/* v6.50: Ask Claude button */
+.ask-claude-btn {
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #d97757 0%, #c8663d 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.ask-claude-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(217, 119, 87, 0.4);
+}
+
+/* v6.50: onboarding overlay */
+.onboarding-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.onboarding-card {
+  background: var(--bg-card, #1c2333);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  max-width: 480px;
+  width: 100%;
+  padding: 28px 24px;
+  color: var(--text);
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.onboarding-card h2 {
+  color: var(--accent);
+  font-size: 1.3em;
+  margin-bottom: 6px;
+}
+
+.onboarding-card .sub {
+  color: var(--text-muted);
+  font-size: 0.9em;
+  margin-bottom: 18px;
+}
+
+.onboarding-step {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+  align-items: flex-start;
+}
+
+.onboarding-step .num {
+  flex: 0 0 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85em;
+}
+
+.onboarding-step .body {
+  flex: 1;
+  font-size: 0.9em;
+  line-height: 1.45;
+}
+
+.onboarding-step .body strong { color: var(--accent); }
+
+.onboarding-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.onboarding-actions button {
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 0.85em;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  transition: all 0.15s;
+}
+
+.onboarding-actions button.primary {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.onboarding-actions button:hover { border-color: var(--accent); color: var(--text); }
+.onboarding-actions button.primary:hover { opacity: 0.9; color: white; }
+
 .filter-control { margin-bottom: 10px; }
 .filter-control > label { font-size: 0.82em; color: var(--text-muted); display: block; margin-bottom: 3px; }
 

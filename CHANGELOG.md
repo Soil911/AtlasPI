@@ -2,6 +2,59 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.50.0] - 2026-04-17
+
+**Tema**: *UX quick wins — era chips narrative + onboarding + Ask Claude*
+
+### 3 feature UX
+
+**1. Era chips narrative** (sostituisce year presets nudi)
+
+I vecchi preset `4500 aC / 3000 aC / 1 / 500 / 1500 / 2024` sono stati sostituiti con chips narrativi:
+
+- 🏺 Età del Bronzo (−3000)
+- 🏛️ Antichità (−500)
+- 🦅 Roma imperiale (117)
+- ⚔️ Medioevo (800)
+- 🏯 Mondo Mongolo (1250)
+- ⛵ Età delle Scoperte (1492)
+- 🗽 Rivoluzioni (1789)
+- ⚙️ Grande Guerra (1914)
+- 📡 Oggi (2024)
+
+Hover title spiega il contesto (es. "Apogeo dell'Impero Romano sotto Traiano"). Più memorabile + educational.
+
+**2. Onboarding overlay** (prima visita)
+
+Overlay a 3 step per nuovi visitatori:
+1. Sposta lo slider dell'anno / click era chip
+2. Clicca entità sulla mappa → detail panel
+3. Prova "Ask Claude" top-right
+
+Persistito in `localStorage` (`atlaspi-onboarding-seen-v1`). Dismiss via Skip / Inizia! / Esc / click backdrop.
+
+**3. "Ask Claude" button** — header, gradient arancione
+
+Click → costruisce prompt context-aware:
+- Se entità selezionata: prompt include `name_original`, period, type, capital, link API, 4 questions preset + ETHICS call-out
+- Se solo anno: prompt chiede overview dell'era globalmente (anti-eurocentric)
+- Default: prompt chiede "help me pick an interesting era"
+
+Copy to clipboard → apre claude.ai in new tab → toast "Prompt copiato". Fallback silenzioso se clipboard API fallisce.
+
+### Nuovi moduli JS
+
+- `static/js/ask-claude.js` (100 righe)
+- `static/js/onboarding.js` (50 righe)
+
+Continua il pattern IIFE + window.* di v6.46 foundation.
+
+### Design proposal (senza codice)
+
+`docs/design-proposal-stories-mode.md` — proposta per "AtlasPI Stories" mode (pagina parallela narrative-driven). NON implementata — da rivalutare post-lancio.
+
+---
+
 ## [v6.49.0] - 2026-04-17
 
 **Tema**: *Analytics dashboard ridisegnata — classificazione semantica, niente IP*

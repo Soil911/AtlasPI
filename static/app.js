@@ -1918,7 +1918,8 @@ function bindEvents() {
   yearInput.addEventListener('keyup', e => { if (e.key === 'Enter') applyYearInput(); });
   yearEra.addEventListener('change', applyYearInput);
 
-  document.querySelectorAll('.year-presets button').forEach(btn => {
+  // v6.50: .era-chips replaces .year-presets (narrative preset buttons)
+  document.querySelectorAll('.year-presets button, .era-chip').forEach(btn => {
     btn.addEventListener('click', () => {
       const val = parseInt(btn.dataset.year, 10);
       yearSlider.value = val;

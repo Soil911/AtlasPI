@@ -30,9 +30,46 @@
       <a href="/embed" class="api-link" title="Versione embed per iframe" target="_blank">Embed</a>
       <a href="/docs-ui" class="api-link" title="Documentazione API interattiva">API Docs</a>
       <a href="/docs" class="api-link" title="Documentazione API OpenAPI">OpenAPI</a>
+      <button id="ask-claude-btn" class="ask-claude-btn" title="Chiedi a Claude usando i dati di AtlasPI" aria-label="Apri Claude con prompt precompilato">
+        🤖 <span data-i18n="ask_claude">Ask Claude</span>
+      </button>
       <span id="entity-count" class="badge" aria-live="polite">...</span>
     </div>
   </header>
+
+  <!-- v6.50: Onboarding overlay (first visit only, triggered by app.js) -->
+  <div id="onboarding" class="onboarding-overlay" style="display:none;" role="dialog" aria-labelledby="onboarding-title">
+    <div class="onboarding-card">
+      <h2 id="onboarding-title" data-i18n="onb_title">Benvenuto in AtlasPI 👋</h2>
+      <p class="sub" data-i18n="onb_sub">Il database geografico storico per esplorare 1033 imperi, 643 eventi, 105 sovrani, 40 siti UNESCO.</p>
+
+      <div class="onboarding-step">
+        <div class="num">1</div>
+        <div class="body"><strong data-i18n="onb_step1_title">Sposta lo slider dell'anno</strong><br>
+          <span data-i18n="onb_step1_desc">O clicca le chip (es. "🦅 Roma imperiale") per saltare a epoche specifiche.</span>
+        </div>
+      </div>
+
+      <div class="onboarding-step">
+        <div class="num">2</div>
+        <div class="body"><strong data-i18n="onb_step2_title">Clicca un'entità sulla mappa</strong><br>
+          <span data-i18n="onb_step2_desc">Apre il pannello con confini, capitale, fonti accademiche, ETHICS notes.</span>
+        </div>
+      </div>
+
+      <div class="onboarding-step">
+        <div class="num">3</div>
+        <div class="body"><strong data-i18n="onb_step3_title">"Ask Claude" in alto destra</strong><br>
+          <span data-i18n="onb_step3_desc">Copia un prompt precompilato per spiegarti quello che stai vedendo con AI.</span>
+        </div>
+      </div>
+
+      <div class="onboarding-actions">
+        <button id="onboarding-skip" data-i18n="onb_skip">Skip</button>
+        <button id="onboarding-done" class="primary" data-i18n="onb_start">Inizia!</button>
+      </div>
+    </div>
+  </div>
 
   <main id="app">
     <!-- Sidebar -->
@@ -79,16 +116,16 @@
               <option value="1000">Lento</option>
             </select>
           </div>
-          <div class="year-presets" aria-label="Periodi storici">
-            <button data-year="-4500">4500 aC</button>
-            <button data-year="-3000">3000 aC</button>
-            <button data-year="-500">500 aC</button>
-            <button data-year="1">1</button>
-            <button data-year="500">500</button>
-            <button data-year="1000">1000</button>
-            <button data-year="1500">1500</button>
-            <button data-year="1800">1800</button>
-            <button data-year="2024">Oggi</button>
+          <div class="era-chips" aria-label="Salta a un'epoca storica">
+            <button class="era-chip" data-year="-3000" data-i18n="era_bronze" title="Età del Bronzo — ~3000 a.C.">🏺 Età del Bronzo</button>
+            <button class="era-chip" data-year="-500" data-i18n="era_classical" title="Antichità classica — Persiani, Greci, Maurya">🏛️ Antichità</button>
+            <button class="era-chip" data-year="117" data-i18n="era_roman_peak" title="Apogeo dell'Impero Romano sotto Traiano (117 CE)">🦅 Roma imperiale</button>
+            <button class="era-chip" data-year="800" data-i18n="era_medieval" title="Alto Medioevo — Carlo Magno, Bisanzio, Califfato">⚔️ Medioevo</button>
+            <button class="era-chip" data-year="1250" data-i18n="era_mongol" title="Mondo di Kublai Khan, Mali, Hohenstaufen">🏯 Mondo Mongolo</button>
+            <button class="era-chip" data-year="1492" data-i18n="era_discovery" title="Colombo, Granada, Mehmed II a Costantinopoli">⛵ Età delle Scoperte</button>
+            <button class="era-chip" data-year="1789" data-i18n="era_revolutions" title="Rivoluzione francese, Ottomani, indipendenza USA">🗽 Rivoluzioni</button>
+            <button class="era-chip" data-year="1914" data-i18n="era_world_wars" title="Prima Guerra Mondiale, crollo imperi">⚙️ Grande Guerra</button>
+            <button class="era-chip" data-year="2024" data-i18n="era_today" title="Mondo contemporaneo">📡 Oggi</button>
           </div>
         </div>
 
@@ -242,7 +279,7 @@
       <span class="legend-item" aria-hidden="true">&#9473; Reale</span>
       <span class="legend-item" aria-hidden="true">&#9476; Approssimato</span>
     </div>
-    <span class="footer-note">AtlasPI v6.49.0 &mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie &middot; 36 tools MCP</span>
+    <span class="footer-note">AtlasPI v6.50.0 &mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie &middot; 36 tools MCP</span>
   </footer>
 
   <noscript>
@@ -260,5 +297,8 @@
   <script src="/static/js/theme.js"></script>
   <script src="/static/js/i18n.js"></script>
   <script src="/static/app.js"></script>
+  <!-- v6.50: UX modules — onboarding + Ask Claude button -->
+  <script src="/static/js/onboarding.js"></script>
+  <script src="/static/js/ask-claude.js"></script>
 </body>
 </html>
