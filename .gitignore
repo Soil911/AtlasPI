@@ -53,3 +53,7 @@ sdk-python/dist/
 sdk-python/build/
 sdk-js/dist/
 sdk-js/node_modules/
+sdk-js/package-lock.json
+
+# Agent research staging (consumed by ingest scripts, not committed)
+research_output/

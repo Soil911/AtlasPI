@@ -17,7 +17,7 @@ import httpx
 
 DEFAULT_BASE_URL = "https://atlaspi.cra-srl.com"
 DEFAULT_TIMEOUT = 30.0
-USER_AGENT = "atlaspi-mcp/0.7.0 (+https://github.com/Soil911/AtlasPI)"
+USER_AGENT = "atlaspi-mcp/0.8.0 (+https://github.com/Soil911/AtlasPI)"
 
 
 class AtlasPIClientError(RuntimeError):
@@ -186,6 +186,43 @@ class AtlasPIClient:
                 "radius": radius,
                 "year": year,
                 "limit": limit,
+            },
+        )
+
+    async def where_was(
+        self,
+        *,
+        lat: float,
+        lon: float,
+        year: int | None = None,
+        include_history: bool = False,
+    ) -> Any:
+        """GET /v1/where-was — reverse-geocoding temporale (v6.34).
+
+        Dato un punto (lat, lon), ritorna le entita' storiche il cui
+        boundary_geojson contiene il punto in quell'anno. Con
+        include_history=True, ritorna la timeline completa (tutte le
+        entita' che hanno mai controllato quel punto, ordinate
+        cronologicamente).
+
+        Args:
+            lat: latitudine WGS84 (-90 a 90)
+            lon: longitudine WGS84 (-180 a 180)
+            year: anno di riferimento (richiesto se include_history=False)
+            include_history: se True, ritorna timeline completa
+
+        Returns:
+            Dict. Con include_history=False: {query, count, entities}.
+            Con include_history=True: {query, timeline, point_covered_years,
+            timeline_span, total_entities, current_entities_count}.
+        """
+        return await self._get(
+            "/v1/where-was",
+            {
+                "lat": lat,
+                "lon": lon,
+                "year": year,
+                "include_history": include_history if include_history else None,
             },
         )
 

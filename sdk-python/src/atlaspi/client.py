@@ -81,6 +81,33 @@ class _EntitiesNS:
             params["radius_km"] = radius_km
         return self._p._get("/v1/nearby", params)
 
+    def where_was(
+        self,
+        *,
+        lat: float,
+        lon: float,
+        year: int | None = None,
+        include_history: bool = False,
+    ) -> dict:
+        """GET /v1/where-was — reverse-geocoding temporale (v6.34).
+
+        Given a point (lat, lon), returns historical entities whose boundary
+        contains that point. Primary use case: genealogy ("where was Lviv
+        in 1905?").
+
+        Args:
+            lat, lon: WGS84 coordinates
+            year: year of interest (required unless include_history=True)
+            include_history: if True, returns the full timeline (all entities
+                that ever controlled this point).
+        """
+        params: dict[str, Any] = {"lat": lat, "lon": lon}
+        if year is not None:
+            params["year"] = year
+        if include_history:
+            params["include_history"] = "true"
+        return self._p._get("/v1/where-was", params)
+
 
 class _EventsNS:
     def __init__(self, parent: AtlasPI) -> None:
@@ -244,7 +271,7 @@ class AtlasPI:
         self.base_url = base_url.rstrip("/")
         self._client = httpx.Client(
             timeout=timeout,
-            headers={"User-Agent": user_agent or f"atlaspi-client/0.1.0 (+{DEFAULT_BASE_URL})"},
+            headers={"User-Agent": user_agent or f"atlaspi-client/0.2.0 (+{DEFAULT_BASE_URL})"},
         )
         self.entities = _EntitiesNS(self)
         self.events = _EventsNS(self)
@@ -350,6 +377,22 @@ class _AsyncEntitiesNS:
             {"region": region} if region else None,
         )
 
+    async def where_was(
+        self,
+        *,
+        lat: float,
+        lon: float,
+        year: int | None = None,
+        include_history: bool = False,
+    ) -> dict:
+        """GET /v1/where-was — reverse-geocoding temporale (v6.34), async."""
+        params: dict[str, Any] = {"lat": lat, "lon": lon}
+        if year is not None:
+            params["year"] = year
+        if include_history:
+            params["include_history"] = "true"
+        return await self._p._get("/v1/where-was", params)
+
 
 class _AsyncEventsNS:
     def __init__(self, parent: AsyncAtlasPI) -> None:
@@ -395,7 +438,7 @@ class AsyncAtlasPI:
         self.base_url = base_url.rstrip("/")
         self._client = httpx.AsyncClient(
             timeout=timeout,
-            headers={"User-Agent": user_agent or f"atlaspi-client/0.1.0 (+{DEFAULT_BASE_URL})"},
+            headers={"User-Agent": user_agent or f"atlaspi-client/0.2.0 (+{DEFAULT_BASE_URL})"},
         )
         self.entities = _AsyncEntitiesNS(self)
         self.events = _AsyncEventsNS(self)

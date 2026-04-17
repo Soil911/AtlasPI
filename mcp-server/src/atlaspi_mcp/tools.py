@@ -120,6 +120,16 @@ async def _h_compare(client: AtlasPIClient, args: dict[str, Any]) -> Any:
     return await client.compare(int(args["id1"]), int(args["id2"]))
 
 
+async def _h_where_was(client: AtlasPIClient, args: dict[str, Any]) -> Any:
+    """v6.34: reverse-geocoding temporale."""
+    return await client.where_was(
+        lat=float(args["lat"]),
+        lon=float(args["lon"]),
+        year=args.get("year"),
+        include_history=bool(args.get("include_history", False)),
+    )
+
+
 async def _h_random(client: AtlasPIClient, args: dict[str, Any]) -> Any:
     return await client.random(
         type=args.get("type"),
@@ -655,6 +665,59 @@ TOOLS: list[ToolDefinition] = [
             "additionalProperties": False,
         },
         handler=_h_nearby,
+    ),
+    ToolDefinition(
+        name="where_was",
+        description=(
+            "v6.34: reverse-geocoding temporale. Dato un punto geografico "
+            "(lat, lon) e un anno, restituisce tutte le entita' storiche il "
+            "cui boundary_geojson contiene quel punto in quell'anno. Primary "
+            "use case: GENEALOGIA / DIASPORA (\"Il mio bisnonno da Leopoli nel "
+            "1905 — sotto che stato era?\"). Due modalita': "
+            "(1) year-specific: entita' che controllavano il punto in un anno; "
+            "(2) include_history=true: timeline completa di TUTTI gli imperi/ "
+            "regni che hanno mai controllato quel punto, ordinati "
+            "cronologicamente. Se il punto e' in territorio contestato "
+            "(ETHICS-003), ritorna tutte le entita' che lo rivendicano "
+            "con status='disputed', senza arbitrare la sovranita'. Usa per "
+            "domande tipo 'chi comandava a Istanbul nel 1500?', 'che impero "
+            "controllava Berlino nel 1945?', 'storia di Gerusalemme dal 1000 "
+            "a.C. a oggi' (include_history=true)."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {
+                "lat": {
+                    "type": "number",
+                    "minimum": -90,
+                    "maximum": 90,
+                    "description": "Latitudine WGS84 in gradi decimali.",
+                },
+                "lon": {
+                    "type": "number",
+                    "minimum": -180,
+                    "maximum": 180,
+                    "description": "Longitudine WGS84 in gradi decimali.",
+                },
+                "year": {
+                    **_YEAR_SCHEMA,
+                    "description": _YEAR_SCHEMA["description"]
+                    + " Richiesto se include_history=false.",
+                },
+                "include_history": {
+                    "type": "boolean",
+                    "description": (
+                        "Se true, ritorna TUTTE le entita' che hanno mai "
+                        "controllato il punto (timeline cronologica). Se "
+                        "false (default), ritorna solo quelle attive "
+                        "nell'anno specificato."
+                    ),
+                },
+            },
+            "required": ["lat", "lon"],
+            "additionalProperties": False,
+        },
+        handler=_h_where_was,
     ),
     ToolDefinition(
         name="compare_entities",

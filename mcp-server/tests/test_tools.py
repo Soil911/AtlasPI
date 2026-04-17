@@ -62,6 +62,8 @@ EXPECTED_TOOL_NAMES = {
     "events_date_coverage",
     # v0.7 batch
     "get_entities_batch",
+    # v0.8 where-was (temporal reverse-geocoding)
+    "where_was",
     # v0.6 historical periods
     "list_historical_periods",
     "get_historical_period",
@@ -138,15 +140,15 @@ def test_base_url_default_when_env_empty(monkeypatch: pytest.MonkeyPatch) -> Non
 
 
 def test_tool_list_complete() -> None:
-    """Tutti e 34 i tools canonici v0.7.0 sono registrati."""
+    """Tutti i tools canonici v0.8.0 sono registrati."""
     names = {t.name for t in get_tools()}
     assert names == EXPECTED_TOOL_NAMES, (
         f"Missing or unexpected tools: {names ^ EXPECTED_TOOL_NAMES}"
     )
     # Bonus: nessun duplicato
     assert len(get_tools()) == len(EXPECTED_TOOL_NAMES)
-    # v0.8.0: 35 tools (+get_entities_batch)
-    assert len(names) == 35
+    # v0.8.0: 36 tools (+where_was)
+    assert len(names) == 36
 
 
 def test_search_entities_tool_schema() -> None:
@@ -176,6 +178,8 @@ def test_required_params_for_path_tools() -> None:
     assert get_tool("get_evolution").input_schema["required"] == ["entity_id"]
     assert set(get_tool("compare_entities").input_schema["required"]) == {"id1", "id2"}
     assert set(get_tool("nearby_entities").input_schema["required"]) == {"lat", "lon"}
+    # v0.8 where-was
+    assert set(get_tool("where_was").input_schema["required"]) == {"lat", "lon"}
     # v0.2 additions
     assert get_tool("get_event").input_schema["required"] == ["event_id"]
     assert get_tool("get_city").input_schema["required"] == ["city_id"]
@@ -705,6 +709,77 @@ async def test_get_historical_period_by_slug_handler() -> None:
 # ------------------------------------------------------------------ #
 # Integrazione opzionale (skippata senza network esplicito)           #
 # ------------------------------------------------------------------ #
+
+
+@pytest.mark.asyncio
+async def test_where_was_handler_year_specific() -> None:
+    """v0.8: where_was year-specific mode."""
+    captured: dict[str, object] = {}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        captured["path"] = request.url.path
+        captured["url"] = str(request.url)
+        return httpx.Response(
+            200,
+            json={
+                "query": {"lat": 41.9, "lon": 12.5, "year": 100, "include_history": False},
+                "count": 1,
+                "entities": [
+                    {"id": 1, "name_original": "Imperium Romanum", "entity_type": "empire",
+                     "year_start": -27, "year_end": 476, "confidence_score": 0.95,
+                     "status": "confirmed", "name_original_lang": "la",
+                     "capital": {"name": "Roma", "lat": 41.9, "lon": 12.5}},
+                ],
+            },
+        )
+
+    client = _client_with_handler(handler)
+    try:
+        result = await get_tool("where_was").handler(
+            client, {"lat": 41.9, "lon": 12.5, "year": 100}
+        )
+    finally:
+        await client.aclose()
+
+    assert captured["path"] == "/v1/where-was"
+    url = str(captured["url"])
+    assert "lat=41.9" in url
+    assert "lon=12.5" in url
+    assert "year=100" in url
+    assert result["count"] == 1
+
+
+@pytest.mark.asyncio
+async def test_where_was_handler_include_history() -> None:
+    """v0.8: where_was con include_history=true propaga il parametro."""
+    captured: dict[str, object] = {}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        captured["url"] = str(request.url)
+        return httpx.Response(
+            200,
+            json={
+                "query": {"lat": 41.9, "lon": 12.5, "include_history": True},
+                "total_entities": 3,
+                "timeline": [],
+                "point_covered_years": 2000,
+                "timeline_span": {"earliest_year": -100, "latest_year": 2024},
+                "current_entities_count": None,
+            },
+        )
+
+    client = _client_with_handler(handler)
+    try:
+        result = await get_tool("where_was").handler(
+            client, {"lat": 41.9, "lon": 12.5, "include_history": True}
+        )
+    finally:
+        await client.aclose()
+
+    url = str(captured["url"])
+    assert "include_history=" in url
+    assert result["total_entities"] == 3
+    assert "timeline" in result
 
 
 @pytest.mark.asyncio

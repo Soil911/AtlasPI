@@ -21,6 +21,6 @@ Source: https://github.com/Soil911/AtlasPI
 
 from atlaspi.client import AtlasPI, AsyncAtlasPI, AtlasPIError
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 __all__ = ["AtlasPI", "AsyncAtlasPI", "AtlasPIError", "__version__"]

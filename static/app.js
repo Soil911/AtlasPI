@@ -395,7 +395,8 @@ async function loadSnapshotSummary(year) {
 async function loadTradeRoutes() {
   if (tradeRoutesData) return tradeRoutesData;
   try {
-    const res = await fetch(`${API}/v1/trade-routes`, { cache: 'no-cache' });
+    // v6.34: fix — backend expone /v1/routes (vedi src/api/routes/cities_routes.py)
+    const res = await fetch(`${API}/v1/routes`, { cache: 'no-cache' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     // Response may be { routes: [...] } or a bare array

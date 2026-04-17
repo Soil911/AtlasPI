@@ -16,7 +16,7 @@
  * Source: https://github.com/Soil911/AtlasPI
  */
 
-export const VERSION = "0.1.0";
+export const VERSION = "0.2.0";
 export const DEFAULT_BASE_URL = "https://atlaspi.cra-srl.com";
 
 export class AtlasPIError extends Error {
@@ -223,6 +223,33 @@ class EntitiesNamespace {
     return this.client._get("/v1/nearby", {
       lat: opts.lat, lon: opts.lon, year: opts.year, radius_km: opts.radiusKm,
     });
+  }
+
+  /**
+   * v6.34: reverse-geocoding temporale.
+   *
+   * Given a point (lat, lon), returns historical entities whose boundary
+   * contains it. Primary use case: genealogy ("my great-grandfather from
+   * Lviv in 1905 — which country?").
+   *
+   * @example
+   *   const r = await client.entities.whereWas({ lat: 49.84, lon: 24.03, year: 1905 });
+   *   // returns entities that controlled Lviv in 1905 (Austria-Hungary)
+   *
+   * @example with history
+   *   const r = await client.entities.whereWas({ lat: 49.84, lon: 24.03, includeHistory: true });
+   *   // returns full timeline of every empire that ever controlled Lviv
+   */
+  async whereWas(opts: {
+    lat: number;
+    lon: number;
+    year?: number;
+    includeHistory?: boolean;
+  }): Promise<Record<string, unknown>> {
+    const params: Record<string, unknown> = { lat: opts.lat, lon: opts.lon };
+    if (opts.year !== undefined) params.year = opts.year;
+    if (opts.includeHistory) params.include_history = "true";
+    return this.client._get("/v1/where-was", params);
   }
 }
 

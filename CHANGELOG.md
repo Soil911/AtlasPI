@@ -2,6 +2,64 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.34.0] - 2026-04-17
+
+**Tema**: *Reverse-geocoding temporale — genealogia, diaspora, fact-check*
+
+### Nuovo endpoint: `GET /v1/where-was`
+
+Dato un punto geografico (lat, lon) e un anno, restituisce tutte le entità
+storiche il cui boundary_geojson contiene quel punto in quell'anno.
+
+- **Two modes**:
+  - `?lat=X&lon=Y&year=Z` → entità attive in quell'anno (year-specific)
+  - `?lat=X&lon=Y&include_history=true` → timeline completa (TUTTI gli
+    imperi/regni che hanno mai controllato quel punto, ordinati cronologicamente)
+- **Backend**:
+  - Produzione (PostgreSQL+PostGIS): native `ST_Contains` con indice GiST
+  - Dev (SQLite): shapely Python fallback, semantica equivalente
+  - Header `X-WhereWas-Backend: postgis|shapely` per trasparenza
+- **ETHICS-003**: se il punto ricade in territorio contestato (Palestina,
+  Kashmir, Taiwan, Kosovo, Crimea, ecc.), l'endpoint ritorna TUTTE le entità
+  con `status='disputed'` che lo rivendicano, senza arbitrare la sovranità.
+
+**Use case primari**:
+- Genealogia ("Mio bisnonno da Leopoli nel 1905 — sotto quale impero era?")
+- Diaspora / heritage research (ancestry)
+- Historical tourism ("Che regni controllavano Cappadocia nel 600 a.C.?")
+- AI agent grounding per domande "where was X in year Y"
+
+### SDK updates
+
+- **MCP server v0.8.0** (was 0.7.0): nuovo tool `where_was` → **36 tools** totali
+- **atlaspi-client Python v0.2.0** (was 0.1.0): `client.entities.where_was(...)`
+- **atlaspi-client JS v0.2.0** (was 0.1.0): `client.entities.whereWas({...})`
+
+### Bug fixes (thanks esterni)
+
+- **Frontend → backend 404**: `static/app.js` chiamava `/v1/trade-routes` ma
+  il backend espone `/v1/routes` (src/api/routes/cities_routes.py). Fixato.
+- **Version drift**: `pyproject.toml` (era 4.5.0 vecchio!) → 6.34.0.
+  `static/index.html` (era v6.32.0) → v6.34.0. `static/landing/index.html`
+  (footer + hero badge + JSON-LD softwareVersion) → tutti allineati.
+
+### Test
+
+- `tests/test_v634_where_was.py` — 17 test: base, validation, synthetic
+  boundaries, year-filter edge cases, include_history structure, ETHICS-003
+  disputed surfacing, backend dispatch, caching headers.
+- `tests/test_health.py` — aggiornato a 6.34.0
+- `mcp-server/tests/test_tools.py` — +2 test per handler `where_was`
+
+### Stats
+
+- **1056 tests** passing (was 1043)
+- **58 REST endpoints** (was 57)
+- **36 MCP tools** (was 35)
+- Zero breaking change su endpoint esistenti
+
+---
+
 ## [v6.33.0] - 2026-04-17
 
 **Tema**: *Growth & tooling — SDKs, metrics, batch endpoint, discoverability*
