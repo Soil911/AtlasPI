@@ -60,6 +60,15 @@ def setup_test_db():
         # v6.27: seed historical periods
         if db.query(HistoricalPeriod).count() == 0:
             seed_periods_database()
+        # v6.30: guard against displaced aourednik matches (same as prod startup)
+        try:
+            from src.ingestion import fix_displaced_aourednik as _fdisp
+            original_fd = _fdisp.SessionLocal
+            _fdisp.SessionLocal = TestSession
+            _fdisp.fix_displaced(dry_run=False)
+            _fdisp.SessionLocal = original_fd
+        except Exception:
+            pass
         seed_module.SessionLocal = original
 
     # v6.5+: ingest chains (separate from seed — chains reference entities

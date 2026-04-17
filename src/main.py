@@ -123,6 +123,18 @@ async def lifespan(app: FastAPI):
                 )
         except Exception:
             logger.warning("Sync chains fallito", exc_info=True)
+        # v6.30: guard against displaced aourednik fuzzy matches (ETHICS-006)
+        # Runs every startup; idempotent (only fixes entities with >3000km displacement).
+        try:
+            from src.ingestion.fix_displaced_aourednik import fix_displaced
+            disp_stats = fix_displaced(dry_run=False)
+            if disp_stats.get("fixed", 0) > 0:
+                logger.warning(
+                    "Displaced aourednik rollback: fixed %d entities (threshold 3000km)",
+                    disp_stats["fixed"],
+                )
+        except Exception:
+            logger.warning("Displacement guard fallito", exc_info=True)
 
     logger.info("AtlasPI pronto")
     yield

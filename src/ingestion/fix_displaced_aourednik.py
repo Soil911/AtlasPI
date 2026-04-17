@@ -35,9 +35,14 @@ logger = logging.getLogger(__name__)
 
 _GEOD = Geod(ellps="WGS84")
 
-# Displacement threshold: anything > 3000km is almost certainly a wrong match.
-# Legitimate edge cases (vast empires like Umayyad) won't trigger at this threshold.
-DISPLACEMENT_THRESHOLD_KM = 3000.0
+# Displacement threshold: centroid distance > 1500km is almost certainly wrong.
+# Legitimate vast empires (Umayyad, Mongol) have polygons where the capital
+# can be far from the centroid but capital-to-polygon-edge distance is small.
+# Using polygon-edge distance (via _capital_distance_to_polygon_km) when available,
+# with fallback to centroid distance.
+DISPLACEMENT_THRESHOLD_KM = 1500.0
+# Polygon-edge threshold (tighter since it ignores polygon size)
+POLYGON_EDGE_THRESHOLD_KM = 800.0
 
 
 def _generate_circle_polygon(lat: float, lon: float, radius_km: float = 150.0) -> dict:
@@ -64,22 +69,34 @@ def _generate_circle_polygon(lat: float, lon: float, radius_km: float = 150.0) -
     }
 
 
-def _displacement_km(entity: GeoEntity) -> float | None:
-    """Return capital-to-centroid distance in km, or None if not applicable."""
+def _displacement_km(entity: GeoEntity) -> tuple[float | None, float | None]:
+    """Return (centroid_dist_km, polygon_edge_dist_km), or (None, None)."""
     if not entity.boundary_geojson or not entity.capital_lat or not entity.capital_lon:
-        return None
+        return (None, None)
     try:
         geom = shape(json.loads(entity.boundary_geojson))
         centroid = geom.centroid
-        _, _, dist_m = _GEOD.inv(
+        _, _, centroid_m = _GEOD.inv(
             entity.capital_lon,
             entity.capital_lat,
             centroid.x,
             centroid.y,
         )
-        return dist_m / 1000
+        # Polygon-edge distance: 0 if capital is inside polygon, else distance to boundary
+        from shapely.geometry import Point
+        pt = Point(entity.capital_lon, entity.capital_lat)
+        if geom.contains(pt):
+            edge_km = 0.0
+        else:
+            # Find nearest boundary point (approximate via Shapely distance in degrees,
+            # then convert using average km-per-degree at this latitude)
+            edge_deg = geom.boundary.distance(pt)
+            # Rough conversion: 1 degree ~ 111km, adjusted for latitude
+            km_per_deg = 111.0 * max(0.1, math.cos(math.radians(entity.capital_lat)))
+            edge_km = edge_deg * km_per_deg
+        return (centroid_m / 1000, edge_km)
     except Exception:
-        return None
+        return (None, None)
 
 
 def fix_displaced(dry_run: bool = False) -> dict:
@@ -107,15 +124,23 @@ def fix_displaced(dry_run: bool = False) -> dict:
         stats["inspected"] = len(entities)
 
         for e in entities:
-            dist = _displacement_km(e)
-            if dist is None:
+            centroid_dist, edge_dist = _displacement_km(e)
+            if centroid_dist is None:
                 continue
 
-            if dist > DISPLACEMENT_THRESHOLD_KM:
+            # Flag as displaced if EITHER:
+            #   - centroid is very far from capital (large empires excepted)
+            #   - capital is outside polygon by more than polygon-edge threshold
+            is_displaced = (
+                centroid_dist > DISPLACEMENT_THRESHOLD_KM
+                or (edge_dist is not None and edge_dist > POLYGON_EDGE_THRESHOLD_KM)
+            )
+
+            if is_displaced:
                 stats["displaced"] += 1
                 if len(stats["samples"]) < 20:
                     stats["samples"].append(
-                        f"id={e.id} '{e.name_original}' displaced={dist:.0f}km"
+                        f"id={e.id} '{e.name_original}' centroid={centroid_dist:.0f}km edge={edge_dist:.0f}km"
                     )
 
                 if not dry_run:
