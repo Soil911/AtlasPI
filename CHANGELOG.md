@@ -2,6 +2,34 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.36.0] - 2026-04-17
+
+**Tema**: *Expand date-precision coverage — on-this-day engine fuelled*
+
+### +32 date-precise events
+
+`batch_28_global_precision_expansion.json` (32 events) — tutti con `date_precision` esplicito (DAY / MONTH / SEASON), `iso_date` formato astronomico per CE, `calendar_note` per calendari originali non-gregoriani (Giuliano, islamico, azteco).
+
+**Globally distributed** (no euro-centric bias):
+- Europe: Battle of Gaugamela (-331-10-01), Edictum Mediolanense (313-02-13), Westfalischer Friede (1648-10-24), Battle of Agincourt (1415-10-25)
+- Asia: Battle of Talas (751-07), Kublai Khan's coronation, Battle of Panipat (1761-01-14)
+- Africa: Battle of Adwa (1896-03-01), Fall of Granada (1492-01-02, Nasrid last stand)
+- Americas: Fall of Tenochtitlan (1521-08-13), Battle of Cajamarca (1532-11-16), Jamestown founding (1607-05-14)
+- Modern: Sputnik-1 launch (1957-10-04), end of WWII Europe (1945-05-08)
+
+### On-this-day coverage
+
+- **Events with full day precision**: 32 new → boost overall coverage
+- `/v1/events/on-this-day/{mm-dd}` now returns richer results for more dates
+- BCE dates correctly encoded as negative iso_date (es. `-0331-10-01`)
+
+### Stats
+
+- **529 events** total (was 497, +32)
+- **1032 entities**
+
+---
+
 ## [v6.35.1] - 2026-04-17
 
 **Sub-release**: Sahel / Africa / Horn of Africa expansion
