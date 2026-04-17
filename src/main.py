@@ -142,6 +142,21 @@ async def lifespan(app: FastAPI):
                 )
         except Exception:
             logger.warning("Displacement guard fallito", exc_info=True)
+        # v6.31: guard against antimeridian-crossing and wrong-polygon inheritors
+        # (Alaska wraps +180 causing USA label in France; tribes inheriting full
+        # USA polygon; USSR getting modern Russia polygon; Fiji/NZ antimeridian)
+        try:
+            from src.ingestion.fix_antimeridian_and_wrong_polygons import fix_all
+            am_stats = fix_all(dry_run=False)
+            total_fixed = am_stats.get("wrong_polygon_fixed", 0) + am_stats.get("antimeridian_clipped", 0)
+            if total_fixed > 0:
+                logger.warning(
+                    "Antimeridian/wrong-polygon fix: %d wrong-polygon resets + %d antimeridian clips",
+                    am_stats["wrong_polygon_fixed"],
+                    am_stats["antimeridian_clipped"],
+                )
+        except Exception:
+            logger.warning("Antimeridian guard fallito", exc_info=True)
 
     logger.info("AtlasPI pronto")
     yield
