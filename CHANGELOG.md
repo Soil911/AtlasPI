@@ -2,6 +2,47 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.37.1] - 2026-04-17
+
+**Sub-release**: popolamento dataset archaeological sites.
+
+### +40 UNESCO / historical sites
+
+`data/sites/batch_00_unesco_historical.json` — 40 UNESCO World Heritage Sites + key ruins selezionati per significato storico globale (no eurocentric bias).
+
+**Geografia**:
+- Europe: Pompeii, Herculaneum, Stonehenge, Acropolis of Athens, Delphi, Olympia, Mycenae, Colosseum, Knossos
+- Asia: Angkor Wat, Borobudur, Prambanan, Great Wall, Mogao Caves, Taj Mahal, Petra, Persepolis, Babylon, Ephesus, Bam, Qusayr 'Amra, Karnak
+- Africa: Pyramids of Giza, Timbuktu, Great Zimbabwe, Aksum, Lalibela, Carthage, Volubilis, Meroe, Djenné
+- Americas: Machu Picchu, Chichen Itza, Tikal/Yax Mutal (linked a v6.34 entity), Teotihuacan, Palenque/Lakamha', Chan Chan, Rapa Nui
+- Oceania: Uluṟu, Göbekli Tepe
+
+### ETHICS-009 — rinominazioni coloniali documentate
+
+Ogni sito con history coloniale ha `ethical_notes` esplicito:
+- **Uluṟu**: dual-name 1993, climbing ban 2019 (Aṉangu self-determination)
+- **Parthenon Marbles**: Elgin removal 1801, ongoing repatriation demand
+- **Aksum Obelisk**: Mussolini 1937 → returned 2005 (70-year struggle)
+- **Machu Picchu**: Bingham/Yale 1911-1915 removal → returned 2011-2012
+- **Rapa Nui**: 1862 Peruvian slave raids, Hoa Hakananai'a moai (British Museum 1868)
+- **Mogao Caves**: Stein/Pelliot 1907-1908 manuscript removals
+- **Meroe**: Ferlini 1834 dynamite, artifacts to Berlin
+- **Great Zimbabwe**: Rhodesia-era denial of African origin, repudiated in modern name
+
+### Ingest pipeline
+
+- `src/ingestion/ingest_sites.py`: idempotent, dedup per (name, lat, lon)
+- Lifespan hook: auto-sync on app startup
+- Entity_id resolution via name_original lookup
+
+### Stats
+
+- **40 archaeological sites** in `ArchaeologicalSite` table
+- **18 UNESCO** con ID + inscription year
+- Lingue originali: grc, ar, zh, km, jv, hi, am, nah, myn, qu, pjt, egy, fa, en, la
+
+---
+
 ## [v6.37.0] - 2026-04-17
 
 **Tema**: *ArchaeologicalSite model — UNESCO / ruins / monuments*

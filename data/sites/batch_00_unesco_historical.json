@@ -1,0 +1,859 @@
+[
+  {
+    "name_original": "Pompeii",
+    "name_original_lang": "la",
+    "latitude": 40.7486,
+    "longitude": 14.4867,
+    "date_start": -600,
+    "date_end": 79,
+    "site_type": "archaeological_zone",
+    "description": "Roman city preserved under Vesuvius eruption of 24 August 79 CE. Continuous urban life from 8th century BCE (Osco-Samnite) to ~79 CE. Rediscovered 1748.",
+    "unesco_id": "829",
+    "unesco_year": 1997,
+    "confidence_score": 0.98,
+    "status": "confirmed",
+    "ethical_notes": "Human body casts (calchi) are contested: some archaeologists argue they should not be publicly displayed, touching the ethics of ancient human remains. Recent 'House of the Vettii' re-opening (2023) sparked debate over reconstructive restoration vs. preservation as-found.",
+    "sources": [
+      {"citation": "Beard, M. (2008). Pompeii: The Life of a Roman Town. Profile Books.", "source_type": "academic"},
+      {"citation": "UNESCO World Heritage Centre 829", "source_type": "primary", "url": "https://whc.unesco.org/en/list/829/"}
+    ],
+    "name_variants": [
+      {"name": "Pompei", "lang": "it", "context": "modern Italian"},
+      {"name": "Pumpaiians", "lang": "osc", "context": "original Oscan"}
+    ]
+  },
+  {
+    "name_original": "Herculaneum",
+    "name_original_lang": "la",
+    "latitude": 40.8056,
+    "longitude": 14.3484,
+    "date_start": -500,
+    "date_end": 79,
+    "site_type": "archaeological_zone",
+    "description": "Roman seaside town buried under pyroclastic surge from Vesuvius 79 CE. Preserved wooden furniture, food, wax tablets. Villa dei Papiri held the only surviving library from antiquity.",
+    "unesco_id": "829",
+    "unesco_year": 1997,
+    "confidence_score": 0.98,
+    "status": "confirmed",
+    "ethical_notes": "Boathouse skeletons (~300 found 1980s) revised understanding of eruption timing — most victims died instantly from pyroclastic heat, not ash suffocation. Their display raises same ethics concerns as Pompeii casts.",
+    "sources": [
+      {"citation": "Wallace-Hadrill, A. (2011). Herculaneum: Past and Future. Frances Lincoln.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Ercolano", "lang": "it", "context": "modern Italian"}
+    ]
+  },
+  {
+    "name_original": "Stonehenge",
+    "name_original_lang": "en",
+    "latitude": 51.1789,
+    "longitude": -1.8262,
+    "date_start": -3000,
+    "date_end": -1500,
+    "site_type": "megalithic",
+    "description": "Neolithic stone circle. Construction phases from 3100 BCE (henge) to 2200 BCE (sarsen trilithons). Alignment with summer solstice. Bluestones transported from Preseli Hills (Wales), ~250km.",
+    "unesco_id": "373",
+    "unesco_year": 1986,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "ethical_notes": "Druid reclaimings since 1970s: English Heritage has granted limited ritual access since 2000. Indigenous British heritage vs tourism tension.",
+    "sources": [
+      {"citation": "Parker Pearson, M. (2012). Stonehenge: Exploring the Greatest Stone Age Mystery. Simon & Schuster.", "source_type": "academic"},
+      {"citation": "UNESCO 373", "source_type": "primary", "url": "https://whc.unesco.org/en/list/373/"}
+    ],
+    "name_variants": []
+  },
+  {
+    "name_original": "Acropolis of Athens",
+    "name_original_lang": "en",
+    "latitude": 37.9715,
+    "longitude": 23.7257,
+    "date_start": -1400,
+    "date_end": null,
+    "site_type": "archaeological_zone",
+    "description": "Parthenon (447-432 BCE) under Pericles, architect Iktinos, sculptor Phidias. Temple of Athena Parthenos. Earlier Mycenaean citadel.",
+    "unesco_id": "404",
+    "unesco_year": 1987,
+    "confidence_score": 0.97,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-009: Parthenon Marbles (Elgin Marbles) removed by Lord Elgin 1801-1812 and sold to British Museum 1816 — Greek government demands return as cultural repatriation case (UNESCO mediation 1983-). British Museum refuses. Case now exemplary of colonial-era plunder debate.",
+    "sources": [
+      {"citation": "Hurwit, J. M. (1999). The Athenian Acropolis: History, Mythology, and Archaeology.", "source_type": "academic"},
+      {"citation": "St Clair, W. (1998). Lord Elgin and the Marbles. Oxford.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Ἀκρόπολις τῶν Ἀθηνῶν", "lang": "grc", "context": "Ancient Greek original"},
+      {"name": "Ακρόπολη Αθηνών", "lang": "el", "context": "Modern Greek"}
+    ]
+  },
+  {
+    "name_original": "Δελφοί",
+    "name_original_lang": "grc",
+    "latitude": 38.4823,
+    "longitude": 22.5010,
+    "date_start": -1200,
+    "date_end": 390,
+    "site_type": "sacred_site",
+    "description": "Panhellenic sanctuary of Apollo with Oracle. Omphalos ('navel of the world' in Greek cosmology). Pythian Games every 4 years. Closed by Theodosius I's ban on pagan cults 390 CE.",
+    "unesco_id": "393",
+    "unesco_year": 1987,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "sources": [
+      {"citation": "Scott, M. (2014). Delphi: A History of the Center of the Ancient World. Princeton.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Delphi", "lang": "en", "context": "latinized"}
+    ]
+  },
+  {
+    "name_original": "Olympia",
+    "name_original_lang": "grc",
+    "latitude": 37.6378,
+    "longitude": 21.6300,
+    "date_start": -776,
+    "date_end": 393,
+    "site_type": "sacred_site",
+    "description": "Sanctuary of Zeus. Olympic Games every 4 years 776 BCE - 393 CE (1169 years). Phidias' chryselephantine Zeus statue (one of Seven Wonders). Abolished by Theodosius I.",
+    "unesco_id": "517",
+    "unesco_year": 1989,
+    "confidence_score": 0.97,
+    "status": "confirmed",
+    "sources": [
+      {"citation": "Miller, S. G. (2004). Ancient Greek Athletics. Yale.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Ὀλυμπία", "lang": "grc", "context": "Ancient Greek"}
+    ]
+  },
+  {
+    "name_original": "Μυκῆναι",
+    "name_original_lang": "grc",
+    "latitude": 37.7306,
+    "longitude": 22.7561,
+    "date_start": -1600,
+    "date_end": -1100,
+    "site_type": "fortification",
+    "description": "Mycenaean citadel with cyclopean walls. Lion Gate (~1250 BCE). Grave Circles A & B (Heinrich Schliemann excavation 1876). Center of Bronze Age power 1600-1100 BCE before Dorian collapse.",
+    "unesco_id": "941",
+    "unesco_year": 1999,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "ethical_notes": "Schliemann's 'Mask of Agamemnon' is disputed — dating and authenticity under ongoing scholarly debate. Famous unprovenanced excavation practices 1870s.",
+    "sources": [
+      {"citation": "Wardle, K. A. (1977). Mycenae: An Archaeological History and Guide.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Mycenae", "lang": "en", "context": "English form"}
+    ]
+  },
+  {
+    "name_original": "Colosseo",
+    "name_original_lang": "it",
+    "latitude": 41.8902,
+    "longitude": 12.4924,
+    "date_start": 70,
+    "date_end": 537,
+    "site_type": "arena",
+    "description": "Flavian Amphitheatre. Construction 70-80 CE under Vespasian and Titus. ~50,000 spectators. Gladiatorial games, venationes, naval battles (naumachiae). Final gladiator show ~435 CE; last venationes 523 CE.",
+    "unesco_id": "91",
+    "unesco_year": 1980,
+    "confidence_score": 0.99,
+    "status": "confirmed",
+    "ethical_notes": "Estimated 400,000-1,000,000 deaths over 400 years (gladiators + condemned criminals + animals). Modern use as tourist monument glosses over violence. Pope Benedict XIV consecrated 1749 to Christian martyrs — conversion may be embellished (few documented Christian martyrdoms specifically there).",
+    "sources": [
+      {"citation": "Hopkins, K., & Beard, M. (2005). The Colosseum. Harvard.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Amphitheatrum Flavium", "lang": "la", "context": "original Roman"},
+      {"name": "Colosseum", "lang": "en", "context": "English form"}
+    ]
+  },
+  {
+    "name_original": "Angkor Wat",
+    "name_original_lang": "km",
+    "latitude": 13.4125,
+    "longitude": 103.8667,
+    "date_start": 1113,
+    "date_end": 1150,
+    "site_type": "temple",
+    "description": "Hindu-Buddhist temple complex, Khmer Empire under Suryavarman II (1113-1150). Largest religious monument globally. Originally dedicated to Vishnu; converted to Theravada Buddhist ~14th century. Bas-reliefs depict Mahabharata + Ramayana.",
+    "unesco_id": "668",
+    "unesco_year": 1992,
+    "confidence_score": 0.98,
+    "status": "confirmed",
+    "ethical_notes": "Khmer Rouge era (1975-1979): civil war damage, looting. Ongoing illicit antiquities trade: Douglas Latchford case (2012-2021, restitution of stolen artifacts to Cambodia).",
+    "sources": [
+      {"citation": "Higham, C. (2001). The Civilization of Angkor. Phoenix.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "អង្គរវត្ត", "lang": "km", "context": "Khmer script original"}
+    ]
+  },
+  {
+    "name_original": "Borobudur",
+    "name_original_lang": "jv",
+    "latitude": -7.6079,
+    "longitude": 110.2038,
+    "date_start": 750,
+    "date_end": 850,
+    "site_type": "temple",
+    "description": "Mahayana Buddhist stupa, Shailendra dynasty, Central Java. 9 stacked platforms (6 square, 3 circular) with 2,672 relief panels and 504 Buddha statues. Abandoned 14th century after Java's Islamization; rediscovered 1814 by Stamford Raffles.",
+    "unesco_id": "592",
+    "unesco_year": 1991,
+    "confidence_score": 0.97,
+    "status": "confirmed",
+    "ethical_notes": "2010 Mount Merapi eruption damaged surface; UNESCO/Indonesia restoration 2011-2015. Climbing restrictions 2020 (wear damage) controversial with local economy dependent on tourism.",
+    "sources": [
+      {"citation": "Miksic, J. (1990). Borobudur: Golden Tales of the Buddhas. Periplus.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "ꦧꦫꦧꦸꦝꦸꦂ", "lang": "jv", "context": "Javanese script"}
+    ]
+  },
+  {
+    "name_original": "Prambanan",
+    "name_original_lang": "jv",
+    "latitude": -7.7520,
+    "longitude": 110.4914,
+    "date_start": 850,
+    "date_end": 930,
+    "site_type": "temple",
+    "description": "Hindu temple complex, Sanjaya dynasty. Trimurti dedication (Shiva, Vishnu, Brahma). 240 temples originally; 8 main + 240 secondary survived in various states. Largest Hindu temple in Indonesia. Ramayana reliefs.",
+    "unesco_id": "642",
+    "unesco_year": 1991,
+    "confidence_score": 0.93,
+    "status": "confirmed",
+    "sources": [
+      {"citation": "Soekmono (1995). The Javanese Candi: Function and Meaning. Brill.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Candi Prambanan", "lang": "id", "context": "Indonesian"},
+      {"name": "ꦕꦤ꧀ꦝꦶꦥꦿꦩ꧀ꦧꦤꦤ꧀", "lang": "jv", "context": "Javanese script"}
+    ]
+  },
+  {
+    "name_original": "万里长城",
+    "name_original_lang": "zh",
+    "latitude": 40.4319,
+    "longitude": 116.5704,
+    "date_start": -220,
+    "date_end": 1644,
+    "site_type": "fortification",
+    "description": "Great Wall system. Qin unification of prior walls (221-206 BCE) under Shi Huangdi. Major Han extension. Most extant sections are Ming (1368-1644). Estimated length 21,196 km (Ming only: 8,851 km). Coordinates for Badaling section.",
+    "unesco_id": "438",
+    "unesco_year": 1987,
+    "confidence_score": 0.98,
+    "status": "confirmed",
+    "ethical_notes": "Corvée and forced labor deaths over 2000+ years of construction estimated in hundreds of thousands (\"longest cemetery on earth\"). Memorialized in legend of Meng Jiangnu.",
+    "sources": [
+      {"citation": "Waldron, A. (1990). The Great Wall of China: From History to Myth. Cambridge.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Great Wall of China", "lang": "en", "context": "English form"},
+      {"name": "万里の長城", "lang": "ja", "context": "Japanese reading"}
+    ]
+  },
+  {
+    "name_original": "莫高窟",
+    "name_original_lang": "zh",
+    "latitude": 40.0390,
+    "longitude": 94.8100,
+    "date_start": 366,
+    "date_end": 1227,
+    "site_type": "sacred_site",
+    "description": "Mogao Caves (Dunhuang), Silk Road oasis. 492 caves with 45,000 m² Buddhist murals + 2,400 statues. Cave 17 (Library Cave) sealed ~1000 CE, discovered 1900 — Aurel Stein & Paul Pelliot removed tens of thousands of manuscripts (1907-1908).",
+    "unesco_id": "440",
+    "unesco_year": 1987,
+    "confidence_score": 0.97,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-009 analog: Stein / Pelliot / Langdon Warner removals 1907-1924 = cultural plunder case. ~10,000+ Dunhuang manuscripts in British Museum/BNF/Bibliothèque nationale de France. Chinese government demands return; IDP (International Dunhuang Project) since 1994 digitizes but does not restitute.",
+    "sources": [
+      {"citation": "Whitfield, S. (2015). Life Along the Silk Road. University of California Press.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Mogao Caves", "lang": "en", "context": "English form"},
+      {"name": "Dunhuang Caves", "lang": "en", "context": "area designation"}
+    ]
+  },
+  {
+    "name_original": "ताज महल",
+    "name_original_lang": "hi",
+    "latitude": 27.1751,
+    "longitude": 78.0421,
+    "date_start": 1632,
+    "date_end": 1653,
+    "site_type": "monument",
+    "description": "White marble mausoleum for Mumtaz Mahal, wife of Mughal emperor Shah Jahan. Architect Ustad Ahmad Lahauri. ~20,000 laborers, 1,000 elephants. Symmetric gardens (charbagh). Pietra dura inlays.",
+    "unesco_id": "252",
+    "unesco_year": 1983,
+    "confidence_score": 0.99,
+    "status": "confirmed",
+    "ethical_notes": "Legend that Shah Jahan had architects' hands severed lacks historical documentation (cf. Ebba Koch). However, labor conditions under Mughal corvée system well-documented as exploitative. Modern air pollution (Agra) causing marble yellowing: restoration ongoing.",
+    "sources": [
+      {"citation": "Koch, E. (2006). The Complete Taj Mahal. Thames & Hudson.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Taj Mahal", "lang": "en", "context": "English form"},
+      {"name": "تاج محل", "lang": "ur", "context": "Urdu"}
+    ]
+  },
+  {
+    "name_original": "البتراء",
+    "name_original_lang": "ar",
+    "latitude": 30.3285,
+    "longitude": 35.4444,
+    "date_start": -400,
+    "date_end": 663,
+    "site_type": "archaeological_zone",
+    "description": "Nabataean capital, rock-cut architecture. Founded ~4th century BCE; became client kingdom of Rome (106 CE annexation by Trajan). Earthquake 363 CE damaged water system, decline begins. Abandoned after 663 CE Arab conquest.",
+    "unesco_id": "326",
+    "unesco_year": 1985,
+    "confidence_score": 0.97,
+    "status": "confirmed",
+    "ethical_notes": "Bedouin (B'doul) displacement 1985 when area became WHS — relocated to purpose-built village Umm Sayhoun. Ongoing rights conflict with tourism authorities (controlled access, no nomadic use).",
+    "sources": [
+      {"citation": "Bowersock, G. W. (1983). Roman Arabia. Harvard.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Petra", "lang": "en", "context": "Greek-derived English form"},
+      {"name": "Raqmu", "lang": "nab", "context": "Nabataean name in inscriptions"}
+    ]
+  },
+  {
+    "name_original": "Persepolis",
+    "name_original_lang": "grc",
+    "latitude": 29.9355,
+    "longitude": 52.8916,
+    "date_start": -518,
+    "date_end": -330,
+    "site_type": "palace",
+    "description": "Ceremonial capital of Achaemenid Empire. Construction under Darius I (518 BCE), extended by Xerxes I and Artaxerxes I. Destroyed by Alexander the Great 330 BCE — debate persists whether accidental or retaliation for Persian burning of Athens (480 BCE).",
+    "unesco_id": "114",
+    "unesco_year": 1979,
+    "confidence_score": 0.97,
+    "status": "confirmed",
+    "ethical_notes": "Alexander's fire: Plutarch reports it as courtesan Thaïs's drunken suggestion — historians divided on deliberacy. Persepolis Administrative Archives (30,000+ tablets) at Oriental Institute Chicago since 1930s — Iranian restitution demands ongoing.",
+    "sources": [
+      {"citation": "Briant, P. (2002). From Cyrus to Alexander. Eisenbrauns.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "پارسه", "lang": "fa", "context": "Persian"},
+      {"name": "Parsa", "lang": "peo", "context": "Old Persian original"}
+    ]
+  },
+  {
+    "name_original": "بابل",
+    "name_original_lang": "ar",
+    "latitude": 32.5364,
+    "longitude": 44.4206,
+    "date_start": -2300,
+    "date_end": 1000,
+    "site_type": "archaeological_zone",
+    "description": "Mesopotamian city. Old Babylonian (Hammurabi, 1792-1750 BCE) + Neo-Babylonian (Nebuchadnezzar II, 605-562 BCE) peaks. Ishtar Gate, Hanging Gardens (Wonder of World, location disputed). Fell to Cyrus 539 BCE. Abandoned after Abbasid period.",
+    "unesco_id": "278",
+    "unesco_year": 2019,
+    "confidence_score": 0.92,
+    "status": "confirmed",
+    "ethical_notes": "Saddam Hussein palace on ancient site (1980s) damaged archaeology. US/Polish military base 2003-2004 further damage: bulldozing of Nebuchadnezzar bricks, aircraft vibration damage. Ongoing ISIS-era concerns (though Babylon not specifically destroyed). Hanging Gardens location still contested — may have been Nineveh.",
+    "sources": [
+      {"citation": "Oates, J. (1979). Babylon. Thames & Hudson.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Babylon", "lang": "en", "context": "English via Greek Βαβυλών"},
+      {"name": "𒆍𒀭𒊏𒆠", "lang": "akk", "context": "Akkadian cuneiform (Bab-ili)"}
+    ]
+  },
+  {
+    "name_original": "اهرامات الجيزة",
+    "name_original_lang": "ar",
+    "latitude": 29.9792,
+    "longitude": 31.1342,
+    "date_start": -2560,
+    "date_end": -2500,
+    "site_type": "pyramid",
+    "description": "Great Pyramid of Khufu (2560 BCE), Pyramid of Khafre, Pyramid of Menkaure + Great Sphinx. Only remaining Wonder of the Ancient World. Khufu's pyramid: 146.6m original (138.5m current), 2.3 million limestone blocks.",
+    "unesco_id": "86",
+    "unesco_year": 1979,
+    "confidence_score": 0.99,
+    "status": "confirmed",
+    "ethical_notes": "Herodotus claimed 100,000 slaves built Khufu's pyramid — archaeology (Lehner 1988, worker village) contradicts: seasonal paid laborers, not slaves. Ongoing Chinese/alt-archaeology myths (aliens, lost advanced civilizations) dismissed by mainstream.",
+    "sources": [
+      {"citation": "Lehner, M. (1997). The Complete Pyramids. Thames & Hudson.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Pyramids of Giza", "lang": "en", "context": "English"},
+      {"name": "Pyramides d'Égypte", "lang": "fr", "context": "French"}
+    ]
+  },
+  {
+    "name_original": "Ṭumbūktū",
+    "name_original_lang": "ar",
+    "latitude": 16.7731,
+    "longitude": -3.0087,
+    "date_start": 1100,
+    "date_end": null,
+    "site_type": "sacred_site",
+    "description": "Trans-Saharan trade center and Islamic scholarly hub under Mali and Songhai Empires. Djinguereber Mosque (1327, Mali period), Sankore Mosque (mid-14th c., became university). ~700,000 manuscripts preserved.",
+    "unesco_id": "119",
+    "unesco_year": 1988,
+    "confidence_score": 0.93,
+    "status": "confirmed",
+    "ethical_notes": "2012 Ansar Dine/AQIM destruction: 14 of 16 earthen mausoleums razed (Sankore saints), partial Djinguereber damage. UNESCO in-danger list 2012-2017. Manuscripts evacuation (Timbuktu Renaissance): 350,000+ saved by Abdel Kader Haidara's network. ICC conviction of al-Mahdi 2016 for destruction as war crime (first such conviction).",
+    "sources": [
+      {"citation": "Hunwick, J. (1999). Timbuktu and the Songhay Empire. Brill.", "source_type": "academic"},
+      {"citation": "ICC. (2016). Prosecutor v. Al Mahdi — Judgment ICC-01/12-01/15.", "source_type": "primary"}
+    ],
+    "name_variants": [
+      {"name": "Timbuktu", "lang": "en", "context": "English/French form"},
+      {"name": "ⵜⵉⵏⴱⵓⴽⵜⵓ", "lang": "tmh", "context": "Tamasheq/Tuareg original"}
+    ]
+  },
+  {
+    "name_original": "Dzimba dza mabwe",
+    "name_original_lang": "sn",
+    "latitude": -20.2670,
+    "longitude": 30.9327,
+    "date_start": 1100,
+    "date_end": 1450,
+    "site_type": "archaeological_zone",
+    "description": "Great Zimbabwe — capital of Karanga kingdom, 1100-1450. 'Great Enclosure' with 11m dry-stone walls (no mortar). Population ~18,000 at peak. Abandoned 15th c., environmental or political causes debated.",
+    "unesco_id": "364",
+    "unesco_year": 1986,
+    "confidence_score": 0.94,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-002: Cecil Rhodes era (1890s+) actively denied African construction — promoted Phoenician/Sabaean myth. Archaeologist Gertrude Caton Thompson (1929) proved Bantu origin; colonial Rhodesia government banned her conclusions. Black Zimbabwe activists adopted name at 1980 independence as direct repudiation.",
+    "sources": [
+      {"citation": "Garlake, P. (1973). Great Zimbabwe. Thames & Hudson.", "source_type": "academic"},
+      {"citation": "Pikirayi, I. (2001). The Zimbabwe Culture. AltaMira.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Great Zimbabwe", "lang": "en", "context": "English designation"}
+    ]
+  },
+  {
+    "name_original": "አክሱም",
+    "name_original_lang": "gez",
+    "latitude": 14.1319,
+    "longitude": 38.7194,
+    "date_start": 100,
+    "date_end": 940,
+    "site_type": "monument",
+    "description": "Aksumite Empire capital, monolithic stelae (tallest: 33m Aksum Obelisk, 4th c.). Church of Our Lady of Zion claimed repository of Ark of the Covenant. Ge'ez inscriptions trilingual.",
+    "unesco_id": "15",
+    "unesco_year": 1980,
+    "confidence_score": 0.94,
+    "status": "confirmed",
+    "ethical_notes": "Aksum Obelisk: Mussolini's Italy removed 1937 to Rome; returned 2005 after 70-year diplomatic struggle. Became precedent for colonial-era restitution cases globally.",
+    "sources": [
+      {"citation": "Phillipson, D. W. (2012). Foundations of an African Civilisation. James Currey.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Aksum", "lang": "en", "context": "English/French"},
+      {"name": "Axum", "lang": "en", "context": "alternative transliteration"}
+    ]
+  },
+  {
+    "name_original": "ላሊበላ",
+    "name_original_lang": "am",
+    "latitude": 12.0303,
+    "longitude": 39.0406,
+    "date_start": 1137,
+    "date_end": 1270,
+    "site_type": "sacred_site",
+    "description": "11 monolithic rock-hewn churches carved from single volcanic tuff blocks, under King Lalibela (Zagwe dynasty). Called 'New Jerusalem' (pilgrimage destination after Saladin's 1187 Jerusalem capture). Bet Giyorgis church iconic.",
+    "unesco_id": "18",
+    "unesco_year": 1978,
+    "confidence_score": 0.96,
+    "status": "confirmed",
+    "ethical_notes": "2021 Tigray War: churches threatened by combat (Ethiopian troops + TPLF + Eritrean forces in region). UNESCO assessment mission delayed by security. Ongoing erosion from rain penetration in single-rock structure — restoration controversial (modern materials vs original).",
+    "sources": [
+      {"citation": "Phillipson, D. W. (2009). Ancient Churches of Ethiopia. Yale.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Lalibela", "lang": "en", "context": "English"}
+    ]
+  },
+  {
+    "name_original": "قرطاج",
+    "name_original_lang": "ar",
+    "latitude": 36.8528,
+    "longitude": 10.3230,
+    "date_start": -814,
+    "date_end": 698,
+    "site_type": "archaeological_zone",
+    "description": "Phoenician founding (traditional 814 BCE by Queen Dido/Elissa). Mediterranean superpower until Third Punic War 146 BCE — Roman destruction under Scipio Aemilianus. Rebuilt by Caesar 44 BCE as Roman colony. Arab conquest 698 CE destroyed it again.",
+    "unesco_id": "37",
+    "unesco_year": 1979,
+    "confidence_score": 0.96,
+    "status": "confirmed",
+    "ethical_notes": "'Salt the earth' legend of Scipio's salt-sowing post-146 BCE is medieval invention (first documented 1863, no ancient sources). Modern Tunis suburbs encroaching on archaeological reserve.",
+    "sources": [
+      {"citation": "Miles, R. (2010). Carthage Must Be Destroyed. Penguin.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Carthage", "lang": "en", "context": "English via Latin Carthago"},
+      {"name": "Qart-hadasht", "lang": "phn", "context": "Phoenician: 'new city'"}
+    ]
+  },
+  {
+    "name_original": "Machu Picchu",
+    "name_original_lang": "qu",
+    "latitude": -13.1631,
+    "longitude": -72.5450,
+    "date_start": 1450,
+    "date_end": 1572,
+    "site_type": "archaeological_zone",
+    "description": "Inca (Tawantinsuyu) royal estate of Pachacuti (1450s). 2,430m elevation. 200+ structures: temples, houses, terraces, irrigation. Abandoned during Spanish conquest ~1572, but not looted — Spanish never found it. Rediscovered 1911 by Hiram Bingham.",
+    "unesco_id": "274",
+    "unesco_year": 1983,
+    "confidence_score": 0.96,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-009: Hiram Bingham/Yale University removed ~40,000 artifacts 1911-1915. Yale returned them 2011-2012 after century of Peruvian demands. Modern over-tourism (~1.5M visitors/year pre-COVID) damaging pathways; access quotas since 2017.",
+    "sources": [
+      {"citation": "Burger, R. L. & Salazar, L. C. (2004). Machu Picchu: Unveiling the Mystery of the Incas. Yale.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Machu Pikchu", "lang": "qu", "context": "Quechua alternative orthography"}
+    ]
+  },
+  {
+    "name_original": "Chichen Itza",
+    "name_original_lang": "yua",
+    "latitude": 20.6843,
+    "longitude": -88.5678,
+    "date_start": 600,
+    "date_end": 1200,
+    "site_type": "archaeological_zone",
+    "description": "Postclassic Maya city. El Castillo (Temple of Kukulcán) with equinox serpent shadow phenomenon. Great Ball Court largest in Mesoamerica. Sacred Cenote sacrificial context. Itza Maya-Toltec hybrid style, suggesting Toltec influence from Tula.",
+    "unesco_id": "483",
+    "unesco_year": 1988,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "ethical_notes": "Climbing ban 2006 after tourist deaths. Sacred Cenote dredging 1904-1910 by Edward Thompson removed thousands of artifacts to Peabody Museum/Harvard — partial restitution 1959. Contemporary Yucatec Maya not consulted in management historically.",
+    "sources": [
+      {"citation": "Coggins, C. C. (1992). Artifacts from the Cenote of Sacrifice, Chichen Itza. Peabody.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Chi'ch'èen Ìitsha'", "lang": "yua", "context": "Yucatec Maya original pronunciation"}
+    ]
+  },
+  {
+    "name_original": "Yax Mutal",
+    "name_original_lang": "myn",
+    "latitude": 17.2223,
+    "longitude": -89.6237,
+    "date_start": -400,
+    "date_end": 900,
+    "site_type": "archaeological_zone",
+    "description": "Classic Maya Yax Mutal (modern Tikal). Rivalry with Kaanul (Calakmul) dominated Maya Classic politics. 5 main pyramids, Temple IV 70m. Abandoned ~900 CE during Classic Maya collapse. Glyphic records document 800+ years of dynasty.",
+    "unesco_id": "64",
+    "unesco_year": 1979,
+    "confidence_score": 0.97,
+    "status": "confirmed",
+    "ethical_notes": "Jaguar filmed here (classic colonial exotic trope). Contemporary Maya (Q'eqchi', Mopán) populations in Petén displaced by 20th c. ladinization and civil war (1960-1996). Park boundaries often in tension with Maya land claims.",
+    "sources": [
+      {"citation": "Martin, S. & Grube, N. (2000). Chronicle of the Maya Kings and Queens. Thames & Hudson.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Tikal", "lang": "en", "context": "modern/English name, uncertain etymology"}
+    ]
+  },
+  {
+    "name_original": "Teotihuacan",
+    "name_original_lang": "nah",
+    "latitude": 19.6925,
+    "longitude": -98.8439,
+    "date_start": -100,
+    "date_end": 550,
+    "site_type": "archaeological_zone",
+    "description": "'Place where gods were made' (Nahuatl name — Teotihuacanos' self-name unknown). Pyramid of the Sun (3rd largest globally), Pyramid of the Moon, Avenue of the Dead, Temple of Quetzalcoatl. Peak population 125,000-150,000. Collapsed ~550 CE, partially burned.",
+    "unesco_id": "414",
+    "unesco_year": 1987,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "ethical_notes": "Original Teotihuacano ethnicity debated (Otomí? Totonac? Nahua-predecessor?). Aztecs (1300s) found it ruined and named it mythologically. 'Feathered Serpent Pyramid' showed 200+ sacrificial burials — displayed at Museo Nacional de Antropología Mexico.",
+    "sources": [
+      {"citation": "Cowgill, G. L. (2015). Ancient Teotihuacan. Cambridge.", "source_type": "academic"}
+    ],
+    "name_variants": []
+  },
+  {
+    "name_original": "Lakamha'",
+    "name_original_lang": "myn",
+    "latitude": 17.4840,
+    "longitude": -92.0461,
+    "date_start": 250,
+    "date_end": 800,
+    "site_type": "archaeological_zone",
+    "description": "Classic Maya Lakamha' (modern Palenque). Peak under Kʼinich Janaabʼ Pakal I (615-683, tomb discovered 1952 by Alberto Ruz Lhuillier). Temple of the Inscriptions, Palace Tower, hieroglyphic history one of most complete.",
+    "unesco_id": "411",
+    "unesco_year": 1987,
+    "confidence_score": 0.97,
+    "status": "confirmed",
+    "ethical_notes": "Pakal's jade death mask + sarcophagus cover basis for 'Ancient Astronauts' pseudo-archaeology (Erich von Däniken), rejected by all Mayanists. Contemporary Chol Maya population has cultural continuity claims not always acknowledged in tourism framing.",
+    "sources": [
+      {"citation": "Ruz Lhuillier, A. (1973). El Templo de las Inscripciones, Palenque. INAH.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Palenque", "lang": "es", "context": "Spanish designation"}
+    ]
+  },
+  {
+    "name_original": "Chan Chan",
+    "name_original_lang": "cjp",
+    "latitude": -8.1054,
+    "longitude": -79.0754,
+    "date_start": 850,
+    "date_end": 1470,
+    "site_type": "archaeological_zone",
+    "description": "Capital of Chimor (Chimú Empire), largest adobe city globally (~20 km²). Population 40,000-60,000 at peak. 9 royal citadels (ciudadelas) each for a Chimú king. Absorbed by Inca under Tupac Inca Yupanqui ~1470.",
+    "unesco_id": "366",
+    "unesco_year": 1986,
+    "confidence_score": 0.93,
+    "status": "confirmed",
+    "ethical_notes": "El Niño flooding 1983, 1998, 2017 severely damaged unglazed adobe. UNESCO In Danger list since 1986. Ongoing illegal adobe removal by local population for house construction — poverty vs heritage conflict.",
+    "sources": [
+      {"citation": "Moore, J. D. (1996). Architecture and Power in the Ancient Andes. Cambridge.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Jang-Jang", "lang": "cjp", "context": "Mochica/Quingnam origin, 'Sun Sun'"}
+    ]
+  },
+  {
+    "name_original": "Rapa Nui",
+    "name_original_lang": "rap",
+    "latitude": -27.1127,
+    "longitude": -109.3497,
+    "date_start": 1100,
+    "date_end": 1868,
+    "site_type": "megalithic",
+    "description": "Easter Island moai culture. Nearly 1,000 monolithic statues (tuff from Rano Raraku quarry). Peak population 15,000+ ~1500, collapse to <3,000 by 1722. Ahu ceremonial platforms. Matakiterangi birdman cult post-collapse.",
+    "unesco_id": "715",
+    "unesco_year": 1995,
+    "confidence_score": 0.92,
+    "status": "confirmed",
+    "ethical_notes": "1862-1863 Peruvian slave raids captured ~1,500 Rapa Nui (half the population) — smallpox devastation on return. Hoa Hakananai'a moai: British Museum 1868 (HMS Topaze Commander Powell). Rapa Nui Council 2018 formal restitution demand — UK refuses. Chilean annexation 1888 not consented.",
+    "sources": [
+      {"citation": "Hunt, T. & Lipo, C. (2011). The Statues That Walked. Free Press.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Easter Island", "lang": "en", "context": "colonial name (Roggeveen Easter Sunday 1722)"},
+      {"name": "Isla de Pascua", "lang": "es", "context": "Spanish"}
+    ]
+  },
+  {
+    "name_original": "Uluṟu",
+    "name_original_lang": "pjt",
+    "latitude": -25.3444,
+    "longitude": 131.0369,
+    "date_start": -30000,
+    "date_end": null,
+    "site_type": "sacred_site",
+    "description": "Sacred monolith for Aṉangu people (Pitjantjatjara & Yankunytjatjara). Tjukurpa (traditional law) identifies specific rock features as ancestral beings. Continuous Aboriginal custodianship 30,000+ years (oldest dated rock art 10,000 years).",
+    "unesco_id": "447",
+    "unesco_year": 1987,
+    "confidence_score": 0.99,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-009: colonial name 'Ayers Rock' imposed 1873 (William Gosse, after S.A. Premier Henry Ayers). Dual-name policy 1993. Climbing banned 26 October 2019 (anniversary of handback to Aṉangu 1985) — returning full control. Uluṟu Climb Ban became global case of Indigenous self-determination over sacred site.",
+    "sources": [
+      {"citation": "Mountford, C. P. (1965). Ayers Rock: Its People, Their Beliefs, and Their Art. Rigby.", "source_type": "academic"},
+      {"citation": "Uluṟu-Kata Tjuṯa National Park. (2019). Climb Closure Announcement.", "source_type": "primary"}
+    ],
+    "name_variants": [
+      {"name": "Ayers Rock", "lang": "en", "context": "colonial imposition 1873-1993 (renounced)"},
+      {"name": "Uluṟu / Ayers Rock", "lang": "en", "context": "dual name 1993-2002"}
+    ]
+  },
+  {
+    "name_original": "Göbekli Tepe",
+    "name_original_lang": "tr",
+    "latitude": 37.2231,
+    "longitude": 38.9222,
+    "date_start": -9500,
+    "date_end": -8000,
+    "site_type": "sacred_site",
+    "description": "Pre-Pottery Neolithic sanctuary. Oldest known megalithic temple complex (11,500 years before present). T-shaped limestone pillars (up to 5.5m) with carved reliefs of animals. Pre-agriculture — challenges 'Neolithic Revolution' sequencing (religion before farming?).",
+    "unesco_id": "1572",
+    "unesco_year": 2018,
+    "confidence_score": 0.94,
+    "status": "confirmed",
+    "ethical_notes": "Discovery by Klaus Schmidt (German) 1994: revolutionary. Post-2019 'Tas Tepeler' project expanded to 12 sites in region. Pseudoarchaeology claims (Hancock, aliens, 'lost civilizations') rejected by Schmidt and successors. Syrian border proximity: security concerns 2012-2017.",
+    "sources": [
+      {"citation": "Schmidt, K. (2006). Sie bauten die ersten Tempel. C.H. Beck.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Potbelly Hill", "lang": "en", "context": "English translation"}
+    ]
+  },
+  {
+    "name_original": "بام",
+    "name_original_lang": "fa",
+    "latitude": 29.1130,
+    "longitude": 58.3688,
+    "date_start": -500,
+    "date_end": null,
+    "site_type": "fortification",
+    "description": "Arg-e Bam — largest adobe citadel globally, Silk Road hub. Pre-Achaemenid foundations, peak Parthian/Sasanian period, continuous use to 19th c. Partially destroyed by 26 December 2003 earthquake (~26,000 deaths in Bam city).",
+    "unesco_id": "1208",
+    "unesco_year": 2004,
+    "confidence_score": 0.92,
+    "status": "confirmed",
+    "ethical_notes": "2003 earthquake destroyed ~80% of citadel + 26,000 human lives. International reconstruction 2004+ (Japan, Italy, France, Germany, USA, etc.) — case of post-disaster heritage recovery with traditional techniques.",
+    "sources": [
+      {"citation": "UNESCO/ICOMOS. (2004). Report on the Bam Earthquake and Post-Disaster Recovery.", "source_type": "primary"}
+    ],
+    "name_variants": [
+      {"name": "Arg-e Bam", "lang": "fa", "context": "'Bam Citadel'"},
+      {"name": "Bam", "lang": "en", "context": "English"}
+    ]
+  },
+  {
+    "name_original": "ꜥꞌnw-rꜥ",
+    "name_original_lang": "egy",
+    "latitude": 25.7188,
+    "longitude": 32.6527,
+    "date_start": -2100,
+    "date_end": -300,
+    "site_type": "temple",
+    "description": "Karnak Temple Complex (Ipet-isut 'Most Selected of Places'). Luxor East Bank. Dedicated to Amun-Ra. Construction 2100 BCE - 300 BCE (1800 years). Great Hypostyle Hall: 134 columns (6 central 21m). Main cultic center of Thebes.",
+    "unesco_id": "87",
+    "unesco_year": 1979,
+    "confidence_score": 0.98,
+    "status": "confirmed",
+    "ethical_notes": "Obelisks removed colonially: Vatican (Constantine), Piazza del Popolo/Rome (Augustus), Istanbul (Theodosius). Modern: Place de la Concorde Paris (1833, Luxor temple-gift). Returns demanded by Egypt — mostly unsettled.",
+    "sources": [
+      {"citation": "Blyth, E. (2006). Karnak: Evolution of a Temple. Routledge.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Karnak", "lang": "en", "context": "Arabic-derived modern name"},
+      {"name": "Ipet-isut", "lang": "egy", "context": "Egyptian original: 'Most Selected of Places'"}
+    ]
+  },
+  {
+    "name_original": "Ψηλορείτης",
+    "name_original_lang": "grc",
+    "latitude": 35.2972,
+    "longitude": 25.1628,
+    "date_start": -1900,
+    "date_end": -1450,
+    "site_type": "palace",
+    "description": "Knossos palace, Minoan civilization. Peak 1700-1450 BCE (New Palace period). Elaborate frescoes (Bull-Leaping). Linear A (undeciphered) + Linear B (Mycenaean Greek, deciphered Ventris 1952). Destroyed by Mycenaean conquest or volcanic tsunami ~1450 BCE. Modern restoration by Arthur Evans (1900+) controversial.",
+    "unesco_id": null,
+    "unesco_year": null,
+    "confidence_score": 0.92,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-002 analog: Arthur Evans's 1900+ 'restorations' using concrete + speculative paint overwrote original fabric. Modern archaeology rejects this approach. 'Minoan' name is Evans's invention (from Greek myth of King Minos) — the civilization's self-designation is unknown.",
+    "sources": [
+      {"citation": "MacGillivray, J. A. (2000). Minotaur: Sir Arthur Evans and the Archaeology of the Minoan Myth.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Knossos", "lang": "en", "context": "English via Greek Κνωσσός"},
+      {"name": "Cnossus", "lang": "la", "context": "Latin"}
+    ]
+  },
+  {
+    "name_original": "Volubilis",
+    "name_original_lang": "la",
+    "latitude": 34.0725,
+    "longitude": -5.5553,
+    "date_start": -300,
+    "date_end": 1000,
+    "site_type": "archaeological_zone",
+    "description": "Mauretanian / Roman North African city. Capital of Mauretania Tingitana. Peak 2nd c. CE, decline after Diocletian withdrawal 285. Last major Berber / Christian presence until 5th c. Idrisid capital 788-808 CE. Lisbon earthquake 1755 damaged ruins (Morocco edge).",
+    "unesco_id": "836",
+    "unesco_year": 1997,
+    "confidence_score": 0.93,
+    "status": "confirmed",
+    "sources": [
+      {"citation": "Mattingly, D. J. (2011). Imperialism, Power, and Identity: Experiencing the Roman Empire. Princeton.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "وليلي", "lang": "ar", "context": "Walili, Arabic"}
+    ]
+  },
+  {
+    "name_original": "Sulaymāniyya",
+    "name_original_lang": "ar",
+    "latitude": 15.4250,
+    "longitude": 32.4880,
+    "date_start": -800,
+    "date_end": 350,
+    "site_type": "archaeological_zone",
+    "description": "Meroë (archaeological area 'Sulaymāniyya' in modern Sudan). Kushite capital after fall of Napata ~590 BCE. ~200 pyramids (smaller/steeper than Egyptian). Independent continuation of Egyptian-style pharaonic state in Nubia. Ended ~350 CE by Aksumite invasion.",
+    "unesco_id": "1336",
+    "unesco_year": 2011,
+    "confidence_score": 0.93,
+    "status": "confirmed",
+    "ethical_notes": "1834: Giuseppe Ferlini dynamited 40+ Meroitic pyramid tops searching for gold — artifacts now at Berlin Ägyptisches Museum. Sudan demands restitution. Modern Sudan civil war (2023+) threatens site access.",
+    "sources": [
+      {"citation": "Shinnie, P. L. (1996). Ancient Nubia. Kegan Paul.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Meroe", "lang": "en", "context": "Greek form Μερόη"},
+      {"name": "Medewi", "lang": "egy", "context": "Meroitic original"}
+    ]
+  },
+  {
+    "name_original": "Ephesus",
+    "name_original_lang": "grc",
+    "latitude": 37.9395,
+    "longitude": 27.3417,
+    "date_start": -1000,
+    "date_end": 1500,
+    "site_type": "archaeological_zone",
+    "description": "Ionian Greek city. Temple of Artemis (Wonder of Ancient World, rebuilt 7x). Roman provincial capital of Asia (133 BCE+). 5th c. Council of Ephesus (431 CE Christological). Abandoned after harbor silting ~6th c.",
+    "unesco_id": "1018",
+    "unesco_year": 2015,
+    "confidence_score": 0.97,
+    "status": "confirmed",
+    "sources": [
+      {"citation": "Scherrer, P. (2000). Ephesus: The New Guide.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Ἔφεσος", "lang": "grc", "context": "Ancient Greek"},
+      {"name": "Efes", "lang": "tr", "context": "modern Turkish"}
+    ]
+  },
+  {
+    "name_original": "Qusayr 'Amra",
+    "name_original_lang": "ar",
+    "latitude": 31.8023,
+    "longitude": 36.5864,
+    "date_start": 723,
+    "date_end": 750,
+    "site_type": "palace",
+    "description": "Early Umayyad 'desert castle' — royal bath + audience hall under Caliph al-Walid II. Frescoes (most intact pre-iconoclastic Islamic art) including the 'Six Kings' depicting defeated Byzantine, Visigoth, Sasanian, Abyssinian, Chinese, Indian rulers.",
+    "unesco_id": "327",
+    "unesco_year": 1985,
+    "confidence_score": 0.95,
+    "status": "confirmed",
+    "ethical_notes": "Rare Islamic figurative art — challenges post-900 CE aniconic consensus. Restoration 2012 (Spanish-Jordanian team) sparked iconoclasm debate in modern Salafist circles.",
+    "sources": [
+      {"citation": "Fowden, G. (2004). Qusayr 'Amra: Art and the Umayyad Elite in Late Antique Syria. California.", "source_type": "academic"}
+    ],
+    "name_variants": []
+  },
+  {
+    "name_original": "Djenné Toguna",
+    "name_original_lang": "bm",
+    "latitude": 13.9058,
+    "longitude": -4.5551,
+    "date_start": -250,
+    "date_end": null,
+    "site_type": "archaeological_zone",
+    "description": "Djenné-Djeno (Old Djenné) archaeological mound — oldest known urban settlement in sub-Saharan Africa (c. 250 BCE). Great Mosque (current structure 1907, rebuilt in Sudano-Sahelian style on original site of 13th c. mosque). Trans-Saharan trade hub.",
+    "unesco_id": "116",
+    "unesco_year": 1988,
+    "confidence_score": 0.92,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: Great Mosque is annually replastered by entire community (crepissage festival) — living heritage. 1996 the Crepissage Festival was recreated by a film crew for a fashion shoot, damaging the mosque. Mali Minister of Culture response banned Westerners from festival.",
+    "sources": [
+      {"citation": "McIntosh, R. J. (1995). Excavations at Jenné-Jeno. University of California Press.", "source_type": "academic"}
+    ],
+    "name_variants": [
+      {"name": "Djenné", "lang": "fr", "context": "French"},
+      {"name": "Jenne", "lang": "en", "context": "English"}
+    ]
+  }
+]

@@ -118,6 +118,15 @@ async def lifespan(app: FastAPI):
                 logger.info("Periods sync: %d new periods added", sync_result["inserted"])
         except Exception:
             logger.warning("Seed/sync periods fallito — v6.27 periods layer non disponibile", exc_info=True)
+        # v6.37.1: sync archaeological sites from data/sites/ (UNESCO, ruins, monuments)
+        try:
+            from src.ingestion.ingest_sites import ingest_sites
+            sites_result = ingest_sites()
+            if sites_result.get("inserted", 0) > 0:
+                logger.info("Sites sync: %d new archaeological sites added", sites_result["inserted"])
+        except Exception:
+            logger.warning("Sites ingest failed — v6.37 sites layer may be empty", exc_info=True)
+
         # v6.31: sync dynasty chains from data/chains/ (idempotent, dedup by name)
         try:
             from src.ingestion.ingest_chains import ingest_chains
