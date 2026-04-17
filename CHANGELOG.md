@@ -2,6 +2,42 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.43.0] - 2026-04-17
+
+**Tema**: *Server-side PNG map rendering (v6.39 originally planned)*
+
+### 2 nuovi endpoint
+
+- `GET /v1/render/snapshot/{year}.png` — world map con boundaries colorati per status
+- `GET /v1/render/entity/{id}.png` — focused single-entity boundary
+
+### Backend: matplotlib
+
+- `matplotlib>=3.7.0` aggiunto a requirements.txt
+- Backend 'Agg' (no GUI, server-safe)
+- Palette matching frontend: confirmed=#58a6ff, uncertain=#fbca04, disputed=#f85149
+- Dark theme background matching frontend map
+- BCE/CE year label in title
+
+### Use cases
+
+- AI agents che vogliono inserire visuals in chat ("mostra Europa nel 800")
+- Open Graph thumbnails per social sharing
+- Embedding in PDF reports, email, Slack
+- AtlasPI blog posts / documentation visual
+
+### Query params
+
+- `width` (200-3000 px, default 1200)
+- `height` (100-2000 px, default 600)
+- `title` (optional override)
+
+### Test
+
+`tests/test_v639_render.py`: 8 test — PNG signature, year validation, size overrides, 404 for missing entity, malformed boundary handling, single-entity focused render.
+
+---
+
 ## [v6.42.1] - 2026-04-17
 
 **Sub-release**: espansione batch_28 events con i 94 nuovi events completati dall'agent research (aveva 32 events al primo ingest v6.36.0, ora al totale 126 entries).
