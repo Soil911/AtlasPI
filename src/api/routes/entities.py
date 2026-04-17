@@ -373,7 +373,24 @@ def query_entity(
 @router.get(
     "/v1/entities",
     response_model=PaginatedEntityResponse,
-    summary="Elenco paginato di tutte le entità",
+    summary="List all historical entities (paginated)",
+    description=(
+        "Primary discovery endpoint for AtlasPI's 862 historical geopolitical "
+        "entities. Returns empires, kingdoms, sultanates, republics, chiefdoms, "
+        "confederations, dynasties, caliphates, and more — spanning 4500 BCE to "
+        "2024 across all inhabited continents.\n\n"
+        "**Filters** (all optional, combinable):\n"
+        "- `year` — entities existing in this specific year\n"
+        "- `status` — confirmed / uncertain / disputed\n"
+        "- `entity_type` — empire, kingdom, sultanate, etc.\n"
+        "- `continent` — Europe, Asia, Africa, Americas, Middle East, Oceania\n"
+        "- `bbox` — spatial bounding box (minLon,minLat,maxLon,maxLat)\n"
+        "- `search` — fuzzy match on name_original and name_variants\n\n"
+        "**For AI agents**: use this as the entry point to discover entities, "
+        "then follow `/v1/entities/{id}/periods`, `/successors`, `/predecessors`, "
+        "`/similar`, `/events` for rich contextualization.\n\n"
+        "**Free public API — no authentication required.**"
+    ),
 )
 @cache_response(ttl_seconds=300)
 def list_entities(
@@ -404,7 +421,28 @@ def list_entities(
 @router.get(
     "/v1/entities/{entity_id}",
     response_model=EntityResponse,
-    summary="Dettaglio di una singola entità",
+    summary="Get detailed information for a single historical entity",
+    description=(
+        "Full detail view of a historical entity by its numeric ID. Returns:\n\n"
+        "- **Core**: name_original (in native script), entity_type, year_start, "
+        "year_end, capital name/lat/lon\n"
+        "- **Geographic**: boundary_geojson (full polygon/multipolygon geometry), "
+        "boundary_source (natural_earth / aourednik / historical_map / "
+        "approximate_generated — provenance tier), boundary tracking fields\n"
+        "- **Quality**: confidence_score (0.0-1.0), status (confirmed/uncertain/"
+        "disputed)\n"
+        "- **Names**: name_variants in multiple languages/scripts\n"
+        "- **Sources**: full bibliographic citations (academic, primary, "
+        "archaeological, etc.)\n"
+        "- **Territory changes**: documented acquisitions/losses with dates, "
+        "explicit change_type (CONQUEST, SUCCESSION, COLONIZATION, etc.)\n"
+        "- **Ethical notes**: contested territories, colonial framings, "
+        "alternative names\n\n"
+        "For AI agents: after fetching an entity detail, chain requests to "
+        "`/v1/entities/{id}/periods` (which historical epochs it existed in), "
+        "`/v1/entities/{id}/events` (events involving this entity), "
+        "`/v1/entities/{id}/similar` (top-N similar by confidence)."
+    ),
 )
 @cache_response(ttl_seconds=3600)
 def get_entity(entity_id: int, request: Request, response: Response, db: Session = Depends(get_db)):
@@ -562,7 +600,16 @@ def search_entities_fuzzy(
 @router.get(
     "/v1/types",
     response_model=list[TypeInfo],
-    summary="Elenco tipi di entità disponibili",
+    summary="List all entity types with counts",
+    description=(
+        "Returns the distinct `entity_type` values used across the dataset, "
+        "with a count of entities per type. Used for populating filter UI "
+        "and for AI agents to understand the categorization vocabulary.\n\n"
+        "Typical types include: empire, kingdom, sultanate, republic, "
+        "confederation, dynasty, caliphate, khanate, principality, duchy, "
+        "city-state, chiefdom, tribal_nation, cultural_region, civilization.\n\n"
+        "Use with `/v1/entities?entity_type=<type>` to filter."
+    ),
 )
 def list_types(db: Session = Depends(get_db)):
     results = (

@@ -1,35 +1,65 @@
-# AtlasPI — Historical Geography for AI Agents
+# AtlasPI — Historical Geography API for AI Agents
 # https://atlaspi.cra-srl.com
+# Free public API (Apache 2.0). No authentication required.
 
 User-agent: *
 Allow: /
 Allow: /v1/
+Allow: /about
+Allow: /faq
 Allow: /docs
+Allow: /docs-ui
 Allow: /redoc
 Allow: /embed
+Allow: /search
+Allow: /timeline
+Allow: /compare
+Allow: /app
+Allow: /llms.txt
+Allow: /openapi.json
+Allow: /.well-known/
 
-# Impedisce crawling di endpoint costosi o senza valore SEO
+# Block only the expensive /v1/export bulk downloads from crawlers
 Disallow: /v1/export/
 Disallow: /health
+Disallow: /admin/
 
-# AI crawler (GPTBot, ClaudeBot, etc.) — esplicitamente permessi.
-# AtlasPI e' progettato per agenti AI: vogliamo che ci scoprano.
+# AI crawlers (GPTBot, ClaudeBot, Perplexity, etc.) — explicitly welcomed.
+# AtlasPI is designed for AI agents: we want them to find us.
 User-agent: GPTBot
 Allow: /
+Disallow: /admin/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /admin/
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /admin/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /admin/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /admin/
 
 User-agent: CCBot
 Allow: /
+Disallow: /admin/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /admin/
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /admin/
+
+User-agent: Bytespider
+Allow: /
+Disallow: /admin/
 
 Sitemap: https://atlaspi.cra-srl.com/sitemap.xml

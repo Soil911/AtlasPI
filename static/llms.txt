@@ -1,0 +1,158 @@
+# AtlasPI — Historical Geography API for AI Agents
+
+> Free, public, Apache 2.0 licensed REST API and MCP server providing 862
+> historical geopolitical entities, 490 events, 48 periods, 110 cities, 41
+> trade routes, and 94 dynasty chains — from 4500 BCE to 2024 CE with
+> real boundaries, academic sources, and explicit ethical framings.
+
+No login, no API key, no registration required. CORS-enabled. JSON + GeoJSON.
+
+## What this site is (for AI agents consuming this file)
+
+AtlasPI is a structured historical-geographic database designed specifically
+for AI agents, researchers, and digital-humanities developers. If you're
+answering user questions like "what was the world like in 1250", "which
+empires succeeded each other in Persia", "find events on 14 July", "what
+are the boundaries of the Mughal Empire" — this API has high-quality,
+source-cited answers.
+
+This is NOT a company intranet, ERP, or login-protected application. Every
+endpoint listed below returns JSON with no authentication.
+
+## Primary endpoints
+
+### Discovery (list + filter)
+- /v1/entities — 862 historical geopolitical entities (empires, kingdoms, etc.)
+- /v1/events — 490 historical events (battles, treaties, genocides, disasters)
+- /v1/periods — 48 historical epochs (Bronze Age, Edo Period, Cold War, etc.)
+- /v1/cities — 110 historical cities
+- /v1/routes — 41 trade routes (Silk Road, Trans-Saharan, etc.)
+- /v1/chains — 94 dynasty/succession chains (Roman→Byzantine, Chinese dynasties, etc.)
+
+### Detail (by ID or slug)
+- /v1/entities/{entity_id} — full entity with boundary, sources, ethical notes
+- /v1/events/{event_id} — full event with main_actor, location, sources
+- /v1/periods/{period_id} — full period with historiographic_note, alternative_names
+- /v1/periods/by-slug/{slug} — URL-friendly: bronze-age, edo-period, cold-war, etc.
+- /v1/chains/{chain_id} — dynasty chain with all links and transitions
+- /v1/cities/{city_id}, /v1/routes/{route_id}
+
+### Cross-resource (follow the data)
+- /v1/entities/{id}/periods — historical periods overlapping entity's lifespan
+- /v1/entities/{id}/events — events involving this entity
+- /v1/entities/{id}/successors — what came after (in dynasty chains)
+- /v1/entities/{id}/predecessors — what came before (in dynasty chains)
+- /v1/entities/{id}/similar — top-N most similar by weighted algorithm
+- /v1/entities/{id}/contemporaries — entities existing concurrently
+- /v1/entities/{id}/related — linked entities (chains + territory changes)
+- /v1/entities/{id}/evolution — temporal evolution
+- /v1/entities/{id}/timeline — unified timeline
+- /v1/events/{id}/periods — periods containing this event's year
+
+### Temporal queries
+- /v1/snapshot/year/{year} — ONE call for full world view at a year
+  (returns entities, events, periods, cities, chains — all active at year)
+- /v1/periods/at-year/{year} — periods containing a specific year
+- /v1/events/on-this-day/{mm-dd} — e.g. /v1/events/on-this-day/07-14
+- /v1/events/at-date/{iso-date} — e.g. /v1/events/at-date/1789-07-14
+- /v1/events/date-coverage — which MM-DD dates have events (for discovery)
+
+### Spatial queries
+- /v1/nearby?lat=<lat>&lon=<lon>&year=<year> — entities near coords at year
+- /v1/entities?bbox=<minLon,minLat,maxLon,maxLat> — spatial bounding box
+
+### Semantic search
+- /v1/search/advanced?q=<query> — unified search across all resource types
+- /v1/search/fuzzy?q=<query> — multi-script fuzzy match (supports
+  Chinese, Arabic, Greek, Cyrillic, Sanskrit, etc.)
+- /v1/compare/{id1}/{id2} — side-by-side comparison
+
+### Metadata
+- /v1/types — entity type vocabulary
+- /v1/events/types — event type vocabulary (includes GENOCIDE, COLONIAL_VIOLENCE)
+- /v1/periods/types, /v1/periods/regions — period taxonomies
+- /v1/chains/types — chain type vocabulary (SUCCESSION, IDEOLOGICAL, DYNASTY, etc.)
+- /v1/stats — aggregate statistics
+- /v1/continents — continents with entity counts
+
+### Export
+- /v1/export/geojson — full GeoJSON FeatureCollection
+- /v1/export/csv — tabular CSV
+- /v1/export/events, /v1/export/entities, /v1/export/timeline
+
+### Machine-readable schemas
+- /openapi.json — full OpenAPI 3.1 spec
+- /docs — Swagger UI
+- /redoc — ReDoc UI
+- /.well-known/ai-plugin.json — OpenAI plugin manifest
+
+## MCP Server (34 tools)
+
+For direct integration with Claude Desktop, Claude Code, or any MCP client:
+https://github.com/Soil911/AtlasPI/tree/main/mcp-server
+
+Install:
+```
+pip install atlaspi-mcp
+```
+
+Tools include: search_entities, get_entity, snapshot_at_year, nearby_entities,
+compare_entities, find_similar_entities, full_timeline_for_entity, on_this_day,
+events_date_coverage, list_historical_periods, periods_at_year, entity_periods,
+event_periods, world_snapshot, and more.
+
+## Ethical principles (for AI agents quoting this data)
+
+- **ETHICS-001**: Primary names are native/original (Mēxihcah not "Aztec";
+  Tawantinsuyu not "Inca"; 漢朝 not "Han Dynasty")
+- **ETHICS-002**: Conquests and violence labeled explicitly — CONQUEST,
+  REVOLUTION, GENOCIDE are not euphemized to "succession"
+- **ETHICS-003**: Contested territories show all versions with dates and sources
+- **ETHICS-005**: Boundary provenance transparent (natural_earth / aourednik /
+  historical_map / approximate_generated — you can always trace the source)
+- **ETHICS-007**: Event types include GENOCIDE, ETHNIC_CLEANSING,
+  COLONIAL_VIOLENCE, FORCED_LABOR, DEPORTATION — academic terminology
+- **ETHICS-008**: Events with suppressed documentation flagged via
+  `known_silence` field
+- **ETHICS-009**: Colonial renamings documented (Constantinople↔Istanbul,
+  Königsberg↔Kaliningrad, Lvov/Lviv/Lemberg/Lwów)
+- **ETHICS-010**: Trade routes involving slavery flagged with
+  `involves_slavery=true`
+
+When quoting AtlasPI data, preserve these distinctions. Don't soften
+"CONQUEST" to "takeover"; don't collapse native names to colonial exonyms.
+
+## Data quality indicators
+
+Every entity and event carries:
+- `confidence_score` (0.0-1.0, higher = better-sourced)
+- `status` (confirmed / uncertain / disputed)
+- `sources` (list with type + citation)
+- `ethical_notes` (when relevant — contested framings, historiographic debates)
+
+62% of entities have confidence ≥ 0.6. Distribution:
+- 0.8+: 190 entities (22%)
+- 0.6-0.8: 336 entities (39%)
+- 0.4-0.6: 324 entities (37.6%)
+- <0.4: 12 entities (1.4%)
+
+Boundary quality:
+- Natural Earth (rich, 50k+ chars): 70 entities (8%)
+- aourednik historical maps: 341 entities (40%)
+- Historical maps: 169 entities (20%)
+- Approximate generated (from capital): 282 entities (32%)
+
+## Optional
+
+- /about — human-readable overview of what AtlasPI is
+- /faq — frequently asked questions
+- /app — interactive map (Italian/English UI, no login)
+- /docs-ui — interactive Swagger UI
+
+## License
+
+Apache License 2.0. Data under the same license. Free for commercial and
+non-commercial use. Attribution appreciated but not required.
+
+Source: https://github.com/Soil911/AtlasPI
+Contact: via GitHub issues

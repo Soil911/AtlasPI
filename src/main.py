@@ -148,54 +148,129 @@ async def lifespan(app: FastAPI):
 
 
 OPENAPI_DESCRIPTION = """
-# AtlasPI — Database Geografico Storico per Agenti AI
+# AtlasPI — Historical Geography API for AI Agents
 
-**862 entita' storiche + 461 eventi** su 9 regioni, da 4500 a.C. al 2024.
-Confini reali da fonti accademiche, governance etica documentata.
+**The first REST API and MCP server for structured historical geography.**
+Free, public, Apache 2.0 licensed. No login. No API key. No registration.
+
+## What AtlasPI is
+
+A structured historical-geographic database designed specifically for AI agents,
+researchers, and digital-humanities developers. Every record carries:
+
+- **Real boundaries** (GeoJSON polygons/multipolygons from Natural Earth,
+  aourednik/historical-basemaps, and curated academic maps — not placeholders)
+- **Academic sources** (2,400+ bibliographic citations)
+- **Confidence scores** (0.0–1.0 per entity/event)
+- **Explicit ethical framings** (conquests labeled as CONQUEST not "succession";
+  contested names preserved; colonial renamings documented)
+- **Native-language primary names** (Mēxihcah not "Aztec"; Tawantinsuyu not
+  "Inca"; 漢朝 not "Han Dynasty")
+
+## What's in the dataset (live)
+
+| Resource | Count | Endpoint |
+|---|---|---|
+| Historical entities | **862** | `/v1/entities` |
+| Historical events | **490** | `/v1/events` |
+| Historical periods | **48** | `/v1/periods` |
+| Historical cities | **110** | `/v1/cities` |
+| Trade routes | **41** | `/v1/routes` |
+| Dynasty chains | **94** | `/v1/chains` |
+| Sources | **2,400+** | (embedded) |
+
+**Temporal range**: 4500 BCE → 2024 CE.
+**Geographic range**: all inhabited continents (Europe 17%, Asia 31%, Africa 18%,
+Americas 17%, Middle East 11%, Oceania 2%).
+
+## Why this API exists
+
+Existing geo datasets (Natural Earth, OSM, Wikidata) are either modern-only,
+unstructured, or poorly cross-linked. AI agents need:
+1. Semantic queries — not just SPARQL
+2. Contextualized answers — e.g., "what was happening in 1250 globally" in
+   one call (`/v1/snapshot/year/1250`)
+3. Cross-referenced entities — e.g., "which periods did Imperium Romanum
+   overlap with?" (`/v1/entities/{id}/periods`)
+4. Ethical framings — e.g., "Aztec Imperial Period" is labeled
+   region=americas, with historiographic_note on Spanish conquest
+
+AtlasPI provides all of this in a uniform REST API.
 
 ## Quick Start
 
+**Python:**
 ```python
 import requests
+BASE = "https://atlaspi.cra-srl.com"
 
-# Cerca entita' per anno
-r = requests.get("http://localhost:10100/v1/entity?year=1500")
-entities = r.json()["entities"]
+# Discover entities existing in 1500 CE
+r = requests.get(f"{BASE}/v1/entities", params={"year": 1500, "limit": 20})
 
-# Snapshot del mondo in un anno
-r = requests.get("http://localhost:10100/v1/snapshot/1500")
-world = r.json()  # count, summary per tipo/continente, entities
+# Single-call world snapshot
+r = requests.get(f"{BASE}/v1/snapshot/year/1250")
+print(r.json()["periods"]["items"])  # periods active in 1250, by region
 
-# Entita' vicine a coordinate
-r = requests.get("http://localhost:10100/v1/nearby?lat=41.9&lon=12.5&year=100")
-nearby = r.json()
+# Events on a specific date
+r = requests.get(f"{BASE}/v1/events/on-this-day/07-14")  # Bastille Day
 
-# Confronta due entita'
-r = requests.get("http://localhost:10100/v1/compare/1/2")
-comparison = r.json()
+# Find similar entities by weighted algorithm
+r = requests.get(f"{BASE}/v1/entities/1/similar?limit=10")
+
+# Cross-resource period linkage
+r = requests.get(f"{BASE}/v1/entities/1/periods")  # Imperium Romanum periods
 ```
 
-```javascript
-// JavaScript/Node.js
-const res = await fetch('http://localhost:10100/v1/snapshot/1500');
-const { entities, summary } = await res.json();
-```
-
+**curl:**
 ```bash
-# curl
-curl -s http://localhost:10100/v1/nearby?lat=30\\&lon=31\\&year=-300 | jq .
-curl -s http://localhost:10100/v1/snapshot/1500?type=empire | jq .summary
-curl -s http://localhost:10100/v1/random | jq .name_original
+curl -s https://atlaspi.cra-srl.com/v1/snapshot/year/1492 | jq .periods
+curl -s https://atlaspi.cra-srl.com/v1/entities/1/similar | jq '.similar[0]'
+curl -s https://atlaspi.cra-srl.com/v1/periods/by-slug/bronze-age
+curl -s "https://atlaspi.cra-srl.com/v1/events?year=1453"
 ```
 
-## Principi Etici
-- **ETHICS-001**: Nomi originali/locali come dato primario
-- **ETHICS-002**: Conquiste e violenze documentate esplicitamente
-- **ETHICS-003**: Territori contestati con tutte le versioni
+## Key endpoint categories
 
-## Fonti
-- Natural Earth (ne_110m_admin_0_countries)
-- aourednik/historical-basemaps (7 periodi: 100-1900)
+- **Discovery**: `/v1/entities`, `/v1/events`, `/v1/periods`, `/v1/chains`
+- **Detail**: `/v1/entities/{id}`, `/v1/events/{id}`, `/v1/periods/by-slug/{slug}`
+- **Cross-resource**: `/v1/entities/{id}/periods`, `/v1/events/{id}/periods`,
+  `/v1/entities/{id}/predecessors`, `/v1/entities/{id}/successors`
+- **Temporal**: `/v1/snapshot/year/{year}`, `/v1/periods/at-year/{year}`,
+  `/v1/events/on-this-day/{mm-dd}`, `/v1/events/at-date/{iso-date}`
+- **Spatial**: `/v1/nearby`, `/v1/entities?bbox=...`
+- **Semantic**: `/v1/entities/{id}/similar`, `/v1/search/advanced`, `/v1/compare/{id1}/{id2}`
+- **Export**: `/v1/export/geojson`, `/v1/export/csv`, `/v1/export/timeline`
+
+## Also available
+
+- **MCP Server** (34 tools, v0.7.0): [github.com/Soil911/AtlasPI](https://github.com/Soil911/AtlasPI/tree/main/mcp-server) — plug directly into Claude Desktop, Claude Code, or any MCP client
+- **OpenAPI spec**: `/openapi.json` — machine-readable schema
+- **Swagger UI**: `/docs` — interactive documentation
+- **LLMs.txt**: `/llms.txt` — AI-agent-friendly site map
+- **Plugin manifest**: `/.well-known/ai-plugin.json` — OpenAI plugin spec
+
+## Ethics (ETHICS-001 → ETHICS-010)
+
+- Native-language primary names (ETHICS-001)
+- Explicit conquest/violence labeling (ETHICS-002)
+- Contested territories with all versions (ETHICS-003)
+- Boundary provenance transparent (ETHICS-005)
+- Geographic guard against fuzzy-match displacement (ETHICS-006)
+- Academic event terminology (GENOCIDE, COLONIAL_VIOLENCE) — no euphemisms (ETHICS-007)
+- Known-silence fields for events with suppressed documentation (ETHICS-008)
+- Colonial renamings documented, not hidden (ETHICS-009)
+- Slavery-involved trade routes flagged (ETHICS-010)
+
+## Data sources
+
+- **Natural Earth** (public domain): ne_110m_admin_0_countries
+- **aourednik/historical-basemaps** (CC BY 4.0): 54 period snapshots 4500 BCE → 2025
+- **Academic citations**: Cambridge Histories, Oxford Handbooks, regional specialists
+
+## License
+
+**Apache License 2.0** — free for commercial and non-commercial use.
+Full source: [github.com/Soil911/AtlasPI](https://github.com/Soil911/AtlasPI)
 """
 
 app = FastAPI(
@@ -302,6 +377,49 @@ async def serve_sitemap():
         STATIC_DIR / "sitemap.xml",
         media_type="application/xml",
     )
+
+
+@app.get("/llms.txt", include_in_schema=False)
+async def serve_llms_txt():
+    """LLMs.txt — emerging standard for AI agent site discovery.
+
+    Provides an AI-agent-readable description of all endpoints, their purposes,
+    and the data model. Consumed by Claude, GPT, Perplexity, and others.
+    """
+    return FileResponse(
+        STATIC_DIR / "llms.txt",
+        media_type="text/plain; charset=utf-8",
+    )
+
+
+@app.get("/.well-known/ai-plugin.json", include_in_schema=False)
+async def serve_ai_plugin():
+    """OpenAI plugin manifest — plug directly into ChatGPT-compatible platforms."""
+    return FileResponse(
+        STATIC_DIR / ".well-known" / "ai-plugin.json",
+        media_type="application/json",
+    )
+
+
+@app.get("/.well-known/mcp.json", include_in_schema=False)
+async def serve_mcp_manifest():
+    """MCP server discovery manifest."""
+    return FileResponse(
+        STATIC_DIR / ".well-known" / "mcp.json",
+        media_type="application/json",
+    )
+
+
+@app.get("/about", include_in_schema=False)
+async def serve_about():
+    """Public about page — what AtlasPI is, for humans and search engines."""
+    return FileResponse(STATIC_DIR / "about.html", media_type="text/html")
+
+
+@app.get("/faq", include_in_schema=False)
+async def serve_faq():
+    """Public FAQ page with JSON-LD FAQPage schema for rich search results."""
+    return FileResponse(STATIC_DIR / "faq.html", media_type="text/html")
 
 
 @app.get("/v1/openapi.json", include_in_schema=False)

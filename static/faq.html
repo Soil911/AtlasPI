@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — AtlasPI Historical Geography API</title>
+  <meta name="description" content="Frequently asked questions about AtlasPI — is it free, do I need an API key, what data is included, how do AI agents use it?">
+  <link rel="canonical" href="https://atlaspi.cra-srl.com/faq">
+  <link rel="icon" type="image/svg+xml" href="/static/landing/assets/favicon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is AtlasPI free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The REST API, MCP server, and dataset are all under Apache License 2.0. Free for commercial and non-commercial use. No subscription, no API key, no registration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need an API key?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Every endpoint is publicly accessible without authentication. CORS-enabled so you can call it from browser JavaScript."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this an internal company portal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. AtlasPI is a public open-source project hosted at atlaspi.cra-srl.com. The cra-srl.com domain belongs to the project sponsor (CRA S.r.l.) but the data and API are public Apache 2.0-licensed infrastructure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is this different from Wikidata or Natural Earth?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wikidata is encyclopedic but unstructured for geographic queries — no boundaries, no cross-referenced dynasty chains, requires SPARQL. Natural Earth is modern-only with no temporal dimension. AtlasPI combines real historical boundaries, a temporal dimension (4500 BCE to 2024), explicit ethical framings, and AI-agent-optimized endpoints like /v1/snapshot/year/{year} for single-call world views."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #0d1117; --surface: #161b22; --border: #30363d;
+      --text: #c9d1d9; --text-muted: #8b949e; --accent: #58a6ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+    }
+    header {
+      background: var(--surface); border-bottom: 1px solid var(--border);
+      padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;
+    }
+    header a { color: var(--accent); text-decoration: none; margin-left: 16px; font-size: 14px; }
+    header h1 { font-size: 20px; margin: 0; }
+    header h1 span { color: var(--accent); }
+    main { max-width: 800px; margin: 0 auto; padding: 48px 24px; }
+    h1.page-title { font-size: 36px; margin-bottom: 32px; }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+    .faq-item h3 {
+      margin: 0 0 12px 0;
+      color: var(--accent);
+      font-size: 18px;
+    }
+    .faq-item p, .faq-item ul { margin: 0; }
+    .faq-item p + p { margin-top: 12px; }
+    .faq-item ul { padding-left: 20px; }
+    code {
+      background: #0d1117; padding: 2px 6px; border-radius: 3px;
+      font-family: 'SF Mono', Monaco, monospace; font-size: 0.9em;
+      border: 1px solid var(--border);
+    }
+    pre {
+      background: #0d1117; padding: 12px; border-radius: 6px;
+      border: 1px solid var(--border); overflow-x: auto; margin: 8px 0;
+    }
+    pre code { background: none; border: none; padding: 0; }
+    a { color: var(--accent); }
+    footer {
+      margin-top: 64px; padding: 32px 24px; text-align: center;
+      color: var(--text-muted); border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Atlas<span>PI</span></h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/app">Interactive Map</a>
+      <a href="/docs">API Docs</a>
+      <a href="https://github.com/Soil911/AtlasPI">GitHub</a>
+    </nav>
+  </header>
+  <main>
+    <h1 class="page-title">Frequently Asked Questions</h1>
+
+    <div class="faq-item">
+      <h3>Is AtlasPI free?</h3>
+      <p>Yes — the REST API, MCP server, and dataset are all under Apache License 2.0.
+        Free for commercial and non-commercial use. No subscription, no API key,
+        no registration.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do I need an API key or to log in?</h3>
+      <p>No. Every endpoint is publicly accessible without authentication:</p>
+      <pre><code>curl https://atlaspi.cra-srl.com/v1/entities | head
+# No auth headers needed.</code></pre>
+      <p>CORS is enabled so you can call it from browser JavaScript directly.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is this an internal company portal?</h3>
+      <p>No. AtlasPI is a <strong>public open-source project</strong>. The domain
+        <code>cra-srl.com</code> belongs to the project sponsor (CRA S.r.l., Italy),
+        but the data, code, and infrastructure are Apache 2.0 — public.</p>
+      <p>Source: <a href="https://github.com/Soil911/AtlasPI">github.com/Soil911/AtlasPI</a></p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How is this different from Wikidata or Natural Earth?</h3>
+      <ul>
+        <li><strong>Wikidata</strong>: encyclopedic but unstructured for geographic
+          queries. No consistent historical boundaries, no cross-referenced dynasty
+          chains, requires SPARQL.</li>
+        <li><strong>Natural Earth / OSM</strong>: modern-only. No temporal dimension
+          for history.</li>
+        <li><strong>AtlasPI</strong>: real historical boundaries (from aourednik &
+          NE), a temporal range 4500 BCE → 2024, explicit ethical framings,
+          AI-agent-optimized endpoints like <code>/v1/snapshot/year/{year}</code> for
+          single-call world views.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>What's included in the dataset?</h3>
+      <ul>
+        <li><strong>862 historical entities</strong> — empires, kingdoms, sultanates,
+          republics, dynasties, chiefdoms, confederations</li>
+        <li><strong>490 events</strong> — battles, treaties, genocides, epidemics,
+          revolutions, natural disasters (all with main_actor and location)</li>
+        <li><strong>48 historical periods</strong> — Bronze Age, Classical Antiquity,
+          Edo Period, Cold War, etc. (with historiographic_note documenting
+          scholarly debates)</li>
+        <li><strong>110 cities</strong> — capitals, trade hubs, religious centers,
+          ports, academic centers</li>
+        <li><strong>41 trade routes</strong> — Silk Road, Trans-Saharan, Indian
+          Ocean, etc. (with involves_slavery flag where applicable)</li>
+        <li><strong>94 dynasty chains</strong> — Chinese dynasties, Roman→Byzantine,
+          Persian succession, Native American confederacies, etc.</li>
+        <li><strong>2,400+ academic sources</strong> — Cambridge Histories, Oxford
+          Handbooks, regional specialist works</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>What's an MCP server?</h3>
+      <p>Model Context Protocol (MCP) is Anthropic's open standard for exposing
+        tools to AI assistants like Claude. AtlasPI's MCP server provides 34
+        pre-built tools so Claude Desktop, Claude Code, or any MCP-compatible
+        client can query historical data directly.</p>
+      <pre><code>pip install atlaspi-mcp</code></pre>
+      <p>Tools include: <code>search_entities</code>, <code>snapshot_at_year</code>,
+      <code>find_similar_entities</code>, <code>on_this_day</code>,
+      <code>list_historical_periods</code>, and 29 more.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How accurate is the data?</h3>
+      <p>Every record carries:</p>
+      <ul>
+        <li><code>confidence_score</code> (0.0-1.0)</li>
+        <li><code>status</code> (confirmed / uncertain / disputed)</li>
+        <li><code>sources</code> (list with bibliographic citations)</li>
+        <li><code>ethical_notes</code> when relevant (contested framings)</li>
+      </ul>
+      <p>61% of entities have confidence ≥ 0.6. Boundary provenance is
+        transparent — <code>boundary_source</code> tells you whether a polygon
+        comes from Natural Earth, aourednik historical maps, or is an approximate
+        generated circle around the capital.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Why does the data use native names instead of English?</h3>
+      <p>Because historical accuracy matters. The primary name for the Aztec
+        polity is <strong>Mēxihcah</strong>, the self-designation in Classical
+        Nahuatl. "Aztec" is a 19th-century English term. Similarly, <strong>Tawantinsuyu</strong>
+        ("four parts together") is what the Inca Empire called itself in Quechua.
+        Using native-language primary names (ETHICS-001) gives downstream AI
+        agents and applications the option to preserve these distinctions.</p>
+      <p>If you want English versions, use <code>name_variants</code> (a list
+        of alternative names across languages and scripts).</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I contribute entities, events, or corrections?</h3>
+      <p>Yes — open a pull request on
+        <a href="https://github.com/Soil911/AtlasPI">GitHub</a>. Entities live in
+        <code>data/entities/batch_*.json</code>, events in <code>data/events/</code>,
+        periods in <code>data/periods/</code>, chains in <code>data/chains/</code>.</p>
+      <p>Pipeline requirements:</p>
+      <ul>
+        <li>Primary name in native language/script</li>
+        <li>At least one academic source citation</li>
+        <li>Explicit <code>status</code> (confirmed/uncertain/disputed)</li>
+        <li>Ethical notes for contested or colonial framings</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is there a rate limit?</h3>
+      <p>There's a soft rate limit (60 requests/minute per IP) to prevent abuse,
+        but no hard cap for reasonable use. If you need higher volume for a
+        research project, contact us via GitHub issues.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Where does the "PI" in AtlasPI come from?</h3>
+      <p>"PI" stands for <strong>Programmatic Interface</strong> — AtlasPI is
+        designed to be called programmatically by software, including AI agents.
+        Not a Raspberry Pi, not an internal product code — just a reminder that
+        this is an API-first historical atlas.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do AI agents like Claude or ChatGPT use this?</h3>
+      <p>Three ways:</p>
+      <ol>
+        <li><strong>Via the REST API</strong> — any agent with HTTP tool-calling
+          can query <code>/v1/*</code> endpoints directly.</li>
+        <li><strong>Via the MCP server</strong> — Claude Desktop, Claude Code,
+          Continue.dev, and other MCP clients can install <code>atlaspi-mcp</code>
+          and get 34 ready-made tools.</li>
+        <li><strong>Via the OpenAI plugin spec</strong> — <code>/.well-known/ai-plugin.json</code>
+          describes the plugin for ChatGPT-compatible platforms.</li>
+      </ol>
+      <p>The <code>/llms.txt</code> file is the canonical site-map for AI agents
+        consuming this API.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is the data biased? What about colonialism?</h3>
+      <p>All history writing has biases. AtlasPI addresses this explicitly via
+        10 documented ETHICS principles (see <a href="/about">/about</a>). Examples:</p>
+      <ul>
+        <li>Conquests are labeled as <code>CONQUEST</code>, not "succession".</li>
+        <li>Genocides use the academic term <code>GENOCIDE</code>, not euphemisms.</li>
+        <li>Colonial renamings are documented (Constantinople/Istanbul,
+          Königsberg/Kaliningrad).</li>
+        <li>Trade routes involving slavery are flagged (<code>involves_slavery=true</code>).</li>
+        <li>The periodization "Pre-Columbian Era" includes a
+          <code>historiographic_note</code> acknowledging its Eurocentric framing.</li>
+      </ul>
+      <p>The AI analysis pipeline also flags geographic and temporal coverage
+        gaps to counter cultural-dominance bias.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I report an error?</h3>
+      <p>Open an issue on <a href="https://github.com/Soil911/AtlasPI/issues">GitHub</a>
+        with the entity/event ID, the field in error, and ideally a source citation
+        for the correct value.</p>
+    </div>
+  </main>
+  <footer>
+    <p>AtlasPI — free, public, Apache 2.0. <a href="/">Home</a> · <a href="/about">About</a> · <a href="/docs">Docs</a> · <a href="https://github.com/Soil911/AtlasPI">GitHub</a></p>
+  </footer>
+</body>
+</html>

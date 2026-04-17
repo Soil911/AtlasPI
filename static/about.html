@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About AtlasPI — Historical Geography API for AI Agents</title>
+  <meta name="description" content="AtlasPI is a free, public REST API and MCP server providing 862 historical entities, 490 events, 94 dynasty chains from 4500 BCE to 2024 with real boundaries and academic sources. Apache 2.0 licensed, no authentication required.">
+  <link rel="canonical" href="https://atlaspi.cra-srl.com/about">
+  <meta property="og:title" content="About AtlasPI">
+  <meta property="og:description" content="What AtlasPI is, why it exists, who uses it, and how it's different from existing datasets.">
+  <meta property="og:url" content="https://atlaspi.cra-srl.com/about">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="/static/landing/assets/favicon.svg">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+      --accent-dim: #1f6feb;
+      --success: #3fb950;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+    }
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header a { color: var(--accent); text-decoration: none; margin-left: 16px; font-size: 14px; }
+    header a:hover { text-decoration: underline; }
+    header h1 { font-size: 20px; margin: 0; }
+    header h1 span { color: var(--accent); }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+    h1.page-title { font-size: 36px; margin: 0 0 8px 0; }
+    .subtitle { color: var(--text-muted); font-size: 18px; margin-bottom: 32px; }
+    h2 { margin-top: 48px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+    h3 { margin-top: 32px; color: var(--accent); }
+    code {
+      background: var(--surface);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: 'SF Mono', Monaco, monospace;
+      font-size: 0.9em;
+    }
+    pre {
+      background: var(--surface);
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+    }
+    pre code { background: none; padding: 0; }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 16px;
+      text-align: center;
+    }
+    .stat-value { font-size: 28px; font-weight: 700; color: var(--accent); }
+    .stat-label { color: var(--text-muted); font-size: 13px; margin-top: 4px; }
+    .cta {
+      display: inline-block;
+      background: var(--accent-dim);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 8px 8px 8px 0;
+    }
+    .cta:hover { background: var(--accent); }
+    .badge {
+      display: inline-block;
+      background: var(--success);
+      color: white;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-left: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    th { color: var(--accent); }
+    a { color: var(--accent); }
+    footer {
+      margin-top: 64px;
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+    blockquote {
+      border-left: 4px solid var(--accent);
+      padding-left: 16px;
+      margin-left: 0;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Atlas<span>PI</span></h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/app">Interactive Map</a>
+      <a href="/docs">API Docs</a>
+      <a href="/faq">FAQ</a>
+      <a href="https://github.com/Soil911/AtlasPI">GitHub</a>
+    </nav>
+  </header>
+  <main>
+    <h1 class="page-title">About AtlasPI</h1>
+    <p class="subtitle">
+      The first REST API and MCP server for structured historical geography.
+      Built for AI agents. Free and public.
+      <span class="badge">Apache 2.0</span>
+    </p>
+
+    <h2>What AtlasPI is</h2>
+    <p>
+      AtlasPI is a structured historical-geographic database — empires, kingdoms,
+      sultanates, republics, confederations, dynasties, cities, trade routes, and
+      major events — designed specifically for consumption by AI agents, researchers,
+      and digital-humanities developers.
+    </p>
+    <p>
+      It is <strong>not</strong> an internal company intranet, ERP, or a login-protected
+      application. Every endpoint returns JSON with no authentication, no API key,
+      no registration, no rate limit for reasonable use.
+    </p>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-value">862</div>
+        <div class="stat-label">Historical entities</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">490</div>
+        <div class="stat-label">Events</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">48</div>
+        <div class="stat-label">Historical periods</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">94</div>
+        <div class="stat-label">Dynasty chains</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">110</div>
+        <div class="stat-label">Cities</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">41</div>
+        <div class="stat-label">Trade routes</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">2,400+</div>
+        <div class="stat-label">Academic sources</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">34</div>
+        <div class="stat-label">MCP tools</div>
+      </div>
+    </div>
+
+    <p><strong>Temporal range:</strong> 4500 BCE → 2024 CE (6500+ years).<br>
+       <strong>Geographic range:</strong> all inhabited continents.<br>
+       <strong>License:</strong> Apache 2.0 for both code and data.</p>
+
+    <h2>Why AtlasPI exists</h2>
+    <p>
+      Existing geographic datasets fall into three camps, all inadequate for
+      modern AI:
+    </p>
+    <ul>
+      <li><strong>Natural Earth / OSM</strong> — modern-only, no temporal dimension.</li>
+      <li><strong>Wikidata</strong> — comprehensive but unstructured for geographic queries;
+        no boundaries, no cross-referenced dynasty chains.</li>
+      <li><strong>Academic GIS databases</strong> — often paywalled or requiring
+        specialized software.</li>
+    </ul>
+    <p>AI agents answering questions about history need:</p>
+    <ol>
+      <li><strong>Semantic queries</strong>, not just SPARQL. "Which empires existed
+        in 1250" should be <code>GET /v1/entities?year=1250</code>, not a 40-line query.</li>
+      <li><strong>One-call contextualization</strong>. "Tell me about the world in 1250"
+        should return entities + events + periods + cities + chains in a single response
+        (this is what <code>/v1/snapshot/year/1250</code> does).</li>
+      <li><strong>Cross-resource linkage</strong>. "Which periods did the Roman Empire
+        overlap with?" should be <code>GET /v1/entities/{id}/periods</code>.</li>
+      <li><strong>Ethical framings preserved</strong>. "Aztec Imperial Period" is labeled
+        <code>region=americas</code>, with <code>historiographic_note</code> documenting
+        Spanish conquest. Native names come first (Mēxihcah, Tawantinsuyu, 漢朝).</li>
+    </ol>
+    <p>AtlasPI provides all of this in a uniform REST API and MCP server.</p>
+
+    <h2>Quick start</h2>
+
+    <h3>Try it right now — no setup</h3>
+    <pre><code>curl https://atlaspi.cra-srl.com/v1/snapshot/year/1492 | jq .periods
+curl https://atlaspi.cra-srl.com/v1/events/on-this-day/07-14
+curl https://atlaspi.cra-srl.com/v1/entities/1/similar?limit=5</code></pre>
+
+    <h3>Python</h3>
+    <pre><code>import requests
+BASE = "https://atlaspi.cra-srl.com"
+
+# What was happening in 1250 globally?
+r = requests.get(f"{BASE}/v1/snapshot/year/1250")
+world = r.json()
+# -> periods (by region), entities (top by confidence), events, cities, chains
+
+# Find similar entities
+r = requests.get(f"{BASE}/v1/entities/1/similar?limit=10")
+similar = r.json()["similar"]  # weighted algorithm: type+temporal+duration+confidence
+
+# Events on a specific day of year
+r = requests.get(f"{BASE}/v1/events/on-this-day/08-15")  # includes Indian Independence
+events = r.json()["events"]</code></pre>
+
+    <h3>MCP server (for Claude Desktop / Claude Code)</h3>
+    <pre><code>pip install atlaspi-mcp</code></pre>
+    <p>Add to your MCP client config:</p>
+    <pre><code>{
+  "mcpServers": {
+    "atlaspi": {
+      "command": "python",
+      "args": ["-m", "atlaspi_mcp"]
+    }
+  }
+}</code></pre>
+    <p>34 tools are exposed: <code>search_entities</code>, <code>snapshot_at_year</code>,
+    <code>find_similar_entities</code>, <code>on_this_day</code>,
+    <code>list_historical_periods</code>, <code>world_snapshot</code>, and more.</p>
+
+    <h2>Ethics first</h2>
+    <p>History is contested. AtlasPI's 10 ETHICS principles are baked into the data
+    model, not an afterthought:</p>
+    <ul>
+      <li><strong>ETHICS-001</strong> — Native-language primary names. Not "Aztec" but
+        <em>Mēxihcah</em>; not "Inca" but <em>Tawantinsuyu</em>; not "Han" but 漢朝.</li>
+      <li><strong>ETHICS-002</strong> — Conquests labeled as CONQUEST, not softened to
+        "succession". REVOLUTION, GENOCIDE, DEPORTATION are explicit event types.</li>
+      <li><strong>ETHICS-003</strong> — Contested territories show all versions with
+        dates and sources.</li>
+      <li><strong>ETHICS-005</strong> — Boundary provenance transparent
+        (<code>natural_earth</code> / <code>aourednik</code> / <code>historical_map</code> /
+        <code>approximate_generated</code>). You can always trace the source.</li>
+      <li><strong>ETHICS-006</strong> — Geographic guard against fuzzy-match displacement.</li>
+      <li><strong>ETHICS-007</strong> — Academic terminology. GENOCIDE, ETHNIC_CLEANSING,
+        COLONIAL_VIOLENCE are event types — no euphemisms.</li>
+      <li><strong>ETHICS-008</strong> — <code>known_silence</code> field for events
+        with suppressed or erased documentation.</li>
+      <li><strong>ETHICS-009</strong> — Colonial renamings documented (Constantinople↔Istanbul,
+        Königsberg↔Kaliningrad, Lvov/Lviv/Lemberg/Lwów).</li>
+      <li><strong>ETHICS-010</strong> — Trade routes involving slavery flagged explicitly.</li>
+    </ul>
+    <p>
+      See <a href="https://github.com/Soil911/AtlasPI/tree/main/docs/ethics">docs/ethics/</a>
+      for the full ADRs.
+    </p>
+
+    <h2>Who should use this?</h2>
+
+    <h3>AI agents (LLMs with tools)</h3>
+    <p>Connect via the MCP server or call the REST API directly.
+    <code>/llms.txt</code> is provided for discoverability; <code>/.well-known/ai-plugin.json</code>
+    supports the OpenAI plugin spec.</p>
+
+    <h3>Historians and researchers</h3>
+    <p>Query for specific entities, events, or periods. Every record has academic
+    sources and confidence scores. Export as GeoJSON for GIS, CSV for analysis.</p>
+
+    <h3>Educators</h3>
+    <p>Use the interactive map (<a href="/app">/app</a>) in classrooms. Embed snapshots
+    or comparisons in educational content.</p>
+
+    <h3>Developers</h3>
+    <p>Build historical-timeline apps, "on this day" features, dynasty visualizers,
+    empire-boundary maps. The API is CORS-enabled.</p>
+
+    <h2>Data sources</h2>
+    <table>
+      <tr><th>Source</th><th>License</th><th>Use</th></tr>
+      <tr>
+        <td>Natural Earth (ne_110m_admin_0)</td>
+        <td>Public domain</td>
+        <td>Modern country boundaries</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/aourednik/historical-basemaps">aourednik/historical-basemaps</a></td>
+        <td>CC BY 4.0</td>
+        <td>54 historical map snapshots (4500 BCE → 2025)</td>
+      </tr>
+      <tr>
+        <td>Academic citations</td>
+        <td>Per-source</td>
+        <td>2,400+ Cambridge / Oxford / regional specialist references</td>
+      </tr>
+    </table>
+
+    <h2>Open source</h2>
+    <p>
+      Everything is on <a href="https://github.com/Soil911/AtlasPI">GitHub</a> under Apache 2.0.
+      Contribute entities, events, chains, or periods via pull request.
+    </p>
+    <div>
+      <a class="cta" href="https://github.com/Soil911/AtlasPI">Source on GitHub</a>
+      <a class="cta" href="/docs">Interactive API Docs</a>
+      <a class="cta" href="/app">Try the map</a>
+    </div>
+
+    <h2>Version info</h2>
+    <p>Currently at v6.30.0. Live stats: <a href="/v1/stats">/v1/stats</a>.
+       OpenAPI spec: <a href="/openapi.json">/openapi.json</a>.
+       LLMs.txt: <a href="/llms.txt">/llms.txt</a>.</p>
+
+  </main>
+  <footer>
+    <p>AtlasPI — free, public, Apache 2.0 licensed. No login. No API key. No registration.</p>
+    <p><a href="https://github.com/Soil911/AtlasPI">Source</a> · <a href="/docs">API Docs</a> · <a href="/app">Interactive map</a> · <a href="/faq">FAQ</a></p>
+  </footer>
+</body>
+</html>

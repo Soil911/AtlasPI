@@ -225,7 +225,17 @@ def period_by_slug(
 
 @router.get(
     "/v1/periods/{period_id}",
-    summary="Get period detail by numeric ID",
+    summary="Get full detail for a historical period",
+    description=(
+        "Returns the complete record for a historical period by numeric ID, "
+        "including description, historiographic_note (documenting scholarly "
+        "contestation), alternative_names (competing/deprecated labels like "
+        "'Dark Ages' for Early Middle Ages), and full academic sources.\n\n"
+        "For AI agents: periods are region-scoped (Europe, Asia_East, "
+        "Africa, Americas, etc.) — no global Eurocentric defaults. The "
+        "`historiographic_note` field is critical context — it documents "
+        "how historians contest these periodizations."
+    ),
 )
 def period_detail(
     period_id: int = Path(..., ge=1),

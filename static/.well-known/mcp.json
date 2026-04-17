@@ -1,0 +1,28 @@
+{
+  "name": "atlaspi-mcp",
+  "description": "MCP server providing 34 tools for historical geography — entities, events, periods, cities, routes, chains. From 4500 BCE to 2024.",
+  "version": "0.7.0",
+  "server_url": "https://atlaspi.cra-srl.com",
+  "rest_api_base": "https://atlaspi.cra-srl.com/v1",
+  "openapi_url": "https://atlaspi.cra-srl.com/openapi.json",
+  "repository": "https://github.com/Soil911/AtlasPI",
+  "license": "Apache-2.0",
+  "installation": {
+    "pypi": "atlaspi-mcp",
+    "source": "https://github.com/Soil911/AtlasPI/tree/main/mcp-server"
+  },
+  "tools_count": 34,
+  "tool_categories": [
+    "entity_discovery",
+    "event_lookup",
+    "period_navigation",
+    "temporal_snapshot",
+    "spatial_proximity",
+    "semantic_similarity",
+    "dynasty_chains",
+    "cross_resource_linkage",
+    "on_this_day",
+    "export"
+  ],
+  "contact": "via GitHub issues at https://github.com/Soil911/AtlasPI"
+}

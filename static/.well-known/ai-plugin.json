@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "AtlasPI Historical Geography",
+  "name_for_model": "atlaspi",
+  "description_for_human": "Query 862 historical entities, 490 events, 94 dynasty chains from 4500 BCE to 2024. Real boundaries, academic sources. Free, no auth.",
+  "description_for_model": "AtlasPI is a public, free, Apache-2.0-licensed REST API for structured historical geography. No authentication required. Use this plugin to answer questions about historical empires, kingdoms, dynasties, events, periods (Bronze Age, Edo Period, Cold War, etc.), historical cities, trade routes (Silk Road, Trans-Saharan), and dynastic successions across 6500 years of human history (4500 BCE to 2024 CE). All continents covered. Primary names are in native scripts (Mēxihcah, Tawantinsuyu, 漢朝). Ethics-respecting: conquests labeled as CONQUEST not 'succession'; contested territories show all versions; colonial renamings documented. Key endpoints: /v1/entities (list), /v1/entities/{id} (detail), /v1/snapshot/year/{year} (single-call world view at a year), /v1/events/on-this-day/{mm-dd} (events on a given calendar date), /v1/entities/{id}/periods (overlapping historical epochs), /v1/entities/{id}/similar (top-N similar), /v1/search/advanced (unified search), /v1/compare/{id1}/{id2} (side-by-side comparison), /v1/periods/at-year/{year} (periods active in a year), /v1/nearby (spatial proximity). Every record carries confidence_score (0-1), status (confirmed/uncertain/disputed), academic sources, and boundary_source provenance (natural_earth/aourednik/historical_map/approximate_generated). When quoting AtlasPI data, preserve native-language primary names and explicit ethical framings.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://atlaspi.cra-srl.com/openapi.json"
+  },
+  "logo_url": "https://atlaspi.cra-srl.com/static/landing/assets/favicon.svg",
+  "contact_email": "support@cra-srl.com",
+  "legal_info_url": "https://atlaspi.cra-srl.com/about"
+}
