@@ -2,6 +2,59 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.53.0] - 2026-04-17
+
+**Tema**: *Self-service "Mark my IP as dev" — filtro user-specific*
+
+### Il problema residuo dopo v6.52
+
+Il filtro external rimuoveva Docker/VPS/admin, ma il **traffico del dev stesso** (Clirim che apre l'app per sviluppo) passava come "human external". L'app è live da ~2 giorni — buona parte dei 1334 "external requests" erano proprio il dev.
+
+### Fix
+
+Nuova tabella `known_dev_ips` + 3 endpoint admin + button UI nella dashboard.
+
+### Schema
+
+`KnownDevIp` model:
+- `id`, `ip` (unique), `label` (opzionale: "laptop Clirim"), `marked_at` (ISO)
+
+### Endpoint (3)
+
+- `POST /admin/dev-ips/mark-current?label=X` — registra l'IP del richiedente
+- `GET /admin/dev-ips` — list dev IPs con conteggio
+- `DELETE /admin/dev-ips/{id}` — rimuovi
+
+### Dashboard UI
+
+Nuova sezione arancione sotto il toggle scope:
+
+```
+🛠️ Mark my IP as dev     N IP dev marcati — filtrati da "External traffic only".
+[chip: 91.13.45.6 laptop ×]
+```
+
+Click "Mark my IP as dev" → prompt chiede etichetta → POST endpoint → toast + reload. L'IP apparirà nei chip rimovibili.
+
+### Filter integration
+
+`apply_external_filter(q, db=db)` ora aggiunge:
+```sql
+WHERE client_ip NOT IN (SELECT ip FROM known_dev_ips)
+```
+
+X-Forwarded-For aware (nginx reverse proxy).
+
+### Test
+
+`tests/test_v653_dev_ips.py`: 7 test — POST mark idempotente, GET list, DELETE, filter integration (verifica che external count scenda dopo mark).
+
+### Migration
+
+`alembic/versions/014_known_dev_ips.py` — crea tabella + index unique su IP.
+
+---
+
 ## [v6.52.0] - 2026-04-17
 
 **Tema**: *Analytics external-only filter — "capire solo il traffico vero"*

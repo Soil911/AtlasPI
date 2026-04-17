@@ -11,16 +11,17 @@ v6.52 change:
 - Toggle UI in dashboard per switchare.
 """
 
+import datetime
 import logging
 import re
 
-from fastapi import APIRouter, Depends, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from fastapi.responses import HTMLResponse, JSONResponse
 from sqlalchemy import and_, desc, func, not_
 from sqlalchemy.orm import Session
 
 from src.db.database import get_db
-from src.db.models import ApiRequestLog
+from src.db.models import ApiRequestLog, KnownDevIp
 
 logger = logging.getLogger(__name__)
 
@@ -221,13 +222,14 @@ _INTERNAL_PATH_PREFIXES: list[str] = [
 ]
 
 
-def apply_external_filter(q):
-    """Filter query to exclude internal/healthcheck/admin traffic.
+def apply_external_filter(q, db: Session | None = None):
+    """Filter query to exclude internal/healthcheck/admin + known dev IPs traffic.
 
     Rimuove:
     - Client IPs in ranges localhost / Docker / LAN / VPS self
     - Path /health, /metrics, favicon, robots, sitemap, llms.txt
     - Path starting with /admin, /static, /.well-known
+    - v6.53: IPs marcati come dev nella tabella known_dev_ips (via db session)
     """
     for pattern in _INTERNAL_IP_LIKES:
         q = q.filter(not_(ApiRequestLog.client_ip.like(pattern)))
@@ -237,7 +239,98 @@ def apply_external_filter(q):
         q = q.filter(ApiRequestLog.path != path_exact)
     for prefix in _INTERNAL_PATH_PREFIXES:
         q = q.filter(not_(ApiRequestLog.path.like(prefix + "%")))
+    # v6.53: exclude user-marked dev IPs (explicit select)
+    if db is not None:
+        from sqlalchemy import select
+        dev_ips_select = select(KnownDevIp.ip)
+        q = q.filter(not_(ApiRequestLog.client_ip.in_(dev_ips_select)))
     return q
+
+
+# ─── v6.53: Dev IPs management endpoints ────────────────────────
+
+def _get_client_ip(request: Request) -> str:
+    """Extract client IP from request, respecting X-Forwarded-For (nginx)."""
+    xff = request.headers.get("x-forwarded-for", "")
+    if xff:
+        # First entry = original client
+        return xff.split(",")[0].strip()
+    if request.client:
+        return request.client.host
+    return "unknown"
+
+
+@router.post(
+    "/admin/dev-ips/mark-current",
+    summary="Marca l'IP chiamante come dev (escluso da analytics external)",
+    include_in_schema=False,
+)
+def mark_current_ip_as_dev(
+    request: Request,
+    label: str | None = Query(None, max_length=200, description="Etichetta opzionale (es. 'laptop Clirim')"),
+    db: Session = Depends(get_db),
+):
+    """Marca l'IP del chiamante come dev. Auto-filtrato da analytics external."""
+    ip = _get_client_ip(request)
+    if not ip or ip == "unknown":
+        raise HTTPException(status_code=400, detail="Impossibile determinare l'IP del chiamante")
+
+    # Check if already present (unique constraint)
+    existing = db.query(KnownDevIp).filter(KnownDevIp.ip == ip).first()
+    if existing:
+        # Update label if provided
+        if label:
+            existing.label = label
+            db.commit()
+        return {
+            "status": "already_marked",
+            "ip": ip,
+            "label": existing.label,
+            "marked_at": existing.marked_at,
+        }
+
+    now = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    entry = KnownDevIp(ip=ip, label=label, marked_at=now)
+    db.add(entry)
+    db.commit()
+    db.refresh(entry)
+    return {
+        "status": "marked",
+        "id": entry.id,
+        "ip": entry.ip,
+        "label": entry.label,
+        "marked_at": entry.marked_at,
+    }
+
+
+@router.get(
+    "/admin/dev-ips",
+    summary="List dev IPs marcati",
+    include_in_schema=False,
+)
+def list_dev_ips(db: Session = Depends(get_db)):
+    rows = db.query(KnownDevIp).order_by(desc(KnownDevIp.marked_at)).all()
+    return {
+        "count": len(rows),
+        "dev_ips": [
+            {"id": r.id, "ip": r.ip, "label": r.label, "marked_at": r.marked_at}
+            for r in rows
+        ],
+    }
+
+
+@router.delete(
+    "/admin/dev-ips/{dev_ip_id}",
+    summary="Rimuovi un IP dev (torna nei conteggi external)",
+    include_in_schema=False,
+)
+def delete_dev_ip(dev_ip_id: int, db: Session = Depends(get_db)):
+    entry = db.query(KnownDevIp).filter(KnownDevIp.id == dev_ip_id).first()
+    if not entry:
+        raise HTTPException(status_code=404, detail=f"Dev IP {dev_ip_id} not found")
+    db.delete(entry)
+    db.commit()
+    return {"status": "deleted", "id": dev_ip_id}
 
 
 # ─── JSON data endpoint ─────────────────────────────────────────
@@ -263,7 +356,7 @@ def analytics_data(
         """Factory per query base — applica filter se scope=external."""
         q = db.query(ApiRequestLog)
         if scope == "external":
-            q = apply_external_filter(q)
+            q = apply_external_filter(q, db=db)
         return q
 
     # ── Raw total (sempre, per confronto) ────────────────────────
@@ -481,6 +574,32 @@ DASHBOARD_HTML = """\
   .scope-btn.active { background: #58a6ff; color: white; border-color: #58a6ff; }
   .scope-hint { font-size: 0.75rem; color: #888; flex: 1 1 100%; }
 
+  /* v6.53: dev IPs section */
+  .dev-ips-bar {
+    background: #16213e; padding: 12px 16px; border-radius: 8px;
+    margin-bottom: 20px; border-left: 4px solid #ff9800;
+  }
+  .dev-ips-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+  .mark-dev-btn {
+    padding: 6px 14px; border: 1px solid #ff9800; border-radius: 6px;
+    background: #ff9800; color: #1a1a2e; font-size: 0.85rem; cursor: pointer;
+    font-weight: 600; transition: all 0.15s;
+  }
+  .mark-dev-btn:hover { opacity: 0.85; }
+  .dev-ips-status { font-size: 0.8rem; color: #888; }
+  .dev-ips-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .dev-ip-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 10px; background: #0f1e35; border: 1px solid #30363d;
+    border-radius: 12px; font-size: 0.78rem; color: #e0e0e0;
+  }
+  .dev-ip-chip .mono { font-family: 'Consolas', monospace; color: #ff9800; }
+  .dev-ip-chip .remove {
+    background: transparent; border: none; color: #888; cursor: pointer;
+    font-size: 0.9rem; padding: 0 2px;
+  }
+  .dev-ip-chip .remove:hover { color: #f85149; }
+
   .card .sub { font-size: 0.7rem; color: #888; margin-top: 4px; }
 
   /* Loading / error */
@@ -510,7 +629,18 @@ DASHBOARD_HTML = """\
 <div class="scope-toggle">
   <button class="scope-btn active" data-scope="external">🌐 External traffic only</button>
   <button class="scope-btn" data-scope="all">🔧 All (include Docker/VPS/admin)</button>
-  <span id="scope-hint" class="scope-hint">Escludo Docker healthcheck, VPS self-requests, admin page visits, /health, /metrics.</span>
+  <span id="scope-hint" class="scope-hint">Escludo Docker healthcheck, VPS self-requests, admin page visits, /health, /metrics, e i tuoi dev IPs.</span>
+</div>
+
+<!-- v6.53: dev IP marker -->
+<div class="dev-ips-bar">
+  <div class="dev-ips-actions">
+    <button id="mark-dev-btn" class="mark-dev-btn" title="Marca il tuo IP come dev — escluso da External traffic">
+      🛠️ Mark my IP as dev
+    </button>
+    <span id="dev-ips-status" class="dev-ips-status">Caricamento...</span>
+  </div>
+  <div id="dev-ips-list" class="dev-ips-list"></div>
 </div>
 
 <div id="loading">Loading analytics data...</div>
@@ -731,6 +861,58 @@ async function load() {
     document.getElementById('error').style.display = 'block';
   }
 }
+
+// v6.53: Dev IPs management
+
+async function loadDevIps() {
+  try {
+    const r = await fetch('/admin/dev-ips');
+    if (!r.ok) return;
+    const d = await r.json();
+    const listEl = document.getElementById('dev-ips-list');
+    const statusEl = document.getElementById('dev-ips-status');
+    if (statusEl) {
+      statusEl.textContent = d.count === 0
+        ? 'Nessun IP dev marcato.'
+        : `${d.count} IP dev marcat${d.count === 1 ? 'o' : 'i'} — filtrat${d.count === 1 ? 'o' : 'i'} da "External traffic only".`;
+    }
+    listEl.innerHTML = d.dev_ips.map(ip =>
+      '<span class="dev-ip-chip">' +
+        '<span class="mono">' + esc(ip.ip) + '</span>' +
+        (ip.label ? '<small style="color:#888">' + esc(ip.label) + '</small>' : '') +
+        '<button class="remove" data-id="' + ip.id + '" title="Rimuovi">×</button>' +
+      '</span>'
+    ).join('');
+    // Bind remove buttons
+    listEl.querySelectorAll('.remove').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const id = btn.dataset.id;
+        const res = await fetch('/admin/dev-ips/' + id, { method: 'DELETE' });
+        if (res.ok) { await loadDevIps(); load(); }
+      });
+    });
+  } catch (e) { console.error('loadDevIps', e); }
+}
+
+async function markSelfAsDev() {
+  const label = prompt("Etichetta per questo IP? (opzionale, es. 'laptop Clirim')", '');
+  const url = label ? '/admin/dev-ips/mark-current?label=' + encodeURIComponent(label) : '/admin/dev-ips/mark-current';
+  try {
+    const r = await fetch(url, { method: 'POST' });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const d = await r.json();
+    alert(d.status === 'already_marked'
+      ? `IP ${d.ip} è già marcato come dev.`
+      : `IP ${d.ip} marcato come dev! Filtrato da ora in "External traffic only".`);
+    await loadDevIps();
+    load();  // reload analytics to reflect new filter
+  } catch (e) {
+    alert('Errore: ' + e.message);
+  }
+}
+
+document.getElementById('mark-dev-btn')?.addEventListener('click', markSelfAsDev);
+loadDevIps();
 
 // v6.52: scope toggle buttons
 document.querySelectorAll('.scope-btn').forEach(btn => {
