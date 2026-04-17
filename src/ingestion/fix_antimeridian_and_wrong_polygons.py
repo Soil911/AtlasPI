@@ -164,11 +164,63 @@ def _normalize_antimeridian(geom: dict, lat: float | None, lon: float | None) ->
 # ─── Orchestrator ─────────────────────────────────────────────────────────
 
 
+# Type-based CONSERVATIVE area ceilings (km²). Entities with polygon area
+# exceeding `ceiling × AUTO_FIX_FACTOR` get auto-reset. Uses higher margin
+# than the analyzer (which flags at 1.5×) to avoid false positives on
+# legitimately-large entities (empires, trans-continental republics, etc.)
+TYPE_MAX_AREA_KM2 = {
+    "city": 10_000,
+    "city-state": 50_000,
+    "principality": 300_000,
+    "duchy": 300_000,
+    "chiefdom": 500_000,
+    "tribal_nation": 2_000_000,
+    "tribal_federation": 2_000_000,
+    "confederation": 4_000_000,
+    "kingdom": 8_000_000,
+    "sultanate": 5_000_000,
+    "republic": 15_000_000,
+    "dynasty": 20_000_000,
+    "caliphate": 20_000_000,
+    "khanate": 40_000_000,
+    "empire": 40_000_000,
+}
+
+# Fix oversized polygons if they exceed ceiling × this factor
+AUTO_FIX_OVERSIZE_FACTOR = 3.0
+
+# Radius (km) to use when regenerating a capital-based circle for an
+# oversized polygon that we can't match to a better source.
+TYPE_RESET_RADIUS_KM = {
+    "city": 10,
+    "city-state": 30,
+    "principality": 80,
+    "duchy": 100,
+    "chiefdom": 150,
+    "tribal_nation": 250,
+    "tribal_federation": 250,
+    "confederation": 400,
+    "kingdom": 500,
+    "sultanate": 400,
+    "republic": 800,
+    "dynasty": 700,
+    "caliphate": 800,
+    "khanate": 1000,
+    "empire": 1200,
+}
+
+
+def _polygon_area_km2(geom) -> float:
+    """Rough km² from shapely geometry (degree area × 111² — not great at poles, fine for sanity)."""
+    return geom.area * 111 * 111
+
+
 def fix_all(dry_run: bool = False) -> dict:
     db = SessionLocal()
     stats = {
         "wrong_polygon_fixed": 0,
         "antimeridian_clipped": 0,
+        "oversized_reset": 0,
         "errors": 0,
         "details": [],
     }
@@ -215,6 +267,47 @@ def fix_all(dry_run: bool = False) -> dict:
                 geom_obj = json.loads(e.boundary_geojson)
                 g = shape(geom_obj)
                 bb = g.bounds
+
+                # Fix 3: oversized polygon for entity type (generic wrong-polygon)
+                # A polygon area >> type ceiling is a strong signal of
+                # fuzzy-match error (city-state with empire-sized polygon, etc.)
+                type_ceiling = TYPE_MAX_AREA_KM2.get(e.entity_type)
+                if type_ceiling and e.capital_lat is not None and e.capital_lon is not None:
+                    try:
+                        area_km2 = _polygon_area_km2(g)
+                        if area_km2 > type_ceiling * AUTO_FIX_OVERSIZE_FACTOR:
+                            # Regenerate as type-sized capital circle
+                            radius = TYPE_RESET_RADIUS_KM.get(e.entity_type, 200)
+                            new_polygon = _generate_circle(e.capital_lat, e.capital_lon, radius)
+                            e.boundary_geojson = json.dumps(new_polygon)
+                            e.boundary_source = "approximate_generated"
+                            e.boundary_aourednik_name = None
+                            e.boundary_aourednik_year = None
+                            e.boundary_aourednik_precision = None
+                            e.boundary_ne_iso_a3 = None
+                            if e.confidence_score > 0.5:
+                                e.confidence_score = 0.5
+                            note = (
+                                f"[v6.31-oversize-reset] Boundary area was "
+                                f"{area_km2:,.0f} km², exceeding {e.entity_type} "
+                                f"ceiling ({type_ceiling:,} km²) by "
+                                f"{area_km2/type_ceiling:.1f}×. Reset to capital-based "
+                                f"circle ({radius}km radius) — likely wrong-polygon "
+                                f"inheritance via fuzzy name matching. Manual review "
+                                f"recommended if the entity's true extent is known."
+                            )
+                            existing = e.ethical_notes or ""
+                            if "[v6.31-oversize-reset]" not in existing:
+                                e.ethical_notes = (existing + "\n\n" if existing else "") + note
+                            stats["oversized_reset"] += 1
+                            stats["details"].append(
+                                f"OVERSIZE id={e.id} {e.name_original[:30]} "
+                                f"{area_km2:,.0f}km² > {type_ceiling:,}km² ({e.entity_type})"
+                            )
+                            continue  # don't also run antimeridian check
+                    except Exception as ex:
+                        logger.debug("Area check failed for %d: %s", e.id, ex)
+
                 if (bb[2] - bb[0]) < 180:
                     continue
                 # Antimeridian crossing detected
