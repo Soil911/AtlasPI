@@ -1,0 +1,119 @@
+[
+  {
+    "name": "Bulgarian state trunk: Първо Българско царство → Vtoro Balgarsko Tsarstvo → Ottoman → Bulgaria",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Balkans / Bulgaria",
+    "description": "Bulgarian state-formation: from the First Bulgarian Empire (681-1018, founded by Khan Asparuh), through Byzantine reconquest (1018-1185), Second Bulgarian Empire (1185-1396), Ottoman rule (~500 years), and the modern Bulgarian state from 1878. The chain shows two distinct 'imperial' periods followed by a long gap under foreign rule.",
+    "confidence_score": 0.85,
+    "ethical_notes": "The Bulgarian 'Yoke' (1396-1878) narrative is politically loaded: Ottoman rule was oppressive in periods (especially the 19th century decline) but Bulgarian identity persisted through the Orthodox Church. The Second Bulgarian Empire's fall at Velbazhd (1330) and Nicopolis (1396) are often nationalist anchors, but the Ottoman period saw genuine cultural persistence (the Tarnovo literary school, Damascene preachers, the National Revival from ~1760).",
+    "sources": [
+      {"citation": "Crampton, R. J. 'A Concise History of Bulgaria' (2005)", "url": null, "source_type": "academic"},
+      {"citation": "Fine, J. V. A. 'The Early Medieval Balkans' (1983) and 'The Late Medieval Balkans' (1987)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Първо Българско царство",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "First Bulgarian Empire (681-1018), founded by Khan Asparuh after the Byzantine-Bulgar Treaty of 681. Christianized under Boris I (864); developed the Cyrillic script under Clement of Ohrid (late 9th c.). Conquered by Byzantine Emperor Basil II 'the Bulgar-slayer' at Kleidion (1014) and fully absorbed by 1018."
+      },
+      {
+        "entity_name": "Vtoro Balgarsko Tsarstvo",
+        "transition_year": 1185,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Second Bulgarian Empire founded by the Asen brothers (Ivan Asen I and Peter) in 1185 after a Byzantine tax revolt. Peaked under Ivan Asen II (1218-1241), then fragmented. Fell piece by piece to the Ottomans (Tarnovo 1393, Vidin 1396)."
+      },
+      {
+        "entity_name": "Osmanlı İmparatorluğu",
+        "transition_year": 1396,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Bulgaria fully incorporated into the Ottoman Empire after the fall of the Tsardom of Vidin (1396). No Bulgarian state existed for ~500 years.",
+        "ethical_notes": "The devshirme (child levy) and millet system shaped Bulgarian experience under Ottoman rule. The 19th-century April Uprising (1876) was brutally suppressed (Batak massacre), triggering Russian intervention."
+      }
+    ]
+  },
+  {
+    "name": "Serbian state trunk: Raska → Srpsko Carstvo → Српска деспотовина → Ottoman → Jugoslavija → Serbia",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Balkans / Serbia",
+    "description": "Serbian state-formation: from the medieval Grand Principality of Rascia (Raška), through the zenith of the Serbian Empire under Stefan Dušan (1346-1371), the fragmenting Serbian Despotate (1402-1459), the long Ottoman period, and eventual revival from 1804 (First Serbian Uprising). Ottoman-era Serbian identity persisted through the Orthodox Patriarchate of Peć (restored 1557).",
+    "confidence_score": 0.8,
+    "ethical_notes": "Serbian national historiography centers the Battle of Kosovo (1389) as the defining tragedy; more recent scholarship notes Serbian nobles fought on BOTH sides at Kosovo, and the battle was not immediately decisive. The Yugoslav period (1918-2006) is contested — Serb-centric vs federal readings diverge. The 1990s Yugoslav Wars are recent enough that historiographic consensus is still forming.",
+    "sources": [
+      {"citation": "Fine, J. V. A. 'The Late Medieval Balkans' (1987)", "url": null, "source_type": "academic"},
+      {"citation": "Ramet, S. P. 'The Three Yugoslavias: State-Building and Legitimation, 1918-2005' (2006)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Raska",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Grand Principality of Rascia (Raška), the medieval Serbian state under the Nemanjić dynasty from c. 1083. Stefan Nemanja (r. 1166-1196) and his son Stefan the First-Crowned established the state's independence from Byzantium."
+      },
+      {
+        "entity_name": "Srpsko Carstvo",
+        "transition_year": 1346,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Serbian Empire under Stefan Uroš IV Dušan, crowned 'Emperor of Serbs and Greeks' at Skopje on 16 April 1346. Controlled most of the Balkans. Collapsed after Dušan's death (1355) — a classic case of over-extension."
+      },
+      {
+        "entity_name": "Српска деспотовина",
+        "transition_year": 1402,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Serbian Despotate (1402-1459), a diminished Serbian state formed after the Battle of Ankara weakened Ottoman pressure. Stefan Lazarević and George Branković ruled as Ottoman vassals. Fell to the Ottomans at Smederevo (20 June 1459)."
+      },
+      {
+        "entity_name": "Osmanlı İmparatorluğu",
+        "transition_year": 1459,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Serbia fully incorporated into the Ottoman Empire. The Patriarchate of Peć (restored 1557) became the vehicle of Serbian religious and cultural identity through 400 years of Ottoman rule.",
+        "ethical_notes": "The Great Migrations of Serbs (1690, 1739) into Habsburg territory reshaped the ethnic map of the Balkans and are often cited in modern Serbian-Croatian disputes."
+      }
+    ]
+  },
+  {
+    "name": "Romanian principalities → Kingdom → Republic",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Balkans / Romania / Moldova",
+    "description": "Romanian state-formation: the medieval principalities of Wallachia (Țara Românească, 1330) and Moldova (Principatul Moldovei, 1346), both Ottoman vassals from the 16th century, united under Alexandru Ioan Cuza (1859) to form Romania (1862).",
+    "confidence_score": 0.85,
+    "ethical_notes": "Transylvania's integration (1918) changed the ethnic balance and is still contested by Hungarian historiography. The interwar 'Greater Romania' included significant Ukrainian (Bessarabia) and Hungarian (Transylvania) minorities. Romania's alignment with Nazi Germany (1940-1944) and the Iași pogroms are significant; Ceaușescu's nationalist narrative minimized them.",
+    "sources": [
+      {"citation": "Hitchins, K. 'A Concise History of Romania' (2014)", "url": null, "source_type": "academic"},
+      {"citation": "Castellan, G. 'A History of the Romanians' (1989)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Furstentum Walachei",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Principality of Wallachia, founded by Basarab I c. 1330 after independence from the Kingdom of Hungary at the Battle of Posada (1330). Produced Vlad III Țepeș (r. 1448, 1456-1462, 1476), the basis for Dracula."
+      },
+      {
+        "entity_name": "Principatul Moldovei",
+        "transition_year": 1346,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Principality of Moldavia, founded 1346 under Dragoș as a Hungarian march, achieving independence under Bogdan I (1359). Stephen the Great (1457-1504) resisted Ottoman expansion. Both principalities fell under Ottoman suzerainty (16th c.) but retained internal autonomy."
+      },
+      {
+        "entity_name": "Tara Romaneasca",
+        "transition_year": 1859,
+        "transition_type": "UNIFICATION",
+        "is_violent": false,
+        "description": "Alexandru Ioan Cuza elected prince of both Wallachia (5 February 1859) and Moldavia (17 January 1859), creating the United Principalities — de facto unification. Formal unification as Romania followed in 1862 and full independence in 1878 (Berlin Treaty)."
+      }
+    ]
+  }
+]

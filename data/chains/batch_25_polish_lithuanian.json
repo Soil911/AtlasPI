@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Polish-Lithuanian trunk: Lietuvos Didžioji Kunigaikštystė → Rzeczpospolita Obojga Narodow → Rzeczpospolita Polska",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Central Europe / Poland-Lithuania",
+    "description": "The Polish-Lithuanian state: the Grand Duchy of Lithuania (1236+) united with the Polish Crown through the Union of Lublin (1569) to form the Polish-Lithuanian Commonwealth (Rzeczpospolita Obojga Narodów), Europe's largest state by the 16th century. Partitioned out of existence (1772, 1793, 1795) by Russia, Prussia, Austria; restored 1918 as the Second Polish Republic.",
+    "confidence_score": 0.9,
+    "ethical_notes": "The Commonwealth's 'Golden Liberty' democracy was noble-only; peasants were serfs. The 'szlachta' noble class (10% of population) voted the king, but the liberum veto paralyzed decision-making. The three Partitions (1772-1795) erased Polish sovereignty for 123 years — a national trauma. Post-1945 Poland was moved 200km west (Yalta/Potsdam) with massive population transfers of Germans eastward and Poles westward.",
+    "sources": [
+      {"citation": "Davies, N. 'God's Playground: A History of Poland' (1981, 2 vols)", "url": null, "source_type": "academic"},
+      {"citation": "Stone, D. 'The Polish-Lithuanian State, 1386-1795' (2001)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Lietuvos Didžioji Kunigaikštystė",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Grand Duchy of Lithuania, founded c. 1236 by Mindaugas. Last pagan state in Europe (Christianized 1387). Extended from Baltic to Black Sea under Vytautas (r. 1392-1430)."
+      },
+      {
+        "entity_name": "Rzeczpospolita Obojga Narodow",
+        "transition_year": 1569,
+        "transition_type": "UNIFICATION",
+        "is_violent": false,
+        "description": "Polish-Lithuanian Commonwealth, established by the Union of Lublin (1 July 1569). A single elected king, shared parliament, but distinct legal systems. The Commonwealth peaked c. 1600 as the largest state in Europe (~1.2 million km²). Partitioned away 1772-1795."
+      },
+      {
+        "entity_name": "Rzeczpospolita Polska",
+        "transition_year": 1918,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Second Polish Republic, proclaimed 11 November 1918 after WWI. Fought the Soviet-Polish War (1919-1921) to determine its eastern borders. Partitioned again 1939 (Molotov-Ribbentrot) between Nazi Germany and USSR. Polish People's Republic 1947-1989, then democratic Third Republic.",
+        "ethical_notes": "Poland under Nazi occupation saw the Holocaust with half the Jewish population of the country (~3 million) murdered. Warsaw Ghetto Uprising (1943), Warsaw Uprising (1944) — both crushed. The post-1945 communist period (Katyń massacre 1940, post-war Stalinism, Solidarity movement 1980-89) shaped contemporary Polish identity."
+      }
+    ]
+  },
+  {
+    "name": "Mesoamerican Classic-to-Colonial trunk: Teotihuacan → Tōllān → Ēxcān Tlahtōlōyān → Nueva España → Primer Imperio Mexicano",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Central Mexico / Valley of Mexico",
+    "description": "Central Mexican state succession: from Teotihuacan (the great Classic-era metropolis, -200 to 550 CE) through the Toltecs of Tula (674-1122), the Aztec Triple Alliance (1428-1521), Spanish colonial Nueva España (1521-1821), to independent Mexico (1821). This trunk represents the political center of gravity in central Mexico over 2200+ years.",
+    "confidence_score": 0.85,
+    "ethical_notes": "The 1521 Spanish conquest marked a demographic catastrophe — smallpox, war, and enslavement reduced the indigenous population by 80-90% within a century. Nueva España's 300 years of colonial rule created caste-based society (peninsulares > criollos > mestizos > indigenas) whose structures persist. Mexican independence (1821) retained criollo dominance; indigenous rebellions (Tzotzil 1712, Yaqui late 19th c., Chiapas 1994) challenge the national-unity narrative.",
+    "sources": [
+      {"citation": "Townsend, R. F. 'The Aztecs' (2009)", "url": null, "source_type": "academic"},
+      {"citation": "Meyer, M. C. & Sherman, W. L. 'The Course of Mexican History' (2002)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Teotihuacan",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Teotihuacan ('the place where gods were born'), the great Classic-era Mesoamerican metropolis (c. 200 BCE - 550 CE). Population peaked ~125,000, making it among the largest cities in the world. Cultural influence reached Maya lowlands. Declined after internal burning of the ceremonial center (~550 CE)."
+      },
+      {
+        "entity_name": "Tōllān",
+        "transition_year": 674,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Tōllān (Tula), the Toltec capital, rising after Teotihuacan's decline. Dominated central Mexico 900-1122 CE. Quetzalcoatl legends linked to Topiltzin Quetzalcoatl (c. 980 CE). Destroyed by political collapse / Chichimec pressure c. 1122."
+      },
+      {
+        "entity_name": "Ēxcān Tlahtōlōyān",
+        "transition_year": 1428,
+        "transition_type": "UNIFICATION",
+        "is_violent": false,
+        "description": "Mexica (Aztec) Triple Alliance (Tenochtitlan, Texcoco, Tlacopan), formed 1428 after defeating Azcapotzalco. Dominated central Mexico for ~93 years. Capital Tenochtitlan was the largest city in the Americas at Spanish contact."
+      },
+      {
+        "entity_name": "Nueva España",
+        "transition_year": 1521,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Viceroyalty of New Spain, established after Cortés destroyed Tenochtitlan (13 August 1521). Covered Mexico, Central America, Caribbean, Philippines, and western US. Extractive colonial economy (silver mines of Potosí/Zacatecas), castas society, missionization.",
+        "ethical_notes": "The conquest involved massive violence, enslavement, disease-driven demographic collapse (90% mortality), and cultural destruction (burning of codices). This was genocide by 20th-century UN definition."
+      },
+      {
+        "entity_name": "Primer Imperio Mexicano",
+        "transition_year": 1821,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "First Mexican Empire (1821-1823), short-lived monarchy under Agustín de Iturbide after independence from Spain (Treaty of Córdoba, 24 August 1821). Replaced by the First Mexican Republic 1824."
+      }
+    ]
+  }
+]

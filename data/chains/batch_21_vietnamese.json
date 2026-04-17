@@ -1,0 +1,120 @@
+[
+  {
+    "name": "Vietnamese dynastic trunk: 大越 (Đại Việt) → Nhà Lý → Trần → Lê → Nguyễn → Đại Nam → Việt Nam",
+    "name_lang": "en",
+    "chain_type": "DYNASTY",
+    "region": "Vietnam / Southeast Asia",
+    "description": "Core Vietnamese state-formation: from the independent Đại Việt kingdom (968, after millennium of Chinese rule), through the Lý (1009-1225), Trần (1225-1400), Lê (1428-1789), Tây Sơn interregnum (1778-1802), Nguyễn (1802-1945), to the modern Socialist Republic of Vietnam. Remarkably continuous despite Chinese, Mongol, and French interruptions.",
+    "confidence_score": 0.9,
+    "ethical_notes": "The millennium of Chinese rule (111 BCE - 939 CE) is often minimized in Vietnamese nationalist narrative, but profoundly shaped Vietnamese language, governance, and ideology. The Trịnh-Nguyễn rivalry (1600-1787) effectively partitioned Vietnam for 200 years. The French colonial period (1858-1954) was devastating; the reunification wars (1954-1975) with US involvement are still living memory. Modern Vietnam's 'doi moi' reforms (1986) are recent enough that historiographic consensus is still evolving.",
+    "sources": [
+      {"citation": "Taylor, K. W. 'A History of the Vietnamese' (2013)", "url": null, "source_type": "academic"},
+      {"citation": "Dutton, G. E. 'The Tay Son Uprising' (2006)", "url": null, "source_type": "academic"},
+      {"citation": "Tucker, S. C. 'Vietnam' (1999)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "大越",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Đại Việt ('Great Viet'), the independent Vietnamese kingdom established 968 under Đinh Bộ Lĩnh after ending a period of fragmentation. This name persisted through multiple dynasties until 1802."
+      },
+      {
+        "entity_name": "Nhà Lý",
+        "transition_year": 1009,
+        "transition_type": "REVOLUTION",
+        "is_violent": false,
+        "description": "Lý dynasty (1009-1225), founded by Lý Công Uẩn who moved the capital to Thăng Long (Hanoi). Consolidated Đại Việt's institutions, defeated the Song Chinese invasion (1075-1077), built the Temple of Literature (1070)."
+      },
+      {
+        "entity_name": "Nhà Trần",
+        "transition_year": 1225,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Trần dynasty (1225-1400), assumed power after the last Lý monarch (a woman, Lý Chiêu Hoàng, age 7) was forced to marry Trần Cảnh. Defeated three Mongol invasions (1258, 1285, 1287-88) under Trần Hưng Đạo.",
+        "ethical_notes": "The Trần dynastic takeover was technically peaceful (via marriage) but functionally a coup. The Mongol defeats made Đại Việt one of few states to successfully resist the Mongol Empire."
+      },
+      {
+        "entity_name": "Nhà Lê",
+        "transition_year": 1428,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Lê dynasty (1428-1789), founded by Lê Lợi after a 10-year war of liberation against Ming China (1418-1428). Split in the 16th century between northern Trịnh and southern Nguyễn lords, with the Lê emperors as figureheads."
+      },
+      {
+        "entity_name": "Nhà Tây Sơn",
+        "transition_year": 1778,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Tây Sơn dynasty (1778-1802), a peasant rebellion that overthrew both Trịnh and Nguyễn lords, defeated a Qing Chinese invasion (1789), and briefly unified Vietnam. Short-lived; fell to Nguyễn Ánh's counter-revolution."
+      },
+      {
+        "entity_name": "Đại Nam",
+        "transition_year": 1802,
+        "transition_type": "RESTORATION",
+        "is_violent": true,
+        "description": "Nguyễn dynasty and the Đại Nam empire (1802-1945), founded by Nguyễn Ánh (Emperor Gia Long) with significant French military assistance. The last Vietnamese dynasty. Became a French protectorate (1884) — the emperors retained ceremonial roles but no real power.",
+        "ethical_notes": "French colonial rule (1858-1954) imposed direct rule in Cochinchina and protectorate status in Annam/Tonkin. Millions died in the 1945 Japanese-induced famine."
+      },
+      {
+        "entity_name": "Việt Nam",
+        "transition_year": 1945,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Democratic Republic of Vietnam proclaimed by Hồ Chí Minh on 2 September 1945. Resistance war against France (1946-1954), partition at Geneva (1954), Vietnam War (1955-1975), reunification (1976) as the Socialist Republic of Vietnam."
+      }
+    ]
+  },
+  {
+    "name": "Thai/Khmer Southeast Asian trunk: ហ្វូណន (Funan) → ចេនឡា (Chenla) → អាណាចក្រខ្មែរ (Khmer) → อาณาจักรอยุธยา → กรุงรัตนโกสินทร์",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Mainland Southeast Asia / Thailand / Cambodia",
+    "description": "Mainland Southeast Asian state succession from ancient Indianized polities (Funan, Chenla) through the Khmer Empire (802-1431), to the rise of Thai states (Ayutthaya, Rattanakosin) that supplanted Khmer hegemony. Represents a complex civilizational continuity with ethnic shifts.",
+    "confidence_score": 0.8,
+    "ethical_notes": "The Funan → Chenla → Khmer chain is traditional Cambodian historiography; some recent scholars question whether these were single successor states or multiple contemporary polities. The Thai 'conquest' narrative (Ayutthaya sacks Angkor 1431) sometimes elides earlier Tai migration and integration. The inclusion of Ayutthaya + Rattanakosin in a Khmer-origin chain is unconventional but reflects real political-territorial continuity in the Chao Phraya basin.",
+    "sources": [
+      {"citation": "Coedès, G. 'The Indianized States of Southeast Asia' (1968)", "url": null, "source_type": "academic"},
+      {"citation": "Wyatt, D. K. 'Thailand: A Short History' (2003)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "ហ្វូណន",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Funan (c. 50-550 CE), earliest known Indianized state of mainland Southeast Asia. Centered on the Mekong Delta, controlled maritime trade between India and China. Adopted Hindu-Buddhist kingship, Sanskrit as court language."
+      },
+      {
+        "entity_name": "ចេនឡា",
+        "transition_year": 550,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Chenla (c. 550-802 CE), successor state to Funan, more inland-oriented. Eventually fragmented into 'Land Chenla' and 'Water Chenla' before Jayavarman II's reunification and declaration of independence at Mount Kulen (802), launching the Khmer Empire."
+      },
+      {
+        "entity_name": "អាណាចក្រខ្មែរ",
+        "transition_year": 802,
+        "transition_type": "REVOLUTION",
+        "is_violent": false,
+        "description": "Khmer Empire (802-1431), apex of Southeast Asian Hindu-Buddhist civilization. Angkor Wat built under Suryavarman II (r. 1113-1150), Angkor Thom under Jayavarman VII (r. 1181-1218). Sacked repeatedly by Ayutthaya; capital abandoned 1431."
+      },
+      {
+        "entity_name": "อาณาจักรอยุธยา",
+        "transition_year": 1351,
+        "transition_type": "SUCCESSION",
+        "is_violent": true,
+        "description": "Ayutthaya kingdom (1351-1767), Thai polity that progressively displaced Khmer power in the Chao Phraya basin. Sacked Angkor repeatedly. Fell to the Burmese in 1767 (burning of Ayutthaya).",
+        "ethical_notes": "The Burmese sack of Ayutthaya (1767) is a foundational trauma in Thai historiography, with perhaps 30,000+ Thais enslaved and carried to Burma."
+      },
+      {
+        "entity_name": "กรุงรัตนโกสินทร์",
+        "transition_year": 1782,
+        "transition_type": "RESTORATION",
+        "is_violent": false,
+        "description": "Rattanakosin Kingdom / Chakri dynasty, founded 6 April 1782 by King Rama I at Bangkok. The currently reigning dynasty. Modernized under Rama IV (Mongkut) and Rama V (Chulalongkorn), avoided formal colonization by playing France and Britain off each other."
+      }
+    ]
+  }
+]

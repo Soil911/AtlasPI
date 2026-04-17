@@ -1,0 +1,109 @@
+[
+  {
+    "name": "Danish state continuity: Kongeriget Danmark (935-present)",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Scandinavia / Denmark",
+    "description": "Denmark has one of the longest continuous monarchies in the world, with Harald Bluetooth's Jelling stones (~965) commemorating the Christianization of the Danes. The realm absorbed Norway (1380-1814) and ruled Norway-Sweden via the Kalmar Union (1397-1523). This chain tracks the Danish polity's continuity through the Slesvig duchy question and into modern Denmark.",
+    "confidence_score": 0.9,
+    "ethical_notes": "The Slesvig/Schleswig question (1848-1864-1920) shaped modern Danish-German relations; Denmark lost 40% of its territory and population in the 1864 war. The Kalmar Union narrative is often Danish-centric; Sweden's 1523 exit was a rebellion, not a peaceful succession. Greenland and the Faroe Islands remain part of the Danish Realm today.",
+    "sources": [
+      {"citation": "Lauring, P. 'A History of the Kingdom of Denmark' (1960)", "url": null, "source_type": "academic"},
+      {"citation": "Jones, G. 'A History of the Vikings' (1968)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Kongeriget Danmark",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Kingdom of Denmark, traditionally founded by Gorm the Old around 935. Harald Bluetooth (c. 965) Christianized the Danes. The kingdom has existed continuously since, making it one of the oldest monarchies in Europe."
+      },
+      {
+        "entity_name": "Kalmarunionen",
+        "transition_year": 1397,
+        "transition_type": "UNIFICATION",
+        "is_violent": false,
+        "description": "The Kalmar Union (1397-1523) united Denmark, Norway, and Sweden under a single monarch, founded at Kalmar Castle under Queen Margaret I. Denmark was the dominant partner. Sweden seceded in 1523 under Gustav Vasa after the Stockholm Bloodbath (1520)."
+      }
+    ]
+  },
+  {
+    "name": "Norwegian state: Kongeriket Noreg → Konungsveldið Noregs → Dano-Norwegian union → Norge",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Scandinavia / Norway",
+    "description": "Norway's medieval kingdom reached its apex under Haakon IV (1217-1263) with an empire including Iceland, Greenland, the Faroe Islands, Orkney, Shetland, and the Hebrides. The Black Death (1349) devastated the country; the Kalmar Union (1397) and subsequent Dano-Norwegian realm (1523-1814) subordinated Norway to Denmark. Independence came 1814 (Union with Sweden) and full sovereignty 1905.",
+    "confidence_score": 0.85,
+    "ethical_notes": "Norwegian nationalist historiography sometimes calls the 1397-1814 period 'the 400-year night' — reductive, as Norwegian law and identity persisted. The Saami indigenous people's history is largely absent from Norwegian state chains; they are not accounted for here.",
+    "sources": [
+      {"citation": "Danielsen, R. et al. 'Norway: A History from the Vikings to Our Own Times' (1995)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Kongeriket Noreg",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Kingdom of Norway traditionally founded by Harald Fairhair around 872 at the Battle of Hafrsfjord. Extended its influence to Iceland, Greenland, and the Scottish islands."
+      },
+      {
+        "entity_name": "Konungsveldið Noregs",
+        "transition_year": 1217,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "The 'Norwegian Realm' under Haakon IV the Old (1217-1263). Apex of Norwegian medieval power: incorporated Iceland (1262) and Greenland (1261), administered as a North Atlantic empire. Declined after the Black Death (1349) and eventual Kalmar Union subordination."
+      },
+      {
+        "entity_name": "Kalmarunionen",
+        "transition_year": 1397,
+        "transition_type": "UNIFICATION",
+        "is_violent": false,
+        "description": "Norway joined the Kalmar Union in 1397, becoming the junior partner. After 1523 (Swedish exit), Norway remained in dynastic union with Denmark (Dano-Norwegian realm) until 1814."
+      }
+    ]
+  },
+  {
+    "name": "Swedish state: Konungariket Sverige → Finland → modern Sweden",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Scandinavia / Sweden-Finland",
+    "description": "Sweden emerged from the Kalmar Union as a distinct state in 1523 under Gustav Vasa. Ruled Finland for ~700 years (until 1809). Lost Finland to Russia in 1809; the Grand Duchy of Finland was a Russian autonomous polity (1809-1917), becoming independent Finland in 1917.",
+    "confidence_score": 0.9,
+    "ethical_notes": "The Swedish-Finnish relationship is often presented as benign; in reality it involved language and religious policies that suppressed Finnish identity. Similarly, the Russian period (1809-1917) oscillated between autonomy and Russification. Finnish independence was contested in a civil war (1918).",
+    "sources": [
+      {"citation": "Scott, F. D. 'Sweden: The Nation's History' (1977)", "url": null, "source_type": "academic"},
+      {"citation": "Jussila, O. et al. 'From Grand Duchy to a Modern State: A Political History of Finland since 1809' (1999)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Kalmarunionen",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Sweden joined the Kalmar Union in 1397 but the union was marked by Swedish resistance culminating in the Stockholm Bloodbath (1520) and Gustav Vasa's successful rebellion."
+      },
+      {
+        "entity_name": "Konungariket Sverige",
+        "transition_year": 1523,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "On 6 June 1523, Gustav Vasa was elected king of Sweden, ending the Kalmar Union from the Swedish side. The Kingdom of Sweden reached imperial extent under Gustavus Adolphus and his successors (17th century Swedish Empire)."
+      },
+      {
+        "entity_name": "Suomen suuriruhtinaskunta",
+        "transition_year": 1809,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "After the Finnish War (1808-1809), Sweden ceded Finland to the Russian Empire. The Grand Duchy of Finland was an autonomous state within Russia, with its own Diet, currency, and legal system, until Russification policies of the late 19th century."
+      },
+      {
+        "entity_name": "Suomi",
+        "transition_year": 1917,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Finland declared independence on 6 December 1917 in the chaos of the Russian Revolution. A civil war (1918) between Reds and Whites followed; the Whites prevailed and Finland became a republic."
+      }
+    ]
+  }
+]

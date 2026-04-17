@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Swahili Coast trunk: Miji ya Pwani → Kilwa → سلطنة زنجبار",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "East African coast / Swahili world",
+    "description": "The Swahili city-states of the East African coast, from the early Miji ya Pwani ('coastal towns', ~800 CE) through the dominance of Kilwa (10th-15th c.), the Portuguese disruption (from 1498), the Omani Sultanate based in Zanzibar (1856-1964), German East Africa (1885-1919), and independence (Tanzania from 1961). This chain captures a 1200-year Swahili continuity across political ruptures.",
+    "confidence_score": 0.85,
+    "ethical_notes": "The Swahili Coast is central to Indian Ocean world history — a hybrid Bantu-Arab-Persian civilization often marginalized in African AND Arab historiographies. Portuguese arrival (1498) inaugurated 150 years of sacking and monopolization. The 19th-century Omani Zanzibar ran the last major slave market on the western Indian Ocean (closed 1873). This history informs present-day Swahili identity across Tanzania, Kenya, Mozambique, and Comoros.",
+    "sources": [
+      {"citation": "Horton, M. & Middleton, J. 'The Swahili: The Social Landscape of a Mercantile Society' (2000)", "url": null, "source_type": "academic"},
+      {"citation": "Sheriff, A. 'Dhow Cultures of the Indian Ocean' (2010)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Miji ya Pwani",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "The 'coastal towns' of the Swahili world — a chain of Bantu-speaking, Islamized trading city-states along the East African littoral. Active from 8th-15th c. CE as nodes in Indian Ocean commerce (Arabia, Persia, India, China)."
+      },
+      {
+        "entity_name": "Kilwa",
+        "transition_year": 957,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Sultanate of Kilwa Kisiwani (Tanzania), the dominant Swahili city-state from the 10th-15th c. Minted its own coinage, controlled Sofala gold trade, produced the famous Husuni Kubwa palace complex. Visited by Ibn Battuta (1331). Sacked by Portuguese 1505."
+      },
+      {
+        "entity_name": "سلطنة زنجبار",
+        "transition_year": 1856,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Sultanate of Zanzibar (1856-1964), founded when the Omani empire split in succession dispute; Said bin Sultan had already moved the Omani capital to Zanzibar (1832). Dominated spice and slave trade. British protectorate from 1890. Zanzibar Revolution (12 January 1964) overthrew the Sultan; merger with Tanganyika formed Tanzania (April 1964).",
+        "ethical_notes": "The 1964 Zanzibar Revolution's violence against the Arab and Indian population (~20,000 killed) is a dark episode minimized in Tanzanian national narrative."
+      }
+    ]
+  }
+]

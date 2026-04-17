@@ -1,0 +1,139 @@
+[
+  {
+    "name": "Austrian trunk: Erzherzogtum Oesterreich → Oesterreich-Ungarn → Republic of Austria",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Central Europe / Austria",
+    "description": "Austrian state-formation: from the Archduchy (1282) through Habsburg expansion, the Austrian Empire (1804), the Austro-Hungarian compromise (1867), collapse in WWI, short-lived First Republic, Anschluss (1938), Nazi Germany, and Second Republic (1945). Habsburg monarchs ruled continuously 1282-1918 — one of Europe's longest dynastic holds.",
+    "confidence_score": 0.9,
+    "ethical_notes": "The 1938 Anschluss is sometimes framed by Austrian narratives as 'occupation' (Opferthese — victim thesis), downplaying enthusiastic Austrian participation in Nazi crimes. Modern Austrian historiography since the 1986 Waldheim affair has increasingly confronted this.",
+    "sources": [
+      {"citation": "Kann, R. A. 'A History of the Habsburg Empire 1526-1918' (1974)", "url": null, "source_type": "academic"},
+      {"citation": "Judson, P. M. 'The Habsburg Empire: A New History' (2016)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Erzherzogtum Oesterreich",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Archduchy of Austria, granted to Rudolf IV (r. 1358-1365) and formalized by Frederick III (1453). Seat of the Habsburg dynasty from 1282 (Rudolf I's victory over Ottokar II of Bohemia)."
+      },
+      {
+        "entity_name": "Oesterreich-Ungarn",
+        "transition_year": 1867,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Austria-Hungary, established by the Ausgleich (Compromise) of 1867, giving Hungary equal status with Austria under a single Habsburg monarch. Dissolved at the end of WWI (October 1918)."
+      }
+    ]
+  },
+  {
+    "name": "Czech/Bohemian trunk: Kralovstvi ceske → Československo → Česko",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Central Europe / Bohemia-Czechia",
+    "description": "Czech state-formation: the Kingdom of Bohemia (1198-1918) under Přemyslid, Luxembourg, Habsburg monarchs; Czechoslovakia (1918-1993); Czech Republic (1993-present). Hussite wars (1419-1434) and the Defenestration of Prague (1618) are pivotal moments. Under Habsburg rule (1526-1918), Bohemia was constitutionally a distinct kingdom.",
+    "confidence_score": 0.9,
+    "ethical_notes": "The 1945-1948 expulsion of Sudeten Germans (~3 million people) is sometimes omitted from heroic narratives of post-war Czech state-formation — this was one of the largest forced population transfers in European history. The 1968 Prague Spring and Soviet invasion, Velvet Revolution (1989), and Velvet Divorce (1993) shape modern Czech-Slovak identity.",
+    "sources": [
+      {"citation": "Agnew, H. L. 'The Czechs and the Lands of the Bohemian Crown' (2004)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Kralovstvi ceske",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Kingdom of Bohemia, elevated to kingdom 1198 under Ottokar I. Peak under Charles IV (1346-1378), also Holy Roman Emperor, who founded Charles University (1348). Joined Habsburg monarchy 1526 after the Battle of Mohács."
+      },
+      {
+        "entity_name": "Československo",
+        "transition_year": 1918,
+        "transition_type": "REVOLUTION",
+        "is_violent": false,
+        "description": "Czechoslovakia, declared independent 28 October 1918 by Masaryk. Democratic interwar, then Munich Agreement (1938) betrayal, Nazi occupation, communist takeover (1948), Prague Spring (1968), Velvet Revolution (1989), Velvet Divorce (1 January 1993)."
+      }
+    ]
+  },
+  {
+    "name": "Brandenburg-Prussia-Germany trunk: Mark Brandenburg → Koenigreich Preussen → Weimarer Republik",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Central Europe / Germany",
+    "description": "The state-building trunk of modern Germany through the Hohenzollern line: Brandenburg march (1157), elevation to Duchy of Prussia (1525) and Kingdom of Prussia (1701), unification of Germany under Prussia (1871), WWI collapse, Weimar Republic (1919-1933). This is the 'Prussian path' — parallel to the Austrian-led Holy Roman Empire path.",
+    "confidence_score": 0.9,
+    "ethical_notes": "The 'Prussian path' to German unification was led by Bismarck's realpolitik — three short wars (Denmark 1864, Austria 1866, France 1870-71). The French narrative of Prussian militarism and the British/French 'Germany must be contained' framing shaped two world wars. The division of Germany 1945-1990 and the GDR-FRG split are covered separately.",
+    "sources": [
+      {"citation": "Clark, C. 'Iron Kingdom: The Rise and Downfall of Prussia 1600-1947' (2006)", "url": null, "source_type": "academic"},
+      {"citation": "Kershaw, I. 'To Hell and Back: Europe 1914-1949' (2015)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Mark Brandenburg",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Margraviate of Brandenburg, founded 1157 by Albert the Bear. Became Electorate in the 14th century, held by Hohenzollern from 1415. Personal union with Duchy of Prussia 1618."
+      },
+      {
+        "entity_name": "Koenigreich Preussen",
+        "transition_year": 1701,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Kingdom of Prussia, proclaimed 18 January 1701 when Frederick III of Brandenburg crowned himself Frederick I 'King in Prussia'. Became a great power under Frederick the Great (r. 1740-1786). Led German unification 1871."
+      },
+      {
+        "entity_name": "Weimarer Republik",
+        "transition_year": 1919,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Weimar Republic (1919-1933), Germany's first democratic regime, proclaimed 9 November 1918 after the Kaiser's abdication. Undermined by the Treaty of Versailles, hyperinflation (1923), the Great Depression, and political violence. Hitler appointed Chancellor 30 January 1933."
+      }
+    ]
+  },
+  {
+    "name": "Venetian Republic continuity: Serenìsima Repùblega de Venèsia → Italian unification",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Italian peninsula / Venice",
+    "description": "The Most Serene Republic of Venice (697-1797) was one of Europe's longest-lived republics — 1100 years of continuous oligarchic governance. Controlled a maritime empire in the Adriatic and Eastern Mediterranean. Fell to Napoleon in 1797 (Treaty of Campo Formio). Eventually absorbed into unified Italy (1866).",
+    "confidence_score": 0.9,
+    "ethical_notes": "Venice is romanticized as a 'merchant republic' but was a rigid oligarchy (after the 1297 Serrata closing of the Great Council, only ~200 families could hold office). Its commercial empire was built on the slave trade (9th-15th c.) and the Fourth Crusade's sack of Constantinople (1204).",
+    "sources": [
+      {"citation": "Norwich, J. J. 'A History of Venice' (1982)", "url": null, "source_type": "academic"},
+      {"citation": "Lane, F. C. 'Venice: A Maritime Republic' (1973)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Serenìsima Repùblega de Venèsia",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Republic of Venice, traditionally founded 697 with the election of the first doge, Paolo Lucio Anafesto. Maritime-commercial empire across the Mediterranean. 1797 dissolution by Napoleon ended 1100 years of continuous governance."
+      }
+    ]
+  },
+  {
+    "name": "Papal States continuity: Stato Pontificio → Vatican City",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Italian peninsula / Rome / Vatican",
+    "description": "Temporal power of the Papacy: the Papal States (756-1870), a central Italian territorial polity ruled by the Pope. Dissolved by Italian unification (1870); the Roman Question was settled only by the Lateran Treaty (1929) creating Vatican City. A peculiar polity — religious leadership + secular sovereignty.",
+    "confidence_score": 0.9,
+    "ethical_notes": "The Papacy's temporal power from 756 (Donation of Pepin) to 1870 involved Inquisitions (Roman 1542, Spanish delegated, Portuguese), participation in the trans-Atlantic slave trade justification (Dum Diversas 1452), and suppression of liberal Italian nationalism. The 1929 Lateran Treaty with Mussolini's Italy preserved Vatican sovereignty — a significant political accommodation.",
+    "sources": [
+      {"citation": "Chadwick, O. 'A History of the Popes 1830-1914' (1998)", "url": null, "source_type": "academic"},
+      {"citation": "Duffy, E. 'Saints and Sinners: A History of the Popes' (2006)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Stato Pontificio",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Papal States, founded by the Donation of Pepin (756) when the Frankish king granted central Italian territories to the Papacy. Survived 1100+ years until Italian unification took Rome on 20 September 1870 (Breach of Porta Pia)."
+      }
+    ]
+  }
+]

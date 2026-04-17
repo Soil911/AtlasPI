@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Moroccan dynastic trunk: الأدارسة → الموحدون → المرينيون → Sa'diyya → 'Alawiyya",
+    "name_lang": "en",
+    "chain_type": "DYNASTY",
+    "region": "North Africa / Morocco",
+    "description": "Moroccan dynastic succession: from the Idrisid founders of Moroccan Islam (788), through the Almoravid/Almohad Berber empires, the Marinid, Wattasid, Saadian, and Alaouite dynasties. The currently reigning Alaouite dynasty has ruled since 1631, making Morocco one of the oldest continuous monarchies.",
+    "confidence_score": 0.85,
+    "ethical_notes": "ETHICS: the 'Arab' vs 'Berber' (Amazigh) framing of Moroccan dynasties is contested — the Almoravids and Almohads were Amazigh, but the chain of Arab-origin Idrisids/Saadians/Alaouites is often privileged in nationalist narrative. Morocco's French protectorate period (1912-1956) is briefly absent from this chain but deeply shaped modern governance. The Western Sahara question (1975-present) is ongoing.",
+    "sources": [
+      {"citation": "Abun-Nasr, J. M. 'A History of the Maghrib in the Islamic Period' (1987)", "url": null, "source_type": "academic"},
+      {"citation": "Brignon, J. et al. 'Histoire du Maroc' (1967)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "الأدارسة",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Idrisid dynasty (788-974), founded by Idris I, an Alid fleeing Abbasid persecution after the Battle of Fakhkh (786). Established the first Muslim state in Morocco, founded Fes (789)."
+      },
+      {
+        "entity_name": "المرابطون",
+        "transition_year": 1040,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Almoravid Empire (1040-1147), Sanhaja Berber movement from the Sahara. Conquered Morocco, Al-Andalus, and the Ghana Empire. Founded Marrakech (1070)."
+      },
+      {
+        "entity_name": "الموحدون",
+        "transition_year": 1121,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Almohad Empire (1121-1269), Masmuda Berber religious reform movement founded by Ibn Tumart. Overthrew the Almoravids and controlled Morocco, Al-Andalus, and all of North Africa. Produced Averroes (Ibn Rushd) and Ibn Tufail."
+      },
+      {
+        "entity_name": "المرينيون",
+        "transition_year": 1244,
+        "transition_type": "SUCCESSION",
+        "is_violent": true,
+        "description": "Marinid Sultanate (1244-1465), Zenata Berber dynasty replacing the Almohads. Promoted scholarship (Fes madrasas). Declined after defeats in Spain and internal conflicts; succeeded by the related Wattasid dynasty."
+      },
+      {
+        "entity_name": "Mamlakat Fas al-Wattasiyya",
+        "transition_year": 1472,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Wattasid dynasty (1472-1554), a Marinid cadet branch that seized power amid Portuguese coastal encroachments. Ineffective against European pressure; overthrown by the Saadians."
+      },
+      {
+        "entity_name": "Al-Dawla al-Sa'diyya",
+        "transition_year": 1554,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Saadian dynasty (1554-1659), Arab sharifian dynasty that defeated the Portuguese at the Battle of the Three Kings (Ksar el-Kebir, 4 August 1578) and later sacked Timbuktu (1591), extending Moroccan influence into the Sahel."
+      },
+      {
+        "entity_name": "Al-Dawla al-'Alawiyya",
+        "transition_year": 1631,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Alaouite dynasty (1631-present), the currently reigning Moroccan royal family. Consolidated power under Moulay Ismail (r. 1672-1727). Withstood French-Spanish protectorate (1912-1956); King Mohammed V led independence; Mohammed VI reigns today."
+      }
+    ]
+  },
+  {
+    "name": "Central Maghreb trunk: Regnum Mauretaniae → Numidia → dynasties → Algeria/Tunisia",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "North Africa / Central Maghreb (Algeria / Tunisia)",
+    "description": "Indigenous Berber polities of the central Maghreb: Numidia and Mauretania, absorbed into Rome, then Vandal, Byzantine, and Islamic rule. Under Islamic rule, the Aghlabids (Ifriqiya), Zirids, Hammadids, Hafsids, and Zayyanids produced distinct North African polities. The region fell under Ottoman regency from 1574 and French/Italian colonial rule in the 19th-20th centuries.",
+    "confidence_score": 0.8,
+    "ethical_notes": "This chain represents political succession, not ethnic continuity. The indigenous Amazigh (Berber) population persisted through all rulers but is rarely the subject of state histories. The French colonial period (Algeria 1830-1962) involved settler colonialism and a brutal war of liberation (1954-1962) with an estimated 1 million Algerian deaths.",
+    "sources": [
+      {"citation": "Abun-Nasr, J. M. 'A History of the Maghrib in the Islamic Period' (1987)", "url": null, "source_type": "academic"},
+      {"citation": "Cherry, D. 'Frontier and Society in Roman North Africa' (1998)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Numidia",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Numidian kingdom, confederation of Amazigh tribes in modern Algeria. Peak under Masinissa (r. 202-148 BCE) as a Roman ally against Carthage. Juba II (r. 25 BCE - 23 CE) ruled a combined Mauretania-Numidia as a Roman client."
+      },
+      {
+        "entity_name": "الأغالبة",
+        "transition_year": 800,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Aghlabid dynasty (800-909), de facto independent Abbasid governors of Ifriqiya (Tunisia + eastern Algeria). Built the Great Mosque of Kairouan, conquered Sicily (827-902)."
+      },
+      {
+        "entity_name": "بنو زيري",
+        "transition_year": 972,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Zirid dynasty (972-1152), Sanhaja Berber vassals of the Fatimids in Ifriqiya. Broke with Fatimid Shia Islam (~1048), provoking the devastating Banu Hilal invasion."
+      },
+      {
+        "entity_name": "الحفصيون",
+        "transition_year": 1229,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Hafsid dynasty (1229-1574), ruled Ifriqiya from Tunis after breaking from the Almohad Empire. Declared themselves caliphs after the fall of Baghdad (1258). Fell to the Ottomans."
+      },
+      {
+        "entity_name": "الزيانيون",
+        "transition_year": 1235,
+        "transition_type": "SUCCESSION",
+        "is_violent": true,
+        "description": "Zayyanid dynasty of Tlemcen (1235-1556), Zenata Berber state in what is now western Algeria. Constantly squeezed between Marinids and Hafsids. Fell to the Ottomans."
+      }
+    ]
+  }
+]

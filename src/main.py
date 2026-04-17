@@ -111,6 +111,18 @@ async def lifespan(app: FastAPI):
                 logger.info("Periods sync: %d new periods added", sync_result["inserted"])
         except Exception:
             logger.warning("Seed/sync periods fallito — v6.27 periods layer non disponibile", exc_info=True)
+        # v6.31: sync dynasty chains from data/chains/ (idempotent, dedup by name)
+        try:
+            from src.ingestion.ingest_chains import ingest_chains
+            chain_result = ingest_chains()
+            if chain_result.get("inserted", 0) > 0:
+                logger.info(
+                    "Chains sync: %d new chains, %d total links",
+                    chain_result["inserted"],
+                    chain_result.get("total_links_created", 0),
+                )
+        except Exception:
+            logger.warning("Sync chains fallito", exc_info=True)
 
     logger.info("AtlasPI pronto")
     yield

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Iberian central trunk: Regnum Visigothorum → Corona de Castilla → Imperio Español → Republica Espanola",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Iberian Peninsula / Spain",
+    "description": "Core political succession of the Iberian peninsula's largest state: from the Visigothic kingdom (418-720), through the Christian Reconquista kingdoms (primarily Castile, with Aragon/Portugal as parallel trunks), to the unified Spanish monarchy, empire, and modern Spanish republic. The Al-Andalus caliphate (929-1031) and its successor taifas are in a parallel chain.",
+    "confidence_score": 0.85,
+    "ethical_notes": "ETHICS: the Spanish 'Reconquista' is a teleological Catholic-centric framing that treats the 780-year Muslim presence as occupation rather than a coherent civilization. Al-Andalus (711-1492) produced its own dynasties, culture, and continuity — see the parallel Iberian Islamic chain. The 1492 'completion' of the Reconquista was immediately followed by the expulsion of Jews and, within a decade, the forced conversion or expulsion of Muslims. The Imperio Español's 1492 founding coincides with the beginning of American colonialism and genocide — these are not separable histories.",
+    "sources": [
+      {"citation": "Payne, S. G. 'A History of Spain and Portugal' (1973, 2 vols)", "url": null, "source_type": "academic"},
+      {"citation": "Collins, R. 'Visigothic Spain 409-711' (2004)", "url": null, "source_type": "academic"},
+      {"citation": "O'Callaghan, J. F. 'A History of Medieval Spain' (1975)", "url": null, "source_type": "academic"},
+      {"citation": "Elliott, J. H. 'Imperial Spain 1469-1716' (1963)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Regnum Visigothorum",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Visigothic kingdom spanning most of the Iberian Peninsula and southern Gaul, Christianized under Reccared I (589). Fell to the Umayyad conquest in 711-720."
+      },
+      {
+        "entity_name": "Corona de Castilla",
+        "transition_year": 1065,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "The Kingdom of Castile emerged from the county of Castile under the Kingdom of León. Became the dominant Christian kingdom during the Reconquista, eventually absorbing León permanently in 1230 under Ferdinand III.",
+        "ethical_notes": "The direct Visigothic-to-Castilian 'succession' is historiographically contested. The intermediate kingdoms (Asturias 722-925, León 910-1230) were the actual continuity chain; Castile grew out of León."
+      },
+      {
+        "entity_name": "Imperio Español",
+        "transition_year": 1492,
+        "transition_type": "UNIFICATION",
+        "is_violent": false,
+        "description": "The dynastic union of the Catholic Monarchs (Isabella of Castile + Ferdinand of Aragon, married 1469) culminated in the 1492 fall of Granada and the beginning of transatlantic colonization. Castile and Aragon remained formally separate crowns until the Nueva Planta decrees (1707-1716)."
+      },
+      {
+        "entity_name": "Republica Espanola",
+        "transition_year": 1931,
+        "transition_type": "REVOLUTION",
+        "is_violent": false,
+        "description": "Second Spanish Republic proclaimed on 14 April 1931 after the peaceful abdication of Alfonso XIII. Ended in 1939 with Franco's victory in the Spanish Civil War; democracy was restored only in 1975."
+      }
+    ]
+  },
+  {
+    "name": "Iberian Islamic trunk: Al-Andalus → خلافة قرطبة → ملوك الطوائف → مملكة غرناطة",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Al-Andalus / Iberian Peninsula (Islamic)",
+    "description": "Political continuity of Muslim Iberia: from the Umayyad emirate of Córdoba (756), through the Caliphate of Córdoba (929-1031), the fragmentation into taifa kingdoms (1009-1091), and the final Nasrid Emirate of Granada (1238-1492). Parallel to the Christian trunk; neither erases the other.",
+    "confidence_score": 0.9,
+    "ethical_notes": "ETHICS: Al-Andalus is often marginalized in Spanish national narratives as 'occupation' despite 780 years of presence and cultural/scientific flourishing (Maimonides, Ibn Rushd, Ibn Zaydun). The 1492 conquest of Granada was followed by mass expulsions of Jews (1492) and Moriscos (1609) — a cultural and demographic catastrophe for Sephardic Jewish and Andalusi Muslim communities that is integral to Spanish history.",
+    "sources": [
+      {"citation": "Fierro, M. 'The Almohad Revolution' (2012)", "url": null, "source_type": "academic"},
+      {"citation": "Kennedy, H. 'Muslim Spain and Portugal: A Political History of al-Andalus' (1996)", "url": null, "source_type": "academic"},
+      {"citation": "Menocal, M. R. 'The Ornament of the World' (2002)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "خلافة قرطبة",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "The Umayyad Caliphate of Córdoba, declared independent from the Abbasids in 929 under Abd al-Rahman III. Apex of Iberian Islamic civilization: Great Mosque of Córdoba, Madinat al-Zahra, philosophical and scientific translation."
+      },
+      {
+        "entity_name": "ملوك الطوائف",
+        "transition_year": 1031,
+        "transition_type": "FRAGMENTATION",
+        "is_violent": true,
+        "description": "The Caliphate fragmented into ~23 independent taifa kingdoms after the abolition of the caliphate in 1031. These smaller emirates were economically prosperous but militarily vulnerable, leading to the Almoravid and later Almohad interventions from North Africa."
+      },
+      {
+        "entity_name": "مملكة غرناطة",
+        "transition_year": 1238,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "The Nasrid Emirate of Granada, founded 1238 by Muhammad I ibn Nasr, was the final Muslim state in Iberia. Produced the Alhambra. Fell on 2 January 1492 to the Catholic Monarchs, marking the end of 781 years of Muslim political presence in the peninsula.",
+        "ethical_notes": "The 1492 Treaty of Granada guaranteed Muslim religious rights, but these were violated within a decade by forced conversion and eventual expulsion. The Alhambra Decree expelling Jews was issued in Granada itself on 31 March 1492."
+      }
+    ]
+  }
+]

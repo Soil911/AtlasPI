@@ -1,0 +1,84 @@
+[
+  {
+    "name": "English / British state trunk: Kingdom of England → British Empire",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "British Isles / England",
+    "description": "English/British state-formation: from the unified Kingdom of England (927 under Æthelstan), through the Anglo-Scottish union (1707) that created Great Britain, to the British Empire at its global apex, and the modern United Kingdom. The 1707 Acts of Union formally unified the English and Scottish crowns, both of which had been personally united since 1603.",
+    "confidence_score": 0.95,
+    "ethical_notes": "ETHICS: the British Empire chain must be read with its victims in view — conquest of Ireland, Scottish Highland Clearances, Indian famines (Bengal 1770, Madras 1876), trans-Atlantic slavery (until 1833), concentration camps in South Africa (1900-1902), Tasmanian genocide (1830s), Jamaica 1865 etc. The 'civilizing mission' framing is colonial ideology, not history. The 1997 end-date marks the Hong Kong handover — the formal end of direct British territorial empire, though Crown Dependencies and Overseas Territories remain.",
+    "sources": [
+      {"citation": "Cannon, J. (ed.) 'The Oxford Companion to British History' (1997)", "url": null, "source_type": "academic"},
+      {"citation": "Ferguson, N. 'Empire: The Rise and Demise of the British World Order' (2003)", "url": null, "source_type": "academic"},
+      {"citation": "Tharoor, S. 'Inglorious Empire: What the British Did to India' (2017)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Kingdom of England",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Kingdom of England, unified under Æthelstan (r. 924-939) after defeating Olaf Guthfrithsson at the Battle of Brunanburh (937). Norman Conquest (1066) reshaped the state but continuity of realm persisted. Magna Carta (1215), Parliament (13th c.), Reformation (1534), Civil War (1642-1651), Glorious Revolution (1688) all shaped its constitutional arc."
+      },
+      {
+        "entity_name": "British Empire",
+        "transition_year": 1583,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Traditionally dated from Humphrey Gilbert's claim to Newfoundland (1583), the British Empire grew through the colonization of the Americas, the East India Company's conquest of India (1757-1858), African colonization (1880s Scramble), and control over Australia/NZ/Canada. At its peak (1920), ruled ~412 million people — a quarter of the world.",
+        "ethical_notes": "1583 is the starting point of the 'First British Empire'; the Kingdom of England (and its successors Great Britain, UK) and the Empire overlapped entirely. The 'British Empire' as a distinct entity is a historiographic convenience."
+      }
+    ]
+  },
+  {
+    "name": "Scottish state: Rioghachd na h-Alba → Union with England → UK",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "British Isles / Scotland",
+    "description": "Kingdom of Scotland (Alba), founded by Kenneth MacAlpin c. 843 uniting the Picts and the Scots (Gaels). Independent from 843 to 1707 despite English attempts (Wars of Scottish Independence, 1296-1357). Joined England via personal union (1603, James VI becomes James I of England) and formal union (1707).",
+    "confidence_score": 0.9,
+    "ethical_notes": "The 1707 Acts of Union were controversial in Scotland — Robert Burns later wrote 'We're bought and sold for English gold, such a parcel of rogues in a nation'. The Highland Clearances (1780s-1850s) were an internal colonization. The 2014 Scottish independence referendum and subsequent Brexit (2016) reopened the Anglo-Scottish question.",
+    "sources": [
+      {"citation": "Lynch, M. 'Scotland: A New History' (1991)", "url": null, "source_type": "academic"},
+      {"citation": "Devine, T. M. 'The Scottish Nation: 1700-2000' (1999)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Rioghachd na h-Alba",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Kingdom of Alba, founded c. 843 by Kenneth MacAlpin as ruler of both Picts and Scots. 'Scotland' in modern English. Fought off Norwegian claims (Battle of Largs, 1263) and English invasions (Wars of Scottish Independence). Stewart dynasty from 1371."
+      }
+    ]
+  },
+  {
+    "name": "Irish polities: Rioghacht na hEireann → British rule → Eire",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "British Isles / Ireland",
+    "description": "Ireland's political history spans pre-Christian high kingships (Uí Néill), Christian consolidation (5th-6th c.), Viking settlements (9th-10th c.), the Norman invasion (1169), the Lordship/Kingdom of Ireland under English crown (1541), the Act of Union (1801), and independence (1922). This chain focuses on the high-medieval to modern continuity.",
+    "confidence_score": 0.8,
+    "ethical_notes": "English/British rule over Ireland (1169-1922) involved conquest, plantation, dispossession, the Great Famine (1845-1852 — ~1 million dead, ~1 million emigrated), and long resistance. The 1998 Good Friday Agreement ended 30 years of 'Troubles' in Northern Ireland but left the island divided. Irish historiography rejects the Anglo-centric framing of Ireland as 'part of' British history.",
+    "sources": [
+      {"citation": "Foster, R. F. 'Modern Ireland, 1600-1972' (1988)", "url": null, "source_type": "academic"},
+      {"citation": "Lyons, F. S. L. 'Ireland Since the Famine' (1971)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Rioghacht na hEireann",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "The medieval Kingdom of Ireland — a high kingship with varying levels of effective power, held by Uí Néill, Brian Boru (High King 1002-1014), and others. Fragmented among provincial kings for much of its history. Norman Invasion from 1169 began a process of English domination."
+      },
+      {
+        "entity_name": "Eire",
+        "transition_year": 1922,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Irish Free State established 6 December 1922 after the Anglo-Irish Treaty (1921) ending the Irish War of Independence. Republic of Ireland declared 1949. 26 of Ireland's 32 counties are in the Republic; the 6 counties of Northern Ireland remain part of the UK."
+      }
+    ]
+  }
+]
