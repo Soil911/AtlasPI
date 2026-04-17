@@ -1,0 +1,46 @@
+name: Publish MCP to PyPI
+
+# Triggered manually or when a tag like "mcp-v0.7.0" is pushed.
+#
+# Requires PyPI trusted publisher configured:
+# https://docs.pypi.org/trusted-publishers/
+# OR an API token as GitHub secret `PYPI_API_TOKEN`.
+
+on:
+  push:
+    tags:
+      - "mcp-v*"
+  workflow_dispatch:  # allow manual trigger from GitHub UI
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write  # for trusted publisher
+    environment:
+      name: pypi
+      url: https://pypi.org/p/atlaspi-mcp
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install build tools
+        run: pip install build twine
+
+      - name: Build sdist and wheel
+        working-directory: mcp-server
+        run: python -m build
+
+      - name: Check distribution
+        working-directory: mcp-server
+        run: twine check dist/*
+
+      - name: Publish via trusted publisher (OIDC)
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: mcp-server/dist/
+          # If trusted publisher isn't set up yet, fall back to token:
+          # password: ${{ secrets.PYPI_API_TOKEN }}

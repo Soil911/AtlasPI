@@ -1,0 +1,63 @@
+name: Deploy to production
+
+# Triggered on push to main (after CI passes), or manually via workflow_dispatch.
+#
+# Requires GitHub secrets:
+# - DEPLOY_SSH_KEY: the ssh private key (same as ~/.ssh/cra_vps)
+# - DEPLOY_HOST: 77.81.229.242
+# - DEPLOY_USER: root
+#
+# If secrets aren't configured, the job skips gracefully with an info log.
+
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for deploy credentials
+        id: check_secrets
+        run: |
+          if [ -n "${{ secrets.DEPLOY_SSH_KEY }}" ]; then
+            echo "has_secrets=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_secrets=false" >> $GITHUB_OUTPUT
+            echo "::notice::DEPLOY_SSH_KEY secret not configured — skipping deploy. Add secret in repo Settings → Secrets → Actions to enable auto-deploy."
+          fi
+
+      - name: Setup SSH key
+        if: steps.check_secrets.outputs.has_secrets == 'true'
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Deploy via SSH
+        if: steps.check_secrets.outputs.has_secrets == 'true'
+        run: |
+          ssh -i ~/.ssh/deploy_key "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" \
+            "cd /opt/cra && git -C atlaspi pull --ff-only && docker compose build atlaspi && docker compose up -d atlaspi"
+
+      - name: Smoke test
+        if: steps.check_secrets.outputs.has_secrets == 'true'
+        run: |
+          sleep 15  # wait for container
+          for i in 1 2 3 4 5; do
+            if curl -fsS https://atlaspi.cra-srl.com/health; then
+              echo "✓ Healthcheck passed"
+              exit 0
+            fi
+            echo "Attempt $i/5 failed, retrying..."
+            sleep 10
+          done
+          echo "::error::Healthcheck failed after 5 attempts"
+          exit 1

@@ -133,6 +133,13 @@ async def _h_evolution(client: AtlasPIClient, args: dict[str, Any]) -> Any:
     return await client.evolution(int(args["entity_id"]))
 
 
+async def _h_entities_batch(client: AtlasPIClient, args: dict[str, Any]) -> Any:
+    ids = args.get("ids") or []
+    if not isinstance(ids, list):
+        raise ValueError("ids must be a list of integers")
+    return await client.entities_batch([int(i) for i in ids])
+
+
 async def _h_similar(client: AtlasPIClient, args: dict[str, Any]) -> Any:
     return await client.similar(
         int(args["entity_id"]),
@@ -548,6 +555,33 @@ TOOLS: list[ToolDefinition] = [
             "additionalProperties": False,
         },
         handler=_h_get_entity,
+    ),
+    ToolDefinition(
+        name="get_entities_batch",
+        description=(
+            "Fetch multiple entities by ID in a single batch request — much "
+            "faster than calling get_entity N times. Use when the user "
+            "asks to compare several empires/kingdoms, or when you've "
+            "just received a list of related IDs (from successors, "
+            "predecessors, similar, etc.) and need full detail for all. "
+            "Max 100 IDs per call. Returns {requested, found, not_found, "
+            "entities}."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {
+                "ids": {
+                    "type": "array",
+                    "items": {"type": "integer", "minimum": 1},
+                    "minItems": 1,
+                    "maxItems": 100,
+                    "description": "List of entity IDs to fetch (1-100).",
+                },
+            },
+            "required": ["ids"],
+            "additionalProperties": False,
+        },
+        handler=_h_entities_batch,
     ),
     ToolDefinition(
         name="snapshot_at_year",

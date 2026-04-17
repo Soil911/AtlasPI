@@ -216,6 +216,18 @@ class AtlasPIClient:
         """GET /v1/entities/{entity_id}/evolution — timeline cambi territoriali."""
         return await self._get(f"/v1/entities/{int(entity_id)}/evolution")
 
+    async def entities_batch(self, ids: list[int]) -> Any:
+        """GET /v1/entities/batch — fetch multiple entities in one request.
+
+        Usage:
+            await client.entities_batch([1, 2, 3, 42])
+
+        Returns dict with {requested, found, not_found, entities}.
+        Max 100 IDs per call.
+        """
+        ids_str = ",".join(str(int(i)) for i in ids)
+        return await self._get("/v1/entities/batch", {"ids": ids_str})
+
     async def similar(
         self, entity_id: int, *, limit: int = 10, min_score: float = 0.3,
     ) -> Any:

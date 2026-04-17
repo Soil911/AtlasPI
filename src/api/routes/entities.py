@@ -419,6 +419,76 @@ def list_entities(
 
 
 @router.get(
+    "/v1/entities/batch",
+    summary="Fetch multiple entities by ID in a single request",
+    description=(
+        "Batch endpoint for AI agents: given a comma-separated list of entity IDs, "
+        "returns all matching entities in a single round-trip. Reduces latency "
+        "significantly when an agent needs to display a timeline, comparison table, "
+        "or collection of related entities.\n\n"
+        "**Usage**: `GET /v1/entities/batch?ids=1,2,3,4,5` (max 100 per call)\n\n"
+        "**Response shape**:\n"
+        "```json\n"
+        "{\n"
+        "  \"requested\": 5,\n"
+        "  \"found\": 4,\n"
+        "  \"not_found\": [999],\n"
+        "  \"entities\": [ ... full detail for each ID ... ]\n"
+        "}\n"
+        "```\n\n"
+        "**Example**: the MCP client calls this when a user asks 'compare these "
+        "5 empires side-by-side'. One request instead of five, 5× faster."
+    ),
+)
+@cache_response(ttl_seconds=3600)
+def get_entities_batch(
+    request: Request,
+    response: Response,
+    ids: str = Query(..., description="Comma-separated entity IDs (max 100)", examples=["1,2,3", "10,42,201,333"]),
+    db: Session = Depends(get_db),
+):
+    """Return multiple entities by ID in a single round-trip."""
+    # Parse IDs
+    try:
+        id_list = [int(x.strip()) for x in ids.split(",") if x.strip()]
+    except ValueError:
+        raise HTTPException(
+            status_code=400,
+            detail="ids must be a comma-separated list of integers, e.g. ?ids=1,2,3",
+        )
+
+    if not id_list:
+        raise HTTPException(status_code=400, detail="ids parameter is empty")
+
+    # Cap at 100 to prevent abuse
+    if len(id_list) > 100:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Max 100 IDs per batch request; got {len(id_list)}. "
+                   f"Split into multiple requests or use /v1/entities?limit=100",
+        )
+
+    # Deduplicate
+    id_list = list(dict.fromkeys(id_list))
+
+    # Fetch all in one query
+    entities = _eager_query(db).filter(GeoEntity.id.in_(id_list)).all()
+    found_ids = {e.id for e in entities}
+    not_found = [i for i in id_list if i not in found_ids]
+
+    # Build response maintaining requested order
+    entity_map = {e.id: _entity_to_response(e) for e in entities}
+    ordered = [entity_map[i] for i in id_list if i in entity_map]
+
+    return {
+        "requested": len(id_list),
+        "found": len(entities),
+        "not_found": not_found,
+        "entities": ordered,
+    }
+
+
+@router.get(
     "/v1/entities/{entity_id}",
     response_model=EntityResponse,
     summary="Get detailed information for a single historical entity",

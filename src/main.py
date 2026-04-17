@@ -353,6 +353,10 @@ app.include_router(search.router)
 app.include_router(docs_ui.router)
 app.include_router(widgets.router)
 
+# v6.33: Prometheus metrics endpoint
+from src.api.metrics import router as metrics_router
+app.include_router(metrics_router)
+
 
 @app.get("/", include_in_schema=False)
 async def serve_landing():

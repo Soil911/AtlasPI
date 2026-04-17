@@ -132,6 +132,13 @@ class AnalyticsMiddleware:
 
         elapsed_ms = (time.perf_counter() - start) * 1000
 
+        # v6.33: Prometheus in-memory counters
+        try:
+            from src.api.metrics import record_request
+            record_request(path, scope.get("method", "?"), status_code, elapsed_ms / 1000.0)
+        except Exception:
+            pass
+
         # Collect request metadata from ASGI scope
         method = scope.get("method", "?")
         qs_raw = scope.get("query_string", b"")

@@ -60,6 +60,8 @@ EXPECTED_TOOL_NAMES = {
     # v0.5 similarity + date coverage
     "find_similar_entities",
     "events_date_coverage",
+    # v0.7 batch
+    "get_entities_batch",
     # v0.6 historical periods
     "list_historical_periods",
     "get_historical_period",
@@ -143,8 +145,8 @@ def test_tool_list_complete() -> None:
     )
     # Bonus: nessun duplicato
     assert len(get_tools()) == len(EXPECTED_TOOL_NAMES)
-    # v0.7.0: 34 tools (+world_snapshot)
-    assert len(names) == 34
+    # v0.8.0: 35 tools (+get_entities_batch)
+    assert len(names) == 35
 
 
 def test_search_entities_tool_schema() -> None:
