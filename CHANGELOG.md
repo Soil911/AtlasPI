@@ -2,6 +2,25 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.35.1] - 2026-04-17
+
+**Sub-release**: Sahel / Africa / Horn of Africa expansion
+
+### +62 historical entities (Africa gap-fill)
+
+`batch_35_sahel_africa.json` (62 entities):
+
+- **Sahel / West Africa**: Kanem e Bornu come fasi separate, Takrur, Jolof Empire, Oyo, Benin Empire, Hausa city-states (Kano, Katsina, Zaria, Gobir, Daura, Biram, Rano), Nupe, Mandinka chiefdoms pre-Mali
+- **Bantu / Great Lakes**: Great Zimbabwe, Mapungubwe, Mutapa, Buganda, Bunyoro-Kitara, Rwanda kingdom, Burundi kingdom, Kongo Kingdom pre-1500, Kuba, Lunda, Luba, Karanga, Torwa, Rozwi
+- **Horn of Africa**: Damot, Adal Sultanate, Ifat, Shewa, Zagwe dynasty (distinct Solomonic Ethiopia), Harar city-state
+- **Nubian**: Alodia, Makuria, Nobadia, Kerma pre-Kush
+- **North African Berber**: Aghlabid, Almoravid, Almohad, Marinid, Hafsid, Zayyanid, Wattasid
+- **East Africa coast**: Swahili city-states (Kilwa, Mombasa, Malindi, Pate, Lamu, Zanzibar as polity), Tunjur, Chwaka
+
+Total entities: **1032** (was 971, +62 from batch_35, -1 duplicate with existing)
+
+---
+
 ## [v6.35.0] - 2026-04-17
 
 **Tema**: *Espansione dataset globale — SE Asia + pre-Columbian Americas*
