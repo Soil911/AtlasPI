@@ -1,22 +1,22 @@
-"""Analytics dashboard per AtlasPI — v6.49 ridisegnata.
+"""Analytics dashboard per AtlasPI — v6.52 con filter external traffic.
 
-GET /admin/analytics       — pagina HTML con dashboard interattiva
-GET /admin/analytics/data  — dati JSON grezzi per il dashboard
+GET /admin/analytics              — pagina HTML con dashboard interattiva
+GET /admin/analytics/data         — dati JSON (default: solo traffico esterno)
+GET /admin/analytics/data?scope=all  — include anche traffico interno
 
-v6.49 change:
-- Rimosso Top IPs dalla dashboard (privacy + poco utile)
-- Aggiunta classificazione user-agent: human / agent / bot / unknown
-- Aggiunta device detection: desktop / mobile / tablet / server / bot
-- Aggiunta endpoint category breakdown (entities / events / geo_query / etc)
-- Recent Requests ora mostra `Client Type` + `Device` invece dell'IP
+v6.52 change:
+- Default scope=external: filtra Docker healthcheck, VPS self-requests,
+  admin page hits, /health, /metrics, static assets.
+- Scope=all: mostra TUTTO (come prima di v6.52).
+- Toggle UI in dashboard per switchare.
 """
 
 import logging
 import re
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Query
 from fastapi.responses import HTMLResponse, JSONResponse
-from sqlalchemy import desc, func
+from sqlalchemy import and_, desc, func, not_
 from sqlalchemy.orm import Session
 
 from src.db.database import get_db
@@ -190,69 +190,124 @@ def classify_endpoint(path: str) -> str:
     return "other"
 
 
+# ─── v6.52: External traffic filter ──────────────────────────────
+
+# IP ranges che consideriamo "interne" (Docker, LAN, VPS self).
+_INTERNAL_IP_LIKES: list[str] = [
+    "127.%",           # localhost IPv4
+    "10.%",            # private class A (Docker)
+    "192.168.%",       # private class C (LAN)
+    # Private class B 172.16.0.0 — 172.31.255.255 (Docker default + swarm)
+    "172.16.%", "172.17.%", "172.18.%", "172.19.%",
+    "172.20.%", "172.21.%", "172.22.%", "172.23.%",
+    "172.24.%", "172.25.%", "172.26.%", "172.27.%",
+    "172.28.%", "172.29.%", "172.30.%", "172.31.%",
+]
+_INTERNAL_IPS_EXACT: list[str] = [
+    "::1",                # localhost IPv6
+    "localhost",
+    "77.81.229.242",      # VPS pubblico (quando fa self-requests)
+]
+
+# Path che consideriamo "noise" (healthcheck, admin, static).
+_INTERNAL_PATHS_EXACT: list[str] = [
+    "/health", "/metrics", "/favicon.ico",
+    "/robots.txt", "/sitemap.xml", "/llms.txt",
+]
+_INTERNAL_PATH_PREFIXES: list[str] = [
+    "/admin",     # admin dashboards = my own visits
+    "/static",    # static assets
+    "/.well-known",
+]
+
+
+def apply_external_filter(q):
+    """Filter query to exclude internal/healthcheck/admin traffic.
+
+    Rimuove:
+    - Client IPs in ranges localhost / Docker / LAN / VPS self
+    - Path /health, /metrics, favicon, robots, sitemap, llms.txt
+    - Path starting with /admin, /static, /.well-known
+    """
+    for pattern in _INTERNAL_IP_LIKES:
+        q = q.filter(not_(ApiRequestLog.client_ip.like(pattern)))
+    for ip_exact in _INTERNAL_IPS_EXACT:
+        q = q.filter(ApiRequestLog.client_ip != ip_exact)
+    for path_exact in _INTERNAL_PATHS_EXACT:
+        q = q.filter(ApiRequestLog.path != path_exact)
+    for prefix in _INTERNAL_PATH_PREFIXES:
+        q = q.filter(not_(ApiRequestLog.path.like(prefix + "%")))
+    return q
+
+
 # ─── JSON data endpoint ─────────────────────────────────────────
 
 
 @router.get(
     "/admin/analytics/data",
     summary="Dati analytics grezzi (JSON)",
-    description="Statistiche aggregate sulle richieste API (v6.49: senza IP).",
+    description="Statistiche aggregate sulle richieste API. Default scope=external (filtra interne).",
     include_in_schema=False,
 )
-def analytics_data(db: Session = Depends(get_db)):
-    """Dati grezzi per la dashboard analytics — v6.49 redesign."""
+def analytics_data(
+    db: Session = Depends(get_db),
+    scope: str = Query(
+        "external",
+        pattern="^(external|all)$",
+        description="'external' (default): filtra Docker/VPS/admin/health. 'all': include tutto.",
+    ),
+):
+    """Dati grezzi per la dashboard analytics — v6.52 con external filter."""
 
-    # ── Summary ──────────────────────────────────────────────────
-    total_requests = db.query(func.count(ApiRequestLog.id)).scalar() or 0
-    unique_ips = db.query(func.count(func.distinct(ApiRequestLog.client_ip))).scalar() or 0
-    avg_response_time = db.query(func.avg(ApiRequestLog.response_time_ms)).scalar()
+    def _q():
+        """Factory per query base — applica filter se scope=external."""
+        q = db.query(ApiRequestLog)
+        if scope == "external":
+            q = apply_external_filter(q)
+        return q
+
+    # ── Raw total (sempre, per confronto) ────────────────────────
+    raw_total = db.query(func.count(ApiRequestLog.id)).scalar() or 0
+
+    # ── Summary (filtered via _q() factory) ─────────────────────
+    total_requests = _q().count()
+    unique_ips = _q().with_entities(func.count(func.distinct(ApiRequestLog.client_ip))).scalar() or 0
+    avg_response_time = _q().with_entities(func.avg(ApiRequestLog.response_time_ms)).scalar()
     avg_response_time = round(avg_response_time, 2) if avg_response_time else 0.0
-    first_request = db.query(func.min(ApiRequestLog.timestamp)).scalar()
-    last_request = db.query(func.max(ApiRequestLog.timestamp)).scalar()
+    first_request = _q().with_entities(func.min(ApiRequestLog.timestamp)).scalar()
+    last_request = _q().with_entities(func.max(ApiRequestLog.timestamp)).scalar()
 
     summary = {
         "total_requests": total_requests,
-        "unique_visitors": unique_ips,  # Renamed: privacy-neutral label
+        "raw_total": raw_total,  # v6.52: tutte includes interne, per confronto
+        "filtered_out": raw_total - total_requests if scope == "external" else 0,
+        "unique_visitors": unique_ips,
         "avg_response_time_ms": avg_response_time,
         "first_request": first_request,
         "last_request": last_request,
+        "scope": scope,
     }
 
     # ── Requests per day (last 30) ───────────────────────────────
     date_col = func.substr(ApiRequestLog.timestamp, 1, 10).label("date")
-    rpd_rows = (
-        db.query(date_col, func.count(ApiRequestLog.id).label("count"))
-        .group_by(date_col)
-        .order_by(desc(date_col))
-        .limit(30)
-        .all()
-    )
-    requests_per_day = [{"date": r.date, "count": r.count} for r in rpd_rows]
+    rpd_q = _q().with_entities(date_col, func.count(ApiRequestLog.id).label("count")).group_by(date_col).order_by(desc(date_col)).limit(30)
+    requests_per_day = [{"date": r.date, "count": r.count} for r in rpd_q.all()]
 
     # ── Top 20 endpoints ─────────────────────────────────────────
-    te_rows = (
-        db.query(
-            ApiRequestLog.path,
-            func.count(ApiRequestLog.id).label("count"),
-            func.avg(ApiRequestLog.response_time_ms).label("avg_ms"),
-        )
-        .group_by(ApiRequestLog.path)
-        .order_by(desc("count"))
-        .limit(20)
-        .all()
-    )
+    te_q = _q().with_entities(
+        ApiRequestLog.path,
+        func.count(ApiRequestLog.id).label("count"),
+        func.avg(ApiRequestLog.response_time_ms).label("avg_ms"),
+    ).group_by(ApiRequestLog.path).order_by(desc("count")).limit(20)
     top_endpoints = [
         {"path": r.path, "count": r.count, "avg_ms": round(r.avg_ms, 2) if r.avg_ms else 0.0}
-        for r in te_rows
+        for r in te_q.all()
     ]
 
-    # ── v6.49: Breakdown per endpoint CATEGORY ──────────────────
-    # Aggregate all paths by category in application code (cheap enough for ~tens of K rows).
-    all_path_counts = (
-        db.query(ApiRequestLog.path, func.count(ApiRequestLog.id).label("count"))
-        .group_by(ApiRequestLog.path)
-        .all()
-    )
+    # ── Breakdown per endpoint CATEGORY ─────────────────────────
+    all_path_counts = _q().with_entities(
+        ApiRequestLog.path, func.count(ApiRequestLog.id).label("count")
+    ).group_by(ApiRequestLog.path).all()
     category_counts: dict[str, int] = {}
     for row in all_path_counts:
         cat = classify_endpoint(row.path)
@@ -262,15 +317,12 @@ def analytics_data(db: Session = Depends(get_db)):
         for k, v in sorted(category_counts.items(), key=lambda kv: -kv[1])
     ]
 
-    # ── v6.49: Breakdown per client_type + device (via user_agent classification) ──
-    ua_rows = (
-        db.query(
-            ApiRequestLog.user_agent,
-            func.count(ApiRequestLog.id).label("count"),
-        )
-        .group_by(ApiRequestLog.user_agent)
-        .all()
-    )
+    # ── Breakdown per client_type + device ──────────────────────
+    ua_rows = _q().with_entities(
+        ApiRequestLog.user_agent,
+        func.count(ApiRequestLog.id).label("count"),
+    ).group_by(ApiRequestLog.user_agent).all()
+
     client_type_counts: dict[str, int] = {"human": 0, "agent": 0, "bot": 0, "unknown": 0}
     device_counts: dict[str, int] = {
         "desktop": 0, "mobile": 0, "tablet": 0, "server": 0, "bot": 0, "unknown": 0,
@@ -287,19 +339,13 @@ def analytics_data(db: Session = Depends(get_db)):
     by_device = [{"device": k, "count": v} for k, v in device_counts.items() if v > 0]
     by_device.sort(key=lambda kv: -kv["count"])
 
-    # Top 15 semantic labels (Chrome / curl / GoogleBot / etc)
     top_clients = sorted(
         [{"label": k, "count": v} for k, v in label_counts.items()],
         key=lambda kv: -kv["count"],
     )[:15]
 
-    # ── Recent 50 requests (v6.49: senza IP, con classification) ──
-    rr_rows = (
-        db.query(ApiRequestLog)
-        .order_by(desc(ApiRequestLog.id))
-        .limit(50)
-        .all()
-    )
+    # ── Recent 50 requests ──────────────────────────────────────
+    rr_rows = _q().order_by(desc(ApiRequestLog.id)).limit(50).all()
     recent_requests = []
     for r in rr_rows:
         cls = classify_user_agent(r.user_agent)
@@ -420,6 +466,23 @@ DASHBOARD_HTML = """\
   .pill-bot { background: #3c2b12; color: #ff9800; }
   .pill-unknown { background: #2a2a2a; color: #888; }
 
+  /* v6.52: scope toggle bar */
+  .scope-toggle {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    background: #16213e; padding: 12px 16px; border-radius: 8px;
+    margin-bottom: 20px; border-left: 4px solid #58a6ff;
+  }
+  .scope-btn {
+    padding: 6px 14px; border: 1px solid #30363d; border-radius: 6px;
+    background: transparent; color: #8b949e; font-size: 0.85rem; cursor: pointer;
+    transition: all 0.15s;
+  }
+  .scope-btn:hover { border-color: #58a6ff; color: #e0e0e0; }
+  .scope-btn.active { background: #58a6ff; color: white; border-color: #58a6ff; }
+  .scope-hint { font-size: 0.75rem; color: #888; flex: 1 1 100%; }
+
+  .card .sub { font-size: 0.7rem; color: #888; margin-top: 4px; }
+
   /* Loading / error */
   #loading { text-align: center; padding: 60px 0; color: #888; }
   #error { text-align: center; padding: 40px 0; color: #e94560; display: none; }
@@ -438,7 +501,17 @@ DASHBOARD_HTML = """\
 <body>
 
 <h1>AtlasPI Analytics Dashboard</h1>
-<p class="subtitle">v6.49 — traffic semantics (no raw IPs) &middot; auto-refresh 60s &middot; <span id="last-update">loading...</span></p>
+<p class="subtitle">
+  v6.52 — traffic semantics (no IPs) &middot; auto-refresh 60s &middot;
+  <span id="last-update">loading...</span>
+</p>
+
+<!-- v6.52: scope toggle -->
+<div class="scope-toggle">
+  <button class="scope-btn active" data-scope="external">🌐 External traffic only</button>
+  <button class="scope-btn" data-scope="all">🔧 All (include Docker/VPS/admin)</button>
+  <span id="scope-hint" class="scope-hint">Escludo Docker healthcheck, VPS self-requests, admin page visits, /health, /metrics.</span>
+</div>
 
 <div id="loading">Loading analytics data...</div>
 <div id="error">Failed to load analytics data. Retrying...</div>
@@ -447,7 +520,8 @@ DASHBOARD_HTML = """\
 
   <!-- Summary cards -->
   <div class="cards">
-    <div class="card"><div class="label">Total Requests</div><div class="value" id="s-total">-</div></div>
+    <div class="card"><div class="label">External Requests</div><div class="value" id="s-total">-</div>
+      <div class="sub" id="s-filtered-hint"></div></div>
     <div class="card"><div class="label">Unique Visitors</div><div class="value" id="s-visitors">-</div></div>
     <div class="card"><div class="label">Top Category</div><div class="value" id="s-topcat" style="font-size:1.1rem;">-</div></div>
     <div class="card"><div class="label">Avg Response Time</div><div class="value" id="s-avg">-</div></div>
@@ -581,9 +655,12 @@ function pillFor(clientType) {
   return '<span class="pill pill-' + clientType + '">' + clientType + '</span>';
 }
 
+let _currentScope = 'external';
+
 async function load() {
   try {
-    const res = await fetch('/admin/analytics/data');
+    const url = '/admin/analytics/data?scope=' + _currentScope;
+    const res = await fetch(url);
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const d = await res.json();
 
@@ -596,6 +673,21 @@ async function load() {
     document.getElementById('s-visitors').textContent = fmt(d.summary.unique_visitors);
     document.getElementById('s-avg').textContent = d.summary.avg_response_time_ms + ' ms';
     document.getElementById('s-topcat').textContent = d.by_category.length ? d.by_category[0].category : '-';
+
+    // v6.52: filtered-out hint
+    const hintEl = document.getElementById('s-filtered-hint');
+    if (d.summary.scope === 'external' && d.summary.filtered_out > 0) {
+      hintEl.textContent = '(' + fmt(d.summary.filtered_out) + ' internal filtered)';
+    } else if (d.summary.scope === 'all') {
+      hintEl.textContent = '(includes internal)';
+    } else {
+      hintEl.textContent = '';
+    }
+    // Update "External Requests" label to "All Requests" if scope=all
+    const totalLabel = document.querySelector('.card .label');
+    if (totalLabel) {
+      totalLabel.textContent = d.summary.scope === 'all' ? 'All Requests' : 'External Requests';
+    }
 
     // Chart
     drawChart(document.getElementById('chart'), d.requests_per_day);
@@ -639,6 +731,22 @@ async function load() {
     document.getElementById('error').style.display = 'block';
   }
 }
+
+// v6.52: scope toggle buttons
+document.querySelectorAll('.scope-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.scope-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    _currentScope = btn.dataset.scope;
+    const hintEl = document.getElementById('scope-hint');
+    if (hintEl) {
+      hintEl.textContent = _currentScope === 'external'
+        ? 'Escludo Docker healthcheck, VPS self-requests, admin page visits, /health, /metrics.'
+        : 'Mostra TUTTO il traffico — incluse health, admin, Docker internal.';
+    }
+    load();
+  });
+});
 
 load();
 setInterval(load, 60000);

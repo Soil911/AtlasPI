@@ -2,6 +2,53 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.52.0] - 2026-04-17
+
+**Tema**: *Analytics external-only filter — "capire solo il traffico vero"*
+
+### Il problema
+
+Dashboard analytics v6.49 mostrava tutti i 7000+ requests, ma il 60%+ era:
+- Docker healthcheck interno (Python-urllib da 127.0.0.1)
+- Admin page visits (io che guardavo la dashboard)
+- Prometheus scrape su `/metrics`
+- Static assets `/static/app.js`, `/static/style.css`
+- Self-requests dal VPS (77.81.229.242)
+
+Questo rumore oscurava il segnale "utenti reali dal mondo esterno".
+
+### Fix
+
+**Default scope=external** — filtra automaticamente il noise interno. Toggle in alto nella dashboard per passare a `scope=all` (include tutto).
+
+### Cosa esclude lo scope "external"
+
+**IP interni** (19 pattern):
+- `127.*` (localhost IPv4), `::1` (IPv6)
+- `10.*`, `192.168.*` (private LAN)
+- `172.16-31.*` (Docker default network)
+- `77.81.229.242` (VPS self)
+
+**Path noise**:
+- `/health`, `/metrics` (healthcheck + Prometheus)
+- `/favicon.ico`, `/robots.txt`, `/sitemap.xml`, `/llms.txt`
+- `/admin/*` (admin page visits)
+- `/static/*` (static assets)
+- `/.well-known/*`
+
+### Dashboard UI changes
+
+- **Toggle bar** in alto: `🌐 External traffic only` (default) ↔ `🔧 All (include Docker/VPS/admin)`
+- **Summary card** mostra: "External Requests: N" con sub-text "(X internal filtered)"
+- Hint text sotto toggle spiega cosa è incluso/escluso
+- Tutti i breakdown (category, client type, device, top clients, recent) rispettano il filtro
+
+### Test
+
+`tests/test_v652_external_filter.py`: 12 test — costanti, filter unit tests (localhost/Docker/VPS/health/admin/static), endpoint contract (default external, scope=all, invalid scope 422).
+
+---
+
 ## [v6.51.0] - 2026-04-17
 
 **Tema**: *UX quick wins parte 2 — sidebar collassabile + events markers*
