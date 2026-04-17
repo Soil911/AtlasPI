@@ -1,8 +1,13 @@
 """Endpoint di esportazione dati.
 
-GET /v1/export/geojson    FeatureCollection GeoJSON
-GET /v1/export/csv        CSV tabellare
-GET /v1/export/timeline   Timeline JSON per visualizzazione
+GET /v1/export/geojson               FeatureCollection GeoJSON entities
+GET /v1/export/csv                   CSV tabellare entities
+GET /v1/export/timeline              Timeline JSON per visualizzazione
+
+v6.48 — export GeoJSON per tutti i resource types puntuali:
+GET /v1/export/sites.geojson         archaeological sites (Point geometry)
+GET /v1/export/rulers.geojson        rulers con posizione via entity.capital
+GET /v1/export/languages.geojson     languages con center_lat/lon
 """
 
 import csv
@@ -14,7 +19,7 @@ from fastapi import APIRouter, Depends, Query, Response
 from sqlalchemy.orm import Session, joinedload
 
 from src.db.database import get_db
-from src.db.models import GeoEntity
+from src.db.models import ArchaeologicalSite, GeoEntity, HistoricalLanguage, HistoricalRuler
 
 logger = logging.getLogger(__name__)
 
@@ -165,4 +170,207 @@ def export_timeline(db: Session = Depends(get_db)):
         "min_year": min(i["start"] for i in items) if items else 0,
         "max_year": max(i["end"] or 2025 for i in items) if items else 2025,
         "items": items,
+    }
+
+
+# ─── v6.48: GeoJSON export per resource types puntuali ──────────────
+
+def _safe_json(raw: str | None) -> list | dict | None:
+    if not raw:
+        return None
+    try:
+        return json.loads(raw)
+    except (json.JSONDecodeError, TypeError):
+        return None
+
+
+@router.get(
+    "/v1/export/sites.geojson",
+    summary="Export archaeological sites as GeoJSON FeatureCollection",
+    description=(
+        "Standard GeoJSON Points per tutti i siti archeologici / UNESCO. "
+        "Compatibile con QGIS, Leaflet, Mapbox, D3. Filtro opzionale "
+        "`year` (siti con documentata attivita' in quell'anno)."
+    ),
+)
+def export_sites_geojson(
+    year: int | None = Query(None, ge=-10000, le=2100),
+    unesco_only: bool = Query(False),
+    db: Session = Depends(get_db),
+):
+    q = db.query(ArchaeologicalSite)
+    if year is not None:
+        from sqlalchemy import or_
+        q = q.filter(or_(ArchaeologicalSite.date_start.is_(None), ArchaeologicalSite.date_start <= year))
+        q = q.filter(or_(ArchaeologicalSite.date_end.is_(None), ArchaeologicalSite.date_end >= year))
+    if unesco_only:
+        q = q.filter(ArchaeologicalSite.unesco_id.isnot(None))
+
+    sites = q.all()
+    features = []
+    for s in sites:
+        features.append({
+            "type": "Feature",
+            "geometry": {"type": "Point", "coordinates": [s.longitude, s.latitude]},
+            "properties": {
+                "id": s.id,
+                "name_original": s.name_original,
+                "name_original_lang": s.name_original_lang,
+                "site_type": s.site_type,
+                "date_start": s.date_start,
+                "date_end": s.date_end,
+                "unesco_id": s.unesco_id,
+                "unesco_year": s.unesco_year,
+                "entity_id": s.entity_id,
+                "confidence_score": s.confidence_score,
+                "status": s.status,
+                "description": s.description,
+                "ethical_notes": s.ethical_notes,
+                "sources": _safe_json(s.sources),
+                "name_variants": _safe_json(s.name_variants),
+            },
+        })
+
+    return {
+        "type": "FeatureCollection",
+        "features": features,
+        "metadata": {"count": len(features), "source": "AtlasPI /v1/export/sites.geojson"},
+    }
+
+
+@router.get(
+    "/v1/export/rulers.geojson",
+    summary="Export historical rulers as GeoJSON",
+    description=(
+        "GeoJSON Points per rulers — geometry derivata da capitale dell'entita' "
+        "governata (se `entity_id` risolvibile). Per rulers senza entita' mappata, "
+        "geometry = null (feature incluso per completezza). Filtro `year` per "
+        "rulers in carica in quell'anno."
+    ),
+)
+def export_rulers_geojson(
+    year: int | None = Query(None, ge=-5000, le=2100),
+    region: str | None = Query(None, max_length=50),
+    db: Session = Depends(get_db),
+):
+    q = db.query(HistoricalRuler).outerjoin(GeoEntity, HistoricalRuler.entity_id == GeoEntity.id)
+    if year is not None:
+        from sqlalchemy import or_
+        q = q.filter(or_(HistoricalRuler.reign_start.is_(None), HistoricalRuler.reign_start <= year))
+        q = q.filter(or_(HistoricalRuler.reign_end.is_(None), HistoricalRuler.reign_end >= year))
+    if region:
+        q = q.filter(HistoricalRuler.region == region)
+
+    rulers = q.all()
+    features = []
+    for r in rulers:
+        # Derive geometry from entity capital if available.
+        geometry = None
+        if r.entity and r.entity.capital_lat is not None and r.entity.capital_lon is not None:
+            geometry = {
+                "type": "Point",
+                "coordinates": [r.entity.capital_lon, r.entity.capital_lat],
+            }
+        features.append({
+            "type": "Feature",
+            "geometry": geometry,
+            "properties": {
+                "id": r.id,
+                "name_original": r.name_original,
+                "name_original_lang": r.name_original_lang,
+                "name_regnal": r.name_regnal,
+                "title": r.title,
+                "region": r.region,
+                "dynasty": r.dynasty,
+                "birth_year": r.birth_year,
+                "death_year": r.death_year,
+                "reign_start": r.reign_start,
+                "reign_end": r.reign_end,
+                "entity_id": r.entity_id,
+                "entity_name_fallback": r.entity_name_fallback,
+                "confidence_score": r.confidence_score,
+                "status": r.status,
+                "description": r.description,
+                "ethical_notes": r.ethical_notes,
+                "sources": _safe_json(r.sources),
+                "name_variants": _safe_json(r.name_variants),
+                "notable_events": _safe_json(r.notable_events),
+            },
+        })
+
+    return {
+        "type": "FeatureCollection",
+        "features": features,
+        "metadata": {
+            "count": len(features),
+            "with_geometry": sum(1 for f in features if f["geometry"] is not None),
+            "source": "AtlasPI /v1/export/rulers.geojson",
+        },
+    }
+
+
+@router.get(
+    "/v1/export/languages.geojson",
+    summary="Export historical languages as GeoJSON",
+    description=(
+        "GeoJSON Points usando `center_lat/center_lon`. Filtro opzionale "
+        "per year (lingue parlate in quell'anno), family, vitality_status."
+    ),
+)
+def export_languages_geojson(
+    year: int | None = Query(None, ge=-10000, le=2100),
+    family: str | None = Query(None, max_length=100),
+    vitality_status: str | None = Query(None, max_length=30),
+    db: Session = Depends(get_db),
+):
+    q = db.query(HistoricalLanguage)
+    if year is not None:
+        from sqlalchemy import or_
+        q = q.filter(or_(HistoricalLanguage.period_start.is_(None), HistoricalLanguage.period_start <= year))
+        q = q.filter(or_(HistoricalLanguage.period_end.is_(None), HistoricalLanguage.period_end >= year))
+    if family:
+        q = q.filter(HistoricalLanguage.family.ilike(f"%{family}%"))
+    if vitality_status:
+        q = q.filter(HistoricalLanguage.vitality_status == vitality_status)
+
+    langs = q.all()
+    features = []
+    for l in langs:
+        geometry = None
+        if l.center_lat is not None and l.center_lon is not None:
+            geometry = {
+                "type": "Point",
+                "coordinates": [l.center_lon, l.center_lat],
+            }
+        features.append({
+            "type": "Feature",
+            "geometry": geometry,
+            "properties": {
+                "id": l.id,
+                "name_original": l.name_original,
+                "name_original_lang": l.name_original_lang,
+                "iso_code": l.iso_code,
+                "family": l.family,
+                "script": l.script,
+                "region_name": l.region_name,
+                "period_start": l.period_start,
+                "period_end": l.period_end,
+                "vitality_status": l.vitality_status,
+                "confidence_score": l.confidence_score,
+                "status": l.status,
+                "description": l.description,
+                "ethical_notes": l.ethical_notes,
+                "sources": _safe_json(l.sources),
+                "name_variants": _safe_json(l.name_variants),
+            },
+        })
+
+    return {
+        "type": "FeatureCollection",
+        "features": features,
+        "metadata": {
+            "count": len(features),
+            "with_geometry": sum(1 for f in features if f["geometry"] is not None),
+            "source": "AtlasPI /v1/export/languages.geojson",
+        },
     }

@@ -2,6 +2,39 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.48.0] - 2026-04-17
+
+**Tema**: *Export GeoJSON per resource types puntuali — interoperabilità GIS*
+
+### 3 nuovi endpoint export
+
+- `GET /v1/export/sites.geojson` — FeatureCollection Points, 40 siti archeologici
+- `GET /v1/export/rulers.geojson` — FeatureCollection Points (geometria derivata da capitale entità), 105 rulers
+- `GET /v1/export/languages.geojson` — FeatureCollection Points, 29 lingue
+
+### Filtri disponibili
+
+- **Sites**: `year`, `unesco_only`
+- **Rulers**: `year`, `region`
+- **Languages**: `year`, `family`, `vitality_status`
+
+### Use cases
+
+- Import diretto in QGIS, Leaflet, Mapbox, D3.js
+- Cross-layer map visualizations ("UNESCO sites + rulers of 1250 + languages")
+- Academic research pipelines (GIS processing)
+- AI agents generating historical maps
+
+### Schema
+
+Standard GeoJSON RFC 7946 `FeatureCollection`. Properties include full metadata (ethical_notes, sources, native script names, confidence_score). Languages/rulers con `geometry: null` quando coordinate non disponibili (incluse comunque per completezza).
+
+### Test
+
+`tests/test_v648_geojson_exports.py`: 8 test — structure, filters (UNESCO, family, vitality, year, region), native script preservation (non-Latin characters in features).
+
+---
+
 ## [v6.45.1] - 2026-04-17
 
 **Sub-release**: espansione rulers dataset da 18 → 105 (agent delivered batch_01).
