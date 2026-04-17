@@ -2,6 +2,53 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.45.0] - 2026-04-17
+
+**Tema**: *Core rulers dataset — 18 sovrani iconici popolati*
+
+### +18 historical rulers
+
+`data/rulers/batch_00_core_rulers.json` — sovrani chiave globalmente bilanciati:
+
+**East Asia**: Qin Shi Huangdi (始皇帝), Wu Zetian (武曌), Kublai Khan (大元皇帝).
+
+**Europa**: Giulio Cesare (Gaius Iulius Caesar), Augusto, Costantino, Carlo Magno, Alessandro Magno (Αλέξανδρος ο Μέγας).
+
+**Central Asia**: Genghis Khan (ᠴᠢᠩᠭᠢᠰ ᠬᠠᠭᠠᠨ), Timur (تیمور گورکان).
+
+**South Asia**: Ashoka (अशोक मौर्य), Akbar (جلال‌الدین محمد اکبر), Aurangzeb (أورنكزيب عالمگير).
+
+**Africa**: Mansa Musa (منسا موسى).
+
+**Near East**: Saladin (صلاح الدين), Solimano il Magnifico (Süleyman-ı Muhteşem).
+
+**Americas**: Pachakuti (Inca), Moctezuma II (Motēcuhzōma Xōcoyōtzin — Mexica).
+
+### ETHICS-007 — violenze esplicitate
+
+Ogni sovrano con storia di violenza su larga scala ha `ethical_notes` dettagliate:
+- **Qin Shi Huangdi**: burning of books 213 BCE, corvée deaths hundreds of thousands
+- **Carlo Magno**: massacre of Verden 782 (~4,500 Saxons executed)
+- **Genghis Khan**: Khwarezmian genocide 1219-1221 (5-30M estimated)
+- **Timur**: industrial-scale massacres (Delhi 1398 ~100K, Baghdad 1401 ~90K, total campaign ~17M)
+- **Caesar**: Gallic Wars ~1M dead + 1M enslaved (own admission)
+- **Aurangzeb**: jizya 1679, temple demolitions, Guru Teg Bahadur execution 1675
+- **Solimano**: devşimre + fratricide (Mustafa 1553, Bayezid 1561)
+- **Alessandro Magno**: Thebes 335 (~30K enslaved), Tyre/Gaza 332 massacres
+- **Moctezuma II**: human sacrifices (Florentine Codex); Cholula massacre 1519 by allied Spanish+Tlaxcalans pre-encounter
+- **Pachakuti**: mitmaq forced resettlement, Chanka mass executions 1438
+
+### Pipeline
+
+`src/ingestion/ingest_rulers.py` — idempotent, dedup per (name_original, reign_start). Lifespan hook + conftest.py auto-seed.
+
+### Stats
+
+- **18 rulers** in DB (vs 0 before — foundation v6.38.0 era empty)
+- Native scripts: Chinese, Mongol, Latin, Greek, Arabic, Persian, Sanskrit, Nahuatl, Quechua, Japanese-katakana
+
+---
+
 ## [v6.44.0] - 2026-04-17
 
 **Tema**: *Historical languages — geocoded linguistic heritage*
