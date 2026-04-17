@@ -59,6 +59,72 @@ WRONG_POLYGON_FIXES = {
         "radius_km": 2500,  # approximate radius for USSR extent — spans from Kaliningrad to Kamchatka
         "note": "Soviet Union spanned 22.4M km² including Caucasus, Central Asia, Ukraine, Baltics — NOT just modern Russian Federation. Reverted from Russia-only polygon.",
     },
+    # v6.32 additions based on /admin/ai/analyze findings:
+    452: {  # 太平天國 (Taiping Heavenly Kingdom)
+        "name": "Taiping Heavenly Kingdom",
+        "radius_km": 600,  # controlled parts of southern China, Nanjing as capital
+        "note": "Taiping Heavenly Kingdom (1851-1864) controlled parts of south-central China around Nanjing — estimated peak ~1M km², NOT the entire Chinese polygon (11M km²). Reverted.",
+    },
+    542: {  # Quilombos (confederation)
+        "name": "Quilombos",
+        "radius_km": 400,  # Palmares quilombo was in Alagoas/Pernambuco
+        "note": "Quilombos were maroon communities of escaped slaves in Brazilian interior, the largest (Palmares) spanning ~350km in Alagoas/Pernambuco ~1600-1694. Never a unified 8.7M km² confederation. Reverted from Brazil polygon.",
+    },
+    326: {  # Cumans / Kipchaks
+        "name": "Kipchak-Cuman confederation",
+        "radius_km": 1500,  # Kazakh steppe to Ukrainian steppe
+        "note": "Kipchak-Cuman confederation of nomadic tribes spanning Central Asian steppes ~4M km² (Kazakh to Ukrainian steppe), NOT the 9.4M km² polygon which extends to Europe/Siberia. Reverted.",
+    },
+    651: {  # Duché de Normandie
+        "name": "Duchy of Normandy",
+        "radius_km": 90,  # Normandy ~30k km²
+        "note": "Duchy of Normandy was the historical region of Normandy (~30,000 km²), not much of NE France as the aourednik polygon suggests. Reverted.",
+    },
+    566: {  # Dugelezh Breizh (Duchy of Brittany)
+        "name": "Duchy of Brittany",
+        "radius_km": 90,  # Brittany ~30k km²
+        "note": "Duchy of Brittany (Dugelezh Breizh) was the peninsula region ~30,000 km². Reverted from oversized polygon.",
+    },
+    580: {  # Kurfurstentum Sachsen
+        "name": "Electorate of Saxony",
+        "radius_km": 100,
+        "note": "Electorate of Saxony was a relatively small HRE state centered on Dresden/Wittenberg ~50-100k km², not a Germany-wide region. Reverted from shared default polygon.",
+    },
+    581: {  # Kurfurstentum Pfalz
+        "name": "Electorate of the Palatinate",
+        "radius_km": 80,
+        "note": "Electorate of the Palatinate was a relatively small HRE state ~20-50k km². Reverted from shared default polygon.",
+    },
+    587: {  # Herzogtum Wurttemberg
+        "name": "Duchy of Württemberg",
+        "radius_km": 80,
+        "note": "Duchy of Württemberg was ~19,500 km² (Swabian region, modern Baden-Württemberg). Reverted from oversized polygon.",
+    },
+    655: {  # Hertugdømmet Slesvig
+        "name": "Duchy of Schleswig",
+        "radius_km": 80,
+        "note": "Duchy of Schleswig was ~9,300 km² between Denmark and Holstein. Reverted from oversized polygon.",
+    },
+    538: {  # Avakuarusu (Guarani confederation)
+        "name": "Avakuarusu / Guarani confederation",
+        "radius_km": 800,  # Guarani lands span Paraguay, parts of Brazil, Argentina
+        "note": "Avakuarusu (Guarani confederation) traditional lands spanned parts of modern Paraguay, southern Brazil, northeastern Argentina — estimated ~2M km², not the 5M km² polygon that overreaches into the Amazon. Reverted.",
+    },
+    779: {  # Lenapehoking
+        "name": "Lenapehoking",
+        "radius_km": 400,
+        "note": "Lenapehoking (Lenape homeland) covered the Delaware River watershed including parts of modern NY, NJ, PA, DE, MD — approximately 100-150k km², not 4.6M. Reverted.",
+    },
+    773: {  # Coosa chiefdom
+        "name": "Coosa paramount chiefdom",
+        "radius_km": 250,
+        "note": "Coosa paramount chiefdom covered much of modern northern Georgia, eastern Tennessee, northern Alabama ~100-200k km², not 500k+ km². Reverted.",
+    },
+    667: {  # Raska
+        "name": "Grand Principality of Rascia",
+        "radius_km": 150,
+        "note": "Grand Principality of Rascia (Raška) was the medieval Serbian polity centered on modern Raška district, ~50-80k km² not 357k. Reverted.",
+    },
 }
 
 
