@@ -29,7 +29,11 @@ if [ "$ANALYZE_CODE" != "200" ]; then
   exit 1
 fi
 ANALYZE_JSON="$(echo "$ANALYZE_RESULT" | sed 's/HTTP_CODE:.*//')"
-TOTAL_NEW="$(echo "$ANALYZE_JSON" | python3 -c 'import json, sys; print(json.load(sys.stdin).get("total_new_suggestions", 0))' 2>/dev/null || echo '?')"
+if command -v jq >/dev/null 2>&1; then
+  TOTAL_NEW="$(echo "$ANALYZE_JSON" | jq -r '.total_new_suggestions // 0' 2>/dev/null || echo '?')"
+else
+  TOTAL_NEW="?"
+fi
 echo "    -> $TOTAL_NEW new suggestions generated"
 
 # 2. Implement accepted
@@ -42,7 +46,11 @@ if [ "$IMPL_CODE" != "200" ]; then
   exit 1
 fi
 IMPL_JSON="$(echo "$IMPL_RESULT" | sed 's/HTTP_CODE:.*//')"
-PROCESSED="$(echo "$IMPL_JSON" | python3 -c 'import json, sys; d=json.load(sys.stdin); print(f"processed={d.get(\"processed\",0)} implemented={d.get(\"implemented\",0)} briefing={d.get(\"briefing\",0)} failed={d.get(\"failed\",0)}")' 2>/dev/null || echo '?')"
+if command -v jq >/dev/null 2>&1; then
+  PROCESSED="$(echo "$IMPL_JSON" | jq -r '"processed=\(.processed // 0) implemented=\(.implemented // 0) briefing=\(.briefing // 0) failed=\(.failed // 0)"' 2>/dev/null || echo '?')"
+else
+  PROCESSED="(jq unavailable — install to see detail)"
+fi
 echo "    -> $PROCESSED"
 
 # 3. Smoke test (optional — comment out if slow in cron)
