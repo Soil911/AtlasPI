@@ -18,10 +18,11 @@
   window.I18N = {
     it: {
       search: 'Cerca per nome, anche varianti...',
-      year: 'Anno', status: 'Status',
+      year: 'Anno:', status: 'Status:',
+      region_legend: 'Regione:',
       confirmed: 'Confermato', uncertain: 'Incerto', disputed: 'Contestato',
-      type: 'Tipo', sort_label: 'Ordina', sort_default: 'Predefinito',
-      sort_name: 'Nome A-Z', sort_year: 'Anno', sort_conf: 'Affidabilit\u00e0',
+      type: 'Tipo:', sort_label: 'Ordina:', sort_default: 'Predefinito',
+      sort_name: 'Nome A-Z', sort_year: 'Anno (antico-recente)', sort_conf: 'Affidabilit\u00e0 (alta-bassa)',
       reset: 'Reset filtri', all: 'Tutti', loading: 'Caricamento...',
       no_results: 'Nessuna entit\u00e0 trovata', entities: 'entit\u00e0',
       sources: 'fonti', changes: 'cambi', contested: 'contestati',
@@ -72,10 +73,11 @@
     },
     en: {
       search: 'Search by name, including variants...',
-      year: 'Year', status: 'Status',
+      year: 'Year:', status: 'Status:',
+      region_legend: 'Region:',
       confirmed: 'Confirmed', uncertain: 'Uncertain', disputed: 'Disputed',
-      type: 'Type', sort_label: 'Sort', sort_default: 'Default',
-      sort_name: 'Name A-Z', sort_year: 'Year', sort_conf: 'Reliability',
+      type: 'Type:', sort_label: 'Sort:', sort_default: 'Default',
+      sort_name: 'Name A-Z', sort_year: 'Year (old-recent)', sort_conf: 'Reliability (high-low)',
       reset: 'Reset filters', all: 'All', loading: 'Loading...',
       no_results: 'No entities found', entities: 'entities',
       sources: 'sources', changes: 'changes', contested: 'contested',
@@ -156,6 +158,18 @@
     }
     const info = document.getElementById('map-info');
     if (info) info.textContent = window.t('map_hint');
+
+    // v6.48.2: generic [data-i18n] translator — any element with
+    // data-i18n="key" gets its textContent replaced with t(key).
+    // Pattern scales without adding per-element code.
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const translated = window.t(key);
+      // Only replace if translation exists and differs from key (fallback)
+      if (translated && translated !== key) {
+        el.textContent = translated;
+      }
+    });
     // Note: chainsData, applyFilters, loadStats, renderChainsList are
     // declared in app.js. `function` declarations are on window; `let/const`
     // are NOT (script global scope). We use typeof guards.

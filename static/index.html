@@ -54,7 +54,7 @@
         </div>
 
         <div class="year-control">
-          <label for="year-input">Anno:</label>
+          <label for="year-input" data-i18n="year">Anno:</label>
           <div class="year-input-row">
             <input type="number" id="year-input" value="1500" min="-4500" max="2025" step="1"
                    aria-label="Inserisci anno esatto" />
@@ -93,35 +93,35 @@
         </div>
 
         <fieldset class="filter-control">
-          <legend>Status:</legend>
+          <legend data-i18n="status">Status:</legend>
           <div class="checkbox-group">
-            <label><input type="checkbox" value="confirmed" checked /> Confermato</label>
-            <label><input type="checkbox" value="uncertain" checked /> Incerto</label>
-            <label><input type="checkbox" value="disputed" checked /> Contestato</label>
+            <label><input type="checkbox" value="confirmed" checked /> <span data-i18n="confirmed">Confermato</span></label>
+            <label><input type="checkbox" value="uncertain" checked /> <span data-i18n="uncertain">Incerto</span></label>
+            <label><input type="checkbox" value="disputed" checked /> <span data-i18n="disputed">Contestato</span></label>
           </div>
         </fieldset>
 
         <fieldset class="filter-control">
-          <legend>Regione:</legend>
+          <legend data-i18n="region_legend">Regione:</legend>
           <div id="continent-chips" class="chip-group" aria-label="Filtra per continente">
-            <button class="chip active" data-continent="">Tutti</button>
+            <button class="chip active" data-continent="" data-i18n="all">Tutti</button>
           </div>
         </fieldset>
 
         <fieldset class="filter-control">
-          <legend>Tipo:</legend>
+          <legend data-i18n="type">Tipo:</legend>
           <div id="type-chips" class="chip-group" aria-label="Filtra per tipo di entit&agrave;">
-            <button class="chip active" data-type="">Tutti</button>
+            <button class="chip active" data-type="" data-i18n="all">Tutti</button>
           </div>
         </fieldset>
 
         <div class="sort-control">
-          <label for="sort-select">Ordina:</label>
+          <label for="sort-select" data-i18n="sort_label">Ordina:</label>
           <select id="sort-select" aria-label="Ordina risultati">
-            <option value="">Predefinito</option>
-            <option value="name">Nome A-Z</option>
-            <option value="year_start">Anno (antico-recente)</option>
-            <option value="confidence-desc">Affidabilit&agrave; (alta-bassa)</option>
+            <option value="" data-i18n="sort_default">Predefinito</option>
+            <option value="name" data-i18n="sort_name">Nome A-Z</option>
+            <option value="year_start" data-i18n="sort_year">Anno (antico-recente)</option>
+            <option value="confidence-desc" data-i18n="sort_conf">Affidabilit&agrave; (alta-bassa)</option>
           </select>
         </div>
 
@@ -242,7 +242,7 @@
       <span class="legend-item" aria-hidden="true">&#9473; Reale</span>
       <span class="legend-item" aria-hidden="true">&#9476; Approssimato</span>
     </div>
-    <span class="footer-note">AtlasPI v6.48.1 &mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie &middot; 36 tools MCP</span>
+    <span class="footer-note">AtlasPI v6.48.2 &mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie &middot; 36 tools MCP</span>
   </footer>
 
   <noscript>
