@@ -1,0 +1,136 @@
+[
+  {
+    "name": "French state deep trunk: Regnum Francorum → Imperium Francorum → Royaume de France → Republique francaise",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Western Europe / France",
+    "description": "French state-formation: from Clovis's Regnum Francorum (481), through Charlemagne's Frankish Empire (800-888), the Capetian/Valois/Bourbon Kingdom of France (987-1792), revolutionary interludes, and the Fifth Republic. One of the longest-continuously-identified polities in Europe despite major institutional ruptures (Revolution, Napoleon, 1870, 1940).",
+    "confidence_score": 0.95,
+    "ethical_notes": "The French imperial period (1870-1962) ruled ~110 million people outside Europe at peak, with extractive colonialism in Africa, Indochina, and the Caribbean. The Vichy regime (1940-1944) collaborated in the Holocaust; this has been officially acknowledged since Chirac's 1995 speech. The wars of decolonization (Indochina 1946-1954, Algeria 1954-1962) involved torture and massacres the French state officially confronted only in the 2020s.",
+    "sources": [
+      {"citation": "Duby, G. 'France in the Middle Ages 987-1460' (1991)", "url": null, "source_type": "academic"},
+      {"citation": "Cobban, A. 'A History of Modern France' (1963, 3 vols)", "url": null, "source_type": "academic"},
+      {"citation": "Furet, F. 'Revolutionary France 1770-1880' (1992)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Regnum Francorum",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Merovingian Kingdom of the Franks (481-751), founded by Clovis I after his victory at the Battle of Soissons (486). Christianized c. 496. Succeeded by the Carolingian mayors of the palace; Pepin the Short deposed the last Merovingian (Childeric III) in 751."
+      },
+      {
+        "entity_name": "Imperium Francorum",
+        "transition_year": 800,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Carolingian / Frankish Empire, formalized when Pope Leo III crowned Charlemagne Emperor of the Romans on 25 December 800. Controlled most of western Europe. Fragmented under his grandsons at the Treaty of Verdun (843); the western third became the nucleus of France."
+      },
+      {
+        "entity_name": "Royaume de France",
+        "transition_year": 987,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Kingdom of France, dated from the election of Hugh Capet (987) as the first Capetian king. The dynasty's direct line ran until the Valois succession (1328), then Bourbons (1589). Absolute monarchy consolidated under Louis XIV. Overthrown by the Revolution (1792)."
+      },
+      {
+        "entity_name": "Republique francaise",
+        "transition_year": 1870,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Third Republic proclaimed 4 September 1870 after the Battle of Sedan. Fourth Republic 1946-1958, Fifth Republic from 1958. France remains the current political form. The Republic has survived Paris Commune (1871), Dreyfus Affair (1894-1906), WWII occupation, decolonization, May 1968, and ongoing reforms.",
+        "ethical_notes": "The French Republic's continuity rests on the symbolic 1792 declaration; the 1870 date here marks the current unbroken republican form. The 1940-1944 Vichy period is officially regarded as a criminal regime, not a legitimate French government."
+      }
+    ]
+  },
+  {
+    "name": "Russian state deep trunk: Rus' Kyivska → Московское → Российская Империя → СССР → Российская Федерация",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Eastern Europe / Russia",
+    "description": "Russian state-formation: from Kievan Rus' (882-1240), through the Mongol-Tatar yoke, the rise of Muscovy (1263-1547), the Russian Empire (1721-1917), the Soviet Union (1922-1991), to the Russian Federation (1991-). The 'translatio imperii' narrative (Russia as Third Rome) shapes much historiography.",
+    "confidence_score": 0.9,
+    "ethical_notes": "ETHICS: Russian historiography contests Ukrainian historiography on whether Kievan Rus' is Russia's direct ancestor or Ukraine's. The Ukrainian narrative emphasizes Kyiv's distinctness; the Russian narrative emphasizes Moscow's succession after Kyiv's destruction (1240). The Soviet period's repressions (Great Terror 1936-1938, Gulag, Holodomor 1932-33 famine, deportation of Chechens/Crimean Tatars 1944) are documented but politically contested. The post-Soviet aggression against Ukraine (2014, 2022) is ongoing.",
+    "sources": [
+      {"citation": "Riasanovsky, N. V. 'A History of Russia' (1963, multiple eds)", "url": null, "source_type": "academic"},
+      {"citation": "Plokhy, S. 'Lost Kingdom: A History of Russian Nationalism' (2017)", "url": null, "source_type": "academic"},
+      {"citation": "Service, R. 'A History of Twentieth-Century Russia' (1997)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Rus' Kyivska",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Kievan Rus' (882-1240), founded when Oleg the Wise of Novgorod captured Kyiv (882). Christianized under Vladimir the Great (988). Peaked under Yaroslav the Wise (1019-1054). Fragmented into principalities before the Mongol invasion (1237-1240 sack of Kyiv).",
+        "ethical_notes": "The 'ancestor' status of Kievan Rus' is contested among Russian, Ukrainian, and Belarusian national histories — all three have legitimate claims to descent from this polity."
+      },
+      {
+        "entity_name": "Великое княжество Московское",
+        "transition_year": 1263,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Grand Duchy of Moscow (1263-1547), founded as a small appanage under Daniel, Ivan Kalita (r. 1325-1340) consolidated power, Ivan III (r. 1462-1505) ended Tatar tribute. Territorial expansion reached the Urals by 1500."
+      },
+      {
+        "entity_name": "Российская Империя",
+        "transition_year": 1721,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Russian Empire, proclaimed by Peter the Great after the Great Northern War (1721). Expanded through Siberia, Central Asia, Caucasus, Poland, Alaska. Collapsed in February-October Revolutions of 1917."
+      },
+      {
+        "entity_name": "Союз Советских Социалистических Республик",
+        "transition_year": 1922,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Soviet Union (1922-1991), formed after the Bolshevik victory in the Russian Civil War (1918-1922). Encompassed 15 republics. Dissolved 26 December 1991 after the failed August coup, leading to independence of all republics.",
+        "ethical_notes": "The Soviet Union conducted mass repressions (Great Purge, Gulag system 18M+ prisoners), the Holodomor (1932-33 Ukrainian famine, 3-4M deaths), forced deportations of 14+ nationalities (1944), and 50 years of Cold War confrontation with the West."
+      },
+      {
+        "entity_name": "Российская Федерация",
+        "transition_year": 1991,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Russian Federation, declared independent of the USSR on 12 June 1990 (now Russia Day), fully sovereign 26 December 1991. First two Chechen Wars (1994-1996, 1999-2009). Since 2022, full-scale invasion of Ukraine — the largest war in Europe since WWII."
+      }
+    ]
+  },
+  {
+    "name": "Ukrainian trunk: Rus' Kyivska → Halytsko-Volynske → Hetmanate → Україна",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Eastern Europe / Ukraine",
+    "description": "Ukrainian state-formation: the parallel trunk to the Russian narrative, emphasizing continuity of the Ukrainian polity through Kievan Rus', the Galicia-Volhynia kingdom (1199-1349), the Cossack Hetmanate (1649-1764), the 1917-1921 People's Republic, and modern Ukraine (1991-).",
+    "confidence_score": 0.85,
+    "ethical_notes": "Ukrainian historiography's emphasis on continuity from Kievan Rus' to modern Ukraine is contested by Russian narratives that see Moscow as the legitimate successor. The Holodomor (1932-33), recognized as genocide by Ukraine and several other countries, is a defining trauma. The 2014 and 2022 Russian aggressions are the current geopolitical reality shaping the country.",
+    "sources": [
+      {"citation": "Plokhy, S. 'The Gates of Europe: A History of Ukraine' (2015)", "url": null, "source_type": "academic"},
+      {"citation": "Subtelny, O. 'Ukraine: A History' (1988, updated 2009)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Rus' Kyivska",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Kievan Rus' (882-1240), with Kyiv as capital — the foundational polity for Ukrainian state identity."
+      },
+      {
+        "entity_name": "Halytsko-Volynske knyazivstvo",
+        "transition_year": 1199,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Kingdom of Galicia-Volhynia (1199-1349), founded by Roman Mstyslavych. Westernmost Rus' polity, maintained independent existence after the Mongol invasions crushed other Rus' principalities. Divided between Poland and Lithuania 1349-1392."
+      },
+      {
+        "entity_name": "Україна",
+        "transition_year": 1991,
+        "transition_type": "REVOLUTION",
+        "is_violent": false,
+        "description": "Ukraine declared independence 24 August 1991; 92% of voters confirmed in referendum 1 December 1991. 2004 Orange Revolution, 2013-14 Revolution of Dignity, 2014 Russian annexation of Crimea, 2022 full-scale Russian invasion — Ukraine's defense and EU/NATO alignment are ongoing."
+      }
+    ]
+  }
+]

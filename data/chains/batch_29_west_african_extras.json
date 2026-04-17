@@ -1,0 +1,89 @@
+[
+  {
+    "name": "Yoruba dynastic trunk: Ọyọ́ → Oyo → modern Nigeria",
+    "name_lang": "en",
+    "chain_type": "DYNASTY",
+    "region": "West Africa / Yoruba lands (modern Nigeria-Benin)",
+    "description": "The Yoruba imperial tradition: the Old Oyo Empire (c. 1400-1905) dominated the interior, producing the Alaafin kingship, an elaborate Ogboni council, and cavalry-based warfare. Declined through the 19th-century civil wars (Owu War 1821-28, internal succession crises) and British conquest (1897-1905).",
+    "confidence_score": 0.85,
+    "ethical_notes": "ETHICS: Oyo's decline involved participation in the trans-Atlantic slave trade as a supplier state (raiding neighbors for captives). The 19th-century internal wars correlated with the slave-trade boom. British conquest (1897-1905) replaced Yoruba polities with colonial rule; the 1960 Nigerian independence reshaped them into traditional-authority units within a federal system.",
+    "sources": [
+      {"citation": "Law, R. 'The Oyo Empire c. 1600-c. 1836' (1977)", "url": null, "source_type": "academic"},
+      {"citation": "Peel, J. D. Y. 'Religious Encounter and the Making of the Yoruba' (2000)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Ọyọ́",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Ọyọ́ (Old Oyo) Empire (c. 1400-1905), Yoruba kingdom centered in modern southwestern Nigeria. Dominant West African interior power in the 17th-18th centuries, controlling trade routes and supplying the Atlantic slave trade. Alaafin's council-based monarchy (Oyo Mesi checked royal power)."
+      },
+      {
+        "entity_name": "Oyo",
+        "transition_year": 1300,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Oyo (labeled in Latin script in AtlasPI), parallel/identical polity to Ọyọ́ in different naming systems. 1300 onset reflects archaeological dating of early Oyo settlement."
+      }
+    ]
+  },
+  {
+    "name": "Sokoto Caliphate: Daular Usmaniyya ta Sakkwato → Northern Nigeria",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "West Africa / Sokoto Caliphate (northern Nigeria)",
+    "description": "The Sokoto Caliphate (1804-1903), founded by Usman dan Fodio's jihad against the Hausa kingdoms, became the largest state in Sub-Saharan Africa in the 19th century. Absorbed the Hausa Bakwai (Seven Hausa States). Fell to British conquest (1903), with Northern Nigeria integrated into colonial Nigeria.",
+    "confidence_score": 0.85,
+    "ethical_notes": "Usman dan Fodio's jihad (1804-1808) was framed as religious reform of compromised Islamic practice but also involved conquest and slavery — the Caliphate had an estimated 2.5 million slaves in the 1890s, making it one of the last major slave-holding polities. British 'indirect rule' co-opted the emirate system, preserving the Caliphate's internal governance under colonial oversight.",
+    "sources": [
+      {"citation": "Last, M. 'The Sokoto Caliphate' (1967)", "url": null, "source_type": "academic"},
+      {"citation": "Lovejoy, P. E. 'Transformations in Slavery' (2011)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Hausa Bakwai",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "The Seven Hausa States (Kano, Katsina, Zaria/Zazzau, Gobir, Daura, Biram, Rano) plus the Banza Bakwai (seven 'bastard' states), established c. 1000 CE. Islamic from the 14th century but with mixed practice. Conquered by dan Fodio's jihad 1804-1808."
+      },
+      {
+        "entity_name": "Daular Usmaniyya ta Sakkwato",
+        "transition_year": 1804,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Sokoto Caliphate (1804-1903), established by Usman dan Fodio's Fulani jihad. Governed through ~30 emirates. Largest African polity south of the Sahara in the 19th century. Militarily conquered by the British under Frederick Lugard 1900-1903 (Battle of Burmi)."
+      }
+    ]
+  },
+  {
+    "name": "Asante Empire → modern Ghana",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "West Africa / Asante (modern Ghana)",
+    "description": "The Asante (Ashanti) Empire (1670-1957) centered on Kumasi, unified by Osei Tutu I under the Sika Dwa Kofi (Golden Stool) mythology. Controlled the gold and kola trade; fought multiple Anglo-Asante wars (1823-1900). Formally abolished 1900 after British conquest; reconstituted as a traditional authority within independent Ghana (1957).",
+    "confidence_score": 0.9,
+    "ethical_notes": "Asante, like other West African states, was deeply involved in the Atlantic slave trade as a supplier (raiding Akyem, Denkyira, and northern territories). After abolition (1807 British), Asante pivoted to 'legitimate commerce' (gold, kola, palm oil). The wars of conquest (1824, 1874, 1896, 1900) involved British siege, exile of the Asantehene Prempeh I (1896-1924), and looting of the palace (Sagrenti War 1874). The Golden Stool incident (1900 demand) triggered the Yaa Asantewaa War.",
+    "sources": [
+      {"citation": "Wilks, I. 'Asante in the Nineteenth Century' (1975)", "url": null, "source_type": "academic"},
+      {"citation": "McCaskie, T. C. 'State and Society in Pre-Colonial Asante' (1995)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Denkyira",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Denkyira (c. 1620-1701), the dominant Akan power that Asante displaced. Osei Tutu and Okomfo Anokye unified the subordinate Akan states against Denkyira at the Battle of Feyiase (1701), founding Asante."
+      },
+      {
+        "entity_name": "Asante",
+        "transition_year": 1670,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Asante Empire (1670-1957), founded by Osei Tutu I with Okomfo Anokye's priestly support. The Golden Stool (Sika Dwa Kofi) descended from heaven, legitimizing the union. Conquered by the British in the 4th Anglo-Asante War (1896) and final Yaa Asantewaa War (1900). Resurrected as traditional polity within Ghana post-1957."
+      }
+    ]
+  }
+]

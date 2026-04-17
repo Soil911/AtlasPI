@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Javanese dynastic trunk: Tarumanagara → Kediri → Singhasari → Majapahit → Demak → Pajang → Mataram",
+    "name_lang": "en",
+    "chain_type": "DYNASTY",
+    "region": "Java / Indonesia",
+    "description": "Continuous Javanese state-formation: from the Indic Tarumanagara kingdom (358 CE) through the Hindu-Buddhist golden age (Kediri, Singhasari, Majapahit), the Islamic transition (Demak), the Mataram succession (Pajang, Mataram Sultanate). Each transition involved dynastic shifts but territorial/cultural continuity in the Javanese core (Central and East Java).",
+    "confidence_score": 0.85,
+    "ethical_notes": "ETHICS: the Hindu-to-Islamic transition (15th-16th century) is often framed by different communities: Javanese Muslims emphasize syncretic continuity (Wali Sanga saints bridging religions), Balinese Hindus see it as forced conversion, and colonial historians often simplified as 'decline'. The Mataram Sultanate's partition by the Dutch VOC (Treaty of Giyanti, 1755) reduced Javanese polities to vassals. Dutch colonial rule (1619-1949) was extractive and exploitative.",
+    "sources": [
+      {"citation": "Ricklefs, M. C. 'A History of Modern Indonesia Since c. 1200' (2008)", "url": null, "source_type": "academic"},
+      {"citation": "Munoz, P. M. 'Early Kingdoms of the Indonesian Archipelago and the Malay Peninsula' (2006)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Tarumanagara",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Tarumanagara (358-669 CE), earliest known Indianized kingdom in western Java. Founded by Maharaja Jayasingawarman, used Pallava script, Vaishnavist Hindu. Succeeded by Kerajaan Sunda (669-1579) in western Java."
+      },
+      {
+        "entity_name": "Kerajaan Kediri",
+        "transition_year": 1042,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Kingdom of Kediri (1042-1222), emerged after Airlangga divided Kahuripan between his sons. Literary golden age (Mpu Sedah's Bharatayuddha). Fell to Ken Arok's rebellion, founder of Singhasari."
+      },
+      {
+        "entity_name": "Singhasari",
+        "transition_year": 1222,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Singhasari kingdom (1222-1292), founded by Ken Arok through violent usurpation. King Kertanegara expanded influence to Sumatra and Malay peninsula; his defiance provoked the Mongol Yuan expedition of 1293."
+      },
+      {
+        "entity_name": "Majapahit",
+        "transition_year": 1293,
+        "transition_type": "SUCCESSION",
+        "is_violent": true,
+        "description": "Majapahit Empire (1293-1527), founded by Raden Wijaya who defeated the Mongol invasion. Peaked under Hayam Wuruk and prime minister Gajah Mada's Sumpah Palapa (oath, 1336) to unify the archipelago. Decline from 1478 with the rise of Islamic coastal sultanates."
+      },
+      {
+        "entity_name": "Kasultanan Demak",
+        "transition_year": 1475,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Sultanate of Demak (1475-1548), first major Islamic polity on Java, founded by Raden Patah. Conquered Majapahit capital 1527. The Wali Sanga (Nine Saints) led the Islamization of Java during this era.",
+        "ethical_notes": "The Majapahit-to-Demak transition was both religious (Hindu-Buddhist to Islam) and dynastic. Raden Patah was allegedly a son of the Majapahit king, softening the 'conquest' framing."
+      },
+      {
+        "entity_name": "Kasultanan Pajang",
+        "transition_year": 1548,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Sultanate of Pajang (1548-1588), short-lived successor to Demak, founded by Hadiwijaya (Jaka Tingkir). Brief hegemony; defeated by Mataram at the Battle of Tembayat (1588)."
+      },
+      {
+        "entity_name": "Kasultanan Mataram",
+        "transition_year": 1587,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Sultanate of Mataram (1587-1755), the last major pre-colonial Javanese state. Founded by Panembahan Senopati. Sultan Agung (1613-1646) expanded to control most of Java. Divided by the Dutch Treaty of Giyanti (1755) into Yogyakarta and Surakarta — both surviving today as sultanate-style monarchies within Indonesia."
+      }
+    ]
+  }
+]
