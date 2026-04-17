@@ -411,6 +411,68 @@ body {
 .onboarding-actions button:hover { border-color: var(--accent); color: var(--text); }
 .onboarding-actions button.primary:hover { opacity: 0.9; color: white; }
 
+/* v6.51: sidebar collapse toggle */
+.sidebar-toggle {
+  padding: 5px 10px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-size: 0.85em;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.sidebar-toggle:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+.sidebar-toggle-icon {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+/* Sidebar collapsed state — hidden, map fills full width */
+#app.sidebar-collapsed #sidebar {
+  transform: translateX(-100%);
+  width: 0;
+  min-width: 0;
+  padding-left: 0;
+  padding-right: 0;
+  border-right: none;
+  overflow: hidden;
+}
+#app.sidebar-collapsed #map-container {
+  margin-left: 0;
+  flex: 1 1 auto;
+}
+#app.sidebar-collapsed .sidebar-toggle-icon {
+  transform: rotate(180deg);
+}
+
+#sidebar {
+  transition: transform 0.25s ease, width 0.25s ease;
+}
+#map-container {
+  transition: margin-left 0.25s ease, flex 0.25s ease;
+}
+
+/* Mobile: sidebar hidden by default */
+@media (max-width: 768px) {
+  #app #sidebar {
+    position: absolute;
+    z-index: 999;
+    height: 100%;
+    background: var(--bg-card, #1c2333);
+    box-shadow: 2px 0 8px rgba(0,0,0,0.4);
+  }
+  #app:not(.sidebar-mobile-open) #sidebar {
+    transform: translateX(-100%);
+  }
+}
+
+/* v6.51: event markers inside mini-timeline (rendered on canvas,
+   no CSS needed — see drawMiniTimeline updates) */
+
 .filter-control { margin-bottom: 10px; }
 .filter-control > label { font-size: 0.82em; color: var(--text-muted); display: block; margin-bottom: 3px; }
 

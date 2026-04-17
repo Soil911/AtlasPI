@@ -2,6 +2,45 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.51.0] - 2026-04-17
+
+**Tema**: *UX quick wins parte 2 — sidebar collassabile + events markers*
+
+### Feature 4: Sidebar collassabile
+
+Button ◀ in header nasconde/mostra la sidebar filtri.
+
+- **Desktop** (>768px): click toggle → sidebar slide-out, mappa si espande full-width. Smooth CSS transition 250ms. Map size auto-invalidated dopo animazione.
+- **Mobile** (<=768px): sidebar overlay (position absolute + z-index). Default collapsed, button apre come modal.
+- **Persistenza**: `localStorage` (`atlaspi-sidebar-collapsed`). Default mobile collapsed, desktop open.
+- **Resize handling**: re-apply state al cross del breakpoint.
+
+Nuovo modulo: `static/js/sidebar-toggle.js` (80 righe).
+
+### Feature 5: Event markers in mini-timeline entità
+
+La mini-timeline dentro il detail panel già mostrava territory changes (diamanti). Ora aggiunge **event markers** (cerchi rossi) sotto la barra:
+
+- Fetch `/v1/entities/{id}/events` in background quando entità è aperta
+- Events dentro la lifespan dell'entità vengono pin-ppati cronologicamente
+- Hover sul marker mostra tooltip con nome evento + tipo + anno
+- Tooltip degli events ha styling distinct (emoji 📍 rossa)
+
+Esempio: click su "Imperium Romanum" → vedi diamanti per territory changes + cerchi rossi per battaglie/trattati/eventi associati.
+
+### Stats
+
+- **4 nuovi moduli JS** in v6.46-6.51 (`utils.js`, `theme.js`, `i18n.js`, `ask-claude.js`, `onboarding.js`, `sidebar-toggle.js`)
+- `app.js` rimane il core ma con 5+ moduli di supporto
+- Tutte le 5 feature UX proposte (era chips / onboarding / Ask Claude / sidebar collapse / event markers) implementate
+
+### Next
+
+- `docs/design-proposal-stories-mode.md` — proposta Stories mode (non implementata, rivalutare post-lancio)
+- Eventualmente v6.52 quick wins: landing tour, Random button, on-this-day banner
+
+---
+
 ## [v6.50.0] - 2026-04-17
 
 **Tema**: *UX quick wins — era chips narrative + onboarding + Ask Claude*

@@ -1460,8 +1460,24 @@ async function showDetail(id) {
     });
   });
 
-  // Draw mini-timeline canvas (v5.8)
+  // Draw mini-timeline canvas (v5.8 + v6.51 event markers)
   drawMiniTimeline(e);
+
+  // v6.51: async-load events linked to this entity and redraw timeline
+  // with additional event markers (red dots, distinct from territory_changes diamonds).
+  (async () => {
+    try {
+      const evRes = await fetch(`${API}/v1/entities/${id}/events`);
+      if (!evRes.ok) return;
+      const evData = await evRes.json();
+      const events = evData.events || evData.items || [];
+      if (events.length > 0) {
+        drawMiniTimeline(e, events);
+      }
+    } catch (_) {
+      // Silent fail — timeline still shows territory_changes
+    }
+  })();
 
   // Bind collapsible sections
   content.querySelectorAll('.collapsible').forEach(h3 => {
@@ -1661,7 +1677,8 @@ function renderUnifiedTimeline(panel, data) {
     </ol>`;
 }
 
-function drawMiniTimeline(e) {
+function drawMiniTimeline(e, events) {
+  // v6.51: events param optional — red circular markers for HistoricalEvent linked
   const canvas = document.getElementById('mini-timeline');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
@@ -1742,6 +1759,42 @@ function drawMiniTimeline(e) {
     markers.push({ x, year: tc.year, type: tc.change_type, desc: tc.description || '', region: tc.region || '' });
   });
 
+  // v6.51: draw event markers (red circles) BELOW the bar.
+  if (Array.isArray(events) && events.length) {
+    events.forEach(ev => {
+      const evY = ev.year || ev.year_start;
+      if (typeof evY !== 'number') return;
+      if (evY < ys || evY > ye) return;  // outside entity lifespan
+      const x = pad + ((evY - ys) / span) * (W - 2 * pad);
+
+      // Connector line (short, dashed feel via stroke pattern)
+      ctx.strokeStyle = 'rgba(248, 81, 73, 0.6)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(x, barY + barH);
+      ctx.lineTo(x, barY + barH + 10);
+      ctx.stroke();
+
+      // Red circle
+      ctx.fillStyle = '#f85149';
+      ctx.beginPath();
+      ctx.arc(x, barY + barH + 13, 3.5, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = '#1a1a2e';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      markers.push({
+        x,
+        year: evY,
+        type: 'EVENT',
+        desc: ev.name_original || ev.description || '',
+        region: ev.event_type || '',
+        isEvent: true,
+      });
+    });
+  }
+
   // Tooltip on hover
   let tooltipDiv = null;
   canvas.addEventListener('mousemove', ev => {
@@ -1756,7 +1809,11 @@ function drawMiniTimeline(e) {
         canvas.parentElement.style.position = 'relative';
         canvas.parentElement.appendChild(tooltipDiv);
       }
-      tooltipDiv.innerHTML = `<strong>${fmtY(hit.year)}</strong> — ${hit.type.replace(/_/g, ' ')}${hit.region ? ' (' + esc(hit.region) + ')' : ''}`;
+      if (hit.isEvent) {
+        tooltipDiv.innerHTML = `<strong style="color:#f85149">📍 ${fmtY(hit.year)}</strong> — ${esc(hit.desc)}${hit.region ? ' <small style="color:#888">[' + esc(hit.region) + ']</small>' : ''}`;
+      } else {
+        tooltipDiv.innerHTML = `<strong>${fmtY(hit.year)}</strong> — ${hit.type.replace(/_/g, ' ')}${hit.region ? ' (' + esc(hit.region) + ')' : ''}`;
+      }
       tooltipDiv.style.left = Math.min(hit.x, W - 150) + 'px';
       tooltipDiv.style.top = '-22px';
       tooltipDiv.style.display = 'block';

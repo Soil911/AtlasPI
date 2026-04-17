@@ -30,6 +30,9 @@
       <a href="/embed" class="api-link" title="Versione embed per iframe" target="_blank">Embed</a>
       <a href="/docs-ui" class="api-link" title="Documentazione API interattiva">API Docs</a>
       <a href="/docs" class="api-link" title="Documentazione API OpenAPI">OpenAPI</a>
+      <button id="sidebar-toggle" class="sidebar-toggle" title="Mostra/nascondi pannello filtri" aria-label="Toggle sidebar" aria-pressed="true">
+        <span class="sidebar-toggle-icon">◀</span>
+      </button>
       <button id="ask-claude-btn" class="ask-claude-btn" title="Chiedi a Claude usando i dati di AtlasPI" aria-label="Apri Claude con prompt precompilato">
         🤖 <span data-i18n="ask_claude">Ask Claude</span>
       </button>
@@ -279,7 +282,7 @@
       <span class="legend-item" aria-hidden="true">&#9473; Reale</span>
       <span class="legend-item" aria-hidden="true">&#9476; Approssimato</span>
     </div>
-    <span class="footer-note">AtlasPI v6.50.0 &mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie &middot; 36 tools MCP</span>
+    <span class="footer-note">AtlasPI v6.51.0 &mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie &middot; 36 tools MCP</span>
   </footer>
 
   <noscript>
@@ -300,5 +303,7 @@
   <!-- v6.50: UX modules — onboarding + Ask Claude button -->
   <script src="/static/js/onboarding.js"></script>
   <script src="/static/js/ask-claude.js"></script>
+  <!-- v6.51: sidebar collapse -->
+  <script src="/static/js/sidebar-toggle.js"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://atlaspi.cra-srl.com"><img alt="Try it live" src="https://img.shields.io/badge/try%20it-live-58a6ff?style=flat-square&logo=globe&logoColor=white"></a>
-  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.50.0-blue?style=flat-square"></a>
+  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.51.0-blue?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-1032-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Events" src="https://img.shields.io/badge/events-623-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Periods" src="https://img.shields.io/badge/periods-55-green?style=flat-square"></a>
