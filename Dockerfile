@@ -11,9 +11,10 @@ FROM python:3.13-slim
 
 # System utilities: per backup/restore scripts + smoke_test.sh
 # sqlite3 per .backup, pg client per pg_dump/psql, jq per asserzioni smoke test
+# git per clonare aourednik/historical-basemaps al runtime (v6.31)
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-         sqlite3 postgresql-client curl jq \
+         sqlite3 postgresql-client curl jq git \
     && rm -rf /var/lib/apt/lists/*
 
 # Security: non-root user

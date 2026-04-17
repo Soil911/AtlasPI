@@ -128,7 +128,7 @@
     "status": "confirmed",
     "known_silence": true,
     "silence_reason": "The event itself is well-documented because the erasure was so systematic that the absences are visible on physical monuments. But the intellectual content Geta may have produced, any writings by his supporters, and much of his reign's administrative record were permanently lost.",
-    "ethical_notes": "Damnatio memoriae is included as an event type because the act of erasure is itself a historical fact with downstream epistemic consequences. Other Roman emperors subjected to it (Domitian, Commodus formally rescinded) are candidates for similar entries.",
+    "ethical_notes": "Damnatio memoriae is included as an event type because the act of erasure is itself a historical fact with downstream epistemic consequences. Other Roman emperors subjected to it (Domitian, Commodus formally rescinded) are candidates for similar entries.\n\n[v6.30-representative-location] location_lat/lon represent a symbolic center; actual event scope was broader. Rome as empire-wide decree origin; the damnatio affected inscriptions throughout the Empire.",
     "entity_links": [
       {
         "entity_name_original": "Imperium Romanum",
@@ -147,7 +147,9 @@
         "url": null
       }
     ],
-    "date_precision": "YEAR"
+    "date_precision": "YEAR",
+    "location_lat": 41.9028,
+    "location_lon": 12.4964
   },
   {
     "name_original": "Hijrah / الهجرة",
@@ -225,7 +227,7 @@
     "casualties_source": "Benedictow, O.J. (2004). The Black Death 1346-1353.",
     "confidence_score": 0.85,
     "status": "confirmed",
-    "ethical_notes": "Casualty range is genuinely large because regional demographic records are uneven. Central Asian and sub-Saharan mortality estimates are the least certain.",
+    "ethical_notes": "Casualty range is genuinely large because regional demographic records are uneven. Central Asian and sub-Saharan mortality estimates are the least certain.\n\n[v6.30-representative-location] location_lat/lon represent a symbolic center; actual event scope was broader. Paris representing European peak of Black Death (1348-1350); pandemic spanned Eurasia + North Africa.",
     "entity_links": [],
     "sources": [
       {
@@ -239,7 +241,9 @@
         "url": null
       }
     ],
-    "date_precision": "YEAR"
+    "date_precision": "YEAR",
+    "location_lat": 48.8566,
+    "location_lon": 2.3522
   },
   {
     "name_original": "Ἅλωσις τῆς Κωνσταντινουπόλεως",
@@ -410,7 +414,7 @@
     "location_name": "Mount Tambora, Sumbawa, Dutch East Indies",
     "location_lat": -8.25,
     "location_lon": 118.0,
-    "main_actor": null,
+    "main_actor": "Mount Tambora VEI-7 supereruption on Sumbawa, Dutch East Indies; triggered 'Year Without a Summer' (1816) globally, affecting agricultural populations across North America, Europe, and East Asia",
     "description": "The largest volcanic eruption in recorded human history, with a VEI of 7. The eruption killed approximately 10,000 people directly through pyroclastic flows on Sumbawa, and an estimated 70,000-120,000 globally through the subsequent 'Year Without a Summer' (1816) — crop failures, famine, and epidemics in Europe, North America, and China.",
     "casualties_low": 80000,
     "casualties_high": 130000,
@@ -487,7 +491,7 @@
     "status": "disputed",
     "known_silence": true,
     "silence_reason": "The Republic of Turkey officially denies the genocide classification and criminalizes (Article 301) descriptions calling it 'genocide'. The Ottoman-era archival record was selectively destroyed or remains inaccessible. Armenian documentation was lost with Armenian populations.",
-    "ethical_notes": "The 'disputed' status here reflects the political controversy with the Turkish state, NOT the historical-academic consensus. The IAGS (1997), most US universities, and most Western governments classify the event as genocide. This field models the distinction: confidence_score 0.95 reflects academic certainty; status 'disputed' reflects the live political contestation.",
+    "ethical_notes": "The 'disputed' status here reflects the political controversy with the Turkish state, NOT the historical-academic consensus. The IAGS (1997), most US universities, and most Western governments classify the event as genocide. This field models the distinction: confidence_score 0.95 reflects academic certainty; status 'disputed' reflects the live political contestation.\n\n[v6.30-representative-location] location_lat/lon represent a symbolic center; actual event scope was broader. Erzurum (eastern Anatolia) as representative epicenter of Armenian Genocide; deportations to Syrian deserts.",
     "entity_links": [
       {
         "entity_name_original": "Osmanlı İmparatorluğu",
@@ -514,7 +518,9 @@
     "month": 4,
     "day": 24,
     "date_precision": "DAY",
-    "iso_date": "1915-04-24"
+    "iso_date": "1915-04-24",
+    "location_lat": 39.9264,
+    "location_lon": 41.1025
   },
   {
     "name_original": "Голодомор",
@@ -532,7 +538,7 @@
     "status": "disputed",
     "known_silence": true,
     "silence_reason": "The Soviet government officially denied the famine existed until the mid-1980s. Western journalists in Moscow (notably Walter Duranty, NYT) actively suppressed coverage in exchange for access. Soviet archival access became possible only after 1991; significant portions remain classified in Russian state archives.",
-    "ethical_notes": "Ukraine classifies the event as genocide (Golodomor is Ukrainian for 'killing by hunger'). Russian official historiography disputes the genocide classification while acknowledging the famine. This entry uses event_type FAMINE because the mechanism (starvation from policy) is factual; the distinct question of 'genocide' vs 'policy-induced mass death' is genuinely debated among historians and is reflected in status=disputed.",
+    "ethical_notes": "Ukraine classifies the event as genocide (Golodomor is Ukrainian for 'killing by hunger'). Russian official historiography disputes the genocide classification while acknowledging the famine. This entry uses event_type FAMINE because the mechanism (starvation from policy) is factual; the distinct question of 'genocide' vs 'policy-induced mass death' is genuinely debated among historians and is reflected in status=disputed.\n\n[v6.30-representative-location] location_lat/lon represent a symbolic center; actual event scope was broader. Kyiv as Ukrainian center; famine also affected Kuban (North Caucasus).",
     "entity_links": [],
     "sources": [
       {
@@ -551,7 +557,9 @@
         "url": null
       }
     ],
-    "date_precision": "YEAR"
+    "date_precision": "YEAR",
+    "location_lat": 50.4501,
+    "location_lon": 30.5234
   },
   {
     "name_original": "השואה",
@@ -567,7 +575,7 @@
     "casualties_source": "Hilberg, R. (1985). The Destruction of the European Jews, 3rd ed.",
     "confidence_score": 0.98,
     "status": "confirmed",
-    "ethical_notes": "Holocaust denial is illegal in many jurisdictions and is not an academic position. The name 'Shoah' (Hebrew: 'catastrophe') is preferred by many Jewish scholars over the etymologically-religious 'Holocaust' (Greek: 'burnt offering'). Both names are in wide academic use.",
+    "ethical_notes": "Holocaust denial is illegal in many jurisdictions and is not an academic position. The name 'Shoah' (Hebrew: 'catastrophe') is preferred by many Jewish scholars over the etymologically-religious 'Holocaust' (Greek: 'burnt offering'). Both names are in wide academic use.\n\n[v6.30-representative-location] location_lat/lon represent a symbolic center; actual event scope was broader. Auschwitz-Birkenau as symbol of industrialized genocide; Shoah spanned Nazi Germany and occupied Europe.",
     "entity_links": [],
     "sources": [
       {
@@ -586,7 +594,9 @@
         "url": null
       }
     ],
-    "date_precision": "YEAR"
+    "date_precision": "YEAR",
+    "location_lat": 50.0355,
+    "location_lon": 19.1783
   },
   {
     "name_original": "Gkasaya ya Rwanda / Jenoside yakorewe Abatutsi",
@@ -639,7 +649,7 @@
     "confidence_score": 0.95,
     "status": "confirmed",
     "known_silence": false,
-    "ethical_notes": "Although this event itself is now well-documented (post-2011), it CAUSED the silencing of many other colonial-era events. Entities and events downstream of 1948-1966 British colonial administration carry partial-archive risk: their 'confidence_score' may be depressed not because the event is doubtful but because primary documentation was destroyed.",
+    "ethical_notes": "Although this event itself is now well-documented (post-2011), it CAUSED the silencing of many other colonial-era events. Entities and events downstream of 1948-1966 British colonial administration carry partial-archive risk: their 'confidence_score' may be depressed not because the event is doubtful but because primary documentation was destroyed.\n\n[v6.30-representative-location] location_lat/lon represent a symbolic center; actual event scope was broader. London as origin of the UK Colonial Office's systematic destruction of colonial records; operation spanned decolonizing UK colonies globally.",
     "entity_links": [
       {
         "entity_name_original": "British Empire",
@@ -668,7 +678,9 @@
         "url": null
       }
     ],
-    "date_precision": "YEAR"
+    "date_precision": "YEAR",
+    "location_lat": 51.5074,
+    "location_lon": -0.1278
   },
   {
     "name_original": "1918 Influenza Pandemic",
@@ -684,7 +696,7 @@
     "casualties_source": "Johnson, N.P.A.S. & Mueller, J. (2002). Updating the Accounts.",
     "confidence_score": 0.85,
     "status": "confirmed",
-    "ethical_notes": "The wide casualty range reflects genuine uncertainty: wartime censorship, colonial under-reporting, and the 'ordinary flu death' coding problem mean national figures are unreliable. India alone lost an estimated 13-18 million.",
+    "ethical_notes": "The wide casualty range reflects genuine uncertainty: wartime censorship, colonial under-reporting, and the 'ordinary flu death' coding problem mean national figures are unreliable. India alone lost an estimated 13-18 million.\n\n[v6.30-representative-location] location_lat/lon represent a symbolic center; actual event scope was broader. Fort Riley, Kansas as likely origin point of 1918 H1N1 pandemic; spread globally in <12 months.",
     "entity_links": [],
     "sources": [
       {
@@ -699,7 +711,9 @@
       }
     ],
     "date_precision": "SEASON",
-    "iso_date": "1918-00-00"
+    "iso_date": "1918-00-00",
+    "location_lat": 39.0458,
+    "location_lon": -97.3714
   },
   {
     "name_original": "Terremoto di Lisbona",
@@ -709,7 +723,7 @@
     "location_name": "Lisbon, Kingdom of Portugal",
     "location_lat": 38.72,
     "location_lon": -9.14,
-    "main_actor": null,
+    "main_actor": "Tectonic megathrust earthquake (M8.5-9.0) offshore Iberian Peninsula followed by tsunami and city-wide fires; affected populations of Lisbon, Algarve coast, and western Morocco (Kingdom of Portugal and Moroccan Alaouite Sultanate)",
     "description": "On the morning of 1 November 1755 (All Saints' Day), a magnitude ~8.5-9.0 earthquake destroyed most of Lisbon. A tsunami followed within minutes, and fires burned for five days. An estimated 30,000-100,000 died. The disaster provoked Europe-wide theological and philosophical crisis — Voltaire's 'Poème sur le désastre de Lisbonne' (1756) was a direct response — and accelerated the decline of optimistic theodicy.",
     "casualties_low": 30000,
     "casualties_high": 100000,
@@ -742,7 +756,7 @@
     "location_name": "Sanriku coast, northeastern Honshu",
     "location_lat": 38.27,
     "location_lon": 141.02,
-    "main_actor": null,
+    "main_actor": "Tectonic subduction earthquake (estimated M8.6) and tsunami off Sanriku coast; affected populations of Mutsu Province (Heian Japan) during the Jōgan era",
     "description": "A magnitude ~8.6 earthquake off the Sanriku coast on 13 July 869 CE produced a massive tsunami that inundated the Sendai plain, killing approximately 1,000 people. Sediment deposits from the event were re-studied in the early 2000s; the findings warned that the Sendai area remained vulnerable to a similar-scale event, a warning that proved prescient for the 2011 Tōhoku earthquake and tsunami.",
     "casualties_low": 1000,
     "casualties_high": 1000,
@@ -886,7 +900,7 @@
     "casualties_source": "Talbot, I. & Singh, G. (2009). The Partition of India.",
     "confidence_score": 0.85,
     "status": "confirmed",
-    "ethical_notes": "The event belongs under ETHNIC_CLEANSING per academic consensus on bilateral population transfers under violence; some scholars (Brass, 2003) further argue for specific GENOCIDE classifications of local incidents. This entry defers to the widely-used ETHNIC_CLEANSING framing while acknowledging the debate. Archival silences remain severe — Radcliffe destroyed his working papers after completing the border.",
+    "ethical_notes": "The event belongs under ETHNIC_CLEANSING per academic consensus on bilateral population transfers under violence; some scholars (Brass, 2003) further argue for specific GENOCIDE classifications of local incidents. This entry defers to the widely-used ETHNIC_CLEANSING framing while acknowledging the debate. Archival silences remain severe — Radcliffe destroyed his working papers after completing the border.\n\n[v6.30-representative-location] location_lat/lon represent a symbolic center; actual event scope was broader. Radcliffe Line across Punjab; partition violence also affected Bengal (east) with millions displaced and killed.",
     "entity_links": [
       {
         "entity_name_original": "British Raj",
@@ -913,7 +927,9 @@
     "month": 8,
     "day": 15,
     "date_precision": "DAY",
-    "iso_date": "1947-08-15"
+    "iso_date": "1947-08-15",
+    "location_lat": 30.0668,
+    "location_lon": 76.4792
   },
   {
     "name_original": "COVID-19 pandemic",

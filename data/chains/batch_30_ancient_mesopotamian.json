@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Mesopotamian imperial trunk: Sumer → Akkad → Babylon → Assyria → Neo-Babylonia → Achaemenid",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Mesopotamia / Fertile Crescent",
+    "description": "Deep-time political succession of Mesopotamian empires: from Sumerian city-states (Eridu, Uruk, Ur) through the Akkadian Empire of Sargon (~2334 BCE), Old Babylonian period (Hammurabi), the Kassite and Middle Assyrian periods, the Neo-Assyrian Empire, the Neo-Babylonian (Chaldean) Empire, culminating in the Achaemenid Persian conquest (539 BCE). 4000+ years of continuous state-building in the same geographic area.",
+    "confidence_score": 0.85,
+    "ethical_notes": "ETHICS: the 'succession' framing is retrospective — these were politically distinct entities often in conflict. The 'cradle of civilization' framing traditionally centered Mesopotamia/Egypt over equally ancient developments in the Indus Valley, China, and Mesoamerica. Neo-Assyrian imperial violence (systematic deportation, mass impalement) was recorded by the Assyrians themselves as policy. The Neo-Babylonian deportation of Judean elites (587 BCE) shaped the Jewish diaspora and biblical literature.",
+    "sources": [
+      {"citation": "Van De Mieroop, M. 'A History of the Ancient Near East ca. 3000-323 BC' (3rd ed., 2016)", "url": null, "source_type": "academic"},
+      {"citation": "Roux, G. 'Ancient Iraq' (1992)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "𒆠𒂗𒄀",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Kengi (Sumer), the earliest urban civilization in Mesopotamia (c. 4500-1900 BCE). Developed cuneiform writing, monumental architecture (ziggurats), irrigation agriculture, and the first identifiable 'states' (Lagash, Uruk, Ur, Umma, Kish)."
+      },
+      {
+        "entity_name": "𒀀𒅗𒁲𒆠",
+        "transition_year": -2334,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Akkadian Empire (2334-2154 BCE), founded by Sargon of Akkad — first multi-ethnic territorial empire in history. Spread Akkadian as lingua franca. Collapsed under Gutian invasions and climate stress (4.2ka event)."
+      },
+      {
+        "entity_name": "𒆍𒀭𒊏𒆠",
+        "transition_year": -1894,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "First Babylonian Empire (Old Babylonian period, 1894-1595 BCE). Hammurabi (r. 1792-1750 BCE) unified Mesopotamia and compiled the famous Code. Sacked by Hittites in 1595."
+      },
+      {
+        "entity_name": "𒌭𒀸𒋗",
+        "transition_year": -1595,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Kassite Babylonia (c. 1595-1155 BCE), replaced the Old Babylonian dynasty after the Hittite sack. Stable but underdocumented era — preserved Babylonian urban culture under foreign rule."
+      },
+      {
+        "entity_name": "𒈠𒀭𒈾𒀀𒀀",
+        "transition_year": -850,
+        "transition_type": "SUCCESSION",
+        "is_violent": true,
+        "description": "Neo-Assyrian Empire (~911-609 BCE), ruthlessly expansionist under Tiglath-Pileser III, Sargon II, Sennacherib, and Ashurbanipal. Conquered northern Israel (722), sacked Memphis (671), destroyed Elam (646). Fell to combined Median-Babylonian assault (Nineveh 612)."
+      },
+      {
+        "entity_name": "𒆳𒆍𒀭𒊏𒆠",
+        "transition_year": -626,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "Neo-Babylonian (Chaldean) Empire (626-539 BCE), founded by Nabopolassar after the fall of Assyria. Peaked under Nebuchadnezzar II (r. 605-562), who built the Hanging Gardens (if they existed), destroyed the First Temple (587), and deported Judean elites."
+      },
+      {
+        "entity_name": "Xšāça",
+        "transition_year": -550,
+        "transition_type": "CONQUEST",
+        "is_violent": false,
+        "description": "Achaemenid Persian Empire (550-330 BCE), founded by Cyrus the Great who conquered Media (550), Lydia (547), and Babylon (539). The transfer to Persian rule was largely peaceful for Babylon — Cyrus allowed exiled peoples (including Judeans) to return home."
+      }
+    ]
+  },
+  {
+    "name": "Iranian medieval trunk: سامانیان → آل بويه → سلجوق (already chained) → Mongols → Safavid (already chained)",
+    "name_lang": "en",
+    "chain_type": "DYNASTY",
+    "region": "Iran / Greater Khorasan",
+    "description": "Post-Abbasid Iranian dynastic succession: the Samanids (819-999) who sponsored the Persian literary renaissance (Rudaki, Ferdowsi's Shahnameh), the Buyids/Buwayhids (934-1062) who controlled Baghdad as Shia protectors of Sunni caliphs, followed by Seljuk and then Mongol rule — these integrate with the existing Iranian state trunk.",
+    "confidence_score": 0.85,
+    "ethical_notes": "The Samanid and Buyid periods represent the 'Iranian Intermezzo' — Persian linguistic and cultural revival under nominally Islamic rule, producing the Shahnameh (completed c. 1010, 50,000 verses). The Buyids' Shi'ism ruling Sunni Baghdad is one of the most interesting religious-political configurations in Islamic history.",
+    "sources": [
+      {"citation": "Frye, R. N. 'The Golden Age of Persia' (1975)", "url": null, "source_type": "academic"},
+      {"citation": "Bosworth, C. E. 'The New Islamic Dynasties' (1996)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "سامانیان",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Samanid Empire (819-999), centered in Bukhara and Samarkand. Sponsored Persian cultural revival in the Islamic world — the 'Shahnameh' (Book of Kings) by Ferdowsi was composed under their patronage. Defeated by the Qarakhanids (999)."
+      },
+      {
+        "entity_name": "آل بويه",
+        "transition_year": 934,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Buyid dynasty (934-1062), Shia Daylamite rulers who controlled Baghdad as nominal protectors of the (Sunni) Abbasid caliph from 945. Fragmented into branches. Replaced by Seljuk Turks."
+      }
+    ]
+  },
+  {
+    "name": "Armenian state continuity: Մեծ Հայք → modern Armenia",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "South Caucasus / Armenia",
+    "description": "Armenian state-formation: from the ancient Kingdom of Greater Armenia (Mets Hayk, -321 to 428), through centuries of suzerainty under Parthia, Rome/Byzantium, and the Seljuks, the medieval Bagratid Kingdom, Cilician Armenia, Ottoman-Persian partition, and modern Armenian Republic (1918-1920 independence, 1991 from USSR).",
+    "confidence_score": 0.85,
+    "ethical_notes": "Armenia is traditionally credited as the first state to adopt Christianity (301 CE under King Tiridates III). The 1915-1923 Armenian Genocide (1-1.5 million deaths) by the Ottoman Empire remains contested by modern Turkey — Armenian recognition campaigns continue globally. The Nagorno-Karabakh conflict (1988-present) reshapes ongoing Armenian-Azerbaijani relations.",
+    "sources": [
+      {"citation": "Hovannisian, R. G. (ed.) 'The Armenian People from Ancient to Modern Times' (1997, 2 vols)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Մեծ Հայք / Armenia Magna",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Kingdom of Greater Armenia (321 BCE - 428 CE), founded by Artaxias I under Artashesian dynasty, peaked under Tigranes the Great (r. 95-55 BCE). Became the first state to officially adopt Christianity (301 CE) under King Tiridates III. Fell to Sasanian Persia (428)."
+      }
+    ]
+  }
+]

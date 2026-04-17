@@ -90,6 +90,13 @@ async def lifespan(app: FastAPI):
         logger.warning("Database non riconosciuto: tabelle create con create_all()")
 
     if AUTO_SEED:
+        # v6.31: ensure aourednik raw data is available (clone if missing)
+        try:
+            from src.ingestion.ensure_aourednik_data import ensure_aourednik
+            ensure_aourednik()
+        except Exception:
+            logger.warning("aourednik fetch failed — boundary enrichment limited", exc_info=True)
+
         seed_database()
         try:
             from src.ingestion.update_boundaries import update_all_boundaries

@@ -175,8 +175,8 @@
     "year": 1932,
     "year_end": 1945,
     "location_name": "Japanese Empire (Korea, China, Philippines, Indonesia, Taiwan, Burma, Pacific)",
-    "location_lat": null,
-    "location_lon": null,
+    "location_lat": 35.6762,
+    "location_lon": 139.6503,
     "main_actor": "Imperial Japanese Army (Ministry of War) and contracted procurement agents",
     "description": "From 1932 onward the Imperial Japanese Army established a system of 'comfort stations' in which an estimated 50,000 to 200,000 women and girls, predominantly Korean but also Chinese, Filipina, Taiwanese, Indonesian, Dutch, and others, were held in conditions of sexual slavery. Recruitment ranged from outright abduction to fraudulent labour contracts; survivors testified to repeated rape under military supervision. The 1993 Kōno Statement formally acknowledged military involvement, but subsequent administrations have attempted to qualify it.",
     "casualties_low": 50000,
@@ -186,7 +186,7 @@
     "status": "confirmed",
     "known_silence": true,
     "silence_reason": "Successive Japanese administrations, textbook publishers and revisionist historians have contested the scale, the coercion, and the direct military responsibility. The 2015 Japan-Korea agreement was rejected by most surviving comfort women and later Korean governments. Many survivors died before receiving recognition.",
-    "ethical_notes": "Event_type SLAVE_TRADE is used per ETHICS-007: the system was state-organised sexual slavery, not 'military prostitution'. Casualty range is victim count, not deaths; an unknown fraction died in captivity or shortly after liberation.",
+    "ethical_notes": "Event_type SLAVE_TRADE is used per ETHICS-007: the system was state-organised sexual slavery, not 'military prostitution'. Casualty range is victim count, not deaths; an unknown fraction died in captivity or shortly after liberation.\n\n[v6.30-representative-location] location_lat/lon represent a symbolic center; actual event scope was broader. Tokyo as organizer of the system; victims were drawn from occupied Korea, China, Philippines, Indonesia, Taiwan, Burma, Pacific.",
     "entity_links": [
       {
         "entity_name_original": "大日本帝國",
