@@ -2,6 +2,55 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.72.0] - 2026-04-18
+
+**Tema**: *Audit v4 Fase C Round 2 — duplicate QIDs cleanup (42 casi)*
+
+Secondo round di cleanup post-bootstrap. Lo stato post-v6.71 aveva **42 QID Wikidata condivisi da 2+ entità AtlasPI** — ambiguità critica per il cross-reference.
+
+### Strategia
+
+Per ogni QID duplicato:
+1. Identifica **primary** (l'entità AtlasPI che rappresenta più fedelmente il concetto Wikidata)
+2. Libera QID su tutte le **secondarie** (wikidata_qid → NULL)
+3. Nessuna entità rimossa (merge strutturale rimandato a fase architetturale successiva)
+
+Criteri primary:
+- **Default**: entity con `id` minore (di solito versione stabile, non duplicato recente)
+- **Eccezione Q1537016 Kanem Empire**: primary = entity 647 "Kanem" (exact match 700-1387); secondary = entity 147 "Kanem-Bornu" (aggregate 700-1893). Il QID Wikidata descrive specificamente Kanem, non l'aggregate.
+
+### Esempi duplicati risolti
+
+| QID | Primary (id/nome) | Secondary (id/nome) |
+|-----|-------------------|---------------------|
+| Q33296 Mughal Empire | 12 مغلیہ سلطنت | 849 سلطنت مغلیہ (script variant) |
+| Q389688 Achaemenid | 27 Xšāça | 847 هخامنشیان (Farsi) |
+| Q207521 Ethiopia | 24 የኢትዮጵያ... | 855 Mengist Ityop'p'ya (Latin transliteration) |
+| Q849623 Oyo | 151 Ọyọ́ | 851 Oyo (audit v2 chain ha già flaggato questa dup) |
+| Q889884 Rwanda | 157 u Rwanda | 558 U Rwanda (audit v2 flaggato) |
+| Q241790 Kingdom of Kush | 52 Kush | 552 Meroe (phase meroitica di Kush — notato v6.71) |
+| Q1537016 Kanem Empire | **647 Kanem** | **147 Kanem-Bornu** (SPECIAL: primary è 647 non min id) |
+| Q211435 Virreinato Perú | 206 (accented) | 709 (plain) |
+| Q156418 Kingdom of Hawaii | 43 Aupuni Mōʻī | 548 Ko Hawaii Pae Aina |
+| ... (42 totali) | | |
+
+### Stato
+
+- Entità con QID: 539 → **497** (42 secondarie liberate)
+- Duplicate QID count: 42 → **0** ✓
+- 42 entità secondarie con `wikidata_qid = NULL` + `rationale` in audit log che punta alla primary
+
+### Nota metodologica
+
+Merge strutturale (eliminare effettivamente le entità duplicate dal DB) è rimandato a una fase architetturale separata perché:
+- Cambia `entity_count` pubblico — possibili rotture di bookmark esterni
+- Richiede ADR per convenzione merge vs keep-split
+- Le entità "secondarie" potrebbero avere dati storici unici che vanno preservati (event, ruler, chain link attuali)
+
+Questo round consegna il valore principale (zero ambiguità cross-reference) senza il rischio strutturale.
+
+---
+
 ## [v6.71.0] - 2026-04-18
 
 **Tema**: *Audit v4 Fase C Round 1 — wrong QID fix + Rome missing + site-vs-polity ethical_notes*
