@@ -9,10 +9,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
-from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 from slowapi.middleware import SlowAPIMiddleware
-from slowapi.util import get_remote_address
 
 from src.api.errors import register_error_handlers
 from src.api.middleware import (
@@ -20,10 +19,13 @@ from src.api.middleware import (
     RequestLoggingMiddleware,
     SecurityHeadersMiddleware,
 )
+# v6.66 FIX 8: HEAD support — delega HEAD a GET internamente, strip body.
+from src.middleware.head_support import HeadSupportMiddleware
 from src.api.routes import admin_cache, admin_cofounder, admin_insights, analytics, chains, cities_routes, compare, docs_ui, entities, events, export, health, languages, periods, relations, render, rulers, search, sites, snapshot, timeline, widgets
 from src.config import (
     APP_TITLE,
     APP_VERSION,
+    CORS_ALLOW_CREDENTIALS,
     CORS_ORIGINS,
     ENVIRONMENT,
     HOST,
@@ -33,6 +35,9 @@ from src.config import (
 from src.db.database import Base, engine
 from src.db.seed import seed_database, seed_events_database, seed_periods_database, sync_new_periods
 from src.logging_config import setup_logging
+# v6.66.0 (audit #security): limiter singleton + endpoint CSP report
+from src.middleware.csp_report import router as csp_report_router
+from src.middleware.rate_limit import limiter
 from src.monitoring import init_sentry
 
 # Logging prima di tutto (Sentry si aggancia poi al logger root)
@@ -42,9 +47,6 @@ init_sentry()
 logger = logging.getLogger(__name__)
 
 STATIC_DIR = Path(__file__).resolve().parent.parent / "static"
-
-# Rate limiter
-limiter = Limiter(key_func=get_remote_address, default_limits=[RATE_LIMIT])
 
 
 def _run_alembic_migrations():
@@ -204,10 +206,13 @@ researchers, and digital-humanities developers. Every record carries:
 
 | Resource | Count | Endpoint |
 |---|---|---|
-| Historical entities | **862** | `/v1/entities` |
-| Historical events | **490** | `/v1/events` |
-| Historical periods | **48** | `/v1/periods` |
+| Historical entities | **1,034** | `/v1/entities` |
+| Historical events | **643** | `/v1/events` |
+| Historical periods | **55** | `/v1/periods` |
 | Historical cities | **110** | `/v1/cities` |
+| Archaeological sites | **1,249** | `/v1/sites` |
+| Historical rulers | **105** | `/v1/rulers` |
+| Historical languages | **29** | `/v1/languages` |
 | Trade routes | **41** | `/v1/routes` |
 | Dynasty chains | **94** | `/v1/chains` |
 | Sources | **2,400+** | (embedded) |
@@ -326,17 +331,30 @@ app = FastAPI(
 # GZip compression (min 500 bytes)
 app.add_middleware(GZipMiddleware, minimum_size=500)
 
-# CORS — legge origini da configurazione, supporta domini di produzione
+# CORS — v6.66.0 (audit #security): whitelist esplicita + credentials
+# coerenti. Se CORS_ORIGINS contiene "*", allow_credentials viene
+# disabilitato automaticamente (Starlette non puo' mandare
+# Access-Control-Allow-Credentials=true con wildcard ACAO, per spec CORS).
+# Per origini specifiche, allow_credentials=True resta attivo.
+# allow_methods include OPTIONS per preflight corretto (Starlette lo fa
+# implicitamente ma esplicito e' meglio).
 app.add_middleware(
     CORSMiddleware,
     allow_origins=CORS_ORIGINS,
-    allow_credentials=True,
-    allow_methods=["GET"],
+    allow_credentials=CORS_ALLOW_CREDENTIALS,
+    allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
+    max_age=600,  # cache preflight 10 minuti
 )
 
 # Security headers (include X-Process-Time)
 app.add_middleware(SecurityHeadersMiddleware)
+
+# v6.66 FIX 8: HEAD → GET rewrite + body strip. Va PRIMA di
+# RequestLoggingMiddleware cosi' il log registra HEAD (non GET finto)
+# e va DOPO SecurityHeadersMiddleware cosi' HEAD riceve gli stessi
+# security headers del corrispondente GET.
+app.add_middleware(HeadSupportMiddleware)
 
 # Request logging (include X-Request-ID) + analytics DB write (v6.12)
 app.add_middleware(RequestLoggingMiddleware)
@@ -378,6 +396,11 @@ app.include_router(widgets.router)
 # v6.33: Prometheus metrics endpoint
 from src.api.metrics import router as metrics_router
 app.include_router(metrics_router)
+
+# v6.66.0 (audit #security): CSP violation report receiver.
+# Il browser invia POST /v1/csp-report quando rileva violazioni CSP.
+# In report-only mode (v6.66.0) questi report vengono loggati per review.
+app.include_router(csp_report_router)
 
 
 @app.get("/", include_in_schema=False)
@@ -461,6 +484,20 @@ async def serve_about():
 async def serve_faq():
     """Public FAQ page with JSON-LD FAQPage schema for rich search results."""
     return FileResponse(STATIC_DIR / "faq.html", media_type="text/html")
+
+
+@app.get("/og-image.png", include_in_schema=False)
+async def serve_og_image():
+    """v6.66: Open Graph image for social sharing (1200x630 PNG).
+
+    Usato da meta property=\"og:image\" in landing/, index.html, about.html, etc.
+    Servirlo al root (non solo /static/...) permette scraper social che
+    assumono l'immagine al path canonico di usarlo senza configurazione.
+    """
+    return FileResponse(
+        STATIC_DIR / "og-image.png",
+        media_type="image/png",
+    )
 
 
 @app.get("/v1/openapi.json", include_in_schema=False)

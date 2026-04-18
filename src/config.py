@@ -16,7 +16,7 @@ DEBUG = ENVIRONMENT == "development"
 SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret-change-in-production")
 
 # ─── Applicazione ────────────────────────────────────────────────
-APP_VERSION = "6.65.0"
+APP_VERSION = "6.66.0"
 APP_TITLE = "AtlasPI"
 APP_DESCRIPTION = "Database geografico storico strutturato per agenti AI"
 
@@ -45,7 +45,24 @@ TRUSTED_PROXIES = [
 ]
 
 # ─── CORS ────────────────────────────────────────────────────────
-CORS_ORIGINS = os.getenv("CORS_ORIGINS", "*").split(",")
+# v6.66.0 (audit #security): CORS ora e' whitelist esplicita, non "*".
+# Rationale:
+#   - prima: default "*" + allow_credentials=True → inconsistente (browser
+#     rifiutano credentials con wildcard; GET public a qualunque origin)
+#   - ora: whitelist di origini note (dominio pubblico + versione www).
+# Override via env CORS_ORIGINS (comma-separated) per staging/dev.
+# Per API completamente pubblica (agenti AI/scraper educati) il valore
+# "*" resta supportato ma deve essere settato esplicitamente.
+_CORS_DEFAULT = "https://atlaspi.cra-srl.com,https://www.atlaspi.cra-srl.com"
+CORS_ORIGINS = [
+    o.strip()
+    for o in os.getenv("CORS_ORIGINS", _CORS_DEFAULT).split(",")
+    if o.strip()
+]
+# Se la whitelist e' esplicita (no "*"), possiamo abilitare credentials.
+# Con "*" FastAPI/Starlette disabilita Access-Control-Allow-Credentials
+# automaticamente per conformita' allo standard CORS.
+CORS_ALLOW_CREDENTIALS = "*" not in CORS_ORIGINS
 
 # ─── Logging ─────────────────────────────────────────────────────
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()

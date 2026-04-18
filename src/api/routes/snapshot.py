@@ -29,6 +29,10 @@ from src.db.models import (
     HistoricalEvent,
     HistoricalPeriod,
 )
+# v6.66.0 (audit #security): limite specifico per /v1/snapshot/year/*
+# Endpoint pesante che aggrega periods+entities+events+cities+chains
+# → 60/minute basta per uso interattivo, previene abuse via scraper.
+from src.middleware.rate_limit import RATE_LIMIT_SNAPSHOT, limiter
 
 logger = logging.getLogger(__name__)
 
@@ -52,6 +56,7 @@ def _year_to_display(year: int) -> str:
         "world like in year X?' with a single API call."
     ),
 )
+@limiter.limit(RATE_LIMIT_SNAPSHOT)
 @cache_response(ttl_seconds=3600)
 def world_snapshot(
     request: Request,

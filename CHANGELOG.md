@@ -2,6 +2,202 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.66.0] - 2026-04-18
+
+**Tema**: *API audit fix — filtri mancanti, schema coerenti, envelope errori, HEAD, /metrics protection*
+
+Un audit della API live ha trovato 8 bug critici. Questa release li risolve in sequenza.
+
+### FIX 1 — P0 CRITICAL: `/v1/entities` ignorava 5 filtri documentati
+
+La docstring elencava `year`, `entity_type`, `continent`, `status`, `search` ma la signature del handler non li dichiarava → FastAPI li scartava senza 422 e l'endpoint restituiva sempre 1034 entità a prescindere dai filtri.
+
+**Reproduce pre-fix**:
+```bash
+curl -sS 'https://atlaspi.cra-srl.com/v1/entities?year=-500' | jq .count   # 1034 (bug)
+curl -sS 'https://atlaspi.cra-srl.com/v1/entities?entity_type=empire' | jq .count  # 1034 (bug)
+```
+
+**Fix**:
+- Aggiunti i 5 parametri Query alla signature di `list_entities`.
+- `year`: `year_start <= year AND (year_end IS NULL OR year_end >= year)`.
+- `entity_type`, `status`, `continent`: exact match (continent via post-query da lat/lon capitale).
+- `search`: ILIKE su `name_original` + `name_variants` (subquery).
+
+### FIX 2 — P1: `/v1/sites?year=` non filtrava
+
+`?year=100` e `?year=-1` restituivano entrambi 1226 (totale). Il filtro usava `OR date_start IS NULL` che lasciava passare tutti i siti privi di date_start.
+
+**Fix**: where clause ora `date_start IS NOT NULL AND date_start <= year AND (date_end IS NULL OR date_end >= year)`. Siti senza `date_start` noto sono esclusi dal filtro anno per evitare falsi positivi; restano disponibili via `/v1/sites` senza filtro year.
+
+### FIX 3 — P1: Schema LIST != DETAIL su `/v1/routes` e `/v1/events`
+
+**Trade routes**: il list endpoint non includeva geometria → il frontend non poteva disegnare linee sulla mappa senza fare N chiamate a `/v1/routes/{id}`.
+
+**Fix**: `_route_summary` ora restituisce:
+- `geometry_simplified` — GeoJSON LineString/MultiLineString con Douglas-Peucker (tolerance 0.5°, riduce i vertici del 70-90%).
+- `start_lat`, `start_lon`, `end_lat`, `end_lon` — fallback minimale da geometry o primo/ultimo waypoint.
+- La `geometry` full resolution resta esclusiva di `/v1/routes/{id}` (detail).
+
+**Events**: il list non includeva `location_lat/lon` → impossibile clusterizzare eventi sulla mappa dal list.
+
+**Fix**: `_event_summary` ora include `location_lat` e `location_lon`.
+
+### FIX 4 — P1: Pagination `count` vs `total`
+
+Alcuni endpoint usavano `count`, altri `total`. Standardizzato su `total` (canonico), con `count` mantenuto come alias deprecated per 1-2 release.
+
+**Schema aggiornato**:
+- `PaginatedEntityResponse` ora include sia `total` (canonical) sia `count` (deprecated).
+- `SearchResponse` stesso pattern.
+- `/v1/entities/light` restituisce entrambi.
+
+Rimozione di `count` pianificata per v6.68 (almeno 2 release di deprecation).
+
+### FIX 5 — P1: `/v1/compare/{a}/{b}` != `/v1/compare?ids=` struttura
+
+Il path restituiva `{entity_a, entity_b, comparison}`; il query `{entities: [...], overlap: {...}, common_events}`. Un consumatore non poteva scrivere un solo parser.
+
+**Fix**: `/v1/compare/{a}/{b}` ora include anche:
+- `entities`: lista `[a, b]` (canonical).
+- `overlap`: struttura identica a `/v1/compare?ids=` (`{all, pairwise}`).
+- `entity_a` / `entity_b`: mantenuti per backward compat (deprecated).
+
+### FIX 6 — P1: `/metrics` Prometheus pubblico leakava metadata AI
+
+`/metrics` era accessibile senza auth e esponeva `suggestions_pending`, `suggestions_accepted`, uptime, e metriche pipeline AI interne.
+
+**Fix**: access control via IP allowlist + Basic auth fallback.
+- `METRICS_ALLOWED_IPS`: comma-separated (es. `127.0.0.1,10.0.0.5`). `*` disabilita (dev only).
+- `METRICS_USER` / `METRICS_PASS`: basic auth fallback.
+- **Default: deny** — se nessuno dei due è configurato, 403.
+
+X-Forwarded-For è rispettato per deployment dietro Nginx/reverse proxy.
+
+### FIX 7 — P1: Error envelope unificato
+
+Quattro formati di errore coesistevano. `/v1/events/on-this-day/{mm_dd}` con input invalido restituiva due shape diverse.
+
+**Fix**: global exception handler aggiornato in `src/api/errors.py`. Canonical envelope:
+```json
+{
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "...",
+    "details": {...},
+    "request_id": "..."
+  }
+}
+```
+
+I campi legacy (`detail`, `request_id`, `error_detail`) sono mantenuti top-level per backward compat con client deployati. Sostituiscono `error: true` (boolean) con `error: {...}` (oggetto). Test esistenti aggiornati.
+
+### FIX 8 — P2: HEAD 405 → 200 senza body
+
+`HEAD /v1/entities` restituiva 405. Per RFC 9110 §9.3.2, ogni GET dovrebbe accettare HEAD.
+
+**Fix**: `HeadSupportMiddleware` in `src/middleware/head_support.py`. Intercetta HEAD, rewrite del `request.scope["method"]` a GET, esegue il routing, strip del body dalla response. Headers preservati (Content-Length, Content-Type, Cache-Control, X-Process-Time, ecc.).
+
+### Test
+
+Nuovi test in `tests/test_v666_entities_filters.py` coprono i fix 1-8. Test legacy (`test_entities.py::test_not_found`, `test_v63_events.py::test_event_detail_404_unknown`) aggiornati al nuovo envelope errori.
+
+### Files toccati
+
+- `src/api/routes/entities.py` — filtri `year/entity_type/continent/status/search` su `list_entities`, `total`/`count` su schema.
+- `src/api/routes/sites.py` — filtro `year` corretto.
+- `src/api/routes/cities_routes.py` — `_route_summary` con `geometry_simplified` + start/end coords.
+- `src/api/routes/events.py` — `_event_summary` con `location_lat/lon`.
+- `src/api/routes/relations.py` — `/v1/compare/{a}/{b}` con `entities` list + `overlap`.
+- `src/api/metrics.py` — IP allowlist + Basic auth.
+- `src/api/errors.py` — envelope `error: {...}` unificato.
+- `src/api/schemas.py` — `PaginatedEntityResponse` con `total` + `count`.
+- `src/middleware/head_support.py` — nuovo file (FIX 8).
+- `src/main.py` — import + registrazione `HeadSupportMiddleware`.
+- `tests/test_v666_entities_filters.py` — nuovi test (8 fix).
+- `tests/test_entities.py`, `tests/test_v63_events.py` — adattati al nuovo envelope.
+
+### Deprecation timeline
+
+- `count` in pagination → alias di `total`, rimozione v6.68.
+- `entity_a`/`entity_b` su `/v1/compare/{a}/{b}` → alias di `entities[0]`/`entities[1]`, rimozione v6.68.
+- `error: true` boolean nel body errore → rimpiazzato da `error: {code, message, ...}`. Legacy `detail`, `request_id`, `error_detail` restano finché necessario.
+
+### Security hardening (audit #security)
+
+Complemento audit API: audit di sicurezza HTTP ha trovato 7 problemi nella configurazione di produzione. Tutti risolti in questa release.
+
+#### S-FIX 1 — Content Security Policy (report-only)
+
+Aggiunto `Content-Security-Policy-Report-Only` su tutte le risposte (eccetto `/widget/*` che ha policy rilassata per embedding di terze parti). Permette:
+- `'self'` per default-src, script, style, connect
+- `https://unpkg.com` per Leaflet CDN
+- Tile servers OSM / CartoDB / ArcGIS / OSM France per img-src
+- `data:` / `blob:` per font e marker SVG inline
+
+Report-only è deliberato: CSP in enforce rischia di rompere pagine live se manca un dominio. v6.66.0 raccoglie 1-2 settimane di report, poi v6.67+ passa a enforce. Reports arrivano su `POST /v1/csp-report` e vengono loggati a livello WARNING.
+
+#### S-FIX 2 — HSTS con includeSubDomains + preload
+
+Prima: `Strict-Transport-Security: max-age=31536000`
+Ora: `Strict-Transport-Security: max-age=31536000; includeSubDomains; preload`
+
+NOTA: settare l'header e' condizione necessaria ma non sufficiente per l'inclusione nel preload list dei browser. Serve submission a https://hstspreload.org/ (TODO post-deploy).
+
+#### S-FIX 3 — Rimozione X-XSS-Protection
+
+`X-XSS-Protection` deprecato (OWASP 2023+: può introdurre XSS nei browser vecchi). Settato a `0` per disabilitare esplicitamente il filtro legacy. CSP moderno sostituisce la funzione.
+
+#### S-FIX 4 — /metrics protection (IP allowlist + Basic auth)
+
+Layer 1 (nginx): edit manuale post-deploy di `/etc/nginx/sites-enabled/atlaspi.cra-srl.com` per allowlist IP.
+Layer 2 (app): `src/api/metrics.py` implementa `_authorize_metrics` che richiede:
+- IP client in `METRICS_ALLOWED_IPS` env var, **oppure**
+- Basic auth con `METRICS_USER` / `METRICS_PASS` env var
+
+Se entrambe mancanti → **403 fail-closed** (meglio rompere monitoring che leakare suggestions_pending / suggestions_accepted).
+
+#### S-FIX 5 — CORS normalizzato
+
+Prima: `CORS_ORIGINS = "*"` + `allow_credentials=True` → inconsistente (browser rifiutano credentials con wildcard; GET da origin qualsiasi rispondeva 200).
+Ora: whitelist esplicita `["https://atlaspi.cra-srl.com", "https://www.atlaspi.cra-srl.com"]`. `CORS_ALLOW_CREDENTIALS` è `True` solo se la whitelist non contiene `*` (coerenza CORS spec).
+
+#### S-FIX 6 — Rate limiting per endpoint
+
+Limiter `slowapi` ora centralizzato in `src/middleware/rate_limit.py`. Limiti per categoria:
+- default globale: `RATE_LIMIT` env (60/minute)
+- `/v1/export/*` → **10/minute** (endpoint pesanti, GeoJSON/CSV generation)
+- `/v1/snapshot/year/*` → **60/minute**
+- Search / detail (entities, events, periods) restano sul default globale (300/minute overridable via env)
+
+Response 429 con `X-RateLimit-*` headers. Chiave = IP client (estratto da `X-Forwarded-For` per nginx in front).
+
+#### S-FIX 7 — Security headers aggiuntivi
+
+- `Referrer-Policy: strict-origin-when-cross-origin` (già presente, confermato)
+- `Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()` — disabilita API sensibili che l'app non usa
+- `X-Content-Type-Options: nosniff` (confermato)
+- `X-Frame-Options: DENY / SAMEORIGIN / ALLOWALL` per path (confermato)
+
+### Files toccati (security fix)
+
+- `src/middleware/security.py` — SecurityHeadersMiddleware esteso con CSP, HSTS preload, Permissions-Policy, rimosso X-XSS
+- `src/middleware/csp_report.py` — **nuovo** — ricevitore POST /v1/csp-report
+- `src/middleware/rate_limit.py` — **nuovo** — limiter singleton + preset per categoria
+- `src/api/routes/export.py` — `@limiter.limit(RATE_LIMIT_EXPORT)` su tutti gli endpoint di export
+- `src/api/routes/snapshot.py` — `@limiter.limit(RATE_LIMIT_SNAPSHOT)` su /v1/snapshot/year/
+- `src/config.py` — `CORS_ORIGINS` default whitelist, `CORS_ALLOW_CREDENTIALS` derivato
+- `src/main.py` — include csp_report_router, CORS con credentials coerenti, import limiter da modulo dedicato
+
+### Post-deploy TODO (manuale)
+
+1. Aggiornare `/etc/nginx/sites-enabled/atlaspi.cra-srl.com` sul VPS con `allow` block per `/metrics` (vedi `docs/ops/nginx-metrics.md`).
+2. Settare `METRICS_USER` + `METRICS_PASS` in `/opt/cra/.env.atlaspi` → `docker compose restart atlaspi`.
+3. Review logs per 1-2 settimane (`cra-logs atlaspi | grep "CSP violation"`). Dopo review, v6.67+ passa CSP da report-only a enforce.
+4. Submit `atlaspi.cra-srl.com` a https://hstspreload.org/ per inclusione preload list (richiede HTTPS + `includeSubDomains` + `preload` — tutto ora presente).
+
+---
+
 ## [v6.65.0] - 2026-04-18
 
 **Tema**: *Capital anachronism ethical_notes — audit #05 MED batch*

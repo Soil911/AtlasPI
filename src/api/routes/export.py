@@ -15,11 +15,13 @@ import io
 import json
 import logging
 
-from fastapi import APIRouter, Depends, Query, Response
+from fastapi import APIRouter, Depends, Query, Request, Response
 from sqlalchemy.orm import Session, joinedload
 
 from src.db.database import get_db
 from src.db.models import ArchaeologicalSite, GeoEntity, HistoricalLanguage, HistoricalRuler
+# v6.66.0 (audit #security): export endpoint pesanti, limite stretto 10/min
+from src.middleware.rate_limit import RATE_LIMIT_EXPORT, limiter
 
 logger = logging.getLogger(__name__)
 
@@ -35,7 +37,10 @@ router = APIRouter(tags=["esportazione"])
         "o `geometry=centroid` per esportare solo le capitali come Point."
     ),
 )
+@limiter.limit(RATE_LIMIT_EXPORT)
 def export_geojson(
+    request: Request,
+    response: Response,  # v6.66: richiesto da slowapi con headers_enabled=True
     year: int | None = Query(None, ge=-4000, le=2100),
     geometry: str = Query(
         "full",
@@ -113,7 +118,12 @@ def export_geojson(
     summary="Esporta entità come CSV",
     description="CSV tabellare per analisi in Excel, Pandas, R.",
 )
-def export_csv(db: Session = Depends(get_db)):
+@limiter.limit(RATE_LIMIT_EXPORT)
+def export_csv(
+    request: Request,
+    response: Response,  # v6.66: richiesto da slowapi con headers_enabled=True
+    db: Session = Depends(get_db),
+):
     entities = db.query(GeoEntity).order_by(GeoEntity.year_start).all()
 
     output = io.StringIO()
@@ -146,7 +156,12 @@ def export_csv(db: Session = Depends(get_db)):
     summary="Dati per visualizzazione timeline",
     description="JSON ottimizzato per rendering timeline interattiva.",
 )
-def export_timeline(db: Session = Depends(get_db)):
+@limiter.limit(RATE_LIMIT_EXPORT)
+def export_timeline(
+    request: Request,
+    response: Response,  # v6.66: richiesto da slowapi con headers_enabled=True
+    db: Session = Depends(get_db),
+):
     entities = (
         db.query(GeoEntity)
         .order_by(GeoEntity.year_start)
@@ -193,7 +208,10 @@ def _safe_json(raw: str | None) -> list | dict | None:
         "`year` (siti con documentata attivita' in quell'anno)."
     ),
 )
+@limiter.limit(RATE_LIMIT_EXPORT)
 def export_sites_geojson(
+    request: Request,
+    response: Response,  # v6.66: richiesto da slowapi con headers_enabled=True
     year: int | None = Query(None, ge=-10000, le=2100),
     unesco_only: bool = Query(False),
     db: Session = Depends(get_db),
@@ -248,7 +266,9 @@ def export_sites_geojson(
         "rulers in carica in quell'anno."
     ),
 )
+@limiter.limit(RATE_LIMIT_EXPORT)
 def export_rulers_geojson(
+    request: Request,
     year: int | None = Query(None, ge=-5000, le=2100),
     region: str | None = Query(None, max_length=50),
     db: Session = Depends(get_db),
@@ -317,7 +337,9 @@ def export_rulers_geojson(
         "per year (lingue parlate in quell'anno), family, vitality_status."
     ),
 )
+@limiter.limit(RATE_LIMIT_EXPORT)
 def export_languages_geojson(
+    request: Request,
     year: int | None = Query(None, ge=-10000, le=2100),
     family: str | None = Query(None, max_length=100),
     vitality_status: str | None = Query(None, max_length=30),
