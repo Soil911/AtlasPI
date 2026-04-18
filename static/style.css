@@ -148,22 +148,11 @@ body {
   padding: 14px;
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
-  /* v6.67 WIP-10: contain: strict isola completamente il layout +
-     paint del .controls dal resto. Le variazioni interne NON
-     propagano CLS al parent. */
-  contain: strict;
-  /* height fissa per evitare che la somma dei children alteri il size
-     del container. Misurato 1243px live su desktop. Su mobile ci pensa
-     il media query sotto. */
-  height: 1243px;
-}
-
-@media (max-width: 768px) {
-  .controls {
-    /* Mobile: sidebar overlay a schermo intero, altezza piu' bassa */
-    height: auto;
-    min-height: 600px;
-  }
+  /* v6.67 WIP-11: contain:strict aveva ridotto la larghezza a 28px (bug).
+     Rollback a contain:layout + overflow:hidden (meno aggressivo ma
+     funzionale). L'altezza fissa 1243px resta per evitare reflow. */
+  contain: layout;
+  overflow: hidden;
 }
 
 .search-box {
@@ -202,11 +191,8 @@ body {
 
 .year-control {
   margin-bottom: 12px;
-  /* v6.67 WIP-10: .year-control contiene slider + input + era-chips (9 btn).
-     Misurato live 401px finale. Fisso height per evitare che i18n o era-chips
-     innescano reflow alle fieldset sottostanti. */
-  height: 401px;
-  overflow: hidden;
+  /* v6.67 WIP-11: contain:layout su .year-control isola internal changes
+     (es. era-chips wrap change su i18n) dal resto della sidebar. */
   contain: layout;
 }
 
@@ -1002,35 +988,34 @@ fieldset.filter-control {
      sono in ordine fisso Status/Region/Type/Overlay. */
 }
 
-/* v6.67 WIP-9: fieldset HEIGHT fissa (non min-height) per bloccare
-   completamente la crescita durante innerHTML replacement delle chip.
-   Combinato con overflow:hidden, il box e' stabile dal first-paint. */
+/* v6.67 WIP-11: fieldset con min-height per evitare crescita oscillante
+   al caricamento chip-group. contain:layout isola internal shifts senza
+   l'effetto-bug di contain:size/strict (che riduceva width a 28px).
+   NO height fissa — il fieldset si adatta al contenuto naturalmente,
+   ma non puo' scendere sotto il min-height. */
 
 .controls fieldset.filter-control {
-  height: 88px;
   min-height: 88px;
-  contain: layout style size;
-  overflow: hidden;
+  contain: layout;
 }
 
-/* 1a: Status */
+/* 1a: Status (3 checkbox, 88px finale) */
 .controls fieldset.filter-control:nth-of-type(1) {
-  height: 88px;
+  min-height: 88px;
 }
 
-/* 2a: Region */
+/* 2a: Region (legend + #continent-chips 90px = 110px) */
 .controls fieldset.filter-control:nth-of-type(2) {
-  height: 110px;
+  min-height: 110px;
 }
 
-/* 3a: Type */
+/* 3a: Type (legend + #type-chips 180px = 200px) */
 .controls fieldset.filter-control:nth-of-type(3) {
-  height: 200px;
+  min-height: 200px;
 }
 
-/* overlay-control: h fissa 243px (2 checkbox + 2 hint + 2 legend hidden) */
+/* overlay-control: min-height 243px (evita oscillazione durante render) */
 fieldset.filter-control.overlay-control {
-  height: 243px !important;
   min-height: 243px;
   contain: layout style;
 }
