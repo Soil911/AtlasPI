@@ -13,7 +13,7 @@
 <!-- ── Header ──────────────────────────────────────── -->
 <header class="docs-header">
   <a href="/" class="logo">Atlas<strong>PI</strong> Docs</a>
-  <span class="version">v6.21.0</span>
+  <span class="version" id="docs-ui-version">v6.66.0</span>
   <nav>
     <a href="/app">Map</a>
     <a href="/timeline">Timeline</a>
@@ -68,19 +68,19 @@
   <div class="info-grid">
     <div class="info-card">
       <div class="label">Entities</div>
-      <div class="value">862+</div>
+      <div class="value" id="stat-entities">1,034</div>
     </div>
     <div class="info-card">
       <div class="label">Events</div>
-      <div class="value">312+</div>
+      <div class="value" id="stat-events">643</div>
     </div>
     <div class="info-card">
       <div class="label">Dynasty Chains</div>
-      <div class="value">25+</div>
+      <div class="value" id="stat-chains">94</div>
     </div>
     <div class="info-card">
       <div class="label">Academic Sources</div>
-      <div class="value">2,200+</div>
+      <div class="value">2,400+</div>
     </div>
   </div>
 </section>
@@ -1257,8 +1257,8 @@
         <div class="code-block-header"><span class="label">Example Response</span><button class="copy-btn">Copy</button></div>
         <pre>{
   <span class="tok-key">"status"</span>: <span class="tok-str">"ok"</span>,
-  <span class="tok-key">"version"</span>: <span class="tok-str">"6.21.0"</span>,
-  <span class="tok-key">"entity_count"</span>: <span class="tok-num">862</span>,
+  <span class="tok-key">"version"</span>: <span class="tok-str">"6.66.0"</span>,
+  <span class="tok-key">"entity_count"</span>: <span class="tok-num">1034</span>,
   <span class="tok-key">"database"</span>: {
     <span class="tok-key">"connected"</span>: <span class="tok-bool">true</span>,
     <span class="tok-key">"type"</span>: <span class="tok-str">"postgresql"</span>

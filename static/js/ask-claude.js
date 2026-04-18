@@ -73,7 +73,16 @@
 
     lines.push('');
     lines.push(`---`);
-    lines.push(`AtlasPI is a free public REST API with 1033 historical entities, 643 events, 105 rulers, 40 UNESCO sites, and 29 historical languages. Native-script names, academic sources, ETHICS layer.`);
+    // v6.66: i numeri sono letti da window.i18nVars (popolati a runtime da
+    // hydrateLiveStats() in app.js). Fallback statici solo se la fetch /health
+    // fallisce — meglio mostrare un numero "abbastanza recente" che uno rotto.
+    const v = (window.i18nVars || {});
+    const nEnt = v.entities || '1,034';
+    const nEvt = v.events || '643';
+    const nRul = v.rulers || '105';
+    const nSit = v.sites || '1,249';
+    const nLng = v.languages || '29';
+    lines.push(`AtlasPI is a free public REST API with ${nEnt} historical entities, ${nEvt} events, ${nRul} rulers, ${nSit} archaeological sites, and ${nLng} historical languages. Native-script names, academic sources, ETHICS layer.`);
 
     return lines.join('\n');
   }

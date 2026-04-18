@@ -4,12 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About AtlasPI — Historical Geography API for AI Agents</title>
-  <meta name="description" content="AtlasPI is a free, public REST API and MCP server providing 862 historical entities, 490 events, 94 dynasty chains from 4500 BCE to 2024 with real boundaries and academic sources. Apache 2.0 licensed, no authentication required.">
+  <meta name="description" content="AtlasPI is a free, public REST API and MCP server providing 1,034 historical entities, 643 events, 94 dynasty chains, 1,249 archaeological sites from 4500 BCE to 2024 with real boundaries and academic sources. Apache 2.0 licensed, no authentication required.">
   <link rel="canonical" href="https://atlaspi.cra-srl.com/about">
   <meta property="og:title" content="About AtlasPI">
   <meta property="og:description" content="What AtlasPI is, why it exists, who uses it, and how it's different from existing datasets.">
   <meta property="og:url" content="https://atlaspi.cra-srl.com/about">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://atlaspi.cra-srl.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://atlaspi.cra-srl.com/og-image.png">
   <link rel="icon" type="image/svg+xml" href="/static/landing/assets/favicon.svg">
   <style>
     :root {
@@ -163,28 +168,36 @@
 
     <div class="stat-grid">
       <div class="stat-card">
-        <div class="stat-value">862</div>
+        <div class="stat-value" data-live="entity_count">1,034</div>
         <div class="stat-label">Historical entities</div>
       </div>
       <div class="stat-card">
-        <div class="stat-value">490</div>
+        <div class="stat-value" data-live="event_count">643</div>
         <div class="stat-label">Events</div>
       </div>
       <div class="stat-card">
-        <div class="stat-value">48</div>
+        <div class="stat-value" data-live="period_count">55</div>
         <div class="stat-label">Historical periods</div>
       </div>
       <div class="stat-card">
-        <div class="stat-value">94</div>
+        <div class="stat-value" data-live="chain_count">94</div>
         <div class="stat-label">Dynasty chains</div>
       </div>
       <div class="stat-card">
-        <div class="stat-value">110</div>
+        <div class="stat-value" data-live="city_count">110</div>
         <div class="stat-label">Cities</div>
       </div>
       <div class="stat-card">
-        <div class="stat-value">41</div>
+        <div class="stat-value" data-live="route_count">41</div>
         <div class="stat-label">Trade routes</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" data-live="ruler_count">105</div>
+        <div class="stat-label">Historical rulers</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" data-live="site_count">1,249</div>
+        <div class="stat-label">Archaeological sites</div>
       </div>
       <div class="stat-card">
         <div class="stat-value">2,400+</div>
@@ -195,6 +208,42 @@
         <div class="stat-label">MCP tools</div>
       </div>
     </div>
+    <!-- v6.66: live-stat injector (shared pattern with landing/docs-ui) -->
+    <script>
+    (function () {
+      if (!('fetch' in window)) return;
+      var fmt = function (n) { return typeof n === 'number' ? n.toLocaleString() : String(n); };
+      var setLive = function (k, v) {
+        var ns = document.querySelectorAll('[data-live="' + k + '"]');
+        for (var i = 0; i < ns.length; i++) ns[i].textContent = v;
+      };
+      var pick = function (j) {
+        if (!j) return null;
+        if (typeof j.count === 'number') return j.count;
+        if (typeof j.total === 'number') return j.total;
+        if (typeof j.entity_count === 'number') return j.entity_count;
+        return null;
+      };
+      fetch('/health', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (h) {
+          if (h && typeof h.entity_count === 'number') setLive('entity_count', fmt(h.entity_count));
+        }).catch(function () {});
+      var ep = [
+        ['event_count', '/v1/events?limit=1'],
+        ['period_count', '/v1/periods?limit=1'],
+        ['chain_count', '/v1/chains?limit=1'],
+        ['city_count', '/v1/cities?limit=1'],
+        ['route_count', '/v1/routes?limit=1'],
+        ['ruler_count', '/v1/rulers?limit=1'],
+        ['site_count', '/v1/sites?limit=1'],
+      ];
+      ep.forEach(function (p) {
+        fetch(p[1], { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (j) { var n = pick(j); if (n !== null) setLive(p[0], fmt(n)); })
+          .catch(function () {});
+      });
+    })();
+    </script>
 
     <p><strong>Temporal range:</strong> 4500 BCE → 2024 CE (6500+ years).<br>
        <strong>Geographic range:</strong> all inhabited continents.<br>

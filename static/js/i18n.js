@@ -82,7 +82,8 @@
       era_today: '📡 Oggi',
       ask_claude: 'Ask Claude',
       onb_title: 'Benvenuto in AtlasPI 👋',
-      onb_sub: 'Il database geografico storico per esplorare 1033 imperi, 643 eventi, 105 sovrani, 40 siti UNESCO.',
+      // v6.66: i numeri reali vengono iniettati a runtime via injectLiveStats()
+      onb_sub: 'Il database geografico storico per esplorare {entities} imperi, {events} eventi, {rulers} sovrani, {sites} siti archeologici.',
       onb_step1_title: "Sposta lo slider dell'anno",
       onb_step1_desc: 'O clicca le chip (es. "🦅 Roma imperiale") per saltare a epoche specifiche.',
       onb_step2_title: "Clicca un'entità sulla mappa",
@@ -133,6 +134,11 @@
       map_fit_title: 'Mostra tutte le entità',
       map_fit_aria: 'Zoom su tutte le entità',
       reset_filters_aria: 'Azzera tutti i filtri',
+      // v6.66: footer legend + scorciatoie + welcome modal
+      legend_aria: 'Legenda colori mappa',
+      legend_real: 'Reale',
+      legend_approx: 'Approssimato',
+      footer_note_tail: '&mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie &middot; 34 tools MCP',
     },
     en: {
       search: 'Search by name, including variants...',
@@ -200,7 +206,8 @@
       era_today: '📡 Today',
       ask_claude: 'Ask Claude',
       onb_title: 'Welcome to AtlasPI 👋',
-      onb_sub: 'The historical geography database — explore 1033 empires, 643 events, 105 rulers, 40 UNESCO sites.',
+      // v6.66: numbers injected at runtime via injectLiveStats()
+      onb_sub: 'The historical geography database — explore {entities} empires, {events} events, {rulers} rulers, {sites} archaeological sites.',
       onb_step1_title: 'Move the year slider',
       onb_step1_desc: 'Or click a chip (e.g. "🦅 Roman Peak") to jump to a specific era.',
       onb_step2_title: 'Click an entity on the map',
@@ -251,6 +258,11 @@
       map_fit_title: 'Show all entities',
       map_fit_aria: 'Zoom to all entities',
       reset_filters_aria: 'Reset all filters',
+      // v6.66: footer legend + shortcuts + welcome modal (EN)
+      legend_aria: 'Map color legend',
+      legend_real: 'Real',
+      legend_approx: 'Approximate',
+      footer_note_tail: '&mdash; Historical data with ethical governance &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> shortcuts &middot; 34 MCP tools',
     },
   };
 
@@ -273,7 +285,28 @@
     if (typeof pushUrlState === 'function') pushUrlState();
   };
 
+  // v6.66: simple {key} placeholder interpolator. Sostituisce
+  // {entities}, {events}, {rulers}, {sites} con numeri live (o fallback).
+  // Assicura che il testo tradotto resti veritiero in qualunque lingua.
+  function interpolate(str, vars) {
+    if (!str || !vars) return str;
+    return str.replace(/\{(\w+)\}/g, function (_, k) {
+      return vars[k] != null ? vars[k] : '{' + k + '}';
+    });
+  }
+  window.i18nVars = window.i18nVars || {};
+
+  // v6.66: esponi una funzione per aggiornare i numeri live e ri-renderare.
+  window.setI18nStats = function (stats) {
+    window.i18nVars = Object.assign({}, window.i18nVars, stats || {});
+    if (typeof window.applyLangUI === 'function') window.applyLangUI();
+  };
+
   window.applyLangUI = function applyLangUI() {
+    // v6.66: aggiorna html[lang] così screen reader e Chrome translator
+    // vedono la lingua corrente. ETHICS: accessibilità reale, non solo UI.
+    document.documentElement.lang = window.lang;
+
     const searchInput = document.getElementById('search-input');
     if (searchInput) searchInput.placeholder = window.t('search');
     const resetBtn = document.getElementById('reset-btn');
@@ -285,15 +318,26 @@
     const info = document.getElementById('map-info');
     if (info) info.textContent = window.t('map_hint');
 
+    const vars = window.i18nVars || {};
+
     // v6.48.2: generic [data-i18n] translator — any element with
     // data-i18n="key" gets its textContent replaced with t(key).
-    // Pattern scales without adding per-element code.
+    // v6.66: se il testo contiene {placeholder}, interpola con i18nVars.
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       const translated = window.t(key);
       // Only replace if translation exists and differs from key (fallback)
       if (translated && translated !== key) {
-        el.textContent = translated;
+        el.textContent = interpolate(translated, vars);
+      }
+    });
+
+    // v6.66: data-i18n-html per stringhe con markup (es. footer).
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      const translated = window.t(key);
+      if (translated && translated !== key) {
+        el.innerHTML = interpolate(translated, vars);
       }
     });
 

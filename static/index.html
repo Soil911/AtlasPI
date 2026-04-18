@@ -7,8 +7,18 @@
   <title>AtlasPI — Database Geografico Storico</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
   <meta property="og:title" content="AtlasPI — Database Geografico Storico">
-  <meta property="og:description" content="862 entità storiche + 461 eventi storici su 9 regioni, da 4500 a.C. al 2024. Confini reali, fonti accademiche, governance etica.">
+  <meta property="og:description" content="1.034 entità storiche + 643 eventi storici su 9 regioni, da 4500 a.C. al 2024. Confini reali, fonti accademiche, governance etica.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://atlaspi.cra-srl.com/app">
+  <meta property="og:image" content="https://atlaspi.cra-srl.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AtlasPI — Historical Geography API for AI Agents">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://atlaspi.cra-srl.com/og-image.png">
+  <meta name="twitter:title" content="AtlasPI — Database Geografico Storico">
+  <meta name="twitter:description" content="1.034 entità storiche + 643 eventi storici, confini reali, fonti accademiche.">
+
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
@@ -276,14 +286,14 @@
   </main>
 
   <footer>
-    <div class="legend" aria-label="Legenda colori mappa">
-      <span class="legend-item"><span class="dot confirmed" aria-hidden="true"></span> Confermato</span>
-      <span class="legend-item"><span class="dot uncertain" aria-hidden="true"></span> Incerto</span>
-      <span class="legend-item"><span class="dot disputed" aria-hidden="true"></span> Contestato</span>
-      <span class="legend-item" aria-hidden="true">&#9473; Reale</span>
-      <span class="legend-item" aria-hidden="true">&#9476; Approssimato</span>
+    <div class="legend" data-i18n-aria-label="legend_aria" aria-label="Legenda colori mappa">
+      <span class="legend-item"><span class="dot confirmed" aria-hidden="true"></span> <span data-i18n="confirmed">Confermato</span></span>
+      <span class="legend-item"><span class="dot uncertain" aria-hidden="true"></span> <span data-i18n="uncertain">Incerto</span></span>
+      <span class="legend-item"><span class="dot disputed" aria-hidden="true"></span> <span data-i18n="disputed">Contestato</span></span>
+      <span class="legend-item" aria-hidden="true">&#9473; <span data-i18n="legend_real">Reale</span></span>
+      <span class="legend-item" aria-hidden="true">&#9476; <span data-i18n="legend_approx">Approssimato</span></span>
     </div>
-    <span class="footer-note">AtlasPI v6.65.0 &mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie &middot; 36 tools MCP</span>
+    <span class="footer-note">AtlasPI v<span id="footer-version">6.66.0</span> <span data-i18n-html="footer_note_tail">&mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie &middot; 34 tools MCP</span></span>
   </footer>
 
   <noscript>

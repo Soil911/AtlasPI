@@ -168,11 +168,49 @@
     update();
   }
 
+  /* ── v6.66: live stats injection ────────────────── */
+  function hydrateLiveStats() {
+    var fmt = function (n) { return typeof n === 'number' ? n.toLocaleString() : String(n); };
+    var pick = function (j) {
+      if (!j) return null;
+      if (typeof j.count === 'number') return j.count;
+      if (typeof j.total === 'number') return j.total;
+      return null;
+    };
+    // Version dal /health
+    fetch('/health', { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (h) {
+        if (!h) return;
+        var vEl = document.getElementById('docs-ui-version');
+        if (vEl && h.version) vEl.textContent = 'v' + h.version;
+        var eEl = document.getElementById('stat-entities');
+        if (eEl && typeof h.entity_count === 'number') eEl.textContent = fmt(h.entity_count);
+      })
+      .catch(function () { /* noop */ });
+    // Counts degli altri resource
+    var targets = [
+      ['stat-events',  '/v1/events?limit=1'],
+      ['stat-chains',  '/v1/chains?limit=1'],
+    ];
+    targets.forEach(function (pair) {
+      fetch(pair[1], { cache: 'no-store' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (j) {
+          var n = pick(j);
+          var el = document.getElementById(pair[0]);
+          if (n !== null && el) el.textContent = fmt(n);
+        })
+        .catch(function () { /* noop */ });
+    });
+  }
+
   /* ── Init ───────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', function () {
     initToggles();
     initCopy();
     initTryIt();
     initScrollSpy();
+    hydrateLiveStats();
   });
 })();

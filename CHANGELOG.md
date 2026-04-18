@@ -123,6 +123,89 @@ Nuovi test in `tests/test_v666_entities_filters.py` coprono i fix 1-8. Test lega
 - `entity_a`/`entity_b` su `/v1/compare/{a}/{b}` → alias di `entities[0]`/`entities[1]`, rimozione v6.68.
 - `error: true` boolean nel body errore → rimpiazzato da `error: {code, message, ...}`. Legacy `detail`, `request_id`, `error_detail` restano finché necessario.
 
+### Frontend audit fix (UX + drift)
+
+Un audit frontend ha trovato 6 bug UX + drift. Risolti in questa release.
+
+#### F-FIX 1 — Version/stats drift in 6+ punti
+
+Numeri stale sparsi su landing/, docs-ui/, footer, welcome modal, README, Swagger description, og-description. "v6.35.0", "862 entità", "1033 imperi", "490 events" coesistevano mentre produzione era 1034/643.
+
+**Fix**: single source of truth = `/health` + `/v1/{resource}?limit=1`.
+- `data-live="entity_count|event_count|..."` attributi nell'HTML.
+- `hydrateLiveStats()` in `static/app.js`, `static/landing/script.js`, `static/docs-ui/docs.js`, inline nelle pagine about/faq: tutti popolano i `data-live` con `Promise.allSettled` (no blocco se una API fallisce).
+- Welcome modal (`onb_sub`) ora usa placeholder `{entities}/{events}/{rulers}/{sites}` interpolati da `window.i18nVars` popolato a runtime.
+- `src/main.py::OPENAPI_DESCRIPTION` aggiornato con numeri correnti + 3 resource (sites/rulers/languages) prima omessi.
+- Version bump a 6.66.0 in src/config.py, README badge, landing JSON-LD, docs-ui header.
+
+Fallback statici (1,034, 643, ...) restano scritti nell'HTML così se `/health` è irraggiungibile la pagina non mostra placeholder vuoti.
+
+#### F-FIX 2 — og-image.png = 404
+
+`curl -I https://atlaspi.cra-srl.com/og-image.png` → 404, social sharing rotto.
+
+**Fix**:
+- `static/og-image.png` generato (1200×630, PIL) con branding AtlasPI, stat 1,034 entities · 643 events · 5,000 years, globo stilizzato, colori canonici (bg #0d1117, accent #58a6ff).
+- Nuova route `@app.get("/og-image.png")` in `src/main.py` (serve al root, non solo `/static/`).
+- `<meta property="og:image">` + twitter:image puntano a `/og-image.png` su landing, index, about.
+- `og:image:width=1200` + `og:image:height=630` + `twitter:card=summary_large_image` dove mancavano.
+
+#### F-FIX 3 — Autocomplete click → spinner infinito
+
+Clic su un item del dropdown autocomplete apriva il detail panel ma non faceva fetch `/v1/entities/{id}` (spinner permanente).
+
+**Fix** in `static/app.js::showAutocomplete`:
+- Event delegation sul parent `#autocomplete-list` (sopravvive al re-render del dropdown).
+- `mousedown` + `click` (fallback touch/a11y) con `preventDefault` + `stopPropagation`.
+- Handler idempotente: rimuove listener pregressi prima di riattaccare.
+- `showDetail()` su errore sostituisce lo spinner con messaggio `error_detail` invece di lasciarlo infinito.
+
+#### F-FIX 4 — `/embed?entity=X` ignorava param + "Apri ↗" puntava a /
+
+`/embed?entity=1` mostrava lo stato default; il link "Apri" portava alla landing invece che a `/app?entity=1`.
+
+**Fix** in `static/embed.html`:
+- Fetch paginata aumentata da `limit=100` a `limit=300` + fetch puntuale su `/v1/entities/{id}` se l'entità target non è nel batch (copre entità con id alto).
+- `map.fitBounds` / `setView` sulla entità focale appena caricata.
+- Slider year allineato al `year_start` dell'entità se `?year=` non specificato.
+- Link "Apri" ora `href="/app?entity={id}&year={year}"` (propaga contesto).
+
+#### F-FIX 5 — Sidebar stat "1034 entities" non aggiornato dopo filter
+
+Cercare "venice" filtrava la mappa a 1 polygon ma il badge header continuava a mostrare "1034 entities". Solo "Reset filtri" ripristinava.
+
+**Fix** in `static/app.js::applyFilters`:
+- Badge `#entity-count` ora mostra `${filtered.length} / ${allEntities.length}` se un filtro è attivo, altrimenti `${allEntities.length}` soltanto.
+- Risultato filtrato esposto su `window.__lastFiltered` per future dependencies.
+
+#### F-FIX 6 — i18n parziale (html[lang], footer, tooltip)
+
+Toggle IT/EN traduceva placeholder ma non `<html lang>`, footer text, alcuni tooltip iconografici.
+
+**Fix** in `static/js/i18n.js::applyLangUI`:
+- `document.documentElement.lang = window.lang` (accessibilità per screen reader, Chrome translator).
+- Nuovo pattern `data-i18n-html="key"` per stringhe con markup (footer con `<kbd>`, legend).
+- Interpolator `interpolate()` per sostituire `{entities}/{events}/...` nelle stringhe tradotte, via `window.i18nVars`.
+- Nuove chiavi IT/EN: `legend_aria`, `legend_real`, `legend_approx`, `footer_note_tail`.
+- Footer legenda dots ora ha `data-i18n` sui label Confermato/Incerto/Contestato.
+
+### Files toccati (frontend)
+
+- `static/og-image.png` — nuovo (1200×630 PNG).
+- `src/main.py` — route `/og-image.png`, OPENAPI_DESCRIPTION aggiornato.
+- `static/landing/index.html` — hero/stats/footer + og-image + JSON-LD dataset.
+- `static/landing/script.js` — `hydrateLiveStats()` fetch + interpola.
+- `static/index.html` — og/twitter meta, footer version span, legend data-i18n.
+- `static/app.js` — `hydrateLiveStats()`, `applyFilters` count aggiornato, autocomplete click fix, showDetail error handler.
+- `static/embed.html` — entity focus + deep link + "Apri" target.
+- `static/js/i18n.js` — `html[lang]`, `data-i18n-html`, interpolator `{key}`, chiavi nuove.
+- `static/js/ask-claude.js` — numeri da `window.i18nVars` invece che hardcoded.
+- `static/docs-ui/index.html` + `docs.js` — stat-* data-live injection.
+- `static/about.html` + `static/faq.html` — stat cards data-live + og tags.
+- `static/llms.txt` — numeri aggiornati + resource mancanti aggiunti.
+- `static/.well-known/ai-plugin.json` — description_for_human aggiornata.
+- `README.md` — badge version/counts + riga 179 stat.
+
 ### Security hardening (audit #security)
 
 Complemento audit API: audit di sicurezza HTTP ha trovato 7 problemi nella configurazione di produzione. Tutti risolti in questa release.

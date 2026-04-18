@@ -1,9 +1,10 @@
 # AtlasPI — Historical Geography API for AI Agents
 
-> Free, public, Apache 2.0 licensed REST API and MCP server providing 862
-> historical geopolitical entities, 490 events, 48 periods, 110 cities, 41
-> trade routes, and 94 dynasty chains — from 4500 BCE to 2024 CE with
-> real boundaries, academic sources, and explicit ethical framings.
+> Free, public, Apache 2.0 licensed REST API and MCP server providing 1,034
+> historical geopolitical entities, 643 events, 55 periods, 110 cities, 41
+> trade routes, 94 dynasty chains, 1,249 archaeological sites, 105 rulers,
+> and 29 historical languages — from 4500 BCE to 2024 CE with real
+> boundaries, academic sources, and explicit ethical framings.
 
 No login, no API key, no registration required. CORS-enabled. JSON + GeoJSON.
 
@@ -22,12 +23,15 @@ endpoint listed below returns JSON with no authentication.
 ## Primary endpoints
 
 ### Discovery (list + filter)
-- /v1/entities — 862 historical geopolitical entities (empires, kingdoms, etc.)
-- /v1/events — 490 historical events (battles, treaties, genocides, disasters)
-- /v1/periods — 48 historical epochs (Bronze Age, Edo Period, Cold War, etc.)
+- /v1/entities — 1,034 historical geopolitical entities (empires, kingdoms, etc.)
+- /v1/events — 643 historical events (battles, treaties, genocides, disasters)
+- /v1/periods — 55 historical epochs (Bronze Age, Edo Period, Cold War, etc.)
 - /v1/cities — 110 historical cities
 - /v1/routes — 41 trade routes (Silk Road, Trans-Saharan, etc.)
 - /v1/chains — 94 dynasty/succession chains (Roman→Byzantine, Chinese dynasties, etc.)
+- /v1/sites — 1,249 archaeological sites (UNESCO heritage, ruins, monuments)
+- /v1/rulers — 105 historical rulers (kings, emperors, caliphs)
+- /v1/languages — 29 historical languages (with native scripts and families)
 
 ### Detail (by ID or slug)
 - /v1/entities/{entity_id} — full entity with boundary, sources, ethical notes

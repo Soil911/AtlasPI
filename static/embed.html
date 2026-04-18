@@ -32,7 +32,9 @@
     <h1>Atlas<span>PI</span></h1>
     <input type="range" id="year-slider" min="-3100" max="2025" value="1500" step="1" />
     <span class="year-display" id="year-display">1500</span>
-    <a href="/" target="_blank" title="Apri AtlasPI completo">Apri &#8599;</a>
+    <!-- v6.66 FIX 4: "Apri" deve portare all'app interattiva, non alla landing.
+         Se presente ?entity=X in embed, propaghiamo il parametro a /app. -->
+    <a id="open-full" href="/app" target="_blank" title="Apri AtlasPI completo">Apri &#8599;</a>
   </div>
   <div id="map"></div>
 
@@ -45,6 +47,17 @@
     const initYear = params.get('year') ? parseInt(params.get('year'), 10) : 1500;
     const focusEntity = params.get('entity') ? parseInt(params.get('entity'), 10) : null;
 
+    // v6.66 FIX 4: propaga ?entity=X e ?year=Y al link "Apri" così
+    // l'utente apre l'app completa già focalizzata sull'entità in vista.
+    (function updateOpenLink() {
+      const openLink = document.getElementById('open-full');
+      if (!openLink) return;
+      const qs = new URLSearchParams();
+      if (focusEntity) qs.set('entity', focusEntity);
+      qs.set('year', initYear);
+      openLink.href = '/app?' + qs.toString();
+    })();
+
     document.getElementById('year-slider').value = initYear;
     document.getElementById('year-display').textContent = fmtY(initYear);
 
@@ -55,18 +68,66 @@
     }).addTo(map);
     layerGroup = L.layerGroup().addTo(map);
 
-    fetch('/v1/entities?limit=100&offset=0')
-      .then(r => r.json())
-      .then(data => {
-        allEntities = data.entities;
-        renderMap(initYear);
-        if (focusEntity) {
-          const e = allEntities.find(en => en.id === focusEntity);
-          if (e && e.boundary_geojson && e.boundary_geojson.type !== 'Point') {
-            map.fitBounds(L.geoJSON(e.boundary_geojson).getBounds(), { padding: [50, 80] });
+    // v6.66 FIX 4: se ?entity=X è presente, facciamo PRIMA una fetch puntuale
+    // a /v1/entities/{id} per ottenere il boundary e centrare la mappa anche
+    // se l'entità non è nelle prime 100. Poi carichiamo le altre.
+    async function focusOnEntity(id) {
+      try {
+        const r = await fetch('/v1/entities/' + id);
+        if (!r.ok) return null;
+        const e = await r.json();
+        if (e.boundary_geojson) {
+          if (e.boundary_geojson.type === 'Point') {
+            const [lon, lat] = e.boundary_geojson.coordinates;
+            map.setView([lat, lon], 6, { animate: true });
+          } else {
+            try {
+              map.fitBounds(L.geoJSON(e.boundary_geojson).getBounds(), { padding: [50, 80] });
+            } catch (_) {}
           }
         }
-      });
+        return e;
+      } catch (_) { return null; }
+    }
+
+    // v6.66 FIX 4: aumentiamo il limit a 300 (era 100) e includiamo l'entità
+    // focale anche se fuori dalla finestra di fetch.
+    fetch('/v1/entities?limit=300&offset=0')
+      .then(r => r.json())
+      .then(async (data) => {
+        allEntities = data.entities || [];
+        if (focusEntity) {
+          const exists = allEntities.some(en => en.id === focusEntity);
+          if (!exists) {
+            const e = await focusOnEntity(focusEntity);
+            if (e) allEntities.push(e);
+          } else {
+            // già caricata: centra subito
+            const e = allEntities.find(en => en.id === focusEntity);
+            if (e && e.boundary_geojson) {
+              try {
+                if (e.boundary_geojson.type === 'Point') {
+                  const [lon, lat] = e.boundary_geojson.coordinates;
+                  map.setView([lat, lon], 6, { animate: true });
+                } else {
+                  map.fitBounds(L.geoJSON(e.boundary_geojson).getBounds(), { padding: [50, 80] });
+                }
+              } catch (_) {}
+            }
+          }
+          // Se l'entità ha year_start, allinea lo slider all'anno esistente
+          const focused = allEntities.find(en => en.id === focusEntity);
+          if (focused && typeof focused.year_start === 'number' && !params.get('year')) {
+            const targetYear = Math.max(focused.year_start, Math.min(focused.year_end || 2025, initYear));
+            document.getElementById('year-slider').value = targetYear;
+            document.getElementById('year-display').textContent = fmtY(targetYear);
+            renderMap(targetYear);
+            return;
+          }
+        }
+        renderMap(initYear);
+      })
+      .catch(() => { /* noop: silent fail, la mappa resta vuota */ });
 
     document.getElementById('year-slider').addEventListener('input', function() {
       const year = parseInt(this.value, 10);

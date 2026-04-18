@@ -89,6 +89,10 @@ document.addEventListener('DOMContentLoaded', () => {
   loadTimeline();
   loadChains();
   bindEvents();
+  // v6.66 FIX 1: inietta i numeri live per onboarding + footer + qualunque
+  // elemento con [data-i18n] che contiene placeholder {entities} {events}...
+  // Single source of truth: /health + /v1/* endpoints. Nessun valore statico.
+  hydrateLiveStats();
   loadEntities().then(() => {
     restoreUrlState();
     // v6.64: force a final applyFilters after restoreUrlState, regardless
@@ -97,6 +101,53 @@ document.addEventListener('DOMContentLoaded', () => {
     applyFilters();
   });
 });
+
+// v6.66 FIX 1: fetch dinamico dei conteggi. Popola i18nVars con i numeri
+// reali così le stringhe tradotte con {entities}/{events}/{rulers}/{sites}
+// vengono interpolate con i valori correnti. Tutto fire-and-forget.
+function hydrateLiveStats() {
+  if (!('fetch' in window) || typeof window.setI18nStats !== 'function') return;
+  const stats = {};
+  const fmt = (n) => (typeof n === 'number' ? n.toLocaleString() : String(n));
+  const pick = (j) => {
+    if (!j) return null;
+    if (typeof j.count === 'number') return j.count;
+    if (typeof j.total === 'number') return j.total;
+    if (typeof j.entity_count === 'number') return j.entity_count;
+    return null;
+  };
+  const calls = [
+    ['entities', '/v1/entities?limit=1'],
+    ['events',   '/v1/events?limit=1'],
+    ['rulers',   '/v1/rulers?limit=1'],
+    ['sites',    '/v1/sites?limit=1'],
+    ['periods',  '/v1/periods?limit=1'],
+    ['chains',   '/v1/chains?limit=1'],
+    ['cities',   '/v1/cities?limit=1'],
+    ['languages', '/v1/languages?limit=1'],
+  ];
+  // Promise.allSettled così una singola API fallita non blocca le altre
+  Promise.allSettled(calls.map(([k, url]) =>
+    fetch(url, { cache: 'no-store' })
+      .then(r => r.ok ? r.json() : null)
+      .then(j => {
+        const n = pick(j);
+        if (n !== null) stats[k] = fmt(n);
+      })
+  )).then(() => {
+    if (Object.keys(stats).length) window.setI18nStats(stats);
+  });
+
+  // Version injection nel footer: /health → span#footer-version
+  fetch('/health', { cache: 'no-store' })
+    .then(r => r.ok ? r.json() : null)
+    .then(h => {
+      if (!h) return;
+      const vEl = document.getElementById('footer-version');
+      if (vEl && h.version) vEl.textContent = h.version;
+    })
+    .catch(() => {});
+}
 
 function initMap() {
   map = L.map('map', {
@@ -1025,13 +1076,39 @@ function showAutocomplete(query) {
   input.setAttribute('aria-expanded', 'true');
   acSelectedIndex = -1;
 
-  dropdown.querySelectorAll('.autocomplete-item').forEach(item => {
-    item.addEventListener('mousedown', (ev) => {
-      ev.preventDefault();
-      showDetail(+item.dataset.id);
-      hideAutocomplete();
-    });
-  });
+  // v6.66 FIX 3: il click sull'item dropdown deve aprire il detail panel
+  // e fare la fetch a /v1/entities/{id}. Bug precedente: usando solo
+  // 'mousedown' il preventDefault evitava il blur sull'input, MA se la
+  // fetch falliva non c'era error-handling visibile e lo spinner restava.
+  // Nuovo approccio:
+  //  - event delegation sul parent dropdown (sopravvive a re-render)
+  //  - mousedown preventDefault (per non perdere il focus prima del click)
+  //  - chiama direttamente showDetail(id) con l'id number coerced
+  //  - reset spinner on error nella catena showDetail/loadDetail
+  const handleItemActivation = (ev) => {
+    const item = ev.target.closest('.autocomplete-item');
+    if (!item) return;
+    ev.preventDefault();
+    ev.stopPropagation();
+    const id = Number(item.dataset.id);
+    if (!Number.isFinite(id)) return;
+    // Chiudiamo il dropdown DOPO aver avviato la fetch, così il blur
+    // dell'input non ruba il focus prima del tempo.
+    showDetail(id);
+    hideAutocomplete();
+    // Sposta il focus sul panel per accessibilità
+    const panel = document.getElementById('detail-panel');
+    if (panel) panel.setAttribute('tabindex', '-1');
+  };
+  // Rimuoviamo eventuali listener pregressi (safe: null se primo setup)
+  if (dropdown.__acHandler) {
+    dropdown.removeEventListener('mousedown', dropdown.__acHandler);
+    dropdown.removeEventListener('click', dropdown.__acHandler);
+  }
+  dropdown.__acHandler = handleItemActivation;
+  dropdown.addEventListener('mousedown', handleItemActivation);
+  // Click come fallback (touch, alcuni a11y tool che non sparano mousedown)
+  dropdown.addEventListener('click', handleItemActivation);
 }
 
 function hideAutocomplete() {
@@ -1110,6 +1187,21 @@ function applyFilters() {
   selectedCardIndex = -1;
   renderResults(filtered);
   renderMap(filtered);
+
+  // v6.66 FIX: aggiorna il counter header (prima mostrava solo allEntities.length,
+  // ora mostra filtered/total così lo stato filtri è sempre visibile).
+  // ETHICS: trasparenza — l'utente deve sapere quante entità sta vedendo davvero.
+  const badgeCount = document.getElementById('entity-count');
+  if (badgeCount) {
+    if (filtered.length === allEntities.length) {
+      badgeCount.textContent = `${allEntities.length} ${t('entities')}`;
+    } else {
+      badgeCount.textContent = `${filtered.length} / ${allEntities.length} ${t('entities')}`;
+    }
+  }
+  // v6.66: esponi risultato filtrato per "Zoom su tutte" (map-fit-all),
+  // così il bottone considera il filtro attivo invece di allEntities.
+  window.__lastFiltered = filtered;
 
   // Update map year badge
   const yearBadge = document.getElementById('map-year-badge');
@@ -1274,7 +1366,12 @@ async function showDetail(id) {
   pushUrlState({ entity: id });
 
   const e = await loadDetail(id);
-  if (!e) { panel.classList.add('hidden'); return; }
+  // v6.66 FIX 3: se loadDetail fallisce, sostituiamo lo spinner con un
+  // messaggio d'errore leggibile invece di lasciare lo spinner infinito.
+  if (!e) {
+    content.innerHTML = `<p class="placeholder">${t('error_detail') || 'Errore nel caricamento dei dettagli.'}</p>`;
+    return;
+  }
 
   // v6.7 — remember current entity for tab switching (Feature 3)
   currentDetailEntity = e;

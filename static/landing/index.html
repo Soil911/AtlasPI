@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0d1117">
 
   <title>AtlasPI — Historical Geography API for AI Agents</title>
-  <meta name="description" content="The first REST API and MCP server for historical geography. 862 entities, 2,200+ academic sources, real boundaries from 4500 BCE to 2024. Built for AI agents.">
+  <meta name="description" content="The first REST API and MCP server for historical geography. 1,034 entities, 643 events, 2,400+ academic sources, real boundaries from 4500 BCE to 2024. Built for AI agents.">
   <meta name="keywords" content="historical geography api, AI agents, MCP server, REST API, GeoJSON, historical data, digital humanities, boundaries, empires, kingdoms">
   <meta name="author" content="AtlasPI">
   <meta name="robots" content="index, follow">
@@ -21,8 +21,8 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://atlaspi.cra-srl.com/">
   <meta property="og:title" content="AtlasPI — Historical Geography API for AI Agents">
-  <meta property="og:description" content="862 historical entities, real boundaries, academic sources. From 4500 BCE to 2024. Available as REST API and MCP server.">
-  <meta property="og:image" content="https://atlaspi.cra-srl.com/static/landing/assets/og-image.png">
+  <meta property="og:description" content="1,034 historical entities, 643 events, real boundaries, academic sources. From 4500 BCE to 2024. Available as REST API and MCP server.">
+  <meta property="og:image" content="https://atlaspi.cra-srl.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="AtlasPI — Historical Geography API for AI Agents">
@@ -33,8 +33,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://atlaspi.cra-srl.com/">
   <meta name="twitter:title" content="AtlasPI — Historical Geography API for AI Agents">
-  <meta name="twitter:description" content="862 historical entities, real boundaries, academic sources. From 4500 BCE to 2024. REST API + MCP server.">
-  <meta name="twitter:image" content="https://atlaspi.cra-srl.com/static/landing/assets/og-image.png">
+  <meta name="twitter:description" content="1,034 historical entities, 643 events, real boundaries, academic sources. From 4500 BCE to 2024. REST API + MCP server.">
+  <meta name="twitter:image" content="https://atlaspi.cra-srl.com/og-image.png">
 
   <!-- JSON-LD structured data -->
   <script type="application/ld+json">
@@ -43,13 +43,13 @@
     "@type": "WebApplication",
     "name": "AtlasPI",
     "alternateName": "AtlasPI Historical Geography API",
-    "description": "Structured historical geographic database for AI agents. REST API and MCP server with 862 entities, real boundaries, and academic sources from 4500 BCE to 2024.",
+    "description": "Structured historical geographic database for AI agents. REST API and MCP server with 1,034 entities, 643 events, real boundaries, and academic sources from 4500 BCE to 2024.",
     "url": "https://atlaspi.cra-srl.com/",
     "applicationCategory": "DeveloperApplication",
     "applicationSubCategory": "API",
     "operatingSystem": "Any",
     "browserRequirements": "Requires JavaScript",
-    "softwareVersion": "6.35.0",
+    "softwareVersion": "6.66.0",
     "license": "https://www.apache.org/licenses/LICENSE-2.0",
     "codeRepository": "https://github.com/Soil911/AtlasPI",
     "programmingLanguage": ["Python", "JavaScript"],
@@ -72,7 +72,7 @@
     "@context": "https://schema.org",
     "@type": "Dataset",
     "name": "AtlasPI Historical Geography Dataset",
-    "description": "862 historical geopolitical entities with boundaries, names, and metadata from 4500 BCE to 2024. Includes confidence scores and 2,200+ academic citations.",
+    "description": "1,034 historical geopolitical entities, 643 events, 105 rulers, 1,249 archaeological sites with boundaries, names, and metadata from 4500 BCE to 2024. Includes confidence scores and 2,400+ academic citations.",
     "url": "https://atlaspi.cra-srl.com/",
     "license": "https://www.apache.org/licenses/LICENSE-2.0",
     "creator": {
@@ -159,13 +159,13 @@
   <div class="container hero-inner">
     <div class="hero-tag">
       <span class="dot-live" aria-hidden="true"></span>
-      Live now &middot; v6.35.0 &middot; 862 entities + 497 events + 55 periods + 110 cities + 41 trade routes + 94 dynasty chains
+      Live now &middot; v<span data-live="version">6.66.0</span> &middot; <span data-live="entity_count">1,034</span> entities + <span data-live="event_count">643</span> events + <span data-live="period_count">55</span> periods + <span data-live="city_count">110</span> cities + <span data-live="route_count">41</span> trade routes + <span data-live="chain_count">94</span> dynasty chains
     </div>
     <h1 class="hero-title">
       Historical Geography <span class="grad">for AI Agents</span>
     </h1>
     <p class="hero-sub">
-      The first REST API and MCP server with <strong>862 historical entities</strong>,
+      The first REST API and MCP server with <strong><span data-live="entity_count">1,034</span> historical entities</strong>,
       real boundaries, and academic sources. From <strong>4500 BCE to 2024</strong>.
     </p>
     <div class="hero-banner" style="margin: 16px 0; padding: 12px 20px; background: linear-gradient(90deg, rgba(63,185,80,0.1), rgba(88,166,255,0.1)); border: 1px solid rgba(63,185,80,0.4); border-radius: 8px; font-size: 14px; line-height: 1.6;">
@@ -223,7 +223,7 @@
           </svg>
         </div>
         <h3>Academically sourced</h3>
-        <p>Over 2,200 academic citations. Every record carries a confidence score and a status: <code>confirmed</code>, <code>uncertain</code>, or <code>disputed</code>.</p>
+        <p>Over 2,400 academic citations. Every record carries a confidence score and a status: <code>confirmed</code>, <code>uncertain</code>, or <code>disputed</code>.</p>
       </article>
 
       <article class="pillar">
@@ -281,7 +281,7 @@
         </p>
         <ul class="check-list">
           <li>Works with Claude Desktop, Claude Code, and any MCP client</li>
-          <li>27 tools: snapshots, events, cities, routes, chains, comparisons, similarity, date coverage, fuzzy search</li>
+          <li>34 tools: snapshots, events, cities, routes, chains, comparisons, similarity, date coverage, fuzzy search</li>
           <li>Returns structured JSON with sources and confidence scores intact</li>
           <li>Open source under Apache-2.0 — fork, audit, self-host</li>
         </ul>
@@ -427,12 +427,20 @@ console.log(<span class="tk-str">'Overlap years:'</span>, data.temporal_overlap)
   <div class="container">
     <div class="stats">
       <div class="stat">
-        <div class="stat-num">862</div>
+        <div class="stat-num" data-live="entity_count">1,034</div>
         <div class="stat-lbl">historical entities</div>
       </div>
       <div class="stat">
-        <div class="stat-num">461</div>
+        <div class="stat-num" data-live="event_count">643</div>
         <div class="stat-lbl">historical events</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" data-live="ruler_count">105</div>
+        <div class="stat-lbl">historical rulers</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" data-live="site_count">1,249</div>
+        <div class="stat-lbl">archaeological sites</div>
       </div>
       <div class="stat">
         <div class="stat-num">6,500<span class="plus">+</span></div>
@@ -443,7 +451,7 @@ console.log(<span class="tk-str">'Overlap years:'</span>, data.temporal_overlap)
         <div class="stat-lbl">REST endpoints</div>
       </div>
       <div class="stat">
-        <div class="stat-num">25</div>
+        <div class="stat-num">34</div>
         <div class="stat-lbl">MCP tools</div>
       </div>
       <div class="stat">
@@ -505,7 +513,7 @@ console.log(<span class="tk-str">'Overlap years:'</span>, data.temporal_overlap)
           <li>MCP server included</li>
           <li>Self-host from GitHub</li>
           <li>Apache-2.0 licensed</li>
-          <li>862 entities + 461 events</li>
+          <li><span data-live="entity_count">1,034</span> entities + <span data-live="event_count">643</span> events</li>
         </ul>
         <a href="https://github.com/Soil911/AtlasPI" class="btn btn-ghost btn-block" target="_blank" rel="noopener">Get on GitHub</a>
       </article>
@@ -575,7 +583,7 @@ console.log(<span class="tk-str">'Overlap years:'</span>, data.temporal_overlap)
 
   <div class="container foot-bottom">
     <span>&copy; <span id="year"></span> AtlasPI &middot; Apache-2.0 licensed core &middot; <a href="https://atlaspi.cra-srl.com/">atlaspi.cra-srl.com</a></span>
-    <span class="foot-version">v6.35.0</span>
+    <span class="foot-version">v<span data-live="version">6.66.0</span></span>
   </div>
 </footer>
 

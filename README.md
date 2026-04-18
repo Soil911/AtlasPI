@@ -11,17 +11,19 @@
 
 <p align="center">
   <a href="https://atlaspi.cra-srl.com"><img alt="Try it live" src="https://img.shields.io/badge/try%20it-live-58a6ff?style=flat-square&logo=globe&logoColor=white"></a>
-  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.65.0-blue?style=flat-square"></a>
-  <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-1032-green?style=flat-square"></a>
-  <a href="#-dataset-overview"><img alt="Events" src="https://img.shields.io/badge/events-623-green?style=flat-square"></a>
+  <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.66.0-blue?style=flat-square"></a>
+  <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-1034-green?style=flat-square"></a>
+  <a href="#-dataset-overview"><img alt="Events" src="https://img.shields.io/badge/events-643-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Periods" src="https://img.shields.io/badge/periods-55-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Cities" src="https://img.shields.io/badge/cities-110-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Routes" src="https://img.shields.io/badge/trade%20routes-41-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Chains" src="https://img.shields.io/badge/dynasty%20chains-94-green?style=flat-square"></a>
+  <a href="#-dataset-overview"><img alt="Sites" src="https://img.shields.io/badge/sites-1249-green?style=flat-square"></a>
+  <a href="#-dataset-overview"><img alt="Rulers" src="https://img.shields.io/badge/rulers-105-green?style=flat-square"></a>
   <a href="#-architecture"><img alt="Tests" src="https://img.shields.io/badge/tests-1056%20passing-brightgreen?style=flat-square"></a>
   <a href="#-license"><img alt="License" src="https://img.shields.io/badge/license-Apache--2.0-orange?style=flat-square"></a>
   <a href="#-api-documentation"><img alt="API" src="https://img.shields.io/badge/API-67%20endpoints-purple?style=flat-square"></a>
-  <a href="mcp-server/README.md"><img alt="MCP" src="https://img.shields.io/badge/MCP-36%20tools-9d4edd?style=flat-square"></a>
+  <a href="mcp-server/README.md"><img alt="MCP" src="https://img.shields.io/badge/MCP-34%20tools-9d4edd?style=flat-square"></a>
   <a href="https://doi.org/10.5281/zenodo.19581784"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.19581784.svg"></a>
 </p>
 
@@ -176,7 +178,7 @@ curl "http://localhost:10100/v1/compare/1/5"
 
 ## Dataset Overview
 
-**846 historical entities + 211 historical events** spanning 6,500 years of human civilization, backed by **3,000+ academic sources** and documenting **2,000+ territory changes**. Events include battles, treaties, epidemics, genocides, colonial violence, massacres, deportations and natural disasters — with ETHICS-007 (no euphemisms) and ETHICS-008 (`known_silence` flag for erased/suppressed records).
+**1,034 historical entities + 643 historical events** spanning 6,500 years of human civilization, backed by **3,000+ academic sources** and documenting **2,000+ territory changes**. Plus **1,249 archaeological sites**, **105 historical rulers**, **29 historical languages**, **94 dynasty chains**, **41 trade routes**, **110 historical cities**, and **55 historical periods**. Events include battles, treaties, epidemics, genocides, colonial violence, massacres, deportations and natural disasters — with ETHICS-007 (no euphemisms) and ETHICS-008 (`known_silence` flag for erased/suppressed records).
 
 ### Coverage by Region
 

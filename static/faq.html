@@ -154,23 +154,62 @@
     <div class="faq-item">
       <h3>What's included in the dataset?</h3>
       <ul>
-        <li><strong>862 historical entities</strong> — empires, kingdoms, sultanates,
+        <li><strong><span data-live="entity_count">1,034</span> historical entities</strong> — empires, kingdoms, sultanates,
           republics, dynasties, chiefdoms, confederations</li>
-        <li><strong>490 events</strong> — battles, treaties, genocides, epidemics,
+        <li><strong><span data-live="event_count">643</span> events</strong> — battles, treaties, genocides, epidemics,
           revolutions, natural disasters (all with main_actor and location)</li>
-        <li><strong>48 historical periods</strong> — Bronze Age, Classical Antiquity,
+        <li><strong><span data-live="period_count">55</span> historical periods</strong> — Bronze Age, Classical Antiquity,
           Edo Period, Cold War, etc. (with historiographic_note documenting
           scholarly debates)</li>
-        <li><strong>110 cities</strong> — capitals, trade hubs, religious centers,
+        <li><strong><span data-live="city_count">110</span> cities</strong> — capitals, trade hubs, religious centers,
           ports, academic centers</li>
-        <li><strong>41 trade routes</strong> — Silk Road, Trans-Saharan, Indian
+        <li><strong><span data-live="site_count">1,249</span> archaeological sites</strong> — UNESCO heritage sites,
+          ancient ruins, and historical monuments</li>
+        <li><strong><span data-live="ruler_count">105</span> historical rulers</strong> — kings, emperors, caliphs, chieftains
+          with native-script names</li>
+        <li><strong><span data-live="route_count">41</span> trade routes</strong> — Silk Road, Trans-Saharan, Indian
           Ocean, etc. (with involves_slavery flag where applicable)</li>
-        <li><strong>94 dynasty chains</strong> — Chinese dynasties, Roman→Byzantine,
+        <li><strong><span data-live="chain_count">94</span> dynasty chains</strong> — Chinese dynasties, Roman→Byzantine,
           Persian succession, Native American confederacies, etc.</li>
         <li><strong>2,400+ academic sources</strong> — Cambridge Histories, Oxford
           Handbooks, regional specialist works</li>
       </ul>
     </div>
+
+    <!-- v6.66: live stats injector -->
+    <script>
+    (function () {
+      if (!('fetch' in window)) return;
+      var fmt = function (n) { return typeof n === 'number' ? n.toLocaleString() : String(n); };
+      var setLive = function (k, v) {
+        var ns = document.querySelectorAll('[data-live="' + k + '"]');
+        for (var i = 0; i < ns.length; i++) ns[i].textContent = v;
+      };
+      var pick = function (j) {
+        if (!j) return null;
+        if (typeof j.count === 'number') return j.count;
+        if (typeof j.total === 'number') return j.total;
+        return null;
+      };
+      fetch('/health', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (h) {
+          if (h && typeof h.entity_count === 'number') setLive('entity_count', fmt(h.entity_count));
+        }).catch(function () {});
+      [
+        ['event_count', '/v1/events?limit=1'],
+        ['period_count', '/v1/periods?limit=1'],
+        ['chain_count', '/v1/chains?limit=1'],
+        ['city_count', '/v1/cities?limit=1'],
+        ['route_count', '/v1/routes?limit=1'],
+        ['ruler_count', '/v1/rulers?limit=1'],
+        ['site_count', '/v1/sites?limit=1'],
+      ].forEach(function (p) {
+        fetch(p[1], { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (j) { var n = pick(j); if (n !== null) setLive(p[0], fmt(n)); })
+          .catch(function () {});
+      });
+    })();
+    </script>
 
     <div class="faq-item">
       <h3>What's an MCP server?</h3>
