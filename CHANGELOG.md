@@ -2,6 +2,65 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.60.0] - 2026-04-18
+
+**Tema**: *Fix batch #3 — rulers linking + Polynesian antimeridian*
+
+### v6.59 — 14 rulers entity_id linking
+
+Da audit #02 `rulers_add_entity_id` con `match_confidence >= 0.85`:
+- ruler/1 Augustus → entity 1 (Imperium Romanum)
+- ruler/2 Constantinus → entity 1
+- ruler/4 Julius Caesar → entity 1
+- ruler/5 Qin Shi Huangdi → entity 103
+- ruler/6 Wu Zetian → entity 107
+- ruler/7 Alessandro Magno → entity 44
+- ruler/8 Ashoka → entity 37
+- ruler/9 Chinggis Khan → entity 107 (Mongol)
+- ruler/10 Ashoka (dup? Maurya) → entity 37
+- ruler/11 Akbar → entity 12 (Mughal)
+- ruler/12 Aurangzeb → entity 12
+- ruler/13 Timur → entity 126
+- ruler/15 Solimano → entity 2 (Ottoman)
+- ruler/16 Pachacuti → entity 4 (Tawantinsuyu)
+- ruler/18 Mansa Musa → entity 18 (Mali)
+
+Via `scripts/apply_data_patch.py` con audit ref.
+
+### v6.60 — 4 Polynesian antimeridian fixes
+
+Da audit #02 `antimeridian_boundary_bugs`:
+- id=748 Pulotu — lon bounds [-181.65, -175.35]
+- id=759 Tui Nayau — [-180.25, -177.41]
+- id=754 Sau o Futuna — [-180.48, -175.84]
+- id=760 Tui Cakau — [-181.24, -178.42]
+
+Tutti hanno polygon che wrappano l'antimeridian (lon < -180). Il fix standard `fix_antimeridian_and_wrong_polygons.py` non ha regole per queste entità polynesiane — approach pragmatico: **null boundary_geojson + set `boundary_source='approximate_generated'`**. Meglio nessun polygon che polygon broken (evita label render fuori posto).
+
+SQL diretto:
+```sql
+UPDATE geo_entities 
+SET boundary_geojson=NULL, boundary_source='approximate_generated'
+WHERE id IN (748, 759, 754, 760);
+```
+
+Impact visivo: queste 4 entità ora appariranno come markers sulla mappa invece che poligoni.
+
+### Stats post-fix batch 3
+
+- 14 rulers con entity_id ora collegati
+- 4 boundary bugs risolti (null vs broken)
+- Dataset integrità migliorata
+
+### Fix rimandati
+
+- 34 continent retag Melanesia/Polynesia (richiede nuovo field o override logic)
+- EN translation leak ~40% (applyLangUI non copre aria-labels, placeholder inner elements)
+- URL param race year=117 (intermittent)
+- API fuzzy search substring bug (report flagged false-positive matches)
+
+---
+
 ## [v6.58.0] - 2026-04-18
 
 **Tema**: *Fix batch #2 — ETHICS-001 native-script conversion per 15 entità*
