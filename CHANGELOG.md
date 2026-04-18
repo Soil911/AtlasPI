@@ -2,6 +2,53 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.65.0] - 2026-04-18
+
+**Tema**: *Capital anachronism ethical_notes — audit #05 MED batch*
+
+### Cosa
+
+7 entità long-duration con capitali multiple ora hanno `ethical_notes` esplicative sulla semplificazione "una entità = una capitale":
+
+| id | entity | issue |
+|----|--------|-------|
+| 30 | Sacrum Imperium Romanum (HRE) | Wien anacronistica + year_start 800 vs 962 |
+| 18 | Manden Kurufaba (Mali) | Niani rigettato da Hunwick/Boulègue 2008 |
+| 12 | مغلیہ سلطنت (Mughal) | Delhi anacronistica per 1526-1648 (era Agra) |
+| 2 | Osmanlı İmparatorluğu (Ottoman) | İstanbul anacronistica per 1299-1453 (era Söğüt/Bursa/Edirne) |
+| 108 | 明朝 (Ming) | Beijing anacronistica per 1368-1420 (era Nanjing) |
+| 106 | 宋朝 (Song) | Kaifeng (N Song) vs Lin'an/Hangzhou (S Song) |
+| 24 | Solomonic Ethiopia | Addis Abeba fondata 1886, anacronistica per 87% del periodo |
+
+### Pattern
+
+Per ogni entità il blocco `[v6.65 audit]` si appende al `ethical_notes` esistente (content-preserving). Include:
+- Cronologia delle capitali effettive con date
+- Percentuale del periodo coperto da ciascuna capitale
+- Esempio concreto di risposta AI sbagliata ("capital of Ming in 1400" → Beijing, ma era Nanjing)
+- Fonte accademica (Wilson 2016, Richards 1993, Brook 2010, Kuhn 2011, Inalcık 1973, Pankhurst 1982, Hunwick&Boulègue 2008)
+
+### Rationale
+
+Audit #05 (historical accuracy spot-check) aveva identificato 1 HIGH (Aksum year_start, già risolto) + 7 MED tutti riguardanti capitali semplificate. Un agente AI che query "capital of HRE in 1200" riceve Wien — storicamente falso. La soluzione scelta è documentare esplicitamente in `ethical_notes` per permettere agli agenti di rilevare il rischio senza cambiare lo schema dati.
+
+### Valori ETHICS preservati
+
+Tutto il contenuto pre-esistente è stato mantenuto byte-per-byte:
+- Ottoman: riferimento al Genocidio armeno/assiro/greco con cifre specifiche + ETHICS-002
+- Ming: lavoro forzato per Città Proibita + Grande Muraglia
+- Song: caduta di Xiangyang + invasioni Jurchen/Mongola
+- Solomonic: tensioni etniche Amhara/Oromo/Tigrinya/Somali
+- Mali: Mansa Musa e pellegrinaggio 1324
+- HRE: citazione Voltaire
+- Mughal: Akbar multireligioso → Aurangzeb intollerante
+
+### Applicazione
+
+Patch applicata in prod via `apply_data_patch.py`: 7/7 applied, 0 errors. Redis cache flush post-apply per visibilità immediata.
+
+---
+
 ## [v6.64.0] - 2026-04-18
 
 **Tema**: *Init order fix — elimina URL race condition dal audit #03*
