@@ -558,6 +558,11 @@ body {
   color: var(--accent-warm);
   line-height: 1.4;
   flex-shrink: 0;
+  /* v6.67 CLS-fix: testo i18n puo' far variare l'altezza banner di qualche px
+     quando da Italian default -> English switch. Riserva min-height per
+     evitare shift della sidebar-controls sottostante. */
+  min-height: 70px;
+  box-sizing: border-box;
 }
 
 .data-banner strong { color: var(--accent-warm); }
