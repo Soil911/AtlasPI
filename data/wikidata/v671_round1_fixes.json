@@ -1,0 +1,65 @@
+[
+  {
+    "resource": "entity",
+    "id": 1,
+    "field": "wikidata_qid",
+    "new_value": "Q2277",
+    "rationale": "Imperium Romanum = Roman Empire (Q2277). Manually verified via Wikidata wbsearchentities. Era NULL in prod (score Fase A sotto 0.85 per ambiguità tra Roman Empire vs Kingdom vs Ancient Rome).",
+    "source": "Wikidata Q2277 'Roman Empire - period of ancient Rome following the Republic'",
+    "audit_ref": "v4/round1/rome_missing"
+  },
+  {
+    "resource": "entity",
+    "id": 91,
+    "field": "wikidata_qid",
+    "new_value": "Q3327860",
+    "rationale": "AtlasPI 'Rioghacht na hEireann' year_start=-500 rappresenta Gaelic Ireland (political order pre-Tudor). Fase A aveva matchato Q215530 'Kingdom of Ireland' che è però post-1542 Tudor, 2042 anni off. Fix: Q3327860 Gaelic Ireland (prehistoric to early modern).",
+    "source": "Wikidata Q3327860 'Gaelic Ireland - Gaelic political and social order that existed in Ireland from the prehistoric era'",
+    "audit_ref": "v4/round1/wrong_qid/ireland"
+  },
+  {
+    "resource": "entity",
+    "id": 142,
+    "field": "wikidata_qid",
+    "new_value": "Q1965597",
+    "rationale": "AtlasPI 'මහා විජයබාහු' year_start=-543 rappresenta Mahavijayabahu, primo re leggendario di Anuradhapura (tradizione Mahavamsa). Fase A aveva matchato Q1530762 Kingdom of Kandy (1469+), 2012 anni off. Fix: Q1965597 Anuradhapura Kingdom (ancient Sinhalese kingdom).",
+    "source": "Wikidata Q1965597 'Anuradhapura Kingdom - ancient Sinhalese kingdom'",
+    "audit_ref": "v4/round1/wrong_qid/anuradhapura"
+  },
+  {
+    "resource": "entity",
+    "id": 439,
+    "field": "wikidata_qid",
+    "new_value": null,
+    "rationale": "AtlasPI Gothia year_start=250 rappresenta i Crimean Goths (3rd-15th secolo). Fase A aveva matchato Q874954 Principato di Theodoro (1300+), 1050 anni off. Il handoff suggeriva Q1107049 ma quello è 'Anastasiia Pidpalova' (handball player), QID sbagliato. Rimuovo QID: Wikidata non ha un concetto chiaro di 'Crimean Goths' come polity continua. Lascio wikidata_qid=NULL, da review in Fase B successiva o nuovo search manuale.",
+    "source": "Review manuale: Q874954 rejected (wrong period), Q1107049 rejected (wrong concept: handball player)",
+    "audit_ref": "v4/round1/wrong_qid/gothia_unmatch"
+  },
+  {
+    "resource": "entity",
+    "id": 864,
+    "field": "wikidata_qid",
+    "new_value": null,
+    "rationale": "AtlasPI 林邑 (Linyi) è documentato come 'proto-Cham phase preceding the Champa mandala' (ethical_notes esistente). Fase A aveva matchato Q216786 Champa ma Linyi è il predecessore (192-605) non Champa (605-1832). Mantenendo stesso QID di entity 50 Campā causa duplicate QID problema. Rimuovo QID: Linyi come entità distinta non è indicizzata separatamente in Wikidata. Entity 50 Campā mantiene Q216786.",
+    "source": "Ethical_notes esistente: 'The Sui conquest of 605 ended Lin-Yi as a distinct political label'",
+    "audit_ref": "v4/round1/wrong_qid/linyi_unmatch"
+  },
+  {
+    "resource": "entity",
+    "id": 498,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: il nome e' in ugaritico, scritto in un alfabeto cuneiforme unico scoperto nel 1929 a Ras Shamra (Siria). L'ugaritico e' una lingua semitica nordoccidentale strettamente imparentata con l'ebraico e il fenicio. ETHICS-002: Ugarit e' di importanza capitale per la storia delle religioni: i testi mitologici ugaritici (Ciclo di Baal, Epopea di Keret) rivelano il contesto religioso cananeo da cui emerse la religione israelitica. Questo dato e' fondamentale e non deve essere edulcorato per sensibilita' religiose contemporanee. ETHICS-003: la distruzione di Ugarit intorno al -1185 e' uno degli episodi meglio documentati del Collasso dell'Eta' del Bronzo. L'ultima lettera del re di Ugarit (RS 20.238) e' un documento straordinario di una civilta' sul punto dell'annientamento. [v6.71 audit v4 Fase B] Drift vs Wikidata Q191369: Wikidata copre l'intero sito archeologico da Neolitico ~6000 BCE, mentre AtlasPI rappresenta specificamente il Kingdom of Ugarit periodo Late Bronze 1450-1185 BCE. Il delta year_start Δ=4550y è un 'site vs polity' methodology difference, non errore. L'AtlasPI year range è storicamente più preciso per il concetto di 'regno'.",
+    "rationale": "Site-vs-polity annotation per il drift più grande in Fase B: AtlasPI kingdom 1450-1185 BCE vs Wikidata site Neolithic-6000 BCE",
+    "source": "Fase B drift report #2",
+    "audit_ref": "v4/round1/site_vs_polity/ugarit"
+  },
+  {
+    "resource": "entity",
+    "id": 272,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-003: The identification of the archaeological site at Hisarlik with Homer's Troy is widely accepted but not universally agreed upon. The site shows multiple destruction layers. Troy VIIa (c. -1180) is the best candidate for a 'Trojan War' destruction but the historicity of the Homeric war itself remains debated. The Hittite texts mention 'Wilusa' which may correspond to Ilion/Troy. Separating archaeological evidence from literary tradition is essential.\n\n[v6.31-oversize-reset] Boundary area was 389,135 km², exceeding city-state ceiling (50,000 km²) by 7.8×. Reset to capital-based circle (30km radius) — likely wrong-polygon inheritance via fuzzy name matching. Manual review recommended if the entity's true extent is known.\n\n[v6.71 audit v4 Fase B] Drift vs Wikidata Q22647: Wikidata Troy include settlements successivi (Troy IX romano, bizantino fino a 500 CE), mentre AtlasPI year_end=-1180 rappresenta fine Bronze Age Troy/Wilusa (Troy VI-VII). Delta Δ=1680y è 'site continuity vs polity phase' methodology difference. AtlasPI privilegia la polity-specific era omerica; Wikidata aggrega tutte le fasi abitative.",
+    "rationale": "Site-vs-polity annotation per Troy: AtlasPI Bronze Age era vs Wikidata multi-phase site",
+    "source": "Fase B drift report #6",
+    "audit_ref": "v4/round1/site_vs_polity/troy"
+  }
+]

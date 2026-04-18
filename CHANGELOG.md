@@ -2,6 +2,41 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.71.0] - 2026-04-18
+
+**Tema**: *Audit v4 Fase C Round 1 — wrong QID fix + Rome missing + site-vs-polity ethical_notes*
+
+Primo round di cleanup post-bootstrap Fase A+B. **Scoperto errore grave nel handoff precedente**: 2 QID suggeriti dalla sessione autonoma erano sbagliati (Q1146570 = film "Howard the Duck", Q1107049 = giocatrice di handball). Tutti i QID in questo round verificati manualmente via `wbsearchentities` + `Special:EntityData`.
+
+### Fix applicati (7 patches)
+
+| Entity | Azione | Rationale |
+|--------|--------|-----------|
+| 1 Imperium Romanum | NULL → **Q2277** Roman Empire | Rome era uno dei 494 senza QID (score < 0.85 per ambiguità empire/kingdom/ancient). Verified via wbsearchentities. |
+| 91 Gaelic Ireland | Q215530 → **Q3327860** Gaelic Ireland | Q215530 è Tudor Kingdom 1542+, off by 2042y. Q3327860 è il concetto correct. |
+| 142 Mahavijayabahu | Q1530762 → **Q1965597** Anuradhapura | Q1530762 è Kingdom of Kandy (1469+), off by 2012y. Q1965597 è Anuradhapura Kingdom. |
+| 439 Gothia | Q874954 → **NULL** | Wrong match (Theodoro 1300+, AtlasPI 250). Handoff Q1107049 = atleta (rejected). Wikidata non ha "Crimean Goths" come polity distinta → NULL. |
+| 864 林邑 (Linyi) | Q216786 → **NULL** | Linyi è predecessore di Champa. Duplicate QID con entity 50 Campā. Entity 50 mantiene Q216786. |
+| 498 Ugarit | ethical_notes appended | Site-vs-polity: Wikidata Q191369 copre sito da Neolitico -6000, AtlasPI = Kingdom phase 1450-1185 BCE |
+| 272 Troy/Wilusa | ethical_notes appended | Site-vs-polity: Wikidata Q22647 include successor settlements fino a Byzantine, AtlasPI = Bronze Age Wilusa |
+
+### Metodologia adottata
+
+**Mai applicare un QID senza verifica diretta** via `wbsearchentities`. Il handoff Fase A+B aveva suggerito 5 QID fix, 2 dei quali pattern match completamente errati. Per Round 2+:
+
+1. Curl `wbsearchentities?search=<name>&limit=5`
+2. Verifica description + dates vs AtlasPI entity
+3. Se match non chiaro: `Special:EntityData/<candidate>.json` per leggere P571/P576
+4. Solo se evidenza solida → applicare patch
+
+### Stato post-v6.71
+
+- 540 - 2 + 1 = **539 entità** con QID (Gothia 439 + Linyi 864 rimossi, Rome 1 aggiunto)
+- 103 HIGH drift ancora da review (Round 1 ha chiuso top 5 + 2 site-vs-polity)
+- 44 duplicate QIDs pending → Round 2
+
+---
+
 ## [v6.70.0] - 2026-04-18
 
 **Tema**: *Audit v4 Fase B — Wikidata drift detection automatico*
