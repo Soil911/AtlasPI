@@ -982,40 +982,35 @@ fieldset.filter-control {
      sono in ordine fisso Status/Region/Type/Overlay. */
 }
 
-/* v6.67 WIP-8: durante innerHTML replacement di #type-chips (loadTypes)
-   e #continent-chips (loadContinents), il browser per ~1-2 frame vede il
-   container con "solo Tutti placeholder" e calcola fieldset=min-height.
-   Dopo che i chip completano l'inserimento, fieldset jump a 200/110px.
-   Questo shift di 100+px causa CLS. Soluzione: min-height esplicito per
-   OGNI fieldset nella sidebar, basato sul selettore nth-of-type nel
-   parent .controls (browser-independent, no :has() early-paint issues). */
+/* v6.67 WIP-9: fieldset HEIGHT fissa (non min-height) per bloccare
+   completamente la crescita durante innerHTML replacement delle chip.
+   Combinato con overflow:hidden, il box e' stabile dal first-paint. */
 
-/* Tutte le fieldset.filter-control (baseline): 88px (case Status, che
-   non ha chip-group — solo 3 checkbox). */
 .controls fieldset.filter-control {
+  height: 88px;
   min-height: 88px;
-  contain: layout;
+  contain: layout style size;
+  overflow: hidden;
 }
 
-/* 1a fieldset dentro .controls: Status (legend + 3 checkbox) = 88px */
+/* 1a: Status */
 .controls fieldset.filter-control:nth-of-type(1) {
-  min-height: 88px;
+  height: 88px;
 }
 
-/* 2a fieldset: Region (legend + #continent-chips 90px) = 110px */
+/* 2a: Region */
 .controls fieldset.filter-control:nth-of-type(2) {
-  min-height: 110px;
+  height: 110px;
 }
 
-/* 3a fieldset: Type (legend + #type-chips 180px) = 200px */
+/* 3a: Type */
 .controls fieldset.filter-control:nth-of-type(3) {
-  min-height: 200px;
+  height: 200px;
 }
 
-/* 4a fieldset: Overlay (gia' gestito sotto con .overlay-control) */
-
-/* overlay-control contiene 2 checkbox + 2 hint + 2 legend hidden. h finale 243px */
+/* overlay-control: h fissa 243px (2 checkbox + 2 hint + 2 legend hidden) */
 fieldset.filter-control.overlay-control {
+  height: 243px !important;
   min-height: 243px;
   contain: layout style;
 }
