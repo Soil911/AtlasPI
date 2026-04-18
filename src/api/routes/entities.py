@@ -412,7 +412,9 @@ def list_entities(
 ):
     q = _eager_query(db)
     q = _apply_bbox_filter(q, bbox)
-    total = q.count()
+    # Direct count avoids subquery wrapping from joinedload, ~10x faster
+    count_q = _apply_bbox_filter(db.query(func.count(GeoEntity.id)), bbox)
+    total = count_q.scalar() or 0
     q = _apply_sort(q, sort, order)
     results = q.offset(offset).limit(limit).all()
     entities = [_entity_to_response(e) for e in results]
