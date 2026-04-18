@@ -80,14 +80,22 @@ const CONTINENT_ICONS = {
 
 document.addEventListener('DOMContentLoaded', () => {
   initMap();
-  loadEntities().then(() => restoreUrlState());
+  // v6.64: initLang first so applyFilters in loadEntities uses correct language
+  // labels. Avoids URL race where ?year=X loads with 0 entities (report #03).
+  initLang();
   loadTypes();
   loadContinents();
   loadStats();
   loadTimeline();
   loadChains();
   bindEvents();
-  initLang();
+  loadEntities().then(() => {
+    restoreUrlState();
+    // v6.64: force a final applyFilters after restoreUrlState, regardless
+    // of whether URL params triggered `changed`. Ensures entities render
+    // even when the URL has no filter params.
+    applyFilters();
+  });
 });
 
 function initMap() {

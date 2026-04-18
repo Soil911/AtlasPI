@@ -2,6 +2,31 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.64.0] - 2026-04-18
+
+**Tema**: *Init order fix — elimina URL race condition dal audit #03*
+
+### Bug
+
+Audit UI/UX aveva flaggato: `/app?year=117` intermittentemente caricava con slider stuck a default 1500 e 0 entità visibili.
+
+### Root cause
+
+`initLang()` era chiamato DOPO `loadEntities().then(restoreUrlState)`. `initLang()` chiama `applyFilters()` che legge `allEntities` — ma quando `loadEntities()` stava ancora caricando, `allEntities=[]` e il render era vuoto.
+
+### Fix
+
+Riordinato DOM-ready init:
+1. `initMap()` — sync, no deps
+2. `initLang()` — sync, no deps (MOVED UP from end)
+3. Other async loads (types, continents, stats, timeline, chains)
+4. `bindEvents()` — binds DOM handlers
+5. `loadEntities().then(() => { restoreUrlState(); applyFilters(); })` — ultimo, con applyFilters sempre forzato alla fine
+
+Così `applyFilters()` finale gira SEMPRE su `allEntities` fully populated + URL state applicato.
+
+---
+
 ## [v6.63.0] - 2026-04-18
 
 **Tema**: *Continent classification — Oceania expansion per Melanesia/Polynesia*
