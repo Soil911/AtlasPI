@@ -2,6 +2,73 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.69.0] - 2026-04-18
+
+**Tema**: *Audit v4 Fase A — Wikidata Q-ID bootstrap sistematico*
+
+Apertura del ciclo audit v4. Obiettivo strategico: passare da "audit periodico manuale costoso" (audit v2 ha auditato 20 entità su 1034 a mano, con 45% error rate su MED+HIGH) a "drift detection automatico nightly zero-cost" basato su cross-reference Wikidata.
+
+Questa release consegna l'**infrastruttura Fase A**: ogni entità AtlasPI ha ora un campo `wikidata_qid` (nullable) che punta al concetto corrispondente su Wikidata. Il Q-ID è un identificatore esterno di riferimento per drift detection, NON una fonte autoritativa (vedi CLAUDE.md valore #2 "nessuna versione unica della storia").
+
+### 1. Schema DB — nuovo campo `geo_entities.wikidata_qid`
+
+- Migration `alembic/versions/015_wikidata_qid.py`: aggiunge colonna `VARCHAR(20) NULL` + indice btree
+- Model `src/db/models.py`: `GeoEntity.wikidata_qid` con commento ETHICS
+- Schema Pydantic `src/api/schemas.py::EntityResponse`: esposto nella response API
+- Route handler `src/api/routes/entities.py::_entity_to_response`: passa il campo
+- Patch applier `scripts/apply_data_patch.py`: whitelist entity include `wikidata_qid`
+
+### 2. Bootstrap script — `scripts/wikidata_bootstrap.py`
+
+Per ogni entità AtlasPI, ricerca sistematica su Wikidata via:
+1. `wbsearchentities` per candidate discovery (label + fallback en)
+2. `Special:EntityData/{qid}.json` per dettaglio (cache disco)
+3. Scoring 0..1 combinando:
+   - exact label match (0.4) + combo con type match (0.1)
+   - type consistency su `P31 instance_of` vs map entity_type (0.25 esatto, 0.12 generico)
+   - year overlap `P571 inception` (0.15) + `P576 dissolved` (0.1)
+   - penalty ambiguità ridotta se top candidato ha year match discriminante
+
+Rate limit: 4 req/sec con UA dedicato (conforme policy Wikidata).
+Cache disco: `scripts/wikidata_cache/` — idempotent su re-run (gitignored).
+
+### 3. Drift check script (preview Fase B) — `scripts/wikidata_drift_check.py`
+
+Script per la release v6.70 che confronta AtlasPI↔Wikidata per entità con QID:
+- year_start vs P571 (HIGH >50y, MED >20y)
+- year_end vs P576 (HIGH >50y, MED >20y)
+- capital_name vs P36 (MED se mismatch)
+- capital_lat/lon vs P36→P625 (HIGH >200km, MED >50km)
+
+Autofix conservativo: solo coordinate typo (swap lat/lon o sign flip) dove `km_diff > 1000km` e il flip produce `< 20km` diff. Le date non sono autofixate (convention BCE/inception differ).
+
+### 4. Testing
+
+Nuovo file `tests/test_wikidata_bootstrap.py` — 16 test unitari:
+- parsing Wikidata time (CE/BCE/invalid)
+- extract_claim_values per entityid/time
+- compute_score su match perfetto + type mismatch
+- find_coord_autofix per swap/sign flip + casi nulli
+- haversine_km sanity
+- EntityResponse schema espone wikidata_qid
+- GeoEntity model ha il campo
+- PATCHABLE_FIELDS include wikidata_qid
+
+### 5. Handoff e report
+
+- `docs/audit/fase_a_report.md`: report Fase A con stats (N auto-high-conf / N review / N no-match) + eye-test top 20 + distribuzione score
+- `docs/audit/FASE_C_HANDOFF.md` (arriverà con v6.70): lista entità drift non-autofixable + Q-ID non trovati + stato pattern sistemici
+
+### 6. Deploy
+
+- Version bump 6.68.0 → 6.69.0 (pyproject, config, static UI, README badge, test_health)
+- Migration gira allo startup del container (run.py → alembic upgrade head)
+- Patch `data/wikidata/v669_qid_high_confidence.json` applicato in prod via `scripts/apply_data_patch.py`
+
+ETHICS: i Q-ID sono cross-reference per verificabilità, non override. Le discrepanze tra AtlasPI e Wikidata vanno valutate caso per caso — Wikidata può avere bias occidentali, convention BCE astronomical vs storica, e inception dates dispute (es. Roman Empire: AtlasPI=-27 Ottaviano Augusto vs varie scuole storiografiche -31 actium / -44 Cesare).
+
+---
+
 ## [v6.68.0] - 2026-04-18
 
 **Tema**: *Audit v3 close-out — trade routes live + first-paint 30× + duplicate DOM + CSP/favicon polish*

@@ -99,6 +99,7 @@ PATCHABLE_FIELDS = {
         "capital_name", "capital_lat", "capital_lon",
         "confidence_score", "status", "ethical_notes",
         "boundary_source", "boundary_aourednik_year", "boundary_aourednik_precision",
+        "wikidata_qid",  # v6.69: audit v4 Fase A bootstrap
     },
     "event": {
         "name_original", "name_original_lang",

@@ -82,6 +82,13 @@ class GeoEntity(Base):
 
     ethical_notes: Mapped[str | None] = mapped_column(Text, nullable=True)
 
+    # v6.69 audit v4 Fase A: Wikidata Q-ID di riferimento (bootstrap via
+    # scripts/wikidata_bootstrap.py con score ≥ 0.85).
+    # ETHICS: il Q-ID serve per cross-reference/drift detection, non come
+    # fonte autoritativa. Wikidata può avere bias occidentali/convention diverse
+    # — le discrepanze vanno valutate manualmente (vedi Fase B drift report).
+    wikidata_qid: Mapped[str | None] = mapped_column(String(20), nullable=True, index=True)
+
     name_variants: Mapped[list[NameVariant]] = relationship(
         "NameVariant", back_populates="entity", cascade="all, delete-orphan"
     )

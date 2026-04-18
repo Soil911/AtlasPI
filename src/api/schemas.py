@@ -84,6 +84,13 @@ class EntityResponse(BaseModel):
     sources: list[SourceResponse] = Field(default_factory=list, description="Fonti bibliografiche")
     ethical_notes: str | None = Field(None, description="Note sulla governance etica del dato")
     continent: str | None = Field(None, description="Continente derivato dalle coordinate della capitale")
+    # v6.69: Wikidata Q-ID per cross-reference (audit v4 Fase A).
+    # ETHICS: identificatore di riferimento esterno, non fonte autoritativa —
+    # usato per drift detection sistematico contro Wikidata.
+    wikidata_qid: str | None = Field(
+        None,
+        description="Wikidata Q-ID di riferimento (formato 'Q12345'). Null se nessun match high-confidence è stato trovato (audit v4, v6.69).",
+    )
 
     model_config = {
         "from_attributes": True,
@@ -104,6 +111,7 @@ class EntityResponse(BaseModel):
                 "boundary_aourednik_year": None,
                 "boundary_aourednik_precision": None,
                 "continent": "Europe",
+                "wikidata_qid": "Q2277",
             }
         },
     }

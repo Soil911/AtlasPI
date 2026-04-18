@@ -221,6 +221,7 @@ def _entity_to_response(entity: GeoEntity) -> EntityResponse:
         sources=entity.sources,
         ethical_notes=entity.ethical_notes,
         continent=continent,
+        wikidata_qid=entity.wikidata_qid,
     )
 
 

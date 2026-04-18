@@ -58,3 +58,6 @@ sdk-js/package-lock.json
 # Agent research staging (consumed by ingest scripts, not committed)
 research_output/
 static/app.js.bak
+
+# v6.69 audit v4 — Wikidata HTTP cache (regeneratable via wikidata_bootstrap.py)
+scripts/wikidata_cache/
