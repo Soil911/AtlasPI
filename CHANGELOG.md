@@ -2,6 +2,84 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.70.0] - 2026-04-18
+
+**Tema**: *Audit v4 Fase B — Wikidata drift detection automatico*
+
+Chiusura Fase B del ciclo audit v4. Questa release consegna il **drift detection sistematico** contro Wikidata per le 540 entità con Q-ID high-confidence applicate in v6.69.
+
+Obiettivo strategico raggiunto: AtlasPI ora può lanciare un nightly cron `scripts/wikidata_drift_check.py --offline` (o online con cache warm) che genera un diff report Wikidata↔AtlasPI in ~4 minuti, senza intervento umano.
+
+### 1. Drift check run
+
+Script `scripts/wikidata_drift_check.py` eseguito contro le 540 entità auto-matchate:
+
+- **540 entità** controllate
+- **300** con ≥1 discrepanza (55.5%)
+- **108 HIGH** severity (review urgenti, Fase C)
+- **270 MED** severity
+- **14 LOW** severity
+- **0 autofixable patches** (conservatively — solo coord typos, nessuno trovato)
+
+### 2. Categorie di drift identificate
+
+| Campo | HIGH | MED | LOW | Totale |
+|-------|------|-----|-----|--------|
+| year_start | 61 | 23 | 9 | 93 |
+| year_end | 33 | 10 | 4 | 47 |
+| capital_name | 0 | 207 | 0 | 207 |
+| capital_coord | 14 | 30 | 0 | 44 |
+| capital (backfill opportunity) | 0 | 0 | 1 | 1 |
+
+### 3. Top pattern emersi (eye-test)
+
+**Pattern A — Wrong QID (matching bias on ambiguous labels)**:
+- Entity 552 `Meroe` → Q241790 "Kingdom of Kush" (Meroe è capitale di Kush, non stessa polity)
+- Entity 91 `Rioghacht na hEireann` → Q215530 "Kingdom of Ireland" (1542+, ma AtlasPI copre Gaelic Ireland -500)
+- Entity 142 `Mahavijayabahu` → Q1530762 "Kingdom of Kandy" (1469+, ma AtlasPI è Anuradhapura -543)
+
+**Pattern B — Site vs Polity (methodology diff)**:
+- Entity 498 `Ugarit`: year_start -1450 (Kingdom) vs Wikidata -6000 (Neolithic site)
+- Entity 272 `Troy/Wilusa`: year_end -1180 (Bronze Age fall) vs Wikidata 500 (site abandonment)
+- Entity 52 `Kush`: year_start -1070 (Napatan) vs Wikidata -2180 (site)
+
+**Pattern C — Different historical capital conventions**:
+- Entity 850 `Pakistan`: 1142km (Islamabad modern vs Karachi 1947-1956 Dominion)
+- Entity 327 `Golden Horde`: 745km (Sarai vs alternative capital Wikidata picks)
+- Entity 208 `Thirteen Colonies`: 5700km (Philadelphia vs London — AtlasPI continental vs Wikidata administrative)
+
+**Pattern D — Convention differences on dynastic inception**:
+- Entity 26 `Kemet`: -3100 (AtlasPI unification) vs -4000 (Wikidata earliest predynastic)
+- Entity 68 `Erzherzogtum Oesterreich`: 1282 (House of Habsburg) vs 1526 (personal union)
+
+### 4. Autofix applicati: 0
+
+Nessuna coordinate typo da correggere — i drift coordinate >1000km sono tutti **capitali storicamente diverse**, non errori di trascrizione. Phase B ha preservato correttamente la sovranità AtlasPI (ETHICS-010).
+
+### 5. Report deliverable
+
+- `research_output/audit_v4/fase_b_drift_report.md` — report narrativo
+- `docs/audit/fase_b_drift_report.md` — versione committed
+- `research_output/audit_v4/fase_b_drift_data.json` — dati strutturati
+- `research_output/audit_v4/fase_b_autofixable.json` — patches JSON vuoto (0 items, per record)
+- `docs/audit/FASE_C_HANDOFF.md` — handoff per prossima sessione
+
+### 6. Infrastructure
+
+Con questa release, AtlasPI ha **infrastructure completa** per drift detection:
+- 540 Q-IDs stored in DB (v6.69)
+- Drift check gira offline su cache (< 1 min) o online (~4 min)
+- Report markdown deterministico (grep-friendly)
+- Pipeline pronta per nightly cron
+
+### 7. Deploy
+
+- Version bump 6.69.0 → 6.70.0
+- Nessuna migration (Fase B non tocca schema)
+- Nessun patch DB (0 autofixable)
+
+---
+
 ## [v6.69.0] - 2026-04-18
 
 **Tema**: *Audit v4 Fase A — Wikidata Q-ID bootstrap sistematico*
