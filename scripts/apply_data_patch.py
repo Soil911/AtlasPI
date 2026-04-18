@@ -204,6 +204,24 @@ def apply_patches(patches: list[dict], dry_run: bool = False) -> dict:
                 stats["skipped_unchanged"] += 1
                 continue
 
+            # v6.58: skip patches that would set required fields to None.
+            # Audit agents can emit null suggestions for "already OK" entries
+            # that the apply script should ignore.
+            _REQUIRED_FIELDS = {
+                "entity": {"name_original", "name_original_lang", "entity_type", "year_start"},
+                "event": {"name_original", "name_original_lang", "event_type", "year"},
+                "site": {"name_original", "name_original_lang", "latitude", "longitude"},
+                "ruler": {"name_original", "name_original_lang", "title", "region"},
+                "language": {"name_original", "name_original_lang", "region_name"},
+            }
+            if new_value is None and field in _REQUIRED_FIELDS.get(resource, set()):
+                logger.warning(
+                    "Patch %d: skip null on required field %s/%s %s",
+                    i, resource, res_id, field,
+                )
+                stats["skipped_unchanged"] += 1
+                continue
+
             # Apply
             if not dry_run:
                 setattr(obj, field, new_value)
