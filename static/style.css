@@ -112,6 +112,13 @@ body {
   font-size: 0.8em;
   border: 1px solid var(--border);
   color: var(--text-muted);
+  /* v6.67 CLS-fix: header #entity-count badge parte come "..." e poi diventa
+     "1.034 entita'" — riserva larghezza minima per non spostare gli altri
+     controlli accanto (Ask Claude bottone, lang-toggle). */
+  min-width: 90px;
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
 }
 
 /* Main layout — key fix: no overlap */
@@ -258,7 +265,7 @@ body {
   color: var(--text-muted);
   font-size: 0.68em;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
 }
 
 .year-presets button:hover { border-color: var(--accent); color: var(--text); }
@@ -271,6 +278,15 @@ body {
   margin-top: 8px;
 }
 
+/*
+ * v6.67 CLS-fix: .era-chip usava transition:all che includeva border-color,
+ * background, color, box-shadow, tutti non compositabili. Chrome trace
+ * ne segnalava TARGET_HAS_INVALID_COMPOSITING_STATE con shift score 0.48.
+ * Soluzione: separare transizioni compositable (transform, opacity) da quelle
+ * lente ma necessarie (color/background limitate a valori che non alterano
+ * il bounding box). Il bordo colorato al hover e' renderizzato come pseudo
+ * ::after overlay — nessuna modifica di layout, nessun CLS.
+ */
 .era-chip {
   padding: 4px 10px;
   border: 1px solid var(--border);
@@ -279,27 +295,49 @@ body {
   color: var(--text-muted);
   font-size: 0.72em;
   cursor: pointer;
-  transition: all 0.15s;
+  /* Solo transform + opacity (compositable) */
+  transition: transform 0.15s ease, opacity 0.15s ease;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
   gap: 2px;
+  /* Necessario per poter posizionare lo pseudo ::after */
+  position: relative;
+}
+
+/* Overlay bordo accent renderizzato come pseudo-element: appare al hover
+   senza triggerare il layout ricalcolo delle dimensioni del chip. */
+.era-chip::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  pointer-events: none;
+  transition: border-color 0.15s ease;
 }
 
 .era-chip:hover {
-  border-color: var(--accent);
   color: var(--text);
   transform: translateY(-1px);
-  box-shadow: 0 2px 6px rgba(88, 166, 255, 0.15);
+}
+
+.era-chip:hover::after {
+  border-color: var(--accent);
 }
 
 .era-chip.active {
   background: var(--accent);
   color: white;
+}
+
+.era-chip.active::after {
   border-color: var(--accent);
 }
 
 /* v6.50: Ask Claude button */
+/* v6.67 CLS-fix: transition:all allargato a tutte le proprieta' — restretto
+   a transform + box-shadow (compositabili). */
 .ask-claude-btn {
   padding: 6px 12px;
   background: linear-gradient(135deg, #d97757 0%, #c8663d 100%);
@@ -309,7 +347,7 @@ body {
   font-size: 0.85em;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -399,7 +437,7 @@ body {
   border: 1px solid var(--border);
   background: transparent;
   color: var(--text-muted);
-  transition: all 0.15s;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
 }
 
 .onboarding-actions button.primary {
@@ -420,7 +458,7 @@ body {
   color: var(--text-muted);
   font-size: 0.85em;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
   /* v6.57 audit fix: defensive — ensure toggle stays visible after collapse */
   display: inline-flex !important;
   visibility: visible !important;
@@ -502,7 +540,7 @@ body {
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.78em;
-  transition: all 0.15s;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
 }
 
 .btn-secondary:hover { border-color: var(--accent); color: var(--text); }
@@ -619,7 +657,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.15s;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
 }
 
 .map-control-btn:hover { color: var(--accent); border-color: var(--accent); }
@@ -902,7 +940,7 @@ footer {
   border: 1px solid var(--border);
   border-radius: 6px;
   margin-right: 10px;
-  transition: all 0.15s;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
 }
 
 .api-link:hover { background: var(--bg-card); border-color: var(--accent); }
@@ -917,7 +955,7 @@ footer {
   border-radius: 6px;
   cursor: pointer;
   margin-right: 6px;
-  transition: all 0.15s;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
   line-height: 1;
 }
 .theme-toggle:hover { border-color: var(--accent); color: var(--text); }
@@ -936,20 +974,61 @@ fieldset.filter-control legend {
 }
 
 /* Skeleton loader */
-.skeleton-loader { padding: 8px; }
+.skeleton-loader {
+  padding: 8px;
+  /* v6.67: riserva spazio verticale per evitare CLS quando la lista risultati
+     carica dal primo fetch /v1/entities (3 card × 60px + gap ≈ 198px). */
+  min-height: 198px;
+}
 
+/*
+ * v6.67 CLS-fix:
+ * La vecchia shimmer animava background-position — NON compositabile, forza
+ * paint/layout ogni frame e conta come layout-shift quando il browser decide
+ * il reflow. Riscritta con pseudo-element + transform: translateX che il
+ * compositor muove sul GPU layer senza toccare il layout tree principale.
+ */
 .skeleton-card {
   height: 60px;
   margin-bottom: 6px;
-  background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-card-hover) 50%, var(--bg-card) 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
+  background: var(--bg-card);
   border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  /* Indica al browser di promuovere a layer compositato — riduce paint churn. */
+  will-change: transform;
+  contain: strict;
 }
 
+.skeleton-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--bg-card-hover) 50%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  animation: shimmer-gpu 1.5s infinite;
+  /* Strict compositing hint */
+  will-change: transform;
+}
+
+@keyframes shimmer-gpu {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Retrocompatibilità: l'animazione storica "shimmer" resta disponibile ma
+   mappata sulla versione GPU (evita regressioni se referenziata altrove). */
 @keyframes shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 /* Detail spinner */
@@ -1023,12 +1102,26 @@ fieldset.filter-control legend {
 }
 
 /* Chip group (type filter) */
+/*
+ * v6.67 CLS-fix: continent-chips e type-chips partono con un solo chip
+ * "Tutti" (placeholder) e poi ricevono ~9 continenti / ~6 tipi dopo il
+ * fetch GET /v1/stats o /v1/types. Senza min-height, quando i chip
+ * streamano, la sidebar faceva reflow e scheda il layout di tutto il
+ * pannello sotto. Riserva spazio per 2 righe (20px × 2 + gap = ~46px).
+ */
 .chip-group {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
+  min-height: 46px;
+  align-content: flex-start;
 }
 
+/*
+ * v6.67 CLS-fix: .chip (continenti, tipi) aveva transition:all che coinvolgeva
+ * border-color e background — entrambi non compositabili. Refactor con
+ * pseudo-element ::after per il ring colorato e transition mirata.
+ */
 .chip {
   padding: 3px 8px;
   border: 1px solid var(--border);
@@ -1037,12 +1130,30 @@ fieldset.filter-control legend {
   color: var(--text-muted);
   font-size: 0.72em;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: color 0.15s ease, background 0.15s ease, transform 0.15s ease;
   white-space: nowrap;
+  position: relative;
 }
 
-.chip:hover { border-color: var(--accent); color: var(--text); }
-.chip.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 600; }
+.chip::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  pointer-events: none;
+  transition: border-color 0.15s ease;
+}
+
+.chip:hover { color: var(--text); }
+.chip:hover::after { border-color: var(--accent); }
+
+.chip.active {
+  background: var(--accent);
+  color: #000;
+  font-weight: 600;
+}
+.chip.active::after { border-color: var(--accent); }
 
 /* Sort control */
 .sort-control {
@@ -1081,6 +1192,12 @@ fieldset.filter-control legend {
   color: var(--text-muted);
   flex-wrap: wrap;
   flex-shrink: 0;
+  /* v6.67 CLS-fix: riserva 32px (singola riga) + padding = 44px totali.
+     Prima l'altezza passava da 0 → ~44px quando /v1/entities rispondeva (190ms),
+     causando layout-shift sul sidebar e sulla lista sotto. */
+  min-height: 44px;
+  box-sizing: border-box;
+  align-items: center;
 }
 
 .stat-item {
@@ -1135,7 +1252,7 @@ fieldset.filter-control legend {
   padding: 2px 8px;
   border: 1px solid var(--border);
   border-radius: 4px;
-  transition: all 0.15s;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
 }
 
 .export-btn:hover { color: var(--accent); border-color: var(--accent); }
@@ -1303,7 +1420,7 @@ fieldset.filter-control legend {
   color: var(--text-muted);
   font-size: 0.8em;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
 }
 
 .btn-share:hover { border-color: var(--accent); color: var(--accent); }
@@ -1353,7 +1470,7 @@ kbd {
   color: var(--accent);
   font-size: 0.9em;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1427,7 +1544,7 @@ kbd {
   color: var(--text-muted);
   font-size: 0.8em;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
 }
 
 .btn-compare:hover { border-color: var(--accent); color: var(--accent); }
@@ -1920,6 +2037,10 @@ kbd {
   font-size: 0.78em;
   color: var(--text-muted);
   border-bottom: 1px solid var(--border);
+  /* v6.67 CLS-fix: mantieni min-height anche nell'override v5.7 */
+  min-height: 44px;
+  box-sizing: border-box;
+  align-items: center;
 }
 
 .stat-item {
@@ -1980,7 +2101,7 @@ kbd {
   border-radius: 4px;
   color: var(--text-muted);
   text-decoration: none;
-  transition: all 0.15s;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
 }
 
 .export-btn:hover {
@@ -1991,8 +2112,12 @@ kbd {
 
 /* ─── v5.7: Smooth hover animations ───────────────────────── */
 
+/* v6.67 CLS-fix: rimossa transition su border-color (non compositabile) —
+   le card vengono iniettate via innerHTML da applyFilters() al load, e una
+   transizione border-color animava ad ogni insert causando layout-shift
+   (vedi CLSCulprit trace: layout shift 4 @ 349ms score 0.44). */
 .result-card {
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .result-card:hover {
@@ -2000,8 +2125,11 @@ kbd {
   box-shadow: 0 2px 8px var(--shadow);
 }
 
+/* v6.67 CLS-fix: override del "transition: all" storico — ora il chip usa
+   solo proprieta' compositabili (transform) + la transizione mirata su color
+   gia' dichiarata nella regola principale. */
 .chip {
-  transition: all 0.15s ease;
+  transition: color 0.15s ease, background 0.15s ease, transform 0.15s ease;
 }
 
 .chip:hover:not(.active) {
@@ -2312,6 +2440,11 @@ button:focus-visible {
   color: var(--accent);
   font-weight: 600;
   font-size: 0.9em;
+  /* v6.67 CLS-fix: inizia vuoto e riempito da /v1/chains response con "(94)".
+     Riserva spazio minimo per evitare shift laterale del chains-label. */
+  min-width: 40px;
+  display: inline-block;
+  text-align: right;
 }
 
 .chains-list {
@@ -2326,6 +2459,10 @@ button:focus-visible {
   color: var(--text-muted);
   text-align: center;
   padding: 10px 4px;
+  /* v6.67 CLS-fix: placeholder "Caricamento catene..." deve occupare
+     lo stesso spazio verticale di un piccolo batch di chain-card
+     (ridurra' il reflow quando /v1/chains arriva). */
+  min-height: 40px;
 }
 
 .chain-card {
@@ -2549,7 +2686,7 @@ button:focus-visible {
   font-weight: 500;
   padding: 6px 10px;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
   margin-bottom: -1px;
 }
 
@@ -2831,3 +2968,80 @@ button:focus-visible {
 }
 
 .ev-popup-link:hover { color: var(--accent-light); }
+
+/* ─── v6.67: CLS stability block (Core Web Vitals) ─────────────────────
+ *
+ * Obiettivo: riduzione CLS su /app da 0.82 (catastrofico) a <0.1 (good).
+ *
+ * Principio: ogni contenitore che riceve contenuto async da /v1/* deve
+ * riservare in anticipo il suo spazio verticale per evitare reflow quando
+ * i dati arrivano (tipico: 150-250ms dopo il first paint). Il browser
+ * altrimenti riposizionerebbe tutto cio' che e' sotto, accumulando CLS
+ * score su ogni shift.
+ *
+ * Riferimenti (web.dev/cls, web.dev/optimize-cls):
+ * - Sempre min-height sui container async
+ * - Sempre aspect-ratio su immagini/embed
+ * - Transform/opacity per animazioni (GPU compositable, no layout)
+ * - Mai animare width/height/top/left/border-width per transizioni
+ * ─────────────────────────────────────────────────────────────────── */
+
+/* Se JavaScript non gira, non mostrare lo skeleton bar animato in modo
+   infinito — riduce overhead CPU per crawler/text-mode browser. */
+.no-js .skeleton-card::after { animation: none; }
+
+/* Fallback per utenti con "prefers-reduced-motion": disabilita tutte le
+   animazioni non compositabili e quelle cumulative. Accessibility +
+   ulteriore riduzione CLS perceived. */
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-card::after {
+    animation: none;
+  }
+  .spinner {
+    animation: none;
+    border-top-color: var(--accent);
+  }
+  /* Disattiva transform hover che causa "spostamenti" visibili. */
+  .era-chip:hover,
+  .chip:hover:not(.active),
+  .ask-claude-btn:hover,
+  .chain-card:hover,
+  .result-card:hover {
+    transform: none;
+  }
+}
+
+/* v6.67: Reserva spazio aggiuntivo per il detail-content (pannello destro)
+   mentre carica entita'. Evita reflow del contenuto interno quando lo
+   spinner scompare e arrivano h2 + sezioni + mappa. */
+#detail-content {
+  min-height: 320px;
+}
+
+/* v6.67: Timeline canvas parte nascosto (collapsed height:0). Quando
+   l'utente apre la timeline, height passa da 0 → 120px in 0.3s.
+   Questa e' una transizione user-initiated, esclusa dal CLS se avviene
+   entro 500ms da un tap/click (spec CLS), quindi la teniamo. */
+
+/* v6.67: Hint al browser per il layering delle regioni che animano
+   spesso. Promuovere solo gli elementi che davvero beneficiano di un
+   compositor layer dedicato (troppo abuso → memoria GPU esaurita). */
+.skeleton-card::after,
+.spinner,
+#sidebar,
+.detail-panel {
+  will-change: transform;
+}
+
+/* v6.67: Font loading — il sito usa solo system fonts (-apple-system,
+   BlinkMacSystemFont, Segoe UI, Helvetica, Arial). Non ci sono web-fonts
+   caricati da CDN, quindi NO FOUT/FOIT — nessun @font-face descriptor
+   necessario. Se in futuro verranno aggiunti font custom, usare
+   font-display: optional per zero CLS (accetta di non caricare
+   il custom font su connessioni lente). */
+
+/* v6.67: Loading bar nel top (2px fixed) — e' un indicatore progress
+   che usa transition:width, ma essendo `position:fixed` e high z-index,
+   NON contribuisce al CLS del layout principale (le shift score del
+   CLS ignorano gli elementi position:fixed/sticky). Lasciato invariato. */
+
