@@ -49,7 +49,10 @@ class TestGetEntity:
         r = client.get("/v1/entities/99999")
         assert r.status_code == 404
         d = r.json()
-        assert d["error"] is True
+        # v6.66 FIX 7: error envelope unificato — `error` ora e' dict con code/message.
+        assert isinstance(d["error"], dict)
+        assert d["error"]["code"] == "NOT_FOUND"
+        assert d["error"]["message"]
 
     def test_has_all_fields(self, client):
         eid = self._first_id(client)

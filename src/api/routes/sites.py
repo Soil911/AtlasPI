@@ -117,9 +117,15 @@ def list_sites(
     q = db.query(ArchaeologicalSite)
 
     if year is not None:
-        q = q.filter(
-            or_(ArchaeologicalSite.date_start.is_(None), ArchaeologicalSite.date_start <= year)
-        )
+        # v6.66 FIX 2: il vecchio filtro includeva siti senza date_start (NULL),
+        # quindi `?year=100` e `?year=-1` restituivano gli stessi 1226 risultati
+        # (solo righe con date_start NULL venivano escluse — ma non ce n'erano).
+        # Nuovo semantics: date_start DEVE essere noto ed essere <= year, e
+        # date_end (se noto) DEVE essere >= year. Siti senza date_start sono
+        # esclusi dal filtro anno — per loro il consumatore usa /v1/sites
+        # senza year.
+        q = q.filter(ArchaeologicalSite.date_start.isnot(None))
+        q = q.filter(ArchaeologicalSite.date_start <= year)
         q = q.filter(
             or_(ArchaeologicalSite.date_end.is_(None), ArchaeologicalSite.date_end >= year)
         )

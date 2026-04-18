@@ -122,7 +122,12 @@ class SearchResult(BaseModel):
 
 
 class SearchResponse(BaseModel):
-    count: int
+    """Risposta search.
+
+    v6.66 FIX 4: include sia `total` (canonico) sia `count` (legacy deprecato).
+    """
+    total: int
+    count: int  # DEPRECATED v6.66 — alias di `total`, verra' rimosso in v6.68.
     results: list[SearchResult]
 
 
@@ -389,7 +394,8 @@ def query_entity(
         total = len(entities)
 
     response.headers["Cache-Control"] = "public, max-age=3600"
-    return PaginatedEntityResponse(count=total, limit=limit, offset=offset, entities=entities)
+    # v6.66 FIX 4: sia `total` (canonico) sia `count` (legacy deprecato).
+    return PaginatedEntityResponse(total=total, count=total, limit=limit, offset=offset, entities=entities)
 
 
 @router.get(
@@ -418,6 +424,14 @@ def query_entity(
 def list_entities(
     request: Request,
     response: Response,
+    # v6.66 FIX 1: filtri documentati nella docstring ma mai accettati dalla signature.
+    # year: entità attiva in quell'anno (year_start <= year AND (year_end IS NULL OR year_end >= year)).
+    # entity_type/continent/status: exact match. search: ILIKE su name_original / name_english / name_local.
+    year: int | None = Query(None, ge=-5000, le=2100, description="Entities active in this year"),
+    entity_type: str | None = Query(None, max_length=50, description="Exact entity_type match (empire, kingdom, sultanate, ...)"),
+    continent: str | None = Query(None, max_length=50, description="Filter by derived continent from capital coordinates"),
+    status: StatusFilter = Query(None, description="Filter by status (confirmed / uncertain / disputed)"),
+    search: str | None = Query(None, max_length=200, description="ILIKE search on name_original + name_variants"),
     bbox: str | None = Query(
         None,
         max_length=80,
@@ -431,15 +445,56 @@ def list_entities(
 ):
     q = _eager_query(db)
     q = _apply_bbox_filter(q, bbox)
-    # Direct count avoids subquery wrapping from joinedload, ~10x faster
-    count_q = _apply_bbox_filter(db.query(func.count(GeoEntity.id)), bbox)
-    total = count_q.scalar() or 0
-    q = _apply_sort(q, sort, order)
-    results = q.offset(offset).limit(limit).all()
-    entities = [_entity_to_response(e) for e in results]
+
+    # v6.66 FIX 1: applichiamo i filtri DB-side prima di count/offset/limit.
+    # Il filtro continent e' post-query (calcolato da lat/lon capitale).
+    if year is not None:
+        q = q.filter(GeoEntity.year_start <= year)
+        q = q.filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= year))
+
+    if entity_type:
+        q = q.filter(GeoEntity.entity_type == entity_type)
+
+    if status:
+        q = q.filter(GeoEntity.status == status)
+
+    if search:
+        pattern = f"%{search}%"
+        # ETHICS-001: ricerca sul name_original (lingua locale) + varianti.
+        # Se name_variants ha una tabella separata via relationship, facciamo
+        # subquery come in /v1/entity per coerenza.
+        variant_ids = select(NameVariant.entity_id).where(NameVariant.name.ilike(pattern))
+        q = q.filter(
+            or_(
+                GeoEntity.name_original.ilike(pattern),
+                GeoEntity.id.in_(variant_ids),
+            )
+        )
+
+    # Se continent e' richiesto, e' un filtro post-query (calcolato da lat/lon).
+    # Dobbiamo calcolare il total post-filter sull'intero result set filtered DB-side,
+    # poi applicare continent, poi paginare su quanto rimane.
+    if continent:
+        # Carichiamo tutte le righe che matchano DB-side, filtriamo per continent
+        # in Python, poi paginiamo. Costo: O(n) su un set gia' ristretto dai filtri.
+        all_results = _apply_sort(q, sort, order).all()
+        entities_all = [_entity_to_response(e) for e in all_results]
+        entities_filtered = [
+            e for e in entities_all
+            if e.continent and e.continent.lower() == continent.lower()
+        ]
+        total = len(entities_filtered)
+        entities = entities_filtered[offset:offset + limit]
+    else:
+        # Path veloce: count SQL-side + offset/limit nativo.
+        total = q.count()
+        q = _apply_sort(q, sort, order)
+        results = q.offset(offset).limit(limit).all()
+        entities = [_entity_to_response(e) for e in results]
 
     response.headers["Cache-Control"] = "public, max-age=3600"
-    return PaginatedEntityResponse(count=total, limit=limit, offset=offset, entities=entities)
+    # v6.66 FIX 4: sia `total` (canonico) sia `count` (legacy deprecato).
+    return PaginatedEntityResponse(total=total, count=total, limit=limit, offset=offset, entities=entities)
 
 
 @router.get(
@@ -507,8 +562,10 @@ def list_entities_light(
 
     rows = q.all()
     response.headers["Cache-Control"] = "public, max-age=3600"
+    # v6.66 FIX 4: restituisce sia `total` (standard) sia `count` (legacy).
     return {
-        "count": len(rows),
+        "total": len(rows),
+        "count": len(rows),  # DEPRECATED v6.66
         "entities": [
             {
                 "id": r.id,
@@ -656,6 +713,8 @@ def search_entities(
     )
 
     return SearchResponse(
+        # v6.66 FIX 4: sia `total` canonico sia `count` legacy.
+        total=len(results),
         count=len(results),
         results=[
             SearchResult(

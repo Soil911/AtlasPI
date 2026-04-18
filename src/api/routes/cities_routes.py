@@ -118,8 +118,100 @@ def _city_detail(c: HistoricalCity) -> dict:
     return base
 
 
+def _simplify_linestring(geometry: dict | None, tolerance: float = 0.5) -> dict | None:
+    """Semplifica un LineString/MultiLineString GeoJSON con tolleranza Douglas-Peucker.
+
+    v6.66 FIX 3: il frontend deve poter disegnare le rotte nella vista lista
+    senza scaricare la geometria completa. Usiamo shapely se disponibile,
+    altrimenti fallback al thinning "ogni N punti" per minimizzare dipendenze.
+
+    Tolerance 0.5° mantiene la forma generale (~55 km in lat) riducendo
+    i vertici del 70-90% su rotte lunghe (Silk Road etc.).
+    """
+    if not geometry or not isinstance(geometry, dict):
+        return None
+    gtype = geometry.get("type")
+    if gtype not in {"LineString", "MultiLineString"}:
+        # Altri tipi (es. Polygon per rotte "area") → ritorna tal quale.
+        return geometry
+
+    try:
+        from shapely.geometry import shape as _shape
+        from shapely.geometry import mapping as _mapping
+        g = _shape(geometry)
+        simplified = g.simplify(tolerance, preserve_topology=False)
+        return _mapping(simplified)
+    except Exception:
+        # Fallback: thinning ogni N punti (preserva gli endpoint).
+        try:
+            if gtype == "LineString":
+                coords = geometry.get("coordinates", [])
+                if len(coords) <= 4:
+                    return geometry
+                step = max(1, len(coords) // 20)
+                thinned = coords[::step]
+                if thinned[-1] != coords[-1]:
+                    thinned.append(coords[-1])
+                return {"type": "LineString", "coordinates": thinned}
+        except Exception:
+            pass
+        return geometry
+
+
+def _route_start_end_coords(r: TradeRoute) -> tuple[float | None, float | None, float | None, float | None]:
+    """Estrae (start_lat, start_lon, end_lat, end_lon) da geometry o waypoints."""
+    # Preferisci geometry_geojson se disponibile.
+    if r.geometry_geojson:
+        try:
+            g = json.loads(r.geometry_geojson)
+            if g.get("type") == "LineString":
+                coords = g.get("coordinates", [])
+                if coords:
+                    sx, sy = coords[0][0], coords[0][1]
+                    ex, ey = coords[-1][0], coords[-1][1]
+                    # GeoJSON: [lon, lat] per convention RFC 7946.
+                    return (sy, sx, ey, ex)
+            elif g.get("type") == "MultiLineString":
+                lines = g.get("coordinates", [])
+                if lines and lines[0] and lines[-1]:
+                    sx, sy = lines[0][0][0], lines[0][0][1]
+                    ex, ey = lines[-1][-1][0], lines[-1][-1][1]
+                    return (sy, sx, ey, ex)
+        except (json.JSONDecodeError, TypeError, IndexError, KeyError):
+            pass
+    # Fallback: waypoints (primo e ultimo terminale).
+    try:
+        links = sorted(r.city_links, key=lambda lk: lk.sequence_order or 0)
+        if links and links[0].city and links[-1].city:
+            return (
+                links[0].city.latitude,
+                links[0].city.longitude,
+                links[-1].city.latitude,
+                links[-1].city.longitude,
+            )
+    except Exception:
+        pass
+    return (None, None, None, None)
+
+
 def _route_summary(r: TradeRoute) -> dict:
+    """Summary di una rotta.
+
+    v6.66 FIX 3: include geometry_simplified (Douglas-Peucker 0.5°) +
+    start/end lat/lon come fallback minimale — il frontend deve poter
+    disegnare le linee sulla mappa senza fare una seconda chiamata a
+    /v1/routes/{id} per ciascuna rotta. La full geometry resta in
+    /v1/routes/{id} come `geometry` (full resolution).
+    """
     commodities = json.loads(r.commodities) if r.commodities else []
+    geometry_full = None
+    if r.geometry_geojson:
+        try:
+            geometry_full = json.loads(r.geometry_geojson)
+        except (json.JSONDecodeError, TypeError):
+            geometry_full = None
+    geometry_simplified = _simplify_linestring(geometry_full, tolerance=0.5)
+    start_lat, start_lon, end_lat, end_lon = _route_start_end_coords(r)
     return {
         "id": r.id,
         "name_original": r.name_original,
@@ -131,6 +223,12 @@ def _route_summary(r: TradeRoute) -> dict:
         "commodities": commodities,
         "confidence_score": r.confidence_score,
         "status": r.status,
+        # v6.66 FIX 3: geometria leggera per rendering in list view.
+        "geometry_simplified": geometry_simplified,
+        "start_lat": start_lat,
+        "start_lon": start_lon,
+        "end_lat": end_lat,
+        "end_lon": end_lon,
     }
 
 

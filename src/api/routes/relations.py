@@ -588,9 +588,18 @@ def compare_entities(
 
     response.headers["Cache-Control"] = "public, max-age=3600"
 
+    # v6.66 FIX 5: normalizza la risposta per allinearla a /v1/compare?ids=
+    # La chiave top-level `entities` e' presente in entrambi i path (list).
+    # `entity_a` / `entity_b` restano per backward-compat e saranno rimossi
+    # in una release successiva (deprecated).
+    entity_a_data = _entity_compare_data(e1)
+    entity_b_data = _entity_compare_data(e2)
+
     return {
-        "entity_a": _entity_compare_data(e1),
-        "entity_b": _entity_compare_data(e2),
+        "entities": [entity_a_data, entity_b_data],
+        # Deprecated v6.66: usare `entities[0]` / `entities[1]`.
+        "entity_a": entity_a_data,
+        "entity_b": entity_b_data,
         "comparison": {
             "temporal_overlap_years": temporal_overlap,
             "overlap_period": f"{overlap_start} — {overlap_end}" if temporal_overlap > 0 else None,
@@ -600,5 +609,21 @@ def compare_entities(
             "duration_diff": abs(
                 ((e1.year_end or 2025) - e1.year_start) - ((e2.year_end or 2025) - e2.year_start)
             ),
+        },
+        # v6.66 FIX 5: overlap nel formato di /v1/compare?ids= per coerenza.
+        "overlap": {
+            "all": {
+                "start": overlap_start if temporal_overlap > 0 else None,
+                "end": overlap_end if temporal_overlap > 0 else None,
+                "years": temporal_overlap,
+            },
+            "pairwise": [
+                {
+                    "entity_ids": [e1.id, e2.id],
+                    "start": overlap_start if temporal_overlap > 0 else None,
+                    "end": overlap_end if temporal_overlap > 0 else None,
+                    "years": temporal_overlap,
+                }
+            ],
         },
     }

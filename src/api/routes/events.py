@@ -50,6 +50,11 @@ def _event_summary(e: HistoricalEvent) -> dict:
     v6.14: include i campi di date precision (month, day, date_precision,
     iso_date) anche nel summary — consente al client di ordinare/filtrare
     senza fetch del detail.
+
+    v6.66 FIX 3: aggiunti location_lat/lon al summary. Il frontend usa
+    /v1/events (list) per clusterizzare eventi sulla mappa e non poteva
+    farlo senza coordinate. location_name e' la stringa human-readable,
+    location_lat/lon sono i valori numerici per il rendering markers.
     """
     return {
         "id": e.id,
@@ -64,6 +69,9 @@ def _event_summary(e: HistoricalEvent) -> dict:
         "date_precision": e.date_precision,
         "iso_date": e.iso_date,
         "location_name": e.location_name,
+        # v6.66 FIX 3: coordinate per map rendering in list view.
+        "location_lat": e.location_lat,
+        "location_lon": e.location_lon,
         "main_actor": e.main_actor,
         "status": e.status,
         "confidence_score": e.confidence_score,

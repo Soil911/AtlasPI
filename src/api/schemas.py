@@ -110,8 +110,13 @@ class EntityResponse(BaseModel):
 
 
 class PaginatedEntityResponse(BaseModel):
-    """Risposta paginata per liste di entità."""
-    count: int = Field(description="Numero totale di risultati")
+    """Risposta paginata per liste di entità.
+
+    v6.66 FIX 4: include sia `total` (standard) sia `count` (legacy).
+    `count` è deprecato ma restituito per retro-compatibilità per 1-2 release.
+    """
+    total: int = Field(description="Numero totale di risultati che matchano i filtri (prima di limit/offset)")
+    count: int = Field(description="DEPRECATED (v6.66) — alias di `total`. Sarà rimosso in v6.68.")
     limit: int = Field(description="Limite per pagina")
     offset: int = Field(description="Offset corrente")
     entities: list[EntityResponse]

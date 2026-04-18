@@ -174,7 +174,10 @@ def test_event_detail_404_unknown(client):
     r = client.get("/v1/events/999999")
     assert r.status_code == 404
     body = r.json()
-    assert body["error"] is True
+    # v6.66 FIX 7: error envelope unificato.
+    assert isinstance(body["error"], dict)
+    assert body["error"]["code"] == "NOT_FOUND"
+    # error_detail resta legacy per backward compat.
     assert body["error_detail"]["code"] == "NOT_FOUND"
 
 

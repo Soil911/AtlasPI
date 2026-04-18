@@ -43,32 +43,54 @@ class ValidationError(AtlasError):
         super().__init__(422, detail, "VALIDATION_ERROR")
 
 
-def _error_response(status_code: int, detail: str, code: str | None = None) -> JSONResponse:
+def _error_response(
+    status_code: int,
+    detail: str,
+    code: str | None = None,
+    details: dict | None = None,
+) -> JSONResponse:
     """Costruisce una risposta di errore strutturata.
+
+    v6.66 FIX 7: formato unificato per tutti gli errori.
 
     Formato completo::
 
         {
-          "error": true,
-          "detail": "...",
-          "request_id": "...",
-          "error_detail": {"code": "NOT_FOUND", "message": "...", "request_id": "..."}
+          "error": {
+            "code": "NOT_FOUND",
+            "message": "...",
+            "details": {...},         # optional context
+            "request_id": "..."
+          },
+          "detail": "...",            # LEGACY flat
+          "request_id": "...",        # LEGACY flat
+          "error_detail": {...}       # LEGACY structured alias
         }
 
-    Il campo ``error_detail`` e' la nuova struttura ricca.
-    I campi ``error``, ``detail``, ``request_id`` al primo livello
-    restano per retrocompatibilita'.
+    La nuova forma canonica e' `error.*` come oggetto annidato.
+    I campi legacy `detail`, `request_id` e `error_detail` restano per
+    retrocompatibilita' con client gia' deployati.
     """
     error_code = code or ERROR_CODES.get(status_code, "UNKNOWN_ERROR")
     rid = request_id_var.get("-")
+    # v6.66 FIX 7: error envelope canonico unificato.
+    err_obj = {
+        "code": error_code,
+        "message": detail,
+        "request_id": rid,
+    }
+    if details is not None:
+        err_obj["details"] = details
+
     return JSONResponse(
         status_code=status_code,
         content={
-            # Retrocompatibilita' (i test esistenti controllano questi)
-            "error": True,
+            # v6.66 canonico
+            "error": err_obj,
+            # Legacy flat (retrocompatibilita' — test e client deployati)
             "detail": detail,
             "request_id": rid,
-            # Strutturato (nuovo — codice errore machine-readable)
+            # Legacy strutturato
             "error_detail": {
                 "code": error_code,
                 "message": detail,

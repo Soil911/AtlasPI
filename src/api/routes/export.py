@@ -269,6 +269,7 @@ def export_sites_geojson(
 @limiter.limit(RATE_LIMIT_EXPORT)
 def export_rulers_geojson(
     request: Request,
+    response: Response,  # v6.66: richiesto da slowapi con headers_enabled=True
     year: int | None = Query(None, ge=-5000, le=2100),
     region: str | None = Query(None, max_length=50),
     db: Session = Depends(get_db),
@@ -340,6 +341,7 @@ def export_rulers_geojson(
 @limiter.limit(RATE_LIMIT_EXPORT)
 def export_languages_geojson(
     request: Request,
+    response: Response,  # v6.66: richiesto da slowapi con headers_enabled=True
     year: int | None = Query(None, ge=-10000, le=2100),
     family: str | None = Query(None, max_length=100),
     vitality_status: str | None = Query(None, max_length=30),
