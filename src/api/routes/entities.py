@@ -48,6 +48,11 @@ def _get_continent(lat: float | None, lon: float | None) -> str:
     ETHICS: il mapping è un'approssimazione geografica, non una
     dichiarazione politica. Le entità trans-continentali (es. Impero
     Romano, Ottomano) vengono assegnate al continente della capitale.
+
+    v6.63 fix (audit #02): Oceania ora include Melanesia (PNG, Solomon,
+    Vanuatu, Fiji), Micronesia (Guam, Marshall), e Polinesia orientale
+    (Easter Island, Hawaii, French Polynesia). Check fatto PRIMA di Asia
+    per evitare che PNG/Indonesia east vengano assegnate ad Asia.
     """
     if lat is None or lon is None:
         return "Unknown"
@@ -55,6 +60,21 @@ def _get_continent(lat: float | None, lon: float | None) -> str:
     # Middle East special case (politicamente Asia ma spesso trattato a parte)
     if 25 <= lat <= 42 and 25 <= lon <= 50:
         return "Middle East"
+
+    # v6.63: Oceania (Melanesia + Micronesia + Polynesia) — CHECKED FIRST
+    # to avoid PNG / eastern Indonesia being tagged as Asia.
+    # - Lat range: -50 (Stewart Island NZ) to +25 (Hawaii)
+    # - Lon range: 100 to 180 (Pacific west) OR -180 to -140 (Pacific east,
+    #   Polynesia central + Hawaii cluster)
+    if -50 <= lat <= 25:
+        # West Pacific (Melanesia + Micronesia + West Polynesia)
+        if 130 <= lon <= 180:
+            return "Oceania"
+        # East Pacific (central + east Polynesia, incluso Rapa Nui at -109).
+        # South America mainland starts around -80 westernmost, so -105
+        # is a safe boundary that catches Easter Island/Pitcairn.
+        if -180 <= lon <= -105:
+            return "Oceania"
 
     # Africa
     if lat < 37 and -20 <= lon <= 55 and lat < (37 - (lon - 10) * 0.05 if lon > 10 else 37):
@@ -65,7 +85,10 @@ def _get_continent(lat: float | None, lon: float | None) -> str:
     if 35 <= lat <= 72 and -25 <= lon <= 40:
         return "Europe"
 
-    # Asia (including Far East, Central, South, Southeast)
+    # Asia (including Far East, Central, South, Southeast).
+    # NOTE: Oceania check already ran above, so we can include lon 100-180
+    # safely here for mainland Asia + SEA mainland (the islands already
+    # captured above).
     if -15 <= lat <= 75 and 40 <= lon <= 180:
         return "Asia"
 
@@ -76,10 +99,6 @@ def _get_continent(lat: float | None, lon: float | None) -> str:
     # South America
     if -60 <= lat <= 15 and -85 <= lon <= -30:
         return "Americas"
-
-    # Oceania
-    if -50 <= lat <= 0 and 100 <= lon <= 180:
-        return "Oceania"
 
     # Africa fallback
     if -40 <= lat <= 37 and -20 <= lon <= 55:

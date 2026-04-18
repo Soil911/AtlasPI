@@ -2,6 +2,44 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.63.0] - 2026-04-18
+
+**Tema**: *Continent classification — Oceania expansion per Melanesia/Polynesia*
+
+### Bug identificato
+
+Audit #02 report: **34 entità** di Melanesia/Polynesia/Micronesia erano tagged come `Asia` invece di `Oceania`. Esempi: PNG Highland tribes, Yolŋu, Me'ekamui, Solomon chiefdoms, Fiji polity, ecc.
+
+### Fix
+
+`_get_continent(lat, lon)` in `entities.py` aggiornato:
+
+**Before**: Oceania = `-50 <= lat <= 0 and 100 <= lon <= 180`  
+**After**: Oceania check *PRIMA* di Asia, con range espanso:
+- Lat: `-50` to `+25` (copre da Stewart Island NZ a Hawaii/Guam)
+- Lon: `130 to 180` (West Pacific: Melanesia, Micronesia, W-Polynesia)
+- OR `-180 to -105` (East Pacific: Hawaii cluster, C-Polynesia, Easter Island/Pitcairn)
+
+### Verified classification
+
+| Entity | Coords | Before | After |
+|---|---|---|---|
+| PNG Port Moresby | -9.48, 147.15 | Asia | **Oceania** ✓ |
+| Fiji Suva | -18.13, 178.44 | Oceania | Oceania ✓ |
+| Rapa Nui | -27.11, -109.35 | Other | **Oceania** ✓ |
+| Hawaii Honolulu | 21.31, -157.86 | Other | **Oceania** ✓ |
+| Guam | 13.44, 144.79 | Asia | **Oceania** ✓ |
+| Tokyo | 35.68, 139.65 | Asia | Asia ✓ |
+| Jakarta | -6.21, 106.84 | Asia | Asia ✓ (Indonesia W stays Asia) |
+
+### Impact
+
+- 34 entità ora correttamente classificate come Oceania
+- `GET /v1/continents` stats aggiornati live dopo redeploy (no DB change — computed)
+- `GET /v1/entities?continent=Oceania` ora include tutte correttamente
+
+---
+
 ## [v6.62.0] - 2026-04-18
 
 **Tema**: *Translation leak fix — data-i18n-{title,aria-label,placeholder} pattern*
