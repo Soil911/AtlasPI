@@ -50,14 +50,22 @@ def ingest_sites(dry_run: bool = False) -> dict:
 
     db = SessionLocal()
     try:
-        # Build dedup set from DB.
+        # Build dedup sets from DB.
+        # (1) By (name, lat, lon) — historical dedup key.
+        # (2) By unesco_id (NEW v6.56) — prevents duplicates when same UNESCO
+        #     site is ingested under different names (e.g. our curated "Pompeii"
+        #     vs UNESCO's "Archaeological Areas of Pompei, Herculaneum...").
         existing = set()
+        existing_unesco_ids = set()
         for row in db.query(
             ArchaeologicalSite.name_original,
             ArchaeologicalSite.latitude,
             ArchaeologicalSite.longitude,
+            ArchaeologicalSite.unesco_id,
         ).all():
             existing.add((row.name_original, round(row.latitude, 4), round(row.longitude, 4)))
+            if row.unesco_id:
+                existing_unesco_ids.add(row.unesco_id)
 
         # Entity map for optional entity_id resolution by name.
         entity_map: dict[str, int] = {
@@ -95,6 +103,15 @@ def ingest_sites(dry_run: bool = False) -> dict:
                     skipped += 1
                     continue
 
+                # v6.56: dedup by unesco_id — cross-batch safety.
+                # If this site has a unesco_id already present in DB, skip
+                # (preserves curated versions with native scripts over
+                # UNESCO-English fetched versions).
+                unesco_id = data.get("unesco_id")
+                if unesco_id and unesco_id in existing_unesco_ids:
+                    skipped += 1
+                    continue
+
                 # Resolve entity_id from name if provided but not numeric.
                 entity_id = data.get("entity_id")
                 if isinstance(entity_id, str):
@@ -122,6 +139,8 @@ def ingest_sites(dry_run: bool = False) -> dict:
                     db.add(site)
                 inserted += 1
                 existing.add(key)
+                if site.unesco_id:
+                    existing_unesco_ids.add(site.unesco_id)
 
         if not dry_run:
             db.commit()

@@ -2,6 +2,54 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.56.0] - 2026-04-18
+
+**Tema**: *UNESCO World Heritage full expansion — 40 → 1248 sites*
+
+### Boost dataset
+
+Il report external-sources audit ha identificato UNESCO DataHub API come "quick win" (value/effort ⭐⭐⭐ / 3h). Implementato.
+
+- **40 siti curated** (v6.37.1 con native scripts + ETHICS-009 notes) **preservati**
+- **+1208 siti nuovi** da UNESCO World Heritage List API
+- **Total: 1248 siti archeologici** in DB
+
+### Pipeline
+
+`src/ingestion/fetch_unesco_whl.py`:
+- Fetch 1247 records from `https://data.unesco.org/api/explore/v2.1/catalog/datasets/whc001/records`
+- Transform to `ArchaeologicalSite` schema
+- Mapping: `id_no → unesco_id`, `name_en → name_original`, `coordinates → lat/lon`, `category → site_type`, multilingual `name_{fr,es,ar,ru,zh} → name_variants`
+- Writes to `data/sites/batch_01_unesco_whl_full.json`
+- License: UNESCO open data (attribution in NOTICE + per-site `sources[]`)
+
+### Dedup fix
+
+`src/ingestion/ingest_sites.py` v6.56 cambio:
+- **Before**: dedup solo per `(name, lat, lon)`
+- **Now**: dedup anche per `unesco_id` — previene duplicati quando stesso sito UNESCO viene ingerito con nomi diversi (es. curated "Pompeii" vs UNESCO English "Archaeological Areas of Pompei, Herculaneum and Torre Annunziata")
+- Curated sites con native script **preservati** (hanno priorità)
+
+### Attribution
+
+UNESCO World Heritage List © UNESCO. License: UNESCO open data (https://whc.unesco.org/en/openaccess).
+
+### Stats
+
+- Sites: 40 → **1248** (+1208, +3020%)
+- Total resource counts sul dataset:
+  - 1033 entities
+  - 643 events
+  - 1248 sites ← v6.56
+  - 105 rulers
+  - 29 languages
+
+### Test
+
+Test ingest_sites pre-existing continua a passare. Ingest locale completato: `inserted 1248, skipped 39` (i curati avevano unesco_id matching con UNESCO batch).
+
+---
+
 ## [v6.55.0] - 2026-04-18
 
 **Tema**: *Data patch infrastructure — fase 2 fix pipeline*
