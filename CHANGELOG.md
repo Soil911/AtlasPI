@@ -2,6 +2,52 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.58.0] - 2026-04-18
+
+**Tema**: *Fix batch #2 — ETHICS-001 native-script conversion per 15 entità*
+
+### Applied da audit #01 (data quality + ETHICS)
+
+15 entity/event/ruler/site con `name_original` in Latin transliteration sono stati convertiti al native script suggerito dall'audit agent. Esempi:
+
+- id=420 `Rus' Kyivska` → `Русь Київська` (Cyrillic)
+- id=436 `Despotaton tou Moreos` → `Δεσποτᾶτον τοῦ Μορέως` (Greek)
+- id=738 `Dar Fur` → `دار فور` (Arabic)
+- id=741 `Maqdishaw` → `مَقْدِشُو` (Arabic)
+- id=1009 `Mogadishu Sultanate early` → `Banaadir مقدشو` (Arabic-Somali)
+
+### Patch application
+
+Via `scripts/apply_data_patch.py` con null guard (v6.58 fix).
+
+Stats: 26 patches proposti, 15 applicati, 11 skippati (null suggestions = "already OK"), 0 errors.
+
+### Script defensive fix
+
+`apply_data_patch.py` ora **skip null su required fields** (prevents `IntegrityError` NOT NULL violation). Required fields per resource codified:
+- entity: name_original, lang, entity_type, year_start
+- event: name_original, lang, event_type, year
+- site: name_original, lang, latitude, longitude
+- ruler: name_original, lang, title, region
+- language: name_original, lang, region_name
+
+### ⚠️ Note re-ingest risk
+
+Il `batch_*_sahel_africa.json` ha name_original in Latin form. Se viene rieseguita `ingest_new_entities.py`, il dedup cerca Latin name che ora è native in DB → NON match → crea duplicato.
+
+**Mitigazione**: non rilanciare `ingest_new_entities.py` su prod senza aver prima aggiornato i batch JSON. In alternativa, aggiungere check cross-NameVariant nel dedup (v6.60+).
+
+### Fix rimandati
+
+- 3 entities skipped_missing (ID shift post UNESCO?): da investigare
+- 1 missing sources fix (Res Publica Romana id=1034)
+- 18 rulers entity_id linking
+- 34 continent retag
+- 4 Polynesian antimeridian
+- EN translation leak
+
+---
+
 ## [v6.57.0] - 2026-04-18
 
 **Tema**: *Fix batch #1 dal super-audit — historical accuracy, status coherence, UI bugs*
