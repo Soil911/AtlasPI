@@ -558,11 +558,13 @@ body {
   color: var(--accent-warm);
   line-height: 1.4;
   flex-shrink: 0;
-  /* v6.67 CLS-fix: testo i18n puo' far variare l'altezza banner di qualche px
-     quando da Italian default -> English switch. Riserva min-height per
-     evitare shift della sidebar-controls sottostante. */
-  min-height: 70px;
+  /* v6.67 CLS-fix WIP-5: il banner viene RISCRITTO da i18n.js (linea 316
+     in js/i18n.js) con un testo piu' corto dopo ~200ms, causando shrink
+     dell'altezza e quindi shift di .controls sottostante.
+     Soluzione: fissare l'altezza (matching post-i18n) + overflow hidden. */
+  height: 82px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .data-banner strong { color: var(--accent-warm); }
