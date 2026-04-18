@@ -730,16 +730,45 @@ def search_entities_fuzzy(
             # 2. v6.42: token-level ratio. Per 'venice' vs 'Repubblica di Venezia'
             # il char-level e' basso, ma SequenceMatcher('venice','venezia') ~0.77.
             # Prendi il max per-token e OR-alo con il char-level.
-            cand_tokens = _tokenize(cand_norm)
-            best_token_ratio = 0.0
+            # v6.61 fix: separa tokens PRIMARY (fuori parens) da tokens SECONDARY
+            # (dentro parens). Secondary matches ricevono penalty perche' descrittivi.
+            # Es. 'sultanate' NON deve matchare 'Gelgel (pre-sultanate Bali)' con
+            # score 1.0 — il sultanate e' descrittivo, non il nome dell'entita'.
+            primary_part = cand_norm
+            secondary_part = ""
+            if "(" in cand_norm and ")" in cand_norm:
+                # Split: before paren is primary, inside paren is secondary
+                idx_open = cand_norm.index("(")
+                idx_close = cand_norm.index(")", idx_open)
+                primary_part = (cand_norm[:idx_open] + cand_norm[idx_close + 1:]).strip()
+                secondary_part = cand_norm[idx_open + 1:idx_close]
+
+            primary_tokens = _tokenize(primary_part)
+            secondary_tokens = _tokenize(secondary_part)
+
+            best_primary = 0.0
             for q_tok in q_tokens:
-                for c_tok in cand_tokens:
+                for c_tok in primary_tokens:
                     if not c_tok:
                         continue
                     tr = SequenceMatcher(None, q_tok, c_tok).ratio()
-                    if tr > best_token_ratio:
-                        best_token_ratio = tr
-            ratio = max(ratio, best_token_ratio)
+                    if tr > best_primary:
+                        best_primary = tr
+
+            best_secondary = 0.0
+            for q_tok in q_tokens:
+                for c_tok in secondary_tokens:
+                    if not c_tok:
+                        continue
+                    tr = SequenceMatcher(None, q_tok, c_tok).ratio()
+                    if tr > best_secondary:
+                        best_secondary = tr
+
+            # Primary tokens win at full weight; secondary at 0.6 weight.
+            token_ratio = max(best_primary, best_secondary * 0.6)
+
+            ratio = max(ratio, token_ratio)
+            cand_tokens = primary_tokens + secondary_tokens  # keep for downstream prefix bonus
 
             # ETHICS-001: bonus per match sul name_original.
             if is_original:

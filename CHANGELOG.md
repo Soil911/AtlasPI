@@ -2,6 +2,34 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.61.0] - 2026-04-18
+
+**Tema**: *Fix fuzzy search substring bug dal audit #02*
+
+### Bug
+
+`GET /v1/search/fuzzy?q=sultanate` ritornava come top match `"Gelgel (pre-sultanate Bali)"` con score 1.0. La parola "sultanate" è nel nome ma è un **descrittore in parentesi**, non il nome reale dell'entità. L'utente cercando "sultanate" si aspetta entità che SONO sultanati, non entità che mentions the word.
+
+### Fix
+
+`search_entities_fuzzy()` ora splitta il nome in:
+- **Primary part** (fuori parens): tokens → full weight
+- **Secondary part** (dentro parens): tokens → 0.6 weight
+
+Esempio: `"Gelgel (pre-sultanate Bali)"` → primary="Gelgel", secondary="pre-sultanate Bali". Match "sultanate" vs secondary token viene scorato a 1.0 * 0.6 = 0.6 invece di 1.0.
+
+### Impatto
+
+- `q=sultanate` ora ranka entità con sultanate nel nome primario (es. "Sultanate of Malacca") SOPRA quelle con sultanate in parens.
+- Mantiene tutti i v6.42 fix (venice, florence, bizantino match).
+- `q=empire` top 3 rimangono British Empire / Empire of Japan / Empire du Djolof (tutti score 1.0, legittimi).
+
+### Test
+
+`tests/test_v661_fuzzy_parens_penalty.py`: 2 test — verify primary-match wins over parens-match, regression test venice still works.
+
+---
+
 ## [v6.60.0] - 2026-04-18
 
 **Tema**: *Fix batch #3 — rulers linking + Polynesian antimeridian*
