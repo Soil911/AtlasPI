@@ -969,10 +969,9 @@ fieldset.filter-control {
   border: none;
   padding: 0;
   margin: 0 0 10px;
-  /* v6.67 CLS-fix: riserva min-height per ogni fieldset (legend + contenuto).
-     Empiricamente i due fieldset Status/Regione/Tipo crescono da ~40px a
-     ~60-80px quando carica la propria chip-group. */
-  min-height: 60px;
+  /* v6.67 CLS-fix: min-height esplicito non necessario qui — #continent-chips
+     e #type-chips hanno altezza fissa propria, il fieldset dimensiona
+     automaticamente. */
 }
 
 /* overlay-control contiene 2 checkbox + 2 hint. Prima senza min-height la
@@ -1119,10 +1118,15 @@ fieldset.filter-control legend {
 /* Chip group (type filter) */
 /*
  * v6.67 CLS-fix: continent-chips e type-chips partono con un solo chip
- * "Tutti" (placeholder) e poi ricevono ~9 continenti / ~6 tipi dopo il
- * fetch GET /v1/stats o /v1/types. Senza min-height, quando i chip
- * streamano, la sidebar faceva reflow e scheda il layout di tutto il
- * pannello sotto. Riserva spazio per 2 righe (20px × 2 + gap = ~46px).
+ * "Tutti" (placeholder) e poi ricevono ~9 continenti / ~29 tipi dopo il
+ * fetch. Misurato live via getBoundingClientRect:
+ * - #type-chips dopo load: 752px (29 chip)
+ * - #continent-chips dopo load: 236px (9 chip)
+ *
+ * Senza riserva, la sidebar faceva reflow di +700px causando CLS 0.29+.
+ * Soluzione: fissare altezza dei contenitori + overflow-y:auto (scroll
+ * interno). UX: l'utente scorre tra i chip; visivamente e' un selettore
+ * compatto. Zero CLS.
  */
 .chip-group {
   display: flex;
@@ -1131,6 +1135,33 @@ fieldset.filter-control legend {
   min-height: 46px;
   align-content: flex-start;
 }
+
+/* Type chips: 29 entita', altezza fissa 180px + scroll interno. */
+#type-chips {
+  height: 180px;
+  max-height: 180px;
+  min-height: 180px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+/* Continent chips: 9 entita', altezza fissa 90px. */
+#continent-chips {
+  height: 90px;
+  max-height: 90px;
+  min-height: 90px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+#type-chips::-webkit-scrollbar,
+#continent-chips::-webkit-scrollbar { width: 4px; }
+#type-chips::-webkit-scrollbar-track,
+#continent-chips::-webkit-scrollbar-track { background: transparent; }
+#type-chips::-webkit-scrollbar-thumb,
+#continent-chips::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
 
 /*
  * v6.67 CLS-fix: .chip (continenti, tipi) aveva transition:all che coinvolgeva
