@@ -2,6 +2,45 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.73.0] - 2026-04-18
+
+**Tema**: *Audit v4 Fase C Round 3 — mid-band Wikidata auto-accept (score 0.75-0.85)*
+
+Terzo round di consolidamento cross-reference. Fase A bootstrap aveva applicato solo match ≥0.85 auto. Score 0.75-0.85 (150 entità) sono ora applicati dopo filtro anti-duplicati.
+
+### Metodologia
+
+1. Filter Fase A matches per score ∈ [0.75, 0.85)
+2. Skip se entity attualmente ha QID in prod (non sovrascrive Round 2 primary)
+3. Skip se QID suggerito è già usato in prod (evita nuovi duplicate con entità esistenti)
+4. Apply patch bulk (144 fresh candidates)
+5. **Post-apply check**: verificare zero duplicate → trovate 3 collisioni INTERNE al batch (entità che convergono sullo stesso QID)
+6. Collision fix: libera QID sulla secondaria (id maggiore)
+
+### Collision trovate e risolte (3)
+
+| QID | Kept (id/nome) | Freed (id/nome) |
+|-----|----------------|-----------------|
+| Q105405 Cherokee | 218 ᏣᎳᎩ (Cherokee script) | 859 Tsalagi (Latin) |
+| Q210623 Taíno | 513 Taíno | 532 Taino (ASCII) |
+| Q51705 Muscogee | 219 Mvskoke (Creek native) | 726 Muscogee (English) |
+
+Pattern: tutte e 3 sono coppie native-script-vs-Latin-transliteration. AtlasPI in vari punti del seed ha creato sia il nome nativo che la versione inglese come entità separate — legitimate ma duplicate.
+
+### Stato
+
+| Metric | v6.72 | v6.73 |
+|--------|-------|-------|
+| Entità con QID | 497 | **638** (+141) |
+| Duplicate QID | 0 | 0 ✓ |
+| Coverage | 48.1% | **61.7%** |
+
+### Lezione metodologica
+
+Il check anti-duplicate deve essere fatto **dopo** apply (post-verify), non solo prima (pre-filter), perché patch batch può creare collisioni interne. Il pattern "apply + verify + collision fix" è ora baseline per Round successivi.
+
+---
+
 ## [v6.72.0] - 2026-04-18
 
 **Tema**: *Audit v4 Fase C Round 2 — duplicate QIDs cleanup (42 casi)*

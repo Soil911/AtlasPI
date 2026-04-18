@@ -1,0 +1,29 @@
+[
+  {
+    "resource": "entity",
+    "id": 859,
+    "field": "wikidata_qid",
+    "new_value": null,
+    "rationale": "Duplicate Q-ID resolution (post v6.73 Round 3): entity 859 Tsalagi (Latin) e entity 218 ᏣᎳᎩ (Cherokee script) puntano entrambi a Q105405 Cherokee. Primary = 218 (id minore, script nativo).",
+    "source": "v4/round3/collision_fix",
+    "audit_ref": "v4/round3/duplicate_resolve/Q105405"
+  },
+  {
+    "resource": "entity",
+    "id": 532,
+    "field": "wikidata_qid",
+    "new_value": null,
+    "rationale": "Duplicate Q-ID resolution: entity 532 Taino (ASCII) e entity 513 Taíno (accentato) puntano a Q210623. Primary = 513 (id minore).",
+    "source": "v4/round3/collision_fix",
+    "audit_ref": "v4/round3/duplicate_resolve/Q210623"
+  },
+  {
+    "resource": "entity",
+    "id": 726,
+    "field": "wikidata_qid",
+    "new_value": null,
+    "rationale": "Duplicate Q-ID resolution: entity 726 Muscogee (English) e entity 219 Mvskoke (Creek native) puntano a Q51705. Primary = 219 (id minore, nome nativo).",
+    "source": "v4/round3/collision_fix",
+    "audit_ref": "v4/round3/duplicate_resolve/Q51705"
+  }
+]
