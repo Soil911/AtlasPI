@@ -982,20 +982,21 @@ fieldset.filter-control {
      sono in ordine fisso Status/Region/Type/Overlay. */
 }
 
-/* Fieldset che contiene il checkbox-group Status — 3 checkbox statici, h 88px */
-.controls fieldset.filter-control:has(.checkbox-group) {
+/* v6.67 WIP-7: selettori basati su :has() erano eluse in fase early-paint
+   — browser riportava comunque shift sui fieldset. Uso ora un approccio
+   piu' robusto: tutte le .filter-control hanno min-height generica 88px,
+   e le due con chip-group (Region, Type) hanno min-height specifici via
+   > .chip-group. Applicato via universal fieldset + child selector. */
+.controls fieldset.filter-control {
   min-height: 88px;
 }
 
-/* Fieldset che contiene #continent-chips (90px fixed) — h finale 110px */
-.controls fieldset.filter-control:has(#continent-chips) {
-  min-height: 110px;
-}
-
-/* Fieldset che contiene #type-chips (180px fixed) — h finale 200px */
-.controls fieldset.filter-control:has(#type-chips) {
-  min-height: 200px;
-}
+/* Fieldset che contiene una chip-group non e' piu' un case specifico —
+   #continent-chips e #type-chips hanno height fissa propria (90px / 180px).
+   Il loro fieldset parent scalera' automaticamente con la chip-group
+   + legend (~20px) + margin. Totale:
+   - Region: 20 + 90 = 110px (quindi min-height fieldset irrilevante <= 110)
+   - Type: 20 + 180 = 200px (quindi fieldset arrivera' naturalmente a 200) */
 
 /* overlay-control contiene 2 checkbox + 2 hint + 2 legend hidden. h finale 243px */
 fieldset.filter-control.overlay-control {
