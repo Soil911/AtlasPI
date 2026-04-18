@@ -148,10 +148,22 @@ body {
   padding: 14px;
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
-  /* v6.67 CLS-fix: isola il layout dell'intera sidebar-controls dal resto.
-     Anche se un chip-group interno cresce, l'impact e' limitato a .controls
-     e non invalida il layout di #map-container / .detail-panel adiacenti. */
-  contain: layout style;
+  /* v6.67 WIP-10: contain: strict isola completamente il layout +
+     paint del .controls dal resto. Le variazioni interne NON
+     propagano CLS al parent. */
+  contain: strict;
+  /* height fissa per evitare che la somma dei children alteri il size
+     del container. Misurato 1243px live su desktop. Su mobile ci pensa
+     il media query sotto. */
+  height: 1243px;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    /* Mobile: sidebar overlay a schermo intero, altezza piu' bassa */
+    height: auto;
+    min-height: 600px;
+  }
 }
 
 .search-box {
@@ -188,7 +200,15 @@ body {
 
 .search-box button:hover { background: var(--accent-light); }
 
-.year-control { margin-bottom: 12px; }
+.year-control {
+  margin-bottom: 12px;
+  /* v6.67 WIP-10: .year-control contiene slider + input + era-chips (9 btn).
+     Misurato live 401px finale. Fisso height per evitare che i18n o era-chips
+     innescano reflow alle fieldset sottostanti. */
+  height: 401px;
+  overflow: hidden;
+  contain: layout;
+}
 
 .year-control > label { font-size: 0.82em; color: var(--text-muted); display: block; margin-bottom: 4px; }
 
