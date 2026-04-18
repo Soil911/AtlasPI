@@ -53,12 +53,26 @@ def _get_continent(lat: float | None, lon: float | None) -> str:
     Vanuatu, Fiji), Micronesia (Guam, Marshall), e Polinesia orientale
     (Easter Island, Hawaii, French Polynesia). Check fatto PRIMA di Asia
     per evitare che PNG/Indonesia east vengano assegnate ad Asia.
+
+    v6.67 fix (audit v2 #04 HIGH): Middle East lon range esteso da 50 a
+    63 per includere Iran (Persepolis 52.89°E, Shiraz 52.53°E,
+    Isfahan 51.67°E). Prima del fix, entità come l'Impero Achemenide
+    (id=27) — capitale Persepolis — cadevano fuori dal range Middle East
+    e matchavano invece il fallback Africa, che è geograficamente e
+    storicamente sbagliato (>95% del territorio achemenide era in Asia).
     """
     if lat is None or lon is None:
         return "Unknown"
 
-    # Middle East special case (politicamente Asia ma spesso trattato a parte)
-    if 25 <= lat <= 42 and 25 <= lon <= 50:
+    # Middle East special case (politicamente Asia ma spesso trattato a parte).
+    # Lat 25-42 copre da Arabia Saudita nord (Riyadh 24.7°N) a Turchia
+    # (Ankara 39.9°N). Yemen/Oman a lat<25 cadono nel fallback Asia (corretto
+    # da v6.67 tramite check Asia più sotto).
+    # Lon 25-63 copre da Istanbul (28.97°E) a Iran orientale (Mashhad 59.6°E).
+    # v6.67: lon range esteso da 50 a 63 per includere l'Iran (Persepolis
+    # 52.89°E, Tehran 51.39°E). Prima del fix Persepolis cadeva nel
+    # fallback Africa — geograficamente sbagliato.
+    if 25 <= lat <= 42 and 25 <= lon <= 63:
         return "Middle East"
 
     # v6.63: Oceania (Melanesia + Micronesia + Polynesia) — CHECKED FIRST

@@ -2,6 +2,71 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.67.0] - 2026-04-18
+
+**Tema**: *CLS zero + continent Iran fix + ETHICS-009 + capital anachronism batch*
+
+Chiusura del ciclo audit v2 (5 agenti QA indipendenti sulla VPS live, poi 4 fix agent paralleli). Questa release consolida i fix che sono rimasti fuori dal batch v6.66.0.
+
+### 1. CLS 0.82 → 0.00 su /app (fix Agent γ)
+
+Lighthouse sul `/app` live mostrava **Cumulative Layout Shift = 0.82** (8× la soglia Bad di 0.1). Fix root cause su 8 elementi in sequenza via 11 commit WIP:
+
+| # | Problema | CLS | Fix |
+|---|---------|-----|-----|
+| 1 | `.leaflet-tile` con `transition: all` + `fade-anim opacity` | **0.577** | `transition:none !important; opacity:1 !important` su `.leaflet-tile` |
+| 2 | `#type-chips` cresceva 25→752px (29 chip streamati) | ~0.29 | Fixed `height:180px; overflow-y:auto` |
+| 3 | `#continent-chips` stesso pattern (9 chip) | ~0.07 | Fixed `height:90px; overflow-y:auto` |
+| 4 | `.data-banner` shrink 194→82px al primo i18n rewrite | ~0.09 | `height:82px; overflow:hidden` |
+| 5 | Shimmer su skeleton-card usava `background-position` non compositable | ~0.003 | Riscritto con `::after` + `transform:translateX` (GPU) |
+| 6 | `.chip/.era-chip` con `transition:all` su border-color | ~0.04 | Bordo colorato come `::after`, transition solo su transform/opacity |
+| 7 | Fieldsets oscillavano 60→200px durante render | ~0.04 | `min-height` per-position 88/110/200/243 + `contain:layout` |
+| 8 | Map container paint-as-CLS | ~0.06 | `contain:strict` su `#map/#map-container` + `.leaflet-container` |
+
+Verificato con Chrome DevTools `performance_start_trace`: CLS **0.00** su prod live.
+
+### 2. Continent Iran fix (audit v2 #04 HIGH)
+
+Bug: entity id=27 Achaemenidi (capital Persepolis 29.94°N 52.89°E) esponeva `continent=Africa`. Root cause in `src/api/routes/entities.py::_get_continent()`: range Middle East era `25<=lon<=50`, escludeva Iran (lon 45-65°E).
+
+Fix: esteso range a `25<=lon<=63` — copre da Istanbul (28.97°E) a Iran orientale (Mashhad 59.61°E). 11 test in `tests/test_v667_continent_iran.py` coprono Persepolis/Tehran/Isfahan/Mashhad + regressione su Istanbul/Rome/Delhi/Kabul/Cairo.
+
+### 3. ETHICS-009 — categorie politiche coloniali imposte su polities indigene
+
+Nuovo record `docs/ethics/ETHICS-009-categorie-politiche-colon-imposte-su-polities-indigene.md` che documenta il problema rilevato dall'audit su entity id=55 Aotearoa:
+- `capital="Kororareka"` per 1250-1840 era **fisicamente impossibile** (insediamento balenieri europeo fondato ~1810s)
+- `entity_type="confederation"` proiettava categoria politica europea su società Māori pre-coloniale organizzata in iwi/hapū decentralizzati
+
+Applicato in v6.67: estensione `ethical_notes` di entity 55 con spiegazione completa + riferimento al record. Split strutturale rimandato a v6.68+ per evitare breaking change immediato.
+
+### 4. Data patches autofixable (audit v2 BLOCCO D — già applicati live in v6.66)
+
+20 patch applicati via `apply_data_patch.py`:
+- **7 ruler FK**: Alexander→Macedonia, Moctezuma→Aztec, Saladin→Ayyubid, **Osceola→Seminole** (era Carolina, errore grosso), **Ranjit Singh→Sikh Empire** (era Polonia), Suryavarman II + Jayavarman VII→Khmer
+- **Cahokia** year_start `600 → 1050` (450y off, Pauketat 2009)
+- **Teotihuacan** `-200 → -100`
+- **URSS** confidence `0.5 → 0.85`
+- **Kanuri** ISO 639-1 `kr → kau` (ISO 639-3)
+- **Entity 602** name_original clean (leading space + apostrofo)
+- **7 capital anachronism notes**: Assiria, Kush, Seleucidi, Kanem-Bornu, Lombardi, Dai Viet, Austria-Hungary
+
+### 5. Pattern sistemici identificati (deferred, non fixati)
+
+Dall'audit v2 resta da decidere:
+- **Sites 100% entity_id=NULL** (1249 siti) — pipeline bug
+- **Cities 84% entity_id=NULL** (92 città)
+- **45 entities** con script/lang mismatch (viola CLAUDE.md ETHICS-001)
+- **Duplicate u Rwanda/U Rwanda** (id 157/558)
+- **8 chain** con link order errato
+- **Entity 600** name_original khmer corrotto (era Sri Lankan)
+- **4 entità mancanti**: Premier Empire français, Afsharid, Virreinato del Peru, Regnum Francorum Carolingian
+- **Split Babilonia/Chola** (bundling di polities discrete)
+- **Aotearoa split strutturale** (già aperto ETHICS-009)
+
+Tutti tracciati in `research_output/audit_v2/CONSOLIDATED_PLAN.md`.
+
+---
+
 ## [v6.66.0] - 2026-04-18
 
 **Tema**: *API audit fix — filtri mancanti, schema coerenti, envelope errori, HEAD, /metrics protection*
