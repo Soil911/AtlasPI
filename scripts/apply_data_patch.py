@@ -136,11 +136,29 @@ PATCHABLE_FIELDS = {
 
 
 def _audit_log(entries: list[str]):
-    """Append audit entries to the log file."""
-    AUDIT_LOG.parent.mkdir(parents=True, exist_ok=True)
-    with AUDIT_LOG.open("a", encoding="utf-8") as f:
-        for entry in entries:
-            f.write(entry + "\n")
+    """Append audit entries to the log file.
+
+    v6.57.1 fix: in prod (Docker), /app is root-owned while app runs as
+    atlaspi user. Cadere gracefully to /tmp if /app not writable.
+    """
+    target = AUDIT_LOG
+    try:
+        target.parent.mkdir(parents=True, exist_ok=True)
+        with target.open("a", encoding="utf-8") as f:
+            for entry in entries:
+                f.write(entry + "\n")
+    except (PermissionError, OSError) as e:
+        # Fallback to /tmp (container-writable)
+        import tempfile
+        fallback = Path(tempfile.gettempdir()) / "atlaspi_data_patch_audit.log"
+        try:
+            with fallback.open("a", encoding="utf-8") as f:
+                for entry in entries:
+                    f.write(entry + "\n")
+            logger.warning("Audit log %s not writable (%s); written to %s", target, e, fallback)
+        except Exception:
+            # Last resort: log warn + continue
+            logger.warning("Audit log write failed entirely: %s", e)
 
 
 def apply_patches(patches: list[dict], dry_run: bool = False) -> dict:

@@ -70,17 +70,26 @@ def fix_status_coherence(dry_run: bool = False) -> dict:
 
         if not dry_run:
             db.commit()
-            # Audit log append
+            # Audit log — with graceful fallback to /tmp in prod (Docker)
             from pathlib import Path
-            audit = Path(__file__).resolve().parent.parent / "data_patch_audit.log"
-            with audit.open("a", encoding="utf-8") as f:
-                now = datetime.datetime.now(datetime.timezone.utc).isoformat()
-                f.write(
-                    f"{now} | bulk-status-coherence | "
-                    f"entities_fixed={stats['entities_fixed']}, "
-                    f"events_fixed={stats['events_fixed']} | "
-                    f"applied_by: cli\n"
-                )
+            import tempfile
+            primary = Path(__file__).resolve().parent.parent / "data_patch_audit.log"
+            targets = [primary, Path(tempfile.gettempdir()) / "atlaspi_data_patch_audit.log"]
+            now = datetime.datetime.now(datetime.timezone.utc).isoformat()
+            line = (
+                f"{now} | bulk-status-coherence | "
+                f"entities_fixed={stats['entities_fixed']}, "
+                f"events_fixed={stats['events_fixed']} | "
+                f"applied_by: cli\n"
+            )
+            for t in targets:
+                try:
+                    t.parent.mkdir(parents=True, exist_ok=True)
+                    with t.open("a", encoding="utf-8") as f:
+                        f.write(line)
+                    break
+                except (PermissionError, OSError):
+                    continue
 
         return stats
     except Exception:
