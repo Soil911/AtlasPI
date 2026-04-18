@@ -2131,6 +2131,14 @@ function handleKeyboard(e) {
       showKeyboardHelp();
       break;
     }
+    // v6.57: audit report 03 flagged 'f' for fullscreen as documented but not wired.
+    case 'f':
+    case 'F': {
+      e.preventDefault();
+      const container = document.getElementById('map-container');
+      if (container) container.classList.toggle('fullscreen');
+      break;
+    }
   }
 }
 

@@ -411,7 +411,7 @@ body {
 .onboarding-actions button:hover { border-color: var(--accent); color: var(--text); }
 .onboarding-actions button.primary:hover { opacity: 0.9; color: white; }
 
-/* v6.51: sidebar collapse toggle */
+/* v6.51+v6.57: sidebar collapse toggle — ALWAYS visible (even when app collapsed) */
 .sidebar-toggle {
   padding: 5px 10px;
   background: transparent;
@@ -421,6 +421,9 @@ body {
   font-size: 0.85em;
   cursor: pointer;
   transition: all 0.15s;
+  /* v6.57 audit fix: defensive — ensure toggle stays visible after collapse */
+  display: inline-flex !important;
+  visibility: visible !important;
 }
 .sidebar-toggle:hover {
   border-color: var(--accent);

@@ -2,6 +2,47 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.57.0] - 2026-04-18
+
+**Tema**: *Fix batch #1 dal super-audit — historical accuracy, status coherence, UI bugs*
+
+### 3 report audit consumati (su 5)
+
+Dei 5 super-agent launched, 5 completati. Report in `research_output/audit/`:
+- `01_data_quality_ethics.md` (232 issues: 27 HIGH + 69 MED + 136 LOW)
+- `02_geo_crosslinks.md` (18 ruler links + 4 antimeridian + 34 retag)
+- `03_ui_ux_report.md` (3 HIGH UI bugs + MED issues)
+- `04_external_sources.md` (Top 5 sources, 5-phase roadmap)
+- `05_historical_accuracy.md` (1 HIGH + 7 MED)
+
+### Fix applicati in v6.57
+
+**Data** (via `scripts/apply_data_patch.py`):
+1. **Aksum year_start** -400 → 100 (audit #05 HIGH). Era confuso con predecessore D'mt. Fonte: Phillipson 2012, Britannica, MET.
+
+**Data bulk** (via `scripts/fix_status_coherence.py`):
+2. **58 entities + 2 events** con `confidence_score < 0.5` AND `status='confirmed'` → `status='uncertain'`. Coherence fix (audit #01 MED 55 flagged, 58 trovati post-ingest UNESCO).
+
+**UI code** (audit #03 HIGH):
+3. **Keyboard shortcut `f`/`F` per fullscreen** — documentato in footer ma non wired. Aggiunto a `handleKeyboard()`.
+4. **Sidebar toggle visibility** — defensive CSS `display: inline-flex !important; visibility: visible !important;` per evitare dead-end dopo collapse.
+
+### Fix rimandati (v6.58+)
+
+- 15 ETHICS native-script name_variants (serve script `add_name_variants.py` — richiede relation logic non supportata da `apply_data_patch.py`)
+- 18 rulers entity_id linking (serve script crossref)
+- 34 continent retagging (continent è derivato runtime da coord, non stored — richiede decisione architetturale)
+- 4 antimeridian Polynesian boundaries (serve aggiornare `fix_antimeridian_and_wrong_polygons.py` con i 4 nuovi pattern)
+- EN translation leak fix (~40% strings in italian)
+- URL param race condition (year=117 intermittent 0 entities)
+- Search silent-fail per autocomplete click
+
+### Audit run script
+
+`scripts/fix_status_coherence.py` — bulk SQL update via SQLAlchemy. Dry-run mode. Audit log append-only (`data_patch_audit.log`).
+
+---
+
 ## [v6.56.0] - 2026-04-18
 
 **Tema**: *UNESCO World Heritage full expansion — 40 → 1248 sites*
