@@ -309,41 +309,103 @@ function restoreUrlState() {
 // ─── API ────────────────────────────────────────────────────────
 
 async function loadEntities() {
-  // NOTE: v6.41 aggiunto endpoint /v1/entities/light (no boundary_geojson)
-  // che sarebbe ~200KB vs 17.8MB della paginata qui sotto. Per usarlo serve
-  // ristrutturazione del rendering map (attualmente iteri su allEntities e
-  // mostri polygon inline — light response non ha boundary). Rimasto v6.43
-  // come refactor.
+  // v6.68: first-paint ottimizzato via /v1/entities/light.
+  //
+  // Strategia progressive:
+  //   1) Phase 1 (fast): /v1/entities/light scarica 1034 entità in ~500ms
+  //      con metadata (id, name, year, capital, type, continent, confidence,
+  //      status) ma SENZA boundary_geojson. Permette first render immediato:
+  //      entity count, search, filtri, timeline, list results funzionano
+  //      subito. Capital markers renderizzabili.
+  //   2) Phase 2 (background): paginata /v1/entities?limit=100 riempie
+  //      progressivamente `boundary_geojson` nelle entità già presenti.
+  //      Ogni pagina arriva → re-render mappa polygon per quelle entità.
+  //
+  // Prima di v6.68 l'utente aspettava 15s prima di vedere qualcosa.
+  // Ora search/filter/list sono operativi entro ~500ms, mappa polygon
+  // si completa progressivamente in background.
   const loadBar = document.getElementById('loading-bar');
   try {
     allEntities = [];
-    let offset = 0;
-    const limit = 100;
-    let total = Infinity;
     if (loadBar) { loadBar.style.width = '5%'; loadBar.style.opacity = '1'; }
 
-    while (offset < total) {
-      const res = await fetch(`${API}/v1/entities?limit=${limit}&offset=${offset}`, { cache: 'no-cache' });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
-      total = data.count;
-      allEntities = allEntities.concat(data.entities);
-      offset += limit;
-      if (loadBar && total > 0) {
-        loadBar.style.width = `${Math.min(95, Math.round((allEntities.length / total) * 100))}%`;
-      }
-      if (data.entities.length === 0) break;
-    }
-
-    if (loadBar) { loadBar.style.width = '100%'; setTimeout(() => { loadBar.style.opacity = '0'; }, 300); }
+    // ─── Phase 1: fast metadata load via /v1/entities/light ──────
+    const lightRes = await fetch(`${API}/v1/entities/light?limit=2000`, { cache: 'no-cache' });
+    if (!lightRes.ok) throw new Error(`HTTP ${lightRes.status}`);
+    const lightData = await lightRes.json();
+    allEntities = (lightData.entities || []).map(e => ({ ...e, _has_boundary: false }));
+    if (loadBar) loadBar.style.width = '40%';
     document.getElementById('entity-count').textContent = `${allEntities.length} ${t('entities')}`;
-    applyFilters();
+    applyFilters(); // first render: markers + search + filters operativi
+
+    // ─── Phase 2: progressive boundary load in background ──────
+    // Non bloccante: ritorna subito, il caricamento avviene in background.
+    loadEntityBoundariesInBackground(loadBar);
   } catch (err) {
     if (loadBar) { loadBar.style.width = '100%'; loadBar.style.background = 'var(--disputed)'; }
     showError(t('error_connection') || 'Impossibile caricare i dati.');
     document.getElementById('results-list').innerHTML =
       '<p class="placeholder">Errore di connessione</p>';
   }
+}
+
+async function loadEntityBoundariesInBackground(loadBar) {
+  // v6.68: carica progressivamente boundary_geojson via /v1/entities paginato.
+  // Merge in place in allEntities (che contiene già metadata via light).
+  const byId = new Map();
+  allEntities.forEach(e => byId.set(e.id, e));
+
+  let offset = 0;
+  const limit = 100;
+  let total = Infinity;
+
+  while (offset < total) {
+    try {
+      const res = await fetch(`${API}/v1/entities?limit=${limit}&offset=${offset}`, { cache: 'no-cache' });
+      if (!res.ok) break;
+      const data = await res.json();
+      total = data.total ?? data.count ?? 0;
+      const batch = data.entities || [];
+      if (batch.length === 0) break;
+
+      batch.forEach(full => {
+        const existing = byId.get(full.id);
+        if (existing) {
+          existing.boundary_geojson = full.boundary_geojson;
+          existing.name_variants = full.name_variants;
+          existing.sources = full.sources;
+          existing.ethical_notes = full.ethical_notes;
+          existing.territory_changes = full.territory_changes;
+          existing._has_boundary = true;
+        } else {
+          // edge case: entità presente in /v1/entities ma non in /light
+          const withFlag = { ...full, _has_boundary: true };
+          byId.set(full.id, withFlag);
+          allEntities.push(withFlag);
+        }
+      });
+
+      offset += limit;
+      if (loadBar && total > 0) {
+        const pct = 40 + Math.round((offset / total) * 55);
+        loadBar.style.width = `${Math.min(95, pct)}%`;
+      }
+
+      // Re-render mappa incrementale: ogni ~200 entità o a fine batch
+      if (offset % 200 === 0 || offset >= total) {
+        applyFilters();
+      }
+    } catch (e) {
+      // Network error: interrompi senza mostrare errore bloccante
+      break;
+    }
+  }
+
+  if (loadBar) {
+    loadBar.style.width = '100%';
+    setTimeout(() => { loadBar.style.opacity = '0'; }, 300);
+  }
+  applyFilters(); // final render with all boundaries
 }
 
 async function loadDetail(id) {
@@ -473,7 +535,12 @@ async function loadTradeRoutes() {
 }
 
 function extractRouteCoords(route) {
-  // Builds an ordered list of [lat, lon] points from start → waypoints → end
+  // v6.68: allineato al contratto backend v6.66+ (list endpoint expone
+  // geometry_simplified + start_lat/lon + end_lat/lon direttamente).
+  // Ordine di preferenza:
+  //   1) geometry_simplified: GeoJSON LineString ({type, coordinates: [[lon,lat],...]})
+  //   2) start_lat/start_lon + end_lat/end_lon (fallback a 2 punti)
+  //   3) legacy fields start/waypoints/end/path (backward compat)
   const pts = [];
   const pushPoint = (p) => {
     if (!p) return;
@@ -489,12 +556,27 @@ function extractRouteCoords(route) {
     }
   };
 
+  // 1) geometry_simplified (preferito — più di 2 punti, utile per rotte curve)
+  if (route.geometry_simplified && Array.isArray(route.geometry_simplified.coordinates)) {
+    route.geometry_simplified.coordinates.forEach(p => pushPoint(p));
+    if (pts.length >= 2) return pts;
+  }
+
+  // 2) start_lat/start_lon + end_lat/end_lon (contratto v6.66+ list endpoint)
+  if (typeof route.start_lat === 'number' && typeof route.start_lon === 'number') {
+    pts.push([route.start_lat, route.start_lon]);
+  }
+  if (typeof route.end_lat === 'number' && typeof route.end_lon === 'number') {
+    pts.push([route.end_lat, route.end_lon]);
+  }
+  if (pts.length >= 2) return pts;
+
+  // 3) Legacy fallback (detail endpoint o backend pre-v6.66)
   pushPoint(route.start || route.start_point || route.origin);
   const waypoints = route.waypoints || route.intermediate_points || [];
   if (Array.isArray(waypoints)) waypoints.forEach(pushPoint);
   pushPoint(route.end || route.end_point || route.destination);
 
-  // Fallback: some payloads may provide a precomputed `path` as [[lon,lat],...]
   if (!pts.length && Array.isArray(route.path)) {
     route.path.forEach(p => pushPoint(p));
   }
@@ -502,8 +584,10 @@ function extractRouteCoords(route) {
 }
 
 function routeActiveInYear(route, year) {
-  const s = route.active_period_start;
-  const e = route.active_period_end;
+  // v6.68: allineato a contratto backend (start_year/end_year). Mantiene
+  // fallback a active_period_start/end per backward compat.
+  const s = route.start_year ?? route.active_period_start;
+  const e = route.end_year ?? route.active_period_end;
   if (typeof s === 'number' && s > year) return false;
   if (typeof e === 'number' && e < year) return false;
   return true;
@@ -570,15 +654,17 @@ function renderTradeRoutes() {
 }
 
 function tradeRouteTooltip(route) {
-  const name = esc(route.name || (lang === 'it' ? 'Rotta senza nome' : 'Unnamed route'));
-  const s = route.active_period_start;
-  const e = route.active_period_end;
+  // v6.68: allineato a contratto backend (name_original, start_year/end_year, commodities)
+  const name = esc(route.name_original || route.name || (lang === 'it' ? 'Rotta senza nome' : 'Unnamed route'));
+  const s = route.start_year ?? route.active_period_start;
+  const e = route.end_year ?? route.active_period_end;
   const period = (s != null || e != null)
     ? `${s != null ? fmtY(s) : '?'}–${e != null ? fmtY(e) : (lang === 'it' ? 'oggi' : 'today')}`
     : '';
-  const commodities = Array.isArray(route.commodities_primary)
-    ? route.commodities_primary.slice(0, 4).map(esc).join(', ')
-    : (route.commodities_primary ? esc(String(route.commodities_primary)) : '');
+  const rawCommodities = route.commodities ?? route.commodities_primary;
+  const commodities = Array.isArray(rawCommodities)
+    ? rawCommodities.slice(0, 4).map(esc).join(', ')
+    : (rawCommodities ? esc(String(rawCommodities)) : '');
 
   return `
     <div style="min-width:180px">
@@ -589,14 +675,16 @@ function tradeRouteTooltip(route) {
 }
 
 function tradeRoutePopup(route) {
-  const name = esc(route.name || (lang === 'it' ? 'Rotta senza nome' : 'Unnamed route'));
+  // v6.68: allineato a contratto backend
+  const name = esc(route.name_original || route.name || (lang === 'it' ? 'Rotta senza nome' : 'Unnamed route'));
   const type = (route.route_type || route.type || '—');
-  const s = route.active_period_start;
-  const e = route.active_period_end;
+  const s = route.start_year ?? route.active_period_start;
+  const e = route.end_year ?? route.active_period_end;
   const period = `${s != null ? fmtY(s) : '?'} – ${e != null ? fmtY(e) : (lang === 'it' ? 'oggi' : 'today')}`;
-  const commodities = Array.isArray(route.commodities_primary)
-    ? route.commodities_primary.map(esc).join(', ')
-    : (route.commodities_primary ? esc(String(route.commodities_primary)) : '—');
+  const rawCommodities = route.commodities ?? route.commodities_primary;
+  const commodities = Array.isArray(rawCommodities)
+    ? rawCommodities.map(esc).join(', ')
+    : (rawCommodities ? esc(String(rawCommodities)) : '—');
   const notes = route.ethical_notes ? esc(route.ethical_notes) : '';
   const conf = (typeof route.confidence_score === 'number')
     ? ` · ${Math.round(route.confidence_score * 100)}%` : '';

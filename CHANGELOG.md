@@ -2,6 +2,63 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.68.0] - 2026-04-18
+
+**Tema**: *Audit v3 close-out — trade routes live + first-paint 30× + duplicate DOM + CSP/favicon polish*
+
+Un secondo pass QA sulla VPS live v6.67 ha rilevato 5 bug residui. Fixati tutti in questa release.
+
+### P1 — Trade routes finalmente disegnate (bug contract backend/frontend)
+
+Il Fix Agent α in v6.66 aveva aggiunto `geometry_simplified`, `start_lat/lon`, `end_lat/lon`, `start_year/end_year` al list endpoint `/v1/routes`. Ma il Fix Agent β non ha toccato il consumer in `static/app.js`, che continuava a cercare i campi obsoleti `waypoints`, `path`, `active_period_start/end`. Risultato: il toggle rotte accendeva la legenda ma non disegnava nessuna `.trade-route` sulla mappa.
+
+**Fix**: riscritto `extractRouteCoords()`, `routeActiveInYear()`, `tradeRouteTooltip()`, `tradeRoutePopup()` per leggere il contratto backend v6.66+:
+- `geometry_simplified.coordinates` preferito (GeoJSON LineString)
+- Fallback `start_lat/start_lon + end_lat/end_lon` (2 punti)
+- Fallback finale legacy `start/waypoints/end/path` (detail endpoint o pre-v6.66)
+- `start_year/end_year` con fallback a `active_period_start/end`
+- `commodities` con fallback a `commodities_primary`
+
+Lezione metodologica: il pattern "agent paralleli su aree diverse" richiede un E2E round-trip check al termine del ciclo.
+
+### P2 — First-paint 30× più veloce (/v1/entities/light)
+
+Prima: `loadEntities()` scaricava `/v1/entities?limit=100` in 11 pagine successive → ~15s prima che qualcosa apparisse. Il commento nel file lo ammetteva già come tech debt dal v6.41.
+
+**Fix**: progressive loading a 2 fasi.
+1. **Phase 1 (fast)**: `/v1/entities/light?limit=2000` in ~500ms, 275KB, tutti i 1034 metadata (no boundary_geojson). First render immediato: entity count, search, filtri, timeline, list operativi.
+2. **Phase 2 (background)**: paginata `/v1/entities?limit=100` riempie progressivamente `boundary_geojson` nelle entità già presenti. Re-render incrementale ogni 200 entità.
+
+Risultato: UX da "15s pagina vuota" a "~500ms funzionalità base + mappa polygon completa progressivamente".
+
+### P2 — Duplicate DOM id (HTML spec violation)
+
+Due elementi `<button id="sidebar-toggle">` in `static/index.html` (riga 43 header + riga 240 mobile) violavano la HTML5 uniqueness rule. `document.getElementById()` ritornava solo il primo → mobile toggle silenziosamente dormant.
+
+**Fix**: rinominato il mobile toggle a `id="sidebar-toggle-mobile"` + class `sidebar-toggle-mobile`. L'handler `static/js/sidebar-toggle.js` continua a trovare l'header toggle (id univoco ora).
+
+### P3 — CSP cartodb wildcard sintassi errata
+
+Il CSP definito in `src/middleware/security.py:49` conteneva `https://cartodb-basemaps-*.global.ssl.fastly.net`. Wildcard nel mezzo del hostname NON è valido per CSP — browser lo rifiuta e loggano violation a ogni tile CARTO.
+
+**Fix**: sostituito con lista esplicita a/b/c/d:
+```
+https://cartodb-basemaps-a.global.ssl.fastly.net
+https://cartodb-basemaps-b.global.ssl.fastly.net
+https://cartodb-basemaps-c.global.ssl.fastly.net
+https://cartodb-basemaps-d.global.ssl.fastly.net
+```
+
+### P3 — /favicon.ico 404
+
+Browser richiedono `/favicon.ico` al root prima di leggere HTML (stub behavior pre-HTML5). AtlasPI non aveva il file né una route → 404 su ogni pagina + icona mancante nel tab browser.
+
+**Fix**:
+- `static/favicon.ico` (32×32 ICO, globe stylized) + `favicon-16.png` + `favicon-32.png` generati con PIL
+- Route `@app.get("/favicon.ico")` + PNG variants in `src/main.py`
+
+---
+
 ## [v6.67.0] - 2026-04-18
 
 **Tema**: *CLS zero + continent Iran fix + ETHICS-009 + capital anachronism batch*

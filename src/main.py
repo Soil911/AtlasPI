@@ -500,6 +500,31 @@ async def serve_og_image():
     )
 
 
+@app.get("/favicon.ico", include_in_schema=False)
+async def serve_favicon():
+    """v6.68: favicon.ico al root (audit v3 P3 fix).
+
+    Prima della v6.68 il browser richiedeva /favicon.ico e otteneva 404,
+    sporcando i log e il tab-bar di Chrome/Firefox (nessuna icona in tab).
+    L'index.html aveva gia' un favicon inline SVG (data: URI) ma i browser
+    chiedono comunque /favicon.ico al root prima di leggere l'HTML.
+    """
+    return FileResponse(
+        STATIC_DIR / "favicon.ico",
+        media_type="image/x-icon",
+    )
+
+
+@app.get("/favicon-16.png", include_in_schema=False)
+async def serve_favicon_16():
+    return FileResponse(STATIC_DIR / "favicon-16.png", media_type="image/png")
+
+
+@app.get("/favicon-32.png", include_in_schema=False)
+async def serve_favicon_32():
+    return FileResponse(STATIC_DIR / "favicon-32.png", media_type="image/png")
+
+
 @app.get("/v1/openapi.json", include_in_schema=False)
 async def openapi_override():
     """Override OpenAPI spec con server URL per produzione."""

@@ -46,7 +46,13 @@ CSP_REPORT_ONLY = (
     "img-src 'self' data: blob: "
     "https://*.tile.openstreetmap.org "
     "https://*.openstreetmap.fr "
-    "https://cartodb-basemaps-*.global.ssl.fastly.net "
+    # v6.68 fix: CSP wildcard non è valido nel mezzo del hostname
+    # (`cartodb-basemaps-*.global.ssl.fastly.net` browser-rejected).
+    # Enumero esplicitamente i 4 subdomain a/b/c/d usati da CARTO DB.
+    "https://cartodb-basemaps-a.global.ssl.fastly.net "
+    "https://cartodb-basemaps-b.global.ssl.fastly.net "
+    "https://cartodb-basemaps-c.global.ssl.fastly.net "
+    "https://cartodb-basemaps-d.global.ssl.fastly.net "
     "https://*.basemaps.cartocdn.com "
     "https://server.arcgisonline.com; "
     "font-src 'self' data:; "
