@@ -92,6 +92,47 @@
       onb_skip: 'Skip',
       onb_start: 'Inizia!',
       claude_prompt_copied: 'Prompt copiato negli appunti! Incollalo in Claude.',
+      // v6.62: header / navigation / controls
+      theme_toggle_title: 'Cambia tema',
+      theme_toggle_aria: 'Cambia tema chiaro/scuro',
+      lang_toggle_title: 'Switch language',
+      lang_toggle_aria: 'Cambia lingua',
+      nav_search_title: 'Ricerca avanzata nel dataset',
+      nav_timeline_title: 'Timeline interattiva',
+      nav_compare_title: 'Confronta entità storiche',
+      nav_embed_title: 'Versione embed per iframe',
+      nav_apidocs_title: 'Documentazione API interattiva',
+      nav_openapi_title: 'Documentazione API OpenAPI',
+      sidebar_toggle_title: 'Mostra/nascondi pannello filtri',
+      sidebar_toggle_aria: 'Toggle sidebar',
+      ask_claude_title: 'Chiedi a Claude usando i dati di AtlasPI',
+      ask_claude_aria: 'Apri Claude con prompt precompilato',
+      // search
+      search_aria: 'Cerca entità per nome',
+      search_btn_title: 'Cerca',
+      search_btn_aria: 'Avvia ricerca',
+      autocomplete_aria: 'Suggerimenti ricerca',
+      // year control
+      year_input_aria: 'Inserisci anno esatto',
+      year_go_aria: 'Applica anno',
+      year_slider_aria: 'Seleziona anno storico',
+      play_btn_title: 'Riproduci timeline',
+      play_btn_aria: 'Avvia playback storico',
+      play_speed_aria: 'Velocità playback',
+      era_chips_aria: "Salta a un'epoca storica",
+      continent_chips_aria: 'Filtra per continente',
+      type_chips_aria: "Filtra per tipo di entità",
+      sort_aria: 'Ordina risultati',
+      // detail panel
+      close_detail_aria: 'Chiudi pannello dettagli',
+      // map
+      events_overlay_title: 'Mostra eventi storici',
+      map_scroll_hint: 'Clicca sulla mappa per abilitare lo zoom con la rotella',
+      map_fullscreen_title: 'Schermo intero',
+      map_fullscreen_aria: 'Mappa a schermo intero',
+      map_fit_title: 'Mostra tutte le entità',
+      map_fit_aria: 'Zoom su tutte le entità',
+      reset_filters_aria: 'Azzera tutti i filtri',
     },
     en: {
       search: 'Search by name, including variants...',
@@ -169,6 +210,47 @@
       onb_skip: 'Skip',
       onb_start: "Let's go!",
       claude_prompt_copied: 'Prompt copied to clipboard! Paste it into Claude.',
+      // v6.62: header / navigation / controls (EN)
+      theme_toggle_title: 'Switch theme',
+      theme_toggle_aria: 'Toggle light/dark theme',
+      lang_toggle_title: 'Switch language',
+      lang_toggle_aria: 'Switch language',
+      nav_search_title: 'Advanced dataset search',
+      nav_timeline_title: 'Interactive timeline',
+      nav_compare_title: 'Compare historical entities',
+      nav_embed_title: 'Embed version for iframe',
+      nav_apidocs_title: 'Interactive API documentation',
+      nav_openapi_title: 'OpenAPI documentation',
+      sidebar_toggle_title: 'Show/hide filters panel',
+      sidebar_toggle_aria: 'Toggle sidebar',
+      ask_claude_title: 'Ask Claude using AtlasPI data',
+      ask_claude_aria: 'Open Claude with preset prompt',
+      // search
+      search_aria: 'Search entities by name',
+      search_btn_title: 'Search',
+      search_btn_aria: 'Start search',
+      autocomplete_aria: 'Search suggestions',
+      // year control
+      year_input_aria: 'Enter exact year',
+      year_go_aria: 'Apply year',
+      year_slider_aria: 'Select historical year',
+      play_btn_title: 'Play timeline',
+      play_btn_aria: 'Start historical playback',
+      play_speed_aria: 'Playback speed',
+      era_chips_aria: 'Jump to a historical era',
+      continent_chips_aria: 'Filter by continent',
+      type_chips_aria: 'Filter by entity type',
+      sort_aria: 'Sort results',
+      // detail panel
+      close_detail_aria: 'Close detail panel',
+      // map
+      events_overlay_title: 'Show historical events',
+      map_scroll_hint: 'Click the map to enable zoom with the scroll wheel',
+      map_fullscreen_title: 'Fullscreen',
+      map_fullscreen_aria: 'Map fullscreen',
+      map_fit_title: 'Show all entities',
+      map_fit_aria: 'Zoom to all entities',
+      reset_filters_aria: 'Reset all filters',
     },
   };
 
@@ -213,6 +295,25 @@
       if (translated && translated !== key) {
         el.textContent = translated;
       }
+    });
+
+    // v6.62: also handle title, aria-label, placeholder attributes
+    // via dedicated data-i18n-* keys. Closes the "EN translation leak ~40%"
+    // issue from audit #03.
+    document.querySelectorAll('[data-i18n-title]').forEach(el => {
+      const key = el.getAttribute('data-i18n-title');
+      const translated = window.t(key);
+      if (translated && translated !== key) el.title = translated;
+    });
+    document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+      const key = el.getAttribute('data-i18n-aria-label');
+      const translated = window.t(key);
+      if (translated && translated !== key) el.setAttribute('aria-label', translated);
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      const translated = window.t(key);
+      if (translated && translated !== key) el.placeholder = translated;
     });
     // Note: chainsData, applyFilters, loadStats, renderChainsList are
     // declared in app.js. `function` declarations are on window; `let/const`

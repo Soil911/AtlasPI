@@ -22,18 +22,18 @@
       <span class="subtitle">Database Geografico Storico per Agenti AI</span>
     </div>
     <div class="header-right">
-      <button id="theme-toggle" class="theme-toggle" title="Cambia tema" aria-label="Cambia tema chiaro/scuro">🌙</button>
-      <button id="lang-toggle" class="api-link" title="Switch language" aria-label="Cambia lingua">EN</button>
-      <a href="/search" class="api-link" title="Ricerca avanzata nel dataset">Search</a>
-      <a href="/timeline" class="api-link" title="Timeline interattiva">Timeline</a>
-      <a href="/compare" class="api-link" title="Confronta entita' storiche">Compare</a>
-      <a href="/embed" class="api-link" title="Versione embed per iframe" target="_blank">Embed</a>
-      <a href="/docs-ui" class="api-link" title="Documentazione API interattiva">API Docs</a>
-      <a href="/docs" class="api-link" title="Documentazione API OpenAPI">OpenAPI</a>
-      <button id="sidebar-toggle" class="sidebar-toggle" title="Mostra/nascondi pannello filtri" aria-label="Toggle sidebar" aria-pressed="true">
+      <button id="theme-toggle" class="theme-toggle" data-i18n-title="theme_toggle_title" data-i18n-aria-label="theme_toggle_aria" title="Cambia tema" aria-label="Cambia tema chiaro/scuro">🌙</button>
+      <button id="lang-toggle" class="api-link" data-i18n-title="lang_toggle_title" data-i18n-aria-label="lang_toggle_aria" title="Switch language" aria-label="Cambia lingua">EN</button>
+      <a href="/search" class="api-link" data-i18n-title="nav_search_title" title="Ricerca avanzata nel dataset">Search</a>
+      <a href="/timeline" class="api-link" data-i18n-title="nav_timeline_title" title="Timeline interattiva">Timeline</a>
+      <a href="/compare" class="api-link" data-i18n-title="nav_compare_title" title="Confronta entita' storiche">Compare</a>
+      <a href="/embed" class="api-link" data-i18n-title="nav_embed_title" title="Versione embed per iframe" target="_blank">Embed</a>
+      <a href="/docs-ui" class="api-link" data-i18n-title="nav_apidocs_title" title="Documentazione API interattiva">API Docs</a>
+      <a href="/docs" class="api-link" data-i18n-title="nav_openapi_title" title="Documentazione API OpenAPI">OpenAPI</a>
+      <button id="sidebar-toggle" class="sidebar-toggle" data-i18n-title="sidebar_toggle_title" data-i18n-aria-label="sidebar_toggle_aria" title="Mostra/nascondi pannello filtri" aria-label="Toggle sidebar" aria-pressed="true">
         <span class="sidebar-toggle-icon">◀</span>
       </button>
-      <button id="ask-claude-btn" class="ask-claude-btn" title="Chiedi a Claude usando i dati di AtlasPI" aria-label="Apri Claude con prompt precompilato">
+      <button id="ask-claude-btn" class="ask-claude-btn" data-i18n-title="ask_claude_title" data-i18n-aria-label="ask_claude_aria" title="Chiedi a Claude usando i dati di AtlasPI" aria-label="Apri Claude con prompt precompilato">
         🤖 <span data-i18n="ask_claude">Ask Claude</span>
       </button>
       <span id="entity-count" class="badge" aria-live="polite">...</span>
@@ -87,10 +87,11 @@
         <div class="search-box">
           <label for="search-input" class="sr-only">Cerca entit&agrave;</label>
           <input type="search" id="search-input" placeholder="Cerca per nome, anche varianti..."
+                 data-i18n-placeholder="search" data-i18n-aria-label="search_aria"
                  aria-label="Cerca entit&agrave; per nome" autocomplete="off" role="combobox"
                  aria-expanded="false" aria-controls="autocomplete-list" aria-autocomplete="list" />
-          <button id="search-btn" title="Cerca" aria-label="Avvia ricerca">&#8594;</button>
-          <div id="autocomplete-list" class="autocomplete-dropdown" role="listbox" aria-label="Suggerimenti ricerca"></div>
+          <button id="search-btn" data-i18n-title="search_btn_title" data-i18n-aria-label="search_btn_aria" title="Cerca" aria-label="Avvia ricerca">&#8594;</button>
+          <div id="autocomplete-list" class="autocomplete-dropdown" role="listbox" data-i18n-aria-label="autocomplete_aria" aria-label="Suggerimenti ricerca"></div>
         </div>
 
         <div class="year-control">
@@ -282,7 +283,7 @@
       <span class="legend-item" aria-hidden="true">&#9473; Reale</span>
       <span class="legend-item" aria-hidden="true">&#9476; Approssimato</span>
     </div>
-    <span class="footer-note">AtlasPI v6.61.0 &mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie &middot; 36 tools MCP</span>
+    <span class="footer-note">AtlasPI v6.62.0 &mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie &middot; 36 tools MCP</span>
   </footer>
 
   <noscript>

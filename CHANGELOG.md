@@ -2,6 +2,41 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.62.0] - 2026-04-18
+
+**Tema**: *Translation leak fix — data-i18n-{title,aria-label,placeholder} pattern*
+
+### Problema
+
+Audit #03 UI/UX ha flaggato: `~40% italian strings leak through` quando toggle EN attivo. Causa: `applyLangUI()` coperta solo elementi con `data-i18n="key"` (textContent), NON title/aria-label/placeholder hardcoded in HTML.
+
+### Fix
+
+Esteso `applyLangUI()` in `static/js/i18n.js` per gestire 3 nuovi attributi:
+- `data-i18n-title="key"` → `el.title`
+- `data-i18n-aria-label="key"` → `el.setAttribute('aria-label', ...)`
+- `data-i18n-placeholder="key"` → `el.placeholder`
+
+Aggiunti ~30 nuove traduzioni IT/EN nel dict per:
+- Header navigation (theme/lang toggle, Search/Timeline/Compare/Embed/APIDocs/OpenAPI)
+- Sidebar controls (sidebar toggle, Ask Claude)
+- Search controls (placeholder, button, autocomplete aria)
+- Year controls (input, slider, playback button, era chips aria)
+- Filters (continent/type chips aria, sort)
+- Detail panel (close button aria)
+- Map overlays (events overlay, fullscreen, fit-all, scroll hint)
+
+### Impact
+
+- Toggle EN ora traduce **tutta** la UI (vs ~60% prima)
+- Elementi HTML con data-i18n-* aggiunti: 13 (partial coverage, il resto rimane come future work)
+
+### Limite
+
+Per coverage 100%, servono ancora data-i18n-* su ~30 elementi HTML rimasti (year presets, playback dropdown options, overlay labels in body). v6.62 copre i visibili top-level in header+sidebar — il grosso del problema. Residual coverage in v6.63+.
+
+---
+
 ## [v6.61.0] - 2026-04-18
 
 **Tema**: *Fix fuzzy search substring bug dal audit #02*
