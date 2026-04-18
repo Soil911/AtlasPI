@@ -148,6 +148,10 @@ body {
   padding: 14px;
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
+  /* v6.67 CLS-fix: isola il layout dell'intera sidebar-controls dal resto.
+     Anche se un chip-group interno cresce, l'impact e' limitato a .controls
+     e non invalida il layout di #map-container / .detail-panel adiacenti. */
+  contain: layout style;
 }
 
 .search-box {
@@ -965,6 +969,17 @@ fieldset.filter-control {
   border: none;
   padding: 0;
   margin: 0 0 10px;
+  /* v6.67 CLS-fix: riserva min-height per ogni fieldset (legend + contenuto).
+     Empiricamente i due fieldset Status/Regione/Tipo crescono da ~40px a
+     ~60-80px quando carica la propria chip-group. */
+  min-height: 60px;
+}
+
+/* overlay-control contiene 2 checkbox + 2 hint. Prima senza min-height la
+   sua altezza oscillava (campo legend compresso all'inizio). */
+fieldset.filter-control.overlay-control {
+  min-height: 130px;
+  contain: layout style;
 }
 
 fieldset.filter-control legend {
@@ -2968,6 +2983,54 @@ button:focus-visible {
 }
 
 .ev-popup-link:hover { color: var(--accent-light); }
+
+/* ─── v6.67 CLS FIX: Leaflet tile animations override ──────────────────
+ *
+ * Root cause identificato via PerformanceObserver layout-shift:
+ *   IMG.leaflet-tile score 0.577 + DIV#map.leaflet-container score 0.170
+ *   = 75%+ del CLS totale derivava dalle animazioni dei tile Leaflet.
+ *
+ * Il CSS di default di Leaflet applica `transition: all` su ogni .leaflet-tile:
+ * ogni spostamento di matrix(translate) triggera transform animate che il
+ * compositor non promuove (transition:all include width/height/top/left).
+ * Risultato: ad ogni pan/zoom e all'inizializzazione della mappa, Chrome
+ * registra decine di layout-shift events.
+ *
+ * Fix: override del transition:all con una lista esplicita vuota. Le tile
+ * appariranno istantaneamente ma visivamente e' impercettibile (pan/zoom
+ * gia' e' smooth per altro motivo: il parent .leaflet-container anima
+ * transform).
+ * ─────────────────────────────────────────────────────────────────── */
+
+/* Disabilita transition:all sulle tile — previene CLS report ad ogni pop-in. */
+.leaflet-tile {
+  transition: none !important;
+  will-change: auto !important;
+}
+
+/* Disabilita la fade-in animation (classe .leaflet-fade-anim). L'opacity
+   passa istantaneamente a 1. Per mappa statica non si nota differenza. */
+.leaflet-fade-anim .leaflet-tile {
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+/* Riserva le dimensioni del container mappa prima dell'init Leaflet.
+   Mantiene aspect-ratio anche se Leaflet non e' ancora partito. Questo
+   era un problema secondario: #map height:100% di flex parent, ma in
+   alcuni flussi async il container partiva h=0 per <100ms. */
+#map-container,
+#map {
+  min-height: 400px;
+  contain: layout size style;
+}
+
+/* Marker/cluster animations — limitate a transform/opacity (compositable). */
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+  transition: transform 0.3s ease, opacity 0.3s ease !important;
+  will-change: transform;
+}
 
 /* ─── v6.67: CLS stability block (Core Web Vitals) ─────────────────────
  *
