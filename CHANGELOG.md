@@ -2,6 +2,57 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.55.0] - 2026-04-18
+
+**Tema**: *Data patch infrastructure — fase 2 fix pipeline*
+
+### Nuovo script
+
+`scripts/apply_data_patch.py` — applier unificato per JSON patches ai 5 resource types (entity / event / site / ruler / language). Safe-by-default:
+
+- **Whitelist field patchabili** per resource (no `id`, no FK, no struttura)
+- **Idempotente**: skip se `new_value == current`
+- **Transactional**: all-or-nothing rollback su errore
+- **Dry-run mode**: preview senza scrivere
+- **Audit log**: `data_patch_audit.log` append-only con timestamp + rationale
+
+### Schema JSON patch
+
+```json
+[{
+  "resource": "entity",
+  "id": 42,
+  "field": "year_end",
+  "new_value": 907,
+  "rationale": "Cambridge History Vol 3",
+  "source": "Twitchett (1979)"
+}]
+```
+
+### Usage
+
+```bash
+# Dry run
+python -m scripts.apply_data_patch research_output/audit/fixes.json --dry-run
+
+# Apply
+python -m scripts.apply_data_patch research_output/audit/fixes.json
+
+# On VPS
+ssh -i ~/.ssh/cra_vps root@77.81.229.242 \
+  "cd /opt/cra && docker compose exec atlaspi python -m scripts.apply_data_patch /opt/cra/patches/fixes.json"
+```
+
+### Test
+
+`tests/test_v655_apply_data_patch.py`: 8 test — whitelist safety, dry-run, idempotent, skip missing, invalid field/resource, apply real write.
+
+### Prossima fase
+
+Script ready per ricevere audit reports dai 5 super-agent background (data quality, geo+crosslinks, UI/UX, external sources, historical accuracy). Ogni report genererà un `fixes.json` che applichiamo via questo script.
+
+---
+
 ## [v6.54.0] - 2026-04-17
 
 **Tema**: *AI Co-Founder analyzer — dedup fix + auto-cleanup pending stale*
