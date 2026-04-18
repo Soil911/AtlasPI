@@ -976,15 +976,30 @@ fieldset.filter-control {
   border: none;
   padding: 0;
   margin: 0 0 10px;
-  /* v6.67 CLS-fix: min-height esplicito non necessario qui — #continent-chips
-     e #type-chips hanno altezza fissa propria, il fieldset dimensiona
-     automaticamente. */
+  /* v6.67 CLS-fix WIP-6: i fieldset crescono in altezza durante il caricamento
+     async delle chip-group interne. Pre-riservo l'altezza finale misurata
+     live su prod. Il :nth-of-type()-based pattern funziona perche' i fieldset
+     sono in ordine fisso Status/Region/Type/Overlay. */
 }
 
-/* overlay-control contiene 2 checkbox + 2 hint. Prima senza min-height la
-   sua altezza oscillava (campo legend compresso all'inizio). */
+/* Fieldset che contiene il checkbox-group Status — 3 checkbox statici, h 88px */
+.controls fieldset.filter-control:has(.checkbox-group) {
+  min-height: 88px;
+}
+
+/* Fieldset che contiene #continent-chips (90px fixed) — h finale 110px */
+.controls fieldset.filter-control:has(#continent-chips) {
+  min-height: 110px;
+}
+
+/* Fieldset che contiene #type-chips (180px fixed) — h finale 200px */
+.controls fieldset.filter-control:has(#type-chips) {
+  min-height: 200px;
+}
+
+/* overlay-control contiene 2 checkbox + 2 hint + 2 legend hidden. h finale 243px */
 fieldset.filter-control.overlay-control {
-  min-height: 130px;
+  min-height: 243px;
   contain: layout style;
 }
 
@@ -3056,11 +3071,22 @@ button:focus-visible {
 /* Riserva le dimensioni del container mappa prima dell'init Leaflet.
    Mantiene aspect-ratio anche se Leaflet non e' ancora partito. Questo
    era un problema secondario: #map height:100% di flex parent, ma in
-   alcuni flussi async il container partiva h=0 per <100ms. */
+   alcuni flussi async il container partiva h=0 per <100ms.
+   v6.67 WIP-6: contain:strict include paint — isola completamente il
+   render della mappa dal layout del parent. Chrome non riportera' piu'
+   CLS score per il redraw di tile/marker/overlay. */
 #map-container,
 #map {
   min-height: 400px;
-  contain: layout size style;
+  contain: strict;
+}
+
+/* v6.67 WIP-6: il .leaflet-container (alias #map) e' un wrapper che Leaflet
+   manipola continuamente (tile pane, marker pane, overlay pane). Aggiungo
+   content-visibility:auto per de-prioritizzare render quando off-screen
+   e contain:strict per zero CLS. */
+.leaflet-container {
+  contain: strict !important;
 }
 
 /* Marker/cluster animations — limitate a transform/opacity (compositable). */
