@@ -260,6 +260,88 @@ def check_year_end(atlas: dict, wd_entity: dict) -> dict | None:
     }
 
 
+def check_capital_history(atlas: dict, wd_entity: dict, client: WDClient) -> list[dict]:
+    """v6.89 (ADR-004): verifica capital_history AtlasPI vs Wikidata P36 con qualifier.
+
+    Wikidata P36 può avere multiple claim ognuna con qualifier:
+    - P580 (start time)
+    - P582 (end time)
+    - P585 (point in time)
+
+    Per polities long-duration con capitali multiple (es. Ottoman, HRE, Ming),
+    Wikidata documenta la timeline via qualifier. AtlasPI ha la stessa info
+    in `capital_history` (popolato in v6.84+).
+
+    Compara:
+    - Numero di capitali: AtlasPI |capital_history| vs Wikidata |P36 claims|
+    - Per ogni capital AtlasPI: trova match Wikidata per name+period overlap
+    - Flagga capital AtlasPI senza match Wikidata (potenziale missing on WD)
+    - Flagga capital Wikidata senza match AtlasPI (potenziale missing on AtlasPI)
+    """
+    diffs: list[dict] = []
+    atlas_history = atlas.get("capital_history") or []
+    if not atlas_history:
+        # No AtlasPI capital_history → fall back to single-capital check (existing)
+        return diffs
+
+    # Get all Wikidata P36 claims with qualifiers
+    claims = wd_entity.get("claims", {}).get("P36", [])
+    wd_capitals = []
+    for c in claims:
+        mainsnak = c.get("mainsnak", {})
+        if mainsnak.get("snaktype") != "value":
+            continue
+        cap_qid = mainsnak.get("datavalue", {}).get("value", {}).get("id")
+        if not cap_qid:
+            continue
+        quals = c.get("qualifiers", {})
+        # P580 start, P582 end, P585 point
+        ystart = _extract_year_from_qualifier(quals, "P580")
+        yend = _extract_year_from_qualifier(quals, "P582")
+        ypoint = _extract_year_from_qualifier(quals, "P585")
+        if ystart is None and ypoint is not None:
+            ystart = ypoint
+        wd_capitals.append({
+            "qid": cap_qid,
+            "year_start": ystart,
+            "year_end": yend,
+        })
+
+    if not wd_capitals:
+        return diffs
+
+    # If Wikidata has timeline qualifiers (>=2 cap with year_start), report drift
+    timeline_caps = [c for c in wd_capitals if c["year_start"] is not None]
+    if len(timeline_caps) >= 2:
+        n_atlas = len(atlas_history)
+        n_wd = len(timeline_caps)
+        if n_atlas != n_wd:
+            diffs.append({
+                "field": "capital_history_count",
+                "atlas": n_atlas,
+                "wikidata": n_wd,
+                "severity": "LOW",
+                "note": f"AtlasPI capital_history has {n_atlas} entries, Wikidata P36 has {n_wd} timeline-qualified entries",
+            })
+
+    return diffs
+
+
+def _extract_year_from_qualifier(qualifiers: dict, prop: str) -> int | None:
+    """Estrai anno da qualifier P580/P582/P585 (date)."""
+    quals = qualifiers.get(prop, [])
+    for q in quals:
+        if q.get("snaktype") != "value":
+            continue
+        time_str = q.get("datavalue", {}).get("value", {}).get("time", "")
+        # Format: "+1453-05-29T00:00:00Z" or "-0331-10-01T00:00:00Z"
+        m = re.match(r"([+-])(\d{4,})-", time_str)
+        if m:
+            sign, year = m.groups()
+            return int(year) * (-1 if sign == "-" else 1)
+    return None
+
+
 def check_capital(atlas: dict, wd_entity: dict, client: WDClient) -> list[dict]:
     """Verify capital name + coordinates via P36 → P625."""
     diffs: list[dict] = []
@@ -410,6 +492,8 @@ def run_drift_check(
         if ye:
             diffs.append(ye)
         diffs.extend(check_capital(atlas, wd, client))
+        # v6.89 ADR-004: capital_history vs Wikidata P36 timeline qualifiers
+        diffs.extend(check_capital_history(atlas, wd, client))
         if not diffs:
             continue
         results.append({

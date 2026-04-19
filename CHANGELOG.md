@@ -2,6 +2,20 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.89.0] - 2026-04-19
+
+**Tema**: *Round 19 — Wikidata drift incorpora capital_history compare*
+
+`scripts/wikidata_drift_check.py` ora ha funzione `check_capital_history()` che confronta `capital_history` AtlasPI vs P36 Wikidata con qualifier P580/P582/P585 (timeline temporale).
+
+Pattern: per polities con multiple capitali nel tempo (popolate in v6.84), sia AtlasPI che Wikidata possono documentare la timeline. Drift detection ora compara count e flagga differenze (severity LOW perché spesso le differenze sono di documentazione granularity).
+
+`_extract_year_from_qualifier()` helper per parse format `+1453-05-29T00:00:00Z` o `-0331-10-01T00:00:00Z` (BC negativi). Integrato nel pipeline drift check standard (chiamata in `check_entity` dopo `check_capital`).
+
+Nightly cron `/etc/cron.daily/atlaspi-drift` ora include questo check senza modifiche al script (drift check è chiamato dallo stesso entry point).
+
+---
+
 ## [v6.88.0] - 2026-04-19
 
 **Tema**: *Round 18 — Frontend timeline capitali nella sidebar detail*
