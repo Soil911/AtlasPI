@@ -1,0 +1,488 @@
+[
+  {
+    "resource": "entity",
+    "id": 26,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: il nome originale 'Kemet' (terra nera) e' il nome che gli antichi egizi usavano per il loro paese. 'Egitto' deriva dal greco Aigyptos. I confini variano enormemente nei 3000 anni di storia. Quelli mostrati sono una approssimazione del Nuovo Regno (~1400 a.C.). [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 900y vs Wikidata Q11768. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q11768 ('Ancient Egypt').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 900y vs Wikidata Q11768",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/26"
+  },
+  {
+    "resource": "entity",
+    "id": 30,
+    "field": "ethical_notes",
+    "new_value": "Voltaire scrisse che non era 'né sacro, né romano, né un impero'. Struttura politica estremamente frammentata con centinaia di entita' semi-indipendenti. I confini mostrati sono molto approssimativi per la natura fluida del territorio. [v6.65 audit] Il year_start=800 riflette l'incoronazione di Carlo Magno — convenzione accademica che lega HRE al suo predecessore carolingio. La convenzione moderna prevalente usa invece 962 (Ottone I, inizio del Sacrum Imperium continuo di tradizione germanica). AtlasPI adotta 800 per continuita' narrativa con Imperium Francorum (id=89). Il capital=Wien e' una semplificazione: l'HRE non ebbe capitale ufficiale. Aachen ospito' incoronazioni fino al 1562, Frankfurt dal 1562, Regensburg la Dieta Perpetua dal 1663. Vienna fu capitale dell'Arciducato d'Austria asburgico (1438+), non dell'Impero. Fonti: Wilson (2016) 'Heart of Europe'; Britannica 'Holy Roman Empire'. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 162y vs Wikidata Q12548. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q12548 ('Holy Roman Empire').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 162y vs Wikidata Q12548",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/30"
+  },
+  {
+    "resource": "entity",
+    "id": 51,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: il nome in Ge'ez (l'antica lingua etiopica) e' 'Mangesta Aksum'. Aksum e' uno dei quattro grandi imperi del mondo antico secondo il profeta persiano Mani (III sec. d.C.), insieme a Roma, Persia e Cina — un fatto frequentemente omesso nella storiografia eurocentrica. Aksum fu tra le prime entita' politiche ad adottare il cristianesimo come religione di stato (IV sec.), prima dell'Impero Romano. La storiografia occidentale ha storicamente minimizzato il ruolo di Aksum nel commercio internazionale antico. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 500y vs Wikidata Q139377. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q139377 ('Kingdom of Aksum').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 500y vs Wikidata Q139377",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/51"
+  },
+  {
+    "resource": "entity",
+    "id": 52,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-003: il Regno di Kush e' sistematicamente sottorappresentato nella storiografia occidentale, spesso ridotto a 'periferia egizia'. In realta' Kush conquisto' l'Egitto e governo' come XXV Dinastia (747-656 a.C.). La civilta' meroitica sviluppo' un proprio sistema di scrittura (meroitico) ancora solo parzialmente decifrato. Le piramidi di Meroe sono piu' numerose di quelle egizie. Il bias eurocentrico ha portato a decenni di negazione delle capacita' tecnologiche e culturali di questa civilta'. [v6.66 audit] La capitale Meroë (16.94°N 33.75°E) lo fu solo dopo il sacco di Napata da parte di Psamtik II (~593 BCE). Per il periodo -1070 a -590 (480 anni, 34% del totale) la capitale era Napata (18.53°N 31.83°E); in età Kerma pre-1070 il centro era Kerma/Nuri. Un agente AI che chiede 'capital of Kush in -800' riceve Meroë — falso, era Napata. Fonte: Britannica 'Napata'; Welsby (1996) 'The Kingdom of Kush'. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 1110y vs Wikidata Q241790. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q241790 ('Kingdom of Kush').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 1110y vs Wikidata Q241790",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/52"
+  },
+  {
+    "resource": "entity",
+    "id": 68,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: name_original in German. The entity evolved through multiple forms: Duchy, Archduchy, Austrian Empire (1804), Austria-Hungary (1867). The entry covers the Habsburg lands from their acquisition of Austria until dissolution. ETHICS-003: The entity_type 'empire' is used because the Habsburgs ruled a multiethnic empire, though the formal title varied. ETHICS-002: Habsburg rule over non-German populations (Czechs, Hungarians, Poles, Italians, Slovenes, Croats, Romanians, Ukrainians, Serbs) involved varying degrees of cultural domination. While the late Habsburg Empire granted some autonomy to its peoples, centuries of German cultural hegemony preceded this. The Counter-Reformation involved religious persecution. The Habsburgs' role in the Thirty Years' War contributed to the devastation of Central Europe. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 244y vs Wikidata Q153136. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q153136 ('Habsburg monarchy').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 244y vs Wikidata Q153136",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/68"
+  },
+  {
+    "resource": "entity",
+    "id": 72,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: name_original in Catalan, reflecting the composite nature of the Crown which included Aragon, Catalonia, Valencia, Mallorca, and Mediterranean territories. The use of Catalan rather than Aragonese or Castilian reflects the Crown's multilingual character. ETHICS-003: The Crown of Aragon was a composite monarchy, not a unitary state. Catalan, Aragonese, and Valencian perspectives on the entity differ. ETHICS-002: The Crown's Mediterranean expansion involved conquest of Mallorca (1229, with massacre of Muslim population), Sardinia, Sicily, and Naples. The expulsion of Moriscos from Valencia (1609) forcibly displaced approximately 120,000 people. The Nueva Planta decrees (1707-1716) abolished Aragonese and Catalan institutions. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 127y vs Wikidata Q204920. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q204920 ('Crown of Aragon').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 127y vs Wikidata Q204920",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/72"
+  },
+  {
+    "resource": "entity",
+    "id": 91,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: name_original in Irish (Gaeilge). ETHICS-003: This entity is highly problematic to define. Ireland was never a unified kingdom in the modern sense. The High Kingship (Ard Ri) was a contested title among competing provincial kings. Tara (Teamhair) was a ceremonial site, not a capital in the administrative sense. The start date -500 is extremely uncertain; it represents the approximate beginning of the La Tene period in Ireland. The confidence score reflects these deep uncertainties. ETHICS-002: English/Norman colonization of Ireland (from 1169) constitutes one of Europe's longest colonial occupations, involving land confiscation, cultural suppression, the Penal Laws, and the catastrophic Great Famine (1845-1852) during which approximately 1 million died and 1 million emigrated under British governance that prioritized exports over Irish lives. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 2042y vs Wikidata Q215530. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q215530 ('Kingdom of Ireland').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 2042y vs Wikidata Q215530",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/91"
+  },
+  {
+    "resource": "entity",
+    "id": 92,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: name_original in Welsh (Cymraeg), the language of the native population. 'Principality of Wales' is the English colonial designation. ETHICS-003: The entity_type 'kingdom' is approximate; the Welsh used the title 'Tywysog' (prince/leader) rather than 'Brenin' (king). The principality only united most of Wales briefly under Llywelyn ab Iorwerth and Llywelyn ap Gruffudd. Earlier Welsh kingdoms (Gwynedd, Powys, Deheubarth) existed independently. ETHICS-002: The English conquest of Wales (1282-1283) destroyed Welsh political independence. Edward I's castle-building program was an instrument of colonial domination. The Statute of Rhuddlan (1284) imposed English law. Welsh language and culture survived despite centuries of suppression, including laws specifically targeting the Welsh language. [v6.75 audit v4 Fase B] Drift Wikidata: year_end drift 259y vs Wikidata Q1483510. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q1483510 ('Principality of Wales').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_end drift 259y vs Wikidata Q1483510",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/92"
+  },
+  {
+    "resource": "entity",
+    "id": 95,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: name_original in Serbian/Montenegrin Cyrillic. The Montenegrin language debate (whether Montenegrin is a separate language from Serbian) is politically sensitive and ongoing. ETHICS-003: The entity_type 'kingdom' is approximate; Montenegro was a prince-bishopric (vladika) under the Petrovic-Njegos dynasty from 1515, then a secular principality from 1851, and formally a kingdom from 1910. The start date reflects the beginning of the theocratic state. Montenegro's exact relationship with the Ottoman Empire (varying degrees of autonomy vs. independence) is debated. ETHICS-002: Montenegrin history involves complex inter-ethnic and inter-clan violence, as well as the broader context of Ottoman-Christian conflict in the Balkans. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 395y vs Wikidata Q386496. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q386496 ('Kingdom of Montenegro').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 395y vs Wikidata Q386496",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/95"
+  },
+  {
+    "resource": "entity",
+    "id": 142,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: il nome originale e' in singalese. La data di fondazione (-543 a.C.) e' basata sulla tradizione del Mahavamsa e non e' confermata archeologicamente. ETHICS-002: la storia di Sri Lanka e' segnata dalla tensione tra la maggioranza singalese buddhista e la minoranza tamil Hindu, un conflitto con radici storiche profonde. Il Mahavamsa presenta una narrazione etnocentrica che ha influenzato il nazionalismo singalese moderno. ETHICS-003: la rappresentazione di Sri Lanka come 'isola buddhista singalese' ignora la presenza tamil millenaria. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 2012y vs Wikidata Q1530762. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q1530762 ('Kingdom of Kandy').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 2012y vs Wikidata Q1530762",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/142"
+  },
+  {
+    "resource": "entity",
+    "id": 146,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: il nome originale e' in Soninke. 'Ghana' era il titolo del sovrano, non il nome del territorio — gli abitanti lo chiamavano Wagadou. La denominazione 'Ghana Empire' e' una convenzione storiografica occidentale. ETHICS-002: la caduta dell'impero e' tradizionalmente attribuita all'invasione almoravide (1076), ma la storiografia recente (Masonen, Levtzion) ritiene che il declino sia stato piu' graduale e multifattoriale. Il commercio trans-sahariano dell'oro fu il fondamento economico dell'impero. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 200y vs Wikidata Q206789. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q206789 ('Ghana Empire').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 200y vs Wikidata Q206789",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/146"
+  },
+  {
+    "resource": "entity",
+    "id": 147,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: il nome e' in Kanuri. L'impero e' uno dei piu' longevi della storia africana (~1200 anni). ETHICS-002: la fine dell'impero avvenne per conquista britannica e francese nel quadro della spartizione coloniale dell'Africa. La tratta schiavista trans-sahariana fu parte dell'economia dell'impero — questo dato non deve essere omesso per correttezza storica. ETHICS-003: le fonti pre-islamiche sono estremamente scarse; il confidence_score riflette questa lacuna. [v6.66 audit] La capitale Njimi (13.5°N 15.0°E) lo fu solo per il periodo Kanem (~700-1380 CE). Dopo 1380, la dinastia Sayfawa fuggì verso ovest in seguito ai conflitti con i Bulala; sotto Mai Ali Gaji (c. 1470) fu fondata Ngazargamu come nuova capitale del Bornu, che restò tale fino al 1893. Usare Njimi per l'intero arco 700-1893 crea anacronismo di ~513 anni. Nota: nel DB esistono entità separate Kanem (id=647) e Bornu (id=166); la super-entità 147 'Kanem-Bornu' potrebbe essere ridondante. Fonte: Wikipedia 'Kanem-Bornu Empire'. [v6.75 audit v4 Fase B] Drift Wikidata: year_end drift 517y vs Wikidata Q1537016. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q1537016 ('Kanem Empire').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_end drift 517y vs Wikidata Q1537016",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/147"
+  },
+  {
+    "resource": "entity",
+    "id": 188,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: il nome e' in Arabo/Sabeo. La lingua sabea era scritta in Musnad (alfabeto sudarabico). ETHICS-002: il Regno di Saba e' famoso nella tradizione biblica e coranica per la regina di Saba (Bilqis). Il commercio dell'incenso e della mirra fu la base economica del regno. La grande diga di Marib fu una meraviglia dell'ingegneria antica. Il suo crollo (circa 575 d.C., dopo la fine del regno) e' menzionato nel Corano (Sura 34:15-17) e simboleggia la caduta di una civilta'. ETHICS-003: la cronologia alta (prima del -800) e' basata quasi esclusivamente su fonti archeologiche ed epigrafiche con margini di incertezza significativi. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 200y vs Wikidata Q216068. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q216068 ('Sheba').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 200y vs Wikidata Q216068",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/188"
+  },
+  {
+    "resource": "entity",
+    "id": 197,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: The Muisca are central to the European myth of 'El Dorado,' which was a distortion of the Muisca investiture ceremony at Lake Guatavita into a justification for conquest and plunder. This myth drove devastating Spanish expeditions across South America. ETHICS-002: The Muisca had a sophisticated confederation with two main leaders (Zipa and Zaque) and a complex legal code. The Spanish conquest under Gonzalo Jiménez de Quesada destroyed this political structure. Muisca descendants continue to seek recognition of their cultural heritage. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 200y vs Wikidata Q5782830. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q5782830 ('Muisca Confederations').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 200y vs Wikidata Q5782830",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/197"
+  },
+  {
+    "resource": "entity",
+    "id": 202,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: The endonym for this state is uncertain; 'Tiwanaku' may derive from Aymara. The site was heavily looted during the colonial period and stones were used for church construction. Inca and later Spanish accounts mythologized the site. ETHICS-003: Modern Bolivia has adopted Tiwanaku iconography as a national symbol, raising questions about whose heritage it represents given the complex ethnic history of the altiplano. [v6.75 audit v4 Fase B] Drift Wikidata: year_end drift 150y vs Wikidata Q1307407. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q1307407 ('Tiwanaku polity').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_end drift 150y vs Wikidata Q1307407",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/202"
+  },
+  {
+    "resource": "entity",
+    "id": 207,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-002: Colonial Brazil was the largest single destination of the transatlantic slave trade, receiving approximately 4.9 million enslaved Africans — more than any other country in the Americas. The sugar plantation (engenho) system was built entirely on enslaved African labor. Indigenous populations were also enslaved through bandeirante expeditions until Pombal's reforms (1755-1758). The indigenous population, estimated at 2-4 million at contact, was devastated by disease, slavery, and displacement. Brazil was the last country in the Western Hemisphere to abolish slavery (1888). [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 121y vs Wikidata Q11876909. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q11876909 ('State of Brazil').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 121y vs Wikidata Q11876909",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/207"
+  },
+  {
+    "resource": "entity",
+    "id": 270,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: Name in Hebrew as used in the Tanakh. ETHICS-003: CRITICAL — the historicity and extent of the United Monarchy (under Saul, David, Solomon) is one of the most intensely debated topics in Near Eastern archaeology. Biblical minimalists (Finkelstein, Silberman) argue the United Monarchy was a small chieftaincy later mythologized; maximalists (Mazar, Kitchen) argue for a larger polity. Archaeological evidence (Tel Dan stele, Mesha stele) confirms a 'House of David' and a polity called Israel by the 9th century BCE. The early dates (-1047 to -930) carry very low confidence. This entity should NOT be used to support any modern territorial claims. [v6.75 audit v4 Fase B] Drift Wikidata: year_end drift 210y vs Wikidata Q3185305. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q3185305 ('Kingdom of Israel').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_end drift 210y vs Wikidata Q3185305",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/270"
+  },
+  {
+    "resource": "entity",
+    "id": 294,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: 'Mauretania' is the Latin/Greek name from the ethnic term 'Mauri'. The Berber/Amazigh self-designation for the kingdom is not preserved. The kingdom should not be confused with the modern state of Mauritania, which lies far to the south. ETHICS-003: Mauretania is relatively well-attested through Roman literary sources, coinage, and archaeology. Its last king, Ptolemy of Mauretania (grandson of both Cleopatra VII and Juba II), was murdered by Caligula — an act of arbitrary imperial violence. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 175y vs Wikidata Q31723. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q31723 ('Kingdom of Mauretania').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 175y vs Wikidata Q31723",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/294"
+  },
+  {
+    "resource": "entity",
+    "id": 319,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-007: CRITICAL — The transfer of Dutch New Guinea to Indonesia (via temporary UN administration, UNTEA, 1962-1963) and the subsequent 'Act of Free Choice' (1969) are among the most controversial decolonization episodes in modern history. The 'Act of Free Choice' — in which 1,025 hand-picked Papuan representatives were coerced by the Indonesian military to vote for integration — is widely regarded by Papuans and many scholars as a sham, referred to as the 'Act of No Choice'. The indigenous population of West Papua (an estimated 500+ ethnic groups speaking 270+ languages) was never given a genuine opportunity for self-determination. The subsequent Indonesian administration has been marked by severe human rights abuses, including extrajudicial killings, disappearances, torture, and the suppression of Papuan identity. The Free Papua Movement (OPM) has sought independence since 1965. The situation in West Papua remains one of the most underreported human rights crises in the world, with severe restrictions on foreign journalists and human rights observers. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 121y vs Wikidata Q941881. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q941881 ('Netherlands New Guinea').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 121y vs Wikidata Q941881",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/319"
+  },
+  {
+    "resource": "entity",
+    "id": 328,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: name_original in Chagatai Turkic (Persian script), the literary language that developed in this khanate and remained the prestige Turkic language of Central Asia for centuries. ETHICS-002: The Chagatai Khanate's fragmentation created the conditions for Timur's rise. The western sedentary portion (Transoxiana) and eastern nomadic portion (Moghulistan) represent a classic steppe-sown divide. ETHICS-003: The khanate's Islamization was gradual and contested; Tarmashirin Khan's forced conversion alienated the eastern nomadic aristocracy, contributing to fragmentation. [v6.75 audit v4 Fase B] Drift Wikidata: year_end drift 340y vs Wikidata Q487829. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q487829 ('Chagatai Khanate').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_end drift 340y vs Wikidata Q487829",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/328"
+  },
+  {
+    "resource": "entity",
+    "id": 339,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: name_original in Chagatai Turkic meaning 'land of the Moghuls/Mongols'. The rulers claimed Chinggisid legitimacy through the Chagatai line. ETHICS-002: Despite the name, Moghulistan was predominantly Turkic-speaking by this period; the 'Moghul' designation referred to political identity, not ethnic composition. The Islamization of the eastern Chagatai successor states was slower and more contested than in western Transoxiana. ETHICS-003: The territory corresponds roughly to modern Xinjiang/East Turkestan — now the site of Chinese state repression of the Uyghur population. Historical context matters for understanding contemporary claims. [v6.75 audit v4 Fase B] Drift Wikidata: year_end drift 108y vs Wikidata Q1191125. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q1191125 ('Moghulistan').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_end drift 108y vs Wikidata Q1191125",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/339"
+  },
+  {
+    "resource": "entity",
+    "id": 366,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: name_original in Cebuano (Sugbu), the local Austronesian language. The 'Rajahnate of Cebu' is largely reconstructed from fragmentary Spanish colonial accounts, Chinese trade records, and oral tradition. The confidence score is low because pre-colonial Philippine polities (barangay-based) did not conform to Southeast Asian 'kingdom' models. The term 'rajahnate' itself may impose a Hinduized political framework onto a more complex, decentralized reality. Spanish colonization after Magellan's arrival (1521) and Legazpi's conquest (1565) destroyed indigenous political structures, burned native records, and imposed Christianity. Rajah Humabon's baptism and the death of Lapu-Lapu's resistance at Mactan are foundational narratives in Filipino identity. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 250y vs Wikidata Q4401071. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q4401071 ('Rajahnate of Cebu').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 250y vs Wikidata Q4401071",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/366"
+  },
+  {
+    "resource": "entity",
+    "id": 373,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: name_original in Thai script (ละโว้), though the original polity was Mon/Khmer, not Thai. The Lavo kingdom's ethnic and linguistic identity shifted over its long history: it was originally a Mon-Khmer polity within the Dvaravati cultural sphere, later came under Khmer (Angkorian) influence and governance, and was eventually absorbed into the Tai-speaking Ayutthaya kingdom. Representing Lavo with a Thai script name reflects modern convention but obscures its Mon-Khmer origins. The alternative Mon name 'Lavapura' better reflects its early identity. The confidence score is low due to the fragmentary nature of evidence for the early period and the difficulty of distinguishing Lavo as an independent polity from a Khmer provincial administration. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 250y vs Wikidata Q1332305. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q1332305 ('Lavo Kingdom').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 250y vs Wikidata Q1332305",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/373"
+  },
+  {
+    "resource": "entity",
+    "id": 376,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: The Cheras are one of the three ancient Tamil dynasties (along with Cholas and Pandyas) documented in Sangam literature. The identification of their capital Vanchi remains disputed among scholars -- some place it at Karur, others near modern Cranganore (Kodungallur). The Chera territory encompassed much of modern Kerala and western Tamil Nadu. Sangam literature provides indigenous Tamil perspectives that predate and differ from later Sanskrit-centric historiography. The Chera role in Indian Ocean maritime trade networks is often underrepresented in favor of northern Indian narratives. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 1100y vs Wikidata Q877155. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q877155 ('Chera dynasty').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 1100y vs Wikidata Q877155",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/376"
+  },
+  {
+    "resource": "entity",
+    "id": 412,
+    "field": "ethical_notes",
+    "new_value": "The Wadai Empire (Ouaddai in French spelling) was a major Sahelian state in present-day eastern Chad. It was a significant participant in the trans-Saharan slave trade, raiding southern non-Muslim peoples (Sara, Bagirmi) for enslaved people exported north via the Darb al-Arba'in route. The Maba and related peoples formed the ruling class. French colonial conquest (1909-1912) was met with fierce resistance: Sultan Dud Murra fought guerrilla warfare for years. French colonial sources portray Wadai as a 'slave state' to justify conquest, while minimizing the economic exploitation that French colonialism itself imposed. Both the indigenous slave trade and the colonial violence must be documented without one being used to excuse the other. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 134y vs Wikidata Q1132786. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q1132786 ('Ouaddai Empire').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 134y vs Wikidata Q1132786",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/412"
+  },
+  {
+    "resource": "entity",
+    "id": 425,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: Basque name Nafarroako Erresuma used as primary because the kingdom was founded by and identified with the Basque-speaking population. The Spanish name 'Reino de Navarra' reflects the Castilian perspective. ETHICS-002: The 1512 conquest of Upper Navarre by Ferdinand of Aragon was a forcible annexation of a sovereign state. Lower Navarre retained nominal independence until absorbed by France in 1620. The Basque cultural and linguistic identity was progressively marginalized under both Spanish and French rule. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 688y vs Wikidata Q63021609. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q63021609 ('Kingdom of Navarre beyond the Pyrenees').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 688y vs Wikidata Q63021609",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/425"
+  },
+  {
+    "resource": "entity",
+    "id": 429,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-002: The Livonian Confederation was established through the military conquest and forced Christianization of the indigenous Latvian and Estonian populations by German crusading orders. The native Baltic and Finnic peoples were subjected to serfdom under a German-speaking ruling class. This German Baltic feudal system persisted for centuries and created deep social stratification along ethnic lines. ETHICS-001: Latvian name used as primary because Riga was the capital and the territory corresponds largely to modern Latvia and Estonia. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 207y vs Wikidata Q1064825. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q1064825 ('Livonian confederation').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 207y vs Wikidata Q1064825",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/429"
+  },
+  {
+    "resource": "entity",
+    "id": 439,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: Gothic name used as primary, though the entity used various names over its long existence. ETHICS-002: The Crimean Goths are one of history's most enigmatic and poorly documented peoples. Their continuous existence from the 3rd to the 15th century is attested but boundaries and political structures are uncertain. They represent a remarkable survival of a Germanic-speaking population in a region dominated by Turkic, Greek, and Slavic peoples. Their absorption by the Ottoman Empire after 1475 and eventual disappearance represents a cultural extinction. ETHICS-003: Confidence score is low due to limited primary sources and significant scholarly debate about the nature and extent of Gothic political authority in Crimea. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 1050y vs Wikidata Q874954. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q874954 ('Principality of Theodoro').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 1050y vs Wikidata Q874954",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/439"
+  },
+  {
+    "resource": "entity",
+    "id": 442,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: il nome originale e' in giapponese classico. Il periodo Yamato rappresenta la formazione dello stato giapponese, ma la cronologia prima del V secolo e' fortemente dibattuta. Le fonti primarie (Kojiki, Nihon Shoki) mescolano mito e storia. ETHICS-002: la relazione tra Yamato e gli stati coreani (Gaya, Baekje) e' oggetto di dispute nazionalistiche tra storici giapponesi e coreani, particolarmente riguardo alla presunta colonia giapponese di Mimana. Il database presenta entrambe le interpretazioni senza privilegiarne una. ETHICS-004: il trattamento delle popolazioni Emishi e Kumaso come 'barbari' nella storiografia giapponese tradizionale riflette un bias etnocentrico. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 850y vs Wikidata Q10888424. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q10888424 ('Wakoku').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 850y vs Wikidata Q10888424",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/442"
+  },
+  {
+    "resource": "entity",
+    "id": 552,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: This entity covers the specifically Meroitic phase of the Kingdom of Kush, when the capital shifted south to Meroe and the civilization developed its own distinctive script (Meroitic), iron-smelting industry, and cultural forms distinct from Egyptian influence. Western scholarship long dismissed Meroe as a derivative Egyptian civilization; this view has been challenged by Africanist scholars who emphasize its indigenous African character. The Meroitic script remains only partially deciphered, meaning indigenous textual sources are largely inaccessible -- a significant historiographic gap. Women rulers (Kandakes/Candaces) held significant political and military power, a feature often minimized in Eurocentric accounts. The kingdom's decline and conquest by Aksum c. 350 CE ended one of Africa's longest-lived civilizations. Archaeological evidence from Meroe is extensive but has been unevenly studied, with early excavations by colonial-era archaeologists (Reisner, Garstang) following methods now considered destructive. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 1880y vs Wikidata Q241790. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q241790 ('Kingdom of Kush').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 1880y vs Wikidata Q241790",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/552"
+  },
+  {
+    "resource": "entity",
+    "id": 568,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: name_original in German, the language of the ruling class. The Slavic population of the region (Wends/Sorbs) called it differently. ETHICS-002: The March of Brandenburg was created through the violent German eastward expansion (Ostsiedlung/Drang nach Osten) that dispossessed and assimilated Slavic populations (Wends, Sorbs, Hevelli). Albert the Bear's conquest (1157) and subsequent colonization systematically replaced Slavic place names, institutions, and populations with German ones. This constitutes cultural genocide of the Polabian Slavic peoples. The indigenous Slavic population was either assimilated, marginalized, or driven out. ETHICS-003: entity_type is 'principality' as 'march/margraviate' is not in the schema but the March was technically a frontier territory.\n\n[v6.31-oversize-reset] Boundary area was 1,407,800 km², exceeding principality ceiling (300,000 km²) by 4.7×. Reset to capital-based circle (80km radius) — likely wrong-polygon inheritance via fuzzy name matching. Manual review recommended if the entity's true extent is known. [v6.75 audit v4 Fase B] Drift Wikidata: year_end drift 188y vs Wikidata Q148499. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q148499 ('Margraviate of Brandenburg').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_end drift 188y vs Wikidata Q148499",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/568"
+  },
+  {
+    "resource": "entity",
+    "id": 581,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: name_original in German; 'Pfalz' derives from Latin 'Palatium' (palace). ETHICS-002: The Electorate Palatinate played a catalytic role in the Thirty Years' War when Elector Frederick V accepted the Bohemian crown in 1619 (the 'Winter King'). The devastating consequences -- the sack of Heidelberg (1622), the transfer of the electoral dignity to Bavaria, and 30 years of war that killed approximately 8 million people in German lands -- can be traced partly to this decision. The later War of the Palatine Succession (1688-1697) saw Louis XIV's armies systematically destroy cities in the Palatinate, including Heidelberg, Mannheim, Speyer, and Worms, as a deliberate scorched-earth policy.\n\n[v6.31-wrong-polygon-reset] Electorate of the Palatinate was a relatively small HRE state ~20-50k km². Reverted from shared default polygon. Boundary reset to approximate circle (80km radius) around capital coordinates. Previous boundary was an over-reach of national (USA/RUS) polygon via faulty name/ISO matching. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 271y vs Wikidata Q22880. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q22880 ('Electoral Palatinate').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 271y vs Wikidata Q22880",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/581"
+  },
+  {
+    "resource": "entity",
+    "id": 590,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: The Eastern Gangas ruled Kalinga (modern Odisha) for nearly a millennium, making them one of the longest-lasting dynasties in Indian history. They built the Sun Temple at Konark (UNESCO World Heritage Site) and the Jagannath Temple at Puri, one of the holiest Hindu pilgrimage sites. The temple at Puri and its associated rituals were later appropriated and regulated by successive Muslim and British rulers. The Gajapati title they established continued to carry religious authority long after political power was lost. The dynasty's early history is poorly documented and contested among regional historians. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 580y vs Wikidata Q250515. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q250515 ('Eastern Ganga dynasty').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 580y vs Wikidata Q250515",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/590"
+  },
+  {
+    "resource": "entity",
+    "id": 593,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: Harsha's empire is unusually well-documented for an early medieval Indian polity, thanks to Banabhatta's Harshacharita (a court biography) and Xuanzang's detailed account of his visit. However, both sources are hagiographic and require critical reading. Harsha's religious policy -- initially a Shaivite, he later patronized Buddhism extensively -- is often oversimplified. His defeat by Pulakeshin II of the Badami Chalukyas at the battle of Narmada demonstrates the limits of north Indian power in the Deccan. The empire's complete disintegration upon his death without heir shows how personality-dependent these early medieval states were. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 106y vs Wikidata Q28109312. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q28109312 ('Pushyabhuti dynasty').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 106y vs Wikidata Q28109312",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/593"
+  },
+  {
+    "resource": "entity",
+    "id": 595,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: The Kingdom of Mysore encompasses two very different political eras: the Wodeyar dynasty (1399-1761, restored 1799-1947) and the Hyder Ali/Tipu Sultan interregnum (1761-1799). Tipu Sultan is a deeply polarizing figure in modern Indian politics -- celebrated as a freedom fighter against the British by some, condemned for forced conversions and violence against Hindu and Christian populations (particularly in Kodagu and Malabar) by others. Both perspectives have documentary support. The kingdom's encounter with French and British imperialism shaped the geopolitics of southern India. Tipu's rocket technology influenced British military innovation. [v6.75 audit v4 Fase B] Drift Wikidata: year_end drift 151y vs Wikidata Q266923. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q266923 ('Kingdom of Mysore').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_end drift 151y vs Wikidata Q266923",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/595"
+  },
+  {
+    "resource": "entity",
+    "id": 600,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: The Dambadeniya Kingdom represents the Sinhalese political recovery after the Chola and Kalinga invasions destroyed the Polonnaruwa kingdom (already in database). The shifting capitals (Dambadeniya, Yapahuwa, Kurunegala, Gampola, Kotte) reflect political instability and external pressure. The period saw the consolidation of Theravada Buddhist identity as a defining feature of Sinhalese political legitimacy, which later contributed to ethnic tensions with Tamil populations. The Tooth Relic's movements between capitals was a key legitimation device, as possessing it was considered essential to rightful sovereignty. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 180y vs Wikidata Q1589163. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q1589163 ('Kingdom of Kotte').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 180y vs Wikidata Q1589163",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/600"
+  },
+  {
+    "resource": "entity",
+    "id": 607,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: The Kingdom of Khotan was one of the principal oasis states of the Tarim Basin and a critical node on the Silk Road. It was the most significant centre of Buddhism in Central Asia, with a tradition of Indian-influenced art and scholarship. The kingdom's population was predominantly Iranian (Saka) in the early period, and the Khotanese Saka language is well-attested from manuscripts found at Dunhuang and in local archaeological sites. The Turkic Islamic conquest by the Karakhanid Yusuf Qadir Khan (c. 1006) ended over a millennium of Buddhist civilization. The Islamization of the Tarim Basin is a sensitive topic given current PRC policies in Xinjiang. The Buddhist heritage of the region is sometimes used to challenge Uyghur claims to the territory, which is historically misleading -- the modern population is the product of centuries of demographic change. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 256y vs Wikidata Q914898. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q914898 ('Kingdom of Khotan').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 256y vs Wikidata Q914898",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/607"
+  },
+  {
+    "resource": "entity",
+    "id": 608,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: Moghulistan (the eastern successor of the Chagatai Khanate, already in database) is distinct from its parent entity. The Chinggisid legitimacy the Moghul khans claimed was increasingly nominal as actual power shifted to tribal emirs. The Islamization of the eastern Chagataid realm, particularly the Tarim Basin oases, was completed during this period. The Yarkand Khanate phase (1514-1680) saw the rise of Sufi Naqshbandi khojas who eventually displaced secular authority entirely. This Sufi political tradition shaped the region's character until the Qing conquest and remains culturally significant in Uyghur identity.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=2345km / edge=0km from capital (exceeded thresholds). Regenerated as 300.0km radius circle. Reverted 2026-04-17. [v6.75 audit v4 Fase B] Drift Wikidata: year_end drift 110y vs Wikidata Q1191125. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q1191125 ('Moghulistan').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_end drift 110y vs Wikidata Q1191125",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/608"
+  },
+  {
+    "resource": "entity",
+    "id": 614,
+    "field": "ethical_notes",
+    "new_value": "ETHICS-001: name_original in Ancient Greek. The Antigonid dynasty ruled Macedon as one of the Diadochi successor states after Alexander the Great's death. ETHICS-002: The question of whether ancient Macedonians were 'Greek' remains politically charged due to the modern North Macedonia naming dispute. Ancient sources are ambiguous — Macedonians participated in Greek games (implying Greek identity) but were also called barbaroi by some Athenian orators. The database records both perspectives without arbitrating. ETHICS-003: The Roman destruction of the Antigonid kingdom at Pydna (168 BCE) and subsequent partition of Macedonia into four republics was a deliberate erasure of Macedonian political identity. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 502y vs Wikidata Q83958. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q83958 ('Macedonia').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 502y vs Wikidata Q83958",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/614"
+  },
+  {
+    "resource": "entity",
+    "id": 645,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: The Teke Kingdom (Anziku/Tio Kingdom) controlled trade on the upper Congo River for centuries before European colonization. The Makoko (king) Iloo I signed a treaty with Pierre Savorgnan de Brazza in 1880 that ostensibly placed the kingdom under French 'protection' but was used by France to claim sovereignty over the entire region — founding what became French Congo (later Republic of Congo). The treaty's terms were not accurately communicated to the Makoko, who understood it as a limited commercial agreement, not a cession of sovereignty. Brazzaville, the colonial capital built on Teke land, is named after the French colonizer rather than any African figure. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 300y vs Wikidata Q4778463. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q4778463 ('Anziku Kingdom').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 300y vs Wikidata Q4778463",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/645"
+  },
+  {
+    "resource": "entity",
+    "id": 685,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: Tidore was Ternate's principal rival in the Spice Islands. The sultanate allied with Spain and Portugal against Ternate's Dutch-allied strategy, demonstrating that indigenous polities actively played European powers against each other. Tidore's territorial claims extended to parts of Halmahera, coastal Papua, and the Raja Ampat Islands -- making it one of the largest pre-colonial polities in eastern Indonesia. The rivalry between Ternate and Tidore predates European arrival and should not be reduced to a proxy conflict between European powers.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon 5985km from capital (exceeded 3000km threshold). Regenerated as 200.0km radius circle. Reverted 2026-04-17. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 369y vs Wikidata Q4118614. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q4118614 ('Sultanate of Tidore').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 369y vs Wikidata Q4118614",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/685"
+  },
+  {
+    "resource": "entity",
+    "id": 703,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: The Rajahnate of Maynila was an Islamic polity at the mouth of the Pasig River, predating and directly displaced by Spanish colonization. Rajah Sulayman III resisted Spanish conquest and was killed defending his city. Spanish sources describe Maynila as a thriving Muslim trading settlement with connections to Brunei, Borneo, and the broader Malay-Islamic world. The conversion of Manila's rulers to Islam (from Brunei influence) and the subsequent Spanish re-conquest and Christianization represent a violent erasure of an Islamic layer of Philippine history that Filipino historiography has only recently begun to recover. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 242y vs Wikidata Q4401247. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q4401247 ('Maynila').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 242y vs Wikidata Q4401247",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/703"
+  },
+  {
+    "resource": "entity",
+    "id": 746,
+    "field": "ethical_notes",
+    "new_value": "The Sultanate (later Emirate) of Harar was the most important center of Islamic learning and commerce in the Horn of Africa. The walled city of Harar, now a UNESCO World Heritage Site, represents a distinct urban Islamic culture in eastern Ethiopia. Harar's incorporation into the Ethiopian Empire by Menelik II in 1887 is viewed differently by Harari and Ethiopian narratives: Ethiopian historiography frames it as national unification, while Harari traditions experience it as the conquest and subjugation of an independent Islamic state. The city's unique Harari language and architectural tradition demonstrate the existence of a distinct political and cultural entity. The representation of Harar must acknowledge both its significance in Islamic African history and the impact of its forcible incorporation into Christian-dominated Ethiopia. [v6.75 audit v4 Fase B] Drift Wikidata: year_end drift 310y vs Wikidata Q7636797. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q7636797 ('Sultanate of Harar').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_end drift 310y vs Wikidata Q7636797",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/746"
+  },
+  {
+    "resource": "entity",
+    "id": 806,
+    "field": "ethical_notes",
+    "new_value": "Ebla (Tell Mardikh, northwestern Syria) was a major Bronze Age commercial empire whose existence was unknown until the 1968 discovery of the site and the 1974–1976 discovery of c. 17,000 cuneiform tablets in the Royal Palace G. The tablets are written in Sumerian and in a previously unknown Semitic language (Eblaite). Early sensational claims (Pettinato) of patriarchal-biblical names in the tablets were largely retracted under more sober readings (Archi); the affair illustrates how readily ancient sources are mined for modern theological agendas. Ebla was destroyed twice (c. 2300 BCE, debated as Sargon or Naram-Sin; and c. 1600 BCE by Hittite forces under Mursili I or earlier). The polygon roughly reflects the kingdom's height under Ar-Ennum and Ibrium. Tell Mardikh has been damaged by the post-2011 Syrian conflict and looting. [v6.75 audit v4 Fase B] Drift Wikidata: year_end drift 640y vs Wikidata Q5743. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q5743 ('Ebla').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_end drift 640y vs Wikidata Q5743",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/806"
+  },
+  {
+    "resource": "entity",
+    "id": 844,
+    "field": "ethical_notes",
+    "new_value": "Yatenga was one of the major Mossi kingdoms of the upper Volta basin (modern northern Burkina Faso), founded around 1540 by Naaba Yadega. The Yatenga Naaba ruled through a hierarchy of district chiefs and a ministerial council; succession alternated among royal segments, frequently producing civil wars. Yatenga raided neighbouring Songhai/Dogon and Fulani settlements for captives and participated in the Sahelian slave trade. Sources: Michel Izard's foundational ethnohistorical work, Mossi oral traditions transmitted by professional griots, and French colonial reports. French colonial forces under Louis Voulet and Charles Chanoine occupied Ouahigouya in 1895, and Yatenga was incorporated into the colony of Haute-Volta. The polygon approximates the late-19th-century kingdom. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 140y vs Wikidata Q23668714. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q23668714 ('Yatenga Kingdom').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 140y vs Wikidata Q23668714",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/844"
+  },
+  {
+    "resource": "entity",
+    "id": 856,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: Samoan political organization was based on the fa'amatai (chiefly system), where authority derived from the matai (titled chiefs) and consensus-based decision making through the fono (council). Western historiography has struggled to represent this system accurately, often imposing European concepts of 'kingdom' or 'confederation' that distort the indigenous political structure. The four paramount titles (Tui Atua, Tui A'ana, Gatoaitele, Tamasoali'i) held by the Tafa'ifa (holder of all four titles) constituted the closest Samoan equivalent to centralized authority, but power was distributed and contested in ways that defy European political categories. The malo (government/authority) shifted between rival factions. German, British, and American colonial interests in the late 19th century exploited these internal rivalries, culminating in the Tripartite Convention of 1899 that divided Samoa between Germany and the United States without Samoan consent. Oral traditions (fagogo, solo) and the tala o le vavau (stories of the past) are primary historical sources. The work of Samoan scholars like Albert Wendt and Malama Meleisea is essential for indigenous perspectives.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon 9395km from capital (exceeded 3000km threshold). Regenerated as 250.0km radius circle. Reverted 2026-04-17. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 608y vs Wikidata Q136527950. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q136527950 ('Kingdom of Samoa').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 608y vs Wikidata Q136527950",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/856"
+  },
+  {
+    "resource": "entity",
+    "id": 864,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: 'Lin-Yi' (林邑) is the Chinese exonym recorded in the Book of Han and Book of Jin for what became the northern Cham polities — the earliest attested independent state in central Vietnam after revolting from Han China in 192 CE under Khu Lien. The local name is uncertain; the polity is the direct proto-Cham phase preceding the Champa mandala of Indrapura-Vijaya-Panduranga. Vietnamese and Chinese sources dominate the record because no in-situ Cham epigraphy from this phase survives in usable quantity. The Sui conquest of 605 ended Lin-Yi as a distinct political label; successor polities reorganised as 'Huanwang' (環王) and 'Champa' proper. Keeping Lin-Yi as a distinct entity resists the Vietnamese nationalist flattening of Cham history into a single ethnically unified 'Champa 192-1832' narrative. [v6.75 audit v4 Fase B] Drift Wikidata: year_end drift 1227y vs Wikidata Q216786. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q216786 ('Champa').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_end drift 1227y vs Wikidata Q216786",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/864"
+  },
+  {
+    "resource": "entity",
+    "id": 872,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: Thaton (Sudhammavati) is the semi-legendary Mon Theravada Buddhist kingdom of Lower Burma destroyed by Anawrahta of Pagan in 1057 CE, an event that supposedly transferred the Pali Tipitaka, Mon architectural traditions and thousands of Mon monks, artisans and captives to Pagan. Michael Aung-Thwin's The Mists of Ramañña (2005) argues that much of the received Mon-Thaton narrative is a later Burmese-Mon literary elaboration, but archaeology confirms a Mon polity of some sort. Confidence is explicitly low because of this active historiographic dispute — honesty about uncertainty is more valuable than a fake-precise founding date. Anawrahta's 1057 conquest is, however, well-attested in Burmese, Mon and epigraphic sources. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 600y vs Wikidata Q1651832. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q1651832 ('Thaton Kingdom').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 600y vs Wikidata Q1651832",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/872"
+  },
+  {
+    "resource": "entity",
+    "id": 883,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: Caboloan (also called Luyag na Kaboloan, or Pangasinan) is the Pangasinan polity of Luzon's Lingayen Gulf, attested in Ming dynastic histories (明史) as 'Feng-chia-hsi-lan' / 馮嘉施蘭. Ming Yongle emperor recognised a ruler named Kamayin with a diplomatic mission in 1406-1411; a second mission in 1417 under Taymey is also recorded. Caboloan was absorbed into Spanish Pangasinan after 1571 conquests and the 1660-1661 Malong Revolt. Spanish colonial and later American colonial historiography elided Caboloan into 'pre-Hispanic Filipino barangays'; recognising it as a polity with external diplomatic relations reclaims indigenous statehood. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 181y vs Wikidata Q22936401. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q22936401 ('Pangasinan (historical polity)').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 181y vs Wikidata Q22936401",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/883"
+  },
+  {
+    "resource": "entity",
+    "id": 885,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: Samudera Pasai is the first Islamic sultanate of maritime Southeast Asia and arguably the mother polity of 'Sumatra' as a toponym (Marco Polo's 'Samara' derives from it). Its founder Sultan Malik al-Saleh converted c. 1267; Ibn Battuta visited in 1345-46 and described the court as a centre of Shafi'i learning. Pasai mediated the Islamisation of the Malay world before Melaka took over that role. The Aceh Sultanate absorbed Pasai in 1521; later Acehnese historiography subsumed Pasai's independent identity. Recognising Pasai separately restores an under-told chapter in the Islamic history of Southeast Asia. [v6.75 audit v4 Fase B] Drift Wikidata: year_end drift 254y vs Wikidata Q3284315. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q3284315 ('Samudra Pasai').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_end drift 254y vs Wikidata Q3284315",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/885"
+  },
+  {
+    "resource": "entity",
+    "id": 904,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: The Martaban Kingdom (Ramanyadesa) is the brief Mon restoration polity of Lower Burma founded by Wareru (a Mon-Shan former tax collector of Sukhothai service) in 1287 after the Mongol pressure broke the Pagan dynasty. Martaban was the capital before the seat moved to Pegu in 1369, at which point the polity is usually renamed Hanthawaddy (Pegu, already in DB). This entity captures the first 82 years of the Mon restoration, distinct from the 1369+ Pegu phase. Historiography tends to collapse the two, losing political texture. [v6.75 audit v4 Fase B] Drift Wikidata: year_end drift 183y vs Wikidata Q1572529. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q1572529 ('Hanthawaddy Kingdom').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_end drift 183y vs Wikidata Q1572529",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/904"
+  },
+  {
+    "resource": "entity",
+    "id": 973,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: Kerma is one of Africa's earliest urban civilizations and Egypt's first serious rival to the south. Egyptian sources called it 'Kush' and depicted Kermans as enemies in royal propaganda — a perspective that long dominated historiography. Kerma's own record is archaeological, including the massive Western Deffufa mud-brick temple and elite tumulus burials with retainer sacrifices. Western scholarship (Reisner, early 20th c.) initially attributed Kerma's achievements to hypothetical 'Egyptian colonists', a racist framework refuted by Bonnet's excavations from 1977. The kingdom was destroyed by Thutmose I of Egypt c.1500 BCE, initiating centuries of Egyptian occupation of Nubia. Separate entity from later Napatan/Meroitic Kush because the material culture, capital, and political system were distinct. [v6.75 audit v4 Fase B] Drift Wikidata: year_start drift 1000y vs Wikidata Q1739282. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q1739282 ('Kerma kingdom').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_start drift 1000y vs Wikidata Q1739282",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/973"
+  },
+  {
+    "resource": "entity",
+    "id": 997,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: The Nok culture of central Nigeria is the earliest known producer of large-scale terracotta sculpture in sub-Saharan Africa and one of the earliest iron-smelting societies in West Africa (evidence from c.500 BCE, possibly earlier). Discovered by tin miners in 1928 and systematically excavated only from 2005 onward by the Goethe University Frankfurt / National Commission for Museums and Monuments Nigeria joint project. The political structure of Nok society is unknown — it may have been acephalous villages rather than a state. I use entity_type='culture' to reflect this. ETHICS — SEVERE LOOTING: from the 1990s, illegal excavation devastated Nok sites. Thousands of terracotta heads were looted and sold on the European art market (Brussels was a major hub). Nigerian authorities have sought restitution. The Louvre's 2000 acquisition of two Nok pieces provoked a major diplomatic dispute. Many authentic pieces in Western collections were looted after 1970 (Unesco Convention). [v6.75 audit v4 Fase B] Drift Wikidata: year_end drift 501y vs Wikidata Q927291. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q927291 ('Nok culture').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_end drift 501y vs Wikidata Q927291",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/997"
+  },
+  {
+    "resource": "entity",
+    "id": 1009,
+    "field": "ethical_notes",
+    "new_value": "ETHICS: IMPORTANT: the existing DB has 'Maqdishaw' (batch 24 africa_medieval) — need to verify coverage. The DB 'Maqdishaw' entry covers the city as a Swahili-coast polity but the PRE-1270 phase (Arab/Persian-Somali merchant oligarchy governed by a qadi rather than sultan, described by al-Idrisi 1154 and al-Dimashqi 1300) is distinct from the later Fakhr ad-Din Sultanate (1270-1500) that the DB entry focuses on. This phase is the one described by Ibn Battuta's visit 1331, where Mogadishu had just recently transitioned from qadi-merchant government to sultanate. If DB's 'Maqdishaw' covers 900-1270 already, this should be skipped — flagged in README. Sources needed: the Kitab al-Zunuj (Book of the Zanj), a local chronicle. [v6.75 audit v4 Fase B] Drift Wikidata: year_end drift 330y vs Wikidata Q861784. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q861784 ('Sultanate of Mogadishu').",
+    "rationale": "HIGH drift annotation (audit v4 Round 5): year_end drift 330y vs Wikidata Q861784",
+    "source": "Fase B drift report HIGH",
+    "audit_ref": "v4/round5/high_drift/1009"
+  }
+]

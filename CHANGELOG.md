@@ -2,6 +2,22 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.75.0] - 2026-04-19
+
+**Tema**: *Audit v4 Fase C Round 5 — HIGH drift bulk ethical_notes annotation*
+
+54 entità con drift HIGH significativo (year delta > 100y O coord delta > 200km) annotate con `[v6.75 audit v4 Fase B]` block in `ethical_notes`. Esclude le 2 già annotate in v6.71 (Ugarit, Troy).
+
+Pattern: AtlasPI mantiene il proprio dato (più preciso per polity-specific era), ma ora documenta esplicitamente la differenza vs Wikidata per agenti AI consumer.
+
+Esempi annotati:
+- Achaemenidi capital coord drift vs Wikidata (Persepoli vs Pasargade)
+- Khazars year_end (1048 AtlasPI vs 969 Wikidata convention)
+- Aksum year_start (100 AtlasPI vs -400 Wikidata pre-D'mt convention — già auditato in v6.65)
+- Various sultanate/khanate end-date conventions
+
+---
+
 ## [v6.74.0] - 2026-04-19
 
 **Tema**: *Audit v4 Fase C Round 4 — score 0.60-0.75 conservative auto-accept*
