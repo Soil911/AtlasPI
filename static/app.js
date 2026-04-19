@@ -1343,6 +1343,37 @@ function hashHue(id) {
 window.hashHue = hashHue;
 
 // ─── Mappa ──────────────────────────────────────────────────────
+// v6.90 A+: HSL per-entity boundary rendering (spec §5).
+// ETICHICS-011: palette arbitraria (hash stateless) — nessuna gerarchia
+// coloniale/indigena. dashArray preservato per status='disputed' come
+// secondo canale visivo (trasparenza dell'incertezza — CLAUDE.md §3).
+
+let _selectedEntityId = null;
+window.getSelectedEntityId = () => _selectedEntityId;
+window.setSelectedEntityId = (id) => { _selectedEntityId = id; };
+
+function computeBoundaryStyle(e, state) {
+  const hue = hashHue(e.id);
+  const real = isReal(e);
+  const selected = state.selected;
+  const hovered = state.hovered;
+  const someoneSelected = _selectedEntityId != null;
+  const fillAlpha = 0.28 * (selected ? 1.4 : hovered ? 1.2 : 1);
+  // ETHICS-011: dashArray priority: disputed > approximate > solid.
+  // Disputed sempre '6,4' (anche quando selected — la disputedness non va nascosta).
+  let dashArray = null;
+  if (e.status === 'disputed') dashArray = '6,4';
+  else if (!real) dashArray = '4,3';
+  return {
+    fillColor: `hsla(${hue}, 55%, 55%, ${fillAlpha.toFixed(3)})`,
+    fillOpacity: 1,  // alpha is in color
+    color:       `hsl(${hue}, 55%, ${selected ? 70 : 62}%)`,
+    weight:      selected ? 2 : hovered ? 1.3 : 0.9,
+    lineJoin:    'round',
+    opacity:     (someoneSelected && !selected && !hovered) ? 0.55 : 1,
+    dashArray
+  };
+}
 
 function renderMap(entities) {
   layerGroup.clearLayers();
@@ -1366,56 +1397,71 @@ function renderMap(entities) {
     : L.layerGroup(); // fallback if plugin not loaded
 
   entities.forEach(e => {
-    const c = COLORS[e.status] || '#8b949e';
+    const hue = hashHue(e.id);
+    const isSel = e.id === _selectedEntityId;
     try {
       const geo = e.boundary_geojson;
 
       if (geo && geo.type === 'Point') {
         const [lon, lat] = geo.coordinates;
+        // Spec §5 capital marker: r=2.2/3.5, fill #c0cad6/accent, stroke #0a0d11
         const m = L.circleMarker([lat, lon], {
-          radius: 8, fillColor: c, color: '#fff', weight: 1.5, fillOpacity: 0.85,
+          radius: isSel ? 3.5 : 2.2,
+          fillColor: isSel ? 'var(--accent)' : '#c0cad6',
+          color: '#0a0d11', weight: 1, fillOpacity: 1,
         });
+        // Re-apply con CSS variable fallback (SVG non risolve var())
+        if (isSel) m.setStyle({ fillColor: getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#e8b14a' });
         m.bindTooltip(richTooltip(e), { direction: 'top' });
         m.on('click', () => showDetail(e.id));
         layerGroup.addLayer(m);
       } else if (geo && (geo.type === 'Polygon' || geo.type === 'MultiPolygon')) {
-        const real = isReal(e);
-        const layer = L.geoJSON(geo, {
-          style: {
-            fillColor: c, fillOpacity: real ? 0.18 : 0.10,
-            color: c, weight: real ? 2 : 1.5,
-            dashArray: e.status === 'disputed' ? '6,4' : (real ? null : '4,3'),
-            opacity: real ? 0.8 : 0.5,
-          },
-        });
+        const baseStyle = computeBoundaryStyle(e, { selected: isSel, hovered: false });
+        const layer = L.geoJSON(geo, { style: baseStyle });
         layer.bindTooltip(richTooltip(e), { sticky: true });
         layer.on('click', () => showDetail(e.id));
+        // Hover state via setStyle — niente re-render completo (CLS-safe)
+        layer.on('mouseover', () => {
+          const hoverStyle = computeBoundaryStyle(e, { selected: isSel, hovered: true });
+          layer.setStyle(hoverStyle);
+        });
+        layer.on('mouseout', () => {
+          layer.setStyle(computeBoundaryStyle(e, { selected: isSel, hovered: false }));
+        });
         layerGroup.addLayer(layer);
 
+        // Label entità (spec §5): Inter 8.5/11px, #a0a9b5/#fff, weight 400/600
         const center = layer.getBounds().getCenter();
+        const labelColor = isSel ? '#ffffff' : '#a0a9b5';
+        const labelSize = isSel ? 11 : 8.5;
+        const labelWeight = isSel ? 600 : 400;
         layerGroup.addLayer(L.marker(center, {
           icon: L.divIcon({
-            className: '',
-            html: `<div style="color:${c};font-size:11px;font-weight:600;text-shadow:0 0 4px #000,0 0 2px #000;white-space:nowrap;pointer-events:none">${esc(e.name_original)}</div>`,
+            className: 'entity-map-label',
+            html: `<div style="color:${labelColor};font-family:'Inter',-apple-system,sans-serif;font-size:${labelSize}px;font-weight:${labelWeight};letter-spacing:0.4px;text-transform:uppercase;text-shadow:0 0 4px #000,0 0 2px #000;white-space:nowrap;pointer-events:none">${esc(e.name_original)}</div>`,
             iconSize: null, iconAnchor: [0, 0],
           }),
           interactive: false,
         }));
       } else if (e.capital && e.capital.lat && e.capital.lon) {
-        // No boundary GeoJSON — show capital as a clustered marker
+        // No boundary — capital cluster marker (spec §5)
+        const capitalFill = isSel ? (getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#e8b14a') : '#c0cad6';
         const m = L.circleMarker([e.capital.lat, e.capital.lon], {
-          radius: 5, fillColor: c, color: c, weight: 1, fillOpacity: 0.7,
+          radius: isSel ? 3.5 : 2.2,
+          fillColor: capitalFill,
+          color: '#0a0d11', weight: 1, fillOpacity: 1,
           className: 'capital-marker',
         });
         m.bindTooltip(richTooltip(e), { direction: 'top' });
         m.on('click', () => showDetail(e.id));
         clusterGroup.addLayer(m);
 
-        // Label for larger zoom levels
+        // Label a cluster-zoom level
+        const labelColor = isSel ? '#ffffff' : '#a0a9b5';
         clusterGroup.addLayer(L.marker([e.capital.lat, e.capital.lon], {
           icon: L.divIcon({
             className: 'capital-label',
-            html: `<div style="color:${c};font-size:9px;font-weight:500;text-shadow:0 0 3px #000,0 0 2px #000;white-space:nowrap;pointer-events:none;opacity:0.8">${esc(e.name_original)}</div>`,
+            html: `<div style="color:${labelColor};font-family:'Inter',-apple-system,sans-serif;font-size:8.5px;font-weight:500;letter-spacing:0.3px;text-transform:uppercase;text-shadow:0 0 3px #000,0 0 2px #000;white-space:nowrap;pointer-events:none;opacity:0.85">${esc(e.name_original)}</div>`,
             iconSize: null, iconAnchor: [-6, 3],
           }),
           interactive: false,
@@ -1461,6 +1507,13 @@ async function showDetail(id) {
   if (info) info.style.display = 'none';
 
   pushUrlState({ entity: id });
+
+  // v6.90 A+: seleziona entità → HSL boundary style si aggiorna (spec §5)
+  if (typeof window.setSelectedEntityId === 'function') {
+    window.setSelectedEntityId(id);
+    // re-render map applicando alpha 0.55 alle non-selected
+    if (typeof applyFilters === 'function') applyFilters();
+  }
 
   const e = await loadDetail(id);
   // v6.66 FIX 3: se loadDetail fallisce, sostituiamo lo spinner con un
@@ -2121,6 +2174,11 @@ function closeDetail() {
   const info = document.getElementById('map-info');
   if (info) info.style.display = '';
   pushUrlState();
+  // v6.90 A+: deselect entity → full-alpha rendering restored
+  if (typeof window.setSelectedEntityId === 'function') {
+    window.setSelectedEntityId(null);
+    if (typeof applyFilters === 'function') applyFilters();
+  }
 }
 
 // ─── Error toast ────────────────────────────────────────────────
