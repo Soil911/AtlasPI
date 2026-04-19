@@ -1,40 +1,78 @@
 /* AtlasPI — Stile interfaccia */
 
-/* ─── Dark theme (default) ────────────────────────────────────── */
+/* ─── A+ design tokens (v6.90 — ADR-006) ───────────────────────
+ * Ethic: la palette HSL ambra/ocra evoca pergamena editoriale,
+ * non comunica gerarchie coloniali vs indigene. Vedi ETHICS-011.
+ * Legacy tokens (--bg-dark, --bg-sidebar, --bg-card, --accent-warm)
+ * sono aliased per retro-compat delle ~3000 righe preesistenti.
+ */
 :root, [data-theme="dark"] {
-  --bg-dark: #0d1117;
-  --bg-sidebar: #161b22;
-  --bg-card: #1c2333;
-  --bg-card-hover: #243044;
-  --accent: #58a6ff;
-  --accent-light: #79c0ff;
-  --accent-warm: #d29922;
-  --text: #e6edf3;
-  --text-muted: #8b949e;
-  --confirmed: #3fb950;
-  --uncertain: #d29922;
-  --disputed: #f85149;
-  --border: #30363d;
-  --shadow: rgba(0,0,0,0.4);
+  /* Backgrounds */
+  --bg:         #0f1318;
+  --panel:      #151a21;
+  --panel-2:    #1b2028;
+  --border:     #242a34;
+
+  /* Text */
+  --text:       #e9edf2;
+  --text-muted: #8a93a0;
+  --text-dim:   #6b7380;
+
+  /* Accent (unico — brand ambra editoriale) */
+  --accent:     #e8b14a;
+  --accent-ink: #1a1208;
+
+  /* Status semantici */
+  --confirmed:  #6eb58a;
+  --uncertain:  #d4a13a;
+  --disputed:   #d57770;
+
+  /* Tipografia */
+  --font-ui:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+
+  /* Spacing scale (usa selettivo in nuove regole) */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 22px;
+  --s-6: 32px;
+
+  /* Legacy aliases (back-compat, non usarli in nuove regole) */
+  --bg-dark:        var(--bg);
+  --bg-sidebar:     var(--panel);
+  --bg-card:        var(--panel-2);
+  --bg-card-hover:  #243044;
+  --accent-light:   #f0c770;
+  --accent-warm:    var(--accent);
+  --shadow:         rgba(0,0,0,0.4);
   --leaflet-filter: none;
 }
 
 /* ─── Light theme ──────────────────────────────────────────────── */
 [data-theme="light"] {
-  --bg-dark: #ffffff;
-  --bg-sidebar: #f6f8fa;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f0f3f6;
-  --accent: #0969da;
-  --accent-light: #218bff;
-  --accent-warm: #bf8700;
-  --text: #1f2328;
-  --text-muted: #656d76;
-  --confirmed: #1a7f37;
-  --uncertain: #9a6700;
-  --disputed: #cf222e;
-  --border: #d0d7de;
-  --shadow: rgba(0,0,0,0.1);
+  --bg:         #faf8f3;
+  --panel:      #ffffff;
+  --panel-2:    #f3efe6;
+  --border:     #e3dcc9;
+  --text:       #1a1a1a;
+  --text-muted: #6b6b6b;
+  --text-dim:   #9a9a9a;
+  --accent:     #b38420;
+  --accent-ink: #ffffff;
+  --confirmed:  #3a7a5a;
+  --uncertain:  #9a7a20;
+  --disputed:   #b04a3f;
+
+  /* Legacy aliases */
+  --bg-dark:        var(--bg);
+  --bg-sidebar:     var(--panel);
+  --bg-card:        var(--panel);
+  --bg-card-hover:  var(--panel-2);
+  --accent-light:   #d4a04a;
+  --accent-warm:    var(--accent);
+  --shadow:         rgba(0,0,0,0.1);
   --leaflet-filter: invert(1) hue-rotate(180deg) brightness(1.1) contrast(0.9);
 }
 
@@ -66,8 +104,8 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  background: var(--bg-dark);
+  font-family: var(--font-ui);
+  background: var(--bg);
   color: var(--text);
   height: 100vh;
   display: flex;
