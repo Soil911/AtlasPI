@@ -1302,36 +1302,45 @@ function applyFilters() {
 
 function renderResults(entities) {
   const el = document.getElementById('results-list');
+  const countEl = document.getElementById('on-map-count');
+  if (countEl) countEl.textContent = entities.length.toLocaleString('en-US').replace(/,/g, '.');
+
   if (!entities.length) {
     el.innerHTML = `<p class="placeholder">${t('no_results')}</p>`;
     return;
   }
 
-  const countInfo = `<div class="results-count">${entities.length} / ${allEntities.length} ${t('entities')}</div>`;
-
-  el.innerHTML = countInfo + entities.map((e, idx) => {
-    const pct = Math.round(e.confidence_score * 100);
-    const real = isReal(e);
-    const icon = TYPE_ICONS[e.entity_type] || '📍';
+  // v6.90: editorial entity-row layout (spec §3). Swatch usa HSL per-id (hashHue).
+  el.innerHTML = entities.map((e, idx) => {
+    const hue = hashHue(e.id);
+    const rangeEnd = e.year_end ? fmtY(e.year_end) : t('today');
+    const range = `${fmtY(e.year_start)}\u2013${rangeEnd}`;
     return `
-    <div class="result-card ${e.status}" data-id="${e.id}" data-idx="${idx}" role="listitem" tabindex="0">
-      <div class="name"><span class="type-icon">${icon}</span> ${esc(e.name_original)}${real ? '' : ' <span class="precision-tag approx">~</span>'}</div>
-      <div class="meta">
-        ${e.entity_type} &middot;
-        ${fmtY(e.year_start)}\u2013${e.year_end ? fmtY(e.year_end) : t('today')} &middot;
-        <span class="status-badge ${e.status}">${t(e.status)}</span>
-        &middot; ${pct}%
-      </div>
-      <div class="score-bar"><div class="score-fill" style="width:${pct}%;background:${COLORS[e.status]}"></div></div>
+    <div class="entity-row result-card ${e.status}" data-id="${e.id}" data-idx="${idx}" role="listitem" tabindex="0">
+      <span class="swatch" style="background:hsl(${hue}, 55%, 55%)" aria-hidden="true"></span>
+      <span class="entity-row__name">${esc(e.name_original)}</span>
+      <span class="range">${range}</span>
     </div>`;
   }).join('');
 
-  el.querySelectorAll('.result-card').forEach(card => {
-    const handler = () => showDetail(+card.dataset.id);
-    card.addEventListener('click', handler);
-    card.addEventListener('keydown', ev => { if (ev.key === 'Enter') handler(); });
+  // v6.90: dual-class .entity-row .result-card — preserva tutti i querySelector
+  // esistenti (.result-card in compare, scroll, keyboard navigation) intatti.
+  el.querySelectorAll('.entity-row').forEach(row => {
+    const handler = () => showDetail(+row.dataset.id);
+    row.addEventListener('click', handler);
+    row.addEventListener('keydown', ev => { if (ev.key === 'Enter') handler(); });
   });
 }
+
+// v6.90: hashHue helper — djb2 hash → HSL hue (0-359). ETICHICS-011: stateless,
+// no gerarchie culturali. Shared con renderMap (Phase 2.6) via window.hashHue.
+function hashHue(id) {
+  let h = 0;
+  const s = String(id);
+  for (let i = 0; i < s.length; i++) h = ((h << 5) - h) + s.charCodeAt(i);
+  return Math.abs(h) % 360;
+}
+window.hashHue = hashHue;
 
 // ─── Mappa ──────────────────────────────────────────────────────
 
