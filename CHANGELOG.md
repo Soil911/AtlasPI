@@ -2,6 +2,29 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.82.0] - 2026-04-19
+
+**Tema**: *Audit v4 Round 12 — Missing entities + Regnum Francorum extension*
+
+3 missing entities flaggate da audit v2 (rulers Napoleon/Nadir Shah/Charlemagne mancavano la entity corretta) ora coperte:
+
+### Nuove entities create
+
+- **id 1037** Premier Empire français (1804-1815, capital Paris, Q71084) — ora ruler Napoleon (se aggiunto in futuro) ha entity corretta.
+- **id 1038** افشاریان Afsharid (1736-1796, capital Mashhad, Q63149558) — Nadir Shah era senza entity matchabile.
+
+### Update entity esistente
+
+- **id 431 Regnum Francorum**: year_end esteso 751 → 800 per coprire il regno Carolingio pre-imperiale (Pippin il Breve 751-768 + Carlo Magno re 768-800). Il gap 751-800 era artificiale: il regno Franco non si interrompe nel 751, passa solo da Merovingi a Carolingi.
+
+### Stato
+
+- Total entities: 1034 → **1036** (+2 nuove)
+- Coverage Wikidata: 711 → **713** (le 2 nuove hanno QID dal seed)
+- Carolingian period coverage completo: id 89 Imperium Francorum (800-888 imperial) + id 431 Regnum Francorum (481-800, ora include Carolingian regal era)
+
+---
+
 ## [v6.80.0] - 2026-04-19
 
 **Tema**: *Audit v4 Round 10 — Sites NULL residual nearest-neighbor fallback*

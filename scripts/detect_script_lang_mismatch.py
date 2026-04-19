@@ -119,6 +119,12 @@ def main():
     entities = fetch_entities()
     print(f'Got {len(entities)} entities')
 
+    # v6.81 refined: false-positive filter.
+    # Many AtlasPI entities have name_original = "نام عربی / Latin Translit"
+    # The detector was flagging them because Latin chars > Arabic chars.
+    # Refined logic: count chars by script and require that:
+    # - if name contains ANY chars in the expected non-Latin script → OK (dual-name pattern)
+    # - mismatch only if name is PURELY in unexpected script (no native chars at all)
     mismatches = []
     for e in entities:
         name = e.get('name_original', '')
@@ -128,14 +134,58 @@ def main():
         detected = detect_script(name)
         expected = LANG_SCRIPT.get(lang)
         if expected and expected != 'Latin' and detected == 'Latin':
-            mismatches.append({
-                'id': e['id'],
-                'name': name,
-                'lang': lang,
-                'expected_script': expected,
-                'detected_script': detected,
-                'kind': 'latin_transliteration_for_native_script_lang',
-            })
+            # Count chars by script to check if expected script appears at all
+            counts_by_script = {}
+            for c in name:
+                if c.isspace() or c in '.,()[]{}\'"-:;/&|':
+                    continue
+                try:
+                    cname = unicodedata.name(c, '')
+                except Exception:
+                    continue
+                # Map char to script (same logic as detect_script)
+                if 'CJK' in cname or 'HIRAGANA' in cname or 'KATAKANA' in cname:
+                    k = 'CJK'
+                elif 'ARABIC' in cname:
+                    k = 'Arabic'
+                elif 'CYRILLIC' in cname:
+                    k = 'Cyrillic'
+                elif 'GREEK' in cname:
+                    k = 'Greek'
+                elif 'HEBREW' in cname:
+                    k = 'Hebrew'
+                elif any(s in cname for s in ('DEVANAGARI', 'BENGALI', 'TAMIL', 'TELUGU', 'KANNADA', 'MALAYALAM', 'GUJARATI', 'GURMUKHI', 'ORIYA', 'SINHALA')):
+                    k = 'Indic'
+                elif any(s in cname for s in ('THAI', 'KHMER', 'LAO', 'MYANMAR')):
+                    k = 'SE_Asian'
+                elif any(s in cname for s in ('CUNEIFORM', 'EGYPTIAN', 'OLD PERSIAN', 'UGARITIC', 'PHOENICIAN', 'ARAMAIC')):
+                    k = 'Ancient'
+                elif 'ETHIOPIC' in cname or 'MEROITIC' in cname:
+                    k = 'Ge_ez_Meroitic'
+                elif 'MONGOLIAN' in cname:
+                    k = 'Mongolian'
+                elif 'TIBETAN' in cname:
+                    k = 'Tibetan'
+                elif 'GEORGIAN' in cname or 'ARMENIAN' in cname:
+                    k = 'Caucasian'
+                elif 'LATIN' in cname:
+                    k = 'Latin'
+                else:
+                    k = 'Other'
+                counts_by_script[k] = counts_by_script.get(k, 0) + 1
+
+            # Mismatch ONLY if expected script has 0 chars in name (truly missing)
+            expected_count = counts_by_script.get(expected, 0)
+            if expected_count == 0:
+                mismatches.append({
+                    'id': e['id'],
+                    'name': name,
+                    'lang': lang,
+                    'expected_script': expected,
+                    'detected_script': detected,
+                    'expected_chars_count': 0,
+                    'kind': 'missing_native_script_chars',
+                })
 
     print(f'\nMismatches found: {len(mismatches)}')
     print('\nSample 15:')
