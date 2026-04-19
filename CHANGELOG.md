@@ -2,6 +2,27 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.74.0] - 2026-04-19
+
+**Tema**: *Audit v4 Fase C Round 4 — score 0.60-0.75 conservative auto-accept*
+
+Quarto round: estende cross-reference a mid-low band con criteri più stretti per evitare match dubbi.
+
+### Filtro applicato
+1. score ∈ [0.60, 0.75)
+2. AND entity attualmente NULL in prod
+3. AND ≥2 strong match_reasons (exact_label / type_exact / year_match)
+4. AND no QID conflict con prod
+5. AND dedup intra-batch (priority lowest entity_id)
+
+### Stato
+- 74 candidati range 0.60-0.75 → 46 con ≥2 strong reasons → 42 fresh after dedup
+- Entità con QID: 638 → **680** (+42)
+- Coverage: 61.7% → **65.8%**
+- Duplicate: 0 ✓
+
+---
+
 ## [v6.73.0] - 2026-04-18
 
 **Tema**: *Audit v4 Fase C Round 3 — mid-band Wikidata auto-accept (score 0.75-0.85)*
