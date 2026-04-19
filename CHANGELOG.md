@@ -2,6 +2,29 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.78.0] - 2026-04-19
+
+**Tema**: *Audit v4 Fase C Round 8 — Cities FK backfill + script/lang detector*
+
+### Cities FK backfill (PostGIS 3-pass)
+
+Pre-v6.78: 92/110 cities (84%) avevano `entity_id=NULL`. Pattern audit v2.
+
+3-pass strategy:
+1. **CAPITAL match**: city con `city_type='CAPITAL'` → entity con capital_lat/lon entro 0.5°. **35 nuovi link.**
+2. **Geo+temporal**: containment + founded_year overlap. **21 nuovi link.**
+3. **Geo-only fallback**: containment puro. **35 nuovi link** (= 21 → 88 dopo Pass 2 → 109 dopo Pass 3).
+
+Risultato: **109/110 cities linked (99.1%)**, 1 NULL residuo.
+
+### Script/lang mismatch detector
+
+Script `scripts/detect_script_lang_mismatch.py` produce `research_output/audit_v4/round8_script_lang_mismatch.json`. Detection è aggressiva (cattura entità con dual-name "native + Latin transliteration" trattando come Latin); il report serve come baseline per refinement.
+
+Findings preliminari: ~187 entità con lang non-Latin ma name_original detected come Latin (la maggior parte sono dual-name pattern, false positive). Per fix accurato serve filtro più sofisticato (es. "almeno N caratteri non-Latin presenti = OK") — rimandato a release successiva.
+
+---
+
 ## [v6.77.0] - 2026-04-19
 
 **Tema**: *Audit v4 Fase C Round 7 — Sites FK backfill (PostGIS geo+temporal)*
