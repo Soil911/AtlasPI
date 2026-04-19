@@ -2,6 +2,21 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.76.0] - 2026-04-19
+
+**Tema**: *Audit v4 Fase C Round 6 — no-match pickup via English name_variants*
+
+188 entità senza match Wikidata Fase A. Strategia pickup: per ognuna cerca su Wikidata `wbsearchentities` usando il `name_variants` con `lang='en'` (se presente). Heuristic accept: label match esatta + descrizione Wikidata non contiene blacklist (film, song, album, asteroid, character, player, ecc.).
+
+Risultato: **31 entità** matchate (16% pickup rate).
+
+### Stato
+- Entità con QID: 680 → **711** (+31)
+- Coverage: 65.8% → **68.8%**
+- Duplicate: 0 ✓
+
+---
+
 ## [v6.75.0] - 2026-04-19
 
 **Tema**: *Audit v4 Fase C Round 5 — HIGH drift bulk ethical_notes annotation*
