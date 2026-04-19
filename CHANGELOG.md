@@ -2,6 +2,30 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.83.0] - 2026-04-19
+
+**Tema**: *Audit v4 Round 11 — Script/lang detector refined + native names from Wikidata*
+
+Round 11 chiude il gap del detector v6.78 (187 falsi positivi su lang=ar):
+
+### Detector refined
+
+`scripts/detect_script_lang_mismatch.py` ora filtra TRUE positive: mismatch SOLO se nessun carattere nello script atteso è presente. Il pattern dual-name "نام عربی / Latin Translit" non triggera più.
+
+Risultato: da 187 → 418 candidati true. Pattern più alto perché il refined è più preciso e cattura tutte le entità con missing native script (anche dove il vecchio detector cliccava sulle dual-name come falsi positivi).
+
+### Native names from Wikidata
+
+`scripts/fix_script_lang_via_wikidata.py` per ogni candidate fetcha label nativo da Wikidata `Special:EntityData/{qid}.json` e propone fix.
+
+Risultato: 186 patches generati (su 418 candidate, gli altri skipped per no QID o no native label disponibile in Wikidata):
+- **17 effettivamente cambiati** (AtlasPI aveva trascrizione, Wikidata ha originale)
+- **169 skipped_unchanged** (AtlasPI già aveva il nome corretto — conferma qualità seed)
+
+Il dataset ETHICS-001 baseline è ora più solidamente verificato.
+
+---
+
 ## [v6.82.0] - 2026-04-19
 
 **Tema**: *Audit v4 Round 12 — Missing entities + Regnum Francorum extension*
