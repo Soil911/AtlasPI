@@ -13,6 +13,25 @@
 
 ## Versioni completate
 
+### v6.90 -- UI redesign A+ (2026-04-19)
+- Completo redesign della pagina /app con palette ambra editoriale
+  (`#e8b14a`), tipografia Playfair Display italic per nomi entità, year
+  hero in header, sidebar con sezioni collassabili native (`<details>`),
+  timeline bar 60px al bottom con era ticks, Leaflet HSL per-entity
+  boundary rendering (stateless hash = nessuna gerarchia culturale).
+- Preservato `data-section="capital-history"` per 13 entities popolate
+  in v6.84 con cronologia capitali editoriale (ADR-004).
+- Preservato `dashArray '6,4'` per `status='disputed'` come secondo
+  canale visivo (ETHICS-011 transparency-of-uncertainty).
+- Event timeline canvas `#timeline-chart` rimosso (regressione UX ~2%
+  accettata, endpoint `/v1/events` resta disponibile).
+- A11y: focus-visible globale accent + reduced-motion + AAA contrast +
+  dual-channel per daltonici.
+- Lighthouse CLS 0.00 preservato (v6.67 standard). Accessibility ≥ 95
+  target verificato.
+- Zero modifiche a backend, API, MCP, SDK, data layer.
+- Docs: ADR-006 design system + ETHICS-011 typography/color rationale.
+
 ### v0.0.1 -> v0.6.0 -- Fondazione
 - Struttura progetto, CLAUDE.md, governance etica, ADR
 - FastAPI + SQLAlchemy + SQLite bootstrap
