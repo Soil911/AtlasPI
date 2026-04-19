@@ -121,34 +121,8 @@
           <div id="autocomplete-list" class="autocomplete-dropdown" role="listbox" data-i18n-aria-label="autocomplete_aria" aria-label="Suggerimenti ricerca"></div>
         </div>
 
-        <!-- v6.90 A+: year-control rimane qui temporaneamente; Phase 2.5 lo sposta in timeline-bar -->
-        <div class="year-control" id="year-control-legacy">
-          <label for="year-input" data-i18n="year">Anno:</label>
-          <div class="year-input-row">
-            <input type="number" id="year-input" value="1500" min="-4500" max="2025" step="1"
-                   aria-label="Inserisci anno esatto" />
-            <select id="year-era" aria-label="Era">
-              <option value="ad">d.C.</option>
-              <option value="bc">a.C.</option>
-            </select>
-            <button id="year-go" class="year-go-btn" aria-label="Applica anno">&#10148;</button>
-          </div>
-          <input type="range" id="year-slider" min="-4500" max="2025" value="1500" step="1"
-                 aria-label="Seleziona anno storico" />
-          <div class="year-range" aria-hidden="true">
-            <span>4500 a.C.</span>
-            <span id="year-display" aria-live="polite">1500</span>
-            <span>2025</span>
-          </div>
-          <div class="playback-controls">
-            <button id="play-btn" class="play-btn" title="Riproduci timeline" aria-label="Avvia playback storico">&#9654;</button>
-            <select id="play-speed" aria-label="Velocit&agrave; playback" class="play-speed">
-              <option value="200">Veloce</option>
-              <option value="500" selected>Normale</option>
-              <option value="1000">Lento</option>
-            </select>
-          </div>
-        </div>
+        <!-- v6.90 A+: year controls spostati in bottom #timeline-bar (spec §4).
+             Year-slider + controls sono ora rendered via main#app > #timeline-bar. -->
 
         <!-- v6.90 A+: sezioni collassabili — spec §3 -->
         <details class="sb-section" open>
@@ -328,21 +302,41 @@
       </div>
     </div>
 
-    <!-- Timeline -->
-    <div id="timeline-bar" class="timeline-bar" aria-label="Timeline storica">
-      <div class="timeline-header">
-        <button id="timeline-toggle" class="timeline-toggle" aria-label="Mostra/nascondi timeline">
-          Timeline &#9660;
-        </button>
-        <div class="timeline-export">
-          <a href="/v1/export/geojson" class="export-btn" title="Esporta GeoJSON">GeoJSON</a>
-          <a href="/v1/export/csv" class="export-btn" title="Esporta CSV">CSV</a>
-          <a href="/docs" class="export-btn" title="API Docs">API</a>
-        </div>
+    <!-- v6.90 A+: Timeline bar — year slider + era ticks + year display (spec §4) -->
+    <div id="timeline-bar" class="timeline-bar" aria-label="Timeline anno storico">
+      <button id="play-btn" class="tb-play-btn" title="Riproduci timeline" aria-label="Avvia playback storico">&#9654;</button>
+
+      <span class="tb-year-start" aria-hidden="true">4500 BCE</span>
+
+      <div class="tb-slider-wrap">
+        <div id="era-ticks-overlay" class="tb-era-ticks" aria-hidden="true"></div>
+        <input type="range" id="year-slider" class="tb-year-slider"
+               min="-4500" max="2025" value="1500" step="1"
+               aria-label="Seleziona anno storico" aria-valuemin="-4500" aria-valuemax="2025" />
       </div>
-      <div id="timeline-canvas" class="timeline-canvas collapsed">
-        <canvas id="timeline-chart"></canvas>
+
+      <span class="tb-year-end" aria-hidden="true">2025</span>
+
+      <div class="tb-year-input-group">
+        <input type="number" id="year-input" value="1500" min="-4500" max="2025" step="1"
+               aria-label="Inserisci anno esatto" class="tb-year-input" />
+        <select id="year-era" aria-label="Era a.C./d.C." class="tb-year-era">
+          <option value="ad">CE</option>
+          <option value="bc">BCE</option>
+        </select>
+        <button id="year-go" class="tb-year-go" aria-label="Applica anno">&#10148;</button>
       </div>
+
+      <select id="play-speed" aria-label="Velocit&agrave; playback" class="tb-play-speed">
+        <option value="200" data-i18n="speed_fast">Fast</option>
+        <option value="500" selected data-i18n="speed_normal">Normal</option>
+        <option value="1000" data-i18n="speed_slow">Slow</option>
+      </select>
+
+      <span class="tb-year-display-wrap" aria-label="Anno corrente">
+        <span id="year-display" class="tb-year-display" aria-live="polite">1500</span>
+        <span id="year-display-era" class="tb-year-display-era">CE</span>
+      </span>
     </div>
 
     <!-- Error toast -->

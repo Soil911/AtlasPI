@@ -2227,10 +2227,15 @@ function bindEvents() {
         yearInput.value = val;
         yearEra.value = 'ad';
       }
+      // v6.90: mark era-chip attivo visualmente (single-selection)
+      document.querySelectorAll('.era-chip').forEach(c => c.classList.remove('active'));
+      if (btn.classList.contains('era-chip')) btn.classList.add('active');
       applyFilters();
       pushUrlState();
       if (eventsOverlayEnabled) renderEventsOverlay();
       if (tradeRoutesEnabled) renderTradeRoutes();
+      // v6.90: dispatch input → year-hero + era-ticks update
+      yearSlider.dispatchEvent(new Event('input', { bubbles: true }));
     });
   });
 
@@ -2271,6 +2276,8 @@ function bindEvents() {
     yearDisplay.textContent = '1500';
     yearInput.value = 1500;
     yearEra.value = 'ad';
+    // v6.90: re-trigger year-hero + era-ticks sync
+    yearSlider.dispatchEvent(new Event('input', { bubbles: true }));
     document.querySelectorAll('.checkbox-group input').forEach(cb => { cb.checked = true; });
     document.getElementById('sort-select').value = '';
     activeType = '';
@@ -2589,6 +2596,8 @@ function togglePlayback() {
     if (timelineData) drawTimeline();
     if (eventsOverlayEnabled) renderEventsOverlay();
     if (tradeRoutesEnabled) renderTradeRoutes();
+    // v6.90: dispatch input event → aggiorna year-hero + era-ticks
+    slider.dispatchEvent(new Event('input', { bubbles: true }));
   }, speed);
 }
 
@@ -2731,4 +2740,72 @@ async function showCompare(id1, id2) {
 
   // Expose for Phase 2.5 (timeline bar) to call after year-slider programmatic updates
   window.atlasPIUpdateYearHero = updateYearHero;
+
+  // ─── v6.90 A+: era ticks overlay nel timeline bar (spec §4) ──
+  // Posiziona label ere lungo lo slider (-4500..2025).
+  const YEAR_MIN = -4500;
+  const YEAR_MAX = 2025;
+  const YEAR_SPAN = YEAR_MAX - YEAR_MIN;
+
+  function yearToPercent(year) {
+    return ((year - YEAR_MIN) / YEAR_SPAN) * 100;
+  }
+
+  function renderEraTicks() {
+    const container = document.getElementById('era-ticks-overlay');
+    if (!container) return;
+    const slider = document.getElementById('year-slider');
+    const currentYear = slider ? parseInt(slider.value, 10) : 1500;
+    const currentEra = eraForYear(currentYear);
+    // Usa solo le prime lettere dell'era come tick (brevità per non sovrapporre)
+    // Ticks subset: non metto tutte 10 (sarebbero troppo dense). Uso 6 principali.
+    const TICKS = [
+      { y: -3000, label: 'Bronze' },
+      { y: -500,  label: 'Classical' },
+      { y:  500,  label: 'Medieval' },
+      { y: 1453,  label: 'Early Modern' },
+      { y: 1789,  label: 'Revolutions' },
+      { y: 1914,  label: 'Modern' },
+    ];
+    // Translate labels via window.t if i18n keys exist
+    const html = TICKS.map(tick => {
+      const pct = yearToPercent(tick.y);
+      const bandForTick = eraForYear(tick.y);
+      const isActive = bandForTick.key === currentEra.key;
+      const label = (typeof window.t === 'function' && window.t(bandForTick.key) && window.t(bandForTick.key) !== bandForTick.key)
+        ? window.t(bandForTick.key)
+        : tick.label;
+      return `<span class="era-tick${isActive ? ' era-tick--active' : ''}" style="left:${pct}%">${label}</span>`;
+    }).join('');
+    container.innerHTML = html;
+  }
+
+  function updateYearDisplayEra() {
+    const slider = document.getElementById('year-slider');
+    if (!slider) return;
+    const y = parseInt(slider.value, 10);
+    const displayEra = document.getElementById('year-display-era');
+    if (displayEra) displayEra.textContent = y < 0 ? 'BCE' : 'CE';
+  }
+
+  // Wire era ticks to slider + initial render
+  function wireEraTicks() {
+    const slider = document.getElementById('year-slider');
+    if (!slider) return;
+    renderEraTicks();
+    updateYearDisplayEra();
+    slider.addEventListener('input', () => {
+      renderEraTicks();
+      updateYearDisplayEra();
+    });
+    document.addEventListener('atlaspi:langChanged', renderEraTicks);
+    const langBtn = document.getElementById('lang-toggle');
+    if (langBtn) langBtn.addEventListener('click', () => setTimeout(renderEraTicks, 50));
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', wireEraTicks);
+  } else {
+    wireEraTicks();
+  }
 })();
