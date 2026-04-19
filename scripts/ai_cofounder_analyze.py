@@ -463,7 +463,7 @@ def analyze_failed_searches(db, existing_titles: set[str]) -> int:
             )
             event_hits = (
                 db.query(func.count(HistoricalEvent.id))
-                .filter(HistoricalEvent.name.ilike(f"%{term}%"))
+                .filter(HistoricalEvent.name_original.ilike(f"%{term}%"))
                 .scalar() or 0
             ) if entity_hits == 0 else 1  # skip event check if entity already found
 
