@@ -2,6 +2,32 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.77.0] - 2026-04-19
+
+**Tema**: *Audit v4 Fase C Round 7 — Sites FK backfill (PostGIS geo+temporal)*
+
+Fino a v6.76, **100% dei 1249 sites archeologici** aveva `entity_id=NULL` — gigantesco debito strutturale flaggato in audit v2 (Agent 03, pattern SITES_100PCT_NULL_ENTITY_ID).
+
+### Strategia 2-pass via PostGIS
+
+1. **Pass 1 — geo + temporal match**: per sites con `date_start` non null, trova entity con boundary che contiene il punto E year overlap. 36 matched.
+2. **Pass 2 — geo-only fallback**: per sites senza date, geographic containment. Privilegia entity con range temporale più stretto (più specifica). 1127 matched.
+
+### Ottimizzazione
+
+Prima implementazione (CROSS JOIN diretto) impiegava >7 min e veniva killata. **v2 con bbox prefilter** (`&&` operatore PostGIS + indice GIST temp) completa in <30 secondi.
+
+### Risultato
+
+| Metric | Pre-v6.77 | Post-v6.77 |
+|--------|-----------|------------|
+| Sites linked | **0** (0%) | **1163** (93.1%) |
+| Sites NULL residui | 1249 | 86 |
+
+I 86 residui sono sites in regioni dove AtlasPI non ha boundary_geojson (es. SE Asia, Sub-Sahara residual). Round 8+ potrà gestirli individualmente o via fallback per `country_code`.
+
+---
+
 ## [v6.76.0] - 2026-04-19
 
 **Tema**: *Audit v4 Fase C Round 6 — no-match pickup via English name_variants*
