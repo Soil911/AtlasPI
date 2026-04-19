@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>AtlasPI — Prototype A+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; overflow: hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg); color: var(--text); }
+  :root {
+    --bg: #0f1318;
+    --panel: #151a21;
+    --panel2: #1b2028;
+    --border: #242a34;
+    --text: #e9edf2;
+    --muted: #8a93a0;
+    --accent: #e8b14a;
+    --confirmed: #6eb58a;
+    --uncertain: #d4a13a;
+    --disputed: #d57770;
+    --density: 1;
+  }
+  input[type=range] { -webkit-appearance: none; background: transparent; }
+  input[type=range]::-webkit-slider-runnable-track { height: 4px; background: #242a34; border-radius: 2px; }
+  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 14px; height: 14px;
+    border-radius: 50%; background: var(--accent); margin-top: -5px; cursor: pointer;
+    box-shadow: 0 0 0 3px var(--panel), 0 0 0 4px rgba(232,177,74,0.3); }
+  input[type=range]::-moz-range-track { height: 4px; background: #242a34; border-radius: 2px; }
+  input[type=range]::-moz-range-thumb { width: 14px; height: 14px; border-radius: 50%;
+    background: var(--accent); border: none; cursor: pointer; }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #242a34; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #30384a; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+// ───── Tweakable defaults ─────
+const TWEAKS = /*EDITMODE-BEGIN*/{
+  "accent": "#58a6ff",
+  "densityCompact": false,
+  "serifYear": true,
+  "underlineEras": true,
+  "boundaryOpacity": 0.28
+}/*EDITMODE-END*/;
+
+// ───── Dataset: schematic Europe + empires across time ─────
+const EUROPE_LAND = "M 140,80 Q 180,60 230,70 Q 280,55 330,68 Q 380,62 420,80 Q 450,95 470,120 L 478,145 Q 490,170 485,200 L 495,230 Q 505,260 490,290 L 475,315 Q 460,340 430,345 L 395,360 Q 360,375 320,370 L 275,385 Q 230,395 185,380 L 145,365 Q 110,350 95,320 L 85,290 Q 72,255 80,220 L 88,185 Q 95,150 115,120 Z";
+const BRITISH_ISLES = "M 130,95 Q 155,85 170,100 Q 180,130 170,160 Q 155,175 135,170 Q 120,150 125,120 Z M 100,135 Q 118,128 128,145 Q 130,165 115,172 Q 98,165 95,148 Z";
+const SCANDINAVIA = "M 290,35 Q 330,25 360,45 Q 375,80 355,120 Q 335,140 315,125 Q 300,100 295,75 Z";
+
+// Each entity has year range → we show if year is in range
+const EMPIRES = [
+  { id: 'hre', name: 'Holy Roman Empire', lat: 'Sacrum Imperium Romanum', y1: 962, y2: 1806,
+    path: 'M 240,150 Q 290,140 335,155 L 345,185 Q 355,215 340,245 L 320,265 L 285,270 L 250,260 L 230,235 L 225,200 Z',
+    center: [285, 210], capital: 'Wien', capPos: [320, 235], hue: 220, conf: 0.94, status: 'confirmed' },
+  { id: 'fr', name: 'Kingdom of France', lat: 'Regnum Francorum', y1: 987, y2: 1791,
+    path: 'M 175,175 Q 215,165 245,180 L 250,215 L 240,250 L 215,270 L 185,265 L 165,240 L 160,205 Z',
+    center: [205, 220], capital: 'Paris', capPos: [200, 205], hue: 15, conf: 0.92, status: 'confirmed' },
+  { id: 'ott', name: 'Ottoman Empire', lat: 'Devlet-i ʿAlīye', y1: 1299, y2: 1922,
+    path: 'M 355,290 Q 415,280 460,300 L 475,330 L 465,360 L 420,370 L 375,358 L 355,335 Z',
+    center: [410, 325], capital: 'Istanbul', capPos: [395, 310], hue: 140, conf: 0.91, status: 'confirmed' },
+  { id: 'sp', name: 'Kingdom of Spain', lat: 'Reinos de España', y1: 1492, y2: 1833,
+    path: 'M 155,305 Q 200,295 235,310 Q 245,335 225,355 Q 195,365 165,355 Q 145,335 155,305 Z',
+    center: [190, 330], capital: 'Madrid', capPos: [185, 330], hue: 45, conf: 0.89, status: 'confirmed' },
+  { id: 'pl', name: 'Poland–Lithuania', lat: 'Rzeczpospolita', y1: 1386, y2: 1795,
+    path: 'M 335,140 Q 395,130 440,150 L 450,190 L 430,225 L 385,230 L 345,215 L 330,180 Z',
+    center: [390, 185], capital: 'Kraków', capPos: [370, 205], hue: 285, conf: 0.88, status: 'confirmed' },
+  { id: 'en', name: 'Kingdom of England', lat: 'Regnum Angliae', y1: 927, y2: 1707,
+    path: 'M 130,95 Q 160,85 172,110 Q 175,140 160,165 Q 140,175 125,160 Q 118,130 128,105 Z',
+    center: [148, 130], capital: 'London', capPos: [155, 145], hue: 350, conf: 0.93, status: 'confirmed' },
+  { id: 'dk', name: 'Denmark–Norway', lat: 'Danmark–Norge', y1: 1537, y2: 1814,
+    path: 'M 260,95 Q 300,85 340,100 L 355,140 L 335,170 L 295,165 L 270,140 Z',
+    center: [305, 130], capital: 'København', capPos: [295, 140], hue: 180, conf: 0.85, status: 'confirmed' },
+  { id: 'byz', name: 'Byzantine Empire', lat: 'Imperium Romanum Orientis', y1: 330, y2: 1453,
+    path: 'M 355,290 Q 405,280 445,295 L 455,320 L 440,345 L 395,355 L 360,340 Z',
+    center: [400, 320], capital: 'Constantinople', capPos: [390, 305], hue: 280, conf: 0.87, status: 'confirmed' },
+  { id: 'rm', name: 'Roman Empire', lat: 'Imperium Romanum', y1: -27, y2: 476,
+    path: 'M 150,220 Q 240,200 340,220 L 400,260 Q 440,290 430,340 L 360,370 L 260,375 L 180,355 L 140,310 L 135,255 Z',
+    center: [290, 290], capital: 'Roma', capPos: [305, 340], hue: 0, conf: 0.96, status: 'confirmed' },
+  { id: 'fr_r', name: 'French Republic', lat: 'République française', y1: 1792, y2: 2025,
+    path: 'M 175,175 Q 215,165 245,180 L 250,215 L 240,250 L 215,270 L 185,265 L 165,240 L 160,205 Z',
+    center: [205, 220], capital: 'Paris', capPos: [200, 205], hue: 15, conf: 0.98, status: 'confirmed' },
+  { id: 'de', name: 'German Empire', lat: 'Deutsches Reich', y1: 1871, y2: 1918,
+    path: 'M 240,150 Q 300,140 345,155 L 355,190 Q 360,225 340,250 L 300,265 L 250,260 L 225,230 L 225,190 Z',
+    center: [290, 205], capital: 'Berlin', capPos: [310, 180], hue: 200, conf: 0.95, status: 'confirmed' },
+  { id: 'tk', name: 'Turkey', lat: 'Türkiye Cumhuriyeti', y1: 1923, y2: 2025,
+    path: 'M 365,305 Q 420,295 465,310 L 475,335 L 460,360 L 410,368 L 370,355 Z',
+    center: [415, 330], capital: 'Ankara', capPos: [410, 330], hue: 10, conf: 0.97, status: 'confirmed' },
+];
+
+const ERAS = [
+  { y: -3000, label: 'Bronze Age' },
+  { y: -500, label: 'Classical' },
+  { y: 117, label: 'Roman Peak' },
+  { y: 800, label: 'Medieval' },
+  { y: 1250, label: 'Mongol Era' },
+  { y: 1492, label: 'Discovery' },
+  { y: 1789, label: 'Revolutions' },
+  { y: 1914, label: 'Great War' },
+  { y: 2024, label: 'Today' },
+];
+
+function eraForYear(y) {
+  let current = ERAS[0];
+  for (const e of ERAS) if (y >= e.y) current = e;
+  return current;
+}
+
+function formatYear(y) {
+  if (y < 0) return `${-y} BCE`;
+  return `${y} CE`;
+}
+
+// ───── App ─────
+function App() {
+  const [year, setYear] = React.useState(1500);
+  const [selected, setSelected] = React.useState('hre');
+  const [hovered, setHovered] = React.useState(null);
+  const [playing, setPlaying] = React.useState(false);
+  const [speed, setSpeed] = React.useState(500);
+  const [tweaksOpen, setTweaksOpen] = React.useState(false);
+  const [showTweaks, setShowTweaks] = React.useState(false);
+  const [tweaks, setTweaks] = React.useState(TWEAKS);
+
+  // Tweak editmode protocol
+  React.useEffect(() => {
+    const onMsg = (e) => {
+      if (e.data?.type === '__activate_edit_mode') setShowTweaks(true);
+      else if (e.data?.type === '__deactivate_edit_mode') setShowTweaks(false);
+    };
+    window.addEventListener('message', onMsg);
+    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+    return () => window.removeEventListener('message', onMsg);
+  }, []);
+
+  // Playback
+  React.useEffect(() => {
+    if (!playing) return;
+    const id = setInterval(() => {
+      setYear(y => y >= 2025 ? -4500 : y + 5);
+    }, speed / 5);
+    return () => clearInterval(id);
+  }, [playing, speed]);
+
+  const activeEntities = EMPIRES.filter(e => year >= e.y1 && year <= e.y2);
+  const selEntity = activeEntities.find(e => e.id === selected) || activeEntities[0];
+  const currentEra = eraForYear(year);
+
+  const updateTweak = (k, v) => {
+    const next = { ...tweaks, [k]: v };
+    setTweaks(next);
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [k]: v } }, '*');
+  };
+
+  const density = tweaks.densityCompact ? 0.85 : 1;
+
+  // CSS var update for accent
+  React.useEffect(() => {
+    document.documentElement.style.setProperty('--accent', tweaks.accent);
+  }, [tweaks.accent]);
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
+
+      {/* ── Header ── */}
+      <Header year={year} era={currentEra} count={activeEntities.length} tweaks={tweaks} />
+
+      {/* ── Main row: sidebar + map ── */}
+      <div style={{ flex: 1, display: 'flex', minHeight: 0 }}>
+        <Sidebar
+          year={year} entities={activeEntities} selected={selected} onSelect={setSelected}
+          tweaks={tweaks} density={density}
+        />
+        <MapArea
+          year={year} entities={activeEntities} selected={selected}
+          onSelect={setSelected} hovered={hovered} onHover={setHovered}
+          tweaks={tweaks}
+        />
+        {selEntity && (
+          <DetailPanel entity={selEntity} year={year} onClose={() => setSelected(null)} />
+        )}
+      </div>
+
+      {/* ── Bottom timeline ── */}
+      <TimelineBar
+        year={year} onYear={setYear} playing={playing} onPlay={() => setPlaying(p => !p)}
+        speed={speed} onSpeed={setSpeed} tweaks={tweaks}
+      />
+
+      {/* ── Tweaks panel ── */}
+      {showTweaks && (
+        <TweaksPanel tweaks={tweaks} onChange={updateTweak} onClose={() => setShowTweaks(false)} />
+      )}
+    </div>
+  );
+}
+
+// ───── Header ─────
+function Header({ year, era, count, tweaks }) {
+  return (
+    <div style={{
+      height: 56, display: 'flex', alignItems: 'center',
+      padding: '0 22px', borderBottom: '1px solid var(--border)',
+      background: 'var(--panel)', gap: 20, flexShrink: 0,
+    }}>
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
+        <div style={{ fontWeight: 600, fontSize: 15, letterSpacing: -0.2 }}>
+          Atlas<span style={{ color: 'var(--accent)' }}>PI</span>
+        </div>
+        <div style={{ fontSize: 10.5, color: 'var(--muted)', letterSpacing: 1.2, textTransform: 'uppercase' }}>
+          Historical Geography
+        </div>
+      </div>
+      <div style={{ width: 1, height: 30, background: 'var(--border)', marginLeft: 6 }} />
+      {/* Editorial year hero */}
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
+        <div style={{
+          fontFamily: tweaks.serifYear ? '"Playfair Display", Georgia, serif' : 'Inter, sans-serif',
+          fontSize: 32, fontWeight: 700,
+          fontStyle: tweaks.serifYear ? 'italic' : 'normal',
+          color: 'var(--text)', letterSpacing: -0.6, lineHeight: 1,
+          fontVariantNumeric: 'tabular-nums',
+          transition: 'color 0.2s',
+        }}>
+          {year < 0 ? -year : year}
+        </div>
+        <div style={{ fontSize: 10, color: 'var(--muted)', letterSpacing: 1.2, textTransform: 'uppercase', fontWeight: 500 }}>
+          {year < 0 ? 'BCE' : 'CE'}
+        </div>
+        <div style={{
+          fontSize: 10.5, color: 'var(--accent)', letterSpacing: 1, textTransform: 'uppercase',
+          fontWeight: 500, marginLeft: 4,
+          fontStyle: tweaks.serifYear ? 'italic' : 'normal',
+          fontFamily: tweaks.serifYear ? '"Playfair Display", serif' : 'inherit',
+        }}>
+          {era.label}
+        </div>
+      </div>
+      <div style={{ flex: 1 }} />
+      {['Search','Timeline','Compare','API Docs'].map(l => (
+        <span key={l} style={{ fontSize: 12, color: 'var(--muted)', cursor: 'pointer', padding: '4px 2px' }}>{l}</span>
+      ))}
+      <div style={{ width: 1, height: 20, background: 'var(--border)' }} />
+      <div style={{
+        fontSize: 11, color: 'var(--muted)', display: 'flex', alignItems: 'center', gap: 6,
+        padding: '4px 10px', border: '1px solid var(--border)', borderRadius: 3,
+        fontVariantNumeric: 'tabular-nums',
+      }}>
+        <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--confirmed)' }} />
+        {count} on map
+      </div>
+      <button style={{
+        padding: '5px 12px', fontSize: 12, fontWeight: 500,
+        background: 'var(--accent)', color: '#1a1208', border: 'none', borderRadius: 3, cursor: 'pointer',
+      }}>Ask Claude</button>
+    </div>
+  );
+}
+
+// ───── Sidebar ─────
+function Sidebar({ year, entities, selected, onSelect, tweaks, density }) {
+  const [collapsed, setCollapsed] = React.useState({ region: true, overlay: true });
+  const pad = 14 * density;
+  return (
+    <aside style={{
+      width: 280, background: 'var(--panel)', borderRight: '1px solid var(--border)',
+      display: 'flex', flexDirection: 'column', flexShrink: 0, overflowY: 'auto', minHeight: 0,
+    }}>
+      <div style={{ padding: `${pad + 2}px ${pad}px ${pad - 2}px` }}>
+        <div style={{
+          display: 'flex', alignItems: 'center', gap: 8,
+          padding: '8px 10px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: 4,
+        }}>
+          <span style={{ color: 'var(--muted)', fontSize: 12 }}>⌕</span>
+          <input
+            style={{ flex: 1, background: 'transparent', border: 'none', color: 'var(--text)', fontSize: 12.5, outline: 'none' }}
+            placeholder="Search empires, cities, rulers…"
+          />
+          <span style={{ color: 'var(--muted)', fontSize: 10, padding: '1px 5px', border: '1px solid var(--border)', borderRadius: 2 }}>⌘K</span>
+        </div>
+      </div>
+
+      <Section title="Era">
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
+          {ERAS.slice(0, 8).map((e, i) => {
+            const active = eraForYear(year).label === e.label;
+            if (tweaks.underlineEras) {
+              return (
+                <span key={e.label}
+                  onClick={() => {/* jump to era */}}
+                  style={{
+                    fontSize: 10.5, padding: '4px 8px 6px', cursor: 'pointer',
+                    color: active ? 'var(--accent)' : 'var(--muted)',
+                    fontWeight: active ? 600 : 400,
+                    fontStyle: active ? 'italic' : 'normal',
+                    fontFamily: active ? '"Playfair Display", Georgia, serif' : 'inherit',
+                    borderBottom: active ? '1.5px solid var(--accent)' : '1.5px solid transparent',
+                    letterSpacing: active ? 0.3 : 0,
+                  }}>{e.label}</span>
+              );
+            } else {
+              return (
+                <span key={e.label} style={{
+                  fontSize: 10.5, padding: '3px 8px', borderRadius: 2,
+                  background: active ? 'var(--accent)' : 'var(--panel2)',
+                  color: active ? '#1a1208' : 'var(--muted)',
+                  fontWeight: active ? 600 : 400, cursor: 'pointer',
+                }}>{e.label}</span>
+              );
+            }
+          })}
+        </div>
+      </Section>
+
+      <Section title="Status">
+        {[
+          { k: 'Confirmed', c: 'var(--confirmed)', n: entities.filter(e => e.status === 'confirmed').length },
+          { k: 'Uncertain', c: 'var(--uncertain)', n: 0 },
+          { k: 'Disputed', c: 'var(--disputed)', n: 0 },
+        ].map(row => (
+          <div key={row.k} style={{
+            display: 'flex', alignItems: 'center', gap: 10, padding: '5px 0', fontSize: 12,
+          }}>
+            <div style={{
+              width: 12, height: 12, border: `1.5px solid ${row.c}`, borderRadius: 2,
+              background: row.c, display: 'flex', alignItems: 'center', justifyContent: 'center',
+            }}>
+              <span style={{ fontSize: 9, color: '#0a0d11' }}>✓</span>
+            </div>
+            <span style={{ flex: 1 }}>{row.k}</span>
+            <span style={{ color: 'var(--muted)', fontSize: 11, fontVariantNumeric: 'tabular-nums' }}>{row.n}</span>
+          </div>
+        ))}
+      </Section>
+
+      <Section title="Region" collapsed>
+        <div style={{ fontSize: 11, color: 'var(--muted)' }}>Europe · Asia · Africa · Americas · +5</div>
+      </Section>
+
+      <Section title="Overlay" collapsed>
+        <div style={{ fontSize: 11, color: 'var(--muted)' }}>Events · Trade routes</div>
+      </Section>
+
+      <div style={{ flex: 1 }} />
+
+      <div style={{ padding: `0 ${pad}px ${pad}px` }}>
+        <div style={{ fontSize: 10.5, letterSpacing: 0.6, textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 8 }}>
+          On map · <span style={{ fontStyle: 'italic', fontFamily: '"Playfair Display", serif' }}>{formatYear(year)}</span>
+        </div>
+        <div style={{ maxHeight: 240, overflowY: 'auto' }}>
+          {entities.map(e => {
+            const sel = e.id === selected;
+            return (
+              <div key={e.id} onClick={() => onSelect(e.id)} style={{
+                padding: '8px 10px', marginBottom: 3,
+                background: sel ? 'var(--panel2)' : 'transparent',
+                border: `1px solid ${sel ? 'var(--border)' : 'transparent'}`,
+                borderRadius: 3, fontSize: 12, cursor: 'pointer',
+                display: 'flex', alignItems: 'center', gap: 8,
+                transition: 'background 0.12s',
+              }}>
+                <span style={{ width: 3, height: 14, background: `hsl(${e.hue}, 55%, 55%)`, borderRadius: 2 }} />
+                <span style={{ flex: 1 }}>{e.name}</span>
+                <span style={{ fontSize: 10, color: 'var(--muted)', fontVariantNumeric: 'tabular-nums' }}>
+                  {e.y1 < 0 ? -e.y1 : e.y1}–{e.y2}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </aside>
+  );
+}
+
+function Section({ title, children, collapsed: initCollapsed }) {
+  const [col, setCol] = React.useState(initCollapsed || false);
+  return (
+    <div style={{ padding: '12px 14px', borderTop: '1px solid var(--border)' }}>
+      <div onClick={() => setCol(c => !c)} style={{
+        display: 'flex', alignItems: 'center', gap: 6,
+        fontSize: 10.5, letterSpacing: 0.6, textTransform: 'uppercase', color: 'var(--muted)',
+        marginBottom: col ? 0 : 10, cursor: 'pointer',
+      }}>
+        <span style={{ fontSize: 8 }}>{col ? '▸' : '▾'}</span>{title}
+      </div>
+      {!col && children}
+    </div>
+  );
+}
+
+// ───── Map ─────
+function MapArea({ year, entities, selected, onSelect, hovered, onHover, tweaks }) {
+  return (
+    <div style={{ flex: 1, position: 'relative', background: '#0a0d11', overflow: 'hidden', minWidth: 0 }}>
+      <svg width="100%" height="100%" viewBox="0 0 600 450" preserveAspectRatio="xMidYMid meet" style={{ display: 'block', position: 'absolute', inset: 0 }}>
+        <defs>
+          <pattern id="gratX" width="50" height="50" patternUnits="userSpaceOnUse">
+            <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#141a22" strokeWidth="1" />
+          </pattern>
+        </defs>
+        <rect width="600" height="450" fill="url(#gratX)" />
+
+        <g>
+          <path d={EUROPE_LAND} fill="#1a2028" stroke="#2a3240" strokeWidth="0.8" />
+          <path d={BRITISH_ISLES} fill="#1a2028" stroke="#2a3240" strokeWidth="0.8" />
+          <path d={SCANDINAVIA} fill="#1a2028" stroke="#2a3240" strokeWidth="0.8" />
+
+          {entities.map(emp => {
+            const sel = emp.id === selected;
+            const hov = emp.id === hovered;
+            const fillA = tweaks.boundaryOpacity * (sel ? 1.4 : hov ? 1.2 : 1);
+            return (
+              <g key={emp.id}
+                style={{ cursor: 'pointer', transition: 'opacity 0.2s' }}
+                onClick={() => onSelect(emp.id)}
+                onMouseEnter={() => onHover(emp.id)}
+                onMouseLeave={() => onHover(null)}>
+                <path d={emp.path}
+                  fill={`hsla(${emp.hue}, 55%, 55%, ${fillA})`}
+                  stroke={`hsl(${emp.hue}, 55%, ${sel ? 70 : 62}%)`}
+                  strokeWidth={sel ? 2 : hov ? 1.3 : 0.9}
+                  strokeLinejoin="round"
+                  opacity={selected && !sel && !hov ? 0.55 : 1} />
+                <circle cx={emp.capPos[0]} cy={emp.capPos[1]}
+                  r={sel ? 3.5 : 2.2}
+                  fill={sel ? 'var(--accent)' : '#c0cad6'}
+                  stroke="#0a0d11" strokeWidth="1" />
+                <text x={emp.center[0]} y={emp.center[1]}
+                  fontSize={sel ? 11 : 8.5}
+                  fill={sel ? '#fff' : '#a0a9b5'}
+                  textAnchor="middle"
+                  fontFamily="Inter, sans-serif"
+                  fontWeight={sel ? 600 : 400}
+                  letterSpacing={0.4}
+                  style={{ pointerEvents: 'none' }}>
+                  {emp.name.replace(/Kingdom of |Empire| Dynasty/g, '').toUpperCase().slice(0, 20)}
+                </text>
+              </g>
+            );
+          })}
+        </g>
+      </svg>
+
+      {/* Hover tooltip */}
+      {hovered && (() => {
+        const e = EMPIRES.find(x => x.id === hovered);
+        if (!e) return null;
+        return (
+          <div style={{
+            position: 'absolute', top: 16, left: 16,
+            background: 'rgba(15,19,24,0.92)', backdropFilter: 'blur(8px)',
+            border: '1px solid var(--border)', borderRadius: 4, padding: '10px 14px',
+            pointerEvents: 'none',
+          }}>
+            <div style={{ fontSize: 13, fontWeight: 600 }}>{e.name}</div>
+            <div style={{ fontSize: 11, color: 'var(--muted)', marginTop: 2, fontVariantNumeric: 'tabular-nums' }}>
+              {formatYear(e.y1)} — {formatYear(e.y2)} · {e.capital}
+            </div>
+          </div>
+        );
+      })()}
+
+      {/* Zoom controls */}
+      <div style={{
+        position: 'absolute', right: 16, bottom: 16,
+        display: 'flex', flexDirection: 'column', gap: 1,
+        background: 'var(--panel)', border: '1px solid var(--border)', borderRadius: 3, overflow: 'hidden',
+      }}>
+        {['+', '−', '⛶'].map((s, i) => (
+          <div key={i} style={{
+            width: 28, height: 28, display: 'flex', alignItems: 'center', justifyContent: 'center',
+            fontSize: 14, color: 'var(--muted)',
+            borderBottom: i < 2 ? '1px solid var(--border)' : 'none',
+            cursor: 'pointer',
+          }}>{s}</div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ───── Detail panel ─────
+function DetailPanel({ entity, year, onClose }) {
+  return (
+    <div style={{
+      width: 300, background: 'var(--panel)', borderLeft: '1px solid var(--border)',
+      padding: '20px 22px', flexShrink: 0, overflowY: 'auto',
+    }}>
+      <div style={{ display: 'flex', alignItems: 'start', gap: 8, marginBottom: 4 }}>
+        <div style={{ flex: 1 }}>
+          <div style={{ fontSize: 10, color: 'var(--muted)', letterSpacing: 1.5, textTransform: 'uppercase' }}>Entity</div>
+        </div>
+        <span onClick={onClose} style={{ cursor: 'pointer', color: 'var(--muted)', fontSize: 16 }}>×</span>
+      </div>
+      <div style={{
+        fontFamily: '"Playfair Display", Georgia, serif',
+        fontSize: 22, fontWeight: 700, letterSpacing: -0.4, lineHeight: 1.1, marginTop: 2,
+      }}>{entity.name}</div>
+      <div style={{
+        fontSize: 11, fontStyle: 'italic', color: 'var(--muted)', marginTop: 4,
+        fontFamily: '"Playfair Display", serif',
+      }}>{entity.lat}</div>
+
+      <div style={{ height: 1, background: 'var(--border)', margin: '14px 0' }} />
+
+      {/* Life timeline */}
+      <div style={{ position: 'relative', height: 28, marginBottom: 14 }}>
+        <div style={{
+          position: 'absolute', top: 12, left: 0, right: 0, height: 2,
+          background: 'var(--border)',
+        }} />
+        {(() => {
+          const span = 2025 + 4500;
+          const L = ((entity.y1 + 4500) / span) * 100;
+          const W = ((entity.y2 - entity.y1) / span) * 100;
+          const yearP = ((year + 4500) / span) * 100;
+          return (
+            <>
+              <div style={{
+                position: 'absolute', left: `${L}%`, width: `${W}%`,
+                top: 12, height: 2, background: `hsl(${entity.hue}, 55%, 55%)`,
+              }} />
+              <div style={{
+                position: 'absolute', left: `${yearP}%`, top: 8, width: 10, height: 10,
+                borderRadius: '50%', background: 'var(--accent)', transform: 'translateX(-50%)',
+                boxShadow: '0 0 0 3px var(--panel)',
+              }} />
+            </>
+          );
+        })()}
+        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 9, color: 'var(--muted)', marginTop: 0, fontVariantNumeric: 'tabular-nums' }}>
+          <span>4500 BCE</span>
+          <span>2025</span>
+        </div>
+      </div>
+
+      {[
+        ['Period', `${formatYear(entity.y1)} — ${formatYear(entity.y2)}`],
+        ['Capital', entity.capital],
+        ['Confidence', entity.conf.toFixed(2) + ' ● confirmed'],
+        ['Source', 'aourednik/basemaps'],
+      ].map(([k, v]) => (
+        <div key={k} style={{
+          display: 'grid', gridTemplateColumns: '80px 1fr', gap: 10, padding: '6px 0',
+          borderTop: '1px solid var(--border)', fontSize: 11.5,
+        }}>
+          <span style={{ color: 'var(--muted)', letterSpacing: 0.4, textTransform: 'uppercase', fontSize: 9.5 }}>{k}</span>
+          <span style={{ fontVariantNumeric: 'tabular-nums' }}>{v}</span>
+        </div>
+      ))}
+
+      <div style={{ display: 'flex', gap: 6, marginTop: 16 }}>
+        {['GeoJSON', 'Sources', 'API'].map(x => (
+          <div key={x} style={{
+            flex: 1, textAlign: 'center', padding: '6px 0', fontSize: 10.5,
+            border: '1px solid var(--border)', borderRadius: 3, color: 'var(--muted)', cursor: 'pointer',
+            letterSpacing: 0.5, textTransform: 'uppercase',
+          }}>{x}</div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ───── Timeline bar ─────
+function TimelineBar({ year, onYear, playing, onPlay, speed, onSpeed, tweaks }) {
+  return (
+    <div style={{
+      height: 72, background: 'var(--panel)', borderTop: '1px solid var(--border)',
+      padding: '12px 20px', display: 'flex', alignItems: 'center', gap: 14, flexShrink: 0,
+    }}>
+      <div onClick={onPlay} style={{
+        width: 30, height: 30, borderRadius: '50%', background: 'var(--accent)',
+        display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1a1208',
+        fontSize: 11, cursor: 'pointer', flexShrink: 0,
+      }}>{playing ? '❚❚' : '▶'}</div>
+
+      <div style={{ fontSize: 11, color: 'var(--muted)', letterSpacing: 0.4, fontVariantNumeric: 'tabular-nums' }}>4500 BCE</div>
+
+      <div style={{ flex: 1, position: 'relative', height: 36 }}>
+        {/* Era marks above slider */}
+        <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
+          {ERAS.map(e => {
+            const p = ((e.y + 4500) / (2025 + 4500)) * 100;
+            const active = eraForYear(year).label === e.label;
+            return (
+              <div key={e.label} style={{
+                position: 'absolute', left: `${p}%`, top: -2, transform: 'translateX(-50%)',
+                fontSize: 9, color: active ? 'var(--accent)' : 'var(--muted)',
+                letterSpacing: 0.4, whiteSpace: 'nowrap',
+                fontWeight: active ? 600 : 400,
+                fontStyle: active ? 'italic' : 'normal',
+                fontFamily: active ? '"Playfair Display", serif' : 'inherit',
+              }}>{e.label}</div>
+            );
+          })}
+        </div>
+
+        <input type="range" min={-4500} max={2025} step={1}
+          value={year} onChange={e => onYear(parseInt(e.target.value))}
+          style={{ position: 'absolute', left: 0, right: 0, top: 16, width: '100%' }} />
+      </div>
+
+      <div style={{ fontSize: 11, color: 'var(--muted)', letterSpacing: 0.4, fontVariantNumeric: 'tabular-nums' }}>2025</div>
+
+      <select value={speed} onChange={e => onSpeed(parseInt(e.target.value))} style={{
+        background: 'var(--bg)', color: 'var(--text)', border: '1px solid var(--border)',
+        fontSize: 11, padding: '4px 6px', borderRadius: 3,
+      }}>
+        <option value={200}>Fast</option>
+        <option value={500}>Normal</option>
+        <option value={1000}>Slow</option>
+      </select>
+
+      <div style={{
+        fontSize: 15, fontWeight: 600, color: 'var(--accent)', minWidth: 78, textAlign: 'right',
+        fontVariantNumeric: 'tabular-nums',
+        fontFamily: tweaks.serifYear ? '"Playfair Display", serif' : 'inherit',
+        fontStyle: tweaks.serifYear ? 'italic' : 'normal',
+      }}>{year < 0 ? -year : year} <span style={{ fontSize: 10, color: 'var(--muted)', fontStyle: 'normal' }}>{year < 0 ? 'BCE' : 'CE'}</span></div>
+    </div>
+  );
+}
+
+// ───── Tweaks ─────
+function TweaksPanel({ tweaks, onChange, onClose }) {
+  return (
+    <div style={{
+      position: 'fixed', right: 20, bottom: 88, width: 280, zIndex: 100,
+      background: 'var(--panel)', border: '1px solid var(--border)', borderRadius: 6,
+      boxShadow: '0 16px 40px rgba(0,0,0,0.5)', padding: '14px 16px',
+    }}>
+      <div style={{ display: 'flex', alignItems: 'center', marginBottom: 10 }}>
+        <div style={{ fontSize: 11, letterSpacing: 1.5, textTransform: 'uppercase', color: 'var(--muted)', flex: 1 }}>Tweaks</div>
+        <span onClick={onClose} style={{ cursor: 'pointer', color: 'var(--muted)' }}>×</span>
+      </div>
+
+      <TweakRow label="Accent color">
+        <div style={{ display: 'flex', gap: 4 }}>
+          {['#e8b14a', '#58a6ff', '#6eb58a', '#d57770', '#b23a1c'].map(c => (
+            <div key={c} onClick={() => onChange('accent', c)} style={{
+              width: 22, height: 22, borderRadius: 3, background: c, cursor: 'pointer',
+              border: tweaks.accent === c ? '2px solid #fff' : '2px solid transparent',
+            }} />
+          ))}
+        </div>
+      </TweakRow>
+
+      <TweakRow label="Serif year (editorial)">
+        <Toggle value={tweaks.serifYear} onChange={v => onChange('serifYear', v)} />
+      </TweakRow>
+
+      <TweakRow label="Underline era chips">
+        <Toggle value={tweaks.underlineEras} onChange={v => onChange('underlineEras', v)} />
+      </TweakRow>
+
+      <TweakRow label="Compact sidebar">
+        <Toggle value={tweaks.densityCompact} onChange={v => onChange('densityCompact', v)} />
+      </TweakRow>
+
+      <TweakRow label={`Boundary fill: ${tweaks.boundaryOpacity.toFixed(2)}`}>
+        <input type="range" min="0.1" max="0.5" step="0.02"
+          value={tweaks.boundaryOpacity}
+          onChange={e => onChange('boundaryOpacity', parseFloat(e.target.value))}
+          style={{ width: 110 }} />
+      </TweakRow>
+    </div>
+  );
+}
+
+function TweakRow({ label, children }) {
+  return (
+    <div style={{
+      display: 'flex', alignItems: 'center', gap: 10, padding: '7px 0',
+      borderTop: '1px solid var(--border)',
+    }}>
+      <span style={{ flex: 1, fontSize: 12, color: 'var(--text)' }}>{label}</span>
+      {children}
+    </div>
+  );
+}
+
+function Toggle({ value, onChange }) {
+  return (
+    <div onClick={() => onChange(!value)} style={{
+      width: 32, height: 18, borderRadius: 9, background: value ? 'var(--accent)' : 'var(--border)',
+      cursor: 'pointer', position: 'relative', transition: 'background 0.15s',
+    }}>
+      <div style={{
+        position: 'absolute', top: 2, left: value ? 16 : 2,
+        width: 14, height: 14, borderRadius: '50%', background: '#fff',
+        transition: 'left 0.15s',
+      }} />
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+</script>
+</body>
+</html>
