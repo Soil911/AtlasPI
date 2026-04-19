@@ -2,6 +2,40 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.79.0] - 2026-04-19
+
+**Tema**: *Audit v4 Fase C Round 9 — Nightly cron + closure*
+
+Ultimo round del piano audit v4. Installa pipeline di drift detection automatico + closure document.
+
+### Continuous validation
+
+- `scripts/nightly_drift_check.sh` — script bash che esegue drift check ogni notte alle 03:00
+- Installato su VPS Aruba: `/etc/cron.daily/atlaspi-drift`
+- Output: `/var/log/atlaspi/drift_YYYYMMDD.{md,json}` (autocleanup dopo 30 giorni)
+- Alert syslog `atlaspi-drift` se HIGH count aumenta day-over-day
+
+### Closure handoff
+
+`docs/audit/FASE_C_CHIUSURA.md` — documento di chiusura completo del piano audit v4 con:
+- Release ledger (v6.71 → v6.79)
+- Stato finale dataset (Wikidata coverage, FK integrity, continuous validation)
+- Pattern sistemici riconosciuti
+- Lezioni metodologiche
+- Cosa rimane deferred (richiede ADR per merge entità o pipeline refinement)
+
+### Stato finale
+
+- Wikidata coverage: 0% → 68.8% (711/1034)
+- Sites FK: 0% → 93.1%
+- Cities FK: 16% → 99.1%
+- Duplicate QID: 0
+- Nightly drift detection: live
+
+**Audit v4 chiuso.**
+
+---
+
 ## [v6.78.0] - 2026-04-19
 
 **Tema**: *Audit v4 Fase C Round 8 — Cities FK backfill + script/lang detector*
