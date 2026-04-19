@@ -158,9 +158,42 @@ Significa che Wikidata ha avuto un edit che ora confligge con AtlasPI (raro ma p
 
 ---
 
+## Estensione Round 10-15 (post-v6.79)
+
+Dopo il closure v6.79, l'utente ha richiesto "finisci tutto" (i deferred). Round 10-15 + ADR docs:
+
+| Round | Ver | Scope |
+|-------|-----|-------|
+| 10 | v6.80.0 | Sites NULL nearest-neighbor fallback (86 → 16, 98.7%) |
+| 11 | v6.83.0 | Native names from Wikidata (17 ETHICS-001 fixes, 169 already correct) |
+| 12 | v6.82.0 | Missing entities: Premier Empire (1037), Afsharid (1038) + Regnum Francorum extension |
+| 13 | v6.84.0 | Schema `capital_history[]` migration 016 + populate 13 entities (47 records) |
+| 14 | v6.85.0 | Merge duplicate entities: 44 deprecated, FK redirected (rulers/sites/cities/chains) |
+| 15 | v6.86.0 | Split bundled: Babilonia (Old Babylonian id 1039) + Chola (Sangam id 1040) |
+
+ADR docs:
+- ADR-004: Capital History schema
+- ADR-005: Deprecated Entity Merge Policy
+
+### Stato finale post-v6.86
+
+| Metric | v6.79 | v6.86 |
+|--------|-------|-------|
+| Total entities | 1034 | 1038 |
+| With QID | 711 | 713 |
+| Confirmed/active (excl deprecated) | N/A | **992** |
+| Sites linked | 1163 (93%) | **1233 (99%)** |
+| Cities linked | 109 (99%) | 109 |
+| Capital history records | 0 | **47 records / 13 entities** |
+| Deprecated duplicates | N/A | 44 |
+
+Il dataset è ora **clean baseline** con drift detection automatico.
+
+---
+
 ## Chiusura
 
-Il piano audit v4 (Fase A+B+C) è **chiuso**. AtlasPI ha:
+Il piano audit v4 (Fase A+B+C estesa) è **chiuso completamente**. AtlasPI ha:
 
 - Cross-reference Wikidata stabile (711/1034 = 69%) con zero duplicati e annotation completa dei drift legittimi
 - FK integrity sites/cities risolti al 99-93%
