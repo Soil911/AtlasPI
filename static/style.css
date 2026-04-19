@@ -348,6 +348,92 @@ body {
   font-family: var(--font-ui);
 }
 
+/* ─── A+ A11y & Reduced Motion (spec §7 + §10 — v6.90) ──────────── */
+
+/* Focus-visible globale: outline accent 2px, offset 2px */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible,
+[role="button"]:focus-visible,
+[role="listitem"]:focus-visible,
+[role="menuitem"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Reduced motion: disabilita transizioni + animazioni, preserva CLS-safe
+   overrides su .leaflet-tile (fade disattivato, non restored) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+  /* Preserva CLS-safe: leaflet-tile resta opacity:1 senza transition */
+  .leaflet-tile {
+    transition: none !important;
+    opacity: 1 !important;
+  }
+  /* Detail panel slide-in diventa istantaneo */
+  .detail-panel {
+    transition: none !important;
+  }
+  /* Play button hover scale rimosso */
+  .tb-play-btn:hover,
+  .tb-play-btn:active {
+    transform: none !important;
+  }
+  /* Slider thumb scale rimosso */
+  .tb-year-slider:hover::-webkit-slider-thumb,
+  .tb-year-slider:hover::-moz-range-thumb {
+    transform: none !important;
+  }
+  /* Era-chip hover neutralizzato (già CLS-safe su border-color) */
+}
+
+/* Sr-only utility (se non già definita altrove) */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Keyboard focus su entity-row (già ha :focus-visible via global,
+   aggiungo styling specifico) */
+.entity-row:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  background: var(--panel-2) !important;
+}
+
+/* Era chip focus (doppio segnale: underline + outline per daltonici) */
+.sb-section .era-chip:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-bottom-color: var(--accent);
+}
+
+/* Details summary senza default marker (cross-browser) */
+details summary {
+  cursor: pointer;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::marker { content: ''; }
+
 /* Legacy .badge kept for any stragglers during transition */
 .badge {
   background: var(--panel-2);
