@@ -2,6 +2,20 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.80.0] - 2026-04-19
+
+**Tema**: *Audit v4 Round 10 — Sites NULL residual nearest-neighbor fallback*
+
+86 sites NULL residui dopo Round 7 (regioni senza boundary AtlasPI: Australian outback, isole sub-antartiche, Galápagos, Surtsey, Sub-Sahara remoto). Fallback: nearest-neighbor su capital coords delle entity moderne ancora attive (`year_end IS NULL`, type ∈ {republic, empire, kingdom, federation}).
+
+Threshold: distanza < 5000km per evitare assegnazioni assurde.
+
+**Risultato**: 86 → 16 NULL. Sites linked **93.1% → 98.7%**.
+
+I 16 residui sono sites in regioni senza alcuna entity AtlasPI moderna nel raggio (es. acque internazionali Antartiche, atolli senza claim politico).
+
+---
+
 ## [v6.79.0] - 2026-04-19
 
 **Tema**: *Audit v4 Fase C Round 9 — Nightly cron + closure*
