@@ -1549,13 +1549,50 @@ async function showDetail(id) {
     }
   }
 
+  // v6.90 A+: life timeline (spec §6) — barra che rappresenta l'intera
+  // timeline del progetto (-4500..2025) con segmento colorato e dot anno corrente.
+  const slider = document.getElementById('year-slider');
+  const currentYear = slider ? parseInt(slider.value, 10) : 1500;
+  const lifeStart = Math.max(-4500, e.year_start);
+  const lifeEnd = Math.min(2025, e.year_end != null ? e.year_end : 2025);
+  const lifeFrom = ((lifeStart + 4500) / 6525) * 100;
+  const lifeWidth = ((lifeEnd - lifeStart) / 6525) * 100;
+  const dotPos = ((currentYear + 4500) / 6525) * 100;
+  const inLife = currentYear >= e.year_start && (e.year_end == null || currentYear <= e.year_end);
+  const entityHue = hashHue(e.id);
+  const spanColor = `hsl(${entityHue}, 55%, 55%)`;
+  const periodStr = e.year_end != null
+    ? `${fmtY(e.year_start)} — ${fmtY(e.year_end)}`
+    : `${fmtY(e.year_start)} — ${t('today') || 'today'}`;
+  const lifeTimelineHtml = `
+    <div class="life-timeline" aria-label="Life timeline">
+      <div class="life-timeline__labels">
+        <span>4500 BCE</span>
+        <span class="period">${periodStr}</span>
+        <span>2025</span>
+      </div>
+      <div class="life-timeline__bar">
+        <span class="life-timeline__span" style="left:${lifeFrom.toFixed(2)}%;width:${lifeWidth.toFixed(2)}%;background:${spanColor}"></span>
+        ${inLife ? `<span class="life-timeline__dot" style="left:${dotPos.toFixed(2)}%"></span>` : ''}
+      </div>
+    </div>`;
+
+  // v6.90 A+: nome Latin variant (se esiste) sotto nome originale
+  const latinVariant = (e.name_variants || []).find(v => (v.lang || '').toLowerCase().startsWith('la'))
+    || (e.name_variants || []).find(v => (v.lang || '').toLowerCase().startsWith('en'));
+  const latinHtml = latinVariant && latinVariant.name !== e.name_original
+    ? `<p class="detail-latin-name">${esc(latinVariant.name)}</p>`
+    : '';
+
   let html = `
     <h2>${esc(e.name_original)}</h2>
+    ${latinHtml}
     <div class="detail-tags">
       <span class="lang-tag">${e.name_original_lang}</span>
       <span class="status-badge ${e.status}">${t(e.status)}</span>
       <span class="continent-tag">${cIcon} ${e.continent || '?'}</span>
     </div>
+    ${lifeTimelineHtml}
 
     <div class="detail-tabs" role="tablist" aria-label="${lang === 'it' ? 'Viste dettaglio entit\u00e0' : 'Entity detail views'}">
       <button class="detail-tab active" role="tab" aria-selected="true" aria-controls="detail-tab-overview" data-tab="overview">
@@ -1631,24 +1668,26 @@ async function showDetail(id) {
     const titleEN = 'Capital history';
     const subIT = 'Capitali multiple per polity long-duration (ADR-004). Useful for AI agents querying "capital of X in year Y".';
     const subEN = 'Multiple capitals for long-duration polities (ADR-004). Useful for AI agents querying "capital of X in year Y".';
+    // v6.90 A+: inline styles sostituiti da classe .capital-history-list (CSS).
+    // Preservato data-section="capital-history" (addendum B — 13 entities).
     html += `
     <div class="detail-section" data-section="capital-history">
       <h3 class="collapsible" tabindex="0">${lang === 'it' ? titleIT : titleEN} <span class="collapse-icon">▾</span></h3>
       <div class="section-body">
-        <p style="font-size:0.78em;color:var(--text-muted);margin:0 0 8px 0">${lang === 'it' ? subIT : subEN}</p>
-        <ol class="capital-history-list" style="list-style:none;padding-left:0;margin:0">
+        <p style="font-size:10.5px;color:var(--text-muted);margin:0 0 8px 0;line-height:1.4">${lang === 'it' ? subIT : subEN}</p>
+        <ol class="capital-history-list">
           ${ch.map(c => {
             const period = c.year_end != null
               ? `${fmtY(c.year_start)} \u2013 ${fmtY(c.year_end)}`
               : `${fmtY(c.year_start)} \u2013 ${lang === 'it' ? 'oggi/ultima' : 'today/last'}`;
             const coords = (c.lat != null && c.lon != null)
-              ? ` <span class="geo-micro">(${c.lat.toFixed(2)}\u00b0, ${c.lon.toFixed(2)}\u00b0)</span>`
-              : ` <span class="geo-micro">(${lang === 'it' ? 'corte itinerante' : 'court itinerant'})</span>`;
-            const notes = c.notes ? `<br><span style="font-size:0.78em;color:var(--text-muted)">${esc(c.notes)}</span>` : '';
+              ? ` <span class="ch-coords">(${c.lat.toFixed(2)}\u00b0, ${c.lon.toFixed(2)}\u00b0)</span>`
+              : ` <span class="ch-coords">(${lang === 'it' ? 'corte itinerante' : 'court itinerant'})</span>`;
+            const notes = c.notes ? `<span class="ch-notes">${esc(c.notes)}</span>` : '';
             return `
-              <li style="padding:6px 8px;margin-bottom:4px;border-left:2px solid var(--accent);background:rgba(88,166,255,0.06)">
-                <strong>${esc(c.name)}</strong>${coords}<br>
-                <span style="font-size:0.82em;color:var(--text-muted)">${period}</span>
+              <li>
+                <span class="ch-name">${esc(c.name)}</span>${coords}
+                <span class="ch-period">${period}</span>
                 ${notes}
               </li>`;
           }).join('')}

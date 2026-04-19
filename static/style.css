@@ -1255,22 +1255,89 @@ body {
 
 .close-btn:hover { color: var(--disputed); border-color: var(--disputed); }
 
+/* ─── Detail panel A+ editorial typography (spec §6 — v6.90) ────
+ * Spec: Playfair italic 22px per name_original, 11px per Latin name,
+ * K/V con label uppercase 9.5px tabular-nums.
+ */
 .detail-panel h2 {
-  font-size: 1.1em;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 22px;
+  font-weight: 700;
   color: var(--text);
-  margin-bottom: 2px;
-  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 1.15;
+  letter-spacing: -0.4px;
 }
 
 .detail-panel .lang-tag {
   display: inline-block;
-  background: var(--bg-card);
+  background: var(--panel-2);
   padding: 1px 7px;
-  border-radius: 4px;
-  font-size: 0.7em;
+  border-radius: 3px;
+  font-size: 9px;
   color: var(--text-muted);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   border: 1px solid var(--border);
+  font-family: var(--font-ui);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.detail-latin-name {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+/* Life timeline (spec §6) — barra 2px con entità + dot anno corrente */
+.life-timeline {
+  margin: 14px 0;
+  padding: 8px 0 6px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.life-timeline__bar {
+  position: relative;
+  height: 2px;
+  background: var(--border);
+  border-radius: 1px;
+  margin: 4px 0;
+}
+.life-timeline__span {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: 1px;
+  /* background set inline: hsl(hue, 55%, 55%) */
+}
+.life-timeline__dot {
+  position: absolute;
+  top: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 2px var(--panel);
+  transform: translateX(-50%);
+}
+.life-timeline__labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-ui);
+  letter-spacing: 0.4px;
+  padding-top: 2px;
+}
+.life-timeline__labels .period {
+  color: var(--text);
+  font-weight: 500;
 }
 
 .detail-section {
@@ -2835,25 +2902,85 @@ kbd {
 
 .detail-section[data-section="info"] .info-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px 12px;
+  grid-template-columns: 80px 1fr;
+  gap: 4px 12px;
+  padding: 4px 0;
 }
 
 .detail-section .info-item {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
+  display: contents; /* flatten into grid for alignment */
 }
 
+/* A+ editorial K/V (spec §6) */
 .detail-section .info-label {
-  font-size: 0.72em;
+  font-size: 9.5px;
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.4px;
+  font-family: var(--font-ui);
+  font-weight: 500;
+  padding-top: 3px;
+  line-height: 1.2;
 }
 
 .detail-section .info-value {
-  font-weight: 500;
+  font-size: 11.5px;
+  font-weight: 400;
+  font-family: var(--font-ui);
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  padding: 3px 0;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.3;
+}
+
+/* Capital history editorial (addendum B — preserve) */
+.capital-history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.capital-history-list li {
+  padding: 8px 10px;
+  margin-bottom: 4px;
+  border-left: 2px solid var(--accent);
+  background: rgba(232, 177, 74, 0.06);
+  border-radius: 0 3px 3px 0;
+}
+
+.capital-history-list .ch-name {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.capital-history-list .ch-coords {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  margin-left: 6px;
+  letter-spacing: 0.2px;
+}
+
+.capital-history-list .ch-period {
+  display: block;
+  font-size: 10.5px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  margin-top: 2px;
+  letter-spacing: 0.3px;
+}
+
+.capital-history-list .ch-notes {
+  display: block;
+  font-size: 10.5px;
+  color: var(--text-muted);
+  margin-top: 3px;
+  font-style: italic;
+  line-height: 1.4;
 }
 
 /* ─── v5.7: Timeline improvements ──────────────────────────── */
