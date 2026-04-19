@@ -32,25 +32,38 @@
   <div id="loading-bar" class="loading-bar" style="width:0%"></div>
   <header id="header">
     <div class="header-left">
-      <h1>Atlas<span>PI</span></h1>
-      <span class="subtitle">Database Geografico Storico per Agenti AI</span>
+      <div class="header-brand">
+        <h1>Atlas<span>PI</span></h1>
+        <span class="subtitle" data-i18n="app_subtitle_short">Historical Geography</span>
+      </div>
+      <div class="header-separator" aria-hidden="true"></div>
+      <div class="header-year-hero" aria-label="Year hero">
+        <span id="year-hero-display" class="year-hero" aria-live="polite">1500</span>
+        <span id="year-hero-era-suffix" class="year-hero-era">CE</span>
+        <span id="era-label" class="era-label" data-i18n-key-dynamic="era_name" aria-live="polite">Age of Discovery</span>
+      </div>
     </div>
     <div class="header-right">
-      <button id="theme-toggle" class="theme-toggle" data-i18n-title="theme_toggle_title" data-i18n-aria-label="theme_toggle_aria" title="Cambia tema" aria-label="Cambia tema chiaro/scuro">🌙</button>
-      <button id="lang-toggle" class="api-link" data-i18n-title="lang_toggle_title" data-i18n-aria-label="lang_toggle_aria" title="Switch language" aria-label="Cambia lingua">EN</button>
-      <a href="/search" class="api-link" data-i18n-title="nav_search_title" title="Ricerca avanzata nel dataset">Search</a>
-      <a href="/timeline" class="api-link" data-i18n-title="nav_timeline_title" title="Timeline interattiva">Timeline</a>
-      <a href="/compare" class="api-link" data-i18n-title="nav_compare_title" title="Confronta entita' storiche">Compare</a>
-      <a href="/embed" class="api-link" data-i18n-title="nav_embed_title" title="Versione embed per iframe" target="_blank">Embed</a>
-      <a href="/docs-ui" class="api-link" data-i18n-title="nav_apidocs_title" title="Documentazione API interattiva">API Docs</a>
-      <a href="/docs" class="api-link" data-i18n-title="nav_openapi_title" title="Documentazione API OpenAPI">OpenAPI</a>
+      <nav class="header-nav" aria-label="Navigation">
+        <a href="/search" class="nav-link" data-i18n="nav_search_title" data-i18n-title="nav_search_title" title="Advanced search">Search</a>
+        <a href="/timeline" class="nav-link" data-i18n="nav_timeline_title" data-i18n-title="nav_timeline_title" title="Interactive timeline">Timeline</a>
+        <a href="/compare" class="nav-link" data-i18n="nav_compare_title" data-i18n-title="nav_compare_title" title="Compare entities">Compare</a>
+        <details class="nav-more" id="nav-more">
+          <summary class="nav-link nav-more-summary" data-i18n="more_dropdown" aria-haspopup="menu">More ▾</summary>
+          <div class="nav-more-panel" role="menu">
+            <a href="/embed" class="nav-more-item" role="menuitem" data-i18n="nav_embed_title" target="_blank">Embed</a>
+            <a href="/docs-ui" class="nav-more-item" role="menuitem" data-i18n="nav_apidocs_title">API Docs</a>
+            <a href="/docs" class="nav-more-item" role="menuitem" data-i18n="nav_openapi_title">OpenAPI</a>
+            <button id="lang-toggle" class="nav-more-item nav-more-item--button" role="menuitem" data-i18n-title="lang_toggle_title" data-i18n-aria-label="lang_toggle_aria" title="Switch language" aria-label="Switch language"><span data-i18n="lang_label">Language</span>: <span id="lang-current">EN</span></button>
+            <button id="theme-toggle" class="nav-more-item nav-more-item--button" data-i18n-title="theme_toggle_title" data-i18n-aria-label="theme_toggle_aria" title="Toggle theme" aria-label="Toggle light/dark theme"><span data-i18n="theme_label">Theme</span> <span class="theme-toggle-icon">🌙</span></button>
+          </div>
+        </details>
+      </nav>
+      <span id="entity-count" class="counter-pill" aria-live="polite" data-i18n-suffix="on_map_label"><span class="counter-dot" aria-hidden="true"></span><span class="counter-value">...</span></span>
       <button id="sidebar-toggle" class="sidebar-toggle" data-i18n-title="sidebar_toggle_title" data-i18n-aria-label="sidebar_toggle_aria" title="Mostra/nascondi pannello filtri" aria-label="Toggle sidebar" aria-pressed="true">
         <span class="sidebar-toggle-icon">◀</span>
       </button>
-      <button id="ask-claude-btn" class="ask-claude-btn" data-i18n-title="ask_claude_title" data-i18n-aria-label="ask_claude_aria" title="Chiedi a Claude usando i dati di AtlasPI" aria-label="Apri Claude con prompt precompilato">
-        🤖 <span data-i18n="ask_claude">Ask Claude</span>
-      </button>
-      <span id="entity-count" class="badge" aria-live="polite">...</span>
+      <button id="ask-claude-btn" class="ask-claude-btn" data-i18n-title="ask_claude_title" data-i18n-aria-label="ask_claude_aria" title="Chiedi a Claude usando i dati di AtlasPI" aria-label="Apri Claude con prompt precompilato"><span data-i18n="ask_claude">Ask Claude</span></button>
     </div>
   </header>
 

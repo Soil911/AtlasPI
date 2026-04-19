@@ -113,23 +113,41 @@ body {
   overflow: hidden;
 }
 
-/* Header */
+/* ─── Header A+ (spec §2 — v6.90) ──────────────────────────────── */
 #header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 20px;
-  background: var(--bg-sidebar);
+  padding: 0 22px;
+  height: 52px;
+  background: var(--panel);
   border-bottom: 1px solid var(--border);
   z-index: 1000;
   flex-shrink: 0;
+  gap: 16px;
+  /* CLS-safe: fixed height avoids reflow durante font-load */
+  contain: layout;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0; /* allow year hero to ellipsis-shrink se serve */
+}
+
+.header-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
 }
 
 #header h1 {
-  font-size: 1.2em;
+  font-size: 15px;
   font-weight: 600;
   color: var(--text);
-  letter-spacing: 0.5px;
+  letter-spacing: -0.2px;
+  font-family: var(--font-ui);
 }
 
 #header h1 span {
@@ -137,22 +155,207 @@ body {
 }
 
 .subtitle {
-  font-size: 0.75em;
+  font-size: 11px;
   color: var(--text-muted);
-  margin-left: 12px;
   font-weight: 400;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  /* CLS-safe: fixed line-height evita reflow quando i18n cambia testo */
+  line-height: 1;
 }
 
+.header-separator {
+  width: 1px;
+  height: 26px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.header-year-hero {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+}
+
+.year-hero {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: -0.6px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  line-height: 1;
+  /* CLS-safe: fixed min-width per 5-digit year + minus sign ("-4500") */
+  min-width: 96px;
+  display: inline-block;
+  /* no transition on font-size/weight — only color */
+  transition: color 0.2s ease;
+}
+
+.year-hero-era {
+  font-family: var(--font-ui);
+  font-style: normal;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  line-height: 1;
+}
+
+.era-label {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent);
+  line-height: 1;
+  margin-left: 4px;
+  /* CLS-safe: fixed min-width per la più lunga era ("Age of Discovery") */
+  min-width: 140px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-link {
+  font-family: var(--font-ui);
+  font-size: 11.5px;
+  color: var(--text-muted);
+  text-decoration: none;
+  cursor: pointer;
+  padding: 4px 2px;
+  border-radius: 2px;
+  background: none;
+  border: none;
+  line-height: 1.2;
+  transition: color 0.15s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: var(--text);
+}
+
+/* More dropdown */
+.nav-more {
+  position: relative;
+  /* reset summary marker */
+}
+
+.nav-more-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.nav-more-summary::-webkit-details-marker { display: none; }
+.nav-more-summary::marker { content: ''; }
+
+.nav-more[open] .nav-more-summary {
+  color: var(--text);
+}
+
+.nav-more-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 6px;
+  min-width: 180px;
+  box-shadow: 0 6px 24px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 1050;
+}
+
+.nav-more-item {
+  display: block;
+  padding: 7px 10px;
+  font-size: 12px;
+  color: var(--text);
+  text-decoration: none;
+  background: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-ui);
+}
+
+.nav-more-item:hover,
+.nav-more-item:focus-visible {
+  background: var(--panel-2);
+}
+
+.nav-more-item--button {
+  font-size: 12px;
+}
+
+/* Counter pill (spec §2) */
+.counter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 9px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--panel);
+  color: var(--text-muted);
+  font-size: 10.5px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  /* CLS-safe (v6.67): reserve width for "1.034 on map" ~ 90px */
+  min-width: 96px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.counter-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--confirmed);
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.counter-value {
+  font-family: var(--font-ui);
+}
+
+/* Legacy .badge kept for any stragglers during transition */
 .badge {
-  background: var(--bg-card);
+  background: var(--panel-2);
   padding: 3px 10px;
-  border-radius: 20px;
+  border-radius: 3px;
   font-size: 0.8em;
   border: 1px solid var(--border);
   color: var(--text-muted);
-  /* v6.67 CLS-fix: header #entity-count badge parte come "..." e poi diventa
-     "1.034 entita'" — riserva larghezza minima per non spostare gli altri
-     controlli accanto (Ask Claude bottone, lang-toggle). */
   min-width: 90px;
   text-align: center;
   display: inline-block;

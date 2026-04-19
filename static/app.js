@@ -2642,3 +2642,84 @@ async function showCompare(id1, id2) {
 // ─── Theme ─────────────────────────────────────────────────────
 // v6.46: extracted to static/js/theme.js (initTheme + toggleTheme + applyTheme)
 // isReal() moved to static/js/utils.js
+
+// ─── v6.90 A+ year hero + era label sync ────────────────────────
+// Aggiorna #year-hero-display, #year-hero-era-suffix, #era-label nell'header
+// quando cambia l'anno sullo slider #year-slider. Nessun impatto su handler
+// esistenti — questo è un secondo listener indipendente.
+// ETHICS: la label dell'era non proiettarsi gerarchie geografiche — usa la
+// stessa nomenclatura periodizzante dei chip sidebar (neutra, multi-culturale).
+(function initYearHeroSync() {
+  const ERA_BANDS = [
+    { from: -4500, to: -3000, key: 'era_prehistoric', fallbackIT: 'Preistoria',        fallbackEN: 'Prehistoric' },
+    { from: -3000, to: -1200, key: 'era_bronze',      fallbackIT: 'Età del Bronzo',     fallbackEN: 'Bronze Age' },
+    { from: -1200, to:  -500, key: 'era_iron',        fallbackIT: 'Età del Ferro',      fallbackEN: 'Iron Age' },
+    { from:  -500, to:   500, key: 'era_classical',   fallbackIT: 'Antichità classica', fallbackEN: 'Classical Antiquity' },
+    { from:   500, to:  1000, key: 'era_early_medieval', fallbackIT: 'Alto Medioevo',   fallbackEN: 'Early Medieval' },
+    { from:  1000, to:  1453, key: 'era_high_medieval',  fallbackIT: 'Basso Medioevo',  fallbackEN: 'High Medieval' },
+    { from:  1453, to:  1789, key: 'era_early_modern',   fallbackIT: 'Prima età moderna', fallbackEN: 'Early Modern' },
+    { from:  1789, to:  1914, key: 'era_revolutions',    fallbackIT: 'Rivoluzioni',      fallbackEN: 'Age of Revolutions' },
+    { from:  1914, to:  1945, key: 'era_world_wars',     fallbackIT: 'Guerre mondiali',  fallbackEN: 'World Wars' },
+    { from:  1945, to:  2025, key: 'era_modern',         fallbackIT: 'Età contemporanea',fallbackEN: 'Modern' },
+  ];
+
+  function eraForYear(year) {
+    for (let i = ERA_BANDS.length - 1; i >= 0; i--) {
+      if (year >= ERA_BANDS[i].from) return ERA_BANDS[i];
+    }
+    return ERA_BANDS[0];
+  }
+
+  function formatYearHero(year) {
+    const absYear = Math.abs(year).toLocaleString('en-US').replace(/,/g, '.');
+    return { display: absYear, suffix: year < 0 ? 'BCE' : 'CE' };
+  }
+
+  function getEraLabel(era) {
+    const lang = (window.CURRENT_LANG || document.documentElement.lang || 'it').slice(0, 2);
+    if (typeof window.t === 'function') {
+      const translated = window.t(era.key);
+      if (translated && translated !== era.key) return translated.toUpperCase();
+    }
+    return (lang === 'en' ? era.fallbackEN : era.fallbackIT).toUpperCase();
+  }
+
+  function updateYearHero() {
+    const slider = document.getElementById('year-slider');
+    if (!slider) return;
+    const year = parseInt(slider.value, 10);
+    const heroDisplay = document.getElementById('year-hero-display');
+    const heroSuffix = document.getElementById('year-hero-era-suffix');
+    const eraLabel = document.getElementById('era-label');
+    const { display, suffix } = formatYearHero(year);
+    if (heroDisplay) heroDisplay.textContent = display;
+    if (heroSuffix) heroSuffix.textContent = suffix;
+    if (eraLabel) {
+      const era = eraForYear(year);
+      eraLabel.textContent = getEraLabel(era);
+      eraLabel.dataset.eraKey = era.key;
+    }
+  }
+
+  function wire() {
+    const slider = document.getElementById('year-slider');
+    if (!slider) return;
+    slider.addEventListener('input', updateYearHero);
+    slider.addEventListener('change', updateYearHero);
+    // Initial + after i18n swap
+    updateYearHero();
+    // v6.78 data-i18n already applied on init; re-render era-label when lang toggles.
+    document.addEventListener('atlaspi:langChanged', updateYearHero);
+    const langBtn = document.getElementById('lang-toggle');
+    if (langBtn) langBtn.addEventListener('click', () => setTimeout(updateYearHero, 50));
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', wire);
+  } else {
+    wire();
+  }
+
+  // Expose for Phase 2.5 (timeline bar) to call after year-slider programmatic updates
+  window.atlasPIUpdateYearHero = updateYearHero;
+})();
