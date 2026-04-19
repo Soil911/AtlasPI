@@ -1558,6 +1558,43 @@ async function showDetail(id) {
     </div>`;
   }
 
+  // v6.88: capital_history timeline (ADR-004)
+  // Per polities long-duration con capitali multiple: mostra cronologia
+  // Ordine: per year_start ASC, poi ordering ASC (per casi sovrapposti es. dual monarchy)
+  if (Array.isArray(e.capital_history) && e.capital_history.length > 0) {
+    const ch = [...e.capital_history].sort((a, b) =>
+      (a.year_start - b.year_start) || (a.ordering - b.ordering)
+    );
+    const titleIT = 'Cronologia capitali';
+    const titleEN = 'Capital history';
+    const subIT = 'Capitali multiple per polity long-duration (ADR-004). Useful for AI agents querying "capital of X in year Y".';
+    const subEN = 'Multiple capitals for long-duration polities (ADR-004). Useful for AI agents querying "capital of X in year Y".';
+    html += `
+    <div class="detail-section" data-section="capital-history">
+      <h3 class="collapsible" tabindex="0">${lang === 'it' ? titleIT : titleEN} <span class="collapse-icon">▾</span></h3>
+      <div class="section-body">
+        <p style="font-size:0.78em;color:var(--text-muted);margin:0 0 8px 0">${lang === 'it' ? subIT : subEN}</p>
+        <ol class="capital-history-list" style="list-style:none;padding-left:0;margin:0">
+          ${ch.map(c => {
+            const period = c.year_end != null
+              ? `${fmtY(c.year_start)} \u2013 ${fmtY(c.year_end)}`
+              : `${fmtY(c.year_start)} \u2013 ${lang === 'it' ? 'oggi/ultima' : 'today/last'}`;
+            const coords = (c.lat != null && c.lon != null)
+              ? ` <span class="geo-micro">(${c.lat.toFixed(2)}\u00b0, ${c.lon.toFixed(2)}\u00b0)</span>`
+              : ` <span class="geo-micro">(${lang === 'it' ? 'corte itinerante' : 'court itinerant'})</span>`;
+            const notes = c.notes ? `<br><span style="font-size:0.78em;color:var(--text-muted)">${esc(c.notes)}</span>` : '';
+            return `
+              <li style="padding:6px 8px;margin-bottom:4px;border-left:2px solid var(--accent);background:rgba(88,166,255,0.06)">
+                <strong>${esc(c.name)}</strong>${coords}<br>
+                <span style="font-size:0.82em;color:var(--text-muted)">${period}</span>
+                ${notes}
+              </li>`;
+          }).join('')}
+        </ol>
+      </div>
+    </div>`;
+  }
+
   if (e.territory_changes.length) {
     html += `
     <div class="detail-section" data-section="territory">

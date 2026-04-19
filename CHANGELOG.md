@@ -2,6 +2,21 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.88.0] - 2026-04-19
+
+**Tema**: *Round 18 — Frontend timeline capitali nella sidebar detail*
+
+`static/app.js::showDetail()` ora rende una nuova sezione "Cronologia capitali" / "Capital history" per ogni entity con `capital_history.length > 0`.
+
+Render:
+- Lista ordinata per `year_start ASC`, secondario `ordering ASC`
+- Per ogni capitale: nome (lingua locale), coordinate (o "corte itinerante" per lat/lon NULL), period range, notes opzionali
+- Styling: bordo accent + sfondo soft, font-size scalato per non rubare attenzione alla mappa
+
+Le 13 entities popolate in v6.84 (HRE, Mughal, Ottoman, Ming, Song, Solomonic, Assiria, Kush, Seleucidi, Kanem-Bornu, Lombardi, Dai Viet, Austria-Hungary, Mali) ora mostrano timeline visiva quando l'utente clicca sulla mappa.
+
+---
+
 ## [v6.87.0] - 2026-04-19
 
 **Tema**: *Round 17 — EntityResponse expose capital_history + filter deprecated default*
