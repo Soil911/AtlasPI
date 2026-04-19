@@ -2,6 +2,41 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.87.0] - 2026-04-19
+
+**Tema**: *Round 17 — EntityResponse expose capital_history + filter deprecated default*
+
+Implementa i TODO espliciti di ADR-004 e ADR-005:
+
+- `EntityResponse.capital_history: list[CapitalHistoryResponse]` ora esposto. Joinedload aggiunto a `_eager_query`. Le 13 entities popolate in v6.84 ora ritornano l'array via API.
+- `/v1/entities` + `/v1/entities/light` filtrano `status='deprecated'` di default (44 secondary entities da Round 14). Override esplicito via `?include_deprecated=true`.
+
+---
+
+## [v6.86.0] - 2026-04-19
+
+**Tema**: *Round 15 — Split bundled (Babilonia + Chola)*
+
+Splits historiografically distinct phases bundled in long-duration entities:
+- Babilonia (id 171, -1894 to -539): now 'aggregate'. Old Babylonian Empire (id 1039, -1894 to -1595, Hammurabi era) created with Q733897.
+- Chola (id 110): year_start aggiornato -300 → 848 per focalizzare Medieval Chola Empire. Sangam-era Cholas (id 1040, -300 to 300) created separately with Q3532146.
+
+Total entities: 1036 → 1038.
+
+---
+
+## [v6.85.0] - 2026-04-19
+
+**Tema**: *Round 14 — Merge duplicate entities (44 deprecated, FK redirected)*
+
+44 secondary entities marcate `status='deprecated'` (no DELETE per non rompere permalinks). FK ricollegate alle primary:
+- 6 rulers, 5 sites, 4 cities, 14 chain_links redirected
+- 2 chain_links duplicate eliminate (dup primary+secondary)
+
+Stato: 1036 totali, 992 confirmed/active, 44 deprecated.
+
+---
+
 ## [v6.83.0] - 2026-04-19
 
 **Tema**: *Audit v4 Round 11 — Script/lang detector refined + native names from Wikidata*

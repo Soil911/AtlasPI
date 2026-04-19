@@ -222,6 +222,8 @@ def _entity_to_response(entity: GeoEntity) -> EntityResponse:
         ethical_notes=entity.ethical_notes,
         continent=continent,
         wikidata_qid=entity.wikidata_qid,
+        # v6.87 ADR-004: capital history per polities long-duration.
+        capital_history=entity.capital_history,
     )
 
 
@@ -230,6 +232,7 @@ def _eager_query(db: Session):
         joinedload(GeoEntity.name_variants),
         joinedload(GeoEntity.territory_changes),
         joinedload(GeoEntity.sources),
+        joinedload(GeoEntity.capital_history),  # v6.87 ADR-004
     )
 
 
@@ -456,10 +459,17 @@ def list_entities(
     order: Literal["asc", "desc"] = Query("asc", description="Direzione ordinamento"),
     limit: int = Query(20, ge=1, le=100, description="Risultati per pagina"),
     offset: int = Query(0, ge=0, description="Offset"),
+    # v6.87 ADR-005: deprecated entities sono escluse di default. Permetti
+    # override esplicito per analisi DB-level / debug / migration tools.
+    include_deprecated: bool = Query(False, description="Includi entità marcate status='deprecated' (ADR-005)"),
     db: Session = Depends(get_db),
 ):
     q = _eager_query(db)
     q = _apply_bbox_filter(q, bbox)
+
+    # v6.87 ADR-005: filter out deprecated entities di default
+    if not include_deprecated:
+        q = q.filter(GeoEntity.status != 'deprecated')
 
     # v6.66 FIX 1: applichiamo i filtri DB-side prima di count/offset/limit.
     # Il filtro continent e' post-query (calcolato da lat/lon capitale).
@@ -538,12 +548,15 @@ def list_entities_light(
     response: Response,
     year: int | None = Query(None, ge=-5000, le=2100, description="Active in this year"),
     bbox: str | None = Query(None, max_length=80),
+    include_deprecated: bool = Query(False, description="Include status='deprecated' entities (ADR-005)"),
     db: Session = Depends(get_db),
 ):
     """Lightweight endpoint — no boundary_geojson in payload.
 
     Risolve il problema scalabilita' della home: 1033 entita' in
     ~200KB vs ~17MB della /v1/entities paginata.
+
+    v6.87 ADR-005: deprecated entities filtrate di default.
     """
     # Select only needed cols.
     q = db.query(
@@ -559,6 +572,10 @@ def list_entities_light(
         GeoEntity.confidence_score,
         GeoEntity.status,
     )
+
+    # v6.87 ADR-005: filter deprecated default
+    if not include_deprecated:
+        q = q.filter(GeoEntity.status != 'deprecated')
 
     if year is not None:
         q = q.filter(GeoEntity.year_start <= year)

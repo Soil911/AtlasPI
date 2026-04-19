@@ -43,6 +43,28 @@ class CapitalResponse(BaseModel):
     lon: float
 
 
+class CapitalHistoryResponse(BaseModel):
+    """Capitale storica con range temporale (v6.87 — ADR-004).
+
+    Per polities long-duration con capitali multiple (Ottoman, HRE, Mughal,
+    Ming, Song, Solomonic Ethiopia, ecc.). Permette query 'capital of X
+    in year Y' senza anacronismo.
+
+    `lat/lon` può essere null per polities con corte itinerante.
+    `year_end` null = capitale attuale o ultima.
+    `ordering` per casi sovrapposti (es. dual monarchy Wien+Budapest).
+    """
+    name: str = Field(description="Nome della capitale (lingua locale, ETHICS-001)")
+    lat: float | None = Field(None, description="Latitudine (null per corte itinerante)")
+    lon: float | None = Field(None, description="Longitudine")
+    year_start: int = Field(description="Anno inizio periodo come capitale")
+    year_end: int | None = Field(None, description="Anno fine (null = ultima/attuale)")
+    ordering: int = Field(default=0, description="Sort secondario per periodi sovrapposti")
+    notes: str | None = Field(None, description="Spiegazione del ruolo")
+
+    model_config = {"from_attributes": True}
+
+
 class EntityResponse(BaseModel):
     """Risposta completa per una singola entità — formato da ADR-002."""
     id: int
@@ -90,6 +112,11 @@ class EntityResponse(BaseModel):
     wikidata_qid: str | None = Field(
         None,
         description="Wikidata Q-ID di riferimento (formato 'Q12345'). Null se nessun match high-confidence è stato trovato (audit v4, v6.69).",
+    )
+    # v6.87 ADR-004: capital history per polities con capitali multiple.
+    capital_history: list[CapitalHistoryResponse] = Field(
+        default_factory=list,
+        description="Cronologia capitali per polities long-duration (ADR-004). Vuoto se l'entity ha solo `capital` singola. Ordinato per year_start ASC, poi ordering.",
     )
 
     model_config = {
