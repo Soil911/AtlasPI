@@ -1302,38 +1302,78 @@ function applyFilters() {
 
 function renderResults(entities) {
   const el = document.getElementById('results-list');
+  const countEl = document.getElementById('on-map-count');
+  if (countEl) countEl.textContent = entities.length.toLocaleString('en-US').replace(/,/g, '.');
+
   if (!entities.length) {
     el.innerHTML = `<p class="placeholder">${t('no_results')}</p>`;
     return;
   }
 
-  const countInfo = `<div class="results-count">${entities.length} / ${allEntities.length} ${t('entities')}</div>`;
-
-  el.innerHTML = countInfo + entities.map((e, idx) => {
-    const pct = Math.round(e.confidence_score * 100);
-    const real = isReal(e);
-    const icon = TYPE_ICONS[e.entity_type] || '📍';
+  // v6.90: editorial entity-row layout (spec §3). Swatch usa HSL per-id (hashHue).
+  el.innerHTML = entities.map((e, idx) => {
+    const hue = hashHue(e.id);
+    const rangeEnd = e.year_end ? fmtY(e.year_end) : t('today');
+    const range = `${fmtY(e.year_start)}\u2013${rangeEnd}`;
     return `
-    <div class="result-card ${e.status}" data-id="${e.id}" data-idx="${idx}" role="listitem" tabindex="0">
-      <div class="name"><span class="type-icon">${icon}</span> ${esc(e.name_original)}${real ? '' : ' <span class="precision-tag approx">~</span>'}</div>
-      <div class="meta">
-        ${e.entity_type} &middot;
-        ${fmtY(e.year_start)}\u2013${e.year_end ? fmtY(e.year_end) : t('today')} &middot;
-        <span class="status-badge ${e.status}">${t(e.status)}</span>
-        &middot; ${pct}%
-      </div>
-      <div class="score-bar"><div class="score-fill" style="width:${pct}%;background:${COLORS[e.status]}"></div></div>
+    <div class="entity-row result-card ${e.status}" data-id="${e.id}" data-idx="${idx}" role="listitem" tabindex="0">
+      <span class="swatch" style="background:hsl(${hue}, 55%, 55%)" aria-hidden="true"></span>
+      <span class="entity-row__name">${esc(e.name_original)}</span>
+      <span class="range">${range}</span>
     </div>`;
   }).join('');
 
-  el.querySelectorAll('.result-card').forEach(card => {
-    const handler = () => showDetail(+card.dataset.id);
-    card.addEventListener('click', handler);
-    card.addEventListener('keydown', ev => { if (ev.key === 'Enter') handler(); });
+  // v6.90: dual-class .entity-row .result-card — preserva tutti i querySelector
+  // esistenti (.result-card in compare, scroll, keyboard navigation) intatti.
+  el.querySelectorAll('.entity-row').forEach(row => {
+    const handler = () => showDetail(+row.dataset.id);
+    row.addEventListener('click', handler);
+    row.addEventListener('keydown', ev => { if (ev.key === 'Enter') handler(); });
   });
 }
 
+// v6.90: hashHue helper — djb2 hash → HSL hue (0-359). ETICHICS-011: stateless,
+// no gerarchie culturali. Shared con renderMap (Phase 2.6) via window.hashHue.
+function hashHue(id) {
+  let h = 0;
+  const s = String(id);
+  for (let i = 0; i < s.length; i++) h = ((h << 5) - h) + s.charCodeAt(i);
+  return Math.abs(h) % 360;
+}
+window.hashHue = hashHue;
+
 // ─── Mappa ──────────────────────────────────────────────────────
+// v6.90 A+: HSL per-entity boundary rendering (spec §5).
+// ETICHICS-011: palette arbitraria (hash stateless) — nessuna gerarchia
+// coloniale/indigena. dashArray preservato per status='disputed' come
+// secondo canale visivo (trasparenza dell'incertezza — CLAUDE.md §3).
+
+let _selectedEntityId = null;
+window.getSelectedEntityId = () => _selectedEntityId;
+window.setSelectedEntityId = (id) => { _selectedEntityId = id; };
+
+function computeBoundaryStyle(e, state) {
+  const hue = hashHue(e.id);
+  const real = isReal(e);
+  const selected = state.selected;
+  const hovered = state.hovered;
+  const someoneSelected = _selectedEntityId != null;
+  const fillAlpha = 0.28 * (selected ? 1.4 : hovered ? 1.2 : 1);
+  // ETHICS-011: dashArray priority: disputed > approximate > solid.
+  // Disputed sempre '6,4' (anche quando selected — la disputedness non va nascosta).
+  let dashArray = null;
+  if (e.status === 'disputed') dashArray = '6,4';
+  else if (!real) dashArray = '4,3';
+  return {
+    fillColor: `hsla(${hue}, 55%, 55%, ${fillAlpha.toFixed(3)})`,
+    fillOpacity: 1,  // alpha is in color
+    color:       `hsl(${hue}, 55%, ${selected ? 70 : 62}%)`,
+    weight:      selected ? 2 : hovered ? 1.3 : 0.9,
+    lineJoin:    'round',
+    opacity:     (someoneSelected && !selected && !hovered) ? 0.55 : 1,
+    dashArray
+  };
+}
 
 function renderMap(entities) {
   layerGroup.clearLayers();
@@ -1357,56 +1397,71 @@ function renderMap(entities) {
     : L.layerGroup(); // fallback if plugin not loaded
 
   entities.forEach(e => {
-    const c = COLORS[e.status] || '#8b949e';
+    const hue = hashHue(e.id);
+    const isSel = e.id === _selectedEntityId;
     try {
       const geo = e.boundary_geojson;
 
       if (geo && geo.type === 'Point') {
         const [lon, lat] = geo.coordinates;
+        // Spec §5 capital marker: r=2.2/3.5, fill #c0cad6/accent, stroke #0a0d11
         const m = L.circleMarker([lat, lon], {
-          radius: 8, fillColor: c, color: '#fff', weight: 1.5, fillOpacity: 0.85,
+          radius: isSel ? 3.5 : 2.2,
+          fillColor: isSel ? 'var(--accent)' : '#c0cad6',
+          color: '#0a0d11', weight: 1, fillOpacity: 1,
         });
+        // Re-apply con CSS variable fallback (SVG non risolve var())
+        if (isSel) m.setStyle({ fillColor: getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#e8b14a' });
         m.bindTooltip(richTooltip(e), { direction: 'top' });
         m.on('click', () => showDetail(e.id));
         layerGroup.addLayer(m);
       } else if (geo && (geo.type === 'Polygon' || geo.type === 'MultiPolygon')) {
-        const real = isReal(e);
-        const layer = L.geoJSON(geo, {
-          style: {
-            fillColor: c, fillOpacity: real ? 0.18 : 0.10,
-            color: c, weight: real ? 2 : 1.5,
-            dashArray: e.status === 'disputed' ? '6,4' : (real ? null : '4,3'),
-            opacity: real ? 0.8 : 0.5,
-          },
-        });
+        const baseStyle = computeBoundaryStyle(e, { selected: isSel, hovered: false });
+        const layer = L.geoJSON(geo, { style: baseStyle });
         layer.bindTooltip(richTooltip(e), { sticky: true });
         layer.on('click', () => showDetail(e.id));
+        // Hover state via setStyle — niente re-render completo (CLS-safe)
+        layer.on('mouseover', () => {
+          const hoverStyle = computeBoundaryStyle(e, { selected: isSel, hovered: true });
+          layer.setStyle(hoverStyle);
+        });
+        layer.on('mouseout', () => {
+          layer.setStyle(computeBoundaryStyle(e, { selected: isSel, hovered: false }));
+        });
         layerGroup.addLayer(layer);
 
+        // Label entità (spec §5): Inter 8.5/11px, #a0a9b5/#fff, weight 400/600
         const center = layer.getBounds().getCenter();
+        const labelColor = isSel ? '#ffffff' : '#a0a9b5';
+        const labelSize = isSel ? 11 : 8.5;
+        const labelWeight = isSel ? 600 : 400;
         layerGroup.addLayer(L.marker(center, {
           icon: L.divIcon({
-            className: '',
-            html: `<div style="color:${c};font-size:11px;font-weight:600;text-shadow:0 0 4px #000,0 0 2px #000;white-space:nowrap;pointer-events:none">${esc(e.name_original)}</div>`,
+            className: 'entity-map-label',
+            html: `<div style="color:${labelColor};font-family:'Inter',-apple-system,sans-serif;font-size:${labelSize}px;font-weight:${labelWeight};letter-spacing:0.4px;text-transform:uppercase;text-shadow:0 0 4px #000,0 0 2px #000;white-space:nowrap;pointer-events:none">${esc(e.name_original)}</div>`,
             iconSize: null, iconAnchor: [0, 0],
           }),
           interactive: false,
         }));
       } else if (e.capital && e.capital.lat && e.capital.lon) {
-        // No boundary GeoJSON — show capital as a clustered marker
+        // No boundary — capital cluster marker (spec §5)
+        const capitalFill = isSel ? (getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#e8b14a') : '#c0cad6';
         const m = L.circleMarker([e.capital.lat, e.capital.lon], {
-          radius: 5, fillColor: c, color: c, weight: 1, fillOpacity: 0.7,
+          radius: isSel ? 3.5 : 2.2,
+          fillColor: capitalFill,
+          color: '#0a0d11', weight: 1, fillOpacity: 1,
           className: 'capital-marker',
         });
         m.bindTooltip(richTooltip(e), { direction: 'top' });
         m.on('click', () => showDetail(e.id));
         clusterGroup.addLayer(m);
 
-        // Label for larger zoom levels
+        // Label a cluster-zoom level
+        const labelColor = isSel ? '#ffffff' : '#a0a9b5';
         clusterGroup.addLayer(L.marker([e.capital.lat, e.capital.lon], {
           icon: L.divIcon({
             className: 'capital-label',
-            html: `<div style="color:${c};font-size:9px;font-weight:500;text-shadow:0 0 3px #000,0 0 2px #000;white-space:nowrap;pointer-events:none;opacity:0.8">${esc(e.name_original)}</div>`,
+            html: `<div style="color:${labelColor};font-family:'Inter',-apple-system,sans-serif;font-size:8.5px;font-weight:500;letter-spacing:0.3px;text-transform:uppercase;text-shadow:0 0 3px #000,0 0 2px #000;white-space:nowrap;pointer-events:none;opacity:0.85">${esc(e.name_original)}</div>`,
             iconSize: null, iconAnchor: [-6, 3],
           }),
           interactive: false,
@@ -1453,6 +1508,13 @@ async function showDetail(id) {
 
   pushUrlState({ entity: id });
 
+  // v6.90 A+: seleziona entità → HSL boundary style si aggiorna (spec §5)
+  if (typeof window.setSelectedEntityId === 'function') {
+    window.setSelectedEntityId(id);
+    // re-render map applicando alpha 0.55 alle non-selected
+    if (typeof applyFilters === 'function') applyFilters();
+  }
+
   const e = await loadDetail(id);
   // v6.66 FIX 3: se loadDetail fallisce, sostituiamo lo spinner con un
   // messaggio d'errore leggibile invece di lasciare lo spinner infinito.
@@ -1487,13 +1549,50 @@ async function showDetail(id) {
     }
   }
 
+  // v6.90 A+: life timeline (spec §6) — barra che rappresenta l'intera
+  // timeline del progetto (-4500..2025) con segmento colorato e dot anno corrente.
+  const slider = document.getElementById('year-slider');
+  const currentYear = slider ? parseInt(slider.value, 10) : 1500;
+  const lifeStart = Math.max(-4500, e.year_start);
+  const lifeEnd = Math.min(2025, e.year_end != null ? e.year_end : 2025);
+  const lifeFrom = ((lifeStart + 4500) / 6525) * 100;
+  const lifeWidth = ((lifeEnd - lifeStart) / 6525) * 100;
+  const dotPos = ((currentYear + 4500) / 6525) * 100;
+  const inLife = currentYear >= e.year_start && (e.year_end == null || currentYear <= e.year_end);
+  const entityHue = hashHue(e.id);
+  const spanColor = `hsl(${entityHue}, 55%, 55%)`;
+  const periodStr = e.year_end != null
+    ? `${fmtY(e.year_start)} — ${fmtY(e.year_end)}`
+    : `${fmtY(e.year_start)} — ${t('today') || 'today'}`;
+  const lifeTimelineHtml = `
+    <div class="life-timeline" aria-label="Life timeline">
+      <div class="life-timeline__labels">
+        <span>4500 BCE</span>
+        <span class="period">${periodStr}</span>
+        <span>2025</span>
+      </div>
+      <div class="life-timeline__bar">
+        <span class="life-timeline__span" style="left:${lifeFrom.toFixed(2)}%;width:${lifeWidth.toFixed(2)}%;background:${spanColor}"></span>
+        ${inLife ? `<span class="life-timeline__dot" style="left:${dotPos.toFixed(2)}%"></span>` : ''}
+      </div>
+    </div>`;
+
+  // v6.90 A+: nome Latin variant (se esiste) sotto nome originale
+  const latinVariant = (e.name_variants || []).find(v => (v.lang || '').toLowerCase().startsWith('la'))
+    || (e.name_variants || []).find(v => (v.lang || '').toLowerCase().startsWith('en'));
+  const latinHtml = latinVariant && latinVariant.name !== e.name_original
+    ? `<p class="detail-latin-name">${esc(latinVariant.name)}</p>`
+    : '';
+
   let html = `
     <h2>${esc(e.name_original)}</h2>
+    ${latinHtml}
     <div class="detail-tags">
       <span class="lang-tag">${e.name_original_lang}</span>
       <span class="status-badge ${e.status}">${t(e.status)}</span>
       <span class="continent-tag">${cIcon} ${e.continent || '?'}</span>
     </div>
+    ${lifeTimelineHtml}
 
     <div class="detail-tabs" role="tablist" aria-label="${lang === 'it' ? 'Viste dettaglio entit\u00e0' : 'Entity detail views'}">
       <button class="detail-tab active" role="tab" aria-selected="true" aria-controls="detail-tab-overview" data-tab="overview">
@@ -1569,24 +1668,26 @@ async function showDetail(id) {
     const titleEN = 'Capital history';
     const subIT = 'Capitali multiple per polity long-duration (ADR-004). Useful for AI agents querying "capital of X in year Y".';
     const subEN = 'Multiple capitals for long-duration polities (ADR-004). Useful for AI agents querying "capital of X in year Y".';
+    // v6.90 A+: inline styles sostituiti da classe .capital-history-list (CSS).
+    // Preservato data-section="capital-history" (addendum B — 13 entities).
     html += `
     <div class="detail-section" data-section="capital-history">
       <h3 class="collapsible" tabindex="0">${lang === 'it' ? titleIT : titleEN} <span class="collapse-icon">▾</span></h3>
       <div class="section-body">
-        <p style="font-size:0.78em;color:var(--text-muted);margin:0 0 8px 0">${lang === 'it' ? subIT : subEN}</p>
-        <ol class="capital-history-list" style="list-style:none;padding-left:0;margin:0">
+        <p style="font-size:10.5px;color:var(--text-muted);margin:0 0 8px 0;line-height:1.4">${lang === 'it' ? subIT : subEN}</p>
+        <ol class="capital-history-list">
           ${ch.map(c => {
             const period = c.year_end != null
               ? `${fmtY(c.year_start)} \u2013 ${fmtY(c.year_end)}`
               : `${fmtY(c.year_start)} \u2013 ${lang === 'it' ? 'oggi/ultima' : 'today/last'}`;
             const coords = (c.lat != null && c.lon != null)
-              ? ` <span class="geo-micro">(${c.lat.toFixed(2)}\u00b0, ${c.lon.toFixed(2)}\u00b0)</span>`
-              : ` <span class="geo-micro">(${lang === 'it' ? 'corte itinerante' : 'court itinerant'})</span>`;
-            const notes = c.notes ? `<br><span style="font-size:0.78em;color:var(--text-muted)">${esc(c.notes)}</span>` : '';
+              ? ` <span class="ch-coords">(${c.lat.toFixed(2)}\u00b0, ${c.lon.toFixed(2)}\u00b0)</span>`
+              : ` <span class="ch-coords">(${lang === 'it' ? 'corte itinerante' : 'court itinerant'})</span>`;
+            const notes = c.notes ? `<span class="ch-notes">${esc(c.notes)}</span>` : '';
             return `
-              <li style="padding:6px 8px;margin-bottom:4px;border-left:2px solid var(--accent);background:rgba(88,166,255,0.06)">
-                <strong>${esc(c.name)}</strong>${coords}<br>
-                <span style="font-size:0.82em;color:var(--text-muted)">${period}</span>
+              <li>
+                <span class="ch-name">${esc(c.name)}</span>${coords}
+                <span class="ch-period">${period}</span>
                 ${notes}
               </li>`;
           }).join('')}
@@ -2112,6 +2213,11 @@ function closeDetail() {
   const info = document.getElementById('map-info');
   if (info) info.style.display = '';
   pushUrlState();
+  // v6.90 A+: deselect entity → full-alpha rendering restored
+  if (typeof window.setSelectedEntityId === 'function') {
+    window.setSelectedEntityId(null);
+    if (typeof applyFilters === 'function') applyFilters();
+  }
 }
 
 // ─── Error toast ────────────────────────────────────────────────
@@ -2218,10 +2324,15 @@ function bindEvents() {
         yearInput.value = val;
         yearEra.value = 'ad';
       }
+      // v6.90: mark era-chip attivo visualmente (single-selection)
+      document.querySelectorAll('.era-chip').forEach(c => c.classList.remove('active'));
+      if (btn.classList.contains('era-chip')) btn.classList.add('active');
       applyFilters();
       pushUrlState();
       if (eventsOverlayEnabled) renderEventsOverlay();
       if (tradeRoutesEnabled) renderTradeRoutes();
+      // v6.90: dispatch input → year-hero + era-ticks update
+      yearSlider.dispatchEvent(new Event('input', { bubbles: true }));
     });
   });
 
@@ -2262,6 +2373,8 @@ function bindEvents() {
     yearDisplay.textContent = '1500';
     yearInput.value = 1500;
     yearEra.value = 'ad';
+    // v6.90: re-trigger year-hero + era-ticks sync
+    yearSlider.dispatchEvent(new Event('input', { bubbles: true }));
     document.querySelectorAll('.checkbox-group input').forEach(cb => { cb.checked = true; });
     document.getElementById('sort-select').value = '';
     activeType = '';
@@ -2580,6 +2693,8 @@ function togglePlayback() {
     if (timelineData) drawTimeline();
     if (eventsOverlayEnabled) renderEventsOverlay();
     if (tradeRoutesEnabled) renderTradeRoutes();
+    // v6.90: dispatch input event → aggiorna year-hero + era-ticks
+    slider.dispatchEvent(new Event('input', { bubbles: true }));
   }, speed);
 }
 
@@ -2642,3 +2757,152 @@ async function showCompare(id1, id2) {
 // ─── Theme ─────────────────────────────────────────────────────
 // v6.46: extracted to static/js/theme.js (initTheme + toggleTheme + applyTheme)
 // isReal() moved to static/js/utils.js
+
+// ─── v6.90 A+ year hero + era label sync ────────────────────────
+// Aggiorna #year-hero-display, #year-hero-era-suffix, #era-label nell'header
+// quando cambia l'anno sullo slider #year-slider. Nessun impatto su handler
+// esistenti — questo è un secondo listener indipendente.
+// ETHICS: la label dell'era non proiettarsi gerarchie geografiche — usa la
+// stessa nomenclatura periodizzante dei chip sidebar (neutra, multi-culturale).
+(function initYearHeroSync() {
+  const ERA_BANDS = [
+    { from: -4500, to: -3000, key: 'era_prehistoric', fallbackIT: 'Preistoria',        fallbackEN: 'Prehistoric' },
+    { from: -3000, to: -1200, key: 'era_bronze',      fallbackIT: 'Età del Bronzo',     fallbackEN: 'Bronze Age' },
+    { from: -1200, to:  -500, key: 'era_iron',        fallbackIT: 'Età del Ferro',      fallbackEN: 'Iron Age' },
+    { from:  -500, to:   500, key: 'era_classical',   fallbackIT: 'Antichità classica', fallbackEN: 'Classical Antiquity' },
+    { from:   500, to:  1000, key: 'era_early_medieval', fallbackIT: 'Alto Medioevo',   fallbackEN: 'Early Medieval' },
+    { from:  1000, to:  1453, key: 'era_high_medieval',  fallbackIT: 'Basso Medioevo',  fallbackEN: 'High Medieval' },
+    { from:  1453, to:  1789, key: 'era_early_modern',   fallbackIT: 'Prima età moderna', fallbackEN: 'Early Modern' },
+    { from:  1789, to:  1914, key: 'era_revolutions',    fallbackIT: 'Rivoluzioni',      fallbackEN: 'Age of Revolutions' },
+    { from:  1914, to:  1945, key: 'era_world_wars',     fallbackIT: 'Guerre mondiali',  fallbackEN: 'World Wars' },
+    { from:  1945, to:  2025, key: 'era_modern',         fallbackIT: 'Età contemporanea',fallbackEN: 'Modern' },
+  ];
+
+  function eraForYear(year) {
+    for (let i = ERA_BANDS.length - 1; i >= 0; i--) {
+      if (year >= ERA_BANDS[i].from) return ERA_BANDS[i];
+    }
+    return ERA_BANDS[0];
+  }
+
+  function formatYearHero(year) {
+    const absYear = Math.abs(year).toLocaleString('en-US').replace(/,/g, '.');
+    return { display: absYear, suffix: year < 0 ? 'BCE' : 'CE' };
+  }
+
+  function getEraLabel(era) {
+    const lang = (window.CURRENT_LANG || document.documentElement.lang || 'it').slice(0, 2);
+    if (typeof window.t === 'function') {
+      const translated = window.t(era.key);
+      if (translated && translated !== era.key) return translated.toUpperCase();
+    }
+    return (lang === 'en' ? era.fallbackEN : era.fallbackIT).toUpperCase();
+  }
+
+  function updateYearHero() {
+    const slider = document.getElementById('year-slider');
+    if (!slider) return;
+    const year = parseInt(slider.value, 10);
+    const heroDisplay = document.getElementById('year-hero-display');
+    const heroSuffix = document.getElementById('year-hero-era-suffix');
+    const eraLabel = document.getElementById('era-label');
+    const { display, suffix } = formatYearHero(year);
+    if (heroDisplay) heroDisplay.textContent = display;
+    if (heroSuffix) heroSuffix.textContent = suffix;
+    if (eraLabel) {
+      const era = eraForYear(year);
+      eraLabel.textContent = getEraLabel(era);
+      eraLabel.dataset.eraKey = era.key;
+    }
+  }
+
+  function wire() {
+    const slider = document.getElementById('year-slider');
+    if (!slider) return;
+    slider.addEventListener('input', updateYearHero);
+    slider.addEventListener('change', updateYearHero);
+    // Initial + after i18n swap
+    updateYearHero();
+    // v6.78 data-i18n already applied on init; re-render era-label when lang toggles.
+    document.addEventListener('atlaspi:langChanged', updateYearHero);
+    const langBtn = document.getElementById('lang-toggle');
+    if (langBtn) langBtn.addEventListener('click', () => setTimeout(updateYearHero, 50));
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', wire);
+  } else {
+    wire();
+  }
+
+  // Expose for Phase 2.5 (timeline bar) to call after year-slider programmatic updates
+  window.atlasPIUpdateYearHero = updateYearHero;
+
+  // ─── v6.90 A+: era ticks overlay nel timeline bar (spec §4) ──
+  // Posiziona label ere lungo lo slider (-4500..2025).
+  const YEAR_MIN = -4500;
+  const YEAR_MAX = 2025;
+  const YEAR_SPAN = YEAR_MAX - YEAR_MIN;
+
+  function yearToPercent(year) {
+    return ((year - YEAR_MIN) / YEAR_SPAN) * 100;
+  }
+
+  function renderEraTicks() {
+    const container = document.getElementById('era-ticks-overlay');
+    if (!container) return;
+    const slider = document.getElementById('year-slider');
+    const currentYear = slider ? parseInt(slider.value, 10) : 1500;
+    const currentEra = eraForYear(currentYear);
+    // Usa solo le prime lettere dell'era come tick (brevità per non sovrapporre)
+    // Ticks subset: non metto tutte 10 (sarebbero troppo dense). Uso 6 principali.
+    const TICKS = [
+      { y: -3000, label: 'Bronze' },
+      { y: -500,  label: 'Classical' },
+      { y:  500,  label: 'Medieval' },
+      { y: 1453,  label: 'Early Modern' },
+      { y: 1789,  label: 'Revolutions' },
+      { y: 1914,  label: 'Modern' },
+    ];
+    // Translate labels via window.t if i18n keys exist
+    const html = TICKS.map(tick => {
+      const pct = yearToPercent(tick.y);
+      const bandForTick = eraForYear(tick.y);
+      const isActive = bandForTick.key === currentEra.key;
+      const label = (typeof window.t === 'function' && window.t(bandForTick.key) && window.t(bandForTick.key) !== bandForTick.key)
+        ? window.t(bandForTick.key)
+        : tick.label;
+      return `<span class="era-tick${isActive ? ' era-tick--active' : ''}" style="left:${pct}%">${label}</span>`;
+    }).join('');
+    container.innerHTML = html;
+  }
+
+  function updateYearDisplayEra() {
+    const slider = document.getElementById('year-slider');
+    if (!slider) return;
+    const y = parseInt(slider.value, 10);
+    const displayEra = document.getElementById('year-display-era');
+    if (displayEra) displayEra.textContent = y < 0 ? 'BCE' : 'CE';
+  }
+
+  // Wire era ticks to slider + initial render
+  function wireEraTicks() {
+    const slider = document.getElementById('year-slider');
+    if (!slider) return;
+    renderEraTicks();
+    updateYearDisplayEra();
+    slider.addEventListener('input', () => {
+      renderEraTicks();
+      updateYearDisplayEra();
+    });
+    document.addEventListener('atlaspi:langChanged', renderEraTicks);
+    const langBtn = document.getElementById('lang-toggle');
+    if (langBtn) langBtn.addEventListener('click', () => setTimeout(renderEraTicks, 50));
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', wireEraTicks);
+  } else {
+    wireEraTicks();
+  }
+})();

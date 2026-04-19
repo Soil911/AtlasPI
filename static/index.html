@@ -22,31 +22,48 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+  <!-- v6.90: A+ redesign — Inter + Playfair Display (editoriale). display=swap per evitare FOIT. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400;1,600;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/style.css" />
 </head>
 <body>
   <div id="loading-bar" class="loading-bar" style="width:0%"></div>
   <header id="header">
     <div class="header-left">
-      <h1>Atlas<span>PI</span></h1>
-      <span class="subtitle">Database Geografico Storico per Agenti AI</span>
+      <div class="header-brand">
+        <h1>Atlas<span>PI</span></h1>
+        <span class="subtitle" data-i18n="app_subtitle_short">Historical Geography</span>
+      </div>
+      <div class="header-separator" aria-hidden="true"></div>
+      <div class="header-year-hero" aria-label="Year hero">
+        <span id="year-hero-display" class="year-hero" aria-live="polite">1500</span>
+        <span id="year-hero-era-suffix" class="year-hero-era">CE</span>
+        <span id="era-label" class="era-label" data-i18n-key-dynamic="era_name" aria-live="polite">Age of Discovery</span>
+      </div>
     </div>
     <div class="header-right">
-      <button id="theme-toggle" class="theme-toggle" data-i18n-title="theme_toggle_title" data-i18n-aria-label="theme_toggle_aria" title="Cambia tema" aria-label="Cambia tema chiaro/scuro">🌙</button>
-      <button id="lang-toggle" class="api-link" data-i18n-title="lang_toggle_title" data-i18n-aria-label="lang_toggle_aria" title="Switch language" aria-label="Cambia lingua">EN</button>
-      <a href="/search" class="api-link" data-i18n-title="nav_search_title" title="Ricerca avanzata nel dataset">Search</a>
-      <a href="/timeline" class="api-link" data-i18n-title="nav_timeline_title" title="Timeline interattiva">Timeline</a>
-      <a href="/compare" class="api-link" data-i18n-title="nav_compare_title" title="Confronta entita' storiche">Compare</a>
-      <a href="/embed" class="api-link" data-i18n-title="nav_embed_title" title="Versione embed per iframe" target="_blank">Embed</a>
-      <a href="/docs-ui" class="api-link" data-i18n-title="nav_apidocs_title" title="Documentazione API interattiva">API Docs</a>
-      <a href="/docs" class="api-link" data-i18n-title="nav_openapi_title" title="Documentazione API OpenAPI">OpenAPI</a>
+      <nav class="header-nav" aria-label="Navigation">
+        <a href="/search" class="nav-link" data-i18n="nav_search_title" data-i18n-title="nav_search_title" title="Advanced search">Search</a>
+        <a href="/timeline" class="nav-link" data-i18n="nav_timeline_title" data-i18n-title="nav_timeline_title" title="Interactive timeline">Timeline</a>
+        <a href="/compare" class="nav-link" data-i18n="nav_compare_title" data-i18n-title="nav_compare_title" title="Compare entities">Compare</a>
+        <details class="nav-more" id="nav-more">
+          <summary class="nav-link nav-more-summary" data-i18n="more_dropdown" aria-haspopup="menu">More ▾</summary>
+          <div class="nav-more-panel" role="menu">
+            <a href="/embed" class="nav-more-item" role="menuitem" data-i18n="nav_embed_title" target="_blank">Embed</a>
+            <a href="/docs-ui" class="nav-more-item" role="menuitem" data-i18n="nav_apidocs_title">API Docs</a>
+            <a href="/docs" class="nav-more-item" role="menuitem" data-i18n="nav_openapi_title">OpenAPI</a>
+            <button id="lang-toggle" class="nav-more-item nav-more-item--button" role="menuitem" data-i18n-title="lang_toggle_title" data-i18n-aria-label="lang_toggle_aria" title="Switch language" aria-label="Switch language"><span data-i18n="lang_label">Language</span>: <span id="lang-current">EN</span></button>
+            <button id="theme-toggle" class="nav-more-item nav-more-item--button" data-i18n-title="theme_toggle_title" data-i18n-aria-label="theme_toggle_aria" title="Toggle theme" aria-label="Toggle light/dark theme"><span data-i18n="theme_label">Theme</span> <span class="theme-toggle-icon">🌙</span></button>
+          </div>
+        </details>
+      </nav>
+      <span id="entity-count" class="counter-pill" aria-live="polite" data-i18n-suffix="on_map_label"><span class="counter-dot" aria-hidden="true"></span><span class="counter-value">...</span></span>
       <button id="sidebar-toggle" class="sidebar-toggle" data-i18n-title="sidebar_toggle_title" data-i18n-aria-label="sidebar_toggle_aria" title="Mostra/nascondi pannello filtri" aria-label="Toggle sidebar" aria-pressed="true">
         <span class="sidebar-toggle-icon">◀</span>
       </button>
-      <button id="ask-claude-btn" class="ask-claude-btn" data-i18n-title="ask_claude_title" data-i18n-aria-label="ask_claude_aria" title="Chiedi a Claude usando i dati di AtlasPI" aria-label="Apri Claude con prompt precompilato">
-        🤖 <span data-i18n="ask_claude">Ask Claude</span>
-      </button>
-      <span id="entity-count" class="badge" aria-live="polite">...</span>
+      <button id="ask-claude-btn" class="ask-claude-btn" data-i18n-title="ask_claude_title" data-i18n-aria-label="ask_claude_aria" title="Chiedi a Claude usando i dati di AtlasPI" aria-label="Apri Claude con prompt precompilato"><span data-i18n="ask_claude">Ask Claude</span></button>
     </div>
   </header>
 
@@ -104,67 +121,118 @@
           <div id="autocomplete-list" class="autocomplete-dropdown" role="listbox" data-i18n-aria-label="autocomplete_aria" aria-label="Suggerimenti ricerca"></div>
         </div>
 
-        <div class="year-control">
-          <label for="year-input" data-i18n="year">Anno:</label>
-          <div class="year-input-row">
-            <input type="number" id="year-input" value="1500" min="-4500" max="2025" step="1"
-                   aria-label="Inserisci anno esatto" />
-            <select id="year-era" aria-label="Era">
-              <option value="ad">d.C.</option>
-              <option value="bc">a.C.</option>
-            </select>
-            <button id="year-go" class="year-go-btn" aria-label="Applica anno">&#10148;</button>
-          </div>
-          <input type="range" id="year-slider" min="-4500" max="2025" value="1500" step="1"
-                 aria-label="Seleziona anno storico" />
-          <div class="year-range" aria-hidden="true">
-            <span>4500 a.C.</span>
-            <span id="year-display" aria-live="polite">1500</span>
-            <span>2025</span>
-          </div>
-          <div class="playback-controls">
-            <button id="play-btn" class="play-btn" title="Riproduci timeline" aria-label="Avvia playback storico">&#9654;</button>
-            <select id="play-speed" aria-label="Velocit&agrave; playback" class="play-speed">
-              <option value="200">Veloce</option>
-              <option value="500" selected>Normale</option>
-              <option value="1000">Lento</option>
-            </select>
-          </div>
-          <div class="era-chips" aria-label="Salta a un'epoca storica">
-            <button class="era-chip" data-year="-3000" data-i18n="era_bronze" title="Età del Bronzo — ~3000 a.C.">🏺 Età del Bronzo</button>
-            <button class="era-chip" data-year="-500" data-i18n="era_classical" title="Antichità classica — Persiani, Greci, Maurya">🏛️ Antichità</button>
-            <button class="era-chip" data-year="117" data-i18n="era_roman_peak" title="Apogeo dell'Impero Romano sotto Traiano (117 CE)">🦅 Roma imperiale</button>
-            <button class="era-chip" data-year="800" data-i18n="era_medieval" title="Alto Medioevo — Carlo Magno, Bisanzio, Califfato">⚔️ Medioevo</button>
-            <button class="era-chip" data-year="1250" data-i18n="era_mongol" title="Mondo di Kublai Khan, Mali, Hohenstaufen">🏯 Mondo Mongolo</button>
-            <button class="era-chip" data-year="1492" data-i18n="era_discovery" title="Colombo, Granada, Mehmed II a Costantinopoli">⛵ Età delle Scoperte</button>
-            <button class="era-chip" data-year="1789" data-i18n="era_revolutions" title="Rivoluzione francese, Ottomani, indipendenza USA">🗽 Rivoluzioni</button>
-            <button class="era-chip" data-year="1914" data-i18n="era_world_wars" title="Prima Guerra Mondiale, crollo imperi">⚙️ Grande Guerra</button>
-            <button class="era-chip" data-year="2024" data-i18n="era_today" title="Mondo contemporaneo">📡 Oggi</button>
-          </div>
-        </div>
+        <!-- v6.90 A+: year controls spostati in bottom #timeline-bar (spec §4).
+             Year-slider + controls sono ora rendered via main#app > #timeline-bar. -->
 
-        <fieldset class="filter-control">
-          <legend data-i18n="status">Status:</legend>
-          <div class="checkbox-group">
-            <label><input type="checkbox" value="confirmed" checked /> <span data-i18n="confirmed">Confermato</span></label>
-            <label><input type="checkbox" value="uncertain" checked /> <span data-i18n="uncertain">Incerto</span></label>
-            <label><input type="checkbox" value="disputed" checked /> <span data-i18n="disputed">Contestato</span></label>
+        <!-- v6.90 A+: sezioni collassabili — spec §3 -->
+        <details class="sb-section" open>
+          <summary class="sb-section__summary">
+            <span class="sb-section__label" data-i18n="era_section_label">Era</span>
+            <span class="sb-section__chev" aria-hidden="true">▾</span>
+          </summary>
+          <div class="sb-section__body">
+            <div class="era-chips" aria-label="Salta a un'epoca storica">
+              <button class="era-chip" data-year="-3000" data-i18n="era_bronze" title="Età del Bronzo — ~3000 a.C.">Età del Bronzo</button>
+              <button class="era-chip" data-year="-500" data-i18n="era_classical" title="Antichità classica — Persiani, Greci, Maurya">Antichità</button>
+              <button class="era-chip" data-year="117" data-i18n="era_roman_peak" title="Apogeo dell'Impero Romano sotto Traiano (117 CE)">Roma imperiale</button>
+              <button class="era-chip" data-year="800" data-i18n="era_medieval" title="Alto Medioevo — Carlo Magno, Bisanzio, Califfato">Medioevo</button>
+              <button class="era-chip" data-year="1250" data-i18n="era_mongol" title="Mondo di Kublai Khan, Mali, Hohenstaufen">Mondo Mongolo</button>
+              <button class="era-chip" data-year="1492" data-i18n="era_discovery" title="Colombo, Granada, Mehmed II a Costantinopoli">Età delle Scoperte</button>
+              <button class="era-chip" data-year="1789" data-i18n="era_revolutions" title="Rivoluzione francese, Ottomani, indipendenza USA">Rivoluzioni</button>
+              <button class="era-chip" data-year="1914" data-i18n="era_world_wars" title="Prima Guerra Mondiale, crollo imperi">Grande Guerra</button>
+              <button class="era-chip" data-year="2024" data-i18n="era_today" title="Mondo contemporaneo">Oggi</button>
+            </div>
           </div>
-        </fieldset>
+        </details>
 
-        <fieldset class="filter-control">
-          <legend data-i18n="region_legend">Regione:</legend>
-          <div id="continent-chips" class="chip-group" aria-label="Filtra per continente">
-            <button class="chip active" data-continent="" data-i18n="all">Tutti</button>
+        <details class="sb-section" open>
+          <summary class="sb-section__summary">
+            <span class="sb-section__label" data-i18n="status">Status</span>
+            <span class="sb-section__chev" aria-hidden="true">▾</span>
+          </summary>
+          <div class="sb-section__body">
+            <fieldset class="filter-control filter-control--naked">
+              <legend class="sr-only" data-i18n="status">Status:</legend>
+              <div class="checkbox-group">
+                <label class="status-row status-row--confirmed"><input type="checkbox" value="confirmed" checked /> <span class="status-row__label" data-i18n="confirmed">Confermato</span></label>
+                <label class="status-row status-row--uncertain"><input type="checkbox" value="uncertain" checked /> <span class="status-row__label" data-i18n="uncertain">Incerto</span></label>
+                <label class="status-row status-row--disputed"><input type="checkbox" value="disputed" checked /> <span class="status-row__label" data-i18n="disputed">Contestato</span></label>
+              </div>
+            </fieldset>
           </div>
-        </fieldset>
+        </details>
 
-        <fieldset class="filter-control">
-          <legend data-i18n="type">Tipo:</legend>
-          <div id="type-chips" class="chip-group" aria-label="Filtra per tipo di entit&agrave;">
-            <button class="chip active" data-type="" data-i18n="all">Tutti</button>
+        <details class="sb-section">
+          <summary class="sb-section__summary">
+            <span class="sb-section__label" data-i18n="region_legend">Regione</span>
+            <span class="sb-section__chev" aria-hidden="true">▸</span>
+          </summary>
+          <div class="sb-section__body">
+            <fieldset class="filter-control filter-control--naked">
+              <legend class="sr-only" data-i18n="region_legend">Regione:</legend>
+              <div id="continent-chips" class="chip-group" aria-label="Filtra per continente">
+                <button class="chip active" data-continent="" data-i18n="all">Tutti</button>
+              </div>
+            </fieldset>
           </div>
-        </fieldset>
+        </details>
+
+        <details class="sb-section">
+          <summary class="sb-section__summary">
+            <span class="sb-section__label" data-i18n="type">Tipo</span>
+            <span class="sb-section__chev" aria-hidden="true">▸</span>
+          </summary>
+          <div class="sb-section__body">
+            <fieldset class="filter-control filter-control--naked">
+              <legend class="sr-only" data-i18n="type">Tipo:</legend>
+              <div id="type-chips" class="chip-group" aria-label="Filtra per tipo di entit&agrave;">
+                <button class="chip active" data-type="" data-i18n="all">Tutti</button>
+              </div>
+            </fieldset>
+          </div>
+        </details>
+
+        <details class="sb-section">
+          <summary class="sb-section__summary">
+            <span class="sb-section__label" data-i18n="overlay_label">Overlay</span>
+            <span class="sb-section__chev" aria-hidden="true">▸</span>
+          </summary>
+          <div class="sb-section__body">
+            <fieldset class="filter-control overlay-control filter-control--naked">
+              <legend class="sr-only">Overlay:</legend>
+              <label class="overlay-toggle">
+                <input type="checkbox" id="events-overlay-toggle" aria-describedby="events-overlay-hint" />
+                <span data-i18n="overlay_events">Mostra eventi storici</span>
+              </label>
+              <div id="events-overlay-hint" class="overlay-hint" aria-hidden="true">
+                Battaglie, trattati, fondazioni e altri eventi nell'anno selezionato.
+              </div>
+              <div id="events-overlay-legend" class="events-overlay-legend hidden" aria-hidden="true">
+                <span class="ev-legend-item"><span class="ev-legend-dot ev-battle"></span> Battaglia/Assedio</span>
+                <span class="ev-legend-item"><span class="ev-legend-dot ev-treaty"></span> Trattato/Diplomazia</span>
+                <span class="ev-legend-item"><span class="ev-legend-dot ev-founding"></span> Fondazione</span>
+                <span class="ev-legend-item"><span class="ev-legend-dot ev-violence"></span> Violenza/Genocidio</span>
+                <span class="ev-legend-item"><span class="ev-legend-dot ev-disaster"></span> Disastro naturale</span>
+                <span class="ev-legend-item"><span class="ev-legend-dot ev-culture"></span> Cultura/Religione</span>
+                <span class="ev-legend-item"><span class="ev-legend-dot ev-other"></span> Altro</span>
+              </div>
+              <label class="overlay-toggle">
+                <input type="checkbox" id="trade-routes-toggle" aria-describedby="trade-routes-hint" />
+                <span data-i18n="overlay_trade">Mostra rotte commerciali</span>
+              </label>
+              <div id="trade-routes-hint" class="overlay-hint" aria-hidden="true">
+                Linee commerciali attive nell'anno selezionato.
+              </div>
+              <div id="trade-routes-legend" class="trade-routes-legend hidden" aria-hidden="true">
+                <span class="tr-legend-item"><span class="tr-legend-line tr-maritime"></span> Marittima</span>
+                <span class="tr-legend-item"><span class="tr-legend-line tr-overland"></span> Terrestre</span>
+                <span class="tr-legend-item"><span class="tr-legend-line tr-river"></span> Fluviale</span>
+                <span class="tr-legend-item"><span class="tr-legend-line tr-mixed"></span> Mista</span>
+                <span class="tr-legend-item"><span class="tr-legend-line tr-slavery"></span> Schiavit&ugrave; (ETHICS-010)</span>
+              </div>
+            </fieldset>
+          </div>
+        </details>
 
         <div class="sort-control">
           <label for="sort-select" data-i18n="sort_label">Ordina:</label>
@@ -175,40 +243,6 @@
             <option value="confidence-desc" data-i18n="sort_conf">Affidabilit&agrave; (alta-bassa)</option>
           </select>
         </div>
-
-        <fieldset class="filter-control overlay-control">
-          <legend>Overlay:</legend>
-          <label class="overlay-toggle">
-            <input type="checkbox" id="events-overlay-toggle" aria-describedby="events-overlay-hint" />
-            <span>Mostra eventi storici</span>
-          </label>
-          <div id="events-overlay-hint" class="overlay-hint" aria-hidden="true">
-            Battaglie, trattati, fondazioni e altri eventi nell'anno selezionato.
-          </div>
-          <div id="events-overlay-legend" class="events-overlay-legend hidden" aria-hidden="true">
-            <span class="ev-legend-item"><span class="ev-legend-dot ev-battle"></span> Battaglia/Assedio</span>
-            <span class="ev-legend-item"><span class="ev-legend-dot ev-treaty"></span> Trattato/Diplomazia</span>
-            <span class="ev-legend-item"><span class="ev-legend-dot ev-founding"></span> Fondazione</span>
-            <span class="ev-legend-item"><span class="ev-legend-dot ev-violence"></span> Violenza/Genocidio</span>
-            <span class="ev-legend-item"><span class="ev-legend-dot ev-disaster"></span> Disastro naturale</span>
-            <span class="ev-legend-item"><span class="ev-legend-dot ev-culture"></span> Cultura/Religione</span>
-            <span class="ev-legend-item"><span class="ev-legend-dot ev-other"></span> Altro</span>
-          </div>
-          <label class="overlay-toggle">
-            <input type="checkbox" id="trade-routes-toggle" aria-describedby="trade-routes-hint" />
-            <span>Mostra rotte commerciali</span>
-          </label>
-          <div id="trade-routes-hint" class="overlay-hint" aria-hidden="true">
-            Linee commerciali attive nell'anno selezionato.
-          </div>
-          <div id="trade-routes-legend" class="trade-routes-legend hidden" aria-hidden="true">
-            <span class="tr-legend-item"><span class="tr-legend-line tr-maritime"></span> Marittima</span>
-            <span class="tr-legend-item"><span class="tr-legend-line tr-overland"></span> Terrestre</span>
-            <span class="tr-legend-item"><span class="tr-legend-line tr-river"></span> Fluviale</span>
-            <span class="tr-legend-item"><span class="tr-legend-line tr-mixed"></span> Mista</span>
-            <span class="tr-legend-item"><span class="tr-legend-line tr-slavery"></span> Schiavit&ugrave; (ETHICS-010)</span>
-          </div>
-        </fieldset>
 
         <button id="reset-btn" class="btn-secondary" aria-label="Azzera tutti i filtri">Reset filtri</button>
       </div>
@@ -227,13 +261,20 @@
       <!-- Stats bar -->
       <div id="stats-bar" class="stats-bar" aria-label="Statistiche dataset"></div>
 
-      <div id="results-list" class="results" role="list" aria-label="Risultati ricerca">
-        <div class="skeleton-loader" aria-hidden="true">
-          <div class="skeleton-card"></div>
-          <div class="skeleton-card"></div>
-          <div class="skeleton-card"></div>
+      <!-- v6.90 A+: "On map" editorial section — spec §3 -->
+      <section class="on-map-section" aria-label="Entities on map">
+        <header class="on-map-section__header">
+          <span class="on-map-section__title" data-i18n="on_map_label">On map</span>
+          <span id="on-map-count" class="on-map-section__count" aria-live="polite">—</span>
+        </header>
+        <div id="results-list" class="results" role="list" aria-label="Risultati ricerca">
+          <div class="skeleton-loader" aria-hidden="true">
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+          </div>
         </div>
-      </div>
+      </section>
     </aside>
 
     <!-- Toggle sidebar mobile (v6.68: rinominato per evitare duplicate ID col toggle in header) -->
@@ -261,21 +302,41 @@
       </div>
     </div>
 
-    <!-- Timeline -->
-    <div id="timeline-bar" class="timeline-bar" aria-label="Timeline storica">
-      <div class="timeline-header">
-        <button id="timeline-toggle" class="timeline-toggle" aria-label="Mostra/nascondi timeline">
-          Timeline &#9660;
-        </button>
-        <div class="timeline-export">
-          <a href="/v1/export/geojson" class="export-btn" title="Esporta GeoJSON">GeoJSON</a>
-          <a href="/v1/export/csv" class="export-btn" title="Esporta CSV">CSV</a>
-          <a href="/docs" class="export-btn" title="API Docs">API</a>
-        </div>
+    <!-- v6.90 A+: Timeline bar — year slider + era ticks + year display (spec §4) -->
+    <div id="timeline-bar" class="timeline-bar" aria-label="Timeline anno storico">
+      <button id="play-btn" class="tb-play-btn" title="Riproduci timeline" aria-label="Avvia playback storico">&#9654;</button>
+
+      <span class="tb-year-start" aria-hidden="true">4500 BCE</span>
+
+      <div class="tb-slider-wrap">
+        <div id="era-ticks-overlay" class="tb-era-ticks" aria-hidden="true"></div>
+        <input type="range" id="year-slider" class="tb-year-slider"
+               min="-4500" max="2025" value="1500" step="1"
+               aria-label="Seleziona anno storico" aria-valuemin="-4500" aria-valuemax="2025" />
       </div>
-      <div id="timeline-canvas" class="timeline-canvas collapsed">
-        <canvas id="timeline-chart"></canvas>
+
+      <span class="tb-year-end" aria-hidden="true">2025</span>
+
+      <div class="tb-year-input-group">
+        <input type="number" id="year-input" value="1500" min="-4500" max="2025" step="1"
+               aria-label="Inserisci anno esatto" class="tb-year-input" />
+        <select id="year-era" aria-label="Era a.C./d.C." class="tb-year-era">
+          <option value="ad">CE</option>
+          <option value="bc">BCE</option>
+        </select>
+        <button id="year-go" class="tb-year-go" aria-label="Applica anno">&#10148;</button>
       </div>
+
+      <select id="play-speed" aria-label="Velocit&agrave; playback" class="tb-play-speed">
+        <option value="200" data-i18n="speed_fast">Fast</option>
+        <option value="500" selected data-i18n="speed_normal">Normal</option>
+        <option value="1000" data-i18n="speed_slow">Slow</option>
+      </select>
+
+      <span class="tb-year-display-wrap" aria-label="Anno corrente">
+        <span id="year-display" class="tb-year-display" aria-live="polite">1500</span>
+        <span id="year-display-era" class="tb-year-display-era">CE</span>
+      </span>
     </div>
 
     <!-- Error toast -->
@@ -293,7 +354,7 @@
       <span class="legend-item" aria-hidden="true">&#9473; <span data-i18n="legend_real">Reale</span></span>
       <span class="legend-item" aria-hidden="true">&#9476; <span data-i18n="legend_approx">Approssimato</span></span>
     </div>
-    <span class="footer-note">AtlasPI v<span id="footer-version">6.89.0</span> <span data-i18n-html="footer_note_tail">&mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie &middot; 34 tools MCP</span></span>
+    <span class="footer-note">AtlasPI v<span id="footer-version">6.90.0</span> <span data-i18n-html="footer_note_tail">&mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie &middot; 34 tools MCP</span></span>
   </footer>
 
   <noscript>

@@ -2,6 +2,145 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.90.0] - 2026-04-19
+
+**Tema**: *UI redesign A+ — mappa editoriale (ADR-006, ETHICS-011)*
+
+Completo redesign visivo della pagina `/app` senza alcuna modifica a
+backend, API, data layer, MCP, SDK. 9 commit strutturati su branch
+`redesign/aplus-map`, tutti whitelist-compliant (solo `static/*` +
+docs).
+
+### Design tokens (Round 1)
+- Palette warm-dark: `--bg #0f1318` (da `#0d1117`), accent ambra
+  `#e8b14a` (da GitHub blue `#58a6ff`), status attenuati
+  (`--confirmed #6eb58a`, `--uncertain #d4a13a`, `--disputed #d57770`)
+- Tipografia: `--font-ui 'Inter'` + `--font-serif 'Playfair Display'`
+  caricati via Google Fonts preconnect + `display=swap` (no FOIT)
+- Spacing scale `--s-1..--s-6` disponibile (uso selettivo)
+- Legacy tokens aliased per backward-compat delle ~3000 righe CSS
+  preesistenti
+
+### Header (Round 2)
+- Brand block `Atlas[PI]` + subtitle `HISTORICAL GEOGRAPHY` (11px
+  uppercase letter-spacing 1.2px)
+- Vertical separator 1×26px
+- Year hero `#year-hero-display` Playfair italic 32px tabular-nums
+  con CLS-safe min-width 96px
+- Era label `#era-label` Playfair italic 10.5px accent uppercase
+- Nav ridotto: 4 link (Search/Timeline/Compare/More▾), con dropdown
+  `<details>` nativo per Embed/API Docs/OpenAPI/Language/Theme
+- Counter pill 10.5px con dot verde `--confirmed`
+- Height 52px fisso, `contain:layout` per CLS
+
+### Sidebar collassabile (Round 3)
+- Filter groups wrapped in `<details>` nativi:
+  Era (aperto), Status (aperto), Region, Type, Overlay (chiusi)
+- Era chips ridisegnate: underline editorial (NO fill pill),
+  Playfair italic accent quando active/focus, border-bottom 1.5px
+  statico = CLS-safe
+- Status rows: checkbox 12×12 con border color-status + checkmark
+- Entity list "On map" con header live count, editorial compact
+  rows 12px con swatch 3×14 HSL per-entity
+- Dual-class `.entity-row .result-card` preserva querySelector legacy
+
+### Timeline bar (Round 4)
+- Bottom bar 60px fisso: `[▶] [4500 BCE] [slider+era-ticks] [2025]
+  [input|era|go] [speed▾] [1500 italic "CE"]`
+- Year slider thumb 14×14 con double shadow (3px panel + 4px
+  accent-glow 0.3)
+- 6 era ticks principali posizionati lungo slider (Bronze -3000,
+  Classical -500, Medieval +500, Early Modern 1453, Revolutions
+  1789, Modern 1914) — active tick serif italic accent
+- Year display 15px Playfair italic accent + BCE/CE 9px muted
+- IDs preservati (#year-slider etc) → app.js handlers unchanged
+- **Rimosso**: `#timeline-toggle`, `#timeline-canvas`, `#timeline-chart`,
+  export links (event timeline canvas — vedi ETHICS-011 §4 per
+  regressione accettata)
+
+### Leaflet HSL rendering (Round 5)
+- `computeBoundaryStyle(e, state)` con HSL per-entity:
+  * `hue = hashHue(e.id)` (djb2 stateless, 0-359)
+  * `fillAlpha = 0.28 * (selected ? 1.4 : hovered ? 1.2 : 1)`
+  * `fillColor: hsla(hue, 55%, 55%, alpha)`
+  * `color: hsl(hue, 55%, 62%/70%)`
+  * `weight: 0.9 / 1.3 / 2` (base/hover/selected)
+  * `opacity: 0.55` su non-selected/non-hovered quando altro selezionato
+- **dashArray PRESERVATO** (ETHICS-011 §2):
+  * `e.status === 'disputed'` → `'6,4'`
+  * `!isReal(e)` → `'4,3'`
+- Capital markers: r=2.2/3.5, fill `#c0cad6` → accent selected
+- Labels entity: Inter 8.5/11px uppercase letter-spacing 0.4px
+- Hover via `layer.setStyle()` (CLS-safe, no re-render full)
+- Selection tracking: `window.setSelectedEntityId(id)`, `showDetail`
+  + `closeDetail` trigger re-render
+
+### Detail panel editorial (Round 6)
+- h2 Playfair italic 22px weight 700 tabular-nums
+- Latin name variant: Playfair italic 11px muted (secondary)
+- Life timeline 2px bar: -4500..2025 full range, HSL entity span,
+  accent dot sul currentYear (nascosto se fuori range)
+- Info grid K/V: 80px/1fr, label 9.5px uppercase, value 11.5px
+  tabular-nums con bottom border
+- `.capital-history-list` CSS class sostituisce inline styles,
+  `data-section="capital-history"` PRESERVATO (addendum B) —
+  13 entities: Ottoman, HRE, Mughal, Ming, Song, Solomonic,
+  Assiria, Kush, Seleucidi, Kanem-Bornu, Lombardi, Dai Viet,
+  Austria-Hungary, Mali, Chola
+
+### A11y + reduced-motion (Round 7)
+- Focus-visible globale: 2px `var(--accent)` + offset 2px
+- Reduced-motion `@media`: transition+animation 0.001ms, preserva
+  CLS-safe overrides su `.leaflet-tile`
+- Era chip focus dual-channel (underline + outline) per daltonici
+- AAA contrast verificato: `--text` su `--bg` = 13.2:1
+
+### i18n (Round 8)
+- 30+ nuove chiavi IT/EN: `app_subtitle_short`, `more_dropdown`,
+  `on_map_label`, `era_section_label`, `overlay_label`,
+  `overlay_events`, `overlay_trade`, `year_hero_label`,
+  `life_timeline_label`, `capital_history_title`, `speed_*`
+- 6 nuove era bands: `era_prehistoric`, `era_iron`,
+  `era_early_medieval`, `era_high_medieval`, `era_early_modern`,
+  `era_modern`
+- Emoji rimossi dalle 9 era chips esistenti (editorial style)
+
+### Docs (Round 9)
+- `docs/adr/ADR-006-ui-aplus-typography.md`: design system
+  completo + alternative + implicazioni
+- `docs/ethics/ETHICS-011-redesign-aplus-typography-and-color.md`:
+  7 decisioni etiche documentate (palette arbitrariness,
+  dashArray preservation, typography neutrality, event canvas
+  removal accettata, deprecated filter, accent ambra,
+  dataset integrity)
+
+### Testing & QA
+- 0 test rotti (Agent C verification: 3 test references a
+  `static/` usano solo path string, non CSS selectors né DOM)
+- CLS: 0.00 → target mantenuto (spec §4 fixed heights + contain)
+- Lighthouse Accessibility target ≥ 95
+
+### Zero impact
+- ✅ Zero modifiche a `src/` (Python)
+- ✅ Zero modifiche a `data/`, `alembic/`
+- ✅ Zero cambio API/MCP/SDK contract
+- ✅ 1038 entity count invariato (992 active + 44 deprecated)
+- ✅ Zenodo DOI stable
+- ✅ CSP compat (no inline script, già extracted v6.46)
+
+### File modificati
+- `static/index.html` (header, sidebar, timeline-bar, detail-panel markup)
+- `static/style.css` (tokens + ~700 linee nuove CSS)
+- `static/app.js` (renderMap HSL, showDetail life-timeline + capital-history
+  class, year-hero sync, era-ticks render)
+- `static/js/i18n.js` (nuove chiavi + emoji rimossi)
+- `docs/adr/ADR-006-*` (nuovo)
+- `docs/ethics/ETHICS-011-*` (nuovo)
+- `ROADMAP.md`, `CHANGELOG.md` (questo entry)
+- `handoff/cofounder-review/*` (audit artifacts)
+
+---
+
 ## [v6.89.0] - 2026-04-19
 
 **Tema**: *Round 19 — Wikidata drift incorpora capital_history compare*
