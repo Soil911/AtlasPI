@@ -405,14 +405,15 @@ def analyze_failed_searches(db, existing_titles: set[str]) -> int:
             if added:
                 count += 1
 
-    # ── Signal 2: Likely-empty search queries (200 + fast response) ──
-    # Heuristic: search endpoints returning 200 with response_time < 100ms
-    # and query_string contains actual SEARCH params (not just pagination).
-    # Pagination-only queries (limit=, offset=) are normal usage, not signals.
-    _SEARCH_PARAMS = ("name=", "q=", "year=", "event_type=", "entity_type=",
+    # ── Signal 2: Truly-empty search queries ──────────────────────────
+    # Original heuristic (response_time < 100ms) was generating false positives
+    # because Redis-cached responses with real results are also very fast.
+    # Fix (v6.91): verify zero results in DB before flagging. Only flag if
+    # the search term genuinely matches no entities or events.
+    _SEARCH_PARAMS = ("name=", "q=", "event_type=", "entity_type=",
                       "status=", "continent=", "type=", "search=")
     search_paths = ("/v1/entities", "/v1/events", "/v1/search")
-    empty_search_rows = (
+    candidate_rows = (
         db.query(
             ApiRequestLog.path,
             ApiRequestLog.query_string,
@@ -425,7 +426,6 @@ def analyze_failed_searches(db, existing_titles: set[str]) -> int:
             or_(
                 *[ApiRequestLog.path.like(f"{p}%") for p in search_paths]
             ),
-            # Must contain at least one real search param (not just limit/offset)
             or_(
                 *[ApiRequestLog.query_string.contains(p) for p in _SEARCH_PARAMS]
             ),
@@ -433,14 +433,45 @@ def analyze_failed_searches(db, existing_titles: set[str]) -> int:
             ApiRequestLog.response_time_ms < 100,
         )
         .group_by(ApiRequestLog.path, ApiRequestLog.query_string)
-        .having(func.count(ApiRequestLog.id) >= 2)  # At least 2 identical queries
+        .having(func.count(ApiRequestLog.id) >= 2)
         .order_by(func.count(ApiRequestLog.id).desc())
-        .limit(10)
+        .limit(20)
         .all()
     )
 
-    for r in empty_search_rows:
-        # Extract human-readable query from query_string
+    for r in candidate_rows:
+        # Extract the text search term (q= or name=) to verify against DB.
+        from urllib.parse import parse_qs, unquote_plus
+        qs_dict = parse_qs(r.query_string, keep_blank_values=False)
+        search_term = (
+            qs_dict.get("q", qs_dict.get("name", qs_dict.get("search", [None])))[0]
+            if (qs_dict.get("q") or qs_dict.get("name") or qs_dict.get("search"))
+            else None
+        )
+
+        if search_term:
+            term = unquote_plus(search_term).strip()
+            if not term:
+                continue
+            # Verify: does this term actually return zero results in the DB?
+            # Check both name_original and name_english (via NameVariant not needed,
+            # basic ILIKE covers the common case).
+            entity_hits = (
+                db.query(func.count(GeoEntity.id))
+                .filter(GeoEntity.name_original.ilike(f"%{term}%"))
+                .scalar() or 0
+            )
+            event_hits = (
+                db.query(func.count(HistoricalEvent.id))
+                .filter(HistoricalEvent.name.ilike(f"%{term}%"))
+                .scalar() or 0
+            ) if entity_hits == 0 else 1  # skip event check if entity already found
+
+            if entity_hits > 0 or event_hits > 0:
+                # Data exists — the fast response was a Redis cache hit, not empty.
+                # Skip to avoid false positive.
+                continue
+
         qs_display = r.query_string[:80] + ("…" if len(r.query_string) > 80 else "")
         added = _add_suggestion(
             db, existing_titles,
@@ -448,7 +479,7 @@ def analyze_failed_searches(db, existing_titles: set[str]) -> int:
             title=f"Empty search: {r.path}?{qs_display} ({r.times}x)",
             description=(
                 f"The query '{r.path}?{r.query_string}' was made {r.times} times "
-                f"in the last 30 days with fast response times (likely zero results). "
+                f"in the last 30 days and returns zero results. "
                 f"This indicates demand for data we may not have."
             ),
             priority=3,
@@ -456,7 +487,7 @@ def analyze_failed_searches(db, existing_titles: set[str]) -> int:
                 "path": r.path,
                 "query_string": r.query_string,
                 "times": r.times,
-                "signal": "fast_200_likely_empty",
+                "signal": "verified_empty",
             }),
         )
         if added:

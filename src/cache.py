@@ -172,22 +172,22 @@ def cache_response(ttl_seconds: int = 300):
             # Run the actual handler.
             result = func(*args, **kwargs)
 
-            # Cache dict/list results directly.
-            if isinstance(result, (dict, list)):
-                try:
+            # Cache dict/list, Pydantic models, and JSONResponse results.
+            try:
+                from fastapi.responses import JSONResponse
+                from pydantic import BaseModel
+
+                if isinstance(result, (dict, list)):
                     serialized = json.dumps(result, ensure_ascii=False, default=str)
                     _redis_client.setex(cache_key, ttl_seconds, serialized)
-                except Exception:
-                    logger.debug("Redis SET failed for %s", cache_key, exc_info=True)
-            else:
-                # Also handle JSONResponse (used by admin endpoints).
-                from fastapi.responses import JSONResponse
-                if isinstance(result, JSONResponse):
-                    try:
-                        body = result.body.decode("utf-8")
-                        _redis_client.setex(cache_key, ttl_seconds, body)
-                    except Exception:
-                        logger.debug("Redis SET failed for %s", cache_key, exc_info=True)
+                elif isinstance(result, BaseModel):
+                    serialized = result.model_dump_json()
+                    _redis_client.setex(cache_key, ttl_seconds, serialized)
+                elif isinstance(result, JSONResponse):
+                    body = result.body.decode("utf-8")
+                    _redis_client.setex(cache_key, ttl_seconds, body)
+            except Exception:
+                logger.debug("Redis SET failed for %s", cache_key, exc_info=True)
 
             return result
 

@@ -1513,7 +1513,8 @@ def year_snapshot(
     summary="Statistiche del dataset",
     description="Panoramica del dataset: conteggi, range, media confidence.",
 )
-def dataset_stats(response: Response, db: Session = Depends(get_db)):
+@cache_response(ttl_seconds=60)
+def dataset_stats(request: Request, response: Response, db: Session = Depends(get_db)):
     total = db.query(GeoEntity).count()
 
     type_counts = (
