@@ -98,6 +98,44 @@ class GeoEntity(Base):
     sources: Mapped[list[Source]] = relationship(
         "Source", back_populates="entity", cascade="all, delete-orphan"
     )
+    capital_history: Mapped[list[CapitalHistory]] = relationship(
+        "CapitalHistory", back_populates="entity", cascade="all, delete-orphan",
+        order_by="CapitalHistory.year_start"
+    )
+
+
+class CapitalHistory(Base):
+    """Storia delle capitali per polities long-duration (audit v4 Round 13).
+
+    Pattern: entità come Ottoman, Mughal, Ming, Song, Solomonic Ethiopia
+    hanno avuto capitali multiple. Il campo `geo_entities.capital_*`
+    espone solo UNA capitale (la "iconica"); questa tabella documenta
+    la cronologia completa per agenti AI che chiedono capital-of-X-in-year-Y.
+
+    ETHICS-001: nomi capital nella lingua locale.
+    ETHICS-002: per polities con corte mobile (Mali, Solomonic medieval),
+    usa name='court itinerant' + lat/lon NULL.
+    """
+
+    __tablename__ = "capital_history"
+    __table_args__ = (
+        Index("ix_capital_history_entity_id", "entity_id"),
+        Index("ix_capital_history_year_range", "year_start", "year_end"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    entity_id: Mapped[int] = mapped_column(
+        Integer, ForeignKey("geo_entities.id", ondelete="CASCADE"), nullable=False
+    )
+    name: Mapped[str] = mapped_column(String(500), nullable=False)
+    lat: Mapped[float | None] = mapped_column(Float, nullable=True)
+    lon: Mapped[float | None] = mapped_column(Float, nullable=True)
+    year_start: Mapped[int] = mapped_column(Integer, nullable=False)
+    year_end: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    ordering: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    notes: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+    entity: Mapped[GeoEntity] = relationship("GeoEntity", back_populates="capital_history")
 
 
 class NameVariant(Base):
