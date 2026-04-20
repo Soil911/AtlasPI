@@ -1,0 +1,121 @@
+[
+  {
+    "name": "Early Vietnamese independence: Nhà Ngô → Nhà Đinh → Nhà Tiền Lê → Nhà Hồ",
+    "name_lang": "en",
+    "chain_type": "DYNASTY",
+    "region": "Vietnam / Red River Delta",
+    "description": "The first three independent Vietnamese dynasties after the end of Chinese (Tang) rule in 938 CE, preceding the main Đại Việt trunk, plus the brief Hồ interregnum (1400-1407) between Trần and Lê. These dynasties are often omitted from simplified Vietnamese chronologies but represent the foundational period of self-rule.",
+    "confidence_score": 0.85,
+    "ethical_notes": "The distinction between these dynasties and the broader 'Đại Việt' identity is a subject of ongoing historiographic discussion. Vietnamese nationalist narratives sometimes project Đại Việt identity back to Nhà Ngô (939), while Chinese historiography emphasizes the continuity of Chinese cultural influence. The Hồ dynasty's brief rule (1400-1407) ended with a Ming Chinese invasion that caused enormous suffering — this is often glossed over in short chronologies.",
+    "sources": [
+      {"citation": "Taylor, K. W. 'A History of the Vietnamese' (Cambridge University Press, 2013)", "url": null, "source_type": "academic"},
+      {"citation": "Whitmore, J. K. 'Vietnam, Hồ Quý Ly, and the Ming' (Yale University Press, 1985)", "url": null, "source_type": "academic"},
+      {"citation": "Churchman, C. 'The People Between the Rivers: The Rise and Fall of a Bronze Drum Culture' (Rowman & Littlefield, 2016)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Nhà Ngô",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Ngô Quyền defeated the Southern Han Chinese at the Battle of Bạch Đằng River (938), ending a millennium of Chinese rule and establishing the first independent Vietnamese state. Short-lived (939-967) and followed by a period of civil war (Thập Nhị Sứ Quân, 'Twelve Lords').",
+        "ethical_notes": "The Battle of Bạch Đằng (938) is a foundational event in Vietnamese nationalism, used to contrast Vietnamese resistance with Chinese domination. The subsequent period of fragmentation (944-968) is often minimized in nationalist narratives."
+      },
+      {
+        "entity_name": "Nhà Đinh",
+        "transition_year": 968,
+        "transition_type": "UNIFICATION",
+        "is_violent": true,
+        "description": "Đinh Bộ Lĩnh unified the twelve warlords and proclaimed himself emperor in 968, naming his state 'Đại Cồ Việt'. First Vietnamese state to use the imperial title. Established the capital at Hoa Lư (Ninh Bình)."
+      },
+      {
+        "entity_name": "Nhà Tiền Lê",
+        "transition_year": 980,
+        "transition_type": "SUCCESSION",
+        "is_violent": true,
+        "description": "Lê Hoàn seized power in 980 following the assassination of the child-emperor Đinh Toàn. His reign successfully repelled a Song Chinese invasion (981) and established a functioning administrative state. Died 1005; succeeded by weaker sons, leading to the Lý takeover in 1009.",
+        "ethical_notes": "Lê Hoàn's seizure of power involved marrying the Đinh empress and sidelining the Đinh heir — this is described diplomatically in Vietnamese chronicles but was effectively a coup."
+      },
+      {
+        "entity_name": "Nhà Hồ",
+        "transition_year": 1400,
+        "transition_type": "COUP",
+        "is_violent": true,
+        "description": "Hồ Quý Ly seized the throne from the Trần dynasty in 1400 — placed as a link here for historical continuity though it represents a rupture, not a succession. His reformist rule lasted only 7 years before the Ming Chinese invasion (1407) conquered Vietnam and imposed direct rule until the Lê Lợi liberation (1427-1428).",
+        "ethical_notes": "The Ming occupation (1407-1427) is a sensitive period: the Chinese imposed cultural assimilation, destroyed Vietnamese books and records, and suppressed local traditions. Vietnamese historiography emphasizes the resistance of Lê Lợi; Chinese sources describe the period as 'reclaiming' former territory."
+      }
+    ]
+  },
+  {
+    "name": "Arakan succession: Dhaññavati → Vesālī → Lemro (c. 580 BCE – 1430 CE)",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Arakan / Rakhine / Western Myanmar",
+    "description": "The three successive kingdoms of the Arakan coastal strip (now Rakhine State, Myanmar), representing over 2000 years of continuous polity in a region geographically separated from the Irrawaddy Valley by mountains. The Arakan tradition maintained a distinct Arakanese/Rakhine identity, Buddhist culture with strong Hindu elements, and significant maritime trade contacts with India and Southeast Asia.",
+    "confidence_score": 0.65,
+    "ethical_notes": "Arakanese historical chronology is disputed: early dates for Dhaññavati come primarily from the Arakanese chronicle 'Rājāvaṃsadīpanī' (18th century), which projects the kingdom back to mythological origins. Modern scholarship places the historically attested beginning at c. 370 CE (Vesālī period). The later Lemro period overlaps with the Pagan empire in some accounts. The region is today Rakhine State, Myanmar — site of the 2017 Rohingya genocide and ongoing displacement.",
+    "sources": [
+      {"citation": "Phayre, A. P. 'History of Burma' (Trübner & Co., 1883)", "url": null, "source_type": "academic"},
+      {"citation": "Gutman, P. 'Burma's Lost Kingdoms: Splendours of Arakan' (Orchid Press, 2001)", "url": null, "source_type": "academic"},
+      {"citation": "Charney, M. W. 'A History of Modern Burma' (Cambridge University Press, 2009)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Dhaññavati",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Dhaññavati ('Blessed Land'), earliest attested Arakan kingdom according to the Arakanese chronicles. Located in the Kaladan River valley. The chronology is largely legendary for early periods; archaeological evidence dates from the 4th century CE. The Mahamuni Buddha image (supposedly cast 554 BCE) is a central sacred object of Arakan tradition.",
+        "ethical_notes": "The legendary founding dates (580 BCE and earlier in the chronicles) are not supported by archaeological evidence. Actual statehood likely dates to 2nd-4th century CE at earliest."
+      },
+      {
+        "entity_name": "Vesālī",
+        "transition_year": 370,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Vesālī (c. 370-818 CE), the principal historically attested Arakan kingdom. Name echoes the ancient Indian city of Vaishali (Bihar). Extensive trade with India and Bengal; issued coinage with both Sanskrit and Brahmi inscriptions. Archaeological finds at Dh-anyawady/Wethali confirm sophisticated urbanization. Fell to the Pyu-influenced Lemro period.",
+        "ethical_notes": "Vesālī's connection to the Indian Vaishali tradition (and early Buddhist councils) is claimed in Arakanese sources but is controversial — it may be a legitimizing origin myth adopted later."
+      },
+      {
+        "entity_name": "Lemro",
+        "transition_year": 818,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Lemro period (818-1430 CE), named after the Lemro River where successive capitals were built. Multiple capitals (Launggyet, Sambawak, Pyinsa, Parin) were constructed during this period. The Lemro kingdoms coexisted with and eventually resisted Pagan Burmese expansion. Ended with the founding of Mrauk-U (1430), the great Rakhine kingdom that lasted until 1784.",
+        "ethical_notes": "The Mrauk-U kingdom (1430-1784), which succeeded Lemro, was one of the most powerful states in Southeast Asia for two centuries and had significant Muslim merchant communities — a historical fact relevant to understanding the complex Buddhist-Muslim relations in today's Rakhine State."
+      }
+    ]
+  },
+  {
+    "name": "Malay peninsula early kingdoms: Langkasuka → Kedah Tua (100 CE – 1136 CE)",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Malay Peninsula / Southern Thailand / Northern Malaysia",
+    "description": "The earliest Indianized kingdoms of the northern Malay Peninsula. Langkasuka and Kedah Tua were contemporaneous for much of their existence and represent distinct polities, but both occupied the strategic Kra Isthmus trade corridor connecting the Bay of Bengal to the South China Sea. Kedah Tua eventually evolved into the Kedah sultanate (still extant as a Malaysian state).",
+    "confidence_score": 0.6,
+    "ethical_notes": "The relationship between Langkasuka and Kedah Tua is debated: they may have been rivals, confederates, or at times overlapping polities. Chinese sources (Liang Shu, 6th century) mention Langkasuka. The chain represents geographic/regional continuity rather than strict dynastic succession.",
+    "sources": [
+      {"citation": "Coedès, G. 'The Indianized States of Southeast Asia' (University of Hawaii Press, 1968)", "url": null, "source_type": "academic"},
+      {"citation": "Wheatley, P. 'The Golden Khersonese: Studies in the Historical Geography of the Malay Peninsula' (University of Malaya Press, 1961)", "url": null, "source_type": "academic"},
+      {"citation": "Hall, D. G. E. 'A History of South-East Asia' (Macmillan, 4th ed. 1981)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Langkasuka",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Langkasuka (c. 100-1474 CE), one of the earliest known polities of the Malay Peninsula. Mentioned in Chinese sources from the 6th century CE as a kingdom that sent envoys to China. Centered around modern Pattani (Thailand). A Hindu-Buddhist state that later came under Srivijayan suzerainty. Eventually Islamized and became the Sultanate of Pattani.",
+        "ethical_notes": "Langkasuka's long duration (1374 years in the DB) reflects the difficulty of dating the transition from pre-Islamic to Islamic polity in the region. The Pattani region today is a site of ongoing Muslim separatist insurgency in Thailand — the pre-Islamic history is contested in current political discourse."
+      },
+      {
+        "entity_name": "Kedah Tua",
+        "transition_year": 170,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Kedah Tua ('Ancient Kedah', c. 170-1136 CE), among the oldest Malay polities. Archaeological evidence at Bujang Valley shows continuous settlement from the 4th century CE. A major entrepôt for India-China trade, with both Hindu and Buddhist temples. Around 1136 CE the polity transitioned to the Sultanate of Kedah (still the name of a Malaysian state).",
+        "ethical_notes": "The 'Tua' (Old) qualifier distinguishes the pre-Islamic Hindu-Buddhist Kedah from the Sultanate era. The transition date is approximate — Islamization was gradual, not an abrupt break."
+      }
+    ]
+  }
+]
