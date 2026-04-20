@@ -524,19 +524,32 @@ details summary::marker { content: ''; }
   color: var(--text-muted);
   background: none;
   border: none;
+  /* ETHICS: v6.91 post-audit (pattern diverso da v6.67 documentato qui).
+   * Il pattern CLS-safe originale v6.67 usava pseudo-element `::after` con
+   * border perché era-chip allora avevano background pillola che cambiava
+   * su active. Il redesign A+ usa underline editorial (1.5px solid
+   * transparent → var(--accent) on active). Border-bottom è SEMPRE presente
+   * (1.5px transparent) quindi lo spazio è RISERVATO: il cambio da
+   * transparent a var(--accent) NON produce reflow.
+   * Transition solo su `color` — NO transition su border-*-color (il cambio
+   * di color-only sul border è compositato dal browser ma fragile su device
+   * lenti: meglio nessuna transition che shift potenziale).
+   */
   border-bottom: 1.5px solid transparent;
   padding: 4px 6px 6px;
   cursor: pointer;
   letter-spacing: 0;
   font-weight: 400;
   line-height: 1.2;
-  /* NO transition su border-color (CLS-safe v6.67). Solo colore testo. */
   transition: color 0.12s ease;
-  /* Backdrop del ::after (ring) legacy viene annullato dal nude style */
 }
 
 .sb-section .era-chip::after {
-  /* Legacy pseudo anellato dalla v6.67 — neutralizzato qui */
+  /* v6.91: il pseudo-element legacy v6.67 non è più necessario con il
+   * pattern border-bottom transparent (spazio già riservato in main box).
+   * Neutralizzato esplicitamente per evitare conflict con global era-chip
+   * rules che aggiungono ::after con content per stili diversi.
+   */
   content: none !important;
 }
 

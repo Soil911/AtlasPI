@@ -2,6 +2,38 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.91.0] - 2026-04-19
+
+**Tema**: *Audit cofounder follow-up — era-chip sync + dead code cleanup + CLS docs*
+
+Chiusura dei 3 follow-up P1/P2 identificati dall'audit cofounder v6.90:
+
+### P1 — Era-chip active state sync con year slider
+
+Bug: Agent A audit aveva riportato "MISMATCH underline active era chip non renderizzato". Root cause: JS v6.90 applicava `.active` **solo su click**, il prototype sincronizzava con `year` corrente.
+
+Fix `static/app.js`: nuova funzione `syncActiveEraChip(year)` che matcha `eraForYear(year).label` con `chip.dataset.era`. Chiamata su input slider + click. Pattern prototype matching.
+
+### P1 — CLS-safe pattern documentation
+
+Agent B aveva flaggato P1 `.sb-section .era-chip::after { content: none !important }` come pattern deviato da v6.67 senza ETHICS comment. Aggiunto commento multi-riga spiegando:
+- Il pattern CLS-safe v6.67 usava pseudo-element perché era-chip avevano background pillola
+- Redesign A+ usa underline editorial — border-bottom transparent riserva 1.5px
+- Transition solo su `color`, NO transition su border-color (compositing fragile su device lenti)
+- Trade-off motivato, non regressione
+
+### P2 — Dead code timeline removal
+
+Agent B aveva rilevato: `loadTimeline()` in `init()` faceva fetch inutile a `/v1/export/timeline` (~50KB per pagina) + `drawTimeline()` dead function 110 righe. Canvas `#timeline-chart` eliminato dal DOM in v6.90 (spec §4 timeline bar 60px senza sparkline).
+
+Rimosso: `loadTimeline()` call, funzione `drawTimeline()` + `timelineData` var, `tlToggle`/`tlCanvas` handler, `yearSlider.input → drawTimeline` listener, `if (timelineData) drawTimeline()` in autoplay loop. Commento di ripristino incluso per eventuale future re-introduction.
+
+### Verifica
+
+Zero regressione funzionale. Nightly drift check + endpoints API unchanged. Tutti i pattern CLS-safe v6.67 restano operativi (leaflet-tile, type-chips, contain, fieldset min-height).
+
+---
+
 ## [v6.90.0] - 2026-04-19
 
 **Tema**: *UI redesign A+ — mappa editoriale (ADR-006, ETHICS-011)*

@@ -86,7 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
   loadTypes();
   loadContinents();
   loadStats();
-  loadTimeline();
+  // v6.91: loadTimeline() rimosso — #timeline-chart canvas eliminato dal
+  // DOM in v6.90 (spec §4 nuovo timeline bar 60px senza sparkline eventi).
+  // La funzione faceva fetch('/v1/export/timeline') inutile ad ogni init.
+  // Se si vuole ripristinare sparkline eventi in futuro, re-aggiungi il
+  // canvas al DOM + ripristina loadTimeline() + drawTimeline().
   loadChains();
   bindEvents();
   // v6.66 FIX 1: inietta i numeri live per onboarding + footer + qualunque
@@ -2274,6 +2278,20 @@ function bindEvents() {
     if (val.length >= 2) showAutocomplete(val);
   });
 
+  // v6.91: sync era chip active state con year slider (audit cofounder fix)
+  // Fix Agent A finding: active era chip underline non renderizzato in prod
+  // perché JS lo applicava SOLO su click, non su slider drag. Ora sync con year.
+  function syncActiveEraChip(year) {
+    if (typeof eraForYear !== 'function') return;  // eraForYear defined ~riga 2781
+    const current = eraForYear(year);
+    if (!current) return;
+    document.querySelectorAll('.era-chip').forEach(chip => {
+      const chipEra = chip.dataset.era || chip.textContent.trim();
+      const isMatch = chipEra === current.label || chip.dataset.year == String(year);
+      chip.classList.toggle('active', isMatch);
+    });
+  }
+
   yearSlider.addEventListener('input', () => {
     const val = +yearSlider.value;
     yearDisplay.textContent = fmtY(val);
@@ -2284,6 +2302,7 @@ function bindEvents() {
       yearInput.value = val;
       yearEra.value = 'ad';
     }
+    syncActiveEraChip(val);
   });
   yearSlider.addEventListener('change', () => {
     applyFilters();
@@ -2324,9 +2343,14 @@ function bindEvents() {
         yearInput.value = val;
         yearEra.value = 'ad';
       }
-      // v6.90: mark era-chip attivo visualmente (single-selection)
-      document.querySelectorAll('.era-chip').forEach(c => c.classList.remove('active'));
-      if (btn.classList.contains('era-chip')) btn.classList.add('active');
+      // v6.91: usa syncActiveEraChip per consistency con slider drag
+      // Se btn è era-chip, marca attivo; altrimenti sync con year corrente
+      if (btn.classList.contains('era-chip')) {
+        document.querySelectorAll('.era-chip').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+      } else {
+        syncActiveEraChip(val);
+      }
       applyFilters();
       pushUrlState();
       if (eventsOverlayEnabled) renderEventsOverlay();
@@ -2354,18 +2378,9 @@ function bindEvents() {
     tradeToggle.addEventListener('change', () => toggleTradeRoutes(tradeToggle.checked));
   }
 
-  // Timeline toggle
-  const tlToggle = document.getElementById('timeline-toggle');
-  const tlCanvas = document.getElementById('timeline-canvas');
-  if (tlToggle && tlCanvas) {
-    tlToggle.addEventListener('click', () => {
-      tlCanvas.classList.toggle('collapsed');
-      tlToggle.textContent = tlCanvas.classList.contains('collapsed') ? 'Timeline \u25BC' : 'Timeline \u25B2';
-      if (!tlCanvas.classList.contains('collapsed')) drawTimeline();
-    });
-  }
-
-  yearSlider.addEventListener('input', () => { if (timelineData) drawTimeline(); });
+  // v6.91: Timeline toggle handler rimosso — #timeline-toggle + #timeline-canvas
+  // eliminati dal DOM in v6.90. Safe guard `if (tlToggle && tlCanvas)` rendeva
+  // il blocco dead code (entrambi sempre null), ma spreca queryString.
 
   document.getElementById('reset-btn').addEventListener('click', () => {
     searchInput.value = '';
@@ -2526,125 +2541,19 @@ function showKeyboardHelp() {
 // v6.46: extracted to static/js/utils.js (fmtY, esc, isReal)
 
 // ─── Timeline ───────────────────────────────────────────────────
-
-let timelineData = null;
-
-async function loadTimeline() {
-  try {
-    const res = await fetch(`${API}/v1/export/timeline`);
-    if (!res.ok) return;
-    timelineData = await res.json();
-    drawTimeline();
-  } catch (_) {}
-}
-
-function drawTimeline() {
-  if (!timelineData) return;
-  const canvas = document.getElementById('timeline-chart');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  const rect = canvas.parentElement.getBoundingClientRect();
-  canvas.width = rect.width * window.devicePixelRatio;
-  canvas.height = 120 * window.devicePixelRatio;
-  canvas.style.width = rect.width + 'px';
-  ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
-
-  const w = rect.width;
-  const h = 120;
-  const pad = { left: 40, right: 20, top: 10, bottom: 25 };
-  const plotW = w - pad.left - pad.right;
-  const plotH = h - pad.top - pad.bottom;
-
-  ctx.clearRect(0, 0, w, h);
-
-  const minY = timelineData.min_year;
-  const maxY = Math.min(timelineData.max_year, 2025);
-  const range = maxY - minY || 1;
-
-  const yearToX = y => pad.left + ((y - minY) / range) * plotW;
-
-  // Grid lines
-  ctx.strokeStyle = 'rgba(48,54,61,0.5)';
-  ctx.lineWidth = 0.5;
-  const step = range > 2000 ? 500 : range > 500 ? 100 : 50;
-  for (let y = Math.ceil(minY / step) * step; y <= maxY; y += step) {
-    const x = yearToX(y);
-    ctx.beginPath();
-    ctx.moveTo(x, pad.top);
-    ctx.lineTo(x, h - pad.bottom);
-    ctx.stroke();
-    ctx.fillStyle = '#8b949e';
-    ctx.font = '9px sans-serif';
-    ctx.textAlign = 'center';
-    ctx.fillText(y < 0 ? `${Math.abs(y)}aC` : String(y), x, h - 8);
-  }
-
-  const sorted = [...timelineData.items].sort((a, b) => {
-    const durA = (a.end || 2025) - a.start;
-    const durB = (b.end || 2025) - b.start;
-    return durB - durA;
-  });
-
-  const barH = Math.min(8, plotH / sorted.length - 1);
-  sorted.forEach((item, i) => {
-    const x1 = yearToX(item.start);
-    const x2 = yearToX(item.end || 2025);
-    const y = pad.top + (i * (plotH / sorted.length));
-    const color = COLORS[item.status] || '#8b949e';
-
-    ctx.fillStyle = color;
-    ctx.globalAlpha = 0.6;
-    ctx.fillRect(x1, y, Math.max(x2 - x1, 2), barH);
-    ctx.globalAlpha = 1;
-
-    if (x2 - x1 > 50) {
-      ctx.fillStyle = '#e6edf3';
-      ctx.font = '8px sans-serif';
-      ctx.textAlign = 'left';
-      const label = item.name.length > 20 ? item.name.slice(0, 18) + '...' : item.name;
-      ctx.fillText(label, x1 + 3, y + barH - 1);
-    }
-  });
-
-  // Year indicator line
-  const slider = document.getElementById('year-slider');
-  if (slider) {
-    const curYear = parseInt(slider.value, 10);
-    const cx = yearToX(curYear);
-    ctx.strokeStyle = '#e94560';
-    ctx.lineWidth = 1.5;
-    ctx.beginPath();
-    ctx.moveTo(cx, pad.top);
-    ctx.lineTo(cx, h - pad.bottom);
-    ctx.stroke();
-  }
-
-  // Make timeline clickable
-  canvas.onclick = (e) => {
-    const rect = canvas.getBoundingClientRect();
-    const x = (e.clientX - rect.left);
-    const clickedYear = Math.round(minY + ((x - pad.left) / plotW) * range);
-    if (clickedYear >= minY && clickedYear <= maxY) {
-      const slider = document.getElementById('year-slider');
-      const yearInput = document.getElementById('year-input');
-      const yearEra = document.getElementById('year-era');
-      slider.value = clickedYear;
-      document.getElementById('year-display').textContent = fmtY(clickedYear);
-      if (clickedYear < 0) {
-        yearInput.value = Math.abs(clickedYear);
-        yearEra.value = 'bc';
-      } else {
-        yearInput.value = clickedYear;
-        yearEra.value = 'ad';
-      }
-      applyFilters();
-      pushUrlState();
-      drawTimeline();
-    }
-  };
-
-  canvas.style.cursor = 'crosshair';
-}
+// v6.91: loadTimeline() + drawTimeline() + timelineData rimosse.
+// Il canvas #timeline-chart è stato eliminato dal DOM in v6.90 (redesign A+
+// spec §4 usa timeline bar 60px fissa senza sparkline eventi).
+// Le funzioni restavano in app.js come dead code: loadTimeline() chiamava
+// fetch('/v1/export/timeline') ad ogni init (~50KB inutili), drawTimeline()
+// faceva getElementById('timeline-chart') → null → return immediato.
+//
+// Se si vuole ripristinare la sparkline eventi in futuro:
+// 1. Re-aggiungi canvas#timeline-chart al DOM
+// 2. Git log: `git show v6.89:static/app.js` per il codice originale
+// 3. Ri-bind yearSlider.addEventListener('input', () => drawTimeline())
+//
+// L'endpoint /v1/export/timeline resta funzionale per consumer API diretti.
 
 // ─── i18n ──────────────────────────────────────────────────────
 // v6.46: extracted to static/js/i18n.js (I18N + t + initLang + switchLang + applyLangUI)
@@ -2690,7 +2599,7 @@ function togglePlayback() {
       yearEra.value = 'ad';
     }
     applyFilters();
-    if (timelineData) drawTimeline();
+    // v6.91: drawTimeline() call rimossa (dead code cleanup)
     if (eventsOverlayEnabled) renderEventsOverlay();
     if (tradeRoutesEnabled) renderTradeRoutes();
     // v6.90: dispatch input event → aggiorna year-hero + era-ticks
