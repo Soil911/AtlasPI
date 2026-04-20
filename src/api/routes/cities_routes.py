@@ -25,7 +25,8 @@ from __future__ import annotations
 import json
 import logging
 
-from fastapi import APIRouter, Depends, HTTPException, Query, Response
+from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
+from fastapi.responses import RedirectResponse
 from sqlalchemy import and_, func, or_
 from sqlalchemy.orm import Session, joinedload
 
@@ -491,3 +492,11 @@ def get_route(route_id: int, response: Response, db: Session = Depends(get_db)):
         raise RouteNotFoundError(route_id)
     response.headers["Cache-Control"] = "public, max-age=3600"
     return _route_detail(r)
+
+
+@router.get("/v1/trade-routes", include_in_schema=False)
+def redirect_trade_routes(request: Request):
+    """Alias: /v1/trade-routes → /v1/routes (backward compat for users hitting wrong path)."""
+    qs = request.url.query
+    target = f"/v1/routes?{qs}" if qs else "/v1/routes"
+    return RedirectResponse(url=target, status_code=301)
