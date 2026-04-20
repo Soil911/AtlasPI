@@ -372,7 +372,7 @@ def query_entity(
     ),
     sort: SortField = Query(None, description="Ordina per: name, year_start, confidence, year_end"),
     order: Literal["asc", "desc"] = Query("asc", description="Direzione ordinamento"),
-    limit: int = Query(20, ge=1, le=100, description="Risultati per pagina"),
+    limit: int = Query(20, ge=1, le=500, description="Risultati per pagina"),
     offset: int = Query(0, ge=0, description="Offset per paginazione"),
     db: Session = Depends(get_db),
 ):
@@ -457,7 +457,7 @@ def list_entities(
     ),
     sort: SortField = Query(None, description="Ordina per: name, year_start, confidence, year_end"),
     order: Literal["asc", "desc"] = Query("asc", description="Direzione ordinamento"),
-    limit: int = Query(20, ge=1, le=100, description="Risultati per pagina"),
+    limit: int = Query(20, ge=1, le=500, description="Risultati per pagina"),
     offset: int = Query(0, ge=0, description="Offset"),
     # v6.87 ADR-005: deprecated entities sono escluse di default. Permetti
     # override esplicito per analisi DB-level / debug / migration tools.
