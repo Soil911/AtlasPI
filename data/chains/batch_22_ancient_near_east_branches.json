@@ -1,0 +1,69 @@
+[
+  {
+    "name": "Iranian power succession: Median Empire → Achaemenid Empire",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Iranian Plateau / Mesopotamia / Anatolia",
+    "description": "The transition from Median dominance to Achaemenid expansion. Cyrus the Great, king of Anshan (nominally a Median vassal), overthrew the Median king Astyages in 550 BCE and founded the Achaemenid Empire — which became the largest empire the world had yet seen, stretching from Egypt to the Indus.",
+    "confidence_score": 0.82,
+    "ethical_notes": "The Achaemenid Empire is among the first documented multi-ethnic, religiously tolerant empires in recorded history. The Cyrus Cylinder (c. 539 BCE) describes policies of religious tolerance and repatriation of displaced peoples — including the return of Jewish exiles from Babylon. Western historiography has historically viewed this empire primarily through the Greek antagonist lens (Herodotus, Aeschylus), which frames Achaemenid expansion as 'Eastern despotism'. The empire's self-designation was Pārsa; 'Persia' is a Greek exonym applied to the entire empire from one region (Persis/Fars). Its official language was Elamite for administration, Aramaic for communication across the empire, and Old Persian for royal inscriptions.",
+    "sources": [
+      {"citation": "Briant, P. 'From Cyrus to Alexander: A History of the Persian Empire' (2002)", "source_type": "academic"},
+      {"citation": "Kuhrt, A. 'The Persian Empire: A Corpus of Sources from the Achaemenid Period' (2007)", "source_type": "academic"},
+      {"citation": "Dandamaev, M.A. 'A Political History of the Achaemenid Empire' (1989)", "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "مادها",
+        "transition_year": -549,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Cyrus II (the Great) of Anshan defeated Astyages, the last Median king, c. 550-549 BCE. The surrender was reportedly facilitated by Median nobles defecting to Cyrus, suggesting the transition was as much an internal coup as an external conquest. Ecbatana (Hamadan) became an Achaemenid royal capital."
+      },
+      {
+        "entity_name": "هخامنشیان",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "The Achaemenid Empire under Cyrus absorbed Media (549 BCE), then Lydia (546 BCE), then the Neo-Babylonian Empire (539 BCE). Cambyses II added Egypt (525 BCE). At its height under Darius I, the empire administered approximately 50% of the world's population."
+      }
+    ]
+  },
+  {
+    "name": "Post-Alexandrian Hellenistic states: fragmentation of Alexander's empire (323 BCE)",
+    "name_lang": "en",
+    "chain_type": "FRAGMENTATION",
+    "region": "Eastern Mediterranean / Near East / Central Asia",
+    "description": "After Alexander III's death (323 BCE), the Wars of the Diadochi (Successor Wars, 322-281 BCE) fragmented his empire into competing successor kingdoms. Three major dynasties stabilized: Seleucids (Asia), Ptolemies (Egypt), and Antigonids (Macedon). This chain documents the political split from a common origin, not a sequential succession.",
+    "confidence_score": 0.85,
+    "ethical_notes": "The 'Hellenistic' period is a historiographic construct coined by Johann Gustav Droysen (1836) to describe Greek cultural diffusion. This framing systematically obscures the resilience and continuation of local cultures — Egyptian (Ptolemaic rulers adopted pharaonic titles), Babylonian (cuneiform scholarship continued at Esagila), and Iranian — under Greek-speaking dynasties. The 'civilization' brought by Alexander is often presented as unambiguously positive; the massacres at Tyre (332 BCE), Gaza, Persepolis (partial burning), and the destruction of Achaemenid administrative records should also be in the accounting.",
+    "sources": [
+      {"citation": "Bosworth, A.B. 'The Legacy of Alexander: Politics, Warfare and Propaganda under the Successors' (2002)", "source_type": "academic"},
+      {"citation": "Sherwin-White, S. & Kuhrt, A. 'From Samarkhand to Sardis' (1993)", "source_type": "academic"},
+      {"citation": "Grainger, J.D. 'A Seleukid Prosopography and Gazetteer' (1997)", "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Αὐτοκρατορία τῶν Σελευκιδῶν",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Seleucus I Nicator secured Babylonia and founded the Seleucid kingdom (312 BCE) after the Battle of Gaza. At peak under Seleucus I and Antiochus III, it controlled most of Alexander's Asian territories. Persistent fragmentation from Ptolemaic rivalry, Parthian expansion, Bactrian revolt, and Maccabean rebellion eroded it until the Roman annexation of Syria (63 BCE)."
+      },
+      {
+        "entity_name": "Βασίλειον τῶν Πτολεμαίων",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Ptolemy I Soter secured Egypt and established the Ptolemaic dynasty (305 BCE). Alexandria became the intellectual center of the Hellenistic world (Library, Mouseion). Cleopatra VII, the last Ptolemaic ruler, was also the last independent ruler of Egypt for nearly 2,000 years before Roman annexation (30 BCE)."
+      },
+      {
+        "entity_name": "Βασιλεία Ἀντιγονιδῶν",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "The Antigonid dynasty established in Macedon (306 BCE). After decades of Macedonian hegemony over Greece, the dynasty ended with Roman conquest at the Battle of Pydna (168 BCE), after which Macedon was divided into four client republics."
+      }
+    ]
+  }
+]

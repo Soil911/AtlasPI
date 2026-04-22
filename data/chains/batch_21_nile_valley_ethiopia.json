@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Nile Valley / Kush dynastic trunk: Kerma → Kush → Napata → Meroe",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Nile Valley / Nubia / Northeast Africa",
+    "description": "The succession of Nubian state-forms from the earliest recorded Kerma culture through the Kushite kingdom, its Napatan phase (including the 25th Dynasty conquest of Egypt), and its final Meroitic phase. These represent one of the world's oldest continuous state traditions outside of Mesopotamia and Egypt, and the longest-lived Black African kingdom in antiquity.",
+    "confidence_score": 0.72,
+    "ethical_notes": "Kush, Napata, and Meroe are often collapsed into a single undifferentiated 'Kushite' entity by Egyptocentric historiography that treats them as footnotes to Egyptian history. Each represents a distinct phase of Nubian state-formation with its own capital, culture, and political logic. The Napatan/25th Dynasty conquest of Egypt (c. 744-656 BCE) — in which Nubian pharaohs ruled all of Egypt — is systematically minimized in Western curricula despite representing a complete reversal of the typical civilizational power gradient. Meroitic script remains only partially deciphered; our confidence in internal political succession is accordingly limited.",
+    "sources": [
+      {"citation": "Welsby, D.A. 'The Kingdom of Kush' (1996)", "source_type": "academic"},
+      {"citation": "Edwards, D.N. 'The Nubian Past' (2004)", "source_type": "academic"},
+      {"citation": "Török, L. 'The Kingdom of Kush' (1997)", "source_type": "academic"},
+      {"citation": "Shinnie, P.L. 'Meroe: A Civilization of the Sudan' (1967)", "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "Kerma",
+        "transition_year": -1500,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Kerma was destroyed by the Egyptian New Kingdom (18th Dynasty) under Thutmose I c. 1500 BCE. The region was incorporated into Egypt as 'Kush' for roughly 500 years before an indigenous Kushite state re-emerged at Napata."
+      },
+      {
+        "entity_name": "Kush",
+        "transition_year": -750,
+        "transition_type": "INTERNAL",
+        "is_violent": false,
+        "description": "The Kushite kingdom under Alara and Kashta consolidated around Napata and began northward expansion into Egypt. The 'Napata' entity represents this specific capital-centered political phase of 25th Dynasty rule.",
+        "ethical_notes": "The 25th Dynasty Kushite pharaohs (Piye, Shabaka, Taharqa) ruled all of Egypt c. 744-656 BCE. Taharqa is mentioned in the Bible (2 Kings 19:9) as a military opponent of Assyria. This African empire governing the canonical 'cradle of civilization' is an inconvenient reversal of assumed civilizational hierarchies and is frequently marginalized in Western historiography."
+      },
+      {
+        "entity_name": "Napata",
+        "transition_year": -590,
+        "transition_type": "REFORM",
+        "is_violent": false,
+        "description": "After Assyrian invasions drove Kushite rulers from Egypt (664 BCE) and the Egyptian pharaoh Psamtik II sacked Napata itself (593 BCE), the political and economic center shifted south to Meroe. This transition marks the beginning of the distinctly Meroitic phase of Kushite civilization."
+      },
+      {
+        "entity_name": "Meroe",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Meroe remained the capital of the Kushite state until Aksumite conquest c. 350 CE. Meroitic culture developed its own script, an extensive iron industry (the 'Birmingham of Africa'), and a distinct artistic tradition independent of Egyptian models."
+      }
+    ]
+  },
+  {
+    "name": "Ethiopian state trunk: D'mt → Aksum → Solomonic restoration",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Ethiopian Highlands / Eritrea / Abyssinia",
+    "description": "The succession of highland Ethiopian/Eritrean state forms from the pre-Aksumite D'mt kingdom through the Aksumite Empire — which conquered Kush c. 350 CE, converted to Christianity c. 340 CE, and dominated Indian Ocean trade — to the Solomonic dynastic restoration of 1270 CE. The Zagwe dynasty (c. 900-1270 CE), which ruled the intervening period and built the Lalibela churches, is not represented as a separate entity in the current dataset.",
+    "confidence_score": 0.63,
+    "ethical_notes": "The relationship between D'mt and Aksum is academically contested. D'mt may have been a Sabaean-influenced proto-state in northern Ethiopia/Eritrea; Aksum emerged from indigenous cultures in the same region after D'mt's collapse. Treating this as a direct succession chain imposes continuity that the 500-year gap (c. 400 BCE to 100 CE) and archaeological ambiguity do not fully support. The Zagwe dynasty omission is a dataset gap — its absence must not be read as denying its historical importance. The Solomonic claim of descent from Solomon and the Queen of Sheba (Makeda) is a dynastic legitimation myth, not documented genealogy; it is nonetheless foundational to Ethiopian imperial identity through Haile Selassie I.",
+    "sources": [
+      {"citation": "Phillipson, D.W. 'Ancient Ethiopia: Aksum, Its Antecedents and Successors' (1998)", "source_type": "academic"},
+      {"citation": "Munro-Hay, S. 'Aksum: An African Civilisation of Late Antiquity' (1991)", "source_type": "academic"},
+      {"citation": "Tamrat, T. 'Church and State in Ethiopia 1270-1527' (1972)", "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "ደዐመተ",
+        "transition_year": -400,
+        "transition_type": "DISSOLUTION",
+        "is_violent": false,
+        "description": "D'mt dissolves c. 400 BCE under unclear circumstances. Multiple smaller highland polities replaced it before Aksumite state consolidation began c. 100 CE. The gap between D'mt and Aksum is c. 500 years.",
+        "ethical_notes": "D'mt is sometimes described as a South Arabian (Sabaean) colony — a framing rooted in 19th-century diffusionism that has been largely rejected by modern archaeologists. D'mt was an indigenous state with trade contacts across the Red Sea, not a transplanted Arabian colony."
+      },
+      {
+        "entity_name": "መንግሥተ አክሱም",
+        "transition_year": 940,
+        "transition_type": "DISSOLUTION",
+        "is_violent": true,
+        "description": "The Aksumite state collapsed c. 940 CE, traditionally linked to the campaigns of Queen Yodit (Gudit/Judith) who destroyed Aksum and ended the Aksumite dynasty. Political fragmentation followed; the Zagwe dynasty (c. 900-1270) ruled before the Solomonic restoration. The Solomonic claim of direct Aksumite lineal descent legitimized Yekuno Amlak's 1270 restoration.",
+        "ethical_notes": "The identity and ethnicity of Yodit is debated in Ethiopian and Eritrean historiography. Ethiopian royal chronicles frame her as a Falasha (Beta Israel Jewish) queen or pagan usurper; her actual identity remains historically ambiguous. The 'destruction of Aksum' narrative may partly reflect the perspective of the dynasty she displaced."
+      },
+      {
+        "entity_name": "Mengist Ityop'p'ya",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "The Solomonic dynasty restored (Yekuno Amlak, 1270 CE) after overthrowing the last Zagwe king. The dynasty claimed descent from Solomon and Makeda as documented in the Kebra Nagast (Glory of Kings). The empire endured through Haile Selassie I (deposed 1974), making it one of the longest-claimed dynastic continuities in world history."
+      }
+    ]
+  }
+]

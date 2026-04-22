@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Inner Asian steppe imperial trunk: Xiongnu → Göktürk → Uyghur → Yenisei Kyrgyz",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Inner Asia / Mongolian Plateau / Central Eurasia",
+    "description": "The sequence of nomadic confederate empires that dominated the Eurasian steppe from the 3rd century BCE. Each arose in the same geographic core (Mongolian plateau / Inner Asia), typically after the military collapse of the preceding dominant power. The Xiongnu established the institutional template — the supreme khan, the dual-wing administrative structure, the tribute-trade system with China — that all successors including the Mongols directly inherited.",
+    "confidence_score": 0.72,
+    "ethical_notes": "Nomadic confederacies are systematically misrepresented in sedentary historiography as purely destructive forces. The Xiongnu, Göktürk, and Uyghur empires maintained sophisticated diplomatic relations with China (including royal marriage alliances and tribute-trade systems that functioned as formalized commerce), supported long-distance trade networks proto-Silk Road, and produced complex material cultures. The Göktürk Khaganate created the first attested Turkic script (Old Turkic runic). The Uyghur Khaganate saved Tang China from disintegration after the An Lushan Rebellion (755-763 CE). 'Barbarian invasion' reflects sedentary-neighbor perspective, not historical neutrality. There is a c. 460-year gap between Xiongnu dissolution and Göktürk formation — this is not a continuous succession but a pattern of re-emergence in the same geopolitical space.",
+    "sources": [
+      {"citation": "Di Cosmo, N. 'Ancient China and its Enemies: The Rise of Nomadic Power in East Asian History' (2002)", "source_type": "academic"},
+      {"citation": "Golden, P. 'An Introduction to the History of the Turkic Peoples' (1992)", "source_type": "academic"},
+      {"citation": "Barfield, T. 'The Perilous Frontier: Nomadic Empires and China, 221 BC to AD 1757' (1989)", "source_type": "academic"},
+      {"citation": "Mackerras, C. 'The Uighur Empire According to the T'ang Dynastic Histories' (1972)", "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "匈奴",
+        "transition_year": 93,
+        "transition_type": "DISSOLUTION",
+        "is_violent": true,
+        "description": "After the Northern Xiongnu were defeated by a joint Han-Xianbei campaign (89 CE) and subsequently destroyed by the Xianbei under Tanshihuai (c. 93 CE), Xiongnu political hegemony over the steppe collapsed. The Southern Xiongnu continued as a Han protectorate until dissolving into Chinese politics. A 460-year gap precedes Göktürk consolidation."
+      },
+      {
+        "entity_name": "𐰜𐰇𐰛:𐱅𐰇𐰼𐰜",
+        "transition_year": 744,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "The Göktürk Khaganate — formally the First (552-630) and Second (682-744) Eastern Göktürk Khaganates — was overthrown by the Uyghur confederation under Qutlugh Bilge Köl Khagan at the Battle of Ötükän in 744 CE. The Second Khaganate had produced the Orkhon inscriptions (c. 720 CE), the oldest known Turkic literary texts."
+      },
+      {
+        "entity_name": "ئۇيغۇر خانلىقى",
+        "transition_year": 840,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "The Uyghur Khaganate was destroyed by the Yenisei Kyrgyz under their khagan in 840 CE, following a catastrophic famine and severe winter that weakened Uyghur military capacity. Uyghur refugee populations fled south into Tang China and west into Central Asia, founding successor states at Ganzhou (Khanate of Ganzhou, 894-1036) and Turfan (Turfan Uyghur Kingdom, until 1209)."
+      },
+      {
+        "entity_name": "Енисей кыргыз",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "The Yenisei Kyrgyz became the dominant steppe power after 840 CE but lacked the administrative capacity to consolidate imperial governance over the Mongolian plateau. They withdrew from their southern conquests c. 924 CE under Khitan pressure and retreated to the Yenisei basin, ending the sequence of Inner Asian steppe empires until Mongol consolidation in the 13th century."
+      }
+    ]
+  }
+]

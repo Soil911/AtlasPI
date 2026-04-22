@@ -1,0 +1,194 @@
+[
+  {
+    "name": "North Indian classical continuation: Gupta → Harsha → Gurjara-Pratihara",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "North India / Gangetic Plain",
+    "description": "The continuation of North Indian imperial forms after the classical Maurya-Shunga-Kanva sequence (already documented in chain id=11). The Gupta Empire is considered the 'Golden Age' of classical Indian civilization; Harsha briefly re-unified the north after Gupta fragmentation; the Gurjara-Pratihara subsequently became the dominant North Indian power before the Islamic incursions.",
+    "confidence_score": 0.78,
+    "ethical_notes": "The Gupta 'Golden Age' framing, while valid for achievements in mathematics (Aryabhata, decimal system), astronomy, literature, and temple architecture, should not obscure that caste hierarchies were simultaneously codified and hardened in this period. Harsha's empire is often romanticized through the account of the Chinese pilgrim Xuanzang (Hiuen Tsang), whose Buddhist perspective was selective. The Gurjara-Pratihara resistance to Arab/Islamic expansion from Sindh is a real historical phenomenon but has been instrumentalized in modern Hindu nationalist historiography — historical accuracy requires documenting both the military fact and the subsequent misuse of that history.",
+    "sources": [
+      {"citation": "Thapar, R. 'Early India: From the Origins to AD 1300' (2002)", "source_type": "academic"},
+      {"citation": "Majumdar, R.C. 'The Age of Imperial Unity' (1951)", "source_type": "academic"},
+      {"citation": "Wink, A. 'Al-Hind: The Making of the Indo-Islamic World vol. 1' (1990)", "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "गुप्त साम्राज्य",
+        "transition_year": 550,
+        "transition_type": "DISSOLUTION",
+        "is_violent": true,
+        "description": "The Gupta Empire fragmented c. 550 CE under pressure from the Huna (Hephthalite) invasions and the revolt of feudatory kings. The later Guptas became regional rulers. A ~56-year gap precedes Harsha's consolidation."
+      },
+      {
+        "entity_name": "हर्षवर्धन साम्राज्य",
+        "transition_year": 647,
+        "transition_type": "DISSOLUTION",
+        "is_violent": false,
+        "description": "Harsha's empire dissolved immediately upon his death (647 CE) with no designated successor. His minister Arunasva seized power but was quickly overthrown. North India returned to fragmented polities for over a century before Pratihara consolidation."
+      },
+      {
+        "entity_name": "गुर्जर-प्रतिहार",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "The Gurjara-Pratihara dynasty, based at Kanauj, became the dominant North Indian power c. 730-1036 CE. They successfully repelled multiple Arab raids from Sindh and were the principal North Indian opponents of both the Rashtrakutas (south) and the Palas (east) in the tripartite struggle for Kanauj."
+      }
+    ]
+  },
+  {
+    "name": "Deccan dynastic trunk: Satavahana → Chalukya → Rashtrakuta → Western Chalukya → Vijayanagara",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Deccan Plateau / South India",
+    "description": "The sequence of major Deccan empires from the Satavahana era through Vijayanagara. Each dynasty typically overthrew or emerged from the ruins of the previous Deccan power, maintaining regional continuity across two millennia. The Deccan was a zone of persistent state-formation connecting North and South India.",
+    "confidence_score": 0.75,
+    "ethical_notes": "South and Deccan Indian history is systematically underrepresented in global historical curricula that focus on North India (Maurya, Gupta, Mughal). The Deccan sequence includes the Chalukya patronage of cave-temple art at Aihole, Badami, and Pattadakal — a UNESCO World Heritage tradition that predates and rivals the better-known Ellora and Ajanta caves. Vijayanagara's resistance to the Deccan Sultanates (1336-1646) preserved Dravidian and Sanskritic cultural traditions. The empire's destruction at the Battle of Talikota (1565) is sometimes framed as a civilizational defeat for Hinduism; this framing conflates religious and political categories in a way the historical actors themselves would not have recognized.",
+    "sources": [
+      {"citation": "Yazdani, G. (ed.) 'The Early History of the Deccan' (1960)", "source_type": "academic"},
+      {"citation": "Stein, B. 'Vijayanagara' (1989, The New Cambridge History of India)", "source_type": "academic"},
+      {"citation": "Nilakanta Sastri, K.A. 'A History of South India' (4th ed., 1966)", "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "सातवाहन",
+        "transition_year": 220,
+        "transition_type": "DISSOLUTION",
+        "is_violent": false,
+        "description": "The Satavahana empire fragmented c. 220 CE as regional lords (Ikshvakus, Abhiras, Chutas, Vakatakas) asserted independence. The Deccan entered a ~320-year interregnum before Chalukya unification."
+      },
+      {
+        "entity_name": "चालुक्य",
+        "transition_year": 753,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Dantidurga, founder of the Rashtrakuta dynasty, overthrew Chalukya king Kirtivarman II of Vatapi in 753 CE, ending the Badami Chalukya (Early Western Chalukya) empire."
+      },
+      {
+        "entity_name": "राष्ट्रकूट",
+        "transition_year": 982,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Tailapa II of the Western Chalukya dynasty overthrew and killed Rashtrakuta king Indra IV in 982 CE, restoring Chalukya power in the Deccan after two and a half centuries of Rashtrakuta rule."
+      },
+      {
+        "entity_name": "ಪಶ್ಚಿಮ ಚಾಳುಕ್ಯ",
+        "transition_year": 1189,
+        "transition_type": "DISSOLUTION",
+        "is_violent": true,
+        "description": "The Western Chalukya empire fragmented c. 1185-1189 CE under simultaneous pressure from the Hoysala (southwest), Yadava (northwest Deccan), and Kakatiya (eastern Deccan) kingdoms. A ~147-year interregnum of smaller Deccan powers precedes Vijayanagara consolidation."
+      },
+      {
+        "entity_name": "విజయనగర సామ్రాజ్యం",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Founded in 1336 CE by Harihara I and Bukka Raya I at Vijayanagara (City of Victory) on the Tungabhadra River. Tradition holds they were former officers of the Hoysala kingdom. Vijayanagara became the largest Hindu empire of its era, patron of Dravidian architecture (Hampi), and a major center of Sanskrit and Telugu literature."
+      }
+    ]
+  },
+  {
+    "name": "North Indian Islamic sultanate trunk: Ghaznavid → Ghurid → Mughal Empire",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "North India / Afghanistan / Punjab / Gangetic Plain",
+    "description": "The successive Islamic dynasties that dominated North India from the Ghaznavid raids (977 CE) through Mughal imperial rule. Each conquered or emerged from the political collapse of the previous North Indian Islamic power. Note: the Delhi Sultanate (1206-1526), which bridged Ghurid and Mughal eras, is not currently a separate entity in the dataset — this chain has a 311-year gap between the Ghurid collapse and Mughal founding.",
+    "confidence_score": 0.8,
+    "ethical_notes": "The framing of Islamic governance in India as uniformly destructive (as in colonial and Hindu nationalist historiography) and the counter-framing as purely enlightened (as in some Pakistani nationalist historiography) both distort the documented record. Temple destructions occurred but were episodic, often motivated by political economy rather than theology. Simultaneous patronage of Indian arts, architecture synthesis (Indo-Islamic style), and administrative continuity also occurred. Akbar's Din-i-Ilahi and his policy of sulh-e-kul (universal peace/tolerance) are documented historical facts. Aurangzeb's reimposition of the jizya tax and some temple destructions are also documented historical facts. Both must be in the record.",
+    "sources": [
+      {"citation": "Wink, A. 'Al-Hind: The Making of the Indo-Islamic World' vols. 1-3 (1990-2004)", "source_type": "academic"},
+      {"citation": "Richards, J.F. 'The Mughal Empire' (1993, The New Cambridge History of India)", "source_type": "academic"},
+      {"citation": "Jackson, P. 'The Delhi Sultanate: A Political and Military History' (1999)", "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "دولت غزنویان",
+        "transition_year": 1186,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Mu'izz ad-Din Muhammad of Ghor conquered the last Ghaznavid ruler Khusrau Malik in Lahore in 1186 CE, ending Ghaznavid power in Punjab. The Ghurids had been Ghaznavid vassals who gradually asserted independence from the 1100s."
+      },
+      {
+        "entity_name": "غوریان",
+        "transition_year": 1215,
+        "transition_type": "DISSOLUTION",
+        "is_violent": true,
+        "description": "The Ghurid empire fragmented after the assassination of Mu'izz ad-Din Muhammad in 1206 CE. His generals established successor states: the Mamluk Delhi Sultanate (Qutb ud-Din Aibak) in India and the Khwarazmian empire absorbed Ghurid territories in Central Asia. The Delhi Sultanate (1206-1526) bridges this gap but is not yet a separate dataset entity."
+      },
+      {
+        "entity_name": "سلطنت مغلیہ",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Babur, a Timurid prince and descendant of both Timur and Genghis Khan, defeated Ibrahim Lodi (last Delhi Sultanate sultan) at the First Battle of Panipat (1526 CE), founding the Mughal Empire. At its peak under Aurangzeb (d. 1707), the Mughal Empire governed approximately 25% of global GDP and 150 million people."
+      }
+    ]
+  },
+  {
+    "name": "South Indian Tamil kingdoms trunk: Sangam Chola → Imperial Chola",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Tamil Nadu / South India / Indian Ocean",
+    "description": "The Chola dynasty ruled Tamil Nadu in two historically distinct phases: the Sangam-era early Cholas (c. 300 BCE - 300 CE, documented in classical Tamil Sangam poetry) and the Medieval Imperial Cholas (848-1279 CE), who built Chola Nadu into the dominant naval power of the Indian Ocean.",
+    "confidence_score": 0.68,
+    "ethical_notes": "The continuity between Sangam-era and Medieval Cholas is debated — the same dynasty name may reflect a political legitimation claim rather than documented biological descent after the Kalabhra interregnum (~500 years). The Medieval Chola navy's expeditions into Southeast Asia (Rajendra Chola I's raid on Srivijaya, 1025 CE) are among the few well-documented pre-modern transoceanic naval campaigns by an Asian power. These expeditions are routinely absent from world history curricula despite their scale and consequence.",
+    "sources": [
+      {"citation": "Nilakanta Sastri, K.A. 'The Colas' 2nd ed. (1955)", "source_type": "academic"},
+      {"citation": "Hall, K.R. 'Trade and Statecraft in the Age of the Colas' (1980)", "source_type": "academic"},
+      {"citation": "Kulke, H. & Rothermund, D. 'A History of India' 4th ed. (2004)", "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "சோழர் (Sangam-era)",
+        "transition_year": 300,
+        "transition_type": "DISSOLUTION",
+        "is_violent": false,
+        "description": "The early Chola state declined c. 300 CE during the Kalabhra interregnum, when obscure invaders (possibly from the Deccan) displaced the three Tamil crowned dynasties (Chola, Pandya, Chera). The Chola name disappears from records for approximately 500 years."
+      },
+      {
+        "entity_name": "சோழ நாடு",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Vijayalaya Chola (c. 848 CE) revived Chola power by capturing Thanjavur from the Muttaraiyar. Under Rajaraja I and Rajendra I (985-1044 CE), the Cholas built the Brihadeeswarar temple, extended control to Sri Lanka and the Maldives, and conducted naval expeditions to the Malay Peninsula — the only documented pre-modern Indian Ocean naval power projection at this scale."
+      }
+    ]
+  },
+  {
+    "name": "Myanmar dynastic trunk: Pagan → Toungoo → Konbaung",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Myanmar / Irrawaddy Valley",
+    "description": "The three principal Burmese dynastic empires. Pagan unified the Irrawaddy valley and adopted Theravada Buddhism as state religion; Toungoo created the first fully unified Burmese empire extending into Thailand, Laos, and Yunnan; Konbaung succeeded Toungoo and was the dynasty that fought all three Anglo-Burmese Wars before British annexation in 1885.",
+    "confidence_score": 0.82,
+    "ethical_notes": "The Konbaung dynasty's wars against Siam (Thailand), Manipur, Assam, and Arakan are recorded primarily from Siamese, British, and to a lesser degree Chinese sources. The Burmese perspective, preserved in the Hmannan Yazawin (Glass Palace Chronicle, 1829) and other royal chronicles, presents a substantially different political logic and causation for these conflicts. The British annexation of Konbaung Burma in three stages (1824, 1852, 1885) is often described as 'acquisition' or 'pacification' — the 1885 conquest involved the arrest and permanent exile of King Thibaw and Queen Supayalat to Ratnagiri, India, where Thibaw died in 1916. Shan, Mon, Karen, and Kachin perspectives on these empires differ substantially from the dominant Bamar imperial narrative.",
+    "sources": [
+      {"citation": "Lieberman, V. 'Strange Parallels: Southeast Asia in Global Context, c. 800-1830' vol. 1 (2003)", "source_type": "academic"},
+      {"citation": "Aung-Thwin, M. 'The Mists of Ramanna: The Legend That Was Lower Burma' (2005)", "source_type": "academic"},
+      {"citation": "Harvey, G.E. 'History of Burma' (1925)", "source_type": "academic"}
+    ],
+    "links": [
+      {
+        "entity_name": "ပုဂံ ခေတ်",
+        "transition_year": 1297,
+        "transition_type": "DISSOLUTION",
+        "is_violent": true,
+        "description": "The Pagan Empire collapsed after repeated Mongol invasions (1277, 1283, 1287) and the subsequent revolt of Shan princes (the 'Myinsaing brothers') who overthrew the last Pagan king c. 1297. A ~213-year interregnum of competing Ava, Hanthawaddy (Mon), and Shan states precedes Toungoo unification."
+      },
+      {
+        "entity_name": "တောင်ငူခေတ်",
+        "transition_year": 1752,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "The Toungoo dynasty (Restored Toungoo, 1597-1752) collapsed after Hanthawaddy Mon forces sacked the capital Inwa (Ava) in 1752 CE. Alaungpaya, a village chief from Shwebo, rallied Burmese forces, expelled the Mon, and founded the Konbaung dynasty in the same year — one of history's fastest transitions from village headman to empire-founder."
+      },
+      {
+        "entity_name": "ကုန်းဘောင်ခေတ်",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "Konbaung Burma fought three Anglo-Burmese Wars: First (1824-26, ceded Arakan and Tenasserim), Second (1852, annexed Lower Burma), Third (1885, total annexation). The final British annexation was ratified despite no formal surrender by King Thibaw, who was deported to India. Burma was administered as a province of British India until 1937, then as a separate colony until independence in 1948."
+      }
+    ]
+  }
+]
