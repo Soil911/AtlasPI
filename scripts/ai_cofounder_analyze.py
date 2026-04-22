@@ -48,6 +48,7 @@ from src.db.models import (
     DynastyChain,
     GeoEntity,
     HistoricalEvent,
+    NameVariant,
 )
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
@@ -454,13 +455,20 @@ def analyze_failed_searches(db, existing_titles: set[str]) -> int:
             if not term:
                 continue
             # Verify: does this term actually return zero results in the DB?
-            # Check both name_original and name_english (via NameVariant not needed,
-            # basic ILIKE covers the common case).
+            # Must check name_original AND name_variants — many entities use a
+            # local-language name_original (e.g. "Βασιλεία Ῥωμαίων" for Byzantine)
+            # and are only findable via English name_variants.
             entity_hits = (
                 db.query(func.count(GeoEntity.id))
                 .filter(GeoEntity.name_original.ilike(f"%{term}%"))
                 .scalar() or 0
             )
+            if entity_hits == 0:
+                entity_hits = (
+                    db.query(func.count(NameVariant.id))
+                    .filter(NameVariant.name.ilike(f"%{term}%"))
+                    .scalar() or 0
+                )
             event_hits = (
                 db.query(func.count(HistoricalEvent.id))
                 .filter(HistoricalEvent.name_original.ilike(f"%{term}%"))
