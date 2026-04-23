@@ -26,14 +26,23 @@ SYSTEM_PROMPT = (
     "ethical notes).\n\n"
     "Rules:\n"
     "1. USE AtlasPI tools whenever relevant for historical facts. Prefer "
-    "AtlasPI data to your own training knowledge when they conflict — AtlasPI "
-    "is curated and more up-to-date.\n"
-    "2. Cite AtlasPI entity IDs in your answer when you use its data "
-    "(format: [AtlasPI:123]).\n"
-    "3. If AtlasPI doesn't have the info, say so explicitly.\n"
-    "4. Be precise with dates, names, places.\n"
+    "AtlasPI data to your training knowledge when they CONFLICT — AtlasPI "
+    "is curated and more up-to-date on capital changes, boundary shifts, "
+    "and corrections over traditional encyclopedias.\n"
+    "2. HOWEVER, AtlasPI is INCOMPLETE on some dimensions: rulers table may "
+    "have only partial dynasties (e.g. only early emperors of a polity), "
+    "events bank has ~643 events. If AtlasPI gives partial data, "
+    "SUPPLEMENT with your training knowledge. Do NOT omit well-established "
+    "historical facts just because AtlasPI doesn't list them. Example: "
+    "if get_rulers returns only old emperors of a polity, and the question "
+    "asks about a specific period, you can answer from training knowledge "
+    "noting 'AtlasPI has entity X but limited ruler coverage for this period'.\n"
+    "3. Cite AtlasPI entity IDs when you use its data (format: [AtlasPI:123]).\n"
+    "4. Be precise with dates, names, places. Prefer the ground-truth level "
+    "of detail (dynasty names, specific rulers, year ranges).\n"
     "5. Respond in the same language as the question.\n"
-    "6. Be concise: 2-4 sentences typical."
+    "6. Be concise: 2-4 sentences typical. Include dynasty + ruler name when "
+    "relevant to the question period."
 )
 
 # Tool definitions — equivalenti a MCP tools di AtlasPI
@@ -167,19 +176,34 @@ def _execute_tool(name: str, inp: dict) -> Any:
             )
             r.raise_for_status()
             d = r.json()
-            entities = d.get("entities", [])
-            # Slim: only key fields
+            # v6.92: /v1/snapshot/year/{year} restituisce `entities` come DICT
+            # con chiavi: total_active, by_type, top_by_confidence (list).
+            # Usiamo top_by_confidence come lista entity principale.
+            entities_block = d.get("entities", {}) or {}
+            if isinstance(entities_block, list):
+                # backward compat se endpoint cambiasse a list
+                entity_list = entities_block
+            else:
+                entity_list = entities_block.get("top_by_confidence", [])
+            total = entities_block.get("total_active", len(entity_list)) if isinstance(entities_block, dict) else len(entity_list)
+            # Slim payload: keep only key fields
             slim = [
                 {
                     "id": e.get("id"),
-                    "name": e.get("name_original"),
+                    "name": e.get("name") or e.get("name_original"),
                     "type": e.get("entity_type"),
                     "range": f"{e.get('year_start')}–{e.get('year_end') or '?'}",
-                    "capital": (e.get("capital") or {}).get("name"),
+                    "confidence": e.get("confidence_score"),
                 }
-                for e in entities[:30]
+                for e in entity_list[:30]
             ]
-            return {"year": inp["year"], "entities": slim, "total": d.get("total", 0)}
+            by_type = entities_block.get("by_type", {}) if isinstance(entities_block, dict) else {}
+            return {
+                "year": inp["year"],
+                "total_active": total,
+                "top_by_confidence": slim,
+                "by_type_count": by_type,
+            }
 
         if name == "get_rulers":
             r = requests.get(
