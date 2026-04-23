@@ -1092,6 +1092,368 @@
       ],
       "atlaspi_entity_ids": [],
       "source_url": "https://en.wikipedia.org/wiki/Congo_Free_State"
+    },
+    {
+      "id": "Q-061",
+      "category": "factual",
+      "epoch_bucket": "500BCE-500CE",
+      "region": "Asia",
+      "question_it": "Quale imperatore cinese unificò la Cina nel 221 a.C.?",
+      "question_en": "Which Chinese emperor unified China in 221 BCE?",
+      "expected_answer": "Qin Shi Huang (秦始皇, 'Primo Imperatore dei Qin', nato Ying Zheng, 259-210 a.C.) unificò la Cina nel 221 a.C. dopo aver conquistato gli ultimi dei Sei Regni del periodo degli Stati Combattenti. Fondò la breve dinastia Qin (221-206 a.C.), ma introdusse riforme di enorme portata: standardizzazione della scrittura (cinese classico), pesi e misure, unificazione della moneta, costruzione iniziale della Grande Muraglia, sistema delle commanderie. Il suo mausoleo ospita l'Esercito di Terracotta (scoperto 1974).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Confucio (filosofo, non imperatore)",
+        "Han Wudi (dinastia Han, 141-87 a.C.)",
+        "Kublai Khan (XIII secolo)",
+        "Genghis Khan (XIII secolo, non cinese)"
+      ],
+      "atlaspi_entity_ids": [103],
+      "source_url": "https://en.wikipedia.org/wiki/Qin_Shi_Huang"
+    },
+    {
+      "id": "Q-062",
+      "category": "factual",
+      "epoch_bucket": "500BCE-500CE",
+      "region": "Asia",
+      "question_it": "Quale imperatore Han inviò Zhang Qian come ambasciatore verso l'Asia centrale?",
+      "question_en": "Which Han emperor sent Zhang Qian as ambassador to Central Asia?",
+      "expected_answer": "L'imperatore Han Wudi (武帝, regno 141-87 a.C.) inviò Zhang Qian in missione diplomatica verso le Regioni Occidentali (Xiyu) nel 138 a.C. per cercare alleanze contro gli Xiongnu. Zhang Qian fu catturato dagli Xiongnu per 10 anni, poi fuggì e proseguì verso il regno dei Yuezhi (Battria/Bactria). Tornò nel 125 a.C. con informazioni cruciali che aprirono la Via della Seta. Una seconda missione (119-115 a.C.) raggiunse il regno di Wusun. Zhang Qian è considerato il 'padre della Via della Seta'.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Qin Shi Huang (precedente, dinastia diversa)",
+        "Liu Bang (fondatore Han, non mandò missioni)",
+        "Sima Qian (fu storico, non imperatore)",
+        "Guang Wudi (restauratore Han Orientale, epoca successiva)"
+      ],
+      "atlaspi_entity_ids": [104],
+      "source_url": "https://en.wikipedia.org/wiki/Zhang_Qian"
+    },
+    {
+      "id": "Q-063",
+      "category": "temporal",
+      "epoch_bucket": "pre-500BCE",
+      "region": "Asia",
+      "question_it": "Quando fiorì la Civiltà della Valle dell'Indo?",
+      "question_en": "When did the Indus Valley Civilization flourish?",
+      "expected_answer": "La Civiltà della Valle dell'Indo (detta anche Harappana) fiorì circa 3300-1300 a.C., con il periodo Maturo dal 2600 al 1900 a.C. I centri principali furono Harappa e Mohenjo-Daro (entrambi nell'attuale Pakistan), con oltre 1.000 siti conosciuti. Era estesa su un'area di ~1 milione km², includendo il Pakistan e l'India nord-occidentale. Aveva pianificazione urbana avanzata, sistemi idrici sofisticati e una scrittura non ancora decifrata. Declinò gradualmente dopo il 1900 a.C. per cause multiple (cambiamenti climatici, siccità del fiume Ghaggar-Hakra, non prove solide di invasione ariana).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "I-II millennio d.C.",
+        "Era contemporanea dell'Impero Mughal",
+        "VIII secolo d.C.",
+        "Scritta in sanscrito (è non decifrata)"
+      ],
+      "atlaspi_entity_ids": [],
+      "source_url": "https://en.wikipedia.org/wiki/Indus_Valley_Civilisation"
+    },
+    {
+      "id": "Q-064",
+      "category": "temporal",
+      "epoch_bucket": "500BCE-500CE",
+      "region": "Asia",
+      "question_it": "Quando visse l'imperatore indiano Ashoka il Grande?",
+      "question_en": "When did the Indian emperor Ashoka the Great live?",
+      "expected_answer": "Ashoka Maurya (अशोक, c. 304-232 a.C.) regnò dal 268 al 232 a.C. Terzo imperatore della dinastia Maurya dopo nonno Chandragupta e padre Bindusara. Dopo la sanguinosa Guerra del Kalinga (c. 261 a.C., ~100.000 morti) si convertì al buddismo e predicò la non-violenza (ahimsa) attraverso i celebri Editti su Roccia (rock edicts) e Colonne di Ashoka sparse in tutto il subcontinente. La sua corona con i quattro leoni è simbolo nazionale dell'India moderna.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Ashoka è leggendario, non è esistito",
+        "VII secolo d.C.",
+        "Contemporaneo di Alessandro Magno (Alessandro morì 323 a.C., Ashoka era giovane)",
+        "Regnò 200 anni dopo Cristo"
+      ],
+      "atlaspi_entity_ids": [37],
+      "source_url": "https://en.wikipedia.org/wiki/Ashoka"
+    },
+    {
+      "id": "Q-065",
+      "category": "spatial",
+      "epoch_bucket": "500BCE-500CE",
+      "region": "Asia",
+      "question_it": "Dove si trovava la capitale dell'Impero Gupta?",
+      "question_en": "Where was the capital of the Gupta Empire?",
+      "expected_answer": "Pataliputra (l'attuale Patna, stato del Bihar in India), la stessa città che fu anche capitale dell'Impero Maurya secoli prima. L'Impero Gupta (c. 320-550 d.C.), considerato un'età dell'oro della civiltà indiana (matematica, astronomia con Aryabhata, letteratura con Kalidasa, scultura), aveva la sua sede politica e culturale a Pataliputra, sulle rive del Gange. L'impero si estendeva su gran parte del nord India, con influenza tributaria verso il sud.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Delhi (non ancora emersa come centro politico)",
+        "Calcutta (città coloniale moderna)",
+        "Mumbai (città moderna)",
+        "Madurai (era capitale Pandya, sud India)"
+      ],
+      "atlaspi_entity_ids": [109],
+      "source_url": "https://en.wikipedia.org/wiki/Gupta_Empire"
+    },
+    {
+      "id": "Q-066",
+      "category": "spatial",
+      "epoch_bucket": "1000-1500",
+      "region": "Asia",
+      "question_it": "Dove si trovava l'Impero Khmer al suo apice?",
+      "question_en": "Where was the Khmer Empire at its height?",
+      "expected_answer": "L'Impero Khmer (802-1431) al suo apice (XI-XII secolo) aveva capitale Angkor (nell'attuale Cambogia nord-occidentale, provincia di Siem Reap) e controllava l'intero bacino del Mekong, includendo l'attuale Cambogia, gran parte della Thailandia centrale e orientale, Laos meridionale e parte del Vietnam meridionale (delta del Mekong, regione di Champassak). Angkor Wat (tempio, costruito sotto Suryavarman II, 1113-1150) e Angkor Thom (città fortificata, sotto Jayavarman VII, 1181-1218) sono tra i siti archeologici più grandi del mondo.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "India (non fu mai parte dell'Impero Khmer)",
+        "Indonesia (era Majapahit/Srivijaya)",
+        "Cina meridionale",
+        "Filippine"
+      ],
+      "atlaspi_entity_ids": [19],
+      "source_url": "https://en.wikipedia.org/wiki/Khmer_Empire"
+    },
+    {
+      "id": "Q-067",
+      "category": "factual",
+      "epoch_bucket": "1500-1800",
+      "region": "Asia",
+      "question_it": "Chi fondò l'Impero Mughal in India?",
+      "question_en": "Who founded the Mughal Empire in India?",
+      "expected_answer": "Babur (Zahir-ud-din Muhammad Babur, 1483-1530), discendente di Tamerlano per linea paterna e Genghis Khan per linea materna, fondò l'Impero Mughal nel 1526 dopo aver sconfitto Ibrahim Lodi (Sultanato di Delhi) nella Prima Battaglia di Panipat (21 aprile 1526). Proveniva dalla Valle del Fergana (Uzbekistan) e aveva governato Kabul prima di invadere il subcontinente. Suo figlio Humayun, nipote Akbar (1556-1605), e discendenti Shah Jahan (che commissionò il Taj Mahal), Aurangzeb estesero l'impero fino alla massima estensione nel XVII secolo.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Akbar (fu nipote, non fondatore)",
+        "Aurangzeb (ultimo grande imperatore)",
+        "Shah Jahan (costruì Taj Mahal)",
+        "Ibrahim Lodi (era il sultano sconfitto da Babur)"
+      ],
+      "atlaspi_entity_ids": [12, 849],
+      "source_url": "https://en.wikipedia.org/wiki/Babur"
+    },
+    {
+      "id": "Q-068",
+      "category": "relational",
+      "epoch_bucket": "1500-1800",
+      "region": "Asia",
+      "question_it": "L'Impero Safavide e l'Impero Mughal erano alleati?",
+      "question_en": "Were the Safavid Empire and the Mughal Empire allies?",
+      "expected_answer": "Fu una relazione oscillante, non una vera alleanza. L'Impero Safavide (1501-1736) e Mughal (1526-1857) ebbero legami dinastici (Babur ricevette aiuto militare dal safavide Ismail I per riprendere Samarcanda nel 1511), scambi culturali ed economici intensi (miniatura persiana, poesia), ma anche conflitti ricorrenti su Kandahar (presa e ripresa più volte nel XVI-XVII secolo tra i due imperi). Entrambi sciiti (Safavidi imamiti, Mughal misti) ma rivalità di grande potenza in Asia centrale con l'Impero Ottomano come terzo vertice.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "No, mai contatti",
+        "Safavidi sempre dominarono i Mughal",
+        "Erano lo stesso impero",
+        "Durata breve sovrapposizione (<50 anni)"
+      ],
+      "atlaspi_entity_ids": [13, 12, 849],
+      "source_url": "https://en.wikipedia.org/wiki/Mughal%E2%80%93Safavid_War_(1649%E2%80%931653)"
+    },
+    {
+      "id": "Q-069",
+      "category": "critical",
+      "epoch_bucket": "1800-2000",
+      "region": "Asia",
+      "question_it": "Quali furono le conseguenze della carestia del Bengala del 1943 sotto dominio britannico?",
+      "question_en": "What were the consequences of the 1943 Bengal famine under British rule?",
+      "expected_answer": "La Grande Carestia del Bengala (1943-1944) causò 2-3 milioni di morti (stime di Amartya Sen e Gokhale). Le cause furono prevalentemente politiche, non climatiche: le politiche di Winston Churchill di accaparramento dei raccolti per lo sforzo bellico britannico (spedizione di grano dall'India ad altri teatri di guerra), le 'denial policies' per impedire l'avanzata giapponese (distruzione di barche di pescatori nel delta), inflazione di guerra, e mancata dichiarazione di carestia dal governo per motivi politici. Amartya Sen (Poverty and Famines, 1981) dimostrò che non ci fu scarsità di cibo in termini assoluti, ma crollo del diritto a procurarselo. Churchill commentò secondo fonti: 'why hasn't Gandhi died yet?' Oggetto di riconsiderazione storica come crimine coloniale.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Carestia puramente naturale senza cause politiche",
+        "Morti sotto 500.000",
+        "Churchill aiutò efficacemente",
+        "Solo causa: tifone del 1942",
+        "Non ci fu carestia significativa"
+      ],
+      "atlaspi_entity_ids": [],
+      "source_url": "https://en.wikipedia.org/wiki/Bengal_famine_of_1943"
+    },
+    {
+      "id": "Q-070",
+      "category": "factual",
+      "epoch_bucket": "pre-500BCE",
+      "region": "Americas",
+      "question_it": "Quale cultura sud-americana è nota per le linee di Nazca?",
+      "question_en": "Which South American culture is known for the Nazca lines?",
+      "expected_answer": "La cultura Nazca (o Nasca), fiorita nella costa meridionale del Perù dal 100 a.C. al 800 d.C. circa. Le linee di Nazca (geoglifi) furono create tra il 500 a.C. e il 500 d.C. circa, rimuovendo le pietre superficiali ossidate per esporre il terreno chiaro sottostante. Rappresentano figure geometriche (linee e trapezi) e zoomorfe (colibrì, scimmia, ragno, balena, condor - alcune lunghe centinaia di metri). Teorie sul significato: calendario astronomico (Maria Reiche), rituali di richiamo dell'acqua, cammini processionali. Scoperti nel 1927 dall'aereo di Toribio Mejía Xesspe. Patrimonio UNESCO 1994.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Inca (posteriori, XV sec.)",
+        "Aztechi (Mesoamerica, non Sud America)",
+        "Maya (Mesoamerica)",
+        "Extraterrestri (pseudoscienza)"
+      ],
+      "atlaspi_entity_ids": [638],
+      "source_url": "https://en.wikipedia.org/wiki/Nazca_culture"
+    },
+    {
+      "id": "Q-071",
+      "category": "temporal",
+      "epoch_bucket": "500-1000",
+      "region": "Americas",
+      "question_it": "Quando avvenne il collasso dei Maya del periodo Classico?",
+      "question_en": "When did the Classic Maya collapse occur?",
+      "expected_answer": "Il collasso Maya del periodo Classico (Terminal Classic Collapse) avvenne tra circa 800 e 950 d.C., caratterizzato dall'abbandono graduale delle grandi città del sud-centro delle terre basse Maya (Tikal, Calakmul, Palenque, Copán, Quiriguá). Non fu un evento unico ma un processo multi-causale: siccità documentate da studi paleoclimatici su laghi e stalagmiti, sovrappopolazione, esaurimento dei suoli, guerre endemiche intensificate, fallimento di elite divine. I Maya NON 'scomparvero': la cultura continuò nelle terre basse del nord (Chichén Itzá, Uxmal, poi Mayapán fino al 1441) e altrove. I discendenti attuali in Guatemala, Belize, Messico e Honduras sono milioni.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Nel 1500 (collasso fu molto prima)",
+        "I Maya si estinsero (errore comune)",
+        "Causa: invasione dai colonizzatori spagnoli (arrivarono molto dopo)",
+        "Avvenne nel II millennio a.C."
+      ],
+      "atlaspi_entity_ids": [192, 908],
+      "source_url": "https://en.wikipedia.org/wiki/Classic_Maya_collapse"
+    },
+    {
+      "id": "Q-072",
+      "category": "spatial",
+      "epoch_bucket": "500BCE-500CE",
+      "region": "Americas",
+      "question_it": "Dove si trovava la città di Teotihuacan?",
+      "question_en": "Where was the city of Teotihuacan located?",
+      "expected_answer": "Teotihuacan ('luogo dove gli dei sono stati creati' in nahuatl) si trovava circa 40 km a nord-est dell'attuale Città del Messico, nell'altopiano centrale messicano (Valle del Messico). Fiorì dal ~100 a.C. al 550 d.C., raggiungendo 125.000-200.000 abitanti (una delle città più grandi del mondo nel VI secolo). Famosa per la Piramide del Sole (terza piramide più grande al mondo per volume), Piramide della Luna, Strada dei Morti. La città fu abbandonata o distrutta intorno al 550-650 d.C. (incendio dei monumenti principali documentato archeologicamente). Gli Aztechi, arrivando ~1200 anni dopo, la considerarono opera degli dei.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Perù (era in Mesoamerica)",
+        "Yucatán (area Maya, diversa)",
+        "Era capitale azteca",
+        "Era in Guatemala"
+      ],
+      "atlaspi_entity_ids": [193],
+      "source_url": "https://en.wikipedia.org/wiki/Teotihuacan"
+    },
+    {
+      "id": "Q-073",
+      "category": "relational",
+      "epoch_bucket": "1000-1500",
+      "region": "Americas",
+      "question_it": "La Confederazione Irochese (Haudenosaunee) esisteva prima dell'arrivo degli europei?",
+      "question_en": "Did the Iroquois Confederacy (Haudenosaunee) exist before European arrival?",
+      "expected_answer": "Sì. La Haudenosaunee (Confederazione delle Cinque Nazioni: Mohawk, Oneida, Onondaga, Cayuga, Seneca) fu fondata ben prima del contatto europeo. Le date proposte variano: tradizione orale e dendrocronologia suggeriscono c. 1142 (eclissi solare), altri studi accademici propongono 1450-1600. Dopo il contatto europeo, nel 1722 si aggiunse la nazione Tuscarora (Six Nations). La Grande Legge della Pace (Kayanerenkó:wa) è considerata da alcuni studiosi (Donald Grinde) fonte di ispirazione per la Costituzione degli Stati Uniti (democrazia federale), teoria riconosciuta con risoluzione del Congresso USA nel 1988.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Fondata dai colonizzatori europei",
+        "Esisteva solo dopo il 1800",
+        "Fu creata dagli olandesi",
+        "Mai esistita"
+      ],
+      "atlaspi_entity_ids": [40],
+      "source_url": "https://en.wikipedia.org/wiki/Iroquois"
+    },
+    {
+      "id": "Q-074",
+      "category": "factual",
+      "epoch_bucket": "1500-1800",
+      "region": "Americas",
+      "question_it": "Chi condusse la spedizione spagnola che conquistò l'Impero Azteco?",
+      "question_en": "Who led the Spanish expedition that conquered the Aztec Empire?",
+      "expected_answer": "Hernán Cortés (1485-1547) guidò la spedizione spagnola che conquistò l'Impero Azteco tra il 1519 e il 1521. Sbarcò sulla costa dello Yucatán nel febbraio 1519, fondò Veracruz, catturò Moctezuma II (novembre 1519), fu temporaneamente scacciato nella 'Noche Triste' (30 giugno 1520), e infine conquistò Tenochtitlán dopo un assedio di 93 giorni (13 agosto 1521). Elementi chiave del successo: alleanze con i Tlaxcaltechi (nemici aztechi), epidemia di vaiolo tra gli aztechi (1520), cavalli e armi da fuoco, interpreti come La Malinche (Malintzin).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Francisco Pizarro (conquistò gli Inca, non Aztechi)",
+        "Christopher Columbus (non mai andato in Messico)",
+        "Vasco Núñez de Balboa (Panama, prima)",
+        "Juan Ponce de León (Florida)"
+      ],
+      "atlaspi_entity_ids": [17],
+      "source_url": "https://en.wikipedia.org/wiki/Spanish_conquest_of_the_Aztec_Empire"
+    },
+    {
+      "id": "Q-075",
+      "category": "critical",
+      "epoch_bucket": "1500-1800",
+      "region": "Americas",
+      "question_it": "Cosa fu la mita coloniale nell'area andina?",
+      "question_en": "What was the colonial mita in the Andean region?",
+      "expected_answer": "La mita coloniale (spagnolo per 'turno') fu un sistema di lavoro forzato imposto dalla Corona spagnola alle comunità indigene andine dal 1573 (riorganizzazione del viceré Francisco de Toledo), basato pervertendo un sistema inca preesistente di lavoro rotativo pubblico. Ogni comunità doveva inviare il 14-16% dei maschi adulti (annualmente) a lavorare in miniere (soprattutto Potosí per l'argento, Huancavelica per il mercurio), haciendas, opere pubbliche. Condizioni letali: mortalità stimata dal 20 al 90% nelle miniere di Potosí e nel mercurio-avvelenato Huancavelica. Devastò le comunità andine: carestie, migrazioni per sfuggire alla mita, disgregazione familiare. Il sistema si protrasse fino al 1812 (Cortes di Cadice).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Sistema volontario di lavoro pagato",
+        "Istituzione inca non coloniale",
+        "Fu abolita immediatamente",
+        "Riguardava solo spagnoli volontari"
+      ],
+      "atlaspi_entity_ids": [],
+      "source_url": "https://en.wikipedia.org/wiki/Mit%27a"
+    },
+    {
+      "id": "Q-076",
+      "category": "factual",
+      "epoch_bucket": "500-1000",
+      "region": "Oceania",
+      "question_it": "Quale popolo polinesiano scolpì le statue moai dell'Isola di Pasqua?",
+      "question_en": "Which Polynesian people carved the moai statues of Easter Island?",
+      "expected_answer": "Il popolo Rapa Nui scolpì le circa 1.000 statue moai dell'Isola di Pasqua (Rapa Nui, in Polinesia orientale) tra circa 1250 e 1500 d.C. I moai rappresentano probabilmente antenati divinizzati (aringa ora) e furono eretti su piattaforme cerimoniali (ahu). Le statue furono scolpite in tufo vulcanico nella cava di Rano Raraku e trasportate fino a 18 km su piattaforme lungo la costa. Le teorie sul 'collasso' della società Rapa Nui (deforestazione, guerre interne, impatto europeo incluse malattie e tratta di schiavi peruviana del 1862-1863) sono complesse e continuano a essere dibattute.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Maori neozelandesi",
+        "Incaici (continentali)",
+        "Extraterrestri (pseudoscienza)",
+        "Antichi greci o romani"
+      ],
+      "atlaspi_entity_ids": [302],
+      "source_url": "https://en.wikipedia.org/wiki/Moai"
+    },
+    {
+      "id": "Q-077",
+      "category": "temporal",
+      "epoch_bucket": "pre-500BCE",
+      "region": "Oceania",
+      "question_it": "Quando iniziò l'espansione dei popoli Lapita nel Pacifico?",
+      "question_en": "When did the expansion of the Lapita people begin in the Pacific?",
+      "expected_answer": "La cultura Lapita, caratterizzata da ceramica decorata con motivi impressi a dentello, iniziò la sua espansione nel Pacifico intorno al 1500 a.C. dall'area Bismarck (Nuova Britannia) verso est, raggiungendo Vanuatu, Nuova Caledonia, Fiji, Samoa, Tonga entro il 900 a.C. Fu la prima grande colonizzazione di gran parte della Melanesia e Polinesia occidentale. I Lapita sono gli antenati culturali e genetici dei polinesiani successivi, che dalle Tonga/Samoa colonizzeranno la Polinesia remota (Tahiti, Hawaii, Nuova Zelanda, Isola di Pasqua) secoli dopo.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "I millennio d.C.",
+        "V secolo d.C. (troppo tardi)",
+        "10.000 a.C.",
+        "Arrivarono dall'Europa"
+      ],
+      "atlaspi_entity_ids": [],
+      "source_url": "https://en.wikipedia.org/wiki/Lapita_culture"
+    },
+    {
+      "id": "Q-078",
+      "category": "spatial",
+      "epoch_bucket": "1000-1500",
+      "region": "Oceania",
+      "question_it": "Dove era situato il regno di Tambralinga?",
+      "question_en": "Where was the kingdom of Tambralinga located?",
+      "expected_answer": "Il regno di Tambralinga (c. 650-1365 d.C.) era situato sulla Penisola Malese, nell'attuale Thailandia meridionale (regione di Nakhon Si Thammarat). Era vassallo di Srivijaya per gran parte della sua storia e importante scalo commerciale tra India, Cina e Sud-Est asiatico insulare. Nel XIII secolo divenne brevemente potenza autonoma: la spedizione di re Chandrabhanu conquistò Sri Lanka (parzialmente, 1247 e 1263) in operazioni storicamente significative. Assorbito poi dall'emergente regno Thai di Sukhothai/Ayutthaya.",
+      "expected_confidence": "medium",
+      "forbidden_facts": [
+        "India centrale",
+        "Giappone",
+        "Vietnam settentrionale",
+        "Australia"
+      ],
+      "atlaspi_entity_ids": [901],
+      "source_url": "https://en.wikipedia.org/wiki/Tambralinga"
+    },
+    {
+      "id": "Q-079",
+      "category": "relational",
+      "epoch_bucket": "500-1000",
+      "region": "Asia",
+      "question_it": "La dinastia Tang cinese e il Califfato Abbaside si scontrarono direttamente?",
+      "question_en": "Did the Chinese Tang Dynasty and the Abbasid Caliphate clash directly?",
+      "expected_answer": "Sì, uno scontro epocale: la Battaglia del Talas (luglio 751) sulle rive del fiume Talas (attuale confine Kazakistan-Kirghizistan). L'esercito Tang sotto Gao Xianzhi fu sconfitto da forze abbasidi e karluki (alleati turchi passati di lato ai musulmani durante la battaglia). Conseguenze storiche: arresto dell'espansione cinese in Asia centrale, fissazione del limite orientale del mondo islamico fino all'epoca mongola, e secondo fonti aneddotiche (non totalmente verificate), trasferimento della tecnica della carta ai musulmani attraverso prigionieri cinesi (prima cartiera islamica a Samarcanda c. 751).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Mai si scontrarono",
+        "Tang conquistarono gli Abbasidi",
+        "Solo rapporti commerciali pacifici",
+        "Batttaglia avvenne in Europa"
+      ],
+      "atlaspi_entity_ids": [105, 31],
+      "source_url": "https://en.wikipedia.org/wiki/Battle_of_Talas"
+    },
+    {
+      "id": "Q-080",
+      "category": "critical",
+      "epoch_bucket": "1800-2000",
+      "region": "Americas",
+      "question_it": "Quali furono le conseguenze del Trail of Tears (Sentiero delle Lacrime) negli Stati Uniti?",
+      "question_en": "What were the consequences of the Trail of Tears in the United States?",
+      "expected_answer": "Il Trail of Tears (1830-1850) fu la deportazione forzata di ~60.000 nativi americani delle 'Cinque Tribù Civilizzate' (Cherokee, Muscogee, Seminole, Chickasaw, Choctaw) dalle terre natie del sud-est statunitense ai territori indiani (attuale Oklahoma) ad ovest del Mississippi. Legalizzato dall'Indian Removal Act (1830) firmato da Andrew Jackson, ignorò la sentenza della Corte Suprema Worcester v. Georgia (1832) favorevole ai Cherokee. Mortalità stimata: 4.000 Cherokee (su 16.000 deportati), migliaia di altri, totale deportati morti 15.000-16.000+. Metodi: marcia forzata invernale, campi di raccolta letali, trasporti fluviali inadeguati. Oggi riconosciuto come crimine etnico e parte integrante della storia del genocidio indigeno americano.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Ricollocazione volontaria dei nativi",
+        "Morti sotto 1.000",
+        "Gli USA offrirono risarcimenti immediati",
+        "Riguardava solo i Cherokee",
+        "Andrew Jackson si oppose al Trail of Tears"
+      ],
+      "atlaspi_entity_ids": [],
+      "source_url": "https://en.wikipedia.org/wiki/Trail_of_Tears"
     }
   ]
 }
