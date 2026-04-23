@@ -13,6 +13,52 @@
 
 ## Versioni completate
 
+### v7.0 benchmark closure -- AtlasPI validato come tool-augmented retrieval (2026-04-23)
+- 3 esperimenti A/B empirici su agent Claude Sonnet 4.5 per validare
+  tesi business "AtlasPI migliora accuracy agenti AI" (vedi
+  [ADR-007](docs/adr/ADR-007-agent-tooling-not-prompt.md)).
+- **Finding killer**: AtlasPI full (prompt + MCP tools) riduce
+  hallucinations LLM del **-67%** su query storiche hard (bank v2
+  30 Q trap-designed), da 0.21 a 0.07 avg per Q. Accuracy +4.6pp
+  tool-only effect, +2.0pp combined.
+- **Prompt standalone e' DANNOSO**: -2.6pp accuracy, +76% hallucinations
+  vs baseline. Evitare di distribuire "AtlasPI prompt template" come
+  prodotto separato.
+- **Bank v1 (100 Q general): ceiling effect** (baseline 92% saturato
+  da Wikipedia training di Claude). Benchmark fallito li' per design
+  flaw, non per AtlasPI.
+- **Pivot strategico positioning**: da "dataset + prompt + MCP" a
+  "tool-augmented retrieval, -3x hallucinations". Target: historical
+  researchers + AI agent developers, non mass consumer.
+- Artefatti riproducibili: `scripts/benchmark/` (runner + 3way +
+  rejudge + resume + 3 agents + judge), 3 bank questions (v1 100 Q,
+  v2 hard 30 Q, seeds 5 Q), 3 results directories complete.
+- Costo totale benchmark: ~$25 API (Anthropic).
+
+### v6.92.0 -- CSP fonts fix + batch deploy (2026-04-22)
+- Fix CSP Google Fonts: aggiunto `fonts.googleapis.com` +
+  `fonts.gstatic.com` a `style-src`, `font-src`, `connect-src`.
+  Risolve 405 POST `/v1/csp-report` noise nei log analytics.
+- Batch deploy 8 commit dormienti: Redis cache `/v1/stats`, limit
+  cap 100->500 entities, 301 redirect `/v1/trade-routes`, +223
+  entities con boundary arricchiti (697K rows JSON), 7 nuovi
+  succession chains (SE Asia, NE Africa, Near East, Steppe, India),
+  3 fix analyzer (NameVariant check, name_original field).
+
+### v6.91.0 -- Audit cofounder follow-up (2026-04-19)
+- P1 fix era-chip active state sync con year slider (Agent A audit
+  finding: underline active non renderizzato in prod perche' JS
+  applicava `.active` solo su click). Nuova funzione
+  `syncActiveEraChip(year)` chiamata su slider input.
+- P1 fix CLS-safe pattern docs: aggiunto commento esplicativo sul
+  pattern `border-bottom transparent -> accent` in `.sb-section
+  .era-chip` (diverso dal v6.67 pseudo-element pattern, ma
+  funzionalmente equivalente per CLS-safety).
+- P2 fix dead code timeline: rimosso `loadTimeline()`,
+  `drawTimeline()` function, `timelineData` var. Canvas eliminato
+  in v6.90 ma funzioni rimanevano dead code (~120 righe + fetch
+  inutile a `/v1/export/timeline` per ogni init).
+
 ### v6.90 -- UI redesign A+ (2026-04-19)
 - Completo redesign della pagina /app con palette ambra editoriale
   (`#e8b14a`), tipografia Playfair Display italic per nomi entità, year
@@ -291,6 +337,38 @@
 ---
 
 ## Roadmap attiva -- Prossime release
+
+### v7.1 -- Post-benchmark pivot (TOP PRIORITY)
+**Obiettivo**: implementare le 5 implementation items da ADR-007 dopo
+validazione benchmark v7.0 (tool-dominant).
+
+- [ ] Revise `scripts/benchmark/agents/atlaspi_agent.py::SYSTEM_PROMPT`:
+      rimuovere "superiority claims" (prefer AtlasPI over training),
+      aggiungere "defer to training when tools return empty". Expected:
+      prompt-only mode diventa neutrale (da -2.6pp attuale) senza
+      impattare full mode +4.6pp.
+- [ ] Aggiungere 3 nuovi MCP tools: `get_rulers_at_year(year, region)`,
+      `get_events_by_entity(entity_id)`,
+      `get_languages_at_year_region(year, region)`.
+      Rationale: dry-run ha mostrato gap rulers per Bisanzio moderni
+      (solo Justinianus I/II in DB), questi tool danno time-window
+      query diretta.
+- [ ] Cross-vendor judge validation: rilanciare bank v2 hard con
+      GPT-4o o Gemini Flash come judge (same-vendor bias mitigation).
+      Costo ~$5. Se risultati simili (+4.6pp tool effect), validation
+      extra-solida.
+- [ ] Landing page rewrite: hero "Reduce LLM hallucinations 3x on
+      historical queries", sezione methodology con link raw data
+      benchmark, case studies target ricercatori + dev agent.
+- [ ] Production cost/latency doc: tool calls aggiungono ~3x latency
+      + ~2x tokens out. Guida integrators su trade-off.
+
+### v7.2 -- Zenodo dataset refresh + multi-turn benchmark
+- [ ] Export Zenodo DOI dataset aggiornato post-audit v4 (1038
+      entities, 715 QID, capital_history 13 entities, sites 99% linked).
+- [ ] Multi-turn agent benchmark: valutare AtlasPI in flow ricerca
+      ripetuta (metric: steps-to-solution, total tokens).
+- [ ] Bank v3 expansion: 100 Q hard (da 30), copertura bilanciata.
 
 ### v6.23 -- EVENTS ON MAP OVERLAY (prossimo)
 **Obiettivo**: visualizzare gli eventi direttamente sulla mappa interattiva.
