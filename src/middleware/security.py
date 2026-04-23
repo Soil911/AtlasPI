@@ -41,8 +41,10 @@ from src.config import ENVIRONMENT
 # vengono loggati (non salvati a DB) per auditing.
 CSP_REPORT_ONLY = (
     "default-src 'self'; "
+    # v6.92: aggiunto fonts.googleapis.com a style-src perché Google Fonts
+    # serve il CSS da lì (il @import/@font-face dichiarativi).
     "script-src 'self' 'unsafe-inline' https://unpkg.com; "
-    "style-src 'self' 'unsafe-inline' https://unpkg.com; "
+    "style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; "
     "img-src 'self' data: blob: "
     "https://*.tile.openstreetmap.org "
     "https://*.openstreetmap.fr "
@@ -55,8 +57,13 @@ CSP_REPORT_ONLY = (
     "https://cartodb-basemaps-d.global.ssl.fastly.net "
     "https://*.basemaps.cartocdn.com "
     "https://server.arcgisonline.com; "
-    "font-src 'self' data:; "
-    "connect-src 'self'; "
+    # v6.92: aggiunto fonts.gstatic.com perché Google Fonts serve i file
+    # WOFF2 da fonts.gstatic.com (CDN separata dal CSS).
+    # Prima fix, i 405 POST /v1/csp-report osservati in prod erano
+    # tutti violazioni font-src per i WOFF2 di Playfair Display/Inter
+    # aggiunti in v6.90 (redesign A+).
+    "font-src 'self' data: https://fonts.gstatic.com; "
+    "connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; "
     "frame-ancestors 'self'; "
     "base-uri 'self'; "
     "form-action 'self'; "

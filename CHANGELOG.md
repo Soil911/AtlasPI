@@ -2,6 +2,44 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.92.0] - 2026-04-22
+
+**Tema**: *CSP fonts fix + batch deploy di 8 commit dormenti*
+
+### CSP Google Fonts (fix bug noise analytics)
+
+Il redesign A+ v6.90 ha aggiunto Google Fonts (Inter + Playfair Display) ma la CSP in `src/middleware/security.py` non è stata aggiornata. Risultato: ogni browser/bot che visita `/app` registra violazioni CSP per `fonts.googleapis.com` (CSS) e `fonts.gstatic.com` (WOFF2) → POST a `/v1/csp-report` (405 totali negli ultimi giorni, visibili nei log admin analytics).
+
+Fix:
+- `style-src`: aggiunto `https://fonts.googleapis.com`
+- `font-src`: aggiunto `https://fonts.gstatic.com`
+- `connect-src`: aggiunto entrambi per fetch request (alcune browser inviano preflight)
+
+Effetto atteso: crollo immediato dei POST `/v1/csp-report` (da 405/totale a ~0), logs analytics leggibili.
+
+### Batch deploy commit dormenti da v6.91
+
+Altre sessioni Claude Code hanno prodotto 8 commit di valore tra v6.91 e v6.92 SENZA version bump — tutti non live. Questa release li rende effettivi in prod:
+
+- `fd1fee7` perf(api): cache Redis su `/v1/stats` + fix analyzer search_demand false positives
+- `9bff5d1` fix(analyzer): use `name_original` field su HistoricalEvent
+- `c390d22` feat(api): raise limit cap da 100 a 500 su `/v1/entities` (rif audit latency observation)
+- `294ae89` fix(api): 301 redirect `/v1/trade-routes` → `/v1/routes` (legacy compat)
+- `a49d582` feat(data): **+223 entities con boundary_geojson** arricchiti (697K righe di JSON)
+- `07578c0` feat(data): 3 succession chains SE Asia early
+- `06b1c72` feat(data): 4 chain batches (NE Africa, Near East, Steppe, India) — 397 righe JSON
+- `59b7488 + e68be1c` fix(analyze): check NameVariant in failed_search detector
+
+### Verifica attesa
+
+- `/v1/entities?limit=500` → OK (no 422)
+- `/v1/trade-routes` → 301 redirect
+- `/v1/stats` → latenza <50ms (Redis cache hit)
+- Boundary coverage migliore (223 entities in più con polygon)
+- `/v1/csp-report` POST → drop ~99% del volume
+
+---
+
 ## [v6.91.0] - 2026-04-19
 
 **Tema**: *Audit cofounder follow-up — era-chip sync + dead code cleanup + CLS docs*
