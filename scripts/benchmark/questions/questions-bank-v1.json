@@ -365,6 +365,370 @@
       ],
       "atlaspi_entity_ids": [],
       "source_url": "https://en.wikipedia.org/wiki/Herero_and_Nama_genocide"
+    },
+    {
+      "id": "Q-021",
+      "category": "factual",
+      "epoch_bucket": "pre-500BCE",
+      "region": "Americas",
+      "question_it": "Quale civiltà costruì le colossali teste di pietra scoperte in Mesoamerica?",
+      "question_en": "Which civilization built the colossal stone heads discovered in Mesoamerica?",
+      "expected_answer": "La civiltà Olmeca (c. 1500-400 a.C.), considerata la 'cultura madre' della Mesoamerica, scolpì le celebri 17 teste colossali di basalto finora rinvenute nei siti di San Lorenzo, La Venta e Tres Zapotes (attuali stati messicani di Veracruz e Tabasco). Le teste, alte fino a 3.4 metri e pesanti fino a 40 tonnellate, rappresentano probabilmente sovrani individuali. Il basalto fu trasportato per centinaia di chilometri dai Monti Tuxtla.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Maya (posteriori, iniziarono c. 2000 a.C. ma classici tardi)",
+        "Aztechi (XV-XVI secolo)",
+        "Inca (non erano in Mesoamerica)",
+        "Teotihuacan (posteriore)"
+      ],
+      "atlaspi_entity_ids": [191],
+      "source_url": "https://en.wikipedia.org/wiki/Olmec_colossal_heads"
+    },
+    {
+      "id": "Q-022",
+      "category": "temporal",
+      "epoch_bucket": "1000-1500",
+      "region": "Americas",
+      "question_it": "Quando fu fondato l'Impero Inca (Tawantinsuyu)?",
+      "question_en": "When was the Inca Empire (Tawantinsuyu) founded?",
+      "expected_answer": "Il Tawantinsuyu ('Quattro Regioni Unite') fu formalmente costituito nel 1438 sotto Pachacuti (Pachacutec), dopo la vittoria contro i Chanka. Il lignaggio incaico Cusco risale a circa il 1200 con il leggendario Manco Capac, ma lo stato-impero espansionistico inizia con Pachacuti. L'impero durò fino al 1533 (esecuzione di Atahualpa da parte di Pizarro), anche se resistenze a Vilcabamba continuarono fino al 1572.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "1200 (fondazione leggendaria, non impero)",
+        "1492 (scoperta dell'America)",
+        "1500 (troppo tardi)",
+        "Fondato da Atahualpa (fu l'ultimo Sapa Inca)"
+      ],
+      "atlaspi_entity_ids": [4],
+      "source_url": "https://en.wikipedia.org/wiki/Inca_Empire"
+    },
+    {
+      "id": "Q-023",
+      "category": "spatial",
+      "epoch_bucket": "1000-1500",
+      "region": "Americas",
+      "question_it": "Qual era la capitale dell'Impero Azteco (Triplice Alleanza)?",
+      "question_en": "What was the capital of the Aztec Empire (Triple Alliance)?",
+      "expected_answer": "Tenochtitlán, fondata nel 1325 su un'isola del lago Texcoco (attuale centro di Città del Messico), fu la capitale della Triplice Alleanza azteca (1428-1521). Alla conquista spagnola (1521) aveva circa 200.000 abitanti, una delle città più grandi del mondo dell'epoca. La Triplice Alleanza comprendeva anche Texcoco e Tlacopan, ma Tenochtitlán era la potenza dominante sotto il tlatoani Mexica. Hernán Cortés la rase al suolo e vi fondò sopra Città del Messico.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Teotihuacan (città precedente, già abbandonata)",
+        "Tula (capitale tolteca, c. 1000-1150)",
+        "Chichén Itzá (Maya, non azteca)",
+        "Cuzco (capitale Inca, non azteca)"
+      ],
+      "atlaspi_entity_ids": [17],
+      "source_url": "https://en.wikipedia.org/wiki/Tenochtitlan"
+    },
+    {
+      "id": "Q-024",
+      "category": "relational",
+      "epoch_bucket": "1500-1800",
+      "region": "Americas",
+      "question_it": "L'Impero Inca e l'Impero Azteco si conobbero reciprocamente?",
+      "question_en": "Did the Inca Empire and the Aztec Empire know each other?",
+      "expected_answer": "Non c'è evidenza di contatti diretti documentati tra Inca (Tawantinsuyu, 1438-1533) e Aztechi (Triplice Alleanza, 1428-1521) nonostante fossero contemporanei per circa 93 anni. Le Ande e la Mesoamerica erano separate da giungle impenetrabili e dall'istmo di Panama, con reti commerciali distinte. Esiste dibattito su contatti indiretti via rotte marittime dell'Ecuador (cultura Manteño, coltivò coca e spondylus) ma non prove di scambi politici o conoscenza reciproca diretta.",
+      "expected_confidence": "medium",
+      "forbidden_facts": [
+        "Ebbero relazioni diplomatiche regolari",
+        "Si combatterono",
+        "Erano lo stesso impero",
+        "Non furono mai contemporanei (sbagliato)"
+      ],
+      "atlaspi_entity_ids": [4, 17],
+      "source_url": "https://en.wikipedia.org/wiki/Pre-Columbian_trans-oceanic_contact_theories"
+    },
+    {
+      "id": "Q-025",
+      "category": "critical",
+      "epoch_bucket": "1500-1800",
+      "region": "Americas",
+      "question_it": "Qual fu l'impatto demografico della conquista spagnola sulle popolazioni indigene americane?",
+      "question_en": "What was the demographic impact of the Spanish conquest on Indigenous American populations?",
+      "expected_answer": "Il contatto con gli europei dopo il 1492 causò un crollo demografico catastrofico delle popolazioni indigene americane, stimato tra il 75% e il 95% nei primi 150 anni. Stime per il Messico centrale: da ~25 milioni (1519) a ~1 milione (1600). Cause: epidemie (vaiolo, morbillo, tifo) contro cui non avevano immunità; violenze di conquista diretta; lavoro forzato (encomienda, mita); carestie da distruzione di sistemi agricoli. L'evento è riconosciuto come uno dei più grandi collassi demografici della storia umana. Alcuni accademici (Stannard, Lenore) lo definiscono genocidio, altri enfatizzano il ruolo preponderante delle epidemie involontarie.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Impatto minimo (<10% di mortalità)",
+        "Solo la guerra fu causa",
+        "Le malattie furono inviate deliberatamente (complesso: vaiolo a volte usato come arma poi, ma crollo iniziale fu involontario)",
+        "Popolazioni indigene aumentarono",
+        "Avvenne solo nel XIX secolo"
+      ],
+      "atlaspi_entity_ids": [],
+      "source_url": "https://en.wikipedia.org/wiki/Population_history_of_Indigenous_peoples_of_the_Americas"
+    },
+    {
+      "id": "Q-026",
+      "category": "factual",
+      "epoch_bucket": "pre-500BCE",
+      "region": "Oceania",
+      "question_it": "Quando iniziò la colonizzazione umana dell'Australia?",
+      "question_en": "When did human colonization of Australia begin?",
+      "expected_answer": "I più antichi resti archeologici umani in Australia risalgono a circa 65.000 anni fa (sito di Madjedbebe, Territorio del Nord). Gli Aborigeni australiani arrivarono dall'arcipelago indonesiano attraversando la regione allora connessa di Sahul (Australia-Nuova Guinea) durante un periodo di basso livello del mare. Rappresentano una delle più antiche culture continuative sulla Terra. Stime precedenti di 40-50.000 anni sono state riviste al rialzo grazie ai dati di Madjedbebe (2017).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "10.000 anni fa (troppo recente)",
+        "3.000 anni fa (sbagliato, confuso con Polinesiani)",
+        "Arrivarono con la Prima Flotta britannica (1788)",
+        "Gli Aborigeni sono originari via terra dall'Asia senza passare dal mare"
+      ],
+      "atlaspi_entity_ids": [],
+      "source_url": "https://en.wikipedia.org/wiki/Prehistory_of_Australia"
+    },
+    {
+      "id": "Q-027",
+      "category": "temporal",
+      "epoch_bucket": "1000-1500",
+      "region": "Oceania",
+      "question_it": "Quando arrivarono i primi Maori in Nuova Zelanda (Aotearoa)?",
+      "question_en": "When did the first Māori arrive in New Zealand (Aotearoa)?",
+      "expected_answer": "I Maori arrivarono in Aotearoa (Nuova Zelanda) intorno al 1250-1300 d.C., provenienti dalla Polinesia orientale (probabilmente dall'area delle Isole della Società/Cook). La colonizzazione è tra le più recenti al mondo. La tradizione orale Maori parla di una 'Grande Flotta' di canoe voyager (waka), ognuna progenitrice di un iwi (tribù). Analisi genetiche e dendrocronologiche confermano la finestra del XIII secolo, non migrazioni precoci prima del 1200 come supposto in passato.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Arrivarono 2000 anni fa",
+        "Arrivarono con Cook nel 1769",
+        "Sono originari della Nuova Zelanda (autoctoni senza migrazione)",
+        "Arrivarono dall'Australia"
+      ],
+      "atlaspi_entity_ids": [55],
+      "source_url": "https://en.wikipedia.org/wiki/History_of_New_Zealand"
+    },
+    {
+      "id": "Q-028",
+      "category": "spatial",
+      "epoch_bucket": "1500-1800",
+      "region": "Oceania",
+      "question_it": "Dove si trovava il Regno delle Hawaii (Aupuni Mōʻī o Hawaiʻi)?",
+      "question_en": "Where was the Kingdom of Hawaiʻi (Aupuni Mōʻī o Hawaiʻi) located?",
+      "expected_answer": "Il Regno delle Hawaii (1795-1893) comprendeva l'intero arcipelago hawaiano nel Pacifico centrale (8 isole principali: Hawaiʻi, Maui, Oʻahu, Kauaʻi, Molokaʻi, Lānaʻi, Niʻihau, Kahoʻolawe), a circa 3.700 km dalla costa californiana. La capitale fu Lahaina a Maui fino al 1845, poi Honolulu a Oʻahu. Fondato da Kamehameha I dopo la battaglia di Nuʻuanu (1795), il regno fu abolito con il colpo di stato americano del 1893 contro la regina Liliʻuokalani, e annesso agli USA nel 1898.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Tahiti (altra regione polinesiana)",
+        "Caraibi",
+        "Samoa",
+        "Filippine"
+      ],
+      "atlaspi_entity_ids": [43, 548],
+      "source_url": "https://en.wikipedia.org/wiki/Hawaiian_Kingdom"
+    },
+    {
+      "id": "Q-029",
+      "category": "relational",
+      "epoch_bucket": "1500-1800",
+      "region": "Oceania",
+      "question_it": "L'impero Tu'i Tonga governava su altre isole oltre Tonga?",
+      "question_en": "Did the Tuʻi Tonga Empire rule over islands other than Tonga?",
+      "expected_answer": "Sì. Al suo apice (c. XII-XV secolo) il Tu'i Tonga (c. 950-1865 d.C.) esercitò egemonia o tributo su un'ampia area della Polinesia occidentale includendo parti di Samoa, Fiji, Wallis e Futuna, Niue, e isole intorno. Fu un 'talassocrazia' basata su prestigio religioso del Tu'i Tonga e relazioni di tributo, più che controllo diretto stile impero territoriale. Declinò progressivamente dal XV secolo; nel XIX secolo si trasformò nel moderno regno di Tonga sotto Taufa'ahau (Giorgio Tupou I).",
+      "expected_confidence": "medium",
+      "forbidden_facts": [
+        "Governava solo su Tonga",
+        "Controllava tutta la Polinesia incluse Hawaii e NZ (troppo ampio)",
+        "Durò solo 50 anni",
+        "Fu impero militare di conquista (era prevalentemente tributario)"
+      ],
+      "atlaspi_entity_ids": [44, 297],
+      "source_url": "https://en.wikipedia.org/wiki/Tu%CA%BBi_Tonga_Empire"
+    },
+    {
+      "id": "Q-030",
+      "category": "critical",
+      "epoch_bucket": "1800-2000",
+      "region": "Oceania",
+      "question_it": "Come furono trattate le popolazioni aborigene australiane durante la colonizzazione britannica?",
+      "question_en": "How were Aboriginal Australian populations treated during British colonization?",
+      "expected_answer": "La colonizzazione britannica dell'Australia (dal 1788) causò un catastrofico collasso delle popolazioni aborigene (stime: 90%+ delle ~750.000 persone pre-contatto entro il 1900). Fattori: epidemie (vaiolo deliberatamente o accidentalmente introdotto), massacri sistematici (frontier wars, documentati come Myall Creek 1838, Coniston 1928), dispossessioni di terra sotto dottrina legale di terra nullius (rovesciata solo nel 1992 con Mabo v Queensland), rimozione forzata di bambini meticci (le 'Generazioni Rubate' 1910-1970). Tasmania vide casi documentati di genocidio dei Palawa (1820s-30s). Nel 2008 il PM Kevin Rudd pronunciò scuse ufficiali.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Convivenza pacifica",
+        "Nessun impatto demografico",
+        "Non ci furono massacri",
+        "Aborigeni diedero il benvenuto ai coloni",
+        "Generazioni Rubate fu un mito"
+      ],
+      "atlaspi_entity_ids": [],
+      "source_url": "https://en.wikipedia.org/wiki/Frontier_Wars_(Australia)"
+    },
+    {
+      "id": "Q-031",
+      "category": "factual",
+      "epoch_bucket": "500BCE-500CE",
+      "region": "Europe",
+      "question_it": "Chi guidò i Cartaginesi nella Seconda Guerra Punica?",
+      "question_en": "Who led the Carthaginians in the Second Punic War?",
+      "expected_answer": "Annibale Barca (247-183 a.C.), figlio di Amilcare Barca, guidò le forze cartaginesi nella Seconda Guerra Punica (218-201 a.C.). Famoso per l'attraversamento delle Alpi con elefanti da guerra (218 a.C.) e per le schiaccianti vittorie di Trebbia (218), Trasimeno (217) e Canne (216). Fu infine sconfitto da Scipione l'Africano nella battaglia di Zama (202 a.C.). Morì in esilio nel Regno di Bitinia per suicidio forzato (cianuro) per non essere consegnato ai Romani.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Asdrubale (fu suo fratello, non comandante supremo)",
+        "Amilcare (suo padre, guidò la Prima Guerra Punica)",
+        "Scipione (era il comandante romano)",
+        "Giugurta (re numida, guerra diversa)"
+      ],
+      "atlaspi_entity_ids": [1],
+      "source_url": "https://en.wikipedia.org/wiki/Hannibal"
+    },
+    {
+      "id": "Q-032",
+      "category": "temporal",
+      "epoch_bucket": "500-1000",
+      "region": "Europe",
+      "question_it": "Quando avvenne il Grande Scisma tra Chiesa latina e Chiesa greca?",
+      "question_en": "When did the Great Schism between the Latin and Greek Churches occur?",
+      "expected_answer": "Il Grande Scisma è tradizionalmente datato al 16 luglio 1054, quando il cardinale Umberto di Silva Candida depositò una bolla di scomunica contro il patriarca Michele Cerulario sull'altare di Santa Sofia a Costantinopoli, e il patriarca scomunicò i legati papali. Divise il cristianesimo in Chiesa cattolica romana e Chiesa ortodossa. Le cause erano dogmatiche (filioque), giurisdizionali (primato papale) e culturali, accumulate nei secoli. Le scomuniche furono ufficialmente revocate solo nel 1965 da Paolo VI e Atenagora.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "1517 (Riforma protestante, Scisma diverso)",
+        "1204 (saccheggio di Costantinopoli, peggiorò ma non iniziò)",
+        "451 (concilio di Calcedonia)",
+        "800 (incoronazione di Carlo Magno)"
+      ],
+      "atlaspi_entity_ids": [11, 30],
+      "source_url": "https://en.wikipedia.org/wiki/East%E2%80%93West_Schism"
+    },
+    {
+      "id": "Q-033",
+      "category": "spatial",
+      "epoch_bucket": "1500-1800",
+      "region": "Europe",
+      "question_it": "Qual era l'estensione della Confederazione Polacco-Lituana al suo apice?",
+      "question_en": "What was the extent of the Polish-Lithuanian Commonwealth at its height?",
+      "expected_answer": "La Confederazione Polacco-Lituana (Rzeczpospolita Obojga Narodów, 1569-1795) al suo apice nel XVII secolo si estendeva per circa 990.000 km², coprendo l'attuale Polonia, Lituania, Bielorussia, gran parte dell'Ucraina (fino a Kiev), Lettonia, e parti di Estonia, Moldavia e Russia occidentale. Era uno dei più grandi stati europei dell'epoca. La popolazione massima raggiunse ~11 milioni. Dopo le guerre con Svezia ('Diluvio' 1655-1660) e le tre spartizioni (1772, 1793, 1795) fu cancellata dalla mappa politica.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Solo attuale Polonia",
+        "Includeva la Germania",
+        "Includeva tutta la Russia",
+        "Era minuscola (dimensione ducato)"
+      ],
+      "atlaspi_entity_ids": [62],
+      "source_url": "https://en.wikipedia.org/wiki/Polish%E2%80%93Lithuanian_Commonwealth"
+    },
+    {
+      "id": "Q-034",
+      "category": "relational",
+      "epoch_bucket": "1500-1800",
+      "region": "Europe",
+      "question_it": "Il Sacro Romano Impero e l'Impero Ottomano combatterono l'uno contro l'altro?",
+      "question_en": "Did the Holy Roman Empire and the Ottoman Empire fight against each other?",
+      "expected_answer": "Sì, molteplici volte. Le guerre ottomano-asburgiche durarono dal 1526 (battaglia di Mohács) al 1791 (Trattato di Sistova). Eventi chiave: primo assedio di Vienna (1529) e secondo assedio di Vienna (1683, respinto da Sobieski), Guerra della Lega Santa (1683-1699) terminata con il Trattato di Karlowitz che cedette gran parte dell'Ungheria agli Asburgo, e la Guerra austro-turca (1716-1718) con Eugenio di Savoia. Dopo il 1700 gli Asburgo erano in ascesa e gli Ottomani in declino militare relativo.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Mai combatterono",
+        "Alleati contro la Russia",
+        "Sacro Romano Impero era più debole dell'Ottomano sempre",
+        "Solo una battaglia isolata"
+      ],
+      "atlaspi_entity_ids": [30, 2],
+      "source_url": "https://en.wikipedia.org/wiki/Ottoman%E2%80%93Habsburg_wars"
+    },
+    {
+      "id": "Q-035",
+      "category": "critical",
+      "epoch_bucket": "1800-2000",
+      "region": "Europe",
+      "question_it": "Quali atrocità commise il regime fascista italiano in Etiopia?",
+      "question_en": "What atrocities did the Italian Fascist regime commit in Ethiopia?",
+      "expected_answer": "Durante la Guerra d'Etiopia (1935-1936) e occupazione (1936-1941), il regime fascista italiano perpetrò gravi crimini di guerra: uso sistematico di armi chimiche vietate (iprite/gas mostarda) ordinato direttamente da Mussolini (telegrammi pubblicati), circa 5.000-7.000 vittime etiopi da armi chimiche; massacri di civili come Addis Abeba (19-21 febbraio 1937, ~19.000-30.000 morti dopo l'attentato a Graziani); rappresaglie contro la chiesa copta (eccidio di Debre Libanos, maggio 1937, ~450 monaci uccisi); campi di concentramento (Danane, Nocra). Stime totali morti etiopi durante guerra+occupazione: 250.000-760.000. L'Italia non ha mai pagato riparazioni di guerra e rimuove in gran parte la memoria di questi eventi dalla coscienza pubblica.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Occupazione pacifica",
+        "Nessun gas chimico",
+        "Stragi furono inventate dopo la guerra",
+        "Italia portò solo strade e ponti",
+        "Fu Haile Selassie a iniziare la guerra"
+      ],
+      "atlaspi_entity_ids": [24, 855],
+      "source_url": "https://en.wikipedia.org/wiki/Italian_war_crimes"
+    },
+    {
+      "id": "Q-036",
+      "category": "factual",
+      "epoch_bucket": "500BCE-500CE",
+      "region": "ME",
+      "question_it": "Chi fondò l'Impero Seleucide?",
+      "question_en": "Who founded the Seleucid Empire?",
+      "expected_answer": "Seleuco I Nicatore (c. 358-281 a.C.), uno dei Diadochi (generali successori di Alessandro Magno), fondò l'Impero Seleucide nel 312 a.C. dopo aver conquistato Babilonia. Fu uno dei più capaci generali macedoni. L'impero arrivò a coprire Siria, Mesopotamia, Persia, parte dell'Asia centrale e brevemente l'India nord-occidentale (prima della cessione a Chandragupta Maurya in cambio di 500 elefanti, c. 305 a.C.). Durò fino al 63 a.C. quando Pompeo convertì la Siria in provincia romana.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Alessandro Magno (non fondò, morì prima)",
+        "Tolomeo I (fondò l'Egitto tolemaico)",
+        "Antigono I (fondò gli Antigonidi)",
+        "Ciro il Grande (epoca molto precedente)"
+      ],
+      "atlaspi_entity_ids": [177],
+      "source_url": "https://en.wikipedia.org/wiki/Seleucus_I_Nicator"
+    },
+    {
+      "id": "Q-037",
+      "category": "temporal",
+      "epoch_bucket": "500BCE-500CE",
+      "region": "ME",
+      "question_it": "Quando fu fondato il Regno dei Parti (Arsacidi)?",
+      "question_en": "When was the Parthian (Arsacid) Empire founded?",
+      "expected_answer": "Il Regno dei Parti fu fondato intorno al 247 a.C. da Arsace I (da cui 'Arsacidi'), capo della tribù Parni, che si ribellò contro il satrapo seleucide Andragoras in Partia (attuale Turkmenistan/Iran nord-orientale). L'impero si espanse gradualmente fino a dominare Iran e Mesopotamia, rivaleggiando con Roma per oltre 250 anni (guerre romano-partiche). Durò fino al 224 d.C., quando fu rovesciato dai Sasanidi sotto Ardashir I.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "224 d.C. (fu anno di caduta, non fondazione)",
+        "330 a.C. (caduta Achemenidi)",
+        "550 a.C. (fondazione Achemenidi)",
+        "63 a.C. (era già esistente)"
+      ],
+      "atlaspi_entity_ids": [120],
+      "source_url": "https://en.wikipedia.org/wiki/Parthian_Empire"
+    },
+    {
+      "id": "Q-038",
+      "category": "spatial",
+      "epoch_bucket": "1000-1500",
+      "region": "ME",
+      "question_it": "Dove si trovava il Sultanato Mamelucco?",
+      "question_en": "Where was the Mamluk Sultanate located?",
+      "expected_answer": "Il Sultanato Mamelucco (1250-1517) governava dal Cairo (capitale) un territorio comprendente Egitto, Siria, Palestina, Libano, Giordania occidentale, la costa orientale dell'Africa del nord (Barqa, Cirenaica) e l'Hejaz (città sante di Mecca e Medina). Sconfissero i Mongoli ad Ayn Jalut (1260), eliminarono gli ultimi stati crociati (Acri 1291), e furono infine conquistati dagli Ottomani nel 1517 (battaglia di Ridaniya).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Baghdad (cadde ai Mongoli 1258, mai capitale Mamelucca)",
+        "Persia (mai sotto i Mamelucchi)",
+        "Solo Penisola Arabica",
+        "Anatolia (era selgiuchide poi ottomana)"
+      ],
+      "atlaspi_entity_ids": [176],
+      "source_url": "https://en.wikipedia.org/wiki/Mamluk_Sultanate"
+    },
+    {
+      "id": "Q-039",
+      "category": "relational",
+      "epoch_bucket": "1000-1500",
+      "region": "ME",
+      "question_it": "Gli Stati Crociati e l'Impero Bizantino erano alleati o nemici?",
+      "question_en": "Were the Crusader States and the Byzantine Empire allies or enemies?",
+      "expected_answer": "Fu una relazione ambivalente e mutevole. Inizialmente alleati: l'imperatore Alessio I Comneno chiese aiuto militare a papa Urbano II, innescando la Prima Crociata (1095-1099). Poi si accumularono tensioni: gli Stati Crociati (Regno di Gerusalemme, Principato di Antiochia, Contea di Tripoli, Contea di Edessa) talvolta ignorarono il giuramento di vassallaggio all'imperatore. La rottura definitiva fu con la Quarta Crociata (1204), quando i Crociati saccheggiarono Costantinopoli e fondarono l'Impero Latino. Bisanzio riconquistò la città nel 1261.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Sempre nemici totali",
+        "Sempre alleati stretti",
+        "Bisanzio non ebbe mai rapporti con i Crociati",
+        "I Crociati conquistarono tutto l'impero bizantino"
+      ],
+      "atlaspi_entity_ids": [470, 472, 11],
+      "source_url": "https://en.wikipedia.org/wiki/Byzantine%E2%80%93Latin_wars"
+    },
+    {
+      "id": "Q-040",
+      "category": "critical",
+      "epoch_bucket": "1500-1800",
+      "region": "Africa",
+      "question_it": "Quale fu il ruolo dei regni africani nella tratta transatlantica degli schiavi?",
+      "question_en": "What was the role of African kingdoms in the transatlantic slave trade?",
+      "expected_answer": "Diversi regni africani furono attori attivi della tratta transatlantica (c. 1526-1867, ~12.5 milioni di africani deportati, ~1.8 milioni morti nel Middle Passage). Regni fortemente coinvolti includono: Dahomey (XVII-XIX sec., militarizzò la cattura), Oyo (Yoruba), Ashanti, Kongo, Benin, Lunda. Fonte degli schiavi erano guerre, incursioni, punizioni giudiziarie e tributi. La complicità non assolve gli europei: la domanda strutturale e il sistema economico (armi da fuoco, alcol in cambio) erano trainati dall'Atlantico. Alcuni regni (Benin c. 1516-1730 limitò esportazioni di schiavi maschi; il re del Kongo Afonso I protestò al Portogallo nel 1526) resistettero parzialmente. La 'colpa condivisa' è fatto storico ma il peso strutturale fu europeo/americano.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Africani vittime passive sempre e solo",
+        "Africa non coinvolta internamente",
+        "Solo europei catturavano schiavi direttamente",
+        "Era solo tratta sahariana, non atlantica",
+        "Solo 1 milione deportato"
+      ],
+      "atlaspi_entity_ids": [151, 48, 10],
+      "source_url": "https://en.wikipedia.org/wiki/Atlantic_slave_trade"
     }
   ]
 }
