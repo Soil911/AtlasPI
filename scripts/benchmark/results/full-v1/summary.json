@@ -1,0 +1,120 @@
+{
+  "overall": {
+    "baseline_accuracy_pct": 92.2,
+    "atlaspi_accuracy_pct": 91.3,
+    "delta_pp": -0.9,
+    "baseline_hallucinations_avg": 0.06,
+    "atlaspi_hallucinations_avg": 0.05,
+    "n": 100
+  },
+  "by_category": {
+    "factual": {
+      "baseline_pct": 96.3,
+      "atlaspi_pct": 94.8,
+      "delta_pp": -1.5,
+      "n": 26
+    },
+    "temporal": {
+      "baseline_pct": 94.1,
+      "atlaspi_pct": 90.5,
+      "delta_pp": -3.6,
+      "n": 22
+    },
+    "spatial": {
+      "baseline_pct": 89.5,
+      "atlaspi_pct": 92.3,
+      "delta_pp": 2.7,
+      "n": 22
+    },
+    "relational": {
+      "baseline_pct": 88.3,
+      "atlaspi_pct": 86.7,
+      "delta_pp": -1.7,
+      "n": 15
+    },
+    "critical": {
+      "baseline_pct": 89.7,
+      "atlaspi_pct": 89.6,
+      "delta_pp": -0.0,
+      "n": 15
+    }
+  },
+  "by_epoch": {
+    "500BCE-500CE": {
+      "baseline_pct": 95.0,
+      "atlaspi_pct": 92.3,
+      "delta_pp": -2.7,
+      "n": 16
+    },
+    "500-1000": {
+      "baseline_pct": 93.9,
+      "atlaspi_pct": 92.4,
+      "delta_pp": -1.6,
+      "n": 19
+    },
+    "1000-1500": {
+      "baseline_pct": 90.5,
+      "atlaspi_pct": 91.7,
+      "delta_pp": 1.2,
+      "n": 21
+    },
+    "1500-1800": {
+      "baseline_pct": 89.5,
+      "atlaspi_pct": 90.0,
+      "delta_pp": 0.5,
+      "n": 19
+    },
+    "pre-500BCE": {
+      "baseline_pct": 92.8,
+      "atlaspi_pct": 91.6,
+      "delta_pp": -1.2,
+      "n": 16
+    },
+    "1800-2000": {
+      "baseline_pct": 91.7,
+      "atlaspi_pct": 88.3,
+      "delta_pp": -3.3,
+      "n": 9
+    }
+  },
+  "by_region": {
+    "Europe": {
+      "baseline_pct": 92.3,
+      "atlaspi_pct": 89.3,
+      "delta_pp": -3.0,
+      "n": 22
+    },
+    "Americas": {
+      "baseline_pct": 91.9,
+      "atlaspi_pct": 90.8,
+      "delta_pp": -1.2,
+      "n": 13
+    },
+    "ME": {
+      "baseline_pct": 91.9,
+      "atlaspi_pct": 90.0,
+      "delta_pp": -1.9,
+      "n": 16
+    },
+    "Asia": {
+      "baseline_pct": 93.1,
+      "atlaspi_pct": 92.7,
+      "delta_pp": -0.4,
+      "n": 26
+    },
+    "Africa": {
+      "baseline_pct": 89.7,
+      "atlaspi_pct": 92.5,
+      "delta_pp": 2.8,
+      "n": 15
+    },
+    "Oceania": {
+      "baseline_pct": 94.4,
+      "atlaspi_pct": 93.1,
+      "delta_pp": -1.2,
+      "n": 8
+    }
+  },
+  "verdict": "❌ FAIL — AtlasPI non giustifica MCP complexity. Revisione strategy drastica.",
+  "strong_categories": []
+}
