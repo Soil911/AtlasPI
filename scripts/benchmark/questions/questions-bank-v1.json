@@ -729,6 +729,369 @@
       ],
       "atlaspi_entity_ids": [151, 48, 10],
       "source_url": "https://en.wikipedia.org/wiki/Atlantic_slave_trade"
+    },
+    {
+      "id": "Q-041",
+      "category": "factual",
+      "epoch_bucket": "500-1000",
+      "region": "Asia",
+      "question_it": "Chi fondò il Califfato Abbaside?",
+      "question_en": "Who founded the Abbasid Caliphate?",
+      "expected_answer": "Abu al-Abbas al-Saffah ('il Sanguinario', regno 750-754) fondò il Califfato Abbaside nel 750 dopo la Rivoluzione Abbaside che rovesciò gli Omayyadi. Discendeva da al-Abbas, zio del profeta Maometto. La rivoluzione iniziò nel Khorasan (Iran orientale) nel 747 sotto Abu Muslim e culminò con la battaglia del Grande Zab (gennaio 750) che sconfisse l'ultimo califfo omayyade Marwan II. Il trasferimento della capitale da Damasco a Baghdad avvenne sotto al-Mansur (fondatore di Baghdad, 762).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Maometto (morì nel 632, prima dei Califfati)",
+        "Abu Bakr (fondò il Rashidun, non Abbaside)",
+        "Muawiya (fondò gli Omayyadi)",
+        "Harun al-Rashid (famoso abbaside, ma non fondatore)"
+      ],
+      "atlaspi_entity_ids": [31],
+      "source_url": "https://en.wikipedia.org/wiki/Abbasid_Revolution"
+    },
+    {
+      "id": "Q-042",
+      "category": "temporal",
+      "epoch_bucket": "500-1000",
+      "region": "Asia",
+      "question_it": "Quando fu scritto il Tale of Genji, considerato il primo romanzo?",
+      "question_en": "When was The Tale of Genji, considered the first novel, written?",
+      "expected_answer": "Il Genji monogatari (源氏物語) fu scritto dalla dama di corte Murasaki Shikibu intorno al 1000-1012, durante il periodo Heian in Giappone sotto la dinastia Fujiwara. È considerato da molti accademici il primo romanzo psicologico/moderno al mondo, in 54 capitoli, narrante la vita del principe Genji. La datazione precisa è incerta ma il diario di Murasaki (Murasaki Shikibu Nikki) suggerisce che fu in parte completato entro il 1008. Precede di secoli i romanzi europei.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "XV secolo (troppo tardi)",
+        "VII secolo (troppo presto)",
+        "Fu scritto in Cina",
+        "Scritto da Ki no Tsurayuki (diario Tosa, opera diversa)"
+      ],
+      "atlaspi_entity_ids": [444],
+      "source_url": "https://en.wikipedia.org/wiki/The_Tale_of_Genji"
+    },
+    {
+      "id": "Q-043",
+      "category": "spatial",
+      "epoch_bucket": "1000-1500",
+      "region": "Asia",
+      "question_it": "Dove si trovava il Sultanato di Delhi?",
+      "question_en": "Where was the Delhi Sultanate located?",
+      "expected_answer": "Il Sultanato di Delhi (1206-1526) aveva capitale Delhi (nord India) e copriva un territorio variabile nel subcontinente indiano. Al suo apice sotto Muhammad bin Tughlaq (1325-1351), estendeva il controllo dal Punjab al Tamil Nadu. Fu una dinastia a turno di cinque famiglie: Mamelucchi (1206-1290), Khilji (1290-1320), Tughlaq (1320-1414), Sayyid (1414-1451), Lodi (1451-1526). Fu distrutto dall'invasione di Babur nel 1526 (battaglia di Panipat), che fondò l'Impero Mughal.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Pakistan moderno",
+        "Afghanistan (alcuni sovrani venivano da lì ma capitale era Delhi)",
+        "Bengala (fu regno separato per gran parte del periodo)",
+        "Iran"
+      ],
+      "atlaspi_entity_ids": [848, 112],
+      "source_url": "https://en.wikipedia.org/wiki/Delhi_Sultanate"
+    },
+    {
+      "id": "Q-044",
+      "category": "relational",
+      "epoch_bucket": "1000-1500",
+      "region": "Asia",
+      "question_it": "L'Impero Timuride e la dinastia Ming erano contemporanei?",
+      "question_en": "Were the Timurid Empire and the Ming Dynasty contemporaries?",
+      "expected_answer": "Sì, parzialmente. L'Impero Timuride (1370-1507) e la dinastia Ming (1368-1644) coesistettero per circa 137 anni. Tamerlano (1336-1405) stava preparando una campagna per conquistare la Cina Ming quando morì a Otrar nel febbraio 1405. Dopo la sua morte, relazioni diplomatiche si normalizzarono: il figlio Shah Rukh scambiò ambascerie con l'imperatore Yongle (Regno del 1402-1424). Un'ambasceria Timuride famosa (quella di Ghiyath al-Din Naqqash, 1419-1422) documentò la corte di Pechino.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "No, epoche diverse",
+        "Timuridi conquistarono la Cina Ming",
+        "Ming finì prima di Tamerlano",
+        "Timuridi durarono solo sotto Tamerlano"
+      ],
+      "atlaspi_entity_ids": [119, 108],
+      "source_url": "https://en.wikipedia.org/wiki/Timurid_Empire"
+    },
+    {
+      "id": "Q-045",
+      "category": "critical",
+      "epoch_bucket": "1800-2000",
+      "region": "Asia",
+      "question_it": "Cosa fu il Massacro di Nanchino commesso dall'esercito giapponese?",
+      "question_en": "What was the Nanjing Massacre committed by the Japanese army?",
+      "expected_answer": "Il Massacro di Nanchino (13 dicembre 1937 - inizio febbraio 1938) fu l'atrocità commessa dall'Esercito Imperiale Giapponese a Nanchino (allora capitale della Cina repubblicana) durante la Seconda Guerra sino-giapponese. Stime riconosciute dal Tribunale di Tokyo (1948) e studi accademici parlano di 200.000-300.000 morti tra civili e prigionieri di guerra cinesi, e 20.000-80.000 stupri documentati. Testimonianze di missionari (es. Minnie Vautrin, John Rabe - il 'Schindler nazista di Nanchino') lo documentarono. Il Giappone oggi riconosce l'evento ma il numero esatto è oggetto di negazionismo da parte della destra giapponese.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Non è mai avvenuto",
+        "Vittime sotto 10.000 (negazionismo)",
+        "Fu solo battaglia militare, non massacro",
+        "Fu invenzione cinese post-bellica",
+        "Avvenne nel 1945"
+      ],
+      "atlaspi_entity_ids": [32],
+      "source_url": "https://en.wikipedia.org/wiki/Nanjing_Massacre"
+    },
+    {
+      "id": "Q-046",
+      "category": "factual",
+      "epoch_bucket": "pre-500BCE",
+      "region": "Asia",
+      "question_it": "Qual era la scrittura utilizzata nell'Impero Assiro?",
+      "question_en": "What script was used in the Assyrian Empire?",
+      "expected_answer": "L'Impero Assiro (c. 2025-609 a.C., fasi: Antico, Medio, Neo-Assiro) utilizzava il cuneiforme (scrittura a cunei incisi su tavolette di argilla con stilo), ereditato dai Sumeri e adattato per l'accadico (lingua semitica). Il cuneiforme assiro era una variante regionale. La biblioteca di Ashurbanipal a Ninive (VII sec. a.C., ~30.000 tavolette) contiene capolavori letterari come l'Epopea di Gilgamesh. Oltre all'accadico si usava anche l'aramaico (su pergamena, meno conservato) dal IX secolo in poi.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Alfabeto greco",
+        "Geroglifici egizi",
+        "Alfabeto latino",
+        "Alfabeto fenicio come primario (era in uso nel Levante, ma non principale in Assiria)"
+      ],
+      "atlaspi_entity_ids": [170],
+      "source_url": "https://en.wikipedia.org/wiki/Cuneiform"
+    },
+    {
+      "id": "Q-047",
+      "category": "temporal",
+      "epoch_bucket": "pre-500BCE",
+      "region": "Asia",
+      "question_it": "Quando regnò il re Hammurabi di Babilonia?",
+      "question_en": "When did King Hammurabi of Babylon reign?",
+      "expected_answer": "Hammurabi regnò sulla Prima Dinastia di Babilonia dal 1792 al 1750 a.C. (cronologia media, la più diffusa in ambito accademico; altre cronologie variano di ~100 anni). È famoso per il Codice di Hammurabi (c. 1754 a.C.), una delle prime raccolte di leggi scritte dell'umanità (282 leggi su stele di basalto, ora al Louvre). Sotto il suo regno Babilonia divenne potenza dominante della Mesopotamia, conquistando Elam, Mari, Eshnunna. Dopo la sua morte l'impero si disgregò rapidamente.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "III millennio a.C. (troppo presto)",
+        "I millennio a.C. (troppo tardi, era Neo-Babilonese)",
+        "VII secolo a.C. (confuso con Nabucodonosor)",
+        "XX secolo a.C. (di poco precedente)"
+      ],
+      "atlaspi_entity_ids": [1039, 171],
+      "source_url": "https://en.wikipedia.org/wiki/Hammurabi"
+    },
+    {
+      "id": "Q-048",
+      "category": "spatial",
+      "epoch_bucket": "500-1000",
+      "region": "Asia",
+      "question_it": "Qual era la capitale del regno di Srivijaya?",
+      "question_en": "What was the capital of the Srivijaya kingdom?",
+      "expected_answer": "Srivijaya (c. 650-1377) era un'entità marittima basata a Palembang, Sumatra (attuale Indonesia), sul fiume Musi. Controllava il commercio attraverso lo Stretto di Malacca, collegando Cina e India. L'ubicazione esatta è stata confermata archeologicamente solo a partire dagli anni '80 grazie a scavi a Palembang. Altre ipotesi storiche proponevano Jambi (nord di Palembang) come capitale tarda dopo il declino di Palembang (c. XII sec.). Il viaggiatore cinese Yijing (I-Tsing) soggiornò a Srivijaya nel VII secolo per tradurre testi buddisti.",
+      "expected_confidence": "medium",
+      "forbidden_facts": [
+        "Giacarta (città moderna)",
+        "Singapore (troppo a sud, non sumatra)",
+        "Giava (diversa isola, regno diverso es. Majapahit)",
+        "Kuala Lumpur"
+      ],
+      "atlaspi_entity_ids": [42],
+      "source_url": "https://en.wikipedia.org/wiki/Srivijaya"
+    },
+    {
+      "id": "Q-049",
+      "category": "relational",
+      "epoch_bucket": "500-1000",
+      "region": "Asia",
+      "question_it": "Il regno di Silla unificata e la dinastia Tang ebbero rapporti?",
+      "question_en": "Did Unified Silla and the Tang Dynasty have relations?",
+      "expected_answer": "Sì, rapporti intensi. Silla (668-935) unificò la penisola coreana con il supporto militare dei Tang (618-907) nella guerra contro Goguryeo e Baekje (660-668). Dopo l'unificazione, Silla espulse militarmente i Tang dalla penisola (guerra Silla-Tang 668-676), ma mantenne rapporti tributari e culturali: scambio di ambascerie, adozione di elementi confuciani nell'amministrazione, studenti coreani all'università di Chang'an, importazione di buddismo Chan (poi coreano Seon). Dopo il crollo dei Tang (907), Silla rapidamente entrò in crisi (Tre Regni Tardivi).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "No, mai contatti",
+        "Silla conquistò la Cina",
+        "Tang governarono direttamente la Corea sempre",
+        "Silla era neutrale verso la Cina"
+      ],
+      "atlaspi_entity_ids": [49, 456, 105],
+      "source_url": "https://en.wikipedia.org/wiki/Silla%E2%80%93Tang_War"
+    },
+    {
+      "id": "Q-050",
+      "category": "critical",
+      "epoch_bucket": "1500-1800",
+      "region": "Africa",
+      "question_it": "Quali furono le conseguenze del commercio di schiavi sulla popolazione africana?",
+      "question_en": "What were the consequences of the slave trade on the African population?",
+      "expected_answer": "La tratta transatlantica (1526-1867) e quella transahariana (VII sec. - XX sec.) deportarono complessivamente circa 25-30 milioni di africani in 1300 anni. Solo la tratta atlantica costò ~12.5 milioni di deportazioni (1.8 milioni morti durante il Middle Passage). L'impatto: devastazione demografica (l'Africa sub-sahariana sarebbe quadruplicata in popolazione secondo stime di Manning e Inikori), distorsione di genere (il maggior numero di maschi giovani deportati alterò la società), militarizzazione di regni per cattura di schiavi (Dahomey, Oyo), armi da fuoco che resero endemica la guerra, declino di arti e mestieri. Conseguenze di lungo termine ancora oggetto di studio accademico (instabilità politica, sfiducia interetnica).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Impatto demografico trascurabile",
+        "Solo pochi milioni deportati",
+        "Non alterò le società africane",
+        "Fu tratta volontaria",
+        "Solo gli europei catturavano"
+      ],
+      "atlaspi_entity_ids": [],
+      "source_url": "https://en.wikipedia.org/wiki/African_slave_trade"
+    },
+    {
+      "id": "Q-051",
+      "category": "factual",
+      "epoch_bucket": "1000-1500",
+      "region": "Europe",
+      "question_it": "Chi firmò la Magna Carta in Inghilterra?",
+      "question_en": "Who signed the Magna Carta in England?",
+      "expected_answer": "La Magna Carta fu 'sigillata' (non firmata in senso moderno: il re usava un sigillo di cera) da re Giovanni d'Inghilterra (John Lackland) il 15 giugno 1215 nella piana di Runnymede presso Windsor, sotto pressione di un gruppo di baroni ribelli. La versione originale fu annullata da papa Innocenzo III tre mesi dopo, ma venne riconfermata in versioni modificate nel 1216, 1217 e 1225 (quella del 1225 sotto Enrico III divenne base dell'accettazione duratura).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Guglielmo il Conquistatore (1066, troppo presto)",
+        "Enrico VIII (troppo tardi)",
+        "Riccardo Cuor di Leone (fu fratello di Giovanni, non firmatario)",
+        "Edoardo I (lo confermò, non lo firmò originariamente)"
+      ],
+      "atlaspi_entity_ids": [57],
+      "source_url": "https://en.wikipedia.org/wiki/Magna_Carta"
+    },
+    {
+      "id": "Q-052",
+      "category": "temporal",
+      "epoch_bucket": "1500-1800",
+      "region": "Europe",
+      "question_it": "Quando iniziò la Riforma Protestante?",
+      "question_en": "When did the Protestant Reformation begin?",
+      "expected_answer": "Tradizionalmente si data al 31 ottobre 1517, quando Martin Lutero affisse le sue 95 Tesi sulla porta della chiesa del castello di Wittenberg (o le inviò all'arcivescovo di Magonza). Il movimento si radicalizzò rapidamente con la Dieta di Worms (1521) in cui Lutero rifiutò di ritrattare. Precedenti riformatori come Jan Hus (bruciato nel 1415) e John Wycliffe (1320s-1384) sono spesso considerati pre-riformatori. La Riforma portò a guerre di religione devastanti in Europa, come la Guerra dei Trent'Anni (1618-1648).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "1054 (Grande Scisma cattolico-ortodosso, non Riforma)",
+        "1492 (scoperta dell'America)",
+        "1555 (Pace di Augusta, consolidamento)",
+        "1648 (Pace di Westfalia, fine delle guerre di religione)"
+      ],
+      "atlaspi_entity_ids": [30],
+      "source_url": "https://en.wikipedia.org/wiki/Reformation"
+    },
+    {
+      "id": "Q-053",
+      "category": "spatial",
+      "epoch_bucket": "500-1000",
+      "region": "Europe",
+      "question_it": "Dove si trovava il Regno degli Ostrogoti?",
+      "question_en": "Where was the Kingdom of the Ostrogoths located?",
+      "expected_answer": "Il Regno Ostrogoto (493-553) governava la penisola italica con capitale Ravenna, fondato da Teoderico il Grande dopo aver sconfitto Odoacre (493). Comprendeva l'attuale Italia, Sicilia, Dalmazia, Provenza (fino al 537), e parti dei Balcani occidentali. Fu distrutto da Giustiniano I (Guerra Gotica, 535-554) che lo riassorbì nell'Impero Bizantino (Esarcato di Ravenna). La cultura ostrogota in Italia fu particolarmente ricca (Mausoleo di Teoderico a Ravenna, Cassiodoro).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Spagna (erano i Visigoti)",
+        "Francia (erano i Franchi)",
+        "Germania orientale",
+        "Grecia"
+      ],
+      "atlaspi_entity_ids": [75],
+      "source_url": "https://en.wikipedia.org/wiki/Ostrogothic_Kingdom"
+    },
+    {
+      "id": "Q-054",
+      "category": "relational",
+      "epoch_bucket": "1500-1800",
+      "region": "Europe",
+      "question_it": "L'Impero Russo di Pietro il Grande era contemporaneo al Regno di Svezia di Carlo XII?",
+      "question_en": "Was the Russian Empire under Peter the Great contemporaneous with Sweden under Charles XII?",
+      "expected_answer": "Sì, furono contemporanei e rivali diretti. Pietro il Grande (Zar 1682, Imperatore 1721-1725) e Carlo XII di Svezia (re 1697-1718) si scontrarono nella Grande Guerra del Nord (1700-1721). Eventi chiave: battaglia di Narva (1700, vittoria svedese), fondazione di San Pietroburgo (1703) da Pietro, battaglia di Poltava (1709, svolta decisiva russa), morte di Carlo XII in Norvegia (1718), Pace di Nystad (1721) che diede alla Russia l'accesso al Baltico e segnò il declino dell'impero svedese.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "No, vissero in epoche diverse",
+        "Carlo XII prima di Pietro (era più giovane)",
+        "Mai in guerra tra loro",
+        "La Svezia vinse la Grande Guerra del Nord"
+      ],
+      "atlaspi_entity_ids": [16, 58],
+      "source_url": "https://en.wikipedia.org/wiki/Great_Northern_War"
+    },
+    {
+      "id": "Q-055",
+      "category": "critical",
+      "epoch_bucket": "1500-1800",
+      "region": "Europe",
+      "question_it": "Cosa furono i Massacri di Cromwell in Irlanda?",
+      "question_en": "What were Cromwell's massacres in Ireland?",
+      "expected_answer": "La Conquista di Cromwell dell'Irlanda (1649-1653) da parte del Commonwealth d'Inghilterra causò ~20% della popolazione irlandese morta (~500.000 su 2.1 milioni pre-guerra). Eventi emblematici: Massacro di Drogheda (11 settembre 1649, ~2.600 soldati e civili uccisi dopo la resa), Massacro di Wexford (ottobre 1649, ~1.500 morti). Seguirono confische su vasta scala (Act of Settlement 1652) trasferendo la terra irlandese cattolica a soldati e creditori inglesi; deportazioni di migliaia in servitù nelle Indie Occidentali; proscrizioni di prete cattolici. Gli storici dibattono se chiamarlo genocidio o punizione brutale: le politiche sono documentate, i numeri ben stabiliti, l'impatto culturale permanente.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Non ci furono massacri significativi",
+        "Cromwell portò libertà religiosa in Irlanda",
+        "Solo combattimenti militari standard",
+        "Meno di 10.000 morti totali"
+      ],
+      "atlaspi_entity_ids": [57],
+      "source_url": "https://en.wikipedia.org/wiki/Cromwellian_conquest_of_Ireland"
+    },
+    {
+      "id": "Q-056",
+      "category": "factual",
+      "epoch_bucket": "500BCE-500CE",
+      "region": "Africa",
+      "question_it": "Quale dinastia ellenistica governava l'Egitto prima della conquista romana?",
+      "question_en": "Which Hellenistic dynasty ruled Egypt before the Roman conquest?",
+      "expected_answer": "La dinastia Tolemaica (o Lagide), fondata da Tolomeo I Sotere (305 a.C., generale di Alessandro Magno) dopo la morte di quest'ultimo. Regnò sull'Egitto ellenistico con capitale Alessandria fino al 30 a.C., quando Cleopatra VII (ultima sovrana della dinastia) e Marco Antonio furono sconfitti da Ottaviano nella battaglia di Azio (31 a.C.) e successivamente si suicidarono (30 a.C.), con l'annessione dell'Egitto a Roma. Fu la più longeva delle dinastie dei Diadochi.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Dinastia Seleucide (governò Siria, non Egitto)",
+        "Dinastia Antigonide (governò Macedonia)",
+        "Faraoni egizi nativi (ultima dinastia nativa fu XXX, XIV sec. a.C.)",
+        "Dinastia Achemenide (governò Egitto 525-404 a.C., ben prima dei Tolomei)"
+      ],
+      "atlaspi_entity_ids": [178],
+      "source_url": "https://en.wikipedia.org/wiki/Ptolemaic_Kingdom"
+    },
+    {
+      "id": "Q-057",
+      "category": "temporal",
+      "epoch_bucket": "1000-1500",
+      "region": "Africa",
+      "question_it": "Quando fu il famoso pellegrinaggio alla Mecca di Mansa Musa?",
+      "question_en": "When did Mansa Musa's famous pilgrimage to Mecca take place?",
+      "expected_answer": "Mansa Musa, decimo imperatore del Mali, intraprese il suo celebre Hajj (pellegrinaggio alla Mecca) nel 1324-1325. Attraversò l'Africa con una carovana enorme (stimata in 60.000 persone, 12.000 schiavi, ~24.000 kg d'oro) passando per Walata, Tuat, Ghadames e Il Cairo. A Il Cairo sostò nel luglio 1324 e distribuì così tanto oro che causò inflazione locale durata oltre un decennio (il valore dell'oro scese del 25% in Egitto secondo fonti arabe). L'evento fece comparire Mali sulla mappa del Mondo Catalano (1375) con Musa indicato come re.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "XI secolo (troppo presto)",
+        "XV secolo (dopo la sua morte nel ~1337)",
+        "Non fece mai il pellegrinaggio",
+        "1235 (fondazione del Mali)"
+      ],
+      "atlaspi_entity_ids": [18],
+      "source_url": "https://en.wikipedia.org/wiki/Mansa_Musa"
+    },
+    {
+      "id": "Q-058",
+      "category": "spatial",
+      "epoch_bucket": "1500-1800",
+      "region": "Africa",
+      "question_it": "Dove si trovava il Regno del Kongo?",
+      "question_en": "Where was the Kingdom of Kongo located?",
+      "expected_answer": "Il Regno del Kongo (c. 1390-1914) occupava una regione dell'Africa centro-occidentale che corrisponde all'attuale Angola settentrionale, Repubblica del Congo, Repubblica Democratica del Congo occidentale e Gabon meridionale. La capitale era M'banza-Kongo (rinominata São Salvador dopo la cristianizzazione sotto re Nzinga a Nkuwu / João I nel 1491). Il regno ebbe rapporti diplomatici diretti con il Portogallo e il Vaticano dal 1491. Declinò dopo la battaglia di Mbwila (1665) e la morte di Antonio I.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Africa orientale (Zanzibar)",
+        "Sudafrica",
+        "Sahel (Mali/Ghana)",
+        "Corno d'Africa"
+      ],
+      "atlaspi_entity_ids": [10],
+      "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Kongo"
+    },
+    {
+      "id": "Q-059",
+      "category": "relational",
+      "epoch_bucket": "pre-500BCE",
+      "region": "Africa",
+      "question_it": "L'Antico Egitto e la civiltà Fenicia avevano rapporti commerciali?",
+      "question_en": "Did Ancient Egypt and the Phoenician civilization have commercial relations?",
+      "expected_answer": "Sì, rapporti antichissimi e intensi. Già dal III millennio a.C., i Fenici (specialmente Byblos) rifornivano l'Egitto di legname di cedro del Libano (essenziale per navi, sarcofagi reali, edilizia templare). Il nome egizio di Byblos, Kebni, è documentato in iscrizioni dell'Antico Regno (c. 2600 a.C.). Rapporti intensificati nel Nuovo Regno (XVI-XI sec. a.C.). Fenici forniti anche di porpora, avorio e trasporti mediterranei. Il 'Racconto di Wenamon' (c. 1075 a.C.) è una fonte egizia chiave sulla decadenza dell'influenza faraonica a Byblos.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Mai si conobbero",
+        "Erano nemici totali",
+        "Fenici erano colonia egizia",
+        "Rapporti iniziarono solo in epoca romana"
+      ],
+      "atlaspi_entity_ids": [26, 269],
+      "source_url": "https://en.wikipedia.org/wiki/Byblos"
+    },
+    {
+      "id": "Q-060",
+      "category": "critical",
+      "epoch_bucket": "1800-2000",
+      "region": "Africa",
+      "question_it": "Cosa fu il regime di re Leopoldo II nello Stato Libero del Congo?",
+      "question_en": "What was King Leopold II's regime in the Congo Free State?",
+      "expected_answer": "Lo Stato Libero del Congo (1885-1908) fu proprietà personale di Leopoldo II del Belgio, concesso alla Conferenza di Berlino (1884-1885). Il regime di sfruttamento per gomma e avorio causò la morte stimata di 5-10 milioni di congolesi (riduzione di metà della popolazione entro il 1908). Metodi: quote di gomma con minacce di esecuzione; mutilazione delle mani a chi non consegnava quote (inclusi bambini, documentato in fotografie dell'epoca); villaggi distrutti; carestia deliberata. L'opinione pubblica internazionale (Mark Twain 'King Leopold's Soliloquy', Edmund Morel Congo Reform Association, Roger Casement rapporto 1904) forzò il trasferimento al Belgio nel 1908. Riconosciuto come uno dei più grandi massacri coloniali. Il Belgio si è scusato ufficialmente solo nel 2020.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Amministrazione umanitaria di Leopoldo",
+        "Nessuna atrocità significativa",
+        "Morti sotto 100.000",
+        "Solo malattie, nessuna violenza sistematica",
+        "Leopoldo non sapeva cosa accadeva"
+      ],
+      "atlaspi_entity_ids": [],
+      "source_url": "https://en.wikipedia.org/wiki/Congo_Free_State"
     }
   ]
 }
