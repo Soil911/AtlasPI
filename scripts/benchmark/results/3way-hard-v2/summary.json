@@ -1,0 +1,26 @@
+{
+  "n_sample": 28,
+  "conditions": {
+    "baseline": {
+      "accuracy_pct": 88.6,
+      "hallucinations_avg": 0.214,
+      "n": 28
+    },
+    "atlaspi_prompt_only": {
+      "accuracy_pct": 85.9,
+      "hallucinations_avg": 0.37,
+      "n": 27
+    },
+    "atlaspi_full": {
+      "accuracy_pct": 90.5,
+      "hallucinations_avg": 0.071,
+      "n": 28
+    }
+  },
+  "deltas": {
+    "prompt_effect": -2.6,
+    "tool_effect": 4.6,
+    "combined_effect": 2.0
+  },
+  "diagnosis": "TOOL-DOMINANT: value is in tool calls, prompt alone insufficient"
+}

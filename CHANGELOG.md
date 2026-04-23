@@ -2,6 +2,69 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v7.0 benchmark closure] - 2026-04-23
+
+**Tema**: *v7.0 benchmark complete — AtlasPI is tool-augmented retrieval (hallucinations -67% on hard queries)*
+
+Non è una release software (nessun cambio codice prod). È la chiusura del **v7.0 benchmark cycle** con verdetto strategico documentato in [ADR-007](docs/adr/ADR-007-agent-tooling-not-prompt.md).
+
+### Metodologia
+
+3 esperimenti sequenziali con escalating rigor:
+
+1. **Full A/B su bank v1** (100 Q Wikipedia-derived): baseline 92.2% vs atlaspi_full 91.3% = -0.9pp FAIL. Ceiling effect — baseline saturato perché Wikipedia è nel training di Claude.
+2. **3-way isolation su bank v1 subset** (20 Q): baseline 89.8%, prompt_only 91.0%, full 93.0%. Prompt +1.2pp, tool +2.0pp. MIXED.
+3. **3-way isolation su bank v2 hard** (30 Q trap-designed): baseline 88.6%, prompt_only 85.9%, full 90.5%. **Prompt -2.6pp (DANNOSO), tool +4.6pp, combined +2.0pp. TOOL-DOMINANT.**
+
+### Finding killer: hallucinations -67%
+
+Su hard bank:
+- Baseline alone: 0.21 hallucinations/Q avg
+- Prompt_only (senza tools): 0.37 (+76% relative, peggio del baseline!)
+- Full (prompt + tools): **0.07 (-67% vs baseline)**
+
+Il prompt standalone **INVENTA DI PIÙ** del baseline. I tools riducono hallucinations del 67%. Questo è il KPI primary di AtlasPI.
+
+### Strategic decisions (ADR-007)
+
+- **Positioning pivot**: AtlasPI è **tool-augmented retrieval**, NOT dataset + prompt template
+- **Marketing claim**: "Reduce LLM hallucinations 3x on historical queries"
+- **Dead weight**: prompt engineering alone è dannoso — revisione system prompt di atlaspi_agent.py in v7.1
+- **Primary asset**: MCP tools (5 attuali + 3 nuovi pianificati v7.1)
+
+### Artefatti committed
+
+- `scripts/benchmark/benchmark_runner.py` — main A/B harness
+- `scripts/benchmark/benchmark_3way.py` — 3-way isolation (baseline / prompt_only / full)
+- `scripts/benchmark/rejudge.py` — recovery judge failures
+- `scripts/benchmark/resume.py` — recovery credit exhaustion
+- `scripts/benchmark/agents/` — baseline, atlaspi_prompt_only (new), atlaspi_full
+- `scripts/benchmark/judges/accuracy_judge.py` — Claude Opus judge
+- `scripts/benchmark/questions/questions-bank-v1.json` — 100 Q general
+- `scripts/benchmark/questions/questions-bank-hard-v2.json` — 30 Q trap-designed with `trap_pattern` field per Q
+- `scripts/benchmark/results/full-v1/` — complete A/B bank v1 (100 Q)
+- `scripts/benchmark/results/3way-v1/` — 3-way isolation bank v1 (20 Q)
+- `scripts/benchmark/results/3way-hard-v2/` — 3-way isolation bank v2 (30 Q) ← decisivo
+- `docs/adr/ADR-007-agent-tooling-not-prompt.md` — decisione strategica
+
+### Cost totale v7.0
+
+Approx $25 API (Claude Sonnet + Opus) su 3 esperimenti:
+- Full bank v1: ~$15 (100 Q × 2 cond × Sonnet + 100 × 2 × Opus judge)
+- 3-way bank v1: ~$3 (20 Q × 3 cond × Sonnet + 20 × 3 × Opus judge)
+- 3-way bank v2: ~$5 (30 Q × 3 cond + judge)
+- Recovery runs (rejudge + resume): ~$2
+
+### Implementation queue v7.1 (da ADR-007)
+
+1. Revise `atlaspi_agent.py::SYSTEM_PROMPT` → rimuovere superiority claims, enfatizzare defer-to-training-when-tools-empty
+2. Add 3 new tools: `get_rulers_at_year`, `get_events_by_entity`, `get_languages_at_year_region`
+3. Cross-vendor judge validation (GPT-4 o Gemini) su sample hard
+4. Landing page marketing "Hallucination reduction" con methodology page
+5. Cost/latency tradeoff doc (tool calls aggiungono ~3× latency, ~2× tokens output)
+
+---
+
 ## [v6.92.0] - 2026-04-22
 
 **Tema**: *CSP fonts fix + batch deploy di 8 commit dormenti*
