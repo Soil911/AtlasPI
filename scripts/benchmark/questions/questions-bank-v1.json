@@ -1454,6 +1454,366 @@
       ],
       "atlaspi_entity_ids": [],
       "source_url": "https://en.wikipedia.org/wiki/Trail_of_Tears"
+    },
+    {
+      "id": "Q-081",
+      "category": "factual",
+      "epoch_bucket": "pre-500BCE",
+      "region": "Europe",
+      "question_it": "Quale civiltà pre-greca costruì il palazzo di Cnosso a Creta?",
+      "question_en": "Which pre-Greek civilization built the palace of Knossos in Crete?",
+      "expected_answer": "La civiltà Minoica (c. 3000-1100 a.C., apice 1700-1450 a.C.) costruì il palazzo di Cnosso, scoperto e in parte ricostruito da Arthur Evans dal 1900. Cnosso fu il più grande centro minoico, probabile sede di un re sacerdote (il 'Minosse' del mito). La civiltà minoica utilizzava la Lineare A (non decifrata) e poi la Lineare B (decifrata da Ventris nel 1952, rivelatasi greco miceneo dopo la conquista). Il crollo della civiltà minoica coincide con l'eruzione di Thera (Santorini, c. 1600 a.C.) e l'arrivo dei Micenei (c. 1450 a.C.).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Micenei (arrivarono dopo)",
+        "Greci classici (molto posteriori)",
+        "Fenici",
+        "Egizi"
+      ],
+      "atlaspi_entity_ids": [],
+      "source_url": "https://en.wikipedia.org/wiki/Knossos"
+    },
+    {
+      "id": "Q-082",
+      "category": "factual",
+      "epoch_bucket": "500BCE-500CE",
+      "region": "Europe",
+      "question_it": "Chi fu il generale cartaginese sconfitto nella battaglia di Zama?",
+      "question_en": "Who was the Carthaginian general defeated at the Battle of Zama?",
+      "expected_answer": "Annibale Barca, sconfitto da Publio Cornelio Scipione 'l'Africano' nella battaglia di Zama (19 ottobre 202 a.C. in Tunisia centrale). Fu la battaglia decisiva che pose fine alla Seconda Guerra Punica. Scipione adottò tattiche che neutralizzarono gli elefanti cartaginesi (lasciando varchi nelle linee) e sfruttò la cavalleria numidica di Massinissa, defezionata da Cartagine. Annibale sopravvisse e fuggì in esilio presso Antioco III Seleucide, poi in Bitinia, dove si tolse la vita nel 183 a.C. per evitare l'estradizione a Roma.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Asdrubale (sconfitto al Metauro 207 a.C.)",
+        "Amilcare (Prima guerra punica)",
+        "Magone",
+        "Giugurta"
+      ],
+      "atlaspi_entity_ids": [1],
+      "source_url": "https://en.wikipedia.org/wiki/Battle_of_Zama"
+    },
+    {
+      "id": "Q-083",
+      "category": "temporal",
+      "epoch_bucket": "500BCE-500CE",
+      "region": "Europe",
+      "question_it": "Quando avvenne la battaglia di Maratona tra Greci e Persiani?",
+      "question_en": "When did the Battle of Marathon between Greeks and Persians occur?",
+      "expected_answer": "Nel 490 a.C., in settembre o agosto (calendario attico), la piana di Maratona (40 km NE di Atene) vide la vittoria ateniese-platese (guidata dallo stratego Milziade) contro la prima invasione persiana di Dario I. L'esercito ateniese di ~10.000 opliti sconfisse forze persiane stimate 25.000-30.000. Tradizione leggendaria dell'araldo Fidippide che corse ad Atene per annunciare la vittoria (morendo all'arrivo) - origine simbolica della maratona moderna (1896). Parte delle Guerre Persiane, cui seguirà la seconda invasione di Serse I (480-479).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "480 a.C. (Termopili/Salamina)",
+        "323 a.C. (morte di Alessandro)",
+        "334 a.C. (inizio conquiste di Alessandro)",
+        "776 a.C. (prime Olimpiadi)"
+      ],
+      "atlaspi_entity_ids": [847, 27],
+      "source_url": "https://en.wikipedia.org/wiki/Battle_of_Marathon"
+    },
+    {
+      "id": "Q-084",
+      "category": "spatial",
+      "epoch_bucket": "500BCE-500CE",
+      "region": "Europe",
+      "question_it": "Dove si trovava l'Impero Romano al suo apice territoriale?",
+      "question_en": "Where was the Roman Empire at its territorial peak?",
+      "expected_answer": "L'Impero Romano raggiunse la massima estensione sotto Traiano nel 117 d.C., con circa 5 milioni di km². Comprendeva l'intera regione mediterranea: Europa mediterranea (Spagna, Francia/Gallia, Italia, Balcani, Grecia), Britannia (fino al Vallo di Adriano), Nord Africa (dall'Atlantico all'Egitto), il Levante (Siria, Palestina), Anatolia, Mesopotamia (acquisizione effimera di Traiano), e parti della Penisola Arabica nord-occidentale (Arabia Petraea). Popolazione stimata 60-70 milioni (~20% dell'umanità dell'epoca). Adriano (117-138) ritirò i confini a linee più difendibili.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Includeva la Germania a est del Reno (perse dopo Teutoburgo 9 d.C.)",
+        "Includeva l'India",
+        "Includeva la Scozia settentrionale (Caledonia, non conquistata definitivamente)",
+        "Includeva l'Etiopia"
+      ],
+      "atlaspi_entity_ids": [1],
+      "source_url": "https://en.wikipedia.org/wiki/Roman_Empire"
+    },
+    {
+      "id": "Q-085",
+      "category": "factual",
+      "epoch_bucket": "pre-500BCE",
+      "region": "ME",
+      "question_it": "Quale popolo fondò la città di Cartagine?",
+      "question_en": "Which people founded the city of Carthage?",
+      "expected_answer": "I Fenici di Tiro fondarono Cartagine tradizionalmente nell'814 a.C., sulla costa nord-africana (attuale Tunisia). Il nome fenicio era Qart-ḥadašt ('Città Nuova'). La fondazione è legata alla leggenda della regina Didone (Elissa), sorella del re di Tiro Pigmalione. Cartagine divenne indipendente da Tiro nel VI secolo a.C. dopo l'indebolimento della madrepatria per le conquiste assire e poi babilonesi (Nabucodonosor II assediò Tiro 585-572 a.C.). Fu distrutta da Roma nel 146 a.C. (Terza Guerra Punica).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Romani (la distrussero, non fondarono)",
+        "Greci",
+        "Egizi",
+        "Berberi (popolazione locale pre-esistente, ma non fondatori della città)"
+      ],
+      "atlaspi_entity_ids": [269],
+      "source_url": "https://en.wikipedia.org/wiki/Carthage"
+    },
+    {
+      "id": "Q-086",
+      "category": "temporal",
+      "epoch_bucket": "pre-500BCE",
+      "region": "ME",
+      "question_it": "Quando fu scritto il Codice di Hammurabi?",
+      "question_en": "When was the Code of Hammurabi written?",
+      "expected_answer": "Il Codice di Hammurabi fu compilato intorno al 1754 a.C. (cronologia media), durante gli ultimi anni di regno del re Hammurabi di Babilonia (regno 1792-1750 a.C.). Contiene 282 leggi su una stele di diorite alta 2.25 metri, in accadico e scrittura cuneiforme. La stele fu ritrovata a Susa (Iran) nel 1901, dove era stata trasportata come bottino di guerra da elamiti del XII sec. a.C. (oggi al Louvre). È uno dei più antichi codici legali scritti (ma non il più antico: quello di Ur-Nammu, c. 2100 a.C., lo precede di ~3 secoli).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "X secolo a.C.",
+        "V secolo a.C.",
+        "Era precedente alla scrittura",
+        "Era il primo codice mai scritto (non lo è)"
+      ],
+      "atlaspi_entity_ids": [1039, 171],
+      "source_url": "https://en.wikipedia.org/wiki/Code_of_Hammurabi"
+    },
+    {
+      "id": "Q-087",
+      "category": "spatial",
+      "epoch_bucket": "500BCE-500CE",
+      "region": "ME",
+      "question_it": "Dove si trovava la capitale dell'Impero Parto?",
+      "question_en": "Where was the capital of the Parthian Empire?",
+      "expected_answer": "Ctesifonte (in persiano: Tesifun), sul fiume Tigri di fronte alla più antica Seleucia (a circa 35 km a sud-est dell'attuale Baghdad, Iraq), fu la capitale principale dell'Impero Parto dal I secolo a.C. circa. Prima capitale era Nisa (attuale Turkmenistan, vicino Ashgabat) e temporaneamente Ecbatana. Ctesifonte fu poi capitale anche dei Sasanidi (224-651), e fu saccheggiata più volte da Roma (Traiano 116, Avidio Cassio 165, Settimio Severo 197-198). Cadde infine agli Arabi musulmani nel 637 (battaglia di Qadisiyya).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Persepoli (distrutta da Alessandro, mai capitale partica)",
+        "Babilonia (già in declino)",
+        "Teheran (città moderna)",
+        "Isfahan (epoca safavide)"
+      ],
+      "atlaspi_entity_ids": [120],
+      "source_url": "https://en.wikipedia.org/wiki/Ctesiphon"
+    },
+    {
+      "id": "Q-088",
+      "category": "factual",
+      "epoch_bucket": "500-1000",
+      "region": "Europe",
+      "question_it": "Chi fondò la dinastia Capetingia di Francia?",
+      "question_en": "Who founded the Capetian dynasty of France?",
+      "expected_answer": "Ugo Capeto (Hugues Capet, c. 940-996), conte di Parigi, fu eletto re dei Franchi il 3 luglio 987 dalla nobiltà, dopo la morte dell'ultimo carolingio Luigi V. La dinastia capetingia diretta regnò dal 987 al 1328, e i suoi rami cadetti (Valois, Borbone) proseguirono fino alla Rivoluzione Francese (1792) e oltre (Restaurazione 1814-1830). È una delle dinastie regnanti più longeve d'Europa, sopravvissuta in ramo borbonico in Spagna e Lussemburgo ai nostri giorni.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Carlo Magno (carolingio, precedente)",
+        "Clodoveo (Merovingio, fondò i Franchi)",
+        "Luigi XIV (XVII secolo)",
+        "Filippo IV il Bello (capetingio successivo)"
+      ],
+      "atlaspi_entity_ids": [56],
+      "source_url": "https://en.wikipedia.org/wiki/Hugh_Capet"
+    },
+    {
+      "id": "Q-089",
+      "category": "temporal",
+      "epoch_bucket": "500-1000",
+      "region": "Europe",
+      "question_it": "Quando avvenne la battaglia di Hastings?",
+      "question_en": "When did the Battle of Hastings occur?",
+      "expected_answer": "Il 14 ottobre 1066, sulla collina di Senlac (East Sussex, Inghilterra meridionale). Guglielmo il Bastardo, duca di Normandia (poi 'il Conquistatore'), sconfisse Harold II Godwinson, re anglosassone d'Inghilterra, che morì in battaglia (colpito forse da freccia all'occhio, secondo l'Arazzo di Bayeux). La conquista normanna trasformò radicalmente l'Inghilterra: introduzione del feudalesimo continentale, francese (anglo-normanno) come lingua dell'aristocrazia per ~300 anni, Domesday Book (1086) come primo censimento.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "1215 (Magna Carta)",
+        "1066 ma in Normandia (fu in Inghilterra)",
+        "1099 (conquista di Gerusalemme)",
+        "1100 (morte di Guglielmo II)"
+      ],
+      "atlaspi_entity_ids": [57],
+      "source_url": "https://en.wikipedia.org/wiki/Battle_of_Hastings"
+    },
+    {
+      "id": "Q-090",
+      "category": "spatial",
+      "epoch_bucket": "500-1000",
+      "region": "Europe",
+      "question_it": "Dove si trovava la capitale dell'Impero Bizantino nel VI secolo?",
+      "question_en": "Where was the capital of the Byzantine Empire in the 6th century?",
+      "expected_answer": "Costantinopoli (in greco Κωνσταντινούπολις, Kōnstantinoúpolis, 'città di Costantino'), fondata nel 330 da Costantino I il Grande sul sito della precedente Bisanzio. Era e rimase capitale bizantina dal 330 al 1453 (con parentesi del 1204-1261 quando fu sede dell'Impero Latino dopo la Quarta Crociata). Nel VI secolo, sotto Giustiniano I (527-565), fu ricostruita dopo la rivolta di Nika (532): Santa Sofia nella forma attuale (537), le Mura Teodosiane rafforzate, e l'impero tentò di riconquistare il Mediterraneo occidentale (Italia, Nord Africa). Popolazione dell'epoca stimata 500.000, la più grande città d'Europa.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Roma (era già sotto gli Ostrogoti/Bizantini, non capitale)",
+        "Atene",
+        "Salonicco",
+        "Ravenna (capitale dell'Esarcato in Italia, non dell'impero)"
+      ],
+      "atlaspi_entity_ids": [11],
+      "source_url": "https://en.wikipedia.org/wiki/Constantinople"
+    },
+    {
+      "id": "Q-091",
+      "category": "factual",
+      "epoch_bucket": "1000-1500",
+      "region": "ME",
+      "question_it": "Chi fondò il Sultanato Ayyubide?",
+      "question_en": "Who founded the Ayyubid Sultanate?",
+      "expected_answer": "Saladino (Salah ad-Din Yusuf ibn Ayyub, 1137-1193), di origine curda, fondò il Sultanato Ayyubide nel 1171 deponendo l'ultimo califfo fatimide in Egitto (al-Adid). Riunificò Egitto e Siria sotto il suo controllo e divenne celebre in Occidente per aver riconquistato Gerusalemme ai Crociati nella Battaglia di Hattin (1187). Affrontò la Terza Crociata (1189-1192) contro Riccardo Cuor di Leone, Filippo II Augusto e Federico Barbarossa. Morì a Damasco nel 1193 lasciando un'eredità controversa: nemico ma rispettato anche in Occidente come esempio di cavalleria.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Maometto (VII sec., troppo presto)",
+        "Harun al-Rashid (Abbaside, diverso)",
+        "Suleiman il Magnifico (Ottomano, XVI sec.)",
+        "Baybars (Mamelucco, successivo)"
+      ],
+      "atlaspi_entity_ids": [175, 510],
+      "source_url": "https://en.wikipedia.org/wiki/Saladin"
+    },
+    {
+      "id": "Q-092",
+      "category": "temporal",
+      "epoch_bucket": "1000-1500",
+      "region": "ME",
+      "question_it": "Quando conquistarono i Mongoli Baghdad?",
+      "question_en": "When did the Mongols conquer Baghdad?",
+      "expected_answer": "Il 10 febbraio 1258 (13 Safar 656 AH). L'esercito mongolo guidato da Hulagu Khan (nipote di Gengis Khan) assediò e conquistò Baghdad, capitale del Califfato Abbaside da quasi 500 anni. Il califfo al-Musta'sim fu giustiziato (arrotolato in un tappeto e calpestato da cavalli, per tradizione, anche se le fonti variano). Circa 200.000-800.000 abitanti uccisi (numeri dibattuti ma la distruzione fu enorme). La Bayt al-Hikma (Casa della Saggezza, biblioteca straordinaria di testi scientifici) fu distrutta e i libri gettati nel Tigri fino a colorarne l'acqua di nero, secondo cronisti arabi (hiperbole ma la perdita fu reale). Evento traumatico per il mondo islamico: fine del califfato abbaside classico.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "1099 (conquista Gerusalemme, non Baghdad)",
+        "1291 (caduta di Acri, fine crociati)",
+        "1453 (caduta di Costantinopoli)",
+        "1219 (Mongoli non ancora lì)"
+      ],
+      "atlaspi_entity_ids": [31, 9],
+      "source_url": "https://en.wikipedia.org/wiki/Siege_of_Baghdad_(1258)"
+    },
+    {
+      "id": "Q-093",
+      "category": "spatial",
+      "epoch_bucket": "1500-1800",
+      "region": "ME",
+      "question_it": "Dove si trovava la capitale dell'Impero Safavide?",
+      "question_en": "Where was the capital of the Safavid Empire?",
+      "expected_answer": "Isfahan fu la capitale dei Safavidi dal 1598 (trasferimento voluto da Shah Abbas I il Grande) alla caduta dell'impero nel 1736. Prima capitale era Tabriz (fino al 1555, troppo vicina agli Ottomani), poi Qazvin (1555-1598). Isfahan fu trasformata in una delle più belle città del mondo: Naqsh-e Jahan Square (Piazza dell'Immagine del Mondo, una delle più grandi del mondo), Moschea di Sheikh Lotfollah, Moschea dello Shah, Bazar Qeysariyeh. Popolazione stimata all'apice ~600.000, più grande di Londra dell'epoca. Detta 'Isfahan nesf-e jahan' (Isfahan è metà del mondo).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Teheran (capitale Qajar dal 1796, non Safavide)",
+        "Baghdad (era ottomana)",
+        "Shiraz (era capitale zand XVIII sec.)",
+        "Istanbul (ottomana)"
+      ],
+      "atlaspi_entity_ids": [13],
+      "source_url": "https://en.wikipedia.org/wiki/Isfahan"
+    },
+    {
+      "id": "Q-094",
+      "category": "factual",
+      "epoch_bucket": "1000-1500",
+      "region": "Asia",
+      "question_it": "Chi unificò i mongoli e fondò l'Impero Mongolo?",
+      "question_en": "Who unified the Mongols and founded the Mongol Empire?",
+      "expected_answer": "Temüjin, noto come Genghis Khan (ᠴᠢᠩᠭᠢᠰ ᠬᠠᠭᠠᠨ, c. 1162-1227), unificò le tribù mongole al kurultai (assemblea) del 1206, ricevendo il titolo di Gran Khan. L'Impero Mongolo (Yeke Mongol Ulus) che fondò raggiunse al suo apice ~24 milioni km² (1279), il più grande impero contiguo della storia. Campagne principali: Xia Occidentali (1209), Khwarezm (1219-1221, distruzione di Samarcanda e Bukhara), incursioni nell'Europa orientale (Rus' di Kiev 1223, 1237-1240). Morì nel 1227 durante la campagna contro gli Xia Occidentali. Successione: Ögedei (1229), Güyük, Möngke, poi divisione tra Kublai (Yuan) e Ariq Böke.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Kublai Khan (suo nipote, fondò Yuan)",
+        "Tamerlano (XIV sec., diverso)",
+        "Attila (V sec. unni, popolo diverso)",
+        "Batu Khan (suo nipote, Orda d'Oro)"
+      ],
+      "atlaspi_entity_ids": [9],
+      "source_url": "https://en.wikipedia.org/wiki/Genghis_Khan"
+    },
+    {
+      "id": "Q-095",
+      "category": "spatial",
+      "epoch_bucket": "500-1000",
+      "region": "Asia",
+      "question_it": "Dove si trovava la capitale della dinastia Goryeo in Corea?",
+      "question_en": "Where was the capital of the Goryeo Dynasty in Korea?",
+      "expected_answer": "Kaesong (in coreano 개성, nome storico Gaegyeong / Songdo), nell'attuale Corea del Nord, vicino alla DMZ. Fu capitale della dinastia Goryeo (918-1392) per quasi tutta la sua durata, scelta dal fondatore Wang Geon (Taejo) perché centrale e strategica. La città fu parzialmente distrutta durante le invasioni mongole del XIII secolo (1231-1259) ma ricostruita. Dopo la fondazione della dinastia Joseon (1392), la capitale fu spostata a Hanyang (l'attuale Seoul) nel 1394. Kaesong mantenne importanza commerciale come centro del commercio del ginseng.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Seoul (capitale Joseon, dal 1394)",
+        "Pyongyang (capitale attuale Corea del Nord, non Goryeo)",
+        "Gyeongju (capitale Silla, dinastia precedente)",
+        "Pusan"
+      ],
+      "atlaspi_entity_ids": [117],
+      "source_url": "https://en.wikipedia.org/wiki/Kaesong"
+    },
+    {
+      "id": "Q-096",
+      "category": "factual",
+      "epoch_bucket": "pre-500BCE",
+      "region": "Africa",
+      "question_it": "Quale antico regno africano conquistò l'Egitto e istituì la XXV dinastia?",
+      "question_en": "Which ancient African kingdom conquered Egypt and established the 25th Dynasty?",
+      "expected_answer": "Il Regno di Kush (Nubia), con capitale iniziale Napata. Sotto il re Piye (Piankhi, regno c. 744-714 a.C.), i Kushiti conquistarono l'Egitto intorno al 747-728 a.C., fondando la XXV dinastia dei 'faraoni neri' che regnò sull'Egitto unificato fino al 656 a.C. (presa di Tebe da Assurbanipal d'Assiria). Faraoni kushiti notevoli: Shabaka, Shebitku, Taharqa (nominato anche nella Bibbia, 2 Re 19:9), Tanutamani. Restaurarono arte, religione e architettura classiche egizie. Dopo la riconquista assira, i Kushiti ripiegarono a sud, poi spostarono la capitale da Napata a Meroe (c. 590 a.C.) dopo l'incursione del faraone Psamtico II.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Persiani (invasero dopo, 525 a.C. XXVII dinastia)",
+        "Romani (I sec. a.C.)",
+        "Assiri (conquistarono Egitto DAI Kush, non fondarono dinastia)",
+        "Greci (I millennio a.C., Tolomei)"
+      ],
+      "atlaspi_entity_ids": [52, 620, 26],
+      "source_url": "https://en.wikipedia.org/wiki/Twenty-fifth_Dynasty_of_Egypt"
+    },
+    {
+      "id": "Q-097",
+      "category": "temporal",
+      "epoch_bucket": "500-1000",
+      "region": "Africa",
+      "question_it": "Quando l'antico regno di Aksum adottò il cristianesimo?",
+      "question_en": "When did the ancient kingdom of Aksum adopt Christianity?",
+      "expected_answer": "Intorno al 330-340 d.C., sotto il re Ezana (regno c. 320-360). Ezana si convertì al cristianesimo grazie a Frumenzio, un siriano rapito da bambino che divenne suo precettore e successivamente primo vescovo di Aksum (consacrato da Atanasio di Alessandria). Aksum fu uno dei primi stati al mondo ad adottare ufficialmente il cristianesimo come religione di stato, dopo l'Armenia (c. 301) e l'Impero Romano (editto di Costantino 313). Le monete aksumite smisero di raffigurare simboli del dio pagano Astar e iniziarono a mostrare la croce dopo la conversione. La Chiesa Ortodossa Etiope Tewahedo discende da questa tradizione.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "VII secolo (troppo tardi)",
+        "Prima dell'Armenia (fu dopo)",
+        "Non ha mai adottato il cristianesimo",
+        "Nel XIV secolo (confusione con conversione forzata)"
+      ],
+      "atlaspi_entity_ids": [51, 853],
+      "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Aksum#Christianity"
+    },
+    {
+      "id": "Q-098",
+      "category": "spatial",
+      "epoch_bucket": "1000-1500",
+      "region": "Africa",
+      "question_it": "Dove si trovava la città-stato di Kilwa?",
+      "question_en": "Where was the city-state of Kilwa located?",
+      "expected_answer": "Kilwa Kisiwani era situata su un'isola al largo della costa meridionale dell'attuale Tanzania, vicino all'estuario del fiume Rufiji. Fu una delle più importanti città-stato della costa swahili (Miji ya Pwani) dal X al XVI secolo, al centro del commercio dell'oro proveniente dal Grande Zimbabwe via Sofala (Mozambico). Al suo apice (XIII-XV sec.) batteva moneta propria e controllava il commercio lungo la costa orientale africana. Ibn Battuta la visitò nel 1331 e la descrisse come 'una delle più belle città del mondo'. Saccheggiata dai portoghesi sotto Vasco da Gama/Francisco de Almeida nel 1505. Patrimonio UNESCO dal 1981. Nella lista 'in pericolo' dal 2004 al 2014.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Zanzibar (isola diversa, più a nord)",
+        "Mombasa (Kenya)",
+        "Madagascar",
+        "Sudafrica"
+      ],
+      "atlaspi_entity_ids": [164, 418],
+      "source_url": "https://en.wikipedia.org/wiki/Kilwa_Kisiwani"
+    },
+    {
+      "id": "Q-099",
+      "category": "factual",
+      "epoch_bucket": "1500-1800",
+      "region": "Europe",
+      "question_it": "Chi fu il primo zar di tutte le Russie?",
+      "question_en": "Who was the first Tsar of all the Russias?",
+      "expected_answer": "Ivan IV 'il Terribile' (Иван Грозный, Ivan Grozny, 1530-1584) fu incoronato primo 'Zar di tutte le Russie' il 16 gennaio 1547, trasformando il Granducato di Moscovia nel Regno (Carstvo) di Russia. Il titolo 'tsar' deriva da 'Caesar'. Regno di grande espansione (conquista dei khanati tatari di Kazan' 1552 e Astrakhan' 1556, inizio conquista Siberia) ma anche di terribile repressione (oprichnina 1565-1572, massacro di Novgorod 1570 con migliaia di vittime). Il titolo 'imperatore' fu adottato più tardi da Pietro il Grande nel 1721.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Pietro il Grande (fu primo imperatore, non primo zar)",
+        "Caterina la Grande (1762)",
+        "Ivan III (fu Granduca, non Zar)",
+        "Boris Godunov (zar 1598-1605, successivo)"
+      ],
+      "atlaspi_entity_ids": [16],
+      "source_url": "https://en.wikipedia.org/wiki/Ivan_the_Terrible"
+    },
+    {
+      "id": "Q-100",
+      "category": "temporal",
+      "epoch_bucket": "pre-500BCE",
+      "region": "ME",
+      "question_it": "Quando cadde Ninive, capitale dell'Impero Neo-Assiro?",
+      "question_en": "When did Nineveh, capital of the Neo-Assyrian Empire, fall?",
+      "expected_answer": "Ninive cadde nel 612 a.C., espugnata dopo tre mesi di assedio da una coalizione di Medi (sotto Ciassare), Babilonesi (sotto Nabopolassar) e Sciti. Ashuruballit II, ultimo re assiro, fuggì verso ovest con i resti dell'esercito, tentando una resistenza a Harran (cadde nel 610) e poi nella battaglia di Carchemish (605 a.C.) contro Nabucodonosor II, che pose fine definitivamente all'impero assiro. La caduta di Ninive è celebrata nei libri biblici di Nahum e Tobia. Riscoperta archeologica dal XIX secolo (Paul-Émile Botta, Austen Henry Layard) rivelò la biblioteca di Ashurbanipal con l'Epopea di Gilgamesh.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "539 a.C. (caduta Babilonia Neo-Babilonese, non Ninive)",
+        "605 a.C. (Carchemish, dopo Ninive)",
+        "701 a.C. (Ninive fu SOTTO Senacherib, era al suo apice)",
+        "XV secolo a.C."
+      ],
+      "atlaspi_entity_ids": [170],
+      "source_url": "https://en.wikipedia.org/wiki/Battle_of_Nineveh_(612_BC)"
     }
   ]
 }
