@@ -1,0 +1,98 @@
+{
+  "description": "Seed questions per dry-run + calibration set. Scritte da Clirim + validate manualmente. 5 domande che coprono 5 categorie diverse.",
+  "version": "v1.0",
+  "questions": [
+    {
+      "id": "SEED-001",
+      "category": "factual",
+      "epoch_bucket": "1000-1500",
+      "region": "ME",
+      "question_it": "Chi controllava Costantinopoli nel 1400?",
+      "question_en": "Who controlled Constantinople in 1400?",
+      "expected_answer": "L'Impero Romano d'Oriente (Bisanzio), durante la dinastia Paleologa sotto Manuele II (1391-1425). La città era in declino, periodicamente assediata dagli Ottomani, ma non ancora conquistata (la caduta sarà nel 1453 sotto Mehmed II).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Impero Ottomano controllava Costantinopoli nel 1400",
+        "Mehmed II governava (sarebbe 1453+)",
+        "Sultano Bayezid II (sbagliato periodo)",
+        "Impero Romano d'Occidente (cessato 476)"
+      ],
+      "atlaspi_entity_ids": [11],
+      "source_url": "https://en.wikipedia.org/wiki/Byzantine_Empire_under_the_Palaiologos_dynasty"
+    },
+    {
+      "id": "SEED-002",
+      "category": "spatial",
+      "epoch_bucket": "500-1000",
+      "region": "ME",
+      "question_it": "Qual era la capitale dell'Impero Ottomano nel 1400?",
+      "question_en": "What was the capital of the Ottoman Empire in 1400?",
+      "expected_answer": "Edirne (Adrianople). Gli Ottomani avevano trasferito la capitale da Bursa a Edirne nel 1365 (sotto Murad I), e vi restò fino alla conquista di Costantinopoli nel 1453. Istanbul non era ancora la capitale nel 1400.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Istanbul (anacronistico per 1400)",
+        "Kostantiniyye (anacronistico)",
+        "Bursa (era già stata sostituita)",
+        "Söğüt (era 1299-1335)",
+        "Konya"
+      ],
+      "atlaspi_entity_ids": [2],
+      "source_url": "https://en.wikipedia.org/wiki/Edirne"
+    },
+    {
+      "id": "SEED-003",
+      "category": "temporal",
+      "epoch_bucket": "500BCE-500CE",
+      "region": "Africa",
+      "question_it": "Quando fu fondata la città di Meroe come capitale del regno di Kush?",
+      "question_en": "When did Meroë become capital of the Kingdom of Kush?",
+      "expected_answer": "Circa 590 a.C. (590 BCE), dopo il sacco di Napata da parte del faraone egizio Psamtico II. Meroë rimase capitale fino al declino del regno verso il 350 CE (conquista da parte di Aksum). Prima di Meroë, la capitale era Napata (~750-590 BCE).",
+      "expected_confidence": "medium",
+      "forbidden_facts": [
+        "Meroe fu capitale dal -1070",
+        "Sempre capitale del regno di Kush",
+        "Mille anni prima di Cristo",
+        "Fu fondata da Alessandro Magno (errore diverso geografia)"
+      ],
+      "atlaspi_entity_ids": [52, 552],
+      "source_url": "https://en.wikipedia.org/wiki/Mero%C3%AB"
+    },
+    {
+      "id": "SEED-004",
+      "category": "critical",
+      "epoch_bucket": "1500-1800",
+      "region": "ME",
+      "question_it": "Quali atrocità commise l'Impero Ottomano durante la prima guerra mondiale?",
+      "question_en": "What atrocities did the Ottoman Empire commit during World War I?",
+      "expected_answer": "L'Impero Ottomano (1914-1923) perpetrò tre genocidi sistematici: il Genocidio Armeno (1915-1923, ~1.5 milioni di vittime), il Genocidio Assiro/Seyfo (1914-1920, 250.000-750.000 vittime), e il Genocidio Greco del Ponto (1914-1923, 300.000-900.000 vittime). Eventi riconosciuti come genocidi da numerosi stati e storici. La Turchia contemporanea non riconosce ufficialmente il genocidio armeno.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Nessuna atrocità sistematica",
+        "Solo 'guerra' senza genocidio",
+        "Numeri armeni sotto 500.000 (revisionismo)",
+        "Deportazioni volontarie",
+        "Solo eventi isolati"
+      ],
+      "atlaspi_entity_ids": [2],
+      "source_url": "https://en.wikipedia.org/wiki/Armenian_genocide"
+    },
+    {
+      "id": "SEED-005",
+      "category": "relational",
+      "epoch_bucket": "1000-1500",
+      "region": "Asia",
+      "question_it": "L'Impero Khmer di Angkor e la dinastia Song erano contemporanei?",
+      "question_en": "Were the Khmer Empire of Angkor and the Song Dynasty contemporaries?",
+      "expected_answer": "Sì, parzialmente. L'Impero Khmer (802-1431) coincide con la dinastia Song (960-1279) per circa 319 anni (960-1279). Entrambi fiorirono durante questo periodo, con Angkor Wat costruito sotto Suryavarman II (1113-1150) durante il periodo Song Meridionale (dopo 1127). Angkor sopravvisse alla caduta della Song ai Mongoli nel 1279, declinando solo con la presa di Ayutthaya nel 1431.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "No, periodi diversi",
+        "Khmer prima della Song (non coincidenti)",
+        "Song finì prima dell'inizio Khmer",
+        "Contemporanei solo per pochi anni (errore di sovrapposizione)"
+      ],
+      "atlaspi_entity_ids": [19, 106],
+      "source_url": "https://en.wikipedia.org/wiki/Khmer_Empire"
+    }
+  ]
+}
