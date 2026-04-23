@@ -79,6 +79,14 @@ def is_rate_limit(e: Exception) -> bool:
 
 
 def main():
+    # Fix Windows cp1252 stdout crash on unicode chars (e.g. Ọyọ́, Cham letters).
+    # errors='replace' ensures progress prints never crash on char mapping.
+    try:
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+        sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+    except Exception:
+        pass  # Python <3.7 or already utf-8
+
     ap = argparse.ArgumentParser()
     ap.add_argument("--questions", type=Path, required=True)
     ap.add_argument("--output", type=Path, required=True)

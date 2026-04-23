@@ -1,0 +1,26 @@
+{
+  "n_sample": 20,
+  "conditions": {
+    "baseline": {
+      "accuracy_pct": 89.8,
+      "hallucinations_avg": 0.05,
+      "n": 20
+    },
+    "atlaspi_prompt_only": {
+      "accuracy_pct": 91.0,
+      "hallucinations_avg": 0.0,
+      "n": 20
+    },
+    "atlaspi_full": {
+      "accuracy_pct": 93.0,
+      "hallucinations_avg": 0.0,
+      "n": 20
+    }
+  },
+  "deltas": {
+    "prompt_effect": 1.2,
+    "tool_effect": 2.0,
+    "combined_effect": 3.2
+  },
+  "diagnosis": "MIXED: unclear attribution"
+}
