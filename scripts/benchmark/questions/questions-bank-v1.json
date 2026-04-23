@@ -1,0 +1,370 @@
+{
+  "description": "v7.0 benchmark question bank — 100 stratified questions",
+  "version": "v1.0",
+  "generated_by": "Claude Code sub-agent",
+  "questions": [
+    {
+      "id": "Q-001",
+      "category": "factual",
+      "epoch_bucket": "500BCE-500CE",
+      "region": "Europe",
+      "question_it": "Chi fu il primo imperatore dell'Impero Romano?",
+      "question_en": "Who was the first emperor of the Roman Empire?",
+      "expected_answer": "Augusto (Gaio Giulio Cesare Ottaviano), che ricevette il titolo di Augustus dal Senato nel 27 a.C. Governò come princeps fino alla morte nel 14 d.C., fondando la dinastia Giulio-Claudia. Giulio Cesare, suo prozio adottivo, non fu imperatore in senso formale: fu dittatore perpetuo assassinato nel 44 a.C. prima dell'istituzione del Principato.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Giulio Cesare (fu dittatore, non imperatore)",
+        "Nerone (fu il quinto imperatore)",
+        "Romolo (figura leggendaria di fondazione, non imperatore)",
+        "Costantino (IV secolo)"
+      ],
+      "atlaspi_entity_ids": [1],
+      "source_url": "https://en.wikipedia.org/wiki/Augustus"
+    },
+    {
+      "id": "Q-002",
+      "category": "temporal",
+      "epoch_bucket": "500-1000",
+      "region": "Europe",
+      "question_it": "In che anno Carlo Magno fu incoronato imperatore?",
+      "question_en": "In what year was Charlemagne crowned emperor?",
+      "expected_answer": "Il 25 dicembre 800, a Roma nella basilica di San Pietro, Papa Leone III incoronò Carlo Magno come Imperator Romanorum. Questo evento segnò la nascita simbolica di quello che diventerà il Sacro Romano Impero e rappresentò una rottura con Bisanzio, che si considerava l'unica erede legittima dell'Impero Romano.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "768 (anno in cui divenne re dei Franchi)",
+        "814 (anno della sua morte)",
+        "962 (incoronazione di Ottone I, nascita formale del Sacro Romano Impero)",
+        "843 (Trattato di Verdun)"
+      ],
+      "atlaspi_entity_ids": [89, 30],
+      "source_url": "https://en.wikipedia.org/wiki/Coronation_of_Charlemagne"
+    },
+    {
+      "id": "Q-003",
+      "category": "spatial",
+      "epoch_bucket": "1000-1500",
+      "region": "Europe",
+      "question_it": "Qual era la capitale della Repubblica di Venezia nel XV secolo?",
+      "question_en": "What was the capital of the Republic of Venice in the 15th century?",
+      "expected_answer": "Venezia stessa era la capitale e il centro politico della Serenissima, con il Palazzo Ducale come sede del governo dogale. La Repubblica era governata dal Doge, assistito dal Maggior Consiglio e dal Consiglio dei Dieci. Nel XV secolo Venezia era all'apice del potere, controllando vasti possedimenti nel Mediterraneo orientale (Stato da Mar) e in Italia settentrionale (Stato da Terra).",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Padova (fu territorio soggetto)",
+        "Verona (fu territorio soggetto)",
+        "Ravenna (fu territorio soggetto, 1441-1509)",
+        "Costantinopoli (era bizantina, poi ottomana)"
+      ],
+      "atlaspi_entity_ids": [23],
+      "source_url": "https://en.wikipedia.org/wiki/Republic_of_Venice"
+    },
+    {
+      "id": "Q-004",
+      "category": "relational",
+      "epoch_bucket": "1000-1500",
+      "region": "Europe",
+      "question_it": "Il Regno di Francia e il Regno d'Inghilterra erano in guerra nel 1400?",
+      "question_en": "Were the Kingdom of France and the Kingdom of England at war in 1400?",
+      "expected_answer": "Nel 1400 i due regni erano tecnicamente in tregua all'interno della Guerra dei Cent'Anni (1337-1453). Dopo la deposizione di Riccardo II (1399) e l'ascesa di Enrico IV in Inghilterra, le ostilità erano in fase calante. La guerra sarebbe ripresa attivamente con Enrico V nel 1415 (battaglia di Azincourt). Nel 1400 regnavano Carlo VI in Francia ed Enrico IV in Inghilterra.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Pace duratura (non c'era)",
+        "Guerra dei Cent'Anni finita nel 1400",
+        "Nessun conflitto tra i due regni",
+        "Enrico V era re nel 1400 (iniziò a regnare nel 1413)"
+      ],
+      "atlaspi_entity_ids": [56, 57],
+      "source_url": "https://en.wikipedia.org/wiki/Hundred_Years%27_War"
+    },
+    {
+      "id": "Q-005",
+      "category": "critical",
+      "epoch_bucket": "1500-1800",
+      "region": "Americas",
+      "question_it": "Cos'era il sistema dell'encomienda nelle colonie spagnole?",
+      "question_en": "What was the encomienda system in Spanish colonies?",
+      "expected_answer": "L'encomienda (istituita dal 1503) era un sistema in cui la Corona spagnola concedeva a un colono (encomendero) il diritto di estrarre tributo e lavoro forzato da popolazioni indigene, in cambio di protezione e cristianizzazione. Nella pratica fu un sistema di schiavitù camuffata che causò sfruttamento brutale, morte per lavoro forzato e crollo demografico indigeno. Leggi come le Leyes Nuevas (1542) tentarono riforme, ma il sistema persistette per decenni. Critici come Bartolomé de las Casas denunciarono gli abusi.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Sistema volontario di protezione",
+        "Solo scambio economico paritario",
+        "Riguardava solo contadini spagnoli",
+        "Abolita immediatamente dopo l'istituzione"
+      ],
+      "atlaspi_entity_ids": [],
+      "source_url": "https://en.wikipedia.org/wiki/Encomienda"
+    },
+    {
+      "id": "Q-006",
+      "category": "factual",
+      "epoch_bucket": "pre-500BCE",
+      "region": "ME",
+      "question_it": "Quale civiltà mesopotamica fondò la città di Ur?",
+      "question_en": "Which Mesopotamian civilization founded the city of Ur?",
+      "expected_answer": "Ur fu fondata dai Sumeri durante il Periodo Ubaid (circa 3800 a.C.) e divenne una delle principali città-stato sumeriche. Raggiunse il massimo splendore durante la Terza Dinastia di Ur (c. 2112-2004 a.C.) sotto Ur-Nammu e Shulgi. La città è citata nella Bibbia come 'Ur dei Caldei', patria di Abramo, ma in senso storico fu prima sumerica, poi accadica, babilonese e infine caldea.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Fondata dagli Ebrei",
+        "Fondata dai Babilonesi (vennero dopo)",
+        "Fondata dagli Assiri",
+        "Fondata dagli Accadi (conquistarono, non fondarono)"
+      ],
+      "atlaspi_entity_ids": [168],
+      "source_url": "https://en.wikipedia.org/wiki/Ur"
+    },
+    {
+      "id": "Q-007",
+      "category": "spatial",
+      "epoch_bucket": "500BCE-500CE",
+      "region": "ME",
+      "question_it": "Qual era la capitale dell'Impero Achemenide al suo apice?",
+      "question_en": "What was the capital of the Achaemenid Empire at its height?",
+      "expected_answer": "L'Impero Achemenide (c. 550-330 a.C.) ebbe più capitali a rotazione stagionale: Persepoli (capitale cerimoniale costruita da Dario I dal 518 a.C.), Susa (capitale amministrativa), Ecbatana (capitale estiva) e Pasargade (capitale originaria di Ciro il Grande). Persepoli è quella più comunemente associata all'impero al suo apice, prima di essere distrutta da Alessandro Magno nel 330 a.C.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Teheran (città moderna, non antica)",
+        "Isfahan (capitale safavide, non achemenide)",
+        "Baghdad (abbaside, non achemenide)",
+        "Babilonia (fu conquistata ma non capitale achemenide principale)"
+      ],
+      "atlaspi_entity_ids": [847, 27],
+      "source_url": "https://en.wikipedia.org/wiki/Achaemenid_Empire"
+    },
+    {
+      "id": "Q-008",
+      "category": "temporal",
+      "epoch_bucket": "500-1000",
+      "region": "ME",
+      "question_it": "Quando cadde l'Impero Sasanide?",
+      "question_en": "When did the Sasanian Empire fall?",
+      "expected_answer": "L'Impero Sasanide (224-651 d.C.) cadde definitivamente nel 651 con la morte dell'ultimo shahanshah Yazdegerd III, ucciso nei pressi di Merv durante la fuga dalle armate arabo-musulmane. La fase critica iniziò con la battaglia di al-Qadisiyya (636) e la battaglia di Nahavand (642). La conquista del califfato Rashidun trasformò radicalmente la regione, portando alla progressiva islamizzazione della Persia zoroastriana.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "632 (morte di Maometto, non fine dei Sasanidi)",
+        "750 (caduta degli Omayyadi)",
+        "224 (fondazione dei Sasanidi)",
+        "1258 (caduta dei califfi abbasidi, non sasanidi)"
+      ],
+      "atlaspi_entity_ids": [121],
+      "source_url": "https://en.wikipedia.org/wiki/Sasanian_Empire"
+    },
+    {
+      "id": "Q-009",
+      "category": "relational",
+      "epoch_bucket": "500-1000",
+      "region": "ME",
+      "question_it": "Il Califfato Abbaside e l'Impero Bizantino erano contemporanei?",
+      "question_en": "Were the Abbasid Caliphate and the Byzantine Empire contemporaneous?",
+      "expected_answer": "Sì, pienamente. Il Califfato Abbaside (750-1258) e l'Impero Bizantino (395-1453) coesistettero per circa 508 anni (750-1258). Ebbero rapporti misti: conflitti frontalieri in Anatolia e Mesopotamia (es. guerre arabo-bizantine), scambi diplomatici (Harun al-Rashid e Carlo Magno con ambascerie bizantine), e intensi scambi culturali durante l'Età dell'Oro Islamica, specialmente nella traduzione di testi greci classici.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "No, periodi diversi",
+        "Abbasidi prima di Bisanzio",
+        "Bisanzio finì prima del 750",
+        "Coesistettero solo per pochi decenni"
+      ],
+      "atlaspi_entity_ids": [31, 11],
+      "source_url": "https://en.wikipedia.org/wiki/Abbasid_Caliphate"
+    },
+    {
+      "id": "Q-010",
+      "category": "critical",
+      "epoch_bucket": "1800-2000",
+      "region": "ME",
+      "question_it": "Cosa fu il Genocidio Armeno?",
+      "question_en": "What was the Armenian Genocide?",
+      "expected_answer": "Il Genocidio Armeno (1915-1923) fu lo sterminio sistematico di circa 1-1.5 milioni di armeni perpetrato dal governo dei Giovani Turchi dell'Impero Ottomano. Iniziato con la deportazione dei leader armeni di Costantinopoli il 24 aprile 1915, comprese marce della morte nel deserto siriano, massacri diretti, carestia forzata e stupri di massa. Riconosciuto come genocidio da oltre 30 stati e dall'Unione Europea. La Turchia contemporanea nega ancora ufficialmente la qualifica di genocidio, ammettendo solo 'deportazioni e morti di guerra'.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Deportazioni volontarie",
+        "Solo conflitto militare, non genocidio",
+        "Vittime sotto 300.000 (revisionismo turco)",
+        "Iniziò nel 1919",
+        "Gli Armeni erano combattenti tutti, non civili"
+      ],
+      "atlaspi_entity_ids": [2],
+      "source_url": "https://en.wikipedia.org/wiki/Armenian_genocide"
+    },
+    {
+      "id": "Q-011",
+      "category": "factual",
+      "epoch_bucket": "pre-500BCE",
+      "region": "Asia",
+      "question_it": "Quale dinastia governava la Cina durante la costruzione delle prime sezioni della Grande Muraglia?",
+      "question_en": "Which dynasty ruled China during the construction of the first sections of the Great Wall?",
+      "expected_answer": "Le prime sezioni furono costruite da vari stati durante il periodo degli Stati Combattenti (475-221 a.C.), ma l'unificazione e massiccia estensione fu opera della dinastia Qin sotto il primo imperatore Qin Shi Huang (221-210 a.C.). Le sezioni Ming (XIV-XVII secolo), dopo 2000 anni, costituiscono la maggior parte della muraglia visibile oggi. La muraglia Qin era in terra battuta, non pietra.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Dinastia Ming (fu estensore, non primo costruttore)",
+        "Dinastia Han (consolidò, non iniziò)",
+        "Dinastia Tang",
+        "Dinastia Zhou (periodo feudale pre-unificazione)"
+      ],
+      "atlaspi_entity_ids": [103],
+      "source_url": "https://en.wikipedia.org/wiki/Great_Wall_of_China"
+    },
+    {
+      "id": "Q-012",
+      "category": "temporal",
+      "epoch_bucket": "500BCE-500CE",
+      "region": "Asia",
+      "question_it": "Quando fu fondato l'Impero Maurya in India?",
+      "question_en": "When was the Maurya Empire founded in India?",
+      "expected_answer": "L'Impero Maurya fu fondato da Chandragupta Maurya intorno al 322-321 a.C., dopo aver rovesciato la dinastia Nanda a Magadha. Raggiunse l'estensione massima sotto il nipote Ashoka (c. 268-232 a.C.), coprendo quasi tutto il subcontinente indiano salvo l'estremo sud tamil. Dopo la morte di Ashoka l'impero declinò rapidamente e terminò nel 185 a.C. con l'assassinio dell'ultimo imperatore Brihadratha.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "400 a.C. (troppo presto)",
+        "150 a.C. (troppo tardi)",
+        "Fondato da Ashoka (fu il nipote)",
+        "500 a.C."
+      ],
+      "atlaspi_entity_ids": [37],
+      "source_url": "https://en.wikipedia.org/wiki/Maurya_Empire"
+    },
+    {
+      "id": "Q-013",
+      "category": "spatial",
+      "epoch_bucket": "500-1000",
+      "region": "Asia",
+      "question_it": "Qual era la capitale della dinastia Tang cinese?",
+      "question_en": "What was the capital of the Chinese Tang Dynasty?",
+      "expected_answer": "Chang'an (l'odierna Xi'an), che fu capitale per gran parte della dinastia Tang (618-907). Sotto i Tang Chang'an divenne una delle città più grandi del mondo, con popolazione stimata oltre un milione di abitanti e fu capolinea orientale della Via della Seta. Luoyang servì come capitale secondaria. La città ospitava una comunità internazionale di mercanti, studiosi e religiosi da tutta l'Eurasia.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Pechino (fu capitale solo dal 1272 con gli Yuan)",
+        "Nanchino (capitale Ming iniziale)",
+        "Kaifeng (Song settentrionali)",
+        "Hangzhou (Song meridionali)"
+      ],
+      "atlaspi_entity_ids": [105],
+      "source_url": "https://en.wikipedia.org/wiki/Chang%27an"
+    },
+    {
+      "id": "Q-014",
+      "category": "relational",
+      "epoch_bucket": "1000-1500",
+      "region": "Asia",
+      "question_it": "L'Impero Mongolo conquistò la dinastia Song?",
+      "question_en": "Did the Mongol Empire conquer the Song Dynasty?",
+      "expected_answer": "Sì. La conquista mongola della dinastia Song fu un processo lungo avviato da Ögedei Khan negli anni 1230 e completato da Kublai Khan nel 1279 con la battaglia navale di Yamen, in cui morì annegato l'ultimo imperatore bambino Zhao Bing. Kublai fondò la dinastia Yuan (1271-1368), la prima dinastia di origine straniera a governare tutta la Cina. La Song settentrionale era già caduta nel 1127 contro i Jurchen (Jin), non i Mongoli.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "No, Song conquistò i Mongoli",
+        "I Mongoli non arrivarono mai in Cina",
+        "Song finì prima dei Mongoli (era Jin per il nord)",
+        "I Song conquistarono i Mongoli nel 1260"
+      ],
+      "atlaspi_entity_ids": [9, 106, 107],
+      "source_url": "https://en.wikipedia.org/wiki/Mongol_conquest_of_the_Song_dynasty"
+    },
+    {
+      "id": "Q-015",
+      "category": "critical",
+      "epoch_bucket": "1800-2000",
+      "region": "Asia",
+      "question_it": "Quali atrocità commisero i Khmer Rossi in Cambogia?",
+      "question_en": "What atrocities did the Khmer Rouge commit in Cambodia?",
+      "expected_answer": "I Khmer Rossi al potere (1975-1979) sotto Pol Pot causarono la morte di 1.5-2 milioni di cambogiani (~21-24% della popolazione) tramite esecuzioni, lavoro forzato, carestia e torture. Svuotarono le città, eliminarono intellettuali, monaci buddisti, minoranze etniche (cham, vietnamiti, cinesi). I campi di sterminio (come S-21/Tuol Sleng) sono documentati. Riconosciuto come genocidio dal tribunale ECCC (con condanne nel 2018-2022). Fu pulizia culturale sistematica oltre che stermino di massa.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Solo guerra civile, nessun genocidio",
+        "Vittime sotto 500.000",
+        "Nessun targeting etnico",
+        "Fu rivoluzione agricola pacifica",
+        "Pol Pot perseguitò solo elite urbane"
+      ],
+      "atlaspi_entity_ids": [240],
+      "source_url": "https://en.wikipedia.org/wiki/Cambodian_genocide"
+    },
+    {
+      "id": "Q-016",
+      "category": "factual",
+      "epoch_bucket": "pre-500BCE",
+      "region": "Africa",
+      "question_it": "Qual era la capitale dell'antico Egitto durante il Nuovo Regno?",
+      "question_en": "What was the capital of ancient Egypt during the New Kingdom?",
+      "expected_answer": "Tebe (l'odierna Luxor, detta Waset in egiziano antico) fu la capitale principale durante gran parte del Nuovo Regno (c. 1550-1069 a.C.), sotto le dinastie XVIII-XX. Parentesi notevole: Akhenaton (c. 1353-1336 a.C.) spostò la capitale ad Akhetaten (Amarna) per la riforma religiosa monoteista. Dal periodo ramesside (XIX dinastia) fu importante anche Pi-Ramesse nel delta. Memphis rimase capitale amministrativa parallela.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Il Cairo (fondato dai Fatimidi nel 969)",
+        "Alessandria (tolemaica)",
+        "Menfi (fu capitale dell'Antico Regno)",
+        "Tanis (tarda, XXI dinastia)"
+      ],
+      "atlaspi_entity_ids": [26],
+      "source_url": "https://en.wikipedia.org/wiki/Thebes,_Egypt"
+    },
+    {
+      "id": "Q-017",
+      "category": "temporal",
+      "epoch_bucket": "500-1000",
+      "region": "Africa",
+      "question_it": "Quando raggiunse l'apice l'Impero di Aksum?",
+      "question_en": "When did the Aksumite Empire reach its height?",
+      "expected_answer": "L'Impero di Aksum (c. 100-940 d.C.) raggiunse l'apice tra il III e il VI secolo, considerato uno dei quattro grandi imperi del mondo antico secondo il profeta persiano Mani (III secolo), insieme a Roma, Persia e Cina. Sotto il re Ezana (c. 320-360) adottò il cristianesimo, e si espanse controllando le rotte commerciali del Mar Rosso, parte dello Yemen (Himyar) e la regione del Nilo superiore. Declinò dal VII secolo con l'ascesa dell'Islam che ridusse il commercio di Aksum.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Apice nel XV secolo (già declinato)",
+        "Apice nel primo millennio a.C. (non ancora esisteva)",
+        "Non adottò mai il cristianesimo",
+        "Cadde a causa di Roma (non corretto)"
+      ],
+      "atlaspi_entity_ids": [51, 853],
+      "source_url": "https://en.wikipedia.org/wiki/Kingdom_of_Aksum"
+    },
+    {
+      "id": "Q-018",
+      "category": "spatial",
+      "epoch_bucket": "1000-1500",
+      "region": "Africa",
+      "question_it": "Qual era la capitale dell'Impero del Mali?",
+      "question_en": "What was the capital of the Mali Empire?",
+      "expected_answer": "Niani è tradizionalmente identificata come la capitale principale dell'Impero del Mali (c. 1235-1600), sotto sovrani come Sundiata Keita e Mansa Musa. Tuttavia, alcuni storici recenti (Conrad, Levtzion) hanno messo in discussione questa identificazione, e il sito preciso è oggetto di dibattito archeologico. Timbuktu e Djenné erano importanti centri commerciali e religiosi, ma non capitali politiche. La corte imperiale era spesso itinerante.",
+      "expected_confidence": "medium",
+      "forbidden_facts": [
+        "Timbuktu (fu centro culturale/commerciale)",
+        "Bamako (città moderna)",
+        "Gao (capitale dell'impero Songhai)",
+        "Kumbi Saleh (capitale Ghana/Wagadou, non Mali)"
+      ],
+      "atlaspi_entity_ids": [18],
+      "source_url": "https://en.wikipedia.org/wiki/Mali_Empire"
+    },
+    {
+      "id": "Q-019",
+      "category": "relational",
+      "epoch_bucket": "1000-1500",
+      "region": "Africa",
+      "question_it": "Il regno del Grande Zimbabwe e l'Impero del Mali erano contemporanei?",
+      "question_en": "Were the Great Zimbabwe kingdom and the Mali Empire contemporaries?",
+      "expected_answer": "Sì, parzialmente. Il Grande Zimbabwe (c. 1100-1450) e l'Impero del Mali (c. 1235-1600) coesistettero per circa 215 anni (1235-1450). Grande Zimbabwe era in Africa australe (attuale Zimbabwe) e fioriva sul commercio dell'oro verso Sofala sulla costa swahili. Il Mali in Africa occidentale (valle del Niger) dominava il commercio transahariano di oro e sale. Non risultano contatti diretti documentati: erano due sfere commerciali separate.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "No, epoche diverse",
+        "Grande Zimbabwe molto prima del Mali",
+        "Il Mali finì prima del 1100",
+        "Erano lo stesso regno"
+      ],
+      "atlaspi_entity_ids": [47, 18],
+      "source_url": "https://en.wikipedia.org/wiki/Great_Zimbabwe"
+    },
+    {
+      "id": "Q-020",
+      "category": "critical",
+      "epoch_bucket": "1800-2000",
+      "region": "Africa",
+      "question_it": "Cosa fu il genocidio degli Herero e Nama in Namibia?",
+      "question_en": "What was the Herero and Nama genocide in Namibia?",
+      "expected_answer": "Il genocidio degli Herero e Nama (1904-1908) fu il primo genocidio del XX secolo, perpetrato dall'Impero tedesco nella colonia dell'Africa Tedesca del Sud-Ovest (Namibia). Dopo la rivolta Herero (1904) il generale Lothar von Trotha emise il Vernichtungsbefehl (ordine di sterminio), causando la morte di 65-80% degli Herero (~65.000-110.000) e del ~50% dei Nama (~10.000). Metodi inclusero spinta nel deserto del Kalahari senza acqua, campi di concentramento (Shark Island), lavoro forzato letale. La Germania ha riconosciuto ufficialmente il genocidio nel 2021.",
+      "expected_confidence": "high",
+      "forbidden_facts": [
+        "Fu solo guerra coloniale",
+        "Non fu genocidio perché nessuna volontà sterminatrice",
+        "Vittime sotto 10.000",
+        "Riguardò solo gli Herero (anche i Nama)",
+        "Non ci furono campi di concentramento"
+      ],
+      "atlaspi_entity_ids": [],
+      "source_url": "https://en.wikipedia.org/wiki/Herero_and_Nama_genocide"
+    }
+  ]
+}
