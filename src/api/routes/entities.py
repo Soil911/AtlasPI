@@ -19,7 +19,7 @@ from pydantic import BaseModel
 from shapely.geometry import Point, shape as shapely_shape
 from shapely.errors import GEOSException
 from sqlalchemy import and_, desc, func, or_, select, text
-from sqlalchemy.orm import Session, joinedload
+from sqlalchemy.orm import Session, joinedload, selectinload
 
 from src.api.errors import EntityNotFoundError
 from src.cache import cache_response
@@ -228,11 +228,15 @@ def _entity_to_response(entity: GeoEntity) -> EntityResponse:
 
 
 def _eager_query(db: Session):
+    # selectinload avoids cartesian product on large result sets (suggestion #67).
+    # For single-row fetches (get_entity) both strategies are equivalent;
+    # for list queries (limit=300) selectinload issues one IN-query per relation
+    # instead of N JOINs that multiply rows.
     return db.query(GeoEntity).options(
-        joinedload(GeoEntity.name_variants),
-        joinedload(GeoEntity.territory_changes),
-        joinedload(GeoEntity.sources),
-        joinedload(GeoEntity.capital_history),  # v6.87 ADR-004
+        selectinload(GeoEntity.name_variants),
+        selectinload(GeoEntity.territory_changes),
+        selectinload(GeoEntity.sources),
+        selectinload(GeoEntity.capital_history),  # v6.87 ADR-004
     )
 
 

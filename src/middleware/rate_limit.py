@@ -53,5 +53,5 @@ RATE_LIMIT_DEFAULT = RATE_LIMIT
 RATE_LIMIT_DETAIL = "300/minute"   # entities/events/periods detail + list
 RATE_LIMIT_SEARCH = "300/minute"   # /v1/search, /v1/entities?q=
 RATE_LIMIT_SNAPSHOT = "60/minute"  # /v1/snapshot/year/* (pesante)
-RATE_LIMIT_EXPORT = "10/minute"    # /v1/export/* (molto pesante)
+RATE_LIMIT_EXPORT = "20/minute"    # /v1/export/* (molto pesante) — raised from 10 (#69)
 RATE_LIMIT_CSP_REPORT = "30/minute"  # /v1/csp-report (anti log-flood)
