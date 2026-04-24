@@ -17,10 +17,6 @@ with a single index scan instead of two separate index lookups merged via bitmap
 Specifically: list_entities always filters status != 'deprecated', then
 optionally filters by year_start <= year AND (year_end IS NULL OR year_end >= year).
 The composite index covers both predicates in order.
-
-CONCURRENTLY creation: PostgreSQL only. Alembic does not support CONCURRENTLY
-natively, so we use op.execute() with the raw DDL. The migration is not
-transactional for this index (CREATE INDEX CONCURRENTLY cannot run in a txn).
 """
 
 from alembic import op
@@ -37,33 +33,14 @@ INDEX_NAME = "ix_geo_entities_status_year_composite"
 
 
 def upgrade() -> None:
-    bind = op.get_bind()
-    dialect = bind.dialect.name
-
-    if dialect == "postgresql":
-        # CONCURRENTLY avoids table lock during index build on production.
-        # Must be run outside of a transaction — Alembic wraps in BEGIN by default,
-        # so we close the transaction first.
-        op.execute("COMMIT")
-        op.execute(
-            f"CREATE INDEX CONCURRENTLY IF NOT EXISTS {INDEX_NAME} "
-            f"ON geo_entities (status, year_start, year_end)"
-        )
-    else:
-        # SQLite / other: plain index (no CONCURRENTLY support needed)
-        op.create_index(
-            INDEX_NAME,
-            "geo_entities",
-            ["status", "year_start", "year_end"],
-            unique=False,
-        )
+    op.create_index(
+        INDEX_NAME,
+        "geo_entities",
+        ["status", "year_start", "year_end"],
+        unique=False,
+        if_not_exists=True,
+    )
 
 
 def downgrade() -> None:
-    bind = op.get_bind()
-    dialect = bind.dialect.name
-
-    if dialect == "postgresql":
-        op.execute(f"DROP INDEX IF EXISTS {INDEX_NAME}")
-    else:
-        op.drop_index(INDEX_NAME, table_name="geo_entities")
+    op.drop_index(INDEX_NAME, table_name="geo_entities")
