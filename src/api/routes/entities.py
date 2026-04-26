@@ -797,7 +797,11 @@ def search_entities_fuzzy(
     coloniali).
 
     Algoritmo:
-    - Per ogni entità carica name_original + tutti i name_variants.
+    - Su PostgreSQL: pg_trgm + GIN trigram indexes filtrano i candidati
+      server-side (similarity + word_similarity + ILIKE). Tipicamente <50
+      entita' invece di ~1000.
+    - Su SQLite (test/dev): full-scan come fallback.
+    - Per ogni candidato carica name_original + tutti i name_variants.
     - Calcola SequenceMatcher ratio sul lowercase-stripped candidate.
     - Bonus di +0.10 se il match è sul name_original (non su una variant).
     - Bonus di +0.15 se il match è un prefisso case-insensitive.
@@ -816,13 +820,85 @@ def search_entities_fuzzy(
 
     q_tokens = _tokenize(q_norm)
 
-    # Carica tutte le entità + varianti (N=~1000 è fattibile in memoria
-    # senza indici trigram PostgreSQL).
-    entities = (
-        db.query(GeoEntity)
-        .options(joinedload(GeoEntity.name_variants))
-        .all()
-    )
+    # v7.2: pg_trgm-based candidate filter — sostituisce l'O(n) scan Python
+    # quando siamo su PostgreSQL. Vedi migration 018_pg_trgm_fuzzy_search.
+    # ETHICS-001: il filter restringe solo l'insieme di candidati; il
+    # bonus +0.10 per name_original e' applicato nel re-rank Python sotto.
+    entities: list[GeoEntity] | None = None
+    if is_postgres:
+        try:
+            # SET LOCAL: thresholds in vigore solo per la transazione corrente
+            # (la sessione FastAPI fa rollback al termine della request, quindi
+            # non inquina la connection pool).
+            db.execute(text("SET LOCAL pg_trgm.similarity_threshold = 0.15"))
+            db.execute(text("SET LOCAL pg_trgm.word_similarity_threshold = 0.20"))
+
+            # Candidate ids: union di entita' che matchano via name_original
+            # OPPURE via una name_variant. Operatori % e <% sfruttano gli
+            # indici GIN trigram. ILIKE %q% fa da rete extra per substring
+            # match (anche pg_trgm-indicizzato).
+            #
+            # NB: il driver psycopg2 usa paramstyle=pyformat — i `%` letterali
+            # nell'SQL vanno raddoppiati a `%%` per evitare che venga
+            # interpretato come segnaposto. Idem per `<%` → `<%%`.
+            cand_rows = db.execute(
+                text(
+                    """
+                    SELECT id FROM (
+                        SELECT id, MAX(sim) AS best_sim
+                        FROM (
+                            SELECT id,
+                                   GREATEST(
+                                       similarity(name_original, :q),
+                                       word_similarity(:q, name_original)
+                                   ) AS sim
+                            FROM geo_entities
+                            WHERE name_original %% :q
+                               OR :q <%% name_original
+                               OR name_original ILIKE :q_ilike
+                            UNION ALL
+                            SELECT entity_id AS id,
+                                   GREATEST(
+                                       similarity(name, :q),
+                                       word_similarity(:q, name)
+                                   ) AS sim
+                            FROM name_variants
+                            WHERE name %% :q
+                               OR :q <%% name
+                               OR name ILIKE :q_ilike
+                        ) c
+                        GROUP BY id
+                    ) g
+                    ORDER BY best_sim DESC
+                    LIMIT 300
+                    """
+                ),
+                {"q": q_norm, "q_ilike": f"%{q_norm}%"},
+            ).all()
+            cand_ids = [row[0] for row in cand_rows]
+
+            if cand_ids:
+                entities = (
+                    db.query(GeoEntity)
+                    .options(joinedload(GeoEntity.name_variants))
+                    .filter(GeoEntity.id.in_(cand_ids))
+                    .all()
+                )
+            else:
+                entities = []
+        except Exception:
+            # pg_trgm assente o errore SQL — fallback al full-scan.
+            logger.exception("pg_trgm fuzzy candidate filter fallito, fallback full-scan")
+            entities = None
+
+    if entities is None:
+        # SQLite (test/dev) o fallback: full-scan come l'implementazione
+        # originale. N=~1000 e' fattibile in memoria.
+        entities = (
+            db.query(GeoEntity)
+            .options(joinedload(GeoEntity.name_variants))
+            .all()
+        )
 
     scored: list[tuple[float, GeoEntity, str, bool]] = []
     for e in entities:
