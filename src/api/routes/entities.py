@@ -838,9 +838,9 @@ def search_entities_fuzzy(
             # indici GIN trigram. ILIKE %q% fa da rete extra per substring
             # match (anche pg_trgm-indicizzato).
             #
-            # NB: il driver psycopg2 usa paramstyle=pyformat — i `%` letterali
-            # nell'SQL vanno raddoppiati a `%%` per evitare che venga
-            # interpretato come segnaposto. Idem per `<%` → `<%%`.
+            # NB: SQLAlchemy 2.0 auto-escapa i `%` letterali per psycopg2
+            # (paramstyle=pyformat), quindi qui usiamo un singolo `%`. Il
+            # rendering finale verso psycopg2 sara' `%%` come richiesto.
             cand_rows = db.execute(
                 text(
                     """
@@ -853,8 +853,8 @@ def search_entities_fuzzy(
                                        word_similarity(:q, name_original)
                                    ) AS sim
                             FROM geo_entities
-                            WHERE name_original %% :q
-                               OR :q <%% name_original
+                            WHERE name_original % :q
+                               OR :q <% name_original
                                OR name_original ILIKE :q_ilike
                             UNION ALL
                             SELECT entity_id AS id,
@@ -863,8 +863,8 @@ def search_entities_fuzzy(
                                        word_similarity(:q, name)
                                    ) AS sim
                             FROM name_variants
-                            WHERE name %% :q
-                               OR :q <%% name
+                            WHERE name % :q
+                               OR :q <% name
                                OR name ILIKE :q_ilike
                         ) c
                         GROUP BY id
