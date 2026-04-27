@@ -162,14 +162,17 @@
       Live now &middot; v<span data-live="version">6.89.0</span> &middot; <span data-live="entity_count">1,034</span> entities + <span data-live="event_count">643</span> events + <span data-live="period_count">55</span> periods + <span data-live="city_count">110</span> cities + <span data-live="route_count">41</span> trade routes + <span data-live="chain_count">94</span> dynasty chains
     </div>
     <h1 class="hero-title">
-      Historical Geography <span class="grad">for AI Agents</span>
+      Reduce LLM hallucinations <span class="grad">3× on historical queries</span>
     </h1>
     <p class="hero-sub">
-      The first REST API and MCP server with <strong><span data-live="entity_count">1,034</span> historical entities</strong>,
-      real boundaries, and academic sources. From <strong>4500 BCE to 2024</strong>.
+      Tool-augmented retrieval for AI agents working with historical geography.
+      <strong><span data-live="entity_count">1,034</span> entities</strong> with capital timelines,
+      rulers, events, and 2,400+ academic sources. <strong>Empirically validated</strong>:
+      hallucinations from 0.21 → 0.07 per query
+      (<a href="/handoff/benchmark/V7-FINAL-REPORT.md" style="color:#58a6ff;text-decoration:underline">benchmark v7.0</a>).
     </p>
     <div class="hero-banner" style="margin: 16px 0; padding: 12px 20px; background: linear-gradient(90deg, rgba(63,185,80,0.1), rgba(88,166,255,0.1)); border: 1px solid rgba(63,185,80,0.4); border-radius: 8px; font-size: 14px; line-height: 1.6;">
-      ✅ <strong>Free public API</strong> — no login, no API key, no registration.
+      ✅ <strong>Free public API + MCP server</strong> — no login, no API key, no registration.
       Apache 2.0. CORS-enabled. Try it: <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 3px;">curl https://atlaspi.cra-srl.com/v1/snapshot/year/1250</code>
     </div>
     <div class="hero-ctas">
@@ -189,6 +192,39 @@
       <span>34 MCP tools</span>
       <span class="meta-sep">&middot;</span>
       <span>Apache-2.0</span>
+    </div>
+  </div>
+</section>
+
+<!-- BENCHMARK CALLOUT (v7.1 — empirical validation) -->
+<section class="section section-alt" style="padding: 32px 0;">
+  <div class="container">
+    <div style="text-align: center; max-width: 920px; margin: 0 auto;">
+      <span class="eyebrow" style="display:inline-block; margin-bottom: 12px;">Empirical validation — v7.0 benchmark, 2026-04-23</span>
+      <h2 style="font-size: 28px; line-height: 1.3; margin-bottom: 18px;">
+        Tool calls reduce hallucinations by <span style="color:#3fb950;">67%</span> on hard historical queries
+      </h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 28px;">
+        <div style="padding: 18px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: rgba(255,255,255,0.02);">
+          <div style="font-size: 32px; font-weight: 600; color: #3fb950;">−67%</div>
+          <div style="font-size: 13px; color: var(--text-muted, #8b949e); margin-top: 6px;">Hallucinations<br/><span style="font-size: 11px;">(baseline 0.21 → AtlasPI 0.07 per query)</span></div>
+        </div>
+        <div style="padding: 18px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: rgba(255,255,255,0.02);">
+          <div style="font-size: 32px; font-weight: 600; color: #58a6ff;">+4.6pp</div>
+          <div style="font-size: 13px; color: var(--text-muted, #8b949e); margin-top: 6px;">Tool effect<br/><span style="font-size: 11px;">(accuracy on trap-designed queries)</span></div>
+        </div>
+        <div style="padding: 18px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: rgba(255,255,255,0.02);">
+          <div style="font-size: 32px; font-weight: 600; color: #d4a13a;">8 MCP tools</div>
+          <div style="font-size: 13px; color: var(--text-muted, #8b949e); margin-top: 6px;">search, snapshots,<br/>rulers, events, languages</div>
+        </div>
+      </div>
+      <div style="margin-top: 24px; font-size: 14px; color: var(--text-muted, #8b949e); line-height: 1.6;">
+        Methodology: A/B test on Claude Sonnet 4.5, judged by Claude Opus 4.5 (cross-vendor with GPT-4o pending).<br/>
+        Bank v2: 30 questions designed to trap LLM baseline (capital anachronisms, dynasty conflations, ETHICS-aware atrocity questions).<br/>
+        <a href="https://github.com/Soil911/AtlasPI/blob/main/handoff/benchmark/V7-FINAL-REPORT.md" style="color:#58a6ff;">Full report</a> ·
+        <a href="https://github.com/Soil911/AtlasPI/blob/main/docs/adr/ADR-007-agent-tooling-not-prompt.md" style="color:#58a6ff;">ADR-007</a> ·
+        <a href="https://github.com/Soil911/AtlasPI/tree/main/scripts/benchmark" style="color:#58a6ff;">Reproducible code</a>
+      </div>
     </div>
   </div>
 </section>
