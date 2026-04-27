@@ -20,29 +20,31 @@ from anthropic import Anthropic
 ATLASPI_BASE = os.environ.get("ATLASPI_BASE_URL", "https://atlaspi.cra-srl.com")
 
 SYSTEM_PROMPT = (
-    "You are a rigorous historian with access to AtlasPI, a structured "
-    "historical geography database for AI agents (1038 entities, 715 Wikidata "
-    "QIDs, capital history timelines, boundary GeoJSON, ETHICS-annotated "
-    "ethical notes).\n\n"
+    "You are a rigorous historian. AtlasPI provides lookup tools for "
+    "structured historical data (entities, rulers, events, snapshots).\n\n"
     "Rules:\n"
-    "1. USE AtlasPI tools whenever relevant for historical facts. Prefer "
-    "AtlasPI data to your training knowledge when they CONFLICT — AtlasPI "
-    "is curated and more up-to-date on capital changes, boundary shifts, "
-    "and corrections over traditional encyclopedias.\n"
-    "2. HOWEVER, AtlasPI is INCOMPLETE on some dimensions: rulers table may "
-    "have only partial dynasties (e.g. only early emperors of a polity), "
-    "events bank has ~643 events. If AtlasPI gives partial data, "
-    "SUPPLEMENT with your training knowledge. Do NOT omit well-established "
-    "historical facts just because AtlasPI doesn't list them. Example: "
-    "if get_rulers returns only old emperors of a polity, and the question "
-    "asks about a specific period, you can answer from training knowledge "
-    "noting 'AtlasPI has entity X but limited ruler coverage for this period'.\n"
-    "3. Cite AtlasPI entity IDs when you use its data (format: [AtlasPI:123]).\n"
-    "4. Be precise with dates, names, places. Prefer the ground-truth level "
-    "of detail (dynasty names, specific rulers, year ranges).\n"
-    "5. Respond in the same language as the question.\n"
-    "6. Be concise: 2-4 sentences typical. Include dynasty + ruler name when "
-    "relevant to the question period."
+    "1. Use the tools when a factual question benefits from a structured "
+    "lookup: capital of a polity at a given year, ruler list, events around "
+    "a date, list of polities active in a snapshot year, fuzzy entity name "
+    "search.\n"
+    "2. When a tool returns empty, partial, or no relevant result, "
+    "EXPLICITLY acknowledge it and answer from your training knowledge "
+    "with appropriate hedging. Example: 'AtlasPI has limited ruler data "
+    "for this period; from my training knowledge, [Ruler X] is well-"
+    "documented as ruling [years].'\n"
+    "3. Do NOT claim 'according to AtlasPI...' unless you actually called "
+    "the tool and got a result. If you answer from training, say 'from my "
+    "training' or omit attribution rather than fabricating one.\n"
+    "4. Cite AtlasPI entity IDs only when you used tool data for that "
+    "specific fact (format: [AtlasPI:123]).\n"
+    "5. Be precise with dates, names, places. Include dynasty/ruler name "
+    "when the question asks about a specific period.\n"
+    "6. Respond in the same language as the question.\n"
+    "7. Be concise: 2-4 sentences typical.\n\n"
+    "v7.1 prompt revision (post benchmark v7.0): superiority claims about "
+    "AtlasPI removed because they caused hallucinations when tools were "
+    "unavailable. The agent is now neutral about source authority and "
+    "explicit about deferring to training when tools are silent."
 )
 
 # Tool definitions — equivalenti a MCP tools di AtlasPI
@@ -123,6 +125,60 @@ TOOLS = [
                 "year": {"type": "integer"},
                 "month": {"type": "integer", "minimum": 1, "maximum": 12},
                 "day": {"type": "integer", "minimum": 1, "maximum": 31},
+            },
+            "required": ["year"],
+        },
+    },
+    # v7.1 NEW TOOLS (3 added per ADR-007 implementation item #2)
+    {
+        "name": "get_rulers_at_year",
+        "description": (
+            "List rulers active in a specific year, optionally filtered by region. "
+            "Returns rulers whose reign overlaps the year. Use this for questions "
+            "like 'who was emperor of Y in 1400' or 'who ruled the Silk Road in 750 CE'. "
+            "More direct than get_rulers(entity_id) when you don't yet know the entity."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "year": {"type": "integer", "description": "Year (negative = BCE)"},
+                "region": {"type": "string", "description": "Optional region filter (e.g. 'Europe', 'Middle East', 'East Asia')"},
+            },
+            "required": ["year"],
+        },
+    },
+    {
+        "name": "get_events_by_entity",
+        "description": (
+            "List historical events associated with a specific AtlasPI entity. "
+            "Returns up to 30 events sorted by year. Use this when you have an "
+            "entity_id (from search_entities or get_entity) and want to know its "
+            "key events: foundations, battles, treaties, dissolutions, succession events. "
+            "Different from get_events_at which filters by year, not entity."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "entity_id": {"type": "integer", "description": "AtlasPI entity ID"},
+            },
+            "required": ["entity_id"],
+        },
+    },
+    {
+        "name": "get_languages_at_year_region",
+        "description": (
+            "List historical languages active at a year, optionally filtered by region. "
+            "Returns language records with iso_code, family, script, geographic center. "
+            "Use this for questions about what language was spoken at place X in year Y, "
+            "or which language family dominated a region. AtlasPI has 29 languages "
+            "(Mesoamerican, Semitic, Indo-European, Sino-Tibetan, etc.); coverage is "
+            "stronger on classical/medieval than modern."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "year": {"type": "integer", "description": "Year for language activity"},
+                "region": {"type": "string", "description": "Optional region filter"},
             },
             "required": ["year"],
         },
@@ -250,6 +306,78 @@ def _execute_tool(name: str, inp: dict) -> Any:
                     "casualties": e.get("casualties_high") or e.get("casualties_low"),
                 }
                 for e in events[:15]
+            ]
+
+        # v7.1 NEW TOOLS (per ADR-007 #2)
+        if name == "get_rulers_at_year":
+            params = {"year": inp["year"], "limit": 20}
+            if inp.get("region"):
+                params["region"] = inp["region"]
+            r = requests.get(f"{ATLASPI_BASE}/v1/rulers", params=params, timeout=15)
+            r.raise_for_status()
+            d = r.json()
+            rulers = d.get("rulers", [])
+            return [
+                {
+                    "id": x.get("id"),
+                    "name": x.get("name_original"),
+                    "title": x.get("title"),
+                    "dynasty": x.get("dynasty"),
+                    "reign_start": x.get("reign_start"),
+                    "reign_end": x.get("reign_end"),
+                    "entity_id": x.get("entity_id"),
+                    "entity_name": x.get("entity_name_fallback"),
+                    "region": x.get("region"),
+                }
+                for x in rulers[:15]
+            ]
+
+        if name == "get_events_by_entity":
+            r = requests.get(
+                f"{ATLASPI_BASE}/v1/events",
+                params={"entity_id": inp["entity_id"], "limit": 30},
+                timeout=15,
+            )
+            r.raise_for_status()
+            d = r.json()
+            events = d.get("events", [])
+            # Sort by year ascending
+            events.sort(key=lambda e: e.get("year") or 0)
+            return [
+                {
+                    "id": e.get("id"),
+                    "name": e.get("name_original"),
+                    "year": e.get("year"),
+                    "year_end": e.get("year_end"),
+                    "type": e.get("event_type"),
+                    "location": e.get("location_name"),
+                    "main_actor": e.get("main_actor"),
+                    "casualties": e.get("casualties_high") or e.get("casualties_low"),
+                }
+                for e in events[:20]
+            ]
+
+        if name == "get_languages_at_year_region":
+            params = {"year": inp["year"], "limit": 30}
+            if inp.get("region"):
+                params["region"] = inp["region"]
+            r = requests.get(f"{ATLASPI_BASE}/v1/languages", params=params, timeout=15)
+            r.raise_for_status()
+            d = r.json()
+            langs = d.get("languages", [])
+            return [
+                {
+                    "id": l.get("id"),
+                    "name": l.get("name_original"),
+                    "iso_code": l.get("iso_code"),
+                    "family": l.get("family"),
+                    "script": l.get("script"),
+                    "region_name": l.get("region_name"),
+                    "period_start": l.get("period_start"),
+                    "period_end": l.get("period_end"),
+                    "vitality": l.get("vitality_status"),
+                }
+                for l in langs[:20]
             ]
 
         return {"error": f"unknown tool: {name}"}
