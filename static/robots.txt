@@ -26,40 +26,65 @@ Disallow: /admin/
 
 # AI crawlers (GPTBot, ClaudeBot, Perplexity, etc.) — explicitly welcomed.
 # AtlasPI is designed for AI agents: we want them to find us.
+# Crawl-delay set to 10s to keep load predictable on the single-VPS deployment.
 User-agent: GPTBot
 Allow: /
 Disallow: /admin/
+Crawl-delay: 10
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin/
+Crawl-delay: 10
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin/
+Crawl-delay: 10
 
 User-agent: ClaudeBot
 Allow: /
 Disallow: /admin/
+Crawl-delay: 10
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /admin/
+Crawl-delay: 10
 
 User-agent: anthropic-ai
 Allow: /
 Disallow: /admin/
+Crawl-delay: 10
 
 User-agent: Google-Extended
 Allow: /
 Disallow: /admin/
+Crawl-delay: 10
 
 User-agent: PerplexityBot
 Allow: /
 Disallow: /admin/
+Crawl-delay: 10
 
 User-agent: CCBot
 Allow: /
 Disallow: /admin/
+Crawl-delay: 10
 
 User-agent: Applebot-Extended
 Allow: /
 Disallow: /admin/
+Crawl-delay: 10
 
 User-agent: cohere-ai
 Allow: /
 Disallow: /admin/
+Crawl-delay: 10
 
 User-agent: Bytespider
 Allow: /
 Disallow: /admin/
+Crawl-delay: 10
 
 Sitemap: https://atlaspi.cra-srl.com/sitemap.xml
