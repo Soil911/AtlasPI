@@ -19,7 +19,7 @@ from pydantic import BaseModel
 from shapely.geometry import Point, shape as shapely_shape
 from shapely.errors import GEOSException
 from sqlalchemy import and_, desc, func, or_, select, text
-from sqlalchemy.orm import Session, joinedload, selectinload
+from sqlalchemy.orm import Session, defer, joinedload, selectinload
 
 from src.api.errors import EntityNotFoundError
 from src.cache import cache_response
@@ -180,8 +180,15 @@ class StatsResponse(BaseModel):
 
 # ─── Conversione ─────────────────────────────────────────────────
 
-def _entity_to_response(entity: GeoEntity) -> EntityResponse:
-    """Converte un record ORM in risposta API."""
+def _entity_to_response(entity: GeoEntity, *, include_geometry: bool = True) -> EntityResponse:
+    """Converte un record ORM in risposta API.
+
+    v6.91 PERF (suggestion #72): `include_geometry=False` salta sia il
+    JSON-parse del `boundary_geojson` (costo dominante a limit=300) sia il
+    fetch della colonna dal DB (la colonna è deferita a livello query).
+    Restituisce `boundary_geojson=None` per indicare al consumer che il
+    payload deve essere recuperato via `/v1/entities/{id}` o `/v1/render`.
+    """
     capital = None
     if entity.capital_name and entity.capital_lat is not None:
         capital = CapitalResponse(
@@ -191,7 +198,7 @@ def _entity_to_response(entity: GeoEntity) -> EntityResponse:
         )
 
     geojson = None
-    if entity.boundary_geojson:
+    if include_geometry and entity.boundary_geojson:
         try:
             geojson = json.loads(entity.boundary_geojson)
         except (json.JSONDecodeError, TypeError):
@@ -227,17 +234,25 @@ def _entity_to_response(entity: GeoEntity) -> EntityResponse:
     )
 
 
-def _eager_query(db: Session):
+def _eager_query(db: Session, *, include_geometry: bool = True):
     # selectinload avoids cartesian product on large result sets (suggestion #67).
     # For single-row fetches (get_entity) both strategies are equivalent;
     # for list queries (limit=300) selectinload issues one IN-query per relation
     # instead of N JOINs that multiply rows.
-    return db.query(GeoEntity).options(
+    #
+    # v6.91 PERF (suggestion #72): `include_geometry=False` defer-loads la colonna
+    # `boundary_geojson` — il payload medio per row è ~30-300KB e a limit=300
+    # produce 2.1s di latenza (DB read + JSON parse + serializzazione Pydantic).
+    # Con defer la colonna non viene letta dal disk e non finisce in payload.
+    opts = [
         selectinload(GeoEntity.name_variants),
         selectinload(GeoEntity.territory_changes),
         selectinload(GeoEntity.sources),
         selectinload(GeoEntity.capital_history),  # v6.87 ADR-004
-    )
+    ]
+    if not include_geometry:
+        opts.append(defer(GeoEntity.boundary_geojson))
+    return db.query(GeoEntity).options(*opts)
 
 
 def _apply_sort(q, sort: SortField, order: str = "asc"):
@@ -466,9 +481,23 @@ def list_entities(
     # v6.87 ADR-005: deprecated entities sono escluse di default. Permetti
     # override esplicito per analisi DB-level / debug / migration tools.
     include_deprecated: bool = Query(False, description="Includi entità marcate status='deprecated' (ADR-005)"),
+    # v6.91 PERF (suggestion #72): a limit=300 la /v1/entities ha latency 2.1s
+    # dominata da fetch+parse di 300 boundary_geojson blobs. Con
+    # exclude_geometry=true il campo viene impostato a None nella response
+    # e la colonna è deferita lato DB. Usa /v1/entities/{id} o /v1/render
+    # per recuperare il polygon di una singola entity.
+    exclude_geometry: bool = Query(
+        False,
+        description=(
+            "Se true, omette `boundary_geojson` dalle entity (None in response) "
+            "e ne defer-loada la colonna dal DB. Riduce la latenza a limit alto "
+            "(~10x più veloce a limit=300). Per il polygon usa /v1/entities/{id}."
+        ),
+    ),
     db: Session = Depends(get_db),
 ):
-    q = _eager_query(db)
+    include_geometry = not exclude_geometry
+    q = _eager_query(db, include_geometry=include_geometry)
     q = _apply_bbox_filter(q, bbox)
 
     # v6.87 ADR-005: filter out deprecated entities di default
@@ -507,7 +536,7 @@ def list_entities(
         # Carichiamo tutte le righe che matchano DB-side, filtriamo per continent
         # in Python, poi paginiamo. Costo: O(n) su un set gia' ristretto dai filtri.
         all_results = _apply_sort(q, sort, order).all()
-        entities_all = [_entity_to_response(e) for e in all_results]
+        entities_all = [_entity_to_response(e, include_geometry=include_geometry) for e in all_results]
         entities_filtered = [
             e for e in entities_all
             if e.continent and e.continent.lower() == continent.lower()
@@ -519,7 +548,7 @@ def list_entities(
         total = q.count()
         q = _apply_sort(q, sort, order)
         results = q.offset(offset).limit(limit).all()
-        entities = [_entity_to_response(e) for e in results]
+        entities = [_entity_to_response(e, include_geometry=include_geometry) for e in results]
 
     response.headers["Cache-Control"] = "public, max-age=3600"
     # v6.66 FIX 4: sia `total` (canonico) sia `count` (legacy deprecato).

@@ -32,6 +32,18 @@ class TestListEntities:
         r = client.get("/v1/entities")
         assert "cache-control" in r.headers
 
+    def test_exclude_geometry_omits_boundary(self, client):
+        r = client.get("/v1/entities?limit=5&exclude_geometry=true")
+        assert r.status_code == 200
+        for e in r.json()["entities"]:
+            assert e["boundary_geojson"] is None
+
+    def test_default_includes_geometry_when_present(self, client):
+        r = client.get("/v1/entities?limit=20")
+        assert r.status_code == 200
+        with_geom = [e for e in r.json()["entities"] if e["boundary_geojson"] is not None]
+        assert with_geom, "Senza exclude_geometry almeno un'entity deve avere il polygon"
+
 
 class TestGetEntity:
     def _first_id(self, client):
