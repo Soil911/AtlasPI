@@ -2,6 +2,57 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.92.3] - 2026-05-13
+
+**Tema**: *audit R10 — retention policy api_request_logs*
+
+### R10 — Prune di api_request_logs ogni 24h (90 giorni TTL)
+
+La tabella `api_request_logs` cresceva senza retention: ~90k righe in
+30 giorni osservato (CHANGELOG v6.32), proiezione ~1.1M righe/anno.
+Senza pulizia, analytics queries con `GROUP BY user_agent` o
+`COUNT() WHERE timestamp BETWEEN` diventavano sempre piu' lente.
+
+**Componenti**:
+
+1. `scripts/prune_old_logs.py` — script standalone CLI con `--days`
+   e `--dry-run`. Riusabile da `docker exec` o cron host.
+
+   ```
+   docker exec cra-atlaspi python -m scripts.prune_old_logs --dry-run
+   docker exec cra-atlaspi python -m scripts.prune_old_logs --days 90
+   ```
+
+2. `src/main.py::_maybe_prune_logs_locked()` — chiamato nel
+   `lifespan` dopo gli altri guard al boot. Idempotente cross-worker
+   via Redis `SET NX EX 86400` su chiave `atlaspi:prune_logs_last_run`:
+   solo un worker per finestra 24h esegue la DELETE. Gli altri worker
+   skippano in silenzio. Se Redis e' giu' (dev locale), esegue senza
+   lock — tabella di solito vuota in dev, race trascurabile.
+
+3. `tests/test_prune_old_logs.py` — 4 test che coprono dry-run,
+   delete reale, zero-noop, idempotenza ripetuta.
+
+**Logica del cutoff**: il campo `timestamp` di `ApiRequestLog` e' ISO
+8601 string UTC. Confronto lessicografico = confronto cronologico per
+ISO 8601 — quindi `WHERE timestamp < '2026-02-12T...'` funziona senza
+parsing.
+
+**ETHICS / data retention**: i log contengono path + IP + user-agent +
+status + timing. IP e' considerato PII in alcune giurisdizioni — 90
+giorni e' uno standard ragionevole per analytics senza accumulare PII.
+
+### Verifica attesa post-deploy
+
+- `cra-logs atlaspi 100` cercando `Prune api_request_logs:` o
+  "Nessun log piu' vecchio".
+- `docker exec cra-atlaspi-redis redis-cli GET atlaspi:prune_logs_last_run`
+  ritorna `"running"` con TTL ~86400s post-prima-startup.
+- Tabella `api_request_logs` mantiene size proporzionale a ~90 giorni
+  di traffico, non cresce indefinitamente.
+
+---
+
 ## [v6.92.2] - 2026-05-13
 
 **Tema**: *audit R4 — CI postgres + cleanup lint debt preesistente*

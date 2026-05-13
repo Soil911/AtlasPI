@@ -92,6 +92,47 @@ def _run_alembic_migrations():
         raise
 
 
+def _maybe_prune_logs_locked(days: int = 90) -> None:
+    """Prune api_request_logs older than `days`, idempotente cross-worker.
+
+    v6.92.3 (audit R10): la tabella api_request_logs cresce ~90k righe/30
+    giorni in prod (osservato CHANGELOG v6.32). Senza retention diventa
+    milioni in un anno, e analytics queries (admin/insights GROUP BY user_agent)
+    diventano lente.
+
+    Idempotenza cross-worker:
+    - Acquire `atlaspi:prune_logs_last_run` via Redis SET NX EX 86400.
+    - Solo un worker per finestra 24h riesce. Gli altri lo skippano.
+    - Se Redis non disponibile (dev locale, Redis down), esegui senza
+      lock — in dev e' di solito 1 worker o tabella vuota, non c'e' race.
+
+    Lo script standalone `python -m scripts.prune_old_logs` resta
+    disponibile per esecuzioni manuali / ad-hoc.
+    """
+    from src.cache import get_redis
+
+    LOCK_KEY = "atlaspi:prune_logs_last_run"
+
+    redis_client = get_redis()
+    if redis_client is not None:
+        try:
+            # SET NX EX 86400 — true se acquisito, false se gia' presente.
+            acquired = redis_client.set(LOCK_KEY, "running", nx=True, ex=86400)
+            if not acquired:
+                logger.debug("Prune skipped: altro worker l'ha eseguito nelle ultime 24h")
+                return
+        except Exception:
+            logger.warning("Redis lock per prune fallito, eseguo senza lock", exc_info=True)
+            # Procediamo comunque — duplicato e' tollerabile (idempotente).
+
+    # Import lazy per non caricare scripts/ se prune non viene eseguito.
+    from scripts.prune_old_logs import prune_old_logs
+
+    deleted = prune_old_logs(days=days, dry_run=False)
+    if deleted > 0:
+        logger.info("Prune api_request_logs: %d righe rimosse (retention %d giorni)", deleted, days)
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Crea tabelle e popola dati demo all'avvio."""
@@ -202,6 +243,16 @@ async def lifespan(app: FastAPI):
                 )
         except Exception:
             logger.warning("Antimeridian guard fallito", exc_info=True)
+
+    # v6.92.3 (audit R10): retention policy api_request_logs (90 giorni).
+    # Idempotente cross-worker via Redis SET NX EX 86400 — solo un
+    # worker per ~24h esegue la query DELETE. Fuori da AUTO_SEED perche'
+    # va in dev/prod allo stesso modo (la tabella esiste sempre, solo
+    # in dev e' tipicamente vuota).
+    try:
+        _maybe_prune_logs_locked(days=90)
+    except Exception:
+        logger.warning("Prune api_request_logs fallito", exc_info=True)
 
     logger.info("AtlasPI pronto")
     yield
