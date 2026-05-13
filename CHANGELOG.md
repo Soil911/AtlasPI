@@ -2,6 +2,48 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.6] - 2026-05-13
+
+**Tema**: *enrichment session 008 — SE Asia maritime kingdoms (major classical)*
+
+6 major SE Asia entity Classical/Medieval boost: tutte da 3 a 6 sources,
+conf → 0.85.
+
+### Entità arricchite
+
+| id | name | era | conf delta |
+|----|------|-----|------------|
+| 139 | ហ្វូណន (Funan) | 50-550 | 0.5x→0.85 |
+| 50 | Campā (Champa) | 192-1832 | 0.65→0.85 |
+| 42 | ศรีวิชัย (Srivijaya) | 650-1377 | 0.65→0.85 |
+| 19 | អាណាចក្រខ្មែរ (Khmer/Angkor) | 802-1431 | 0.7x→0.85 |
+| 129 | ပုဂံ ခေတ် (Pagan/Bagan) | 849-1297 | 0.7x→0.85 |
+| 130 | 大越 (Đại Việt) | 968-1802 | 0.7x→0.85 |
+
+### Source highlights
+
+- Coedès *Indianized States of Southeast Asia* (U Hawaii Press)
+- Higham *Archaeology of Mainland Southeast Asia* (Cambridge UP)
+- Aung-Thwin *Pagan: Origins of Modern Burma* (U Hawaii)
+- Taylor *A History of the Vietnamese* (Cambridge UP)
+- Kiernan *Việt Nam: A History* (Oxford UP)
+- Lockhart & Tran *The Cham of Vietnam* (NUS Press Singapore)
+- Hall *History of Early Southeast Asia* (Rowman & Littlefield)
+- Luce *Old Burma – Early Pagán* (J.J. Augustin)
+- Manguin *Trading Ships of the South China Sea* (Brill JESHO)
+- Vickery *Funan reviewed* (BEFEO)
+- Stark *Pre-Angkorian Settlement Trends* (IPPA)
+- Zhou Daguan *Customs of Cambodia* (1296 primary source)
+
+### Cumulative stats (S1-S8)
+
+- **Total entities arricchite**: **85** (8.5% del DB attivo)
+- **Total sources**: 2400 → **3068** (+668)
+- **Entity con ≥3 sources**: 645 (65%)
+- **Entity con ≥5 sources**: **78** (8%)
+
+---
+
 ## [v6.99.5] - 2026-05-13
 
 **Tema**: *enrichment session 007 — Africa Sahel + Burma Pyu + Mesopotamia/Levant ancient*
