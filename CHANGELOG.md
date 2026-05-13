@@ -2,6 +2,74 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.20] - 2026-05-13
+
+**Tema**: *enrichment session 027 — Crusaders + steppe + Swahili + Javanese + Hausa + Mexican (10 entity)*
+
+### S27 — gap analysis sustained (10)
+**Nogay Horde** (338, conf 0.55→0.85, era 1390-1634, post-Mongol steppe),
+**Crusader Tripoli** (471, conf 0.55→0.85, era 1102-1289),
+**Crusader Edessa** (473, conf 0.60→0.85, era 1098-1150),
+**Brabant** (582, conf 0.50→0.85, era 1183-1795, Low Countries),
+**Tlaxcallan** (643, conf 0.55→0.85, era 1348-1525, Mexica resistance),
+**Cirebon Sultanate** (695, conf 0.55→0.85, era 1527-1677, Javanese Islamic),
+**Melayu Kingdom** (866, conf 0.55→0.85, era 671-1347, Sumatra),
+**Haudenosaunee proto-confederacy** (941, conf 0.50→0.85, era 800-1142),
+**Gobir** (978, conf 0.50→0.85, era 1000-1808, Hausa Bakwai),
+**Mafia Sultanate** (1020, conf 0.50→0.85, era 1100-1500, Swahili).
+
+Tutte le 10 entità ora con 7-8 sources ciascuna (50 nuove sources accademiche totali).
+
+### Source highlights
+
+**Crusader states** — Harvard UP (Tyerman *God's War*), Yale UP (Barber
+*Crusader States*), Cambridge UP (Kennedy *Crusader Castles*), Palgrave
+(Riley-Smith *Hospitaller*), Antonianum (Ferdinandi *Edessa*),
+Penn UP (MacEvitt *Christian World of the East*), Geuthner (Amouroux-Mourad).
+
+**Eurasian steppe** — Indiana UP (Khodarkovsky *Steppe Frontier*),
+Routledge (Davies *Black Sea Steppe*), Vostochnaya Literatura
+(Trepavlov *История Ногайской Орды*), Cambridge UP (Sinor),
+*Harvard Ukrainian Studies* (Başer).
+
+**Hausa** — Présence africaine (Hama *Histoire du Gobir et de Sokoto*),
+Oxford UP (Hogben & Kirk-Greene), Brill (Last in *Being and Becoming Hausa*),
+UNESCO/Heinemann (Adamu), *Anthropos* (Lange).
+
+**Swahili (Mafia)** — Tanganyika Antiquities (Chittick *Kisimani Mafia*),
+Blackwell (Horton & Middleton), Cambridge UP (Pouwels), Routledge
+(LaViolette & Fleisher *Swahili World*), *Azania* (Wright).
+
+**Sumatra (Melayu)** — U Hawai'i Press (Cœdès), Editions Didier Millet
+(Munoz *Early Kingdoms Indonesian Archipelago*), Routledge (Miksic & Goh
+*Ancient Southeast Asia*), Munshiram (I-Tsing primary), *Moussons* (Manguin).
+
+**Mesoamerica (Tlaxcallan)** — Yale/Stanford UP (Gibson 1952), *LAA*
+(Fargher, Blanton, Heredia Espinoza — Egalitarian Ideology), Penn State UP
+(Restall & Asselbergs), UATX (Muñoz Camargo 1585 primary), U Oklahoma Press
+(Hassig *Aztec Warfare*).
+
+**NE Woodlands (Haudenosaunee)** — Smithsonian (*Handbook NA Indians* Vol 15),
+Blackwell (Snow *Iroquois*), Syracuse UP (Engelbrecht *Iroquoia*),
+Cornell UP (Dennis *Landscape of Peace*), *AICRJ* (Mann & Fields).
+
+**Low Countries (Brabant)** — Cornell UP (Arnade *Realms of Ritual*),
+Penn UP (Blockmans & Prevenier *Promised Lands*), Oxford UP (Stein,
+Israel *Dutch Republic*), KVAB (Avonds).
+
+**Javanese (Cirebon)** — Palgrave (Ricklefs *History of Modern Indonesia*),
+Gramedia (Guillot *Banten*), Edinburgh UP (Peacock *Islamisation*),
+LKiS (Muljana), KITLV/Brill (Noorduyn & Teeuw).
+
+### Cumulative stats post-S27
+
+- **Total entities arricchite**: **~238** (23.8% del DB attivo)
+- **Total sources**: 3617 → **3667** (+50)
+- **Entity con ≥3 sources**: **796** (80%)
+- **Entity con ≥5 sources**: **234** (23.4%)
+
+---
+
 ## [v6.99.19] - 2026-05-13
 
 **Tema**: *enrichment session 026 — Kilwa + Chenla + Crusader Antioch + Eurasian steppe + Igbo + Lithuania + Cherokee (10 entity)*
