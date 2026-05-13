@@ -2,6 +2,41 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.2] - 2026-05-13
+
+**Tema**: *enrichment session 004 — Italian maritime republics (analytics gap)*
+
+Search analytics ha rivelato "venice" come 2° top search query (32 hits)
+ma l'entità `Serenìsima Repùblega de Venèsia` (id=23) aveva solo 2 fonti.
+Stessa situazione per Florence (id=82) e Genoa (id=81, confidence 0.43!).
+
+### Entità arricchite
+
+| id | name | search hits | sources before→after | conf before→after |
+|----|------|-------------|----------------------|-------------------|
+| 23 | Serenìsima Repùblega de Venèsia | 32 | 2→6 | 0.75→0.90 |
+| 82 | Repubblica di Firenze | 4 + indirect | 2→6 | 0.75→0.88 |
+| 81 | Republique de Genes | indirect | 2→6 | 0.43→0.78 |
+
+### Sources highlight
+
+- Lane, F. C. (1973). *Venice: A Maritime Republic*. Johns Hopkins UP.
+- Norwich, J. J. (1982). *A History of Venice*. Allen Lane/Penguin.
+- Crouzet-Pavan, E. (2002). *Venice Triumphant*. Johns Hopkins UP.
+- Najemy, J. M. (2006). *A History of Florence 1200-1575*. Wiley-Blackwell.
+- Brucker, G. A. (1998). *Florence: The Golden Age*. UC Press.
+- Epstein, S. A. (2002). *Genoa and the Genoese, 958-1528*. UNC Press.
+- Kirk, T. A. (2005). *Genoa and the Sea*. Johns Hopkins UP.
+
+### Cumulative stats (Sessions 1+2+3+4)
+
+- **Total entities arricchite**: 44 (4.4% del DB attivo)
+- **Total sources**: 2400 → **2945** (+545)
+- **Genoa confidence biggest jump**: 0.43 → 0.78 (+0.35)
+- **Italian republics: 100% top quality**
+
+---
+
 ## [v6.99.1] - 2026-05-13
 
 **Tema**: *enrichment session 002+003 — 20 top-demanded entity arricchite (analytics-driven)*
