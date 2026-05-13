@@ -2,6 +2,64 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.22] - 2026-05-13
+
+**Tema**: *enrichment session 029 — Native N America + Caribbean Taíno + Swahili Lamu coast (10 entity)*
+
+### S29 — Americas + Indian Ocean (10)
+**Apalachee** (777, conf 0.50→0.85, era 1000-1704, Florida panhandle),
+**Niswi-mishkodewinan** (778, conf 0.50→0.85, era 1400-1855, Three Fires Anishinaabe),
+**Shawanwaki / Shawnee** (780, conf 0.50→0.85, era 1400-1832, Ohio Valley),
+**Chahta Yakni / Choctaw** (782, conf 0.50→0.85, era 1500-1830),
+**Xaragua** (797, conf 0.55→0.85, era 1300-1504, Taíno Hispaniola SW),
+**Malindi** (823, conf 0.55→0.85, era 1100-1593, Swahili Kenya),
+**Pate Sultanate** (825, conf 0.55→0.85, era 1200-1895, Lamu archipelago),
+**Cuba cacicazgos** (947, conf 0.55→0.85, era 1200-1540, Taíno),
+**Jamaica cacicazgos** (948, conf 0.55→0.85, era 1200-1600, Taíno Xaymaca),
+**Vumba Kuu** (1017, conf 0.50→0.80, era 1300-1700, Swahili Diani Kenya).
+
+Tutte le 10 entità ora con 7 sources ciascuna (50 nuove sources accademiche totali).
+
+### Source highlights
+
+**SE US Native** — U Press of Florida (Hann *Apalachee*, Milanich
+*Spanish Missions*, Hann & McEwan *San Luis*, Worth *Timucuan Chiefdoms*),
+Smithsonian (McEwan), U Nebraska Press (Galloway *Choctaw Genesis 1500-1700*,
+O'Brien), U Alabama Press (Swanton), U Oklahoma Press (Kidwell),
+Michigan State UP (Akers *Land of Death*).
+
+**Ohio Valley / Great Lakes** — Yale UP (Lakomäki *Gathering Together
+— Shawnee*), Ohio U Press (Howard), UNC Press (Warren *Worlds the Shawnees
+Made*), MN Historical Society (Warren *Ojibway People*), Cambridge UP
+(White *Middle Ground*), Penn UP (Witgen *Infinity of Nations*),
+U Oklahoma Press (Edmunds *Potawatomis*).
+
+**Caribbean Taíno** — Yale UP (Rouse *Tainos*), Oxford UP (Keegan &
+Hofman *Caribbean Before Columbus*), U Pittsburgh Press (Dacal Moure &
+Rivero de la Calle), U Press of Florida (Wilson *Indigenous People of
+the Caribbean*), UWI Press (Atkinson *Jamaican Taíno*), U Alabama Press
+(Wilson *Hispaniola*, Allsworth-Jones *Pre-Columbian Jamaica*),
+UNESCO/Macmillan (Sued-Badillo Vol I), Gutenberg (Las Casas primary).
+
+**Swahili Kenya** — Yale UP (Middleton *World of the Swahili*),
+Blackwell (Horton & Middleton), BIEA (Horton *Shanga*),
+Michigan State UP (Tolmacheva *Pate Chronicle*), Université Paris I
+(Vernet *Cités-États Swahili Lamu 1585-1810*), Oxford UP
+(Freeman-Grenville), C. Struik (Axelson), National Museums of Kenya
+(Martin, Wilson *Monumental Architecture*), James Currey (Allen
+*Swahili Origins — Shungwaya*), *J. Afr. History* (Berg).
+
+### Cumulative stats post-S29
+
+- **Total entities arricchite**: **~258** (25.8% del DB attivo)
+- **Total sources**: 3717 → **3767** (+50)
+- **Entity con ≥3 sources**: **816** (82%)
+- **Entity con ≥5 sources**: **254** (25.4%)
+
+**Milestone: 25%+ entity arricchite, 82% con ≥3 sources, 25%+ con ≥5 sources.**
+
+---
+
 ## [v6.99.21] - 2026-05-13
 
 **Tema**: *enrichment session 028 — Mississippian + HRE residual + Africa interior + Andes Chanka + Akan (10 entity)*
