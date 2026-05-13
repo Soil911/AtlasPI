@@ -2,6 +2,70 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.1] - 2026-05-13
+
+**Tema**: *enrichment session 002+003 — 20 top-demanded entity arricchite (analytics-driven)*
+
+Continuazione iterativa di v6.99.0. Sessioni 2 e 3 sono **data-driven**:
+priority calcolata da `api_request_logs` (top entity richieste ultimo
+mese) cross-validated con `sources count < 3`.
+
+### Entità arricchite (20)
+
+**Session 2 (16 entity, 4 batch):**
+
+- Ancient empires top-demand: Achaemenid (27, 19hits), Kemet (26, 15hits),
+  Kush (52, 18hits), Qart-ḥadašt Carthage (36, 11hits)
+- Egypt + Horn of Africa: Punt (1031, 12hits — conf 0.40→0.60),
+  Solomonic Ethiopia (1005, 13hits), Sultanate of Shewa (1006, 11hits —
+  conf 0.45→0.65), Zeila (1007, 11hits)
+- Sahel polities: Wadan (1001), Oualata (1002), Banu Midrar (986),
+  al-Tunjur (1033 — conf 0.30→0.55 — biggest jump)
+- Misc: Byzantine (11, 24 search hits — conf 0.85→0.95), Lan Fang (705),
+  Zeta (665), Polotsk (679)
+
+**Session 3 (4 entity):**
+
+- Hammadid (988, 11hits), Vidin Tsardom (664, 11hits),
+  Lemro/Mrauk-U Arakan (875, 12hits), Ta-hua-lo/Lavo Kingdom (900, 12hits)
+
+### Source highlights (Sessions 2+3)
+
+- Stanford UP (Treadgold *History of the Byzantine State and Society*)
+- Oxford UP (Kaldellis *Short History of Byzantine Empire*)
+- Brill (Chekroun & Hirsch *Sultanates of Medieval Ethiopia*, Baadj
+  *Saladin & Banū Ghāniya*)
+- University of Michigan Press (Fine *Late Medieval Balkans*)
+- Cambridge History of Africa (Fage & Oliver eds)
+- *Encyclopaedia of Islam* 2nd ed. (Hammadid, Midrar entries)
+- *Journal of African History*, *Journal of North African Studies*
+- PLoS ONE (Schwartz *Punic Carthage Sacrifice*, Matisoo-Smith *Phoenician mtDNA*)
+- 60+ DOI citations totali (sessione 2+3)
+
+### Combined stats post-session 3
+
+- **Total entities arricchite (S1+S2+S3)**: 41 (4.1% del DB attivo)
+- **Total sources**: 2400 → **2942** (+542 da inizio audit)
+- **Entity con ≥3 sources**: 530 → **618** (62% del DB attivo)
+- **Top 40 demanded entity con ≥3 sources**: 40/40 ✅ (era ~5/40 pre-enrichment)
+
+### Workflow consolidato
+
+Documentato in `data/enrichment/session_002_top_demanded.md`. Pattern:
+
+1. SQL analytics → top demanded ∩ sources<3
+2. WebFetch parallel (4-5 entity per batch)
+3. SQL apply via SSH + confidence update
+4. Log markdown per checkpoint sessioni future
+
+### Next iteration
+
+- Search query "venice" (32 hits) → curation gap, no Venezia entity?
+- Entità sotto-coperte: Centro-Asia, India pre-Mughal, SE Asia maritime
+- Manual curation queue: Izapa, Salinar, Gallinazo, Tekrur, Lembeh-Shemba
+
+---
+
 ## [v6.99.0] - 2026-05-13
 
 **Tema**: *enrichment session 001 — 21 entità priority arricchite con fonti academic*
