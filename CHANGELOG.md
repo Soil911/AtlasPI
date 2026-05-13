@@ -2,6 +2,39 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.9] - 2026-05-13
+
+**Tema**: *enrichment session 011 — Aboriginal Australia + Olmec residuali + Marshall Islands*
+
+5 entity arricchite (3 sources each).
+
+| id | name | era | conf delta |
+|----|------|-----|------------|
+| 771 | Noongar boodja | -40000 to 1829 | 0.55→0.70 |
+| 772 | Wiradjuri | -20000 to 1840 | 0.55→0.70 |
+| 923 | San Lorenzo Tenochtitlán (Olmec) | -1500 to -900 | 0.5x→0.85 |
+| 962 | Tres Zapotes (Olmec) | -900 to 300 | 0.5x→0.85 |
+| 634 | Ralik-Ratak (Marshall Islands) | -2000 to 1885 | 0.5x→0.70 |
+
+### Source highlights
+
+- Cambridge UP (Pool *Olmec Archaeology and Early Mesoamerica*)
+- Thames & Hudson (Diehl *The Olmecs*)
+- U Texas Press (Coe & Diehl *In the Land of the Olmec*)
+- U Hawaii Press (Hezel *First Taint of Civilization*)
+- U Western Australia Press (Tilbrook *Nyungar Tradition*, Haebich)
+- ANU Press / UC Press (Tindale *Aboriginal Tribes of Australia*)
+- *Aboriginal History* journal (Donaldson 1984)
+
+### Cumulative stats post-S11
+
+- **Total entities arricchite**: **105** (10.5%)
+- **Total sources**: 2400 → **3128** (+728)
+- **Entity con ≥3 sources**: 656 (66%)
+- **Entity con ≥5 sources**: **98** (10%)
+
+---
+
 ## [v6.99.8] - 2026-05-13
 
 **Tema**: *enrichment session 010 — Sparta + Andean Formative + Olmec + NE Asia minor + Powhatan = 100 entity milestone*
