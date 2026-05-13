@@ -216,33 +216,18 @@ async def lifespan(app: FastAPI):
                 )
         except Exception:
             logger.warning("Sync chains fallito", exc_info=True)
-        # v6.30: guard against displaced aourednik fuzzy matches (ETHICS-006)
-        # Runs every startup; idempotent (only fixes entities with >3000km displacement).
+        # v6.93.0 (audit R12): boundary guards consolidati in un'unica
+        # facade `src/ingestion/boundary_guards.py`. Prima erano 2 try/except
+        # separati con log non uniformi; ora 1 chiamata + summary unificato.
+        # Guards inclusi:
+        #   1. fix_displaced_aourednik (ETHICS-006 follow-up)
+        #   2. fix_antimeridian_and_wrong_polygons (v6.31 wrong-country +
+        #      antimeridian-crossing fix)
         try:
-            from src.ingestion.fix_displaced_aourednik import fix_displaced
-            disp_stats = fix_displaced(dry_run=False)
-            if disp_stats.get("fixed", 0) > 0:
-                logger.warning(
-                    "Displaced aourednik rollback: fixed %d entities (threshold 3000km)",
-                    disp_stats["fixed"],
-                )
+            from src.ingestion.boundary_guards import run_boundary_guards_at_boot
+            run_boundary_guards_at_boot()
         except Exception:
-            logger.warning("Displacement guard fallito", exc_info=True)
-        # v6.31: guard against antimeridian-crossing and wrong-polygon inheritors
-        # (Alaska wraps +180 causing USA label in France; tribes inheriting full
-        # USA polygon; USSR getting modern Russia polygon; Fiji/NZ antimeridian)
-        try:
-            from src.ingestion.fix_antimeridian_and_wrong_polygons import fix_all
-            am_stats = fix_all(dry_run=False)
-            total_fixed = am_stats.get("wrong_polygon_fixed", 0) + am_stats.get("antimeridian_clipped", 0)
-            if total_fixed > 0:
-                logger.warning(
-                    "Antimeridian/wrong-polygon fix: %d wrong-polygon resets + %d antimeridian clips",
-                    am_stats["wrong_polygon_fixed"],
-                    am_stats["antimeridian_clipped"],
-                )
-        except Exception:
-            logger.warning("Antimeridian guard fallito", exc_info=True)
+            logger.warning("Boundary guards al boot fallito", exc_info=True)
 
     # v6.92.3 (audit R10): retention policy api_request_logs (90 giorni).
     # Idempotente cross-worker via Redis SET NX EX 86400 — solo un

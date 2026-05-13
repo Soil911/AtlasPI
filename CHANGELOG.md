@@ -2,6 +2,93 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.93.0] - 2026-05-13
+
+**Tema**: *audit closure — R12 boundary guards consolidate + R9 API versioning policy*
+
+Continua lo sprint dell'audit architetturale. Due item indipendenti
+bundleati perche' entrambi backward-compatible (no schema, no API
+breaking).
+
+### R12 — Consolidate boundary guards into single facade
+
+Prima del refactor, `src/main.py::lifespan` chiamava 2 funzioni
+separate da 2 moduli diversi:
+
+```python
+# v6.30 — Displaced aourednik rollback
+try:
+    from src.ingestion.fix_displaced_aourednik import fix_displaced
+    disp_stats = fix_displaced(dry_run=False)
+    if disp_stats.get("fixed", 0) > 0:
+        logger.warning("Displaced aourednik rollback: %d", ...)
+except Exception:
+    logger.warning("Displacement guard fallito")
+
+# v6.31 — Antimeridian + wrong-polygon
+try:
+    from src.ingestion.fix_antimeridian_and_wrong_polygons import fix_all
+    am_stats = fix_all(dry_run=False)
+    ...
+```
+
+24 righe di boilerplate, log non uniformi, ordine implicito.
+
+**Fix** (`src/ingestion/boundary_guards.py`):
+
+```python
+def run_boundary_guards_at_boot() -> dict:
+    """Orchestra tutti i boundary guard in sequenza, summary unificato."""
+    ...
+```
+
+`lifespan` ora chiama 1 funzione + 1 try/except + log summary
+unificato:
+
+```
+Boundary guards al boot: X displaced rollback + Y wrong-polygon reset + Z antimeridian clipped
+```
+
+I file legacy `fix_bad_boundaries_v671/v672/v673.py` NON erano gia'
+chiamati al boot — restano per uso CLI manuale (audit history). Nessun
+file rimosso.
+
+### R9 — ADR-008 API versioning policy
+
+ADR-002 prometteva "introdurre /v2/ se necessario" senza definire
+**cosa** conta come breaking, **quando** aprire /v2/, **come** gestire
+la finestra di compatibilita'. Risultato: in v6.32 sono stati rimossi
+silenziosamente `top_ips`/`unique_ips` da `/admin/analytics/data` —
+breaking di fatto che ha rotto 3 test (v6.92.4 xfail).
+
+`docs/adr/ADR-008-api-versioning.md` definisce:
+
+1. **Classificazione change** — additive vs soft breaking vs hard
+   breaking, ognuno con regola di gestione esplicita.
+2. **Trigger /v2/** — ≥3 hard breaking in coda OR urgenza esterna OR
+   refactor strutturale (es. cambio coordinate ref system).
+3. **Protocollo /v2/** — co-esistenza ≥6 mesi, header
+   `Deprecation`/`Sunset`/`Link successor-version`, sunset con `410 Gone`.
+4. **Deprecation in /v1/** — N-1 release con field-as-null e
+   `Sunset` header, N rimozione fisica.
+5. **Docs sincroni** — landing, llms.txt, ai-plugin.json, MCP tools,
+   tutti aggiornati alla stessa release breaking.
+6. **Esenzioni** — `/admin/*` e `/v1/csp-report` non seguono policy
+   (consumer interni / browser-internal).
+
+Niente cambio di codice ora; lo state attuale di `/v1/` resta. La
+policy si applica a tutte le change future.
+
+### Nessun cambio di schema, runtime, o behavior pubblico
+
+- `/health` invariato
+- `/v1/*` invariato
+- Tutti i 1205 test passano (1204 + 1 nuovo guard test implicito nel
+  lifespan smoke).
+- Lint pulito.
+
+---
+
 ## [v6.92.4] - 2026-05-13
 
 **Tema**: *audit closure — CI green (test housekeeping)*
