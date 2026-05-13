@@ -2,6 +2,64 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.24] - 2026-05-13
+
+**Tema**: *enrichment session 031 — HRE residual + Atacama + Tai/Mon + Tondo + Mande/Akan (10 entity)*
+
+### S31 — cross-region cleanup (10)
+**Tundo / Tondo** (367, conf 0.50→0.85, era 900-1589, Philippines pre-Hispanic),
+**Kurland und Semgallen** (574, conf 0.50→0.85, era 1561-1795, Baltic vassal),
+**Landgrafschaft Hessen** (578, conf 0.50→0.85, era 1264-1567, Henry the Child),
+**Kurfürstentum Pfalz** (581, conf 0.50→0.85, era 1356-1803, Wittelsbach),
+**Hertugdømmet Slesvig** (655, conf 0.50→0.85, era 1058-1864, Danish-German),
+**Phayao** (889, conf 0.55→0.85, era 1094-1338, N Thai pre-Lan Na),
+**Mottama / Martaban** (904, conf 0.55→0.85, era 1287-1369, Mon Wareru),
+**Likan-antay / Atacama** (958, conf 0.55→0.85, era 500-1536, Chile Atacama),
+**Kaabu Nsiiw** (983, conf 0.55→0.85, era 1200-1867, Mandinka Senegambia),
+**Bighu / Begho** (1015, conf 0.40→0.85, era 1400-1500, Akan trading).
+
+Tutte le 10 entità ora con 7-8 sources ciascuna (50 nuove sources accademiche totali).
+
+### Source highlights
+
+**HRE residual** — Belknap/Harvard UP (Wilson *Heart of Europe HRE*),
+Bärenreiter (Demandt), Vandenhoeck & Ruprecht (Reuling), G. Braun
+(Kohnle *Kurpfalz*), Penguin (Wilson *Thirty Years War*), Klett-Cotta
+(Press *Calvinismus*), Cambridge UP (Plakans *Baltic States*),
+Wachholtz (Lange *Schleswig-Holsteins*, Brandt), Gads Forlag (Bregnsbo),
+Steiner Verlag (Bues — Kurland).
+
+**Andes (Atacama)** — Editorial Universitaria (Núñez *Cultura y conflicto
+San Pedro Atacama*), Museo Chileno Arte Precolombino (Berenguer & Martínez),
+Pehuén/UCN (Llagostera *Salar de Atacama*), Andrés Bello (Hidalgo
+*Culturas de Chile*), Americanistas (Tarragó).
+
+**SE Asia (Phayao, Mottama)** — Yale UP (Wyatt *Thailand*),
+Silkworm Books (Penth *Brief History of Lan Na*, Ongsakul, Wyatt
+& Wichienkeeo *Chiang Mai Chronicle*), U Hawai'i Press (Cœdès,
+Aung-Thwin *Mists of Rāmañña*), River Books (Moore & San Win
+— Sampanago/Muttama), FSG (Myint-U *Lost Footsteps*).
+
+**Philippines (Tondo)** — Ateneo de Manila UP (Scott *Barangay*),
+U Hawai'i Press (Junker *Raiding, Trading, Feasting*),
+PUNLAD (Jocano *Filipino Prehistory*), New Day (Scott *Prehispanic Source
+Materials*), *Philippine Studies* (Postma — Laguna Copper-Plate).
+
+**W Africa (Kaabu, Begho)** — Cambridge UP (Barry *Senegambia and the
+Atlantic Slave Trade*), Karthala (Niane *Histoire des Mandingues — Gabou*),
+Michigan State UP (Glovsky *Kaabu*), Ohio U Press / J. Currey (Forrest),
+*JWAH* (Posnansky *Begho*), BAR Publishing (Compton *Kranka Dada*),
+*CEA* (Massing *Wangara Soninke*), Duke UP (Konadu & Campbell *Ghana Reader*).
+
+### Cumulative stats post-S31
+
+- **Total entities arricchite**: **~278** (27.8% del DB attivo)
+- **Total sources**: 3817 → **3867** (+50)
+- **Entity con ≥3 sources**: **835** (84%)
+- **Entity con ≥5 sources**: **274** (27.4%)
+
+---
+
 ## [v6.99.23] - 2026-05-13
 
 **Tema**: *enrichment session 030 — Plains + SE Mississippian + E Africa interior + Hawaii + Solomons (10 entity)*
