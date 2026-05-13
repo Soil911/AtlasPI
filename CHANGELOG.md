@@ -2,6 +2,65 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.23] - 2026-05-13
+
+**Tema**: *enrichment session 030 — Plains + SE Mississippian + E Africa interior + Hawaii + Solomons (10 entity)*
+
+### S30 — multi-continent gap close (10)
+**Mōʻī o Maui** (749, conf 0.55→0.85, era 1300-1795, Hawaiian pre-Kamehameha),
+**Roviana** (755, conf 0.40→0.85, era 1600-1900, New Georgia head-hunting),
+**Marovo** (756, conf 0.40→0.85, era 1700-1900, Solomon Islands lagoon),
+**Coosa** (773, conf 0.50→0.85, era 1400-1600, Mississippian paramount chiefdom),
+**Nueta / Mandan** (784, conf 0.50→0.85, era 1100-1837, Missouri River),
+**Hiraacá / Hidatsa** (785, conf 0.50→0.85, era 1300-1885, Knife River),
+**Engaruka** (995, conf 0.50→0.85, era 1400-1700, Tanzania irrigation),
+**Ntusi** (1010, conf 0.55→0.85, era 1000-1400, Bunyoro precursor),
+**Tumbatu** (1021, conf 0.55→0.85, era 1100-1500, Zanzibar Swahili),
+**Chwaka** (1022, conf 0.50→0.85, era 1000-1500, Pemba Swahili).
+
+Tutte le 10 entità ora con 7 sources ciascuna (50 nuove sources accademiche totali).
+
+### Source highlights
+
+**Plains Indians** — Hill & Wang/FSG (Fenn *Encounters at Heart of World*
+Pulitzer 2014), Bison/UN Press (Bowers *Mandan/Hidatsa Social Organization*),
+Smithsonian (*Handbook* Vol 13 Plains), U Nebraska Press (Meyer *Village
+Indians of Upper Missouri*), U Oklahoma Press (Wood & Thiessen), U North
+Dakota Press (Ahler *People of the Willows*), Caxton (Robertson *Rotting Face*).
+
+**Mississippian SE (Coosa)** — U Georgia Press (Hudson *Knights of Spain*),
+UNC Press (Hudson *High Priest of Coosa*, Ethridge *Chicaza to Chickasaw*),
+U Press of Florida (Smith *Coosa*), U Alabama Press (Hally *King*).
+
+**E Africa** — *Azania* (Stump — Engaruka, Sutton — Ntusi/Bigo,
+Horton & Clark — Zanzibar), *Geographical Journal* (Westerberg —
+Engaruka), *Nyame Akuma* (Seitsonen, Rødland), UZ Press (Reid —
+Ntusi complexity), Routledge (Connah, Wynne-Jones & LaViolette *Swahili World*),
+James Currey (Schoenbrun *Green Place*), BIEA (Horton *Shanga*),
+International African Institute (Prins *Swahili Zanzibar*),
+*IJAHS* (LaViolette & Fleisher), *J Field Archaeology* (Fleisher synoecism).
+
+**Hawaii (Maui)** — Kamehameha Schools Press (Kamakau *Ruling Chiefs*
+primary), UC Press (Kirch *How Chiefs Became Kings*), U Hawaii Press
+(Kuykendall *Hawaiian Kingdom* I), Trübner/Tuttle (Fornander),
+U Michigan Press (Sahlins *Historical Metaphors and Mythical Realities*).
+
+**Solomon Islands** — U Hawaii Press (Hviding *Guardians of Marovo Lagoon*),
+Ashgate/Routledge (Hviding & Bayliss-Smith *Islands of Rainforest*),
+*JPS Polynesian Society* (Aswani — Roviana head-hunting, Sheppard et al.
+archaeology), *JRAI* (Hocart *Eddystone Cult of the Dead*),
+RAI (Hocart *Northern States of Fiji*), Harwood (Burt *Tradition
+and Christianity*), U Otago Press (Walter & Sheppard).
+
+### Cumulative stats post-S30
+
+- **Total entities arricchite**: **~268** (26.8% del DB attivo)
+- **Total sources**: 3767 → **3817** (+50)
+- **Entity con ≥3 sources**: **826** (83%)
+- **Entity con ≥5 sources**: **264** (26.4%)
+
+---
+
 ## [v6.99.22] - 2026-05-13
 
 **Tema**: *enrichment session 029 — Native N America + Caribbean Taíno + Swahili Lamu coast (10 entity)*
