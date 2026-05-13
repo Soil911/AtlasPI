@@ -19,7 +19,9 @@ class TestInputValidation:
         assert r.status_code == 422
 
     def test_limit_too_high(self, client):
-        r = client.get("/v1/entities?limit=500")
+        # v6.92.0 ha alzato la cap da 100 a 500 (commit c390d22 "raise
+        # limit cap"). Quindi 501 e' il primo valore fuori range.
+        r = client.get("/v1/entities?limit=501")
         assert r.status_code == 422
 
     def test_negative_offset(self, client):

@@ -85,6 +85,14 @@ class EventType(enum.StrEnum):
     FLOOD = "FLOOD"
     DROUGHT = "DROUGHT"
     FIRE = "FIRE"
+    # v6.92.4: NATURAL_DISASTER come catch-all per eventi compositi (es.
+    # Tohoku earthquake + tsunami + Fukushima, Tambora eruption + global
+    # climate, Black Death "arrival" geografica). Sub-tipo specifico
+    # quando l'evento e' singolarmente caratterizzato; NATURAL_DISASTER
+    # quando combinato o non riducibile a un solo sub-tipo.
+    # ETHICS-007: non e' eufemismo — e' categoria semantica utile per
+    # query "tutti i disastri naturali in epoca X" senza UNION di 6 tipi.
+    NATURAL_DISASTER = "NATURAL_DISASTER"
     # Altri
     EXPLORATION = "EXPLORATION"
     TRADE_AGREEMENT = "TRADE_AGREEMENT"

@@ -2,14 +2,14 @@
 
 from __future__ import annotations
 
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 
 
 def _make_log(db, days_ago: int, path: str = "/v1/entities") -> None:
     """Inserisce una riga api_request_logs con timestamp `days_ago` giorni fa."""
     from src.db.models import ApiRequestLog
 
-    ts = (datetime.now(timezone.utc) - timedelta(days=days_ago)).isoformat()
+    ts = (datetime.now(UTC) - timedelta(days=days_ago)).isoformat()
     db.add(ApiRequestLog(
         timestamp=ts,
         method="GET",

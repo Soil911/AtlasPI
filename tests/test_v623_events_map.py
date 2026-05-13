@@ -278,8 +278,11 @@ class TestMigrationCollapseEnum:
     def test_collapse_in_enum(self):
         assert "COLLAPSE" in {t.value for t in EventType}
 
-    def test_enum_has_33_values(self):
-        assert len(EventType) == 33
+    def test_enum_has_34_values(self):
+        # v6.92.4: aggiunto NATURAL_DISASTER come catch-all (Tohoku, Tambora,
+        # Krakatau — eventi compositi terremoto+tsunami+eruzione). Conteggio
+        # totale enum salito da 33 a 34.
+        assert len(EventType) == 34
 
     def test_event_types_endpoint_includes_new_types(self, client):
         r = client.get("/v1/events/types")
