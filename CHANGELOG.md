@@ -2,6 +2,61 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.97.0] - 2026-05-13
+
+**Tema**: *audit R6 — split `entities.py` helpers privati in `_entities_helpers.py`*
+
+`src/api/routes/entities.py` (1814 righe) → 1320 righe + nuovo
+`src/api/routes/_entities_helpers.py` (627 righe). Riduzione del 27%
+del file principale.
+
+### Helpers estratti
+
+| Helper | Categoria |
+|--------|-----------|
+| `_get_continent` | Continent classification (math hardcoded) |
+| `_entity_to_response` | ORM → API conversion |
+| `_eager_query`, `_apply_sort` | Query helpers |
+| `_parse_bbox`, `_apply_bbox_filter` | Spatial filter bbox |
+| `_parse_contains`, `_apply_contains_filter` | Spatial filter point-in-polygon |
+| `_nearby_postgis`, `_nearby_python_haversine` | Distance computation |
+| `_point_in_boundary_shapely` | Polygon containment (SQLite fallback) |
+| `_where_was_sqlite`, `_where_was_postgis` | Reverse-geocoding |
+| `_year_to_century_label` | Aggregation utility |
+
+### Schemas estratti
+
+`SearchResult`, `SearchResponse`, `TypeInfo`, `ContinentInfo`,
+`EventStatsInfo`, `StatsResponse` + type aliases `StatusFilter`, `SortField`.
+
+### Cosa rimane in `entities.py`
+
+Solo i decoratori `@router.get(...)` + function bodies degli endpoint
+(query_entity, list_entities, list_entities_light, get_entities_batch,
+get_entity, search_entities, search_entities_fuzzy, list_types,
+list_continents, random_entity, nearby_entities, where_was,
+year_snapshot, dataset_stats, aggregation).
+
+L'import block in cima esplicita gli helper necessari (`from
+src.api.routes._entities_helpers import ...`) — naming consistency
+preservata, behaviour invariato.
+
+### Backward compatibility
+
+- API endpoint paths invariati (`/v1/entity`, `/v1/entities`, etc.)
+- Response shape invariato
+- Tutti i test esistenti passano (1219 passing locale)
+- `main.py::app.include_router(entities.router)` invariato
+
+### Verifica
+
+`pytest tests/test_entities.py tests/test_relations.py tests/test_v666_entities_filters.py tests/test_v6941_postgis_geom.py`
+→ 51 passed
+
+`ruff check src/ tests/` → All checks passed
+
+---
+
 ## [v6.96.0] - 2026-05-13
 
 **Tema**: *audit R7 — split `models.py` 1131 righe in package per dominio*

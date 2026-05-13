@@ -8,26 +8,43 @@ GET /v1/types                                                   tipi disponibili
 GET /v1/stats                                                   statistiche dataset
 GET /v1/continents                                              continenti disponibili
 GET /v1/where-was?lat=...&lon=...&year=...                      reverse-geocoding temporale (v6.34)
+
+v6.97.0 (audit R6): helpers privati + schemas locali estratti in
+`src/api/routes/_entities_helpers.py`. Questo file mantiene solo gli
+endpoint registrati sul `router`.
 """
 
-import json
 import logging
 from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
-from pydantic import BaseModel
-from shapely.errors import GEOSException
-from shapely.geometry import Point
-from shapely.geometry import shape as shapely_shape
-from sqlalchemy import and_, desc, func, or_, select, text
-from sqlalchemy.orm import Session, defer, joinedload, selectinload
+from sqlalchemy import desc, func, or_, select, text
+from sqlalchemy.orm import Session, joinedload
 
 from src.api.errors import EntityNotFoundError
-from src.api.schemas import (
-    CapitalResponse,
-    EntityResponse,
-    PaginatedEntityResponse,
+from src.api.routes._entities_helpers import (
+    ContinentInfo,
+    EventStatsInfo,
+    SearchResponse,
+    SearchResult,
+    SortField,
+    StatsResponse,
+    StatusFilter,
+    TypeInfo,
+    _apply_bbox_filter,
+    _apply_contains_filter,
+    _apply_sort,
+    _eager_query,
+    _entity_to_response,
+    _get_continent,
+    _nearby_postgis,
+    _nearby_python_haversine,
+    _parse_bbox,
+    _where_was_postgis,
+    _where_was_sqlite,
+    _year_to_century_label,
 )
+from src.api.schemas import EntityResponse, PaginatedEntityResponse
 from src.cache import cache_response
 from src.db.database import get_db, is_postgres
 from src.db.models import GeoEntity, HistoricalEvent, NameVariant, Source, TerritoryChange
@@ -36,402 +53,10 @@ logger = logging.getLogger(__name__)
 
 router = APIRouter(tags=["entità"])
 
-# Tipi per validazione
-StatusFilter = Literal["confirmed", "uncertain", "disputed"] | None
-SortField = Literal["name", "year_start", "confidence", "year_end"] | None
 
-
-# ─── Continente da coordinate ────────────────────────────────────
-
-def _get_continent(lat: float | None, lon: float | None) -> str:
-    """Determina il continente dalla posizione della capitale.
-
-    ETHICS: il mapping è un'approssimazione geografica, non una
-    dichiarazione politica. Le entità trans-continentali (es. Impero
-    Romano, Ottomano) vengono assegnate al continente della capitale.
-
-    v6.63 fix (audit #02): Oceania ora include Melanesia (PNG, Solomon,
-    Vanuatu, Fiji), Micronesia (Guam, Marshall), e Polinesia orientale
-    (Easter Island, Hawaii, French Polynesia). Check fatto PRIMA di Asia
-    per evitare che PNG/Indonesia east vengano assegnate ad Asia.
-
-    v6.67 fix (audit v2 #04 HIGH): Middle East lon range esteso da 50 a
-    63 per includere Iran (Persepolis 52.89°E, Shiraz 52.53°E,
-    Isfahan 51.67°E). Prima del fix, entità come l'Impero Achemenide
-    (id=27) — capitale Persepolis — cadevano fuori dal range Middle East
-    e matchavano invece il fallback Africa, che è geograficamente e
-    storicamente sbagliato (>95% del territorio achemenide era in Asia).
-    """
-    if lat is None or lon is None:
-        return "Unknown"
-
-    # Middle East special case (politicamente Asia ma spesso trattato a parte).
-    # Lat 25-42 copre da Arabia Saudita nord (Riyadh 24.7°N) a Turchia
-    # (Ankara 39.9°N). Yemen/Oman a lat<25 cadono nel fallback Asia (corretto
-    # da v6.67 tramite check Asia più sotto).
-    # Lon 25-63 copre da Istanbul (28.97°E) a Iran orientale (Mashhad 59.6°E).
-    # v6.67: lon range esteso da 50 a 63 per includere l'Iran (Persepolis
-    # 52.89°E, Tehran 51.39°E). Prima del fix Persepolis cadeva nel
-    # fallback Africa — geograficamente sbagliato.
-    if 25 <= lat <= 42 and 25 <= lon <= 63:
-        return "Middle East"
-
-    # v6.63: Oceania (Melanesia + Micronesia + Polynesia) — CHECKED FIRST
-    # to avoid PNG / eastern Indonesia being tagged as Asia.
-    # - Lat range: -50 (Stewart Island NZ) to +25 (Hawaii)
-    # - Lon range: 100 to 180 (Pacific west) OR -180 to -140 (Pacific east,
-    #   Polynesia central + Hawaii cluster)
-    if -50 <= lat <= 25:
-        # West Pacific (Melanesia + Micronesia + West Polynesia)
-        if 130 <= lon <= 180:
-            return "Oceania"
-        # East Pacific (central + east Polynesia, incluso Rapa Nui at -109).
-        # South America mainland starts around -80 westernmost, so -105
-        # is a safe boundary that catches Easter Island/Pitcairn.
-        if -180 <= lon <= -105:
-            return "Oceania"
-
-    # Africa
-    if lat < 37 and -20 <= lon <= 55 and lat < (37 - (lon - 10) * 0.05 if lon > 10 else 37):
-        if lat < 35:
-            return "Africa"
-
-    # Europe
-    if 35 <= lat <= 72 and -25 <= lon <= 40:
-        return "Europe"
-
-    # Asia (including Far East, Central, South, Southeast).
-    # NOTE: Oceania check already ran above, so we can include lon 100-180
-    # safely here for mainland Asia + SEA mainland (the islands already
-    # captured above).
-    if -15 <= lat <= 75 and 40 <= lon <= 180:
-        return "Asia"
-
-    # North America
-    if 7 <= lat <= 85 and -170 <= lon <= -50:
-        return "Americas"
-
-    # South America
-    if -60 <= lat <= 15 and -85 <= lon <= -30:
-        return "Americas"
-
-    # Africa fallback
-    if -40 <= lat <= 37 and -20 <= lon <= 55:
-        return "Africa"
-
-    return "Other"
-
-
-# ─── Schema aggiuntivi ──────────────────────────────────────────
-
-class SearchResult(BaseModel):
-    id: int
-    name_original: str
-    name_original_lang: str
-    entity_type: str
-    year_start: int
-    year_end: int | None
-    status: str
-    confidence_score: float
-    continent: str | None = None
-
-
-class SearchResponse(BaseModel):
-    """Risposta search.
-
-    v6.66 FIX 4: include sia `total` (canonico) sia `count` (legacy deprecato).
-    """
-    total: int
-    count: int  # DEPRECATED v6.66 — alias di `total`, verra' rimosso in v6.68.
-    results: list[SearchResult]
-
-
-class TypeInfo(BaseModel):
-    type: str
-    count: int
-
-
-class ContinentInfo(BaseModel):
-    continent: str
-    count: int
-
-
-class EventStatsInfo(BaseModel):
-    """Statistiche aggregate eventi storici."""
-    total_events: int
-    events_with_day: int
-    events_with_month: int
-    date_coverage_unique_days: int
-    date_coverage_pct: float
-    date_precision_breakdown: dict[str, int]
-
-
-class StatsResponse(BaseModel):
-    total_entities: int
-    types: list[TypeInfo]
-    status_counts: dict[str, int]
-    year_range: dict[str, int]
-    avg_confidence: float
-    total_sources: int
-    total_territory_changes: int
-    disputed_count: int
-    continents: list[ContinentInfo] = []
-    events: EventStatsInfo | None = None
-
-
-# ─── Conversione ─────────────────────────────────────────────────
-
-def _entity_to_response(entity: GeoEntity, *, include_geometry: bool = True) -> EntityResponse:
-    """Converte un record ORM in risposta API.
-
-    v6.91 PERF (suggestion #72): `include_geometry=False` salta sia il
-    JSON-parse del `boundary_geojson` (costo dominante a limit=300) sia il
-    fetch della colonna dal DB (la colonna è deferita a livello query).
-    Restituisce `boundary_geojson=None` per indicare al consumer che il
-    payload deve essere recuperato via `/v1/entities/{id}` o `/v1/render`.
-    """
-    capital = None
-    if entity.capital_name and entity.capital_lat is not None:
-        capital = CapitalResponse(
-            name=entity.capital_name,
-            lat=entity.capital_lat,
-            lon=entity.capital_lon,
-        )
-
-    geojson = None
-    if include_geometry and entity.boundary_geojson:
-        try:
-            geojson = json.loads(entity.boundary_geojson)
-        except (json.JSONDecodeError, TypeError):
-            logger.warning("GeoJSON malformato per entità %d", entity.id)
-
-    continent = _get_continent(entity.capital_lat, entity.capital_lon)
-
-    return EntityResponse(
-        id=entity.id,
-        entity_type=entity.entity_type,
-        year_start=entity.year_start,
-        year_end=entity.year_end,
-        name_original=entity.name_original,
-        name_original_lang=entity.name_original_lang,
-        name_variants=entity.name_variants,
-        capital=capital,
-        boundary_geojson=geojson,
-        # ETHICS-005: provenance tracking fields.
-        boundary_source=entity.boundary_source,
-        boundary_aourednik_name=entity.boundary_aourednik_name,
-        boundary_aourednik_year=entity.boundary_aourednik_year,
-        boundary_aourednik_precision=entity.boundary_aourednik_precision,
-        boundary_ne_iso_a3=entity.boundary_ne_iso_a3,
-        confidence_score=entity.confidence_score,
-        status=entity.status,
-        territory_changes=entity.territory_changes,
-        sources=entity.sources,
-        ethical_notes=entity.ethical_notes,
-        continent=continent,
-        wikidata_qid=entity.wikidata_qid,
-        # v6.87 ADR-004: capital history per polities long-duration.
-        capital_history=entity.capital_history,
-    )
-
-
-def _eager_query(db: Session, *, include_geometry: bool = True):
-    # selectinload avoids cartesian product on large result sets (suggestion #67).
-    # For single-row fetches (get_entity) both strategies are equivalent;
-    # for list queries (limit=300) selectinload issues one IN-query per relation
-    # instead of N JOINs that multiply rows.
-    #
-    # v6.91 PERF (suggestion #72): `include_geometry=False` defer-loads la colonna
-    # `boundary_geojson` — il payload medio per row è ~30-300KB e a limit=300
-    # produce 2.1s di latenza (DB read + JSON parse + serializzazione Pydantic).
-    # Con defer la colonna non viene letta dal disk e non finisce in payload.
-    opts = [
-        selectinload(GeoEntity.name_variants),
-        selectinload(GeoEntity.territory_changes),
-        selectinload(GeoEntity.sources),
-        selectinload(GeoEntity.capital_history),  # v6.87 ADR-004
-    ]
-    if not include_geometry:
-        opts.append(defer(GeoEntity.boundary_geojson))
-    return db.query(GeoEntity).options(*opts)
-
-
-def _apply_sort(q, sort: SortField, order: str = "asc"):
-    """Applica ordinamento alla query."""
-    if not sort:
-        return q
-    col_map = {
-        "name": GeoEntity.name_original,
-        "year_start": GeoEntity.year_start,
-        "year_end": GeoEntity.year_end,
-        "confidence": GeoEntity.confidence_score,
-    }
-    col = col_map.get(sort, GeoEntity.name_original)
-    return q.order_by(desc(col) if order == "desc" else col)
-
-
-def _parse_bbox(bbox: str | None) -> tuple[float, float, float, float] | None:
-    """Parse bbox string 'min_lon,min_lat,max_lon,max_lat' into a tuple.
-
-    Convenzione standard (Mapbox/OpenStreetMap/GeoJSON RFC 7946):
-    `min_lon, min_lat, max_lon, max_lat` (longitudine prima!).
-
-    Raises HTTPException 422 se il formato è invalido o le coordinate
-    sono fuori range geografico.
-    """
-    if not bbox:
-        return None
-    try:
-        parts = [float(x.strip()) for x in bbox.split(",")]
-    except ValueError:
-        raise HTTPException(
-            status_code=422,
-            detail="bbox deve essere 'min_lon,min_lat,max_lon,max_lat' (4 float separati da virgola)",
-        )
-    if len(parts) != 4:
-        raise HTTPException(
-            status_code=422,
-            detail=f"bbox richiede esattamente 4 valori, ricevuti {len(parts)}",
-        )
-    min_lon, min_lat, max_lon, max_lat = parts
-    if not (-180.0 <= min_lon <= 180.0 and -180.0 <= max_lon <= 180.0):
-        raise HTTPException(status_code=422, detail="Longitudine fuori range [-180, 180]")
-    if not (-90.0 <= min_lat <= 90.0 and -90.0 <= max_lat <= 90.0):
-        raise HTTPException(status_code=422, detail="Latitudine fuori range [-90, 90]")
-    if min_lon > max_lon or min_lat > max_lat:
-        raise HTTPException(
-            status_code=422,
-            detail="bbox: min_lon/min_lat devono essere <= max_lon/max_lat",
-        )
-    return (min_lon, min_lat, max_lon, max_lat)
-
-
-def _apply_bbox_filter(q, bbox: str | None):
-    """Filtra entità per bounding box geografico.
-
-    PostgreSQL+PostGIS (prod, v6.94.1+):
-        ST_Intersects(boundary_geom, bbox_envelope) — usa indice GiST
-        `ix_geo_entities_boundary_geom`. Fallback al capital-point per
-        entità senza boundary_geom (backfill non riuscito o entity senza
-        boundary).
-
-        v6.94.1 (audit R1): switch da ST_GeomFromGeoJSON(boundary_geojson)
-        runtime alla colonna materializzata boundary_geom. Elimina parsing
-        JSON per ogni riga + abilita l'uso dell'indice. Target p95 < 50ms
-        (vs ~180ms pre-switch).
-
-    SQLite (dev):
-        Filtro approssimato sul solo capital-point (lat/lon BETWEEN bbox).
-        Più rapido del calcolo Shapely su tutte le righe; perde le entità
-        con boundary che intersecano il bbox ma con capitale fuori. Usare
-        Postgres locale per accuratezza piena in dev.
-
-    Args:
-        q: SQLAlchemy query su GeoEntity.
-        bbox: stringa "min_lon,min_lat,max_lon,max_lat" oppure None.
-
-    Returns:
-        Query filtrata (no-op se bbox è None).
-    """
-    parsed = _parse_bbox(bbox)
-    if parsed is None:
-        return q
-    min_lon, min_lat, max_lon, max_lat = parsed
-
-    if is_postgres:
-        # ADR-009: boundary_geom NON e' mappata in ORM. Usiamo column()
-        # come reference unmapped — SQLAlchemy emette "boundary_geom" raw
-        # nel SQL. Funziona per IS NOT NULL e func.* call.
-        from sqlalchemy import column
-
-        boundary_geom = column("boundary_geom")
-        envelope = func.ST_MakeEnvelope(min_lon, min_lat, max_lon, max_lat, 4326)
-        return q.filter(
-            or_(
-                and_(
-                    boundary_geom.isnot(None),
-                    func.ST_Intersects(boundary_geom, envelope),
-                ),
-                and_(
-                    boundary_geom.is_(None),
-                    GeoEntity.capital_lat.between(min_lat, max_lat),
-                    GeoEntity.capital_lon.between(min_lon, max_lon),
-                ),
-            )
-        )
-
-    # SQLite fallback: solo capital-point.
-    return q.filter(
-        GeoEntity.capital_lat.isnot(None),
-        GeoEntity.capital_lon.isnot(None),
-        GeoEntity.capital_lat.between(min_lat, max_lat),
-        GeoEntity.capital_lon.between(min_lon, max_lon),
-    )
-
-
-def _parse_contains(contains: str | None) -> tuple[float, float] | None:
-    """Parse contains string 'lat,lon' into a (lat, lon) tuple.
-
-    v6.94.1 (audit R1): nuovo parametro per "trova entita' il cui
-    boundary_geom CONTIENE il punto (lat, lon)". Usa ST_Contains
-    su indice GiST in Postgres.
-
-    Convention: lat,lon order (NON come bbox che usa lon,lat).
-    Coerente con `/v1/where-was?lat=...&lon=...` esistente.
-    """
-    if not contains:
-        return None
-    try:
-        parts = [float(x.strip()) for x in contains.split(",")]
-    except ValueError:
-        raise HTTPException(
-            status_code=422,
-            detail="contains deve essere 'lat,lon' (2 float separati da virgola)",
-        )
-    if len(parts) != 2:
-        raise HTTPException(
-            status_code=422,
-            detail=f"contains richiede esattamente 2 valori, ricevuti {len(parts)}",
-        )
-    lat, lon = parts
-    if not (-90.0 <= lat <= 90.0):
-        raise HTTPException(status_code=422, detail="Latitudine fuori range [-90, 90]")
-    if not (-180.0 <= lon <= 180.0):
-        raise HTTPException(status_code=422, detail="Longitudine fuori range [-180, 180]")
-    return (lat, lon)
-
-
-def _apply_contains_filter(q, contains: str | None):
-    """Filtra entita' il cui boundary contiene il punto (lat, lon).
-
-    PostgreSQL+PostGIS (prod): ST_Contains(boundary_geom, ST_MakePoint(...))
-    — usa indice GiST. Fallback opzionale: distanza haversine dal capital
-    NON applicato (semanticamente diverso: "contains" e' polygon
-    containment, non vicinanza).
-
-    SQLite (dev): no-op che ritorna la query identica (feature richiede
-    Postgres). Documentato in OpenAPI.
-    """
-    parsed = _parse_contains(contains)
-    if parsed is None:
-        return q
-    lat, lon = parsed
-
-    if is_postgres:
-        from sqlalchemy import column
-
-        boundary_geom = column("boundary_geom")
-        # ST_MakePoint(lon, lat) — ordine PostGIS standard (x, y).
-        # ST_SetSRID per chiarezza SRID, anche se boundary_geom e' gia' 4326.
-        point = func.ST_SetSRID(func.ST_MakePoint(lon, lat), 4326)
-        return q.filter(
-            boundary_geom.isnot(None),
-            func.ST_Contains(boundary_geom, point),
-        )
-
-    # SQLite: feature non disponibile, ritorna query vuota per chiarezza.
-    return q.filter(False)
-
+# NOTE v6.97.0 (audit R6): _get_continent, schemas (SearchResult, ...,
+# StatsResponse), _entity_to_response, e tutti gli helper privati sono
+# stati spostati in src/api/routes/_entities_helpers.py. Vedi import in cima.
 
 # ─── Endpoints ───────────────────────────────────────────────────
 
@@ -1227,108 +852,7 @@ def random_entity(
     return _entity_to_response(entity)
 
 
-def _nearby_postgis(
-    db: Session,
-    lat: float,
-    lon: float,
-    radius_km: float,
-    year: int | None,
-    limit: int,
-) -> list[tuple[GeoEntity, float]]:
-    """PostGIS-native nearby query usando ST_DWithin su geography.
-
-    Indicizzabile via GiST su `ST_MakePoint(capital_lon, capital_lat)::geography`
-    se il volume di entita' cresce oltre la soglia O(n) utile. A 747 righe
-    l'index non e' necessario ma il percorso nativo e' comunque piu' veloce
-    del Python haversine + full scan.
-
-    Ritorna lista di tuple (GeoEntity, distance_km) gia' ordinata per
-    distanza crescente e tagliata a `limit`.
-    """
-    radius_m = radius_km * 1000.0
-
-    sql_parts = [
-        "SELECT id,",
-        "       ST_Distance(",
-        "           ST_MakePoint(capital_lon, capital_lat)::geography,",
-        "           ST_MakePoint(:lon, :lat)::geography",
-        "       ) / 1000.0 AS dist_km",
-        "  FROM geo_entities",
-        " WHERE capital_lat IS NOT NULL AND capital_lon IS NOT NULL",
-        "   AND ST_DWithin(",
-        "           ST_MakePoint(capital_lon, capital_lat)::geography,",
-        "           ST_MakePoint(:lon, :lat)::geography,",
-        "           :radius_m",
-        "       )",
-    ]
-    params: dict = {"lat": lat, "lon": lon, "radius_m": radius_m, "limit": limit}
-
-    if year is not None:
-        sql_parts.append("   AND year_start <= :year AND (year_end IS NULL OR year_end >= :year)")
-        params["year"] = year
-
-    sql_parts.append(" ORDER BY dist_km ASC LIMIT :limit")
-    sql = "\n".join(sql_parts)
-
-    rows = db.execute(text(sql), params).all()
-    if not rows:
-        return []
-
-    ids_dists: list[tuple[int, float]] = [(row.id, float(row.dist_km)) for row in rows]
-    ids = [i for i, _ in ids_dists]
-
-    entities_map = {
-        e.id: e
-        for e in db.query(GeoEntity).filter(GeoEntity.id.in_(ids)).all()
-    }
-    # Preserve PostGIS ordering (by dist_km) while pairing with ORM instances.
-    return [(entities_map[i], round(d, 1)) for i, d in ids_dists if i in entities_map]
-
-
-def _nearby_python_haversine(
-    db: Session,
-    lat: float,
-    lon: float,
-    radius_km: float,
-    year: int | None,
-    limit: int,
-) -> list[tuple[GeoEntity, float]]:
-    """Fallback Python haversine per SQLite (no PostGIS).
-
-    O(n) su tutte le entita' con capitale — accettabile fino a qualche
-    migliaio di righe. Per scala maggiore in dev, usare Postgres locale.
-    """
-    import math
-
-    def haversine(lat1, lon1, lat2, lon2):
-        earth_r = 6371  # km
-        dlat = math.radians(lat2 - lat1)
-        dlon = math.radians(lon2 - lon1)
-        a = (
-            math.sin(dlat / 2) ** 2
-            + math.cos(math.radians(lat1))
-            * math.cos(math.radians(lat2))
-            * math.sin(dlon / 2) ** 2
-        )
-        return earth_r * 2 * math.asin(math.sqrt(a))
-
-    q = db.query(GeoEntity).filter(
-        GeoEntity.capital_lat.isnot(None),
-        GeoEntity.capital_lon.isnot(None),
-    )
-    if year is not None:
-        q = q.filter(GeoEntity.year_start <= year)
-        q = q.filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= year))
-
-    entities = q.all()
-    results: list[tuple[GeoEntity, float]] = []
-    for e in entities:
-        dist = haversine(lat, lon, e.capital_lat, e.capital_lon)
-        if dist <= radius_km:
-            results.append((e, round(dist, 1)))
-
-    results.sort(key=lambda x: x[1])
-    return results[:limit]
+# (rimosso v6.97.0: _nearby_postgis, _nearby_python_haversine ora in _entities_helpers.py)
 
 
 @router.get(
@@ -1391,87 +915,8 @@ def nearby_entities(
 
 
 # ─── v6.34: Reverse-geocoding temporale ──────────────────────────────
-
-def _point_in_boundary_shapely(lat: float, lon: float, boundary_geojson: str | None) -> bool:
-    """SQLite fallback: shapely point-in-polygon.
-
-    ETHICS-005: rispetta il confidence del boundary. Se il boundary_geojson
-    e' mal formato o vuoto, ritorna False (l'entita' non viene considerata
-    "controllare" quel punto — meglio false-negative che false-positive).
-
-    NOTE geografica: GeoJSON usa ordinamento (lon, lat), non (lat, lon).
-    """
-    if not boundary_geojson:
-        return False
-    try:
-        geom = shapely_shape(json.loads(boundary_geojson))
-    except (json.JSONDecodeError, ValueError, TypeError, GEOSException):
-        return False
-    try:
-        return geom.contains(Point(lon, lat))
-    except GEOSException:
-        # Polygon invalido (self-intersecting, etc.) — tratta come non-contenente.
-        return False
-
-
-def _where_was_sqlite(
-    db: Session,
-    lat: float,
-    lon: float,
-    year: int | None,
-) -> list[GeoEntity]:
-    """Reverse-geocoding Python fallback (dev/test su SQLite).
-
-    O(n) su tutte le entita' con boundary_geojson. A ~850 entita' e'
-    accettabile (~300-500ms). In produzione PostGIS fa ST_Contains
-    nativamente con indice GiST.
-    """
-    q = db.query(GeoEntity).filter(GeoEntity.boundary_geojson.isnot(None))
-    if year is not None:
-        q = q.filter(GeoEntity.year_start <= year)
-        q = q.filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= year))
-    entities = q.all()
-    return [e for e in entities if _point_in_boundary_shapely(lat, lon, e.boundary_geojson)]
-
-
-def _where_was_postgis(
-    db: Session,
-    lat: float,
-    lon: float,
-    year: int | None,
-) -> list[GeoEntity]:
-    """Reverse-geocoding PostGIS nativo (prod).
-
-    Usa ST_Contains su ST_GeomFromGeoJSON(boundary_geojson). Se esiste
-    l'indice GiST spaziale sulla colonna (ADR-001 migration futura),
-    la query e' O(log n). Senza indice e' comunque ~10x piu' veloce
-    del fallback Python grazie a implementazione C nativa.
-    """
-    sql_parts = [
-        "SELECT id FROM geo_entities",
-        "WHERE boundary_geojson IS NOT NULL",
-        "  AND ST_Contains(",
-        "      ST_GeomFromGeoJSON(boundary_geojson),",
-        "      ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)",
-        "  )",
-    ]
-    params: dict = {"lat": lat, "lon": lon}
-    if year is not None:
-        sql_parts.append("  AND year_start <= :year AND (year_end IS NULL OR year_end >= :year)")
-        params["year"] = year
-
-    sql = "\n".join(sql_parts)
-    try:
-        rows = db.execute(text(sql), params).all()
-    except Exception:
-        logger.warning("PostGIS ST_Contains failed for where-was query", exc_info=True)
-        return []
-
-    if not rows:
-        return []
-
-    ids = [r.id for r in rows]
-    return db.query(GeoEntity).filter(GeoEntity.id.in_(ids)).all()
+# (rimosso v6.97.0: _point_in_boundary_shapely, _where_was_sqlite,
+# _where_was_postgis ora in _entities_helpers.py)
 
 
 @router.get(
@@ -1790,30 +1235,7 @@ def dataset_stats(request: Request, response: Response, db: Session = Depends(ge
 
 
 # ─── Aggregation ────────────────────────────────────────────────
-
-def _year_to_century_label(year: int) -> str:
-    """Converte un anno in etichetta di secolo (es. 1500 → 'XVI', -500 → 'V a.C.')."""
-    if year > 0:
-        century = (year - 1) // 100 + 1
-    elif year < 0:
-        century = (-year - 1) // 100 + 1
-    else:
-        century = 1
-
-    roman_map = {
-        1: "I", 2: "II", 3: "III", 4: "IV", 5: "V",
-        6: "VI", 7: "VII", 8: "VIII", 9: "IX", 10: "X",
-        11: "XI", 12: "XII", 13: "XIII", 14: "XIV", 15: "XV",
-        16: "XVI", 17: "XVII", 18: "XVIII", 19: "XIX", 20: "XX",
-        21: "XXI", 22: "XXII", 23: "XXIII", 24: "XXIV", 25: "XXV",
-        26: "XXVI", 27: "XXVII", 28: "XXVIII", 29: "XXIX", 30: "XXX",
-        31: "XXXI", 32: "XXXII", 33: "XXXIII", 34: "XXXIV", 35: "XXXV",
-        36: "XXXVI", 37: "XXXVII", 38: "XXXVIII", 39: "XXXIX", 40: "XL",
-        41: "XLI", 42: "XLII", 43: "XLIII", 44: "XLIV", 45: "XLV",
-        46: "XLVI",
-    }
-    label = roman_map.get(century, str(century))
-    return f"{label} a.C." if year < 0 else label
+# (rimosso v6.97.0: _year_to_century_label ora in _entities_helpers.py)
 
 
 @router.get(
