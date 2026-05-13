@@ -2,6 +2,49 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.13] - 2026-05-13
+
+**Tema**: *enrichment sessions 018-020 — Arabia residual + Mesoamerica minor + medieval African + Abbasid/Papal + SE Asia early + Native NA + Bavaria (22 entity)*
+
+### S18 — Arabia + Mesoamerica minor (6)
+Qedar (819), Gerrha (802), Teenek/Huastec (933), Chorrera (957),
+Cantona (642), Teuchitlán (937).
+
+### S19 — Major medieval (8)
+**Abbasid Caliphate** (31, conf →0.90), **Papal States** (71, →0.90),
+Kanem (647), Koumbi Saleh (1000, Ghana capital), Manda Swahili (1018),
+Takrur medieval (842), Panduranga Champa (894), Mitla Zapotec (935).
+
+### S20 — SE Asia Javanese + Caribbean + NA + Bavaria (8)
+Kalingga (671), Kutai Martadipura (672), Salakanagara (907), Galuh (899),
+Taíno (960), Tongva (791), Nuu-chah-nulth (676), Duchy of Bavaria (570).
+
+### Source highlights
+
+- Routledge (Kennedy *Prophet & Age of Caliphates*, Hawting *First Dynasty Islam*, Hoyland *Arabia & Arabs*, Retsö *Arabs in Antiquity*)
+- UC Press (Partner *Lands of St Peter*, Nelson *King and Emperor: Charlemagne*)
+- Cambridge UP (Prodi *Papal Prince*, Bonner *Cambridge History of Islam*)
+- Yale UP (Rouse *Tainos*)
+- UBC Press (McMillan *Nuu-chah-nulth Ancient Heritage*)
+- Brill (Healey, Thiaw, Pirie)
+- Karthala (Kane *Fuuta Tooro*)
+- Éditions de la Sorbonne (Dewière *Borno*)
+- British Institute East Africa (Chittick *Manda Excavations*)
+- *Nature* (Brielle 2023 Swahili genetics)
+- ANU E Press (Bellwood *Indo-Malaysian Prehistory*)
+- Royal British Columbia Museum (Hoover *Nuu-chah-nulth Voices*)
+- Cornell UP (Pohl *Avars*)
+- U Pennsylvania Press (Bowlus *Franks Moravians Magyars*)
+
+### Cumulative stats post-S20
+
+- **Total entities arricchite**: **~168** (16.8% del DB attivo)
+- **Total sources**: 2400 → **3317** (+917)
+- **Entity con ≥3 sources**: **719** (72%)
+- **Entity con ≥5 sources**: ~165 (16.5%)
+
+---
+
 ## [v6.99.12] - 2026-05-13
 
 **Tema**: *enrichment sessions 014-017 — major classical + Maya + Andean + minor ME (27 entity)*
