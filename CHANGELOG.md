@@ -2,6 +2,24 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.32 perf] - 2026-05-13
+
+**Tema**: `/admin/insights` slow — cache miss + Python-side aggregation (suggestion #73, accepted).
+
+Endpoint `/admin/insights` averagiava 1.0-1.5s su ~11 chiamate/24h. Due cause:
+
+1. **TTL cache troppo basso**: `@cache_response(ttl_seconds=300)` ma le admin checks tipicamente accadono ogni ~6 minuti, sempre fuori dalla finestra di cache → quasi ogni call era un MISS.
+2. **User-agent classification in Python**: `db.query(ApiRequestLog.user_agent).all()` recuperava ~90k righe (30 giorni di log), classificate poi una-per-una in Python.
+
+### Fix
+
+- **`src/api/routes/admin_insights.py`**:
+  - TTL cache `300s → 900s` (15 min). Admin views tollerano staleness moderato.
+  - `Cache-Control: max-age=300 → 900` (allineato).
+  - UA query: `GROUP BY user_agent` a livello SQL → da 90k righe a poche centinaia di UA unici; la classificazione regex Python lavora ora su un insieme molto più piccolo aggregando i counts.
+
+I 49 test su `tests/test_v615_insights.py` continuano a passare. Suggestion #73 ora è `implemented`.
+
 ## [v7.0 benchmark closure] - 2026-04-23
 
 **Tema**: *v7.0 benchmark complete — AtlasPI is tool-augmented retrieval (hallucinations -67% on hard queries)*

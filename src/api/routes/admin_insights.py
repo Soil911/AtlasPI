@@ -141,7 +141,7 @@ def _year_to_era(year: int) -> str:
     description="Analisi del traffico API: volume, endpoint, errori, user agent, utenti esterni, ore di punta.",
     include_in_schema=False,
 )
-@cache_response(ttl_seconds=300)
+@cache_response(ttl_seconds=900)
 def insights(request: Request, db: Session = Depends(get_db)):
     """Structured traffic insights from api_request_logs."""
 
@@ -243,14 +243,21 @@ def insights(request: Request, db: Session = Depends(get_db)):
     }
 
     # ── User agent analysis ───────────────────────────────────
+    # v6.32 (suggestion #73): GROUP BY user_agent at SQL level to avoid
+    # fetching every row (90k+ over 30 days). Classification stays in Python
+    # because the regex logic is complex.
     ua_rows = (
-        db.query(ApiRequestLog.user_agent)
+        db.query(
+            ApiRequestLog.user_agent,
+            func.count(ApiRequestLog.id).label("hits"),
+        )
         .filter(ApiRequestLog.timestamp >= month_ago)
+        .group_by(ApiRequestLog.user_agent)
         .all()
     )
     ua_counts: dict[str, int] = Counter()
-    for (ua,) in ua_rows:
-        ua_counts[_classify_ua(ua)] += 1
+    for ua, hits in ua_rows:
+        ua_counts[_classify_ua(ua)] += hits
     user_agent_analysis = dict(ua_counts)
 
     # ── External users ────────────────────────────────────────
@@ -296,7 +303,7 @@ def insights(request: Request, db: Session = Depends(get_db)):
             "external_users": external_users[:30],
             "peak_hours": peak_hours,
         },
-        headers={"Cache-Control": "public, max-age=300"},
+        headers={"Cache-Control": "public, max-age=900"},
     )
 
 
