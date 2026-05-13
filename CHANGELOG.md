@@ -2,6 +2,47 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.4] - 2026-05-13
+
+**Tema**: *enrichment session 006 — Pacific Oceania batch + Mesoamerica residual*
+
+Area Pacific Oceania (Fiji + Polynesia + Marianas) completamente
+sotto-coperta. 8 entity arricchite tutte da 2 a 5 sources.
+
+### Entità arricchite (8)
+
+| id | name | era | conf before→after |
+|----|------|-----|-------------------|
+| 760 | Tui Cakau (Fiji) | 1700-1874 | 0.60→0.70 |
+| 759 | Tui Nayau (Lau Islands) | 1700-1874 | 0.60→0.70 |
+| 754 | Sau o Futuna | 1500-1961 | 0.40→0.60 |
+| 753 | Hau o ʻUvea (Wallis) | 1500-1961 | 0.40→0.60 |
+| 770 | Taotao Tano (Chamorro, Marianas) | -1500 to 1668 | 0.40→0.70 |
+| 748 | Pulotu (Polynesian) | -1500 to 1000 | 0.40→0.70 |
+| 913 | Pa' Chan (Piedras Negras Maya) | 359-808 | 0.50→0.70 |
+| 644 | Cacicazgo de Coclé (Panama) | 300-1520 | 0.50→0.70 |
+
+### Source highlights
+
+- Bernice P. Bishop Museum publications (Hocart *Lau Islands Fiji*,
+  Burrows *Ethnology of Futuna/Uvea*, Collocott *Tales of Tonga*)
+- Stanford UP (Sharer & Traxler *The Ancient Maya*)
+- Thames and Hudson (Martin & Grube *Chronicle of Maya Kings*)
+- Cambridge UP (Lawson *Tradition vs Democracy in South Pacific*)
+- University of Chicago Press (Sahlins *Apologies to Thucydides*)
+- *Antiquity* journal (Hung et al. 2015 *First settlement Remote Oceania*)
+- Peabody Museum Harvard (Lothrop *Coclé Archaeological Study*)
+- Westview Press, Greenwood Press, Bess Press
+
+### Cumulative stats (S1+...+S6)
+
+- **Total entities arricchite**: **69** (6.9% del DB attivo)
+- **Total sources**: 2400 → **3026** (+626)
+- **Entity con ≥3 sources**: 530 → **645** (65%)
+- **Entity con ≥4 sources**: ~80 → **205** (21%)
+
+---
+
 ## [v6.99.3] - 2026-05-13
 
 **Tema**: *enrichment session 005 — 16 medieval/Mesoamerica + 3000 sources milestone*
