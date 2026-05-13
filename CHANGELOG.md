@@ -2,6 +2,53 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.14] - 2026-05-13
+
+**Tema**: *enrichment session 021 — medieval European kingdoms & duchies (10 entity)*
+
+### S21 — Medieval European kingdoms & duchies (10)
+**Kingdom of England** (57, conf →0.85, era 927-1707),
+**Kongeriget Danmark** (59, conf 0.40→0.80, era 935-),
+**Kongeriket Noreg** (60, conf →0.85, era 872-1397),
+**Duché de Bourgogne** (84, conf 0.70→0.85, era 918-1477),
+**Rioghachd na h-Alba / Scotland** (90, conf 0.70→0.85, era 843-1707),
+**Nafarroako Erresuma / Navarra** (425, conf →0.85, era 824-1620),
+**Comtats Catalans** (426, conf 0.75→0.85, era 801-1162),
+**Herzogtum Sachsen** (569, conf 0.50→0.80, era 804-1296),
+**Grevskabet Flandern / Flanders** (583, conf 0.50→0.80, era 862-1795),
+**Duché de Normandie** (651, conf 0.50→0.80, era 911-1204).
+
+Tutte le 10 entità ora con 7 sources ciascuna (50 nuove sources accademiche totali).
+
+### Source highlights
+
+- Oxford UP (Stenton *Anglo-Saxon England*, Bisson *Crown of Aragon*, van Houts *Gesta Normannorum Ducum*, Garnett *Conquered England*, Dunbabin *France in the Making*)
+- Cambridge UP (Helle *Cambridge History of Scandinavia* I-II, Prevenier & Blockmans *Burgundian Netherlands*, Power *Norman Frontier*, Verhulst *Rise of Cities NW Europe*)
+- Edinburgh UP (Barrow *Robert Bruce*, Broun *Scottish Independence*, Woolf *Pictland to Alba*, Oram *Domination and Lordship*)
+- Boydell Press (Vaughan trilogy Burgundy: *Philip the Good*, *Charles the Bold*, *John the Fearless*)
+- Penguin / Aschehoug / Museum Tusculanum (Roesdahl *Vikings*, Bagge *From Viking Stronghold*, Krag *Vikingtid og rikssamling*)
+- U Pennsylvania Press (Kagay *Usatges of Barcelona*, Blockmans & Prevenier *Promised Lands*)
+- Routledge / Longman (Yorke *Kings and Kingdoms*, Huscroft *Ruling England*, Loyn *Norman Conquest*, Nicholas *Medieval Flanders*, Reuter *Germany Early Middle Ages*, Bates *Normandy Before 1066*)
+- Cornell UP (Vanderputten *Saint-Vanne*, Goldberg *Louis the German*)
+- Perrin (Schnerb *L'État bourguignon*)
+- Brill (Bachrach *Charlemagne's Early Campaigns*)
+- Penn State UP (Althoff *Otto III*)
+- John Donald / Birlinn (Crawford *Northern Earldoms*)
+- Edward Arnold (Leyser *Ottonian Saxony*)
+- Hambledon Continuum (Crouch *The Normans*)
+- Wiley-Blackwell (Collins *The Basques*)
+- Vicens-Vives / Edicions 62 / PU Mirail (Sobrequés, Salrach, Bonnassie — Catalonia)
+- Gobierno de Navarra (Martín Duque *Sancho III el Mayor*)
+
+### Cumulative stats post-S21
+
+- **Total entities arricchite**: **~178** (17.8% del DB attivo)
+- **Total sources**: 3317 → **3367** (+50)
+- **Entity con ≥3 sources**: **760** (76%)
+- **Entity con ≥5 sources**: **174** (17.4%)
+
+---
+
 ## [v6.99.13] - 2026-05-13
 
 **Tema**: *enrichment sessions 018-020 — Arabia residual + Mesoamerica minor + medieval African + Abbasid/Papal + SE Asia early + Native NA + Bavaria (22 entity)*
