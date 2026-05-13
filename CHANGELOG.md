@@ -2,6 +2,68 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.16] - 2026-05-13
+
+**Tema**: *enrichment session 023 — Americas + W Africa Hausa + Mbundu + Pomerania (10 entity)*
+
+### S23 — gap analysis cross-continental (10)
+**Birane Hausa** (414, conf 0.50→0.85, era 1000-1804, Hausa Bakwai collective),
+**Sicán** (640, conf 0.60→0.85, era 750-1375, Peru N coast Lambayeque),
+**Herzogtum Pommern** (681, conf 0.50→0.80, era 1121-1637, House of Griffins),
+**Muzo** (719, conf 0.40→0.80, era 800-1559, Colombia Eastern Cordillera/esmeraldas),
+**Calusa** (776, conf 0.55→0.85, era 800-1763, SW Florida nonagricultural chiefdom),
+**Sachapuyas / Chachapoya** (796, conf 0.55→0.85, era 800-1545, NE Peru cloud forest),
+**Ichma / Ychsma** (951, conf 0.65→0.85, era 900-1470, Pachacamac region),
+**Katsina** (976, conf 0.50→0.85, era 1100-1805, Hausa trade & scholarship),
+**Daura** (979, conf 0.50→0.85, era 900-1805, Hausa Bakwai origin),
+**Mbundu pre-Ndongo** (1030, conf 0.55→0.85, era 1200-1500, Angola Ngola precursor).
+
+Tutte le 10 entità ora con 7-8 sources ciascuna (50 nuove sources accademiche totali).
+
+### Source highlights
+
+**Andean pre-Inca** — U Oklahoma Press / Fondo Editorial Congreso Perú
+(Shimada *Cultura Sicán*), Cambridge UP (Bruhns *Ancient South America*),
+U Utah Press (Shimada *Craft Production*), *Latin American Antiquity* (Hayashida),
+U New Mexico Press (Muscutt *Warriors of the Clouds*), Göteborg U
+(Schjellerup *Incas and Spaniards Chachapoyas*), Wiley-Blackwell
+(Silverman *Andean Archaeology*), Dumbarton Oaks (Toyne & Narváez *Fall of Kuelap*),
+IFEA *BIFEA* + PUCP (Eeckhout, Vallejo Berríos, Makowski — Ychsma).
+
+**Colombia** — Banco de la República (Langebaek, Lleras Pérez *esmeraldas Muzo*),
+*Revista Colombiana de Antropología* (Friede), Cambridge UP (Salomon & Schwartz
+*Cambridge History Native Peoples Americas* III).
+
+**Florida** — U Alabama Press (Widmer *Evolution of the Calusa*),
+U Press of Florida (Milanich, Hann, MacMahon & Marquardt),
+Smithsonian (*Handbook of North American Indians* Vol 14 Southeast).
+
+**Hausa-Sahel** — UC Press (M. G. Smith *Affairs of Daura*),
+Oxford UP (Hogben & Kirk-Greene), J.H. Röll (Lange),
+Longman (Ajayi & Crowder, Hiskett), UNESCO/Heinemann
+(Adamu *General History of Africa* IV), Cambridge UP (Lapidus),
+Royal Danish Academy (Hansen *Thirty City-State Cultures*),
+Ahmadu Bello UP (Usman *Transformation of Katsina*), Brill
+(Hunwick *Arabic Literature of Africa* II), Africa World Press (Lovejoy).
+
+**W-Central Africa** — Oxford UP/Clarendon (Miller *Kings and Kinsmen*,
+Birmingham *Trade & Conflict in Angola*), U Wisconsin Press
+(Vansina *Kingdoms of the Savanna*), U Virginia Press (Vansina *How Societies
+Are Born*), Cambridge UP (Heywood & Thornton *Central Africans*).
+
+**Baltic frontier** — Zamek Książąt Pomorskich (Piskorski *Pommern im Wandel*),
+Siedler Verlag (Buchholz), Akademie-Verlag (Herrmann *Slawen in Deutschland*),
+Princeton UP (Bartlett *Making of Europe*), Penguin (Christiansen *Northern Crusades*).
+
+### Cumulative stats post-S23
+
+- **Total entities arricchite**: **~198** (19.8% del DB attivo)
+- **Total sources**: 3417 → **3467** (+50)
+- **Entity con ≥3 sources**: **778** (78%)
+- **Entity con ≥5 sources**: **194** (19.4%)
+
+---
+
 ## [v6.99.15] - 2026-05-13
 
 **Tema**: *enrichment session 022 — Indian Ocean Swahili + Pacific + Balkans + Inner Asia (10 entity)*
