@@ -2,6 +2,72 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.21] - 2026-05-13
+
+**Tema**: *enrichment session 028 — Mississippian + HRE residual + Africa interior + Andes Chanka + Akan (10 entity)*
+
+### S28 — multi-region gap closing (10)
+**Saxony Electorate** (580, conf 0.50→0.85, era 1356-1806, Wettin),
+**Württemberg** (587, conf 0.50→0.85, era 1495-1806, Swabian Lutheran),
+**Moundville** (775, conf 0.50→0.85, era 1050-1500, Mississippian Alabama),
+**Lenapehoking** (779, conf 0.50→0.85, era 1000-1763, Delaware homeland),
+**Damot** (832, conf 0.55→0.85, era 1100-1316, medieval Ethiopia),
+**Chanka** (952, conf 0.55→0.85, era 1000-1440, Andean Inca rivals),
+**K2 / Bambandyanalo** (990, conf 0.55→0.85, era 1000-1075, pre-Mapungubwe),
+**Bigo bya Mugenyi** (996, conf 0.55→0.85, era 1300-1500, Chwezi-Kitara),
+**Kong Empire** (1013, conf 0.40→0.85, era 1300-1500, Dyula Niger Bend),
+**Bono-Manso** (1014, conf 0.40→0.85, era 1270-1500, Akan precursor).
+
+Tutte le 10 entità ora con 7 sources ciascuna (50 nuove sources accademiche totali).
+
+### Source highlights
+
+**N. American Mississippian** — U Alabama Press (Blitz *Moundville*, Knight
+*Mound Excavations*, Wilson *Everyday Life*, Steponaitis *Ceramics, Chronology*),
+U Press of Florida (Steponaitis & Scarry *Rethinking Moundville*).
+
+**NE Woodlands (Lenapehoking)** — Rutgers UP (Weslager *Delaware Indians*),
+Penn UP (Schutt *Peoples of River Valleys*), Smithsonian (Goddard),
+U Michigan Anthropology (Newcomb), U Oklahoma Press (Grumet *Munsee*).
+
+**HRE residual** — Harvard UP (Wilson *Heart of Europe HRE*),
+Kohlhammer (Groß *Wettiner*), C.H. Beck (Kroll *Herrscher Sachsens*),
+Steiner (Schirmer *Kursächsische Staatsfinanzen*), Cambridge UP (Fulbrook
+*Piety and Politics*), Oxford UP (Raitt *Colloquy of Montbéliard*),
+Cornell UP (Vann *Württemberg 1593-1793*).
+
+**Ethiopia (Damot)** — *Annales d'Éthiopie* (Bouanga), Brill (Kelly
+*Companion to Medieval Ethiopia*), James Currey (Hassen *Oromo*),
+Scarecrow (Shinn & Ofcansky), Oxford UP/Clarendon (Taddesse Tamrat
+*Church and State 1270-1527*).
+
+**Great Lakes Africa** — *Azania* (Sutton — Ntusi/Bigo),
+*Uganda Journal* (Posnansky, Robertshaw), *World Archaeology* (Reid),
+James Currey (Schoenbrun *Green Place*).
+
+**S. Africa (K2)** — Wits UP (Huffman *Mapungubwe*),
+*African Archaeological Review* (Calabrese, Kim & Kusimba),
+*PLOS ONE* (Chirikure et al. *Mapela Hill*), U Pretoria (Meyer).
+
+**Andes (Chanka)** — Cambridge UP (Rostworowski),
+Cotsen Inst./UCLA (Bauer, Kellett & Aráoz Silva — Andahuaylas),
+Wiley-Blackwell (D'Altroy *Incas*), UNM diss. (Kellett), UCL (Meddens).
+
+**W Africa (Bono-Manso, Kong)** — U Calgary (Effah-Gyamfi),
+*JAH* (Warren — Bono-Manso chronology), Oxford UP (Konadu *Akan Diaspora*),
+Ohio U Press (Wilks *Forests of Gold*), *IJAHS* (Şaul *War Houses Watara*),
+Karthala (Tauxier *Les états de Kong*), Brill (Azarya), *CEA* (Launay,
+Massing — Wangara Soninke diaspora).
+
+### Cumulative stats post-S28
+
+- **Total entities arricchite**: **~248** (24.8% del DB attivo)
+- **Total sources**: 3667 → **3717** (+50)
+- **Entity con ≥3 sources**: **806** (81%)
+- **Entity con ≥5 sources**: **244** (24.4%)
+
+---
+
 ## [v6.99.20] - 2026-05-13
 
 **Tema**: *enrichment session 027 — Crusaders + steppe + Swahili + Javanese + Hausa + Mexican (10 entity)*
