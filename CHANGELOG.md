@@ -2,6 +2,39 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.11] - 2026-05-13
+
+**Tema**: *enrichment session 013 — Bronze Age residuals (Magan, Tayma, Arzawa)*
+
+3 entity residuali Bronze Age completate.
+
+### Entità arricchite
+
+| id | name | era | conf delta |
+|----|------|-----|------------|
+| 803 | 𒈣𒃶𒀭 (Magan/Oman) | -2500 to -1700 | 0.80→0.85 |
+| 804 | 𒋫𒄿𒈠 (Tayma) | -1500 to -550 | 0.50→0.85 |
+| 812 | 𒅈𒍝𒉿 (Arzawa) | -1500 to -1320 | 0.55→0.85 |
+
+### Source highlights
+
+- Oxford UP (Bryce *Late Bronze Age West/Aegean*, Beal *Hittite Anatolia*,
+  Tebes *Oxford History of Ancient Near East: Persia Vol 5*)
+- Society of Biblical Literature (Beckman et al. *Ahhiyawa Texts*)
+- Trident Press (Abed & Hellyer *UAE: A New Perspective*)
+- *Annual Review of Anthropology* (Tosi *Prehistoric Arabia*)
+- *Bulletin of SOAS* (Hansman *Periplus of Magan and Meluḫḫa*)
+- Somogy Art Publishing (Hausleiter *Oasis of Tayma*)
+
+### Cumulative stats post-S13
+
+- **Total entities arricchite**: **119** (12.0% del DB attivo)
+- **Total sources**: 2400 → **3170** (+770)
+- **Entity con ≥3 sources**: 670 (67%)
+- **Entity con ≥5 sources**: **112** (11%)
+
+---
+
 ## [v6.99.10] - 2026-05-13
 
 **Tema**: *enrichment session 012 — Mesopotamia Bronze Age + Anatolian kingdoms (11 entity)*
