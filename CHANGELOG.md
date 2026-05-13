@@ -2,6 +2,54 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.10] - 2026-05-13
+
+**Tema**: *enrichment session 012 — Mesopotamia Bronze Age + Anatolian kingdoms (11 entity)*
+
+Coverage Bronze Age Near East + Anatolia Iron Age complete.
+
+### Mesopotamia Bronze Age (5)
+| id | name | era |
+|----|------|-----|
+| 806 | 𒅁𒆷 (Ebla) | -3000 to -1600 |
+| 805 | 𒈠𒌷𒆠 (Mari) | -2900 to -1759 |
+| 809 | 𒌓𒀕𒆠 (Larsa) | -2025 to -1763 |
+| 808 | 𒅖𒂊𒀭𒈾𒆠 (Isin) | -2017 to -1794 |
+| 810 | 𒌔𒂊𒂗𒈾 (Eshnunna) | -2000 to -1762 |
+| 807 | 𒄿𒄠𒄩𒀜 (Yamhad/Aleppo) | -1810 to -1517 |
+| 811 | 𒌭𒀸𒋗 (Kassite Babylonia) | -1595 to -1155 |
+
+### Anatolian Iron Age kingdoms (4)
+| id | name | era |
+|----|------|-----|
+| 815 | Lycia | -1400 to -43 |
+| 813 | Phrygia | -1200 to -547 |
+| 814 | Caria | -1100 to -129 |
+| 816 | Cilicia | -1200 to -67 |
+
+### Source highlights
+
+- Oxford UP (Bryce *Kingdom of Hittites*, *Routledge Handbook Western Asia*, *Late Bronze Age West/Aegean*)
+- Cambridge UP (Thonemann *Roman Phrygia*)
+- Brill (Keen *Dynastic Lycia*, Yakubovich *Sociolinguistics Luvian*, Obrador-Cursach *Phrygian Language*)
+- De Gruyter (*Babylonia under Kassites*, *Sealand-Kassite Dynasties*)
+- Routledge (Hamblin *Warfare Ancient Near East*, Liverani *Ancient Near East*)
+- Eisenbrauns (Heimpel *Letters to King of Mari*)
+- Hodder & Stoughton (Matthiae *Ebla: An Empire Rediscovered*)
+- Doubleday (Pettinato *Archives of Ebla*)
+- Vandenhoeck & Ruprecht (Charpin *Mesopotamien: altbabylonische Zeit*)
+- University of Toronto Press (Frayne *Royal Inscriptions Mesopotamia*)
+- University of Pennsylvania Museum (Rose *Iron Age Gordion*)
+
+### Cumulative stats post-S12
+
+- **Total entities arricchite**: **116** (11.7%)
+- **Total sources**: 2400 → **3161** (+761)
+- **Entity con ≥3 sources**: 667 (67%)
+- **Entity con ≥5 sources**: **109** (11%)
+
+---
+
 ## [v6.99.9] - 2026-05-13
 
 **Tema**: *enrichment session 011 — Aboriginal Australia + Olmec residuali + Marshall Islands*
