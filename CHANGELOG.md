@@ -2,6 +2,64 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.28] - 2026-05-13
+
+**Tema**: *boundary curation + URL dedup — verification follow-up post S21-S34 audit*
+
+### Manual boundary curation (10 entity)
+
+Verification post-S34 ha rilevato 10 entità con `confidence_score = 0.5`
+nonostante l'enrichment (S21-S34), perché il startup guard
+`fix_antimeridian_and_wrong_polygons.py` aveva sostituito i poligoni
+ereditati erroneamente con cerchi approssimativi attorno alla capitale
+(comportamento corretto per ETHICS).
+
+Ora ho disegnato poligoni storici approssimati per queste 10:
+
+| id  | Entity                  | New area (km²) | Era        |
+|-----|-------------------------|----------------|------------|
+| 218 | Cherokee (ᏣᎳᎩ)          | 100,843        | 1540-1907  |
+| 326 | Cumans/Kipchak          | 3,496,392      | 900-1241   |
+| 545 | Seminole / Ikaniuksalgi | 272,118        | 1715-1858  |
+| 580 | Saxony Electorate       | 37,606         | 1356-1806  |
+| 581 | Pfalz (Electoral)       | 19,013 (2 ps)  | 1356-1803  |
+| 587 | Württemberg             | 20,763         | 1495-1806  |
+| 651 | Normandie               | 39,787         | 911-1204   |
+| 655 | Slesvig                 | 14,064         | 1058-1864  |
+| 773 | Coosa                   | 46,002         | 1400-1600  |
+| 779 | Lenapehoking            | 64,512         | 1000-1763  |
+
+Tutte ora con `boundary_source = 'historical_approximation'`, conf=0.85.
+Poligoni basati su consenso storiografico, non confini amministrativi moderni.
+
+### Guard patch v6.99.28
+
+`src/ingestion/fix_antimeridian_and_wrong_polygons.py`:
+- Aggiunto `MANUALLY_CURATED_IDS: set[int]` (10 entity sopra) — skip in Fix 1 + Fix 2
+- Aggiunto `CURATED_BOUNDARY_SOURCES: set[str]` = `{historical_approximation, aourednik_curated, manual}` — exempt from auto-reset
+- Il guard ora preserva i poligoni manualmente curati invece di sovrascriverli a ogni restart
+
+### URL dedup (16 sources)
+
+Sostituiti URL publisher generici con riferimenti specifici:
+- WorldCat ISBN per i libri (es. `https://www.worldcat.org/isbn/9783447032742` per Golden 1992)
+- JSTOR stable URL per articoli di journal (Sudan Notes and Records, Polynesian Society)
+- WorldCat OCLC per opere senza ISBN
+- ISSN per journal references
+
+Risultato: **0 duplicate URL** (URL non-vuoto) nelle entità S21-S34.
+
+### Cumulative stats post-v6.99.28
+
+- **Total entities arricchite**: ~308 (30.8%)
+- **Total sources**: 4017
+- **Entity con ≥3 sources**: 852 (85%)
+- **Entity con ≥5 sources**: 304 (30.4%)
+- **Entity con conf ≥0.80**: ora **139/140** delle S21-S34 (era 129) — Kintamani 0.75 resta intenzionale
+- **0 URL duplicati** nelle entità S21-S34
+
+---
+
 ## [v6.99.27] - 2026-05-13
 
 **Tema**: *enrichment session 034 — Visayan + Nuba + Oirat + Poverty Point + Khotan + Sumatra + Sri Lanka + Assam + Sahara (10 entity) — TRIPLE MILESTONE*

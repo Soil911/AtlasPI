@@ -36,6 +36,34 @@ logger = logging.getLogger(__name__)
 
 # ─── Fix 1: Wrong-country polygon inheritance ──────────────────────────────
 
+# v6.99.28: entities whose boundaries have been manually curated with proper
+# historical approximations. The startup guard SKIPS these in Fix 1 (no circle
+# reset) AND in Fix 2 (no oversize reset), preserving the manual boundaries.
+# An entity is treated as manually-curated if its `boundary_source` equals
+# any value in this set (typically 'historical_approximation' or
+# 'aourednik_curated'). The set below is the *id-level* override —
+# regardless of current boundary_source, these IDs are never reset.
+MANUALLY_CURATED_IDS: set[int] = {
+    218,  # Cherokee — Southern Appalachians manual polygon (v6.99.28)
+    326,  # Cumans/Kipchak — Pontic-Caspian + Kazakh steppe (v6.99.28)
+    545,  # Seminole — Florida peninsula (v6.99.28)
+    580,  # Saxony Electorate — Wettin Albertine lands (v6.99.28)
+    581,  # Pfalz — Lower Palatinate Heidelberg region (v6.99.28)
+    587,  # Württemberg — Stuttgart-Tübingen region (v6.99.28)
+    651,  # Normandie — NW France Rouen-Caen (v6.99.28)
+    655,  # Slesvig — S Jutland (v6.99.28)
+    773,  # Coosa — NW Georgia + SE Tennessee + NE Alabama (v6.99.28)
+    779,  # Lenapehoking — Delaware homeland NY/NJ/PA/DE (v6.99.28)
+}
+
+# Boundary sources considered manually curated (also exempt from auto-reset)
+CURATED_BOUNDARY_SOURCES: set[str] = {
+    "historical_approximation",
+    "aourednik_curated",
+    "manual",
+}
+
+
 # Entities that inherited a too-large national polygon. Each gets reset to
 # approximate_generated with a capital-based circle of appropriate radius.
 WRONG_POLYGON_FIXES = {
@@ -304,6 +332,11 @@ def fix_all(dry_run: bool = False) -> dict:
             e = db.query(GeoEntity).filter(GeoEntity.id == eid).first()
             if e is None:
                 continue
+            # v6.99.28: skip if entity has been manually curated
+            if eid in MANUALLY_CURATED_IDS:
+                continue
+            if e.boundary_source in CURATED_BOUNDARY_SOURCES:
+                continue
             # Use fallback coords if entity has no capital (e.g., nomadic peoples)
             cap_lat = e.capital_lat if e.capital_lat is not None else cfg.get("fallback_lat")
             cap_lon = e.capital_lon if e.capital_lon is not None else cfg.get("fallback_lon")
@@ -345,6 +378,11 @@ def fix_all(dry_run: bool = False) -> dict:
         for e in suspects:
             if e.id in WRONG_POLYGON_FIXES:
                 continue  # already handled
+            # v6.99.28: skip manually-curated entities (no oversize reset either)
+            if e.id in MANUALLY_CURATED_IDS:
+                continue
+            if e.boundary_source in CURATED_BOUNDARY_SOURCES:
+                continue
             try:
                 geom_obj = json.loads(e.boundary_geojson)
                 g = shape(geom_obj)
