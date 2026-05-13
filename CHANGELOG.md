@@ -2,6 +2,42 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.7] - 2026-05-13
+
+**Tema**: *enrichment session 009 — Central Asia + India Classical + Korea + Africa subequatoriale*
+
+6 major classical/medieval entity arricchite (3 sources cadauna):
+
+| id | name | era | conf delta |
+|----|------|-----|------------|
+| 114 | कुषाण साम्राज्य (Kushan) | 30-375 | 0.60→0.85 |
+| 109 | गुप्त साम्राज्य (Gupta) | 320-550 | 0.82→0.85 |
+| 117 | 고려 (Goryeo) | 918-1392 | 0.82→0.85 |
+| 47 | Dzimba dza mabwe (Great Zimbabwe) | 1100-1450 | 0.60→0.85 |
+| 989 | Mapungubwe | 1075-1300 | 0.75→0.85 |
+| 131 | పల్లవ (Pallava) | 275-897 | 0.60→0.85 |
+
+### Source highlights
+
+- Oxford UP (Liu *Silk Road in World History*, Sastri *South India*)
+- Cambridge UP (no direct)
+- Routledge (Kulke & Rothermund *History of India*)
+- Brill (Breuker *Pluralist Society Medieval Korea*)
+- Wits University Press (Huffman *Mapungubwe*)
+- Springer (Pikirayi *Great Zimbabwe*)
+- Motilal Banarsidass (Agrawal *Imperial Guptas*)
+- Real African Publishers (Chirikure *Mapungubwe Reconsidered*)
+- Duke UP (Em *The Great Enterprise: Korea*)
+
+### Cumulative stats (S1-S9)
+
+- **Total entities arricchite**: **91** (9.1% del DB attivo)
+- **Total sources**: 2400 → **3086** (+686)
+- **Entity con ≥3 sources**: 645 (65%)
+- **Entity con ≥5 sources**: **84** (8.4%)
+
+---
+
 ## [v6.99.6] - 2026-05-13
 
 **Tema**: *enrichment session 008 — SE Asia maritime kingdoms (major classical)*
