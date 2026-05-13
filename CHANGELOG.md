@@ -2,6 +2,60 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.8] - 2026-05-13
+
+**Tema**: *enrichment session 010 — Sparta + Andean Formative + Olmec + NE Asia minor + Powhatan = 100 entity milestone*
+
+🎉 **100 entità arricchite milestone** raggiunto.
+
+### Entità arricchite (9)
+
+**Batch 1 — Ancient classical/Formative**
+| id | name | era | conf delta |
+|----|------|-----|------------|
+| 66 | Λακεδαίμων (Sparta) | -900 to -192 | 0.7x→0.90 |
+| 959 | Caral/Norte Chico | -3500 to -1800 | 0.6x→0.85 |
+| 956 | Valdivia (Ecuador) | -3500 to -1800 | 0.6x→0.85 |
+| 639 | Chavín (Peru) | -1200 to -400 | 0.6x→0.85 |
+| 924 | La Venta (Olmec) | -900 to -400 | 0.6x→0.85 |
+| 641 | Kaminaljuyú (Maya pre-Classic) | -1200 to 900 | 0.6x→0.85 |
+
+**Batch 2 — NE Asia + Powhatan**
+| id | name | era | conf delta |
+|----|------|-----|------------|
+| 123 | 遼朝 (Liao Khitan) | 916-1125 | 0.65→0.85 |
+| 125 | 西夏 (Western Xia/Xixia) | 1038-1227 | 0.60→0.85 |
+| 221 | Tsenacommacah (Powhatan) | 1570-1677 | 0.49→0.72 |
+
+### Source highlights
+
+- Cambridge UP (Twitchett & Tietze *Liao* + *Hsi Hsia* — Cambridge History of China Vol 6)
+- Harvard UP (Mote *Imperial China 900-1800*)
+- Brill (Kane *Kitan Language and Script*)
+- Duckworth / UC Press (Cartledge *Spartan Reflections*)
+- Routledge (Cartledge *Sparta and Lakonia*)
+- Classical Press of Wales (Hodkinson *Property and Wealth*)
+- University Press of Florida (Rountree & Turner *Before and After Jamestown*)
+- University of Virginia Press (Rountree *Pocahontas*)
+- *Science* (Shady 2001 — Caral dating)
+- PNAS (Sandweiss 2009 — coastal Peru environmental change)
+- *Current Anthropology* (Haas & Creamer 2006 — Andean crucible)
+- Thames & Hudson (Burger *Chavín*, Diehl *Olmecs*)
+- Springer (Burger *Chavín Sphere of Influence*)
+- Duke UP (Bray *Ecuador's Pre-Columbian Past*)
+- Carnegie Institution (Kidder *Kaminaljuyu Excavations* 1946)
+- Pennsylvania State UP (Sanders & Michels *Teotihuacan-Kaminaljuyú*)
+- Dumbarton Oaks (Heizer *La Venta*)
+
+### Cumulative stats post-S10 (MILESTONE 100)
+
+- **Total entities arricchite**: **100** (10.0% del DB attivo) 🎯
+- **Total sources DB**: 2400 → **3113** (+713)
+- **Entity con ≥3 sources**: 645 (65%)
+- **Entity con ≥5 sources**: **93** (9.3%)
+
+---
+
 ## [v6.99.7] - 2026-05-13
 
 **Tema**: *enrichment session 009 — Central Asia + India Classical + Korea + Africa subequatoriale*
