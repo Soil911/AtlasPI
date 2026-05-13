@@ -2,6 +2,43 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.3] - 2026-05-13
+
+**Tema**: *enrichment session 005 — 16 medieval/Mesoamerica + 3000 sources milestone*
+
+DB sources >= 3000 raggiunto.
+
+### Entità arricchite (16)
+
+- **Major medieval European**: Imperium Francorum (89), Moscow (78),
+  Austria-Hungary (99), Langobardorum (76), Ostrogoth (75), Swiss
+  Confederacy (83), Ireland (91), Merovingian (431), Gothia (439)
+- **Constantinople** (3, conf 0.50→0.85)
+- **Tibet** (35, conf 0.40→0.75)
+- **Maurya** (37), **Cahokia** (46), **Haudenosaunee** (40)
+- **Cobá** (920), **Huexotzinco** (929)
+
+### Source highlights
+
+Cambridge UP (McKitterick *Charlemagne*, Allchin), Oxford UP (Wickham,
+Heather, Goldstein), Yale UP (Shakabpa), Brill (Cohen Ostrogothic Italy),
+UC Press, Carnegie Institution (Cobá 1932).
+
+### Cumulative stats (S1+S2+S3+S4+S5)
+
+- **Total entities arricchite**: **61** (6.1%)
+- **Total sources**: 2400 → **3002** (+602) — **3000 milestone** ✅
+- **Entity con ≥3 sources**: 530 → **637** (64%)
+- **Entity con ≥4 sources**: ~80 → **191** (19%)
+
+### Next
+
+- Session 6: Pacific Oceania batch (Tui Cakau, Tui Nayau, Sau o Futuna,
+  Hau o ʻUvea, Taotao Tano, Pulotu)
+- Session 7: cleanup low-confidence (0.4-0.5)
+
+---
+
 ## [v6.99.2] - 2026-05-13
 
 **Tema**: *enrichment session 004 — Italian maritime republics (analytics gap)*
