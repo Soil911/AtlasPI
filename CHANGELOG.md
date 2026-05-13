@@ -2,6 +2,64 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.12] - 2026-05-13
+
+**Tema**: *enrichment sessions 014-017 — major classical + Maya + Andean + minor ME (27 entity)*
+
+Batch grande: 27 entità arricchite in 4 mini-sessioni consecutive.
+
+### S14 — Major classical (8)
+Athens (8), ancient Macedonia (65), Visigothic Kingdom (74), First
+Bulgarian Empire (70), Pontus Kingdom (79), Chichén Itzá (916),
+Makuria/Christian Nubia (822), Hohokam (939).
+
+### S15 — Maya classical (6)
+Calakmul (910), Caracol (911), Palenque (909), Copán (912), Dos Pilas
+(918), Lamanai (921).
+
+### S16 — Andean pre-Inca + Sahara + Nubia (6)
+Paracas (949), Recuay (656), Marajoara (794), Garamantes (1023),
+Blemmyes (1024), Alodia (740).
+
+### S17 — Minor ME kingdoms (7)
+Minaean (798), D'mt (799), Lihyan (800), Mannaea (817), Osroene (820),
+Adiabene (821), Caucasian Albania (818).
+
+### Source highlights
+
+- Cambridge UP (Crook *Cambridge Ancient History Vol 9*, Samons *Pericles*,
+  Curta *Southeastern Europe Middle Ages*)
+- Oxford UP (Errington *Macedonia*, Hammond *Macedonian State*)
+- Princeton UP (Ober *Democracy and Knowledge*, Borza *Shadow of Olympus*,
+  Adams *Nubia: Corridor to Africa*)
+- Yale UP (Camp *Archaeology of Athens*)
+- Brill (McGing *Mithridates*, Marciak *Sophene/Gordyene/Adiabene*, Healey
+  *Aramaeans*)
+- Thames & Hudson (Martin & Grube *Chronicle of Maya Kings* x4 — Maya
+  canonical, Diehl *Olmecs*, Miller *Maya Art*)
+- Stanford UP (Sharer & Traxler *Ancient Maya* x4)
+- University Press of Florida (Graham *Maya Christians*)
+- Vanderbilt UP (Demarest *Petexbatun Project*)
+- William Morrow (Schele & Freidel *Forest of Kings*)
+- L'Erma di Bretschneider (Avanzini *South Arabia*)
+- Edinburgh UP (Munro-Hay *Aksum*)
+- James Currey (Phillipson *Aksum and Northern Horn*)
+- *Science* (Lazaridis 2022 genetic probe)
+- British Museum Press (Welsby *Medieval Kingdoms of Nubia*)
+- *Journal of Field Archaeology* (Lau *Recuay chronology*)
+- *Journal of Archaeological Science* (Chase *Caracol LiDAR*)
+- *Encyclopædia Iranica* (Segal, Lieu, Zadok)
+- Georgetown UP (Toumanoff *Christian Caucasian History*)
+
+### Cumulative stats post-S17
+
+- **Total entities arricchite**: **~146** (14.6% del DB attivo)
+- **Total sources**: 2400 → **~3290** (+890)
+- **Entity con ≥3 sources**: ~690
+- **Entity con ≥5 sources**: ~135
+
+---
+
 ## [v6.99.11] - 2026-05-13
 
 **Tema**: *enrichment session 013 — Bronze Age residuals (Magan, Tayma, Arzawa)*
