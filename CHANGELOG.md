@@ -2,6 +2,68 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.15] - 2026-05-13
+
+**Tema**: *enrichment session 022 — Indian Ocean Swahili + Pacific + Balkans + Inner Asia (10 entity)*
+
+### S22 — gap analysis crosswise (10)
+**Tu'i Tonga** (44, conf 0.55→0.80, era 950-1865, Pacific maritime empire),
+**Kraljevina Hrvatska** (433, conf 0.75→0.85, era 925-1102, medieval Croatia),
+**Markgrafschaft Meissen** (577, conf 0.50→0.80, era 929-1423, Wettin margraviate),
+**Þjóðveldið íslensku** (650, conf 0.83→0.85, era 930-1262, Icelandic Commonwealth),
+**Mogadishu Sultanate** (741, conf 0.60→0.85, era 900-1600, Fakhr al-Din dynasty),
+**Mixtec / Ñuu Tnoo** (792, conf 0.60→0.85, era 900-1521, Oaxaca highlands),
+**Mvita / Mombasa** (824, conf 0.50→0.80, era 900-1837, Swahili port),
+**Pemba** (827, conf 0.44→0.80, era 900-1822, Swahili Indian Ocean),
+**Sofala** (828, conf 0.50→0.80, era 950-1898, Mozambique gold port),
+**Ganzhou Uyghur** (897, conf 0.65→0.85, era 848-1036, Hexi Corridor).
+
+Tutte le 10 entità ora con 7 sources ciascuna (50 nuove sources accademiche totali).
+
+### Source highlights
+
+**Swahili coast / Indian Ocean** — Blackwell (Horton & Middleton *Swahili*),
+Cambridge UP (Pouwels *Horn and Crescent*), Indiana UP (Newitt *Mozambique*,
+Meier *Swahili Port Cities*), Johns Hopkins UP (Pearson), *Nature* (Brielle
+2023 genetics), *Journal of Field Archaeology* (Fleisher/LaViolette Pemba),
+AltaMira (Pikirayi *Zimbabwe Culture*), James Currey (Mudenge *Munhumutapa*).
+
+**Pacific Polynesia** — Cambridge UP (Kirch *Polynesian Chiefdoms*),
+U Hawai'i Press (St. Cartmail *Art of Tonga*), Polynesian Society (Bott),
+*Journal of Pacific History* (Gunson), *Journal of World Prehistory* (Burley).
+
+**Inner Asia steppe** — Brill (Drompp *Tang & Uighur*), Columbia UP
+(Millward *Eurasian Crossroads Xinjiang*), Oxford UP (Golden *Central Asia*),
+I.B. Tauris (Baumer *Silk Roads*), UNESCO (Bosworth & Asimov Vol IV).
+
+**Medieval Balkans** — U Michigan Press (Fine *Early Medieval Balkans*),
+Cambridge UP (Curta *Southeastern Europe*), McGill-Queen's (Goldstein),
+Hrvatska sveučilišna naklada (Budak), Philip Wilson (Margetić).
+
+**N. Atlantic** — Princeton UP (Bagge *Cross and Scepter*), U Minnesota Press
+(Karlsson *Iceland*), Odense UP (Sigurðsson *Icelandic Commonwealth*),
+Penguin (Byock), *Scandinavian Journal of History* (Jakobsson).
+
+**Saxon-Slavic frontier** — Cambridge UP (Althoff in NCMH III),
+*Early Medieval Europe* + Boydell (Bachrach Henry I + II campaigns),
+Brill (Hardt Carolingian frontiers), Longman (Reuter).
+
+**Horn of Africa** — Scarecrow (Mukhtar), Uppsala (Jama *Mogadishu*),
+U Pennsylvania Press (Cassanelli), James Currey (Lewis 4th ed.), ABC-CLIO.
+
+**Mixtec Oaxaca** — Wiley-Blackwell (Joyce), Stanford UP (Terraciano),
+Brill (Jansen & Pérez Jiménez *Pictorial Manuscripts*), U Oklahoma Press
+(Spores), Vanderbilt (Pohl).
+
+### Cumulative stats post-S22
+
+- **Total entities arricchite**: **~188** (18.8% del DB attivo)
+- **Total sources**: 3367 → **3417** (+50)
+- **Entity con ≥3 sources**: **770** (77%)
+- **Entity con ≥5 sources**: **184** (18.4%)
+
+---
+
 ## [v6.99.14] - 2026-05-13
 
 **Tema**: *enrichment session 021 — medieval European kingdoms & duchies (10 entity)*
