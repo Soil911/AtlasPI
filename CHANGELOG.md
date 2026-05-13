@@ -2,6 +2,39 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.5] - 2026-05-13
+
+**Tema**: *enrichment session 007 — Africa Sahel + Burma Pyu + Mesopotamia/Levant ancient*
+
+10 entity arricchite, mix di:
+- **Africa Sahel/Nilotic** (Sennar 410, Darfur 413, Wadai 412, Rustamids 985)
+- **Burma Pyu city-states** (Halin 871, Beikthano 870)
+- **Mesopotamia/Levant ancient** (Assur 170, Karkemish 508, Tadmor/Palmyra 180)
+- **SE Asia** (Tambralinga 901)
+
+### Source highlights
+
+- Cambridge UP (Abun-Nasr *History of the Maghrib*)
+- Oxford UP (Smith *Roman Palmyra*)
+- Hurst Publishers (O'Fahey *The Darfur Sultanate*)
+- *Encyclopaedia of Islam* 2nd ed. (Talbi *Rustamids*)
+- Walter de Gruyter (Hawkins *Hieroglyphic Luwian Inscriptions*)
+- Thames & Hudson (Bahrani *Mesopotamia Ancient Art*)
+- Wiley-Blackwell (Frahm *Companion to Assyria* 2017)
+- British Museum Press (Woolley *Carchemish III*)
+- University of California Press (Nachtigal *Sahara and Sudan*)
+- University of Hawai'i Press (Aung-Thwin *Mists of Rāmañña*, Noonsuk Peninsular Siam)
+- Brill (Jacq-Hergoualc'h *Malay Peninsula*, Drijvers *Religion of Palmyra*)
+
+### Cumulative stats post-S7
+
+- **Total entities arricchite**: **79** (7.9% del DB attivo)
+- **Total sources**: 2400 → **3050** (+650)
+- **Entity con ≥3 sources**: 645 (65%)
+- **Entity con ≥5 sources**: **72** (7%, +52 da inizio)
+
+---
+
 ## [v6.99.4] - 2026-05-13
 
 **Tema**: *enrichment session 006 — Pacific Oceania batch + Mesoamerica residual*
