@@ -2,6 +2,96 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.27] - 2026-05-13
+
+**Tema**: *enrichment session 034 — Visayan + Nuba + Oirat + Poverty Point + Khotan + Sumatra + Sri Lanka + Assam + Sahara (10 entity) — TRIPLE MILESTONE*
+
+### S34 — long-tail multi-continental closing (10)
+**Nabta Playa** (291, conf 0.48→0.85, era -7500/-3400, Saharan Neolithic),
+**Sugbu / Cebu** (366, conf 0.45→0.85, era 1200-1565, Visayan pre-Spanish),
+**Taqali Sultanate** (411, conf 0.45→0.85, era 1570-1884, Sudan Nuba),
+**Four Oirat** (459, conf 0.45→0.85, era 1399-1634, Western Mongol),
+**Poverty Point** (528, conf 0.45→0.85, era -1700/-1100, Louisiana Archaic),
+**Kamarupa** (591, conf 0.48→0.85, era 350-1140, Assam India),
+**Jaffna Kingdom** (601, conf 0.49→0.85, era 1215-1619, Sri Lanka Tamil),
+**Kingdom of Khotan** (607, conf 0.45→0.85, era -200/1006, Tarim Basin),
+**Butuan** (669, conf 0.45→0.85, era 1001-1521, Mindanao trade),
+**Haru / Aru** (887, conf 0.47→0.85, era 1225-1613, N Sumatra).
+
+Tutte le 10 entità ora con 8 sources ciascuna (50 nuove sources accademiche totali).
+
+### TRIPLE MILESTONE crossed in S34
+
+- **30%+ entities with ≥5 sources** (304/1000+)
+- **4000+ total sources** (4017)
+- **85% entities with ≥3 sources** (852)
+
+### Source highlights
+
+**Philippines (Sugbu, Butuan)** — New Day (Scott *Looking for Prehispanic
+Filipino*, *Prehispanic Source Materials*), Ateneo de Manila UP (Scott
+*Barangay*), U Hawai'i Press (Junker *Raiding, Trading, Feasting*),
+*Moussons* (Orillaneda — 15th c. Maritime Trade), Bagong Kasaysayan
+(Salazar *Babaylan*).
+
+**Sudan Nuba (Taqali)** — Michigan State UP (Spaulding *Heroic Age in
+Sinnār*), Methuen/Routledge (O'Fahey & Spaulding *Kingdoms of the Sudan*),
+U Wisconsin Press (Ewald *Soldiers, Traders, Slaves*), *Sudan Notes and
+Records* (Stevenson, Sagar).
+
+**Mongol (Four Oirat)** — Facts on File (Atwood *Encyclopedia of Mongolia*),
+Peter Lang (Bergholz *Partition of the Steppe — Zunghar*), Harvard UP
+(Perdue *China Marches West*), UNESCO (Dani & Masson Vol V), Rutgers UP
+(Grousset *Empire of the Steppes*).
+
+**N. American Archaic (Poverty Point)** — U Press of Florida (Gibson
+*Ancient Mounds of Poverty Point*), AMNH (Ford & Webb), *SAA Archaeological
+Record* (Kidder/Ortmann/Arco), AltaMira (Sassaman *Eastern Archaic*),
+*Louisiana Archaeology* (Connolly).
+
+**Tarim Basin (Khotan)** — Oxford UP (Hansen *Silk Road*), Thames & Hudson
+(Mallory & Mair *Tarim Mummies*), Cambridge UP (Emmerick — *Cambridge
+History of Iran* 3.1), I.B. Tauris (Baumer Vol I), British Library/Brepols
+(Skjærvø *Khotanese Manuscripts*).
+
+**Sumatra (Haru/Aru)** — Cambridge Scholars (Bonatz, Miksic & Neidel
+*From Distant Tales*), LKiS (Muljana), Asian Educational Services
+(Pires *Suma Oriental* primary), Editions Didier Millet (Munoz),
+Wiley-Blackwell (Reid *History of Southeast Asia*).
+
+**Saharan Neolithic (Nabta Playa)** — Kluwer/Plenum/Springer (Wendorf
+& Schild *Holocene Settlement Egyptian Sahara* I), *PPP* (Hoelzmann),
+*Antiquity* (Wendorf — Late Neolithic Megalithic), *African Skies*
+(Malville — Astronomy).
+
+**Assam (Kamarupa)** — Munshiram Manoharlal (Lahiri *Pre-Ahom Assam*,
+Baruah *Comprehensive History of Assam*), Publication Board Assam
+(Sircar — Pragjyotisha-Kamarupa), *Indian History Congress* (Boruah).
+
+**Sri Lanka Tamil (Jaffna)** — Vijitha Yapa (de Silva *History of Sri
+Lanka*), Stamford Lake (Abeysinghe *Jaffna under the Portuguese*),
+Asian Educational Services (Gnanaprakasar), Arul M. Rajendran
+(Pathmanathan *Kingdom of Jaffna 1250-1450*), Greenwood Press (Peebles).
+
+### Cumulative stats post-S34
+
+- **Total entities arricchite**: **~308** (30.8% del DB attivo)
+- **Total sources**: 3967 → **4017** (+50)
+- **Entity con ≥3 sources**: **852** (85%)
+- **Entity con ≥5 sources**: **304** (30.4%)
+
+### Run S21-S34 summary (autonomous batch)
+
+- **130 entity** elevated to academic-grade confidence (0.80-0.85)
+- **+700 sources** added (3317 → 4017)
+- **+130 entity** crossed ≥5 sources (174 → 304)
+- **14 consecutive deployed sub-versions** v6.99.14 → v6.99.27
+- **Triple milestone**: 30% ≥5 src + 4000 src + 85% ≥3 src
+- **S1-flagged Tekrur**: resolved
+- **6 continents** covered with academic peer-reviewed citations
+
+---
+
 ## [v6.99.26] - 2026-05-13
 
 **Tema**: *enrichment session 033 — Pacific micro + Lucayan + Kuhikugu + Sahrawi + S1-flagged cleanup (10 entity)*
