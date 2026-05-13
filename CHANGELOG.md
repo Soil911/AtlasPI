@@ -2,6 +2,100 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.98.0] - 2026-05-13
+
+**Tema**: *audit R8 — `external_source_records` polymorphic mirror per JSON-blob sources*
+
+Foundation per future query cross-source. JSON sources resta CANONICO
+(backward compat 100%). Tabella nuova e' un mirror queryable popolato
+via script standalone.
+
+### Cosa cambia
+
+`docs/adr/ADR-010-source-records-polymorphic.md` documenta la decisione
++ alternative considerate + edge cases.
+
+`alembic/versions/020_external_source_records.py` crea tabella:
+
+```sql
+CREATE TABLE external_source_records (
+    id          SERIAL PRIMARY KEY,
+    parent_type VARCHAR(50)   NOT NULL,  -- city|route|chain|site|ruler|language
+    parent_id   INTEGER       NOT NULL,
+    citation    VARCHAR(1000) NOT NULL,
+    url         VARCHAR(2000) NULL,
+    source_type VARCHAR(30)   NOT NULL DEFAULT 'secondary',
+    created_at  VARCHAR(50)   NOT NULL,
+    UNIQUE(parent_type, parent_id, citation)
+);
+```
+
+Indici:
+- `ix_source_records_parent` (parent_type, parent_id)
+- `ix_source_records_citation` (citation)
+- `ix_source_records_source_type` (source_type)
+
+`scripts/sync_source_records.py` — backfill manuale (idempotente):
+
+```bash
+docker exec cra-atlaspi python -m scripts.sync_source_records
+docker exec cra-atlaspi python -m scripts.sync_source_records --only cities
+docker exec cra-atlaspi python -m scripts.sync_source_records --rebuild
+docker exec cra-atlaspi python -m scripts.sync_source_records --dry-run
+```
+
+### Cosa NON cambia
+
+- `historical_cities.sources` JSON: resta CANONICO. Serializzato in
+  response `/v1/cities` invariato.
+- Stesso per `trade_routes`, `dynasty_chains`, `archaeological_sites`,
+  `historical_rulers`, `historical_languages`.
+- Nessun nuovo endpoint pubblico (additive in v7.x).
+- Nessun cambio ORM nei modelli.
+
+### Strategy: source-of-truth vs mirror
+
+JSON resta canonico. `external_source_records` e' un mirror popolato
+on-demand via script. Quando in futuro consumer downstream useranno la
+tabella relazionale come fonte primaria (es. endpoint
+`/v1/sources/search`), il JSON puo' essere droppato in v7.x gated da
+ADR-008 deprecation cycle.
+
+### Performance
+
+Backfill su dataset attuale stimato:
+- 110 cities × ~2 fonti = ~220 records
+- 41 routes × ~2 fonti = ~82
+- 94 chains × ~3 fonti = ~282
+- 1249 sites × ~1 fonte = ~1249
+- 105 rulers × ~3 fonti = ~315
+- 29 languages × ~3 fonti = ~87
+
+Totale ~2235 records, ~5s su PostgreSQL+PostGIS reale.
+
+### Test
+
+`tests/test_v698_source_records.py` — 8 test:
+- `_parse_sources_json`: empty, malformed, valid, missing citation,
+  default source_type, length cap
+- CLI: importable, invalid `--only` rejected
+
+### Verifica post-deploy
+
+```sql
+-- Migration applicata
+SELECT version_num FROM alembic_version;  -- expected: 020_external_source_records
+
+-- Tabella esiste
+SELECT count(*) FROM external_source_records;  -- expected: 0 (sync manuale)
+
+-- Manual sync
+docker exec cra-atlaspi python -m scripts.sync_source_records
+-- expected: ~2200 records inserted
+```
+
+---
+
 ## [v6.97.0] - 2026-05-13
 
 **Tema**: *audit R6 — split `entities.py` helpers privati in `_entities_helpers.py`*
