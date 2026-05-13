@@ -2,6 +2,65 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.25] - 2026-05-13
+
+**Tema**: *enrichment session 032 — Plains + Philippines + Bali + Wolof + Mogadishu pre-Fakhr + Manteño (10 entity)*
+
+### S32 — cross-continental sustained closing (10)
+**Comancheria** (216, conf 0.50→0.85, era 1700-1875, Plains Comanche empire),
+**Lakȟóta Oyáte** (217, conf 0.50→0.85, era 1600-1877, Plains Sioux),
+**Mvskoke / Creek** (219, conf 0.50→0.85, era 1600-1832, SE confederacy),
+**Madja-as** (884, conf 0.25→0.85, era 1212-1569, Panay Visayan confederation),
+**Cotabato/Buayan** (898, conf 0.30→0.85, era 1350-1520, Mindanao pre-Maguindanao),
+**Gangga Negara** (902, conf 0.55→0.85, era 100-1025, Malay Peninsula Hindu),
+**Gelgel Bali** (906, conf 0.35→0.85, era 1343-1550, pre-Klungkung),
+**Milagro-Quevedo / Manteño** (968, conf 0.55→0.85, era 500-1535, coastal Ecuador),
+**Dyolof pre-1549** (984, conf 0.55→0.85, era 1200-1549, Wolof Senegambia),
+**Mogadishu pre-Fakhr ad-Din** (1009, conf 0.55→0.85, era 900-1270, early Somali port).
+
+Tutte le 10 entità ora con 7-9 sources ciascuna (50 nuove sources accademiche totali).
+
+### Source highlights
+
+**Plains Indians** — Yale UP (Hämäläinen *Comanche Empire* / *Lakota
+America*, DeLay *War of a Thousand Deserts*), U Nebraska Press
+(Kavanagh, Hahn *Invention of Creek Nation*, Powers *Oglala*),
+U Oklahoma Press (Wallace & Hoebel, Andersson & Posthumus *Lakȟóta*),
+UNC Press (Brooks *Captives and Cousins*, Ethridge *Creek Country*),
+Cambridge UP (Saunt *Property, Power, Transformation*).
+
+**Philippines** — New Day (Scott *Prehispanic Source Materials*),
+Ateneo de Manila UP (Scott *Barangay*, Hayase), DLSU (Talaguit
+*Maragtas*), Springer (Donoso *Bichara*), U Philippines Press
+(Majul *Muslims in Philippines*).
+
+**Malay Peninsula + Bali** — U Hawai'i Press (Cœdès, Reuter
+*Custodians of Sacred Mountains*), *J Malayan Branch RAS* (Brown
+*Sejarah Melayu*), Brill (Jacq-Hergoualc'h *Maritime Silk Road*),
+KITLV (Robson *Deśawarṇana*, Schulte Nordholt *Spell of Power*).
+
+**W Africa Wolof** — Karthala (Boulègue *Royaumes wolof*),
+Cambridge UP (Barry *Senegambia*), BU African Studies (Charles),
+Maisonneuve & Larose (Diouf *Histoire du Sénégal*),
+Ohio U Press (Levtzion & Pouwels *Islam in Africa*).
+
+**Mogadishu** — Uppsala (Jama *Origins of Mogadishu*),
+*Paideuma* (Chittick *Medieval Mogadishu*), Cambridge UP (Pouwels),
+U Penn Press (Cassanelli), Scarecrow (Mukhtar).
+
+**Coastal Ecuador (Manteño)** — ESPOL (Marcos *Real Alto*),
+Museo Estrada (Estrada *Manabí*), U Illinois diss. (Mester),
+Banco Central Ecuador (McEwan & Hudson), U Press of Colorado (Bray).
+
+### Cumulative stats post-S32
+
+- **Total entities arricchite**: **~288** (28.8% del DB attivo)
+- **Total sources**: 3867 → **3917** (+50)
+- **Entity con ≥3 sources**: **842** (84%)
+- **Entity con ≥5 sources**: **284** (28.4%)
+
+---
+
 ## [v6.99.24] - 2026-05-13
 
 **Tema**: *enrichment session 031 — HRE residual + Atacama + Tai/Mon + Tondo + Mande/Akan (10 entity)*
