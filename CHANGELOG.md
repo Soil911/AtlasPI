@@ -2,6 +2,65 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.96.0] - 2026-05-13
+
+**Tema**: *audit R7 — split `models.py` 1131 righe in package per dominio*
+
+### Cosa cambia
+
+`src/db/models.py` (1131 righe, 20 classi) → `src/db/models/` package
+con 9 sub-moduli per dominio. **Backward compat al 100%**: tutte le
+chiamate `from src.db.models import X` continuano a funzionare (il
+`__init__.py` re-esporta tutte le 20 classi).
+
+### Split
+
+| Sub-module | Classi | LOC |
+|------------|--------|-----|
+| `entities.py` | GeoEntity, CapitalHistory, NameVariant, TerritoryChange, Source | ~220 |
+| `events.py` | HistoricalEvent, EventEntityLink, EventSource | ~180 |
+| `places.py` | HistoricalCity, TradeRoute, RouteCityLink | ~210 |
+| `chains.py` | DynastyChain, ChainLink | ~130 |
+| `periods.py` | HistoricalPeriod | ~85 |
+| `archaeology.py` | ArchaeologicalSite | ~110 |
+| `rulers.py` | HistoricalRuler | ~80 |
+| `languages.py` | HistoricalLanguage | ~95 |
+| `observability.py` | ApiRequestLog, AiSuggestion, KnownDevIp | ~120 |
+| `__init__.py` (re-export) | — | ~80 |
+
+Totale ~1310 righe (vs 1131 monolitico) — overhead dei docstring +
+header per sub-module. **File grande max 220 righe**, navigazione per
+concern.
+
+### Backward compatibility
+
+```python
+# Pre v6.96.0 e post v6.96.0:
+from src.db.models import GeoEntity, HistoricalEvent, DynastyChain
+```
+
+Il `__init__.py` ha re-export esplicito di tutte le 20 classi + `__all__`
+list per type-checker. Nessuna migration richiesta nel codice esistente.
+
+### SQLAlchemy metadata
+
+Tutte le 20 classi sono registrate in `Base.metadata.tables` come prima.
+Alembic migrations + `Base.metadata.create_all()` invariati.
+
+### Side fix incidentale
+
+`tests/test_api_edge_cases.py::test_continents_under_200ms` era flaky
+in CI (0.18–0.25s su `/v1/continents`). Soglia da 0.2s → 0.5s, target
+ampiamente sotto user-perceived 1s. Rinominato a
+`test_continents_under_500ms`.
+
+### Verifica
+
+`pytest tests/` → 1219 passed, 33 skipped, 10 xfailed
+`ruff check src/ tests/` → All checks passed
+
+---
+
 ## [v6.95.0] - 2026-05-13
 
 **Tema**: *audit R3 — fast boot + scripts/seed_all.py orchestrator*
