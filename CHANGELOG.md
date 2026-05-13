@@ -2,6 +2,87 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.94.0] - 2026-05-13
+
+**Tema**: *audit R1 — PostGIS Geometry column (foundation per query spaziali indicizzate)*
+
+Il debt principale dell'audit architetturale. ADR-009 documenta la
+decisione, Alembic migration 019 la implementa, `boundary_guards`
+ne mantiene la sincronia.
+
+### Cosa cambia (sintesi)
+
+- **Nuova colonna** `geo_entities.boundary_geom GEOMETRY(MultiPolygon, 4326)`
+  affiancata a `boundary_geojson Text` (canonica).
+- **Indice GiST** `ix_geo_entities_boundary_geom` per query spaziali
+  indicizzate (ST_Within, ST_Intersects, ST_DWithin).
+- **Backfill** UPDATE su ~700 righe esistenti via
+  `ST_Multi(ST_MakeValid(ST_GeomFromGeoJSON(boundary_geojson)))`.
+- **Boot guard** `sync_boundary_geom_from_geojson()` per popolare la
+  colonna su entita' nuove (ingest pipeline aggiorna `boundary_geojson`
+  ma lascia `boundary_geom` NULL → guard al boot lo backfilla).
+
+### Cosa NON cambia
+
+- `/v1/entities` response invariata. `boundary_geojson` resta canonico.
+- SQLite dev: no-op. La colonna non viene creata, query spaziali
+  continuano col fallback math/Text esistente.
+- ORM `GeoEntity` invariato. `boundary_geom` non e' mappata in SQLAlchemy
+  (vedi ADR-009 §"ORM strategy"). Le future query useranno raw SQL +
+  `if is_postgres` check.
+
+### File toccati
+
+- `docs/adr/ADR-009-postgis-geometry-column.md` — decisione + alternative
+  considerate + edge cases (antimeridian, ST_MakeValid, GeoJSON malformed).
+- `alembic/versions/019_boundary_geom_postgis.py` — migration:
+  `CREATE EXTENSION postgis IF NOT EXISTS`, `ADD COLUMN IF NOT EXISTS`,
+  `CREATE INDEX ... USING GIST`, backfill UPDATE con `ST_MakeValid` per
+  polygon recovery.
+- `src/ingestion/boundary_guards.py` — nuova funzione
+  `sync_boundary_geom_from_geojson()` aggiunta a
+  `run_boundary_guards_at_boot()` come terzo guard (gira dopo
+  displaced_aourednik + antimeridian, cosi' la colonna riceve i
+  polygon gia' corretti).
+
+### Performance attesa
+
+Prima (`ST_GeomFromGeoJSON(boundary_geojson)` runtime su Text):
+- `/v1/entities?bbox=...` ~180ms p95 su 700 entita' (seq scan + JSON parse)
+
+Dopo (con boundary_geom + GiST, v6.94.1 endpoint switch):
+- Target p95 < 50ms (roadmap v6.24)
+
+Lo switch dell'endpoint a usare `boundary_geom` arriva in v6.94.1 — questa
+release porta solo la foundation (colonna + indice + backfill).
+
+### Verifica attesa post-deploy
+
+```sql
+-- Colonna esiste con tipo corretto
+SELECT column_name, udt_name FROM information_schema.columns
+WHERE table_name = 'geo_entities' AND column_name = 'boundary_geom';
+-- expected: boundary_geom | geometry
+
+-- Indice GiST creato
+SELECT indexname FROM pg_indexes WHERE indexname = 'ix_geo_entities_boundary_geom';
+-- expected: 1 row
+
+-- Backfill non-zero
+SELECT count(*) FROM geo_entities WHERE boundary_geom IS NOT NULL;
+-- expected: ~700 (entita' con boundary_geojson reali)
+
+-- ST_IsValid: nessun polygon corrupted
+SELECT count(*) FROM geo_entities
+WHERE boundary_geom IS NOT NULL AND NOT ST_IsValid(boundary_geom);
+-- expected: 0
+```
+
+CI postgres-migrations job valida che la migration giri senza errori
+contro PostGIS 3.4 reale.
+
+---
+
 ## [v6.93.0] - 2026-05-13
 
 **Tema**: *audit closure — R12 boundary guards consolidate + R9 API versioning policy*

@@ -38,6 +38,51 @@ from typing import Any
 logger = logging.getLogger(__name__)
 
 
+def sync_boundary_geom_from_geojson() -> int:
+    """Backfill incrementale di `boundary_geom` da `boundary_geojson`.
+
+    v6.94.0 (audit R1 / ADR-009): la colonna PostGIS `boundary_geom`
+    deve restare sincrona con `boundary_geojson` quando l'ingestion
+    pipeline aggiorna una boundary. Strategy: chiamato al boot,
+    aggiorna righe con `boundary_geojson NOT NULL AND boundary_geom IS NULL`.
+
+    Solo PostgreSQL — su SQLite e' un no-op (colonna non esiste).
+
+    Idempotente: zero righe modificate se tutto sincrono. Sicuro
+    chiamare ad ogni boot.
+
+    Returns: numero di righe aggiornate.
+    """
+    from sqlalchemy import text
+
+    from src.db.database import SessionLocal, is_postgres
+
+    if not is_postgres:
+        return 0
+
+    db = SessionLocal()
+    try:
+        result = db.execute(
+            text("""
+                UPDATE geo_entities
+                SET boundary_geom = ST_Multi(
+                    ST_MakeValid(ST_GeomFromGeoJSON(boundary_geojson))
+                )
+                WHERE boundary_geojson IS NOT NULL
+                  AND boundary_geojson != ''
+                  AND boundary_geom IS NULL
+                  AND ST_IsValid(ST_MakeValid(ST_GeomFromGeoJSON(boundary_geojson)))
+            """)
+        )
+        db.commit()
+        return result.rowcount or 0
+    except Exception:
+        db.rollback()
+        raise
+    finally:
+        db.close()
+
+
 def run_boundary_guards_at_boot() -> dict[str, Any]:
     """Esegui tutti i boundary guards in sequenza con summary unificato.
 
@@ -46,6 +91,7 @@ def run_boundary_guards_at_boot() -> dict[str, Any]:
             "displaced_fixed": int,        # da fix_displaced_aourednik
             "wrong_polygon_fixed": int,    # da fix_antimeridian_and_wrong_polygons
             "antimeridian_clipped": int,   # da fix_antimeridian_and_wrong_polygons
+            "geom_synced": int,            # da sync_boundary_geom_from_geojson (R1)
             "errors": list[str],           # eventuali messaggi di errore (no raise)
         }
 
@@ -57,6 +103,7 @@ def run_boundary_guards_at_boot() -> dict[str, Any]:
         "displaced_fixed": 0,
         "wrong_polygon_fixed": 0,
         "antimeridian_clipped": 0,
+        "geom_synced": 0,
         "errors": [],
     }
 
@@ -81,18 +128,32 @@ def run_boundary_guards_at_boot() -> dict[str, Any]:
         logger.warning(msg, exc_info=True)
         stats["errors"].append(msg)
 
+    # ── Guard 3: sync boundary_geom from boundary_geojson (R1) ─────
+    # IMPORTANTE: deve girare DOPO i guard 1-2 perche' quelli possono
+    # modificare boundary_geojson (rollback a circle, antimeridian clip).
+    # Il sync ripopola boundary_geom solo dove e' NULL.
+    try:
+        synced = sync_boundary_geom_from_geojson()
+        stats["geom_synced"] = synced
+    except Exception as exc:
+        msg = f"sync_boundary_geom_from_geojson failed: {exc!r}"
+        logger.warning(msg, exc_info=True)
+        stats["errors"].append(msg)
+
     # ── Summary log unificato ─────────────────────────────────────
     total_fixed = (
         stats["displaced_fixed"]
         + stats["wrong_polygon_fixed"]
         + stats["antimeridian_clipped"]
     )
-    if total_fixed > 0:
+    if total_fixed > 0 or stats["geom_synced"] > 0:
         logger.warning(
-            "Boundary guards al boot: %d displaced rollback + %d wrong-polygon reset + %d antimeridian clipped",
+            "Boundary guards al boot: %d displaced rollback + %d wrong-polygon reset + "
+            "%d antimeridian clipped + %d geom synced",
             stats["displaced_fixed"],
             stats["wrong_polygon_fixed"],
             stats["antimeridian_clipped"],
+            stats["geom_synced"],
         )
     elif stats["errors"]:
         logger.warning("Boundary guards al boot: %d errori, vedi log", len(stats["errors"]))
