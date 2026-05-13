@@ -27,9 +27,51 @@ jobs:
       - run: pip install -r requirements.txt
       - run: pytest tests/ -v --tb=short
 
+  # v6.92.2 (audit R4): valida Alembic + schema contro Postgres+PostGIS reale.
+  # La suite test/ gira contro SQLite (veloce, dataset bakato in CI). Questo
+  # job aggiunge una linea di difesa: ogni nuova migration deve girare con
+  # successo su Postgres 16 + PostGIS 3.4 (stesso stack della prod), perche'
+  # bug specifici PostGIS (es. ST_GeomFromGeoJSON, pg_trgm, indici GiST) non
+  # sono catturati dal job `test`.
+  postgres-migrations:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgis/postgis:16-3.4
+        env:
+          POSTGRES_DB: atlaspi_test
+          POSTGRES_USER: atlaspi
+          POSTGRES_PASSWORD: atlaspi_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U atlaspi -d atlaspi_test"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Alembic upgrade head (validates migrations against PostGIS)
+        env:
+          DATABASE_URL: postgresql://atlaspi:atlaspi_test@localhost:5432/atlaspi_test
+        run: |
+          alembic upgrade head
+          alembic current
+      - name: App import sanity (valida che src.main carica con DATABASE_URL postgres)
+        env:
+          DATABASE_URL: postgresql://atlaspi:atlaspi_test@localhost:5432/atlaspi_test
+          AUTO_SEED: "false"
+          REDIS_URL: ""
+        run: |
+          python -c "from src.main import app; print('OK: app imported with', len(app.routes), 'routes')"
+
   build:
     runs-on: ubuntu-latest
-    needs: [lint, test]
+    needs: [lint, test, postgres-migrations]
     steps:
       - uses: actions/checkout@v4
       - run: docker build -t atlaspi .
