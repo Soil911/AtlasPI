@@ -2,6 +2,66 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.18] - 2026-05-13
+
+**Tema**: *enrichment session 025 — SE Asia + East Asia + Americas + Sokoto + Bali (10 entity)*
+
+### S25 — gap analysis Asia + Americas (10)
+**Ayutthaya** (54, conf 0.75→0.85, era 1351-1767, Siam),
+**Jin Jurchen** (124, conf 0.70→0.85, era 1115-1234, N China),
+**Lan Na** (127, conf 0.60→0.85, era 1292-1775, N Thailand Mangrai),
+**Lan Xang** (128, conf 0.60→0.85, era 1354-1707, Lao Fa Ngum),
+**Balhae / Parhae** (141, conf 0.40→0.85, era 698-926, Manchuria/Korea),
+**Seminole / Ikaniuksalgi** (545, conf 0.50→0.85, era 1715-1858, Florida),
+**Principatus Transsilvaniae** (575, conf 0.50→0.85, era 1570-1711, Ottoman vassal),
+**Tlingit / Lingit Aani** (673, conf 0.48→0.85, era 800-1867, SE Alaska),
+**Sokoto Caliphate** (852, conf 0.65→0.85, era 1804-1903, Fulani jihad),
+**Kintamani / Warmadewa Bali** (891, conf 0.30→0.75, era 882-914, pre-Majapahit).
+
+Tutte le entità ora con 7-9 sources ciascuna (50 nuove sources accademiche totali).
+
+### Source highlights
+
+**SE Asia kingdoms** — Yale UP (Wyatt), Cambridge UP (Baker & Phongpaichit
+*Ayutthaya*, Stuart-Fox *History of Laos*), U Hawai'i Press (Cœdès *Indianized
+States*), Silkworm Books (Penth, Ongsakul, van Vliet primary), White Lotus
+(Stuart-Fox *Lan Xang*), Curzon/Routledge (Simms *Kingdoms of Laos*),
+Allen & Unwin (Evans *Laos: Land in Between*), Cognoscenti (Forbes & Henley),
+ARI/NUS (Vickery).
+
+**East Asia borderlands** — Cambridge UP (Twitchett *Sui & T'ang*, Franke
+& Twitchett *Alien Regimes 907-1368*), Harvard UP (Mote *Imperial China
+900-1800*), U Washington Press (Tao *Jurchen*), U Hawai'i Press (Wang,
+Standen), Blackwell (Crossley *Manchus*), Harrassowitz (Reckel *Bohai*),
+Academia Sinica (Sloane).
+
+**Transylvania** — Cambridge UP (Molnár *Hungary*), Akadémiai/Columbia UP
+(Köpeczi *History of Transylvania* 3 vols), Palgrave (Hupchick), Oxford UP
+(Murdock *Calvinism on the Frontier*), Peter Lang (Bonney & Trim).
+
+**N. America** — Smithsonian (*Handbook NA Indians* Vol 7 NW Coast +
+Vol 14 Southeast), U Washington Press (Emmons & de Laguna, Kan *Memory
+Eternal*, Dauenhauer *Tlingit Oral Literature*), U Nebraska Press (Grinev),
+U Press of Florida (Mahon *Second Seminole War*, Porter *Black Seminoles*),
+U Alabama Press (Wickman *Tree That Bends*), Duke UP (Cattelino).
+
+**Sokoto Caliphate** — Longman/Humanities (Last, Adeleye), Oxford UP
+(Hiskett *Sword of Truth*), Cambridge UP (Lovejoy & Hogendorn *Slow Death
+for Slavery*), Ohio U Press (Lovejoy *Jihad in West Africa Age of Revolutions*).
+
+**Bali Warmadewa** — Universitas Indonesia (Goris *Prasasti Bali*), KITLV/Brill
+(de Casparis), White Lotus (Hägerdal), U Hawai'i Press (Reuter *Custodians
+of the Sacred Mountains*), *Antiquity* (Ardika & Bellwood *Sembiran*).
+
+### Cumulative stats post-S25
+
+- **Total entities arricchite**: **~218** (21.8% del DB attivo)
+- **Total sources**: 3517 → **3567** (+50)
+- **Entity con ≥3 sources**: **788** (79%)
+- **Entity con ≥5 sources**: **214** (21.4%)
+
+---
+
 ## [v6.99.17] - 2026-05-13
 
 **Tema**: *enrichment session 024 — HRE states + Atlantic Africa + Mrauk-U + Dutch Brazil + Ajuran (10 entity)*
