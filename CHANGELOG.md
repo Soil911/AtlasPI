@@ -2,6 +2,95 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.95.0] - 2026-05-13
+
+**Tema**: *audit R3 — fast boot + scripts/seed_all.py orchestrator*
+
+### Problema
+
+`src/main.py::lifespan` chiama `update_all_boundaries()` ad ogni boot
+del container. La funzione fa:
+1. `extract_all_boundaries()` — parsing GeoJSON Natural Earth (~14MB)
+   + aourednik (~140MB across periods).
+2. Update di ~700 entita' nel DB.
+
+Tempo: ~5-15s per boot. Ad ogni `cra-deploy atlaspi` (anche solo cambio
+di un endpoint), il boot rifa parsing/UPDATE di tutto.
+
+### Fix
+
+`src/ingestion/update_boundaries.py::update_all_boundaries(force=False)`:
+
+```python
+if not force:
+    total = db.query(GeoEntity).count()
+    with_source = db.query(GeoEntity).filter(boundary_source.isnot(None)).count()
+    if total > 0 and (with_source / total) >= 0.80:
+        logger.info("Skip — 80%%+ entita' gia' con boundary_source")
+        return
+```
+
+Soglia 80% perche' ~700/1038 = 67% in v6.92.x ma cresce a >900/1038 ~87%
+con i recent batches. La soglia 80% e' robusta per dataset corrente +
+futuri batch additivi.
+
+**Effetto**: dopo prima inizializzazione + primo boot post-deploy,
+update_all_boundaries esce in ~10ms (count query) invece di 5-15s.
+Boot total scende da ~30s a ~15s.
+
+`force=True` bypassa skip per:
+- Aggiornamento di `data/raw/aourednik-historical-basemaps/` dopo nuovo
+  fetch upstream.
+- Re-extract test/QA su nuovi batch boundary.
+
+### `scripts/seed_all.py` orchestrator
+
+Nuovo CLI per re-seed manuale (DB wiped, ambiente test, re-build).
+Chiama tutti gli step seed/ingest in sequenza con timing + try/except
+per step.
+
+Uso:
+
+```bash
+# Sequenza completa (tutti gli step, idempotenti)
+docker exec cra-atlaspi python -m scripts.seed_all
+
+# Solo step specifico
+docker exec cra-atlaspi python -m scripts.seed_all --only=entities
+docker exec cra-atlaspi python -m scripts.seed_all --only=boundaries
+
+# Force re-extract boundary (bypass skip 80%)
+docker exec cra-atlaspi python -m scripts.seed_all --force-boundaries
+
+# Veloce: salta boundary expensive
+docker exec cra-atlaspi python -m scripts.seed_all --skip-boundaries
+```
+
+Failure mode: ogni step in try/except. Errore in uno non blocca gli
+altri. Exit code 1 se ≥1 failure.
+
+### Workflow consigliato per prod
+
+Per ridurre ulteriormente boot time, opzionalmente in
+`/opt/cra/.env.atlaspi`:
+
+```bash
+AUTO_SEED=false   # disable seed automatico
+```
+
+Poi `docker exec cra-atlaspi python -m scripts.seed_all` post-deploy
+quando serve. Per ora il default `AUTO_SEED=true` resta per safety
+(container nuovo deve auto-seed).
+
+### Test
+
+`tests/test_v695_seed_orchestrator.py` — 5 test:
+- `update_all_boundaries` skip-when-80%-populated
+- `update_all_boundaries(force=True)` bypassa skip
+- `scripts.seed_all` importabile + CLI parses args
+
+---
+
 ## [v6.94.2] - 2026-05-13
 
 **Tema**: *audit R1.c — endpoint /v1/entities usa boundary_geom (GiST indexed) + nuovo ?contains parameter*

@@ -20,8 +20,38 @@ from src.ingestion.extract_boundaries import extract_all_boundaries
 logger = logging.getLogger(__name__)
 
 
-def update_all_boundaries():
-    """Aggiorna i confini di tutte le entità mappate."""
+def update_all_boundaries(force: bool = False):
+    """Aggiorna i confini di tutte le entità mappate.
+
+    v6.95.0 (audit R3): aggiunto skip idempotente. Se >=80% delle entita'
+    hanno gia' `boundary_source != NULL`, considera l'update fatto e ritorna
+    early. Questo rende il chiamante (`src/main.py::lifespan`) un no-op
+    rapido dopo la prima inizializzazione, eliminando ~secondi di file I/O
+    + GeoJSON parsing ad ogni boot.
+
+    `force=True` bypassa il check e re-esegue full extraction (utile dopo
+    aggiornamento di data/raw/aourednik-historical-basemaps/ o
+    data/raw/natural-earth/).
+    """
+    if not force:
+        db_check: Session = SessionLocal()
+        try:
+            total = db_check.query(GeoEntity).count()
+            if total > 0:
+                with_source = db_check.query(GeoEntity).filter(
+                    GeoEntity.boundary_source.isnot(None)
+                ).count()
+                ratio = with_source / total
+                if ratio >= 0.80:
+                    logger.info(
+                        "update_all_boundaries: %d/%d entita' con boundary_source (%.0f%%), "
+                        "skip extraction (force=True per re-run).",
+                        with_source, total, ratio * 100,
+                    )
+                    return
+        finally:
+            db_check.close()
+
     boundaries = extract_all_boundaries()
     if not boundaries:
         logger.warning("Nessun confine estratto.")
