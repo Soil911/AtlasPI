@@ -45,7 +45,12 @@ def _enrich_test_boundaries(setup_test_db):
     db_module.SessionLocal = TestSession
 
     try:
-        update_all_boundaries()
+        # v6.95.0 (audit R3): update_all_boundaries ora ha skip se 80%+
+        # entita' hanno boundary_source. Nel test il seed JSON popola tutti
+        # boundary_source ma con polygon "small" (post-simplification);
+        # serve force=True per re-extract real polygon from raw data e
+        # raggiungere il vertex floor del test_spotcheck.
+        update_all_boundaries(force=True)
     except Exception as exc:
         pytest.skip(f"update_all_boundaries failed in test env: {exc}")
     finally:
