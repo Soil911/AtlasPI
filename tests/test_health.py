@@ -1,12 +1,16 @@
 """Test per l'endpoint di health check."""
 
+from src.config import APP_VERSION
+
 
 def test_health_returns_ok(client):
     r = client.get("/health")
     assert r.status_code == 200
     d = r.json()
     assert d["status"] == "ok"
-    assert d["version"] == "6.92.0"
+    # v6.92.1: version assertion contro APP_VERSION dinamico (evita
+    # update manuale del test ad ogni bump).
+    assert d["version"] == APP_VERSION
     assert d["entity_count"] >= 50
 
 

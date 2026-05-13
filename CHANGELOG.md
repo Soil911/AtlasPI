@@ -2,6 +2,61 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.92.1] - 2026-05-13
+
+**Tema**: *hardening operativo da audit architetturale — R2 + R5*
+
+Due fix presi dallo "sprint corto" dell'audit architetturale 2026-05-13.
+Nessun cambio di schema, nessun cambio di API. Solo configurazione e
+rate-limiter backend.
+
+### R2 — Rate limiter multi-worker safe (Redis-backed)
+
+**Problema**: `Dockerfile` lancia gunicorn con `--workers 2` ma
+`src/middleware/rate_limit.py` usava storage in-memory di slowapi
+(default). Ogni worker manteneva contatori separati → un client poteva
+bypassare il limite essendo distribuito tra i 2 worker (effettivo 2x
+del valore dichiarato in `RATE_LIMIT`).
+
+**Fix** (`src/middleware/rate_limit.py`):
+
+- Nuova funzione `_resolve_storage_uri()`: legge `REDIS_URL` dall'env,
+  fa ping di health, e se ok ritorna l'URL Redis come storage backend.
+- Fallback graceful a `memory://` se Redis non e' settato o non risponde.
+  Log esplicito sulla scelta fatta all'avvio.
+- `Limiter(storage_uri=...)` ora condiviso tra worker quando Redis e'
+  disponibile → contatori coerenti, limit dichiarato == limit effettivo.
+
+Effetto atteso in prod: il limite `120/minute` globale e `300/minute`
+sui detail endpoint sono ora effettivi anche con 2 worker, non
+"effettivamente 240/minute" e "600/minute".
+
+### R5 — CORS_ORIGINS default sicuro in docker-compose.yml
+
+**Problema**: `docker-compose.yml` impostava `CORS_ORIGINS=*` come
+default. In prod il file `/opt/cra/.env.atlaspi` override correttamente,
+ma chiunque clonava il repo per dev locale partiva con wildcard,
+contraddicendo l'hardening v6.66.0 (`src/config.py` ha rimosso
+proprio il default `*`).
+
+**Fix** (`docker-compose.yml`):
+
+```yaml
+- CORS_ORIGINS=${CORS_ORIGINS:-https://atlaspi.cra-srl.com,https://www.atlaspi.cra-srl.com}
+```
+
+Default ora restrittivo (whitelist dominio pubblico), override esplicito
+via env var se serve API totalmente publica in dev.
+
+### Verifica attesa post-deploy
+
+- `cra-logs atlaspi 50` → cerca riga `Rate limiter: storage Redis attivo`.
+- Header `X-RateLimit-Remaining` invariato in formato.
+- `/health` 200 OK.
+- Nessun cambio in latenza / behavior degli endpoint.
+
+---
+
 ## [v6.32 perf] - 2026-05-13
 
 **Tema**: `/admin/insights` slow — cache miss + Python-side aggregation (suggestion #73, accepted).

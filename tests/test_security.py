@@ -18,14 +18,29 @@ class TestSecurityHeaders:
 
 class TestCORS:
     def test_cors_preflight(self, client):
+        # v6.92.1: origin deve essere nella whitelist CORS (v6.66.0 audit
+        # security ha tolto il default `*`). Usiamo il dominio pubblico
+        # canonico — vedi src/config.py::_CORS_DEFAULT.
         r = client.options(
             "/health",
             headers={
-                "Origin": "http://example.com",
+                "Origin": "https://atlaspi.cra-srl.com",
                 "Access-Control-Request-Method": "GET",
             },
         )
         assert r.status_code == 200
+
+    def test_cors_preflight_unknown_origin_rejected(self, client):
+        # Origin non in whitelist: Starlette CORSMiddleware risponde 400
+        # al preflight (non manda Access-Control-Allow-Origin).
+        r = client.options(
+            "/health",
+            headers={
+                "Origin": "http://evil.example.com",
+                "Access-Control-Request-Method": "GET",
+            },
+        )
+        assert r.status_code == 400
 
 
 class TestErrorResponses:

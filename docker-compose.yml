@@ -45,8 +45,11 @@ services:
       - LOG_FORMAT=json
       - LOG_LEVEL=INFO
       - AUTO_SEED=true
-      # In produzione restringere: CORS_ORIGINS=https://atlaspi.cra-srl.com
-      - CORS_ORIGINS=*
+      # v6.92.1 (audit R5): default sicuro, NON wildcard. In prod il file
+      # /opt/cra/.env.atlaspi imposta CORS_ORIGINS esplicito. Per dev locale,
+      # override con CORS_ORIGINS=* nel proprio .env se serve API publica.
+      # Vedi src/config.py per il rationale (audit #security v6.66.0).
+      - CORS_ORIGINS=${CORS_ORIGINS:-https://atlaspi.cra-srl.com,https://www.atlaspi.cra-srl.com}
       # Observability — passati se presenti nel .env del server
       - SENTRY_DSN=${SENTRY_DSN:-}
       - SENTRY_ENVIRONMENT=${SENTRY_ENVIRONMENT:-production}
