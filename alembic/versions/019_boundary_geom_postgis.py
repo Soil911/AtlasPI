@@ -75,20 +75,35 @@ def upgrade() -> None:
 
     # 4. Backfill: popola boundary_geom da boundary_geojson.
     #    - Solo righe con boundary_geom NULL (idempotente).
-    #    - Filtro ST_IsValid sul polygon parsato per skippare malformed.
-    #    - ST_MakeValid recovery: tentativo di self-intersect repair prima di skip.
-    #    - ST_Multi: wrap Polygon → MultiPolygon (la colonna e' MultiPolygon).
+    #    - ST_MakeValid puo' ritornare GeometryCollection per polygon
+    #      corrupted complessi (mix Polygon + LineString + Point dopo recovery).
+    #      ST_CollectionExtract(..., 3) estrae SOLO i polygon → sempre
+    #      MultiPolygon, compatibile con la colonna.
+    #    - WHERE finale filtra righe in cui dopo extract il geom risulta
+    #      EMPTY (boundary_geojson era LineString/Point puro) o di tipo
+    #      diverso da Polygon/MultiPolygon — restano NULL, riproveremo
+    #      al prossimo boot via sync_boundary_geom_from_geojson() se i
+    #      dati vengono corretti.
     op.execute(
         """
         UPDATE geo_entities
         SET boundary_geom = ST_Multi(
-            ST_MakeValid(ST_GeomFromGeoJSON(boundary_geojson))
+            ST_CollectionExtract(
+                ST_MakeValid(ST_GeomFromGeoJSON(boundary_geojson)),
+                3
+            )
         )
         WHERE boundary_geom IS NULL
           AND boundary_geojson IS NOT NULL
           AND boundary_geojson != ''
           AND boundary_geojson NOT LIKE '%null%'
           AND ST_IsValid(ST_MakeValid(ST_GeomFromGeoJSON(boundary_geojson)))
+          AND NOT ST_IsEmpty(
+              ST_CollectionExtract(
+                  ST_MakeValid(ST_GeomFromGeoJSON(boundary_geojson)),
+                  3
+              )
+          )
         """
     )
 

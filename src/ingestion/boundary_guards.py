@@ -62,16 +62,28 @@ def sync_boundary_geom_from_geojson() -> int:
 
     db = SessionLocal()
     try:
+        # ST_CollectionExtract(..., 3) estrae solo polygons (gestisce
+        # GeometryCollection ritornata da ST_MakeValid su polygon corrupted).
+        # NOT ST_IsEmpty: skip righe in cui dopo extract risulta empty.
         result = db.execute(
             text("""
                 UPDATE geo_entities
                 SET boundary_geom = ST_Multi(
-                    ST_MakeValid(ST_GeomFromGeoJSON(boundary_geojson))
+                    ST_CollectionExtract(
+                        ST_MakeValid(ST_GeomFromGeoJSON(boundary_geojson)),
+                        3
+                    )
                 )
                 WHERE boundary_geojson IS NOT NULL
                   AND boundary_geojson != ''
                   AND boundary_geom IS NULL
                   AND ST_IsValid(ST_MakeValid(ST_GeomFromGeoJSON(boundary_geojson)))
+                  AND NOT ST_IsEmpty(
+                      ST_CollectionExtract(
+                          ST_MakeValid(ST_GeomFromGeoJSON(boundary_geojson)),
+                          3
+                      )
+                  )
             """)
         )
         db.commit()

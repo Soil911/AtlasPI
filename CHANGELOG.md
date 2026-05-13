@@ -2,6 +2,59 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.94.1] - 2026-05-13 — HOTFIX
+
+**Tema**: *fix migration 019: ST_MakeValid → GeometryCollection on corrupted polygons*
+
+### Problema
+
+Deploy v6.94.0 ha messo prod in crash-loop. La migration 019 sembrava
+girare ma falliva al backfill:
+
+```
+psycopg2.errors.InvalidParameterValue:
+  Geometry type (GeometryCollection) does not match column type (MultiPolygon)
+```
+
+Root cause: `ST_MakeValid()` su alcuni polygon corrupted (probabilmente
+self-intersect complessi o mix di componenti dopo recovery) ritorna
+`GeometryCollection` invece di `MultiPolygon` o `Polygon`. `ST_Multi()`
+non riesce a forzarlo. La transazione della migration fa rollback →
+alembic_version resta a 018 → worker fail-to-boot → crash-loop.
+
+CI postgres-migrations NON ha catturato il bug perche' il DB di test
+era vuoto (no boundary_geojson da convertire = no backfill = no errore).
+**Tracked come finding separato**: il CI postgres-migrations job va
+seedato con sample boundary per validare backfill su dati reali.
+
+### Fix (`alembic/versions/019_boundary_geom_postgis.py`)
+
+Sostituito `ST_Multi(ST_MakeValid(...))` con:
+
+```sql
+ST_Multi(
+    ST_CollectionExtract(
+        ST_MakeValid(ST_GeomFromGeoJSON(boundary_geojson)),
+        3  -- 3 = polygons only
+    )
+)
+```
+
+`ST_CollectionExtract(geom, 3)` ritorna sempre MultiPolygon (anche da
+GeometryCollection). Aggiunto `WHERE NOT ST_IsEmpty(...)` per skippare
+righe in cui dopo extract il geom risulta empty (boundary_geojson era
+LineString/Point puro).
+
+Stessa fix applicata a `boundary_guards.sync_boundary_geom_from_geojson()`.
+
+### Stato
+
+- Container prod ancora in crash-loop al momento del fix push.
+- cra-deploy rebuild con codice nuovo → migration 019 patched → backfill
+  ok → worker boot ok → /health risponde.
+
+---
+
 ## [v6.94.0] - 2026-05-13
 
 **Tema**: *audit R1 — PostGIS Geometry column (foundation per query spaziali indicizzate)*
