@@ -2,6 +2,73 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.19] - 2026-05-13
+
+**Tema**: *enrichment session 026 — Kilwa + Chenla + Crusader Antioch + Eurasian steppe + Igbo + Lithuania + Cherokee (10 entity)*
+
+### S26 — gap analysis cross-civilizational (10)
+**Kilwa Sultanate** (164, conf 0.50→0.85, era 957-1513, Swahili Indian Ocean),
+**Cherokee / ᏣᎳᎩ** (218, conf 0.50→0.85, era 1540-1907, SE US),
+**Tuyuhun** (296, conf 0.50→0.85, era 285-670, Xianbei Qinghai),
+**Cumans / Кыпчак** (326, conf 0.50→0.85, era 900-1241, Pontic-Caspian steppe),
+**Chenla / ចេនឡា** (374, conf 0.50→0.85, era 550-802, pre-Angkor Cambodia),
+**Principatus Antiochenus** (472, conf 0.50→0.85, era 1098-1268, Crusader),
+**Eze Nri** (553, conf 0.50→0.85, era 900-1911, Igbo theocracy),
+**Igbo-Ukwu** (562, conf 0.50→0.85, era 800-1000, SE Nigeria bronze),
+**Karakhanids** (609, conf 0.50→0.85, era 840-1212, Turkic Central Asia),
+**Grand Duchy of Lithuania** (653, conf 0.50→0.85, era 1236-1795).
+
+Tutte le 10 entità ora con 7-9 sources ciascuna (50 nuove sources accademiche totali).
+
+### Source highlights
+
+**Swahili Indian Ocean** — British Institute in Eastern Africa (Chittick *Kilwa*),
+Blackwell (Horton & Middleton *Swahili*), *Azania* (Sutton), Johns Hopkins UP
+(Pearson), Cambridge UP (Pouwels).
+
+**Pre-Angkor SE Asia** — Toyo Bunko (Vickery *Pre-Angkor Cambodia*),
+U Hawai'i Press (Cœdès), Westview/Routledge (Chandler *Cambodia*),
+River Books (Higham), Oxford UP (Jacques *Funan, Zhenla*).
+
+**Crusader Antioch** — Boydell Press (Asbridge, Buck *Antioch and Frontiers*),
+Cambridge UP (Runciman *Crusades* 3 vols, Richard *The Crusades*),
+Longman/Routledge (Holt *Age of the Crusades*).
+
+**Eurasian steppe** — Cambridge UP (Vásáry *Cumans and Tatars*, Sinor
+*Early Inner Asia*), Brill (Spinei), Harrassowitz (Golden *Turkic Peoples*),
+Archivum Eurasiae Medii Aevi (Pritsak).
+
+**Tuyuhun (Qinghai)** — Princeton UP (Beckwith *Empires of the Silk Road*,
+*Tibetan Empire in Central Asia*), IsMEO (Molè *T'u-yü-hun*),
+Cambridge UP (Twitchett), *J Sino-Western Communications* (Vovin).
+
+**SE Nigeria Igbo** — Faber/Northwestern UP (Shaw *Igbo-Ukwu* 1970),
+Oxford UP (Shaw *Unearthing Igbo-Ukwu*, Northrup *Trade Without Rulers*),
+*Archaeometry* (Chikwendu — bronze metallurgy), Met Museum (Apley),
+U Virginia/Currey (Ehret), Ethnographica (Onwuejeogwu *Igbo Civilization*),
+Macmillan (Isichei), UNESCO/Heinemann (Ogot Vol V).
+
+**Karakhanid Central Asia** — UNESCO (Asimov & Bosworth *Central Asia* IV.1),
+Harrassowitz (Golden), Cambridge UP (Soucek, Biran *Qara Khitai*),
+Rutgers UP (Grousset *Empire of the Steppes*).
+
+**Lithuania Grand Duchy** — Cambridge UP (Rowell *Lithuania Ascending*),
+Lithuanian Institute (Kiaupa), Routledge (Norkus), U Washington Press
+(Stone *Polish-Lithuanian State*), Penguin (Christiansen *Northern Crusades*).
+
+**Cherokee** — U Nebraska Press (Perdue *Cherokee Women*),
+Princeton UP (McLoughlin *Cherokee Renascence*), U Tennessee Press
+(Hudson *Southeastern Indians*), Smithsonian (Mooney *Myths*, *Handbook* Vol 14).
+
+### Cumulative stats post-S26
+
+- **Total entities arricchite**: **~228** (22.8% del DB attivo)
+- **Total sources**: 3567 → **3617** (+50)
+- **Entity con ≥3 sources**: **789** (79%)
+- **Entity con ≥5 sources**: **224** (22.4%)
+
+---
+
 ## [v6.99.18] - 2026-05-13
 
 **Tema**: *enrichment session 025 — SE Asia + East Asia + Americas + Sokoto + Bali (10 entity)*
