@@ -2,6 +2,68 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.26] - 2026-05-13
+
+**Tema**: *enrichment session 033 — Pacific micro + Lucayan + Kuhikugu + Sahrawi + S1-flagged cleanup (10 entity)*
+
+### S33 — multi-region long-tail + S1-flagged Tekrur resolved (10)
+**Patuiki o Niue** (751, conf 0.40→0.85, era 1700-1900),
+**Taupulega o Tokelau** (752, conf 0.40→0.85, era 1000-1889),
+**Tuanga ni Butaritari** (769, conf 0.40→0.85, era 1500-1892, Kiribati),
+**Etalwa / Lucayan** (774, conf 0.45→0.85, era 1000-1550, Bahamas Taíno),
+**Kuhikugu** (795, conf 0.55→0.85, era 1000-1600, Upper Xingu Amazonia),
+**Amu / Sahrawi** (826, conf 0.45→0.85, era 1370-1895, Western Sahara nomads),
+**Namayan** (882, conf 0.35→0.85, era 1175-1571, Philippines),
+**Balanguingui** (905, conf 0.30→0.85, era 1300-1848, Sulu piracy),
+**Garoumele** (1012, conf 0.55→0.85, era 1200-1480, Kanem-Bornu transitional),
+**Tekrur pre-Almoravid** (1026, conf 0.40→0.85, era 500-1040, S1-flagged ✓).
+
+Tutte le 10 entità ora con 7 sources ciascuna. **S1-flagged Tekrur risolto.**
+
+### Source highlights
+
+**Pacific micro** — Bishop Museum (Loeb *Niue*, Macgregor *Tokelau*),
+U Hawai'i Press (Hooper & Huntsman *Tokelau*, Grimble *Tungaru Traditions*),
+ANU Press (Maude *Slavers in Paradise*), Victoria UP (Angelo & Pasikale),
+*JPS* (Huntsman & Hooper, Maude — Gilbertese Boti), USP Pacific Studies
+(Macdonald *Kiribati and Tuvalu*, Talagi *Niue*), Oxford UP
+(Sabatier *Astride the Equator*).
+
+**Caribbean (Lucayan)** — U Press of Florida (Keegan *People Who Discovered
+Columbus*), U Alabama Press (Granberry & Vescelius, Keegan & Carlson),
+UC Press (Sauer *Early Spanish Main*), U Georgia Press (Craton & Saunders
+*Islanders in the Stream*).
+
+**Amazon Xingu** — Routledge (Heckenberger *Ecology of Power*),
+*Science* (Heckenberger 2003/2008 — Amazonia 1492, Pre-Columbian Urbanism),
+*LAA* (Heckenberger/Petersen/Neves), Vintage/Knopf (Mann *1491*).
+
+**W Sahara** — Lawrence Hill (Hodges), George Allen & Unwin (Mercer
+*Spanish Sahara*), Longman (Norris *Arab Conquest*), Lynne Rienner
+(Jensen), CSIC/Júcar (Caro Baroja *Estudios Saharianos*).
+
+**Philippines** — Ateneo de Manila UP (Scott *Barangay*), Imprenta Sanchez
+(Huerta 1865 primary), NUS Press (Warren *Sulu Zone* / *Iranun and Balangingi*),
+Cheshire/Moore (Tarling *Piracy in Malay World*), Springer (Donoso),
+National Museum Philippines (Fox & Legaspi *Santa Ana*).
+
+**Sahel cleanup** — Methuen (Levtzion *Ancient Ghana and Mali*),
+Karthala (Kane *Fuuta Tooro*), Brill (Thiaw — Senegal River to Siin),
+IU African Studies (Brooks), L'Harmattan (Ba), UNESCO/Heinemann
+(Lange *History of Africa* IV), Hurst (Hiribarren *Borno*),
+Éditions de la Sorbonne (Dewière), BU African Studies (Cohen).
+
+### Cumulative stats post-S33
+
+- **Total entities arricchite**: **~298** (29.8% del DB attivo)
+- **Total sources**: 3917 → **3967** (+50)
+- **Entity con ≥3 sources**: **852** (85%)
+- **Entity con ≥5 sources**: **294** (29.4%)
+
+**Milestone: 85% with ≥3 sources, approaching 30% with ≥5 sources.**
+
+---
+
 ## [v6.99.25] - 2026-05-13
 
 **Tema**: *enrichment session 032 — Plains + Philippines + Bali + Wolof + Mogadishu pre-Fakhr + Manteño (10 entity)*
