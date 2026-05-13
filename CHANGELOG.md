@@ -2,6 +2,70 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.17] - 2026-05-13
+
+**Tema**: *enrichment session 024 — HRE states + Atlantic Africa + Mrauk-U + Dutch Brazil + Ajuran (10 entity)*
+
+### S24 — cross-continental gap closure (10)
+**Ajuuraan Sultanate** (165, conf 0.50→0.85, era 1300-1700, S Somali hydraulic),
+**Mark Brandenburg** (568, conf 0.50→0.85, era 1157-1618, Ascanian/Hohenzollern),
+**Duché de Savoie** (573, conf 0.50→0.85, era 1003-1720, House of Savoy),
+**Fürstentum Walachei** (579, conf 0.40→0.80, era 1247-1330, Basarab I origin),
+**Mrauk U / Arakan** (691, conf 0.40→0.85, era 1430-1785, Indo-Burmese),
+**Nieuw-Holland / Dutch Brazil** (715, conf 0.40→0.85, era 1630-1654, WIC),
+**Soyo** (837, conf 0.60→0.85, era 1500-1859, Kongo Atlantic coast),
+**Ngoyo / Loango** (838, conf 0.60→0.85, era 1600-1885, Vili Atlantic),
+**Oyo Empire** (851, conf 0.60→0.85, era 1300-1896, Yoruba slave-trade era),
+**Yoruba early polities / Ile-Ife** (1027, conf 0.55→0.85, era 1000-1400, pre-Oyo).
+
+Tutte le 10 entità ora con 7-9 sources ciascuna (50 nuove sources accademiche totali).
+
+### Source highlights
+
+**Holy Roman states** — Harvard UP (Clark *Iron Kingdom*),
+Duncker & Humblot (Schultze *Mark Brandenburg* 5 vols), Akademie Verlag
+(Materna & Ribbe), Truman State / Penn State Press (Vester *Sabaudian Studies*),
+Princeton UP (Cox *Green Count of Savoy*), Cambridge UP (Storrs, Hearder).
+
+**Wallachia** — Columbia UP (Pop), Scarecrow (Treptow & Popa),
+Brill (Cazacu *Dracula*), Ohio State UP / I.B. Tauris (Georgescu),
+Romanian Academy (Iorga 10 vols).
+
+**Mrauk-U / Arakan** — Longmans / Asian Educational Services (Harvey),
+École française d'Extrême-Orient (Leider *Royaume d'Arakan*),
+Orchid Press (Gutman *Burma's Lost Kingdoms*), U Michigan diss. (Charney),
+Farrar Straus (Myint-U *River of Lost Footsteps*).
+
+**Ajuran** — U Pennsylvania Press (Cassanelli), James Currey (Lewis),
+Scarecrow (Mukhtar), Cambridge UP (Pouwels *Horn and Crescent*),
+ABC-CLIO (Njoku).
+
+**Dutch Brazil** — Clarendon / Archon (Boxer *Dutch in Brazil 1624-1654*),
+Cambridge UP (van Groesen *Legacy*, Schwartz *Early Brazil documentary*),
+Amsterdam UP (Israel & Schwartz *Expansion of Tolerance*),
+Cornell UP (Klooster *The Dutch Moment*).
+
+**Atlantic Africa Kongo successors** — U Wisconsin Press (Thornton, Vansina),
+Oxford UP/Clarendon (Hilton *Kingdom of Kongo*, Martin *Loango Coast*),
+Cambridge UP (Heywood & Thornton, Thornton *West Central Africa to 1850*),
+U Chicago Press (MacGaffey *BaKongo*), Garland/Routledge (Janzen *Lemba*),
+Gallica (Proyart 1776 primary).
+
+**Yoruba** — Oxford UP/Clarendon (Law *Oyo Empire*), Indiana UP
+(Ogundiran *Yoruba*, Falola & Childs *Yoruba Diaspora*), Heinemann Nigeria
+(Akinjogbin), C.M.S./Routledge (Samuel Johnson 1921 primary), Harry N. Abrams
+(Drewal/Pemberton/Abiodun *Yoruba: Nine Centuries*), BAR International
+(Ogundiran *Ilare archaeology*), Knopf (Eyo & Willett), Holt Rinehart (Bascom).
+
+### Cumulative stats post-S24
+
+- **Total entities arricchite**: **~208** (20.8% del DB attivo)
+- **Total sources**: 3467 → **3517** (+50)
+- **Entity con ≥3 sources**: **787** (79%)
+- **Entity con ≥5 sources**: **204** (20.4%)
+
+---
+
 ## [v6.99.16] - 2026-05-13
 
 **Tema**: *enrichment session 023 — Americas + W Africa Hausa + Mbundu + Pomerania (10 entity)*
