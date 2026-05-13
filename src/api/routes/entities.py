@@ -309,10 +309,16 @@ def _parse_bbox(bbox: str | None) -> tuple[float, float, float, float] | None:
 def _apply_bbox_filter(q, bbox: str | None):
     """Filtra entità per bounding box geografico.
 
-    PostgreSQL+PostGIS (prod):
-        ST_Intersects(ST_GeomFromGeoJSON(boundary_geojson), bbox_envelope)
-        OR fallback al capital-point se l'entità non ha boundary_geojson.
-        Sfrutta l'indice GiST `ix_geo_entities_boundary_geom` se presente.
+    PostgreSQL+PostGIS (prod, v6.94.1+):
+        ST_Intersects(boundary_geom, bbox_envelope) — usa indice GiST
+        `ix_geo_entities_boundary_geom`. Fallback al capital-point per
+        entità senza boundary_geom (backfill non riuscito o entity senza
+        boundary).
+
+        v6.94.1 (audit R1): switch da ST_GeomFromGeoJSON(boundary_geojson)
+        runtime alla colonna materializzata boundary_geom. Elimina parsing
+        JSON per ogni riga + abilita l'uso dell'indice. Target p95 < 50ms
+        (vs ~180ms pre-switch).
 
     SQLite (dev):
         Filtro approssimato sul solo capital-point (lat/lon BETWEEN bbox).
@@ -333,20 +339,21 @@ def _apply_bbox_filter(q, bbox: str | None):
     min_lon, min_lat, max_lon, max_lat = parsed
 
     if is_postgres:
-        # PostGIS: spatial intersection sull'envelope. SRID 4326 = WGS84.
-        # OR sul capitale per entità prive di boundary_geojson.
+        # ADR-009: boundary_geom NON e' mappata in ORM. Usiamo column()
+        # come reference unmapped — SQLAlchemy emette "boundary_geom" raw
+        # nel SQL. Funziona per IS NOT NULL e func.* call.
+        from sqlalchemy import column
+
+        boundary_geom = column("boundary_geom")
         envelope = func.ST_MakeEnvelope(min_lon, min_lat, max_lon, max_lat, 4326)
         return q.filter(
             or_(
                 and_(
-                    GeoEntity.boundary_geojson.isnot(None),
-                    func.ST_Intersects(
-                        func.ST_GeomFromGeoJSON(GeoEntity.boundary_geojson),
-                        envelope,
-                    ),
+                    boundary_geom.isnot(None),
+                    func.ST_Intersects(boundary_geom, envelope),
                 ),
                 and_(
-                    GeoEntity.boundary_geojson.is_(None),
+                    boundary_geom.is_(None),
                     GeoEntity.capital_lat.between(min_lat, max_lat),
                     GeoEntity.capital_lon.between(min_lon, max_lon),
                 ),
@@ -360,6 +367,70 @@ def _apply_bbox_filter(q, bbox: str | None):
         GeoEntity.capital_lat.between(min_lat, max_lat),
         GeoEntity.capital_lon.between(min_lon, max_lon),
     )
+
+
+def _parse_contains(contains: str | None) -> tuple[float, float] | None:
+    """Parse contains string 'lat,lon' into a (lat, lon) tuple.
+
+    v6.94.1 (audit R1): nuovo parametro per "trova entita' il cui
+    boundary_geom CONTIENE il punto (lat, lon)". Usa ST_Contains
+    su indice GiST in Postgres.
+
+    Convention: lat,lon order (NON come bbox che usa lon,lat).
+    Coerente con `/v1/where-was?lat=...&lon=...` esistente.
+    """
+    if not contains:
+        return None
+    try:
+        parts = [float(x.strip()) for x in contains.split(",")]
+    except ValueError:
+        raise HTTPException(
+            status_code=422,
+            detail="contains deve essere 'lat,lon' (2 float separati da virgola)",
+        )
+    if len(parts) != 2:
+        raise HTTPException(
+            status_code=422,
+            detail=f"contains richiede esattamente 2 valori, ricevuti {len(parts)}",
+        )
+    lat, lon = parts
+    if not (-90.0 <= lat <= 90.0):
+        raise HTTPException(status_code=422, detail="Latitudine fuori range [-90, 90]")
+    if not (-180.0 <= lon <= 180.0):
+        raise HTTPException(status_code=422, detail="Longitudine fuori range [-180, 180]")
+    return (lat, lon)
+
+
+def _apply_contains_filter(q, contains: str | None):
+    """Filtra entita' il cui boundary contiene il punto (lat, lon).
+
+    PostgreSQL+PostGIS (prod): ST_Contains(boundary_geom, ST_MakePoint(...))
+    — usa indice GiST. Fallback opzionale: distanza haversine dal capital
+    NON applicato (semanticamente diverso: "contains" e' polygon
+    containment, non vicinanza).
+
+    SQLite (dev): no-op che ritorna la query identica (feature richiede
+    Postgres). Documentato in OpenAPI.
+    """
+    parsed = _parse_contains(contains)
+    if parsed is None:
+        return q
+    lat, lon = parsed
+
+    if is_postgres:
+        from sqlalchemy import column
+
+        boundary_geom = column("boundary_geom")
+        # ST_MakePoint(lon, lat) — ordine PostGIS standard (x, y).
+        # ST_SetSRID per chiarezza SRID, anche se boundary_geom e' gia' 4326.
+        point = func.ST_SetSRID(func.ST_MakePoint(lon, lat), 4326)
+        return q.filter(
+            boundary_geom.isnot(None),
+            func.ST_Contains(boundary_geom, point),
+        )
+
+    # SQLite: feature non disponibile, ritorna query vuota per chiarezza.
+    return q.filter(False)
 
 
 # ─── Endpoints ───────────────────────────────────────────────────
@@ -475,6 +546,16 @@ def list_entities(
         max_length=80,
         description="Bounding box 'min_lon,min_lat,max_lon,max_lat' (vedi /v1/entity).",
     ),
+    contains: str | None = Query(
+        None,
+        max_length=40,
+        description=(
+            "Point-in-polygon: 'lat,lon'. Restituisce entita' il cui "
+            "boundary_geom contiene il punto (PostGIS ST_Contains, indice "
+            "GiST). Esempio: ?contains=41.9,12.5 -> entita' con territorio "
+            "che includeva Roma. PostGIS only — SQLite dev ritorna empty."
+        ),
+    ),
     sort: SortField = Query(None, description="Ordina per: name, year_start, confidence, year_end"),
     order: Literal["asc", "desc"] = Query("asc", description="Direzione ordinamento"),
     limit: int = Query(20, ge=1, le=500, description="Risultati per pagina"),
@@ -500,6 +581,8 @@ def list_entities(
     include_geometry = not exclude_geometry
     q = _eager_query(db, include_geometry=include_geometry)
     q = _apply_bbox_filter(q, bbox)
+    # v6.94.1 (audit R1.c): point-in-polygon via ST_Contains su boundary_geom (GiST).
+    q = _apply_contains_filter(q, contains)
 
     # v6.87 ADR-005: filter out deprecated entities di default
     if not include_deprecated:

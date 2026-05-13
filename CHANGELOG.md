@@ -2,6 +2,94 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.94.2] - 2026-05-13
+
+**Tema**: *audit R1.c — endpoint /v1/entities usa boundary_geom (GiST indexed) + nuovo ?contains parameter*
+
+Completamento dell'audit R1. Le foundation (boundary_geom column + GiST
+index + backfill) sono in v6.94.0/1. Questa release **fa girare il
+beneficio**: gli endpoint spatial usano la colonna indicizzata.
+
+### Switch query bbox a boundary_geom (PostgreSQL)
+
+`src/api/routes/entities.py::_apply_bbox_filter()`:
+
+Prima (v6.94.0 e precedenti):
+```python
+func.ST_Intersects(
+    func.ST_GeomFromGeoJSON(GeoEntity.boundary_geojson),  # runtime JSON parse
+    envelope,
+)
+```
+
+Dopo (v6.94.2):
+```python
+from sqlalchemy import column
+
+boundary_geom = column("boundary_geom")  # ADR-009 unmapped column ref
+func.ST_Intersects(boundary_geom, envelope)  # usa indice GiST
+```
+
+Effetto atteso (osservabile su PostGIS reale):
+- `/v1/entities?bbox=...` p95: ~180ms (con seq scan + JSON parse) →
+  target <50ms (indice GiST). Misura on-prod post-deploy con
+  `EXPLAIN ANALYZE`.
+
+SQLite dev resta sul fallback capital-point (invariato).
+
+### Nuovo parametro `?contains=lat,lon`
+
+`/v1/entities?contains=41.9,12.5` ritorna entita' il cui boundary_geom
+contiene il punto. Usa `ST_Contains(boundary_geom, ST_MakePoint(lon, lat))`
+con indice GiST.
+
+Esempi:
+- `?contains=41.9,12.5` → tutte le entita' che hanno avuto Roma sul
+  loro territorio (Imperium Romanum, Regnum Italiae, Stato Pontificio,
+  Repubblica Italiana, etc.).
+- `?contains=35.7,51.4` → entita' con Tehran (Achaemenid, Sasanian,
+  Safavid, Qajar, Pahlavi, IRI).
+- Combinabile con `?year=` per scoping temporale.
+
+Convenzione: `lat,lon` order (coerente con `/v1/where-was`, NON come
+bbox che usa `lon,lat`).
+
+SQLite dev: il filter ritorna sempre lista vuota (feature PostGIS-only).
+Documentato in OpenAPI description.
+
+### Validazione
+
+`_parse_contains()` simile a `_parse_bbox`:
+- 422 su formato sbagliato (non 'lat,lon')
+- 422 su lat fuori [-90, 90]
+- 422 su lon fuori [-180, 180]
+- 422 su valori non numerici
+
+### Test
+
+`tests/test_v6941_postgis_geom.py` — 10 test:
+- 5 validazione parametri (422)
+- 3 happy path su SQLite (response shape, combined filter, empty result)
+- 2 regression bbox (shape + global envelope)
+
+### Verifica attesa post-deploy
+
+```bash
+# Endpoint funzionale
+curl -sS 'https://atlaspi.cra-srl.com/v1/entities?contains=41.9,12.5&limit=5'
+
+# EXPLAIN ANALYZE per misura indice
+docker exec cra-atlaspi-db psql -U atlaspi -d atlaspi -c "
+EXPLAIN ANALYZE
+SELECT id, name_original FROM geo_entities
+WHERE ST_Contains(boundary_geom, ST_SetSRID(ST_MakePoint(12.5, 41.9), 4326))
+LIMIT 50
+"
+# expected: "Index Scan using ix_geo_entities_boundary_geom" nel plan
+```
+
+---
+
 ## [v6.94.1] - 2026-05-13 — HOTFIX
 
 **Tema**: *fix migration 019: ST_MakeValid → GeometryCollection on corrupted polygons*
