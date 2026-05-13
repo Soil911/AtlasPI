@@ -21,9 +21,6 @@ from src.db.enums import ChainType, EventType, TransitionType
 from src.db.models import (
     ChainLink,
     DynastyChain,
-    EventEntityLink,
-    EventSource,
-    GeoEntity,
     HistoricalEvent,
 )
 

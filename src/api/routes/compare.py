@@ -20,10 +20,9 @@ from pathlib import Path
 
 from fastapi import APIRouter, Depends, Query, Request, Response
 from fastapi.responses import FileResponse
-from sqlalchemy import or_
 from sqlalchemy.orm import Session, joinedload
 
-from src.api.errors import AtlasError, EntityNotFoundError
+from src.api.errors import AtlasError
 from src.cache import cache_response
 from src.db.database import get_db
 from src.db.models import (
@@ -32,7 +31,6 @@ from src.db.models import (
     EventEntityLink,
     GeoEntity,
     HistoricalEvent,
-    NameVariant,
 )
 
 logger = logging.getLogger(__name__)

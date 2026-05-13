@@ -568,7 +568,7 @@ class RouteCityLink(Base):
     is_terminal: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
 
     route: Mapped[TradeRoute] = relationship("TradeRoute", back_populates="city_links")
-    city: Mapped["HistoricalCity"] = relationship("HistoricalCity", back_populates="route_links")
+    city: Mapped[HistoricalCity] = relationship("HistoricalCity", back_populates="route_links")
 
 
 # ─── v6.5: Dynasty / Succession Chains ─────────────────────────────────────

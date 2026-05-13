@@ -21,12 +21,12 @@ import math
 from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
-from sqlalchemy import and_, desc, func, or_
+from sqlalchemy import desc, func, or_
 from sqlalchemy.orm import Session
 
 from src.cache import cache_response
 from src.db.database import get_db
-from src.db.models import ArchaeologicalSite, GeoEntity
+from src.db.models import ArchaeologicalSite
 
 logger = logging.getLogger(__name__)
 

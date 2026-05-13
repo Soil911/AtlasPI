@@ -13,9 +13,9 @@ Key format: cache:{method}:{path}:{sorted_query_params}
 import json
 import logging
 import os
-import time
+from collections.abc import Callable
 from functools import wraps
-from typing import Any, Callable
+from typing import Any
 
 import redis
 
@@ -130,7 +130,6 @@ def cache_response(ttl_seconds: int = 300):
 
             # Extract Request from kwargs (FastAPI injects it).
             from starlette.requests import Request
-            from starlette.responses import Response as StarletteResponse
 
             request: Request | None = kwargs.get("request")
 

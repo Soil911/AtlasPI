@@ -17,9 +17,6 @@ presence). This new analyzer runs SHAPELY sanity checks on actual geometry.
 """
 
 import json
-from datetime import datetime, timezone
-
-import pytest
 
 from src.db.models import AiSuggestion, GeoEntity
 

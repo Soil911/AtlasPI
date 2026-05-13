@@ -16,10 +16,11 @@ import json
 import logging
 
 from fastapi import APIRouter, Depends, Query, Request, Response
-from sqlalchemy.orm import Session, joinedload
+from sqlalchemy.orm import Session
 
 from src.db.database import get_db
 from src.db.models import ArchaeologicalSite, GeoEntity, HistoricalLanguage, HistoricalRuler
+
 # v6.66.0 (audit #security): export endpoint pesanti, limite stretto 10/min
 from src.middleware.rate_limit import RATE_LIMIT_EXPORT, limiter
 

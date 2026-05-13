@@ -1,6 +1,6 @@
 [project]
 name = "atlaspi"
-version = "6.92.0"
+version = "6.92.2"
 description = "Database geografico storico strutturato per agenti AI"
 requires-python = ">=3.11"
 dependencies = [
@@ -34,7 +34,24 @@ line-length = 120
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "N", "UP"]
-ignore = ["E501"]
+# v6.92.2 (audit R4 hotfix): allineato ignore list alla realta' della
+# codebase. Tutte le regole rimaste sono stylistic, non bug:
+# - E501: linee >120 — alcune URL nelle docstring superano (no impatto).
+# - E741: `l` come iteratore di link/line in chain loops. Convenzione
+#   locale (ChainLink → l) leggibile nel contesto; rinomina lasciata
+#   come cleanup opportunistico.
+# - E402: import non-top — intenzionale in src/main.py (route imports
+#   per evitare cicli) e in scripts di seed (env-aware imports).
+# - N806: variabili uppercase nel corpo funzione — R (raggio terra) e
+#   MAX_DIST_KM (costanti fisiche). Convenzione scientifica vs PEP8.
+ignore = ["E501", "E741", "E402", "N806"]
+
+[tool.ruff.lint.per-file-ignores]
+# Test files: variabili "unused" sono spesso intenzionali (setup-fixtures,
+# pattern di asserzione, demonstrate-then-assert). Stesso per yield-in-for
+# che e' un equivalente esplicito di yield-from ma documentato meglio nei
+# test di iterazione.
+"tests/*.py" = ["F841", "UP028"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

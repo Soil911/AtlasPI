@@ -26,7 +26,7 @@ import json
 import logging
 import math
 
-from shapely.geometry import MultiPolygon, Polygon, mapping, shape
+from shapely.geometry import MultiPolygon, mapping, shape
 
 from src.db.database import SessionLocal
 from src.db.models import GeoEntity

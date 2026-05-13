@@ -17,7 +17,6 @@ import pytest
 
 from src.ingestion.fix_bad_boundaries_v672 import FIXES_V672, run_v672_fixes
 
-
 V672_IDS = {f.entity_id for f in FIXES_V672}
 
 

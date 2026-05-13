@@ -9,10 +9,9 @@ Covers:
 - Filtering and ordering
 """
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from src.db.models import AiSuggestion
-
 
 # ═══════════════════════════════════════════════════════════════════
 # Model CRUD
@@ -28,7 +27,7 @@ def test_create_suggestion(db):
         priority=3,
         status="pending",
         source="auto",
-        created_at=datetime.now(timezone.utc).isoformat(),
+        created_at=datetime.now(UTC).isoformat(),
     )
     db.add(s)
     db.commit()
@@ -51,13 +50,13 @@ def test_update_suggestion_status(db):
         priority=2,
         status="pending",
         source="auto",
-        created_at=datetime.now(timezone.utc).isoformat(),
+        created_at=datetime.now(UTC).isoformat(),
     )
     db.add(s)
     db.commit()
 
     s.status = "accepted"
-    s.reviewed_at = datetime.now(timezone.utc).isoformat()
+    s.reviewed_at = datetime.now(UTC).isoformat()
     s.review_note = "Will add Sumerian events"
     db.commit()
     db.refresh(s)
@@ -76,7 +75,7 @@ def test_suggestion_with_detail_json(db):
         priority=3,
         status="pending",
         source="auto",
-        created_at=datetime.now(timezone.utc).isoformat(),
+        created_at=datetime.now(UTC).isoformat(),
         detail_json='[{"id": 1, "name": "Test Entity"}]',
     )
     db.add(s)
@@ -96,7 +95,7 @@ def test_delete_suggestion(db):
         priority=5,
         status="pending",
         source="manual",
-        created_at=datetime.now(timezone.utc).isoformat(),
+        created_at=datetime.now(UTC).isoformat(),
     )
     db.add(s)
     db.commit()

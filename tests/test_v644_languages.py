@@ -1,6 +1,5 @@
 """v6.44: tests per HistoricalLanguage + /v1/languages endpoints."""
 
-import pytest
 
 
 def test_list_languages_returns_seed_data(client):

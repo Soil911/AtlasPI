@@ -18,8 +18,6 @@ import pytest
 from src.db.enums import EventRole, EventType
 from src.db.models import (
     EventEntityLink,
-    EventSource,
-    GeoEntity,
     HistoricalEvent,
 )
 

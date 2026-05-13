@@ -27,11 +27,11 @@ import logging
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
 from fastapi.responses import RedirectResponse
-from sqlalchemy import and_, func, or_
+from sqlalchemy import or_
 from sqlalchemy.orm import Session, joinedload
 
 from src.api.errors import AtlasError
-from src.db.database import get_db, is_postgres
+from src.db.database import get_db
 from src.db.enums import CityType, RouteType
 from src.db.models import HistoricalCity, RouteCityLink, TradeRoute
 
@@ -137,8 +137,8 @@ def _simplify_linestring(geometry: dict | None, tolerance: float = 0.5) -> dict 
         return geometry
 
     try:
-        from shapely.geometry import shape as _shape
         from shapely.geometry import mapping as _mapping
+        from shapely.geometry import shape as _shape
         g = _shape(geometry)
         simplified = g.simplify(tolerance, preserve_topology=False)
         return _mapping(simplified)

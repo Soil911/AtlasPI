@@ -1,8 +1,6 @@
 """v6.39: tests per /v1/render/*.png endpoints — server-side PNG rendering."""
 
-import io
 
-import pytest
 
 
 PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
@@ -72,6 +70,7 @@ def test_render_entity_no_boundary(client, db):
 
 def test_render_entity_with_boundary(client, db):
     import json
+
     from src.db.models import GeoEntity
     coords = [[[10.0, 10.0], [20.0, 10.0], [20.0, 20.0], [10.0, 20.0], [10.0, 10.0]]]
     e = GeoEntity(

@@ -16,7 +16,6 @@ Il confidence_score viene ridotto di 0.1 per riflettere l'incertezza aggiuntiva.
 
 import math
 import random
-from typing import Optional
 
 # ETHICS: i raggi sono stime conservative basate su storiografia comparata.
 # Non rappresentano confini reali ma ordini di grandezza plausibili.
@@ -64,7 +63,7 @@ def _km_per_deg_lon(lat: float) -> float:
     return 111.32 * math.cos(math.radians(abs(lat)))
 
 
-def _get_era_scale(year_start: int, year_end: Optional[int]) -> float:
+def _get_era_scale(year_start: int, year_end: int | None) -> float:
     """Restituisce il fattore di scala per l'era storica."""
     mid_year = year_start
     if year_end is not None:
@@ -77,7 +76,7 @@ def _get_era_scale(year_start: int, year_end: Optional[int]) -> float:
 
 
 def _get_base_radius_km(entity_type: str, year_start: int,
-                        year_end: Optional[int]) -> float:
+                        year_end: int | None) -> float:
     """Calcola il raggio base in km per il tipo di entità e l'era."""
     r_min, r_max = ENTITY_TYPE_RADIUS_KM.get(entity_type, (100, 300))
     era_scale = _get_era_scale(year_start, year_end)
@@ -139,7 +138,7 @@ def name_seeded_boundary(
     lon: float,
     entity_type: str,
     num_vertices: int = 12,
-    radius_km: Optional[float] = None,
+    radius_km: float | None = None,
 ) -> dict:
     """Genera un poligono GeoJSON con seed deterministico basato sul NOME.
 
@@ -215,9 +214,9 @@ def generate_approximate_boundary(
     lon: float,
     entity_type: str,
     year_start: int,
-    year_end: Optional[int] = None,
+    year_end: int | None = None,
     num_vertices: int = 12,
-    seed: Optional[int] = None,
+    seed: int | None = None,
 ) -> dict:
     """Genera un poligono GeoJSON approssimativo per un'entità storica.
 

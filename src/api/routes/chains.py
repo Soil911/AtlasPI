@@ -21,7 +21,7 @@ from __future__ import annotations
 import json
 import logging
 
-from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
+from fastapi import APIRouter, Depends, Query, Request, Response
 from sqlalchemy.orm import Session, joinedload
 
 from src.api.errors import AtlasError

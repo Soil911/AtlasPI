@@ -5,10 +5,7 @@ degrade gracefully: no crashes, handlers run normally, stats return
 zeroed values.
 """
 
-import json
-from unittest.mock import MagicMock, patch
 
-import pytest
 
 
 # ═══════════════════════════════════════════════════════════════════

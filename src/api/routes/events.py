@@ -21,7 +21,6 @@ estrarre specificamente gli eventi la cui documentazione contemporanea
 from __future__ import annotations
 
 import logging
-
 import re
 
 from fastapi import APIRouter, Depends, HTTPException, Path, Query, Request, Response
@@ -444,7 +443,7 @@ def events_date_coverage(
     response: Response,
     db: Session = Depends(get_db),
 ):
-    from sqlalchemy import func, distinct
+    from sqlalchemy import func
 
     rows = (
         db.query(

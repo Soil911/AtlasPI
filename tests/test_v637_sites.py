@@ -17,7 +17,6 @@ import pytest
 
 from src.db.models import ArchaeologicalSite
 
-
 # ─── Helpers ─────────────────────────────────────────────────────────
 
 def _insert_test_site(

@@ -1,9 +1,7 @@
 """v6.55: tests per apply_data_patch script."""
 
-import json
-import pytest
 
-from scripts.apply_data_patch import apply_patches, PATCHABLE_FIELDS, RESOURCE_MAP
+from scripts.apply_data_patch import PATCHABLE_FIELDS, RESOURCE_MAP, apply_patches
 from src.db.models import GeoEntity, HistoricalEvent
 
 

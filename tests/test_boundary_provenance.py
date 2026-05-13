@@ -13,7 +13,6 @@ These tests validate:
 
 import pytest
 
-
 VALID_BOUNDARY_SOURCES = {
     "historical_map",
     "natural_earth",

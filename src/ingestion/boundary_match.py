@@ -28,8 +28,9 @@ from __future__ import annotations
 
 import logging
 import unicodedata
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Any, Iterable, Optional
+from typing import Any
 
 logger = logging.getLogger(__name__)
 
@@ -85,11 +86,11 @@ class MatchResult:
     matched: bool
     strategy: str = ""  # "iso_a3" | "exact_name" | "variant" | "alt_lang" | "fuzzy" | "capital_in_polygon"
     confidence: float = 0.0  # 0.0-1.0 (rapidfuzz score / 100, o 1.0 per match esatto)
-    ne_iso_a3: Optional[str] = None
-    ne_name: Optional[str] = None
-    geojson: Optional[dict] = None
+    ne_iso_a3: str | None = None
+    ne_name: str | None = None
+    geojson: dict | None = None
     is_disputed: bool = False  # ETHICS: territorio contestato
-    rejection_reason: Optional[str] = None  # se matched=False
+    rejection_reason: str | None = None  # se matched=False
     notes: list[str] = field(default_factory=list)
 
 
@@ -177,7 +178,7 @@ def _gather_ne_names(ne_record: dict) -> list[str]:
     return deduped
 
 
-def _extract_iso_hint(entity: dict) -> Optional[str]:
+def _extract_iso_hint(entity: dict) -> str | None:
     """Cerca un suggerimento ISO_A3 nei campi dell'entita'.
 
     L'entita' AtlasPI puo' avere:
@@ -206,7 +207,7 @@ def _extract_iso_hint(entity: dict) -> Optional[str]:
 
 def _try_iso_match(
     entity: dict, ne_by_iso: dict[str, dict]
-) -> Optional[MatchResult]:
+) -> MatchResult | None:
     iso = _extract_iso_hint(entity)
     if not iso:
         return None
@@ -229,7 +230,7 @@ def _try_iso_match(
 
 def _try_exact_name_match(
     entity: dict, ne_records: list[dict]
-) -> Optional[MatchResult]:
+) -> MatchResult | None:
     entity_names_norm = {_normalize(n): n for n in _gather_entity_names(entity)}
     if not entity_names_norm:
         return None
@@ -354,8 +355,9 @@ def _capital_to_centroid_km(entity: dict, geojson: dict | None) -> float | None:
     if lat is None or lon is None or not geojson:
         return None
     try:
-        from shapely.geometry import shape
         import math
+
+        from shapely.geometry import shape
     except ImportError:
         return None
     try:
@@ -378,7 +380,7 @@ def _capital_to_centroid_km(entity: dict, geojson: dict | None) -> float | None:
 
 def _try_fuzzy_match(
     entity: dict, ne_records: list[dict], threshold: int = FUZZY_THRESHOLD
-) -> Optional[MatchResult]:
+) -> MatchResult | None:
     try:
         from rapidfuzz import fuzz
     except ImportError:
@@ -483,7 +485,7 @@ def _try_fuzzy_match(
 
 def _try_capital_in_polygon(
     entity: dict, ne_records: list[dict]
-) -> Optional[MatchResult]:
+) -> MatchResult | None:
     """Match basato sul fatto che la capitale e' dentro al polygon del paese moderno.
 
     Strategia di fallback piu' debole — usata quando il nome non matcha ma

@@ -49,7 +49,6 @@ import re
 import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterable, Optional
 
 logger = logging.getLogger(__name__)
 
@@ -108,17 +107,17 @@ class AourednikMatch:
     matched: bool
     strategy: str = ""  # "exact_name" | "fuzzy_name" | "subjecto" | "partof" | "capital_near_centroid"
     confidence: float = 0.0
-    aourednik_name: Optional[str] = None
-    aourednik_year: Optional[int] = None
-    border_precision: Optional[int] = None
-    geojson: Optional[dict] = None
-    rejection_reason: Optional[str] = None
+    aourednik_name: str | None = None
+    aourednik_year: int | None = None
+    border_precision: int | None = None
+    geojson: dict | None = None
+    rejection_reason: str | None = None
 
 
 # ─── Helpers ────────────────────────────────────────────────────────────────
 
 
-def _normalize(s: Optional[str]) -> str:
+def _normalize(s: str | None) -> str:
     """Normalizza un nome: lowercase, accent-fold, strip punct."""
     if not s:
         return ""
@@ -129,7 +128,7 @@ def _normalize(s: Optional[str]) -> str:
     return s.strip().lower()
 
 
-def _year_from_filename(filename: str) -> Optional[int]:
+def _year_from_filename(filename: str) -> int | None:
     """Estrae l'anno da un filename aourednik.
 
     Esempi:
@@ -156,7 +155,7 @@ def _haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     return 2 * R * math.asin(math.sqrt(a))
 
 
-def _polygon_centroid(geom: dict) -> Optional[tuple[float, float]]:
+def _polygon_centroid(geom: dict) -> tuple[float, float] | None:
     """Calcola un centroide approssimato per un Polygon/MultiPolygon.
 
     Non usiamo shapely qui per leggerezza: media dei vertici di una ring.
@@ -177,7 +176,7 @@ def _polygon_centroid(geom: dict) -> Optional[tuple[float, float]]:
         return None
 
 
-def _ring_bbox(ring: list) -> Optional[tuple[float, float, float, float]]:
+def _ring_bbox(ring: list) -> tuple[float, float, float, float] | None:
     """Bounding box (min_lon, min_lat, max_lon, max_lat) di una ring."""
     if not ring:
         return None
@@ -329,9 +328,9 @@ def list_snapshots() -> list[tuple[int, Path]]:
 
 def choose_snapshot(
     year_start: int,
-    year_end: Optional[int],
+    year_end: int | None,
     snapshots: list[tuple[int, Path]],
-) -> Optional[tuple[int, Path]]:
+) -> tuple[int, Path] | None:
     """Sceglie lo snapshot aourednik piu' adatto per [year_start, year_end].
 
     Strategia:
@@ -402,7 +401,7 @@ def _entity_candidate_names(entity: dict) -> list[str]:
 def _best_name_match(
     candidate_names: list[str],
     features: list[dict],
-) -> tuple[Optional[dict], str, float]:
+) -> tuple[dict | None, str, float]:
     """Trova la feature con miglior match di nome.
 
     Returns: (feature, strategy, score) — score in 0.0-1.0.
@@ -466,7 +465,7 @@ def _best_name_match(
 def _capital_in_polygon(
     entity: dict,
     features: list[dict],
-) -> tuple[Optional[dict], str, float]:
+) -> tuple[dict | None, str, float]:
     """Fallback rigoroso: feature il cui poligono CONTIENE la capitale.
 
     ETHICS:

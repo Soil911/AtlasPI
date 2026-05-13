@@ -11,7 +11,6 @@ Tests:
   - Ethics: historiographic notes, alternative names present
 """
 
-import json
 
 
 # ═══════════════════════════════════════════════════════════════════

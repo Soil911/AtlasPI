@@ -18,9 +18,6 @@ from src.db.models import (
     DynastyChain,
     GeoEntity,
     HistoricalEvent,
-    NameVariant,
-    Source,
-    TerritoryChange,
 )
 
 

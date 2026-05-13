@@ -13,11 +13,7 @@ Testa:
 
 import json
 
-import pytest
-from sqlalchemy import text
-
 from src.db.models import GeoEntity
-
 
 # ─── Helpers ─────────────────────────────────────────────────────────
 

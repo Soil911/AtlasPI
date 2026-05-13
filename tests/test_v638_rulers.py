@@ -6,7 +6,6 @@ import pytest
 
 from src.db.models import HistoricalRuler
 
-
 # ─── Helpers ─────────────────────────────────────────────────────────
 
 def _insert_test_ruler(

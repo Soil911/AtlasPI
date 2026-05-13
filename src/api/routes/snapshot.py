@@ -12,8 +12,6 @@ and provides context (top-N selections, region breakdowns, statistics).
 from __future__ import annotations
 
 import logging
-from collections import Counter
-from typing import Any
 
 from fastapi import APIRouter, Depends, Path, Query, Request, Response
 from sqlalchemy import func, or_
@@ -29,6 +27,7 @@ from src.db.models import (
     HistoricalEvent,
     HistoricalPeriod,
 )
+
 # v6.66.0 (audit #security): limite specifico per /v1/snapshot/year/*
 # Endpoint pesante che aggrega periods+entities+events+cities+chains
 # → 60/minute basta per uso interattivo, previene abuse via scraper.

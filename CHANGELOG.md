@@ -2,6 +2,75 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.92.2] - 2026-05-13
+
+**Tema**: *audit R4 — CI postgres + cleanup lint debt preesistente*
+
+### R4 — CI job postgres-migrations contro PostgreSQL+PostGIS reale
+
+Aggiunto job `postgres-migrations` in `.github/workflows/ci.yml`. Spinge
+un service `postgis/postgis:16-3.4` (stesso stack della prod) e valida:
+
+1. `alembic upgrade head` completa senza errori → cattura bug PostGIS
+   specific (es. `ST_GeomFromGeoJSON`, `pg_trgm`, indici GiST) che
+   sfuggono al job `test` (che gira contro SQLite).
+2. App import sanity: `from src.main import app` con `DATABASE_URL`
+   postgres → 126 routes caricate senza crash al boot.
+
+`build` job ora dipende da `[lint, test, postgres-migrations]`. Una
+migration che funziona in SQLite ma rompe Postgres viene bloccata
+prima del merge.
+
+### Hotfix preesistenti che bloccavano CI
+
+Nel verificare R4 ho trovato il CI master gia' **rosso** (commit
+prev. cd8e32a) per ragioni indipendenti dall'audit. Sbloccati qui
+perche' altrimenti `build` non sarebbe mai partito:
+
+#### Test collection error
+
+`tests/test_wikidata_bootstrap.py` importava `scripts/wikidata_bootstrap.py`
+che `import requests`, ma `requests` non era in `requirements.txt`. CI
+falliva su `ModuleNotFoundError: No module named 'requests'` durante la
+collection pytest, interrompendo TUTTA la suite.
+
+**Fix**: aggiunto `requests>=2.32.0` a `requirements.txt`.
+
+#### Ruff lint debt accumulato (228 errori)
+
+Il job `lint` ha trovato 228 errori, mai pulito da quando aggiunto.
+Approccio bilanciato:
+
+- **Auto-fix**: `ruff --fix` ha risolto 186 errori (unused imports,
+  unsorted imports, datetime.UTC alias, etc.) — nessun cambio
+  funzionale, solo cleanup.
+- **Ignore stylistic**: `pyproject.toml` `[tool.ruff.lint]` aggiornato
+  per ignorare `E741` (variabile `l` come ChainLink iterator),
+  `E402` (import deferiti intenzionali in `src/main.py` e
+  `src/ingestion/ingest_*`), `N806` (variabili uppercase per
+  costanti fisiche tipo `R` = raggio terra haversine).
+- **Per-file ignore tests**: `F841` (unused var in test pattern),
+  `UP028` (yield-in-for) ammessi nei test files.
+
+Dopo: `ruff check src/ tests/` → "All checks passed!".
+
+### Nessun cambio comportamentale runtime
+
+- `src/config.py::APP_VERSION` → `6.92.2`.
+- `pyproject.toml::version` → `6.92.2`.
+- Zero modifiche a logica applicativa. Tutti i file toccati dall'auto-fix
+  ruff (7 file) hanno passato la sanity-test pytest (entities + health
+  + security 25/25 pass).
+
+### Verifica attesa CI
+
+- `lint`: All checks passed
+- `test`: 1199 pass (12 fail preesistenti dataset-dependent, non bloccanti)
+- `postgres-migrations`: alembic upgrade head + app import → green
+- `build`: docker build atlaspi → success
+
+---
+
 ## [v6.92.1] - 2026-05-13
 
 **Tema**: *hardening operativo da audit architetturale — R2 + R5*

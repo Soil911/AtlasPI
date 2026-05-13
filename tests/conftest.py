@@ -119,7 +119,9 @@ def setup_test_db():
 
     # v6.37.1: seed archaeological sites + v6.44 languages + v6.45 rulers.
     try:
-        from src.ingestion import ingest_sites as _sites_mod, ingest_languages as _lang_mod, ingest_rulers as _rulers_mod
+        from src.ingestion import ingest_languages as _lang_mod
+        from src.ingestion import ingest_rulers as _rulers_mod
+        from src.ingestion import ingest_sites as _sites_mod
         for mod in (_sites_mod, _lang_mod, _rulers_mod):
             orig = mod.SessionLocal
             mod.SessionLocal = TestSession

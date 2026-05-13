@@ -16,6 +16,7 @@ import json
 import logging
 
 import matplotlib
+
 matplotlib.use("Agg")  # Non-GUI backend for server-side rendering
 import matplotlib.pyplot as plt
 from fastapi import APIRouter, Depends, HTTPException, Query, Request
@@ -25,7 +26,6 @@ from shapely.geometry import shape as shapely_shape
 from sqlalchemy import or_
 from sqlalchemy.orm import Session
 
-from src.cache import cache_response
 from src.db.database import get_db
 from src.db.models import GeoEntity
 

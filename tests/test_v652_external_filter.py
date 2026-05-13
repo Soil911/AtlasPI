@@ -1,17 +1,14 @@
 """v6.52: tests per filter external traffic in analytics."""
 
-import pytest
-from sqlalchemy.orm import Session
 
 from src.api.routes.analytics import (
-    apply_external_filter,
     _INTERNAL_IP_LIKES,
     _INTERNAL_IPS_EXACT,
-    _INTERNAL_PATHS_EXACT,
     _INTERNAL_PATH_PREFIXES,
+    _INTERNAL_PATHS_EXACT,
+    apply_external_filter,
 )
 from src.db.models import ApiRequestLog
-
 
 # ─── Constants ─────────────────────────────────────────────────
 

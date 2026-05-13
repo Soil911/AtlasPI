@@ -17,7 +17,6 @@ from sqlalchemy.exc import IntegrityError
 from src.db.enums import DatePrecision
 from src.db.models import HistoricalEvent, TerritoryChange
 
-
 # ─── DatePrecision Enum ────────────────────────────────────────────────────
 
 

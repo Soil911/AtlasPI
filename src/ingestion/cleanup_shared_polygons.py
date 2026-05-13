@@ -44,9 +44,9 @@ import logging
 import re
 import sys
 from collections import defaultdict
+from collections.abc import Iterable
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Iterable
 
 from rapidfuzz import fuzz
 from sqlalchemy.orm import Session
@@ -431,13 +431,13 @@ def main() -> int:
     print(f"Entities dropped in DB:   {result['stats']['entities_dropped_db']}")
     print(f"Entities dropped in JSON: {result['stats']['entities_dropped_json']}")
     print(f"Skipped (no capital):     {result['stats']['skipped_no_capital']}")
-    print(f"\nPer-cluster drops:")
+    print("\nPer-cluster drops:")
     for ao_name, count in sorted(
         result['stats']['dropped_by_cluster'].items(), key=lambda x: -x[1]
     ):
         print(f"  [-{count:>2}x] {ao_name}")
 
-    print(f"\nSample drops (first 20):")
+    print("\nSample drops (first 20):")
     for sample in result['stats']['dropped_samples']:
         print(f"  {sample}")
 

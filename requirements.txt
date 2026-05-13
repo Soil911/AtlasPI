@@ -17,3 +17,8 @@ geopandas>=0.14.0
 shapely>=2.0.0
 rapidfuzz>=3.0.0
 matplotlib>=3.7.0
+# v6.92.2 (audit R4 hotfix): requests usato da scripts/wikidata_*.py e
+# scripts/benchmark/agents/atlaspi_agent.py. Prima era assunto presente
+# transitivamente, causando ImportError in CI quando pytest scopriva
+# tests/test_wikidata_bootstrap.py.
+requests>=2.32.0

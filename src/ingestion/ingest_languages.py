@@ -11,6 +11,7 @@ import logging
 import sys
 from pathlib import Path
 
+
 def _apply_windows_stdout_fix():
     if sys.platform == "win32" and isinstance(sys.stdout, io.TextIOWrapper):
         try:

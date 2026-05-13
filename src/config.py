@@ -16,7 +16,7 @@ DEBUG = ENVIRONMENT == "development"
 SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret-change-in-production")
 
 # ─── Applicazione ────────────────────────────────────────────────
-APP_VERSION = "6.92.1"
+APP_VERSION = "6.92.2"
 APP_TITLE = "AtlasPI"
 APP_DESCRIPTION = "Database geografico storico strutturato per agenti AI"
 
@@ -86,6 +86,7 @@ SENTRY_RELEASE = os.getenv("SENTRY_RELEASE", f"atlaspi@{APP_VERSION}")
 # ─── Observability: Uptime / misc ───────────────────────────────
 # Timestamp di avvio del processo per calcolare uptime in /health.
 import time as _time  # noqa: E402 (import localizzato per evitare dipendenze al top)
+
 PROCESS_START_TIME = _time.time()
 
 # URL pubblico canonico del servizio (usato in sitemap.xml, OG tags, docs).

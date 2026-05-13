@@ -10,7 +10,6 @@ ETHICS: soppressioni coloniali documentate in ethical_notes.
 
 import json
 import logging
-from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
 from sqlalchemy import desc, func, or_

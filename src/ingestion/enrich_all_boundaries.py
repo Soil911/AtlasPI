@@ -36,23 +36,25 @@ import json
 import logging
 import shutil
 import sys
-from collections import Counter, defaultdict
+from collections import Counter
 from pathlib import Path
-from typing import Optional
 
 from src.ingestion.aourednik_match import (
     AourednikMatch,
-    list_snapshots as list_aourednik_snapshots,
     match_entity_aourednik,
+)
+from src.ingestion.aourednik_match import (
+    list_snapshots as list_aourednik_snapshots,
 )
 from src.ingestion.boundary_generator import name_seeded_boundary
 from src.ingestion.boundary_match import (
     MatchResult,
-    entity_key,
     match_entity,
 )
 from src.ingestion.natural_earth_import import (
     OUTPUT_JSON as NE_PROCESSED_JSON,
+)
+from src.ingestion.natural_earth_import import (
     import_natural_earth,
 )
 
@@ -290,7 +292,7 @@ def process_file(
             continue
 
         # 2. Tenta Natural Earth (confini moderni, ottimo per post-1800)
-        match: Optional[MatchResult] = None
+        match: MatchResult | None = None
         if not skip_natural_earth and ne_by_iso:
             match = match_entity(entity, ne_by_iso)
 
@@ -309,7 +311,7 @@ def process_file(
             continue
 
         # 3. Tenta aourednik/historical-basemaps (confini storici, pre-1800)
-        aou_match: Optional[AourednikMatch] = None
+        aou_match: AourednikMatch | None = None
         if not skip_aourednik and aourednik_snapshots:
             aou_match = match_entity_aourednik(
                 entity, aourednik_snapshots, aourednik_cache
@@ -503,7 +505,7 @@ def process_all(
         real_pct = real_total / aggregate["total"] * 100
         gen_pct = gen_total / aggregate["total"] * 100
         none_pct = aggregate["missing_capital"] / aggregate["total"] * 100
-        print(f"  COVERAGE (after this run):")
+        print("  COVERAGE (after this run):")
         print(f"    Real boundaries:           {real_total} ({real_pct:.1f}%)")
         print(f"    Generated boundaries:      {gen_total} ({gen_pct:.1f}%)")
         print(f"    No boundary (no capital):  {aggregate['missing_capital']} ({none_pct:.1f}%)")

@@ -2,8 +2,6 @@
 
 import datetime
 
-import pytest
-
 from src.db.models import ApiRequestLog, KnownDevIp
 
 

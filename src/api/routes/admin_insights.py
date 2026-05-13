@@ -13,12 +13,12 @@ from __future__ import annotations
 
 import logging
 import re
-from collections import Counter, defaultdict
-from datetime import datetime, timedelta, timezone
+from collections import Counter
+from datetime import UTC, datetime, timedelta
 
 from fastapi import APIRouter, Depends, Request
 from fastapi.responses import JSONResponse
-from sqlalchemy import func, distinct, or_
+from sqlalchemy import distinct, func, or_
 from sqlalchemy.orm import Session
 
 from src.cache import cache_response
@@ -27,7 +27,6 @@ from src.db.models import (
     ApiRequestLog,
     ChainLink,
     DynastyChain,
-    EventEntityLink,
     GeoEntity,
     HistoricalCity,
     HistoricalEvent,
@@ -145,12 +144,12 @@ def _year_to_era(year: int) -> str:
 def insights(request: Request, db: Session = Depends(get_db)):
     """Structured traffic insights from api_request_logs."""
 
-    now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+    now_str = datetime.now(UTC).strftime("%Y-%m-%d %H:%M:%S")
     # We use string comparisons on the ISO timestamp column.
     # This works because ISO 8601 strings sort lexicographically.
-    day_ago = (datetime.now(timezone.utc) - timedelta(days=1)).isoformat()
-    week_ago = (datetime.now(timezone.utc) - timedelta(days=7)).isoformat()
-    month_ago = (datetime.now(timezone.utc) - timedelta(days=30)).isoformat()
+    day_ago = (datetime.now(UTC) - timedelta(days=1)).isoformat()
+    week_ago = (datetime.now(UTC) - timedelta(days=7)).isoformat()
+    month_ago = (datetime.now(UTC) - timedelta(days=30)).isoformat()
 
     # ── Traffic summary ────────────────────────────────────────
     total_all = db.query(func.count(ApiRequestLog.id)).scalar() or 0
@@ -474,7 +473,7 @@ def coverage_report(request: Request, db: Session = Depends(get_db)):
 
     return JSONResponse(
         content={
-            "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S"),
+            "generated_at": datetime.now(UTC).strftime("%Y-%m-%d %H:%M:%S"),
             "totals": {
                 "entities": total_entities,
                 "events": total_events,
@@ -546,7 +545,7 @@ def _extract_failed_searches(db: Session, since: str) -> list[dict]:
 def suggestions(db: Session = Depends(get_db)):
     """Generate prioritised suggestions for expanding the dataset."""
 
-    month_ago = (datetime.now(timezone.utc) - timedelta(days=30)).isoformat()
+    month_ago = (datetime.now(UTC) - timedelta(days=30)).isoformat()
 
     # ── 1. Failed searches (potential demand signals) ─────────
     failed_searches = _extract_failed_searches(db, month_ago)
@@ -662,7 +661,7 @@ def suggestions(db: Session = Depends(get_db)):
 
     return JSONResponse(
         content={
-            "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S"),
+            "generated_at": datetime.now(UTC).strftime("%Y-%m-%d %H:%M:%S"),
             "failed_searches": failed_searches,
             "geographic_gaps": geographic_gaps,
             "temporal_gaps": temporal_gaps,

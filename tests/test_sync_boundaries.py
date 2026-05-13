@@ -21,7 +21,6 @@ from src.ingestion.sync_boundaries_from_json import (
 )
 from tests.conftest import TestSession
 
-
 # ─── unit tests: pure predicates ───────────────────────────────────────────
 
 def test_count_vertices_handles_shapes():
@@ -234,8 +233,8 @@ def test_sync_accepts_displacement_downgrade():
     """If DB has aourednik polygon but capital is way outside and JSON now
     says approximate_generated, the sync should downgrade — one legitimate
     exception to the monotonic-upgrade rule (ETHICS-006 v6.2)."""
-    from tempfile import TemporaryDirectory
     import pathlib as _pl
+    from tempfile import TemporaryDirectory
     from unittest.mock import patch
 
     # Create a test DB row with a catastrophically displaced aourednik polygon

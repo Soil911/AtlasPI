@@ -7,7 +7,6 @@ Tests cover:
 - /search HTML page
 """
 
-import json
 
 
 # ─── Advanced Search API ──────────────────────────────────────

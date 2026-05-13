@@ -13,7 +13,7 @@ GET  /admin/ai/status                     — dashboard summary counts
 from __future__ import annotations
 
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from fastapi import APIRouter, Depends, HTTPException, Query
@@ -110,7 +110,7 @@ def _update_suggestion_status(db: Session, suggestion_id: int, new_status: str, 
         raise HTTPException(status_code=404, detail=f"Suggestion {suggestion_id} not found")
 
     suggestion.status = new_status
-    suggestion.reviewed_at = datetime.now(timezone.utc).isoformat()
+    suggestion.reviewed_at = datetime.now(UTC).isoformat()
     if note is not None:
         suggestion.review_note = note
     db.commit()

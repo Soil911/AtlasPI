@@ -218,6 +218,7 @@ def _db_capital_displaced(entity: GeoEntity) -> bool:
         return False
     try:
         import math
+
         from shapely.geometry import Point, shape
     except ImportError:
         return False  # Without shapely we can't check — default to "no downgrade".

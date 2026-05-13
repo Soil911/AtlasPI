@@ -16,18 +16,19 @@ from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
 from pydantic import BaseModel
-from shapely.geometry import Point, shape as shapely_shape
 from shapely.errors import GEOSException
+from shapely.geometry import Point
+from shapely.geometry import shape as shapely_shape
 from sqlalchemy import and_, desc, func, or_, select, text
 from sqlalchemy.orm import Session, defer, joinedload, selectinload
 
 from src.api.errors import EntityNotFoundError
-from src.cache import cache_response
 from src.api.schemas import (
     CapitalResponse,
     EntityResponse,
     PaginatedEntityResponse,
 )
+from src.cache import cache_response
 from src.db.database import get_db, is_postgres
 from src.db.models import GeoEntity, HistoricalEvent, NameVariant, Source, TerritoryChange
 

@@ -228,7 +228,7 @@ def enrich_all(dry_run: bool = False) -> None:
     print(f"  Skipped (no coordinates):    {total_stats['skipped_no_coords']}")
     print(f"  Source-tagged (existing):    {total_stats['source_tagged']}")
     print(f"  Files modified:              {total_stats['files_modified']}")
-    print(f"\n  Enriched by entity type:")
+    print("\n  Enriched by entity type:")
     for etype, count in total_stats["by_type"].most_common():
         print(f"    {etype:25s} {count}")
     print(f"\n{'='*70}")

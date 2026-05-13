@@ -17,7 +17,6 @@ Questi test verificano che:
 
 from __future__ import annotations
 
-
 # ─── FIX 1: /v1/entities filters ─────────────────────────────────────
 
 def test_entities_year_filter_returns_subset(client):

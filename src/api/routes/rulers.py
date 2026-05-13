@@ -14,7 +14,7 @@ import logging
 from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
-from sqlalchemy import and_, desc, func, or_
+from sqlalchemy import or_
 from sqlalchemy.orm import Session
 
 from src.cache import cache_response

@@ -13,11 +13,10 @@ v6.52 change:
 
 import datetime
 import logging
-import re
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from fastapi.responses import HTMLResponse, JSONResponse
-from sqlalchemy import and_, desc, func, not_
+from sqlalchemy import desc, func, not_
 from sqlalchemy.orm import Session
 
 from src.db.database import get_db
@@ -289,7 +288,7 @@ def mark_current_ip_as_dev(
             "marked_at": existing.marked_at,
         }
 
-    now = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    now = datetime.datetime.now(datetime.UTC).isoformat()
     entry = KnownDevIp(ip=ip, label=label, marked_at=now)
     db.add(entry)
     db.commit()

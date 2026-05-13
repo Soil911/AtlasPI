@@ -38,7 +38,7 @@ def test_fuzzy_venice_finds_venezia(client, db):
 
 def test_fuzzy_florence_finds_firenze(client, db):
     """Tokenize aiuta anche 'florence' → 'Repubblica di Firenze' via token 'firenze'."""
-    from src.db.models import GeoEntity, NameVariant
+    from src.db.models import GeoEntity
     entity = GeoEntity(
         name_original="Repubblica di Firenze",
         name_original_lang="it",
@@ -63,7 +63,7 @@ def test_fuzzy_florence_finds_firenze(client, db):
 
 def test_fuzzy_byzantine_finds_bisanzio(client, db):
     """Query 'bisanzio' deve trovare 'Byzantine Empire' via token match."""
-    from src.db.models import GeoEntity, NameVariant
+    from src.db.models import GeoEntity
     entity = GeoEntity(
         name_original="Bisanzio",
         name_original_lang="it",

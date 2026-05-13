@@ -10,17 +10,12 @@ Covers:
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
-
-import pytest
-
 from src.api.routes.admin_insights import (
+    INTERNAL_IPS,
     _classify_ua,
     _lat_to_continent,
     _year_to_era,
-    INTERNAL_IPS,
 )
-
 
 # ═══════════════════════════════════════════════════════════════════
 # Helper function tests

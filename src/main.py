@@ -19,9 +19,30 @@ from src.api.middleware import (
     RequestLoggingMiddleware,
     SecurityHeadersMiddleware,
 )
-# v6.66 FIX 8: HEAD support — delega HEAD a GET internamente, strip body.
-from src.middleware.head_support import HeadSupportMiddleware
-from src.api.routes import admin_cache, admin_cofounder, admin_insights, analytics, chains, cities_routes, compare, docs_ui, entities, events, export, health, languages, periods, relations, render, rulers, search, sites, snapshot, timeline, widgets
+from src.api.routes import (
+    admin_cache,
+    admin_cofounder,
+    admin_insights,
+    analytics,
+    chains,
+    cities_routes,
+    compare,
+    docs_ui,
+    entities,
+    events,
+    export,
+    health,
+    languages,
+    periods,
+    relations,
+    render,
+    rulers,
+    search,
+    sites,
+    snapshot,
+    timeline,
+    widgets,
+)
 from src.config import (
     APP_TITLE,
     APP_VERSION,
@@ -30,13 +51,16 @@ from src.config import (
     ENVIRONMENT,
     HOST,
     PORT,
-    RATE_LIMIT,
 )
 from src.db.database import Base, engine
 from src.db.seed import seed_database, seed_events_database, seed_periods_database, sync_new_periods
 from src.logging_config import setup_logging
+
 # v6.66.0 (audit #security): limiter singleton + endpoint CSP report
 from src.middleware.csp_report import router as csp_report_router
+
+# v6.66 FIX 8: HEAD support — delega HEAD a GET internamente, strip body.
+from src.middleware.head_support import HeadSupportMiddleware
 from src.middleware.rate_limit import limiter
 from src.monitoring import init_sentry
 
@@ -56,8 +80,9 @@ def _run_alembic_migrations():
     Per PostgreSQL, le migrazioni Alembic garantiscono upgrade incrementali sicuri.
     """
     try:
-        from alembic import command
         from alembic.config import Config
+
+        from alembic import command
 
         alembic_cfg = Config("alembic.ini")
         command.upgrade(alembic_cfg, "head")
@@ -395,6 +420,7 @@ app.include_router(widgets.router)
 
 # v6.33: Prometheus metrics endpoint
 from src.api.metrics import router as metrics_router
+
 app.include_router(metrics_router)
 
 # v6.66.0 (audit #security): CSP violation report receiver.

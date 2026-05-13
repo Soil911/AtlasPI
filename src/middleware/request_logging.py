@@ -8,7 +8,7 @@ Combina due funzioni:
 import logging
 import time
 import uuid
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from starlette.middleware.base import BaseHTTPMiddleware, RequestResponseEndpoint
 from starlette.requests import Request
@@ -117,7 +117,7 @@ class RequestLoggingMiddleware(BaseHTTPMiddleware):
 
         # ── Analytics DB write (v6.12) ─────────────────────────────
         if _is_api_relevant(path):
-            timestamp = datetime.now(timezone.utc).isoformat()
+            timestamp = datetime.now(UTC).isoformat()
             qs = str(request.url.query) if request.url.query else None
             # Synchronous write — fast enough for now (<5ms per INSERT).
             # If latency becomes an issue, switch to background thread

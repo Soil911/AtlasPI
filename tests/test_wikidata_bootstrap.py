@@ -12,8 +12,6 @@ Copertura:
 
 from __future__ import annotations
 
-import pytest
-
 from scripts.wikidata_bootstrap import (
     compute_score,
     extract_claim_values,

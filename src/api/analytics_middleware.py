@@ -11,10 +11,8 @@ in a background thread to avoid slowing responses.
 import logging
 import threading
 import time
-from datetime import datetime, timezone
-from typing import Any
+from datetime import UTC, datetime
 
-from starlette.requests import Request
 from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
 logger = logging.getLogger(__name__)
@@ -146,7 +144,7 @@ class AnalyticsMiddleware:
         client_ip = _extract_client_ip(scope)
         user_agent = _extract_header(scope, b"user-agent")
         referer = _extract_header(scope, b"referer")
-        timestamp = datetime.now(timezone.utc).isoformat()
+        timestamp = datetime.now(UTC).isoformat()
 
         # Fire-and-forget DB write
         thread = threading.Thread(

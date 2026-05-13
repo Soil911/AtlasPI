@@ -15,11 +15,9 @@ Tests:
 """
 
 import json
-from datetime import datetime, timezone
-from pathlib import Path
+from datetime import UTC, datetime
 
 from src.db.models import AiSuggestion, GeoEntity, Source
-
 
 # ═══════════════════════════════════════════════════════════════════
 # 1. Endpoint smoke tests
@@ -65,8 +63,8 @@ def test_handle_briefing_creates_file(db, tmp_path, monkeypatch):
         priority=2,
         status="accepted",
         source="auto",
-        created_at=datetime.now(timezone.utc).isoformat(),
-        reviewed_at=datetime.now(timezone.utc).isoformat(),
+        created_at=datetime.now(UTC).isoformat(),
+        reviewed_at=datetime.now(UTC).isoformat(),
     )
     db.add(sug)
     db.flush()
@@ -121,7 +119,7 @@ def test_handle_low_confidence_boosts_well_sourced(db):
         priority=4,
         status="accepted",
         source="auto",
-        created_at=datetime.now(timezone.utc).isoformat(),
+        created_at=datetime.now(UTC).isoformat(),
     )
     db.add(sug)
     db.flush()
@@ -167,7 +165,7 @@ def test_handle_low_confidence_skips_low_source_entities(db):
         priority=4,
         status="accepted",
         source="auto",
-        created_at=datetime.now(timezone.utc).isoformat(),
+        created_at=datetime.now(UTC).isoformat(),
     )
     db.add(sug)
     db.flush()
@@ -191,7 +189,7 @@ def test_handle_low_confidence_malformed_detail(db):
         priority=4,
         status="accepted",
         source="auto",
-        created_at=datetime.now(timezone.utc).isoformat(),
+        created_at=datetime.now(UTC).isoformat(),
     )
     db.add(sug)
     db.flush()
@@ -252,7 +250,7 @@ def test_implement_accepted_marks_implemented(db, tmp_path, monkeypatch):
         priority=4,
         status="accepted",
         source="auto",
-        created_at=datetime.now(timezone.utc).isoformat(),
+        created_at=datetime.now(UTC).isoformat(),
     )
     db.add(sug)
     db.flush()
@@ -284,7 +282,7 @@ def test_implement_accepted_generates_briefing_for_unknown_category(db, tmp_path
         priority=2,
         status="accepted",
         source="auto",
-        created_at=datetime.now(timezone.utc).isoformat(),
+        created_at=datetime.now(UTC).isoformat(),
     )
     db.add(sug)
     db.flush()
@@ -323,7 +321,7 @@ def test_dispatch_quality_with_boundary_goes_to_boundaries_handler(db):
         priority=3,
         status="accepted",
         source="auto",
-        created_at=datetime.now(timezone.utc).isoformat(),
+        created_at=datetime.now(UTC).isoformat(),
     )
     db.add(sug)
     db.flush()
@@ -351,7 +349,7 @@ def test_dispatch_unknown_category_uses_briefing(db, tmp_path, monkeypatch):
         priority=3,
         status="accepted",
         source="auto",
-        created_at=datetime.now(timezone.utc).isoformat(),
+        created_at=datetime.now(UTC).isoformat(),
     )
     db.add(sug)
     db.flush()

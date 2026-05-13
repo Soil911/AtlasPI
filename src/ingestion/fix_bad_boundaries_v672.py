@@ -53,7 +53,6 @@ import sys
 
 from src.ingestion.fix_bad_boundaries_v671 import (
     EntityFix,
-    run_fixes as _run_fixes_with_custom,
 )
 
 logger = logging.getLogger(__name__)

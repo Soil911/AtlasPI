@@ -7,10 +7,8 @@ Verifica:
 - Query aggregate corrette
 """
 
-import pytest
 
 from src.db.models import ApiRequestLog
-
 
 # ─── Model ──────────────────────────────────────────────────────────────
 

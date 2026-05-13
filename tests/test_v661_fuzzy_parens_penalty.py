@@ -7,9 +7,8 @@ cerca è un vero sultanato, non un'entità con 'sultanate' nella descrizione.
 Fix: score token-match in parens a 0.6 * del match in primary name.
 """
 
-import pytest
 
-from src.db.models import GeoEntity, NameVariant
+from src.db.models import GeoEntity
 
 
 def test_parens_match_weakened(client, db):

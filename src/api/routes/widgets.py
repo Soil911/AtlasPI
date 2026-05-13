@@ -15,7 +15,7 @@ import logging
 from pathlib import Path
 
 from fastapi import APIRouter, Request, Response
-from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.responses import HTMLResponse
 
 logger = logging.getLogger(__name__)
 

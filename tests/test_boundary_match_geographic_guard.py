@@ -21,7 +21,6 @@ from src.ingestion.boundary_match import (
     match_entity,
 )
 
-
 # ─── Synthetic Natural Earth fixtures ───────────────────────────────────────
 
 def _square(lon_c: float, lat_c: float, half: float) -> dict:

@@ -20,7 +20,6 @@ from src.cache import cache_response
 from src.db.database import get_db
 from src.db.models import (
     ChainLink,
-    DynastyChain,
     EventEntityLink,
     GeoEntity,
     HistoricalEvent,

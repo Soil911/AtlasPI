@@ -10,10 +10,9 @@ Tests:
   - Analysis returns correct structure
 """
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
-from src.db.models import AiSuggestion, ApiRequestLog, HistoricalEvent
-
+from src.db.models import ApiRequestLog
 
 # ═══════════════════════════════════════════════════════════════════
 # 1. POST /admin/ai/analyze endpoint
@@ -154,7 +153,7 @@ def test_failed_searches_with_404_logs(db):
     """With enough 404 logs, failed searches creates suggestions."""
     from scripts.ai_cofounder_analyze import analyze_failed_searches
 
-    now = datetime.now(timezone.utc).isoformat()
+    now = datetime.now(UTC).isoformat()
 
     # Insert enough logs to pass the threshold (10 total)
     for i in range(12):
@@ -190,7 +189,7 @@ def test_failed_searches_with_empty_search_logs(db):
     """With repeated fast-200 searches, detects empty search patterns."""
     from scripts.ai_cofounder_analyze import analyze_failed_searches
 
-    now = datetime.now(timezone.utc).isoformat()
+    now = datetime.now(UTC).isoformat()
 
     # Insert enough general logs (threshold = 10)
     for i in range(12):

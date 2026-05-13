@@ -24,7 +24,6 @@ import io
 import json
 import logging
 import sys
-from pathlib import Path
 
 # Windows cp1252 stdout fix for non-latin entity names
 if sys.platform == "win32" and isinstance(sys.stdout, io.TextIOWrapper):
@@ -129,6 +128,6 @@ if __name__ == "__main__":
         format="%(asctime)s %(levelname)s %(name)s: %(message)s",
     )
     stats = ingest_missing_entities()
-    print(f"\nIngest stats:")
+    print("\nIngest stats:")
     for k, v in stats.items():
         print(f"  {k}: {v}")

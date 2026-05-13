@@ -1,9 +1,7 @@
 """v6.49: tests per analytics redesign — user-agent classification + endpoint category."""
 
-import pytest
 
-from src.api.routes.analytics import classify_user_agent, classify_endpoint
-
+from src.api.routes.analytics import classify_endpoint, classify_user_agent
 
 # ─── classify_user_agent ────────────────────────────────────────
 

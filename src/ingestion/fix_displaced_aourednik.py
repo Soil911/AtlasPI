@@ -23,7 +23,7 @@ import argparse
 import json
 import logging
 import math
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from pyproj import Geod
 from shapely.geometry import shape
@@ -183,7 +183,7 @@ def fix_displaced(dry_run: bool = False) -> dict:
                         f"aourednik fuzzy match placed polygon centroid={centroid_dist:.0f}km / "
                         f"edge={edge_dist:.0f}km from capital (exceeded thresholds). "
                         f"Regenerated as {radius}km radius circle. "
-                        f"Reverted {datetime.now(timezone.utc).date().isoformat()}."
+                        f"Reverted {datetime.now(UTC).date().isoformat()}."
                     )
                     if e.ethical_notes:
                         e.ethical_notes = e.ethical_notes + "\n\n" + rollback_note
