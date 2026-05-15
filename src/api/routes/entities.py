@@ -141,20 +141,34 @@ def query_entity(
         "entities. Returns empires, kingdoms, sultanates, republics, chiefdoms, "
         "confederations, dynasties, caliphates, and more — spanning 4500 BCE to "
         "2024 across all inhabited continents.\n\n"
+        "**⚡ PERFORMANCE TIP for AI agents and scrapers**: when you only need "
+        "names/types/years/coordinates and NOT the full polygon geometry, pass "
+        "`exclude_geometry=true` — the response is **~10x faster** at limit≥100 "
+        "(e.g. `?limit=300&exclude_geometry=true` ≈ 250ms vs 2.5s). For an even "
+        "lighter overview of ALL entities in one shot, prefer `/v1/entities/light`. "
+        "Fetch the full polygon for a single entity later via `/v1/entities/{id}` "
+        "or render via `/v1/render`.\n\n"
         "**Filters** (all optional, combinable):\n"
         "- `year` — entities existing in this specific year\n"
         "- `status` — confirmed / uncertain / disputed\n"
         "- `entity_type` — empire, kingdom, sultanate, etc.\n"
         "- `continent` — Europe, Asia, Africa, Americas, Middle East, Oceania\n"
         "- `bbox` — spatial bounding box (minLon,minLat,maxLon,maxLat)\n"
-        "- `search` — fuzzy match on name_original and name_variants\n\n"
+        "- `search` — fuzzy match on name_original and name_variants\n"
+        "- `exclude_geometry` — omit `boundary_geojson` for ~10x speedup at high limit\n\n"
         "**For AI agents**: use this as the entry point to discover entities, "
         "then follow `/v1/entities/{id}/periods`, `/successors`, `/predecessors`, "
         "`/similar`, `/events` for rich contextualization.\n\n"
         "**Free public API — no authentication required.**"
     ),
 )
-@cache_response(ttl_seconds=300)
+# v6.99.29 (suggestion #74): bump server-side cache TTL from 300s → 1800s.
+# Dataset is append-only, no mid-day mutation. Scrapers polling /v1/entities
+# with same query string benefit from longer Redis TTL — current 5min meant
+# ~12 cache misses/hour per IP on identical params. 30min halves that. The
+# Cache-Control header already says max-age=3600 so HTTP clients can also
+# cache for 1h locally.
+@cache_response(ttl_seconds=1800)
 def list_entities(
     request: Request,
     response: Response,
