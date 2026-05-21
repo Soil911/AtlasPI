@@ -2,6 +2,49 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.29] - 2026-05-21 (autonomous loop iter 1)
+
+**Tema**: *Phase A tier-1 batch 1 — 10 manual historical boundaries + GPT-5.5 fact-check Balhae*
+
+### Iter 1 — boundary curation (10 entities)
+
+| id  | Entity                  | Area km² | Era        |
+|-----|-------------------------|----------|------------|
+| 141 | Balhae/Parhae 渤海國      | 537,112  | 698-926    |
+| 216 | Comancheria             | 766,580  | 1700-1875  |
+| 217 | Lakȟóta Oyáte           | 868,886  | 1600-1877  |
+| 296 | Tuyuhun 吐谷浑           | 447,288  | 285-670    |
+| 414 | Birane Hausa            | 195,161  | 1000-1804  |
+| 472 | Crusader Antioch        | 34,227   | 1098-1268  |
+| 562 | Igbo-Ukwu               | 6,762    | 800-1000   |
+| 575 | Transilvania (Princip.) | 78,246   | 1570-1711  |
+| 669 | Butuan                  | 8,546    | 1001-1521  |
+| 976 | Katsina                 | 26,903   | 1100-1805  |
+
+Tutte ora `boundary_source = 'historical_approximation'` con poligoni storicamente
+plausibili (Tuyuhun = Qinghai region; Comancheria = Southern Plains incl. mod.
+Texas/NM/OK; Lakhota = Great Plains Black Hills epicenter; etc.).
+
+### GPT-5.5 fact-check applied (Balhae)
+
+GPT-5.5 (reasoning_effort=low) ha identificato 5 correzioni importanti per Balhae:
+- Polity inizialmente chiamata Jin/Zhen (698); nome Balhae adottato dopo
+  investitura Tang nel 713
+- Founder: Dae Joyeong (大祚榮), Battle of Tianmenling 698
+- Capitali multiple: Dongmo Mountain (698-742) → Central Capital (742-756)
+  → Shangjing/Sanggyeong (756-926)
+- Conquista Khitan Liao 926, successori "Later Balhae" continuano nell'11° sec
+- Identità etnica Balhae rimane contestata in storiografia Korea/Cina/Russia/Giappone
+
+Ethical_notes aggiornati con tutte queste sfumature.
+
+### Guard patch
+
+Aggiunti 10 nuovi ID a `MANUALLY_CURATED_IDS` in
+`src/ingestion/fix_antimeridian_and_wrong_polygons.py` per protezione cross-restart.
+
+---
+
 ## [v6.99.28] - 2026-05-13
 
 **Tema**: *boundary curation + URL dedup — verification follow-up post S21-S34 audit*

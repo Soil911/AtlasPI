@@ -44,16 +44,28 @@ logger = logging.getLogger(__name__)
 # 'aourednik_curated'). The set below is the *id-level* override —
 # regardless of current boundary_source, these IDs are never reset.
 MANUALLY_CURATED_IDS: set[int] = {
-    218,  # Cherokee — Southern Appalachians manual polygon (v6.99.28)
-    326,  # Cumans/Kipchak — Pontic-Caspian + Kazakh steppe (v6.99.28)
-    545,  # Seminole — Florida peninsula (v6.99.28)
-    580,  # Saxony Electorate — Wettin Albertine lands (v6.99.28)
-    581,  # Pfalz — Lower Palatinate Heidelberg region (v6.99.28)
-    587,  # Württemberg — Stuttgart-Tübingen region (v6.99.28)
-    651,  # Normandie — NW France Rouen-Caen (v6.99.28)
-    655,  # Slesvig — S Jutland (v6.99.28)
-    773,  # Coosa — NW Georgia + SE Tennessee + NE Alabama (v6.99.28)
-    779,  # Lenapehoking — Delaware homeland NY/NJ/PA/DE (v6.99.28)
+    # v6.99.28 batch — manual boundary curation post-S34
+    218,  # Cherokee — Southern Appalachians manual polygon
+    326,  # Cumans/Kipchak — Pontic-Caspian + Kazakh steppe
+    545,  # Seminole — Florida peninsula
+    580,  # Saxony Electorate — Wettin Albertine lands
+    581,  # Pfalz — Lower Palatinate Heidelberg region
+    587,  # Württemberg — Stuttgart-Tübingen region
+    651,  # Normandie — NW France Rouen-Caen
+    655,  # Slesvig — S Jutland
+    773,  # Coosa — NW Georgia + SE Tennessee + NE Alabama
+    779,  # Lenapehoking — Delaware homeland NY/NJ/PA/DE
+    # v6.99.29 iter 1 — Phase A tier-1 batch 1 (autonomous loop)
+    141,  # Balhae/Parhae — E Manchuria + N Korea + Primorye
+    216,  # Comancheria — Southern Plains empire
+    217,  # Lakhota Oyate — Great Plains 1600-1877
+    296,  # Tuyuhun — Qinghai Xianbei kingdom
+    414,  # Birane Hausa — 7 city-states N Nigeria
+    472,  # Crusader Antioch — N Syria + Cilicia
+    562,  # Igbo-Ukwu — SE Nigeria bronze site
+    575,  # Transilvania — Carpathian basin Ottoman vassal
+    669,  # Butuan — NE Mindanao Agusan delta
+    976,  # Katsina — Hausa Bakwai city-state
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)
