@@ -18,7 +18,7 @@ if ! git push origin main 2>&1 | tee /tmp/safe_deploy_push.log; then
 fi
 
 # 2. Deploy via cra-deploy
-if ! cra-deploy atlaspi 2>&1 | tee /tmp/safe_deploy_cra.log; then
+if ! "$HOME/bin/cra-deploy.sh" atlaspi 2>&1 | tee /tmp/safe_deploy_cra.log; then
     DEPLOY_RC=$?
     echo "[safe_deploy] cra-deploy returned $DEPLOY_RC"
     # cra-deploy itself already does a healthcheck, so failure here means the
@@ -30,7 +30,7 @@ if ! cra-deploy atlaspi 2>&1 | tee /tmp/safe_deploy_cra.log; then
         exit 2
     }
     git push origin main
-    cra-deploy atlaspi || echo "[safe_deploy] revert deploy also failed — SERIOUS"
+    "$HOME/bin/cra-deploy.sh" atlaspi || echo "[safe_deploy] revert deploy also failed — SERIOUS"
     {
         echo ""
         echo "## ⚠️ AUTO-REVERT $START_TIME"
@@ -52,7 +52,7 @@ for i in 1 2 3; do
         echo "[safe_deploy] healthcheck FAILED 3x — auto-reverting"
         git revert --no-edit "$START_HASH" || exit 2
         git push origin main
-        cra-deploy atlaspi
+        "$HOME/bin/cra-deploy.sh" atlaspi
         {
             echo ""
             echo "## ⚠️ AUTO-REVERT $START_TIME"
