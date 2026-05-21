@@ -55,6 +55,7 @@ Prioritizzo:
 |---|---|---|---|---|---|
 | 0 | 2026-05-21 18:30 | Setup | Configured loop infrastructure | OK | — |
 | — | 2026-05-21 18:30 | Launch | Loop launched, ScheduleWakeup +1800s | scheduled | — |
+| 1 | 2026-05-21 18:55 | A | 10 boundaries Tier-1 batch 1 + GPT-5.5 fact-check Balhae | v6.99.29 deployed, 20 curated/277 approximate | ✓ |
 
 (Append new rows on each iteration. Format: `| N | ts | phase | action | result | deploy/skip |`)
 
@@ -72,25 +73,35 @@ immediately to resume the cadence, then proceed with Phase A iter 1.
 
 | Date | OpenAI tokens | Est. cost | Deploys | Sessions |
 |---|---|---|---|---|
-| 2026-05-21 | 0 | $0.00 | 0 | 0 |
+| 2026-05-21 | ~700 (Balhae fact-check) | $0.005 | 1 (v6.99.29) | iter 1 |
 
 ## 🔧 Next iteration plan
 
-**Iter 1 — Phase A tier-1 batch 1**:
-1. SQL query for top-10 entities with `boundary_source='approximate_generated'`
-   ordered by `(n_sources DESC, confidence_score DESC)`
-2. For each: research historical territory via WebFetch or canonical knowledge
-3. Patch `WRONG_POLYGON_FIXES` to add new entity IDs to `MANUALLY_CURATED_IDS`
-4. Write SQL UPDATE with proper GeoJSON polygon + `boundary_source='historical_approximation'`
-5. Run via SSH → docker cp → psql
-6. (Optional) Send 1-2 random new boundaries to gpt-5.5 for fact-check
-7. `bash scripts/safe_deploy.sh <iter_num>`
-8. If safe_deploy returns 0: bump version, append iteration row to this file
-9. If safe_deploy returns 1: log auto-revert in this file, continue next iteration
-10. Schedule next iteration: `ScheduleWakeup(delaySeconds=1800, ...)` (30 min)
+**Iter 2 — Phase A tier-1 batch 2**:
+Same workflow as iter 1, but skip already-curated IDs.
+Query: `SELECT id, name_original, entity_type, year_start, year_end, capital_name,
+confidence_score, (SELECT count(*) FROM sources s WHERE s.entity_id=g.id) AS n_src
+FROM geo_entities g WHERE boundary_source = 'approximate_generated'
+ORDER BY n_src DESC, confidence_score DESC LIMIT 15`.
 
-**Iteration cadence**: ~30 min between fires (cache miss but workable).
-Each iteration aims to ship 1 batch of 10 entities (~50 sources + boundaries).
+Next 10 candidates expected: Vumba Kuu (1017), Tu'i Tonga (44),
+Cumans (already curated), Maui (749), Roviana (755), Marovo (756), Mvskoke (219),
+Mojinda Mxikodewinan (778), Chahta Yakni (782), Shawanwaki (780),
+Mottama (904), Kintamani (891), Phayao (889), Pate (825), Malindi (823),
+Sugbu (366), Cebu, Bono-Manso (1014), Damot (832), Chanka (952), etc.
 
-**End condition**: when LOOP_STATE.md shows Phase A complete + Phase B caught up,
-or when Clirim writes a new message (he returns).
+(Note: many of these already have manual boundaries from S29-S33;
+double-check before re-curating. Some entries may have been left as
+`approximate_generated` intentionally because city-state polygons are
+inherently uncertain — use Tier 3 strategy for them.)
+
+**Iteration cadence**: ~30 min between fires.
+**Target per iter**: 10 boundaries + 1-2 GPT-5.5 fact-checks + 1 deploy.
+
+**End condition**: when ≥150 entity in 'historical_approximation' (target halfway),
+or when Phase B (sources enrichment) starts taking over.
+
+## Cumulative iter stats
+
+- **Iter 1**: 10 boundaries + 1 fact-check + 1 deploy. v6.99.29 live.
+- Status: **20/287 (7%) Phase A complete**
