@@ -54,8 +54,13 @@ Prioritizzo:
 | # | Time (UTC) | Phase | Action | Result | Deploy? |
 |---|---|---|---|---|---|
 | 0 | 2026-05-21 18:30 | Setup | Configured loop infrastructure | OK | — |
+| — | 2026-05-21 18:30 | Launch | Loop launched, ScheduleWakeup +1800s | scheduled | — |
 
 (Append new rows on each iteration. Format: `| N | ts | phase | action | result | deploy/skip |`)
+
+**IMPORTANT for resuming after PC restart**: if you (Claude) wake up and notice
+this session was reopened after a Claude Code restart, re-issue ScheduleWakeup
+immediately to resume the cadence, then proceed with Phase A iter 1.
 
 ## ⚠️ Errors / decisions / open questions
 
