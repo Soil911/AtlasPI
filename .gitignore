@@ -61,3 +61,8 @@ static/app.js.bak
 
 # v6.69 audit v4 — Wikidata HTTP cache (regeneratable via wikidata_bootstrap.py)
 scripts/wikidata_cache/
+
+# v6.99.29 autonomous loop — ChatGPT review logs (local auditing, sensitive)
+data/chatgpt_review/
+# LOOP_STATE.md is committed for transparency, but the loop session screenshots are not
+data/enrichment/loop_screenshots/
