@@ -2,6 +2,13 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.47] - 2026-05-22 (autonomous loop iter 19)
+
+200/287 (70%). Roman Republic 6M, Kalinago 269k, Babylon 218k, Ngati Toa 58k,
+Djenne-Djeno 50k, Nāgar Sri Lanka 49k, Lenca 45k, Commagene 29k, Cuzcatan 20k, Nauru 0.3k.
+
+---
+
 ## [v6.99.46] - 2026-05-22 (autonomous loop iter 18)
 
 190/287 (66%). Lapita 5.7M, Miji ya Pwani 630k, Wagadou Ghana 420k, Tonga 326k,

@@ -253,6 +253,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     617,  # Herodian Kingdom — Judea+Galilee
     630,  # Safineis (Samnites) — Apennines central Italy
     860,  # Muisca — Cundinamarca-Boyacá Colombia
+    # v6.99.47 iter 19 — Phase A tier-1 batch 19 (autonomous loop)
+    171,  # Babylon (Babylonia old kingdom) — S Mesopotamia
+    282,  # Commagene — Hellenistic upper Euphrates
+    295,  # Nāgar — Sri Lankan Naga/early Tamil
+    304,  # Naoero (Nauru)
+    550,  # Cuzcatan — Pipil Nahua W El Salvador
+    551,  # Lenca — Honduras+E Salvador interior
+    857,  # Ngati Toa / Te Ati Awa — NZ Cook Strait
+    944,  # Kalinago — Lesser Antilles
+    998,  # Djenne-Djeno — Niger Inland Delta Mali
+    1034, # Res Publica Romana — Roman Republic
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)
