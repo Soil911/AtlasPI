@@ -16,7 +16,7 @@ DEBUG = ENVIRONMENT == "development"
 SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret-change-in-production")
 
 # ─── Applicazione ────────────────────────────────────────────────
-APP_VERSION = "6.99.57"
+APP_VERSION = "6.99.58"
 APP_TITLE = "AtlasPI"
 APP_DESCRIPTION = "Database geografico storico strutturato per agenti AI"
 

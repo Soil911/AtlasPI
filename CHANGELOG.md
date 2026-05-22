@@ -2,6 +2,26 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.58] - 2026-05-22 (bugfix post-Phase A)
+
+**Tema**: *fix 2 duplicate polygons + 1 antimeridian crossing*
+
+### Bugs fixed
+
+1. **Pa' Chan (913) vs Yokib (914)** — distinct Classic Maya cities ~20km apart along Usumacinta River had been given identical generic polygons. Now Yaxchilán (913) is centered at ~17.0°N/-90.95°W (1842 km²) and Piedras Negras (914) at ~17.25°N/-91.30°W (1883 km²).
+
+2. **Maynila (703) vs Namayan (882)** — Manila Bay neighbours, distinct Tagalog polities. Maynila now W bank Pasig river (405 km²), Namayan upriver Santa Ana E side (405 km²).
+
+3. **Lapita (307)** — cultural region with span 345° crossing antimeridian (Bismarcks to Tonga). Split into 2-polygon MultiPolygon: W hemisphere (145°E to 178.5°E) + E hemisphere (-180° to -172°). Total area 6.19M km² preserved.
+
+### Health verified
+
+- `/health` returns OK
+- Lapita API returns 2 polygons, 11 vertices, lon range [-180, 178.5]
+- All other 297 historical_approximation entities unchanged
+
+---
+
 ## [v6.99.57] - 2026-05-22 (autonomous loop iter 29) — 🎉 **PHASE A COMPLETE**
 
 **297/297 boundaries curated. ZERO `approximate_generated` remaining in DB.**
