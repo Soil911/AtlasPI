@@ -166,7 +166,6 @@ MANUALLY_CURATED_IDS: set[int] = {
     937,  # Teuchitlán — Jalisco/Nayarit guachimontones
     1018, # Manda — Lamu archipelago Swahili
     # v6.99.39 iter 11 — Phase A tier-1 batch 11 (autonomous loop)
-    70,   # (already above — keep)
     791,  # Tongva — California LA Basin
     794,  # Marajoara — Lower Amazon island
     804,  # Tayma — NW Arabia oasis
@@ -177,6 +176,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     960,  # Lucayan (Bahamas Taíno) — Bahamas
     962,  # Tres Zapotes — Olmec/Epi-Olmec lowland
     1000, # Koumbi Saleh — Ghana Empire capital
+    # v6.99.40 iter 12 — Phase A tier-1 batch 12 (autonomous loop)
+    634,  # Ralik-Ratak — Marshall Islands chiefdoms
+    807,  # Yamhad — Old Syrian (Halab/Aleppo)
+    808,  # Isin — Sumerian/Old Babylonian
+    871,  # Halin — Pyu city-state Upper Burma
+    912,  # Copán (Oxwitik) — Maya SE periphery Honduras
+    913,  # Yaxchilán (Pa' Chan) — Maya Usumacinta
+    929,  # Huexotzinco — Aztec-resistant Puebla
+    985,  # Rustamid Imamate — Ibadi Tahert
+    986,  # Midrarid Emirate — Sijilmasa SE Morocco
+    988,  # Hammadid Emirate — central Maghreb
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

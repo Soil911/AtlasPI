@@ -2,6 +2,16 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.40] - 2026-05-22 (autonomous loop iter 12)
+
+**Tema**: *Phase A tier-1 batch 12 — 10 boundaries (Maghreb emirates + Sumerian + Maya cities + Marshalls)*
+
+130/287 (45%) curate. Ralik-Ratak 1.46M km² (Marshall atolls spread), Hammadid 132k,
+Isin 57k, Yamhad 55k, Rustamid 47k, Midrarid 44k, Copán 11k, Yaxchilán 5k, Halin 3k,
+Huexotzinco 2.7k.
+
+---
+
 ## [v6.99.39] - 2026-05-22 (autonomous loop iter 11)
 
 **Tema**: *Phase A tier-1 batch 11 — 10 boundaries (Koumbi Saleh, Palenque, Lucayan, Tayma, Tres Zapotes, Edessa, Marajoara, Paracas, Qedar, Tongva)*
