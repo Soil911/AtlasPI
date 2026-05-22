@@ -2,6 +2,13 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.48] - 2026-05-22 (autonomous loop iter 20) — **70% MILESTONE**
+
+210/287 (73%). Akkad 602k, Dali 562k, Mosquitia 151k, Butua 147k, Tarascan 83k,
+Kahuripan 70k, Wendat 53k, Zapotec 35k, Sri Ksetra 5.8k.
+
+---
+
 ## [v6.99.47] - 2026-05-22 (autonomous loop iter 19)
 
 200/287 (70%). Roman Republic 6M, Kalinago 269k, Babylon 218k, Ngati Toa 58k,

@@ -264,6 +264,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     944,  # Kalinago — Lesser Antilles
     998,  # Djenne-Djeno — Niger Inland Delta Mali
     1034, # Res Publica Romana — Roman Republic
+    # v6.99.48 iter 20 — Phase A tier-1 batch 20 (autonomous loop)
+    169,  # Akkad — Mesopotamian empire
+    195,  # Bēnizàa (Zapotec) — Oaxaca valley
+    203,  # Tarascan/Purépecha — Michoacán
+    220,  # Wendat (Huron) — Georgian Bay
+    453,  # Dali Kingdom — Yunnan
+    533,  # Mosquitia — Caribbean coast Honduras/Nicaragua
+    720,  # Irecha Irechekwa (Purépecha) — Michoacán
+    865,  # Kahuripan — East Java (Airlangga)
+    869,  # Śrī Kṣetra — Pyu city Upper Burma
+    991,  # Butua (Torwa) — SW Zimbabwe Khami
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)
