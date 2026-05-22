@@ -2,6 +2,36 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.68] - 2026-05-23 (Phase B S43 — +50 sources)
+
+**Tema**: *Empires, caliphates and 20th-century states*
+
+### S43 batch (10 entities, +50 academic sources)
+
+Entities upgraded from 3 → 8 sources:
+
+- **ID 249**: Rzeczpospolita Polska (1918-) — Davies, Lukowski, Snyder, Garlinski, Porter-Szücs
+- **ID 247**: Republic of Korea (1948-) — Cumings, Eckert, Lankov, Seth, Stueck
+- **ID 242**: Rhodesia (1965-1979) — Wessels, White, Wood, Mlambo, Onslow
+- **ID 68**: Erzherzogtum Österreich (1282-1804) — Vocelka, Beller, Evans, Brook-Shepherd, Bérenger
+- **ID 98**: Deutsches Kaiserreich (1871-1918) — Clark, Wehler, Berghahn, Steinmetz, Olusoga
+- **ID 28**: Imperio Español (1492-1898) — Elliott, Kamen, Lynch, Restall, Phillips
+- **ID 486**: Caliphate of Córdoba (929-1031) — Kennedy, Fierro, Catlos, Safran, Wasserstein
+- **ID 479**: Aghlabid dynasty (800-909) — Talbi, Anderson, Brett, Abun-Nasr, Kennedy
+- **ID 341**: Samanid Empire (819-999) — Frye, Bosworth (×2), Treadwell, Negmatov
+- **ID 178**: Ptolemaic Kingdom (-305 to -30) — Hölbl, Manning, Bowman, McKechnie, Thompson
+
+### ETHICS notes embedded in SQL
+
+- Rhodesia: white-minority UDI, sanctions, Bush War, Zimbabwe transition
+- Deutsches Kaiserreich: colonial empire + Herero-Nama genocide (Olusoga reference)
+- Imperio Español: Reconquista, Inquisition, encomienda, transatlantic slave trade
+- Ptolemaic Egypt: Greek dynasty over Egyptians, bilingual admin
+
+Total sources: 4417 → **4467**.
+
+---
+
 ## [v6.99.67] - 2026-05-23 (Phase B S42 — +50 sources)
 
 **Tema**: *Modern republics + late colonial regimes enrichment*
