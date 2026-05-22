@@ -2,6 +2,37 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.30] - 2026-05-22 (autonomous loop iter 2, resumed after ~19h gap)
+
+**Tema**: *Phase A tier-1 batch 2 — 10 manual historical boundaries*
+
+### Iter 2 — boundary curation (10 entities)
+
+| id   | Entity                  | Area km²    | Era        |
+|------|-------------------------|-------------|------------|
+| 164  | Kilwa Sultanate         | 50,282      | 957-1513   |
+| 165  | Ajuran Empire           | 248,211     | 1300-1700  |
+| 219  | Mvskoke (Creek)         | 332,805     | 1600-1832  |
+| 459  | Four Oirats             | 1,438,325   | 1399-1634  |
+| 471  | Crusader Tripoli        | 11,864      | 1102-1289  |
+| 591  | Kamarupa                | 206,305     | 350-1140   |
+| 607  | Kingdom of Khotan       | 119,210     | -200/1006  |
+| 609  | Karakhanid Khanate      | 1,112,029   | 840-1212   |
+| 715  | Nieuw-Holland (Dutch)   | 313,696     | 1630-1654  |
+| 1026 | Tekrur pre-Almoravid    | 106,370     | 500-1040   |
+
+Tutte ora `boundary_source = 'historical_approximation'`, conf=0.85.
+Aggiunti 10 nuovi ID a `MANUALLY_CURATED_IDS` (totale 30 curate).
+
+### Loop gap note
+
+Iter 2 schedulata originalmente per 2026-05-21 21:39 CET. PC riavviato per
+Claude Code update v1.8555.0 → wake-up perso. Loop ripreso manualmente da
+Clirim 2026-05-22 15:54 (~19h gap). Lesson learned: ScheduleWakeup è
+session-local, non sopravvive a chiusura Claude Code.
+
+---
+
 ## [v6.99.29] - 2026-05-21 (autonomous loop iter 1)
 
 **Tema**: *Phase A tier-1 batch 1 — 10 manual historical boundaries + GPT-5.5 fact-check Balhae*

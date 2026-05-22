@@ -66,6 +66,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     575,  # Transilvania — Carpathian basin Ottoman vassal
     669,  # Butuan — NE Mindanao Agusan delta
     976,  # Katsina — Hausa Bakwai city-state
+    # v6.99.30 iter 2 — Phase A tier-1 batch 2 (autonomous loop)
+    164,  # Kilwa Sultanate — Tanzania Swahili coast
+    165,  # Ajuran Empire — Southern Somalia Shabelle/Jubba
+    219,  # Mvskoke Creek — SE US AL/GA/N FL
+    459,  # Four Oirats — W Mongolia + Dzungaria
+    471,  # Crusader Tripoli — N Lebanon coast
+    591,  # Kamarupa — Assam Brahmaputra valley
+    607,  # Kingdom of Khotan — S Tarim Basin oasis
+    609,  # Karakhanid — Transoxiana + W Tarim
+    715,  # Nieuw-Holland (Dutch Brazil) — NE Brazil coast
+    1026, # Tekrur pre-Almoravid — Senegal River valley
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)
