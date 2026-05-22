@@ -187,6 +187,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     985,  # Rustamid Imamate — Ibadi Tahert
     986,  # Midrarid Emirate — Sijilmasa SE Morocco
     988,  # Hammadid Emirate — central Maghreb
+    # v6.99.41 iter 13 — Phase A tier-1 batch 13 (autonomous loop)
+    644,  # Cacicazgo de Coclé — Panama central
+    679,  # Polotsk Principality — Belarus/Lithuania border
+    753,  # ʻUvea — Wallis island Polynesia
+    770,  # Taotao Tano — Mariana Islands Chamorro
+    771,  # Noongar boodja — SW Australia Aboriginal
+    772,  # Wiradjuri — central NSW Aboriginal
+    920,  # Quiriguá (K'iik'aab) — Maya Motagua valley
+    1001, # Wadan — Adrar Mauritania oasis
+    1002, # Oualata — Mauritania trans-Saharan
+    1006, # Sultanate of Shewa — central Ethiopia
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

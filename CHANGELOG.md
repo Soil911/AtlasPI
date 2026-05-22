@@ -2,6 +2,15 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.41] - 2026-05-22 (autonomous loop iter 13)
+
+**Tema**: *Phase A tier-1 batch 13 — 10 boundaries (Polotsk, Wiradjuri, Noongar, Shewa, Coclé, Quiriguá, Wadan, Oualata, Chamorro, Wallis)*
+
+140/287 (49%) curate. Noongar 344k, Wiradjuri 240k, Taotao Tano 188k, Polotsk 80k,
+Shewa 67k, Wadan 33k, Oualata 29k, Wallis 12k, Coclé 10k, Quiriguá 3k.
+
+---
+
 ## [v6.99.40] - 2026-05-22 (autonomous loop iter 12)
 
 **Tema**: *Phase A tier-1 batch 12 — 10 boundaries (Maghreb emirates + Sumerian + Maya cities + Marshalls)*
