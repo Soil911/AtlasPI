@@ -2,6 +2,16 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.34] - 2026-05-22 (autonomous loop iter 6)
+
+**Tema**: *Phase A tier-1 batch 6 — 10 boundaries (Mafia, Brabant, Savoy, Three Fires, etc.)*
+
+70/287 (24%) boundaries curate. Aree km²: Mafia 4k, Balanguingui 8k, Namayan 1.4k,
+Tumbatu 857, Brabant 15.7k, Engaruka 1k, Chwaka 674, Savoy 35k, Butaritari 2.2k,
+Three Fires 623k.
+
+---
+
 ## [v6.99.33] - 2026-05-22 (autonomous loop iter 5)
 
 **Tema**: *Phase A tier-1 batch 5 — 10 boundaries*

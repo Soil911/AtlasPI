@@ -110,6 +110,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     906,  # Gelgel pre-sultanate Bali — Majapahit successor
     1013, # Kong — Dyula city-state N Côte d'Ivoire
     1015, # Bighu (Begho) — Dyula trading city Brong-Ahafo Ghana
+    # v6.99.34 iter 6 — Phase A tier-1 batch 6 (autonomous loop)
+    573,  # Savoy Duchy — Alpine France/Italy
+    582,  # Brabant — Low Countries (Brussels/Antwerp/Leuven)
+    769,  # Butaritari — Gilbert Islands Kiribati
+    778,  # Niswi-mishkodewinan (Three Fires Anishinaabe) — Great Lakes
+    882,  # Namayan — Manila bay area Philippines
+    905,  # Balanguingui — Sulu archipelago piracy
+    995,  # Engaruka — N Tanzania irrigation complex
+    1020, # Mafia Sultanate — Mafia island Tanzania
+    1021, # Tumbatu — Zanzibar Swahili
+    1022, # Chwaka — Pemba Swahili
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)
