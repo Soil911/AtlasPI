@@ -330,6 +330,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     688,  # Sunda Kingdom — W Java
     718,  # Kitu (Quitu) — N Ecuadorian highlands
     981,  # Sosso — Soninke W Sudan
+    # v6.99.54 iter 26 — Phase A tier-1 batch 26 (autonomous loop)
+    173,  # Umayyad Caliphate — Damascus-based
+    654,  # Norway peak (Hákon IV/Magnús V)
+    713,  # Province of Carolina — colonial English
+    788,  # Haak'u (Acoma) — NM Pueblo
+    881,  # Ma-i — Mindoro polity Philippines
+    888,  # Ngoenyang — N Thai Tai pre-Lan Na
+    938,  # Paquimé (Casas Grandes) — Chihuahua
+    942,  # Vínland — Norse settlement Newfoundland
+    943,  # Eystribyggð — Norse Eastern Settlement Greenland
+    1039, # Old Babylonian — Hammurabi peak
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

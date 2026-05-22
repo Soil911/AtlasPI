@@ -2,6 +2,14 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.54] - 2026-05-22 (autonomous loop iter 26)
+
+270/287 (94%) — Phase A nearly complete. Umayyad 5.8M, Norway peak 1.17M,
+Old Babylonian 400k, Carolina 390k, Ngoenyang 58k, Ma-i 27k, Eystribyggð 12k,
+Paquimé 10.7k, Haak'u 10.1k, Vinland 2.3k.
+
+---
+
 ## [v6.99.53] - 2026-05-22 (autonomous loop iter 25)
 
 260/287 (91%) — Phase A near-complete. Maratha 2.9M, Zunghar 2.55M, Xianbei 2.18M,
