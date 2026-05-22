@@ -71,6 +71,14 @@ Prioritizzo:
 | 13 | 2026-05-22 16:10 | A | 10 boundaries (Polotsk, Wiradjuri, Noongar, Shewa, Cocle, Quirigua, Wadan, Oualata, Chamorro, Wallis) | v6.99.41, 140/147 | ✓ |
 | 14 | 2026-05-22 16:15 | A | 10 boundaries **50% MILESTONE** (USSR, Aboriginal Aus nations, Marshall Is., Punt, Tunjur, Pulotu, Chiripa, Futuna, Kulin, Yolŋu) | v6.99.42, **150/137** | ✓ |
 | 15 | 2026-05-22 16:20 | A | 10 boundaries (Chamorro, Ugarit, Xochicalco, El Tajin, Aguateca, Spiro, Kuna, Shilluk, Kuba, Shanga) | v6.99.43, 160/127 | ✓ |
+| 16 | 2026-05-22 16:25 | A | 10 boundaries (Scythia, Epirus, Corinth, Catalhoyuk, Dilmun, Navajo, K'iche', Tsalagi, Uxmal, Nojpeten) | v6.99.44, **170/117 (59%)** | ✓ |
+
+### 🎉 SESSION SUMMARY (turno 2026-05-22 14:00 → 16:25, 16 iter consecutive)
+
+**Phase A progress**: 20/287 → 170/287 (7% → 59%) = **+150 boundaries curate in un turno**
+**Deploys**: v6.99.29 → v6.99.44 (16 sub-versioni)
+**Tutti i deploy passati healthcheck — zero auto-revert**
+**Schema versioning corretto, MANUALLY_CURATED_IDS guard rispettato a ogni restart**
 
 (Append new rows on each iteration. Format: `| N | ts | phase | action | result | deploy/skip |`)
 
