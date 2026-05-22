@@ -2,6 +2,15 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.44] - 2026-05-22 (autonomous loop iter 16)
+
+**Tema**: *Phase A tier-1 batch 16 — 10 boundaries (Scythia, Epirus, Corinth, Çatalhöyük, Dilmun, Navajo, K'iche', Tsalagi, Uxmal, Nojpeten)*
+
+170/287 (59%) curate. Skythia 935k, Navajo 106k, Tsalagi 101k, Epirus 41k,
+Dilmun 15k, Nojpeten 12k, Q'umarkaj 7k, Corinth 5k, Çatalhöyük 3k, Uxmal 2k.
+
+---
+
 ## [v6.99.43] - 2026-05-22 (autonomous loop iter 15)
 
 **Tema**: *Phase A tier-1 batch 15 — 10 boundaries (Chamorro, Ugarit, Mesoamerican cities, Kuba, Shilluk, Spiro, Kuna, Shanga)*

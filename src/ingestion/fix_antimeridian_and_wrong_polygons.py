@@ -220,6 +220,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     993,  # Shilluk Reth — White Nile Sudan
     1016, # Kuba pre-Shyaam — DR Congo Kasai
     1019, # Shanga — Lamu Pate Swahili
+    # v6.99.44 iter 16 — Phase A tier-1 batch 16 (autonomous loop)
+    275,  # Skythia — Pontic Steppe confederation
+    284,  # Epirus (Pyrrhus' kingdom)
+    285,  # Corinth — Greek city-state
+    292,  # Çatalhöyük — Neolithic proto-city Anatolia
+    293,  # Dilmun — Persian Gulf Bronze Age
+    544,  # Dine Bikeyah (Navajo) — Four Corners
+    549,  # Q'umarkaj — K'iche' Maya capital
+    859,  # Tsalagi — pre-contact Cherokee Appalachian
+    915,  # Uxmal — Puuc Maya Yucatan
+    922,  # Nojpeten (Itza) — Lake Peten Itza
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)
