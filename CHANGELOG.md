@@ -2,6 +2,33 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.63] - 2026-05-22 (Phase B S40 — major imperial states)
+
+S40 — +50 sources: Ottoman Empire, Qing Empire, Russian Empire, Đại Nam
+(Nguyễn Vietnam), Buganda, Imerina Madagascar, Captaincy Chile, Uruguay,
+Republic of India, Weimar Republic.
+
+Major academic publishers: Belknap/Harvard UP (Rowe Great Qing, Woodside
+Vietnam Chinese Model, Eyck Weimar), Cambridge UP (Inalcik+Quataert Ottoman
+economic, Faroqhi Later Ottoman, Quataert 1700-1922, Hosking Russia, Wrigley
+Buganda, Campbell Imperial Madagascar, Collier+Sater Chile, Talbot South Asia),
+Yale UP (Lieven Empire, Talbot South Asia), UC Press (Crossley Translucent
+Mirror, Rawski Last Emperors, Brocheux Indochina), Princeton UP (Wortman
+Scenarios, Weitz Weimar Promise and Tragedy), Penguin (Khilnani Idea of India),
+Routledge (Kolb Weimar), Basic Books (Finkel Osman's Dream, Goscha Vietnam),
+Pearson (Kappeler Russian Multi-Ethnic).
+
+### Phase B progress (S35-S40)
+
+| Stat | Pre-Phase B | Post S40 | Δ |
+|---|---:|---:|---:|
+| Total sources | 4017 | **4317** | +300 |
+| Entity ≥3 src | 852 | **879** | +27 |
+| Entity ≥5 src | 304 | **364** | +60 |
+| Sub-versioni | v6.99.58 | v6.99.63 | +5 |
+
+---
+
 ## [v6.99.62] - 2026-05-22 (Phase B S39)
 
 S39 — +50 sources: Maximilian's Mexican Empire, French Mandate Syria/Lebanon,
