@@ -2,6 +2,22 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.61] - 2026-05-22 (Phase B S38)
+
+S38 — 10 entities, +50 sources: Vínland, Latin Empire (Imperium Romaniae),
+Captaincy Guatemala (214 + 711), Gran Colombia, Yucatán Republic, Portugal,
+Captaincy Cuba, Tây Sơn (Vietnam), Paraguay Republic. Tutte 7-8 sources.
+
+Highlights: Cambridge UP (Disney Portugal, Taylor Vietnamese, Bethencourt
+Portuguese Oceanic, Madden Dandolo Venice), UTexas (Rugeley Caste War, Williams
+Paraguay, Smith Guatemala), Yale UP (Lynch Bolivar), UC Press (MacLeod
+Central America), Stanford UP (Reed Caste War, Patch Maya/Spaniard, Seaver
+Greenland), Hawaii (Dutton Tây Sơn), Oxford UP (Pérez Cuba, Kiernan Vietnam),
+Duke UP (Joseph Yucatán, Lambert Paraguay), Penguin (Phillips Fourth Crusade,
+Kunz Vinland Sagas).
+
+---
+
 ## [v6.99.60] - 2026-05-22 (Phase B S37)
 
 S37 — 10 entities, +50 sources: Darfur, Dahomey, France (Capetian-1792), Norse
