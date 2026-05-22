@@ -242,6 +242,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     543,  # Ndee (Apache) — SW USA + N Mexico
     618,  # Illyria/Ardiaei — Adriatic coast
     861,  # Tairona — Sierra Nevada Santa Marta
+    # v6.99.46 iter 18 — Phase A tier-1 batch 18 (autonomous loop)
+    146,  # Wagadou (Ghana Empire) — W Sahel
+    297,  # Tu'i Ha'atakalaua — Tonga successor dynasty
+    305,  # Saudeleur — Pohnpei Nan Madol
+    307,  # Lapita — Austronesian cultural Bismarcks-Polynesia
+    312,  # Belau (Palau) — Caroline Islands W
+    349,  # Sogdiana — Iranian Central Asia
+    418,  # Miji ya Pwani — Swahili coastal aggregate
+    617,  # Herodian Kingdom — Judea+Galilee
+    630,  # Safineis (Samnites) — Apennines central Italy
+    860,  # Muisca — Cundinamarca-Boyacá Colombia
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

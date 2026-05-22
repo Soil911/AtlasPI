@@ -2,6 +2,13 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.46] - 2026-05-22 (autonomous loop iter 18)
+
+190/287 (66%). Lapita 5.7M, Miji ya Pwani 630k, Wagadou Ghana 420k, Tonga 326k,
+Belau Palau 294k, Sogdiana 223k, Muisca 64k, Herodian 59k, Samnites 35k, Saudeleur 1.5k.
+
+---
+
 ## [v6.99.45] - 2026-05-22 (autonomous loop iter 17)
 
 180/287 (63%). Sarmatia 1.4M, Indus Valley 1.4M, Avakuarusu 894k, Apache 506k,
