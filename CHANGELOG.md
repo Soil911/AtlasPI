@@ -2,6 +2,39 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.66] - 2026-05-23 (Phase B S41 — +50 sources)
+
+**Tema**: *Modern republics + colonial regimes enrichment*
+
+### S41 batch (10 entities, +50 academic sources)
+
+Entities upgraded from 3 → 8 sources:
+
+- **ID 850**: Islamic Republic of Pakistan (1947-) — Talbot, Jalal, Khan, Cohen, Bose
+- **ID 390**: Khalji sultanate of Delhi (1290-1320) — Jackson, Kumar, Eaton, Lal, Asher
+- **ID 928**: Cholōllān/Cholula (-500 to 1519) — McCafferty, Plunket, Carrasco, Solís, Restall
+- **ID 255**: Republic of Iraq (1932-) — Tripp, Marr, Dodge, Sluglett, Bashkin
+- **ID 236**: People's Republic of Bangladesh (1971-) — Bose, Raghavan, Schendel, Ludden, Riaz
+- **ID 501**: Emirate of Transjordan (1921-1946) — Wilson, Salibi, Alon, Robins, Massad
+- **ID 256**: Kingdom of Cambodia (1953-) — Chandler, Kiernan, Tully, Strangio, Edwards
+- **ID 251**: Imperial Iran/Pahlavi (1925-1979) — Abrahamian, Katouzian, Ansari, Cronin, Milani
+- **ID 736**: Mahdiyya state of Sudan (1885-1898) — Holt, Searcy, Daly, Voll, Warburg
+- **ID 709**: Viceroyalty of Peru (1542-1824) — Andrien, Lockhart, Cahill, Mumford, Klarén
+
+All citations include ISBN/DOI with WorldCat or JSTOR/DOI URLs.
+
+### ETHICS notes embedded in SQL
+
+- Cholula: includes 1519 massacre by Cortés (Restall reference)
+- Bangladesh: 1971 genocide (3M dead per official estimates)
+- Cambodia: Khmer Rouge genocide (Kiernan)
+- Transjordan: British-imposed Hashemite construct (Massad colonial effects)
+- Viceroyalty of Peru: mita labor system, demographic collapse (Mumford, Andrien)
+
+Total sources: 4317 → **4367**.
+
+---
+
 ## [v6.99.65] - 2026-05-22 (Phase D — analytics-driven gap closure)
 
 **Tema**: *Closing 0-result user queries via name_variants*
