@@ -2,6 +2,35 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.59] - 2026-05-22 (Phase B start: S35+S36 enrichment)
+
+**Tema**: *Phase B kickoff — +100 academic sources to 20 high-conf entities (S35+S36)*
+
+### S35 — 10 entities, +50 sources
+Río de la Plata Viceroyalty, Rozvi (Zimbabwe), Wadai, Due Sicilie, Oyo, Czechoslovakia, Asante, Ducato Milano, Regno Napoli, Romania. Tutte ora con 7-8 sources.
+
+### S36 — 10 entities, +50 sources
+Nueva Granada, Empire Japan, Sardinia, Tuscany, Brasil Empire, Alaouite Morocco, Rattanakosin Siam, Achaemenid Persia, Republic of Texas, British Raj. Tutte ora con 7-8 sources.
+
+### Source highlights
+
+- Princeton UP (Mamatey/Luža Czechoslovakia, Skilling, Korbel, Litchfield Florence)
+- Cambridge UP (Bayly Modern India, Wilks Asante, McCaskie, Bethell Brazil, Calabria Naples)
+- Yale UP (Wyatt Thailand, Innes Czechoslovakia)
+- Oxford UP (Hitchins Rumania, Black Milan, Brown Modern India, Beasley Japan Imperialism)
+- Belknap/Harvard UP (Jansen Modern Japan)
+- Norton (Lynch Spanish American Revolutions, Dower Embracing Defeat)
+- Stanford UP (Adelman, Barman Brazil, Marino Naples)
+- UC Press (Bushnell Colombia)
+- I.B. Tauris (Wiesehöfer Ancient Persia)
+- Eisenbrauns (Briant From Cyrus to Alexander)
+- Edinburgh UP (Llewellyn-Jones Achaemenid court)
+- Routledge (Kuhrt Persian Empire, Stein History of India)
+- Da Capo / Hachette (Fehrenbach Lone Star)
+- Heinemann/Mambo (Beach Shona/Zimbabwe), James Currey (Mudenge Munhumutapa)
+
+---
+
 ## [v6.99.58] - 2026-05-22 (bugfix post-Phase A)
 
 **Tema**: *fix 2 duplicate polygons + 1 antimeridian crossing*
