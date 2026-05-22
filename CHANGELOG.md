@@ -2,6 +2,33 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.65] - 2026-05-22 (Phase D — analytics-driven gap closure)
+
+**Tema**: *Closing 0-result user queries via name_variants*
+
+### Analytics findings (from `api_request_logs`)
+
+Run query top searches from production logs. Top queries with **0 results in
+`/v1/search`** despite matching entities existing:
+
+- **Bantu** (10 hits/day): entities like Buganda, Kongo, Rwanda, Zulu existed
+  but `name_original` in local languages
+- **Crusader**: entities 472 (Antioch), 471 (Tripoli), 473 (Edessa) existed
+  but only `Comitatus/Principatus` Latin names
+- **Frankish**: 431 (Regnum Francorum), 89 (Imperium Francorum) only Latin
+- **Hellenistic**: 282 (Commagene), 284 (Epirus), 347 (Bactria) only Greek
+- **Maori**: entity 55 (Aotearoa) only Maori name
+- **Renaissance**: 422 (Milan), 23 (Venice) only Italian/Venetian names
+
+### Fix: +44 name_variants added
+
+Added English/French/German/Italian variants targeting these queries.
+Verification: all 6 previously 0-result queries now return ≥1 result.
+
+Total name_variants: 3016 → **3060**.
+
+---
+
 ## [v6.99.64] - 2026-05-22 (Phase C COMPLETE — Cities 110→252)
 
 **Tema**: *Phase C cities expansion — 142 new historical cities*
