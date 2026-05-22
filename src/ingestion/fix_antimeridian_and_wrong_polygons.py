@@ -121,6 +121,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     1020, # Mafia Sultanate — Mafia island Tanzania
     1021, # Tumbatu — Zanzibar Swahili
     1022, # Chwaka — Pemba Swahili
+    # v6.99.35 iter 7 — Phase A tier-1 batch 7 (autonomous loop)
+    59,   # Denmark — peninsular Jutland + islands
+    569,  # Saxony Duchy (old) — Magdeburg
+    577,  # Meissen Margraviate — Wettin precursor
+    579,  # Wallachia (Basarab I) — Curtea de Argeș
+    583,  # Flanders County — Low Countries (Gent/Brugge/Lille)
+    681,  # Pomerania Duchy — Baltic S coast
+    824,  # Mvita (Mombasa) — Swahili Kenya
+    827,  # Pemba — Pemba Island Swahili
+    828,  # Sofala — Mozambique gold port
+    1017, # Vumba Kuu — Wadigo Swahili Shimoni/Diani
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

@@ -2,6 +2,15 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.35] - 2026-05-22 (autonomous loop iter 7)
+
+**Tema**: *Phase A tier-1 batch 7 — 10 boundaries (Denmark, Flanders, Pomerania, Saxony Duchy, etc.)*
+
+80/287 (28%) boundaries curate. Aree key: Denmark 83k, Saxony Duchy 95k, Wallachia 65k,
+Pomerania 44k, Meissen 23k, Flanders 15k, Sofala 17k, Mvita 4k, Pemba 3k, Vumba Kuu 5k.
+
+---
+
 ## [v6.99.34] - 2026-05-22 (autonomous loop iter 6)
 
 **Tema**: *Phase A tier-1 batch 6 — 10 boundaries (Mafia, Brabant, Savoy, Three Fires, etc.)*
