@@ -23,6 +23,8 @@ At each iteration: (a) read this file first, (b) work, (c) update this file with
 
 - [x] **Phase 0** — Setup (this file, chatgpt_review.py, gitignore, backup) — 2026-05-21 20:30
 - [x] **Phase A** — Boundary cleanup: COMPLETE (297 manual polygons, 2026-05-22 17:30)
+- [x] **Bugfix** — duplicate polygons (Yaxchilán/Piedras Negras + Maynila/Namayan) + Lapita antimeridian split (v6.99.58)
+- [~] **Phase B** — Enrichment IN PROGRESS — 6 batches done S35-S40, +300 sources
 - [ ] **Phase B** — Enrichment S35+ (target 90% ≥3 src, 40% ≥5 src, 5000+ sources)
 - [ ] **Phase C** — New entities (cities 110→250, events, routes)
 - [ ] **Phase D** — Analytics-driven gap closure (top 404s, top low-result queries)
@@ -73,12 +75,31 @@ Prioritizzo:
 | 15 | 2026-05-22 16:20 | A | 10 boundaries (Chamorro, Ugarit, Xochicalco, El Tajin, Aguateca, Spiro, Kuna, Shilluk, Kuba, Shanga) | v6.99.43, 160/127 | ✓ |
 | 16 | 2026-05-22 16:25 | A | 10 boundaries (Scythia, Epirus, Corinth, Catalhoyuk, Dilmun, Navajo, K'iche', Tsalagi, Uxmal, Nojpeten) | v6.99.44, **170/117 (59%)** | ✓ |
 
-### 🎉 SESSION SUMMARY (turno 2026-05-22 14:00 → 16:25, 16 iter consecutive)
+### 🎉 SESSION SUMMARY (turno 2026-05-22 14:00 → ~18:00, ~40 iter consecutive)
 
-**Phase A progress**: 20/287 → 170/287 (7% → 59%) = **+150 boundaries curate in un turno**
-**Deploys**: v6.99.29 → v6.99.44 (16 sub-versioni)
-**Tutti i deploy passati healthcheck — zero auto-revert**
-**Schema versioning corretto, MANUALLY_CURATED_IDS guard rispettato a ogni restart**
+**Phase A**: COMPLETE — 20/287 → 297/297 (100%) = **+277 boundaries curate**
+**Bugfix**: 3 fixes — Pa'Chan/Yokib + Maynila/Namayan + Lapita antimeridian
+**Phase B**: STARTED — S35→S40 batches, +300 sources, 60 entities upgraded ≥5 src
+**Deploys**: v6.99.29 → v6.99.63 (35 sub-versioni)
+**0 deploy fail / 0 auto-revert**
+**Sito live e healthy a v6.99.63 — /health OK, API responsive**
+
+### 🔧 Next iteration plan (post-pause)
+
+- Phase B: continuare S41+ — entità a confidence 0.78-0.85 con 3 sources (~50 ancora da fare)
+- Phase C: cities expansion 110 → 250+ (via HF Datasets)
+- Phase D: analytics-driven gap closure (top 404s/0-result queries)
+- Phase E: GPT-5.5 fact-check batch (290 boundaries → verifica 10-20 random per epoch)
+- Phase F: visual map tour (multi-epoca screenshot) — REQUIRES Chrome MCP available
+
+### 📊 Final stats post-S40
+
+- Total sources: **4317** (era 4017 pre-Phase B = +300)
+- Entity ≥3 sources: **879** (88% del DB)
+- Entity ≥5 sources: **364** (36% del DB)
+- Entity con conf ≥0.85: ~365
+- Boundaries manualmente curated: **297**
+- Active version: **v6.99.63**
 
 (Append new rows on each iteration. Format: `| N | ts | phase | action | result | deploy/skip |`)
 
