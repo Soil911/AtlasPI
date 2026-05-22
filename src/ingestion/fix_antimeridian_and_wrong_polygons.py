@@ -231,6 +231,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     859,  # Tsalagi — pre-contact Cherokee Appalachian
     915,  # Uxmal — Puuc Maya Yucatan
     922,  # Nojpeten (Itza) — Lake Peten Itza
+    # v6.99.45 iter 17 — Phase A tier-1 batch 17 (autonomous loop)
+    272,  # Troia / Wilusa — Bronze Age Anatolia
+    276,  # Sarmatia — Eurasian steppe Don-Volga
+    277,  # Indus Valley Civilization
+    308,  # Torres Strait Islander peoples
+    316,  # PNG Highland societies
+    538,  # Avakuarusu (Guarani) — Paraguay+N Argentina+S Brazil
+    542,  # Quilombos — Brazilian maroon
+    543,  # Ndee (Apache) — SW USA + N Mexico
+    618,  # Illyria/Ardiaei — Adriatic coast
+    861,  # Tairona — Sierra Nevada Santa Marta
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

@@ -2,6 +2,14 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.45] - 2026-05-22 (autonomous loop iter 17)
+
+180/287 (63%). Sarmatia 1.4M, Indus Valley 1.4M, Avakuarusu 894k, Apache 506k,
+PNG Highlands 274k, Illyria 96k, Torres Strait 91k, Quilombos 76k, Tairona 16k,
+Troia 3.4k.
+
+---
+
 ## [v6.99.44] - 2026-05-22 (autonomous loop iter 16)
 
 **Tema**: *Phase A tier-1 batch 16 — 10 boundaries (Scythia, Epirus, Corinth, Çatalhöyük, Dilmun, Navajo, K'iche', Tsalagi, Uxmal, Nojpeten)*
