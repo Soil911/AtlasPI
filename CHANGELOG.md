@@ -2,6 +2,13 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.50] - 2026-05-22 (autonomous loop iter 22) — **50th sub-version**
+
+230/287 (80%). Oceti Sakowin 785k, Hausa Bakwai 195k, Saba 162k, Sumer 119k,
+Linyi 101k, Rascia 89k, Caral-Supe 14k, Gelgel 12k, Ile-Ife 6k.
+
+---
+
 ## [v6.99.49] - 2026-05-22 (autonomous loop iter 21)
 
 220/287 (77%). Tupinambá 2.2M, Taiping 541k, Niitsitapi Blackfoot 497k, E Ganga 346k,

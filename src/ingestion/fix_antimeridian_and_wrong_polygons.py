@@ -286,6 +286,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     726,  # Muscogee (Creek aggregate) — SE US
     854,  # Zagwe — Ethiopia (Lalibela)
     966,  # Tupinambá — Brazilian Atlantic coast
+    # v6.99.50 iter 22 — Phase A tier-1 batch 22 (autonomous loop)
+    160,  # Hausa Bakwai — Seven Hausa city-states aggregate
+    168,  # Sumer — S Mesopotamia
+    188,  # Sabaʾ — S Arabia Yemen
+    201,  # Caral-Supe — Supe valley Peru Norte Chico
+    667,  # Rascia — Medieval Serbia
+    694,  # Kerajaan Gelgel — Bali post-Majapahit
+    727,  # Oceti Sakowin (Great Sioux) — N+W Plains
+    864,  # Linyi/Lâm Ấp — pre-Champa central Vietnam
+    977,  # Zazzau — Hausa Bakwai (Zaria)
+    982,  # Ile-Ife — Yoruba sacred SW Nigeria
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)
