@@ -132,6 +132,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     827,  # Pemba — Pemba Island Swahili
     828,  # Sofala — Mozambique gold port
     1017, # Vumba Kuu — Wadigo Swahili Shimoni/Diani
+    # v6.99.36 iter 8 — Phase A tier-1 batch 8 (autonomous loop)
+    66,   # Sparta (Lakedaimon) — Laconia + Messenia Peloponnese
+    123,  # Liao Empire (Khitan) — Mongolia + N China + Manchuria
+    129,  # Pagan Kingdom — Central+Upper Burma
+    139,  # Funan — Mekong delta SE Asia
+    170,  # Assyria — N Mesopotamia + peak expansions
+    719,  # Muzo — Colombia E Cordillera (emerald region)
+    870,  # Beikthano — Pyu city central Burma
+    891,  # Kintamani — Bali highland pre-Warmadewa
+    910,  # Calakmul (Uxte'tuun) — Maya S Yucatan/Campeche
+    1007, # Zeila — Somaliland Red Sea port
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

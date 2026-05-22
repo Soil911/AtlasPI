@@ -2,6 +2,16 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.36] - 2026-05-22 (autonomous loop iter 8)
+
+**Tema**: *Phase A tier-1 batch 8 — 10 boundaries (Liao, Assyria, Pagan, Funan, Sparta, Calakmul, etc.)*
+
+90/287 (31%) boundaries curate. Major aree: Liao 3.46M km² (largest curated yet),
+Assyria 941k, Pagan 419k, Funan 172k, Calakmul 36k, Zeila 9k, Sparta 12k, Muzo 14k,
+Beikthano 3k, Kintamani 2.9k.
+
+---
+
 ## [v6.99.35] - 2026-05-22 (autonomous loop iter 7)
 
 **Tema**: *Phase A tier-1 batch 7 — 10 boundaries (Denmark, Flanders, Pomerania, Saxony Duchy, etc.)*
