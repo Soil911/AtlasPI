@@ -165,6 +165,18 @@ MANUALLY_CURATED_IDS: set[int] = {
     935,  # Mitla (Lyobaa) — Zapotec Oaxaca
     937,  # Teuchitlán — Jalisco/Nayarit guachimontones
     1018, # Manda — Lamu archipelago Swahili
+    # v6.99.39 iter 11 — Phase A tier-1 batch 11 (autonomous loop)
+    70,   # (already above — keep)
+    791,  # Tongva — California LA Basin
+    794,  # Marajoara — Lower Amazon island
+    804,  # Tayma — NW Arabia oasis
+    819,  # Qedar — Arab tribal federation N Arabia
+    820,  # Edessa (Osroene) — Upper Mesopotamia
+    909,  # Palenque (Lakamha') — Maya Classic Chiapas
+    949,  # Paracas — S Peru coast cultural
+    960,  # Lucayan (Bahamas Taíno) — Bahamas
+    962,  # Tres Zapotes — Olmec/Epi-Olmec lowland
+    1000, # Koumbi Saleh — Ghana Empire capital
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

@@ -2,6 +2,15 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.39] - 2026-05-22 (autonomous loop iter 11)
+
+**Tema**: *Phase A tier-1 batch 11 — 10 boundaries (Koumbi Saleh, Palenque, Lucayan, Tayma, Tres Zapotes, Edessa, Marajoara, Paracas, Qedar, Tongva)*
+
+120/287 (42%) curate. Lucayan 527k (Bahamas archipelago), Qedar 334k (N Arabia),
+Marajoara 73k, Edessa 39k, Koumbi Saleh 17k, Paracas 16k, Tres Zapotes 10k.
+
+---
+
 ## [v6.99.38] - 2026-05-22 (autonomous loop iter 10)
 
 **Tema**: *Phase A tier-1 batch 10 — 10 boundaries (Istanbul, Bavaria, Maʿīn, Gerrha, Mitla, Cantona, Nuuchahnulth, Salakanagara, Teuchitlán, Manda)*
