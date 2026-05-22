@@ -2,6 +2,36 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.67] - 2026-05-23 (Phase B S42 — +50 sources)
+
+**Tema**: *Modern republics + late colonial regimes enrichment*
+
+### S42 batch (10 entities, +50 academic sources)
+
+Entities upgraded from 3 → 8 sources:
+
+- **ID 683**: Capitania General de las Islas Filipinas (1565-1898) — Phelan, Newson, Reed, Aguilar, Schumacher
+- **ID 268**: Arab Republic of Egypt (1953-) — Goldschmidt, Vatikiotis, Cook, Beinin, Osman
+- **ID 258**: Suomi/Finland (1917-) — Jussila, Meinander, Kirby, Tepora, Singleton
+- **ID 257**: Éire/Ireland (1922-) — Foster, Ferriter, Townshend, Bartlett, Lee
+- **ID 252**: Islamic Republic of Iran (1979-) — Axworthy, Keddie, Abrahamian, Bayat, Takeyh
+- **ID 1034**: Res Publica Romana (-509 to -27) — Cornell, Beard, Flower, Brunt, Crawford
+- **ID 265**: Estado Novo Portugal (1933-1974) — Meneses, Pinto, Birmingham, Wheeler
+- **ID 253**: Kingdom of Saudi Arabia (1932-) — Vassiliev, Al-Rasheed, Commins, Hertog, Lacroix
+- **ID 250**: Türkiye Cumhuriyeti (1923-) — Zürcher, Hanioğlu, Kasaba, Yavuz, Findley
+- **ID 243**: Republic of China (1912-) — Fenby, Westad, Esherick, Taylor, Mitter
+
+### ETHICS notes embedded in SQL
+
+- Filipinas: 333 years Spanish colonial rule, encomienda, Moro Wars
+- Egypt: 1952 coup → Nasser → Mubarak → 2011 revolution → 2013 coup
+- Estado Novo: Salazar dictatorship, colonial wars Angola/Mozambique/Guinea-Bissau, PIDE
+- ROC: 1911 Xinhai revolution, warlord era, 1949 retreat to Taiwan
+
+Total sources: 4367 → **4417**.
+
+---
+
 ## [v6.99.66] - 2026-05-23 (Phase B S41 — +50 sources)
 
 **Tema**: *Modern republics + colonial regimes enrichment*
