@@ -2,6 +2,14 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.55] - 2026-05-22 (autonomous loop iter 27)
+
+280/287 (98%) — Phase A almost done. Sangam Chola 73k, Wales 42k, Essouk 35k,
+Manteño-Huancavilca 24k, Quimbaya 18k, Cañari 12k, Hopi 10k, Cholōllān 2k,
+Chalco 1k, Xochimilco 0.35k.
+
+---
+
 ## [v6.99.54] - 2026-05-22 (autonomous loop iter 26)
 
 270/287 (94%) — Phase A nearly complete. Umayyad 5.8M, Norway peak 1.17M,

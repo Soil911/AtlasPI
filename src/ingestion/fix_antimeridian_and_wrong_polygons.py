@@ -341,6 +341,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     942,  # Vínland — Norse settlement Newfoundland
     943,  # Eystribyggð — Norse Eastern Settlement Greenland
     1039, # Old Babylonian — Hammurabi peak
+    # v6.99.55 iter 27 — Phase A tier-1 batch 27 (autonomous loop)
+    92,   # Tywysogaeth Cymru (Wales Principality)
+    790,  # Hopi (Hopituh Shi-nu-mu) — Arizona mesas
+    793,  # Cholōllān — Aztec-period Puebla
+    931,  # Xochimilco — Nahua altepetl Texcoco
+    932,  # Chalco — Aztec-era Nahua altepetl
+    954,  # Cañari — S Ecuador pre-Inca
+    955,  # Manteño-Huancavilca — Coastal Ecuador
+    965,  # Quimbaya — Middle Cauca Colombia
+    1011, # Essouk-Tadmakka — Mali Saharan
+    1040, # Sangam-era Chola — S India Tamil
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)
