@@ -58,6 +58,7 @@ Prioritizzo:
 | 1 | 2026-05-21 18:55 | A | 10 boundaries Tier-1 batch 1 + GPT-5.5 fact-check Balhae | v6.99.29 deployed, 20 curated/277 approximate | ✓ |
 | ⚠️ | 2026-05-21 19:00 → 2026-05-22 13:54 | — | **GAP ~19h**: Claude Code restart (PC update v1.8555.0) → scheduled wakeup lost | manual resume by Clirim | — |
 | 2 | 2026-05-22 14:00 | A | 10 boundaries Tier-1 batch 2 (Kilwa, Ajuran, Mvskoke, Oirats, Crusader Tripoli, Kamarupa, Khotan, Karakhanid, Dutch Brazil, Tekrur) | v6.99.30 deployed, 30 curated/267 approximate | ✓ |
+| 3 | 2026-05-22 14:40 | A | 10 boundaries Tier-1 batch 3 (Lithuania GD, Choctaw, Daura, Mrauk-U, Gobir, Bono-Manso, Mandan, Hessen, Brandenburg, Marovo) | v6.99.31 deployed, 40 curated/257 approximate | ✓ |
 
 (Append new rows on each iteration. Format: `| N | ts | phase | action | result | deploy/skip |`)
 
