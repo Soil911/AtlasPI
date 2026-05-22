@@ -2,6 +2,35 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.71] - 2026-05-23 (Phase B S46 — +50 sources, Iberian + Eastern Europe)
+
+**Tema**: *Iberian crowns, Lithuanian-Polish union, Vietnamese dynasty*
+
+### S46 batch (10 entities)
+
+- **ID 72**: Crown of Aragon (1035-1716) — Bisson, Hillgarth, Belenguer, Abulafia, Constable
+- **ID 73**: Crown of Castile (1065-1715) — O'Callaghan, MacKay, Reilly, Edwards, Ruiz
+- **ID 63**: Kingdom of Poland (1025-1569) — Knoll, Halecki, Górecki, Reddaway, Hartleb
+- **ID 33**: Grand Duchy of Lithuania (1236-1569) — Rowell, Kiaupa, Norkus, Christiansen, Petrauskas
+- **ID 429**: Livonian Confederation (1228-1561) — Plakans, Murray, Selart, Christiansen, Bombi
+- **ID 878**: Đinh dynasty Vietnam (968-980) — Taylor (×2), Whitmore, Wolters, Kiernan
+- **ID 339**: Moghulistan (1347-1680) — Manz, Biran, Allsen, Soucek, Grousset
+- **ID 781**: Chickasaw confederation (1400+) — Atkinson, Gibson, Galloway, St. Jean, Ethridge
+- **ID 584**: Serbian Despotate (1402-1459) — Fine, Mihaljčić, Ćirković, Pavlowitch, Spremić
+- **ID 567**: Comune di Pisa (1000-1406) — Heywood, Abulafia, Herlihy, Cardini, Tangheroni
+
+### ETHICS notes embedded in SQL
+
+- Aragon: 1391 anti-Jewish pogroms, 1492 expulsion of Jews
+- Castile: Reconquista, Inquisition (1478), Morisco expulsion 1609-1614
+- Lithuania: last pagan European state, Christianized 1387
+- Livonian Confederation: Northern Crusades against pagan Balts
+- Chickasaw: Trail of Tears removal 1837 Mississippi → Indian Territory
+
+Total sources: 4569 → **4619**.
+
+---
+
 ## [v6.99.70] - 2026-05-23 (Phase B S45 — +51 sources, low-src targeting)
 
 **Tema**: *British Empire, Pawnee, Beothuk, Hammurabi-era Babylonia*
