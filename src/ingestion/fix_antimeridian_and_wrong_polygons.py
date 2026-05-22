@@ -143,6 +143,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     891,  # Kintamani — Bali highland pre-Warmadewa
     910,  # Calakmul (Uxte'tuun) — Maya S Yucatan/Campeche
     1007, # Zeila — Somaliland Red Sea port
+    # v6.99.37 iter 9 — Phase A tier-1 batch 9 (autonomous loop)
+    70,   # First Bulgarian Empire — Balkans (Pliska, Preslav)
+    641,  # Kaminaljuyú — Maya highland (Guatemala City)
+    799,  # Dʿmt — Eritrean/N Ethiopian highlands pre-Aksum
+    800,  # Lihyanite/Dedanite — NW Arabia (al-Ula)
+    811,  # Kassite Babylonia — Mesopotamia
+    911,  # Caracol (Oxwitzá) — Maya Belize Vaca Plateau
+    916,  # Chichen Itza — Postclassic Maya N Yucatan
+    918,  # Dos Pilas — Petexbatun Maya
+    921,  # Lamanai — Belize Maya long occupation
+    1023, # Garamantes — Fezzan Libya
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

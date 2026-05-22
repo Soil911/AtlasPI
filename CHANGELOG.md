@@ -2,6 +2,16 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.37] - 2026-05-22 (autonomous loop iter 9)
+
+**Tema**: *Phase A tier-1 batch 9 — 10 boundaries (Bulgaria I, Kassite, Maya cities, Garamantes, Dʿmt, Dedan)*
+
+100/287 (35%) boundaries curate. Milestone 100 raggiunto. Aree: Bulgaria I 361k,
+Kassite 315k, Garamantes 193k, Dʿmt 75k, Dedan 56k, Chichen Itza 25k, Oxwitzá 8k,
+Dos Pilas 5k, Lamanai 3k, Kaminaljuyú 3k.
+
+---
+
 ## [v6.99.36] - 2026-05-22 (autonomous loop iter 8)
 
 **Tema**: *Phase A tier-1 batch 8 — 10 boundaries (Liao, Assyria, Pagan, Funan, Sparta, Calakmul, etc.)*
