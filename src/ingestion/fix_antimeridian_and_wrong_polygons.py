@@ -198,6 +198,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     1001, # Wadan — Adrar Mauritania oasis
     1002, # Oualata — Mauritania trans-Saharan
     1006, # Sultanate of Shewa — central Ethiopia
+    # v6.99.42 iter 14 — Phase A tier-1 batch 14 (autonomous loop) — CROSSING 50%
+    230,  # USSR — Soviet Union polygon (replaces previous oversize circle)
+    309,  # Aboriginal Australian Nations — continent-wide
+    310,  # Kulin Nation — SE Australia
+    311,  # Yolŋu — Arnhem Land NE
+    313,  # Marshall Islands (Aelōn̄ in M̧ajeļ)
+    748,  # Pulotu — mythic isle Tonga-Fiji area
+    754,  # Sau o Futuna — Futuna+Alofi
+    963,  # Chiripa — pre-Tiwanaku Bolivia
+    1031, # Punt — Horn of Africa S Red Sea
+    1033, # Tunjur Sultanate — Darfur predecessor
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

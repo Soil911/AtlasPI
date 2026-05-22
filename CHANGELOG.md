@@ -2,6 +2,22 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.42] - 2026-05-22 (autonomous loop iter 14) — **50% MILESTONE**
+
+**Tema**: *Phase A tier-1 batch 14 — 10 boundaries (USSR, Australian Aboriginal nations, Punt, Tunjur, Marshalls, Wallis-Futuna, Pulotu, Chiripa)*
+
+**150/287 (52%) curate** — superato il 50% Phase A milestone. Areas:
+- USSR 38.5M km² (full Soviet polygon, no more shrunken circle)
+- Aboriginal Australian Nations 12.2M (continent-wide)
+- Marshall Islands 1.46M (replicates Ralik-Ratak)
+- Punt 387k (Horn of Africa)
+- Pulotu 263k (Tonga-Fiji)
+- Tunjur 200k (Darfur)
+- Yolŋu 153k, Kulin Nation 133k
+- Chiripa 4k, Sau o Futuna 1.2k
+
+---
+
 ## [v6.99.41] - 2026-05-22 (autonomous loop iter 13)
 
 **Tema**: *Phase A tier-1 batch 13 — 10 boundaries (Polotsk, Wiradjuri, Noongar, Shewa, Coclé, Quiriguá, Wadan, Oualata, Chamorro, Wallis)*
