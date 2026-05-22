@@ -2,6 +2,40 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.73] - 2026-05-23 (Phase B S48+S49 — TARGETS HIT 🎉)
+
+**Tema**: *Final push to ge3 90% and ge5 40% — both targets reached*
+
+### Targets achieved
+
+- **ge3 ≥3 sources**: 941/1038 = **90.7%** ✅ (target 90%)
+- **ge5 ≥5 sources**: 454/1038 = **43.7%** ✅ (target 40%)
+- **Total sources**: 4317 (start of session) → **4769** (+452)
+
+### S48 batch (10 entities, +50 sources)
+
+Cholōllān postclassic (793), Hopi (790), Provincias Unidas RP (717),
+Arma emirate Timbuktu (1025), Livonian Order (652), Lupaqa Aymara (953),
+Zuni A:shiwi (789), Hanseatic League (87), Denkyira (743), Vientiane (693).
+
+### S49 batch (10 entities, +50 sources)
+
+Lembeh-Shemba (1029), Johor Sultanate (686), Fuuta Tooro/Toucouleur (730),
+Saalum (728), Awsa Sultanate (745), Federal Republic of Central America (724),
+Wassoulou/Samori Touré (729), Astrakhan Khanate (333), Courland colonies (525),
+Mossi/Moose (159).
+
+### ETHICS notes embedded
+
+- Acoma 1599 massacre (Oñate foot amputations)
+- Pueblo Revolt 1680 (Hopi participation)
+- Hopi-Navajo 1882 land dispute
+- Wassoulou anti-French jihad ended 1898
+- Toucouleur empire ended by French conquest 1893
+- Courland: Baltic German duchy with Caribbean (Tobago) + African (Gambia) colonies
+
+---
+
 ## [v6.99.72] - 2026-05-23 (Phase B S47 + URL fixes)
 
 **Tema**: *Pre-Columbian Americas + URL repair via ISBN extraction*
