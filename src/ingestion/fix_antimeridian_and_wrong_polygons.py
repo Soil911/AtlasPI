@@ -363,6 +363,14 @@ MANUALLY_CURATED_IDS: set[int] = {
     934,  # Isthmus Zoque — Tehuantepec
     961,  # Izapa — Soconusco Olmec-Maya
     1008, # Berbera early — Somaliland port
+    # v6.99.57 iter 29 — Phase A FINAL batch (PHASE A COMPLETE)
+    747,  # Bazin/Bagirmi — Lake Chad
+    903,  # Pahang (tua) — Malay Peninsula E coast
+    967,  # Emberá-Wounaan (Darién)
+    980,  # Wangara — Soninke gold-trading
+    1032, # Daju Sultanate — pre-Tunjur Darfur
+    1037, # Premier Empire français — Napoleonic peak
+    1038, # Afsharid Empire — Nader Shah Iran
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

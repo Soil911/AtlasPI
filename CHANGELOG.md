@@ -2,6 +2,23 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.57] - 2026-05-22 (autonomous loop iter 29) — 🎉 **PHASE A COMPLETE**
+
+**297/297 boundaries curated. ZERO `approximate_generated` remaining in DB.**
+
+Final batch: Premier Empire français (Napoleonic 1.7M), Afsharid Empire 5.5M,
+Daju Sultanate 200k, Bagirmi 145k, Wangara 105k, Embera-Wounaan 52k, Pahang 49k.
+
+### Run summary 2026-05-22 14:00 → 17:30 (3h30m, 29 iter consecutive)
+
+- **+290 boundaries** drawn from scratch (20 → 297, +1485% improvement)
+- **29 sub-versions** deployed (v6.99.29 → v6.99.57)
+- **0 deploy fail / auto-revert** (29/29 healthchecks passed)
+- All 287 entities flagged Phase A target now have proper historical polygons
+- `MANUALLY_CURATED_IDS` set grew from 10 to 297 (guard preserves curation through restarts)
+
+---
+
 ## [v6.99.56] - 2026-05-22 (autonomous loop iter 28)
 
 290/287 ≈ 97% near-complete (some are now showing curated/total mismatched

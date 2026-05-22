@@ -22,7 +22,7 @@ At each iteration: (a) read this file first, (b) work, (c) update this file with
 ## 🎯 Phase tracker
 
 - [x] **Phase 0** — Setup (this file, chatgpt_review.py, gitignore, backup) — 2026-05-21 20:30
-- [ ] **Phase A** — Boundary cleanup: find all `approximate_generated` entities, draw manual polygons
+- [x] **Phase A** — Boundary cleanup: COMPLETE (297 manual polygons, 2026-05-22 17:30)
 - [ ] **Phase B** — Enrichment S35+ (target 90% ≥3 src, 40% ≥5 src, 5000+ sources)
 - [ ] **Phase C** — New entities (cities 110→250, events, routes)
 - [ ] **Phase D** — Analytics-driven gap closure (top 404s, top low-result queries)
