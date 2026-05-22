@@ -297,6 +297,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     864,  # Linyi/Lâm Ấp — pre-Champa central Vietnam
     977,  # Zazzau — Hausa Bakwai (Zaria)
     982,  # Ile-Ife — Yoruba sacred SW Nigeria
+    # v6.99.51 iter 23 — Phase A tier-1 batch 23 (autonomous loop)
+    222,  # Wôpanâak (Wampanoag) — Massachusetts
+    342,  # Ghurids — Afghan-Indian empire
+    465,  # Tuyuhun (alt transliteration of 296)
+    506,  # Sur (Tyre) — Phoenician
+    507,  # Sidon — Phoenician
+    596,  # Hyderabad State — Asaf Jahi Deccan
+    703,  # Rajahnate of Maynila
+    908,  # Yax Mutal (Tikal) — Classic Maya
+    999,  # Gao-Saney — Niger River Songhai precursor
+    1004, # Awdaghust — Trans-Saharan Mauritania
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

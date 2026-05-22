@@ -2,6 +2,13 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.51] - 2026-05-22 (autonomous loop iter 23)
+
+240/287 (84%). Ghurids 2.16M, Hyderabad 491k, Tuyuhun 447k, Wampanoag 35k,
+Awdaghust 18k, Gao-Saney 18k, Tikal 11k, Maynila 1.5k, Tyre/Sidon 0.4k.
+
+---
+
 ## [v6.99.50] - 2026-05-22 (autonomous loop iter 22) — **50th sub-version**
 
 230/287 (80%). Oceti Sakowin 785k, Hausa Bakwai 195k, Saba 162k, Sumer 119k,
