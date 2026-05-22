@@ -319,6 +319,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     677,  # Haida Gwaii — Queen Charlotte Islands BC
     975,  # Takedda — Saharan copper-trading oasis Niger
     1003, # Tichitt — Pre-Saharan urban Mauritania
+    # v6.99.53 iter 25 — Phase A tier-1 batch 25 (autonomous loop)
+    111,  # Maratha Empire — Deccan + N+W India
+    145,  # Zunghar (alt of 605)
+    290,  # Xianbei — Northern frontier steppe
+    347,  # Kushano-Sasanian — Bactria
+    491,  # Zagwe (alt of 854) — Ethiopia
+    604,  # Kazakh/Caspian-Volga khanate
+    668,  # Kediri — E Java
+    688,  # Sunda Kingdom — W Java
+    718,  # Kitu (Quitu) — N Ecuadorian highlands
+    981,  # Sosso — Soninke W Sudan
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

@@ -2,6 +2,14 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.53] - 2026-05-22 (autonomous loop iter 25)
+
+260/287 (91%) — Phase A near-complete. Maratha 2.9M, Zunghar 2.55M, Xianbei 2.18M,
+Kazakh khanate 1.4M, Kushano-Sasanian 543k, Sosso 189k, Zagwe 170k, Sunda 88k,
+Kediri 56k, Quitu 37k.
+
+---
+
 ## [v6.99.52] - 2026-05-22 (autonomous loop iter 24)
 
 250/287 (87%). Chagatai 3.23M, Zunghar 2.55M, Diaguita 451k, Guaraní Jesuit missions
