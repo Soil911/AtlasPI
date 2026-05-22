@@ -2,6 +2,53 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.64] - 2026-05-22 (Phase C COMPLETE — Cities 110→252)
+
+**Tema**: *Phase C cities expansion — 142 new historical cities*
+
+### Batch 1 (20): Mesopotamia/Bronze Age/Classical
+Eridu, Lagash, Mari, Ebla, Knossos, Mycenae, Sparta, Thebes Greek,
+Mohenjo-Daro, Harappa, Ujjain, Mathura, Pompeii, Mediolanum, Petra, Palmyra,
+Aleppo, Antioch, Meroe, Carthago Nova.
+
+### Batch 2 (20): Asia/Americas/Africa
+Sukhothai, Thăng Long, Lhasa, Xianyang, Khanbaliq, Borobudur, Tula, Cholōllān,
+Monte Albán, Chan Chan, Cahuachi, Lima, La Habana, Adulis, Napata, Marrakesh,
+Lalibela, Mogadishu, Ngazargamu, Ouagadougou.
+
+### Batch 3 (20): Europe/Russia/Korea/Japan/ME
+Lutetia, Camulodunum, Londinium, Ravenna, Lugdunum, Moscow, Vladimir, Tver,
+Gyeongju, P'yŏngyang, Hanseong, Osaka, Kamakura, Tabriz, Mashhad, Mecca,
+Medina, Copenhagen, Lübeck, Antwerp.
+
+### Batch 4 (20): India/SE Asia/Pre-Columbian/Colonial
+Hampi, Thanjavur, Kanchipuram, Jaipur, Murshidabad, Pegu, Phnom Penh,
+Manila, Hue, Great Zimbabwe, Mapungubwe, Ile-Ife, Kumasi, Abomey, New Amsterdam,
+Mexico City, Boston, Honolulu, Lapita village, Nan Madol.
+
+### Batch 5 (20): More Mesopotamia/Persia/N Africa/Central Asia/Russia
+Hattusa, Nineveh, Ur, Susa, Ecbatana, Cyrene, Leptis Magna, Volubilis, Merv,
+Otrar, Talas, Kazan, Astrakhan, Smolensk, Gondar, Harar, Yogyakarta, Banten,
+Sydney, Wellington.
+
+### Batch 6 (42): Final mix
+Aquileia, Trier, Mediolanum alt, Pisa, Siena, Verona, Bruges, Aachen, Cologne,
+Mainz, Prague, Krakow, Toledo, Lisbon, Seville, Kufa, Basra, Khiva, Yarkand,
+Indraprastha, Vidisha, Karachi, Suzhou, Yangzhou, Macao, Tlemcen, Algiers,
+Pskov, Suzdal, Yaroslavl, Cuicuilco, Cacaxtla, Ouidah, Walata, Khartoum,
+Buenos Aires, Rio de Janeiro, New Orleans, Charleston, Singapore, Batavia, Mumbai.
+
+### Geographic coverage post-Phase C
+
+- Europe: 50+ cities (Italian, French, German, Iberian, Russian, Greek...)
+- Asia: 70+ (Chinese, Indian, Japanese, Korean, SE Asian, Central Asian)
+- Middle East: 25+ (Persian, Arab, Anatolian, Mesopotamian)
+- Africa: 25+ (N African Arab, Sahel, Swahili, Sub-Saharan, Horn of Africa)
+- Americas: 25+ (pre-Columbian Mesoamerica/Andes, colonial Spanish/Portuguese/English/French)
+- Pacific/Oceania: 5+ (Sydney, Wellington, Honolulu, Lapita, Nan Madol)
+
+---
+
 ## [v6.99.63] - 2026-05-22 (Phase B S40 — major imperial states)
 
 S40 — +50 sources: Ottoman Empire, Qing Empire, Russian Empire, Đại Nam
