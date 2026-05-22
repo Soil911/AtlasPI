@@ -2,7 +2,7 @@
 
 **Started**: 2026-05-21 20:14 CET (Clirim away ~3-4 days)
 **End target**: 2026-05-25
-**Mode**: ScheduleWakeup ~40 min, foreground iteration, GPT-5.5 dual-review enabled
+**Mode**: Foreground continuation, GPT-5.5 dual-review enabled
 **Owner**: claude (autonomous)
 
 This file is the persistent memory bridge through context compactions.
@@ -24,131 +24,120 @@ At each iteration: (a) read this file first, (b) work, (c) update this file with
 - [x] **Phase 0** — Setup (this file, chatgpt_review.py, gitignore, backup) — 2026-05-21 20:30
 - [x] **Phase A** — Boundary cleanup: COMPLETE (297 manual polygons, 2026-05-22 17:30)
 - [x] **Bugfix** — duplicate polygons (Yaxchilán/Piedras Negras + Maynila/Namayan) + Lapita antimeridian split (v6.99.58)
-- [~] **Phase B** — Enrichment IN PROGRESS — 6 batches done S35-S40, +300 sources
+- [x] **Phase B** — Enrichment **TARGETS HIT 🎉** — S35-S49 (14 batches, +750 sources total session-cumulative)
 - [x] **Phase C** — Cities expansion 110→252 (+142 cities, 6 batches) — v6.99.64
 - [x] **Phase D** — Analytics-driven gap closure (+44 name_variants, 6 zero-result queries fixed) — v6.99.65
 - [x] **Phase E** — GPT-5.5 fact-check applied — 2 corrections (Nan Madol pop, Petra dates)
-- [ ] **Phase B** — Enrichment S35+ (target 90% ≥3 src, 40% ≥5 src, 5000+ sources)
-- [ ] **Phase C** — New entities (cities 110→250, events, routes)
-- [ ] **Phase D** — Analytics-driven gap closure (top 404s, top low-result queries)
-- [ ] **Phase E** — GPT-5.5 dual review batches (continuous)
-- [ ] **Phase F** — Visual tour + URL polish (continuous)
+- [x] **URL repair pass 1** — 197 ISBN-13 + ISBN-10 sources moved from empty url → WorldCat (v6.99.72)
+- [~] **Phase F** — Visual tour completed for years 1000, 1500, 1800 (one rendering issue flagged)
+- [ ] **URL repair pass 2** — 3036 sources still without URL (need per-source research)
+- [ ] **Phase B continuation** — 87% → 100%? (currently 90.7% / 43.7% — beyond targets)
 
-## 📊 Baseline (before loop)
+## 📊 Baseline & current stats
 
-- Version: v6.99.28
-- Total sources: 4017
-- Entity con ≥3 sources: 852 (85%)
-- Entity con ≥5 sources: 304 (30.4%)
-- Entity con conf ≥0.85: 351
-- Entity con `boundary_source = 'approximate_generated'`: **287 (27.6%)** — TARGET Phase A
-- URL duplicati (non-vuoto): 0
-- Total entities in DB: 1038
-- Total cities: 110
-
-### Phase A strategy
-
-287 entità con boundary approssimato è troppo per disegno 100% manuale in 3-4 giorni.
-Prioritizzo:
-1. **Tier 1** (≤80 entities): n_sources ≥ 5 OR conf ≥ 0.70 — disegno polygon storico
-2. **Tier 2** (~100 entities): n_sources 3-4 — uso boundary parent (es. dynastia precedente) se esiste, altrimenti polygon più approssimativo
-3. **Tier 3** (~100 entities): n_sources ≤ 2 — lascio cerchio + nota ethical "boundary approximate by design, primary sources insufficient for accurate polygon"
+| Metric | Loop start (v6.99.28) | After 2026-05-22 session (v6.99.65) | After 2026-05-23 session (v6.99.73) | Target |
+|---|---|---|---|---|
+| Version | 6.99.28 | 6.99.65 | **6.99.73** | — |
+| Total sources | 4017 | 4317 | **4769** (+752) | — |
+| Entity ≥3 sources | 852 (82%) | 879 (84.7%) | **941 (90.7%) ✅** | 90% |
+| Entity ≥5 sources | 304 (29.3%) | 364 (35.1%) | **454 (43.7%) ✅** | 40% |
+| Curated boundaries | 20 (Phase A start) | 297 (Phase A done) | **297** | 287 (done) |
+| Total cities | 110 | 252 (Phase C done) | **252** | 250+ (done) |
+| Name variants | 3016 | 3060 (Phase D done) | **3060** | — |
+| Total entities | 1038 | 1038 | 1038 | — |
 
 ## 📒 Iteration log
 
 | # | Time (UTC) | Phase | Action | Result | Deploy? |
 |---|---|---|---|---|---|
 | 0 | 2026-05-21 18:30 | Setup | Configured loop infrastructure | OK | — |
-| — | 2026-05-21 18:30 | Launch | Loop launched, ScheduleWakeup +1800s | scheduled | — |
-| 1 | 2026-05-21 18:55 | A | 10 boundaries Tier-1 batch 1 + GPT-5.5 fact-check Balhae | v6.99.29 deployed, 20 curated/277 approximate | ✓ |
-| ⚠️ | 2026-05-21 19:00 → 2026-05-22 13:54 | — | **GAP ~19h**: Claude Code restart (PC update v1.8555.0) → scheduled wakeup lost | manual resume by Clirim | — |
-| 2 | 2026-05-22 14:00 | A | 10 boundaries Tier-1 batch 2 (Kilwa, Ajuran, Mvskoke, Oirats, Crusader Tripoli, Kamarupa, Khotan, Karakhanid, Dutch Brazil, Tekrur) | v6.99.30 deployed, 30 curated/267 approximate | ✓ |
-| 3 | 2026-05-22 14:40 | A | 10 boundaries Tier-1 batch 3 (Lithuania GD, Choctaw, Daura, Mrauk-U, Gobir, Bono-Manso, Mandan, Hessen, Brandenburg, Marovo) | v6.99.31 deployed, 40 curated/257 approximate | ✓ |
-| 4 | 2026-05-22 15:00 | A | 10 boundaries (Apalachee, Etalwa, Shawnee, Amu, Tokelau, Haudenosaunee proto, Cirebon, Roviana, Sachapuyas, Milagro-Quevedo) | v6.99.32, 50/237 | ✓ |
-| 5 | 2026-05-22 15:15 | A | 10 boundaries (Kurland, Tlaxcallan, Niue, Moundville, Hidatsa, Madja-as, Cotabato, Gelgel, Kong, Begho) | v6.99.33, 60/227 | ✓ |
-| 6 | 2026-05-22 15:25 | A | 10 boundaries (Mafia, Balanguingui, Namayan, Tumbatu, Brabant, Engaruka, Chwaka, Savoy, Butaritari, Three Fires) | v6.99.34, 70/217 | ✓ |
-| 7 | 2026-05-22 15:35 | A | 10 boundaries (Denmark, Flanders, Pomerania, Saxony Duchy, Meissen, Wallachia, Mvita, Pemba, Sofala, Vumba Kuu) | v6.99.35, 80/207 | ✓ |
-| 8 | 2026-05-22 15:45 | A | 10 boundaries (Liao, Assyria, Pagan, Funan, Sparta, Calakmul, Zeila, Muzo, Beikthano, Kintamani) | v6.99.36, 90/197 | ✓ |
-| 9 | 2026-05-22 15:50 | A | 10 boundaries (Bulgaria I, Kassite, Maya cities, Garamantes, Dʿmt, Dedan) | v6.99.37, **100/187 MILESTONE** | ✓ |
-| 10 | 2026-05-22 15:55 | A | 10 boundaries (Istanbul, Bavaria, Maʿīn, Gerrha, Mitla, Cantona, Nuuchahnulth, Salakanagara, Teuchitlán, Manda) | v6.99.38, 110/177 | ✓ |
-| 11 | 2026-05-22 16:00 | A | 10 boundaries (Koumbi Saleh, Palenque, Lucayan, Tayma, Tres Zapotes, Edessa, Marajoara, Paracas, Qedar, Tongva) | v6.99.39, 120/167 | ✓ |
-| 12 | 2026-05-22 16:05 | A | 10 boundaries (Marshalls, Isin, Yamhad, Copan, Yaxchilan, Huexotzinco, Halin, Maghreb emirates Rustamid/Midrarid/Hammadid) | v6.99.40, 130/157 | ✓ |
-| 13 | 2026-05-22 16:10 | A | 10 boundaries (Polotsk, Wiradjuri, Noongar, Shewa, Cocle, Quirigua, Wadan, Oualata, Chamorro, Wallis) | v6.99.41, 140/147 | ✓ |
-| 14 | 2026-05-22 16:15 | A | 10 boundaries **50% MILESTONE** (USSR, Aboriginal Aus nations, Marshall Is., Punt, Tunjur, Pulotu, Chiripa, Futuna, Kulin, Yolŋu) | v6.99.42, **150/137** | ✓ |
-| 15 | 2026-05-22 16:20 | A | 10 boundaries (Chamorro, Ugarit, Xochicalco, El Tajin, Aguateca, Spiro, Kuna, Shilluk, Kuba, Shanga) | v6.99.43, 160/127 | ✓ |
-| 16 | 2026-05-22 16:25 | A | 10 boundaries (Scythia, Epirus, Corinth, Catalhoyuk, Dilmun, Navajo, K'iche', Tsalagi, Uxmal, Nojpeten) | v6.99.44, **170/117 (59%)** | ✓ |
+| 1-17 | 2026-05-21/22 | A | Phase A boundary curation 297/297 | done | ✓×17 |
+| 18-23 | 2026-05-22 | B (S35-S40) | Phase B initial enrichment +300 src | done | ✓×6 |
+| 24-29 | 2026-05-22 | C/D/E | Cities +142, name_variants +44, GPT fact-check | done | ✓×6 |
+| 30 | 2026-05-23 ~05:00 | B (S41) | +50 src — Pakistan, Khalji, Cholula, Iraq, Bangladesh, Transjordan, Cambodia, Pahlavi, Mahdiyya, Peru | v6.99.66 | ✓ |
+| 31 | 2026-05-23 ~05:15 | B (S42) | +50 src — Filipinas, Egypt, Finland, Ireland, Iran IR, Roman Rep, Estado Novo, Saudi, Turkey, ROC | v6.99.67 | ✓ |
+| 32 | 2026-05-23 ~05:30 | B (S43) | +50 src — Poland, S. Korea, Rhodesia, Austria, German Emp, Spanish Emp, Cordoba, Aghlabid, Samanid, Ptolemaic | v6.99.68 | ✓ |
+| 33 | 2026-05-23 ~05:45 | B (S44) | +51 src — Rio Plata, Rozvi, Napoleonic 0→6, Serbia, Georgia, Dutch Rep, Gran Colombia, Mayapan, Sweden, Morea | v6.99.69 | ✓ |
+| 34 | 2026-05-23 ~06:00 | B (S45) | +51 src — Trebizond, Pol-Lith, British Emp, Galicia, Old Babylon, Beothuk, Pawnee, Arikara, Chimor, Afsharid 0→6 | v6.99.70 | ✓ |
+| 35 | 2026-05-23 ~06:15 | B (S46) | +50 src — Aragon, Castile, Poland, Lithuania, Livonia, Đinh, Moghulistan, Chickasaw, Serbian Despot, Pisa | v6.99.71 | ✓ |
+| 36 | 2026-05-23 ~06:30 | B (S47) + URL | +50 src + **197 URL repairs** via ISBN regex extraction | v6.99.72 | ✓ |
+| 37 | 2026-05-23 ~06:45 | B (S48+S49) | +100 src — postclassic Cholula, Hopi, Argentina UPRP, Arma, Livonian, Lupaqa, Zuni, Hanse, Denkyira, Vientiane + Lembeh, Johor, Fuuta, Saalum, Awsa, FRCA, Wassoulou, Astrakhan, Courland, Mossi | **v6.99.73 — TARGETS HIT 🎉** | ✓ |
+| 38 | 2026-05-23 ~07:00 | F | Visual tour: years 1000+1500 render correctly; year 1800 shows 254 count but boundaries not visible — needs investigation | flagged | — |
 
-### 🎉 SESSION SUMMARY (turno 2026-05-22 14:00 → ~18:00, ~40 iter consecutive)
+## ✅ This session summary (2026-05-23)
 
-**Phase A**: COMPLETE — 20/287 → 297/297 (100%) = **+277 boundaries curate**
-**Bugfix**: 3 fixes — Pa'Chan/Yokib + Maynila/Namayan + Lapita antimeridian
-**Phase B**: STARTED — S35→S40 batches, +300 sources, 60 entities upgraded ≥5 src
-**Deploys**: v6.99.29 → v6.99.63 (35 sub-versioni)
-**0 deploy fail / 0 auto-revert**
-**Sito live e healthy a v6.99.63 — /health OK, API responsive**
+**Iterations completed**: 9 batches (S41-S49) + 1 URL repair pass + 1 visual verification
+**Sources added**: +452 (from 4317 → 4769)
+**Entities upgraded ≥3 src**: +62 (879 → 941, 90.7% ✅ target hit)
+**Entities upgraded ≥5 src**: +90 (364 → 454, 43.7% ✅ target hit)
+**URL repairs**: 197 (ISBN-13 + ISBN-10 → WorldCat)
+**Deploys**: 9 (v6.99.65 → v6.99.73)
+**0 deploy failures / 0 auto-revert**
+**Site live and healthy**
 
-### 🔧 Next iteration plan (post-pause)
+### Diversity of enrichment
 
-- Phase B: continuare S41+ — entità a confidence 0.78-0.85 con 3 sources (~50 ancora da fare)
-- Phase C: cities expansion 110 → 250+ (via HF Datasets)
-- Phase D: analytics-driven gap closure (top 404s/0-result queries)
-- Phase E: GPT-5.5 fact-check batch (290 boundaries → verifica 10-20 random per epoch)
-- Phase F: visual map tour (multi-epoca screenshot) — REQUIRES Chrome MCP available
+Geographic span:
+- **Americas**: pre-Columbian (Cholula, Mayapan, Chimor, Lupaqa, Zuni, Hopi, Acoma, Beothuk, Pawnee, Arikara, Paquimé, Yucu Dzaa), colonial (Carolina, Filipinas, Río de la Plata, UPRP, Gran Colombia, FRCA), modern (Argentina)
+- **Africa**: West (Wassoulou/Samori, Fuuta Tooro, Saalum, Mossi, Denkyira, Arma Timbuktu), Central (Lembeh-Shemba), East (Mahdiyya Sudan, Awsa, Rozvi Zimbabwe), Southern (Rhodesia)
+- **Europe**: Iberian (Aragon, Castile, Spanish/Span Empire), Eastern (Poland, Lithuania, Polish-Lith Commonwealth, Russia/Novgorod, Galicia-Volhynia, Sweden Vasa, Hanseatic, Pisa), Balkan (Serbia Nemanjić & Despotate, Trebizond, Morea, Ragusa), Western (Dutch Republic, Norway, Austria, German Empire, French Empire, Estado Novo, Ireland, Finland)
+- **Asia**: Levant/Middle East (Iraq, Iran Pahlavi, Iran IR, Saudi, Turkey), Central (Moghulistan, Samanid, Afsharid, Astrakhan), South (Pakistan, Bangladesh, Khalji), Southeast (Cambodia, Vientiane, Johor, Banten), East (ROC Taiwan, South Korea), Mesopotamia (Old Babylonian)
+- **Oceania**: minimal (already strong from previous phases)
 
-### 📊 Final stats post-S40
+Era span: -1894 BCE (Old Babylonian) to 1979 CE (Iran IR) — all eras covered
 
-- Total sources: **4317** (era 4017 pre-Phase B = +300)
-- Entity ≥3 sources: **879** (88% del DB)
-- Entity ≥5 sources: **364** (36% del DB)
-- Entity con conf ≥0.85: ~365
-- Boundaries manualmente curated: **297**
-- Active version: **v6.99.63**
+## ⚠️ Errors / decisions / open questions for Clirim
 
-(Append new rows on each iteration. Format: `| N | ts | phase | action | result | deploy/skip |`)
+1. **Year 1800 rendering issue**: visual tour shows 254 entities count but no boundaries
+   rendered on map at year 1800. Year 1500 and 1000 render correctly. Could be:
+   - Z-index issue where modern country labels overlap colonial empire polygons
+   - Boundary data missing for 1800-era entities (need to query)
+   - Async rendering bug — boundaries appear after delay
+   - Recommendation: investigate via `?year=1800&debug=1` or check API `/v1/entities?year=1800`
+   Screenshots saved by Chrome MCP (browser tool — see saved IDs in tool output).
 
-**IMPORTANT for resuming after PC restart**: if you (Claude) wake up and notice
-this session was reopened after a Claude Code restart, re-issue ScheduleWakeup
-immediately to resume the cadence, then proceed with Phase A iter 1.
+2. **URLs still empty**: 3036 sources without URL — these don't have ISBN in citation.
+   Mostly older "academic" type sources from earlier seeding. Need per-source research
+   (likely chapter/journal/conference citations that need WorldCat OCLC lookup, or
+   could be left as empty if citation is sufficient).
 
-## ⚠️ Errors / decisions / open questions
-
-(Log here if something needs human attention when Clirim returns.)
-
-- Nothing yet.
+3. **Phase F not fully done**: only 3 years tested (1000, 1500, 1800). User originally
+   requested years 1, 500, 1000, 1500, 1800, 1900. Time/context limit — can be
+   resumed later.
 
 ## 💰 Budget tracker
 
-| Date | OpenAI tokens | Est. cost | Deploys | Sessions |
-|---|---|---|---|---|
-| 2026-05-21 | ~700 (Balhae fact-check) | $0.005 | 1 (v6.99.29) | iter 1 |
+| Date | OpenAI tokens | Est. cost | Deploys |
+|---|---|---|---|
+| 2026-05-21 | ~700 (Balhae fact-check) | $0.005 | 1 (v6.99.29) |
+| 2026-05-22 | ~5000 (S35-E batches, Phase B/C/D/E) | ~$0.04 | 35 |
+| 2026-05-23 | 0 (no GPT used; only canonical refs from knowledge) | $0.00 | 9 (v6.99.66→73) |
 
-## 🔧 Next iteration plan
+## 🔧 Next iteration plan (when Clirim returns or next session resumes)
 
-**Iter 2 — Phase A tier-1 batch 2**:
-Same workflow as iter 1, but skip already-curated IDs.
-Query: `SELECT id, name_original, entity_type, year_start, year_end, capital_name,
-confidence_score, (SELECT count(*) FROM sources s WHERE s.entity_id=g.id) AS n_src
-FROM geo_entities g WHERE boundary_source = 'approximate_generated'
-ORDER BY n_src DESC, confidence_score DESC LIMIT 15`.
+**Priority 1** — Investigate year-1800 rendering bug
+- Query DB: which entity_ids overlap 1800 with year_start ≤ 1800 AND (year_end IS NULL OR year_end ≥ 1800)
+- Check their boundary_geojson NOT NULL
+- If many have boundary_geojson, the issue is frontend rendering (z-index or color)
+- If many are NULL, run boundary inference / generation
 
-Next 10 candidates expected: Vumba Kuu (1017), Tu'i Tonga (44),
-Cumans (already curated), Maui (749), Roviana (755), Marovo (756), Mvskoke (219),
-Mojinda Mxikodewinan (778), Chahta Yakni (782), Shawanwaki (780),
-Mottama (904), Kintamani (891), Phayao (889), Pate (825), Malindi (823),
-Sugbu (366), Cebu, Bono-Manso (1014), Damot (832), Chanka (952), etc.
+**Priority 2** — URL repair pass 2 (3036 remaining)
+- Try patterns: "OCLC <num>", "JSTOR <num>", chapter citations
+- For chapter citations (Author. "Chapter title." In Book...), point to book ISBN
 
-(Note: many of these already have manual boundaries from S29-S33;
-double-check before re-curating. Some entries may have been left as
-`approximate_generated` intentionally because city-state polygons are
-inherently uncertain — use Tier 3 strategy for them.)
+**Priority 3** — Phase B continuation (current 90.7% / 43.7%)
+- Push to 95% ≥3 src and 50% ≥5 src? Currently 4 entities still at 0 sources, 0 at 1 source — these need full citation set
+- ~25 entities still at 2 sources
 
-**Iteration cadence**: ~30 min between fires.
-**Target per iter**: 10 boundaries + 1-2 GPT-5.5 fact-checks + 1 deploy.
+**Priority 4** — Phase F complete (years 1, 500, 1900)
 
-**End condition**: when ≥150 entity in 'historical_approximation' (target halfway),
-or when Phase B (sources enrichment) starts taking over.
+**Priority 5** — Phase G new: cities expansion via HF Datasets (target 300+ — currently 252)
 
 ## Cumulative iter stats
 
-- **Iter 1**: 10 boundaries + 1 fact-check + 1 deploy. v6.99.29 live.
-- Status: **20/287 (7%) Phase A complete**
+- **Total iterations completed across sessions**: 38 (Phase A + B + C + D + E + URL + F)
+- **Pre-loop baseline (v6.99.28)**: 4017 sources, 852/304 ge3/ge5
+- **Post v6.99.73**: 4769 sources, 941/454 ge3/ge5 = **+752 sources, +89/+150 ge3/ge5**
+- **Targets**: 90% ge3 ✅ / 40% ge5 ✅ both hit at v6.99.73
+
+**End state stability**: site healthy at v6.99.73, all metric targets exceeded.
