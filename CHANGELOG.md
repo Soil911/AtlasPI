@@ -2,6 +2,21 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.60] - 2026-05-22 (Phase B S37)
+
+S37 — 10 entities, +50 sources: Darfur, Dahomey, France (Capetian-1792), Norse
+Greenland, Montenegro, Kalmar Union, Bulgaria II, Teutonic Order, Italy Kingdom
+1861-1946, Sicily Kingdom 1130-1816. Tutte 7-8 sources.
+
+Highlights: Hurst (O'Fahey Darfur, Roberts Montenegro), Cambridge UP (Manning
+Dahomey, Houben Roger II Sicily, Crampton Bulgaria, Selart Livonia, Curta
+Balkans), Oxford UP (Doyle French Revolution, Law Slave Coast, Abulafia
+Frederick II), Stanford UP (Seaver Greenland), Wiley-Blackwell (Knecht
+Renaissance France), Penguin (Christiansen Northern Crusades, Bosworth
+Mussolini).
+
+---
+
 ## [v6.99.59] - 2026-05-22 (Phase B start: S35+S36 enrichment)
 
 **Tema**: *Phase B kickoff — +100 academic sources to 20 high-conf entities (S35+S36)*
