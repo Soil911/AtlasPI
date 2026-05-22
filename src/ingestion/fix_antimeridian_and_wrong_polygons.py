@@ -99,6 +99,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     826,  # Amu (Lamu archipelago) — Swahili Kenya coast
     941,  # Haudenosaunee proto-confederacy — Upstate NY
     968,  # Milagro-Quevedo — coastal Ecuador Guayas
+    # v6.99.33 iter 5 — Phase A tier-1 batch 5 (autonomous loop)
+    574,  # Kurland und Semgallen — Latvia W (Polish-Lithuanian fief)
+    643,  # Tlaxcallan — Aztec-resistant city-republic central Mexico
+    751,  # Niue (Patuiki) — Pacific island
+    775,  # Moundville — Black Warrior Alabama Mississippian
+    785,  # Hiraacá (Hidatsa) — Plains Knife River N Dakota
+    884,  # Madja-as — Panay Visayan confederation
+    898,  # Cotabato (Buayan) — Mindanao Pulangi basin
+    906,  # Gelgel pre-sultanate Bali — Majapahit successor
+    1013, # Kong — Dyula city-state N Côte d'Ivoire
+    1015, # Bighu (Begho) — Dyula trading city Brong-Ahafo Ghana
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

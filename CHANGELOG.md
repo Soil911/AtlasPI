@@ -2,6 +2,27 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.33] - 2026-05-22 (autonomous loop iter 5)
+
+**Tema**: *Phase A tier-1 batch 5 — 10 boundaries*
+
+| id   | Entity                  | Area km² |
+|------|-------------------------|----------|
+| 574  | Kurland und Semgallen   | 34,619   |
+| 643  | Tlaxcallan              | 11,227   |
+| 751  | Niue (Patuiki)          | 932      |
+| 775  | Moundville              | 21,433   |
+| 785  | Hiraacá (Hidatsa)       | 44,768   |
+| 884  | Madja-as                | 27,285   |
+| 898  | Cotabato (Buayan)       | 24,698   |
+| 906  | Gelgel pre-sultanate    | 11,630   |
+| 1013 | Kong                    | 19,366   |
+| 1015 | Bighu (Begho)           | 3,748    |
+
+Totale 60/287 (21%) boundaries curate.
+
+---
+
 ## [v6.99.32] - 2026-05-22 (autonomous loop iter 4)
 
 **Tema**: *Phase A tier-1 batch 4 — 10 boundaries (foreground continuous mode)*
