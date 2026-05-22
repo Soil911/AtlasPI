@@ -66,6 +66,11 @@ Prioritizzo:
 | 8 | 2026-05-22 15:45 | A | 10 boundaries (Liao, Assyria, Pagan, Funan, Sparta, Calakmul, Zeila, Muzo, Beikthano, Kintamani) | v6.99.36, 90/197 | ✓ |
 | 9 | 2026-05-22 15:50 | A | 10 boundaries (Bulgaria I, Kassite, Maya cities, Garamantes, Dʿmt, Dedan) | v6.99.37, **100/187 MILESTONE** | ✓ |
 | 10 | 2026-05-22 15:55 | A | 10 boundaries (Istanbul, Bavaria, Maʿīn, Gerrha, Mitla, Cantona, Nuuchahnulth, Salakanagara, Teuchitlán, Manda) | v6.99.38, 110/177 | ✓ |
+| 11 | 2026-05-22 16:00 | A | 10 boundaries (Koumbi Saleh, Palenque, Lucayan, Tayma, Tres Zapotes, Edessa, Marajoara, Paracas, Qedar, Tongva) | v6.99.39, 120/167 | ✓ |
+| 12 | 2026-05-22 16:05 | A | 10 boundaries (Marshalls, Isin, Yamhad, Copan, Yaxchilan, Huexotzinco, Halin, Maghreb emirates Rustamid/Midrarid/Hammadid) | v6.99.40, 130/157 | ✓ |
+| 13 | 2026-05-22 16:10 | A | 10 boundaries (Polotsk, Wiradjuri, Noongar, Shewa, Cocle, Quirigua, Wadan, Oualata, Chamorro, Wallis) | v6.99.41, 140/147 | ✓ |
+| 14 | 2026-05-22 16:15 | A | 10 boundaries **50% MILESTONE** (USSR, Aboriginal Aus nations, Marshall Is., Punt, Tunjur, Pulotu, Chiripa, Futuna, Kulin, Yolŋu) | v6.99.42, **150/137** | ✓ |
+| 15 | 2026-05-22 16:20 | A | 10 boundaries (Chamorro, Ugarit, Xochicalco, El Tajin, Aguateca, Spiro, Kuna, Shilluk, Kuba, Shanga) | v6.99.43, 160/127 | ✓ |
 
 (Append new rows on each iteration. Format: `| N | ts | phase | action | result | deploy/skip |`)
 
