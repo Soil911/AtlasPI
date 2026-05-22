@@ -2,6 +2,15 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.43] - 2026-05-22 (autonomous loop iter 15)
+
+**Tema**: *Phase A tier-1 batch 15 — 10 boundaries (Chamorro, Ugarit, Mesoamerican cities, Kuba, Shilluk, Spiro, Kuna, Shanga)*
+
+160/287 (56%) curate. Chamorro 177k, Kuba 104k, Shilluk 59k, Kuna 26k, Spiro 8k,
+Ugarit 5k, Aguateca 2k, Xochicalco 1k, El Tajín 1.4k, Shanga 1.4k.
+
+---
+
 ## [v6.99.42] - 2026-05-22 (autonomous loop iter 14) — **50% MILESTONE**
 
 **Tema**: *Phase A tier-1 batch 14 — 10 boundaries (USSR, Australian Aboriginal nations, Punt, Tunjur, Marshalls, Wallis-Futuna, Pulotu, Chiripa)*

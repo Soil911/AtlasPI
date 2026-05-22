@@ -209,6 +209,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     963,  # Chiripa — pre-Tiwanaku Bolivia
     1031, # Punt — Horn of Africa S Red Sea
     1033, # Tunjur Sultanate — Darfur predecessor
+    # v6.99.43 iter 15 — Phase A tier-1 batch 15 (autonomous loop)
+    306,  # Chamorro / Taotao Tano' — Mariana Islands
+    498,  # Ugarit — Bronze Age Levant (Ras Shamra)
+    919,  # Aguateca — Petexbatun Maya
+    925,  # Xochicalco — Epiclassic Mexico
+    927,  # El Tajín — Classic Veracruz
+    940,  # Spiro — Caddoan Mississippian
+    964,  # Sapzurro/Kuna (Dulenega) — Darién Panama/Colombia
+    993,  # Shilluk Reth — White Nile Sudan
+    1016, # Kuba pre-Shyaam — DR Congo Kasai
+    1019, # Shanga — Lamu Pate Swahili
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)
