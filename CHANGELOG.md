@@ -2,6 +2,41 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.72] - 2026-05-23 (Phase B S47 + URL fixes)
+
+**Tema**: *Pre-Columbian Americas + URL repair via ISBN extraction*
+
+### S47 batch (10 entities, +50 academic sources)
+
+- **ID 77**: Novgorod Republic (1136-1478) — Birnbaum, Martin, Halperin, Granberg, Yanin
+- **ID 950**: Chincha kingdom (1000-1532) — Sandweiss, Marcus, Rostworowski, Lumbreras, Stanish
+- **ID 930**: Culhuacan (600-1200) — Smith, Carrasco, Davies, Aguilar-Moreno, Sanders
+- **ID 69**: Serbian early kingdom (1217-) — Fine, Ćirković, Curta, Stephenson, Pavlowitch
+- **ID 788**: Acoma Pueblo/Haak'u (1150+) — Minge, Knaut, Sando, Preucel, Roberts
+- **ID 938**: Paquimé/Casas Grandes (1200-1450) — Di Peso, Whalen, Schaafsma, VanPool
+- **ID 936**: Yucu Dzaa/Tututepec (1080-1522) — Spores, Joyce, Pohl, Levine, Terraciano
+- **ID 713**: Province of Carolina (1663-1729) — Wood, Edgar, Powell, Gallay, Roper
+- **ID 654**: Kingdom of Norway (1217+) — Helle, Bagge, Krag, Lunden, Larsen
+- **ID 1011**: Essouk-Tadmakka (700-1500) — Nixon, Insoll, Mauny, Levtzion
+
+### URL repair via regex extraction
+
+Two passes:
+- **Pass 1**: 162 sources with `ISBN 97x-...` in citation → `worldcat.org/isbn/<13-digit>`
+- **Pass 2**: 35 sources with legacy ISBN-10 → `worldcat.org/isbn/<10-digit>`
+
+Total URL repairs: **197 sources** moved from empty url to valid HTTPS WorldCat link.
+Still empty (no ISBN/DOI in citation): 3036 — needs per-source research.
+
+### ETHICS notes embedded in SQL
+
+- Acoma: 1599 massacre by Juan de Oñate, foot amputations
+- Carolina: rice-plantation slave economy, Yamasee War 1715
+
+Total sources: 4619 → **4669**.
+
+---
+
 ## [v6.99.71] - 2026-05-23 (Phase B S46 — +50 sources, Iberian + Eastern Europe)
 
 **Tema**: *Iberian crowns, Lithuanian-Polish union, Vietnamese dynasty*
