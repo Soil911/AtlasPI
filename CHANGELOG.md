@@ -2,6 +2,21 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.62] - 2026-05-22 (Phase B S39)
+
+S39 — +50 sources: Maximilian's Mexican Empire, French Mandate Syria/Lebanon,
+Gorkha Nepal, Lê dynasty Vietnam, Trần dynasty Vietnam, Konbaung Burma, GDR,
+Rwanda Nyiginya, Tughlaq Delhi, Tokugawa Shogunate.
+
+Highlights: Princeton UP (Khoury Syria, Maier Dissolution GDR, Mamdani Rwanda),
+Cambridge UP (Whelpton Nepal, Taylor Vietnamese, Jackson Delhi Sultanate,
+Hall + Jansen Cambridge History of Japan, Lieberman Burma, Myint-U Modern Burma),
+Yale UP (Fulbrook GDR, Whitmore Vietnam Hồ Quý Ly), Wisconsin UP (Vansina
+Rwanda), Hawaii (Vaporis Edo, Kelley Sino-Vietnamese), UC Press (Totman Edo,
+Howell Identity Japan), Penguin (Eaton Persianate India).
+
+---
+
 ## [v6.99.61] - 2026-05-22 (Phase B S38)
 
 S38 — 10 entities, +50 sources: Vínland, Latin Empire (Imperium Romaniae),
