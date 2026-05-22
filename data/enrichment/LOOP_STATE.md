@@ -59,6 +59,13 @@ Prioritizzo:
 | ⚠️ | 2026-05-21 19:00 → 2026-05-22 13:54 | — | **GAP ~19h**: Claude Code restart (PC update v1.8555.0) → scheduled wakeup lost | manual resume by Clirim | — |
 | 2 | 2026-05-22 14:00 | A | 10 boundaries Tier-1 batch 2 (Kilwa, Ajuran, Mvskoke, Oirats, Crusader Tripoli, Kamarupa, Khotan, Karakhanid, Dutch Brazil, Tekrur) | v6.99.30 deployed, 30 curated/267 approximate | ✓ |
 | 3 | 2026-05-22 14:40 | A | 10 boundaries Tier-1 batch 3 (Lithuania GD, Choctaw, Daura, Mrauk-U, Gobir, Bono-Manso, Mandan, Hessen, Brandenburg, Marovo) | v6.99.31 deployed, 40 curated/257 approximate | ✓ |
+| 4 | 2026-05-22 15:00 | A | 10 boundaries (Apalachee, Etalwa, Shawnee, Amu, Tokelau, Haudenosaunee proto, Cirebon, Roviana, Sachapuyas, Milagro-Quevedo) | v6.99.32, 50/237 | ✓ |
+| 5 | 2026-05-22 15:15 | A | 10 boundaries (Kurland, Tlaxcallan, Niue, Moundville, Hidatsa, Madja-as, Cotabato, Gelgel, Kong, Begho) | v6.99.33, 60/227 | ✓ |
+| 6 | 2026-05-22 15:25 | A | 10 boundaries (Mafia, Balanguingui, Namayan, Tumbatu, Brabant, Engaruka, Chwaka, Savoy, Butaritari, Three Fires) | v6.99.34, 70/217 | ✓ |
+| 7 | 2026-05-22 15:35 | A | 10 boundaries (Denmark, Flanders, Pomerania, Saxony Duchy, Meissen, Wallachia, Mvita, Pemba, Sofala, Vumba Kuu) | v6.99.35, 80/207 | ✓ |
+| 8 | 2026-05-22 15:45 | A | 10 boundaries (Liao, Assyria, Pagan, Funan, Sparta, Calakmul, Zeila, Muzo, Beikthano, Kintamani) | v6.99.36, 90/197 | ✓ |
+| 9 | 2026-05-22 15:50 | A | 10 boundaries (Bulgaria I, Kassite, Maya cities, Garamantes, Dʿmt, Dedan) | v6.99.37, **100/187 MILESTONE** | ✓ |
+| 10 | 2026-05-22 15:55 | A | 10 boundaries (Istanbul, Bavaria, Maʿīn, Gerrha, Mitla, Cantona, Nuuchahnulth, Salakanagara, Teuchitlán, Manda) | v6.99.38, 110/177 | ✓ |
 
 (Append new rows on each iteration. Format: `| N | ts | phase | action | result | deploy/skip |`)
 
