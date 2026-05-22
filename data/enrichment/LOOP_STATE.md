@@ -25,6 +25,9 @@ At each iteration: (a) read this file first, (b) work, (c) update this file with
 - [x] **Phase A** — Boundary cleanup: COMPLETE (297 manual polygons, 2026-05-22 17:30)
 - [x] **Bugfix** — duplicate polygons (Yaxchilán/Piedras Negras + Maynila/Namayan) + Lapita antimeridian split (v6.99.58)
 - [~] **Phase B** — Enrichment IN PROGRESS — 6 batches done S35-S40, +300 sources
+- [x] **Phase C** — Cities expansion 110→252 (+142 cities, 6 batches) — v6.99.64
+- [x] **Phase D** — Analytics-driven gap closure (+44 name_variants, 6 zero-result queries fixed) — v6.99.65
+- [x] **Phase E** — GPT-5.5 fact-check applied — 2 corrections (Nan Madol pop, Petra dates)
 - [ ] **Phase B** — Enrichment S35+ (target 90% ≥3 src, 40% ≥5 src, 5000+ sources)
 - [ ] **Phase C** — New entities (cities 110→250, events, routes)
 - [ ] **Phase D** — Analytics-driven gap closure (top 404s, top low-result queries)
