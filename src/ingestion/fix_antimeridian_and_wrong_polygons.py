@@ -154,6 +154,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     918,  # Dos Pilas — Petexbatun Maya
     921,  # Lamanai — Belize Maya long occupation
     1023, # Garamantes — Fezzan Libya
+    # v6.99.38 iter 10 — Phase A tier-1 batch 10 (autonomous loop)
+    3,    # Istanbul (Byzantium/Constantinople) — city
+    570,  # Bavaria Duchy (Herzogtum Baiern) — Regensburg
+    642,  # Cantona — Central Mexico fortified city
+    676,  # Nuuchahnulth — Vancouver Island W coast
+    798,  # Maʿīn (Minaean) — N Yemen Qarnāwu
+    802,  # Gerrha — E Arabia trading city
+    907,  # Salakanagara — W Java Sundanese
+    935,  # Mitla (Lyobaa) — Zapotec Oaxaca
+    937,  # Teuchitlán — Jalisco/Nayarit guachimontones
+    1018, # Manda — Lamu archipelago Swahili
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

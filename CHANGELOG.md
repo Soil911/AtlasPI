@@ -2,6 +2,15 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.38] - 2026-05-22 (autonomous loop iter 10)
+
+**Tema**: *Phase A tier-1 batch 10 — 10 boundaries (Istanbul, Bavaria, Maʿīn, Gerrha, Mitla, Cantona, Nuuchahnulth, Salakanagara, Teuchitlán, Manda)*
+
+110/287 (38%) boundaries curate. Bavaria 111k, Nuuchahnulth 52k, Gerrha 48k, Teuchitlán
+42k, Maʿīn 40k, Salakanagara 17k, Cantona 3.5k, Istanbul 3k, Manda 1.4k, Mitla 0.9k.
+
+---
+
 ## [v6.99.37] - 2026-05-22 (autonomous loop iter 9)
 
 **Tema**: *Phase A tier-1 batch 9 — 10 boundaries (Bulgaria I, Kassite, Maya cities, Garamantes, Dʿmt, Dedan)*
