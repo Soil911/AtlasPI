@@ -2,6 +2,41 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.69] - 2026-05-23 (Phase B S44 — +51 sources, low-src targeting)
+
+**Tema**: *Boosting ge3 metric — entities with 0-2 sources*
+
+### Strategy shift
+
+Previous batches enriched entities already at 3 sources → 8.
+S44 onwards targets **n_src ≤ 2** to maximize ge3 (≥3 sources) AND
+ge5 (≥5 sources) metrics simultaneously.
+
+### S44 batch (10 entities, +51 academic sources)
+
+Entities upgraded from 0-2 → 5-7 sources:
+
+- **ID 710**: Virreinato del Río de la Plata (1776-1814) — Lynch, Brown, Adelman, Socolow, Lewis
+- **ID 155**: Rozvi Empire/Zimbabwe (1684-1834) — Beach, Mudenge, Pikirayi, Bhila, Mlambo
+- **ID 1037**: Premier Empire français (1804-1815) — Lyons, Englund, Roberts, Esdaile, Broers, Bell **(was 0 sources!)**
+- **ID 435**: Serbian Empire (1346-1371) — Fine, Soulis, Ćirković, Bataković, Curta
+- **ID 430**: Kingdom of Georgia (1008-1490) — Suny, Rapp, Eastmond, Lang, Mikaberidze
+- **ID 88**: Dutch Republic (1581-1795) — Israel, Prak, Price, Boxer, de Vries
+- **ID 38**: Gran Colombia (1819-1831) — Bushnell, Lynch, Bushnell, Brown, Helg
+- **ID 917**: Mayapan (1220-1441) — Masson, Pollock, Roys, Restall, Hare LiDAR
+- **ID 58**: Konungariket Sverige (1523-) — Roberts, Scott, Kirby, Lockhart, Nordstrom
+- **ID 436**: Despotate of Morea (1349-1460) — Zakythinos, Runciman, Nicol, Talbot, Necipoğlu
+
+### ETHICS notes embedded in SQL
+
+- Dutch Republic: golden age + VOC slavery + Cape colony
+- Gran Colombia: Bolivarian federation, dissolution
+- Premier Empire: military conquests, Continental System, abolition of feudalism
+
+Total sources: 4467 → **4518**.
+
+---
+
 ## [v6.99.68] - 2026-05-23 (Phase B S43 — +50 sources)
 
 **Tema**: *Empires, caliphates and 20th-century states*
