@@ -308,6 +308,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     908,  # Yax Mutal (Tikal) — Classic Maya
     999,  # Gao-Saney — Niger River Songhai precursor
     1004, # Awdaghust — Trans-Saharan Mauritania
+    # v6.99.52 iter 24 — Phase A tier-1 batch 24 (autonomous loop)
+    142,  # Sinhala Kingdom (Anuradhapura tradition)
+    227,  # Misiones Guaraníes — Jesuit
+    539,  # Diaguita — NW Argentina + N Chile
+    558,  # Kingdom of Rwanda
+    605,  # Zunghar Khanate — W Mongolia + Dzungaria
+    608,  # Chagatai Khanate — Central Asia post-Mongol
+    670,  # Tarumanagara — W Java early kingdom
+    677,  # Haida Gwaii — Queen Charlotte Islands BC
+    975,  # Takedda — Saharan copper-trading oasis Niger
+    1003, # Tichitt — Pre-Saharan urban Mauritania
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

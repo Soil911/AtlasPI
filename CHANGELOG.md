@@ -2,6 +2,13 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.52] - 2026-05-22 (autonomous loop iter 24)
+
+250/287 (87%). Chagatai 3.23M, Zunghar 2.55M, Diaguita 451k, Guaraní Jesuit missions
+173k, Sinhala 108k, Takedda 59k, Haida Gwaii 53k, Rwanda 45k, Tichitt 44k, Tarumanagara 26k.
+
+---
+
 ## [v6.99.51] - 2026-05-22 (autonomous loop iter 23)
 
 240/287 (84%). Ghurids 2.16M, Hyderabad 491k, Tuyuhun 447k, Wampanoag 35k,
