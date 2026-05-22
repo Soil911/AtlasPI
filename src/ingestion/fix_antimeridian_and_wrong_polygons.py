@@ -275,6 +275,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     865,  # Kahuripan — East Java (Airlangga)
     869,  # Śrī Kṣetra — Pyu city Upper Burma
     991,  # Butua (Torwa) — SW Zimbabwe Khami
+    # v6.99.49 iter 21 — Phase A tier-1 batch 21 (autonomous loop)
+    196,  # Ñuu Dzahui (Mixtec) — Oaxaca highlands
+    197,  # Muyska — Cundinamarca-Boyacá Colombia
+    452,  # Taiping Heavenly Kingdom — S-central China
+    566,  # Duchy of Brittany — Brittany peninsula
+    590,  # Eastern Ganga — Odisha + N coastal AP
+    675,  # Niitsitapi (Blackfoot) — N Plains
+    682,  # Chinook Illahee — Lower Columbia
+    726,  # Muscogee (Creek aggregate) — SE US
+    854,  # Zagwe — Ethiopia (Lalibela)
+    966,  # Tupinambá — Brazilian Atlantic coast
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

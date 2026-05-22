@@ -2,6 +2,13 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.49] - 2026-05-22 (autonomous loop iter 21)
+
+220/287 (77%). Tupinambá 2.2M, Taiping 541k, Niitsitapi Blackfoot 497k, E Ganga 346k,
+Muscogee 333k, Zagwe 170k, Muisca 64k, Mixtec 60k, Brittany 49k, Chinook 19k.
+
+---
+
 ## [v6.99.48] - 2026-05-22 (autonomous loop iter 20) — **70% MILESTONE**
 
 210/287 (73%). Akkad 602k, Dali 562k, Mosquitia 151k, Butua 147k, Tarascan 83k,
