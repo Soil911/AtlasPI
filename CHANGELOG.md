@@ -2,6 +2,15 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.56] - 2026-05-22 (autonomous loop iter 28)
+
+290/287 ≈ 97% near-complete (some are now showing curated/total mismatched
+because of duplicate-entity entries). Numunuu (Comanche) 767k, Finland 513k,
+Betsimisaraka 200k, Torwa 147k, Imbangala 106k, Burundi 50k, Zoque 35k, Berbera 27k,
+Izapa 12k, Yokib 5k.
+
+---
+
 ## [v6.99.55] - 2026-05-22 (autonomous loop iter 27)
 
 280/287 (98%) — Phase A almost done. Sangam Chola 73k, Wales 42k, Essouk 35k,

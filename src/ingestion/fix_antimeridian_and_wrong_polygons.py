@@ -352,6 +352,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     965,  # Quimbaya — Middle Cauca Colombia
     1011, # Essouk-Tadmakka — Mali Saharan
     1040, # Sangam-era Chola — S India Tamil
+    # v6.99.56 iter 28 — Phase A tier-1 batch 28 (autonomous loop)
+    427,  # Grand Duchy of Finland — autonomous Russian Empire
+    725,  # Numunuu (Comanche) — overlap with 216
+    732,  # Imbangala — Angola Kasanje warriors
+    735,  # Burundi Kingdom
+    830,  # Torwa (alt of 991 Butua) — Khami
+    846,  # Betsimisaraka — Madagascar E coast
+    914,  # Yokib (Piedras Negras) — Classic Maya
+    934,  # Isthmus Zoque — Tehuantepec
+    961,  # Izapa — Soconusco Olmec-Maya
+    1008, # Berbera early — Somaliland port
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)
