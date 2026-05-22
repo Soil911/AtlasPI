@@ -2,6 +2,36 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.70] - 2026-05-23 (Phase B S45 — +51 sources, low-src targeting)
+
+**Tema**: *British Empire, Pawnee, Beothuk, Hammurabi-era Babylonia*
+
+### S45 batch (10 entities, +51 academic sources)
+
+- **ID 438**: Empire of Trebizond (1204-1461) — Bryer, Eastmond, Karpov, Miller, Shukurov
+- **ID 62**: Polish-Lithuanian Commonwealth (1569-1795) — Stone, Lukowski, Frost, Davies, Butterwick
+- **ID 29**: British Empire (1583-1997) — Darwin, Marshall (OHBE), Cain, Hyam, Tharoor
+- **ID 440**: Galicia-Volhynia (1199-1349) — Magocsi, Subtelny, Halperin, Plokhy, Martin
+- **ID 1039**: Old Babylonian Empire (-1894 to -1595) — Van De Mieroop, Charpin, Roth, Stol
+- **ID 787**: Beothuk (1000-1829) — Marshall, Holly, Pastore, Howley **— extinct nation**
+- **ID 783**: Chaticks-si-Chaticks/Pawnee — Hyde, Wishart, Weltfish, Echo-Hawk, Dunbar
+- **ID 786**: Sahnish/Arikara — Meyer, Trimble, Hollow, Parks, Fenn
+- **ID 657**: Chimor Empire (900-1470) — Moseley, Topic, Quilter, Rowe, Klaus
+- **ID 1038**: Afsharid Empire (1736-1796) — Axworthy, Tucker, Lockhart, Floor, Matthee, Perry **(was 0 sources)**
+
+### ETHICS notes embedded in SQL
+
+- British Empire: 25% of land, slavery, Bengal famine, partition — Tharoor reference
+- Beothuk: declared extinct as culturally distinct people 1829
+- Pawnee: forced removal to Indian Territory 1875
+- Sahnish: smallpox 1780s/1830s reduced population 30,000 → 500
+- Chimor: conquered by Inca under Topa Inca Yupanqui
+- Afsharid: sacking of Delhi 1739, taking of Peacock Throne and Koh-i-Noor
+
+Total sources: 4518 → **4569**.
+
+---
+
 ## [v6.99.69] - 2026-05-23 (Phase B S44 — +51 sources, low-src targeting)
 
 **Tema**: *Boosting ge3 metric — entities with 0-2 sources*
