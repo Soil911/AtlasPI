@@ -77,6 +77,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     609,  # Karakhanid — Transoxiana + W Tarim
     715,  # Nieuw-Holland (Dutch Brazil) — NE Brazil coast
     1026, # Tekrur pre-Almoravid — Senegal River valley
+    # v6.99.31 iter 3 — Phase A tier-1 batch 3 (autonomous loop)
+    568,  # Mark Brandenburg — NE Germany Ascanian/Hohenzollern
+    578,  # Landgrafschaft Hessen — central Germany Kassel
+    653,  # Lithuania Grand Duchy — Baltic to Black Sea peak
+    691,  # Mrauk U / Arakan — coastal Burma + Chittagong
+    756,  # Marovo — New Georgia Solomon Islands
+    782,  # Choctaw (Chahta Yakni) — MS + AL + LA
+    784,  # Nueta (Mandan) — Missouri River N Dakota
+    978,  # Gobir — NW Hausaland (Alkalawa capital)
+    979,  # Daura — Katsina State N Nigeria
+    1014, # Bono-Manso — central Ghana Akan precursor
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

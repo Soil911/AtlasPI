@@ -2,6 +2,28 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.31] - 2026-05-22 16:40 (autonomous loop iter 3)
+
+**Tema**: *Phase A tier-1 batch 3 — 10 manual historical boundaries*
+
+| id   | Entity                  | Area km²  | Era        |
+|------|-------------------------|-----------|------------|
+| 568  | Mark Brandenburg        | 49,890    | 1157-1618  |
+| 578  | Landgrafschaft Hessen   | 39,105    | 1264-1567  |
+| 653  | Lithuania Grand Duchy   | 949,605   | 1236-1795  |
+| 691  | Mrauk U (Arakan)        | 110,242   | 1430-1785  |
+| 756  | Marovo                  | 7,670     | 1700-1900  |
+| 782  | Chahta Yakni (Choctaw)  | 184,039   | 1500-1830  |
+| 784  | Nueta (Mandan)          | 72,358    | 1100-1837  |
+| 978  | Gobir                   | 41,094    | 1000-1808  |
+| 979  | Daura                   | 21,175    | 900-1805   |
+| 1014 | Bono-Manso              | 44,909    | 1270-1500  |
+
+Tutte ora `boundary_source = 'historical_approximation'`, conf=0.85.
+Aggiunti 10 nuovi ID a `MANUALLY_CURATED_IDS` (totale 40 curate).
+
+---
+
 ## [v6.99.30] - 2026-05-22 (autonomous loop iter 2, resumed after ~19h gap)
 
 **Tema**: *Phase A tier-1 batch 2 — 10 manual historical boundaries*
