@@ -88,6 +88,17 @@ MANUALLY_CURATED_IDS: set[int] = {
     978,  # Gobir — NW Hausaland (Alkalawa capital)
     979,  # Daura — Katsina State N Nigeria
     1014, # Bono-Manso — central Ghana Akan precursor
+    # v6.99.32 iter 4 — Phase A tier-1 batch 4 (autonomous loop)
+    695,  # Cirebon Sultanate — Javanese N coast
+    752,  # Tokelau (Taupulega) — 3 atolls Pacific Polynesia
+    755,  # Roviana — New Georgia Solomon Is.
+    774,  # Etalwa (Etowah) — NW Georgia Mississippian
+    777,  # Apalachee — Florida panhandle
+    780,  # Shawnee (Shawanwaki) — Ohio Valley + KY + WV
+    796,  # Sachapuyas (Chachapoya) — NE Peru cloud forest
+    826,  # Amu (Lamu archipelago) — Swahili Kenya coast
+    941,  # Haudenosaunee proto-confederacy — Upstate NY
+    968,  # Milagro-Quevedo — coastal Ecuador Guayas
 }
 
 # Boundary sources considered manually curated (also exempt from auto-reset)

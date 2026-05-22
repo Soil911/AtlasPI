@@ -2,6 +2,27 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.32] - 2026-05-22 (autonomous loop iter 4)
+
+**Tema**: *Phase A tier-1 batch 4 — 10 boundaries (foreground continuous mode)*
+
+| id  | Entity                | Area km² |
+|-----|-----------------------|----------|
+| 695 | Cirebon Sultanate     | 16,682   |
+| 752 | Tokelau               | 29,241   |
+| 755 | Roviana               | 4,857    |
+| 774 | Etalwa (Etowah)       | 14,853   |
+| 777 | Apalachee             | 28,313   |
+| 780 | Shawnee               | 198,245  |
+| 796 | Sachapuyas            | 38,225   |
+| 826 | Amu (Lamu)            | 6,166    |
+| 941 | Haudenosaunee proto   | 101,731  |
+| 968 | Milagro-Quevedo       | 33,217   |
+
+Totale 50 boundaries curate (5%/loop a passo regolare). Loop in foreground continuous mode (no ScheduleWakeup).
+
+---
+
 ## [v6.99.31] - 2026-05-22 16:40 (autonomous loop iter 3)
 
 **Tema**: *Phase A tier-1 batch 3 — 10 manual historical boundaries*
