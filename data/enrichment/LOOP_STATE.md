@@ -29,18 +29,18 @@ At each iteration: (a) read this file first, (b) work, (c) update this file with
 - [x] **Phase D** — Analytics-driven gap closure (+44 name_variants, 6 zero-result queries fixed) — v6.99.65
 - [x] **Phase E** — GPT-5.5 fact-check applied — 2 corrections (Nan Madol pop, Petra dates)
 - [x] **URL repair pass 1** — 197 ISBN-13 + ISBN-10 sources moved from empty url → WorldCat (v6.99.72)
-- [~] **Phase F** — Visual tour completed for years 1000, 1500, 1800 (one rendering issue flagged)
-- [ ] **URL repair pass 2** — 3036 sources still without URL (need per-source research)
-- [ ] **Phase B continuation** — 87% → 100%? (currently 90.7% / 43.7% — beyond targets)
+- [x] **Phase F** — Visual tour COMPLETE (years 1, 500, 1000, 1500, 1800, 1900 all OK)
+- [x] **Phase B S50** — +50 sources push to 91.6%/44.7% (v6.99.74)
+- [ ] **URL repair pass 2** — 3036 sources still without URL (mostly short book citations without ISBN, need per-source manual research — skipped to avoid faking URLs)
 
 ## 📊 Baseline & current stats
 
-| Metric | Loop start (v6.99.28) | After 2026-05-22 session (v6.99.65) | After 2026-05-23 session (v6.99.73) | Target |
+| Metric | Loop start (v6.99.28) | After 2026-05-22 session (v6.99.65) | After 2026-05-23 session (v6.99.74) | Target |
 |---|---|---|---|---|
-| Version | 6.99.28 | 6.99.65 | **6.99.73** | — |
-| Total sources | 4017 | 4317 | **4769** (+752) | — |
-| Entity ≥3 sources | 852 (82%) | 879 (84.7%) | **941 (90.7%) ✅** | 90% |
-| Entity ≥5 sources | 304 (29.3%) | 364 (35.1%) | **454 (43.7%) ✅** | 40% |
+| Version | 6.99.28 | 6.99.65 | **6.99.74** | — |
+| Total sources | 4017 | 4317 | **4819** (+802) | — |
+| Entity ≥3 sources | 852 (82%) | 879 (84.7%) | **951 (91.6%) ✅** | 90% |
+| Entity ≥5 sources | 304 (29.3%) | 364 (35.1%) | **464 (44.7%) ✅** | 40% |
 | Curated boundaries | 20 (Phase A start) | 297 (Phase A done) | **297** | 287 (done) |
 | Total cities | 110 | 252 (Phase C done) | **252** | 250+ (done) |
 | Name variants | 3016 | 3060 (Phase D done) | **3060** | — |
@@ -62,7 +62,9 @@ At each iteration: (a) read this file first, (b) work, (c) update this file with
 | 35 | 2026-05-23 ~06:15 | B (S46) | +50 src — Aragon, Castile, Poland, Lithuania, Livonia, Đinh, Moghulistan, Chickasaw, Serbian Despot, Pisa | v6.99.71 | ✓ |
 | 36 | 2026-05-23 ~06:30 | B (S47) + URL | +50 src + **197 URL repairs** via ISBN regex extraction | v6.99.72 | ✓ |
 | 37 | 2026-05-23 ~06:45 | B (S48+S49) | +100 src — postclassic Cholula, Hopi, Argentina UPRP, Arma, Livonian, Lupaqa, Zuni, Hanse, Denkyira, Vientiane + Lembeh, Johor, Fuuta, Saalum, Awsa, FRCA, Wassoulou, Astrakhan, Courland, Mossi | **v6.99.73 — TARGETS HIT 🎉** | ✓ |
-| 38 | 2026-05-23 ~07:00 | F | Visual tour: years 1000+1500 render correctly; year 1800 shows 254 count but boundaries not visible — needs investigation | flagged | — |
+| 38 | 2026-05-23 ~07:00 | F | Visual tour partial: years 1000+1500 OK; 1800 flagged | flagged | — |
+| 39 | 2026-05-23 ~07:20 | F | **Re-test 1800 with 8s wait**: OK! False alarm — just needed longer load. Verified years 1, 500, 1900 too. **Phase F COMPLETE** | verified | — |
+| 40 | 2026-05-23 ~07:30 | B (S50) | +50 src — Kayor, Banten, Moldavia, Ragusa, Hungary, Prussia, Teke/Tio, Kel Ahaggar, Yap, 1st Mexican Empire | v6.99.74 | ✓ |
 
 ## ✅ This session summary (2026-05-23)
 
@@ -88,22 +90,17 @@ Era span: -1894 BCE (Old Babylonian) to 1979 CE (Iran IR) — all eras covered
 
 ## ⚠️ Errors / decisions / open questions for Clirim
 
-1. **Year 1800 rendering issue**: visual tour shows 254 entities count but no boundaries
-   rendered on map at year 1800. Year 1500 and 1000 render correctly. Could be:
-   - Z-index issue where modern country labels overlap colonial empire polygons
-   - Boundary data missing for 1800-era entities (need to query)
-   - Async rendering bug — boundaries appear after delay
-   - Recommendation: investigate via `?year=1800&debug=1` or check API `/v1/entities?year=1800`
-   Screenshots saved by Chrome MCP (browser tool — see saved IDs in tool output).
+1. **Year 1800 rendering — RESOLVED**: was NOT a bug. Just needed longer page wait
+   (8s) for boundaries to fully draw. Re-verified after extending wait time.
+   All 6 epoch screenshots rendered correctly.
 
-2. **URLs still empty**: 3036 sources without URL — these don't have ISBN in citation.
-   Mostly older "academic" type sources from earlier seeding. Need per-source research
-   (likely chapter/journal/conference citations that need WorldCat OCLC lookup, or
-   could be left as empty if citation is sufficient).
+2. **URLs still empty (~2986)**: most are short citations like "Goldsworthy. Caesar
+   (2006)" without ISBN. Tried inferring URLs (WorldCat title-search, UN docs,
+   Britannica search) but rejected to avoid faking. Truth > comfort principle:
+   better empty URL than wrong URL. Manual per-source research needed.
 
-3. **Phase F not fully done**: only 3 years tested (1000, 1500, 1800). User originally
-   requested years 1, 500, 1000, 1500, 1800, 1900. Time/context limit — can be
-   resumed later.
+3. **Phase F — COMPLETE**: all 6 epochs verified (1, 500, 1000, 1500, 1800, 1900).
+   No rendering bugs found.
 
 ## 💰 Budget tracker
 
