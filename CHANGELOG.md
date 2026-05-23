@@ -2,6 +2,40 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.74] - 2026-05-23 (Phase B S50 + Phase F complete)
+
+**Tema**: *Post-target push + complete visual tour 6 epochs*
+
+### Phase F COMPLETE — visual verification
+
+All 6 epochs verified rendering correctly:
+- Year 1: 97 entities (Roman/Han/Parthia/Garamantes/Pueblo/Cholula)
+- Year 500: 127 entities (Frankish/Visigoth/Sassanid/Bantu)
+- Year 1000: 233 entities
+- Year 1500: 331 entities
+- Year 1800: 254 entities (with 8s wait — needs longer load time)
+- Year 1900: 118 entities (British/Russian/French empires)
+
+### S50 batch (10 entities, +50 sources)
+
+- Kayor Wolof (742), Banten Sultanate (687), Moldavia (94), Ragusa (86)
+- Hungary kingdom (64), Prussia (67), Teke/Tio Kingdom (645)
+- Kel Ahaggar Tuareg (839), Yap/Wa'ab (764), First Mexican Empire (210)
+
+Final stats v6.99.74:
+- ge3: **951/1038 = 91.6%** (target 90% ✅+1.6pp)
+- ge5: **464/1038 = 44.7%** (target 40% ✅+4.7pp)
+- Total sources: **4819**
+
+### ETHICS notes embedded
+
+- Kayor: ended by French conquest, Lat Joor anti-colonial resistance
+- Banten: Dutch VOC 1684 interference, full abolition by Daendels 1813
+- Kel Ahaggar: French conquest 1902 Battle of Tit ended independence
+- Prussia: Junker militarism, abolished 1947
+
+---
+
 ## [v6.99.73] - 2026-05-23 (Phase B S48+S49 — TARGETS HIT 🎉)
 
 **Tema**: *Final push to ge3 90% and ge5 40% — both targets reached*
