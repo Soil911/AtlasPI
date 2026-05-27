@@ -26,6 +26,7 @@ from src.api.routes import (
     agents_insights,
     analytics,
     chains,
+    citations,
     cities_routes,
     compare,
     docs_ui,
@@ -465,6 +466,9 @@ app.include_router(agents_insights.router)
 
 # Phase G4c (v6.99.77): badge embed SVG — pubblico, CORS aperto
 app.include_router(embed.router)
+
+# Phase G5 (v6.99.78): citation tracking via Zenodo/OpenAlex/Crossref
+app.include_router(citations.router)
 
 # v6.33: Prometheus metrics endpoint
 from src.api.metrics import router as metrics_router

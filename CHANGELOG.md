@@ -2,6 +2,30 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.78] - 2026-05-28 (Phase G5 — Citation tracking Zenodo+OpenAlex+Crossref)
+
+**Tema**: *Academic flywheel — chi cita AtlasPI?*
+
+### Nuovo
+
+- `GET /citations` — HTML pubblica con paper che citano AtlasPI
+- `GET /citations/data` — JSON normalizzato (`source`, `type`, `title`, `authors`, `year`, `doi`, `url`)
+- `POST /citations/refresh` — force refresh (admin token)
+
+Sorgenti:
+1. **OpenAlex** (https://api.openalex.org) — free scholarly graph, miglior coverage per Zenodo DOIs
+2. **Crossref** (https://api.crossref.org) — verifica DOI in `reference` field
+3. **`data/citations.json`** — cura manuale per blog/post non-academici
+
+Caching: 6h via Redis. Tracked DOIs:
+- `10.5281/zenodo.19581784` (concept)
+- `10.5281/zenodo.19581785` (v6.1.2)
+
+Quando nuova citazione viene scoperta → flywheel academico: piu' citazioni
+→ piu' SEO → piu' paper citano → ecc.
+
+---
+
 ## [v6.99.77] - 2026-05-28 (Phase G4c — Badge embed SVG)
 
 **Tema**: *Backlink SEO + scoperta organica via embed badges*
