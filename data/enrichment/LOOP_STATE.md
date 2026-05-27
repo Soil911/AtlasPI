@@ -138,3 +138,81 @@ Era span: -1894 BCE (Old Babylonian) to 1979 CE (Iran IR) — all eras covered
 - **Targets**: 90% ge3 ✅ / 40% ge5 ✅ both hit at v6.99.73
 
 **End state stability**: site healthy at v6.99.73, all metric targets exceeded.
+
+---
+
+## Phase G — Feedback + Discoverability (2026-05-28)
+
+**Tema**: trasformare AtlasPI da "read-only DB" a "ecosistema bidirezionale" con
+feedback umano + AI + bot, telemetry, citation tracking, embeddable badges.
+
+### Versioni rilasciate
+
+| Version | Phase | What |
+|---|---|---|
+| v6.99.75 | G1 | Feedback API + UI widget + MCP write tools |
+| v6.99.76 | G3 | Agent telemetry insights (4 endpoint) |
+| v6.99.77 | G4c | Badge embed SVG (`/embed/badge.svg`) |
+| v6.99.78 | G5 | Citation tracking Zenodo+OpenAlex+Crossref |
+| v6.99.79 | G2 | Reputation scoring + contributors leaderboard |
+
+### G1 — Feedback layer
+- Alembic 021 `feedback_submissions` table
+- POST/GET/PATCH `/v1/feedback` (admin via X-Admin-Token)
+- 8 categorie + 4 submitter_type + 6 status
+- MCP tools: `submit_feedback`, `list_feedback`, `feedback_stats`
+- atlaspi-mcp 0.7.0 → **0.9.0** (39 tools totali, da pubblicare via GH Action)
+- Widget JS `static/js/feedback-widget.js` (i18n IT/EN, MutationObserver)
+- GPT-5.5 dual-review applicato: hmac.compare_digest, max-length fields,
+  event_id/city_id validation, default-hide rejected
+- **18 nuovi pytest pass** (totale 1260 OK)
+
+### G2 — Reputation system
+- Email scoring: .edu/.ac.uk (35+ trusted domains) → 0.4, standard → 0.1, anon → 0.0
+- +0.05 per accepted feedback dello stesso submitter (cap 1.0)
+- `GET /v1/feedback/contributors` leaderboard
+- 4 nuovi pytest (totale 22 feedback tests)
+
+### G3 — Agent telemetry
+- Riusa `api_request_logs` (no nuova tabella)
+- 4 endpoint pubblici `/agents/insights/{overview,by-family,top-queries,zero-results}`
+- 42 pattern UA in 11 categorie (anthropic, openai, perplexity, google, microsoft, ecc.)
+- Dati prod: 2,089 AI agent requests on 133,775 — GoogleBot 69, BingBot 43, GPTBot 27, ClaudeBot 5, ChatGPT-User 1
+
+### G4c — Badge embed
+- `GET /embed/badge.svg?entity=ID&style=dark|light` — 400×88 SVG
+- `GET /embed/preview/{entity_id}` — HTML con HTML/Markdown copy-paste snippet
+- Cache 1h browser + 6h CDN, CORS aperto, `X-Robots-Tag: noindex`
+- Test prod entity 178: Greek "Βασίλειον τῶν Πτολεμαίων" renderizza correttamente
+
+### G5 — Citation pings
+- `GET /citations` HTML, `GET /citations/data` JSON, `POST /citations/refresh` admin
+- Sorgenti: OpenAlex API + Crossref API + `data/citations.json` curate manuale
+- Tracked DOIs: `10.5281/zenodo.19581784` (concept) + `10.5281/zenodo.19581785` (v6.1.2)
+- Cache 6h via Redis
+
+### Decisione: G6 MCP HTTP transport — DIFFERITO
+
+stdio transport (atlaspi-mcp PyPI v0.9.0) basta per ora. Endpoint HTTP/SSE
+richiederebbe container Docker separato + nginx routing — ~3-4h. Differito.
+
+### Open items per Clirim
+
+1. **Pubblicare atlaspi-mcp v0.9.0 su PyPI**:
+   ```bash
+   gh workflow run publish-mcp.yml
+   ```
+
+2. **Settare `ATLASPI_ADMIN_TOKEN` env var** sul VPS per PATCH feedback:
+   ```bash
+   ssh -i ~/.ssh/cra_vps root@77.81.229.242
+   # edit /opt/cra/.env.atlaspi → add ATLASPI_ADMIN_TOKEN=<random-32-char>
+   # docker compose restart
+   ```
+
+3. **Curare `data/citations.json`** per blog/paper non su OpenAlex.
+
+4. **Test feedback widget UI**: apri `https://atlaspi.cra-srl.com/app`,
+   seleziona entita', clicca "🚩 Segnala".
+
+5. **G6 MCP HTTP**: differito ~3-4h se serve.
