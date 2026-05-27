@@ -23,6 +23,7 @@ from src.api.routes import (
     admin_cache,
     admin_cofounder,
     admin_insights,
+    agents_insights,
     analytics,
     chains,
     cities_routes,
@@ -457,6 +458,9 @@ app.include_router(widgets.router)
 
 # Phase G1 (v6.99.75): feedback layer — pubblico, no auth richiesta
 app.include_router(feedback.router)
+
+# Phase G3 (v6.99.76): agent telemetry insights — pubblico
+app.include_router(agents_insights.router)
 
 # v6.33: Prometheus metrics endpoint
 from src.api.metrics import router as metrics_router

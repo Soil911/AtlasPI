@@ -2,6 +2,43 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.76] - 2026-05-28 (Phase G3 — Agent Telemetry Insights)
+
+**Tema**: *Capire cosa cercano gli agenti AI — gap analysis pubblica*
+
+### Nuovo
+
+Endpoint pubblici (no nuova tabella, riusa `api_request_logs`):
+
+- `GET /agents/insights/overview` — counter totali, by_category, last_24h/7d
+- `GET /agents/insights/by-family?days=30` — breakdown per famiglia AI
+- `GET /agents/insights/top-queries?days=30&limit=25` — top path richiesti
+- `GET /agents/insights/zero-results?days=30&limit=50` — 404 patterns (= cosa manca)
+
+### Classificazione AI Agent
+
+42 pattern UA classificati in 11 categorie:
+- **anthropic**: ClaudeBot, Claude.ai, atlaspi-mcp
+- **openai**: GPTBot, ChatGPT-User, OAI-SearchBot
+- **perplexity**: PerplexityBot, Perplexity-User
+- **google**: Googlebot, Google-Extended, Bard
+- **microsoft**: BingBot, CopilotBot
+- **other_search**: DuckDuckBot, Baidu, Yandex, PetalBot
+- **archive**: Common Crawl, Internet Archive
+- **social_preview**: Facebook, Twitter/X, LinkedIn, Slack, Discord, Telegram
+- **seo**: SemrushBot, AhrefsBot, Majestic, Moz
+- **programmatic**: Python requests, curl, wget, axios, ecc.
+- **generic_bot**: catch-all per *bot/* *crawler* *spider*
+
+### Use case
+
+- Identificare quali agenti AI usano AtlasPI per cosa
+- Vedere il pattern di query GPTBot → guidare SEO / content strategy
+- Zero-results endpoint → roadmap dati (quali entita' mancano?)
+- Cross-validare il MCP server usage tracking
+
+---
+
 ## [v6.99.75] - 2026-05-28 (Phase G1 — Feedback layer)
 
 **Tema**: *Feedback API + UI widget + MCP write tools — sblocca contribuzioni*
