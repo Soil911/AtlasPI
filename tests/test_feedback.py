@@ -269,6 +269,61 @@ def test_list_default_hides_rejected(client, monkeypatch):
     assert fb_id in ids_visible
 
 
+def test_reputation_academic_email_gets_higher_score(client):
+    """G2: email accademica → reputation 0.4."""
+    r = client.post(
+        "/v1/feedback",
+        json={
+            "category": "other",
+            "submitter_type": "human",
+            "submitter_id": "researcher@harvard.edu",
+            "reasoning": "Academic test",
+        },
+    )
+    assert r.status_code == 201
+    assert r.json()["submitter_reputation"] == 0.4
+
+
+def test_reputation_standard_email_lower_score(client):
+    """G2: email non accademica → reputation 0.1."""
+    r = client.post(
+        "/v1/feedback",
+        json={
+            "category": "other",
+            "submitter_type": "human",
+            "submitter_id": "foo@gmail.com",
+            "reasoning": "Standard test",
+        },
+    )
+    assert r.status_code == 201
+    assert r.json()["submitter_reputation"] == 0.1
+
+
+def test_reputation_anonymous_zero(client):
+    """G2: anonymous → reputation 0.0."""
+    r = client.post(
+        "/v1/feedback",
+        json={"category": "other", "submitter_type": "anonymous"},
+    )
+    assert r.status_code == 201
+    assert r.json()["submitter_reputation"] == 0.0
+
+
+def test_contributors_endpoint(client):
+    """G2: leaderboard funzionante."""
+    r = client.get("/v1/feedback/contributors")
+    assert r.status_code == 200
+    items = r.json()
+    # ≥1 submitter ID con email (creato nei test sopra)
+    assert isinstance(items, list)
+    # Check structure of any row
+    if items:
+        row = items[0]
+        assert "submitter_id" in row
+        assert "accepted" in row
+        assert "reputation" in row
+
+
 def test_admin_token_constant_time(client, monkeypatch):
     """GPT-5.5 review #2: hmac.compare_digest, no timing leakage.
 

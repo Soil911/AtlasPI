@@ -54,6 +54,59 @@ MAX_REASONING_LEN = 4000
 # per evitare che spam/rejected siano pubblicamente visibili.
 DEFAULT_VISIBLE_STATUSES = {"pending", "under_review", "accepted"}
 
+# Domini email accademici trusted (reputation iniziale 0.4 invece di 0.0)
+TRUSTED_ACADEMIC_DOMAINS = {
+    ".edu", ".ac.uk", ".ac.it", ".ac.jp", ".ac.za", ".edu.au", ".edu.cn",
+    ".uni-muenchen.de", ".uni-leipzig.de", ".uni-bonn.de", ".uni-koeln.de",
+    ".unibo.it", ".unimi.it", ".uniroma1.it", ".uniroma3.it", ".unipd.it",
+    ".sorbonne-universite.fr", ".u-bordeaux.fr", ".univ-paris1.fr",
+    ".cnrs.fr", ".inria.fr",  # CNRS, INRIA research orgs
+    ".mpg.de",  # Max Planck
+    ".cam.ac.uk", ".ox.ac.uk", ".harvard.edu", ".mit.edu", ".stanford.edu",
+    ".yale.edu", ".princeton.edu", ".columbia.edu", ".berkeley.edu",
+    ".chicago.edu", ".jhu.edu",  # Johns Hopkins
+    ".si.edu",  # Smithsonian
+}
+
+
+def _compute_reputation_for_email(email: str) -> float:
+    """Calcola reputation iniziale basata su dominio email.
+
+    - Trusted academic (.edu, etc.): 0.4 (skip-the-queue ma comunque review)
+    - Email standard: 0.1
+    - No email: 0.0
+    """
+    if not email or "@" not in email:
+        return 0.0
+    domain = email.rsplit("@", 1)[1].lower()
+    for trusted in TRUSTED_ACADEMIC_DOMAINS:
+        if domain.endswith(trusted):
+            return 0.4
+    return 0.1
+
+
+def _lookup_reputation(db: Session, submitter_id: str | None) -> float:
+    """Calcola reputation cumulative basata su feedback accettati passati.
+
+    Formula: base + 0.05 per ogni feedback accettato dello stesso submitter_id,
+    capped a 1.0. + bonus accademico iniziale.
+
+    NB: questo NON e' un mechanism anti-Sybil — submitter_id puo' essere
+    cambiato. Usa solo come segnale soft per prioritizzare la review queue.
+    """
+    if not submitter_id:
+        return 0.0
+    base = _compute_reputation_for_email(submitter_id)
+    accepted = (
+        db.query(func.count(FeedbackSubmission.id))
+        .filter(FeedbackSubmission.submitter_id == submitter_id)
+        .filter(FeedbackSubmission.status == "accepted")
+        .scalar()
+        or 0
+    )
+    rep = min(base + 0.05 * accepted, 1.0)
+    return round(rep, 3)
+
 logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/v1/feedback", tags=["feedback"])
@@ -293,6 +346,9 @@ def submit_feedback(
 
     now_iso = datetime.datetime.utcnow().isoformat() + "Z"
 
+    # G2: compute reputation based on past accepted feedback + email domain
+    reputation = _lookup_reputation(db, payload.submitter_id)
+
     fb = FeedbackSubmission(
         created_at=now_iso,
         entity_id=payload.entity_id,
@@ -302,7 +358,7 @@ def submit_feedback(
         category=payload.category,
         submitter_type=payload.submitter_type,
         submitter_id=payload.submitter_id,
-        submitter_reputation=0.0,  # default; G2 reputation system aggiornera'
+        submitter_reputation=reputation,
         current_value=payload.current_value,
         suggested_value=payload.suggested_value,
         citation=payload.citation,
@@ -432,6 +488,94 @@ def feedback_stats(db: Session = Depends(get_db)) -> FeedbackStatsResponse:
         last_24h=last_24h,
         last_7d=last_7d,
     )
+
+
+class ContributorRow(BaseModel):
+    submitter_id: str  # masked
+    submitter_type: str
+    total_submissions: int
+    accepted: int
+    pending: int
+    rejected: int
+    reputation: float
+
+
+# IMPORTANTE: /contributors va PRIMA di /{feedback_id} perche' FastAPI
+# matcha le route in ordine di registrazione e {feedback_id:int} catturerebbe
+# "contributors" tentando di parsarlo come int (422).
+@router.get(
+    "/contributors",
+    response_model=list[ContributorRow],
+    summary="Leaderboard contributori",
+    description=(
+        "Top submitter per numero di feedback accettati. Email mascherate per "
+        "privacy. Usato per gamification + accountability."
+    ),
+)
+def contributors(
+    limit: int = Query(50, ge=1, le=200),
+    db: Session = Depends(get_db),
+) -> list[ContributorRow]:
+    # Top submitter_id by # accepted, gives also pending/rejected counts
+    rows = (
+        db.query(
+            FeedbackSubmission.submitter_id,
+            FeedbackSubmission.submitter_type,
+            FeedbackSubmission.status,
+            func.count(FeedbackSubmission.id).label("c"),
+        )
+        .filter(FeedbackSubmission.submitter_id.isnot(None))
+        .filter(FeedbackSubmission.submitter_id != "")
+        .group_by(
+            FeedbackSubmission.submitter_id,
+            FeedbackSubmission.submitter_type,
+            FeedbackSubmission.status,
+        )
+        .all()
+    )
+
+    agg: dict[str, dict] = {}
+    for sid, stype, status, c in rows:
+        if sid not in agg:
+            agg[sid] = {
+                "submitter_id": sid,
+                "submitter_type": stype,
+                "total_submissions": 0,
+                "accepted": 0,
+                "pending": 0,
+                "rejected": 0,
+            }
+        agg[sid]["total_submissions"] += c
+        if status == "accepted":
+            agg[sid]["accepted"] += c
+        elif status == "pending":
+            agg[sid]["pending"] += c
+        elif status == "rejected":
+            agg[sid]["rejected"] += c
+
+    # Mask submitter_id (email) per privacy
+    def _mask(s: str) -> str:
+        if "@" in s and "." in s:
+            return f"***@{s.rsplit('@', 1)[1]}"
+        return s
+
+    output: list[ContributorRow] = []
+    for sid, data in agg.items():
+        rep = _lookup_reputation(db, sid)
+        output.append(
+            ContributorRow(
+                submitter_id=_mask(sid),
+                submitter_type=data["submitter_type"],
+                total_submissions=data["total_submissions"],
+                accepted=data["accepted"],
+                pending=data["pending"],
+                rejected=data["rejected"],
+                reputation=rep,
+            )
+        )
+
+    output.sort(key=lambda x: (x.accepted, x.total_submissions), reverse=True)
+    return output[:limit]
 
 
 @router.get(

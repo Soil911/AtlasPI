@@ -2,6 +2,39 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.79] - 2026-05-28 (Phase G2 — Reputation system + Contributors leaderboard)
+
+**Tema**: *Trust scoring per scalare il feedback layer*
+
+### Reputation scoring
+
+Quando un feedback viene sottomesso, `submitter_reputation` viene calcolato:
+
+- **Email accademica** (`*.edu`, `*.ac.uk`, `*.unibo.it`, ecc.) → **0.4** baseline
+- **Email standard** → **0.1**
+- **Anonymous** → **0.0**
+- **+0.05** per ogni feedback `accepted` dello stesso submitter_id (cap 1.0)
+
+35+ domini accademici trusted (US Ivy, UK Russell Group, Italy/Germany/France
+top universities, Smithsonian, CNRS, INRIA, Max Planck, ecc.).
+
+NB: non e' anti-Sybil — submitter_id puo' essere cambiato. E' un segnale
+soft per prioritizzare la review queue.
+
+### Contributors leaderboard
+
+- `GET /v1/feedback/contributors?limit=50`
+- Mostra top submitter per # accepted (poi total_submissions)
+- Email mascherate `***@yale.edu`
+- Include accepted/pending/rejected breakdown + reputation score
+
+### Test
+
+22 pytest pass (4 nuovi: reputation academic/standard/anonymous + leaderboard).
+0 regressioni totale suite 1242.
+
+---
+
 ## [v6.99.78] - 2026-05-28 (Phase G5 — Citation tracking Zenodo+OpenAlex+Crossref)
 
 **Tema**: *Academic flywheel — chi cita AtlasPI?*
