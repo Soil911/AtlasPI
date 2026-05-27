@@ -1530,6 +1530,8 @@ async function showDetail(id) {
   // v6.7 — remember current entity for tab switching (Feature 3)
   currentDetailEntity = e;
   currentDetailTab = 'overview';
+  // v6.99.75 (Phase G1): espone l'entita' corrente al widget feedback
+  window.currentDetailEntity = e;
 
   const pct = Math.round(e.confidence_score * 100);
   const sc = COLORS[e.status] || '#8b949e';

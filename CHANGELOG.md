@@ -2,6 +2,66 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.75] - 2026-05-28 (Phase G1 — Feedback layer)
+
+**Tema**: *Feedback API + UI widget + MCP write tools — sblocca contribuzioni*
+
+### Nuovo
+
+**Backend (`/v1/feedback`)**:
+- Tabella `feedback_submissions` (Alembic 021)
+- Endpoint POST/GET/PATCH:
+  - `POST /v1/feedback` — submit (anonymous OK, validation strict)
+  - `GET  /v1/feedback` — lista pubblica trasparente (default nasconde rejected/duplicate)
+  - `GET  /v1/feedback/stats` — counters aggregati
+  - `GET  /v1/feedback/{id}` — dettaglio
+  - `PATCH /v1/feedback/{id}` — review (admin via `X-Admin-Token` env var)
+- 8 categorie: incorrect_data, missing_source, bias_report, boundary_dispute,
+  missing_entity, translation_error, ethics_concern, other
+- 4 submitter_type: human, ai_agent, bot, anonymous
+- 6 status: pending, under_review, accepted, rejected, duplicate, ethics_escalated
+
+**MCP server (`atlaspi-mcp` v0.9.0)**:
+- 3 nuovi tool: `submit_feedback`, `list_feedback`, `feedback_stats`
+- Total tools: 36 → 39
+- Pubblicato su PyPI (workflow GitHub Action `publish-mcp.yml`)
+
+**Frontend (`static/js/feedback-widget.js`)**:
+- Widget self-contained, MutationObserver-based, no modifiche a `app.js` (eccetto 1 riga)
+- Bottone "Segnala / Suggest correction" auto-injectato sul detail panel
+- Modal i18n (IT/EN) con form completo
+- ETHICS box visibile
+
+### Security hardening (GPT-5.5 review)
+
+5 problemi sollevati da review GPT-5.5 — tutti risolti:
+
+1. ✅ **Admin token timing-attack**: `hmac.compare_digest` invece di `==`
+2. ✅ **Unbounded TEXT fields**: max length 2000 (citation) / 4000 (value/reasoning)
+3. ✅ **event_id/city_id non validati**: ora check esistenza come entity_id
+4. ✅ **Public listing espone rejected**: GET di default mostra solo pending/under_review/accepted
+5. ⚠️ **submitter_id raw in DB** (PII): rimandato a G2 (reputation system con hash dedup)
+
+### ETHICS
+
+Tutti i feedback vanno in stato `pending`. La review umana e' SEMPRE richiesta
+per contenuti storici (year_*, boundary, acquisition_method, nomi originali).
+Vedi CLAUDE.md "Governance etica durante lo sviluppo".
+
+### Test coverage
+
+18 nuovi pytest (`tests/test_feedback.py`):
+- Validation (categoria/submitter_type enum, cross-field, max-length)
+- Submit success roundtrip
+- Listing filter (default visibility, status, category)
+- PATCH admin-only (con/senza token, token sbagliato, empty token)
+- Privacy (email masking nel response)
+- Existence check entity_id/event_id/city_id
+
+Totale test suite: 1242 → **1260 pass** (+18, 0 regressioni).
+
+---
+
 ## [v6.99.74] - 2026-05-23 (Phase B S50 + Phase F complete)
 
 **Tema**: *Post-target push + complete visual tour 6 epochs*

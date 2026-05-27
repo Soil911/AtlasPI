@@ -40,6 +40,7 @@ from src.db.models.events import (  # noqa: F401
     EventSource,
     HistoricalEvent,
 )
+from src.db.models.feedback import FeedbackSubmission  # noqa: F401
 from src.db.models.languages import HistoricalLanguage  # noqa: F401
 from src.db.models.observability import (  # noqa: F401
     AiSuggestion,
@@ -80,4 +81,6 @@ __all__ = [
     "ApiRequestLog",
     "AiSuggestion",
     "KnownDevIp",
+    # feedback (Phase G1)
+    "FeedbackSubmission",
 ]

@@ -17,7 +17,7 @@ import httpx
 
 DEFAULT_BASE_URL = "https://atlaspi.cra-srl.com"
 DEFAULT_TIMEOUT = 30.0
-USER_AGENT = "atlaspi-mcp/0.8.0 (+https://github.com/Soil911/AtlasPI)"
+USER_AGENT = "atlaspi-mcp/0.9.0 (+https://github.com/Soil911/AtlasPI)"
 
 
 class AtlasPIClientError(RuntimeError):
@@ -87,6 +87,37 @@ class AtlasPIClient:
             await self._client.aclose()
 
     # -- Helper interno -------------------------------------------------
+
+    async def _post(self, path: str, body: dict[str, Any] | None = None) -> Any:
+        """Esegue una POST con body JSON su ``path`` e ritorna il body JSON.
+
+        Usato per i tools "write" (feedback submission) — leggere endpoint
+        sono tutti GET.
+        """
+        try:
+            response = await self._client.post(path, json=body or {})
+        except httpx.TimeoutException as exc:
+            raise AtlasPIClientError(
+                f"AtlasPI POST timed out after {self._client.timeout.read}s "
+                f"({path})"
+            ) from exc
+        except httpx.RequestError as exc:
+            raise AtlasPIClientError(
+                f"Network error while POSTing to AtlasPI ({path}): {exc}"
+            ) from exc
+
+        if response.status_code >= 400:
+            detail = response.text[:500]
+            raise AtlasPIClientError(
+                f"AtlasPI returned HTTP {response.status_code} for POST {path}: {detail}",
+                status_code=response.status_code,
+            )
+        try:
+            return response.json()
+        except ValueError as exc:
+            raise AtlasPIClientError(
+                f"AtlasPI returned non-JSON response for POST {path}"
+            ) from exc
 
     async def _get(self, path: str, params: dict[str, Any] | None = None) -> Any:
         """Esegue una GET su ``path`` e ritorna il body JSON decodificato.
@@ -572,6 +603,76 @@ class AtlasPIClient:
             "/v1/search/fuzzy",
             {"q": q, "limit": limit, "min_score": min_score},
         )
+
+    # -- Phase G1: feedback layer (POST + GET) --------------------------
+
+    async def submit_feedback(
+        self,
+        *,
+        category: str,
+        submitter_type: str,
+        submitter_id: str | None = None,
+        entity_id: int | None = None,
+        event_id: int | None = None,
+        city_id: int | None = None,
+        field_name: str | None = None,
+        current_value: str | None = None,
+        suggested_value: str | None = None,
+        citation: str | None = None,
+        reasoning: str | None = None,
+        confidence: float | None = None,
+    ) -> Any:
+        """POST /v1/feedback — submit a correction or suggestion.
+
+        Tutti i feedback vanno in stato `pending` lato server. La review
+        umana e' richiesta per contenuti storici (ETHICS).
+        """
+        body = _drop_none({
+            "category": category,
+            "submitter_type": submitter_type,
+            "submitter_id": submitter_id,
+            "entity_id": entity_id,
+            "event_id": event_id,
+            "city_id": city_id,
+            "field_name": field_name,
+            "current_value": current_value,
+            "suggested_value": suggested_value,
+            "citation": citation,
+            "reasoning": reasoning,
+            "confidence": confidence,
+        })
+        return await self._post("/v1/feedback", body)
+
+    async def list_feedback(
+        self,
+        *,
+        status: str | None = None,
+        category: str | None = None,
+        entity_id: int | None = None,
+        submitter_type: str | None = None,
+        limit: int | None = None,
+        offset: int | None = None,
+    ) -> Any:
+        """GET /v1/feedback — lista pubblica feedback con filtri opzionali.
+
+        Utile per cross-validation: un agente puo' leggere il feedback gia'
+        sottomesso prima di proporne uno nuovo (evita duplicati).
+        """
+        return await self._get(
+            "/v1/feedback",
+            {
+                "status": status,
+                "category": category,
+                "entity_id": entity_id,
+                "submitter_type": submitter_type,
+                "limit": limit,
+                "offset": offset,
+            },
+        )
+
+    async def feedback_stats(self) -> Any:
+        """GET /v1/feedback/stats — counters aggregati."""
+        return await self._get("/v1/feedback/stats")
 
     # -- v6.7 composite: nearest historical city -----------------------
 

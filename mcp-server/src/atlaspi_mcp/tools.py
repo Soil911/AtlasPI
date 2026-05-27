@@ -481,6 +481,77 @@ async def _h_what_changed_between(
 
 
 # ------------------------------------------------------------------ #
+# Handler — Phase G1 feedback                                          #
+# ------------------------------------------------------------------ #
+
+async def _h_submit_feedback(client: AtlasPIClient, args: dict[str, Any]) -> Any:
+    return await client.submit_feedback(
+        category=args["category"],
+        submitter_type=args.get("submitter_type", "ai_agent"),
+        submitter_id=args.get("submitter_id"),
+        entity_id=args.get("entity_id"),
+        event_id=args.get("event_id"),
+        city_id=args.get("city_id"),
+        field_name=args.get("field_name"),
+        current_value=args.get("current_value"),
+        suggested_value=args.get("suggested_value"),
+        citation=args.get("citation"),
+        reasoning=args.get("reasoning"),
+        confidence=args.get("confidence"),
+    )
+
+
+async def _h_list_feedback(client: AtlasPIClient, args: dict[str, Any]) -> Any:
+    return await client.list_feedback(
+        status=args.get("status"),
+        category=args.get("category"),
+        entity_id=args.get("entity_id"),
+        submitter_type=args.get("submitter_type"),
+        limit=args.get("limit"),
+        offset=args.get("offset"),
+    )
+
+
+async def _h_feedback_stats(client: AtlasPIClient, args: dict[str, Any]) -> Any:  # noqa: ARG001
+    return await client.feedback_stats()
+
+
+# Schemi riusabili per feedback tools
+_FEEDBACK_CATEGORY_SCHEMA: dict[str, Any] = {
+    "type": "string",
+    "enum": [
+        "incorrect_data",
+        "missing_source",
+        "bias_report",
+        "boundary_dispute",
+        "missing_entity",
+        "translation_error",
+        "ethics_concern",
+        "other",
+    ],
+    "description": (
+        "Categoria del feedback. 'incorrect_data' per valori sbagliati di "
+        "un campo; 'missing_source' per chiedere di aggiungere una citation; "
+        "'bias_report' per rappresentazioni biasate (ETHICS); "
+        "'boundary_dispute' per polygon imprecisi; "
+        "'missing_entity' per entita' che dovrebbe esserci ma non c'e'; "
+        "'translation_error' per nomi/varianti errati; "
+        "'ethics_concern' per violazioni ETHICS-001-010; "
+        "'other' per tutto il resto."
+    ),
+}
+
+_FEEDBACK_SUBMITTER_TYPE_SCHEMA: dict[str, Any] = {
+    "type": "string",
+    "enum": ["human", "ai_agent", "bot", "anonymous"],
+    "description": (
+        "Tipo di submitter. Per agenti AI come Claude, GPT, Gemini, ecc. "
+        "usa 'ai_agent' e fornisci submitter_id con il nome del modello."
+    ),
+}
+
+
+# ------------------------------------------------------------------ #
 # Definizioni tools                                                    #
 # ------------------------------------------------------------------ #
 
@@ -1645,6 +1716,168 @@ TOOLS: list[ToolDefinition] = [
             "additionalProperties": False,
         },
         handler=_h_what_changed_between,
+    ),
+    # ------------------------------------------------------------- #
+    # Phase G1 — feedback tools (read + write)                      #
+    # ------------------------------------------------------------- #
+    ToolDefinition(
+        name="submit_feedback",
+        description=(
+            "Sottometti un feedback strutturato sul database AtlasPI: correzioni "
+            "di dati, citazioni mancanti, polygon imprecisi, bias report, ecc. "
+            "Usa questo tool quando hai informazioni VERIFICATE che contraddicono "
+            "i dati attuali, oppure quando vuoi suggerire una fonte accademica "
+            "non ancora presente. \n\n"
+            "Il feedback non modifica direttamente i dati: va in stato 'pending' "
+            "e richiede review umana per contenuti storici (vedi ETHICS).\n\n"
+            "**Quando usarlo**:\n"
+            "- Trovi una data sbagliata supportata da una fonte (es. year_end di "
+            "  una dinastia)\n"
+            "- Vuoi aggiungere una citation accademica a un'entita'\n"
+            "- Noti un bias di rappresentazione (es. nome coloniale come "
+            "  primario)\n"
+            "- Identifichi un'entita' storica mancante dal database\n\n"
+            "**Best practice**: fornisci sempre 'citation' (la fonte) e "
+            "'reasoning' (1-3 frasi che spiegano perche')."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {
+                "category": _FEEDBACK_CATEGORY_SCHEMA,
+                "submitter_type": _FEEDBACK_SUBMITTER_TYPE_SCHEMA,
+                "submitter_id": {
+                    "type": "string",
+                    "maxLength": 256,
+                    "description": (
+                        "Identificativo del submitter. Per agenti AI: nome "
+                        "modello (es. 'claude-sonnet-4.7', 'gpt-5'). "
+                        "Per umani: email o handle pubblico."
+                    ),
+                },
+                "entity_id": {
+                    "type": "integer",
+                    "description": (
+                        "ID dell'entita' (geo_entities) target del feedback. "
+                        "Obbligatorio per categoria incorrect_data, "
+                        "missing_source, boundary_dispute, translation_error, "
+                        "ethics_concern (almeno uno tra entity/event/city)."
+                    ),
+                },
+                "event_id": {
+                    "type": "integer",
+                    "description": "ID dell'evento storico target del feedback.",
+                },
+                "city_id": {
+                    "type": "integer",
+                    "description": "ID della citta' storica target del feedback.",
+                },
+                "field_name": {
+                    "type": "string",
+                    "maxLength": 64,
+                    "description": (
+                        "Campo specifico (es. 'year_end', 'boundary_geojson', "
+                        "'name_original', 'acquisition_method'). Opzionale."
+                    ),
+                },
+                "current_value": {
+                    "type": "string",
+                    "description": (
+                        "Valore attuale del campo (snapshot). Aiuta la review "
+                        "a verificare la correttezza della segnalazione."
+                    ),
+                },
+                "suggested_value": {
+                    "type": "string",
+                    "description": "Valore corretto proposto.",
+                },
+                "citation": {
+                    "type": "string",
+                    "description": (
+                        "Riferimento bibliografico a supporto della correzione "
+                        "(es. 'Holt 1970, p. 142; ISBN 978-0-19-821648-1')."
+                    ),
+                },
+                "reasoning": {
+                    "type": "string",
+                    "description": (
+                        "Spiegazione breve (1-3 frasi) della correzione "
+                        "e del perche' la fonte e' affidabile."
+                    ),
+                },
+                "confidence": {
+                    "type": "number",
+                    "minimum": 0.0,
+                    "maximum": 1.0,
+                    "description": (
+                        "Self-reported confidence (0.0-1.0) sulla correzione. "
+                        "Usa <0.5 se hai dubbi, >0.8 se hai fonte primaria diretta."
+                    ),
+                },
+            },
+            "required": ["category", "submitter_type"],
+            "additionalProperties": False,
+        },
+        handler=_h_submit_feedback,
+    ),
+    ToolDefinition(
+        name="list_feedback",
+        description=(
+            "Lista i feedback gia' sottomessi da altri agenti/umani. Utile per "
+            "cross-validation: prima di sottomettere un nuovo feedback, controlla "
+            "se qualcuno ha gia' segnalato lo stesso problema. \n\n"
+            "Filtra per status (pending, accepted, rejected, ...), category, "
+            "entity_id, o submitter_type. Trasparenza pubblica."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "string",
+                    "enum": [
+                        "pending",
+                        "under_review",
+                        "accepted",
+                        "rejected",
+                        "duplicate",
+                        "ethics_escalated",
+                    ],
+                    "description": "Filtra per status (default: tutti).",
+                },
+                "category": _FEEDBACK_CATEGORY_SCHEMA,
+                "entity_id": {
+                    "type": "integer",
+                    "description": "Filtra per entity_id.",
+                },
+                "submitter_type": _FEEDBACK_SUBMITTER_TYPE_SCHEMA,
+                "limit": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 200,
+                    "description": "Max items (default 50).",
+                },
+                "offset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Pagination offset.",
+                },
+            },
+            "additionalProperties": False,
+        },
+        handler=_h_list_feedback,
+    ),
+    ToolDefinition(
+        name="feedback_stats",
+        description=(
+            "Counters aggregati sul feedback: totale, by_status, by_category, "
+            "by_submitter_type, last_24h, last_7d. Utile per capire l'attivita' "
+            "della community e identificare le categorie piu' calde."
+        ),
+        input_schema={
+            "type": "object",
+            "properties": {},
+            "additionalProperties": False,
+        },
+        handler=_h_feedback_stats,
     ),
 ]
 

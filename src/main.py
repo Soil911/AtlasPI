@@ -31,6 +31,7 @@ from src.api.routes import (
     entities,
     events,
     export,
+    feedback,
     health,
     languages,
     periods,
@@ -453,6 +454,9 @@ app.include_router(compare.router)
 app.include_router(search.router)
 app.include_router(docs_ui.router)
 app.include_router(widgets.router)
+
+# Phase G1 (v6.99.75): feedback layer — pubblico, no auth richiesta
+app.include_router(feedback.router)
 
 # v6.33: Prometheus metrics endpoint
 from src.api.metrics import router as metrics_router
