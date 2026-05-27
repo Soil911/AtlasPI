@@ -29,6 +29,7 @@ from src.api.routes import (
     cities_routes,
     compare,
     docs_ui,
+    embed,
     entities,
     events,
     export,
@@ -461,6 +462,9 @@ app.include_router(feedback.router)
 
 # Phase G3 (v6.99.76): agent telemetry insights — pubblico
 app.include_router(agents_insights.router)
+
+# Phase G4c (v6.99.77): badge embed SVG — pubblico, CORS aperto
+app.include_router(embed.router)
 
 # v6.33: Prometheus metrics endpoint
 from src.api.metrics import router as metrics_router

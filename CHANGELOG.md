@@ -2,6 +2,35 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.77] - 2026-05-28 (Phase G4c — Badge embed SVG)
+
+**Tema**: *Backlink SEO + scoperta organica via embed badges*
+
+### Nuovo
+
+- `GET /embed/badge.svg?entity=ID&style=dark|light` — SVG 400×88 badge
+- `GET /embed/preview/{entity_id}` — HTML preview con snippet copy-paste (HTML + Markdown)
+
+Caching: 1h browser, 6h CDN. CORS aperto (`Access-Control-Allow-Origin: *`).
+`X-Robots-Tag: noindex` per evitare duplicate URLs nella SERP.
+
+### Use case
+
+Blog/wiki/storia-sites possono embeddare:
+```html
+<a href="https://atlaspi.cra-srl.com/app?entity=178">
+  <img src="https://atlaspi.cra-srl.com/embed/badge.svg?entity=178" alt="Ptolemaic Kingdom">
+</a>
+```
+
+Ogni embed:
+- Mostra nome originale + periodo + tipo + sources count + confidence
+- Linka indietro a AtlasPI (backlink SEO)
+- Si aggiorna automaticamente (n_sources, confidence)
+- Funziona in Markdown (GitHub, Notion) via `![]()` sintassi
+
+---
+
 ## [v6.99.76] - 2026-05-28 (Phase G3 — Agent Telemetry Insights)
 
 **Tema**: *Capire cosa cercano gli agenti AI — gap analysis pubblica*
