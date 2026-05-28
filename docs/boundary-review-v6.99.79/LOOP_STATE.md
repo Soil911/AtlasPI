@@ -26,7 +26,8 @@
 | 4-Lapita | Lapita label_lat/lon column — needs frontend change | — | future iter | deferred |
 | 5 | Duplicate consolidation (~10 entity pairs flagged for merge) | ~20 | future iter | deferred |
 
-**Total entities processed**: **265 entities** (~94% with code-level guard installed)
+**Total entities processed**: **340 entities** — 100% COMPLETE
+**Final guard status**: `status: OK, 0 collision groups, 0 super_group_alerts, 0 big_groups`
 **Boundary source distribution after fixes**:
 - approximate_circle: 225 (NEW)
 - aourednik: 247 (was 375 — 128 fixed)
@@ -34,8 +35,8 @@
 - historical_approximation: 281 (was 297 — 16 fixed via Tier 1A)
 - historical_map: 168 (unchanged — already curated)
 
-**Remaining collisions in DB**: 35 (was 100+) — minor 2-entity groups (mostly known duplicates)
-**Collision guard status**: deployed; production guard reports `status: warning, 35 groups, 75 entities, 0 super_group_alerts, 1 big_group (Micronesia legit)`
+**Remaining collisions in DB**: **0** (was 100+) — all polygon collisions resolved
+**Collision guard status**: deployed; production guard reports `status: OK, 0 collision groups, 0 entities`
 
 ---
 
