@@ -478,12 +478,12 @@ prodotto completo (entita' + eventi + citta' + rotte + catene + widgets + search
 |---------|-------------|--------------------------------------|
 | Uptime | 99.5% | da misurare (UptimeRobot non ancora attivo) |
 | Latenza API p95 | < 200ms | ~20ms nearby (PostGIS), ~180ms altri |
-| Entita' | 1,000+ | **862** |
+| Entita' | 1,000+ | **1,038** (target raggiunto e superato; v6.99.80) |
 | Eventi storici | 500+ | **401** (target 300 gia' superato) |
 | Catene dinastiche | 50+ | **26** |
 | Citta' storiche | 100+ | **110** (target raggiunto) |
 | Rotte commerciali | 40+ | **41** (target raggiunto) |
-| Boundary coverage | 80%+ | **72%** (post ETHICS-006, volontaria) |
+| Boundary coverage | 80%+ | **99.9%** (1037/1038, post Phase H v6.99.80; target ampiamente superato) |
 | Test coverage | 500+ test | **917** (target ampiamente superato) |
 | Endpoint API | 30+ | **~50** (target superato) |
 | Pagine web | 9+ | **9** (app, landing, timeline, compare, search, docs-ui, analytics, brief, widgets) |
@@ -527,6 +527,8 @@ prodotto completo (entita' + eventi + citta' + rotte + catene + widgets + search
 | ETHICS-008 | known_silence su eventi silenziati | v6.3 |
 | ETHICS-009 | Rinominazioni coloniali documentate | v6.4 |
 | ETHICS-010 | Tratta esseri umani come categoria | v6.4 |
+| ETHICS-011 | Redesign A+ typography + color | v6.90 |
+| ETHICS-012 | Phase H boundary review systematica + matcher hardening | v6.99.80 |
 
 ---
 
