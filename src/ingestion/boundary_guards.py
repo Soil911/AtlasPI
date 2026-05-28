@@ -116,6 +116,9 @@ def run_boundary_guards_at_boot() -> dict[str, Any]:
         "wrong_polygon_fixed": 0,
         "antimeridian_clipped": 0,
         "geom_synced": 0,
+        "collision_groups": 0,
+        "collision_alarm": False,
+        "super_group_alerts": 0,
         "errors": [],
     }
 
@@ -149,6 +152,21 @@ def run_boundary_guards_at_boot() -> dict[str, Any]:
         stats["geom_synced"] = synced
     except Exception as exc:
         msg = f"sync_boundary_geom_from_geojson failed: {exc!r}"
+        logger.warning(msg, exc_info=True)
+        stats["errors"].append(msg)
+
+    # ── Guard 4: collision detection (v6.99.79 Phase H) ────────────
+    # Rileva polygon condivisi tra entita' storiche diverse (super-group
+    # matching error). Solo informational — logga warning, non modifica
+    # i dati. Soglia: > 60 gruppi o presenza di super-group alerts.
+    try:
+        from src.ingestion.boundary_collision_guard import detect_boundary_collisions
+        coll_result = detect_boundary_collisions()
+        stats["collision_groups"] = coll_result.get("total_groups", 0)
+        stats["collision_alarm"] = coll_result.get("status") == "alarm"
+        stats["super_group_alerts"] = coll_result.get("super_group_alert_count", 0)
+    except Exception as exc:
+        msg = f"detect_boundary_collisions failed: {exc!r}"
         logger.warning(msg, exc_info=True)
         stats["errors"].append(msg)
 
