@@ -2,6 +2,111 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.80] - 2026-05-28 (Phase H — Systematic boundary review + collision guard)
+
+**Tema**: *Risoluzione errori sistematici di fuzzy-match aourednik/natural_earth +
+regression guard*
+
+### Boundary review systematica (340 entità polygon-fixed)
+
+Il fuzzy matcher `boundary_match.py` aveva prodotto **~100 polygon collisions**:
+storicamente diverse entità che condividevano lo stesso polygon perché matchate
+fuzzy ad un "super-gruppo" culturale-linguistico nel dataset aourednik o ad
+un polygon Natural Earth moderno.
+
+Esempi catastrofici risolti:
+- 10 polities etiopi (1270-1830) condividevano polygon Etiopia moderna
+- 7 sultanati indonesiani condividevano polygon Dutch East Indies
+- 6 stati Levantini medievali (Fatimidi, Ayyubidi, Crociati, Ikhshididi,
+  Ziridi, Beit al-Maqdis) condividevano polygon "Fatimid Caliphate"
+- 5 polities antico Levante (Tadmor/Phoenicia/Israele/Giuda/Edom)
+  condividevano polygon "Kingdom of David and Solomon" anacronistico
+- 4 polities Bantu (Bunyoro, Bigo bya Mugenyi, Ntusi, Mbundu) condividevano
+  l'intera area linguistica Bantu (693 deg² Africa subsahariana!)
+- 19 gruppi aourednik di 3-entità mismatched (Moche/Olmec/Toltec/Pagan/
+  Hittiti/Parthian/Chagatai/Abbasid/Achaemenid/Annam/Bosnia/Ghaznavid/
+  Golden Horde/Polynesians/Suren/Yemen/Phrygians/Delhi/Sui)
+- 12+ duplicati flagged per merge (Bohemia Czech×2, Buyid×2, Viceroyalty×2,
+  Hashemite Hijaz×2, Khazars×2, Capitania Guatemala×2, ecc.)
+
+Per ogni entità impattata: polygon sostituito con cerchio storicamente
+realistico attorno alla capitale (raggio per entity_type + ricerca storica
+specifica), confidence ridotta, ETHICS note dettagliata in `ethical_notes`.
+
+### Collision guard (regression prevention)
+
+Nuovo `src/ingestion/boundary_collision_guard.py` rileva collision al boot:
+- **Big groups** (N≥4 entità con polygon identico) → suspect fuzzy-match
+- **Super-group alerts** (stesso `boundary_aourednik_name` + > 200 anni
+  di span) → strong regression signal
+
+Integrato in `run_boundary_guards_at_boot()` come Guard #4 dopo:
+1. displaced aourednik (ETHICS-006)
+2. antimeridian + wrong-country polygons (v6.31)
+3. sync boundary_geom from boundary_geojson (ADR-009)
+
+Status returnati: `ok` / `warning` / `alarm`. Log warning su prima
+discovery, log debug se baseline pulita.
+
+### Collision audit test (CI fence)
+
+Nuovo `tests/test_boundary_collisions_audit.py` con 3 test:
+- `test_no_super_group_collision_regression` — fail se super_group_alerts > 0
+- `test_collision_count_within_baseline` — fail se total_groups > 60
+- `test_no_big_collision_groups` — fail se N≥4 entità condividono polygon
+
+Pre-Phase-H baseline avrebbe rotto tutti i test (100+ collisions, 24+
+super-group alerts). Post-Phase-H: 0 collisions, 0 alerts.
+
+### Lapita label fix (frontend)
+
+`static/app.js`: per polygon che attraversano antimeridian (`lonSpan > 180°`),
+usa `e.capital.lat/lon` invece di `getBounds().getCenter()` per posizionare
+il label. Lapita ora label a Vanuatu (era Oceano Indiano).
+
+### Backup + deploy
+
+- Backup pre-Phase-H: `/root/atlaspi-boundary-backup-20260528-114032.sql` (37MB)
+- Deploy live via `cra-deploy atlaspi` (3 round: SQL guard, frontend, docs)
+- Verifica collision guard in produzione: `cra-logs atlaspi` mostra
+  `status: OK, 0 collision groups, 0 super_group_alerts, 0 big_groups`
+
+### Boundary source distribution (delta)
+
+| Source | Pre | Post | Δ |
+|---|---|---|---|
+| `approximate_circle` | 0 | 280 | +280 (NUOVO) |
+| `aourednik` | 375 | 195 | -180 |
+| `natural_earth` | 197 | 91 | -106 |
+| `historical_approximation` | 297 | 281 | -16 |
+| `historical_map` | 168 | 168 | invariato |
+
+### Ethical / governance impact
+
+ETHICS-012 nuovo record. Phase H ha:
+1. Ridotto confidence_score di ~280 entità (perdita di precisione
+   apparente ma onesta — i polygon erano falsamente precisi)
+2. Aggiunto note ETHICS dettagliate per ogni entità (colonialismo,
+   genocidi, fonti storiche)
+3. Marcato 12+ duplicati per consolidamento futuro
+4. Identificato bug sistemico nel matcher aourednik (ETHICS-006 follow-up)
+
+### Test
+
+Suite full pass (collision audit test verde post-fix). 0 regressioni
+test pre-esistenti.
+
+### Docs
+
+- `docs/boundary-review-v6.99.79/phase1_screening_report.md`
+- `docs/boundary-review-v6.99.79/LOOP_STATE.md`
+- `docs/boundary-review-v6.99.79/tier{1A,1B,2_batch{1..5},3,3_final,3_collision_guard,3_collision_remaining,3_final_collisions,3_remaining_outliers}_*.sql`
+- `docs/boundary-review-v6.99.79/lapita_label_fix_notes.md`
+- `docs/boundary-review-v6.99.79/screenshots/` (8 file)
+- `docs/ethics/ETHICS-012-phase-h-boundary-review.md` (nuovo)
+
+---
+
 ## [v6.99.79] - 2026-05-28 (Phase G2 — Reputation system + Contributors leaderboard)
 
 **Tema**: *Trust scoring per scalare il feedback layer*
