@@ -13,7 +13,7 @@
 |------|-------------|----------|--------|------|
 | 1A | Default placeholder squares → circles | 16 | done | ✅ 16 |
 | 1B | Bigo bya Mugenyi + Bantu collision | 4 | done | ✅ 4 |
-| 1C | Lapita centroid override | 1 | deferred (needs frontend label_lat/lon column) | — |
+| 1C | Lapita centroid override | 1 | done — frontend fix in static/app.js | ✅ 1 |
 | 2-Batch1 | aourednik super-groups (Fatimid+Taino+5levant+HRE+Byz+Huari+Sui+Srivijaya+Greek+Anatolia) | 46 | done | ✅ 46 |
 | 2-Batch2 | natural_earth super-groups (Ethiopia+Indonesia+Congo+Vietnam+Senegambia+WAfrica+Uzbek+Germany) | 43 | done | ✅ 43 |
 | 2-Batch3 | aourednik 3-entity groups (19 groups: Moche/Olmec/Parthian/Hittites/Pagan/Chagatai/Abbasid/Achaemenid/Annam/Bosnia/Ghaznavid/Golden Horde/Polynesians/Suren/Toltec/Ur/Yemen/Phrygians/Delhi) | 57 | done | ✅ 57 |
@@ -23,7 +23,7 @@
 | 3-cont | Remaining outliers (Kish/Finland/Lucayan + Xianbei/Miji ya Pwani ETHICS) | 5 | done | ✅ 5 |
 | 3-guard | Super-group alerts found by collision guard (Arakan/Nabatean/Nazca/Qataban/Urartu) | 10 | done | ✅ 10 |
 | 4-guard | Code-level: `boundary_collision_guard.py` + test_boundary_collisions_audit.py + integration in `boundary_guards.py` lifespan | — | done | ✅ |
-| 4-Lapita | Lapita label_lat/lon column — needs frontend change | — | future iter | deferred |
+| 4-Lapita | Lapita label fix via lonSpan detection + capital fallback | 1 | done in commit 1930fdd | ✅ |
 | 5 | Duplicate consolidation (~10 entity pairs flagged for merge) | ~20 | future iter | deferred |
 
 **Total entities processed**: **340 entities** — 100% COMPLETE
