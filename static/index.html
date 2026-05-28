@@ -63,7 +63,10 @@
       <button id="sidebar-toggle" class="sidebar-toggle" data-i18n-title="sidebar_toggle_title" data-i18n-aria-label="sidebar_toggle_aria" title="Mostra/nascondi pannello filtri" aria-label="Toggle sidebar" aria-pressed="true">
         <span class="sidebar-toggle-icon">◀</span>
       </button>
-      <button id="ask-claude-btn" class="ask-claude-btn" data-i18n-title="ask_claude_title" data-i18n-aria-label="ask_claude_aria" title="Chiedi a Claude usando i dati di AtlasPI" aria-label="Apri Claude con prompt precompilato"><span data-i18n="ask_claude">Ask Claude</span></button>
+      <!-- v6.99.84 Wave 1.4: rimosso aria-label per matchare visible text
+           ("Ask Claude") — Lighthouse a11y "label consistent with visible
+           text". title resta per hover tooltip. -->
+      <button id="ask-claude-btn" class="ask-claude-btn" data-i18n-title="ask_claude_title" title="Chiedi a Claude usando i dati di AtlasPI"><span data-i18n="ask_claude">Ask Claude</span></button>
     </div>
   </header>
 
@@ -71,7 +74,7 @@
   <div id="onboarding" class="onboarding-overlay" style="display:none;" role="dialog" aria-labelledby="onboarding-title">
     <div class="onboarding-card">
       <h2 id="onboarding-title" data-i18n="onb_title">Benvenuto in AtlasPI 👋</h2>
-      <p class="sub" data-i18n="onb_sub">Il database geografico storico per esplorare 1033 imperi, 643 eventi, 105 sovrani, 40 siti UNESCO.</p>
+      <p class="sub" data-i18n="onb_sub">Il database geografico storico per esplorare 1038 imperi, 643 eventi, 105 sovrani, 40 siti UNESCO.</p>
 
       <div class="onboarding-step">
         <div class="num">1</div>
@@ -296,7 +299,9 @@
     <div id="detail-panel" class="detail-panel hidden" role="dialog" aria-label="Dettagli entit&agrave;">
       <button id="close-detail" class="close-btn" aria-label="Chiudi pannello dettagli">&times;</button>
       <div id="detail-content">
-        <div class="detail-spinner" aria-label="Caricamento dettagli">
+        <!-- v6.99.84 Wave 1.4: role="status" rende valido aria-label su div
+             (era flagged da Lighthouse: aria-label senza ruolo valido). -->
+        <div class="detail-spinner" role="status" aria-label="Caricamento dettagli">
           <div class="spinner"></div>
         </div>
       </div>

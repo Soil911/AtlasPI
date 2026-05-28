@@ -272,4 +272,24 @@ i boundary_geojson, indipendentemente dall'anno visualizzato.
 
 Pronto per cra-deploy + verifica network panel + tag v6.99.83.
 
+**Wave 1.3: COMPLETE.** v6.99.83 deployata. Network: 27 MB → 1.02 MB (96% reduction). AbortController + cache verified via 3 scenari.
+
+## Wave 1.4 — Housekeeping (2026-05-28)
+
+5 fix in batch, basso rischio:
+1. `static/index.html` ask-claude-btn: rimosso aria-label mismatch
+2. `static/index.html` detail-spinner: role="status"
+3. `static/index.html` onboarding: 1033 → 1038
+4. `static/llms.txt`: count 1034 → 1038 + "(100% boundary coverage)"
+5. `ROADMAP.md`: versione corrente + v6.22 storico + nota su v6.23-v6.26 superseded
+6. **Bump APP_VERSION** 6.99.80 → 6.99.84 in `src/config.py` + `pyproject.toml`
+   (recupero coerenza dopo 3 sub-wave dimenticate)
+
+Skip ChatGPT cross-check (modifiche puramente documentative).
+Skip pytest (no runtime .py change). Solo JS syntax (HTML/text edits).
+
+Deploy v6.99.84 e tag.
+
+**Wave 1.4: COMPLETE.**
+
 

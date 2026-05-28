@@ -13,6 +13,21 @@
 
 ## Versioni completate
 
+### v6.99.81-83 Wave 1 -- Security, data-fix, perf (2026-05-28)
+**Versione corrente: v6.99.83.** Triplo deploy autonomo in 1 sessione
+(`auto-iter-wave0` branch, ChatGPT-5.5 cross-check ogni step):
+- **v6.99.81** — Admin containment: tutti i 19 endpoint `/admin/*` ora
+  richiedono auth (X-Admin-Token header o Basic Auth admin:TOKEN).
+  Prima erano security-by-obscurity. 13 nuovi test in
+  `tests/test_admin_auth.py`. Vedi CHANGELOG.
+- **v6.99.82** — Antimeridian data fix: id 754 Sau o Futuna e id 307
+  Lapita avevano polygon bbox 359° (wrap-around). Sostituiti con cerchi
+  storicamente realistici. Label mappa rendono ora nel Pacifico, non
+  in Atlantico/centro mondo.
+- **v6.99.83** — Performance year-aware lazy load: ~27 MB upfront
+  ridotto a ~3 MB (single fetch `/v1/entities?year=Y&limit=500`).
+  AbortController + cache per anno. Default load -85%.
+
 ### v6.99.80 Phase H -- Systematic boundary review + matcher hardening (2026-05-28)
 - **340 entità polygon-fixed**: risoluzione di ~100 polygon collisions causate
   da fuzzy matching aourednik/natural_earth con super-gruppi culturali-linguistici
@@ -340,7 +355,8 @@
 - 899 test
 
 ### v6.22 -- EMBEDDABLE WIDGETS + MAJOR EVENT EXPANSION (2026-04-16)
-**Versione corrente.**
+**Storico** (NON più versione corrente — superseded dalla serie v6.99.x
+in alto; vedi v6.99.81-83 per "Versione corrente").
 
 - **+89 eventi** (312 -> **401**) in 4 batch tematici:
   - batch_17: 38 eventi XX secolo (Trianon, Spanish Civil War, Indian independence, ...)
@@ -356,6 +372,13 @@
 ---
 
 ## Roadmap attiva -- Prossime release
+
+> **Nota di sync (v6.99.83, 2026-05-28)**: le entries `v6.23-v6.26` sotto
+> in questa sezione sono **storiche/superseded**, in larga parte assorbite
+> dalla serie v6.99.x (Phase B-G enrichment + Wave 1 security/perf). Da
+> rifattorizzare in una nuova `v7.x` roadmap consolidata. Le 3 priorità
+> attive sono: v7.1 (post-benchmark pivot), v7.2 (Zenodo + multi-turn),
+> Wave 1.4+ (housekeeping in corso).
 
 ### v7.1 -- Post-benchmark pivot (TOP PRIORITY)
 **Obiettivo**: implementare le 5 implementation items da ADR-007 dopo

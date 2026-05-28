@@ -2,6 +2,54 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.84] - 2026-05-28 (Wave 1.4 — Housekeeping)
+
+**Tema**: *Sync docs, a11y micro-fix, llms.txt count update, APP_VERSION bump.*
+
+### Bump APP_VERSION 6.99.80 → 6.99.84
+
+Recupero coerenza: `src/config.py::APP_VERSION` e `pyproject.toml::version`
+erano rimaste a 6.99.80 anche dopo i 3 deploy v6.99.81-83 di Wave 1
+(bump dimenticato in foga). Ora allineate a 6.99.84.
+
+### Docs sync (ROADMAP.md)
+
+- Aggiunta entry top "Versione corrente: v6.99.83 Wave 1" con riassunto
+  delle 3 sub-release (admin containment, antimeridian fix, perf 27→3MB)
+- Marcato v6.22 entry come "Storico" (non più "Versione corrente")
+- Nota di sync su "Roadmap attiva": v6.23-v6.26 sono storiche/superseded
+  da Phase B-G + Wave 1. Da rifattorizzare in v7.x consolidata.
+- Le 3 priorità attive chiare: v7.1, v7.2, Wave 1.4+
+
+### A11y micro-fix (static/index.html)
+
+- `#ask-claude-btn`: rimosso `aria-label="Apri Claude con prompt
+  precompilato"` perché mismatch con visible text "Ask Claude"
+  (Lighthouse "label consistent with visible text"). `title` resta
+  come hover tooltip.
+- `.detail-spinner`: aggiunto `role="status"` per validare `aria-label`
+  (era flagged: aria-label senza ruolo valido). Pattern WAI-ARIA
+  per indicatori di caricamento.
+- Onboarding text: 1033 → 1038 imperi (sync con count attuale).
+
+### Count update (static/llms.txt)
+
+`1,034 entities` → `1,038 entities`, + "(100% boundary coverage)" come
+nota di garanzia per AI agents che consumano il file.
+
+### Files
+
+- MODIFIED: `src/config.py`, `pyproject.toml`, `CHANGELOG.md`,
+  `ROADMAP.md`, `static/index.html`, `static/llms.txt`,
+  `docs/auto-iteration-log.md`
+- NO new files. NO backend logic change. NO migration.
+
+Cross-check ChatGPT-5.5 saltato per Wave 1.4 (modifiche puramente
+documentative/cosmetiche, basso rischio). Backend pytest non rilevante
+(no .py runtime change oltre version string).
+
+---
+
 ## [v6.99.83] - 2026-05-28 (Wave 1.3 — Perf: year-aware lazy boundary load)
 
 **Tema**: *Eliminata regressione di banda ~27 MB upfront sul first page load
