@@ -20,10 +20,13 @@
 | 2-Batch4 | small natural_earth (Bohemia/CentralAmerica/CongoCoast/Fiji×2) + top 2-entity (CSA/CaliforniaRep/PRC/RoC/Nanzhao/Ganzhou/Moscow/Horde/Ryukyu/Ainu/Tang/FiveDyn/Bactria/IndoGreek/Shang/Zhou/Prussia/GermanEmpire) | 33 | done | ✅ 33 |
 | 2-Batch5 | Remaining 2-entity (40 entities: PLC/Hetmanate/Seljuk/Edessa/Puebloans/PeruVR/RdPlataVR/Patagonia/Mapuche/Iran×2/DSE/Karagwe/Khazars/Durrani/AfghanEmir/Buyid/Idrisid/Barghawata/Hafsid/Zayyanid/Cordoba/Taifa/Hijaz/Bagirmi/Teda/Chalukya/Yadava/Oyo/Sokoto/Salinar/Tiahuanaco/Kaabu/Dyolof) | 40 | done | ✅ 40 |
 | 3 | High-certainty outliers + ETHICS records (Kuhikugu/Thulamela/Lakhmid/Theloal/Yoruba/Qocho/LaterZhao/Cimmerian/Aonikenk + Harappa/Aboriginal ethics notes) | 11 | done | ✅ 11 |
-| 3-pending | Remaining outliers (low priority — Russia/USSR/USA/etc are correct large entities) | ~20 | future iter | |
-| 4 | Code-level fixes (Lapita label_lat/lon column + ETHICS records consolidation + boundary_match.py audit to prevent regression) | — | future iter | |
+| 3-cont | Remaining outliers (Kish/Finland/Lucayan + Xianbei/Miji ya Pwani ETHICS) | 5 | done | ✅ 5 |
+| 3-guard | Super-group alerts found by collision guard (Arakan/Nabatean/Nazca/Qataban/Urartu) | 10 | done | ✅ 10 |
+| 4-guard | Code-level: `boundary_collision_guard.py` + test_boundary_collisions_audit.py + integration in `boundary_guards.py` lifespan | — | done | ✅ |
+| 4-Lapita | Lapita label_lat/lon column — needs frontend change | — | future iter | deferred |
+| 5 | Duplicate consolidation (~10 entity pairs flagged for merge) | ~20 | future iter | deferred |
 
-**Total entities processed**: **250 entities** (~85% of estimated 170 + extras)
+**Total entities processed**: **265 entities** (~94% with code-level guard installed)
 **Boundary source distribution after fixes**:
 - approximate_circle: 225 (NEW)
 - aourednik: 247 (was 375 — 128 fixed)
@@ -31,7 +34,8 @@
 - historical_approximation: 281 (was 297 — 16 fixed via Tier 1A)
 - historical_map: 168 (unchanged — already curated)
 
-**Remaining collisions in DB**: 40 (was 100+) — minor 2-entity groups deferred to future iteration
+**Remaining collisions in DB**: 35 (was 100+) — minor 2-entity groups (mostly known duplicates)
+**Collision guard status**: deployed; production guard reports `status: warning, 35 groups, 75 entities, 0 super_group_alerts, 1 big_group (Micronesia legit)`
 
 ---
 
@@ -166,3 +170,7 @@ Ordinati per ratio area/median. Top 20:
 | 8    | 2026-05-28 | 2-Batch5 | 40 | tier2_batch5_remaining_2entity.sql executed | remaining 2-entity collisions |
 | 9    | 2026-05-28 | 3 | 11 | tier3_final_outliers.sql executed | Kuhikugu/Thulamela/Lakhmid/Qocho/etc + Harappa/Aboriginal ethics |
 | 10   | 2026-05-28 | visual-verify | — | 3 screenshots (year -500/1000/1500/1700) | map now shows distinct polygons |
+| 11   | 2026-05-28 | 3-cont | 5 | tier3_remaining_outliers.sql executed | Kish/Finland/Lucayan/Xianbei/Miji ya Pwani |
+| 12   | 2026-05-28 | code-guard | — | boundary_collision_guard.py + test | regression detector at boot |
+| 13   | 2026-05-28 | 3-guard | 10 | tier3_collision_guard_fixes.sql executed | Arakan/Nabatean/Nazca/Qataban/Urartu super-group splits |
+| 14   | 2026-05-28 | deploy | — | cra-deploy atlaspi successful | guard now running in production lifespan |
