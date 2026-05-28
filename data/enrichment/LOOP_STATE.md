@@ -196,23 +196,39 @@ feedback umano + AI + bot, telemetry, citation tracking, embeddable badges.
 stdio transport (atlaspi-mcp PyPI v0.9.0) basta per ora. Endpoint HTTP/SSE
 richiederebbe container Docker separato + nginx routing — ~3-4h. Differito.
 
+### Wrap-up 2026-05-28 (questa sessione) — DONE ✅
+
+1. **atlaspi-mcp v0.9.0 pubblicato su PyPI** ✅
+   - GH Action `publish-mcp.yml` triggerata manualmente → riuscita in 39s
+   - Versione live: `pip install atlaspi-mcp` → 0.9.0
+
+2. **ATLASPI_ADMIN_TOKEN settato sul VPS** ✅
+   - Token aggiunto in `/opt/cra/.env.atlaspi`
+   - Container riavviato, health OK
+   - Token salvato: `c42aed3bd3adcf898b61f9991c9729054ac71ec510627a13`
+   - ⚠️ SALVA QUESTO TOKEN da qualche parte sicura (es. password manager)
+
+3. **Test Claude vs GPT-5.5 sul feedback system** ✅
+   - Script: `scripts/chatgpt_feedback_comparison.py`
+   - Testati 3 entità live: Imperium Romanum, Campā, Βασίλειον τῶν Πτολεμαίων
+   - GPT ha trovato cose più specifiche (Byzantine continuity, Champa fragmentation)
+   - Claude più conservativo (generico "missing_source")
+   - 12 feedback nel DB come test (pending, submitter_type=ai_agent)
+   - Report: `data/chatgpt_review/20260528/feedback_comparison.json`
+
+4. **data/citations.json creato** ✅
+   - Seed con 1 voce manuale (Zenodo record)
+   - Live: https://atlaspi.cra-srl.com/citations/data → total:1
+   - Aggiungere qui blog post, tesi, articoli che citano AtlasPI
+
+5. **G6 MCP HTTP** — ancora differito, spiegato sopra
+
 ### Open items per Clirim
 
-1. **Pubblicare atlaspi-mcp v0.9.0 su PyPI**:
-   ```bash
-   gh workflow run publish-mcp.yml
-   ```
+1. **ATLASPI_ADMIN_TOKEN** — già settato ✅, token:
+   `c42aed3bd3adcf898b61f9991c9729054ac71ec510627a13`
+   Usalo in: `curl -H "X-Admin-Token: <token>" -X PATCH https://atlaspi.cra-srl.com/v1/feedback/<id> -d '{"status":"accepted"}'`
 
-2. **Settare `ATLASPI_ADMIN_TOKEN` env var** sul VPS per PATCH feedback:
-   ```bash
-   ssh -i ~/.ssh/cra_vps root@77.81.229.242
-   # edit /opt/cra/.env.atlaspi → add ATLASPI_ADMIN_TOKEN=<random-32-char>
-   # docker compose restart
-   ```
+2. **Test feedback widget**: apri https://atlaspi.cra-srl.com/app, seleziona entità, clicca "🚩 Segnala"
 
-3. **Curare `data/citations.json`** per blog/paper non su OpenAlex.
-
-4. **Test feedback widget UI**: apri `https://atlaspi.cra-srl.com/app`,
-   seleziona entita', clicca "🚩 Segnala".
-
-5. **G6 MCP HTTP**: differito ~3-4h se serve.
+3. **G6 MCP HTTP**: differito — non necessario ora, vedi nota sopra
