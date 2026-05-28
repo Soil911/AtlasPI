@@ -1435,7 +1435,19 @@ function renderMap(entities) {
         layerGroup.addLayer(layer);
 
         // Label entità (spec §5): Inter 8.5/11px, #a0a9b5/#fff, weight 400/600
-        const center = layer.getBounds().getCenter();
+        // v6.99.79 Phase H: per polygon che attraversano l'antimeridian
+        // (span lon > 180°, es. Lapita, Russian Federation), `getBounds()`
+        // ritorna un bbox-piatto enorme col centro in Oceano Indiano/Atlantico.
+        // In quel caso preferiamo capital_lat/lon se presente — è il punto
+        // semanticamente corretto per il label dell'entità.
+        const bounds = layer.getBounds();
+        const lonSpan = bounds.getEast() - bounds.getWest();
+        let center;
+        if (lonSpan > 180 && e.capital && e.capital.lat != null && e.capital.lon != null) {
+          center = L.latLng(e.capital.lat, e.capital.lon);
+        } else {
+          center = bounds.getCenter();
+        }
         const labelColor = isSel ? '#ffffff' : '#a0a9b5';
         const labelSize = isSel ? 11 : 8.5;
         const labelWeight = isSel ? 600 : 400;
