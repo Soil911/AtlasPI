@@ -337,14 +337,12 @@ async function loadEntities() {
     const lightRes = await fetch(`${API}/v1/entities/light?limit=2000`, { cache: 'no-cache' });
     if (!lightRes.ok) throw new Error(`HTTP ${lightRes.status}`);
     const lightData = await lightRes.json();
-    allEntities = (lightData.entities || []).map(e => ({ ...e, _has_boundary: false }));
+    allEntities = (lightData.entities || []).map(e => ({ ...e, _boundary_load_state: undefined }));
     if (loadBar) loadBar.style.width = '40%';
     document.getElementById('entity-count').textContent = `${allEntities.length} ${t('entities')}`;
     applyFilters(); // first render: markers + search + filters operativi
-
-    // ─── Phase 2: progressive boundary load in background ──────
-    // Non bloccante: ritorna subito, il caricamento avviene in background.
-    loadEntityBoundariesInBackground(loadBar);
+                    // applyFilters() triggera anche loadBoundariesForYear(currentYear)
+                    // tramite hook v6.99.83 (vedi inizio applyFilters).
   } catch (err) {
     if (loadBar) { loadBar.style.width = '100%'; loadBar.style.background = 'var(--disputed)'; }
     showError(t('error_connection') || 'Impossibile caricare i dati.');
@@ -353,63 +351,99 @@ async function loadEntities() {
   }
 }
 
-async function loadEntityBoundariesInBackground(loadBar) {
-  // v6.68: carica progressivamente boundary_geojson via /v1/entities paginato.
-  // Merge in place in allEntities (che contiene già metadata via light).
-  const byId = new Map();
-  allEntities.forEach(e => byId.set(e.id, e));
+// v6.99.83 Wave 1.3: year-aware lazy boundary load.
+//
+// Sostituisce il vecchio Phase 2 (10x /v1/entities?limit=100&offset=N = ~27 MB
+// upfront, indipendente dall'anno visualizzato). Adesso:
+//   - Phase 1: invariata (/v1/entities/light?limit=2000, 272 KB)
+//   - Phase 2 NEW: on year-load/change, fetch solo boundaries per entità ATTIVE
+//     in quell'anno (/v1/entities?year=Y&limit=500, ~0.5-5 MB per anno)
+//   - Cache per anno via boundaryYearState Map (dedup, no double-fetch)
+//   - AbortController su year rapido (slider drag, playback) → solo l'ultima
+//     fetch sopravvive (no rate-limit pressure)
+//   - Paginate defensively se mai un anno superasse 500 active (oggi peak 331)
+//   - Merge SOLO boundary_geojson + campi opzionali non-conflittuali (NO
+//     overwrite di name/status/year/confidence — quelli vengono da /light)
+//
+// Cross-check GPT-5.5 round 2 (data/chatgpt_review/20260528/ask.jsonl) ha
+// guidato: Map state {status,promise,...}, AbortController, paginate
+// defensive, no field overwrite, debounce implicito via cache.
+const boundaryYearState = new Map(); // year (int) -> {status:'pending'|'loaded'|'error', promise, loadedAt, error}
+let boundaryCurrentAbortController = null;
+let boundaryActiveGeneration = 0;
 
-  let offset = 0;
-  const limit = 100;
-  let total = Infinity;
+async function loadBoundariesForYear(year, loadBar) {
+  if (!Number.isFinite(year)) return;
+  const existing = boundaryYearState.get(year);
+  if (existing && existing.status === 'loaded') return; // hit
+  if (existing && existing.status === 'pending') return existing.promise; // dedup concurrent
 
-  while (offset < total) {
+  // Abort previous in-flight (different year)
+  if (boundaryCurrentAbortController) {
+    try { boundaryCurrentAbortController.abort(); } catch (_) { /* noop */ }
+  }
+  boundaryCurrentAbortController = new AbortController();
+  const myController = boundaryCurrentAbortController;
+  const myGen = ++boundaryActiveGeneration;
+
+  if (loadBar) { loadBar.style.width = '50%'; loadBar.style.opacity = '1'; }
+
+  const promise = (async () => {
+    const limit = 500;
+    let offset = 0;
+    let totalMerged = 0;
     try {
-      const res = await fetch(`${API}/v1/entities?limit=${limit}&offset=${offset}`, { cache: 'no-cache' });
-      if (!res.ok) break;
-      const data = await res.json();
-      total = data.total ?? data.count ?? 0;
-      const batch = data.entities || [];
-      if (batch.length === 0) break;
-
-      batch.forEach(full => {
-        const existing = byId.get(full.id);
-        if (existing) {
-          existing.boundary_geojson = full.boundary_geojson;
-          existing.name_variants = full.name_variants;
-          existing.sources = full.sources;
-          existing.ethical_notes = full.ethical_notes;
-          existing.territory_changes = full.territory_changes;
-          existing._has_boundary = true;
-        } else {
-          // edge case: entità presente in /v1/entities ma non in /light
-          const withFlag = { ...full, _has_boundary: true };
-          byId.set(full.id, withFlag);
-          allEntities.push(withFlag);
+      // Paginate defensively: today peak is 331 active in any year (<500),
+      // but if future expansion exceeds 500 we keep correctness.
+      while (true) {
+        const url = `${API}/v1/entities?year=${year}&limit=${limit}&offset=${offset}`;
+        const res = await fetch(url, { signal: myController.signal, cache: 'default' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        if (myGen !== boundaryActiveGeneration) {
+          return; // newer year requested — drop result
         }
-      });
+        const data = await res.json();
+        const batch = data.entities || [];
+        if (batch.length === 0) break;
 
-      offset += limit;
-      if (loadBar && total > 0) {
-        const pct = 40 + Math.round((offset / total) * 55);
-        loadBar.style.width = `${Math.min(95, pct)}%`;
-      }
+        // Merge ONLY boundary_geojson + non-conflicting optional fields.
+        // Do NOT overwrite name/status/year/confidence: canonical from /light.
+        const byId = new Map();
+        allEntities.forEach(e => byId.set(e.id, e));
+        batch.forEach(full => {
+          const e = byId.get(full.id);
+          if (!e) return; // entity not in /light → ignore (light has canonical list)
+          e.boundary_geojson = full.boundary_geojson;
+          e._boundary_load_state = 'loaded';
+          if (!e.sources) e.sources = full.sources;
+          if (!e.ethical_notes) e.ethical_notes = full.ethical_notes;
+          if (!e.territory_changes) e.territory_changes = full.territory_changes;
+          if (!e.name_variants) e.name_variants = full.name_variants;
+        });
+        totalMerged += batch.length;
 
-      // Re-render mappa incrementale: ogni ~200 entità o a fine batch
-      if (offset % 200 === 0 || offset >= total) {
-        applyFilters();
+        if (batch.length < limit) break; // exhausted
+        offset += limit;
       }
-    } catch (e) {
-      // Network error: interrompi senza mostrare errore bloccante
-      break;
+      if (myGen === boundaryActiveGeneration) {
+        boundaryYearState.set(year, { status: 'loaded', loadedAt: Date.now(), totalMerged });
+        applyFilters(); // re-render with boundaries
+      }
+    } catch (err) {
+      if (err && err.name === 'AbortError') return; // benign
+      // silent fail: UI keeps working, polygons missing for this year only
+      boundaryYearState.set(year, { status: 'error', error: String(err) });
+      // do NOT mark as cached, allow retry on next applyFilters
+    } finally {
+      if (loadBar && myGen === boundaryActiveGeneration) {
+        loadBar.style.width = '100%';
+        setTimeout(() => { loadBar.style.opacity = '0'; }, 300);
+      }
     }
-  }
+  })();
 
-  if (loadBar) {
-    loadBar.style.width = '100%';
-    setTimeout(() => { loadBar.style.opacity = '0'; }, 300);
-  }
-  applyFilters(); // final render with all boundaries
+  boundaryYearState.set(year, { status: 'pending', promise });
+  return promise;
 }
 
 async function loadDetail(id) {
@@ -1253,6 +1287,14 @@ function applyFilters() {
   const year = parseInt(document.getElementById('year-slider').value, 10);
   const statuses = getStatuses();
   const sortVal = document.getElementById('sort-select').value;
+
+  // v6.99.83 Wave 1.3: fire-and-forget boundary load for current year.
+  // Cache + AbortController garantiscono dedup e nessuna pressione rate-limit.
+  // Skipped silently se year non finito.
+  if (typeof loadBoundariesForYear === 'function') {
+    const loadBar = document.getElementById('loading-bar');
+    loadBoundariesForYear(year, loadBar);
+  }
 
   let filtered = allEntities.filter(e => {
     if (!statuses.includes(e.status)) return false;

@@ -238,4 +238,38 @@ Tag `v6.99.82` da pushare dopo cra-deploy.
 
 **Wave 1.2: COMPLETE.**
 
+## Wave 1.3 — Year-aware lazy boundary load (2026-05-28)
+
+Status: IMPLEMENTED, awaiting deploy + visual verify.
+
+### Bug
+
+`loadEntityBoundariesInBackground` (v6.68) faceva 10 fetch sequenziali
+a `/v1/entities?limit=100&offset=N` (~27 MB totali) per pre-caricare TUTTI
+i boundary_geojson, indipendentemente dall'anno visualizzato.
+
+### Fix design (post ChatGPT-5.5 cross-check, 12+ critiche applicate)
+
+- Phase 1 invariata: `/v1/entities/light?limit=2000` (272 KB)
+- Phase 2 NEW: `/v1/entities?year=Y&limit=500` solo on year change
+- Cache Map<year, {status, promise, ...}>
+- AbortController per stale race
+- Paginate defensive (future-proof se anno > 500 entità)
+- Merge solo boundary_geojson + opzionali (no overwrite name/status)
+
+### Trade-offs (verificati)
+
+- Default load: 272 KB + ~3 MB = ~85% reduction vs 27 MB
+- Year change: 0.5-5 MB single fetch (cached dopo)
+- Peak active year (1500=331): ben sotto limit=500
+- Rate-limit: AbortController evita pressure su slider drag
+
+### File toccati
+
+- MODIFIED: `static/app.js` (~+30 LOC net)
+- JS syntax OK (`node --check`)
+- Backend pytest: 1292 pass, 0 failed
+
+Pronto per cra-deploy + verifica network panel + tag v6.99.83.
+
 

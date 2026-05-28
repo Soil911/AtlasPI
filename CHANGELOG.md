@@ -2,6 +2,72 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.83] - 2026-05-28 (Wave 1.3 — Perf: year-aware lazy boundary load)
+
+**Tema**: *Eliminata regressione di banda ~27 MB upfront sul first page load
+sostituendo la background-paginate-all con lazy load year-aware.*
+
+### Bug (identificato in Wave 0 brief C)
+
+Il v6.68 Phase 2 (`loadEntityBoundariesInBackground`) faceva **10 fetch
+sequenziali** `/v1/entities?limit=100&offset=N` (~2.7 MB ciascuna = ~27 MB
+totali) per scaricare TUTTI i `boundary_geojson` di tutte le 1038 entità,
+indipendentemente dall'anno visualizzato dall'utente. Conseguenze:
+- 95% bandwidth spreco per session tipica (utente naviga 1-3 anni)
+- LCP fine completo a ~4 secondi (`NetworkDependencyTree` Lighthouse)
+- Pressione su rate-limit globale + costi cdn/egress prod
+
+### Fix
+
+**`loadEntityBoundariesInBackground` → `loadBoundariesForYear(year, loadBar)`**:
+
+- Phase 1 invariata: `/v1/entities/light?limit=2000` (272 KB, metadata)
+- Phase 2 NEW: solo on year load/change, fetch
+  `/v1/entities?year=Y&limit=500` (~0.5-5 MB single request per anno)
+- Hook nella `applyFilters()` — riusa cache se anno già fetched
+- `Map<year, {status, promise, ...}>` per dedup concurrent + retry su errore
+- **AbortController**: rapid year change (slider drag, playback) abort
+  pending fetch → solo l'ultima sopravvive
+- **Paginate defensively**: today peak active=331 in year 1500, ma il
+  loop continua se mai un anno superasse 500 (future-proof)
+- **No field overwrite**: merge SOLO `boundary_geojson` + campi opzionali
+  con `if (!existing.X)`. `name/status/year/confidence` restano canonici
+  da `/light` (cross-check GPT-5.5)
+
+### Trade-offs
+
+**Win**: default load 272 KB + ~3 MB = **~85% riduzione vs 27 MB**.
+**Cost**: year change comporta ~500ms-2s fetch (cached dopo first).
+**Net**: meglio per la maggioranza degli utenti; comparable for power
+users browsing many years.
+
+### Verifica (post-deploy)
+
+- Network panel `/app?year=1500`: 1 fetch a `/v1/entities?year=1500&limit=500`
+  (~3 MB) invece di 10 fetch (~27 MB totali)
+- Visual: polygons rendono come prima per ogni anno testato
+- Year change: AbortController evita 429/rate-limit pressure su slider drag
+- Cache: anno gia' fetched → 0 network calls
+
+### Cross-check ChatGPT-5.5
+
+1 round (`data/chatgpt_review/20260528/ask.jsonl`).
+Modifiche obbligate applicate:
+- Map state {status, promise, loadedAt, error} (non solo Set)
+- AbortController + generation counter (evita stale race)
+- Paginate defensively (hardcoded 500 era silent failure waiting)
+- No field overwrite (merge granulare)
+- `_boundary_load_state` field (era `_has_boundary` bool — insufficient)
+- Cache strategy per retry su error
+
+### Files toccati
+
+- MODIFIED: `static/app.js` (-50 LOC + 80 LOC = +30 net)
+
+NO code change backend → no migration. Pytest backend: 1292 pass, 0 failed.
+
+---
+
 ## [v6.99.82] - 2026-05-28 (Wave 1.2 — Antimeridian data fix)
 
 **Tema**: *Fix dei 2 boundary polygon antimeridian-crossing (id 754 Sau o
