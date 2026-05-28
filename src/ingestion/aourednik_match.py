@@ -98,6 +98,174 @@ PRECISION_CONFIDENCE = {
 SKIP_NAMES = {"", "none"}
 
 
+# ═══════════════════════════════════════════════════════════════════════════
+# v6.99.80 Phase H follow-up: super-group polygon blacklist (ETHICS-012)
+# ═══════════════════════════════════════════════════════════════════════════
+# These NAMEs in aourednik label cultural-linguistic super-groups, not
+# political polities. Phase H discovered that fuzzy + capital-in-polygon
+# matching against these labels caused 100+ catastrophic polygon collisions
+# (e.g. 4 Bantu-area kingdoms matched to entire sub-Saharan Africa polygon,
+# 6 Levantine medieval states matched to a generic "Fatimid Caliphate" polygon,
+# 5 ancient Levantine kingdoms matched to anachronistic "Kingdom of David
+# and Solomon"). These NAMEs are now rejected as ineligible match targets.
+# Future entities that legitimately want one of these polygons (e.g. an entity
+# specifically representing the Bantu cultural area) should be assigned via
+# explicit `boundary_aourednik_name` override, not via fuzzy match.
+#
+# IMPORTANT: store labels as RAW strings — they get normalized at module-load
+# time via _normalize() (handles diacritics + punctuation + case). Don't
+# rely on a particular spelling/punctuation in the upstream aourednik data.
+_RAW_SUPER_GROUP_LABELS: tuple[str, ...] = (
+    # Linguistic families / cultural zones (not polities)
+    "Bantou",
+    "Polynesians",
+    "Phrygians",
+    "Hittites",
+    "Cimerians",  # aourednik spelling
+    "Cimmerians",
+    "Moche",  # cultural — distinct from kingdom of Moche (use exact_name)
+    "Olmec",
+    "Nazca",
+    "Ur",  # the city-state itself OK as exact_name; bucket label dangerous
+    "Huari Empire",  # OK as exact_name; bucket dangerous
+    "Sui Empire",
+    "Abbasid Caliphate",
+    "Achaemenid Empire",
+    "Parthian Empire",
+    "Sultanate of Delhi",
+    "Fatimid Caliphate",
+    "Ghaznavid Emirate",
+    "Chagatai Khanate",
+    "Golden Horde",
+    "Byzantine Empire",
+    "Holy Roman Empire",
+    # Vague anthropological / anachronistic labels
+    "Kingdom of David and Solomon",
+    "Greek city-states",
+    "Taino",
+    "Amazon hunter-gatherers",
+    "Eastern North American hunter-gatherers",
+    "West African cereal farmers",
+    "minor states",
+    "Annam",
+    "Qataban",
+    "Nabatean Kingdom",
+    "Urartu",
+    "Yemen",
+    "Mwenemutapa",
+    "Cuman-Kipchak confederation",
+    "Jin",
+    "Sasanian Empire",
+    "Srivijaya Empire",
+    "Pagan",
+    "Arakan",
+    "Bosnia",
+    "Toltec Empire",
+    "Suren Kingdom",
+)
+
+# Normalized form computed lazily on first access (avoids forward-reference
+# to _normalize, which is defined later in the module). _normalize() strips
+# diacritics, lowercases, removes punctuation (including hyphens), and
+# collapses whitespace — so "amazon hunter-gatherers" and "Amazon
+# Hunter-Gatherers" and "amazon hunter gatherers" all hit the same key.
+_SUPER_GROUP_LABELS_BLACKLIST_CACHE: frozenset[str] | None = None
+
+
+def _get_super_group_blacklist() -> frozenset[str]:
+    """Return the normalized super-group label set (lazy-init)."""
+    global _SUPER_GROUP_LABELS_BLACKLIST_CACHE
+    if _SUPER_GROUP_LABELS_BLACKLIST_CACHE is None:
+        _SUPER_GROUP_LABELS_BLACKLIST_CACHE = frozenset(
+            _normalize(label) for label in _RAW_SUPER_GROUP_LABELS
+        )
+    return _SUPER_GROUP_LABELS_BLACKLIST_CACHE
+
+
+# Public read-only handle for tests + introspection. Lazy-evaluated via
+# __getattr__ at module level (not used as a regular module attribute
+# because that would trigger normalization at import time, before _normalize
+# exists). Tests should call _get_super_group_blacklist() directly.
+SUPER_GROUP_LABELS_BLACKLIST: frozenset[str]
+
+
+def __getattr__(name: str) -> object:
+    """Module-level lazy attribute access for SUPER_GROUP_LABELS_BLACKLIST.
+
+    Allows `from aourednik_match import SUPER_GROUP_LABELS_BLACKLIST` to work
+    without triggering normalization at module-import time.
+    """
+    if name == "SUPER_GROUP_LABELS_BLACKLIST":
+        return _get_super_group_blacklist()
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+
+
+# Per-entity-type area ceilings (in approximate deg²) — used as sanity check.
+# Aourednik polygon with area > ceiling × AREA_SANITY_FACTOR for entity_type
+# is rejected (super-group polygon too large for that polity type).
+# Values aligned with TYPE_MAX_AREA_KM2 in fix_antimeridian_and_wrong_polygons.py
+# but converted to deg² (1 deg² ≈ 111² ≈ 12,321 km² at equator).
+TYPE_MAX_AREA_DEG2: dict[str, float] = {
+    "city": 0.8,            # ~10k km²
+    "city-state": 4.0,      # ~50k km²
+    "principality": 24.0,   # ~300k km²
+    "duchy": 24.0,
+    "chiefdom": 40.0,       # ~500k km²
+    "tribal_nation": 160.0, # ~2M km²
+    "tribal_federation": 160.0,
+    "confederation": 320.0, # ~4M km²
+    "kingdom": 640.0,       # ~8M km²
+    "sultanate": 400.0,     # ~5M km²
+    "republic": 1200.0,     # ~15M km²
+    "dynasty": 1600.0,      # ~20M km²
+    "caliphate": 1600.0,
+    "khanate": 3200.0,      # ~40M km²
+    "empire": 3200.0,
+    "cultural_region": 320.0,
+    "earthwork-complex": 0.5,
+    "settlement": 0.5,
+    "settlement-complex": 0.5,
+}
+
+# Stricter factor for small types (rarely legitimately exceed ceiling).
+AREA_SANITY_FACTOR = 3.0  # accept up to 3× ceiling for non-strict types
+AREA_SANITY_FACTOR_STRICT = 2.0  # 2× for small types
+
+STRICT_AREA_TYPES = {
+    "city", "city-state", "principality", "duchy", "chiefdom",
+    "earthwork-complex", "settlement", "settlement-complex",
+}
+
+
+def _is_super_group_label(name: str | None) -> bool:
+    """Check if an aourednik NAME is a known super-group/cultural-zone label."""
+    if not name:
+        return False
+    return _normalize(name) in _get_super_group_blacklist()
+
+
+def _is_polygon_too_large_for_type(
+    geometry: dict | None, entity_type: str | None
+) -> bool:
+    """Reject match if polygon area exceeds the type-ceiling × factor.
+
+    ETHICS-012 / Phase H: a city-state should never match an empire-sized
+    polygon. This rejects the class of error where fuzzy-matched a small
+    entity to a huge cultural-zone polygon (Bantu, Polynesia, etc.).
+    """
+    if not geometry or not entity_type:
+        return False
+    ceiling = TYPE_MAX_AREA_DEG2.get(entity_type)
+    if ceiling is None:
+        return False  # unknown type — pass through
+    factor = (
+        AREA_SANITY_FACTOR_STRICT if entity_type in STRICT_AREA_TYPES
+        else AREA_SANITY_FACTOR
+    )
+    area = _polygon_area_approx(geometry)
+    return area > ceiling * factor
+
+
 # ─── Data structures ────────────────────────────────────────────────────────
 
 
@@ -579,6 +747,61 @@ def match_entity_aourednik(
             )
 
     props = feat["properties"] or {}
+    matched_name = props.get("NAME")
+    geometry = feat.get("geometry")
+    entity_type = entity.get("entity_type")
+
+    # ──────────────────────────────────────────────────────────────────────
+    # v6.99.80 Phase H follow-up: super-group polygon rejection (ETHICS-012)
+    # ──────────────────────────────────────────────────────────────────────
+    # Reject if the matched aourednik NAME is a known cultural-zone label
+    # (Bantou, Polynesians, "minor states", "West African cereal farmers",
+    # etc.). These are super-group labels that should never become the
+    # boundary of a specific entity via fuzzy or capital-in-polygon.
+    # The legitimate primary entity (e.g. an actual "Bantou cultural region"
+    # entry) can be assigned this polygon via explicit boundary_aourednik_name
+    # override outside the matcher.
+    if _is_super_group_label(matched_name) and strategy != "exact_name":
+        logger.debug(
+            "Aourednik match rejected (super-group label, strategy=%s): %s -> %s",
+            strategy, entity.get("name_original"), matched_name,
+        )
+        return AourednikMatch(
+            matched=False,
+            aourednik_year=snap_year,
+            rejection_reason=f"super_group_label:{matched_name}",
+        )
+
+    # ──────────────────────────────────────────────────────────────────────
+    # v6.99.80 Phase H follow-up: area sanity check (ETHICS-012)
+    # ──────────────────────────────────────────────────────────────────────
+    # Reject if the matched polygon is much larger than the type ceiling.
+    # A city-state should not match an empire-sized polygon. This catches
+    # the class of error where a small entity gets matched to a huge
+    # cultural-zone polygon by fuzzy or capital-in-polygon strategy.
+    # Exception: exact_name match is trusted (the polygon legitimately
+    # represents the entity).
+    if (
+        strategy != "exact_name"
+        and _is_polygon_too_large_for_type(geometry, entity_type)
+    ):
+        area = _polygon_area_approx(geometry)
+        ceiling = TYPE_MAX_AREA_DEG2.get(entity_type, 0)
+        logger.debug(
+            "Aourednik match rejected (polygon area %.1f deg² >> type ceiling %.1f deg² "
+            "for %s, strategy=%s): %s -> %s",
+            area, ceiling, entity_type, strategy,
+            entity.get("name_original"), matched_name,
+        )
+        return AourednikMatch(
+            matched=False,
+            aourednik_year=snap_year,
+            rejection_reason=(
+                f"polygon_too_large:{area:.1f}deg2>"
+                f"{ceiling:.1f}deg2:{entity_type}"
+            ),
+        )
+
     border_prec = props.get("BORDERPRECISION")
     # Confidence finale: media tra score di match e score di precisione
     precision_conf = PRECISION_CONFIDENCE.get(border_prec, 0.45)
@@ -588,8 +811,8 @@ def match_entity_aourednik(
         matched=True,
         strategy=strategy,
         confidence=round(final_confidence, 3),
-        aourednik_name=props.get("NAME"),
+        aourednik_name=matched_name,
         aourednik_year=snap_year,
         border_precision=border_prec,
-        geojson=feat.get("geometry"),
+        geojson=geometry,
     )

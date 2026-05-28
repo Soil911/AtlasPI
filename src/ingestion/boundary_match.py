@@ -62,6 +62,110 @@ FUZZY_THRESHOLD = 85
 # fuzzy match — exact_name e ISO sono segnali piu' forti.
 FUZZY_CENTROID_MAX_KM = 500.0
 
+# ═══════════════════════════════════════════════════════════════════════════
+# v6.99.80 Phase H follow-up: area sanity check (ETHICS-012)
+# ═══════════════════════════════════════════════════════════════════════════
+# Natural Earth modern country polygons can be enormous (Russia 50M km²,
+# China 9.6M km², Indonesia 1.9M km², etc.). Fuzzy + capital-in-polygon
+# can falsely match a small entity (city-state, principality, chiefdom)
+# to a country-sized polygon (e.g. Bone kingdom → Indonesia).
+# This guard rejects matches where polygon area is much larger than the
+# entity_type ceiling.
+#
+# Values aligned with aourednik_match.py TYPE_MAX_AREA_DEG2 and
+# fix_antimeridian_and_wrong_polygons.py TYPE_MAX_AREA_KM2. The guard
+# only fires for FUZZY + CAPITAL_IN_POLYGON strategies — exact_name
+# and ISO_A3 are trusted.
+NE_TYPE_MAX_AREA_DEG2: dict[str, float] = {
+    "city": 0.8,
+    "city-state": 4.0,
+    "principality": 24.0,
+    "duchy": 24.0,
+    "chiefdom": 40.0,
+    "tribal_nation": 160.0,
+    "tribal_federation": 160.0,
+    "confederation": 320.0,
+    "kingdom": 640.0,
+    "sultanate": 400.0,
+    "republic": 1200.0,
+    "dynasty": 1600.0,
+    "caliphate": 1600.0,
+    "khanate": 3200.0,
+    "empire": 3200.0,
+    "cultural_region": 320.0,
+    "earthwork-complex": 0.5,
+    "settlement": 0.5,
+    "settlement-complex": 0.5,
+}
+
+NE_AREA_SANITY_FACTOR = 3.0
+NE_AREA_SANITY_FACTOR_STRICT = 2.0
+NE_STRICT_AREA_TYPES = {
+    "city", "city-state", "principality", "duchy", "chiefdom",
+    "earthwork-complex", "settlement", "settlement-complex",
+}
+
+
+def _ne_polygon_area_deg2(geojson: dict | None) -> float:
+    """Approximate polygon area in deg² (no shapely dependency for speed)."""
+    if not geojson:
+        return 0.0
+    gtype = geojson.get("type")
+    coords = geojson.get("coordinates")
+    if not coords:
+        return 0.0
+
+    def ring_area(ring: list) -> float:
+        if not ring or len(ring) < 3:
+            return 0.0
+        a = 0.0
+        for i in range(len(ring)):
+            try:
+                x1, y1 = ring[i][0], ring[i][1]
+                x2, y2 = ring[(i + 1) % len(ring)][0], ring[(i + 1) % len(ring)][1]
+                a += x1 * y2 - x2 * y1
+            except (IndexError, TypeError):
+                continue
+        return abs(a) / 2.0
+
+    try:
+        if gtype == "Polygon":
+            area = ring_area(coords[0])
+            for hole in coords[1:]:
+                area -= ring_area(hole)
+            return max(area, 0.0)
+        elif gtype == "MultiPolygon":
+            total = 0.0
+            for poly in coords:
+                if not poly:
+                    continue
+                a = ring_area(poly[0])
+                for hole in poly[1:]:
+                    a -= ring_area(hole)
+                total += max(a, 0.0)
+            return total
+    except (IndexError, KeyError, TypeError):
+        return 0.0
+    return 0.0
+
+
+def _is_ne_polygon_too_large_for_type(
+    geojson: dict | None, entity_type: str | None
+) -> bool:
+    """Reject NE match if polygon area exceeds entity_type ceiling × factor."""
+    if not geojson or not entity_type:
+        return False
+    ceiling = NE_TYPE_MAX_AREA_DEG2.get(entity_type)
+    if ceiling is None:
+        return False
+    factor = (
+        NE_AREA_SANITY_FACTOR_STRICT if entity_type in NE_STRICT_AREA_TYPES
+        else NE_AREA_SANITY_FACTOR
+    )
+    area = _ne_polygon_area_deg2(geojson)
+    return area > ceiling * factor
+
+
 # ETHICS: territori contestati che richiedono ethical_notes esplicite.
 # Vedi ETHICS-005. Quando viene fatto un match con uno di questi, lo
 # segnaliamo nel risultato per gestione manuale a valle.
@@ -466,6 +570,19 @@ def _try_fuzzy_match(
         )
         return None
 
+    # ETHICS-012 / Phase H follow-up: area sanity check. NE polygons can be
+    # huge (Russia 50M km², Indonesia 1.9M km², etc.) — a city-state should
+    # not get assigned an empire-sized polygon just because its capital
+    # happens to fall inside one.
+    if _is_ne_polygon_too_large_for_type(rec.get("geojson"), entity.get("entity_type")):
+        area = _ne_polygon_area_deg2(rec.get("geojson"))
+        logger.debug(
+            "Fuzzy match rejected (NE polygon %.1f deg² too large for %s): %s -> %s",
+            area, entity.get("entity_type"),
+            entity.get("name_original"), ne_name,
+        )
+        return None
+
     return MatchResult(
         entity_key=entity_key(entity),
         matched=True,
@@ -525,6 +642,21 @@ def _try_capital_in_polygon(
 
     rec = matches[0]
     iso = rec.get("iso_a3")
+
+    # ETHICS-012 / Phase H follow-up: area sanity check. A small entity
+    # (e.g. Sultanate of Banten, city-state ~4 deg² ceiling) should not
+    # inherit the entire Indonesia polygon (148 deg²) just because Banten
+    # is inside Indonesia.
+    if _is_ne_polygon_too_large_for_type(rec.get("geojson"), entity.get("entity_type")):
+        area = _ne_polygon_area_deg2(rec.get("geojson"))
+        logger.debug(
+            "Capital-in-polygon match rejected (NE polygon %.1f deg² too large for %s): "
+            "%s -> %s",
+            area, entity.get("entity_type"),
+            entity.get("name_original"), rec.get("name"),
+        )
+        return None
+
     return MatchResult(
         entity_key=entity_key(entity),
         matched=True,
