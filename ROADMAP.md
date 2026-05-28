@@ -13,6 +13,25 @@
 
 ## Versioni completate
 
+### v6.99.80 Phase H -- Systematic boundary review + matcher hardening (2026-05-28)
+- **340 entità polygon-fixed**: risoluzione di ~100 polygon collisions causate
+  da fuzzy matching aourednik/natural_earth con super-gruppi culturali-linguistici
+  (Bantou, Polynesians, "minor states", Fatimid Caliphate, Sasanian Empire,
+  Kingdom of David and Solomon, ecc.). Vedi [ETHICS-012](docs/ethics/ETHICS-012-phase-h-boundary-review.md).
+- **Boot guard** `boundary_collision_guard.py` rileva regression al boot
+  (Guard #4 in lifespan, status ok/warning/alarm).
+- **CI fence** `test_boundary_collisions_audit.py` (3 test) blocca PR se
+  super_group_alerts > 0 o total_groups > 60.
+- **Matcher hardening** `aourednik_match.py` + `boundary_match.py`:
+  super-group label blacklist (44 entries) + area sanity check (per-entity-type
+  ceiling). Tre layer di defense in depth.
+- **Lapita label fix** in `static/app.js`: per polygon che attraversano
+  antimeridian (lonSpan > 180°), usa `capital.lat/lon` invece di
+  bounds-center per il label.
+- **Distribuzione boundary_source**: approximate_circle 0 → 280, aourednik
+  375 → 195, natural_earth 197 → 91.
+- **Final status produzione**: `status: OK, 0 collision groups`.
+
 ### v7.0 benchmark closure -- AtlasPI validato come tool-augmented retrieval (2026-04-23)
 - 3 esperimenti A/B empirici su agent Claude Sonnet 4.5 per validare
   tesi business "AtlasPI migliora accuracy agenti AI" (vedi
