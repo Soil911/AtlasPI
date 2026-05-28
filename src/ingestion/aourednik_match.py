@@ -167,6 +167,8 @@ _RAW_SUPER_GROUP_LABELS: tuple[str, ...] = (
     "minor Hindu and Buddhist states",  # bucket for SE Asian H/B kingdoms
     "Ptolemaic Kingdom",             # bucket — Hasmoneans erroneously matched
     "Tiahuanaco Empire",             # bucket — Atacama Likan-antay erroneously matched
+    # v6.99.80 post-H wave 4
+    "Thai Kingdoms",                 # bucket — Thaton Mon kingdom erroneously matched
 )
 
 # Normalized form computed lazily on first access (avoids forward-reference
