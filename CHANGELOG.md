@@ -2,6 +2,85 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.82] - 2026-05-28 (Wave 1.2 — Antimeridian data fix)
+
+**Tema**: *Fix dei 2 boundary polygon antimeridian-crossing (id 754 Sau o
+Futuna, id 307 Lapita) che il startup auto-fix script saltava per essere
+in `MANUALLY_CURATED_IDS`.*
+
+### Bug
+
+Entrambe le entità avevano `boundary_geojson` con bbox `lon_span` ~359°
+(vertici a ±179.98). Conseguenza visiva: label e centroide della mappa
+rendevano in posizioni assurde (centro mondo / Atlantico) invece che nel
+Pacifico. Identificato in Wave 0 brief B (`analyze_geometric_bugs`).
+
+Il startup auto-fix `fix_antimeridian_and_wrong_polygons.py` non li
+catturava perché:
+1. Entrambi sono in `MANUALLY_CURATED_IDS` (skip esplicito)
+2. `_normalize_antimeridian` agisce solo su MultiPolygon, non su Polygon
+   singoli "wrap-around"
+
+### Fix applicato (data-only, NO code change)
+
+**id 754 Sau o Futuna** (confederation 1500-1961, Futuna+Alofi islands):
+- Vecchio: bbox lon_span 359.97°, area 124879 km² (wrap-around)
+- Nuovo: cerchio r=10km centrato su Sigave/Alo (-14.30°S, -178.16°E)
+- Nuovo bbox: lon range [-178.25, -178.07], lon_span 0.19°, area 313 km²
+- `boundary_source`: `historical_approximation`
+- `ethical_notes`: appended nota esplicativa con "SCHEMATIC MARITIME/
+  ISLAND APPROXIMATION" (cerchio simbolico, area reale isole ~64 km²)
+
+**id 307 Lapita** (confederation/cultural complex -1600 to -500):
+- Vecchio: bbox lon_span 358.5°, area 6.19M km² (wrap-around)
+- Nuovo: cerchio r=1000km centrato su Vanuatu Efate (-17.73°S, +168.32°E)
+- Nuovo bbox: lon range [158.86, 177.77], lon_span 18.92°, area 3.12M km²
+- Copre core area Bismarcks-Solomon-Vanuatu-Fiji
+- `ethical_notes`: appended nota esplicita "WESTERN/CORE PROXY" — la
+  cultura Lapita storicamente attestata si estendeva ulteriormente est
+  fino a Tonga/Samoa attraverso l'antimeridian (escluso da questo polygon
+  per limiti rendering; follow-up: MultiPolygon antimeridian-safe)
+- Reference esplicito a ETHICS-007 nelle note
+
+### Implementation
+
+- **NEW `scripts/fix_anti_754_307.py`**: genera SQL idempotente che usa
+  `_generate_circle()` dal modulo esistente + `ST_SetSRID(_, 4326)` +
+  WHERE clause anti-doppia-applicazione
+- **NEW `data/fixes/v6.99.82_antimeridian.sql`**: SQL committato per
+  audit trail (~5KB, contiene il geojson completo)
+- **NEW `data/fixes/backups/v6.99.82_pre_fix_754_307.jsonl`**: snapshot
+  pre-fix completo (rollback ready)
+
+### Verifica
+
+- `ST_IsValid(boundary_geom) = t` per entrambi (post-fix)
+- `(ST_XMax - ST_XMin) < 180°` per entrambi
+- `boundary_source = 'historical_approximation'` confermato
+- Cache flushed (12 keys) per visibilità immediata
+- API `/v1/entities/754` e `/v1/entities/307` ritornano nuovi bbox
+- Screenshot pre/post in `docs/auto-iter-wave0/wave-1-2/screenshots/`
+
+### Cross-check ChatGPT-5.5
+
+1 round su design del fix (`data/chatgpt_review/20260528/ask.jsonl`).
+Modifiche obbligate applicate prima dell'apply:
+- `ST_SetSRID(_, 4326)` wrapper (cross-proxy SRID safety)
+- Idempotency guard via `WHERE ethical_notes NOT LIKE '%v6.99.82 antimeridian fix%'`
+- Wording esplicito "WESTERN/CORE PROXY" per Lapita (non solo "extends east")
+- `CASE WHEN ethical_notes empty` per evitare leading newline
+
+### Note
+
+Entrambe le entità RIMANGONO in `MANUALLY_CURATED_IDS`. La lista è per
+skip auto-reset, NON per "boundary corretto". Il fix manuale di v6.99.82
+le riporta a uno stato curato corretto.
+
+Nessuna code change → nessuna migration → rollback istantaneo via git
+revert + re-apply SQL dalla backup jsonl.
+
+---
+
 ## [v6.99.81] - 2026-05-28 (Wave 1.1 — Admin containment)
 
 **Tema**: *Autenticazione obbligatoria su `/admin/*` (chiusura security gap).*

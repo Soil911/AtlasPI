@@ -165,4 +165,77 @@ Log: `data/chatgpt_review/20260528/ask.jsonl` (round 1 piano + round 2 design + 
 **Disaccordi documentati**:
 - gpt: "llms.txt not material" → mantenuto in Wave 1.4 (strategicamente importante per "AI-readable" mission)
 
+### Deploy outcome (2026-05-28 18:46 UTC)
+
+- `cra-deploy atlaspi` → build + recreate container + healthcheck OK
+- Commit hash deployed: `7f3006857f7040ee55eab3c0776dad7be23fad3f` (verified match local HEAD)
+- Tag annotato `v6.99.81` creato e pushato
+
+### Smoke prod result (9 check + cron WET run)
+
+| # | Test | Expected | Got | OK |
+|---|---|---|---|---|
+| 1 | /health public | 200 | 200 | ✓ |
+| 2 | /v1/entities/light?limit=5 | 200 | 200 | ✓ |
+| 3 | /admin/cache-stats UNAUTH | 401 + WWW-Authenticate Basic | 401 + correct header | ✓ |
+| 4 | /admin/cache-stats + X-Admin-Token | 200 | 200 + valid JSON body | ✓ |
+| 5 | /admin/cache-stats + Basic admin:TOKEN | 200 | 200 | ✓ |
+| 6 | /admin/cache-stats + Basic foo:TOKEN | 401 | 401 | ✓ |
+| 7 | /admin/cache-stats + wrong token | 401 | 401 | ✓ |
+| 8 | /admin/coverage-report UNAUTH (era esposto via docs-ui) | 401 | 401 | ✓ |
+| 9 | Cron daily_ai_check.sh WET run | exit 0 + 52/52 smoke pass | exit 0 + 52/52 + 1 briefing | ✓ |
+
+**Wave 1.1: COMPLETE. v6.99.81 in produzione, validato.**
+
+## Wave 1.2 — Antimeridian data fix (2026-05-28)
+
+Status: COMPLETE. v6.99.82 deployato. id 754 + id 307 fixati.
+
+### Bug root cause
+
+Boundaries Polygon singoli con vertici a ±179.98 → bbox lon_span 359°.
+- `_normalize_antimeridian` script salta perché agisce solo su MultiPolygon
+- Entrambi sono in `MANUALLY_CURATED_IDS` (skip aggiuntivo)
+
+### Fix design (post ChatGPT-5.5 cross-check)
+
+**id 754 Sau o Futuna**: cerchio 10km attorno a Sigave/Alo (Futuna island)
+- bbox: lon [-178.25, -178.07] = 0.19° span, area 313 km²
+
+**id 307 Lapita**: cerchio 1000km attorno a Vanuatu (Efate)
+- bbox: lon [158.86, 177.77] = 18.92° span, area 3.12M km²
+- Core Bismarcks-Solomon-Vanuatu-Fiji (Tonga/Samoa esclusi: doc esplicito)
+
+### ChatGPT critiche applicate
+
+- `ST_SetSRID(_, 4326)` wrapper
+- WHERE clause idempotency guard
+- "WESTERN/CORE PROXY" wording per Lapita
+- `CASE WHEN ethical_notes empty` per cleanliness
+
+### Verifica produzione
+
+| | id 754 | id 307 |
+|---|---|---|
+| lon_span pre | 359.97° | 358.50° |
+| lon_span post | 0.19° | 18.92° |
+| area pre | 124,879 km² | 6,187,246 km² |
+| area post | 313 km² | 3,124,123 km² |
+| ST_IsValid | t | t |
+| boundary_source | historical_approximation | historical_approximation |
+| bbox center | Pacific (Futuna) | Pacific (Vanuatu) |
+
+### Files
+
+- NEW: `scripts/fix_anti_754_307.py`
+- NEW: `data/fixes/v6.99.82_antimeridian.sql`
+- NEW: `data/fixes/backups/v6.99.82_pre_fix_754_307.jsonl`
+- NEW: `docs/auto-iter-wave0/wave-1-2/inventory-and-design.md` (skipped, design in CHANGELOG)
+- NEW: `docs/auto-iter-wave0/wave-1-2/screenshots/{01,02}*.png`
+
+Nessuna code change runtime → no migration, no breaking change.
+Tag `v6.99.82` da pushare dopo cra-deploy.
+
+**Wave 1.2: COMPLETE.**
+
 
