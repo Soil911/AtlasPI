@@ -66,3 +66,8 @@ scripts/wikidata_cache/
 data/chatgpt_review/
 # LOOP_STATE.md is committed for transparency, but the loop session screenshots are not
 data/enrichment/loop_screenshots/
+
+# Password handoff files — must NEVER be committed
+psw.txt
+password.txt
+*.password
