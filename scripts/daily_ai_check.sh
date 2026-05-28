@@ -14,6 +14,21 @@
 
 set -euo pipefail
 
+# v6.99.81 Wave 1.1: /admin/* ora richiede ATLASPI_ADMIN_TOKEN.
+# Carichiamo le env dal file di prod se disponibile (cron ha env minimo).
+if [ -f /opt/cra/.env.atlaspi ]; then
+  set -a
+  # shellcheck disable=SC1091
+  source /opt/cra/.env.atlaspi
+  set +a
+fi
+
+if [ -z "${ATLASPI_ADMIN_TOKEN:-}" ]; then
+  echo "[ERROR] ATLASPI_ADMIN_TOKEN env var not set — /admin/* calls will 401."
+  echo "[ERROR] Set it in /opt/cra/.env.atlaspi or export it before running."
+  exit 1
+fi
+
 BASE="${ATLASPI_BASE:-https://atlaspi.cra-srl.com}"
 TIMESTAMP="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 
@@ -21,7 +36,7 @@ echo "=== AtlasPI daily AI check @ $TIMESTAMP ==="
 
 # 1. Analyze
 echo "[1/3] POST $BASE/admin/ai/analyze"
-ANALYZE_RESULT="$(curl -sS -X POST "$BASE/admin/ai/analyze" -w '\nHTTP_CODE:%{http_code}\n')"
+ANALYZE_RESULT="$(curl -sS -X POST -H "X-Admin-Token: $ATLASPI_ADMIN_TOKEN" "$BASE/admin/ai/analyze" -w '\nHTTP_CODE:%{http_code}\n')"
 ANALYZE_CODE="$(echo "$ANALYZE_RESULT" | grep -oP 'HTTP_CODE:\K[0-9]+' || echo 0)"
 if [ "$ANALYZE_CODE" != "200" ]; then
   echo "[ERROR] analyze returned HTTP $ANALYZE_CODE"
@@ -38,7 +53,7 @@ echo "    -> $TOTAL_NEW new suggestions generated"
 
 # 2. Implement accepted
 echo "[2/3] POST $BASE/admin/ai/implement-accepted"
-IMPL_RESULT="$(curl -sS -X POST "$BASE/admin/ai/implement-accepted" -w '\nHTTP_CODE:%{http_code}\n')"
+IMPL_RESULT="$(curl -sS -X POST -H "X-Admin-Token: $ATLASPI_ADMIN_TOKEN" "$BASE/admin/ai/implement-accepted" -w '\nHTTP_CODE:%{http_code}\n')"
 IMPL_CODE="$(echo "$IMPL_RESULT" | grep -oP 'HTTP_CODE:\K[0-9]+' || echo 0)"
 if [ "$IMPL_CODE" != "200" ]; then
   echo "[ERROR] implement-accepted returned HTTP $IMPL_CODE"

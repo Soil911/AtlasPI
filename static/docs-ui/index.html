@@ -49,7 +49,6 @@
   </div>
   <div class="sidebar-section">
     <span class="sidebar-section-title">System</span>
-    <a href="#admin" class="sidebar-link">Admin &amp; Insights</a>
     <a href="#health" class="sidebar-link">Health</a>
   </div>
 </aside>
@@ -1159,82 +1158,11 @@
   </div>
 </section>
 
-<!-- ════════════════ ADMIN ════════════════════════ -->
-<section class="docs-section" id="admin">
-  <h2>Admin &amp; Insights API</h2>
-  <p class="section-desc">
-    Traffic analytics, data coverage reports, and smart suggestions for data expansion.
-  </p>
-
-  <!-- GET /admin/insights -->
-  <div class="endpoint" id="ep-admin-insights">
-    <div class="endpoint-header">
-      <span class="http-method method-get">GET</span>
-      <span class="endpoint-path">/admin/insights</span>
-      <span class="endpoint-desc">Traffic and usage analytics</span>
-      <span class="endpoint-toggle">&#9660;</span>
-    </div>
-    <div class="endpoint-body">
-      <p>Returns traffic analytics: request counts, popular endpoints, geographic distribution, user agents.</p>
-      <div class="try-it-row">
-        <button class="try-btn" data-path="/admin/insights">Try it</button>
-        <span class="try-status"></span>
-      </div>
-      <div class="try-response">
-        <div class="code-block">
-          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
-          <pre></pre>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- GET /admin/coverage-report -->
-  <div class="endpoint" id="ep-admin-coverage">
-    <div class="endpoint-header">
-      <span class="http-method method-get">GET</span>
-      <span class="endpoint-path">/admin/coverage-report</span>
-      <span class="endpoint-desc">Data quality and coverage</span>
-      <span class="endpoint-toggle">&#9660;</span>
-    </div>
-    <div class="endpoint-body">
-      <p>Comprehensive report on data coverage: temporal gaps, geographic distribution, confidence scores, source quality.</p>
-      <div class="try-it-row">
-        <button class="try-btn" data-path="/admin/coverage-report">Try it</button>
-        <span class="try-status"></span>
-      </div>
-      <div class="try-response">
-        <div class="code-block">
-          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
-          <pre></pre>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- GET /admin/suggestions -->
-  <div class="endpoint" id="ep-admin-suggestions">
-    <div class="endpoint-header">
-      <span class="http-method method-get">GET</span>
-      <span class="endpoint-path">/admin/suggestions</span>
-      <span class="endpoint-desc">Smart expansion suggestions</span>
-      <span class="endpoint-toggle">&#9660;</span>
-    </div>
-    <div class="endpoint-body">
-      <p>AI-generated suggestions for expanding the dataset: missing entities, underrepresented regions, temporal gaps.</p>
-      <div class="try-it-row">
-        <button class="try-btn" data-path="/admin/suggestions">Try it</button>
-        <span class="try-status"></span>
-      </div>
-      <div class="try-response">
-        <div class="code-block">
-          <div class="code-block-header"><span class="label">Response</span><span class="status-badge"></span></div>
-          <pre></pre>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- v6.99.81 Wave 1.1: Admin & Insights API section RIMOSSA dai docs
+     pubblici. Gli endpoint /admin/insights, /admin/coverage-report,
+     /admin/suggestions ora richiedono autenticazione (X-Admin-Token
+     o Basic Auth). Vedi src/api/deps.py e
+     docs/auto-iter-wave0/wave-1-1/. Documentazione interna a parte. -->
 
 <!-- ════════════════ HEALTH ═══════════════════════ -->
 <section class="docs-section" id="health">

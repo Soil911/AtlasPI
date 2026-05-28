@@ -11,6 +11,13 @@ os.environ["AUTO_SEED"] = "false"
 # quando i test fanno molte richieste in pochi secondi)
 os.environ.setdefault("RATE_LIMIT", "100000/minute")
 
+# v6.99.81 Wave 1.1: gli endpoint /admin/* ora richiedono ATLASPI_ADMIN_TOKEN.
+# Per i test esistenti, settiamo un token noto + lo pre-iniettiamo nel
+# fixture `client` (vedi sotto). I test che vogliono testare i fallimenti
+# di auth (test_admin_auth.py) usano il fixture `unauth_client`.
+TEST_ADMIN_TOKEN = "test-admin-token-CHANGE"
+os.environ.setdefault("ATLASPI_ADMIN_TOKEN", TEST_ADMIN_TOKEN)
+
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine, event
@@ -148,7 +155,22 @@ def setup_test_db():
 
 @pytest.fixture
 def client():
-    """TestClient FastAPI con database di test."""
+    """TestClient FastAPI con DB di test + X-Admin-Token pre-impostato.
+
+    v6.99.81 Wave 1.1: il token è pre-iniettato cosi' tutti i test esistenti
+    che chiamano /admin/* continuano a funzionare senza modifiche. Per testare
+    failure di auth, usa il fixture `unauth_client`.
+    """
+    app.dependency_overrides[get_db] = override_get_db
+    with TestClient(app) as c:
+        c.headers["X-Admin-Token"] = TEST_ADMIN_TOKEN
+        yield c
+    app.dependency_overrides.clear()
+
+
+@pytest.fixture
+def unauth_client():
+    """TestClient FastAPI SENZA header auth. Per testare /admin/* failures."""
     app.dependency_overrides[get_db] = override_get_db
     with TestClient(app) as c:
         yield c

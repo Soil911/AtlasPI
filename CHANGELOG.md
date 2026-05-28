@@ -2,6 +2,80 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.81] - 2026-05-28 (Wave 1.1 — Admin containment)
+
+**Tema**: *Autenticazione obbligatoria su `/admin/*` (chiusura security gap).*
+
+### Sicurezza
+
+Tutti i 19 endpoint sotto `/admin/*` (cache flush, AI implement/accept,
+dev-ips DELETE, analytics dashboard, insights, coverage report,
+suggestions) ora richiedono autenticazione. Prima erano nascosti solo
+via `include_in_schema=False` ma raggiungibili pubblicamente da chiunque
+conoscesse l'URL.
+
+- **NEW `src/api/deps.py::verify_admin`**: dependency token-based con due
+  canali di accesso:
+  - `X-Admin-Token: <token>` (curl/cron friendly)
+  - `Authorization: Basic <b64(admin:token)>` (browser friendly, autocache)
+- **Failsafe**: se `ATLASPI_ADMIN_TOKEN` env è unset o vuoto → tutti
+  bloccati (closed-by-default).
+- **Username constraint**: Basic Auth richiede esattamente `admin` come
+  username (cross-check GPT-5.5: any-username era policy mismatch).
+- **WWW-Authenticate Basic header** su 401 → browser prompt automatico
+  alla prima visita di `/admin/brief` o `/admin/analytics`.
+- **IP allowlist SCARTATA** (cross-check GPT-5.5): dietro nginx reverse
+  proxy `request.client.host` riceve l'IP del proxy, non del client reale,
+  rendendo qualunque allowlist 127.0.0.1 un bypass per tutti.
+
+### Cron daily_ai_check.sh
+
+- Sourcing `/opt/cra/.env.atlaspi` allo start (cron ha env minimo)
+- Fail-fast se `ATLASPI_ADMIN_TOKEN` non settato (exit 1, niente silent fail)
+- Header `X-Admin-Token` ora obbligatorio in entrambe le `curl` POST
+
+### Docs UI (cleanup esposizione)
+
+- Rimossa intera sezione "Admin & Insights API" da `/docs-ui` pubblico
+  (3 endpoint GET — insights, coverage-report, suggestions — venivano
+  esposti come "Try it" buttons leakando stato operazionale a chiunque
+  visitasse la pagina docs)
+- Rimosso link sidebar `#admin` correlato
+
+### Startup audit
+
+`src/main.py` lifespan ora enumera ogni route `/admin/*` e verifica la
+presenza di `verify_admin` nella catena delle Dependant. Log INFO con
+count delle route registrate; ERROR loud se compare route nuova senza
+dependency.
+
+### Test
+
+- **NEW `tests/test_admin_auth.py`** (13 test): unauth → 401, token →
+  pass, Basic Auth → pass, wrong token/password/username → 401, env
+  unset/vuoto failsafe → 401, base64 malformato → 401, query-param
+  bypass → 401, endpoint pubblici inalterati.
+- `tests/conftest.py`: pre-inietta token nel fixture `client` (tutti i
+  test pre-esistenti che chiamano `/admin/*` continuano a funzionare
+  senza modifiche). Aggiunto fixture `unauth_client` per testare i
+  fallimenti.
+
+**Risultato**: 1291 test pass, 36 skipped, 0 failed.
+
+**Cross-check ChatGPT-5.5**: 2 round di review prima del deploy
+(`data/chatgpt_review/20260528/ask.jsonl`). Critical fix applicato:
+rimozione IP allowlist (bypass via reverse proxy).
+
+### Files
+
+- NEW: `src/api/deps.py`, `tests/test_admin_auth.py`,
+  `docs/auto-iter-wave0/wave-1-1/inventory-and-design.md`,
+  `docs/auto-iteration-log.md`
+- MODIFIED: `src/main.py`, `scripts/daily_ai_check.sh`,
+  `static/docs-ui/index.html`, `tests/conftest.py`
+
+---
+
 ## [v6.99.80] - 2026-05-28 (Phase H — Systematic boundary review + collision guard)
 
 **Tema**: *Risoluzione errori sistematici di fuzzy-match aourednik/natural_earth +

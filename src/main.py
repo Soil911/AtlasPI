@@ -4,7 +4,7 @@ import logging
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import FileResponse, JSONResponse
@@ -13,6 +13,7 @@ from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 from slowapi.middleware import SlowAPIMiddleware
 
+from src.api.deps import verify_admin
 from src.api.errors import register_error_handlers
 from src.api.middleware import (
     RateLimitMiddleware,  # noqa: F401 — disponibile per uso futuro
@@ -243,6 +244,40 @@ async def lifespan(app: FastAPI):
     except Exception:
         logger.warning("Prune api_request_logs fallito", exc_info=True)
 
+    # v6.99.81 Wave 1.1: startup audit /admin/* routes. Verifichiamo che
+    # OGNI route con path che inizia per /admin/ abbia verify_admin nella
+    # catena delle dependencies (FastAPI Dependant). Cross-check GPT-5.5:
+    # contare routes non basta — serve provare che la dep sia applicata.
+    # Se una route /admin/* manca della dep → log ERROR (visibile, ma non
+    # crashiamo: i test in tests/test_admin_auth.py sono il guard primario).
+    _admin_paths = []
+    _admin_paths_unprotected = []
+    for _route in app.routes:
+        _path = getattr(_route, "path", "") or ""
+        if not _path.startswith("/admin/"):
+            continue
+        _admin_paths.append(_path)
+        _dependant = getattr(_route, "dependant", None)
+        _has_admin = False
+        if _dependant is not None:
+            for _dep in getattr(_dependant, "dependencies", []) or []:
+                if getattr(_dep, "call", None) is verify_admin:
+                    _has_admin = True
+                    break
+        if not _has_admin:
+            _admin_paths_unprotected.append(_path)
+    if _admin_paths:
+        logger.info(
+            "Admin auth audit: %d /admin/* routes registered (Wave 1.1 v6.99.81)",
+            len(_admin_paths),
+        )
+    if _admin_paths_unprotected:
+        logger.error(
+            "SECURITY: %d /admin/* routes SENZA verify_admin dependency: %s",
+            len(_admin_paths_unprotected),
+            _admin_paths_unprotected,
+        )
+
     logger.info("AtlasPI pronto")
     yield
 
@@ -448,10 +483,17 @@ app.include_router(rulers.router)
 app.include_router(languages.router)
 app.include_router(render.router)
 app.include_router(snapshot.router)
-app.include_router(analytics.router)
-app.include_router(admin_insights.router)
-app.include_router(admin_cache.router)
-app.include_router(admin_cofounder.router)
+# v6.99.81 Wave 1.1: tutti i router con route /admin/* sono protetti
+# via verify_admin (token X-Admin-Token o Basic Auth). Failsafe: se
+# ATLASPI_ADMIN_TOKEN env unset, tutti gli /admin/* ritornano 401.
+# IP allowlist scartata (cross-check GPT-5.5): dietro nginx reverse
+# proxy request.client.host = IP del proxy, non del client reale.
+# Vedi src/api/deps.py + docs/auto-iter-wave0/wave-1-1/.
+_admin_deps = [Depends(verify_admin)]
+app.include_router(analytics.router, dependencies=_admin_deps)
+app.include_router(admin_insights.router, dependencies=_admin_deps)
+app.include_router(admin_cache.router, dependencies=_admin_deps)
+app.include_router(admin_cofounder.router, dependencies=_admin_deps)
 app.include_router(timeline.router)
 app.include_router(compare.router)
 app.include_router(search.router)
