@@ -162,6 +162,11 @@ _RAW_SUPER_GROUP_LABELS: tuple[str, ...] = (
     "Bosnia",
     "Toltec Empire",
     "Suren Kingdom",
+    # v6.99.80 post-H additions (discovered after first hardening pass)
+    "Malaysian Islamic states",      # bucket for SE Asian sultanates
+    "minor Hindu and Buddhist states",  # bucket for SE Asian H/B kingdoms
+    "Ptolemaic Kingdom",             # bucket — Hasmoneans erroneously matched
+    "Tiahuanaco Empire",             # bucket — Atacama Likan-antay erroneously matched
 )
 
 # Normalized form computed lazily on first access (avoids forward-reference
