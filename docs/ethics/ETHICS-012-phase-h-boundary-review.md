@@ -196,7 +196,7 @@ cerchio dalle nuove coordinate).
 
 ## Lezioni per il futuro
 
-### 1. Il matcher fuzzy ha bisogno di ulteriori guardie
+### 1. Il matcher fuzzy ha bisogno di ulteriori guardie (IMPLEMENTATO v6.99.80)
 
 ETHICS-006 ha aggiunto capital-in-polygon e geographic distance check.
 Phase H rivela che ancora **non basta**: il matcher può ancora produrre
@@ -204,15 +204,40 @@ collision quando il polygon "matched" è ENORME (es. tutta l'Africa) — la
 capitale dell'entità è dentro, ma il polygon è 100× troppo grande per
 quell'entity_type.
 
-Future hardening (da implementare in iterazione successiva):
-- **Area sanity check**: rifiutare match se `polygon_area > 3× type_ceiling`
-  (es. city-state non può matchare polygon > 100k km²)
-- **Specifica boundary_aourednik_name blacklist**: nomi come "Bantou",
-  "Polynesians", "West African cereal farmers", "Eastern North American
-  hunter-gatherers" sono cultural-zone labels, non political polygons —
-  mai matchare a singoli stati
-- **Required: 1-to-1 matching per polygon**: se 2+ entità sono già matchate
-  allo stesso polygon, rifiutare la terza match e marcare per review
+**Status implementazione (commit 8aad160, v6.99.80):**
+
+✅ **Area sanity check** (`_is_polygon_too_large_for_type`):
+- Aggiunto in `aourednik_match.py` e `boundary_match.py`
+- `TYPE_MAX_AREA_DEG2` per ogni entity_type (city-state 4 deg², kingdom
+  640 deg², empire 3200 deg², earthwork-complex 0.5 deg², ecc.)
+- Factor: 2× per STRICT types (city-state, principality, duchy, chiefdom,
+  earthwork), 3× per altri (kingdom, empire, ecc.)
+- Applicato a strategy `fuzzy_name`, `subjecto`, `partof`,
+  `capital_in_polygon` — non applicato a `exact_name` (trusted)
+- Test: `tests/test_aourednik_match_super_group_guard.py` +
+  `tests/test_boundary_match_area_sanity.py` (29 test totali)
+
+✅ **Super-group label blacklist** (`SUPER_GROUP_LABELS_BLACKLIST`):
+- 44 entries: Bantou, Polynesians, Hittites, Cimmerians, Moche, Olmec,
+  Nazca, Huari Empire, Sui Empire, Abbasid Caliphate, Achaemenid Empire,
+  Parthian Empire, Sultanate of Delhi, Fatimid Caliphate, Ghaznavid
+  Emirate, Chagatai Khanate, Golden Horde, Byzantine Empire, Holy Roman
+  Empire, Kingdom of David and Solomon, Greek city-states, Taino,
+  Amazon hunter-gatherers, Eastern North American hunter-gatherers,
+  West African cereal farmers, "minor states", Annam, Qataban, Nabatean
+  Kingdom, Urartu, Yemen, Mwenemutapa, Cuman-Kipchak confederation, Jin,
+  Sasanian Empire, Srivijaya Empire, Pagan, Arakan, Bosnia, Toltec
+  Empire, Suren Kingdom, Ur, Phrygians, Cimerians (aourednik spelling)
+- Applicato in `aourednik_match.py` quando strategy ≠ `exact_name`
+- L'entità legittima primaria (es. "Fatimid Caliphate" empire 909-1171)
+  può comunque ottenere la sua polygon via `exact_name` strategy
+- Test: spot-check di tutte le label che hanno causato Phase H regressions
+
+⏳ **1-to-1 matching per polygon** (DEFFERED a iterazione futura):
+- Richiede stato condiviso tra match calls (set di polygon già assigned)
+- Più complesso, beneficio marginale ora che area + blacklist sono attivi
+- Future: tracking via dict `geojson_hash → [entity_keys]` durante batch
+  ingestion, alert se 3+ entity_keys condividono lo stesso hash
 
 ### 2. Il collision guard al boot è preziose
 
