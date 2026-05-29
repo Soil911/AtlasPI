@@ -9,6 +9,7 @@ import traceback
 
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
+from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from src.logging_config import request_id_var
 
@@ -17,6 +18,8 @@ logger = logging.getLogger(__name__)
 # ── Codici errore standard ──────────────────────────────────────
 ERROR_CODES = {
     400: "BAD_REQUEST",
+    401: "UNAUTHORIZED",
+    403: "FORBIDDEN",
     404: "NOT_FOUND",
     422: "VALIDATION_ERROR",
     429: "RATE_LIMITED",
@@ -107,6 +110,30 @@ def register_error_handlers(app: FastAPI):
     async def atlas_error_handler(request: Request, exc: AtlasError):
         logger.warning("AtlasError %d [%s]: %s", exc.status_code, exc.code, exc.detail)
         return _error_response(exc.status_code, exc.detail, exc.code)
+
+    @app.exception_handler(StarletteHTTPException)
+    async def http_exception_handler(request: Request, exc: StarletteHTTPException):
+        """v6.99.87 Wave 2.3 (audit API #2): normalizza i raw `raise
+        HTTPException` (FastAPI/Starlette) nello stesso envelope canonico di
+        AtlasError. Prima questi (58 call-site, es. /v1/periods/by-slug/{slug})
+        bypassavano l'envelope restituendo il default {"detail": ...}, quindi
+        due 404 da endpoint fratelli avevano forma diversa.
+
+        IMPORTANTE: preserva exc.headers — verify_admin (src/api/deps.py) lancia
+        401 con WWW-Authenticate: Basic per far comparire il prompt del browser;
+        senza questo l'auth admin si romperebbe (e test_admin_auth fallirebbe).
+        """
+        detail = exc.detail if isinstance(exc.detail, str) else str(exc.detail)
+        logger.warning(
+            "HTTPException %s on %s %s: %s",
+            exc.status_code, request.method, request.url.path, detail,
+        )
+        resp = _error_response(exc.status_code, detail)
+        # Preserva eventuali header dell'eccezione (es. WWW-Authenticate, Retry-After).
+        if getattr(exc, "headers", None):
+            for k, v in exc.headers.items():
+                resp.headers[k] = v
+        return resp
 
     @app.exception_handler(422)
     async def validation_error_handler(request: Request, exc):

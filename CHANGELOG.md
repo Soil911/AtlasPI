@@ -2,6 +2,38 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.87] - 2026-05-29 (Wave 2.3 — Envelope errori unificato)
+
+**Tema**: *Tutti gli errori HTTP usano l'envelope canonico `{"error":{code,message,request_id}}`.*
+
+Audit Wave 2, finding API **#2 (HIGH, confermato)**.
+
+### Bug
+
+`register_error_handlers` gestiva `AtlasError`/422/500/`Exception` ma **non**
+`StarletteHTTPException`. I ~58 `raise HTTPException` (es.
+`/v1/periods/by-slug/{slug}`, `/v1/entities/batch`) bypassavano l'envelope →
+default FastAPI `{"detail": ...}`. Due 404 da endpoint fratelli avevano forma
+JSON diversa: un agent che legge `response.error.code` su `/v1/entities/{id}`
+prendeva `KeyError` su `by-slug`.
+
+### Fix
+
+Handler `@app.exception_handler(StarletteHTTPException)` che instrada tutti i
+raw `HTTPException` attraverso `_error_response`. **Preserva `exc.headers`**
+(critico: `WWW-Authenticate` di `verify_admin`, altrimenti l'auth admin si
+romperebbe). Aggiunti `401→UNAUTHORIZED`, `403→FORBIDDEN` a `ERROR_CODES`.
+
+### Files
+
+- MODIFIED: `src/api/errors.py` (handler `StarletteHTTPException` + import + `ERROR_CODES` 401/403)
+- NEW: `tests/test_error_envelope.py` (3 test: raw-404 envelope, shape == typed-404, `WWW-Authenticate` preservato)
+- MODIFIED: `src/config.py`, `pyproject.toml` (6.99.86 → 6.99.87)
+
+Test: 1299 passed, 0 failed. Nessuna migration.
+
+---
+
 ## [v6.99.86] - 2026-05-29 (Wave 2.2 — Rate-limit key = IP reale del client)
 
 **Tema**: *Il rate limiter ora chiave sull'IP reale del client (`X-Real-IP`),
