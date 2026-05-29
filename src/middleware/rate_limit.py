@@ -11,10 +11,13 @@ con storage in-memory ogni worker mantiene un suo contatore separato —
 risultato: un client puo' fare effettivamente 2x il limite dichiarato.
 Con Redis come storage condiviso, i contatori sono coerenti tra worker.
 
-Chiave: IP del client (estratto da X-Forwarded-For in presenza di proxy,
-altrimenti request.client.host). Nginx davanti al container imposta
-X-Forwarded-For con l'IP reale — quindi get_remote_address di slowapi
-va benissimo.
+Chiave (v6.99.86 / Wave 2.2, audit security #3): IP REALE del client via
+header `X-Real-IP` impostato da nginx (`$remote_addr` — non falsificabile
+dal client perché nginx la sovrascrive). Dietro il reverse proxy
+`request.client.host` è l'IP del proxy (rete Docker), quindi
+`get_remote_address` da solo collasserebbe TUTTI i client in un unico
+bucket globale (un client aggressivo → 429 per tutti). Fallback a
+`get_remote_address` in dev/locale senza proxy o se l'header manca.
 
 Limiti per endpoint:
 - Default globale: 120/minute (sopra RATE_LIMIT del config — safety margin)
@@ -81,6 +84,26 @@ def _resolve_storage_uri() -> str:
         return "memory://"
 
 
+def _client_ip_key(request) -> str:
+    """Chiave rate-limit = IP reale del client.
+
+    Dietro nginx (topologia prod) request.client.host è l'IP del proxy
+    (rete Docker), quindi get_remote_address da solo metterebbe tutti i
+    client nello stesso bucket. Nginx imposta `X-Real-IP = $remote_addr`
+    (IP reale, non appendabile/falsificabile dal client), quindi la usiamo
+    come chiave. Fallback a get_remote_address (request.client.host) quando
+    l'header manca — dev/locale senza proxy. Vedi Wave 2.2 / audit #3.
+
+    NB: si usa X-Real-IP e NON X-Forwarded-For[0]: XFF è
+    `$proxy_add_x_forwarded_for`, quindi un client può prependere valori
+    arbitrari (il primo elemento è spoofabile). X-Real-IP no.
+    """
+    real_ip = request.headers.get("x-real-ip")
+    if real_ip:
+        return real_ip.strip()
+    return get_remote_address(request)
+
+
 # Singleton — importato da src/main.py e dai router che vogliono
 # applicare un decorator @limiter.limit() specifico.
 #
@@ -88,7 +111,7 @@ def _resolve_storage_uri() -> str:
 # (Dockerfile) i contatori sono condivisi → un client non puo' piu'
 # bypassare il limite essendo bilanciato su 2 worker.
 limiter = Limiter(
-    key_func=get_remote_address,
+    key_func=_client_ip_key,
     default_limits=[RATE_LIMIT],
     storage_uri=_resolve_storage_uri(),
     headers_enabled=True,  # aggiunge X-RateLimit-* alle risposte

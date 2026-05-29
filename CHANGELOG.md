@@ -2,6 +2,40 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.86] - 2026-05-29 (Wave 2.2 — Rate-limit key = IP reale del client)
+
+**Tema**: *Il rate limiter ora chiave sull'IP reale del client (`X-Real-IP`),
+non sull'IP del proxy.*
+
+Audit Wave 2, finding security **#3 (HIGH, confermato)**.
+
+### Bug
+
+`Limiter(key_func=get_remote_address)` usa `request.client.host`, che dietro
+nginx è l'IP del proxy (rete Docker) → **tutti i client finivano in un unico
+bucket globale**: un client aggressivo faceva scattare 429 per tutti, e la
+protezione per-client di fatto non esisteva. (Il fix Redis v6.92.1 aveva
+risolto la condivisione cross-worker, non la chiave sbagliata.)
+
+### Fix
+
+Nuova `key_func` `_client_ip_key` che usa l'header `X-Real-IP` impostato da
+nginx (`$remote_addr` — **non falsificabile** dal client, a differenza del
+primo elemento di `X-Forwarded-For` che è `$proxy_add_x_forwarded_for`), con
+fallback a `get_remote_address` in dev/locale senza proxy. Verificato sul VPS:
+nginx imposta `X-Real-IP $remote_addr` per il vhost atlaspi. Docstring
+fuorviante (che diceva "get_remote_address va benissimo") corretto.
+
+### Files
+
+- MODIFIED: `src/middleware/rate_limit.py` (`_client_ip_key` + key_func + docstring)
+- NEW: `tests/test_rate_limit_key.py` (4 test: X-Real-IP, bucket distinti, fallback, trim)
+- MODIFIED: `src/config.py`, `pyproject.toml` (6.99.85 → 6.99.86)
+
+Test: 1296 passed, 0 failed. Nessuna migration.
+
+---
+
 ## [v6.99.85] - 2026-05-29 (Wave 2.1 — Fix indice spaziale GiST)
 
 **Tema**: *Ripristino dell'indice GiST sulla colonna `boundary_geom`, mai
