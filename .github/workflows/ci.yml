@@ -80,9 +80,20 @@ jobs:
           REDIS_URL: ""
         run: python -m scripts.ci_spatial_check
 
+  # Wave 2.6 (audit #8): unit test della logica di merge del lazy-loader boundary
+  # (static/js/boundary-cache.js) — prima il frontend non aveva copertura automatica.
+  js-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: node --test tests/js/boundary-cache.test.js
+
   build:
     runs-on: ubuntu-latest
-    needs: [lint, test, postgres-migrations]
+    needs: [lint, test, postgres-migrations, js-tests]
     steps:
       - uses: actions/checkout@v4
       - run: docker build -t atlaspi .

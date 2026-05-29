@@ -2,6 +2,49 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.90] - 2026-05-29 (Wave 2.6 — Copertura test frontend + hardening CI)
+
+**Tema**: *Copertura automatica del lazy-loader frontend (#8) + spatial query
+in CI (#6) + job `lint` reso verde.*
+
+Audit Wave 2, findings **#6 + #8 (HIGH)**.
+
+### #8 — Copertura frontend (era zero)
+
+La logica di merge del lazy-loader boundary (Wave 1.3) — la parte
+comportamentalmente più complessa del frontend (concorrenza +
+merge-without-overwrite), prima **senza alcun test** — è stata estratta in
+`static/js/boundary-cache.js` (funzione pura UMD) e coperta da **5 unit test
+`node --test`**. `app.js` la usa con **fallback inline identico**, così un
+modulo mancante/bloccato non può mai rompere il rendering della mappa (rischio
+zero). Verificato nel browser (preview locale): modulo caricato e usato, merge
+di 294 entità per l'anno 1200, `name`/`status` NON sovrascritti, 0 errori
+console.
+
+### #6 — Spatial query in CI
+
+`scripts/ci_spatial_check.py` esercita `ST_Intersects(boundary_geom)` via
+`/v1/entities?bbox=` contro PostGIS reale nel job CI postgres (la suite pytest
+gira su SQLite, dove bbox/contains sono no-op). Copre la classe di bug del
+difetto indice GiST di Wave 2.1.
+
+### CI hardening
+
+- Fixato il job `lint` (ruff), che era **rosso su main** da issue pre-esistenti
+  (F401 unused import + I001 import-sort in vari test file) — 12 auto-fix.
+- Nuovo job `js-tests` (`node --test`). CI ora interamente verde:
+  `lint` + `test` + `postgres-migrations` + `js-tests` + `build`.
+
+### Files
+
+- NEW: `static/js/boundary-cache.js`, `tests/js/boundary-cache.test.js`, `scripts/ci_spatial_check.py`
+- MODIFIED: `static/app.js` (merge via modulo + fallback), `static/index.html` (script tag), `.github/workflows/ci.yml` (spatial check + job js-tests)
+- MODIFIED: `src/config.py`, `pyproject.toml` (6.99.89 → 6.99.90)
+
+Frontend: 5 node test. Backend: 1307 pytest. Nessuna migration.
+
+---
+
 ## [v6.99.89] - 2026-05-29 (Wave 2.5 — response_model sugli endpoint agent headline)
 
 **Tema**: *L'OpenAPI spec ora espone schemi reali (non `{}`) sugli endpoint che

@@ -408,18 +408,25 @@ async function loadBoundariesForYear(year, loadBar) {
 
         // Merge ONLY boundary_geojson + non-conflicting optional fields.
         // Do NOT overwrite name/status/year/confidence: canonical from /light.
-        const byId = new Map();
-        allEntities.forEach(e => byId.set(e.id, e));
-        batch.forEach(full => {
-          const e = byId.get(full.id);
-          if (!e) return; // entity not in /light → ignore (light has canonical list)
-          e.boundary_geojson = full.boundary_geojson;
-          e._boundary_load_state = 'loaded';
-          if (!e.sources) e.sources = full.sources;
-          if (!e.ethical_notes) e.ethical_notes = full.ethical_notes;
-          if (!e.territory_changes) e.territory_changes = full.territory_changes;
-          if (!e.name_variants) e.name_variants = full.name_variants;
-        });
+        // Wave 2.6 (audit #8): logica estratta in static/js/boundary-cache.js
+        // per essere unit-testata (node --test); fallback inline IDENTICO se il
+        // modulo manca, così la mappa non si rompe mai per un asset non caricato.
+        if (window.AtlasBoundaryCache && typeof window.AtlasBoundaryCache.mergeBoundaryBatch === 'function') {
+          window.AtlasBoundaryCache.mergeBoundaryBatch(allEntities, batch);
+        } else {
+          const byId = new Map();
+          allEntities.forEach(e => byId.set(e.id, e));
+          batch.forEach(full => {
+            const e = byId.get(full.id);
+            if (!e) return; // entity not in /light → ignore (light has canonical list)
+            e.boundary_geojson = full.boundary_geojson;
+            e._boundary_load_state = 'loaded';
+            if (!e.sources) e.sources = full.sources;
+            if (!e.ethical_notes) e.ethical_notes = full.ethical_notes;
+            if (!e.territory_changes) e.territory_changes = full.territory_changes;
+            if (!e.name_variants) e.name_variants = full.name_variants;
+          });
+        }
         totalMerged += batch.length;
 
         if (batch.length < limit) break; // exhausted
