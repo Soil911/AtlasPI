@@ -20,7 +20,6 @@ from __future__ import annotations
 
 import datetime
 import logging
-from urllib.parse import parse_qs
 
 from fastapi import APIRouter, Depends, Query
 from pydantic import BaseModel

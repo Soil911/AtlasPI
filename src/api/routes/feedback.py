@@ -25,7 +25,6 @@ import hashlib
 import hmac
 import logging
 import os
-from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from pydantic import BaseModel, Field, field_validator

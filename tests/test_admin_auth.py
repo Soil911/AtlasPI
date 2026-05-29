@@ -9,7 +9,6 @@ import re
 
 import pytest
 
-
 TEST_TOKEN = "test-admin-token-CHANGE"
 
 

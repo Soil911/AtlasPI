@@ -12,16 +12,11 @@ legitimate ones.
 
 from __future__ import annotations
 
-import pytest
-
 from src.ingestion.aourednik_match import (
-    AourednikMatch,
-    SUPER_GROUP_LABELS_BLACKLIST,
     TYPE_MAX_AREA_DEG2,
     _is_polygon_too_large_for_type,
     _is_super_group_label,
 )
-
 
 # ─── Super-group label blacklist ─────────────────────────────────────────
 

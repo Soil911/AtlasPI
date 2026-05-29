@@ -39,7 +39,6 @@ from __future__ import annotations
 
 import pytest
 
-
 MAX_COLLISION_GROUPS = 60  # baseline post-Phase-H is ~40
 MAX_BIG_GROUP_SIZE = 4  # group of 4+ entities sharing polygon = suspect
 

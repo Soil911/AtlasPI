@@ -92,7 +92,7 @@ class GeoEntity(Base):
 # chiamato). Lo status 'disputed' resta RISERVATO ai territori contestati
 # (ETHICS-003, cap ≤0.7) e non viene mai sovrascritto qui.
 # Vedi docs/ethics/ETHICS-013-confidence-status-coherence.md.
-def _coerce_low_confidence_status(mapper, connection, target: "GeoEntity") -> None:
+def _coerce_low_confidence_status(mapper, connection, target: GeoEntity) -> None:
     if (
         target.confidence_score is not None
         and target.confidence_score < 0.5
