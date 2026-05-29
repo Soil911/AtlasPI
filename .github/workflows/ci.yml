@@ -69,6 +69,17 @@ jobs:
         run: |
           python -c "from src.main import app; print('OK: app imported with', len(app.routes), 'routes')"
 
+      # Wave 2.6 (audit #6): esercita il path spaziale reale (ST_Intersects su
+      # boundary_geom) contro PostGIS vero via /v1/entities?bbox=. La suite
+      # pytest gira su SQLite (bbox/contains no-op), quindi questa classe di bug
+      # — incluso il difetto indice GiST di Wave 2.1 — non era catturabile in CI.
+      - name: PostGIS spatial query check (audit #6)
+        env:
+          DATABASE_URL: postgresql://atlaspi:atlaspi_test@localhost:5432/atlaspi_test
+          AUTO_SEED: "false"
+          REDIS_URL: ""
+        run: python -m scripts.ci_spatial_check
+
   build:
     runs-on: ubuntu-latest
     needs: [lint, test, postgres-migrations]
