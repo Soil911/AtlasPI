@@ -2,6 +2,49 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.85] - 2026-05-29 (Wave 2.1 — Fix indice spaziale GiST)
+
+**Tema**: *Ripristino dell'indice GiST sulla colonna `boundary_geom`, mai
+creato in produzione per collisione di nome tra migration 004 e 019.*
+
+Primo intervento della **Wave 2 (consolidamento & hardening)**, partita
+dall'audit a freddo del 2026-05-29 (10 dimensioni in parallelo + verifica
+adversariale, 10 finding HIGH confermati, 0 critical). Vedi
+`docs/wave2/2.1-boundary-geom-index.md`.
+
+### Bug (audit DB #5 — verificato in prod)
+
+La migration `004_postgis_indexes` crea `ix_geo_entities_boundary_geom` come
+**expression index** su `ST_GeomFromGeoJSON(boundary_geojson)`. La
+`019_boundary_geom_postgis` tentava di creare un indice **omonimo** sulla
+**colonna** `boundary_geom`, ma `CREATE INDEX IF NOT EXISTS` con nome già
+occupato → **no-op silenzioso**. Risultato: la colonna `boundary_geom` era
+SENZA indice GiST, quindi `?bbox` e `?contains` su `/v1/entities`
+(`ST_Intersects`/`ST_Contains` in `src/api/routes/_entities_helpers.py`)
+giravano in sequential scan — l'O(n) che ADR-009 voleva eliminare. In prod
+era presente anche un duplicato `ix_geo_entities_boundary_geom_temp` (residuo
+di uno script one-off).
+
+### Fix (migration 022)
+
+- `CREATE INDEX ix_geo_entities_boundary_geom_gist` su `GIST(boundary_geom)` (nome distinto)
+- `DROP INDEX ix_geo_entities_boundary_geom_temp` (duplicato ridondante)
+- `ix_geo_entities_boundary_geom` (004, expression) lasciato **intatto** — usato da `_where_was_postgis`
+- `ANALYZE geo_entities` per aggiornare subito le statistiche del planner (cross-check GPT-5.5)
+- Corretto docstring fuorviante in `_entities_helpers.py` (citava l'indice sbagliato)
+
+Solo PostgreSQL; SQLite (dev/test) → no-op. Idempotente, additiva, reversibile.
+Cross-check ChatGPT-5.5: approvato. Backup DB pre-deploy: `atlaspi-backup-wave2.1-20260529-174932.sql` (45 MB).
+
+### Files
+
+- NEW: `alembic/versions/022_fix_boundary_geom_gist_index.py`
+- NEW: `docs/wave2/2.1-boundary-geom-index.md`
+- MODIFIED: `src/api/routes/_entities_helpers.py` (docstring index name)
+- MODIFIED: `src/config.py`, `pyproject.toml` (APP_VERSION 6.99.84 → 6.99.85)
+
+---
+
 ## [v6.99.84] - 2026-05-28 (Wave 1.4 — Housekeeping)
 
 **Tema**: *Sync docs, a11y micro-fix, llms.txt count update, APP_VERSION bump.*

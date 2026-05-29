@@ -297,8 +297,9 @@ def _apply_bbox_filter(q, bbox: str | None):
     """Filtra entità per bounding box geografico.
 
     PostgreSQL+PostGIS (v6.94.1+, audit R1): ST_Intersects(boundary_geom, envelope)
-    usa indice GiST `ix_geo_entities_boundary_geom`. Fallback al capital-point
-    per entità senza boundary_geom.
+    usa l'indice GiST sulla colonna `ix_geo_entities_boundary_geom_gist`
+    (migration 022 — la 019 era no-op per collisione di nome con la 004, vedi
+    Wave 2.1). Fallback al capital-point per entità senza boundary_geom.
 
     SQLite (dev): filtro approssimato sul solo capital-point.
     """
