@@ -45,7 +45,9 @@ Il database non arbitra la storia. La documenta.
 ### 3. Trasparenza dell'incertezza
 - Ogni record ha un campo confidence_score (0.0 → 1.0)
 - Ogni dato ha sources[] con citazione della fonte primaria
-- I record con score < 0.5 sono marcati come status: "disputed"
+- I record con score < 0.5 sono marcati come status: "uncertain"
+  (enforcement a livello dato, vedi ETHICS-013; lo status "disputed"
+  è riservato ai territori *contestati* — ETHICS-003 — con cap 0.7)
 Un dato incerto comunicato come tale è più onesto di un dato
 certo inventato.
 

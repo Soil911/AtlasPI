@@ -240,7 +240,7 @@ Contested borders show all known versions, with dates and sources. Place names i
 
 ### 3. Transparency of Uncertainty
 
-Every record carries a `confidence_score` from 0.0 to 1.0. Every data point includes `sources[]` with primary source citations. Records scoring below 0.5 are marked as `status: "disputed"`. An uncertain datum honestly labeled is more valuable than a fabricated certainty.
+Every record carries a `confidence_score` from 0.0 to 1.0. Every data point includes `sources[]` with primary source citations. Records scoring below 0.5 are marked as `status: "uncertain"` (enforced at the data layer — see ETHICS-013; the distinct `status: "disputed"` is reserved for *contested* territories, ETHICS-003). An uncertain datum honestly labeled is more valuable than a fabricated certainty.
 
 ### 4. No Geographic or Cultural Bias
 

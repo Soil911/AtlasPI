@@ -10,7 +10,7 @@ ETHICS-005: boundary_source documenta la provenance (audit v6.1).
 
 from __future__ import annotations
 
-from sqlalchemy import CheckConstraint, Float, ForeignKey, Index, Integer, String, Text
+from sqlalchemy import CheckConstraint, Float, ForeignKey, Index, Integer, String, Text, event
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from src.db.database import Base
@@ -81,6 +81,28 @@ class GeoEntity(Base):
         "CapitalHistory", back_populates="entity", cascade="all, delete-orphan",
         order_by="CapitalHistory.year_start"
     )
+
+
+# ETHICS-013 (principio 3 — trasparenza dell'incertezza): un'entità con
+# confidence_score < 0.5 NON può essere status='confirmed'. Sarebbe un "dato
+# certo inventato" — esattamente ciò che CLAUDE.md dichiara peggiore
+# dell'incertezza onesta. Forziamo 'confirmed' → 'uncertain' a livello dato,
+# così seed/ingest/patch e ogni futuro write-path ORM non possono far divergere
+# confidence e status (audit Wave 2 #4/#9: derive_status era codice morto, mai
+# chiamato). Lo status 'disputed' resta RISERVATO ai territori contestati
+# (ETHICS-003, cap ≤0.7) e non viene mai sovrascritto qui.
+# Vedi docs/ethics/ETHICS-013-confidence-status-coherence.md.
+def _coerce_low_confidence_status(mapper, connection, target: "GeoEntity") -> None:
+    if (
+        target.confidence_score is not None
+        and target.confidence_score < 0.5
+        and target.status == EntityStatus.CONFIRMED.value
+    ):
+        target.status = EntityStatus.UNCERTAIN.value
+
+
+event.listen(GeoEntity, "before_insert", _coerce_low_confidence_status)
+event.listen(GeoEntity, "before_update", _coerce_low_confidence_status)
 
 
 class CapitalHistory(Base):

@@ -2,6 +2,59 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.88] - 2026-05-29 (Wave 2.4 — Coerenza confidence↔status + integrità ETHICS-009)
+
+**Tema**: *`confidence<0.5` non può più essere `status='confirmed'` (no "certezza
+inventata"); la Fase 2 di ETHICS-009 documentata onestamente come differita.*
+
+Audit Wave 2, findings **#4/#9 (HIGH)** e **#10 (HIGH)**. Cross-check ChatGPT-5.5:
+approvato su tutti i 4 punti.
+
+### #4/#9 — Coerenza confidence→status ([ETHICS-013](docs/ethics/ETHICS-013-confidence-status-coherence.md))
+
+`derive_status()` era codice morto (mai chiamato da seed/ingest) → entità con
+`confidence<0.5` spedite come `status='confirmed'` (3 in prod, ~58 in seed
+fresco): falsa certezza, viola il principio 3. Colpiva sproporzionatamente
+polities indigene/decentralizzate.
+
+**Fix**: event listener SQLAlchemy `before_insert`/`before_update` su `GeoEntity`
+che forza `confirmed`→`uncertain` quando `confidence<0.5` — chokepoint unico che
+copre seed/ingest/patch. Lo status `disputed` (ETHICS-003, territori *contesi*,
+cap ≤0.7) **non** viene mai toccato: `uncertain` ("poco documentato") ≠
+`disputed` ("conteso"). Backfill una tantum delle 3 righe in prod. Test
+invariante in `tests/test_confidence_status_coherence.py`.
+
+> ⚠️ **Cambio semantico**: `?status=confirmed` ora **esclude** le entità a bassa
+> confidenza. I client che vogliono inclusività ampia devono interrogare anche
+> `?status=uncertain` o filtrare per `confidence_score`. `confirmed` è ora
+> riservato a `confidence_score ≥ 0.5`.
+
+Documentazione riconciliata: CLAUDE.md e README dicevano erroneamente
+"`<0.5 ⇒ disputed`". Follow-up tracciato: DB `CHECK` constraint (coprirebbe anche
+le write raw-SQL che bypassano l'ORM — suggerito nel cross-check).
+
+### #10 — ETHICS-009 Fase 2 (addendum di onestà di processo)
+
+La Fase 2 (nuovo `entity_type=indigenous_society_decentralized` + split di Te
+Whakaminenga + ADR) era marcata "Adottato" ma **mai implementata**;
+l'anti-pattern persiste in `batch_30_oceania.json`. Il record è stato emendato
+per documentare onestamente la deferral (è un progetto dati pluri-sessione) + la
+mitigazione interim (queste polities low-conf ora `status=uncertain` via
+ETHICS-013) + il follow-up tracciato. Chiude il gap di integrità "record
+Adottato le cui azioni non erano avvenute".
+
+### Files
+
+- MODIFIED: `src/db/models/entities.py` (listener `_coerce_low_confidence_status` + import `event`)
+- NEW: `tests/test_confidence_status_coherence.py` (4 test: invariante corpus, coercion, disputed intatto, high-conf intatto)
+- NEW: `docs/ethics/ETHICS-013-confidence-status-coherence.md`
+- MODIFIED: `docs/ethics/ETHICS-009-*.md` (addendum deferral), `CLAUDE.md`, `README.md` (wording `uncertain`)
+- MODIFIED: `src/config.py`, `pyproject.toml` (6.99.87 → 6.99.88)
+
+Test: 1303 passed, 0 failed. Nessuna migration (enforcement ORM + backfill SQL una tantum).
+
+---
+
 ## [v6.99.87] - 2026-05-29 (Wave 2.3 — Envelope errori unificato)
 
 **Tema**: *Tutti gli errori HTTP usano l'envelope canonico `{"error":{code,message,request_id}}`.*

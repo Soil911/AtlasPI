@@ -113,3 +113,48 @@ Entità con capital anacronistica o entity_type mal-calzante **dovrebbero avere 
 - `docs/ethics/ETHICS-009-categorie-politiche-colon-imposte-su-polities-indigene.md` (questo file) creato
 - `entity/55 ethical_notes` aggiornato con riferimento a ETHICS-009 (v6.67)
 - Audit programmato per i polity indigeni simili (v6.67+)
+
+---
+
+## Addendum 2026-05-29 (Wave 2.4) — stato reale della Fase 2: DIFFERITA
+
+**Onestà di processo (audit Wave 2, finding #10, HIGH).** Una verifica a freddo
+ha rilevato che la **Fase 2 strutturale dichiarata sopra NON è mai stata
+implementata**, pur essendo questo record marcato "Adottato":
+
+- `grep` nell'intero repo (data/, src/, docs/): **zero** occorrenze di
+  `indigenous_society_decentralized` / `decentralized_society`.
+- L'ADR previsto (`docs/adr/008-entity-type-indigenous-decentralized.md`) non
+  esiste: lo slot `ADR-008` è stato riusato per `ADR-008-api-versioning.md`.
+- Lo split di **Te Whakaminenga** non è avvenuto.
+- L'anti-pattern **persiste in dati più recenti**: es. `batch_30_oceania.json`
+  contiene `Ngati Toa / Te Ati Awa Confederation` e `Rarotongan Ariki
+  Confederation` con `entity_type='confederation'`, conf 0.4.
+
+### Perché non chiudo la Fase 2 oggi
+
+La Fase 2 è un **progetto dati pluri-sessione** (nuovo `entity_type` nel
+vocabolario + ADR + ri-audit di tutte le polities polinesiane / First Nations /
+nomadi + eventuali split + chain). Forzarla in fretta rischierebbe proprio le
+distorsioni che questo record vuole evitare. Va pianificata, non improvvisata.
+
+### Mitigazione interim adottata oggi (v6.99.88)
+
+[ETHICS-013](ETHICS-013-confidence-status-coherence.md) introduce un enforcement
+a livello dato: ogni entità con `confidence_score < 0.5` (categoria in cui
+ricadono molte di queste polities mal-categorizzate) ottiene automaticamente
+`status='uncertain'` invece di `'confirmed'`. Non risolve il `entity_type`
+sbagliato, ma **rimuove la falsa certezza** dal campo `status` — i consumer
+sanno che il dato è incerto.
+
+### Follow-up tracciato (Fase 2, non ancora schedulata)
+
+1. Aggiungere `indigenous_society_decentralized` a `EntityStatus`/vocabolario
+   entity_type + ADR dedicato.
+2. Ri-audit delle polities elencate al §"Polities da ri-auditare" (Oceania,
+   First Nations, nomadi) con set `status='uncertain'` finché non risolte.
+3. Split di Te Whakaminenga come da Opzione B.
+
+Questo addendum chiude il gap di **integrità del record** (un record "Adottato"
+le cui azioni non erano avvenute) documentando onestamente lo stato reale,
+come richiesto dalla governance etica di CLAUDE.md.
