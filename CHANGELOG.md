@@ -2,6 +2,47 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.89] - 2026-05-29 (Wave 2.5 — response_model sugli endpoint agent headline)
+
+**Tema**: *L'OpenAPI spec ora espone schemi reali (non `{}`) sugli endpoint che
+gli agent AI usano per primi.*
+
+Audit Wave 2, finding API **#1 (HIGH)**.
+
+### Bug
+
+Solo 21/119 route dichiaravano `response_model` → l'`openapi.json` reale mostrava
+`schema: {}` sull'~88% delle operazioni. Un agent che legge lo spec non poteva
+generare tipi né validare per `/light`, `/batch`, `/events`, ecc. — contraddice
+la missione "contratto machine-readable a forma prevedibile".
+
+### Fix
+
+`response_model` con modelli **MIRROR-ESATTI** (stesse chiavi dei dict
+restituiti, campi `Optional`) su:
+- `/v1/entities/light` → `LightListResponse`
+- `/v1/entities/batch` → `BatchResponse` (riusa `EntityResponse` per gli elementi)
+- `/v1/events` → `EventListResponse`
+
+Mirror esatto + `Optional` ⇒ `response_model` non può eliminare campi né
+sollevare 500 in validazione. Un contract test (`tests/test_response_models.py`)
+verifica che lo schema OpenAPI sia non-vuoto **e** che nessun campo venga
+droppato dalle risposte live — rete anti-regressione che rende sicura la
+tipizzazione incrementale dei restanti endpoint con lo stesso pattern.
+
+### Files
+
+- MODIFIED: `src/api/schemas.py` (+5 modelli mirror)
+- MODIFIED: `src/api/routes/entities.py` (`response_model` su /light, /batch), `src/api/routes/events.py` (su /v1/events)
+- NEW: `tests/test_response_models.py` (4 test: schemi OpenAPI + no field-drop su light/events/batch)
+- MODIFIED: `src/config.py`, `pyproject.toml` (6.99.88 → 6.99.89)
+
+Test: 1307 passed, 0 failed. Nessuna migration. Endpoint secondari
+(snapshot/compare/chains/periods/cities/rulers/...) tipizzabili incrementalmente
+con lo stesso pattern, ora protetti dal fence.
+
+---
+
 ## [v6.99.88] - 2026-05-29 (Wave 2.4 — Coerenza confidence↔status + integrità ETHICS-009)
 
 **Tema**: *`confidence<0.5` non può più essere `status='confirmed'` (no "certezza

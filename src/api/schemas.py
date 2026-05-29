@@ -157,6 +157,77 @@ class PaginatedEntityResponse(BaseModel):
     entities: list[EntityResponse]
 
 
+# ─── Wave 2.5 (audit API #1): response_model per gli endpoint headline ──────
+# Modelli MIRROR-ESATTI dei dict restituiti dagli handler (stesse chiavi),
+# campi Optional/permissivi così response_model NON elimina campi né solleva
+# 500 su validazione. Scopo: l'OpenAPI spec espone schemi reali (non `{}`) sugli
+# endpoint che gli agent AI usano per primi (/light, /batch, /events).
+
+
+class LightEntityResponse(BaseModel):
+    """Entità in forma leggera (senza boundary_geojson) — vedi /v1/entities/light."""
+    id: int
+    name_original: str | None = None
+    name_original_lang: str | None = None
+    entity_type: str | None = None
+    year_start: int | None = None
+    year_end: int | None = None
+    capital_name: str | None = None
+    capital_lat: float | None = None
+    capital_lon: float | None = None
+    confidence_score: float | None = None
+    status: str | None = None
+    continent: str | None = Field(None, description="Continente derivato dalle coordinate capitale")
+
+    model_config = {"from_attributes": True}
+
+
+class LightListResponse(BaseModel):
+    """Risposta di /v1/entities/light — bootstrap mappa / overview agent."""
+    total: int
+    count: int = Field(description="DEPRECATED — alias di total (retro-compat)")
+    entities: list[LightEntityResponse]
+
+
+class BatchResponse(BaseModel):
+    """Risposta di /v1/entities/batch — fetch multiplo per ID in un round-trip."""
+    requested: int
+    found: int
+    not_found: list[int] = Field(default_factory=list)
+    entities: list[EntityResponse]
+
+
+class EventSummaryResponse(BaseModel):
+    """Evento storico in forma compatta (liste) — mirror di _event_summary."""
+    id: int
+    name_original: str | None = None
+    name_original_lang: str | None = None
+    event_type: str | None = None
+    year: int | None = None
+    year_end: int | None = None
+    month: int | None = None
+    day: int | None = None
+    date_precision: str | None = None
+    iso_date: str | None = None
+    location_name: str | None = None
+    location_lat: float | None = None
+    location_lon: float | None = None
+    main_actor: str | None = None
+    status: str | None = None
+    confidence_score: float | None = None
+    known_silence: bool | None = None
+
+    model_config = {"from_attributes": True}
+
+
+class EventListResponse(BaseModel):
+    """Risposta di /v1/events (list)."""
+    total: int
+    limit: int
+    offset: int
+    events: list[EventSummaryResponse]
+
+
 class HealthResponse(BaseModel):
     """Stato di salute del servizio."""
     status: str = Field(description="'ok' | 'degraded' | 'down'")

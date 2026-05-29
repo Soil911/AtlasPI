@@ -28,6 +28,7 @@ from sqlalchemy import or_
 from sqlalchemy.orm import Session, joinedload
 
 from src.api.errors import AtlasError, EntityNotFoundError
+from src.api.schemas import EventListResponse
 from src.cache import cache_response
 from src.db.database import get_db
 from src.db.enums import EventRole, EventType
@@ -121,6 +122,7 @@ def _event_detail(e: HistoricalEvent) -> dict:
 
 @router.get(
     "/v1/events",
+    response_model=EventListResponse,
     summary="Lista eventi storici",
     description=(
         "Lista paginata di eventi storici con filtri su anno, tipo, stato e silenzi. "

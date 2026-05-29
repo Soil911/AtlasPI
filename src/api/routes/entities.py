@@ -44,7 +44,7 @@ from src.api.routes._entities_helpers import (
     _where_was_sqlite,
     _year_to_century_label,
 )
-from src.api.schemas import EntityResponse, PaginatedEntityResponse
+from src.api.schemas import BatchResponse, EntityResponse, LightListResponse, PaginatedEntityResponse
 from src.cache import cache_response
 from src.db.database import get_db, is_postgres
 from src.db.models import GeoEntity, HistoricalEvent, NameVariant, Source, TerritoryChange
@@ -280,6 +280,7 @@ def list_entities(
 
 @router.get(
     "/v1/entities/light",
+    response_model=LightListResponse,
     summary="List ALL entities without boundary_geojson — optimized for map viewport",
     description=(
         "Returns all historical entities with ONLY lightweight fields (id, "
@@ -376,6 +377,7 @@ def list_entities_light(
 
 @router.get(
     "/v1/entities/batch",
+    response_model=BatchResponse,
     summary="Fetch multiple entities by ID in a single request",
     description=(
         "Batch endpoint for AI agents: given a comma-separated list of entity IDs, "
