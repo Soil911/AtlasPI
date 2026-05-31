@@ -2,6 +2,35 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.91] - 2026-05-31 (traffic-fix #1 — alias /v1/entity/{id} → /v1/entities/{id})
+
+**Tema**: *Redirect 308 dal namespace singolare `/v1/entity/{id}` alla forma
+canonica plurale, per non far fallire gli agent AI.*
+
+Emerso dall'**analisi del traffico di produzione**: il 2026-05-31 un agent AI,
+trovato funzionante `/v1/entity?name=…`, ha dedotto `/v1/entity/107` e
+`/v1/entity/evolution` per dettaglio/evolution → **404**. È la confusione
+singolare/plurale già segnalata dall'audit (API #design), qui osservata far
+fallire agent reali in produzione.
+
+### Fix
+
+Nuova route `/v1/entity/{rest:path}` → **redirect 308** a `/v1/entities/{rest}`,
+che preserva la query string e copre il dettaglio + tutte le sotto-route
+(evolution, timeline, similar, periods, events, predecessors, successors,
+contemporaries, related). `/v1/entity` (senza sotto-path) resta l'endpoint di
+ricerca, tuttora usato dagli agent.
+
+### Files
+
+- MODIFIED: `src/api/routes/entities.py` (route redirect + import `RedirectResponse`)
+- NEW: `tests/test_entity_singular_redirect.py` (5 test)
+- MODIFIED: `src/config.py`, `pyproject.toml` (6.99.90 → 6.99.91)
+
+Test: 1312 passed, 0 failed. Nessuna migration.
+
+---
+
 ## [v6.99.90] - 2026-05-29 (Wave 2.6 — Copertura test frontend + hardening CI)
 
 **Tema**: *Copertura automatica del lazy-loader frontend (#8) + spatial query

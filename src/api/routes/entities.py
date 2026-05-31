@@ -18,6 +18,7 @@ import logging
 from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
+from fastapi.responses import RedirectResponse
 from sqlalchemy import desc, func, or_, select, text
 from sqlalchemy.orm import Session, joinedload
 
@@ -444,6 +445,24 @@ def get_entities_batch(
         "not_found": not_found,
         "entities": ordered,
     }
+
+
+@router.get("/v1/entity/{rest:path}", include_in_schema=False)
+async def redirect_singular_entity_subpath(rest: str, request: Request):
+    """Compat (traffic-fix #1): `/v1/entity/{id}` e le sue sotto-route sono un
+    errore ricorrente degli agent AI (singolare invece di plurale → 404 in
+    produzione, osservato 2026-05-31). Redirect 308 permanente alla forma
+    canonica `/v1/entities/{...}`, preservando la query string. Copre dettaglio
+    + tutte le sotto-route (evolution, timeline, similar, periods, events,
+    predecessors, successors, contemporaries, related).
+
+    NB: `/v1/entity` senza sotto-path NON è intercettato qui — resta l'endpoint
+    di ricerca (`?name=...&fuzzy=...`), tuttora usato dagli agent.
+    """
+    target = f"/v1/entities/{rest}"
+    if request.url.query:
+        target = f"{target}?{request.url.query}"
+    return RedirectResponse(url=target, status_code=308)
 
 
 @router.get(
