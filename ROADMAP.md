@@ -13,8 +13,32 @@
 
 ## Versioni completate
 
+### v6.99.85-92 -- Wave 2 hardening + full audit + traffic fixes (2026-05-31)
+**Versione corrente: v6.99.92.** CI interamente verde (lint+test+js-tests+postgres-migrations+build).
+
+Sessione lunga: audit a freddo (10 dimensioni, workflow `wb4nky8m3` con 29 agenti +
+verifica adversariale) → tutte "adequate", 0 critical, **10 HIGH confermati**. Verdetto:
+continuare a wave + 1 wave di consolidamento. Chiusi **9/10 HIGH** + analisi traffico
+prod + 2 bug-fix:
+- **v6.99.85** (2.1) indice GiST `boundary_geom` mai creato in prod (migration 022) — #5
+- **v6.99.86** (2.2) rate-limit key = `X-Real-IP` (prima bucket globale dietro nginx) — #3
+- **v6.99.87** (2.3) envelope errori unificato (handler `StarletteHTTPException`) — #2
+- **v6.99.88** (2.4) `confidence<0.5 ⇒ uncertain` enforced (ETHICS-013) + addendum ETHICS-009 — #4/#9/#10
+- **v6.99.89** (2.5) `response_model` su `/light`, `/batch`, `/events` (OpenAPI tipizzato) — #1
+- **v6.99.90** (2.6) copertura test frontend (`boundary-cache.js`) + spatial check CI + fix lint — #6/#8
+- **v6.99.91** traffic-fix #1: redirect `/v1/entity/{id}` → `/v1/entities/{id}` (agent 404 in prod)
+- **v6.99.92** traffic-fix #2: auth admin via token (shell pubbliche + `admin-auth.js`, 401 intermittenti risolti)
+
+**Rimanenti / prossima sessione** (ordine deciso con Clirim: **a → c → b**):
+- **(a) Backport Phase H JSON↔prod** — 372 entità `approximate_circle` esistono solo
+  in prod; un seed fresco rigenera ~22 collision-group. Approccio approvato: export
+  prod→JSON (solo campi boundary). Chiude audit **#7** + mette in sicurezza i deploy da
+  DB vuoto. *Da eseguire.*
+- **(c) orjson** serializzazione globale (perf; cambio ampio → test completo + cross-check).
+- **(b) Enrichment** entità low-confidence (Wave 2 Plan A — vedi `docs/auto-iter-wave0/briefs/D-enrichment-backlog.md`).
+
 ### v6.99.81-83 Wave 1 -- Security, data-fix, perf (2026-05-28)
-**Versione corrente: v6.99.83.** Triplo deploy autonomo in 1 sessione
+**(storico — versione corrente ora v6.99.92, sopra.)** Triplo deploy autonomo in 1 sessione
 (`auto-iter-wave0` branch, ChatGPT-5.5 cross-check ogni step):
 - **v6.99.81** — Admin containment: tutti i 19 endpoint `/admin/*` ora
   richiedono auth (X-Admin-Token header o Basic Auth admin:TOKEN).
