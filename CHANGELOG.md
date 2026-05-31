@@ -2,6 +2,38 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.94] - 2026-05-31 (Wave 2.7 follow-up — riconciliazione residua entità JSON↔prod: nomi nativi + 6 insert)
+
+**Tema**: *Chiusi i 2 debiti residui lasciati da v6.99.93 (vedi ETHICS-012 §"#2"):
+i nomi nativi (ETHICS-001) e le 6 entità solo-prod. Il JSON ora ha 1038 entità
+deduplicate = totale prod. Source-only, nessun deploy.*
+
+Script `scripts/backport_residual_to_json.py` (input read-only
+`data/fixes/phase_h_residual_export.json`).
+
+### Triage dei 7 "insert" → 6 ADD + 1 rename
+- **Aggiunte** 6 entità realmente assenti dal JSON in
+  `data/entities/batch_36_prod_reconciliation.json` (complete, da prod):
+  `Res Publica Romana`, `Premier Empire français`, `افشاریان` (Afsharidi),
+  `𒆍𒀭𒊏𒆠 (Old Babylonian)`, `சோழர் (Sangam-era)`, e `Kingdom of Quito`
+  (contestata/leggendaria ma gestita responsabilmente: `disputed`, conf 0.5,
+  `ethical_notes` che documenta il dibattito storiografico — conforme ETHICS-002/003).
+- **Riclassificato come rename** prod 741 `مقديشو` = JSON `Maqdishaw` (stesso
+  sultanato 900-1600) + backport del boundary che v6.99.93 aveva mancato.
+
+### 15 rename `name_original` → forma nativa (ETHICS-001)
+`Hetmanshchyna`→`Гетьманщина`, `Raska`→`Србија`, `Maqdishaw`→`مقديشو`, ecc.;
+`name_variants` sincronizzate da prod (union lossless: la forma latina resta
+variante). Aggiornati 2 riferimenti per-nome (`data/chains/batch_20_balkan.json`,
+`data/events/batch_20_trade_exploration.json`) per non rompere il linking al seed.
+
+### Note
+- 4 insert privi di `name_variants` in prod → aggiunte le forme inglesi
+  documentate (invariante "ogni entità ≥1 variante" + ricercabilità).
+- Suite verde (1316 passed), fence collision a 0, ruff verde.
+- Follow-up residui (ETHICS-012 §"#2"): cap prod 6 disputed>0.70; riconciliare in
+  prod le 3 entità Babilonia sovrapposte; arricchire `name_variants` in prod.
+
 ## [v6.99.93] - 2026-05-31 (Wave 2.7 — backport confini JSON↔prod + fence collision: chiude audit #7)
 
 **Tema**: *Il sorgente JSON viene riallineato alla realtà-prod già revisionata

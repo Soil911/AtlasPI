@@ -1,0 +1,3621 @@
+[
+  {
+    "id": 530,
+    "name_original": "Kingdom of Quito",
+    "name_original_lang": "qu",
+    "entity_type": "kingdom",
+    "year_start": 1000,
+    "year_end": 1470,
+    "capital_name": "Quitu (present-day Quito)",
+    "capital_lat": -0.1807,
+    "capital_lon": -78.4678,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              -76.225843282,
+              -0.18024602
+            ],
+            [
+              -76.268611032,
+              -0.620004229
+            ],
+            [
+              -76.395549861,
+              -1.043041637
+            ],
+            [
+              -76.601911568,
+              -1.433219629
+            ],
+            [
+              -76.879940408,
+              -1.775597574
+            ],
+            [
+              -77.219126448,
+              -2.056997335
+            ],
+            [
+              -77.606566619,
+              -2.266519148
+            ],
+            [
+              -78.02743157,
+              -2.395985598
+            ],
+            [
+              -78.465527946,
+              -2.440288762
+            ],
+            [
+              -78.903935211,
+              -2.397617539
+            ],
+            [
+              -79.325686525,
+              -2.269547988
+            ],
+            [
+              -79.714456807,
+              -2.060988566
+            ],
+            [
+              -80.055219943,
+              -1.779982786
+            ],
+            [
+              -80.334841232,
+              -1.437381853
+            ],
+            [
+              -80.542579385,
+              -1.046407345
+            ],
+            [
+              -80.6704822,
+              -0.622128047
+            ],
+            [
+              -80.713668908,
+              -0.180875534
+            ],
+            [
+              -80.670498116,
+              0.260378669
+            ],
+            [
+              -80.542622722,
+              0.684664163
+            ],
+            [
+              -80.334932723,
+              1.075652521
+            ],
+            [
+              -80.055385338,
+              1.418279501
+            ],
+            [
+              -79.714721419,
+              1.699328505
+            ],
+            [
+              -79.326069401,
+              1.907952646
+            ],
+            [
+              -78.904443916,
+              2.036110969
+            ],
+            [
+              -78.466154852,
+              2.078894946
+            ],
+            [
+              -78.028152347,
+              2.034725304
+            ],
+            [
+              -77.607341244,
+              1.905406749
+            ],
+            [
+              -77.219902695,
+              1.696038086
+            ],
+            [
+              -76.880659322,
+              1.414785784
+            ],
+            [
+              -76.602514195,
+              1.072538031
+            ],
+            [
+              -76.395984244,
+              0.682462115
+            ],
+            [
+              -76.268838521,
+              0.259489817
+            ],
+            [
+              -76.225843282,
+              -0.18024602
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "approximate_circle",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.5,
+    "status": "disputed",
+    "ethical_notes": "ETHICS-002: The 'Kingdom of Quito' is one of the most contested entities in South American historiography. The traditional narrative, originating with the colonial-era Jesuit historian Juan de Velasco (1789), describes a pre-Inca kingdom of the Quitu-Cara people. Modern archaeology has found no evidence supporting Velasco's account of a unified Quitu kingdom. The narrative likely served Ecuadorian nationalist purposes — providing a pre-Inca legitimating origin story. However, dismissing the concept entirely may erase genuine pre-Inca political complexity in the region. Archaeological evidence does show complex chiefdoms (señoríos) in the northern Andes before Inca conquest, including the Caranqui, Cayambe, and Panzaleo peoples. ETHICS-001: The low confidence score reflects genuine academic dispute. Including this entity documents the historiographic controversy itself. Velasco's account should not be treated as reliable history, but the pre-Inca political complexity it gestures toward was real.\n\n[v6.99.80-postH-visual] Replaced rectangle bbox placeholder polygon (visually obvious as bounding box, not real boundary) with capital-based circle of 250km radius. Approximate but visually honest as approximation rather than pretending to be a documented boundary.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Quito",
+        "lang": "en",
+        "period_start": 1000,
+        "period_end": 1470,
+        "context": "English translation of the traditional (and disputed) narrative of a pre-Inca kingdom",
+        "source": "Velasco, Juan de. Historia del Reino de Quito en la América Meridional (1789)"
+      },
+      {
+        "name": "Reino de Quito",
+        "lang": "es",
+        "period_start": 1000,
+        "period_end": 1470,
+        "context": "Spanish designation from colonial-era histories; the primary source is Juan de Velasco's 1789 account",
+        "source": "Velasco, Juan de. Historia del Reino de Quito en la América Meridional (1789)"
+      },
+      {
+        "name": "Señorío de los Quitu-Cara / Shyri",
+        "lang": "es",
+        "period_start": null,
+        "period_end": null,
+        "context": "Alternative designation; 'Shyri' was the title attributed to the rulers of Quito in Velasco's account. The historicity of the Shyri dynasty is rejected by modern archaeology",
+        "source": "Salomon, Frank. Native Lords of Quito in the Age of the Incas (1986)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1000,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Northern Andean highlands (present-day Ecuador)",
+        "change_type": "CULTURAL",
+        "description": "Traditional narrative: emergence of the Quitu-Cara polity through merger of coastal Cara people and highland Quitu. Modern archaeology: the northern Ecuadorian highlands hosted multiple complex chiefdoms (señoríos) including the Caranqui, Cayambe, Otavalo, Panzaleo, and Puruhá. These were independent polities, not a unified kingdom. Archaeological evidence shows monumental mound construction, intensive agriculture, and long-distance trade.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1470,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Northern Andes (present-day Ecuador)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Inca expansion under Tupac Inca Yupanqui and later Huayna Capac conquered the northern Andean chiefdoms. The Caranqui and Cayambe peoples resisted fiercely; the Battle of Yahuarcocha ('Blood Lake,' ca. 1487) reportedly ended with thousands of Cayambe-Caranqui warriors massacred on the shores of the lake. Huayna Capac established Quito as a secondary Inca capital and married local nobility.",
+        "population_affected": 300000,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Salomon, Frank. Native Lords of Quito in the Age of the Incas: The Political Economy of North Andean Chiefdoms. Cambridge University Press, 1986",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Velasco, Juan de. Historia del Reino de Quito en la América Meridional, 1789 — primary source for the traditional narrative, now considered largely mythological",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Athens, J. Stephen. 'Ethnicity and Adaptation: The Late Period-Cara Occupation in Northern Highland Ecuador.' PhD dissertation, University of New Mexico, 1992",
+        "url": null,
+        "source_type": "archaeological"
+      }
+    ]
+  },
+  {
+    "id": 584,
+    "name_original": "Деспотовина Србија",
+    "name_original_lang": "sr",
+    "entity_type": "principality",
+    "year_start": 1402,
+    "year_end": 1459,
+    "capital_name": "Smederevo",
+    "capital_lat": 44.6625,
+    "capital_lon": 20.9281,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              23.44979579,
+              44.636240747
+            ],
+            [
+              23.38703369,
+              44.286305649
+            ],
+            [
+              23.231755178,
+              43.951662671
+            ],
+            [
+              22.9912039,
+              43.644789291
+            ],
+            [
+              22.675386856,
+              43.376966588
+            ],
+            [
+              22.29660983,
+              43.157923672
+            ],
+            [
+              21.869007671,
+              42.995542515
+            ],
+            [
+              21.408078543,
+              42.895625003
+            ],
+            [
+              20.930224914,
+              42.861724235
+            ],
+            [
+              20.452300393,
+              42.895042188
+            ],
+            [
+              19.991159859,
+              42.994395357
+            ],
+            [
+              19.563209705,
+              43.156248935
+            ],
+            [
+              19.183955017,
+              43.374818923
+            ],
+            [
+              18.867541072,
+              43.642240488
+            ],
+            [
+              18.6262882,
+              43.948800438
+            ],
+            [
+              18.470222643,
+              44.283231761
+            ],
+            [
+              18.406612407,
+              44.633068417
+            ],
+            [
+              18.439526549,
+              44.985058345
+            ],
+            [
+              18.569448406,
+              45.325630944
+            ],
+            [
+              18.792985732,
+              45.641411449
+            ],
+            [
+              19.102730368,
+              45.919768232
+            ],
+            [
+              19.487322163,
+              46.149370777
+            ],
+            [
+              19.931762367,
+              46.320727274
+            ],
+            [
+              20.417998362,
+              46.426663962
+            ],
+            [
+              20.925766253,
+              46.462705872
+            ],
+            [
+              21.433636966,
+              46.427322753
+            ],
+            [
+              21.92017522,
+              46.322014766
+            ],
+            [
+              22.365099163,
+              46.151228762
+            ],
+            [
+              22.750328396,
+              45.92211411
+            ],
+            [
+              23.060829336,
+              45.644143253
+            ],
+            [
+              23.2852031,
+              45.328633159
+            ],
+            [
+              23.416001952,
+              44.988207962
+            ],
+            [
+              23.44979579,
+              44.636240747
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "approximate_circle",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-001: name_original in Serbian (Cyrillic original: Деспотовина Србије). The title 'Despot' was a high Byzantine court dignity, not the pejorative English term. ETHICS-002: The Serbian Despotate was the last major Serbian state before Ottoman conquest. Its fall at Smederevo (1459) marked the beginning of nearly four centuries of Ottoman rule over Serbia. The Ottoman conquest involved significant violence, population displacement, and the imposition of the devshirme (child levy) system that forcibly converted Christian boys to Islam for military service. ETHICS-003: entity_type is 'principality' since 'despotate' is not in the schema. The state was technically a vassal of both Hungary and the Ottoman Empire at various points, reflecting the desperate diplomatic balancing of a small state between two empires.\n\n[v6.99.79-tier2/bosnia-fix] Replaced erroneous Bosnia polygon with 200km circle. Serbian Despotate (Деспотовина Србија, 1402-1459) was successor state to medieval Serbian Empire, last vassal of Ottomans before annexation 1459 (fall of Smederevo).",
+    "name_variants": [
+      {
+        "name": "Serbian Despotate",
+        "lang": "en",
+        "period_start": 1402,
+        "period_end": 1459,
+        "context": "Standard English denomination",
+        "source": "Fine, John V.A. The Late Medieval Balkans (1987)"
+      },
+      {
+        "name": "Despotatus Serbiae",
+        "lang": "la",
+        "period_start": 1402,
+        "period_end": 1459,
+        "context": "Latin form used in Hungarian and papal diplomatic correspondence",
+        "source": "Cirković, Sima. The Serbs (2004)"
+      },
+      {
+        "name": "Sirp Despotlugu",
+        "lang": "tr",
+        "period_start": 1402,
+        "period_end": 1459,
+        "context": "Ottoman Turkish denomination; the Ottomans recognized the despotate as a vassal state before its conquest",
+        "source": "Inalcik, Halil. The Ottoman Empire: The Classical Age 1300-1600 (1973)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1402,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Central Serbia",
+        "change_type": "INDEPENDENCE",
+        "description": "Stefan Lazarevic received the title of 'Despot' from Byzantine Emperor Manuel II Palaiologos and exploited the Ottoman civil war following the Battle of Ankara (1402) to reassert Serbian autonomy. The despotate represented a partial restoration of Serbian statehood after the catastrophic defeat at Kosovo (1389) and the period of Ottoman vassalage that followed.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1459,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Smederevo and all Serbian territories",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Sultan Mehmed II conquered Smederevo, the last Serbian fortress, extinguishing the Serbian Despotate. Serbia was incorporated into the Ottoman Empire as a direct province (Sandzak of Smederevo). This marked the end of medieval Serbian statehood for nearly four centuries. The Serbian population was subjected to Ottoman taxation, the devshirme system, and periodic violence. Serbian cultural life survived primarily through the Orthodox Church and the Kosovo myth.",
+        "population_affected": 800000,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Fine, John V.A. The Late Medieval Balkans: A Critical Survey from the Late Twelfth Century to the Ottoman Conquest. University of Michigan Press, 1987",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Cirković, Sima. The Serbs. Blackwell, 2004",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Fine, John V.A. The Late Medieval Balkans: A Critical Survey from the Late Twelfth Century to the Ottoman Conquest. Ann Arbor: University of Michigan Press, 1987. ISBN 978-0-472-08260-5.",
+        "url": "https://www.worldcat.org/isbn/9780472082605",
+        "source_type": "book"
+      },
+      {
+        "citation": "Mihaljčić, Rade. The Battle of Kosovo in History and in Popular Tradition. Belgrade: BIGZ, 1989. ISBN 978-86-13-00074-1.",
+        "url": "https://www.worldcat.org/isbn/9788613000746",
+        "source_type": "book"
+      },
+      {
+        "citation": "Ćirković, Sima M. The Serbs. Trans. Vuk Tošić. Oxford: Blackwell, 2004. ISBN 978-0-631-20471-8.",
+        "url": "https://www.worldcat.org/isbn/9780631204718",
+        "source_type": "book"
+      },
+      {
+        "citation": "Pavlowitch, Stevan K. Serbia: The History of an Idea. New York: New York University Press, 2002. ISBN 978-0-8147-6708-2.",
+        "url": "https://www.worldcat.org/isbn/9780814767085",
+        "source_type": "book"
+      },
+      {
+        "citation": "Spremić, Momčilo. Despot Đurađ Branković i njegovo doba. 2nd ed. Belgrade: Srpska književna zadruga, 1999. ISBN 978-86-379-0586-8.",
+        "url": "https://www.worldcat.org/isbn/9788637905868",
+        "source_type": "book"
+      }
+    ]
+  },
+  {
+    "id": 665,
+    "name_original": "Зета",
+    "name_original_lang": "sr",
+    "entity_type": "principality",
+    "year_start": 1360,
+    "year_end": 1421,
+    "capital_name": "Zabljak Crnojevica",
+    "capital_lat": 42.34,
+    "capital_lon": 19.07,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              20.040948707,
+              42.352234936
+            ],
+            [
+              20.024457751,
+              42.211535604
+            ],
+            [
+              19.971503453,
+              42.075911495
+            ],
+            [
+              19.884326443,
+              41.950529096
+            ],
+            [
+              19.766416784,
+              41.84013628
+            ],
+            [
+              19.622360648,
+              41.748890688
+            ],
+            [
+              19.457657575,
+              41.680212502
+            ],
+            [
+              19.278515743,
+              41.636665463
+            ],
+            [
+              19.091631762,
+              41.619869051
+            ],
+            [
+              18.903960713,
+              41.630443829
+            ],
+            [
+              18.722481486,
+              41.667991107
+            ],
+            [
+              18.553962092,
+              41.731107264
+            ],
+            [
+              18.404729503,
+              41.817432269
+            ],
+            [
+              18.28044879,
+              41.923731186
+            ],
+            [
+              18.185916796,
+              42.046006671
+            ],
+            [
+              18.124876324,
+              42.179639695
+            ],
+            [
+              18.099857658,
+              42.319554886
+            ],
+            [
+              18.112055048,
+              42.46040599
+            ],
+            [
+              18.161246289,
+              42.596775917
+            ],
+            [
+              18.245763405,
+              42.723384747
+            ],
+            [
+              18.362521405,
+              42.835298022
+            ],
+            [
+              18.507109867,
+              42.928126687
+            ],
+            [
+              18.67394867,
+              42.998209521
+            ],
+            [
+              18.856504728,
+              43.042768824
+            ],
+            [
+              19.047561518,
+              43.060030883
+            ],
+            [
+              19.239528269,
+              43.049304177
+            ],
+            [
+              19.424771646,
+              43.011010561
+            ],
+            [
+              19.595950343,
+              42.946667391
+            ],
+            [
+              19.746332662,
+              42.858821627
+            ],
+            [
+              19.870078914,
+              42.750939791
+            ],
+            [
+              19.962474086,
+              42.627260178
+            ],
+            [
+              20.020100923,
+              42.492615471
+            ],
+            [
+              20.040948707,
+              42.352234936
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "approximate_circle",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "ethical_notes": "The Principality of Zeta under the Balsic and Crnojevic dynasties is a key entity in Montenegrin national identity formation. Serbian historiography often treats Zeta as a Serbian vassal state, while Montenegrin historiography emphasizes its independence as evidence of a distinct Montenegrin national tradition predating Serbian identity. The principality's shifting allegiances between Venice, the Ottoman Empire, and the Serbian Despotate make it a contested entity in South Slavic identity politics. Albanian historiography also emphasizes the Albanian ethnic character of parts of the Balsic realm.\n\n[v6.99.79-tier2/bosnia-fix] Replaced erroneous Bosnia polygon with 80km circle. Zeta (Crnojevic principality, 1360-1421→1499) was a Montenegrin principality on Adriatic coast, predecessor of modern Montenegro; resisted Ottomans longest in W Balkans.",
+    "name_variants": [
+      {
+        "name": "Principality of Zeta",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "English academic designation",
+        "source": null
+      },
+      {
+        "name": "Кнежевина Зета",
+        "lang": "sr",
+        "period_start": null,
+        "period_end": null,
+        "context": "Serbian Cyrillic form",
+        "source": null
+      },
+      {
+        "name": "Zetsko Vojvodstvo",
+        "lang": "sr",
+        "period_start": null,
+        "period_end": null,
+        "context": "Alternative designation as Duchy of Zeta",
+        "source": null
+      },
+      {
+        "name": "Zeta under Balsici",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "Period-specific designation for Balsic dynasty rule (1356-1421)",
+        "source": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1360,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Southern Adriatic coast and Montenegrin hinterland",
+        "change_type": "independence",
+        "description": "The Balsic family established independent control over Zeta following the collapse of the Serbian Empire after Stefan Dusan's death (1355). Balsa I and his brothers consolidated power over the region from Skadar (Shkoder) to the Bay of Kotor.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1396,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Skadar (Shkoder) and southern Zeta",
+        "change_type": "contraction",
+        "description": "Ottoman forces inflicted a major defeat on Balsa III at the Battle of Savra. The Balsic lost southern territories and Skadar was increasingly threatened. The dynasty turned to Venetian and Hungarian alliances for survival.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1421,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Zeta",
+        "change_type": "dissolution",
+        "description": "Death of Balsa III without a direct heir. Zeta was contested between the Serbian Despotate under Stefan Lazarevic, Venice, and local nobles. The Crnojevic dynasty eventually emerged as rulers of a diminished Zeta centered on Cetinje.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Fine, John V.A. The Late Medieval Balkans: A Critical Survey from the Late Twelfth Century to the Ottoman Conquest. Ann Arbor: University of Michigan Press, 1987",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Malovic, Zarko. Balsici: Drzava i Porodica. Podgorica: Istorijski Institut, 2000",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ćirković, S. (2004). The Serbs. Blackwell Publishing. ISBN 9781405142915.",
+        "url": "https://www.worldcat.org/isbn/9781405142915",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Djukanović, B. (2023). Historical Dictionary of Montenegro. Bloomsbury Publishing. ISBN 9781538139158.",
+        "url": "https://www.worldcat.org/isbn/9781538139158",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Fine, J. V. A. Jr. (1994). The Late Medieval Balkans: A Critical Survey from the Late Twelfth Century to the Ottoman Conquest. University of Michigan Press. ISBN 978-0-472-10079-8.",
+        "url": "https://archive.org/details/latemedievalbalk00fine/",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "id": 667,
+    "name_original": "Србија",
+    "name_original_lang": "sr",
+    "entity_type": "principality",
+    "year_start": 1083,
+    "year_end": 1217,
+    "capital_name": "Ras",
+    "capital_lat": 43.12,
+    "capital_lon": 20.42,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              18.5,
+              44.5
+            ],
+            [
+              22.0,
+              44.5
+            ],
+            [
+              22.0,
+              42.0
+            ],
+            [
+              19.5,
+              41.5
+            ],
+            [
+              18.0,
+              43.0
+            ],
+            [
+              18.5,
+              44.5
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "ethical_notes": "Rascia (Grand Principality of Serbia) is the foundational state of medieval Serbian identity and the Nemanjic dynasty. Its name 'Raska' is the root of later European designations for Serbia. The relationship between Rascia and Byzantium involved complex vassal-sovereign dynamics that Serbian nationalist historiography tends to minimize in favor of narratives of unbroken independence. Kosovo Serb identity claims draw heavily on the Nemanjic legacy in this region, making its history directly relevant to contemporary political disputes.\n\n[v6.31-wrong-polygon-reset] Grand Principality of Rascia (Raška) was the medieval Serbian polity centered on modern Raška district, ~50-80k km² not 357k. Reverted. Boundary reset to approximate circle (150km radius) around capital coordinates. Previous boundary was an over-reach of national (USA/RUS) polygon via faulty name/ISO matching.",
+    "name_variants": [
+      {
+        "name": "Grand Principality of Serbia / Rascia",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "English academic designation",
+        "source": null
+      },
+      {
+        "name": "Велики Жупанат Рашка",
+        "lang": "sr",
+        "period_start": null,
+        "period_end": null,
+        "context": "Serbian Cyrillic: Grand Zupanate of Raska",
+        "source": null
+      },
+      {
+        "name": "Rascia / Raxia",
+        "lang": "la",
+        "period_start": null,
+        "period_end": null,
+        "context": "Latin form used in Western European documents",
+        "source": null
+      },
+      {
+        "name": "Ρασία",
+        "lang": "el",
+        "period_start": null,
+        "period_end": null,
+        "context": "Byzantine Greek designation",
+        "source": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1083,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Central western Balkans (Raska region)",
+        "change_type": "independence",
+        "description": "Vukan, Grand Zupan of Rascia, established effective independence from the Byzantine Empire during a period of Byzantine weakness. The Raska heartland lay in the valleys of the Ibar and Raska rivers in modern southwestern Serbia.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 1166,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Raska and surrounding regions",
+        "change_type": "expansion",
+        "description": "Stefan Nemanja became Grand Zupan, founding the Nemanjic dynasty that would rule Serbia for two centuries. Nemanja expanded Raska's territory to include Zeta (Montenegro), parts of Kosovo, and Hum (Herzegovina), creating the core of the medieval Serbian state.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1217,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Serbia",
+        "change_type": "expansion",
+        "description": "Stefan Nemanjic (Stefan the First-Crowned) received a royal crown from Pope Honorius III, elevating Rascia to the Kingdom of Serbia. This marked the transformation from a principality to a kingdom and the end of Rascia as a distinct polity name.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Fine, John V.A. The Early Medieval Balkans: A Critical Survey from the Sixth to the Late Twelfth Century. Ann Arbor: University of Michigan Press, 1983",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Kalic, Jovanka. 'Rascia: The Nucleus of the Medieval Serbian State.' Serbian Studies, vol. 1, 1980",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Stefan Nemanja, Charter of the Monastery of Studenica, c. 1196",
+        "url": null,
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "id": 678,
+    "name_original": "Гетьманщина",
+    "name_original_lang": "uk",
+    "entity_type": "republic",
+    "year_start": 1649,
+    "year_end": 1764,
+    "capital_name": "Chyhyryn",
+    "capital_lat": 49.08,
+    "capital_lon": 32.66,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              38.126823606,
+              48.966461115
+            ],
+            [
+              37.953139279,
+              48.271706442
+            ],
+            [
+              37.587351259,
+              47.611561069
+            ],
+            [
+              37.049050613,
+              47.0094642
+            ],
+            [
+              36.361788599,
+              46.486196267
+            ],
+            [
+              35.552080584,
+              46.059426765
+            ],
+            [
+              34.648617494,
+              45.743338435
+            ],
+            [
+              33.681624422,
+              45.548319516
+            ],
+            [
+              32.682309766,
+              45.480729839
+            ],
+            [
+              31.682362406,
+              45.542753347
+            ],
+            [
+              30.713469311,
+              45.73234849
+            ],
+            [
+              29.806835192,
+              46.043300775
+            ],
+            [
+              28.992685809,
+              46.465372397
+            ],
+            [
+              28.299727332,
+              46.984536754
+            ],
+            [
+              27.754519081,
+              47.583284554
+            ],
+            [
+              27.380702565,
+              48.24099514
+            ],
+            [
+              27.198025205,
+              48.9343808
+            ],
+            [
+              27.221113549,
+              49.638029903
+            ],
+            [
+              27.457999376,
+              50.325090518
+            ],
+            [
+              27.908489681,
+              50.968141914
+            ],
+            [
+              28.56259333,
+              51.540288458
+            ],
+            [
+              29.399346846,
+              52.01647291
+            ],
+            [
+              30.386466659,
+              52.374944592
+            ],
+            [
+              31.481226599,
+              52.598744558
+            ],
+            [
+              32.632767523,
+              52.67700926
+            ],
+            [
+              33.785706919,
+              52.605876403
+            ],
+            [
+              34.884537832,
+              52.388821956
+            ],
+            [
+              35.878050971,
+              52.036360665
+            ],
+            [
+              36.723006152,
+              51.565170323
+            ],
+            [
+              37.386523285,
+              50.996805906
+            ],
+            [
+              37.847038996,
+              50.356218782
+            ],
+            [
+              38.094019758,
+              49.670281657
+            ],
+            [
+              38.126823606,
+              48.966461115
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "approximate_circle",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "ethical_notes": "The Cossack Hetmanate (Hetmanshchyna) is a foundational entity in Ukrainian national identity, representing the first large-scale Ukrainian state. Russian imperial historiography consistently minimized or denied Ukrainian political distinctiveness, treating the Hetmanate as a Russian borderland rather than a sovereign polity. The Treaty of Pereyaslav (1654) between Hetman Bohdan Khmelnytsky and Tsar Alexis is interpreted diametrically: Ukrainian historiography views it as an alliance between equals, while Russian historiography treats it as voluntary reunification of 'Little Russia' with 'Great Russia.' This dispute has direct bearing on the contemporary Russo-Ukrainian conflict. The Khmelnytsky uprising also involved devastating pogroms against Jews (Khmelnytsky massacres, 1648-1649), one of the worst anti-Jewish atrocities before the Holocaust.\n\n[v6.99.79-tier2/hetmanate-fix] Cossack Hetmanate (Гетьманщина, 1649-1764) was a Ukrainian Cossack state founded by Bohdan Khmelnytsky after Khmelnytsky Uprising; Pereiaslav Agreement 1654 made it Russian protectorate; abolished by Catherine II 1764.",
+    "name_variants": [
+      {
+        "name": "Cossack Hetmanate",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "English academic designation",
+        "source": null
+      },
+      {
+        "name": "Гетьманщина",
+        "lang": "uk",
+        "period_start": null,
+        "period_end": null,
+        "context": "Ukrainian: Hetmanshchyna",
+        "source": null
+      },
+      {
+        "name": "Hetmanat / Hetmanstvo",
+        "lang": "uk",
+        "period_start": null,
+        "period_end": null,
+        "context": "Alternative Ukrainian forms",
+        "source": null
+      },
+      {
+        "name": "Malorossiya / Little Russia",
+        "lang": "ru",
+        "period_start": null,
+        "period_end": null,
+        "context": "Russian imperial designation; considered offensive in Ukrainian context as it denies Ukrainian distinct identity",
+        "source": null
+      },
+      {
+        "name": "Wojsko Zaporoskie",
+        "lang": "pl",
+        "period_start": null,
+        "period_end": null,
+        "context": "Polish: 'Zaporozhian Host', the name used in the Treaty of Hadiach (1658)",
+        "source": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1649,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Central Ukraine (Left and Right Bank)",
+        "change_type": "rebellion",
+        "description": "The Khmelnytsky Uprising (1648) led to the establishment of the Hetmanate after the Cossack victory at the Battle of Zboriv and the Treaty of Zboriv (1649). Bohdan Khmelnytsky became Hetman of a de facto independent Ukrainian Cossack state. The uprising involved widespread pogroms against Jews and Poles.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1654,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Ukraine",
+        "change_type": "treaty",
+        "description": "Treaty of Pereyaslav: Khmelnytsky placed the Hetmanate under Muscovite protection. The exact terms remain disputed, as the original document has not survived. Ukrainian sources emphasize limited military alliance; Russian sources claim full incorporation.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1764,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Left-Bank Ukraine",
+        "change_type": "dissolution",
+        "description": "Catherine II abolished the Hetmanate, replacing it with the Little Russia Governorate under direct Russian administration. The last Hetman, Kyrylo Rozumovsky, was forced to resign. This ended Ukrainian political autonomy until the 20th century and is viewed in Ukrainian historiography as an act of Russian colonial absorption.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Plokhy, Serhii. The Cossacks and Religion in Early Modern Ukraine. Oxford: Oxford University Press, 2001",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "The Litopys Samovidets (Eyewitness Chronicle). Ukrainian Cossack chronicle, late 17th century",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Kohut, Zenon E. Russian Centralism and Ukrainian Autonomy: Imperial Absorption of the Hetmanate, 1760s-1830s. Cambridge, MA: Harvard Ukrainian Research Institute, 1988",
+        "url": null,
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "id": 679,
+    "name_original": "Полацкае княства",
+    "name_original_lang": "be",
+    "entity_type": "principality",
+    "year_start": 987,
+    "year_end": 1397,
+    "capital_name": "Polotsk",
+    "capital_lat": 55.49,
+    "capital_lon": 28.8,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              26.5,
+              56.5
+            ],
+            [
+              31.0,
+              56.5
+            ],
+            [
+              31.5,
+              54.5
+            ],
+            [
+              28.0,
+              53.8
+            ],
+            [
+              26.2,
+              55.0
+            ],
+            [
+              26.5,
+              56.5
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "ethical_notes": "The Principality of Polotsk is foundational to Belarusian national identity, often cited as the first distinctly Belarusian state. Russian historiography traditionally treats Polotsk as a minor Rus' principality within the broader Russian historical narrative, while Belarusian historiography emphasizes its independence from Kyiv and distinctive character. Lithuanian historiography focuses on the incorporation of Polotsk into the Grand Duchy of Lithuania. This three-way historiographical contest directly mirrors contemporary geopolitical tensions regarding Belarusian sovereignty and identity.\n\n[v6.31-oversize-reset] Boundary area was 927,222 km², exceeding principality ceiling (300,000 km²) by 3.1×. Reset to capital-based circle (80km radius) — likely wrong-polygon inheritance via fuzzy name matching. Manual review recommended if the entity's true extent is known.",
+    "name_variants": [
+      {
+        "name": "Principality of Polotsk",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "English academic designation",
+        "source": null
+      },
+      {
+        "name": "Полацкае княства",
+        "lang": "be",
+        "period_start": null,
+        "period_end": null,
+        "context": "Belarusian Cyrillic form",
+        "source": null
+      },
+      {
+        "name": "Полоцкое княжество",
+        "lang": "ru",
+        "period_start": null,
+        "period_end": null,
+        "context": "Russian designation",
+        "source": null
+      },
+      {
+        "name": "Polocko kunigaikstija",
+        "lang": "lt",
+        "period_start": null,
+        "period_end": null,
+        "context": "Lithuanian designation",
+        "source": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 987,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Western Dvina River basin (modern northern Belarus)",
+        "change_type": "independence",
+        "description": "Polotsk achieved effective independence under Prince Ragvalod (Rognvald), establishing a dynasty separate from the Kyivan Rurikids. The city controlled strategic trade routes along the Western Dvina connecting the Baltic Sea to Byzantium.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 1067,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Belarus and northern Russia",
+        "change_type": "expansion",
+        "description": "Under Vseslav the Sorcerer (Vseslav Bryachislavich), Polotsk reached its peak independence, warring against Kyiv and briefly seizing the Kyivan throne (1068-1069). Vseslav became a legendary figure in Belarusian cultural memory and is celebrated in the Lay of Igor's Campaign.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 1397,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Polotsk region",
+        "change_type": "conquest",
+        "description": "Grand Duke Vitautas of Lithuania abolished Polotsk's special autonomous status and incorporated it fully into the Grand Duchy of Lithuania as an ordinary province. This ended the last vestiges of Polotsk's distinct political identity, though the city remained an important regional center.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Duk, Dzmitry. Polatsk i Polatskaya zyamlya u XII-XIII st. (Polotsk and the Polotsk Land in the 12th-13th Centuries). Navapolack, 2009",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Primary Chronicle (Povest' vremennykh let). Compiled by Nestor, c. 1113",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Fennell, J. (2014). The Crisis of Medieval Russia 1200-1304. Taylor & Francis. ISBN 978-1-317-87314-3.",
+        "url": "https://www.worldcat.org/isbn/9781317873143",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Feldbrugge, F. J. M. (2017). A History of Russian Law: From Ancient Times to the Council Code of 1649. Brill. ISBN 9789004352148.",
+        "url": "https://www.worldcat.org/isbn/9789004352148",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Wikipedia contributors. Principality of Polotsk. Reference for chronology and Slavic medieval polities.",
+        "url": "https://en.wikipedia.org/wiki/Principality_of_Polotsk",
+        "source_type": "secondary"
+      }
+    ]
+  },
+  {
+    "id": 705,
+    "name_original": "蘭芳共和國",
+    "name_original_lang": "zh",
+    "entity_type": "republic",
+    "year_start": 1777,
+    "year_end": 1884,
+    "capital_name": "Mandor (Pontianak region)",
+    "capital_lat": 0.05,
+    "capital_lon": 109.3,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              109.839033876,
+              0.050011827
+            ],
+            [
+              109.828675253,
+              -0.05586868
+            ],
+            [
+              109.797994054,
+              -0.157678316
+            ],
+            [
+              109.74817022,
+              -0.251502465
+            ],
+            [
+              109.681119922,
+              -0.333733778
+            ],
+            [
+              109.599421961,
+              -0.401211049
+            ],
+            [
+              109.506218571,
+              -0.451340954
+            ],
+            [
+              109.405094384,
+              -0.482197916
+            ],
+            [
+              109.299938214,
+              -0.492598159
+            ],
+            [
+              109.19479304,
+              -0.482145036
+            ],
+            [
+              109.093700106,
+              -0.45124387
+            ],
+            [
+              109.000543284,
+              -0.401085767
+            ],
+            [
+              108.918899824,
+              -0.333601149
+            ],
+            [
+              108.851903264,
+              -0.251384942
+            ],
+            [
+              108.802123745,
+              -0.157596449
+            ],
+            [
+              108.771470144,
+              -0.055837887
+            ],
+            [
+              108.761117605,
+              0.049983723
+            ],
+            [
+              108.771463007,
+              0.155806037
+            ],
+            [
+              108.802109937,
+              0.257566671
+            ],
+            [
+              108.851883672,
+              0.351358467
+            ],
+            [
+              108.918875663,
+              0.433579002
+            ],
+            [
+              109.000515987,
+              0.501068712
+            ],
+            [
+              109.093671186,
+              0.551232381
+            ],
+            [
+              109.194763964,
+              0.582139293
+            ],
+            [
+              109.299910294,
+              0.592598065
+            ],
+            [
+              109.405068692,
+              0.58220314
+            ],
+            [
+              109.506195903,
+              0.551350979
+            ],
+            [
+              109.599402832,
+              0.501225226
+            ],
+            [
+              109.681104602,
+              0.433751381
+            ],
+            [
+              109.748158795,
+              0.351522728
+            ],
+            [
+              109.797986498,
+              0.257700469
+            ],
+            [
+              109.828671499,
+              0.15589196
+            ],
+            [
+              109.839033876,
+              0.050011827
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "approximate_circle",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.55,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Lanfang Republic was a Chinese-led polity in western Borneo that has been variously described as the 'first republic in Asia' or simply a mining kongsi (corporate community). Chinese nationalist historiography sometimes overstates its political sophistication, while Dutch colonial sources minimized its significance. The reality was a self-governing Hakka Chinese mining community with elected leaders that existed for over a century. Its destruction by the Dutch in 1884 was part of the broader colonial consolidation of Borneo. The Lanfang Republic's multiethnic dimension -- Hakka Chinese coexisting with Dayak and Malay populations -- complicates simplistic ethnic narratives.\n\n[v6.99.79-tier2/indonesia-fix] Replaced erroneous shared polygon with 60km circle. 蘭芳共和國 (Lanfang Republic, 1777-1884) was a Hakka-led Chinese kongsi (mining federation) in W Borneo with elected presidents; arguably first modern Chinese republic; absorbed into Dutch East Indies after Dutch reconquest.",
+    "name_variants": [
+      {
+        "name": "Lanfang Republic",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "English academic designation",
+        "source": null
+      },
+      {
+        "name": "兰芳共和国",
+        "lang": "zh",
+        "period_start": null,
+        "period_end": null,
+        "context": "Chinese name: 'Orchid Fragrance Republic'",
+        "source": null
+      },
+      {
+        "name": "Republik Lanfang",
+        "lang": "id",
+        "period_start": null,
+        "period_end": null,
+        "context": "Modern Indonesian designation",
+        "source": null
+      },
+      {
+        "name": "兰芳公司",
+        "lang": "zh",
+        "period_start": null,
+        "period_end": null,
+        "context": "Chinese: 'Lanfang Company', the original kongsi name",
+        "source": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1777,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Western Borneo (Pontianak region)",
+        "change_type": "independence",
+        "description": "Lo Fang-pak (Luo Fangbo), a Hakka Chinese, organized the Chinese mining communities of western Borneo into a self-governing polity with elected leaders. The Lanfang kongsi controlled gold mining, trade, and maintained relations with the Sultanate of Pontianak and local Dayak communities.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 1884,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Western Borneo",
+        "change_type": "conquest",
+        "description": "Dutch colonial forces conquered the Lanfang Republic as part of the consolidation of Netherlands East Indies authority over western Borneo. The last leader (zongting) was deposed and the territory placed under direct colonial administration. Chinese mining communities were subsequently subjected to colonial regulation.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Heidhues, Mary Somers. Golddiggers, Farmers, and Traders in the 'Chinese Districts' of West Kalimantan, Indonesia. Ithaca: Cornell Southeast Asia Program, 2003",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Yuan, Bingling. Chinese Democracies: A Study of the Kongsis of West Borneo (1776-1884). Leiden: Research School of Asian, African, and Amerindian Studies, 2000",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "de Groot, J. J. M. (1885). Het Kongsiwezen van Borneo: een verhandeling over den grondslag en den aard der chineesche politieke vereenigingen in de koloniën. M. Nijhoff, The Hague.",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Heidhues, M. F. S. (2003). Golddiggers, Farmers, and Traders in the Chinese Districts of West Kalimantan, Indonesia. SEAP Publications, Cornell.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Wikipedia contributors. Lanfang Republic. Tertiary reference for chronology.",
+        "url": "https://en.wikipedia.org/wiki/Lan_Fang_Republic",
+        "source_type": "secondary"
+      }
+    ]
+  },
+  {
+    "id": 741,
+    "name_original": "مقديشو",
+    "name_original_lang": "ar",
+    "entity_type": "sultanate",
+    "year_start": 900,
+    "year_end": 1600,
+    "capital_name": "Mogadishu",
+    "capital_lat": 2.05,
+    "capital_lon": 45.32,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              46.039341375,
+              2.049692901
+            ],
+            [
+              46.02543388,
+              1.908522855
+            ],
+            [
+              45.984431389,
+              1.7727914
+            ],
+            [
+              45.917912386,
+              1.647710147
+            ],
+            [
+              45.82843292,
+              1.538082089
+            ],
+            [
+              45.719429023,
+              1.448117648
+            ],
+            [
+              45.595085594,
+              1.381273043
+            ],
+            [
+              45.460176486,
+              1.340117222
+            ],
+            [
+              45.319881683,
+              1.326232668
+            ],
+            [
+              45.179588538,
+              1.340154096
+            ],
+            [
+              45.044684779,
+              1.381347597
+            ],
+            [
+              44.920351436,
+              1.448231125
+            ],
+            [
+              44.811363845,
+              1.538235494
+            ],
+            [
+              44.721908491,
+              1.647903396
+            ],
+            [
+              44.655422687,
+              1.773022437
+            ],
+            [
+              44.614463085,
+              1.908786913
+            ],
+            [
+              44.600607778,
+              2.049982062
+            ],
+            [
+              44.614395516,
+              2.191183776
+            ],
+            [
+              44.655304215,
+              2.326966317
+            ],
+            [
+              44.721769669,
+              2.452110298
+            ],
+            [
+              44.811243984,
+              2.56180318
+            ],
+            [
+              44.920291922,
+              2.65182467
+            ],
+            [
+              45.044721881,
+              2.718709866
+            ],
+            [
+              45.179746839,
+              2.759883635
+            ],
+            [
+              45.320169171,
+              2.773760758
+            ],
+            [
+              45.460582101,
+              2.759807653
+            ],
+            [
+              45.595579659,
+              2.718563053
+            ],
+            [
+              45.719966534,
+              2.651616785
+            ],
+            [
+              45.828959243,
+              2.561547591
+            ],
+            [
+              45.918370531,
+              2.451822647
+            ],
+            [
+              45.984769796,
+              2.32666303
+            ],
+            [
+              46.025613565,
+              2.190880617
+            ],
+            [
+              46.039341375,
+              2.049692901
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "approximate_circle",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.65,
+    "status": "uncertain",
+    "ethical_notes": "The Sultanate of Mogadishu was a major Somali trading state on the Indian Ocean coast. Its history illustrates the deep integration of the East African coast into Indian Ocean trade networks, challenging narratives that portray Africa as isolated from global commerce. The sultanate's ruling Fakhr al-Din dynasty and its successor the Muzaffar dynasty reflect the complex interplay of Arab, Persian, and Somali identities on the Swahili coast. Ibn Battuta's 1331 account is the most detailed contemporary description but represents a brief visitor's perspective. Archaeological evidence from Mogadishu, including Chinese ceramics and Indian coins, confirms its cosmopolitan character. The role of Mogadishu and other coastal cities in the Indian Ocean slave trade must also be acknowledged.\n\n[v6.99.79-tier3/mogadishu-fix] Mogadishu (مقديشو, 900-1530) was a Swahili coastal city-state on Somali coast; important Arab trading port + sultanate; controlled gold trade Sofala-Kilwa-Mogadishu route; conquered by Portuguese 1499 then Ajuran 1530.",
+    "name_variants": [
+      {
+        "name": "Sultanate of Mogadishu",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "English academic designation",
+        "source": null
+      },
+      {
+        "name": "Maqdishaw",
+        "lang": "ar",
+        "period_start": null,
+        "period_end": null,
+        "context": "Arabic/Somali form used in medieval sources",
+        "source": null
+      },
+      {
+        "name": "Mogadiscio",
+        "lang": "it",
+        "period_start": null,
+        "period_end": null,
+        "context": "Italian colonial-era form",
+        "source": null
+      },
+      {
+        "name": "Muqdisho",
+        "lang": "so",
+        "period_start": null,
+        "period_end": null,
+        "context": "Modern Somali form",
+        "source": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 900,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Southern Somali coast",
+        "change_type": "independence",
+        "description": "Mogadishu emerged as a significant trading city under the Fakhr al-Din dynasty. The city's origins are debated, with some traditions attributing its founding to Arab or Persian settlers and others emphasizing indigenous Somali foundations. Archaeological evidence suggests a gradual development of urban settlement from the 9th century.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1268,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Mogadishu and Benadir coast",
+        "change_type": "expansion",
+        "description": "Under the Muzaffar dynasty (established c. 1268), Mogadishu became the dominant commercial center on the East African coast. The city minted its own currency, traded with Arabia, India, and China, and was described by Ibn Battuta (1331) as an extremely wealthy and large city.",
+        "population_affected": null,
+        "confidence_score": 0.55
+      },
+      {
+        "year": 1600,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Mogadishu and hinterland",
+        "change_type": "contraction",
+        "description": "The Ajuran Sultanate's dominance over the southern Somali interior and Portuguese disruption of Indian Ocean trade routes led to Mogadishu's decline as an independent sultanate. The city came under Ajuran suzerainty and later passed through various Somali clan-based administrations.",
+        "population_affected": null,
+        "confidence_score": 0.45
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Chittick, Neville. 'An Archaeological Reconnaissance of the Southern Somali Coast.' Azania 4 (1969): 115–130",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Freeman-Grenville, G.S.P. The East African Coast: Select Documents from the First to the Earlier Nineteenth Century. Oxford: Clarendon Press, 1962",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Mukhtar, M. H. (2003). Historical Dictionary of Somalia (New ed.). Scarecrow Press. ISBN 978-0810866041.",
+        "url": "https://rowman.com/ISBN/9780810866041",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Jama, A. (1996). The Origins and Development of Mogadishu AD 1000 to 1850. Studies in African Archaeology 12. Uppsala University. ISBN 978-9150611236.",
+        "url": "https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A167611",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Cassanelli, L. V. (1982). The Shaping of Somali Society: Reconstructing the History of a Pastoral People, 1600-1900. University of Pennsylvania Press. ISBN 978-0812278323.",
+        "url": "https://www.upenn.edu/pennpress/book/13888.html",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Lewis, I. M. (2002). A Modern History of the Somali (4th ed.). James Currey. ISBN 978-0852554838.",
+        "url": "https://www.jamescurrey.com/9780852554838",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Njoku, R. C. (2013). The History of Somalia. ABC-CLIO/Greenwood. ISBN 978-0313378577.",
+        "url": "https://www.abc-clio.com/products/a3094c/",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "id": 747,
+    "name_original": "بازين",
+    "name_original_lang": "ar",
+    "entity_type": "kingdom",
+    "year_start": 1500,
+    "year_end": 1800,
+    "capital_name": "Am Timan",
+    "capital_lat": 11.04,
+    "capital_lon": 20.28,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              22.568550133,
+              11.036794128
+            ],
+            [
+              22.522362505,
+              10.596070727
+            ],
+            [
+              22.390476861,
+              10.172633363
+            ],
+            [
+              22.178214271,
+              9.782621906
+            ],
+            [
+              21.893861438,
+              9.440874543
+            ],
+            [
+              21.548352295,
+              9.160381526
+            ],
+            [
+              21.154863981,
+              8.951800899
+            ],
+            [
+              20.728334693,
+              8.82305483
+            ],
+            [
+              20.284915421,
+              8.779025354
+            ],
+            [
+              19.841373458,
+              8.821365846
+            ],
+            [
+              19.414471043,
+              8.948439232
+            ],
+            [
+              19.020345598,
+              9.155386409
+            ],
+            [
+              18.673917788,
+              9.434320053
+            ],
+            [
+              18.388349987,
+              9.77463174
+            ],
+            [
+              18.174571974,
+              10.163395294
+            ],
+            [
+              18.040884526,
+              10.585847385
+            ],
+            [
+              17.99264711,
+              11.025926998
+            ],
+            [
+              18.032054173,
+              11.466857594
+            ],
+            [
+              18.158005941,
+              11.891757704
+            ],
+            [
+              18.366082965,
+              12.284266152
+            ],
+            [
+              18.648636969,
+              12.629166139
+            ],
+            [
+              18.995011357,
+              12.912988226
+            ],
+            [
+              19.391900975,
+              13.124567116
+            ],
+            [
+              19.823851573,
+              13.255522792
+            ],
+            [
+              20.273885595,
+              13.300635295
+            ],
+            [
+              20.724225221,
+              13.258085594
+            ],
+            [
+              21.157069614,
+              13.129543049
+            ],
+            [
+              21.555374985,
+              12.920091826
+            ],
+            [
+              21.903585546,
+              12.638001996
+            ],
+            [
+              22.188271003,
+              12.294363254
+            ],
+            [
+              22.398639611,
+              11.902607848
+            ],
+            [
+              22.526911389,
+              11.477953204
+            ],
+            [
+              22.568550133,
+              11.036794128
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "approximate_circle",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.3,
+    "status": "disputed",
+    "ethical_notes": "The Kingdom of Bazin (also Bagirmi or a predecessor/rival state in the Chad basin) is extremely poorly documented. Much of what is known comes from oral traditions recorded by colonial-era French officers and from Arabic chronicles that focus on the Bornu and Wadai empires. Bazin represents the broader problem of representing Central African states whose histories were systematically unrecorded by literate neighbors and subsequently ignored by colonial ethnographers. The low confidence score reflects the genuine uncertainty about this polity's exact boundaries, chronology, and political structure. Including Bazin with appropriate uncertainty markers is more honest than excluding it from the historical record.\n\n[v6.99.80-postH-visual] Replaced rectangle bbox placeholder polygon (visually obvious as bounding box, not real boundary) with capital-based circle of 250km radius. Approximate but visually honest as approximation rather than pretending to be a documented boundary.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Bazin",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": "English academic designation, used in French colonial ethnography",
+        "source": null
+      },
+      {
+        "name": "Bazin",
+        "lang": "ar",
+        "period_start": null,
+        "period_end": null,
+        "context": "Arabic/local form from oral traditions",
+        "source": null
+      },
+      {
+        "name": "Pays Bazin",
+        "lang": "fr",
+        "period_start": null,
+        "period_end": null,
+        "context": "French colonial geographic term",
+        "source": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1500,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Southern Chad, Guéra region",
+        "change_type": "independence",
+        "description": "Bazin emerged as a distinct polity in the Chad basin, likely as one of several small non-Muslim kingdoms south of the Sahelo-Sudanic empires. Its political organization and extent are poorly understood due to limited documentary evidence.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1800,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Bazin territory",
+        "change_type": "conquest",
+        "description": "Bazin was absorbed by the expanding Wadai Empire and/or Bagirmi, losing its political independence. The process of absorption likely involved a combination of military pressure, tribute extraction, and the gradual Islamization of the ruling elite.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Nachtigal, Gustav. Sahara and Sudan, vol. 4: Wadai and Darfur. London: C. Hurst, 1971 (trans. of 1889 German original)",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Cordell, Dennis D. Dar al-Kuti and the Last Years of the Trans-Saharan Slave Trade. Madison: University of Wisconsin Press, 1985",
+        "url": null,
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "id": 985,
+    "name_original": "رستميون",
+    "name_original_lang": "ar",
+    "entity_type": "imamate",
+    "year_start": 776,
+    "year_end": 909,
+    "capital_name": "Tahert",
+    "capital_lat": 35.37,
+    "capital_lon": 1.32,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              0.5,
+              36.0
+            ],
+            [
+              3.5,
+              36.0
+            ],
+            [
+              3.8,
+              34.8
+            ],
+            [
+              1.5,
+              34.3
+            ],
+            [
+              0.2,
+              35.2
+            ],
+            [
+              0.5,
+              36.0
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Rustamid imamate was the first Ibadi (Kharijite) state in the Maghreb, centered at Tahert (modern Tiaret, Algeria). Founded by Abd al-Rahman ibn Rustam, a Persian Ibadi missionary, and supported by Berber Ibadi tribes (especially the Nafusa and Lwata) who rejected both Umayyad and Abbasid Sunni orthodoxy. The state was destroyed by the Fatimids in 909 as part of the Isma'ili Shi'a conquest of the Maghreb. Ibadism still survives today in the Mzab (Algeria), Jerba (Tunisia), Nafusa (Libya), and Oman — a direct continuity from the Rustamids. Western scholarship long marginalized Ibadism as 'Kharijite sectarianism'; current historiography treats it as a major early Islamic movement with distinct theology. ETHICS: Rustamid society was notably egalitarian by medieval standards (imam elected, not hereditary in theory), but participated in trans-Saharan slave trading.",
+    "name_variants": [
+      {
+        "name": "Rustamid Imamate",
+        "lang": "en",
+        "period_start": 776,
+        "period_end": 909,
+        "context": "English academic designation",
+        "source": "Savage, E. A Gateway to Hell (1997)"
+      },
+      {
+        "name": "Imamat Rustamide",
+        "lang": "fr",
+        "period_start": 776,
+        "period_end": 909,
+        "context": "French designation",
+        "source": "Lewicki, T. in Revue des etudes islamiques (1962)"
+      },
+      {
+        "name": "الإمامة الرستمية",
+        "lang": "ar",
+        "period_start": 776,
+        "period_end": 909,
+        "context": "Arabic form",
+        "source": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 776,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "central Maghreb",
+        "change_type": "formation",
+        "description": "After the Ibadi Berber revolt was crushed by the Abbasids (771-772), the survivors gathered at Tahert and elected Abd al-Rahman ibn Rustam imam. This founded the first durable Ibadi state in North Africa.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 909,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Tahert",
+        "change_type": "conquest",
+        "description": "Abu Abdullah al-Shi'i, the Fatimid da'i, conquered Tahert. The last Rustamid imam Yaqzan ibn Muhammad was killed. Ibadi communities survived by fleeing south to Sedrata, then to the Mzab oases, where they persist today.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Savage, Elizabeth. A Gateway to Hell, A Gateway to Paradise: The North African Response to the Arab Conquest. Princeton: Darwin Press, 1997",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Lewicki, Tadeusz. 'The Ibadites in Arabia and Africa.' Journal of World History 13 (1971): 51-130",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ibn al-Saghir. Akhbar al-a'imma al-rustamiyyin. Ed. M. Nasir. Algiers: Matba'a al-Ba'th, 1986",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Abun-Nasr, J. M. (1987). A History of the Maghrib in the Islamic Period. Cambridge University Press. ISBN 0521337674.",
+        "url": "https://www.worldcat.org/isbn/0521337674",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Talbi, M. (1995). Rustamids. In: Encyclopaedia of Islam, Second Edition Vol. VIII. Brill. ISBN 978-90-04-09834-3.",
+        "url": "https://www.worldcat.org/isbn/9789004098343",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "id": 986,
+    "name_original": "بنو مدرار",
+    "name_original_lang": "ar",
+    "entity_type": "emirate",
+    "year_start": 772,
+    "year_end": 976,
+    "capital_name": "Sijilmasa",
+    "capital_lat": 31.28,
+    "capital_lon": -4.27,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              -5.5,
+              32.5
+            ],
+            [
+              -3.5,
+              32.5
+            ],
+            [
+              -3.2,
+              31.0
+            ],
+            [
+              -4.5,
+              30.3
+            ],
+            [
+              -5.8,
+              31.3
+            ],
+            [
+              -5.5,
+              32.5
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.78,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Banu Midrar (Midrarid) emirate ruled Sijilmasa, the northern terminus of the western trans-Saharan gold trade, for roughly two centuries. Sijilmasa's prosperity derived from the gold-for-salt trade with Wagadou (Ghana) — the Midrarids were gatekeepers of one of the most important commercial arteries of the medieval world. The dynasty adhered to Sufri Kharijism, making them theological rivals of Sunni Umayyads and Abbasids alike. Fell to Fatimid then Umayyad control, then definitively to the Maghrawa Berber coalition in 976. Archaeological work by the Moroccan-American project at Sijilmasa (1988-1998) is the primary modern source. The site remained important into Almoravid times but never recovered its Midrarid-era autonomy.",
+    "name_variants": [
+      {
+        "name": "Midrarid Dynasty",
+        "lang": "en",
+        "period_start": 772,
+        "period_end": 976,
+        "context": "English academic designation",
+        "source": "Messier, R.A. and Miller, J.A. The Last Civilized Place (2015)"
+      },
+      {
+        "name": "Dinastia Midraride",
+        "lang": "it",
+        "period_start": 772,
+        "period_end": 976,
+        "context": "Italian designation",
+        "source": null
+      },
+      {
+        "name": "بنو مدرار",
+        "lang": "ar",
+        "period_start": 772,
+        "period_end": 976,
+        "context": "Arabic form",
+        "source": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 772,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Tafilalt oasis",
+        "change_type": "formation",
+        "description": "Abu al-Qasim Samgu ibn Wasul founded Sijilmasa as a Sufri Kharijite refuge polity, attracting dissidents from Abbasid authority. The town grew rapidly into the primary North African terminus of the Wangara gold trade.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": 976,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Tafilalt",
+        "change_type": "conquest",
+        "description": "The Maghrawa Berbers (Zenata confederation) captured Sijilmasa, ending Midrarid rule. The town continued under various overlords (Maghrawa, Almoravid, Merinid) but never again ruled itself.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Messier, Ronald A., and James A. Miller. The Last Civilized Place: Sijilmasa and Its Saharan Destiny. Austin: University of Texas Press, 2015",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Lightfoot, Dale R., and James A. Miller. 'Sijilmassa: The Rise and Fall of a Walled Oasis in Medieval Morocco.' Annals of the Association of American Geographers 86, no. 1 (1996): 78-101",
+        "url": null,
+        "source_type": "archaeological"
+      },
+      {
+        "citation": "Love, P. M. (2010). The Sufris of Sijilmasa: Toward a history of the Midrarids. Journal of North African Studies 15(2).",
+        "url": "https://doi.org/10.1080/13629380902734136",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Pellat, Ch. (1991). Midrār. In: Encyclopaedia of Islam, Second Edition, Volume VI. Brill. ISBN 978-90-04-08112-3.",
+        "url": "https://www.worldcat.org/isbn/9789004081123",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Levtzion, N. & Hopkins, J. F. P. (eds) (2000). Corpus of Early Arabic Sources for West Africa. Marcus Weiner Press.",
+        "url": null,
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "id": 988,
+    "name_original": "بنو حماد",
+    "name_original_lang": "ar",
+    "entity_type": "emirate",
+    "year_start": 1014,
+    "year_end": 1152,
+    "capital_name": "Qal'at Bani Hammad",
+    "capital_lat": 35.82,
+    "capital_lon": 4.79,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              2.5,
+              36.5
+            ],
+            [
+              8.0,
+              36.5
+            ],
+            [
+              8.5,
+              34.5
+            ],
+            [
+              4.0,
+              34.0
+            ],
+            [
+              2.0,
+              35.3
+            ],
+            [
+              2.5,
+              36.5
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.78,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Hammadid emirate (central Maghreb, modern Algeria) was a Sanhaja Berber dynasty founded by Hammad ibn Buluggin, nephew of Zirid emir Badis. Initially a Zirid vassal in the western provinces, Hammad declared independence in 1014 and built the mountain capital Qal'at Bani Hammad (now a UNESCO site). Displaced to Bejaia (Bougie) c.1090 under pressure from the Banu Hilal. Surrendered to the Almohads in 1152. ETHICS: the Hammadids are frequently collapsed into Zirid histories because they were a cadet branch. Separating them documents the reality of medieval Maghreb as a mosaic of Berber dynasties rather than a succession of monolithic empires. The Qal'at site was extensively looted and destroyed after the Almohad conquest; archaeological work reveals a sophisticated urban civilization with elaborate hydraulic systems.",
+    "name_variants": [
+      {
+        "name": "Hammadid Dynasty",
+        "lang": "en",
+        "period_start": 1014,
+        "period_end": 1152,
+        "context": "English academic designation",
+        "source": "Idris, H.R. La Berberie orientale sous les Zirides (1962)"
+      },
+      {
+        "name": "Dynastie hammadide",
+        "lang": "fr",
+        "period_start": 1014,
+        "period_end": 1152,
+        "context": "French designation",
+        "source": null
+      },
+      {
+        "name": "الحماديون",
+        "lang": "ar",
+        "period_start": 1014,
+        "period_end": 1152,
+        "context": "Arabic form",
+        "source": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1014,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "central Maghreb",
+        "change_type": "formation",
+        "description": "Hammad ibn Buluggin declared independence from his nephew the Zirid emir al-Mu'izz ibn Badis, founding the Hammadid dynasty at Qal'at Bani Hammad.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1090,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "coastal Maghreb",
+        "change_type": "capital_shift",
+        "description": "Under pressure from the Banu Hilal Arab migration disrupting the interior, the Hammadid capital shifted from the mountain fortress Qal'a to the coastal port of Bejaia, becoming a Mediterranean mercantile power.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1152,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "central Maghreb",
+        "change_type": "conquest",
+        "description": "Almohad caliph Abd al-Mu'min conquered Bejaia. The last Hammadid emir Yahya ibn Abd al-Aziz surrendered and was granted a pension in the Almohad retinue.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Idris, Hady Roger. La Berberie orientale sous les Zirides, Xe-XIIe siecles. Paris: Adrien-Maisonneuve, 1962",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Golvin, Lucien. Recherches archeologiques a la Qal'a des Banu Hammad. Paris: Maisonneuve, 1965",
+        "url": null,
+        "source_type": "archaeological"
+      },
+      {
+        "citation": "Baadj, A. S. (2015). Saladin, the Almohads and the Banū Ghāniya: The Contest for North Africa. Brill. ISBN 978-90-04-29857-6.",
+        "url": "https://www.worldcat.org/isbn/9789004298576",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Idris, H. R. (1986). Ḥammādids. In: Encyclopaedia of Islam, Second Edition, Vol. 3. Brill.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ibn Khaldūn. Kitāb al-ʻibar (Translated to French, 1867). Berber dynasties chronicle.",
+        "url": null,
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "id": 1006,
+    "name_original": "سلطنة شوا",
+    "name_original_lang": "ar",
+    "entity_type": "sultanate",
+    "year_start": 896,
+    "year_end": 1285,
+    "capital_name": "Walale",
+    "capital_lat": 9.45,
+    "capital_lon": 40.2,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              38.5,
+              10.2
+            ],
+            [
+              40.5,
+              10.3
+            ],
+            [
+              40.8,
+              8.5
+            ],
+            [
+              39.5,
+              7.5
+            ],
+            [
+              38.2,
+              8.2
+            ],
+            [
+              38.5,
+              10.2
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The existing DB entity 'Shewa' (batch 28, year_start 1150?) partially covers this — but DB's 'Shewa' actually references the later Christian Shewa kingdom (c.1696+), distinct from the earlier Muslim Makhzumi Sultanate of Shewa. This NEW entity covers the Muslim Shewa (896-1285), one of the earliest Islamic polities in the Horn of Africa, founded by the Makhzumi dynasty of Arabian origin. Absorbed by Ifat in 1285. Sources: the Chronicles of Shewa and al-Umari. NOT TO BE CONFUSED with Christian Shewa. ETHICS: documenting the Muslim Shewa is essential — the existing DB's 'Shewa' entry is ambiguous and risks collapsing two very different polities across 800 years. Creating this separate pre-Ifat sultanate makes the historical record accurate.",
+    "name_variants": [
+      {
+        "name": "Shoa Sultanate",
+        "lang": "en",
+        "period_start": 896,
+        "period_end": 1285,
+        "context": "English academic designation",
+        "source": "Cerulli, E. 'Il sultanato dello Scioa' (1941)"
+      },
+      {
+        "name": "Makhzumi Dynasty",
+        "lang": "en",
+        "period_start": 896,
+        "period_end": 1285,
+        "context": "dynasty-specific reference",
+        "source": "Trimingham, J.S. Islam in Ethiopia (1952)"
+      },
+      {
+        "name": "سلطنة شوا",
+        "lang": "ar",
+        "period_start": 896,
+        "period_end": 1285,
+        "context": "Arabic form",
+        "source": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 896,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "eastern Ethiopian highlands",
+        "change_type": "formation",
+        "description": "Traditional founding by Khalid ibn al-Walid al-Makhzumi, descended from the famous Umayyad-era general. This date is from the Chronicle of Shewa (dating uncertain; some scholars argue 10th c.).",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": 1285,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "eastern Ethiopian highlands",
+        "change_type": "conquest",
+        "description": "Conquered by Umar Walashma, founder of the Ifat Sultanate (the existing DB 'Sultanat Ifat'). The Makhzumi royal family was killed or dispersed; Ifat absorbed the Shewan territories.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Cerulli, Enrico. 'Il sultanato dello Scioa nel secolo XIII secondo un nuovo documento storico.' Rassegna di Studi Etiopici 1 (1941): 5-42",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Trimingham, J. Spencer. Islam in Ethiopia. Oxford: Oxford University Press, 1952",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Chekroun, A. & Hirsch, B. (2020). The Sultanates of Medieval Ethiopia. In: A Companion to Medieval Ethiopia and Eritrea. Brill.",
+        "url": "https://doi.org/10.1163/9789004419582_005",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Levtzion, N. & Pouwels, R. (eds) (2000). The History of Islam in Africa. Ohio University Press.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Munro-Hay, S. (2002). Ethiopia, the Unknown Land: A Cultural and Historical Guide. I.B. Tauris.",
+        "url": null,
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "id": 1009,
+    "name_original": "سلطنة مقديشو",
+    "name_original_lang": "ar",
+    "entity_type": "city-state",
+    "year_start": 900,
+    "year_end": 1270,
+    "capital_name": "Mogadishu",
+    "capital_lat": 2.04,
+    "capital_lon": 45.34,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              45.789597259,
+              2.039841274
+            ],
+            [
+              45.780917113,
+              1.951602674
+            ],
+            [
+              45.755297768,
+              1.86676211
+            ],
+            [
+              45.713725194,
+              1.788578419
+            ],
+            [
+              45.65779736,
+              1.720054693
+            ],
+            [
+              45.589662915,
+              1.663823107
+            ],
+            [
+              45.511938846,
+              1.622043885
+            ],
+            [
+              45.427610186,
+              1.596322298
+            ],
+            [
+              45.339915571,
+              1.587646906
+            ],
+            [
+              45.252223001,
+              1.596351468
+            ],
+            [
+              45.16790058,
+              1.622102028
+            ],
+            [
+              45.090187223,
+              1.663909693
+            ],
+            [
+              45.02206833,
+              1.720168624
+            ],
+            [
+              44.966161207,
+              1.788717727
+            ],
+            [
+              44.924614627,
+              1.866923672
+            ],
+            [
+              44.899026337,
+              1.951781989
+            ],
+            [
+              44.890381637,
+              2.040032374
+            ],
+            [
+              44.89901533,
+              2.1282838
+            ],
+            [
+              44.924598507,
+              2.21314466
+            ],
+            [
+              44.966150702,
+              2.291353029
+            ],
+            [
+              45.02207705,
+              2.359902055
+            ],
+            [
+              45.090229129,
+              2.416155715
+            ],
+            [
+              45.167987268,
+              2.457950423
+            ],
+            [
+              45.252361249,
+              2.48367855
+            ],
+            [
+              45.340105534,
+              2.492350538
+            ],
+            [
+              45.427844561,
+              2.483633149
+            ],
+            [
+              45.512203152,
+              2.457862291
+            ],
+            [
+              45.589936885,
+              2.416029946
+            ],
+            [
+              45.65805726,
+              2.359745714
+            ],
+            [
+              45.713946744,
+              2.291174538
+            ],
+            [
+              45.755459253,
+              2.21295311
+            ],
+            [
+              45.781002225,
+              2.128088256
+            ],
+            [
+              45.789597259,
+              2.039841274
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "approximate_circle",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.65,
+    "status": "deprecated",
+    "ethical_notes": "ETHICS: IMPORTANT: the existing DB has 'Maqdishaw' (batch 24 africa_medieval) — need to verify coverage. The DB 'Maqdishaw' entry covers the city as a Swahili-coast polity but the PRE-1270 phase (Arab/Persian-Somali merchant oligarchy governed by a qadi rather than sultan, described by al-Idrisi 1154 and al-Dimashqi 1300) is distinct from the later Fakhr ad-Din Sultanate (1270-1500) that the DB entry focuses on. This phase is the one described by Ibn Battuta's visit 1331, where Mogadishu had just recently transitioned from qadi-merchant government to sultanate. If DB's 'Maqdishaw' covers 900-1270 already, this should be skipped — flagged in README. Sources needed: the Kitab al-Zunuj (Book of the Zanj), a local chronicle. [v6.75 audit v4 Fase B] Drift Wikidata: year_end drift 330y vs Wikidata Q861784. AtlasPI mantiene il proprio dato; la differenza riflette convention diverse (es. site vs polity, capital iconica vs storica iniziale). Cross-reference Q-ID: Q861784 ('Sultanate of Mogadishu'). [v6.85 audit v4 Round 14] DUPLICATE merged: questa entity è stata identificata come duplicato di entity 741 (cross-reference Wikidata Q-ID condiviso). FK su rulers/sites/cities/chain_links sono state ricollegate alla primary. Status=deprecated; entity preservata per non rompere permalinks /v1/entities/1009 esistenti, ma considerare canonical lookup via primary id 741.\n\n[v6.99.80-postH] Generated 50km circle boundary around Mogadishu coordinates. Sultanate of Mogadishu (سلطنة مقديشو, 900-1530 CE) was an Arab-Somali maritime sultanate on Banadir coast, founded by Persian Arab settlers; ruled by Muzaffar dynasty + later Ajuran suzerainty; traded with Swahili coast, India, Yemen, China (Zheng He visit 1418); ended by Ajuran expansion absorbing Banadir cities.",
+    "name_variants": [
+      {
+        "name": "Maqdishu",
+        "lang": "ar",
+        "period_start": 900,
+        "period_end": 1270,
+        "context": "medieval Arabic form",
+        "source": "al-Idrisi, Nuzhat al-Mushtaq (1154)"
+      },
+      {
+        "name": "Hamarweyne era",
+        "lang": "so",
+        "period_start": 900,
+        "period_end": 1270,
+        "context": "referring to the old Hamar quarter (the original settlement)",
+        "source": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1270,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Benadir coast",
+        "change_type": "dynastic_change",
+        "description": "Transition from qadi-merchant oligarchic rule to the Fakhr ad-Din Sultanate — beginning of the phase covered by existing DB entity 'Maqdishaw'.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Cerulli, Enrico. Somalia: Scritti vari editi ed inediti. 3 vols. Rome: Ministero degli Affari Esteri, 1957-1964",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Chittick, H. Neville. 'An Archaeological Reconnaissance of the Southern Somali Coast.' Azania 4 (1969): 115-130",
+        "url": null,
+        "source_type": "archaeological"
+      },
+      {
+        "citation": "Jama, A. (1996). The Origins and Development of Mogadishu AD 1000 to 1850. Studies in African Archaeology 12. Uppsala University. ISBN 978-9150611236.",
+        "url": "https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A167611",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Mukhtar, M. H. (2003). Historical Dictionary of Somalia (New ed.). Scarecrow Press. ISBN 978-0810866041.",
+        "url": "https://rowman.com/ISBN/9780810866041",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Cassanelli, L. V. (1982). The Shaping of Somali Society: Reconstructing the History of a Pastoral People, 1600-1900. University of Pennsylvania Press. ISBN 978-0812278323.",
+        "url": "https://www.upenn.edu/pennpress/book/13888.html",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Chittick, H. N. (1982). Medieval Mogadishu. Paideuma, 28, 45-62.",
+        "url": "https://www.jstor.org/stable/40341670",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Pouwels, R. L. (1987). Horn and Crescent: Cultural Change and Traditional Islam on the East African Coast, 800-1900. Cambridge University Press. ISBN 978-0521523097.",
+        "url": "https://www.cambridge.org/9780521523097",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "id": 1032,
+    "name_original": "سلطنة الداجو",
+    "name_original_lang": "ar",
+    "entity_type": "sultanate",
+    "year_start": 1200,
+    "year_end": 1400,
+    "capital_name": "Uri",
+    "capital_lat": 14.14,
+    "capital_lon": 23.7,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              22.5,
+              15.5
+            ],
+            [
+              26.0,
+              15.5
+            ],
+            [
+              26.3,
+              12.0
+            ],
+            [
+              23.0,
+              11.0
+            ],
+            [
+              21.5,
+              13.0
+            ],
+            [
+              22.5,
+              15.5
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.24999999999999997,
+    "status": "uncertain",
+    "ethical_notes": "ETHICS: The Daju were the first state-forming people of Darfur (western Sudan), preceding the Tunjur and then the Keira Sultanate covered by existing DB 'Saltanat Dar Fur'. Oral traditions (Macmichael, O'Fahey) place the Daju c.1200-1400. The capital Uri is an archaeological site with stone ruins. Very low confidence because nearly all sources are 19th-20th c. oral tradition retrojected. ETHICS: including this documents pre-Keira political life in Darfur, a historiographically marginalized region. If ingest finds evidence too thin, skip.",
+    "name_variants": [
+      {
+        "name": "Daju Kingdom",
+        "lang": "en",
+        "period_start": 1200,
+        "period_end": 1400,
+        "context": "English academic designation",
+        "source": "O'Fahey, R.S. State and Society in Dar Fur (1980)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1400,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Darfur",
+        "change_type": "dynastic_change",
+        "description": "The Daju were displaced by the Tunjur confederation, who in turn were replaced by the Keira Sultanate of Darfur (existing DB entity).",
+        "population_affected": null,
+        "confidence_score": 0.35
+      }
+    ],
+    "sources": [
+      {
+        "citation": "O'Fahey, Rex S. State and Society in Dar Fur. New York: St. Martin's Press, 1980",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Macmichael, Harold A. A History of the Arabs in the Sudan. 2 vols. Cambridge: Cambridge University Press, 1922",
+        "url": null,
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "id": 1033,
+    "name_original": "التنجر",
+    "name_original_lang": "ar",
+    "entity_type": "sultanate",
+    "year_start": 1400,
+    "year_end": 1640,
+    "capital_name": "Uri",
+    "capital_lat": 14.14,
+    "capital_lon": 23.7,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              22.5,
+              15.5
+            ],
+            [
+              26.0,
+              15.5
+            ],
+            [
+              26.3,
+              12.0
+            ],
+            [
+              23.0,
+              11.0
+            ],
+            [
+              21.5,
+              13.0
+            ],
+            [
+              22.5,
+              15.5
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.55,
+    "status": "uncertain",
+    "ethical_notes": "ETHICS: The Tunjur were the second state-forming people of Darfur, ruling c.1400-1640 before being overthrown by the Keira (existing DB entity 'Saltanat Dar Fur'). Semi-legendary dynasty with origins disputed (Arab genealogies claim Banu Hilal descent; more likely a local Darfuri confederation with Arabization of ruling lineage). Their capital was also at Uri, with the Tunjur building the stone ruins still visible. Low confidence but better-attested than the Daju.",
+    "name_variants": [
+      {
+        "name": "Tunjur Sultanate",
+        "lang": "en",
+        "period_start": 1400,
+        "period_end": 1640,
+        "context": "English academic designation",
+        "source": "O'Fahey, R.S. State and Society in Dar Fur (1980)"
+      },
+      {
+        "name": "التنجر",
+        "lang": "ar",
+        "period_start": 1400,
+        "period_end": 1640,
+        "context": "Arabic form",
+        "source": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1640,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Darfur",
+        "change_type": "overthrow",
+        "description": "Sulayman Solong, of the Keira Fur dynasty, overthrew the last Tunjur ruler Ahmad al-Ma'qur. Beginning of the Keira Sultanate (DB entity 'Saltanat Dar Fur').",
+        "population_affected": null,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "O'Fahey, Rex S. State and Society in Dar Fur. New York: St. Martin's Press, 1980",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Arkell, Anthony J. 'The History of Darfur 1200-1700 A.D.' Sudan Notes and Records 32 (1951): 37-70, 207-238; 33 (1952): 129-155, 244-275",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Rilly, C. (2021). Aux racines de la population soudanaise. Soleb Bleu autour. ISBN 978-2-35848-186-1.",
+        "url": "https://www.worldcat.org/isbn/9782358481861",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Appiah, A. & Gates, H. L. Jr. (2005). Africana: The Encyclopedia of the African and African American Experience. Oxford University Press. ISBN 978-0-19-517055-9.",
+        "url": "https://www.worldcat.org/isbn/9780195170559",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Minahan, J. (2002). Encyclopedia of the Stateless Nations: L-R. Greenwood. ISBN 978-0-313-32111-5.",
+        "url": "https://www.worldcat.org/isbn/9780313321115",
+        "source_type": "academic"
+      }
+    ]
+  },
+  {
+    "id": 1034,
+    "name_original": "Res Publica Romana",
+    "name_original_lang": "la",
+    "entity_type": "republic",
+    "year_start": -509,
+    "year_end": -27,
+    "capital_name": "Roma",
+    "capital_lat": 41.9028,
+    "capital_lon": 12.4964,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              -9.0,
+              44.5
+            ],
+            [
+              18.0,
+              46.5
+            ],
+            [
+              28.0,
+              42.0
+            ],
+            [
+              36.0,
+              38.0
+            ],
+            [
+              36.0,
+              30.0
+            ],
+            [
+              28.0,
+              30.0
+            ],
+            [
+              10.0,
+              30.0
+            ],
+            [
+              -5.0,
+              32.0
+            ],
+            [
+              -9.5,
+              38.0
+            ],
+            [
+              -9.0,
+              44.5
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "Predecessor state to Imperium Romanum. Events between the expulsion of the kings (-509) and the Principate of Augustus (-27) belong to this entity.",
+    "name_variants": [
+      {
+        "name": "Roman Republic",
+        "lang": "en",
+        "period_start": null,
+        "period_end": null,
+        "context": null,
+        "source": null
+      },
+      {
+        "name": "Repubblica Romana",
+        "lang": "it",
+        "period_start": null,
+        "period_end": null,
+        "context": null,
+        "source": null
+      },
+      {
+        "name": "République romaine",
+        "lang": "fr",
+        "period_start": null,
+        "period_end": null,
+        "context": null,
+        "source": null
+      },
+      {
+        "name": "Römische Republik",
+        "lang": "de",
+        "period_start": null,
+        "period_end": null,
+        "context": null,
+        "source": null
+      }
+    ],
+    "territory_changes": [],
+    "sources": [
+      {
+        "citation": "Flower, H. (ed.) (2004). The Cambridge Companion to the Roman Republic. Cambridge University Press.",
+        "url": "https://doi.org/10.5860/choice.42-0688",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Weigel, R. D. (2002). The Constitution of the Roman Republic. The Classical World 95(4).",
+        "url": "https://doi.org/10.2307/4352697",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Wikipedia contributors. Roman Republic. Cross-reference for narrative summary.",
+        "url": "https://en.wikipedia.org/wiki/Roman_Republic",
+        "source_type": "secondary"
+      },
+      {
+        "citation": "Cornell, T.J. The Beginnings of Rome: Italy and Rome from the Bronze Age to the Punic Wars (c. 1000-264 BC). London: Routledge, 1995. ISBN 978-0-415-01596-1.",
+        "url": "https://www.worldcat.org/isbn/9780415015967",
+        "source_type": "book"
+      },
+      {
+        "citation": "Beard, Mary. SPQR: A History of Ancient Rome. London: Profile Books, 2015. ISBN 978-1-84668-381-7.",
+        "url": "https://www.worldcat.org/isbn/9781846683817",
+        "source_type": "book"
+      },
+      {
+        "citation": "Flower, Harriet I., ed. The Cambridge Companion to the Roman Republic. 2nd ed. Cambridge: Cambridge University Press, 2014. ISBN 978-1-107-66942-0.",
+        "url": "https://www.worldcat.org/isbn/9781107669420",
+        "source_type": "book"
+      },
+      {
+        "citation": "Brunt, P.A. Social Conflicts in the Roman Republic. London: Chatto & Windus, 1971. ISBN 978-0-7011-1701-7.",
+        "url": "https://www.worldcat.org/isbn/9780701117016",
+        "source_type": "book"
+      },
+      {
+        "citation": "Crawford, Michael. The Roman Republic. 2nd ed. London: Fontana Press, 1992. ISBN 978-0-00-686250-8.",
+        "url": "https://www.worldcat.org/isbn/9780006862505",
+        "source_type": "book"
+      }
+    ]
+  },
+  {
+    "id": 1037,
+    "name_original": "Premier Empire français",
+    "name_original_lang": "fr",
+    "entity_type": "empire",
+    "year_start": 1804,
+    "year_end": 1815,
+    "capital_name": "Paris",
+    "capital_lat": 48.8566,
+    "capital_lon": 2.3522,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              -5.0,
+              51.5
+            ],
+            [
+              3.5,
+              53.5
+            ],
+            [
+              13.0,
+              52.0
+            ],
+            [
+              14.5,
+              46.0
+            ],
+            [
+              12.0,
+              42.0
+            ],
+            [
+              8.0,
+              40.0
+            ],
+            [
+              -2.5,
+              42.5
+            ],
+            [
+              -5.0,
+              46.0
+            ],
+            [
+              -5.0,
+              51.5
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-001: nome originale in francese (lingua amministrativa). L'impero napoleonico (1804-1815) è separato dalla République française (1789-1804) e dalla Restaurazione (1815+). I confini variarono enormemente — i Cento Giorni (marzo-luglio 1815) sono inclusi nella periodo. ETHICS-002: l'impero portò avanti le idee della Rivoluzione (Codice Civile, abolizione feudalismo) ma anche guerre napoleoniche con ~3-6M morti, schiavitù reintrodotta nelle colonie (1802), repressioni in Spagna/Russia/Germania. La narrativa 'glorie napoleoniche' va bilanciata con il costo umano. Q71084 verified Wikidata.",
+    "name_variants": [],
+    "territory_changes": [],
+    "sources": [
+      {
+        "citation": "Lyons, Martyn. Napoleon Bonaparte and the Legacy of the French Revolution. New York: St. Martin's Press, 1994. ISBN 978-0-312-12123-5.",
+        "url": "https://www.worldcat.org/isbn/9780312121235",
+        "source_type": "book"
+      },
+      {
+        "citation": "Englund, Steven. Napoleon: A Political Life. New York: Scribner, 2004. ISBN 978-0-684-87142-4.",
+        "url": "https://www.worldcat.org/isbn/9780684871424",
+        "source_type": "book"
+      },
+      {
+        "citation": "Roberts, Andrew. Napoleon: A Life. New York: Viking, 2014. ISBN 978-0-670-02532-9.",
+        "url": "https://www.worldcat.org/isbn/9780670025329",
+        "source_type": "book"
+      },
+      {
+        "citation": "Esdaile, Charles. Napoleon's Wars: An International History, 1803-1815. New York: Viking, 2008. ISBN 978-0-670-01803-1.",
+        "url": "https://www.worldcat.org/isbn/9780670018031",
+        "source_type": "book"
+      },
+      {
+        "citation": "Broers, Michael. Europe under Napoleon, 1799-1815. London: Arnold, 1996. ISBN 978-0-340-66134-8.",
+        "url": "https://www.worldcat.org/isbn/9780340661345",
+        "source_type": "book"
+      },
+      {
+        "citation": "Bell, David A. The First Total War: Napoleon's Europe and the Birth of Warfare as We Know It. Boston: Houghton Mifflin, 2007. ISBN 978-0-618-34965-4.",
+        "url": "https://www.worldcat.org/isbn/9780618349654",
+        "source_type": "book"
+      }
+    ]
+  },
+  {
+    "id": 1038,
+    "name_original": "افشاریان",
+    "name_original_lang": "fa",
+    "entity_type": "empire",
+    "year_start": 1736,
+    "year_end": 1796,
+    "capital_name": "مشهد",
+    "capital_lat": 36.297,
+    "capital_lon": 59.6062,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              40.0,
+              42.0
+            ],
+            [
+              72.0,
+              42.0
+            ],
+            [
+              72.0,
+              25.0
+            ],
+            [
+              44.0,
+              25.0
+            ],
+            [
+              40.0,
+              30.0
+            ],
+            [
+              40.0,
+              42.0
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-001: nome originale in persiano (Afsharyan). Dinastia turcomanna fondata da Nadir Shah (1736-1747), uno dei più grandi conquistatori iraniani — sconfisse Mughal a Karnal (1739) e saccheggio' Delhi (Peacock Throne preso). ETHICS-002: il sacco di Delhi del 1739 vide ~30,000 vittime in massacri urbani. Le campagne ottomane e nel Caucaso furono parimenti brutali. Dopo l'assassinio di Nadir Shah (1747) l'impero collassò rapidamente; il successore Shahrokh regnò solo a Khorasan. ETHICS-003: la storiografia iraniana enfatizza Nadir come 'Napoleone d'Iran' ma è cauto sulle violenze. Q63149558 verified.",
+    "name_variants": [],
+    "territory_changes": [],
+    "sources": [
+      {
+        "citation": "Axworthy, Michael. The Sword of Persia: Nader Shah, from Tribal Warrior to Conquering Tyrant. London: I.B. Tauris, 2006. ISBN 978-1-85043-706-2.",
+        "url": "https://www.worldcat.org/isbn/9781850437062",
+        "source_type": "book"
+      },
+      {
+        "citation": "Tucker, Ernest. Nadir Shah's Quest for Legitimacy in Post-Safavid Iran. Gainesville: University Press of Florida, 2006. ISBN 978-0-8130-2964-0.",
+        "url": "https://www.worldcat.org/isbn/9780813029641",
+        "source_type": "book"
+      },
+      {
+        "citation": "Lockhart, Laurence. Nadir Shah: A Critical Study Based Mainly upon Contemporary Sources. London: Luzac, 1938.",
+        "url": "https://www.worldcat.org/oclc/1241670",
+        "source_type": "book"
+      },
+      {
+        "citation": "Floor, Willem. The Rise and Fall of Nader Shah: Dutch East India Company Reports, 1730-1747. Washington, DC: Mage Publishers, 2009. ISBN 978-1-933823-32-3.",
+        "url": "https://www.worldcat.org/isbn/9781933823324",
+        "source_type": "book"
+      },
+      {
+        "citation": "Matthee, Rudolph P. Persia in Crisis: Safavid Decline and the Fall of Isfahan. London: I.B. Tauris, 2012. ISBN 978-1-84511-745-0.",
+        "url": "https://www.worldcat.org/isbn/9781845117450",
+        "source_type": "book"
+      },
+      {
+        "citation": "Perry, John R. \"The Last Safavids 1722-1773.\" Iran 9 (1971): 59-71.",
+        "url": "https://doi.org/10.2307/4300439",
+        "source_type": "journal_article"
+      }
+    ]
+  },
+  {
+    "id": 1039,
+    "name_original": "𒆍𒀭𒊏𒆠 (Old Babylonian)",
+    "name_original_lang": "akk",
+    "entity_type": "empire",
+    "year_start": -1894,
+    "year_end": -1595,
+    "capital_name": "Babylon",
+    "capital_lat": 32.5429,
+    "capital_lon": 44.4209,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              42.0,
+              35.5
+            ],
+            [
+              48.5,
+              35.5
+            ],
+            [
+              49.0,
+              30.0
+            ],
+            [
+              44.0,
+              29.5
+            ],
+            [
+              41.5,
+              32.0
+            ],
+            [
+              42.0,
+              35.5
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.78,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-001: Old Babylonian Empire (Hammurabi dynasty), -1894 a -1595 BCE. Distinct from Neo-Babylonian (id=490, -626 to -539). The intermediate Kassite period (-1595 to -1155) is not separately covered as entity yet. The Code of Hammurabi (~1754 BCE) belongs to this period. Q733897 verified Wikidata.",
+    "name_variants": [],
+    "territory_changes": [],
+    "sources": [
+      {
+        "citation": "Renger, J. (1995). Institutional, Communal, and Individual Ownership in Ancient Mesopotamia. Chicago-Kent Law Review 71(269).",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Wikipedia contributors. First Babylonian dynasty (Old Babylonian period). Reference for chronology.",
+        "url": "https://en.wikipedia.org/wiki/First_Babylonian_dynasty",
+        "source_type": "secondary"
+      },
+      {
+        "citation": "Van De Mieroop, Marc. King Hammurabi of Babylon: A Biography. Oxford: Blackwell, 2005. ISBN 978-1-4051-2660-1.",
+        "url": "https://www.worldcat.org/isbn/9781405126601",
+        "source_type": "book"
+      },
+      {
+        "citation": "Charpin, Dominique. Writing, Law, and Kingship in Old Babylonian Mesopotamia. Trans. Jane Marie Todd. Chicago: University of Chicago Press, 2010. ISBN 978-0-226-10158-0.",
+        "url": "https://www.worldcat.org/isbn/9780226101583",
+        "source_type": "book"
+      },
+      {
+        "citation": "Roth, Martha T. Law Collections from Mesopotamia and Asia Minor. 2nd ed. Atlanta: Scholars Press, 1997. ISBN 978-0-7885-0378-6.",
+        "url": "https://www.worldcat.org/isbn/9780788503788",
+        "source_type": "book"
+      },
+      {
+        "citation": "Stol, Marten. Letters from Yale Forerunners of the Hammurabi Letters. Leiden: Brill, 1981. ISBN 978-90-04-06329-7.",
+        "url": "https://www.worldcat.org/isbn/9789004063297",
+        "source_type": "book"
+      },
+      {
+        "citation": "Van De Mieroop, Marc. A History of the Ancient Near East, ca. 3000-323 BC. 3rd ed. Chichester: Wiley-Blackwell, 2016. ISBN 978-1-118-71815-5.",
+        "url": "https://www.worldcat.org/isbn/9781118718155",
+        "source_type": "book"
+      }
+    ]
+  },
+  {
+    "id": 1040,
+    "name_original": "சோழர் (Sangam-era)",
+    "name_original_lang": "ta",
+    "entity_type": "kingdom",
+    "year_start": -300,
+    "year_end": 300,
+    "capital_name": "Uraiyur",
+    "capital_lat": 10.7905,
+    "capital_lon": 78.6864,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              80.972669224,
+              10.79915098
+            ],
+            [
+              80.928828377,
+              10.358032832
+            ],
+            [
+              80.799139981,
+              9.933809279
+            ],
+            [
+              80.588866568,
+              9.542698831
+            ],
+            [
+              80.306262006,
+              9.199615957
+            ],
+            [
+              79.962247672,
+              8.917616947
+            ],
+            [
+              79.570000781,
+              8.70741104
+            ],
+            [
+              79.144463815,
+              8.576955898
+            ],
+            [
+              78.701788542,
+              8.531156099
+            ],
+            [
+              78.258733909,
+              8.571680238
+            ],
+            [
+              77.832042121,
+              8.696906458
+            ],
+            [
+              77.437819894,
+              8.901998414
+            ],
+            [
+              77.090950981,
+              9.17910538
+            ],
+            [
+              76.804561928,
+              9.517673096
+            ],
+            [
+              76.589556753,
+              9.904847448
+            ],
+            [
+              76.45422986,
+              10.325951605
+            ],
+            [
+              76.403961873,
+              10.765018519
+            ],
+            [
+              76.441001514,
+              11.20536333
+            ],
+            [
+              76.564338258,
+              11.630182661
+            ],
+            [
+              76.769674267,
+              12.023168483
+            ],
+            [
+              77.049507932,
+              12.369122449
+            ],
+            [
+              77.393342834,
+              12.654552292
+            ],
+            [
+              77.788032903,
+              12.868226416
+            ],
+            [
+              78.218266001,
+              13.001657966
+            ],
+            [
+              78.66717483,
+              13.049487599
+            ],
+            [
+              79.117048312,
+              13.009736575
+            ],
+            [
+              79.550102301,
+              12.883909098
+            ],
+            [
+              79.949259205,
+              12.676934242
+            ],
+            [
+              80.298884612,
+              12.39695102
+            ],
+            [
+              80.585435454,
+              12.054952693
+            ],
+            [
+              80.797986903,
+              11.664315602
+            ],
+            [
+              80.92862039,
+              11.240242564
+            ],
+            [
+              80.972669224,
+              10.79915098
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "approximate_circle",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-001: Early Cholas / Sangam-era Tamil kingdom, regional dynasty del delta Kaveri (-300 to 300 CE). Distinct from Medieval Chola Empire (id 110, restricted to 848-1279 dopo split v6.86). After Sangam era there was a 650-year gap (Kalabhra interregnum + Pallava rule) before Vijayalaya restored Chola rule in 848. Confidence 0.6 perché Sangam literature (Pattuppattu, Ettuthokai) è la fonte primaria ma con cronologie incerte. Q3532146 verified.\n\n[v6.99.80-postH-visual] Replaced rectangle bbox placeholder polygon (visually obvious as bounding box, not real boundary) with capital-based circle of 250km radius. Approximate but visually honest as approximation rather than pretending to be a documented boundary.",
+    "name_variants": [],
+    "territory_changes": [],
+    "sources": [
+      {
+        "citation": "Thapar, R. (2003). Early India: From the Origins to AD 1300. Penguin Books.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Wikipedia contributors. Sangam period / Early Cholas. Cross-reference for chronology and rulers.",
+        "url": "https://en.wikipedia.org/wiki/Sangam_period",
+        "source_type": "secondary"
+      }
+    ]
+  }
+]

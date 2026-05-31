@@ -1,0 +1,847 @@
+[
+  {
+    "name_original": "Kingdom of Quito",
+    "name_original_lang": "qu",
+    "entity_type": "kingdom",
+    "year_start": 1000,
+    "year_end": 1470,
+    "capital_name": "Quitu (present-day Quito)",
+    "capital_lat": -0.1807,
+    "capital_lon": -78.4678,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              -76.225843282,
+              -0.18024602
+            ],
+            [
+              -76.268611032,
+              -0.620004229
+            ],
+            [
+              -76.395549861,
+              -1.043041637
+            ],
+            [
+              -76.601911568,
+              -1.433219629
+            ],
+            [
+              -76.879940408,
+              -1.775597574
+            ],
+            [
+              -77.219126448,
+              -2.056997335
+            ],
+            [
+              -77.606566619,
+              -2.266519148
+            ],
+            [
+              -78.02743157,
+              -2.395985598
+            ],
+            [
+              -78.465527946,
+              -2.440288762
+            ],
+            [
+              -78.903935211,
+              -2.397617539
+            ],
+            [
+              -79.325686525,
+              -2.269547988
+            ],
+            [
+              -79.714456807,
+              -2.060988566
+            ],
+            [
+              -80.055219943,
+              -1.779982786
+            ],
+            [
+              -80.334841232,
+              -1.437381853
+            ],
+            [
+              -80.542579385,
+              -1.046407345
+            ],
+            [
+              -80.6704822,
+              -0.622128047
+            ],
+            [
+              -80.713668908,
+              -0.180875534
+            ],
+            [
+              -80.670498116,
+              0.260378669
+            ],
+            [
+              -80.542622722,
+              0.684664163
+            ],
+            [
+              -80.334932723,
+              1.075652521
+            ],
+            [
+              -80.055385338,
+              1.418279501
+            ],
+            [
+              -79.714721419,
+              1.699328505
+            ],
+            [
+              -79.326069401,
+              1.907952646
+            ],
+            [
+              -78.904443916,
+              2.036110969
+            ],
+            [
+              -78.466154852,
+              2.078894946
+            ],
+            [
+              -78.028152347,
+              2.034725304
+            ],
+            [
+              -77.607341244,
+              1.905406749
+            ],
+            [
+              -77.219902695,
+              1.696038086
+            ],
+            [
+              -76.880659322,
+              1.414785784
+            ],
+            [
+              -76.602514195,
+              1.072538031
+            ],
+            [
+              -76.395984244,
+              0.682462115
+            ],
+            [
+              -76.268838521,
+              0.259489817
+            ],
+            [
+              -76.225843282,
+              -0.18024602
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "approximate_circle",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.5,
+    "status": "disputed",
+    "ethical_notes": "ETHICS-002: The 'Kingdom of Quito' is one of the most contested entities in South American historiography. The traditional narrative, originating with the colonial-era Jesuit historian Juan de Velasco (1789), describes a pre-Inca kingdom of the Quitu-Cara people. Modern archaeology has found no evidence supporting Velasco's account of a unified Quitu kingdom. The narrative likely served Ecuadorian nationalist purposes — providing a pre-Inca legitimating origin story. However, dismissing the concept entirely may erase genuine pre-Inca political complexity in the region. Archaeological evidence does show complex chiefdoms (señoríos) in the northern Andes before Inca conquest, including the Caranqui, Cayambe, and Panzaleo peoples. ETHICS-001: The low confidence score reflects genuine academic dispute. Including this entity documents the historiographic controversy itself. Velasco's account should not be treated as reliable history, but the pre-Inca political complexity it gestures toward was real.\n\n[v6.99.80-postH-visual] Replaced rectangle bbox placeholder polygon (visually obvious as bounding box, not real boundary) with capital-based circle of 250km radius. Approximate but visually honest as approximation rather than pretending to be a documented boundary.",
+    "name_variants": [
+      {
+        "name": "Kingdom of Quito",
+        "lang": "en",
+        "period_start": 1000,
+        "period_end": 1470,
+        "context": "English translation of the traditional (and disputed) narrative of a pre-Inca kingdom",
+        "source": "Velasco, Juan de. Historia del Reino de Quito en la América Meridional (1789)"
+      },
+      {
+        "name": "Reino de Quito",
+        "lang": "es",
+        "period_start": 1000,
+        "period_end": 1470,
+        "context": "Spanish designation from colonial-era histories; the primary source is Juan de Velasco's 1789 account",
+        "source": "Velasco, Juan de. Historia del Reino de Quito en la América Meridional (1789)"
+      },
+      {
+        "name": "Señorío de los Quitu-Cara / Shyri",
+        "lang": "es",
+        "context": "Alternative designation; 'Shyri' was the title attributed to the rulers of Quito in Velasco's account. The historicity of the Shyri dynasty is rejected by modern archaeology",
+        "source": "Salomon, Frank. Native Lords of Quito in the Age of the Incas (1986)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1000,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Northern Andean highlands (present-day Ecuador)",
+        "change_type": "CULTURAL",
+        "description": "Traditional narrative: emergence of the Quitu-Cara polity through merger of coastal Cara people and highland Quitu. Modern archaeology: the northern Ecuadorian highlands hosted multiple complex chiefdoms (señoríos) including the Caranqui, Cayambe, Otavalo, Panzaleo, and Puruhá. These were independent polities, not a unified kingdom. Archaeological evidence shows monumental mound construction, intensive agriculture, and long-distance trade.",
+        "population_affected": null,
+        "confidence_score": 0.3
+      },
+      {
+        "year": 1470,
+        "month": null,
+        "day": null,
+        "date_precision": null,
+        "iso_date": null,
+        "calendar_note": null,
+        "region": "Northern Andes (present-day Ecuador)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Inca expansion under Tupac Inca Yupanqui and later Huayna Capac conquered the northern Andean chiefdoms. The Caranqui and Cayambe peoples resisted fiercely; the Battle of Yahuarcocha ('Blood Lake,' ca. 1487) reportedly ended with thousands of Cayambe-Caranqui warriors massacred on the shores of the lake. Huayna Capac established Quito as a secondary Inca capital and married local nobility.",
+        "population_affected": 300000,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Salomon, Frank. Native Lords of Quito in the Age of the Incas: The Political Economy of North Andean Chiefdoms. Cambridge University Press, 1986",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Velasco, Juan de. Historia del Reino de Quito en la América Meridional, 1789 — primary source for the traditional narrative, now considered largely mythological",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Athens, J. Stephen. 'Ethnicity and Adaptation: The Late Period-Cara Occupation in Northern Highland Ecuador.' PhD dissertation, University of New Mexico, 1992",
+        "url": null,
+        "source_type": "archaeological"
+      }
+    ]
+  },
+  {
+    "name_original": "Res Publica Romana",
+    "name_original_lang": "la",
+    "entity_type": "republic",
+    "year_start": -509,
+    "year_end": -27,
+    "capital_name": "Roma",
+    "capital_lat": 41.9028,
+    "capital_lon": 12.4964,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              -9.0,
+              44.5
+            ],
+            [
+              18.0,
+              46.5
+            ],
+            [
+              28.0,
+              42.0
+            ],
+            [
+              36.0,
+              38.0
+            ],
+            [
+              36.0,
+              30.0
+            ],
+            [
+              28.0,
+              30.0
+            ],
+            [
+              10.0,
+              30.0
+            ],
+            [
+              -5.0,
+              32.0
+            ],
+            [
+              -9.5,
+              38.0
+            ],
+            [
+              -9.0,
+              44.5
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "ethical_notes": "Predecessor state to Imperium Romanum. Events between the expulsion of the kings (-509) and the Principate of Augustus (-27) belong to this entity.",
+    "name_variants": [
+      {
+        "name": "Roman Republic",
+        "lang": "en"
+      },
+      {
+        "name": "Repubblica Romana",
+        "lang": "it"
+      },
+      {
+        "name": "République romaine",
+        "lang": "fr"
+      },
+      {
+        "name": "Römische Republik",
+        "lang": "de"
+      }
+    ],
+    "territory_changes": [],
+    "sources": [
+      {
+        "citation": "Flower, H. (ed.) (2004). The Cambridge Companion to the Roman Republic. Cambridge University Press.",
+        "url": "https://doi.org/10.5860/choice.42-0688",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Weigel, R. D. (2002). The Constitution of the Roman Republic. The Classical World 95(4).",
+        "url": "https://doi.org/10.2307/4352697",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Wikipedia contributors. Roman Republic. Cross-reference for narrative summary.",
+        "url": "https://en.wikipedia.org/wiki/Roman_Republic",
+        "source_type": "secondary"
+      },
+      {
+        "citation": "Cornell, T.J. The Beginnings of Rome: Italy and Rome from the Bronze Age to the Punic Wars (c. 1000-264 BC). London: Routledge, 1995. ISBN 978-0-415-01596-1.",
+        "url": "https://www.worldcat.org/isbn/9780415015967",
+        "source_type": "book"
+      },
+      {
+        "citation": "Beard, Mary. SPQR: A History of Ancient Rome. London: Profile Books, 2015. ISBN 978-1-84668-381-7.",
+        "url": "https://www.worldcat.org/isbn/9781846683817",
+        "source_type": "book"
+      },
+      {
+        "citation": "Flower, Harriet I., ed. The Cambridge Companion to the Roman Republic. 2nd ed. Cambridge: Cambridge University Press, 2014. ISBN 978-1-107-66942-0.",
+        "url": "https://www.worldcat.org/isbn/9781107669420",
+        "source_type": "book"
+      },
+      {
+        "citation": "Brunt, P.A. Social Conflicts in the Roman Republic. London: Chatto & Windus, 1971. ISBN 978-0-7011-1701-7.",
+        "url": "https://www.worldcat.org/isbn/9780701117016",
+        "source_type": "book"
+      },
+      {
+        "citation": "Crawford, Michael. The Roman Republic. 2nd ed. London: Fontana Press, 1992. ISBN 978-0-00-686250-8.",
+        "url": "https://www.worldcat.org/isbn/9780006862505",
+        "source_type": "book"
+      }
+    ]
+  },
+  {
+    "name_original": "Premier Empire français",
+    "name_original_lang": "fr",
+    "entity_type": "empire",
+    "year_start": 1804,
+    "year_end": 1815,
+    "capital_name": "Paris",
+    "capital_lat": 48.8566,
+    "capital_lon": 2.3522,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              -5.0,
+              51.5
+            ],
+            [
+              3.5,
+              53.5
+            ],
+            [
+              13.0,
+              52.0
+            ],
+            [
+              14.5,
+              46.0
+            ],
+            [
+              12.0,
+              42.0
+            ],
+            [
+              8.0,
+              40.0
+            ],
+            [
+              -2.5,
+              42.5
+            ],
+            [
+              -5.0,
+              46.0
+            ],
+            [
+              -5.0,
+              51.5
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.8,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-001: nome originale in francese (lingua amministrativa). L'impero napoleonico (1804-1815) è separato dalla République française (1789-1804) e dalla Restaurazione (1815+). I confini variarono enormemente — i Cento Giorni (marzo-luglio 1815) sono inclusi nella periodo. ETHICS-002: l'impero portò avanti le idee della Rivoluzione (Codice Civile, abolizione feudalismo) ma anche guerre napoleoniche con ~3-6M morti, schiavitù reintrodotta nelle colonie (1802), repressioni in Spagna/Russia/Germania. La narrativa 'glorie napoleoniche' va bilanciata con il costo umano. Q71084 verified Wikidata.",
+    "name_variants": [
+      {
+        "name": "First French Empire",
+        "lang": "en"
+      },
+      {
+        "name": "Napoleonic Empire",
+        "lang": "en"
+      },
+      {
+        "name": "Premier Empire",
+        "lang": "fr"
+      }
+    ],
+    "territory_changes": [],
+    "sources": [
+      {
+        "citation": "Lyons, Martyn. Napoleon Bonaparte and the Legacy of the French Revolution. New York: St. Martin's Press, 1994. ISBN 978-0-312-12123-5.",
+        "url": "https://www.worldcat.org/isbn/9780312121235",
+        "source_type": "book"
+      },
+      {
+        "citation": "Englund, Steven. Napoleon: A Political Life. New York: Scribner, 2004. ISBN 978-0-684-87142-4.",
+        "url": "https://www.worldcat.org/isbn/9780684871424",
+        "source_type": "book"
+      },
+      {
+        "citation": "Roberts, Andrew. Napoleon: A Life. New York: Viking, 2014. ISBN 978-0-670-02532-9.",
+        "url": "https://www.worldcat.org/isbn/9780670025329",
+        "source_type": "book"
+      },
+      {
+        "citation": "Esdaile, Charles. Napoleon's Wars: An International History, 1803-1815. New York: Viking, 2008. ISBN 978-0-670-01803-1.",
+        "url": "https://www.worldcat.org/isbn/9780670018031",
+        "source_type": "book"
+      },
+      {
+        "citation": "Broers, Michael. Europe under Napoleon, 1799-1815. London: Arnold, 1996. ISBN 978-0-340-66134-8.",
+        "url": "https://www.worldcat.org/isbn/9780340661345",
+        "source_type": "book"
+      },
+      {
+        "citation": "Bell, David A. The First Total War: Napoleon's Europe and the Birth of Warfare as We Know It. Boston: Houghton Mifflin, 2007. ISBN 978-0-618-34965-4.",
+        "url": "https://www.worldcat.org/isbn/9780618349654",
+        "source_type": "book"
+      }
+    ]
+  },
+  {
+    "name_original": "افشاریان",
+    "name_original_lang": "fa",
+    "entity_type": "empire",
+    "year_start": 1736,
+    "year_end": 1796,
+    "capital_name": "مشهد",
+    "capital_lat": 36.297,
+    "capital_lon": 59.6062,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              40.0,
+              42.0
+            ],
+            [
+              72.0,
+              42.0
+            ],
+            [
+              72.0,
+              25.0
+            ],
+            [
+              44.0,
+              25.0
+            ],
+            [
+              40.0,
+              30.0
+            ],
+            [
+              40.0,
+              42.0
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-001: nome originale in persiano (Afsharyan). Dinastia turcomanna fondata da Nadir Shah (1736-1747), uno dei più grandi conquistatori iraniani — sconfisse Mughal a Karnal (1739) e saccheggio' Delhi (Peacock Throne preso). ETHICS-002: il sacco di Delhi del 1739 vide ~30,000 vittime in massacri urbani. Le campagne ottomane e nel Caucaso furono parimenti brutali. Dopo l'assassinio di Nadir Shah (1747) l'impero collassò rapidamente; il successore Shahrokh regnò solo a Khorasan. ETHICS-003: la storiografia iraniana enfatizza Nadir come 'Napoleone d'Iran' ma è cauto sulle violenze. Q63149558 verified.",
+    "name_variants": [
+      {
+        "name": "Afsharid dynasty",
+        "lang": "en"
+      },
+      {
+        "name": "Afsharid Empire",
+        "lang": "en"
+      },
+      {
+        "name": "Afshariyan",
+        "lang": "fa"
+      }
+    ],
+    "territory_changes": [],
+    "sources": [
+      {
+        "citation": "Axworthy, Michael. The Sword of Persia: Nader Shah, from Tribal Warrior to Conquering Tyrant. London: I.B. Tauris, 2006. ISBN 978-1-85043-706-2.",
+        "url": "https://www.worldcat.org/isbn/9781850437062",
+        "source_type": "book"
+      },
+      {
+        "citation": "Tucker, Ernest. Nadir Shah's Quest for Legitimacy in Post-Safavid Iran. Gainesville: University Press of Florida, 2006. ISBN 978-0-8130-2964-0.",
+        "url": "https://www.worldcat.org/isbn/9780813029641",
+        "source_type": "book"
+      },
+      {
+        "citation": "Lockhart, Laurence. Nadir Shah: A Critical Study Based Mainly upon Contemporary Sources. London: Luzac, 1938.",
+        "url": "https://www.worldcat.org/oclc/1241670",
+        "source_type": "book"
+      },
+      {
+        "citation": "Floor, Willem. The Rise and Fall of Nader Shah: Dutch East India Company Reports, 1730-1747. Washington, DC: Mage Publishers, 2009. ISBN 978-1-933823-32-3.",
+        "url": "https://www.worldcat.org/isbn/9781933823324",
+        "source_type": "book"
+      },
+      {
+        "citation": "Matthee, Rudolph P. Persia in Crisis: Safavid Decline and the Fall of Isfahan. London: I.B. Tauris, 2012. ISBN 978-1-84511-745-0.",
+        "url": "https://www.worldcat.org/isbn/9781845117450",
+        "source_type": "book"
+      },
+      {
+        "citation": "Perry, John R. \"The Last Safavids 1722-1773.\" Iran 9 (1971): 59-71.",
+        "url": "https://doi.org/10.2307/4300439",
+        "source_type": "journal_article"
+      }
+    ]
+  },
+  {
+    "name_original": "𒆍𒀭𒊏𒆠 (Old Babylonian)",
+    "name_original_lang": "akk",
+    "entity_type": "empire",
+    "year_start": -1894,
+    "year_end": -1595,
+    "capital_name": "Babylon",
+    "capital_lat": 32.5429,
+    "capital_lon": 44.4209,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              42.0,
+              35.5
+            ],
+            [
+              48.5,
+              35.5
+            ],
+            [
+              49.0,
+              30.0
+            ],
+            [
+              44.0,
+              29.5
+            ],
+            [
+              41.5,
+              32.0
+            ],
+            [
+              42.0,
+              35.5
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.78,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-001: Old Babylonian Empire (Hammurabi dynasty), -1894 a -1595 BCE. Distinct from Neo-Babylonian (id=490, -626 to -539). The intermediate Kassite period (-1595 to -1155) is not separately covered as entity yet. The Code of Hammurabi (~1754 BCE) belongs to this period. Q733897 verified Wikidata.",
+    "name_variants": [
+      {
+        "name": "Old Babylonian Empire",
+        "lang": "en"
+      },
+      {
+        "name": "First Dynasty of Babylon",
+        "lang": "en"
+      }
+    ],
+    "territory_changes": [],
+    "sources": [
+      {
+        "citation": "Renger, J. (1995). Institutional, Communal, and Individual Ownership in Ancient Mesopotamia. Chicago-Kent Law Review 71(269).",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Wikipedia contributors. First Babylonian dynasty (Old Babylonian period). Reference for chronology.",
+        "url": "https://en.wikipedia.org/wiki/First_Babylonian_dynasty",
+        "source_type": "secondary"
+      },
+      {
+        "citation": "Van De Mieroop, Marc. King Hammurabi of Babylon: A Biography. Oxford: Blackwell, 2005. ISBN 978-1-4051-2660-1.",
+        "url": "https://www.worldcat.org/isbn/9781405126601",
+        "source_type": "book"
+      },
+      {
+        "citation": "Charpin, Dominique. Writing, Law, and Kingship in Old Babylonian Mesopotamia. Trans. Jane Marie Todd. Chicago: University of Chicago Press, 2010. ISBN 978-0-226-10158-0.",
+        "url": "https://www.worldcat.org/isbn/9780226101583",
+        "source_type": "book"
+      },
+      {
+        "citation": "Roth, Martha T. Law Collections from Mesopotamia and Asia Minor. 2nd ed. Atlanta: Scholars Press, 1997. ISBN 978-0-7885-0378-6.",
+        "url": "https://www.worldcat.org/isbn/9780788503788",
+        "source_type": "book"
+      },
+      {
+        "citation": "Stol, Marten. Letters from Yale Forerunners of the Hammurabi Letters. Leiden: Brill, 1981. ISBN 978-90-04-06329-7.",
+        "url": "https://www.worldcat.org/isbn/9789004063297",
+        "source_type": "book"
+      },
+      {
+        "citation": "Van De Mieroop, Marc. A History of the Ancient Near East, ca. 3000-323 BC. 3rd ed. Chichester: Wiley-Blackwell, 2016. ISBN 978-1-118-71815-5.",
+        "url": "https://www.worldcat.org/isbn/9781118718155",
+        "source_type": "book"
+      }
+    ]
+  },
+  {
+    "name_original": "சோழர் (Sangam-era)",
+    "name_original_lang": "ta",
+    "entity_type": "kingdom",
+    "year_start": -300,
+    "year_end": 300,
+    "capital_name": "Uraiyur",
+    "capital_lat": 10.7905,
+    "capital_lon": 78.6864,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              80.972669224,
+              10.79915098
+            ],
+            [
+              80.928828377,
+              10.358032832
+            ],
+            [
+              80.799139981,
+              9.933809279
+            ],
+            [
+              80.588866568,
+              9.542698831
+            ],
+            [
+              80.306262006,
+              9.199615957
+            ],
+            [
+              79.962247672,
+              8.917616947
+            ],
+            [
+              79.570000781,
+              8.70741104
+            ],
+            [
+              79.144463815,
+              8.576955898
+            ],
+            [
+              78.701788542,
+              8.531156099
+            ],
+            [
+              78.258733909,
+              8.571680238
+            ],
+            [
+              77.832042121,
+              8.696906458
+            ],
+            [
+              77.437819894,
+              8.901998414
+            ],
+            [
+              77.090950981,
+              9.17910538
+            ],
+            [
+              76.804561928,
+              9.517673096
+            ],
+            [
+              76.589556753,
+              9.904847448
+            ],
+            [
+              76.45422986,
+              10.325951605
+            ],
+            [
+              76.403961873,
+              10.765018519
+            ],
+            [
+              76.441001514,
+              11.20536333
+            ],
+            [
+              76.564338258,
+              11.630182661
+            ],
+            [
+              76.769674267,
+              12.023168483
+            ],
+            [
+              77.049507932,
+              12.369122449
+            ],
+            [
+              77.393342834,
+              12.654552292
+            ],
+            [
+              77.788032903,
+              12.868226416
+            ],
+            [
+              78.218266001,
+              13.001657966
+            ],
+            [
+              78.66717483,
+              13.049487599
+            ],
+            [
+              79.117048312,
+              13.009736575
+            ],
+            [
+              79.550102301,
+              12.883909098
+            ],
+            [
+              79.949259205,
+              12.676934242
+            ],
+            [
+              80.298884612,
+              12.39695102
+            ],
+            [
+              80.585435454,
+              12.054952693
+            ],
+            [
+              80.797986903,
+              11.664315602
+            ],
+            [
+              80.92862039,
+              11.240242564
+            ],
+            [
+              80.972669224,
+              10.79915098
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "approximate_circle",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.5,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-001: Early Cholas / Sangam-era Tamil kingdom, regional dynasty del delta Kaveri (-300 to 300 CE). Distinct from Medieval Chola Empire (id 110, restricted to 848-1279 dopo split v6.86). After Sangam era there was a 650-year gap (Kalabhra interregnum + Pallava rule) before Vijayalaya restored Chola rule in 848. Confidence 0.6 perché Sangam literature (Pattuppattu, Ettuthokai) è la fonte primaria ma con cronologie incerte. Q3532146 verified.\n\n[v6.99.80-postH-visual] Replaced rectangle bbox placeholder polygon (visually obvious as bounding box, not real boundary) with capital-based circle of 250km radius. Approximate but visually honest as approximation rather than pretending to be a documented boundary.",
+    "name_variants": [
+      {
+        "name": "Early Cholas",
+        "lang": "en"
+      },
+      {
+        "name": "Sangam-era Chola",
+        "lang": "en"
+      }
+    ],
+    "territory_changes": [],
+    "sources": [
+      {
+        "citation": "Thapar, R. (2003). Early India: From the Origins to AD 1300. Penguin Books.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Wikipedia contributors. Sangam period / Early Cholas. Cross-reference for chronology and rulers.",
+        "url": "https://en.wikipedia.org/wiki/Sangam_period",
+        "source_type": "secondary"
+      }
+    ]
+  }
+]

@@ -385,3 +385,58 @@ follow-up.
 2. **Sync `name_original` nativo prod→JSON** per i ~14 rename (debito ETHICS-001:
    il JSON ha ancora forme latine dove la prod ha la forma locale primaria).
 3. **Cappare in prod** le 6 entità `disputed` > 0.70 al prossimo deploy.
+
+---
+
+## Aggiornamento 2026-05-31 (#2) — Riconciliazione residua (v6.99.94)
+
+Chiusi i follow-up **#1 e #2** sopra (script `scripts/backport_residual_to_json.py`,
+input read-only `data/fixes/phase_h_residual_export.json`). Source-only, **nessun
+deploy**. Il JSON ora ha **1038 entità deduplicate = totale prod** (parità di conteggio).
+
+### Triage dei 7 "insert" → 6 ADD + 1 rename
+
+Export completo da prod dei 7 id `SKIP` del backport v6.99.93 → triage:
+- **6 entità realmente assenti dal JSON, aggiunte** in `data/entities/batch_36_prod_reconciliation.json`
+  (entità complete da prod, con `ethical_notes`):
+  - `Res Publica Romana` (-509..-27, distinta da `Imperium Romanum`).
+  - `Premier Empire français` (1804..1815, distinta da Royaume/République).
+  - `افشاریان` (Afsharidi, 1736..1796).
+  - `𒆍𒀭𒊏𒆠 (Old Babylonian)` (-1894..-1595; prod la tiene distinta dalla
+    Neo-Babylonian id 490). **Nota prod-debt**: prod ha ANCHE `𒆍𒀭𒊏𒆠` "combinata"
+    (id 171, -1894..-539) che si sovrappone — da riconciliare in prod (follow-up #4).
+  - `சோழர் (Sangam-era)` (-300..300, distinta dalla Chola medievale id 110).
+  - `Kingdom of Quito` (1000..1470): **entità contestata/leggendaria**, ma prod la
+    gestisce in modo responsabile — `status='disputed'`, conf 0.5, `ethical_notes`
+    che documenta la narrazione di Velasco (1789) e l'assenza di evidenza
+    archeologica. Aggiungerla è **conforme a ETHICS-002/003** ("mostrare tutte le
+    versioni"): coesiste come entità distinta accanto a `Quitu-Cara` e `Kitu`.
+- **1 era un rename mal classificato**: prod id 741 `مقديشو` È il JSON `Maqdishaw`
+  (stessa sultanato 900-1600, stessa capitale). Riclassificata come rename **+
+  backport del boundary** che v6.99.93 aveva mancato (era ancora `aourednik`).
+
+### 15 rename `name_original` → script nativo (ETHICS-001)
+
+`name_original` portato alla forma locale primaria (es. `Hetmanshchyna`→`Гетьманщина`,
+`Raska`→`Србија`, `Maqdishaw`→`مقديشو`); `name_variants` sincronizzate da prod
+(union, lossless — la vecchia forma latina è preservata come variante).
+**Cascade integrità**: aggiornati i 2 riferimenti per-nome in file non-entità così
+che il linking al seed sopravviva — `data/chains/batch_20_balkan.json` (link `Raska`)
+e `data/events/batch_20_trade_exploration.json` (`entity_links` `Maqdishaw`).
+
+### Note
+
+- 4 insert arrivavano da prod **senza `name_variants`** (viola l'invariante JSON
+  "ogni entità ha ≥1 variante"): aggiunte le forme inglesi documentate
+  (First French Empire, Afsharid dynasty, Old Babylonian Empire, Early Cholas) —
+  miglioria di ricercabilità. **Prod ne è privo → arricchire in prod (follow-up #5).**
+- Suite completa verde (1316 passed), fence collision a **0**, ruff verde.
+
+### Follow-up aggiornati
+
+1. ✅ Triage 7 insert (fatto — 6 add + 1 rename).
+2. ✅ Sync nomi nativi (fatto — 15 rename + cascade).
+3. ⏳ Cappare in prod le 6 `disputed` > 0.70 (al prossimo deploy).
+4. ⏳ Prod: riconciliare le 3 entità Babilonia sovrapposte (171 combinata vs
+   490 Neo + 1039 Old) — deprecare/restringere la 171.
+5. ⏳ Prod: aggiungere `name_variants` ai 4 insert che ne sono privi.

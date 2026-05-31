@@ -13,8 +13,8 @@
 
 ## Versioni completate
 
-### v6.99.85-93 -- Wave 2 hardening + full audit + traffic fixes (2026-05-31)
-**Versione corrente: v6.99.93.** CI interamente verde (lint+test+js-tests+postgres-migrations+build).
+### v6.99.85-94 -- Wave 2 hardening + full audit + traffic fixes (2026-05-31)
+**Versione corrente: v6.99.94.** CI interamente verde (lint+test+js-tests+postgres-migrations+build).
 **10/10 HIGH dell'audit chiusi** (con v6.99.93 / audit #7).
 
 Sessione lunga: audit a freddo (10 dimensioni, workflow `wb4nky8m3` con 29 agenti +
@@ -37,8 +37,9 @@ prod + 2 bug-fix:
 **Rimanenti / prossima sessione** (ordine deciso con Clirim: ~~a~~ → c → b):
 - ~~**(a) Backport Phase H JSON↔prod**~~ — ✅ **fatto in v6.99.93** (scope reale 599, non
   372: inclusa la iter-series `historical_approximation`; backportati anche
-  confidence+status per coerenza; 7 insert prod-only + sync nomi nativi tracciati come
-  follow-up in ETHICS-012).
+  confidence+status per coerenza). **Follow-up chiuso in v6.99.94**: riconciliazione
+  residua → 6 entità solo-prod aggiunte + 15 `name_original` portati a script nativo
+  (ETHICS-001); JSON ora 1038 entità = totale prod. Vedi ETHICS-012 §"#2".
 - **(c) orjson** serializzazione globale (perf; cambio ampio → test completo + cross-check). *Prossima.*
 - **(b) Enrichment** entità low-confidence (Wave 2 Plan A — vedi `docs/auto-iter-wave0/briefs/D-enrichment-backlog.md`).
 
