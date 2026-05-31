@@ -13,8 +13,9 @@
 
 ## Versioni completate
 
-### v6.99.85-92 -- Wave 2 hardening + full audit + traffic fixes (2026-05-31)
-**Versione corrente: v6.99.92.** CI interamente verde (lint+test+js-tests+postgres-migrations+build).
+### v6.99.85-93 -- Wave 2 hardening + full audit + traffic fixes (2026-05-31)
+**Versione corrente: v6.99.93.** CI interamente verde (lint+test+js-tests+postgres-migrations+build).
+**10/10 HIGH dell'audit chiusi** (con v6.99.93 / audit #7).
 
 Sessione lunga: audit a freddo (10 dimensioni, workflow `wb4nky8m3` con 29 agenti +
 verifica adversariale) → tutte "adequate", 0 critical, **10 HIGH confermati**. Verdetto:
@@ -28,13 +29,17 @@ prod + 2 bug-fix:
 - **v6.99.90** (2.6) copertura test frontend (`boundary-cache.js`) + spatial check CI + fix lint — #6/#8
 - **v6.99.91** traffic-fix #1: redirect `/v1/entity/{id}` → `/v1/entities/{id}` (agent 404 in prod)
 - **v6.99.92** traffic-fix #2: auth admin via token (shell pubbliche + `admin-auth.js`, 401 intermittenti risolti)
+- **v6.99.93** (2.7) backport confini JSON↔prod (599 entità: 372 `approximate_circle` +
+  227 `historical_approximation`, prima solo-prod) + fence collision attivato (test
+  PostGIS-free in SQLite + job Postgres CI) → seed fresco a **0 super-group collision**
+  (era 29). Chiude audit **#7** → **10/10 HIGH chiusi**. Vedi ETHICS-012. *Nessun deploy.*
 
-**Rimanenti / prossima sessione** (ordine deciso con Clirim: **a → c → b**):
-- **(a) Backport Phase H JSON↔prod** — 372 entità `approximate_circle` esistono solo
-  in prod; un seed fresco rigenera ~22 collision-group. Approccio approvato: export
-  prod→JSON (solo campi boundary). Chiude audit **#7** + mette in sicurezza i deploy da
-  DB vuoto. *Da eseguire.*
-- **(c) orjson** serializzazione globale (perf; cambio ampio → test completo + cross-check).
+**Rimanenti / prossima sessione** (ordine deciso con Clirim: ~~a~~ → c → b):
+- ~~**(a) Backport Phase H JSON↔prod**~~ — ✅ **fatto in v6.99.93** (scope reale 599, non
+  372: inclusa la iter-series `historical_approximation`; backportati anche
+  confidence+status per coerenza; 7 insert prod-only + sync nomi nativi tracciati come
+  follow-up in ETHICS-012).
+- **(c) orjson** serializzazione globale (perf; cambio ampio → test completo + cross-check). *Prossima.*
 - **(b) Enrichment** entità low-confidence (Wave 2 Plan A — vedi `docs/auto-iter-wave0/briefs/D-enrichment-backlog.md`).
 
 ### v6.99.81-83 Wave 1 -- Security, data-fix, perf (2026-05-28)

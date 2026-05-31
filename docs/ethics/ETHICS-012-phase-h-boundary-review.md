@@ -291,3 +291,97 @@ Phase H rispetta:
 **Test CI fence**: ✅ (3 test in tests/test_boundary_collisions_audit.py)
 **Documentato**: ✅ (questo file + CHANGELOG v6.99.80 + LOOP_STATE.md +
 phase1_screening_report.md + lapita_label_fix_notes.md)
+
+---
+
+## Aggiornamento 2026-05-31 — Backport JSON↔prod (Wave 2 audit #7, v6.99.93)
+
+**Stato**: Accettato · **Tipo**: sync alla realtà-prod *già revisionata* (NON
+una nuova decisione etica) · **Deploy prod**: nessuno (la prod è già corretta).
+
+### Problema
+
+I fix Phase H (cerchi `approximate_circle`) e una campagna **precedente** della
+iter-series (`scripts/sql_iter*_boundaries.sql` + `sql_manual_boundaries.sql`,
+poligoni storici `historical_approximation` disegnati a mano) erano stati
+applicati **solo in produzione via SQL**, mai propagati al sorgente
+`data/entities/*.json`. Poiché `seed_database()` gira solo su DB vuoto, un seed
+fresco / deploy da DB vuoto **(a)** rigenerava i vecchi super-group polygon →
+~22 collision group (verificato: 29 super-group alert sul JSON pre-backport) e
+**(b)** perdeva i poligoni storici ricercati. Questo bloccava il fence collision
+(#7) e avrebbe regredito silenziosamente ogni redeploy pulito.
+
+### Cosa è stato sincronizzato (599 entità)
+
+Export **read-only** da prod (`data/fixes/phase_h_backport_export.json`,
+2026-05-31) → `scripts/backport_phase_h_to_json.py` aggiorna, per ogni entità,
+**solo lo stato confine revisionato**:
+- `boundary_geojson`, `boundary_source` (372 `approximate_circle` + 227
+  `historical_approximation`), provenance aourednik/Natural-Earth;
+- **`confidence_score` + `status`**: backportati INSIEME alla geometria perché
+  Phase H/iter li hanno rivisti come **un'unica decisione coerente**
+  (ETHICS-004/012/013) — i cerchi hanno confidence ridotta, i poligoni ricercati
+  alzata, alcuni duplicati marcati `deprecated`. La sola geometria avrebbe
+  lasciato **58 entità** con confidence/status incoerenti col confine.
+
+**Matching**: 578/599 per `name_original`; 14 rename in script nativo (ETHICS-001,
+es. `Гетьманщина`→`Hetmanshchyna`, `بازين`→`Bazin`) risolti con mappa
+`id→nome JSON` vettata; 7 (insert prod-only / rename ambigui) **saltati** e
+tracciati come follow-up. Il backport è idempotente e si rifiuta di scrivere se
+il fence non è verde sul risultato.
+
+### Sotto-decisioni etiche
+
+1. **Cap ETHICS-003 sui territori contestati**: 6 entità `status='disputed'`
+   avevano in prod confidence 0.85/0.80 (violazione *latente* della regola
+   "contestati ≤ 0.70"). Il backport le **cappa a 0.70** (identico a
+   `sync_boundaries_from_json`): il JSON risulta *più* conforme della prod. È una
+   **correzione etica intenzionale**, non un mismatch accidentale. → La prod
+   resta non-conforme su queste 6: da cappare al prossimo deploy (fuori scope —
+   nessun deploy qui). Vedi follow-up #3.
+2. **`status` come companion di `confidence`** (incluso `deprecated`):
+   `deprecated` = duplicato/superseduto (ADR-005, accoppiato a
+   `[DUPLICATE_OF=...]` in `ethical_notes` in prod) — **NON** significa "entità
+   storicamente illegittima". Senza il backport di `status`, un seed fresco
+   resusciterebbe duplicati fuorvianti come record validi: distorsione peggiore
+   dell'omissione di un polygon.
+3. **Esclusi dal backport**: `name_original` (i ~14 rename in script nativo
+   restano divergenti — **debito ETHICS-001**, follow-up #2) e `ethical_notes`
+   (la narrativa per-entità resta in prod + nei file tier SQL + in questo
+   record; un consumatore del solo JSON ha meno contesto — accettato e
+   documentato).
+
+### Fence collision attivato (chiude audit #7)
+
+- `tests/test_boundary_collisions_json_audit.py` — variante **PostGIS-free**
+  (`detect_json_boundary_collisions`: sha256 della geometria + stesso
+  `boundary_aourednik_name` con span > 200 anni) sul JSON sorgente; gira nel job
+  SQLite di **ogni PR** + un test "guard-the-guard" sintetico.
+- `scripts/ci_collision_check.py` — seed fresco del JSON in **PostGIS reale** +
+  guard `detect_boundary_collisions`, nel job `postgres-migrations`.
+- Verifica: seed fresco dal JSON backportato → **0 super-group collision** (era 29).
+
+### Provenance enum (ETHICS-005)
+
+`approximate_circle` e `historical_approximation` aggiunti all'enum documentale
+(`tests/test_boundary_provenance.py`, `src/api/schemas.py`): erano usati in prod
+dai tempi di Phase H/iter ma mancavano dalla lista valida.
+
+### Cross-check
+
+Decisione cross-checkata con **ChatGPT-5.5** (ethics review, log in
+`data/chatgpt_review/`): verdetto **SOUND-WITH-CAVEATS**. Le caveat (loggare il
+cap come correzione intenzionale; chiarire la semantica di `deprecated`; triage
+prossimo dei 7 insert + sync dei nomi nativi) sono recepite qui sopra e nei
+follow-up.
+
+### Follow-up tracciati (debito; NON bloccano audit #7)
+
+1. **Triage dei 7 insert prod-only** (`Premier Empire français`,
+   `Res Publica Romana`, `சோழர் (Sangam-era)`, `افشاریان`, `Kingdom of Quito`,
+   `مقديشو`, `𒆍𒀭𒊏𒆠 (Old Babylonian)`): aggiungere come entità complete al JSON
+   o confermare merge. Rischio rappresentazionale: assenti dai deploy puliti
+   finché non triagiati.
+2. **Sync `name_original` nativo prod→JSON** per i ~14 rename (debito ETHICS-001:
+   il JSON ha ancora forme latine dove la prod ha la forma locale primaria).
+3. **Cappare in prod** le 6 entità `disputed` > 0.70 al prossimo deploy.

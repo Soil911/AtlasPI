@@ -80,6 +80,17 @@ jobs:
           REDIS_URL: ""
         run: python -m scripts.ci_spatial_check
 
+      # Wave 2.7 (audit #7): fresh-seed the JSON source into real PostGIS and run
+      # the boundary collision guard. Proves an empty-DB deploy yields 0
+      # super-group polygon collisions (the Phase H regression). Pairs with the
+      # PostGIS-free tests/test_boundary_collisions_json_audit.py in the SQLite job.
+      - name: PostGIS boundary collision fence (audit #7)
+        env:
+          DATABASE_URL: postgresql://atlaspi:atlaspi_test@localhost:5432/atlaspi_test
+          AUTO_SEED: "false"
+          REDIS_URL: ""
+        run: python -m scripts.ci_collision_check
+
   # Wave 2.6 (audit #8): unit test della logica di merge del lazy-loader boundary
   # (static/js/boundary-cache.js) — prima il frontend non aveva copertura automatica.
   js-tests:

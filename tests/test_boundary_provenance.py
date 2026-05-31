@@ -19,6 +19,10 @@ VALID_BOUNDARY_SOURCES = {
     "aourednik",
     "academic_source",
     "approximate_generated",
+    # Phase H + iter-series tiers (ETHICS-012): capital circles replacing
+    # collided super-group polygons, and hand-drawn historical polygons.
+    "approximate_circle",
+    "historical_approximation",
 }
 
 

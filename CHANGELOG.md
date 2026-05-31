@@ -2,6 +2,54 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.93] - 2026-05-31 (Wave 2.7 — backport confini JSON↔prod + fence collision: chiude audit #7)
+
+**Tema**: *Il sorgente JSON viene riallineato alla realtà-prod già revisionata
+così che un seed fresco / deploy da DB vuoto non rigeneri più le ~22 super-group
+collision; il fence collision viene attivato in CI. Nessun deploy prod (la prod
+è già corretta).*
+
+Due campagne SQL (Phase H `approximate_circle` + iter-series
+`historical_approximation`) erano applicate **solo in prod**, mai nel sorgente
+`data/entities/*.json` → un seed fresco rigenerava i vecchi super-group polygon
+(29 super-group alert misurati) e perdeva i poligoni storici disegnati a mano.
+Ultimo HIGH aperto dell'audit Wave 2.
+
+### Backport (599 entità, `scripts/backport_phase_h_to_json.py`)
+
+- Export read-only da prod → `data/fixes/phase_h_backport_export.json` (audit
+  trail). Aggiorna **solo** lo stato confine: `boundary_geojson`,
+  `boundary_source` (372 `approximate_circle` + 227 `historical_approximation`),
+  provenance aourednik/NE, **e** `confidence_score` + `status` (rivisti come
+  decisione coerente con la geometria — vedi ETHICS-012).
+- Match 578/599 per `name_original` + 14 rename in script nativo (ETHICS-001) via
+  mappa id→nome vettata; 7 insert/ambigui prod-only saltati (follow-up).
+- **Cap ETHICS-003**: 6 entità `disputed` con confidence prod > 0.70 cappate a
+  0.70 (il JSON è *più* conforme della prod; prod da cappare al prossimo deploy).
+- Minimal-diff (CRLF, `ensure_ascii=False`, `indent=2`); idempotente; si rifiuta
+  di scrivere se il fence non è verde sul risultato.
+
+### Fence collision (chiude audit #7)
+
+- `tests/test_boundary_collisions_json_audit.py` — variante PostGIS-free
+  (`detect_json_boundary_collisions` in `boundary_collision_guard.py`) sul JSON
+  sorgente, nel job SQLite di ogni PR + un guard-the-guard sintetico.
+- `scripts/ci_collision_check.py` — seed fresco in PostGIS reale + guard, nel job
+  `postgres-migrations` di `ci.yml`.
+- Risultato verificato: seed fresco dal JSON backportato → **0 super-group
+  collision** (era 29). Suite completa verde (1316 passed), ruff verde.
+
+### Altro
+
+- `approximate_circle` + `historical_approximation` aggiunti all'enum provenance
+  ETHICS-005 (`schemas.py`, `test_boundary_provenance.py`): usati in prod da Phase
+  H/iter ma assenti dalla lista valida.
+- Decisione cross-checkata con ChatGPT-5.5 → **SOUND-WITH-CAVEATS** (caveat
+  recepite in ETHICS-012).
+- **Follow-up tracciati** (non bloccano #7): triage 7 insert prod-only; sync
+  `name_original` nativo prod→JSON (~14, debito ETHICS-001); cap prod delle 6
+  disputed al prossimo deploy.
+
 ## [v6.99.92] - 2026-05-31 (traffic-fix #2 — dashboard admin: auth via token affidabile)
 
 **Tema**: *Le dashboard admin (`/admin/brief`, `/admin/analytics`) autenticano in

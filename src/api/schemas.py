@@ -79,10 +79,16 @@ class EntityResponse(BaseModel):
     # ETHICS-005: la tier di provenienza del confine. Permette al consumatore
     # di distinguere un poligono reale da uno generato senza ispezionare il
     # geojson. Valori: historical_map, natural_earth, aourednik,
-    # academic_source, approximate_generated.
+    # academic_source, approximate_generated, approximate_circle (cerchio sulla
+    # capitale, Phase H — ETHICS-012), historical_approximation (poligono storico
+    # disegnato a mano).
     boundary_source: str | None = Field(
         None,
-        description="Tier di provenienza del confine (ETHICS-005): historical_map, natural_earth, aourednik, academic_source, approximate_generated",
+        description=(
+            "Tier di provenienza del confine (ETHICS-005): historical_map, "
+            "natural_earth, aourednik, academic_source, approximate_generated, "
+            "approximate_circle, historical_approximation"
+        ),
     )
     boundary_aourednik_name: str | None = Field(
         None,

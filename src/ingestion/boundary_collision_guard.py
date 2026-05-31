@@ -179,3 +179,127 @@ def detect_boundary_collisions() -> dict[str, Any]:
         return result
     finally:
         db.close()
+
+
+# ─── PostGIS-free variant (Wave 2 #7) ──────────────────────────────────────
+# The query above needs PostGIS (ST_Area on boundary_geom), so it only runs in
+# the Postgres CI job. The SQLite test suite — which runs on every PR — gets the
+# same fence via this pure-Python detector that works directly on the JSON
+# source (data/entities/*.json), i.e. exactly the artifact a fresh seed loads.
+#
+# Difference vs the PostGIS version: instead of bucketing by ST_Area (equal area
+# ≈ same polygon), we bucket by the sha256 of the canonical geometry — i.e.
+# *byte-identical* polygons. This is the precise signature of the Phase H
+# super-group bug, where the fuzzy matcher literally assigned the SAME upstream
+# polygon to several historically-distinct entities. The two detectors agree on
+# super-group alerts (the hard fence); the JSON one is strictly stricter on
+# bucketing, so its group COUNT is not compared against the loose 60 threshold.
+
+# Year span beyond which entities sharing one aourednik label are almost
+# certainly different polities (matches the >200y test in the PostGIS query).
+SUPER_GROUP_YEAR_SPAN = 200
+
+# Sources produced by the fuzzy matcher — the only ones that can carry the
+# super-group regression. Curated circles / hand-drawn polygons / Natural-Earth
+# modern shapes are out of scope (a shared circle is impossible; see ETHICS-012).
+_FUZZY_SOURCES = ("aourednik", "natural_earth")
+
+
+def _canonical_geom_key(geom: Any) -> str | None:
+    """Stable hash of a GeoJSON geometry, robust to key order and fp jitter.
+
+    Coordinates are rounded to 6 dp (~0.1 m) before hashing so that two
+    geometries that differ only by float-serialisation noise still collide —
+    we want to catch *the same polygon assigned twice*, not formatting.
+    """
+    import hashlib
+
+    if not isinstance(geom, dict) or "coordinates" not in geom:
+        return None
+
+    def _round(c: Any) -> Any:
+        if isinstance(c, list):
+            if c and isinstance(c[0], (int, float)):
+                return [round(float(v), 6) for v in c]
+            return [_round(x) for x in c]
+        return c
+
+    import json as _json
+
+    payload = _json.dumps(
+        {"type": geom.get("type"), "coordinates": _round(geom.get("coordinates"))},
+        sort_keys=True,
+        ensure_ascii=False,
+    )
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
+def detect_json_boundary_collisions(entities: list[dict]) -> dict[str, Any]:
+    """PostGIS-free super-group collision detector over JSON entity dicts.
+
+    Args:
+        entities: list of entity dicts as produced by
+            ``src.db.seed.load_all_entities`` (each with ``boundary_geojson`` as
+            a dict, ``boundary_source``, ``boundary_aourednik_name``,
+            ``year_start``, ``name_original``).
+
+    Returns the same shape as :func:`detect_boundary_collisions` minus the
+    Postgres-only ``status`` heuristics: ``super_group_alerts`` and
+    ``big_groups`` are the actionable signals for the CI fence.
+    """
+    buckets: dict[str, list[dict]] = {}
+    for ent in entities:
+        if ent.get("boundary_source") not in _FUZZY_SOURCES:
+            continue
+        key = _canonical_geom_key(ent.get("boundary_geojson"))
+        if key is None:
+            continue
+        buckets.setdefault(key, []).append(ent)
+
+    super_group_alerts: list[dict[str, Any]] = []
+    big_groups: list[dict[str, Any]] = []
+
+    for members in buckets.values():
+        if len(members) < 2:
+            continue
+
+        # Big group: 4+ fuzzy entities sharing one byte-identical polygon.
+        if len(members) >= MAX_GROUP_SIZE_BEFORE_ALARM:
+            big_groups.append(
+                {
+                    "n_entities": len(members),
+                    "names": [m.get("name_original") for m in members],
+                }
+            )
+
+        # Super-group: same aourednik label spanning > SUPER_GROUP_YEAR_SPAN.
+        by_label: dict[str, list[int]] = {}
+        names_by_label: dict[str, list[str]] = {}
+        for m in members:
+            label = m.get("boundary_aourednik_name")
+            if not label:
+                continue
+            yr = m.get("year_start")
+            if yr is None:
+                continue
+            by_label.setdefault(label, []).append(yr)
+            names_by_label.setdefault(label, []).append(m.get("name_original"))
+        for label, years in by_label.items():
+            if len(years) >= 2 and (max(years) - min(years)) > SUPER_GROUP_YEAR_SPAN:
+                super_group_alerts.append(
+                    {
+                        "boundary_aourednik_name": label,
+                        "n_entities": len(years),
+                        "year_range": (min(years), max(years)),
+                        "names": names_by_label[label],
+                    }
+                )
+
+    return {
+        "total_groups": sum(1 for m in buckets.values() if len(m) >= 2),
+        "super_group_alerts": super_group_alerts,
+        "super_group_alert_count": len(super_group_alerts),
+        "big_groups": big_groups,
+        "big_groups_count": len(big_groups),
+        "status": "alarm" if (super_group_alerts or big_groups) else "ok",
+    }
