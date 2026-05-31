@@ -9,6 +9,8 @@ import re
 
 import pytest
 
+from src.api.routes.admin_pages import PUBLIC_ADMIN_SHELLS
+
 TEST_TOKEN = "test-admin-token-CHANGE"
 
 
@@ -25,7 +27,9 @@ def _admin_routes(client):
     for r in client.app.routes:
         path = getattr(r, "path", "") or ""
         methods = getattr(r, "methods", set()) or set()
-        if path.startswith("/admin/"):
+        # traffic-fix #2: le shell HTML pubbliche (analytics, brief) NON sono
+        # protette di proposito (solo layout; i dati sono protetti a parte).
+        if path.startswith("/admin/") and path not in PUBLIC_ADMIN_SHELLS:
             for m in methods:
                 if m in ("GET", "POST", "PATCH", "DELETE", "PUT"):
                     out.append((m, path))
@@ -46,8 +50,18 @@ class TestAdminAuth:
             f"Expected >=15 admin routes, got {len(routes)}: {routes}"
         )
 
+    def test_public_admin_shells_load_without_auth(self, unauth_client):
+        """traffic-fix #2: le shell HTML (analytics, brief) sono pubbliche di
+        proposito — caricano senza auth (i DATI restano protetti via XHR)."""
+        for path in sorted(PUBLIC_ADMIN_SHELLS):
+            r = unauth_client.get(path)
+            assert r.status_code == 200, f"{path} shell dovrebbe essere pubblica, got {r.status_code}"
+            assert "text/html" in r.headers.get("content-type", "")
+            # la shell deve includere admin-auth.js (token X-Admin-Token)
+            assert "admin-auth.js" in r.text
+
     def test_unauth_returns_401(self, unauth_client):
-        """Senza header auth → 401 per OGNI route /admin/*."""
+        """Senza header auth → 401 per OGNI route /admin/* (escluse le shell)."""
         failed = []
         for method, path in _admin_routes(unauth_client):
             url = _safe_path(path)

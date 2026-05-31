@@ -2,6 +2,47 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.92] - 2026-05-31 (traffic-fix #2 — dashboard admin: auth via token affidabile)
+
+**Tema**: *Le dashboard admin (`/admin/brief`, `/admin/analytics`) autenticano in
+modo affidabile via token, eliminando i 401 intermittenti del caching Basic-Auth.*
+
+Emerso dall'analisi del traffico: 401 intermittenti su `/admin/brief`,
+`/admin/insights`, `/admin/ai/*`. **Non un bug server** (tutte rispondono
+identiche: 401 senza token, 200 con) ma fragilità del caching Basic-Auth del
+browser tra tab/sessioni, e i `fetch()` delle dashboard non inviavano il token.
+
+### Fix
+
+- Le **shell HTML** delle dashboard (`/admin/analytics`, `/admin/brief`) sono ora
+  servite **pubblicamente** (come `/docs`) da un nuovo router
+  `src/api/routes/admin_pages.py` — contengono solo layout, **nessun dato**. I
+  DATI restano protetti da `verify_admin` (`/admin/analytics/data`, `/admin/ai/*`,
+  `/admin/insights`, `/admin/coverage-report`, `/admin/dev-ips`, …).
+- `static/admin/admin-auth.js`: chiede il token **una volta**, lo salva in
+  `localStorage`, lo invia come `X-Admin-Token` su ogni chiamata `/admin/*`.
+  Wrapper installato subito; prompt lazy/guarded; su 401 ripulisce e richiede una
+  volta **senza reload** → niente loop.
+- Lo startup-guard (Wave 1.1) e `tests/test_admin_auth.py` allowlistano le 2 shell
+  pubbliche (`admin_pages.PUBLIC_ADMIN_SHELLS`).
+- **Verificato in browser** (preview): shell pubblica, wrapper installato, tutti e
+  4 gli endpoint dati del brief (`/admin/ai/status`, `/admin/insights`,
+  `/admin/coverage-report`, `/admin/ai/suggestions`) → **200** col token.
+
+### Files
+
+- NEW: `static/admin/admin-auth.js`, `src/api/routes/admin_pages.py`
+- MODIFIED: `src/api/routes/analytics.py` + `admin_cofounder.py` (route shell rimosse → router pubblico), `src/main.py` (include pubblico + allowlist nel guard), `static/admin/brief.html` (+ `<script>`), `tests/test_admin_auth.py` (allowlist + test shell pubbliche)
+- MODIFIED: `src/config.py`, `pyproject.toml` (6.99.91 → 6.99.92)
+
+Test: 1313 passed, 0 failed. Nessuna migration.
+
+> ⚠️ **Nota sicurezza**: le shell `/admin/analytics` e `/admin/brief` sono ora
+> pubblicamente *caricabili* (solo layout, nessun dato — pattern come `/docs`).
+> Tutti i dati admin restano protetti dal token.
+
+---
+
 ## [v6.99.91] - 2026-05-31 (traffic-fix #1 — alias /v1/entity/{id} → /v1/entities/{id})
 
 **Tema**: *Redirect 308 dal namespace singolare `/v1/entity/{id}` alla forma

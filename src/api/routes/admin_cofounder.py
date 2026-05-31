@@ -17,7 +17,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from fastapi import APIRouter, Depends, HTTPException, Query
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import JSONResponse
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
@@ -35,18 +35,9 @@ STATIC_DIR = Path(__file__).resolve().parent.parent.parent.parent / "static"
 # 1. HTML Dashboard
 # ═══════════════════════════════════════════════════════════════════
 
-@router.get(
-    "/admin/brief",
-    summary="AI Co-Founder Dashboard (HTML)",
-    description="Pagina HTML con dashboard interattiva per il co-founder.",
-    include_in_schema=False,
-)
-async def cofounder_brief():
-    """Serve the Co-Founder Brief dashboard HTML page."""
-    brief_path = STATIC_DIR / "admin" / "brief.html"
-    if brief_path.exists():
-        return FileResponse(brief_path, media_type="text/html")
-    raise HTTPException(status_code=404, detail="Dashboard file not found")
+# traffic-fix #2: la route /admin/brief (shell HTML) è stata spostata nel
+# router PUBBLICO src/api/routes/admin_pages.py (la shell non contiene dati;
+# /admin/ai/*, /admin/insights restano protetti).
 
 
 # ═══════════════════════════════════════════════════════════════════

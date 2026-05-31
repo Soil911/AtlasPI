@@ -24,6 +24,7 @@ from src.api.routes import (
     admin_cache,
     admin_cofounder,
     admin_insights,
+    admin_pages,
     agents_insights,
     analytics,
     chains,
@@ -255,6 +256,11 @@ async def lifespan(app: FastAPI):
     for _route in app.routes:
         _path = getattr(_route, "path", "") or ""
         if not _path.startswith("/admin/"):
+            continue
+        # traffic-fix #2: le shell HTML pubbliche (/admin/analytics, /admin/brief)
+        # NON richiedono verify_admin di proposito (solo layout, dati protetti a
+        # parte). Allowlist esplicita per non generare falsi ERROR nel guard.
+        if _path in admin_pages.PUBLIC_ADMIN_SHELLS:
             continue
         _admin_paths.append(_path)
         _dependant = getattr(_route, "dependant", None)
@@ -494,6 +500,11 @@ app.include_router(analytics.router, dependencies=_admin_deps)
 app.include_router(admin_insights.router, dependencies=_admin_deps)
 app.include_router(admin_cache.router, dependencies=_admin_deps)
 app.include_router(admin_cofounder.router, dependencies=_admin_deps)
+# traffic-fix #2: shell PUBBLICHE delle dashboard admin (/admin/analytics,
+# /admin/brief) — solo layout + admin-auth.js, nessun dato. I DATI restano
+# protetti dai router admin qui sopra. NESSUN verify_admin su queste 2 shell
+# (allowlist in admin_pages.PUBLIC_ADMIN_SHELLS, nota allo startup-guard).
+app.include_router(admin_pages.router)
 app.include_router(timeline.router)
 app.include_router(compare.router)
 app.include_router(search.router)

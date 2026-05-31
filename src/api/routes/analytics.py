@@ -15,7 +15,7 @@ import datetime
 import logging
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Request
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import JSONResponse
 from sqlalchemy import desc, func, not_
 from sqlalchemy.orm import Session
 
@@ -474,6 +474,8 @@ DASHBOARD_HTML = """\
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AtlasPI Analytics Dashboard</title>
+<!-- traffic-fix #2: admin auth via token (X-Admin-Token), prima di ogni altro script -->
+<script src="/static/admin/admin-auth.js"></script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -942,13 +944,6 @@ window.addEventListener('resize', () => {
 """
 
 
-@router.get(
-    "/admin/analytics",
-    response_class=HTMLResponse,
-    summary="Dashboard analytics (HTML)",
-    description="Pagina HTML con dashboard analytics interattiva (v6.49 ridisegnata).",
-    include_in_schema=False,
-)
-def analytics_dashboard():
-    """Serve la pagina HTML della dashboard analytics."""
-    return HTMLResponse(content=DASHBOARD_HTML)
+# traffic-fix #2: la route /admin/analytics (shell HTML) è stata spostata nel
+# router PUBBLICO src/api/routes/admin_pages.py (la shell non contiene dati;
+# /admin/analytics/data resta protetto). DASHBOARD_HTML resta esportato qui.
