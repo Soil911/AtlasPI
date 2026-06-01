@@ -552,9 +552,9 @@
         ]
       ]
     },
-    "confidence_score": 0.4,
-    "status": "uncertain",
-    "ethical_notes": "ETHICS: The Maratha Confederacy is celebrated in Indian (especially Maharashtrian) nationalism as Hindu resistance to Mughal/Islamic hegemony. This framing is partially accurate -- Shivaji's rebellion had genuine anti-Mughal elements and his coronation (1674) symbolized sovereignty. However, the Maratha expansion was also characterized by predatory revenue extraction: chauth (one-fourth of revenue) and sardeshmukhi (additional 10%) were effectively protection rackets extracted from non-Maratha territories. Maratha raids devastated Bengal (1742-51, the 'Maratha Ditch' of Calcutta), Mysore, and Rajputana. The Peshwa-era Confederacy operated through quasi-feudal Gaekwad, Holkar, Scindia, and Bhonsle houses that frequently fought each other. The narrative of unified Hindu resistance oversimplifies a complex, often internally violent political formation.",
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Maratha Confederacy is celebrated in Indian (especially Maharashtrian) nationalism as Hindu resistance to Mughal/Islamic hegemony. This framing is partially accurate -- Shivaji's rebellion had genuine anti-Mughal elements and his coronation (1674) symbolized sovereignty. However, the Maratha expansion was also characterized by predatory revenue extraction: chauth (one-fourth of revenue) and sardeshmukhi (additional 10%) were effectively protection rackets extracted from non-Maratha territories. Maratha raids devastated Bengal (1742-51, the 'Maratha Ditch' of Calcutta), Mysore, and Rajputana. The Peshwa-era Confederacy operated through quasi-feudal Gaekwad, Holkar, Scindia, and Bhonsle houses that frequently fought each other. The narrative of unified Hindu resistance oversimplifies a complex, often internally violent political formation.\n\n[S51-enrich] ETHICS-002/007: l'espansione Maratha si finanzio' col chauth (~25% del gettito) e il sardeshmukhi (~10% aggiuntivo), tributi spesso estratti con incursioni militari. La Terza Battaglia di Panipat (1761) costo' ~60-70.000 morti in combattimento; secondo la cronaca oculare di Kashi Raja ~40.000 prigionieri Maratha furono massacrati il giorno dopo; Shejwalkar stima ~100.000 morti Maratha tra combattenti e civili. Aggiunte fonti (Gordon Cambridge, Sardesai, Shejwalkar, Pearson); confidence 0.40->0.75.",
     "name_variants": [
       {
         "name": "Maratha Empire",
@@ -624,6 +624,26 @@
       {
         "citation": "Sabhasad Bakhar (chronicle by Krishnaji Anant Sabhasad), c. 1694. Contemporary Marathi account of Shivaji's reign",
         "source_type": "primary"
+      },
+      {
+        "citation": "Gordon, S. The Marathas 1600-1818 (The New Cambridge History of India II.4), Cambridge Univ. Press (1993)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Sardesai, G.S. New History of the Marathas, 3 vols, Phoenix (1946-48)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Shejwalkar, T.S. Panipat 1761, Deccan College (1946)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Pearson, M.N. 'Shivaji and the Decline of the Mughal Empire', Journal of Asian Studies 35.2 (1976)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "historical_approximation"

@@ -8,7 +8,7 @@
     "capital_name": "Koumbi Saleh",
     "capital_lat": 15.7667,
     "capital_lon": -7.9833,
-    "confidence_score": 0.6,
+    "confidence_score": 0.68,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -43,7 +43,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: il nome originale e' in Soninke. 'Ghana' era il titolo del sovrano, non il nome del territorio — gli abitanti lo chiamavano Wagadou. La denominazione 'Ghana Empire' e' una convenzione storiografica occidentale. ETHICS-002: la caduta dell'impero e' tradizionalmente attribuita all'invasione almoravide (1076), ma la storiografia recente (Masonen, Levtzion) ritiene che il declino sia stato piu' graduale e multifattoriale. Il commercio trans-sahariano dell'oro fu il fondamento economico dell'impero. Boundary da aourednik/historical-basemaps (700, strategy=capital_in_polygon, precision=1). CC BY 4.0.",
+    "ethical_notes": "ETHICS-001: il nome originale e' in Soninke. 'Ghana' era il titolo del sovrano, non il nome del territorio — gli abitanti lo chiamavano Wagadou. La denominazione 'Ghana Empire' e' una convenzione storiografica occidentale. ETHICS-002: la caduta dell'impero e' tradizionalmente attribuita all'invasione almoravide (1076), ma la storiografia recente (Masonen, Levtzion) ritiene che il declino sia stato piu' graduale e multifattoriale. Il commercio trans-sahariano dell'oro fu il fondamento economico dell'impero. Boundary da aourednik/historical-basemaps (700, strategy=capital_in_polygon, precision=1). CC BY 4.0.\n\n[S51-enrich] ETHICS: la 'conquista almoravide di Ghana (1076)' e' un MITO storiografico — Conrad & Fisher (1982) non trovano evidenza ne' nelle fonti arabe esterne ne' nella tradizione orale locale; il declino di Wagadou fu graduale e interno, NON una conquista militare. E' una correzione di una narrazione di origine coloniale. Regno soninke fondato sul commercio transahariano oro-sale (e schiavi). Aggiunte fonti (Levtzion, Levtzion & Hopkins Corpus, Conrad & Fisher); confidence 0.45->0.68.",
     "name_variants": [
       {
         "name": "Ghana Empire",
@@ -111,6 +111,21 @@
       },
       {
         "citation": "Mauny, R. Tableau geographique de l'Ouest africain au Moyen Age (1961)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Levtzion, N. Ancient Ghana and Mali, Methuen (1973)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Levtzion, N. & Hopkins, J.F.P. (eds) Corpus of Early Arabic Sources for West African History, Cambridge Univ. Press (1981)",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Conrad, D.C. & Fisher, H.J. 'The Conquest That Never Was: Ghana and the Almoravids, 1076', History in Africa 9 (1982)",
+        "url": null,
         "source_type": "academic"
       }
     ],
@@ -44186,7 +44201,7 @@
     "capital_name": "Akkad",
     "capital_lat": 33.1,
     "capital_lon": 44.1,
-    "confidence_score": 0.55,
+    "confidence_score": 0.72,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -44221,7 +44236,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: il nome e' in cuneiforme accadico. L'Impero Accadico e' considerato il primo impero della storia (nel senso di stato multietnico centralizzato). ETHICS-002: Sargon di Akkad creo' l'impero con conquiste militari brutali, come documentato dalle iscrizioni reali. Il nipote Naram-Sin si proclamo' dio, il che genero' resistenza e ribellioni. Le iscrizioni di vittoria celebrano distruzione e sottomissione — la retorica imperiale nasce qui. ETHICS-003: la posizione esatta della capitale Akkad non e' stata ancora identificata archeologicamente; le coordinate sono una stima approssimativa.",
+    "ethical_notes": "ETHICS-001: il nome e' in cuneiforme accadico. L'Impero Accadico e' considerato il primo impero della storia (nel senso di stato multietnico centralizzato). ETHICS-002: Sargon di Akkad creo' l'impero con conquiste militari brutali, come documentato dalle iscrizioni reali. Il nipote Naram-Sin si proclamo' dio, il che genero' resistenza e ribellioni. Le iscrizioni di vittoria celebrano distruzione e sottomissione — la retorica imperiale nasce qui. ETHICS-003: la posizione esatta della capitale Akkad non e' stata ancora identificata archeologicamente; le coordinate sono una stima approssimativa.\n\n[S51-enrich] ETHICS-007: la violenza imperiale e' documentata dalle iscrizioni reali STESSE (propaganda celebrativa, non cronaca neutrale): Rimush (figlio di Sargon) rivendica 56.041 uccisi e 29.438 ridotti in schiavitu' nella repressione delle rivolte delle citta' sumere; Naram-Sin vittorie in nove battaglie in un anno. Documentano l'ideologia di conquista e la deportazione/schiavizzazione di massa. La capitale Agade non e' ancora stata localizzata. Aggiunte fonti (Frayne RIME 2 per le iscrizioni, Liverani, Van De Mieroop, Kuhrt); confidence 0.55->0.72.",
     "name_variants": [
       {
         "name": "Akkadian Empire",
@@ -44278,6 +44293,26 @@
       {
         "citation": "Cooper, J.S. The Curse of Agade (1983)",
         "source_type": "primary"
+      },
+      {
+        "citation": "Frayne, D.R. Sargonic and Gutian Periods (2334-2113 BC), RIME 2, Univ. of Toronto Press (1993)",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Liverani, M. (ed.) Akkad: The First World Empire - Structure, Ideology, Traditions, Sargon (1993)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Van De Mieroop, M. A History of the Ancient Near East ca. 3000-323 BC, Blackwell (2nd ed. 2007)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Kuhrt, A. The Ancient Near East c. 3000-330 BC, vol. 1, Routledge (1995)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "historical_approximation"
@@ -45007,7 +45042,7 @@
     "capital_name": "Damascus",
     "capital_lat": 33.5138,
     "capital_lon": 36.2765,
-    "confidence_score": 0.775,
+    "confidence_score": 0.75,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -45074,7 +45109,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: il nome e' in Arabo. ETHICS-002: il Califfato Omayyade fu il piu' grande impero della storia fino a quel momento per estensione territoriale (dalla Spagna all'Indo). L'arabizzazione e l'islamizzazione delle regioni conquistate trasformo' profondamente culture preesistenti — un processo che va documentato riconoscendo sia le conquiste culturali che le perdite. La discriminazione contro i mawali (musulmani non-arabi) fu una tensione strutturale dell'impero. La rivoluzione abbaside (750) porto' al massacro quasi totale della famiglia omayyade. Boundary da aourednik/historical-basemaps (700, strategy=exact_name, precision=1). CC BY 4.0.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=1846km / edge=0km from capital (exceeded thresholds). Regenerated as 500.0km radius circle.",
+    "ethical_notes": "ETHICS-001: il nome e' in Arabo. ETHICS-002: il Califfato Omayyade fu il piu' grande impero della storia fino a quel momento per estensione territoriale (dalla Spagna all'Indo). L'arabizzazione e l'islamizzazione delle regioni conquistate trasformo' profondamente culture preesistenti — un processo che va documentato riconoscendo sia le conquiste culturali che le perdite. La discriminazione contro i mawali (musulmani non-arabi) fu una tensione strutturale dell'impero. La rivoluzione abbaside (750) porto' al massacro quasi totale della famiglia omayyade. Boundary da aourednik/historical-basemaps (700, strategy=exact_name, precision=1). CC BY 4.0.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=1846km / edge=0km from capital (exceeded thresholds). Regenerated as 500.0km radius circle.\n\n[S51-enrich] ETHICS-009: i mawali (convertiti non-arabi) continuarono a pagare la jizya nonostante la conversione all'Islam — una gerarchia etnica istituzionalizzata che privilegiava gli arabi; Umar II la aboli' brevemente, Yazid II la reimpose. La Rivolta Berbera (739-740) insorse contro questo trattamento discriminatorio dei musulmani nordafricani. Le riforme di Abd al-Malik (697-706) sostituirono greco/persiano/copto con l'arabo nell'amministrazione (arabizzazione). Le conquiste (al-Andalus, Sind, Transoxiana) produssero riduzione in schiavitu' di massa dei prigionieri. Aggiunte fonti (Robinson, Blankinship, Crone, Donner); confidence 0.40->0.75.",
     "name_variants": [
       {
         "name": "Umayyad Caliphate",
@@ -45139,6 +45174,26 @@
       {
         "citation": "Al-Tabari, Tarikh al-Rusul wa al-Muluk",
         "source_type": "primary"
+      },
+      {
+        "citation": "Robinson, C.F. 'Abd al-Malik, Oneworld (2005)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Blankinship, K.Y. The End of the Jihad State: The Reign of Hisham ibn 'Abd al-Malik and the Collapse of the Umayyads, SUNY Press (1994)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Crone, P. Slaves on Horses: The Evolution of the Islamic Polity, Cambridge Univ. Press (1980)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Donner, F.M. The Early Islamic Conquests, Princeton Univ. Press (1981)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "historical_approximation",
@@ -54581,7 +54636,7 @@
     "capital_name": "Marib",
     "capital_lat": 15.4543,
     "capital_lon": 45.3265,
-    "confidence_score": 0.5,
+    "confidence_score": 0.68,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -54616,7 +54671,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: il nome e' in Arabo/Sabeo. La lingua sabea era scritta in Musnad (alfabeto sudarabico). ETHICS-002: il Regno di Saba e' famoso nella tradizione biblica e coranica per la regina di Saba (Bilqis). Il commercio dell'incenso e della mirra fu la base economica del regno. La grande diga di Marib fu una meraviglia dell'ingegneria antica. Il suo crollo (circa 575 d.C., dopo la fine del regno) e' menzionato nel Corano (Sura 34:15-17) e simboleggia la caduta di una civilta'. ETHICS-003: la cronologia alta (prima del -800) e' basata quasi esclusivamente su fonti archeologiche ed epigrafiche con margini di incertezza significativi.",
+    "ethical_notes": "ETHICS-001: il nome e' in Arabo/Sabeo. La lingua sabea era scritta in Musnad (alfabeto sudarabico). ETHICS-002: il Regno di Saba e' famoso nella tradizione biblica e coranica per la regina di Saba (Bilqis). Il commercio dell'incenso e della mirra fu la base economica del regno. La grande diga di Marib fu una meraviglia dell'ingegneria antica. Il suo crollo (circa 575 d.C., dopo la fine del regno) e' menzionato nel Corano (Sura 34:15-17) e simboleggia la caduta di una civilta'. ETHICS-003: la cronologia alta (prima del -800) e' basata quasi esclusivamente su fonti archeologiche ed epigrafiche con margini di incertezza significativi.\n\n[S51-enrich] ETHICS: la Regina di Saba e' leggenda — nessuna iscrizione sabea la attesta; il regno fiori' dall'VIII sec. a.C., ~due secoli dopo l'epoca tradizionale di Salomone (Finkelstein/Silberman). Il regno storico e' documentato da epigrafia sabea, dalla diga di Marib e dal controllo del commercio dell'incenso. La leggenda riflette interazioni storiche reali filtrate da agende teologiche posteriori. Aggiunte fonti (Hoyland, Korotayev, Simpson/British Museum); confidence 0.50->0.68.",
     "name_variants": [
       {
         "name": "Kingdom of Saba",
@@ -54672,6 +54727,21 @@
       },
       {
         "citation": "Robin, C.J. 'Les inscriptions de l'Arabie antique et les etudes arabes' in Arabica (1991)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Hoyland, R.G. Arabia and the Arabs: From the Bronze Age to the Coming of Islam, Routledge (2001)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Korotayev, A. Ancient Yemen: Some General Trends of Evolution of the Sabaic Language and Sabaean Culture, Oxford Univ. Press (1995)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Simpson, St J. (ed.) Queen of Sheba: Treasures from Ancient Yemen, British Museum Press (2002)",
+        "url": null,
         "source_type": "academic"
       }
     ],

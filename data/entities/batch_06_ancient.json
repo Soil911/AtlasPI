@@ -1244,7 +1244,7 @@
     "capital_name": "Μυκῆναι (Mycenae)",
     "capital_lat": 37.7306,
     "capital_lon": 22.7564,
-    "confidence_score": 0.55,
+    "confidence_score": 0.7,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -1387,7 +1387,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: The Greek name Μυκῆναι is attested in Linear B as mu-ka-na. Unlike the Minoans, the Mycenaeans can be identified as Greek speakers through deciphered Linear B tablets. ETHICS-003: 'Mycenaean Greece' is a modern construct — the Mycenaean world consisted of multiple independent palace-states (Mycenae, Pylos, Tiryns, Thebes, etc.). Whether Mycenae held any primacy (as Homer suggests with Agamemnon) is debated. Representing it as a single kingdom oversimplifies the political landscape. Boundary da aourednik/historical-basemaps (-1500, strategy=capital_in_polygon, precision=1). CC BY 4.0.",
+    "ethical_notes": "ETHICS-001: The Greek name Μυκῆναι is attested in Linear B as mu-ka-na. Unlike the Minoans, the Mycenaeans can be identified as Greek speakers through deciphered Linear B tablets. ETHICS-003: 'Mycenaean Greece' is a modern construct — the Mycenaean world consisted of multiple independent palace-states (Mycenae, Pylos, Tiryns, Thebes, etc.). Whether Mycenae held any primacy (as Homer suggests with Agamemnon) is debated. Representing it as a single kingdom oversimplifies the political landscape. Boundary da aourednik/historical-basemaps (-1500, strategy=capital_in_polygon, precision=1). CC BY 4.0.\n\n[S51-enrich] ETHICS: i testi in Lineare B documentano lavoro servile/dipendente ('do-e-ro', schiavi del palazzo o delle divinita'), benche' non risultino registri di compravendita di persone — una dipendenza diversa dalla schiavitu'-merce greca classica. La struttura politica e' ricostruita archeologicamente (confidence 0.70). La civilta' palaziale micenea collasso' nel Bronze Age collapse (~1177 a.C.). Aggiunte fonti (Chadwick, Dickinson, Shelmerdine, Cline); confidence 0.55->0.70.",
     "name_variants": [
       {
         "name": "Mycenaean Greece",
@@ -1456,6 +1456,26 @@
       {
         "citation": "Linear B tablets from Pylos and Knossos",
         "source_type": "primary"
+      },
+      {
+        "citation": "Chadwick, J. The Mycenaean World, Cambridge Univ. Press (1976)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Dickinson, O. The Aegean Bronze Age, Cambridge Univ. Press (1994)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Shelmerdine, C.W. (ed.) The Cambridge Companion to the Aegean Bronze Age, Cambridge Univ. Press (2008)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Cline, E.H. 1177 B.C.: The Year Civilization Collapsed, Princeton Univ. Press (2014)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "approximate_circle",
@@ -4811,8 +4831,8 @@
     "capital_name": null,
     "capital_lat": 48.5,
     "capital_lon": 115.0,
-    "confidence_score": 0.4,
-    "status": "uncertain",
+    "confidence_score": 0.68,
+    "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -4846,7 +4866,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: Like the Xiongnu, the Xianbei name is known only in Chinese transcription (鲜卑, Xiānbēi). Their language is classified as Mongolic or para-Mongolic, but this is uncertain. ETHICS-003: The Xianbei confederation was extremely diverse and fragmented. The 'peak' under Tanshihuai was brief. The Xianbei are more significant for what they became — their descendants include the founders of several Chinese dynasties (Northern Wei, Sui, Tang all had Xianbei ancestry). Capital coordinates are approximate for the steppe center, as there was no fixed capital.",
+    "ethical_notes": "ETHICS-001: Like the Xiongnu, the Xianbei name is known only in Chinese transcription (鲜卑, Xiānbēi). Their language is classified as Mongolic or para-Mongolic, but this is uncertain. ETHICS-003: The Xianbei confederation was extremely diverse and fragmented. The 'peak' under Tanshihuai was brief. The Xianbei are more significant for what they became — their descendants include the founders of several Chinese dynasties (Northern Wei, Sui, Tang all had Xianbei ancestry). Capital coordinates are approximate for the steppe center, as there was no fixed capital.\n\n[S51-enrich] ETHICS-008: i Tuoba Xianbei fondarono i Wei del Nord; l'imperatore Xiaowen (495 d.C.) impose l'assimilazione: cognomi Han obbligatori (Tuoba->Yuan), divieto della lingua e dell'abbigliamento xianbei a corte — un'assimilazione forzata che erose dall'interno l'identita' xianbei della minoranza al potere. Confederazione nomade documentata soprattutto da fonti cinesi (visione esterna). Aggiunte fonti (Barfield, Holcombe); confidence 0.40->0.68.",
     "name_variants": [
       {
         "name": "Xianbei",
@@ -4910,6 +4930,21 @@
       },
       {
         "citation": "Di Cosmo, N., Frank, A.J., & Golden, P.B. (eds.) The Cambridge History of Inner Asia (2009)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Barfield, T.J. The Perilous Frontier: Nomadic Empires and China, 221 BC to AD 1757, Blackwell (1989)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Holcombe, C. 'The Xianbei in Chinese History', Early Medieval China 19 (2013)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Holcombe, C. A History of East Asia: From the Origins of Civilization to the Twenty-First Century, Cambridge Univ. Press (2011)",
+        "url": null,
         "source_type": "academic"
       }
     ],

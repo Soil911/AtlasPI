@@ -13938,7 +13938,7 @@
     "capital_name": "रायगड",
     "capital_lat": 18.2362,
     "capital_lon": 73.4491,
-    "confidence_score": 0.4,
+    "confidence_score": 0.75,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -13977,7 +13977,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: il nome originale e' in marathi. L'Impero Maratha rappresenta la principale sfida Hindu al dominio Mughal e poi al colonialismo britannico in India. Shivaji e' una figura fondamentale dell'identita' Maratha, ma anche soggetto di appropriazione nazionalista Hindu moderna. ETHICS-003: le campagne Maratha, incluse quelle nel Bengala e nel sud, comportarono saccheggi e sofferenze per le popolazioni locali. La Terza Battaglia di Panipat (1761) fu una catastrofe umana.",
+    "ethical_notes": "ETHICS-001: il nome originale e' in marathi. L'Impero Maratha rappresenta la principale sfida Hindu al dominio Mughal e poi al colonialismo britannico in India. Shivaji e' una figura fondamentale dell'identita' Maratha, ma anche soggetto di appropriazione nazionalista Hindu moderna. ETHICS-003: le campagne Maratha, incluse quelle nel Bengala e nel sud, comportarono saccheggi e sofferenze per le popolazioni locali. La Terza Battaglia di Panipat (1761) fu una catastrofe umana.\n\n[S51-enrich] ETHICS-002/007: l'espansione Maratha si finanzio' col chauth (~25% del gettito) e il sardeshmukhi (~10% aggiuntivo), tributi spesso estratti con incursioni militari. La Terza Battaglia di Panipat (1761) costo' ~60-70.000 morti in combattimento; secondo la cronaca oculare di Kashi Raja ~40.000 prigionieri Maratha furono massacrati il giorno dopo; Shejwalkar stima ~100.000 morti Maratha tra combattenti e civili. Aggiunte fonti (Gordon Cambridge, Sardesai, Shejwalkar, Pearson); confidence 0.40->0.75.",
     "name_variants": [
       {
         "name": "Maratha Empire",
@@ -14041,6 +14041,26 @@
       },
       {
         "citation": "Sen, S. Military System of the Marathas (1958)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Gordon, S. The Marathas 1600-1818 (The New Cambridge History of India II.4), Cambridge Univ. Press (1993)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Sardesai, G.S. New History of the Marathas, 3 vols, Phoenix (1946-48)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Shejwalkar, T.S. Panipat 1761, Deccan College (1946)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Pearson, M.N. 'Shivaji and the Decline of the Mughal Empire', Journal of Asian Studies 35.2 (1976)",
+        "url": null,
         "source_type": "academic"
       }
     ],

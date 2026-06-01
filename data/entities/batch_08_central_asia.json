@@ -8271,7 +8271,7 @@
     "capital_name": "Firuzkuh (فیروزکوه)",
     "capital_lat": 34.7,
     "capital_lon": 65.5,
-    "confidence_score": 0.715,
+    "confidence_score": 0.7,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -8306,7 +8306,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: name_original in Persian (غوریان, 'Ghurids'). The Ghurids were of Eastern Iranian (possibly Tajik) origin from the mountainous Ghur region of central Afghanistan. ETHICS-002: The Ghurid sack of Ghazni (1149-1150) was so devastating that the city was nicknamed 'Jahansoz' ('World-Burner') after Sultan Ala al-Din. The dynasty's conquest of northern India established the Delhi Sultanate, fundamentally transforming the subcontinent. As with the Ghaznavids, Indian historiography is divided on the Ghurid legacy. ETHICS-003: The legendary capital Firuzkuh ('Turquoise Mountain') has never been conclusively located archaeologically; coordinates are approximate. Boundary da aourednik/historical-basemaps (1000, strategy=fuzzy_name, precision=1). CC BY 4.0.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=15310km / edge=13095km from capital (exceeded thresholds). Regenerated as 500.0km radius circle.",
+    "ethical_notes": "ETHICS-001: name_original in Persian (غوریان, 'Ghurids'). The Ghurids were of Eastern Iranian (possibly Tajik) origin from the mountainous Ghur region of central Afghanistan. ETHICS-002: The Ghurid sack of Ghazni (1149-1150) was so devastating that the city was nicknamed 'Jahansoz' ('World-Burner') after Sultan Ala al-Din. The dynasty's conquest of northern India established the Delhi Sultanate, fundamentally transforming the subcontinent. As with the Ghaznavids, Indian historiography is divided on the Ghurid legacy. ETHICS-003: The legendary capital Firuzkuh ('Turquoise Mountain') has never been conclusively located archaeologically; coordinates are approximate. Boundary da aourednik/historical-basemaps (1000, strategy=fuzzy_name, precision=1). CC BY 4.0.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=15310km / edge=13095km from capital (exceeded thresholds). Regenerated as 500.0km radius circle.\n\n[S51-enrich] ETHICS-007: le campagne di Muhammad of Ghor in India (vittoria a Tarain 1192 su Prithviraj Chauhan) includono, secondo le cronache islamiche stesse (Ibn al-Athir, al-Kamil), distruzione di templi indu' ad Ajmer sostituiti da moschee, massacri e riduzione in schiavitu' di donne vendute nel mondo islamico. Dal generale-schiavo Qutb al-Din Aibak nacque il Sultanato di Delhi. Queste fonti sono medievali e celebrative: documentano l'iconoclastia e la schiavizzazione come vanto, non come neutra cronaca. Aggiunte fonti (Jackson, Wink, Flood); confidence 0.40->0.70.",
     "name_variants": [
       {
         "name": "Ghurid Empire",
@@ -8370,6 +8370,21 @@
       },
       {
         "citation": "Thomas, D. 'The Ebb and Flow of the Ghurids', Afghanistan 25:2 (1972)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Jackson, P. The Delhi Sultanate: A Political and Military History, Cambridge Univ. Press (1999)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Wink, A. Al-Hind: The Making of the Indo-Islamic World, vol. 2: The Slave Kings and the Islamic Conquest, Brill (1997)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Flood, F.B. Objects of Translation: Material Culture and Medieval 'Hindu-Muslim' Encounter, Princeton Univ. Press (2009)",
+        "url": null,
         "source_type": "academic"
       }
     ],

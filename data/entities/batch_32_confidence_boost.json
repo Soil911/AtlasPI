@@ -500,8 +500,8 @@
     "capital_name": null,
     "capital_lat": 48.5,
     "capital_lon": 115.0,
-    "confidence_score": 0.4,
-    "status": "uncertain",
+    "confidence_score": 0.68,
+    "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -535,7 +535,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: Like the Xiongnu, the Xianbei name is known only in Chinese transcription (鲜卑, Xiānbēi). Their language is classified as Mongolic or para-Mongolic, but this is uncertain. ETHICS-003: The Xianbei confederation was extremely diverse and fragmented. The 'peak' under Tanshihuai was brief. The Xianbei are more significant for what they became — their descendants include the founders of several Chinese dynasties (Northern Wei, Sui, Tang all had Xianbei ancestry). Capital coordinates are approximate for the steppe center, as there was no fixed capital.",
+    "ethical_notes": "ETHICS-001: Like the Xiongnu, the Xianbei name is known only in Chinese transcription (鲜卑, Xiānbēi). Their language is classified as Mongolic or para-Mongolic, but this is uncertain. ETHICS-003: The Xianbei confederation was extremely diverse and fragmented. The 'peak' under Tanshihuai was brief. The Xianbei are more significant for what they became — their descendants include the founders of several Chinese dynasties (Northern Wei, Sui, Tang all had Xianbei ancestry). Capital coordinates are approximate for the steppe center, as there was no fixed capital.\n\n[S51-enrich] ETHICS-008: i Tuoba Xianbei fondarono i Wei del Nord; l'imperatore Xiaowen (495 d.C.) impose l'assimilazione: cognomi Han obbligatori (Tuoba->Yuan), divieto della lingua e dell'abbigliamento xianbei a corte — un'assimilazione forzata che erose dall'interno l'identita' xianbei della minoranza al potere. Confederazione nomade documentata soprattutto da fonti cinesi (visione esterna). Aggiunte fonti (Barfield, Holcombe); confidence 0.40->0.68.",
     "name_variants": [
       {
         "name": "Xianbei",
@@ -607,6 +607,21 @@
       },
       {
         "citation": "Schreiber, G. 'The History of the Former Yan Dynasty', Monumenta Serica 15, 1956, pp. 1–141",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Barfield, T.J. The Perilous Frontier: Nomadic Empires and China, 221 BC to AD 1757, Blackwell (1989)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Holcombe, C. 'The Xianbei in Chinese History', Early Medieval China 19 (2013)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Holcombe, C. A History of East Asia: From the Origins of Civilization to the Twenty-First Century, Cambridge Univ. Press (2011)",
+        "url": null,
         "source_type": "academic"
       }
     ],

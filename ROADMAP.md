@@ -50,7 +50,13 @@ prod + 2 bug-fix:
   serializzazione** → orjson non aiuta. Change revertato (non committato). Perf reale =
   task separata: profilare query DB / caricamento boundary / validazione Pydantic di
   500 entità (es. `exclude_geometry` di default, indici, paginazione boundary).
-- **(b) Enrichment** entità low-confidence (Wave 2 Plan A — vedi `docs/auto-iter-wave0/briefs/D-enrichment-backlog.md`).
+- **(b) Enrichment** entità low-confidence (Wave 2 Plan A — vedi `docs/auto-iter-wave0/briefs/D-enrichment-backlog.md`). ← IN CORSO
+  - **S51 (v6.99.95)** — batch brief-D (Umayyad, Maratha, Ghurid, Zagwe, Akkad, Neo-Babylon,
+    Mycenae, Saba, Xianbei, Wagadou): +34 fonti verificate, confidence 0.4-0.55→0.65-0.78,
+    ethical_notes. **Source-only**: JSON aggiornato + `data/fixes/enrichment_s51_eurasia.sql`
+    pronto. ⏳ **DA FARE (Clirim)**: eseguire la SQL in prod + `cra-deploy atlaspi`.
+  - Prossimi batch: S52+ (gap geografici Pacific/Siberia; low-conf estreme; chain linkage
+    Xianbei→Wei + i 78% orfani da chain_links).
 
 ### v6.99.81-83 Wave 1 -- Security, data-fix, perf (2026-05-28)
 **(storico — versione corrente ora v6.99.92, sopra.)** Triplo deploy autonomo in 1 sessione

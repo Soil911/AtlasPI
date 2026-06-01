@@ -2,6 +2,39 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.95] - 2026-05-31 (S51 enrichment — Eurasia/Africa Classical Empires: fonti + confidence, JSON sorgente; SQL prod preparato, NO deploy)
+
+**Tema**: *Deep-enrichment di 10 entità low-confidence ad alta visibilità (Wave 2
+Plan A, brief D). Aggiunte 34 fonti accademiche **verificate**, confidence calibrata
+onestamente per-entità, ethical_notes non-eufemistici (ETHICS-002/007/008/009).
+Source-only: JSON aggiornato + SQL prod **preparato** (idempotente) per Clirim —
+NESSUN deploy.*
+
+10 entità (id): Umayyad (173) · Maratha (111) · Ghurid (342) · Zagwe (491) · Akkad
+(169) · Neo-Babylon (490) · Mycenae (274) · Saba (188) · Xianbei (290) · Wagadou
+(146). confidence 0.40-0.55 → 0.65-0.78 (calibrata: es. Zagwe solo 0.65, "l'enigma"
+di Derat). status uncertain→confirmed dove attestato.
+
+### Contenuto
+- **+34 fonti** canoniche verificate via ricerca web (Frayne RIME 2, Liverani, Van
+  De Mieroop, Kuhrt; Robinson, Blankinship, Crone, Donner; Gordon, Jackson, Wink,
+  Flood, Derat, Phillipson, Tamrat, Beaulieu, Wiseman, Chadwick, Dickinson, Cline,
+  Hoyland, Korotayev, Barfield, Holcombe, Levtzion, Conrad & Fisher, …).
+- **ethical_notes** (ETHICS-007/008/009 non-eufemistici, con attribuzione): cifre di
+  Rimush dalle iscrizioni-propaganda di Akkad; jizya sui mawali + Rivolta Berbera
+  (Umayyad); massacri/schiavitù di Tarain 1192 (Ghurid); delegittimazione "usurpatrice"
+  Zagwe via Kebra Nagast; deportazione giudaica del 587 a.C. (Neo-Babylon); lavoro
+  servile in Lineare B (Mycenae); Regina di Saba come leggenda; assimilazione forzata
+  xianbei (Xiaowen); "conquista almoravide di Ghana" come mito storiografico debunkato.
+
+### Meccanismo (prepare + commit, NO deploy)
+- `data/fixes/enrichment_s51_eurasia.json` (spec) + `scripts/apply_enrichment.py`
+  (applier generico, idempotente).
+- JSON sorgente aggiornato (7 file batch). **`data/fixes/enrichment_s51_eurasia.sql`**
+  generato (idempotente, BEGIN/COMMIT) — **da eseguire in prod da Clirim** + cra-deploy.
+- Suite verde (1316), fence collision 0. Chain linkage rinviata (i 3 trunk principali
+  già esistono; Xianbei→Wei come follow-up).
+
 ## [v6.99.94] - 2026-05-31 (Wave 2.7 follow-up — riconciliazione residua entità JSON↔prod: nomi nativi + 6 insert)
 
 **Tema**: *Chiusi i 2 debiti residui lasciati da v6.99.93 (vedi ETHICS-012 §"#2"):

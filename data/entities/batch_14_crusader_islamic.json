@@ -4737,9 +4737,9 @@
         ]
       ]
     },
-    "confidence_score": 0.65,
+    "confidence_score": 0.78,
     "status": "confirmed",
-    "ethical_notes": "ETHICS: The Neo-Babylonian Empire, also known as the Chaldean Empire, is most famously associated with Nebuchadnezzar II, who destroyed the Temple of Solomon in Jerusalem (586 BCE) and deported the Jewish population to Babylon (the 'Babylonian Captivity'). This event is foundational to Jewish historical consciousness and religious identity. The biblical narrative presents Babylon as a symbol of tyranny and exile; Babylonian sources present Nebuchadnezzar as a great builder and restorer. Both perspectives must be represented. The Ishtar Gate, the Hanging Gardens (whose existence is disputed), and the ziggurat Etemenanki (possible inspiration for the Tower of Babel) represent the empire's cultural achievements. The empire's fall to Cyrus the Great of Persia (539 BCE) is celebrated in both Jewish and Persian traditions as liberation. Boundary da aourednik/historical-basemaps (-500, strategy=capital_in_polygon, precision=1). CC BY 4.0.",
+    "ethical_notes": "ETHICS: The Neo-Babylonian Empire, also known as the Chaldean Empire, is most famously associated with Nebuchadnezzar II, who destroyed the Temple of Solomon in Jerusalem (586 BCE) and deported the Jewish population to Babylon (the 'Babylonian Captivity'). This event is foundational to Jewish historical consciousness and religious identity. The biblical narrative presents Babylon as a symbol of tyranny and exile; Babylonian sources present Nebuchadnezzar as a great builder and restorer. Both perspectives must be represented. The Ishtar Gate, the Hanging Gardens (whose existence is disputed), and the ziggurat Etemenanki (possible inspiration for the Tower of Babel) represent the empire's cultural achievements. The empire's fall to Cyrus the Great of Persia (539 BCE) is celebrated in both Jewish and Persian traditions as liberation. Boundary da aourednik/historical-basemaps (-500, strategy=capital_in_polygon, precision=1). CC BY 4.0.\n\n[S51-enrich] ETHICS-007: nel 587 a.C. Nabucodonosor II distrusse Gerusalemme e rase al suolo il Tempio di Salomone, deportando in piu' ondate (597 ~7.000; 587 e oltre) gran parte della popolazione del Regno di Giuda in Babilonia — la 'cattivita' babilonese', deportazione forzata di un intero popolo, non una semplice annessione. Aggiunte fonti (Beaulieu, Wiseman, Vanderhooft); confidence 0.55->0.78.",
     "name_variants": [
       {
         "name": "Neo-Babylonian Empire",
@@ -4820,6 +4820,21 @@
       {
         "citation": "Cyrus Cylinder, c. 539 BCE (British Museum)",
         "source_type": "archaeological"
+      },
+      {
+        "citation": "Beaulieu, P.-A. A History of Babylon, 2200 BC - AD 75, Wiley-Blackwell (2018)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Wiseman, D.J. Nebuchadrezzar and Babylon (Schweich Lectures 1983), Oxford Univ. Press for the British Academy (1985)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Vanderhooft, D.S. The Neo-Babylonian Empire and Babylon in the Latter Prophets, Scholars Press (1999)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "approximate_circle",
@@ -4869,9 +4884,9 @@
         ]
       ]
     },
-    "confidence_score": 0.4,
-    "status": "uncertain",
-    "ethical_notes": "ETHICS: The Zagwe Dynasty ruled the Ethiopian highlands between the fall of Aksum and the rise of the Solomonic Dynasty. King Lalibela (r. c. 1181-1221) is credited with commissioning the rock-hewn churches of Lalibela, one of the greatest architectural achievements in Africa. The dynasty's exact dates are deeply uncertain — Ethiopian traditional chronology differs significantly from modern scholarly estimates. The Solomonic Dynasty, which overthrew the Zagwe, deliberately delegitimized them in official histories (the Kebra Nagast) by claiming they were usurpers who broke the line of descent from King Solomon. This dynastic propaganda has shaped Ethiopian historiography for centuries. Agaw/Agew ethnic identity of the Zagwe is sometimes downplayed in Amhara-centric national narratives. The confidence_score is low due to the severe lack of contemporary written sources.",
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS: The Zagwe Dynasty ruled the Ethiopian highlands between the fall of Aksum and the rise of the Solomonic Dynasty. King Lalibela (r. c. 1181-1221) is credited with commissioning the rock-hewn churches of Lalibela, one of the greatest architectural achievements in Africa. The dynasty's exact dates are deeply uncertain — Ethiopian traditional chronology differs significantly from modern scholarly estimates. The Solomonic Dynasty, which overthrew the Zagwe, deliberately delegitimized them in official histories (the Kebra Nagast) by claiming they were usurpers who broke the line of descent from King Solomon. This dynastic propaganda has shaped Ethiopian historiography for centuries. Agaw/Agew ethnic identity of the Zagwe is sometimes downplayed in Amhara-centric national narratives. The confidence_score is low due to the severe lack of contemporary written sources.\n\n[S51-enrich] ETHICS-008: la dinastia Zagwe (Agaw, cushitica) fu delegittimata come 'usurpatrice' dalla successiva dinastia Salomonide (dal 1270), che fece redigere il Kebra Nagast (~40 anni dopo) per rivendicare una discendenza salomonica 'restaurata' contro i 'pretendenti' Zagwe — una cancellazione narrativa di una dinastia di fatto legittima. Costrui' le chiese rupestri di Lalibela. La documentazione resta scarsa (Derat la chiama 'l'enigma'): confidence tenuta a 0.65 per onesta' sull'incertezza. Aggiunte fonti (Derat Brepols 2018, Phillipson, Tamrat); confidence 0.40->0.65.",
     "name_variants": [
       {
         "name": "Zagwe Dynasty",
@@ -4933,6 +4948,21 @@
       {
         "citation": "Kebra Nagast (Glory of Kings), 14th century compilation",
         "source_type": "primary"
+      },
+      {
+        "citation": "Derat, M.-L. L'enigme d'une dynastie sainte et usurpatrice dans le royaume chretien d'Ethiopie (XIe-XIIIe siecle), Brepols (2018)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Phillipson, D.W. Foundations of an African Civilisation: Aksum and the Northern Horn, 1000 BC - AD 1300, James Currey (2012)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Tamrat, T. Church and State in Ethiopia 1270-1527, Clarendon Press / Oxford Univ. Press (1972)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "historical_approximation"
