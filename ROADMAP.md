@@ -34,13 +34,22 @@ prod + 2 bug-fix:
   PostGIS-free in SQLite + job Postgres CI) → seed fresco a **0 super-group collision**
   (era 29). Chiude audit **#7** → **10/10 HIGH chiusi**. Vedi ETHICS-012. *Nessun deploy.*
 
-**Rimanenti / prossima sessione** (ordine deciso con Clirim: ~~a~~ → c → b):
+**Rimanenti / prossima sessione** (ordine deciso con Clirim: ~~a~~ → ~~c~~ → b):
 - ~~**(a) Backport Phase H JSON↔prod**~~ — ✅ **fatto in v6.99.93** (scope reale 599, non
   372: inclusa la iter-series `historical_approximation`; backportati anche
   confidence+status per coerenza). **Follow-up chiuso in v6.99.94**: riconciliazione
   residua → 6 entità solo-prod aggiunte + 15 `name_original` portati a script nativo
   (ETHICS-001); JSON ora 1038 entità = totale prod. Vedi ETHICS-012 §"#2".
-- **(c) orjson** serializzazione globale (perf; cambio ampio → test completo + cross-check). *Prossima.*
+- ~~**(c) orjson** serializzazione globale~~ — ❌ **investigato, NON adottato** (2026-05-31).
+  `ORJSONResponse` è **deprecato** in FastAPI ≥0.115 e tutti i `/v1/*` principali
+  hanno già `response_model` → FastAPI serializza **nativamente via Pydantic v2**
+  (Rust, ≈ velocità orjson), bypassando la response class. Benchmark su payload
+  reale (500 entità + boundary, ~10,7 MB): stdlib 315 ms vs orjson 17 ms — ma con
+  `response_model` non si usa nessuna delle due, e comunque la serializzazione è
+  ≤0,3 s del ~4,5 s. **Il ~4,5 s di `/v1/entities?limit=500` è DB/validazione, NON
+  serializzazione** → orjson non aiuta. Change revertato (non committato). Perf reale =
+  task separata: profilare query DB / caricamento boundary / validazione Pydantic di
+  500 entità (es. `exclude_geometry` di default, indici, paginazione boundary).
 - **(b) Enrichment** entità low-confidence (Wave 2 Plan A — vedi `docs/auto-iter-wave0/briefs/D-enrichment-backlog.md`).
 
 ### v6.99.81-83 Wave 1 -- Security, data-fix, perf (2026-05-28)
