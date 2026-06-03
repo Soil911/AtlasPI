@@ -2,6 +2,63 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.96] - 2026-06-03 (AI Co-Founder suggestion #77 — allineamento analizzatore geometrico ↔ auto-fixer; ETHICS-014)
+
+**Tema**: *L'analizzatore geometrico (`analyze_geometric_bugs`) produceva rumore
+persistente: ogni run segnalava ~34 entità ma l'auto-fixer ne resettava 0, perché
+analizzatore e fixer divergevano su soglie, esenzioni e calcolo dell'area. Questa
+release li riallinea, così **ogni item segnalato è qualcosa che il fixer può
+davvero correggere**. Implementazione della suggestion accettata #77 da parte
+dell'AI Co-Founder.*
+
+### Contesto
+
+La suggestion #77 chiedeva anche di "resettare l'entità secondaria a un cerchio
+sulla capitale" per 6 gruppi a poligono condiviso. **Verifica in produzione
+(2026-06-03)**: dei 13 ID citati solo la coppia 1032/1033 (Daju/Tunjur) condivide
+ancora un poligono; gli altri 11 hanno già confini distinti. Allargando, i gruppi
+condivisi oggi sono 23 e **quasi tutti legittimi**: stesso popolo in due
+traslitterazioni (218 ᏣᎳᎩ / 859 Tsalagi; 296/465 Tuyuhun; 197/860 Muisca) o stati
+successivi che condividono un cerchio sulla stessa capitale (251/252 Iran;
+229/244 Germania; 878/879 Vietnam). La premessa "condiviso ⇒ bug" non è più valida;
+per 1032/1033 le capitali sono **identiche**, quindi un cerchio rigenerato sarebbe
+identico. Decisione documentata in [ETHICS-014](docs/ethics/ETHICS-014-shared-polygon-classification.md):
+**non** si esegue il reset cieco (distruggerebbe geometrie curate senza migliorare
+nulla); si riclassificano invece i poligoni condivisi nell'analizzatore.
+
+### Contenuto
+
+- **`scripts/ai_cofounder_analyze.py::analyze_geometric_bugs`** allineato al fixer:
+  - **(a)** salta `MANUALLY_CURATED_IDS` + `CURATED_BOUNDARY_SOURCES` (Phase A,
+    esenti dal fixer) — prima venivano segnalati ~25 curati a vuoto;
+  - **(b)** soglia oversize = `ceiling × 3.0` (`× 2.5` per `STRICT_TYPES`),
+    identica al fixer, al posto del vecchio `× 1.5` (la banda 1.5×→3.0×
+    segnalava senza mai correggere);
+  - **(c)** area in km² via **proiezione equiareale geodetica** (pyproj/WGS84,
+    nuovo helper `_equal_area_km2`) — elimina il bias polare del vecchio
+    `gradi² × 111²` (Russia stimata 35.5M km² vs ~17M reali);
+  - **(d)** poligoni condivisi riclassificati: azionabili solo se ≥1 membro
+    **non curato** e con sorgente a eredità grezza; co-locazioni/varianti-nome
+    benigne (`approximate_circle`, `historical_approximation`, `historical_map`,
+    `manual`, `aourednik_curated`, `approximate_generated`) **soppresse**.
+- **`src/ingestion/fix_antimeridian_and_wrong_polygons.py`**: nota di documentazione
+  (nessun cambio di comportamento) sul perché il fixer **non** resetta ciecamente i
+  poligoni condivisi; la classificazione vive nell'analizzatore.
+- **[ETHICS-014](docs/ethics/ETHICS-014-shared-polygon-classification.md)** (nuovo):
+  preservare gli stati successivi sullo stesso territorio e le varianti-nome invece
+  di inventare confini distinti (CLAUDE.md #1/#2/#3).
+- **Test**: `tests/test_v6996_geometric_alignment.py` (6 test) — equal-area,
+  skip curati, soppressione condivise benigne, condivise grezze ancora segnalate,
+  soglia oversize allineata. Suite completa: 1322 passed.
+
+### Note
+
+- Daju (1032) / Tunjur (1033): confine condiviso storicamente difendibile (due
+  sultanati predecessori del Darfur, stessa regione/capitale nei dati); un confine
+  distinto richiede fonti dedicate → **follow-up di enrichment**, non fabbricato qui.
+- Source + analyzer only: nessun dato di produzione modificato. L'analizzatore
+  riallineato gira al prossimo ciclo Co-Founder dopo il deploy.
+
 ## [v6.99.95] - 2026-05-31 (S51 enrichment — Eurasia/Africa Classical Empires: fonti + confidence, JSON sorgente; SQL prod preparato, NO deploy)
 
 **Tema**: *Deep-enrichment di 10 entità low-confidence ad alta visibilità (Wave 2

@@ -573,8 +573,32 @@ def analyze_date_coverage_gaps(db, existing_titles: set[str]) -> int:
 
 
 # ═══════════════════════════════════════════════════════════════════
-# Geometric quality analyzer (v6.31)
+# Geometric quality analyzer (v6.31; aligned with the auto-fixer v6.99.96)
 # ═══════════════════════════════════════════════════════════════════
+
+
+def _equal_area_km2(geom) -> float:
+    """Polygon area in km² via geodesic (equal-area) computation on the WGS84
+    ellipsoid.
+
+    Far more accurate than the legacy `degree² × 111²` estimate, which
+    over-estimated high-latitude polygons because a longitude-degree shrinks
+    toward the poles (e.g. Russia was estimated at ~35.5M km² vs the true
+    ~17M km² — see ETHICS-014). Equal-area geodesics remove that polar bias,
+    so the analyzer no longer flags large northern states as oversized.
+
+    Falls back to the rough estimate if pyproj is unavailable (CI without the
+    optional dep) so the analyzer degrades gracefully instead of crashing.
+    """
+    try:
+        from pyproj import Geod
+
+        geod = Geod(ellps="WGS84")
+        # geometry_area_perimeter handles Polygon AND MultiPolygon directly.
+        area_m2, _ = geod.geometry_area_perimeter(geom)
+        return abs(area_m2) / 1_000_000.0
+    except Exception:
+        return geom.area * 111 * 111
 
 
 def analyze_geometric_bugs(db, existing_titles: set[str]) -> int:
@@ -594,14 +618,35 @@ def analyze_geometric_bugs(db, existing_titles: set[str]) -> int:
     This analyzer performs SHAPE-LEVEL SANITY CHECKS:
 
     1. ANTIMERIDIAN CROSSING: bbox width > 180° (polygon wraps the globe)
-    2. CAPITAL FAR FROM POLYGON: capital_lat/lon > 500km from polygon
-       (already in fix_displaced_aourednik but we re-check here as a
-       belt-and-suspenders)
-    3. POLYGON TOO LARGE FOR ENTITY TYPE: a city with boundary >100,000 km²,
-       a principality with >1M km², etc. (wrong-polygon inheritance
-       indicator)
-    4. IDENTICAL POLYGONS WITH DIFFERENT OWNERS: two entities sharing the
-       exact same boundary_geojson bytes are a red flag (matching gone wrong)
+    2. POLYGON TOO LARGE FOR ENTITY TYPE: a city with an empire-sized polygon
+       is a wrong-polygon-inheritance indicator.
+    3. IDENTICAL POLYGONS WITH DIFFERENT OWNERS: two entities sharing the exact
+       same boundary_geojson bytes CAN be a fuzzy-match error — but is most
+       often benign (see below).
+
+    v6.99.96 — ALIGNMENT WITH THE AUTO-FIXER (suggestion #77). The analyzer
+    previously produced persistent noise: it flagged entities the fixer would
+    never touch, so every run re-proposed work that "auto-fix reset 0". Three
+    corrections close that gap, so the analyzer now flags ONLY what the fixer
+    can actually act on:
+
+      (a) Skip MANUALLY_CURATED_IDS + CURATED_BOUNDARY_SOURCES — these are
+          intentionally exempt from the fixer (Phase A manual curation), so
+          flagging them was pure noise.
+      (b) Use the SAME oversize threshold as the fixer (ceiling × 3.0, or 2.5
+          for STRICT_TYPES) instead of the old 1.5× — the 1.5×→3.0× band
+          flagged entities that were never reset.
+      (c) Equal-area km² (see `_equal_area_km2`) removes the polar over-estimate
+          that falsely flagged large northern states.
+
+    Shared polygons are RE-CLASSIFIED: two entities sharing a small
+    approximate/curated boundary are almost always legitimate — the same people
+    under two transliterations (Cherokee ᏣᎳᎩ / Tsalagi), or successive states
+    sharing one capital-based circle (Pahlavi → Islamic-Republic Iran). Those
+    are NOT fuzzy-match errors and the fixer would never reset them, so they are
+    suppressed. Only shared polygons with a raw-inheritance source (a national
+    Natural-Earth / aourednik polygon shared across owners) remain actionable.
+    See ETHICS-014.
 
     Returns count of suggestions created.
     """
@@ -611,29 +656,46 @@ def analyze_geometric_bugs(db, existing_titles: set[str]) -> int:
         logger.warning("shapely not available — skipping geometric analysis")
         return 0
 
+    # Import the fixer's exemptions + thresholds so the analyzer can never
+    # drift out of alignment with what the fixer actually does. Lazy import
+    # (inside the function) avoids any import-time coupling / circulars.
+    try:
+        from src.ingestion.fix_antimeridian_and_wrong_polygons import (
+            AUTO_FIX_OVERSIZE_FACTOR,
+            AUTO_FIX_OVERSIZE_FACTOR_STRICT,
+            CURATED_BOUNDARY_SOURCES,
+            MANUALLY_CURATED_IDS,
+            STRICT_TYPES,
+            TYPE_MAX_AREA_KM2,
+            WRONG_POLYGON_FIXES,
+        )
+    except Exception:  # pragma: no cover — defensive fallback if fixer moves
+        logger.warning("fixer constants unavailable — using local defaults")
+        AUTO_FIX_OVERSIZE_FACTOR = 3.0
+        AUTO_FIX_OVERSIZE_FACTOR_STRICT = 2.5
+        CURATED_BOUNDARY_SOURCES = {"historical_approximation", "aourednik_curated", "manual"}
+        MANUALLY_CURATED_IDS = set()
+        STRICT_TYPES = set()
+        TYPE_MAX_AREA_KM2 = {}
+        WRONG_POLYGON_FIXES = {}
+
+    # Boundary sources that are deliberately-generated SMALL approximations —
+    # a shared polygon among these is benign co-location (successive states,
+    # alt-transliterations), NOT a fuzzy-match error. Raw country sources
+    # ('aourednik', 'natural_earth', None) are NOT here: a shared national
+    # polygon among those IS actionable.
+    BENIGN_SHARED_SOURCES = {
+        "approximate_circle",
+        "approximate_generated",
+        "historical_approximation",
+        "historical_map",
+        "manual",
+        "aourednik_curated",
+    }
+
     count = 0
     suspects: list[dict] = []
 
-    # Type-based area ceilings (km², rough) for wrong-polygon detection
-    type_max_area_km2 = {
-        "city": 10_000,
-        "city-state": 50_000,
-        "principality": 200_000,
-        "duchy": 200_000,
-        "chiefdom": 300_000,
-        "tribal_nation": 2_000_000,
-        "tribal_federation": 2_000_000,
-        "confederation": 3_000_000,
-        "kingdom": 6_000_000,
-        "sultanate": 4_000_000,
-        "republic": 10_000_000,
-        "dynasty": 15_000_000,
-        "caliphate": 15_000_000,
-        "khanate": 30_000_000,
-        "empire": 35_000_000,
-    }
-
-    # Check every entity
     entities = (
         db.query(GeoEntity)
         .filter(GeoEntity.boundary_geojson.isnot(None))
@@ -643,6 +705,7 @@ def analyze_geometric_bugs(db, existing_titles: set[str]) -> int:
     # Track boundary hashes to detect shared polygons
     from hashlib import sha256
     boundary_owners: dict[str, list[int]] = {}
+    ent_by_id: dict[int, GeoEntity] = {e.id: e for e in entities}
 
     for e in entities:
         boundary = e.boundary_geojson
@@ -651,6 +714,17 @@ def analyze_geometric_bugs(db, existing_titles: set[str]) -> int:
         try:
             geom = shape(json.loads(boundary))
         except Exception:
+            continue
+
+        # Record boundary hash for shared-polygon detection — for EVERY entity
+        # (curated included) so a curated↔non-curated share is still detectable.
+        if len(boundary) > 100:
+            h = sha256(boundary.encode()).hexdigest()[:16]
+            boundary_owners.setdefault(h, []).append(e.id)
+
+        # (a) Skip per-entity flagging for fixer-exempt entities. The fixer
+        # never resets these, so flagging them only generates noise.
+        if e.id in MANUALLY_CURATED_IDS or e.boundary_source in CURATED_BOUNDARY_SOURCES:
             continue
 
         issues = []
@@ -663,22 +737,24 @@ def analyze_geometric_bugs(db, existing_titles: set[str]) -> int:
                 f"label will render at lon≈{(bb[0]+bb[2])/2:.1f} not at capital"
             )
 
-        # 2. Polygon too large for entity type
+        # 2. Polygon too large for entity type — equal-area km², and the SAME
+        #    ceiling × factor the fixer uses (so a flag implies a fixable bug).
         if e.entity_type and geom.area > 0:
-            # approximate km² from degree² (very rough; polar-biased)
-            approx_km2 = geom.area * 111 * 111
-            ceiling = type_max_area_km2.get(e.entity_type)
-            if ceiling and approx_km2 > ceiling * 1.5:
-                issues.append(
-                    f"polygon area {approx_km2:,.0f} km² exceeds type "
-                    f"ceiling for {e.entity_type} ({ceiling:,} km² × 1.5 margin) — "
-                    f"likely wrong-polygon inheritance"
+            ceiling = TYPE_MAX_AREA_KM2.get(e.entity_type)
+            if ceiling:
+                approx_km2 = _equal_area_km2(geom)
+                factor = (
+                    AUTO_FIX_OVERSIZE_FACTOR_STRICT
+                    if e.entity_type in STRICT_TYPES
+                    else AUTO_FIX_OVERSIZE_FACTOR
                 )
-
-        # 3. Track boundary-hash duplicates
-        if len(boundary) > 100:  # only meaningful-size polygons
-            h = sha256(boundary.encode()).hexdigest()[:16]
-            boundary_owners.setdefault(h, []).append(e.id)
+                if approx_km2 > ceiling * factor:
+                    issues.append(
+                        f"polygon area {approx_km2:,.0f} km² exceeds type "
+                        f"ceiling for {e.entity_type} "
+                        f"({ceiling:,} km² × {factor} fixer-factor) — "
+                        f"likely wrong-polygon inheritance"
+                    )
 
         if issues:
             suspects.append({
@@ -689,23 +765,49 @@ def analyze_geometric_bugs(db, existing_titles: set[str]) -> int:
                 "issues": issues,
             })
 
-    # 4. Shared-polygon detection (different entities with identical boundary)
-    # This catches fuzzy-match failures where multiple entities were assigned
-    # the same NE polygon.
+    # 3. Shared-polygon detection. A group is ACTIONABLE only if at least one
+    #    member is something the fixer could reset: i.e. NOT a curated id and
+    #    NOT a benign small-approximation source (or it is a known
+    #    WRONG_POLYGON_FIXES target). Benign co-location / alt-transliteration
+    #    duplicates are suppressed — see ETHICS-014.
     shared_polygons = {h: ids for h, ids in boundary_owners.items() if len(ids) > 1}
-    if shared_polygons:
-        for h, ids in list(shared_polygons.items())[:10]:  # cap to 10 for sanity
-            names = []
-            for eid in ids[:10]:
-                ent = next((e for e in entities if e.id == eid), None)
-                if ent:
-                    names.append(f"{eid}={ent.name_original[:30]}")
-            suspects.append({
-                "hash": h,
-                "shared_polygon_ids": ids,
-                "shared_polygon_names": names,
-                "issues": [f"{len(ids)} entities share the exact same polygon — fuzzy-match error"],
-            })
+    for h, ids in shared_polygons.items():
+        actionable_member = False
+        for eid in ids:
+            ent = ent_by_id.get(eid)
+            if ent is None:
+                continue
+            # The fixer skips curated entities FIRST (before any reset), so a
+            # curated member can never make a group actionable — even if it is
+            # a WRONG_POLYGON_FIXES key (the fixer's Fix-1 also early-continues
+            # on MANUALLY_CURATED_IDS). Mirror that order exactly.
+            if eid in MANUALLY_CURATED_IDS or ent.boundary_source in CURATED_BOUNDARY_SOURCES:
+                continue
+            if eid in WRONG_POLYGON_FIXES:
+                actionable_member = True
+                break
+            if ent.boundary_source not in BENIGN_SHARED_SOURCES:
+                actionable_member = True
+                break
+        if not actionable_member:
+            continue  # legitimate co-location / name-variant — suppress
+
+        names = []
+        for eid in ids[:10]:
+            ent = ent_by_id.get(eid)
+            if ent:
+                names.append(f"{eid}={ent.name_original[:30]}")
+        suspects.append({
+            "hash": h,
+            "shared_polygon_ids": ids,
+            "shared_polygon_names": names,
+            "issues": [
+                f"{len(ids)} entities share the exact same polygon with a "
+                f"raw-inheritance source — likely fuzzy-match error"
+            ],
+        })
+        if len(suspects) >= 40:  # hard cap on payload
+            break
 
     # Create suggestions
     if suspects:
@@ -718,10 +820,12 @@ def analyze_geometric_bugs(db, existing_titles: set[str]) -> int:
             description=(
                 f"The geometric quality analyzer detected {len(suspects)} entities "
                 f"with shape-level bugs (antimeridian-crossing bbox, polygon-area "
-                f"exceeding type-based ceiling, or shared polygons across multiple "
-                f"entities). These are NOT caught by metadata checks (confidence, "
-                f"boundary-presence, status) but cause visual bugs on the map or "
-                f"incorrect spatial queries. Run "
+                f"exceeding the fixer's type ceiling, or a shared raw-inheritance "
+                f"polygon across multiple entities). These are NOT caught by "
+                f"metadata checks (confidence, boundary-presence, status) but cause "
+                f"visual bugs on the map or incorrect spatial queries. Thresholds "
+                f"are aligned with the auto-fixer (v6.99.96), so every flagged item "
+                f"is something the fixer can act on. Run "
                 f"`python -m src.ingestion.fix_antimeridian_and_wrong_polygons` to "
                 f"fix automatically."
             ),

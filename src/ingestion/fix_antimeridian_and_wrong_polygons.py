@@ -17,6 +17,20 @@ Two distinct bugs identified v6.30.x:
 Run:
     python -m src.ingestion.fix_antimeridian_and_wrong_polygons
     python -m src.ingestion.fix_antimeridian_and_wrong_polygons --dry-run
+
+NOTE on shared polygons (v6.99.96, suggestion #77 / ETHICS-014). This fixer
+deliberately does NOT blind-reset entities that merely share an identical
+boundary. In the v6.30 era shared polygons meant a fuzzy-match error (two
+entities inheriting the same national Natural-Earth polygon). Since Phase A,
+the surviving shared polygons are almost all LEGITIMATE: the same people under
+two transliterations (Cherokee ᏣᎳᎩ / Tsalagi) or successive states sharing a
+single capital-based circle (Pahlavi → Islamic-Republic Iran, same Tehran). For
+those, regenerating a "capital circle" for the secondary entity produces the
+*identical* circle (shared capital) and would only destroy curated geometry.
+The classification of which shares are still actionable lives in the analyzer
+(`scripts/ai_cofounder_analyze.py::analyze_geometric_bugs`); this fixer keeps
+its existing wrong-polygon / oversize / antimeridian resets, which already cover
+the only shared polygons that are real bugs (raw national inheritance).
 """
 
 from __future__ import annotations
