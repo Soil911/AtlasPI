@@ -36,13 +36,6 @@ import sys
 from pathlib import Path
 from typing import Any
 
-# Windows cp1252 stdout fix for non-latin names
-if sys.platform == "win32" and isinstance(sys.stdout, io.TextIOWrapper):
-    try:
-        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
-    except AttributeError:
-        pass
-
 from src.config import DATA_DIR
 from src.db.database import SessionLocal
 from src.db.models import ChainLink, DynastyChain, GeoEntity
@@ -71,6 +64,33 @@ def _load_json_dir(dir_path: Path) -> list[dict[str, Any]]:
     return out
 
 
+def _dedupe_by_name(chains: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], int]:
+    """Keep the FIRST occurrence of each chain ``name``; drop later repeats.
+
+    Ritorna ``(deduped, n_dropped)``.
+    """
+    # ETHICS-002/003: una catena successoria duplicata è una catena *fantasma* —
+    # mostrata due volte agli agenti, falsa la rappresentazione della continuità
+    # storica (la stessa successione contata due volte). La sorgente su disco deve
+    # restare unica (fence CI, vedi tests/test_chain_dedup_json_audit.py), ma
+    # l'ingest deve essere robusto ANCHE se non lo è: il set ``existing`` qui sotto
+    # è calcolato UNA volta dal DB e non assorbiva i nomi inseriti nello stesso run,
+    # quindi due file che elencano lo stesso ``name`` inserivano entrambi. Questa è
+    # la root cause dei 30 doppioni solo-prod ripuliti in v6.99.101.
+    seen: set[str] = set()
+    out: list[dict[str, Any]] = []
+    dropped = 0
+    for ch in chains:
+        name = ch.get("name")
+        if name and name in seen:
+            dropped += 1
+            continue
+        if name:
+            seen.add(name)
+        out.append(ch)
+    return out, dropped
+
+
 def ingest_chains() -> dict[str, Any]:
     """Insert chains whose ``name`` isn't already in DB.
 
@@ -81,7 +101,14 @@ def ingest_chains() -> dict[str, Any]:
         existing = {c.name for c in db.query(DynastyChain.name).all()}
 
         all_chains = _load_json_dir(CHAINS_DIR)
-        logger.info("Catene nei JSON: %d", len(all_chains))
+        all_chains, intra_dropped = _dedupe_by_name(all_chains)
+        if intra_dropped:
+            logger.warning(
+                "Ingest catene: %d nome/i duplicato/i nei JSON sorgente scartati "
+                "(dedup intra-run, vedi _dedupe_by_name).",
+                intra_dropped,
+            )
+        logger.info("Catene nei JSON (deduped): %d", len(all_chains))
 
         entity_map = {e.name_original: e.id for e in db.query(GeoEntity).all()}
 
@@ -187,6 +214,7 @@ def ingest_chains() -> dict[str, Any]:
         return {
             "inserted": inserted,
             "skipped_existing": skipped,
+            "intra_run_duplicates_dropped": intra_dropped,
             "total_in_json": len(all_chains),
             "total_links_created": total_links_created,
             "unresolved_entity_refs": len(unresolved),
@@ -198,6 +226,15 @@ def ingest_chains() -> dict[str, Any]:
 
 
 def main() -> None:
+    # Windows cp1252 stdout fix per nomi non-latini — applicato SOLO da CLI, non
+    # all'import: rimpiazzare sys.stdout all'import rompe la cattura di pytest
+    # (ed è il motivo per cui tests/conftest.py evitava di importare questo modulo).
+    if sys.platform == "win32" and isinstance(sys.stdout, io.TextIOWrapper):
+        try:
+            sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+        except AttributeError:
+            pass
+
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     res = ingest_chains()
     print("=== Chains ingest ===")

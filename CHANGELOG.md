@@ -2,6 +2,35 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.101] - 2026-06-04 (chain dedup — rimozione 30 catene successorie duplicate + hardening ingest)
+
+**Tema**: *Bug dati strutturale: prod aveva 107 `dynasty_chains` ma solo 77 nomi
+distinti — 30 catene successorie duplicate (coppie byte-identiche, stessi link).
+Prerequisito prima di estendere il chain linkage (78% entità orfane).*
+
+**Root cause**: `ingest_chains` salta i nomi già nel DB (set `existing` calcolato
+una volta all'avvio) ma NON assorbiva i nomi inseriti nello stesso run. La sorgente
+JSON elencava alcune catene-trunk sia nel vecchio `batch_01` sia nei nuovi file
+per-regione → un singolo ingest inseriva entrambe. Il JSON è stato poi ripulito
+(77 nomi unici, verificato) ma l'ingest INSERT-only ha lasciato in prod i 30 doppioni.
+
+- **Hardening** `src/ingestion/ingest_chains.py`: nuovo helper puro `_dedupe_by_name`
+  (tiene la prima occorrenza, scarta i repeat) applicato alla lista caricata, così
+  l'ingest è idempotente ANCHE se la sorgente regredisce. Spostato il fix `sys.stdout`
+  cp1252 da import-time dentro `main()` (rimpiazzare stdout all'import rompeva la
+  cattura di pytest — ora il modulo è importabile senza side-effect).
+- **Fence CI** `tests/test_chain_dedup_json_audit.py`: asserisce 0 nomi di catena
+  duplicati in `data/chains/*.json` (job SQLite, gira su ogni PR) + unit test
+  dell'helper. La sorgente è pulita: 77 catene, 77 nomi distinti.
+- **Prod** `scripts/sql_chain_dedup_v6_99_101.sql`: rimozione una tantum dei 30
+  doppioni (tiene MIN(id) per name, elimina prima i `chain_links`; transazionale,
+  idempotente, con guard anti-residui). Backup `pg_dump` preso prima.
+- **ETHICS-002/003**: una catena successoria duplicata è una continuità *fantasma*
+  contata due volte agli agenti — falsa la rappresentazione della continuità storica.
+  Verificato: tutte e 30 le coppie byte-identiche (0 divergenti). Nessun dato perso.
+
+`data/chains/*.json` invariato (già corretto). Suite verde, ruff verde.
+
 ## [v6.99.100] - 2026-06-04 (S54 enrichment — long-tail low-confidence: Pacifico + archeologia africana)
 
 **Tema**: *S54 — 10 entità della coda low-confidence, con copertura di regioni
