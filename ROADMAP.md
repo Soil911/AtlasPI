@@ -13,11 +13,25 @@
 
 ## Versioni completate
 
-### v6.99.85-99 -- Wave 2 hardening + audit + enrichment S51-53 (2026-05-31 → 06-04)
-**Versione corrente: v6.99.99** (prod). CI interamente verde (lint+test+js-tests+postgres-migrations+build).
+### v6.99.85-101 -- Wave 2 hardening + audit + enrichment S51-54 + chain dedup (2026-05-31 → 06-04)
+**Versione corrente: v6.99.101** (prod). CI interamente verde (lint+test+js-tests+postgres-migrations+build).
 **10/10 HIGH dell'audit chiusi** (con v6.99.93 / audit #7). Poi: discoverability refresh
-(llms.txt/landing, v6.99.97), agent-compat routes (#78-81, v6.99.97), enrichment S51-53
-(30 entità deployate, v6.99.95/98/99). Suggestion AI Co-Founder: 5/6 chiuse (#78-82), resta #83.
+(llms.txt/landing, v6.99.97), agent-compat routes (#78-81, v6.99.97), enrichment S51-54
+(40 entità deployate, ~110 fonti, v6.99.95/98/99/100). Suggestion AI Co-Founder: 5/6 chiuse (#78-82), resta #83.
+- **v6.99.101 chain dedup** (struttura): prod aveva 107 catene ma solo 77 nomi distinti — 30
+  catene successorie duplicate (doppia-ingestione; root cause in `ingest_chains`, JSON poi
+  ripulito ma prod INSERT-only). Rimosse (107→77, orfani invariati 772). Hardening
+  `_dedupe_by_name` + fence CI. Vedi `docs/structural-tracks-plan.md`. Prerequisito al linking.
+
+### Prossima sessione — tracce strutturali (Clirim: "le vorrei fare tutte")
+Piano eseguibile completo in **`docs/structural-tracks-plan.md`**:
+- **B1 chain linkage** (78% orfani): estendere catene già "TODO-listate" (Premier Empire #1037
+  → cat. francese #74, Afsharian #1038 → iraniana, Segundo Imperio Mexicano #522, Romania #441)
+  + nuove catene nazionali (Brasile, unificazione italiana → #100, ecc.). Decisione modello
+  "many→one" pendente.
+- **Track 3 split**: Babilonia #171 (deprecate/narrow, ripunta cat. #88), Sri Lanka #142,
+  Kemet #26 — distinti dai **popoli indigeni continui** (NON splittare: ETHICS).
+- **Track 1 enrichment**: coda ~206 entità <0.6 (turnkey).
 
 Sessione lunga: audit a freddo (10 dimensioni, workflow `wb4nky8m3` con 29 agenti +
 verifica adversariale) → tutte "adequate", 0 critical, **10 HIGH confermati**. Verdetto:
