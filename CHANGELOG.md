@@ -92,6 +92,18 @@ di Derat). status uncertain→confirmed dove attestato.
 - Suite verde (1316), fence collision 0. Chain linkage rinviata (i 3 trunk principali
   già esistono; Xianbei→Wei come follow-up).
 
+### Discoverability agenti AI (refresh accuratezza — `static/llms.txt` + landing)
+- `llms.txt`: corretti dati stale/fuorvianti che gli agenti leggono direttamente —
+  cities 110→**252**, chains 94→**107**, MCP **34→39 tool** (allineato a `mcp.json`),
+  distribuzione confidence "62%"→**76% ≥0.6** (la prod è migliore di quanto dichiarato),
+  e **provenienza boundary**: aggiunti i due `boundary_source` ora dominanti
+  (`approximate_circle` 372, `historical_approximation` 227) che mancavano dall'enum
+  ETHICS-005 + distribuzione boundary aggiornata.
+- Landing (`static/landing/index.html`): JSON-LD (WebApplication + Dataset) e meta
+  OG/Twitter aggiornati (1.034→1.038 entità, 2.400→4.800+ fonti, version 6.89→6.99.95,
+  +`isAccessibleForFree`); fallback crawler-visible (cities/chains/version) sincronizzati.
+- Effettivo al prossimo deploy (static servito da prod).
+
 ## [v6.99.94] - 2026-05-31 (Wave 2.7 follow-up — riconciliazione residua entità JSON↔prod: nomi nativi + 6 insert)
 
 **Tema**: *Chiusi i 2 debiti residui lasciati da v6.99.93 (vedi ETHICS-012 §"#2"):

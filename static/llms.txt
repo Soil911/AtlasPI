@@ -2,7 +2,7 @@
 
 > Free, public, Apache 2.0 licensed REST API and MCP server providing 1,038
 > historical geopolitical entities (100% boundary coverage), 643 events,
-> 55 periods, 110 cities, 41 trade routes, 94 dynasty chains, 1,249
+> 55 periods, 252 cities, 41 trade routes, 107 dynasty chains, 1,249
 > archaeological sites, 105 rulers, and 29 historical languages — from
 > 4500 BCE to 2024 CE with real boundaries, academic sources, and
 > explicit ethical framings.
@@ -27,9 +27,9 @@ endpoint listed below returns JSON with no authentication.
 - /v1/entities — 1,038 historical geopolitical entities (empires, kingdoms, etc.)
 - /v1/events — 643 historical events (battles, treaties, genocides, disasters)
 - /v1/periods — 55 historical epochs (Bronze Age, Edo Period, Cold War, etc.)
-- /v1/cities — 110 historical cities
+- /v1/cities — 252 historical cities
 - /v1/routes — 41 trade routes (Silk Road, Trans-Saharan, etc.)
-- /v1/chains — 94 dynasty/succession chains (Roman→Byzantine, Chinese dynasties, etc.)
+- /v1/chains — 107 dynasty/succession chains (Roman→Byzantine, Chinese dynasties, etc.)
 - /v1/sites — 1,249 archaeological sites (UNESCO heritage, ruins, monuments)
 - /v1/rulers — 105 historical rulers (kings, emperors, caliphs)
 - /v1/languages — 29 historical languages (with native scripts and families)
@@ -91,7 +91,7 @@ endpoint listed below returns JSON with no authentication.
 - /redoc — ReDoc UI
 - /.well-known/ai-plugin.json — OpenAI plugin manifest
 
-## MCP Server (34 tools)
+## MCP Server (39 tools)
 
 For direct integration with Claude Desktop, Claude Code, or any MCP client:
 https://github.com/Soil911/AtlasPI/tree/main/mcp-server
@@ -113,8 +113,12 @@ event_periods, world_snapshot, and more.
 - **ETHICS-002**: Conquests and violence labeled explicitly — CONQUEST,
   REVOLUTION, GENOCIDE are not euphemized to "succession"
 - **ETHICS-003**: Contested territories show all versions with dates and sources
-- **ETHICS-005**: Boundary provenance transparent (natural_earth / aourednik /
-  historical_map / approximate_generated — you can always trace the source)
+- **ETHICS-005**: Boundary provenance transparent — every boundary carries a
+  `boundary_source` you can trace: natural_earth / aourednik / historical_map /
+  approximate_generated / approximate_circle (capital-centred circle, honest
+  approximation) / historical_approximation (hand-drawn historical polygon).
+  A circle means "we know the capital, the exact borders are approximate" — not
+  a false-precision polygon.
 - **ETHICS-007**: Event types include GENOCIDE, ETHNIC_CLEANSING,
   COLONIAL_VIOLENCE, FORCED_LABOR, DEPORTATION — academic terminology
 - **ETHICS-008**: Events with suppressed documentation flagged via
@@ -135,17 +139,22 @@ Every entity and event carries:
 - `sources` (list with type + citation)
 - `ethical_notes` (when relevant — contested framings, historiographic debates)
 
-62% of entities have confidence ≥ 0.6. Distribution:
-- 0.8+: 190 entities (22%)
-- 0.6-0.8: 336 entities (39%)
-- 0.4-0.6: 324 entities (37.6%)
-- <0.4: 12 entities (1.4%)
+76% of entities have confidence ≥ 0.6 (788/1,038, as of 2026-06). Distribution:
+- ≥0.8: 330 entities (32%)
+- 0.6-0.8: 458 entities (44%)
+- 0.5-0.6: 186 entities (18%)
+- <0.5: 64 entities (6%)
 
-Boundary quality:
-- Natural Earth (rich, 50k+ chars): 70 entities (8%)
-- aourednik historical maps: 341 entities (40%)
-- Historical maps: 169 entities (20%)
-- Approximate generated (from capital): 282 entities (32%)
+Status: 719 confirmed, 242 uncertain, 33 disputed (contested, capped ≤0.7),
+44 deprecated (duplicates flagged for merge, hidden from default listings).
+
+Boundary quality (100% coverage; as of 2026-06):
+- approximate_circle (capital-centred circle): 372 entities (36%)
+- historical_approximation (hand-drawn historical polygon): 227 entities (22%)
+- aourednik historical maps: 183 entities (18%)
+- historical_map: 162 entities (16%)
+- natural_earth (rich, 50k+ chars): 91 entities (9%)
+- approximate_generated (from capital): 3 entities (<1%)
 
 ## Optional
 

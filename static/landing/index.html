@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0d1117">
 
   <title>AtlasPI — Historical Geography API for AI Agents</title>
-  <meta name="description" content="The first REST API and MCP server for historical geography. 1,034 entities, 643 events, 2,400+ academic sources, real boundaries from 4500 BCE to 2024. Built for AI agents.">
+  <meta name="description" content="The first REST API and MCP server for historical geography. 1,038 entities, 643 events, 4,800+ academic sources, real boundaries from 4500 BCE to 2024. Built for AI agents.">
   <meta name="keywords" content="historical geography api, AI agents, MCP server, REST API, GeoJSON, historical data, digital humanities, boundaries, empires, kingdoms">
   <meta name="author" content="AtlasPI">
   <meta name="robots" content="index, follow">
@@ -21,7 +21,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://atlaspi.cra-srl.com/">
   <meta property="og:title" content="AtlasPI — Historical Geography API for AI Agents">
-  <meta property="og:description" content="1,034 historical entities, 643 events, real boundaries, academic sources. From 4500 BCE to 2024. Available as REST API and MCP server.">
+  <meta property="og:description" content="1,038 historical entities, 643 events, real boundaries, academic sources. From 4500 BCE to 2024. Available as REST API and MCP server.">
   <meta property="og:image" content="https://atlaspi.cra-srl.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -33,7 +33,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://atlaspi.cra-srl.com/">
   <meta name="twitter:title" content="AtlasPI — Historical Geography API for AI Agents">
-  <meta name="twitter:description" content="1,034 historical entities, 643 events, real boundaries, academic sources. From 4500 BCE to 2024. REST API + MCP server.">
+  <meta name="twitter:description" content="1,038 historical entities, 643 events, real boundaries, academic sources. From 4500 BCE to 2024. REST API + MCP server.">
   <meta name="twitter:image" content="https://atlaspi.cra-srl.com/og-image.png">
 
   <!-- JSON-LD structured data -->
@@ -43,13 +43,13 @@
     "@type": "WebApplication",
     "name": "AtlasPI",
     "alternateName": "AtlasPI Historical Geography API",
-    "description": "Structured historical geographic database for AI agents. REST API and MCP server with 1,034 entities, 643 events, real boundaries, and academic sources from 4500 BCE to 2024.",
+    "description": "Structured historical geographic database for AI agents. REST API and MCP server with 1,038 entities, 643 events, real boundaries, and academic sources from 4500 BCE to 2024.",
     "url": "https://atlaspi.cra-srl.com/",
     "applicationCategory": "DeveloperApplication",
     "applicationSubCategory": "API",
     "operatingSystem": "Any",
     "browserRequirements": "Requires JavaScript",
-    "softwareVersion": "6.89.0",
+    "softwareVersion": "6.99.95",
     "license": "https://www.apache.org/licenses/LICENSE-2.0",
     "codeRepository": "https://github.com/Soil911/AtlasPI",
     "programmingLanguage": ["Python", "JavaScript"],
@@ -72,7 +72,7 @@
     "@context": "https://schema.org",
     "@type": "Dataset",
     "name": "AtlasPI Historical Geography Dataset",
-    "description": "1,034 historical geopolitical entities, 643 events, 105 rulers, 1,249 archaeological sites with boundaries, names, and metadata from 4500 BCE to 2024. Includes confidence scores and 2,400+ academic citations.",
+    "description": "1,038 historical geopolitical entities, 643 events, 105 rulers, 1,249 archaeological sites with boundaries, names, and metadata from 4500 BCE to 2024. Includes confidence scores and 4,800+ academic citations.",
     "url": "https://atlaspi.cra-srl.com/",
     "license": "https://www.apache.org/licenses/LICENSE-2.0",
     "creator": {
@@ -92,7 +92,8 @@
       }
     ],
     "temporalCoverage": "-4500/2024",
-    "keywords": ["historical geography", "boundaries", "empires", "GeoJSON", "AI training data"]
+    "isAccessibleForFree": true,
+    "keywords": ["historical geography", "boundaries", "empires", "GeoJSON", "AI training data", "MCP server", "digital humanities"]
   }
   </script>
 
@@ -159,15 +160,15 @@
   <div class="container hero-inner">
     <div class="hero-tag">
       <span class="dot-live" aria-hidden="true"></span>
-      Live now &middot; v<span data-live="version">6.89.0</span> &middot; <span data-live="entity_count">1,034</span> entities + <span data-live="event_count">643</span> events + <span data-live="period_count">55</span> periods + <span data-live="city_count">110</span> cities + <span data-live="route_count">41</span> trade routes + <span data-live="chain_count">94</span> dynasty chains
+      Live now &middot; v<span data-live="version">6.99.95</span> &middot; <span data-live="entity_count">1,038</span> entities + <span data-live="event_count">643</span> events + <span data-live="period_count">55</span> periods + <span data-live="city_count">252</span> cities + <span data-live="route_count">41</span> trade routes + <span data-live="chain_count">107</span> dynasty chains
     </div>
     <h1 class="hero-title">
       Reduce LLM hallucinations <span class="grad">3× on historical queries</span>
     </h1>
     <p class="hero-sub">
       Tool-augmented retrieval for AI agents working with historical geography.
-      <strong><span data-live="entity_count">1,034</span> entities</strong> with capital timelines,
-      rulers, events, and 2,400+ academic sources. <strong>Empirically validated</strong>:
+      <strong><span data-live="entity_count">1,038</span> entities</strong> with capital timelines,
+      rulers, events, and 4,800+ academic sources. <strong>Empirically validated</strong>:
       hallucinations from 0.21 → 0.07 per query
       (<a href="/handoff/benchmark/V7-FINAL-REPORT.md" style="color:#58a6ff;text-decoration:underline">benchmark v7.0</a>).
     </p>
@@ -463,7 +464,7 @@ console.log(<span class="tk-str">'Overlap years:'</span>, data.temporal_overlap)
   <div class="container">
     <div class="stats">
       <div class="stat">
-        <div class="stat-num" data-live="entity_count">1,034</div>
+        <div class="stat-num" data-live="entity_count">1,038</div>
         <div class="stat-lbl">historical entities</div>
       </div>
       <div class="stat">
@@ -549,7 +550,7 @@ console.log(<span class="tk-str">'Overlap years:'</span>, data.temporal_overlap)
           <li>MCP server included</li>
           <li>Self-host from GitHub</li>
           <li>Apache-2.0 licensed</li>
-          <li><span data-live="entity_count">1,034</span> entities + <span data-live="event_count">643</span> events</li>
+          <li><span data-live="entity_count">1,038</span> entities + <span data-live="event_count">643</span> events</li>
         </ul>
         <a href="https://github.com/Soil911/AtlasPI" class="btn btn-ghost btn-block" target="_blank" rel="noopener">Get on GitHub</a>
       </article>
@@ -619,7 +620,7 @@ console.log(<span class="tk-str">'Overlap years:'</span>, data.temporal_overlap)
 
   <div class="container foot-bottom">
     <span>&copy; <span id="year"></span> AtlasPI &middot; Apache-2.0 licensed core &middot; <a href="https://atlaspi.cra-srl.com/">atlaspi.cra-srl.com</a></span>
-    <span class="foot-version">v<span data-live="version">6.89.0</span></span>
+    <span class="foot-version">v<span data-live="version">6.99.95</span></span>
   </div>
 </footer>
 
