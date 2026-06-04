@@ -1,0 +1,90 @@
+{
+  "_meta": {
+    "session": "S54 (Wave 2 Plan A — long-tail low-confidence, wide spread incl. Pacific + African archaeology)",
+    "date": "2026-06-04",
+    "policy": "ADD sources; confidence calibrated honestly (obscure/archaeological → modest); ethical_notes [S54-enrich] non-euphemistic (ETHICS-002/007/008). status uncertain->confirmed where conf>=0.5 + attested. Citations verified via web search 2026-06-04."
+  },
+  "entities": [
+    {
+      "id": 282, "name_original": "Κομμαγηνή", "label": "Commagene", "confidence": 0.60, "status": "confirmed",
+      "ethical_notes_append": "[S54-enrich] ETHICS: regno greco-iranico (Antioco I Teos, ~-69), sincretismo ellenistico-persiano monumentalizzato nel hierothesion del Nemrut Dağı. Fonti: Sullivan, Versluys.",
+      "new_sources": [
+        {"citation": "Sullivan, R.D. Near Eastern Royalty and Rome, 100-30 BC, Univ. of Toronto Press (1990)", "source_type": "academic", "url": null},
+        {"citation": "Versluys, M.J. Visual Style and Constructing Identity in the Hellenistic World: Nemrud Dağ and Commagene under Antiochos I, Cambridge Univ. Press (2017)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 347, "name_original": "Κουσανο-Σασσανιδαι", "label": "Kushano-Sasanian", "confidence": 0.58, "status": "confirmed",
+      "ethical_notes_append": "[S54-enrich] ETHICS: i Kushanshah, vicereame sasanide su Battriana e Gandhara (~230-365), fase di transizione tra impero kushana e sasanide; attestati soprattutto dalla numismatica. Fonti: Rezakhani, Cribb.",
+      "new_sources": [
+        {"citation": "Rezakhani, K. ReOrienting the Sasanians: East Iran in Late Antiquity, Edinburgh Univ. Press (2017)", "source_type": "academic", "url": null},
+        {"citation": "Cribb, J. studies on Kushano-Sasanian coinage (British Museum / Studia Iranica)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 980, "name_original": "Wangara", "label": "Wangara", "confidence": 0.55, "status": "confirmed",
+      "ethical_notes_append": "[S54-enrich] ETHICS: rete di mercanti-studiosi soninke/juula (dyula) del commercio dell'oro transahariano e della diffusione dell'Islam in Africa occidentale — NON uno stato territoriale ma una diaspora commerciale. Fonti: Wilks (J. African History), Levtzion.",
+      "new_sources": [
+        {"citation": "Wilks, I. 'Wangara, Akan and Portuguese in the Fifteenth and Sixteenth Centuries', Journal of African History (1982)", "source_type": "academic", "url": null},
+        {"citation": "Levtzion, N. Ancient Ghana and Mali, Methuen (1973)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 732, "name_original": "Imbangala", "label": "Imbangala", "confidence": 0.60, "status": "confirmed",
+      "ethical_notes_append": "[S54-enrich] ETHICS-007: bande guerriere imbangala (i 'Jaga') dell'Angola orientale, centrali nella tratta atlantica degli schiavi; il regno di Kasanje fu un grande intermediario di schiavi verso il Brasile. Documentano la violenza del sistema schiavista mercantile (Miller, 'Way of Death'). Fonti: Miller, Thornton.",
+      "new_sources": [
+        {"citation": "Miller, J.C. Way of Death: Merchant Capitalism and the Angolan Slave Trade, 1730-1830, Univ. of Wisconsin Press (1988)", "source_type": "academic", "url": null},
+        {"citation": "Thornton, J.K. Africa and Africans in the Making of the Atlantic World, 1400-1800, Cambridge Univ. Press (1998)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 830, "name_original": "Torwa", "label": "Torwa/Butua", "confidence": 0.58, "status": "confirmed",
+      "ethical_notes_append": "[S54-enrich] ETHICS: regno di Butua (Kalanga / Shona occidentale, ~1425-1683), dinastia Torwa, capitale Khami — successore della cultura di Great Zimbabwe nel sud-ovest dello Zimbabwe. Fonti: Beach, Pikirayi.",
+      "new_sources": [
+        {"citation": "Beach, D.N. The Shona and Zimbabwe 900-1850, Heinemann (1980)", "source_type": "academic", "url": null},
+        {"citation": "Pikirayi, I. The Zimbabwe Culture: Origins and Decline of Southern Zambezian States, AltaMira Press (2001)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 1003, "name_original": "Tichitt", "label": "Dhar Tichitt", "confidence": 0.60, "status": "confirmed",
+      "ethical_notes_append": "[S54-enrich] ETHICS: cultura di Dhar Tichitt (Mauritania, ~2000 a.C.), comunita' agro-pastorali proto-soninke, tra i piu' antichi insediamenti urbani dell'Africa subsahariana e precursore dell'Impero del Ghana — contrasta la narrazione coloniale di un'Africa 'senza storia'. Fonti: Holl, McIntosh.",
+      "new_sources": [
+        {"citation": "Holl, A.F.C. 'Subsistence patterns of the Dhar Tichitt Neolithic, Mauritania', African Archaeological Review (1985)", "source_type": "academic", "url": null},
+        {"citation": "Holl, A.F.C. 'Coping with uncertainty: Neolithic life in the Dhar Tichitt-Walata, Mauritania (ca. 4000-2300 BP)', Comptes Rendus Geoscience (2009)", "source_type": "academic", "url": null},
+        {"citation": "McIntosh, R.J. The Peoples of the Middle Niger, Blackwell (1998)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 881, "name_original": "Ma-i", "label": "Ma-i", "confidence": 0.52, "status": "confirmed",
+      "ethical_notes_append": "[S54-enrich] ETHICS: polita' commerciale filippina precoloniale, prima attestata nei registri cinesi (971; Zhufan Zhi di Zhao Rugua, 1225) come confederazione di barangay senza stato centralizzato. Fonti: Scott (Barangay), Zhao Rugua (primaria).",
+      "new_sources": [
+        {"citation": "Scott, W.H. Barangay: Sixteenth-Century Philippine Culture and Society, Ateneo de Manila Univ. Press (1994)", "source_type": "academic", "url": null},
+        {"citation": "Zhao Rugua, Zhufan Zhi (Records of Foreign Peoples, 1225)", "source_type": "primary", "url": null}
+      ]
+    },
+    {
+      "id": 227, "name_original": "Misiones Guaraníes", "label": "Guaraní Missions", "confidence": 0.65, "status": "confirmed",
+      "ethical_notes_append": "[S54-enrich] ETHICS-002/008: riduzioni gesuitiche guaraní (1609-1768) — rifugio dai cacciatori di schiavi (bandeirantes paulisti) ma anche strumento di controllo coloniale. La Guerra Guaranitica (1754-56, contro il Trattato di Madrid) e l'espulsione dei gesuiti (1767) dispersero le comunita'. Fonti: Ganson, Sarreal.",
+      "new_sources": [
+        {"citation": "Ganson, B. The Guaraní Under Spanish Rule in the Río de la Plata, Stanford Univ. Press (2003)", "source_type": "academic", "url": null},
+        {"citation": "Sarreal, J. The Guaraní and Their Missions: A Socioeconomic History, Stanford Univ. Press (2014)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 312, "name_original": "Belau", "label": "Palau", "confidence": 0.55, "status": "confirmed",
+      "ethical_notes_append": "[S54-enrich] ETHICS: arcipelago di Palau, insediato ~3000 anni fa; societa' di clan matrilineari (bai, denaro-perla). Storia pre-contatto poco documentata (primo contatto europeo: naufragio di H. Wilson, 1783). Fonti: Hezel, Parmentier.",
+      "new_sources": [
+        {"citation": "Hezel, F.X. The First Taint of Civilization: A History of the Caroline and Marshall Islands in Pre-Colonial Days, 1521-1885, Univ. of Hawaii Press (1983)", "source_type": "academic", "url": null},
+        {"citation": "Parmentier, R.J. The Sacred Remains: Myth, History, and Polity in Belau, Univ. of Chicago Press (1987)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 297, "name_original": "Regnum Tonganum (Tu'i Ha'atakalaua)", "label": "Tu'i Ha'atakalaua (Tonga)", "confidence": 0.58, "status": "confirmed",
+      "ethical_notes_append": "[S54-enrich] ETHICS-001: linea Tu'i Ha'atakalaua, ramo amministrativo-secolare del sistema tripartito tongano (fondato ~XV sec. da Mo'ungamotu'a per gestire il governo quotidiano mentre il Tu'i Tonga divenne sacro). Chiefdom marittimo, unico nel Pacifico per l'aggregazione di un intero arcipelago. Fonti: Campbell, Kirch.",
+      "new_sources": [
+        {"citation": "Campbell, I.C. Island Kingdom: Tonga Ancient and Modern, Canterbury Univ. Press (1992)", "source_type": "academic", "url": null},
+        {"citation": "Kirch, P.V. The Evolution of the Polynesian Chiefdoms, Cambridge Univ. Press (1984)", "source_type": "academic", "url": null}
+      ]
+    }
+  ]
+}

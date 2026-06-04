@@ -10364,8 +10364,8 @@
     "capital_name": "Balkh (Bactra)",
     "capital_lat": 36.76,
     "capital_lon": 66.9,
-    "confidence_score": 0.4,
-    "status": "uncertain",
+    "confidence_score": 0.58,
+    "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -10507,7 +10507,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: The entity's self-designation is unknown. Greek form used as a conventional scholarly label; the rulers used Bactrian script (modified Greek alphabet) on their coinage. ETHICS-002: The Kushano-Sasanians represent the intersection of Iranian, Indian, and Hellenistic cultural traditions in Central Asia. Their coinage shows Hindu deities (Shiva, Nandi), Buddhist symbols, and Zoroastrian fire temples — evidence of remarkable religious pluralism. ETHICS-003: The entity is poorly attested; most knowledge comes from numismatics (coins). Boundaries and exact dates are highly uncertain.",
+    "ethical_notes": "ETHICS-001: The entity's self-designation is unknown. Greek form used as a conventional scholarly label; the rulers used Bactrian script (modified Greek alphabet) on their coinage. ETHICS-002: The Kushano-Sasanians represent the intersection of Iranian, Indian, and Hellenistic cultural traditions in Central Asia. Their coinage shows Hindu deities (Shiva, Nandi), Buddhist symbols, and Zoroastrian fire temples — evidence of remarkable religious pluralism. ETHICS-003: The entity is poorly attested; most knowledge comes from numismatics (coins). Boundaries and exact dates are highly uncertain.\n\n[S54-enrich] ETHICS: i Kushanshah, vicereame sasanide su Battriana e Gandhara (~230-365), fase di transizione tra impero kushana e sasanide; attestati soprattutto dalla numismatica. Fonti: Rezakhani, Cribb.",
     "name_variants": [
       {
         "name": "Kushano-Sasanian Kingdom",
@@ -10563,6 +10563,16 @@
       },
       {
         "citation": "Zeimal, E.V. 'The Kidarite Kingdom in Central Asia', in Litvinsky, B.A. (ed.) History of Civilizations of Central Asia, vol. 3 (1996)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Rezakhani, K. ReOrienting the Sasanians: East Iran in Late Antiquity, Edinburgh Univ. Press (2017)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Cribb, J. studies on Kushano-Sasanian coinage (British Museum / Studia Iranica)",
+        "url": null,
         "source_type": "academic"
       }
     ],

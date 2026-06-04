@@ -8,8 +8,8 @@
     "capital_name": "Mu'a",
     "capital_lat": -21.167,
     "capital_lon": -175.15,
-    "confidence_score": 0.45,
-    "status": "uncertain",
+    "confidence_score": 0.58,
+    "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -151,7 +151,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-007: The Tu'i Ha'atakalaua dynasty is known primarily through Tongan oral traditions, genealogies, and limited archaeological evidence from the Mu'a area. Confidence score is low because the exact founding date and succession of rulers are reconstructed from oral sources compiled centuries later. The dynasty's role as temporal administrators under the sacred Tu'i Tonga is a complex Polynesian political structure that does not map neatly onto European categories like 'kingdom'. European contact from the 17th century introduced biases in recording. Indigenous Tongan historiography should be privileged over colonial accounts.",
+    "ethical_notes": "ETHICS-007: The Tu'i Ha'atakalaua dynasty is known primarily through Tongan oral traditions, genealogies, and limited archaeological evidence from the Mu'a area. Confidence score is low because the exact founding date and succession of rulers are reconstructed from oral sources compiled centuries later. The dynasty's role as temporal administrators under the sacred Tu'i Tonga is a complex Polynesian political structure that does not map neatly onto European categories like 'kingdom'. European contact from the 17th century introduced biases in recording. Indigenous Tongan historiography should be privileged over colonial accounts.\n\n[S54-enrich] ETHICS-001: linea Tu'i Ha'atakalaua, ramo amministrativo-secolare del sistema tripartito tongano (fondato ~XV sec. da Mo'ungamotu'a per gestire il governo quotidiano mentre il Tu'i Tonga divenne sacro). Chiefdom marittimo, unico nel Pacifico per l'aggregazione di un intero arcipelago. Fonti: Campbell, Kirch.",
     "name_variants": [
       {
         "name": "Tu'i Ha'atakalaua dynasty",
@@ -220,6 +220,16 @@
       {
         "citation": "Tongan oral genealogies (ko e hohoko)",
         "source_type": "primary"
+      },
+      {
+        "citation": "Campbell, I.C. Island Kingdom: Tonga Ancient and Modern, Canterbury Univ. Press (1992)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Kirch, P.V. The Evolution of the Polynesian Chiefdoms, Cambridge Univ. Press (1984)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "approximate_circle"
@@ -14286,8 +14296,8 @@
     "capital_name": "Koror",
     "capital_lat": 7.3419,
     "capital_lon": 134.4792,
-    "confidence_score": 0.45,
-    "status": "uncertain",
+    "confidence_score": 0.55,
+    "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -14429,7 +14439,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-007: Palau (Belau) had a sophisticated dual-chieftainship system with the Ibedul of Koror and the Reklai of Melekeok as paramount chiefs. This complex governance, including the women's councils (mechesil) and the chiefly meeting house (bai), is often oversimplified in Western accounts. The monumental basalt terraces of Babeldaob predate European contact and indicate large-scale organized labor. Palau was subject to successive colonial regimes: Spain (1885-1899), Germany (1899-1914), Japan (1914-1944), and the United States (1944-1994). During WWII, the Battle of Peleliu (1944) was one of the bloodiest in the Pacific theater, devastating the small island and its people. Palau's 1979 constitution was the world's first to include a nuclear-free clause, which the US pressured Palau to amend for over a decade before the Compact of Free Association was approved in 1994.",
+    "ethical_notes": "ETHICS-007: Palau (Belau) had a sophisticated dual-chieftainship system with the Ibedul of Koror and the Reklai of Melekeok as paramount chiefs. This complex governance, including the women's councils (mechesil) and the chiefly meeting house (bai), is often oversimplified in Western accounts. The monumental basalt terraces of Babeldaob predate European contact and indicate large-scale organized labor. Palau was subject to successive colonial regimes: Spain (1885-1899), Germany (1899-1914), Japan (1914-1944), and the United States (1944-1994). During WWII, the Battle of Peleliu (1944) was one of the bloodiest in the Pacific theater, devastating the small island and its people. Palau's 1979 constitution was the world's first to include a nuclear-free clause, which the US pressured Palau to amend for over a decade before the Compact of Free Association was approved in 1994.\n\n[S54-enrich] ETHICS: arcipelago di Palau, insediato ~3000 anni fa; societa' di clan matrilineari (bai, denaro-perla). Storia pre-contatto poco documentata (primo contatto europeo: naufragio di H. Wilson, 1783). Fonti: Hezel, Parmentier.",
     "name_variants": [
       {
         "name": "Palau",
@@ -14506,6 +14516,16 @@
       {
         "citation": "Liston, J. & Tuggle, H.D. 'Prehistoric Warfare in Palau', in Arkush, E. & Allen, M. (eds.) The Archaeology of Warfare (2006)",
         "source_type": "archaeological"
+      },
+      {
+        "citation": "Hezel, F.X. The First Taint of Civilization: A History of the Caroline and Marshall Islands in Pre-Colonial Days, 1521-1885, Univ. of Hawaii Press (1983)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Parmentier, R.J. The Sacred Remains: Myth, History, and Polity in Belau, Univ. of Chicago Press (1987)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "approximate_circle"

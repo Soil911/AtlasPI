@@ -3610,8 +3610,8 @@
     "capital_name": "Ma-i (possibly Mindoro or Bay Laguna)",
     "capital_lat": 13.0,
     "capital_lon": 121.083,
-    "confidence_score": 0.35,
-    "status": "uncertain",
+    "confidence_score": 0.52,
+    "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -3753,7 +3753,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS: Ma-i (麻逸) is a pre-colonial Philippine polity attested from 971 CE in the Song Shi and Zhu Fan Zhi (1225) trade records, the earliest documented polity in the northern Philippine archipelago. Its exact location is contested: scholarly consensus oscillates between Mindoro, the shores of Laguna de Bay (home of the 900 CE Laguna Copperplate), and Bay in northern Palawan. Low confidence reflects this ambiguity, not the existence of the polity. Pre-Hispanic Philippine history is chronically underrepresented, partly because Spanish colonial historiography treated pre-1565 indigenous states as stateless societies — a framing contemporary archaeology has refuted.",
+    "ethical_notes": "ETHICS: Ma-i (麻逸) is a pre-colonial Philippine polity attested from 971 CE in the Song Shi and Zhu Fan Zhi (1225) trade records, the earliest documented polity in the northern Philippine archipelago. Its exact location is contested: scholarly consensus oscillates between Mindoro, the shores of Laguna de Bay (home of the 900 CE Laguna Copperplate), and Bay in northern Palawan. Low confidence reflects this ambiguity, not the existence of the polity. Pre-Hispanic Philippine history is chronically underrepresented, partly because Spanish colonial historiography treated pre-1565 indigenous states as stateless societies — a framing contemporary archaeology has refuted.\n\n[S54-enrich] ETHICS: polita' commerciale filippina precoloniale, prima attestata nei registri cinesi (971; Zhufan Zhi di Zhao Rugua, 1225) come confederazione di barangay senza stato centralizzato. Fonti: Scott (Barangay), Zhao Rugua (primaria).",
     "name_variants": [
       {
         "name": "麻逸 (Mo-i / Ma-yi)",
@@ -3812,6 +3812,16 @@
         "citation": "Wang Dayuan (汪大淵), Daoyi Zhilüe (島夷誌略 'A Brief Account of Island Barbarians'), 1349",
         "source_type": "primary",
         "url": null
+      },
+      {
+        "citation": "Scott, W.H. Barangay: Sixteenth-Century Philippine Culture and Society, Ateneo de Manila Univ. Press (1994)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Zhao Rugua, Zhufan Zhi (Records of Foreign Peoples, 1225)",
+        "url": null,
+        "source_type": "primary"
       }
     ],
     "boundary_source": "approximate_circle"

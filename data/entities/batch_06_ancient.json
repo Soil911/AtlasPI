@@ -2886,7 +2886,7 @@
     "capital_name": "Σαμόσατα (Samosata)",
     "capital_lat": 37.5833,
     "capital_lon": 38.5167,
-    "confidence_score": 0.55,
+    "confidence_score": 0.6,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -3029,7 +3029,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: Greek administrative name; the population was mixed Armenian, Syriac, and Greek. The royal dynasty claimed dual descent from Alexander the Great and the Achaemenid dynasty — a conscious syncretic identity. ETHICS-003: Commagene is exceptionally well-known for the monumental sanctuary at Nemrud Dagi (Mount Nemrut), a UNESCO World Heritage Site, built by Antiochus I. The syncretism of Greek and Persian religion visible there is historically significant. Boundary da aourednik/historical-basemaps (-1, strategy=capital_in_polygon, precision=1). CC BY 4.0.\n\n[v6.7.2] boundary precedente era un mismatch geografico (polygon >10x l'estensione storica attesa). Sostituito con name_seeded_boundary ancorato alla capital. Vedi ETHICS-006.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=2032km / edge=0km from capital (exceeded thresholds). Regenerated as 200.0km radius circle.",
+    "ethical_notes": "ETHICS-001: Greek administrative name; the population was mixed Armenian, Syriac, and Greek. The royal dynasty claimed dual descent from Alexander the Great and the Achaemenid dynasty — a conscious syncretic identity. ETHICS-003: Commagene is exceptionally well-known for the monumental sanctuary at Nemrud Dagi (Mount Nemrut), a UNESCO World Heritage Site, built by Antiochus I. The syncretism of Greek and Persian religion visible there is historically significant. Boundary da aourednik/historical-basemaps (-1, strategy=capital_in_polygon, precision=1). CC BY 4.0.\n\n[v6.7.2] boundary precedente era un mismatch geografico (polygon >10x l'estensione storica attesa). Sostituito con name_seeded_boundary ancorato alla capital. Vedi ETHICS-006.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=2032km / edge=0km from capital (exceeded thresholds). Regenerated as 200.0km radius circle.\n\n[S54-enrich] ETHICS: regno greco-iranico (Antioco I Teos, ~-69), sincretismo ellenistico-persiano monumentalizzato nel hierothesion del Nemrut Dağı. Fonti: Sullivan, Versluys.",
     "name_variants": [
       {
         "name": "Commagene",
@@ -3098,6 +3098,16 @@
       {
         "citation": "Nemrud Dagi inscriptions (Antiochus I Nomos inscription)",
         "source_type": "primary"
+      },
+      {
+        "citation": "Sullivan, R.D. Near Eastern Royalty and Rome, 100-30 BC, Univ. of Toronto Press (1990)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Versluys, M.J. Visual Style and Constructing Identity in the Hellenistic World: Nemrud Dağ and Commagene under Antiochos I, Cambridge Univ. Press (2017)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "approximate_circle",

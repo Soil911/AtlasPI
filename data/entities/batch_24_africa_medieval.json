@@ -7606,9 +7606,9 @@
         ]
       ]
     },
-    "confidence_score": 0.863,
-    "status": "uncertain",
-    "ethical_notes": "The Imbangala (also known as Jaga) were itinerant warrior bands in Central Africa who became deeply entangled with the Portuguese slave trade. Their origins are debated: some scholars see them as displaced peoples from the Lunda diaspora, others as an ideologically-driven military movement. The Imbangala practiced extreme rituals including reported cannibalism and infanticide, though the extent to which these accounts reflect reality versus Portuguese propaganda is disputed. They were instrumental in the Portuguese conquest of Ndongo and the expansion of the Angolan slave trade, serving as intermediaries and raiders. The kingdom of Kasanje, founded by Imbangala leader Kasanje ka Imba around 1630, became a major slave-trading polity. Representing the Imbangala requires acknowledging both their agency as historical actors and the devastating role they played in the slave trade, without reducing them to colonial stereotypes of African savagery. Boundary da aourednik/historical-basemaps (1650, strategy=fuzzy_name, precision=3). CC BY 4.0.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=11354km / edge=11552km from capital (exceeded thresholds). Regenerated as 250.0km radius circle.",
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "ethical_notes": "The Imbangala (also known as Jaga) were itinerant warrior bands in Central Africa who became deeply entangled with the Portuguese slave trade. Their origins are debated: some scholars see them as displaced peoples from the Lunda diaspora, others as an ideologically-driven military movement. The Imbangala practiced extreme rituals including reported cannibalism and infanticide, though the extent to which these accounts reflect reality versus Portuguese propaganda is disputed. They were instrumental in the Portuguese conquest of Ndongo and the expansion of the Angolan slave trade, serving as intermediaries and raiders. The kingdom of Kasanje, founded by Imbangala leader Kasanje ka Imba around 1630, became a major slave-trading polity. Representing the Imbangala requires acknowledging both their agency as historical actors and the devastating role they played in the slave trade, without reducing them to colonial stereotypes of African savagery. Boundary da aourednik/historical-basemaps (1650, strategy=fuzzy_name, precision=3). CC BY 4.0.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=11354km / edge=11552km from capital (exceeded thresholds). Regenerated as 250.0km radius circle.\n\n[S54-enrich] ETHICS-007: bande guerriere imbangala (i 'Jaga') dell'Angola orientale, centrali nella tratta atlantica degli schiavi; il regno di Kasanje fu un grande intermediario di schiavi verso il Brasile. Documentano la violenza del sistema schiavista mercantile (Miller, 'Way of Death'). Fonti: Miller, Thornton.",
     "name_variants": [
       {
         "name": "Imbangala",
@@ -7667,6 +7667,16 @@
         "citation": "Thornton, John K. 'A Resurrection for the Jaga.' Cahiers d'Études Africaines 18, no. 69/70 (1978): 223–227",
         "source_type": "academic",
         "url": null
+      },
+      {
+        "citation": "Miller, J.C. Way of Death: Merchant Capitalism and the Angolan Slave Trade, 1730-1830, Univ. of Wisconsin Press (1988)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Thornton, J.K. Africa and Africans in the Making of the Atlantic World, 1400-1800, Cambridge Univ. Press (1998)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "approximate_circle",

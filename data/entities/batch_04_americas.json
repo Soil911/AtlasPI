@@ -135455,7 +135455,7 @@
     "capital_name": null,
     "capital_lat": -27.25,
     "capital_lon": -55.5,
-    "confidence_score": 0.7,
+    "confidence_score": 0.65,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -135598,7 +135598,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-003: The Guarani Jesuit Missions present a complex ethical case. On one hand, they protected Guarani peoples from the worst abuses of colonial slave-raiders (bandeirantes). On the other, they imposed European religious conversion and cultural transformation. The missions combined Guarani communal traditions with Jesuit organization. At their height, approximately 140,000 Guarani lived in 30 missions. The Guarani were armed to defend against slave raids — an unusual case of indigenous-European military cooperation. ETHICS-002: The expulsion of the Jesuits (1767) left the Guarani vulnerable to exploitation. The ruins are now UNESCO World Heritage Sites in Argentina, Brazil, and Paraguay. Boundary da aourednik/historical-basemaps (1700, strategy=capital_in_polygon, precision=3). CC BY 4.0.\n\n[v6.7.2] boundary precedente era un mismatch geografico (polygon >10x l'estensione storica attesa). Sostituito con name_seeded_boundary ancorato alla capital. Vedi ETHICS-006.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=1721km / edge=0km from capital (exceeded thresholds). Regenerated as 250.0km radius circle.",
+    "ethical_notes": "ETHICS-003: The Guarani Jesuit Missions present a complex ethical case. On one hand, they protected Guarani peoples from the worst abuses of colonial slave-raiders (bandeirantes). On the other, they imposed European religious conversion and cultural transformation. The missions combined Guarani communal traditions with Jesuit organization. At their height, approximately 140,000 Guarani lived in 30 missions. The Guarani were armed to defend against slave raids — an unusual case of indigenous-European military cooperation. ETHICS-002: The expulsion of the Jesuits (1767) left the Guarani vulnerable to exploitation. The ruins are now UNESCO World Heritage Sites in Argentina, Brazil, and Paraguay. Boundary da aourednik/historical-basemaps (1700, strategy=capital_in_polygon, precision=3). CC BY 4.0.\n\n[v6.7.2] boundary precedente era un mismatch geografico (polygon >10x l'estensione storica attesa). Sostituito con name_seeded_boundary ancorato alla capital. Vedi ETHICS-006.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=1721km / edge=0km from capital (exceeded thresholds). Regenerated as 250.0km radius circle.\n\n[S54-enrich] ETHICS-002/008: riduzioni gesuitiche guaraní (1609-1768) — rifugio dai cacciatori di schiavi (bandeirantes paulisti) ma anche strumento di controllo coloniale. La Guerra Guaranitica (1754-56, contro il Trattato di Madrid) e l'espulsione dei gesuiti (1767) dispersero le comunita'. Fonti: Ganson, Sarreal.",
     "name_variants": [
       {
         "name": "Jesuit Missions of the Guaranis",
@@ -135666,6 +135666,16 @@
         "citation": "Sarreal, J.M. The Guarani and Their Missions (2014), Stanford University Press",
         "source_type": "academic",
         "url": null
+      },
+      {
+        "citation": "Ganson, B. The Guaraní Under Spanish Rule in the Río de la Plata, Stanford Univ. Press (2003)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Sarreal, J. The Guaraní and Their Missions: A Socioeconomic History, Stanford Univ. Press (2014)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "approximate_circle",

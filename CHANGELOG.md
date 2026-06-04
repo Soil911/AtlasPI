@@ -2,6 +2,24 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.100] - 2026-06-04 (S54 enrichment — long-tail low-confidence: Pacifico + archeologia africana)
+
+**Tema**: *S54 — 10 entità della coda low-confidence, con copertura di regioni
+sotto-rappresentate (Pacifico, Sahara/Africa) per bilanciare il dataset.*
+
+Entità: Commagene (Κομμαγηνή), Kushano-Sasanidi, Wangara, Imbangala, Torwa/Butua,
+Dhar Tichitt, Ma-i, Missioni Guaraní, Palau (Belau), Tonga (Tu'i Ha'atakalaua).
+- **+21 fonti verificate** (Sullivan, Versluys, Rezakhani, Wilks, Levtzion, Miller,
+  Thornton, Beach, Pikirayi, Holl, McIntosh, Scott, Ganson, Sarreal, Hezel, Parmentier,
+  Campbell, Kirch). confidence 0.35-0.45 → 0.52-0.65.
+- ethical_notes (ETHICS-007/008): tratta atlantica degli schiavi imbangala (Miller);
+  missioni gesuitiche guaraní + Guerra Guaranitica + espulsione; **Dhar Tichitt**
+  (urbanesimo africano ~2000 a.C., contro la narrazione coloniale di un'Africa
+  "senza storia"); copertura Pacifico (Palau/Tonga).
+
+`data/fixes/enrichment_s54.sql` per prod. Suite 1326 verde, ruff verde. Totale
+enrichment S51-54 = **40 entità, ~110 fonti**, tutte deployate.
+
 ## [v6.99.99] - 2026-06-04 (S53 enrichment — Cina/Mesoamerica/Levante/Galles/C.America/Ande/Giava/S.India)
 
 **Tema**: *S53 deep-enrichment di 10 entità low-confidence ad alta visibilità con

@@ -1141,7 +1141,7 @@
     "capital_lat": 12.0,
     "capital_lon": -9.5,
     "confidence_score": 0.55,
-    "status": "uncertain",
+    "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -1283,7 +1283,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS: 'Wangara' in Arabic sources designates the gold-producing region and the Mande-speaking (Soninke/Malinke/Dyula) merchant network that operated the trans-Saharan gold trade. Wangara is not a unified state — it's a merchant diaspora and source-area that shaped political formations from Ghana to Mali to the Hausa states. Arab geographers (al-Bakri, al-Idrisi, Ibn Battuta) wrote extensively about 'Wangara gold' without understanding its source. Indigenous mining communities deliberately maintained secrecy about mine locations (Bure in modern Guinea, Bambuk on the Senegal-Faleme). Confidence is moderate because 'Wangara' was simultaneously a region, an ethnonym, and a network rather than a bounded polity — any entity record is an approximation. Boundary da aourednik/historical-basemaps (1100, strategy=capital_in_polygon, precision=1). CC BY 4.0.",
+    "ethical_notes": "ETHICS: 'Wangara' in Arabic sources designates the gold-producing region and the Mande-speaking (Soninke/Malinke/Dyula) merchant network that operated the trans-Saharan gold trade. Wangara is not a unified state — it's a merchant diaspora and source-area that shaped political formations from Ghana to Mali to the Hausa states. Arab geographers (al-Bakri, al-Idrisi, Ibn Battuta) wrote extensively about 'Wangara gold' without understanding its source. Indigenous mining communities deliberately maintained secrecy about mine locations (Bure in modern Guinea, Bambuk on the Senegal-Faleme). Confidence is moderate because 'Wangara' was simultaneously a region, an ethnonym, and a network rather than a bounded polity — any entity record is an approximation. Boundary da aourednik/historical-basemaps (1100, strategy=capital_in_polygon, precision=1). CC BY 4.0.\n\n[S54-enrich] ETHICS: rete di mercanti-studiosi soninke/juula (dyula) del commercio dell'oro transahariano e della diffusione dell'Islam in Africa occidentale — NON uno stato territoriale ma una diaspora commerciale. Fonti: Wilks (J. African History), Levtzion.",
     "name_variants": [
       {
         "name": "Wangara",
@@ -1338,6 +1338,16 @@
         "citation": "Lovejoy, Paul E. 'The Role of the Wangara in the Economic Transformation of the Central Sudan in the Fifteenth and Sixteenth Centuries.' Journal of African History 19, no. 2 (1978): 173-193",
         "source_type": "academic",
         "url": null
+      },
+      {
+        "citation": "Wilks, I. 'Wangara, Akan and Portuguese in the Fifteenth and Sixteenth Centuries', Journal of African History (1982)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Levtzion, N. Ancient Ghana and Mali, Methuen (1973)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "approximate_circle",
@@ -5662,7 +5672,7 @@
     "capital_name": "Dakhlet el Atrouss",
     "capital_lat": 18.49,
     "capital_lon": -9.75,
-    "confidence_score": 0.55,
+    "confidence_score": 0.6,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -5805,7 +5815,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS: The Tichitt Tradition (roughly 2000-300 BCE) is one of the earliest complex societies in West Africa, pre-dating Djenne-Djeno by a millennium. Drystone-walled villages along the Tichitt-Oualata escarpment in southeastern Mauritania demonstrate sedentary cereal agriculture (Pennisetum glaucum / pearl millet — one of the earliest domesticated African cereals here), social hierarchy, and long-distance exchange. Excavations by Patrick Munson and Augustin Holl established a four-phase sequence culminating in the Dakhlet el Atrouss phase (c.1100-400 BCE) with possibly proto-urban settlements of ~10,000 population. ETHICS: the Tichitt Tradition is direct ancestor to the Soninke and Wagadou — an indigenous West African trajectory of state formation with no external stimulus. It dismantles the colonial-era claim that sub-Saharan urbanism required Berber or Arab influence. Boundary da aourednik/historical-basemaps (-1000, strategy=capital_in_polygon, precision=1). CC BY 4.0.",
+    "ethical_notes": "ETHICS: The Tichitt Tradition (roughly 2000-300 BCE) is one of the earliest complex societies in West Africa, pre-dating Djenne-Djeno by a millennium. Drystone-walled villages along the Tichitt-Oualata escarpment in southeastern Mauritania demonstrate sedentary cereal agriculture (Pennisetum glaucum / pearl millet — one of the earliest domesticated African cereals here), social hierarchy, and long-distance exchange. Excavations by Patrick Munson and Augustin Holl established a four-phase sequence culminating in the Dakhlet el Atrouss phase (c.1100-400 BCE) with possibly proto-urban settlements of ~10,000 population. ETHICS: the Tichitt Tradition is direct ancestor to the Soninke and Wagadou — an indigenous West African trajectory of state formation with no external stimulus. It dismantles the colonial-era claim that sub-Saharan urbanism required Berber or Arab influence. Boundary da aourednik/historical-basemaps (-1000, strategy=capital_in_polygon, precision=1). CC BY 4.0.\n\n[S54-enrich] ETHICS: cultura di Dhar Tichitt (Mauritania, ~2000 a.C.), comunita' agro-pastorali proto-soninke, tra i piu' antichi insediamenti urbani dell'Africa subsahariana e precursore dell'Impero del Ghana — contrasta la narrazione coloniale di un'Africa 'senza storia'. Fonti: Holl, McIntosh.",
     "name_variants": [
       {
         "name": "Tichitt Tradition",
@@ -5849,6 +5859,21 @@
         "citation": "MacDonald, Kevin C. 'The Tichitt Tradition in the West African Sahel.' In Archaeology of African Plant Use, 79-91. Walnut Creek, CA: Left Coast Press, 2014",
         "source_type": "academic",
         "url": null
+      },
+      {
+        "citation": "Holl, A.F.C. 'Subsistence patterns of the Dhar Tichitt Neolithic, Mauritania', African Archaeological Review (1985)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Holl, A.F.C. 'Coping with uncertainty: Neolithic life in the Dhar Tichitt-Walata, Mauritania (ca. 4000-2300 BP)', Comptes Rendus Geoscience (2009)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "McIntosh, R.J. The Peoples of the Middle Niger, Blackwell (1998)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "approximate_circle",
