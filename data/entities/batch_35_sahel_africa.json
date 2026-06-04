@@ -1354,7 +1354,7 @@
     "capital_name": "Soso",
     "capital_lat": 11.3,
     "capital_lon": -10.2,
-    "confidence_score": 0.55,
+    "confidence_score": 0.58,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -1389,7 +1389,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS: The Sosso kingdom under Sumanguru Kante (Soumaoro in Mande epic) briefly filled the vacuum left by Wagadou's decline, dominating the Middle Niger area c.1200-1235. Sumanguru is the villain of the Sundiata epic — the sorcerer-king defeated at the Battle of Kirina (1235) by Sundiata Keita, which founded Mali. Sources are almost entirely the Mande oral epic tradition (jeli/griot) and later Arabic accounts derived from it; archaeology is very thin. Western historiography long either ignored Sosso or treated the Sundiata epic as fable. Current scholarship (Conrad, Jansen) treats the epic as structured historical memory with a genuine political core. The Sosso were Soninke (same people as Wagadou) but of the Kante clan, traditionally smiths and sorcerers. Boundary da aourednik/historical-basemaps (1200, strategy=capital_in_polygon, precision=1). CC BY 4.0.",
+    "ethical_notes": "ETHICS: The Sosso kingdom under Sumanguru Kante (Soumaoro in Mande epic) briefly filled the vacuum left by Wagadou's decline, dominating the Middle Niger area c.1200-1235. Sumanguru is the villain of the Sundiata epic — the sorcerer-king defeated at the Battle of Kirina (1235) by Sundiata Keita, which founded Mali. Sources are almost entirely the Mande oral epic tradition (jeli/griot) and later Arabic accounts derived from it; archaeology is very thin. Western historiography long either ignored Sosso or treated the Sundiata epic as fable. Current scholarship (Conrad, Jansen) treats the epic as structured historical memory with a genuine political core. The Sosso were Soninke (same people as Wagadou) but of the Kante clan, traditionally smiths and sorcerers. Boundary da aourednik/historical-basemaps (1200, strategy=capital_in_polygon, precision=1). CC BY 4.0.\n\n[S52-enrich] ETHICS-008: regno Soninke/Sosso di Sumanguru (Soumaoro) Kante, sorto dal vuoto lasciato dal Ghana; sconfitto da Sundiata Keita a Kirina (~1235) -> nascita dell'Impero del Mali. La fonte primaria e' l'epica orale mande di Sundiata, narrazione DEI VINCITORI (Sumanguru dipinto come re-stregone tiranno) — da trattare come tradizione, non cronaca neutrale. Fonti: Niane (epica), Levtzion, Conrad.",
     "name_variants": [
       {
         "name": "Sosso Kingdom",
@@ -1449,6 +1449,21 @@
         "citation": "Jansen, Jan. 'The Sunjata Epic — the Ultimate Version.' Research in African Literatures 32, no. 1 (2001): 14-46",
         "source_type": "academic",
         "url": null
+      },
+      {
+        "citation": "Niane, D.T. Sundiata: An Epic of Old Mali (trans. G.D. Pickett), Longmans (1965)",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Levtzion, N. Ancient Ghana and Mali, Methuen (1973)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Conrad, D.C. Empires of Medieval West Africa: Ghana, Mali, and Songhay, Facts on File (2005)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "historical_approximation",
@@ -25811,9 +25826,9 @@
     "year_start": 1200,
     "year_end": 1400,
     "capital_name": "Uri",
-    "capital_lat": 14.14,
-    "capital_lon": 23.7,
-    "confidence_score": 0.24999999999999997,
+    "capital_lat": 12.7,
+    "capital_lon": 24.2,
+    "confidence_score": 0.45,
     "status": "uncertain",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -25821,34 +25836,158 @@
         [
           [
             [
-              22.5,
-              15.5
+              25.30501,
+              12.7
             ],
             [
-              26.0,
-              15.5
+              25.28822,
+              12.88719
             ],
             [
-              26.3,
-              12.0
+              25.23837,
+              13.06869
             ],
             [
-              23.0,
-              11.0
+              25.15696,
+              13.23899
             ],
             [
-              21.5,
-              13.0
+              25.04649,
+              13.39291
             ],
             [
-              22.5,
-              15.5
+              24.91029,
+              13.52578
+            ],
+            [
+              24.7525,
+              13.63355
+            ],
+            [
+              24.57793,
+              13.71296
+            ],
+            [
+              24.39188,
+              13.7616
+            ],
+            [
+              24.2,
+              13.77797
+            ],
+            [
+              24.00812,
+              13.7616
+            ],
+            [
+              23.82207,
+              13.71296
+            ],
+            [
+              23.6475,
+              13.63355
+            ],
+            [
+              23.48971,
+              13.52578
+            ],
+            [
+              23.35351,
+              13.39291
+            ],
+            [
+              23.24304,
+              13.23899
+            ],
+            [
+              23.16163,
+              13.06869
+            ],
+            [
+              23.11178,
+              12.88719
+            ],
+            [
+              23.09499,
+              12.7
+            ],
+            [
+              23.11178,
+              12.51281
+            ],
+            [
+              23.16163,
+              12.33131
+            ],
+            [
+              23.24304,
+              12.16101
+            ],
+            [
+              23.35351,
+              12.00709
+            ],
+            [
+              23.48971,
+              11.87422
+            ],
+            [
+              23.6475,
+              11.76645
+            ],
+            [
+              23.82207,
+              11.68704
+            ],
+            [
+              24.00812,
+              11.6384
+            ],
+            [
+              24.2,
+              11.62203
+            ],
+            [
+              24.39188,
+              11.6384
+            ],
+            [
+              24.57793,
+              11.68704
+            ],
+            [
+              24.7525,
+              11.76645
+            ],
+            [
+              24.91029,
+              11.87422
+            ],
+            [
+              25.04649,
+              12.00709
+            ],
+            [
+              25.15696,
+              12.16101
+            ],
+            [
+              25.23837,
+              12.33131
+            ],
+            [
+              25.28822,
+              12.51281
+            ],
+            [
+              25.30501,
+              12.7
             ]
           ]
         ]
       ]
     },
-    "ethical_notes": "ETHICS: The Daju were the first state-forming people of Darfur (western Sudan), preceding the Tunjur and then the Keira Sultanate covered by existing DB 'Saltanat Dar Fur'. Oral traditions (Macmichael, O'Fahey) place the Daju c.1200-1400. The capital Uri is an archaeological site with stone ruins. Very low confidence because nearly all sources are 19th-20th c. oral tradition retrojected. ETHICS: including this documents pre-Keira political life in Darfur, a historiographically marginalized region. If ingest finds evidence too thin, skip.",
+    "ethical_notes": "ETHICS: The Daju were the first state-forming people of Darfur (western Sudan), preceding the Tunjur and then the Keira Sultanate covered by existing DB 'Saltanat Dar Fur'. Oral traditions (Macmichael, O'Fahey) place the Daju c.1200-1400. The capital Uri is an archaeological site with stone ruins. Very low confidence because nearly all sources are 19th-20th c. oral tradition retrojected. ETHICS: including this documents pre-Keira political life in Darfur, a historiographically marginalized region. If ingest finds evidence too thin, skip.\n\n[S52-enrich] ETHICS-014 / suggestion #82: i Daju (primo regno noto del Darfur, ~1200-1400) e i loro successori Tunjur condividevano un poligono identico — bug risolto dando cerchi distinti attorno a capitali distinte e sourcedate (i Daju nel Jebel Marra MERIDIONALE, dove il sultano Ahmed el-Daj trasferi' la capitale ~1100; O'Fahey). Documentazione scarsa: confidence tenuta a 0.45 (status uncertain) per onesta'. Fonti: O'Fahey & Spaulding, O'Fahey 2008, Arkell.",
     "name_variants": [
       {
         "name": "Daju Kingdom",
@@ -25884,9 +26023,28 @@
         "citation": "Macmichael, Harold A. A History of the Arabs in the Sudan. 2 vols. Cambridge: Cambridge University Press, 1922",
         "source_type": "primary",
         "url": null
+      },
+      {
+        "citation": "O'Fahey, R.S. & Spaulding, J.L. Kingdoms of the Sudan, Methuen (1974)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "O'Fahey, R.S. The Darfur Sultanate: A History, Hurst / Columbia Univ. Press (2008)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Arkell, A.J. 'The History of Darfur 1200-1700 A.D.', Sudan Notes and Records (1951-52)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
-    "boundary_source": "historical_approximation"
+    "boundary_source": "approximate_circle",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null
   },
   {
     "name_original": "التنجر",
@@ -25895,44 +26053,168 @@
     "year_start": 1400,
     "year_end": 1640,
     "capital_name": "Uri",
-    "capital_lat": 14.14,
-    "capital_lon": 23.7,
-    "confidence_score": 0.55,
-    "status": "uncertain",
+    "capital_lat": 14.5,
+    "capital_lon": 24.4,
+    "confidence_score": 0.62,
+    "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
       "coordinates": [
         [
           [
             [
-              22.5,
-              15.5
+              25.51344,
+              14.5
             ],
             [
-              26.0,
-              15.5
+              25.49652,
+              14.68719
             ],
             [
-              26.3,
-              12.0
+              25.44629,
+              14.86869
             ],
             [
-              23.0,
-              11.0
+              25.36427,
+              15.03899
             ],
             [
-              21.5,
-              13.0
+              25.25294,
+              15.19291
             ],
             [
-              22.5,
-              15.5
+              25.1157,
+              15.32578
+            ],
+            [
+              24.95672,
+              15.43355
+            ],
+            [
+              24.78082,
+              15.51296
+            ],
+            [
+              24.59335,
+              15.5616
+            ],
+            [
+              24.4,
+              15.57797
+            ],
+            [
+              24.20665,
+              15.5616
+            ],
+            [
+              24.01918,
+              15.51296
+            ],
+            [
+              23.84328,
+              15.43355
+            ],
+            [
+              23.6843,
+              15.32578
+            ],
+            [
+              23.54706,
+              15.19291
+            ],
+            [
+              23.43573,
+              15.03899
+            ],
+            [
+              23.35371,
+              14.86869
+            ],
+            [
+              23.30348,
+              14.68719
+            ],
+            [
+              23.28656,
+              14.5
+            ],
+            [
+              23.30348,
+              14.31281
+            ],
+            [
+              23.35371,
+              14.13131
+            ],
+            [
+              23.43573,
+              13.96101
+            ],
+            [
+              23.54706,
+              13.80709
+            ],
+            [
+              23.6843,
+              13.67422
+            ],
+            [
+              23.84328,
+              13.56645
+            ],
+            [
+              24.01918,
+              13.48704
+            ],
+            [
+              24.20665,
+              13.4384
+            ],
+            [
+              24.4,
+              13.42203
+            ],
+            [
+              24.59335,
+              13.4384
+            ],
+            [
+              24.78082,
+              13.48704
+            ],
+            [
+              24.95672,
+              13.56645
+            ],
+            [
+              25.1157,
+              13.67422
+            ],
+            [
+              25.25294,
+              13.80709
+            ],
+            [
+              25.36427,
+              13.96101
+            ],
+            [
+              25.44629,
+              14.13131
+            ],
+            [
+              25.49652,
+              14.31281
+            ],
+            [
+              25.51344,
+              14.5
             ]
           ]
         ]
       ]
     },
-    "ethical_notes": "ETHICS: The Tunjur were the second state-forming people of Darfur, ruling c.1400-1640 before being overthrown by the Keira (existing DB entity 'Saltanat Dar Fur'). Semi-legendary dynasty with origins disputed (Arab genealogies claim Banu Hilal descent; more likely a local Darfuri confederation with Arabization of ruling lineage). Their capital was also at Uri, with the Tunjur building the stone ruins still visible. Low confidence but better-attested than the Daju. Boundary da aourednik/historical-basemaps (1530, strategy=capital_in_polygon, precision=1). CC BY 4.0.",
+    "ethical_notes": "ETHICS: The Tunjur were the second state-forming people of Darfur, ruling c.1400-1640 before being overthrown by the Keira (existing DB entity 'Saltanat Dar Fur'). Semi-legendary dynasty with origins disputed (Arab genealogies claim Banu Hilal descent; more likely a local Darfuri confederation with Arabization of ruling lineage). Their capital was also at Uri, with the Tunjur building the stone ruins still visible. Low confidence but better-attested than the Daju. Boundary da aourednik/historical-basemaps (1530, strategy=capital_in_polygon, precision=1). CC BY 4.0.\n\n[S52-enrich] ETHICS-014 / suggestion #82: confine ora differenziato dai Daju — capitale dei Tunjur a Uri poi Ain Farah (Furnung Hills, ~130km a NO di El Fasher, Darfur SETTENTRIONALE; O'Fahey). I Tunjur (~1400-1640) sostituirono i Daju prima dell'ascesa del sultanato Keira/Fur. Fonti: O'Fahey & Spaulding, O'Fahey 2008.",
     "name_variants": [
       {
         "name": "Tunjur Sultanate",
@@ -25975,11 +26257,22 @@
         "citation": "Arkell, Anthony J. 'The History of Darfur 1200-1700 A.D.' Sudan Notes and Records 32 (1951): 37-70, 207-238; 33 (1952): 129-155, 244-275",
         "source_type": "academic",
         "url": null
+      },
+      {
+        "citation": "O'Fahey, R.S. & Spaulding, J.L. Kingdoms of the Sudan, Methuen (1974)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "O'Fahey, R.S. The Darfur Sultanate: A History, Hurst / Columbia Univ. Press (2008)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
-    "boundary_source": "historical_approximation",
+    "boundary_source": "approximate_circle",
     "boundary_aourednik_name": null,
     "boundary_aourednik_year": null,
-    "boundary_aourednik_precision": 1
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null
   }
 ]

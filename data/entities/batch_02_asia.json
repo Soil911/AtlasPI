@@ -30157,7 +30157,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: il nome originale e' in mongolo (Zuungar/Dzungar, 'mano sinistra'). Gli Dzungari erano mongoli Oirati. ETHICS-002: il genocidio degli Dzungari perpetrato dalla dinastia Qing (1755-1758) e' uno degli episodi piu' gravi della storia dell'Asia Centrale. Circa il 80% della popolazione Dzungara fu sterminata — circa 500.000-800.000 persone. Questo va documentato come genocidio. ETHICS-003: il genocidio Dzungaro e' un precedente storico significativo nella regione dello Xinjiang/Turkestan Orientale. La sostituzione demografica e' un fatto documentato. Boundary da aourednik/historical-basemaps (1700, strategy=capital_in_polygon, precision=3). CC BY 4.0.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=1659km / edge=0km from capital (exceeded thresholds). Regenerated as 500.0km radius circle.",
+    "ethical_notes": "ETHICS-001: il nome originale e' in mongolo (Zuungar/Dzungar, 'mano sinistra'). Gli Dzungari erano mongoli Oirati. ETHICS-002: il genocidio degli Dzungari perpetrato dalla dinastia Qing (1755-1758) e' uno degli episodi piu' gravi della storia dell'Asia Centrale. Circa il 80% della popolazione Dzungara fu sterminata — circa 500.000-800.000 persone. Questo va documentato come genocidio. ETHICS-003: il genocidio Dzungaro e' un precedente storico significativo nella regione dello Xinjiang/Turkestan Orientale. La sostituzione demografica e' un fatto documentato. Boundary da aourednik/historical-basemaps (1700, strategy=capital_in_polygon, precision=3). CC BY 4.0.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=1659km / edge=0km from capital (exceeded thresholds). Regenerated as 500.0km radius circle.\n\n[S52-enrich] ETHICS-007: ultimo grande impero nomade (oirati, 1634-1755). La conquista Qing culmino' nel GENOCIDIO DEGLI DZUNGARI (1755-1758): il Qianlong ordino' di 'non mostrare pieta''; il 70-80% di ~600.000 Dzungari fu sterminato (≈40% vaiolo, 20% fuga in Russia, 30% uccisi dall'esercito — Wei Yuan citato da Perdue). Perdue: i Dzungari 'scomparvero come stato e come popolo'. NON eufemizzare. Fonti: Perdue (Harvard), Millward.",
     "name_variants": [
       {
         "name": "Dzungar Khanate",
@@ -30222,6 +30222,16 @@
       {
         "citation": "Qing Shilu (Annali Veritieri dei Qing), capitoli sull'imperatore Qianlong",
         "source_type": "primary"
+      },
+      {
+        "citation": "Perdue, P.C. China Marches West: The Qing Conquest of Central Eurasia, Harvard Univ. Press (2005)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Millward, J.A. Eurasian Crossroads: A History of Xinjiang, Columbia Univ. Press (2007)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "historical_approximation",

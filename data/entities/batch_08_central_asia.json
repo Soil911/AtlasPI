@@ -11445,8 +11445,8 @@
     "capital_name": "Samarkand (Marakanda)",
     "capital_lat": 39.65,
     "capital_lon": 66.96,
-    "confidence_score": 0.45,
-    "status": "uncertain",
+    "confidence_score": 0.65,
+    "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -11480,7 +11480,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: name_original in both Greek (Σογδιανή, from Achaemenid-era sources) and Arabic (سغد, from Islamic-era sources). The Sogdian language is an extinct Eastern Iranian language known from manuscript fragments and inscriptions. ETHICS-002: Sogdiana was never a unified state but rather a network of city-states (Samarkand, Bukhara, Panjikent, etc.) connected by trade. Representing it as a single entity is a scholarly convenience. The Sogdians were the paramount merchant people of the Silk Road — their commercial network stretched from Constantinople to Chang'an. ETHICS-003: The Arab conquest of Sogdiana (early 8th century) under Qutayba ibn Muslim involved massive destruction, forced conversions, and the suppression of Zoroastrian, Buddhist, Manichaean, and Christian religious traditions. The destruction of Panjikent's murals and the loss of Sogdian literature represent a major cultural erasure.",
+    "ethical_notes": "ETHICS-001: name_original in both Greek (Σογδιανή, from Achaemenid-era sources) and Arabic (سغد, from Islamic-era sources). The Sogdian language is an extinct Eastern Iranian language known from manuscript fragments and inscriptions. ETHICS-002: Sogdiana was never a unified state but rather a network of city-states (Samarkand, Bukhara, Panjikent, etc.) connected by trade. Representing it as a single entity is a scholarly convenience. The Sogdians were the paramount merchant people of the Silk Road — their commercial network stretched from Constantinople to Chang'an. ETHICS-003: The Arab conquest of Sogdiana (early 8th century) under Qutayba ibn Muslim involved massive destruction, forced conversions, and the suppression of Zoroastrian, Buddhist, Manichaean, and Christian religious traditions. The destruction of Panjikent's murals and the loss of Sogdian literature represent a major cultural erasure.\n\n[S52-enrich] ETHICS: confederazione di citta'-stato iraniche (Samarcanda, Bukhara), rete mercantile dominante della Via della Seta (IV-VIII sec.); il sogdiano fu lingua franca del commercio asiatico. Fonti: de la Vaissière (Brill), Hansen, Smithsonian 'The Sogdians'.",
     "name_variants": [
       {
         "name": "Sogdiana",
@@ -11565,6 +11565,21 @@
       {
         "citation": "al-Tabari. Tarikh al-Rusul wa'l-Muluk (History of the Prophets and Kings)",
         "source_type": "primary"
+      },
+      {
+        "citation": "de la Vaissière, É. Sogdian Traders: A History (trans. J. Ward), Brill (2005)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Hansen, V. The Silk Road: A New History, Oxford Univ. Press (2012)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Lerner, J.A. & Sims-Williams, N. (eds.) The Sogdians: Influencers on the Silk Roads, Smithsonian (2020)",
+        "url": "https://sogdians.si.edu/",
+        "source_type": "academic"
       }
     ],
     "boundary_source": "historical_approximation"

@@ -952,7 +952,7 @@
     "capital_name": "Yerushalayim (Jerusalem)",
     "capital_lat": 31.7767,
     "capital_lon": 35.2345,
-    "confidence_score": 0.681,
+    "confidence_score": 0.72,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -991,7 +991,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: name_original in Hebrew, though Herod's court used Greek extensively and the king was of Idumean (Edomite) origin — forcibly converted to Judaism under the Hasmoneans. His ethnic identity was used against him by opponents who questioned his legitimacy as king of the Jews. ETHICS-002: Herod's reign combined remarkable construction achievements (rebuilding of the Jerusalem Temple, Caesarea Maritima, Masada, Herodium) with extreme political violence, including the execution of his own wife Mariamne and several sons. The 'Massacre of the Innocents' (Matthew 2:16-18) is not independently attested and likely reflects literary/theological motifs rather than historical events. ETHICS-003: The Herodian kingdom was a Roman client state with no independent foreign policy. Its sovereignty was nominal — Herod ruled at the pleasure of Augustus. Boundary da aourednik/historical-basemaps (-1, strategy=fuzzy_name, precision=1). CC BY 4.0.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=1355km / edge=1052km from capital (exceeded thresholds). Regenerated as 200.0km radius circle.",
+    "ethical_notes": "ETHICS-001: name_original in Hebrew, though Herod's court used Greek extensively and the king was of Idumean (Edomite) origin — forcibly converted to Judaism under the Hasmoneans. His ethnic identity was used against him by opponents who questioned his legitimacy as king of the Jews. ETHICS-002: Herod's reign combined remarkable construction achievements (rebuilding of the Jerusalem Temple, Caesarea Maritima, Masada, Herodium) with extreme political violence, including the execution of his own wife Mariamne and several sons. The 'Massacre of the Innocents' (Matthew 2:16-18) is not independently attested and likely reflects literary/theological motifs rather than historical events. ETHICS-003: The Herodian kingdom was a Roman client state with no independent foreign policy. Its sovereignty was nominal — Herod ruled at the pleasure of Augustus. Boundary da aourednik/historical-basemaps (-1, strategy=fuzzy_name, precision=1). CC BY 4.0.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=1355km / edge=1052km from capital (exceeded thresholds). Regenerated as 200.0km radius circle.\n\n[S52-enrich] ETHICS-002: re cliente romano della Giudea (37-4 a.C.), nominato 'Re dei Giudei' dal Senato romano (fine della dinastia asmonea). Ricostrui' ed espanse il Secondo Tempio (il Muro Occidentale ne e' parte). Brutalita' documentata (Giuseppe Flavio): giustizio' la moglie Mariamne, vari figli e 45 membri del Sinedrio. Fonti: Richardson, Giuseppe Flavio (primaria), Schürer.",
     "name_variants": [
       {
         "name": "Herodian Kingdom",
@@ -1068,6 +1068,21 @@
       {
         "citation": "Strabo, Geography XVI.2.46 (description of Herod's kingdom)",
         "source_type": "primary"
+      },
+      {
+        "citation": "Richardson, P. Herod: King of the Jews and Friend of the Romans, Univ. of South Carolina Press (1996)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Flavius Josephus, Antiquities of the Jews & The Jewish War (I sec. CE)",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Schürer, E. The History of the Jewish People in the Age of Jesus Christ (rev. Vermes, Millar & Black), T&T Clark (1973-87)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "historical_approximation",

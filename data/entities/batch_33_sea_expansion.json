@@ -5885,8 +5885,8 @@
     "capital_name": "Chiang Saen",
     "capital_lat": 20.273,
     "capital_lon": 100.088,
-    "confidence_score": 0.3,
-    "status": "uncertain",
+    "confidence_score": 0.52,
+    "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -6028,7 +6028,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS: Ngoenyang ('Silver Yang') is the Tai-Yuan kingdom of the upper Mekong region from which Mangrai launched the conquest of Hariphunchai in 1292 and founded Lan Na. Traditional chronicles (Jinakalamali, Chiang Mai Chronicle) give founding dates as early as 638 CE under King Lavachangkarat — this is legendary rather than historically verifiable. Ngoenyang represents the proto-Lan Na Tai polity and links the historical Tai migration into northern Southeast Asia.",
+    "ethical_notes": "ETHICS: Ngoenyang ('Silver Yang') is the Tai-Yuan kingdom of the upper Mekong region from which Mangrai launched the conquest of Hariphunchai in 1292 and founded Lan Na. Traditional chronicles (Jinakalamali, Chiang Mai Chronicle) give founding dates as early as 638 CE under King Lavachangkarat — this is legendary rather than historically verifiable. Ngoenyang represents the proto-Lan Na Tai polity and links the historical Tai migration into northern Southeast Asia.\n\n[S52-enrich] ETHICS: regno Tai Yuan a Chiang Saen, antenato del Lanna; Mangrai, re di Ngoenyang, annetté Hariphunchai (1292) fondando il regno di Lanna. I primi sovrani (linea Singhanavati) sono semi-leggendari: confidence 0.52. Fonti: Wyatt, Penth, Coedès.",
     "name_variants": [
       {
         "name": "Hiran-nakorn-ngoenyang-chang-saen",
@@ -6082,6 +6082,21 @@
         "citation": "Chiang Mai Chronicle, trans. D.K. Wyatt & Aroonrut Wichienkeeo. Chiang Mai: Silkworm Books, 1995",
         "source_type": "primary",
         "url": null
+      },
+      {
+        "citation": "Wyatt, D.K. Thailand: A Short History, 2nd ed., Yale Univ. Press (2003)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Penth, H. A Brief History of Lan Na: Civilizations of North Thailand, Silkworm Books (2000)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Coedès, G. The Indianized States of Southeast Asia, Univ. of Hawaii Press (1968)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "approximate_circle"

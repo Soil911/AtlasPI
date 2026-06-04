@@ -2185,9 +2185,9 @@
         ]
       ]
     },
-    "confidence_score": 0.675,
+    "confidence_score": 0.62,
     "status": "confirmed",
-    "ethical_notes": "The Kingdom of Kediri is known primarily through inscriptions and later literary tradition (kakawin poetry). The Javanese literary golden age under Kediri produced works like the Bharatayuddha and Smaradahana that are foundational to Javanese cultural identity. The kingdom's history is sometimes romanticized in Javanese nationalist narratives. Archaeological evidence is limited compared to the rich literary tradition, creating uncertainty about political realities versus literary idealization. Boundary da aourednik/historical-basemaps (1100, strategy=fuzzy_name, precision=1). CC BY 4.0.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=8882km / edge=9090km from capital (exceeded thresholds). Regenerated as 200.0km radius circle.",
+    "ethical_notes": "The Kingdom of Kediri is known primarily through inscriptions and later literary tradition (kakawin poetry). The Javanese literary golden age under Kediri produced works like the Bharatayuddha and Smaradahana that are foundational to Javanese cultural identity. The kingdom's history is sometimes romanticized in Javanese nationalist narratives. Archaeological evidence is limited compared to the rich literary tradition, creating uncertainty about political realities versus literary idealization. Boundary da aourednik/historical-basemaps (1100, strategy=fuzzy_name, precision=1). CC BY 4.0.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=8882km / edge=9090km from capital (exceeded thresholds). Regenerated as 200.0km radius circle.\n\n[S52-enrich] ETHICS: regno giavanese (Kadiri/Panjalu, 1042-1222), centro della letteratura kakawin (il Bharatayuddha di Mpu Sedah e Mpu Panuluh sotto re Jayabhaya). Fonti: Coedès, Hall, kakawin primarie.",
     "name_variants": [
       {
         "name": "Kingdom of Kediri",
@@ -2251,6 +2251,21 @@
         "citation": "Bharatayuddha Kakawin. Old Javanese court poem composed under Kediri patronage, c. 1157 CE",
         "source_type": "primary",
         "url": null
+      },
+      {
+        "citation": "Coedès, G. The Indianized States of Southeast Asia, Univ. of Hawaii Press (1968)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Hall, K.R. A History of Early Southeast Asia: Maritime Trade and Societal Development, 100-1500, Rowman & Littlefield (2011)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Kakawin Bharatayuddha (Mpu Sedah & Mpu Panuluh, 1157 CE)",
+        "url": null,
+        "source_type": "primary"
       }
     ],
     "boundary_source": "historical_approximation",
@@ -2525,9 +2540,9 @@
         ]
       ]
     },
-    "confidence_score": 0.4,
-    "status": "uncertain",
-    "ethical_notes": "Tarumanagara is one of the earliest known Indianized kingdoms in the Indonesian archipelago, documented through stone inscriptions of King Purnavarman. The 'Indianization' model has been critiqued for implying passive Southeast Asian adoption of Indian culture, when the evidence suggests selective and creative local adaptation. Sundanese cultural identity claims draw on Tarumanagara as a foundational state, but the relationship between this early polity and later Sundanese culture is uncertain. Archaeological investigation is limited by modern urban development in the Jakarta-Bogor area.",
+    "confidence_score": 0.6,
+    "status": "confirmed",
+    "ethical_notes": "Tarumanagara is one of the earliest known Indianized kingdoms in the Indonesian archipelago, documented through stone inscriptions of King Purnavarman. The 'Indianization' model has been critiqued for implying passive Southeast Asian adoption of Indian culture, when the evidence suggests selective and creative local adaptation. Sundanese cultural identity claims draw on Tarumanagara as a foundational state, but the relationship between this early polity and later Sundanese culture is uncertain. Archaeological investigation is limited by modern urban development in the Jakarta-Bogor area.\n\n[S52-enrich] ETHICS: primo regno indianizzato del Giava occidentale (re Purnawarman, ~358-450); le sue iscrizioni (Ciaruteun, Tugu) sono tra le piu' antiche di Giava. Fonti: Coedès, Miksic & Goh, iscrizioni primarie.",
     "name_variants": [
       {
         "name": "Kingdom of Tarumanagara",
@@ -2591,6 +2606,21 @@
         "citation": "Marwati Djoened Poesponegoro and Nugroho Notosusanto (eds.). Sejarah Nasional Indonesia, vol. 2. Jakarta: Balai Pustaka, 2008",
         "source_type": "academic",
         "url": null
+      },
+      {
+        "citation": "Coedès, G. The Indianized States of Southeast Asia, Univ. of Hawaii Press (1968)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Miksic, J.N. & Goh, G.Y. Ancient Southeast Asia, Routledge (2017)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Iscrizioni di Tarumanagara (Ciaruteun, Tugu, Kebon Kopi), V sec. CE",
+        "url": null,
+        "source_type": "primary"
       }
     ],
     "boundary_source": "approximate_circle"

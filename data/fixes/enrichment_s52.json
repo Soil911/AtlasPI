@@ -1,0 +1,98 @@
+{
+  "_meta": {
+    "session": "S52 (Wave 2 Plan A, brief D — geographic spread + #82 resolution)",
+    "date": "2026-06-04",
+    "theme": "Low-confidence high-visibility entities across Sahel, SE Asia, Central Asia, Andes, Levant",
+    "policy": "ADD sources (never remove); confidence calibrated honestly; ethical_notes appended [S52-enrich], non-euphemistic (ETHICS-002/007/008/009/014). status uncertain->confirmed where conf>=0.5 and well-attested (Daju stays uncertain at 0.45 — poorly documented). Daju(1032)+Tunjur(1033) geometry differentiated by scripts/fix_82_daju_tunjur.py (closes AI Co-Founder suggestion #82). Citations verified via web search 2026-06-04."
+  },
+  "entities": [
+    {
+      "id": 1032, "name_original": "سلطنة الداجو", "label": "Daju", "confidence": 0.45, "status": "uncertain",
+      "ethical_notes_append": "[S52-enrich] ETHICS-014 / suggestion #82: i Daju (primo regno noto del Darfur, ~1200-1400) e i loro successori Tunjur condividevano un poligono identico — bug risolto dando cerchi distinti attorno a capitali distinte e sourcedate (i Daju nel Jebel Marra MERIDIONALE, dove il sultano Ahmed el-Daj trasferi' la capitale ~1100; O'Fahey). Documentazione scarsa: confidence tenuta a 0.45 (status uncertain) per onesta'. Fonti: O'Fahey & Spaulding, O'Fahey 2008, Arkell.",
+      "new_sources": [
+        {"citation": "O'Fahey, R.S. & Spaulding, J.L. Kingdoms of the Sudan, Methuen (1974)", "source_type": "academic", "url": null},
+        {"citation": "O'Fahey, R.S. The Darfur Sultanate: A History, Hurst / Columbia Univ. Press (2008)", "source_type": "academic", "url": null},
+        {"citation": "Arkell, A.J. 'The History of Darfur 1200-1700 A.D.', Sudan Notes and Records (1951-52)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 1033, "name_original": "التنجر", "label": "Tunjur", "confidence": 0.62, "status": "confirmed",
+      "ethical_notes_append": "[S52-enrich] ETHICS-014 / suggestion #82: confine ora differenziato dai Daju — capitale dei Tunjur a Uri poi Ain Farah (Furnung Hills, ~130km a NO di El Fasher, Darfur SETTENTRIONALE; O'Fahey). I Tunjur (~1400-1640) sostituirono i Daju prima dell'ascesa del sultanato Keira/Fur. Fonti: O'Fahey & Spaulding, O'Fahey 2008.",
+      "new_sources": [
+        {"citation": "O'Fahey, R.S. & Spaulding, J.L. Kingdoms of the Sudan, Methuen (1974)", "source_type": "academic", "url": null},
+        {"citation": "O'Fahey, R.S. The Darfur Sultanate: A History, Hurst / Columbia Univ. Press (2008)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 981, "name_original": "Sosso", "label": "Sosso", "confidence": 0.58, "status": "confirmed",
+      "ethical_notes_append": "[S52-enrich] ETHICS-008: regno Soninke/Sosso di Sumanguru (Soumaoro) Kante, sorto dal vuoto lasciato dal Ghana; sconfitto da Sundiata Keita a Kirina (~1235) -> nascita dell'Impero del Mali. La fonte primaria e' l'epica orale mande di Sundiata, narrazione DEI VINCITORI (Sumanguru dipinto come re-stregone tiranno) — da trattare come tradizione, non cronaca neutrale. Fonti: Niane (epica), Levtzion, Conrad.",
+      "new_sources": [
+        {"citation": "Niane, D.T. Sundiata: An Epic of Old Mali (trans. G.D. Pickett), Longmans (1965)", "source_type": "primary", "url": null},
+        {"citation": "Levtzion, N. Ancient Ghana and Mali, Methuen (1973)", "source_type": "academic", "url": null},
+        {"citation": "Conrad, D.C. Empires of Medieval West Africa: Ghana, Mali, and Songhay, Facts on File (2005)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 888, "name_original": "Ngoenyang", "label": "Ngoenyang", "confidence": 0.52, "status": "confirmed",
+      "ethical_notes_append": "[S52-enrich] ETHICS: regno Tai Yuan a Chiang Saen, antenato del Lanna; Mangrai, re di Ngoenyang, annetté Hariphunchai (1292) fondando il regno di Lanna. I primi sovrani (linea Singhanavati) sono semi-leggendari: confidence 0.52. Fonti: Wyatt, Penth, Coedès.",
+      "new_sources": [
+        {"citation": "Wyatt, D.K. Thailand: A Short History, 2nd ed., Yale Univ. Press (2003)", "source_type": "academic", "url": null},
+        {"citation": "Penth, H. A Brief History of Lan Na: Civilizations of North Thailand, Silkworm Books (2000)", "source_type": "academic", "url": null},
+        {"citation": "Coedès, G. The Indianized States of Southeast Asia, Univ. of Hawaii Press (1968)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 670, "name_original": "Tarumanagara", "label": "Tarumanagara", "confidence": 0.60, "status": "confirmed",
+      "ethical_notes_append": "[S52-enrich] ETHICS: primo regno indianizzato del Giava occidentale (re Purnawarman, ~358-450); le sue iscrizioni (Ciaruteun, Tugu) sono tra le piu' antiche di Giava. Fonti: Coedès, Miksic & Goh, iscrizioni primarie.",
+      "new_sources": [
+        {"citation": "Coedès, G. The Indianized States of Southeast Asia, Univ. of Hawaii Press (1968)", "source_type": "academic", "url": null},
+        {"citation": "Miksic, J.N. & Goh, G.Y. Ancient Southeast Asia, Routledge (2017)", "source_type": "academic", "url": null},
+        {"citation": "Iscrizioni di Tarumanagara (Ciaruteun, Tugu, Kebon Kopi), V sec. CE", "source_type": "primary", "url": null}
+      ]
+    },
+    {
+      "id": 668, "name_original": "Kerajaan Kediri", "label": "Kediri", "confidence": 0.62, "status": "confirmed",
+      "ethical_notes_append": "[S52-enrich] ETHICS: regno giavanese (Kadiri/Panjalu, 1042-1222), centro della letteratura kakawin (il Bharatayuddha di Mpu Sedah e Mpu Panuluh sotto re Jayabhaya). Fonti: Coedès, Hall, kakawin primarie.",
+      "new_sources": [
+        {"citation": "Coedès, G. The Indianized States of Southeast Asia, Univ. of Hawaii Press (1968)", "source_type": "academic", "url": null},
+        {"citation": "Hall, K.R. A History of Early Southeast Asia: Maritime Trade and Societal Development, 100-1500, Rowman & Littlefield (2011)", "source_type": "academic", "url": null},
+        {"citation": "Kakawin Bharatayuddha (Mpu Sedah & Mpu Panuluh, 1157 CE)", "source_type": "primary", "url": null}
+      ]
+    },
+    {
+      "id": 349, "name_original": "Σογδιανή / سغد", "label": "Sogdiana", "confidence": 0.65, "status": "confirmed",
+      "ethical_notes_append": "[S52-enrich] ETHICS: confederazione di citta'-stato iraniche (Samarcanda, Bukhara), rete mercantile dominante della Via della Seta (IV-VIII sec.); il sogdiano fu lingua franca del commercio asiatico. Fonti: de la Vaissière (Brill), Hansen, Smithsonian 'The Sogdians'.",
+      "new_sources": [
+        {"citation": "de la Vaissière, É. Sogdian Traders: A History (trans. J. Ward), Brill (2005)", "source_type": "academic", "url": null},
+        {"citation": "Hansen, V. The Silk Road: A New History, Oxford Univ. Press (2012)", "source_type": "academic", "url": null},
+        {"citation": "Lerner, J.A. & Sims-Williams, N. (eds.) The Sogdians: Influencers on the Silk Roads, Smithsonian (2020)", "source_type": "academic", "url": "https://sogdians.si.edu/"}
+      ]
+    },
+    {
+      "id": 145, "name_original": "ᠵᠡᠭᠦᠨᠭᠠᠷ", "label": "Zunghar", "confidence": 0.70, "status": "confirmed",
+      "ethical_notes_append": "[S52-enrich] ETHICS-007: ultimo grande impero nomade (oirati, 1634-1755). La conquista Qing culmino' nel GENOCIDIO DEGLI DZUNGARI (1755-1758): il Qianlong ordino' di 'non mostrare pieta''; il 70-80% di ~600.000 Dzungari fu sterminato (≈40% vaiolo, 20% fuga in Russia, 30% uccisi dall'esercito — Wei Yuan citato da Perdue). Perdue: i Dzungari 'scomparvero come stato e come popolo'. NON eufemizzare. Fonti: Perdue (Harvard), Millward.",
+      "new_sources": [
+        {"citation": "Perdue, P.C. China Marches West: The Qing Conquest of Central Eurasia, Harvard Univ. Press (2005)", "source_type": "academic", "url": null},
+        {"citation": "Millward, J.A. Eurasian Crossroads: A History of Xinjiang, Columbia Univ. Press (2007)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 860, "name_original": "Muisca", "label": "Muisca", "confidence": 0.62, "status": "confirmed",
+      "ethical_notes_append": "[S52-enrich] ETHICS-002/008: confederazione chibcha dell'altopiano colombiano (zipa di Bacata, zaque di Hunza), NON un impero. Conquistata da Gonzalo Jiménez de Quesada (1536-37); gli spagnoli giustiziarono gli ultimi sovrani Sagipa (1539) e Aquiminzaque (1540). La 'guerra civile muisca' (zipa vs zaque) e' probabilmente un'invenzione dei cronisti spagnoli (non attestata). La leggenda di El Dorado nasce dal rito dello zipa al lago Guatavita. Fonti: Langebaek, Francis (resoconti spagnoli), Bray.",
+      "new_sources": [
+        {"citation": "Langebaek, C.H. Los muiscas: la historia milenaria de un pueblo chibcha, Debate (2019)", "source_type": "academic", "url": null},
+        {"citation": "Francis, J.M. (ed.) Invading Colombia: Spanish Accounts of the Gonzalo Jiménez de Quesada Expedition of Conquest, Penn State Univ. Press (2007)", "source_type": "primary", "url": null},
+        {"citation": "Bray, W. The Gold of El Dorado, Royal Academy of Arts (1978)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 617, "name_original": "ממלכת הורדוס", "label": "Herod", "confidence": 0.72, "status": "confirmed",
+      "ethical_notes_append": "[S52-enrich] ETHICS-002: re cliente romano della Giudea (37-4 a.C.), nominato 'Re dei Giudei' dal Senato romano (fine della dinastia asmonea). Ricostrui' ed espanse il Secondo Tempio (il Muro Occidentale ne e' parte). Brutalita' documentata (Giuseppe Flavio): giustizio' la moglie Mariamne, vari figli e 45 membri del Sinedrio. Fonti: Richardson, Giuseppe Flavio (primaria), Schürer.",
+      "new_sources": [
+        {"citation": "Richardson, P. Herod: King of the Jews and Friend of the Romans, Univ. of South Carolina Press (1996)", "source_type": "academic", "url": null},
+        {"citation": "Flavius Josephus, Antiquities of the Jews & The Jewish War (I sec. CE)", "source_type": "primary", "url": null},
+        {"citation": "Schürer, E. The History of the Jewish People in the Age of Jesus Christ (rev. Vermes, Millar & Black), T&T Clark (1973-87)", "source_type": "academic", "url": null}
+      ]
+    }
+  ]
+}

@@ -2,6 +2,33 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.98] - 2026-06-04 (S52 enrichment + AI Co-Founder suggestion #82 chiusa)
+
+**Tema**: *S52 deep-enrichment di 10 entità low-confidence (spread geografico:
+Sahel, SE Asia, Asia Centrale, Ande, Levante) + risoluzione del bug #82
+(Daju/Tunjur poligono Darfur condiviso).*
+
+### S52 (10 entità): Daju, Tunjur, Sosso, Ngoenyang, Tarumanagara, Kediri, Sogdiana, Zunghar, Muisca, Herod
+- **+28 fonti** accademiche verificate (O'Fahey, Levtzion, Niane, Conrad, Wyatt,
+  Penth, Coedès, Hall, Miksic, de la Vaissière, Hansen, Perdue, Millward,
+  Langebaek, Francis, Bray, Richardson, Josephus, Schürer, …).
+- confidence 0.25-0.55 → 0.45-0.72 (calibrata onestamente; Daju resta 0.45/uncertain
+  perché poco documentato).
+- `ethical_notes` ETHICS-007/008 non-eufemistici, in particolare il **genocidio
+  degli Dzungari** (Qing 1755-58, 70-80% di ~600.000 sterminati — Perdue, "scomparvero
+  come stato e come popolo"); la conquista spagnola dei Muisca (giustiziati gli
+  ultimi sovrani Sagipa/Aquiminzaque; la "guerra civile" come invenzione dei cronisti);
+  l'epica orale mandè come narrazione dei vincitori (Sosso/Sumanguru).
+
+### Suggestion #82 chiusa (`scripts/fix_82_daju_tunjur.py`)
+- Daju (1032) e Tunjur (1033) condividevano un poligono Darfur **identico** + la stessa
+  capitale (falsa precisione). Differenziati con cerchi distinti attorno a capitali
+  sourcedate (Daju → Jebel Marra meridionale; Tunjur → Ain Farah, Darfur settentrionale,
+  O'Fahey). `boundary_source` → `approximate_circle` (onesto: centri approssimativi).
+
+`data/fixes/enrichment_s52.sql` + `fix_82_daju_tunjur.sql` per prod. Suite 1326 verde,
+fence 0, ruff verde.
+
 ## [v6.99.97] - 2026-06-04 (agent-compat routes — AI Co-Founder suggestions #78-81 + discoverability refresh)
 
 **Tema**: *Implementate le suggestion `traffic_pattern` accettate (404 ricorrenti da
