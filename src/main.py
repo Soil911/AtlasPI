@@ -4,10 +4,10 @@ import logging
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-from fastapi import Depends, FastAPI
+from fastapi import Depends, FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import FileResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
@@ -603,6 +603,42 @@ async def serve_mcp_manifest():
         STATIC_DIR / ".well-known" / "mcp.json",
         media_type="application/json",
     )
+
+
+@app.get("/v1/models", include_in_schema=False)
+async def v1_models_alias():
+    """Compat (AI Co-Founder suggestion #78): clients probing the OpenAI-style
+    `/v1/models` (10× 404 in 30d) treat AtlasPI as an LLM endpoint. AtlasPI is a
+    historical-geography DATA API, not a model server. Return an OpenAI-shaped
+    empty list (so those clients don't crash on a 404) plus a pointer to the
+    real API surface."""
+    return JSONResponse({
+        "object": "list",
+        "data": [],
+        "note": (
+            "AtlasPI is a historical-geography data API, not an LLM/model endpoint. "
+            "See /llms.txt and /openapi.json. Try /v1/entities, /v1/events, "
+            "/v1/snapshot/year/{year}, /v1/search/advanced?q=..."
+        ),
+        "resources": [
+            "/v1/entities", "/v1/events", "/v1/periods", "/v1/cities", "/v1/routes",
+            "/v1/chains", "/v1/sites", "/v1/rulers", "/v1/languages",
+            "/v1/snapshot/year/{year}",
+        ],
+        "docs": "https://atlaspi.cra-srl.com/llms.txt",
+    })
+
+
+@app.get("/v1/atlaspi/{rest:path}", include_in_schema=False)
+async def redirect_v1_atlaspi_prefix(rest: str, request: Request):
+    """Compat (AI Co-Founder suggestions #79-81): an external client repeatedly
+    hit `/v1/atlaspi/{cities,events,export/geojson}` — the canonical paths are
+    `/v1/...` without the doubled `atlaspi/` segment (6× 404 each in 30d).
+    Redirect 308 to `/v1/{rest}`, preserving the query string."""
+    target = f"/v1/{rest}"
+    if request.url.query:
+        target = f"{target}?{request.url.query}"
+    return RedirectResponse(url=target, status_code=308)
 
 
 @app.get("/about", include_in_schema=False)

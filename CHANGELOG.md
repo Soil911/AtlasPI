@@ -2,6 +2,32 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.97] - 2026-06-04 (agent-compat routes — AI Co-Founder suggestions #78-81 + discoverability refresh)
+
+**Tema**: *Implementate le suggestion `traffic_pattern` accettate (404 ricorrenti da
+client esterni) come route agent-friendly, e refresh dei metadati agent-facing.
+Source-only fino al deploy.*
+
+### Route di compatibilità (suggestion #78-81)
+- **`/v1/models`** (probing stile OpenAI, 10× 404 in 30g): ora 200 con lista vuota
+  OpenAI-shaped + `note`/`resources` che indirizzano a `/llms.txt` e ai veri endpoint
+  — i client LLM non vanno più in errore su un 404.
+- **`/v1/atlaspi/{rest:path}`** → **308** → `/v1/{rest}` (prefisso doppio errato,
+  #79-81; query string preservata). Mirror del fix `/v1/entity/{id}`→`/v1/entities`.
+- Test: `tests/test_v6997_agent_compat_routes.py`.
+
+### Discoverability (già committato in 11f29cf, incluso in questo deploy)
+- `llms.txt` + landing JSON-LD/meta riallineati ai dati correnti (vedi commit).
+
+### Suggestion residue (NON auto-eseguibili)
+- **#82** (Daju 1032 & Tunjur 1033 condividono un poligono Darfur identico):
+  confermato reale in prod (stesso md5 geometria + stessa capitale) ma è un task di
+  **enrichment** (poligoni/capitali distinti con fonti) → in coda S52, non auto-fix
+  (per ETHICS-014 un cerchio sarebbe ugualmente identico).
+- **#83** (client esterno scansiona anni -4500..-4050 → 422, floor year>=-4000):
+  **decisione dati/roadmap per Clirim** (estendere copertura Neolitico vs documentare
+  il range / clamp). Non modificato unilateralmente.
+
 ## [v6.99.96] - 2026-06-03 (AI Co-Founder suggestion #77 — allineamento analizzatore geometrico ↔ auto-fixer; ETHICS-014)
 
 **Tema**: *L'analizzatore geometrico (`analyze_geometric_bugs`) produceva rumore
