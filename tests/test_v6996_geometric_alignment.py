@@ -23,7 +23,6 @@ import math
 from scripts.ai_cofounder_analyze import _equal_area_km2, analyze_geometric_bugs
 from src.db.models import AiSuggestion, GeoEntity
 
-
 # Explicit ids far above any real entity id (max curated id is 1040), so test
 # entities can never collide with MANUALLY_CURATED_IDS and get falsely skipped.
 _NEXT_ID = [9_000_001]
@@ -175,8 +174,10 @@ def test_oversize_uses_fixer_factor(db):
     """An area between the OLD 1.5× band and the fixer's 3.0× factor must NOT
     be flagged; an area clearly above 3.0× must be flagged."""
     from shapely.geometry import shape
+
     from src.ingestion.fix_antimeridian_and_wrong_polygons import (
-        AUTO_FIX_OVERSIZE_FACTOR, TYPE_MAX_AREA_KM2,
+        AUTO_FIX_OVERSIZE_FACTOR,
+        TYPE_MAX_AREA_KM2,
     )
 
     ceiling = TYPE_MAX_AREA_KM2["kingdom"]  # 8,000,000; kingdom => factor 3.0
