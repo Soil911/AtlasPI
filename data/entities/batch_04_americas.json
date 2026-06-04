@@ -865,7 +865,7 @@
     "capital_name": "Monte Albán",
     "capital_lat": 17.0436,
     "capital_lon": -96.7675,
-    "confidence_score": 0.6,
+    "confidence_score": 0.62,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -1008,7 +1008,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: Bēnizàa means 'Cloud People' in Zapotec, the endonym for this civilization. The Zapotec developed one of the earliest writing systems in Mesoamerica. Monte Albán's 'Danzantes' carvings likely depict tortured/sacrificed captives, not dancers as the colonial-era misnomer implies. ETHICS-002: Spanish colonization imposed the encomienda system on surviving populations. Zapotec peoples and language persist today with approximately 500,000 speakers. Boundary da aourednik/historical-basemaps (400, strategy=capital_in_polygon, precision=1). CC BY 4.0.",
+    "ethical_notes": "ETHICS-001: Bēnizàa means 'Cloud People' in Zapotec, the endonym for this civilization. The Zapotec developed one of the earliest writing systems in Mesoamerica. Monte Albán's 'Danzantes' carvings likely depict tortured/sacrificed captives, not dancers as the colonial-era misnomer implies. ETHICS-002: Spanish colonization imposed the encomienda system on surviving populations. Zapotec peoples and language persist today with approximately 500,000 speakers. Boundary da aourednik/historical-basemaps (400, strategy=capital_in_polygon, precision=1). CC BY 4.0.\n\n[S53-enrich] ETHICS-001: 'Bēnizàa' e' l'autonimo zapoteco. Civilta' di Monte Albán (Valle di Oaxaca), tra i primi sistemi di scrittura mesoamericani. Fonti: Marcus & Flannery, The Cloud People (Flannery & Marcus), Blanton.",
     "name_variants": [
       {
         "name": "Zapotec civilization",
@@ -1068,6 +1068,21 @@
         "citation": "Flannery, K.V. & Marcus, J. The Cloud People (1983), Academic Press",
         "source_type": "academic",
         "url": null
+      },
+      {
+        "citation": "Marcus, J. & Flannery, K.V. Zapotec Civilization: How Urban Society Evolved in Mexico's Oaxaca Valley, Thames & Hudson (1996)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Flannery, K.V. & Marcus, J. (eds.) The Cloud People: Divergent Evolution of the Zapotec and Mixtec Civilizations, Academic Press (1983)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Blanton, R.E. et al. Ancient Oaxaca: The Monte Albán State, Cambridge Univ. Press (1999)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "approximate_circle",
@@ -1084,7 +1099,7 @@
     "capital_name": "Tilantongo",
     "capital_lat": 17.2825,
     "capital_lon": -97.3031,
-    "confidence_score": 0.6,
+    "confidence_score": 0.65,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -1119,7 +1134,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: Ñuu Dzahui means 'Nation of the Rain' in Mixtec, the endonym for this civilization. 'Mixtec' is an exonym from Nahuatl; the endonym should be preferred. The Mixtec produced extraordinary codices (screenfold books) that are among the few pre-Columbian manuscripts to survive Spanish destruction. These codices document genealogies, conquests, and rituals from the indigenous perspective, making them invaluable primary sources. Boundary da aourednik/historical-basemaps (-1, strategy=capital_in_polygon, precision=1). CC BY 4.0.",
+    "ethical_notes": "ETHICS-001: Ñuu Dzahui means 'Nation of the Rain' in Mixtec, the endonym for this civilization. 'Mixtec' is an exonym from Nahuatl; the endonym should be preferred. The Mixtec produced extraordinary codices (screenfold books) that are among the few pre-Columbian manuscripts to survive Spanish destruction. These codices document genealogies, conquests, and rituals from the indigenous perspective, making them invaluable primary sources. Boundary da aourednik/historical-basemaps (-1, strategy=capital_in_polygon, precision=1). CC BY 4.0.\n\n[S53-enrich] ETHICS-001: 'Ñuu Dzahui' (popolo della pioggia) e' l'autonimo mixteco; la loro storia e' documentata nei codici precoloniali (es. Codex Zouche-Nuttall, gesta di Otto-Cervo Artiglio-di-Giaguaro). Fonti: The Cloud People, Jansen & Pérez Jiménez, codici primari.",
     "name_variants": [
       {
         "name": "Mixtec kingdom",
@@ -1179,6 +1194,21 @@
         "citation": "Codex Zouche-Nuttall, British Museum",
         "source_type": "primary",
         "url": null
+      },
+      {
+        "citation": "Flannery, K.V. & Marcus, J. (eds.) The Cloud People: Divergent Evolution of the Zapotec and Mixtec Civilizations, Academic Press (1983)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Jansen, M. & Pérez Jiménez, G.A. Encounter with the Plumed Serpent: Drama and Power in the Heart of Mesoamerica, Univ. Press of Colorado (2007)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Codex Zouche-Nuttall (codice mixteco precoloniale)",
+        "url": null,
+        "source_type": "primary"
       }
     ],
     "boundary_source": "historical_approximation",

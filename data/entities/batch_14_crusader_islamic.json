@@ -13508,7 +13508,7 @@
     "capital_name": "Jerusalem",
     "capital_lat": 31.7683,
     "capital_lon": 35.2137,
-    "confidence_score": 0.55,
+    "confidence_score": 0.65,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -13651,7 +13651,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: questa entita' rappresenta il controllo ayyubide su Gerusalemme dopo la riconquista di Saladino (1187) fino alla cessione crociata del 1229 tramite il trattato tra Federico II e al-Kamil. Il nome e' una designazione storica convenzionale. ETHICS-002: il trattato di Giaffa (1229) in cui al-Kamil cedette Gerusalemme a Federico II senza combattere fu enormemente controverso nel mondo islamico. I cronisti arabi lo condannarono come un tradimento. La citta' ritorno' sotto controllo musulmano nel 1244 con la conquista dei Khwarezmiani. ETHICS-003: Gerusalemme nel periodo ayyubide ospitava musulmani, cristiani ed ebrei in una coesistenza che, pur non essendo idilliaca, contrasta con la violenza della conquista crociata del 1099. Boundary da aourednik/historical-basemaps (1200, strategy=capital_in_polygon, precision=1). CC BY 4.0.",
+    "ethical_notes": "ETHICS-001: questa entita' rappresenta il controllo ayyubide su Gerusalemme dopo la riconquista di Saladino (1187) fino alla cessione crociata del 1229 tramite il trattato tra Federico II e al-Kamil. Il nome e' una designazione storica convenzionale. ETHICS-002: il trattato di Giaffa (1229) in cui al-Kamil cedette Gerusalemme a Federico II senza combattere fu enormemente controverso nel mondo islamico. I cronisti arabi lo condannarono come un tradimento. La citta' ritorno' sotto controllo musulmano nel 1244 con la conquista dei Khwarezmiani. ETHICS-003: Gerusalemme nel periodo ayyubide ospitava musulmani, cristiani ed ebrei in una coesistenza che, pur non essendo idilliaca, contrasta con la violenza della conquista crociata del 1099. Boundary da aourednik/historical-basemaps (1200, strategy=capital_in_polygon, precision=1). CC BY 4.0.\n\n[S53-enrich] ETHICS-002/003: Gerusalemme sotto controllo ayyubide dopo la riconquista di Saladino (1187, dopo Hattin), fine di 88 anni di dominio crociato. Trattato di Giaffa (1229): al-Kamil cedette la citta' a Federico II senza combattere (le fonti arabe lo definirono 'uno degli eventi piu' disastrosi dell'Islam'). NB: e' la fase AYYUBIDE (la dominazione mamelucca arrivo' dopo il 1250). Fonti: Hillenbrand, Humphreys.",
     "name_variants": [
       {
         "name": "Ayyubid Jerusalem",
@@ -13699,6 +13699,16 @@
       },
       {
         "citation": "Hillenbrand, C. The Crusades: Islamic Perspectives (1999)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Hillenbrand, C. The Crusades: Islamic Perspectives, Edinburgh Univ. Press (1999)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Humphreys, R.S. From Saladin to the Mongols: The Ayyubids of Damascus, 1193-1260, SUNY Press (1977)",
+        "url": null,
         "source_type": "academic"
       }
     ],

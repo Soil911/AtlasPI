@@ -1,0 +1,93 @@
+{
+  "_meta": {
+    "session": "S53 (Wave 2 Plan A — low-confidence high-visibility, geographic spread)",
+    "date": "2026-06-04",
+    "theme": "China, Mesoamerica, Levant, Wales, Central America, S Andes, Java, S India",
+    "policy": "ADD sources; confidence calibrated; ethical_notes [S53-enrich] non-euphemistic (ETHICS-001/002/003/007). status uncertain->confirmed where conf>=0.5 + attested. Citations verified via web search 2026-06-04. Skipped #142 (Sri Lanka -543..1815) — a 2358yr super-aggregate that needs SPLITTING, not enrichment (flagged like the Babylon split)."
+  },
+  "entities": [
+    {
+      "id": 452, "name_original": "太平天國", "label": "Taiping", "confidence": 0.72, "status": "confirmed",
+      "ethical_notes_append": "[S53-enrich] ETHICS-007: una delle guerre piu' letali della storia umana — 20-30 milioni di morti (stime alte fino a 70-100M), il 5-10% della popolazione cinese dell'epoca. Hong Xiuquan, hakka, si proclamo' fratello minore di Gesu'. Repressa dai Qing (con l'ufficiale britannico C. Gordon). Fonti: Platt, Spence, Michael.",
+      "new_sources": [
+        {"citation": "Platt, S.R. Autumn in the Heavenly Kingdom: China, the West, and the Epic Story of the Taiping Civil War, Knopf (2012)", "source_type": "academic", "url": null},
+        {"citation": "Spence, J.D. God's Chinese Son: The Taiping Heavenly Kingdom of Hong Xiuquan, W.W. Norton (1996)", "source_type": "academic", "url": null},
+        {"citation": "Michael, F. The Taiping Rebellion: History and Documents, Univ. of Washington Press (1966-71)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 195, "name_original": "Bēnizàa", "label": "Zapotec", "confidence": 0.62, "status": "confirmed",
+      "ethical_notes_append": "[S53-enrich] ETHICS-001: 'Bēnizàa' e' l'autonimo zapoteco. Civilta' di Monte Albán (Valle di Oaxaca), tra i primi sistemi di scrittura mesoamericani. Fonti: Marcus & Flannery, The Cloud People (Flannery & Marcus), Blanton.",
+      "new_sources": [
+        {"citation": "Marcus, J. & Flannery, K.V. Zapotec Civilization: How Urban Society Evolved in Mexico's Oaxaca Valley, Thames & Hudson (1996)", "source_type": "academic", "url": null},
+        {"citation": "Flannery, K.V. & Marcus, J. (eds.) The Cloud People: Divergent Evolution of the Zapotec and Mixtec Civilizations, Academic Press (1983)", "source_type": "academic", "url": null},
+        {"citation": "Blanton, R.E. et al. Ancient Oaxaca: The Monte Albán State, Cambridge Univ. Press (1999)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 196, "name_original": "Ñuu Dzahui", "label": "Mixtec", "confidence": 0.65, "status": "confirmed",
+      "ethical_notes_append": "[S53-enrich] ETHICS-001: 'Ñuu Dzahui' (popolo della pioggia) e' l'autonimo mixteco; la loro storia e' documentata nei codici precoloniali (es. Codex Zouche-Nuttall, gesta di Otto-Cervo Artiglio-di-Giaguaro). Fonti: The Cloud People, Jansen & Pérez Jiménez, codici primari.",
+      "new_sources": [
+        {"citation": "Flannery, K.V. & Marcus, J. (eds.) The Cloud People: Divergent Evolution of the Zapotec and Mixtec Civilizations, Academic Press (1983)", "source_type": "academic", "url": null},
+        {"citation": "Jansen, M. & Pérez Jiménez, G.A. Encounter with the Plumed Serpent: Drama and Power in the Heart of Mesoamerica, Univ. Press of Colorado (2007)", "source_type": "academic", "url": null},
+        {"citation": "Codex Zouche-Nuttall (codice mixteco precoloniale)", "source_type": "primary", "url": null}
+      ]
+    },
+    {
+      "id": 511, "name_original": "مملكة بيت المقدس العربية", "label": "Ayyubid Jerusalem", "confidence": 0.65, "status": "confirmed",
+      "ethical_notes_append": "[S53-enrich] ETHICS-002/003: Gerusalemme sotto controllo ayyubide dopo la riconquista di Saladino (1187, dopo Hattin), fine di 88 anni di dominio crociato. Trattato di Giaffa (1229): al-Kamil cedette la citta' a Federico II senza combattere (le fonti arabe lo definirono 'uno degli eventi piu' disastrosi dell'Islam'). NB: e' la fase AYYUBIDE (la dominazione mamelucca arrivo' dopo il 1250). Fonti: Hillenbrand, Humphreys.",
+      "new_sources": [
+        {"citation": "Hillenbrand, C. The Crusades: Islamic Perspectives, Edinburgh Univ. Press (1999)", "source_type": "academic", "url": null},
+        {"citation": "Humphreys, R.S. From Saladin to the Mongols: The Ayyubids of Damascus, 1193-1260, SUNY Press (1977)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 92, "name_original": "Tywysogaeth Cymru", "label": "Wales", "confidence": 0.70, "status": "confirmed",
+      "ethical_notes_append": "[S53-enrich] ETHICS-002: principato gallese di Llywelyn ap Gruffudd ('l'Ultimo'), ucciso a Orewin Bridge (11 dic 1282); la conquista inglese di Edoardo I fu completata nel 1283 (cattura di Dafydd). Lo Statuto di Rhuddlan (1284) annetté il Galles alla corona inglese — fine dell'indipendenza gallese. Fonti: Davies, Smith.",
+      "new_sources": [
+        {"citation": "Davies, R.R. The Age of Conquest: Wales 1063-1415, Oxford Univ. Press (1987)", "source_type": "academic", "url": null},
+        {"citation": "Smith, J.B. Llywelyn ap Gruffudd, Prince of Wales, Univ. of Wales Press (1998)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 550, "name_original": "Cuzcatan", "label": "Cuzcatlan (Pipil)", "confidence": 0.55, "status": "confirmed",
+      "ethical_notes_append": "[S53-enrich] ETHICS-002: stato nahua (pipil) di Cuzcatlán (El Salvador occidentale, da ~900). La conquista spagnola (Pedro de Alvarado, 1524) fu inizialmente RESPINTA (resistenza di Atlácatl, battaglia di Acajutla); servirono spedizioni successive (1525, 1528) per sottometterli. Fonti: Fowler.",
+      "new_sources": [
+        {"citation": "Fowler, W.R. The Cultural Evolution of Ancient Nahua Civilizations: The Pipil-Nicarao of Central America, Univ. of Oklahoma Press (1989)", "source_type": "academic", "url": null},
+        {"citation": "Sharer, R.J. & Traxler, L.P. The Ancient Maya, 6th ed., Stanford Univ. Press (2006)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 551, "name_original": "Lenca", "label": "Lenca", "confidence": 0.55, "status": "confirmed",
+      "ethical_notes_append": "[S53-enrich] ETHICS-007: confederazione lenca dell'Honduras. La resistenza di Lempira (1537, ~30.000 guerrieri da ~200 villaggi al Peñol de Cerquín) fu spezzata dal suo ASSASSINIO durante finti negoziati di pace (1538). La popolazione indigena crollo' a ~8.000 entro il 1541 (guerra, encomienda, epidemie). Fonti: Newson, Chapman.",
+      "new_sources": [
+        {"citation": "Newson, L.A. The Cost of Conquest: Indian Decline in Honduras under Spanish Rule, Westview Press / Dellplain Latin American Studies (1986)", "source_type": "academic", "url": null},
+        {"citation": "Chapman, A. Los hijos del copal y la candela, UNAM (1985)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 539, "name_original": "Diaguita", "label": "Diaguita", "confidence": 0.55, "status": "confirmed",
+      "ethical_notes_append": "[S53-enrich] ETHICS-007: gruppi diaguita-calchaquí del NO argentino; resistettero agli spagnoli per ~130 anni (Guerre Calchaquíes, fino al 1667). Alla fine i ~2.000 Quilmes superstiti furono DEPORTATI a piedi per ~1.500 km verso Buenos Aires (desnaturalización) — centinaia morirono nel tragitto. Fonti: Lorandi, González & Pérez.",
+      "new_sources": [
+        {"citation": "Lorandi, A.M. De quimeras, rebeliones y utopías: la gesta del inca Pedro Bohórquez, Pontificia Univ. Católica del Perú (1997)", "source_type": "academic", "url": null},
+        {"citation": "González, A.R. & Pérez, J.A. Argentina indígena, vísperas de la conquista, Paidós (1972)", "source_type": "academic", "url": null}
+      ]
+    },
+    {
+      "id": 688, "name_original": "Kerajaan Sunda", "label": "Sunda", "confidence": 0.60, "status": "confirmed",
+      "ethical_notes_append": "[S53-enrich] ETHICS: regno indù del Giava occidentale (Pajajaran, 669-1579), capitale Pakuan Pajajaran; documentato dal Bujangga Manik (resoconto di viaggio sundanese, XVI sec.). Termino' con l'ascesa del sultanato di Banten. Fonti: Coedès, Noorduyn & Teeuw.",
+      "new_sources": [
+        {"citation": "Coedès, G. The Indianized States of Southeast Asia, Univ. of Hawaii Press (1968)", "source_type": "academic", "url": null},
+        {"citation": "Noorduyn, J. & Teeuw, A. Three Old Sundanese Poems, KITLV Press (2006)", "source_type": "primary", "url": null}
+      ]
+    },
+    {
+      "id": 1040, "name_original": "சோழர் (Sangam-era)", "label": "Sangam Chola", "confidence": 0.60, "status": "confirmed",
+      "ethical_notes_append": "[S53-enrich] ETHICS: prima fase Chola (era Sangam, -300..300), capitale Uraiyur; documentata dalla letteratura Sangam (la piu' antica letteratura tamil). Distinta dall'Impero Chola medievale (848-1279, id 110). Fonti: Sastri (The Colas / A History of South India), corpus Sangam.",
+      "new_sources": [
+        {"citation": "Nilakanta Sastri, K.A. The Cōḷas, Univ. of Madras (1935; rev. 1955)", "source_type": "academic", "url": null},
+        {"citation": "Nilakanta Sastri, K.A. A History of South India, Oxford Univ. Press (1955)", "source_type": "academic", "url": null}
+      ]
+    }
+  ]
+}

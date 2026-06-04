@@ -17848,7 +17848,7 @@
     "capital_lat": -29.5,
     "capital_lon": -67.5,
     "confidence_score": 0.55,
-    "status": "uncertain",
+    "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -17882,7 +17882,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: 'Diaguita' is a collective designation for multiple Kakan-speaking peoples of northwestern Argentina and central-north Chile, including the Calchaqui, Quilmes, Pulares, and others. They did not form a single polity but shared linguistic and cultural features. The Kakan language is now extinct, extinguished through colonial violence and forced assimilation. ETHICS-002: The Calchaqui Wars (1560-1665) represent one of the longest sustained indigenous resistance campaigns in the Americas. The final defeat of the Quilmes people resulted in their forced deportation march of over 1,200 km to Buenos Aires province -- an act of ethnic cleansing. The town of Quilmes near Buenos Aires is named for these deportees. Boundary da aourednik/historical-basemaps (600, strategy=capital_in_polygon, precision=1). CC BY 4.0.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=1773km / edge=0km from capital (exceeded thresholds). Regenerated as 250.0km radius circle.",
+    "ethical_notes": "ETHICS-001: 'Diaguita' is a collective designation for multiple Kakan-speaking peoples of northwestern Argentina and central-north Chile, including the Calchaqui, Quilmes, Pulares, and others. They did not form a single polity but shared linguistic and cultural features. The Kakan language is now extinct, extinguished through colonial violence and forced assimilation. ETHICS-002: The Calchaqui Wars (1560-1665) represent one of the longest sustained indigenous resistance campaigns in the Americas. The final defeat of the Quilmes people resulted in their forced deportation march of over 1,200 km to Buenos Aires province -- an act of ethnic cleansing. The town of Quilmes near Buenos Aires is named for these deportees. Boundary da aourednik/historical-basemaps (600, strategy=capital_in_polygon, precision=1). CC BY 4.0.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=1773km / edge=0km from capital (exceeded thresholds). Regenerated as 250.0km radius circle.\n\n[S53-enrich] ETHICS-007: gruppi diaguita-calchaquí del NO argentino; resistettero agli spagnoli per ~130 anni (Guerre Calchaquíes, fino al 1667). Alla fine i ~2.000 Quilmes superstiti furono DEPORTATI a piedi per ~1.500 km verso Buenos Aires (desnaturalización) — centinaia morirono nel tragitto. Fonti: Lorandi, González & Pérez.",
     "name_variants": [
       {
         "name": "Diaguita",
@@ -17950,6 +17950,16 @@
         "citation": "Boixados, R. 'Los pueblos de indios de La Rioja colonial,' Mundo de Antes 1 (2008), Universidad Nacional de Tucuman",
         "source_type": "academic",
         "url": null
+      },
+      {
+        "citation": "Lorandi, A.M. De quimeras, rebeliones y utopías: la gesta del inca Pedro Bohórquez, Pontificia Univ. Católica del Perú (1997)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "González, A.R. & Pérez, J.A. Argentina indígena, vísperas de la conquista, Paidós (1972)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "historical_approximation",
@@ -23045,8 +23055,8 @@
     "capital_name": "Cuzcatan",
     "capital_lat": 13.72,
     "capital_lon": -89.2,
-    "confidence_score": 0.4,
-    "status": "uncertain",
+    "confidence_score": 0.55,
+    "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -23188,7 +23198,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: The Pipil are Nahua-speaking peoples who migrated from central Mexico to Central America in multiple waves. Their language (Nawat) is closely related to Nahuatl but distinct. 'Cuzcatan' (place of jewels/necklaces in Nawat) gives modern El Salvador its name through the Spanish adaptation. ETHICS-002: The Pipil resisted Spanish conquest fiercely; the 1524 campaign under Pedro de Alvarado met stronger resistance here than in Guatemala. Prince Atlacatl (whether historical or legendary) is commemorated as a resistance figure. ETHICS-003: The 1932 La Matanza in El Salvador, in which the Salvadoran military killed an estimated 10,000-40,000 indigenous people (mostly Pipil), effectively destroyed visible indigenous identity in El Salvador. After 1932, Pipil people abandoned traditional dress and language to avoid identification and death. The Nawat language is now critically endangered with fewer than 200 speakers.",
+    "ethical_notes": "ETHICS-001: The Pipil are Nahua-speaking peoples who migrated from central Mexico to Central America in multiple waves. Their language (Nawat) is closely related to Nahuatl but distinct. 'Cuzcatan' (place of jewels/necklaces in Nawat) gives modern El Salvador its name through the Spanish adaptation. ETHICS-002: The Pipil resisted Spanish conquest fiercely; the 1524 campaign under Pedro de Alvarado met stronger resistance here than in Guatemala. Prince Atlacatl (whether historical or legendary) is commemorated as a resistance figure. ETHICS-003: The 1932 La Matanza in El Salvador, in which the Salvadoran military killed an estimated 10,000-40,000 indigenous people (mostly Pipil), effectively destroyed visible indigenous identity in El Salvador. After 1932, Pipil people abandoned traditional dress and language to avoid identification and death. The Nawat language is now critically endangered with fewer than 200 speakers.\n\n[S53-enrich] ETHICS-002: stato nahua (pipil) di Cuzcatlán (El Salvador occidentale, da ~900). La conquista spagnola (Pedro de Alvarado, 1524) fu inizialmente RESPINTA (resistenza di Atlácatl, battaglia di Acajutla); servirono spedizioni successive (1525, 1528) per sottometterli. Fonti: Fowler.",
     "name_variants": [
       {
         "name": "Pipil / Cuzcatlan",
@@ -23261,6 +23271,16 @@
         "citation": "Lara-Martinez, R. Balsamera bajo la guerra fria: El Salvador 1932, historia e imagenes (2009)",
         "source_type": "academic",
         "url": null
+      },
+      {
+        "citation": "Fowler, W.R. The Cultural Evolution of Ancient Nahua Civilizations: The Pipil-Nicarao of Central America, Univ. of Oklahoma Press (1989)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Sharer, R.J. & Traxler, L.P. The Ancient Maya, 6th ed., Stanford Univ. Press (2006)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "approximate_circle"
@@ -23274,8 +23294,8 @@
     "capital_name": "Cerquin",
     "capital_lat": 14.35,
     "capital_lon": -88.45,
-    "confidence_score": 0.4,
-    "status": "uncertain",
+    "confidence_score": 0.55,
+    "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -23309,7 +23329,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: The Lenca language is now extinct, and little is known about Lenca self-designation. The term 'Lenca' may derive from a local placename. The Lenca were linguistically isolated, unrelated to surrounding Mesoamerican or Chibchan language families, suggesting deep antiquity in the region. ETHICS-002: Lempira, a Lenca war chief, organized a confederation of 30,000 warriors against Spanish forces in 1537-1539 and is now the national hero of Honduras (the currency is named after him). Spanish accounts state he was killed treacherously during peace negotiations -- lured out under a flag of truce and shot by a Spanish soldier. ETHICS-003: Contemporary Lenca communities in Honduras face violence for environmental and land rights activism. Berta Caceres, a Lenca environmental activist, was assassinated in 2016 for opposing the Agua Zarca hydroelectric dam, highlighting the continuity of indigenous land struggles from the 16th century to the present.",
+    "ethical_notes": "ETHICS-001: The Lenca language is now extinct, and little is known about Lenca self-designation. The term 'Lenca' may derive from a local placename. The Lenca were linguistically isolated, unrelated to surrounding Mesoamerican or Chibchan language families, suggesting deep antiquity in the region. ETHICS-002: Lempira, a Lenca war chief, organized a confederation of 30,000 warriors against Spanish forces in 1537-1539 and is now the national hero of Honduras (the currency is named after him). Spanish accounts state he was killed treacherously during peace negotiations -- lured out under a flag of truce and shot by a Spanish soldier. ETHICS-003: Contemporary Lenca communities in Honduras face violence for environmental and land rights activism. Berta Caceres, a Lenca environmental activist, was assassinated in 2016 for opposing the Agua Zarca hydroelectric dam, highlighting the continuity of indigenous land struggles from the 16th century to the present.\n\n[S53-enrich] ETHICS-007: confederazione lenca dell'Honduras. La resistenza di Lempira (1537, ~30.000 guerrieri da ~200 villaggi al Peñol de Cerquín) fu spezzata dal suo ASSASSINIO durante finti negoziati di pace (1538). La popolazione indigena crollo' a ~8.000 entro il 1541 (guerra, encomienda, epidemie). Fonti: Newson, Chapman.",
     "name_variants": [
       {
         "name": "Lenca",
@@ -23374,6 +23394,16 @@
         "citation": "Lara Pinto, G. 'Perfil de los pueblos de tradicion lenca ante el tercer milenio,' Yaxkin 23(1) (2006)",
         "source_type": "academic",
         "url": null
+      },
+      {
+        "citation": "Newson, L.A. The Cost of Conquest: Indian Decline in Honduras under Spanish Rule, Westview Press / Dellplain Latin American Studies (1986)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Chapman, A. Los hijos del copal y la candela, UNAM (1985)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "historical_approximation"

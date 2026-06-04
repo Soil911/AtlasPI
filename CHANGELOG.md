@@ -2,6 +2,27 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.99] - 2026-06-04 (S53 enrichment — Cina/Mesoamerica/Levante/Galles/C.America/Ande/Giava/S.India)
+
+**Tema**: *S53 deep-enrichment di 10 entità low-confidence ad alta visibilità con
+ampio spread geografico. +23 fonti verificate; ethical_notes ETHICS-007 forti.*
+
+Entità: Taiping (太平天國), Zapotec (Bēnizàa), Mixtec (Ñuu Dzahui), Gerusalemme
+ayyubide, Galles (Tywysogaeth Cymru), Cuzcatlán/Pipil, Lenca, Diaguita, Sunda,
+Chola Sangam.
+- confidence 0.4-0.55 → 0.55-0.72 (calibrata); 4 entità uncertain→confirmed.
+- **ethical_notes non-eufemistici**: Taiping = una delle guerre più letali della
+  storia (20-30M morti); Lenca = Lempira assassinato durante finti negoziati (1538) +
+  crollo demografico; Diaguita = **deportazione forzata dei Quilmes** (~1.500 km a
+  piedi, 1667, centinaia di morti); Galles = fine dell'indipendenza (Statuto di
+  Rhuddlan 1284); conquiste spagnole (Pipil/Atlácatl) e di Saladino (Gerusalemme 1187).
+- Fonti verificate: Platt, Spence, Marcus & Flannery, Jansen, Hillenbrand, Humphreys,
+  Davies, Fowler, Newson, Lorandi, Coedès, Nilakanta Sastri, …
+- **Saltata #142** (Sri Lanka -543..1815): super-aggregato di 2358 anni → da SPLITTARE,
+  non arricchire (flag, come la Babilonia combinata).
+
+`data/fixes/enrichment_s53.sql` per prod. Suite 1326 verde, ruff verde.
+
 ## [v6.99.98] - 2026-06-04 (S52 enrichment + AI Co-Founder suggestion #82 chiusa)
 
 **Tema**: *S52 deep-enrichment di 10 entità low-confidence (spread geografico:

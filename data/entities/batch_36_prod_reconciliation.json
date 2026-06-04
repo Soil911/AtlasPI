@@ -817,9 +817,9 @@
     "boundary_aourednik_year": null,
     "boundary_aourednik_precision": null,
     "boundary_ne_iso_a3": null,
-    "confidence_score": 0.5,
+    "confidence_score": 0.6,
     "status": "confirmed",
-    "ethical_notes": "ETHICS-001: Early Cholas / Sangam-era Tamil kingdom, regional dynasty del delta Kaveri (-300 to 300 CE). Distinct from Medieval Chola Empire (id 110, restricted to 848-1279 dopo split v6.86). After Sangam era there was a 650-year gap (Kalabhra interregnum + Pallava rule) before Vijayalaya restored Chola rule in 848. Confidence 0.6 perché Sangam literature (Pattuppattu, Ettuthokai) è la fonte primaria ma con cronologie incerte. Q3532146 verified.\n\n[v6.99.80-postH-visual] Replaced rectangle bbox placeholder polygon (visually obvious as bounding box, not real boundary) with capital-based circle of 250km radius. Approximate but visually honest as approximation rather than pretending to be a documented boundary.",
+    "ethical_notes": "ETHICS-001: Early Cholas / Sangam-era Tamil kingdom, regional dynasty del delta Kaveri (-300 to 300 CE). Distinct from Medieval Chola Empire (id 110, restricted to 848-1279 dopo split v6.86). After Sangam era there was a 650-year gap (Kalabhra interregnum + Pallava rule) before Vijayalaya restored Chola rule in 848. Confidence 0.6 perché Sangam literature (Pattuppattu, Ettuthokai) è la fonte primaria ma con cronologie incerte. Q3532146 verified.\n\n[v6.99.80-postH-visual] Replaced rectangle bbox placeholder polygon (visually obvious as bounding box, not real boundary) with capital-based circle of 250km radius. Approximate but visually honest as approximation rather than pretending to be a documented boundary.\n\n[S53-enrich] ETHICS: prima fase Chola (era Sangam, -300..300), capitale Uraiyur; documentata dalla letteratura Sangam (la piu' antica letteratura tamil). Distinta dall'Impero Chola medievale (848-1279, id 110). Fonti: Sastri (The Colas / A History of South India), corpus Sangam.",
     "name_variants": [
       {
         "name": "Early Cholas",
@@ -841,6 +841,16 @@
         "citation": "Wikipedia contributors. Sangam period / Early Cholas. Cross-reference for chronology and rulers.",
         "url": "https://en.wikipedia.org/wiki/Sangam_period",
         "source_type": "secondary"
+      },
+      {
+        "citation": "Nilakanta Sastri, K.A. The Cōḷas, Univ. of Madras (1935; rev. 1955)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Nilakanta Sastri, K.A. A History of South India, Oxford Univ. Press (1955)",
+        "url": null,
+        "source_type": "academic"
       }
     ]
   }

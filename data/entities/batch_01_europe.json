@@ -98713,7 +98713,7 @@
     "capital_name": "Aberffraw",
     "capital_lat": 53.193,
     "capital_lon": -4.461,
-    "confidence_score": 0.5,
+    "confidence_score": 0.7,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -98856,7 +98856,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: name_original in Welsh (Cymraeg), the language of the native population. 'Principality of Wales' is the English colonial designation. ETHICS-003: The entity_type 'kingdom' is approximate; the Welsh used the title 'Tywysog' (prince/leader) rather than 'Brenin' (king). The principality only united most of Wales briefly under Llywelyn ab Iorwerth and Llywelyn ap Gruffudd. Earlier Welsh kingdoms (Gwynedd, Powys, Deheubarth) existed independently. ETHICS-002: The English conquest of Wales (1282-1283) destroyed Welsh political independence. Edward I's castle-building program was an instrument of colonial domination. The Statute of Rhuddlan (1284) imposed English law. Welsh language and culture survived despite centuries of suppression, including laws specifically targeting the Welsh language.",
+    "ethical_notes": "ETHICS-001: name_original in Welsh (Cymraeg), the language of the native population. 'Principality of Wales' is the English colonial designation. ETHICS-003: The entity_type 'kingdom' is approximate; the Welsh used the title 'Tywysog' (prince/leader) rather than 'Brenin' (king). The principality only united most of Wales briefly under Llywelyn ab Iorwerth and Llywelyn ap Gruffudd. Earlier Welsh kingdoms (Gwynedd, Powys, Deheubarth) existed independently. ETHICS-002: The English conquest of Wales (1282-1283) destroyed Welsh political independence. Edward I's castle-building program was an instrument of colonial domination. The Statute of Rhuddlan (1284) imposed English law. Welsh language and culture survived despite centuries of suppression, including laws specifically targeting the Welsh language.\n\n[S53-enrich] ETHICS-002: principato gallese di Llywelyn ap Gruffudd ('l'Ultimo'), ucciso a Orewin Bridge (11 dic 1282); la conquista inglese di Edoardo I fu completata nel 1283 (cattura di Dafydd). Lo Statuto di Rhuddlan (1284) annetté il Galles alla corona inglese — fine dell'indipendenza gallese. Fonti: Davies, Smith.",
     "name_variants": [
       {
         "name": "Principality of Wales",
@@ -98901,6 +98901,16 @@
       {
         "citation": "Brut y Tywysogion (Chronicle of the Princes, medieval Welsh chronicle)",
         "source_type": "primary"
+      },
+      {
+        "citation": "Davies, R.R. The Age of Conquest: Wales 1063-1415, Oxford Univ. Press (1987)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Smith, J.B. Llywelyn ap Gruffudd, Prince of Wales, Univ. of Wales Press (1998)",
+        "url": null,
+        "source_type": "academic"
       }
     ],
     "boundary_source": "approximate_circle"
