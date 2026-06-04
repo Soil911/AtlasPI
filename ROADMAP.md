@@ -13,9 +13,11 @@
 
 ## Versioni completate
 
-### v6.99.85-94 -- Wave 2 hardening + full audit + traffic fixes (2026-05-31)
-**Versione corrente: v6.99.94.** CI interamente verde (lint+test+js-tests+postgres-migrations+build).
-**10/10 HIGH dell'audit chiusi** (con v6.99.93 / audit #7).
+### v6.99.85-99 -- Wave 2 hardening + audit + enrichment S51-53 (2026-05-31 → 06-04)
+**Versione corrente: v6.99.99** (prod). CI interamente verde (lint+test+js-tests+postgres-migrations+build).
+**10/10 HIGH dell'audit chiusi** (con v6.99.93 / audit #7). Poi: discoverability refresh
+(llms.txt/landing, v6.99.97), agent-compat routes (#78-81, v6.99.97), enrichment S51-53
+(30 entità deployate, v6.99.95/98/99). Suggestion AI Co-Founder: 5/6 chiuse (#78-82), resta #83.
 
 Sessione lunga: audit a freddo (10 dimensioni, workflow `wb4nky8m3` con 29 agenti +
 verifica adversariale) → tutte "adequate", 0 critical, **10 HIGH confermati**. Verdetto:
@@ -50,13 +52,27 @@ prod + 2 bug-fix:
   serializzazione** → orjson non aiuta. Change revertato (non committato). Perf reale =
   task separata: profilare query DB / caricamento boundary / validazione Pydantic di
   500 entità (es. `exclude_geometry` di default, indici, paginazione boundary).
-- **(b) Enrichment** entità low-confidence (Wave 2 Plan A — vedi `docs/auto-iter-wave0/briefs/D-enrichment-backlog.md`). ← IN CORSO
-  - **S51 (v6.99.95)** — batch brief-D (Umayyad, Maratha, Ghurid, Zagwe, Akkad, Neo-Babylon,
-    Mycenae, Saba, Xianbei, Wagadou): +34 fonti verificate, confidence 0.4-0.55→0.65-0.78,
-    ethical_notes. **Source-only**: JSON aggiornato + `data/fixes/enrichment_s51_eurasia.sql`
-    pronto. ⏳ **DA FARE (Clirim)**: eseguire la SQL in prod + `cra-deploy atlaspi`.
-  - Prossimi batch: S52+ (gap geografici Pacific/Siberia; low-conf estreme; chain linkage
-    Xianbei→Wei + i 78% orfani da chain_links).
+- **(b) Enrichment** entità low-confidence (Wave 2 Plan A) — ← IN CORSO (turnkey:
+  spec `data/fixes/enrichment_sNN.json` → `scripts/apply_enrichment.py` → SQL+JSON →
+  backup+SQL+cra-deploy). **30 entità arricchite + DEPLOYATE** (~90 fonti verificate):
+  - **S51 (v6.99.95)** Eurasia classical empires (Umayyad, Maratha, Ghurid, Zagwe, Akkad,
+    Neo-Babylon, Mycenae, Saba, Xianbei, Wagadou) — deployato in v6.99.97.
+  - **S52 (v6.99.98)** Daju, Tunjur, Sosso, Ngoenyang, Tarumanagara, Kediri, Sogdiana,
+    Zunghar, Muisca, Herod — + **chiusa suggestion #82** (Daju/Tunjur geometrie distinte).
+  - **S53 (v6.99.99)** Taiping, Zapotec, Mixtec, Gerusalemme ayyubide, Galles, Pipil, Lenca,
+    Diaguita, Sunda, Sangam Chola.
+  - **Backlog residuo (prod, 2026-06-04)**: **226 entità < 0.6** (di cui 46 < 0.5),
+    223 `uncertain`, 84 con < 3 fonti. ≈22 batch da 10 per portare tutto ≥0.6 (i top-30
+    ad alta visibilità di brief D sono già fatti). S54+ in corso.
+  - **Sotto-tracce aperte**: chain linkage (78% entità orfane da chain_links); gap
+    geografici (Pacifico/Siberia/Patagonia); **split-candidate** (Babilonia #171, Sri Lanka
+    #142 — super-aggregati da splittare, non arricchire).
+
+### Decisioni/follow-up aperti (non-Wave-2, da Clirim)
+- **Suggestion #83** (AI Co-Founder): client esterno → 422 su anni < -4000. Estendere la
+  copertura pre-4000 a.C. (Neolitico) vs documentare il floor / restituire vuoto invece di 422.
+- **Discoverability esterna** (MCP-registry, GSC/Bing, backlink): attende la **decisione dominio**.
+- **7 insert solo-prod** + sync `name_original` nativo (ETHICS-001): vedi ETHICS-012 §"#2".
 
 ### v6.99.81-83 Wave 1 -- Security, data-fix, perf (2026-05-28)
 **(storico — versione corrente ora v6.99.92, sopra.)** Triplo deploy autonomo in 1 sessione
