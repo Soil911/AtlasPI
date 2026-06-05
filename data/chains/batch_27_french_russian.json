@@ -8,9 +8,21 @@
     "confidence_score": 0.95,
     "ethical_notes": "The French imperial period (1870-1962) ruled ~110 million people outside Europe at peak, with extractive colonialism in Africa, Indochina, and the Caribbean. The Vichy regime (1940-1944) collaborated in the Holocaust; this has been officially acknowledged since Chirac's 1995 speech. The wars of decolonization (Indochina 1946-1954, Algeria 1954-1962) involved torture and massacres the French state officially confronted only in the 2020s.",
     "sources": [
-      {"citation": "Duby, G. 'France in the Middle Ages 987-1460' (1991)", "url": null, "source_type": "academic"},
-      {"citation": "Cobban, A. 'A History of Modern France' (1963, 3 vols)", "url": null, "source_type": "academic"},
-      {"citation": "Furet, F. 'Revolutionary France 1770-1880' (1992)", "url": null, "source_type": "academic"}
+      {
+        "citation": "Duby, G. 'France in the Middle Ages 987-1460' (1991)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Cobban, A. 'A History of Modern France' (1963, 3 vols)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Furet, F. 'Revolutionary France 1770-1880' (1992)",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "links": [
       {
@@ -35,6 +47,14 @@
         "description": "Kingdom of France, dated from the election of Hugh Capet (987) as the first Capetian king. The dynasty's direct line ran until the Valois succession (1328), then Bourbons (1589). Absolute monarchy consolidated under Louis XIV. Overthrown by the Revolution (1792)."
       },
       {
+        "entity_name": "Premier Empire français",
+        "transition_year": 1804,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "First French Empire (1804-1815). After the 1789 Revolution abolished the monarchy (First Republic, 1792) and the 1799 coup of 18 Brumaire, Napoleon Bonaparte crowned himself Emperor on 2 December 1804. At its height the Empire dominated continental Europe; it collapsed after the disastrous 1812 Russian campaign and the defeat at Waterloo (1815).",
+        "ethical_notes": "This node makes explicit one of the episodes the chain otherwise compresses: the First Republic (1792-1804), First Empire (1804-1815), Bourbon Restoration (1815-1830), July Monarchy, Second Republic, and Second Empire (1852-1870) all preceded the current republican form. The Napoleonic Wars caused an estimated 3-6 million deaths; the Empire also reinstated slavery in the French colonies (1802), reversing the 1794 revolutionary abolition."
+      },
+      {
         "entity_name": "Republique francaise",
         "transition_year": 1870,
         "transition_type": "REVOLUTION",
@@ -53,9 +73,21 @@
     "confidence_score": 0.9,
     "ethical_notes": "ETHICS: Russian historiography contests Ukrainian historiography on whether Kievan Rus' is Russia's direct ancestor or Ukraine's. The Ukrainian narrative emphasizes Kyiv's distinctness; the Russian narrative emphasizes Moscow's succession after Kyiv's destruction (1240). The Soviet period's repressions (Great Terror 1936-1938, Gulag, Holodomor 1932-33 famine, deportation of Chechens/Crimean Tatars 1944) are documented but politically contested. The post-Soviet aggression against Ukraine (2014, 2022) is ongoing.",
     "sources": [
-      {"citation": "Riasanovsky, N. V. 'A History of Russia' (1963, multiple eds)", "url": null, "source_type": "academic"},
-      {"citation": "Plokhy, S. 'Lost Kingdom: A History of Russian Nationalism' (2017)", "url": null, "source_type": "academic"},
-      {"citation": "Service, R. 'A History of Twentieth-Century Russia' (1997)", "url": null, "source_type": "academic"}
+      {
+        "citation": "Riasanovsky, N. V. 'A History of Russia' (1963, multiple eds)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Plokhy, S. 'Lost Kingdom: A History of Russian Nationalism' (2017)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Service, R. 'A History of Twentieth-Century Russia' (1997)",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "links": [
       {
@@ -106,8 +138,16 @@
     "confidence_score": 0.85,
     "ethical_notes": "Ukrainian historiography's emphasis on continuity from Kievan Rus' to modern Ukraine is contested by Russian narratives that see Moscow as the legitimate successor. The Holodomor (1932-33), recognized as genocide by Ukraine and several other countries, is a defining trauma. The 2014 and 2022 Russian aggressions are the current geopolitical reality shaping the country.",
     "sources": [
-      {"citation": "Plokhy, S. 'The Gates of Europe: A History of Ukraine' (2015)", "url": null, "source_type": "academic"},
-      {"citation": "Subtelny, O. 'Ukraine: A History' (1988, updated 2009)", "url": null, "source_type": "academic"}
+      {
+        "citation": "Plokhy, S. 'The Gates of Europe: A History of Ukraine' (2015)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Subtelny, O. 'Ukraine: A History' (1988, updated 2009)",
+        "url": null,
+        "source_type": "academic"
+      }
     ],
     "links": [
       {

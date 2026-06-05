@@ -101,9 +101,9 @@
     "name_lang": "en",
     "chain_type": "SUCCESSION",
     "region": "Balkans / Romania / Moldova",
-    "description": "Romanian state-formation: the medieval principalities of Wallachia (Țara Românească, 1330) and Moldova (Principatul Moldovei, 1346), both Ottoman vassals from the 16th century, united under Alexandru Ioan Cuza (1859) to form Romania (1862).",
+    "description": "Romanian state-formation: the medieval principalities of Wallachia (Țara Românească, c. 1330) and Moldavia (1346), both Ottoman vassals, united under Alexandru Ioan Cuza (1859), independent 1878, proclaimed the Kingdom of Romania under Carol I (1881-1947).",
     "confidence_score": 0.85,
-    "ethical_notes": "Transylvania's integration (1918) changed the ethnic balance and is still contested by Hungarian historiography. The interwar 'Greater Romania' included significant Ukrainian (Bessarabia) and Hungarian (Transylvania) minorities. Romania's alignment with Nazi Germany (1940-1944) and the Iași pogroms are significant; Ceaușescu's nationalist narrative minimized them.",
+    "ethical_notes": "Transylvania's integration (1918) changed the ethnic balance and is still contested by Hungarian historiography. The interwar 'Greater Romania' included significant Ukrainian (Bessarabia) and Hungarian (Transylvania) minorities. Romania's alignment with Nazi Germany (1940-1944) and the Iași pogroms are significant; Ceaușescu's nationalist narrative minimized them. NOTE (ETHICS-001): the early-Wallachia entity 'Furstentum Walachei' (a German-language name) was removed from this chain in favor of the local-named Țara Românească; that entity's German name_original is itself slated for an entity-level rename/deprecation.",
     "sources": [
       {
         "citation": "Hitchins, K. 'A Concise History of Romania' (2014)",
@@ -118,25 +118,26 @@
     ],
     "links": [
       {
-        "entity_name": "Furstentum Walachei",
+        "entity_name": "Tara Romaneasca",
         "transition_year": null,
         "transition_type": null,
         "is_violent": false,
-        "description": "Principality of Wallachia, founded by Basarab I c. 1330 after independence from the Kingdom of Hungary at the Battle of Posada (1330). Produced Vlad III Țepeș (r. 1448, 1456-1462, 1476), the basis for Dracula."
+        "description": "Principality of Wallachia (Țara Românească), founded by Basarab I c. 1330 after independence from the Kingdom of Hungary at the Battle of Posada (1330). It produced Vlad III Țepeș (the historical basis for Dracula). An Ottoman vassal from the 16th century while retaining internal autonomy."
       },
       {
         "entity_name": "Principatul Moldovei",
         "transition_year": 1346,
         "transition_type": "SUCCESSION",
         "is_violent": false,
-        "description": "Principality of Moldavia, founded 1346 under Dragoș as a Hungarian march, achieving independence under Bogdan I (1359). Stephen the Great (1457-1504) resisted Ottoman expansion. Both principalities fell under Ottoman suzerainty (16th c.) but retained internal autonomy."
+        "description": "Principality of Moldavia, founded 1346 under Dragoș as a Hungarian march, achieving independence under Bogdan I (1359). Stephen the Great (1457-1504) resisted Ottoman expansion. Wallachia and Moldavia were PARALLEL principalities (not one succeeding the other), both Ottoman vassals from the 16th century; the linear order here is a model artifact — they unite at the next node."
       },
       {
-        "entity_name": "Tara Romaneasca",
+        "entity_name": "Regatul Romaniei",
         "transition_year": 1859,
         "transition_type": "UNIFICATION",
         "is_violent": false,
-        "description": "Alexandru Ioan Cuza elected prince of both Wallachia (5 February 1859) and Moldavia (17 January 1859), creating the United Principalities — de facto unification. Formal unification as Romania followed in 1862 and full independence in 1878 (Berlin Treaty)."
+        "description": "United Principalities of Moldavia and Wallachia, formed when Alexandru Ioan Cuza was elected prince of both Moldavia (Jan 1859) and Wallachia (Feb 1859); formal union as Romania in 1862, full independence in 1878 (Treaty of Berlin, after the violent 1877-78 Russo-Turkish war). Proclaimed the Kingdom of Romania (Regatul României) under Carol I in 1881; the monarchy lasted until 1947, when it was abolished under Soviet pressure.",
+        "ethical_notes": "Greater Romania (1918) integrated Transylvania, Bessarabia, and Bukovina, changing the ethnic balance — still contested by Hungarian historiography. Romania's alignment with Nazi Germany (1940-44) and the Iași pogrom (1941, ~13,000 Jews killed) are part of the record; Ceaușescu's nationalist narrative minimized them."
       }
     ]
   }

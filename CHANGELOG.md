@@ -2,6 +2,31 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.102] - 2026-06-05 (chain linkage B1a — estensione catene con entità-intermedie già seedate)
+
+**Tema**: *Fase B chain linkage, primo batch B1a: estendere catene esistenti con entità
+ora seedate che le loro stesse `ethical_notes` segnalavano come mancanti. Dual-write
+JSON + prod SQL (ETHICS-002/003/007: ogni link è una claim di successione).*
+
+- **Afsharian (#1038) → catena Iran #9**: inserito tra Safavidi e Qajar (CONQUEST 1736).
+  ethical_notes ETHICS-007: sacco di Delhi 1739 (~30.000 morti, Trono del Pavone/Koh-i-Noor),
+  tirannia e assassinio di Nader 1747; Zand (1751-94) resta compresso (no entità).
+- **Premier Empire français (#1037) → catene Francia #8 e #74**: inserito tra Royaume de
+  France e République (REVOLUTION 1804). ethical_notes: guerre napoleoniche ~3-6M morti +
+  **reintroduzione della schiavitù nelle colonie (1802)**, contro l'abolizione del 1794.
+- **Regatul României (#441) → catena Romania #35**: restructure — consolidata la Valacchia
+  sul nome locale **#93 Țara Românească**, **rimosso #579 "Furstentum Walachei"** (nome
+  tedesco, ETHICS-001) dalla catena, appeso il Regno (UNIFICATION 1859 → Kingdom 1881).
+  ethical_notes: pogrom di Iași 1941. *Follow-up ETHICS-001*: l'entità #579 va rinominata/
+  deprecata a livello-entità (il suo `name_original` tedesco resta da sistemare).
+- Tooling: `scripts/apply_chain_links_b1a.py` (applier dual-write idempotente, tiene il
+  contenuto storico in un posto solo) → `scripts/sql_chain_links_b1a.sql` (prod, transazionale
+  + guard di contiguità `sequence_order`). Messico (Segundo Imperio #522) **rinviato**: manca
+  l'entità Repubblica Messicana (1823-64) per non saltare 41 anni.
+
+`data/chains/` aggiornati (batch_02, batch_20, batch_27). Suite 1329 verde, ruff verde.
+Backup pg_dump preso prima dell'applicazione SQL su prod.
+
 ## [v6.99.101] - 2026-06-04 (chain dedup — rimozione 30 catene successorie duplicate + hardening ingest)
 
 **Tema**: *Bug dati strutturale: prod aveva 107 `dynasty_chains` ma solo 77 nomi
