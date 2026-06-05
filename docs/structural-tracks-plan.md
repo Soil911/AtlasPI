@@ -6,10 +6,14 @@
 > non un dato meccanico (ETHICS-002/003). Fonti accademiche REALI verificate, mai inventate.
 
 ## Stato di partenza
-- Prod **v6.99.101** (HEAD `259b0b4`), CI verde, suite 1329 verde.
-- **Fase A chiusa** (chain dedup): prod 107→**77 catene** (77 distinct). Orfani **772**,
-  entità-in-catena **222** (invariati: il dedup non ha toccato la copertura). Hardening
-  `_dedupe_by_name` + fence CI `tests/test_chain_dedup_json_audit.py`. Backup preso.
+- Prod **v6.99.103**, CI verde, suite 1329 verde, **79 catene, 766 orfani** (da 772).
+- **Fase A chiusa** (v6.99.101, chain dedup): 107→77 catene, hardening `_dedupe_by_name` + fence CI.
+- **B1a fatta** (v6.99.102): estese Iran #9 (Afsharidi), Francia #8/#74 (Premier Empire),
+  Romania #35 (Regno + Valacchia tedesca #579 droppata). `scripts/apply_chain_links_b1a.py`.
+- **B1b fatta** (v6.99.103): NUOVE catene Brasile #109 + Italia #110. Modello unificazioni
+  FISSO = linea principale + annessi nelle note.
+- **Babilonia #171**: decisione presa + design COMPLETO in `docs/ethics/ETHICS-015...` →
+  ESECUZIONE = primo task prossima sessione (vedi `NEXT_SESSION_PROMPT.md`).
 - ⚠️ **Deploy**: l'auto-deploy GitHub "Deploy to production" ha riportato success ma NON
   ha aggiornato il VPS (HEAD restava fermo). **Usa sempre `cra-deploy`** (path diretto se
   l'alias non è caricato: `/c/Users/cliri/bin/cra-deploy.sh atlaspi`).
