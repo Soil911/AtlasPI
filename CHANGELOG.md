@@ -2,6 +2,29 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.103] - 2026-06-05 (chain linkage B1b — nuove catene nazionali: Brasile + unificazione italiana)
+
+**Tema**: *Fase B chain linkage, secondo batch B1b: due NUOVE catene di formazione
+nazionale (endpoint già esistenti come entità orfane). Essendo catene nuove, l'ingest
+al boot le crea da sé — solo JSON, niente SQL manuale. Modello unificazioni deciso con
+Clirim: linea principale + annessioni nelle ethical_notes.*
+
+- **Brasile** (`batch_33`, COLONIAL): Brasil Colônia #207 → Império do Brasil #523
+  (DECOLONIZATION 1822). ethical_notes ETHICS-007: **Brasile = maggior destinazione della
+  tratta atlantica (~5M africani schiavizzati) e ULTIMO stato delle Americhe ad abolire
+  la schiavitù (Lei Áurea, 1888)**; guerra del Paraguay; colpo di stato repubblicano 1889
+  (Pedro II deposto). Repubblica non ancora entità → documentata.
+- **Italia** (`batch_33`, SUCCESSION): Regno di Sardegna #423 → Regno d'Italia #100
+  (UNIFICATION 1861). **Linea principale sabauda**; gli stati annessi (Due Sicilie #572,
+  Napoli #424, Stato Pontificio, ducati) sono nelle ethical_notes con la **conquista del
+  Sud** (spedizione dei Mille + invasione piemontese) e la **guerra al brigantaggio**
+  (1861-65, repressione, decine di migliaia di morti, Questione meridionale) — non
+  eufemizzata. Repubblica 1946 documentata (non ancora entità).
+- **Fonti verificate reali via WebSearch** (mai inventate): Fausto, Schwarcz & Starling,
+  Bethell (Brasile); Duggan, Riall, Mack Smith (Italia).
+- Orfani attesi 770→766 (207/523/423/100 entrano in catena); Due Sicilie/Napoli restano
+  orfane (annessi documentati, non nodi). Suite 1329 verde, ruff verde.
+
 ## [v6.99.102] - 2026-06-05 (chain linkage B1a — estensione catene con entità-intermedie già seedate)
 
 **Tema**: *Fase B chain linkage, primo batch B1a: estendere catene esistenti con entità

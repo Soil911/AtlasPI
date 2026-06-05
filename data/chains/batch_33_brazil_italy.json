@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Brazilian state trunk: Brasil Colônia → Império do Brasil",
+    "name_lang": "en",
+    "chain_type": "COLONIAL",
+    "region": "South America / Brazil",
+    "description": "Brazilian state-formation: from the Portuguese colony (Brasil Colônia, 1500-1822), through the independent Empire of Brazil (1822-1889) under the Braganza dynasty, to the republican coup of 1889. The only durable monarchy in independent Latin America.",
+    "confidence_score": 0.85,
+    "ethical_notes": "Brazil was the single largest destination of the transatlantic slave trade — roughly 5 million enslaved Africans were forcibly transported there, more than to any other country — and it was the LAST state in the Americas to abolish slavery (Lei Áurea, 13 May 1888). Both the colony and the Empire rested economically on enslaved labour (sugar, gold, then coffee). Indigenous peoples were dispossessed, enslaved, and decimated by violence and disease across both periods. The 1889 transition to a republic was a military coup deposing Pedro II, not a popular revolution. The republican period is not yet a separate entity here.",
+    "sources": [
+      {"citation": "Fausto, B. 'A Concise History of Brazil' (Cambridge University Press, 1999)", "url": null, "source_type": "academic"},
+      {"citation": "Schwarcz, L. M. & Starling, H. M. 'Brazil: A Biography' (Farrar, Straus and Giroux, 2018)", "url": null, "source_type": "academic"},
+      {"citation": "Bethell, L. (ed.) 'Colonial Brazil' (Cambridge University Press, 1987)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "Brasil Colônia", "transition_year": null, "transition_type": null, "is_violent": false, "description": "Portuguese colony from Pedro Álvares Cabral's landfall (1500). Economy built on Atlantic-facing plantation slavery — brazilwood, then sugar (Northeast), then gold and diamonds (Minas Gerais, 18th c.). The Portuguese royal court relocated to Rio de Janeiro (1808-1821) fleeing Napoleon; Brazil was elevated to a co-kingdom (Reino Unido) in 1815.", "ethical_notes": "Three centuries of plantation slavery and the destruction of indigenous societies (e.g. the Tupí coastal peoples) define the colonial period; the bandeirantes' slave-raiding expeditions reached deep into the interior."},
+      {"entity_name": "Império do Brasil", "transition_year": 1822, "transition_type": "DECOLONIZATION", "is_violent": true, "description": "Empire of Brazil: Pedro I declared independence from Portugal on 7 September 1822 (the 'Grito do Ipiranga'); independence was secured through armed conflict in several provinces (Bahia, Maranhão, Pará, Cisplatina). The constitutional monarchy peaked under Pedro II (r. 1831-1889); the catastrophic Paraguayan War (1864-1870) and the 1888 abolition of slavery preceded the 1889 military coup that founded the Republic.", "ethical_notes": "Independence under a Portuguese prince was not a clean rupture: slavery continued for 66 more years, and the Paraguayan War (1864-70) devastated Paraguay — proportionally one of the deadliest wars in modern history. The 1888 abolition (Lei Áurea) freed ~700,000 still-enslaved people with no land or compensation, shaping enduring racial inequality."}
+    ]
+  },
+  {
+    "name": "Italian unification trunk: Regno di Sardegna → Regno d'Italia",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Italian peninsula / Italy",
+    "description": "Italian unification (Risorgimento): the Kingdom of Sardinia (House of Savoy, Piedmont) as the nucleus that unified the Italian peninsula into the Kingdom of Italy (1861), absorbing Lombardy (1859), the central duchies, the Kingdom of the Two Sicilies (1860), Venetia (1866), and Rome (1870). The Savoyard monarchy lasted until the 1946 republican referendum.",
+    "confidence_score": 0.85,
+    "ethical_notes": "This chain follows the Savoyard MAIN LINE (Sardinia → Italy); unification was substantially a CONQUEST of the other Italian states by Piedmont-Sardinia, not a voluntary merger, and that is not euphemised here. The Kingdom of the Two Sicilies (entity #572, successor to the Kingdom of Naples #424) was conquered in 1860 by Garibaldi's Expedition of the Thousand and the subsequent Piedmontese invasion; the Papal States were annexed in 1870; the central duchies and Austrian Lombardy-Venetia were absorbed 1859-1866. The ensuing 'brigandage war' (1861-1865) in the conquered South was a brutal counter-insurgency under martial law (the 1863 Pica Law), with tens of thousands killed — the origin of the enduring 'Southern Question' (Questione meridionale). These annexed states are documented here rather than as separate chain nodes (a many→one merger is not representable as a single linear succession).",
+    "sources": [
+      {"citation": "Duggan, C. 'The Force of Destiny: A History of Italy Since 1796' (Allen Lane / Houghton Mifflin, 2007)", "url": null, "source_type": "academic"},
+      {"citation": "Riall, L. 'The Italian Risorgimento: State, Society and National Unification' (Routledge, 1994)", "url": null, "source_type": "academic"},
+      {"citation": "Mack Smith, D. 'The Making of Italy, 1796-1870' (1968)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "Regno di Sardegna", "transition_year": null, "transition_type": null, "is_violent": false, "description": "Kingdom of Sardinia, ruled by the House of Savoy from Turin. Under the liberal premiership of Camillo Benso, Count of Cavour (1852-1861), it became the diplomatic and military engine of unification, allying with Napoleon III's France against Austria in the Second War of Italian Independence (1859, Magenta and Solferino) to gain Lombardy.", "ethical_notes": null},
+      {"entity_name": "Regno d'Italia", "transition_year": 1861, "transition_type": "UNIFICATION", "is_violent": true, "description": "Kingdom of Italy, proclaimed 17 March 1861 under Victor Emmanuel II of Savoy after the annexation of Lombardy, the central duchies, and the Two Sicilies (1860). Venetia was added in 1866 (Third War of Independence) and Rome in 1870, becoming the capital in 1871. The Savoyard monarchy lasted until the 2 June 1946 referendum that established the Italian Republic (not yet a separate entity here).", "ethical_notes": "The 'unification' of the South was a military conquest followed by the brigandage war (1861-1865) — a counter-insurgency with mass executions and martial law that killed tens of thousands. The economic and political subordination of the Mezzogiorno dates from this period."}
+    ]
+  }
+]
