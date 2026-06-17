@@ -3,8 +3,17 @@
 
 class TestInputValidation:
     def test_year_too_low(self, client):
-        r = client.get("/v1/entity?year=-5000")
+        # ETHICS-016: il floor è -4000000 (allineato a periods.py/export.py per
+        # coprire "qualsiasi epoca": nazioni aborigene -65000, Çatalhöyük, Sumer
+        # -4500). Solo anni sotto questo floor di sanità vengono rifiutati.
+        r = client.get("/v1/entity?year=-5000000")
         assert r.status_code == 422
+
+    def test_year_pre_4000_bce_accepted(self, client):
+        # ETHICS-016: anni < -4000 (es. Sumer -4500, Çatalhöyük -7500) devono
+        # essere accettati — il vecchio floor -4000 nascondeva 14 entità reali.
+        r = client.get("/v1/entity?year=-7500")
+        assert r.status_code == 200
 
     def test_year_too_high(self, client):
         r = client.get("/v1/entity?year=3000")

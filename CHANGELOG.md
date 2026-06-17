@@ -2,6 +2,28 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.104] - 2026-06-17 (AI Co-Founder suggestion #83 — floor temporale "qualsiasi epoca"; ETHICS-016)
+
+**Tema**: *Implementazione della suggestion accettata #83. Il floor `year >= -4000`
+su `/v1/entity`, `/v1/entities`, `/v1/export/geojson` (e `-10000` su
+`/v1/export/sites/geojson`) rifiutava 422 le query su **14 entità che il dataset GIÀ
+contiene** con `year_start < -4000`. Allineato a `periods.py` → `ge=-4000000`,
+coerente con la missione "qualsiasi epoca".*
+
+- **Origine**: AI Co-Founder #83 — consumatore esterno `182.232.122.40` ha scansionato
+  anni -4500..-4050 su `/v1/export/geojson`, 25 richieste **tutte 422**. Clirim ha
+  accettato la suggestion → opzione (a) estendere la copertura.
+- **Bias corretto**: il floor nascondeva sproporzionatamente popoli indigeni/neolitici
+  (Aboriginal Australian Nations -65000, Papua -50000, Yolŋu/Kulin/Noongar -40000,
+  Wôpanâak -12000, Torres Strait/Selk'nam/Aonikenk -8000, Çatalhöyük/Nabta Playa -7500,
+  Sumer 𒆠𒂗𒄀 -4500). Cancellazione *de facto* delle origini più antiche — viola
+  principio #4 e "qualsiasi epoca". Vedi **ETHICS-016**.
+- **Modifiche**: `entities.py` e `export.py` → `year: ge=-4000000`. `periods.py` già
+  allineato. Floor di sanità mantenuto (-4M a.C.).
+- **Test**: `test_validation.py::test_year_too_low` ora verifica il rifiuto sotto il
+  nuovo floor (-5000000); aggiunto `test_year_pre_4000_bce_accepted` (-7500 → 200).
+- **Doc**: nuovo `docs/ethics/ETHICS-016-floor-temporale-qualsiasi-epoca.md`.
+
 ## [v6.99.103] - 2026-06-05 (chain linkage B1b — nuove catene nazionali: Brasile + unificazione italiana)
 
 **Tema**: *Fase B chain linkage, secondo batch B1b: due NUOVE catene di formazione

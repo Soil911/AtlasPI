@@ -83,8 +83,9 @@ prod + 2 bug-fix:
     #142 — super-aggregati da splittare, non arricchire).
 
 ### Decisioni/follow-up aperti (non-Wave-2, da Clirim)
-- **Suggestion #83** (AI Co-Founder): client esterno → 422 su anni < -4000. Estendere la
-  copertura pre-4000 a.C. (Neolitico) vs documentare il floor / restituire vuoto invece di 422.
+- ~~**Suggestion #83** (AI Co-Founder): client esterno → 422 su anni < -4000.~~ **RISOLTO
+  v6.99.104** (opzione a): floor allineato a -4000000 su tutti gli endpoint; le 14 entità
+  pre-4000 a.C. già nel dataset ora interrogabili/esportabili. Vedi ETHICS-016.
 - **Discoverability esterna** (MCP-registry, GSC/Bing, backlink): attende la **decisione dominio**.
 - **7 insert solo-prod** + sync `name_original` nativo (ETHICS-001): vedi ETHICS-012 §"#2".
 

@@ -42,7 +42,10 @@ router = APIRouter(tags=["esportazione"])
 def export_geojson(
     request: Request,
     response: Response,  # v6.66: richiesto da slowapi con headers_enabled=True
-    year: int | None = Query(None, ge=-4000, le=2100),
+    # ETHICS-016: floor allineato a periods.py/entities.py (-4000000). Il vecchio
+    # -4000 rifiutava (422) query su 14 entità che il dataset GIÀ contiene
+    # (year_start fino a -65000: nazioni aborigene, Çatalhöyük, Sumer/Kengi -4500).
+    year: int | None = Query(None, ge=-4000000, le=2100),
     geometry: str = Query(
         "full",
         pattern="^(full|centroid|none)$",
@@ -213,7 +216,7 @@ def _safe_json(raw: str | None) -> list | dict | None:
 def export_sites_geojson(
     request: Request,
     response: Response,  # v6.66: richiesto da slowapi con headers_enabled=True
-    year: int | None = Query(None, ge=-10000, le=2100),
+    year: int | None = Query(None, ge=-4000000, le=2100),  # ETHICS-016: floor coerente "qualsiasi epoca"
     unesco_only: bool = Query(False),
     db: Session = Depends(get_db),
 ):

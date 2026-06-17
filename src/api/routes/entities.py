@@ -73,7 +73,10 @@ router = APIRouter(tags=["entità"])
 def query_entity(
     response: Response,
     name: str | None = Query(None, max_length=200, description="Nome (parziale) dell'entità"),
-    year: int | None = Query(None, ge=-4000, le=2100, description="Anno di riferimento (negativo = a.C.)"),
+    # ETHICS-016: il floor -4000 nascondeva ~14 entità che il dataset GIÀ contiene
+    # (year_start fino a -65000: nazioni aborigene australiane, Papua, Çatalhöyük,
+    # Sumer/Kengi -4500). Floor allineato a periods.py (-4000000) → "qualsiasi epoca".
+    year: int | None = Query(None, ge=-4000000, le=2100, description="Anno di riferimento (negativo = a.C.)"),
     status: StatusFilter = Query(None, description="Filtra per status"),
     type: str | None = Query(None, max_length=50, description="Filtra per entity_type (empire, kingdom, city, etc.)"),
     continent: str | None = Query(None, max_length=50, description="Filtra per continente (Europe, Asia, Africa, Americas, Middle East, Oceania)"),
