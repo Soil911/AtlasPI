@@ -21,6 +21,28 @@ def test_v1_models_returns_helpful_openai_shaped_stub(client):
     assert "/v1/entities" in body.get("resources", [])
 
 
+def test_v1_messages_alias_returns_pointer(client):
+    """AI Co-Founder #88: /v1/messages (Anthropic-style) must 200 with the same
+    pointer stub as /v1/models, on both GET and POST (agents POST)."""
+    for call in (lambda: client.get("/v1/messages"),
+                 lambda: client.post("/v1/messages", json={})):
+        r = call()
+        assert r.status_code == 200
+        body = r.json()
+        assert body["object"] == "list"
+        assert "/v1/entities" in body.get("resources", [])
+
+
+def test_v1_chat_completions_alias_returns_pointer(client):
+    """AI Co-Founder #88: /v1/chat/completions (OpenAI-style) must 200 with the
+    pointer stub on both GET and POST."""
+    for call in (lambda: client.get("/v1/chat/completions"),
+                 lambda: client.post("/v1/chat/completions", json={})):
+        r = call()
+        assert r.status_code == 200
+        assert r.json()["object"] == "list"
+
+
 def test_v1_atlaspi_prefix_redirects_preserving_query(client):
     """/v1/atlaspi/{rest} → 308 → /v1/{rest}, query string preserved."""
     r = client.get("/v1/atlaspi/cities?limit=5", follow_redirects=False)

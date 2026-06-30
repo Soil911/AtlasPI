@@ -2,6 +2,24 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.105] - 2026-06-30 (AI Co-Founder suggestion #88 — alias LLM-probe /v1/messages + /v1/chat/completions)
+
+**Tema**: *Implementazione della suggestion accettata #88. Agent esterni probano gli
+endpoint stile Anthropic `/v1/messages` e OpenAI `/v1/chat/completions` scambiando
+AtlasPI per un endpoint LLM (2× 404 in 7d), stessa classe di `/v1/models` (#78, già
+fixato). Invece di un 404 secco, ora restituiamo lo stesso pointer JSON che indirizza
+l'agent verso la vera data-API.*
+
+- **Origine**: AI Co-Founder #88 — `/v1/messages` 404 in produzione. `/v1/models` già
+  fixato (#78) restituisce 200; `/v1/messages` e `/v1/chat/completions` ancora 404.
+- **Modifiche**: `src/main.py` → estratto `_LLM_PROBE_POINTER` condiviso; nuovi alias
+  `/v1/messages` e `/v1/chat/completions` (GET+POST, gli agent fanno POST) che
+  restituiscono il pointer JSON. Nessun impatto su dati storici (commento ETHICS).
+- **Nota**: suggestion #89 (`/v1/models` 404 9×) risolta come **stale** — i 404 erano
+  antecedenti al fix #78; l'endpoint ora risponde 200. Suggestion #90 (`/v1/.env`)
+  risolta come **non-actionable** — è un probe di security scanner (credential
+  harvesting), il 404 è la risposta corretta e sicura; nessun endpoint da creare.
+
 ## [v6.99.104] - 2026-06-17 (AI Co-Founder suggestion #83 — floor temporale "qualsiasi epoca"; ETHICS-016)
 
 **Tema**: *Implementazione della suggestion accettata #83. Il floor `year >= -4000`

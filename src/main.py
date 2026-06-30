@@ -605,6 +605,26 @@ async def serve_mcp_manifest():
     )
 
 
+# ETHICS: nessun impatto sulla verità storica — questi sono alias di compat
+# per redirezionare agent LLM che scambiano AtlasPI per un endpoint-modello.
+# Il payload è informativo, non altera dati.
+_LLM_PROBE_POINTER = {
+    "object": "list",
+    "data": [],
+    "note": (
+        "AtlasPI is a historical-geography data API, not an LLM/model endpoint. "
+        "See /llms.txt and /openapi.json. Try /v1/entities, /v1/events, "
+        "/v1/snapshot/year/{year}, /v1/search/advanced?q=..."
+    ),
+    "resources": [
+        "/v1/entities", "/v1/events", "/v1/periods", "/v1/cities", "/v1/routes",
+        "/v1/chains", "/v1/sites", "/v1/rulers", "/v1/languages",
+        "/v1/snapshot/year/{year}",
+    ],
+    "docs": "https://atlaspi.cra-srl.com/llms.txt",
+}
+
+
 @app.get("/v1/models", include_in_schema=False)
 async def v1_models_alias():
     """Compat (AI Co-Founder suggestion #78): clients probing the OpenAI-style
@@ -612,21 +632,18 @@ async def v1_models_alias():
     historical-geography DATA API, not a model server. Return an OpenAI-shaped
     empty list (so those clients don't crash on a 404) plus a pointer to the
     real API surface."""
-    return JSONResponse({
-        "object": "list",
-        "data": [],
-        "note": (
-            "AtlasPI is a historical-geography data API, not an LLM/model endpoint. "
-            "See /llms.txt and /openapi.json. Try /v1/entities, /v1/events, "
-            "/v1/snapshot/year/{year}, /v1/search/advanced?q=..."
-        ),
-        "resources": [
-            "/v1/entities", "/v1/events", "/v1/periods", "/v1/cities", "/v1/routes",
-            "/v1/chains", "/v1/sites", "/v1/rulers", "/v1/languages",
-            "/v1/snapshot/year/{year}",
-        ],
-        "docs": "https://atlaspi.cra-srl.com/llms.txt",
-    })
+    return JSONResponse(_LLM_PROBE_POINTER)
+
+
+@app.api_route("/v1/messages", methods=["GET", "POST"], include_in_schema=False)
+@app.api_route("/v1/chat/completions", methods=["GET", "POST"], include_in_schema=False)
+async def v1_llm_chat_alias():
+    """Compat (AI Co-Founder suggestion #88): agent probano gli endpoint stile
+    Anthropic `/v1/messages` e OpenAI `/v1/chat/completions` (2× 404 in 7d),
+    stessa classe di `/v1/models` (#78). AtlasPI NON è un endpoint LLM: invece
+    di un 404 secco restituiamo lo stesso pointer JSON che indirizza l'agent
+    verso la vera data-API. Accetta GET e POST (gli agent fanno POST)."""
+    return JSONResponse(_LLM_PROBE_POINTER)
 
 
 @app.get("/v1/atlaspi/{rest:path}", include_in_schema=False)
