@@ -63,6 +63,24 @@ class SearchResult(BaseModel):
     continent: str | None = None
 
 
+def _zero_result_hint(query_text: str) -> str:
+    """Retry-path esplicito per le risposte a 0 risultati (agent-UX v6.99.109).
+
+    Gli agenti che cercano per substring esatta ('Holy Roman Empire of the
+    German Nation' → 0) abbandonavano senza sapere che /v1/search/fuzzy
+    avrebbe risolto: la risposta vuota ora lo dice. Il testo è in inglese
+    perché è machine-facing (il consumatore tipico è un agente).
+    """
+    from urllib.parse import quote
+
+    return (
+        "0 results for exact/substring match. Retry with fuzzy multi-script "
+        f"matching: /v1/search/fuzzy?q={quote(query_text[:100])} — it handles "
+        "transliteration variants, partial names and cross-script lookups "
+        "(e.g. 'Bisanzio' → Βασιλεία Ῥωμαίων)."
+    )
+
+
 class SearchResponse(BaseModel):
     """Risposta search.
 
@@ -71,6 +89,8 @@ class SearchResponse(BaseModel):
     total: int
     count: int  # DEPRECATED v6.66 — alias di `total`, verra' rimosso in v6.68.
     results: list[SearchResult]
+    # v6.99.109 (agent-UX): retry-path esplicito sui zero-result.
+    hint: str | None = None
 
 
 class TypeInfo(BaseModel):
@@ -209,6 +229,9 @@ def _entity_to_response(entity: GeoEntity, *, include_geometry: bool = True) -> 
         boundary_source=entity.boundary_source,
         boundary_aourednik_name=entity.boundary_aourednik_name,
         boundary_aourednik_year=entity.boundary_aourednik_year,
+        # v6.99.109 (agent-UX): anno di riferimento machine-readable del polygon
+        # statico (oggi = snapshot aourednik quando presente, NULL altrimenti).
+        boundary_reference_year=entity.boundary_aourednik_year,
         boundary_aourednik_precision=entity.boundary_aourednik_precision,
         boundary_ne_iso_a3=entity.boundary_ne_iso_a3,
         confidence_score=entity.confidence_score,

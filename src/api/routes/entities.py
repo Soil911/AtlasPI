@@ -44,6 +44,7 @@ from src.api.routes._entities_helpers import (
     _where_was_postgis,
     _where_was_sqlite,
     _year_to_century_label,
+    _zero_result_hint,
 )
 from src.api.schemas import BatchResponse, EntityResponse, LightListResponse, PaginatedEntityResponse
 from src.cache import cache_response
@@ -141,7 +142,11 @@ def query_entity(
 
     response.headers["Cache-Control"] = "public, max-age=3600"
     # v6.66 FIX 4: sia `total` (canonico) sia `count` (legacy deprecato).
-    return PaginatedEntityResponse(total=total, count=total, limit=limit, offset=offset, entities=entities)
+    # v6.99.109 (agent-UX): zero-result su ricerca per nome → retry-path esplicito.
+    hint = _zero_result_hint(name) if total == 0 and name else None
+    return PaginatedEntityResponse(
+        total=total, count=total, limit=limit, offset=offset, entities=entities, hint=hint
+    )
 
 
 @router.get(
@@ -287,7 +292,11 @@ def list_entities(
 
     response.headers["Cache-Control"] = "public, max-age=3600"
     # v6.66 FIX 4: sia `total` (canonico) sia `count` (legacy deprecato).
-    return PaginatedEntityResponse(total=total, count=total, limit=limit, offset=offset, entities=entities)
+    # v6.99.109 (agent-UX): zero-result su ricerca per nome → retry-path esplicito.
+    hint = _zero_result_hint(search) if total == 0 and search else None
+    return PaginatedEntityResponse(
+        total=total, count=total, limit=limit, offset=offset, entities=entities, hint=hint
+    )
 
 
 @router.get(
@@ -538,6 +547,8 @@ def search_entities(
         # v6.66 FIX 4: sia `total` canonico sia `count` legacy.
         total=len(results),
         count=len(results),
+        # v6.99.109 (agent-UX): retry-path esplicito sui zero-result.
+        hint=_zero_result_hint(q) if not results else None,
         results=[
             SearchResult(
                 id=e.id,

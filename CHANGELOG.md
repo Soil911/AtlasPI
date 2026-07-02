@@ -2,6 +2,26 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.109] - 2026-07-02 (agent-UX quick wins: zero-result hint, boundary_reference_year, event summary)
+
+**Tema**: *Primi tre fix della milestone M3 (agent-UX), dall'audit agent-consumer
+2026-07-02. Tutti additivi e non-breaking. M2 discoverability resta in pausa per
+decisione di Clirim (sottodominio ok ma submission rinviate).*
+
+- **Zero-result hint**: `/v1/entity`, `/v1/entities` e `/v1/search` con 0 risultati
+  su ricerca per nome ora includono `hint` con il retry-path verso
+  `/v1/search/fuzzy` (query già percent-encoded). Prima erano un dead-end: gli
+  agenti abbandonavano (pattern visibile nei zero-result loggati da agent-insights).
+- **`boundary_reference_year`** (machine-readable): dichiara di quale anno è lo
+  snapshot del polygon — il boundary è statico per l'intero lifespan e a query su
+  altri anni può essere anacronistico (es. Mughal al massimo ~1700 anche nel 1550).
+  Prima la disclosure viveva solo nelle ethical_notes in italiano. Valorizzato da
+  `boundary_aourednik_year` quando presente; NULL = approssimazione generica.
+  Documentata la semantica in llms.txt (sezione "Boundary semantics").
+- **`description_short` + `main_actor` nei summary eventi**: on-this-day e liste
+  eventi forzavano N+1 fetch di detail solo per capire di cosa parlasse l'evento.
+- Test: `tests/test_agent_ux_v109.py` (8 test). Suite 1355 verde.
+
 ## [v6.99.108] - 2026-07-02 (rename #579: Furstentum Walachei → Terra Transalpina — ETHICS-001)
 
 **Tema**: *Chiusura del follow-up ETHICS-001 di B1a. L'entità #579 (voivodati

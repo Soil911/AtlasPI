@@ -75,6 +75,15 @@ endpoint listed below returns JSON with no authentication.
 - /v1/search/fuzzy?q=<query> — multi-script fuzzy match (supports
   Chinese, Arabic, Greek, Cyrillic, Sanskrit, etc.)
 - /v1/compare/{id1}/{id2} — side-by-side comparison
+- Zero results? Exact/substring searches return a `hint` field pointing to
+  the fuzzy retry path — follow it instead of giving up.
+
+### Boundary semantics (IMPORTANT for map rendering)
+- Each entity has ONE static boundary polygon for its whole lifespan.
+  `boundary_reference_year` (machine-readable) tells you which year the
+  polygon depicts; querying other years may show anachronistic borders
+  (e.g. an empire at its maximum extent). NULL = generic approximation.
+  `boundary_source` gives the provenance tier (ETHICS-005).
 
 ### Metadata
 - /v1/types — entity type vocabulary

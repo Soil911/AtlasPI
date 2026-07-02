@@ -98,6 +98,18 @@ class EntityResponse(BaseModel):
         None,
         description="Anno dello snapshot aourednik usato (uno dei 53 disponibili, -123000..2010)",
     )
+    # v6.99.109 (agent-UX): flag machine-readable dell'anacronismo potenziale.
+    boundary_reference_year: int | None = Field(
+        None,
+        description=(
+            "Anno di riferimento del polygon. Il boundary è UNO snapshot STATICO "
+            "per l'intero lifespan dell'entità: interrogando un anno diverso da "
+            "questo, i confini mostrati possono essere anacronistici (es. Mughal "
+            "alla massima estensione ~1700 anche per query sul 1550). NULL = anno "
+            "di riferimento non noto (approssimazione generica). Oggi coincide con "
+            "boundary_aourednik_year quando la provenienza è aourednik."
+        ),
+    )
     boundary_aourednik_precision: int | None = Field(
         None,
         description="Precisione BORDERPRECISION dell'upstream aourednik (README historical-basemaps): 1=approssimato, 2=moderatamente preciso, 3=determinato da legge internazionale. Il valore 0 e' un edge-case legacy (4 feature upstream). Converte in confidence via PRECISION_CONFIDENCE (3->0.85, 2->0.70, 1->0.55, 0->0.45).",
@@ -161,6 +173,12 @@ class PaginatedEntityResponse(BaseModel):
     limit: int = Field(description="Limite per pagina")
     offset: int = Field(description="Offset corrente")
     entities: list[EntityResponse]
+    # v6.99.109 (agent-UX): con 0 risultati, indica il retry-path invece di
+    # un dead-end silenzioso (gli agenti abbandonavano dopo il primo 0-result).
+    hint: str | None = Field(
+        None,
+        description="Presente solo con total=0 su ricerche per nome: suggerisce il retry via /v1/search/fuzzy",
+    )
 
 
 # ─── Wave 2.5 (audit API #1): response_model per gli endpoint headline ──────

@@ -76,6 +76,14 @@ def _event_summary(e: HistoricalEvent) -> dict:
         "status": e.status,
         "confidence_score": e.confidence_score,
         "known_silence": e.known_silence,
+        # v6.99.109 (agent-UX): estratto della descrizione anche nel summary —
+        # on-this-day/liste forzavano un fetch di detail per OGNI evento (N+1)
+        # solo per capire di cosa parlasse l'evento.
+        "description_short": (
+            (e.description[:277] + "...")
+            if e.description and len(e.description) > 280
+            else e.description
+        ),
     }
 
 
