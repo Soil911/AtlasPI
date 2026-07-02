@@ -50,9 +50,11 @@ Record etico: **ETHICS-017**.*
   correggere via ETHICS-001); #240 'សាធារណរដ្ឋខ្មែរ' porta il nome della
   Khmer Republic (1970-75) con gli anni della Kampuchea Democratica
   (1975-79) — possibile mislabel di un regime genocida, verifica prioritaria.
-- Orfani Class-1: 27 → 6 (i 5 differiti + Due Sicilie risolta; nel conteggio
-  entrano anche i bonus #47, #830, #665, #693, #424, #209, #459 non nella
-  query moderna). Verifica post-deploy nel commit.
+- Orfani Class-1: **27 → 5** (verificato post-deploy: restano solo le
+  esclusioni/differite documentate — Soyo #837, Taqali #411, Gorkha #399,
+  Taiping #452, Saudi #253). Bonus fuori-query risolti: #47, #830, #665,
+  #693, #424, #209, #459, #572, #522. Catene in prod: 79 → **100**, tutte
+  con link completamente risolti (nessuna catena parziale).
 
 ## [v6.99.109] - 2026-07-02 (agent-UX quick wins: zero-result hint, boundary_reference_year, event summary)
 
