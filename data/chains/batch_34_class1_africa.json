@@ -1,0 +1,129 @@
+[
+  {
+    "name": "Zimbabwe plateau northern trunk: Dzimba dza mabwe → Mutapa",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Southern Africa / Zimbabwe plateau / Zambezi valley",
+    "description": "Northern branch of the Zimbabwe plateau state tradition: from Great Zimbabwe (Dzimba dza mabwe, c. 1100-1450) to the Mutapa state (Mwene Mutapa / Monomotapa, c. 1430-1760) founded by Nyatsimba Mutota's northward expansion toward the Zambezi valley as Great Zimbabwe declined.",
+    "confidence_score": 0.75,
+    "ethical_notes": "The chain ends WITHOUT a successor link, deliberately: Mutapa's sovereignty was eroded by Portuguese penetration (prazo estates, arms trade) culminating in the 1629 capitulation treaty that made Mwene Mutapa Mavura a Portuguese vassal, but Portugal never constituted a successor polity administering this territory in the period — vassalage is not succession, so no link to the metropole Kingdom of Portugal is asserted. The written record for this region is dominated by Portuguese colonial sources; dates rest on archaeology and oral tradition and are approximate (hence the prudent confidence score). Changamire Dombo's Rozwi expelled the Portuguese from most of the plateau 1684-1696 (see the southwestern trunk chain).",
+    "sources": [
+      {"citation": "Mudenge, S.I.G. 'A Political History of Munhumutapa c. 1400-1902' (Zimbabwe Publishing House / James Currey, 1988)", "url": null, "source_type": "academic"},
+      {"citation": "Beach, D.N. 'The Shona and Zimbabwe 900-1850: An Outline of Shona History' (Heinemann, 1980)", "url": null, "source_type": "academic"},
+      {"citation": "Pikirayi, I. 'The Zimbabwe Culture: Origins and Decline of Southern Zambezian States' (AltaMira Press, 2001)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "Dzimba dza mabwe", "transition_year": null, "transition_type": null, "is_violent": false, "description": "Great Zimbabwe, the stone-built capital of a Shona state controlling the gold trade between the plateau and the Swahili coast (Kilwa network). Its decline in the 15th century is attributed to trade-route shifts and resource pressures, not to conquest.", "ethical_notes": "Colonial-era Rhodesian archaeology long denied the African origin of Great Zimbabwe, attributing it to Phoenicians or other outsiders; this racist fabrication was refuted by archaeology (Caton-Thompson 1929 onwards) and the African origin is not in scholarly dispute."},
+      {"entity_name": "Mutapa", "transition_year": 1430, "transition_type": "SUCCESSION", "is_violent": false, "description": "The Mutapa state (Mwene Mutapa, 'Monomotapa' in Portuguese sources), founded c. 1430 by Nyatsimba Mutota, who according to tradition led an expansion from the declining Great Zimbabwe polity north to the Dande/Zambezi region. Controlled gold and ivory trade with the Swahili coast, later with the Portuguese.", "ethical_notes": "From 1571 Portugal attempted military conquest (Barreto expedition, a failure); penetration succeeded instead through traders, missionaries and prazo estates. The 1629 treaty made the kingdom a Portuguese vassal and legalised land alienation. A rump Mutapa persisted into the 18th century; its later phases are documented mainly through hostile colonial sources."}
+    ]
+  },
+  {
+    "name": "Zimbabwe plateau southwestern trunk: Dzimba dza mabwe → Torwa → Rozwi",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Southern Africa / Zimbabwe plateau (Butua)",
+    "description": "Southwestern branch of the Zimbabwe plateau state tradition: from Great Zimbabwe to the Torwa state of Butua (capital Khami, c. 1450-1683) and then the Rozwi empire (Changamire dynasty, 1684-1834), which conquered Torwa and expelled the Portuguese from the plateau.",
+    "confidence_score": 0.72,
+    "ethical_notes": "Torwa is one of the least-documented major states of the region (confidence of the entity itself is low; dates approximate, resting on the archaeology of Khami and Portuguese hearsay). The Rozwi state was destroyed during the Mfecane: Nguni groups moving north of the Limpopo (Zwangendaba's Ngoni sacked the capital c. 1834; later the Ndebele under Mzilikazi settled the region c. 1838-1840 and absorbed the remnants). The Ndebele kingdom — the on-the-ground successor — is NOT yet an entity in this dataset, so the chain ends at Rozwi with this note rather than asserting a link that cannot be resolved; creating the Ndebele entity is queued.",
+    "sources": [
+      {"citation": "Beach, D.N. 'The Shona and Zimbabwe 900-1850: An Outline of Shona History' (Heinemann, 1980)", "url": null, "source_type": "academic"},
+      {"citation": "Pikirayi, I. 'The Zimbabwe Culture: Origins and Decline of Southern Zambezian States' (AltaMira Press, 2001)", "url": null, "source_type": "academic"},
+      {"citation": "Mudenge, S.I.G. 'The Role of Foreign Trade in the Rozvi Empire: A Reappraisal', Journal of African History 15/3 (1974)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "Dzimba dza mabwe", "transition_year": null, "transition_type": null, "is_violent": false, "description": "Great Zimbabwe as the common root of the plateau state tradition (see also the northern trunk chain to Mutapa — two successor branches from one root, like the Kyivan Rus' chains).", "ethical_notes": null},
+      {"entity_name": "Torwa", "transition_year": 1450, "transition_type": "SUCCESSION", "is_violent": false, "description": "The Torwa state of Butua, centred on Khami (whose stone architecture continues the Great Zimbabwe tradition), rose in the southwest as Great Zimbabwe declined, c. 1450. Known to the Portuguese only indirectly, through Swahili and Portuguese traders' reports.", "ethical_notes": "Approximate dates; the transition from Great Zimbabwe is inferred from archaeology (architectural continuity, trade-goods sequences), not from written or oral records of a political handover."},
+      {"entity_name": "Rozwi", "transition_year": 1684, "transition_type": "CONQUEST", "is_violent": true, "description": "Changamire Dombo, a military leader risen amid Mutapa's fragmentation, conquered Torwa/Butua c. 1683-1684 (Khami destroyed) and founded the Rozwi empire. In 1684-1696 the Rozwi defeated and expelled the Portuguese from the plateau fairs (battle of Maungwe, 1684) — one of the clearest 17th-century cases of an African power rolling back a European colonial advance.", "ethical_notes": "The conquest of Torwa was violent (destruction of Khami). The Rozwi state itself was destroyed in the 1830s by Nguni incursions during the Mfecane — see chain-level notes on the missing Ndebele successor entity."}
+    ]
+  },
+  {
+    "name": "Zulu kingdom: KwaZulu → British Empire",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Southern Africa / KwaZulu-Natal",
+    "description": "The Zulu kingdom from Shaka's state-building (c. 1816) to British conquest: Anglo-Zulu War (1879), engineered partition and civil war, annexation of Zululand (1887), incorporation into Natal (1897).",
+    "confidence_score": 0.85,
+    "ethical_notes": "This chain records the succession of power over the territory, not a lineage: the British Empire is the conqueror, not an heir. Britain invaded in January 1879 under an ultimatum engineered by Sir Bartle Frere without imperial authorisation; after the Zulu victory at Isandlwana (22 January 1879, one of the worst defeats of a modern army by a force without firearms parity), the kingdom was defeated at Ulundi (4 July 1879). Wolseley's settlement deliberately partitioned the kingdom among 13 appointed chiefs, producing a devastating civil war (1879-1884) — a 'divide and rule' destruction documented by Guy. Zululand was annexed in 1887, King Dinuzulu exiled to St Helena, and the territory transferred to Natal in 1897; the 1906 Bambatha rebellion against poll taxes was crushed (~3,000-4,000 Zulu dead). Land dispossession confined the Zulu to reserves — the foundation of later apartheid-era 'homelands'.",
+    "sources": [
+      {"citation": "Guy, J. 'The Destruction of the Zulu Kingdom: The Civil War in Zululand, 1879-1884' (Longman, 1979)", "url": null, "source_type": "academic"},
+      {"citation": "Laband, J. 'Rope of Sand: The Rise and Fall of the Zulu Kingdom in the Nineteenth Century' (Jonathan Ball, 1995)", "url": null, "source_type": "academic"},
+      {"citation": "Morris, D.R. 'The Washing of the Spears' (Simon & Schuster, 1965)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "KwaZulu", "transition_year": null, "transition_type": null, "is_violent": false, "description": "The Zulu kingdom consolidated by Shaka kaSenzangakhona from c. 1816 through military innovation and the absorption of neighbouring chiefdoms during the upheavals of the Mfecane. Under Cetshwayo (r. 1873-1879/1883) it was the strongest independent African state in southern Africa.", "ethical_notes": "Shaka's expansion was itself violent and displaced neighbouring peoples (Mfecane debates: scale and causes are contested in the historiography — Cobbing's critique vs traditional accounts; the dataset does not arbitrate). Predecessor chiefdoms (Mthethwa of Dingiswayo) are not yet entities."},
+      {"entity_name": "British Empire", "transition_year": 1887, "transition_type": "CONQUEST", "is_violent": true, "description": "British conquest: invasion January 1879 (Isandlwana, Rorke's Drift, Ulundi), capture and exile of Cetshwayo, partition into 13 chiefdoms and engineered civil war (1879-1884), formal annexation of Zululand 21 June 1887, incorporation into the Colony of Natal in 1897.", "ethical_notes": "The 1879 invasion was launched on a manufactured pretext against a state that had not attacked British territory. The post-war settlement was designed to destroy Zulu royal power without the cost of direct rule — the resulting civil war killed more Zulu than the 1879 war itself (Guy 1979)."}
+    ]
+  },
+  {
+    "name": "Kingdom of Danhomè: Danhome → colonial France",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "West Africa / Bight of Benin (modern Benin)",
+    "description": "The kingdom of Dahomey (Danhomè, c. 1600-1904, capital Abomey) from its rise on the Abomey plateau to French conquest in the Second Franco-Dahomean War (1892-1894) and absorption into French West Africa.",
+    "confidence_score": 0.85,
+    "ethical_notes": "Truth in both directions. (1) Dahomey's political economy was deeply built on the Atlantic slave trade: annual military campaigns supplied captives sold at Ouidah, one of the largest slave ports in Africa, and the Annual Customs at Abomey included human sacrifice of war captives — these are documented facts, not colonial inventions, though French propaganda inflated them to justify conquest. (2) The French conquest was a colonial war of aggression: the 1892-1894 campaign (Foreign Legion, tirailleurs sénégalais under Dodds) broke the kingdom's army — including its famous women soldiers (the agojie/'Amazons'), most of whom died in combat — burned Abomey, exiled King Béhanzin to Martinique (1894), installed the puppet Agoli-Agbo and deposed him in 1900, dissolving the kingdom into the colony of Dahomey (AOF, 1904). Neither truth cancels the other.",
+    "sources": [
+      {"citation": "Bay, E.G. 'Wives of the Leopard: Gender, Politics, and Culture in the Kingdom of Dahomey' (University of Virginia Press, 1998)", "url": null, "source_type": "academic"},
+      {"citation": "Law, R. 'Ouidah: The Social History of a West African Slaving Port, 1727-1892' (Ohio University Press, 2004)", "url": null, "source_type": "academic"},
+      {"citation": "Alpern, S.B. 'Amazons of Black Sparta: The Women Warriors of Dahomey' (NYU Press, 1998)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "Danhome", "transition_year": null, "transition_type": null, "is_violent": false, "description": "Founded on the Abomey plateau c. 1600 (Houegbadja dynasty), Dahomey conquered the coastal kingdoms of Allada (1724) and Whydah/Ouidah (1727), gaining direct access to the Atlantic trade; tributary to the Oyo empire 1730-1823. A highly centralised monarchy with a standing army including the agojie women's regiments.", "ethical_notes": "See chain-level notes: the kingdom's economy rested substantially on warfare for captives feeding the Atlantic slave trade, alongside later palm-oil exports."},
+      {"entity_name": "Republique francaise", "transition_year": 1894, "transition_type": "CONQUEST", "is_violent": true, "description": "French conquest under the Third Republic: First Franco-Dahomean War 1890; Second 1892-1894 ended with the fall and burning of Abomey (November 1892), Béhanzin's surrender and exile (January 1894), a French puppet king until 1900, then direct colonial rule; incorporated into Afrique-Occidentale Française.", "ethical_notes": "Recorded as the conquest it was. The successor entity is the French Republic (the colonial power itself); no separate 'Colonie du Dahomey' entity exists yet in the dataset."}
+    ]
+  },
+  {
+    "name": "Merina kingdom of Madagascar: Imerina → colonial France",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Madagascar / Indian Ocean",
+    "description": "The Merina kingdom (Imerina, c. 1540-1897), which under Andrianampoinimerina and Radama I unified most of Madagascar in the 19th century, to French conquest: Second Franco-Hova War (1894-1895), annexation (law of 6 August 1896), abolition of the monarchy and exile of Queen Ranavalona III (February 1897).",
+    "confidence_score": 0.85,
+    "ethical_notes": "The French conquest was violent and its aftermath more so: the 1895 expedition took Antananarivo by surprise from the west; the Menalamba ('red shawl') insurgency that erupted in late 1895 was suppressed by Gallieni's 'pacification' through the end of 1897 with summary executions (including the public execution of ministers) — estimates of Malagasy deaths in the conquest-and-pacification period run into the tens of thousands. The monarchy was abolished on 28 February 1897 and Ranavalona III exiled to Réunion, then Algiers, where she died (1917). Also truthful in the other direction: the Merina kingdom's own 19th-century expansion subjugated other Malagasy peoples (Sakalava, Betsimisaraka and others), used forced labour (fanompoana), and is remembered ambivalently outside the highlands — 'Madagascar' and 'Imerina' are not synonyms.",
+    "sources": [
+      {"citation": "Campbell, G. 'An Economic History of Imperial Madagascar, 1750-1895: The Rise and Fall of an Island Empire' (Cambridge University Press, 2005)", "url": null, "source_type": "academic"},
+      {"citation": "Ellis, S. 'The Rising of the Red Shawls: A Revolt in Madagascar, 1895-1899' (Cambridge University Press, 1985)", "url": null, "source_type": "academic"},
+      {"citation": "Randrianja, S. & Ellis, S. 'Madagascar: A Short History' (Hurst, 2009)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "Imerina", "transition_year": null, "transition_type": null, "is_violent": false, "description": "The Merina kingdom of the central highlands, traditionally dated from Andriamanelo (c. 1540); unified under Andrianampoinimerina (c. 1787-1810) and expanded by Radama I to control most of the island, with a literate administration and diplomatic relations with Britain and France.", "ethical_notes": "See chain-level notes on Merina expansionism over other Malagasy peoples and fanompoana forced labour."},
+      {"entity_name": "Republique francaise", "transition_year": 1897, "transition_type": "CONQUEST", "is_violent": true, "description": "French conquest: expedition of 1895 (most French deaths from disease, not combat), protectorate imposed 1895-96, annexation as a colony by the law of 6 August 1896, monarchy abolished and queen exiled February 1897, Menalamba insurgency crushed by end 1897.", "ethical_notes": "Recorded as conquest. The successor entity is the French Republic; no separate 'Colonie de Madagascar' entity exists yet in the dataset."}
+    ]
+  },
+  {
+    "name": "Wadai sultanate: سلطنة وداي → colonial France",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Central Africa / eastern Chad (Ouaddaï)",
+    "description": "The Wadai sultanate (dar Wadai, 1501-1912, capitals Wara then Abéché), a major Sahelian state astride trans-Saharan trade routes, to French conquest in the Wadai War (1906-1912): occupation of Abéché (June 1909), resistance of Sultan Dud Murra until surrender (1911), last resistance suppressed (1912).",
+    "confidence_score": 0.75,
+    "ethical_notes": "Truth in both directions. Wadai was a significant participant in the trans-Saharan slave trade, raiding southern non-Muslim peoples for captives exported north — a documented fact that French sources then weaponised as the justification for conquest while erasing the violence and forced labour of French colonial rule that followed. The French conquest (one of the last in Africa) was fiercely resisted: Dud Murra fought on from allied Dar Masalit and Darfur until 1911, and eastern Chad remained under military rule for decades. The entity name follows ETHICS-001 (native Arabic name; the JSON name was backported from the latinised 'Dar Wadai' in v6.99.110).",
+    "sources": [
+      {"citation": "Nachtigal, G. 'Sahara and Sudan. Vol. IV: Wadai and Darfur', trans. A.G.B. Fisher & H.J. Fisher (Hurst, 1971; orig. 1889)", "url": null, "source_type": "primary"},
+      {"citation": "Azevedo, M.J. 'Roots of Violence: A History of War in Chad' (Routledge, 1998)", "url": null, "source_type": "academic"},
+      {"citation": "Cordell, D.D. 'The Awlad Sulayman of Libya and Chad: Power and Adaptation in the Sahara and Sahel', Canadian Journal of African Studies 19/2 (1985)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "سلطنة وداي", "transition_year": null, "transition_type": null, "is_violent": false, "description": "The Wadai sultanate, founded by the Maba-led Tunjur overthrow tradition (c. 1501 per this dataset; the Abd al-Karim dynasty consolidated in the early 17th century), grew into the dominant power of the eastern Sahel in the 19th century, controlling the Darb al-Arba'in and Benghazi trade routes.", "ethical_notes": "Founding chronology is debated (1501 vs 1635 traditions — the dataset carried both as duplicate entities; the deprecated duplicate used 1635). Confidence is kept prudent."},
+      {"entity_name": "Republique francaise", "transition_year": 1909, "transition_type": "CONQUEST", "is_violent": true, "description": "French conquest in the Wadai War (1906-1912): a French column occupied Abéché on 2 June 1909 and installed a client kolak; Sultan Dud Murra continued armed resistance from Dar Masalit and Darfur until his surrender in 1911; the last effective resistance was suppressed in 1912. Wadai became part of French Equatorial Africa (Chad).", "ethical_notes": "Recorded as conquest — among the last colonial conquests in Africa, completed only two years before World War I. The successor entity is the French Republic; no separate AEF/Tchad colonial entity exists yet in the dataset."}
+    ]
+  },
+  {
+    "name": "Luba empire: Buluba → Congo Free State",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Central Africa / Upemba depression (DR Congo, Katanga)",
+    "description": "The Luba empire (Buluba, c. 1585-1889, heartland in the Upemba depression) — one of the great states of central Africa, whose kingship model (bulopwe) shaped the wider Luba-Lunda world — to its collapse in the 1889 succession civil war and absorption by Leopold II's Congo Free State in the early 1890s.",
+    "confidence_score": 0.8,
+    "ethical_notes": "The Luba state was first hollowed out by the east-coast ivory and slave trade (Swahili-Arab and Nyamwezi/Yeke raiders from the 1870s, Msiri's Garanganze state carving off tributaries), then split by the 1889 succession civil war, then absorbed piecemeal by the Congo Free State — whose rule (Force Publique, rubber and ivory quotas, hostage-taking, mutilations) was among the most murderous colonial regimes ever documented; demographic estimates for the CFS/early Belgian period across the Congo run to millions of deaths (the exact figure is debated; the atrocities are not). The last independent-minded Luba ruler, Kasongo Nyembo, resisted colonial control until 1917. The successor entity ('Etat indépendant du Congo', 1885-1960 in this dataset) covers both the Free State and Belgian Congo phases.",
+    "sources": [
+      {"citation": "Reefe, T.Q. 'The Rainbow and the Kings: A History of the Luba Empire to 1891' (University of California Press, 1981)", "url": null, "source_type": "academic"},
+      {"citation": "Vansina, J. 'Kingdoms of the Savanna' (University of Wisconsin Press, 1966)", "url": null, "source_type": "academic"},
+      {"citation": "Hochschild, A. 'King Leopold's Ghost: A Story of Greed, Terror, and Heroism in Colonial Africa' (Houghton Mifflin, 1998)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "Buluba", "transition_year": null, "transition_type": null, "is_violent": false, "description": "The Luba empire of the Upemba depression, whose sacred kingship (bulopwe) and titled associations (bambudye) organised a network of tributary polities; its political charter (the Luba Epic) is a foundational central-African oral tradition. Flourished on regional trade in salt, iron, copper and fish.", "ethical_notes": "Chronology before the 19th century rests on oral tradition and archaeology (Upemba sequence); regnal dates are approximate. The empire's later wealth was partly drawn into the ivory/slave frontier economy that would destroy it."},
+      {"entity_name": "Etat independant du Congo", "transition_year": 1889, "transition_type": "CONQUEST", "is_violent": true, "description": "Collapse and absorption: the 1889 succession war split the empire; Congo Free State expeditions and client arrangements absorbed the fragments during the early 1890s; Kasongo Nyembo's resistance in Katanga was only broken in 1917, under the Belgian Congo phase.", "ethical_notes": "The transition year marks the terminal civil war; CFS control was consolidated over the following years by armed expeditions. The CFS was a private colonial regime of systematic atrocity (see chain-level notes) — is_violent understates rather than overstates this transition."}
+    ]
+  }
+]

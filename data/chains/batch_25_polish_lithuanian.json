@@ -84,6 +84,14 @@
         "transition_type": "REVOLUTION",
         "is_violent": true,
         "description": "First Mexican Empire (1821-1823), short-lived monarchy under Agustín de Iturbide after independence from Spain (Treaty of Córdoba, 24 August 1821). Replaced by the First Mexican Republic 1824."
+      },
+      {
+        "entity_name": "Segundo Imperio Mexicano",
+        "transition_year": 1864,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Second Mexican Empire (1864-1867): imposed by Napoleon III's French Intervention (invasion 1862, Mexico City taken June 1863); Maximilian of Habsburg accepted the crown in April 1864, sustained by the French army against Juárez's republic. After the French withdrawal (1866-67) the empire collapsed: Maximilian was captured and executed at Querétaro (19 June 1867).",
+        "ethical_notes": "GAP DOCUMENTED: the First Mexican Republic (1824-1864, including the Reforma and Juárez's legitimate government, which never ceased to exist during the Intervention) and the Restored Republic (1867-) are not yet entities in this dataset — this link does NOT mean the First Empire transitioned directly into the Second; four decades of republican history and a foreign invasion lie between. The empire was a French imperial imposition resisted by the republican government throughout."
       }
     ]
   }

@@ -1634,7 +1634,7 @@
     "boundary_source": "historical_map"
   },
   {
-    "name_original": "Dar Wadai",
+    "name_original": "سلطنة وداي",
     "name_original_lang": "ar",
     "entity_type": "empire",
     "year_start": 1501,
@@ -1713,6 +1713,14 @@
     },
     "ethical_notes": "The Wadai Empire (Ouaddai in French spelling) was a major Sahelian state in present-day eastern Chad. It was a significant participant in the trans-Saharan slave trade, raiding southern non-Muslim peoples (Sara, Bagirmi) for enslaved people exported north via the Darb al-Arba'in route. The Maba and related peoples formed the ruling class. French colonial conquest (1909-1912) was met with fierce resistance: Sultan Dud Murra fought guerrilla warfare for years. French colonial sources portray Wadai as a 'slave state' to justify conquest, while minimizing the economic exploitation that French colonialism itself imposed. Both the indigenous slave trade and the colonial violence must be documented without one being used to excuse the other.",
     "name_variants": [
+      {
+        "name": "Dar Wadai",
+        "lang": "ar-Latn",
+        "period_start": 1501,
+        "period_end": 1912,
+        "context": "Latinised form, former primary name in this dataset (native Arabic name backported per ETHICS-001 in v6.99.110)",
+        "source": "AtlasPI ETHICS-017 §7"
+      },
       {
         "name": "Wadai Empire",
         "lang": "en",

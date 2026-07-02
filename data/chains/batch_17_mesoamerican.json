@@ -4,7 +4,7 @@
     "name_lang": "en",
     "chain_type": "COLONIAL",
     "region": "Mesoamerica / North America",
-    "description": "Political succession from the earliest Mesoamerican civilization (Olmeca, c. 1500-400 BCE) through Spanish colonial rule (Nueva Espana, 1521-1821) to independent Mexico. Note: Mesoamerican civilizations did not form a linear chain — the Olmeca, Zapotec, Maya, Toltec, and Mexica (Aztec) were partly overlapping and partly sequential. This chain highlights the Olmeca-to-Nueva Espana trunk to show the colonial rupture. The Primer Imperio Mexicano (1821-23) represents independence.",
+    "description": "Political succession from the earliest Mesoamerican civilization (Olmeca, c. 1500-400 BCE) through Spanish colonial rule (Nueva Espana, 1521-1821) to independent Mexico. Note: Mesoamerican civilizations did not form a linear chain — the Olmeca, Zapotec, Maya, Toltec, and Mexica (Aztec) were partly overlapping and partly sequential. This chain highlights the Olmeca-to-Nueva Espana trunk to show the colonial rupture. The Primer Imperio Mexicano (1821-23) represents independence; the Segundo Imperio Mexicano (1864-67, imposed by the French Intervention) was appended in v6.99.110 — the republics between and after (1824-1864, 1867-) are not yet entities and are documented in the link notes.",
     "confidence_score": 0.7,
     "ethical_notes": "The linear 'Olmec -> Aztec -> Mexico' narrative is a drastic simplification that erases the complexity of Mesoamerican civilization: the Maya existed independently for millennia, Zapotec Monte Alban flourished for over a thousand years, and hundreds of other polities existed simultaneously. The Mexica themselves were relative newcomers (c. 1325 founding of Tenochtitlan). The Spanish conquest of 1519-21 was enabled by alliances with Tlaxcala and other anti-Mexica polities — it was not simply 'Spain conquers Aztecs' but a complex indigenous political realignment that the Spanish exploited. Colonial-era sources (Sahagun, Duran) were compiled under Spanish supervision and reflect conquest-era biases.",
     "sources": [
@@ -36,6 +36,14 @@
         "is_violent": true,
         "description": "Mexican independence (1821) was achieved by a coalition of criollo elites (Plan de Iguala) after 11 years of insurgency (begun by Hidalgo 1810, continued by Morelos). Agustin de Iturbide proclaimed himself Emperor of the First Mexican Empire (1822-23), which briefly included Central America. The empire collapsed within two years.",
         "ethical_notes": "Mexican independence was largely a criollo project — indigenous populations saw limited immediate benefit. The 'Mexican' national identity that emerged drew selectively on Aztec imagery (eagle and serpent) while the actual indigenous majority remained marginalized."
+      },
+      {
+        "entity_name": "Segundo Imperio Mexicano",
+        "transition_year": 1864,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Second Mexican Empire (1864-1867): imposed by Napoleon III's French Intervention (invasion 1862, Mexico City taken June 1863); Maximilian of Habsburg accepted the crown in April 1864, sustained by the French army against Juárez's republic. After the French withdrawal (1866-67) the empire collapsed: Maximilian was captured and executed at Querétaro (19 June 1867).",
+        "ethical_notes": "GAP DOCUMENTED: the First Mexican Republic (1824-1864, including the Reforma and Juárez's legitimate government, which never ceased to exist during the Intervention) and the Restored Republic (1867-) are not yet entities in this dataset — this link does NOT mean the First Empire transitioned directly into the Second; four decades of republican history and a foreign invasion lie between. The empire was a French imperial imposition resisted by the republican government throughout."
       }
     ]
   }

@@ -27,10 +27,29 @@
   guard ingest_chains + fence `test_chain_deprecated_json_audit`, follow-up
   ETHICS-012 #3/#5 chiusi. CI riparata (introspezione route FastAPI ≥ 0.139 —
   era rossa dal 17/06 e lo startup-audit sicurezza era cieco).
-- 🆕 **Debito scoperto** (vedi ETHICS-012 follow-up #5): 18 rename nativi prod-only;
-  ~299 divergenze confidence bidirezionali (serve policy); 30 record JSON ombreggiati;
-  catene etiopi #22/#100 semanticamente duplicate + entità #853 "Aksum" dup mancato
-  di #51; entità-fase meroitica nativa da creare (vedi note catena #99).
+- 🆕 **Debito scoperto** (vedi ETHICS-012 follow-up #5): 18 rename nativi prod-only
+  (→ **17** dopo v6.99.110: Wadai backportato); ~299 divergenze confidence
+  bidirezionali (serve policy); 30 record JSON ombreggiati; catene etiopi #22/#100
+  semanticamente duplicate + entità #853 "Aksum" dup mancato di #51; entità-fase
+  meroitica nativa da creare (vedi note catena #99).
+
+### Aggiornamento 2026-07-02 sera (sessione v6.99.110) — B1c ESEGUITA
+- ✅ **B1c fatta** (v6.99.110): **21 catene nuove** (batch_34/35/36) + **3 estensioni**
+  (#97 Arakan +Mrauk U+Konbaung con rename sincronizzato; #27/#49 +Segundo Imperio).
+  ETHICS-017 documenta: CONQUEST vs ANNEXATION, esclusioni (Taiping/Soyo),
+  Montenegro senza successore modellabile, catene autonome per le potenze
+  conquistate, backport Wadai. Cross-check ChatGPT recepito (2 anacronismi evitati).
+- ⏭️ **Class-1 residui** (bloccati da entità mancanti, NON dimenticati):
+  Saudi #253 (servono Emirato di Dirʿiyya 1744-1818 + Emirato di Najd 1824-1891),
+  Gorkha #399 (serve Nepal repubblicano 2008-), Taqali #411 (serve Stato Mahdista
+  1885-1899), Rarotonga risolta, Taiping #452 e Soyo #837 esclusi per modello.
+- 🆕 **Entità da creare** (sbloccano catene migliori): Lan Xang (1354-1707,
+  predecessore dei 3 regni lao), Regno dei Serbi Croati e Sloveni (1918-1929/41 —
+  serve ANCHE alla catena serba #34, i cui link 'Jugoslavija' non risolsero mai),
+  regno post-angkoriano di Cambogia (Longvek/Oudong 1431-1863), Regno Ndebele
+  (1838-1893, successore dei Rozwi), Repubblica di Hawaii NON necessaria (coperta
+  in note). Flag qualità: #534 nome del Primo Impero di Haiti errato; #240 nome
+  Khmer Republic con anni della Kampuchea Democratica (1975-79) — VERIFICARE.
 
 ---
 

@@ -47,11 +47,17 @@ che *nessuno lo trova* (zero canali di acquisizione) e che la differenziazione r
 misurata. Ordine per leva: M2 > M3 > M1 > M4 > enrichment.
 
 ### M1 — Layer catene/entità COMPLETO (residuo)
-B1c: catene Class-1 rimanenti (~33 orfani moderni: Montenegro #95, Zulu #34, Hawaii #43,
-Sikh #400, Madagascar #162, Maratha #111, Gorkha #399, Dahomey #149, Haiti #534...), con
-fonti verificate per ogni claim; design split Sri Lanka #142 (nome = un re, non l'entità)
-e valutazione Kemet #26 (ETHICS record prima); dedup trunk etiope (#22/#100 + entità #853
-dup di #51); entità-fase meroitica nativa (vedi note catena #99).
+~~B1c: catene Class-1 rimanenti~~ ✅ **FATTA in v6.99.110** (21 catene nuove + 3
+estensioni, ETHICS-017; 2026-07-02). Residuo M1:
+- Entità nuove che sbloccano il completamento (da ETHICS-017): Lan Xang, Regno SHS
+  (serve anche alla catena serba #34), Cambogia post-angkoriana, Regno Ndebele,
+  Emirati di Dirʿiyya/Najd, Nepal repubblicano, Stato Mahdista → poi Saudi #253,
+  Gorkha #399, Taqali #411 diventano incatenabili.
+- Design split Sri Lanka #142 (nome = un re, non l'entità) e valutazione Kemet #26
+  (ETHICS record prima); dedup trunk etiope (#22/#100 + entità #853 dup di #51);
+  entità-fase meroitica nativa (vedi note catena #99).
+- Flag qualità da B1c: rename #534 (Primo Impero di Haiti, non 'Repiblik') e
+  verifica #240 (nome Khmer Republic, anni Kampuchea Democratica).
 
 ### M2 — Discoverability (⛔ GATED: decisione DOMINIO di Clirim)
 Tutto il lavoro on-page è fatto (llms.txt, JSON-LD, sitemap); manca il canale: submission

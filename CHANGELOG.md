@@ -2,6 +2,58 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.110] - 2026-07-02 (B1c: 21 catene Class-1 + 3 estensioni — gli orfani moderni entrano nelle successioni)
+
+**Tema**: *Track B1c (milestone M1): i grandi stati moderni orfani vengono
+collegati in catene successorie. La maggior parte termina in una conquista
+coloniale/imperiale, registrata come tale (CONQUEST/ANNEXATION, is_violent
+veritiero, note non eufemistiche in ENTRAMBE le direzioni). Ogni link
+verificato con WebSearch; decisioni di design cross-checked con ChatGPT-5.5
+(2 errori intercettati: anacronismo Khmer→Indochina, Travancore/Dominion).
+Record etico: **ETHICS-017**.*
+
+- **21 catene NUOVE** (JSON-only, ingest al boot) in 3 batch:
+  - `batch_34_class1_africa.json` (7): Great Zimbabwe→Mutapa; Great
+    Zimbabwe→Torwa→Rozwi; Zulu→British Empire (1879/87); Danhomè→Francia
+    (1894); Imerina→Francia (1897); Wadai→Francia (1909); Luba→Stato Libero
+    del Congo (1889).
+  - `batch_35_class1_asia_pacific.json` (11): Oirat→Dzungar→Qing (1755,
+    genocidio documentato con Perdue/Millward); Sikh→BE (1849); Maratha→BE
+    (1818); Kandy→BE (1815); Travancore→India (UNIFICATION 1949);
+    Vientiane→Siam (1828, città rasa + deportazioni 100-300k); Luang
+    Prabang→Indocina (ANNEXATION 1893); Champasak→Indocina (1904);
+    Indocina→Cambogia (1953; catena corta DELIBERATA — niente falso salto
+    Khmer 1431→1863, vedi ETHICS-017 §4); Hawaiʻi→USA (1893, PL 103-150);
+    Rarotonga→BE (1888).
+  - `batch_36_class1_atlantic_europe.json` (3): Haiti Impero→Repubblica
+    (COUP 1806 + partizione 1806-20 + taglia francese 1825 documentate);
+    Зета→Црна Гора (fine 1918 contestata documentata, successore KSCS
+    mancante esplicitato); Napoli→Due Sicilie→Regno d'Italia (la linea del
+    CONQUISTATO, complementare alla trunk #110).
+- **3 estensioni** (SQL prod + JSON, `scripts/sql_b1c_chain_extensions_v6_99_110.sql`):
+  - Catena **#97 Arakan**: +Mrauk U #691 (1430) +Konbaung #360 (CONQUEST
+    1785: 20k deportati, Mahamuni asportato, biblioteca reale bruciata) +
+    **rename** della catena (il vecchio nome asseriva il range '– 1430 CE',
+    falso dopo l'estensione; dedup-key ingest → rename sincronizzato JSON+prod).
+  - Catene **#27 e #49 (Messico)**: +Segundo Imperio Mexicano #522 (CONQUEST
+    1864, Intervento francese; gap repubbliche 1824-64/1867- documentato).
+- **Backport nome nativo Wadai** (ETHICS-001, primo dei 18 rename M4):
+  JSON `'Dar Wadai'` → **'سلطنة وداي'** (già in prod); forma latina come
+  name_variant su entrambi i lati.
+- **Esclusioni documentate** (ETHICS-017 §3): Taiping #452 e Soyo #837 non
+  incatenabili nel modello lineare (stato ribelle riassorbito / secessione
+  coesistita); Saudi #253, Gorkha #399, Taqali #411 differite per entità
+  controparte mancanti (Dirʿiyya/Najd, Nepal repubblicano, Stato Mahdista).
+- **Entità da creare** (coda, da ETHICS-017): Lan Xang, Regno SHS, regno
+  post-angkoriano (Longvek/Oudong), Regno Ndebele, stati sauditi I-II.
+- **Flag qualità**: #534 'Repiblik Dayiti' = Primo IMPERO di Haiti (nome da
+  correggere via ETHICS-001); #240 'សាធារណរដ្ឋខ្មែរ' porta il nome della
+  Khmer Republic (1970-75) con gli anni della Kampuchea Democratica
+  (1975-79) — possibile mislabel di un regime genocida, verifica prioritaria.
+- Orfani Class-1: 27 → 6 (i 5 differiti + Due Sicilie risolta; nel conteggio
+  entrano anche i bonus #47, #830, #665, #693, #424, #209, #459 non nella
+  query moderna). Verifica post-deploy nel commit.
+
 ## [v6.99.109] - 2026-07-02 (agent-UX quick wins: zero-result hint, boundary_reference_year, event summary)
 
 **Tema**: *Primi tre fix della milestone M3 (agent-UX), dall'audit agent-consumer

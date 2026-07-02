@@ -47,11 +47,11 @@
     ]
   },
   {
-    "name": "Arakan succession: Dhaññavati → Vesālī → Lemro (c. 580 BCE – 1430 CE)",
+    "name": "Arakan succession: Dhaññavati → Vesālī → Lemro → Mrauk U (c. 580 BCE – 1785 CE)",
     "name_lang": "en",
     "chain_type": "SUCCESSION",
     "region": "Arakan / Rakhine / Western Myanmar",
-    "description": "The three successive kingdoms of the Arakan coastal strip (now Rakhine State, Myanmar), representing over 2000 years of continuous polity in a region geographically separated from the Irrawaddy Valley by mountains. The Arakan tradition maintained a distinct Arakanese/Rakhine identity, Buddhist culture with strong Hindu elements, and significant maritime trade contacts with India and Southeast Asia.",
+    "description": "The successive kingdoms of the Arakan coastal strip (now Rakhine State, Myanmar), representing over 2000 years of continuous polity in a region geographically separated from the Irrawaddy Valley by mountains — extended in v6.99.110 to the Mrauk U kingdom (1430-1785) and its violent end in the Konbaung conquest. The Arakan tradition maintained a distinct Arakanese/Rakhine identity, Buddhist culture with strong Hindu elements, and significant maritime trade contacts with India and Southeast Asia.",
     "confidence_score": 0.65,
     "ethical_notes": "Arakanese historical chronology is disputed: early dates for Dhaññavati come primarily from the Arakanese chronicle 'Rājāvaṃsadīpanī' (18th century), which projects the kingdom back to mythological origins. Modern scholarship places the historically attested beginning at c. 370 CE (Vesālī period). The later Lemro period overlaps with the Pagan empire in some accounts. The region is today Rakhine State, Myanmar — site of the 2017 Rohingya genocide and ongoing displacement.",
     "sources": [
@@ -82,7 +82,23 @@
         "transition_type": "SUCCESSION",
         "is_violent": false,
         "description": "Lemro period (818-1430 CE), named after the Lemro River where successive capitals were built. Multiple capitals (Launggyet, Sambawak, Pyinsa, Parin) were constructed during this period. The Lemro kingdoms coexisted with and eventually resisted Pagan Burmese expansion. Ended with the founding of Mrauk-U (1430), the great Rakhine kingdom that lasted until 1784.",
-        "ethical_notes": "The Mrauk-U kingdom (1430-1784), which succeeded Lemro, was one of the most powerful states in Southeast Asia for two centuries and had significant Muslim merchant communities — a historical fact relevant to understanding the complex Buddhist-Muslim relations in today's Rakhine State."
+        "ethical_notes": "The Mrauk-U kingdom (1430-1785), which succeeded Lemro, was one of the most powerful states in Southeast Asia for two centuries and had significant Muslim merchant communities — a historical fact relevant to understanding the complex Buddhist-Muslim relations in today's Rakhine State."
+      },
+      {
+        "entity_name": "မြောက်ဦးခေတ်",
+        "transition_year": 1430,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "The kingdom of Mrauk U (1430-1785), founded by Min Saw Mon, who regained the Arakanese throne with help from the Bengal Sultanate — the origin of the court's distinctive Buddhist-Islamic syncretism (kings bore Muslim titles alongside Buddhist ones, and Muslim communities were integral to the kingdom). At its height (16th-17th c.) Mrauk U controlled the coast from the Ganges delta to Cape Negrais, fielding a formidable fleet, and repelled the Toungoo empire.",
+        "ethical_notes": "Mrauk U's own record includes large-scale slave-raiding into Bengal (with Portuguese mercenaries based at Chittagong/Dianga) — documented, not euphemised. Its history is today contested terrain: both Rakhine Buddhist and Rohingya Muslim narratives claim it, and the kingdom's genuinely plural character resists both exclusivist readings (no single version of history)."
+      },
+      {
+        "entity_name": "ကုန်းဘောင်ခေတ်",
+        "transition_year": 1785,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Konbaung conquest of Arakan: Bodawpaya's invasion force under Crown Prince Thado Minsaw (over 20,000 men) crossed the Arakan Mountains in December 1784 and took Mrauk U on 2 January 1785, ending c. 355 years of Arakanese independence. The Mahamuni Buddha image — the palladium of Arakanese kingship — was dismantled and carried off to Amarapura; some 20,000 people were deported to the Konbaung capital region; the royal library was burned.",
+        "ethical_notes": "Recorded as the violent conquest and cultural despoliation it was. The conquest's aftermath — flight of tens of thousands of Arakanese into British Bengal, Chin Byan's cross-border resistance (1811-1815) — entangled Arakan in Anglo-Burmese relations and led to the First Anglo-Burmese War (1824-26), after which Arakan passed to British rule. The region's modern tragedies (including the 2017 Rohingya genocide) have roots in the layered dispossessions that began here; the chain-level notes flag this continuity."
       }
     ]
   },

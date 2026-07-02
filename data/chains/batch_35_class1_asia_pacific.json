@@ -1,0 +1,192 @@
+[
+  {
+    "name": "Oirat–Dzungar trunk: Four Oirat → Dzungar Khanate → Qing conquest",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Inner Asia / Dzungaria / western Mongolia",
+    "description": "The western-Mongol (Oirat) state tradition: from the Four Oirat confederation (1399-1634) to the Dzungar Khanate (1634-1755), the last great steppe empire, destroyed by the Qing conquest of 1755-1758.",
+    "confidence_score": 0.8,
+    "ethical_notes": "The end of this chain is a genocide and is recorded as such. After conquering the khanate in 1755 with Amursana's help and then facing his revolt, the Qianlong Emperor issued explicit extermination orders ('Show no mercy at all to these rebels' — trans. Perdue). Between 1755 and 1758 roughly 70-80% of the Dzungar population (estimates c. 480,000-600,000 people) was destroyed by massacre, smallpox, flight, enslavement and famine (Wei Yuan's classic breakdown: ~30% killed by the army, ~40% dead of smallpox, ~20% fled to Russia or the Kazakhs). The Qing then repopulated Dzungaria with Han, Hui, Uyghur, Xibe and Manchu settlers — the demographic foundation of modern Xinjiang. Calling this anything less than deliberate destruction would falsify the record.",
+    "sources": [
+      {"citation": "Perdue, P.C. 'China Marches West: The Qing Conquest of Central Eurasia' (Harvard University Press, 2005)", "url": null, "source_type": "academic"},
+      {"citation": "Millward, J.A. 'Eurasian Crossroads: A History of Xinjiang' (Columbia University Press, 2007)", "url": null, "source_type": "academic"},
+      {"citation": "Levey, B. 'Jungar Refugees and the Making of Empire on Qing China's Kazakh Frontier, 1759-1773' (PhD diss., Harvard, 2014)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "ᠣᠢᠷᠠᠳ ᠬᠣᠯᠪᠣᠭ᠎ᠠ", "transition_year": null, "transition_type": null, "is_violent": false, "description": "The Four Oirat confederation (Dörben Oirat) of the western Mongols — Choros, Dörbet, Torghut, Khoshut — dominant on the steppe after the Northern Yuan decline, famously capturing the Ming emperor at Tumu (1449) under Esen Taishi.", "ethical_notes": "A confederation, not a unitary state; dating (1399-1634) follows the conventional span from the rise of Oirat power to the Dzungar consolidation."},
+      {"entity_name": "ᠵᠡᠭᠦᠨᠭᠠᠷ", "transition_year": 1634, "transition_type": "SUCCESSION", "is_violent": false, "description": "The Dzungar Khanate consolidated from the Choros-led Oirat under Erdeni Batur (from 1634) and expanded under Galdan Boshugtu Khan (1670s-1697) into the last major nomadic empire, contesting Tibet, the Kazakh steppe and Qing Mongolia.", "ethical_notes": "Consolidation was gradual (some chronologies emphasise Galdan's khanate of the 1670s); 1634 marks Batur Hongtaiji's succession, the conventional start."},
+      {"entity_name": "大清帝國", "transition_year": 1755, "transition_type": "CONQUEST", "is_violent": true, "description": "Qing conquest: the khanate, weakened by succession wars and smallpox, fell to Qianlong's armies in 1755; after Amursana's revolt the Qing carried out the systematic destruction of the Dzungars as a people (1755-1758), then repopulated the region.", "ethical_notes": "Genocide — see chain-level notes for the extermination orders, mortality estimates and repopulation policy. This transition is why 'Dzungaria' survives only as a geographic name."}
+    ]
+  },
+  {
+    "name": "Sikh empire: ਖ਼ਾਲਸਾ ਰਾਜ → British Empire",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "South Asia / Punjab",
+    "description": "The Sikh empire (Khalsa Raj, 1799-1849) founded by Ranjit Singh from the misl confederacies, to British conquest in the Second Anglo-Sikh War and the annexation of the Punjab (29 March 1849).",
+    "confidence_score": 0.85,
+    "ethical_notes": "A standalone chain by design: grafting the Sikh empire into the Indian paramountcy chain (Delhi Sultanate → Mughal → British Raj) would misrepresent a distinct sovereign state as a stage of the conqueror's lineage (see ETHICS-017). The conquest was by the East India Company (the British Raj entity begins only in 1858), hence the successor is the British Empire entity. The annexation deposed the ten-year-old Maharaja Duleep Singh, separated him from his mother and converted him in exile; the Koh-i-Noor diamond was taken as a term of the Treaty of Lahore — an appropriation still contested today.",
+    "sources": [
+      {"citation": "Grewal, J.S. 'The Sikhs of the Punjab' (The New Cambridge History of India II.3, Cambridge University Press, 1990)", "url": null, "source_type": "academic"},
+      {"citation": "Singh, Khushwant. 'A History of the Sikhs, Vol. 2: 1839-2004' (Oxford University Press, 2004)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "ਖ਼ਾਲਸਾ ਰਾਜ", "transition_year": null, "transition_type": null, "is_violent": false, "description": "The Sikh empire of Ranjit Singh (crowned Maharaja at Lahore, 1801; khanate of the Punjab from 1799), a religiously plural state with a Europeanised army (the Khalsa), ruling Punjab, Kashmir, Ladakh and Peshawar at its height.", "ethical_notes": null},
+      {"entity_name": "British Empire", "transition_year": 1849, "transition_type": "CONQUEST", "is_violent": true, "description": "East India Company conquest: First Anglo-Sikh War (1845-46, cession of Kashmir sold on to Gulab Singh), Second Anglo-Sikh War (1848-49, Chillianwala, Gujrat), annexation of the Punjab proclaimed 29 March 1849; Duleep Singh deposed and exiled.", "ethical_notes": "Recorded as conquest by the Company acting for the British Empire — not as 'lapse' or 'accession'. The wars followed deliberate Company encroachment after Ranjit Singh's death destabilised the state."}
+    ]
+  },
+  {
+    "name": "Maratha confederacy: मराठा साम्राज्य → British Empire",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "South Asia / Deccan and western India",
+    "description": "The Maratha empire/confederacy (1674-1818), from Shivaji's coronation at Raigad to defeat by the East India Company in the Third Anglo-Maratha War and the abolition of the Peshwa (1818).",
+    "confidence_score": 0.85,
+    "ethical_notes": "Standalone chain (see ETHICS-017): the Marathas were the paramount indigenous power of 18th-century India — treating them as a mere stage of the Mughal→British line would erase that. Conquest was by the East India Company (pre-1858), hence the British Empire entity as successor. The confederacy's own expansion was frequently violent (chauth tribute extraction; devastation of Bengal raids of the 1740s), recorded here truthfully as well.",
+    "sources": [
+      {"citation": "Gordon, S. 'The Marathas 1600-1818' (The New Cambridge History of India II.4, Cambridge University Press, 1993)", "url": null, "source_type": "academic"},
+      {"citation": "Cooper, R.G.S. 'The Anglo-Maratha Campaigns and the Contest for India' (Cambridge University Press, 2003)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "मराठा साम्राज्य", "transition_year": null, "transition_type": null, "is_violent": false, "description": "From Shivaji's coronation (1674) the Maratha state rose against Mughal power; by the mid-18th century the Peshwa-led confederacy (Scindia, Holkar, Gaekwad, Bhonsle) was the dominant power of the subcontinent, checked at Panipat (1761) but resurgent after.", "ethical_notes": "A confederacy with real internal plurality — the linear model compresses this; the constituent houses are not separate entities in the dataset."},
+      {"entity_name": "British Empire", "transition_year": 1818, "transition_type": "CONQUEST", "is_violent": true, "description": "East India Company conquest across three Anglo-Maratha Wars (1775-82, 1803-05, 1817-18); the Third war ended with the Peshwa's surrender (June 1818), the abolition of his office, and Company paramountcy over the Deccan.", "ethical_notes": "Recorded as conquest by the Company. Residual Maratha princely states (Gwalior, Indore, Baroda, Nagpur) persisted under subsidiary alliance — subordination, not sovereignty."}
+    ]
+  },
+  {
+    "name": "Kandyan kingdom: මහනුවර රාජධානිය → British Empire",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "South Asia / Sri Lanka (central highlands)",
+    "description": "The Kingdom of Kandy (1469-1815), the last independent Sinhalese kingdom, which resisted Portuguese, Dutch and British attempts for three centuries until the Kandyan Convention (2 March 1815) and the brutal suppression of the 1817-18 Uva-Wellassa rising.",
+    "confidence_score": 0.8,
+    "ethical_notes": "Kandy fell not by battle in 1815 but through an internal crisis exploited by the British: aristocratic factions deposed King Sri Vikrama Rajasinha (of the Telugu Nayakkar dynasty) and signed the Kandyan Convention with Britain. The 1817-18 Uva-Wellassa rebellion against British rule was crushed with scorched-earth reprisals (destruction of paddy fields, cattle and irrigation; population of Uva devastated) — an atrocity documented in British records. NOTE: the long-span 'Sri Lanka' aggregate entity #142 is a separate, pending decomposition (ETHICS-015 class; design with Clirim); this chain stands independently and Kandy can slot into that future succession (Anuradhapura → Polonnaruwa → ... → Kandy).",
+    "sources": [
+      {"citation": "de Silva, K.M. 'A History of Sri Lanka' (C. Hurst / University of California Press, 1981)", "url": null, "source_type": "academic"},
+      {"citation": "Powell, G. 'The Kandyan Wars: The British Army in Ceylon, 1803-1818' (Leo Cooper, 1973)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "මහනුවර රාජධානිය", "transition_year": null, "transition_type": null, "is_violent": false, "description": "The kingdom of Kandy (Senkadagala/Mahanuwara), from c. 1469 the highland successor of the Sinhalese state tradition; it outlasted the Portuguese and Dutch coastal occupations, annihilating a British invasion force in 1803 (First Kandyan War).", "ethical_notes": null},
+      {"entity_name": "British Empire", "transition_year": 1815, "transition_type": "CONQUEST", "is_violent": true, "description": "British takeover: invasion of 1815 meeting little resistance amid an internal revolt against the king, the Kandyan Convention (2 March 1815) ceding sovereignty while promising to protect Buddhism, then the Uva-Wellassa rebellion (1817-18) crushed with scorched-earth repression; the Kandyan provinces were merged into colonial Ceylon in 1833.", "ethical_notes": "The Convention was signed by Kandyan chiefs, not by popular consent, and its guarantees were rapidly eroded — the 1817-18 repression is the true face of the transition, hence CONQUEST and is_violent."}
+    ]
+  },
+  {
+    "name": "Travancore: തിരുവിതാംകൂർ → Republic of India",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "South Asia / Kerala (southwestern India)",
+    "description": "The kingdom of Travancore (Thiruvithamkoor, 1729-1949), from Marthanda Varma's consolidation to accession to India (30 July 1947) and merger into the Travancore-Cochin union (1 July 1949).",
+    "confidence_score": 0.85,
+    "ethical_notes": "The transition was formally voluntary but under real coercive pressure, and is typed UNIFICATION rather than CONQUEST or a euphemistic plain 'succession': in June 1947 Dewan C.P. Ramaswami Iyer declared Travancore would remain an independent sovereign state; after an assassination attempt on him (25 July 1947) the Maharaja signed the Instrument of Accession on 30 July 1947. Integration followed the pattern Patel and V.P. Menon applied to all princely states — a mix of negotiation, popular pressure (the Travancore State Congress movement) and implicit force. The successor entity (भारत गणराज्य, year_start 1947) is this dataset's container for post-1947 India: India was a Dominion until 26 January 1950 — noted to avoid anachronism. Travancore had been under British subsidiary alliance since 1795 (subordinate, not sovereign) — the chain records the end of the dynastic state, not a fall from full sovereignty.",
+    "sources": [
+      {"citation": "Menon, V.P. 'The Story of the Integration of the Indian States' (Longmans, 1956)", "url": null, "source_type": "primary"},
+      {"citation": "Ramusack, B.N. 'The Indian Princes and their States' (The New Cambridge History of India III.6, Cambridge University Press, 2004)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "തിരുവിതാംകൂർ", "transition_year": null, "transition_type": null, "is_violent": false, "description": "Travancore, consolidated by Marthanda Varma (r. 1729-1758) who defeated the Dutch at Colachel (1741); under British subsidiary alliance from 1795; in the 20th century one of the most literate and administratively developed princely states, and the theatre of major caste-equality struggles (Temple Entry Proclamation, 1936).", "ethical_notes": "The kingdom's social order rested on one of the most rigid caste/slavery systems in India well into the 19th century (agrestic slavery abolished 1855 under missionary and colonial pressure); the 20th-century reforms came after long lower-caste struggles (Vaikom Satyagraha 1924-25)."},
+      {"entity_name": "भारत गणराज्य", "transition_year": 1949, "transition_type": "UNIFICATION", "is_violent": false, "description": "Accession to the Dominion of India signed 30 July 1947 after the failed independence bid; merged with Cochin into the Travancore-Cochin state on 1 July 1949, the Maharaja becoming Rajpramukh; fully integrated on the republic's founding (26 January 1950) and reorganised into Kerala (1956).", "ethical_notes": "Formally voluntary, effectively under pressure — see chain-level notes. No Travancore-Cochin or Dominion-of-India intermediate entities exist in the dataset; the post-1947 India entity is the established container (precedent: the paramountcy chain uses it from 1947)."}
+    ]
+  },
+  {
+    "name": "Lan Xang partition — Vientiane line: ອານາຈັກວຽງຈັນ → Siam",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Southeast Asia / middle Mekong (Laos)",
+    "description": "The kingdom of Vientiane (1707-1828), one of the three successor kingdoms of Lan Xang, to its destruction by Siam after Chao Anouvong's war of independence (1826-1828): the city razed, the kingdom abolished, its population mass-deported across the Mekong.",
+    "confidence_score": 0.8,
+    "ethical_notes": "One of the great erasures of Southeast Asian history, recorded here without euphemism: after Anouvong's failed campaign to throw off Siamese suzerainty, Siamese forces razed Vientiane almost completely (1828 — only Wat Sisaket survived among the major temples), abolished the kingdom, and carried out mass deportations of the Lao population to the Khorat plateau and central Siam — estimates run from 100,000 to 300,000 people, with as many as two-thirds dying en route (Ngaosyvathn & Ngaosyvathn 1998). This forced transfer is why more ethnic Lao live in northeastern Thailand (Isan) than in Laos today. Anouvong died in a cage in Bangkok (1829). PREDECESSOR NOTE: Lan Xang (1354-1707), the unified Lao kingdom whose 1707 partition created Vientiane, Luang Prabang and Champasak, is NOT yet an entity in this dataset — its creation is queued; until then the three partition chains start at the successor kingdoms.",
+    "sources": [
+      {"citation": "Ngaosyvathn, M. & Ngaosyvathn, P. 'Paths to Conflagration: Fifty Years of Diplomacy and Warfare in Laos, Thailand, and Vietnam, 1778-1828' (Cornell SEAP, 1998)", "url": null, "source_type": "academic"},
+      {"citation": "Stuart-Fox, M. 'A History of Laos' (Cambridge University Press, 1997)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "ອານາຈັກວຽງຈັນ", "transition_year": null, "transition_type": null, "is_violent": false, "description": "The kingdom of Vientiane, created in the 1707 partition of Lan Xang; a Siamese vassal after 1779, its last king Chao Anouvong (r. 1805-1828) attempted to restore Lao independence and recreate Lan Xang.", "ethical_notes": "See chain-level note: the Lan Xang predecessor entity does not yet exist."},
+      {"entity_name": "กรุงรัตนโกสินทร์", "transition_year": 1828, "transition_type": "CONQUEST", "is_violent": true, "description": "Siamese destruction of the kingdom: after Anouvong's armies (with Champasak) reached Saraburi in 1827, the Siamese counter-offensive took Vientiane, razed the city (1828), abolished the kingdom into direct provincial administration, and deported the population en masse.", "ethical_notes": "Razing and mass deportation with catastrophic mortality — see chain-level notes. Recorded as the violent conquest and demographic engineering it was."}
+    ]
+  },
+  {
+    "name": "Lan Xang partition — Luang Prabang line: ອານາຈັກຫລວງພະບາງ → French Indochina",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Southeast Asia / upper Mekong (Laos)",
+    "description": "The kingdom of Luang Prabang (1707-1949), successor of Lan Xang on the upper Mekong, from Siamese vassalage to incorporation as a French protectorate within Indochina after the Franco-Siamese crisis of 1893.",
+    "confidence_score": 0.8,
+    "ethical_notes": "Typed ANNEXATION with is_violent=true: the transfer of suzerainty from Siam to France was imposed by military coercion — the Franco-Siamese War of 1893 (Paknam incident, naval blockade of Bangkok) forced Siam to cede the left bank of the Mekong. Luang Prabang itself was not conquered by French arms; King Oun Kham had accepted French protection after the devastating 1887 sack of Luang Prabang by Chinese Black Flag/upland raiders (which the French agent Auguste Pavie survived, evacuating the king). A protectorate imposed through gunboat diplomacy and exploited crisis is not evidence of consent — the monarchy was retained as an instrument of colonial administration. The kingdom became the nucleus of the French-created Kingdom of Laos (1947-49 constitutional process), at which point this entity's span ends; the modern Lao state entities are not yet in the dataset.",
+    "sources": [
+      {"citation": "Stuart-Fox, M. 'A History of Laos' (Cambridge University Press, 1997)", "url": null, "source_type": "academic"},
+      {"citation": "Ivarsson, S. 'Creating Laos: The Making of a Lao Space between Indochina and Siam, 1860-1945' (NIAS Press, 2008)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "ອານາຈັກຫລວງພະບາງ", "transition_year": null, "transition_type": null, "is_violent": false, "description": "The kingdom of Luang Prabang, created in the 1707 partition of Lan Xang; tributary to Siam (and at times Vietnam and China) through the 18th-19th centuries; sacked by Black Flag raiders in 1887.", "ethical_notes": "See the Vientiane-line chain for the missing Lan Xang predecessor entity (queued)."},
+      {"entity_name": "Indochine francaise", "transition_year": 1893, "transition_type": "ANNEXATION", "is_violent": true, "description": "Incorporated into French Indochina as the protectorate of Laos after the Franco-Siamese War of 1893 forced Siam to renounce the left bank of the Mekong; the monarchy was retained under a French Résident. Luang Prabang's king became constitutional monarch of the French-sponsored Kingdom of Laos in 1947.", "ethical_notes": "Annexation achieved by military coercion against Siam and the exploitation of the 1887 crisis — not by consent of the Lao population. See chain-level notes."}
+    ]
+  },
+  {
+    "name": "Lan Xang partition — Champasak line: ອານາຈັກຈຳປາສັກ → French Indochina",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Southeast Asia / lower Mekong (southern Laos)",
+    "description": "The kingdom of Champasak (1713-1946), southern successor of Lan Xang, from Siamese vassalage to French annexation: left-bank territories under France in 1893, the kingdom dissolved as an administrative entity on 22 November 1904, the royal title extinguished with Chao Ratsadanay's death in 1946.",
+    "confidence_score": 0.75,
+    "ethical_notes": "Typed ANNEXATION with is_violent=false because the 1904 dissolution was administrative, without battle — but it was an act of colonial coercion within the same Franco-Siamese power play that carved up the Lao lands, and no popular consent existed or was sought. Champasak had already been devastated as a polity for joining Anouvong's 1826-28 war (its king deposed by Siam); after 1904 the last king, Ratsadanay, was demoted to governor of Champasak province, allowed to keep his title for life as a French concession. The kingdom's span in this dataset ends with his death (1946), when the title lapsed and the territory was folded into the Kingdom of Laos. Lan Xang predecessor entity: missing, queued (see Vientiane-line chain).",
+    "sources": [
+      {"citation": "Stuart-Fox, M. 'A History of Laos' (Cambridge University Press, 1997)", "url": null, "source_type": "academic"},
+      {"citation": "Stuart-Fox, M. 'Historical Dictionary of Laos' (3rd ed., Scarecrow Press, 2008)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "ອານາຈັກຈຳປາສັກ", "transition_year": null, "transition_type": null, "is_violent": false, "description": "The kingdom of Champasak on the lower Mekong, created in the 1713 completion of the Lan Xang partition under Nokasad; a Siamese vassal from 1778; joined Anouvong's war (1826-28) and was reduced to a Siamese-appointed governorship in its aftermath.", "ethical_notes": null},
+      {"entity_name": "Indochine francaise", "transition_year": 1904, "transition_type": "ANNEXATION", "is_violent": false, "description": "French annexation: left-bank Champasak territories came under France in 1893; the Franco-Siamese convention of 1904 transferred the right-bank remainder, and the kingdom was dissolved as an administrative entity on 22 November 1904, its king becoming a colonial governor with a courtesy title held until his death in 1946.", "ethical_notes": "An administrative annexation under colonial coercion — no battle, no consent. See chain-level notes."}
+    ]
+  },
+  {
+    "name": "Cambodian state: Indochine française → Kingdom of Cambodia",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Southeast Asia / lower Mekong (Cambodia)",
+    "description": "The modern Cambodian state's emergence from French colonial rule: the French protectorate of Cambodia (from 11 August 1863) within French Indochina (from 1887), to the independent Kingdom of Cambodia (9 November 1953).",
+    "confidence_score": 0.8,
+    "ethical_notes": "DELIBERATELY SHORT CHAIN (see ETHICS-017 §4): the Khmer lineage behind modern Cambodia runs Funan → Chenla → Khmer Empire (see the existing Thai/Khmer trunk chain) and then through the post-Angkor Kingdom of Cambodia (Longvek/Oudong, 1431-1863, squeezed between Siamese and Vietnamese suzerainty) — but that post-Angkor kingdom is NOT yet an entity in this dataset, and linking the Khmer EMPIRE (ended 1431) directly to French Indochina (born 1887) would assert a false 432-year succession jump. The missing entity is queued; when created, this chain should be extended backwards. The 1863 protectorate treaty was signed by King Norodom under duress (gunboat diplomacy, competing Siamese claims); the 1884-86 anti-French rising was repressed. The successor entity (ព្រះរាជាណាចក្រកម្ពុជា, 1953-present) spans the 1970 coup, the Khmer Republic, the DEMOCRATIC KAMPUCHEA GENOCIDE (1975-79, an estimated 1.5-2 million dead), the Vietnamese-installed PRK and the 1993 restoration — upheavals internal to that entity's span, flagged here so the smooth span is not read as continuity without catastrophe. (Dataset flag: entity #240 'សាធារណរដ្ឋខ្មែរ' carries Khmer Republic's name with 1975-1979 years — under review, see ETHICS-017 §8.)",
+    "sources": [
+      {"citation": "Chandler, D. 'A History of Cambodia' (4th ed., Westview Press, 2008)", "url": null, "source_type": "academic"},
+      {"citation": "Osborne, M. 'The French Presence in Cochinchina and Cambodia: Rule and Response (1859-1905)' (Cornell University Press, 1969)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "Indochine francaise", "transition_year": null, "transition_type": null, "is_violent": false, "description": "French colonial rule over Cambodia: protectorate treaty imposed on King Norodom on 11 August 1863, tightened by the 1884 convention (provoking the 1884-86 rising, repressed), folded into the Indochinese Union at its creation in 1887.", "ethical_notes": "The protectorate preserved the monarchy as an instrument of rule while extracting revenue and labour; Cambodia's western provinces (Battambang, Siem Reap) were only recovered from Siam via French pressure in 1907."},
+      {"entity_name": "ព្រះរាជាណាចក្រកម្ពុជា", "transition_year": 1953, "transition_type": "DECOLONIZATION", "is_violent": false, "description": "Independence achieved 9 November 1953 through King Norodom Sihanouk's 'Royal Crusade for Independence' — negotiation and international pressure amid the First Indochina War, without an anticolonial war on Cambodian soil.", "ethical_notes": "The peaceful decolonisation moment must not obscure what the successor entity's span contains: the 1970-1993 catastrophes including the Khmer Rouge genocide — see chain-level notes."}
+    ]
+  },
+  {
+    "name": "Hawaiian kingdom: Aupuni Mōʻī o Hawaiʻi → United States",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Pacific / Hawaiian Islands",
+    "description": "The Hawaiian Kingdom (1795-1893), founded by Kamehameha I's unification of the islands, to the armed overthrow of Queen Liliʻuokalani (17 January 1893) backed by US forces, and US annexation (1898).",
+    "confidence_score": 0.85,
+    "ethical_notes": "The 1893 overthrow was an armed coup by a committee of mostly American settler businessmen, succeeding only because US Minister John Stevens landed US Marines from the USS Boston in support — as the United States itself formally acknowledged in the 1993 Apology Resolution (Public Law 103-150), which states the overthrow was illegal and that 'the indigenous Hawaiian people never directly relinquished their claims to their inherent sovereignty'. Annexation (Newlands Resolution, 7 July 1898) proceeded despite the Kūʻē petitions of 1897, in which over 21,000 Native Hawaiians — the great majority of the adult native population — petitioned against it, defeating the treaty route; annexation was pushed through by joint resolution during the Spanish-American War. The interim 'Republic of Hawaii' (1894-98) is not modelled as an entity: it was the coup regime in institutional form. Native Hawaiian dispossession (land, language suppression in schools after 1896, demographic collapse from introduced disease across the century) is the context of this transition.",
+    "sources": [
+      {"citation": "Kuykendall, R.S. 'The Hawaiian Kingdom, Vol. 3: 1874-1893, The Kalakaua Dynasty' (University of Hawaii Press, 1967)", "url": null, "source_type": "academic"},
+      {"citation": "Silva, N.K. 'Aloha Betrayed: Native Hawaiian Resistance to American Colonialism' (Duke University Press, 2004)", "url": null, "source_type": "academic"},
+      {"citation": "US Public Law 103-150 (Apology Resolution), 23 November 1993", "url": "https://www.govinfo.gov/content/pkg/STATUTE-107/pdf/STATUTE-107-Pg1510.pdf", "source_type": "primary"}
+    ],
+    "links": [
+      {"entity_name": "Aupuni Mōʻī o Hawaiʻi", "transition_year": null, "transition_type": null, "is_violent": false, "description": "The Hawaiian Kingdom, unified by Kamehameha I (1795, completed 1810), an internationally recognised constitutional monarchy with treaties with the US, Britain and France; progressively penetrated by American plantation interests, especially after the 1887 'Bayonet Constitution' was forced on Kalākaua.", "ethical_notes": "The 1887 constitution — imposed under threat of force by the same settler faction that led the 1893 coup — had already stripped the monarchy of much power and disenfranchised most Native Hawaiians and all Asians; Liliʻuokalani's attempt to promulgate a new constitution restoring native suffrage was the coup's pretext."},
+      {"entity_name": "United States of America", "transition_year": 1893, "transition_type": "CONQUEST", "is_violent": true, "description": "Armed overthrow of the monarchy (17 January 1893) with US military backing; provisional government and 'Republic of Hawaii' (1894); annexation by joint resolution 7 July 1898 over documented mass Native Hawaiian opposition; US territory 1900, state 1959.", "ethical_notes": "Typed CONQUEST: an armed, foreign-backed seizure of a sovereign state later acknowledged as illegal by the successor's own law (PL 103-150). The queen yielded under protest 'to the superior force of the United States' — her words — to avoid bloodshed; the violence was in the armed coercion, not in casualties."}
+    ]
+  },
+  {
+    "name": "Kingdom of Rarotonga → British Empire",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Pacific / Cook Islands",
+    "description": "The Kingdom of Rarotonga (1827-1888), a unified ariki (chiefly) monarchy under Makea dynasty leadership with missionary-influenced written law, to British protectorate (1888), cession (1900) and annexation to New Zealand (11 June 1901).",
+    "confidence_score": 0.75,
+    "ethical_notes": "Typed ANNEXATION with is_violent=false: no war was fought. But 'requested protectorate' must not be over-read as popular consent — Queen Makea Takau and allied ariki petitioned for British protection in 1888 largely to pre-empt feared French annexation (as had happened to Tahiti and was happening in the region); the 1900 cession instruments were signed by chiefs within a colonial framework offering no real alternative, and the 1901 transfer to New Zealand was decided in London and Wellington, not Rarotonga. New Zealand's subsequent administration suppressed the islands' own legislature (1912) and is itself part of the colonial record. The Cook Islands regained self-government in free association with New Zealand only in 1965.",
+    "sources": [
+      {"citation": "Gilson, R. 'The Cook Islands 1820-1950' (Victoria University Press / Institute of Pacific Studies, 1980)", "url": null, "source_type": "academic"},
+      {"citation": "Scott, D. 'Years of the Pooh-Bah: A Cook Islands History' (Cook Islands Trading Corp / Hodder and Stoughton, 1991)", "url": null, "source_type": "academic"}
+    ],
+    "links": [
+      {"entity_name": "Kingdom of Rarotonga", "transition_year": null, "transition_type": null, "is_violent": false, "description": "The Rarotongan kingdom formed after 1827 as the island's ariki adopted a unified code of law under London Missionary Society influence, with the Makea Nui line pre-eminent; from 1843 repeatedly sought British protection against French expansion.", "ethical_notes": "Missionary influence transformed (and partly suppressed) pre-Christian Rarotongan institutions and practices — the kingdom itself was already a hybrid colonial-era formation."},
+      {"entity_name": "British Empire", "transition_year": 1888, "transition_type": "ANNEXATION", "is_violent": false, "description": "British protectorate proclaimed 1888 at the petition of Makea Takau and allied ariki (fearing French annexation); instruments of cession signed October 1900; included within the boundaries of New Zealand by Order in Council effective 11 June 1901.", "ethical_notes": "Formally consensual at the elite level, structurally coerced by the imperial scramble — see chain-level notes; not evidence of popular consent."}
+    ]
+  }
+]
