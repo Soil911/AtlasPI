@@ -23,15 +23,56 @@
   ripulito ma prod INSERT-only). Rimosse (107→77, orfani invariati 772). Hardening
   `_dedupe_by_name` + fence CI. Vedi `docs/structural-tracks-plan.md`. Prerequisito al linking.
 
-### Prossima sessione — tracce strutturali (Clirim: "le vorrei fare tutte")
-Piano eseguibile completo in **`docs/structural-tracks-plan.md`**:
-- **B1 chain linkage** (78% orfani): estendere catene già "TODO-listate" (Premier Empire #1037
-  → cat. francese #74, Afsharian #1038 → iraniana, Segundo Imperio Mexicano #522, Romania #441)
-  + nuove catene nazionali (Brasile, unificazione italiana → #100, ecc.). Decisione modello
-  "many→one" pendente.
-- **Track 3 split**: Babilonia #171 (deprecate/narrow, ripunta cat. #88), Sri Lanka #142,
-  Kemet #26 — distinti dai **popoli indigeni continui** (NON splittare: ETHICS).
-- **Track 1 enrichment**: coda ~206 entità <0.6 (turnkey).
+### v6.99.102-108 — tracce strutturali: B1a/B1b, split Babilonia, coerenza deprecati (2026-06-05 → 07-02)
+- **v6.99.102/103**: B1a (estensioni catene Iran/Francia/Romania) + B1b (nuove catene
+  Brasile + unificazione italiana). Modello unificazioni: linea principale + annessi in note.
+- **v6.99.106**: **split Babilonia #171 eseguito** (ETHICS-015 + emendamento): deprecata,
+  14 ref ri-homati alle entità-periodo; NUOVA entità #1042 "𒆳𒆍𒀭𒊏𒆠 (Post-Kassite)"
+  (−1155..−626, Brinkman/Frame/Beaulieu) per evitare l'anacronismo dell'evento #213.
+- **fix CI** (rossa dal 17/06): introspezione route version-proof per FastAPI ≥ 0.139
+  (lazy include) — lo startup-audit sicurezza /admin/* era silenziosamente cieco.
+- **v6.99.107**: **coerenza deprecati end-to-end** — ADR-005 su ~20 endpoint discovery
+  (snapshot/fuzzy/similar/where-was/export...), backport status prod→JSON (66), fix 5
+  chain_links + cascata 13 ref JSON alle primary native, guard ingest + 2 fence nuovi,
+  follow-up ETHICS-012 #3/#5 chiusi, /v1/where-was documentato in llms.txt.
+- **v6.99.108**: rename ETHICS-001 #579 'Fürstentum Walachei' → 'Terra Transalpina'.
+
+---
+
+## Milestone giganti (tesi 2026-07-02 — sessione autonoma)
+
+**Tesi**: i dati sono ormai strutturalmente solidi; il collo di bottiglia del prodotto è
+che *nessuno lo trova* (zero canali di acquisizione) e che la differenziazione reale
+(where-was, snapshot, metadata epistemici, contesto etico) non è né dimostrata né
+misurata. Ordine per leva: M2 > M3 > M1 > M4 > enrichment.
+
+### M1 — Layer catene/entità COMPLETO (residuo)
+B1c: catene Class-1 rimanenti (~33 orfani moderni: Montenegro #95, Zulu #34, Hawaii #43,
+Sikh #400, Madagascar #162, Maratha #111, Gorkha #399, Dahomey #149, Haiti #534...), con
+fonti verificate per ogni claim; design split Sri Lanka #142 (nome = un re, non l'entità)
+e valutazione Kemet #26 (ETHICS record prima); dedup trunk etiope (#22/#100 + entità #853
+dup di #51); entità-fase meroitica nativa (vedi note catena #99).
+
+### M2 — Discoverability (⛔ GATED: decisione DOMINIO di Clirim)
+Tutto il lavoro on-page è fatto (llms.txt, JSON-LD, sitemap); manca il canale: submission
+MCP registry (il server è già su PyPI), Google Search Console + Bing, backlink iniziali
+(awesome-lists MCP/API/DH, Zenodo→repo), Matomo per il traffico umano (l'analytics attuale
+vede solo l'API). Ogni submission va fatta UNA volta col dominio definitivo → decidere prima.
+
+### M3 — Agent-UX dimostrabilmente superiore
+Dai gap dell'audit agent-consumer 2026-07-02: (1) zero-result senza hint → suggerire
+/v1/search/fuzzy nella risposta vuota; (2) boundary statico silenziosamente anacronistico →
+campo machine-readable `boundary_reference_year`; (3) campi machine-facing in italiano
+(404, OpenAPI summaries, ethical_notes) → strategia lingua esplicita; (4) on-this-day
+payload magro (N+1); (5) freshness release MCP/SDK (dist/ stantii, README con conteggi
+vecchi). Più: pagina/benchmark "perché AtlasPI e non Wikidata" con query comparate reali.
+
+### M4 — Riconciliazione totale JSON↔prod (fresh-seed ≡ prod)
+Residuo documentato in ETHICS-012 follow-up #5: 18 rename nativi prod-only; ~299
+divergenze confidence BIDIREZIONALI (serve una policy: chi vince e perché, caso per
+caso); 30 record JSON ombreggiati (last-wins) da pulire; ethical_notes narrative.
+
+### Track continuo — enrichment coda <0.6 (~206 entità, valore marginale calante)
 
 Sessione lunga: audit a freddo (10 dimensioni, workflow `wb4nky8m3` con 29 agenti +
 verifica adversariale) → tutte "adequate", 0 critical, **10 HIGH confermati**. Verdetto:
