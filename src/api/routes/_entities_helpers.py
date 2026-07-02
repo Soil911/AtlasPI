@@ -418,6 +418,8 @@ def _nearby_postgis(
         "       ) / 1000.0 AS dist_km",
         "  FROM geo_entities",
         " WHERE capital_lat IS NOT NULL AND capital_lon IS NOT NULL",
+        # ADR-005 (v6.99.107): deprecated esclusi dalle discovery spaziali
+        "   AND status != 'deprecated'",
         "   AND ST_DWithin(",
         "           ST_MakePoint(capital_lon, capital_lat)::geography,",
         "           ST_MakePoint(:lon, :lat)::geography,",
@@ -478,6 +480,8 @@ def _nearby_python_haversine(
     q = db.query(GeoEntity).filter(
         GeoEntity.capital_lat.isnot(None),
         GeoEntity.capital_lon.isnot(None),
+        # ADR-005 (v6.99.107): parita' semantica col path PostGIS
+        GeoEntity.status != "deprecated",
     )
     if year is not None:
         q = q.filter(GeoEntity.year_start <= year)
@@ -525,7 +529,12 @@ def _where_was_sqlite(
     year: int | None,
 ) -> list[GeoEntity]:
     """Reverse-geocoding Python fallback (dev/test su SQLite). O(n)."""
-    q = db.query(GeoEntity).filter(GeoEntity.boundary_geojson.isnot(None))
+    # ADR-005 (v6.99.107): i gemelli deprecati condividono il polygon della
+    # primary → where-was riportava lo stesso territorio due volte.
+    q = db.query(GeoEntity).filter(
+        GeoEntity.boundary_geojson.isnot(None),
+        GeoEntity.status != "deprecated",
+    )
     if year is not None:
         q = q.filter(GeoEntity.year_start <= year)
         q = q.filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= year))
@@ -547,6 +556,8 @@ def _where_was_postgis(
     sql_parts = [
         "SELECT id FROM geo_entities",
         "WHERE boundary_geojson IS NOT NULL",
+        # ADR-005 (v6.99.107): stesso filtro del fallback SQLite
+        "  AND status != 'deprecated'",
         "  AND ST_Contains(",
         "      ST_GeomFromGeoJSON(boundary_geojson),",
         "      ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)",

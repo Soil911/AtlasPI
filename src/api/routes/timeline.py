@@ -52,7 +52,9 @@ def get_timeline_data(
     db: Session = Depends(get_db),
 ):
     # --- Entities: lightweight temporal data only ---
-    entities_q = db.query(GeoEntity).all()
+    # ADR-005 (v6.99.107): i duplicati deprecati renderizzavano come barre
+    # duplicate nella timeline pubblica.
+    entities_q = db.query(GeoEntity).filter(GeoEntity.status != "deprecated").all()
     entities = [
         {
             "id": e.id,

@@ -63,6 +63,10 @@ endpoint listed below returns JSON with no authentication.
 - /v1/events/date-coverage — which MM-DD dates have events (for discovery)
 
 ### Spatial queries
+- /v1/where-was?lat=<lat>&lon=<lon>&year=<year> — temporal reverse geocoding:
+  which polity controlled this point at that year (add &include_history=true
+  for the full timeline of polities at that point). AtlasPI's most
+  differentiated primitive — no equivalent in Wikidata/Natural Earth.
 - /v1/nearby?lat=<lat>&lon=<lon>&year=<year> — entities near coords at year
 - /v1/entities?bbox=<minLon,minLat,maxLon,maxLat> — spatial bounding box
 

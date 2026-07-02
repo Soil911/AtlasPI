@@ -2,6 +2,46 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.107] - 2026-07-02 (coerenza deprecati end-to-end: API + catene + backport status)
+
+**Tema**: *Le entità deprecate (duplicati del merge v6.85 + ETHICS-015) leakavano
+ovunque: nei risultati flagship dell'API (snapshot top_by_confidence, fuzzy
+search, similar, where-was, export), in 17 chain-link JSON mai cascadati dopo il
+merge, e nel fresh-seed (66 status prod mai backportati → i duplicati
+"resuscitavano" come record validi). Chiusura end-to-end della classe di bug,
+con guard + fence perché non si ripresenti.*
+
+- **API (ADR-005, ~20 punti)**: esclusione dei deprecated di default da
+  /v1/snapshot/year/{year}, /v1/snapshot/{year}, /v1/search, /v1/search/fuzzy
+  (bug live id 414), /v1/search/advanced, /v1/entity (legacy), /v1/random,
+  /v1/nearby e /v1/where-was (entrambi i path PostGIS+SQLite; i gemelli
+  condividono il polygon → where-was riportava lo stesso territorio due volte),
+  /v1/entities/{id}/similar (il gemello scorava ~0.9+ e si piazzava #1),
+  /contemporaries, /related, /v1/timeline-data, /v1/render/snapshot,
+  /v1/types, /v1/continents, /v1/stats, /v1/aggregation, /v1/export/*.
+  Opt-in `include_deprecated=true` sugli endpoint di listing/export.
+  **Trasparenza**: il bucket 'deprecated' resta visibile in status_counts e
+  by_status; i permalink /v1/entities/{id} restano accessibili.
+- **Backport status prod→JSON** (`scripts/backport_status_to_json.py`, spec
+  `data/fixes/prod_status_export_20260702.json`): 66 divergenze corrette (i
+  deprecated v6.85 e le ricalibrazioni uncertain). Confidence ESCLUSA di
+  proposito (drift bidirezionale ~299 entità → riconciliazione dedicata futura).
+- **Catene**: 5 chain_links prod (catene 99/100/101/106) puntavano a duplicati
+  deprecati — 4 ri-puntati alle primary native (855→24, 847→27, 477→143,
+  849→12), il link 'Meroe' (552, dup di Kush 52 già in catena) rimosso con
+  nota (fase meroitica documentata, non cancellata). JSON: cascata di 13 ref
+  in 9 file catene alle primary native (`scripts/cascade_chain_refs_to_primary.py`)
+  — mai cascadati dal Pass 4 del merge v6.85.
+- **Guard + fence**: `ingest_chains` ora salta (con warning ADR-005) i link a
+  entità deprecate; nuovo fence `tests/test_chain_deprecated_json_audit.py`
+  (ogni entity_name delle catene deve risolvere a un'entità JSON viva) +
+  `tests/test_deprecated_exclusion.py` (15 test di regressione sui leak).
+- **Follow-up ETHICS-012 chiusi**: #3 cap disputed ≤ 0.70 in prod (10 entità);
+  #5 name_variants per 1037/1038/1039/1040 in prod (da batch_36).
+- **llms.txt**: documentato /v1/where-was (+include_history) — l'endpoint più
+  differenziante era assente dal doc agent-facing.
+- **Test**: suite 1348 verde (2 test stantii aggiornati alla nuova semantica).
+
 ## [v6.99.106] - 2026-07-02 (split Babilonia #171 — ETHICS-015 + emendamento)
 
 **Tema**: *Esecuzione della decomposizione del super-aggregato "Babilonia" #171

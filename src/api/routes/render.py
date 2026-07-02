@@ -92,9 +92,12 @@ def render_snapshot_png(
         raise HTTPException(status_code=400, detail=f"year {year} out of range")
 
     # Query entities con boundary attive nell'anno
+    # ADR-005 (v6.99.107): i deprecati non venivano disegnati (nessun colore
+    # per lo status) ma gonfiavano il conteggio nel titolo/header.
     q = db.query(GeoEntity).filter(GeoEntity.boundary_geojson.isnot(None))
     q = q.filter(GeoEntity.year_start <= year)
     q = q.filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= year))
+    q = q.filter(GeoEntity.status != "deprecated")
     entities = q.all()
 
     if not entities:

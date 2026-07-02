@@ -110,12 +110,23 @@ def ingest_chains() -> dict[str, Any]:
             )
         logger.info("Catene nei JSON (deduped): %d", len(all_chains))
 
-        entity_map = {e.name_original: e.id for e in db.query(GeoEntity).all()}
+        entity_rows = db.query(
+            GeoEntity.name_original, GeoEntity.id, GeoEntity.status
+        ).all()
+        entity_map = {r.name_original: r.id for r in entity_rows}
+        # ETHICS/ADR-005 (v6.99.107): le entita' deprecate sono duplicati/
+        # superseduti — linkarle in una catena le "resuscita" nei risultati
+        # (bug reale: catene 99-106 linkavano 5 duplicati deprecati del merge
+        # v6.85 perche' questo resolver accettava qualsiasi name_original).
+        deprecated_names = {
+            r.name_original for r in entity_rows if r.status == "deprecated"
+        }
 
         inserted = 0
         skipped = 0
         total_links_created = 0
         unresolved: list[str] = []
+        deprecated_refs: list[str] = []
         missing_transition_types: list[str] = []
         ideological_without_notes: list[str] = []
 
@@ -166,6 +177,11 @@ def ingest_chains() -> dict[str, Any]:
                 if entity_id is None:
                     unresolved.append(f"chain='{name}' link[{i}] → entity='{ent_name}'")
                     continue
+                if ent_name in deprecated_names:
+                    deprecated_refs.append(
+                        f"chain='{name}' link[{i}] → entity='{ent_name}' (deprecated — link saltato)"
+                    )
+                    continue
 
                 transition_type = link_data.get("transition_type")
                 # ETHICS-002: non-first links should ideally have a transition_type.
@@ -193,17 +209,21 @@ def ingest_chains() -> dict[str, Any]:
         db.commit()
         logger.info(
             "Ingest catene: %d inserite, %d saltate, %d link creati, "
-            "%d entity-refs non risolti, %d link senza transition_type, "
+            "%d entity-refs non risolti, %d ref a entita' deprecate saltati, "
+            "%d link senza transition_type, "
             "%d catene IDEOLOGICAL senza ethical_notes",
             inserted,
             skipped,
             total_links_created,
             len(unresolved),
+            len(deprecated_refs),
             len(missing_transition_types),
             len(ideological_without_notes),
         )
         for ref in unresolved[:20]:
             logger.warning(" unresolved: %s", ref)
+        for ref in deprecated_refs[:20]:
+            logger.warning(" ADR-005 deprecated ref: %s", ref)
         for m in missing_transition_types[:10]:
             logger.warning(" ETHICS-002 soft: %s", m)
         for c in ideological_without_notes:
@@ -218,6 +238,7 @@ def ingest_chains() -> dict[str, Any]:
             "total_in_json": len(all_chains),
             "total_links_created": total_links_created,
             "unresolved_entity_refs": len(unresolved),
+            "deprecated_entity_refs_skipped": len(deprecated_refs),
             "missing_transition_types": len(missing_transition_types),
             "ideological_without_notes": len(ideological_without_notes),
         }

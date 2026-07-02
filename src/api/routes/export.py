@@ -51,9 +51,18 @@ def export_geojson(
         pattern="^(full|centroid|none)$",
         description="full = poligoni completi (default); centroid = Point capitali; none = solo properties",
     ),
+    include_deprecated: bool = Query(
+        False, description="Includi entità status='deprecated' (ADR-005: escluse di default)"
+    ),
     db: Session = Depends(get_db),
 ):
     q = db.query(GeoEntity)
+
+    # ADR-005 (v6.99.107): i gemelli deprecati condividono il polygon della
+    # primary → il GeoJSON di default renderizzava lo stesso territorio due
+    # volte. Opt-in per dump di completezza.
+    if not include_deprecated:
+        q = q.filter(GeoEntity.status != "deprecated")
 
     if year is not None:
         from sqlalchemy import or_
@@ -126,9 +135,16 @@ def export_geojson(
 def export_csv(
     request: Request,
     response: Response,  # v6.66: richiesto da slowapi con headers_enabled=True
+    include_deprecated: bool = Query(
+        False, description="Includi entità status='deprecated' (ADR-005: escluse di default)"
+    ),
     db: Session = Depends(get_db),
 ):
-    entities = db.query(GeoEntity).order_by(GeoEntity.year_start).all()
+    q = db.query(GeoEntity)
+    # ADR-005 (v6.99.107): esclusi di default; opt-in per dump completi
+    if not include_deprecated:
+        q = q.filter(GeoEntity.status != "deprecated")
+    entities = q.order_by(GeoEntity.year_start).all()
 
     output = io.StringIO()
     writer = csv.writer(output)
@@ -164,13 +180,16 @@ def export_csv(
 def export_timeline(
     request: Request,
     response: Response,  # v6.66: richiesto da slowapi con headers_enabled=True
+    include_deprecated: bool = Query(
+        False, description="Includi entità status='deprecated' (ADR-005: escluse di default)"
+    ),
     db: Session = Depends(get_db),
 ):
-    entities = (
-        db.query(GeoEntity)
-        .order_by(GeoEntity.year_start)
-        .all()
-    )
+    q = db.query(GeoEntity)
+    # ADR-005 (v6.99.107): i duplicati deprecati apparivano come barre extra
+    if not include_deprecated:
+        q = q.filter(GeoEntity.status != "deprecated")
+    entities = q.order_by(GeoEntity.year_start).all()
 
     items = []
     for e in entities:

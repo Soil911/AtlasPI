@@ -436,7 +436,19 @@ e `data/events/batch_20_trade_exploration.json` (`entity_links` `Maqdishaw`).
 
 1. ✅ Triage 7 insert (fatto — 6 add + 1 rename).
 2. ✅ Sync nomi nativi (fatto — 15 rename + cascade).
-3. ⏳ Cappare in prod le 6 `disputed` > 0.70 (al prossimo deploy).
+3. ✅ Cappare in prod le `disputed` > 0.70 — fatto in v6.99.107 (il set era
+   cresciuto a 10 entità; cap applicato a tutte, prod SQL + verifica JSON).
+4. ✅ (v6.99.107) name_variants mancanti in prod per 1037/1038/1039/1040 —
+   INSERT da batch_36 nello stesso SQL.
+5. ⏳ **Debito residuo scoperto 2026-07-02** (diff completo prod↔JSON):
+   (a) 18 rename nativi prod-only non ancora sincronizzati nel JSON (stessa
+   classe del punto 2 — es. `Rus' Kyivska`→`Русь Київська`,
+   `Sakartvelos samepo`→`საქართველოს სამეფო`); (b) ~299 divergenze di
+   confidence BIDIREZIONALI (batch_32 boost mai applicato a prod vs
+   ricalibrazioni prod mai backportate) → serve una policy di
+   riconciliazione dedicata, non un backport meccanico; (c) 30 record JSON
+   con nome duplicato (semantica last-wins del seed: i primi sono
+   ombreggiati e inerti — cleanup cosmetico.
 4. ⏳ Prod: riconciliare le 3 entità Babilonia sovrapposte (171 combinata vs
    490 Neo + 1039 Old) — deprecare/restringere la 171.
 5. ⏳ Prod: aggiungere `name_variants` ai 4 insert che ne sono privi.

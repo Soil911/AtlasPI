@@ -1,17 +1,29 @@
 [
   {
-    "name": "Nile Valley / Kush dynastic trunk: Kerma → Kush → Napata → Meroe",
+    "name": "Nile Valley / Kush dynastic trunk: Kerma → Kush → Napata",
     "name_lang": "en",
     "chain_type": "SUCCESSION",
     "region": "Nile Valley / Nubia / Northeast Africa",
     "description": "The succession of Nubian state-forms from the earliest recorded Kerma culture through the Kushite kingdom, its Napatan phase (including the 25th Dynasty conquest of Egypt), and its final Meroitic phase. These represent one of the world's oldest continuous state traditions outside of Mesopotamia and Egypt, and the longest-lived Black African kingdom in antiquity.",
     "confidence_score": 0.72,
-    "ethical_notes": "Kush, Napata, and Meroe are often collapsed into a single undifferentiated 'Kushite' entity by Egyptocentric historiography that treats them as footnotes to Egyptian history. Each represents a distinct phase of Nubian state-formation with its own capital, culture, and political logic. The Napatan/25th Dynasty conquest of Egypt (c. 744-656 BCE) — in which Nubian pharaohs ruled all of Egypt — is systematically minimized in Western curricula despite representing a complete reversal of the typical civilizational power gradient. Meroitic script remains only partially deciphered; our confidence in internal political succession is accordingly limited.",
+    "ethical_notes": "Kush, Napata, and Meroe are often collapsed into a single undifferentiated 'Kushite' entity by Egyptocentric historiography that treats them as footnotes to Egyptian history. Each represents a distinct phase of Nubian state-formation with its own capital, culture, and political logic. The Napatan/25th Dynasty conquest of Egypt (c. 744-656 BCE) — in which Nubian pharaohs ruled all of Egypt — is systematically minimized in Western curricula despite representing a complete reversal of the typical civilizational power gradient. Meroitic script remains only partially deciphered; our confidence in internal political succession is accordingly limited. NOTE (ADR-005/ETHICS-001, 2026-07-02): the Meroitic-phase node was removed from this chain because the 'Meroe' entity was deprecated as a duplicate of Kush (v6.85 merge map 52←552), which is already this chain's seq-1 node and whose span (-1070..350) includes the Meroitic phase (c. -300..350, capital at Medewi/Meroë, Meroitic script, iron industry, ruling Kandakes). The phase remains part of the historical record via the Kush entity and the Napata node; a dedicated native-named Meroitic-phase entity (like the Napata one) is open future work, not an erasure.",
     "sources": [
-      {"citation": "Welsby, D.A. 'The Kingdom of Kush' (1996)", "source_type": "academic"},
-      {"citation": "Edwards, D.N. 'The Nubian Past' (2004)", "source_type": "academic"},
-      {"citation": "Török, L. 'The Kingdom of Kush' (1997)", "source_type": "academic"},
-      {"citation": "Shinnie, P.L. 'Meroe: A Civilization of the Sudan' (1967)", "source_type": "academic"}
+      {
+        "citation": "Welsby, D.A. 'The Kingdom of Kush' (1996)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Edwards, D.N. 'The Nubian Past' (2004)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Török, L. 'The Kingdom of Kush' (1997)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Shinnie, P.L. 'Meroe: A Civilization of the Sudan' (1967)",
+        "source_type": "academic"
+      }
     ],
     "links": [
       {
@@ -35,13 +47,6 @@
         "transition_type": "REFORM",
         "is_violent": false,
         "description": "After Assyrian invasions drove Kushite rulers from Egypt (664 BCE) and the Egyptian pharaoh Psamtik II sacked Napata itself (593 BCE), the political and economic center shifted south to Meroe. This transition marks the beginning of the distinctly Meroitic phase of Kushite civilization."
-      },
-      {
-        "entity_name": "Meroe",
-        "transition_year": null,
-        "transition_type": null,
-        "is_violent": false,
-        "description": "Meroe remained the capital of the Kushite state until Aksumite conquest c. 350 CE. Meroitic culture developed its own script, an extensive iron industry (the 'Birmingham of Africa'), and a distinct artistic tradition independent of Egyptian models."
       }
     ]
   },
@@ -54,9 +59,18 @@
     "confidence_score": 0.63,
     "ethical_notes": "The relationship between D'mt and Aksum is academically contested. D'mt may have been a Sabaean-influenced proto-state in northern Ethiopia/Eritrea; Aksum emerged from indigenous cultures in the same region after D'mt's collapse. Treating this as a direct succession chain imposes continuity that the 500-year gap (c. 400 BCE to 100 CE) and archaeological ambiguity do not fully support. The Zagwe dynasty omission is a dataset gap — its absence must not be read as denying its historical importance. The Solomonic claim of descent from Solomon and the Queen of Sheba (Makeda) is a dynastic legitimation myth, not documented genealogy; it is nonetheless foundational to Ethiopian imperial identity through Haile Selassie I.",
     "sources": [
-      {"citation": "Phillipson, D.W. 'Ancient Ethiopia: Aksum, Its Antecedents and Successors' (1998)", "source_type": "academic"},
-      {"citation": "Munro-Hay, S. 'Aksum: An African Civilisation of Late Antiquity' (1991)", "source_type": "academic"},
-      {"citation": "Tamrat, T. 'Church and State in Ethiopia 1270-1527' (1972)", "source_type": "academic"}
+      {
+        "citation": "Phillipson, D.W. 'Ancient Ethiopia: Aksum, Its Antecedents and Successors' (1998)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Munro-Hay, S. 'Aksum: An African Civilisation of Late Antiquity' (1991)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Tamrat, T. 'Church and State in Ethiopia 1270-1527' (1972)",
+        "source_type": "academic"
+      }
     ],
     "links": [
       {
@@ -76,7 +90,7 @@
         "ethical_notes": "The identity and ethnicity of Yodit is debated in Ethiopian and Eritrean historiography. Ethiopian royal chronicles frame her as a Falasha (Beta Israel Jewish) queen or pagan usurper; her actual identity remains historically ambiguous. The 'destruction of Aksum' narrative may partly reflect the perspective of the dynasty she displaced."
       },
       {
-        "entity_name": "Mengist Ityop'p'ya",
+        "entity_name": "የኢትዮጵያ ንጉሠ ነገሥት መንግሥት",
         "transition_year": null,
         "transition_type": null,
         "is_violent": false,

@@ -210,7 +210,10 @@ class TestNewChains:
             ChainLink.sequence_order == 0,
         ).first()
         entity = db.query(GeoEntity).filter(GeoEntity.id == first_link.entity_id).first()
-        assert entity.name_original == "\u0647\u062e\u0627\u0645\u0646\u0634\u06cc\u0627\u0646"
+        # v6.99.107 (ADR-005/ETHICS-001): la catena punta alla primary in
+        # antico persiano 'X\u0161\u0101\u00e7a' (id prod 27), non pi\u00f9 al duplicato deprecato
+        # '\u0647\u062e\u0627\u0645\u0646\u0634\u06cc\u0627\u0646' (persiano moderno \u2014 merge v6.85, mappa 27\u2190847).
+        assert entity.name_original == "X\u0161\u0101\u00e7a"
 
     def test_persian_chain_ends_with_islamic_republic(self, db):
         chain = db.query(DynastyChain).filter(

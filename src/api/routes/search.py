@@ -116,6 +116,9 @@ def advanced_search(
     year_min: int | None = Query(None, description="Minimum year (inclusive)"),
     year_max: int | None = Query(None, description="Maximum year (inclusive)"),
     status: str | None = Query(None, description="Filter by status (confirmed/uncertain/disputed)"),
+    include_deprecated: bool = Query(
+        False, description="Includi entità status='deprecated' (ADR-005: escluse di default)"
+    ),
     confidence_min: float | None = Query(None, ge=0.0, le=1.0, description="Minimum confidence score"),
     confidence_max: float | None = Query(None, ge=0.0, le=1.0, description="Maximum confidence score"),
     sort: str = Query(
@@ -157,6 +160,10 @@ def advanced_search(
             )
         if status:
             eq = eq.filter(GeoEntity.status == status)
+        # ADR-005 (v6.99.107): deprecated esclusi di default (opt-in esplicito;
+        # status=deprecated conta come opt-in per non restituire vuoto ambiguo)
+        if not include_deprecated and status != "deprecated":
+            eq = eq.filter(GeoEntity.status != "deprecated")
         if confidence_min is not None:
             eq = eq.filter(GeoEntity.confidence_score >= confidence_min)
         if confidence_max is not None:
@@ -354,6 +361,9 @@ def export_entities(
     year_min: int | None = Query(None, description="Minimum year_start"),
     year_max: int | None = Query(None, description="Maximum year_start"),
     status: str | None = Query(None, description="Filter by status"),
+    include_deprecated: bool = Query(
+        False, description="Includi entità status='deprecated' (ADR-005: escluse di default)"
+    ),
     confidence_min: float | None = Query(None, ge=0.0, le=1.0),
     confidence_max: float | None = Query(None, ge=0.0, le=1.0),
     db: Session = Depends(get_db),
@@ -368,6 +378,10 @@ def export_entities(
         q = q.filter(GeoEntity.year_start <= year_max)
     if status:
         q = q.filter(GeoEntity.status == status)
+    # ADR-005 (v6.99.107): i duplicati deprecati consumavano slot del cap 1000
+    # righe. Opt-in esplicito per export di completezza/riproducibilità.
+    if not include_deprecated and status != "deprecated":
+        q = q.filter(GeoEntity.status != "deprecated")
     if confidence_min is not None:
         q = q.filter(GeoEntity.confidence_score >= confidence_min)
     if confidence_max is not None:

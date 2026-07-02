@@ -46,7 +46,9 @@ def get_contemporaries(
         raise EntityNotFoundError(entity_id)
 
     # Trova entità che si sovrappongono temporalmente
+    # ADR-005 (v6.99.107): deprecated esclusi — consumavano slot del limit
     q = db.query(GeoEntity).filter(GeoEntity.id != entity_id)
+    q = q.filter(GeoEntity.status != "deprecated")
     q = q.filter(GeoEntity.year_start <= (entity.year_end or 2025))
     q = q.filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= entity.year_start))
 
@@ -93,9 +95,12 @@ def get_related(
         raise EntityNotFoundError(entity_id)
 
     # 1. Stesso tipo
+    # ADR-005 (v6.99.107): il gemello deprecato condivide entity_type e periodo
+    # con la primary → senza filtro finiva quasi sempre nei correlati.
     same_type = (
         db.query(GeoEntity)
         .filter(GeoEntity.id != entity_id, GeoEntity.entity_type == entity.entity_type)
+        .filter(GeoEntity.status != "deprecated")
         .limit(5)
         .all()
     )
@@ -104,6 +109,7 @@ def get_related(
     temporal = (
         db.query(GeoEntity)
         .filter(GeoEntity.id != entity_id)
+        .filter(GeoEntity.status != "deprecated")
         .filter(GeoEntity.year_start <= (entity.year_end or 2025))
         .filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= entity.year_start))
         .limit(10)
@@ -202,7 +208,13 @@ def get_similar(
         raise EntityNotFoundError(entity_id)
 
     # Score all candidates (excluding self)
-    candidates = db.query(GeoEntity).filter(GeoEntity.id != entity_id).all()
+    # ADR-005 (v6.99.107): il gemello deprecato scorava ~0.9+ contro la sua
+    # primary (stesso tipo, stessi anni) e si piazzava #1 in /similar.
+    candidates = (
+        db.query(GeoEntity)
+        .filter(GeoEntity.id != entity_id, GeoEntity.status != "deprecated")
+        .all()
+    )
     scored = []
     for c in candidates:
         s = _similarity_score(entity, c)

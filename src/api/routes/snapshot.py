@@ -90,12 +90,15 @@ def world_snapshot(
     )
 
     # ── 2. Active entities (any entity existing at `year`) ────────
+    # ADR-005 (v6.99.107): le entita' deprecate (duplicati/superseduti) sono
+    # escluse — leakavano nel top_by_confidence (bug live: id 847).
     active_entities_q = db.query(GeoEntity).filter(
         GeoEntity.year_start <= year,
         or_(
             GeoEntity.year_end.is_(None),
             GeoEntity.year_end >= year,
         ),
+        GeoEntity.status != "deprecated",
     )
 
     total_entities = active_entities_q.count()

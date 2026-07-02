@@ -90,10 +90,16 @@ class TestAggregation:
         assert continent_sum == d["total"]
 
     def test_aggregation_by_status_sum_matches_total(self, client):
-        """La somma per status corrisponde al totale."""
+        """La somma per status corrisponde al totale.
+
+        v6.99.107 (ADR-005): `total` conta solo le entità vive; il bucket
+        'deprecated' resta in by_status per trasparenza ma fuori dal totale.
+        """
         d = client.get("/v1/aggregation").json()
-        status_sum = sum(item["count"] for item in d["by_status"])
-        assert status_sum == d["total"]
+        live_sum = sum(
+            item["count"] for item in d["by_status"] if item["status"] != "deprecated"
+        )
+        assert live_sum == d["total"]
 
     def test_aggregation_centuries_ordered(self, client):
         """I secoli sono in ordine cronologico (a.C. prima)."""

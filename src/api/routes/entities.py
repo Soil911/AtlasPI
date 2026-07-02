@@ -94,9 +94,17 @@ def query_entity(
     order: Literal["asc", "desc"] = Query("asc", description="Direzione ordinamento"),
     limit: int = Query(20, ge=1, le=500, description="Risultati per pagina"),
     offset: int = Query(0, ge=0, description="Offset per paginazione"),
+    include_deprecated: bool = Query(
+        False, description="Includi entità marcate status='deprecated' (ADR-005)"
+    ),
     db: Session = Depends(get_db),
 ):
     q = _eager_query(db)
+
+    # ADR-005 (v6.99.107): deprecated esclusi di default anche dall'endpoint
+    # legacy /v1/entity (era rimasto senza filtro, a differenza di /v1/entities)
+    if not include_deprecated:
+        q = q.filter(GeoEntity.status != "deprecated")
 
     if name:
         pattern = f"%{name}%"
@@ -519,6 +527,8 @@ def search_entities(
     variant_ids = select(NameVariant.entity_id).where(NameVariant.name.ilike(pattern))
     results = (
         db.query(GeoEntity)
+        # ADR-005 (v6.99.107): niente duplicati deprecati nell'autocomplete
+        .filter(GeoEntity.status != "deprecated")
         .filter(or_(GeoEntity.name_original.ilike(pattern), GeoEntity.id.in_(variant_ids)))
         .limit(limit)
         .all()
@@ -658,6 +668,9 @@ def search_entities_fuzzy(
                     db.query(GeoEntity)
                     .options(joinedload(GeoEntity.name_variants))
                     .filter(GeoEntity.id.in_(cand_ids))
+                    # ADR-005 (v6.99.107): bug live — fuzzy restituiva
+                    # duplicati deprecati (es. id 414)
+                    .filter(GeoEntity.status != "deprecated")
                     .all()
                 )
             else:
@@ -673,6 +686,8 @@ def search_entities_fuzzy(
         entities = (
             db.query(GeoEntity)
             .options(joinedload(GeoEntity.name_variants))
+            # ADR-005 (v6.99.107): parita' col path PostgreSQL
+            .filter(GeoEntity.status != "deprecated")
             .all()
         )
 
@@ -808,8 +823,11 @@ def search_entities_fuzzy(
     ),
 )
 def list_types(db: Session = Depends(get_db)):
+    # ADR-005 (v6.99.107): i conteggi alimentano la UI accoppiata a
+    # /v1/entities (che esclude i deprecati) — senza filtro non tornavano
     results = (
         db.query(GeoEntity.entity_type, func.count(GeoEntity.id))
+        .filter(GeoEntity.status != "deprecated")
         .group_by(GeoEntity.entity_type)
         .order_by(desc(func.count(GeoEntity.id)))
         .all()
@@ -824,7 +842,8 @@ def list_types(db: Session = Depends(get_db)):
     description="Restituisce i continenti disponibili calcolati dalle coordinate delle capitali.",
 )
 def list_continents(db: Session = Depends(get_db)):
-    entities = db.query(GeoEntity).all()
+    # ADR-005 (v6.99.107): esclusi i deprecati dai conteggi per continente
+    entities = db.query(GeoEntity).filter(GeoEntity.status != "deprecated").all()
     counts: dict[str, int] = {}
     for e in entities:
         c = _get_continent(e.capital_lat, e.capital_lon)
@@ -862,6 +881,9 @@ def random_entity(
     id_q = db.query(
         GeoEntity.id, GeoEntity.capital_lat, GeoEntity.capital_lon
     )
+    # ADR-005 (v6.99.107): /v1/random non deve mai pescare un duplicato
+    # deprecato (StatusFilter non permette nemmeno di richiederlo)
+    id_q = id_q.filter(GeoEntity.status != "deprecated")
 
     if type:
         id_q = id_q.filter(GeoEntity.entity_type == type)
@@ -1126,6 +1148,9 @@ def year_snapshot(
     response: Response,
     type: str | None = Query(None, max_length=50, description="Filtra per tipo"),
     continent: str | None = Query(None, max_length=50, description="Filtra per continente"),
+    include_deprecated: bool = Query(
+        False, description="Includi entità marcate status='deprecated' (ADR-005)"
+    ),
     db: Session = Depends(get_db),
 ):
     if year < -4500 or year > 2100:
@@ -1134,6 +1159,9 @@ def year_snapshot(
 
     q = db.query(GeoEntity).filter(GeoEntity.year_start <= year)
     q = q.filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= year))
+    # ADR-005 (v6.99.107): i duplicati deprecati gonfiavano lo snapshot annuale
+    if not include_deprecated:
+        q = q.filter(GeoEntity.status != "deprecated")
 
     if type:
         q = q.filter(GeoEntity.entity_type == type)
@@ -1191,10 +1219,16 @@ def year_snapshot(
 )
 @cache_response(ttl_seconds=60)
 def dataset_stats(request: Request, response: Response, db: Session = Depends(get_db)):
-    total = db.query(GeoEntity).count()
+    # ADR-005 (v6.99.107): i numeri headline (total, per-tipo, per-continente,
+    # min/max/avg) escludono i duplicati deprecati per riconciliarsi con i
+    # listing filtrati. TRASPARENZA: status_counts resta NON filtrato — il
+    # bucket 'deprecated' rimane visibile, non nascosto.
+    _live = GeoEntity.status != "deprecated"
+    total = db.query(GeoEntity).filter(_live).count()
 
     type_counts = (
         db.query(GeoEntity.entity_type, func.count(GeoEntity.id))
+        .filter(_live)
         .group_by(GeoEntity.entity_type)
         .all()
     )
@@ -1205,15 +1239,15 @@ def dataset_stats(request: Request, response: Response, db: Session = Depends(ge
         .all()
     )
 
-    min_year = db.query(func.min(GeoEntity.year_start)).scalar() or 0
-    max_year = db.query(func.max(GeoEntity.year_start)).scalar() or 0
-    avg_conf = db.query(func.avg(GeoEntity.confidence_score)).scalar() or 0.0
+    min_year = db.query(func.min(GeoEntity.year_start)).filter(_live).scalar() or 0
+    max_year = db.query(func.max(GeoEntity.year_start)).filter(_live).scalar() or 0
+    avg_conf = db.query(func.avg(GeoEntity.confidence_score)).filter(_live).scalar() or 0.0
     total_sources = db.query(Source).count()
     total_changes = db.query(TerritoryChange).count()
     disputed = db.query(GeoEntity).filter(GeoEntity.status == "disputed").count()
 
     # Continenti
-    all_entities = db.query(GeoEntity).all()
+    all_entities = db.query(GeoEntity).filter(_live).all()
     continent_counts: dict[str, int] = {}
     for ent in all_entities:
         c = _get_continent(ent.capital_lat, ent.capital_lon)
@@ -1286,12 +1320,17 @@ def dataset_stats(request: Request, response: Response, db: Session = Depends(ge
     ),
 )
 def aggregation(response: Response, db: Session = Depends(get_db)):
-    entities = db.query(GeoEntity).all()
+    # ADR-005 (v6.99.107): aggregati senza duplicati deprecati; il conteggio
+    # deprecated resta visibile in by_status per trasparenza (come /v1/stats)
+    entities = db.query(GeoEntity).filter(GeoEntity.status != "deprecated").all()
+    deprecated_count = (
+        db.query(GeoEntity).filter(GeoEntity.status == "deprecated").count()
+    )
 
     by_century: dict[str, int] = {}
     by_type: dict[str, int] = {}
     by_continent: dict[str, int] = {}
-    by_status: dict[str, int] = {}
+    by_status: dict[str, int] = {"deprecated": deprecated_count} if deprecated_count else {}
     earliest = 0
     latest = 0
 
