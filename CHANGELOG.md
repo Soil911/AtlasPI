@@ -2,6 +2,41 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.106] - 2026-07-02 (split Babilonia #171 — ETHICS-015 + emendamento)
+
+**Tema**: *Esecuzione della decomposizione del super-aggregato "Babilonia" #171
+(−1894..−539, ETHICS-015): l'entità presentava come un unico impero continuo tre
+stati distinti separati da cesure violente. Deprecata; i 14 riferimenti ri-homati
+alle entità-periodo. La verifica pre-esecuzione contro prod ha trovato un errore
+storico nel piano approvato, corretto con un emendamento documentato.*
+
+- **Origine**: ETHICS-015 (decisione presa con Clirim, sessione 2026-06-05) +
+  emendamento 2026-07-02 (§1-§4, stesso file) con cross-check ChatGPT-5.5.
+- **Emendamento §1 — NUOVA entità "𒆳𒆍𒀭𒊏𒆠 (Post-Kassite)"** (kingdom, −1155..−626,
+  conf 0.62, `data/entities/batch_37_babylon_split.json`): l'evento #213 (massacro
+  di Sennacherib, −689) sarebbe stato anacronistico su #490 Neo-Babilonese (nato
+  −626). Periodizzazione standard (Brinkman 1968, Analecta Orientalia 43; Frame
+  1992; Beaulieu 2018 — fonti verificate). Ethical_notes esplicite su dominazione
+  assira (−729 "doppia monarchia"), distruzione di Sennacherib (−689), guerra
+  civile Šamaš-šuma-ukin (−652..−648).
+- **Emendamento §2**: territory_changes #417/#418 (−586/−539) ELIMINATE, non
+  spostate — #490 aveva già le proprie righe equivalenti (evitato doppio conteggio
+  della deportazione giudaica).
+- **Emendamento §3**: ruler #61 Hammurabi — aggiornato anche `entity_name_fallback`.
+- **Emendamento §4**: città Bābilim (historical_cities #15) — sanata divergenza
+  preesistente: il JSON puntava al riferimento morto "Māt Akkadī" (entity_id NULL
+  al fresh-seed) mentre prod aveva #171 via backfill; ora entrambi → #1039.
+- **Re-homing**: catena #88 seq2 → #1039; eventi #448→#1039, #455→#811,
+  #213→post-cassita, #214/215/216→#490; ruler #61→#1039; città #15→#1039;
+  territory_change #416→#1039. Sources e name_variants restano su #171 deprecata
+  (come da piano). Nota stantia su #1039 ("Kassite period not covered yet") sanata.
+- **Modifiche**: 7 JSON sorgente (dual-write) + `scripts/apply_babylon_split.py`
+  (applier dedicato, stile B1a) + `scripts/sql_babylon_split.sql` (transazionale,
+  guard: zero ref residui a #171, catena #88 contigua, evento #213 su entità viva
+  che copre −689, antimeridian check sul nuovo boundary).
+- **Test**: suite 1332 verde; i 6 eventi (inclusi Gerusalemme −586 e deportazione)
+  restano su entità VIVE, mai persi.
+
 ## [v6.99.105] - 2026-06-30 (AI Co-Founder suggestion #88 — alias LLM-probe /v1/messages + /v1/chat/completions)
 
 **Tema**: *Implementazione della suggestion accettata #88. Agent esterni probano gli

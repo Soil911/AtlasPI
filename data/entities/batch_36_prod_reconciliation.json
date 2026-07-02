@@ -612,7 +612,7 @@
     "boundary_ne_iso_a3": null,
     "confidence_score": 0.78,
     "status": "confirmed",
-    "ethical_notes": "ETHICS-001: Old Babylonian Empire (Hammurabi dynasty), -1894 a -1595 BCE. Distinct from Neo-Babylonian (id=490, -626 to -539). The intermediate Kassite period (-1595 to -1155) is not separately covered as entity yet. The Code of Hammurabi (~1754 BCE) belongs to this period. Q733897 verified Wikidata.",
+    "ethical_notes": "ETHICS-001: Old Babylonian Empire (Hammurabi dynasty), -1894 a -1595 BCE. Distinct from Neo-Babylonian (id=490, -626 to -539). The intermediate Kassite period (-1595 to -1155) is covered by the Kassite entity (𒌭𒀸𒋗), and the post-Kassite period (-1155 to -626) by 𒆳𒆍𒀭𒊏𒆠 (Post-Kassite) — see ETHICS-015. The Code of Hammurabi (~1754 BCE) belongs to this period. Q733897 verified Wikidata.",
     "name_variants": [
       {
         "name": "Old Babylonian Empire",
@@ -623,7 +623,16 @@
         "lang": "en"
       }
     ],
-    "territory_changes": [],
+    "territory_changes": [
+      {
+        "year": -1894,
+        "region": "Mesopotamia centrale",
+        "change_type": "INDEPENDENCE",
+        "description": "Fondazione della Prima Dinastia di Babilonia. Sotto Hammurabi (~1792-1750 a.C.) Babilonia unifica la Mesopotamia e promulga il celebre codice legislativo.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
     "sources": [
       {
         "citation": "Renger, J. (1995). Institutional, Communal, and Individual Ownership in Ancient Mesopotamia. Chicago-Kent Law Review 71(269).",

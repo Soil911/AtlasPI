@@ -1,0 +1,126 @@
+[
+  {
+    "name_original": "𒆳𒆍𒀭𒊏𒆠 (Post-Kassite)",
+    "name_original_lang": "akk",
+    "entity_type": "kingdom",
+    "year_start": -1155,
+    "year_end": -626,
+    "capital_name": "Babylon",
+    "capital_lat": 32.5427,
+    "capital_lon": 44.4209,
+    "boundary_geojson": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              43.6,
+              34.2
+            ],
+            [
+              47.6,
+              33.4
+            ],
+            [
+              48.1,
+              30.6
+            ],
+            [
+              46.0,
+              29.9
+            ],
+            [
+              44.3,
+              30.3
+            ],
+            [
+              42.9,
+              31.9
+            ],
+            [
+              43.6,
+              34.2
+            ]
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "boundary_aourednik_name": null,
+    "boundary_aourednik_year": null,
+    "boundary_aourednik_precision": null,
+    "boundary_ne_iso_a3": null,
+    "confidence_score": 0.62,
+    "status": "confirmed",
+    "ethical_notes": "ETHICS-015 (emendamento 2026-07-02): entita' creata nella decomposizione del super-aggregato 'Babilonia' per coprire il periodo post-cassita (-1155..-626), altrimenti privo di rappresentazione. NON e' un regno indipendente continuo: la periodizzazione segue Brinkman (Post-Kassite Babylonia) e comprende la II Dinastia di Isin (Nabucodonosor I), le successive case dinastiche caldee e aramee frammentate, e la dominazione assira dal 729 a.C. ('doppia monarchia': Tiglath-Pileser III assume direttamente la corona babilonese). ETHICS-002/007 (non-eufemismo): nel 689 a.C. Sennacherib rase al suolo Babilonia dopo la rivolta di Mushezib-Marduk — deviazione delle acque sull'area urbana, deportazione della statua di Marduk in Assiria; attribuzione esplicita al perpetratore assiro. La guerra civile di Shamash-shuma-ukin contro Ashurbanipal (652-648 a.C.) si concluse con assedio e carestia a Babilonia. Anno di inizio approssimato (1158/1157/1155 a.C. secondo la cronologia adottata). Il confine e' un'approssimazione onesta della Babilonia propria (tra i fiumi, da Sippar al Golfo), NON i confini di un impero: per gran parte del periodo l'autorita' politica reale era frammentata o subordinata all'Assiria.",
+    "name_variants": [
+      {
+        "name": "Post-Kassite Babylonia",
+        "lang": "en",
+        "period_start": -1155,
+        "period_end": -626,
+        "context": "periodizzazione storiografica standard",
+        "source": "Brinkman, J.A. A Political History of Post-Kassite Babylonia, 1158-722 B.C. (1968)"
+      },
+      {
+        "name": "māt Akkadī",
+        "lang": "akk",
+        "period_start": -1155,
+        "period_end": -626,
+        "context": "designazione nativa del paese ('terra di Akkad') nelle fonti babilonesi del I millennio a.C.",
+        "source": "Brinkman, J.A. A Political History of Post-Kassite Babylonia, 1158-722 B.C. (1968)"
+      },
+      {
+        "name": "Babilonia post-cassita",
+        "lang": "it",
+        "period_start": -1155,
+        "period_end": -626,
+        "context": "denominazione italiana",
+        "source": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -1155,
+        "region": "Babilonia (Mesopotamia meridionale)",
+        "change_type": "INDEPENDENCE",
+        "description": "Dopo l'invasione elamita di Shutruk-Nahhunte e Kutir-Nahhunte, che pone fine alla dinastia cassita, il potere passa alla II Dinastia di Isin: Nabucodonosor I (~1125-1104 a.C.) sconfigge l'Elam e recupera la statua di Marduk. Inizio del periodo post-cassita.",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": -729,
+        "region": "Babilonia",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Tiglath-Pileser III d'Assiria assume direttamente la corona babilonese ('doppia monarchia'): inizio della dominazione assira diretta, contestata da ripetute rivolte caldee (Marduk-apla-iddina II).",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": -689,
+        "region": "Babilonia (citta')",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Sennacherib distrugge Babilonia dopo la rivolta di Mushezib-Marduk: la citta' viene rasa al suolo e allagata, la statua di Marduk deportata in Assiria. Ricostruita da Esarhaddon a partire dal 680 a.C.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Brinkman, J.A. A Political History of Post-Kassite Babylonia, 1158-722 B.C. Analecta Orientalia 43. Roma: Pontificium Institutum Biblicum, 1968.",
+        "url": "https://cdli.earth/publications/1699895",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Frame, Grant. Babylonia 689-627 B.C.: A Political History. Uitgaven van het Nederlands Historisch-Archaeologisch Instituut te Istanbul. Leiden: Nederlands Instituut voor het Nabije Oosten, 1992. ISBN 978-90-6258-069-9.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Beaulieu, Paul-Alain. A History of Babylon, 2200 BC - AD 75. Blackwell History of the Ancient World. Hoboken: Wiley-Blackwell, 2018. ISBN 978-1-4051-8899-9.",
+        "url": "https://www.wiley.com/en-us/A+History+of+Babylon,+2200+BC+AD+75-p-9781405188999",
+        "source_type": "academic"
+      }
+    ]
+  }
+]

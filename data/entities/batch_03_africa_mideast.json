@@ -44447,7 +44447,7 @@
     "capital_lat": 32.5427,
     "capital_lon": 44.4209,
     "confidence_score": 0.65,
-    "status": "confirmed",
+    "status": "deprecated",
     "boundary_geojson": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -44481,7 +44481,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: il nome e' in cuneiforme accadico (Bab-ilani, 'Porta degli dei'). ETHICS-002: la civilta' babilonese produsse il Codice di Hammurabi (~1754 a.C.), i Giardini Pensili (una delle Sette Meraviglie) e la torre-ziggurat Etemenanki (probabile ispirazione della Torre di Babele biblica). Nabucodonosor II distrusse Gerusalemme e deporto' la popolazione giudaica (586 a.C.) — evento fondante della memoria ebraica (la 'Cattivita' Babilonese'). La caduta per mano di Ciro il Grande (539 a.C.) e' documentata nel Cilindro di Ciro, considerato da alcuni un precursore dei diritti umani. Boundary da aourednik/historical-basemaps (-1000, strategy=capital_in_polygon, precision=1). CC BY 4.0.",
+    "ethical_notes": "ETHICS-001: il nome e' in cuneiforme accadico (Bab-ilani, 'Porta degli dei'). ETHICS-002: la civilta' babilonese produsse il Codice di Hammurabi (~1754 a.C.), i Giardini Pensili (una delle Sette Meraviglie) e la torre-ziggurat Etemenanki (probabile ispirazione della Torre di Babele biblica). Nabucodonosor II distrusse Gerusalemme e deporto' la popolazione giudaica (586 a.C.) — evento fondante della memoria ebraica (la 'Cattivita' Babilonese'). La caduta per mano di Ciro il Grande (539 a.C.) e' documentata nel Cilindro di Ciro, considerato da alcuni un precursore dei diritti umani. Boundary da aourednik/historical-basemaps (-1000, strategy=capital_in_polygon, precision=1). CC BY 4.0. DEPRECATA (ETHICS-015, 2026-07-02): questa entita' era un super-aggregato che presentava come un unico impero continuo (-1894..-539) stati distinti separati da cesure violente (sacco ittita -1595, dominazione cassita, conquista assira, indipendenza caldea -626, caduta persiana -539). Vedi le entita'-periodo: 𒆍𒀭𒊏𒆠 (Old Babylonian) -1894..-1595, 𒌭𒀸𒋗 (Cassiti) -1595..-1155, 𒆳𒆍𒀭𒊏𒆠 (Post-Kassite) -1155..-626, 𒆳𒆍𒀭𒊏𒆠 (Neo-Babylonian) -626..-539. La continuita' 'babilonese' e' documentata dalla catena di successione mesopotamica (#88), non da un'entita' unica.",
     "name_variants": [
       {
         "name": "Babylonian Empire",
@@ -44508,32 +44508,7 @@
         "source": "George, A. Babylonian Topographical Texts (1992)"
       }
     ],
-    "territory_changes": [
-      {
-        "year": -1894,
-        "region": "Mesopotamia centrale",
-        "change_type": "INDEPENDENCE",
-        "description": "Fondazione della Prima Dinastia di Babilonia. Sotto Hammurabi (~1792-1750 a.C.) Babilonia unifica la Mesopotamia e promulga il celebre codice legislativo.",
-        "population_affected": null,
-        "confidence_score": 0.7
-      },
-      {
-        "year": -586,
-        "region": "Giuda / Gerusalemme",
-        "change_type": "CONQUEST_MILITARY",
-        "description": "Nabucodonosor II distrugge il Tempio di Gerusalemme e deporta la popolazione giudaica. La 'Cattivita' Babilonese' e' un evento fondante della memoria e dell'identita' ebraica.",
-        "population_affected": 20000,
-        "confidence_score": 0.8
-      },
-      {
-        "year": -539,
-        "region": "Babilonia",
-        "change_type": "CONQUEST_MILITARY",
-        "description": "Ciro il Grande di Persia conquista Babilonia. Il Cilindro di Ciro permette il ritorno dei deportati, inclusi gli Ebrei. Fine della civilta' babilonese come entita' politica indipendente.",
-        "population_affected": 1000000,
-        "confidence_score": 0.85
-      }
-    ],
+    "territory_changes": [],
     "sources": [
       {
         "citation": "Van De Mieroop, M. A History of the Ancient Near East, ca. 3000-323 BC (2015)",
