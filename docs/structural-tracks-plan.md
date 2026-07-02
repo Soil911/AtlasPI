@@ -18,6 +18,20 @@
   ha aggiornato il VPS (HEAD restava fermo). **Usa sempre `cra-deploy`** (path diretto se
   l'alias non è caricato: `/c/Users/cliri/bin/cra-deploy.sh atlaspi`).
 
+### Aggiornamento 2026-07-02 (sessione v6.99.106-107)
+- ✅ **Babilonia #171 ESEGUITA** (v6.99.106): deprecata + 14 ref ri-homati; NUOVA entità
+  #1042 "𒆳𒆍𒀭𒊏𒆠 (Post-Kassite)" (−1155..−626) per l'evento #213 (Sennacherib −689,
+  anacronistico su #490 — emendamento in ETHICS-015 con cross-check ChatGPT).
+- ✅ **Coerenza deprecati end-to-end** (v6.99.107): ADR-005 su ~20 endpoint discovery,
+  backport status prod→JSON (66), fix 5 chain_links prod + cascata 13 ref JSON,
+  guard ingest_chains + fence `test_chain_deprecated_json_audit`, follow-up
+  ETHICS-012 #3/#5 chiusi. CI riparata (introspezione route FastAPI ≥ 0.139 —
+  era rossa dal 17/06 e lo startup-audit sicurezza era cieco).
+- 🆕 **Debito scoperto** (vedi ETHICS-012 follow-up #5): 18 rename nativi prod-only;
+  ~299 divergenze confidence bidirezionali (serve policy); 30 record JSON ombreggiati;
+  catene etiopi #22/#100 semanticamente duplicate + entità #853 "Aksum" dup mancato
+  di #51; entità-fase meroitica nativa da creare (vedi note catena #99).
+
 ---
 
 ## TRACK B1 — Chain linkage "Class-1" (formazione nazionale moderna) — PRIORITÀ ALTA

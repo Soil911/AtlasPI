@@ -2,6 +2,27 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.108] - 2026-07-02 (rename #579: Furstentum Walachei → Terra Transalpina — ETHICS-001)
+
+**Tema**: *Chiusura del follow-up ETHICS-001 di B1a. L'entità #579 (voivodati
+proto-valacchi 1247-1330, NON un duplicato di #93 che parte dal 1330) aveva
+name_original in TEDESCO con una giustificazione fattualmente errata ("forma
+usata nei documenti reali ungheresi contemporanei" — la cancelleria ungherese
+scriveva in latino; 'Fürstentum Walachei' è storiografia tedesca moderna).*
+
+- **Rename**: name_original → **'Terra Transalpina'** (lang 'la'), la
+  designazione latina contemporanea della cancelleria ungherese — un esonimo,
+  dichiarato come tale nelle note, ma l'unica tradizione scritta contemporanea
+  (il proto-rumeno non aveva forma scritta; 'Țara Românească' è attestato solo
+  dal XIV secolo e appartiene all'entità successore #93).
+- **Caveat onesti** (cross-check ChatGPT-5.5): 'Terra Transalpina' è
+  parzialmente retrospettivo per il 1247 (la Diploma dei Giovanniti nomina i
+  voivodati singoli: 'terra Lytua', 'terra Szeneslai' — aggiunti come variant);
+  la capitale 'Curtea de Arges' è troppo netta per il periodo (centri politici
+  incerti, Câmpulung/Curtea de Argeș) — dichiarato nelle note.
+- La forma tedesca resta come name_variant per tracciabilità.
+- Dual-write: `scripts/apply_579_rename.py` + `scripts/sql_579_rename.sql`.
+
 ## [v6.99.107] - 2026-07-02 (coerenza deprecati end-to-end: API + catene + backport status)
 
 **Tema**: *Le entità deprecate (duplicati del merge v6.85 + ETHICS-015) leakavano

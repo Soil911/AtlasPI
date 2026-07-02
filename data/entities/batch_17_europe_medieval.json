@@ -2600,8 +2600,8 @@
     "boundary_aourednik_precision": 1
   },
   {
-    "name_original": "Furstentum Walachei",
-    "name_original_lang": "de",
+    "name_original": "Terra Transalpina",
+    "name_original_lang": "la",
     "entity_type": "principality",
     "year_start": 1247,
     "year_end": 1330,
@@ -2643,7 +2643,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: The early Wallachian voivodates before the Battle of Posada (1330) are poorly documented and historiographically contested. Romanian national historiography emphasizes continuity with Daco-Roman populations; Hungarian historiography emphasizes Hungarian suzerainty over the region. The status 'disputed' reflects genuine scholarly uncertainty. ETHICS-002: The name_original is given in the German form used in contemporary Hungarian royal documents, since the earliest references to organized Wallachian polities come from Hungarian chancery documents (Diploma of the Joannites, 1247). The Romanian self-designation 'Tara Romaneasca' (Romanian Land) reflects the population's own identity but appears in documents only from the 14th century onward. ETHICS-003: This entry covers the proto-state period (1247-1330) before the established Principality of Wallachia (already in the database starting 1330). The dates and political structure of this period are genuinely uncertain. Boundary da aourednik/historical-basemaps (1279, strategy=capital_in_polygon, precision=1). CC BY 4.0.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=2817km / edge=0km from capital (exceeded thresholds). Regenerated as 80.0km radius circle.",
+    "ethical_notes": "ETHICS-001: The early Wallachian voivodates before the Battle of Posada (1330) are poorly documented and historiographically contested. Romanian national historiography emphasizes continuity with Daco-Roman populations; Hungarian historiography emphasizes Hungarian suzerainty over the region. The status 'disputed' reflects genuine scholarly uncertainty. ETHICS-001 (rename 2026-07-02): name_original is 'Terra Transalpina', the contemporary Latin designation of the Hungarian royal chancery for the trans-Carpathian Wallachian polity — an exonym, declared as such, but the only contemporary WRITTEN naming tradition (proto-Romanian had no written form in this period; the self-designation 'Țara Românească' is attested only from the 14th century and belongs to the successor entity). The 1247 Diploma of the Joannites names the component voivodates individually ('terra Lytua', 'terra Szeneslai') — 'Terra Transalpina' as a unified name is partially retrospective for 1247. The previous name_original 'Fürstentum Walachei' was MODERN German historiography, wrongly described as contemporary — kept as name_variant for traceability. NOTE: the capital 'Curtea de Arges' is too firm for this period — early Wallachian political centers are uncertain and shifted (Câmpulung, Curtea de Argeș). ETHICS-003: This entry covers the proto-state period (1247-1330) before the established Principality of Wallachia (already in the database starting 1330). The dates and political structure of this period are genuinely uncertain. Boundary da aourednik/historical-basemaps (1279, strategy=capital_in_polygon, precision=1). CC BY 4.0.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=2817km / edge=0km from capital (exceeded thresholds). Regenerated as 80.0km radius circle.",
     "name_variants": [
       {
         "name": "Early Wallachian Voivodates",
@@ -2660,6 +2660,22 @@
         "period_end": 1330,
         "context": "Romanian self-designation meaning 'Romanian Land'; emphasizes the ethnic Romanian character of the polity. First attested in documents from the 14th century.",
         "source": "Georgescu, Vlad. The Romanians: A History (1991)"
+      },
+      {
+        "name": "Fürstentum Walachei",
+        "lang": "de",
+        "period_start": 1247,
+        "period_end": 1330,
+        "context": "modern German historiographical name; was this record's name_original until 2026-07-02 (ETHICS-001 rename — not a contemporary form)",
+        "source": null
+      },
+      {
+        "name": "terra Lytua / terra Szeneslai",
+        "lang": "la",
+        "period_start": 1247,
+        "period_end": 1330,
+        "context": "the component voivodates (Litovoi, Seneslau) as actually named in the Diploma of the Joannites (1247), the earliest document on organized Wallachian polities",
+        "source": "Diploma of the Joannites (1247), Hungarian royal chancery"
       }
     ],
     "territory_changes": [
