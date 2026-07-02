@@ -9,6 +9,7 @@ import re
 
 import pytest
 
+from src.api.route_introspection import iter_effective_api_routes
 from src.api.routes.admin_pages import PUBLIC_ADMIN_SHELLS
 
 TEST_TOKEN = "test-admin-token-CHANGE"
@@ -22,11 +23,13 @@ def admin_token_env(monkeypatch):
 
 
 def _admin_routes(client):
-    """Tutti i (method, path) /admin/* registrati nell'app."""
+    """Tutti i (method, path) /admin/* registrati nell'app.
+
+    v6.99.106: usa l'helper version-proof (FastAPI >= 0.139 non appiattisce
+    piu' le route incluse in app.routes — vedi src/api/route_introspection.py).
+    """
     out = []
-    for r in client.app.routes:
-        path = getattr(r, "path", "") or ""
-        methods = getattr(r, "methods", set()) or set()
+    for path, methods, _deps in iter_effective_api_routes(client.app.routes):
         # traffic-fix #2: le shell HTML pubbliche (analytics, brief) NON sono
         # protette di proposito (solo layout; i dati sono protetti a parte).
         if path.startswith("/admin/") and path not in PUBLIC_ADMIN_SHELLS:

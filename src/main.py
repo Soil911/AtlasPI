@@ -20,6 +20,7 @@ from src.api.middleware import (
     RequestLoggingMiddleware,
     SecurityHeadersMiddleware,
 )
+from src.api.route_introspection import iter_effective_api_routes
 from src.api.routes import (
     admin_cache,
     admin_cofounder,
@@ -251,10 +252,13 @@ async def lifespan(app: FastAPI):
     # contare routes non basta — serve provare che la dep sia applicata.
     # Se una route /admin/* manca della dep → log ERROR (visibile, ma non
     # crashiamo: i test in tests/test_admin_auth.py sono il guard primario).
+    # v6.99.106: FastAPI >= 0.139 rende lazy l'inclusione dei router →
+    # app.routes non e' piu' piatta e questo audit trovava 0 route (guard
+    # CIECO, regressione silenziosa). Introspezione delegata al helper
+    # version-proof src/api/route_introspection.py.
     _admin_paths = []
     _admin_paths_unprotected = []
-    for _route in app.routes:
-        _path = getattr(_route, "path", "") or ""
+    for _path, _methods, _deps in iter_effective_api_routes(app.routes):
         if not _path.startswith("/admin/"):
             continue
         # traffic-fix #2: le shell HTML pubbliche (/admin/analytics, /admin/brief)
@@ -263,19 +267,19 @@ async def lifespan(app: FastAPI):
         if _path in admin_pages.PUBLIC_ADMIN_SHELLS:
             continue
         _admin_paths.append(_path)
-        _dependant = getattr(_route, "dependant", None)
-        _has_admin = False
-        if _dependant is not None:
-            for _dep in getattr(_dependant, "dependencies", []) or []:
-                if getattr(_dep, "call", None) is verify_admin:
-                    _has_admin = True
-                    break
-        if not _has_admin:
+        if verify_admin not in _deps:
             _admin_paths_unprotected.append(_path)
     if _admin_paths:
         logger.info(
             "Admin auth audit: %d /admin/* routes registered (Wave 1.1 v6.99.81)",
             len(_admin_paths),
+        )
+    else:
+        # 0 route admin trovate = introspezione rotta (mai legittimo): il
+        # guard non deve poter tornare cieco in silenzio una seconda volta.
+        logger.error(
+            "SECURITY: admin auth audit ha trovato 0 route /admin/* — "
+            "introspezione route rotta? (vedi src/api/route_introspection.py)"
         )
     if _admin_paths_unprotected:
         logger.error(
