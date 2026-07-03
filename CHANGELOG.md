@@ -2,6 +2,30 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.114] - 2026-07-03 (🌍 CUTOVER DOMINIO: atlaspi.it — M2 sbloccata)
+
+**Tema**: *AtlasPI ha il suo dominio: **https://atlaspi.it** (registrato da
+Clirim su Aruba, stesso provider del VPS). Il gate della milestone M2
+(discoverability) è rimosso: da ora ogni submission esterna usa il dominio
+definitivo, una volta sola.*
+
+- **Repo** (PR #5, 195 sostituzioni su 66 file): runtime (config, llms.txt,
+  embed, sitemap/robots, 7 HTML, .well-known/mcp.json + ai-plugin.json),
+  CI healthcheck, docs/README/BibTeX, pacchetti (mcp 0.10.0, sdk-py/js
+  0.3.0), .zenodo.json/CITATION.cff. Refactor: URL runtime da
+  `PUBLIC_BASE_URL` (un solo posto). FAQ riscritta (dominio proprio + 301).
+- **VPS**: server block nginx dedicato (`sites-available/atlaspi`),
+  certificato Let's Encrypt per atlaspi.it + www (con redirect HTTP→HTTPS),
+  **301 permanente** `atlaspi.cra-srl.com → atlaspi.it` (da NON rimuovere
+  MAI: wheel PyPI/npm e DOI Zenodo puntano al vecchio host), env aggiornata
+  (PUBLIC_BASE_URL + CORS_ORIGINS con entrambi i domini).
+- Nota DNS: al primo tentativo certbot fallì perché il cluster NS Aruba era
+  parzialmente sincronizzato (2/4 server servivano ancora l'IP parking
+  62.149.128.40); risolto in ~15 min di propagazione interna.
+- Runbook completo: `docs/domain-cutover-runbook.md`. Post-cutover (M2, da
+  fare una volta sola): MCP registry, GSC/Bing, backlink, Matomo, release
+  pacchetti, upload HF dataset.
+
 ## [v6.99.113] - 2026-07-03 (ADR-011: riconciliazione confidence JSON↔prod — 199/286 divergenze chiuse)
 
 **Tema**: *Chiusura della parte meccanizzabile del debito confidence M4

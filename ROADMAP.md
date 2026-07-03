@@ -59,15 +59,15 @@ estensioni, ETHICS-017; 2026-07-02). Residuo M1:
 - Flag qualità da B1c: rename #534 (Primo Impero di Haiti, non 'Repiblik') e
   verifica #240 (nome Khmer Republic, anni Kampuchea Democratica).
 
-### M2 — Discoverability (✅ DOMINIO DECISO: **atlaspi.it** — cutover pending DNS)
-Dominio dedicato registrato da Clirim (2026-07-03). Migrazione repo-side PRONTA sul
-branch `domain-atlaspi-it` ([PR #5](https://github.com/Soil911/AtlasPI/pull/5), draft) —
-195 sostituzioni, refactor PUBLIC_BASE_URL, FAQ, bump pacchetti. **Gate residuo**: DNS
-non ancora delegato (A record → 77.81.229.242, azione Clirim al registrar); poi cutover
-secondo `docs/domain-cutover-runbook.md` (nginx+certbot+301 permanente+env+merge+deploy).
-Post-cutover, UNA volta sola: submission MCP registry, GSC + Bing (proprietà atlaspi.it),
-backlink iniziali (awesome-lists MCP/API/DH, Zenodo→repo), Matomo (server + site id),
-release pacchetti (mcp 0.10.0, sdk-py/js 0.3.0), upload HF dataset.
+### M2 — Discoverability (🌍 CUTOVER FATTO: **https://atlaspi.it** live, v6.99.114)
+Dominio dedicato registrato da Clirim e cutover eseguito il 2026-07-03: PR #5 mergiata,
+cert Let's Encrypt attivo (apex+www), **301 permanente dal vecchio host** (da non
+rimuovere mai: wheel PyPI/npm e DOI puntano lì), env/nginx/refactor PUBLIC_BASE_URL.
+**Ora eseguibili, UNA volta sola col dominio definitivo**: submission MCP registry,
+Google Search Console + Bing (serve login Clirim per la verifica proprietà), backlink
+iniziali (awesome-lists MCP/API/DH, Zenodo→repo), Matomo (server + site id da decidere),
+release pacchetti (mcp 0.10.0, sdk-py/js 0.3.0 — nuovi default atlaspi.it; rebuild
+sdk-js/dist prima di npm publish), upload HF dataset.
 
 ### M3 — Agent-UX dimostrabilmente superiore
 Dai gap dell'audit agent-consumer 2026-07-02: (1) zero-result senza hint → suggerire
