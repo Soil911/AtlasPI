@@ -59,11 +59,15 @@ estensioni, ETHICS-017; 2026-07-02). Residuo M1:
 - Flag qualità da B1c: rename #534 (Primo Impero di Haiti, non 'Repiblik') e
   verifica #240 (nome Khmer Republic, anni Kampuchea Democratica).
 
-### M2 — Discoverability (⛔ GATED: decisione DOMINIO di Clirim)
-Tutto il lavoro on-page è fatto (llms.txt, JSON-LD, sitemap); manca il canale: submission
-MCP registry (il server è già su PyPI), Google Search Console + Bing, backlink iniziali
-(awesome-lists MCP/API/DH, Zenodo→repo), Matomo per il traffico umano (l'analytics attuale
-vede solo l'API). Ogni submission va fatta UNA volta col dominio definitivo → decidere prima.
+### M2 — Discoverability (✅ DOMINIO DECISO: **atlaspi.it** — cutover pending DNS)
+Dominio dedicato registrato da Clirim (2026-07-03). Migrazione repo-side PRONTA sul
+branch `domain-atlaspi-it` ([PR #5](https://github.com/Soil911/AtlasPI/pull/5), draft) —
+195 sostituzioni, refactor PUBLIC_BASE_URL, FAQ, bump pacchetti. **Gate residuo**: DNS
+non ancora delegato (A record → 77.81.229.242, azione Clirim al registrar); poi cutover
+secondo `docs/domain-cutover-runbook.md` (nginx+certbot+301 permanente+env+merge+deploy).
+Post-cutover, UNA volta sola: submission MCP registry, GSC + Bing (proprietà atlaspi.it),
+backlink iniziali (awesome-lists MCP/API/DH, Zenodo→repo), Matomo (server + site id),
+release pacchetti (mcp 0.10.0, sdk-py/js 0.3.0), upload HF dataset.
 
 ### M3 — Agent-UX dimostrabilmente superiore
 Dai gap dell'audit agent-consumer 2026-07-02: (1) zero-result senza hint → suggerire
@@ -74,9 +78,12 @@ payload magro (N+1); (5) freshness release MCP/SDK (dist/ stantii, README con co
 vecchi). Più: pagina/benchmark "perché AtlasPI e non Wikidata" con query comparate reali.
 
 ### M4 — Riconciliazione totale JSON↔prod (fresh-seed ≡ prod)
-Residuo documentato in ETHICS-012 follow-up #5: 18 rename nativi prod-only; ~299
-divergenze confidence BIDIREZIONALI (serve una policy: chi vince e perché, caso per
-caso); 30 record JSON ombreggiati (last-wins) da pulire; ethical_notes narrative.
+**Policy confidence FATTA (ADR-011, v6.99.113)**: 199/286 divergenze chiuse (197
+backport JSON:=prod + 2 UPDATE prod batch_32); **87 in coda review manuale**
+(`data/fixes/conf_review_queue.json`, lotti da ~10 nelle sessioni enrichment).
+Residuo: 17 rename nativi prod-only (pattern = backport Wadai v6.99.110);
+30 record JSON ombreggiati (last-wins) da pulire; 61 entità JSON-only mai seedate
+(⚠️ vietato ingest_new_entities su prod); ethical_notes narrative.
 
 ### Track continuo — enrichment coda <0.6 (~206 entità, valore marginale calante)
 
