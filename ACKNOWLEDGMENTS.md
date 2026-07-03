@@ -73,7 +73,7 @@ that deserve acknowledgment beyond their `pyproject.toml` entry:
 ## Funding and hosting
 
 AtlasPI is self-funded by **CRA (Cra Srl)**, which operates the hosted
-instance at <https://atlaspi.cra-srl.com> at its own cost. No external
+instance at <https://atlaspi.it> at its own cost. No external
 grants have been received to date.
 
 ---

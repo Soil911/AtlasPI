@@ -24,7 +24,7 @@ from datetime import datetime
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from scripts.chatgpt_review import ask
 
-BASE_URL = "https://atlaspi.cra-srl.com"
+BASE_URL = "https://atlaspi.it"
 LOG_DIR = Path(__file__).resolve().parent.parent / "data" / "chatgpt_review"
 
 

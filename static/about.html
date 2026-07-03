@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About AtlasPI — Historical Geography API for AI Agents</title>
   <meta name="description" content="AtlasPI is a free, public REST API and MCP server providing 1,034 historical entities, 643 events, 94 dynasty chains, 1,249 archaeological sites from 4500 BCE to 2024 with real boundaries and academic sources. Apache 2.0 licensed, no authentication required.">
-  <link rel="canonical" href="https://atlaspi.cra-srl.com/about">
+  <link rel="canonical" href="https://atlaspi.it/about">
   <meta property="og:title" content="About AtlasPI">
   <meta property="og:description" content="What AtlasPI is, why it exists, who uses it, and how it's different from existing datasets.">
-  <meta property="og:url" content="https://atlaspi.cra-srl.com/about">
+  <meta property="og:url" content="https://atlaspi.it/about">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://atlaspi.cra-srl.com/og-image.png">
+  <meta property="og:image" content="https://atlaspi.it/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://atlaspi.cra-srl.com/og-image.png">
+  <meta name="twitter:image" content="https://atlaspi.it/og-image.png">
   <link rel="icon" type="image/svg+xml" href="/static/landing/assets/favicon.svg">
   <style>
     :root {
@@ -279,13 +279,13 @@
     <h2>Quick start</h2>
 
     <h3>Try it right now — no setup</h3>
-    <pre><code>curl https://atlaspi.cra-srl.com/v1/snapshot/year/1492 | jq .periods
-curl https://atlaspi.cra-srl.com/v1/events/on-this-day/07-14
-curl https://atlaspi.cra-srl.com/v1/entities/1/similar?limit=5</code></pre>
+    <pre><code>curl https://atlaspi.it/v1/snapshot/year/1492 | jq .periods
+curl https://atlaspi.it/v1/events/on-this-day/07-14
+curl https://atlaspi.it/v1/entities/1/similar?limit=5</code></pre>
 
     <h3>Python</h3>
     <pre><code>import requests
-BASE = "https://atlaspi.cra-srl.com"
+BASE = "https://atlaspi.it"
 
 # What was happening in 1250 globally?
 r = requests.get(f"{BASE}/v1/snapshot/year/1250")

@@ -15,7 +15,7 @@ pip install atlaspi-client
 ```python
 from atlaspi import AtlasPI
 
-client = AtlasPI()  # defaults to https://atlaspi.cra-srl.com
+client = AtlasPI()  # defaults to https://atlaspi.it
 
 # What was happening in 1250?
 snapshot = client.snapshot(year=1250)
@@ -71,7 +71,7 @@ The client mirrors AtlasPI's endpoint taxonomy:
 - `client.stats()` — aggregate statistics
 - `client.export.*` — GeoJSON, CSV bulk export
 
-See [API docs](https://atlaspi.cra-srl.com/docs) for the full endpoint catalog.
+See [API docs](https://atlaspi.it/docs) for the full endpoint catalog.
 
 ## License
 
@@ -80,5 +80,5 @@ Apache 2.0.
 ## Source
 
 - GitHub: https://github.com/Soil911/AtlasPI
-- API: https://atlaspi.cra-srl.com
+- API: https://atlaspi.it
 - Issues: https://github.com/Soil911/AtlasPI/issues

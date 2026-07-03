@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "atlaspi-client"
-version = "0.2.0"
+version = "0.3.0"
 description = "Official Python client for the AtlasPI Historical Geography API"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -46,10 +46,10 @@ dependencies = [
 async = []  # httpx already supports both
 
 [project.urls]
-Homepage = "https://atlaspi.cra-srl.com"
+Homepage = "https://atlaspi.it"
 Repository = "https://github.com/Soil911/AtlasPI"
 Issues = "https://github.com/Soil911/AtlasPI/issues"
-Documentation = "https://atlaspi.cra-srl.com/docs"
+Documentation = "https://atlaspi.it/docs"
 
 [tool.setuptools.packages.find]
 where = ["src"]

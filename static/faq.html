@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FAQ — AtlasPI Historical Geography API</title>
   <meta name="description" content="Frequently asked questions about AtlasPI — is it free, do I need an API key, what data is included, how do AI agents use it?">
-  <link rel="canonical" href="https://atlaspi.cra-srl.com/faq">
+  <link rel="canonical" href="https://atlaspi.it/faq">
   <link rel="icon" type="image/svg+xml" href="/static/landing/assets/favicon.svg">
   <script type="application/ld+json">
   {
@@ -33,7 +33,7 @@
         "name": "Is this an internal company portal?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. AtlasPI is a public open-source project hosted at atlaspi.cra-srl.com. The cra-srl.com domain belongs to the project sponsor (CRA S.r.l.) but the data and API are public Apache 2.0-licensed infrastructure."
+          "text": "No. AtlasPI is a public open-source project with its own domain, atlaspi.it. It is sponsored and operated by CRA S.r.l. (Italy); the data, code, and API are public Apache 2.0-licensed infrastructure. The former address atlaspi.cra-srl.com permanently redirects here."
         }
       },
       {
@@ -123,16 +123,17 @@
     <div class="faq-item">
       <h3>Do I need an API key or to log in?</h3>
       <p>No. Every endpoint is publicly accessible without authentication:</p>
-      <pre><code>curl https://atlaspi.cra-srl.com/v1/entities | head
+      <pre><code>curl https://atlaspi.it/v1/entities | head
 # No auth headers needed.</code></pre>
       <p>CORS is enabled so you can call it from browser JavaScript directly.</p>
     </div>
 
     <div class="faq-item">
       <h3>Is this an internal company portal?</h3>
-      <p>No. AtlasPI is a <strong>public open-source project</strong>. The domain
-        <code>cra-srl.com</code> belongs to the project sponsor (CRA S.r.l., Italy),
-        but the data, code, and infrastructure are Apache 2.0 — public.</p>
+      <p>No. AtlasPI is a <strong>public open-source project</strong> with its own
+        domain, <code>atlaspi.it</code>. It is sponsored and operated by CRA S.r.l.
+        (Italy); the data, code, and infrastructure are Apache 2.0 — public. The
+        former address <code>atlaspi.cra-srl.com</code> permanently redirects here.</p>
       <p>Source: <a href="https://github.com/Soil911/AtlasPI">github.com/Soil911/AtlasPI</a></p>
     </div>
 

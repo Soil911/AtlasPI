@@ -102,7 +102,7 @@ Manual:
 
 ### Performance characterisation
 
-Measured against the live production instance at https://atlaspi.cra-srl.com:
+Measured against the live production instance at https://atlaspi.it:
 
 | Endpoint | p95 (ms) |
 |----------|---------:|
@@ -127,8 +127,8 @@ Measured against the live production instance at https://atlaspi.cra-srl.com:
 | **Language** | English (API, code, schema); Italian (internal documentation and ethics records); entity names in the original local language with variant translations |
 | **License** | Apache-2.0 (source code and API); entity records CC BY 4.0; derived geometries inherit upstream licenses (Natural Earth public domain; Ourednik CC BY 4.0) |
 | **Repository** | https://github.com/Soil911/AtlasPI |
-| **Live instance** | https://atlaspi.cra-srl.com |
-| **API docs** | https://atlaspi.cra-srl.com/docs (OpenAPI), https://atlaspi.cra-srl.com/redoc |
+| **Live instance** | https://atlaspi.it |
+| **API docs** | https://atlaspi.it/docs (OpenAPI), https://atlaspi.it/redoc |
 | **MCP server** | Python package `atlaspi-mcp`, 8 tools (to be published to PyPI) |
 | **DOI** | Concept: [10.5281/zenodo.19581784](https://doi.org/10.5281/zenodo.19581784) (all versions) — Version v6.1.2: [10.5281/zenodo.19581785](https://doi.org/10.5281/zenodo.19581785) |
 | **Publication date** | 2026-04-14 (v6.1.2 production deploy) |
@@ -201,7 +201,7 @@ The methodological framing, ethics governance, and ongoing iteration benefit fro
 
 ## Competing interests
 
-The author declares no competing interests. CRA (Cra Srl) operates the hosted instance at https://atlaspi.cra-srl.com at its own cost. Potential future premium / enterprise tiers (documented in `ROADMAP.md`) would be offered alongside the open-core dataset released under Apache-2.0 and would not restrict access to the published dataset described in this paper.
+The author declares no competing interests. CRA (Cra Srl) operates the hosted instance at https://atlaspi.it at its own cost. Potential future premium / enterprise tiers (documented in `ROADMAP.md`) would be offered alongside the open-core dataset released under Apache-2.0 and would not restrict access to the published dataset described in this paper.
 
 ---
 

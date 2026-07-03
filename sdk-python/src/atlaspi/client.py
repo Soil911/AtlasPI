@@ -10,7 +10,7 @@ from typing import Any
 
 import httpx
 
-DEFAULT_BASE_URL = "https://atlaspi.cra-srl.com"
+DEFAULT_BASE_URL = "https://atlaspi.it"
 DEFAULT_TIMEOUT = 30.0
 
 

@@ -33,11 +33,11 @@ It's also available as an **MCP server** (`pip install atlaspi-mcp`) — 35 tool
 
 Free to use, no login, no API key, Apache 2.0.
 
-- **API**: https://atlaspi.cra-srl.com
-- **Interactive map**: https://atlaspi.cra-srl.com/app
-- **Docs**: https://atlaspi.cra-srl.com/docs
+- **API**: https://atlaspi.it
+- **Interactive map**: https://atlaspi.it/app
+- **Docs**: https://atlaspi.it/docs
 - **Source**: https://github.com/Soil911/AtlasPI
-- **LLMs.txt**: https://atlaspi.cra-srl.com/llms.txt
+- **LLMs.txt**: https://atlaspi.it/llms.txt
 
 Would love feedback — especially on what's missing for your agentic use cases.
 
@@ -89,9 +89,9 @@ Works with Claude Desktop, Claude Code, Continue.dev, and any MCP-compatible cli
 **Data is solid**: real historical boundaries (not modern country polygons), 2,400+ academic sources, confidence scores per record, explicit ethical framings (conquests labeled CONQUEST, colonial renamings documented, native-language primary names).
 
 **Also available as**:
-- REST API (free, no auth): https://atlaspi.cra-srl.com
+- REST API (free, no auth): https://atlaspi.it
 - Python SDK: `pip install atlaspi-client`
-- Interactive map: https://atlaspi.cra-srl.com/app
+- Interactive map: https://atlaspi.it/app
 
 **Source**: https://github.com/Soil911/AtlasPI (Apache 2.0)
 
@@ -122,14 +122,14 @@ Works with Claude Desktop, Claude Code, Continue.dev, and any MCP-compatible cli
 - **Explicit ethical framings** — event types like GENOCIDE, COLONIAL_VIOLENCE; trade routes flagged for slavery involvement
 
 **Access**:
-- REST API (free, no auth): https://atlaspi.cra-srl.com
+- REST API (free, no auth): https://atlaspi.it
 - Python SDK: `pip install atlaspi-client`
-- GeoJSON bulk download: https://atlaspi.cra-srl.com/v1/export/geojson
+- GeoJSON bulk download: https://atlaspi.it/v1/export/geojson
 - HuggingFace dataset: https://huggingface.co/datasets/atlaspi (coming soon)
 
 **License**: Apache 2.0 (code + data)
 
-**Docs**: https://atlaspi.cra-srl.com/about | https://atlaspi.cra-srl.com/docs
+**Docs**: https://atlaspi.it/about | https://atlaspi.it/docs
 
 Happy to answer questions about data provenance, collection methodology, or specific use cases. Feedback welcome — especially if you spot missing coverage or inaccuracies.
 

@@ -788,7 +788,7 @@ async def test_where_was_handler_include_history() -> None:
     reason="integration test disabled (set ATLASPI_RUN_INTEGRATION=1 to enable)",
 )
 async def test_integration_real_api() -> None:
-    """Smoke test contro l'API live https://atlaspi.cra-srl.com."""
+    """Smoke test contro l'API live https://atlaspi.it."""
     async with AtlasPIClient() as client:
         stats = await client.stats()
     assert "total_entities" in stats

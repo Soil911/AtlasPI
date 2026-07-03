@@ -99,7 +99,7 @@ class TestSEOEndpoints:
     def test_sitemap_includes_canonical_root(self, client):
         body = client.get("/sitemap.xml").text
         # La home del dominio canonico deve essere indicizzata
-        assert "atlaspi.cra-srl.com" in body
+        assert "atlaspi.it" in body
 
 
 # ─── TestMonitoringModule ────────────────────────────────────────

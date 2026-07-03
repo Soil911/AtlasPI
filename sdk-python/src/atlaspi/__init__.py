@@ -15,7 +15,7 @@ Async:
     async with AsyncAtlasPI() as client:
         snapshot = await client.snapshot(year=1500)
 
-Docs: https://atlaspi.cra-srl.com/docs
+Docs: https://atlaspi.it/docs
 Source: https://github.com/Soil911/AtlasPI
 """
 

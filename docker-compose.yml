@@ -49,12 +49,12 @@ services:
       # /opt/cra/.env.atlaspi imposta CORS_ORIGINS esplicito. Per dev locale,
       # override con CORS_ORIGINS=* nel proprio .env se serve API publica.
       # Vedi src/config.py per il rationale (audit #security v6.66.0).
-      - CORS_ORIGINS=${CORS_ORIGINS:-https://atlaspi.cra-srl.com,https://www.atlaspi.cra-srl.com}
+      - CORS_ORIGINS=${CORS_ORIGINS:-https://atlaspi.it,https://www.atlaspi.it}
       # Observability — passati se presenti nel .env del server
       - SENTRY_DSN=${SENTRY_DSN:-}
       - SENTRY_ENVIRONMENT=${SENTRY_ENVIRONMENT:-production}
       - SENTRY_TRACES_SAMPLE_RATE=${SENTRY_TRACES_SAMPLE_RATE:-0.1}
-      - PUBLIC_BASE_URL=${PUBLIC_BASE_URL:-https://atlaspi.cra-srl.com}
+      - PUBLIC_BASE_URL=${PUBLIC_BASE_URL:-https://atlaspi.it}
       - RATE_LIMIT=${RATE_LIMIT:-60/minute}
     # NOTE (ETHICS-006 follow-up): /app/data is intentionally NOT a named volume.
     # Le batch JSON e i dataset raw vengono "bakati" nell'immagine al build

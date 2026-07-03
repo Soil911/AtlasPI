@@ -47,7 +47,7 @@ console.log(`Got ${batch.found} of ${batch.requested}`);
 
 ```ts
 const client = new AtlasPI({
-  baseUrl: "https://atlaspi.cra-srl.com",
+  baseUrl: "https://atlaspi.it",
   timeout: 30_000,
   userAgent: "my-app/1.0",
 });
@@ -70,6 +70,6 @@ Apache 2.0.
 
 ## Links
 
-- **API**: https://atlaspi.cra-srl.com
-- **Docs**: https://atlaspi.cra-srl.com/docs
+- **API**: https://atlaspi.it
+- **Docs**: https://atlaspi.it/docs
 - **Source**: https://github.com/Soil911/AtlasPI

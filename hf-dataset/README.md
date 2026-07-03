@@ -146,7 +146,7 @@ these distinctions. Don't collapse native names to colonial exonyms.
 ### Via REST API (no download needed)
 ```python
 import requests
-snap = requests.get("https://atlaspi.cra-srl.com/v1/snapshot/year/1250").json()
+snap = requests.get("https://atlaspi.it/v1/snapshot/year/1250").json()
 ```
 
 ### Via Python SDK
@@ -177,14 +177,14 @@ pip install atlaspi-mcp
   title = {AtlasPI: Historical Geography Dataset for AI Agents},
   author = {AtlasPI Project},
   year = {2026},
-  url = {https://atlaspi.cra-srl.com},
+  url = {https://atlaspi.it},
   license = {Apache-2.0}
 }
 ```
 
 ## Links
 
-- **REST API**: https://atlaspi.cra-srl.com
-- **Docs**: https://atlaspi.cra-srl.com/docs
+- **REST API**: https://atlaspi.it
+- **Docs**: https://atlaspi.it/docs
 - **Source**: https://github.com/Soil911/AtlasPI
 - **License**: Apache 2.0

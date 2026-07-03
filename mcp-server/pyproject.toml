@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "atlaspi-mcp"
-version = "0.9.0"
+version = "0.10.0"
 description = "MCP server for AtlasPI — historical geographic database for AI agents"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -55,7 +55,7 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://atlaspi.cra-srl.com"
+Homepage = "https://atlaspi.it"
 Repository = "https://github.com/Soil911/AtlasPI"
 Issues = "https://github.com/Soil911/AtlasPI/issues"
 Documentation = "https://github.com/Soil911/AtlasPI#readme"

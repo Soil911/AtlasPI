@@ -267,13 +267,13 @@ prod + 2 bug-fix:
 - 208 test passano, dedup cross-batch automatizzato
 
 ### v6.0 -- DEPLOY ONLINE (2026-04-14)
-**Criterio di completamento raggiunto**: `curl https://atlaspi.cra-srl.com/health` risponde `200 OK`.
+**Criterio di completamento raggiunto**: `curl https://atlaspi.it/health` risponde `200 OK`.
 
 - Dockerfile multi-stage (build + runtime, non-root user)
 - Aruba Cloud deploy con HTTPS automatico
 - Gunicorn + 2 uvicorn workers, porta 10100
 - Variabili ambiente per produzione (DATABASE_URL, SECRET_KEY, etc.)
-- CORS configurato, dominio custom **atlaspi.cra-srl.com**
+- CORS configurato, dominio custom **atlaspi.it**
 - Health check ottimizzato per monitoring esterno
 - Seed automatico al primo deploy
 - Repository pubblico Soil911/AtlasPI (account principale)

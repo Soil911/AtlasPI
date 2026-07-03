@@ -6,7 +6,7 @@
 #
 # Uso:
 #   ./scripts/smoke_test.sh                          # testa localhost:10100
-#   ./scripts/smoke_test.sh https://atlaspi.cra-srl.com
+#   ./scripts/smoke_test.sh https://atlaspi.it
 #   BASE_URL=http://staging.example.com ./scripts/smoke_test.sh
 #
 # Pensato per girare dopo ogni deploy. Da integrare nei workflow CI/CD.

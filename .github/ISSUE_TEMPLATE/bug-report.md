@@ -29,7 +29,7 @@ assignees: []
 
 - AtlasPI version (from `/health` or the badge in the README):
 - Endpoint or module:
-- Against public instance (`atlaspi.cra-srl.com`) or self-hosted?
+- Against public instance (`atlaspi.it`) or self-hosted?
 - For self-hosted: Python version, database (SQLite / PostgreSQL)
 
 ## Additional context

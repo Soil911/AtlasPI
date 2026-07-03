@@ -14,11 +14,11 @@ spam DoS). Rate limit aggiuntivo applicato a monte via middleware globale.
 Formato payload (browser-dependent):
     {
       "csp-report": {
-        "document-uri": "https://atlaspi.cra-srl.com/app",
+        "document-uri": "https://atlaspi.it/app",
         "violated-directive": "img-src",
         "blocked-uri": "https://some-cdn.com/foo.png",
         "line-number": 42,
-        "source-file": "https://atlaspi.cra-srl.com/static/main.js",
+        "source-file": "https://atlaspi.it/static/main.js",
         ...
       }
     }

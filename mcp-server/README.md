@@ -5,7 +5,7 @@
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 The **first MCP server for historical geography**. Wraps
-[AtlasPI](https://atlaspi.cra-srl.com), a structured historical-geographic
+[AtlasPI](https://atlaspi.it), a structured historical-geographic
 database (860+ geopolitical entities, 430+ events, 110+ cities across 65,000 years), so any MCP-compatible
 client — Claude Desktop, Claude Code, Cursor, Zed, etc. — can answer questions
 like *"What empire ruled Egypt in 300 BC?"* with sourced, structured data
@@ -18,7 +18,7 @@ instead of hallucinating.
 AtlasPI is a structured historical-geographic database, designed to be consumed
 by AI agents. It provides coordinates, GeoJSON boundaries and historical
 metadata of geopolitical entities in any era. Live API and docs:
-**https://atlaspi.cra-srl.com**.
+**https://atlaspi.it**.
 
 This package (`atlaspi-mcp`) is the official
 [Model Context Protocol](https://modelcontextprotocol.io) bridge.
@@ -80,7 +80,7 @@ Or edit `~/.claude/mcp.json` (or the project-local `.mcp.json`) directly:
 ### Pointing to a custom AtlasPI instance
 
 By default the server talks to the public production API
-(`https://atlaspi.cra-srl.com`). To target a self-hosted or staging instance,
+(`https://atlaspi.it`). To target a self-hosted or staging instance,
 set the `ATLASPI_API_URL` environment variable:
 
 ```json
@@ -220,7 +220,7 @@ To set up PyPI credentials:
 
 ## Links
 
-- AtlasPI live API: https://atlaspi.cra-srl.com
+- AtlasPI live API: https://atlaspi.it
 - AtlasPI source code: https://github.com/Soil911/AtlasPI
 - Model Context Protocol: https://modelcontextprotocol.io
 

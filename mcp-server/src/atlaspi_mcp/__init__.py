@@ -1,6 +1,6 @@
 """atlaspi-mcp — MCP server per AtlasPI.
 
-Espone gli endpoint REST di AtlasPI (https://atlaspi.cra-srl.com) come
+Espone gli endpoint REST di AtlasPI (https://atlaspi.it) come
 tools del Model Context Protocol, utilizzabili da Claude Desktop, Claude
 Code e qualsiasi altro client MCP-compatibile.
 

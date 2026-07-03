@@ -230,7 +230,7 @@ assert g.bounds[2] - g.bounds[0] < 180, "polygon crosses antimeridian!"
 
 ### Visual checks (raccomandati per nuove feature)
 Quando aggiungi una feature che altera rendering o dati visibili:
-1. Aprire https://atlaspi.cra-srl.com/app e navigare ad un anno campione
+1. Aprire https://atlaspi.it/app e navigare ad un anno campione
 2. Verificare che labels, boundary, markers siano in posizioni sensate
 3. Screenshotare o descrivere risultato nel commit message
 
@@ -271,7 +271,7 @@ Operazioni irreversibili (DROP TABLE, docker compose down -v, alembic downgrade 
 
 ### Topologia
 - **Produzione**: Aruba VPS `77.81.229.242` (Ubuntu 24.04 + Docker)
-- **Dominio pubblico**: https://atlaspi.cra-srl.com (Nginx + Let's Encrypt)
+- **Dominio pubblico**: https://atlaspi.it (Nginx + Let's Encrypt)
 - **Porta interna container**: 10100
 - **Stack**: 3 container — `cra-atlaspi` (app), `cra-atlaspi-db` (Postgres), `cra-atlaspi-redis`
 - **Path sul server**: `/opt/cra/atlaspi` (git repo)
@@ -306,7 +306,7 @@ Il Dockerfile fa `COPY alembic/ alembic/` e `COPY alembic.ini .` — se sposti l
 ### Verifica post-deploy
 ```bash
 cra-health
-curl -sS https://atlaspi.cra-srl.com/health | python -m json.tool
+curl -sS https://atlaspi.it/health | python -m json.tool
 ```
 
 ### Se il deploy fallisce

@@ -2,7 +2,7 @@
 
 Wrappa httpx.AsyncClient con:
 - base URL configurabile via env var ``ATLASPI_API_URL``
-  (default: https://atlaspi.cra-srl.com)
+  (default: https://atlaspi.it)
 - timeout di rete sano
 - normalizzazione delle eccezioni in :class:`AtlasPIClientError`
 - helper async per ognuno degli endpoint pubblici v1
@@ -15,7 +15,7 @@ from typing import Any
 
 import httpx
 
-DEFAULT_BASE_URL = "https://atlaspi.cra-srl.com"
+DEFAULT_BASE_URL = "https://atlaspi.it"
 DEFAULT_TIMEOUT = 30.0
 USER_AGENT = "atlaspi-mcp/0.9.0 (+https://github.com/Soil911/AtlasPI)"
 
@@ -36,7 +36,7 @@ def get_base_url() -> str:
     """Ritorna la base URL letta dalla env var ``ATLASPI_API_URL``.
 
     Se la variabile non e' impostata o e' vuota, ritorna il default
-    di produzione (https://atlaspi.cra-srl.com). Eventuale slash finale
+    di produzione (https://atlaspi.it). Eventuale slash finale
     viene rimosso per evitare ``//`` nei path.
     """
     raw = os.environ.get("ATLASPI_API_URL", "").strip()

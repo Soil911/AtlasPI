@@ -44,7 +44,7 @@ fi
 
 # 3. Extra post-deploy verification via public health endpoint
 for i in 1 2 3; do
-    if curl -fsS -m 10 https://atlaspi.cra-srl.com/health > /tmp/safe_deploy_health.json 2>&1; then
+    if curl -fsS -m 10 https://atlaspi.it/health > /tmp/safe_deploy_health.json 2>&1; then
         echo "[safe_deploy] healthcheck pass on attempt $i"
         break
     fi

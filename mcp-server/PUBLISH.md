@@ -59,7 +59,7 @@ Or in Claude Desktop config (`~/Library/Application Support/Claude/claude_deskto
 - **Version**: 0.7.0 (34 MCP tools)
 - **License**: Apache-2.0
 - **Python**: >=3.10
-- **Homepage**: https://atlaspi.cra-srl.com
+- **Homepage**: https://atlaspi.it
 - **Source**: https://github.com/Soil911/AtlasPI
 
 ## Version bumping

@@ -60,7 +60,7 @@ ENTITY_CACHE = CACHE_DIR / "entity"
 
 WIKIDATA_ENTITY = "https://www.wikidata.org/wiki/Special:EntityData/{qid}.json"
 
-UA = "AtlasPI/6.70 (https://atlaspi.cra-srl.com; contact@cra-srl.com) audit-v4-drift"
+UA = "AtlasPI/6.70 (https://atlaspi.it; contact@cra-srl.com) audit-v4-drift"
 RATE_LIMIT_SLEEP = 0.25
 
 

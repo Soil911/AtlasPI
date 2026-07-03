@@ -24,7 +24,7 @@ class TestCORS:
         r = client.options(
             "/health",
             headers={
-                "Origin": "https://atlaspi.cra-srl.com",
+                "Origin": "https://atlaspi.it",
                 "Access-Control-Request-Method": "GET",
             },
         )

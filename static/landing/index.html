@@ -11,18 +11,18 @@
   <meta name="author" content="AtlasPI">
   <meta name="robots" content="index, follow">
 
-  <link rel="canonical" href="https://atlaspi.cra-srl.com/">
+  <link rel="canonical" href="https://atlaspi.it/">
   <link rel="icon" type="image/svg+xml" href="/static/landing/assets/favicon.svg">
-  <link rel="alternate" hreflang="en" href="https://atlaspi.cra-srl.com/">
-  <link rel="alternate" hreflang="it" href="https://atlaspi.cra-srl.com/it/app">
-  <link rel="alternate" hreflang="x-default" href="https://atlaspi.cra-srl.com/">
+  <link rel="alternate" hreflang="en" href="https://atlaspi.it/">
+  <link rel="alternate" hreflang="it" href="https://atlaspi.it/it/app">
+  <link rel="alternate" hreflang="x-default" href="https://atlaspi.it/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://atlaspi.cra-srl.com/">
+  <meta property="og:url" content="https://atlaspi.it/">
   <meta property="og:title" content="AtlasPI — Historical Geography API for AI Agents">
   <meta property="og:description" content="1,038 historical entities, 643 events, real boundaries, academic sources. From 4500 BCE to 2024. Available as REST API and MCP server.">
-  <meta property="og:image" content="https://atlaspi.cra-srl.com/og-image.png">
+  <meta property="og:image" content="https://atlaspi.it/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="AtlasPI — Historical Geography API for AI Agents">
@@ -31,10 +31,10 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://atlaspi.cra-srl.com/">
+  <meta name="twitter:url" content="https://atlaspi.it/">
   <meta name="twitter:title" content="AtlasPI — Historical Geography API for AI Agents">
   <meta name="twitter:description" content="1,038 historical entities, 643 events, real boundaries, academic sources. From 4500 BCE to 2024. REST API + MCP server.">
-  <meta name="twitter:image" content="https://atlaspi.cra-srl.com/og-image.png">
+  <meta name="twitter:image" content="https://atlaspi.it/og-image.png">
 
   <!-- JSON-LD structured data -->
   <script type="application/ld+json">
@@ -44,7 +44,7 @@
     "name": "AtlasPI",
     "alternateName": "AtlasPI Historical Geography API",
     "description": "Structured historical geographic database for AI agents. REST API and MCP server with 1,038 entities, 643 events, real boundaries, and academic sources from 4500 BCE to 2024.",
-    "url": "https://atlaspi.cra-srl.com/",
+    "url": "https://atlaspi.it/",
     "applicationCategory": "DeveloperApplication",
     "applicationSubCategory": "API",
     "operatingSystem": "Any",
@@ -62,7 +62,7 @@
     "creator": {
       "@type": "Organization",
       "name": "AtlasPI",
-      "url": "https://atlaspi.cra-srl.com/"
+      "url": "https://atlaspi.it/"
     }
   }
   </script>
@@ -73,7 +73,7 @@
     "@type": "Dataset",
     "name": "AtlasPI Historical Geography Dataset",
     "description": "1,038 historical geopolitical entities, 643 events, 105 rulers, 1,249 archaeological sites with boundaries, names, and metadata from 4500 BCE to 2024. Includes confidence scores and 4,800+ academic citations.",
-    "url": "https://atlaspi.cra-srl.com/",
+    "url": "https://atlaspi.it/",
     "license": "https://www.apache.org/licenses/LICENSE-2.0",
     "creator": {
       "@type": "Organization",
@@ -83,12 +83,12 @@
       {
         "@type": "DataDownload",
         "encodingFormat": "application/json",
-        "contentUrl": "https://atlaspi.cra-srl.com/v1/entities"
+        "contentUrl": "https://atlaspi.it/v1/entities"
       },
       {
         "@type": "DataDownload",
         "encodingFormat": "application/geo+json",
-        "contentUrl": "https://atlaspi.cra-srl.com/v1/export/geojson"
+        "contentUrl": "https://atlaspi.it/v1/export/geojson"
       }
     ],
     "temporalCoverage": "-4500/2024",
@@ -174,7 +174,7 @@
     </p>
     <div class="hero-banner" style="margin: 16px 0; padding: 12px 20px; background: linear-gradient(90deg, rgba(63,185,80,0.1), rgba(88,166,255,0.1)); border: 1px solid rgba(63,185,80,0.4); border-radius: 8px; font-size: 14px; line-height: 1.6;">
       ✅ <strong>Free public API + MCP server</strong> — no login, no API key, no registration.
-      Apache 2.0. CORS-enabled. Try it: <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 3px;">curl https://atlaspi.cra-srl.com/v1/snapshot/year/1250</code>
+      Apache 2.0. CORS-enabled. Try it: <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 3px;">curl https://atlaspi.it/v1/snapshot/year/1250</code>
     </div>
     <div class="hero-ctas">
       <a href="/app" class="btn btn-primary">
@@ -291,7 +291,7 @@
         <span class="dot-r"></span>
         <span class="dot-y"></span>
         <span class="dot-g"></span>
-        <span class="demo-url">atlaspi.cra-srl.com/embed</span>
+        <span class="demo-url">atlaspi.it/embed</span>
       </div>
       <iframe
         src="/embed"
@@ -372,13 +372,13 @@
             <button class="copy-btn" data-copy-target="snippet-curl" aria-label="Copy command">Copy</button>
           </div>
 <pre><code id="snippet-curl"><span class="tk-com"># Get every entity that existed in the year 1500</span>
-curl https://atlaspi.cra-srl.com/v1/snapshot/1500 | jq <span class="tk-str">'.summary'</span>
+curl https://atlaspi.it/v1/snapshot/1500 | jq <span class="tk-str">'.summary'</span>
 
 <span class="tk-com"># Compare two empires side by side</span>
-curl https://atlaspi.cra-srl.com/v1/compare/1/2
+curl https://atlaspi.it/v1/compare/1/2
 
 <span class="tk-com"># Find what existed near a coordinate at a given year</span>
-curl <span class="tk-str">"https://atlaspi.cra-srl.com/v1/nearby?lat=41.9&amp;lon=12.5&amp;year=100"</span></code></pre>
+curl <span class="tk-str">"https://atlaspi.it/v1/nearby?lat=41.9&amp;lon=12.5&amp;year=100"</span></code></pre>
         </div>
       </div>
 
@@ -392,7 +392,7 @@ curl <span class="tk-str">"https://atlaspi.cra-srl.com/v1/nearby?lat=41.9&amp;lo
 
 <span class="tk-com"># What existed near Rome in the year 100 CE?</span>
 r = requests.get(
-    <span class="tk-str">"https://atlaspi.cra-srl.com/v1/nearby"</span>,
+    <span class="tk-str">"https://atlaspi.it/v1/nearby"</span>,
     params={<span class="tk-str">"lat"</span>: 41.9, <span class="tk-str">"lon"</span>: 12.5, <span class="tk-str">"year"</span>: 100},
 )
 
@@ -409,7 +409,7 @@ r = requests.get(
           </div>
 <pre><code id="snippet-js"><span class="tk-com">// Compare two historical entities by ID</span>
 <span class="tk-key">const</span> r = <span class="tk-key">await</span> fetch(
-  <span class="tk-str">'https://atlaspi.cra-srl.com/v1/compare/1/2'</span>
+  <span class="tk-str">'https://atlaspi.it/v1/compare/1/2'</span>
 );
 <span class="tk-key">const</span> data = <span class="tk-key">await</span> r.json();
 
@@ -619,7 +619,7 @@ console.log(<span class="tk-str">'Overlap years:'</span>, data.temporal_overlap)
   </div>
 
   <div class="container foot-bottom">
-    <span>&copy; <span id="year"></span> AtlasPI &middot; Apache-2.0 licensed core &middot; <a href="https://atlaspi.cra-srl.com/">atlaspi.cra-srl.com</a></span>
+    <span>&copy; <span id="year"></span> AtlasPI &middot; Apache-2.0 licensed core &middot; <a href="https://atlaspi.it/">atlaspi.it</a></span>
     <span class="foot-version">v<span data-live="version">6.99.97</span></span>
   </div>
 </footer>

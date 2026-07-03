@@ -12,12 +12,12 @@
  * Free, public, no-auth API. 862 entities + 490 events + 94 dynasty chains
  * from 4500 BCE to 2024.
  *
- * Docs: https://atlaspi.cra-srl.com/docs
+ * Docs: https://atlaspi.it/docs
  * Source: https://github.com/Soil911/AtlasPI
  */
 
 export const VERSION = "0.2.0";
-export const DEFAULT_BASE_URL = "https://atlaspi.cra-srl.com";
+export const DEFAULT_BASE_URL = "https://atlaspi.it";
 
 export class AtlasPIError extends Error {
   public readonly statusCode?: number;
