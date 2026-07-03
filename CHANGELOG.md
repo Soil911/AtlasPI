@@ -2,6 +2,30 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.113] - 2026-07-03 (ADR-011: riconciliazione confidence JSON↔prod — 199/286 divergenze chiuse)
+
+**Tema**: *Chiusura della parte meccanizzabile del debito confidence M4
+(ETHICS-012 follow-up #5), con policy approvata da Clirim e documentata in
+**ADR-011**. Nessun allineamento silenzioso: tutto in audit log versionato.*
+
+- **197 backport JSON:=prod** (`scripts/reconcile_confidence.py`, chirurgia a
+  stringa depth-aware sul record last-wins, verifica di rilettura): la conf
+  prod è quella calibrata con fonti nelle sessioni enrichment. Fixate in
+  automatico le 3 violazioni ETHICS-013 lato JSON (İstanbul #3, Cantona
+  #642, Tlaxcallan #643).
+- **2 UPDATE prod:=JSON** (classe A, boost batch_32 mai applicato): Крим #25
+  0.60→0.65, KKTC #39 0.35→0.60 — entrambe disputed ≤0.70 (cap ETHICS-003 ok).
+  SQL generato con lock ottimistico: `data/fixes/sql_conf_reconciliation_v6_99_113.sql`.
+- **87 json_higher in coda review manuale** (`data/fixes/conf_review_queue.json`):
+  deviazione conservativa dalla bozza — lo spec-matching meccanico non ha
+  trovato evidenza per NESSUNA riga, quindi niente scritture automatiche in
+  nessuna direzione; review con fonti a lotti da ~10 nelle sessioni enrichment.
+- Guardrail hard (0 righe rifiutate): conf<0.5+confirmed, conf>0.70+disputed.
+- Audit completo: `data/fixes/conf_reconciliation_audit_20260703.json`.
+- Residuo M4 dopo questo run: 17 rename nativi, 87 conf in coda, 30 record
+  ombreggiati, 61 JSON-only (vietato ingest_new_entities su prod).
+- Suite 1355 verde.
+
 ## [v6.99.112] - 2026-07-03 (ETHICS-018: dedup trunk etiope + merge Aksum latino→nativo)
 
 **Tema**: *Le due catene etiopi semanticamente duplicate diventano UNA (#22 a
