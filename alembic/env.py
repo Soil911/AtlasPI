@@ -22,9 +22,16 @@ logger = logging.getLogger("alembic.env")
 # Alembic Config object
 config = context.config
 
-# Setup logging da alembic.ini
-if config.config_file_name is not None:
-    fileConfig(config.config_file_name)
+# Setup logging da alembic.ini SOLO se il logging non e' gia' configurato.
+# Quando Alembic gira embedded allo startup dell'app (src/main.py lifespan →
+# command.upgrade), setup_logging() ha gia' installato l'handler JSON sul root
+# logger: fileConfig() lo sostituirebbe (root a WARN, handler plain su stderr)
+# e con disable_existing_loggers=True (default) disabiliterebbe i logger gia'
+# creati (es. src.main) → "AtlasPI pronto" e l'audit admin sparirebbero dai
+# docker logs. Da CLI (root senza handler) il comportamento resta invariato;
+# disable_existing_loggers=False e' difesa aggiuntiva anche per quel ramo.
+if config.config_file_name is not None and not logging.getLogger().handlers:
+    fileConfig(config.config_file_name, disable_existing_loggers=False)
 
 # Sovrascrivi sqlalchemy.url con il valore da src.config
 config.set_main_option("sqlalchemy.url", DATABASE_URL)

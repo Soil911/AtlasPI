@@ -2,6 +2,27 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.111] - 2026-07-03 (fix logging: la fileConfig di Alembic non clobbera più il logging JSON al boot)
+
+**Tema**: *Osservabilità del boot ripristinata. Dal deploy delle migration
+automatiche, `alembic/env.py` chiamava `fileConfig(alembic.ini)` incondizionata
+allo startup: (1) `disable_existing_loggers=True` (default) disabilitava i
+logger già creati — `src.main` incluso, quindi "AtlasPI pronto" e l'audit admin
+(anche i suoi `logger.error` SECURITY) sparivano dai docker logs; (2) il root
+logger veniva riconfigurato a WARN con handler plain-text su stderr al posto
+dell'handler JSON su stdout.*
+
+- **Fix**: `fileConfig` ora gira SOLO se il root logger non ha handler (pattern
+  Alembic per l'esecuzione embedded) + `disable_existing_loggers=False` come
+  difesa aggiuntiva. Da CLI (`alembic upgrade/current` in locale) il
+  comportamento resta invariato (root senza handler → fileConfig applicata).
+- **Repro verificato** (script pre/post): pre-patch `src.main.disabled=True`,
+  root=WARNING/plain; post-patch la riga JSON "AtlasPI pronto" appare.
+- Side effect dichiarato: nel boot embedded i log Alembic ("Running upgrade…")
+  escono ora in JSON su stdout via handler dell'app (prima plain su stderr) —
+  aggiornare eventuali grep/alerting sul formato vecchio.
+- Suite 1355 verde.
+
 ## [v6.99.110] - 2026-07-02 (B1c: 21 catene Class-1 + 3 estensioni — gli orfani moderni entrano nelle successioni)
 
 **Tema**: *Track B1c (milestone M1): i grandi stati moderni orfani vengono
