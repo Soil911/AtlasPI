@@ -3,38 +3,48 @@
     "name": "Ethiopian State Trunk",
     "name_lang": "en",
     "chain_type": "SUCCESSION",
-    "region": "East Africa",
-    "description": "Political succession of the Ethiopian highland state: the Kingdom of Aksum (c. 100-940 CE) gave way to the Zagwe dynasty (c. 940-1270) and then to the Solomonic dynasty's Mengist Ityop'p'ya (1270-1974). This is a trunk chain covering the three major polities; intermediate fragmentation periods and regional kingdoms are omitted for clarity.",
-    "confidence_score": 0.8,
-    "ethical_notes": "The Solomonic dynasty's claim to descent from King Solomon and the Queen of Sheba (Kebra Nagast narrative) is foundational mythology, not historical fact. The Zagwe are often portrayed as 'usurpers' in Solomonic-era sources — this is winner's historiography. The Zagwe produced the rock-hewn churches of Lalibela and were a legitimate dynasty in their own right. Aksumite-to-Zagwe transition details are poorly documented; the ~940 date is approximate.",
+    "region": "East Africa / Ethiopian Highlands / Eritrea",
+    "description": "Political succession of the Ethiopian-Eritrean highland state tradition: the pre-Aksumite kingdom of D'mt (c. 800-400 BCE), the Kingdom of Aksum (c. 100-960 CE), the Zagwe dynasty (c. 900/1137-1270, builders of the Lalibela rock churches), and the Solomonic Mengist Ityop'p'ya (1270-1974). Merged in v6.99.112 from two previously duplicate chains (ETHICS-018); intermediate fragmentation periods are documented in the link notes, not asserted as continuity.",
+    "confidence_score": 0.7,
+    "ethical_notes": "Three legitimation myths and one weak link, all declared. (1) The D'mt→Aksum link crosses a ~500-year archaeological gap (D'mt dissolves c. 400 BCE, Aksumite consolidation c. 100 CE): the chain asserts a regional state-tradition succession, NOT documented dynastic continuity — academically contested, hence the chain confidence is capped at 0.7. (2) The fall of Aksum is tied by tradition to Queen Gudit/Yodit (c. 940-960), whose identity and historicity are debated (Ethiopian chronicles frame her variously as Beta Israel or pagan — partly the perspective of the displaced dynasty); the Zagwe did not 'conquer' Aksum — they emerged from the fragmentation that followed (the Zagwe dynasty proper is conventionally dated c. 1137 in many chronologies). (3) The Zagwe are portrayed as 'usurpers' by Solomonic-era sources — winners' historiography: they were a legitimate dynasty (Agaw-speaking, hence 'outsiders' in later Amhara-dominated accounts) and produced the rock-hewn churches of Lalibela. (4) The Solomonic claim of descent from Solomon and the Queen of Sheba (Kebra Nagast) is foundational political theology, not documented genealogy; 'restoration' is the victors' framing, stated as such.",
     "sources": [
       {"citation": "Munro-Hay, S. 'Aksum: An African Civilisation of Late Antiquity' (1991)", "url": null, "source_type": "academic"},
+      {"citation": "Phillipson, D.W. 'Ancient Ethiopia: Aksum, Its Antecedents and Successors' (1998)", "url": null, "source_type": "academic"},
       {"citation": "Henze, P. 'Layers of Time: A History of Ethiopia' (2000)", "url": null, "source_type": "academic"},
       {"citation": "Taddesse Tamrat, 'Church and State in Ethiopia, 1270-1527' (1972)", "url": null, "source_type": "academic"}
     ],
     "links": [
       {
-        "entity_name": "Aksum",
+        "entity_name": "ደዐመተ",
         "transition_year": null,
         "transition_type": null,
         "is_violent": false,
-        "description": "The Kingdom of Aksum, one of the great powers of the ancient world, controlling trade routes from the Nile to the Red Sea. Converted to Christianity under King Ezana (c. 340 CE). Declined after the 7th century as Arab expansion cut Red Sea trade routes."
+        "description": "D'mt (Daamat), the pre-Aksumite kingdom of the northern highlands (c. 800-400 BCE), with monumental architecture at Yeha. It dissolved c. 400 BCE under unclear circumstances; multiple smaller highland polities followed before Aksumite consolidation.",
+        "ethical_notes": "D'mt is sometimes described as a South Arabian (Sabaean) colony — a framing rooted in 19th-century diffusionism, largely rejected by modern archaeology: D'mt was an indigenous state with trade contacts across the Red Sea, not a transplanted Arabian colony."
+      },
+      {
+        "entity_name": "መንግሥተ አክሱም",
+        "transition_year": 100,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "The Kingdom of Aksum, one of the four great powers of the late-antique world (so ranked by the prophet Mani), controlling Red Sea trade through Adulis, minting its own coinage, converting to Christianity under Ezana (c. 330-340), destroying Meroe (c. 350) and ruling Himyarite Yemen (6th c.). Declined from the 7th century as Islamic expansion re-routed Red Sea trade.",
+        "ethical_notes": "SUCCESSION here means regional state-tradition succession across a ~500-year gap (c. 400 BCE - 100 CE), not documented dynastic continuity — the link is academically contested and this is the chain's weak ring (see chain-level notes)."
       },
       {
         "entity_name": "ዛግዌ",
         "transition_year": 940,
-        "transition_type": "CONQUEST",
+        "transition_type": "DISSOLUTION",
         "is_violent": true,
-        "description": "The Zagwe dynasty seized power from the declining Aksumite state around 940 CE. Details of the transition are obscure — later Solomonic sources portray it as usurpation, but the Zagwe ruled effectively for ~330 years and produced the monumental rock churches of Lalibela.",
-        "ethical_notes": "The characterization of the Zagwe as 'usurpers' comes from pro-Solomonic sources written after 1270. The Zagwe themselves may have claimed Aksumite legitimacy. The ~940 date is conventional; some scholars place it earlier or later."
+        "description": "The Zagwe dynasty of Roha/Lalibela emerged from the fragmentation that followed the collapse of the Aksumite state (c. 940-960, traditionally tied to Queen Gudit/Yodit's destruction of Aksum). The transition year marks Aksum's end, not a Zagwe conquest: the dynasty proper is conventionally dated c. 1137 in many chronologies (this dataset's Zagwe entity starts c. 900), and the intervening century is poorly documented. The Zagwe ruled until 1270 and built the rock-hewn churches of Lalibela.",
+        "ethical_notes": "Typed DISSOLUTION (power passed through the collapse of the predecessor, as with USSR→successor states), NOT CONQUEST: asserting a Zagwe conquest of Aksum would overstate what the sources support. The violence flag records the Gudit/Yodit destruction tradition, whose historicity and the queen's identity are debated; the 'destruction of Aksum' narrative partly reflects the displaced dynasty's perspective."
       },
       {
         "entity_name": "የኢትዮጵያ ንጉሠ ነገሥት መንግሥት",
         "transition_year": 1270,
         "transition_type": "REVOLUTION",
         "is_violent": true,
-        "description": "Yekuno Amlak overthrew the last Zagwe king (c. 1270) and founded the Solomonic dynasty, claiming descent from the Aksumite royal line via King Solomon and the Queen of Sheba. The Kebra Nagast ('Glory of Kings') was compiled to legitimize this claim.",
-        "ethical_notes": "The Solomonic restoration narrative is political theology, not documented genealogy. The dynasty nonetheless ruled Ethiopia until Haile Selassie's deposition in 1974 — over 700 years of claimed continuity."
+        "description": "Yekuno Amlak overthrew the last Zagwe king (c. 1270) and founded the Solomonic dynasty, claiming descent from the Aksumite royal line via King Solomon and the Queen of Sheba. The Kebra Nagast ('Glory of Kings') was compiled to legitimize this claim. The dynasty ruled — through interruptions it does not advertise (Zemene Mesafint decentralization c. 1769-1855, Italian occupation 1936-41) — until Haile Selassie's deposition in 1974.",
+        "ethical_notes": "The Solomonic 'restoration' narrative is political theology, not documented genealogy — over 700 years of CLAIMED continuity. The framing of the Zagwe as illegitimate usurpers comes from the dynasty that overthrew them."
       }
     ]
   }

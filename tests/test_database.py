@@ -55,5 +55,8 @@ class TestDataIntegrity:
             assert len(e.sources) > 0, f"'{e.name_original}' non ha fonti"
 
     def test_all_entities_have_name_variants(self, db):
-        for e in db.query(GeoEntity).all():
+        # ETHICS/ADR-005: le entita' deprecate sono tombstone di merge — le loro
+        # varianti vengono ri-homate alla primary (es. #853 'Aksum' → #51 in
+        # ETHICS-018), quindi zero varianti sul record deprecato e' corretto.
+        for e in db.query(GeoEntity).filter(GeoEntity.status != "deprecated").all():
             assert len(e.name_variants) > 0, f"'{e.name_original}' non ha varianti nome"

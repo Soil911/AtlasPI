@@ -683,72 +683,10 @@
       ]
     },
     "confidence_score": 0.6,
-    "status": "confirmed",
-    "ethical_notes": "ETHICS: The Kingdom of Aksum was one of the four great powers of the ancient world (alongside Rome, Persia, and China) according to the 3rd-century Persian prophet Mani. Western historiography systematically marginalized Aksum, treating it as peripheral to 'real' ancient history centered on the Mediterranean. Aksumite civilization developed its own script (Ge'ez), coinage, monumental architecture (stelae), and was among the earliest states to adopt Christianity (c. 330 CE under King Ezana). The kingdom controlled trade routes linking the Roman Mediterranean with the Indian Ocean via the Red Sea port of Adulis. Aksum's destruction of Meroe (c. 350 CE) and its intervention in South Arabia demonstrate its military power. Indigenous sources include Ge'ez royal inscriptions and the later Kebra Nagast tradition. The decline of Aksum is debated: environmental degradation, loss of trade routes to Islamic expansion, and the rise of regional rivals all contributed. Boundary da aourednik/historical-basemaps (500, strategy=capital_in_polygon, precision=1). CC BY 4.0.",
-    "name_variants": [
-      {
-        "name": "Aksumite Empire",
-        "lang": "en",
-        "context": "Standard English academic designation"
-      },
-      {
-        "name": "Kingdom of Axum",
-        "lang": "en",
-        "context": "Alternative English spelling"
-      },
-      {
-        "name": "Regno di Aksum",
-        "lang": "it",
-        "context": "Italian academic designation"
-      },
-      {
-        "name": "Medri Bahri",
-        "lang": "tig",
-        "context": "Tigrinya regional designation, though primarily refers to the later successor polity"
-      }
-    ],
-    "territory_changes": [
-      {
-        "year": 100,
-        "region": "Ethiopian Highlands / Eritrean coast",
-        "change_type": "formation",
-        "description": "Aksum emerges as a major trading kingdom in the Ethiopian Highlands, succeeding the earlier D'mt polity. The port of Adulis on the Red Sea became the kingdom's maritime gateway to Roman and Indian Ocean trade networks. The Periplus of the Erythraean Sea (c. 50 CE) describes Adulis as a major trading port under Aksumite control.",
-        "population_affected": null,
-        "confidence_score": 0.5
-      },
-      {
-        "year": 325,
-        "region": "Ethiopian Highlands",
-        "change_type": "religious_transformation",
-        "description": "King Ezana converted to Christianity, making Aksum one of the earliest Christian states. Ge'ez inscriptions document the shift from polytheistic to Christian royal ideology. The Ethiopian Orthodox Tewahedo Church traces its origins to this period.",
-        "population_affected": null,
-        "confidence_score": 0.7
-      },
-      {
-        "year": 350,
-        "region": "Upper Nubia / Meroe",
-        "change_type": "expansion",
-        "description": "King Ezana's campaign against Meroe, recorded in Ge'ez and Greek inscriptions at Aksum. The Aksumite invasion effectively ended the Meroitic Kingdom of Kush, one of Africa's longest-lived civilizations. This represents a major African-on-African conquest that challenges simplistic narratives of African history.",
-        "population_affected": null,
-        "confidence_score": 0.6
-      },
-      {
-        "year": 525,
-        "region": "South Arabia / Yemen",
-        "change_type": "expansion",
-        "description": "King Kaleb of Aksum invaded the Himyarite Kingdom in South Arabia to depose the Jewish king Dhu Nuwas, who had persecuted Christians. Aksum ruled Yemen directly for approximately 50 years. This demonstrates Aksum's trans-Red Sea imperial reach.",
-        "population_affected": null,
-        "confidence_score": 0.65
-      },
-      {
-        "year": 940,
-        "region": "Ethiopian Highlands",
-        "change_type": "dissolution",
-        "description": "The Aksumite state collapsed, traditionally attributed to the invasion by Queen Gudit (Yodit), a non-Christian ruler from the south. The historical reality is debated: internal decline, loss of Red Sea trade routes to Islamic expansion, environmental degradation, and political fragmentation all contributed. The Zagwe dynasty eventually emerged as the successor state.",
-        "population_affected": null,
-        "confidence_score": 0.4
-      }
-    ],
+    "status": "deprecated",
+    "ethical_notes": "DEPRECATA (ETHICS-018, ADR-005, v6.99.112): duplicato in trascrizione latina dell'entita' 51 (መንግሥተ አክሱም) — mancato dal merge v6.85 perche' privo di wikidata_qid. Riferimenti (evento Ezana/Meroe, 3 name_variants, fonte primaria iscrizioni di Ezana, 5 territory_changes) ri-homati alla 51; la variante 'Medri Bahri' e' stata RIMOSSA perche' designa una polity successiva distinta (altopiano eritreo, XV-XIX sec.), non Aksum — entita' da creare. Lookup canonico via id 51. ETHICS: The Kingdom of Aksum was one of the four great powers of the ancient world (alongside Rome, Persia, and China) according to the 3rd-century Persian prophet Mani. Western historiography systematically marginalized Aksum, treating it as peripheral to 'real' ancient history centered on the Mediterranean. Aksumite civilization developed its own script (Ge'ez), coinage, monumental architecture (stelae), and was among the earliest states to adopt Christianity (c. 330 CE under King Ezana). The kingdom controlled trade routes linking the Roman Mediterranean with the Indian Ocean via the Red Sea port of Adulis. Aksum's destruction of Meroe (c. 350 CE) and its intervention in South Arabia demonstrate its military power. Indigenous sources include Ge'ez royal inscriptions and the later Kebra Nagast tradition. The decline of Aksum is debated: environmental degradation, loss of trade routes to Islamic expansion, and the rise of regional rivals all contributed. Boundary da aourednik/historical-basemaps (500, strategy=capital_in_polygon, precision=1). CC BY 4.0.",
+    "name_variants": [],
+    "territory_changes": [],
     "sources": [
       {
         "citation": "Munro-Hay, Stuart. Aksum: An African Civilisation of Late Antiquity. Edinburgh: Edinburgh University Press, 1991.",
@@ -762,11 +700,6 @@
       },
       {
         "citation": "Periplus Maris Erythraei (Periplus of the Erythraean Sea), c. 50 CE. Greek merchant's guide describing Adulis and Aksumite trade.",
-        "source_type": "primary",
-        "url": null
-      },
-      {
-        "citation": "Ge'ez royal inscriptions of Ezana (Aksum, multiple stelae), c. 330-350 CE.",
         "source_type": "primary",
         "url": null
       }

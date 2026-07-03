@@ -2,6 +2,33 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.112] - 2026-07-03 (ETHICS-018: dedup trunk etiope + merge Aksum latino→nativo)
+
+**Tema**: *Le due catene etiopi semanticamente duplicate diventano UNA (#22 a
+4 nodi tutti nativi: ደዐመተ → መንግሥተ አክሱም → ዛግዌ → የኢትዮጵያ ንጉሠ ነገሥት መንግሥት); il
+duplicato latino #853 "Aksum" (sfuggito al merge v6.85 perché senza
+wikidata_qid) è deprecato con re-homing a #51. Cross-check ChatGPT-5.5 con 2
+correzioni recepite. Ok di Clirim. Record: **ETHICS-018**.*
+
+- **Catena #22 merged**: +D'mt (#799) come radice; Aksum = #51 nativo;
+  Aksum→Zagwe ritipizzata **DISSOLUTION** (non CONQUEST: gli Zagwe emersero
+  dalla frammentazione post-collasso — correzione dal cross-check), violent
+  per la tradizione di Gudit/Yodit dichiarata contesa; confidence 0.8→0.7
+  (anello D'mt dichiarato debole). **Catena #100 eliminata** (precedente
+  v6.99.101): prod passa a **99 catene**.
+- **#853 → deprecated** (ADR-005): ri-homati a #51 l'evento Ezana/Meroe (#441),
+  3 name_variants EN/IT, la fonte primaria delle iscrizioni di Ezana, 5
+  territory_changes. La variante **'Medri Bahri' ELIMINATA** (polity eritrea
+  successiva distinta, non Aksum — correzione dal cross-check; entità da
+  creare, in coda). La territory_change #93 di #51 (conflava conversione 325
+  + Meroe) eliminata: superseduta dalle migrate 2424/2425. Risolto anche il
+  **doppio polygon Aksum** sulla mappa (anni 100-940).
+- **Fix collaterale**: `year_start` JSON di #51 era −400 (inglobava il gap
+  D'mt, contraddicendo prod=100 e il gap dichiarato) → allineato a 100.
+- Dual-write: batch_14 riscritto (nomi nativi), catena #100 rimossa da
+  batch_21, batch_29/batch_00 aggiornati;
+  `scripts/sql_ethiopian_trunk_merge_v6_99_112.sql` (transazione con guard).
+
 ## [v6.99.111] - 2026-07-03 (fix logging: la fileConfig di Alembic non clobbera più il logging JSON al boot)
 
 **Tema**: *Osservabilità del boot ripristinata. Dal deploy delle migration

@@ -39360,7 +39360,7 @@
     "name_original": "መንግሥተ አክሱም",
     "name_original_lang": "gez",
     "entity_type": "kingdom",
-    "year_start": -400,
+    "year_start": 100,
     "year_end": 960,
     "capital_name": "Aksum",
     "capital_lat": 14.1211,
@@ -39477,14 +39477,54 @@
         "lang": "it",
         "context": "denominazione italiana",
         "source": "Enciclopedia Treccani"
+      },
+      {
+        "name": "Aksumite Empire",
+        "lang": "en",
+        "context": "Standard English academic designation (migrata dall'entita' deprecata 'Aksum' — ETHICS-018, v6.99.112)"
+      },
+      {
+        "name": "Kingdom of Axum",
+        "lang": "en",
+        "context": "Alternative English spelling (migrata dall'entita' deprecata 'Aksum' — ETHICS-018, v6.99.112)"
+      },
+      {
+        "name": "Regno di Aksum",
+        "lang": "it",
+        "context": "Italian academic designation (migrata dall'entita' deprecata 'Aksum' — ETHICS-018, v6.99.112)"
       }
     ],
     "territory_changes": [
       {
+        "year": 100,
+        "region": "Ethiopian Highlands / Eritrean coast",
+        "change_type": "formation",
+        "description": "Aksum emerges as a major trading kingdom in the Ethiopian Highlands, succeeding the earlier D'mt polity. The port of Adulis on the Red Sea became the kingdom's maritime gateway to Roman and Indian Ocean trade networks. The Periplus of the Erythraean Sea (c. 50 CE) describes Adulis as a major trading port under Aksumite control.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
         "year": 325,
-        "region": "Etiopia e Yemen",
-        "change_type": "CONQUEST_MILITARY",
-        "description": "Massima espansione sotto il re Ezana. Conquista del regno di Meroe (Kush) e conversione al cristianesimo. Controllo su rotte commerciali del Mar Rosso.",
+        "region": "Ethiopian Highlands",
+        "change_type": "religious_transformation",
+        "description": "King Ezana converted to Christianity, making Aksum one of the earliest Christian states. Ge'ez inscriptions document the shift from polytheistic to Christian royal ideology. The Ethiopian Orthodox Tewahedo Church traces its origins to this period.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": 350,
+        "region": "Upper Nubia / Meroe",
+        "change_type": "expansion",
+        "description": "King Ezana's campaign against Meroe, recorded in Ge'ez and Greek inscriptions at Aksum. The Aksumite invasion effectively ended the Meroitic Kingdom of Kush, one of Africa's longest-lived civilizations. This represents a major African-on-African conquest that challenges simplistic narratives of African history.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 525,
+        "region": "South Arabia / Yemen",
+        "change_type": "expansion",
+        "description": "King Kaleb of Aksum invaded the Himyarite Kingdom in South Arabia to depose the Jewish king Dhu Nuwas, who had persecuted Christians. Aksum ruled Yemen directly for approximately 50 years. This demonstrates Aksum's trans-Red Sea imperial reach.",
+        "population_affected": null,
         "confidence_score": 0.65
       },
       {
@@ -39493,6 +39533,14 @@
         "change_type": "CONQUEST_MILITARY",
         "description": "Perdita del controllo sullo Yemen a favore dell'Impero Sasanide. Inizio del declino commerciale.",
         "confidence_score": 0.55
+      },
+      {
+        "year": 940,
+        "region": "Ethiopian Highlands",
+        "change_type": "dissolution",
+        "description": "The Aksumite state collapsed, traditionally attributed to the invasion by Queen Gudit (Yodit), a non-Christian ruler from the south. The historical reality is debated: internal decline, loss of Red Sea trade routes to Islamic expansion, environmental degradation, and political fragmentation all contributed. The Zagwe dynasty eventually emerged as the successor state.",
+        "population_affected": null,
+        "confidence_score": 0.4
       }
     ],
     "sources": [
@@ -39506,6 +39554,10 @@
       },
       {
         "citation": "Periplus Maris Erythraei (I sec. d.C.)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Ge'ez royal inscriptions of Ezana (Aksum, multiple stelae), c. 330-350 CE.",
         "source_type": "primary"
       }
     ],

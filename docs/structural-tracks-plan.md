@@ -47,9 +47,19 @@
   predecessore dei 3 regni lao), Regno dei Serbi Croati e Sloveni (1918-1929/41 —
   serve ANCHE alla catena serba #34, i cui link 'Jugoslavija' non risolsero mai),
   regno post-angkoriano di Cambogia (Longvek/Oudong 1431-1863), Regno Ndebele
-  (1838-1893, successore dei Rozwi), Repubblica di Hawaii NON necessaria (coperta
-  in note). Flag qualità: #534 nome del Primo Impero di Haiti errato; #240 nome
-  Khmer Republic con anni della Kampuchea Democratica (1975-79) — VERIFICARE.
+  (1838-1893, successore dei Rozwi), **Medri Bahri** (ምድሪ ባሕሪ, altopiano eritreo
+  ~1450-1890 — da ETHICS-018: la sua variante è stata rimossa da Aksum),
+  Repubblica di Hawaii NON necessaria (coperta in note). Flag qualità: #534 nome
+  del Primo Impero di Haiti errato; #240 nome Khmer Republic con anni della
+  Kampuchea Democratica (1975-79) — VERIFICARE.
+
+### Aggiornamento 2026-07-03 (sessione v6.99.111-112)
+- ✅ **Fix logging Alembic** (v6.99.111): fileConfig con guard — "AtlasPI pronto"
+  e audit admin tornano nei docker logs.
+- ✅ **Dedup trunk etiope ESEGUITO** (v6.99.112, ETHICS-018): catena #22 merged a
+  4 nodi nativi (D'mt→Aksum #51→Zagwe DISSOLUTION→Solomonic), #100 eliminata
+  (prod a 99 catene), #853 deprecato con re-homing a #51, 'Medri Bahri' rimossa
+  (entità da creare), doppio polygon Aksum risolto.
 
 ---
 
