@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://atlaspi.cra-srl.com"><img alt="Try it live" src="https://img.shields.io/badge/try%20it-live-58a6ff?style=flat-square&logo=globe&logoColor=white"></a>
+  <a href="https://atlaspi.it"><img alt="Try it live" src="https://img.shields.io/badge/try%20it-live-58a6ff?style=flat-square&logo=globe&logoColor=white"></a>
   <a href="#-quick-start"><img alt="Version" src="https://img.shields.io/badge/version-6.92.0-blue?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Entities" src="https://img.shields.io/badge/entities-1034-green?style=flat-square"></a>
   <a href="#-dataset-overview"><img alt="Events" src="https://img.shields.io/badge/events-643-green?style=flat-square"></a>
@@ -29,13 +29,13 @@
 
 <p align="center">
   <strong>✅ Free · No API key · No registration · Apache 2.0 · CORS-enabled</strong><br>
-  <code>curl https://atlaspi.cra-srl.com/v1/snapshot/year/1250</code>
+  <code>curl https://atlaspi.it/v1/snapshot/year/1250</code>
 </p>
 
 <p align="center">
-  <strong>Live: <a href="https://atlaspi.cra-srl.com">atlaspi.cra-srl.com</a></strong> &middot;
-  <a href="https://atlaspi.cra-srl.com/docs">API Docs</a> &middot;
-  <a href="https://atlaspi.cra-srl.com/app">Map App</a> &middot;
+  <strong>Live: <a href="https://atlaspi.it">atlaspi.it</a></strong> &middot;
+  <a href="https://atlaspi.it/docs">API Docs</a> &middot;
+  <a href="https://atlaspi.it/app">Map App</a> &middot;
   <a href="mcp-server/README.md">MCP Server</a>
 </p>
 
@@ -55,7 +55,7 @@ Historical data is never neutral. Borders were drawn through conquest, names wer
 
 ![AtlasPI Web UI — the world in 1000 CE, 146 historical entities rendered from primary-source boundaries](docs/screenshot.png)
 
-The web UI supports keyboard shortcuts, deep linking (`/app?year=1000`), continent filtering, time playback animation, dark/light mode, and full i18n (English/Italian). Try it live at **[atlaspi.cra-srl.com](https://atlaspi.cra-srl.com/app)**.
+The web UI supports keyboard shortcuts, deep linking (`/app?year=1000`), continent filtering, time playback animation, dark/light mode, and full i18n (English/Italian). Try it live at **[atlaspi.it](https://atlaspi.it/app)**.
 
 ---
 
@@ -386,7 +386,7 @@ If you use AtlasPI in academic work, teaching, or derivative datasets, please ci
   publisher    = {CRA},
   doi          = {10.5281/zenodo.19581784},
   url          = {https://doi.org/10.5281/zenodo.19581784},
-  note         = {Live instance: https://atlaspi.cra-srl.com. Concept DOI (all versions): 10.5281/zenodo.19581784. Version v6.1.2 DOI: 10.5281/zenodo.19581785.}
+  note         = {Live instance: https://atlaspi.it. Concept DOI (all versions): 10.5281/zenodo.19581784. Version v6.1.2 DOI: 10.5281/zenodo.19581785.}
 }
 ```
 

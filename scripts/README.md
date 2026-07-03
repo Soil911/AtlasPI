@@ -37,7 +37,7 @@ Test end-to-end degli endpoint critici. Exit code 0 se tutto ok, 1 altrimenti.
 
 ```bash
 ./scripts/smoke_test.sh                          # localhost:10100
-./scripts/smoke_test.sh https://atlaspi.cra-srl.com
+./scripts/smoke_test.sh https://atlaspi.it
 BASE_URL=http://staging ./scripts/smoke_test.sh
 ```
 

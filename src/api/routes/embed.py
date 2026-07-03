@@ -13,6 +13,7 @@ import logging
 from fastapi import APIRouter, Depends, HTTPException, Query, Response
 from sqlalchemy.orm import Session
 
+from src.config import PUBLIC_BASE_URL
 from src.db.database import get_db
 from src.db.models import GeoEntity, Source
 
@@ -75,8 +76,8 @@ PALETTE = {
         "Genera un badge SVG (400x88) per linkare a una entita' AtlasPI.\n\n"
         "Esempio:\n"
         "```html\n"
-        "<a href='https://atlaspi.cra-srl.com/app?entity=178'>\n"
-        "  <img src='https://atlaspi.cra-srl.com/embed/badge.svg?entity=178' alt='Ptolemaic Kingdom on AtlasPI'>\n"
+        "<a href='https://atlaspi.it/app?entity=178'>\n"
+        "  <img src='https://atlaspi.it/embed/badge.svg?entity=178' alt='Ptolemaic Kingdom on AtlasPI'>\n"
         "</a>\n"
         "```\n\n"
         "Cache 1h client + 6h CDN."
@@ -157,7 +158,7 @@ def badge_preview(
         raise HTTPException(status_code=404, detail=f"entity {entity_id} not found")
 
     name = _esc_xml(ent.name_original or f"Entity #{ent.id}")
-    base = "https://atlaspi.cra-srl.com"
+    base = PUBLIC_BASE_URL  # dominio in un solo posto (src.config)
     badge_dark = f"{base}/embed/badge.svg?entity={entity_id}&style=dark"
     badge_light = f"{base}/embed/badge.svg?entity={entity_id}&style=light"
 

@@ -9,7 +9,7 @@ Se stai leggendo questo durante un incidente: vai direttamente alla sezione
 
 ## Deployment target
 
-- **Dominio**: https://atlaspi.cra-srl.com
+- **Dominio**: https://atlaspi.it
 - **Host**: Aruba Cloud
 - **Container**: Docker (multi-stage build, non-root user `atlaspi`)
 - **Processo**: `gunicorn` con 2 uvicorn workers, porta 10100
@@ -24,7 +24,7 @@ Se stai leggendo questo durante un incidente: vai direttamente alla sezione
 
 ```bash
 # 1. Check dal nostro stesso host
-curl -i https://atlaspi.cra-srl.com/health
+curl -i https://atlaspi.it/health
 
 # 2. Verifica container
 ssh aruba 'docker ps | grep atlaspi'
@@ -36,14 +36,14 @@ ssh aruba 'docker logs --tail 200 atlaspi'
 ssh aruba 'docker restart atlaspi'
 
 # 5. Verifica dopo restart
-curl -i https://atlaspi.cra-srl.com/health
+curl -i https://atlaspi.it/health
 ```
 
 ### Il sito e' lento (>1s)
 
 ```bash
 # Dal tuo laptop
-./scripts/smoke_test.sh https://atlaspi.cra-srl.com
+./scripts/smoke_test.sh https://atlaspi.it
 
 # Sul server: top dei processi
 ssh aruba 'docker exec atlaspi top -b -n 1 | head -20'
@@ -68,7 +68,7 @@ ssh aruba 'cd /opt/atlaspi && ./scripts/restore.sh backup/atlaspi-YYYY-MM-DD-HHM
 ssh aruba 'docker start atlaspi'
 
 # 5. Verifica
-curl https://atlaspi.cra-srl.com/health
+curl https://atlaspi.it/health
 ```
 
 ---
@@ -85,7 +85,7 @@ git push origin main
 ssh aruba 'cd /opt/atlaspi && git pull && docker compose up -d --build'
 
 # Verifica con smoke test
-./scripts/smoke_test.sh https://atlaspi.cra-srl.com
+./scripts/smoke_test.sh https://atlaspi.it
 ```
 
 ### Rollback rapido
@@ -163,7 +163,7 @@ HTTP code: 200 per `ok` e `degraded`, 503 per `down` → così UptimeRobot capis
 1. Crea account su https://uptimerobot.com (free: 50 monitor, check ogni 5 min)
 2. Add new monitor:
    - Type: **HTTPS**
-   - URL: `https://atlaspi.cra-srl.com/health`
+   - URL: `https://atlaspi.it/health`
    - Interval: 5 min
    - Keyword alert: `"status":"ok"` (ti avvisa anche se torna 200 ma status e' `degraded`)
 3. Alert contact: la tua email + eventuale Telegram bot
@@ -181,7 +181,7 @@ HTTP code: 200 per `ok` e `degraded`, 503 per `down` → così UptimeRobot capis
    SENTRY_RELEASE=atlaspi@6.1.1
    ```
 5. Restart container: `docker restart atlaspi`
-6. Verifica: `curl https://atlaspi.cra-srl.com/health | jq .sentry_active` → deve essere `true`
+6. Verifica: `curl https://atlaspi.it/health | jq .sentry_active` → deve essere `true`
 
 ---
 
@@ -240,7 +240,7 @@ Il middleware `SecurityHeadersMiddleware` applica:
 Default: `*`. In produzione **restringere** tramite env var:
 
 ```
-CORS_ORIGINS=https://atlaspi.cra-srl.com,https://docs.cra-srl.com
+CORS_ORIGINS=https://atlaspi.it,https://docs.cra-srl.com
 ```
 
 ---

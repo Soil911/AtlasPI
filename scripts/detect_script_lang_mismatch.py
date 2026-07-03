@@ -22,7 +22,7 @@ def fetch_entities():
     state = []
     for offset in range(0, 1100, 100):
         try:
-            url = f'https://atlaspi.cra-srl.com/v1/entities/light?limit=100&offset={offset}'
+            url = f'https://atlaspi.it/v1/entities/light?limit=100&offset={offset}'
             with urllib.request.urlopen(url, timeout=10) as r:
                 state.extend(json.loads(r.read().decode()).get('entities', []))
         except Exception:

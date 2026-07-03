@@ -15,7 +15,7 @@ assignees: []
 
 - **ID** (if known): 
 - **name_original**: 
-- **API link**: https://atlaspi.cra-srl.com/v1/entities/`{id}`
+- **API link**: https://atlaspi.it/v1/entities/`{id}`
 
 ## What is wrong
 

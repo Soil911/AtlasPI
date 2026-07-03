@@ -17,7 +17,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-BASE = "https://atlaspi.cra-srl.com"
+BASE = "https://atlaspi.it"
 OUT_DIR = Path(__file__).resolve().parent
 
 

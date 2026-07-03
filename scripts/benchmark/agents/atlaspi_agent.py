@@ -1,7 +1,7 @@
 """AtlasPI agent: Claude con tool access che chiamano AtlasPI REST API.
 
 Simuliamo MCP tools come function definitions Anthropic. Ogni tool_use chiamato
-dal model viene eseguito come HTTP call verso https://atlaspi.cra-srl.com/v1/*,
+dal model viene eseguito come HTTP call verso https://atlaspi.it/v1/*,
 il risultato viene restituito come tool_result. Il loop continua finché il
 model dà una text response finale.
 """
@@ -17,7 +17,7 @@ import requests
 from anthropic import Anthropic
 
 
-ATLASPI_BASE = os.environ.get("ATLASPI_BASE_URL", "https://atlaspi.cra-srl.com")
+ATLASPI_BASE = os.environ.get("ATLASPI_BASE_URL", "https://atlaspi.it")
 
 SYSTEM_PROMPT = (
     "You are a rigorous historian. AtlasPI provides lookup tools for "

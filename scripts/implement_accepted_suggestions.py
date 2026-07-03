@@ -24,7 +24,7 @@ Handler outcomes:
 
 Usage:
     python -m scripts.implement_accepted_suggestions
-    curl -X POST https://atlaspi.cra-srl.com/admin/ai/implement-accepted
+    curl -X POST https://atlaspi.it/admin/ai/implement-accepted
 """
 
 from __future__ import annotations
@@ -245,7 +245,7 @@ fully automated. Typical approaches:
 After implementation, mark the suggestion as implemented via:
 
 ```bash
-curl -X POST "https://atlaspi.cra-srl.com/admin/ai/suggestions/{sug.id}/implement" \\
+curl -X POST "https://atlaspi.it/admin/ai/suggestions/{sug.id}/implement" \\
   -G --data-urlencode "note=Implemented on $(date +%Y-%m-%d)"
 ```
 """

@@ -53,7 +53,7 @@ TRUSTED_PROXIES = [
 # Override via env CORS_ORIGINS (comma-separated) per staging/dev.
 # Per API completamente pubblica (agenti AI/scraper educati) il valore
 # "*" resta supportato ma deve essere settato esplicitamente.
-_CORS_DEFAULT = "https://atlaspi.cra-srl.com,https://www.atlaspi.cra-srl.com"
+_CORS_DEFAULT = "https://atlaspi.it,https://www.atlaspi.it"
 CORS_ORIGINS = [
     o.strip()
     for o in os.getenv("CORS_ORIGINS", _CORS_DEFAULT).split(",")
@@ -90,4 +90,4 @@ import time as _time  # noqa: E402 (import localizzato per evitare dipendenze al
 PROCESS_START_TIME = _time.time()
 
 # URL pubblico canonico del servizio (usato in sitemap.xml, OG tags, docs).
-PUBLIC_BASE_URL = os.getenv("PUBLIC_BASE_URL", "https://atlaspi.cra-srl.com")
+PUBLIC_BASE_URL = os.getenv("PUBLIC_BASE_URL", "https://atlaspi.it")

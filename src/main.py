@@ -58,6 +58,7 @@ from src.config import (
     ENVIRONMENT,
     HOST,
     PORT,
+    PUBLIC_BASE_URL,
 )
 from src.db.database import Base, engine
 from src.db.seed import seed_database, seed_events_database, seed_periods_database, sync_new_periods
@@ -350,7 +351,7 @@ AtlasPI provides all of this in a uniform REST API.
 **Python:**
 ```python
 import requests
-BASE = "https://atlaspi.cra-srl.com"
+BASE = "https://atlaspi.it"
 
 # Discover entities existing in 1500 CE
 r = requests.get(f"{BASE}/v1/entities", params={"year": 1500, "limit": 20})
@@ -371,10 +372,10 @@ r = requests.get(f"{BASE}/v1/entities/1/periods")  # Imperium Romanum periods
 
 **curl:**
 ```bash
-curl -s https://atlaspi.cra-srl.com/v1/snapshot/year/1492 | jq .periods
-curl -s https://atlaspi.cra-srl.com/v1/entities/1/similar | jq '.similar[0]'
-curl -s https://atlaspi.cra-srl.com/v1/periods/by-slug/bronze-age
-curl -s "https://atlaspi.cra-srl.com/v1/events?year=1453"
+curl -s https://atlaspi.it/v1/snapshot/year/1492 | jq .periods
+curl -s https://atlaspi.it/v1/entities/1/similar | jq '.similar[0]'
+curl -s https://atlaspi.it/v1/periods/by-slug/bronze-age
+curl -s "https://atlaspi.it/v1/events?year=1453"
 ```
 
 ## Key endpoint categories
@@ -625,7 +626,7 @@ _LLM_PROBE_POINTER = {
         "/v1/chains", "/v1/sites", "/v1/rulers", "/v1/languages",
         "/v1/snapshot/year/{year}",
     ],
-    "docs": "https://atlaspi.cra-srl.com/llms.txt",
+    "docs": f"{PUBLIC_BASE_URL}/llms.txt",
 }
 
 

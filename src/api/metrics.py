@@ -27,7 +27,7 @@ Scrape with Prometheus/Grafana by adding a scrape config:
     scrape_configs:
       - job_name: atlaspi
         static_configs:
-          - targets: ['atlaspi.cra-srl.com:443']
+          - targets: ['atlaspi.it:443']
         scheme: https
         metrics_path: /metrics
         basic_auth:

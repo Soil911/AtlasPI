@@ -15,7 +15,7 @@ if sys.platform == "win32":
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 
-HEADERS = {'User-Agent': 'AtlasPI/6.81 (https://atlaspi.cra-srl.com)'}
+HEADERS = {'User-Agent': 'AtlasPI/6.81 (https://atlaspi.it)'}
 
 
 def fetch_wikidata(qid):
@@ -30,7 +30,7 @@ def fetch_wikidata(qid):
 
 def fetch_entity_qid(eid):
     try:
-        with urllib.request.urlopen(f'https://atlaspi.cra-srl.com/v1/entities/{eid}', timeout=10) as r:
+        with urllib.request.urlopen(f'https://atlaspi.it/v1/entities/{eid}', timeout=10) as r:
             return json.loads(r.read().decode())
     except Exception:
         return None

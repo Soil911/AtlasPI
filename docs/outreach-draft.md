@@ -14,7 +14,7 @@ Dear Prof. *[surname]*,
 
 I am Clirim Ramadani (CRA, Italy). I am writing because your work on *[concrete paper / dataset / tool]* sits very close to a project I have just put online and would benefit from your critical reading before I take it further.
 
-AtlasPI (https://atlaspi.cra-srl.com, https://github.com/Soil911/AtlasPI) is an Apache-2.0 structured dataset of 747 historical polities from 4500 BCE to 2024, exposed via a REST API and an MCP server intended for AI-agent consumption. Boundaries are assembled through a documented three-tier pipeline (Natural Earth for modern states, Ourednik's *historical-basemaps* for pre-1800, a deterministic fallback otherwise) and every record carries an explicit confidence score and source citations. The methodology is written up in `docs/METHODOLOGY.md`, and a data-paper draft targeting JOHD is in `docs/paper-draft.md`.
+AtlasPI (https://atlaspi.it, https://github.com/Soil911/AtlasPI) is an Apache-2.0 structured dataset of 747 historical polities from 4500 BCE to 2024, exposed via a REST API and an MCP server intended for AI-agent consumption. Boundaries are assembled through a documented three-tier pipeline (Natural Earth for modern states, Ourednik's *historical-basemaps* for pre-1800, a deterministic fallback otherwise) and every record carries an explicit confidence score and source citations. The methodology is written up in `docs/METHODOLOGY.md`, and a data-paper draft targeting JOHD is in `docs/paper-draft.md`.
 
 I am not asking for co-authorship or a formal review. I am asking whether you would glance at the methodology document and paper draft for 20–30 minutes and tell me where the approach is clearly wrong or where a working historian would reach for the delete key. I would find that signal more valuable than any other feedback at this stage.
 
@@ -34,7 +34,7 @@ Hi *[first name]*,
 
 I have been following your work on *[project / toolkit / post]* and suspect AtlasPI will be recognisable to you.
 
-It is a 747-entity structured historical geographic dataset, released under Apache-2.0, with an explicit ethics framework baked in: contested names carry the original-language form as primary, disputed territories are capped at confidence ≤ 0.70 regardless of source quality, generated polygons are tagged and capped at 0.40, and every record has source citations. The API is live at https://atlaspi.cra-srl.com; a JOHD-style data paper draft is in the repo.
+It is a 747-entity structured historical geographic dataset, released under Apache-2.0, with an explicit ethics framework baked in: contested names carry the original-language form as primary, disputed territories are capped at confidence ≤ 0.70 regardless of source quality, generated polygons are tagged and capped at 0.40, and every record has source citations. The API is live at https://atlaspi.it; a JOHD-style data paper draft is in the repo.
 
 The short version of the ask: do you think the ethics framework is honest, or is it performing honesty? Specifically — would you look at `docs/ethics/ETHICS-003-disputed-territories.en.md` and tell me whether the confidence cap mechanism is sufficient for what it claims to do?
 
@@ -64,7 +64,7 @@ I would be grateful for 15 minutes of your time on either:
 1. Running the MCP server against a tool-using agent of your choice and telling me what breaks.
 2. Reading the ethics framework (`docs/ethics/`) and telling me whether the constraints are ones LLM pipelines would actually respect in practice.
 
-Live: https://atlaspi.cra-srl.com
+Live: https://atlaspi.it
 Repo: https://github.com/Soil911/AtlasPI
 Methodology: `docs/METHODOLOGY.md`
 
@@ -83,9 +83,9 @@ Use this when you have found a specific weakness in your own spot-check (e.g. th
 
 Dear Prof. *[surname]*,
 
-Brief and concrete: AtlasPI (https://atlaspi.cra-srl.com) is a structured historical geographic dataset I have just put online. During a top-10 spot check I noticed that the boundary for *[specific entity]* is almost certainly too simple for serious use — the polygon is drawn from an older secondary source and does not reflect *[the specific historical insight you want to check]*.
+Brief and concrete: AtlasPI (https://atlaspi.it) is a structured historical geographic dataset I have just put online. During a top-10 spot check I noticed that the boundary for *[specific entity]* is almost certainly too simple for serious use — the polygon is drawn from an older secondary source and does not reflect *[the specific historical insight you want to check]*.
 
-Would you be willing to look at the entity page (https://atlaspi.cra-srl.com/v1/entities/*[id]*) and tell me either:
+Would you be willing to look at the entity page (https://atlaspi.it/v1/entities/*[id]*) and tell me either:
 
 1. That the simplification is acceptable for a structured-data context, or
 2. What the canonical citation for a better polygon would be.

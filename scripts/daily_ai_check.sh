@@ -29,7 +29,7 @@ if [ -z "${ATLASPI_ADMIN_TOKEN:-}" ]; then
   exit 1
 fi
 
-BASE="${ATLASPI_BASE:-https://atlaspi.cra-srl.com}"
+BASE="${ATLASPI_BASE:-https://atlaspi.it}"
 TIMESTAMP="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 
 echo "=== AtlasPI daily AI check @ $TIMESTAMP ==="

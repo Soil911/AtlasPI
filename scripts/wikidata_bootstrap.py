@@ -68,7 +68,7 @@ ENTITY_CACHE = CACHE_DIR / "entity"
 WIKIDATA_API = "https://www.wikidata.org/w/api.php"
 WIKIDATA_ENTITY = "https://www.wikidata.org/wiki/Special:EntityData/{qid}.json"
 
-UA = "AtlasPI/6.69 (https://atlaspi.cra-srl.com; contact@cra-srl.com) audit-v4-bootstrap"
+UA = "AtlasPI/6.69 (https://atlaspi.it; contact@cra-srl.com) audit-v4-bootstrap"
 
 # Rate limit: Wikidata ammette ~5 req/sec con UA, stiamo sotto con 4 req/sec.
 RATE_LIMIT_SLEEP = 0.25

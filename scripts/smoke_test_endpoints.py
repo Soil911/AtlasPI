@@ -6,7 +6,7 @@ bug are caught quickly.
 
 Usage:
     python -m scripts.smoke_test_endpoints
-    python -m scripts.smoke_test_endpoints --base=https://atlaspi.cra-srl.com
+    python -m scripts.smoke_test_endpoints --base=https://atlaspi.it
 """
 
 from __future__ import annotations
@@ -23,7 +23,7 @@ try:
 except Exception:
     pass
 
-DEFAULT_BASE = "https://atlaspi.cra-srl.com"
+DEFAULT_BASE = "https://atlaspi.it"
 
 
 @dataclass

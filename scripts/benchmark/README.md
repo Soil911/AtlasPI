@@ -25,7 +25,7 @@ pip install -r scripts/benchmark/requirements.txt
 export ANTHROPIC_API_KEY=sk-ant-...
 
 # 3. Verify AtlasPI live (should return v6.92+)
-curl https://atlaspi.cra-srl.com/health
+curl https://atlaspi.it/health
 ```
 
 ## Dry-run (5 seed questions, ~$0.20)
