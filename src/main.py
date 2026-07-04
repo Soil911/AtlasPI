@@ -305,7 +305,7 @@ researchers, and digital-humanities developers. Every record carries:
 
 - **Real boundaries** (GeoJSON polygons/multipolygons from Natural Earth,
   aourednik/historical-basemaps, and curated academic maps — not placeholders)
-- **Academic sources** (2,400+ bibliographic citations)
+- **Academic sources** (5,000+ bibliographic citations)
 - **Confidence scores** (0.0–1.0 per entity/event)
 - **Explicit ethical framings** (conquests labeled as CONQUEST not "succession";
   contested names preserved; colonial renamings documented)
@@ -316,16 +316,16 @@ researchers, and digital-humanities developers. Every record carries:
 
 | Resource | Count | Endpoint |
 |---|---|---|
-| Historical entities | **1,034** | `/v1/entities` |
+| Historical entities | **1,006** | `/v1/entities` |
 | Historical events | **643** | `/v1/events` |
 | Historical periods | **55** | `/v1/periods` |
-| Historical cities | **110** | `/v1/cities` |
+| Historical cities | **252** | `/v1/cities` |
 | Archaeological sites | **1,249** | `/v1/sites` |
 | Historical rulers | **105** | `/v1/rulers` |
 | Historical languages | **29** | `/v1/languages` |
 | Trade routes | **41** | `/v1/routes` |
-| Dynasty chains | **94** | `/v1/chains` |
-| Sources | **2,400+** | (embedded) |
+| Dynasty chains | **104** | `/v1/chains` |
+| Sources | **5,000+** | (embedded) |
 
 **Temporal range**: 4500 BCE → 2024 CE.
 **Geographic range**: all inhabited continents (Europe 17%, Asia 31%, Africa 18%,
@@ -699,6 +699,12 @@ async def serve_about():
 async def serve_faq():
     """Public FAQ page with JSON-LD FAQPage schema for rich search results."""
     return FileResponse(STATIC_DIR / "faq.html", media_type="text/html")
+
+
+@app.get("/why", include_in_schema=False)
+async def serve_why():
+    """Public benchmark page: why AtlasPI vs Wikidata for AI agents (M3)."""
+    return FileResponse(STATIC_DIR / "why-atlaspi.html", media_type="text/html")
 
 
 @app.get("/og-image.png", include_in_schema=False)

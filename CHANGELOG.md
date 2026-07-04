@@ -2,6 +2,23 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.123] - 2026-07-04 (M3: freshness + pagina benchmark "perché AtlasPI e non Wikidata")
+
+*Chiude gli ultimi due punti di M3 (agent-UX): freshness dei conteggi e la
+pagina di differenziazione con query comparate reali.*
+
+- **README + OPENAPI_DESCRIPTION** allineati ai conteggi reali di prod
+  (`/v1/stats`): entità 1.034→**1.006** (live, deprecate escluse), catene
+  94→**104**, città 110→**252**, fonti 2.400+/3.000+→**5.000+**, badge
+  versione a 6.99.123.
+- **Pagina `/why`** (`static/why-atlaspi.html`): "Why AtlasPI, not Wikidata?"
+  con 4 query comparate reali (misurate 2026-07-04): stati nel 1250
+  (`/v1/entities?year=1250` con boundary vs SPARQL count-only), snapshot
+  mondiale (`/v1/snapshot/year/1250` vs nessun equivalente), confini ottomani
+  (GeoJSON MultiPolygon vs punto Q12560), on-this-day (nativo vs SPARQL su
+  P585). Framing onesto: non "più veloce" ma cosa torna — boundary, confidence,
+  nomi nativi, framing etico. Aggiunta a sitemap + link da about/faq.
+
 ## [v6.99.122] - 2026-07-04 (ETHICS-022: split Kemet — da "impero" a civiltà-ombrello)
 
 *Split di super-aggregato (variante ombrello). #26 `Kemet` tipizzava 3070 anni

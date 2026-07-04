@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why AtlasPI, not Wikidata? — Agent-ready historical geography</title>
+  <meta name="description" content="A side-by-side comparison of AtlasPI and Wikidata for AI agents asking historical-geography questions: real boundaries, single-call snapshots, confidence scores, and explicit ethical framing vs raw SPARQL.">
+  <link rel="canonical" href="https://atlaspi.it/why">
+  <meta property="og:title" content="Why AtlasPI, not Wikidata?">
+  <meta property="og:description" content="Real boundaries, single-call world snapshots, confidence scores, and explicit ethical framing — compared with Wikidata SPARQL on the same questions.">
+  <meta property="og:url" content="https://atlaspi.it/why">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://atlaspi.it/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://atlaspi.it/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="/static/landing/assets/favicon.svg">
+  <style>
+    :root {
+      --bg: #0d1117; --surface: #161b22; --border: #30363d;
+      --text: #c9d1d9; --text-muted: #8b949e; --accent: #58a6ff;
+      --accent-dim: #1f6feb; --success: #3fb950; --warn: #d29922;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; }
+    header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 1.5rem 1rem; }
+    header .wrap, main { max-width: 940px; margin: 0 auto; }
+    header h1 { margin: 0; font-size: 1.5rem; }
+    header p { margin: .3rem 0 0; color: var(--text-muted); }
+    main { padding: 2rem 1rem 4rem; }
+    h2 { margin-top: 2.4rem; font-size: 1.3rem; border-bottom: 1px solid var(--border); padding-bottom: .4rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code { background: var(--surface); border: 1px solid var(--border); border-radius: 4px;
+      padding: .1rem .35rem; font-size: .85em; color: #e6edf3; word-break: break-all; }
+    .lede { font-size: 1.05rem; color: var(--text); }
+    .tablewrap { overflow-x: auto; margin: 1rem 0; border: 1px solid var(--border); border-radius: 8px; }
+    table { border-collapse: collapse; width: 100%; min-width: 620px; }
+    th, td { text-align: left; padding: .7rem .8rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: .92rem; }
+    th { background: var(--surface); color: var(--text-muted); font-weight: 600; }
+    tr:last-child td { border-bottom: none; }
+    .atlas { color: var(--success); }
+    .wd { color: var(--text-muted); }
+    .q { color: var(--accent); font-weight: 600; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.2rem; margin: 1rem 0; }
+    .note { color: var(--text-muted); font-size: .88rem; }
+    ul { padding-left: 1.2rem; }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 1rem; color: var(--text-muted); font-size: .88rem; }
+    footer .wrap { max-width: 940px; margin: 0 auto; }
+    .pill { display: inline-block; background: var(--accent-dim); color: #fff; border-radius: 999px; padding: .1rem .6rem; font-size: .75rem; margin-left: .4rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Why AtlasPI, not Wikidata?</h1>
+      <p>Both are free and open. They answer different questions. Here is the same question, run against each.</p>
+    </div>
+  </header>
+  <main>
+    <p class="lede">
+      Wikidata is a magnificent general-purpose knowledge graph. But an AI agent
+      asking <em>“what states existed in 1250, where were their borders, and what
+      was contested?”</em> has to translate that into SPARQL, join across items,
+      fetch external GeoShapes, and then decide for itself how to frame a conquest.
+      AtlasPI answers the same question in one REST call, with the polygon, a
+      confidence score, and the historiographic caveat already attached.
+    </p>
+
+    <p class="note">
+      All numbers below were measured on 2026-07-04 against the live
+      <a href="https://atlaspi.it">atlaspi.it</a> and
+      <a href="https://query.wikidata.org">query.wikidata.org</a>. Wall-clock
+      times vary; AtlasPI is not meaningfully faster than Wikidata — the point is
+      <strong>what comes back</strong>, not how fast.
+    </p>
+
+    <h2>Four questions, side by side</h2>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Question</th><th>AtlasPI</th><th>Wikidata</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="q">Which polities existed in 1250 CE?</span></td>
+            <td class="atlas">One call: <code>GET /v1/entities?year=1250</code> → 300 entities, each with a <strong>GeoJSON boundary</strong>, native-language name, confidence score and status. ~2&nbsp;MB, ready to render on a map.</td>
+            <td class="wd">A SPARQL query joining <code>P31/P279*</code> to “historical country” plus <code>P571</code>/<code>P576</code> date filters returns ~586 items — <strong>a count and QIDs only</strong>. Names, coordinates and any geometry each need further queries; duplicates and anachronistic items must be filtered by hand.</td>
+          </tr>
+          <tr>
+            <td><span class="q">What did the world look like in 1250?</span></td>
+            <td class="atlas">One call: <code>GET /v1/snapshot/year/1250</code> → entities, active periods (by region), and events, pre-joined for that year.</td>
+            <td class="wd">No equivalent. You compose several SPARQL queries and assemble the “snapshot” client-side.</td>
+          </tr>
+          <tr>
+            <td><span class="q">Where were the Ottoman Empire’s borders?</span></td>
+            <td class="atlas"><code>GET /v1/entities/2</code> returns a <strong>GeoJSON MultiPolygon</strong> with documented provenance (<code>boundary_source</code>, Natural&nbsp;Earth / aourednik).</td>
+            <td class="wd">The Ottoman Empire item (Q12560) carries a <strong>point coordinate</strong> (<code>P625</code>) — no polygon. Boundaries live in external Wikimedia GeoShape files, if they exist for the period at all.</td>
+          </tr>
+          <tr>
+            <td><span class="q">What happened on 14 July?</span></td>
+            <td class="atlas"><code>GET /v1/events/on-this-day/07-14</code> → events with date precision, casualties, linked entities, sources and ethical notes.</td>
+            <td class="wd">No native “on this day” endpoint; requires SPARQL extracting month/day from <code>P585</code> point-in-time values across all events.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>The real difference: four things AtlasPI attaches that a general graph doesn’t</h2>
+
+    <div class="card">
+      <strong>1. Real boundaries, with provenance.</strong>
+      Every entity that has a shape carries a GeoJSON polygon, not just a point,
+      and records where the shape came from (<code>boundary_source</code>). An
+      agent can render a historical map directly from the response.
+    </div>
+    <div class="card">
+      <strong>2. Epistemic honesty, in the data.</strong>
+      Each record has a <code>confidence_score</code> (0–1); records below 0.5 are
+      marked <code>uncertain</code>, contested territories are capped and flagged
+      <code>disputed</code>. The database tells you how sure it is
+      <span class="pill">ETHICS-013</span>.
+    </div>
+    <div class="card">
+      <strong>3. Native names first, imposed names preserved.</strong>
+      The primary name is the local/original form — <code>Mēxihcah</code>, not
+      “Aztec”; <code>Tawantinsuyu</code>, not “Inca”; <code>ⵉⵎⴰⵣⵉⵖⵏ</code> alongside
+      colonial exonyms. Colonial renamings are documented, not silently replaced
+      <span class="pill">ETHICS-001</span>.
+    </div>
+    <div class="card">
+      <strong>4. Conquests named as conquests.</strong>
+      Succession links carry an explicit <code>transition_type</code> —
+      <code>CONQUEST</code>, <code>ANNEXATION</code>, <code>DECOLONIZATION</code> —
+      with <code>is_violent</code> and perpetrators named; genocides and colonial
+      violence use those words, not euphemisms
+      <span class="pill">ETHICS-002 / 007</span>. When historians disagree, both
+      readings are recorded rather than arbitrated.
+    </div>
+
+    <h2>When to use which</h2>
+    <ul>
+      <li><strong>Use Wikidata</strong> when you need breadth across every domain,
+        cross-links to millions of entities, or facts AtlasPI doesn’t model.</li>
+      <li><strong>Use AtlasPI</strong> when an agent needs structured, map-ready,
+        confidence-scored, ethically-framed historical geography in one call —
+        the shape of a state in a given year, a world snapshot, a succession
+        chain, or an “on this day.”</li>
+    </ul>
+    <p>
+      AtlasPI even cross-references Wikidata: most entities carry a
+      <code>wikidata_qid</code> so you can pivot to the broader graph when you need it.
+    </p>
+
+    <h2>Try it now</h2>
+    <p>
+      <a href="/v1/snapshot/year/1250">/v1/snapshot/year/1250</a> ·
+      <a href="/v1/entities?year=1250&amp;limit=20">/v1/entities?year=1250</a> ·
+      <a href="/v1/events/on-this-day/07-14">/v1/events/on-this-day/07-14</a> ·
+      <a href="/v1/stats">/v1/stats</a> ·
+      <a href="/docs">Interactive API docs</a>
+    </p>
+  </main>
+  <footer>
+    <div class="wrap">
+      <p>AtlasPI — free, public, Apache 2.0 licensed. No login. No API key. No registration.</p>
+      <p><a href="https://github.com/Soil911/AtlasPI">Source</a> · <a href="/about">About</a> · <a href="/faq">FAQ</a> · <a href="/docs">API Docs</a> · <a href="/app">Interactive map</a></p>
+    </div>
+  </footer>
+</body>
+</html>
