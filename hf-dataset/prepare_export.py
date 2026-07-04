@@ -14,18 +14,40 @@ from __future__ import annotations
 
 import json
 import sys
+import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 
 BASE = "https://atlaspi.it"
 OUT_DIR = Path(__file__).resolve().parent
 
+# Rate-limit safety: prod applica 60 req/min per IP. Throttliamo a ~50/min e
+# ritentiamo sui 429 con backoff, così l'export completo (~800 GET individuali)
+# non si spezza a metà.
+_MIN_INTERVAL = 1.2  # secondi tra le richieste
+_last_call = [0.0]
+
 
 def _get(path: str) -> dict | list:
-    print(f"GET {path}")
-    req = urllib.request.Request(BASE + path, headers={"User-Agent": "hf-export/1.0"})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return json.load(r)
+    for attempt in range(6):
+        wait = _MIN_INTERVAL - (time.time() - _last_call[0])
+        if wait > 0:
+            time.sleep(wait)
+        _last_call[0] = time.time()
+        req = urllib.request.Request(BASE + path, headers={"User-Agent": "hf-export/1.0"})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                print(f"GET {path}")
+                return json.load(r)
+        except urllib.error.HTTPError as e:
+            if e.code == 429:
+                back = 5 * (attempt + 1)
+                print(f"  429 rate-limited su {path} — retry tra {back}s")
+                time.sleep(back)
+                continue
+            raise
+    raise RuntimeError(f"GET {path} fallito dopo retry (429 persistente)")
 
 
 def _paginated(path: str, limit: int = 100) -> list:
