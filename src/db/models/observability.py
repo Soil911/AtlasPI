@@ -1,9 +1,9 @@
-"""Models: ApiRequestLog + AiSuggestion + KnownDevIp (observability / analytics).
+"""Models: ApiRequestLog + AiSuggestion (observability / telemetria).
 
 Sub-module di src.db.models (split v6.96.0 / audit R7).
 
 Queste tabelle NON sono parte del dataset storico — sono telemetria
-operativa per dashboard analytics + AI co-founder. Sono separate dalle
+operativa per AI co-founder e agent-insights. Sono separate dalle
 entità di dominio per chiarezza concettuale.
 """
 
@@ -89,19 +89,6 @@ class AiSuggestion(Base):
     review_note: Mapped[str | None] = mapped_column(Text, nullable=True)
 
 
-class KnownDevIp(Base):
-    """IP marcati come 'dev' dall'admin — esclusi dalla dashboard analytics
-    external-only. Popolato via `POST /admin/dev-ips/mark-current`.
-
-    Semplice table — nessuna FK, nessun vincolo, solo IP univoci.
-    """
-
-    __tablename__ = "known_dev_ips"
-    __table_args__ = (
-        Index("ix_dev_ips_ip", "ip", unique=True),
-    )
-
-    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
-    ip: Mapped[str] = mapped_column(String(45), nullable=False)  # IPv6 max 45
-    label: Mapped[str | None] = mapped_column(String(200), nullable=True)
-    marked_at: Mapped[str] = mapped_column(String(50), nullable=False)  # ISO 8601
+# v6.99.115: KnownDevIp RIMOSSO insieme alla dashboard analytics interna
+# (sostituita da Matomo self-hosted). La tabella known_dev_ips e' droppata
+# dalla migration 023. La telemetria API (ApiRequestLog) resta.

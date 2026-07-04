@@ -27,7 +27,6 @@ from src.api.routes import (
     admin_insights,
     admin_pages,
     agents_insights,
-    analytics,
     chains,
     citations,
     cities_routes,
@@ -262,9 +261,9 @@ async def lifespan(app: FastAPI):
     for _path, _methods, _deps in iter_effective_api_routes(app.routes):
         if not _path.startswith("/admin/"):
             continue
-        # traffic-fix #2: le shell HTML pubbliche (/admin/analytics, /admin/brief)
-        # NON richiedono verify_admin di proposito (solo layout, dati protetti a
-        # parte). Allowlist esplicita per non generare falsi ERROR nel guard.
+        # traffic-fix #2: la shell HTML pubblica (/admin/brief) NON richiede
+        # verify_admin di proposito (solo layout, dati protetti a parte).
+        # Allowlist esplicita per non generare falsi ERROR nel guard.
         if _path in admin_pages.PUBLIC_ADMIN_SHELLS:
             continue
         _admin_paths.append(_path)
@@ -501,13 +500,15 @@ app.include_router(snapshot.router)
 # proxy request.client.host = IP del proxy, non del client reale.
 # Vedi src/api/deps.py + docs/auto-iter-wave0/wave-1-1/.
 _admin_deps = [Depends(verify_admin)]
-app.include_router(analytics.router, dependencies=_admin_deps)
+# v6.99.115: analytics.router rimosso — dashboard analytics interna sostituita
+# da Matomo self-hosted (stats.cra-srl.com); la telemetria API resta (vedi
+# RequestLoggingMiddleware + agents_insights).
 app.include_router(admin_insights.router, dependencies=_admin_deps)
 app.include_router(admin_cache.router, dependencies=_admin_deps)
 app.include_router(admin_cofounder.router, dependencies=_admin_deps)
-# traffic-fix #2: shell PUBBLICHE delle dashboard admin (/admin/analytics,
-# /admin/brief) — solo layout + admin-auth.js, nessun dato. I DATI restano
-# protetti dai router admin qui sopra. NESSUN verify_admin su queste 2 shell
+# traffic-fix #2: shell PUBBLICA della dashboard admin (/admin/brief) — solo
+# layout + admin-auth.js, nessun dato. I DATI restano protetti dai router
+# admin qui sopra. NESSUN verify_admin su questa shell
 # (allowlist in admin_pages.PUBLIC_ADMIN_SHELLS, nota allo startup-guard).
 app.include_router(admin_pages.router)
 app.include_router(timeline.router)

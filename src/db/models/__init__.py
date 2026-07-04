@@ -15,7 +15,7 @@ Mapping:
 - `archaeology`: ArchaeologicalSite
 - `rulers`: HistoricalRuler
 - `languages`: HistoricalLanguage
-- `observability`: ApiRequestLog, AiSuggestion, KnownDevIp
+- `observability`: ApiRequestLog, AiSuggestion
 
 IMPORTANTE per SQLAlchemy: tutte le classi devono essere importate qui
 affinche' siano registrate in `Base.metadata` per migration + create_all.
@@ -45,7 +45,6 @@ from src.db.models.languages import HistoricalLanguage  # noqa: F401
 from src.db.models.observability import (  # noqa: F401
     AiSuggestion,
     ApiRequestLog,
-    KnownDevIp,
 )
 from src.db.models.periods import HistoricalPeriod  # noqa: F401
 from src.db.models.places import HistoricalCity, RouteCityLink, TradeRoute  # noqa: F401
@@ -80,7 +79,6 @@ __all__ = [
     # observability
     "ApiRequestLog",
     "AiSuggestion",
-    "KnownDevIp",
     # feedback (Phase G1)
     "FeedbackSubmission",
 ]

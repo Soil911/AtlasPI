@@ -30,8 +30,8 @@ def _admin_routes(client):
     """
     out = []
     for path, methods, _deps in iter_effective_api_routes(client.app.routes):
-        # traffic-fix #2: le shell HTML pubbliche (analytics, brief) NON sono
-        # protette di proposito (solo layout; i dati sono protetti a parte).
+        # traffic-fix #2: la shell HTML pubblica (brief) NON e' protetta di
+        # proposito (solo layout; i dati sono protetti a parte).
         if path.startswith("/admin/") and path not in PUBLIC_ADMIN_SHELLS:
             for m in methods:
                 if m in ("GET", "POST", "PATCH", "DELETE", "PUT"):
@@ -47,15 +47,20 @@ def _safe_path(path: str) -> str:
 class TestAdminAuth:
 
     def test_admin_routes_discovered(self, client):
-        """Sanity: ci sono almeno 15 route /admin/* registrate."""
+        """Sanity: ci sono almeno 12 route /admin/* registrate.
+
+        v6.99.115: soglia 15→12 — rimossi /admin/analytics/data e i 3
+        endpoint /admin/dev-ips insieme alla dashboard analytics interna
+        (sostituita da Matomo self-hosted, vedi admin_pages.py).
+        """
         routes = _admin_routes(client)
-        assert len(routes) >= 15, (
-            f"Expected >=15 admin routes, got {len(routes)}: {routes}"
+        assert len(routes) >= 12, (
+            f"Expected >=12 admin routes, got {len(routes)}: {routes}"
         )
 
     def test_public_admin_shells_load_without_auth(self, unauth_client):
-        """traffic-fix #2: le shell HTML (analytics, brief) sono pubbliche di
-        proposito — caricano senza auth (i DATI restano protetti via XHR)."""
+        """traffic-fix #2: la shell HTML (brief) e' pubblica di proposito —
+        carica senza auth (i DATI restano protetti via XHR)."""
         for path in sorted(PUBLIC_ADMIN_SHELLS):
             r = unauth_client.get(path)
             assert r.status_code == 200, f"{path} shell dovrebbe essere pubblica, got {r.status_code}"

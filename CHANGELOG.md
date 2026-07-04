@@ -2,6 +2,34 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.116] - 2026-07-03 (M2: Matomo al posto della dashboard analytics interna + IndexNow)
+
+**Tema**: *Decisione di Clirim: via le analytics interne, statistiche web con
+Matomo (istanza self-hosted già esistente su stats.cra-srl.com, la stessa del
+sito aziendale). SCOPING IMPORTANTE: rimosse le analytics UMANE (dashboard,
+endpoint dati, dev-ips); la TELEMETRIA API resta perché alimenta l'AI
+Co-Founder (analyzer `failed_searches`, uno dei 7 core di CLAUDE.md), gli
+agent-insights (Phase G3) e il daily brief — è sistema qualità, non analytics.*
+
+- **Matomo**: nuovo sito "AtlasPI" (siteId 2) creato via API nell'istanza
+  esistente (token di automazione salvato SOLO sul VPS in
+  `/root/.atlaspi-secrets`); snippet cookieless (come il sito aziendale:
+  `disableCookies`, niente banner necessario) su 6 pagine umane (app, landing,
+  about, faq, docs-ui, showcase — NON su embed/widget iframe); CSP aggiornata
+  (script/img/connect-src += stats.cra-srl.com).
+- **RIMOSSO**: `src/api/routes/analytics.py` (dashboard `/admin/analytics`,
+  `/admin/analytics/data`, `/admin/dev-ips` ×3, helper external-filter),
+  shell pubblica, modello `KnownDevIp` + **migration 023** (drop
+  `known_dev_ips` — conteneva solo pochi IP di sviluppo), 4 file di test
+  (v6120/v649/v652/v653), nav link nel brief. `PUBLIC_ADMIN_SHELLS` =
+  {"/admin/brief"}.
+- **CONSERVATO** (esplicitamente): `RequestLoggingMiddleware` +
+  `api_request_logs` + retention 90gg, `agents_insights`, `admin_insights`
+  (Co-Founder Brief), `/metrics` Prometheus. I log storici delle richieste
+  NON vengono persi.
+- **IndexNow** (M2): chiave in `static/indexnow.txt` — ping a Bing/Yandex
+  post-deploy senza bisogno di login.
+
 ## [v6.99.115] - 2026-07-04 (AI Co-Founder: stop al rumore degli scanner probe)
 
 **Tema**: *implementata la suggestion #93 (accepted). `analyze_failed_searches()`
