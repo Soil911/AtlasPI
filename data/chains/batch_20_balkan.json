@@ -45,7 +45,7 @@
     ]
   },
   {
-    "name": "Serbian state trunk: Raska → Srpsko Carstvo → Српска деспотовина → Ottoman → Jugoslavija → Serbia",
+    "name": "Serbian state trunk: Raska → Srpsko Carstvo → Српска деспотовина → Ottoman → Кнежевина Србија → Југославија (СХС → СФРЈ)",
     "name_lang": "en",
     "chain_type": "SUCCESSION",
     "region": "Balkans / Serbia",
@@ -93,6 +93,30 @@
         "is_violent": true,
         "description": "Serbia fully incorporated into the Ottoman Empire. The Patriarchate of Peć (restored 1557) became the vehicle of Serbian religious and cultural identity through 400 years of Ottoman rule.",
         "ethical_notes": "The Great Migrations of Serbs (1690, 1739) into Habsburg territory reshaped the ethnic map of the Balkans and are often cited in modern Serbian-Croatian disputes."
+      },
+      {
+        "entity_name": "Кнежевина Србија",
+        "transition_year": 1815,
+        "transition_type": "DECOLONIZATION",
+        "is_violent": true,
+        "description": "Serbian self-rule re-emerged from the Ottoman Empire through the uprisings of 1804-1815: de facto autonomy from the Second Uprising settlement (1815), hereditary autonomous principality by hatt-i sharif (1830), full international independence at the Treaty of Berlin (1878), kingdom from 1882.",
+        "ethical_notes": "The transition was a violent decolonization (two uprisings, 1804-13 and 1815). ETHICS-002: the consolidating Serbian state was also a perpetrator - the 1862-67 removal of the Muslim population from the garrison towns and the 1878 expulsions from the Nis/Toplica sanjaks (~49,000 Albanians among at least 71,000 Muslims) are recorded on the entity."
+      },
+      {
+        "entity_name": "Краљевина Срба, Хрвата и Словенаца",
+        "transition_year": 1918,
+        "transition_type": "UNIFICATION",
+        "is_violent": false,
+        "description": "On 1 December 1918 the Kingdom of Serbia merged with the State of Slovenes, Croats and Serbs (and, via the contested Podgorica Assembly, with Montenegro) into the Kingdom of Serbs, Croats and Slovenes, renamed Yugoslavia in 1929.",
+        "ethical_notes": "The Serbia-side unification was negotiated and peaceful; the Montenegrin absorption was contested and its aftermath violent (Christmas Uprising 1919) - see the Montenegrin chain, where that link is typed ANNEXATION."
+      },
+      {
+        "entity_name": "Социјалистичка Федеративна Република Југославија",
+        "transition_year": 1945,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "The Axis invasion (April 1941) destroyed the kingdom; after four years of occupation, partition, genocide (NDH camps, Jasenovac) and multi-sided war, the communist Partisans established the Federal People's Republic (AVNOJ 1943; monarchy abolished 29 November 1945).",
+        "ethical_notes": "The 1941-45 period saw occupation, the Holocaust and the Ustasa genocide of Serbs, Roma and Jews, and civil war among resistance movements - the socialist state emerged from that violence, not from a peaceful succession."
       }
     ]
   },

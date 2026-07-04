@@ -1,0 +1,137 @@
+[
+  {
+    "name": "Saudi dynastic states: إمارة الدرعية → إمارة نجد → المملكة العربية السعودية",
+    "name_lang": "en",
+    "chain_type": "DYNASTY",
+    "region": "Arabian Peninsula / Najd",
+    "description": "The three Saudi-Wahhabi states of the Al Saud: the Emirate of Diriyah (1744-1818, destroyed by the Ottoman-Egyptian expedition), the Emirate of Najd (1824-1891, ended by the Rashidi conquest at Mulayda), and the Kingdom of Saudi Arabia (proclaimed 1932 after Ibn Saud's 1902-1932 reconquest and unification).",
+    "confidence_score": 0.8,
+    "ethical_notes": "ETHICS-002: every transition in this chain is violent and is recorded as such. The chain is DYNASTIC (same Al Saud house), not an unbroken state: two interregna (1818-1824 under Egyptian occupation after Ibrahim Pasha razed Diriyah and had Imam Abdullah bin Saud executed; 1891-1902 under Rashidi rule with the Al Saud exiled in Kuwait) are documented on the links, not papered over. The third state's unification was by conquest: Riyadh 1902, Ha'il 1921, the Hejaz 1924-25 (including the Ta'if massacre of 1924, ~300-400 civilians killed by the Ikhwan) - per the cross-check, the 1932 transition is typed UNIFICATION (conquest-built), not 'restoration'. The state-sponsored 2022 re-dating of the first state's founding to 1727 is treated as politicized periodization (see the Diriyah entity record).",
+    "sources": [
+      {
+        "citation": "Madawi Al-Rasheed, A History of Saudi Arabia, Cambridge University Press, 2002 (2nd ed. 2010)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Alexei Vassiliev, The History of Saudi Arabia, Saqi Books, 1998",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "R. Bayly Winder, Saudi Arabia in the Nineteenth Century, Macmillan, 1965",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "links": [
+      {
+        "entity_name": "إمارة الدرعية",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "The first Saudi state: the 1744 pact between Muhammad ibn Saud and Muhammad ibn Abd al-Wahhab turned the Diriyah town emirate into an expansionist religious-political state that conquered Najd, al-Hasa and the Hejaz.",
+        "ethical_notes": null
+      },
+      {
+        "entity_name": "إمارة نجد",
+        "transition_year": 1824,
+        "transition_type": "RESTORATION",
+        "is_violent": true,
+        "description": "Al Saud restoration after a six-year interregnum (1818-1824): Ibrahim Pasha's Ottoman-Egyptian army had razed Diriyah (1818) and executed Imam Abdullah bin Saud in Istanbul; in 1824 Turki ibn Abdullah retook Riyadh from the Egyptian garrison by siege and made it the new capital.",
+        "ethical_notes": "The 1818-1824 gap (Egyptian occupation, failed risings of Mishari bin Saud 1819-20 and Turki 1821-23) is real and documented - the chain records a dynastic restoration, not state continuity."
+      },
+      {
+        "entity_name": "المملكة العربية السعودية",
+        "transition_year": 1932,
+        "transition_type": "UNIFICATION",
+        "is_violent": true,
+        "description": "After the Rashidi conquest of Najd (Mulayda 1891) and Al Saud exile in Kuwait, Abdulaziz Ibn Saud retook Riyadh in 1902 and unified the peninsula by conquest over three decades: Ha'il and the Rashidi emirate (1921), the Hejaz (1924-25), proclamation of the Kingdom of Saudi Arabia on 23 September 1932.",
+        "ethical_notes": "Typed UNIFICATION (not 'restoration') per cross-check: the third state was conquest-built. The conquest of the Hejaz included the Ta'if massacre (September 1924, ~300-400 civilians killed by the Ikhwan); the Ikhwan themselves were crushed by Ibn Saud at Sabilla (1929) when they pressed to continue raiding."
+      }
+    ]
+  },
+  {
+    "name": "Nepalese state: गोर्खा राज्य → सङ्घीय लोकतान्त्रिक गणतन्त्र नेपाल",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "South Asia / Himalaya",
+    "description": "The Nepalese state from the Gorkha conquest-founded Shah kingdom (1768) to the Federal Democratic Republic declared on 28 May 2008 by the 1st Constituent Assembly, which abolished the 240-year monarchy.",
+    "confidence_score": 0.9,
+    "ethical_notes": "ETHICS-002: the 2008 transition is typed REVOLUTION with is_violent=true - the abolition vote itself (560-4) was peaceful and King Gyanendra left the palace without resistance, but the republic was the direct outcome of the 1996-2006 civil war (~13,000 deaths documented by OHCHR, Nepali government figures to ~17,000; the majority of documented killings attributed to state security forces per INSEC) and of the April 2006 Jana Andolan II uprising (~18-25 protesters killed by royal security forces). Marking it non-violent would erase the war that produced it.",
+    "sources": [
+      {
+        "citation": "John Whelpton, A History of Nepal, Cambridge University Press, 2005",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "OHCHR, Nepal Conflict Report, 2012",
+        "url": "https://www.ohchr.org/en/documents/reports/nepal-conflict-report",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Sebastian von Einsiedel, David M. Malone, Suman Pradhan (eds.), Nepal in Transition: From People's War to Fragile Peace, Cambridge University Press, 2012",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "links": [
+      {
+        "entity_name": "गोर्खा राज्य",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "The Shah kingdom founded by Prithvi Narayan Shah's conquest of the Kathmandu valley (1768-69), expanded through the Anglo-Nepalese war (1814-16, Sugauli treaty), ruled 1846-1951 by the hereditary Rana premiership, and ended by the 2006-08 peace process.",
+        "ethical_notes": null
+      },
+      {
+        "entity_name": "सङ्घीय लोकतान्त्रिक गणतन्त्र नेपाल",
+        "transition_year": 2008,
+        "transition_type": "REVOLUTION",
+        "is_violent": true,
+        "description": "On 28 May 2008 the newly elected Constituent Assembly abolished the monarchy (560-4) and declared a federal democratic republic; Gyanendra Shah left Narayanhiti palace peacefully on 11 June 2008.",
+        "ethical_notes": "is_violent=true refers to the revolutionary process (1996-2006 people's war, ~13,000-17,000 dead; 2006 Jana Andolan II), not to the final vote, which was peaceful - see chain-level note."
+      }
+    ]
+  },
+  {
+    "name": "Taqali and the Mahdiyya: مملكة تقلي → الدولة المهدية",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Northeast Africa / Sudan (Nuba mountains)",
+    "description": "The Nuba-mountains kingdom of Taqali, independent for over three centuries, conquered by the Mahdist state: invaded from 1883, its ruler Makk Adam captured in July 1884 (he died in Mahdist captivity); the Mahdiyya itself was destroyed by the British-led Anglo-Egyptian reconquest in 1898-99.",
+    "confidence_score": 0.7,
+    "ethical_notes": "ETHICS-002: the transition is a violent conquest and is recorded as such. Taqali's resistance in the hills was never fully broken - Mahdist control of the Nuba mountains remained contested, and a Taqali lineage re-emerged as a client under the Anglo-Egyptian Condominium; the chain records the 1884 destruction of the independent kingdom, not a total erasure of the Taqali polity's people. The successor's own end (Omdurman 1898, ~10,000-12,000 Sudanese dead to Maxim guns and artillery against 48 British-led casualties; Condominium agreement 1899) is colonial violence, perpetrator named on the Mahdist entity record.",
+    "sources": [
+      {
+        "citation": "Janet J. Ewald, Soldiers, Traders, and Slaves: State Formation and Economic Transformation in the Greater Nile Valley, 1700-1885, University of Wisconsin Press, 1990",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "P. M. Holt, The Mahdist State in the Sudan, 1881-1898, 2nd ed., Clarendon Press, 1970",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "links": [
+      {
+        "entity_name": "Taqali",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "The kingdom of Taqali in the Nuba mountains (from ~1570), a hill state that preserved independence from Sennar and from Turco-Egyptian Sudan through tribute diplomacy and mountain warfare.",
+        "ethical_notes": null
+      },
+      {
+        "entity_name": "Dawla al-Mahdiyya",
+        "transition_year": 1884,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Mahdist forces invaded Taqali from 1883; Makk Adam was captured in July 1884 and died in Mahdist captivity. Resistance in the hills continued through the Mahdist period.",
+        "ethical_notes": "Violent conquest, perpetrator named (Mahdist state). Taqali's entity record ends 1884 with this conquest."
+      }
+    ]
+  }
+]

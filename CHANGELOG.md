@@ -2,6 +2,49 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.120] - 2026-07-04 (M1/ETHICS-020: 8 entità-sblocco + rename Lan Xang + catene complete)
+
+*Chiude il residuo M1 da ETHICS-017. Metodo: workflow multi-agente
+(ricercatore + fact-checker avversariale per entità, fonti verificate) +
+cross-check ChatGPT sulle 8 decisioni di incatenamento (2 DISAGREE recepiti:
+entità Serbia 1815-1918 creata invece del link diretto Ottomano→SHS;
+transizione saudita 1932 = UNIFICATION, non "restoration"). Record: ETHICS-020.*
+
+- **Scoperta**: 3 delle 11 entità pianificate ESISTEVANO GIÀ su prod — le
+  guardie SQL + ricognizione per varianti hanno evitato duplicati. Lan Xang =
+  #128 (ma col nome in script THAI `ล้านช้าง` e lang='lo': **rinominato** alla
+  forma lao attestata `ອານາຈັກລ້ານຊ້າງ`, pattern Wadai/ETHICS-001, forma thai →
+  variante); Stato Mahdista = #736 e Medri Bahri = #658 (entrambi nella coda
+  M4 dei rename nativi prod-only: JSON-land li chiama `Dawla al-Mahdiyya` /
+  `Medri Bahri`). L'handoff e le note ETHICS-017 erano erronei su questo.
+- **8 entità nuove** (1039→1047): Cambogia post-angkoriana
+  `កម្ពុជា (Longvek-Oudong)` (1431-1863), Repubblica Khmer (1970-75, follow-up
+  ETHICS-019, QID Q1054184), Кнежевина Србија (1815-1918), Regno SHS/Jugoslavia
+  (1918-41), Emirato di Dirʿiyya (1744-1818), Emirato di Najd (1824-91), Nepal
+  repubblicano (2008-), Mthwakazi/Ndebele (1838-93). Tutte con endonimo
+  primario attestato, boundary historical_approximation validato (antimeridian
+  guard), 3+ fonti accademiche verificate, QID verificato, note etiche
+  non-eufemistiche (perpetratori nominati, letture contese registrate).
+- **Catene estese** (dual-write JSON+SQL): 123/124/125 lao (prepend Lan Xang
+  #128, PARTITION 1707/1713), 126 cambogiana (prepend Khmer Empire #19 +
+  post-Angkor; estensione in avanti deliberatamente NON fatta finché manca la
+  PRK), 34 serba (append Србија → СХС → СФРЈ #231), 130 montenegrina (append
+  СХС con ANNEXATION 1918 is_violent — entrambe le letture registrate).
+- **3 catene nuove**: saudita (Dirʿiyya → Najd → Regno #253, DYNASTY,
+  interregni documentati), nepalese (Gorkha #399 → repubblica, REVOLUTION
+  2008), Taqali (#411 → Mahdiyya #736, CONQUEST 1884) — sbloccati gli ultimi
+  3 orfani Class-1 con controparte mancante.
+- **PERF /v1/stats**: il conteggio per continente materializzava TUTTE le
+  entità coi blob boundary_geojson (~48MB) solo per le coordinate delle
+  capitali → ora seleziona solo le 2 colonne (fix del
+  test_stats_under_200ms, 227ms→<50ms).
+- **Generatore**: `scripts/apply_m1_unlock.py` (correzioni fact-checker
+  incluse) → batch_37 entità/catene + chirurgia batch_02/20/35/36 +
+  `scripts/sql_m1_unlock_entities.sql` (transazionale, guardie + validazione
+  contiguità seq + antimeridian). Ricerca committata in
+  `data/enrichment/m1_unlock_research_20260704.json` (incl. i dossier
+  Lan Xang/Mahdiyya/Medri Bahri come enrichment M4).
+
 ## [v6.99.119] - 2026-07-04 (M3 agent-UX: machine-facing in inglese + on-this-day completo)
 
 *Strategia lingua esplicita (M3): l'API è consumata da agenti AI — il

@@ -49,17 +49,21 @@ misurata. Ordine per leva: M2 > M3 > M1 > M4 > enrichment.
 ### M1 — Layer catene/entità COMPLETO (residuo)
 ~~B1c: catene Class-1 rimanenti~~ ✅ **FATTA in v6.99.110** (21 catene nuove + 3
 estensioni, ETHICS-017; 2026-07-02). Residuo M1:
-- Entità nuove che sbloccano il completamento (da ETHICS-017): Lan Xang, Regno SHS
-  (serve anche alla catena serba #34), Cambogia post-angkoriana, Regno Ndebele,
-  Emirati di Dirʿiyya/Najd, Nepal repubblicano, Stato Mahdista → poi Saudi #253,
-  Gorkha #399, Taqali #411 diventano incatenabili.
+- ~~Entità-sblocco~~ ✅ **FATTE in v6.99.120** (ETHICS-020: 8 entità nuove —
+  Cambogia post-Angkor, Repubblica Khmer, Serbia 1815-1918 (aggiunta su
+  indicazione del cross-check), Regno SHS, Dirʿiyya, Najd, Nepal repubblicano,
+  Mthwakazi/Ndebele — più il rename nativo di Lan Xang #128 (era in script thai);
+  Mahdiyya e Medri Bahri esistevano GIÀ (#736/#658, coda rename M4). Catene
+  34/123/124/125/126/130 estese + 3 nuove per Saudi #253, Gorkha #399,
+  Taqali #411 — orfani Class-1 esauriti. Follow-up espliciti in ETHICS-020:
+  PRK 1979-89, Eritrea italiana, Serbia moderna.
 - Design split Sri Lanka #142 (nome = un re, non l'entità) e valutazione Kemet #26
-  (ETHICS record prima); dedup trunk etiope (#22/#100 + entità #853 dup di #51);
-  entità-fase meroitica nativa (vedi note catena #99).
+  (ETHICS record prima — dossier di ricerca pronti, 2026-07-04); dedup trunk etiope
+  (#22/#100 + entità #853 dup di #51); entità-fase meroitica nativa (dossier pronto,
+  vedi note catena #99).
 - ~~Flag qualità da B1c: rename #534 e verifica #240~~ ✅ **FATTI in v6.99.118**
   (ETHICS-019: #240 → `កម្ពុជាប្រជាធិបតេយ្យ` Kampuchea Democratica + QID Q330988;
   #534 → `Anpi an Ayiti`, entity_type=empire, variante `Empire d'Haïti`).
-  Follow-up in coda: entità Repubblica Khmer (1970-75) propria.
 
 ### M2 — Discoverability (🌍 CUTOVER FATTO: **https://atlaspi.it** live, v6.99.114)
 Dominio dedicato registrato da Clirim e cutover eseguito il 2026-07-03: PR #5 mergiata,

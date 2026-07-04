@@ -1,0 +1,1477 @@
+[
+  {
+    "name_original": "កម្ពុជា (Longvek-Oudong)",
+    "name_original_lang": "km",
+    "entity_type": "kingdom",
+    "year_start": 1431,
+    "year_end": 1863,
+    "capital_name": "Oudong (ឧដុង្គ)",
+    "capital_lat": 11.8239,
+    "capital_lon": 104.7425,
+    "confidence_score": 0.7,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            103,
+            10.9
+          ],
+          [
+            104.5,
+            10.4
+          ],
+          [
+            106,
+            10.8
+          ],
+          [
+            106.5,
+            12
+          ],
+          [
+            106.2,
+            13.4
+          ],
+          [
+            105,
+            14.2
+          ],
+          [
+            103.2,
+            14
+          ],
+          [
+            102.6,
+            13.2
+          ],
+          [
+            102.9,
+            12
+          ],
+          [
+            103,
+            10.9
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "ethical_notes": "ETHICS-002: The period opened and closed with violence and coercion. Ayutthaya (Siam) sacked the Khmer capital Yasodharapura (Angkor) around 1431, and on 3 January 1594 King Naresuan of Ayutthaya stormed and looted the capital Longvek, deporting much of its population — remembered in Khmer tradition as a national catastrophe. ETHICS-002: The Nguyen lords of Vietnam progressively annexed Kampuchea Krom (the Mekong Delta): in 1698 Nguyen Huu Canh administratively detached Prey Nokor (renamed Sai Gon) from Cambodia, and by 1757 the entire delta was absorbed, leaving the Khmer Krom a dispossessed minority under Vietnamese rule to this day. ETHICS-002: In 1834-1841 Emperor Minh Mang annexed Cambodia outright as the Vietnamese province of Tran Tay, installed Queen Ang Mey as a puppet and imposed forced Vietnamization, until a Khmer rebellion and Siamese intervention restored King Ang Duong under joint Siamese-Vietnamese suzerainty (formalized 1845-1847); Siam separately seized Battambang and Siem Reap provinces in 1794. ETHICS-002: The 11 August 1863 'protection' treaty with France was signed by King Norodom under French naval-diplomatic pressure and as an escape from Siamese-Vietnamese domination — a colonial protectorate, not a partnership of equals. ETHICS-001: The primary name is the attested Khmer endonym កម្ពុជា (Kampuchea, attested since the Baksei Chamkrong inscription, 947 CE, and throughout the Middle Period); 'Cambodia', 'Camboja' and 'Cambodge' are European exonyms kept in name_variants. The 'Dark Age' framing (reflected in the Khmer Wikidata label យុគអន្ធកាលនៃកម្ពុជា) is contested historiography — Vickery and later scholarship show an era of reorientation toward maritime trade, not simple decay.",
+    "wikidata_qid": "Q4919413",
+    "name_variants": [
+      {
+        "name": "Post-Angkor Cambodia",
+        "lang": "en",
+        "context": "modern historiographical term (Wikidata Q4919413)",
+        "period_start": 1431,
+        "period_end": 1863,
+        "source": "Wikidata Q4919413; Chandler 2008"
+      },
+      {
+        "name": "Middle Period Cambodia",
+        "lang": "en",
+        "context": "alternative historiographical term used by Chandler and Vickery",
+        "period_start": 1431,
+        "period_end": 1863,
+        "source": "Chandler, A History of Cambodia (2008)"
+      },
+      {
+        "name": "Kampuchea (Longvek-Oudong)",
+        "lang": "km-Latn",
+        "context": "romanization of the Khmer endonym កម្ពុជា with DB disambiguator (modern Kingdom of Cambodia holds the unqualified name)",
+        "period_start": 1431,
+        "period_end": 1863,
+        "source": "Names of Cambodia (endonym attested from 947 CE inscription onward)"
+      },
+      {
+        "name": "ស្រុកខ្មែរ (Srok Khmer)",
+        "lang": "km",
+        "context": "colloquial endonym, 'land of the Khmers'",
+        "period_start": null,
+        "period_end": null,
+        "source": "Names of Cambodia"
+      },
+      {
+        "name": "Camboja",
+        "lang": "pt",
+        "context": "16th-17th-century Iberian exonym used by Portuguese and Spanish visitors to Longvek",
+        "period_start": 1500,
+        "period_end": 1700,
+        "source": null
+      },
+      {
+        "name": "Cambodge",
+        "lang": "fr",
+        "context": "French exonym, official under the 1863 protectorate",
+        "period_start": 1863,
+        "period_end": null,
+        "source": "Treaty of 11 August 1863"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1431,
+        "region": "Angkor (Yasodharapura) and northwest heartland",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ayutthaya (Siam) captured and sacked the Khmer capital Yasodharapura (Angkor); the royal court shifted south to Chaktomuk (Phnom Penh), founding the Middle Period. Conventional date — the exact nature and year of the Siamese intervention are debated (Vickery 1977), and Angkor's abandonment was gradual.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1594,
+        "region": "Longvek (capital, Tonle Sap west bank)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "King Naresuan of Ayutthaya stormed, looted and destroyed the capital Longvek on 3 January 1594, ending the Siamese-Cambodian War of 1591-1594; population deported, Cambodia reduced to intermittent Siamese vassalage. Court later re-established at Oudong (1618).",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1698,
+        "region": "Kampuchea Krom / Mekong Delta (Prey Nokor-Saigon)",
+        "change_type": "CESSION_FORCED",
+        "description": "The Nguyen lords commissioned Nguyen Huu Canh to organize Prey Nokor (renamed Sai Gon) under Vietnamese administration, de facto detaching it from Cambodia; by 1757 the whole delta (Psar Dek/Sa Dec, Moat Chrouk/Chau Doc) was absorbed into Vietnam, dispossessing the Khmer Krom.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1863,
+        "region": "Entire kingdom",
+        "change_type": "TREATY",
+        "description": "King Norodom signed the French protectorate treaty on 11 August 1863 under French naval-diplomatic pressure, ending the Siamese-Vietnamese dual vassalage; the monarchy survived but power passed to a French resident. Successor chain leads into French Indochina (federation formed 1887).",
+        "population_affected": null,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "David Chandler, A History of Cambodia, 4th ed. (Boulder: Westview Press, 2008)",
+        "source_type": "academic",
+        "url": "https://www.routledge.com/A-History-of-Cambodia/Chandler/p/book/9780813343631"
+      },
+      {
+        "citation": "Mak Phoeun, Histoire du Cambodge de la fin du XVIe siècle au début du XVIIIe siècle (Paris: École française d'Extrême-Orient, 1995)",
+        "source_type": "academic",
+        "url": "https://angkordatabase.asia/books/histoire-du-cambodge-de-la-fin-du-xvie-au-xviiieme-siecle"
+      },
+      {
+        "citation": "Khin Sok, Le Cambodge entre le Siam et le Viêtnam (de 1775 à 1860) (Paris: École française d'Extrême-Orient, 1991)",
+        "source_type": "academic",
+        "url": "https://publications.efeo.fr/en/livres/192_le-cambodge-entre-le-siam-et-le-vietnam-de-1775-a-1860"
+      },
+      {
+        "citation": "Michael Vickery, Cambodia After Angkor: The Chronicular Evidence for the Fourteenth to Sixteenth Centuries (PhD dissertation, Yale University, 1977)",
+        "source_type": "academic",
+        "url": "http://michaelvickery.org/"
+      }
+    ]
+  },
+  {
+    "name_original": "សាធារណរដ្ឋខ្មែរ",
+    "name_original_lang": "km",
+    "entity_type": "republic",
+    "year_start": 1970,
+    "year_end": 1975,
+    "capital_name": "Phnom Penh (ភ្នំពេញ)",
+    "capital_lat": 11.5564,
+    "capital_lon": 104.9282,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            102.35,
+            13.55
+          ],
+          [
+            102.75,
+            11.65
+          ],
+          [
+            103.55,
+            10.55
+          ],
+          [
+            104.45,
+            10.42
+          ],
+          [
+            105.35,
+            10.85
+          ],
+          [
+            106.2,
+            10.95
+          ],
+          [
+            106,
+            11.75
+          ],
+          [
+            107.55,
+            12.35
+          ],
+          [
+            107.5,
+            14.45
+          ],
+          [
+            105.9,
+            14.15
+          ],
+          [
+            104.6,
+            14.4
+          ],
+          [
+            103.1,
+            14.3
+          ],
+          [
+            102.35,
+            13.55
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "ethical_notes": "ETHICS-002: The United States (Nixon administration, US Air Force) bombed the Cambodian countryside in Operations Menu (1969-70) and Freedom Deal (1970 to 15 August 1973), killing an estimated 50,000-150,000 Cambodian civilians per Kiernan and Owen — the toll is disputed, and the underlying tonnage data were themselves revised (c. 2.76 million tons claimed in their 2006 analysis, corrected to roughly 500,000 tons for 1969-73 in their 2015 re-analysis). Shawcross, Chandler and Kiernan all argue the bombing devastated rural society and materially aided Khmer Rouge recruitment. ETHICS-002: In April 1970 the Lon Nol government organized and tolerated pogroms against Cambodia's c. 400,000-strong ethnic Vietnamese minority: army, police and mobs massacred thousands of civilians, whose bodies floated down the Mekong into South Vietnam, and most of the surviving community fled or was expelled. The Khmer Republic was a US-backed military dictatorship whose 1972 presidential election of Lon Nol was widely regarded as rigged, and which survived only on US military and economic aid until the Khmer Rouge took Phnom Penh on 17 April 1975. ETHICS-001: the primary name is the attested Khmer form សាធារណរដ្ឋខ្មែរ (Sathearonaroat Khmae); the French co-official name République khmère is recorded as a variant. This record fills the 1970-75 gap created by the ETHICS-019 correction, under which the Democratic Kampuchea record (#240) had wrongly carried this state's name.",
+    "wikidata_qid": "Q1054184",
+    "name_variants": [
+      {
+        "name": "Khmer Republic",
+        "lang": "en",
+        "context": "English name",
+        "period_start": 1970,
+        "period_end": 1975,
+        "source": "Wikidata Q1054184"
+      },
+      {
+        "name": "Sathearonaroat Khmae",
+        "lang": "km-Latn",
+        "context": "romanization of សាធារណរដ្ឋខ្មែរ",
+        "period_start": 1970,
+        "period_end": 1975,
+        "source": "en.wikipedia.org/wiki/Khmer_Republic"
+      },
+      {
+        "name": "République khmère",
+        "lang": "fr",
+        "context": "official name in French, co-official language of the republic",
+        "period_start": 1970,
+        "period_end": 1975,
+        "source": "en.wikipedia.org/wiki/Khmer_Republic"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1970,
+        "region": "Phnom Penh / nationwide",
+        "change_type": "REVOLUTION",
+        "description": "18 March 1970: National Assembly vote led by Prime Minister Lon Nol and Sisowath Sirik Matak deposed head of state Norodom Sihanouk while he was abroad; the monarchy was abolished and the Khmer Republic formally proclaimed on 9 October 1970. Sihanouk formed the GRUNK government-in-exile allied with the Khmer Rouge, starting full-scale civil war.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1970,
+        "region": "Phnom Penh and Mekong lowlands",
+        "change_type": "ETHNIC_CLEANSING",
+        "description": "April 1970: pogroms against Cambodia's c. 400,000-strong ethnic Vietnamese minority, organized and tolerated by the Lon Nol government — army and police rounded up, interned and massacred thousands of civilians (bodies floated down the Mekong into South Vietnam); most of the surviving community fled or was expelled to South Vietnam.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1973,
+        "region": "rural Cambodia (countryside)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "By the US Congress-mandated bombing halt of 15 August 1973 (end of Operation Freedom Deal), CPK/Khmer Rouge and GRUNK forces controlled most of the countryside; the Republic was reduced to Phnom Penh, provincial capitals and supply corridors. US bombing 1969-73 killed an estimated 50,000-150,000 Cambodian civilians (Kiernan & Owen; disputed range).",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1975,
+        "region": "Phnom Penh",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "17 April 1975: the Khmer Rouge captured Phnom Penh after a siege; the Khmer Republic collapsed and was succeeded by the CPK regime (Democratic Kampuchea). The last government outpost, Preah Vihear temple, fell on 22 May 1975.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "William Shawcross, Sideshow: Kissinger, Nixon and the Destruction of Cambodia, Simon & Schuster, 1979 (rev. ed. Cooper Square Press, 2002)",
+        "source_type": "secondary",
+        "url": "https://books.google.com/books/about/Sideshow.html?id=bjtvQgAACAAJ"
+      },
+      {
+        "citation": "David P. Chandler, The Tragedy of Cambodian History: Politics, War, and Revolution since 1945, Yale University Press, 1991",
+        "source_type": "academic",
+        "url": "https://yalebooks.yale.edu/book/9780300057522/the-tragedy-of-cambodian-history/"
+      },
+      {
+        "citation": "Justin J. Corfield, Khmers Stand Up! A History of the Cambodian Government 1970-1975, Monash Papers on Southeast Asia No. 32, Centre of Southeast Asian Studies, Monash University, 1994",
+        "source_type": "academic",
+        "url": "https://catalogue.nla.gov.au/catalog/662024"
+      },
+      {
+        "citation": "Taylor Owen and Ben Kiernan, 'Bombs over Cambodia', The Walrus, October 2006",
+        "source_type": "academic",
+        "url": "https://thewalrus.ca/2006-10-history/"
+      },
+      {
+        "citation": "Ben Kiernan and Taylor Owen, 'Making More Enemies than We Kill? Calculating US Bomb Tonnages Dropped on Laos and Cambodia, and Weighing Their Implications', The Asia-Pacific Journal: Japan Focus, vol. 13, issue 16, no. 3, 2015",
+        "source_type": "academic",
+        "url": "https://apjjf.org/ben-kiernan/4313"
+      }
+    ]
+  },
+  {
+    "name_original": "Кнежевина Србија",
+    "name_original_lang": "sr",
+    "entity_type": "principality",
+    "year_start": 1815,
+    "year_end": 1918,
+    "capital_name": "Belgrade (Београд)",
+    "capital_lat": 44.8176,
+    "capital_lon": 20.4569,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            19.35,
+            44.9
+          ],
+          [
+            19.7,
+            44.77
+          ],
+          [
+            20.2,
+            44.66
+          ],
+          [
+            20.45,
+            44.82
+          ],
+          [
+            20.95,
+            44.67
+          ],
+          [
+            21.4,
+            44.78
+          ],
+          [
+            21.63,
+            44.66
+          ],
+          [
+            22.15,
+            44.47
+          ],
+          [
+            22.45,
+            44.67
+          ],
+          [
+            22.68,
+            44.55
+          ],
+          [
+            22.67,
+            44.21
+          ],
+          [
+            22.4,
+            43.85
+          ],
+          [
+            22.55,
+            43.45
+          ],
+          [
+            23,
+            43.18
+          ],
+          [
+            22.55,
+            42.85
+          ],
+          [
+            22.35,
+            42.55
+          ],
+          [
+            21.7,
+            42.32
+          ],
+          [
+            21.45,
+            42.75
+          ],
+          [
+            21,
+            43.1
+          ],
+          [
+            20.85,
+            43.25
+          ],
+          [
+            20.6,
+            43.32
+          ],
+          [
+            20.1,
+            43.45
+          ],
+          [
+            19.63,
+            43.58
+          ],
+          [
+            19.48,
+            43.75
+          ],
+          [
+            19.4,
+            43.98
+          ],
+          [
+            19.35,
+            44.2
+          ],
+          [
+            19.2,
+            44.55
+          ],
+          [
+            19.35,
+            44.9
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "ethical_notes": "ETHICS-002-relevant events, perpetrators named. (1) 1862 Belgrade crisis: after the Cukur Fountain killing of a Serb boy by Ottoman soldiers, the Ottoman garrison bombarded civilian Belgrade from the fortress (~50 killed, hundreds of houses damaged) — perpetrator: Ottoman garrison. The subsequent Great-Power Kanlica conference (1862) mandated the removal of the Muslim civilian population from Serbian towns; roughly 10,000 Muslims left the six Serbian garrison towns in the 1862-1867 wave (about 2,100 of them from Belgrade) — a state- and Great-Power-sanctioned population removal benefiting the Serbian state, recorded as ETHNIC_CLEANSING with dual agency (Ottoman bombardment; Serbian/Great-Power removal). (2) 1877-78: during and after the Serbian army's conquest of the Nis and Toplica sanjaks, the Muslim population — majority Albanian in the countryside, Turkish in towns, roughly one third of the region's population — was expelled or fled under military pressure; Serbian forces under Prince Milan Obrenovic burned villages and blocked return. Best academic estimates: ~49,000 Albanians among at least 71,000 Muslims (Jagodic 1998; Stefanovic 2005); Albanian historiography cites higher figures. Recorded as ETHNIC_CLEANSING, perpetrator the Serbian army/state. The refugees (muhaxhire) resettled in Kosovo, seeding long-term Serb-Albanian conflict. (3) Balkan Wars 1912-13: Serbian (and Montenegrin) forces conquering Kosovo and Vardar Macedonia committed massacres of Albanian civilians, village burnings and forced conversions, documented contemporaneously by the Carnegie Endowment's 1914 International Commission report — which found grave violations by ALL belligerents (Serbian, Bulgarian, Greek, Ottoman, Montenegrin); Albanians and Macedonian Slavs passed under Serbian rule without consent, under a regime of military administration. (4) WWI 1914-18: Austria-Hungary invaded (perpetrating documented mass executions of civilians in Macva/Sabac in 1914); the 1915 Central Powers conquest was followed by harsh Austro-Hungarian and Bulgarian occupation regimes (internment, forced Bulgarianization in the east, suppression of the 1917 Toplica uprising with mass reprisals); the winter 1915-16 retreat through Albania killed tens of thousands of soldiers and civilians. Serbia's total war losses: 16-28% of the pre-war population depending on methodology (~25% is a common mid-range figure) — among the highest per-capita losses of any WWI belligerent. Serbia in this entry is BOTH perpetrator (1862 removals, 1878 expulsions, 1912-13 conquests) and victim (1862 bombardment, 1914-18 invasion and occupation): both are stated without hierarchy.",
+    "wikidata_qid": "Q684030",
+    "name_variants": [
+      {
+        "name": "Кнежевина Србија",
+        "lang": "sr-Cyrl",
+        "period_start": 1815,
+        "period_end": 1882,
+        "context": "Founding form (modern standard Serbian orthography), chosen as primary per founding-form convention",
+        "source": "Standard Serbian historiography"
+      },
+      {
+        "name": "Књажество Србија",
+        "lang": "sr-Cyrl",
+        "period_start": 1830,
+        "period_end": 1882,
+        "context": "Attested official 19th-century orthography, e.g. the 1869 constitution 'Устав за Књажество Србију'",
+        "source": "Constitution of 1869"
+      },
+      {
+        "name": "Краљевина Србија",
+        "lang": "sr-Cyrl",
+        "period_start": 1882,
+        "period_end": 1918,
+        "context": "Kingdom proclaimed 6 March 1882 under Milan I Obrenovic; period variant of the same continuous state",
+        "source": "Proclamation of the Kingdom, 1882"
+      },
+      {
+        "name": "Kneževina Srbija",
+        "lang": "sr-Latn",
+        "period_start": 1815,
+        "period_end": 1882,
+        "context": "Serbian Latin script",
+        "source": null
+      },
+      {
+        "name": "Kraljevina Srbija",
+        "lang": "sr-Latn",
+        "period_start": 1882,
+        "period_end": 1918,
+        "context": "Serbian Latin script, kingdom phase",
+        "source": null
+      },
+      {
+        "name": "Principality of Serbia",
+        "lang": "en",
+        "period_start": 1815,
+        "period_end": 1882,
+        "context": "English exonym",
+        "source": null
+      },
+      {
+        "name": "Kingdom of Serbia",
+        "lang": "en",
+        "period_start": 1882,
+        "period_end": 1918,
+        "context": "English exonym, kingdom phase",
+        "source": null
+      },
+      {
+        "name": "Principauté de Serbie",
+        "lang": "fr",
+        "period_start": 1830,
+        "period_end": 1882,
+        "context": "French, diplomatic language of the era (Treaty of Berlin drafted in French)",
+        "source": "Treaty of Berlin, 1878"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1815,
+        "region": "Pashalik of Belgrade (Sumadija / Morava valley core)",
+        "change_type": "REVOLUTION",
+        "description": "Second Serbian Uprising under Milos Obrenovic (from April 1815, Takovo); negotiated settlement with Marashli Ali Pasha gave Serbs de facto self-rule within the Pashalik of Belgrade while remaining under Ottoman suzerainty.",
+        "population_affected": null,
+        "confidence_score": 0.95
+      },
+      {
+        "year": 1830,
+        "region": "Autonomous Principality (Belgrade pashalik core)",
+        "change_type": "TREATY",
+        "description": "Ottoman hatt-i sharif of 1830 (following the Akkerman Convention 1826 and Treaty of Adrianople 1829) recognized Serbia as an autonomous, tribute-paying hereditary principality under Milos Obrenovic; Ottoman garrisons remained in the fortress towns.",
+        "population_affected": null,
+        "confidence_score": 0.95
+      },
+      {
+        "year": 1833,
+        "region": "Six nahiyes (Krajina, Crna Reka, Banja/Aleksinac, Krusevac, Stari Vlah, Jadar-Radjevina)",
+        "change_type": "TREATY",
+        "description": "Supplementary hatt-i sharif of 1833 confirmed the annexation of six contested nahiyes claimed since the First Uprising, enlarging the principality to its 1833-1878 extent.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1862,
+        "region": "Belgrade and Serbian fortress towns",
+        "change_type": "ETHNIC_CLEANSING",
+        "description": "Cukur Fountain incident: Ottoman soldiers killed a Serb apprentice boy; riots followed and the Ottoman garrison bombarded civilian Belgrade from the fortress (~50 killed). The Great-Power Kanlica conference then mandated the departure of the Muslim civilian population from Serbian towns; roughly 10,000 Muslims left the six Serbian garrison towns in the 1862-1867 wave (about 2,100 of them from Belgrade). Dual agency: Ottoman garrison (bombardment); Serbian state and Great Powers (sanctioned population removal).",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1867,
+        "region": "Fortresses of Belgrade, Sabac, Smederevo, Kladovo",
+        "change_type": "TREATY",
+        "description": "Ottoman garrisons withdrew from all remaining fortresses; keys of Belgrade fortress ceremonially handed to Prince Mihailo Obrenovic on Kalemegdan (April 1867), ending the Ottoman military presence while nominal suzerainty continued.",
+        "population_affected": null,
+        "confidence_score": 0.95
+      },
+      {
+        "year": 1878,
+        "region": "Nis, Pirot, Toplica and Vranje districts",
+        "change_type": "TREATY",
+        "description": "Treaty of Berlin (13 July 1878) recognized Serbia's full independence from the Ottoman Empire and its annexation of four southeastern districts (Nis, Pirot, Toplica, Vranje) taken in the 1876-78 Serbo-Ottoman wars.",
+        "population_affected": null,
+        "confidence_score": 0.95
+      },
+      {
+        "year": 1878,
+        "region": "Nis and Toplica sanjaks (newly annexed districts)",
+        "change_type": "ETHNIC_CLEANSING",
+        "description": "During and after the 1877-78 war the Serbian army under Prince Milan Obrenovic expelled the Muslim population of the annexed regions — majority Albanian in the countryside, Turkish in the towns, about one third of the regional population. Academic estimates: ~49,000 Albanians among at least 71,000 Muslims expelled or fled without return (Jagodic 1998; Stefanovic 2005); Albanian historiography cites higher figures. Refugees (muhaxhire) resettled largely in Ottoman Kosovo.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1912,
+        "region": "Kosovo and Vardar Macedonia",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "First Balkan War (October-November 1912): Serbian army conquered Kosovo and Vardar Macedonia from the Ottoman Empire. The Carnegie Endowment's 1914 International Commission documented massacres of Albanian civilians, village burnings and forced conversions by Serbian forces, alongside grave violations by all belligerents. Albanian and Macedonian populations passed under Serbian military rule without consent.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1913,
+        "region": "Kosovo, Vardar Macedonia, eastern Sandzak of Novi Pazar",
+        "change_type": "TREATY",
+        "description": "Treaties of London (May 1913) and Bucharest (August 1913) after the Second Balkan War confirmed Serbia's possession of Kosovo, most of Vardar Macedonia (disputed with Bulgaria) and the eastern Sandzak (partitioned with Montenegro), nearly doubling the state's territory. Rule remained contested and militarized until 1915.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1915,
+        "region": "Entire state territory",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "TERRITORIAL LOSS: combined Austro-Hungarian, German and Bulgarian offensive (October-November 1915) conquered all of Serbia; the country was partitioned into Austro-Hungarian and Bulgarian occupation zones (internment, forced Bulgarianization, bloody suppression of the 1917 Toplica uprising). The Serbian army and tens of thousands of civilians retreated through the Albanian mountains in winter 1915-16 with mass deaths from cold, hunger and disease; the army was evacuated to Corfu.",
+        "population_affected": null,
+        "confidence_score": 0.95
+      },
+      {
+        "year": 1918,
+        "region": "Entire state territory",
+        "change_type": "LIBERATION",
+        "description": "Salonika front breakthrough (September 1918) led to the liberation of Serbia by Serbian and Allied forces (Belgrade retaken 1 November 1918). On 1 December 1918 the Kingdom of Serbia merged into the newly proclaimed Kingdom of Serbs, Croats and Slovenes, ending its separate statehood. Serbia's WWI losses were among the highest per-capita of any belligerent (16-28% of pre-war population depending on methodology).",
+        "population_affected": null,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Jagodic, Milos. 'The Emigration of Muslims from the New Serbian Regions 1877/1878'. Balkanologie, Vol. II, no. 2 (1998).",
+        "source_type": "academic",
+        "url": "https://journals.openedition.org/balkanologie/265"
+      },
+      {
+        "citation": "Report of the International Commission to Inquire into the Causes and Conduct of the Balkan Wars. Washington D.C.: Carnegie Endowment for International Peace, 1914.",
+        "source_type": "primary",
+        "url": "https://archive.org/details/reportofinternat00inteuoft"
+      },
+      {
+        "citation": "Radivojevic, Biljana and Goran Penev. 'Demographic Losses of Serbia in the First World War and Their Long-Term Consequences'. Economic Annals, Vol. 59, no. 203 (2014), pp. 29-54.",
+        "source_type": "academic",
+        "url": "https://ea.ekof.bg.ac.rs/index.php/economicannals/article/view/181"
+      },
+      {
+        "citation": "Stefanovic, Djordje. 'Seeing the Albanians through Serbian Eyes: The Inventors of the Tradition of Intolerance and their Critics, 1804-1939'. European History Quarterly, Vol. 35, no. 3 (2005), pp. 465-492.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Jelavich, Barbara. History of the Balkans: Eighteenth and Nineteenth Centuries (Vol. 1) and Twentieth Century (Vol. 2). Cambridge: Cambridge University Press, 1983.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Hatt-i Sharif of 1830 (Ottoman imperial decree recognizing the autonomous hereditary Principality of Serbia) and Treaty of Berlin, 13 July 1878, Articles XXXIV-XLII (independence and borders of Serbia).",
+        "source_type": "primary",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "Краљевина Срба, Хрвата и Словенаца",
+    "name_original_lang": "sr",
+    "entity_type": "kingdom",
+    "year_start": 1918,
+    "year_end": 1941,
+    "capital_name": "Београд (Belgrade)",
+    "capital_lat": 44.8167,
+    "capital_lon": 20.4667,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            13.9,
+            45.45
+          ],
+          [
+            16.5,
+            43.3
+          ],
+          [
+            19.35,
+            41.87
+          ],
+          [
+            20.55,
+            41.4
+          ],
+          [
+            20.98,
+            40.86
+          ],
+          [
+            22.93,
+            41.34
+          ],
+          [
+            22.98,
+            43.1
+          ],
+          [
+            22.68,
+            44.22
+          ],
+          [
+            21.2,
+            45.3
+          ],
+          [
+            20.1,
+            46.05
+          ],
+          [
+            18.9,
+            45.92
+          ],
+          [
+            16.4,
+            46.85
+          ],
+          [
+            14.45,
+            46.44
+          ],
+          [
+            13.9,
+            45.45
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "ethical_notes": "ETHICS-002: Montenegro's entry into the new state was not a free union: the Podgorica Assembly (24-29 November 1918), convened under Serbian military presence with an irregular electoral procedure, deposed King Nikola I and proclaimed unconditional union with Serbia, and the Greens' Christmas Uprising (January 1919) was suppressed by the Serbian army and pro-union White militias, with executions, house-burnings and guerrilla fighting into the mid-1920s; Montenegrin historiography (Pavlović 2008) documents this as annexation, Serbian unification historiography as voluntary union — both readings are recorded, not arbitrated. ETHICS-002: On 6 January 1929 King Aleksandar I Karađorđević abolished the constitution, dissolved parliament and banned national and ethnic parties (the 6 January Dictatorship), months after Croat Peasant Party leader Stjepan Radić was fatally shot by a Serb deputy inside the Belgrade parliament (June 1928); the 1929 renaming to Yugoslavia imposed a unitary identity that suppressed Croat, Macedonian and Albanian national expression — Vardar Macedonia was administered as 'South Serbia' and interwar agrarian colonization settled Serb colonists on lands of Albanians and Turks in Kosovo and Macedonia. ETHICS-002: The state ended through external violence: Nazi Germany, with Italy, Hungary and Bulgaria, invaded on 6 April 1941, opening with the Luftwaffe terror bombing of Belgrade that killed thousands of civilians; after the capitulation of 17 April 1941 the invaders partitioned the country and installed the Ustaša Independent State of Croatia, which carried out genocide against Serbs, Roma and Jews. ETHICS-001: the primary name is the attested founding Serbian-Cyrillic form; the 1918-1920 proclamation form 'Краљевство Срба, Хрвата и Словенаца' and the 1929 'Краљевина Југославија' are recorded as period variants rather than replacing it.",
+    "wikidata_qid": "Q191077",
+    "name_variants": [
+      {
+        "name": "Kraljevina Srba, Hrvata i Slovenaca",
+        "lang": "sh",
+        "context": "Serbo-Croatian Latin script, official alongside Cyrillic; also romanization of the primary name",
+        "period_start": 1918,
+        "period_end": 1929,
+        "source": "sr.wikipedia; Srpska enciklopedija"
+      },
+      {
+        "name": "Kingdom of Serbs, Croats and Slovenes",
+        "lang": "en",
+        "context": "English name of the founding period",
+        "period_start": 1918,
+        "period_end": 1929,
+        "source": "Banac 1984; Lampe 2000"
+      },
+      {
+        "name": "Краљевство Срба, Хрвата и Словенаца",
+        "lang": "sr",
+        "context": "Form used in the 1 December 1918 unification proclamation ('Kraljevstvo'); changed to 'Kraljevina' by decision of the Provisional National Representation on 15 July 1920",
+        "period_start": 1918,
+        "period_end": 1920,
+        "source": "Srpska enciklopedija; sr.wikipedia"
+      },
+      {
+        "name": "Краљевина Југославија",
+        "lang": "sr",
+        "context": "Official name from 3 October 1929 (royal decree of Aleksandar I)",
+        "period_start": 1929,
+        "period_end": 1941,
+        "source": "Wikidata Q191077 (verified); Djokić 2007"
+      },
+      {
+        "name": "Kraljevina Jugoslavija",
+        "lang": "sh",
+        "context": "Latin-script form (identical in Slovene)",
+        "period_start": 1929,
+        "period_end": 1941,
+        "source": "sr.wikipedia"
+      },
+      {
+        "name": "Kingdom of Yugoslavia",
+        "lang": "en",
+        "context": "English name after the 1929 renaming",
+        "period_start": 1929,
+        "period_end": 1941,
+        "source": "Lampe 2000; Tomasevich 2001"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1918,
+        "region": "Montenegro",
+        "change_type": "CESSION_FORCED",
+        "description": "The Podgorica Assembly (in session 24-29 November 1918), convened under Serbian army presence with an irregular electoral procedure, deposed King Nikola I Petrović-Njegoš and proclaimed unconditional union with Serbia. The Greens' Christmas Uprising against the annexation (Cetinje, 7 January 1919, led by Krsto Popović) was crushed by Serbian troops and pro-union White militias; guerrilla resistance and reprisals continued into the mid-1920s. Montenegrin and part of Western historiography (Pavlović 2008) call this an annexation; Serbian unification historiography calls it a voluntary union.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1918,
+        "region": "All South Slav lands (Serbia, Montenegro, former Habsburg South Slav territories)",
+        "change_type": "TREATY",
+        "description": "1 December 1918: Regent Aleksandar Karađorđević proclaimed the Kingdom of Serbs, Croats and Slovenes, uniting the Kingdom of Serbia (with newly absorbed Montenegro) and the State of Slovenes, Croats and Serbs formed from the collapsed Austria-Hungary — a negotiated unification (Corfu Declaration 1917, National Council address), not a treaty in the strict sense.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1920,
+        "region": "Istria, Zadar and Adriatic islands",
+        "change_type": "TREATY",
+        "description": "Treaty of Rapallo (12 November 1920): the Kingdom ceded Istria, Zadar and several islands to Italy; roughly half a million South Slavs (Slovenes, Croats) came under Italian rule and subsequent forced Italianization. Rijeka went to Italy by the 1924 Treaty of Rome, with Sušak remaining Yugoslav.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1941,
+        "region": "Entire kingdom",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Axis invasion from 6 April 1941, opened by Nazi Germany's terror bombing of Belgrade that killed thousands of civilians; unconditional surrender on 17 April 1941. Nazi Germany, Fascist Italy, Hungary and Bulgaria partitioned the country, installing the Ustaša-run Independent State of Croatia (10 April 1941), occupied Serbia, the Italian Governorate of Montenegro and the Province of Ljubljana.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Ivo Banac, The National Question in Yugoslavia: Origins, History, Politics, Cornell University Press, 1984.",
+        "source_type": "academic",
+        "url": "https://www.cornellpress.cornell.edu/book/9780801494932/the-national-question-in-yugoslavia/"
+      },
+      {
+        "citation": "John R. Lampe, Yugoslavia as History: Twice There Was a Country, 2nd ed., Cambridge University Press, 2000.",
+        "source_type": "academic",
+        "url": "https://www.cambridge.org/9780521774017"
+      },
+      {
+        "citation": "Dejan Djokić, Elusive Compromise: A History of Interwar Yugoslavia, Hurst / Columbia University Press, 2007.",
+        "source_type": "academic",
+        "url": "https://muse.jhu.edu/article/817674/summary"
+      },
+      {
+        "citation": "Srdja Pavlović, Balkan Anschluss: The Annexation of Montenegro and the Creation of the Common South Slavic State, Purdue University Press, 2008.",
+        "source_type": "academic",
+        "url": "https://www.press.purdue.edu/9781557534651/"
+      },
+      {
+        "citation": "Jozo Tomasevich, War and Revolution in Yugoslavia, 1941-1945: Occupation and Collaboration, Stanford University Press, 2001.",
+        "source_type": "academic",
+        "url": "https://www.sup.org/books/history/war-and-revolution-yugoslavia-1941-1945"
+      }
+    ]
+  },
+  {
+    "name_original": "إمارة الدرعية",
+    "name_original_lang": "ar",
+    "entity_type": "emirate",
+    "year_start": 1744,
+    "year_end": 1818,
+    "capital_name": "Diriyah (ad-Dirʿiyyah)",
+    "capital_lat": 24.7333,
+    "capital_lon": 46.5756,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            42.5,
+            20.5
+          ],
+          [
+            45.5,
+            19.8
+          ],
+          [
+            47.5,
+            21.5
+          ],
+          [
+            48.5,
+            24.5
+          ],
+          [
+            48,
+            26.5
+          ],
+          [
+            46.5,
+            27.8
+          ],
+          [
+            43.5,
+            27.5
+          ],
+          [
+            41.8,
+            25.5
+          ],
+          [
+            42,
+            22.5
+          ],
+          [
+            42.5,
+            20.5
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "ethical_notes": "ETHICS-002: The state's expansion was overwhelmingly military and accompanied by explicit religious violence. On 21 April 1802 (date disputed, possibly 1801) roughly 12,000 Wahhabi raiders from Najd, sent under Emir Abdulaziz bin Muhammad Al Saud, sacked the Shia holy city of Karbala in Ottoman Iraq, killed an estimated 2,000-5,000 inhabitants, plundered the shrine of Imam Husayn and destroyed its dome — an atrocity still central to Shia collective memory. In 1803 Saudi forces massacred inhabitants of Taif, and after taking Mecca (1803) and Medina (1804-05) they demolished the venerated tombs of al-Baqi cemetery and Jannat al-Mualla in 1806, destruction condemned across much of the Muslim world. The state itself was destroyed by comparable violence: the Ottoman-Egyptian army of Ibrahim Pasha besieged Diriyah for months in 1818, razed the city in 1819, and beheaded the captured Imam Abdullah bin Saud in Istanbul. ETHICS-001: the primary name is the attested Arabic إمارة الدرعية; \"First Saudi State\" (الدولة السعودية الأولى) is a retrospective label, and the 2022 Saudi royal decree moving the official founding from the 1744 Wahhabi pact back to Muhammad ibn Saud's 1727 accession is a politicized modern re-dating that de-emphasizes the state's Wahhabi origins — both dates are documented here rather than arbitrated. Non-Western historiography is represented via the contemporary Najdi chronicle of Ibn Bishr; Shia accounts of Karbala provide the victims' perspective against Najdi court chronicles that celebrate the raid.",
+    "wikidata_qid": "Q146871",
+    "name_variants": [
+      {
+        "name": "Emirate of Diriyah",
+        "lang": "en",
+        "context": "English name emphasizing the capital; common in historiography",
+        "period_start": 1744,
+        "period_end": 1818,
+        "source": "Wikipedia / Rentz 2004"
+      },
+      {
+        "name": "First Saudi State",
+        "lang": "en",
+        "context": "Retrospective English label used in Saudi and Western historiography",
+        "period_start": 1744,
+        "period_end": 1818,
+        "source": "Al-Rasheed 2002; Wikidata Q146871"
+      },
+      {
+        "name": "ʾImārat ad-Dirʿiyya",
+        "lang": "ar-Latn",
+        "context": "Romanization of the attested Arabic name إِمَارَةُ الدِّرْعِيَّة",
+        "period_start": 1744,
+        "period_end": 1818,
+        "source": "Wikipedia (attested form)"
+      },
+      {
+        "name": "الدولة السعودية الأولى",
+        "lang": "ar",
+        "context": "ad-Dawla as-Suʿūdiyya al-ʾŪlā — retrospective official Arabic designation used in Saudi historiography and state commemoration",
+        "period_start": null,
+        "period_end": null,
+        "source": "Wikidata Q146871 Arabic label; Saudipedia"
+      },
+      {
+        "name": "ad-Dawla as-Suʿūdiyya al-ʾŪlā",
+        "lang": "ar-Latn",
+        "context": "Romanization of the retrospective Arabic designation",
+        "period_start": null,
+        "period_end": null,
+        "source": "Wikipedia"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1744,
+        "region": "Diriyah (central Najd)",
+        "change_type": "TREATY",
+        "description": "Pact between Emir Muhammad ibn Saud (ruler of Diriyah since 1727) and the preacher Muhammad ibn Abd al-Wahhab fused Al Saud political power with the Wahhabi religious mission, founding the expansionist emirate.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1773,
+        "region": "Riyadh and Najd",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Abdulaziz bin Muhammad captured Riyadh after a long war against Dahham ibn Dawwas, consolidating Saudi-Wahhabi military control over central Najd; al-Hasa on the Gulf coast followed by 1795.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": 1803,
+        "region": "Hejaz (Taif, Mecca; Medina 1804-05)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Saudi forces under Saud bin Abdulaziz took Taif (with a massacre of inhabitants), then Mecca in 1803 and Medina by 1804-05; in 1806 they demolished the domed tombs of al-Baqi cemetery in Medina and Jannat al-Mualla in Mecca (including the tomb of Khadijah) as idolatrous. The 21 April 1802 sack of Shia Karbala (2,000-5,000 killed, shrine of Imam Husayn plundered) preceded this campaign.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1818,
+        "region": "Diriyah and all Saudi territories",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ottoman-Egyptian army under Ibrahim Pasha, son of Muhammad Ali of Egypt, ended the Ottoman-Saudi (Wahhabi) War of 1811-1818: after a months-long siege, Imam Abdullah bin Saud surrendered on 9 September 1818; Diriyah was razed in 1819 and Abdullah was beheaded in Istanbul.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Madawi Al-Rasheed, A History of Saudi Arabia, Cambridge University Press, 2002 (2nd ed. 2010)",
+        "source_type": "academic",
+        "url": "https://www.cambridge.org/core/books/history-of-saudi-arabia/3B0C42E92B2A83F79E85D28083D2D223"
+      },
+      {
+        "citation": "Alexei Vassiliev, The History of Saudi Arabia, Saqi Books, London, 1998 (US ed. New York University Press, 2000)",
+        "source_type": "academic",
+        "url": "https://search.worldcat.org/title/39641842"
+      },
+      {
+        "citation": "George S. Rentz, The Birth of the Islamic Reform Movement in Saudi Arabia: Muhammad ibn 'Abd al-Wahhab (1703/4-1792) and the Beginnings of Unitarian Empire in Arabia, Arabian Publishing, London, 2004",
+        "source_type": "academic",
+        "url": "https://arabian-publishing.com/product/the-birth-of-the-islamic-reform-movement-in-saudi-arabia"
+      },
+      {
+        "citation": "Uthman ibn Abdullah ibn Bishr, 'Unwan al-majd fi tarikh Najd (The Mark of Glory in the History of Najd), 19th-century Najdi chronicle covering 1745-1850, 2 vols.",
+        "source_type": "primary",
+        "url": "https://search.worldcat.org/title/'Unwan-al-majd-fi-tarikh-Najd/oclc/476235996"
+      }
+    ]
+  },
+  {
+    "name_original": "إمارة نجد",
+    "name_original_lang": "ar",
+    "entity_type": "emirate",
+    "year_start": 1824,
+    "year_end": 1891,
+    "capital_name": "Riyadh (الرياض)",
+    "capital_lat": 24.6333,
+    "capital_lon": 46.7167,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            44,
+            20.8
+          ],
+          [
+            46.5,
+            20.5
+          ],
+          [
+            48.5,
+            21.8
+          ],
+          [
+            50.2,
+            24
+          ],
+          [
+            50.1,
+            26.6
+          ],
+          [
+            48.8,
+            27.3
+          ],
+          [
+            46.8,
+            27.2
+          ],
+          [
+            43.5,
+            26.8
+          ],
+          [
+            43.2,
+            24.5
+          ],
+          [
+            43.8,
+            22.3
+          ],
+          [
+            44,
+            20.8
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "ethical_notes": "ETHICS-001: The primary name Imarat Najd (Emirate of Najd) is the attested contemporary designation; \"Second Saudi State\" (al-Dawla al-Su'udiyya al-Thaniya) is a retrospective label of modern Saudi historiography and is kept as a variant, not the primary name. ETHICS-002: The state was founded and ended by military violence, perpetrators named: Turki ibn Abdullah's forces besieged and expelled the Egyptian garrison of Muhammad Ali's occupation army from Riyadh in 1824, six years after Ibrahim Pasha's Ottoman-Egyptian army razed Diriyah (1818) and had Imam Abdullah bin Saud executed in Istanbul. ETHICS-002: The 1830 reconquest of al-Hasa and Qatif placed the region's large Twelver Shia population under a Wahhabi-legitimated state that treated them as tributary subjects with discriminatory taxation. Dynastic violence was chronic and is stated plainly: Turki was assassinated in 1834 by his cousin Mishari bin Abdul Rahman (executed in turn by Faisal bin Turki); Egypt's Khurshid Pasha re-invaded in 1838, deporting Imam Faisal to Cairo and installing Khalid bin Saud as vassal until Faisal's return in 1843. After Faisal's death (1865) the fratricidal civil war between his sons Abdullah and Saud devastated Najd, and Abdullah's 1871 appeal to Ottoman governor Midhat Pasha ended in betrayal — the Ottomans annexed al-Hasa for themselves instead of helping him. The state was destroyed at the Battle of Mulayda (21 January 1891) by Muhammad bin Abdullah Al Rashid of Jabal Shammar, and the Al Saud under Abdul Rahman bin Faisal fled into exile in Kuwait. Non-Western historiography is foregrounded via the contemporary Najdi chronicle of Ibn Bishr.",
+    "wikidata_qid": "Q146862",
+    "name_variants": [
+      {
+        "name": "Emirate of Najd",
+        "lang": "en",
+        "context": "official designation, attested in English-language historiography",
+        "period_start": 1824,
+        "period_end": 1891,
+        "source": "en.wikipedia.org/wiki/Second_Saudi_state"
+      },
+      {
+        "name": "Emirate of Nejd",
+        "lang": "en",
+        "context": "alternative English spelling",
+        "period_start": 1824,
+        "period_end": 1891,
+        "source": null
+      },
+      {
+        "name": "Second Saudi State",
+        "lang": "en",
+        "context": "retrospective historiographic name (ETHICS-001: modern Saudi periodization, not contemporary usage)",
+        "period_start": null,
+        "period_end": null,
+        "source": "Madawi al-Rasheed, A History of Saudi Arabia (2002)"
+      },
+      {
+        "name": "الدولة السعودية الثانية",
+        "lang": "ar",
+        "context": "al-Dawla al-Su'udiyya al-Thaniya — retrospective Arabic historiographic name",
+        "period_start": null,
+        "period_end": null,
+        "source": "ar.wikipedia.org; saudipedia.com"
+      },
+      {
+        "name": "Imārat Najd",
+        "lang": "ar-Latn",
+        "context": "romanization of the primary name",
+        "period_start": 1824,
+        "period_end": 1891,
+        "source": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1824,
+        "region": "Riyadh and central Najd",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Turki ibn Abdullah Al Saud besieged and expelled the Egyptian garrison (Muhammad Ali's occupation forces) from Riyadh, restoring Al Saud rule six years after the Ottoman-Egyptian destruction of Diriyah; Riyadh made the new capital.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1830,
+        "region": "al-Hasa and Qatif (Eastern Arabia)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Turki ibn Abdullah reconquered al-Hasa, Qatif and Saihat, extending Saudi rule to the Gulf coast; the region's Shia population became tributary subjects of the Wahhabi-legitimated state.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1871,
+        "region": "al-Hasa and Qatif",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ottoman al-Hasa Expedition under Baghdad governor Midhat Pasha: invited by Imam Abdullah bin Faisal against his brother Saud during the Saudi civil war, the Ottomans instead annexed al-Hasa outright (held until 1913), stripping the emirate of its eastern province.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1891,
+        "region": "Najd (entire state)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Battle of Mulayda (21 January 1891): Muhammad bin Abdullah Al Rashid of the Emirate of Jabal Shammar defeated the last imam Abdul Rahman bin Faisal; the state ceased to exist and the Al Saud went into exile in Kuwait.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "R. Bayly Winder, Saudi Arabia in the Nineteenth Century, London: Macmillan / New York: St. Martin's Press, 1965 (xiv+312 pp.) — the standard monograph on the second Saudi state.",
+        "source_type": "academic",
+        "url": "https://link.springer.com/book/10.1007/978-1-349-81723-8"
+      },
+      {
+        "citation": "Madawi al-Rasheed, A History of Saudi Arabia, Cambridge: Cambridge University Press, 2002 (2nd ed. 2010) — history by a Saudi-born scholar, critical of official dynastic narratives.",
+        "source_type": "academic",
+        "url": "https://www.cambridge.org/core/books/history-of-saudi-arabia/1C499DA74EC7147305236A70C1F7C7DB"
+      },
+      {
+        "citation": "Alexei Vassiliev, The History of Saudi Arabia, London: Saqi Books, 1998 (576 pp., ISBN 0-86356-935-8) — Russian-school historiography drawing on Arabic, Turkish and Russian sources.",
+        "source_type": "academic",
+        "url": "https://saqibooks.com/books/saqi/the-history-of-saudi-arabia/"
+      },
+      {
+        "citation": "ʿUthmān ibn ʿAbd Allāh Ibn Bishr, ʿUnwān al-majd fī tārīkh Najd [The Sign of Glory in the History of Najd], vol. 2 completed 1270 AH / 1853-54 CE — contemporary Najdi chronicle covering the first and second Saudi states to 1854.",
+        "source_type": "primary",
+        "url": "https://onlinebooks.library.upenn.edu/webbin/book/lookupid?key=ha001866084"
+      }
+    ]
+  },
+  {
+    "name_original": "सङ्घीय लोकतान्त्रिक गणतन्त्र नेपाल",
+    "name_original_lang": "ne",
+    "entity_type": "republic",
+    "year_start": 2008,
+    "year_end": null,
+    "capital_name": "Kathmandu (काठमाडौँ)",
+    "capital_lat": 27.7172,
+    "capital_lon": 85.324,
+    "confidence_score": 0.85,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            80.1,
+            28.7
+          ],
+          [
+            81.6,
+            28.1
+          ],
+          [
+            83,
+            27.4
+          ],
+          [
+            85,
+            26.9
+          ],
+          [
+            86.5,
+            26.55
+          ],
+          [
+            88.15,
+            26.4
+          ],
+          [
+            88.2,
+            27.1
+          ],
+          [
+            88,
+            27.9
+          ],
+          [
+            86.5,
+            28.1
+          ],
+          [
+            84.2,
+            29.3
+          ],
+          [
+            82.2,
+            30.2
+          ],
+          [
+            80.4,
+            29.9
+          ],
+          [
+            80.1,
+            28.7
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "ethical_notes": "ETHICS-002: The republic was born from the 1996-2006 civil war launched by the Communist Party of Nepal (Maoist) against the Kingdom of Nepal: approximately 13,000 deaths documented by OHCHR (Nepal Conflict Report, 2012), with Nepal government figures reaching ~17,000; INSEC data attribute the majority of documented killings to state security forces (Royal Nepal Army and police, 8,200+ killed 1996-2005) versus 4,000+ killed by the Maoists — both perpetrators named explicitly. ETHICS-002: Over 1,300 people were forcibly disappeared during the war, most by state forces, with Tharu victims of Bardiya district grossly overrepresented; transitional justice (TRC and Commission on Enforced Disappearances) has delivered near-total impunity to date. ETHICS-002: During the September 2015 constitution promulgation, more than 50 people died in the Terai unrest overall (Aug 2015-Feb 2016) - protesters, mostly Madhesi and Tharu, killed by police, and at least 9 police killed by protesters; Human Rights Watch ('Like We Are Not Nepali', 2015) documented unlawful killings on both sides including excessive police force; no senior official held accountable, and the subsequent 135-day border blockade (Madhesi groups, partially supported by India) caused a humanitarian fuel and medicine crisis. ETHICS-003: Madhesi, Tharu, Janajati and Dalit communities contest the 2015 federal province boundaries and citizenship clauses as perpetuating historic domination by hill high-caste (Khas Arya) elites; this record documents the dispute without arbitrating it. ETHICS-001: the primary name is the attested Nepali Devanagari form; note the 2015 Constitution (Art. 4) formally names the state simply 'Nepal', while the full republican formula remains in official and international use since 2008. ETHICS-003: the Kalapani-Lipulekh-Limpiyadhura territory (~335-372 km2) is claimed by Nepal (2020 constitutional map amendment) but administered by India — both versions are noted, neither endorsed.",
+    "wikidata_qid": "Q837",
+    "name_variants": [
+      {
+        "name": "Federal Democratic Republic of Nepal",
+        "lang": "en",
+        "context": "Official English long-form name since the 28 May 2008 republic declaration",
+        "period_start": 2008,
+        "period_end": null,
+        "source": "Wikidata Q837; Constituent Assembly declaration 2008"
+      },
+      {
+        "name": "Saṅghīya Loktāntrik Gaṇatantra Nepāl",
+        "lang": "ne-Latn",
+        "context": "IAST-style romanization of the Nepali official name",
+        "period_start": 2008,
+        "period_end": null,
+        "source": "Romanization of attested Devanagari form"
+      },
+      {
+        "name": "नेपाल",
+        "lang": "ne",
+        "context": "Constitutional short name: Constitution of Nepal 2015, Art. 4, names the state 'Nepal'; a Nov 2020 government directive limited letterhead use of the full republican formula",
+        "period_start": 2015,
+        "period_end": null,
+        "source": "Constitution of Nepal 2015 (Nepal Law Commission)"
+      },
+      {
+        "name": "Nepal",
+        "lang": "en",
+        "context": "Common short name",
+        "period_start": 2008,
+        "period_end": null,
+        "source": "Wikidata Q837"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 2008,
+        "region": "Entire state (former Kingdom of Nepal)",
+        "change_type": "REVOLUTION",
+        "description": "On 28 May 2008 the 1st Constituent Assembly, elected on 10 April 2008 under the Comprehensive Peace Accord (21 Nov 2006), abolished the 240-year Shah monarchy by a 560-4 vote and declared the Federal Democratic Republic. The peaceful vote was the direct outcome of the 1996-2006 Maoist civil war (~13,000-17,000 dead; state forces the larger documented killer) and the April 2006 Jana Andolan II mass uprising, in which royal security forces killed ~18-25 protesters before King Gyanendra capitulated.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 2020,
+        "region": "Kalapani-Lipulekh-Limpiyadhura (far-west, ~335-372 km2)",
+        "change_type": "UNKNOWN",
+        "description": "Constitutional amendment (June 2020) added the India-administered Kalapani-Lipulekh-Limpiyadhura triangle to Nepal's official map and coat of arms. This is a cartographic-legal claim only: India continues to administer the territory and rejects the claim. No change of actual control occurred; the dispute remains open.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      }
+    ],
+    "sources": [
+      {
+        "citation": "John Whelpton, A History of Nepal, Cambridge University Press, 2005.",
+        "source_type": "academic",
+        "url": "https://www.cambridge.org/core/books/history-of-nepal/340C4E78125368B8D0623201D61E5A9E"
+      },
+      {
+        "citation": "Sebastian von Einsiedel, David M. Malone and Suman Pradhan (eds.), Nepal in Transition: From People's War to Fragile Peace, Cambridge University Press, 2012.",
+        "source_type": "academic",
+        "url": "https://www.cambridge.org/core/books/nepal-in-transition/FAA071F9BDF58C731109296F59C86F4A"
+      },
+      {
+        "citation": "Prashant Jha, Battles of the New Republic: A Contemporary History of Nepal, Hurst & Company, 2014. (Nepali/South Asian author — non-Western historiography per ETHICS values)",
+        "source_type": "academic",
+        "url": "https://www.hurstpublishers.com/book/battles-new-republic/"
+      },
+      {
+        "citation": "OHCHR, Nepal Conflict Report: An analysis of conflict-related violations of international human rights law and international humanitarian law between February 1996 and 21 November 2006, United Nations Office of the High Commissioner for Human Rights, 2012.",
+        "source_type": "primary",
+        "url": "https://www.ohchr.org/en/documents/country-reports/nepal-conflict-report"
+      },
+      {
+        "citation": "Constitution of Nepal, 2015 (नेपालको संविधान), Nepal Law Commission, promulgated 20 September 2015.",
+        "source_type": "primary",
+        "url": "https://lawcommission.gov.np/content/13437/nepal-s-constitution/"
+      },
+      {
+        "citation": "Human Rights Watch, \"Like We Are Not Nepali\": Protest and Police Crackdown in the Terai Region of Nepal, HRW, 2015.",
+        "source_type": "primary",
+        "url": "https://www.hrw.org/report/2015/10/16/we-are-not-nepali/protest-and-police-crackdown-terai-region-nepal"
+      }
+    ]
+  },
+  {
+    "name_original": "Mthwakazi",
+    "name_original_lang": "nd",
+    "entity_type": "kingdom",
+    "year_start": 1838,
+    "year_end": 1893,
+    "capital_name": "koBulawayo",
+    "capital_lat": -20.3023,
+    "capital_lon": 28.6264,
+    "confidence_score": 0.65,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            27.2,
+            -21.5
+          ],
+          [
+            28.5,
+            -21.8
+          ],
+          [
+            29.8,
+            -21
+          ],
+          [
+            30,
+            -20
+          ],
+          [
+            29.5,
+            -19
+          ],
+          [
+            28.5,
+            -18.5
+          ],
+          [
+            27,
+            -19
+          ],
+          [
+            26.5,
+            -20.3
+          ],
+          [
+            27.2,
+            -21.5
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "ethical_notes": "ETHICS-002: The kingdom was destroyed by Cecil Rhodes's British South Africa Company in the First Matabele War (October 1893 - January 1894): company Maxim guns, used here in battle for the first time, killed roughly 1,500 Ndebele at the Shangani (25 Oct 1893) and about 2,500 at Bembesi (1 Nov 1893) against single-digit company battle deaths; koBulawayo was occupied on 4 November 1893, Lobengula died in flight in January 1894, and the company's Victoria Agreement 'loot' terms promised each volunteer about 6,000 acres of seized Ndebele land plus a share of confiscated cattle. ETHICS-002: The 1888 Rudd Concession was obtained by deception - missionary interpreter Charles Helm mistranslated the text, and the verbal assurances given to Lobengula (no more than ten diggers, subject to Ndebele law) were deliberately omitted from the written English version; Lobengula repudiated the concession and protested to Queen Victoria, and was ignored, while Rhodes used it to secure the BSAC royal charter in 1889. ETHICS-002: The Ndebele state itself was built by conquest: Mzilikazi's forces subjugated the Rozvi remnants (c. 1838-1840) and extracted tribute, cattle and captives from western Shona and Kalanga communities, incorporated at the bottom of a three-tier status hierarchy (abeZansi, abeNhla, amaHole). ETHICS-003: the 'predatory raiding state' image is contested - Julian Cobbing and Zimbabwean historians such as Ndlovu-Gatsheni argue it was inflated by BSAC propaganda to justify the 1893 invasion, and this record reports both the violence and the dispute. ETHICS-001: the primary name Mthwakazi is the attested endonym; 'Matabele' is a Sotho-Tswana-mediated exonym adopted by the British and kept only as a variant.",
+    "wikidata_qid": "Q1193853",
+    "name_variants": [
+      {
+        "name": "Mthwakazi",
+        "lang": "nd",
+        "context": "Attested endonym; per Ndebele tradition the name Mzilikazi gave his nation ('something which became big at conception'). Latin script is native for isiNdebele.",
+        "period_start": 1838,
+        "period_end": null,
+        "source": "Wikidata Q1193853; Ndlovu-Gatsheni, The Ndebele Nation (2009)"
+      },
+      {
+        "name": "Ndebele Kingdom",
+        "lang": "en",
+        "context": "Modern English scholarly name (also 'Northern Ndebele Kingdom' to distinguish from the Southern/Transvaal Ndebele)",
+        "period_start": null,
+        "period_end": null,
+        "source": "Rasmussen 1978; Cobbing 1976"
+      },
+      {
+        "name": "Matabele Kingdom",
+        "lang": "en",
+        "context": "19th-century British colonial name, from the Sotho-Tswana exonym 'Matebele' transmitted to British travellers; not the endonym",
+        "period_start": 1838,
+        "period_end": 1893,
+        "source": "Wikipedia, Northern Ndebele people"
+      },
+      {
+        "name": "Matabeleland",
+        "lang": "en",
+        "context": "British name for the territory; retained as a Rhodesian and then Zimbabwean regional name after the conquest",
+        "period_start": 1838,
+        "period_end": null,
+        "source": "Wikidata Q1266775 (modern region)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1838,
+        "region": "Matabeleland highveld (southwestern Zimbabwean plateau)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "After defeats by Voortrekker commandos in the Transvaal (Vegkop 1836, Mosega/eGabeni 1837), Mzilikazi's Khumalo-led Ndebele crossed the Limpopo and settled the southwestern Zimbabwean plateau (c. 1838-1840), displacing and forcibly incorporating local Kalanga and Rozvi-Shona communities.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": 1840,
+        "region": "Former Rozvi heartland (Danamombe, Insiza-Mberengwa belt)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ndebele forces defeated the Rozvi Mutinhima house; the remaining Rozvi royal houses, leaderless since Nyamazana's Ngoni sacked Danamombe and killed Changamire Chirisamhuru c. 1835, submitted one by one c. 1839-1840 and were reduced to tributary status.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": 1888,
+        "region": "Mineral rights over Matabeleland, Mashonaland and adjoining territories",
+        "change_type": "TREATY",
+        "description": "Rudd Concession (30 Oct 1888): Lobengula granted exclusive mineral rights to Cecil Rhodes's agents Charles Rudd, Rochfort Maguire and Francis Thompson for 100 pounds per lunar month, 1,000 Martini-Henry rifles, 100,000 cartridges and a Zambezi steamboat. Interpreter Charles Helm's mistranslation and the exclusion of verbal assurances (max ten diggers, subject to Ndebele law) from the written English text made it fraudulent; Lobengula repudiated it and protested to Queen Victoria without effect. It became the legal basis of the British South Africa Company's royal charter (Oct 1889) and the 1890 Pioneer Column occupation of Mashonaland.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": 1893,
+        "region": "Entire kingdom",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "First Matabele War: British South Africa Company columns using Maxim guns killed roughly 1,500 Ndebele at the Shangani (25 Oct 1893) and about 2,500 at Bembesi (1 Nov 1893) against single-digit company battle deaths; Lobengula burned koBulawayo and fled north; the BSAC occupied Bulawayo on 4 Nov 1893 and seized Ndebele land and cattle. Lobengula died in flight, probably of smallpox, on 22/23 Jan 1894.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      }
+    ],
+    "sources": [
+      {
+        "citation": "R. Kent Rasmussen, Migrant Kingdom: Mzilikazi's Ndebele in South Africa, London: Rex Collings / Cape Town: David Philip, 1978",
+        "source_type": "academic",
+        "url": "https://books.google.com/books/about/Migrant_Kingdom.html?id=M2QfAAAAMAAJ"
+      },
+      {
+        "citation": "Julian R. D. Cobbing, The Ndebele under the Khumalos, 1820-1896, PhD thesis, University of Lancaster, 1976",
+        "source_type": "academic",
+        "url": "https://search.worldcat.org/title/ndebele-under-the-khumalos-1820-1896/oclc/733067611"
+      },
+      {
+        "citation": "Sabelo J. Ndlovu-Gatsheni, The Ndebele Nation: Reflections on Hegemony, Memory and Historiography, Amsterdam: Rozenberg / Pretoria: UNISA Press, 2009",
+        "source_type": "academic",
+        "url": "https://rozenbergquarterly.com/the-ndebele-nation/"
+      },
+      {
+        "citation": "Julian Cobbing, 'The Absent Priesthood: Another Look at the Rhodesian Risings of 1896-1897', Journal of African History 18(1), 1977, Cambridge University Press",
+        "source_type": "academic",
+        "url": "https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/absent-priesthood-another-look-at-the-rhodesian-risings-of-189618971/0E41064A88F519A8F45F2FBDC8428DFC"
+      },
+      {
+        "citation": "Rudd Concession, original text granted by Lobengula to Rudd, Maguire and Thompson, 30 October 1888 (South African History Online archive)",
+        "source_type": "primary",
+        "url": "https://sahistory.org.za/archive/rudd-concession-king-lobengula-matabeleland-1888"
+      }
+    ]
+  }
+]

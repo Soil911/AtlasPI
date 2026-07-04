@@ -1257,11 +1257,15 @@ def dataset_stats(request: Request, response: Response, db: Session = Depends(ge
     total_changes = db.query(TerritoryChange).count()
     disputed = db.query(GeoEntity).filter(GeoEntity.status == "disputed").count()
 
-    # Continenti
-    all_entities = db.query(GeoEntity).filter(_live).all()
+    # Continenti — v6.99.120 PERF: solo le 2 colonne necessarie. Il vecchio
+    # .all() materializzava anche i boundary_geojson (~48MB di TEXT) solo per
+    # leggere le coordinate delle capitali, e /v1/stats sforava i 200ms.
+    capital_coords = (
+        db.query(GeoEntity.capital_lat, GeoEntity.capital_lon).filter(_live).all()
+    )
     continent_counts: dict[str, int] = {}
-    for ent in all_entities:
-        c = _get_continent(ent.capital_lat, ent.capital_lon)
+    for lat, lon in capital_coords:
+        c = _get_continent(lat, lon)
         continent_counts[c] = continent_counts.get(c, 0) + 1
 
     # ─── Event stats ────────────────────────────────────────────
