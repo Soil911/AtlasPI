@@ -571,6 +571,21 @@ async def serve_robots():
     )
 
 
+# IndexNow (v6.99.117, M2): la chiave DEVE stare alla root del sito per
+# coprire l'intero host (da /static/ coprirebbe solo quel prefisso).
+# Il contenuto vive in static/indexnow.txt; il nome-route = chiave stessa.
+_INDEXNOW_KEY = "d1f21732401546e5667e3631a61af513"
+
+
+@app.get(f"/{_INDEXNOW_KEY}.txt", include_in_schema=False)
+async def serve_indexnow_key():
+    """Chiave IndexNow (verifica ownership per Bing/Yandex/Seznam)."""
+    return FileResponse(
+        STATIC_DIR / "indexnow.txt",
+        media_type="text/plain",
+    )
+
+
 @app.get("/sitemap.xml", include_in_schema=False)
 async def serve_sitemap():
     """Sitemap XML con le route indicizzabili."""

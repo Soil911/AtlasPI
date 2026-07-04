@@ -2,6 +2,13 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.117] - 2026-07-04 (fix IndexNow: chiave alla root)
+
+- La spec IndexNow richiede la chiave alla ROOT dell'host per coprire tutto il
+  sito (il primo submit da `/static/` è stato rifiutato con 422): nuova route
+  `/{key}.txt` che serve `static/indexnow.txt`. Submit dei 13 URL della
+  sitemap riuscito post-deploy.
+
 ## [v6.99.116] - 2026-07-03 (M2: Matomo al posto della dashboard analytics interna + IndexNow)
 
 **Tema**: *Decisione di Clirim: via le analytics interne, statistiche web con
