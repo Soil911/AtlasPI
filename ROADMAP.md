@@ -59,10 +59,12 @@ estensioni, ETHICS-017; 2026-07-02). Residuo M1:
   PRK 1979-89, Eritrea italiana, Serbia moderna.
 - ~~Split Sri Lanka #142~~ ✅ **FATTO in v6.99.121** (ETHICS-021: #142→Anuradhapura,
   #386 deprecata, #600→Dambadeniya, +Gampola +Kotte, catena Sinhalese trunk).
-- Split Kemet #26 (ETHICS record prima — dossier pronto, in corso v6.99.122);
-  dedup trunk etiope (#22/#100 + entità #853 dup di #51); entità-fase meroitica
-  nativa (#552 Meroe già esiste ma deprecata nel merge v6.85 — candidata a ripristino
-  per la catena #99; dossier pronto).
+- ~~Split Kemet #26~~ ✅ **FATTO in v6.99.122** (ETHICS-022: #26 empire→civilization
+  ombrello; 4 entità-periodo tꜣ.wy Old/Middle/New + Πτολεμαϊκὴ βασιλεία; 16 eventi
+  ri-organizzati con agentività kushita/persiana aggiunta; catena 3 Regni).
+- Residuo split: dedup trunk etiope (#22/#100 + entità #853 dup di #51); ripristino
+  #552 Meroe (deprecata nel merge v6.85, in realtà entità-fase) per la catena #99;
+  follow-up ETHICS-022 (Terzo Periodo Intermedio, Periodo Tardo, Egitto achemenide).
 - ~~Flag qualità da B1c: rename #534 e verifica #240~~ ✅ **FATTI in v6.99.118**
   (ETHICS-019: #240 → `កម្ពុជាប្រជាធិបតេយ្យ` Kampuchea Democratica + QID Q330988;
   #534 → `Anpi an Ayiti`, entity_type=empire, variante `Empire d'Haïti`).

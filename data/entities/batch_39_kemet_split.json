@@ -1,0 +1,909 @@
+[
+  {
+    "name_original": "tꜣ.wy (Old Kingdom)",
+    "name_original_lang": "egy",
+    "entity_type": "kingdom",
+    "year_start": -2686,
+    "year_end": -2160,
+    "capital_name": "Memphis (Old Kingdom name Inbu-hedj, \"White Walls\"; Men-nefer is the later name derived from Pepi I's pyramid town)",
+    "capital_lat": 29.8494,
+    "capital_lon": 31.255,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            29.85,
+            31.15
+          ],
+          [
+            31,
+            31.45
+          ],
+          [
+            32.3,
+            31.2
+          ],
+          [
+            32.2,
+            30.3
+          ],
+          [
+            31.6,
+            29.5
+          ],
+          [
+            32.9,
+            26
+          ],
+          [
+            33.1,
+            24
+          ],
+          [
+            32.6,
+            23.9
+          ],
+          [
+            32.3,
+            25.3
+          ],
+          [
+            31.3,
+            27.2
+          ],
+          [
+            30.3,
+            29.2
+          ],
+          [
+            29.85,
+            31.15
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "ethical_notes": "(1) NAME HONESTY: \"Old Kingdom\" is a modern historiographic construct (19th-century German Egyptology, \"Altes Reich\"); no ancient Egyptian used it. The attested in-period self-designation of the state was tꜣ.wy, \"the Two Lands\" (Pyramid Texts; royal title nb tꜣ.wy \"Lord of the Two Lands\"). The umbrella name \"Kemet\" (km.t, \"the Black Land\") is anachronistic for this specific period: its earliest secure attestation as a name for the country dates to the late First Intermediate Period / Middle Kingdom (c. 10th-12th Dynasty), not the Old Kingdom. The transliteration tꜣ.wy and vocalization \"Tawy\" are modern Egyptological renderings — hieroglyphic writing recorded no vowels, and the Unicode hieroglyphs are modern typesetting of ancient signs. (2) STATE VIOLENCE, PERPETRATORS NAMED: King Sneferu (founder of Dynasty 4) conducted a razzia into Lower Nubia recorded in his own royal annals (Palermo Stone): 7,000 Nubian human beings carried off as captives and 200,000 head of livestock seized. Archaeology shows the Lower Nubian A-Group population largely disappeared from the record afterwards — a violent depopulation. The only textual record is the perpetrator state's boast; Nubia was preliterate at this date, so no Nubian counter-narrative survives — an evidentiary asymmetry, not an absence of Nubian experience. The same annals credit Sneferu with a raid on the Tjehenu (Libyans): 11,000 captives and 13,100 cattle (reading of the numerals debated). Under Pepi I (Dynasty 6), general Weni's autobiography boasts that five campaigns against the Aamu \"Sand-dwellers\" (northern Sinai/southern Levant) razed settlements, cut down fig trees and vines, and carried off captives \"in very great numbers\". These are recorded as raids and forced deportations, not \"expeditions\" or \"pacification\". (3) PYRAMID LABOR, STATED PRECISELY: per current Egyptology (Lehner/Hawass excavations of the Heit el-Ghurab workers' town and the builders' cemetery at Giza), the Giza pyramids (Khufu, Khafre, Menkaure) were built by corvée conscription — a compulsory rotational labor tax on the Egyptian population — supplemented by skilled permanent crews; workers received rations, beer, medical care, and burial. This was NOT chattel slavery (the Herodotean/Hollywood trope is rejected), but it was also not free voluntary labor: it was state compulsion. Both halves of that sentence matter. (4) DISPUTES RECORDED, NOT RESOLVED: chronology (Shaw vs Hornung/Krauss/Warburton, up to ~95 years divergence) and collapse causation (climate vs structural decentralization) are documented as open debates below.",
+    "wikidata_qid": "Q177819",
+    "name_variants": [
+      {
+        "name": "Kemet (Old Kingdom)",
+        "lang": "egy-Latn",
+        "context": "AtlasPI period-state display form under the Kemet civilization umbrella (ETHICS-015 decomposition). Flag: km.t is not attested as a country name in Old Kingdom sources — earliest secure attestation is late First Intermediate Period / Middle Kingdom.",
+        "period_start": null,
+        "period_end": null,
+        "source": "Wikipedia: Km and Km.t (Kemet) (hieroglyphs); Gardiner, Ancient Egyptian Onomastica"
+      },
+      {
+        "name": "km.t (𓆎𓅓𓏏𓊖, Kemet, \"the Black Land\")",
+        "lang": "egy",
+        "context": "Native name of Egypt used retrospectively; attested as a country designation only from c. -2100 onward, NOT in Old Kingdom texts. Refers to the black Nile alluvium as opposed to dšrt, the \"red land\" desert.",
+        "period_start": -2100,
+        "period_end": null,
+        "source": "Wikipedia: Km and Km.t (Kemet) (hieroglyphs)"
+      },
+      {
+        "name": "tꜣ.wy (Tawy, \"the Two Lands\")",
+        "lang": "egy",
+        "context": "Attested in-period designation of the unified state (Upper + Lower Egypt) in the Pyramid Texts and royal titulary (nb tꜣ.wy, zmꜣ-tꜣ.wy unification motif). Transliteration and vocalization are modern Egyptological conventions.",
+        "period_start": -2686,
+        "period_end": -2160,
+        "source": "Pyramid Texts; Wikipedia: Upper and Lower Egypt"
+      },
+      {
+        "name": "Old Kingdom of Egypt",
+        "lang": "en",
+        "context": "Modern historiographic construct; standard in Anglophone Egyptology.",
+        "period_start": null,
+        "period_end": null,
+        "source": "Shaw (ed.), The Oxford History of Ancient Egypt, 2000"
+      },
+      {
+        "name": "Altes Reich",
+        "lang": "de",
+        "context": "Original 19th-century historiographic coinage (German Egyptology), from which the English term derives.",
+        "period_start": null,
+        "period_end": null,
+        "source": "Wikidata Q177819 German label"
+      },
+      {
+        "name": "المملكة المصرية القديمة",
+        "lang": "ar",
+        "context": "Modern Arabic historiography, including Egyptian national scholarship (Ministry of Tourism and Antiquities).",
+        "period_start": null,
+        "period_end": null,
+        "source": "Wikidata Q177819 Arabic label; egymonuments.gov.eg"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -2686,
+        "region": "Nile Valley and Delta (Memphite state)",
+        "change_type": "INHERITANCE",
+        "description": "Start of Dynasty 3 (Netjerikhet/Djoser) per Shaw chronology — a historiographic period boundary, not a territorial acquisition: the Old Kingdom monarchy continued the already-unified Early Dynastic state (Dynasties 1-2). Hornung/Krauss/Warburton 2006 place this c. -2592, up to ~95 years later.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": -2600,
+        "region": "Lower Nubia (Ta-Sety, south of the First Cataract)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "King Sneferu's razzia into Nubia, recorded in the Palermo Stone royal annals: 7,000 Nubians carried off as captives and 200,000 head of livestock seized. Archaeology shows Lower Nubia (A-Group culture) largely depopulated afterwards. A raid and forced mass deportation by the Egyptian crown, not a permanent annexation; the figures are the perpetrator state's own boast and may be rounded or inflated. No Nubian textual record exists (preliterate society).",
+        "population_affected": null,
+        "confidence_score": 0.65
+      },
+      {
+        "year": -2600,
+        "region": "Tjehenu (Libyan western desert margins)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "The Palermo Stone annals also credit Sneferu with a raid against the Tjehenu (Libyans): 11,000 captives and 13,100 cattle per the common reading (the numerals are debated). Perpetrator: the Egyptian crown under Sneferu.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      },
+      {
+        "year": -2300,
+        "region": "Northern Sinai / southern Levant (land of the 'Sand-dwellers')",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Under Pepi I (Dynasty 6), general Weni led five punitive campaigns against the Aamu 'Sand-dwellers'. His tomb autobiography boasts that the army razed settlements, cut down fig trees and vines, and carried off captives 'in very great numbers'. Destructive raids for security and plunder, not annexation.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": -2160,
+        "region": "Entire state — fragmentation into nomarch-ruled polities (First Intermediate Period)",
+        "change_type": "UNKNOWN",
+        "description": "Collapse of centralized Memphite rule. Causes debated, deliberately NOT resolved here: (a) climate camp — the 4.2 ka BP aridification event and low Nile floods causing famine (Nile Delta sedimentation studies; Yale/Manning discussion of the drought record); (b) structural camp — long-term decentralization: growing hereditary nomarch autonomy, expansion of tax-exempt temple estates, and the destabilizing ultra-long reign of Pepi II (Bárta: a long embedded process, not a sudden catastrophe). Manning disputes a direct low-Nile causation; Moeller cautions against climate monocausality. Date convention: Shaw ends Dynasty 6 at -2181 and the Memphite Dynasties 7/8 c. -2160 (used here); HKW end c. -2150/-2118.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Shaw, Ian (ed.), The Oxford History of Ancient Egypt, Oxford University Press, 2000 — esp. Jaromír Málek, 'The Old Kingdom (c. 2686-2160 BC)'. Chronological framework used for year_start/year_end.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Hornung, Erik; Krauss, Rolf; Warburton, David A. (eds.), Ancient Egyptian Chronology, Handbook of Oriental Studies I/83, Brill, Leiden, 2006 — chronological tables pp. 490-495 (Dynasty 3 from c. 2592, end of Old Kingdom c. 2150/2118 BCE).",
+        "source_type": "academic",
+        "url": "https://brill.com/edcollbook/title/7028"
+      },
+      {
+        "citation": "Wilkinson, Toby A. H., Royal Annals of Ancient Egypt: The Palermo Stone and its Associated Fragments, Kegan Paul International, London, 2000 — edition and translation of the Palermo Stone, the primary source for Sneferu's Nubian (7,000 captives, 200,000 cattle) and Libyan raids.",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "Lehner, Mark, 'Labor and the Pyramids: The Heit el-Ghurab \"Workers Town\" at Giza', in Steinkeller & Hudson (eds.), Labor in the Ancient World, ISLET, 2015 — archaeological evidence for corvée-conscripted (not enslaved) pyramid labor.",
+        "source_type": "archaeological",
+        "url": "https://www.researchgate.net/publication/303875906_Labor_and_the_Pyramids_The_Heit_el-Ghurab_Workers_Town_at_Giza"
+      },
+      {
+        "citation": "Hawass, Zahi & Lehner, Mark, 'Builders of the Pyramids', Archaeology 50/1, 1997, pp. 30-38 — builders' cemetery and workers' settlement at Giza; Egyptian-led excavation (non-Western historiography: Hawass, Egyptian Supreme Council of Antiquities).",
+        "source_type": "archaeological",
+        "url": "https://www.academia.edu/36645637/1997_Pyramid_Builders_Hawass_and_Lehner_pdf"
+      },
+      {
+        "citation": "Moeller, Nadine, 'The First Intermediate Period: A Time of Famine and Climate Change?', Ägypten und Levante / Egypt and the Levant 15, 2005, pp. 153-167 — critique of climate monocausality for the Old Kingdom collapse.",
+        "source_type": "academic",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "tꜣ.wy (Middle Kingdom)",
+    "name_original_lang": "egy",
+    "entity_type": "kingdom",
+    "year_start": -2055,
+    "year_end": -1650,
+    "capital_name": "Itjtawy",
+    "capital_lat": 29.57,
+    "capital_lon": 31.231,
+    "confidence_score": 0.75,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            30.4,
+            31.35
+          ],
+          [
+            32.35,
+            31.1
+          ],
+          [
+            32.6,
+            29.5
+          ],
+          [
+            33.3,
+            25.9
+          ],
+          [
+            32.95,
+            24
+          ],
+          [
+            31.3,
+            21.45
+          ],
+          [
+            30.6,
+            21.45
+          ],
+          [
+            31,
+            23.9
+          ],
+          [
+            30.4,
+            26.2
+          ],
+          [
+            29.85,
+            29.2
+          ],
+          [
+            30.2,
+            30.5
+          ],
+          [
+            30.4,
+            31.35
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "ethical_notes": "Naming: km.t (\"Black Land\", hieroglyphic 𓆎𓅓𓏏𓊖) is the attested endonym, well documented in Middle Kingdom texts themselves (e.g., Tale of Sinuhe); the vocalization \"Kemet\" is a modern Egyptological convention (the script wrote consonants only; Coptic descendant Keme). \"Middle Kingdom\" is a 19th-century European periodization, not an ancient name — the parenthetical is kept transparently as a modern qualifier distinguishing this period-state under the Kemet umbrella entity, same approach as the Old Kingdom record. Violence made explicit: (1) The reunification that founded this state was military conquest — Mentuhotep II of Thebes defeated and annexed the Herakleopolitan (10th Dynasty) kingdom; slain soldiers buried near his Deir el-Bahri temple attest the wars' human cost. (2) The 12th Dynasty conquered and militarily occupied Lower Nubia: Senusret I's armies (campaign c. 1938 BCE, general Mentuhotep) pushed to the Second Cataract and built Buhen; Senusret III's campaigns (c. 1864-1851 BCE) fixed the boundary at Semna and completed a fortress chain that policed Nubian movement and seized control of trade. Royal ideology dehumanized Nubians as \"wretched Kush\" (K3š ẖst): Senusret III's own Semna boundary stela (Berlin ÄM 1157) boasts of capturing Nubian women, carrying off dependants, burning grain and slaughtering cattle — state violence recorded in the perpetrator's words. Perpetrators named: the Egyptian crown under Senusret I and Senusret III. The occupied land belonged to Nubian communities and to the orbit of Kerma (Kush), an independent African state that later recovered the fortress zone. Disputes recorded, not resolved: start date (Shaw 2055 = Mentuhotep II's accession; final reunification c. 2040 conventional, later under other chronologies; Wikidata uses 2040-1782); end date (1782/1700/1650 depending on whether the 13th Dynasty is included — Shaw's 1650 used here); the Hyksos rise is debated between gradual Levantine settlement with internal takeover vs. invasion; Itjtawy's exact location is unidentified.",
+    "wikidata_qid": "Q191324",
+    "name_variants": [
+      {
+        "name": "km.t",
+        "lang": "egy",
+        "context": "Attested consonantal endonym, 'Black Land' (hieroglyphic 𓆎𓅓𓏏𓊖), referring to the fertile Nile soil; attested in Middle Kingdom literature itself (e.g., Tale of Sinuhe). 'Kemet' is the conventional modern vocalization; Coptic descendant Keme.",
+        "period_start": null,
+        "period_end": null,
+        "source": "Woerterbuch der aegyptischen Sprache V, 126-127; Tale of Sinuhe (P. Berlin 3022)"
+      },
+      {
+        "name": "T3wy",
+        "lang": "egy",
+        "context": "'The Two Lands' (Upper and Lower Egypt), attested self-designation of the unified state; the capital name Itj-tawy ('Seizer of the Two Lands') derives from it.",
+        "period_start": null,
+        "period_end": null,
+        "source": "Royal titulary, Middle Kingdom inscriptions"
+      },
+      {
+        "name": "Middle Kingdom of Egypt",
+        "lang": "en",
+        "context": "Modern Egyptological periodization (19th-century construct, not an ancient name).",
+        "period_start": -2055,
+        "period_end": -1650,
+        "source": "Shaw, I. (ed.), The Oxford History of Ancient Egypt (2000)"
+      },
+      {
+        "name": "Mittleres Reich",
+        "lang": "de",
+        "context": "German Egyptological term; the tripartite 'Reich' periodization originated in 19th-century German scholarship.",
+        "period_start": null,
+        "period_end": null,
+        "source": "German Egyptological literature"
+      },
+      {
+        "name": "Medio Regno d'Egitto",
+        "lang": "it",
+        "context": "Modern Italian historiography.",
+        "period_start": null,
+        "period_end": null,
+        "source": null
+      },
+      {
+        "name": "المملكة الوسطى",
+        "lang": "ar",
+        "context": "Modern Arabic (Egyptian) historiography.",
+        "period_start": null,
+        "period_end": null,
+        "source": null
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -2040,
+        "region": "Lower and Middle Egypt (Herakleopolitan kingdom)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Mentuhotep II of Thebes (11th Dynasty) defeated the Herakleopolitan 10th Dynasty and reunified Egypt by force, taking the title Sema-tawy ('He who unites the Two Lands'). Final victory came around his regnal year 39: c. 2040 BCE in the conventional dating, c. 2016 BCE if his accession is placed at 2055 (Shaw). The entity's start year (-2055) follows Shaw's accession date; the conquest itself was a process spanning his mid-reign, triggered in part by the Herakleopolitan desecration of the Abydos necropolis.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": -1938,
+        "region": "Lower Nubia to the Second Cataract (Buhen)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Senusret I's armies (campaign of regnal year 18, led by general Mentuhotep) conquered Lower Nubia and established the fortress of Buhen at the Second Cataract, with influence reaching toward the Third Cataract. Explicit military occupation of Nubian land, opening Egyptian exploitation of Nubian gold and trade routes. Perpetrator: the Egyptian crown under Senusret I.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": -1854,
+        "region": "Lower Nubia (Semna boundary and fortress chain)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Senusret III campaigned repeatedly in Nubia (regnal years 6/8, 10, 16, 19; c. 1864-1851 BCE) and fixed Egypt's formal boundary at the Semna gorge, completing a chain of fortresses (Semna, Kumma, Uronarti, Askut, Mirgissa, Buhen) that policed Nubian movement — Nubians could pass only for trade or official business — and monopolized commerce. His Semna boundary stela of year 16 (Berlin AeM 1157) brands the enemy 'wretched Kush' and boasts: 'I captured their women, I carried off their underlings, went to their wells, drove off their bulls, tore out their barley, set fire to it.' Military occupation and dehumanizing royal ideology, perpetrator named: Senusret III and the Egyptian state.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": -1820,
+        "region": "Faiyum depression",
+        "change_type": "UNKNOWN",
+        "description": "Internal expansion, not conquest: multi-generational irrigation and land-reclamation project from Senusret II onward, peaking under Amenemhat III, converted large parts of the Faiyum into cultivable, administered land.",
+        "population_affected": null,
+        "confidence_score": 0.7
+      },
+      {
+        "year": -1700,
+        "region": "Lower Nubia (fortress chain)",
+        "change_type": "UNKNOWN",
+        "description": "During the 13th Dynasty the state's grip weakened and control of the Nubian fortresses lapsed; garrison communities remained and passed into the service of the expanding Kingdom of Kush (Kerma). From the Nubian perspective this was a recovery of occupied land by an independent African state. Gradual process, date approximate.",
+        "population_affected": null,
+        "confidence_score": 0.4
+      },
+      {
+        "year": -1650,
+        "region": "Lower Egypt (Avaris, Memphis)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "The Hyksos 15th Dynasty, rulers of West Asian (Levantine) origin based at Avaris, seized control of Lower Egypt including Memphis; the Itjtawy state collapsed and the Second Intermediate Period began. The nature of the takeover is disputed — gradual Levantine settlement culminating in an internal seizure of power vs. armed invasion — the debate is recorded, not resolved. By late 13th Dynasty reigns (e.g., Merneferre Ay) royal authority had already contracted to the south.",
+        "population_affected": null,
+        "confidence_score": 0.5
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Callender, G. (2000). 'The Middle Kingdom Renaissance (c. 2055-1650 BC)'. In Shaw, I. (ed.), The Oxford History of Ancient Egypt. Oxford: Oxford University Press, pp. 148-183.",
+        "source_type": "academic",
+        "url": "https://archive.org/details/oxfordhistoryofa0000unse_u4p1"
+      },
+      {
+        "citation": "Grajetzki, W. (2006). The Middle Kingdom of Ancient Egypt: History, Archaeology and Society. London: Duckworth.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Smith, S.T. (1995). Askut in Nubia: The Economics and Ideology of Egyptian Imperialism in the Second Millennium B.C. London: Kegan Paul International.",
+        "source_type": "archaeological",
+        "url": null
+      },
+      {
+        "citation": "Boundary stela of Senusret III from Semna, regnal year 16 (c. 1854 BCE), Aegyptisches Museum und Papyrussammlung, Berlin, AeM 1157.",
+        "source_type": "primary",
+        "url": "https://smb.museum-digital.de/object/502"
+      },
+      {
+        "citation": "Mokhtar, G. (ed.) (1981). General History of Africa, Vol. II: Ancient Civilizations of Africa. Paris: UNESCO / London: Heinemann.",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Arnold, D. (2008). Middle Kingdom Tomb Architecture at Lisht. Publications of The Metropolitan Museum of Art Egyptian Expedition, Vol. 28. New Haven: Yale University Press.",
+        "source_type": "archaeological",
+        "url": null
+      }
+    ]
+  },
+  {
+    "name_original": "tꜣ.wy (New Kingdom)",
+    "name_original_lang": "egy",
+    "entity_type": "empire",
+    "year_start": -1550,
+    "year_end": -1069,
+    "capital_name": "Waset (Thebes)",
+    "capital_lat": 25.7188,
+    "capital_lon": 32.6573,
+    "confidence_score": 0.78,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            29.8,
+            31.45
+          ],
+          [
+            29.3,
+            30.2
+          ],
+          [
+            28.5,
+            28.3
+          ],
+          [
+            28.2,
+            25.4
+          ],
+          [
+            30,
+            22.5
+          ],
+          [
+            30.6,
+            19.6
+          ],
+          [
+            31.6,
+            18.2
+          ],
+          [
+            33.7,
+            19.3
+          ],
+          [
+            33.6,
+            22.2
+          ],
+          [
+            33.9,
+            26
+          ],
+          [
+            32.9,
+            29.4
+          ],
+          [
+            32.4,
+            31.25
+          ],
+          [
+            29.8,
+            31.45
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "ethical_notes": "This record uses explicit language about conquest and colonial extraction, per project values. (1) NUBIA: Egypt under the 18th–20th Dynasties conquered and colonized Kush. Thutmose I's army killed the Kushite ruler and his Tombos stela (c. -1500) boasts of Nubian corpses strewn across their valleys — royal violence celebrated as propaganda. Egypt annexed Nubia to beyond the Fourth Cataract, governed it through a viceroy ('King's Son of Kush'), extracted gold at industrial scale from Wadi Allaqi and the Eastern Desert using conscripted labor (gold that financed the empire and its diplomacy — 'gold is like dust in your land', Amarna letters), and planted temple-towns (Sesebi, Soleb, Amara West, Napata) as instruments of colonial administration and cultural Egyptianization. Official Egyptian rhetoric was openly contemptuous: 'Kush the wretched' (kš ẖst) was the standard state epithet — racist framing by the perpetrator state, documented here, not endorsed. The conquered Nubians left no written counter-narrative (no indigenous script in this period); their perspective is recovered archaeologically (Tombos and Amara West excavations show cultural entanglement, resistance and biological continuity, not the total assimilation Egyptian sources claim). (2) LEVANT: Thutmose III's 17 campaigns (from Megiddo, -1457) reduced Canaanite and Syrian city-states to tribute-paying vassals; the Annals at Karnak record thousands of captives deported to Egyptian temple estates as unfree labor. (3) PROPAGANDA VS FACT: Ramesses II's Kadesh reliefs claim a great victory; modern consensus is a stalemate — both versions recorded, dispute documented not resolved. (4) INTERNAL VIOLENCE: Akhenaten's regime persecuted the Amun cult and erased its names; his successors (Horemheb onward) in turn erased Akhenaten's memory — two-way state iconoclasm. (5) NAMING: 'Kemet' is the modern Egyptological vocalization of the attested endonym km.t (hieroglyphic 𓆎𓅓𓏏𓊖, 'the Black Land', for the fertile Nile silt); actual ancient pronunciation is uncertain. 'New Kingdom' and 'Egyptian Empire' are modern historiographic labels — Egyptians did not periodize their own history this way.",
+    "wikidata_qid": "Q180568",
+    "name_variants": [
+      {
+        "name": "𓆎𓅓𓏏𓊖 (km.t)",
+        "lang": "egy",
+        "context": "Attested endonym, hieroglyphic: 'the Black Land', from the fertile black Nile silt. Attested from the Old Kingdom onward and throughout New Kingdom texts. The vocalization 'Kemet' is a modern Egyptological convention — ancient pronunciation uncertain.",
+        "period_start": null,
+        "period_end": null,
+        "source": "Wörterbuch der aegyptischen Sprache / TLA lemma km.t; New Kingdom royal inscriptions"
+      },
+      {
+        "name": "Kemet",
+        "lang": "egy-Latn",
+        "context": "Modern Egyptological romanization of km.t; used as primary name per AtlasPI local-name-first policy",
+        "period_start": null,
+        "period_end": null,
+        "source": "standard Egyptological usage"
+      },
+      {
+        "name": "tꜣ-mrj (Ta-mery)",
+        "lang": "egy",
+        "context": "'The beloved land' — poetic endonym attested in New Kingdom texts",
+        "period_start": null,
+        "period_end": null,
+        "source": "New Kingdom literary and monumental texts"
+      },
+      {
+        "name": "Miṣri",
+        "lang": "akk",
+        "context": "Akkadian exonym for Egypt in the Amarna diplomatic correspondence (EA tablets) — contemporary non-Egyptian, non-Western attestation",
+        "period_start": -1360,
+        "period_end": -1330,
+        "source": "Amarna letters (EA archive, Akhetaten)"
+      },
+      {
+        "name": "New Kingdom of Egypt",
+        "lang": "en",
+        "context": "Modern historiographic periodization (19th-century Egyptology); not an ancient name",
+        "period_start": -1550,
+        "period_end": -1069,
+        "source": "Shaw (ed.), Oxford History of Ancient Egypt, 2000"
+      },
+      {
+        "name": "Egyptian Empire",
+        "lang": "en",
+        "context": "Standard historiographic label — the only period of pharaonic Egypt conventionally called an 'empire' (basis for entity_type)",
+        "period_start": -1550,
+        "period_end": -1069,
+        "source": "Wikidata Q180568 label (verified 2026-07-04)"
+      },
+      {
+        "name": "Nuovo Regno d'Egitto",
+        "lang": "it",
+        "context": "Italian historiographic form",
+        "period_start": null,
+        "period_end": null,
+        "source": "standard Italian Egyptological usage"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -1550,
+        "region": "Avaris and Lower Egypt (Nile Delta)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ahmose I (founder of the 18th Dynasty) sacked the Hyksos capital Avaris, expelled the 15th (Hyksos) Dynasty and pursued them into southern Canaan with a multi-year siege of Sharuhen. Egypt reunified by force under Theban rule — conventional start of the New Kingdom (Shaw chronology).",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": -1500,
+        "region": "Nubia (Kush) to Kurgus, beyond the Fourth Cataract",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Thutmose I invaded Kush and killed its ruler; his Tombos stela boasts of Nubian corpses strewn across their valleys. He carved a boundary tableau at Hagar el-Merwa (Kurgus), upstream of the Fourth Cataract — perpetrator: the Egyptian state; victims: the Kushite kingdom of Kerma and Nubian populations.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": -1457,
+        "region": "Canaan and the Levant (Megiddo)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Thutmose III defeated the Kadesh-led Canaanite coalition at Megiddo — the first battle in history recorded in reliable detail (Annals, Hall of Annals at Karnak, scribe Tjaneni). Seventeen campaigns over two decades reduced the Canaanite and Syrian city-states to tribute-paying vassals under Egyptian garrisons; thousands of captives were deported to Egypt as unfree labor.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": -1450,
+        "region": "Upper Nubia (Napata / Gebel Barkal)",
+        "change_type": "COLONIZATION",
+        "description": "Thutmose III founded Napata below Gebel Barkal, consolidating colonial rule over Kush: a viceroy ('King's Son of Kush'), industrial-scale gold extraction (Wadi Allaqi, Eastern Desert) with conscripted labor, and temple-towns (Sesebi, Soleb, Amara West) as instruments of administration and forced cultural Egyptianization. Explicit colonial extraction from Kush that financed the empire.",
+        "population_affected": null,
+        "confidence_score": 0.8
+      },
+      {
+        "year": -1259,
+        "region": "Syria (Kadesh / Amurru frontier)",
+        "change_type": "TREATY",
+        "description": "Egyptian–Hittite treaty between Ramesses II and Hattusili III — the earliest surviving international peace treaty (silver tablet original; hieroglyphic copies at Karnak and the Ramesseum; Akkadian tablet from Hattusa, now Istanbul Archaeology Museums; replica at UN headquarters). It stabilized the frontier after the drawn Battle of Kadesh (-1274): Kadesh and Amurru stayed Hittite, Canaan stayed Egyptian. Ramesses II's Kadesh 'victory' reliefs are state propaganda; the battle was a stalemate.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": -1177,
+        "region": "Nile Delta and Djahy (coastal Levant)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ramesses III repelled the Sea Peoples' combined land and sea invasions (Medinet Habu reliefs and inscriptions, regnal year 8, c. -1177). Egypt survived the eastern-Mediterranean collapse that destroyed Hatti and Ugarit, but its Levantine holdings eroded in the following decades as Philistines and others settled coastal Canaan.",
+        "population_affected": null,
+        "confidence_score": 0.75
+      },
+      {
+        "year": -1140,
+        "region": "Canaan and Syria",
+        "change_type": "UNKNOWN",
+        "description": "Gradual, poorly documented Egyptian withdrawal from the Levantine empire; the last secure attestations of Egyptian control date to Ramesses VI (c. -1141..-1133). Marked UNKNOWN because no single conquest or treaty ended it — the tribute system dissolved with Egyptian state capacity.",
+        "population_affected": null,
+        "confidence_score": 0.6
+      },
+      {
+        "year": -1069,
+        "region": "Nubia and Upper Egypt",
+        "change_type": "REVOLUTION",
+        "description": "Internal breakdown of the 20th Dynasty under Ramesses XI: state-prosecuted royal tomb robberies (Tomb Robbery Papyri, e.g. P. Abbott), grain crises after the first recorded labor strike at Deir el-Medina (-1157, year 29 of Ramesses III), and civil war between viceroy Panehesy of Kush and the Theban high priesthood of Amun. Nubia was lost; power split between Smendes at Tanis and the high priests of Amun at Thebes — start of the Third Intermediate Period (conventional end date -1069, Shaw).",
+        "population_affected": null,
+        "confidence_score": 0.7
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Ian Shaw (ed.), The Oxford History of Ancient Egypt, Oxford University Press, 2000 — New Kingdom chapters; source of the 1550–1069 BCE chronology used here",
+        "source_type": "academic",
+        "url": "https://global.oup.com/academic/product/the-oxford-history-of-ancient-egypt-9780192804587"
+      },
+      {
+        "citation": "Stuart Tyson Smith, Wretched Kush: Ethnic Identities and Boundaries in Egypt's Nubian Empire, Routledge, 2003",
+        "source_type": "academic",
+        "url": "https://books.google.com/books/about/Wretched_Kush.html?id=fsbmHwcbfFIC"
+      },
+      {
+        "citation": "Ellen Morris, Ancient Egyptian Imperialism, Wiley-Blackwell, 2018",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Donald B. Redford, Egypt, Canaan, and Israel in Ancient Times, Princeton University Press, 1992",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Eric H. Cline, 1177 B.C.: The Year Civilization Collapsed, Princeton University Press, 2014",
+        "source_type": "academic",
+        "url": null
+      },
+      {
+        "citation": "Annals of Thutmose III, Hall of Annals, Temple of Amun-Re at Karnak (Urk. IV) — Megiddo campaign account by the scribe Tjaneni",
+        "source_type": "primary",
+        "url": "https://en.wikipedia.org/wiki/Annals_of_Thutmose_III"
+      },
+      {
+        "citation": "Egyptian–Hittite peace treaty (c. 1259 BCE), Ramesses II–Hattusili III: hieroglyphic copies at Karnak and the Ramesseum; Akkadian tablet from Hattusa, Istanbul Archaeology Museums",
+        "source_type": "primary",
+        "url": "https://en.wikipedia.org/wiki/Egyptian%E2%80%93Hittite_peace_treaty"
+      },
+      {
+        "citation": "Medinet Habu, mortuary temple of Ramesses III: year-8 Sea Peoples reliefs and inscriptions (Epigraphic Survey, Medinet Habu I–II, Oriental Institute of the University of Chicago)",
+        "source_type": "primary",
+        "url": null
+      },
+      {
+        "citation": "W. Vivian Davies, 'Nubia in the New Kingdom: the Egyptians at Kurgus', in N. Spencer, A. Stevens, M. Binder (eds.), Nubia in the New Kingdom: Lived Experience, Pharaonic Control and Indigenous Traditions, British Museum, 2017 — Hagar el-Merwa boundary inscriptions of Thutmose I and III",
+        "source_type": "archaeological",
+        "url": "https://www.academia.edu/36674653/Nubia_in_the_New_Kingdom_the_Egyptians_at_Kurgus"
+      }
+    ]
+  },
+  {
+    "name_original": "Πτολεμαϊκὴ βασιλεία",
+    "name_original_lang": "grc",
+    "entity_type": "kingdom",
+    "year_start": -305,
+    "year_end": -30,
+    "capital_name": "Alexandria (Ἀλεξάνδρεια)",
+    "capital_lat": 31.2001,
+    "capital_lon": 29.9187,
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            25.15,
+            31.4
+          ],
+          [
+            29.92,
+            31.3
+          ],
+          [
+            32.55,
+            31.1
+          ],
+          [
+            33.8,
+            31.1
+          ],
+          [
+            32.6,
+            29.7
+          ],
+          [
+            34.3,
+            27.2
+          ],
+          [
+            35.55,
+            23.9
+          ],
+          [
+            32.9,
+            23.8
+          ],
+          [
+            30.6,
+            24.5
+          ],
+          [
+            28.9,
+            25.4
+          ],
+          [
+            25.4,
+            29.2
+          ],
+          [
+            25.15,
+            31.4
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "ethical_notes": "The Ptolemaic Kingdom was a Macedonian-Greek conquest state: a Greek-speaking dynasty and settler-soldier elite ruled the native Egyptian majority following the military conquest of Egypt in 332 BCE by Alexander III of Macedon (taken from the Achaemenid Persian occupation). Greeks and Hellenized immigrants were legally and fiscally privileged over Egyptians — 'Hellene' tax status, separate Greek courts, land allotments to Greek cleruch soldiers — and Alexandria was constitutionally a Greek polis. Native resistance was repeated and violently suppressed: in the Great Theban Revolt (unrest from c. 206, secession from 205 BCE) Upper Egypt broke away as an Egyptian pharaonic state under the native pharaohs Horwennefer (r. 205–199) and Ankhwennefer (r. 199–186); Ptolemy V's general Comanus crushed it on 27 August 186 BCE, killing Ankhwennefer's son in battle. Ptolemy V had the captured Delta rebel leaders of Lycopolis executed at his Memphis coronation in 196 BCE — an execution the regime itself commemorated on the Rosetta Stone; per the Second Philae decree Ankhwennefer was condemned to death and then pardoned at the priests' intercession. The perpetrators of these repressions were the Ptolemaic kings and their armies. At the same time the dynasty presented itself as legitimate pharaohs, funded Egyptian temples, and governed through an increasingly bilingual Greek-demotic administration (trilingual Memphis decree/Rosetta Stone, 196 BCE) — domination and accommodation coexisted, and the scholarly dispute over how 'colonial' or 'entangled' Ptolemaic rule was (older segregationist readings vs. Manning's and Fischer-Bovet's integration readings) is recorded here, not resolved. The kingdom ended in violence: Octavian (Augustus) defeated Antony and Cleopatra VII at Actium (31 BCE), invaded Egypt, and took Alexandria on 1 August 30 BCE; Antony and Cleopatra died by suicide, and Octavian ordered the killing of the seventeen-year-old co-ruler Ptolemy XV Caesarion. Egypt was annexed as the personal province of the Roman emperor — the violent extinction of the last major Hellenistic kingdom. Hostile Roman portrayals of Cleopatra VII reflect Augustan propaganda and are treated critically. The record deliberately names the Egyptian secessionist state and its pharaohs rather than treating the revolt as mere 'unrest'.",
+    "wikidata_qid": "Q2320005",
+    "name_variants": [
+      {
+        "name": "Πτολεμαϊκὴ βασιλεία",
+        "lang": "grc",
+        "context": "Koine Greek form used as the standard name in scholarship and reference works (romanized Ptolemaïkḕ basileía). HONESTY NOTE: the adjective Ptolemaïkos and the word basileia are amply attested in ancient sources, but the compound phrase as an official state name is a scholarly convention — contemporary documents named the state through its ruler ('King Ptolemy' / hē basileia of Ptolemy).",
+        "period_start": -305,
+        "period_end": -30,
+        "source": "Wikipedia/Wikidata Q2320005; conventional in Hölbl 2001 and Manning 2010"
+      },
+      {
+        "name": "Kmt (Kemet, 𓆎𓅓𓏏𓊖)",
+        "lang": "egy",
+        "context": "Native Egyptian name of the land itself, still used in hieroglyphic and demotic documents of the period; the Ptolemies bore full pharaonic titularies in Egyptian (e.g. on the Rosetta Stone). There was no separate native name for the dynasty's state.",
+        "period_start": -305,
+        "period_end": -30,
+        "source": "Memphis decree (Rosetta Stone), 196 BCE"
+      },
+      {
+        "name": "Ptolemaic Kingdom",
+        "lang": "en",
+        "context": "Standard English name",
+        "period_start": null,
+        "period_end": null,
+        "source": "Wikidata Q2320005"
+      },
+      {
+        "name": "Ptolemaic Egypt",
+        "lang": "en",
+        "context": "Common English alternative",
+        "period_start": null,
+        "period_end": null,
+        "source": "Wikidata Q2320005 alias"
+      },
+      {
+        "name": "Lagid Kingdom",
+        "lang": "en",
+        "context": "From Lagos, father of Ptolemy I; the dynasty is also called the Lagids",
+        "period_start": null,
+        "period_end": null,
+        "source": "Wikidata Q2320005 alias"
+      },
+      {
+        "name": "Royaume lagide",
+        "lang": "fr",
+        "context": "Standard in French historiography (e.g. Véïsse 2004)",
+        "period_start": null,
+        "period_end": null,
+        "source": "Véïsse 2004"
+      },
+      {
+        "name": "الدولة البطلمية",
+        "lang": "ar",
+        "context": "Modern Arabic historiographical name (also مصر البطالمة, 'Ptolemaic Egypt')",
+        "period_start": null,
+        "period_end": null,
+        "source": "modern Arabic historiography"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -332,
+        "region": "Egypt (Nile valley and Delta)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Alexander III of Macedon conquered Egypt from the Achaemenid Persian occupation (Second Persian Period); the Persian satrap surrendered without major battle. Predates the kingdom proper but is the founding act of Macedonian rule; Alexandria founded 331 BCE.",
+        "population_affected": null,
+        "confidence_score": 0.95
+      },
+      {
+        "year": -323,
+        "region": "Egypt",
+        "change_type": "TREATY",
+        "description": "Partition of Babylon after Alexander's death: Ptolemy son of Lagos assigned Egypt as satrap. He ruled as satrap 323-305, seizing Alexander's corpse (321) and defending Egypt against Perdiccas (321/320).",
+        "population_affected": null,
+        "confidence_score": 0.95
+      },
+      {
+        "year": -322,
+        "region": "Cyrenaica",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ptolemy I's general Ophellas subjugated Cyrene and Cyrenaica by military force, exploiting the city's civil strife; held (with revolts) as Ptolemaic dependency.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": -301,
+        "region": "Coele-Syria, Phoenicia, Judea",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "After the Battle of Ipsus, Ptolemy I occupied Coele-Syria and southern Phoenicia in defiance of the coalition award to Seleucus — root of the six Syrian Wars (274-168 BCE) between Ptolemies and Seleucids.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": -217,
+        "region": "Coele-Syria (Raphia)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Fourth Syrian War: Ptolemy IV defeated the Seleucid Antiochus III at Raphia, retaining Coele-Syria. Polybius links the arming of ~20,000 native Egyptian phalangites at Raphia to the rise of subsequent native revolts.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": -205,
+        "region": "Thebaid (Upper Egypt)",
+        "change_type": "REVOLUTION",
+        "description": "Great Theban Revolt: Upper Egypt seceded from Ptolemaic rule as a native Egyptian pharaonic state under Horwennefer (proclaimed pharaoh c. 205; unrest from 206), succeeded by Ankhwennefer (199-186). An Egyptian secessionist state, not mere banditry.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": -198,
+        "region": "Coele-Syria, Phoenicia, Judea",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Fifth Syrian War: Antiochus III defeated the Ptolemaic army at Panium (200 BCE) and by 198 had conquered Coele-Syria, Phoenicia and Judea from Ptolemy V — permanent loss of the Levantine province.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": -196,
+        "region": "Nile Delta (Lycopolis)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ptolemy V's forces besieged and took rebel Lycopolis in the Delta; the captured rebel leaders were executed at the king's Memphis coronation — the repression is recorded, as royal self-celebration, on the trilingual Memphis decree (Rosetta Stone).",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": -186,
+        "region": "Thebaid (Upper Egypt)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Ptolemy V's general Comanus defeated the native pharaoh Ankhwennefer on 27 August 186 BCE, killing his son in battle; Upper Egypt forcibly reincorporated, followed by amnesty decree and garrisoning. Per the Second Philae decree Ankhwennefer was condemned to death, then pardoned at the priests' intercession.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": -168,
+        "region": "Egypt (Alexandria and Memphis)",
+        "change_type": "TREATY",
+        "description": "Sixth Syrian War: Antiochus IV invaded Egypt twice (170-168) and had himself crowned; the Roman envoy C. Popillius Laenas' ultimatum ('Day of Eleusis') forced Seleucid withdrawal. Egypt survived intact but henceforth as a de facto Roman protectorate.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": -96,
+        "region": "Cyrenaica",
+        "change_type": "INHERITANCE",
+        "description": "Ptolemy Apion died bequeathing Cyrenaica to Rome by testament; Rome formally organized it as a province in 74 BCE.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": -58,
+        "region": "Cyprus",
+        "change_type": "CESSION_FORCED",
+        "description": "Rome annexed Ptolemaic Cyprus under the lex Clodia; king Ptolemy of Cyprus (brother of Ptolemy XII) killed himself rather than submit; Ptolemy XII of Egypt, dependent on Roman backing, did not resist.",
+        "population_affected": null,
+        "confidence_score": 0.85
+      },
+      {
+        "year": -30,
+        "region": "Egypt (entire kingdom)",
+        "change_type": "CONQUEST_MILITARY",
+        "description": "Octavian (the future Augustus) invaded Egypt after defeating Antony and Cleopatra VII at Actium (Sept 31 BCE); Alexandria fell 1 August 30 BCE. Antony and Cleopatra died by suicide; Octavian ordered the killing of the co-ruler Ptolemy XV Caesarion, aged seventeen. Egypt annexed as a Roman province — the violent end of the last major Hellenistic kingdom.",
+        "population_affected": null,
+        "confidence_score": 0.95
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hölbl, Günther. A History of the Ptolemaic Empire. Translated by Tina Saavedra. London: Routledge, 2001. ISBN 978-0415234894.",
+        "source_type": "academic",
+        "url": "https://www.routledge.com/A-History-of-the-Ptolemaic-Empire/Holbl/p/book/9780415234894"
+      },
+      {
+        "citation": "Manning, J. G. The Last Pharaohs: Egypt Under the Ptolemies, 305–30 BC. Princeton: Princeton University Press, 2010. ISBN 978-0691156385.",
+        "source_type": "academic",
+        "url": "https://press.princeton.edu/books/paperback/9780691156385/the-last-pharaohs"
+      },
+      {
+        "citation": "Véïsse, Anne-Emmanuelle. Les « révoltes égyptiennes »: Recherches sur les troubles intérieurs en Égypte du règne de Ptolémée III Évergète à la conquête romaine. Studia Hellenistica 41. Leuven: Peeters, 2004. ISBN 978-9042913998.",
+        "source_type": "academic",
+        "url": "https://www.peeters-leuven.be/detail.php?search_key=8574"
+      },
+      {
+        "citation": "Memphis decree of Ptolemy V (Rosetta Stone), 27 March 196 BCE, trilingual (Egyptian hieroglyphic, demotic, Greek). British Museum, EA 24 — priestly decree recording royal cult, tax remissions, and the execution of the Lycopolis rebel leaders.",
+        "source_type": "primary",
+        "url": "https://www.britishmuseum.org/collection/object/Y_EA24"
+      },
+      {
+        "citation": "Polybius, Histories, Book 5 (Battle of Raphia, 5.79-86; native unrest after Raphia, 5.107) and Book 29.27 (Day of Eleusis). 2nd century BCE.",
+        "source_type": "primary",
+        "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/home.html"
+      },
+      {
+        "citation": "Fischer-Bovet, Christelle. Army and Society in Ptolemaic Egypt. Cambridge: Cambridge University Press, 2014. ISBN 978-1107007758.",
+        "source_type": "academic",
+        "url": "https://www.cambridge.org/core/books/army-and-society-in-ptolemaic-egypt/8B70E39A9ECB4E4EA6F4E20B85F09F97"
+      }
+    ]
+  }
+]

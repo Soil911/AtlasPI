@@ -2,6 +2,32 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.122] - 2026-07-04 (ETHICS-022: split Kemet — da "impero" a civiltà-ombrello)
+
+*Split di super-aggregato (variante ombrello). #26 `Kemet` tipizzava 3070 anni
+(-3100..-30) come un unico 'impero': km.t nomina la TERRA, non lo stato, e la
+continuità cancellava i Periodi Intermedi di collasso e il dominio straniero.
+Cross-check ChatGPT d/e/f/g AGREE. Record: ETHICS-022.*
+
+- **#26 → `civilization`** (non deprecata, a differenza di Babilonia — è una
+  civiltà genuina, come Wikidata Q11768). Nome/span/conf invariati; note
+  riscritte: ombrello-civiltà NON stato continuo, rotture enumerate.
+- **4 entità-periodo** (schema `tꜣ.wy (X)`, nome attestato dello *stato* Two
+  Lands): `tꜣ.wy (Old Kingdom)` -2686..-2160 (Q177819), `tꜣ.wy (Middle
+  Kingdom)` -2055..-1650 (Q191324), `tꜣ.wy (New Kingdom)` -1550..-1069
+  (Q180568, type=empire), `Πτολεμαϊκὴ βασιλεία` -305..-30 (Q2320005, dinastia
+  macedone-greca, nome greco).
+- **16 eventi ri-organizzati**: 12 interni spostati all'entità-periodo per
+  anno; la fondazione -3100 e Alessandro -334 restano sull'ombrello; le
+  **conquiste straniere** (kushita -747, persiana -525) tengono il link a
+  Kemet come VICTIM e **aggiungono il conquistatore** (Kush #52, Xšāça #27)
+  come MAIN_ACTOR — l'agentività nubiana/persiana non è più cancellata sotto
+  "impero egizio".
+- **Catena "Egyptian pharaonic kingdoms"** dei soli 3 Regni, ogni link
+  RESTORATION con nota sul Periodo Intermedio di collasso interposto; il
+  Regno tolemaico NON è nella catena (750 anni di dominio straniero lo
+  separano). Prod 1049→1053 entità.
+
 ## [v6.99.121] - 2026-07-04 (ETHICS-021: split Sri Lanka — #142 era un nome di re)
 
 *Split di super-aggregato (classe ETHICS-015). La linea singalese era rotta:

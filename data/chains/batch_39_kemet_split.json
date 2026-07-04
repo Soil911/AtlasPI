@@ -1,0 +1,49 @@
+[
+  {
+    "name": "Egyptian pharaonic kingdoms: tꜣ.wy (Old) → (Middle) → (New)",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "Northeast Africa / Nile Valley (Egypt)",
+    "description": "The three 'Kingdom' high-points of pharaonic Egyptian statehood (Old, Middle, New), each separated from the next by an Intermediate Period of real state collapse and (for the New Kingdom's founding) by foreign Hyksos rule.",
+    "confidence_score": 0.8,
+    "ethical_notes": "This chain links only the three periods of FULL pharaonic statehood and does NOT assert continuous statehood: it is punctuated by the First Intermediate Period (c. -2160..-2055, rival Herakleopolitan and Theban dynasties) and the Second Intermediate Period (c. -1650..-1550), during which the Levantine Hyksos (15th Dynasty) ruled Lower Egypt as a FOREIGN power. The links are typed RESTORATION precisely to mark these interruptions. The Ptolemaic Kingdom (a Macedonian-Greek state) is deliberately NOT in this chain: ~750 years of Third Intermediate Period, Late Period and foreign rule (Kushite 25th Dynasty — see Kush #52; Assyrian, Achaemenid Persian — see Xšāça #27; then Argead Macedonian) separate it from the New Kingdom. The 'Kemet' entity #26 is the civilisation umbrella over all of this, not a continuous state.",
+    "sources": [
+      {
+        "citation": "Ian Shaw (ed.), The Oxford History of Ancient Egypt, Oxford University Press, 2000",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Erik Hornung, Rolf Krauss, David Warburton (eds.), Ancient Egyptian Chronology, Brill (HdO 83), 2006",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "links": [
+      {
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "The Old Kingdom (c. -2686..-2160), the 'pyramid age' of the 3rd-6th Dynasties, ruled from Memphis (Inbu-hedj).",
+        "ethical_notes": null,
+        "entity_name": "tꜣ.wy (Old Kingdom)"
+      },
+      {
+        "transition_year": -2055,
+        "transition_type": "RESTORATION",
+        "is_violent": true,
+        "description": "Mentuhotep II reunified Egypt by war (c. -2055), ending the First Intermediate Period, and founded the Middle Kingdom (11th-13th Dynasties).",
+        "ethical_notes": "The FIRST INTERMEDIATE PERIOD (c. -2160..-2055) — real state collapse with rival Herakleopolitan and Theban dynasties — intervened between the Old and Middle Kingdoms. RESTORATION marks that interruption; the reunification itself was a military conquest.",
+        "entity_name": "tꜣ.wy (Middle Kingdom)"
+      },
+      {
+        "transition_year": -1550,
+        "transition_type": "RESTORATION",
+        "is_violent": true,
+        "description": "Ahmose I expelled the Hyksos and founded the New Kingdom (18th-20th Dynasties, c. -1550..-1069), the era of the Egyptian Empire in Nubia and the Levant.",
+        "ethical_notes": "The SECOND INTERMEDIATE PERIOD (c. -1650..-1550), during which the Levantine Hyksos (15th Dynasty) ruled Lower Egypt as a FOREIGN power, intervened between the Middle and New Kingdoms. RESTORATION marks that interruption; Ahmose's expulsion of the Hyksos was a war of conquest.",
+        "entity_name": "tꜣ.wy (New Kingdom)"
+      }
+    ]
+  }
+]
