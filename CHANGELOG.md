@@ -2,6 +2,21 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [packaging] - 2026-07-04 (M2: registrazione nel registry MCP ufficiale + GSC)
+
+*Non tocca l'app runtime (APP_VERSION resta 6.99.117) — solo discoverability.*
+
+- **Registry MCP ufficiale**: AtlasPI pubblicato su registry.modelcontextprotocol.io
+  come `io.github.Soil911/atlaspi` v0.10.1. Autenticazione via **GitHub OIDC** dal
+  CI (`.github/workflows/publish-mcp-registry.yml`) — nessun login manuale: l'Action
+  prova di girare nel repo Soil911/AtlasPI. Ostacoli risolti: namespace
+  case-sensitive (`io.github.Soil911`, non `soil911`); prova di ownership del
+  pacchetto PyPI via riga `mcp-name: io.github.Soil911/atlaspi` nel README →
+  bump `atlaspi-mcp` **0.10.1**; schema server.json aggiornato a 2025-12-11,
+  description ≤100 char.
+- **Google Search Console**: proprietà Dominio `atlaspi.it` **verificata** (record
+  TXT aggiunto nella console DNS Aruba) + **sitemap.xml inviata** (13 URL).
+
 ## [v6.99.117] - 2026-07-04 (fix IndexNow: chiave alla root)
 
 - La spec IndexNow richiede la chiave alla ROOT dell'host per coprire tutto il
