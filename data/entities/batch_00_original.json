@@ -4446,10 +4446,10 @@
     "entity_type": "disputed_territory",
     "year_start": 2014,
     "year_end": null,
-    "capital_name": null,
+    "capital_name": "Simferopol",
     "capital_lat": 44.9521,
     "capital_lon": 34.1024,
-    "confidence_score": 0.35,
+    "confidence_score": 0.65,
     "status": "disputed",
     "boundary_geojson": {
       "type": "Polygon",
@@ -4510,7 +4510,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-003: la Crimea e' un territorio attivamente contestato tra Ucraina e Russia. Annessa dalla Russia nel 2014 dopo un referendum non riconosciuto dalla comunità internazionale. L'Ucraina e la maggior parte degli stati ONU considerano la Crimea territorio ucraino sotto occupazione russa. name_original include sia la forma ucraina (Крим) che russa (Крым). Questo record non arbitra la disputa.",
+    "ethical_notes": "ETHICS-003: Crimea is an actively contested territory between Ukraine and Russia. Following the 2014 Russian military intervention and a referendum not recognised by the international community (UN General Assembly Resolution 68/262, adopted 100-11 with 58 abstentions), Russia annexed the peninsula. Ukraine and the majority of UN member states consider Crimea Ukrainian territory under Russian military occupation. The name_original includes both the Ukrainian form (Крим) and Russian form (Крым). ETHICS-001: The Crimean Tatars (Qırımtatarlar) are the indigenous people of Crimea who were subjected to total deportation (sürgün) by Stalin in May 1944. An estimated 18–46% died during transport or in the first years of exile. Those who returned after 1989 faced systematic discrimination. The 2014 annexation has brought renewed pressure on the Tatar community. This record does not arbitrate the sovereignty dispute — it documents all perspectives with sources.",
     "name_variants": [
       {
         "name": "Crimea",
@@ -4532,27 +4532,36 @@
         "change_type": "ETHNIC_CLEANSING",
         "description": "Stalin ordina la deportazione totale dei Tartari di Crimea in Asia Centrale. Si stima che il 18-46% sia morto durante il trasferimento o subito dopo.",
         "population_affected": 200000,
-        "confidence_score": 0.85
+        "confidence_score": 0.9
       },
       {
         "year": 2014,
         "region": "Crimea",
         "change_type": "CONQUEST_MILITARY",
         "description": "Annessione russa della Crimea dopo l'intervento militare e un referendum contestato. Condannata come violazione del diritto internazionale dalla Risoluzione ONU 68/262.",
-        "confidence_score": 0.9
+        "confidence_score": 0.95
       }
     ],
     "sources": [
       {
-        "citation": "Williams, B.G. The Crimean Tatars (2001)",
+        "citation": "Williams, B.G. The Crimean Tatars: The Diaspora Experience and the Forging of a Nation. Brill, 2001",
         "source_type": "academic"
       },
       {
-        "citation": "Nazioni Unite, Risoluzione 68/262 (2014)",
+        "citation": "United Nations General Assembly Resolution 68/262, 'Territorial Integrity of Ukraine', 27 March 2014",
+        "source_type": "primary",
+        "url": "https://undocs.org/A/RES/68/262"
+      },
+      {
+        "citation": "Plokhy, S. The Gates of Europe: A History of Ukraine. Basic Books, 2015",
+        "source_type": "academic"
+      },
+      {
+        "citation": "International Court of Justice, 'Legal Consequences of the Separation of the Chagos Archipelago from Mauritius in 1965', Advisory Opinion, 2019 — relevant precedent on territorial integrity and self-determination",
         "source_type": "primary"
       },
       {
-        "citation": "Plokhy, S. The Gates of Europe: A History of Ukraine (2015)",
+        "citation": "Grant, T.D. 'Annexation of Crimea', American Journal of International Law 109(1), 2015, pp. 68–95",
         "source_type": "academic"
       }
     ],
@@ -37718,7 +37727,7 @@
     "capital_name": "Lefkoşa",
     "capital_lat": 35.1856,
     "capital_lon": 33.3823,
-    "confidence_score": 0.35,
+    "confidence_score": 0.6,
     "status": "disputed",
     "boundary_geojson": {
       "type": "Polygon",
@@ -37767,7 +37776,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-003: la Repubblica Turca di Cipro del Nord e' riconosciuta solo dalla Turchia. L'ONU e la comunita' internazionale riconoscono la sovranita' della Repubblica di Cipro sull'intera isola. La divisione risale all'invasione turca del 1974 dopo il colpo di stato greco-cipriota. Questo record documenta entrambe le posizioni.",
+    "ethical_notes": "ETHICS-003: The TRNC is recognised as a sovereign state only by Turkey. All other UN member states and the UN itself consider it occupied territory of the Republic of Cyprus. UN Security Council Resolutions 541 (1983) and 550 (1984) call the declaration of independence 'legally invalid' and call for its withdrawal. ETHICS-001: The 1974 Turkish military intervention followed a Greek-junta-backed coup aimed at enosis (union with Greece). Both Greek Cypriot and Turkish Cypriot communities suffered casualties and displacement: approximately 160,000 Greek Cypriots were displaced from the north and approximately 50,000 Turkish Cypriots from the south. The Committee on Missing Persons in Cyprus continues to exhume and identify victims from both communities. This record documents the dispute; it does not take a position on sovereignty.",
     "name_variants": [
       {
         "name": "Northern Cyprus",
@@ -37794,11 +37803,25 @@
     ],
     "sources": [
       {
-        "citation": "Ker-Lindsay, J. The Cyprus Problem (2011)",
+        "citation": "Ker-Lindsay, J. The Cyprus Problem: What Everyone Needs to Know. Oxford University Press, 2011",
         "source_type": "academic"
       },
       {
-        "citation": "Nazioni Unite, Risoluzione 541 (1983)",
+        "citation": "Hitchens, C. Hostage to History: Cyprus from the Ottomans to Kissinger. Verso, 1997 (3rd ed.)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "UN Security Council Resolution 541 (1983)",
+        "source_type": "primary",
+        "url": "https://undocs.org/S/RES/541(1983)"
+      },
+      {
+        "citation": "UN Security Council Resolution 550 (1984)",
+        "source_type": "primary",
+        "url": "https://undocs.org/S/RES/550(1984)"
+      },
+      {
+        "citation": "European Court of Human Rights, Loizidou v. Turkey (Application no. 15318/89), Judgment, 18 December 1996",
         "source_type": "primary"
       }
     ],

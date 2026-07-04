@@ -12962,7 +12962,7 @@
     "capital_name": "पाटलिपुत्र",
     "capital_lat": 25.6115,
     "capital_lon": 85.144,
-    "confidence_score": 0.825,
+    "confidence_score": 0.85,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -22806,7 +22806,7 @@
     "capital_name": "تیسفون",
     "capital_lat": 33.0925,
     "capital_lon": 44.5814,
-    "confidence_score": 0.75,
+    "confidence_score": 0.9,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -29083,7 +29083,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: il nome 'Funan' e' l'esonimo cinese (扶南). Il nome originale e' incerto — potrebbe derivare dal khmer antico 'bnam' (montagna). Le fonti sono quasi esclusivamente cinesi. ETHICS-003: Funan e' il primo stato indianizzato documentato del Sud-est asiatico. La sua esistenza come entita' politica unitaria e' dibattuta: alcuni lo vedono come una rete commerciale. Il confidence_score e' basso per riflettere questa incertezza.",
+    "ethical_notes": "ETHICS-001: The name 'Funan' is the Chinese exonym (扶南, Fúnán), which may derive from Old Khmer *bnaṃ ('mountain'). The entity's self-designation is unknown. The primary sources are Chinese dynastic histories (Liangshu, Jinshu); no indigenous Funanese texts survive. ETHICS-003: Funan is the earliest documented Indianised state in mainland Southeast Asia, but its nature as a unified political entity is debated. Michael Vickery (1998) argued it was not a single polity but a network of trading communities, while Claude Jacques and others maintain it was a genuine though loosely structured kingdom. The archaeological site of Óc Eo (excavated by Louis Malleret, 1942–1944; Vietnamese campaigns 1975–present) has produced Roman gold medallions, Indian seals, and Chinese ceramics, confirming its role as a major Indian Ocean trading hub. The raised confidence score reflects substantial archaeological corroboration of the Chinese textual accounts, even though political structure remains uncertain.",
     "name_variants": [
       {
         "name": "Funan",
@@ -29117,7 +29117,7 @@
         "change_type": "UNIFICATION",
         "description": "Fondazione tradizionale del regno di Funan, probabilmente un sistema di citta'-stato collegate dal commercio marittimo. Il sito di Oc Eo mostra contatti con Roma, India e Cina. La data e' molto approssimativa.",
         "population_affected": null,
-        "confidence_score": 0.3
+        "confidence_score": 0.5
       },
       {
         "year": 550,
@@ -29125,21 +29125,33 @@
         "change_type": "CONQUEST_MILITARY",
         "description": "Il regno di Chenla (predecessore dell'Impero Khmer) assorbe Funan. La transizione potrebbe essere stata graduale. Gli studiosi dibattono se Chenla fosse un vassallo ribelle o un'entita' separata.",
         "population_affected": null,
-        "confidence_score": 0.4
+        "confidence_score": 0.6
       }
     ],
     "sources": [
       {
-        "citation": "Vickery, M. Society, Economics, and Politics in Pre-Angkor Cambodia (1998)",
+        "citation": "Vickery, M. Society, Economics, and Politics in Pre-Angkor Cambodia: The 7th–8th Centuries. Centre for East Asian Cultural Studies, 1998",
         "source_type": "academic"
       },
       {
-        "citation": "Coedes, G. The Indianized States of Southeast Asia (1968)",
+        "citation": "Coedès, G. The Indianized States of Southeast Asia (trans. S.B. Cowing). University of Hawai'i Press, 1968",
         "source_type": "academic"
       },
       {
-        "citation": "Scavi archeologici di Oc Eo, Vietnam",
+        "citation": "Malleret, L. L'Archéologie du delta du Mékong, 4 vols. École française d'Extrême-Orient, 1959–1963",
         "source_type": "archaeological"
+      },
+      {
+        "citation": "Liang Shu (Book of Liang), ch. 54 — 'Account of Funan' (635 CE official dynastic history)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Jacques, C. 'Funan, Zhenla: The Reality Concealed by These Chinese Views of Indochina', in Glover, I. & Bellwood, P. (eds.) Southeast Asia: From Prehistory to History. Routledge, 2004",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Stark, M.T. 'Pre-Angkorian and Angkorian Cambodia', in Glover, I. & Bellwood, P. (eds.) Southeast Asia: From Prehistory to History. Routledge, 2004",
+        "source_type": "academic"
       }
     ],
     "boundary_source": "historical_approximation"

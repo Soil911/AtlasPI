@@ -1573,7 +1573,7 @@
         "change_type": "CONQUEST_MILITARY",
         "description": "Scythians displace the Cimmerians from the Pontic-Caspian steppe, as reported by Herodotus. Archaeological evidence (weapon types, horse gear) supports a major cultural change in the region. The Scythians may have originated further east in Central Asia.",
         "population_affected": null,
-        "confidence_score": 0.4
+        "confidence_score": 0.55
       },
       {
         "year": -512,
@@ -1581,7 +1581,7 @@
         "change_type": "CONQUEST_MILITARY",
         "description": "Darius I of Persia invades Scythia and is forced to retreat. Herodotus provides a detailed (if embellished) account. This event demonstrated the difficulty of conquering nomadic peoples and is one of the few Scythian 'events' with textual corroboration.",
         "population_affected": null,
-        "confidence_score": 0.55
+        "confidence_score": 0.65
       },
       {
         "year": -200,
@@ -1589,25 +1589,33 @@
         "change_type": "CONQUEST_MILITARY",
         "description": "Sarmatian tribes gradually displace the Scythians from the steppe. The process was probably gradual rather than a single event. Remnant Scythian populations persisted in Crimea into the Roman period.",
         "population_affected": null,
-        "confidence_score": 0.4
+        "confidence_score": 0.55
       }
     ],
     "sources": [
       {
-        "citation": "Herodotus, Histories IV (c. 440 BCE)",
+        "citation": "Herodotus, Histories, Book IV (c. 440 BCE) — primary account of Scythian customs, territory, and the failed Persian invasion under Darius I",
         "source_type": "primary"
       },
       {
-        "citation": "Rolle, R. The World of the Scythians (1989)",
+        "citation": "Rolle, R. The World of the Scythians. University of California Press, 1989",
         "source_type": "academic"
       },
       {
-        "citation": "Cunliffe, B. The Scythians: Nomad Warriors of the Steppe (2019)",
+        "citation": "Cunliffe, B. The Scythians: Nomad Warriors of the Steppe. Oxford University Press, 2019",
         "source_type": "academic"
       },
       {
-        "citation": "Darius I, Behistun inscription",
+        "citation": "Darius I, Behistun Inscription (c. 520 BCE) — lists 'Saka' among peoples of the Achaemenid Empire",
         "source_type": "primary"
+      },
+      {
+        "citation": "Parzinger, H. Die Skythen. C.H. Beck, 2004 (3rd ed. 2007)",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Alekseev, A.Yu. et al. 'A Chronology of the Scythian Antiquities of Eurasia Based on New Archaeological and 14C Data', Radiocarbon 43(2B), 2001, pp. 1085–1107",
+        "source_type": "academic"
       }
     ],
     "boundary_source": "historical_approximation"
@@ -1694,7 +1702,7 @@
         "change_type": "CONQUEST_MILITARY",
         "description": "Sarmatian tribes progressively displace Scythians from the western steppe. Archaeological evidence shows replacement of Scythian-type burials with Sarmatian ones (characterized by different weapon types, mirror types, and tamga symbols). The process was gradual, not a single event.",
         "population_affected": null,
-        "confidence_score": 0.35
+        "confidence_score": 0.5
       },
       {
         "year": 375,
@@ -1702,25 +1710,33 @@
         "change_type": "CONQUEST_MILITARY",
         "description": "Hunnic invasion destroys Sarmatian dominance on the steppe. The Alans (a Sarmatian subgroup) are scattered — some join the Huns, others flee westward (reaching as far as North Africa with the Vandals). Ammianus Marcellinus provides a near-contemporary account.",
         "population_affected": null,
-        "confidence_score": 0.5
+        "confidence_score": 0.55
       }
     ],
     "sources": [
       {
-        "citation": "Sulimirski, T. The Sarmatians, Ancient Peoples and Places (1970)",
+        "citation": "Sulimirski, T. The Sarmatians. Thames & Hudson (Ancient Peoples and Places), 1970",
         "source_type": "academic"
       },
       {
-        "citation": "Herodotus, Histories IV.21 (c. 440 BCE)",
+        "citation": "Herodotus, Histories IV.21, IV.110–117 (c. 440 BCE) — earliest description of Sauromatae, including the famous passage linking them to the Amazons",
         "source_type": "primary"
       },
       {
-        "citation": "Ammianus Marcellinus, Res Gestae XXXI (c. 390 CE)",
+        "citation": "Ammianus Marcellinus, Res Gestae XXXI (c. 390 CE) — late Roman account of Sarmatian and Alan involvement in the Gothic wars",
         "source_type": "primary"
       },
       {
-        "citation": "Ptolemy, Geography III.5 (c. 150 CE)",
+        "citation": "Ptolemy, Geography III.5 (c. 150 CE) — defines 'European Sarmatia' and 'Asiatic Sarmatia' as geographic regions",
         "source_type": "primary"
+      },
+      {
+        "citation": "Brzezinski, R. & Mielczarek, M. The Sarmatians 600 BC–AD 450. Osprey Publishing, 2002",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Mordvintseva, V. 'Barbarians of the North Pontic Region and Their Contacts with the Graeco-Roman World', in Oxford Handbook of the Roman World. Oxford, 2022",
+        "source_type": "academic"
       }
     ],
     "boundary_source": "historical_approximation"
@@ -4910,7 +4926,7 @@
         "change_type": "CONQUEST_MILITARY",
         "description": "Following the Han-Xiongnu war that shattered the Northern Xiongnu, the Xianbei rapidly expand into the power vacuum on the steppe. The Hou Hanshu (Book of Later Han) records this transition. Many former Xiongnu subjects simply adopted the Xianbei identity.",
         "population_affected": null,
-        "confidence_score": 0.4
+        "confidence_score": 0.55
       },
       {
         "year": 156,
@@ -4918,7 +4934,7 @@
         "change_type": "CONQUEST_MILITARY",
         "description": "Under Tanshihuai, the Xianbei briefly unite into a powerful confederation stretching from Manchuria to the Ili Valley. Tanshihuai defeated both the Xiongnu remnants and repulsed Han Chinese attacks. However, the confederation fragmented after his death in 181.",
         "population_affected": null,
-        "confidence_score": 0.4
+        "confidence_score": 0.55
       },
       {
         "year": 234,
@@ -4926,20 +4942,28 @@
         "change_type": "DISSOLUTION",
         "description": "The Xianbei confederation fully fragments into competing groups (Murong, Tuoba, Khitan ancestors, etc.). This date is approximate — the fragmentation was a process, not a single event. These successor groups would profoundly shape Chinese history in subsequent centuries.",
         "population_affected": null,
-        "confidence_score": 0.35
+        "confidence_score": 0.5
       }
     ],
     "sources": [
       {
-        "citation": "Fan Ye, Hou Hanshu (Book of Later Han), ch. 90 (5th century CE compilation of earlier sources)",
+        "citation": "Fan Ye, Hou Hanshu (Book of Later Han), ch. 90 — 'Account of the Wuhuan and Xianbei' (5th-century compilation of earlier sources)",
         "source_type": "primary"
       },
       {
-        "citation": "Barfield, T.J. The Perilous Frontier: Nomadic Empires and China (1989)",
+        "citation": "Barfield, T.J. The Perilous Frontier: Nomadic Empires and China, 221 BC – AD 1757. Blackwell, 1989",
         "source_type": "academic"
       },
       {
-        "citation": "Di Cosmo, N., Frank, A.J., & Golden, P.B. (eds.) The Cambridge History of Inner Asia (2009)",
+        "citation": "Di Cosmo, N., Frank, A.J. & Golden, P.B. (eds.) The Cambridge History of Inner Asia: The Chinggisid Age. Cambridge University Press, 2009",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Holcombe, C. 'The Xianbei in Chinese History', Early Medieval China 19, 2013, pp. 1–38",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Schreiber, G. 'The History of the Former Yan Dynasty', Monumenta Serica 15, 1956, pp. 1–141",
         "source_type": "academic"
       },
       {
@@ -5894,7 +5918,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: 'Çatalhöyük' is a modern Turkish name meaning 'forked mound'. The original inhabitants' language is unknown — they predate all known Anatolian languages by millennia. ETHICS-003: Çatalhöyük is one of the most thoroughly excavated Neolithic sites in the world (Mellaart 1960s, Hodder 1993-2018). It was NOT a 'city-state' but a large Neolithic settlement of perhaps 3,000-8,000 people. There is no evidence of social hierarchy, central authority, defensive walls, or administrative structures. Its social organization appears remarkably egalitarian. The entity_type 'city-state' is a schema limitation. Earlier interpretations by Mellaart (a 'Mother Goddess' cult) have been substantially revised by Hodder's work.",
+    "ethical_notes": "ETHICS-001: 'Çatalhöyük' is a modern Turkish name meaning 'forked mound'. The original inhabitants' language is unknown — they predate all known Anatolian languages by millennia. ETHICS-003: Çatalhöyük is one of the most thoroughly excavated Neolithic sites in the world, investigated by James Mellaart (1961–1965) and by Ian Hodder's Stanford-led Çatalhöyük Research Project (1993–2018), producing over 25 seasons of stratigraphic excavation. The site was NOT a 'city-state' in any conventional political-science sense: it was a large Neolithic settlement covering ~13 hectares with an estimated peak population of 3,500–8,000. There is no evidence of social hierarchy, centralised authority, defensive walls, or administrative structures. Hodder interprets the social organisation as 'aggressively egalitarian', with house-based ritual practice replacing what later societies institutionalised as temples and government. The entity_type 'city-state' is a schema limitation — a more accurate designation would be 'proto-urban settlement'. Earlier interpretations by Mellaart positing a 'Mother Goddess' cult have been substantially revised by Hodder's contextual archaeology. UNESCO inscribed the site as a World Heritage Site in 2012 (criteria iii, iv).",
     "name_variants": [
       {
         "name": "Catalhoyuk",
@@ -5928,7 +5952,7 @@
         "change_type": "INDEPENDENCE",
         "description": "Earliest occupation of the East Mound. Settlement grew to cover 13 hectares, making it one of the largest known Neolithic settlements. Houses were tightly packed with roof access and no streets — a unique urban form. Evidence of agriculture (wheat, barley) and animal husbandry (cattle, sheep, goats).",
         "population_affected": null,
-        "confidence_score": 0.4
+        "confidence_score": 0.55
       },
       {
         "year": -6500,
@@ -5936,7 +5960,7 @@
         "change_type": "INDEPENDENCE",
         "description": "Peak occupation period. Rich symbolic culture including wall paintings, figurines, cattle skulls (bucrania) installed in houses, and elaborate burial practices (bodies interred under house floors). Obsidian trade networks extended to eastern Anatolia and beyond.",
         "population_affected": 8000,
-        "confidence_score": 0.4
+        "confidence_score": 0.55
       },
       {
         "year": -5700,
@@ -5944,24 +5968,33 @@
         "change_type": "DISSOLUTION",
         "description": "Abandonment of the site. Occupation shifted briefly to the smaller West Mound before the location was entirely abandoned. Reasons unknown — possibly soil exhaustion, climate change, or shifting social patterns. There was no violent destruction.",
         "population_affected": null,
-        "confidence_score": 0.35
+        "confidence_score": 0.5
       }
     ],
     "sources": [
       {
-        "citation": "Hodder, I. The Leopard's Tale: Revealing the Mysteries of Çatalhöyük (2006)",
+        "citation": "Hodder, I. The Leopard's Tale: Revealing the Mysteries of Çatalhöyük. Thames & Hudson, 2006",
         "source_type": "academic"
       },
       {
-        "citation": "Hodder, I. (ed.) Çatalhöyük Excavations: The 2000-2008 Seasons (2013)",
+        "citation": "Hodder, I. (ed.) Çatalhöyük Excavations: The 2000–2008 Seasons. Çatalhöyük Research Project vol. 7. British Institute at Ankara Monograph 46, 2013",
         "source_type": "archaeological"
       },
       {
-        "citation": "Mellaart, J. Çatal Hüyük: A Neolithic Town in Anatolia (1967)",
+        "citation": "Mellaart, J. Çatal Hüyük: A Neolithic Town in Anatolia. Thames & Hudson, 1967",
         "source_type": "archaeological"
       },
       {
-        "citation": "Asouti, E. & Fuller, D. Trees and Woodlands of South India: Archaeological Perspectives (2008)",
+        "citation": "Hodder, I. (ed.) Religion at Work in a Neolithic Society: Vital Matters. Cambridge University Press, 2014",
+        "source_type": "academic"
+      },
+      {
+        "citation": "UNESCO World Heritage Centre. 'Neolithic Site of Çatalhöyük', nomination dossier and advisory body evaluation, 2012",
+        "source_type": "primary",
+        "url": "https://whc.unesco.org/en/list/1405"
+      },
+      {
+        "citation": "Düring, B.S. The Prehistory of Asia Minor: From Complex Hunter-Gatherers to Early Urban Societies. Cambridge University Press, 2011",
         "source_type": "academic"
       }
     ],
@@ -6011,7 +6044,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: The name 'Dilmun' comes from Sumerian/Akkadian cuneiform texts. The native language of Dilmun's population is unknown. Arabic is used here as the modern language of the region but is anachronistic. ETHICS-003: Dilmun is attested in Mesopotamian texts as a trading partner and a mythological 'paradise' (in the Epic of Gilgamesh and Enki and Ninhursag). The identification with Bahrain is now well-established through archaeological excavation (Qal'at al-Bahrain, a UNESCO World Heritage Site). Dilmun served as a crucial intermediary in the trade between Mesopotamia and the Indus Valley Civilization.",
+    "ethical_notes": "ETHICS-001: The name 'Dilmun' comes from Sumerian/Akkadian cuneiform texts. The native language of Dilmun's population is unknown; it is possible they spoke an early Semitic language related to later Gulf Arabic, but no indigenous Dilmunite texts have been found. Arabic is used here as the modern language of the region but is anachronistic. ETHICS-003: Dilmun is exceptionally well-attested for a Bronze Age Gulf polity: it appears in Sumerian literary texts (Enki and Ninhursag), Akkadian royal inscriptions (Sargon of Akkad), and extensive cuneiform commercial correspondence from Ur III and Old Babylonian periods. The archaeological site of Qal'at al-Bahrain (UNESCO World Heritage, 2005) provides direct physical evidence of an urban trading centre spanning the entire period. Burial mounds in Bahrain number over 100,000 — one of the largest ancient burial complexes in the world (UNESCO World Heritage, 2019). The raised confidence score reflects the depth of both textual and archaeological evidence.",
     "name_variants": [
       {
         "name": "Dilmun",
@@ -6045,7 +6078,7 @@
         "change_type": "INDEPENDENCE",
         "description": "Peak of Dilmun's commercial importance as an entrepôt between Mesopotamia and the Indus Valley. Ur III texts record extensive trade with Dilmun. Circular 'Dilmun seals' are found across the Gulf region and in Indus Valley sites, attesting to long-distance trade networks.",
         "population_affected": null,
-        "confidence_score": 0.45
+        "confidence_score": 0.6
       },
       {
         "year": -600,
@@ -6053,7 +6086,7 @@
         "change_type": "CONQUEST_DIPLOMATIC",
         "description": "Under Neo-Babylonian influence. Inscription of Uperi, king of Dilmun, paying tribute to Sargon II of Assyria (c. -709) shows earlier Assyrian domination. Dilmun's independence was effectively lost long before the formal end.",
         "population_affected": null,
-        "confidence_score": 0.5
+        "confidence_score": 0.6
       },
       {
         "year": -538,
@@ -6061,25 +6094,39 @@
         "change_type": "CONQUEST_MILITARY",
         "description": "Absorbed into the Achaemenid Persian Empire following Cyrus the Great's conquest of Babylon. Dilmun ceased to exist as an independent entity, becoming part of the satrapy system. The name survived in later texts but as a geographical rather than political designation.",
         "population_affected": null,
-        "confidence_score": 0.55
+        "confidence_score": 0.6
       }
     ],
     "sources": [
       {
-        "citation": "Potts, D.T. The Arabian Gulf in Antiquity, 2 vols. (1990)",
+        "citation": "Potts, D.T. The Arabian Gulf in Antiquity, 2 vols. Clarendon Press, 1990",
         "source_type": "academic"
       },
       {
-        "citation": "Crawford, H. Dilmun and Its Gulf Neighbours (1998)",
+        "citation": "Crawford, H. Dilmun and Its Gulf Neighbours. Cambridge University Press, 1998",
         "source_type": "academic"
       },
       {
-        "citation": "Epic of Gilgamesh, Tablet X (c. 2100 BCE original, 7th century BCE Standard Babylonian version)",
+        "citation": "Enki and Ninhursag (Sumerian literary composition, c. 2100 BCE) — describes Dilmun as a paradise land",
         "source_type": "primary"
       },
       {
-        "citation": "Qal'at al-Bahrain excavation reports, UNESCO World Heritage nomination dossier (2005)",
-        "source_type": "archaeological"
+        "citation": "Epic of Gilgamesh, Tablet X (Standard Babylonian version, c. 7th century BCE) — identifies Dilmun with the abode of Utnapishtim",
+        "source_type": "primary"
+      },
+      {
+        "citation": "UNESCO World Heritage Centre. 'Qal'at al-Bahrain — Ancient Harbour and Capital of Dilmun', 2005",
+        "source_type": "primary",
+        "url": "https://whc.unesco.org/en/list/1192"
+      },
+      {
+        "citation": "UNESCO World Heritage Centre. 'Dilmun Burial Mounds', 2019",
+        "source_type": "primary",
+        "url": "https://whc.unesco.org/en/list/1542"
+      },
+      {
+        "citation": "Laursen, S. & Steinkeller, P. Babylonia, the Gulf Region, and the Indus: Archaeological and Textual Evidence for Contact in the Third and Early Second Millennia B.C. Eisenbrauns, 2017",
+        "source_type": "academic"
       }
     ],
     "boundary_source": "historical_approximation"
@@ -6674,7 +6721,7 @@
         "change_type": "INDEPENDENCE",
         "description": "Murong Tuyuhun, elder son of the Murong Xianbei chieftain, leads his followers westward from Manchuria to the Qinghai-Gansu border region following a succession dispute. The migration covered over 2,000 km. The kingdom that bears his name gradually formed as these Xianbei settlers established dominance over local Qiang and Di populations.",
         "population_affected": null,
-        "confidence_score": 0.4
+        "confidence_score": 0.55
       },
       {
         "year": 445,
@@ -6682,7 +6729,7 @@
         "change_type": "CONQUEST_MILITARY",
         "description": "Northern Wei dynasty campaigns against the Tuyuhun, forcing them to temporarily flee westward. The Tuyuhun proved remarkably resilient, repeatedly recovering from military defeats due to their control of difficult terrain (high altitude, arid steppe) inhospitable to lowland Chinese armies.",
         "population_affected": null,
-        "confidence_score": 0.45
+        "confidence_score": 0.6
       },
       {
         "year": 670,
@@ -6690,25 +6737,33 @@
         "change_type": "CONQUEST_MILITARY",
         "description": "The Tibetan Empire (Bod/Tubo) conquers the Tuyuhun kingdom, absorbing it into the expanding Tibetan state. The Tuyuhun royal family fled to Tang China. Some Tuyuhun populations were assimilated into the Tibetan population; others maintained a distinct identity for centuries under Tang protection. The Monguor/Tu people of modern Qinghai are sometimes identified as their descendants.",
         "population_affected": null,
-        "confidence_score": 0.5
+        "confidence_score": 0.6
       }
     ],
     "sources": [
       {
-        "citation": "Molè, G. The T'u-yü-hun from the Northern Wei to the Time of the Five Dynasties (1970)",
+        "citation": "Molè, G. The T'u-yü-hun from the Northern Wei to the Time of the Five Dynasties. Istituto Italiano per il Medio ed Estremo Oriente (IsMEO), 1970",
         "source_type": "academic"
       },
       {
-        "citation": "Beckwith, C.I. The Tibetan Empire in Central Asia (1987)",
+        "citation": "Beckwith, C.I. The Tibetan Empire in Central Asia. Princeton University Press, 1987",
         "source_type": "academic"
       },
       {
-        "citation": "Fang Xuanling et al., Jin Shu (Book of Jin), ch. 97 (648 CE)",
+        "citation": "Fang Xuanling et al., Jin Shu (Book of Jin), ch. 97 — 'Biography of Tuyuhun' (648 CE official dynastic history)",
         "source_type": "primary"
       },
       {
-        "citation": "Wei Shou, Wei Shu (Book of Wei), ch. 101 (554 CE)",
+        "citation": "Wei Shou, Wei Shu (Book of Wei), ch. 101 — 'Account of the Tuyuhun' (554 CE official dynastic history)",
         "source_type": "primary"
+      },
+      {
+        "citation": "Li Yanshou, Bei Shi (History of the Northern Dynasties), ch. 96 (659 CE)",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Xu, E. Historical Development of the Pre-Dynastic Khitan. Institute of Inner Asian Studies, University of Helsinki, 2005",
+        "source_type": "academic"
       }
     ],
     "boundary_source": "historical_approximation"

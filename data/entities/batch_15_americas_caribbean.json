@@ -2561,7 +2561,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-002: The 'Kingdom of Quito' is one of the most contested entities in South American historiography. The traditional narrative, originating with the colonial-era Jesuit historian Juan de Velasco (1789), describes a pre-Inca kingdom of the Quitu-Cara people. Modern archaeology has found no evidence supporting Velasco's account of a unified Quitu kingdom. The narrative likely served Ecuadorian nationalist purposes — providing a pre-Inca legitimating origin story. However, dismissing the concept entirely may erase genuine pre-Inca political complexity in the region. Archaeological evidence does show complex chiefdoms (señoríos) in the northern Andes before Inca conquest, including the Caranqui, Cayambe, and Panzaleo peoples. ETHICS-001: The low confidence score reflects genuine academic dispute. Including this entity documents the historiographic controversy itself. Velasco's account should not be treated as reliable history, but the pre-Inca political complexity it gestures toward was real.\n\n[v6.7.1] boundary_geojson è un placeholder rettangolare, non il contorno reale dell'entità. L'estensione effettiva è incerta e richiede revisione storiografica. Vedi docs/boundary_audit_2026_04_15.md.",
+    "ethical_notes": "ETHICS-002: The 'Kingdom of Quito' is one of the most contested entities in South American historiography. The traditional narrative, originating with the colonial-era Jesuit historian Juan de Velasco (Historia del Reino de Quito, 1789), describes a pre-Inca kingdom of the Quitu-Cara people ruled by the 'Shyri' dynasty. Modern archaeology has found no evidence supporting Velasco's account of a unified kingdom. The narrative likely served Ecuadorian nationalist purposes, providing a pre-Inca legitimating origin story. However, dismissing the concept entirely risks erasing genuine pre-Inca political complexity. Archaeological evidence (Frank Salomon, 1986; J. Stephen Athens, 1992) confirms the existence of complex chiefdoms (señoríos) in the northern Andes before the Inca conquest, including the Caranqui, Cayambe, Otavalo, and Panzaleo. The Battle of Yahuarcocha (c. 1487) and fierce Caranqui resistance are attested in multiple independent sources. ETHICS-001: The raised confidence (0.35 to 0.45) reflects not validation of Velasco's narrative but recognition that some form of pre-Inca complex polity existed in the region, even if not matching the 'Kingdom of Quito' as traditionally described. The entity documents the historiographic controversy itself.\n\n[v6.7.1] boundary_geojson is a rectangular placeholder, not the actual entity boundary. The effective extent is uncertain and requires historiographic revision.",
     "name_variants": [
       {
         "name": "Kingdom of Quito",
@@ -2595,7 +2595,7 @@
         "change_type": "CULTURAL",
         "description": "Traditional narrative: emergence of the Quitu-Cara polity through merger of coastal Cara people and highland Quitu. Modern archaeology: the northern Ecuadorian highlands hosted multiple complex chiefdoms (señoríos) including the Caranqui, Cayambe, Otavalo, Panzaleo, and Puruhá. These were independent polities, not a unified kingdom. Archaeological evidence shows monumental mound construction, intensive agriculture, and long-distance trade.",
         "population_affected": null,
-        "confidence_score": 0.3
+        "confidence_score": 0.4
       },
       {
         "year": 1470,
@@ -2603,24 +2603,29 @@
         "change_type": "CONQUEST_MILITARY",
         "description": "Inca expansion under Tupac Inca Yupanqui and later Huayna Capac conquered the northern Andean chiefdoms. The Caranqui and Cayambe peoples resisted fiercely; the Battle of Yahuarcocha ('Blood Lake,' ca. 1487) reportedly ended with thousands of Cayambe-Caranqui warriors massacred on the shores of the lake. Huayna Capac established Quito as a secondary Inca capital and married local nobility.",
         "population_affected": 300000,
-        "confidence_score": 0.5
+        "confidence_score": 0.55
       }
     ],
     "sources": [
       {
-        "citation": "Salomon, Frank. Native Lords of Quito in the Age of the Incas: The Political Economy of North Andean Chiefdoms. Cambridge University Press, 1986",
-        "source_type": "academic",
-        "url": null
+        "citation": "Salomon, F. Native Lords of Quito in the Age of the Incas: The Political Economy of North Andean Chiefdoms. Cambridge University Press, 1986",
+        "source_type": "academic"
       },
       {
-        "citation": "Velasco, Juan de. Historia del Reino de Quito en la América Meridional, 1789 — primary source for the traditional narrative, now considered largely mythological",
-        "source_type": "primary",
-        "url": null
+        "citation": "Velasco, J. de. Historia del Reino de Quito en la América Meridional, 1789 — primary source for the traditional narrative, now considered largely mythological",
+        "source_type": "primary"
       },
       {
-        "citation": "Athens, J. Stephen. 'Ethnicity and Adaptation: The Late Period-Cara Occupation in Northern Highland Ecuador.' PhD dissertation, University of New Mexico, 1992",
-        "source_type": "archaeological",
-        "url": null
+        "citation": "Athens, J.S. 'Ethnicity and Adaptation: The Late Period–Cara Occupation in Northern Highland Ecuador'. PhD dissertation, University of New Mexico, 1992",
+        "source_type": "archaeological"
+      },
+      {
+        "citation": "Bray, T.L. (ed.) The Archaeology of Wak'as: Explorations of the Sacred in the Pre-Columbian Andes. University Press of Colorado, 2015",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ogburn, D.E. 'Evidence for Long-Distance Transportation of Building Stones in the Inka Empire', Latin American Antiquity 15(4), 2004, pp. 419–439",
+        "source_type": "academic"
       }
     ],
     "boundary_source": "approximate_circle"

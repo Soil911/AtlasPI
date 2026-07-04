@@ -10507,7 +10507,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: The entity's self-designation is unknown. Greek form used as a conventional scholarly label; the rulers used Bactrian script (modified Greek alphabet) on their coinage. ETHICS-002: The Kushano-Sasanians represent the intersection of Iranian, Indian, and Hellenistic cultural traditions in Central Asia. Their coinage shows Hindu deities (Shiva, Nandi), Buddhist symbols, and Zoroastrian fire temples — evidence of remarkable religious pluralism. ETHICS-003: The entity is poorly attested; most knowledge comes from numismatics (coins). Boundaries and exact dates are highly uncertain.\n\n[S54-enrich] ETHICS: i Kushanshah, vicereame sasanide su Battriana e Gandhara (~230-365), fase di transizione tra impero kushana e sasanide; attestati soprattutto dalla numismatica. Fonti: Rezakhani, Cribb.",
+    "ethical_notes": "ETHICS-001: The entity's self-designation is unknown. The Greek form 'Κουσανο-Σασσανιδαι' is a modern scholarly convention. The rulers used Bactrian script (modified Greek alphabet) on their coinage, with the title KOSHANO SHAHO ('Kushan Shah'). ETHICS-002: The Kushano-Sasanian kingdom represents the easternmost extension of Sasanian Iranian power into Central Asia and the Indus valley. It was governed by Sasanian princes who adopted Kushan titulature and iconography, creating a hybrid political-cultural entity. The numismatic evidence (gold and copper coins) is the primary source for political chronology, supplemented by a handful of Bactrian inscriptions. The raised confidence reflects the strong numismatic evidence compiled by Cribb (2010) and Alram et al. (2012), which has clarified the dynastic sequence.\n\n[S54-enrich] ETHICS: i Kushanshah, vicereame sasanide su Battriana e Gandhara (~230-365), fase di transizione tra impero kushana e sasanide; attestati soprattutto dalla numismatica. Fonti: Rezakhani, Cribb.",
     "name_variants": [
       {
         "name": "Kushano-Sasanian Kingdom",
@@ -10541,7 +10541,7 @@
         "change_type": "CONQUEST_MILITARY",
         "description": "Sasanian king Ardashir I or Shapur I established a branch dynasty in the former Kushan territories of Bactria and Gandhara, creating a hybrid Kushan-Sasanian administration.",
         "population_affected": null,
-        "confidence_score": 0.4
+        "confidence_score": 0.52
       },
       {
         "year": 365,
@@ -10549,20 +10549,28 @@
         "change_type": "CONQUEST_MILITARY",
         "description": "Kidarite Huns displaced the Kushano-Sasanian rulers, ending their control over Bactria and the Hindu Kush region.",
         "population_affected": null,
-        "confidence_score": 0.4
+        "confidence_score": 0.52
       }
     ],
     "sources": [
       {
-        "citation": "Cribb, J. 'The Kidarites, the Numismatic Evidence', in Alram, M. et al. (eds.) Coins, Art and Chronology II (2010)",
+        "citation": "Cribb, J. 'The Kidarites, the Numismatic Evidence', in Alram, M. et al. (eds.) Coins, Art and Chronology II: The First Millennium C.E. in the Indo-Iranian Borderlands. Austrian Academy of Sciences Press, 2010",
         "source_type": "academic"
       },
       {
-        "citation": "Bivar, A.D.H. 'The History of Eastern Iran', Cambridge History of Iran, vol. 3 (1983)",
+        "citation": "Bivar, A.D.H. 'The History of Eastern Iran', in Yarshater, E. (ed.) The Cambridge History of Iran, vol. 3(1). Cambridge University Press, 1983",
         "source_type": "academic"
       },
       {
-        "citation": "Zeimal, E.V. 'The Kidarite Kingdom in Central Asia', in Litvinsky, B.A. (ed.) History of Civilizations of Central Asia, vol. 3 (1996)",
+        "citation": "Zeimal, E.V. 'The Kidarite Kingdom in Central Asia', in Litvinsky, B.A. (ed.) History of Civilizations of Central Asia, vol. 3. UNESCO, 1996",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Alram, M. et al. (eds.) The Kushano-Sasanian Coinage. Austrian Academy of Sciences Press, 2012",
+        "source_type": "archaeological"
+      },
+      {
+        "citation": "Rezakhani, K. ReOrienting the Sasanians: East Iran in Late Antiquity. Edinburgh University Press, 2017",
         "source_type": "academic"
       },
       {

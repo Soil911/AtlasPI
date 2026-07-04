@@ -1808,7 +1808,7 @@
     "boundary_source": "historical_map"
   },
   {
-    "name_original": "Saltanat Dar Fur",
+    "name_original": "سلطنة دارفور",
     "name_original_lang": "ar",
     "entity_type": "sultanate",
     "year_start": 1603,
@@ -1816,7 +1816,7 @@
     "capital_name": "El Fasher",
     "capital_lat": 13.6286,
     "capital_lon": 25.3494,
-    "confidence_score": 0.65,
+    "confidence_score": 0.78,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "Polygon",
@@ -1887,6 +1887,14 @@
     },
     "ethical_notes": "The Sultanate of Darfur was a major Sahelian state whose legacy is deeply entangled with modern conflict. The Fur people established the Keira dynasty. The sultanate was a major node in the trans-Saharan slave trade, particularly along the Darb al-Arba'in ('Forty Days Road') to Egypt. The 2003-present Darfur conflict has roots in historical tensions between sedentary Fur/Masalit/Zaghawa farmers and nomadic Arab groups, but these tensions were exacerbated by British colonial policies of indirect rule that hardened ethnic boundaries. Modern political instrumentalization of the Darfur Sultanate's history by all sides of the conflict must be acknowledged. The sultanate's destruction by Anglo-Egyptian forces in 1916 and the killing of Sultan Ali Dinar was an act of colonial aggression during WWI.",
     "name_variants": [
+      {
+        "name": "Saltanat Dar Fur",
+        "lang": "ar-Latn",
+        "period_start": null,
+        "period_end": null,
+        "context": "romanizzazione (ex name_original latino, sync M4)",
+        "source": "M4 reconciliation"
+      },
       {
         "name": "Sultanate of Darfur",
         "lang": "en",

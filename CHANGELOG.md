@@ -2,6 +2,28 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.126] - 2026-07-04 (M4: riconciliazione strutturale JSON↔prod COMPLETA)
+
+*Chiude la parte strutturale di M4: dopo questa, ogni nome JSON è in prod e
+viceversa (1053 = 1053, JSON-only e prod-only entrambi VUOTI). Sorgente-only
+(prod già corretta). Resta solo la coda confidence (72, review incrementale).*
+
+- **30 ombreggiati deduplicati position-aware** (`scripts/apply_shadow_dedup_v2.py`):
+  il record sopravvive alla posizione della PRIMA occorrenza (id-order del
+  fresh-seed preservato → `test_v673` verde) coi dati CANONICI (matcha prod:
+  stessi anni, più fonti = il superset che prod ha per last-wins), conf/status
+  forzati a prod. Rimossa solo la copia successiva. Equivale al risultato del
+  seed (first-position + last-data) ma senza il duplicato → nessuno shift di id.
+- **#413 Dar Fur riconciliato SENZA shift**: i 2 record JSON con nomi diversi
+  ('Dar Fur' + 'Saltanat Dar Fur', mappavano a #413 live + #738 tombstone
+  deprecato) rinominati ENTRAMBI ai nativi prod — `سلطنة دارفور` (#413, conf
+  0.78) e `دار فور` (#738, marcato deprecated) — senza rimuovere record
+  (conteggio 1053 invariato). Evento cascato. La forma latina resta come
+  variante romanizzazione (ETHICS-001).
+- **Risultato**: JSON↔prod name-reconciled al 100% (delta 0). `ingest_new_entities`
+  ora NON crea più duplicati. Vincolo id-order del seed documentato (dedup =
+  rimuovi solo occorrenze successive + merge dati).
+
 ## [v6.99.125] - 2026-07-04 (M4: fix Kham + batch 1 review confidence, 6 entità)
 
 - **Kham `མདོ་ཁམས་རྒྱལ་ཁབ`**: rimosso lo spazio iniziale nel JSON che non

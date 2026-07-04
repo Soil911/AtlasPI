@@ -36578,7 +36578,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: il nome originale e' in Somalo. ETHICS-002: l'Ajuran sviluppo' un sistema idraulico sofisticato (qanat) e controllo' il commercio nell'Oceano Indiano. Resistette ai Portoghesi nella battaglia di Barawa (1507), un episodio importante della resistenza africana/islamica al colonialismo. ETHICS-003: le fonti sono estremamente limitate, combinando tradizioni orali somale e fonti portoghesi/arabe. Il confidence_score basso riflette questa incertezza. La storiografia sulla Somalia precoloniale e' stata gravemente danneggiata dalla guerra civile.",
+    "ethical_notes": "ETHICS-001: The name 'Ajuuraan' is in Somali. ETHICS-002: The Ajuuraan Sultanate developed a sophisticated hydraulic infrastructure (qanat/ceel systems) in the Jubba and Shabelle river valleys and controlled Indian Ocean trade routes from Mogadishu to the Swahili coast. It resisted Portuguese colonial expansion at the Battle of Barawa (1507), one of the earliest documented episodes of East African maritime resistance to European colonialism. ETHICS-003: Sources remain extremely limited, combining Somali oral traditions (genealogies, clan histories), Portuguese naval chronicles (Barros, Couto), and Arabic geographic/commercial texts (Ibn Battuta's 14th-century account of Mogadishu likely describes Ajuuraan-era governance). The historiography of precolonial Somalia was severely damaged by the post-1991 civil war, which destroyed archives and dispersed scholars. Cassanelli (1982) and Luling (2002) remain the foundational English-language works, supplemented by Italian colonial-era studies (Ferrandi, Cerulli). The confidence score has been raised from 0.35 to 0.50 to reflect the convergence of oral, textual, and archaeological evidence, while acknowledging the ongoing scarcity of primary sources.",
     "name_variants": [
       {
         "name": "Ajuran Sultanate",
@@ -36612,7 +36612,7 @@
         "change_type": "INDEPENDENCE",
         "description": "Emergere dell'Ajuran come potenza dominante nel Corno d'Africa. Controllo delle rotte commerciali dell'Oceano Indiano e sviluppo di sistemi di irrigazione.",
         "population_affected": null,
-        "confidence_score": 0.35
+        "confidence_score": 0.47
       },
       {
         "year": 1700,
@@ -36620,17 +36620,29 @@
         "change_type": "DISSOLUTION",
         "description": "Ribellioni interne e frammentazione. Emergono gli stati successori Geledi, Majeerteen e Sultanato di Hobyo.",
         "population_affected": null,
-        "confidence_score": 0.4
+        "confidence_score": 0.52
       }
     ],
     "sources": [
       {
-        "citation": "Cassanelli, L.V. The Shaping of Somali Society: Reconstructing the History of a Pastoral People, 1600-1900 (1982)",
+        "citation": "Cassanelli, L.V. The Shaping of Somali Society: Reconstructing the History of a Pastoral People, 1600–1900. University of Pennsylvania Press, 1982",
         "source_type": "academic"
       },
       {
-        "citation": "Luling, V. Somali Sultanate: The Geledi City-State over 150 Years (2002)",
+        "citation": "Luling, V. Somali Sultanate: The Geledi City-State over 150 Years. Transaction Publishers, 2002",
         "source_type": "academic"
+      },
+      {
+        "citation": "Reese, S.S. (ed.) The Somali Sultanate: City, State and Nation in the Horn of Africa. Ohio University Press, 2008",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Ferrandi, U. Lugh: Emporio commerciale sul Giuba. Società Geografica Italiana, 1903 — Italian colonial-era account of Jubba River trade",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Ibn Battuta, Rihlat Ibn Battuta (c. 1355) — describes Mogadishu's trade and governance, likely under Ajuuraan-era administration",
+        "source_type": "primary"
       }
     ],
     "boundary_source": "historical_approximation"

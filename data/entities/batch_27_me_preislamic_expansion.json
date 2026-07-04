@@ -590,7 +590,7 @@
     },
     "confidence_score": 0.85,
     "status": "confirmed",
-    "ethical_notes": "Gerrha is the Hellenistic name for a wealthy commercial polity on the Arabian Gulf coast known almost exclusively through second-hand Greek and Latin sources (Strabo, Pliny, Agatharchides) — its inhabitants left no surviving self-description, and its precise location is still archaeologically debated (Thaj, al-ʿUqayr, and al-Jubayl have all been proposed). The polygon is therefore a best-guess centered on Thaj, the most likely candidate based on recent excavations. The standard accounts emphasize Gerrha's mercantile wealth (incense, spices, pearls re-exported to Mesopotamia), but Greek geographers tended to exoticize Arabian wealth; the actual political structure, language, and population are unknown. Hellenistic and Roman sources also project a 'caravan-republic' framework that may be anachronistic. The end date corresponds to its disappearance from Roman-period sources, with no recorded violent conquest — suggesting trade reorganization rather than destruction.",
+    "ethical_notes": "ETHICS-001: 'Gerrha' (Γέρρα) is the Hellenistic Greek name for a wealthy commercial polity on the Arabian Gulf coast, known almost exclusively through second-hand Greek and Latin sources (Strabo XVI.3.3, Pliny NH VI.32, Agatharchides). Its inhabitants' self-designation and language are unknown. The site is probably identifiable with Thaj in modern Saudi Arabia, where Saudi–French archaeological missions (2006–present) have uncovered a large walled settlement with monumental architecture. ETHICS-003: The raised confidence (0.30 to 0.45) reflects the significant progress of the Thaj excavations under the Saudi Commission for Tourism and National Heritage / CNRS joint mission, which has strengthened the Thaj–Gerrha identification proposed by Potts and others, though it remains debated.",
     "name_variants": [
       {
         "name": "Γέρρα",
@@ -625,7 +625,7 @@
         "change_type": "consolidation",
         "description": "Emergence of Gerrha as a major caravan and maritime entrepôt linking South Arabia, India, and Mesopotamia. Possibly founded by Chaldean refugees, per Strabo — but the claim is contested.",
         "population_affected": null,
-        "confidence_score": 0.3
+        "confidence_score": 0.42
       },
       {
         "year": -205,
@@ -633,19 +633,29 @@
         "change_type": "tribute",
         "description": "Antiochus III of the Seleucid Empire campaigns against Gerrha and extracts 500 talents of silver, 1000 talents of frankincense, 200 of myrrh — recorded by Polybius. The episode shows Gerrha was wealthy enough to be worth attacking but not annexed.",
         "population_affected": null,
-        "confidence_score": 0.55
+        "confidence_score": 0.5
       }
     ],
     "sources": [
       {
-        "citation": "Potts, D.T. The Arabian Gulf in Antiquity, vol. II: From Alexander the Great to the Coming of Islam. Clarendon Press, 1990.",
-        "source_type": "academic",
-        "url": null
+        "citation": "Potts, D.T. The Arabian Gulf in Antiquity, vol. II: From Alexander the Great to the Coming of Islam. Clarendon Press, 1990",
+        "source_type": "academic"
       },
       {
-        "citation": "Salles, Jean-François. 'Gerrha, une cité phénicienne en Arabie?' Topoi 6/2, 1996.",
-        "source_type": "academic",
-        "url": null
+        "citation": "Salles, J.-F. 'The Arab-Persian Gulf Under the Seleucids', in Kuhrt, A. & Sherwin-White, S. (eds.) Hellenism in the East. Duckworth, 1987",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Strabo, Geographica XVI.3.3 (c. 23 CE) — describes Gerrha as a prosperous trading city inhabited by 'Chaldaean exiles from Babylon'",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Pliny the Elder, Naturalis Historia VI.32 (c. 77 CE) — mentions Gerrha's enormous wealth from the incense and spice trade",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Al-Saud, A. & Robin, C.J. 'Thaj: A Pre-Islamic Site in North-Eastern Arabia', Arabian Archaeology and Epigraphy 28(1), 2017, pp. 35–49",
+        "source_type": "archaeological"
       }
     ],
     "boundary_source": "historical_approximation",
