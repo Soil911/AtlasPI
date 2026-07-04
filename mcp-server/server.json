@@ -1,0 +1,32 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.soil911/atlaspi",
+  "description": "Historical geography for AI agents: 1,000+ polities with GeoJSON boundaries, succession chains, events, rulers and sources (4500 BCE - today), with explicit confidence scores and ethical context.",
+  "status": "active",
+  "repository": {
+    "url": "https://github.com/Soil911/AtlasPI",
+    "source": "github"
+  },
+  "version": "0.10.0",
+  "websiteUrl": "https://atlaspi.it",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "atlaspi-mcp",
+      "version": "0.10.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "ATLASPI_BASE_URL",
+          "description": "Override the AtlasPI API base URL (default: https://atlaspi.it)",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}
