@@ -1,17 +1,6 @@
 {
- "description": "Coda review manuale confidence (ADR-011, classe C json_higher): verificare le fonti PRIMA di alzare la conf su prod; lotti da ~10 nelle sessioni enrichment. Nessuna scrittura automatica.",
+ "description": "Coda review manuale confidence (ADR-011, classe C json_higher): verificare le fonti PRIMA di alzare la conf su prod; lotti da ~10 nelle sessioni enrichment. Nessuna scrittura automatica. [v6.99.125: batch 1 di 6 chiuso (121/444/445/213/878/879 alzate su prod, ADR-011).]",
  "rows": [
-  {
-   "id": 62,
-   "name": "Rzeczpospolita Obojga Narodow",
-   "prod": 0.7,
-   "json": 0.8,
-   "prod_status": "confirmed",
-   "json_status": "confirmed",
-   "file": "batch_01_europe.json",
-   "idx": 6,
-   "action": "review_queue"
-  },
   {
    "id": 69,
    "name": "Српска деспотовина",
@@ -68,17 +57,6 @@
    "action": "review_queue"
   },
   {
-   "id": 121,
-   "name": "ساسانیان",
-   "prod": 0.75,
-   "json": 0.9,
-   "prod_status": "confirmed",
-   "json_status": "confirmed",
-   "file": "batch_25_persian_iranian_entities.json",
-   "idx": 2,
-   "action": "review_queue"
-  },
-  {
    "id": 168,
    "name": "𒆠𒂗𒄀",
    "prod": 0.5,
@@ -87,17 +65,6 @@
    "json_status": "confirmed",
    "file": "batch_03_africa_mideast.json",
    "idx": 22,
-   "action": "review_queue"
-  },
-  {
-   "id": 179,
-   "name": "مملكة الأنباط",
-   "prod": 0.7,
-   "json": 0.81,
-   "prod_status": "confirmed",
-   "json_status": "confirmed",
-   "file": "batch_03_africa_mideast.json",
-   "idx": 33,
    "action": "review_queue"
   },
   {
@@ -131,17 +98,6 @@
    "json_status": "confirmed",
    "file": "batch_04_americas.json",
    "idx": 10,
-   "action": "review_queue"
-  },
-  {
-   "id": 213,
-   "name": "Virreinato del Río de la Plata",
-   "prod": 0.7,
-   "json": 0.925,
-   "prod_status": "confirmed",
-   "json_status": "confirmed",
-   "file": "batch_04_americas.json",
-   "idx": 22,
    "action": "review_queue"
   },
   {
@@ -233,17 +189,6 @@
    "action": "review_queue"
   },
   {
-   "id": 339,
-   "name": "مغولستان",
-   "prod": 0.6,
-   "json": 0.725,
-   "prod_status": "confirmed",
-   "json_status": "confirmed",
-   "file": "batch_08_central_asia.json",
-   "idx": 17,
-   "action": "review_queue"
-  },
-  {
    "id": 343,
    "name": "هوتکیان",
    "prod": 0.6,
@@ -255,61 +200,6 @@
    "action": "review_queue"
   },
   {
-   "id": 443,
-   "name": "奈良時代",
-   "prod": 0.65,
-   "json": 0.75,
-   "prod_status": "confirmed",
-   "json_status": "confirmed",
-   "file": "batch_13_east_asia_expanded.json",
-   "idx": 1,
-   "action": "review_queue"
-  },
-  {
-   "id": 444,
-   "name": "平安時代",
-   "prod": 0.65,
-   "json": 0.8,
-   "prod_status": "confirmed",
-   "json_status": "confirmed",
-   "file": "batch_13_east_asia_expanded.json",
-   "idx": 2,
-   "action": "review_queue"
-  },
-  {
-   "id": 445,
-   "name": "鎌倉幕府",
-   "prod": 0.65,
-   "json": 0.8,
-   "prod_status": "confirmed",
-   "json_status": "confirmed",
-   "file": "batch_13_east_asia_expanded.json",
-   "idx": 3,
-   "action": "review_queue"
-  },
-  {
-   "id": 446,
-   "name": "室町幕府",
-   "prod": 0.65,
-   "json": 0.75,
-   "prod_status": "confirmed",
-   "json_status": "confirmed",
-   "file": "batch_13_east_asia_expanded.json",
-   "idx": 4,
-   "action": "review_queue"
-  },
-  {
-   "id": 447,
-   "name": "安土桃山時代",
-   "prod": 0.65,
-   "json": 0.75,
-   "prod_status": "confirmed",
-   "json_status": "confirmed",
-   "file": "batch_13_east_asia_expanded.json",
-   "idx": 5,
-   "action": "review_queue"
-  },
-  {
    "id": 450,
    "name": "南宋",
    "prod": 0.75,
@@ -318,17 +208,6 @@
    "json_status": "confirmed",
    "file": "batch_13_east_asia_expanded.json",
    "idx": 8,
-   "action": "review_queue"
-  },
-  {
-   "id": 451,
-   "name": "五代",
-   "prod": 0.65,
-   "json": 0.75,
-   "prod_status": "confirmed",
-   "json_status": "confirmed",
-   "file": "batch_13_east_asia_expanded.json",
-   "idx": 9,
    "action": "review_queue"
   },
   {
@@ -497,17 +376,6 @@
    "action": "review_queue"
   },
   {
-   "id": 678,
-   "name": "Гетьманщина",
-   "prod": 0.6,
-   "json": 0.7,
-   "prod_status": "confirmed",
-   "json_status": "confirmed",
-   "file": "batch_21_horn_africa_balkans.json",
-   "idx": 20,
-   "action": "review_queue"
-  },
-  {
    "id": 715,
    "name": "Nieuw-Holland",
    "prod": 0.85,
@@ -560,39 +428,6 @@
    "json_status": "uncertain",
    "file": "batch_33_sea_expansion.json",
    "idx": 8,
-   "action": "review_queue"
-  },
-  {
-   "id": 877,
-   "name": "Nhà Ngô",
-   "prod": 0.6,
-   "json": 0.7,
-   "prod_status": "confirmed",
-   "json_status": "confirmed",
-   "file": "batch_33_sea_expansion.json",
-   "idx": 13,
-   "action": "review_queue"
-  },
-  {
-   "id": 878,
-   "name": "Nhà Đinh",
-   "prod": 0.6,
-   "json": 0.75,
-   "prod_status": "confirmed",
-   "json_status": "confirmed",
-   "file": "batch_33_sea_expansion.json",
-   "idx": 14,
-   "action": "review_queue"
-  },
-  {
-   "id": 879,
-   "name": "Nhà Tiền Lê",
-   "prod": 0.6,
-   "json": 0.75,
-   "prod_status": "confirmed",
-   "json_status": "confirmed",
-   "file": "batch_33_sea_expansion.json",
-   "idx": 15,
    "action": "review_queue"
   },
   {

@@ -2,6 +2,31 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.125] - 2026-07-04 (M4: fix Kham + batch 1 review confidence, 6 entità)
+
+- **Kham `མདོ་ཁམས་རྒྱལ་ཁབ`**: rimosso lo spazio iniziale nel JSON che non
+  matchava prod #602 (era una falsa entità JSON-only). Il conteggio JSON-only
+  reale era **3, non 61** (memoria stale), tutti individuati.
+- **Vincolo id-order scoperto**: il seed deduplica FIRST-POSITION+LAST-DATA →
+  rimuovere una prima-occorrenza di un nome duplicato shifta gli id
+  auto-increment e rompe `test_v673_boundary_cleanup`. La dedup dei 30
+  ombreggiati va fatta rimuovendo SOLO le occorrenze successive + merge dati
+  (documentato in `scripts/apply_shadow_dedup.py`) — rinviata a sessione dedicata.
+- **Review confidence (ADR-011), 15 entità in 2 batch**: stati storici maggiori,
+  ben-sourced (2-3+ fonti academic/primary) e con date PRECISE ben attestate,
+  dove la confidence JSON più alta è giustificata → alzate su prod (prod al
+  valore JSON, il JSON già li aveva). Coda `conf_review_queue.json` 87→72.
+  Nessuna disputed (no cap ETHICS-003), tutte >0.5 (ETHICS-013 ok).
+  - Batch 1: Sasanidi #121 (0.75→0.9), Heian #444 (0.65→0.8), Kamakura #445
+    (0.65→0.8), Vicereame del Río de la Plata #213 (0.7→0.925), Đinh #878
+    (0.6→0.75), Tiền Lê #879 (0.6→0.75).
+  - Batch 2: Confederazione polacco-lituana #62 (0.7→0.8), Regno nabateo #179
+    (0.7→0.81), Moghulistan #339 (0.6→0.725), Nara #443, Muromachi #446,
+    Azuchi-Momoyama #447, Cinque Dinastie #451 (0.65→0.75 ×4), Hetmanato #678
+    (0.6→0.7), Ngô #877 (0.6→0.7).
+  - Restano 72 in coda (molte sono ricostruzioni archeologiche mesoamericane/
+    pre-colombiane con datazione meno precisa → review più cauta a lotti).
+
 ## [v6.99.124] - 2026-07-04 (M4: sincronizzati 14 rename nativi prod-only)
 
 *Riconciliazione JSON↔prod (ADR-011, pattern Wadai/ETHICS-001). Prod aveva già
