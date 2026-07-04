@@ -26,16 +26,16 @@ from src.middleware.rate_limit import RATE_LIMIT_EXPORT, limiter
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(tags=["esportazione"])
+router = APIRouter(tags=["export"])
 
 
 @router.get(
     "/v1/export/geojson",
-    summary="Esporta tutte le entità come GeoJSON FeatureCollection",
+    summary="Export all entities as a GeoJSON FeatureCollection",
     description=(
-        "Standard GeoJSON — importabile in QGIS, Leaflet, Mapbox, etc. "
-        "Usa `geometry=none` per esportare solo le proprieta' (molto piu' veloce) "
-        "o `geometry=centroid` per esportare solo le capitali come Point."
+        "Standard GeoJSON — importable in QGIS, Leaflet, Mapbox, etc. "
+        "Use `geometry=none` to export only properties (much faster) "
+        "or `geometry=centroid` to export only capitals as Point."
     ),
 )
 @limiter.limit(RATE_LIMIT_EXPORT)
@@ -49,10 +49,10 @@ def export_geojson(
     geometry: str = Query(
         "full",
         pattern="^(full|centroid|none)$",
-        description="full = poligoni completi (default); centroid = Point capitali; none = solo properties",
+        description="full = complete polygons (default); centroid = capital Points; none = properties only",
     ),
     include_deprecated: bool = Query(
-        False, description="Includi entità status='deprecated' (ADR-005: escluse di default)"
+        False, description="Include entities with status='deprecated' (ADR-005: excluded by default)"
     ),
     db: Session = Depends(get_db),
 ):
@@ -128,15 +128,15 @@ def export_geojson(
 
 @router.get(
     "/v1/export/csv",
-    summary="Esporta entità come CSV",
-    description="CSV tabellare per analisi in Excel, Pandas, R.",
+    summary="Export entities as CSV",
+    description="Tabular CSV for analysis in Excel, Pandas, R.",
 )
 @limiter.limit(RATE_LIMIT_EXPORT)
 def export_csv(
     request: Request,
     response: Response,  # v6.66: richiesto da slowapi con headers_enabled=True
     include_deprecated: bool = Query(
-        False, description="Includi entità status='deprecated' (ADR-005: escluse di default)"
+        False, description="Include entities with status='deprecated' (ADR-005: excluded by default)"
     ),
     db: Session = Depends(get_db),
 ):
@@ -173,15 +173,15 @@ def export_csv(
 
 @router.get(
     "/v1/export/timeline",
-    summary="Dati per visualizzazione timeline",
-    description="JSON ottimizzato per rendering timeline interattiva.",
+    summary="Timeline visualization data",
+    description="JSON optimized for interactive timeline rendering.",
 )
 @limiter.limit(RATE_LIMIT_EXPORT)
 def export_timeline(
     request: Request,
     response: Response,  # v6.66: richiesto da slowapi con headers_enabled=True
     include_deprecated: bool = Query(
-        False, description="Includi entità status='deprecated' (ADR-005: escluse di default)"
+        False, description="Include entities with status='deprecated' (ADR-005: excluded by default)"
     ),
     db: Session = Depends(get_db),
 ):
@@ -226,9 +226,9 @@ def _safe_json(raw: str | None) -> list | dict | None:
     "/v1/export/sites.geojson",
     summary="Export archaeological sites as GeoJSON FeatureCollection",
     description=(
-        "Standard GeoJSON Points per tutti i siti archeologici / UNESCO. "
-        "Compatibile con QGIS, Leaflet, Mapbox, D3. Filtro opzionale "
-        "`year` (siti con documentata attivita' in quell'anno)."
+        "Standard GeoJSON Points for all archaeological / UNESCO sites. "
+        "Compatible with QGIS, Leaflet, Mapbox, D3. Optional `year` "
+        "filter (sites with documented activity in that year)."
     ),
 )
 @limiter.limit(RATE_LIMIT_EXPORT)
@@ -283,10 +283,10 @@ def export_sites_geojson(
     "/v1/export/rulers.geojson",
     summary="Export historical rulers as GeoJSON",
     description=(
-        "GeoJSON Points per rulers — geometry derivata da capitale dell'entita' "
-        "governata (se `entity_id` risolvibile). Per rulers senza entita' mappata, "
-        "geometry = null (feature incluso per completezza). Filtro `year` per "
-        "rulers in carica in quell'anno."
+        "GeoJSON Points for rulers — geometry derived from the capital of the "
+        "governed entity (if `entity_id` is resolvable). For rulers without a mapped "
+        "entity, geometry = null (feature included for completeness). `year` filter "
+        "for rulers reigning in that year."
     ),
 )
 @limiter.limit(RATE_LIMIT_EXPORT)
@@ -357,8 +357,8 @@ def export_rulers_geojson(
     "/v1/export/languages.geojson",
     summary="Export historical languages as GeoJSON",
     description=(
-        "GeoJSON Points usando `center_lat/center_lon`. Filtro opzionale "
-        "per year (lingue parlate in quell'anno), family, vitality_status."
+        "GeoJSON Points using `center_lat/center_lon`. Optional filter "
+        "by year (languages spoken in that year), family, vitality_status."
     ),
 )
 @limiter.limit(RATE_LIMIT_EXPORT)

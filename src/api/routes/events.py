@@ -36,15 +36,15 @@ from src.db.models import EventEntityLink, GeoEntity, HistoricalEvent
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(tags=["eventi"])
+router = APIRouter(tags=["events"])
 
 
 class EventNotFoundError(AtlasError):
     def __init__(self, event_id: int):
-        super().__init__(404, f"Evento con id={event_id} non trovato", "NOT_FOUND")
+        super().__init__(404, f"Event with id={event_id} not found", "NOT_FOUND")
 
 
-def _event_summary(e: HistoricalEvent) -> dict:
+def _event_summary(e: HistoricalEvent, include_entities: bool = False) -> dict:
     """Rappresentazione compatta di un evento (usata nelle liste).
 
     v6.14: include i campi di date precision (month, day, date_precision,
@@ -55,7 +55,27 @@ def _event_summary(e: HistoricalEvent) -> dict:
     /v1/events (list) per clusterizzare eventi sulla mappa e non poteva
     farlo senza coordinate. location_name e' la stringa human-readable,
     location_lat/lon sono i valori numerici per il rendering markers.
+
+    v6.99.120 (agent-UX, M3): `include_entities=True` aggiunge gli
+    entity_links leggeri (id, nome, ruolo). on-this-day/at-date forzavano
+    un fetch di detail per OGNI evento solo per sapere QUALI entità erano
+    coinvolte (N+1 lato client). Va usato SOLO con eager-loading
+    (joinedload di entity_links → entity) per non spostare l'N+1 sul DB.
     """
+    base = _event_summary_base(e)
+    if include_entities:
+        base["entities"] = [
+            {
+                "entity_id": link.entity_id,
+                "entity_name": link.entity.name_original if link.entity else None,
+                "role": link.role,
+            }
+            for link in e.entity_links
+        ]
+    return base
+
+
+def _event_summary_base(e: HistoricalEvent) -> dict:
     return {
         "id": e.id,
         "name_original": e.name_original,
@@ -131,26 +151,26 @@ def _event_detail(e: HistoricalEvent) -> dict:
 @router.get(
     "/v1/events",
     response_model=EventListResponse,
-    summary="Lista eventi storici",
+    summary="List historical events",
     description=(
-        "Lista paginata di eventi storici con filtri su anno, tipo, stato e silenzi. "
-        "ETHICS-007: nessun eufemismo nei termini EventType (GENOCIDE, COLONIAL_VIOLENCE, ...). "
-        "ETHICS-008: `known_silence=true` restituisce solo eventi con documentazione "
-        "contemporanea assente/cancellata."
+        "Paginated list of historical events with filters on year, type, status and silences. "
+        "ETHICS-007: no euphemisms in EventType terms (GENOCIDE, COLONIAL_VIOLENCE, ...). "
+        "ETHICS-008: `known_silence=true` returns only events whose contemporary "
+        "documentation is absent/erased."
     ),
 )
 @cache_response(ttl_seconds=300)
 def list_events(
     request: Request,
     response: Response,
-    year_min: int | None = Query(None, description="Anno minimo (incluso)"),
-    year_max: int | None = Query(None, description="Anno massimo (incluso)"),
-    event_type: str | None = Query(None, description="Filtra per EventType (es. BATTLE, GENOCIDE)"),
+    year_min: int | None = Query(None, description="Minimum year (inclusive)"),
+    year_max: int | None = Query(None, description="Maximum year (inclusive)"),
+    event_type: str | None = Query(None, description="Filter by EventType (e.g. BATTLE, GENOCIDE)"),
     status: str | None = Query(None, description="confirmed / uncertain / disputed"),
-    known_silence: bool | None = Query(None, description="Solo eventi con silenzio documentato"),
+    known_silence: bool | None = Query(None, description="Only events with documented silence"),
     # v6.14: date precision filters.
-    month: int | None = Query(None, ge=1, le=12, description="Filtra per mese (1-12)"),
-    day: int | None = Query(None, ge=1, le=31, description="Filtra per giorno (1-31)"),
+    month: int | None = Query(None, ge=1, le=12, description="Filter by month (1-12)"),
+    day: int | None = Query(None, ge=1, le=31, description="Filter by day (1-31)"),
     limit: int = Query(50, ge=1, le=500),
     offset: int = Query(0, ge=0),
     db: Session = Depends(get_db),
@@ -191,52 +211,52 @@ def list_events(
 
 @router.get(
     "/v1/events/types",
-    summary="Enumera i tipi di evento",
+    summary="Enumerate event types",
     description=(
-        "Restituisce i tipi di evento supportati (EventType enum) "
-        "con breve descrizione dell'uso corretto. "
-        "ETHICS-007: i termini sono espliciti — GENOCIDE, COLONIAL_VIOLENCE, "
-        "ETHNIC_CLEANSING, MASSACRE, DEPORTATION — e non vanno sostituiti "
-        "con eufemismi."
+        "Returns the supported event types (EventType enum) "
+        "with a short description of correct usage. "
+        "ETHICS-007: the terms are explicit — GENOCIDE, COLONIAL_VIOLENCE, "
+        "ETHNIC_CLEANSING, MASSACRE, DEPORTATION — and must not be replaced "
+        "with euphemisms."
     ),
 )
 def list_event_types(response: Response):
     response.headers["Cache-Control"] = "public, max-age=86400"
 
     descriptions = {
-        "BATTLE": "Scontro militare circoscritto nel tempo.",
-        "SIEGE": "Assedio di una città o fortificazione.",
-        "TREATY": "Accordo formale tra entità.",
-        "REBELLION": "Insurrezione contro il potere costituito.",
-        "REVOLUTION": "Cambio di regime su scala politica-sociale.",
-        "CORONATION": "Ascesa al trono di un sovrano.",
-        "DEATH_OF_RULER": "Morte di un sovrano (naturale o violenta).",
-        "MARRIAGE_DYNASTIC": "Unione matrimoniale con impatto dinastico/territoriale.",
-        "FOUNDING_CITY": "Fondazione di una città.",
-        "FOUNDING_STATE": "Fondazione di un'entità geopolitica.",
-        "DISSOLUTION_STATE": "Dissoluzione di un'entità geopolitica.",
-        "CONQUEST": "Annessione territoriale militare.",
-        "COLONIAL_VIOLENCE": "Violenza coloniale organizzata — NON 'pacification'.",
-        "GENOCIDE": "Distruzione sistematica di un gruppo — NON 'massacre' né 'conflict'.",
-        "ETHNIC_CLEANSING": "Rimozione etnica forzata — NON 'population exchange'.",
-        "MASSACRE": "Uccisione di massa a scala sub-genocidale.",
-        "DEPORTATION": "Trasferimento forzato di popolazione.",
-        "MIGRATION": "Movimento di massa di popolazione (es. Bantu expansion, Slavic settlement).",
-        "COLLAPSE": "Collasso statale/civile (distinto da dissoluzione deliberata).",
-        "FAMINE": "Carestia strutturale — NON 'food crisis'.",
-        "EPIDEMIC": "Epidemia o pandemia.",
-        "EARTHQUAKE": "Terremoto documentato.",
-        "VOLCANIC_ERUPTION": "Eruzione vulcanica.",
+        "BATTLE": "Military engagement bounded in time.",
+        "SIEGE": "Siege of a city or fortification.",
+        "TREATY": "Formal agreement between entities.",
+        "REBELLION": "Insurrection against established power.",
+        "REVOLUTION": "Regime change at a political-social scale.",
+        "CORONATION": "Accession of a ruler to the throne.",
+        "DEATH_OF_RULER": "Death of a ruler (natural or violent).",
+        "MARRIAGE_DYNASTIC": "Marriage union with dynastic/territorial impact.",
+        "FOUNDING_CITY": "Founding of a city.",
+        "FOUNDING_STATE": "Founding of a geopolitical entity.",
+        "DISSOLUTION_STATE": "Dissolution of a geopolitical entity.",
+        "CONQUEST": "Military territorial annexation.",
+        "COLONIAL_VIOLENCE": "Organized colonial violence — NOT 'pacification'.",
+        "GENOCIDE": "Systematic destruction of a group — NOT 'massacre' nor 'conflict'.",
+        "ETHNIC_CLEANSING": "Forced ethnic removal — NOT 'population exchange'.",
+        "MASSACRE": "Mass killing at sub-genocidal scale.",
+        "DEPORTATION": "Forced transfer of population.",
+        "MIGRATION": "Mass movement of population (e.g. Bantu expansion, Slavic settlement).",
+        "COLLAPSE": "State/civilizational collapse (distinct from deliberate dissolution).",
+        "FAMINE": "Structural famine — NOT 'food crisis'.",
+        "EPIDEMIC": "Epidemic or pandemic.",
+        "EARTHQUAKE": "Documented earthquake.",
+        "VOLCANIC_ERUPTION": "Volcanic eruption.",
         "TSUNAMI": "Tsunami.",
-        "FLOOD": "Inondazione maggiore.",
-        "DROUGHT": "Siccità estesa.",
-        "FIRE": "Incendio catastrofico.",
-        "EXPLORATION": "Esplorazione geografica (framing attento, ETHICS-007).",
-        "TRADE_AGREEMENT": "Accordo commerciale formale.",
-        "RELIGIOUS_EVENT": "Conversione, scisma, proclamazione religiosa.",
-        "INTELLECTUAL_EVENT": "Pubblicazione o cancellazione di opera fondamentale.",
-        "TECHNOLOGICAL_EVENT": "Invenzione o adozione di tecnologia.",
-        "OTHER": "Evento non classificabile nei tipi precedenti.",
+        "FLOOD": "Major flood.",
+        "DROUGHT": "Extended drought.",
+        "FIRE": "Catastrophic fire.",
+        "EXPLORATION": "Geographic exploration (careful framing, ETHICS-007).",
+        "TRADE_AGREEMENT": "Formal trade agreement.",
+        "RELIGIOUS_EVENT": "Religious conversion, schism, or proclamation.",
+        "INTELLECTUAL_EVENT": "Publication or erasure of a foundational work.",
+        "TECHNOLOGICAL_EVENT": "Invention or adoption of technology.",
+        "OTHER": "Event not classifiable under the preceding types.",
     }
 
     return {
@@ -277,18 +297,18 @@ def _event_map_marker(e: HistoricalEvent) -> dict:
 @cache_response(ttl_seconds=300)
 @router.get(
     "/v1/events/map",
-    summary="Eventi per visualizzazione mappa",
+    summary="Events for map display",
     description=(
-        "Payload leggero ottimizzato per il rendering di marker su mappa. "
-        "Restituisce solo eventi con coordinate (lat/lon non null) entro "
-        "una finestra temporale centrata su `year`. La finestra si auto-espande "
-        "per epoche antiche: ±50 per anni < -1000, ±25 per anni da -1000 a 0."
+        "Lightweight payload optimized for map marker rendering. "
+        "Returns only events with coordinates (non-null lat/lon) within "
+        "a temporal window centered on `year`. The window auto-expands "
+        "for ancient eras: ±50 for years < -1000, ±25 for years from -1000 to 0."
     ),
 )
 def events_for_map(
-    year: int = Query(..., description="Anno centrale della finestra temporale"),
-    window: int = Query(10, ge=1, le=500, description="Semi-ampiezza finestra in anni (auto-espansa per epoche antiche)"),
-    limit: int = Query(200, ge=1, le=500, description="Numero massimo di eventi"),
+    year: int = Query(..., description="Central year of the temporal window"),
+    window: int = Query(10, ge=1, le=500, description="Window half-width in years (auto-expanded for ancient eras)"),
+    limit: int = Query(200, ge=1, le=500, description="Maximum number of events"),
     response: Response = None,
     db: Session = Depends(get_db),
 ):
@@ -334,31 +354,32 @@ _DATE_RE = re.compile(r"^-?\d{4}-\d{2}-\d{2}$")
 
 @router.get(
     "/v1/events/on-this-day/{mm_dd}",
-    summary="Eventi accaduti in un giorno dell'anno",
+    summary="Events that occurred on a given day of the year",
     description=(
-        "Restituisce gli eventi storici con month/day corrispondenti, ordinati per anno. "
-        "Formato path: MM-DD (es. 07-14 per il 14 luglio). "
-        "Restituisce lista vuota (non 404) se nessun evento coincide."
+        "Returns historical events with matching month/day, ordered by year. "
+        "Path format: MM-DD (e.g. 07-14 for July 14). "
+        "Returns an empty list (not 404) if no event matches."
     ),
 )
 def events_on_this_day(
-    mm_dd: str = Path(..., description="Mese-giorno in formato MM-DD", pattern=r"^\d{2}-\d{2}$"),
+    mm_dd: str = Path(..., description="Month-day in MM-DD format", pattern=r"^\d{2}-\d{2}$"),
     response: Response = None,
     db: Session = Depends(get_db),
 ):
     if not _MM_DD_RE.match(mm_dd):
-        raise HTTPException(status_code=422, detail="Formato richiesto: MM-DD (es. 07-14)")
+        raise HTTPException(status_code=422, detail="Required format: MM-DD (e.g. 07-14)")
 
     parts = mm_dd.split("-")
     m, d = int(parts[0]), int(parts[1])
 
     if m < 1 or m > 12:
-        raise HTTPException(status_code=422, detail=f"Mese non valido: {m} (1-12)")
+        raise HTTPException(status_code=422, detail=f"Invalid month: {m} (1-12)")
     if d < 1 or d > 31:
-        raise HTTPException(status_code=422, detail=f"Giorno non valido: {d} (1-31)")
+        raise HTTPException(status_code=422, detail=f"Invalid day: {d} (1-31)")
 
     results = (
         db.query(HistoricalEvent)
+        .options(joinedload(HistoricalEvent.entity_links).joinedload(EventEntityLink.entity))
         .filter(HistoricalEvent.month == m, HistoricalEvent.day == d)
         .order_by(HistoricalEvent.year)
         .all()
@@ -370,29 +391,29 @@ def events_on_this_day(
         "month": m,
         "day": d,
         "total": len(results),
-        "events": [_event_summary(e) for e in results],
+        "events": [_event_summary(e, include_entities=True) for e in results],
     }
 
 
 @router.get(
     "/v1/events/at-date/{date_str}",
-    summary="Eventi in una data esatta",
+    summary="Events at an exact date",
     description=(
-        "Restituisce gli eventi in una data esatta ISO-like. "
-        "Formato: YYYY-MM-DD (es. 1789-07-14) o -YYYY-MM-DD per BCE "
-        "(es. -0331-10-01 per il 1 ottobre 331 a.C.). "
-        "Restituisce lista vuota (non 404) se nessun evento coincide."
+        "Returns events at an exact ISO-like date. "
+        "Format: YYYY-MM-DD (e.g. 1789-07-14) or -YYYY-MM-DD for BCE "
+        "(e.g. -0331-10-01 for October 1, 331 BCE). "
+        "Returns an empty list (not 404) if no event matches."
     ),
 )
 def events_at_date(
-    date_str: str = Path(..., description="Data in formato [-]YYYY-MM-DD"),
+    date_str: str = Path(..., description="Date in [-]YYYY-MM-DD format"),
     response: Response = None,
     db: Session = Depends(get_db),
 ):
     if not _DATE_RE.match(date_str):
         raise HTTPException(
             status_code=422,
-            detail="Formato richiesto: YYYY-MM-DD o -YYYY-MM-DD per BCE (es. -0331-10-01)",
+            detail="Required format: YYYY-MM-DD or -YYYY-MM-DD for BCE (e.g. -0331-10-01)",
         )
 
     # Parse year (may be negative for BCE), month, day.
@@ -410,12 +431,13 @@ def events_at_date(
         d = int(parts[2])
 
     if m < 1 or m > 12:
-        raise HTTPException(status_code=422, detail=f"Mese non valido: {m} (1-12)")
+        raise HTTPException(status_code=422, detail=f"Invalid month: {m} (1-12)")
     if d < 1 or d > 31:
-        raise HTTPException(status_code=422, detail=f"Giorno non valido: {d} (1-31)")
+        raise HTTPException(status_code=422, detail=f"Invalid day: {d} (1-31)")
 
     results = (
         db.query(HistoricalEvent)
+        .options(joinedload(HistoricalEvent.entity_links).joinedload(EventEntityLink.entity))
         .filter(
             HistoricalEvent.year == year,
             HistoricalEvent.month == m,
@@ -433,18 +455,18 @@ def events_at_date(
         "month": m,
         "day": d,
         "total": len(results),
-        "events": [_event_summary(e) for e in results],
+        "events": [_event_summary(e, include_entities=True) for e in results],
     }
 
 
 @router.get(
     "/v1/events/date-coverage",
-    summary="Copertura date per on-this-day",
+    summary="Date coverage for on-this-day",
     description=(
-        "Restituisce le date (MM-DD) che hanno almeno un evento nel dataset. "
-        "Utile per un agente AI che vuole sapere prima di chiamare "
-        "on-this-day se quella data avrà risultati, o per suggerire "
-        "date 'interessanti' all'utente."
+        "Returns the dates (MM-DD) that have at least one event in the dataset. "
+        "Useful for an AI agent that wants to know, before calling "
+        "on-this-day, whether that date will have results, or to suggest "
+        "'interesting' dates to the user."
     ),
 )
 @cache_response(ttl_seconds=3600)
@@ -492,10 +514,10 @@ def events_date_coverage(
 
 @router.get(
     "/v1/events/{event_id}",
-    summary="Dettaglio evento storico",
+    summary="Historical event detail",
     description=(
-        "Dettaglio completo di un evento con entity_links (ruolo esplicito per "
-        "ogni entità coinvolta) e sources. ETHICS-007: main_actor obbligatorio."
+        "Full detail of an event with entity_links (explicit role for "
+        "each involved entity) and sources. ETHICS-007: main_actor is mandatory."
     ),
 )
 @cache_response(ttl_seconds=3600)
@@ -518,17 +540,17 @@ def get_event(event_id: int, request: Request, response: Response, db: Session =
 
 @router.get(
     "/v1/entities/{entity_id}/events",
-    summary="Eventi collegati a un'entità",
+    summary="Events linked to an entity",
     description=(
-        "Restituisce tutti gli eventi in cui l'entità compare (qualunque ruolo). "
-        "Utile per ricostruire la storia eventuale di un'entità: fondazione, "
-        "conquiste, dissoluzione, eventi subiti (violenze coloniali, epidemie)."
+        "Returns all events in which the entity appears (any role). "
+        "Useful to reconstruct an entity's event history: founding, "
+        "conquests, dissolution, events suffered (colonial violence, epidemics)."
     ),
 )
 def get_events_for_entity(
     entity_id: int,
     response: Response,
-    role: str | None = Query(None, description="Filtra per ruolo (es. MAIN_ACTOR, VICTIM)"),
+    role: str | None = Query(None, description="Filter by role (e.g. MAIN_ACTOR, VICTIM)"),
     db: Session = Depends(get_db),
 ):
     entity = db.query(GeoEntity).filter(GeoEntity.id == entity_id).first()

@@ -83,7 +83,7 @@ def _period_detail(p: HistoricalPeriod) -> dict[str, Any]:
 @router.get(
     "/v1/periods",
     summary="List historical periods",
-    description="Lista strutturata di epoche storiche. Filtrabile per regione, tipo, anno e status.",
+    description="Structured list of historical periods. Filterable by region, type, year and status.",
 )
 @cache_response(ttl_seconds=3600)
 def list_periods(

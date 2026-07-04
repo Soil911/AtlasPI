@@ -4,78 +4,78 @@ from pydantic import BaseModel, Field
 
 
 class NameVariantResponse(BaseModel):
-    """Variante di nome con contesto storico (ETHICS-001)."""
-    name: str = Field(description="Nome nella lingua indicata")
-    lang: str = Field(description="Codice lingua ISO 639-1")
-    period_start: int | None = Field(None, description="Anno inizio uso (negativo = a.C.)")
-    period_end: int | None = Field(None, description="Anno fine uso")
-    context: str | None = Field(None, description="Contesto storico-politico del nome")
-    source: str | None = Field(None, description="Fonte bibliografica")
+    """Name variant with historical context (ETHICS-001)."""
+    name: str = Field(description="Name in the indicated language")
+    lang: str = Field(description="ISO 639-1 language code")
+    period_start: int | None = Field(None, description="Year usage began (negative = BCE)")
+    period_end: int | None = Field(None, description="Year usage ended")
+    context: str | None = Field(None, description="Historical-political context of the name")
+    source: str | None = Field(None, description="Bibliographic source")
 
     model_config = {"from_attributes": True}
 
 
 class TerritoryChangeResponse(BaseModel):
-    """Cambio territoriale con tipo esplicito (ETHICS-002)."""
-    year: int = Field(description="Anno del cambio (negativo = a.C.)")
-    region: str = Field(description="Regione coinvolta")
-    change_type: str = Field(description="Tipo: CONQUEST_MILITARY, TREATY, COLONIZATION, etc.")
-    description: str | None = Field(None, description="Descrizione del cambio")
-    population_affected: int | None = Field(None, description="Stima popolazione colpita")
-    confidence_score: float = Field(description="Affidabilità dato 0.0-1.0")
+    """Territorial change with explicit change type (ETHICS-002)."""
+    year: int = Field(description="Year of the change (negative = BCE)")
+    region: str = Field(description="Region involved")
+    change_type: str = Field(description="Type: CONQUEST_MILITARY, TREATY, COLONIZATION, etc.")
+    description: str | None = Field(None, description="Description of the change")
+    population_affected: int | None = Field(None, description="Estimated population affected")
+    confidence_score: float = Field(description="Data reliability 0.0-1.0")
 
     model_config = {"from_attributes": True}
 
 
 class SourceResponse(BaseModel):
-    """Fonte bibliografica tracciabile."""
-    citation: str = Field(description="Citazione bibliografica")
-    url: str | None = Field(None, description="URL della fonte")
-    source_type: str = Field(description="Tipo: primary, secondary, academic")
+    """Traceable bibliographic source."""
+    citation: str = Field(description="Bibliographic citation")
+    url: str | None = Field(None, description="Source URL")
+    source_type: str = Field(description="Type: primary, secondary, academic")
 
     model_config = {"from_attributes": True}
 
 
 class CapitalResponse(BaseModel):
-    """Capitale dell'entità."""
+    """Capital of the entity."""
     name: str
     lat: float
     lon: float
 
 
 class CapitalHistoryResponse(BaseModel):
-    """Capitale storica con range temporale (v6.87 — ADR-004).
+    """Historical capital with temporal range (v6.87 — ADR-004).
 
-    Per polities long-duration con capitali multiple (Ottoman, HRE, Mughal,
-    Ming, Song, Solomonic Ethiopia, ecc.). Permette query 'capital of X
-    in year Y' senza anacronismo.
+    For long-duration polities with multiple capitals (Ottoman, HRE, Mughal,
+    Ming, Song, Solomonic Ethiopia, etc.). Enables 'capital of X in year Y'
+    queries without anachronism.
 
-    `lat/lon` può essere null per polities con corte itinerante.
-    `year_end` null = capitale attuale o ultima.
-    `ordering` per casi sovrapposti (es. dual monarchy Wien+Budapest).
+    `lat/lon` may be null for polities with an itinerant court.
+    `year_end` null = current or last capital.
+    `ordering` for overlapping cases (e.g. dual monarchy Wien+Budapest).
     """
-    name: str = Field(description="Nome della capitale (lingua locale, ETHICS-001)")
-    lat: float | None = Field(None, description="Latitudine (null per corte itinerante)")
-    lon: float | None = Field(None, description="Longitudine")
-    year_start: int = Field(description="Anno inizio periodo come capitale")
-    year_end: int | None = Field(None, description="Anno fine (null = ultima/attuale)")
-    ordering: int = Field(default=0, description="Sort secondario per periodi sovrapposti")
-    notes: str | None = Field(None, description="Spiegazione del ruolo")
+    name: str = Field(description="Name of the capital (local language, ETHICS-001)")
+    lat: float | None = Field(None, description="Latitude (null for itinerant court)")
+    lon: float | None = Field(None, description="Longitude")
+    year_start: int = Field(description="Year the period as capital began")
+    year_end: int | None = Field(None, description="End year (null = last/current)")
+    ordering: int = Field(default=0, description="Secondary sort for overlapping periods")
+    notes: str | None = Field(None, description="Explanation of the role")
 
     model_config = {"from_attributes": True}
 
 
 class EntityResponse(BaseModel):
-    """Risposta completa per una singola entità — formato da ADR-002."""
+    """Full response for a single entity — format per ADR-002."""
     id: int
-    entity_type: str = Field(description="Tipo: empire, kingdom, city-state, colony, disputed_territory")
-    year_start: int = Field(description="Anno inizio (negativo = a.C.)")
-    year_end: int | None = Field(None, description="Anno fine (null = ancora esistente)")
-    name_original: str = Field(description="Nome nella lingua originale/locale (ETHICS-001)")
-    name_original_lang: str = Field(description="Codice lingua ISO 639-1")
-    name_variants: list[NameVariantResponse] = Field(default_factory=list, description="Nomi in altre lingue con contesto")
+    entity_type: str = Field(description="Type: empire, kingdom, city-state, colony, disputed_territory")
+    year_start: int = Field(description="Start year (negative = BCE)")
+    year_end: int | None = Field(None, description="End year (null = still existing)")
+    name_original: str = Field(description="Name in the original/local language (ETHICS-001)")
+    name_original_lang: str = Field(description="ISO 639-1 language code")
+    name_variants: list[NameVariantResponse] = Field(default_factory=list, description="Names in other languages with context")
     capital: CapitalResponse | None = None
-    boundary_geojson: dict | None = Field(None, description="Confini GeoJSON (Polygon o MultiPolygon)")
+    boundary_geojson: dict | None = Field(None, description="GeoJSON boundaries (Polygon or MultiPolygon)")
     # ETHICS-005: la tier di provenienza del confine. Permette al consumatore
     # di distinguere un poligono reale da uno generato senza ispezionare il
     # geojson. Valori: historical_map, natural_earth, aourednik,
@@ -85,56 +85,56 @@ class EntityResponse(BaseModel):
     boundary_source: str | None = Field(
         None,
         description=(
-            "Tier di provenienza del confine (ETHICS-005): historical_map, "
+            "Boundary provenance tier (ETHICS-005): historical_map, "
             "natural_earth, aourednik, academic_source, approximate_generated, "
             "approximate_circle, historical_approximation"
         ),
     )
     boundary_aourednik_name: str | None = Field(
         None,
-        description="Nome esatto della feature matchata in aourednik/historical-basemaps (riproducibilita' scientifica)",
+        description="Exact name of the matched feature in aourednik/historical-basemaps (scientific reproducibility)",
     )
     boundary_aourednik_year: int | None = Field(
         None,
-        description="Anno dello snapshot aourednik usato (uno dei 53 disponibili, -123000..2010)",
+        description="Year of the aourednik snapshot used (one of the 53 available, -123000..2010)",
     )
     # v6.99.109 (agent-UX): flag machine-readable dell'anacronismo potenziale.
     boundary_reference_year: int | None = Field(
         None,
         description=(
-            "Anno di riferimento del polygon. Il boundary è UNO snapshot STATICO "
-            "per l'intero lifespan dell'entità: interrogando un anno diverso da "
-            "questo, i confini mostrati possono essere anacronistici (es. Mughal "
-            "alla massima estensione ~1700 anche per query sul 1550). NULL = anno "
-            "di riferimento non noto (approssimazione generica). Oggi coincide con "
-            "boundary_aourednik_year quando la provenienza è aourednik."
+            "Reference year of the polygon. The boundary is ONE STATIC snapshot "
+            "for the entity's entire lifespan: when querying a year other than "
+            "this one, the boundaries shown may be anachronistic (e.g. Mughal "
+            "at maximum extent ~1700 even for queries about 1550). NULL = reference "
+            "year unknown (generic approximation). Currently coincides with "
+            "boundary_aourednik_year when the provenance is aourednik."
         ),
     )
     boundary_aourednik_precision: int | None = Field(
         None,
-        description="Precisione BORDERPRECISION dell'upstream aourednik (README historical-basemaps): 1=approssimato, 2=moderatamente preciso, 3=determinato da legge internazionale. Il valore 0 e' un edge-case legacy (4 feature upstream). Converte in confidence via PRECISION_CONFIDENCE (3->0.85, 2->0.70, 1->0.55, 0->0.45).",
+        description="BORDERPRECISION value from the aourednik upstream (historical-basemaps README): 1=approximate, 2=moderately precise, 3=determined by international law. Value 0 is a legacy edge-case (4 upstream features). Converts to confidence via PRECISION_CONFIDENCE (3->0.85, 2->0.70, 1->0.55, 0->0.45).",
     )
     boundary_ne_iso_a3: str | None = Field(
         None,
-        description="ISO_A3 del paese Natural Earth quando il match passa per NE",
+        description="ISO_A3 of the Natural Earth country when the match goes through NE",
     )
-    confidence_score: float = Field(description="Affidabilità complessiva 0.0-1.0")
-    status: str = Field(description="confirmed, uncertain, o disputed")
-    territory_changes: list[TerritoryChangeResponse] = Field(default_factory=list, description="Cambi territoriali (ETHICS-002)")
-    sources: list[SourceResponse] = Field(default_factory=list, description="Fonti bibliografiche")
-    ethical_notes: str | None = Field(None, description="Note sulla governance etica del dato")
-    continent: str | None = Field(None, description="Continente derivato dalle coordinate della capitale")
+    confidence_score: float = Field(description="Overall reliability 0.0-1.0")
+    status: str = Field(description="confirmed, uncertain, or disputed")
+    territory_changes: list[TerritoryChangeResponse] = Field(default_factory=list, description="Territorial changes (ETHICS-002)")
+    sources: list[SourceResponse] = Field(default_factory=list, description="Bibliographic sources")
+    ethical_notes: str | None = Field(None, description="Notes on the ethical governance of the data")
+    continent: str | None = Field(None, description="Continent derived from the capital's coordinates")
     # v6.69: Wikidata Q-ID per cross-reference (audit v4 Fase A).
     # ETHICS: identificatore di riferimento esterno, non fonte autoritativa —
     # usato per drift detection sistematico contro Wikidata.
     wikidata_qid: str | None = Field(
         None,
-        description="Wikidata Q-ID di riferimento (formato 'Q12345'). Null se nessun match high-confidence è stato trovato (audit v4, v6.69).",
+        description="Reference Wikidata Q-ID (format 'Q12345'). Null if no high-confidence match was found (audit v4, v6.69).",
     )
     # v6.87 ADR-004: capital history per polities con capitali multiple.
     capital_history: list[CapitalHistoryResponse] = Field(
         default_factory=list,
-        description="Cronologia capitali per polities long-duration (ADR-004). Vuoto se l'entity ha solo `capital` singola. Ordinato per year_start ASC, poi ordering.",
+        description="Capital history for long-duration polities (ADR-004). Empty if the entity only has a single `capital`. Sorted by year_start ASC, then ordering.",
     )
 
     model_config = {
@@ -163,21 +163,21 @@ class EntityResponse(BaseModel):
 
 
 class PaginatedEntityResponse(BaseModel):
-    """Risposta paginata per liste di entità.
+    """Paginated response for entity lists.
 
-    v6.66 FIX 4: include sia `total` (standard) sia `count` (legacy).
-    `count` è deprecato ma restituito per retro-compatibilità per 1-2 release.
+    v6.66 FIX 4: includes both `total` (standard) and `count` (legacy).
+    `count` is deprecated but returned for backward compatibility for 1-2 releases.
     """
-    total: int = Field(description="Numero totale di risultati che matchano i filtri (prima di limit/offset)")
-    count: int = Field(description="DEPRECATED (v6.66) — alias di `total`. Sarà rimosso in v6.68.")
-    limit: int = Field(description="Limite per pagina")
-    offset: int = Field(description="Offset corrente")
+    total: int = Field(description="Total number of results matching the filters (before limit/offset)")
+    count: int = Field(description="DEPRECATED (v6.66) — alias of `total`. Will be removed in v6.68.")
+    limit: int = Field(description="Per-page limit")
+    offset: int = Field(description="Current offset")
     entities: list[EntityResponse]
     # v6.99.109 (agent-UX): con 0 risultati, indica il retry-path invece di
     # un dead-end silenzioso (gli agenti abbandonavano dopo il primo 0-result).
     hint: str | None = Field(
         None,
-        description="Presente solo con total=0 su ricerche per nome: suggerisce il retry via /v1/search/fuzzy",
+        description="Present only when total=0 on name searches: suggests retrying via /v1/search/fuzzy",
     )
 
 
@@ -189,7 +189,7 @@ class PaginatedEntityResponse(BaseModel):
 
 
 class LightEntityResponse(BaseModel):
-    """Entità in forma leggera (senza boundary_geojson) — vedi /v1/entities/light."""
+    """Lightweight entity (without boundary_geojson) — see /v1/entities/light."""
     id: int
     name_original: str | None = None
     name_original_lang: str | None = None
@@ -201,20 +201,20 @@ class LightEntityResponse(BaseModel):
     capital_lon: float | None = None
     confidence_score: float | None = None
     status: str | None = None
-    continent: str | None = Field(None, description="Continente derivato dalle coordinate capitale")
+    continent: str | None = Field(None, description="Continent derived from the capital coordinates")
 
     model_config = {"from_attributes": True}
 
 
 class LightListResponse(BaseModel):
-    """Risposta di /v1/entities/light — bootstrap mappa / overview agent."""
+    """Response of /v1/entities/light — map bootstrap / agent overview."""
     total: int
-    count: int = Field(description="DEPRECATED — alias di total (retro-compat)")
+    count: int = Field(description="DEPRECATED — alias of total (backward compat)")
     entities: list[LightEntityResponse]
 
 
 class BatchResponse(BaseModel):
-    """Risposta di /v1/entities/batch — fetch multiplo per ID in un round-trip."""
+    """Response of /v1/entities/batch — multi-ID fetch in one round-trip."""
     requested: int
     found: int
     not_found: list[int] = Field(default_factory=list)
@@ -222,7 +222,7 @@ class BatchResponse(BaseModel):
 
 
 class EventSummaryResponse(BaseModel):
-    """Evento storico in forma compatta (liste) — mirror di _event_summary."""
+    """Historical event in compact form (lists) — mirrors _event_summary."""
     id: int
     name_original: str | None = None
     name_original_lang: str | None = None
@@ -245,7 +245,7 @@ class EventSummaryResponse(BaseModel):
 
 
 class EventListResponse(BaseModel):
-    """Risposta di /v1/events (list)."""
+    """Response of /v1/events (list)."""
     total: int
     limit: int
     offset: int
@@ -253,16 +253,16 @@ class EventListResponse(BaseModel):
 
 
 class HealthResponse(BaseModel):
-    """Stato di salute del servizio."""
+    """Service health status."""
     status: str = Field(description="'ok' | 'degraded' | 'down'")
     version: str
     environment: str = Field(default="unknown", description="development, staging, production")
-    database: str = Field(description="Tipo e stato del database")
+    database: str = Field(description="Database type and status")
     entity_count: int
-    uptime_seconds: float = Field(default=0.0, description="Secondi dall'avvio del processo")
-    check_duration_ms: float = Field(default=0.0, description="Tempo speso in questo health check")
-    sentry_active: bool = Field(default=False, description="Se Sentry sta catturando errori")
+    uptime_seconds: float = Field(default=0.0, description="Seconds since process start")
+    check_duration_ms: float = Field(default=0.0, description="Time spent in this health check")
+    sentry_active: bool = Field(default=False, description="Whether Sentry is capturing errors")
     checks: dict[str, str] = Field(
         default_factory=dict,
-        description="Esito delle sotto-verifiche (database, seed, rate_limit, ...)",
+        description="Result of the sub-checks (database, seed, rate_limit, ...)",
     )

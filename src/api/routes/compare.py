@@ -102,12 +102,12 @@ def _event_summary(ev: HistoricalEvent) -> dict:
 
 @router.get(
     "/v1/compare",
-    summary="Confronta 2-4 entita' storiche",
-    tags=["relazioni"],
+    summary="Compare 2-4 historical entities",
+    tags=["relations"],
     description=(
-        "Confronto multi-entita' strutturato. Restituisce dettagli completi "
-        "per ogni entita', eventi collegati, catene successorie e calcolo "
-        "dell'overlap temporale. Minimo 2, massimo 4 entita' per richiesta."
+        "Structured multi-entity comparison. Returns full details for "
+        "each entity, linked events, succession chains and temporal "
+        "overlap calculation. Minimum 2, maximum 4 entities per request."
     ),
 )
 @cache_response(ttl_seconds=300)

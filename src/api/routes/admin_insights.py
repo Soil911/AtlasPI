@@ -137,7 +137,7 @@ def _year_to_era(year: int) -> str:
 @router.get(
     "/admin/insights",
     summary="Traffic and usage insights (JSON)",
-    description="Analisi del traffico API: volume, endpoint, errori, user agent, utenti esterni, ore di punta.",
+    description="API traffic analysis: volume, endpoints, errors, user agents, external users, peak hours.",
     include_in_schema=False,
 )
 @cache_response(ttl_seconds=900)
@@ -314,7 +314,7 @@ def insights(request: Request, db: Session = Depends(get_db)):
 @router.get(
     "/admin/coverage-report",
     summary="Data coverage and quality report (JSON)",
-    description="Analisi della copertura dati: distribuzione geografica, temporale, confidenza, confini, catene.",
+    description="Data coverage analysis: geographic and temporal distribution, confidence, boundaries, chains.",
     include_in_schema=False,
 )
 @cache_response(ttl_seconds=600)
@@ -539,7 +539,7 @@ def _extract_failed_searches(db: Session, since: str) -> list[dict]:
 @router.get(
     "/admin/suggestions",
     summary="Smart suggestions for data expansion (JSON)",
-    description="Suggerimenti intelligenti: ricerche fallite, gap geografici, gap temporali, entita' orfane, bassa confidenza.",
+    description="Smart suggestions: failed searches, geographic gaps, temporal gaps, orphan entities, low confidence.",
     include_in_schema=False,
 )
 def suggestions(db: Session = Depends(get_db)):

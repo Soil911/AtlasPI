@@ -47,7 +47,7 @@ STATIC_DIR = Path(__file__).resolve().parent.parent.parent.parent / "static"
 @router.get(
     "/admin/ai/suggestions",
     summary="List AI suggestions",
-    description="Lista suggerimenti AI con filtro opzionale per status.",
+    description="List AI suggestions with optional filter by status.",
     include_in_schema=False,
 )
 def list_suggestions(

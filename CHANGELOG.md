@@ -2,6 +2,29 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.119] - 2026-07-04 (M3 agent-UX: machine-facing in inglese + on-this-day completo)
+
+*Strategia lingua esplicita (M3): l'API è consumata da agenti AI — il
+machine-facing è ora inglese; i commenti/docstring interni restano in
+italiano; le `ethical_notes` narrative dei DATI restano nella loro lingua.*
+
+- **~450 stringhe machine-facing IT→EN** su 20 file `src/api/`: summary e
+  description OpenAPI, descrizioni di Query/Path/Field, messaggi d'errore
+  (`Entità con id=X non trovata` → `Entity with id=X not found`, handler
+  422/500), descrizioni enum restituite dagli endpoint `/types`.
+- **Tag OpenAPI normalizzati in EN** (`entità`→`entities`, `relazioni`→
+  `relations`, `sistema`→`system`, `siti archeologici`→`archaeological-sites`,
+  `esportazione`→`export`) + `openapi_tags` completo in `main.py` (14 tag
+  con descrizioni EN).
+- **Docstring dei modelli Pydantic tradotte** (finiscono nelle description
+  dello schema OpenAPI — machine-facing, non doc interna).
+- **Label dei secoli in `/v1/aggregation`**: `V a.C.` → `V BCE` (generatore,
+  sort key e test allineati).
+- **on-this-day/at-date completati** (chiude il lavoro iniziato in
+  v6.99.109): il payload include `entities` (id, nome, ruolo) per evento con
+  eager-loading `joinedload` — prima il client doveva fare N+1 fetch di
+  detail solo per sapere quali entità erano coinvolte.
+
 ## [v6.99.118] - 2026-07-04 (ETHICS-019: mislabel di regime #240 e #534)
 
 *Flag etici a priorità massima dall'handoff 2026-07-04 (origine: ETHICS-017 §8).

@@ -30,7 +30,7 @@ from src.db.models import ArchaeologicalSite
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(tags=["siti archeologici"])
+router = APIRouter(tags=["archaeological-sites"])
 
 
 # ─── Response helpers ──────────────────────────────────────────────

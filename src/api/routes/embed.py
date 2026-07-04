@@ -71,10 +71,10 @@ PALETTE = {
 
 @router.get(
     "/badge.svg",
-    summary="SVG badge per embed in blog/wiki",
+    summary="SVG badge for embedding in blogs/wikis",
     description=(
-        "Genera un badge SVG (400x88) per linkare a una entita' AtlasPI.\n\n"
-        "Esempio:\n"
+        "Generates an SVG badge (400x88) linking to an AtlasPI entity.\n\n"
+        "Example:\n"
         "```html\n"
         "<a href='https://atlaspi.it/app?entity=178'>\n"
         "  <img src='https://atlaspi.it/embed/badge.svg?entity=178' alt='Ptolemaic Kingdom on AtlasPI'>\n"
@@ -84,7 +84,7 @@ PALETTE = {
     ),
 )
 def badge_svg(
-    entity: int = Query(..., ge=1, description="ID entita'"),
+    entity: int = Query(..., ge=1, description="Entity ID"),
     style: str = Query("dark", regex="^(dark|light)$", description="dark | light"),
     db: Session = Depends(get_db),
 ):
@@ -146,7 +146,7 @@ def badge_svg(
 
 @router.get(
     "/preview/{entity_id}",
-    summary="HTML preview con snippet copy-paste per embed",
+    summary="HTML preview with copy-paste embed snippets",
     response_class=Response,
 )
 def badge_preview(

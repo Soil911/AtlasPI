@@ -107,8 +107,8 @@ class TestAggregation:
         centuries = d["by_century"]
         assert len(centuries) > 0
         # a.C. entries should come before d.C. entries
-        bc_indices = [i for i, c in enumerate(centuries) if "a.C." in c["century"]]
-        ad_indices = [i for i, c in enumerate(centuries) if "a.C." not in c["century"]]
+        bc_indices = [i for i, c in enumerate(centuries) if "BCE" in c["century"]]
+        ad_indices = [i for i, c in enumerate(centuries) if "BCE" not in c["century"]]
         if bc_indices and ad_indices:
             assert max(bc_indices) < min(ad_indices)
 

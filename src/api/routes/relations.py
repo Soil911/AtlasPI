@@ -27,13 +27,13 @@ from src.db.models import (
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(tags=["relazioni"])
+router = APIRouter(tags=["relations"])
 
 
 @router.get(
     "/v1/entities/{entity_id}/contemporaries",
-    summary="Entità contemporanee",
-    description="Restituisce le entità attive nello stesso periodo dell'entità data.",
+    summary="Contemporary entities",
+    description="Returns the entities active in the same period as the given entity.",
 )
 def get_contemporaries(
     entity_id: int,
@@ -59,7 +59,7 @@ def get_contemporaries(
     return {
         "entity_id": entity_id,
         "entity_name": entity.name_original,
-        "period": f"{entity.year_start} — {entity.year_end or 'presente'}",
+        "period": f"{entity.year_start} — {entity.year_end or 'present'}",
         "count": len(results),
         "contemporaries": [
             {
@@ -79,10 +79,10 @@ def get_contemporaries(
 
 @router.get(
     "/v1/entities/{entity_id}/related",
-    summary="Entità correlate",
+    summary="Related entities",
     description=(
-        "Restituisce entità correlate per tipo, periodo e riferimenti incrociati "
-        "nei cambi territoriali."
+        "Returns entities related by type, period and cross-references "
+        "in territory changes."
     ),
 )
 def get_related(
@@ -187,12 +187,12 @@ def _similarity_score(source: GeoEntity, candidate: GeoEntity) -> float:
 
 @router.get(
     "/v1/entities/{entity_id}/similar",
-    summary="Entità più simili",
+    summary="Most similar entities",
     description=(
-        "Trova entità simili a quella data, ordinate per punteggio di similarità "
-        "(0.0-1.0). Il punteggio considera: tipo di entità (35%), sovrapposizione "
-        "temporale (30%), durata simile (15%), confidence simile (10%), stesso "
-        "status (10%). Utile per agenti AI che cercano paragoni storici."
+        "Finds entities similar to the given one, ordered by similarity score "
+        "(0.0-1.0). The score considers: entity type (35%), temporal overlap "
+        "(30%), similar duration (15%), similar confidence (10%), same "
+        "status (10%). Useful for AI agents looking for historical comparisons."
     ),
 )
 @cache_response(ttl_seconds=3600)
@@ -254,11 +254,11 @@ def get_similar(
 
 @router.get(
     "/v1/entities/{entity_id}/evolution",
-    summary="Evoluzione temporale di un'entità",
+    summary="Temporal evolution of an entity",
     description=(
-        "Restituisce la cronologia completa di un'entità: fondazione, "
-        "cambiamenti territoriali ordinati, fase finale. Utile per agenti AI "
-        "che devono ricostruire la storia di un'entità nel tempo."
+        "Returns the complete chronology of an entity: founding, "
+        "ordered territory changes, final phase. Useful for AI agents "
+        "that need to reconstruct an entity's history over time."
     ),
 )
 def get_evolution(
@@ -332,16 +332,16 @@ def get_evolution(
 
 @router.get(
     "/v1/entities/{entity_id}/timeline",
-    summary="Timeline unificata di un'entità",
+    summary="Unified timeline of an entity",
     description=(
-        "Fonde in un unico stream cronologico: "
-        "(1) territory_changes dell'entità, "
-        "(2) historical_events che coinvolgono l'entità (via event_entity_links), "
-        "(3) chain_transitions dove l'entità entra/esce da una catena dinastica. "
-        "Ogni evento ha un campo `kind` (territory_change|event|chain_transition) "
-        "per disambiguare la sorgente. Utile per agenti AI che devono "
-        "ricostruire la traiettoria completa di un'entità storica senza "
-        "fare 3-4 chiamate separate."
+        "Merges into a single chronological stream: "
+        "(1) the entity's territory_changes, "
+        "(2) historical_events involving the entity (via event_entity_links), "
+        "(3) chain_transitions where the entity enters/exits a dynastic chain. "
+        "Each event has a `kind` field (territory_change|event|chain_transition) "
+        "to disambiguate the source. Useful for AI agents that need to "
+        "reconstruct the complete trajectory of a historical entity without "
+        "making 3-4 separate calls."
     ),
 )
 def get_entity_timeline(
@@ -350,9 +350,9 @@ def get_entity_timeline(
     include_entity_links: bool = Query(
         True,
         description=(
-            "Se True include tutti gli eventi con un link all'entità (MAIN_ACTOR, "
+            "If True, includes all events with a link to the entity (MAIN_ACTOR, "
             "VICTIM, PARTICIPANT, AFFECTED, WITNESS, FOUNDED, DISSOLVED). "
-            "Se False include solo eventi dove l'entità è MAIN_ACTOR o FOUNDED/DISSOLVED."
+            "If False, includes only events where the entity is MAIN_ACTOR or FOUNDED/DISSOLVED."
         ),
     ),
     db: Session = Depends(get_db),
@@ -554,10 +554,10 @@ def _entity_compare_data(entity: GeoEntity) -> dict:
 
 @router.get(
     "/v1/compare/{id1}/{id2}",
-    summary="Confronta due entità storiche",
+    summary="Compare two historical entities",
     description=(
-        "Restituisce un confronto strutturato tra due entità: "
-        "durata, overlap temporale, metriche di qualità dati."
+        "Returns a structured comparison between two entities: "
+        "duration, temporal overlap, data quality metrics."
     ),
 )
 def compare_entities(

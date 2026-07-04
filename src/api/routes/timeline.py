@@ -37,7 +37,7 @@ async def serve_timeline():
 @router.get(
     "/v1/timeline-data",
     summary="Dati ottimizzati per la timeline",
-    tags=["esportazione"],
+    tags=["export"],
     description=(
         "Restituisce entita', eventi e catene successorie in un unico payload "
         "leggero, ottimizzato per il rendering della timeline SVG interattiva. "

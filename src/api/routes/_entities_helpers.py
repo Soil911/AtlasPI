@@ -296,22 +296,22 @@ def _parse_bbox(bbox: str | None) -> tuple[float, float, float, float] | None:
     except ValueError:
         raise HTTPException(
             status_code=422,
-            detail="bbox deve essere 'min_lon,min_lat,max_lon,max_lat' (4 float separati da virgola)",
+            detail="bbox must be 'min_lon,min_lat,max_lon,max_lat' (4 comma-separated floats)",
         )
     if len(parts) != 4:
         raise HTTPException(
             status_code=422,
-            detail=f"bbox richiede esattamente 4 valori, ricevuti {len(parts)}",
+            detail=f"bbox requires exactly 4 values, got {len(parts)}",
         )
     min_lon, min_lat, max_lon, max_lat = parts
     if not (-180.0 <= min_lon <= 180.0 and -180.0 <= max_lon <= 180.0):
-        raise HTTPException(status_code=422, detail="Longitudine fuori range [-180, 180]")
+        raise HTTPException(status_code=422, detail="Longitude out of range [-180, 180]")
     if not (-90.0 <= min_lat <= 90.0 and -90.0 <= max_lat <= 90.0):
-        raise HTTPException(status_code=422, detail="Latitudine fuori range [-90, 90]")
+        raise HTTPException(status_code=422, detail="Latitude out of range [-90, 90]")
     if min_lon > max_lon or min_lat > max_lat:
         raise HTTPException(
             status_code=422,
-            detail="bbox: min_lon/min_lat devono essere <= max_lon/max_lat",
+            detail="bbox: min_lon/min_lat must be <= max_lon/max_lat",
         )
     return (min_lon, min_lat, max_lon, max_lat)
 
@@ -375,18 +375,18 @@ def _parse_contains(contains: str | None) -> tuple[float, float] | None:
     except ValueError:
         raise HTTPException(
             status_code=422,
-            detail="contains deve essere 'lat,lon' (2 float separati da virgola)",
+            detail="contains must be 'lat,lon' (2 comma-separated floats)",
         )
     if len(parts) != 2:
         raise HTTPException(
             status_code=422,
-            detail=f"contains richiede esattamente 2 valori, ricevuti {len(parts)}",
+            detail=f"contains requires exactly 2 values, got {len(parts)}",
         )
     lat, lon = parts
     if not (-90.0 <= lat <= 90.0):
-        raise HTTPException(status_code=422, detail="Latitudine fuori range [-90, 90]")
+        raise HTTPException(status_code=422, detail="Latitude out of range [-90, 90]")
     if not (-180.0 <= lon <= 180.0):
-        raise HTTPException(status_code=422, detail="Longitudine fuori range [-180, 180]")
+        raise HTTPException(status_code=422, detail="Longitude out of range [-180, 180]")
     return (lat, lon)
 
 
@@ -630,7 +630,7 @@ def _year_to_century_label(year: int) -> str:
         46: "XLVI",
     }
     label = roman_map.get(century, str(century))
-    return f"{label} a.C." if year < 0 else label
+    return f"{label} BCE" if year < 0 else label
 
 
 __all__ = [

@@ -117,49 +117,49 @@ router = APIRouter(prefix="/v1/feedback", tags=["feedback"])
 class FeedbackSubmitRequest(BaseModel):
     """Schema per POST /v1/feedback."""
 
-    entity_id: int | None = Field(None, description="ID entita' (geo_entities)")
-    event_id: int | None = Field(None, description="ID evento (historical_events)")
-    city_id: int | None = Field(None, description="ID citta' (historical_cities)")
+    entity_id: int | None = Field(None, description="Entity ID (geo_entities)")
+    event_id: int | None = Field(None, description="Event ID (historical_events)")
+    city_id: int | None = Field(None, description="City ID (historical_cities)")
     field_name: str | None = Field(
         None,
         max_length=64,
-        description="Campo specifico (es. 'year_end', 'boundary_geojson')",
+        description="Specific field (e.g. 'year_end', 'boundary_geojson')",
     )
 
     category: str = Field(
         ...,
-        description=f"Categoria. Uno di: {sorted(FEEDBACK_CATEGORIES)}",
+        description=f"Category. One of: {sorted(FEEDBACK_CATEGORIES)}",
     )
 
     submitter_type: str = Field(
         ...,
-        description=f"Tipo submitter. Uno di: {sorted(SUBMITTER_TYPES)}",
+        description=f"Submitter type. One of: {sorted(SUBMITTER_TYPES)}",
     )
     submitter_id: str | None = Field(
         None,
         max_length=256,
-        description="Email umano | nome agente AI | handle pubblico",
+        description="Human email | AI agent name | public handle",
     )
 
     current_value: str | None = Field(
         None,
         max_length=MAX_VALUE_LEN,
-        description=f"Valore attuale (snapshot). Max {MAX_VALUE_LEN} chars.",
+        description=f"Current value (snapshot). Max {MAX_VALUE_LEN} chars.",
     )
     suggested_value: str | None = Field(
         None,
         max_length=MAX_VALUE_LEN,
-        description=f"Valore corretto proposto. Max {MAX_VALUE_LEN} chars.",
+        description=f"Proposed corrected value. Max {MAX_VALUE_LEN} chars.",
     )
     citation: str | None = Field(
         None,
         max_length=MAX_CITATION_LEN,
-        description=f"Riferimento bibliografico/accademico. Max {MAX_CITATION_LEN} chars.",
+        description=f"Bibliographic/academic reference. Max {MAX_CITATION_LEN} chars.",
     )
     reasoning: str | None = Field(
         None,
         max_length=MAX_REASONING_LEN,
-        description=f"Spiegazione breve (1-3 frasi). Max {MAX_REASONING_LEN} chars.",
+        description=f"Brief explanation (1-3 sentences). Max {MAX_REASONING_LEN} chars.",
     )
     confidence: float | None = Field(
         None,
@@ -279,15 +279,15 @@ def _check_admin_token(request: Request) -> bool:
     "",
     response_model=FeedbackResponse,
     status_code=201,
-    summary="Submit feedback su entita'/evento/citta'",
+    summary="Submit feedback on entity/event/city",
     description=(
-        "Sottometti una correzione, segnalazione di fonte mancante, "
-        "boundary dispute, bias report, ecc. \n\n"
-        "Tutti i feedback vanno in stato `pending`. La review umana e' "
-        "richiesta per contenuti storici (ETHICS).\n\n"
-        "**Rate limit**: 5/min per IP anonimo, 30/min per submitter "
-        "identificato (con submitter_id non-vuoto).\n\n"
-        "Endpoint pubblico, no auth richiesta."
+        "Submit a correction, missing source report, "
+        "boundary dispute, bias report, etc. \n\n"
+        "All feedback starts in `pending` status. Human review is "
+        "required for historical content (ETHICS).\n\n"
+        "**Rate limit**: 5/min per anonymous IP, 30/min per identified "
+        "submitter (with non-empty submitter_id).\n\n"
+        "Public endpoint, no auth required."
     ),
 )
 def submit_feedback(
@@ -382,24 +382,24 @@ def submit_feedback(
 @router.get(
     "",
     response_model=FeedbackListResponse,
-    summary="Lista pubblica feedback (trasparenza)",
+    summary="Public feedback list (transparency)",
     description=(
-        "Filtri opzionali per status/category/entity_id/submitter_type. "
-        "Pubblicamente accessibile per permettere ad agenti AI di leggere "
-        "il feedback pending e fare cross-validation."
+        "Optional filters by status/category/entity_id/submitter_type. "
+        "Publicly accessible so AI agents can read pending feedback "
+        "and cross-validate."
     ),
 )
 def list_feedback(
     status: str | None = Query(
         None,
         description=(
-            "Filtra per status. Se omesso, mostra solo pending/under_review/"
-            "accepted (rejected/duplicate visibili solo con filter esplicito)."
+            "Filter by status. If omitted, shows only pending/under_review/"
+            "accepted (rejected/duplicate visible only with an explicit filter)."
         ),
     ),
-    category: str | None = Query(None, description="Filtra per categoria"),
-    entity_id: int | None = Query(None, description="Filtra per entity_id"),
-    submitter_type: str | None = Query(None, description="Filtra per submitter_type"),
+    category: str | None = Query(None, description="Filter by category"),
+    entity_id: int | None = Query(None, description="Filter by entity_id"),
+    submitter_type: str | None = Query(None, description="Filter by submitter_type"),
     limit: int = Query(50, ge=1, le=200),
     offset: int = Query(0, ge=0),
     db: Session = Depends(get_db),
@@ -505,10 +505,10 @@ class ContributorRow(BaseModel):
 @router.get(
     "/contributors",
     response_model=list[ContributorRow],
-    summary="Leaderboard contributori",
+    summary="Contributor leaderboard",
     description=(
-        "Top submitter per numero di feedback accettati. Email mascherate per "
-        "privacy. Usato per gamification + accountability."
+        "Top submitters by number of accepted feedback. Emails masked for "
+        "privacy. Used for gamification + accountability."
     ),
 )
 def contributors(
@@ -580,7 +580,7 @@ def contributors(
 @router.get(
     "/{feedback_id}",
     response_model=FeedbackResponse,
-    summary="Dettaglio singolo feedback",
+    summary="Single feedback detail",
 )
 def get_feedback(
     feedback_id: int,
@@ -597,8 +597,8 @@ def get_feedback(
     response_model=FeedbackResponse,
     summary="Review feedback (admin only)",
     description=(
-        "Aggiorna lo status di un feedback. Richiede header "
-        "`X-Admin-Token` corrispondente a env var `ATLASPI_ADMIN_TOKEN`."
+        "Updates the status of a feedback record. Requires an "
+        "`X-Admin-Token` header matching the `ATLASPI_ADMIN_TOKEN` env var."
     ),
 )
 def review_feedback(

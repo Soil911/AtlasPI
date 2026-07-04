@@ -69,7 +69,7 @@ def _draw_geom(ax, geom, color: str, alpha: float = 0.65):
 
 @router.get(
     "/v1/render/snapshot/{year}.png",
-    summary="Render PNG del mondo in un dato anno",
+    summary="Render a PNG of the world in a given year",
     description=(
         "Returns a PNG image showing all historical entities active in "
         "the given year, with boundaries colored by status (confirmed/"
@@ -152,7 +152,7 @@ def render_snapshot_png(
 
 @router.get(
     "/v1/render/entity/{entity_id}.png",
-    summary="Render PNG del boundary di una singola entity",
+    summary="Render a PNG of a single entity's boundary",
     description="Focused map showing a single entity's boundary.",
 )
 def render_entity_png(

@@ -53,7 +53,7 @@ from src.db.models import GeoEntity, HistoricalEvent, NameVariant, Source, Terri
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(tags=["entità"])
+router = APIRouter(tags=["entities"])
 
 
 # NOTE v6.97.0 (audit R6): _get_continent, schemas (SearchResult, ...,
@@ -65,38 +65,38 @@ router = APIRouter(tags=["entità"])
 @router.get(
     "/v1/entity",
     response_model=PaginatedEntityResponse,
-    summary="Cerca entità per nome, anno, status e tipo",
+    summary="Search entities by name, year, status and type",
     description=(
-        "Endpoint principale (ADR-002). Cerca per nome (anche varianti), "
-        "filtra per anno, status e tipo. Supporta ordinamento."
+        "Main endpoint (ADR-002). Searches by name (including variants), "
+        "filters by year, status and type. Supports sorting."
     ),
 )
 def query_entity(
     response: Response,
-    name: str | None = Query(None, max_length=200, description="Nome (parziale) dell'entità"),
+    name: str | None = Query(None, max_length=200, description="Entity name (partial match)"),
     # ETHICS-016: il floor -4000 nascondeva ~14 entità che il dataset GIÀ contiene
     # (year_start fino a -65000: nazioni aborigene australiane, Papua, Çatalhöyük,
     # Sumer/Kengi -4500). Floor allineato a periods.py (-4000000) → "qualsiasi epoca".
-    year: int | None = Query(None, ge=-4000000, le=2100, description="Anno di riferimento (negativo = a.C.)"),
-    status: StatusFilter = Query(None, description="Filtra per status"),
-    type: str | None = Query(None, max_length=50, description="Filtra per entity_type (empire, kingdom, city, etc.)"),
-    continent: str | None = Query(None, max_length=50, description="Filtra per continente (Europe, Asia, Africa, Americas, Middle East, Oceania)"),
+    year: int | None = Query(None, ge=-4000000, le=2100, description="Reference year (negative = BCE)"),
+    status: StatusFilter = Query(None, description="Filter by status"),
+    type: str | None = Query(None, max_length=50, description="Filter by entity_type (empire, kingdom, city, etc.)"),
+    continent: str | None = Query(None, max_length=50, description="Filter by continent (Europe, Asia, Africa, Americas, Middle East, Oceania)"),
     bbox: str | None = Query(
         None,
         max_length=80,
         description=(
-            "Bounding box geografico 'min_lon,min_lat,max_lon,max_lat' (RFC 7946). "
-            "Restituisce entità il cui boundary_geojson interseca il bbox; per entità "
-            "senza boundary, fallback alla capitale dentro il bbox. PostGIS in prod, "
-            "approssimato in dev SQLite."
+            "Geographic bounding box 'min_lon,min_lat,max_lon,max_lat' (RFC 7946). "
+            "Returns entities whose boundary_geojson intersects the bbox; for entities "
+            "without a boundary, falls back to the capital inside the bbox. PostGIS in prod, "
+            "approximate in dev SQLite."
         ),
     ),
-    sort: SortField = Query(None, description="Ordina per: name, year_start, confidence, year_end"),
-    order: Literal["asc", "desc"] = Query("asc", description="Direzione ordinamento"),
-    limit: int = Query(20, ge=1, le=500, description="Risultati per pagina"),
-    offset: int = Query(0, ge=0, description="Offset per paginazione"),
+    sort: SortField = Query(None, description="Sort by: name, year_start, confidence, year_end"),
+    order: Literal["asc", "desc"] = Query("asc", description="Sort direction"),
+    limit: int = Query(20, ge=1, le=500, description="Results per page"),
+    offset: int = Query(0, ge=0, description="Pagination offset"),
     include_deprecated: bool = Query(
-        False, description="Includi entità marcate status='deprecated' (ADR-005)"
+        False, description="Include entities marked status='deprecated' (ADR-005)"
     ),
     db: Session = Depends(get_db),
 ):
@@ -200,25 +200,25 @@ def list_entities(
     bbox: str | None = Query(
         None,
         max_length=80,
-        description="Bounding box 'min_lon,min_lat,max_lon,max_lat' (vedi /v1/entity).",
+        description="Bounding box 'min_lon,min_lat,max_lon,max_lat' (see /v1/entity).",
     ),
     contains: str | None = Query(
         None,
         max_length=40,
         description=(
-            "Point-in-polygon: 'lat,lon'. Restituisce entita' il cui "
-            "boundary_geom contiene il punto (PostGIS ST_Contains, indice "
-            "GiST). Esempio: ?contains=41.9,12.5 -> entita' con territorio "
-            "che includeva Roma. PostGIS only — SQLite dev ritorna empty."
+            "Point-in-polygon: 'lat,lon'. Returns entities whose "
+            "boundary_geom contains the point (PostGIS ST_Contains, GiST "
+            "index). Example: ?contains=41.9,12.5 -> entities whose territory "
+            "included Rome. PostGIS only — SQLite dev returns empty."
         ),
     ),
-    sort: SortField = Query(None, description="Ordina per: name, year_start, confidence, year_end"),
-    order: Literal["asc", "desc"] = Query("asc", description="Direzione ordinamento"),
-    limit: int = Query(20, ge=1, le=500, description="Risultati per pagina"),
+    sort: SortField = Query(None, description="Sort by: name, year_start, confidence, year_end"),
+    order: Literal["asc", "desc"] = Query("asc", description="Sort direction"),
+    limit: int = Query(20, ge=1, le=500, description="Results per page"),
     offset: int = Query(0, ge=0, description="Offset"),
     # v6.87 ADR-005: deprecated entities sono escluse di default. Permetti
     # override esplicito per analisi DB-level / debug / migration tools.
-    include_deprecated: bool = Query(False, description="Includi entità marcate status='deprecated' (ADR-005)"),
+    include_deprecated: bool = Query(False, description="Include entities marked status='deprecated' (ADR-005)"),
     # v6.91 PERF (suggestion #72): a limit=300 la /v1/entities ha latency 2.1s
     # dominata da fetch+parse di 300 boundary_geojson blobs. Con
     # exclude_geometry=true il campo viene impostato a None nella response
@@ -227,9 +227,9 @@ def list_entities(
     exclude_geometry: bool = Query(
         False,
         description=(
-            "Se true, omette `boundary_geojson` dalle entity (None in response) "
-            "e ne defer-loada la colonna dal DB. Riduce la latenza a limit alto "
-            "(~10x più veloce a limit=300). Per il polygon usa /v1/entities/{id}."
+            "If true, omits `boundary_geojson` from entities (None in response) "
+            "and defer-loads the column from the DB. Reduces latency at high limit "
+            "(~10x faster at limit=300). For the polygon use /v1/entities/{id}."
         ),
     ),
     db: Session = Depends(get_db),
@@ -524,12 +524,12 @@ def get_entity(entity_id: int, request: Request, response: Response, db: Session
 @router.get(
     "/v1/search",
     response_model=SearchResponse,
-    summary="Ricerca veloce per autocomplete",
-    description="Restituisce risultati leggeri (senza GeoJSON) per ricerca rapida.",
+    summary="Fast search for autocomplete",
+    description="Returns lightweight results (no GeoJSON) for quick lookup.",
 )
 def search_entities(
-    q: str = Query(..., min_length=1, max_length=200, description="Testo da cercare"),
-    limit: int = Query(10, ge=1, le=50, description="Max risultati"),
+    q: str = Query(..., min_length=1, max_length=200, description="Text to search for"),
+    limit: int = Query(10, ge=1, le=50, description="Max results"),
     db: Session = Depends(get_db),
 ):
     pattern = f"%{q}%"
@@ -567,22 +567,22 @@ def search_entities(
 
 @router.get(
     "/v1/search/fuzzy",
-    summary="Ricerca fuzzy multi-script su name_original + name_variants",
+    summary="Multi-script fuzzy search on name_original + name_variants",
     description=(
-        "Ranking per similarità (SequenceMatcher ratio) sul nome originale e "
-        "sulle varianti. Funziona cross-script (Greek, Persian, Chinese, "
-        "Cyrillic) perché la metrica è character-level. Utile per agenti AI "
-        "che ricevono nomi approssimati o in trascrizione errata."
+        "Ranks by similarity (SequenceMatcher ratio) on the original name and "
+        "its variants. Works cross-script (Greek, Persian, Chinese, "
+        "Cyrillic) because the metric is character-level. Useful for AI agents "
+        "that receive approximate or mistranscribed names."
     ),
 )
 def search_entities_fuzzy(
-    q: str = Query(..., min_length=1, max_length=200, description="Testo da cercare (fuzzy)"),
-    limit: int = Query(10, ge=1, le=50, description="Max risultati"),
+    q: str = Query(..., min_length=1, max_length=200, description="Text to search for (fuzzy)"),
+    limit: int = Query(10, ge=1, le=50, description="Max results"),
     min_score: float = Query(
         0.4,
         ge=0.0,
         le=1.0,
-        description="Soglia minima di similarità (0.0=tutto, 1.0=solo match esatti)",
+        description="Minimum similarity threshold (0.0=everything, 1.0=exact matches only)",
     ),
     db: Session = Depends(get_db),
 ):
@@ -849,8 +849,8 @@ def list_types(db: Session = Depends(get_db)):
 @router.get(
     "/v1/continents",
     response_model=list[ContinentInfo],
-    summary="Elenco continenti con conteggio entità",
-    description="Restituisce i continenti disponibili calcolati dalle coordinate delle capitali.",
+    summary="List continents with entity counts",
+    description="Returns the available continents computed from capital coordinates.",
 )
 def list_continents(db: Session = Depends(get_db)):
     # ADR-005 (v6.99.107): esclusi i deprecati dai conteggi per continente
@@ -869,18 +869,18 @@ def list_continents(db: Session = Depends(get_db)):
 @router.get(
     "/v1/random",
     response_model=EntityResponse,
-    summary="Entit\u00e0 casuale (con filtri opzionali)",
+    summary="Random entity (with optional filters)",
     description=(
-        "Restituisce un'entit\u00e0 casuale dal dataset. "
-        "Supporta filtri per tipo, anno, status e continente."
+        "Returns a random entity from the dataset. "
+        "Supports filters by type, year, status and continent."
     ),
 )
 def random_entity(
     response: Response,
-    type: str | None = Query(None, max_length=50, description="Filtra per entity_type"),
-    year: int | None = Query(None, ge=-4500, le=2100, description="Entit\u00e0 attiva in questo anno"),
-    status: StatusFilter = Query(None, description="Filtra per status"),
-    continent: str | None = Query(None, max_length=50, description="Filtra per continente"),
+    type: str | None = Query(None, max_length=50, description="Filter by entity_type"),
+    year: int | None = Query(None, ge=-4500, le=2100, description="Entity active in this year"),
+    status: StatusFilter = Query(None, description="Filter by status"),
+    continent: str | None = Query(None, max_length=50, description="Filter by continent"),
     db: Session = Depends(get_db),
 ):
     import random as rnd
@@ -915,7 +915,7 @@ def random_entity(
 
     if not candidates:
         from src.api.errors import AtlasError
-        raise AtlasError(status_code=404, detail="Nessuna entit\u00e0 corrisponde ai filtri")
+        raise AtlasError(status_code=404, detail="No entity matches the given filters")
 
     chosen_id = rnd.choice(candidates).id
     entity = _eager_query(db).filter(GeoEntity.id == chosen_id).one()
@@ -928,18 +928,18 @@ def random_entity(
 
 @router.get(
     "/v1/nearby",
-    summary="Entit\u00e0 vicine a coordinate date",
+    summary="Entities near given coordinates",
     description=(
-        "Trova entit\u00e0 storiche vicine a una posizione geografica. "
-        "Utile per agenti AI che partono da coordinate."
+        "Finds historical entities near a geographic location. "
+        "Useful for AI agents starting from coordinates."
     ),
 )
 def nearby_entities(
-    lat: float = Query(..., ge=-90, le=90, description="Latitudine"),
-    lon: float = Query(..., ge=-180, le=180, description="Longitudine"),
-    radius: float = Query(500, ge=1, le=5000, description="Raggio in km"),
-    year: int | None = Query(None, ge=-4500, le=2100, description="Anno (opzionale)"),
-    limit: int = Query(10, ge=1, le=50, description="Max risultati"),
+    lat: float = Query(..., ge=-90, le=90, description="Latitude"),
+    lon: float = Query(..., ge=-180, le=180, description="Longitude"),
+    radius: float = Query(500, ge=1, le=5000, description="Radius in km"),
+    year: int | None = Query(None, ge=-4500, le=2100, description="Year (optional)"),
+    limit: int = Query(10, ge=1, le=50, description="Max results"),
     response: Response = None,
     db: Session = Depends(get_db),
 ):
@@ -992,7 +992,7 @@ def nearby_entities(
 
 @router.get(
     "/v1/where-was",
-    summary="Reverse-geocoding temporale: quali entit\u00e0 controllavano un punto in un anno",
+    summary="Temporal reverse-geocoding: which entities controlled a point in a given year",
     description=(
         "Given a geographic point (lat, lon) and a year, returns all historical "
         "entities whose documented `boundary_geojson` contains that point. Primary "
@@ -1017,18 +1017,18 @@ def nearby_entities(
 def where_was(
     request: Request,
     response: Response,
-    lat: float = Query(..., ge=-90, le=90, description="Latitudine del punto"),
-    lon: float = Query(..., ge=-180, le=180, description="Longitudine del punto"),
+    lat: float = Query(..., ge=-90, le=90, description="Latitude of the point"),
+    lon: float = Query(..., ge=-180, le=180, description="Longitude of the point"),
     year: int | None = Query(
         None,
         ge=-5000,
         le=2100,
-        description="Anno di riferimento. Richiesto se include_history=false.",
+        description="Reference year. Required if include_history=false.",
     ),
     include_history: bool = Query(
         False,
-        description="Se true, ritorna tutte le entit\u00e0 che hanno controllato "
-        "il punto storicamente (serie temporale). Se false, solo l'anno richiesto.",
+        description="If true, returns all entities that historically controlled "
+        "the point (time series). If false, only the requested year.",
     ),
     db: Session = Depends(get_db),
 ):
@@ -1147,26 +1147,26 @@ def where_was(
 
 @router.get(
     "/v1/snapshot/{year}",
-    summary="Snapshot del mondo in un anno specifico",
+    summary="Snapshot of the world in a specific year",
     description=(
-        "Restituisce tutte le entit\u00e0 attive in un dato anno, "
-        "con conteggi per tipo e continente. Ideale per agenti AI "
-        "che vogliono ricostruire il mondo in un momento storico."
+        "Returns all entities active in a given year, "
+        "with counts by type and continent. Ideal for AI agents "
+        "reconstructing the world at a moment in history."
     ),
 )
 def year_snapshot(
     year: int,
     response: Response,
-    type: str | None = Query(None, max_length=50, description="Filtra per tipo"),
-    continent: str | None = Query(None, max_length=50, description="Filtra per continente"),
+    type: str | None = Query(None, max_length=50, description="Filter by type"),
+    continent: str | None = Query(None, max_length=50, description="Filter by continent"),
     include_deprecated: bool = Query(
-        False, description="Includi entità marcate status='deprecated' (ADR-005)"
+        False, description="Include entities marked status='deprecated' (ADR-005)"
     ),
     db: Session = Depends(get_db),
 ):
     if year < -4500 or year > 2100:
         from src.api.errors import AtlasError
-        raise AtlasError(status_code=400, detail=f"Anno fuori range: {year}")
+        raise AtlasError(status_code=400, detail=f"Year out of range: {year}")
 
     q = db.query(GeoEntity).filter(GeoEntity.year_start <= year)
     q = q.filter(or_(GeoEntity.year_end.is_(None), GeoEntity.year_end >= year))
@@ -1225,8 +1225,8 @@ def year_snapshot(
 @router.get(
     "/v1/stats",
     response_model=StatsResponse,
-    summary="Statistiche del dataset",
-    description="Panoramica del dataset: conteggi, range, media confidence.",
+    summary="Dataset statistics",
+    description="Dataset overview: counts, ranges, average confidence.",
 )
 @cache_response(ttl_seconds=60)
 def dataset_stats(request: Request, response: Response, db: Session = Depends(get_db)):
@@ -1323,11 +1323,11 @@ def dataset_stats(request: Request, response: Response, db: Session = Depends(ge
 
 @router.get(
     "/v1/aggregation",
-    summary="Statistiche aggregate per secolo, tipo, continente e status",
+    summary="Aggregate statistics by century, type, continent and status",
     description=(
-        "Restituisce conteggi aggregati delle entit\u00e0 raggruppati per "
-        "secolo (basato su year_start), tipo, continente e status. "
-        "Ideale per dashboard e analisi AI."
+        "Returns aggregate entity counts grouped by "
+        "century (based on year_start), type, continent and status. "
+        "Ideal for dashboards and AI analysis."
     ),
 )
 def aggregation(response: Response, db: Session = Depends(get_db)):
@@ -1366,7 +1366,7 @@ def aggregation(response: Response, db: Session = Depends(get_db)):
         if e.year_start > latest:
             latest = e.year_start
 
-    # Ordina secoli cronologicamente (a.C. prima, poi d.C.)
+    # Ordina secoli cronologicamente (BCE prima, poi CE)
     def century_sort_key(label: str) -> int:
         roman_to_int = {
             "I": 1, "II": 2, "III": 3, "IV": 4, "V": 5,
@@ -1380,8 +1380,8 @@ def aggregation(response: Response, db: Session = Depends(get_db)):
             "XLI": 41, "XLII": 42, "XLIII": 43, "XLIV": 44, "XLV": 45,
             "XLVI": 46,
         }
-        if label.endswith(" a.C."):
-            roman = label[:-5]
+        if label.endswith(" BCE"):
+            roman = label[:-4]
             return -(roman_to_int.get(roman, 0))
         return roman_to_int.get(label, 0)
 

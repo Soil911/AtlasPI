@@ -38,7 +38,7 @@ class AtlasError(Exception):
 
 class EntityNotFoundError(AtlasError):
     def __init__(self, entity_id: int):
-        super().__init__(404, f"Entit\u00e0 con id={entity_id} non trovata", "NOT_FOUND")
+        super().__init__(404, f"Entity with id={entity_id} not found", "NOT_FOUND")
 
 
 class ValidationError(AtlasError):
@@ -138,12 +138,12 @@ def register_error_handlers(app: FastAPI):
     @app.exception_handler(422)
     async def validation_error_handler(request: Request, exc):
         logger.warning("Validation error: %s", exc)
-        return _error_response(422, "Parametri di richiesta non validi", "VALIDATION_ERROR")
+        return _error_response(422, "Invalid request parameters", "VALIDATION_ERROR")
 
     @app.exception_handler(500)
     async def internal_error_handler(request: Request, exc):
         logger.exception("Internal server error")
-        return _error_response(500, "Errore interno del server", "INTERNAL_ERROR")
+        return _error_response(500, "Internal server error", "INTERNAL_ERROR")
 
     @app.exception_handler(Exception)
     async def unhandled_exception_handler(request: Request, exc: Exception):
@@ -159,4 +159,4 @@ def register_error_handlers(app: FastAPI):
             exc,
             traceback.format_exc(),
         )
-        return _error_response(500, "Errore interno del server", "INTERNAL_ERROR")
+        return _error_response(500, "Internal server error", "INTERNAL_ERROR")

@@ -23,7 +23,7 @@ from src.db.models import GeoEntity, HistoricalRuler
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(tags=["sovrani"])
+router = APIRouter(tags=["rulers"])
 
 
 # ─── Response helpers ──────────────────────────────────────────────
@@ -137,7 +137,7 @@ def list_rulers(
         "Returns all historical rulers who were actively reigning in the "
         "specified year. Optionally filtered by region.\n\n"
         "Critical for 'who ruled X in year Y' queries — AI agents can "
-        "answer 'Chi regnava in Cina nel 1200?' directly."
+        "answer 'Who ruled China in 1200?' directly."
     ),
 )
 @cache_response(ttl_seconds=3600)

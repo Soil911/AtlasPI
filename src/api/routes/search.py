@@ -93,7 +93,7 @@ def _highlight(text: str, query: str) -> str:
 @router.get(
     "/v1/search/advanced",
     summary="Unified search across all data types",
-    tags=["ricerca"],
+    tags=["search"],
     description=(
         "Searches entities, events, cities, and trade routes in a single query. "
         "Results are ranked by relevance (exact match > starts with > contains). "
@@ -117,7 +117,7 @@ def advanced_search(
     year_max: int | None = Query(None, description="Maximum year (inclusive)"),
     status: str | None = Query(None, description="Filter by status (confirmed/uncertain/disputed)"),
     include_deprecated: bool = Query(
-        False, description="Includi entità status='deprecated' (ADR-005: escluse di default)"
+        False, description="Include entities with status='deprecated' (ADR-005: excluded by default)"
     ),
     confidence_min: float | None = Query(None, ge=0.0, le=1.0, description="Minimum confidence score"),
     confidence_max: float | None = Query(None, ge=0.0, le=1.0, description="Maximum confidence score"),
@@ -349,7 +349,7 @@ _MAX_EXPORT_ROWS = 1000
 @router.get(
     "/v1/export/entities",
     summary="Export entities as CSV or GeoJSON",
-    tags=["esportazione"],
+    tags=["export"],
     description=(
         "Export entities with filters. Formats: csv (UTF-8 with BOM for Excel), "
         "geojson (FeatureCollection). Max 1000 rows per export."
@@ -362,7 +362,7 @@ def export_entities(
     year_max: int | None = Query(None, description="Maximum year_start"),
     status: str | None = Query(None, description="Filter by status"),
     include_deprecated: bool = Query(
-        False, description="Includi entità status='deprecated' (ADR-005: escluse di default)"
+        False, description="Include entities with status='deprecated' (ADR-005: excluded by default)"
     ),
     confidence_min: float | None = Query(None, ge=0.0, le=1.0),
     confidence_max: float | None = Query(None, ge=0.0, le=1.0),
@@ -455,7 +455,7 @@ def export_entities(
 @router.get(
     "/v1/export/events",
     summary="Export events as CSV or JSON",
-    tags=["esportazione"],
+    tags=["export"],
     description=(
         "Export historical events with filters. Formats: csv (UTF-8 with BOM), "
         "json (JSON array). Max 1000 rows per export."

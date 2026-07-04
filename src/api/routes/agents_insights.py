@@ -186,7 +186,7 @@ class ZeroResultRow(BaseModel):
 @router.get(
     "/overview",
     response_model=AgentOverview,
-    summary="Overview di traffico AI agent",
+    summary="AI agent traffic overview",
 )
 def overview(db: Session = Depends(get_db)) -> AgentOverview:
     # Counters
@@ -238,10 +238,10 @@ def overview(db: Session = Depends(get_db)) -> AgentOverview:
 @router.get(
     "/by-family",
     response_model=list[FamilyRow],
-    summary="Breakdown per famiglia AI agent",
+    summary="Breakdown by AI agent family",
 )
 def by_family(
-    days: int = Query(30, ge=1, le=365, description="Finestra temporale in giorni"),
+    days: int = Query(30, ge=1, le=365, description="Time window in days"),
     db: Session = Depends(get_db),
 ) -> list[FamilyRow]:
     threshold = (datetime.datetime.utcnow() - datetime.timedelta(days=days)).isoformat()
@@ -293,7 +293,7 @@ def by_family(
 @router.get(
     "/top-queries",
     response_model=list[TopQueryRow],
-    summary="Top query patterns dagli AI agents",
+    summary="Top query patterns from AI agents",
 )
 def top_queries(
     days: int = Query(30, ge=1, le=365),
@@ -348,7 +348,7 @@ def top_queries(
 @router.get(
     "/zero-results",
     response_model=list[ZeroResultRow],
-    summary="Queries che hanno 404 / 0 risultati (gap analysis)",
+    summary="Queries that returned 404 / 0 results (gap analysis)",
 )
 def zero_results(
     days: int = Query(30, ge=1, le=365),

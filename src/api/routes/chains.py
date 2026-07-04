@@ -37,12 +37,12 @@ router = APIRouter(tags=["chains"])
 
 class ChainNotFoundError(AtlasError):
     def __init__(self, chain_id: int):
-        super().__init__(404, f"Catena con id={chain_id} non trovata", "NOT_FOUND")
+        super().__init__(404, f"Chain with id={chain_id} not found", "NOT_FOUND")
 
 
 class EntityNotFoundError(AtlasError):
     def __init__(self, entity_id: int):
-        super().__init__(404, f"Entità con id={entity_id} non trovata", "NOT_FOUND")
+        super().__init__(404, f"Entity with id={entity_id} not found", "NOT_FOUND")
 
 
 # ─── helpers ───────────────────────────────────────────────────────────────
@@ -100,14 +100,14 @@ def _chain_detail(c: DynastyChain) -> dict:
 
 @router.get(
     "/v1/chains",
-    summary="Lista catene successorie",
+    summary="List succession chains",
     description=(
-        "Lista paginata di catene successorie / dinastiche / coloniali. "
-        "Ogni catena lega più entità geopolitiche con un transition_type "
-        "esplicito (ETHICS-002): CONQUEST e REVOLUTION non sono "
-        "sostituibili da SUCCESSION generico. Filtri opzionali su "
-        "chain_type, region, year (almeno una entità della catena attiva "
-        "in quell'anno)."
+        "Paginated list of succession / dynastic / colonial chains. "
+        "Each chain links multiple geopolitical entities with an explicit "
+        "transition_type (ETHICS-002): CONQUEST and REVOLUTION cannot be "
+        "replaced by a generic SUCCESSION. Optional filters on "
+        "chain_type, region, year (at least one entity of the chain active "
+        "in that year)."
     ),
 )
 @cache_response(ttl_seconds=600)
@@ -119,13 +119,13 @@ def list_chains(
         description="DYNASTY / SUCCESSION / RESTORATION / COLONIAL / IDEOLOGICAL / OTHER",
     ),
     region: str | None = Query(
-        None, description="Filtro substring case-insensitive sul campo region"
+        None, description="Case-insensitive substring filter on the region field"
     ),
     year: int | None = Query(
         None,
         description=(
-            "Anno di interesse: ritorna catene con almeno un'entità attiva "
-            "in quell'anno."
+            "Year of interest: returns chains with at least one entity active "
+            "in that year."
         ),
     ),
     status: str | None = Query(
@@ -184,31 +184,31 @@ def list_chains(
 
 @router.get(
     "/v1/chains/types",
-    summary="Enumera ChainType + TransitionType",
-    description="Restituisce gli enum di tipologia per catene e transizioni.",
+    summary="Enumerate ChainType + TransitionType",
+    description="Returns the type enums for chains and transitions.",
 )
 def list_chain_types(response: Response):
     response.headers["Cache-Control"] = "public, max-age=86400"
     chain_descriptions = {
-        "DYNASTY": "Stessa entità politica con dinastie consecutive (es. Cina: Han→Tang→Song).",
-        "SUCCESSION": "Una entità succede a un'altra su un tema territoriale/politico.",
-        "RESTORATION": "Entità formalmente restaurata dopo interruzione (es. Restoration France 1814).",
-        "COLONIAL": "Catena coloniale (es. Tawantinsuyu → Vicereame del Perù → Repubblica del Perù).",
-        "IDEOLOGICAL": "Linea di continuità ideologica anche con cesura statale (avvertimento: continuità self-proclaimed ≠ legittimità).",
-        "OTHER": "Altri tipi di catena.",
+        "DYNASTY": "Same political entity with consecutive dynasties (e.g. China: Han→Tang→Song).",
+        "SUCCESSION": "One entity succeeds another on a territorial/political theme.",
+        "RESTORATION": "Entity formally restored after an interruption (e.g. Restoration France 1814).",
+        "COLONIAL": "Colonial chain (e.g. Tawantinsuyu → Viceroyalty of Peru → Republic of Peru).",
+        "IDEOLOGICAL": "Line of ideological continuity even across a break in statehood (warning: self-proclaimed continuity ≠ legitimacy).",
+        "OTHER": "Other chain types.",
     }
     transition_descriptions = {
-        "CONQUEST": "Conquista militare violenta. ETHICS-002: NON usare 'succession' generico.",
-        "REVOLUTION": "Cambio di regime interno (es. 1789, 1917).",
-        "REFORM": "Trasformazione legale/amministrativa (es. Diocletian 285).",
-        "SUCCESSION": "Successione dinastica/legittima (no rottura politica).",
-        "RESTORATION": "Ripristino formale dopo interruzione.",
-        "DECOLONIZATION": "Indipendenza da potenza coloniale (es. India 1947).",
-        "PARTITION": "Divisione territoriale (es. India/Pakistan 1947).",
-        "UNIFICATION": "Fusione di più entità (es. Italia 1861).",
-        "DISSOLUTION": "Collasso interno (es. URSS 1991).",
-        "ANNEXATION": "Incorporazione formale (es. Texas 1845).",
-        "OTHER": "Altri tipi di transizione.",
+        "CONQUEST": "Violent military conquest. ETHICS-002: do NOT use generic 'succession'.",
+        "REVOLUTION": "Internal regime change (e.g. 1789, 1917).",
+        "REFORM": "Legal/administrative transformation (e.g. Diocletian 285).",
+        "SUCCESSION": "Dynastic/legitimate succession (no political rupture).",
+        "RESTORATION": "Formal restoration after an interruption.",
+        "DECOLONIZATION": "Independence from a colonial power (e.g. India 1947).",
+        "PARTITION": "Territorial division (e.g. India/Pakistan 1947).",
+        "UNIFICATION": "Merger of multiple entities (e.g. Italy 1861).",
+        "DISSOLUTION": "Internal collapse (e.g. USSR 1991).",
+        "ANNEXATION": "Formal incorporation (e.g. Texas 1845).",
+        "OTHER": "Other transition types.",
     }
     return {
         "chain_types": [
@@ -224,11 +224,11 @@ def list_chain_types(response: Response):
 
 @router.get(
     "/v1/chains/{chain_id}",
-    summary="Dettaglio catena successoria",
+    summary="Succession chain detail",
     description=(
-        "Dettaglio di una catena con tutti i link in ordine cronologico. "
-        "Ogni link include transition_type esplicito (ETHICS-002) + "
-        "is_violent + ethical_notes specifiche della transizione."
+        "Detail of a chain with all links in chronological order. "
+        "Each link includes an explicit transition_type (ETHICS-002) + "
+        "is_violent + ethical_notes specific to the transition."
     ),
 )
 def get_chain(chain_id: int, response: Response, db: Session = Depends(get_db)):
@@ -249,11 +249,11 @@ def get_chain(chain_id: int, response: Response, db: Session = Depends(get_db)):
 
 @router.get(
     "/v1/entities/{entity_id}/predecessors",
-    summary="Predecessori di un'entità nelle catene",
+    summary="Predecessors of an entity in the chains",
     description=(
-        "Restituisce le catene in cui questa entità ha un predecessore "
-        "(sequence_order > 0), insieme al predecessore immediato e al "
-        "tipo di transizione che ha portato A questa entità."
+        "Returns the chains in which this entity has a predecessor "
+        "(sequence_order > 0), along with the immediate predecessor and the "
+        "transition type that led TO this entity."
     ),
 )
 def get_entity_predecessors(
@@ -315,11 +315,11 @@ def get_entity_predecessors(
 
 @router.get(
     "/v1/entities/{entity_id}/successors",
-    summary="Successori di un'entità nelle catene",
+    summary="Successors of an entity in the chains",
     description=(
-        "Restituisce le catene in cui questa entità ha un successore, "
-        "insieme al successore immediato e al tipo di transizione che "
-        "ha portato DA questa entità all'entità successiva."
+        "Returns the chains in which this entity has a successor, "
+        "along with the immediate successor and the transition type that "
+        "led FROM this entity to the next entity."
     ),
 )
 def get_entity_successors(

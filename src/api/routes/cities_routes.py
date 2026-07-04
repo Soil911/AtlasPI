@@ -42,12 +42,12 @@ router = APIRouter(tags=["cities-routes"])
 
 class CityNotFoundError(AtlasError):
     def __init__(self, city_id: int):
-        super().__init__(404, f"Città con id={city_id} non trovata", "NOT_FOUND")
+        super().__init__(404, f"City with id={city_id} not found", "NOT_FOUND")
 
 
 class RouteNotFoundError(AtlasError):
     def __init__(self, route_id: int):
-        super().__init__(404, f"Rotta con id={route_id} non trovata", "NOT_FOUND")
+        super().__init__(404, f"Route with id={route_id} not found", "NOT_FOUND")
 
 
 # ─── helpers ───────────────────────────────────────────────────────────────
@@ -61,26 +61,26 @@ def _parse_bbox(bbox: str | None) -> tuple[float, float, float, float] | None:
     if len(parts) != 4:
         raise HTTPException(
             status_code=422,
-            detail=f"bbox deve avere 4 valori (min_lon,min_lat,max_lon,max_lat), ricevuti {len(parts)}",
+            detail=f"bbox must have 4 values (min_lon,min_lat,max_lon,max_lat), got {len(parts)}",
         )
     try:
         min_lon, min_lat, max_lon, max_lat = (float(p.strip()) for p in parts)
     except ValueError:
         raise HTTPException(
             status_code=422,
-            detail=f"bbox contiene valori non numerici: {bbox!r}",
+            detail=f"bbox contains non-numeric values: {bbox!r}",
         )
     if not (-180 <= min_lon <= 180 and -180 <= max_lon <= 180):
         raise HTTPException(
-            status_code=422, detail="longitudine fuori range [-180,180]"
+            status_code=422, detail="longitude out of range [-180,180]"
         )
     if not (-90 <= min_lat <= 90 and -90 <= max_lat <= 90):
         raise HTTPException(
-            status_code=422, detail="latitudine fuori range [-90,90]"
+            status_code=422, detail="latitude out of range [-90,90]"
         )
     if min_lon > max_lon or min_lat > max_lat:
         raise HTTPException(
-            status_code=422, detail="bbox invertito: min > max"
+            status_code=422, detail="inverted bbox: min > max"
         )
     return (min_lon, min_lat, max_lon, max_lat)
 
@@ -265,29 +265,29 @@ def _route_detail(r: TradeRoute) -> dict:
 
 @router.get(
     "/v1/cities",
-    summary="Lista città storiche",
+    summary="List historical cities",
     description=(
-        "Lista paginata di città storiche con filtri su anno, tipo, entità, "
-        "bbox e prossimità geografica. Una città è separata dalla capital_* "
-        "di GeoEntity perché può sopravvivere più entità politiche."
+        "Paginated list of historical cities with filters on year, type, entity, "
+        "bbox and geographic proximity. A city is kept separate from GeoEntity's "
+        "capital_* because it can outlive multiple political entities."
     ),
 )
 def list_cities(
     response: Response,
     year: int | None = Query(
         None,
-        description="Anno di attività (città esistente in quell'anno): "
+        description="Activity year (city existing in that year): "
         "founded_year <= year AND (abandoned_year IS NULL OR abandoned_year >= year).",
     ),
     city_type: str | None = Query(
-        None, description="Filtra per CityType (es. TRADE_HUB, CAPITAL)"
+        None, description="Filter by CityType (e.g. TRADE_HUB, CAPITAL)"
     ),
     entity_id: int | None = Query(
-        None, description="Filtra per entità politica di appartenenza"
+        None, description="Filter by the political entity the city belongs to"
     ),
     bbox: str | None = Query(
         None,
-        description="Filtro spaziale. Formato: min_lon,min_lat,max_lon,max_lat.",
+        description="Spatial filter. Format: min_lon,min_lat,max_lon,max_lat.",
     ),
     status: str | None = Query(
         None, description="confirmed / uncertain / disputed"
@@ -341,21 +341,21 @@ def list_cities(
 
 @router.get(
     "/v1/cities/types",
-    summary="Enumera i tipi di città",
-    description="Restituisce l'enum CityType con breve descrizione.",
+    summary="Enumerate city types",
+    description="Returns the CityType enum with a short description.",
 )
 def list_city_types(response: Response):
     response.headers["Cache-Control"] = "public, max-age=86400"
     descriptions = {
-        "CAPITAL": "Capitale politica di un'entità (attuale o storica).",
-        "TRADE_HUB": "Nodo commerciale (Samarcanda, Venezia, Malacca).",
-        "RELIGIOUS_CENTER": "Centro religioso di rilevanza trans-regionale.",
-        "FORTRESS": "Fortezza o città murata con funzione difensiva primaria.",
-        "PORT": "Porto marittimo o fluviale di rilevanza commerciale/militare.",
-        "ACADEMIC_CENTER": "Centro di studi (Timbuctù, Bologna, Nalanda).",
-        "INDUSTRIAL_CENTER": "Centro produttivo industriale (post-1750).",
-        "MULTI_PURPOSE": "Più funzioni co-dominanti (default).",
-        "OTHER": "Città fuori dalle categorie standard.",
+        "CAPITAL": "Political capital of an entity (current or historical).",
+        "TRADE_HUB": "Trade hub (Samarkand, Venice, Malacca).",
+        "RELIGIOUS_CENTER": "Religious center of trans-regional significance.",
+        "FORTRESS": "Fortress or walled city with a primary defensive function.",
+        "PORT": "Maritime or river port of commercial/military significance.",
+        "ACADEMIC_CENTER": "Center of learning (Timbuktu, Bologna, Nalanda).",
+        "INDUSTRIAL_CENTER": "Industrial production center (post-1750).",
+        "MULTI_PURPOSE": "Multiple co-dominant functions (default).",
+        "OTHER": "City outside the standard categories.",
     }
     return {
         "city_types": [
@@ -367,10 +367,10 @@ def list_city_types(response: Response):
 
 @router.get(
     "/v1/cities/{city_id}",
-    summary="Dettaglio città storica",
+    summary="Historical city detail",
     description=(
-        "Dettaglio di una città storica con name_variants (ETHICS-009: "
-        "rename coloniali/imperiali), sources e entità di appartenenza."
+        "Detail of a historical city with name_variants (ETHICS-009: "
+        "colonial/imperial renames), sources and owning entity."
     ),
 )
 def get_city(city_id: int, response: Response, db: Session = Depends(get_db)):
@@ -391,25 +391,25 @@ def get_city(city_id: int, response: Response, db: Session = Depends(get_db)):
 
 @router.get(
     "/v1/routes",
-    summary="Lista rotte commerciali",
+    summary="List trade routes",
     description=(
-        "Lista paginata di rotte commerciali storiche (Silk Road, Trans-"
+        "Paginated list of historical trade routes (Silk Road, Trans-"
         "Saharan, Trans-Atlantic slave trade, Amber Route, etc). "
-        "ETHICS-010: `involves_slavery=true` filtra le rotte che "
-        "trafficavano esseri umani — il flag è esplicito perché la "
-        "distinzione è eticamente rilevante."
+        "ETHICS-010: `involves_slavery=true` filters routes that "
+        "trafficked human beings — the flag is explicit because the "
+        "distinction is ethically significant."
     ),
 )
 def list_routes(
     response: Response,
     year: int | None = Query(
-        None, description="Anno di attività (start_year <= year <= end_year)."
+        None, description="Activity year (start_year <= year <= end_year)."
     ),
     route_type: str | None = Query(
         None, description="LAND / SEA / RIVER / CARAVAN / MIXED"
     ),
     involves_slavery: bool | None = Query(
-        None, description="ETHICS-010: filtra rotte che trafficavano esseri umani"
+        None, description="ETHICS-010: filter routes that trafficked human beings"
     ),
     status: str | None = Query(
         None, description="confirmed / uncertain / disputed"
@@ -450,17 +450,17 @@ def list_routes(
 
 @router.get(
     "/v1/routes/types",
-    summary="Enumera i tipi di rotta",
-    description="Restituisce l'enum RouteType con breve descrizione.",
+    summary="Enumerate route types",
+    description="Returns the RouteType enum with a short description.",
 )
 def list_route_types(response: Response):
     response.headers["Cache-Control"] = "public, max-age=86400"
     descriptions = {
-        "LAND": "Rotta terrestre (strade, sentieri).",
-        "SEA": "Rotta marittima oceanica.",
-        "RIVER": "Rotta fluviale interna.",
-        "CARAVAN": "Rotta carovaniera (cammelli, yak) con caravanserragli.",
-        "MIXED": "Combinazione di più modalità.",
+        "LAND": "Land route (roads, trails).",
+        "SEA": "Ocean-going maritime route.",
+        "RIVER": "Inland river route.",
+        "CARAVAN": "Caravan route (camels, yaks) with caravanserais.",
+        "MIXED": "Combination of multiple modes.",
     }
     return {
         "route_types": [
@@ -472,11 +472,11 @@ def list_route_types(response: Response):
 
 @router.get(
     "/v1/routes/{route_id}",
-    summary="Dettaglio rotta commerciale",
+    summary="Trade route detail",
     description=(
-        "Dettaglio completo con geometria GeoJSON, commodities, waypoints "
-        "ordinati e sources. ETHICS-010: `ethical_notes` esplicita scala e "
-        "main_actors per le rotte schiaviste."
+        "Full detail with GeoJSON geometry, commodities, ordered waypoints "
+        "and sources. ETHICS-010: `ethical_notes` makes scale and "
+        "main_actors explicit for slave-trade routes."
     ),
 )
 def get_route(route_id: int, response: Response, db: Session = Depends(get_db)):

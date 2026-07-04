@@ -19,7 +19,7 @@ from src.monitoring import sentry_is_active, uptime_seconds
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(tags=["sistema"])
+router = APIRouter(tags=["system"])
 
 # Soglia minima sotto cui consideriamo il dataset "vuoto" → degraded
 MIN_EXPECTED_ENTITIES = 100

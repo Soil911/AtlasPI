@@ -21,7 +21,7 @@ from src.db.models import HistoricalLanguage
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(tags=["lingue"])
+router = APIRouter(tags=["languages"])
 
 
 def _lang_to_dict(lang: HistoricalLanguage) -> dict:
@@ -104,7 +104,7 @@ def list_languages(
 
 @router.get(
     "/v1/languages/at-year/{year}",
-    summary="Lingue attive in un dato anno",
+    summary="Languages active in a given year",
 )
 @cache_response(ttl_seconds=3600)
 def languages_at_year(
