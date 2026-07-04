@@ -72,8 +72,11 @@ estensioni, ETHICS-017; 2026-07-02). Residuo M1:
 - ~~Follow-up ETHICS-020: Serbia moderna~~ ✅ **FATTO in v6.99.130** (Task 2c, ETHICS-025:
   FRY+S&M+Repubblica di Serbia, catena 34 6→10 link; decisione ETHICS-003 = Serbia
   confirmed/0.9 non disputed, Kosovo localizzato; cross-check ChatGPT).
-- Residuo split/dedup: trunk etiope (#22/#100 + #853 dup di #51); Ptolemaico #178/#1059;
-  split #256 Cambogia; coda catena montenegrina #130. Task 2 rimanente: Eritrea italiana (2d).
+- ~~Follow-up ETHICS-020: Eritrea italiana~~ ✅ **FATTO in v6.99.131** (Task 2d, ETHICS-026:
+  Colonia Eritrea + catena COLONIAL Medri Bahri #658 → Colonia Eritrea). **Task 2 CHIUSO.**
+- Residuo split/dedup (coda, non bloccante): trunk etiope (#22/#100 + #853 dup di #51);
+  Ptolemaico #178/#1059; split #256 Cambogia; Stato di Eritrea 1993- + interregno;
+  coda catena montenegrina #130.
 - ~~Flag qualità da B1c: rename #534 e verifica #240~~ ✅ **FATTI in v6.99.118**
   (ETHICS-019: #240 → `កម្ពុជាប្រជាធិបតេយ្យ` Kampuchea Democratica + QID Q330988;
   #534 → `Anpi an Ayiti`, entity_type=empire, variante `Empire d'Haïti`).

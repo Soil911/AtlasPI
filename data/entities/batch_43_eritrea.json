@@ -1,0 +1,223 @@
+[
+  {
+    "name_original": "Colonia Eritrea",
+    "name_original_lang": "it",
+    "entity_type": "colony",
+    "year_start": 1890,
+    "year_end": 1941,
+    "capital_name": "Asmara",
+    "capital_lat": 15.338,
+    "capital_lon": 38.932,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            36.42951,
+            14.42211
+          ],
+          [
+            36.32322,
+            14.82249
+          ],
+          [
+            36.75389,
+            16.29186
+          ],
+          [
+            36.85253,
+            16.95655
+          ],
+          [
+            37.16747,
+            17.26314
+          ],
+          [
+            37.904,
+            17.42754
+          ],
+          [
+            38.41009,
+            17.998307
+          ],
+          [
+            38.990623,
+            16.840626
+          ],
+          [
+            39.26611,
+            15.922723
+          ],
+          [
+            39.814294,
+            15.435647
+          ],
+          [
+            41.179275,
+            14.49108
+          ],
+          [
+            41.734952,
+            13.921037
+          ],
+          [
+            42.276831,
+            13.343992
+          ],
+          [
+            42.589576,
+            13.000421
+          ],
+          [
+            43.081226,
+            12.699639
+          ],
+          [
+            42.779642,
+            12.455416
+          ],
+          [
+            42.35156,
+            12.54223
+          ],
+          [
+            42.00975,
+            12.86582
+          ],
+          [
+            41.59856,
+            13.45209
+          ],
+          [
+            41.1552,
+            13.77333
+          ],
+          [
+            40.8966,
+            14.11864
+          ],
+          [
+            40.02625,
+            14.51959
+          ],
+          [
+            39.34061,
+            14.53155
+          ],
+          [
+            39.0994,
+            14.74064
+          ],
+          [
+            38.51295,
+            14.50547
+          ],
+          [
+            37.90607,
+            14.95943
+          ],
+          [
+            37.59377,
+            14.2131
+          ],
+          [
+            36.42951,
+            14.42211
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "Colonia Eritrea was an occupation regime of the Kingdom of Italy, later intensified under Mussolini's Fascist state, which used the colony as the launchpad for the 1935-36 invasion and conquest of Ethiopia. The regime imposed racial segregation: separate \"native\" schools were decreed in 1909, urban segregation in Asmara in 1916, the 1933 legislation regulated the legal status of mixed-race (meticci) children, and \"madamato\" (Italian-Eritrean unions) was criminalized in 1937 with prison terms of one to five years. Italian settlers reached roughly 75,000 by 1939 (about 53,000 in Asmara alone, out of a city of ~98,000), a demographic transformation imposed on the colonized population. Eritrean troops (ascari) were also conscripted into these campaigns of conquest. The capital's Latinate name (\"Eritrea,\" from the Greek for the Red Sea) itself supplanted indigenous designations; the highland Tigrinya kingdom of Medri Bahri is recorded as name variant and predecessor rather than erased.",
+    "wikidata_qid": "Q1232988",
+    "name_variants": [
+      {
+        "name": "ኤርትራ",
+        "lang": "ti",
+        "context": "Tigrinya name of the territory (Ertra); the Tigrinya-speaking highlands formed the colony's core and its predecessor kingdom Medri Bahri",
+        "source": "Wikipedia, 'Eritrea' / 'Asmara' (Tigrinya orthography)"
+      },
+      {
+        "name": "إرتريا",
+        "lang": "ar",
+        "context": "Arabic name (Iritriyā); Arabic was widely used in the Muslim coastal lowlands and became a co-official language of Eritrea",
+        "source": "Wikipedia, 'Eritrea' Arabic-language article"
+      },
+      {
+        "name": "Erythrea",
+        "lang": "la",
+        "context": "Latinate form (from Greek Erythra Thalassa, 'Red Sea'); alias su Wikidata Q1232988",
+        "source": "Wikidata Q1232988 official-name statement"
+      },
+      {
+        "name": "Medri Bahri",
+        "lang": "ti",
+        "context": "ምድሪ ባሕሪ ('Land of the Sea'), the Tigrinya highland kingdom that preceded and was absorbed by the colony",
+        "source": "Wikipedia, 'Medri Bahri'"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1890,
+        "region": "Eritrean coast and highlands (Massawa, Asmara, Assab)",
+        "change_type": "FOUNDING",
+        "description": "King Umberto I of Italy proclaimed the unified Colony of Eritrea on 1 January 1890 by royal decree, consolidating footholds seized at Assab and Massawa (occupied 1885) under General Oreste Baratieri's occupation of the highlands.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1896,
+        "region": "Adwa (Tigray), Ethiopian frontier",
+        "change_type": "CONQUEST",
+        "description": "Italian expansion inland was halted when Emperor Menelik II's Ethiopian army decisively defeated General Oreste Baratieri's Italian colonial force at the Battle of Adwa on 1 March 1896; over 7,000 Italian-side troops were killed, fixing Eritrea's southern boundary at the Mareb river.",
+        "population_affected": 7000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1936,
+        "region": "Italian East Africa (Eritrea, Ethiopia, Somaliland)",
+        "change_type": "ANNEXATION",
+        "description": "After Mussolini's Fascist Italy invaded and conquered Ethiopia (1935-36) using Eritrea as its base, Eritrea was administratively merged into Africa Orientale Italiana (Italian East Africa) as its northern governorate.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 1941,
+        "region": "Eritrea",
+        "change_type": "OCCUPATION",
+        "description": "British and Commonwealth forces defeated the Italians at the Battle of Keren (Feb-March 1941), captured Asmara on 1 April 1941, and took the Italian surrender on 8 April 1941, ending Italian rule and beginning a British Military Administration.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Negash, Tekeste. Italian Colonialism in Eritrea, 1882-1941: Policies, Praxis and Impact. Uppsala: Acta Universitatis Upsaliensis (Studia Historica Upsaliensia 148), 1987.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Iyob, Ruth. The Eritrean Struggle for Independence: Domination, Resistance, Nationalism, 1941-1993. Cambridge: Cambridge University Press, 1995.",
+        "url": "https://www.cambridge.org/core/books/eritrean-struggle-for-independence/",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Barrera, Giulia. 'Mussolini's Colonial Race Laws and State-Settler Relations in Africa Orientale Italiana (1935-41).' Journal of Modern Italian Studies 8, no. 3 (2003): 425-443.",
+        "url": "https://doi.org/10.1080/09585170320000113770",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Jonas, Raymond. The Battle of Adwa: African Victory in the Age of Empire. Cambridge, MA: Belknap Press of Harvard University Press, 2011.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "'Italian Eritrea' and 'Battle of Keren' (East African Campaign, WWII), cross-verified with Britannica, 'Eritrea: Contesting for the coastlands and beyond.'",
+        "url": "https://www.britannica.com/place/Eritrea",
+        "source_type": "secondary"
+      }
+    ]
+  }
+]

@@ -2,6 +2,23 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.131] - 2026-07-05 (Task 2d: Eritrea — Colonia Eritrea + catena Medri Bahri, ETHICS-026)
+
+*Chiude Task 2 (follow-up ETHICS-019/020/022): l'ultima entità-sblocco flaggata.*
+
+- **1 entità NUOVA**: **`Colonia Eritrea`** (it) 1890-1941, **Q1232988**, colony, conf 0.9,
+  capitale Asmara. Confine INHERITATO da #658 (altopiano eritreo).
+- **1 catena NUOVA COLONIAL**: `Eritrean state trunk: ምድረ ባሕሪ → Colonia Eritrea` (Medri
+  Bahri #658 → Colonia Eritrea, **CONQUEST** 1890). Catena creata via SQL + JSON.
+- **ETHICS-017 (catena corta + note)**: 2 link soli, ma le note documentano l'arco fino
+  all'indipendenza (Ammin. britannica 1941-52, federazione/annessione etiope, guerra
+  1961-91 EPLF, referendum 1993) → NON finisce la storia eritrea alla colonizzazione.
+- **ETHICS-002**: perpetratore (Regno d'Italia / Stato fascista) nominato, Colonia come
+  trampolino per l'invasione dell'Etiopia 1935-36, leggi razziali con date.
+- **Correzione verifier**: "matrimoni misti banditi nel 1933" → la legge 1933 regolava lo
+  status dei figli meticci; il divieto delle unioni (madamato) è del 1937.
+- Generatore `scripts/apply_task2d_eritrea.py` + `sql_task2d_eritrea.sql`. Prod 1014→1015.
+
 ## [v6.99.130] - 2026-07-05 (Task 2c: Serbia moderna — FRY + S&M + Repubblica di Serbia, ETHICS-025)
 
 *Follow-up ETHICS-020: la coda della catena serba #34 dalla SFRJ al presente.*
