@@ -2,6 +2,31 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.115] - 2026-07-04 (AI Co-Founder: stop al rumore degli scanner probe)
+
+**Tema**: *implementata la suggestion #93 (accepted). `analyze_failed_searches()`
+non trasforma più i probe degli scanner di sicurezza in "domanda utente".*
+
+- **Problema**: il Signal 1 dell'analizzatore flaggava QUALSIASI 404 su `/v1/*`
+  ripetuto ≥3 volte come domanda per dati mancanti, inclusi i probe di
+  credential-harvest (`/v1/.env`, `/v1/.git/config`, `/v1/wp-login.php`,
+  `/v1/phpinfo.php`). Un 404 su questi path è il comportamento corretto e
+  sicuro — non devono mai diventare endpoint. Inoltre il titolo della
+  suggestion includeva il conteggio degli hit (`… (Nx)`), quindi il dedup
+  per-titolo falliva appena il contatore saliva: lo stesso probe si
+  rigenerava ogni giorno anche dopo essere stato rifiutato (es. #90 → #91
+  per `/v1/.env`).
+- **Fix** (`scripts/ai_cofounder_analyze.py`):
+  - (a) denylist `_SCANNER_PATH_MARKERS` + helper `_is_scanner_path()`: i
+    path che matchano marker noti (`.env`, `.git`, `.well-known`, `phpinfo`,
+    `wp-`, `phpmyadmin`, `.php`, `credentials`, …) vengono saltati.
+  - (b) dedup per **path normalizzato** (`_existing_flagged_404_paths()`),
+    non per titolo: un path già flaggato in QUALSIASI stato non si
+    ripropone più, indipendentemente dal conteggio hit.
+- **Test**: `test_scanner_probes_not_flagged_as_demand`,
+  `test_repeated_404_deduped_by_path_across_hit_counts` (test_v626).
+  44 passed, 2 xfailed sulle suite co-founder.
+
 ## [v6.99.114] - 2026-07-03 (🌍 CUTOVER DOMINIO: atlaspi.it — M2 sbloccata)
 
 **Tema**: *AtlasPI ha il suo dominio: **https://atlaspi.it** (registrato da

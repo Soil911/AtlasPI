@@ -193,6 +193,100 @@ def test_failed_searches_with_404_logs(db):
     db.rollback()  # Clean up test data
 
 
+def test_scanner_probes_not_flagged_as_demand(db):
+    """Credential-harvest scanner 404s must NOT become 'demand' suggestions.
+
+    Suggestion #93: /v1/.env, /v1/.git/config, /v1/wp-login.php etc. are
+    security scanner probes. A 404 is correct/secure — they are never demand.
+    """
+    from scripts.ai_cofounder_analyze import (
+        _is_scanner_path,
+        analyze_failed_searches,
+    )
+    from src.db.models import AiSuggestion
+
+    now = datetime.now(UTC).isoformat()
+
+    # Baseline logs to clear the 10-log threshold.
+    for i in range(12):
+        db.add(ApiRequestLog(
+            timestamp=now, method="GET", path=f"/v1/entities/{800 + i}",
+            status_code=200, response_time_ms=50.0, client_ip="127.0.0.1",
+        ))
+
+    scanner_paths = ["/v1/.env", "/v1/.git/config", "/v1/wp-login.php",
+                     "/v1/phpinfo.php", "/v1/vendor/aws/credentials"]
+    for sp in scanner_paths:
+        assert _is_scanner_path(sp), f"{sp} should be recognized as a scanner probe"
+        for _ in range(5):
+            db.add(ApiRequestLog(
+                timestamp=now, method="GET", path=sp,
+                status_code=404, response_time_ms=8.0, client_ip="45.9.148.1",
+            ))
+    db.flush()
+
+    titles: set[str] = set()
+    analyze_failed_searches(db, titles)
+
+    # None of the scanner paths may appear in traffic_pattern suggestions.
+    sugg = db.query(AiSuggestion).filter(
+        AiSuggestion.category == "traffic_pattern"
+    ).all()
+    for s in sugg:
+        for sp in scanner_paths:
+            assert sp not in (s.title or ""), f"scanner path {sp} leaked into {s.title}"
+
+    db.rollback()
+
+
+def test_repeated_404_deduped_by_path_across_hit_counts(db):
+    """The same 404 path must not regenerate as its hit count climbs.
+
+    Suggestion #93: the title embeds the count ("… (3x)"), so title-based
+    dedup misses when the count becomes 4x. Path-based dedup fixes this.
+    """
+    from scripts.ai_cofounder_analyze import analyze_failed_searches
+    from src.db.models import AiSuggestion
+
+    now = datetime.now(UTC).isoformat()
+
+    for i in range(12):
+        db.add(ApiRequestLog(
+            timestamp=now, method="GET", path=f"/v1/entities/{700 + i}",
+            status_code=200, response_time_ms=50.0, client_ip="127.0.0.1",
+        ))
+    for _ in range(3):
+        db.add(ApiRequestLog(
+            timestamp=now, method="GET", path="/v1/entities/dedupme",
+            status_code=404, response_time_ms=9.0, client_ip="10.0.0.5",
+        ))
+    db.flush()
+
+    titles: set[str] = set()
+    first = analyze_failed_searches(db, titles)
+    db.flush()
+    assert first >= 1
+
+    # Simulate the count climbing to 4x on a later day.
+    db.add(ApiRequestLog(
+        timestamp=now, method="GET", path="/v1/entities/dedupme",
+        status_code=404, response_time_ms=9.0, client_ip="10.0.0.5",
+    ))
+    db.flush()
+
+    titles2: set[str] = set()  # fresh title set, as a new run would have
+    analyze_failed_searches(db, titles2)
+    db.flush()
+
+    matches = db.query(AiSuggestion).filter(
+        AiSuggestion.category == "traffic_pattern",
+        AiSuggestion.title.like("Repeated 404: /v1/entities/dedupme%"),
+    ).all()
+    assert len(matches) == 1, f"path re-flagged despite dedup: {[m.title for m in matches]}"
+
+    db.rollback()
+
+
 @pytest.mark.xfail(
     strict=False,
     reason="v6.92.4: analyze_failed_searches logic e' cambiata (v6.92 commits "

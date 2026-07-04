@@ -55,6 +55,50 @@ logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
 
+# ─── Security scanner / credential-harvest probe denylist ────────
+# ETHICS-adjacent (operational integrity): analyze_failed_searches() treats
+# repeated /v1/* 404s as "user demand" for missing data. But automated
+# scanners constantly probe for secrets and admin panels (/v1/.env,
+# /v1/.git/config, /v1/wp-login.php, /v1/phpinfo.php). A 404 on these is the
+# CORRECT, secure behaviour — they must NEVER become endpoints and are not
+# demand signals. Flagging them just generates recurring co-founder noise
+# (suggestion #93). Any path whose normalized form contains one of these
+# markers is skipped entirely.
+_SCANNER_PATH_MARKERS = (
+    ".env",
+    ".git",
+    ".well-known",  # legitimate for some clients, but never a "missing entity"
+    "phpinfo",
+    "wp-",          # wp-login, wp-admin, wp-content, wp-includes…
+    "wordpress",
+    "phpmyadmin",
+    "admin",
+    "config.",
+    ".php",
+    ".aspx",
+    "vendor/",
+    "actuator",
+    "/.ssh",
+    "id_rsa",
+    "credentials",
+    "aws/",
+    ".yml",
+    ".yaml",
+    ".bak",
+)
+
+
+def _is_scanner_path(path: str | None) -> bool:
+    """True if `path` matches a known scanner/credential-harvest probe.
+
+    Such paths are security noise, not demand signals — see _SCANNER_PATH_MARKERS.
+    """
+    if not path:
+        return False
+    p = path.lower()
+    return any(marker in p for marker in _SCANNER_PATH_MARKERS)
+
+
 # ─── Helper: continent from coordinates ──────────────────────────
 def _lat_to_continent(lat: float | None, lon: float | None) -> str:
     if lat is None or lon is None:
@@ -355,6 +399,35 @@ def analyze_orphan_entities(db, existing_titles: set[str]) -> int:
     return 1 if added else 0
 
 
+def _existing_flagged_404_paths(db) -> set[str]:
+    """Paths already flagged as 'Repeated 404' in ANY status.
+
+    Used for path-based dedup so the same probe isn't re-proposed every day as
+    its hit count climbs (title-based dedup fails because the count is in the
+    title). Reads the path from detail_json, falling back to parsing the title.
+    """
+    rows = (
+        db.query(AiSuggestion.title, AiSuggestion.detail_json)
+        .filter(AiSuggestion.category == "traffic_pattern")
+        .all()
+    )
+    paths: set[str] = set()
+    for title, detail in rows:
+        path = None
+        if detail:
+            try:
+                path = json.loads(detail).get("path")
+            except (ValueError, TypeError):
+                path = None
+        if not path and title and title.startswith("Repeated 404: "):
+            # "Repeated 404: /v1/foo (3x)" → "/v1/foo"
+            body = title[len("Repeated 404: "):]
+            path = body.rsplit(" (", 1)[0].strip()
+        if path:
+            paths.add(path)
+    return paths
+
+
 def analyze_failed_searches(db, existing_titles: set[str]) -> int:
     """Look for patterns in failed/empty API searches that signal demand.
 
@@ -393,7 +466,21 @@ def analyze_failed_searches(db, existing_titles: set[str]) -> int:
         .all()
     )
 
+    # Dedup by NORMALIZED PATH, not title. The title embeds the hit count
+    # (e.g. "Repeated 404: /v1/.env (3x)") so once the count increments the
+    # title changes and the title-based dedup in _add_suggestion() misses it —
+    # the SAME probe regenerates daily even after the user rejected it
+    # (suggestion #93). We pre-collect every path already flagged in ANY status
+    # and skip it here.
+    flagged_paths = _existing_flagged_404_paths(db)
+
     for r in not_found_rows:
+        # Skip security scanner probes — a 404 here is correct, not demand.
+        if _is_scanner_path(r.path):
+            continue
+        # Skip paths we've already flagged (any status) regardless of hit count.
+        if r.path in flagged_paths:
+            continue
         if r.times >= 3:  # Only if queried multiple times
             added = _add_suggestion(
                 db, existing_titles,
@@ -404,6 +491,7 @@ def analyze_failed_searches(db, existing_titles: set[str]) -> int:
                 detail_json=json.dumps({"path": r.path, "times": r.times}),
             )
             if added:
+                flagged_paths.add(r.path)
                 count += 1
 
     # ── Signal 2: Truly-empty search queries ──────────────────────────
