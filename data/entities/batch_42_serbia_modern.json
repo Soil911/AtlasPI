@@ -1,0 +1,477 @@
+[
+  {
+    "name_original": "Савезна Република Југославија",
+    "name_original_lang": "sr-Cyrl",
+    "entity_type": "federation",
+    "year_start": 1992,
+    "year_end": 2003,
+    "capital_name": "Belgrade",
+    "capital_lat": 44.8125,
+    "capital_lon": 20.4612,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            22.8717,
+            44.8125
+          ],
+          [
+            23.1828,
+            46.0015
+          ],
+          [
+            21.4221,
+            46.0272
+          ],
+          [
+            20.4612,
+            47.1132
+          ],
+          [
+            19.6086,
+            45.8308
+          ],
+          [
+            18.0171,
+            45.8535
+          ],
+          [
+            18.1016,
+            44.8125
+          ],
+          [
+            18.6914,
+            44.1108
+          ],
+          [
+            19.3974,
+            43.5481
+          ],
+          [
+            20.4612,
+            42.8894
+          ],
+          [
+            21.6076,
+            43.4024
+          ],
+          [
+            22.5173,
+            43.828
+          ],
+          [
+            22.8717,
+            44.8125
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "approximate_generated",
+    "confidence_score": 0.92,
+    "status": "confirmed",
+    "ethical_notes": "Il regime di Slobodan Milošević a Belgrado orchestrò la pulizia etnica in Bosnia e, nel 1998-99, in Kosovo: forze militari e di polizia serbe/jugoslave espulsero con la forza circa 863.000 albanesi del Kosovo tra marzo e giugno 1999 e ne uccisero migliaia (l'ICTY incriminò Milošević per crimini di guerra e contro l'umanità). Vanno però registrate entrambe le storiografie senza arbitrarle: i bombardamenti NATO dell'operazione Allied Force (24 marzo–9 giugno 1999), condotti senza mandato del Consiglio di Sicurezza ONU, uccisero secondo Human Rights Watch circa 500 civili (la FRY dichiarò 1.200–5.700), e la questione della legittimità dell'intervento e dello status del Kosovo resta contesa. Sul versante opposto, l'UÇK (Esercito di Liberazione del Kosovo) commise a sua volta rappresaglie e sfollamenti di serbi e rom. Le cifre demografiche qui riportate sono attribuite alle fonti (HRW, studio Lancet, censimento FRY 1991) e non vanno presentate come definitive.",
+    "wikidata_qid": "Q838261",
+    "name_variants": [
+      {
+        "name": "Savezna Republika Jugoslavija",
+        "lang": "sr-Latn",
+        "context": "Serbian Latin-script romanization of the constitutional name",
+        "source": "en.wikipedia.org/wiki/Serbia_and_Montenegro"
+      },
+      {
+        "name": "Federal Republic of Yugoslavia",
+        "lang": "en",
+        "context": "Standard English designation (FRY) used by the UN, ICTY and Western governments 1992–2003",
+        "source": "ICTY, icty.org/en/about/what-former-yugoslavia"
+      },
+      {
+        "name": "Savezna Republika Jugoslavija (Савезна Република Југославија)",
+        "lang": "hbs",
+        "context": "Same name in the shared Serbo-Croatian/Bosnian standard used across the former Yugoslavia",
+        "source": "Wikidata Q37024"
+      },
+      {
+        "name": "Трећа Југославија (Treća Jugoslavija)",
+        "lang": "sr",
+        "context": "Denominazione informale 'Terza Jugoslavia' (dopo il Regno e la SFRJ); lang sr.",
+        "source": "Britannica, britannica.com/place/Yugoslavia-former-federated-nation-1929-2003"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 1992,
+        "region": "Serbia and Montenegro",
+        "change_type": "FOUNDING",
+        "description": "On 27 April 1992 the Assembly in Belgrade adopted the FRY constitution, constituting a two-republic federation (Serbia incl. the autonomous provinces of Kosovo and Vojvodina, plus Montenegro) as the self-declared continuation of SFR Yugoslavia. The UN Security Council (Res. 777/1992) rejected automatic continuity and required reapplication for membership.",
+        "population_affected": 10394026,
+        "confidence_score": 0.92
+      },
+      {
+        "year": 1992,
+        "region": "International / Bosnia-Herzegovina",
+        "change_type": "REFORM",
+        "description": "UN Security Council Resolution 757 (30 May 1992) imposed a near-total trade embargo, financial and air-traffic sanctions on the FRY for Belgrade's role in arming and directing Bosnian Serb forces during the Bosnian War; sanctions crippled the economy through the 1990s.",
+        "population_affected": null,
+        "confidence_score": 0.92
+      },
+      {
+        "year": 1999,
+        "region": "Kosovo",
+        "change_type": "OCCUPATION",
+        "description": "During the Kosovo War, Yugoslav/Serbian forces under Milošević forcibly expelled roughly 863,000 Kosovo Albanians (Mar–Jun 1999); NATO's Operation Allied Force bombed the FRY 24 Mar–9 Jun 1999, after which UNSC Res. 1244 placed Kosovo under UN administration (UNMIK/KFOR), removing it from effective Belgrade control.",
+        "population_affected": 863000,
+        "confidence_score": 0.92
+      },
+      {
+        "year": 2003,
+        "region": "Serbia and Montenegro",
+        "change_type": "REFORM",
+        "description": "On 4 February 2003 the Federal Assembly promulgated the Constitutional Charter, abolishing the name 'Federal Republic of Yugoslavia' and reconstituting the polity as the looser State Union of Serbia and Montenegro, ending the Yugoslav state name after 74 years.",
+        "population_affected": null,
+        "confidence_score": 0.92
+      }
+    ],
+    "sources": [
+      {
+        "citation": "International Criminal Tribunal for the former Yugoslavia (ICTY), \"What is the former Yugoslavia?\" — official background on the SFRY/FRY and the wars of the 1990s.",
+        "url": "https://www.icty.org/en/about/what-former-yugoslavia",
+        "source_type": "primary"
+      },
+      {
+        "citation": "United Nations Security Council Resolution 757 (S/RES/757, 30 May 1992), imposing comprehensive sanctions on the Federal Republic of Yugoslavia (Serbia and Montenegro).",
+        "url": "https://digitallibrary.un.org/record/142881",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Human Rights Watch, \"Under Orders: War Crimes in Kosovo\" (2001) — documentation of forced expulsions and killings by Serbian/Yugoslav forces and of civilian deaths from NATO bombing.",
+        "url": "https://www.hrw.org/reports/2001/kosovo/",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Spiegel PB & Salama P, \"War and mortality in Kosovo, 1998–99: an epidemiological testimony,\" The Lancet 355 (2000): 2204–2209 — CDC-linked mortality estimate (~12,000 war-related deaths).",
+        "url": "https://www.thelancet.com/pdfs/journals/lancet/PIIS0140673600024041.pdf",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Encyclopaedia Britannica, \"Yugoslavia (former federated nation, 1929–2003)\" and \"Serbia and Montenegro\" — standard reference for the 27 April 1992 founding, 4 February 2003 renaming, and Belgrade capital.",
+        "url": "https://www.britannica.com/place/Yugoslavia-former-federated-nation-1929-2003",
+        "source_type": "secondary"
+      }
+    ]
+  },
+  {
+    "name_original": "Државна заједница Србија и Црна Гора",
+    "name_original_lang": "sr-Cyrl",
+    "entity_type": "federation",
+    "year_start": 2003,
+    "year_end": 2006,
+    "capital_name": "Belgrade",
+    "capital_lat": 44.8125,
+    "capital_lon": 20.4612,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            22.5187,
+            44.8125
+          ],
+          [
+            23.0018,
+            45.7921
+          ],
+          [
+            21.837,
+            46.2527
+          ],
+          [
+            20.4612,
+            46.6559
+          ],
+          [
+            18.8049,
+            46.6558
+          ],
+          [
+            18.8399,
+            45.6351
+          ],
+          [
+            17.5618,
+            44.8125
+          ],
+          [
+            18.4593,
+            43.9037
+          ],
+          [
+            19.4331,
+            43.5373
+          ],
+          [
+            20.4612,
+            43.0713
+          ],
+          [
+            21.6589,
+            43.4056
+          ],
+          [
+            22.9163,
+            43.8102
+          ],
+          [
+            22.5187,
+            44.8125
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "approximate_generated",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "Il quesito dell'unione tra Serbia e Montenegro ammette due letture storiografiche che il record non arbitra (ETHICS-003). Lettura pro-indipendenza: l'unione statale del 2003 fu un contenitore lasco mediato dall'Occidente (in particolare dall'inviato UE Javier Solana, da cui il soprannome 'Solania') per rinviare la separazione, e il referendum del 21 maggio 2006 completò l'autodeterminazione montenegrina. Lettura pro-unionista/serba: la soglia del 55% fissata dall'UE fu imposta dall'esterno e l'esito (55,5%) fu talmente stretto da restare contestato. Entrambe vanno registrate con attribuzione. Va inoltre esplicitato che durante tutta l'esistenza dell'unione il Kosovo restò de iure parte della Serbia ma sotto amministrazione ONU (UNMIK) in base alla Risoluzione 1244 del Consiglio di Sicurezza (1999), conseguenza dei bombardamenti NATO e del conflitto del 1998-99; questo status irrisolto non è edulcorato ma non altera i confini nominali dell'entità.",
+    "wikidata_qid": "Q37024",
+    "name_variants": [
+      {
+        "name": "Србија и Црна Гора",
+        "lang": "sr-Cyrl",
+        "context": "Short/common name of the state union in Serbian Cyrillic, as used on the Serbian Wikipedia and in the Constitutional Charter",
+        "source": "sr.wikipedia.org/wiki/Србија_и_Црна_Гора"
+      },
+      {
+        "name": "Državna zajednica Srbija i Crna Gora",
+        "lang": "sr-Latn",
+        "context": "Official name in Serbian Latin script (co-official); rendered by Wikidata as the official name statement",
+        "source": "Wikidata Q37024 (official name)"
+      },
+      {
+        "name": "Serbia and Montenegro",
+        "lang": "en",
+        "context": "Standard English name of the state union (2003-2006)",
+        "source": "en.wikipedia.org/wiki/Serbia_and_Montenegro"
+      },
+      {
+        "name": "Crna Gora",
+        "lang": "cnr",
+        "context": "Montenegrin form of the co-constituent republic's name; Montenegrin is now recognized as a distinct standard",
+        "source": "en.wikipedia.org/wiki/Constitutional_Charter_of_Serbia_and_Montenegro"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 2002,
+        "region": "Serbia and Montenegro",
+        "change_type": "REFORM",
+        "description": "Belgrade Agreement (Accord on Principles in Relations between Serbia and Montenegro), signed March 2002 by the Serbian, Montenegrin and FRY governments under EU mediation (Javier Solana), framing the restructuring of the FRY into a loose state union.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 2003,
+        "region": "Federal Republic of Yugoslavia / Serbia and Montenegro",
+        "change_type": "REFORM",
+        "description": "Constitutional Charter came into force 4 February 2003, transforming the Federal Republic of Yugoslavia into the confederal State Union of Serbia and Montenegro and retiring the name 'Yugoslavia'.",
+        "population_affected": 10825900,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 2006,
+        "region": "Montenegro",
+        "change_type": "SECESSION",
+        "description": "Montenegrin independence referendum of 21 May 2006 (55.5% in favour, EU/Venice Commission threshold 55%); Montenegro's parliament declared independence 3 June 2006, ending the union.",
+        "population_affected": 620000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 2006,
+        "region": "Serbia and Montenegro",
+        "change_type": "DISSOLUTION",
+        "description": "Serbia's parliament declared Serbia the legal successor to the State Union on 5 June 2006, dissolving Serbia and Montenegro into two independent states.",
+        "population_affected": 10832545,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Constitutional Charter of the State Union of Serbia and Montenegro, adopted by the Federal Assembly, 4 February 2003.",
+        "url": "https://www.worldstatesmen.org/SerbMont_Const_2003.pdf",
+        "source_type": "primary"
+      },
+      {
+        "citation": "'Serbia and Montenegro', Wikidata item Q37024 (labels, official name, inception, dissolved 4 June 2006, capitals Belgrade and Podgorica, replaces Federal Republic of Yugoslavia Q838261).",
+        "url": "https://www.wikidata.org/wiki/Q37024",
+        "source_type": "secondary"
+      },
+      {
+        "citation": "Florian Bieber (ed.), Montenegro in Transition: Problems of Identity and Statehood, Nomos Verlag, 2003.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "European Commission for Democracy through Law (Venice Commission), Opinion on the Compatibility of the Existing Legislation in Montenegro concerning the Organisation of Referendums with Applicable International Standards, CDL-AD(2005)041, 2005 (55% threshold).",
+        "url": "https://www.venice.coe.int/webforms/documents/?pdf=CDL-AD(2005)041-e",
+        "source_type": "primary"
+      },
+      {
+        "citation": "U.S. Department of State, Background Note: Serbia and Montenegro / Serbia (Bureau of European and Eurasian Affairs), 2003-2008.",
+        "url": "https://2009-2017.state.gov/outofdate/bgn/serbiaandmontenegro/28187.htm",
+        "source_type": "secondary"
+      }
+    ]
+  },
+  {
+    "name_original": "Република Србија",
+    "name_original_lang": "sr-Cyrl",
+    "entity_type": "republic",
+    "year_start": 2006,
+    "year_end": null,
+    "capital_name": "Belgrade",
+    "capital_lat": 44.8125,
+    "capital_lon": 20.4612,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            23.1963,
+            44.8125
+          ],
+          [
+            22.4063,
+            45.5786
+          ],
+          [
+            21.4743,
+            46.1761
+          ],
+          [
+            20.4612,
+            46.4925
+          ],
+          [
+            19.7218,
+            45.9085
+          ],
+          [
+            19.2384,
+            45.2973
+          ],
+          [
+            18.7777,
+            44.8125
+          ],
+          [
+            18.5749,
+            44.0369
+          ],
+          [
+            19.3521,
+            43.5214
+          ],
+          [
+            20.4612,
+            43.0456
+          ],
+          [
+            21.7403,
+            43.3673
+          ],
+          [
+            22.16,
+            44.1051
+          ],
+          [
+            23.1963,
+            44.8125
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "approximate_generated",
+    "confidence_score": 0.9,
+    "status": "confirmed",
+    "ethical_notes": "Il conflitto del Kosovo del 1998-1999 va nominato per primo (ETHICS-002): le forze serbo-jugoslave dell'era di Slobodan Milošević condussero una pulizia etnica su larga scala (circa 850.000 albanesi kosovari espulsi e migliaia di uccisi), che innescò l'intervento aereo NATO (marzo-giugno 1999) e l'amministrazione ONU del Kosovo (UNMIK, Ris. CdS 1244). Su questo sfondo si colloca la disputa successiva sullo status. Il record documenta senza arbitrare la disputa sul Kosovo, il territorio più contestato dello Stato. Lettura serba: la Costituzione del 2006 sancisce nel preambolo il Kosovo e Metohija come parte integrante e inalienabile della Serbia; Belgrado considera la dichiarazione unilaterale d'indipendenza del Kosovo (17 febbraio 2008) illegittima e non la riconosce. Lettura kosovara/di parte della comunità internazionale: il Kosovo esercita controllo statale de facto e il parere consultivo della Corte Internazionale di Giustizia del 22 luglio 2010 stabilì (10 voti contro 4) che la dichiarazione non violava il diritto internazionale; il numero di Stati riconoscenti è a sua volta conteso (il Kosovo rivendica ~120 riconoscimenti, la Serbia ne conta ~84-85 dopo la propria campagna di de-riconoscimento avviata dal 2017-2020). Entrambe le letture sono registrate senza risoluzione. La secessione del Montenegro (2006) fu pacifica e frutto di referendum, non di violenza.",
+    "wikidata_qid": "Q403",
+    "name_variants": [
+      {
+        "name": "Republika Srbija",
+        "lang": "sr-Latn",
+        "context": "Official Serbian name in Latin script (Gaj's Latin alphabet), co-official constitutional form",
+        "source": "Constitution of the Republic of Serbia (2006), Article 10"
+      },
+      {
+        "name": "Republic of Serbia",
+        "lang": "en",
+        "context": "Standard English designation used by the UN and EU",
+        "source": "UN Member States list / Wikidata Q403 alias"
+      },
+      {
+        "name": "Serbia",
+        "lang": "en",
+        "context": "Common short-form country name",
+        "source": "Britannica, 'Serbia'"
+      },
+      {
+        "name": "République de Serbie",
+        "lang": "fr",
+        "context": "French official form used in diplomatic/UN contexts",
+        "source": "Wikidata Q403 official name (French)"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": 2006,
+        "region": "Montenegro",
+        "change_type": "SECESSION",
+        "description": "Following the referendum of 21 May 2006 (55.5% in favour), Montenegro declared independence on 3 June 2006. On 5 June 2006 the National Assembly of Serbia declared the Republic of Serbia the legal successor of the State Union, formally dissolving Serbia and Montenegro. The separation was peaceful and referendum-based, brokered under EU mediation (Javier Solana's threshold of 55%).",
+        "population_affected": 620000,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 2006,
+        "region": "Serbia",
+        "change_type": "FOUNDING",
+        "description": "Re-emergence of Serbia as a fully sovereign independent state for the first time since 1918. A new constitution — the first as an independent state since the Kingdom of Serbia's 1903 constitution — was adopted by referendum on 28-29 October 2006 and promulgated on 8 November 2006.",
+        "population_affected": null,
+        "confidence_score": 0.9
+      },
+      {
+        "year": 2008,
+        "region": "Kosovo",
+        "change_type": "SECESSION",
+        "description": "Kosovo's Assembly issued a unilateral declaration of independence on 17 February 2008, which Serbia rejects as illegitimate; the Serbian constitution continues to claim Kosovo and Metohija as an inalienable part of Serbia. The ICJ advisory opinion of 22 July 2010 found the declaration did not violate international law. De facto Serbian administrative control was lost after the 1998-1999 war and the NATO bombing of the Federal Republic of Yugoslavia (Milošević era); status remains disputed.",
+        "population_affected": 1800000,
+        "confidence_score": 0.9
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Constitution of the Republic of Serbia (Ustav Republike Srbije), adopted 8 November 2006, Official Gazette RS No. 98/2006 — see Preamble and Article 10 on Kosovo and Metohija and official languages/script.",
+        "url": "https://www.wipo.int/wipolex/en/legislation/details/7378",
+        "source_type": "primary"
+      },
+      {
+        "citation": "International Court of Justice, 'Accordance with International Law of the Unilateral Declaration of Independence in Respect of Kosovo', Advisory Opinion of 22 July 2010, ICJ Reports 2010, p. 403.",
+        "url": "https://www.icj-cij.org/case/141",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Sabrina P. Ramet, 'The Three Yugoslavias: State-Building and Legitimation, 1918-2005', Indiana University Press, 2006.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Encyclopaedia Britannica, 'Serbia and Montenegro' (historical nation, Europe, 2003-2006) and 'Serbia'.",
+        "url": "https://www.britannica.com/place/Serbia-and-Montenegro",
+        "source_type": "secondary"
+      },
+      {
+        "citation": "'2006 Montenegrin independence referendum' and 'International recognition of Kosovo', Wikipedia (referencing OSCE/ODIHR and government sources on referendum figures and recognition counts).",
+        "url": "https://en.wikipedia.org/wiki/2006_Montenegrin_independence_referendum",
+        "source_type": "secondary"
+      }
+    ]
+  }
+]

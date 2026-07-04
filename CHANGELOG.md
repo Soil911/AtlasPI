@@ -2,6 +2,29 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.130] - 2026-07-05 (Task 2c: Serbia moderna — FRY + S&M + Repubblica di Serbia, ETHICS-025)
+
+*Follow-up ETHICS-020: la coda della catena serba #34 dalla SFRJ al presente.*
+
+- **3 entità NUOVE** (ricerca + verifier + cross-check ChatGPT AGREE su tutti i punti):
+  - **`Савезна Република Југославија`** (FR Yugoslavia) 1992-2003, **Q838261** (corretto
+    dal verifier da Q37024 = Serbia and Montenegro).
+  - **`Државна заједница Србија и Црна Гора`** (Serbia and Montenegro) 2003-2006, Q37024.
+  - **`Република Србија`** (Republic of Serbia) 2006-, Q403.
+  - Catena 34 (6→**10 link**): SFRJ → FRY (**DISSOLUTION** 1992) → S&M (**REFORM** 2003)
+    → Republic of Serbia (**SECESSION** 2006, referendum montenegrino).
+- **⚠️ Decisione ETHICS-003**: Republic of Serbia = **`confirmed`/0.9**, NON disputed/0.70
+  (come proponeva la ricerca). Lo Stato serbo (membro ONU) non è in dubbio; il cap disputed
+  è **riservato al TERRITORIO contestato** (Kosovo), rappresentato come territory_change
+  2008 + note con **entrambe le letture** (serba / kosovara), non arbitrate. Cross-check
+  ChatGPT AGREE.
+- **ETHICS-002**: le note di Serbia ora **nominano per primo** il conflitto del Kosovo
+  1998-99 e la pulizia etnica dell'era Milošević (~850.000 albanesi espulsi) → intervento
+  NATO + UNMIK, prima della disputa 2008.
+- Confini `approximate_generated` (nessun vicino da ereditare per gli stati moderni).
+  Generatore `scripts/apply_task2c_serbia.py` (catena strutturale, batch_20 round-trippa)
+  + `sql_task2c_serbia.sql`. Prod 1011→1014 vive.
+
 ## [v6.99.129] - 2026-07-05 (Task 2b: Cambogia — PRK + Stato di Cambogia + catena 126 avanti, ETHICS-024)
 
 *Follow-up ETHICS-020: crea le 2 entità mancanti della sequenza cambogiana moderna e

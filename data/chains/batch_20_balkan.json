@@ -45,7 +45,7 @@
     ]
   },
   {
-    "name": "Serbian state trunk: Raska → Srpsko Carstvo → Српска деспотовина → Ottoman → Кнежевина Србија → Југославија (СХС → СФРЈ)",
+    "name": "Serbian state trunk: Raska → Srpsko Carstvo → Српска деспотовина → Ottoman → Кнежевина Србија → Југославија (СХС → СФРЈ → СРЈ → СЦГ) → Република Србија",
     "name_lang": "en",
     "chain_type": "SUCCESSION",
     "region": "Balkans / Serbia",
@@ -117,6 +117,30 @@
         "is_violent": true,
         "description": "The Axis invasion (April 1941) destroyed the kingdom; after four years of occupation, partition, genocide (NDH camps, Jasenovac) and multi-sided war, the communist Partisans established the Federal People's Republic (AVNOJ 1943; monarchy abolished 29 November 1945).",
         "ethical_notes": "The 1941-45 period saw occupation, the Holocaust and the Ustasa genocide of Serbs, Roma and Jews, and civil war among resistance movements - the socialist state emerged from that violence, not from a peaceful succession."
+      },
+      {
+        "entity_name": "Савезна Република Југославија",
+        "transition_year": 1992,
+        "transition_type": "DISSOLUTION",
+        "is_violent": true,
+        "description": "As the SFR Yugoslavia broke up in the 1991-1995 wars (Slovenia, Croatia, Bosnia, Macedonia seceding), Serbia and Montenegro proclaimed the Federal Republic of Yugoslavia on 27 April 1992 as the rump/claimed-continuator state.",
+        "ethical_notes": "is_violent=true: the FRY was born from the violent dissolution of the SFRY (Yugoslav wars, including the Srebrenica genocide of 1995 by Bosnian Serb forces, and the 1998-99 Kosovo war and NATO intervention involving FRY forces). Milošević-era Serbia was a principal party; perpetrator roles are named on the relevant entities."
+      },
+      {
+        "entity_name": "Државна заједница Србија и Црна Гора",
+        "transition_year": 2003,
+        "transition_type": "REFORM",
+        "is_violent": false,
+        "description": "The Constitutional Charter of 4 February 2003 restructured the FRY into the loose State Union of Serbia and Montenegro, retiring the name 'Yugoslavia' after 74 years (EU-mediated, the 'Solania' arrangement).",
+        "ethical_notes": "A constitutional restructuring/renaming, not a violent transition. Kosovo remained de iure part of Serbia but under UN administration (UNMIK, UNSC Res 1244)."
+      },
+      {
+        "entity_name": "Република Србија",
+        "transition_year": 2006,
+        "transition_type": "SECESSION",
+        "is_violent": false,
+        "description": "Montenegro's independence referendum of 21 May 2006 (55.5% vs the EU-set 55% threshold) led to Montenegro's declaration of independence on 3 June 2006; Serbia's National Assembly declared the Republic of Serbia the successor state on 5 June 2006.",
+        "ethical_notes": "Peaceful secession by referendum. Both historiographies on the 55% threshold and the union are recorded on the Serbia-and-Montenegro entity; the unresolved Kosovo dispute (2008 UDI) is recorded on the Republic of Serbia entity, not arbitrated."
       }
     ]
   },
