@@ -2,6 +2,27 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.124] - 2026-07-04 (M4: sincronizzati 14 rename nativi prod-only)
+
+*Riconciliazione JSON↔prod (ADR-011, pattern Wadai/ETHICS-001). Prod aveva già
+il nome nativo; il JSON teneva ancora la forma latina come name_original →
+`ingest_new_entities` su prod avrebbe creato duplicati. Diff calcolato per
+capitale+anno (deterministico), 16 candidati → 14 sincronizzati + #413 escluso
+(doppio record JSON = anche ombreggiato, va nel track dedup).*
+
+- **14 rename JSON latino→nativo** con la forma latina conservata come
+  **variante-romanizzazione** (ETHICS-001, lang `*-Latn`): #405/#406 Marocco
+  (Wattasidi/Saadi), #410 Sennar, #411 Taqali, #420 Rus' di Kiev, #430 Georgia,
+  #434/#664 Bulgaria (Secondo Impero/Vidin), #435 Impero Serbo, #436 Morea,
+  #438 Trebisonda, #440 Galizia-Volinia, #658 Medri Bahri, #736 Mahdiyya.
+- **Cascata dei riferimenti per-nome** (il seed linka per nome): catene
+  (batch_20/37), eventi (batch_05/10/27), rulers (batch_01) allineati alle
+  forme native — nessun ref latino residuo.
+- **Variante latina anche su prod** (`scripts/sql_native_rename_variants.sql`,
+  INSERT idempotente NOT EXISTS) per simmetria fresh-seed ≡ prod.
+- Debito M4 residuo: 3 rename (incl. #413, doppio record), 87 confidence in
+  coda review, ~30 ombreggiati, 61 JSON-only.
+
 ## [v6.99.123] - 2026-07-04 (M3: freshness + pagina benchmark "perché AtlasPI e non Wikidata")
 
 *Chiude gli ultimi due punti di M3 (agent-UX): freshness dei conteggi e la
