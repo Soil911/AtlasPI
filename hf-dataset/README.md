@@ -34,7 +34,7 @@ configs:
 
 # AtlasPI — Historical Geography Dataset
 
-**862 historical geopolitical entities · 490 events · 48 periods · 94 dynasty chains · 110 cities · 41 trade routes**
+**1,006 historical geopolitical entities · 643 events · 55 periods · 104 dynasty chains · 252 cities · 41 trade routes**
 
 The first open dataset specifically designed for AI agents working on
 historical geography questions. Apache 2.0 licensed. Includes real GeoJSON
@@ -72,7 +72,7 @@ Americas 17%, Europe 17%, Middle East 11%, Oceania 2%)
 
 ## Dataset structure
 
-### `entities.jsonl` (862 records)
+### `entities.jsonl` (1,006 records)
 
 ```json
 {
@@ -96,7 +96,7 @@ Americas 17%, Europe 17%, Middle East 11%, Oceania 2%)
 }
 ```
 
-### `events.jsonl` (490 records)
+### `events.jsonl` (643 records)
 
 ```json
 {
@@ -119,12 +119,12 @@ Americas 17%, Europe 17%, Middle East 11%, Oceania 2%)
 }
 ```
 
-### `periods.jsonl` (48 records)
+### `periods.jsonl` (55 records)
 
 Historical epochs with region scope, historiographic notes, and alternative
 names (e.g., "Dark Ages" → deprecated label for "Early Middle Ages").
 
-### `chains.jsonl` (94 records)
+### `chains.jsonl` (104 records)
 
 Dynasty / succession chains with explicit transition_type per link (CONQUEST,
 SUCCESSION, REVOLUTION, etc.). No euphemisms.

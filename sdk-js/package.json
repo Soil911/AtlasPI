@@ -1,16 +1,15 @@
 {
   "name": "atlaspi-client",
   "version": "0.3.0",
-  "description": "Official JavaScript/TypeScript client for the AtlasPI Historical Geography API — free, public, no-auth REST API with 862 historical entities from 4500 BCE to 2024.",
+  "description": "Official JavaScript/TypeScript client for the AtlasPI Historical Geography API — free, public, no-auth REST API with 1000+ historical entities from 4500 BCE to 2024.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     }
   },
   "files": [
