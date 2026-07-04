@@ -1,0 +1,41 @@
+name: Publish to MCP Registry
+
+# Registra AtlasPI nel registry MCP ufficiale (registry.modelcontextprotocol.io).
+# Autenticazione via GitHub OIDC: l'Action prova di girare nel repo Soil911/AtlasPI,
+# quindi è autorizzata a pubblicare sotto il namespace io.github.soil911/* SENZA
+# alcun login manuale o device flow. Trigger manuale o su modifica del server.json.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "mcp-server/server.json"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write   # necessario per l'OIDC token (login github-oidc)
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install mcp-publisher
+        run: |
+          curl -sSL -o mcp-publisher.tar.gz \
+            https://github.com/modelcontextprotocol/registry/releases/download/v1.7.9/mcp-publisher_linux_amd64.tar.gz
+          tar -xzf mcp-publisher.tar.gz mcp-publisher
+          chmod +x mcp-publisher
+
+      - name: Validate server.json
+        working-directory: mcp-server
+        run: ../mcp-publisher validate
+
+      - name: Login (GitHub OIDC)
+        working-directory: mcp-server
+        run: ../mcp-publisher login github-oidc
+
+      - name: Publish
+        working-directory: mcp-server
+        run: ../mcp-publisher publish
