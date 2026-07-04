@@ -2,6 +2,40 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.127] - 2026-07-04 (Task 1 ultracode: coda confidence review CHIUSA, 72 entità)
+
+*Chiude l'ultimo pezzo "finibile" di M4: la coda `conf_review_queue.json` (72
+entità, ADR-011 classe json_higher) esaurita con review per-entità fonti-based.
+JSON↔prod ora convergenti anche sulla confidence per queste 72.*
+
+- **Workflow ultracode** (`conf-review-queue-waved`): 1 verify-agent storico per
+  entità (legge le fonti già su prod + web research su precisione di datazione e
+  qualità delle fonti) + 1 refuter avversariale su OGNI decisione di rialzo
+  (burden of proof sul rialzo, ETHICS-013). 89 agenti totali, in waves da 6 per
+  evitare i burst di rate-limit lato API.
+- **Esito: 11 rialzi prod:=json, 59 backport json:=prod, 2 già convergenti.**
+  - **11 rialzati** (stati letterati, datazione precisa, fonti forti): Granducato
+    di Mosca #78 (0.7→0.75), Armenia Magna #288 (0.75→0.825), Hotaki #343
+    (0.6→0.7), Song del Sud #450 (0.75→0.8), Califfato di Cordova #486
+    (0.75→0.825), Ducato di Bretagna #566 (0.5→0.55), Chālukya occidentali #588
+    (0.65→0.725), Nieuw-Holland/Brasile olandese #715 (0.85→0.925), Copán/Oxwitik
+    #912 (0.85→0.9), Yaxchilán/Pa'Chan #913 (0.7→0.85), Quiriguá/K'iik'aab #920
+    (0.7→0.8).
+  - **6 rialzi ribaltati dal refuter** → tenuti bassi: Despotato serbo #69 (span
+    composito 1217-1459, tre polity in un'entità), Goguryeo #115 (fondazione
+    mitica -37 vs II sec. a.C. attestato), Kadaram #600, Serbia #667, Samudera
+    Pasai #885, Yokib #914. ETHICS-013: incertezza onesta > certezza inventata.
+  - **59 backport json:=prod**: ricostruzioni archeologiche meso/pre-colombiane
+    e orizzonti di datazione ampi (Sumer, Teotihuacan, Caral-Supe, Urartu, siti
+    Olmechi/Maya, ecc.) dove il valore prod più basso è quello onesto.
+- **Dual-write**: 59 chirurgie confidence sul JSON (byte-preserving; idx
+  ri-derivato dal record effettivo CORRENTE per nome — beccato uno shift stale
+  della coda su #1008 che avrebbe patchato il record sbagliato), 11 UPDATE su
+  prod (`scripts/sql_conf_review_batch3.sql`, idempotente + guard). Audit in
+  `data/fixes/conf_review_batch3_audit_20260704.json`. Coda svuotata (72→0).
+- **Applier**: `scripts/apply_conf_review_batch3.py` (riusa la chirurgia di
+  `reconcile_confidence`; guard ETHICS-003/013; skip dei già-convergenti #120/#300).
+
 ## [v6.99.126] - 2026-07-04 (M4: riconciliazione strutturale JSON↔prod COMPLETA)
 
 *Chiude la parte strutturale di M4: dopo questa, ogni nome JSON è in prod e

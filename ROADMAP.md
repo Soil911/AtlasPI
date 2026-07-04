@@ -89,11 +89,12 @@ vecchi). Più: pagina/benchmark "perché AtlasPI e non Wikidata" con query compa
 
 ### M4 — Riconciliazione totale JSON↔prod (fresh-seed ≡ prod)
 **Policy confidence FATTA (ADR-011, v6.99.113)**: 199/286 divergenze chiuse (197
-backport JSON:=prod + 2 UPDATE prod batch_32); **87 in coda review manuale**
-(`data/fixes/conf_review_queue.json`, lotti da ~10 nelle sessioni enrichment).
-Residuo: 17 rename nativi prod-only (pattern = backport Wadai v6.99.110);
-30 record JSON ombreggiati (last-wins) da pulire; 61 entità JSON-only mai seedate
-(⚠️ vietato ingest_new_entities su prod); ethical_notes narrative.
+backport JSON:=prod + 2 UPDATE prod batch_32). Coda review manuale poi lavorata a
+lotti: 87→72 (v6.99.125, 15 rialzi) → **✅ CHIUSA in v6.99.127** (Task 1 ultracode:
+72 entità con verify-agent + refuter avversariale → 11 rialzi prod:=json, 59
+backport json:=prod, 2 già convergenti). `conf_review_queue.json` ora VUOTA.
+Struttura M4 (rename nativi, ombreggiati, JSON-only) già chiusa in v6.99.124-126
+(JSON↔prod name-reconciled 100%). Residuo M4: solo ethical_notes narrative (IT).
 
 ### Track continuo — enrichment coda <0.6 (~206 entità, valore marginale calante)
 

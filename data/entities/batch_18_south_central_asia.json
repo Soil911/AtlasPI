@@ -491,7 +491,7 @@
         ]
       ]
     },
-    "confidence_score": 0.53,
+    "confidence_score": 0.52,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Eastern Gangas ruled Kalinga (modern Odisha) for nearly a millennium, making them one of the longest-lasting dynasties in Indian history. They built the Sun Temple at Konark (UNESCO World Heritage Site) and the Jagannath Temple at Puri, one of the holiest Hindu pilgrimage sites. The temple at Puri and its associated rituals were later appropriated and regulated by successive Muslim and British rulers. The Gajapati title they established continued to carry religious authority long after political power was lost. The dynasty's early history is poorly documented and contested among regional historians. Boundary da aourednik/historical-basemaps (1000, strategy=capital_near_centroid, precision=1). CC BY 4.0.",
     "name_variants": [
@@ -4442,7 +4442,7 @@
         ]
       ]
     },
-    "confidence_score": 0.6,
+    "confidence_score": 0.55,
     "status": "confirmed",
     "ethical_notes": "ETHICS: The Dambadeniya Kingdom represents the Sinhalese political recovery after the Chola and Kalinga invasions destroyed the Polonnaruwa kingdom (already in database). The shifting capitals (Dambadeniya, Yapahuwa, Kurunegala, Gampola, Kotte) reflect political instability and external pressure. The period saw the consolidation of Theravada Buddhist identity as a defining feature of Sinhalese political legitimacy, which later contributed to ethnic tensions with Tamil populations. The Tooth Relic's movements between capitals was a key legitimation device, as possessing it was considered essential to rightful sovereignty. Boundary da aourednik/historical-basemaps (1400, strategy=capital_in_polygon, precision=1). CC BY 4.0.",
     "name_variants": [
@@ -5155,7 +5155,7 @@
         ]
       ]
     },
-    "confidence_score": 0.7,
+    "confidence_score": 0.4,
     "status": "uncertain",
     "ethical_notes": "ETHICS: The Kalmyk Khanate represents the westernmost migration of Mongolic peoples in recorded history. The Oirat/Kalmyk migration from Dzungaria to the lower Volga steppes (1630s) displaced and clashed with Nogai Tatar populations. The catastrophic return migration (1771), when most Kalmyks attempted to return to Dzungaria, resulted in the death of approximately 100,000-150,000 people from Russian Cossack attacks, Kazakh raids, starvation, and disease -- one of the great humanitarian disasters of the 18th century. The Kalmyks who remained were progressively absorbed into the Russian imperial system. Modern Kalmyk identity and the Republic of Kalmykia in Russia are direct legacies of this history. Boundary da aourednik/historical-basemaps (1700, strategy=capital_in_polygon, precision=3). CC BY 4.0.\n\n[v6.7.3] aourednik polygon codificava estensione nominale composita (o dinastia successiva), >2x l'area effettiva storica. Sostituito con name_seeded_boundary ancorato al capital, radius calibrato al 1.2-1.5x del picco storico. Vedi ETHICS-006.\n\n[v6.30-displaced-rollback] Boundary reverted to capital-based approximation: aourednik fuzzy match placed polygon centroid=3169km / edge=0km from capital (exceeded thresholds). Regenerated as 300.0km radius circle.",
     "name_variants": [
