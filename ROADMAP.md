@@ -56,8 +56,10 @@ estensioni, ETHICS-017; 2026-07-02). Residuo M1:
 - Design split Sri Lanka #142 (nome = un re, non l'entità) e valutazione Kemet #26
   (ETHICS record prima); dedup trunk etiope (#22/#100 + entità #853 dup di #51);
   entità-fase meroitica nativa (vedi note catena #99).
-- Flag qualità da B1c: rename #534 (Primo Impero di Haiti, non 'Repiblik') e
-  verifica #240 (nome Khmer Republic, anni Kampuchea Democratica).
+- ~~Flag qualità da B1c: rename #534 e verifica #240~~ ✅ **FATTI in v6.99.118**
+  (ETHICS-019: #240 → `កម្ពុជាប្រជាធិបតេយ្យ` Kampuchea Democratica + QID Q330988;
+  #534 → `Anpi an Ayiti`, entity_type=empire, variante `Empire d'Haïti`).
+  Follow-up in coda: entità Repubblica Khmer (1970-75) propria.
 
 ### M2 — Discoverability (🌍 CUTOVER FATTO: **https://atlaspi.it** live, v6.99.114)
 Dominio dedicato registrato da Clirim e cutover eseguito il 2026-07-03: PR #5 mergiata,

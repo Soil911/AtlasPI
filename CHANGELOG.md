@@ -2,6 +2,32 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.118] - 2026-07-04 (ETHICS-019: mislabel di regime #240 e #534)
+
+*Flag etici a priorità massima dall'handoff 2026-07-04 (origine: ETHICS-017 §8).
+Cross-check ChatGPT gpt-5.5: AGREE su entrambe. Record completo in
+`docs/ethics/ETHICS-019-mislabel-regimi-cambogia-haiti.md`.*
+
+- **#240 Cambogia**: il record portava il nome della **Repubblica Khmer**
+  (`សាធារណរដ្ឋខ្មែរ`, regime Lon Nol 1970-75) su anni/evento/note del **genocidio
+  della Kampuchea Democratica** (1975-79) — attribuiva implicitamente il
+  genocidio al regime sbagliato. Rinominato `កម្ពុជាប្រជាធិបតេយ្យ` (nome ufficiale
+  khmer), QID `Q1054184`→`Q330988`, variante km ridondante → romanizzazione
+  `Kampuchea Prâcheathippadey` (km-Latn), nota event-link #109 riscritta,
+  nota etica sulla proclamazione formale del gennaio 1976 (convenzione
+  periodo-di-regime per il 1975). Il nome "Repubblica Khmer" NON resta come
+  variante (stato distinto, 1970-75 — entità propria in coda M1).
+- **#534 Haiti**: il **Primo Impero** di Dessalines (1804-06) era etichettato
+  `Repiblik Dayiti` (kreyòl ibrido + forma istituzionale negata) con
+  `entity_type='kingdom'`. Rinominato **`Anpi an Ayiti`** (kreyòl attestato,
+  ETHICS-001), `entity_type='empire'`, nuova variante `Empire d'Haïti` (fr,
+  nome ufficiale della costituzione imperiale 1805, grafia d'epoca *Hayti*).
+- **Dual-write completo**: entità + catene (batch_35/36, flag narrativi
+  risolti) + eventi (batch_04/07) + rulers (batch_01) + wikidata
+  (v669 patch-file e prod_qid_state) + SQL prod transazionale
+  (`scripts/sql_ethics019_mislabel_fix.sql`) con backup pg_dump preventivo.
+  Gli export storici in `data/fixes/` restano intatti (snapshot datati).
+
 ## [packaging] - 2026-07-04 (M2: registrazione nel registry MCP ufficiale + GSC)
 
 *Non tocca l'app runtime (APP_VERSION resta 6.99.117) — solo discoverability.*
