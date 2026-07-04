@@ -66,9 +66,12 @@ estensioni, ETHICS-017; 2026-07-02). Residuo M1:
   v6.99.128** (Task 2a, ETHICS-023: 2 entità-fase `tꜣ.wy (Third Intermediate)` +
   `(Late Period)` con conf onesta 0.62/0.82; Meroe #552 un-deprecated come fase
   meroitica; catene 137 e 99 estese; cross-check ChatGPT AGREE).
-- Residuo split: dedup trunk etiope (#22/#100 + entità #853 dup di #51); dedup
-  Ptolemaico #178/#1059 (creato nel Kemet split). Follow-up ETHICS-020 in corso
-  (Task 2b/c/d): PRK+Stato Cambogia, Serbia moderna, Eritrea italiana.
+- ~~Follow-up ETHICS-020: PRK + Stato di Cambogia~~ ✅ **FATTO in v6.99.129** (Task 2b,
+  ETHICS-024: 2 entità + catena 126 estesa 4→8 link coi regimi 1970-1993; cross-check
+  ChatGPT; split di #256 rinviato per Sihanouk).
+- Residuo split/dedup: trunk etiope (#22/#100 + #853 dup di #51); Ptolemaico #178/#1059
+  (Kemet split); split #256 Cambogia (1953-70/1993-). Task 2 rimanente: Serbia moderna
+  (2c), Eritrea italiana (2d).
 - ~~Flag qualità da B1c: rename #534 e verifica #240~~ ✅ **FATTI in v6.99.118**
   (ETHICS-019: #240 → `កម្ពុជាប្រជាធិបតេយ្យ` Kampuchea Democratica + QID Q330988;
   #534 → `Anpi an Ayiti`, entity_type=empire, variante `Empire d'Haïti`).

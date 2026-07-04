@@ -2,6 +2,28 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.129] - 2026-07-05 (Task 2b: Cambogia — PRK + Stato di Cambogia + catena 126 avanti, ETHICS-024)
+
+*Follow-up ETHICS-020: crea le 2 entità mancanti della sequenza cambogiana moderna e
+incatena i 4 regimi 1970-1993 (finora solo accennati nelle note di #256).*
+
+- **2 entità NUOVE** (ricerca `pass` + cross-check ChatGPT):
+  - **`សាធារណរដ្ឋប្រជាមានិតកម្ពុជា`** (PRK) 1979-1989, **Q867778** (corretto dal verifier
+    da Q853993), conf 0.9. Regime installato dall'invasione vietnamita.
+  - **`រដ្ឋកម្ពុជា`** (State of Cambodia) 1989-1993, **Q2387250**, conf 0.9.
+  - Confini INHERITATI da #256 (ETHICS-005).
+- **Catena 126 estesa avanti** (4→8 link): Kingdom of Cambodia → Repubblica Khmer
+  (**REVOLUTION** 1970, colpo Lon Nol/Sirik Matak) → Kampuchea Democratica (**CONQUEST**
+  1975, genocidio ~1,5-2M nominato) → PRK (**CONQUEST** 1979, invasione vietnamita:
+  **entrambe le letture** — fine del genocidio E occupazione/stato-cliente, no-single-
+  version) → State of Cambodia (**REFORM** 1989). Il restauro monarchico del 1993 torna
+  a #256, documentato nelle note (linea+note, ETHICS-017), non come back-link.
+- **Split di #256 (1953-70 / 1993-) CONSIDERATO ma RINVIATO**: il cross-check ChatGPT lo
+  preferiva; rinviato perché Sihanouk regnò in entrambi i periodi (re-home non banale).
+  Interruzione resa esplicita nelle note. Deviazione documentata in ETHICS-024.
+- Generatore `scripts/apply_task2b_cambodia.py` (chirurgia a stringa newline-agnostica su
+  batch_35, che NON round-trippa) + `scripts/sql_task2b_cambodia.sql`. Prod 1009→1011 vive.
+
 ## [v6.99.128] - 2026-07-05 (Task 2a: Egitto/Nubia — TIP + Periodo Tardo + restore Meroe, ETHICS-023)
 
 *Chiude il follow-up di ETHICS-022 (split Kemet): le due fasi egizie mancanti come
