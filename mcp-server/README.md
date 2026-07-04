@@ -1,5 +1,8 @@
 # atlaspi-mcp
 
+<!-- Ownership proof for the official MCP registry (registry.modelcontextprotocol.io) -->
+mcp-name: io.github.Soil911/atlaspi
+
 [![PyPI version](https://img.shields.io/pypi/v/atlaspi-mcp.svg)](https://pypi.org/project/atlaspi-mcp/)
 [![Python versions](https://img.shields.io/pypi/pyversions/atlaspi-mcp.svg)](https://pypi.org/project/atlaspi-mcp/)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
