@@ -4293,11 +4293,11 @@
     "boundary_aourednik_precision": 1
   },
   {
-    "name_original": "ការ្យ​ ​សីលេន",
+    "name_original": "දඹදෙණිය රාජධානිය",
     "name_original_lang": "si",
     "entity_type": "kingdom",
     "year_start": 1232,
-    "year_end": 1597,
+    "year_end": 1341,
     "capital_name": "Dambadeniya",
     "capital_lat": 7.4656,
     "capital_lon": 80.1728,
@@ -4449,49 +4449,26 @@
       {
         "name": "Kingdom of Dambadeniya",
         "lang": "en",
-        "context": "Capital-based designation for the first phase of post-Polonnaruwa Sinhalese kingdoms",
+        "context": "Capital-based designation for the first drifting-capital phase after Polonnaruwa (Dambadeniya/Yapahuwa/Kurunegala). ETHICS-021: #600 was mislabelled with a corrupted Khmer-script name spanning 1232..1597.",
         "period_start": 1232,
         "period_end": 1341
       },
       {
-        "name": "දඹදෙණිය රාජධානිය",
-        "lang": "si",
-        "context": "Sinhalese name for the kingdom during the Dambadeniya capital period",
+        "name": "Dambadeniya Rajadhaniya",
+        "lang": "si-Latn",
+        "context": "romanization of දඹදෙණිය රාජධානිය",
         "period_start": 1232,
         "period_end": 1341
-      },
-      {
-        "name": "Kingdom of Kotte",
-        "lang": "en",
-        "context": "Designation for the later phase when the capital moved to Kotte near modern Colombo",
-        "period_start": 1412,
-        "period_end": 1597
       }
     ],
     "territory_changes": [
       {
         "year": 1232,
-        "change_type": "formation",
+        "change_type": "LIBERATION",
         "region": "Southwestern Sri Lanka",
-        "description": "Vijayabahu III established the kingdom at Dambadeniya after expelling the Kalinga (Odisha) invader Magha from much of the island. He secured the Tooth Relic and the Pali Tripitaka, re-establishing Sinhalese Buddhist sovereignty. The northern Jaffna Kingdom remained independent under Tamil rule.",
+        "description": "Vijayabahu III established the kingdom at Dambadeniya after expelling the Kalinga (Odisha) invader Magha (invasion of 1215) from much of the island. He secured the Tooth Relic and the Pali Tripitaka, re-establishing Sinhalese Buddhist sovereignty. The northern Jaffna Kingdom remained independent under Tamil rule.",
         "population_affected": null,
         "confidence_score": 0.65
-      },
-      {
-        "year": 1412,
-        "change_type": "expansion",
-        "region": "Western and southern Sri Lanka",
-        "description": "Parakramabahu VI of Kotte reunified most of the island under Sinhalese rule for the last time, temporarily subduing the Jaffna Kingdom. His court at Kotte became a centre of Sinhalese literary achievement (the age of the Salalihini Sandeshaya).",
-        "population_affected": null,
-        "confidence_score": 0.65
-      },
-      {
-        "year": 1597,
-        "change_type": "dissolution",
-        "region": "Southwestern Sri Lanka",
-        "description": "Dharmapala of Kotte, having converted to Christianity under Portuguese influence, bequeathed his kingdom to the King of Portugal upon his death. The Portuguese established direct colonial rule over the lowland territories. The highland Kingdom of Kandy continued as an independent Sinhalese state.",
-        "population_affected": null,
-        "confidence_score": 0.75
       }
     ],
     "sources": [

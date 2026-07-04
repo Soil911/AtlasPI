@@ -2,6 +2,32 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.121] - 2026-07-04 (ETHICS-021: split Sri Lanka — #142 era un nome di re)
+
+*Split di super-aggregato (classe ETHICS-015). La linea singalese era rotta:
+#142 `මහා විජයබාහු` = nome di un RE (span -543..1815, conf 0.4); #386 `ගජබාහු`
+= altro nome di re; #600 in script KHMER corrotto. Cross-check ChatGPT AGREE.
+Record: ETHICS-021.*
+
+- **#142 re-scope → Regno di Anuradhapura** `අනුරාධපුර රාජධානිය` (-437..1017,
+  conf 0.7, QID Q1965597 già corretto); varianti ripulite (rimosse Kandy/
+  generiche), tradizione Vijaya -543 documentata come tradizione non fondazione.
+- **#386 Gajabahu deprecata** (nome di re dentro il periodo di Anuradhapura):
+  2 territory_changes ri-homati a #142; gli 8 siti UNESCO (bucket generico)
+  **distribuiti all'entità corretta** — Anuradhapura+Sigiriya→#142,
+  Polonnaruwa→#387, Kandy+Dambulla→#388, Galle/Sinharaja/Central Highlands
+  (coloniale/naturali)→NULL.
+- **#600 re-scope → Regno di Dambadeniya** `දඹදෙණිය රාජධානිය` (1232..1341,
+  QID Q1589163→Q3136869); rimosso il muddle Kotte (varianti + tc 1412/1597).
+- **2 entità nuove**: Gampola `ගම්පොල රාජධානිය` (1341-1412, Q6412581 —
+  intervento militare Ming 1411 nominato come conquista) e Kotte
+  `කෝට්ටේ රාජධානිය` (1412-1597, Q1589163 — assorbimento coatto portoghese 1597).
+- **Catena "Sinhalese kingdom trunk"**: Anuradhapura → Chola #110 (occupazione
+  Rajarata come conquista TAMIL straniera, non successione singalese) →
+  Polonnaruwa → Dambadeniya (CONQUEST 1215, Kalinga Māgha) → Gampola → Kotte.
+  Jaffna #601 resta PARALLELA (catena propria), Kandy #388 ramo — nessuna falsa
+  linearità. Prod 1047→1049 entità.
+
 ## [v6.99.120] - 2026-07-04 (M1/ETHICS-020: 8 entità-sblocco + rename Lan Xang + catene complete)
 
 *Chiude il residuo M1 da ETHICS-017. Metodo: workflow multi-agente

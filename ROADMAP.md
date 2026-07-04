@@ -57,10 +57,12 @@ estensioni, ETHICS-017; 2026-07-02). Residuo M1:
   34/123/124/125/126/130 estese + 3 nuove per Saudi #253, Gorkha #399,
   Taqali #411 — orfani Class-1 esauriti. Follow-up espliciti in ETHICS-020:
   PRK 1979-89, Eritrea italiana, Serbia moderna.
-- Design split Sri Lanka #142 (nome = un re, non l'entità) e valutazione Kemet #26
-  (ETHICS record prima — dossier di ricerca pronti, 2026-07-04); dedup trunk etiope
-  (#22/#100 + entità #853 dup di #51); entità-fase meroitica nativa (dossier pronto,
-  vedi note catena #99).
+- ~~Split Sri Lanka #142~~ ✅ **FATTO in v6.99.121** (ETHICS-021: #142→Anuradhapura,
+  #386 deprecata, #600→Dambadeniya, +Gampola +Kotte, catena Sinhalese trunk).
+- Split Kemet #26 (ETHICS record prima — dossier pronto, in corso v6.99.122);
+  dedup trunk etiope (#22/#100 + entità #853 dup di #51); entità-fase meroitica
+  nativa (#552 Meroe già esiste ma deprecata nel merge v6.85 — candidata a ripristino
+  per la catena #99; dossier pronto).
 - ~~Flag qualità da B1c: rename #534 e verifica #240~~ ✅ **FATTI in v6.99.118**
   (ETHICS-019: #240 → `កម្ពុជាប្រជាធិបតេយ្យ` Kampuchea Democratica + QID Q330988;
   #534 → `Anpi an Ayiti`, entity_type=empire, variante `Empire d'Haïti`).

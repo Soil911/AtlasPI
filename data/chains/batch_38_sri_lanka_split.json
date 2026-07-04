@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Sinhalese kingdom trunk: අනුරාධපුර → පොළොන්නරුව → දඹදෙණිය → ගම්පොල → කෝට්ටේ",
+    "name_lang": "en",
+    "chain_type": "SUCCESSION",
+    "region": "South Asia / Sri Lanka (Sinhalese heartland)",
+    "description": "The Sinhalese Buddhist monarchy from the Anuradhapura kingdom (from the 5th c. BCE) through its drifting-capital successors to the Kingdom of Kotte, absorbed by Portugal in 1597. The Kandyan kingdom (a branch from 1469) carried the line to 1815.",
+    "confidence_score": 0.75,
+    "ethical_notes": "This is the SINHALESE line only. ETHICS (no false linearity): the northern Tamil Jaffna kingdom (#601) is a PARALLEL polity with its own chain, NOT a subordinate node here; the 1017-1070 occupation of Rajarata is modelled as a FOREIGN Tamil Chola conquest (a node through the existing Chola entity #110), not a Sinhalese succession; the Kandyan kingdom (#388) is a branch, not the trunk terminus. Kalinga Magha's invasion (1215) preceded the Dambadeniya consolidation (1232). The 1597 Portuguese absorption was a coerced client-state annexation at Dharmapala's death, not a voluntary bequest.",
+    "sources": [
+      {
+        "citation": "K.M. de Silva, A History of Sri Lanka, University of California Press, 1981",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "R.A.L.H. Gunawardana, Robe and Plough: Monasticism and Economic Interest in Early Medieval Sri Lanka, University of Arizona Press, 1979",
+        "url": null,
+        "source_type": "academic"
+      }
+    ],
+    "links": [
+      {
+        "entity_name": "අනුරාධපුර රාජධානිය",
+        "transition_year": null,
+        "transition_type": null,
+        "is_violent": false,
+        "description": "The Anuradhapura kingdom (c. 437 BCE - 1017 CE), the long first phase of the Sinhalese state, centred on the dry-zone irrigation civilisation of Rajarata.",
+        "ethical_notes": null
+      },
+      {
+        "entity_name": "சோழ நாடு",
+        "transition_year": 1017,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "FOREIGN Tamil Chola conquest: Rajaraja I sacked Anuradhapura (993) and Rajendra I annexed the whole of Rajarata by 1017, administering it as the province Mummudi-sola-mandalam from Polonnaruwa (renamed Jananathamangalam). King Mahinda V was captured and died in exile in India (1029).",
+        "ethical_notes": "This link is a FOREIGN occupation, NOT a Sinhalese succession: the Chola entity #110 is a South Indian Tamil empire. Recorded here to represent the 1017-1070 interruption honestly, per the no-false-linearity principle."
+      },
+      {
+        "entity_name": "පොළොන්නරුව",
+        "transition_year": 1070,
+        "transition_type": "RESTORATION",
+        "is_violent": true,
+        "description": "Vijayabahu I expelled the Cholas by war (from Ruhuna in the south) and was crowned at Polonnaruwa (1070; formal consecration 1076-77), restoring Sinhalese sovereignty over Rajarata. Polonnaruwa became the new capital.",
+        "ethical_notes": "The 1055/56-1070 overlap is real: Vijayabahu I ruled from Ruhuna while the Cholas still held Rajarata."
+      },
+      {
+        "entity_name": "දඹදෙණිය රාජධානිය",
+        "transition_year": 1215,
+        "transition_type": "CONQUEST",
+        "is_violent": true,
+        "description": "Kalinga Magha's invasion (1215) with a brutal occupation of Rajarata forced the Sinhalese polity to relocate to the southwestern wet zone; Vijayabahu III established the kingdom at Dambadeniya (1232), securing the Tooth Relic and re-founding Buddhist kingship.",
+        "ethical_notes": "The trigger is the 1215 invasion; 1232 is the Dambadeniya consolidation. The dry-zone irrigation civilisation of Rajarata was permanently abandoned after this."
+      },
+      {
+        "entity_name": "ගම්පොල රාජධානිය",
+        "transition_year": 1341,
+        "transition_type": "SUCCESSION",
+        "is_violent": false,
+        "description": "Peaceful dynastic capital shift to Gampola (Gangasiripura) under Bhuvanaikabahu IV.",
+        "ethical_notes": null
+      },
+      {
+        "entity_name": "කෝට්ටේ රාජධානිය",
+        "transition_year": 1412,
+        "transition_type": "SUCCESSION",
+        "is_violent": true,
+        "description": "Parakramabahu VI acceded (1412) and moved the capital to Kotte, reunifying most of the island by 1450. The transition followed the 1410-11 Ming intervention that captured and deported the previous king Vira Alakesvara.",
+        "ethical_notes": "Ming China's armed intervention (1411) is documented on the Gampola entity; the Ming and Sinhala accounts of the 1412 accession (installation vs indigenous restoration) are both recorded, not arbitrated."
+      }
+    ]
+  }
+]

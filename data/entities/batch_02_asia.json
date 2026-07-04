@@ -29413,16 +29413,16 @@
     "boundary_aourednik_precision": 1
   },
   {
-    "name_original": "මහා විජයබාහු",
+    "name_original": "අනුරාධපුර රාජධානිය",
     "name_original_lang": "si",
     "entity_type": "kingdom",
-    "year_start": -543,
-    "year_end": 1815,
+    "year_start": -437,
+    "year_end": 1017,
     "capital_name": "අනුරාධපුරය",
     "capital_lat": 8.3114,
     "capital_lon": 80.4037,
-    "confidence_score": 0.4,
-    "status": "uncertain",
+    "confidence_score": 0.7,
+    "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
       "coordinates": [
@@ -29455,62 +29455,46 @@
     "ethical_notes": "ETHICS-001: il nome originale e' in singalese. La data di fondazione (-543 a.C.) e' basata sulla tradizione del Mahavamsa e non e' confermata archeologicamente. ETHICS-002: la storia di Sri Lanka e' segnata dalla tensione tra la maggioranza singalese buddhista e la minoranza tamil Hindu, un conflitto con radici storiche profonde. Il Mahavamsa presenta una narrazione etnocentrica che ha influenzato il nazionalismo singalese moderno. ETHICS-003: la rappresentazione di Sri Lanka come 'isola buddhista singalese' ignora la presenza tamil millenaria.",
     "name_variants": [
       {
-        "name": "Sinhalese Kingdom",
-        "lang": "en",
-        "period_start": -543,
-        "period_end": 1815,
-        "context": "denominazione inglese generica (multiple dinastie e capitali)",
-        "source": "De Silva, A History of Sri Lanka (1981)"
-      },
-      {
         "name": "Anuradhapura Kingdom",
         "lang": "en",
-        "period_start": -377,
+        "period_start": -437,
         "period_end": 1017,
-        "context": "periodo della capitale Anuradhapura",
+        "context": "standard English name of the polity (ETHICS-021: #142 was mislabelled with a king's name, මහා විජයබාහු, spanning -543..1815)",
         "source": "De Silva, A History of Sri Lanka (1981)"
       },
       {
-        "name": "Kingdom of Kandy",
-        "lang": "en",
-        "period_start": 1469,
-        "period_end": 1815,
-        "context": "ultimo regno singalese indipendente",
-        "source": "Dewaraja, The Kandyan Kingdom of Sri Lanka (1988)"
+        "name": "Rajarata",
+        "lang": "si",
+        "period_start": -437,
+        "period_end": 1017,
+        "context": "the dry-zone 'king's country' core of the Anuradhapura state",
+        "source": "Gunawardana, Robe and Plough (1979)"
       },
       {
-        "name": "Regno Singalese",
+        "name": "Regno di Anuradhapura",
         "lang": "it",
-        "period_start": -543,
-        "period_end": 1815,
-        "context": "denominazione italiana generica",
-        "source": "Enciclopedia Treccani"
+        "period_start": -437,
+        "period_end": 1017,
+        "context": "denominazione italiana",
+        "source": null
       }
     ],
     "territory_changes": [
       {
-        "year": -543,
-        "region": "Sri Lanka",
+        "year": -437,
+        "region": "Rajarata (Sri Lanka settentrionale)",
         "change_type": "INDEPENDENCE",
-        "description": "Data tradizionale dell'arrivo del principe Vijaya dall'India secondo il Mahavamsa. La fondazione mitologica non e' confermata archeologicamente.",
+        "description": "Convenzione mainstream: Pandukabhaya stabilisce la capitale ad Anuradhapura (~437 a.C.; cronologia corta si.wiki: 377 a.C. — dato conteso, non risolto). L'arrivo del principe Vijaya (Tambapanni, ~543 a.C. secondo il Mahavamsa) e' TRADIZIONE fondativa, non confermata archeologicamente.",
         "population_affected": null,
-        "confidence_score": 0.25
+        "confidence_score": 0.5
       },
       {
         "year": 993,
         "region": "Sri Lanka settentrionale",
         "change_type": "CONQUEST_MILITARY",
-        "description": "I Chola invadono Sri Lanka e conquistano Anuradhapura. Il re singalese fugge a sud. I Chola governano il nord per oltre 75 anni.",
+        "description": "I Chola (Rajaraja I) invadono e saccheggiano Anuradhapura; Rajendra I annette l'intera Rajarata entro il 1017, amministrata come provincia Mummudi-sola-mandalam. Il re Mahinda V catturato, morto in esilio in India (1029).",
         "population_affected": null,
-        "confidence_score": 0.7
-      },
-      {
-        "year": 1815,
-        "region": "Kandy",
-        "change_type": "COLONIZATION",
-        "description": "Convenzione di Kandy: i Britannici annettono l'ultimo regno singalese indipendente. Fine di circa 2300 anni (tradizionali) di monarchia singalese.",
-        "population_affected": null,
-        "confidence_score": 0.85
+        "confidence_score": 0.75
       }
     ],
     "sources": [
