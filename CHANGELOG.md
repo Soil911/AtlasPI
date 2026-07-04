@@ -2,6 +2,35 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.128] - 2026-07-05 (Task 2a: Egitto/Nubia — TIP + Periodo Tardo + restore Meroe, ETHICS-023)
+
+*Chiude il follow-up di ETHICS-022 (split Kemet): le due fasi egizie mancanti come
+entità + il ripristino della fase meroitica, con estensione delle catene 137 e 99.*
+
+- **2 entità-fase NUOVE** (workflow di ricerca + refuter avversariale, verdetti `pass`;
+  cross-check ChatGPT AGREE su tutte le decisioni):
+  - **`tꜣ.wy (Third Intermediate Period)`** −1069..−664 (Q212728, conf 0.62 bassa):
+    fase FRAMMENTATA modellata come una entità solo con garanzie anti-falsa-statualità
+    (note di non-unità esplicite, conf bassa, transizione DISSOLUTION). Agentività
+    kushita (25a din.) nominata (CLAUDE.md #4).
+  - **`tꜣ.wy (Late Period)`** −664..−332 (Q621917, conf 0.82): Saiti + conquiste
+    achemenidi (−525/−343) e macedone (−332) nominate. Sacco assiro di Tebe corretto
+    a **663 a.C.** (cross-check), consolidamento Psamtik I ~656.
+  - Confini INHERITATI da vicini reali (ETHICS-005): TIP ← #1058, Tardo ← #1057.
+- **Ripristino Meroe #552**: era deprecata nel merge v6.85 come falso "duplicato" di
+  Kush #52 (QID condiviso assunto). Un-deprecated come **fase meroitica distinta**
+  (ETHICS-015), `wikidata_qid` null (Q241790 = intero Kush su #52; Q3654 = città).
+  `ethical_notes` prod convergenti al testo pulito JSON + nota di ripristino.
+- **Catene estese**: 137 Old→Middle→New→**(Third Intermediate)**→**(Late Period)**
+  (i collassi ora sono nodi DISSOLUTION, non salti); 99 Kerma→Kush→Napata→**Meroe**
+  (REFORM). Prod: 1006→1008 entità vive, deprecate 47→46.
+- **ETHICS-023** documenta il raffinamento di ETHICS-022 (le fasi di collasso POSSONO
+  essere entità con le garanzie di cui sopra) + i 3 cross-check.
+- Generatore `scripts/apply_task2a_egypt.py` (dual-write strutturale JSON, round-trip
+  indent=2) + `scripts/sql_task2a_egypt.sql` (INSERT+UPDATE+chain_links, guard
+  antimeridiano/contiguità/idempotenza). **Fix**: `boundary_geojson` nel JSON va come
+  DICT (il seed fa `json.dumps`), non stringa — la doppia-codifica rompeva `shape()`.
+
 ## [v6.99.127] - 2026-07-04 (Task 1 ultracode: coda confidence review CHIUSA, 72 entità)
 
 *Chiude l'ultimo pezzo "finibile" di M4: la coda `conf_review_queue.json` (72

@@ -1,0 +1,326 @@
+[
+  {
+    "name_original": "tꜣ.wy (Third Intermediate Period)",
+    "name_original_lang": "egy",
+    "entity_type": "period",
+    "year_start": -1069,
+    "year_end": -664,
+    "capital_name": "Tanis (Djanet)",
+    "capital_lat": 30.9758,
+    "capital_lon": 31.8804,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            29.8,
+            31.45
+          ],
+          [
+            29.3,
+            30.2
+          ],
+          [
+            28.5,
+            28.3
+          ],
+          [
+            28.2,
+            25.4
+          ],
+          [
+            30,
+            22.5
+          ],
+          [
+            30.6,
+            19.6
+          ],
+          [
+            31.6,
+            18.2
+          ],
+          [
+            33.7,
+            19.3
+          ],
+          [
+            33.6,
+            22.2
+          ],
+          [
+            33.9,
+            26
+          ],
+          [
+            32.9,
+            29.4
+          ],
+          [
+            32.4,
+            31.25
+          ],
+          [
+            29.8,
+            31.45
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "confidence_score": 0.62,
+    "status": "confirmed",
+    "ethical_notes": "Modelling five dynasties (21st-25th) spanning ~400 years of politically fragmented Egypt as ONE entity is a periodization simplification: for most of the period Egypt was NOT unified but split between Tanis (Lower Egypt) and the Theban High Priests of Amun (Upper Egypt), later subdivided among competing Libyan-descended (Meshwesh) rulers of the 22nd-24th dynasties. A single \"capital\" (Tanis) is therefore a convenience that erases contemporaneous rival seats (Thebes, Bubastis, Herakleopolis, Sais, Napata). ETHICS-002: the Kushite (Nubian) 25th Dynasty of Piye, Shabaka and Taharqa, ruling from Napata, is not a \"foreign invasion\" to be euphemized as decline — it reversed the earlier New Kingdom Egyptian military conquest and colonial domination of Kush (Nubia), so the \"invaders\" framing common in older Western Egyptology reflects the perspective of the conquered northern elite, not a neutral fact. The period ended through violence by named perpetrators: the Neo-Assyrian empire under Ashurbanipal sacked Thebes in 664 BCE and installed Psamtik I; historiographies conflict on whether the Saite 26th Dynasty represents indigenous \"reunification\" or an Assyrian client-state that only later won independence — both readings are recorded here without arbitration.",
+    "wikidata_qid": "Q212728",
+    "name_variants": [
+      {
+        "name": "tꜣ.wy",
+        "lang": "egy",
+        "context": "Ancient Egyptian self-designation of the land itself, 'The Two Lands' (Upper and Lower Egypt), Egyptological pronunciation 'Tawy'; the polity had no single ancient name for this fragmented era.",
+        "source": "Wikipedia, 'Upper and Lower Egypt' / 'Km (hieroglyph)'"
+      },
+      {
+        "name": "Dritte Zwischenzeit",
+        "lang": "de",
+        "context": "German original of the 'Third Intermediate Period' scholarly convention, whence the English term derives.",
+        "source": "Wikidata Q212728 (German label)"
+      },
+      {
+        "name": "Libyan Period / Libyan anarchy",
+        "lang": "en",
+        "context": "Alternative Egyptological label emphasizing the Libyan-descended (Meshwesh) 22nd-24th dynasties; 'anarchy' is a dated, value-laden term.",
+        "source": "Wikidata Q212728 (also known as)"
+      },
+      {
+        "name": "al-ʿaṣr al-intiqālī al-thālith",
+        "lang": "ar",
+        "context": "Modern Arabic rendering used in Egyptian scholarship and museums for the Third Intermediate Period.",
+        "source": "Arabic Wikipedia, العصر الانتقالي الثالث"
+      },
+      {
+        "name": "Third Intermediate Period of Egypt",
+        "lang": "en",
+        "context": "Standard Egyptological periodization label (21st-25th dynasties, c. 1069-664 BCE); era il name_original inglese, normalizzato alla convenzione tꜣ.wy (X) come i fratelli di catena.",
+        "source": "Metropolitan Museum of Art, Heilbrunn Timeline of Art History"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -1069,
+        "region": "Nile Delta and Nile Valley (Egypt)",
+        "change_type": "FOUNDING",
+        "description": "Accession of Smendes I at Tanis after the death of Ramesses XI ends the New Kingdom's 20th Dynasty; central authority fractures between Tanis (Lower Egypt) and the Theban High Priests of Amun (Upper Egypt), inaugurating the Third Intermediate Period.",
+        "population_affected": null,
+        "confidence_score": 0.62
+      },
+      {
+        "year": -945,
+        "region": "Lower Egypt (Bubastis)",
+        "change_type": "RESTORATION",
+        "description": "Sheshonq I, a ruler of Libyan (Meshwesh) descent from Bubastis, founds the 22nd Dynasty and briefly re-establishes direct control over most of Egypt, before renewed fragmentation into the 23rd and 24th dynasties.",
+        "population_affected": null,
+        "confidence_score": 0.62
+      },
+      {
+        "year": -728,
+        "region": "Egypt and Nubia (Kush)",
+        "change_type": "CONQUEST",
+        "description": "The Kushite (Nubian) king Piye (Piankhi) of Napata campaigns north and subdues the Delta rulers, uniting Egypt under the 25th Dynasty; this reverses the earlier New Kingdom Egyptian conquest and domination of Kush. Date c.728 BCE per Piye's Victory Stela; Kushite control over Upper Egypt began earlier under Kashta.",
+        "population_affected": null,
+        "confidence_score": 0.62
+      },
+      {
+        "year": -664,
+        "region": "Egypt (Thebes, Memphis, Sais)",
+        "change_type": "CONQUEST",
+        "description": "The Neo-Assyrian empire under Ashurbanipal sacks Thebes in 663 BCE and expels the Kushite Tantamani; Psamtik I is installed at Sais and founds the Saite 26th Dynasty, ending the Third Intermediate Period and later reunifying Egypt independently.",
+        "population_affected": null,
+        "confidence_score": 0.62
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Kitchen, Kenneth A. (1996). The Third Intermediate Period in Egypt (1100-650 BC). 3rd ed. Warminster: Aris & Phillips. (The foundational chronological study of the period.)",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Metropolitan Museum of Art, Heilbrunn Timeline of Art History, 'Egypt in the Third Intermediate Period (ca. 1070-664 B.C.).'",
+        "url": "https://www.metmuseum.org/essays/egypt-in-the-third-intermediate-period-1070-712-b-c",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Wikidata, 'Third Intermediate Period of Egypt' (Q212728), instance of periodization, 1069-664 BCE. Confirms the correct Q-id (hint Q1189047 is 'romantic love' and is incorrect).",
+        "url": "https://www.wikidata.org/wiki/Q212728",
+        "source_type": "secondary"
+      },
+      {
+        "citation": "Taylor, John H. (2000). 'The Third Intermediate Period (1069-664 BC)', in Ian Shaw (ed.), The Oxford History of Ancient Egypt. Oxford: Oxford University Press, pp. 330-368.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Piye Victory Stela (Gebel Barkal, Napata), c. 727 BCE, Egyptian Museum Cairo JE 48862 — primary royal inscription documenting the Kushite conquest of Egypt and founding of the 25th Dynasty.",
+        "url": null,
+        "source_type": "primary"
+      }
+    ]
+  },
+  {
+    "name_original": "tꜣ.wy (Late Period)",
+    "name_original_lang": "egy",
+    "entity_type": "period",
+    "year_start": -664,
+    "year_end": -332,
+    "capital_name": "Sais (Zau)",
+    "capital_lat": 30.9666,
+    "capital_lon": 30.7693,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            30.4,
+            31.35
+          ],
+          [
+            32.35,
+            31.1
+          ],
+          [
+            32.6,
+            29.5
+          ],
+          [
+            33.3,
+            25.9
+          ],
+          [
+            32.95,
+            24
+          ],
+          [
+            31.3,
+            21.45
+          ],
+          [
+            30.6,
+            21.45
+          ],
+          [
+            31,
+            23.9
+          ],
+          [
+            30.4,
+            26.2
+          ],
+          [
+            29.85,
+            29.2
+          ],
+          [
+            30.2,
+            30.5
+          ],
+          [
+            30.4,
+            31.35
+          ]
+        ]
+      ]
+    },
+    "boundary_source": "historical_approximation",
+    "confidence_score": 0.82,
+    "status": "confirmed",
+    "ethical_notes": "The period was defined by two foreign conquests that must be named as such, not smoothed over. In 525 BCE the Achaemenid king Cambyses II defeated Psamtik III at Pelusium, sacked Memphis and imposed direct Persian rule (27th Dynasty); Greek sources (Herodotus) portray Cambyses as a desecrator of Egyptian temples and animal cults, though modern scholarship (e.g. the Udjahorresnet inscription) argues this hostile image is partly propaganda — both readings should stand. In 343 BCE Artaxerxes III reconquered Egypt by force, expelling the last native pharaoh Nectanebo II, and ancient tradition again accuses the Persians of temple violence. The Saite capital Sais was itself the seat of an Egyptianized Libyan-descended dynasty, so \"native\" restoration here is a matter of degree; population figures for this era are not reliably attested and are given as null rather than invented.",
+    "wikidata_qid": "Q621917",
+    "name_variants": [
+      {
+        "name": "km.t",
+        "lang": "egy",
+        "context": "Kemet, 'the Black Land', the most common ancient Egyptian self-designation for the country (fertile Nile soil), transliterated km.t",
+        "source": "Wikipedia, 'Km and Km.t (Kemet) (hieroglyphs)'; British Museum / standard Egyptological usage"
+      },
+      {
+        "name": "Late Period of ancient Egypt",
+        "lang": "en",
+        "context": "Standard Egyptological label for the 26th-31st Dynasties, c. 664-332 BCE",
+        "source": "Metropolitan Museum of Art, 'Egypt in the Late Period (ca. 664-332 B.C.)'"
+      },
+      {
+        "name": "Mudrāya (𐎸𐎭𐎼𐎠𐎹)",
+        "lang": "peo",
+        "context": "Old Persian name for the Egyptian satrapy under Achaemenid rule (27th and 31st Dynasties)",
+        "source": "Achaemenid royal inscriptions (Behistun/DNa); Wikipedia 'Late Period of ancient Egypt'"
+      },
+      {
+        "name": "Saïs (Σάϊς)",
+        "lang": "grc",
+        "context": "Ancient Greek name of the Saite-dynasty capital, from which the '26th (Saite) Dynasty' takes its name",
+        "source": "Herodotus, Histories; EES resource on Sais"
+      }
+    ],
+    "territory_changes": [
+      {
+        "year": -664,
+        "region": "Egypt (Nile valley and Delta)",
+        "change_type": "RESTORATION",
+        "description": "Psamtik I of Sais reunified Egypt under a native (Egyptianized Libyan-descended) dynasty, ending the Nubian 25th Dynasty and casting off Neo-Assyrian overlordship; opens the Saite renaissance and the Late Period.",
+        "population_affected": null,
+        "confidence_score": 0.82
+      },
+      {
+        "year": -525,
+        "region": "Egypt",
+        "change_type": "CONQUEST",
+        "description": "The Achaemenid king Cambyses II defeated Psamtik III at the Battle of Pelusium, captured Memphis, and annexed Egypt as a Persian satrapy (First Persian Period / 27th Dynasty).",
+        "population_affected": null,
+        "confidence_score": 0.82
+      },
+      {
+        "year": -343,
+        "region": "Egypt",
+        "change_type": "OCCUPATION",
+        "description": "Artaxerxes III (Ochus) reconquered Egypt by force, driving out the last native pharaoh Nectanebo II and re-establishing Persian rule (Second Persian Period / 31st Dynasty).",
+        "population_affected": null,
+        "confidence_score": 0.82
+      },
+      {
+        "year": -332,
+        "region": "Egypt",
+        "change_type": "CONQUEST",
+        "description": "Alexander III of Macedon took Egypt from the Achaemenid satrap Mazaces without a battle, ending Persian rule and the Late Period; Egypt passes to Argead/Ptolemaic Macedonian control.",
+        "population_affected": null,
+        "confidence_score": 0.82
+      }
+    ],
+    "sources": [
+      {
+        "citation": "The Metropolitan Museum of Art, 'Egypt in the Late Period (ca. 664-332 B.C.)', Heilbrunn Timeline of Art History.",
+        "url": "https://www.metmuseum.org/essays/egypt-in-the-late-period-ca-712-332-b-c",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Lloyd, A. B., 'The Late Period (664-332 BC)', in I. Shaw (ed.), The Oxford History of Ancient Egypt, Oxford University Press, 2000.",
+        "url": null,
+        "source_type": "academic"
+      },
+      {
+        "citation": "Herodotus, Histories, Book II (Euterpe) and Book III, on Saite Egypt and Cambyses' conquest.",
+        "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0126",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Wikidata item Q621917, 'Late Period of ancient Egypt' (instance of periodization; start time 664 BCE, end time 332 BCE).",
+        "url": "https://www.wikidata.org/wiki/Q621917",
+        "source_type": "secondary"
+      },
+      {
+        "citation": "Twenty-sixth Dynasty of Egypt / Late Period of ancient Egypt, Wikipedia (dynastic sequence, Sais as Saite capital, Persian periods).",
+        "url": "https://en.wikipedia.org/wiki/Late_Period_of_ancient_Egypt",
+        "source_type": "secondary"
+      }
+    ]
+  }
+]

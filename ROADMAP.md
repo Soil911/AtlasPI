@@ -62,9 +62,13 @@ estensioni, ETHICS-017; 2026-07-02). Residuo M1:
 - ~~Split Kemet #26~~ ✅ **FATTO in v6.99.122** (ETHICS-022: #26 empire→civilization
   ombrello; 4 entità-periodo tꜣ.wy Old/Middle/New + Πτολεμαϊκὴ βασιλεία; 16 eventi
   ri-organizzati con agentività kushita/persiana aggiunta; catena 3 Regni).
-- Residuo split: dedup trunk etiope (#22/#100 + entità #853 dup di #51); ripristino
-  #552 Meroe (deprecata nel merge v6.85, in realtà entità-fase) per la catena #99;
-  follow-up ETHICS-022 (Terzo Periodo Intermedio, Periodo Tardo, Egitto achemenide).
+- ~~Ripristino #552 Meroe + follow-up ETHICS-022 (TIP, Periodo Tardo)~~ ✅ **FATTO in
+  v6.99.128** (Task 2a, ETHICS-023: 2 entità-fase `tꜣ.wy (Third Intermediate)` +
+  `(Late Period)` con conf onesta 0.62/0.82; Meroe #552 un-deprecated come fase
+  meroitica; catene 137 e 99 estese; cross-check ChatGPT AGREE).
+- Residuo split: dedup trunk etiope (#22/#100 + entità #853 dup di #51); dedup
+  Ptolemaico #178/#1059 (creato nel Kemet split). Follow-up ETHICS-020 in corso
+  (Task 2b/c/d): PRK+Stato Cambogia, Serbia moderna, Eritrea italiana.
 - ~~Flag qualità da B1c: rename #534 e verifica #240~~ ✅ **FATTI in v6.99.118**
   (ETHICS-019: #240 → `កម្ពុជាប្រជាធិបតេយ្យ` Kampuchea Democratica + QID Q330988;
   #534 → `Anpi an Ayiti`, entity_type=empire, variante `Empire d'Haïti`).

@@ -1,6 +1,6 @@
 [
   {
-    "name": "Nile Valley / Kush dynastic trunk: Kerma → Kush → Napata",
+    "name": "Nile Valley / Kush dynastic trunk: Kerma → Kush → Napata → Meroe",
     "name_lang": "en",
     "chain_type": "SUCCESSION",
     "region": "Nile Valley / Nubia / Northeast Africa",
@@ -47,6 +47,14 @@
         "transition_type": "REFORM",
         "is_violent": false,
         "description": "After Assyrian invasions drove Kushite rulers from Egypt (664 BCE) and the Egyptian pharaoh Psamtik II sacked Napata itself (593 BCE), the political and economic center shifted south to Meroe. This transition marks the beginning of the distinctly Meroitic phase of Kushite civilization."
+      },
+      {
+        "entity_name": "Meroe",
+        "transition_year": -300,
+        "transition_type": "REFORM",
+        "is_violent": false,
+        "description": "The Kushite kingdom's primary royal, political and burial focus shifted south toward Meroe (Begrawiya) by c. 300 BCE (Meroe was already significant earlier, and Napata retained religious weight); the Meroitic period developed its own script, large-scale iron industry and the ruling Kandake (Candace) queens, and the kingdom endured until its conquest by Aksum c. 350 CE.",
+        "ethical_notes": "Restored as a distinct Meroitic phase-entity (ETHICS-015/023) after being wrongly deprecated as a duplicate of Kush in v6.85; the earlier merge conflated the Meroitic phase with the umbrella Kingdom of Kush (#52, Q241790)."
       }
     ]
   }

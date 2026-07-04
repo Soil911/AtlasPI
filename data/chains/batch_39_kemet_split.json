@@ -1,6 +1,6 @@
 [
   {
-    "name": "Egyptian pharaonic kingdoms: tꜣ.wy (Old) → (Middle) → (New)",
+    "name": "Egyptian pharaonic kingdoms: tꜣ.wy (Old) → (Middle) → (New) → (Third Intermediate) → (Late Period)",
     "name_lang": "en",
     "chain_type": "SUCCESSION",
     "region": "Northeast Africa / Nile Valley (Egypt)",
@@ -43,6 +43,22 @@
         "description": "Ahmose I expelled the Hyksos and founded the New Kingdom (18th-20th Dynasties, c. -1550..-1069), the era of the Egyptian Empire in Nubia and the Levant.",
         "ethical_notes": "The SECOND INTERMEDIATE PERIOD (c. -1650..-1550), during which the Levantine Hyksos (15th Dynasty) ruled Lower Egypt as a FOREIGN power, intervened between the Middle and New Kingdoms. RESTORATION marks that interruption; Ahmose's expulsion of the Hyksos was a war of conquest.",
         "entity_name": "tꜣ.wy (New Kingdom)"
+      },
+      {
+        "entity_name": "tꜣ.wy (Third Intermediate Period)",
+        "transition_year": -1069,
+        "transition_type": "DISSOLUTION",
+        "is_violent": false,
+        "description": "The death of Ramesses XI and accession of Smendes I at Tanis (c. 1069 BCE) ended the New Kingdom and opened four centuries of political fragmentation: Tanite pharaohs of the 21st Dynasty in the north shared power with the Theban High Priests of Amun, and Libyan-descended (Meshwesh) dynasties (22nd-24th) later ruled competing seats.",
+        "ethical_notes": "Modelling ~400 years of a divided Egypt (21st-25th dynasties) as one chain node is a periodization convenience; the entity record documents the fragmentation and the Kushite 25th Dynasty's reversal of the New Kingdom's earlier domination of Nubia."
+      },
+      {
+        "entity_name": "tꜣ.wy (Late Period)",
+        "transition_year": -664,
+        "transition_type": "RESTORATION",
+        "is_violent": true,
+        "description": "After the Neo-Assyrian sack of Thebes (663 BCE) under Ashurbanipal, Psamtik I of Sais opened the Late Period (26th Saite Dynasty, native Egyptianized Libyan-descended), consolidating an independent reunified Egypt by c. 656 BCE; it ended with the Achaemenid (525, 343 BCE) and Macedonian (332 BCE) conquests.",
+        "ethical_notes": "is_violent=true: the reunification followed the Assyrian sack of Thebes; historiographies differ on whether the Saite dynasty was an indigenous restoration or an Assyrian client that later won independence — both readings are recorded on the entity."
       }
     ]
   }
