@@ -2,6 +2,27 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.132] - 2026-07-05 (Task 3: enrichment S55 — 10 polity sotto-sourced, +45 fonti)
+
+*Batch di enrichment ultracode sul collo di bottiglia della copertura: 10 stati
+ben-documentati ma con sole 2-3 fonti, confidence calibrata onestamente.*
+
+- **Workflow `enrich-s55`**: 1 agente-ricerca per entità (fonti academic/primary
+  verificate, NON duplicando le esistenti) + 1 refuter avversariale che controlla che
+  OGNI fonte sia REALE e che la confidence sia onesta (ETHICS-013). 20 agenti.
+  **0 fonti fabbricate** trovate dal refuter (batch pulito).
+- **10 entità, +45 fonti verificate**, confidence calibrata (NON uniforme):
+  Kanva #381 0.45→0.72 (+mosso da disputed→confirmed: la dinastia non è territorio
+  conteso), Granducato di Finlandia #427 0.5→0.85, Sultanato di Tidore #685 0.55→0.62,
+  Regno di Lombok #707 0.55→0.72, Regno di Karagwe #733 0.55→0.68, Emirato di Harar
+  #746 0.55→0.70, Regno di Jimma #834 0.55→0.82, Waithali/Vesālī #874 0.5→0.68,
+  Sultanato di Perlak #886 0.49→0.54 (uncertain: attestato solo dal XIII sec.),
+  Antico Pahang #903 0.4→0.68.
+- **ETHICS-002** nei notes: conquiste/tratta schiavi/russificazione nominate
+  (Jimma tratta oromo, Finlandia russificazione di Bobrikov, Kanva colpo di palazzo).
+- Spec `data/fixes/enrichment_s55.json` + `scripts/apply_enrichment.py` (dual-write JSON
+  + SQL idempotente) + `scripts/build_enrich_s55_spec.py`. Suite 1293 verde.
+
 ## [v6.99.131] - 2026-07-05 (Task 2d: Eritrea — Colonia Eritrea + catena Medri Bahri, ETHICS-026)
 
 *Chiude Task 2 (follow-up ETHICS-019/020/022): l'ultima entità-sblocco flaggata.*

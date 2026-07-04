@@ -964,7 +964,7 @@
     "capital_name": "Helsinki",
     "capital_lat": 60.1699,
     "capital_lon": 24.9384,
-    "confidence_score": 0.5,
+    "confidence_score": 0.85,
     "status": "confirmed",
     "boundary_geojson": {
       "type": "MultiPolygon",
@@ -1107,7 +1107,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS-001: Finnish name used as primary. The Swedish name Storfurstendoet Finland reflects the Swedish-speaking minority's perspective and the legacy of centuries of Swedish rule prior to Russian acquisition. ETHICS-002: Finland was transferred from Sweden to Russia by military conquest (Treaty of Fredrikshamn 1809) without consulting the Finnish population. However, the Grand Duchy enjoyed considerable autonomy within the Russian Empire, and Finnish national identity crystallized during this period. Russian Russification policies in the late 19th century suppressed Finnish autonomy.\n\n[v6.7.2] boundary precedente era un mismatch geografico (polygon >10x l'estensione storica attesa). Sostituito con name_seeded_boundary ancorato alla capital. Vedi ETHICS-006.",
+    "ethical_notes": "ETHICS-001: Finnish name used as primary. The Swedish name Storfurstendoet Finland reflects the Swedish-speaking minority's perspective and the legacy of centuries of Swedish rule prior to Russian acquisition. ETHICS-002: Finland was transferred from Sweden to Russia by military conquest (Treaty of Fredrikshamn 1809) without consulting the Finnish population. However, the Grand Duchy enjoyed considerable autonomy within the Russian Empire, and Finnish national identity crystallized during this period. Russian Russification policies in the late 19th century suppressed Finnish autonomy.\n\n[v6.7.2] boundary precedente era un mismatch geografico (polygon >10x l'estensione storica attesa). Sostituito con name_seeded_boundary ancorato alla capital. Vedi ETHICS-006.\n\n[S55-enrich] The Grand Duchy of Finland was created when Russia annexed the territory from Sweden through military conquest in the Finnish War of 1808-1809 (Treaty of Fredrikshamn, 1809); the Diet of Porvoo secured a conditional autonomy under the tsar rather than the treaty-between-equals later claimed by Finnish nationalists (Jussila, Hentilä & Nevakivi). From 1899 to 1917 the imperial government under Governor-General Bobrikov pursued a coercive Russification campaign that suspended Finnish laws and sought to erode Finnish autonomy, language, and self-government, as documented by Polvinen and by the contributors to Thaden's edited volume.",
     "name_variants": [
       {
         "name": "Grand Duchy of Finland",
@@ -1162,6 +1162,31 @@
         "citation": "Kirby, David. A Concise History of Finland. Cambridge University Press, 2006",
         "source_type": "academic",
         "url": null
+      },
+      {
+        "citation": "Polvinen, Tuomo. Imperial Borderland: Bobrikov and the Attempted Russification of Finland, 1898-1904. Translated by Steven Huxley. Durham, NC: Duke University Press, 1995.",
+        "url": "https://www.dukeupress.edu/imperial-borderland",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Thaden, Edward C. (ed.). Russification in the Baltic Provinces and Finland, 1855-1914. Princeton, NJ: Princeton University Press, 1981.",
+        "url": "https://press.princeton.edu/books/hardcover/9780691642802/russification-in-the-baltic-provinces-and-finland-1855-1914",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Jussila, Osmo; Hentilä, Seppo & Nevakivi, Jukka. From Grand Duchy to a Modern State: A Political History of Finland Since 1809. London: Hurst & Co., 1999.",
+        "url": "https://www.hurstpublishers.com/book/from-grand-duchy-to-modern-state/",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Treaty of Fredrikshamn (Treaty of Hamina), signed 17 September 1809, between the Russian Empire and the Kingdom of Sweden, ceding Finland to Russia and establishing the basis of the autonomous Grand Duchy.",
+        "url": null,
+        "source_type": "primary"
+      },
+      {
+        "citation": "Snellman, Alex & Kalleinen, Kristiina. \"Introduction: Finland in Imperial Context.\" Journal of Finnish Studies, vol. 25, no. 2 (2022), pp. 143-153.",
+        "url": "https://scholarlypublishingcollective.org/uip/jfs/article/25/2/143/351680",
+        "source_type": "academic"
       }
     ],
     "boundary_source": "approximate_circle",

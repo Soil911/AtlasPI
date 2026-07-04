@@ -850,8 +850,8 @@
     "capital_name": "Pataliputra (पाटलिपुत्र)",
     "capital_lat": 25.61,
     "capital_lon": 85.14,
-    "confidence_score": 0.45,
-    "status": "disputed",
+    "confidence_score": 0.72,
+    "status": "confirmed",
     "boundary_geojson": {
       "type": "Polygon",
       "coordinates": [
@@ -923,7 +923,7 @@
         ]
       ]
     },
-    "ethical_notes": "ETHICS: The Kanva dynasty is known almost exclusively from Puranic genealogies, with virtually no epigraphic or archaeological evidence. Their existence is accepted by most historians but the details are highly uncertain. The low confidence score reflects this near-total dependence on later textual compilations rather than contemporary sources. Representing them at all is a historiographic choice -- they illustrate how Puranic traditions preserved dynastic memory even when other sources are absent.",
+    "ethical_notes": "ETHICS: The Kanva dynasty is known almost exclusively from Puranic genealogies, with virtually no epigraphic or archaeological evidence. Their existence is accepted by most historians but the details are highly uncertain. The low confidence score reflects this near-total dependence on later textual compilations rather than contemporary sources. Representing them at all is a historiographic choice -- they illustrate how Puranic traditions preserved dynastic memory even when other sources are absent.\n\n[S55-enrich] The Kanva dynasty originated in a palace coup: Vasudeva Kanva, a Brahmin minister, assassinated the last Shunga emperor Devabhuti and usurped the throne (c. 73 BCE), as recorded in the Puranic dynastic lists edited by Pargiter (1913). The dynasty was itself extinguished by force around 28 BCE when the Satavahana (Andhra) king slew the final Kanva ruler Susarman, ending Magadhan imperial continuity (Thapar 2002). These are dynastic-succession killings and conquest, not smooth transfers of power, and should be stated as such.",
     "name_variants": [
       {
         "name": "Kanva Dynasty",
@@ -970,6 +970,26 @@
         "citation": "Raychaudhuri, H.C. Political History of Ancient India: From the Accession of Parikshit to the Extinction of the Gupta Dynasty. University of Calcutta, 1923",
         "source_type": "academic",
         "url": null
+      },
+      {
+        "citation": "Pargiter, F. E. (ed.). The Purāṇa Text of the Dynasties of the Kali Age, with Introduction, Translation, and Notes. Oxford: Humphrey Milford / Oxford University Press, 1913.",
+        "url": "https://archive.org/details/in.ernet.dli.2015.22906",
+        "source_type": "primary"
+      },
+      {
+        "citation": "Thapar, Romila. The Penguin History of Early India: From the Origins to AD 1300. London: Penguin Books, 2002 (ch. 7–8 on the post-Mauryan Shunga–Kanva–Satavahana transition).",
+        "url": "https://books.google.com/books/about/The_Penguin_History_of_Early_India.html?id=gyiqZKDlSBMC",
+        "source_type": "academic"
+      },
+      {
+        "citation": "Majumdar, R. C. (ed.). The Age of Imperial Unity (The History and Culture of the Indian People, Vol. II). Bombay: Bharatiya Vidya Bhavan, 1951 (section on the Sungas and Kanvas).",
+        "url": "https://archive.org/details/dli.ernet.544243",
+        "source_type": "academic"
+      },
+      {
+        "citation": "\"Kanva dynasty.\" Encyclopædia Britannica (entry on the Brahmin Magadhan dynasty, c. 73–28 BCE, founded by Vasudeva after overthrowing the Shungas).",
+        "url": "https://www.britannica.com/topic/Kanva-dynasty",
+        "source_type": "secondary"
       }
     ],
     "boundary_source": "historical_map"
