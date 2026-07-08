@@ -781,6 +781,20 @@ def analyze_geometric_bugs(db, existing_titles: set[str]) -> int:
         "aourednik_curated",
     }
 
+    # Groups of entity ids that legitimately share one polygon and have been
+    # reviewed as NON-bugs, even though a member carries a raw source
+    # (natural_earth / aourednik / None). Suppress a shared-polygon group when
+    # its owner-id set is a subset of any reviewed group. Mirrors the intent of
+    # MANUALLY_CURATED_IDS but at the group level. See ETHICS-027.
+    REVIEWED_LEGITIMATE_SHARED_GROUPS: list[frozenset[int]] = [
+        # Cambodia: successive states occupying the SAME (stable-since-1953)
+        # national territory. #256 modern Kingdom (natural_earth KHM) is the
+        # legitimate anchor; #1062 People's Republic of Kampuchea (1979-89) and
+        # #1063 State of Cambodia (1989-93) correctly inherit identical borders.
+        # Perturbing them would be false precision, not a fix. See ETHICS-027.
+        frozenset({256, 1062, 1063}),
+    ]
+
     count = 0
     suspects: list[dict] = []
 
@@ -860,6 +874,11 @@ def analyze_geometric_bugs(db, existing_titles: set[str]) -> int:
     #    duplicates are suppressed — see ETHICS-014.
     shared_polygons = {h: ids for h, ids in boundary_owners.items() if len(ids) > 1}
     for h, ids in shared_polygons.items():
+        # Reviewed-legitimate co-location (successive states on identical
+        # borders, etc.) — suppress before the actionable-member scan.
+        id_set = frozenset(ids)
+        if any(id_set <= grp for grp in REVIEWED_LEGITIMATE_SHARED_GROUPS):
+            continue
         actionable_member = False
         for eid in ids:
             ent = ent_by_id.get(eid)

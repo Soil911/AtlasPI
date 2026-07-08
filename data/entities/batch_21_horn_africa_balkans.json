@@ -13,123 +13,51 @@
       "coordinates": [
         [
           [
-            36.42951,
-            14.42211
+            38.3,
+            15.7
           ],
           [
-            36.32322,
-            14.82249
+            38.9,
+            15.85
           ],
           [
-            36.75389,
-            16.29186
+            39.35,
+            15.6
           ],
           [
-            36.85253,
-            16.95655
+            39.6,
+            15.1
           ],
           [
-            37.16747,
-            17.26314
+            39.45,
+            14.65
           ],
           [
-            37.904,
-            17.42754
+            39.0,
+            14.35
           ],
           [
-            38.41009,
-            17.998307
+            38.55,
+            14.4
           ],
           [
-            38.990623,
-            16.840626
+            38.25,
+            14.9
           ],
           [
-            39.26611,
-            15.922723
+            38.2,
+            15.35
           ],
           [
-            39.814294,
-            15.435647
-          ],
-          [
-            41.179275,
-            14.49108
-          ],
-          [
-            41.734952,
-            13.921037
-          ],
-          [
-            42.276831,
-            13.343992
-          ],
-          [
-            42.589576,
-            13.000421
-          ],
-          [
-            43.081226,
-            12.699639
-          ],
-          [
-            42.779642,
-            12.455416
-          ],
-          [
-            42.35156,
-            12.54223
-          ],
-          [
-            42.00975,
-            12.86582
-          ],
-          [
-            41.59856,
-            13.45209
-          ],
-          [
-            41.1552,
-            13.77333
-          ],
-          [
-            40.8966,
-            14.11864
-          ],
-          [
-            40.02625,
-            14.51959
-          ],
-          [
-            39.34061,
-            14.53155
-          ],
-          [
-            39.0994,
-            14.74064
-          ],
-          [
-            38.51295,
-            14.50547
-          ],
-          [
-            37.90607,
-            14.95943
-          ],
-          [
-            37.59377,
-            14.2131
-          ],
-          [
-            36.42951,
-            14.42211
+            38.3,
+            15.7
           ]
         ]
       ]
     },
     "confidence_score": 0.6,
     "status": "uncertain",
-    "ethical_notes": "Medri Bahri ('Land of the Sea' in Tigrinya) occupied roughly the territory of modern Eritrea. Its history is often subsumed into Ethiopian imperial narratives, obscuring its distinct political identity. The kingdom's rulers (Bahr Negash, 'Kings of the Sea') maintained varying degrees of independence from the Ethiopian Solomonic dynasty. Ottoman, Portuguese, and Egyptian interference further complicates sovereignty claims. Eritrean nationalist historiography emphasizes Medri Bahri's independence as evidence of a distinct Eritrean political tradition, while Ethiopian historiography treats it as a vassal province. Both perspectives must be represented.",
+    "ethical_notes": "Medri Bahri ('Land of the Sea' in Tigrinya) occupied roughly the territory of modern Eritrea. Its history is often subsumed into Ethiopian imperial narratives, obscuring its distinct political identity. The kingdom's rulers (Bahr Negash, 'Kings of the Sea') maintained varying degrees of independence from the Ethiopian Solomonic dynasty. Ottoman, Portuguese, and Egyptian interference further complicates sovereignty claims. Eritrean nationalist historiography emphasizes Medri Bahri's independence as evidence of a distinct Eritrean political tradition, while Ethiopian historiography treats it as a vassal province. Both perspectives must be represented.\n\n[2026-07-08 boundary correction, v6.99.133 / ETHICS-027] The stored boundary was previously the modern Eritrea national outline (Natural Earth ISO 'ERI'), auto-assigned by country-code matching — an anachronism (20th-century colonial-derived borders) and byte-identical to the later Colonia Eritrea #1067 polygon. It has been replaced with an approximate reconstruction of the highland core (Hamasien, Serae, Akele Guzai — the plateau between the Mareb River and the coastal escarpment), consistent with this record's own territory_changes: the western lowlands (Barka/Gash; Beja, Kunama, Nara peoples) lay outside the Christian highland kingdom, and the Red Sea coast (Massawa, Arkiko) was taken by the Ottomans in 1557. The nationalist reading of Medri Bahri as coextensive with modern Eritrea and the Ethiopian reading of it as a highland vassal province both remain documented above; the geometry is a low-confidence (0.6) approximation of the durably-controlled core, not an adjudication of the maximal territorial claim.",
     "name_variants": [
       {
         "name": "Medri Bahri",
@@ -195,8 +123,8 @@
         "url": null
       }
     ],
-    "boundary_source": "natural_earth",
-    "boundary_ne_iso_a3": "ERI",
+    "boundary_source": "historical_approximation",
+    "boundary_ne_iso_a3": null,
     "boundary_aourednik_name": null,
     "boundary_aourednik_year": null,
     "boundary_aourednik_precision": null

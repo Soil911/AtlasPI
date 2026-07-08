@@ -2,6 +2,27 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.133] - 2026-07-08 (AI Co-Founder: fix suggestion #94/#95 — confine Medri Bahri + relink FIP, ETHICS-027)
+
+*Daily run del co-founder: implementate 2 suggestion ACCEPTED. Distinti 1 bug reale,
+1 falso positivo e 1 deriva JSON↔prod.*
+
+- **Medri Bahri #658 (bug reale)**: confine `natural_earth` ERI (Eritrea moderna,
+  anacronistico + byte-identico a Colonia Eritrea #1067) → **approssimazione nucleo
+  d'altopiano** (~19k km² vs ~121k, esclude bassopiani occidentali e costa ottomana
+  post-1557, coerente con le `territory_changes` del record). `historical_approximation`,
+  `boundary_ne_iso_a3=NULL`, conf 0.6 invariata. Note esistenti (lettura nazionalista
+  eritrea + etiope) preservate; appesa nota di provenienza. Vedi ETHICS-027 §1.
+- **Cambogia #256/#1062/#1063 (falso positivo)**: share **legittimo** (RPK 1979-89 e
+  Stato di Cambogia 1989-93 su confini nazionali stabili dal 1953). Aggiunto allowlist
+  `REVIEWED_LEGITIMATE_SHARED_GROUPS` in `ai_cofounder_analyze.py`; nessuna modifica
+  geometrica. Vedi ETHICS-027 §2.
+- **Evento #424 First Intermediate Period (deriva JSON↔prod)**: link ri-puntato da
+  #1057 Middle Kingdom (post-datava l'evento) a **#26 Kemet** (-3100..-30), risolvendo
+  il `temporal_mismatch` e riconciliando prod↔JSON (il JSON linkava già "Kemet").
+  Vedi ETHICS-027 §3.
+- Backup pre-modifica: `/root/atlaspi-backup-cofounder-20260708-101139.sql`.
+
 ## [v6.99.132] - 2026-07-05 (Task 3: enrichment S55 — 10 polity sotto-sourced, +45 fonti)
 
 *Batch di enrichment ultracode sul collo di bottiglia della copertura: 10 stati
