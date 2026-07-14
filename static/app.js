@@ -279,6 +279,8 @@ function restoreUrlState() {
       input.value = state.year;
       era.value = 'ad';
     }
+    // v6.99.135: input → aggiorna il fill accent dello slider (deep-link ?year=)
+    slider.dispatchEvent(new Event('input', { bubbles: true }));
     changed = true;
   }
 
@@ -2355,6 +2357,22 @@ function bindEvents() {
     });
   }
 
+  // v6.99.135 (affordance A/B/C): aggiorna il fill accent, e alla prima
+  // interazione toglie pulse+hint. updateSliderFill/dismissSliderHint sotto.
+  function updateSliderFill() {
+    const min = +yearSlider.min, max = +yearSlider.max, val = +yearSlider.value;
+    const pct = max > min ? ((val - min) / (max - min)) * 100 : 0;
+    yearSlider.style.setProperty('--fill', pct.toFixed(2) + '%');
+  }
+  let sliderHintDismissed = false;
+  function dismissSliderHint() {
+    if (sliderHintDismissed) return;
+    sliderHintDismissed = true;
+    yearSlider.classList.remove('tb-hint');
+    const hint = document.getElementById('slider-hint');
+    if (hint) hint.classList.add('dismissed');
+  }
+
   yearSlider.addEventListener('input', () => {
     const val = +yearSlider.value;
     yearDisplay.textContent = fmtY(val);
@@ -2366,7 +2384,15 @@ function bindEvents() {
       yearEra.value = 'ad';
     }
     syncActiveEraChip(val);
+    updateSliderFill();
   });
+  // B/C: la prima interazione diretta sullo slider spegne pulse + hint
+  yearSlider.addEventListener('pointerdown', dismissSliderHint);
+  yearSlider.addEventListener('keydown', dismissSliderHint);
+  // B/C: mostra il richiamo all'ingresso, poi auto-spegni dopo 8s
+  yearSlider.classList.add('tb-hint');
+  updateSliderFill();
+  setTimeout(dismissSliderHint, 8000);
   yearSlider.addEventListener('change', () => {
     applyFilters();
     pushUrlState();
@@ -2383,6 +2409,8 @@ function bindEvents() {
     val = Math.max(-4500, Math.min(2025, val));
     yearSlider.value = val;
     yearDisplay.textContent = fmtY(val);
+    updateSliderFill();      // v6.99.135: sync fill (input non viene dispatchato qui)
+    dismissSliderHint();     // v6.99.135: l'utente ha interagito → via il richiamo
     applyFilters();
     pushUrlState();
     if (eventsOverlayEnabled) renderEventsOverlay();
@@ -2396,6 +2424,7 @@ function bindEvents() {
   // v6.50: .era-chips replaces .year-presets (narrative preset buttons)
   document.querySelectorAll('.year-presets button, .era-chip').forEach(btn => {
     btn.addEventListener('click', () => {
+      dismissSliderHint();   // v6.99.135: interazione via chip → via il richiamo
       const val = parseInt(btn.dataset.year, 10);
       yearSlider.value = val;
       yearDisplay.textContent = fmtY(val);

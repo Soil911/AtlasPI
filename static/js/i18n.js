@@ -13,7 +13,11 @@
 (function() {
   'use strict';
 
-  window.lang = localStorage.getItem('atlaspi-lang') || 'it';
+  // Default lingua: preferenza salvata > lingua del browser (solo se italiano)
+  // > inglese. Il pubblico target è internazionale, quindi EN è il default per
+  // tutti tranne chi ha il browser in italiano. Vedi v6.99.135.
+  window.lang = localStorage.getItem('atlaspi-lang') ||
+    ((navigator.language || 'en').toLowerCase().startsWith('it') ? 'it' : 'en');
 
   window.I18N = {
     it: {
@@ -153,6 +157,7 @@
       // map
       events_overlay_title: 'Mostra eventi storici',
       map_scroll_hint: 'Clicca sulla mappa per abilitare lo zoom con la rotella',
+      slider_hint: '⇆ Trascina per viaggiare nel tempo',
       map_fullscreen_title: 'Schermo intero',
       map_fullscreen_aria: 'Mappa a schermo intero',
       map_fit_title: 'Mostra tutte le entità',
@@ -302,6 +307,7 @@
       // map
       events_overlay_title: 'Show historical events',
       map_scroll_hint: 'Click the map to enable zoom with the scroll wheel',
+      slider_hint: '⇆ Drag to travel through time',
       map_fullscreen_title: 'Fullscreen',
       map_fullscreen_aria: 'Map fullscreen',
       map_fit_title: 'Show all entities',

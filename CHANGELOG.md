@@ -2,6 +2,29 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.135] - 2026-07-14 (app UX: default lingua inglese + affordance slider anno)
+
+*Due migliorie all'app mappa, decise con Clirim. Nessuna modifica ai dati/API.*
+
+- **Default lingua → inglese** ([static/js/i18n.js](static/js/i18n.js)): prima il
+  default era `it` hard-coded. Ora: preferenza salvata > lingua del browser (solo se
+  italiano) > **inglese**. Il pubblico target è internazionale; chi ha il browser in
+  italiano continua a vedere italiano. Il toggle IT/EN e le due lingue restano invariati
+  (nessuna nuova lingua in questo giro, come da accordo).
+- **Affordance slider anno** (l'interazione principale "si vedeva poco"): 4 interventi —
+  **A** fill accent della porzione percorsa (gradiente WebKit pilotato da `--fill` +
+  `::-moz-range-progress` nativo Firefox); **B** pulsazione d'ingresso sul thumb (classe
+  `.tb-hint`, rimossa alla prima interazione o dopo 8s); **C** etichetta-invito "⇆ Trascina
+  per viaggiare nel tempo / Drag to travel through time" (chiave i18n `slider_hint`, sparisce
+  al primo uso); **D** thumb 14→18px, traccia 4→6px, ombra sulla barra per staccarla dalla
+  mappa. Rispetta `prefers-reduced-motion`.
+- **Bug fix (specificità CSS)**: la regola ID `#year-slider { height: 4px }` sovrascriveva
+  `.tb-year-slider { height: 6px }` (ID > classe) → traccia rimasta sottile. Allineata a
+  6px. Scoperto in verifica via computed-style (non visibile ai check solo-metadata).
+- Verifica: suite Python verde, sintassi JS ok, computed-style live (fill 91.95% al 1500,
+  height 6px, dizionari IT/EN completi). Screenshot mappa non catturabile in sandbox
+  (tile esterne), verificato via `getComputedStyle`.
+
 ## [v6.99.134] - 2026-07-14 (SEO hygiene: sitemap lastmod + canonical/description mancanti + /docs EN)
 
 *Sessione post-format (PC di Clirim riformattato, ambiente ripristinato da backup di

@@ -96,6 +96,12 @@ verificato + sitemap inviata, Bing/IndexNow, Matomo (siteId 2), pacchetti + HF d
 **SEO hygiene (v6.99.134, 2026-07-14)**: sitemap `<lastmod>` su tutti gli URL, canonical
 mancanti aggiunti (/app /search /timeline /compare /embed), meta description su /embed +
 /docs + /redoc (route custom con injection nel `<head>`), metadati /app in EN.
+**App UX (v6.99.135, 2026-07-14)**: default lingua → **inglese** (browser-detect, IT
+resta per browser italiani); affordance slider anno (fill accent, pulse d'ingresso,
+hint "trascina", thumb/traccia più grandi) — l'interazione principale "si vedeva poco".
+Le quick-win narrative del design-proposal-stories (era chips, Ask Claude, onboarding,
+playback) erano già a bordo; restano da fare bottone "Sorprendimi" e on-this-day in-app.
+
 **RESIDUO M2 — la leva rimasta**: **backlink** (awesome-lists MCP/API/DH, Zenodo→repo).
 Diagnosi 2026-07-14: le pagine sono indicizzabili ma Google ne indicizza 1/14 → dominio
 nuovo + zero backlink ("crawled, not indexed"). I backlink sono l'intervento a leva più
