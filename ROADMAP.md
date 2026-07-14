@@ -91,6 +91,16 @@ iniziali (awesome-lists MCP/API/DH, Zenodo→repo), Matomo (server + site id da 
 release pacchetti (mcp 0.10.0, sdk-py/js 0.3.0 — nuovi default atlaspi.it; rebuild
 sdk-js/dist prima di npm publish), upload HF dataset.
 
+**Fatti (v6.99.114-134)**: MCP registry (`io.github.Soil911/atlaspi` 0.10.1), GSC dominio
+verificato + sitemap inviata, Bing/IndexNow, Matomo (siteId 2), pacchetti + HF dataset.
+**SEO hygiene (v6.99.134, 2026-07-14)**: sitemap `<lastmod>` su tutti gli URL, canonical
+mancanti aggiunti (/app /search /timeline /compare /embed), meta description su /embed +
+/docs + /redoc (route custom con injection nel `<head>`), metadati /app in EN.
+**RESIDUO M2 — la leva rimasta**: **backlink** (awesome-lists MCP/API/DH, Zenodo→repo).
+Diagnosi 2026-07-14: le pagine sono indicizzabili ma Google ne indicizza 1/14 → dominio
+nuovo + zero backlink ("crawled, not indexed"). I backlink sono l'intervento a leva più
+alta ancora aperto.
+
 ### M3 — Agent-UX dimostrabilmente superiore
 Dai gap dell'audit agent-consumer 2026-07-02: (1) zero-result senza hint → suggerire
 /v1/search/fuzzy nella risposta vuota; (2) boundary statico silenziosamente anacronistico →

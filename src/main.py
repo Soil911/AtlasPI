@@ -7,7 +7,8 @@ from pathlib import Path
 from fastapi import Depends, FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
-from fastapi.responses import FileResponse, JSONResponse, RedirectResponse
+from fastapi.openapi.docs import get_redoc_html, get_swagger_ui_html
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
@@ -426,8 +427,11 @@ app = FastAPI(
     description=OPENAPI_DESCRIPTION,
     version=APP_VERSION,
     lifespan=lifespan,
-    docs_url="/docs",
-    redoc_url="/redoc",
+    # docs_url/redoc_url disabilitati qui: le route /docs e /redoc sono servite
+    # da handler custom (sotto) che iniettano meta description + canonical nel
+    # <head> — Swagger/ReDoc di serie non hanno metadati SEO. Vedi v6.99.134.
+    docs_url=None,
+    redoc_url=None,
     openapi_tags=[
         {"name": "entities", "description": "Search and retrieval of historical geopolitical entities"},
         {"name": "relations", "description": "Contemporaries, correlations and comparison between entities"},
@@ -603,6 +607,52 @@ async def serve_sitemap():
         STATIC_DIR / "sitemap.xml",
         media_type="application/xml",
     )
+
+
+def _inject_head_meta(html: bytes, meta_tags: str) -> bytes:
+    """Inietta tag SEO nel <head> di una pagina HTML generata.
+
+    Swagger UI e ReDoc di FastAPI non emettono meta description né canonical:
+    le pagine /docs e /redoc restavano "thin" per i crawler. Qui aggiungiamo
+    i tag subito dopo <head> senza toccare il resto del markup generato.
+    """
+    return html.replace(b"<head>", b"<head>\n" + meta_tags.encode("utf-8"), 1)
+
+
+_DOCS_META = (
+    '  <meta name="description" content="Interactive API reference for AtlasPI '
+    "— the free historical-geography REST API and MCP server for AI agents. "
+    "Explore and try every endpoint live: entities, GeoJSON boundaries, events, "
+    'succession chains, cities and trade routes.">\n'
+    '  <link rel="canonical" href="https://atlaspi.it/docs">\n'
+)
+
+_REDOC_META = (
+    '  <meta name="description" content="AtlasPI API reference (ReDoc) — the free '
+    "historical-geography REST API and MCP server for AI agents. Full schema for "
+    'entities, boundaries, events, succession chains, cities and trade routes.">\n'
+    '  <link rel="canonical" href="https://atlaspi.it/redoc">\n'
+)
+
+
+@app.get("/docs", include_in_schema=False)
+async def custom_swagger_ui():
+    """Swagger UI con meta description + canonical iniettati (SEO)."""
+    page = get_swagger_ui_html(
+        openapi_url=app.openapi_url,
+        title=f"{APP_TITLE} — Interactive API Docs",
+    )
+    return HTMLResponse(_inject_head_meta(page.body, _DOCS_META))
+
+
+@app.get("/redoc", include_in_schema=False)
+async def custom_redoc():
+    """ReDoc con meta description + canonical iniettati (SEO)."""
+    page = get_redoc_html(
+        openapi_url=app.openapi_url,
+        title=f"{APP_TITLE} — API Reference",
+    )
+    return HTMLResponse(_inject_head_meta(page.body, _REDOC_META))
 
 
 @app.get("/llms.txt", include_in_schema=False)

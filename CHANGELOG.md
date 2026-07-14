@@ -2,6 +2,28 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.134] - 2026-07-14 (SEO hygiene: sitemap lastmod + canonical/description mancanti + /docs EN)
+
+*Sessione post-format (PC di Clirim riformattato, ambiente ripristinato da backup di
+rete). Nessuna modifica ai dati. Fix delle debolezze SEO emerse dall'audit: le pagine
+erano tecnicamente indicizzabili (200, no `noindex`, title presenti) ma la causa
+dell'1-pagina-su-14 indicizzata è il dominio nuovo (cutover 3/07) + zero backlink.
+Questi fix sono igiene tecnica; la leva vera restano i backlink.*
+
+- **Sitemap `<lastmod>`**: aggiunto a tutti i 14 URL di [static/sitemap.xml](static/sitemap.xml)
+  (prima assente) — segnale di freschezza per i crawler / re-crawl.
+- **Canonical mancanti aggiunti**: `/app` ([static/index.html](static/index.html)),
+  `/search`, `/timeline`, `/compare`, `/embed` (self-canonical, convenzione di about.html).
+- **Meta description mancanti aggiunte**: `/embed` e — via handler custom — `/docs` e `/redoc`.
+- **`/docs` e `/redoc` ora serviti da route custom** ([src/main.py](src/main.py)):
+  `docs_url=None`/`redoc_url=None` nel costruttore FastAPI + due handler che chiamano
+  `get_swagger_ui_html`/`get_redoc_html` e iniettano meta description + canonical nel
+  `<head>` (`_inject_head_meta`). Swagger/ReDoc di serie non hanno metadati SEO.
+- **`/app` metadati EN**: title `AtlasPI — Database Geografico Storico` → `Interactive Map
+  — AtlasPI`, description + og:title/og:description tradotti (coerenza con il resto del
+  sito, in inglese). `lang="it"` invariato: la UI dell'app è effettivamente in italiano.
+- Suite 1293 verde, ruff pulito. Nessun impatto sui dati o sull'API `/v1/*`.
+
 ## [v6.99.133] - 2026-07-08 (AI Co-Founder: fix suggestion #94/#95 — confine Medri Bahri + relink FIP, ETHICS-027)
 
 *Daily run del co-founder: implementate 2 suggestion ACCEPTED. Distinti 1 bug reale,
