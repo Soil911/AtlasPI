@@ -2,6 +2,24 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.137] - 2026-07-17 (discovery push: structured data + metadati accademici + kit backlink)
+
+*Spinta sulla scoperta — il collo di bottiglia misurato (0 star, 1 pagina indicizzata,
+crawler AI in accelerazione). Ricerca multi-agente (9 agenti, ~120 verifiche web) →
+kit di submission + rifiniture on-site autonome. Nessuna modifica a dati/API.*
+
+- **Dataset JSON-LD arricchito** ([static/landing/index.html](static/landing/index.html))
+  per **Google Dataset Search**: `identifier` (DOI, come array), `sameAs` (GitHub+HF+Zenodo),
+  `spatialCoverage` mondiale (GeoShape box), `includedInDataCatalog` (HF+Zenodo), `version`,
+  3ª `distribution` (HuggingFace), keywords estese. Numeri resi robusti ("1.000+"/"5.000+")
+  per l'ambiguità definitoria del conteggio entità (stats 1015 / health 1061 / vecchio 1038).
+- **Metadati accademici corretti**: `CITATION.cff` (era "747 entità / 2.200 fonti") e
+  `.zenodo.json` (idem) → cifre oneste; +npm +HF nei `related_identifiers` di Zenodo.
+- **`docs/DISCOVERY.md`**: kit di 15 canali ordinati per leva (awesome-mcp punkpeye 91k★,
+  APIs.guru, PulseMCP, reciprocità aourednik, public-apis, Zenodo dhdatasets, ecc.), ognuno
+  con voce click-ready + passi + rischi. Le submission verso terzi le esegue Clirim.
+- Pre-check: NOTICE cita aourednik ✓, `/openapi.json` stabile 3.1.0 ✓. Suite 1293 verde.
+
 ## [v6.99.136] - 2026-07-17 (app UX: quick-win "Sorprendimi" + banner "Accadde oggi")
 
 *Le due quick-win narrative rimaste dal design-proposal-stories (§alternative

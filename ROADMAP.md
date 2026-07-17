@@ -108,6 +108,12 @@ Prossimo bivio narrativo: Stories mode completo (grosso), da valutare solo con t
 Diagnosi 2026-07-14: le pagine sono indicizzabili ma Google ne indicizza 1/14 → dominio
 nuovo + zero backlink ("crawled, not indexed"). I backlink sono l'intervento a leva più
 alta ancora aperto.
+- **v6.99.137 (2026-07-17)**: ricerca multi-agente → **kit `docs/DISCOVERY.md`** (15 canali
+  verificati, voci click-ready, ordinati per leva) + rifiniture on-site AUTONOME (Dataset
+  JSON-LD arricchito per Google Dataset Search, CITATION/.zenodo accurati). **Le submission
+  verso repo/servizi terzi le esegue Clirim** (top-3: punkpeye/awesome-mcp-servers,
+  APIs.guru, PulseMCP). Segnale-guida della strategia: i crawler AI sono l'unica cosa che
+  si muove → priorità ai canali agent-crawlati e all'eleggibilità Google Dataset Search.
 
 ### M3 — Agent-UX dimostrabilmente superiore
 Dai gap dell'audit agent-consumer 2026-07-02: (1) zero-result senza hint → suggerire

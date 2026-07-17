@@ -1,6 +1,6 @@
 {
   "title": "AtlasPI: A structured historical geographic database for AI agents",
-  "description": "<p>AtlasPI is an open-source REST API and dataset of 747 historical geopolitical entities spanning 6,500 years (4500 BCE to 2024), with coordinates, GeoJSON boundaries (93% real polygon coverage), confidence scores, 2,200+ academic sources, and 2,000+ documented territory changes. The dataset is consumed by AI agents via a public REST API and an official MCP (Model Context Protocol) server. AtlasPI bridges the gap between fragmented geographic primary sources (Natural Earth, aourednik/historical-basemaps, Wikidata) and the structured, contextualized format required for automated historical reasoning. It documents conquest, displacement, and contested borders with an explicit ethical framework (ETHICS-001..005) covering transparency of uncertainty, multi-version borders, and no geographic/cultural bias.</p><p><strong>Live service</strong>: https://atlaspi.it</p><p><strong>MCP server</strong>: https://pypi.org/project/atlaspi-mcp/</p>",
+  "description": "<p>AtlasPI is an open-source REST API and dataset of 1,000+ historical geopolitical entities spanning 6,500 years (4500 BCE to 2024), with coordinates, GeoJSON boundaries (100% coverage), confidence scores, 5,000+ academic sources, and 2,800+ documented territory changes. The dataset is consumed by AI agents via a public REST API and an official MCP (Model Context Protocol) server. AtlasPI bridges the gap between fragmented geographic primary sources (Natural Earth, aourednik/historical-basemaps, Wikidata) and the structured, contextualized format required for automated historical reasoning. It documents conquest, displacement, and contested borders with an explicit ethical framework (ETHICS-001..005) covering transparency of uncertainty, multi-version borders, and no geographic/cultural bias.</p><p><strong>Live service</strong>: https://atlaspi.it</p><p><strong>MCP server</strong>: https://pypi.org/project/atlaspi-mcp/</p>",
   "creators": [
     {
       "name": "Ramadani, Clirim",
@@ -30,6 +30,16 @@
     },
     {
       "identifier": "https://pypi.org/project/atlaspi-mcp/",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://www.npmjs.com/package/atlaspi-client",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://huggingface.co/datasets/clirim911/atlaspi-historical-geography",
       "relation": "isSupplementTo",
       "scheme": "url"
     }

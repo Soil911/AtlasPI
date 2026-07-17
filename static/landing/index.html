@@ -72,28 +72,64 @@
     "@context": "https://schema.org",
     "@type": "Dataset",
     "name": "AtlasPI Historical Geography Dataset",
-    "description": "1,038 historical geopolitical entities, 643 events, 105 rulers, 1,249 archaeological sites with boundaries, names, and metadata from 4500 BCE to 2024. Includes confidence scores and 4,800+ academic citations.",
+    "description": "1,000+ historical geopolitical entities, 640+ events, 100+ rulers, 1,200+ archaeological sites with real GeoJSON boundaries, names in original languages, and metadata from 4500 BCE to 2024. Includes per-record confidence scores, explicit ethical framings, and 5,000+ academic citations. Designed for AI agents, researchers, and digital humanities.",
     "url": "https://atlaspi.it/",
+    "sameAs": [
+      "https://github.com/Soil911/AtlasPI",
+      "https://huggingface.co/datasets/clirim911/atlaspi-historical-geography",
+      "https://doi.org/10.5281/zenodo.19581784"
+    ],
+    "identifier": ["https://doi.org/10.5281/zenodo.19581784", "10.5281/zenodo.19581784"],
     "license": "https://www.apache.org/licenses/LICENSE-2.0",
+    "version": "6.99.136",
     "creator": {
       "@type": "Organization",
-      "name": "AtlasPI"
+      "name": "AtlasPI",
+      "url": "https://atlaspi.it/"
     },
+    "includedInDataCatalog": [
+      {
+        "@type": "DataCatalog",
+        "name": "Hugging Face Datasets",
+        "url": "https://huggingface.co/datasets/clirim911/atlaspi-historical-geography"
+      },
+      {
+        "@type": "DataCatalog",
+        "name": "Zenodo",
+        "url": "https://doi.org/10.5281/zenodo.19581784"
+      }
+    ],
     "distribution": [
       {
         "@type": "DataDownload",
+        "name": "REST API — entities (JSON)",
         "encodingFormat": "application/json",
         "contentUrl": "https://atlaspi.it/v1/entities"
       },
       {
         "@type": "DataDownload",
+        "name": "GeoJSON export",
         "encodingFormat": "application/geo+json",
         "contentUrl": "https://atlaspi.it/v1/export/geojson"
+      },
+      {
+        "@type": "DataDownload",
+        "name": "Hugging Face dataset (JSONL)",
+        "encodingFormat": "application/jsonl",
+        "contentUrl": "https://huggingface.co/datasets/clirim911/atlaspi-historical-geography"
       }
     ],
     "temporalCoverage": "-4500/2024",
+    "spatialCoverage": {
+      "@type": "Place",
+      "name": "Worldwide",
+      "geo": {
+        "@type": "GeoShape",
+        "box": "-90 -180 90 180"
+      }
+    },
     "isAccessibleForFree": true,
-    "keywords": ["historical geography", "boundaries", "empires", "GeoJSON", "AI training data", "MCP server", "digital humanities"]
+    "keywords": ["historical geography", "historical GIS", "boundaries", "empires", "GeoJSON", "AI training data", "MCP server", "digital humanities", "world history", "geopolitics"]
   }
   </script>
 
