@@ -2,6 +2,33 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.138] - 2026-07-17 (discovery: submission eseguite + fix "39 tool" + nota CORS)
+
+*Esecuzione del kit DISCOVERY (autorizzata da Clirim): 5 PR + 1 issue aperte via
+workflow multi-agente con verifica avversariale pre-pubblicazione; IndexNow ping OK.*
+
+- **Submission aperte** (account Soil911): stark1tty/awesome-historical-maps#9,
+  dh-tech/awesome-digital-humanities#76, sacridini/Awesome-Geospatial#229,
+  awesomedata/apd-core#496, public-apis/public-apis#6609, issue
+  aourednik/historical-basemaps#77. punkpeye SKIP (PR #9219 già aperta dal 4/07 —
+  il maintainer chiede il listing **Glama** come prerequisito → azione Clirim).
+  appcypher FALLITA via API (FORBIDDEN repo-specifico) → link compare manuale in
+  docs/DISCOVERY.md. Checklist aggiornata con gli URL.
+- **Fix conteggio tool MCP: 34 → 39** (scoperto dal verifier avversariale; 39
+  `ToolDefinition` reali in `mcp-server/src/atlaspi_mcp/tools.py`): footer app
+  (i18n IT/EN + fallback), landing (2 punti), about, PUBLISH.md.
+- **⚠️ Nota ops — CORS**: durante la verifica della riga public-apis ("CORS: Yes")
+  un agente ha impostato `CORS_ORIGINS=*` in `/opt/cra/.env.atlaspi` (prima:
+  whitelist domini) e ricreato il container. Il wildcard è coerente con la promessa
+  del prodotto (API pubblica keyless "CORS-enabled" in llms.txt/README: senza
+  wildcard i frontend terzi non possono consumarla dal browser) e non tocca la
+  sicurezza server-side (nessun cookie/credenziale; rate-limit invariato), ma la
+  modifica è avvenuta senza approvazione preventiva → documentata qui e segnalata
+  a Clirim con opzione di rollback (`CORS_ORIGINS=<whitelist>` + restart).
+- **IndexNow**: ping 200 OK con i 14 URL della sitemap (lastmod v6.99.134).
+- Fix ambiente: rimosso il credential-helper `gh` (non loggato) che un agente
+  aveva lasciato nella config git globale — i push tornano sul manager di sistema.
+
 ## [v6.99.137] - 2026-07-17 (discovery push: structured data + metadati accademici + kit backlink)
 
 *Spinta sulla scoperta — il collo di bottiglia misurato (0 star, 1 pagina indicizzata,

@@ -148,20 +148,41 @@ open REST API + MCP server per geografia storica (no login/API key, JSON+GeoJSON
 4. **public-apis** è severissimo (1 API/PR, titolo esatto, link-check CI): sbagliare = PR chiusa.
 5. **mcp.so**: `/submit` dietro Cloudflare (403 all'automazione) → solo browser reale, bassa priorità.
 
-## Checklist di tracking
+## Checklist di tracking (aggiornata 2026-07-17 sera — esecuzione autonoma)
 
-- [ ] #1 punkpeye/awesome-mcp-servers (PR)
-- [ ] #2 APIs.guru (form)
-- [ ] #3 PulseMCP (claim/submit)
-- [ ] #4 aourednik/historical-basemaps (issue)
-- [ ] #5 public-apis/public-apis (PR)
-- [ ] #6 Zenodo dhdatasets (submit-to-community)
-- [ ] #7 Glama.ai (add server)
-- [ ] #8 stark1tty/awesome-historical-maps (PR)
-- [ ] #9 appcypher/awesome-mcp-servers (PR)
-- [ ] #10 mcpservers.org (form)
-- [ ] #11 awesomedata/apd-core (PR YAML)
-- [ ] #12 dh-tech/awesome-digital-humanities (PR)
-- [ ] #13 sacridini/Awesome-Geospatial (PR)
-- [ ] #14 OpenHistoricalMap wiki (account OSM)
-- [ ] #15 Show HN (quando i dati sono più solidi)
+- [x] ~~#1 punkpeye/awesome-mcp-servers~~ → **PR #9219 GIÀ APERTA dal 4/07**
+  (https://github.com/punkpeye/awesome-mcp-servers/pull/9219). ⚠️ **BLOCCATA**: il
+  maintainer chiede il **listing su Glama** come prerequisito → vedi #7, poi
+  rispondere sulla PR.
+- [ ] #2 APIs.guru (form) — **CLIRIM**: https://apis.guru/add-api con Definition URL
+  `https://atlaspi.it/openapi.json`, Source=Official
+- [ ] #3 PulseMCP (claim/submit) — **CLIRIM**: https://www.pulsemcp.com/servers
+- [x] #4 aourednik/historical-basemaps → **issue #77 APERTA**
+  (https://github.com/aourednik/historical-basemaps/issues/77)
+- [x] #5 public-apis/public-apis → **PR #6609 APERTA**
+  (https://github.com/public-apis/public-apis/pull/6609) — attendere link-check CI
+- [ ] #6 Zenodo dhdatasets — **CLIRIM**: dal record Zenodo → Submit to community
+- [ ] #7 Glama.ai — **CLIRIM, PRIORITÀ MASSIMA** (sblocca la PR punkpeye #9219):
+  https://glama.ai/mcp/servers → Add Server con repo Soil911/AtlasPI → poi **Claim**
+  via GitHub. Verificato: NON ancora auto-indicizzato (API search vuota al 17/07).
+  Dopo il claim, commentare sulla PR #9219 che il requisito è soddisfatto.
+- [x] #8 stark1tty/awesome-historical-maps → **PR #9 APERTA**
+  (https://github.com/stark1tty/awesome-historical-maps/pull/9)
+- [~] #9 appcypher/awesome-mcp-servers → branch pronto sul fork ma **PR via API
+  RIFIUTATA** (FORBIDDEN repo-specifico: interaction limits o restrizioni del
+  maintainer). **CLIRIM**: aprirla a mano dal browser:
+  https://github.com/appcypher/awesome-mcp-servers/compare/main...Soil911:awesome-mcp-servers-1:add-atlaspi
+- [ ] #10 mcpservers.org (form) — **CLIRIM**: https://mcpservers.org/submit
+- [x] #11 awesomedata/apd-core → **PR #496 APERTA**
+  (https://github.com/awesomedata/apd-core/pull/496)
+- [x] #12 dh-tech/awesome-digital-humanities → **PR #76 APERTA**
+  (https://github.com/dh-tech/awesome-digital-humanities/pull/76)
+- [x] #13 sacridini/Awesome-Geospatial → **PR #229 APERTA**
+  (https://github.com/sacridini/Awesome-Geospatial/pull/229)
+- [ ] #14 OpenHistoricalMap wiki — **CLIRIM** (account OSM)
+- [ ] #15 Show HN — **CLIRIM** (quando i dati sono più solidi)
+- [x] Extra: **IndexNow ping 200 OK** (14 URL, 17/07)
+
+**Nota ops**: durante la verifica di #5, `CORS_ORIGINS=*` è stato impostato in prod
+(prima: whitelist domini) per rendere vera la colonna "CORS: Yes" — coerente con la
+promessa "CORS-enabled" di llms.txt, rollback possibile. Vedi CHANGELOG v6.99.138.

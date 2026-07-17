@@ -174,7 +174,7 @@
       legend_aria: 'Legenda colori mappa',
       legend_real: 'Reale',
       legend_approx: 'Approssimato',
-      footer_note_tail: '&mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie &middot; 34 tools MCP',
+      footer_note_tail: '&mdash; Dati storici con governance etica &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> scorciatoie &middot; 39 tools MCP',
     },
     en: {
       search: 'Search by name, including variants...',
@@ -331,7 +331,7 @@
       legend_aria: 'Map color legend',
       legend_real: 'Real',
       legend_approx: 'Approximate',
-      footer_note_tail: '&mdash; Historical data with ethical governance &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> shortcuts &middot; 34 MCP tools',
+      footer_note_tail: '&mdash; Historical data with ethical governance &middot; <kbd style="font-size:0.9em;padding:1px 4px;background:#1c2333;border:1px solid #30363d;border-radius:3px;color:#58a6ff">?</kbd> shortcuts &middot; 39 MCP tools',
     },
   };
 

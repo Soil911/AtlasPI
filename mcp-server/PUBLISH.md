@@ -56,7 +56,7 @@ Or in Claude Desktop config (`~/Library/Application Support/Claude/claude_deskto
 ## Package metadata
 
 - **Name**: `atlaspi-mcp`
-- **Version**: 0.7.0 (34 MCP tools)
+- **Version**: 0.10.1 (39 MCP tools)
 - **License**: Apache-2.0
 - **Python**: >=3.10
 - **Homepage**: https://atlaspi.it
