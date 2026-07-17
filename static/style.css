@@ -972,6 +972,86 @@ details summary::marker { content: ''; }
   box-shadow: 0 3px 8px rgba(217, 119, 87, 0.4);
 }
 
+/* v6.99.136 (quick-win B): bottone "Sorprendimi" — ghost variant accanto ad
+   Ask Claude: stessa geometria, ma bordo+testo invece del gradiente pieno,
+   così il CTA principale resta Ask Claude. */
+.surprise-btn {
+  padding: 6px 12px;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.85em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.surprise-btn:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+  box-shadow: 0 3px 8px rgba(232, 177, 74, 0.25);
+}
+.surprise-btn:disabled { opacity: 0.55; cursor: wait; transform: none; }
+.surprise-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* v6.99.136 (quick-win C): banner "Accadde oggi" — card flottante in basso a
+   sinistra, sopra la timeline-bar (60px) senza coprire lo slider. */
+.otd-banner {
+  position: absolute;
+  left: 16px;
+  bottom: 76px;
+  z-index: 45;               /* sotto timeline-bar (50) e detail panel */
+  max-width: 360px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-family: var(--font-ui);
+  font-size: 0.85em;
+  color: var(--text);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+.otd-banner.hidden { display: none; }
+.otd-banner .otd-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9em;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.otd-banner .otd-close {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+.otd-banner .otd-close:hover { color: var(--text); }
+.otd-banner .otd-text { line-height: 1.45; }
+.otd-banner .otd-open {
+  display: inline-block;
+  margin-top: 6px;
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: 600;
+}
+.otd-banner .otd-open:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .otd-banner { left: 12px; right: 12px; max-width: none; bottom: 70px; }
+}
+
 /* v6.50: onboarding overlay */
 .onboarding-overlay {
   position: fixed;

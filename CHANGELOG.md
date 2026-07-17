@@ -2,6 +2,27 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [v6.99.136] - 2026-07-17 (app UX: quick-win "Sorprendimi" + banner "Accadde oggi")
+
+*Le due quick-win narrative rimaste dal design-proposal-stories (§alternative
+leggere B e C). Zero modifiche a dati/API — solo front-end. Riusano endpoint
+esistenti (`/v1/random`, `/v1/events/on-this-day`).*
+
+- **"🎲 Sorprendimi"** ([static/index.html](static/index.html), header accanto ad
+  Ask Claude, stile *ghost* per non competere col CTA): chiama `/v1/random?status=confirmed`
+  (niente entità incerte come prima impressione), salta all'anno rappresentativo
+  (metà vita dell'entità) e apre il detail panel con fitBounds sul confine. Bottone
+  `disabled` durante il fetch, errore via toast. `surpriseMe()` in app.js.
+- **Banner "Accadde oggi"** (card in basso a sinistra, sopra la timeline-bar):
+  `initOnThisDay()` al load interroga `/v1/events/on-this-day/MM-DD`; se c'è un evento
+  mostra anno + nome + luogo con link "Vai all'evento →" (pan + popup mappa, o detail
+  panel se senza coordinate). Chiudibile, e la chiusura vale per la giornata
+  (`localStorage`). **Fallisce in silenzio** (try/catch): è un nice-to-have, non deve
+  mai bloccare l'app né apparire se la data non ha eventi.
+- i18n IT/EN per entrambe (`surprise_btn`, `otd_label`, ecc.). Verifica: suite Python
+  verde, sintassi JS ok, DOM/CSS/i18n confermati live via getComputedStyle; comportamento
+  fetch verificato su produzione post-deploy.
+
 ## [v6.99.135] - 2026-07-14 (app UX: default lingua inglese + affordance slider anno)
 
 *Due migliorie all'app mappa, decise con Clirim. Nessuna modifica ai dati/API.*

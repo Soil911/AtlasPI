@@ -97,6 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // elemento con [data-i18n] che contiene placeholder {entities} {events}...
   // Single source of truth: /health + /v1/* endpoints. Nessun valore statico.
   hydrateLiveStats();
+  // v6.99.136 (quick-win C): banner "Accadde oggi" — fire-and-forget
+  initOnThisDay();
   loadEntities().then(() => {
     restoreUrlState();
     // v6.64: force a final applyFilters after restoreUrlState, regardless
@@ -2299,6 +2301,88 @@ function showError(msg) {
   setTimeout(() => toast.classList.add('hidden'), 8000);
 }
 
+// ─── Quick-win B (v6.99.136): "Sorprendimi" — entità casuale ───────
+// Design-proposal-stories §alternative-leggere: hook narrativo a costo
+// minimo. status=confirmed → niente entità incerte come prima impressione.
+
+function jumpToYear(y) {
+  const slider = document.getElementById('year-slider');
+  slider.value = Math.max(-4500, Math.min(2025, y));
+  // input → display/fill/era-chips; change → applyFilters + overlays + URL
+  slider.dispatchEvent(new Event('input', { bubbles: true }));
+  slider.dispatchEvent(new Event('change', { bubbles: true }));
+}
+
+async function surpriseMe() {
+  const btn = document.getElementById('surprise-btn');
+  if (btn) btn.disabled = true;
+  try {
+    const r = await fetch(`${API}/v1/random?status=confirmed`);
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const e = await r.json();
+    // Anno rappresentativo: metà vita (year_end null = entità viva → oggi)
+    const end = (e.year_end == null) ? 2025 : e.year_end;
+    jumpToYear(Math.round((e.year_start + end) / 2));
+    showDetail(e.id);   // apre il panel e fa fitBounds sul boundary
+  } catch (_) {
+    showError(t('surprise_error'));
+  } finally {
+    if (btn) btn.disabled = false;
+  }
+}
+
+// ─── Quick-win C (v6.99.136): banner "Accadde oggi" ────────────────
+// Mostra al load l'evento del giorno (/v1/events/on-this-day). Chiudibile;
+// la chiusura vale per la giornata (localStorage). Fallisce in silenzio:
+// è un nice-to-have, non deve mai bloccare l'app.
+
+async function initOnThisDay() {
+  try {
+    const now = new Date();
+    const mmdd = String(now.getMonth() + 1).padStart(2, '0') + '-' +
+                 String(now.getDate()).padStart(2, '0');
+    if (localStorage.getItem('atlaspi-otd-dismissed') === mmdd) return;
+    const r = await fetch(`${API}/v1/events/on-this-day/${mmdd}`);
+    if (!r.ok) return;
+    const data = await r.json();
+    if (!data || !data.total || !data.events || !data.events.length) return;
+    const ev = data.events[0];
+
+    const banner = document.getElementById('otd-banner');
+    if (!banner) return;
+    banner.innerHTML = `
+      <div class="otd-head">
+        <span aria-hidden="true">📅</span>
+        <span>${t('otd_label')}</span>
+        <button class="otd-close" aria-label="${t('otd_dismiss_aria')}">✕</button>
+      </div>
+      <div class="otd-text">${t('otd_in_year')} <strong>${fmtY(ev.year)}</strong>:
+        ${esc(ev.name_original)}${ev.location_name ? ' — ' + esc(ev.location_name) : ''}</div>
+      <span class="otd-open" role="button" tabindex="0">${t('otd_open')}</span>`;
+
+    const dismiss = () => {
+      banner.classList.add('hidden');
+      localStorage.setItem('atlaspi-otd-dismissed', mmdd);
+    };
+    banner.querySelector('.otd-close').addEventListener('click', dismiss);
+    const open = () => {
+      dismiss();
+      jumpToYear(ev.year);
+      // popup sulla mappa se l'evento ha coordinate, altrimenti detail panel
+      if (ev.location_lat != null && ev.location_lon != null) {
+        setTimeout(() => showEventPopup(ev), 700);   // lascia assestare il pan
+      } else {
+        showEventDetail(ev.id);
+      }
+    };
+    const openEl = banner.querySelector('.otd-open');
+    openEl.addEventListener('click', open);
+    openEl.addEventListener('keydown', e => { if (e.key === 'Enter') open(); });
+
+    banner.classList.remove('hidden');
+  } catch (_) { /* silente per design */ }
+}
+
 // ─── Events ─────────────────────────────────────────────────────
 
 function bindEvents() {
@@ -2309,6 +2393,10 @@ function bindEvents() {
   const yearEra = document.getElementById('year-era');
 
   document.getElementById('search-btn').addEventListener('click', () => { hideAutocomplete(); applyFilters(); pushUrlState(); });
+
+  // v6.99.136 (quick-win B): bottone "Sorprendimi" in header
+  const surpriseBtn = document.getElementById('surprise-btn');
+  if (surpriseBtn) surpriseBtn.addEventListener('click', surpriseMe);
 
   searchInput.addEventListener('keydown', e => {
     const dropdown = document.getElementById('autocomplete-list');

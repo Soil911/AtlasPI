@@ -100,7 +100,9 @@ mancanti aggiunti (/app /search /timeline /compare /embed), meta description su 
 resta per browser italiani); affordance slider anno (fill accent, pulse d'ingresso,
 hint "trascina", thumb/traccia più grandi) — l'interazione principale "si vedeva poco".
 Le quick-win narrative del design-proposal-stories (era chips, Ask Claude, onboarding,
-playback) erano già a bordo; restano da fare bottone "Sorprendimi" e on-this-day in-app.
+playback) erano già a bordo; **bottone "Sorprendimi" + banner "Accadde oggi" FATTI in
+v6.99.136 (2026-07-17)** → tutte le "alternative leggere" A/B/C del proposal ora a bordo.
+Prossimo bivio narrativo: Stories mode completo (grosso), da valutare solo con traffico reale.
 
 **RESIDUO M2 — la leva rimasta**: **backlink** (awesome-lists MCP/API/DH, Zenodo→repo).
 Diagnosi 2026-07-14: le pagine sono indicizzabili ma Google ne indicizza 1/14 → dominio
