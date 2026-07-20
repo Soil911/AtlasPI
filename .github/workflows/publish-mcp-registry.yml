@@ -32,10 +32,37 @@ jobs:
         working-directory: mcp-server
         run: ../mcp-publisher validate
 
+      # Guardia (2026-07-20): il registry rifiuta la ri-pubblicazione della stessa
+      # versione ("cannot publish duplicate version"). Modificare server.json per
+      # motivi NON di release (es. correggere una descrizione o il nome di una env
+      # var) faceva quindi fallire il workflow — successo v0.10.1 il 04/07, poi
+      # fallimento su fea1944 che correggeva ATLASPI_BASE_URL→ATLASPI_API_URL.
+      # Ora: se la versione è già nel registry saltiamo con un avviso, invece di
+      # marcare rosso un push legittimo.
+      - name: Check if version is already published
+        id: check
+        working-directory: mcp-server
+        run: |
+          NAME=$(jq -r .name server.json)
+          VERSION=$(jq -r .version server.json)
+          echo "Checking $NAME @ $VERSION"
+          PUBLISHED=$(curl -sS --max-time 30 \
+            "https://registry.modelcontextprotocol.io/v0/servers?search=$(jq -rn --arg n "$NAME" '$n|@uri')" \
+            | jq -r --arg n "$NAME" '[.servers[]? | select(.server.name==$n) | .server.version] | join(" ")')
+          echo "Published versions: ${PUBLISHED:-<none>}"
+          if grep -qw -- "$VERSION" <<<"$PUBLISHED"; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "::notice::$NAME@$VERSION è già nel registry — publish saltato. Bumpa 'version' in mcp-server/server.json (e in pyproject.toml) per pubblicare una nuova release."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Login (GitHub OIDC)
+        if: steps.check.outputs.skip == 'false'
         working-directory: mcp-server
         run: ../mcp-publisher login github-oidc
 
       - name: Publish
+        if: steps.check.outputs.skip == 'false'
         working-directory: mcp-server
         run: ../mcp-publisher publish

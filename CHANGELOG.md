@@ -31,6 +31,14 @@ sandbox per introspezionarne i tool: senza queste correzioni sarebbe fallita.*
 - ⚠️ **Follow-up**: le correzioni 2 e 3 raggiungono gli utenti `pip install atlaspi-mcp`
   solo con una nuova release (0.10.2) su PyPI + re-publish nel registro MCP. Per Glama
   non serve: compila dal repo GitHub.
+- **Guardia anti-duplicato nel workflow registry** (`publish-mcp-registry.yml`): il
+  workflow parte a ogni push che tocca `mcp-server/server.json`, ma il registry
+  rifiuta la ri-pubblicazione della stessa versione → il fix dell'env var (commit
+  fea1944, senza bump) l'ha fatto fallire con
+  `400 "cannot publish duplicate version"`. Nessun danno (niente pubblicato, la voce
+  0.10.1 nel registry resta valida), ma era un trabocchetto: ora uno step interroga
+  il registry e **salta il publish con un ::notice** se la versione è già presente,
+  invece di marcare rosso un push legittimo. Logica testata contro il registry reale.
 
 ## [v6.99.138] - 2026-07-17 (discovery: submission eseguite + fix "39 tool" + nota CORS)
 
