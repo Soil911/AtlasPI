@@ -177,8 +177,9 @@ open REST API + MCP server per geografia storica (no login/API key, JSON+GeoJSON
   (https://github.com/awesomedata/apd-core/pull/496)
 - [x] #12 dh-tech/awesome-digital-humanities → **PR #76 APERTA**
   (https://github.com/dh-tech/awesome-digital-humanities/pull/76)
-- [x] #13 sacridini/Awesome-Geospatial → **PR #229 APERTA**
-  (https://github.com/sacridini/Awesome-Geospatial/pull/229)
+- [x] #13 sacridini/Awesome-Geospatial → ✅ **PR #229 MERGED** (2026-07-18, ~5.2k⭐)
+  — AtlasPI ora nel README (sezione DaaS, riga ~451).
+  **PRIMO BACKLINK OTTENUTO.** https://github.com/sacridini/Awesome-Geospatial/pull/229
 - [ ] #14 OpenHistoricalMap wiki — **CLIRIM** (account OSM)
 - [ ] #15 Show HN — **CLIRIM** (quando i dati sono più solidi)
 - [x] Extra: **IndexNow ping 200 OK** (14 URL, 17/07)
