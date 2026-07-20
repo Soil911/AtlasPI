@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [mcp-server 0.10.2] - 2026-07-20 (release: propaga i fix di versione/env a PyPI + registry)
+
+*Release che porta agli utenti `pip install atlaspi-mcp` le correzioni entrate nel
+repo con la voce sotto (erano solo su GitHub). Sequenza: PyPI prima, registry dopo —
+il registry valida che il pacchetto esista su PyPI.*
+
+- `serverInfo` ora riporta la versione REALE del server (0.10.2) e `websiteUrl`,
+  non più la versione dell'SDK `mcp` (1.28.1).
+- `__version__` derivato da `importlib.metadata` (era hard-coded 0.9.0).
+- `server.json`: env var corretta `ATLASPI_API_URL` (era documentata
+  `ATLASPI_BASE_URL`, che il codice ignora) + version allineata.
+- Incluso il nuovo `mcp-server/Dockerfile` (introspezione MCP verificata: 39 tool).
+
 ## [mcp-server] - 2026-07-18 (prerequisiti Glama: Dockerfile MCP + 3 bug di versione/env)
 
 *Non tocca l'app runtime (APP_VERSION resta 6.99.138). Prepara il repo perché la
