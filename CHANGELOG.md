@@ -2,6 +2,36 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [mcp-server] - 2026-07-18 (prerequisiti Glama: Dockerfile MCP + 3 bug di versione/env)
+
+*Non tocca l'app runtime (APP_VERSION resta 6.99.138). Prepara il repo perché la
+submission a Glama — prerequisito posto dal maintainer di punkpeye per la PR #9219
+(~91k★) — superi i controlli automatici. Glama **compila ed esegue** il server in
+sandbox per introspezionarne i tool: senza queste correzioni sarebbe fallita.*
+
+- **`mcp-server/Dockerfile` (NUOVO)**: mancava del tutto → Glama avrebbe dedotto il
+  Dockerfile della root, che compila l'app web FastAPI (richiede Postgres, non parla
+  MCP) e l'introspezione sarebbe fallita. Transport stdio, utente non-root, nessuna
+  porta esposta. **Verificato sul VPS con handshake MCP reale**: build ok,
+  `initialize` ok, `tools/list` → 39 tool.
+- **Bug 1 — env var documentata sbagliata**: `server.json` (scheda pubblicata nel
+  registro MCP ufficiale) dichiarava `ATLASPI_BASE_URL`, ma codice/README/test usano
+  `ATLASPI_API_URL` → chi seguiva la doc impostava una variabile ignorata. Allineato.
+- **Bug 2 — versione falsa esposta via MCP**: `Server("atlaspi-mcp")` senza `version`
+  faceva riportare all'SDK **la propria** versione (1.28.1) come versione del server.
+  Ora `version=__version__` + `website_url`. Verificato: `serverInfo` ora
+  `{version: 0.10.1, websiteUrl: https://atlaspi.it}`.
+- **Bug 3 — `__version__` derivato**: era hard-coded `0.9.0` mentre il package era
+  `0.10.1` (finiva nel log di avvio). Ora letto da `importlib.metadata` → fonte unica
+  di verità (pyproject), con fallback `0.0.0+source` se eseguito dai sorgenti.
+- **Test stantii sistemati**: `EXPECTED_TOOL_NAMES` era fermo ai 36 tool della v0.8.0
+  e ometteva `submit_feedback`/`list_feedback`/`feedback_stats` → il test falliva da
+  tempo **senza che nessuno se ne accorgesse, perché la CI non esegue i test di
+  mcp-server**. Ora 39 e verdi (26 passed).
+- ⚠️ **Follow-up**: le correzioni 2 e 3 raggiungono gli utenti `pip install atlaspi-mcp`
+  solo con una nuova release (0.10.2) su PyPI + re-publish nel registro MCP. Per Glama
+  non serve: compila dal repo GitHub.
+
 ## [v6.99.138] - 2026-07-17 (discovery: submission eseguite + fix "39 tool" + nota CORS)
 
 *Esecuzione del kit DISCOVERY (autorizzata da Clirim): 5 PR + 1 issue aperte via

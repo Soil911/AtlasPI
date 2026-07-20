@@ -20,7 +20,7 @@
       },
       "environmentVariables": [
         {
-          "name": "ATLASPI_BASE_URL",
+          "name": "ATLASPI_API_URL",
           "description": "Override the AtlasPI API base URL (default: https://atlaspi.it)",
           "isRequired": false,
           "format": "string",

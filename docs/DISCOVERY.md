@@ -162,10 +162,24 @@ open REST API + MCP server per geografia storica (no login/API key, JSON+GeoJSON
 - [x] #5 public-apis/public-apis → **PR #6609 APERTA**
   (https://github.com/public-apis/public-apis/pull/6609) — attendere link-check CI
 - [ ] #6 Zenodo dhdatasets — **CLIRIM**: dal record Zenodo → Submit to community
-- [ ] #7 Glama.ai — **CLIRIM, PRIORITÀ MASSIMA** (sblocca la PR punkpeye #9219):
-  https://glama.ai/mcp/servers → Add Server con repo Soil911/AtlasPI → poi **Claim**
-  via GitHub. Verificato: NON ancora auto-indicizzato (API search vuota al 17/07).
-  Dopo il claim, commentare sulla PR #9219 che il requisito è soddisfatto.
+- [ ] #7 Glama.ai — **CLIRIM, PRIORITÀ MASSIMA** (sblocca la PR punkpeye #9219).
+  **Preparazione lato repo: FATTA** (vedi sotto). Restano i 3 passi umani:
+  1. https://glama.ai/mcp/servers → **Add Server** → si apre un **sign-up**
+     (nome, email, CAPTCHA, accettazione ToS: azioni che deve fare una persona).
+  2. Autenticarsi con **GitHub OAuth**: Glama richiede che il submitter abbia
+     permessi write/admin sul repo → per definizione può farlo solo Clirim.
+  3. Indicare `https://github.com/Soil911/AtlasPI`, poi **Claim**. Infine
+     commentare sulla PR punkpeye #9219 che il requisito è soddisfatto.
+  Verificato il 17/07: AtlasPI **non è** auto-indicizzato — la
+  [metodologia Glama](https://glama.ai/mcp/methodology) conferma che il registry
+  è **su submission, non auto-crawl**.
+
+  **Preparazione già eseguita (perché la submission passi i controlli)**: Glama
+  *compila ed esegue* il server in sandbox per introspezionarne i tool. Mancava un
+  Dockerfile del server MCP → avrebbe dedotto quello della root (app web FastAPI,
+  richiede Postgres, non parla MCP) e i check sarebbero **falliti**. Aggiunto
+  [mcp-server/Dockerfile](../mcp-server/Dockerfile) e **verificato sul VPS con un
+  handshake MCP reale**: build ok, `initialize` ok, `tools/list` → **39 tool**.
 - [x] #8 stark1tty/awesome-historical-maps → **PR #9 APERTA**
   (https://github.com/stark1tty/awesome-historical-maps/pull/9)
 - [~] #9 appcypher/awesome-mcp-servers → branch pronto sul fork ma **PR via API

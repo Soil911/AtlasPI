@@ -60,7 +60,14 @@ def build_server(client: AtlasPIClient | None = None) -> Server:
     (utile nei test). In produzione il server costruisce il proprio
     client al momento dell'avvio.
     """
-    server: Server = Server("atlaspi-mcp")
+    # version/website_url espliciti: senza `version` l'SDK espone la PROPRIA
+    # versione in serverInfo (es. 1.28.1), non quella di atlaspi-mcp — i client
+    # e i registry MCP (Glama) mostrerebbero un numero falso.
+    server: Server = Server(
+        "atlaspi-mcp",
+        version=__version__,
+        website_url="https://atlaspi.it",
+    )
     shared_client = client
 
     @server.list_tools()

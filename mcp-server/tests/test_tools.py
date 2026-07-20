@@ -64,6 +64,11 @@ EXPECTED_TOOL_NAMES = {
     "get_entities_batch",
     # v0.8 where-was (temporal reverse-geocoding)
     "where_was",
+    # feedback (mancavano: la lista era ferma ai 36 tool della v0.8.0
+    # mentre il server ne espone 39 — verificato via introspezione MCP reale)
+    "submit_feedback",
+    "list_feedback",
+    "feedback_stats",
     # v0.6 historical periods
     "list_historical_periods",
     "get_historical_period",
@@ -140,15 +145,15 @@ def test_base_url_default_when_env_empty(monkeypatch: pytest.MonkeyPatch) -> Non
 
 
 def test_tool_list_complete() -> None:
-    """Tutti i tools canonici v0.8.0 sono registrati."""
+    """Tutti i tools canonici sono registrati (39 alla v0.10.1)."""
     names = {t.name for t in get_tools()}
     assert names == EXPECTED_TOOL_NAMES, (
         f"Missing or unexpected tools: {names ^ EXPECTED_TOOL_NAMES}"
     )
     # Bonus: nessun duplicato
     assert len(get_tools()) == len(EXPECTED_TOOL_NAMES)
-    # v0.8.0: 36 tools (+where_was)
-    assert len(names) == 36
+    # 39 tools: 36 della v0.8.0 + i 3 di feedback
+    assert len(names) == 39
 
 
 def test_search_entities_tool_schema() -> None:
