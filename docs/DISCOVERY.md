@@ -162,14 +162,25 @@ open REST API + MCP server per geografia storica (no login/API key, JSON+GeoJSON
 - [x] #5 public-apis/public-apis → **PR #6609 APERTA**
   (https://github.com/public-apis/public-apis/pull/6609) — attendere link-check CI
 - [ ] #6 Zenodo dhdatasets — **CLIRIM**: dal record Zenodo → Submit to community
-- [x] #7 Glama.ai → ✅ **SUBMITTED 2026-07-20, in attesa di revisione**.
-  Account creato da Clirim (Soil911); form "Add MCP Server" compilato e inviato:
-  name `atlaspi-mcp`, repo `https://github.com/Soil911/AtlasPI`, descrizione con
-  39 tool. Glama: *"Public submissions are reviewed before becoming publicly
-  visible"* → non ancora in ricerca pubblica (verificato via API), nessuna
-  sezione UI mostra la coda, quindi l'esito si vede solo quando compare.
-  **Follow-up quando appare**: (a) **Claim** il server, (b) commentare sulla PR
-  punkpeye #9219 che il requisito Glama è soddisfatto → sblocca ~91k★.
+- [x] #7 Glama.ai → ✅ **APPROVATO E LISTATO 2026-07-21**:
+  https://glama.ai/mcp/servers/Soil911/AtlasPI (categorie Knowledge & Memory /
+  Research & Data / Open Data; ha importato README + screenshot dell'app).
+  - ✅ **Claim fatto** (OAuth GitHub, scope read-only; ATTENZIONE: GitHub offre
+    sia `Soil911` sia il typo-account `Soiil911` — scegliere il PRIMO).
+  - ✅ **Sync repo** lanciato (serve a far rilevare la licenza: GitHub espone
+    correttamente Apache-2.0, era lo scanner Glama a non averla ancora letta →
+    da cui il blocco *"This server cannot be installed"*).
+  - ✅ **Dockerfile configurato** nell'admin Glama (NON si incolla un file: è un
+    generatore guidato). Valori usati:
+    `buildSteps: ["uv pip install --system ./mcp-server"]` ·
+    `cmdArguments: ["atlaspi-mcp"]` (Glama li avvolge in `mcp-proxy -- …`) ·
+    base `debian:trixie-slim`, Python 3.14, Node 26.
+  - ⏳ **Build di verifica lanciato** (test `019f855e-51e5-7529-820d-50d21506ba57`).
+    Rischio noto: Python 3.14 è recentissimo, se `pydantic` non ha wheel per
+    quella versione abbassare a 3.13 e rilanciare.
+  - **Restano** (automatici dopo un build verde): estrazione dei 39 tool +
+    punteggi license/quality → poi **Make Release**, e infine aggiungere il
+    **badge Glama** alla voce nella PR punkpeye #9219 + commento → sblocca ~91k★.
   Verificato il 17/07: AtlasPI **non è** auto-indicizzato — la
   [metodologia Glama](https://glama.ai/mcp/methodology) conferma che il registry
   è **su submission, non auto-crawl**.
