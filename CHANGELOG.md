@@ -2,6 +2,41 @@
 
 Tutte le modifiche rilevanti del progetto devono essere documentate qui.
 
+## [governance] - 2026-07-23 (ETHICS-028: disclosure EN, pulizia repo pubblico, audit citazioni)
+
+*Attuazione dell'impegno preso pubblicamente dopo il rifiuto della PR su
+tmcw/awesome-geojson ("reorganize the plan and review the critical points
+before pushing anything else"). Solo docs+tooling, nessun deploy
+(APP_VERSION resta 6.99.138). Promozione in pausa finché l'audit non è
+pubblicato.*
+
+- **Disclosure in inglese**: nuovo `docs/ethics/ETHICS-028-ai-assisted-curation-transparency.en.md`
+  (l'episodio è avvenuto in inglese, in pubblico); record IT esteso con le
+  decisioni operative (pausa promozione, comunicazioni sensibili firmate dal
+  maintainer, remediation). README: blockquote datato in cima a *Dataset
+  Overview* — curation AI-assistita, citazioni **machine-verified, not
+  human-audited** finché l'audit umano non è pubblicato, «hand-curated»
+  ritirato.
+- **Pulizia del repo pubblico**: i documenti di lavoro interni (handoff,
+  playbook promozione/DISCOVERY, log auto-iter, bozze JOHD, bozze
+  reddit/outreach, worklist di sessione, handoff d'audit) sono stati spostati
+  nell'archivio locale privato `../AtlasPI-internal/` e tolti dal tracking —
+  senza riscrittura della history (restano nei commit passati; niente segreti
+  veri nel repo). `CLAUDE.md` untracked+gitignored ma invariato in locale.
+  `.gitignore` impedisce di ricommetterli. I riferimenti storici in
+  CHANGELOG/ethics/report d'audit restano com'erano (sono cronaca); i
+  puntatori vivi sono stati annotati. `docs/paper-draft.md` (tenuto pubblico
+  per provenance) ha ora un banner: la descrizione della curation nel draft
+  di aprile è superata da ETHICS-028. Suite: 1293 passed.
+- **Audit umano delle citazioni — avviato**: protocollo in
+  `docs/academic-audit/CITATION-AUDIT.md`; `scripts/citation_audit_sample.py`
+  estrae un campione deterministico e pubblicamente riproducibile (seed
+  `atlaspi-audit-2026-07`, stdlib pura, API pubblica) — 40 entità + 10
+  eventi, 1 citazione casuale ciascuno; campione congelato in
+  `docs/academic-audit/sample-2026-07.csv` (estratto 2026-07-23 contro prod
+  v6.99.138; doppia estrazione verificata byte-identica). Verifica manuale
+  del maintainer su 3 criteri; risultati pubblicati **inclusi i fallimenti**.
+
 ## [mcp-server 0.10.2] - 2026-07-20 (release: propaga i fix di versione/env a PyPI + registry)
 
 *Release che porta agli utenti `pip install atlaspi-mcp` le correzioni entrate nel
