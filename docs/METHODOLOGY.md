@@ -54,6 +54,67 @@ When an entity is matched via the aourednik pipeline, the following metadata is 
 - `boundary_aourednik_year` — the snapshot year used (one of 53 available)
 - `boundary_aourednik_precision` — 0, 1, or 2 (see 3.2)
 
+### 2.4 Events, cities, trade routes, rulers, sites, periods, languages
+
+**These are not imported from any upstream dataset.** Unlike boundary geometry
+(§2.2), every non-boundary record is hand-curated against cited literature and
+carries its own `sources[]`. There is no bulk import step for them.
+
+Source coverage is complete — every record of every type carries at least one
+citation (verified 2026-07-23 against production):
+
+| Resource | Records | With sources |
+|---|---|---|
+| Entities | 1,015 | 1,015 (100%) |
+| Events | 643 | 643 (100%) |
+| Archaeological sites | 1,249 | 1,249 (100%) |
+| Historical cities | 252 | 252 (100%) |
+| Trade routes | 41 | 41 (100%) |
+| Rulers | 105 | 105 (100%) |
+| Historical periods | 55 | 55 (100%) |
+| Languages | 29 | 29 (100%) |
+
+Citations are typed. Across the 5,085 entity/event citations:
+
+| `source_type` | Count |
+|---|---|
+| academic | 3,701 |
+| primary | 718 |
+| book | 480 |
+| archaeological | 113 |
+| secondary | 44 |
+| journal_article | 19 |
+| oral_tradition | 6 |
+| official | 4 |
+
+Example (event #314, Spanish Civil War): Preston, P. (2006), *The Spanish Civil
+War: Reaction, Revolution, and Revenge*, W.W. Norton; Thomas, H. (2001), *The
+Spanish Civil War*, revised ed., Penguin.
+
+### 2.5 What Wikidata and OpenStreetMap are — and are not — used for
+
+Both appear in `NOTICE` and are easy to misread as content sources. They are not:
+
+- **Wikidata** is used **only for cross-linking identifiers**. `scripts/wikidata_bootstrap.py`
+  matches each entity to a Q-ID with a confidence score, so that AtlasPI records can
+  be joined to other datasets. **No descriptive content, dates, geometry or citations
+  are taken from Wikidata.**
+- **OpenStreetMap** is used **only as map tiles in the web front-end** (rendering, via
+  CARTO, with attribution). **No OSM data is incorporated into the dataset**, so the
+  ODbL share-alike obligation does not extend to AtlasPI's data.
+
+### 2.6 Licensing summary
+
+AtlasPI's own code and hand-curated records are Apache-2.0. Upstream data retains
+its original licence, and each is credited in `NOTICE`:
+
+| Upstream | Licence | Used for | Obligation |
+|---|---|---|---|
+| Natural Earth 10m | Public domain (CC0) | modern boundaries | none |
+| `aourednik/historical-basemaps` | CC BY 4.0 | pre-1800 boundary matching | **attribution** — given in `NOTICE`, in this document, and in the app's data banner |
+| Wikidata | CC0 | Q-ID cross-links only | none |
+| OpenStreetMap | ODbL | map tiles only (not data) | attribution shown on the map |
+
 ---
 
 ## 3. Boundary enrichment pipeline
