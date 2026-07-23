@@ -47,9 +47,25 @@ del comfort", questo è inaccettabile a prescindere dall'esito della PR.
    progetto se non per i (pochi) record effettivamente scritti a mano.
 4. Le submission a liste/directory di terzi non devono nascondere la natura
    AI-assistita del progetto quando il contesto la rende rilevante.
+5. **Promozione in pausa** — nessuna nuova submission, nessun launch post,
+   nessun invio a riviste — finché l'audit umano delle citazioni (vedi sotto)
+   non è pubblicato.
+6. Le **comunicazioni pubbliche sensibili** (commenti su PR, risposte ai
+   maintainer) le scrive e le posta il maintainer in prima persona. Gli agenti
+   AI possono preparare bozze; non parlano a nome del progetto.
 
-## Follow-up aperto
+## Remediation (aggiornato 2026-07-23)
 
-- Valutare un **audit umano a campione** delle citazioni (es. 50 record estratti
-  casualmente, verifica bibliografica manuale, risultati pubblicati in docs/):
-  è la mitigazione più credibile verso l'esterno e ad oggi non esiste.
+L'**audit umano a campione** delle citazioni — indicato alla stesura di questo
+record come follow-up aperto — è ora avviato: protocollo e campione in
+[`docs/academic-audit/`](../academic-audit/CITATION-AUDIT.md). Campionamento
+deterministico e riproducibile pubblicamente dalla API di produzione; verifica
+manuale del maintainer su tre criteri (l'opera esiste / dati bibliografici
+corretti / supporta il record); risultati pubblicati **inclusi i fallimenti**.
+
+Finché l'audit non è pubblicato, la descrizione onesta delle citazioni di
+AtlasPI è: **verificate a macchina, non auditate da umani**.
+
+Di questo record esiste una versione inglese
+([ETHICS-028-ai-assisted-curation-transparency.en.md](ETHICS-028-ai-assisted-curation-transparency.en.md)),
+perché l'episodio che lo ha originato è avvenuto in inglese, in pubblico.

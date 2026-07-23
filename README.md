@@ -178,6 +178,10 @@ curl "http://localhost:10100/v1/compare/1/5"
 
 ## Dataset Overview
 
+> **How this data is curated — disclosure and correction (2026-07-23)**
+>
+> Curation of non-boundary records (entities, events, cities, rulers, routes, sites) is **AI-assisted**: LLM research agents propose metadata and candidate citations, an adversarial verification step rejects citations that do not exist or do not support the claim, and the maintainer supervises the pipeline. Records are **not systematically reviewed by professional historians**. Until the human citation audit ([protocol](docs/academic-audit/CITATION-AUDIT.md)) is published, treat citations as **machine-verified, not human-audited**. Earlier versions of this documentation said the dataset was "hand-curated" — that wording was inaccurate and has been retired. Full details: [METHODOLOGY §2.4](docs/METHODOLOGY.md#24-events-cities-trade-routes-rulers-sites-periods-languages) · [ETHICS-028 (EN)](docs/ethics/ETHICS-028-ai-assisted-curation-transparency.en.md).
+
 **1,006 historical entities + 643 historical events** spanning 6,500 years of human civilization, backed by **5,000+ academic sources** and documenting **2,000+ territory changes**. Plus **1,249 archaeological sites**, **105 historical rulers**, **29 historical languages**, **104 dynasty chains**, **41 trade routes**, **252 historical cities**, and **55 historical periods**. Events include battles, treaties, epidemics, genocides, colonial violence, massacres, deportations and natural disasters — with ETHICS-007 (no euphemisms) and ETHICS-008 (`known_silence` flag for erased/suppressed records).
 
 ### Coverage by Region
