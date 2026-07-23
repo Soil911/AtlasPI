@@ -2,7 +2,8 @@
 
 # ETHICS: questi test prevengono regressioni dove un nuovo /admin/* viene
 # aggiunto senza la dependency verify_admin, lasciandolo esposto.
-# Vedi docs/auto-iter-wave0/wave-1-1/inventory-and-design.md.
+# Design in wave-1-1/inventory-and-design.md (archivio interno, fuori dal
+# repo pubblico dal 2026-07-23 — ETHICS-028).
 """
 import base64
 import re

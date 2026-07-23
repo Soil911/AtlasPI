@@ -3,8 +3,8 @@
 # ETHICS: questa logica protegge endpoint che possono modificare/leakare
 # stato interno (cache flush, AI suggestions, dev-ip dashboard, analytics).
 # Failsafe: se ATLASPI_ADMIN_TOKEN non è settato → tutti bloccati
-# (closed-by-default). Decisione e razionale in
-# docs/auto-iter-wave0/wave-1-1/inventory-and-design.md.
+# (closed-by-default). Decisione e razionale in wave-1-1/inventory-and-design.md
+# (archivio interno, fuori dal repo pubblico dal 2026-07-23 — ETHICS-028).
 #
 # Note: l'IP allowlist è stata SCARTATA (cross-check GPT-5.5 ha mostrato
 # che dietro nginx reverse proxy `request.client.host` riceve l'IP del

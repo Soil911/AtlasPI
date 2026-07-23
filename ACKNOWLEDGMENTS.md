@@ -41,7 +41,8 @@ framework and provided substantive feedback will be named here with
 their permission, alongside the version of AtlasPI they reviewed.*
 
 *The list is currently empty because pre-submission review outreach
-(see `docs/outreach-draft.md`) is just beginning as of v6.1.1
+(drafts kept in the project's internal archive since 2026-07-23, per
+ETHICS-028) is just beginning as of v6.1.1
 (2026-04-14). Any reviewer who prefers not to be named publicly will
 be acknowledged anonymously by discipline (e.g. "a medievalist
 specialising in the Islamic Mediterranean").*

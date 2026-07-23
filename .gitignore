@@ -72,3 +72,17 @@ data/enrichment/loop_screenshots/
 psw.txt
 password.txt
 *.password
+
+# ETHICS-028 (2026-07-23): documenti di lavoro interni — mai più nel repo
+# pubblico. Spostati in ../AtlasPI-internal/ (CLAUDE.md resta in locale:
+# Claude Code lo legge dal filesystem, non da GitHub).
+NEXT_SESSION_PROMPT.md
+CLAUDE.md
+docs/DISCOVERY.md
+docs/academic/
+docs/auto-iter*
+docs/reddit-drafts.md
+docs/outreach-draft.md
+docs/structural-tracks-plan.md
+docs/audit/FASE_A_B_HANDOFF.md
+docs/audit/FASE_C_HANDOFF.md

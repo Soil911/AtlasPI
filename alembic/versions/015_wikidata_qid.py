@@ -14,7 +14,7 @@ con confidence ≥ 0.85. Le entità senza match sicuro restano NULL.
 ETHICS: il Q-ID è un identificatore esterno di riferimento, non un'autorità.
 AtlasPI non adotta automaticamente i dati Wikidata — il Q-ID serve a
 confronto/drift detection (fase B) + tracciabilità. Le discrepanze vanno
-valutate caso per caso (vedi docs/audit/FASE_A_B_HANDOFF.md).
+valutate caso per caso (vedi FASE_A_B_HANDOFF.md, archivio interno — ETHICS-028).
 """
 
 from typing import Sequence, Union

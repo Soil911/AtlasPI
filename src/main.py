@@ -512,7 +512,7 @@ app.include_router(snapshot.router)
 # ATLASPI_ADMIN_TOKEN env unset, tutti gli /admin/* ritornano 401.
 # IP allowlist scartata (cross-check GPT-5.5): dietro nginx reverse
 # proxy request.client.host = IP del proxy, non del client reale.
-# Vedi src/api/deps.py + docs/auto-iter-wave0/wave-1-1/.
+# Vedi src/api/deps.py (design: wave-1-1, archivio interno — ETHICS-028).
 _admin_deps = [Depends(verify_admin)]
 # v6.99.115: analytics.router rimosso — dashboard analytics interna sostituita
 # da Matomo self-hosted (stats.cra-srl.com); la telemetria API resta (vedi

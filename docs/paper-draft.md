@@ -2,6 +2,8 @@
 
 **Status**: pre-submission draft — targeting the [Journal of Open Humanities Data](https://openhumanitiesdata.metajnl.com/) (JOHD) *data paper* format. Not yet submitted. This file is intentionally kept in the repository so reviewers can track its provenance.
 
+> **Note (2026-07-23)**: this April 2026 draft predates [ETHICS-028](ethics/ETHICS-028-ai-assisted-curation-transparency.en.md). Where it describes curation as the work of a human curator, that description is outdated: curation is **AI-assisted** (LLM research agents + adversarial citation verification + maintainer supervision, no systematic review by professional historians) — see [METHODOLOGY §2.4](METHODOLOGY.md). The draft is kept unmodified for provenance; the current manuscript uses the corrected wording and will return to this repository when actually published.
+
 **Version referenced**: AtlasPI 6.1.2 (2026-04-14) — DOI [10.5281/zenodo.19581784](https://doi.org/10.5281/zenodo.19581784)
 
 ---

@@ -21,7 +21,8 @@
 - **v6.99.101 chain dedup** (struttura): prod aveva 107 catene ma solo 77 nomi distinti — 30
   catene successorie duplicate (doppia-ingestione; root cause in `ingest_chains`, JSON poi
   ripulito ma prod INSERT-only). Rimosse (107→77, orfani invariati 772). Hardening
-  `_dedupe_by_name` + fence CI. Vedi `docs/structural-tracks-plan.md`. Prerequisito al linking.
+  `_dedupe_by_name` + fence CI. Vedi `structural-tracks-plan.md` (archivio
+  interno dal 2026-07-23 — ETHICS-028). Prerequisito al linking.
 
 ### v6.99.102-108 — tracce strutturali: B1a/B1b, split Babilonia, coerenza deprecati (2026-06-05 → 07-02)
 - **v6.99.102/103**: B1a (estensioni catene Iran/Francia/Romania) + B1b (nuove catene
@@ -108,7 +109,8 @@ Prossimo bivio narrativo: Stories mode completo (grosso), da valutare solo con t
 Diagnosi 2026-07-14: le pagine sono indicizzabili ma Google ne indicizza 1/14 → dominio
 nuovo + zero backlink ("crawled, not indexed"). I backlink sono l'intervento a leva più
 alta ancora aperto.
-- **v6.99.137 (2026-07-17)**: ricerca multi-agente → **kit `docs/DISCOVERY.md`** (15 canali
+- **v6.99.137 (2026-07-17)**: ricerca multi-agente → **kit `DISCOVERY.md`** (dal
+  2026-07-23 in archivio interno — ETHICS-028) (15 canali
   verificati, voci click-ready, ordinati per leva) + rifiniture on-site AUTONOME (Dataset
   JSON-LD arricchito per Google Dataset Search, CITATION/.zenodo accurati). **Le submission
   verso repo/servizi terzi le esegue Clirim** (top-3: punkpeye/awesome-mcp-servers,
