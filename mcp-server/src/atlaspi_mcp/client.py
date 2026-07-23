@@ -15,9 +15,16 @@ from typing import Any
 
 import httpx
 
+from atlaspi_mcp import __version__
+
 DEFAULT_BASE_URL = "https://atlaspi.it"
 DEFAULT_TIMEOUT = 30.0
-USER_AGENT = "atlaspi-mcp/0.9.0 (+https://github.com/Soil911/AtlasPI)"
+
+# La versione nello User-Agent finisce nella telemetria (`api_request_logs`) ed e'
+# quindi il modo in cui distinguiamo le versioni del client in uso. Era hard-coded
+# a "0.9.0" mentre il package era gia' 0.10.2: tutte le richieste MCP risultavano
+# di una versione mai piu' corretta. Ora deriva dai metadati del package.
+USER_AGENT = f"atlaspi-mcp/{__version__} (+https://github.com/Soil911/AtlasPI)"
 
 
 class AtlasPIClientError(RuntimeError):
