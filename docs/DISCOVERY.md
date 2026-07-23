@@ -216,7 +216,17 @@ open REST API + MCP server per geografia storica (no login/API key, JSON+GeoJSON
 - [ ] #14 OpenHistoricalMap wiki — **CLIRIM** (account OSM)
 - [ ] #15 Show HN — **CLIRIM** (quando i dati sono più solidi)
 - [x] Extra: **IndexNow ping 200 OK** (14 URL, 17/07)
-- [x] **tmcw/awesome-geojson #77** (2.516★) → **PR APERTA 23/07**
+- [x] ~~tmcw/awesome-geojson #77~~ → ❌ **RESPINTA E CHIUSA 23/07** dal maintainer
+  (tmcw): *"it looks like this is getting an LLM to produce academic citations …
+  slop datasets are bad"*, con richiamo al precedente #75 (*"is this even a real
+  person … or is it the vibecoding bot doing the promotion too?"*).
+  **LEZIONI (vedi ETHICS-028)**: (1) l'accusa aveva un fondamento — la nostra doc
+  diceva "hand-curated" mentre la curation è AI-assistita: corretto ovunque
+  (METHODOLOGY §2.4, paper JOHD, ethics record); (2) NON rispondere in modo
+  difensivo né ri-sottomettere; (3) le altre PR aperte possono ricevere la stessa
+  obiezione — la risposta onesta ora esiste ed è METHODOLOGY §2.4; (4) la vera
+  remediation è un **audit umano a campione delle citazioni** (follow-up aperto).
+  ~~PR APERTA 23/07~~
   (https://github.com/tmcw/awesome-geojson/pull/77). Trovata analizzando *chi cita*
   historical-basemaps: è l'unica awesome-list verificata che lo elenca, nella sezione
   `data`. AtlasPI inserito subito sotto, stesso contesto. Mantenuta da Tom MacWright

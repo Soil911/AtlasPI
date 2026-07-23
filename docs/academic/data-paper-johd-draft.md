@@ -1,5 +1,9 @@
 # Data paper — bozza per Journal of Open Humanities Data (JOHD)
 
+> ⚠️ **SUPERATA il 2026-07-23** dalla versione in `JOHD-SUBMISSION/manuscript.md`
+> (che dichiara esplicitamente la curation AI-assistita, vedi ETHICS-028).
+> Questa bozza contiene ancora 'hand-curated': NON usarla per la submission.
+
 > **Stato**: BOZZA da rivedere e firmare da Clirim Ramadani.
 > **Target**: [Journal of Open Humanities Data](https://openhumanitiesdata.metajnl.com/),
 > formato *Data Paper*: 1.000–1.500 parole, peer-reviewed.

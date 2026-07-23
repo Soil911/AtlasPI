@@ -24,7 +24,7 @@ For monograph-grade spatial accuracy, researchers should still consult the upstr
 
 ### 2.1 Entity records
 
-Entity metadata (name, type, time range, capital, sources, territory changes) is hand-curated in JSON files under `data/entities/`, reviewed against the four ethical principles documented in `CLAUDE.md` and the `docs/ethics/` record set. Each entity requires at least one academic citation in `sources[]`.
+Entity metadata (name, type, time range, capital, sources, territory changes) is curated in JSON files under `data/entities/` through the AI-assisted workflow described in §2.4, reviewed against the four ethical principles documented in `CLAUDE.md` and the `docs/ethics/` record set. Each entity requires at least one academic citation in `sources[]`.
 
 ### 2.2 Boundary geometry
 
@@ -57,8 +57,21 @@ When an entity is matched via the aourednik pipeline, the following metadata is 
 ### 2.4 Events, cities, trade routes, rulers, sites, periods, languages
 
 **These are not imported from any upstream dataset.** Unlike boundary geometry
-(§2.2), every non-boundary record is hand-curated against cited literature and
-carries its own `sources[]`. There is no bulk import step for them.
+(§2.2), every non-boundary record is curated individually against published
+literature and carries its own `sources[]`. There is no bulk import step for them.
+
+**Curation is AI-assisted, and this is disclosed deliberately.** Most enrichment
+batches use LLM research agents to propose metadata and candidate sources; every
+batch then passes an adversarial verification step whose sole task is to reject
+citations that do not exist or do not support the claim (see e.g. CHANGELOG
+v6.99.132, where the verifier reported zero fabricated sources in that batch).
+Structural CI fences guard referential integrity, and the maintainer supervises
+the pipeline and its outputs. **Individual records are, however, not
+systematically reviewed by professional historians.** LLM-produced bibliographies
+carry a documented fabrication risk; the mitigations here are adversarial
+verification, typed citations, conservative confidence scoring, and full public
+inspectability of every record (`/v1/*`). Corrections are welcome — via GitHub
+issues or the in-app `/v1/feedback` endpoint. See ETHICS-028.
 
 Source coverage is complete — every record of every type carries at least one
 citation (verified 2026-07-23 against production):
@@ -105,7 +118,7 @@ Both appear in `NOTICE` and are easy to misread as content sources. They are not
 
 ### 2.6 Licensing summary
 
-AtlasPI's own code and hand-curated records are Apache-2.0. Upstream data retains
+AtlasPI's own code and curated records are Apache-2.0. Upstream data retains
 its original licence, and each is credited in `NOTICE`:
 
 | Upstream | Licence | Used for | Obligation |
@@ -188,7 +201,7 @@ Every entity carries a `confidence_score` in `[0.0, 1.0]`:
 | 0.90–1.00 | Strong primary sources, uncontested geometry |
 | 0.75–0.89 | Good sources, minor uncertainty in geometry or dates |
 | 0.50–0.74 | Reasonable sources, noticeable uncertainty — **default for most disputed entities** |
-| 0.30–0.49 | Generated/approximate geometry, hand-curated metadata |
+| 0.30–0.49 | Generated/approximate geometry, curated metadata |
 | < 0.30 | Fragmentary evidence — entity may be flagged `status: "disputed"` |
 
 Scores are computed from a combination of source tier, boundary source tier, date precision, and manual review. They are reviewable and adjustable — the confidence field is not a black-box ML output.

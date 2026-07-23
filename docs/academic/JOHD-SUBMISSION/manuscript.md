@@ -52,9 +52,9 @@ uncertainty and contestation explicit, queryable fields.
 ## (2) Method
 
 **Entity records.** Entity metadata (name, type, temporal range, capital, sources,
-territorial changes) is hand-curated in versioned JSON. Each entity requires at least
-one academic citation; the dataset currently carries 5,089 citations and 2,880
-documented territorial changes.
+territorial changes) is curated in versioned JSON through the AI-assisted workflow
+described below. Each entity requires at least one academic citation; the dataset
+currently carries 5,089 citations and 2,880 documented territorial changes.
 
 **Boundary geometry** is derived through a three-tier pipeline, ranked by trust and
 recorded per record in a `boundary_source` field:
@@ -70,18 +70,25 @@ and a precision grade, so that any polygon can be traced back to its upstream fe
 Upstream datasets are not vendored; they are fetched reproducibly by a documented
 script and credited in the repository's `NOTICE` file.
 
-**Curation and review workflow.** Records enter the dataset in one of two ways: manual
-curation against cited literature, or programmatic import followed by review. Every
-import is dual-written to versioned JSON and to the production database, so that the
-canonical files and the served data can be reconciled and any divergence detected. A
-continuous-integration suite of 1,293 tests enforces structural invariants —
-referential integrity of succession chains, exclusion of deprecated records from
-public endpoints, and coherence between confidence and status fields. Geometric
-regressions are additionally caught by automated checks for implausible polygons, such
-as boundaries crossing the antimeridian or exceeding a plausible area for the declared
-entity type: a class of error that metadata validation alone does not surface.
-Confidence values are revisited when new sources are added; downgrades are as common
-as upgrades, and both are recorded in the version history.
+**Curation and review workflow.** Curation is AI-assisted, and this is disclosed
+deliberately. Most enrichment batches use large-language-model research agents to
+propose metadata and candidate sources; every batch then passes an adversarial
+verification step whose sole task is to reject citations that do not exist or do not
+support the claim, and the maintainer supervises the pipeline and its outputs.
+Individual records are, however, not systematically reviewed by professional
+historians. LLM-produced bibliographies carry a documented fabrication risk; the
+mitigations adopted here are adversarial source verification, typed citations,
+conservative confidence scoring, and full public inspectability of every record.
+Every change is dual-written to versioned JSON and to the production database, so
+that the canonical files and the served data can be reconciled and any divergence
+detected. A continuous-integration suite of 1,293 tests enforces structural
+invariants — referential integrity of succession chains, exclusion of deprecated
+records from public endpoints, and coherence between confidence and status fields.
+Geometric regressions are additionally caught by automated checks for implausible
+polygons, such as boundaries crossing the antimeridian or exceeding a plausible area
+for the declared entity type: a class of error that metadata validation alone does
+not surface. Confidence values are revisited when new sources are added; downgrades
+are as common as upgrades, and both are recorded in the version history.
 
 **Confidence scoring.** Every entity carries `confidence_score ∈ [0,1]`, derived from
 source tier, boundary tier, date precision and manual review. The mean across the
