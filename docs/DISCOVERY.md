@@ -175,12 +175,20 @@ open REST API + MCP server per geografia storica (no login/API key, JSON+GeoJSON
     `buildSteps: ["uv pip install --system ./mcp-server"]` ·
     `cmdArguments: ["atlaspi-mcp"]` (Glama li avvolge in `mcp-proxy -- …`) ·
     base `debian:trixie-slim`, Python 3.14, Node 26.
-  - ⏳ **Build di verifica lanciato** (test `019f855e-51e5-7529-820d-50d21506ba57`).
-    Rischio noto: Python 3.14 è recentissimo, se `pydantic` non ha wheel per
-    quella versione abbassare a 3.13 e rilanciare.
-  - **Restano** (automatici dopo un build verde): estrazione dei 39 tool +
-    punteggi license/quality → poi **Make Release**, e infine aggiungere il
-    **badge Glama** alla voce nella PR punkpeye #9219 + commento → sblocca ~91k★.
+  - ✅ **BUILD RIUSCITO** (`019f8594`, 43.8s) + ✅ **RELEASE 0.10.2 CREATA** (23/07).
+    Log confermano `initialize` + `ListToolsRequest` ok (introspezione riuscita).
+  - **Il 1° build era fallito** per `uv pip install --system` → Python di sistema
+    Debian "externally managed" (PEP 668). NON era il Python 3.14 come temuto.
+    Correzione verificata replicando il loro Dockerfile sul VPS. Config finale:
+    `buildSteps: ["uv venv /opt/venv","uv pip install --python /opt/venv/bin/python ./mcp-server"]`
+    `cmdArguments: ["mcp-proxy","--","/opt/venv/bin/atlaspi-mcp"]` · Python **3.13**.
+  - ⚠️ **ATTENZIONE — Glama SOVRASCRIVE la config**: dopo il nostro build, il loro
+    sistema ha rigenerato la build spec con valori inventati e sbagliati
+    (`uv sync`, `python mcp-server/main.py` — file inesistente, Python 3.14) e ha
+    lanciato un test che è fallito. **Config ripristinata a mano il 23/07.**
+    Se in futuro i build falliscono, ricontrollare PRIMA questi campi.
+  - **Resta**: attendere che l'API pubblica propaghi i 39 tool (asincrono), poi
+    aggiungere il **badge Glama** alla PR punkpeye #9219 + commento → sblocca ~91k★.
   Verificato il 17/07: AtlasPI **non è** auto-indicizzato — la
   [metodologia Glama](https://glama.ai/mcp/methodology) conferma che il registry
   è **su submission, non auto-crawl**.
