@@ -208,6 +208,22 @@ open REST API + MCP server per geografia storica (no login/API key, JSON+GeoJSON
 - [ ] #14 OpenHistoricalMap wiki — **CLIRIM** (account OSM)
 - [ ] #15 Show HN — **CLIRIM** (quando i dati sono più solidi)
 - [x] Extra: **IndexNow ping 200 OK** (14 URL, 17/07)
+- [x] **tmcw/awesome-geojson #77** (2.516★) → **PR APERTA 23/07**
+  (https://github.com/tmcw/awesome-geojson/pull/77). Trovata analizzando *chi cita*
+  historical-basemaps: è l'unica awesome-list verificata che lo elenca, nella sezione
+  `data`. AtlasPI inserito subito sotto, stesso contesto. Mantenuta da Tom MacWright
+  (ex-Mapbox). Era stata "deprioritizzata" nel kit iniziale: sbagliato, è un fit diretto.
+
+## Metodo che ha funzionato (e quello che NON ha funzionato)
+
+**Analisi dei 138 fork di historical-basemaps → VICOLO CIECO.** I fork di un repo di
+dati sono copie inerti: tutti ereditano la stessa descrizione e hanno 0 stelle. Non
+distinguono chi ha costruito qualcosa da chi ha solo scaricato.
+
+**Cercare chi CITA il dataset → UTILE, ma la ricerca GitHub è inaffidabile.**
+`search/repositories?q=...in:readme` ha dato 1.814 risultati, ma **5 su 6 dei primi
+erano falsi positivi** (matchava "historical" e "basemaps" separatamente). *Verificare
+sempre scaricando il README e cercando la stringa reale* prima di agire.
 
 **Nota ops**: durante la verifica di #5, `CORS_ORIGINS=*` è stato impostato in prod
 (prima: whitelist domini) per rendere vera la colonna "CORS: Yes" — coerente con la
